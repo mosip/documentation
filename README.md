@@ -6,7 +6,9 @@ MOSIP is built considering architecture and design principles that makes it trul
 To know about MOSIP check out our [Platform Documentation](https://github.com/mosip/mosip-docs/wiki)
 
 ### Contribute
-You can contribute to MOSIP! If you see a problem, or have inputs on how we can improve, please see the [Contributor Guide](https://github.com/mosip/mosip-docs/wiki/Contributor-Guide) on how to file bugs, contribute code, and more.
+You can contribute to MOSIP! 
+
+We want to engage constructively with the community.  If you find a **vulnerability** or issue, please file a bug with the respective repository.  We welcome pull requests with fixes too.  Please see the [Contributor Guide](https://github.com/mosip/mosip-docs/wiki/Contributor-Guide) on how to file bugs, contribute code, and more.
 
 ### License
 This project is licensed under the terms of [Mozilla Public License 2.0](https://github.com/mosip/mosip-platform/blob/master/LICENSE)
