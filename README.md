@@ -1,5 +1,5 @@
 # mosip-docs
-Documents repository of MOSIP
+Documentation repository of MOSIP
 
 Welcome to MOSIP!
 
