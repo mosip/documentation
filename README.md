@@ -1,7 +1,5 @@
 # Documentation
-MOSIP is built considering architecture and design principles that makes it truly modular, interoperable, customizable and extensible.  This enables countries to adopt MOSIP as the core for building their foundational identity systems. The Platform Documentation contains everything you need to understand MOSIP in terms of its requirements, architecture, functional view and APIs.  
-
-The document can be accessed [here](../../wiki/Platform-Documentation).
+MOSIP is built considering architecture and design principles that makes it truly modular, interoperable, customizable and extensible.  This enables countries to adopt MOSIP as the core for building their foundational identity systems. The Platform Documentation contains everything you need to understand MOSIP in terms of its requirements, architecture, functional view and APIs.  Get started on documentation [here](../../wiki).
 
 ---
 ### About MOSIP
