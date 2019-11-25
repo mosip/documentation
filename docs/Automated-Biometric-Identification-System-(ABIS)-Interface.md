@@ -1,3 +1,5 @@
+# Automated Biometric Identification System (ABIS) Interface
+
 Providing unique identity for an individual is one of key features of MOSIP platform. To do this MOSIP will 
 
 - Use multi modal biometric information of an individual
@@ -7,7 +9,7 @@ Providing unique identity for an individual is one of key features of MOSIP plat
 
 This document will provide the specification an ABIS provider must implement to meet MOSIP's requirements.
 
-# Overview
+## Overview
 ![](_images/arch_diagrams/ABIS_middleware.png)
 
 - MOSIP will interact with ABIS only via message queues
@@ -81,6 +83,6 @@ Target FPIR | score
 1 in 100,000            | 50
 
 
-## API's to interact with an ABIS system
+# ABIS APIs
 
 [**ABIS APIs**](ABIS-APIs) details the API's that an ABIS system must support

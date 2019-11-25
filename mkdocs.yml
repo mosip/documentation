@@ -14,9 +14,7 @@ nav:
 
   - INTERFACES AND APIs:
     - APIs: APIs.md
-    - ABIS:
-      - Interface: Automated-Biometric-Identification-System-(ABIS)-Interface.md
-      - ABIS APIs: ABIS-APIs.md
+    - ABIS Interface: Automated-Biometric-Identification-System-(ABIS)-Interface.md
     - Biometric SDKs: Biometric-Functions-API-Specification.md
     - MOSIP Device Service Specification: MOSIP-Device-Service-Specification.md
 
