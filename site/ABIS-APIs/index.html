@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>ABIS APIs - MOSIP Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "ABIS APIs";
+    var mkdocs_page_input_path = "ABIS-APIs.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> MOSIP Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">OVERVIEW</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="..">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Architecture/">Architecture</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Features/">Features</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Technology-Stack/">Technology Stack</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">BUILD AND DEPLOY</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Getting-Started/">Getting Started</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Infrastructure/">Infrastructure Recommendations</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Tester-Documentation/">Tester Documentation</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">INTERFACES AND APIs</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../APIs/">APIs</a>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">ABIS</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Automated-Biometric-Identification-System-(ABIS)-Interface/">Interface</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">ABIS APIs</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#common-parameters-used-for-all-abis-operations">Common parameters used for all ABIS operations</a></li>
+    
+
+    <li class="toctree-l4"><a href="#standard-return-codes">Standard return codes</a></li>
+    
+
+    <li class="toctree-l4"><a href="#failure-reasons">Failure reasons</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#insert-insert-biometric-data-of-an-individual">INSERT (insert biometric data of an Individual)</a></li>
+        
+            <li><a class="toctree-l5" href="#behavior-of-insert">Behavior of Insert</a></li>
+        
+            <li><a class="toctree-l5" href="#identify">IDENTIFY</a></li>
+        
+            <li><a class="toctree-l5" href="#behavior-of-identify">Behavior of IDENTIFY</a></li>
+        
+            <li><a class="toctree-l5" href="#delete">DELETE</a></li>
+        
+            <li><a class="toctree-l5" href="#behavior-of-delete">Behavior of DELETE</a></li>
+        
+            <li><a class="toctree-l5" href="#ping">PING</a></li>
+        
+            <li><a class="toctree-l5" href="#behavior-of-ping">Behavior of PING</a></li>
+        
+            <li><a class="toctree-l5" href="#pending-jobs">Pending Jobs</a></li>
+        
+            <li><a class="toctree-l5" href="#behavior-of-pending-jobs">Behavior of Pending Jobs</a></li>
+        
+            <li><a class="toctree-l5" href="#reference-count">Reference Count</a></li>
+        
+            <li><a class="toctree-l5" href="#behavior-of-reference-count">Behavior of Reference Count</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Biometric-Functions-API-Specification/">Biometric SDKs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../MOSIP-Device-Service-Specification/">MOSIP Device Service Specification</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">CONTRIBUTE</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Contributor-Guide/">Contributor Guide</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Code-of-Conduct/">Code of Conduct</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../FAQs/">FAQs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../MOSIP-Releases/">Releases</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Roadmap/">Roadmap</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">MOSIP Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>ABIS &raquo;</li>
+        
+      
+        
+          <li>INTERFACES AND APIs &raquo;</li>
+        
+      
+    
+    <li>ABIS APIs</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>An ABIS system that integrates with MOSIP should support the following operations. All ABIS operations are via a message queue and asynchronous.</p>
+<h3 id="common-parameters-used-for-all-abis-operations">Common parameters used for all ABIS operations</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+<th>Restrictions</th>
+<th>Default Value</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>requestID</td>
+<td>ID that is associated with each request sent to ABIS</td>
+<td>ABIS should not use this ID in any other context outside the request</td>
+<td></td>
+<td>80bd41f8-31b2-46ac-ac9c-3534fc1b220e (UUID)</td>
+</tr>
+<tr>
+<td>referenceID</td>
+<td>Id of a single registration record. Registration record is maintained in MOSIP. This ID is the mapping between MOSIP and ABIS</td>
+<td>None</td>
+<td></td>
+<td>80bd41f8-31b2-46ac-ac9c-3534fc1b220e (UUID)</td>
+</tr>
+<tr>
+<td>referenceURL</td>
+<td>URL to the biometrics data stored in MOSIP. This URL will have read only access</td>
+<td>None</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>biometricType</td>
+<td>Type of biometric data sent in the request</td>
+<td>FMR/FIR/IIR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Return Value</td>
+<td>Response</td>
+<td>None</td>
+<td>None</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>failureReason</td>
+<td>Response</td>
+<td>None</td>
+<td>None</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>scaledScore</td>
+<td>Score of the match against the population</td>
+<td>None</td>
+<td>None</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>targetFPIR</td>
+<td>FPIR score as per the formula</td>
+<td>None</td>
+<td>None</td>
+<td>Integer</td>
+</tr>
+<tr>
+<td>maxResults</td>
+<td>maximum number of results returned for IDENTIFY operation</td>
+<td>30</td>
+<td>30</td>
+<td>Integer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard-return-codes">Standard return codes</h3>
+<table>
+<thead>
+<tr>
+<th>0</th>
+<th>not used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Success</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Failed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="failure-reasons">Failure reasons</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Internal error - Unknown</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Aborted</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Unexpected error</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Unable to serve the request</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Missing reference id</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Unable to fetch biometric details</td>
+</tr>
+</tbody>
+</table>
+<p>All the below operations send biometric data in CBEFF format. (Please refer to the <a href="MOSIP-Biometric-Data-Specifications#cbeff-xml"><strong>link</strong></a> for sample cbeff data)</p>
+<h3 id="insert-insert-biometric-data-of-an-individual">INSERT (insert biometric data of an Individual)</h3>
+<pre><code>//Request
+{
+    &quot;id&quot; : &quot;mosip.abis.insert&quot;,
+    &quot;ver&quot; : &quot;1.0&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;,
+    &quot;referenceId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;referenceURL&quot; : &quot;https://mosip.io/biometric/45678&quot;
+
+}
+
+//Success response
+{
+    &quot;id&quot; : &quot;mosip.abis.insert&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;,
+    &quot;returnValue&quot; : &quot;1&quot;
+}
+
+//Failure response
+{
+    &quot;id&quot; : &quot;mosip.abis.insert&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;,
+    &quot;returnValue&quot; : &quot;2&quot;,
+    &quot;errorCode&quot; : &quot;1&quot;
+    &quot;failureReason&quot; : &quot;&quot;
+}
+</code></pre>
+
+<h3 id="behavior-of-insert">Behavior of Insert</h3>
+<ul>
+<li>ABIS must get biometric data from referenceURL, process it and store it locally within the ABIS reference database </li>
+<li>referenceId must not be active prior to this operation i.e., it must not have been used before this operation</li>
+<li>De-duplication must not be performed in this operation</li>
+<li>MOSIP must provide CBEFF format biometric data to ABIS</li>
+</ul>
+<h3 id="identify">IDENTIFY</h3>
+<pre><code>//Request
+{
+    &quot;id&quot; : &quot;mosip.abis.identify&quot;,
+    &quot;ver&quot; : &quot;1.0&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;,
+    &quot;referenceId&quot; : &quot;987654321-89AB-CDEF-0123-456789ABCDEF&quot;,
+        &quot;referenceUrl&quot; : &quot;https://mosip.io/registrationprocessor/v1/bio-dedupe/biometricfile/2cce7b7d-b58a-4466-a006-c79297281789&quot;,
+    &quot;maxResults&quot; : 10,
+    &quot;targetFPIR&quot; : 30,
+    &quot;gallery&quot; : {
+        &quot;referenceIds&quot; : [ {
+              &quot;referenceId&quot; : &quot;2cce7b7d-b58a-4466-a006-c79297281123&quot;
+            }, {
+              &quot;referenceId&quot; : &quot;2cce7b7d-b58a-4466-a006-c79297281456&quot;
+            }, {
+              &quot;referenceId&quot; : &quot;2cce7b7d-b58a-4466-a006-c79297281678&quot;
+            }, {
+              &quot;referenceId&quot; : &quot;2cce7b7d-b58a-4466-a006-c79297281098&quot;
+            }, {
+              &quot;referenceId&quot; : &quot;2cce7b7d-b58a-4466-a006-c79297281321&quot;
+            } 
+        ]
+  }
+}
+
+//Success response
+{
+    &quot;id&quot; : &quot;mosip.abis.identify&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;,
+    &quot;returnValue&quot; : &quot;1&quot;,
+    &quot;candidateList&quot; : {
+     &quot;count&quot; : &quot;&quot;,
+     &quot;candidates&quot; : [
+    {
+     &quot;referenceId&quot; : &quot;&quot;,
+     &quot;internalScore&quot;: &quot;&quot;,
+     &quot;scaledScore&quot; : &quot;&quot;,
+     &quot;analytics&quot;: [
+       {
+        &quot;key1&quot;: &quot;value1&quot;,
+        &quot;key2&quot;: &quot;value2&quot;
+       }
+     ],
+     &quot;scores&quot;: [
+      {
+       &quot;biometricType&quot;: &quot;FIR&quot;,
+       &quot;scaledScore&quot;: &quot;&quot;,
+       &quot;internalScore&quot;: &quot;&quot;,
+       &quot;analytics&quot;: [
+        {
+         &quot;key1&quot;: &quot;value1&quot;,
+         &quot;key2&quot;: &quot;value2&quot;
+        }
+       ]
+      },
+      {
+       &quot;biometricType&quot;: &quot;IIR&quot;,
+       &quot;scaledScore&quot;: &quot;&quot;,
+       &quot;internalScore&quot;: &quot;&quot;,
+       &quot;analytics&quot;: [
+        {
+         &quot;key1&quot;: &quot;value1&quot;,
+         &quot;key2&quot;: &quot;value2&quot;
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+}
+
+//Failure response
+{
+    &quot;id&quot; : &quot;mosip.id.identify&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;,
+    &quot;returnValue&quot; : &quot;2&quot;,
+    &quot;errorCode&quot; : &quot;7&quot;
+    &quot;failureReason&quot; : &quot;&quot;
+}
+</code></pre>
+
+<h3 id="behavior-of-identify">Behavior of IDENTIFY</h3>
+<ul>
+<li>IDENTIFY request MUST provide a 1:n comparison</li>
+<li>The input set for comparison can be provided by referenceID</li>
+<li>The collection against which the input set has to be matched is specified by a set of referenceID's. 
+   If referenceId is provided, atleast one referenceID must be provided in the input. The provided referenceID's must be 
+   present in the reference database.</li>
+<li>If IDENTIFY is against all the entries in ABIS, then gallery attribute MUST not be specified</li>
+<li>maxResults specify how many results can be returned. By default this will be 10</li>
+<li>IDENTIFY should give all candidates which match targetFIPR or a better score than the targetFIPR</li>
+<li>This request should not match against referenceID that is not in the reference database</li>
+<li>If referenceID is not NULL, then, ABIS performs 1:n comparison against all the entries in ABIS using the referenceID</li>
+<li>If referenceID is NULL and referenceURL is provided, then, ABIS performs 1:n comparison against all the entries in ABIS using the referenceURL</li>
+<li>If referenceID and reference URL both are NULL, then, ABIS throws an error (error code 5)</li>
+</ul>
+<h3 id="delete">DELETE</h3>
+<pre><code>//Request
+{
+    &quot;id&quot; : &quot;mosip.abis.delete&quot;,
+    &quot;ver&quot; : &quot;1.0&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;,
+    &quot;referenceId&quot; : &quot;&quot;
+}
+
+//Success response
+{
+    &quot;id&quot; : &quot;mosip.abis.delete&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;,
+    &quot;returnValue&quot; : &quot;&quot;
+}
+
+//Failure response
+{
+    &quot;id&quot; : &quot;mosip.abis.delete&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;,
+    &quot;returnValue&quot; : &quot;&quot;,
+    &quot;errorCode&quot; : &quot;1&quot;
+    &quot;failureReason&quot; : &quot;&quot;
+}
+</code></pre>
+
+<h3 id="behavior-of-delete">Behavior of DELETE</h3>
+<ul>
+<li>Removes only the entry referred by the referenceId</li>
+<li>This operation can be used to remove duplicates found by Identify</li>
+</ul>
+<h3 id="ping">PING</h3>
+<pre><code>//Request
+{
+    &quot;id&quot; : &quot;mosip.abis.ping&quot;,
+    &quot;ver&quot; : &quot;1.0&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;
+}
+
+//Success response
+{
+    &quot;id&quot; : &quot;mosip.abis.ping&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;,
+    &quot;returnValue&quot; : &quot;&quot;,
+    &quot;failureReason&quot; : &quot;&quot;
+}
+</code></pre>
+
+<h3 id="behavior-of-ping">Behavior of PING</h3>
+<p>A PING request should respond with a response on the liveness of the ABIS system</p>
+<h3 id="pending-jobs">Pending Jobs</h3>
+<pre><code>//Request
+{
+    &quot;id&quot; : &quot;mosip.abis.pendingJobs&quot;,
+    &quot;ver&quot; : &quot;1.0&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;
+}
+
+//Success response
+{
+    &quot;id&quot; : &quot;mosip.abis.pendingJobs&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;,
+    &quot;jobscount&quot; : &quot;&quot;,
+    &quot;returnValue&quot; : &quot;&quot;,
+    &quot;failureReason&quot; : &quot;&quot;    
+}
+</code></pre>
+
+<h3 id="behavior-of-pending-jobs">Behavior of Pending Jobs</h3>
+<ul>
+<li>ABIS responds with the count of requests that are still pending</li>
+</ul>
+<h3 id="reference-count">Reference Count</h3>
+<pre><code>//Request
+{
+    &quot;id&quot; : &quot;mosip.abis.referenceCount&quot;,
+    &quot;ver&quot; : &quot;1.0&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;
+}
+
+//Success response
+{
+    &quot;id&quot; : &quot;mosip.abis.referenceCount&quot;,
+    &quot;requestId&quot; : &quot;01234567-89AB-CDEF-0123-456789ABCDEF&quot;,
+    &quot;timestamp&quot; : &quot;1539777717&quot;,
+    &quot;count&quot; : &quot;&quot;,
+    &quot;returnValue&quot; : &quot;&quot;,
+    &quot;failureReason&quot; : &quot;&quot;    
+}
+</code></pre>
+
+<h3 id="behavior-of-reference-count">Behavior of Reference Count</h3>
+<ul>
+<li>ABIS will send a count of records in the reference database</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Biometric-Functions-API-Specification/" class="btn btn-neutral float-right" title="Biometric SDKs">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Automated-Biometric-Identification-System-(ABIS)-Interface/" class="btn btn-neutral" title="Interface"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Automated-Biometric-Identification-System-(ABIS)-Interface/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Biometric-Functions-API-Specification/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

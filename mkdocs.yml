@@ -1,7 +1,6 @@
 site_name: MOSIP Documentation
 theme: readthedocs
-pages:
-
+nav:
   - OVERVIEW: 
     - Introduction: index.md
     - Architecture: Architecture.md
