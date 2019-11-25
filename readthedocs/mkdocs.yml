@@ -1,0 +1,36 @@
+site_name: MOSIP Documentation
+theme: readthedocs
+pages:
+
+  - OVERVIEW: 
+    - Introduction: index.md
+    - Architecture: Architecture.md
+    - Features: Features.md
+    - Technology Stack: Technology-Stack.md
+  
+  - BUILD AND DEPLOY: 
+    - Getting Started: Getting-Started.md
+    - Infrastructure Recommendations: Infrastructure.md
+    - Tester Documentation: Tester-Documentation.md
+
+  - INTERFACES AND APIs:
+    - APIs: APIs.md
+    - ABIS:
+      - Interface: Automated-Biometric-Identification-System-(ABIS)-Interface.md
+      - ABIS APIs: ABIS-APIs.md
+    - Biometric SDKs: Biometric-Functions-API-Specification.md
+    - MOSIP Device Service Specification: MOSIP-Device-Service-Specification.md
+
+  - CONTRIBUTE:
+    - Contributor Guide: Contributor-Guide.md
+    - Code of Conduct: Code-of-Conduct.md
+
+  - FAQs: FAQs.md
+
+  - Releases: MOSIP-Releases.md
+  
+  - Roadmap: Roadmap.md
+
+
+
+    
