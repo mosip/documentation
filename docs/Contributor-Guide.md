@@ -33,7 +33,6 @@ If you have questions about the development process
 * Join the [mosip-dev@groups.io](https://groups.io/g/mosip-dev) mailing list. 
 * For general queries, try info@mosip.io 
 
-
 ## Community Events
 
 We actively organise online and in-person meetups and discussions. Keep an eye on [this page](https://www.mosip.io/news-events.php) for the latest.
