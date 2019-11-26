@@ -1,6 +1,8 @@
 # Contributor Guide
 
-Welcome to MOSIP, and thank you for thinking of contributing! We want to engage constructively with the community.  
+Welcome to MOSIP, and thank you for thinking of contributing! 
+
+We want to engage constructively with the community.  
 
 Before you get started, 
 
