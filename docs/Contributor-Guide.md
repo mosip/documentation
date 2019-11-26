@@ -1,9 +1,11 @@
 # Contributor Guide
 
-Welcome to MOSIP, and thank you for thinking of contributing! Before you get started, 
+Welcome to MOSIP, and thank you for thinking of contributing! We want to engage constructively with the community.  
+
+Before you get started, 
 
 *   Please make sure to read and observe our [Code of Conduct](code-of-conduct).
-*   Check out [our repositories](https://github.com/mosip) and [Platform Documentation](https://github.com/mosip/mosip-docs/wiki/Platform-Documentation)
+*   Check out [our repositories](https://github.com/mosip) 
 *   Join us in our [chatroom](https://gitter.im/mosip-community/community) and [developer mailing list](https://groups.io/g/mosip-dev)
 
 ## Your First Contribution
@@ -12,17 +14,13 @@ Help is always welcome with MOSIP! Documentation can be simplified, code can be 
 
 If you want to get started on contributing, there are multiple ways to do so - 
 
-a)  Contribute to code (fix bugs, implement new features, enhance features)
-
-b)  Contribute to improve specifications.
-
-c)  Suggest new features and feature enhancements.
-
-d)  Test MOSIP and log bugs.
-
-e)  Help us fix documentation errors.
-
-f)   Help spread the word on MOSIP among interested developers.
+1. Contribute to code (fix bugs, implement new features, enhance features)
+1. Fix any vulnerabilities
+1. Contribute to improve specifications.
+1. Suggest new features and feature enhancements.
+1. Test MOSIP and log bugs.
+1. Help us fix documentation errors.
+1. Help spread the word on MOSIP among interested developers.
 
 There are multiple repositories within the MOSIP organization. To contribute to (a) Code, take a look at the Open Issues that are not assigned to anyone and put a comment saying “I would like to take this up” along with your approach and design preferably with pseudo code. The issue shall be assigned to you after review.  Alternatively, please join our [developer mailing list](https://groups.io/g/mosip-dev) and send an email there. The core contributors team will interact with you via Github Issue comments.  You may work in the forked version of the repository and send pull requests via Github.
 
