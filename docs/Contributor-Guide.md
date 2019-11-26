@@ -6,7 +6,7 @@ Before you get started,
 
 *   Please make sure to read and observe our [Code of Conduct](code-of-conduct).
 *   Check out [our repositories](https://github.com/mosip) 
-*   Join us in our [chatroom](https://gitter.im/mosip-community/community) and [developer mailing list](https://groups.io/g/mosip-dev)
+*   Join us on our [Gitter channel](https://gitter.im/mosip-community/community) and [developer mailing list](https://groups.io/g/mosip-dev)
 
 ## Your First Contribution
 
@@ -22,17 +22,9 @@ If you want to get started on contributing, there are multiple ways to do so -
 1.  Help us fix documentation errors.
 1.  Help spread the word on MOSIP among interested developers.
 
-There are multiple repositories within the MOSIP organization. To contribute to (a) Code, take a look at the Open Issues that are not assigned to anyone and put a comment saying “I would like to take this up” along with your approach and design preferably with pseudo code. The issue shall be assigned to you after review.  Alternatively, please join our [developer mailing list](https://groups.io/g/mosip-dev) and send an email there. The core contributors team will interact with you via Github Issue comments.  You may work in the forked version of the repository and send pull requests via Github.
+There are multiple repositories within the MOSIP organization. To contribute to code, take a look at the Open Issues that are not assigned to anyone and put a comment saying “I would like to take this up” along with your approach and design preferably with pseudo code. The issue shall be assigned to you after review.  Alternatively, please join our [developer mailing list](https://groups.io/g/mosip-dev) and send an email there. The core contributors team will interact with you via Github Issue comments.  You may work in the forked version of the repository and send pull requests via Github.
 
 For (b) - (e), i.e. new bugs, specs, features or documentation improvements, please log Github Issues under the appropriate repository, or join and write in at our [developer mailing list](https://groups.io/g/mosip-dev)
-
-## Getting in touch
-
-If you have questions about the development process  
-
-*  Feel free to jump into our [Gitter channel](https://gitter.im/mosip-community/community) or  
-*  Join the [mosip-dev@groups.io](https://groups.io/g/mosip-dev) mailing list.  
-*  For general queries, try info@mosip.io 
 
 ## Community Events
 
