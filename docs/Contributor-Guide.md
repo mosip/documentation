@@ -29,6 +29,7 @@ For (b) - (e), i.e. new bugs, specs, features or documentation improvements, ple
 ## Getting in touch
 
 If you have questions about the development process  
+
 -  Feel free to jump into our [Gitter channel](https://gitter.im/mosip-community/community) or  
 -  Join the [mosip-dev@groups.io](https://groups.io/g/mosip-dev) mailing list.  
 -  For general queries, try info@mosip.io 
