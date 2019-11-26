@@ -2,8 +2,6 @@
 
 Welcome to MOSIP, and thank you for thinking of contributing! 
 
-We want to engage constructively with the community.  
-
 Before you get started, 
 
 *   Please make sure to read and observe our [Code of Conduct](code-of-conduct).
