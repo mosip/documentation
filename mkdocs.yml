@@ -25,6 +25,8 @@ nav:
     - Contributor Guide: Contributor-Guide.md
     - Code of Conduct: Code-of-Conduct.md
 
+  - LICENSE: License.md
+  
   - FAQs: FAQs.md
 
   - Releases: MOSIP-Releases.md
