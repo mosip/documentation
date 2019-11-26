@@ -1,9 +1,7 @@
 Welcome to MOSIP's documentation!
 =======================================
 
-MOSIP is built considering architecture and design principles that makes it truly modular, interoperable, customizable and extensible.  This enables countries to adopt MOSIP as the core for building their foundational identity systems. The Platform Documentation contains everything you need to understand MOSIP in terms of its requirements, architecture, functional view and APIs. 
-
----
+The Modular Open Source Identity Platform (MOSIP) helps Governments and other user organizations implement a digital, foundational identity system. Nations can use MOSIP freely as a core to build their own identity systems. Being modular in its architecture, MOSIP provides flexibility to countries in how they implement and configure their systems, and helps avoid vendor lock-in.  Anchored at the International Institute of Information Technology, Bangalore (IIIT-B), MOSIP harnesses the power of open source and embraces the best practices of scalability, security and privacy.
 
 ### Contribute
 You can contribute to MOSIP! 
