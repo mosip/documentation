@@ -40,8 +40,8 @@ MOSIP should be flexible for countries to configure the base platform according 
 
 ### Extensibility
 MOSIP should be flexible to extend functionality on top of the basic platform. Some of the examples of extensibility are
-* A country should be able to introduce a new step in processing data
 
+* A country should be able to introduce a new step in processing data
 * Integrate MOSIP with other ID systems and include it as part of the MOSIP data processing flow
 
 ### Modularity
