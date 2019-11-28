@@ -85,7 +85,7 @@ How the personal data are protected from deviant usage by Services providers?
 
 **Is MOSIP functionally tested in a generic use case, Is this test suite delivered together with it?**
 
-Yes. MOSIP has hired the services of independent IV&V partner for  testing. The test report will be available once testing has been completed. Tentatively Scheduled for Dec 2019.  The automation tests scripts are also part of open source in Github.
+Yes. MOSIP has hired the services of independent IV&V partner for  testing. The test report will be available once testing has been completed. Tentatively scheduled for Dec 2019.  The automation tests scripts are also part of open source in Github.
 
 **Is MOSIP tested for performance? Can we access the tests reports? Can the tools be delivered togther with the platform?**
 
@@ -107,7 +107,7 @@ If a country decides to allow this, MOSIP is configurable in that way.
 
 **What are the MOSIP compatible Biometrics solutions (ABIS, SDK, Scanners)?**
 
-A continuously updated list of vendors that have integrated with MOSIP is [available on our website](https://www.mosip.io/resource-partners/mosip-integrations). We are working with more companies to get integrations up and running in accordance with our [Biometric Data Specifications](MOSIP-Biometric-Data-Specifications) and [Device Integration Specifications](https://github.com/mosip/mosip-docs/wiki/Device-Integration-Specifications). 
+A continuously updated list of vendors that have integrated with MOSIP is [available on our website](https://www.mosip.io/resource-partners/mosip-integrations). We are working with more companies to get integrations up and running in accordance with our [Biometric Data Specifications](MOSIP-Biometric-Data-Specifications.md) and [Device Integration Specifications](Device-Integration-Specifications.md). 
 
 **Is MOSIP robust to disconnection with external systems like ABIS?**
 
@@ -157,7 +157,7 @@ Yes. MOSIP design has factored in the idea of integrating with a country's exist
 
 **What is the standard to be followed for interfacing with enrolment points?**
 
-We have published the [MOSIP Device Service (MDS) Specifications](MOSIP-Device-Service-Specification). MOSIP has a packet sync API that defines the interface between the registration client and the server	
+We have published the [MOSIP Device Service (MDS) Specifications](MOSIP-Device-Service-Specification.md). MOSIP has a packet sync API that defines the interface between the registration client and the server	
 
 **Will MOSIP be supporting other Open Standard APIs defined by the key technology providers of identity market?**
 
@@ -165,7 +165,7 @@ MOSIP is evolving and we are open to embrace any efforts that are in line with M
 
 **What are the main external API available in MOSIP?**
 
-[APIs are listed in our documentation](APIs)
+[APIs are listed in our documentation](APIs.md)
 
 **Will there be an external interface for producing identity documents externally?**
 
@@ -180,7 +180,7 @@ MOSIP offers integration hook points for other modules. The APIs/modules to conn
 
 **Does MOSIP define customization points in order for SI to not change MOSIP root source code and can manage MOSIP upgrades in the future?**
 
-Yes, if components are build in addition to MOSIP standard modules. If MOSIP platform code is changed, then the change request should be sent to MOSIP -- and if the change is generic enough, shall be incorporated in the next release. Changes to the platform code will be governed by the [Mozilla Public License 2.0](License)	
+Yes, if components are build in addition to MOSIP standard modules. If MOSIP platform code is changed, then the change request should be sent to MOSIP -- and if the change is generic enough, shall be incorporated in the next release. Changes to the platform code will be governed by the [Mozilla Public License 2.0](License.md)	
 
 **Is it possible to switch a sub-component by another software provider, i.e. workflow engine, population database?**
 
