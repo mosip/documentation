@@ -1,6 +1,6 @@
 # MOSIP Architecture
 
-The key objectives of the platform are to:
+The key objectives of the platform are to
 
 * provide the basic framework to create a fully functional identity system
 * provide the flexibility for a country to choose the features from the basic framework according to their requirements
