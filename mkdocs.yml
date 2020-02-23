@@ -3,6 +3,7 @@ theme: readthedocs
 repo_name: 'GitHub'
 repo_url: 'https://github.com/mosip/mosip-docs'
 edit_uri: 'blob/master/docs/'
+navigation_depth: 3
 nav:
   - OVERVIEW: 
     - Introduction: index.md
