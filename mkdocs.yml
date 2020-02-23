@@ -6,7 +6,7 @@ edit_uri: 'blob/master/docs/'
 nav:
   - OVERVIEW: 
     - Introduction: index.md
-    - Architecture: Architecture.md
+    - Architecture.md
     - Features: Features.md
     - Technology Stack: Technology-Stack.md
   
