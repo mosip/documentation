@@ -9,7 +9,7 @@ Pre-registration is the web channel of MOSIP. This module enables a user to
 Resident data is sent to registration center before appointment, which can be used during registration.
 
 # Detailed functionality
-[Pre-Registration Functionality](Pre-Registration-Functionality)
+[Pre-Registration Functionality](Pre-Registration-Functionality.md)
 
 # Process Flow
 ![](_images/pre_registration/pre-registration_process_flow.jpg)
