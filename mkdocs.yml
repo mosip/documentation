@@ -7,8 +7,8 @@ navigation_depth: 5
 nav:
   - OVERVIEW: 
     - Introduction: index.md
-    - Architecture.md
-    - Features: Features.md
+    - Architecture: MOSIPO-Architecture.md
+    - Pre-Registration: Pre-Registration.md 
     - Technology Stack: Technology-Stack.md
   
   - BUILD AND DEPLOY: 
