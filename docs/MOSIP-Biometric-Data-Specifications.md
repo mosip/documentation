@@ -1,4 +1,4 @@
-Multi modal biometrics (Fingerprint, Iris, Face...) is key component in MOSIP to identify and provide a unique identity to an individual. The page details out the specifications for Biometrics data during data acquisition and verification.
+Multi modal biometrics (Fingerprint, Iris, Face) is key component in MOSIP to identify and provide a unique identity to an individual. The page details out the specifications for Biometrics data during data acquisition and verification.
 
 MOSIP uses ISO specified formats to represent the biometric data, while CBEFF XML is used as a container to store and exchange multiple biometric data. All the biometrics data captured for an individual is stored in a single XML file. The ISO binary data withing XML is base64 encoded.
 	
@@ -8,7 +8,7 @@ MOSIP uses ISO specified formats to represent the biometric data, while CBEFF XM
   * [OASIS patron format ISO/IEC JTC 1 SC 37 - biometrics](//ibia.org/cbeff/iso/bir-header-identifiers), patron identifier 257, patron format identifier 11
   * [OASIS Binary Data Block Format Identifiers](//ibia.org/cbeff/iso/bdb-format-identifiers) for Format Type ISO/IEC JTC 1 SC 37-biometrics, patron identifier 257, BDB patron format identifier 7 for finger image, 8 for face image and 9 for iris image.
 * [Schema](//docs.oasis-open.org/bioserv/BIAS/v2.0/csprd01/schemas/cbeff_ed2.xsd) 
-* [[CBEFF XML Sample|CBEFF XML Sample]] 
+* [CBEFF XML Sample[(CBEFF-XML-Sample.md)
 * MOSIP's [CBEFF Utility](//github.com/mosip/commons/tree/master/kernel/kernel-cbeffutil-api) to create, update, search and validate CBEFF XML data.
 
 ## Data standards for Registration
