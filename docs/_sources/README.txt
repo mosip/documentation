@@ -1,0 +1,1 @@
+This folder contains the source files for the architecture diagrams created using draw.io (draw.io) tool. Diagrams can be modified/updated using draw.io (online or offline version).
