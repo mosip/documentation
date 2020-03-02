@@ -15,7 +15,7 @@ Admin application contains UI layer and Service layer. All the components in bot
 [Admin Services Functionality](Admin-Services-Functionality.md)
 
 # Logical view
-![Logical Diagram](_images/arch_diagrams/MOSIP_Admin_logical_diagram.jpg)
+![Logical Diagram](_images/admin/admin_logical_diagram.jpg)
 
 
 # Backend Services 
