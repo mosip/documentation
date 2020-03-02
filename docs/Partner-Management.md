@@ -10,7 +10,7 @@ Partners will utilize MOSIP’s resigned digital certificate from Partner Manage
 
 # Detailed functionality 
 
-[Parter Management Functionality](Partner-Management-Functionality)
+[Parter Management Functionality](Partner-Management-Functionality.md)
 
 # Entities and their relation 
 
@@ -105,7 +105,7 @@ For a partner to opt for an authentication policy, they have to generate Partner
 
 # Secure communication
 
-[MOSIP Partner Secure Communication](MOSIP-Partner-Secure-Communication)
+[MOSIP Partner Secure Communication](MOSIP-Partner-Secure-Communication.md)
 
 # Services
 
@@ -115,6 +115,6 @@ For detailed description of Partner Management Services, high and low level desi
 Refer to build and deploy instructions in [partner management repo](https://github.com/mosip/mosip-partner-portal-api)
 
 # APIs
-[Partner Management](Partner-Management-Service-APIs)
+[Partner Management](Partner-Management-Service-APIs.md)
 
 

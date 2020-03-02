@@ -9,7 +9,7 @@ Pre-registration is the web channel of MOSIP. This module enables a user to
 Resident data is sent to registration center before appointment, which can be used during registration.
 
 # Detailed functionality
-[Pre-Registration Functionality](Pre-Registration-Functionality)
+[Pre-Registration Functionality](Pre-Registration-Functionality.md)
 
 # Process flow
 ![](_images/pre_registration/pre-registration_process_flow.jpg)
@@ -23,7 +23,7 @@ For high level and low level design refer to [pre-registration repo/design](http
 Refer to build and deploy instructions in [pre-registration repo](https://github.com/mosip/pre-registration).
 
 # APIs
-[Pre-Registration APIs](Pre-Registration-APIs)
+[Pre-Registration APIs](Pre-Registration-APIs.md)
 
 # UI Reference Implementation
 MOSIP provides a reference implementation of Pre-Registration UI that may be customised as per country needs. The implementation is available in [ref impl repo](https://github.com/mosip/mosip-ref-impl).

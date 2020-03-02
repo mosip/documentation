@@ -68,4 +68,4 @@ Refer to build and deploy instructions in [commons repo/id-repository](https://g
 
 # APIs
 
-[ID Repository APIs](ID-Repository-APIs)
+[ID Repository APIs](ID-Repository-APIs.md)

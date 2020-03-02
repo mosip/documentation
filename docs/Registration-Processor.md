@@ -12,7 +12,7 @@ Important considerations are as follows:
 * Each stage in the processor is independent of other stages such that logic of a stage can be changed to improve efficiency without affecting the overall flow
 
 # Detailed functionality
-[Registration Processor Functionality](Registration-Processor-Functionality)
+[Registration Processor Functionality](Registration-Processor-Functionality.md)
 
 # Process flow
 ![](_images/reg_processor/reg_processor_new_packet_flow.jpg)
@@ -38,4 +38,4 @@ For high level and low level design refer to [registration processor repo](https
 Refer to build and deploy instructions in [registration processor repo](https://github.com/mosip/registration/registration-processor).
 
 # APIs
-[Registration Processor APIs](Registration-Processor-APIs)
+[Registration Processor APIs](Registration-Processor-APIs.md)

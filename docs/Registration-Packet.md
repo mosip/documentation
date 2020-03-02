@@ -398,9 +398,9 @@ This document describes the following aspects
     -   HashSequence for both applicant and OSI detail.{It provides the hash created sequence}
 
 7.  **Registration Officer authentication Bio [officer_bio_cbeff.xml]**
-    -   Officer bio should be captured in standard [**CBEFF xml**](MOSIP-Biometric-Data-Specifications) format.
+    -   Officer bio should be captured in standard [**CBEFF xml**](MOSIP-Biometric-Data-Specifications.md) format.
 7.  **Registration Supervisor authentication Bio [supervisor_bio_cbeff.xml]**
-    -   Supervisor bio should be captured in standard [**CBEFF xml**](MOSIP-Biometric-Data-Specifications) format.
+    -   Supervisor bio should be captured in standard [**CBEFF xml**](MOSIP-Biometric-Data-Specifications.md) format.
 
 -   Capture the Registration Officer/Supervisor Authentication finger
     image and append to the Zip object.

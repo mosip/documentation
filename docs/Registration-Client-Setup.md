@@ -189,7 +189,7 @@ Refer the **Global configuration** maintained in [QA](https://github.com/mosip/m
 
 
 ## Real biometric service installation to windows.
-Please refer to the detailed [**Real-bio-metric-service-integration**](Registration-client---Real-bio-metric-service-integration)
+Please refer to the detailed [**Real-bio-metric-service-integration**](Registration-client---Real-bio-metric-service-integration.md)
 
 **Network Connectivity Check:**  
    Registration client verifies the below-configured URL to check whether the system is in online or not. The application uses this URL to perform the health check before communicating with the external services.

@@ -62,4 +62,4 @@ MOSIP also has a batch Job to auto-expire VIDs and mark expired VIDs as to be av
 * (Work in Progress) 
 
 ### Kernel API
-[**Refer to Wiki for more details on Kernel API**](Kernel-APIs)
+[**Refer to Wiki for more details on Kernel API**](Kernel-APIs.md)

@@ -1,6 +1,6 @@
 # Guidelines
 
-This document lists out the instructions on how to use the [AuthAdapter](Auth-Adapter) in a Spring Boot application.
+This document lists out the instructions on how to use the [AuthAdapter](Auth-Adapter.md) in a Spring Boot application.
 
 * Step 1: [Inject required libraries](#Inject-required-libraries)
 * Step 2: [Attach annotations to authorize endpoints](#Attach-annotations-to-authorize-endpoints)
@@ -8,7 +8,7 @@ This document lists out the instructions on how to use the [AuthAdapter](Auth-Ad
 
 ## Inject required libraries
 
-* Add the [AuthAdapter](Auth-Adapter) module to your project as a maven dependency
+* Add the [AuthAdapter](Auth-Adapter.md) module to your project as a maven dependency
 
 ```xml
 <dependency>
@@ -41,7 +41,7 @@ There are few more methods available apart from hasAnyRole like hasRole. Look in
 
 ## Use restTemplate for Http calls
 
-To make any kind of HTTP or HTTPS calls to a mosip's micro service that also injected the [AuthAdapter](Auth-Adapter), use the standard RestTemplate capabilities as shown below.
+To make any kind of HTTP or HTTPS calls to a mosip's micro service that also injected the [AuthAdapter](Auth-Adapter.md), use the standard RestTemplate capabilities as shown below.
 
 * Intially autowire the RestTemplate in the class where you are going to make an API call.
 

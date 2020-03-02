@@ -16,8 +16,8 @@ Please find below the sequence diagrams for auth flows.
 
 ## Documentations for the Auth Implementations
 
-1. [Auth Adapter Documentation](Auth-Adapter)
-2. [Auth Angular User Guide](Auth-Angular-User-Guide)
-3. [Auth SpringBoot User Guide](Auth-SpringBoot-User-Guide)
-4. [ApacheDs Server installation and config](ApacheDs-Server-installation-and-config)
-5. [Apache Directory Studio user guide](Apache-Directory-Studio-user-guide)
+1. [Auth Adapter Documentation](Auth-Adapter.md)
+2. [Auth Angular User Guide](Auth-Angular-User-Guide.md)
+3. [Auth SpringBoot User Guide](Auth-SpringBoot-User-Guide.md)
+4. [ApacheDs Server installation and config](ApacheDs-Server-installation-and-config.md)
+5. [Apache Directory Studio user guide](Apache-Directory-Studio-user-guide.md)

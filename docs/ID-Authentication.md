@@ -27,7 +27,7 @@ To enhance security a second factor of authentication is supported:
 To analyze and generate authentication patterns, all authentication requests are audited. These audit logs may be used to determine any frauds during authentication process.
 
 # Detailed functionality
-[ID Authentication Functionality](ID-Authentication-Functionality)
+[ID Authentication Functionality](ID-Authentication-Functionality.md)
 
 # Process flow
 ## Demographic auth
@@ -61,5 +61,5 @@ Refer to build and deploy instructions in [ID auth repo](https://github.com/mosi
 
 # APIs
 
-[ID Authentication APIs](ID-Authentication-APIs)
+[ID Authentication APIs](ID-Authentication-APIs.md)
 

@@ -6,7 +6,7 @@ The backend is a set of services with REST API interface (provided by MOSIP) and
 
 # Detailed functionality
 
-[Resident Services Functionality](Resident-Services-Functionality)
+[Resident Services Functionality](Resident-Services-Functionality.md)
 
 # Process flow
 

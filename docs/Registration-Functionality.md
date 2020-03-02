@@ -547,7 +547,7 @@ Registration Client performs a local duplicate check for irises and face of an i
 1. When no match is found, the system proceeds to the next step (Registration Preview).
 1. The number of recapture attempts due to local duplicate check failures is not capped.
 
-Please refer to [**Wiki**](MOSIP-Biometric-APIs) for more details on the MOSIP Biometric APIs.
+Please refer to [**Wiki**](MOSIP-Biometric-APIs.md) for more details on the MOSIP Biometric APIs.
 
 [**Link to design**](/mosip/mosip-platform/blob/master/design/registration/registration-MOSIP-bio-device-integration.md)
 
@@ -772,7 +772,7 @@ MOSIP performs the following:
 1. Signing the data (This process is called as Signature) using Private Key provided by the TPM
    * This process will ensure that the request to the server has been dispatched from a registered or trusted Registration Client machine
 2. Validates the signature against the actual data using the Public Key or Public Part. The application does not connect or access the underlying TPM to validate the Signature. This validation ensures that the request is from a registered or trusted Registration Client machine
-1. Encrypts and decrypts the data using RSA algorithm in TPM. [**Please refer to Wiki for more details on TPM**](Registration-Client).
+1. Encrypts and decrypts the data using RSA algorithm in TPM. [**Please refer to Wiki for more details on TPM**](Registration-Client.md).
 
 **System security and tampering of packets**
 
@@ -814,7 +814,7 @@ The system follows the following steps during the update process:
 1. If update is not successful, the client returns to its earlier version.
 1. System captures and stores the transaction details for audit purpose (except PII data).
 
-Refer to [**Wiki**](Registration-Client-Setup) for more details.
+Refer to [**Wiki**](Registration-Client-Setup.md) for more details.
 
 
 ## 11. Clean up [**[↑]**](#table-of-contents)

@@ -57,10 +57,10 @@ To support performance, following database design features are to be considered
 
 ## Data Model Naming Standards
 
-[Naming Standards](Data-Model-Naming-Standards)
+[Naming Standards](Data-Model-Naming-Standards.md)
 
 ## Data Model
-[Data Model](MOSIP-Data-Model)
+[Data Model](MOSIP-Data-Model.md)
 
 ## Data encryption
 [Encryption in DTO Layer](Encryption-in-DTO-Layer)

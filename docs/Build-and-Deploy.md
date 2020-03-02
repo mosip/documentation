@@ -7,5 +7,5 @@ Instructions to compile code and build docker images are given in respective rep
 
 ## Production deployment - Cell based approach
 * [Architecture diagram](https://github.com/mosip/mosip-infra/blob/master/deployment/production/images/mosip-cell-deployment.jpg)
-* For hardware sizing in production setups refer to [Hardware Sizing](Hardware-Sizing)
-* For adapting MOSIP for a country refer to [Customisations for a Country](Customisations-for-a-Country) for details.
+* For hardware sizing in production setups refer to [Hardware Sizing](Hardware-Sizing.md)
+* For adapting MOSIP for a country refer to [Customisations for a Country](Customisations-for-a-Country.md) for details.

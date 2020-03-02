@@ -560,7 +560,7 @@ The authentication services can be utilized only by a trusted partner and a regi
 * (Work in Progress) 
  
 ### Authentication Services API [**[↑]**](#table-of-contents)
-[**Refer to Wiki for more details on Authentication Services API**](ID-Authentication-APIs)
+[**Refer to Wiki for more details on Authentication Services API**](ID-Authentication-APIs.md)
 ### Process View [**[↑]**](#table-of-contents)
 [**Link to Process View of Authentication Services**](Process-view#4-id-authentication-)
 

@@ -12,7 +12,7 @@ Admin application contains UI layer and Service layer. All the components in bot
 
 # Detailed functionality
 
-[Admin Services Functionality](Admin-Services-Functionality)
+[Admin Services Functionality](Admin-Services-Functionality.md)
 
 # Logical view
 ![Logical Diagram](_images/arch_diagrams/MOSIP_Admin_logical_diagram.jpg)
@@ -34,11 +34,11 @@ Build and deploy instructions available in the above repos.
 # APIs
 
 APIs from multiple services are used for Admin as follows:
-* [Admin APIs](Admin-APIs) 
-* [Document APIs](Document-APIs)
-* [Register Center APIs](Registration-Center-APIs)
-* [Device APIs](Device-APIs)
-* [Machine APIs](Machine-APIs)
-* [Common APIs](Common-APIs)
-* [Zone APIs](Zone-APIs) 
-* [Device Management APIs](Device-Management-APIs)
+* [Admin APIs](Admin-APIs.md) 
+* [Document APIs](Document-APIs.md)
+* [Register Center APIs](Registration-Center-APIs.md)
+* [Device APIs](Device-APIs.md)
+* [Machine APIs](Machine-APIs.md)
+* [Common APIs](Common-APIs.md)
+* [Zone APIs](Zone-APIs.md) 
+* [Device Management APIs](Device-Management-APIs.md)

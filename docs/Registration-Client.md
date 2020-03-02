@@ -9,7 +9,7 @@ Important considerations are as follows.  Registration client must provide the f
 * **Tamper-proof client software**. Since registration client must work in offline mode, there is a possibility of client software itself being tampered with. There must be enough checks and balances to detect tampering and reject such packets.
 
 # Detailed functionality
-[Registration Functionality](Registration-Functionality)
+[Registration Functionality](Registration-Functionality.md)
 
 # Process flow
 ## Registration Officer Onboarding
@@ -44,13 +44,13 @@ Important considerations are as follows.  Registration client must provide the f
 
 # Registration packet structure
 
-All the registration information is zipped and encrypted in a packet and send to the server. The structure of the packet is given [here](Registration-Packet)
+All the registration information is zipped and encrypted in a packet and send to the server. The structure of the packet is given [here](Registration-Packet.md)
 
 # Registration client reference App
 
 MOSIP provides an Windows based reference implementation of the client that has UI and business logic to perform the above process flows.  The code, design, App setup, build documentation is available in [registration client repo](https://github.com/mosip/registration/registration).  The App may be modified according to a country's need.  
 
-* [App setup guide](Registration-Client-Setup)
+* [App setup guide](Registration-Client-Setup.md)
 * [APIs used by App]
 
 # First user on-boarding

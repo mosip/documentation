@@ -56,5 +56,5 @@ Log manager provides following functionalities:
    [**Link to Configurable Parameters of Kernel**](/mosip/mosip-config/tree/master/config-templates/kernel-env.properties)
 
 ### Kernel API 
-[**Refer to Wiki for more details on Kernel API**](Kernel-APIs)
+[**Refer to Wiki for more details on Kernel API**](Kernel-APIs.md)
 

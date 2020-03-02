@@ -11,12 +11,12 @@ Refer to [commons repo/kernel](https://github.com/mosip/commons/kernel) for all 
 # Detailed functionality
 
 Kernel has many services and functions.  Details of some of them are mentioned below:
-* [Common Services Functionality](Common-Services-Functionality)
-* [UIN & VID Generation Service](UIN-and-VID-Generation-Service-Functionality)
-* [Data Services Functionality](Data-Services-Functionality)
-* [Master Data Services Functionality](Master-Data-Services-Functionality)
-* [Audit Manager Functionality](Audit-Manager-Functionality)
-* [Authentication and Authorization Functionality](Authentication-and-Authorization-Functionality)
+* [Common Services Functionality](Common-Services-Functionality.md)
+* [UIN & VID Generation Service](UIN-and-VID-Generation-Service-Functionality.md)
+* [Data Services Functionality](Data-Services-Functionality.md)
+* [Master Data Services Functionality](Master-Data-Services-Functionality.md)
+* [Audit Manager Functionality](Audit-Manager-Functionality.md)
+* [Authentication and Authorization Functionality](Authentication-and-Authorization-Functionality.md)
 
 # Logical view
 
@@ -32,4 +32,4 @@ Refer to build and deploy instructions in [commons repo/kernel](https://github.c
 
 # APIs
 
-[Kernel APIs](Kernel-APIs)
+[Kernel APIs](Kernel-APIs.md)
