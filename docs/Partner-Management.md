@@ -115,6 +115,7 @@ For detailed description of Partner Management Services, high and low level desi
 Refer to build and deploy instructions in [partner management repo](https://github.com/mosip/mosip-partner-portal-api)
 
 # APIs
+
 [Partner Management](Partner-Management-Service-APIs.md)
 
 
