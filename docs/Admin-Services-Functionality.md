@@ -74,7 +74,8 @@ Admin portal allows an administrator to manage machines the country will use for
 The Admin portal allows an admin to view the list of all machines available in the jurisdiction of his/her administrative zone. The system does not fetch the details of decommissioned machines but only active and inactive machines. 
 Admin portal UI shows the list of machines in only the country configured primary language. 
 
-The admin can filter the list of machine based on following parameters
+The admin can filter the list of machine based on following parameters:
+
 1.  Machine name
 2.  Mac address
 3.  Serial number
@@ -123,6 +124,7 @@ The Admin portal allows an Admin to view the list of all Devices available in th
 Admin portal UI shows the list of Devices in only the country configured Primary Language. 
 
 The Admin can filter the list of Registration Centers based on following parameters:
+
 1.  Device Name
 2.  Mac Address
 3.  Serial Number
@@ -388,6 +390,7 @@ A Registration packet generated in Registration Client is sent to Registration P
 All the bio-metric devices which will be used for Authentication and Registration needs to be registered with MOSIP. Unless these devices are not registered, they cannot be used for capturing resident Bio-metrics for registrations or authentication.
 
 For managing these devices, MOSIP needs to store details of following four entities:
+
 1. Device Provider
 2. Foundational Trust Providers
 3. MOSIP Complaint MDS services
@@ -444,6 +447,7 @@ Once the device is registered, there details should not be changed. However, an 
 Device Provider Management also provides an API to validate device details during Authentication in IDA or during packet validation in Registration Processor.
 
 The API receives Device Code, Digital ID, and MDS Service Version and validates the following conditions.
+
 1. The Device exist and is ‘Registered’ and ‘Active’
 2. The Device is not Revoked or Retired
 3. The Device Provider exist and is 'Active’
