@@ -34,7 +34,7 @@ Well, there are many things that you could get involved with, like
 	* Localize documents (French, Arabic, Spanish are most needed now!) 
 
 ### Can you fix an issue?
-Very good!  Submit a pull request.  See the [code submission guidelines](https://github.com/mosip/documentation/wiki/Github-Workflow).
+Very good!  Submit a pull request.  See the [code submission guidelines](Github-Workflow.md).
 
 ### Don't know which bug to fix?
 Don't worry!  Here are some [GOOD FIRST BUGS](https://mosip.atlassian.net/issues/?jql=issuetype%20%3D%20Bug%20AND%20project%20%3D%20MOSIP%20AND%20resolution%20%3D%20Unresolved%20AND%20labels%20%3D%20GOOD-FIRST-BUG%20ORDER%20BY%20priority%20DESC#) that you can try to work on. These are simple ones and wouldn't take long time to fix.  But they are great to start with.
