@@ -24,12 +24,13 @@ These APIs includes the Map, Unmap, Search and Filter API which are used by the 
 * [POST /documentcategories/search](#post-documentcategoriessearch)
 * [POST /documentcategories/filtervalues](#post-documentcategoriesfiltervalues)
 
-# POST /documentcategories
+## POST/documentcategories
 
 This service will create the list of Documents Category which are used in the MOSIP platform. 
 
 ### Resource URL
-### `POST /documentcategories`
+
+`POST/documentcategories`
 
 ### Resource details
 
@@ -93,11 +94,14 @@ Description: Unauthorized
 403
 
 Description: Forbidden
------
+
+## PUT/documentcategories
+
 This service will create the list of Documents Category which are used in the MOSIP platform. 
 
 ### Resource URL
-### `PUT /documentcategories`
+
+`PUT /documentcategories`
 
 ### Resource details
 
@@ -167,13 +171,12 @@ Description: Forbidden
 Description: Not Found
 
 
------
-# GET /documentcategories
+## GET /documentcategories
 
 This service will provides the service for the List of documents categories. 
 
 ### Resource URL
-### `GET /documentcategories`
+`GET /documentcategories`
 
 ### Resource details
 
@@ -224,13 +227,14 @@ Description: Unauthorized
 
 Description: Not Found
 
-# GET /documentcategories/{code}/{langcode}
+## GET /documentcategories/{code}/{langcode}
 
 This service will provides the service for the List of documents categories. 
 
 
 ### Resource URL
-### `GET /documentcategories/{code}/{langcode}`
+
+`GET /documentcategories/{code}/{langcode}`
 
 ### Resource details
 
@@ -282,13 +286,14 @@ Description: Unauthorized
 Description: Not Found
 
 
-# GET /documentcategories/{langcode} 
+## GET /documentcategories/{langcode} 
 
 This service will provides the service for the List of documents categories based on the passed langcode. 
 
 
 ### Resource URL
-### `GET /documentcategories/{langcode}`
+
+`GET /documentcategories/{langcode}`
 
 ### Resource details
 
@@ -334,14 +339,16 @@ Description: Bad request
 Description: Unauthorized
 
 404
-------
-# DELETE /documentcategories/{code} 
+
+
+## DELETE /documentcategories/{code} 
 
 This service will provides the service to delete documents categories based on the passed given code. 
 
 
 ### Resource URL
-### `DELETE /documentcategories/{code}`
+
+`DELETE /documentcategories/{code}`
 
 ### Resource details
 
@@ -380,18 +387,17 @@ Description: Unauthorized
 
 Description: Not Found
 
-----
-
 # Documents Category search APIs
 
 * [POST /documentcategories/search](#post-documentcategoriessearch)
 
-# POST /documentcategories/search
+## POST /documentcategories/search
 
 This service is for the registration centers search functionality. All the filter parameters are passed and the Documents Category are searched and the matching results are returned. 
 
 ### Resource URL
-### `POST /documentcategories/search`
+
+`POST /documentcategories/search`
 
 ### Resource details
 
@@ -401,6 +407,7 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Parameters
+
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
@@ -418,12 +425,14 @@ pageStart|This is the start index | 0 | 10
 pageFetch| This is the amount of records to be fetched | 10 | 10
 
 ### Filter Values
+
 Filter Name| Search Values
 -----|----------
 
 Please find the filter columns used in search
-1) name
-2) status
+
+1. Name
+2. Status
 
 ### Example Request
 ```JSON
@@ -486,12 +495,13 @@ Please find the filter columns used in search
 
 * [POST /documentcategories/filtervalues](#post-documentcategoriesfiltervalues)
 
-# POST /documentcategories/filtervalues
+## POST /documentcategories/filtervalues
 
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
-### `POST /documentcategories/filtervalues`
+
+`POST /documentcategories/filtervalues`
 
 ### Resource details
 
@@ -501,6 +511,7 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Parameters
+
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
@@ -547,7 +558,7 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-##### Failure Response:
+### Failure Response:
 ```JSON
 {
   "id": "string",
@@ -562,7 +573,8 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-#### Failure details
+### Failure details
+
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-013 | Error occurred while fetching Document Category details | Fetch Issue
@@ -586,7 +598,7 @@ KER-MSD-123 | Cannot delete dependency found | Deletion Issue because of depende
 
 
 
-# POST /documenttype
+## POST /documenttype
 
 This service will create the list of Documents types which are used in the MOSIP platform. There is another service to map the document category and document type.
 
@@ -594,8 +606,9 @@ Please find the steps to create primary/secondary languages
 
 https://github.com/mosip/mosip-docs/wiki/Registration-Center-APIs#createupdate-api
 
-### Resource URL
-### `POST /documenttype`
+## Resource URL
+
+`POST /documenttype`
 
 ### Resource details
 
@@ -629,6 +642,7 @@ isActive|Yes|Active field of the document type| |
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -652,7 +666,7 @@ isActive|Yes|Active field of the document type| |
   "errors": null
 }
 ```
-##### Error Response:
+### Error Response:
 ```
 {
   "id": "string",
@@ -669,7 +683,7 @@ isActive|Yes|Active field of the document type| |
 }
 ```
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
@@ -677,12 +691,12 @@ KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 KER-MSD-101 |Error occurred while inserting application details
 
-# PUT /documenttype
+## PUT /documenttype
 
 This service will update the list of Documents types which are used in the MOSIP platform. 
 
 ### Resource URL
-### `PUT /documenttype`
+`PUT /documenttype`
 
 ### Resource details
 
@@ -739,7 +753,7 @@ isActive|Yes|Active field of the document type| |
   "errors": null
 }
 ```
-##### Error Response:
+### Error Response:
 ```
 {
   "id": "string",
@@ -755,7 +769,7 @@ isActive|Yes|Active field of the document type| |
  "response": null
 }
 ```
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
@@ -764,13 +778,14 @@ KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 KER-MSD-091 |Error occurred while updating application details
 KER-MSD-118 |Document Type not found
 
-# GET /documenttypes/{documentcategorycode}/{langcode}
+## GET /documenttypes/{documentcategorycode}/{langcode}
 
 This service will provides the service for the valid doucment type avialbale for specific Document Category code
 
 
 ### Resource URL
-### `GET /documenttypes/{documentcategorycode}/{langcode}`
+
+`GET /documenttypes/{documentcategorycode}/{langcode}`
 
 ### Resource details
 
@@ -823,12 +838,13 @@ Description: Unauthorized
 Description: Not Found
 
 
-# GET /documentcategorytypes
+## GET /documentcategorytypes
 
 This service will provides the service for the List of documents types. 
 
 ### Resource URL
-### `GET /documentcategorytypes`
+
+`GET /documentcategorytypes`
 
 ### Resource details
 
@@ -869,12 +885,13 @@ Name | Required | Description | Default Value | Example
 ```
 
 
-# GET /doccattypes
+## GET /doccattypes
 
 This service will give back the document category and it's corresponding category types based on Individual type code, Age group type code and Gender type code. 
 
 ### Resource URL
-### `GET /doccattypes`
+
+`GET /doccattypes`
 
 ### Resource details
 
@@ -934,12 +951,13 @@ gendertypecode |Yes| Code of Gender type | |
 
 
 
-# GET /checkapptypedoccattypedoctype
+## GET /checkapptypedoccattypedoctype
 
 This service checks the mapping between the Applicant type code, Document category and the Document type mapping. Result message will be success, if the mapping exists. 
 
 ### Resource URL
-### `GET /checkapptypedoccattypedoctype`
+
+`GET /checkapptypedoccattypedoctype`
 
 ### Resource details
 
@@ -979,12 +997,12 @@ documenttypecode |Yes| Code of Document type | |
 
 * [POST /documenttypes/search](#post-documenttypessearch)
 
-# POST /documenttypes/search
+## POST /documenttypes/search
 
 This service is for the document type search functionality. All the filter parameters are passed and the document type are searched and the matching results are returned. 
 
 ### Resource URL
-### `POST /documenttypes/search`
+`POST /documenttypes/search`
 
 ### Resource details
 
@@ -1089,7 +1107,8 @@ status|["contains","equals","startsWith"]
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
-### `POST /documenttypes/filtervalues`
+
+`POST /documenttypes/filtervalues`
 
 ### Resource details
 
@@ -1164,7 +1183,10 @@ KER-MSD-092 | Error occurred while deleting Document Type details
 * [POST /validdocuments/map/{doccategorycode}/{doctypecode}](#post-validdocumentsmapdoccategorycodedoctypecode)
 * [PUT /validdocuments/unmap/{doccategorycode}/{doctypecode}](#put-validdocumentsunmapdoccategorycodedoctypecode)
 
+## GET /validdocuments
+
 ### Resource URL
+
 ### `GET /validdocuments/{languagecode}`
 
 ### Resource details
@@ -1232,7 +1254,8 @@ languagecode|Yes|Language code in ISO 639-2|-NA-|fra
   "response": null
 }
 ```
-## Valid Documents search APIs
+
+# Valid Documents search APIs
 
 * [POST /validdocuments/search](#post-validdocumentssearch)
 
@@ -1241,7 +1264,8 @@ languagecode|Yes|Language code in ISO 639-2|-NA-|fra
 This service is for the valid document search functionality. All the filter parameters are passed and the valid document are searched and the matching results are returned. 
 
 ### Resource URL
-### `POST /validdocuments/search`
+
+`POST /validdocuments/search`
 
 ### Resource details
 
@@ -1338,16 +1362,17 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
  }
 }
 ```
-## Valid Documents filter values
+# Valid Documents filter values
 
 * [POST /validdocuments/filtervalues](#post-validdocumentsfiltervalues)
 
-### POST /validdocuments/filtervalues
+## POST /validdocuments/filtervalues
 
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
-### `POST /validdocuments/filtervalues`
+
+`POST /validdocuments/filtervalues`
 
 ### Resource details
 
@@ -1407,7 +1432,8 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 
 Description: Success
 
-#### Failure details
+### Failure details
+
 Error Code | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-071 | Exception during inserting data into db | Insertion Issue
@@ -1415,12 +1441,13 @@ KER-MSD-016 | Valid document not found | Data Not Found
 KER-MSD-113 | Error occurred while deleting a mapping of Document Category and Document Type details | Deletion Issue
 KER-MSD-XXX | Error occurred while fetching Document Categories and Document Types | Fetching Issue
 
-### POST /validdocuments/map/{doccategorycode}/{doctypecode}
+## POST /validdocuments/map/{doccategorycode}/{doctypecode}
 
 This service is for the valid document mapping category with document category with document type code.
 
 ### Resource URL
-### `POST /validdocuments/map/{doccategorycode}/{doctypecode}`
+
+`POST /validdocuments/map/{doccategorycode}/{doctypecode}`
 
 ### Resource details
 
@@ -1455,7 +1482,7 @@ https://mosip.io/v1/masterdata/validdocuments/map/POE/POC
 }
 ```
 
-#### Error Response:
+### Error Response:
 ``` JSON
 {
   "id": "string",
@@ -1473,7 +1500,7 @@ https://mosip.io/v1/masterdata/validdocuments/map/POE/POC
 
 ```
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
@@ -1483,12 +1510,13 @@ KER-MSD-071 |Exception during inserting data into DB|If any error occur from dat
 KER-MSD-360 |Document Type is already mapped to the received Document Category|If document type is already mapped to document category
 KER-MSD-361 |Document Category Code %s - Document Type %s Mapping does not exist|If the mapping document doesn't exist
 
-### PUT /validdocuments/unmap/{doccategorycode}/{doctypecode}
+## PUT /validdocuments/unmap/{doccategorycode}/{doctypecode}
 
 This service is used for the un-mapping document category with document type code.
 
 ### Resource URL
-### `PUT /validdocuments/unmap/{doccategorycode}/{doctypecode}`
+
+`PUT /validdocuments/unmap/{doccategorycode}/{doctypecode}`
 
 ### Resource details
 
@@ -1523,7 +1551,7 @@ https://mosip.io/v1/masterdata/validdocuments/unmap/CIN/POB
 }
 ```
 
-#### Error Response:
+### Error Response:
 ``` JSON
 {
   "id": "string",
@@ -1541,7 +1569,7 @@ https://mosip.io/v1/masterdata/validdocuments/unmap/CIN/POB
 
 ```
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
