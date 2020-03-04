@@ -64,7 +64,7 @@ Note that specifying issue-id tags the commit with Jira. Example:
     ```
 
 1. Create a pull request
-    1. Before creating a pull request ensure that your code builds and follows coding guidelines.
-    1. On Github page of your forked repo (example: `https://github.com/<your_github_id>/common`) select your branch (example: `issue-id`) and create a new pull request.
+    1.  Before creating a pull request ensure that your code builds and follows coding guidelines.
+    1.  On Github page of your forked repo (example: `https://github.com/<your_github_id>/common`) select your branch (example: `issue-id`) and create a new pull request.
 	
 1. The pull request shall be reviewed by reviewers.
