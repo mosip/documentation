@@ -2,7 +2,6 @@
 [Architecture Principles](MOSIP-Architecture-Principles.md)
 
 # Modules
-
 *  [Pre-Registration](Pre-Registration.md)
 *  [Registration](Registration-Client.md)
 *  [Registration Processor](Registration-Processor.md)
