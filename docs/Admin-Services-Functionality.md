@@ -1,7 +1,9 @@
 _This document is work-in-progress_
 
 #  Login 
+
 ##  Login
+
 The Admin Portal integrates with the Key Cloak IAM to store users and provides login functionality.  When an Administrator access the Homepage or any page on the Admin portal through a browser, the portal detects if the Administrator is already logged-in or not. If not, the system re-directs the Administrator to the Key Cloak Login User Interface (UI) which requests the Administrator for his/her Username and Password.  After getting the credentials, KeyCloak verifies the Administrator’s credentials and Role. It also validates whether the Administrator is not deactivated.After successful validation of the credentials, the system then re-directs the Administrator to the page he/she initially landed on.
 
 ##  Logout
@@ -14,28 +16,16 @@ If an Administrator wishes to logout of the Admin Portal, he/she can opt to sele
 
 If the user is inactive for X minutes (X is configurable), the system logs out the user automatically. In such case, the system will not save any user’s data.
 
+
 # Account Management
 
 Using the portal, user will  manage his/her profile. The  portal users are Central Admin, Central Approver, Zonal Admin, Zonal Approver, Registration Center Head, Registration Supervisor, and Registration Officer.
 
-##  Edit Personal Details
 
-##  Change Password
-
-##  Reset Password
-
-##  Forgot User Name
-
-##  Account Unlock
-
-# Security Policy Configuration 
-
-# Notification 
-
-##  Approval Notifications
-##  Country Specific News/Notifications
 # Resource Management 
-##  Center Management 
+
+##  Center Management
+
 Admin Portal allows an Administrator to manage Registration Centers the Country will setup for taking Registrations of the Residents. Center management includes functionalities like Viewing, Creating, Editing, Activating, Deactivating and Decommission of Centers. An Administrator should have the role of a Zonal Admin/Global Admin to do this. A Zonal Admin/Global Admin can manage only Centers under his/her administrative zone.
 
 ### View Center 
@@ -92,6 +82,7 @@ The Admin can filter the list of Registration Centers based on following paramet
 Besides the list view, an Administrator can also view the detail of a Machine by clinking on a Machine Name in the List view. This Detail view shows all the details of a Machine in all the country configured languages.
 
 ###  Create Machine 
+
 An Admin can create a Machine by providing necessary mandatory details. A Machine needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of the Machine in only primary language but will not allow activation of that Machine until data for that Machine is not updated for all the languages. 
 
 A Machine is created with the following attributes: 
@@ -101,6 +92,7 @@ Machine ID, Machine Name, Mac Address, Serial Number, Machine Spec ID and Admini
 While entering data through UI in multiple languages, the dropdown values and numeric values entered in primary language gets automatically captured in all language. But the text fields (e.g., Machine Name) needs to be manually input in all the languages. A Machine can be mapped to the Administrative Zone which is at the any Zonal hierarchy.
 
 ###  Update Machine 
+
 Once a Machine is created, an Admin can edit a Machine later if required. The Update can include adding the details in another required language that were missed during creation of the Machine or changing the details of a Machine itself. 
 All the attributes mentioned in the 'Create Machine' section can be updated for a Machine.
 
@@ -120,9 +112,11 @@ Admin portal allows an Admin to map Machines to a Center. This mapping specifies
 A Machine can later be un-mapped from the Center in cases where a Machine is needed to be moved to another Center. In such cases, the Machine will later need to be mapped to the new Center. In case the Machine is required to be mapped to a Registration Center outside the Administrative Zonal Restriction, the Administrative Zone of the Machine must be changed. 
 
 ##  Device Management 
+
 Admin Portal allows an Administrator to manage Devices the Country will use for taking Registration of the Residents. These includes Device for bio-metric capture (Fingerprint, Iris, Web camera etc.) Device management includes Viewing, Creating, Editing, Activating, Deactivating and Decommission of Devices. An Administrator should have the role of a Zonal Admin/Global Admin to do this. A Zonal Admin can manage only Devices under his/her administrative zone.
 
 ###  View Device 
+
 The Admin portal allows an Admin to view the list of all Devices available in the jurisdiction of his/her administrative zone. The system does not fetch the details of Decommissioned Devices but only Active and Inactive Devices. 
 Admin portal UI shows the list of Devices in only the country configured Primary Language. 
 
@@ -138,6 +132,7 @@ The Admin can filter the list of Registration Centers based on following paramet
 Besides the list view, an Administrator can also view the detail of a Device by clinking on a Device Name in the List view. This Detail view shows all the details of a Device in all the country configured languages.
 
 ###  Create Device 
+
 An Admin can create a Device by providing necessary mandatory details. A Device needs to be created in both configured Primary and Secondary languages. Although the Portal will allow creation of the Device in only primary language but will not allow activation of that Device until data for that Device is not updated for all the languages. 
 A Device is created with the following attributes: 
 Device ID, Device Name, Mac Address, Serial Number, Device Spec ID and Administrative Zone the Device belongs to. A Machine can be mapped to the Administrative Zone which is at the any Zonal hierarchy.
@@ -145,10 +140,12 @@ Device ID, Device Name, Mac Address, Serial Number, Device Spec ID and Administr
 While entering data through UI in multiple languages, the dropdown values and numeric values entered in primary language gets automatically captured in all language. But the text fields (e.g., Device Name) needs to be manually input in all the languages.
 
 ###  Update Device 
+
 Once a Device is created, an Admin can edit a Device later if required. The Update can include adding the details in another required language that were missed during creation of the Device or changing the details of a Device itself. 
 All the attributes mentioned in the 'Create Machine' section can be updated for a Machine.
 
 ###  Activate/Deactivate/Decommission Device 
+
 An Admin can Deactivate or Decommission a Device through the Admin Portal.
 
 Deactivation refers to a temporary shut down while Decommission refers to a permanent shut down of the Device. Decommissioning a Machine also automatically deactivates the Machine. In cases, where a Device is mapped to any Center, the portal won't allow the Admin to decommission such a Device. 
@@ -168,28 +165,24 @@ Refer to section on more details of CRUD APIs used in above mentioned features.
 MOSIP uses Keycloak as an IAM (Identity access management tool) for managing Users. These users are internal users of MOSIP including Registration Officers, Registration Supervisors, Zonal Admins, Global Admins etc. 
 User Management includes Viewing, Creating, Editing, Activating, Deactivating and Blacklisting of Users.
 
-###  View User 
-###  Create User 
-###  Update User 
-###  Activate/Deactivate/Blacklist/Whitelist User 
-#### Activate User 
-#### Deactivate User 
-#### Blacklist User 
-###  Map/Un-map/Re-map User to a Center
 ###  Map/Un-map User to a Registration Center
+
 Admin portal allows an Admin to map Users to a Center. This mapping specifies as to which Center the User will be used in. A User can only be mapped to a Center which belongs under the User’s Administrative Zone.
 
 A User can later be un-mapped from the Center in cases where a User is needed to be moved to another Center. In such cases, the User will later need to be mapped to the new Center. In case the User is required to be mapped to a Registration Center outside the Administrative Zonal Restriction, the Administrative Zone of the User must be changed.
 
 ## Administrative Zone Management 
+
 Administrative Zones are virtual boundaries which a country can define to better manage their resources which are used during registrations. These resources includes Centers, Users, Machines and Devices. These zones can be defined in a hierarchical fashion and a country can allocate resources to such zones based on their requirements. 
 
 Resources under each zone is managed by a Zonal Admin. This is done by assigning an Administrative zone to the Zonal Admin during user creation. These Zonal Admins can exist at any zonal hierarchy. (For e.g, a Zonal Admin can directly be mapped to the whole country as a Zone or can be mapped to a significantly smaller zone such as a city). Thus these resources when mapped to an Administrative Zone can only be managed by the Admin of that Zone.
 
 #  Master Data Management 
+
 Admin Portal allows an Administrator to manage Masterdata applicable for a Country. These data includes list of Genders, list of Holidays, Templates etc. This data is used by all the modules across MOSIP which includes Pre-Registration, Registration Client, Registration processor and ID-Authentication. An Administrator should have the role of a Global Admin to manage Masterdata.
 
 ##  View Master Data Types 
+
 The portal allows a Global Admin to view the list of Masterdata types. Through this list, the global admin can click on any of them and can view the data for that particular Masterdata table.
 ##  View Master Data for Each Table 
 The portal allows the Global Admin to view the data of any Masterdata which are applicable to a country. The Administrator can access these list views by clicking on a type of Masterdata in the Masterdata Types Screen.
@@ -208,10 +201,13 @@ Each of these List views consumes the same UI template and allows following feat
 Since not all the attributes for a Masterdata record will be shown on the list view, the Global Admin can them all on the Masterdata detail view page. This view can be accessed by clicking on a record in the list view. The detail view will show all the details of a Masterdata record in all the languages configured by the country. The Global Admin can also activate/deactivate the record from detail view page.
 
 ##  Manage Master Data 
+
 ###  Manage Document Type (View, Create, Update, Activate, Deactivate) 
+
 Document types is the list of Documents a country will configure for the users to give during registrations. 
 
 ### View Document Types 
+
 The Global Admin can view list of all the available Document Types on the Admin UI portal. The portal shows both activated or deactivated Document Types.  The Admin can filter the list of Document Types based on Document Name(Search box) and Status (Drop-down).
 
 ### Create/Update Document Types 
@@ -224,7 +220,6 @@ Admin Portal also allows modification of any detail of a Document type. The modi
 
 The portal allows Zonal Admin to activate or deactivate a document type. Deactivation of a document type can be done if the country feels the document type is not applicable anymore. Thus, deactivated documents does now show up on the Pre-Registration and Registration Client UI. The Activation/Deactivation functionality can be accessed from both the list view or the detail view page of Document Types
 
-### Manage Document Categories (View, Create, Update) 
 ### View Document Categories 
 
 The Global Admin can view list of all the available Document Categories as created by the Country in Masterdata. The portal shows both activated or deactivated Document Categories. The Admin can filter the list of Document Categories based on Status (Drop-down).
@@ -235,19 +230,20 @@ Using the portal, the Global Admin can create the document category providing th
 
 Admin Portal also allows modification of any detail of a Document category . The modification includes either adding the details in another language that were missed during creation of the Document category or changing the details of a Document category itself including name, description etc.
 
-### Manage Document Type to Document Category Mapping (Map, Unmap, View) 
-
 ###  View mappings of Document Categories and Document Types 
+
 The portal allows an Global Admin to view Document Categories along with its mapped and un-mapped Document Types. From the view screen itself, the Global Admin can map or un-map the Documents from a Document Category.
 
 ###  Map/Un-map Document Type to Document Category 
+
 The portal allows the Global Admin to map the available Document types to a Document category. This feature helps the country define as to which document falls under which category. Each Document can be mapped to multiple categories depending on the country's requirement.
 
-###  Manage Location Data (View, Create, Update, Activate, Deactivate) 
 ### View Location Data 
+
 The Global Admin can view list of all the Locations created by the country on the Admin UI portal. This list of locations defined shows up on the Pre-Registration and Registration UI while typing the address. The portal shows both activated or deactivated Locations Types. The Admin can filter the list of Locations based on Status (Drop-down) and each Location level (Search Box).
 
 ### Create/Update Location Data 
+
 Using the portal, Global Admin can create/update the location data by providing location name and the parent hierarchy of that location. A location needs 
 
 A Location needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Location in only primary language but will not allow activation of that Location until data for that Location is not updated for all the languages. A deactivated Location will not show up on the Pre-Registration/Registration Client UI.  While entering the data, the text fields (e.g., Document Type Name) needs to be manually input in all the languages. After successful creation, a Location code will be generated.
@@ -258,9 +254,8 @@ Admin Portal also allows modification of any detail of a Location. The modificat
 
 The portal allows activation or deactivation of a Location. Deactivation of a Location can be done if the country feels the Location is not applicable anymore. Thus, deactivated locations does now show up on the Pre-Registration and Registration Client UI. The Portal won't allow deactivation of a Location if any child of that location is still active. The Admin will have to first deactivate all the child locations before deactivating a parent location. The Activation/Deactivation functionality can be accessed from both the list view or the detail view page of Location data.
 
-###  Manage Blacklisted Words (View, Create, Update, Activate, Deactivate) 
-
 ###  View Blacklisted Words 
+
 The Global Admin can view list of all the available Blacklisted words on the Admin UI portal. The portal shows both activated or deactivated Blacklisted words. Blacklisted words in the only Masterdata which is language independent and will show the data in all the languages unlike the rest of the Masterdata tables which will show data only in primary language. The Admin can filter the list of Blacklisted Words based on Status (Drop-down), Word (Search Box) and Language (Drop-Down).
 
 ### Create/Update Blacklisted Word 
@@ -270,8 +265,6 @@ Using the portal, the Global Admin can create the Blacklisted Word providing the
 ### Activate/Deactivate Blacklisted Word 
 
 The portal allows activation or deactivation of a Blacklisted Word. Deactivation of a Blacklisted Word can be done if the country feels the Blacklisted Word is not applicable anymore. The Activation/Deactivation functionality can be accessed from both the list view or the detail view page of Blacklisted Word.
-
-###  Manage Registration Center Types (View, Create, Update) 
 
 ###  View Registration Center Types 
 
@@ -283,9 +276,8 @@ Using the portal, the Global Admin can create the Registration Center Type provi
 
 Admin Portal also allows modification of any detail of a Registration Center Type. The modification includes either adding the details in another language that were missed during creation of the Registration Center Type or changing the details of a Registration Center Type itself including name, description etc.
 
-###  Manage Machine Types (View, Create, Update) 
-
 ###  View Machine Types 
+
 Machine Type indicates the type of Machines a country uses to take registrations. The Global Admin can view list of all the Machine Types on the Admin UI portal. A Machine while creation, can be assigned to a Machine Types as defined by the country.
 The portal shows both activated or deactivated Machine Types. 
 
@@ -297,8 +289,6 @@ While entering the data, the text fields (e.g., Machine type Name) needs to be m
 
 Admin Portal also allows modification of any detail of a Machine Type. The modification includes either adding the details in another language that were missed during creation of the Machine Type or changing the details of a Machine Type itself including name, description etc.
 
-###  Manage Machine Specifications (View, Create, Update) 
-
 ###  View Machine Specifications 
 
 Machine specification indicates the Brand, Make and Model of a Machine a country uses to take registrations. The Global Admin can view list of all the Machine Specifications on the Admin UI portal. A Machine while creation, can be assigned to a Machine Specification as required by the country.
@@ -309,8 +299,6 @@ The portal shows both activated or deactivated Machine Specification. The Admin 
 Using the portal, the Global Admin can create the Machine Specification providing the Machine Specification name, brand, make and model.  A Machine Specification needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Machine Specification in only primary language but will not allow activation of that Machine Specification until data for that Specification is not updated for all the languages.  While entering the data, the text fields (e.g., Machine Specification Name) needs to be manually input in all the languages. After successful creation, a Machine Specification ID will be generated.
 
 Admin Portal also allows modification of any detail of a Machine Specification. The modification includes either adding the details in another language that were missed during creation of the Machine Specification or changing the details of a Machine Specification itself including name, brand etc.
-
-###  Manage Device Types (View, Create, Update) 
 
 ####  View Device Types 
 
@@ -325,8 +313,6 @@ While entering the data, the text fields (e.g., Device type Name) needs to be ma
 
 Admin Portal also allows modification of any detail of a Device Type. The modification includes either adding the details in another language that were missed during creation of the Device Type or changing the details of a Device Type itself including name, description etc.
 
-### Manage Device Specifications (View, Create, Update) 
-
 ####  View Device Specifications 
 
 Device specification indicates the Brand, Make and Model of a Device a country uses to take registrations. The Global Admin can view list of all the Device Specifications on the Admin UI portal. A Device while creation, can be assigned to a Device Specification as required by the country.  The portal shows both activated or deactivated Device Specification. The Admin can filter the list of Device Specifications based on Status (Drop-down), Name (Search Box) and Device type (Search Box).
@@ -336,8 +322,6 @@ Device specification indicates the Brand, Make and Model of a Device a country u
 Using the portal, the Global Admin can create the Device Specification providing the Device Specification name, brand, make and model.  A Device Specification needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Device Specification in only primary language but will not allow activation of that Device Specification until data for that Specification is not updated for all the languages.  While entering the data, the text fields (e.g., Device Specification Name) needs to be manually input in all the languages. After successful creation, a Device Specification ID will be generated.
 
 Admin Portal also allows modification of any detail of a Device Specification. The modification includes either adding the details in another language that were missed during creation of the Device Specification or changing the details of a Device Specification itself including name, brand etc.
-
-###  Manage Individual Types (View, Create, Update) 
 
 ####  View Individual Types 
 
@@ -349,8 +333,6 @@ Using the portal, the Global Admin can create the Individual Type providing the 
 
 Admin Portal also allows modification of any detail of a Document category . The modification includes either adding the details in another language that were missed during creation of the Document category or changing the details of a Document category itself including name, description etc.
 
-###  Manage List of Holidays (View, Create, Update) 
-
 ####  View List of Holidays 
 
 List of Holiday defines all the public holiday a applicable for a country. These holidays are on of the criteria for Pre-Registration to generate appointments. The holidays only define the public holidays and not the week-end days for the country. The Global Admin can view list of all the defined Holidays on the Admin UI portal.  The portal shows both activated or deactivated Holidays. The Admin can filter the list of Holidays based on Status (Drop-down), Date Range (Search Box) and Name (Search Box).
@@ -360,8 +342,6 @@ List of Holiday defines all the public holiday a applicable for a country. These
 Using the portal, the Global Admin can create a Holiday providing the Document Category name, date, location, and description if applicable.  A Holiday  needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Holiday  in only primary language but will not allow activation of that Holiday  until data for that Holiday is not updated for all the languages. A deactivated Holiday will not be considered for appointment generation in Pre-Registration While entering the data, the text fields (e.g., Holiday Name) needs to be manually input in all the languages. After successful creation, a Holiday ID will be generated.
 
 Admin Portal also allows modification of any detail of a Holiday. The modification includes either adding the details in another language that were missed during creation of the Holiday or changing the details of a Holiday itself including name, description etc.
-
-###  Manage List of Templates (View, Create, Update) 
 
 ####  View List of Templates 
 
@@ -373,8 +353,6 @@ Using the portal, the Global Admin can create a Template providing the Template 
 
 Admin Portal also allows modification of any detail of a Template. The modification includes either adding the details in another language that were missed during creation of the Template  or changing the details of a Template itself including name, description etc.
 
-### Manage List of Titles (View, Create, Update) 
-
 #### View Titles 
 
 List of Titles contains all the salutations defined by a country in all the country defined languages. The Global Admin can view list of all the defined Holidays on the Admin UI portal.  The portal shows both Activated or Deactivated Titles. The Admin can filter the list of Titles based on Status (Drop-down).
@@ -384,8 +362,6 @@ List of Titles contains all the salutations defined by a country in all the coun
 Using the portal, the Global Admin can create the Title providing the Title name and description if applicable.  A Title needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Title in only primary language but will not allow activation of that Title until data for that Title is not updated for all the languages.  While entering the data, the text fields (e.g., Title Name) needs to be manually input in all the languages. After successful creation, a Title code will be generated.
 
 Admin Portal also allows modification of any detail of a Title . The modification includes either adding the details in another language that were missed during creation of the Title or changing the details of a Title itself including name, description etc.
-
-###  Manage Gender Types (View, Create, Update) 
 
 ####  View Gender Types 
 
@@ -397,21 +373,16 @@ Using the portal, the Global Admin can create a Gender Type providing the Gender
 
 Admin Portal also allows modification of any detail of a Gender Type. The modification includes either adding the details in another language that were missed during creation of the Gender Type or changing the details of a Gender Type itself including name, description etc.
 
-# Approval Process 
-##  Approval for Resource Creation
-### Approval of Center
-### Approval of Machine
-### Approval of Device
-### Approval of User
-## Approval for Master Data Creation
-
 # UIN Activation/Deactivation 
+
 Using the portal, a Global Admin can activate or deactivate a UIN based on the request by the UIN holder for any reason. The Admin have to provide a UIN/VID and a valid reason for deactivating the UIN. A standard set of reasons will be defined by the country. While Activation/Deactivation of a UIN, all the VIDs linked that UIN will also be activated/deactivated based on the request. the Admin can choose to send notification to the applicant whose UIN is activated/deactivated. Moreover, the admin can also choose to send notification to an additional recipient by giving the recipient's email id or mobile number or both.  
 
 # Packet Status Check (based on RID) 
+
 A Registration packet generated in Registration Client is sent to Registration Processor for further processing and UIN generation.  Using the Portal, A Zonal Admin can view the status of a packet by giving the RID of the packet. The packet status will contain all the stages the packet has passed through along with the last stage the packet is in. In case the packet has not been processed or is marked for Re-Send/Re-Register, the admin will be able to view specific comments indicating the reason for that particular status.
 
 # Device Provider Management 
+
 All the bio-metric devices which will be used for Authentication and Registration needs to be registered with MOSIP. Unless these devices are not registered, they cannot be used for capturing resident Bio-metrics for registrations or authentication.
 
 For managing these devices, MOSIP needs to store details of following four entities:
@@ -421,6 +392,7 @@ For managing these devices, MOSIP needs to store details of following four entit
 1. Biometric Devices (Registered and White-listed)
 
 ## Device Providers (Create/Update) 
+
 Device Providers are the vendors supplying devices for Registration or Authentication. This device provides are needed to be registered before the devices of this providers are getting registered. 
 
 An MOSIP Administrator can register each Device Provider with MOSIP by storing the attributes Vendor Name, Vendor Address, Contact Number, Email, Status (Active/Inactive) and Certificate Alias. The status of a Device Provider is automatically marked as ‘Active’ during the creation. After successful registration, a unique Device Provider ID is generated by MOSIP for each device provider. In case a device provider is getting registered with an already existing name and address, Admin portal won’t allow the creation of such a Provider.
@@ -428,6 +400,7 @@ An MOSIP Administrator can register each Device Provider with MOSIP by storing t
 Admin portal will also allow an Admin to update details of the Device Provider including the Name, Address, Contact Details and Status. Changing the status from Active to Inactive will render that provider inactive and any biometric received from a device of such a provider will fail the validation checks and thus rejecting the Auth/Registration request. Any creation and modification in the details of a Device Providers is maintained in a history table to future references.
 
 ## Foundational Trust Providers (Create/Update) 
+
 MOSIP will use two types of devices. L0 devices (encryption is done on the host machine device driver or the MOSIP device service) and L1 (capable of performing encryption in device’s trusted module). A Foundational Trust Provider provides this module which is then put in the L1 devices during manufacturing. These Foundational Trust Providers are identified before-hand and are registered with MOSIP. 
 
 An MOSIP Administrator can register each Foundational Trust Provider with MOSIP by storing the attributes Trust Providers Name, Trust Providers Address, Contact Number, Email, Status (Active/Inactive) and Certificate Alias. The status of a Foundational Trust Provider is automatically marked as ‘Active’ during the creation. After successful registration, a unique Foundational Trust Provider ID is generated by MOSIP for each Foundational Trust Provider. In case a Foundational Trust Provider is getting registered with an already existing name and address, Admin portal won’t allow the creation of such a Trust Provider.
@@ -435,12 +408,14 @@ An MOSIP Administrator can register each Foundational Trust Provider with MOSIP 
 Admin portal will also allow an Admin to update details of the Foundational Trust Provider including the Name, Address, Contact Details and Status. Any creation and modification in the details of a Foundational Trust Providers is maintained in a history table to future references.
 
 ## MOSIP Complaint MDS services (Create/Update) 
+
 Every Registration/Auth Device needs to use a MDS (MOSIP Device Service) to communicate with MOSIP. Each MDS needs to be registered before-hand with the MOSIP.  A MOSIP Administrator can register each MDS with MOSIP by storing the attributes Software Version, Provider ID, Device Type Code, Device Sub-Type, Make, Model, Software Created Date, Software Expiry Date and Software’s Binary hash. The status of a MDS is automatically marked as ‘Active’ during the creation. After successful registration, a unique Service ID is generated by MOSIP for each MDS. 
 
 There will always be a unique service ID of an MDS against a unique combination of a Software Version, Provider ID, Device Type, Device Sub Type, Make and Model. Thus, no two MDS can exist with same above-mentioned combination. 
 Admin portal will also allow an Admin to update details of an MDS. Any creation and modification in the details of a MDS is maintained in a history table to future references.
 
 ##  Devices (Register/De-Register) 
+
 Devices are categorized in two types based on the usage. Registration Devices (used during registrations in Registration Client) and Auth Devices (used during authentication through Partners). Before being used, these devices are needed to be registered in MOSIP using the Register/De-Register API.
 
 The Device is needed to be registered with the following attributes.
@@ -463,6 +438,7 @@ Once the device is registered, there details should not be changed. However, an 
 
 
 ##  Device Detail Validation 
+
 Device Provider Management also provides an API to validate device details during Authentication in IDA or during packet validation in Registration Processor.
 
 The API receives Device Code, Digital ID, and MDS Service Version and validates the following conditions.
@@ -476,12 +452,9 @@ The API receives Device Code, Digital ID, and MDS Service Version and validates 
 For validation in IDA, the API checks the current status of the details, But for validation in Registration processor, API checks the status of details as on the packet generation date and time. For this, the API additionally receives packet generation timestamp.
 
 # Multi-language Support 
+
 ## i18N
+
 Admin portal provides support for multiple languages which can be configured by a country. The portal can support two languages one of which will be primary and another a secondary language. Both can be configured as per the Country’s requirements. The portal will render all the functionalities (View, Create and Update) in two languages thus allowing the Admin to access these functionality in both the languages simultaneously. Although the Home page, Labels and certain functionalities like ‘Viewing Packet Status based on RID’ will only be rendered in the primary language.
 
 If a Country wants to use only one language in MOSIP, both primary and secondary language must be configured as the same language. If configured, the portal will render the screens in only one configured language. Although to be noted, both the primary and secondary languages must be configured. If not, The portal won’t allow the Admin to login and will be shown a message saying “The system has encountered a technical error. Administrator to setup the necessary language configuration(s)".
-
-##  Implementation in English (Labels etc)
-## Language Specific Setup
-
-# Responsive UI 
