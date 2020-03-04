@@ -31,10 +31,11 @@ Admin portal allows an administrator to manage registration centers, setup by th
 The admin portal allows an admin to view the list of all registration centers available in the jurisdiction of his/her administrative zone. The system does not fetch the details of decommissioned registration centers but only active and inactive centers. Admin portal UI shows the list of registration centers in only the country configured primary language.
 
 The administrator can filter the list of registration centers based on following parameters:
+
 1. Center name
-1. Center type
-1. Status
-1. Location hierarchy (all location levels)
+2. Center type
+3. Status
+4. Location hierarchy (all location levels)
 
 Besides the list view, an administrator can also view the detail of a registration center by clinking on a center name in the list view. This detail view shows all the details of a registration center in all the country configured languages.
 
