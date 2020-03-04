@@ -63,4 +63,4 @@ To support performance, following database design features are to be considered
 [Data Model](MOSIP-Data-Model.md)
 
 ## Data encryption
-[Encryption in DTO Layer](Encryption-in-DTO-Layer)
+[Encryption in DTO Layer](Encryption-in-DTO-Layer.md)

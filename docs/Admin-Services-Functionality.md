@@ -76,11 +76,11 @@ Admin portal UI shows the list of machines in only the country configured primar
 
 The admin can filter the list of machine based on following parameters
 1.  Machine name
-1.  Mac address
-1.  Serial number
-1.  Status
-1.  Map status
-1.  Machine type
+2.  Mac address
+3.  Serial number
+4.  Status
+5.  Map status
+6.  Machine type
 
 Besides the list view, an administrator can also view the detail of a machine by clinking on a machine name in the list view. This detail view shows all the details of a machine in all the country configured languages.
 
@@ -124,12 +124,12 @@ Admin portal UI shows the list of Devices in only the country configured Primary
 
 The Admin can filter the list of Registration Centers based on following parameters:
 1.  Device Name
-1.  Mac Address
-1.  Serial Number
-1.  Status
-1.  Map Status
-1.  Device Type
-1.  Device Spec ID
+2.  Mac Address
+3.  Serial Number
+4.  Status
+5.  Map Status
+6.  Device Type
+7.  Device Spec ID
 
 Besides the list view, an Administrator can also view the detail of a Device by clinking on a Device Name in the List view. This Detail view shows all the details of a Device in all the country configured languages.
 
@@ -192,10 +192,10 @@ The portal allows the Global Admin to view the data of any Masterdata which are 
 Each of these List views consumes the same UI template and allows following features:
 
 1. List view shows data of a Masterdata Type only in the country configured Primary Language. 
-1. The Global Admin can access pagination features on each list screens. These includes selecting no. of rows to be displayed on the list view and options to jump to next or previous set of records. 
-1. The Global Admin can sort the data by any column on the list view
-1. The List view also allows the Global Admin to directly activate or deactivate a Masterdata record from list view itself
-1. The List view also supports filtering by multiple attributes. The attribute can either have a drop-down or a search box which an Admin can use to input values for filtering the values. The search box supports wildcard search as listed below
+2. The Global Admin can access pagination features on each list screens. These includes selecting no. of rows to be displayed on the list view and options to jump to next or previous set of records. 
+3. The Global Admin can sort the data by any column on the list view
+4. The List view also allows the Global Admin to directly activate or deactivate a Masterdata record from list view itself
+5. The List view also supports filtering by multiple attributes. The attribute can either have a drop-down or a search box which an Admin can use to input values for filtering the values. The search box supports wildcard search as listed below
     *  text*:  implies "Starts with" search
     * *text: implies "Contains in" search
     *  text: implies exact match search
@@ -389,9 +389,9 @@ All the bio-metric devices which will be used for Authentication and Registratio
 
 For managing these devices, MOSIP needs to store details of following four entities:
 1. Device Provider
-1. Foundational Trust Providers
-1. MOSIP Complaint MDS services
-1. Biometric Devices (Registered and White-listed)
+2. Foundational Trust Providers
+3. MOSIP Complaint MDS services
+4. Biometric Devices (Registered and White-listed)
 
 ## Device Providers (Create/Update) 
 
@@ -423,14 +423,14 @@ Devices are categorized in two types based on the usage. Registration Devices (u
 The Device is needed to be registered with the following attributes.
 
 1. Device ID – Mandatory
-1. Purpose – [Registration or Auth
-1. Device Sub Ids - (optional)
-1. Signed Digital ID
-1. Firmware
-1. Device Expiry - (optional)
-1. Certification Level – L0 or L1
-1. Timestamp - ISO format date time with time-zone
-1. Foundational Trust provider ID - Required only if certification level received is L1
+2. Purpose – [Registration or Auth]
+3. Device Sub Ids - (optional)
+4. Signed Digital ID
+5. Firmware
+6. Device Expiry - (optional)
+7. Certification Level – L0 or L1
+8. Timestamp - ISO format date time with time-zone
+9. Foundational Trust provider ID - Required only if certification level received is L1
 
 Digital ID will be a signed base64 encoded Json Object. It will be decoded and stored in the Registered Device Table once the signature is validated with the root certificate issued to each Device Provider (for L0 devices) or Foundational Trust Provider (for L1 devices). 
 
