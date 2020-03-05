@@ -194,9 +194,9 @@ It integrates the Registration application with Bio-devices [IRIS/ Finger Print/
 |2|	mosip.reg.mdm.server.port=8080	| To run the MDM service in local machine's port |
 
 
-# Real biometric service installation to windows
+# Biometric service installation to windows
 
-Please refer to the detailed [**Real Biometrics Service Integration**](Registration-client---Real-bio-metric-service-integration.md)
+Please refer to the detailed [**Biometrics Service Integration**](Registration-Client-Biometrics-Service-Integration.md)
 
 **Network Connectivity Check:**  
 Registration client verifies the below-configured URL to check whether the system is in online or not. The application uses this URL to perform the health check before communicating with the external services.
