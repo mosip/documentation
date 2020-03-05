@@ -1,37 +1,36 @@
-**Registration Client - Installation and Configuration:** 
-***
+# Registration Client - Installation and Configuration:
 
 This document contains the 'Registration client (Reg Client App)' application initial setup, update and configuration process.       
 
-Registration Client application is a desktop based application, that can be used to captures the Demographic and Biometric details of an Individual along with supporting information (proof documents & information about parent /guardian /introducer) and packages the information in a secure way using RSA based algorithm. The information packet can be sent to the server in an online or offline mode for processing.  
+Registration Client application is a desktop based application, that can be used to captures the demographic and biometric details of a resident along with supporting information (like. proof documents & information about parent/guardian/introducer) and packages the information in a secure way using RSA based algorithm. The information packet can be sent to the server in an online or offline mode for processing.  
 
-The Registration client application leverages the TPM capabilities and secure the data and mark the senders identity in the request before sending to external system. The MOSIP server would validate the request and make sure that the request received from the right source. Every individual machine's TPM public key should be registered at MOSIP server to accept and process the data send by them.   
+The registration client application leverages the TPM capabilities and secure the data and mark the senders identity in the request before sending to external system. The MOSIP server would validate the request and make sure that the request received from the right source. Every individual machine's TPM public key should be registered at MOSIP server to accept and process the data send by them.   
 
 A Trusted Platform Module (TPM) is a specialized chip on a local machines that stores RSA encryption keys specific to the host system for hardware authentication. Each TPM chip contains an RSA key pair called the Endorsement Key (EK). The pair is maintained inside the chip and cannot be accessed by software. By leveraging this security feature every individual machine would be uniquely registered and identified by the MOSIP server component. 
 
 ![Registration client Setup](_images/registration/reg-client-app-install-process1.png)   
 
+# Application Build:  
+JDK 8u181 [Oracle] or later version to Build the application.  
 
-## Application Build:  
+**Registration client application is built with four different modules:**
 
-   JDK 8u181 [Oracle] or later version to Build the application.  
-   **Registration client application is built with four different modules.**     
-     registration-client - it contains only UI related code.  
-     registration-libs - it contains the code to generate the initial run.bat.   
-     registration-MDM-service - Mosip Device Manager service to integrate with BIO device and render the required data in a standard format and that will be consumed by the 'registration-services' module.   
-     registration-services - it contains the Java API, which would be called from UI module to render the services to the User and capture the detail from User and store it in DB or send to external systems through services.    
+	* registration-client - it contains only UI related code.  
+	* registration-libs - it contains the code to generate the initial run.bat.   
+    * registration-MDM-service - Mosip Device Manager service to integrate with BIO device and render the required data in a standard format and that will be consumed by the 'registration-services' module.   
+    * registration-services - it contains the Java API, which would be called from UI module to render the services to the User and capture the detail from User and store it in DB or send to external systems through services.    
 
-   **Following files to be modified before building the application:**    
-     -  spring.properties - [registration-services module] - It contains the environment based REST client URL to make different service calls and all the required properties.  
-	 -  mosip-application.properties - [registration-libs module] - It contains Reg-Client Download , Configuration URL and Properties to check application online/offline status and Reg client download url from JFrog repository and all the required properties.
-     -  As part of the Jenkins, the required environment should be passed as run time argument **environment** for the build. Ex: "mvn clean install -Denvironment=mosip.hostname".
-     -  Post completion of above-mentioned changes, build 'mosip-parent' pom.xml file to build the application.  
-     -  Make sure that 'maven-metadata.xml' is generated under the '**registration-client**' module, post successful build generation. Which is referred by the reg-client application to download the required jars based on the version.   
-     - Post-build process 'META-INF.MF' file also should be present in the Secure JFROG repository[Https --> Hostname], which consists of the jar files checksum.   
+**Following files to be modified before building the application:**    
+	*  spring.properties - [registration-services module] - It contains the environment based REST client URL to make different service calls and all the required properties.  
+	*  mosip-application.properties - [registration-libs module] - It contains Reg-Client Download , Configuration URL and Properties to check application online/offline status and Reg client download url from JFrog repository and all the required properties.
+    *  As part of the Jenkins, the required environment should be passed as run time argument **environment** for the build. Ex: "mvn clean install -Denvironment=mosip.hostname".
+    *  Post completion of above-mentioned changes, build 'mosip-parent' pom.xml file to build the application.  
+    *  Make sure that 'maven-metadata.xml' is generated under the '**registration-client**' module, post successful build generation. Which is referred by the reg-client application to download the required jars based on the version.   
+    * Post-build process 'META-INF.MF' file also should be present in the Secure JFROG repository[Https --> Hostname], which consists of the jar files checksum.   
 
-## Prerequisites:  
-
-**System Prerequisites:**  
+## Prerequisites
+  
+### System Prerequisites
    - CPU - Dual Core Processor - 2GHZ  
    - Ram - 16 GB  
    - Local Storage Disk Space - 500 GB 
@@ -39,13 +38,14 @@ A Trusted Platform Module (TPM) is a specialized chip on a local machines that s
    - Physical machine with TPM 2.0 facility.   
    - Windows OS [10 v] 
 
-**Application Prerequisites:**  
+### Application Prerequisites:  
+   
    Before running the 'Registration client' application, following prerequisites to be completed.
 
    - Before building the 'registration-services' module, all the external [dependent services](#dependent-services-) URLs should be configured in the **'spring.properties'** and **'mosip-application.properties'** files.     
    - [Property file](#property-file-) - **[spring.properties]** should be updated with right environment [env] and other detail.     
-   - All **Master data** should be loaded at MOSIP kernel database [Refer MOISP document](https://github.com/mosip/mosip-docs/wiki/Getting-Started#7-configuring-mosip-).    
-   - User, machine, center mapping, and all other required table and data setup should exist in MOSIP kernel database along with the profile and desired roles configuration in LDAP server.    [This is required until the Admin module is delivered. Post-delivery, all the configuration can be done through the Admin module.]   
+   - All **Master data** should be loaded at MOSIP kernel database.  
+   - User, machine, center mapping, and all other required table and data setup should exist in MOSIP kernel database along with the profile and desired roles configuration in LDAP server.[This is required until the Admin module is delivered. Post-delivery, all the configuration can be done through the Admin module.]   
    - User's machine should have online connectivity to access the Secure JFrog artifactory repository[Https --> Hostname], where the application binaries are available.   
    - If TPM enabled, a logged-in user to windows machine should have permission to get the public key from TPM device.  
    - The initial DB embedded with the setup process should contain all the required tables along with the data for few tables.    
@@ -138,72 +138,71 @@ Refer the configuration maintained in [QA](https://github.com/mosip/mosip-config
 
 |**S.No.**| **Config Key**| **Sample Values**|**Description**|
 |:------:|-----|---|---|
-|1	.|	mosip.registration.fingerprint_enable_flag                            | y	/ n			| To disable the fingerprint capture. |	
-|2	.|	mosip.registration.iris_enable_flag                                   | y	/ n			| To disable the IRIS capture. |	
-|3	.|	mosip.registration.face_enable_flag                                   | y	/ n			| To disable the Face capture. |	
-|4	.|	mosip.registration.document_enable_flag                               | y	/ n			| To disable the document capture. | 	
-|5	.|	mosip.registration.iris_threshold									   | 0 - 100				|	
-|6	.|	mosip.registration.leftslap_fingerprint_threshold                      | 0 - 100				|	
-|7.|	mosip.registration.rightslap_fingerprint_threshold                 | 0 - 100				|	
-|8.|	mosip.registration.thumbs_fingerprint_threshold                    | 0 - 100					|	
-|9	.|	mosip.registration.num_of_fingerprint_retries                          | 3				|	
-|10	.|	mosip.registration.num_of_iris_retries                                 | 3				|	
-|11	.|	mosip.registration.supervisorverificationrequiredforexceptions         | true			| To capture Supervisor approval for exception case. |
-|12	.|	mosip.registration.gpsdistanceradiusinmeters                           | 3				|	
-|13	.|	mosip.registration.packet.maximum.count.offline.frequency              | 100			| No. of packets can be created in offline mode. |	
-|14	.|	mosip.registration.user_on_board_threshold_limit                       | 1				| No. of biometric required to be captured. |	
-|15	.|	mosip.registration.finger_print_score                                  | 100			|	
-|16	.|	mosip.registration.pre_reg_no_of_days_limit                            | 5				|	
-|17	.|	mosip.registration.reg_pak_max_cnt_apprv_limit                         | 100			| Max No. of packets waiting for approval.	|
-|18	.|	mosip.registration.reg_pak_max_time_apprv_limit                        | 30				| Max time wait for approval in mins. |	
-|19	.|	mosip.registration.eod_process_config_flag                             | y	/ n			| Enable/ Disable EOD process. |
-|20	.|	mosip.registration.invalid_login_count                                 | 3				| 	
-|21	.|	mosip.registration.invalid_login_time                                  | 2				|	
-|22	.|	mosip.registration.gps_device_enable_flag                              | y	/ n			| Enable / Disable GPS |	
-|23	.|	mosip.registration.uin_update_config_flag                              | y	/ n		    | Enable / Disable update feature. |
-|24.|	mosip.registration.lost_uin_disable_flag                    |  y	/ n| Enable / Disable Lost UIN functionality. |
-|25.|	mosip.registration.webcam_name                           |logitech|
-|26.|	mosip.registration.document_scanner_enabled				|no|
-|27.|	mosip.registration.send_notification_disable_flag        |y	/ n| Enable/ Disable additional notification. |  
-|28.|	mosip.registration.onboarduser_ida_auth        |Y	/ N| To enable the bio auth validation during user 'On Boarding' process and validated against the IDA Auth service. | 
+|1|mosip.registration.fingerprint_enable_flag						|Y/N| To disable the fingerprint capture |	
+|2|mosip.registration.iris_enable_flag								|Y/N| To disable the IRIS capture |	
+|3|mosip.registration.face_enable_flag								|Y/N| To disable the Face capture |	
+|4|mosip.registration.document_enable_flag							|Y/N| To disable the document capture | 	
+|5|mosip.registration.iris_threshold								|0 - 100|	
+|6|mosip.registration.leftslap_fingerprint_threshold				|0 - 100|	
+|7|mosip.registration.rightslap_fingerprint_threshold				|0 - 100|	
+|8|mosip.registration.thumbs_fingerprint_threshold					|0 - 100|	
+|9|mosip.registration.num_of_fingerprint_retries					|3|	
+|10|mosip.registration.num_of_iris_retries							|3|	
+|11|mosip.registration.supervisorverificationrequiredforexceptions	|TRUE| To capture Supervisor approval for exception case |
+|12|mosip.registration.gpsdistanceradiusinmeters					|3|	
+|13|mosip.registration.packet.maximum.count.offline.frequency		|100| No. of packets can be created in offline mode |
+|14|mosip.registration.user_on_board_threshold_limit				|1| No. of biometric required to be captured |	
+|15|mosip.registration.finger_print_score							|100|	
+|16|mosip.registration.pre_reg_no_of_days_limit						|5|	
+|17|mosip.registration.reg_pak_max_cnt_apprv_limit					|100| Max No. of packets waiting for approval	|
+|18|mosip.registration.reg_pak_max_time_apprv_limit					|30| Max time wait for approval in mins |	
+|19|mosip.registration.eod_process_config_flag						|Y/N| Enable/ Disable EOD process |
+|20|mosip.registration.invalid_login_count							|3| 	
+|21|mosip.registration.invalid_login_time							|2|	  	
+|22|mosip.registration.gps_device_enable_flag						|Y/N| Enable / Disable GPS |	
+|23|mosip.registration.uin_update_config_flag						|Y/N| Enable / Disable update feature |
+|24|mosip.registration.lost_uin_disable_flag						|Y/N| Enable / Disable Lost UIN functionality |
+|25|mosip.registration.webcam_name									|logitech|
+|26|mosip.registration.document_scanner_enabled						|Y/N|
+|27|mosip.registration.send_notification_disable_flag				|Y/N| Enable/ Disable additional notification |  
+|28|mosip.registration.onboarduser_ida_auth							|Y/N| To enable the bio auth validation during user 'On Boarding' process and validated against the IDA Auth service| 
 
 Refer the **Global configuration** maintained in [QA](https://github.com/mosip/mosip-configuration/blob/master/config/application-qa.properties) environment. 
 
 |**S.No.**| **Config Key**| **Sample Values**|**Description**|
 |:------:|-----|---|---|
-|1.|	mosip.primary-language        |fra / ara/ eng| French/ Arabic/ English |  
-|2.|	mosip.secondary-language        |fra / ara/ eng| French/ Arabic/ English |
+|1|	mosip.primary-language        	|fra / ara/ eng| French/ Arabic/ English |  
+|2|	mosip.secondary-language        |fra / ara/ eng| French/ Arabic/ English |
 
 **TPM [Trusted Platform Module]:**  
 
-   To enable or disable the TPM functionality, modify the mentioned key in 'registrtaion-services/src/main/resources/spring.properties' file.    
-    - mosip.client.tpm.registration = { Y - to enable the TPM, N - to disable the TPM}.
+To enable or disable the TPM functionality, modify the mentioned key in 'registrtaion-services/src/main/resources/spring.properties' file.    
+    - mosip.client.tpm.registration = { Y - to enable the TPM, N - to disable the TPM}
 
 **MDM [Mosip Device Manager] Service:**  
-   It integrates the Registration application with Bio-devices [IRIS/ Finger Print/ Face]
+It integrates the Registration application with Bio-devices [IRIS/ Finger Print/ Face]
    
 |**S.No.**| **Config Key**| **Sample Values and Description**|
 |:------:|-----|-----|
-|1.|	mosip.mdm.enabled=N        | Y - Enable , N - Disable |  
-|2.|	mosip.reg.mdm.server.port=8080        | To run the MDM service in local machine's port.  |
+|1|	mosip.mdm.enabled=N				| Y - Enable , N - Disable |  
+|2|	mosip.reg.mdm.server.port=8080	| To run the MDM service in local machine's port.  |
 
 
 ## Real biometric service installation to windows.
 Please refer to the detailed [**Real-bio-metric-service-integration**](Registration-client---Real-bio-metric-service-integration.md)
 
 **Network Connectivity Check:**  
-   Registration client verifies the below-configured URL to check whether the system is in online or not. The application uses this URL to perform the health check before communicating with the external services.
+Registration client verifies the below-configured URL to check whether the system is in online or not. The application uses this URL to perform the health check before communicating with the external services.
    
 |**S.No.**| **Config Key**| **Sample Values and Description**|
 |:------:|-----|-----|
-|1.|	mosip.reg.healthcheck.url={URL} | Ex: https\://domainname.com/v1/authmanager/actuator/health |  
+|1|	mosip.reg.healthcheck.url={URL} | Ex: https\://domainname.com/v1/authmanager/actuator/health |  
 
-	
 ## Property File :
 
-   Property attributes and the respective sample values are provided below. Before building the **registration-services**, the required below properties needs to be changed.
+Property attributes and the respective sample values are provided below. Before building the **registration-services**, the required below properties needs to be changed.
    
-   **File Location:** registration-services/src/main/resources/spring.properties       
+**File Location:** registration-services/src/main/resources/spring.properties       
      - mosip.reg.logpath=../logs  
      - mosip.reg.packetstorepath={where the registration packet should be stored}. 
      - mosip.reg.healthcheck.url={Application uses this url to perform the health check before communicating with the external services. Default value: https://${environment}/v1/authmanager/actuator/health }  
@@ -231,35 +230,35 @@ Please refer to the detailed [**Real-bio-metric-service-integration**](Registrat
      	
 ## Dependent Services :    
 
-   In Registration client application, only user mapping to the local machine can be performed. Rest of the data setup should be performed at MOSIP Admin portal.
+In Registration client application, only user mapping to the local machine can be performed. Rest of the data setup should be performed at MOSIP Admin portal.
 Through sync process the data would be sync between local machine and server based on machine's mac-id and center id.  There are other services are available to send the created packet from local machine to remote system.   
 
 
 |**S.No.**| **Service Name**| **Service Description**| **Module Name**|
 |:------:|-----|---|----|
-|1	.|	User Detail Sync  | To synchronize the user related information. Without this sync user can't login to the application. | Kernel|
-|2	.|	User Salt Sync  | User's password is validated using this salt. Without this sync user can't login to the app.  |Kernel|
-|3	.|	Master Data Sync  | Reg. client application related master data are sync from server using this sync. Without this sync, the app won't work. |Kernel|
-|4 	.|	Application configuration Sync  | Reg. client app related dynamic configuration parameters are sync from server. Without this sync, the app won't work.|Kernel|
-|5	.|	Policy Sync  | Sync the key required for packet creation based on center and machine id. Packet can't be created without this sync.|Kernel|
-|6	.|	MOSIP public key Sync  | To synchronize the MOSIP public key, which is used during response sign validation. |	Kernel|
-|7	.|	Pre-registration Data Sync  | To download the center specific pre-registration packet data based on date range. |Pre-Registration|
-|8	.|	Packet Sync  | To upload the list of packet related information before uploading actual packet. Without this sync, the packet can't be uploaded to the server .|Registration-Processor|	
-|9	.|	Packet Status reader  | At regular interval read the status of the uploaded packet and update the same in local db. |Registration-Processor|
-|10	.|	Packet Upload  | To upload the packet generated out of New/ Lost UIN / Update UIN process to MOSIP server. |Registration-Processor|
-|11	.|	Send OTP  | To send OTP message to the user's mobile no. during authentication process. |Kernel|
-|12	.|	Auth Service - UserName and Password  | To get the auth token based on user provided user name and password. This token would be attached in the request while making any service calls in the same user context. |Kernel|	
-|13	.|	Auth Service - UserName and OTP | To get the auth token based on user provided user name and OTP. |Kernel|
-|14	.|	Auth Service - Client id and Secret Key  | To get the auth token based on client id and secret key. |Kernel|
-|15	.|	Validate / Invalidate auth Token  | To validate and invalidate the generated token. |Kernel|
-|16	.|	Notification Service (SMS / EMAIL) | To send notification through SMS / Email channel at the end of Registration process. |Kernel|	
-|17	.|	ID-Authentication API | To on board the user based on user's bio authentication. Without this service, user onborading screen won't work if bio auth enabled. |ID-Authentication|
+|1|	User Detail Sync  | To synchronize the user related information. Without this sync user can't login to the application. | Kernel|
+|2|	User Salt Sync  | User's password is validated using this salt. Without this sync user can't login to the app.  |Kernel|
+|3|	Master Data Sync  | Reg. client application related master data are sync from server using this sync. Without this sync, the app won't work. |Kernel|
+|4|	Application configuration Sync  | Reg. client app related dynamic configuration parameters are sync from server. Without this sync, the app won't work.|Kernel|
+|5|	Policy Sync  | Sync the key required for packet creation based on center and machine id. Packet can't be created without this sync.|Kernel|
+|6|	MOSIP public key Sync  | To synchronize the MOSIP public key, which is used during response sign validation. |	Kernel|
+|7|	Pre-registration Data Sync  | To download the center specific pre-registration packet data based on date range. |Pre-Registration|
+|8|	Packet Sync  | To upload the list of packet related information before uploading actual packet. Without this sync, the packet can't be uploaded to the server .|Registration-Processor|	
+|9|	Packet Status reader  | At regular interval read the status of the uploaded packet and update the same in local db. |Registration-Processor|
+|10|	Packet Upload  | To upload the packet generated out of New/ Lost UIN / Update UIN process to MOSIP server. |Registration-Processor|
+|11|	Send OTP  | To send OTP message to the user's mobile no. during authentication process. |Kernel|
+|12|	Auth Service - UserName and Password  | To get the auth token based on user provided user name and password. This token would be attached in the request while making any service calls in the same user context. |Kernel|	
+|13|	Auth Service - UserName and OTP | To get the auth token based on user provided user name and OTP. |Kernel|
+|14|	Auth Service - Client id and Secret Key  | To get the auth token based on client id and secret key. |Kernel|
+|15|	Validate / Invalidate auth Token  | To validate and invalidate the generated token. |Kernel|
+|16|	Notification Service (SMS / EMAIL) | To send notification through SMS / Email channel at the end of Registration process. |Kernel|	
+|17|	ID-Authentication API | To on board the user based on user's bio authentication. Without this service, user onborading screen won't work if bio auth enabled. |ID-Authentication|
 
    
    
 ## External hardware Driver(s): 
 
-   This section covers the list of drivers required to communicate with the external devices.  
+This section covers the list of drivers required to communicate with the external devices.  
    - To integrate with Scanner, windows WIA libraries are used. So, the respective service should be running and also the scanner specific driver should also be installed.  
    - The application has been currently tested with CANON LiDE 120.  
    - Printer should be available to take the print out from application and the respective driver should be installed.    

@@ -606,7 +606,7 @@ Please find the steps to create primary/secondary languages
 
 https://github.com/mosip/mosip-docs/wiki/Registration-Center-APIs#createupdate-api
 
-## Resource URL
+### Resource URL
 
 `POST /documenttype`
 
@@ -1183,11 +1183,11 @@ KER-MSD-092 | Error occurred while deleting Document Type details
 * [POST /validdocuments/map/{doccategorycode}/{doctypecode}](#post-validdocumentsmapdoccategorycodedoctypecode)
 * [PUT /validdocuments/unmap/{doccategorycode}/{doctypecode}](#put-validdocumentsunmapdoccategorycodedoctypecode)
 
-## GET /validdocuments
+## GET /validdocuments/{languagecode}
 
 ### Resource URL
 
-### `GET /validdocuments/{languagecode}`
+`GET /validdocuments/{languagecode}`
 
 ### Resource details
 
