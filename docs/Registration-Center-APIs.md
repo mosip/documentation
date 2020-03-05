@@ -13,7 +13,6 @@ This section contains detail about the service APIs in the Registration Center M
 * [Search API](#search-api)
 
 # Registration Centers API
-
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Center functionality. Fetch APIs are used by Pre-Registration to display the List of Registration Centers on the UI for an Applicant to select and book appointments. Registration processor also uses the fetch API to validate if a packet is generated in an Authorized Registration Center or not.
 
 * [POST /registrationcenters](#post-registrationcenters)
@@ -28,26 +27,19 @@ These APIs includes create, update and fetch APIs. Create and Update API is used
 * [GET /getlocspecificregistrationcenters/{hierarchylevel}/{textvalue}/{languagecode}](#get-getlocspecificregistrationcentershierarchyleveltextvaluelanguagecode)
 
 ## POST /registrationcenters
-
-Master data is required across the platform. 
-
 This service will create the list of Registration Centers which are used in the MOSIP platform. 
-
-Please find the steps to [create primary/secondary languages](#createupdate-api) 
+Please find the steps to [create primary/secondary languages](#create-update-api) 
 
 ### Resource URL
-
-```POST /registrationcenters````
+`POST /registrationcenters`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
 ### Parameters
-
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 name|Yes|Name of the registration center| | 
@@ -71,7 +63,6 @@ timezone |No | time zone of the registration center | |
 lang_code |Yes | language code  | |
 
 ### Example Request
-
 ```JSON
 {
 	"id": "string",
@@ -136,17 +127,12 @@ KER-MSD-308 |Center Lunch Start Time must be smaller than Center Lunch End Time|
 KER-MSD-309|Center Start Time must be smaller than Center End Time|If Center Start time is bigger than Center End Time
 
 ## PUT /registrationcenters
-
-Master data is required across the platform. 
-
 This service will update the list of Registration Centers which are used in the MOSIP platform. 
 
 ### Resource URL
-
 `PUT /registrationcenters`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -212,6 +198,7 @@ numberOfKiosks|No | Number of Kiosks  | |
 	"requesttime": "2019-12-02T15:32:26.503Z"
 }
 ```
+
 ### Error Response:
 ```
 {
@@ -231,7 +218,6 @@ numberOfKiosks|No | Number of Kiosks  | |
 ```
 
 ### Failure details
-
 Error Code | Error Message | Error Description
 ----- |----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
@@ -246,17 +232,13 @@ KER-MSD-307 |Latitude or Longitude must have minimum 4 digits after decimal|If t
 KER-MSD-308 |Center Lunch Start Time must be smaller than Center Lunch End Time|If Center Lunch start time is bigger than Center Lunch End Time
 KER-MSD-309 |Center Start Time must be smaller than Center End Time|If Center Start time is bigger than Center End Time
 
-
 ## GET /registrationcenters
-Master data is required across the platform. 
-
 This service will provides the service for the List of Registration Centers. 
 
 ### Resource URL
 `GET /registrationcenters`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -330,15 +312,12 @@ Name | Required | Description | Default Value | Example
 ```
 
 ## GET /registrationcenters/{id}/{languagecode}
-Master data is required across the platform. 
-
 This service will provides the service for the List of Registration Centers. 
 
 ### Resource URL
 `GET /registrationcenters/{id}/{languagecode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -348,7 +327,6 @@ Requires Authentication | Yes
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 -NA-
-
 
 ### Example Response
 ```JSON
@@ -489,7 +467,6 @@ This service will return a list of enrollment center details based on the locati
 `GET /getlocspecificregistrationcenters/{langcode}/{locationcode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -543,7 +520,6 @@ locationcode|Yes|The location code for which the list of enrollment centers are 
 
 Description: OK
 
-
 ## GET /getcoordinatespecificregistrationcenters/{languagecode}/{longitude}/{latitude}/{proximitydistance}
 This service will return a list of enrollment center details based on the coordinates
 
@@ -551,7 +527,6 @@ This service will return a list of enrollment center details based on the coordi
 `GET /getcoordinatespecificregistrationcenters/{languagecode}/{longitude}/{latitude}/{proximitydistance}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -606,8 +581,6 @@ proximitydistance|Yes|The proximity diameter in meter| |
 200
 
 Description: Success
-
-
 
 ## GET /registrationcentershistory/{id}/{languagecode}/{eff_dtimes}
 
@@ -693,7 +666,6 @@ Name | Required | Description | Default Value | Example
 
 Description: Success
 
-
 ## GET /getregistrationmachineusermappinghistory/{eff_dtimes}/{registrationcenterid}/{machineid}/{userid}
 
 This service will provides the history of mappings of mapping History of Registration, Machine and User based on Registration Center ID, Machine ID, User ID, Date and Language Code 
@@ -744,7 +716,6 @@ machineid|Yes|ID of the machine| |
 
 Description: Success
 
-
 ## GET /getlocspecificregistrationcenters/{hierarchylevel}/{textvalue}/{languagecode}
 This service will return a list of enrollment center details based on hierarchy level, text value and language code
 
@@ -752,7 +723,6 @@ This service will return a list of enrollment center details based on hierarchy 
 `GET /getlocspecificregistrationcenters/{hierarchylevel}/{textvalue}/{languagecode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -764,7 +734,6 @@ Name | Required | Description | Default Value | Example
 hierarchylevel|Yes|The hierarchy level for which the list of enrollment centers are needed| | 
 textvalue|Yes|This is a free text. The search will happen with the combination of hierarchy level, language code and this free text. The enrollment centers which satisfy these 3 criteria will be returned| | 
 languagecode|Yes|The enrollment center description will be returned in this language code | | 
-
 
 ### Example Response
 ```JSON
@@ -843,16 +812,13 @@ These APIs includes map and un-map API. Both these APIs are used by the Administ
 * [GET /getregistrationmachineusermappinghistory/{effdtimes}/{registrationcenterid}/{machineid}/{userid}](#get-getregistrationmachineusermappinghistoryeffdtimesregistrationcenteridmachineiduserid-1)
 * [PUT /registrationmachineusermappings](#put-registrationmachineusermappings-1)
 
-
 ## POST /registrationmachineusermappings
-
 This service will create a Registration Center-User-Machine Mapping which are used in the MOSIP platform. 
 
 ### Resource URL
 `POST /registrationmachineusermappings`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -904,11 +870,10 @@ isActive|Yes|Mapping is active or not| |
 Description: Success
 
 ## GET /getregistrationmachineusermappinghistory/{effdtimes}/{registrationcenterid}/{machineid}/{userid}
-
 This service will provides the service for the Center-User-Machine with their history. 
 
 ### Resource URL
-### `GET /getregistrationmachineusermappinghistory/{effdtimes}/{registrationcenterid}/{machineid}/{userid}`
+`GET /getregistrationmachineusermappinghistory/{effdtimes}/{registrationcenterid}/{machineid}/{userid}`
 
 ### Resource details
 
@@ -953,14 +918,12 @@ userid|Yes|User Id|
 Description: Success
 
 ## PUT /registrationmachineusermappings
-
 This service will create or update a Registration Center-User-Machine Mapping which are used in the MOSIP platform. 
 
 ### Resource URL
 `PUT /registrationmachineusermappings`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1044,24 +1007,19 @@ KER-MSD-131 | Registration Center, Machine and User Mapping not found | registra
 KER-MSD-108 | Error occurred while deleting mapping of Center, User and Machine details | registration center user machine delete exception
 KER-MSD-136 | Error occurred while updating mapping of Center, User and Machine details | registration center user machine update exception
 
-	
 # Registration Center Machine API
-
 These APIs includes map and un-map API. Both these APIs are used by the Administrator Portal for the Create and Remove Center-Machine Mapping functionality.
 
 * [POST /registrationcentermachine](#post-registrationcentermachine)
 * [DELETE /registrationcentermachine/{regCenterId}/{machineId}](#deleteregistrationcentermachineregcenteridmachineid)
 
 ## POST /registrationcentermachine
-Master data is required across the platform. 
-
 This service will create the mapping of registration canter and machine in the RegistrationCenterMachine Master module. 
 
 ### Resource URL
 `POST /registrationcentermachine`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1112,17 +1070,13 @@ regCenterId|Yes|Available registration center| |
 
 Description: Created
 
-
 ## DELETE/registrationcentermachine/{regCenterId}/{machineId}
-
 This service will provides the service for delete mapping of  Center-Machine. 
 
-
 ### Resource URL
-### `DELETE /registrationcentermachine/{regCenterId}/{machineId}`
+`DELETE /registrationcentermachine/{regCenterId}/{machineId}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1133,7 +1087,6 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 regCenterId|Yes|Registration Center Id|
 machineId|Yes|Machine Id |
-
 
 ### Example Response
 ```JSON
@@ -1155,7 +1108,6 @@ machineId|Yes|Machine Id |
 200
 
 Description: Success
-
 
 ### Failure Response:
 ```JSON
@@ -1182,22 +1134,18 @@ KER-MSD-114 | Mapping for Machine and Center not found | registration center mac
 KER-MSD-106 | Error occurred while deleting a mapping of Machine and Center | registration center machine delete exception
 
 # Registration Center Device API
-
 These APIs includes map and un-map API. Both these APIs are used by the Administrator Portal for the Create and Remove Center-Device Mapping functionality.
 
 * [GET /registrationcenterdevice/map/{regCenterId}/{deviceId}](#get-registrationcenterdevicemapregcenteriddeviceid)
 * [PUT /registrationcenterdevice/unmap/{deviceId}/{regCenterId}](#put-registrationcenterdeviceunmapdeviceidregcenterid)
 
 ## GET /registrationcenterdevice/map/{regCenterId}/{deviceId}
-Master data is required across the platform. 
-
 This service will create the mapping of registration canter and device in the RegistrationCenterDevice Master module. 
 
 ### Resource URL
 `GET /registrationcenterdevice/map/{regCenterId}/{deviceId}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1210,8 +1158,7 @@ deviceId|Yes|Available device id| |
 regCenterId|Yes|Available registration center| | 
 
 ### Example Request
-
-https://mosip.io/v1/masterdata/registrationcenterdevice/map/10001/4cb310e3-965a-4afd-a28e-0db6b3db5423
+```https://mosip.io/v1/masterdata/registrationcenterdevice/map/10001/4cb310e3-965a-4afd-a28e-0db6b3db5423```
 
 ### Example Response
 ```JSON
@@ -1257,15 +1204,12 @@ KER-MSD-419 | Cannot map the Device as it is mapped to another Registration Cent
 KER-MSD-416 | Device cannot be mapped to the Center as Center and Device does not belong to the same Administrative Zone | When the device doesn't belong to same category
 
 ## PUT /registrationcenterdevice/unmap/{deviceId}/{regCenterId}
-
 This service will provides the service for un map the mapping of Device and Registration Center. 
-
 
 ### Resource URL
 `PUT /registrationcenterdevice/unmap/{deviceId}/{regCenterId}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1295,7 +1239,6 @@ https://mosip.io/v1/masterdata/registrationcenterdevice/unmap/4cb310e3-965a-4afd
   "errors": null
 }
 ```
-
 ### Failure Response:
 ```JSON
  {
@@ -1312,9 +1255,7 @@ https://mosip.io/v1/masterdata/registrationcenterdevice/unmap/4cb310e3-965a-4afd
   "response" : null
 }
 ```
-
 ### Failure details
-
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-411 | Admin not authorized to map/un-map this Registration Center | when user zone doesn't belong to the same zone of center
@@ -1325,7 +1266,6 @@ KER-MSD-416 | Device cannot be mapped to the Center as Center and Device does no
 KER-MSD-436 | Error occurred while mapping Device to Registration Center | Exception while mapping device to registration center
 
 # Registration Center Machine Device API
-
 These APIs includes map, un-map and fetch mapping APIs. The Map and Un-Map APIs are used to create/remove Center-Machine-Device mapping.
 
 * [POST /registrationcentermachinedevice](#post-registrationcentermachinedevice)
@@ -1365,8 +1305,6 @@ deviceId|Yes|Available device id| |
     "regCenterId": "string"
   }
 }
-
-
 ```
 ### Example Response
 ```JSON
@@ -1392,14 +1330,12 @@ deviceId|Yes|Available device id| |
 Description: Created
 
 ## DELETE /registrationcentermachinedevice/{regcenterid}/{machineid}/{deviceid}
-Master data is required across the platform. 
 This service will delete the mapping of registration center, machine and device in the RegistrationCenter-Machine-Device Master module. 
 
 ### Resource URL
 `DELETE /registrationcentermachinedevice/{regcenterid}/{machineid}/{deviceid}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1409,7 +1345,6 @@ Requires Authentication | Yes
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 NA
-
 
 ### Example Response
 ```JSON
@@ -1433,7 +1368,6 @@ NA
 200
 
 Description: Success
-
 
 ### Failure Response:
 ```JSON
@@ -1459,12 +1393,10 @@ KER-MSD-076 | Error occurred while inserting a mapping of Center, Machine and De
 KER-MSD-107 | Error occurred while deleting a mapping of Center, Machine and Device | registration center machine device delete exception
 KER-MSD-116 | Mapping for Center, Machine and Device not found | registration center machine device data not found exception
 
-
 # Registration Center search APIs
-
 This API is used by the Administrator Portal to fetch the list of Registration Centers based on a given filter criteria to display the list of Registration Centers on the Portal UI.
 
-[POST /registrationcenters/search](#post-registrationcenterssearch)
+* [POST /registrationcenters/search](#post-registrationcenterssearch)
 
 ## POST /registrationcenters/search
 This service is for the registration centers search functionality. All the filter parameters are passed and the registration centers are searched and the matching results are returned. 
@@ -1598,10 +1530,9 @@ Please find the filter columns used in search:
 }
 ```
 # Registration Center filter values
-
 This API is used by the Administrator Portal to fetch the list of Registration Centers based on a given filter criteria to display the list of Registration Centers on the Portal UI.
 
-[POST /registrationcenters/filtervalues](#post-registrationcentersfiltervalues)
+* [POST /registrationcenters/filtervalues](#post-registrationcentersfiltervalues)
 
 ## POST /registrationcenters/filtervalues
 
@@ -1664,13 +1595,11 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 # Registration Center Type Search APIs
-
 This API is used by the Administrator Portal to fetch the list of Registration Center Types based on a given filter criteria to display the list of Registration Center Types on the Portal UI.
 
-[POST /registrationcentertypes/search](#post-registrationcentertypessearch)
+* [POST /registrationcentertypes/search](#post-registrationcentertypessearch)
 
 ## POST /registrationcentertypes/search
-
 This service is for the registration center types search functionality. All the filter parameters are passed and the registration center types are searched and the matching results are returned. 
 
 ### Resource URL
@@ -1765,9 +1694,9 @@ status|["contains","equals","startsWith"]
 # Registration Center Types Filter values
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Registration Center Type List View UI Screen.
 
-[POST /regcentertypes/filtervalues](#post-regcentertypesfiltervalues)
+* [POST /regcentertypes/filtervalues](#post-regcentertypesfiltervalues)
 
-# POST /regcentertypes/filtervalues
+## POST /regcentertypes/filtervalues
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
@@ -1827,7 +1756,6 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 ```
 
 # Create/Update API
-
 This API is a utility used by all the Create and Update APIs to perform multi-language data validation on the input received from Administrator Portal UI.
 
 All the Create API's use the common class to create masterdata, Please find the important points to be taken care 
@@ -1842,5 +1770,4 @@ Update :
 * Activation and deactivation will be done , If we only pass the primary language with active/deactivate in the request.
 
 # Search API
-
 This API is a utility used by all the Masterdata Search APIs to accept the filter criteria and form a query to fetch data from the Database.
