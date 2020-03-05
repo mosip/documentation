@@ -196,7 +196,7 @@ It integrates the Registration application with Bio-devices [IRIS/ Finger Print/
 
 # Biometric service installation to windows
 
-Please refer to the detailed [**Biometrics Service Integration**](Registration-Client-Biometrics-Service-Integration.md)
+Please refer to the detailed [Biometrics Service Integration](Registration-Client-Biometrics-Service-Integration.md)
 
 **Network Connectivity Check:**  
 Registration client verifies the below-configured URL to check whether the system is in online or not. The application uses this URL to perform the health check before communicating with the external services.
@@ -263,7 +263,7 @@ Through sync process the data would be sync between local machine and server bas
 
    
    
-# External hardware driver(s): 
+# External hardware driver(s)
 
 This section covers the list of drivers required to communicate with the external devices.  
    * To integrate with Scanner, windows WIA libraries are used. So, the respective service should be running and also the scanner specific driver should also be installed.  

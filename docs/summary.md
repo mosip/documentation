@@ -77,7 +77,7 @@
     * [Device Management APIs](Device-Management-APIs.md)
     * [Device Type and Subtype APIs](Device-Type-and-Subtype-APIs.md)
     * [Document APIs](Document-APIs.md)
-    * [Encryption in DTO layer](Encryption-in-DTO-layer.md)
+    * [Encryption in DTO Layer](Encryption-in-DTO-Layer.md)
     * [First User Registration and Onboarding](First-User-Registration-and-Onboarding.md)
     * [FRS MISP Self Service Portal](FRS-MISP-Self-Service-Portal.md)
     * [Github Workflow](Github-Workflow.md)
