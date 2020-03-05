@@ -1,6 +1,6 @@
 An ABIS system that integrates with MOSIP should support the following operations. All ABIS operations are via a message queue and asynchronous.
 
-### Common parameters used for all ABIS operations
+## Common parameters used for all ABIS operations
 
 Name | Description | Restrictions | Default Value | Example
 -----|----------|-------------|--------------|---------------
@@ -14,13 +14,13 @@ scaledScore | Score of the match against the population | None | None | Integer
 targetFPIR | FPIR score as per the formula | None | None | Integer
 maxResults | maximum number of results returned for IDENTIFY operation | 30 | 30 | Integer
 
-### Standard return codes
+## Standard return codes
 0 | not used
 --|---------
 1 | Success
 2 | Failed
 
-### Failure reasons
+## Failure reasons
 Code | Reason
 -----| ------
 1 | Internal error - Unknown
@@ -30,14 +30,15 @@ Code | Reason
 5 | Missing reference id
 7 | Unable to fetch biometric details
 
-All the below operations send biometric data in CBEFF format. (Please refer to the [**link**](MOSIP-Biometric-Data-Specifications#cbeff-xml) for sample cbeff data)
-### INSERT (insert biometric data of an Individual)
+## ABIS Operations
+All the below operations send biometric data in CBEFF format. (Please refer to the [**link**](MOSIP-Biometric-Data-Specifications.md#cbeff) for sample cbeff data)
+### Insert 
 ```
 //Request
 {
     "id" : "mosip.abis.insert",
     "ver" : "1.0",
-    "requestId" : "01234567-89AB-CDEF-0123-456789ABCDEF",
+    "requestId" : "91234567-89AB-CDEF-0123-456789ABCDEF",
     "timestamp" : "1539777717",
     "referenceId" : "01234567-89AB-CDEF-0123-456789ABCDEF",
     "referenceURL" : "https://mosip.io/biometric/45678"
@@ -47,7 +48,7 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
 //Success response
 {
     "id" : "mosip.abis.insert",
-    "requestId" : "01234567-89AB-CDEF-0123-456789ABCDEF",
+    "requestId" : "91234567-89AB-CDEF-0123-456789ABCDEF",
     "timestamp" : "1539777717",
     "returnValue" : 1
 }
@@ -67,7 +68,7 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
  - De-duplication must not be performed in this operation
  - MOSIP must provide CBEFF format biometric data to ABIS
 
-### IDENTIFY
+### Identify
 ```
 {
     "id" : "mosip.abis.identify",
@@ -81,16 +82,16 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
     "gallery" : {
         "referenceIds" : [
             {
-                "referenceId" : "2cce7b7d-b58a-4466-a006-c79297281123"
+                "referenceId" : "2abe7b7d-b58a-4466-a006-c79297281123"
             }, 
             {
-                "referenceId" : "2cce7b7d-b58a-4466-a006-c79297281456"
+                "referenceId" : "7acce7b7d-b58a-4466-a006-c79297281456"
             }, 
             {
-                "referenceId" : "2cce7b7d-b58a-4466-a006-c79297281678"
+                "referenceId" : "3bce7b7d-b58a-4466-a006-c79297281678"
             }, 
             {
-                "referenceId" : "2cce7b7d-b58a-4466-a006-c79297281098"
+                "referenceId" : "5cce7b7d-b58a-4466-a006-c79297281098"
             }, 
             {
                 "referenceId" : "2cce7b7d-b58a-4466-a006-c79297281321"
@@ -109,9 +110,9 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
         "count" : "",
         "candidates" : [
             {
-                "referenceId" : "",
-                "internalScore": "",
-                "scaledScore" : "",
+                "referenceId" : "7acce7b7d-b58a-4466-a006-c79297281456",
+                "internalScore": "112",
+                "scaledScore" : "90",
                 "analytics": [
                     {
                         "key1": "value1",
@@ -121,8 +122,8 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
                 "scores": [
                     {
                         "biometricType": "FIR",
-                        "scaledScore": "",
-                        "internalScore": "",
+                        "scaledScore": "90",
+                        "internalScore": "112",
                         "analytics": [
                             {
                                 "key1": "value1",
@@ -132,8 +133,19 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
                     },
                     {
                         "biometricType": "IIR",
-                        "scaledScore": "",
-                        "internalScore": "",
+                        "scaledScore": "80",
+                        "internalScore": "109",
+                        "analytics": [
+                            {
+                                "key1": "value1",
+                                "key2": "value2"
+                            }
+                        ]
+                    },
+					{
+                        "biometricType": "FID",
+                        "scaledScore": "80",
+                        "internalScore": "109",
                         "analytics": [
                             {
                                 "key1": "value1",
@@ -156,21 +168,21 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
     "failureReason" : 7
 }
 ```
-#### Behavior of IDENTIFY
- - IDENTIFY request MUST provide a 1:n comparison
+#### Behavior of Identify
+ - Identify request MUST provide a 1:N comparison
  - The input set for comparison can be provided by referenceID
  - The collection against which the input set has to be matched is specified by a set of referenceID's. 
    If referenceId is provided, atleast one referenceID must be provided in the input. The provided referenceID's must be 
    present in the reference database.
- - If IDENTIFY is against all the entries in ABIS, then gallery attribute MUST not be specified
+ - If Identify is against all the entries in ABIS, then gallery attribute MUST not be specified
  - maxResults specify how many results can be returned. By default this will be 10
- - IDENTIFY should give all candidates which match targetFIPR or a better score than the targetFIPR
+ - Identify should give all candidates which match targetFIPR or a better score than the targetFIPR
  - This request should not match against referenceID that is not in the reference database
- - If referenceID is not NULL, then, ABIS performs 1:n comparison against all the entries in ABIS using the referenceID
- - If referenceID is NULL and referenceURL is provided, then, ABIS performs 1:n comparison against all the entries in ABIS using the referenceURL
+ - If referenceID is not NULL, then, ABIS performs 1:N comparison against all the entries in ABIS using the referenceID
+ - If referenceID is NULL and referenceURL is provided, then, ABIS performs 1:N comparison against all the entries in ABIS using the referenceURL
  - If referenceID and reference URL both are NULL, then, ABIS throws an error (error code 5)
 
-### DELETE
+### Delete
 ```
 //Request
 {
@@ -199,11 +211,11 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
 }
 ```
 
-#### Behavior of DELETE
+#### Behavior of Delete
 - Removes only the entry referred by the referenceId
 - This operation can be used to remove duplicates found by Identify
 
-### PING
+### Ping
 ```
 //Request
 {
@@ -222,8 +234,8 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
 }
 ```
 
-#### Behavior of PING
-A PING request should respond with a response on the liveness of the ABIS system
+#### Behavior of Ping
+- A Ping request should respond with a response on the liveness of the ABIS system
 
 ### Pending Jobs
 ```
