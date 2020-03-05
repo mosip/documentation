@@ -36,7 +36,7 @@
 #### Issues Workflow
 Status flow from the time an issue is reported till it is resolved and closed.
 
-![https://github.com/mosip/documentation/blob/master/site/_images/issueworflow.png](https://github.com/mosip/documentation/blob/master/site/_images/issueworflow.png)
+![Issue Workflow](_images\contribution_documentation\issueworkflow.PNG)
 
 1. Any issue created will be in NEW status 
 1. NEW issues are triaged and if deemed to be fixed, they are marked "TO BE FIXED".  If not, then are closed directly as CLOSED.

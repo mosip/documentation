@@ -517,5 +517,5 @@ public class SampleReference extends SomeSuperClass {
 ```
 # References
 
-<div>http://www.oracle.com/technetwork/java/codeconventions-150003.pdf</div>
-<div>https://www.jfokus.se/jfokus17/preso/Java-SE-8-best-practices.pdf</div>
+* http://www.oracle.com/technetwork/java/codeconventions-150003.pdf
+* https://www.jfokus.se/jfokus17/preso/Java-SE-8-best-practices.pdf
