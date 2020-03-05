@@ -1,4 +1,4 @@
-# Installation and Configuration:
+# Registration Client Installation and Configuration
 
 This document contains the 'Registration client (Reg Client App)' application initial setup, update and configuration process.       
 
@@ -10,8 +10,9 @@ A Trusted Platform Module (TPM) is a specialized chip on a local machines that s
 
 ![Registration client Setup](_images/registration/reg-client-app-install-process1.png)   
 
-# Application Build:  
-JDK 8u181 [Oracle] or later version to Build the application.  
+# Application Build
+
+JDK 8u181 [Oracle] or later version to build the application.  
 
 **Registration client application is built with four different modules:**
 
@@ -21,6 +22,7 @@ JDK 8u181 [Oracle] or later version to Build the application.
     * registration-services - it contains the Java API, which would be called from UI module to render the services to the User and capture the detail from User and store it in DB or send to external systems through services.    
 
 **Following files to be modified before building the application:**    
+	
 	*  spring.properties - [registration-services module] - It contains the environment based REST client URL to make different service calls and all the required properties.  
 	*  mosip-application.properties - [registration-libs module] - It contains Reg-Client Download , Configuration URL and Properties to check application online/offline status and Reg client download url from JFrog repository and all the required properties.
     *  As part of the Jenkins, the required environment should be passed as run time argument **environment** for the build. Ex: "mvn clean install -Denvironment=mosip.hostname".
@@ -30,7 +32,7 @@ JDK 8u181 [Oracle] or later version to Build the application.
 
 # Prerequisites
   
-## System Prerequisites
+## System prerequisites
    - CPU - Dual Core Processor - 2GHZ  
    - Ram - 16 GB  
    - Local Storage Disk Space - 500 GB 
@@ -38,9 +40,9 @@ JDK 8u181 [Oracle] or later version to Build the application.
    - Physical machine with TPM 2.0 facility.   
    - Windows OS [10 v] 
 
-## Application Prerequisites
+## Application prerequisites
    
-   Before running the 'Registration client' application, following prerequisites to be completed.
+**Before running the 'Registration client' application, following prerequisites to be completed:**
 
    - Before building the 'registration-services' module, all the external [dependent services](#dependent-services-) URLs should be configured in the **'spring.properties'** and **'mosip-application.properties'** files.     
    - [Property file](#property-file-) - **[spring.properties]** should be updated with right environment [env] and other detail.     
@@ -54,43 +56,48 @@ JDK 8u181 [Oracle] or later version to Build the application.
         
 # Anti Virus - ClamAV Setup and Configuration in local machine 
 
-   Installation of Open Source Anti Virus Software [ClamAV]:  
+**Installation of Open Source Anti Virus Software [ClamAV]:**  
+   
    1.	Download the ClamAV (Version: 0.101.2) Anti Virus Software - [link](http://www.clamav.net/downloads)  
    2.	Install the downloaded .exe file.  
    	
-   **ClamAV Config Setup:**     
-    1. Rename the **clamd.conf.sample** to **clamd.conf** from the installed directory of ClamAV.   
+**ClamAV Config Setup:**     
+    
+	* Rename the **clamd.conf.sample** to **clamd.conf** from the installed directory of ClamAV.   
         Ex: C:\Program Files\ClamAV\conf_examples\clamd.conf.sample file   
             save as  C:\Program Files\ClamAV\conf_examples\clamd.conf   
-    2.Rename the **freshclam.conf.sample** to **freshclam.conf** from the installed directory of ClamAV.  
+    * Rename the **freshclam.conf.sample** to **freshclam.conf** from the installed directory of ClamAV.  
         Ex: C:\Program Files\ClamAV\conf_examples\ freshclam.conf.sample file  
             save as C:\Program Files\ClamAV\conf_examples\ freshclam.conf  
-    3.Comment the line# 8(Example) in both the files  
-    4.Download the Antivirus database from the following urls and placed it in the database folder(C:\Program Files\ClamAV\database)  
+    * Comment the line# 8(Example) in both the files  
+    * Download the Antivirus database from the following urls and placed it in the database folder(C:\Program Files\ClamAV\database)  
        - http://database.clamav.net/main.cvd  
        - http://database.clamav.net/daily.cvd  
        - http://database.clamav.net/bytecode.cvd  
-    5. Update Config files:  
-    **clamd.conf file changes:**  
-      1.	Uncomment LogFile "C:\Program Files\ClamAV\clamd.log"(Line 14)
-   
-    **freshclam.conf file changes:**  
-     Uncomment the below mentioned lines in the file,  
-    1.	DatabaseDirectory - "C:\Program Files\ClamAV\database"(Line 13)  
-    2.	UpdateLogFile     - "C:\Program Files\ClamAV\freshclam.log"(Line 17)  
-    3.	DatabaseMirror    - db.XY.clamav.net(Line 69)  change XY to our country code [Eg: IN]
-    4.	DatabaseMirror    - database.clamav.net(Line 75)   
-    5.	Checks 24(Line 113)  
-    6.	LocalIPAddress aaa.bbb.ccc.ddd(Line 131)  change to our machine IP address   
+    * Update Config files:  
 
-   **Once all the Configurations are done run the freshclam.exe and then run clamd.exe. If required, restart the machine.**   
+**clamd.conf file changes:**  
+
+    * Uncomment LogFile "C:\Program Files\ClamAV\clamd.log"(Line 14)
+   
+**freshclam.conf file changes:**  
+    Uncomment the below mentioned lines in the file,
+	
+    * DatabaseDirectory - "C:\Program Files\ClamAV\database"(Line 13)  
+    * UpdateLogFile     - "C:\Program Files\ClamAV\freshclam.log"(Line 17)  
+    * DatabaseMirror    - db.XY.clamav.net(Line 69)  change XY to our country code [Eg: IN]
+    * DatabaseMirror    - database.clamav.net(Line 75)   
+    * Checks 24(Line 113)  
+    * LocalIPAddress aaa.bbb.ccc.ddd(Line 131)  change to our machine IP address   
+
+**Once all the Configurations are done run the freshclam.exe and then run clamd.exe. If required, restart the machine.**   
  
 # Registration Client installation  
 
 **Download - Application Initial Setup file:**  
    
-   1. User login to the Secure JFROG artifactory[Https --> Hostname] portal and download the client application initial setup ZIP file [mosip-sw-0.12.*.zip].   
-   2. Once downloaded then unzip the file into a particular location. It contains the following folder structure.  
+   * User login to the Secure JFROG artifactory[Https --> Hostname] portal and download the client application initial setup ZIP file [mosip-sw-0.12.*.zip].   
+   * Once downloaded then unzip the file into a particular location. It contains the following folder structure.  
       - bin: It contains the client UI and service binaries in an encrypted format.
       - lib: It contains the library required for the application to run.  
       - cer: It contains the certificate used to communicate with the MOSIP server.  
@@ -98,15 +105,16 @@ JDK 8u181 [Oracle] or later version to Build the application.
       - run.bat: batch file to launch the application.  
       - jre: It contains the java runtime engine along with the required DLLs. 
       
-   3. Click the 'run.bat' to initiate the setup process.  
+   * Click the 'run.bat' to initiate the setup process.  
    
-   When the user clicks on the 'run.bat' it does the following :  
-   1. Loads the binary repository URL from a property file.  
-   2. Communicate with the  Secure JFrog repository[Https --> Hostname] through a secured connection and download the maven-metadata.xml file to identify the latest jar versions.    
-   3. Download the latest build Manifest.mf file from the server, where all the jars (including shared lib) name and checksums are provided.  
-   4. Compare the checksum of the local version of jar files with the data present in the latest downloaded Manifest.mf file.    
-   5. Identify the list of binary files and Download the required jars.  
-   6. Once download completed then communicate with TPM to decrypt the key{if TPM enabled}, which is used to decrypt the UI and service jars and start the application.   
+**When the user clicks on the 'run.bat' it does the following:**
+   
+   * Loads the binary repository URL from a property file.  
+   * Communicate with the  Secure JFrog repository[Https --> Hostname] through a secured connection and download the maven-metadata.xml file to identify the latest jar versions.    
+   * Download the latest build Manifest.mf file from the server, where all the jars (including shared lib) name and checksums are provided.  
+   * Compare the checksum of the local version of jar files with the data present in the latest downloaded Manifest.mf file.    
+   * Identify the list of binary files and Download the required jars.  
+   * Once download completed then communicate with TPM to decrypt the key{if TPM enabled}, which is used to decrypt the UI and service jars and start the application.   
    
 **Application Startup:**  
    - User should initially be online to validate their authentication against the MOSIP server. Post which, the sync process would be initiated.     
@@ -116,17 +124,17 @@ JDK 8u181 [Oracle] or later version to Build the application.
 
 # Update Process
 The application refers to the 'maven-metadata.xml' to verifies any new version exists or not. [Which is generated under the '**registration-client**' module post successful Jenkins build.]
-   
+
 mosip.rollback.path - Make sure that the rollback path is provided in this variable, which is available in 'spring.properties' file; as part of the **registration-services** module. 
        
 ## Application update
-   - During the startup of the application, the software check will be validating against the maven-metadata.xml file from artifactory repository. If any diffs found, the application prompts the user with 'Update Now' or 'Update Later' options to install immediately or later. Apart from this, there is another menu option available in the application to trigger the 'Update' process post login to the application. The update process would update both the application binaries and DB.
-    
-   - During the update process, the running application refer to the 'rollback' path and take the back up of 'lib, bin, MANIFEST.MF' files inside rollback folder with the new folder as 'Version_timstamp' format. 
-   - Download and Update the required binary libraries and DB script into the existing running folder and restart the application.  
+
+   * During the startup of the application, the software check will be validating against the maven-metadata.xml file from artifactory repository. If any diffs found, the application prompts the user with 'Update Now' or 'Update Later' options to install immediately or later. Apart from this, there is another menu option available in the application to trigger the 'Update' process post login to the application. The update process would update both the application binaries and DB.
+   * During the update process, the running application refer to the 'rollback' path and take the back up of 'lib, bin, MANIFEST.MF' files inside rollback folder with the new folder as 'Version_timstamp' format. 
+   * Download and Update the required binary libraries and DB script into the existing running folder and restart the application.  
         
 ## Database update
-   - The database update can be rolled out through the binary update process. If any changes in the script then the respective script would be attached inside 'registration-service/resource/sql/version folder [like: 0.12.8]' and deliver the jar with the newer version. During the update process, the jar would be downloaded and script inside the jar would be executed.  It would also contains the 'rollback' {registration-service/resource/sql/version folder_rollback [like: 0.12.8_rollback]} script if update process to be rollbacked due to any technical error.  
+   * The database update can be rolled out through the binary update process. If any changes in the script then the respective script would be attached inside 'registration-service/resource/sql/version folder [like: 0.12.8]' and deliver the jar with the newer version. During the update process, the jar would be downloaded and script inside the jar would be executed.  It would also contains the 'rollback' {registration-service/resource/sql/version folder_rollback [like: 0.12.8_rollback]} script if update process to be rollbacked due to any technical error.  
 
 
 # Configuration
@@ -258,10 +266,10 @@ Through sync process the data would be sync between local machine and server bas
 # External hardware Driver(s): 
 
 This section covers the list of drivers required to communicate with the external devices.  
-   - To integrate with Scanner, windows WIA libraries are used. So, the respective service should be running and also the scanner specific driver should also be installed.  
-   - The application has been currently tested with CANON LiDE 120.  
-   - Printer should be available to take the print out from application and the respective driver should be installed.    
-   - Camera and the respective driver should be available to capture the applicant photo. Application tested with Logitech camera.  
-   - If GPS enabled through configuration then the respective device/ model specific driver should be installed to communicate through application.  
+   * To integrate with Scanner, windows WIA libraries are used. So, the respective service should be running and also the scanner specific driver should also be installed.  
+   * The application has been currently tested with CANON LiDE 120.  
+   * Printer should be available to take the print out from application and the respective driver should be installed.    
+   * Camera and the respective driver should be available to capture the applicant photo. Application tested with Logitech camera.  
+   * If GPS enabled through configuration then the respective device/ model specific driver should be installed to communicate through application.  
    
    
