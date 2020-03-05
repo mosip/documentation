@@ -20,7 +20,7 @@ maxResults | maximum number of results returned for IDENTIFY operation | 30 | 30
 1 | Success
 2 | Failed
 
-## Failure reasons
+### Failure reasons
 Code | Reason
 -----| ------
 1 | Internal error - Unknown
@@ -61,7 +61,7 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
     "failureReason" : 7
 }
 ```
-### Behavior of Insert
+#### Behavior of Insert
  - ABIS must get biometric data from referenceURL, process it and store it locally within the ABIS reference database 
  - referenceId must not be active prior to this operation i.e., it must not have been used before this operation
  - De-duplication must not be performed in this operation
@@ -156,7 +156,7 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
     "failureReason" : 7
 }
 ```
-### Behavior of IDENTIFY
+#### Behavior of IDENTIFY
  - IDENTIFY request MUST provide a 1:n comparison
  - The input set for comparison can be provided by referenceID
  - The collection against which the input set has to be matched is specified by a set of referenceID's. 
@@ -199,7 +199,7 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
 }
 ```
 
-### Behavior of DELETE
+#### Behavior of DELETE
 - Removes only the entry referred by the referenceId
 - This operation can be used to remove duplicates found by Identify
 
@@ -222,7 +222,7 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
 }
 ```
 
-### Behavior of PING
+#### Behavior of PING
 A PING request should respond with a response on the liveness of the ABIS system
 
 ### Pending Jobs
@@ -245,7 +245,7 @@ A PING request should respond with a response on the liveness of the ABIS system
 }
 ```
 
-### Behavior of Pending Jobs
+#### Behavior of Pending Jobs
 - ABIS responds with the count of requests that are still pending
 
 ### Reference Count
@@ -267,5 +267,5 @@ A PING request should respond with a response on the liveness of the ABIS system
     "returnValue" : 1
 }
 ```
-### Behavior of Reference Count
+#### Behavior of Reference Count
 - ABIS will send a count of records in the reference database
