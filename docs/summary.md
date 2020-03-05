@@ -41,6 +41,7 @@
     * [Resident Service APIs](Resident-Service-APIs.md)
     * [Template APIs](Template-APIs.md)
     * [Zone APIs](Zone-APIs.md)
+* [LICENSE](License.md)
 
 ## ALL PAGES
 
@@ -96,6 +97,7 @@
     * [Issue Reporting Guideline](Issue-Reporting-Guideline.md)
     * [Kernel APIs](Kernel-APIs.md)
     * [Kernel](Kernel.md)
+    * [License](License.md)
     * [Machine APIs](Machine-APIs.md)
     * [Master Data Services Functionality](Master-Data-Services-Functionality.md)
     * [Masterdata generic api spec](Masterdata-generic-api-spec.md)
