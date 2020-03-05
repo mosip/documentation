@@ -5,7 +5,7 @@
 * Get to know the [MOSIP github repo structure](https://github.com/mosip)
 * If you do not have a github account, get one.
 * Deploy and try MOSIP using the [MOSIP deployer for developers](https://github.com/mosip/mosip-infra/tree/master/deployment/sandbox).
-* The [code of conduct](code-of-conduct.md) some basic ethics that must while operating within the MOSIP community.  Make sure you read it completely.  If you have any queries/suggestions, direct them to info@mosip.io.
+* The [code of conduct](Code-of-Conduct.md) some basic ethics that must while operating within the MOSIP community.  Make sure you read it completely.  If you have any queries/suggestions, direct them to info@mosip.io.
 * If you are a developer willing to contribute to MOSIP, take a look at [MOSIP Java coding standards](MOSIP-Java-Coding-Standards.md).
 
 That's it!  You have bootsrapped yourself into the world of MOSIP.  Welcome!
