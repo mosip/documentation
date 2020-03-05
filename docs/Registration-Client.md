@@ -50,11 +50,10 @@ All the registration information is zipped and encrypted in a packet and send to
 
 MOSIP provides an Windows based reference implementation of the client that has UI and business logic to perform the above process flows.  The code, design, App setup, build documentation is available in [registration client repo](https://github.com/mosip/registration/tree/master/registration).  The App may be modified according to a country's need.  
 
-* [App setup guide](Registration-Client-Setup.md)
-* [APIs used by App]
+[App setup guide](Registration-Client-Setup.md)
+
 
 # First user on-boarding
-
 TBD
 
 
