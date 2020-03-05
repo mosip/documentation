@@ -38,7 +38,7 @@ MOSIP offers high configurability to customise and deploy for a country. Many co
 |---|---|---|
 |UIN Generator|Yes||
 |Token Generator|Yes||
-|Partner Management|Yes|[Partner Managemen APIs](Partner-Management-Service-APIs.md) are available.  Portal to be created by SI|
+|Partner Management|Yes|[Partner Management APIs](Partner-Management-Service-APIs.md) are available.  Portal to be created by SI|
 |Device Management|Yes|Admin portal allows managing registered devices. Device registration API is available. Device vendor to provide Device Management Server which takes care of registering devices and Key rotation|
 |SMS Notification|Yes|Interface available.  SMS Gateway/service to be provided by SI|
 |Email Notification|Yes|Interface available.  SMS Gateway/service to be provided by SI|

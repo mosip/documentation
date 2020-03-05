@@ -2,13 +2,12 @@ This section details about the service API in the Partner Management module.
 
 #### Note:
 For securely accessing any API in MOSIP, you must gain auth token from kernel authmanager
+
 1. Authenticate through client-id/Secret or User Id/Password having respective roles assigned in IAM.
 2. After successful authentication access token will set as Authorization cookies.
 3. Access API through postman by passing the access token in cookies.
 
-MOSIP common authentication and authorization APIs would be used for authentication and generation of secured auth token 
- url- https://github.com/mosip/mosip-docs/wiki/AuthN-&-AuthZ-APIs#post-v1authenticateuseridpwd
-
+MOSIP common [authentication and authorization APIs](authn-and-authz-apis.md) would be used for authentication and generation of secured auth token.
 ```
 {
   "id": "string",
@@ -22,9 +21,10 @@ MOSIP common authentication and authorization APIs would be used for authenticat
   }
 }
 ```
-After hitting api, you will get the Authorization token in the cookie. 
+After hitting api, you will get the authorization token in the cookie. 
 
 #### Prerequisite for Partner Management Module:
+
 1. Digital certificate sharing between MOSIP and Partners
 2. MISP (MOSIP Infrastructure Service Provider) Creation
 3. Master data related to Partner Management - like Policy Groups, Partner Manager mappings to Policy Groups, Policy Manager mappings to Policy Groups, Master policy for the country
@@ -54,10 +54,10 @@ This service would be used by MOSIP admin for MISP(MOSIP Infrastructure Service 
 
 
 ### POST /misps
-MOSIP Admin would be able to create MISP using this API. At the time of creation of MISP, MISP ID and MISP License Key are generated,mapped and shared back in response. Post successful MISP creation, by default MISP is set to active status,  MISP License key is to active status. MISP License key is configurable and set to expire in 3 months, 6 months OR any configurable period.  Kernel ID generator API would be used to generate unique id as mentioned in [Kernel ID Generator](https://github.com/mosip/mosip-platform/tree/master/kernel/kernel-idgenerator-vid)
+MOSIP Admin would be able to create MISP using this API. At the time of creation of MISP, MISP ID and MISP License Key are generated,mapped and shared back in response. Post successful MISP creation, by default MISP is set to active status,  MISP License key is to active status. MISP License key is configurable and set to expire in 3 months, 6 months OR any configurable period.  Kernel ID generator API would be used to generate unique id as mentioned in [Kernel ID Generator](https://github.com/mosip/commons/tree/master/kernel/kernel-idgenerator-mispid)
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/misps</div>
+`https://mosip.io/partnermanagement/v1/misps`
 
 #### Resource details
 Resource Details | Description
@@ -99,8 +99,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 
 ```
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: MISP successfully created
 ```JSON
 {
@@ -120,7 +123,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: MISP already registered
 
 ```JSON
@@ -151,7 +156,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to update MISP for given mispID.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/misps/{mispId}</div>
+`https://mosip.io/partnermanagement/v1/misps/{mispId}`
 
 #### Resource details
 Resource Details | Description
@@ -197,7 +202,9 @@ request.address|Optional|MISP address|India
 }
 ```
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
 ```JSON
 {
@@ -243,13 +250,14 @@ PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attr
 PMS_COR_003|Could not process the request|Any Internal Error
 
 ### POST /misps/{mispId}/licenseKey
-This API would be used for validating MISPs license key- 
+This API would be used for validating MISPs license key.
+
    1. Validate license key pattern.
    2. Validate license key is associated with the requested MISP id.
    3. Validate license key is Active or not.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/misps/{mispId}/licenseKey</div>
+`https://mosip.io/partnermanagement/v1/misps/{mispId}/licenseKey`
 
 #### Resource details
 Resource Details | Description
@@ -293,8 +301,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: MISP License validated successfully
 ```JSON
 {
@@ -308,7 +319,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 }
 ```
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: MISP ID/MISP License Key not available in database
 ```JSON
 {
@@ -341,7 +354,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to update MISP status for given MISP ID.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/misps/{mispId}</div>
+`https://mosip.io/partnermanagement/v1/misps/{mispId}`
 
 #### Resource details
 Resource Details | Description
@@ -381,7 +394,9 @@ request.mispStatus|Yes|MISP status|De-Active
 }
 ```
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
 ```JSON
 {
@@ -395,7 +410,9 @@ request.mispStatus|Yes|MISP status|De-Active
 }
 ```
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: MISP Organization Name, MISP Contact Number, MISP Email ID, MISP Address - None available in request
 ```JSON
 {
@@ -428,7 +445,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to activate/deactivate MISPs License Key for the MSIP ID.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/misps/{mispId}/licenseKey</div>
+`https://mosip.io/partnermanagement/v1/misps/{mispId}/licenseKey`
 
 #### Resource details
 Resource Details | Description
@@ -441,7 +458,6 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 mispId |Yes| id of the misp|64269837502851
 
-
 #### Request Body Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
@@ -453,12 +469,10 @@ request.mispStatus|Optional|MISP status|Active
 request.mispLicenseKey|Optional|MISP license Key|fa604-affcd-33201-04770
 request.mispLicenseKeyStatus|Optional|MISP license Key Status|Active
 
-
 #### Request Header 
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
-
 
 #### Request:
 ```JSON
@@ -476,8 +490,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: MISP License updated successfully
 ```JSON
 {
@@ -491,7 +508,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 }
 ```
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: MISP status,  MISP License key status - None available in request
 ```JSON
 {
@@ -523,7 +542,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve all MISPs details.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/misps</div>
+`https://mosip.io/partnermanagement/v1/misps`
 
 #### Resource details
 Resource Details | Description
@@ -539,7 +558,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
 
 ```JSON
@@ -569,7 +590,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 }
 ```
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: No MISP details found
 ```JSON
 {
@@ -600,7 +623,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve the MISPs details based on given misp id.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/misps/{mispId}</div>
+`https://mosip.io/partnermanagement/v1/misps/{mispId}`
 
 #### Resource details
 Resource Details | Description
@@ -618,9 +641,10 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
 
 ```JSON
@@ -639,7 +663,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 }
 ```
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: MISP ID does not exist
 ```JSON
 {
@@ -671,7 +697,7 @@ This API would be used to retrieve MISPs details based on given name
 2. If MISP organization name not present, then retrieve all misp details. 
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/misps/{mispOrgName}</div>
+`https://mosip.io/partnermanagement/v1/misps/{mispOrgName}`
 
 #### Resource details
 Resource Details | Description
@@ -690,8 +716,11 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: Config parameter retrieved successfully 
 ```JSON
 {
@@ -726,7 +755,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 }
 ```
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: No MISP found for the organization
 ```JSON
 {
@@ -756,7 +787,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used by MISP Admin / MOSIP Admin for download MISPs license key. In case where license key got expired then user would be able to get a new license key. New license key thus generated would be mapped with given MISP ID . Older license keys would be updated with inactive status. 
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/misps/{mispId}/licenseKey</div>
+`https://mosip.io/partnermanagement/v1/misps/{mispId}/licenseKey`
 
 #### Resource details
 Resource Details | Description
@@ -777,8 +808,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: MISP License retrieved successfully
 ```JSON
 {
@@ -794,7 +828,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 }
 ```
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: MISP status,  MISP License key status - None available in request
 ```JSON
 {
@@ -835,7 +871,7 @@ This service would be used by Policy Manager to manage policies for his Policy G
 This API would be used to create new Policy for policy group
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/policies</div>
+`https://mosip.io/partnermanagement/v1/policies`
 
 #### Resource details
 Resource Details | Description
@@ -855,7 +891,6 @@ request.desc|Yes|description of the policy|Desc about policy
 request.policies|Yes|policy file|JSON
 request.policies.authPolicies|Yes|auth details|Array of JSON
 request.policies.allowedKycAttributes|Yes|eKYC details|Array of JSON
-
 
 #### Request Header 
 Name | Required | Description | Comment
@@ -902,8 +937,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: create new Policy for policy group is successful
 ```JSON
 {
@@ -928,9 +966,10 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 }
 ```
 
-
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: If policy name already exists in the policy group
 ```JSON
 {
@@ -946,6 +985,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -963,7 +1003,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to update existing policy for a policy group
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/policies/{policyID}</div>
+`https://mosip.io/partnermanagement/v1/policies/{policyID}`
 
 #### Resource details
 Resource Details | Description
@@ -1034,8 +1074,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: update existing policy for policy group is successful
 ```JSON
 {
@@ -1058,7 +1101,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: If policy ID does not exist
 ```JSON
 {
@@ -1074,6 +1119,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -1094,7 +1140,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to update the status (activate/deactivate) for the given policy id.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/policies/{policyID}</div>
+`https://mosip.io/partnermanagement/v1/policies/{policyID}`
 
 #### Resource details
 Resource Details | Description
@@ -1133,10 +1179,12 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
    }
 }
 ```
-
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: update the existing policy status successful
 ```JSON
 {
@@ -1152,7 +1200,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: If policy ID does not exist
 ```JSON
 {
@@ -1184,7 +1234,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 Policy manager would require this service to get details for the policies in the policy group he belongs to. All the policy groups are required to be back filled in the partner management database through an offline process based on country specific requirements. Partner Manager and Policy Manager assigned for the Policy group are also required to be back filled along with creation of the policy group. Partner management would depend on Kernel IAM module services for all user management related activities. User ID and Password are shared using off-line process.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/policies</div>
+`https://mosip.io/partnermanagement/v1/policies`
 
 #### Resource details
 Resource Details | Description
@@ -1198,8 +1248,11 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: retrieve the policies available for my policy group successful
 ```JSON
 {
@@ -1287,7 +1340,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: No Active policy available in the Policy Group
 ```JSON
 {
@@ -1317,7 +1372,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve existing policy for a policy group based on the policy id.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/policies/{policyID}</div>
+`https://mosip.io/partnermanagement/v1/policies/{policyID}`
 
 #### Resource details
 Resource Details | Description
@@ -1336,8 +1391,11 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: policy retrieved successfully
 ```JSON
 {
@@ -1384,7 +1442,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: If policy ID does not exist
 ```JSON
 {
@@ -1416,7 +1476,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve the partner policy details for given PartnerAPIKey. 
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/policies/fa604-affcd-33201-04770</div>
+`https://mosip.io/partnermanagement/v1/policies/fa604-affcd-33201-04770`
 
 #### Resource details
 Resource Details | Description
@@ -1435,8 +1495,11 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: retrieve the partner policy details for given PartnerAPIKey successful
 ```JSON
 {
@@ -1483,7 +1546,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: No policy available for given PartnerAPIKey
 ```JSON
 {
@@ -1527,7 +1592,7 @@ This service enables partner managers to manage respective partners, manage part
 This API would be used by partner Manager, to update Partner api key to Policy Mappings.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}/{PartnerAPIKey}</div>
+`https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}/{PartnerAPIKey}`
 
 #### Resource details
 Resource Details | Description
@@ -1572,8 +1637,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: Partner api key to Policy Mappings updated successfully.
 ```JSON
 {
@@ -1588,7 +1656,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: old/new Policy %d does not exist
 ```JSON
 {
@@ -1624,7 +1694,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to activate/deactivate Auth/E-KYC Partners
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}</div>
+`https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}`
 
 #### Resource details
 Resource Details | Description
@@ -1666,8 +1736,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: Partner status updated successfully.
 ```JSON
 {
@@ -1715,7 +1788,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 Partner Manager would be using this API to activate OR de-activate PartnerAPIKey for given partner.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}/{PartnerAPIKey}</div>
+`https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}/{PartnerAPIKey}`
 
 #### Resource details
 Resource Details | Description
@@ -1758,8 +1831,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: PartnerAPIKey status updated successfully.
 ```JSON
 {
@@ -1811,7 +1887,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 Partner Manager would be using this API to approve OR reject partner API key requests based on API key request id. During approval process of the request unique PartnerAPI Key is generated in Partner Management module, which is mapped to requested policies. Partner API Key would be having default active status, expiry of which would configurable.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/pmpartners/PartnerAPIKeyRequests/{APIKeyReqID}</div>
+`https://mosip.io/partnermanagement/v1/pmpartners/PartnerAPIKeyRequests/{APIKeyReqID}`
 
 #### Resource details
 Resource Details | Description
@@ -1853,8 +1929,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: PartnerAPIKey approved successfully.
 ```JSON
 {
@@ -1902,7 +1981,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve all Auth/E-KYC Partners for the policy group.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/pmpartners</div>
+`https://mosip.io/partnermanagement/v1/pmpartners`
 
 #### Resource details
 Resource Details | Description
@@ -1916,8 +1995,11 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: retrieve the partner details for the particular policy group.
 ```JSON
 {
@@ -1949,7 +2031,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: No partner Registered in the policy Group
 ```JSON
 {
@@ -1981,7 +2065,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve the particular Auth/E-KYC Partner details for given partner id. 
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}</div>
+`https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}`
 
 #### Resource details
 Resource Details | Description
@@ -2000,8 +2084,11 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: retrieve the partner details for the particular policy group.
 ```JSON
 {
@@ -2021,7 +2108,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: Requested partner does not exist
 ```JSON
 {
@@ -2053,7 +2142,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 Partner managers would be using this request to retrieve the Partner API key to Policy Mappings. Partner management system would be able to validate Partner API Key pattern, validate expiry for Partner API Key and status details in background, while fetching Policy to Partner API mappings.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}/{PartnerAPIKey}</div>
+`https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}/{PartnerAPIKey}`
 
 #### Resource details
 Resource Details | Description
@@ -2074,8 +2163,11 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: successfully retrieved the Partner API key to Policy Mappings.
 ```JSON
 {
@@ -2091,7 +2183,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: Requested partner does not exist
 ```JSON
 {
@@ -2124,7 +2218,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve all Partner API Key requests as received by partner manager
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/pmpartners/PartnerAPIKeyRequests</div>
+`https://mosip.io/partnermanagement/v1/pmpartners/PartnerAPIKeyRequests`
 
 #### Resource details
 Resource Details | Description
@@ -2138,8 +2232,11 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: successfully retrieved the Partner API key to Policy Mappings.
 ```JSON
 {
@@ -2171,7 +2268,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: No Partner api key requests for the Policy Group
 ```JSON
 {
@@ -2203,7 +2302,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve the request for Partner API key to Policy Mappings for given request id
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/pmpartners/PartnerAPIKeyRequests/{APIKeyReqID}</div>
+`https://mosip.io/partnermanagement/v1/pmpartners/PartnerAPIKeyRequests/{APIKeyReqID}`
 
 #### Resource details
 Resource Details | Description
@@ -2222,8 +2321,11 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: successfully retrieved the Partner API key requests for the partner manager.
 ```JSON
 {
@@ -2242,7 +2344,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: No Partner api key requests for the Policy Group
 ```JSON
 {
@@ -2291,7 +2395,7 @@ This API would be used for self registration by partner to create Auth/E-KYC Par
 * Password for any userid would be shared via an off-line process.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/partners</div>
+`https://mosip.io/partnermanagement/v1/partners`
 
 #### Resource details
 Resource Details | Description
@@ -2336,8 +2440,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: Partner successfully created.
 ```JSON
 {
@@ -2383,7 +2490,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to submit Partner api key request.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests</div>
+`https://mosip.io/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests`
 
 #### Resource details
 Resource Details | Description
@@ -2427,8 +2534,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: partnerAPIKeyRequest successfully created.
 ```JSON
 {
@@ -2444,7 +2554,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: A Partner is already registered with name ”+ Partner Organization Name+ “ in the policy Group +Policy Group
 ```JSON
 {
@@ -2477,7 +2589,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to download Partner API key for the given APIKeyReqID
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests/{APIKeyReqID}</div>
+`https://mosip.io/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests/{APIKeyReqID}`
 
 #### Resource details
 Resource Details | Description
@@ -2497,8 +2609,11 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: successfully retrieved the partnerAPIKey.
 ```JSON
 {
@@ -2513,7 +2628,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: APIKeyReqID does not exist
 ```JSON
 {
@@ -2554,7 +2671,7 @@ Following Kernel services would be utilized for certificate and key management a
 
    
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/partners/digitalcertificate</div>
+`https://mosip.io/partnermanagement/v1/partners/digitalcertificate`
 
 #### Resource details
 Resource Details | Description
@@ -2599,8 +2716,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: successfully uploaded partner's digital certificate
 ```JSON
 {
@@ -2615,7 +2735,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: Partner digital certificate is not valid
 ```JSON
 {
@@ -2646,7 +2768,7 @@ PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attr
 This API would be used to update Auth/E-KYC Partner's details.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/partners/{partnerID}</div>
+`https://mosip.io/partnermanagement/v1/partners/{partnerID}`
 
 #### Resource details
 Resource Details | Description
@@ -2694,8 +2816,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: Partner successfully updated.
 ```JSON
 {
@@ -2744,7 +2869,7 @@ As the MOSIP system Partner Management module would integrate with Kernel for va
 In case where MOSIP would act as certification authority for partners, MOSIP would be able to sign and resign partner digital certificates. Partner management module would depend on Kernel services for signing and re-signing of partner digital certificates.
 Kernel Signature service would be utilized to validate signature : [Kernel Signature Service](https://github.com/mosip/mosip-platform/tree/master/kernel/kernel-signature-service)
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/partners/digitalcertificate</div>
+`https://mosip.io/partnermanagement/v1/partners/digitalcertificate`
 
 #### Resource details
 Resource Details | Description
@@ -2789,8 +2914,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: successfully validated partner's digital certificate
 ```JSON
 {
@@ -2805,7 +2933,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: Partner digital certificate is not valid
 ```JSON
 {
@@ -2837,7 +2967,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve Auth/E-KYC Partner details.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/partners/{partnerID}</div>
+`https://mosip.io/partnermanagement/v1/partners/{partnerID}`
 
 #### Resource details
 Resource Details | Description
@@ -2856,8 +2986,11 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: successfully retrieved the Partner details.
 ```JSON
 {
@@ -2878,7 +3011,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: Partner does not exist
 ```JSON
 {
@@ -2909,7 +3044,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve all API key requests submitted by partner till date.
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests</div>
+`https://mosip.io/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests`
 
 #### Resource details
 Resource Details | Description
@@ -2928,8 +3063,11 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: successfully retrieved all Active policies available for my policy group.
 ```JSON
 {
@@ -2955,7 +3093,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: No API Key Request found for the partner
 ```JSON
 {
@@ -2987,7 +3127,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to view API key request status and API key (in case request is approved).
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests/{APIKeyReqID}</div>
+`https://mosip.io/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests/{APIKeyReqID}`
 
 #### Resource details
 Resource Details | Description
@@ -3007,8 +3147,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: successfully retrieved Partner api key/partner api key request status
 ```JSON
 {
@@ -3025,7 +3168,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: APIKeyReqID does not exist
 ```JSON
 {
@@ -3057,7 +3202,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 Partners would be required to download MOSIP digital certificates. Partner would be using MOSIP public key (part of MOSIP digital certificate) and MOSIP digital certificate, for establishing secure communication with MOSIP. Partner management module would depend on Kernel services to manage MOSIP digital certificate, sharing and re-issue of digital certificate post expiry, validation, encryption/decryption activities. 
 
 #### Resource URL
-<div>https://mosip.io/partnermanagement/v1/partners/digitalcertificate</div>
+`https://mosip.io/partnermanagement/v1/partners/digitalcertificate`
 
 #### Resource details
 Resource Details | Description
@@ -3072,8 +3217,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 
 
 #### Responses:
+
 ##### Success Response:
+
 ###### Status code: '200'
+
 ###### Description: successfully retrieved mosip digital certificate
 ```JSON
 {
@@ -3096,7 +3244,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 ```
 
 ##### Failure Response:
+
 ###### Status code: '200'
+
 ###### Description: Partner does not exist
 ```JSON
 {
