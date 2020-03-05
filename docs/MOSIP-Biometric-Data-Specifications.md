@@ -5,11 +5,11 @@ MOSIP uses ISO specified formats to represent the biometric data, while CBEFF XM
 ## CBEFF
 * Standards:
   * ISO 19785-3
-  * [OASIS patron format ISO/IEC JTC 1 SC 37 - biometrics](//ibia.org/cbeff/iso/bir-header-identifiers), patron identifier 257, patron format identifier 11
-  * [OASIS Binary Data Block Format Identifiers](//ibia.org/cbeff/iso/bdb-format-identifiers) for Format Type ISO/IEC JTC 1 SC 37-biometrics, patron identifier 257, BDB patron format identifier 7 for finger image, 8 for face image and 9 for iris image.
-* [Schema](//docs.oasis-open.org/bioserv/BIAS/v2.0/csprd01/schemas/cbeff_ed2.xsd) 
+  * [OASIS patron format ISO/IEC JTC 1 SC 37 - biometrics](https://www.ibia.org/cbeff/iso/bir-header-identifiers), patron identifier 257, patron format identifier 11
+  * [OASIS Binary Data Block Format Identifiers](https://www.ibia.org/cbeff/iso/bdb-format-identifiers) for Format Type ISO/IEC JTC 1 SC 37-biometrics, patron identifier 257, BDB patron format identifier 7 for finger image, 8 for face image and 9 for iris image.
+* [Schema](https://docs.oasis-open.org/bioserv/BIAS/v2.0/csprd01/schemas/cbeff_ed2.xsd) 
 * [CBEFF XML Sample[(CBEFF-XML-Sample.md)
-* MOSIP's [CBEFF Utility](//github.com/mosip/commons/tree/master/kernel/kernel-cbeffutil-api) to create, update, search and validate CBEFF XML data.
+* MOSIP's [CBEFF Utility](https://github.com/mosip/commons/tree/master/kernel/kernel-cbeffutil-api) to create, update, search and validate CBEFF XML data.
 
 ## Data standards for Registration
 
@@ -43,9 +43,10 @@ Face Image Data (FID):
  * Storage: JPEG2000 or PNG
 
 ## Data standards for Authentication
+
 ### Fingerprint
 Minutiae based authentication  
-   
+
 Fingerprint Minutiae Record (FMR):
  * Minutiae specification: ISO/IEC 19794-2
  * Number of fingers: 1 or 2
@@ -64,4 +65,3 @@ IRIS Image Record (IIR):
 
 ### Face
 Face authentication - future release of MOSIP.
-
