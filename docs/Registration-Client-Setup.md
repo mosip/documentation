@@ -1,4 +1,4 @@
-# Registration Client - Installation and Configuration:
+# Installation and Configuration:
 
 This document contains the 'Registration client (Reg Client App)' application initial setup, update and configuration process.       
 
@@ -28,9 +28,9 @@ JDK 8u181 [Oracle] or later version to Build the application.
     *  Make sure that 'maven-metadata.xml' is generated under the '**registration-client**' module, post successful build generation. Which is referred by the reg-client application to download the required jars based on the version.   
     * Post-build process 'META-INF.MF' file also should be present in the Secure JFROG repository[Https --> Hostname], which consists of the jar files checksum.   
 
-## Prerequisites
+# Prerequisites
   
-### System Prerequisites
+## System Prerequisites
    - CPU - Dual Core Processor - 2GHZ  
    - Ram - 16 GB  
    - Local Storage Disk Space - 500 GB 
@@ -38,7 +38,7 @@ JDK 8u181 [Oracle] or later version to Build the application.
    - Physical machine with TPM 2.0 facility.   
    - Windows OS [10 v] 
 
-### Application Prerequisites:  
+## Application Prerequisites
    
    Before running the 'Registration client' application, following prerequisites to be completed.
 
@@ -52,7 +52,7 @@ JDK 8u181 [Oracle] or later version to Build the application.
    - Through the sync process, the data would be updated into the local database from the server.  
    - All the required [dependent services](#dependent-services-) should be installed, up and running before running the client application.    
         
-## Anti Virus - ClamAV Setup and Configuration in local machine: 
+# Anti Virus - ClamAV Setup and Configuration in local machine 
 
    Installation of Open Source Anti Virus Software [ClamAV]:  
    1.	Download the ClamAV (Version: 0.101.2) Anti Virus Software - [link](http://www.clamav.net/downloads)  
@@ -85,7 +85,7 @@ JDK 8u181 [Oracle] or later version to Build the application.
 
    **Once all the Configurations are done run the freshclam.exe and then run clamd.exe. If required, restart the machine.**   
  
-## Registration Client installation:  
+# Registration Client installation  
 
 **Download - Application Initial Setup file:**  
    
@@ -114,27 +114,26 @@ JDK 8u181 [Oracle] or later version to Build the application.
    - User should perform the self onboarding before start using the application.  
 
 
-## Update Process: 
-   The application refers to the 'maven-metadata.xml' to verifies any new version exists or not. [Which is generated under 
-   the '**registration-client**' module post successful Jenkins build.]
+# Update Process
+The application refers to the 'maven-metadata.xml' to verifies any new version exists or not. [Which is generated under the '**registration-client**' module post successful Jenkins build.]
    
-   mosip.rollback.path - Make sure that the rollback path is provided in this variable, which is available in 'spring.properties' file; as part of the **registration-services** module. 
+mosip.rollback.path - Make sure that the rollback path is provided in this variable, which is available in 'spring.properties' file; as part of the **registration-services** module. 
        
-   **Application update:**
+## Application update
    - During the startup of the application, the software check will be validating against the maven-metadata.xml file from artifactory repository. If any diffs found, the application prompts the user with 'Update Now' or 'Update Later' options to install immediately or later. Apart from this, there is another menu option available in the application to trigger the 'Update' process post login to the application. The update process would update both the application binaries and DB.
     
    - During the update process, the running application refer to the 'rollback' path and take the back up of 'lib, bin, MANIFEST.MF' files inside rollback folder with the new folder as 'Version_timstamp' format. 
    - Download and Update the required binary libraries and DB script into the existing running folder and restart the application.  
         
-   **Database update:**  
+## Database update
    - The database update can be rolled out through the binary update process. If any changes in the script then the respective script would be attached inside 'registration-service/resource/sql/version folder [like: 0.12.8]' and deliver the jar with the newer version. During the update process, the jar would be downloaded and script inside the jar would be executed.  It would also contains the 'rollback' {registration-service/resource/sql/version folder_rollback [like: 0.12.8_rollback]} script if update process to be rollbacked due to any technical error.  
 
 
-## Configuration:  
+# Configuration
 
-   The application provided with the facility of multiple configurations for a different set of parameters. Each attribute level configuration changes should be performed at 'Config' server and same should be sync to the local machine through kernel services.  Here few of the configurations are listed out that provide the facility to enable and disable the biometric. 
+The application provided with the facility of multiple configurations for a different set of parameters. Each attribute level configuration changes should be performed at 'Config' server and same should be sync to the local machine through kernel services.  Here few of the configurations are listed out that provide the facility to enable and disable the biometric. 
 
-Refer the configuration maintained in [QA](https://github.com/mosip/mosip-configuration/blob/master/config/registration-qa.properties) environment. 
+Refer the configuration maintained in [Configuration Repository](https://github.com/mosip/mosip-config/blob/master/config-templates/registration-env.properties). 
 
 |**S.No.**| **Config Key**| **Sample Values**|**Description**|
 |:------:|-----|---|---|
@@ -188,8 +187,8 @@ It integrates the Registration application with Bio-devices [IRIS/ Finger Print/
 |2|	mosip.reg.mdm.server.port=8080	| To run the MDM service in local machine's port.  |
 
 
-## Real biometric service installation to windows.
-Please refer to the detailed [**Real-bio-metric-service-integration**](Registration-client---Real-bio-metric-service-integration.md)
+# Real biometric service installation to windows
+Please refer to the detailed [**Real Biometrics Service Integration**](Registration-client---Real-bio-metric-service-integration.md)
 
 **Network Connectivity Check:**  
 Registration client verifies the below-configured URL to check whether the system is in online or not. The application uses this URL to perform the health check before communicating with the external services.
@@ -198,7 +197,7 @@ Registration client verifies the below-configured URL to check whether the syste
 |:------:|-----|-----|
 |1|	mosip.reg.healthcheck.url={URL} | Ex: https\://domainname.com/v1/authmanager/actuator/health |  
 
-## Property File :
+# Property File
 
 Property attributes and the respective sample values are provided below. Before building the **registration-services**, the required below properties needs to be changed.
    
@@ -228,7 +227,7 @@ Property attributes and the respective sample values are provided below. Before 
      - mosip.reg.client.tpm.availability={ Y - to enable the TPM, N - to disable the TPM, default N}.   
      	    	
      	
-## Dependent Services :    
+# Dependent services
 
 In Registration client application, only user mapping to the local machine can be performed. Rest of the data setup should be performed at MOSIP Admin portal.
 Through sync process the data would be sync between local machine and server based on machine's mac-id and center id.  There are other services are available to send the created packet from local machine to remote system.   
@@ -256,7 +255,7 @@ Through sync process the data would be sync between local machine and server bas
 
    
    
-## External hardware Driver(s): 
+# External hardware Driver(s): 
 
 This section covers the list of drivers required to communicate with the external devices.  
    - To integrate with Scanner, windows WIA libraries are used. So, the respective service should be running and also the scanner specific driver should also be installed.  

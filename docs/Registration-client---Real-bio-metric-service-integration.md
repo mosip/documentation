@@ -1,19 +1,19 @@
-# Registration client - Real biometric device integration
+# Registration Client - Real Biometric Device Integration
    This document contains information regarding the installation of biometric devices and how to register the biometric device for capturing the biodata.
    
-## REQUIRED BINARIES
+## Required Binaries
    * SyncbyteMosipRDServiceSetup.exe
    * MosipClient_Debug.rar
    
 ### SyncbyteMosipRDServiceSetup.exe
-
-    This is the service application which we have to run in order to install the driver dependencies of the concerned biometric devices, upon successful installation of this binary it will start an ever running service named SYNCBYTEMOSIPRDSERVICE.
+This is the service application which we have to run in order to install the driver dependencies of the concerned biometric devices, upon successful installation of this binary it will start an ever running service named SYNCBYTEMOSIPRDSERVICE.
 	
 ### MosipClient_Debug.rar
-    Upon unzipping this file you will find a runnable binary named MosipCleint.exe among other dependency files.
+Upon unzipping this file you will find a runnable binary named MosipCleint.exe among other dependency files.
 	
 **MosipCleint.exe**
-	Run this client application you will be prompted with a client UI <br/>
+
+Run this client application you will be prompted with a client UI <br/>
 		![Biometric service UI ](_images/registration/mdm_integ_01.png)
 		
 MosipClient application is a client-side application which will be used to register the biometric devices such as fingerprint capturing device or iris capturing device to the **SYNCBYTEMOSIPRDSERVICE** which is running in the background.	
@@ -81,7 +81,7 @@ MosipClient application is a client-side application which will be used to regis
 
 Location of the log file in windows machine:  **C:\Program Files\Syncbyte Innovations Private Limited\SyncbyteMosipRDService\MOSIPRDSERVICE.log**
 
-## REGISTRATION OF PHOTO CAPTURE DEVICE
+## Registration of photo capture device
  Special measures should be in place when registering the photo capture device
  Apart from performing the above-mentioned steps, you have to specify the VID and PID of the connected device for the 
  service application.
@@ -100,9 +100,3 @@ Location of the log file in windows machine:  **C:\Program Files\Syncbyte Innova
 
 2. Please find the following **config.properties** file : **C:\Program Files\Syncbyte Innovations Private Limited\SyncbyteMosipRDService\source\ config.properties**
 	And change the value of faceVID, and facePID to the VID and PID that you have found earlier.
-
-
-
-
-
-
