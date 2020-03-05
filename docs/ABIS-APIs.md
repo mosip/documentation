@@ -31,7 +31,7 @@ Code | Reason
 7 | Unable to fetch biometric details
 
 ## ABIS Operations
-All the below operations send biometric data in CBEFF format. (Please refer to the [**link**](MOSIP-Biometric-Data-Specifications.md#cbeff) for sample cbeff data)
+All the below operations send biometric data in CBEFF format. (Please refer to the [link](MOSIP-Biometric-Data-Specifications.md#cbeff) for sample cbeff data)
 ### Insert 
 ```
 //Request
