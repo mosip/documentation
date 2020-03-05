@@ -20,12 +20,12 @@ Admin application contains UI layer and Service layer. All the components in bot
 
 # Backend Services 
 
-Admin uses many services available as part of Kernel in [commons repo](https://github.com/mosip/commons).  There are a few Admin specific services available in [admin repo](https://githbu.com/mosip/mosip-admin).  The code and design documentation is available in the repos.
+Admin uses many services available as part of Kernel in [commons repo](https://github.com/mosip/commons).  There are a few Admin specific services available in [admin repo](https://github.com/mosip/admin-services).  The code and design documentation is available in the repos.
 
 
 # Frontend - Admin portal 
 
-Reference implentation of Admin portal is availalbe in [ref impl repo](https://githbu.com/mosip/mosip-ref-impl)
+Reference implentation of Admin portal is availalbe in [ref impl repo](https://github.com/mosip/mosip-ref-impl)
 
 # Build and Deploy
 

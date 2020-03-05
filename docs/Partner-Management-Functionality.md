@@ -1,4 +1,5 @@
 #  Users and Roles 
+
 ##  User Creation
 
 MOSIP allows the creation of the following roles: MISP, Partners, Partner Manager, and Policy Manager.
@@ -9,9 +10,12 @@ self-service mode.
 The system also allows Updation, Retrieval, Activation and Deactivation of the user.
  
 ## Role Mapping 
+
 ### MISP 
+
 #### A. MISP Creation
 Upon receiving a request to create MISP with the parameters, the system performs the following steps:
+
 1. Validates the credentials of the MOSIP Admin.
 1. The system then validates if the MISP is not registered earlier using the same MISP Organization Name.
 1. The system then  generate MISP ID as per the logic defined below:
@@ -29,6 +33,7 @@ Upon receiving a request to create MISP with the parameters, the system performs
 An Admin user can retrieve a MISP ID
 
 Upon receiving a request from the admin user to retrieve MISP ID, the system performs the following steps:
+
 1. Validates the credentials of the MOSIP Admin 
 1. A standard MISP retrieval request must have the following parameters based on which the system will retrieve the MISP-MOSIP Admin Username, MOSIP Admin Password, MISP Organization Name
 1. The system fetches the data based on complete or partial match. Partial Match is defined as ‘when the input string is available in any part of a MISP Organization Name’ 
@@ -40,6 +45,7 @@ Upon receiving a request from the admin user to retrieve MISP ID, the system per
 An Admin user can update MISPs
 	
 Upon receiving a request from the admin user to update an  MISP, the system performs the following steps:
+
 1. Validates the credentials of the MOSIP Admin
 1. Ideally an update MISP request should have the following parameters: MOSIP Admin Username, MOSIP Admin Password, MISP ID, MISP Organization Name, MISP Contact Number, MISP Email ID, MISP Address
 1. The system updates the record based on the MISP ID and based on the requested parameters and responds with a status, err (as applicable)
@@ -51,6 +57,7 @@ An Admin user can update MISP License key status
 Ideally an update MISP License key status request should have the following parameters: MOSIP Admin Username, MOSIP Admin Password, MISP ID, MISP status, MISP License Key and MISP License key status
 
 Upon receiving a request from the admin user to update an MISP License key status the system performs the following steps:
+
 1. Validates the following:
    * The credentials of the MOSIP Admin
    * Validates if MISP ID is valid
@@ -66,6 +73,7 @@ Upon receiving a request from the admin user to update an MISP License key statu
 
 #### A. Partner Creation 
 Upon receiving a request to generate partner ID, the system performs the following steps:
+
 1. Partner ID will be created based on default logic. 
 1. The number of digits for Partner ID generation will be configurable
 1. The system then responds with the Partner ID, err (as applicable) to the source 
@@ -73,14 +81,17 @@ Upon receiving a request to generate partner ID, the system performs the followi
 
 #### B. Create Auth/E-KYC Partners
 For creation of Auth/E-KYC Partners its necessary that Partners Role exists in the system. The partner must download digital certificates signed by MOSIP and upload digital certificate (either MOSIP provided/third party provided).
+
 1. Upon receiving a request to create Partner with the parameters: Partner Organization Name, Partner Contact Number, Partner Email ID, Partner Address Policy Group the system validates if the a partner is not registered earlier using the same Partner Organization Name in the policy group 
 1. The system then generates Partner ID (PM to integrate with IAM to obtain the Partner ID (user-id)
 1. The default status of Partner is set as active.
 1. The system responds with the parameters: Partner ID, Partner status, err (as applicable). partner ID generated will be the partner User Name
 
 ### Policy Manager 
+
 #### A. Generate Policy Manager ID
 Upon receiving a request to generate Policy Manager ID, the system performs the following steps:
+
 1. MOSIP Admin will create Policy Manager.
 1. The system then responds with the Policy Manager ID, err (as applicable) to the source 
 1. Raises an alert in case of exceptions 
@@ -89,6 +100,7 @@ Upon receiving a request to generate Policy Manager ID, the system performs the 
 
 #### A. Generate Partner Manager ID
 Upon receiving a request to generate Partner Manager ID, the system performs the following steps:
+
 1. MOSIP Admin will create Partner Manager
 1. The system then responds with the Partner Manager ID to the source 
 1. Raises an alert in case of exceptions
@@ -99,9 +111,13 @@ Upon receiving a request to generate Partner Manager ID, the system performs the
 * In general Partner Manager and Policy Manger should be mapped to any of the policy groups created above
  
 # MISP Activities 
-##  License Key Management 
+
+## License Key Management 
+
 #### A. Generate MISP License Key
+
 Upon receiving a request to generate License Key, the system performs the following steps:
+
 1. MISP License key will be issued during creation of MISP.
 1. Generates License Key as per default License Key generation logic defined below:
    * License Key Generation should follow a random generation pattern
@@ -121,9 +137,13 @@ Upon receiving a request to regenerate License Key with the input parameter, suc
 1. Responds with the parameter, such as MISP License Key, MISP License key Status, MISP License Key expiry, err (as applicable).
 
 # Partner Activities 
-## 3.1 Registration 
+
+## Registration 
+
 #### A. Create Auth/E-KYC Partners
+
 Upon receiving a request to create Partner with the input parameters, such as Partner Organization Name, Partner Contact Number, Partner Email ID, and Partner Address Policy Group, the system performs the following steps:
+
 1. Validates if a partner is not registered earlier using the same Partner Organization Name in the policy group.
 1. Generates Partner ID.
 1. Sets the default status of Partner as active.
@@ -131,55 +151,74 @@ Upon receiving a request to create Partner with the input parameters, such as Pa
    * Partner ID generated will be the partner User Name.
 
 #### B. Retrieve Auth/E-KYC Partners
+
 Upon receiving a request to retrieve Partner with the input parameters, such as Partner Username and Partner Password/Security token, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Username and Partner Password/security token.
 1. Fetches the data based on exact match of Partner Username/Partner ID.
 1. Responds with the parameters, such as PartnerID, Partner status, Partner Organization Name, Partner Contact Number, Partner Email ID, Partner Address, and err (as applicable).
 
 #### C. Update Auth/E-KYC Partners
 Upon receiving a request to update Partner with the input parameters, such as Partner Username, Partner Password/security token, Partner Organization Name, Partner Contact Number, Partner Email ID, and Partner Address, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Username and Partner Password/security token.
 1. If Partner Organization Name is provided for update, the system validates if the provided Partner Organization Name is not registered earlier for an entity in the policy group.
 1. Updates the input data provided based on the located Partner ID (Partner Username).
 1. Responds with the parameters, such as status message, and err (as applicable).
 
 ## API Key Management 
+
 #### A. View policies available for policy group to place a request for a partner API key
+
 Upon receiving a request to fetch a Policy with input parameters, such as Partner Username, Partner Password/security token, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Username and Partner Password/security token.
 1. Retrieves all the active policies defined for the Policy Group.
 1. Responds to the source with the attributes, such as Policy ID, Policy Name, Policy Description, and Policy file for all the policies retrieved.
 
 #### B. Submit Partner API key request
+
 Upon receiving a request to submit Partner API key request with input parameters, such as Partner Username, Partner Password/security token, Policy Name, and Use Case Description, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Username and Partner Password/security token.
 1. Generates Partner API key Request Number and sets the default status to ‘In Progress’. 
 1. Responds to the source with the attributes, such as Partner API key Request Number, and err (as applicable).
 
 #### C. View Partner API key status
+
 Upon receiving a request to view Partner API key status with the input parameters, such as Partner Username, Partner Password/security token, Partner API key Request Number, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Username and Partner Password/security token.
 1. Retrieves the status of the Partner API key Request Number. The status can be ‘In Progress', ‘Approved’, ‘Rejected’, 'Issued’
 1. Validates if the status is ‘Issued’ then retrieves the Partner API key corresponding to the Partner API key Request Number.
 1. Responds to the source with the attributes, such as Partner API key Request Status, Partner API key and Partner API key Time Validity (as applicable), and err (as applicable).
 
 ## Certificate Management 
+
 #### A. Upload Partner digital certificate
+
 Upon receiving a request to upload digital certificate with the input parameters, such as Partner Username, Partner Password/security token, and Partner Digital Certificate, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Username and Partner Password/security token.
 1. Sends the reference of the digital certificate to be stored in kernel.
 1. Sends the response with status and err (as applicable).
 
 #### B. Download MOSIP digital certificate
+
 Upon receiving a request to download digital certificate with the input parameters, such as Partner Username and Partner Password/security token, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Username and Partner Password/security token.
 1. Integrates with kernel component to retrieve MOSIP digital certificate.
 1. Sends the response with MOSIP Digital Certificate and err(as applicable).
 
 # Policy Manager Activities 
+
 ##  Policy Management 
+
 ### Creation and Publication of Authentication Policies
+
 Upon receiving a request to create a Policy with input parameters (Policy Manager Username, Policy Manager Password, Policy Name, Policy Description, and Policy File), the system performs the following steps:
+
 1. Validates the credentials of the Policy Manager.
 1. Validates if the policy file contains only the authentication types supported in MOSIP.
 1. Validates if the policy file contains only the eKYC attributes supported in MOSIP.
@@ -188,8 +227,11 @@ Upon receiving a request to create a Policy with input parameters (Policy Manage
 1. Sends the response with ‘Policy ID’, ‘Policy Status’
  
 ### List, View, Add, Edit, Activate, Deactivate Policies 
+
 #### A. Retrieve Auth/E-KYC Policy
+
 Upon receiving a request to fetch a Policy with input parameters (Policy Manager Username, Policy Manager Password, and Policy Name), the system performs the following steps:
+
 1. Validates the credentials of the Policy Manager
 1. Fetches the data based on a complete/partial match of Policy Name and the Policy Group of the Policy Manager
 1. If the input parameter received is null or empty, then fetches all the data of the Policies of the Policy Group of the Policy Manager. 
@@ -198,6 +240,7 @@ Upon receiving a request to fetch a Policy with input parameters (Policy Manager
 #### B. Update Auth/E-KYC Policy 
 
 Upon receiving a request to update a Policy with input parameters (Policy Manager Username, Policy Manager Password, Policy ID, Policy Name, Policy Description, and Policy File), the system performs the following steps:
+
 1. Validates the credentials of the Policy Manager
 1. Validates if the policy file contains only the authentication types supported in MOSIP.
 1. Validates if the policy file contains only the eKYC attributes supported in MOSIP.
@@ -206,38 +249,52 @@ Upon receiving a request to update a Policy with input parameters (Policy Manage
 1. Responds to the source with the required success message.
 
 #### C. Deactivate Auth/E-KYC Policy
+
 Upon receiving a request to update a Policy with input parameters (Policy Manager Username, Policy Manager Password, Policy ID, and Policy Status), the system performs the following steps:
+
 1. Validates the credentials of the Policy Manager.
 1. Validates if the Policy ID and the Policy Manager are associated to the same Policy Group.
 1. Responds to the source with the required success message.
 
-###  Filtered by Policy Group (Regulator)
+
+
 # Partner Manager Activities 
+
 ##  Partner Management 
+
 #### A. Activate/Deactivate Auth/E-KYC Partners
+
 Upon receiving a request to update the partner status with the input parameters, such as Partner Manager Username, Partner Manager Password/security token, Partner ID, and Partner Status, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Manager Username and Partner Manager Password/security token.
 1. Validates if Partner ID is valid.
 1. Validates if Partner ID belong to the policy group of the Partner Manager.
 1. After all the validations are performed, the system updates the ‘Partner Status’ for the requested Partner ID and responds with the status message.
   
 #### B. View Auth/E-KYC Partners
+
 Upon receiving a request to retrieve the Partner with the input parameters, such as Partner Manager Username and Partner Manager Password/Security token, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Manager Username and Partner Manager Password/security token.
 1. Retrieves the policy group of the Partner Manager.
 1. Fetches all the partner details of the partners registered in the policy group.
 1. Then the system responds with the parameters, such as PartnerID, Partner status, Partner Organization Name, Partner Contact Number, Partner Email ID, Partner Address, and err (as applicable).
 
 ### Filtered by Policy Group (Regulator) 
+
 #### A. View  Partner API key requests based on 'policy group'
+
 Upon receiving a request to retrieve the Partner API key with the input parameters, such as Partner Manager Username and Partner Manager Password/Security token, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Manager Username and Partner Manager Password/security token.
 1. Retrieves the policy group of the Partner Manager.
 1. Fetches all the partner API key requests of the partners registered in the policy group.
 1. Then the system responds with the parameters, such as PartnerID, Partner status, Partner Organization Name, Policy Name, Use Case Description, Partner API key Request Number, err (as applicable).
 
 #### B. Approve/Reject Partner API key requests based on 'policy group'
+
 Upon receiving a request to retrieve the Partner API key with the input parameters, such as Partner Manager Username, Partner Manager Password/Security token, Partner API key Request Number, and Partner API key Request Status, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Manager Username and Partner Manager Password/security token.
 1. Validates if the Partner API key Request Number is available in the database.
 1. Retrieves the policy group of the Partner Manager.
@@ -247,9 +304,11 @@ Upon receiving a request to retrieve the Partner API key with the input paramete
 1. Then the system responds with the parameters, such as status, Partner API key (as applicable), Partner API key status (as applicable), and err (as applicable).
 
 ## Partner Policy Assignment 
+
 #### A. Generate Partner API key 
 
 Upon receiving a request to generate Partner API key, the system performs the following steps:
+
 1. Generates Partner API key as per the defined logic mentioned below:
    * Partner API key Generation must follow a random generation pattern
    * Partner API key must be alphanumeric
@@ -258,7 +317,9 @@ Upon receiving a request to generate Partner API key, the system performs the fo
 1. In case of exceptions, system triggers the relevant error messages.
 
 #### B. Retrieve Auth/E-KYC Policy for policy group to assign relevant policy to partner API key 
+
 Upon receiving a request to fetch a Policy with the input parameters, such as Partner Manager Username, Partner Manager Password, and Policy Name, the system performs the following steps:
+
 1. Validates the credentials of the Policy Manager.
 1. Validates if the policy name is available in the database.
 1. Fetches the data based on a complete/partial match of Policy Name and the Policy Group of the Partner Manager
@@ -268,6 +329,7 @@ Upon receiving a request to fetch a Policy with the input parameters, such as Pa
 #### C. Create “Partner API key to Policy” Mappings
 
 Upon receiving a request to retrieve Partner API key requests with the input parameters, such as Partner Manager Username, Partner Manager Password/Security token, Partner API key, and policy ID, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Manager Username and Partner Manager Password/security token.
 1. Validates if the policy ID and partner API key are available in the database.
 1. Retrieves the partner ID, who has placed the request for the partner API key.
@@ -281,6 +343,7 @@ Upon receiving a request to retrieve Partner API key requests with the input par
 #### D. Retrieve “Partner API key to Policy” Mappings
 
 Upon receiving a request to retrieve Partner API key requests with the input parameters, such as Partner Manager Username, Partner Manager Password/Security token, and Partner API key, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Manager Username and Partner Manager Password/security token.
 1. Validates if the Partner API key is available in the database.
 1. Validates if the Partner API key was issued by the Partner Manager (belongs to the same policy group of the Partner Manager).
@@ -289,7 +352,9 @@ Upon receiving a request to retrieve Partner API key requests with the input par
 1. Then the system responds with the parameters, such as policy ID, err (as applicable) for the partner API keys retrieved.
 
 #### E. Activate/deactivate Partner API key based on 'policy group'
+
 Upon receiving a request to retrieve Partner API key requests with the input parameters, such as Partner Manager Username, Partner Manager Password/Security token, Partner API key, and Partner API key status, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Manager Username and Partner Manager Password/security token.
 1. Validates if the Partner API key is available in the database.
 1. Retrieves the policy group of the partner who is issued the Partner API key.
@@ -297,7 +362,9 @@ Upon receiving a request to retrieve Partner API key requests with the input par
 1. Updates the status of the Partner API key and then responds with the parameters, such as status, err (as applicable).
 
 #### F. Update Partner API key to Policy Mappings 
+
 Upon receiving a request to retrieve Partner API key requests with the input parameters, such as Partner Manager Username, Partner Manager Password/Security token, Partner API key, old policy ID, and new policy ID, the system performs the following steps:
+
 1. Validates the credentials of the partner, such as Partner Manager Username and Partner Manager Password/security token.
 1. Validates if the Partner API key is available in the database.
 1. Validates if old policy ID is available in the database.
@@ -315,14 +382,18 @@ Upon receiving a request to retrieve Partner API key requests with the input par
 # Impact on Authentication
 
 #### A. ID Authentication Validates MISP License key
+
 Upon receiving a request from ID Authentication to check the status of MISP License Key with input parameter (MISP License Key), the system performs the following steps:
+
 1. Validates if the status of the MISP License Key is active.
 1. Retrieves the MISP status corresponding to the MISP License key in the request.
 1. Validates if the status of MISP is active.
 1. Responds with the parameters, such as status, err (as applicable).
 
 #### B. ID Authentication retrieves policy of a partner with partner-ID and partner API key
+
 Upon receiving a request from ID Authentication to retrieve the policy with input parameters (Partner ID and Partner API key), the system performs the following steps:
+
 1. Validates if the status of the Partner ID is active.
 1. Validates the length and pattern of the Partner API Key.
 1. Validates if the status of Partner API Key is active.

@@ -36,4 +36,4 @@ Refer to build and deploy instructions in [resident services repo](https://githu
 
 # APIs
 
-[Resident Services APIs](Resident-Services-APIs)
+[Resident Services APIs](Resident-Services-APIs.md)

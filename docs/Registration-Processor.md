@@ -30,12 +30,12 @@ Important considerations are as follows:
 ![](_images/reg_processor/reg_processor_update_packet_flow.jpg)
 
 # Services
-For detailed description of Registration Processor Services refer to [registration processor repo](https://github.com/mosip/registration/registration-processor).
+For detailed description of Registration Processor Services refer to [registration processor repo](https://github.com/mosip/registration/tree/master/registration-processor).
 
-For high level and low level design refer to [registration processor repo](https://github.com/mosip/registration/registration-processor)
+For high level and low level design refer to [registration processor repo](https://github.com/mosip/registration/tree/master/registration-processor)
 
 # Build and deploy
-Refer to build and deploy instructions in [registration processor repo](https://github.com/mosip/registration/registration-processor).
+Refer to build and deploy instructions in [registration processor repo](https://github.com/mosip/registration/tree/master/registration-processor).
 
 # APIs
 [Registration Processor APIs](Registration-Processor-APIs.md)

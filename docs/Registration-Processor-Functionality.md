@@ -2,11 +2,12 @@
 When an individual visits a registration center to get an ID or update his/her ID details, a registration officer captures the individual’s demographic (name, date of birth, gender, etc.) and biometric (face, iris, fingerprint image) details in a Registration Client. The Registration Client packages the captured information in a secure way (in the form of encrypted packets) and sends it to Registration Processor for further processing. 
 
 The packet received from the Registration Client goes through various sanity checks and validations to perform various life cycle events. The various life cycle events that can be processed by Registration Processor are:
-1. New ID Issuance
-1. Update individual’s Information
-1. De-activate individual’s ID
-1. Re-activate individual’s ID
-1. Find an individual’s ID
+
+* New ID Issuance
+* Update individual’s Information
+* De-activate individual’s ID
+* Re-activate individual’s ID
+* Find an individual’s ID
 
 ## New ID issuance 
 
@@ -17,8 +18,9 @@ When a registration officer captures an individual’s information, the Registra
 During the allocation of the Unique Identification Number (UIN), the system also allocates a Virtual Identification Number (VID) to the individual. VID is an alternative to UIN and is a temporary number that can be used for authentications of an individual. The individual can provide the VID instead of UIN to authenticate themselves and protect their UIN from being accessed by someone else. 
 
 MOSIP generates two types of VID such as Perpetual VID and Temporary VID. 
-1. Perpetual VID: Registration Processor will create a new perpetual VID once UIN is generated successfully.
-1. Temporary VID: individual can use Resident portal to generate or re-generate a new temporary VID.
+
+* Perpetual VID: Registration Processor will create a new perpetual VID once UIN is generated successfully.
+* Temporary VID: individual can use Resident portal to generate or re-generate a new temporary VID.
 
 ## Update individual’s information 
 After an ID is created for an individual, then he/she can choose to update his/her demographic or biometric information. The system provides two different channels by which an individual can update his/her information - by visiting a registration center and by using the resident portal.
@@ -27,8 +29,8 @@ In both the cases, the individual’s information is securely packaged and sent 
 
 A country decides the channel and data attributes that can be updated for the individual. In the current implementation, 
 
-1. An individual can update his/her demographic and biometric information when he/she visits the registration center.
-1. An individual can update his/her demographic information when he/she uses the resident portal.
+* An individual can update his/her demographic and biometric information when he/she visits the registration center.
+* An individual can update his/her demographic information when he/she uses the resident portal.
 
 ## De-activate individual’s ID 
 This feature is used to de-activate an individual’s ID. When an individual’s ID is deactivated, then he/she will not be able to authenticate himself/herself by using UIN or VID.
@@ -86,12 +88,12 @@ MOSIP is scalable so that it can handle any kind of processing load or request i
 ###  Sanity check 
 When Registration Processor receives a packet, the system performs various sanity checks on the packet, such as:
 
-1. Authentication of the request: If the request is coming from a verified source.
-1. Virus scan: In-memory virus scan of the packet received.
-1. Packet integrity check: If the packet received was not tampered during transit by performing checksum validation.
-1. Packet size check: If the packet received was not tampered during transit by validating the size of the packet.
-1. Packet format check: If the packet format is per the configured format.
-1. Duplicate check: If the request received is not a duplicate request.
+* Authentication of the request: If the request is coming from a verified source.
+* Virus scan: In-memory virus scan of the packet received.
+* Packet integrity check: If the packet received was not tampered during transit by performing checksum validation.
+* Packet size check: If the packet received was not tampered during transit by validating the size of the packet.
+* Packet format check: If the packet format is per the configured format.
+* Duplicate check: If the request received is not a duplicate request.
 
 ### Virus scan 
 Virus Scanning is an important process, which helps to detect and move the virus infected packets to the quarantine zone. With a good virus scanner integrated in MOSIP will prevent virus interference.
@@ -99,25 +101,28 @@ Virus Scanning is an important process, which helps to detect and move the virus
 Whenever virus scanning is performed in Registration Processor, the encrypted packets are first scanned and then the packets are decrypted in-memory and scanned.
 
 Virus scanning is performed twice in Registration Processor:
-1. When a packet is received by Registration Processor.
-1. When Registration Processor stores the packet in its internal secure file system.
+
+* When a packet is received by Registration Processor.
+* When Registration Processor stores the packet in its internal secure file system.
 
 ### Machine-Center mapping 
 When a packet is created in Registration Client, the packet will be created using a registered machine, devices, registration officer, registration supervisor, and registration center.
 
 To make sure that the packets are created as per the defined rules, the system performs the following validations:
-1. Registration Center must be active when the packet was created.
-1. User (registration officer/registration supervisor) must be active when the packet was created.
-1. Machine and devices, in which packet was created must be active when the packet was created.
-1. User, machine and center must be mapped when the packet was created.
-1. Packet must be created in working days and not in holidays.
-1. The GPS must be captured when a packet is created.
+
+* Registration Center must be active when the packet was created.
+* User (registration officer/registration supervisor) must be active when the packet was created.
+* Machine and devices, in which packet was created must be active when the packet was created.
+* User, machine and center must be mapped when the packet was created.
+* Packet must be created in working days and not in holidays.
+* The GPS must be captured when a packet is created.
 
 ### Officer & supervisor validation 
 When a packet is created in Registration Client, the officer or supervisor will authenticate himself/herself and the same is captured in the packet. There are three modes by which an officer or supervisor can authenticate himself/herself, which are listed below:
-1. Biometric authentication
-1. Password based authentication
-1. OTP based authentication
+
+* Biometric authentication
+* Password based authentication
+* OTP based authentication
 
 In case of biometric authentication, Registration Processor authenticates the officer/supervisor again after receiving the packet from the Registration Client.
 
@@ -146,8 +151,8 @@ _*This is factored for future releases and is not part of current implementation
 When the Registration Packets are received from Registration Client, the system checks if all the files listed in the packet are available. If available, the system verifies if the documents required for an individual are present in the packet as per the data captured. In order to perform this validation, the mapping of the data captured and mandatory document required can be configured by the country.
  
 For Example:
-1. If name is captured, the country can add a validation for Proof of Identity.
-1. If address is captured, the country can add a validation for Proof of Address.
+* If name is captured, the country can add a validation for Proof of Identity.
+* If address is captured, the country can add a validation for Proof of Address.
 
 #### Introducer validation 
 An Introducer in MOSIP is one who introduces someone attempting to register without any valid document or proof of identity. In the current implementation, in the context of Minor's registration Introducer is the parent or guardian of the minor (child) who approaches the center for registration. 
@@ -161,16 +166,16 @@ To support the Principle of Inclusion, an Introducer can be any individual whose
 #### Deduplication – demographic, biometrics 
 Deduplication is the process to find a duplicate by comparing the individual’s details (biometric and demographic data) with the data stored in the system.
 * Demographic deduplication 
-    1. The system compares the demographic details (name, gender, and date of birth) of the individual with the data available in the system to find a potential match.
-    1. If a potential match is found, then the system sends the packet to [ABIS](Automated-Biometric-Identification-System-(ABIS)) to perform 1:1 biometric match (it is an additional check to confirm that it is a duplicate).
-    1. If a potential match is not found in ABIS or demographic deduplication, then system sends the packet to perform biometric deduplication.
+    * The system compares the demographic details (name, gender, and date of birth) of the individual with the data available in the system to find a potential match.
+    * If a potential match is found, then the system sends the packet to [ABIS](Automated-Biometric-Identification-System-(ABIS)) to perform 1:1 biometric match (it is an additional check to confirm that it is a duplicate).
+    * If a potential match is not found in ABIS or demographic deduplication, then system sends the packet to perform biometric deduplication.
 
 * Biometric deduplication 
-1. The system performs biometric deduplication (1:N, where N indicates the whole set of biometric available in the system) by sending the data to ABIS 
-1.  ABIS compares the biometric data received with the whole set of the data to find a potential match based on a configured threshold.
-1. If a potential match is found in the ABIS, then the system sends the packet for manual verification.
-1. If a manual verifier (experts who know more about biometrics) finds a duplicate, then the system rejects the packet.
-1. If the manual verifier or ABIS does not find a duplicate, then the system sends the packet for UIN generation.
+* The system performs biometric deduplication (1:N, where N indicates the whole set of biometric available in the system) by sending the data to ABIS 
+*  ABIS compares the biometric data received with the whole set of the data to find a potential match based on a configured threshold.
+* If a potential match is found in the ABIS, then the system sends the packet for manual verification.
+* If a manual verifier (experts who know more about biometrics) finds a duplicate, then the system rejects the packet.
+* If the manual verifier or ABIS does not find a duplicate, then the system sends the packet for UIN generation.
 
 ###  External system integration 
 _All the below functions can be plugged in by a System Integrator into MOSIP system.  MOSIP provides interfaces for integration._
@@ -224,8 +229,8 @@ This feature is the post processing integration point for Registration Processor
 
 ###  Packet processing status 
 After the Registration Client sends the packet to Registration Processor, it starts processing the packet. Registration Processor enables the Registration Client to know the processing status of such packets. The probable packet statuses are as follows:
-1. PROCESSING: The packet is under processing.
-1. PROCESSED: The packet has been processed and Registration Client deletes the packet from its storage location.
-1. RESEND: Initial validation like virus scan and packet integrity check have failed for the packet for a configured number of times and Registration Client needs to resend the packet for processing.
-1. RE-REGISTER: The packet has failed a business validation like center-machine check, supervisor and officer validation, etc., due to which the system will not be able to process the packet. The registration officer will intimate the individual to come back to the center and re-register, post which registration client can delete the packet from its storage location.
-1. REJECTED: A duplicate packet was found against the individual’s biometrics. As processing of the packet is completed, Registration Client can delete the packet from it storage location.
+* PROCESSING: The packet is under processing.
+* PROCESSED: The packet has been processed and Registration Client deletes the packet from its storage location.
+* RESEND: Initial validation like virus scan and packet integrity check have failed for the packet for a configured number of times and Registration Client needs to resend the packet for processing.
+* RE-REGISTER: The packet has failed a business validation like center-machine check, supervisor and officer validation, etc., due to which the system will not be able to process the packet. The registration officer will intimate the individual to come back to the center and re-register, post which registration client can delete the packet from its storage location.
+* REJECTED: A duplicate packet was found against the individual’s biometrics. As processing of the packet is completed, Registration Client can delete the packet from it storage location.

@@ -34,7 +34,7 @@ In case of closure of the Consent Pop-up, the following scenarios may arise:
 
 ## Create multiple applications 
 
-Once the demographic details are filled and the Documents are uploaded, if the user wishes to add an applicant, he/she can opt to select 'Add An Applicant' option on the preview page or 'Create New Application' option on the Dashboard. The system provides the user with demographic form based on the defined [ID Object Definition](MOSIP-ID-Object-definition) to fill. The system associates the pre-registration id to the new Application(s) created.
+Once the demographic details are filled and the Documents are uploaded, if the user wishes to add an applicant, he/she can opt to select 'Add An Applicant' option on the preview page or 'Create New Application' option on the Dashboard. The system provides the user with demographic form based on the defined [ID Object Definition](MOSIP-ID-Object-Definition.md) to fill. The system associates the pre-registration id to the new Application(s) created.
 
 ## Provide data in prreferred language 
 
