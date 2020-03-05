@@ -6,8 +6,7 @@ ID definition is the key to use MOSIP. ID definition describes the attributes a 
 * Schema can also create User Defined Types (UDTs) to specify the format of data to be captured. For example, biometrics data should always be in CBEFF ISO 19795 - 1 format. This helps in specifying the format of the data that is captured
 * MOSIP will provide in-built validators for certain data types like CBEFF which can be used for data validation
 
-Below is a sample ID object definition schema and a sample of a JSON object based on the schema.
-
+Below is a sample ID object definition schema and a sample of a JSON object based on the schema:
 ```JSON
 {
   "$id": "http://mosip.io/id_object/1.0/id_object.json",
@@ -164,9 +163,7 @@ Below is a sample ID object definition schema and a sample of a JSON object base
   }
 }
 ```
-
-Below is a sample JSON as per the schema defined above 
-
+Below is a sample JSON as per the schema defined above: 
 ```JSON
 {
   "identity": {
@@ -293,8 +290,7 @@ Below is a sample JSON as per the schema defined above
   }
 }
 ```
-All operations related to ID will have a place holder to receive the ID Object as per the schema, validate it as per the schema and store it AS IS. For example, when an Individual creates a Pre-Registration, the API for Pre-Registration will look as below
-
+All operations related to ID will have a place holder to receive the ID Object as per the schema, validate it as per the schema and store it AS IS. For example, when an Individual creates a Pre-Registration, the API for Pre-Registration will look as below:
 ```
 //CREATE Pre-Registration
 request body
@@ -307,4 +303,4 @@ request body
 	}
 }
 ```
-Also, please refer to [**ID Repository API**](ID-Repository-API) on how an ID Object is managed in MOSIP.
+Also, please refer to [ID Repository API](ID-Repository-APIs.md) on how an ID Object is managed in MOSIP.
