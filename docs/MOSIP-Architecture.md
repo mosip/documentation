@@ -1,14 +1,14 @@
 # Architecture Principles
-[Architecture Principles](/MOSIP-Architecture-Principles.md)
+[Architecture Principles](MOSIP-Architecture-Principles.md)
 
 # Modules
-* [Pre-Registration](/Pre-Registration.md)  
-* [Registration](/Registration-Client.md)  
-* [Registration Processor](/Registration-Processor.md)  
-* [ID Authentication](/ID-Authentication.md)  
-* [Resident Services](/Resident-Services.md)  
-* [Partner Management](/Partner-Management.md)  
-* [Admin](/Admin.md)
+* [Pre-Registration](Pre-Registration.md)  
+* [Registration](Registration-Client.md)  
+* [Registration Processor](Registration-Processor.md)  
+* [ID Authentication](ID-Authentication.md)  
+* [Resident Services](Resident-Services.md)  
+* [Partner Management](Partner-Management.md)  
+* [Admin](Admin.md)
 
 # Functional Architecture
 ![MOSIP Functional Architecture](_images/arch_diagrams/MOSIP_functional_architecture.png)
@@ -17,7 +17,7 @@
 ![MOSIP Logical Architecture](_images/arch_diagrams/MOSIP_logical_architecture_v0.1.png)
 
 # Data Architecture
-[MOSIP Data Architecture](/MOSIP-Data-Architecture.md)
+[MOSIP Data Architecture](MOSIP-Data-Architecture.md)
 
 # Design choices
 * Microservice based architecture for all platform services for modularity and scalability.
