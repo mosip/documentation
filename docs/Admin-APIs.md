@@ -1,6 +1,6 @@
 # Packet Status Services
 
-[GET /packetstatusupdate](#get-packetstatusupdate)
+* [GET /packetstatusupdate](#get-packetstatusupdate)
 
 ## GET /packetstatusupdate
 
