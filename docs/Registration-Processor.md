@@ -38,4 +38,5 @@ For high level and low level design refer to [registration processor repo](https
 Refer to build and deploy instructions in [registration processor repo](https://github.com/mosip/registration/tree/master/registration-processor).
 
 # APIs
-[Registration Processor APIs](Registration-Processor-APIs.md)
+
+[Registration Processor APIs](Registration-Processor-APIs.md)  
