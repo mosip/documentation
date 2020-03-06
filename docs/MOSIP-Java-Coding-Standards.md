@@ -1001,12 +1001,10 @@ MessageDialog.makeText(text)
 ### 10.13.5 Special Comments
 
 * Special comments are used to give a hint for further development. Following are the special comments used in MOSIP project,
-
-- TODO
-- FIXME
-- NOTE
-- OPTIMIZE
-
+	* TODO
+	* FIXME
+	* NOTE
+	* OPTIMIZE
 * It should be made sure to track the above comments, perform action accordingly and remove them when they become irrelevant.
 
 
