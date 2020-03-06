@@ -30,7 +30,7 @@ If a new source code module is planned to be added, and if it is a reusable libr
  
     
 ## 2.2 Source Code Organization in a MOSIP Repository
-Sauce code of any feature in MOSIP will be organized as below. 
+Source code of any feature in MOSIP will be organized as below. 
 ```
 - feature-parent
     - feature-core - jar 
