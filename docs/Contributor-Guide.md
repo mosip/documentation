@@ -1,4 +1,4 @@
-### Where to begin ?
+### Where to start ?
 * Read the [MOSIP Blue Book](https://www.mosip.io/uploads/resources/5c9e073f0668fMOSIP%20-%20Blue%20Book.pdf).  Gives you a good overview of foundational ID and MOSIP.
 * Sit back, relax and check this introductory [webinar](https://zoom.us/recording/play/GSWnvtI3wMIKD3Tig3MeuRgCGGUOz0CPTHo9dUVLL8oQIxyzahuytImAtBrntiZ9?continueMode=true) (1 hr).  A focused presentation on MOSIP with some Q&A.
 * Get to know the [Technology Stack](Technology-Stack.md)
