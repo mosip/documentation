@@ -1098,13 +1098,18 @@ Request:
 
 The management server has the following objectives.
 1. Validate the devices to ensure its a genuine device from the respective device provider. This can be achieved using the device info and the certificates for the Foundational Trust Module.
+
 1. Register the genuine device with the MOSIP device server.
+
 1. Manage/Sync time between the end device the server. The time to be synced should be the only trusted time accepted by the device.
+
 1. Ability to issue commands to the end device for
     1. Key rotation of the end device
     1. De-registration of the device
     1. Collect device info
+
 1. A central repository of all the approved devices from the device provider.
+
 1. Safe storage of keys using HSM FIPS 140-2 Level 3. These keys are used to issue the device certificate upon registration.
 The Management Server is created and hosted by the device provider outside of MOSIP software. The communication protocols between the MDS and the Management Server can be decided by the respective device provider. Such communication should be restricted to the above specified interactions only. No transactional information should be sent to this server.
 
