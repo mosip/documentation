@@ -14,6 +14,7 @@
 * [MDS](MOSIP-Device-Service-Specification.md) 
 * [Privacy & Security](Privacy-and-Security.md)
 * [Build & Deploy](Build-and-Deploy.md)
+* [Troubleshooting](Troubleshooting.md)
 * [Contribute](Contributor-Guide.md)
 * APIs
     * [ABIS APIs](ABIS-APIs.md)
