@@ -1104,9 +1104,12 @@ The management server has the following objectives.
 1. Manage/Sync time between the end device the server. The time to be synced should be the only trusted time accepted by the device.
 
 1. Ability to issue commands to the end device for
-    1. Key rotation of the end device
-    1. De-registration of the device
-    1. Collect device info
+
+      * Key rotation of the end device
+
+      * De-registration of the device
+
+      * Collect device info
 
 1. A central repository of all the approved devices from the device provider.
 
