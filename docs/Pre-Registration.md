@@ -23,6 +23,7 @@ For high level and low level design refer to [pre-registration repo/design](http
 Refer to build and deploy instructions in [pre-registration repo](https://github.com/mosip/pre-registration).
 
 # APIs
+
 [Pre-Registration APIs](Pre-Registration-APIs.md)
 
 # UI Reference Implementation
