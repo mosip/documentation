@@ -267,10 +267,10 @@ Both the comment types are used in the source code of MOSIP.
 When the developer needs to explain in detail about some functionality, block comments are used. Block comments are used anywhere in the code. It can be for the class or interface declarations or it can be within the java methods also. Example of block comments,
 ```
 /*
-* This is the block comment. This is the block comment.
-* This is the block comment. This is the block comment. This is                
-* block comment.
-*/
+ * This is the block comment. This is the block comment.
+ * This is the block comment. This is the block comment. This is                
+ * block comment.
+ */
 ```
 ### Single-Line Comments
 
@@ -314,8 +314,8 @@ if(width > 45) {
     2. Multi-line documentation comment:
        ````
        /** 
-         * COMMENT 
-         */
+        * COMMENT 
+        */
        ````
 	 
 ## Example
@@ -351,20 +351,20 @@ import org.mosip.exception.SMSException;
  */
 
 public class SampleReference extends SomeSuperClass {
-    /**
+   /**
     * someClass is used for so and so purpose
     */
 
     @Nullable
     private final Object someClass;
-    /**
+   /**
     * someIdentifier is used to identify something
     */
 
     @Nullable
     private final Object someidentifier;
 
-    /**
+   /**
     * Create some functionality with the with the given message, unless so and so
     * functionality.
     *
@@ -380,7 +380,7 @@ public class SampleReference extends SomeSuperClass {
         this.someidentifier = null ;
     }
 
-    /**
+   /**
     * Sends the SMS to the given phone number
     *
     * @param someClass
@@ -452,16 +452,16 @@ class Sample extends Object {
 * A method line count should not exceed 80 lines. If required break the blocks of code in the method to separate methods.
 * Methods are separated by a blank line.
 
-### Method parameters
-	1. Never re-assign a parameter value. This may lead to unpredictable bugs.
-	2. Don't use too many number of parameters. Keep the maximum number of method parameters to 5 for simplicity.
-    	3. Prefer method parameter type to be more generic such as a Super Interface or Super Class. For example, `List` instead of `ArrayList`.
+### Method Parameters
+1. Never re-assign a parameter value. This may lead to unpredictable bugs.
+2. Don't use too many number of parameters. Keep the maximum number of method parameters to 5 for simplicity.
+3. Prefer method parameter type to be more generic such as a Super Interface or Super Class. For example, `List` instead of `ArrayList`.
 	
-### Method return statement
-    1.	Never return null for an Array return type. Return an empty array of 0 like `return new String[0]`.
-    2.	Never return null for a Set/List/Map collection return types. Return corresponding empty values such as `Collections.emptySet()`, `Collections.emptyList()` or `Collections.emptyMap()`;
-    3. Prefer method return type to be more generic such as a Super Interface or Super Class. For example, `List` instead of `ArrayList`.
-    4.	Avoid having multiple return statements in a method. Prefer to provide a single point of exit to a method. For example,
+### Method Return Statement
+1.	Never return null for an Array return type. Return an empty array of 0 like `return new String[0]`.
+2.	Never return null for a Set/List/Map collection return types. Return corresponding empty values such as `Collections.emptySet()`, `Collections.emptyList()` or `Collections.emptyMap()`;
+3. Prefer method return type to be more generic such as a Super Interface or Super Class. For example, `List` instead of `ArrayList`.
+4.	Avoid having multiple return statements in a method. Prefer to provide a single point of exit to a method. For example,
 
         ```
         //AVOID BELOW
@@ -491,8 +491,8 @@ class Sample extends Object {
         }
 
         ```
-        5. Use `Optional` return type to avoid null checking. When there is possible to return `null` for a method, return `Optional.empty()`.
-        6. Use `OptionalInt`, `OptionalLong` return types for a method when there is an unknown value of Integer/Long to be returned like `-1`;
+5. Use `Optional` return type to avoid null checking. When there is possible to return `null` for a method, return `Optional.empty()`.
+6. Use `OptionalInt`, `OptionalLong` return types for a method when there is an unknown value of Integer/Long to be returned like `-1`;
 
 
 # Statements
@@ -554,9 +554,9 @@ return myDisk.size();
 return (size ? size : defaultSize);
 ```
 
-* Refer to Section 6.4.2 for more information.
+* Refer to [Method return statement](#method-return-statement) for more information.
 
-## if, if-else, if-else-if-else Statements
+## if, if-else, if-else if-else Statements
 
 * Always curly braces are used in the if-else statements. Even though there is a single statement below the if-else statement, curly braces is used. For example,
 ```
@@ -584,7 +584,7 @@ return isEmpty(); //PREFER
 * Avoid using nested conditional expressions for better readability.
 
 
-## switch Statements
+## "switch" Statements
 * A switch statement should have the following form:
 ```
 switch (condition) {
@@ -639,15 +639,15 @@ while(age > 60)  {
 # Naming Conventions
 ## Package names
 
-All the package name in MOSIP application starts with **io.mosip**. Please refer to Section 2.3 for various kinds or classes and the package names under which they should be kept.
+All the package name in MOSIP application starts with **io.mosip**. Refer to [Classes/Interfaces in MOSIP](#classesinterfaces-in-mosip) section for various kinds or classes and the package names under which they should be kept.
 
 ## Classes
 
-The names given to classes are always nouns and in camel case. Please refer to Section 2.3 for various kinds or classes and their names.
+The names given to classes are always nouns and in camel case. Refer to [Classes/Interfaces in MOSIP](#classesinterfaces-in-mosip) section for various kinds or classes and their names.
 
 ## Interfaces
 
-The names given to interface is always noun and in camel case. Please refer to Section 2.3 for various kinds or interfaces and their names.
+The names given to interface is always noun and in camel case. Refer to [Classes/Interfaces in MOSIP](#classesinterfaces-in-mosip) section for various kinds or interfaces and their names.
 
 ## Methods
 
@@ -695,9 +695,9 @@ while (age > MAX_AGE) {
 
 * Avoid multiple assignments in the same line. For example,
 ```
-int a, b = 10 //AVOID
+int a, b = 10 // AVOID
 
-//PREFER
+// PREFER
 int a = 10;
 int b = 10;
 ```
@@ -781,12 +781,12 @@ public void myMethod()throws NumberFormatException{  // PREFER
 The exceptions are documented clearly. For example,
 ```
 /**
-* The method description goes here ...
-*
-* @param input
-* @throws PacketNotValidException
-* if so and so... happens
-*/
+ * The method description goes here ...
+ *
+ * @param input
+ * @throws PacketNotValidException
+ * if so and so... happens
+ */
 
 public void myMethod(String someInput) throws PacketNotValidException {
 ```
@@ -810,23 +810,23 @@ public static void viewTable(Connection con) throws SQLException {
 
 * Always catch specific exceptions over a more generic exceptions like Exception/Throwable class. For example,
 ```
-//AVOID BELOW
+// AVOID BELOW
 try {
     ...
 } catch(Exception e) {  //AVOID
     ...
 }
 
-//PREFER BELOW
+// PREFER BELOW
 try {
     ...
-} catch(RestException e) { //PREFER
+} catch(RestException e) { // PREFER
     ...
 }
 ```
 * Never leave a catch block empty. Either handle the exception, or say proper reason for doing nothing in it.
 ```
-//AVOID BELOW
+// AVOID BELOW
 try {
    ...
 } catch(NumberFormatException e) {} // AVOID
@@ -926,10 +926,10 @@ public final class XYZLogger {
 
 ````
 * To log any information/error/debug in a class, 
-    * create a logger instance in that class as below:
-	`private static Logger mosipLogger = XYZLogger.getLogger(MyClass.class);`
-    
-    * In appropriate places invoke the appropriate log method of mosipLogger such as `error`, `debug` or `info` with appropriate parameters passed to it.
+	* create a logger instance in that class as below:
+		`private static Logger mosipLogger = XYZLogger.getLogger(MyClass.class);`
+
+	* In appropriate places invoke the appropriate log method of mosipLogger such as `error`, `debug` or `info` with appropriate parameters passed to it.
 
 ### MOSIP log format
 
@@ -1010,5 +1010,5 @@ MessageDialog.makeText(text)
 
 # References
 
-<div>http://www.oracle.com/technetwork/java/codeconventions-150003.pdf</div>
-<div>https://www.jfokus.se/jfokus17/preso/Java-SE-8-best-practices.pdf</div>
+* <div>http://www.oracle.com/technetwork/java/codeconventions-150003.pdf</div>
+* <div>https://www.jfokus.se/jfokus17/preso/Java-SE-8-best-practices.pdf</div>
