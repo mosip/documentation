@@ -15,6 +15,7 @@ This service creates a service provider. The history is persisted
 
 #### Resource URL
 `POST /deviceprovider`
+
 `https://mosip.io/v1/masterdata/deviceprovider`
 
 ###$ Resource details
@@ -956,11 +957,12 @@ ADM-DPM-009 |Error occurred while checking a Device Details| If there an error f
 * [POST /mosipdeviceservice](#post-mosipdeviceservice)
 * [PUT /mosipdeviceservice](#put-mosipdeviceservice)
 
-### POST /mds
+### POST /mosipdeviceservice
 This service will create the MDS which are used in the MOSIP platform. 
 
 #### Resource URL
 `POST /mosipdeviceservice`
+
 `https://qa.mosip.io/v1/masterdata/mosipdeviceservice`
 
 #### Resource details

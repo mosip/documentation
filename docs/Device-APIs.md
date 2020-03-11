@@ -48,9 +48,7 @@ This API is used by the Administrator Portal UI to populate filter dropdowns on 
 
 This service will create the list of Devices which are used in the MOSIP platform. 
 
-Please find the steps to create primary/secondary languages 
-
-https://github.com/mosip/mosip-docs/wiki/Registration-Center-APIs#createupdate-api
+Please find the steps to create primary/secondary languages in [Registration Center Create/Update API](Registration-Center-APIs.md#createupdate-api)
 
 ### Resource URL
 `https://mosip.io/v1/masterdata/devices`
@@ -132,7 +130,7 @@ zoneCode|Yes|Zone code of device| |
 200 Ok
 
 ### Error Response:
-```
+```JSON
 {
   "id": "string",
   "version": "string",
