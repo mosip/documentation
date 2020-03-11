@@ -34,7 +34,6 @@ Build and deploy instructions available in the above repos.
 # APIs
 
 APIs from multiple services are used for Admin as follows:
-
 * [Admin APIs](Admin-APIs.md) 
 * [Document APIs](Document-APIs.md)
 * [Register Center APIs](Registration-Center-APIs.md)
