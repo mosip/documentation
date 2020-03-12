@@ -1,8 +1,9 @@
 ## Setup Keycloak Standalone Server setup 6.0.1
-**Dcumentation for setting up Keycloak server**
+Dcumentation for setting up keycloak server
+
 ### Prerequisites
 
-1. Install java (java-8-openjdk) in all the machines in the cluster and setup the JAVA_HOME environment variable for the same.
+1. Install java (java-8-openjdk) in all the machines in the cluster and setup the `JAVA_HOME` environment variable for the same.
 ```
 sudo yum install java-1.8.0-openjdk-devel
 ``` 
@@ -12,8 +13,8 @@ update-alternatives --display java
 ```
 
 **_Note:_**
-Take the value of the current link and remove the trailing `/bin/java`. <br/>
-For example, on RHEL 7, the link is `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre/bin/java`, <br/>
+Take the value of the current link and remove the trailing `/bin/java`.
+For example, on RHEL 7, the link is `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre/bin/java`,
 So, `JAVA_HOME` should be `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre.`
 
 #### Edit ~/bashrc.sh:
@@ -23,27 +24,30 @@ For example on a Debian with open-jdk-8:
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre
 ```
 
-### Download Keycloak 
+### Download & install keycloak 
 Download and unzip Keycloak
 ```  
 sudo wget "https://downloads.jboss.org/keycloak/6.0.1/keycloak-6.0.1.tar.gz" 
 sudo tar xzf keycloak-6.0.1.tar.gz
 ```
-#### Install postgres as a database with Keycloak or you can use any database supported by Keycloak**
-[Keycloak Database Setup](https://www.keycloak.org/docs/latest/server_installation/index.html#_database)
+#### Install a database supproted by keycloak
+
+We have installed postgres as the database for keycloak; you can use any database supported by Keycloak**
+
+* [Documentation for Keycloak Database Setup is available here!](https://www.keycloak.org/docs/latest/server_installation/index.html#_database)
 
 Install Postgres in your vm
 [Install  Postgres](https://github.com/mosip/mosip-docs/wiki/Getting-Started#61-install-and-use-postgresql-version-102-on-rhel-75)
 
-Within the  _…​/modules/_  directory of your Keycloak distribution, you need to create a directory structure to hold your module definition. The convention is use the Java package name of the JDBC driver for the name of the directory structure. For PostgreSQL, create the directory  _org/postgresql/main_. Copy your database driver JAR into this directory and create an empty  _module.xml_  file within it too.
+Within the  `…​/modules/`  directory of your Keycloak distribution, you need to create a directory structure to hold your module definition. The convention is use the Java package name of the JDBC driver for the name of the directory structure. For PostgreSQL, create the directory  `org/postgresql/main`. Copy your database driver JAR into this directory and create an empty `module.xml` file within it too.
 
-Module Directory
+**Module Directory**
 
 ![db module](https://www.keycloak.org/docs/latest/server_installation/keycloak-images/db-module.png)
 
-After you have done this, open up the  _module.xml_  file and create the following XML:
+After you have done this, open up the `module.xml` file and create the following XML:
 
-Module XML
+**Module XML**
 ```
 <?xml version="1.0" ?>
 <module xmlns="urn:jboss:module:1.3" name="org.postgresql">
@@ -59,7 +63,7 @@ Module XML
 </module>
 ```
 
-The module name should match the directory structure of your module. So,  _org/postgresql_  maps to  `org.postgresql`. The  `resource-root path`  attribute should specify the JAR filename of the driver. The rest are just the normal dependencies that any JDBC driver JAR would have.
+The module name should match the directory structure of your module. So, `org/postgresql` maps to `org.postgresql`. The `resource-root path` attribute should specify the JAR filename of the driver. The rest are just the normal dependencies that any JDBC driver JAR would have.
 
 
 #### Create a service to start Keycloak
@@ -81,24 +85,22 @@ TimeoutStopSec=600
 [Install]
 WantedBy=multi-user.target
 ```
+
 #### Enable SSL for Keycloak server
 
-To enable SSL we need a certificate which here in example we will use Lets encrypt
+To enable SSL we need a certificate which here in example we will use Lets encrypt.
 
-Follow the steps in this link to create a certificate for your domain
-
-[https://letsencrypt.org/](https://letsencrypt.org/)
+Follow the steps in this [link](https://letsencrypt.org/) to create a certificate for your domain.
 
 We will create a keystore in which we will store certificate chain and private key and give them an alias
-
 ```
 openssl pkcs12 -export -inkey{{private key pem path}} -in {{certificate pem path}} -password pass:{{keystore password}} -out {{output keystore name}} -name {{alias}}
 ```
 
 #### Configure standalone xml
 
-* Go to {{keycloak folder}}/standalone/configuration
-* Open Standalone.xml and make following changes
+* Go to `{{keycloak folder}}/standalone/configuration`
+* Open `Standalone.xml` and make following changes
 	*  Add a driver for postgres(Or your database)
 		```
 		<driver  name="postgresql"  module="org.postgresql">
@@ -133,7 +135,6 @@ openssl pkcs12 -export -inkey{{private key pem path}} -in {{certificate pem path
 		</properties>
 		</provider>
 		```
-
 	* Change network configuration
 		* Inet address for both public and management profile to access it remotely
 			```
@@ -146,7 +147,7 @@ openssl pkcs12 -export -inkey{{private key pem path}} -in {{certificate pem path
 			</interface>
 			</interfaces>
 			```
-		* Default ports from 8080 -> 80 and 8443 -> 443 to not give ports at time of accessing Keycloak
+		* Default ports from `8080 -> 80` and `8443 -> 443` to not give ports at time of accessing Keycloak
 			```
 			<socket-binding  name="http"  port="${jboss.http.port:80}"/>
 			<socket-binding  name="https"  port="${jboss.https.port:443}"/>
@@ -172,8 +173,8 @@ From keycloak bin directory run
 ```
 
 ### Configure Keycloak
-* Create a new Realm.(Eg mosip)   
-* Create clients for every module.(ida,pre-registration,registration-processor,registration-client,auth,resident,mosip-client)
+* Create a new Realm(eg. mosip).   
+* Create clients for every module(i.e. ida,pre-registration,registration-processor,registration-client,auth,resident,mosip-client).
 * Enable Authorization and Service Account for every Client and provide valid redirect uri. These clients will be used by all modules to get client tokens.
  
  ![Client_Service Account](_images/kernel/keycloak/clients.jpg)
@@ -183,8 +184,8 @@ For this Example we will be configuring LDAP as user federation
 * Go to User Federation.
 * Create a new User Federation for LDAP.
 * Make Edit Mode Writable.
-* Configure field based on your LDAP(There are many vendors for ldap you can connect to any ldap vendor based on configurations)
-* Go to Mappers and Create mappers for each field you want keycloak to take from LDAP
+* Configure field based on your LDAP(There are many vendors for ldap you can connect to any ldap vendor based on configurations).
+* Go to Mappers and Create mappers for each field you want keycloak to take from LDAP.
 
 ![User_Federation _A](_images/kernel/keycloak/userfed.jpg)
 
@@ -212,15 +213,16 @@ email : user-attribute-ldap-mapper
 ```
 IDA => ID_AUTHENTICATION
 Registration-Processor => REGISTRATION_PROCESSOR
-Registration-Client => REGISTRATION_ADMIN
-                       REGISTRATION_SUPERVISOR
-                       REGISTRATION_OFFICER
-                       REGISTRATION_OPERATOR
- Resident => RESIDENT
- Pre-Registration => PRE_REGISTRATION
-                     INDIVIDUAL
+Registration-Client => 	REGISTRATION_ADMIN
+						REGISTRATION_SUPERVISOR
+						REGISTRATION_OFFICER
+						REGISTRATION_OPERATOR
+Resident => RESIDENT
+Pre-Registration => PRE_REGISTRATION
+					INDIVIDUAL
 Auth => AUTH
- ```
+```
+
 #### Updation of Configuration for Keycloak**
 **_Note:_** <> is for variable properties with this sign need to be updated
 
@@ -241,7 +243,7 @@ mosip.kernel.roles-url=realms/mosip/roles
 mosip.kernel.users-url=realms/mosip/users
 mosip.kernel.role-user-mapping-url=/{userId}/role-mappings/realm
 
-\#Domain should be updated
+`#Domain should be updated
 mosip.authmanager.base-url=https://<domain>/v1/authmanager
 
 mosip.keycloak.authorization_endpoint=${mosip.keycloak.base-url}/auth/realms/mosip/protocol/openid-connect/auth
@@ -256,7 +258,7 @@ mosip.admin_realm_id=<Mosip realm id> (EX mosip)
 
 mosip.master.realm-id=master
 
-\#Go to Mosip realm -> Go to Roles -> select INDIVIDUAL ROLE you will find hyperlink  in tab will have a id after roles-> /realms/mosip/roles/[e3bb3344-6445-4f6f-9e33-d5ec0d231327]
+`#Go to Mosip realm -> Go to Roles -> select INDIVIDUAL ROLE you will find hyperlink  in tab will have a id after roles-> /realms/mosip/roles/[e3bb3344-6445-4f6f-9e33-d5ec0d231327]
 mosip.admin.individual_role_id=<role if of individual>
 
 mosip.admin.pre-reg_user_password=mosip
@@ -268,10 +270,10 @@ db_3_DS.keycloak.driverClassName=<keycloak db driver class name>
 
 mosip.keycloak.admin.client.id=admin-cli
 
-\#First user we create when we started keycloak
+`#First user we create when we started keycloak
 mosip.keycloak.admin.user.id=<admin user name>
 
-\#First user we create when we started keycloak
+`#First user we create when we started keycloak
 mosip.keycloak.admin.secret.key=<admin user password>
 
 mosip.kernel.auth.client.id=<Auth Client id>
@@ -311,7 +313,7 @@ AUTH_SECRET_KEY=<registration-client-secret>
 ```
 ##### Resident
 ```
-\#Token generation app id
+`#Token generation app id
 resident.clientId=<resident-client-id>
 resident.secretKey=<resident-client-secret>
 KERNELAUTHMANAGER=${mosip.base.url}/v1/authmanager/authenticate/clientidsecretkey
