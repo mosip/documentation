@@ -1,10 +1,10 @@
-## Device Management
+# Device Management APIs
 * [Device Providers](#device-providers)
 * [Foundational Trust Providers](#foundational-trust-providers)
 * [Devices](#devices)
 * [MDS API](#mds-api)
 
-# Device Providers
+## Device Providers
 
 * [POST /deviceprovider](#post-deviceprovider)
 * [PUT /deviceprovider](#put-deviceprovider)
@@ -13,18 +13,18 @@
 
 This service creates a service provider. The history is persisted
 
-### Resource URL
-### `POST /deviceprovider`
+#### Resource URL
+`POST /deviceprovider`
+
 `https://mosip.io/v1/masterdata/deviceprovider`
 
-### Resource details
-
+###$ Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-### Parameters
+#### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 vendorName|yes|This is the name of the vendor|-NA|-NA-
@@ -35,7 +35,7 @@ certificateAlias|yes|This is the certificate alias of the vendor|-NA|-NA-
 isActive|yes|This field represents whether this entity is active or not|-NA|-NA-
 id|yes|This is the id of the vendor|-NA|-NA-
 
-### Example Request
+#### Example Request
 ```JSON
 {
 	"id": "string",
@@ -53,7 +53,7 @@ id|yes|This is the id of the vendor|-NA|-NA-
 }
 ```
 
-### Example success response
+#### Example success response
 ```JSON
 {
 	"id": null,
@@ -79,7 +79,7 @@ id|yes|This is the id of the vendor|-NA|-NA-
 }
 
 ```
-### Example failure response
+#### Example failure response
 ```JSON
 {
 	"id": "io.mosip.masterdata.deviceprovider.create",
@@ -106,17 +106,18 @@ ADM-DPM-012 |Error occurred while registering a Device Provider|If there an erro
 
 This service updates a service provider. The history is persisted
 
-### Resource URL
-### `PUT /deviceprovider`
+#### Resource URL
 
-### Resource details
+`PUT /deviceprovider`
+
+#### Resource details
 
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-### Parameters
+#### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 vendorName|yes|This is the name of the vendor|-NA|-NA-
@@ -127,7 +128,7 @@ certificateAlias|yes|This is the certificate alias of the vendor|-NA|-NA-
 isActive|yes|This field represents whether this entity is active or not|-NA|-NA-
 id|yes|This is the id of the vendor|-NA|-NA-
 
-### Example Request
+#### Example Request
 ```JSON
 {
   "id": "string",
@@ -146,7 +147,7 @@ id|yes|This is the id of the vendor|-NA|-NA-
 }
 ```
 
-### Example success response
+#### Example success response
 ```JSON
 {
   "id": null,
@@ -172,7 +173,7 @@ id|yes|This is the id of the vendor|-NA|-NA-
 }
 
 ```
-### Example failure response
+#### Example failure response
 ```JSON
 {
 	"id": "io.mosip.masterdata.deviceprovider.create",
@@ -187,10 +188,10 @@ id|yes|This is the id of the vendor|-NA|-NA-
 }
 ```
 
-### Response codes
+#### Response codes
 200
 
-### Example failure response
+#### Example failure response
 ```JSON
 {
 	"id": "io.mosip.masterdata.deviceprovider.update",
@@ -205,7 +206,7 @@ id|yes|This is the id of the vendor|-NA|-NA-
 }
 ```
 
-### Response codes
+#### Response codes
 200
 
 #### Failure details
@@ -215,7 +216,7 @@ KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 ADM-DPM-013|Mandatory input parameter is missing|If any mandatory input parameter is missing
 ADM-DPM-014 |Error occurred while registering a Device Provider|If there an error from DB while storing details of Device Provider
 
-# Foundational Trust Providers
+## Foundational Trust Providers
 
 * [POST /foundationaltrustprovider](#post-foundationaltrustprovider)
 * [PUT /foundationaltrustprovider](#put-foundationaltrustprovider)
@@ -224,17 +225,16 @@ ADM-DPM-014 |Error occurred while registering a Device Provider|If there an erro
 
 This service creates a service provider. 
 
-### Resource URL
-### `POST /foundationaltrustprovider`
+#### Resource URL
+`POST /foundationaltrustprovider`
 
-### Resource details
-
+#### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-### Parameters
+#### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 vendor_name|yes|This is the name of the vendor|-NA|-NA-
@@ -243,7 +243,7 @@ email|yes|This is the email of the vendor|-NA|-NA-
 contactNo|yes|This is the contact number of the vendor|-NA|-NA-
 active|yes|This field represents whether this entity is active or not|-NA|-NA-
 
-### Example Request
+#### Example Request
 ```JSON
 {
   "id": "string",
@@ -263,7 +263,7 @@ active|yes|This field represents whether this entity is active or not|-NA|-NA-
 }
 ```
 
-### Example success response
+#### Example success response
 ```JSON
 {
   "id": "string",
@@ -289,10 +289,10 @@ active|yes|This field represents whether this entity is active or not|-NA|-NA-
 }
 ```
 
-### Response codes
+#### Response codes
 200
 
-### Example failure response
+#### Example failure response
 ```JSON
 {
 	"id": "io.mosip.masterdata.foundationaltrustprovider.create",
@@ -307,7 +307,7 @@ active|yes|This field represents whether this entity is active or not|-NA|-NA-
 }
 ```
 
-### Response codes
+#### Response codes
 200
 
 #### Failure details
@@ -320,20 +320,19 @@ ADM-DPM-017|Error occurred while registering a Foundational Trust Provider|If th
 
 
 ### PUT /foundationaltrustprovider
-
 This service updates a service provider. 
 
-### Resource URL
-### `PUT /foundationaltrustprovider`
+#### Resource URL
+`PUT /foundationaltrustprovider`
 
-### Resource details
+#### Resource details
 
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-### Parameters
+#### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 vendor_name|yes|This is the name of the vendor|-NA|-NA-
@@ -342,7 +341,7 @@ email|yes|This is the email of the vendor|-NA|-NA-
 contact_number|yes|This is the contact number of the vendor|-NA|-NA-
 is_active|yes|This field represents whether this entity is active or not|-NA|-NA-
 
-### Example Request
+#### Example Request
 ```JSON
 {
   "id": "string",
@@ -362,7 +361,7 @@ is_active|yes|This field represents whether this entity is active or not|-NA|-NA
 }
 ```
 
-### Example success response
+#### Example success response
 ```JSON
 {
   "id": "string",
@@ -388,10 +387,10 @@ is_active|yes|This field represents whether this entity is active or not|-NA|-NA
 }
 ```
 
-### Response codes
+#### Response codes
 200
 
-### Example failure response
+#### Example failure response
 ```JSON
 {
 	"id": "io.mosip.masterdata.foundationaltrustprovider.update",
@@ -406,7 +405,7 @@ is_active|yes|This field represents whether this entity is active or not|-NA|-NA
 }
 ```
 
-### Response codes
+#### Response codes
 200
 
 #### Failure details
@@ -416,9 +415,7 @@ KER-ATH-401|Authentication Failed|If no role/invalid token is detected
 ADM-DPM-018|Mandatory input parameter is missing|If any mandatory input parameter is missing
 ADM-DPM-019|Error occurred while registering a Foundational Trust Provider|If there an error from DB while storing details of Foundational Trust Provider
 
-
-
-# Devices
+## Devices
 
 * [POST /registereddevices](#post-registereddevices)
 * [DELETE /deregister/{deviceCode}](#delete-deregister)
@@ -428,20 +425,19 @@ ADM-DPM-019|Error occurred while registering a Foundational Trust Provider|If th
 
 
 ### POST /registereddevices
-
 This service creates a device in the platform. The history is persisted
 
-### Resource URL
-### `POST /registereddevices`
+#### Resource URL
+`POST /registereddevices`
 
-### Resource details
+#### Resource details
 
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-1) Device data contains the device details in Base64 encoded format.
+* Device data contains the device details in Base64 encoded format.
 
 Request : 
 ```JSON
@@ -456,16 +452,14 @@ Request :
 }
 ```
 
-### Parameters
+#### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 deviceData|yes|This contains the encrypted device data|-NA|-NA-
 
-2) Device data : 
+* Device data : Device data contains the device id, device info 
 
-Device data contains the device id, device info 
-
-Decoded Json :
+**Decoded Json:**
 ```JSON
 {
               "deviceId": "70959dd5-e45f-438a-9ff8-9b263908e572",
@@ -482,7 +476,7 @@ Decoded Json :
 }
 ```
 
-### Parameters
+#### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 deviceId|yes|This is the id of the device|-NA|-NA-
@@ -492,9 +486,9 @@ purpose|yes|This is the purpose of the device|-NA|-AUTH or REGISTRATION
 If purpose is AUTH , we are generation the autogenerating the code.
 If purpose is REGISTRATION, device id will be populated as device code.
 
-Device Info : 
+**Device Info:** 
 
-### Parameters
+#### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 certificationLevel|yes|This is the certification level of the device|-NA|-NA-
@@ -503,7 +497,7 @@ firmware|yes|This is the firmware of the device|-NA|-NA-
 timestamp|yes|This is the timestamp of the record|-NA|-NA-
 expiryDate|no|This is the expiry date of the device|current timestamp|-NA-
 
-
+**Digital ID:**
 Digital Id will be encoded , Please find the decoded json : 
 ```JSON
 {
@@ -531,7 +525,7 @@ make|yes|This is the make of the device|-NA|-NA-
 model|yes|This is the model of the device|-NA|-NA-
 dateTime|yes|This is the dateTime of the device|-NA|-NA-
 
-Validations : 
+**Validations:** 
 
 We have added a configurable time value +timevalue , which will accept the request within configured time in timestamp of Device Info.
 
@@ -550,66 +544,63 @@ Response :
     "errors": null
 }
 ```
-3) Signed Response :
+* Signed Response:
 
-Response follows the JWT format :
+Response follows the JWT format:
+	* Header: 
+		```eyJhbGciOiJSUzI1NiIsInR5cGUiOiJKV1MifQ==.```
+	* Decoded Header: 
+		```JSON
+		{
+			"alg": "RS256",
+			"type": "JWS"
+		}
+		```
+	* Pay load: 
+		```
+		eyJzdGF0dXMiOiJSRUdJU1RFUkVEIiwiZGlnaXRhbElkIjoiZXlKelpYSnBZV3hPYnlJNklqRTRNREV4TmpBNU9USWlMQ0prWlhacFkyVlFjbTkyYVdSbGNpSTZJbE5aVGtOQ1dWUkZJaXdpWkdWMmFXTmxVSEp2ZG1sa1pYSkpaQ0k2SWxOWlRrTkNXVlJGTGsxRE1ERkJJaXdpYldGclpTSTZJazFETURGQklpd2liVzlrWld3aU9pSlRUVWxFUTB3aUxDSmtZWFJsVkdsdFpTSTZJakl3TWpBdE1ERXRNVE5VTURjNk1qQTZOREl1TVRrMVdpSXNJblI1Y0dVaU9pSkdhVzVuWlhKd2NtbHVkQ0lzSW5OMVlsUjVjR1VpT2lKVGFXNW5iR1VpZlEiLCJkZXZpY2VDb2RlIjoiOGNkNDI4NjQtMmNkYy00MDY3LThkMTEtNDBiMjVmZjhjNzYwIiwiZW52IjoibG9jYWwiLCJ0aW1lU3RhbXAiOiIyMDIwLTAxLTEzVDEyOjU1OjI5LjkxOFoifQ==
+		```
+	* Decoded Payload: 
+		```JSON
+		{
+		  "status": "REGISTERED",
+		  "digitalId": "eyJzZXJpYWxObyI6IjE4MDExNjA5OTIiLCJkZXZpY2VQcm92aWRlciI6IlNZTkNCWVRFIiwiZGV2aWNlUHJvdmlkZXJJZCI6IlNZTkNCWVRFLk1DMDFBIiwibWFrZSI6Ik1DMDFBIiwibW9kZWwiOiJTTUlEQ0wiLCJkYXRlVGltZSI6IjIwMjAtMDEtMTNUMDc6MjA6NDIuMTk1WiIsInR5cGUiOiJGaW5nZXJwcmludCIsInN1YlR5cGUiOiJTaW5nbGUifQ",
+		  "deviceCode": "8cd42864-2cdc-4067-8d11-40b25ff8c760",
+		  "env": "local",
+		  "timeStamp": "2020-01-13T12:55:29.918Z"
+		}
+		```
 
-1)           Header : 
+* Digital Id: 
 
-eyJhbGciOiJSUzI1NiIsInR5cGUiOiJKV1MifQ==.
-
-Decoded : 
-```JSON
-{
-              "alg": "RS256",
-              "type": "JWS"
-}
-```
-
-2)           Pay load : 
-
-eyJzdGF0dXMiOiJSRUdJU1RFUkVEIiwiZGlnaXRhbElkIjoiZXlKelpYSnBZV3hPYnlJNklqRTRNREV4TmpBNU9USWlMQ0prWlhacFkyVlFjbTkyYVdSbGNpSTZJbE5aVGtOQ1dWUkZJaXdpWkdWMmFXTmxVSEp2ZG1sa1pYSkpaQ0k2SWxOWlRrTkNXVlJGTGsxRE1ERkJJaXdpYldGclpTSTZJazFETURGQklpd2liVzlrWld3aU9pSlRUVWxFUTB3aUxDSmtZWFJsVkdsdFpTSTZJakl3TWpBdE1ERXRNVE5VTURjNk1qQTZOREl1TVRrMVdpSXNJblI1Y0dVaU9pSkdhVzVuWlhKd2NtbHVkQ0lzSW5OMVlsUjVjR1VpT2lKVGFXNW5iR1VpZlEiLCJkZXZpY2VDb2RlIjoiOGNkNDI4NjQtMmNkYy00MDY3LThkMTEtNDBiMjVmZjhjNzYwIiwiZW52IjoibG9jYWwiLCJ0aW1lU3RhbXAiOiIyMDIwLTAxLTEzVDEyOjU1OjI5LjkxOFoifQ==
-
-Decoded : 
-```JSON
-{
-  "status": "REGISTERED",
-  "digitalId": "eyJzZXJpYWxObyI6IjE4MDExNjA5OTIiLCJkZXZpY2VQcm92aWRlciI6IlNZTkNCWVRFIiwiZGV2aWNlUHJvdmlkZXJJZCI6IlNZTkNCWVRFLk1DMDFBIiwibWFrZSI6Ik1DMDFBIiwibW9kZWwiOiJTTUlEQ0wiLCJkYXRlVGltZSI6IjIwMjAtMDEtMTNUMDc6MjA6NDIuMTk1WiIsInR5cGUiOiJGaW5nZXJwcmludCIsInN1YlR5cGUiOiJTaW5nbGUifQ",
-  "deviceCode": "8cd42864-2cdc-4067-8d11-40b25ff8c760",
-  "env": "local",
-  "timeStamp": "2020-01-13T12:55:29.918Z"
-}
-```
-
-2a)Digital Id: 
-
-  Digital Id will be unsigned and will be base64 encoded.
-
-eyJzZXJpYWxObyI6IjE4MDExNjA5OTIiLCJkZXZpY2VQcm92aWRlciI6IlNZTkNCWVRFIiwiZGV2aWNlUHJvdmlkZXJJZCI6IlNZTkNCWVRFLk1DMDFBIiwibWFrZSI6Ik1DMDFBIiwibW9kZWwiOiJTTUlEQ0wiLCJkYXRlVGltZSI6IjIwMjAtMDEtMTNUMDc6MjA6NDIuMTk1WiIsInR5cGUiOiJGaW5nZXJwcmludCIsInN1YlR5cGUiOiJTaW5nbGUifQ
-
- Decoded : 
-```JSON   
-{
-              "serialNo": "1801160992",
-              "deviceProvider": "SYNCBYTE",
-              "deviceProviderId": "SYNCBYTE.MC01A",
-              "make": "MC01A",
-              "model": "SMIDCL",
-              "dateTime": "2020-01-13T07:20:42.195Z",
-              "type": "Fingerprint",
-              "subType": "Single"
+Digital Id will be unsigned and will be base64 encoded.
+	```
+	eyJzZXJpYWxObyI6IjE4MDExNjA5OTIiLCJkZXZpY2VQcm92aWRlciI6IlNZTkNCWVRFIiwiZGV2aWNlUHJvdmlkZXJJZCI6IlNZTkNCWVRFLk1DMDFBIiwibWFrZSI6Ik1DMDFBIiwibW9kZWwiOiJTTUlEQ0wiLCJkYXRlVGltZSI6IjIwMjAtMDEtMTNUMDc6MjA6NDIuMTk1WiIsInR5cGUiOiJGaW5nZXJwcmludCIsInN1YlR5cGUiOiJTaW5nbGUifQ
+	```
+Decoded Digital ID: 
+	```JSON   
+	{
+		"serialNo": "1801160992",
+		"deviceProvider": "SYNCBYTE",
+        "deviceProviderId": "SYNCBYTE.MC01A",
+        "make": "MC01A",
+        "model": "SMIDCL",
+        "dateTime": "2020-01-13T07:20:42.195Z",
+        "type": "Fingerprint",
+        "subType": "Single"
    }
    ```
 
-3) Signed Response : 
-Signed response from signature api 
+* Signed Response: 
+Signed response from signature api
+``` 
 dkd3Mlo2TStDT2JpM1lHY2Q1OFNJRkJ6T0E5bFZ6dUFlZnN3NHhQZzEzWE42LzAvWVZ6Qm0yNnpmZXFPRXdmWHNKQUN4aC9QNExuM2RHcjhSR2diZjEvRXgwNktCOEhhbEM1VjhPMFh4VGxmK3ZSZFlJeTZhbFh0cS8rY0s0VjRSYUpHYjVDL2kweHdzMFF3bHh0UEo4cFIvbnVrb1d5dzNNTmRDSkNZaVlGSkxVUUpKbnhyaEtYR3dvM1ZlcVNkaEYrMStjS1ZpSzFWSlQ5OHFsMjFhTUp0MGd4Wko1Rzg5V0lSbi9yTnU1Slg1N0c0dnNya1JhN3JEUURsNDI5dEdkT3RYYVJYK3dOb0FESmI5V0psOFlLOW5hUFkyNExkZ3FkOXRydEw2VUoyaTc5ek1Qclk0cjhIQWFQaXlxc0REQmRPVFdhanN5VmhOODFuU0JCQ0tBPT0=
+```
 
-
-### Response codes
+#### Response codes
 200
 
-### Example failure response
+#### Example failure response
 ```JSON
 {
 	"id": "io.mosip.masterdata.device.l0.create",
@@ -624,7 +615,7 @@ dkd3Mlo2TStDT2JpM1lHY2Q1OFNJRkJ6T0E5bFZ6dUFlZnN3NHhQZzEzWE42LzAvWVZ6Qm0yNnpmZXFP
 }
 ```
 
-### Response codes
+#### Response codes
 200
 
 #### Failure details
@@ -643,25 +634,23 @@ ADM-DPM-034|Invalid Purpose received|If in purpose, standard values are not rece
 ADM-DPM-036|Error occurred while storing MDS Details|If there an error from DB while registering the Device
 
 ### DELETE deregister
-
 This service deregisters a device in the platform. The history is persisted
 
-### Resource URL
-### `DELETE /registereddevices/deregister/{deviceCode}`
+#### Resource URL
+`DELETE /registereddevices/deregister/{deviceCode}`
 
-### Resource details
-
+#### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-### Parameters
+#### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 deviceCode|yes|This is the code of the device|-NA|-NA-
 
-### Example success response
+#### Example success response
 ```JSON
 {
 	"id": "io.mosip.masterdata.device.l0.delete",
@@ -676,10 +665,10 @@ deviceCode|yes|This is the code of the device|-NA|-NA-
 }
 ```
 
-### Response codes
+#### Response codes
 200
 
-### Example failure response
+#### Example failure response
 ```JSON
 {
 	"id": "io.mosip.masterdata.device.l0.create",
@@ -694,30 +683,28 @@ deviceCode|yes|This is the code of the device|-NA|-NA-
 }
 ```
 
-### Response codes
+#### Response codes
 200
 
 ### PUT /registereddevices/status
-
 This service updates status of the device. The history is persisted
 
-### Resource URL
-### `PUT /registereddevices/status?devicecode='10001'&status='REVOKED'`
+#### Resource URL
+`PUT /registereddevices/status?devicecode='10001'&status='REVOKED'`
 
-### Resource details
-
+#### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-### Parameters
+#### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 deviceCode|yes|This is the code of the device|-NA|-NA-
 status|yes|This is the code of the device|-NA|-NA-
 
-### Example success response
+#### Example success response
 ```JSON
 {
 	"id": "io.mosip.masterdata.device.l0.delete",
@@ -732,10 +719,10 @@ status|yes|This is the code of the device|-NA|-NA-
 }
 ```
 
-### Response codes
+#### Response codes
 200
 
-### Example failure response
+#### Example failure response
 ```JSON
 {
 	"id": "io.mosip.masterdata.device.l0.update",
@@ -750,7 +737,7 @@ status|yes|This is the code of the device|-NA|-NA-
 }
 ```
 
-### Response codes
+#### Response codes
 200
 
 #### Failure details
@@ -762,27 +749,25 @@ ADM-DPM-037|Invalid Status received|If in Status, standard values are not receiv
 ADM-DPM-038|Error occurred while updating Device Status|If there an error from DB while updating Device Status
 
 ### POST /deviceprovidermanagement/validate
-
 This service will validate the device details from the list of registered devices.
 
-### Resource URL
-### `POST /deviceprovidermanagement/validate`
+#### Resource URL
+`POST /deviceprovidermanagement/validate`
 
-### Resource details
-
+#### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-### Request Parameters
+#### Request Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 deviceCode|Yes|code of the device| | 
 digitalId|Yes|JSON object consists of device details| | 
 deviceServiceVersion|Yes|DeviceServiceVersion of the mds| | 
 
-### Example Request
+#### Example Request
 ```
 https://mosip.io/masterdata/deviceprovidermanagement/validate
 
@@ -808,7 +793,7 @@ https://mosip.io/masterdata/deviceprovidermanagement/validate
 }
 ```
 
-### Example Response
+#### Example Response
 
 200 Ok
 
@@ -829,7 +814,7 @@ https://mosip.io/masterdata/deviceprovidermanagement/validate
 
 ```
 
-##### Error Response:
+#### Error Response:
 
 ```JSON
 {
@@ -868,17 +853,17 @@ ADM-DPM-009 |Error occurred while checking a Device Details| If there an error f
 
 This service will validate the device history details from the list of registered devices.
 
-### Resource URL
-### `POST/deviceprovidermanagement/validate/history`
+#### Resource URL
+`POST/deviceprovidermanagement/validate/history`
 
-### Resource details
+#### Resource details
 
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-### Request Parameters
+#### Request Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 deviceCode|Yes|code of the device| | 
@@ -886,7 +871,7 @@ digitalId|Yes|JSON object of the device details| |
 deviceServiceVersion|Yes|DeviceServiceVersion of the mds| |
 timeStamp|Yes|Timestamp in LocalDataTimeformat of history table| | 
 
-### Example Request
+#### Example Request
 ```
 https://mosip.io/masterdata/deviceprovidermanagement/validate/history
 
@@ -913,8 +898,7 @@ https://mosip.io/masterdata/deviceprovidermanagement/validate/history
 }
 ```
 
-### Example Response
-
+#### Example Response
 200 Ok
 
 ```JSON
@@ -934,8 +918,7 @@ https://mosip.io/masterdata/deviceprovidermanagement/validate/history
 
 ```
 
-##### Error Response:
-
+#### Error Response:
 ```JSON
 {
   "id": "string",
@@ -969,29 +952,26 @@ ADM-DPM-007 |Software version does not match against the Service ID|If the Softw
 ADM-DPM-008 |Device Provider ID does not match against the Service ID|If the Device provider ID does not match the Service ID received
 ADM-DPM-009 |Error occurred while checking a Device Details| If there an error from DB while checking device details
 
-# MDS API
+## MDS API
 
 * [POST /mosipdeviceservice](#post-mosipdeviceservice)
 * [PUT /mosipdeviceservice](#put-mosipdeviceservice)
 
-# POST /mds
-Master data is required across the platform. 
-
+### POST /mosipdeviceservice
 This service will create the MDS which are used in the MOSIP platform. 
 
-### Resource URL
-### `POST /mosipdeviceservice`
+#### Resource URL
+`POST /mosipdeviceservice`
 
 `https://qa.mosip.io/v1/masterdata/mosipdeviceservice`
 
-### Resource details
-
+#### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-### Parameters
+#### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 id|Yes|id of the mds| | 
@@ -1005,7 +985,7 @@ model|Yes|model of the mds| |
 swCreateDateTime|Yes|Created date time of MDS| | 
 swExpiryDateTime|Yes|Expiry date time of MDS| | 
 
-### Example Request
+#### Example Request
 ```JSON
 {
 	"id": "string",
@@ -1026,8 +1006,7 @@ swExpiryDateTime|Yes|Expiry date time of MDS| |
 	"version": "string"
 }
 ```
-### Example Response
-
+#### Example Response
 200 Ok
 
 ```JSON
@@ -1070,22 +1049,22 @@ ADM-DPM-039|Device Provider ID not found in the list of Device Providers|Device 
 ADM-DPM-040|Device Type Code not found in the list of Device Types|Device Type Code received does not exist in the Device Type Table
 ADM-DPM-041|Device Sub Type Code not found in the list of Device Sub Types|Device Sub Type Code received does not exist in the Device Sub Type Table
 
-# PUT /mosipdeviceservice
+### PUT /mosipdeviceservice
 Master data is required across the platform. 
 
 This service will update the MDS which are used in the MOSIP platform. 
 
-### Resource URL
-### `PUT /mosipdeviceservice`
+#### Resource URL
+`PUT /mosipdeviceservice`
 
-### Resource details
+#### Resource details
 
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-### Parameters
+#### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 id|Yes|id of the mds| | 
@@ -1099,7 +1078,7 @@ model|Yes|model of the mds| |
 swCreateDateTime|Yes|Created date time of MDS| | 
 swExpiryDateTime|Yes|Expiry date time of MDS| | 
 
-### Example Request
+#### Example Request
 ```JSON
 {
   "id": "string",
@@ -1121,8 +1100,7 @@ swExpiryDateTime|Yes|Expiry date time of MDS| |
   "version": "string"
 }
 ```
-### Example Response
-
+#### Example Response
 200 Ok
 
 ```JSON
@@ -1157,8 +1135,7 @@ swExpiryDateTime|Yes|Expiry date time of MDS| |
 
 ```
 
-##### Error Response:
-
+#### Error Response:
 ```JSON
 {
   "id": "string",
@@ -1185,4 +1162,3 @@ ADM-DPM-021|MDS Details already exist|If the MDS Details already exist
 ADM-DPM-039|Device Provider ID not found in the list of Device Providers|Device Provider ID received does not exist in the Device Provider Table
 ADM-DPM-040|Device Type Code not found in the list of Device Types|Device Type Code received does not exist in the Device Type Table
 ADM-DPM-041|Device Sub Type Code not found in the list of Device Sub Types|Device Sub Type Code received does not exist in the Device Sub Type Table
-

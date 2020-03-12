@@ -1,5 +1,4 @@
-This section contains detail about the service APIs in the Device Masterdata module
-
+**This section contains detail about the service APIs in the Device Masterdata module**
 
 * [Devices API](#devices-master-api)
 
@@ -45,16 +44,14 @@ This API is used by the Administrator Portal UI to populate filter dropdowns on 
 * [PUT /devices](#put-devices-1)
 * [DELETE /devices/{id}](#delete-devicesid)
 
-# POST /devices
+## POST /devices
 
 This service will create the list of Devices which are used in the MOSIP platform. 
 
-Please find the steps to create primary/secondary languages 
-
-https://github.com/mosip/mosip-docs/wiki/Registration-Center-APIs#createupdate-api
+Please find the steps to create primary/secondary languages in [Registration Center Create/Update API](Registration-Center-APIs.md#createupdate-api)
 
 ### Resource URL
-### `https://mosip.io/v1/masterdata/devices`
+`https://mosip.io/v1/masterdata/devices`
 
 ### Resource details
 
@@ -132,8 +129,8 @@ zoneCode|Yes|Zone code of device| |
 
 200 Ok
 
-##### Error Response:
-```
+### Error Response:
+```JSON
 {
   "id": "string",
   "version": "string",
@@ -150,7 +147,7 @@ zoneCode|Yes|Zone code of device| |
 
 ```
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
@@ -158,16 +155,13 @@ KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 KER-MSD-069 |Error occurred while inserting Device details
 
-# GET /devices/{languagecode}
-
+## GET /devices/{languagecode}
 This service will provides the service for the List of devices. 
 
-
 ### Resource URL
-### `GET /devices`
+`GET /devices`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -177,7 +171,6 @@ Requires Authentication | Yes
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 -NA-
-
 
 ### Example Response
 ```JSON
@@ -219,13 +212,13 @@ Description: Unauthorized
 Description: Not Found
 
 
-# GET /devices/{languagecode}/{deviceType}
+## GET /devices/{languagecode}/{deviceType}
 
 This service will provides the service for the List of devices. 
 
 
 ### Resource URL
-### `GET /devices/{languagecode}/{deviceType}`
+`GET /devices/{languagecode}/{deviceType}`
 
 ### Resource details
 
@@ -280,13 +273,11 @@ Description: Unauthorized
 
 Description: Not Found
 
-# PUT /devices
-
+## PUT /devices
 This service will update existing device. 
 
-
 ### Resource URL
-### `PUT /devices`
+`PUT /devices`
 
 ### Resource details
 
@@ -354,7 +345,7 @@ Name | Required | Description | Default Value | Example
 
 200 Ok
 
-##### Error Response:
+### Error Response:
 ```
 {
   "id": "string",
@@ -372,7 +363,7 @@ Name | Required | Description | Default Value | Example
 
 ```
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
@@ -380,15 +371,13 @@ KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 KER-MSD-083 |Error occurred while updating Device details
 
-# DELETE /devices/{id}
-
+## DELETE /devices/{id}
 This service will delete the devices. 
 
 ### Resource URL
-### `DELETE /devices/{id}`
+`DELETE /devices/{id}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -430,7 +419,7 @@ deviceId|Yes|The device Id| |
 }
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-009 | Error occurred while fetching Devices | Fetch Issue
@@ -439,7 +428,6 @@ KER-MSD-010 | Device not Found | Data Not Found
 KER-MSD-083 | Error while updating | Update Issue
 KER-MSD-084 | Error while deleting | Deletion Issue
 KER-MSD-147 | Cannot delete as dependency found | Deletion Issue because of dependency
-
 
 # Device Types Master API
 
@@ -450,7 +438,7 @@ KER-MSD-147 | Cannot delete as dependency found | Deletion Issue because of depe
 This service will create the list of Device types which are used in the MOSIP platform. 
 
 ### Resource URL
-### `POST /devicetypes`
+`POST /devicetypes`
 
 ### Resource details
 
@@ -484,6 +472,7 @@ isactive|Yes|Is the device type active?| |
   }
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -498,6 +487,7 @@ isactive|Yes|Is the device type active?| |
   }
 }
 ```
+
 ### Response codes
 202
 
@@ -515,7 +505,7 @@ Description: Unauthorized
 
 Description: Forbidden
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-053 |  Error occurred while inserting Device Type details | Insertion Issue
@@ -532,15 +522,14 @@ KER-MSD-054 |  Error occurred while fetching Device Type details | Fetch Issue
 * [GET /devicespecifications/{langcode}/{devicetypecode}](#get-devicespecificationslangcodedevicetypecode)
 * [GET /devicespecifications/{lang_code}](#get-devicespecificationslang_code)
 
-# POST /devicespecifications
+## POST /devicespecifications
 
 This service will create a Device Specification which are used in the MOSIP platform. 
 
 ### Resource URL
-### `https://mosip.io/v1/masterdata/devicespecifications`
+`https://mosip.io/v1/masterdata/devicespecifications`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -586,16 +575,13 @@ isActive|Yes|Is the Device Specification active| |
 }
 ```
 
-# PUT /devicespecifications
-
+## PUT /devicespecifications
 This service will update a Device Specification which are used in the MOSIP platform. 
 
-
 ### Resource URL
-### `PUT /devicespecifications`
+`PUT /devicespecifications`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -634,15 +620,13 @@ lang_code|Yes|Language code of the Device Specification| |
 }
 ```
 
-# DELETE /devicespecifications/{id}
-
+## DELETE /devicespecifications/{id}
 This service deletes a Device Specification from the Device Specifications master module. 
 
 ### Resource URL
-### `DELETE /devicespecifications/{id}`
+`DELETE /devicespecifications/{id}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -652,7 +636,6 @@ Requires Authentication | Yes
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 id|Yes|ID of the Device Specification| | 
-
 
 ### Example Response
 ```JSON
@@ -668,16 +651,13 @@ id|Yes|ID of the Device Specification| |
 }
 ```
 
-# GET /devicespecifications/{langcode}/{devicetypecode}
-
+## GET /devicespecifications/{langcode}/{devicetypecode}
 This service will provides the list of all Device Specifications for specified language code and device type code . 
 
-
 ### Resource URL
-### `GET /devicespecifications/{langcode}/{devicetypecode}`
+`GET /devicespecifications/{langcode}/{devicetypecode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -721,17 +701,13 @@ dtyp_code|Yes|device type code of the Device specification| |
 
 ```
 
-
-# GET /devicespecifications/{lang_code}
-
+## GET /devicespecifications/{lang_code}
 This service will provides the list of all Device Specifications in a specific language. 
 
-
 ### Resource URL
-### `GET /devicespecifications/{lang_code}`
+`GET /devicespecifications/{lang_code}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -805,7 +781,7 @@ Description: Forbidden
 }
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-011 | Error occurred while fetching Device Specifications | Fetch Issue
@@ -820,12 +796,12 @@ KER-MSD-121 | Cannot delete dependency found | Deletion Issue because of depende
 
 * [POST /devices/search](#post-devicessearch)
 
-# POST /devices/search
+## POST /devices/search
 
 This service is for the devices search functionality. All the filter parameters are passed and the devices are searched and the matching results are returned.
 
 ### Resource URL
-### `POST /devices/search`
+`POST /devices/search`
 
 ### Resource details
 
@@ -854,12 +830,12 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
 
 ### Filter Values
 Please find the filter columns used in search
-1) name
-2) isActive
-3) macAddress
-4) serialNum
-5) mapStatus
-6) deviceTypeName
+	* name
+	* isActive
+	* macAddress
+	* serialNum
+	* mapStatus
+	* deviceTypeName
 
 ### Filter Values
 Filter Name| Search Values
@@ -938,12 +914,12 @@ Device Specification ID|["contains","equals","startsWith"]
 
 * [POST /devicetypes/search](#post-devicetypessearch)
 
-# POST /devicetypes/search
+## POST /devicetypes/search
 
 This service is for the devices types search functionality. All the filter parameters are passed and the devices types are searched and the matching results are returned.
 
 ### Resource URL
-### `POST /devicetypes/search`
+`POST /devicetypes/search`
 
 ### Resource details
 
@@ -971,8 +947,8 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
 
 ### Filter Values
 Please find the filter columns used in search
-1) name
-2) status
+	* name
+	* status
 
 ### Example Request
 ```JSON
@@ -1036,15 +1012,14 @@ Please find the filter columns used in search
 
 * [POST /devicespecifications/search](#post-devicespecificationssearch)
 
-# POST /devicespecifications/search
+## POST /devicespecifications/search
 
 This service is for the devices specifications search functionality. All the filter parameters are passed and the device specifications are searched and the matching results are returned.
 
 ### Resource URL
-### `POST /devicespecifications/search`
+`POST /devicespecifications/search`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1069,9 +1044,9 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
 
 ### Filter Values
 Please find the filter columns used in search
-1) name
-2) isActive
-3) deviceTypeName
+	* name
+	* isActive
+	* deviceTypeName
 
 ### Example Request
 ```JSON
@@ -1139,15 +1114,13 @@ Please find the filter columns used in search
 
 * [POST /devices/filtervalues](#post-devicesfiltervalues)
 
-# POST /devices/filtervalues
-
+## POST /devices/filtervalues
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
-### `POST /devices/filtervalues`
+`POST /devices/filtervalues`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1160,7 +1133,6 @@ filters|No|Array of the filter applied. In case of "list" screen, this array wil
 columnName|No|The column name in the JSON response| -NA- |
 type|No|The value have to be in ["unique","all"]| unique | unique
 languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-
 
 ### Example Request
 ```JSON
@@ -1204,15 +1176,13 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 
 * [POST /devicetypes/filtervalues](#post-devicetypesfiltervalues)
 
-# POST /devicetypes/filtervalues
-
+## POST /devicetypes/filtervalues
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
-### `POST /devicetypes/filtervalues`
+`POST /devicetypes/filtervalues`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1225,7 +1195,6 @@ filters|No|Array of the filter applied. In case of "list" screen, this array wil
 columnName|No|The column name in the JSON response| -NA- |
 type|No|The value have to be in ["unique","all"]| unique | unique
 languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-
 
 ### Example Request
 ```JSON
@@ -1269,12 +1238,11 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 
 * [POST /devicespecifications/filtervalues](#post-devicespecificationsfiltervalues)
 
-# POST /devicespecifications/filtervalues
-
+## POST /devicespecifications/filtervalues
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
-### `POST /devicespecifications/filtervalues`
+`POST /devicespecifications/filtervalues`
 
 ### Resource details
 

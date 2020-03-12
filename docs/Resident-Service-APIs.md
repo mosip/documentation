@@ -181,7 +181,7 @@ request: individualIdType| Y | Allowed Type of Individual ID - RID | RID
 ### Request Body
 ```JSON
 {
-  "id": "mosip.resident.uinstatus",
+  "id": "mosip.resident.checkstatus",
   "version": "v1",
   "requestTime": "2018-12-09T06:39:04.683Z",
   "request": {
@@ -199,7 +199,7 @@ request: individualIdType| Y | Allowed Type of Individual ID - RID | RID
 
 ```JSON
 {
-  "id": "mosip.resident.uinstatus",
+  "id": "mosip.resident.checkstatus",
   "version": "v1",
   "responseTime": "2018-12-09T06:39:04.683Z",
   "response": {
@@ -215,7 +215,7 @@ request: individualIdType| Y | Allowed Type of Individual ID - RID | RID
 
 ```JSON
 {
-  "id": "mosip.resident.uinstatus",
+  "id": "mosip.resident.checkstatus",
   "version": "v1",
   "responseTime": "2018-12-09T06:39:04.683Z",
   "response": {
