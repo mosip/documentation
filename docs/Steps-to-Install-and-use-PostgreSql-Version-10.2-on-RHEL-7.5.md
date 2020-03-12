@@ -88,26 +88,29 @@ It will ask new password to login to postgresql
 	```
 ** Default lines are present in `pg_hab.conf` file**
 
- TYPE  DATABASE        USER            ADDRESS                 METHOD <br/>
-
-local   all             all                                     peer <br/>
-host    all             all             127.0.0.1/32            ident <br/>
-host    all             all             ::1/128                 ident <br/>
-local   replication     all                                     peer  <br/>
-host    replication     all             127.0.0.1/32            ident <br/>
-host    replication     all             ::1/128                 ident <br/>
+TYPE	|DATABASE	    |USER			|ADDRESS				|METHOD
+--------|---------------|---------------|-----------------------|---------
+local   |all            |all            |                       |peer 
+host    |all            |all            |127.0.0.1/32           |ident 
+host    |all            |all            |::1/128                |ident 
+local   |replication    |all            |                       |peer  
+host    |replication    |all            |127.0.0.1/32           |ident 
+host    |replication    |all            |::1/128                |ident 
 
 ** Modify  with below changes in file  `/var/lib/pgsql/10/data/pg_hba.conf`**
-local   all             all                                     md5 <br/>
-host    all             all             127.0.0.1/32            ident <br/>
-host    all             all             0.0.0.0/0               md5 <br/>
-host    all             all             ::1/128                 ident <br/>
-local   replication     all                                     peer <br/>
-host    replication     all             127.0.0.1/32            ident <br/>
-host    replication     all             ::1/128                 ident <br/>
+
+TYPE	|DATABASE	    |USER			|ADDRESS				|METHOD
+--------|---------------|---------------|-----------------------|---------
+local   |all            |all            |                       |md5 
+host    |all            |all            |127.0.0.1/32           |ident <br/>
+host    |all            |all            |0.0.0.0/0              |md5 <br/>
+host    |all            |all            |::1/128                |ident <br/>
+local   |replication    |all            |                       |peer <br/>
+host    |replication    |all            |127.0.0.1/32           |ident <br/>
+host    |replication    |all            |::1/128                |ident <br/>
 
 ```
 $ sudo systemctl status postgresql-10
 ```
 **Reference link:**
-https://www.tecmint.com/install-postgresql-on-centos-rhel-fedora</div> 
+https://www.tecmint.com/install-postgresql-on-centos-rhel-fedora
