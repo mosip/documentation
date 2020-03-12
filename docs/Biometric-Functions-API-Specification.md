@@ -606,4 +606,15 @@ interface IBioApi
 }
 ```
 
+**Error Codes**
+
+Error Code	|Error Message	|Scenario
+----- |----- |-----
+KER-BIO-001	|Invalid Input Parameter - %s	|Thrown when data provided as input is invalid. (eg. Invalid Input Parameter - Gallery - FIR)
+KER-BIO-002	|Missing Input Parameter - %s	|Thrown when data required as input is missing. (eg. Missing Input Parameter - Probe - FIR)
+KER-BIO-003	|Quality check of Biometric data failed	|Thrown when data provided is valid but quality check cannot be performed
+KER-BIO-004	|Matching of Biometric data failed	|Thrown when data provided is valid, but matching cannot be performed
+KER-BIO-005	|Unknown error occurred	|Thrown when some other error occurred (eg. licensing issue)
+
+
 The above code snippets can be referred to from here - [CBEFF-util](https://github.com/mosip/mosip-platform/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/cbeffutil) and [Bio API](https://github.com/mosip/mosip-platform/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/bioapi)
