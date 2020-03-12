@@ -513,7 +513,7 @@ Digital Id will be encoded , Please find the decoded json :
 ```
 DigitalIdDTO Object
 
-### Parameters
+#### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 deviceProvider|yes|This is the name of the device provider|-NA|-NA-
