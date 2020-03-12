@@ -251,12 +251,13 @@ Auth => AUTH
 
 **_Note:_** <> is for variable properties with this sign need to be updated
 
-****Global Config****
+##### Global Config
 ```
 auth.server.validate.url=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
 auth.server.admin.validate.url=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
 ``` 
-****Kernel****
+
+##### Kernel
 ```
 mosip.keycloak.base-url=https://<keycloak.domain>
 mosip.kernel.realm-id=<Mosip realm id> (EX mosip)
@@ -306,21 +307,23 @@ mosip.kernel.auth.secret.key=<Auth Secret id>
 mosip.kernel.ida.client.id=<Ida Client id>
 mosip.kernel.ida.secret.key=<Ida Secret id>
 ```
-****Pre-Registration****
+
+##### Pre-Registration
 ```
 clientId=<pre-registration client id>
 secretKey=<pre-registration-secret>
 mosip.batch.token.authmanager.userName=<pre-registration client id>
 mosip.batch.token.authmanager.password=<pre-registration-client-secret>
 ```
-****Registration-processor****
+
+##### Registration-processor
 ```
 token.request.clientId=<registration-processor-client-id>
 token.request.secretKey=<registration-processor-client-secret>
 KEYBASEDTOKENAPI=${mosip.base.url}/v1/authmanager/authenticate/clientidsecretkey
 TOKENVALIDATE=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
 ```
-***IDA***
+##### IDA
 ```
 auth-token-generator.rest.uri=${mosip.base.url}/v1/authmanager/authenticate/clientidsecretkey
 auth-token-validator.rest.uri=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
@@ -328,12 +331,12 @@ auth-token-generator.rest.clientId=<ida-client-id>
 auth-token-generator.rest.secretKey=<ida-secret-key>
 auth-token-generator.rest.appId=ida
 ```
-***Registration-client***
+##### Registration-client
 ```
 AUTH_CLIENT_ID=<registration-client-id>
 AUTH_SECRET_KEY=<registration-client-secret>
 ```
-***Resident***
+##### Resident
 ```
 \#Token generation app id
 resident.clientId=<resident-client-id>
