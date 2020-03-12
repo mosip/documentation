@@ -29,6 +29,9 @@ Important considerations are as follows:
 &nbsp;
 ![](_images/reg_processor/reg_processor_update_packet_flow.jpg)
 
+# Logical View
+![Registration Processor Logical view](_images/reg_processor/reg-proc-logical-view.png)
+
 # Services
 For detailed description of Registration Processor Services refer to [registration processor repo](https://github.com/mosip/registration/tree/master/registration-processor).
 
