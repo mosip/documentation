@@ -3,7 +3,8 @@ Dcumentation for setting up keycloak server
 
 ### Prerequisites
 
-1. Install java (java-8-openjdk) in all the machines in the cluster and setup the `JAVA_HOME` environment variable for the same.
+#### Install Java
+Install java (java-8-openjdk) in all the machines in the cluster and setup the `JAVA_HOME` environment variable for the same.
 ```
 sudo yum install java-1.8.0-openjdk-devel
 ``` 
