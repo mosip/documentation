@@ -10,14 +10,14 @@ Get your Java installation path.
 ```
 update-alternatives --display java
 ```
-**_Note:_** 
+
+**_Note:_**
 Take the value of the current link and remove the trailing `/bin/java`. <br/>
 For example, on RHEL 7, the link is `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre/bin/java`, <br/>
 So, `JAVA_HOME` should be `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre.`
 
 #### Edit ~/bashrc.sh:
 Export `JAVA_HOME={path-tojava}` with your actual java installation path. 
-
 For example on a Debian with open-jdk-8:
 ```
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre
@@ -267,7 +267,7 @@ mosip.kernel.roles-url=realms/mosip/roles
 mosip.kernel.users-url=realms/mosip/users
 mosip.kernel.role-user-mapping-url=/{userId}/role-mappings/realm
 
-#domain should be updated
+\#Domain should be updated
 mosip.authmanager.base-url=https://<domain>/v1/authmanager
 
 mosip.keycloak.authorization_endpoint=${mosip.keycloak.base-url}/auth/realms/mosip/protocol/openid-connect/auth
@@ -282,7 +282,7 @@ mosip.admin_realm_id=<Mosip realm id> (EX mosip)
 
 mosip.master.realm-id=master
 
-#Go to Mosip realm -> Go to Roles -> select INDIVIDUAL ROLE you will find hyperlink  in tab will have a id after roles-> /realms/mosip/roles/[e3bb3344-6445-4f6f-9e33-d5ec0d231327]
+\#Go to Mosip realm -> Go to Roles -> select INDIVIDUAL ROLE you will find hyperlink  in tab will have a id after roles-> /realms/mosip/roles/[e3bb3344-6445-4f6f-9e33-d5ec0d231327]
 mosip.admin.individual_role_id=<role if of individual>
 
 mosip.admin.pre-reg_user_password=mosip
@@ -294,10 +294,10 @@ db_3_DS.keycloak.driverClassName=<keycloak db driver class name>
 
 mosip.keycloak.admin.client.id=admin-cli
 
-#first user we create when we started keycloak
+\#First user we create when we started keycloak
 mosip.keycloak.admin.user.id=<admin user name>
 
-#first user we create when we started keycloak
+\#First user we create when we started keycloak
 mosip.keycloak.admin.secret.key=<admin user password>
 
 mosip.kernel.auth.client.id=<Auth Client id>
@@ -335,7 +335,7 @@ AUTH_SECRET_KEY=<registration-client-secret>
 ```
 ***Resident***
 ```
-#Token generation app id
+\#Token generation app id
 resident.clientId=<resident-client-id>
 resident.secretKey=<resident-client-secret>
 KERNELAUTHMANAGER=${mosip.base.url}/v1/authmanager/authenticate/clientidsecretkey
