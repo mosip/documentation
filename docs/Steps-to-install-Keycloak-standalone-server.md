@@ -34,10 +34,10 @@ sudo tar xzf keycloak-6.0.1.tar.gz
 
 We have installed postgres as the database for keycloak; you can use any database supported by Keycloak**
 
-* [Documentation for Keycloak Database Setup is available here!](https://www.keycloak.org/docs/latest/server_installation/index.html#_database)
+* [Documentation for Keycloak Database Setup is available here.](https://www.keycloak.org/docs/latest/server_installation/index.html#_database)
 
 Install Postgres in your vm
-[Install  Postgres](https://github.com/mosip/mosip-docs/wiki/Getting-Started#61-install-and-use-postgresql-version-102-on-rhel-75)
+[Guide to Install PostgreSQL is available here.](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md)
 
 Within the  `…​/modules/`  directory of your Keycloak distribution, you need to create a directory structure to hold your module definition. The convention is use the Java package name of the JDBC driver for the name of the directory structure. For PostgreSQL, create the directory  `org/postgresql/main`. Copy your database driver JAR into this directory and create an empty `module.xml` file within it too.
 
