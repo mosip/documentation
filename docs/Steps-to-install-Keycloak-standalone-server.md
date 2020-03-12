@@ -176,6 +176,7 @@ From keycloak bin directory run
 * Create a new Realm(eg. mosip).   
 * Create clients for every module(i.e. ida,pre-registration,registration-processor,registration-client,auth,resident,mosip-client).
 * Enable Authorization and Service Account for every Client and provide valid redirect uri. These clients will be used by all modules to get client tokens. 
+
 ![Client_Service Account](_images/kernel/keycloak/clients.jpg)
  
 #### Configure User Federation
@@ -185,8 +186,11 @@ For this Example we will be configuring LDAP as user federation
 * Make Edit Mode Writable.
 * Configure field based on your LDAP(There are many vendors for ldap you can connect to any ldap vendor based on configurations).
 * Go to Mappers and Create mappers for each field you want keycloak to take from LDAP.
+
 ![User_Federation _A](_images/kernel/keycloak/userfed.jpg)
+
 ![User_Federation _B](_images/kernel/keycloak/userfed1.jpg)
+
 ```
 isActive : user-attribute-ldap-mapper
 username : user-attribute-ldap-mapper
@@ -200,10 +204,13 @@ dob : user-attribute-ldap-mapper
 first name : user-attribute-ldap-mapper
 email : user-attribute-ldap-mapper
  ```
+
 ![Role_Mapper](_images/kernel/keycloak/rolemapper.jpg)
+
 * Sync Users and Roles from LDAP .
 * Create INDIVIDUAL, RESIDENT Role from Keycloak in Realm Roles
 * Assign Roles from LDAP and Keycloak to All Clients
+
 ```
 IDA => ID_AUTHENTICATION
 Registration-Processor => REGISTRATION_PROCESSOR
