@@ -60,6 +60,5 @@ For detailed description of ID Auth services, code and design refer to [ID auth 
 Refer to build and deploy instructions in [ID auth repo](https://github.com/mosip/id-authentication)
 
 # APIs
-
 [ID Authentication APIs](ID-Authentication-APIs.md)
 
