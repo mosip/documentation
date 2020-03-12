@@ -97,111 +97,94 @@ openssl pkcs12 -export -inkey{{private key pem path}} -in {{certificate pem path
 
 #### Configure standalone xml
 
-1. Go to {{keycloak folder}}/standalone/configuration
-2. Open Standalone.xml and make following changes
+* Go to {{keycloak folder}}/standalone/configuration
+* Open Standalone.xml and make following changes
+	*  Add a driver for postgres(Or your database)
+		```
+		<driver  name="postgresql"  module="org.postgresql">
+		<xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
+		</driver>
+		```
+	* Change the datasource properties
+		```
+		<datasource  jndi-name="java:jboss/datasources/KeycloakDS"  pool-name="KeycloakDS"  enabled="true"  use-java-context="true">
+		<connection-url>jdbc:postgresql://<Host>:<Port>/{{database_name}}</connection-url>
+		<driver>{{drivername}}</driver>
+		<pool>
+		<max-pool-size>pool size</max-pool-size>
+		</pool>
+		<security>
+		<user-name>database username</user-name>
+		<password>database password</password>
+		</security>
+		</datasource>
+		```
+	* Register the datasource
+		While registering change the schema name if you want.
+		```
+		<spi  name="connectionsJpa">
+		<provider  name="default"  enabled="true">
+		<properties>
+		<property  name="dataSource"  value="java:jboss/datasources/KeycloakDS"/>
+		<property  name="initializeEmpty"  value="true"/>
+		<property  name="migrationStrategy"  value="update"/>
+		<property  name="migrationExport"  value="${jboss.home.dir}/keycloak-database-update.sql"/>
+		<property  name="schema"  value="public"/>
+		</properties>
+		</provider>
+		```
 
-
-2.1  Add a driver for postgres(Or your database)
-```
-<driver  name="postgresql"  module="org.postgresql">
-<xa-datasource-class>org.postgresql.xa.PGXADataSource</xa-datasource-class>
-</driver>
-```
-2.2  Change the datasource properties
-```
-<datasource  jndi-name="java:jboss/datasources/KeycloakDS"  pool-name="KeycloakDS"  enabled="true"  use-java-context="true">
-<connection-url>jdbc:postgresql://<Host>:<Port>/{{database_name}}</connection-url>
-<driver>{{drivername}}</driver>
-<pool>
-<max-pool-size>pool size</max-pool-size>
-</pool>
-<security>
-<user-name>database username</user-name>
-<password>database password</password>
-</security>
-</datasource>
-
-```
-2.3 Register the datasource
-
-While registering change the schema name if you want.
-```
-<spi  name="connectionsJpa">
-<provider  name="default"  enabled="true">
-<properties>
-<property  name="dataSource"  value="java:jboss/datasources/KeycloakDS"/>
-<property  name="initializeEmpty"  value="true"/>
-<property  name="migrationStrategy"  value="update"/>
-<property  name="migrationExport"  value="${jboss.home.dir}/keycloak-database-update.sql"/>
-<property  name="schema"  value="public"/>
-</properties>
-</provider>
-```
-
-2.4 Change network configuration
-
-1. Inet address for both public and management profile to access it remotely
-
-
-```
-<interfaces>
-<interface  name="management">
-<inet-address value="0.0.0.0"/>
-</interface>
-
-<interface  name="public">
-<inet-address value="0.0.0.0"/>
-</interface>
-</interfaces>
-```
-2. Default ports from 8080 -> 80 and 8443 -> 443 to not give ports at time of accessing Keycloak
-```
-<socket-binding  name="http"  port="${jboss.http.port:80}"/>
-
-<socket-binding  name="https"  port="${jboss.https.port:443}"/>
-```
-
-2.5 Adding a SSL certificate to Keycloak
-
-Here we will give the keystore we created to keycloak
-
-```
-<ssl>
-<keystore  path="your key store pass relative to the next property"  relative-to="jboss.server.config.dir"  keystore-password="yourpassword"  alias="your alias"/>
-</ssl>
-```
-
+	* Change network configuration
+		* Inet address for both public and management profile to access it remotely
+			```
+			<interfaces>
+			<interface  name="management">
+			<inet-address value="0.0.0.0"/>
+			</interface>
+			<interface  name="public">
+			<inet-address value="0.0.0.0"/>
+			</interface>
+			</interfaces>
+			```
+		* Default ports from 8080 -> 80 and 8443 -> 443 to not give ports at time of accessing Keycloak
+			```
+			<socket-binding  name="http"  port="${jboss.http.port:80}"/>
+			<socket-binding  name="https"  port="${jboss.https.port:443}"/>
+			```
+	* Adding a SSL certificate to Keycloak
+		Here we will give the keystore we created to keycloak
+		```
+		<ssl>
+		<keystore  path="your key store pass relative to the next property"  relative-to="jboss.server.config.dir"  keystore-password="yourpassword"  alias="your alias"/>
+		</ssl>
+		```
+		
 #### Add Keycloak Admin user
 
 From keycloak bin directory run 
-
 ```
 ./add-user-keycloak.sh -u {{username}} -p {{password}}
 ```
 
 #### Keycloak server start
-
 ```
  systemctl start keycloak
 ```
 
 ### Configure Keycloak
-
- 1. Create a new Realm.(Eg mosip)   
- 2. Create clients for every module.(ida,pre-registration,registration-processor,registration-client,auth,resident,mosip-client)
- 3. Enable Authorization and Service Account for every Client and provide valid redirect uri. These clients will be used by all modules to get client tokens.
-
-  
+* Create a new Realm.(Eg mosip)   
+* Create clients for every module.(ida,pre-registration,registration-processor,registration-client,auth,resident,mosip-client)
+* Enable Authorization and Service Account for every Client and provide valid redirect uri. These clients will be used by all modules to get client tokens.
+ 
  ![Client_Service Account](_images/kernel/keycloak/clients.jpg)
  
 #### Configure User Federation
-For this Example we will be configuring LDAP as user federation
- 
- 1. Go to User Federation.
- 2. Create a new User Federation for LDAP.
- 3. Make Edit Mode Writable.
- 4. Configure field based on your LDAP(There are many vendors for ldap you can connect to any ldap vendor based on configurations)
- 5. Go to Mappers and Create mappers for each field you want keycloak to take from LDAP
+For this Example we will be configuring LDAP as user federation 
+* Go to User Federation.
+* Create a new User Federation for LDAP.
+* Make Edit Mode Writable.
+* Configure field based on your LDAP(There are many vendors for ldap you can connect to any ldap vendor based on configurations)
+* Go to Mappers and Create mappers for each field you want keycloak to take from LDAP
 
 ![User_Federation _A](_images/kernel/keycloak/userfed.jpg)
 
@@ -209,46 +192,36 @@ For this Example we will be configuring LDAP as user federation
  
 ```
 isActive : user-attribute-ldap-mapper
-
 username : user-attribute-ldap-mapper
-
 rid : user-attribute-ldap-mapper
-
 creation date : user-attribute-ldap-mapper
-
 roles : role-ldap-mapper
-
 last name : user-attribute-ldap-mapper
-
 userPassword : user-attribute-ldap-mapper
-
 mobile : user-attribute-ldap-mapper
-
 dob : user-attribute-ldap-mapper
-
 first name : user-attribute-ldap-mapper
-
 email : user-attribute-ldap-mapper
  ```
+ 
 ![Role_Mapper](_images/kernel/keycloak/rolemapper.jpg)
 
- 6. Sync Users and Roles from LDAP .
- 7. Create INDIVIDUAL, RESIDENT Role from Keycloak in Realm Roles
- 8. Assign Roles from LDAP and Keycloak to All Clients
- ```
- IDA => ID_AUTHENTICATION
- Registration-Processor => REGISTRATION_PROCESSOR
- Registration-Client => REGISTRATION_ADMIN
-                        REGISTRATION_SUPERVISOR
-                        REGISTRATION_OFFICER
-                        REGISTRATION_OPERATOR
+* Sync Users and Roles from LDAP .
+* Create INDIVIDUAL, RESIDENT Role from Keycloak in Realm Roles
+* Assign Roles from LDAP and Keycloak to All Clients
+```
+IDA => ID_AUTHENTICATION
+Registration-Processor => REGISTRATION_PROCESSOR
+Registration-Client => REGISTRATION_ADMIN
+                       REGISTRATION_SUPERVISOR
+                       REGISTRATION_OFFICER
+                       REGISTRATION_OPERATOR
  Resident => RESIDENT
  Pre-Registration => PRE_REGISTRATION
                      INDIVIDUAL
 Auth => AUTH
  ```
 #### Updation of Configuration for Keycloak**
-
 **_Note:_** <> is for variable properties with this sign need to be updated
 
 ##### Global Config
