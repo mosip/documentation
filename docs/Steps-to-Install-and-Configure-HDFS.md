@@ -341,7 +341,7 @@ Hdfs has been Configured Successfully
 # Securing HDFS
 
 Following configuration is required to run HDFS in secure mode.
-Read more about kerberos here:[**link**](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/managing_smart_cards/using_Kerberos)
+Read more about kerberos here: [**link**](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/managing_smart_cards/using_Kerberos)
 
 ## Install Kerberos
 
@@ -471,7 +471,7 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 	```
 
 ## Create and Deploy the Kerberos Principals and Keytab Files
-For more information, check here:[**link**](https://cloudera.com/documentation/enterprise/5-16-x/topics/cdh_sg_kerberos_prin_keytab_deploy.html)
+For more information, check here: [**link**](https://cloudera.com/documentation/enterprise/5-16-x/topics/cdh_sg_kerberos_prin_keytab_deploy.html)
 
 If you have root access to the KDC machine, use kadmin.local, else use kadmin.
 To start `kadmin.local` (on the KDC machine), run this command:
@@ -695,7 +695,7 @@ Finally, you need to import both the certificate of the CA and the signed certif
 	```
 ### Configuring HDFS
 Change the ssl-server.xml and ssl-client.xml on all nodes to tell HDFS about the keystore and the truststore
-* Edit ~/hadoop/etc/hadoop/ssl-server.xml
+* Edit `~/hadoop/etc/hadoop/ssl-server.xml`
 	```
 	<configuration>
 
@@ -835,4 +835,4 @@ Change the ssl-server.xml and ssl-client.xml on all nodes to tell HDFS about the
 	```
 After restarting the HDFS daemons (NameNode, DataNode and JournalNode), you should have successfully deployed HTTPS in your HDFS cluster.
 
-For you face error during kerberos, check this:[**link**](//steveloughran.gitbooks.io/kerberos_and_hadoop/content/sections/errors.html)
+For you face error during kerberos, check this: [**link**](https://steveloughran.gitbooks.io/kerberos_and_hadoop/content/sections/errors.html)
