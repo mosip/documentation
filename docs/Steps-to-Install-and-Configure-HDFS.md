@@ -360,6 +360,7 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 	```
 	yum install krb5-workstation krb5-libs krb5-auth-dialog
 	```
+
 ## Configuring the Master KDC Server
 
 ### Edit the `/etc/krb5.conf`:
