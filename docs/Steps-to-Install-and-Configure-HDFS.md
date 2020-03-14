@@ -1,5 +1,6 @@
+This documentation is for setting up HDFS (v2.8.1) cluster with one namenode and one datanode
+
 # Setup HDFS version 2.8.1
-**documentation for setting up hdfs cluster with one namenode and one datanode**
 
 ## Prerequisites
 * Create 2 VMs. They’ll be referred to throughout this guide as 
@@ -20,7 +21,7 @@
 For example on RHEL 7, the link is `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre/bin/java`, 
 So JAVA_HOME should be `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre`.
 
-#### Edit ~/bashrc.sh:
+### Edit ~/bashrc.sh:
 * `export JAVA_HOME={path-tojava}` with your actual java installation path. 
 For example on a Debian with open-jdk-8:
 ```
@@ -48,7 +49,7 @@ Example:
 	10.0.22.11 node-master.example.com
 	10.0.3.12 node-slave1.example.com
 	```
-### Creating Hadoop User
+## Creating Hadoop User
 
 **Create a hadoop user** in every machine in the cluster to followup the documentation or **replace the hadoop user** in the documentation with your own user.
 
@@ -98,7 +99,7 @@ Example:
 
 **You have successfully configured a hadoop user with sudo access**. You can now log in to this hadoop account and use sudo to run commands as if you were logged in to the account of the root user.
 
-### Distribute Authentication Key-pairs for the Hadoop User
+## Distribute Authentication Key-pairs for the Hadoop User
 The master node will use an ssh-connection to connect to other nodes with key-pair authentication, to manage the cluster.<br/>
 * Login to node-master as the hadoop user, and generate an ssh-key:
 	```
@@ -116,14 +117,14 @@ The master node will use an ssh-connection to connect to other nodes with key-pa
 	Update the `$HOME/.ssh/id_rsa.pub` file contents of slave node to Master node `$HOME/.ssh/authorized_keys file` and also
 	Update `$HOME/.ssh/id_rsa.pub` file contents of Master node to Slave node `$HOME/.ssh/authorized_keys manually`.
 
-### Verify ssh from Master node to slave node and vice versa.
+## Verify ssh from Master node to slave node and vice versa.
 ```
 ssh hadoop@node-slave1.example.com
 ```
 
 **_Note:_** if ssh fails, try setting up again the authorized_keys to the machine.
 
-### Download and Unpack Hadoop Binaries
+## Download and Unpack Hadoop Binaries
 Login to node-master as the hadoop user, download the Hadoop tarball from Hadoop project page, and unzip it:
 ```
 cd
@@ -135,7 +136,7 @@ tar -xzf hadoop-2.8.1.tar.gz
 mv hadoop-2.8.1 hadoop
 ```
 
-### Set Environment Variables in each machine in the cluster
+## Set Environment variables in each machine in the cluster
 Add Hadoop binaries to your PATH. Edit `/home/hadoop/.bashrc` or `/home/hadoop/.bash_profile` and add the following line:
 ```
 export HADOOP_HOME=$HOME/hadoop
@@ -154,10 +155,10 @@ or
 source /home/hadoop/.bash_profile
 ```
 
-### Configure the Master Node
+## Configure the Master Node
 Configuration will be done on node-master and replicated to other slave nodes.
 
-#### Set NameNode
+### Set NameNode
 	Update `~/hadoop/etc/hadoop/core-site.xml`:
 	```
 	<configuration>
@@ -167,7 +168,7 @@ Configuration will be done on node-master and replicated to other slave nodes.
 		 </property>
 	</configuration>
 	```
-#### Set path for HDFS
+### Set path for HDFS
 * Edit `~/hadoop/etc/hadoop/hdfs-site.xml`:
 	```
 	<configuration>
@@ -231,19 +232,20 @@ Configuration will be done on node-master and replicated to other slave nodes.
 	mkdir -p /home/hadoop/data/dataNode  [where data node should store its blocks.]
 	```
 	
-#### Configure Master
+### Configure Master
 Edit `~/hadoop/etc/hadoop/masters` to be:
 	````
 	node-master.example.com
 	````
 
-#### Configure Slaves
+### Configure Slaves
 Edit `~/hadoop/etc/hadoop/slaves` to be:
 This slaves file will specifies the datanode to be setup in which machine
 	````
 	node-slave1.example.com
 	````
-### Duplicate Config Files on Each Node 
+
+## Create duplicate config files on each node 
 * Copy the hadoop binaries to slave nodes:
 	```
 	cd /home/hadoop/
@@ -269,14 +271,14 @@ This slaves file will specifies the datanode to be setup in which machine
 		scp ~/hadoop/etc/hadoop/* $node:/home/hadoop/hadoop/etc/hadoop/;
 	done
 	```
-### Format HDFS
+## Format HDFS
 HDFS needs to be formatted like any classical file system. On node-master, run the following command:
 	```
 	hdfs namenode -format
 	```
 Your Hadoop installation is now configured and ready to run.
 
-### Start HDFS
+## Start HDFS
 * Start the HDFS by running the following script from node-master:
 `start-dfs.sh`, `stop-dfs.sh` script files will be present in `hadoop_Installation_Dir/sbin/start.dfs.sg`
 ```
@@ -300,7 +302,7 @@ Hdfs has been Configured Successfully
 
 **_Note:_** If datanode and namenode has not started, look into hdfs logs to debug: `$HOME/hadoop/logs/`
 
-### Create hdfs users
+## Create HDFS users
 * To create users for hdfs (regprocessor, prereg, idrepo), run this command:
 	```
 	sudo useradd  regprocessor
@@ -319,7 +321,8 @@ Hdfs has been Configured Successfully
 	hdfs dfs -mkdir /user/idrepo
 	hdfs dfs -chown -R idrepo:idrepo  /user/idrepo
 	``` 
-#### enabling configured port through firewall in each machine in cluster
+
+### Enabling configured port through firewall in each machine in cluster
 	```ssh
 	sudo firewall-cmd --zone=public --add-port=51000/tcp --permanent
 	sudo firewall-cmd --zone=public --add-port=51090/tcp --permanent
@@ -335,14 +338,14 @@ Hdfs has been Configured Successfully
 
 **_Note:_** If different port has been configured , enable those port.
 
-## Securing HDFS
+# Securing HDFS
 
 Following configuration is required to run HDFS in secure mode.
 Read more about kerberos here:[**link**](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/managing_smart_cards/using_Kerberos)
 
-### Install Kerberos
+## Install Kerberos
 
-####  Before Installing Kerberos Install the JCE Policy File
+###  Before Installing Kerberos Install the JCE Policy File
 
 Install Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy File on all cluster and Hadoop user machines.
 Follow this [**link**](https://dzone.com/articles/install-java-cryptography-extension-jce-unlimited)
@@ -358,7 +361,7 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 	```
 	yum install krb5-workstation krb5-libs krb5-auth-dialog
 	```
-### Configuring the Master KDC Server
+## Configuring the Master KDC Server
 
 * Edit the `/etc/krb5.conf`:
 
@@ -467,7 +470,7 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 	kdestroy -A
 	```
 
-### Create and Deploy the Kerberos Principals and Keytab Files
+## Create and Deploy the Kerberos Principals and Keytab Files
 For more information, check here:[**link**](https://cloudera.com/documentation/enterprise/5-16-x/topics/cdh_sg_kerberos_prin_keytab_deploy.html)
 
 If you have root access to the KDC machine, use kadmin.local, else use kadmin.
@@ -475,8 +478,8 @@ To start `kadmin.local` (on the KDC machine), run this command:
 	```
 	sudo kadmin.local
 	```
-	
-#### To create the Kerberos principals
+
+### To create the Kerberos principals
 Do the following steps for masternode.
 * In the kadmin.local or kadmin shell, create the hadoop principal. This principal is used for the NameNode, Secondary NameNode, and DataNodes.
 	```
@@ -493,7 +496,7 @@ Do the following steps for masternode.
 	kadmin:  addprinc idrepo@NODE-MASTER.EXAMPLE.COM
 	```
 
-#### To create the Kerberos keytab files
+### To create the Kerberos keytab files
 Create the hdfs keytab file that will contain the hdfs principal and HTTP principal. This keytab file is used for the NameNode, Secondary NameNode, and DataNodes.
 	```
 	kadmin:  xst -norandkey -k hadoop.keytab hadoop/admin HTTP/admin
@@ -522,7 +525,7 @@ Use klist to display the keytab file entries; a correctly-created hdfs keytab fi
 	   1 02/11/2019 08:53:51 HTTP/admin@NODE-MASTER.EXAMPLE.COM (des-cbc-md5)
 	```
 
-##### Creating keytab [mosip.keytab] file for application to authenticate  with hdfs cluster
+#### Creating keytab `[mosip.keytab]` file for application to authenticate  with HDFS cluster
 	``` 
 	$sudo kadmin
 	kadmin: xst -norandkey -k mosip.keytab {user1}
@@ -530,13 +533,13 @@ Use klist to display the keytab file entries; a correctly-created hdfs keytab fi
 	```
     replace {user} with username.
 
-##### to view the principals in keytab
+#### To view the principals in keytab
 	```
 	 klist -k -e -t mosip.keytab
 	```
 	and so on add all the users to keytab. if you want create the separate keytab file for each application and distribute them
 
-#### To deploy the Kerberos keytab file
+### To deploy the Kerberos keytab file
 On every node in the cluster, copy or move the keytab file to a directory that Hadoop can access, such as `/home/hadoop/hadoop/etc/hadoop/hadoop.keytab`.
 
 ### To configure Kernel HDFS Adapter
@@ -550,13 +553,13 @@ Place this mosip.keytab file in `/kernel/kernel-fsadapter-hdfs/src/main/resource
 
 **_Note_:** Configure the user in module specific properties file (example: `pre-registration-qa.properties` as `mosip.kernel.fsadapter.hdfs.user-name=prereg`).
 
-### Enable security in hdfs
+## Enable security in HDFS
 To enable security in hdfs, you must stop all Hadoop daemons in your cluster and then change some configuration properties. 
 	```
 	sh hadoop/sbin/stop-dfs.sh
 	```
 
-### Enable Hadoop Security
+## Enable Hadoop Security
 * To enable Hadoop security, add the following properties to the ~/hadoop/etc/hadoop/core-site.xml file on every machine in the cluster:
 	```
 	<property>
@@ -659,15 +662,15 @@ To enable security in hdfs, you must stop all Hadoop daemons in your cluster and
 	  <value>HTTPS_ONLY</value>
 	 </property>
 	```
-### Configuring https in hdfs
+## Configuring HTTPS in HDFS
 
-#### Generating the key and certificate
+### Generating the key and certificate
 The first step of deploying HTTPS is to generate the key and the certificate for each machine in the cluster. You can use Java’s keytool utility to accomplish this task:
 Ensure that firstname/lastname OR common name (CN) matches exactly with the fully qualified domain name (e.g. node-master.example.com) of the server. 
 	```
 	keytool -genkey -alias localhost  -keyalg RSA -keysize 2048 -keystore keystore.jks
 	```
-####  Creating your own CA
+###  Creating your own CA
 We use openssl to generate a new CA certificate:
 	```
 	openssl req -new -x509 -keyout ca-key.cer -out ca-cert.cer -days 365
@@ -676,7 +679,7 @@ The next step is to add the generated CA to the clients’ truststore so that th
 	```
 	keytool -keystore truststore.jks -alias CARoot -import -file ca-cert.cer
 	```
-#### Signing the certificate:
+### Signing the certificate:
 The next step is to sign all certificates generated  with the CA. First, you need to export the certificate from the keystore:
 	```
 	keytool -keystore keystore.jks -alias localhost -certreq -file cert-file.cer
@@ -690,7 +693,7 @@ Finally, you need to import both the certificate of the CA and the signed certif
 	keytool -keystore keystore.jks -alias CARoot -import -file ca-cert.cer
 	keytool -keystore keystore.jks -alias localhost -import -file cert-signed.cer
 	```
-#### Configuring Hdfs
+### Configuring HDFS
 Change the ssl-server.xml and ssl-client.xml on all nodes to tell HDFS about the keystore and the truststore
 * Edit ~/hadoop/etc/hadoop/ssl-server.xml
 	```
