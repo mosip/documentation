@@ -77,7 +77,7 @@ The user can modify the pre-registration data by opting to select the “Modify�
 Note: Modify application data cannot be done for an expired application
 
 ## Discard application 
-The user can discard the pre-registration by clicking on the Delete icon for the pre-registration id for which he/she wishes to discard. The system provides the user with two options: ‘Discard entire Application’ or ‘Cancel appointment.' The user choses to discard entire application. The system deletes all the data mapped to the pre-registration id and cancels the appointment (if any).
+The user can discard the pre-registration by clicking on the Delete icon for the pre-registration id for which he/she wishes to discard. The system provides the user with two options: ‘Discard entire Application’ or ‘Cancel appointment.' The user chooses to discard entire application. The system deletes all the data mapped to the pre-registration id and cancels the appointment (if any).
 
 
 #  Attaching documents to the application
