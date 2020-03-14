@@ -1,4 +1,3 @@
- 
 # Packet Status Services
 
 * [GET /packetstatusupdate](#get-packetstatusupdate)
@@ -26,9 +25,9 @@ rid |Yes|rid of the user| 10008100670000220191226111423
 ```
 https://mosip.io/v1/admin/packetstatusupdate?rid=10008100670000220191226111423
 ```
-### Responses:
+### Responses
 
-#### Success Response:
+#### Success Response
 
 #### Description: returns status of rid
 ```JSON
@@ -94,7 +93,7 @@ https://mosip.io/v1/admin/packetstatusupdate?rid=10008100670000220191226111423
 ```
 200 Ok
 ```
-#### Error response:
+#### Error response
 ```
 {
   "id": "string",
@@ -119,3 +118,5 @@ ADM-PKT-002 |RID is invalid|If RID is invalid
 ADM-PKT-003 |Center does not exist|If Center ID extracted from RID does not exist
 ADM-PKT-004 |RID is miss|If RID is missing in the Input
 ADM-PKT-005 |Error occurred while fetch Packet Status|If any system error occurs while fetching Packet Status
+
+#
