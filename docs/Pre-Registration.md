@@ -12,6 +12,7 @@ Resident data is sent to registration center before appointment, which can be us
 [Pre-Registration Functionality](Pre-Registration-Functionality.md)
 
 # Process flow
+
 ![](_images/pre_registration/pre-registration_process_flow.jpg)
 
 # Services

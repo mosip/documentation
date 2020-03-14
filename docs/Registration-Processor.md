@@ -15,6 +15,7 @@ Important considerations are as follows:
 [Registration Processor Functionality](Registration-Processor-Functionality.md)
 
 # Process flow
+
 ![](_images/reg_processor/reg_processor_new_packet_flow.jpg)
 &nbsp;  
 &nbsp; 
@@ -30,6 +31,7 @@ Important considerations are as follows:
 ![](_images/reg_processor/reg_processor_update_packet_flow.jpg)
 
 # Logical View
+
 ![Registration Processor Logical view](_images/reg_processor/reg-proc-logical-view.png)
 
 # Services
