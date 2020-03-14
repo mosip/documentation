@@ -188,7 +188,7 @@ Refer below for the process:
 [**Link to design**](/mosip/mosip-platform/blob/master/design/kernel/Kernel-idgenerator-vid.md)
 #### 4.1.7 Token ID Generator [**[↑]**](#table-of-contents)
 
-Upon receiving a request to generate Token ID (with input para meters (TSP ID, UIN), the system generates token ID as per default Token ID generation logic
+Upon receiving a request to generate Token ID (with input parameters (TSP ID, UIN), the system generates token ID as per default Token ID generation logic
 
 Refer below for the process:
 1. Token ID should be generated based on the below logic using received UIN and Partner ID
@@ -289,7 +289,7 @@ RID Validation performs pattern validation on RID and provides three methods to 
 The system receives a request to check status of the License Key with an input parameter (License Key)
 1. Checks the length of the License Key
 2. Fetches the status of the License Key
-3. Throw an error if an input parameter in empty
+3. Throw an error if an input parameter is empty
 4. Responds to the source according to the conditions mentioned below:
    * If the length of License Key is not 8 digits, respond with message "INVALID"
    * If the License Key is expired as per the expiry period configured, respond with message "EXPIRED"
@@ -304,9 +304,9 @@ The system receives a request to check status of the License Key with an input p
 
 1. Configurable Parameters
 
-   [**Link to Configurable Parameters of Kernel**](/mosip/mosip-config/blob/master/config/kernel.properties)
+   [**Link to Configurable Parameters of Kernel**](https://github.com/mosip/mosip-config/blob/master/config-templates/kernel-env.properties)
 
-   [**Link to Kernel Application Properties**](/mosip/mosip-config/blob/master/config/application.properties)
+   [**Link to Kernel Application Properties**](https://github.com/mosip/mosip-config/blob/master/config-templates/application-env.properties)
 
 2. Configurable Processes 
 * (Work in Progress) 
