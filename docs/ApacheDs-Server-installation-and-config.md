@@ -46,18 +46,16 @@ Press Enter key to read through the license agreement untill you are prompted to
 ![](_images/apache_directory_studio_user_guide/apacheds-installation-4.png)
 
 
-## go to the location (cd /etc/init.d) Start, Stop and check status ApacheDs server.
+## Go to the location (cd /etc/init.d) Start, Stop and check status ApacheDs server.
 
 * To run ApacheDs server, run the below command       
     ```shell
     ./apacheds-2.0.0.AM25-mosip start
     ```
-
 * To check status of ApacheDs server, run the below command
     ```shell
     ./apacheds-2.0.0.AM25-mosip status
     ```
-
 * To stop ApacheDs server, run the below command
     ```shell
     ./apacheds-2.0.0.AM25-mosip stop
