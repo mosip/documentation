@@ -221,7 +221,7 @@ The user opts to view the available slots for a selected registration center.
 #### 2.4.4.1 Auto-cancel appointment based on change in working days/holidays [**[↑]**](#table-of-contents)
 Additionally, in case of any change made by the administrator in terms of updating a working day/Non-holiday day to a non-working day/holiday for a Registration Center or updating the working hours of a Registration Center, the system will automatically cancel the affected appointment(s) and trigger a notification to the mobile number or email id of the associated PRID, notifying regarding cancellation of appointment. (Subject to the Notification Configuration - Refer section 2.5.2)
 
-[**Link to design**](/mosip/mosip-platform-mt/blob/0.9.1/design/pre-registration/pre-registration-batch-job.md)
+[**Link to design**](https://github.com/mosip/pre-registration/tree/master/design/pre-registration/pre-registration-batch-job.md)
 
 ### 2.4.5 Re-book Appointment [**[↑]**](#table-of-contents)
 1. The system provides the user with the list of available Appointment Slots
