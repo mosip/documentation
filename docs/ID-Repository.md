@@ -50,10 +50,10 @@ An individual's UIN/VIDS can be de-activated or re-activated.
 # Process flow
 
 ## Identity service
-![](_images/id_repo/id_repo_identity_service_flow.pg) 
+![](_images/id_repo/id_repo_identity_service_flow.jpg) 
 
 ## VID service
-![](_images/id_repo/id_repo_vid_service_flow.pg) 
+![](_images/id_repo/id_repo_vid_service_flow.jpg) 
 
 # Logical view
 ![](_images/id_repo/id_repo_logical_view.jpg)

@@ -109,7 +109,7 @@ If an individual wants to reactivate his/her UIN and its associated VIDs due to 
 
 
 #### ID Repository API [**[↑]**](#table-of-contents)
-[**Refer to Wiki for more details on ID Repository API**](ID-Repository-API).
+[**Refer to Wiki for more details on ID Repository API**](https://mosipdoc.gitbook.io/platform/quick-links/apis/id-repository-apis).
 
 #### Process View [**[↑]**](#table-of-contents)
 [**Link to Process View of ID Repository**](Process-view#5-id-repository-)
