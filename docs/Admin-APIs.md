@@ -1,35 +1,36 @@
-## Packet Status Services
+ 
+# Packet Status Services
 
 * [GET /packetstatusupdate](#get-packetstatusupdate)
 
-### GET /packetstatusupdate
+## GET /packetstatusupdate
 
 The user can get status of the uin
 
-#### Resource URL
+### Resource URL
 ```
 https://mosip.io/v1/admin/packetstatusupdate?rid={rid}
 ```
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request part parameters
+### Request part parameters
 Name | Required | Description |  Example
 -----|----------|-------------|--------
 rid |Yes|rid of the user| 10008100670000220191226111423
 
-#### Request
+### Request
 ```
 https://mosip.io/v1/admin/packetstatusupdate?rid=10008100670000220191226111423
 ```
-#### Responses:
+### Responses:
 
-##### Success Response:
+#### Success Response:
 
-###### Description: returns status of rid
+#### Description: returns status of rid
 ```JSON
 
 {
@@ -89,11 +90,11 @@ https://mosip.io/v1/admin/packetstatusupdate?rid=10008100670000220191226111423
     "errors": null
 }
 ```
-##### Response codes
+#### Response codes
 ```
 200 Ok
 ```
-##### Error response:
+#### Error response:
 ```
 {
   "id": "string",
@@ -110,7 +111,7 @@ https://mosip.io/v1/admin/packetstatusupdate?rid=10008100670000220191226111423
 }
 
 ```
-##### Failure details
+#### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 ADM-PKT-001|Admin is not authorized|
