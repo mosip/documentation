@@ -40,7 +40,7 @@ The identity data stored inside the ID repository is encrypted. The Identity Rep
 * Performance
 * High Availability
 
-[**Please refer wiki for more details on the key non-Functional requirements of ID Repository.**](/mosip/mosip/blob/6c097369722ddff4ec513c15db03b09a6e6ebdc3/docs/design/idrepository/identity-service.md)
+[**Please refer wiki for more details on the key non-Functional requirements of ID Repository.**](https://github.com/mosip/commons/blob/master/design/idrepository/identity-service.md)
 
 ## 3. ID Repository services [**[↑]**](#table-of-contents)
 ### 3.1 Store Identity Data and Documents in Repository [**[↑]**](#table-of-contents)
@@ -50,7 +50,7 @@ Upon receiving the request to store identity details of individual in ID Reposit
 1. Receives and stores individual biometric documents generated during registration
 1. Receives and stores documents of proofs provided by individual at the time of registration
 1. On successful storage of identity for an individual, status of UIN of the individual is marked as 'ACTIVATED'
-1. Please refer Git for more details on the type of [**error messages**](/mosip/mosip/blob/master/docs/requirements/Requirements%20Detailing%20References/ID-Authentication/Sprint%2010/Consolidated%20error%20messages%20V2.2.xlsx).
+1. Please refer Git for more details on the type of [**error messages**](https://github.com/mosip/documentation/wiki/_file/requirements/Requirements%20Detailing%20References/ID-Authentication/Sprint%2010/Consolidated%20error%20messages%20V2.2.xlsx).
 
 ### 3.2 Retrieve the Stored Identity Details by UIN [**[↑]**](#table-of-contents)
 
@@ -61,7 +61,7 @@ Upon receiving a request to retrieve identity details of an individual based on 
    * If demographic details are requested, system retrieves demographic documents in the response
    * If biometric details are requested, system retrieves biometric documents in the response
    * If both biometric and demographic details are requested, system retrieves both biometric and demographic documents in the response
-1. Please refer Git for more details on the type of [**error messages**](/mosip/mosip/blob/master/docs/requirements/Requirements%20Detailing%20References/ID-Authentication/Sprint%2010/Consolidated%20error%20messages%20V2.2.xlsx).
+1. Please refer Git for more details on the type of [**error messages**](https://github.com/mosip/documentation/wiki/_file/requirements/Requirements%20Detailing%20References/ID-Authentication/Sprint%2010/Consolidated%20error%20messages%20V2.2.xlsx).
 
 ### 3.3 Retrieve the Stored Identity Details by RID [**[↑]**](#table-of-contents)
 
@@ -73,7 +73,7 @@ Upon receiving a request to retrieve identity details of an individual based on 
    * If demographic details are requested, system retrieves demographic documents in the response
    * If biometric details are requested, system retrieves biometric documents in the response
    * If both biometric and demographic details are requested, system retrieves both biometric and demographic documents in the response
-1. Please refer Git for more details on the type of [**error messages**](/mosip/mosip/blob/master/docs/requirements/Requirements%20Detailing%20References/ID-Authentication/Sprint%2010/Consolidated%20error%20messages%20V2.2.xlsx).
+1. Please refer Git for more details on the type of [**error messages**](https://github.com/mosip/documentation/wiki/_file/requirements/Requirements%20Detailing%20References/ID-Authentication/Sprint%2010/Consolidated%20error%20messages%20V2.2.xlsx).
 
 ### 3.4 Update Identity Data and Documents in Repository [**[↑]**](#table-of-contents)
 
@@ -84,10 +84,10 @@ Upon receiving a request to update identity details of an individual, the system
 1. If request contains biometric document of individual, the system updates with the latest documents received
 1. If request updates status of UIN as 'DEACTIVATED' or 'BLOCKED', the system updates the same
 1. Sends the response with updated ID details of individual
-1. Please refer Git for more details on the type of [**error messages**](/mosip/mosip/blob/master/docs/requirements/Requirements%20Detailing%20References/ID-Authentication/Sprint%2010/Consolidated%20error%20messages%20V2.2.xlsx).
+1. Please refer Git for more details on the type of [**error messages**](https://github.com/mosip/documentation/wiki/_file/requirements/Requirements%20Detailing%20References/ID-Authentication/Sprint%2010/Consolidated%20error%20messages%20V2.2.xlsx).
 
 
-[**Link to design**](/mosip/mosip/blob/0.12.0/docs/design/idrepository/identity-service.md)
+[**Link to design**](https://github.com/mosip/commons/blob/master/design/idrepository/identity-service.md)
  
 #### 3.4.1 De-activate UIN and its Associated VIDs [**[↑]**](#table-of-contents)
 This feature is used to de-activate UIN and its associated VIDs. When an individual’s UIN and its associated VIDs is deactivated, then he/she will not be able to authenticate himself/herself by using UIN or VID.
