@@ -8,7 +8,7 @@ This documentation is for setting up HDFS (v2.8.1) cluster with one namenode and
 	node-master.example.com
 	node-slave1.example.com
 	```
-* Install java (java-8-openjdk) to all the machines in the cluster and setup the JAVA_HOME environment variable for the same.
+* Install java (`java-8-openjdk`) to all the machines in the cluster and setup the `JAVA_HOME` environment variable for the same.
 	```
 	sudo yum install java-1.8.0-openjdk-devel
 	``` 
@@ -20,13 +20,13 @@ This documentation is for setting up HDFS (v2.8.1) cluster with one namenode and
 **_Note:_** 
 Take the value of the current link and remove the trailing `/bin/java`.
 
-For example on RHEL 7, the link is `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre/bin/java`, 
+For example on RHEL 7, the link is `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre/bin/java`
 
-So JAVA_HOME should be `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre`.
+So `JAVA_HOME` should be `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre`.
 
 ### Edit ~/bashrc.sh:
 
-#### `export JAVA_HOME={path-tojava}` with your actual java installation path. 
+* Export `JAVA_HOME={path-tojava}` with your actual java installation path. 
 
 For example on a Debian with open-jdk-8:
 	```
@@ -35,12 +35,12 @@ For example on a Debian with open-jdk-8:
 
 **_Note:_** In the further steps when u login to the hadoop account set the java path in `~/hadoop/etc/hadoop/hadoop-env.sh` also.
 
-#### Get the IP of master and slave nodes using:
-```
-ifconfig
-```
+* Get the IP of master and slave nodes using:
+	```
+	ifconfig
+	```
 
-#### Adjust `/etc/hosts` on all nodes according to your configuration.
+* Adjust `/etc/hosts` on all nodes according to your configuration.
 
 **_Note:_** 
 
