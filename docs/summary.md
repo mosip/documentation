@@ -50,7 +50,7 @@
 * All
 
     * [Admin Services Functionality](Admin-Services-Functionality.md)
-    * [Apache Directory Studio user guide](Apache-Directory-Studio-user-guide.md)
+    * [Apache Directory Studio User Guide](Apache-Directory-Studio-User-Guide.md)
     * [ApacheDs Server installation and config](ApacheDs-Server-installation-and-config.md)
     * [Audit Manager Functionality](Audit-Manager-Functionality.md)
     * [Auth Adapter](Auth-Adapter.md)
