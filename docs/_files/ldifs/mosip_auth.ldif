@@ -1,0 +1,87 @@
+dn: c=morocco
+changetype: modify
+add: administrativeRole
+administrativeRole: accessControlSpecificArea
+
+dn: cn=adminACISubentry,c=morocco
+changetype: add
+objectClass: subentry
+objectClass: top
+objectClass: accessControlSubentry
+prescriptiveACI: {
+    identificationTag "directoryManagerFullAccessACI",
+    precedence 1,
+    authenticationLevel simple,
+    itemOrUserFirst userFirst: {
+        userClasses {
+            name { "uid=admin,ou=people,c=morocco" } 
+        },
+        userPermissions {
+            {
+                protectedItems {
+                    entry,
+                    allUserAttributeTypes,
+                    allUserAttributeTypesAndValues 
+                },
+                grantsAndDenials {
+                    grantInvoke,
+                    grantImport,
+                    grantRename,
+                    grantRead,
+                    grantBrowse,
+                    grantCompare,
+                    grantReturnDN,
+                    grantFilterMatch,
+                    grantRemove,
+                    grantDiscloseOnError,
+                    grantAdd,
+                    grantExport,
+                    grantModify 
+                }
+            }
+        }
+    }
+    }
+subtreeSpecification: { }
+cn: adminACISubentry
+
+dn: cn=userACISubentry,c=morocco
+changetype: add
+objectClass: subentry
+objectClass: top
+objectClass: accessControlSubentry
+prescriptiveACI: {
+    identificationTag "userAccessACI",
+    precedence 0,
+    authenticationLevel simple,
+    itemOrUserFirst userFirst: {
+        userClasses { allUsers },
+        userPermissions 
+        {
+            {
+                protectedItems {
+                    attributeType { userPassword } 
+                },
+                grantsAndDenials {
+                    denyRead,
+                    denyCompare,
+                    denyFilterMatch,
+                    denyBrowse 
+                }
+            }, {
+                protectedItems { entry, allUserAttributeTypesAndValues },
+                grantsAndDenials {
+                    grantReturnDN,
+                    grantFilterMatch,
+                    grantRead,
+                    grantDiscloseOnError,
+                    grantBrowse,
+                    grantCompare 
+                }
+            }
+        }
+    }
+    }
+subtreeSpecification: { }
+cn: userACISubentry
+

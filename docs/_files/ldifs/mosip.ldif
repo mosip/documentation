@@ -1,0 +1,956 @@
+version: 1
+
+dn: c=morocco
+objectclass: extensibleObject
+objectclass: domain
+objectclass: top
+dc: morocco
+c: morocco
+
+dn: ou=division,c=morocco
+objectClass: organizationalUnit
+objectClass: top
+ou: division
+
+dn: ou=people,c=morocco
+objectClass: organizationalUnit
+objectClass: top
+ou: people
+
+dn: ou=roles,c=morocco
+objectClass: organizationalUnit
+objectClass: top
+ou: roles
+
+#---------------------
+# People
+#---------------------
+
+dn: uid=110003,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Qm9uZ8KgQnJhZ2Fu
+sn: Qm9uZ8KgQnJhZ2Fu
+mail: bong.bragan@xyz.com
+mobile: 739704695
+uid: 110003
+userPassword: {SSHA256}dSPz+kISr5IMIsYwknGw2iVICxr8Srm+cEsgfDS9WYFrDtU57OEGmA==
+
+dn: uid=110026,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Elvis Mcmillan
+sn: Elvis Mcmillan
+mail: elvis.mcmillan@xyz.com
+mobile: 884282274
+uid: 110026
+userPassword: {SSHA256}pOFycD+3KiUsIs+NvZpZLb1tUmfte+uMdVuuseESsbj+kX+/8tDziQ==
+
+dn: uid=110014,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn:: Q3Jpc3N5wqBGbG9y
+sn:: Q3Jpc3N5wqBGbG9y
+mail: crissy.flor@xyz.com
+mobile: 971384902
+uid: 110014
+userPassword: {SSHA256}pcFSfxs8bOX8tmPQRXm2N13YaXdpZhVRHKmjONe0GF47eGJI43M2Dw==
+
+dn: uid=reg_client_app1,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: user
+sn: user
+mail: balaji.sridharan@mindtree.com
+mobile: 9791941815
+uid: reg_client_app1
+userPassword: {SSHA256}6msJx0oICth6nCNJjSFOYKzpzhStqTIkds8VxnHbGKgJAcn6UygPFg==
+
+dn: uid=110002,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn:: TGVvbmlhwqBCZXJtZW8=
+sn:: TGVvbmlhwqBCZXJtZW8=
+mail: Mahesh.Gattupalli@mindtree.com
+mobile: 8919377939
+uid: 110002
+userPassword: {SSHA256}mywiitC8EHG3pC9T89+vE/oFuZntG5S9TzyNzl8fQnvNt0qpNIFoyg==
+
+dn: uid=ida,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: ida
+sn: ida
+mail: ida@mosip.io
+mobile: 8976394859
+uid: ida
+userPassword: {SSHA256}tbSiHuhAEq0JwK4bMA0Pivjr+yM+ss0TQo2K2Ekqk4EGPBBDYFJJdw==
+
+dn: uid=110029,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Carolyn Rodriguez
+sn: Carolyn Rodriguez
+mail: carolyn.rodriguez@xyz.com
+mobile: 818876429
+uid: 110029
+userPassword: {SSHA256}REJlKQqT0wWm8ySwc2f0aNyj+UUX+OJlMip07WWn67Y/EhD04ozqbg==
+
+dn: uid=auth_server_id1,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: auth_server_id
+sn: auth_server_id
+mail: ramadurai.pandian@mindtree.com
+mobile: 9663175928
+uid: auth_server_id1
+userPassword: {SSHA512}Uk3bqUreCtxk3Ov6rSYlwDoA3WOXD8wGplypbXumg//n2twYz8Z+P+lOojmAZ+UNQ8K7Ou5IL0Yn+YFtLDPWO9On5+DWEz/
+
+dn: uid=registration_supervisor,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Registration Supervisor
+sn: Registration Supervisor
+mail: registration_supervisor@mosip.io
+mobile: 8756983674
+uid: registration_supervisor
+userPassword: {SSHA512}t6zi8drjTWqBPrOqvb+aPzBff+QAsXFBpZWsEa4RfpUrpgkn2P9Pbv7iAaQC1MwW7mjCOBJOejkUJ9ZiSRIXP+rXF4dD3qtG
+
+dn: uid=reg_client_id1,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: user
+sn: user
+mail: balaji.sridharan@mindtree.com
+mobile: 9791941815
+uid: reg_client_id1
+userPassword: {SSHA256}m4nPAS+VBNZxiePfG+VJXHHiyKWRKwGo1b/xWDVAU8rIvToJrnZFrw==
+
+dn: uid=110018,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn:: RmVybmXCoEhhbmc=
+sn:: RmVybmXCoEhhbmc=
+mail: ferne.hang@xyz.com
+mobile: 733802681
+uid: 110018
+userPassword: {SSHA256}qV6B0gEKBkQNvBtPykh2sW5fG5DvoinwlTSZbGKg8U7CFjBoxoFfhw==
+
+dn: uid=110010,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn:: TWF6aWXCoE5lZ2xleQ==
+sn:: TWF6aWXCoE5lZ2xleQ==
+mail: mazie.negley@xyz.com
+mobile: 718961429
+uid: 110010
+userPassword: {SSHA256}DoLMn2Yy+4gMbHef+n0JedDmINYazG7tkK/0zDsPSVvZWUt1ud4g2g==
+
+dn: uid=110008,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn:: SWRlbGxhwqBIb3VnZQ==
+sn:: SWRlbGxhwqBIb3VnZQ==
+mail: idella.houge@xyz.com
+mobile: 9789970767
+uid: 110008
+userPassword: {SSHA256}qMccPwxhprQRirWX6AtANjemL1VHb4s6TLtKYEi7mOWyyHRGfhqgnQ==
+
+dn: uid=110017,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn:: S3Jpc8KgUmFobQ==
+sn:: S3Jpc8KgUmFobQ==
+mail: kris.rahm@xyz.com
+mobile: 723337142
+uid: 110017
+userPassword: {SSHA256}PXkF4vexKgC1DJC8dNOqxTF0FQM0SizB/lf8AzUYFK7rJa11D2RBdg==
+
+dn: uid=110019,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn:: TGVpbGFuacKgSGVhdmVuZXI=
+sn:: TGVpbGFuacKgSGVhdmVuZXI=
+mail: leilani.heavener@xyz.com
+mobile: 942983448
+uid: 110019
+userPassword: {SSHA256}PJR5K7Ot2WX1ogkVyGgTo6jil71BFh88MEwuyWXujpynnL7kMWQdHw==
+
+dn: uid=super_admin_user1,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Super Admin User1
+sn: Super Admin User1
+mail: super_admin_user1@mosip.io
+mobile: 7585675364
+uid: super_admin_user1
+userPassword: {SSHA256}KSFrerRyXbGSE2JFug+ETOXFxnTe3kEm6SE6tXo4HVhUhhiR0n4Bbw==
+
+dn: uid=110015,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn:: QmV0dGluYcKgR29lcmluZw==
+sn:: QmV0dGluYcKgR29lcmluZw==
+mail: bettina.goering@xyz.com
+mobile: 876997632
+uid: 110015
+userPassword: {SSHA256}77qbkzJRnOzgBJ7TqtW50niTjlV7hrhS0qmWN5z1CLLG4RDNwJ94ow==
+
+dn: uid=110028,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Colton Elliott
+sn: Colton Elliott
+mail: colton.elliott@xyz.com
+mobile: 809908673
+uid: 110028
+userPassword: {SSHA256}mVahxzaThAfkYbmV8igTWW5Iiq9TN87a3GKN1GA29lpiytIRJMLjag==
+
+dn: uid=110020,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn:: SXJ3aW7CoE5vcndvb2Q=
+sn:: SXJ3aW7CoE5vcndvb2Q=
+mail: irwin.norwood@xyz.com
+mobile: 936463358
+uid: 110020
+userPassword: {SSHA256}4zG3Q8WhK7a7lyT+qpVlWQvRH6oKlQ02d8mr9eYraqQOTAm2zO9NmQ==
+
+dn: uid=110022,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Adrienne Hoffman
+sn: Adrienne Hoffman
+mail: adrienne.hoffman@xyz.com
+mobile: 848488000
+uid: 110022
+userPassword: {SSHA256}IjVmGulZ0ERM65C1jn+rsBICZBwWTo9n9wnN2t6vrqyuRKMArrNl6A==
+
+dn: uid=registration_supervisor_user1,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Registration Supervisor User1
+sn: Registration Supervisor User1
+mail: registration_supervisor_user1@mosip.io
+mobile: 8756983674
+uid: registration_supervisor_user1
+userPassword: {SSHA256}II2JIGnts6n8UJ0pLG9VZ9AVvD0gMMLTiLhHYw0FZ9CT38WslNr2gA==
+
+dn: uid=idauthentication,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: idauthentication
+sn: idauthentication
+mail: idauthentication@mosip.io
+mobile: 8937273849
+uid: idauthentication
+userPassword: {SSHA512}hqp3uk8WBP7fMp/l1D/HCEj6T3P6oltyHUSdsqc3lAKDS1vUZwtNlt/JFLn1FRGMpzyedh2z/Q0JlU+8M9euRCbvlpqLOh1+
+
+dn: uid=registrationclient_batch_user,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: user
+sn: user
+mail: balaji.sridharan@mindtree.com
+mobile: 9791941815
+uid: registrationclient_batch_user
+userPassword: {SHA256}4uSI7K+RiX1xvqwliUM4mEFP7rFAg3KExpDfwmcHsmI=
+
+dn: uid=ida_client_app,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: user
+sn: user
+mail: ida_client_app@mosip.io
+mobile: 9663175928
+uid: ida_client_app
+userPassword: {SSHA512}r1i9mSAymMBsQJSeiTirVUn6UP3R0OXrgh3KGGBhxJlZkIPj2cW5ArsPXDRdBmk9sjyLTvqGO8RroaeYmmh4sDE9JUnKu3j5
+
+dn: uid=regproc_app_user,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: regproc_app_user
+sn: regproc_app_user
+mail: idaappuser@mosip.io
+mobile: 9663175928
+uid: regproc_app_user
+userPassword: {SSHA256}nb84x7xYM+P0Qes1/RtH86ZwMVj8ZeWG+ohJ+W65FJhhXbmrlDs34g==
+
+dn: uid=registration_officer,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Registration Officer
+sn: Registration Officer
+mail: registration_officer@mosip.io
+mobile: 8978738490
+uid: registration_officer
+userPassword: {SHA512}WdSCGMngFZqv+EVnOoN06vsVLJExBXnDLgSoro30NPatX8OHt6Oxv2XdFjtneLdguBJ0Yb341auf6MGAWp/WMw==
+
+dn: uid=110011,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: TWFnZGHCoEdvZG95
+sn: TWFnZGHCoEdvZG95
+mail: magda.godoy@xyz.com
+mobile: 938380935
+uid: 110011
+userPassword: {SSHA512}0DRzIgGk30zS5rviXzzdkdgFiOCYfcnETUnd647qpW+KuhLhM3LGKv/6w5D+jscZahKRFrIauBQdfEEVdpo6Gh3aQj5tTmeP
+
+dn: uid=admin_user1,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Admin_User1
+sn: Admin_User1
+mail: admin@mosip.io
+mobile: 9663175928
+uid: admin_user1
+userPassword: {SSHA512}3oAz+8E0zvIAN1mFBvCpK6zAMeckAo41SbA4cWkLpGy6I6MN8hIwDN4Bd52oHe/ccd2k7T4yw4XTxuN38O4LKjUiPGxKrvXI
+
+dn: uid=individual_user1,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Individual User1
+sn: Individual User1
+mail: individual_user1@mosip.io
+mobile: 8976394859
+uid: individual_user1
+userPassword: {SSHA512}jJRebGnXfojcSXdCbZlp06LB1idFfka8Kc85fXAYipl3x0RDhlGjVQcllB9/Mm0/YQusNi4lUdawz2wQYmdSs4/L9HlI777m
+
+dn: uid=110023,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Adrienne Mcgee
+sn: Adrienne Mcgee
+mail: adrienne.mcgee@xyz.com
+mobile: 7585675364
+uid: 110023
+userPassword: {SSHA512}Ei4QWQM3AMf8nEYbfX7w0KUslPn7jTAH1RrB2eVTpdSvWlCOGoLv1ueNDXM59sop2X63Z2S4OC1+x6T2aV2MvWNflL3q0JUC
+
+dn: uid=110024,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Amare Coleman
+sn: Amare Coleman
+mail: amare.coleman@xyz.com
+mobile: 956554588
+uid: 110024
+userPassword: {SSHA256}D+1abQS/TnwU70VqNUz/oTXWOmP0p3woGq2pqIf+9ISy4lS4E8oX8w==
+
+dn: uid=110001,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: test
+sn: test
+mail: hortense.dauenhauer@xyz.com
+mobile: 975366148
+uid: 110001
+userPassword: {SSHA512}/nDW/mj7RnPLdTDb1tupzO7BNiVs8JVv5MruitRfPkH+MVbCMuH3irokaqXlvTzZCJap0Jw+Iw9HW7idXRzghpSBKk5tRU07
+
+dn: uid=110021,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Magdalena Weber
+sn: Magdalena Weber
+mail: magdalena.weber@xyz.com
+mobile: 932122450
+uid: 110021
+userPassword: {SSHA512}NHUoW6XzdeRBkGkmOmNOYpIouIMDiy89I+ta6m8wAeMhLHJ2Ln0IRd4BvvCjTX8m0nWfrI+gypSV+mmRJZp1NApOpVcs1MU9
+
+dn: uid=110016,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: SGlsYXJ5wqBEdW5rbGlu
+sn: SGlsYXJ5wqBEdW5rbGlu
+mail: hilary.dunklin@xyz.com
+mobile: 853451517
+uid: 110016
+userPassword: {SSHA512}NHUoW6XzdeRBkGkmOmNOYpIouIMDiy89I+ta6m8wAeMhLHJ2Ln0IRd4BvvCjTX8m0nWfrI+gypSV+mmRJZp1NApOpVcs1MU9
+
+dn: uid=admin,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: ramadurai
+sn: ramadurai
+mail: admin@mosip.io
+mobile: 9663175928
+uid: admin
+userPassword: {SSHA512}OqeUsPwpG5/LTcjfg4zhqRPMEZ5uOuiexY2v9ylwn7mTVCfbocps7HNAMNvcO4RcJBxyyA7IwxBCV2tZ6tmMT8aevy/YtymV
+
+dn: uid=admin2,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: ramadurai
+sn: ramadurai
+mail: admin@mosip.io
+mobile: 9663175928
+uid: admin2
+userPassword: {SSHA512}sKrCz0AVGYAyKXHbVhAyt/fMcgKm9ihYqTjsCbk3XXuXyh1ruXVu9Xj+d9UpgvTRjvxd3Qzfb9rJ+P2c+J3A78pcLlIs5Jqb
+
+dn: uid=110027,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Steve George
+sn: Steve George
+mail: steve.george@xyz.com
+mobile: 971073663
+uid: 110027
+userPassword: {SSHA512}NHUoW6XzdeRBkGkmOmNOYpIouIMDiy89I+ta6m8wAeMhLHJ2Ln0IRd4BvvCjTX8m0nWfrI+gypSV+mmRJZp1NApOpVcs1MU9
+
+dn: uid=110005,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: test
+sn: test
+mail: antony.hughes@xyz.com
+mobile: 9704578829
+uid: 110005
+userPassword: {SSHA512}/nDW/mj7RnPLdTDb1tupzO7BNiVs8JVv5MruitRfPkH+MVbCMuH3irokaqXlvTzZCJap0Jw+Iw9HW7idXRzghpSBKk5tRU07
+
+dn: uid=tsp,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: tsp
+sn: tsp
+mail: tsp@mosip.io
+mobile: 8976545678
+uid: tsp
+userPassword: {SSHA512}HMQAHaC1fZPtQRp9YpT/rcUdDfOpZWrMsbyqHQktk35wx6BGq+cupfhDaGX1FuoehFw2XbVnjT4DfJQqeDw8pIt3x7pB0rIE
+
+dn: uid=registrationprocessor,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: registrationprocessor
+sn: registrationprocessor
+mail: monobikash.das@mindtree.com
+mobile: 8892323542
+uid: registrationprocessor
+userPassword: {SHA512}WdSCGMngFZqv+EVnOoN06vsVLJExBXnDLgSoro30NPatX8OHt6Oxv2XdFjtneLdguBJ0Yb341auf6MGAWp/WMw==
+
+dn: uid=super_admin,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: super_admin
+sn: super_admin
+mail: super_admin@mosip.io
+mobile: 7585675364
+uid: super_admin
+userPassword: {SSHA512}Ei4QWQM3AMf8nEYbfX7w0KUslPn7jTAH1RrB2eVTpdSvWlCOGoLv1ueNDXM59sop2X63Z2S4OC1+x6T2aV2MvWNflL3q0JUC
+
+dn: uid=test,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: test
+sn: test
+mail: test@mosip.io
+mobile: 8929838494
+uid: test
+userPassword: {SHA512}7iaw3Ur350mqGo7jwQrpkj9hiYB3Lkc/iBml1JQODbJ6wYX4oOHV+E+IvIh/1nsUNzLDBMxfqa2Ob1f1ACio/w==
+
+dn: uid=registration_admin,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Registration Admin
+sn: Registration Admin
+mail: registration_admin@mosip.io
+mobile: 7809875645
+uid: registration_admin
+userPassword: {SSHA512}ihWDWg5DmqeZmplbZ3k1eGLoSGXHCKvwXgslPwy6R9s60I3KMLaUsM7p/VsAP4Oa7mG34gG2rPpoFWxlQWdly3+05fzbsIBS
+
+dn: uid=110006,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: test
+sn: test
+mail: audra.amezquita@xyz.com
+mobile: 791830986
+uid: 110006
+userPassword: {SSHA512}/nDW/mj7RnPLdTDb1tupzO7BNiVs8JVv5MruitRfPkH+MVbCMuH3irokaqXlvTzZCJap0Jw+Iw9HW7idXRzghpSBKk5tRU07
+
+dn: uid=individual,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: individual
+sn: individual
+mail: individual@mosip.io
+mobile: 8976394859
+uid: individual
+userPassword: {SSHA512}NHUoW6XzdeRBkGkmOmNOYpIouIMDiy89I+ta6m8wAeMhLHJ2Ln0IRd4BvvCjTX8m0nWfrI+gypSV+mmRJZp1NApOpVcs1MU9
+
+dn: uid=registration_officer_user1,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Registration Officer User1
+sn: Registration Officer User1
+mail: registration_officer_user1@mosip.io
+mobile: 8978738490
+uid: registration_officer_user1
+userPassword: {SSHA512}Kozz6RbwbIpmXBvYpbcv0mTX3fqzS+MM6Fwb8J1yk4q3LsQmmh2n7LeeMR+EbTBr1LtW1/57+iwbNJq22s9ok2BH0tc8eyUS
+
+dn: uid=110007,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: test
+sn: test
+mail: leia.white@xyz.com
+mobile: 899884346
+uid: 110007
+userPassword: {SSHA512}/nDW/mj7RnPLdTDb1tupzO7BNiVs8JVv5MruitRfPkH+MVbCMuH3irokaqXlvTzZCJap0Jw+Iw9HW7idXRzghpSBKk5tRU07
+
+dn: uid=110013,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: test
+sn: test
+mail: darby.self@xyz.com
+mobile: 859668671
+uid: 110013
+userPassword: {SSHA512}NHUoW6XzdeRBkGkmOmNOYpIouIMDiy89I+ta6m8wAeMhLHJ2Ln0IRd4BvvCjTX8m0nWfrI+gypSV+mmRJZp1NApOpVcs1MU9
+
+dn: uid=auth_server_id,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: auth_server_id
+sn: auth_server_id
+mail: ramadurai.pandian@mindtree.com
+mobile: 9663175928
+uid: auth_server_id
+userPassword: {SSHA512}Uk3bqUreCtxk3Ov6rSYlwDoA3WOXD8wGplypbXumg//n2twYz8Z+P+lOojmTAZ+UNQ8K7Ou5IL0Yn+YFtLDPWO9On5+DWEz/
+
+dn: uid=reg_client_app,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: user
+sn: user
+mail: balaji.sridharan@mindtree.com
+mobile: 9791941815
+uid: reg_client_app
+userPassword: {SSHA256}sEwEeAOGx99XAbZw2TH/X9yPiEWmneDWnhHToSPfhsY7h6cFsV+kIw==
+
+dn: uid=110012,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: QW55YcKgQWRvcm5v
+sn: QW55YcKgQWRvcm5v
+mail: anya.adorno@xyz.com
+mobile: 911713143
+uid: 110012
+userPassword: {SSHA512}NHUoW6XzdeRBkGkmOmNOYpIouIMDiy89I+ta6m8wAeMhLHJ2Ln0IRd4BvvCjTX8m0nWfrI+gypSV+mmRJZp1NApOpVcs1MU9
+
+dn: uid=tsp_user1,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: tsp user1
+sn: tsp user1
+mail: tsp_user1@mosip.io
+mobile: 8976545678
+uid: tsp_user1
+userPassword: {SSHA512}IEuCyOgT8tBn8htK5VT90pDtPczC+nJ48l46V+Y5L51FRi4dxaDDGK6cJe/XzKSTQIygHF3V8ruxwFY7BldqwTyKjMVqJBd0
+
+dn: uid=regproctest,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: reproctest
+sn: regproctest
+uid: regproctest
+userPassword: {SSHA256}5wh7sG14SKWpfBtFGPELzjmdEc7di7eQwjt1+J7hb32pKVUhiRKkxg==
+
+dn: uid=110009,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: test
+sn: test
+mail: shay.vitagliano@xyz.com
+mobile: 716591396
+uid: 110009
+userPassword: {SSHA512}/nDW/mj7RnPLdTDb1tupzO7BNiVs8JVv5MruitRfPkH+MVbCMuH3irokaqXlvTzZCJap0Jw+Iw9HW7idXRzghpSBKk5tRU07
+
+dn: uid=ida_app_user,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: ida_app_user
+sn: ida_app_user
+mail: idaappuser@mosip.io
+mobile: 9663175928
+uid: ida_app_user
+userPassword: {SSHA512}q2Mi6M6csyMYKMZqA347tZc1NLhoyHk1wDoClPh7xULViOGkyn9bX0glAsMFD0YclPkVHpIgZULmx7NsujaVtNeef+u1e/2r
+
+dn: uid=110025,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Dawson Ibarra
+sn: Dawson Ibarra
+mail: dawson.ibarra@xyz.com
+mobile: 765455583
+uid: 110025
+userPassword: {SSHA512}NHUoW6XzdeRBkGkmOmNOYpIouIMDiy89I+ta6m8wAeMhLHJ2Ln0IRd4BvvCjTX8m0nWfrI+gypSV+mmRJZp1NApOpVcs1MU9
+
+dn: uid=110004,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: test
+sn: test
+mail: homer.molinar@xyz.com
+mobile: 725028706
+uid: 110004
+userPassword: {SHA256}9JctRbQoMNGANg8qK16SHl9nqhitCelN0c0MBB/tEyk=
+
+dn: uid=registration_admin_user1,ou=people,c=morocco
+objectClass: organizationalPerson
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+cn: Registration Admin User1
+sn: Registration Admin User1
+mail: registration_admin_user1@mosip.io
+mobile: 7809875645
+uid: registration_admin_user1
+userPassword: {SSHA512}S4KL7uzTZhO/tj1xo78DCHomqqOyS3KWA4qA1kWt89HsSSvxtTJ1KAco11V/bOU0u9F5g2TDCvUYaASu8ac8ufsJ6SQzQK62
+
+#---------------------
+# centers group entries
+#---------------------
+
+dn: cn=casablanca_settat,ou=division,c=morocco
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: casablanca_settat
+uniqueMember: cn=casablanca_settat_center1,ou=center,cn=casablanca_settat,ou=division,c=morocco
+uniqueMember: cn=casablanca_settat_center2,ou=center,cn=casablanca_settat,ou=division,c=morocco
+
+dn: cn=oriental,ou=division,c=morocco
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: oriental
+uniqueMember: cn=oriental_center1,ou=center,cn=oriental,ou=division,c=morocco
+uniqueMember: cn=oriental_center2,ou=center,cn=oriental,ou=division,c=morocco
+
+dn: ou=center,cn=casablanca_settat,ou=division,c=morocco
+objectClass: organizationalUnit
+objectClass: top
+ou: center
+
+dn: ou=center,cn=oriental,ou=division,c=morocco
+objectClass: organizationalUnit
+objectClass: top
+ou: center
+
+dn: cn=casablanca_settat_center1,ou=center,cn=casablanca_settat,ou=division,c=morocco
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: casablanca_settat_center1
+uniqueMember: uid=admin,ou=people,c=morocco
+
+dn: cn=casablanca_settat_center2,ou=center,cn=casablanca_settat,ou=division,c=morocco
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: casablanca_settat_center2
+uniqueMember: uid=admin,ou=people,c=morocco
+
+dn: cn=oriental_center1,ou=center,cn=oriental,ou=division,c=morocco
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: oriental_center1
+uniqueMember: uid=admin,ou=people,c=morocco
+
+dn: cn=oriental_center2,ou=center,cn=oriental,ou=division,c=morocco
+objectClass: groupOfUniqueNames
+objectClass: top
+cn: oriental_center2
+uniqueMember: uid=admin,ou=people,c=morocco
+
+#---------------------
+# Roles
+#---------------------
+
+dn: cn=ID_AUTHENTICATION,ou=roles,c=morocco
+objectClass: organizationalRole
+objectClass: top
+
+cn: ID_AUTHENTICATION
+description: IDA
+roleOccupant: uid=idauthentication,ou=people,c=morocco
+roleOccupant: uid=ida,ou=people,c=morocco
+roleOccupant: uid=ida_app_user,ou=people,c=morocco
+
+dn: cn=REGISTRATION_ADMIN,ou=roles,c=morocco
+objectClass: organizationalRole
+objectClass: top
+cn: REGISTRATION_ADMIN
+description: Registration administrator
+roleOccupant: uid=registration_admin,ou=people,c=morocco
+roleOccupant: uid=registration_admin_user1,ou=people,c=morocco
+roleOccupant: uid=individual,ou=people,c=morocco
+roleOccupant: uid=110001,ou=people,c=morocco
+roleOccupant: uid=reg_client_app,ou=people,c=morocco
+roleOccupant: uid=110002,ou=people,c=morocco
+roleOccupant: uid=110003,ou=people,c=morocco
+roleOccupant: uid=110004,ou=people,c=morocco
+roleOccupant: uid=110005,ou=people,c=morocco
+roleOccupant: uid=110006,ou=people,c=morocco
+roleOccupant: uid=110007,ou=people,c=morocco
+roleOccupant: uid=110008,ou=people,c=morocco
+roleOccupant: uid=110009,ou=people,c=morocco
+roleOccupant: uid=110010,ou=people,c=morocco
+roleOccupant: uid=110011,ou=people,c=morocco
+roleOccupant: uid=110012,ou=people,c=morocco
+roleOccupant: uid=110013,ou=people,c=morocco
+roleOccupant: uid=110014,ou=people,c=morocco
+roleOccupant: uid=110015,ou=people,c=morocco
+roleOccupant: uid=110016,ou=people,c=morocco
+roleOccupant: uid=110017,ou=people,c=morocco
+roleOccupant: uid=110018,ou=people,c=morocco
+roleOccupant: uid=110019,ou=people,c=morocco
+roleOccupant: uid=110020,ou=people,c=morocco
+roleOccupant: uid=110021,ou=people,c=morocco
+roleOccupant: uid=110022,ou=people,c=morocco
+roleOccupant: uid=110023,ou=people,c=morocco
+roleOccupant: uid=110024,ou=people,c=morocco
+roleOccupant: uid=110025,ou=people,c=morocco
+roleOccupant: uid=110026,ou=people,c=morocco
+roleOccupant: uid=110027,ou=people,c=morocco
+roleOccupant: uid=110028,ou=people,c=morocco
+roleOccupant: uid=110029,ou=people,c=morocco
+roleOccupant: uid=reg_client_app1,ou=people,c=morocco
+roleOccupant: uid=registrationclient_batch_user,ou=people,c=morocco
+
+dn: cn=TEST,ou=roles,c=morocco
+objectClass: organizationalRole
+objectClass: top
+cn: TEST
+description: test
+roleOccupant: uid=test,ou=people,c=morocco
+
+dn: cn=REGISTRATION_PROCESSOR,ou=roles,c=morocco
+objectClass: organizationalRole
+objectClass: top
+cn: REGISTRATION_PROCESSOR
+description: REG PROC
+ou: roles
+roleOccupant: uid=registrationprocessor,ou=people,c=morocco
+roleOccupant: uid=regproctest,ou=people,c=morocco
+roleOccupant: uid=ida_app_user,ou=people,c=morocco
+
+dn: cn=MISP,ou=roles,c=morocco
+objectClass: organizationalRole
+objectClass: top
+cn: MISP
+description: Trusted Service Provider
+roleOccupant: uid=tsp,ou=people,c=morocco
+roleOccupant: uid=tsp_user1,ou=people,c=morocco
+roleOccupant: uid=ida,ou=people,c=morocco
+
+dn: cn=AUTH,ou=roles,c=morocco
+objectClass: organizationalRole
+objectClass: top
+cn: AUTH
+description: Auth User role
+roleOccupant: uid=auth_server_id,ou=people,c=morocco
+
+dn: cn=REGISTRATION_OFFICER,ou=roles,c=morocco
+objectClass: organizationalRole
+objectClass: top
+cn: REGISTRATION_OFFICER
+description: Registration officer
+roleOccupant: uid=registration_officer,ou=people,c=morocco
+roleOccupant: uid=registration_officer_user1,ou=people,c=morocco
+roleOccupant: uid=110001,ou=people,c=morocco
+roleOccupant: uid=reg_client_app,ou=people,c=morocco
+roleOccupant: uid=110002,ou=people,c=morocco
+roleOccupant: uid=110003,ou=people,c=morocco
+roleOccupant: uid=110004,ou=people,c=morocco
+roleOccupant: uid=110005,ou=people,c=morocco
+roleOccupant: uid=110006,ou=people,c=morocco
+roleOccupant: uid=110007,ou=people,c=morocco
+roleOccupant: uid=110008,ou=people,c=morocco
+roleOccupant: uid=110009,ou=people,c=morocco
+roleOccupant: uid=110010,ou=people,c=morocco
+roleOccupant: uid=110011,ou=people,c=morocco
+roleOccupant: uid=110012,ou=people,c=morocco
+roleOccupant: uid=110013,ou=people,c=morocco
+roleOccupant: uid=110014,ou=people,c=morocco
+roleOccupant: uid=110015,ou=people,c=morocco
+roleOccupant: uid=110016,ou=people,c=morocco
+roleOccupant: uid=110017,ou=people,c=morocco
+roleOccupant: uid=110018,ou=people,c=morocco
+roleOccupant: uid=110019,ou=people,c=morocco
+roleOccupant: uid=110020,ou=people,c=morocco
+roleOccupant: uid=110021,ou=people,c=morocco
+roleOccupant: uid=110022,ou=people,c=morocco
+roleOccupant: uid=110023,ou=people,c=morocco
+roleOccupant: uid=110024,ou=people,c=morocco
+roleOccupant: uid=110025,ou=people,c=morocco
+roleOccupant: uid=110026,ou=people,c=morocco
+roleOccupant: uid=110027,ou=people,c=morocco
+roleOccupant: uid=110028,ou=people,c=morocco
+roleOccupant: uid=110029,ou=people,c=morocco
+roleOccupant: uid=reg_client_app1,ou=people,c=morocco
+roleOccupant: uid=registrationclient_batch_user,ou=people,c=morocco
+
+dn: cn=REGISTRATION_SUPERVISOR,ou=roles,c=morocco
+objectClass: organizationalRole
+objectClass: top
+cn: REGISTRATION_SUPERVISOR
+description: Registration supervisor
+roleOccupant: uid=registration_supervisor,ou=people,c=morocco
+roleOccupant: uid=registration_supervisor_user1,ou=people,c=morocco
+roleOccupant: uid=reg_client_app,ou=people,c=morocco
+roleOccupant: uid=110001,ou=people,c=morocco
+roleOccupant: uid=110002,ou=people,c=morocco
+roleOccupant: uid=110003,ou=people,c=morocco
+roleOccupant: uid=110004,ou=people,c=morocco
+roleOccupant: uid=110005,ou=people,c=morocco
+roleOccupant: uid=110006,ou=people,c=morocco
+roleOccupant: uid=110007,ou=people,c=morocco
+roleOccupant: uid=110008,ou=people,c=morocco
+roleOccupant: uid=110009,ou=people,c=morocco
+roleOccupant: uid=110010,ou=people,c=morocco
+roleOccupant: uid=110011,ou=people,c=morocco
+roleOccupant: uid=110012,ou=people,c=morocco
+roleOccupant: uid=110013,ou=people,c=morocco
+roleOccupant: uid=110014,ou=people,c=morocco
+roleOccupant: uid=110015,ou=people,c=morocco
+roleOccupant: uid=110016,ou=people,c=morocco
+roleOccupant: uid=110017,ou=people,c=morocco
+roleOccupant: uid=110018,ou=people,c=morocco
+roleOccupant: uid=110019,ou=people,c=morocco
+roleOccupant: uid=110020,ou=people,c=morocco
+roleOccupant: uid=110021,ou=people,c=morocco
+roleOccupant: uid=110022,ou=people,c=morocco
+roleOccupant: uid=110023,ou=people,c=morocco
+roleOccupant: uid=110024,ou=people,c=morocco
+roleOccupant: uid=110025,ou=people,c=morocco
+roleOccupant: uid=110026,ou=people,c=morocco
+roleOccupant: uid=110027,ou=people,c=morocco
+roleOccupant: uid=110028,ou=people,c=morocco
+roleOccupant: uid=110029,ou=people,c=morocco
+roleOccupant: uid=reg_client_app1,ou=people,c=morocco
+roleOccupant: uid=registrationclient_batch_user,ou=people,c=morocco
+
+dn: cn=SUPERADMIN,ou=roles,c=morocco
+objectClass: organizationalRole
+objectClass: top
+cn: SUPERADMIN
+description: Super administrator
+roleOccupant: uid=super_admin,ou=people,c=morocco
+roleOccupant: uid=110011,ou=people,c=morocco
+roleOccupant: uid=110012,ou=people,c=morocco
+
+dn: cn=PRE_REGISTRATION_ADMIN,ou=roles,c=morocco
+objectClass: organizationalRole
+objectClass: top
+cn: PRE_REGISTRATION_ADMIN
+description: preregistration admin

@@ -4,7 +4,7 @@ Follow the below guidelines to use Apache Directory Studio.
 
 ## Download Apache Directory Studio
 
-Download apache directory studio from [here](//directory.apache.org/studio/downloads.html).
+Download apache directory studio from [here](http://directory.apache.org/studio/downloads.html).
 Look for a ZIP file or a TAR ball.
 
 ## Install Apache Directory Studio
@@ -13,27 +13,27 @@ To install extract the downloaded ZIP or TAR files in to a particular location.
 
 ## Run Apache Directory Studio
 
-Run the ./ApacheDirectoryStudio application in the root path of the installation.
+Run the `./ApacheDirectoryStudio` application in the root path of the installation.
 
 ## Create to LDAP server connection
 
 Click on the create connection button.
-![Apache-Directory-Studio-1.png](_images/auth/Apache-Directory-Studio-1.png)
+![Apache-Directory-Studio-1.png](_images/apache_directory_studio_user_guide/Apache-Directory-Studio-1.png)
 
 On the dialog that opens enter the following details
-![Apache-Directory-Studio-2.png](_images/auth/Apache-Directory-Studio-2.png)
+![Apache-Directory-Studio-2.png](_images/apache_directory_studio_user_guide/Apache-Directory-Studio-2.png)
 
 Click next and enter the following details in the Auhentication tab
 
 Password for default connection : secret
-![Apache-Directory-Studio-3.png](_images/auth/Apache-Directory-Studio-3.png)
+![Apache-Directory-Studio-3.png](_images/apache_directory_studio_user_guide/Apache-Directory-Studio-3.png)
 
 Now your connection is configured.
 
 ## Connect to LDAP server
 
 Select the connection and click on connect/disconnect as shown in the figure below.
-![Apache-Directory-Studio-4.png](_images/auth/Apache-Directory-Studio-4.png)
+![Apache-Directory-Studio-4.png](_images/apache_directory_studio_user_guide/Apache-Directory-Studio-4.png)
 
 
 ## Create a partition
@@ -41,10 +41,10 @@ Select the connection and click on connect/disconnect as shown in the figure bel
 
 
 To create a partition, select the connection and right click to select Open Configuration option.
-![Apache-Directory-Studio-5.png](_images/auth/Apache-Directory-Studio-5.png)
+![Apache-Directory-Studio-5.png](_images/apache_directory_studio_user_guide/Apache-Directory-Studio-5.png)
 
 In the window opened in the center of the screen, select the partitions tab in the bottom and add a partition as shown in the figure.
-![Apache-Directory-Studio-6.png](_images/auth/Apache-Directory-Studio-6.png)
+![Apache-Directory-Studio-6.png](_images/apache_directory_studio_user_guide/Apache-Directory-Studio-6.png)
 
 Once you are done with the configuration press ctrl+s to save the configurations.
 
@@ -55,8 +55,8 @@ Once you are done with the configuration press ctrl+s to save the configurations
 
 * To import entries, select your parent node, right click on it and select import > LDIF import...
 * Now select a ldif file which has the entries that you require.
-* First, Import mosip-schema-extn.ldif for custom mosip objectClass and attributes [here](_files/auth/mosip-schema-extn.ldif).
-* After importing mosip-schema-extn.ldif, Import mosip-entries.ldif for initial entries [here](_files/auth/mosip-entries.ldif).
+* First, Import mosip-schema-extn.ldif for custom mosip objectClass and attributes [here](_files/ldifs/mosip-schema-extn.ldif).
+* After importing mosip-schema-extn.ldif, Import mosip-entries.ldif for initial entries [here](_files/ldifs/mosip-entries.ldif).
 
 
 
@@ -125,7 +125,7 @@ allow to create custom attribute in an existing object class.
 * MAY (rid) : samplePerson class have a optional attribute. So when user select samplePerson as object class then it is not mandatory to the attribute in user entry.
 
 * Save the file to the file system. In order to add the custom attribute follow the below image.
-![ApacheDs-Custom-Attribute.png](_images/auth/ApacheDs-Custom-Attribute.png)
+![ApacheDs-Custom-Attribute.png](_images/apache_directory_studio_user_guide/ApacheDs-Custom-Attribute.png)
 
 **Note** : If it is not showing your newly created class then just click on Refresh of Available Object Class list.
 
@@ -136,7 +136,7 @@ For more info [Follow](https://directory.apache.org/apacheds/basic-ug/2.3.1-addi
 
 ## Object classes
 
-For documentation about Object classes, schemas and it's attributes, click [here](//directory.apache.org/apacheds/basic-ug/2.3-introducing-schema.html)
+For documentation about Object classes, schemas and it's attributes, click [here](https://directory.apache.org/apacheds/basic-ug/2.3-introducing-schema.html)
 
 ## Create a new User
 
@@ -145,52 +145,52 @@ For documentation about Object classes, schemas and it's attributes, click [here
 Steps to create a new user from scratch in Apache Directory Studio.
 
 1. Right click on ou=people then click on New -> New Entry
-   ![createuser0.png](_images/auth/createuser0.png)
+   ![createuser0.png](_images/apache_directory_studio_user_guide/createuser0.png)
 
 2. Select Create Entry from Scratch
-    ![createuser1.png](_images/auth/createuser1.png)
+    ![createuser1.png](_images/apache_directory_studio_user_guide/createuser1.png)
 
 3. Select Object classes InetOrgPerson and Userdetials from the list
-   ![createuser2.png](_images/auth/createuser2.png)
+   ![createuser2.png](_images/apache_directory_studio_user_guide/createuser2.png)
 
 4. Add userid using attribute uid in distinguished name table as below.
-   ![createuser3.png](_images/auth/createuser3.png)
+   ![createuser3.png](_images/apache_directory_studio_user_guide/createuser3.png)
 
 5. Add the mandatory attributes sn-surname and cn-common name in the table.
-   ![createuser4.png](_images/auth/createuser4.png)
+   ![createuser4.png](_images/apache_directory_studio_user_guide/createuser4.png)
 
 6. New User got created , If we need any attributes ,we can right click and add attributes.
-   ![createuser5.png](_images/auth/createuser5.png)
+   ![createuser5.png](_images/apache_directory_studio_user_guide/createuser5.png)
 
 ## Create a new Role
 
 Steps to create new role in Apache Directory Studio.
 
 1. Right click on ou=roles , Create new Entry -> Select ObjectClasses ->OrganizationalRole
-   ![createrole1.png](_images/auth/createrole1.png)
+   ![createrole1.png](_images/apache_directory_studio_user_guide/createrole1.png)
 
 2. Select cn-common name for the role.
-    ![createrole2.png](_images/auth/createrole2.png)
+    ![createrole2.png](_images/apache_directory_studio_user_guide/createrole2.png)
 
 3. New Role is created and add description attribute for the role.
-    ![createrole3.png](_images/auth/createrole3.png)
+    ![createrole3.png](_images/apache_directory_studio_user_guide/createrole3.png)
 
 ## User Role Mapping
 
 Steps to create user role mapping
 
 1. Right click on role to be mapped, Select attribute -> RoleOccupant
-    ![roleuser1.png](_images/auth/roleuser1.png)
+    ![roleuser1.png](_images/apache_directory_studio_user_guide/roleuser1.png)
 
 2. Try to click Browse and map the user or give the DN directly to be mapped.
-   ![roleuser2.png](_images/auth/roleuser2.png)
+   ![roleuser2.png](_images/apache_directory_studio_user_guide/roleuser2.png)
 
 ## Troubleshooting
 1 . Incase Importing Ldif throws an failure to import, due to user details already exists error.
-![entryalready.png](_images/auth/entryalready.png)
+![entryalready.png](_images/apache_directory_studio_user_guide/entryalready.png)
 
 2. Please select checkbox Update Existing entries and import the ldif entries.
-![updateexistingentries.png](_images/auth/updateexistingentries.png)
+![updateexistingentries.png](_images/apache_directory_studio_user_guide/updateexistingentries.png)
 
 3. In case of Connection lookup issues, when Ldap is not able to fetch the data.
 
