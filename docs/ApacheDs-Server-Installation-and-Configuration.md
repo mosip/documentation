@@ -1,4 +1,4 @@
-# ApacheDs Installation and Config
+# ApacheDs Installation and Configuration
 
 The below documentation is for linux machines.
 
