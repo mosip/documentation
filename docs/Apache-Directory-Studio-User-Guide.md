@@ -35,10 +35,7 @@ Now your connection is configured.
 Select the connection and click on connect/disconnect as shown in the figure below.
 ![Apache-Directory-Studio-4.png](_images/apache_directory_studio_user_guide/Apache-Directory-Studio-4.png)
 
-
 ## Create a partition
-
-
 
 To create a partition, select the connection and right click to select Open Configuration option.
 ![Apache-Directory-Studio-5.png](_images/apache_directory_studio_user_guide/Apache-Directory-Studio-5.png)
@@ -50,7 +47,6 @@ Once you are done with the configuration press ctrl+s to save the configurations
 
 **Note:**  Delete existing partition if want to import latest ldif.  When ever the configuration of the connection is changed, restart the LDAP server for the changes to take place.
 
-
 ## Import schemas
 
 * To import entries, select your parent node, right click on it and select import > LDIF import...
@@ -58,14 +54,10 @@ Once you are done with the configuration press ctrl+s to save the configurations
 * First, Import mosip-schema-extn.ldif for custom mosip objectClass and attributes [here](_files/ldifs/mosip-schema-extn.ldif).
 * After importing mosip-schema-extn.ldif, Import mosip-entries.ldif for initial entries [here](_files/ldifs/mosip-entries.ldif).
 
-
-
 ## Add Custom Attributes in LDAP (Not Required, Sample LDIF has this already created)
 * Create new LDIF file [ file -> new -> LDIF file ] in Apache Directory Studio.
-* Follow the below given template to create a custom attribute.
-      
+* Follow the below given template to create a custom attribute.      
 ```
-      
 dn: cn=schema
 changetype: modify
 add: attributeTypes
@@ -106,11 +98,8 @@ objectClasses: ( 1.2.840.113556.1.8000.2554.4819.13991.55685.16487.47941.21082.3
    SUP inetOrgPerson
    STRUCTURAL
    MAY  (dob $ genderCode $ firstName $ lastName $ rid $ isActive)
-   )
-   
-      
+   )     
 ```
-
 
 **Description**
 
@@ -186,21 +175,15 @@ Steps to create user role mapping
    ![roleuser2.png](_images/apache_directory_studio_user_guide/roleuser2.png)
 
 ## Troubleshooting
+
 1 . Incase Importing Ldif throws an failure to import, due to user details already exists error.
 ![entryalready.png](_images/apache_directory_studio_user_guide/entryalready.png)
 
 2. Please select checkbox Update Existing entries and import the ldif entries.
 ![updateexistingentries.png](_images/apache_directory_studio_user_guide/updateexistingentries.png)
 
-3. In case of Connection lookup issues, when Ldap is not able to fetch the data.
-
-       Please follow the steps 
-
-       *) Login to the machine where ldap is installed.
-
-       *) Navigate to the path where partitions are installed "/var/lib/apacheds-2.0.0.AM25/mosip/partitions".
-
-       *) Delete the folder and it contents.
-
-       *) Follow the above steps from "Create a partition" again.
-
+3. In case of Connection lookup issues, when Ldap is not able to fetch the data. Please follow the steps:
+	* Login to the machine where ldap is installed.
+	* Navigate to the path where partitions are installed "/var/lib/apacheds-2.0.0.AM25/mosip/partitions".
+	* Delete the folder and it contents.
+	* Follow the above steps from "Create a partition" again.
