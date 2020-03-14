@@ -55,16 +55,15 @@ While adding same machine ip to `/etc/hosts`, use private ip that machine instea
 
 ## Creating Hadoop User
 **Create a hadoop user** in every machine in the cluster to followup the documentation or **replace the hadoop user** in the documentation with your own user.
-
-### Log in to the system as the root user.
+* Log in to the system as the root user.
 	```
 	sudo su -
 	```
-### Create a hadoop user account using the **useradd** command.
+* Create a hadoop user account using the **useradd** command.
 	```
 	adduser hadoop
 	```
-### Set a password for the new hadoop user using the **passwd** command.
+* Set a password for the new hadoop user using the **passwd** command.
 	```
 	passwd hadoop
 	Changing password for user hadoop.
@@ -72,20 +71,20 @@ While adding same machine ip to `/etc/hosts`, use private ip that machine instea
 	Retype new password: 
 	passwd: all authentication tokens updated successfully.
 	```
-### Add the haddop user to the wheel group using the **usermod** command.
+* Add the haddop user to the wheel group using the **usermod** command.
 	```
 	usermod -aG wheel hadoop
 	```
-### Test that the updated configuration allows the user you created to run commands using sudo.
-	Use the **su** to switch to the new user account that you created.
+* Test that the updated configuration allows the user you created to run commands using sudo.
+	* Use the **su** to switch to the new user account that you created.
 	```
 	su hadoop
 	```
-	Use the groups to verify that the user is in the wheel group.
+	* Use the groups to verify that the user is in the wheel group.
 	```
 	groups
 	```
-	Use the sudo command to run the **whoami** command. As this is the first time you have run a command using sudo from hadoop user account the banner message will be displayed. You will be also be prompted to enter the password for the hadoop account.
+	* Use the sudo command to run the **whoami** command. As this is the first time you have run a command using sudo from hadoop user account the banner message will be displayed. You will be also be prompted to enter the password for the hadoop account.
 	```
 	sudo whoami
 	We trust you have received the usual lecture from the local System
@@ -98,7 +97,7 @@ While adding same machine ip to `/etc/hosts`, use private ip that machine instea
 	[sudo] password for hadoop:
 	root
 	```
-	The last line of the output is the user name returned by the **whoami** command. If sudo is configured correctly this value will be **root**.
+	* The last line of the output is the user name returned by the **whoami** command. If sudo is configured correctly this value will be **root**.
 
 **You have successfully configured a hadoop user with sudo access**. You can now log in to this hadoop account and use sudo to run commands as if you were logged in to the account of the root user.
 
@@ -169,8 +168,7 @@ Update `~/hadoop/etc/hadoop/core-site.xml`:
 	</configuration>
 	```
 ### Set path for HDFS
-
-#### Edit `~/hadoop/etc/hadoop/hdfs-site.xml`:
+* Edit `~/hadoop/etc/hadoop/hdfs-site.xml`:
 	```
 	<configuration>
 			<property>
@@ -227,8 +225,7 @@ Update `~/hadoop/etc/hadoop/core-site.xml`:
 			</property>
 	</configuration>
 	```
-
-#### Create directories
+* Create directories
 	```
 	mkdir -p /home/hadoop/data/nameNode [where on the filesystem the DFS name node should store the name table(fsimage)]
 	mkdir -p /home/hadoop/data/dataNode  [where data node should store its blocks.]
@@ -362,8 +359,7 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 	```
 
 ## Configuring the Master KDC Server
-
-### Edit the `/etc/krb5.conf`:
+* Edit the `/etc/krb5.conf`:
 	Configuration snippets may be placed in this directory (`includedir /etc/krb5.conf.d/`) as well, 
 	```
 	[logging]
@@ -402,7 +398,7 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 	mosip.kernel.fsadapter.hdfs.krb-file=file:/opt/kdc/krb5.conf 
 	```
 
-### Edit `/var/kerberos/krb5kdc/kdc.conf`
+* Edit `/var/kerberos/krb5kdc/kdc.conf`
 	```
 	[kdcdefaults]
 		kdc_ports = <b>51088</b>
@@ -416,26 +412,26 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 			admin_keytab = /var/kerberos/krb5kdc/kadm5.keytab
 			supported_enctypes = aes256-cts:normal aes128-cts:normal des3-hmac-sha1:normal arcfour-hmac:normal camellia256-cts:normal camellia128-cts:normal des-hmac-sha1:normal des-cbc-md5:normal des-cbc-crc:normal
 		}
-	``` 
-	
-### Create the database using the `kdb5_util` utility.
+	``` 	
+* Create the database using the `kdb5_util` utility.
 	```
 	/usr/sbin/kdb5_util create -s
 	```
-### Edit the `/var/kerberos/krb5kdc/kadm5.acl`
+* Edit the `/var/kerberos/krb5kdc/kadm5.acl`
 	```
 	*/admin@NODE-MASTER.EXAMPLE.COM	*
 	```
-### Create the first principal using kadmin.local at the KDC terminal:
+* Create the first principal using kadmin.local at the KDC terminal:
 	```
 	/usr/sbin/kadmin.local -q "addprinc root/admin"
 	```
-### Start Kerberos using the following commands:
+* Start Kerberos using the following commands:
 	```
 	/sbin/service krb5kdc start
 	/sbin/service kadmin start
 	```
-	To set up the KDC server to auto-start on boot.
+
+To set up the KDC server to auto-start on boot.
 	```
 	RHEL/CentOS/Oracle Linux 6
 
@@ -450,7 +446,7 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 	systemctl enable kadmin
 	```
 
-### Verify that the KDC is issuing tickets. 
+* Verify that the KDC is issuing tickets. 
 	First, run kinit to obtain a ticket and store it in a credential cache file.
 	```
 	kinit root/admin
@@ -554,8 +550,7 @@ To enable security in hdfs, you must stop all Hadoop daemons in your cluster and
 	```
 
 ## Enable Hadoop Security
-
-### To enable Hadoop security, add the following properties to the `~/hadoop/etc/hadoop/core-site.xml` file on every machine in the cluster:
+* To enable Hadoop security, add the following properties to the `~/hadoop/etc/hadoop/core-site.xml` file on every machine in the cluster:
 	```
 	<property>
 	  <name>hadoop.security.authentication</name>
@@ -592,7 +587,7 @@ To enable security in hdfs, you must stop all Hadoop daemons in your cluster and
 	  <value>/home/hadoop/hadoop/etc/hadoop/hadoop.keytab</value>
 	</property>
 	```
-### Add the following properties to the `~/hadoop/etc/hadoop/hdfs-site.xml` file on every machine in the cluster.
+* Add the following properties to the `~/hadoop/etc/hadoop/hdfs-site.xml` file on every machine in the cluster.
 	```
 	<property>
 	  <name>dfs.block.access.token.enable</name>
@@ -691,7 +686,7 @@ Finally, you need to import both the certificate of the CA and the signed certif
 ### Configuring HDFS
 Change the ssl-server.xml and ssl-client.xml on all nodes to tell HDFS about the keystore and the truststore
 
-#### Edit `~/hadoop/etc/hadoop/ssl-server.xml`
+* Edit `~/hadoop/etc/hadoop/ssl-server.xml`
 	```
 	<configuration>
 
@@ -764,7 +759,7 @@ Change the ssl-server.xml and ssl-client.xml on all nodes to tell HDFS about the
 
 	</configuration>
 	```
-#### Edit `~/hadoop/etc/hadoop/ssl-client.xml`
+* Edit `~/hadoop/etc/hadoop/ssl-client.xml`
 	```
 	<configuration>
 
