@@ -25,7 +25,8 @@ For example on RHEL 7, the link is `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b1
 So JAVA_HOME should be `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre`.
 
 ### Edit ~/bashrc.sh:
-* `export JAVA_HOME={path-tojava}` with your actual java installation path. 
+
+#### `export JAVA_HOME={path-tojava}` with your actual java installation path. 
 
 For example on a Debian with open-jdk-8:
 	```
@@ -34,12 +35,12 @@ For example on a Debian with open-jdk-8:
 
 **_Note:_** In the further steps when u login to the hadoop account set the java path in `~/hadoop/etc/hadoop/hadoop-env.sh` also.
 
-* Get the IP of master and slave nodes using:
+#### Get the IP of master and slave nodes using:
 ```
 ifconfig
 ```
 
-* Adjust `/etc/hosts` on all nodes according to your configuration.
+#### Adjust `/etc/hosts` on all nodes according to your configuration.
 
 **_Note:_** 
 
@@ -54,15 +55,16 @@ While adding same machine ip to `/etc/hosts`, use private ip that machine instea
 
 ## Creating Hadoop User
 **Create a hadoop user** in every machine in the cluster to followup the documentation or **replace the hadoop user** in the documentation with your own user.
-* Log in to the system as the root user.
+
+### Log in to the system as the root user.
 	```
 	sudo su -
 	```
-* Create a hadoop user account using the **useradd** command.
+### Create a hadoop user account using the **useradd** command.
 	```
 	adduser hadoop
 	```
-* Set a password for the new hadoop user using the **passwd** command.
+### Set a password for the new hadoop user using the **passwd** command.
 	```
 	passwd hadoop
 	Changing password for user hadoop.
@@ -70,11 +72,11 @@ While adding same machine ip to `/etc/hosts`, use private ip that machine instea
 	Retype new password: 
 	passwd: all authentication tokens updated successfully.
 	```
-* Add the haddop user to the wheel group using the **usermod** command.
+### Add the haddop user to the wheel group using the **usermod** command.
 	```
 	usermod -aG wheel hadoop
 	```
-* Test that the updated configuration allows the user you created to run commands using sudo.
+### Test that the updated configuration allows the user you created to run commands using sudo.
 	Use the **su** to switch to the new user account that you created.
 	```
 	su hadoop
@@ -167,7 +169,8 @@ Update `~/hadoop/etc/hadoop/core-site.xml`:
 	</configuration>
 	```
 ### Set path for HDFS
-* Edit `~/hadoop/etc/hadoop/hdfs-site.xml`:
+
+#### Edit `~/hadoop/etc/hadoop/hdfs-site.xml`:
 	```
 	<configuration>
 			<property>
@@ -224,7 +227,8 @@ Update `~/hadoop/etc/hadoop/core-site.xml`:
 			</property>
 	</configuration>
 	```
-* Create directories
+
+#### Create directories
 	```
 	mkdir -p /home/hadoop/data/nameNode [where on the filesystem the DFS name node should store the name table(fsimage)]
 	mkdir -p /home/hadoop/data/dataNode  [where data node should store its blocks.]
@@ -337,19 +341,16 @@ Hdfs has been Configured Successfully
 **_Note:_** If different port has been configured , enable those port.
 
 # Securing HDFS
-
 Following configuration is required to run HDFS in secure mode.
 Read more about kerberos here: [**link**](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/managing_smart_cards/using_Kerberos)
 
 ## Install Kerberos
 
 ###  Before Installing Kerberos Install the JCE Policy File
-
 Install Java Cryptography Extension (JCE) Unlimited Strength Jurisdiction Policy File on all cluster and Hadoop user machines.
 Follow this [**link**](https://dzone.com/articles/install-java-cryptography-extension-jce-unlimited)
 
 ### Kerberos
-
 Kerberos server(KDC) and the client needs to be installed. Install the client on both master and slave nodes. KDC server will be installed on the master node.
 * To install packages for a Kerberos server:
 	```
@@ -361,10 +362,8 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 	```
 ## Configuring the Master KDC Server
 
-* Edit the `/etc/krb5.conf`:
-
-**Configuration snippets may be placed in this directory as well**, 
-`includedir /etc/krb5.conf.d/`
+### Edit the `/etc/krb5.conf`:
+	Configuration snippets may be placed in this directory (`includedir /etc/krb5.conf.d/`) as well, 
 	```
 	[logging]
 	default = FILE:/var/log/krb5libs.log
@@ -402,7 +401,7 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 	mosip.kernel.fsadapter.hdfs.krb-file=file:/opt/kdc/krb5.conf 
 	```
 
-* Edit `/var/kerberos/krb5kdc/kdc.conf`
+### Edit `/var/kerberos/krb5kdc/kdc.conf`
 	```
 	[kdcdefaults]
 		kdc_ports = <b>51088</b>
@@ -416,20 +415,21 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 			admin_keytab = /var/kerberos/krb5kdc/kadm5.keytab
 			supported_enctypes = aes256-cts:normal aes128-cts:normal des3-hmac-sha1:normal arcfour-hmac:normal camellia256-cts:normal camellia128-cts:normal des-hmac-sha1:normal des-cbc-md5:normal des-cbc-crc:normal
 		}
-	```
-* Create the database using the `kdb5_util` utility.
+	``` 
+	
+### Create the database using the `kdb5_util` utility.
 	```
 	/usr/sbin/kdb5_util create -s
 	```
-* Edit the `/var/kerberos/krb5kdc/kadm5.acl`
+### Edit the `/var/kerberos/krb5kdc/kadm5.acl`
 	```
 	*/admin@NODE-MASTER.EXAMPLE.COM	*
 	```
-* Create the first principal using kadmin.local at the KDC terminal:
+### Create the first principal using kadmin.local at the KDC terminal:
 	```
 	/usr/sbin/kadmin.local -q "addprinc root/admin"
 	```
-* Start Kerberos using the following commands:
+### Start Kerberos using the following commands:
 	```
 	/sbin/service krb5kdc start
 	/sbin/service kadmin start
@@ -449,7 +449,7 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 	systemctl enable kadmin
 	```
 
-* Verify that the KDC is issuing tickets. 
+### Verify that the KDC is issuing tickets. 
 	First, run kinit to obtain a ticket and store it in a credential cache file.
 	```
 	kinit root/admin
@@ -463,7 +463,7 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 	kdestroy -A
 	```
 
-## Create and Deploy the Kerberos Principals and Keytab Files
+## Create and Deploy the Kerberos Principals and Keytab files
 For more information, check here: [**link**](https://cloudera.com/documentation/enterprise/5-16-x/topics/cdh_sg_kerberos_prin_keytab_deploy.html)
 
 If you have root access to the KDC machine, use kadmin.local, else use kadmin.
@@ -553,7 +553,8 @@ To enable security in hdfs, you must stop all Hadoop daemons in your cluster and
 	```
 
 ## Enable Hadoop Security
-* To enable Hadoop security, add the following properties to the `~/hadoop/etc/hadoop/core-site.xml` file on every machine in the cluster:
+
+### To enable Hadoop security, add the following properties to the `~/hadoop/etc/hadoop/core-site.xml` file on every machine in the cluster:
 	```
 	<property>
 	  <name>hadoop.security.authentication</name>
@@ -590,7 +591,7 @@ To enable security in hdfs, you must stop all Hadoop daemons in your cluster and
 	  <value>/home/hadoop/hadoop/etc/hadoop/hadoop.keytab</value>
 	</property>
 	```
-* Add the following properties to the `~/hadoop/etc/hadoop/hdfs-site.xml` file on every machine in the cluster.
+### Add the following properties to the `~/hadoop/etc/hadoop/hdfs-site.xml` file on every machine in the cluster.
 	```
 	<property>
 	  <name>dfs.block.access.token.enable</name>
@@ -688,7 +689,8 @@ Finally, you need to import both the certificate of the CA and the signed certif
 	```
 ### Configuring HDFS
 Change the ssl-server.xml and ssl-client.xml on all nodes to tell HDFS about the keystore and the truststore
-* Edit `~/hadoop/etc/hadoop/ssl-server.xml`
+
+#### Edit `~/hadoop/etc/hadoop/ssl-server.xml`
 	```
 	<configuration>
 
@@ -761,7 +763,7 @@ Change the ssl-server.xml and ssl-client.xml on all nodes to tell HDFS about the
 
 	</configuration>
 	```
-* Edit `~/hadoop/etc/hadoop/ssl-client.xml`
+#### Edit `~/hadoop/etc/hadoop/ssl-client.xml`
 	```
 	<configuration>
 
