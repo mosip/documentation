@@ -3,7 +3,7 @@ This documentation is for setting up HDFS (v2.8.1) cluster with one namenode and
 # Setup HDFS version 2.8.1
 
 ## Prerequisites
-* Create 2 VMs. They’ll be referred to throughout this guide as 
+* Create 2 VMs. They’ll be referred to throughout this guide as, 
 	```
 	node-master.example.com
 	node-slave1.example.com
@@ -17,42 +17,43 @@ This documentation is for setting up HDFS (v2.8.1) cluster with one namenode and
 	update-alternatives --display java
 	```
 
-**_Note:_** Take the value of the current link and remove the trailing `/bin/java`.
+**_Note:_** 
+Take the value of the current link and remove the trailing `/bin/java`.
+
 For example on RHEL 7, the link is `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre/bin/java`, 
+
 So JAVA_HOME should be `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre`.
 
 ### Edit ~/bashrc.sh:
 * `export JAVA_HOME={path-tojava}` with your actual java installation path. 
-For example on a Debian with open-jdk-8:
-```
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre
-```
 
-**_Note:_** In the further steps when u login to the hadoop account set the java path in ~/hadoop/etc/hadoop/hadoop-env.sh also.
+For example on a Debian with open-jdk-8:
+	```
+	export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre
+	```
+
+**_Note:_** In the further steps when u login to the hadoop account set the java path in `~/hadoop/etc/hadoop/hadoop-env.sh` also.
 
 * Get the IP of master and slave nodes using:
 ```
 ifconfig
 ```
 
-* Adjust `/etc/hosts` on all nodes according to your configuration:
+* Adjust `/etc/hosts` on all nodes according to your configuration.
 
-**_Note:_** While adding same machine ip to `/etc/hosts`, use private ip that machine instead of public IP. For other machine in the cluster use public IP.
+**_Note:_** 
 
-```text
-NOTE : Editing the Master node VM /etc/hosts file  use private IP of Master node and public IP of the Slave node
-         Editing the Slave node  VM /etc/hosts file use private IP of Slave node and Public IP of Master node 
-```
+While adding same machine ip to `/etc/hosts`, use private ip that machine instead of public IP. For other machine in the cluster use public IP.
+	* Edit the Master node VM `/etc/hosts` file  use private IP of Master node and public IP of the Slave node.
+	* Edit the Slave node  VM `/etc/hosts` file use private IP of Slave node and Public IP of Master node. 
+	* Example:
+		```
+		10.0.22.11 node-master.example.com
+		10.0.3.12 node-slave1.example.com
+		```
 
-Example:
-	```
-	10.0.22.11 node-master.example.com
-	10.0.3.12 node-slave1.example.com
-	```
 ## Creating Hadoop User
-
 **Create a hadoop user** in every machine in the cluster to followup the documentation or **replace the hadoop user** in the documentation with your own user.
-
 * Log in to the system as the root user.
 	```
 	sudo su -
@@ -100,7 +101,7 @@ Example:
 **You have successfully configured a hadoop user with sudo access**. You can now log in to this hadoop account and use sudo to run commands as if you were logged in to the account of the root user.
 
 ## Distribute Authentication Key-pairs for the Hadoop User
-The master node will use an ssh-connection to connect to other nodes with key-pair authentication, to manage the cluster.<br/>
+The master node will use an ssh-connection to connect to other nodes with key-pair authentication, to manage the cluster.
 * Login to node-master as the hadoop user, and generate an ssh-key:
 	```
 	ssh-keygen -t rsa
@@ -118,48 +119,45 @@ The master node will use an ssh-connection to connect to other nodes with key-pa
 	Update `$HOME/.ssh/id_rsa.pub` file contents of Master node to Slave node `$HOME/.ssh/authorized_keys manually`.
 
 ## Verify ssh from Master node to slave node and vice versa.
-```
-ssh hadoop@node-slave1.example.com
-```
+	```
+	ssh hadoop@node-slave1.example.com
+	```
 
 **_Note:_** if ssh fails, try setting up again the authorized_keys to the machine.
 
 ## Download and Unpack Hadoop Binaries
 Login to node-master as the hadoop user, download the Hadoop tarball from Hadoop project page, and unzip it:
-```
-cd
-
-wget https://archive.apache.org/dist/hadoop/core/hadoop-2.8.1/hadoop-2.8.1.tar.gz
-
-tar -xzf hadoop-2.8.1.tar.gz
-
-mv hadoop-2.8.1 hadoop
-```
+	```
+	cd
+	wget https://archive.apache.org/dist/hadoop/core/hadoop-2.8.1/hadoop-2.8.1.tar.gz
+	tar -xzf hadoop-2.8.1.tar.gz
+	mv hadoop-2.8.1 hadoop
+	```
 
 ## Set Environment variables in each machine in the cluster
 Add Hadoop binaries to your PATH. Edit `/home/hadoop/.bashrc` or `/home/hadoop/.bash_profile` and add the following line:
-```
-export HADOOP_HOME=$HOME/hadoop
-export HADOOP_CONF_DIR=$HOME/hadoop/etc/hadoop
-export HADOOP_MAPRED_HOME=$HOME/hadoop
-export HADOOP_COMMON_HOME=$HOME/hadoop
-export HADOOP_HDFS_HOME=$HOME/hadoop
-export YARN_HOME=$HOME/hadoop
-export PATH=$PATH:$HOME/hadoop/bin
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-0.el7_5.x86_64/jre
-```
-run following command to apply environment variable changes, using source command
-```
-source /home/hadoop/.bashrc
-or
-source /home/hadoop/.bash_profile
-```
+	```
+	export HADOOP_HOME=$HOME/hadoop
+	export HADOOP_CONF_DIR=$HOME/hadoop/etc/hadoop
+	export HADOOP_MAPRED_HOME=$HOME/hadoop
+	export HADOOP_COMMON_HOME=$HOME/hadoop
+	export HADOOP_HDFS_HOME=$HOME/hadoop
+	export YARN_HOME=$HOME/hadoop
+	export PATH=$PATH:$HOME/hadoop/bin
+	export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-0.el7_5.x86_64/jre
+	```
+Run following command to apply environment variable changes, using source command:
+	```
+	source /home/hadoop/.bashrc
+	or
+	source /home/hadoop/.bash_profile
+	```
 
 ## Configure the Master Node
 Configuration will be done on node-master and replicated to other slave nodes.
 
 ### Set NameNode
-	Update `~/hadoop/etc/hadoop/core-site.xml`:
+Update `~/hadoop/etc/hadoop/core-site.xml`:
 	```
 	<configuration>
 		 <property>
@@ -365,17 +363,15 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 
 * Edit the `/etc/krb5.conf`:
 
-**Configuration snippets may be placed in this directory as well**
+**Configuration snippets may be placed in this directory as well**, 
 `includedir /etc/krb5.conf.d/`
-
-[logging]
 	```
+	[logging]
 	default = FILE:/var/log/krb5libs.log
 	kdc = FILE:/var/log/krb5kdc.log
 	admin_server = FILE:/var/log/kadmind.log
-	```
-[libdefaults]
-	```
+
+	[libdefaults]
 	udp_preference_limit = 1
 	dns_lookup_realm = false
 	ticket_lifetime = 365d
@@ -385,46 +381,43 @@ Kerberos server(KDC) and the client needs to be installed. Install the client on
 	pkinit_anchors = /etc/pki/tls/certs/ca-bundle.crt
 	default_realm =  <b>NODE-MASTER.EXAMPLE.COM</b>
 	#default_ccache_name = KEYRING:persistent:%{uid}
-	```
-[realms]
-	```
+
+	[realms]
 	NODE-MASTER.EXAMPLE.COM = {
 		kdc = node-master.example.com:51088
 		admin_server = node-master.example.com
 	}
-	```
-[domain_realm]
-	```
+
+	[domain_realm]
 	.node-master.example.com = NODE-MASTER.EXAMPLE.COM
 	node-master.example.com = NODE-MASTER.EXAMPLE.COM
 	```
 
-**_Note:_** Place this krb5.conf /kernel/kernel-fsadapter-hdfs/src/main/resources**
+**_Note:_** Place this `krb5.conf` file in `/kernel/kernel-fsadapter-hdfs/src/main/resources`
 	```
 	mosip.kernel.fsadapter.hdfs.krb-file=classpath:krb5.conf 
 	```
-	Or if Kept outside resource then give absolute path 
+	Or if kept outside resource then give absolute path 
 	```
 	mosip.kernel.fsadapter.hdfs.krb-file=file:/opt/kdc/krb5.conf 
 	```
 
-* Edit /var/kerberos/krb5kdc/kdc.conf
-[kdcdefaults]
+* Edit `/var/kerberos/krb5kdc/kdc.conf`
 	```
-	kdc_ports = <b>51088</b>
-	kdc_tcp_ports = <b>51088</b>
+	[kdcdefaults]
+		kdc_ports = <b>51088</b>
+		kdc_tcp_ports = <b>51088</b>
+
+	[realms]
+		NODE-MASTER.EXAMPLE.COM = {
+			#master_key_type = aes256-cts
+			acl_file = /var/kerberos/krb5kdc/kadm5.acl
+			dict_file = /usr/share/dict/words
+			admin_keytab = /var/kerberos/krb5kdc/kadm5.keytab
+			supported_enctypes = aes256-cts:normal aes128-cts:normal des3-hmac-sha1:normal arcfour-hmac:normal camellia256-cts:normal camellia128-cts:normal des-hmac-sha1:normal des-cbc-md5:normal des-cbc-crc:normal
+		}
 	```
-[realms]
-	``` 
-	NODE-MASTER.EXAMPLE.COM = {
-		#master_key_type = aes256-cts
-		acl_file = /var/kerberos/krb5kdc/kadm5.acl
-		dict_file = /usr/share/dict/words
-		admin_keytab = /var/kerberos/krb5kdc/kadm5.keytab
-		supported_enctypes = aes256-cts:normal aes128-cts:normal des3-hmac-sha1:normal arcfour-hmac:normal camellia256-cts:normal camellia128-cts:normal des-hmac-sha1:normal des-cbc-md5:normal des-cbc-crc:normal
-	}
-	```
-* Create the database using the kdb5_util utility.
+* Create the database using the `kdb5_util` utility.
 	```
 	/usr/sbin/kdb5_util create -s
 	```
@@ -560,7 +553,7 @@ To enable security in hdfs, you must stop all Hadoop daemons in your cluster and
 	```
 
 ## Enable Hadoop Security
-* To enable Hadoop security, add the following properties to the ~/hadoop/etc/hadoop/core-site.xml file on every machine in the cluster:
+* To enable Hadoop security, add the following properties to the `~/hadoop/etc/hadoop/core-site.xml` file on every machine in the cluster:
 	```
 	<property>
 	  <name>hadoop.security.authentication</name>
@@ -597,7 +590,7 @@ To enable security in hdfs, you must stop all Hadoop daemons in your cluster and
 	  <value>/home/hadoop/hadoop/etc/hadoop/hadoop.keytab</value>
 	</property>
 	```
-* Add the following properties to the ~/hadoop/etc/hadoop/hdfs-site.xml file on every machine in the cluster.
+* Add the following properties to the `~/hadoop/etc/hadoop/hdfs-site.xml` file on every machine in the cluster.
 	```
 	<property>
 	  <name>dfs.block.access.token.enable</name>
