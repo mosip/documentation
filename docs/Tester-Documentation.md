@@ -377,7 +377,7 @@ The workflow of testing or running the test suite of the available API’s And S
 
    Note: env = qa,dev,int | testLevel=smoke,regression,smokeandregression
 
-3. Report will be generated under “< wokspace >/testing-report.
+3. Report will be generated under “< workspace >/testing-report.
 
 ### 4.4.6 Analyze the test reports
 1. Report can be opened in any Web browser (i.e. Internet Explorer)
@@ -449,7 +449,7 @@ The workflow of testing or running the test suite of the available API’s is as
 
    Note: env = qa,dev,int | testLevel=smoke,regression,smokeandregression
 
-3. Report will be generated under “<wokspace>/testing-report
+3. Report will be generated under “<workspace>/testing-report
 
 
 ### 4.5.6 Analyze the test reports
@@ -542,7 +542,7 @@ The E2E code has the following prerequisite
 
 ### 4.6.5 Procedure to execute or Run the tests on a new environment
 * To run the automation suite simply select the “EndToEndRun.java” class under the package “io.mosip.e2e.runner”.
-* Report will be generated under “< wokspace >/testing-report.
+* Report will be generated under “< workspace >/testing-report.
 
 ### 4.6.6 Analyze the test reports
 1. Report can be opened in any Web browser (i.e. Internet Explorer)
