@@ -30,7 +30,7 @@ IRIS Image Record (IIR):
  * Number of eyes: 2
  * Format: JPEG2000 (lossless) 
  * Transmission format: JPEG2000
- * Storage: JPEG2000 or PNG
+ * Storage: JPEG2000
 
 ### Face
 MOSIP will use face image for registration
@@ -38,9 +38,9 @@ MOSIP will use face image for registration
 Face Image Data (FID):
  * Image specification: ISO/IEC 19794-5
  * Image details: Full frontal image, +/- 5 degrees rotation, 24 bit RGB, white background, 35 mm width, 45 mm height
- * Format: JPEG2000 or PNG (lossless) 
+ * Format: JPEG2000 (lossless) 
  * Transmission format: JPEG2000
- * Storage: JPEG2000 or PNG
+ * Storage: JPEG2000
 
 ## Data standards for Authentication
 
@@ -61,7 +61,7 @@ IRIS Image Record (IIR):
  * Image specification: ISO/IEC 19794-6
  * Number of eyes: 1 or 2
  * Transmission format: JPEG2000 (lossless)
- * Storage: JPEG2000 or PNG
+ * Storage: JPEG2000
 
 ### Face
 Face authentication - future release of MOSIP.

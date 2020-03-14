@@ -25,6 +25,7 @@
     * [Common APIs](Common-APIs.md)
     * [Device APIs](Device-APIs.md)
     * [Device Type and Subtype APIs](Device-Type-and-Subtype-APIs.md)
+	* [Device Management APIs](Device-Management-APIs.md)
     * [Document APIs](Document-APIs.md)
     * [Holiday APIs](Holiday-APIs.md)
     * [ID Authentication APIs](ID-Authentication-APIs.md)
