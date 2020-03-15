@@ -1,3 +1,6 @@
-MOSIP documentation can be viewed at https://mosipdocs.gitbook.io/platform/
+# MOSIP Documentation
 
-The .md files for all pages are in the /docs folder of this repository.  Please send pull-requests to update any content.
+All the pages of MOSIP documentation are available as `.md` files in `/docs` folder.  The documentation is best viewed at
+https://mosipdocs.gitbook.io/platform/
+
+Please send pull-requests to change any content.
