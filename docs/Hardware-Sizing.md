@@ -10,6 +10,7 @@ This document provides estimates for server machines and other hardware needed f
 * Number of servers needed:  80 (4 core, 16 GB RAM)
 
 **Important notes**:
+
 1.  The above are rough estimates we must add a margin of 30% for the unknowns.
 1.  High availability is taken into consideration.
 1.  The above estimates do not include hardware/servers needed for

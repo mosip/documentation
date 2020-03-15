@@ -16,6 +16,7 @@ MOSIP's approach on privacy and security is determined by the [framework princip
 
 # MOSIP Cryptography Algorithms
 MOSIP uses following algorithms:
+
 1. RSA OAEP 2048 bit minimum for all PKI based encryption.
 2. AES GCM 256 bit minimum for all Symmetric key encryption.
 3. SHA256 as the standard hashing algorithm.

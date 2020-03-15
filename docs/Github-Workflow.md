@@ -1,5 +1,5 @@
 ### Setup
-1. Fork MOSIP repository of interenst from 
+1. Fork MOSIP repository of interest from 
     https://github.com/mosip/
 
 1. Clone the fork to your local machine. Example: 
@@ -64,6 +64,7 @@ Note that specifying issue-id tags the commit with Jira. Example:
     ```
 
 1. Create a pull request
+
     1.  Before creating a pull request ensure that your code builds and follows coding guidelines.
     1.  On Github page of your forked repo (example: `https://github.com/<your_github_id>/common`) select your branch (example: `issue-id`) and create a new pull request.
 	
