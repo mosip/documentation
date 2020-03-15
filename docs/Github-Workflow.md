@@ -1,5 +1,5 @@
 ### Setup
-1. Fork MOSIP repository of interenst from 
+1. Fork MOSIP repository of interest from 
     https://github.com/mosip/
 
 1. Clone the fork to your local machine. Example: 
