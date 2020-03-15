@@ -1,5 +1,8 @@
 ## Issues/Enhancements/Features Reporting Guideline
 
+#### Pre-requisite 
+MOSIP stories and issues are maintained in JIRA (https://mosip.atlassian.net).  Before you log an issue, it is necesary to sign-up to get a JIRA ID.  However, JIRA ID is not required for viewing issues.
+
 #### Reporting Issues 
 1. Check if the issue is already reported.
 
