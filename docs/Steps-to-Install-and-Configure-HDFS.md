@@ -270,6 +270,7 @@ This slaves file will specifies the datanode to be setup in which machine
 		scp ~/hadoop/etc/hadoop/* $node:/home/hadoop/hadoop/etc/hadoop/;
 	done
 	```
+
 ## Format HDFS
 HDFS needs to be formatted like any classical file system. On node-master, run the following command:
 	```
