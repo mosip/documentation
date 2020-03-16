@@ -1,6 +1,6 @@
 ## Overview
 
-Providing unique identity for an individual is one of key features of any identity platform.  To achieve this, MOSIP interfaces with Automated Biometric Identification System (ABIS) to de-duplicate an individual's biometric data. MOSIP is designed to integrate with multiple ABISs to leverage expertise of different ABIS providers. A country may use one ABIS for fingerprint and another for Iris or use multiple ABISs for the same biometric data and evaluate the best ABIS based on de-duplication quality.  Note that ABIS is used for deduplication during registration, but not for authentication.
+Providing unique identity for an individual is one of key features of any identity platform.  To achieve this, MOSIP interfaces with **Automated Biometric Identification System (ABIS)** to de-duplicate an individual's biometric data. MOSIP is designed to integrate with multiple ABISs to leverage expertise of different ABIS providers. A country may use one ABIS for fingerprint and another for Iris or use multiple ABISs for the same biometric data and evaluate the best ABIS based on de-duplication quality.  Note that ABIS is used for deduplication during registration, but not for authentication.
 
 ![](_images/arch_diagrams/ABIS_middleware.png)
 
