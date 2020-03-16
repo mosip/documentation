@@ -473,7 +473,7 @@ Analytics
 Appendix A - Java Specifications
 
 
-```
+```java
 class Score
 {
    float scaledScore; //0 - 100, used for internal classification and efficacy analysis
