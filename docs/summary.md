@@ -15,7 +15,6 @@
 * [MDS](MOSIP-Device-Service-Specification.md) 
 * [Privacy & Security](Privacy-and-Security.md)
 * [Build & Deploy](Build-and-Deploy.md)
-* [Contribute](Contributor-Guide.md)
 * APIs
     * [ABIS APIs](ABIS-APIs.md)
     * [Admin APIs](Admin-APIs.md)
@@ -43,6 +42,7 @@
     * [Resident Service APIs](Resident-Service-APIs.md)
     * [Template APIs](Template-APIs.md)
     * [Zone APIs](Zone-APIs.md)
+* [Contribute](Contributor-Guide.md)
 * [LICENSE](License.md)
 
 ## OTHER PAGES 
