@@ -3,6 +3,18 @@
 
 MOSIP uses biometrics in the registration and the authentication processes. As part of this it requires specialized processing of the biometrics data for different types of biometrics. This document defines the interface for the Java Library providing the functional support for processing biometrics.
 
+
+|Function | Quality Check |
+|---------|---------------|
+|Usee Cases |
+* When a biometric  image is received by MOSIP in the registration client using a forced capture, this method is used to check the quality of the image.
+* Server side validation of quality of biometric images uses this method
+* When external biometric images are received to be put on record this method is used to determine the quality of the received biometric image|
+|Signature | 
+Input Parameters
+* Biometric Image in “Biometric Image Record” format. This could be FIR, IIR etc.
+* Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.|
+
 <table>
   <tr>
    <td>Function
@@ -30,7 +42,7 @@ MOSIP uses biometrics in the registration and the authentication processes. As p
    <td>
 Input Parameters
 <ul>
-    <li> Biometric Image in “Biometric Image Record” format. This could be FIR, IIR etc.</li>
+    <li>Biometric Image in “Biometric Image Record” format. This could be FIR, IIR etc.</li>
     <li>Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.</li>
 </ul>
 
