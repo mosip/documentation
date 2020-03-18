@@ -1,4 +1,4 @@
-### Setup
+## Setup
 1. Fork MOSIP repository of interest from 
     https://github.com/mosip/
 
@@ -17,50 +17,53 @@
     ```
     $ git remote set-url --push upstream no_push
     ```
-1. Make sure you don't pull from the origin (don't use `git pull`):
-    ```
-    $ git config branch.autoSetupRebase always
-    ```
+
 1. Confirm the origin and upstream with: 
     ```
-    git remote -v
+    $ git remote -v
     ```
 
-### Code changes
+## Code changes
 
-1. First, update your master with the latest changes from the community.
+1. First, update your master with the latest changes from upstream repo: 
     ```
-    git fetch upstream
+    $ git fetch upstream
     git checkout master
     git rebase upstream/master
     ```
 
 1. Create a new issue in [MOSIP Jira](https://mosip.atlassian.net/)
 
-1. Create a branch to work on your changes. Example: 
+1. Create a branch to work on your changes or continue to work on `master` (developer's choice).  To create a branch: 
     ```
-    git checkout -b <issue-id> 
-    ```
-
-1. Keeping your branch synced with upstream:
-    ```
-    git fetch upstream
-    git rebase upstream/master
+    $ git checkout -b <issue-id> 
     ```
 
 1. Once you are done with the work, commit your changes:
     ```
-    git commit -m "[issue-id] <meaningful commit message>.." 
+    $ git commit -m "[issue-id] <meaningful commit message>.." 
     ```
 Note that specifying issue-id tags the commit with Jira. Example:
+    ```
+    $ git commit -m "[MOS-2346] Adding new upload feature in Pre registration module for POA documents"
+    ```
 
+1. Once again sync with upstream: 
     ```
-    git commit -m "[MOS-2346] Adding new upload feature in Pre registration module for POA documents"
+    $ git fetch upstream
+    $ git rebase upstream/master
     ```
 
-1. Push to origin your branch
+1. Push to origin  
+
+    * If you are working on branch: 
     ```
-    git push -u origin <issue-id>
+    $ git push -u origin <issue-id>
+    ```
+
+    * If you are working on master:
+    ```
+    $ git push 
     ```
 
 1. Create a pull request
