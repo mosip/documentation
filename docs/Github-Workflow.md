@@ -28,8 +28,8 @@
 1. First, update your master with the latest changes from upstream repo: 
     ```
     $ git fetch upstream
-    git checkout master
-    git rebase upstream/master
+    $ git checkout master
+    $ git rebase upstream/master
     ```
 
 1. Create a new issue in [MOSIP Jira](https://mosip.atlassian.net/)
