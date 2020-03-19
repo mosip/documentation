@@ -17,14 +17,12 @@ If a new source code module is planned to be added, and if it is a reusable libr
  
     
 ## Source Code Organization in a MOSIP Repository
-Source code of any feature in MOSIP will be organized as below. 
-```
-- feature-parent
-    - feature-core - jar 
-    - feature-common - jar
-    - feature-service-1 - SpringBoot service
-    - feature-service-2 - SpringBoot service
-```
+Source code of any feature in MOSIP will be organized as below:
+* feature-parent
+  * feature-core - jar 
+  * feature-common - jar
+  * feature-service-1 - SpringBoot service
+  *  feature-service-2 - SpringBoot service
 
 ### Feature-Parent Module
 This should be a POM module that aggregates all the sub-modules. This should contain
@@ -102,6 +100,7 @@ This should be a POM module that aggregates all the sub-modules. This should con
 * Any request/response body should have proper meta-data such as `"id`, `"version"` and `"requestTime"`/`"responseTime"`, etc... .
 
 For example:
+
 ```java
 {
   //API Metadata
@@ -139,6 +138,7 @@ When a java file is written, the following order is maintained,
 ### Beginning documentation comment
 
 The beginning comment should be in a C-style comment. Following is the format of the comment.
+
 ```
 /*  
  * Firstname Lastname
@@ -153,6 +153,7 @@ The first non-comment line is the package statement.
 ### Import statement
 
 - After a line-break below the package statement, import statements are placed. The import statements are grouped and segregated by a line-break. For example,
+
 ```
 import java.util.List;
 import java.util.Map;
@@ -166,6 +167,7 @@ import org.mosip.kernel.core.exception.UnauthenticatedException;
 ### Class or Interface comment for documentation
 
 This comment will be going in to the Javadocs
+
 ```java
 /**
  * Class/Interface description goes here
@@ -251,7 +253,8 @@ Both the comment types are used in the source code of MOSIP.
 
 ### Block Comments
 
-When the developer needs to explain in detail about some functionality, block comments are used. Block comments are used anywhere in the code. It can be for the class or interface declarations or it can be within the java methods also. Example of block comments,
+When the developer needs to explain in detail about some functionality, block comments are used. Block comments are used anywhere in the code. It can be for the class or interface declarations or it can be within the java methods also. Example of block comments:
+
 ```java
 /*
  * This is the block comment. This is the block comment.
@@ -262,6 +265,7 @@ When the developer needs to explain in detail about some functionality, block co
 ### Single-Line Comments
 
 Single line comments are used for short description. For example,
+
 ```java
 /* This is short description */
 if( height > 45) {
@@ -272,6 +276,7 @@ if( height > 45) {
 ### Trailing Comments
 
 Trailing comments are given in the same line where the source code resides. For example,
+
 ```java
 if(height > 45) { /* This is the trailing comment */
     ...
@@ -281,6 +286,7 @@ if(height > 45) { /* This is the trailing comment */
 ### End-Of-Line comments
 
 The end-of-line comments are also used in the source file. For example,
+
 ```java
 if(width > 45) {
     return false; // some description
@@ -302,6 +308,7 @@ if(width > 45) {
 Or 
 
   *  Multi-line documentation comment:
+
 ```java
 /** 
  * COMMENT 
@@ -452,7 +459,8 @@ class Sample extends Object {
 1.	Never return null for an Array return type. Return an empty array of 0 like `return new String[0]`.
 1.	Never return null for a Set/List/Map collection return types. Return corresponding empty values such as `Collections.emptySet()`, `Collections.emptyList()` or `Collections.emptyMap()`;
 1. Prefer method return type to be more generic such as a Super Interface or Super Class. For example, `List` instead of `ArrayList`.
-1.	Avoid having multiple return statements in a method. Prefer to provide a single point of exit to a method. For example,
+1.	Avoid having multiple return statements in a method. Prefer to provide a single point of exit to a method. For example:
+
 ``` java
 //AVOID BELOW
 private int getStatus() {
@@ -492,6 +500,7 @@ private int getStatus() {
 
 Each line should contain at most one statement. 
 Example:
+
 ```java
 argv++;         // Correct
 argc--;         // Correct  
@@ -500,6 +509,7 @@ argv++; argc--; // AVOID!
 
 ## Compound Statements
 * Compound statements are statements that contain lists of statements enclosed in braces 
+
 ```java
 { 
 	Statement1;
@@ -510,6 +520,7 @@ argv++; argc--; // AVOID!
 * The enclosed statements should be indented one more level than the compound statement.
 * The opening brace should be at the end of the line that begins the compound statement; the closing brace should begin a line and be indented to the beginning of the compound statement.
 * Braces are used around all statements, even single statements, when they are part of a control structure, such as an if-else or for statement. This makes it easier to add statements without accidentally introducing bugs due to forgetting to add braces.  For example:
+
 ```java
 //COMPOUND STATEMENT
 if(list.size() == 2) {
@@ -537,6 +548,7 @@ if(list.isEmpty()) {
 ## "return" Statements
 
 * A return statement with a value should not use parentheses unless they make the return value more obvious in some way. Example:
+
 ```java
 return;
 return myDisk.size();
@@ -548,6 +560,7 @@ return (size ? size : defaultSize);
 ## if, if-else, if-else if-else Statements
 
 * Always curly braces are used in the if-else statements. Even though there is a single statement below the if-else statement, curly braces is used. For example,
+
 ```java
 if(width > 45) {
     return false; // some description
@@ -556,6 +569,7 @@ if(width > 45) {
 
 * If there is a Boolean value to be returned in a method or assigned to a variable based on an if-else condition, the condition itself should be returned or assigned instead of `true` or `false` for the condition.
 For example, 
+
 ```java
 if(isEmpty()) return true; else return false; //AVOID
 
@@ -566,6 +580,7 @@ return isEmpty(); //PREFER
 
 ## Conditional Expressions
 * If any binary operator is used before "?" in the ternary operator, then parentheses is used.
+
 ```java
 (age >= 25) ? "VALID" : "INVALID" ;
 ```
@@ -575,6 +590,7 @@ return isEmpty(); //PREFER
 
 ## "switch" Statements
 * A switch statement should have the following form:
+
 ```java
 switch (condition) {
 case ABC:
@@ -618,6 +634,7 @@ Only for the following situations, 1 blank line is used,
 Under the following circumstances, blank space are used,
 
 1. When a keyword followed by parenthesis, a blank space should be given after the keyword. For example,
+
 ```java
 while(age > 60)  {
     ...
@@ -640,12 +657,13 @@ The names given to interface is always noun and in camel case. Refer to [Classes
 
 ## Methods
 
-The method names are always verbs and in camel case. For example,
-```
+The method names are always verbs and in camel case. For example
+
+```java
 public void deleteFromCache(String cacheName, String key) {
     ...
 }
-````
+```
 
 ## Variables
 
@@ -653,7 +671,7 @@ The variable names are short and meaningful. Any new observer can understand the
 
 ## Constants
 
-* The constants are given the name in capital letters. The words in the names are separated by underscore("_").
+* The constants are given the name in capital letters. The words in the names are separated by underscore.
 * String literals should not be used in the code directly. Declare them as constant in the class.
 * Magic Numbers should not be used in code, they should be declared as constants.
 * Create Xyz**Constants** class to group related and reused constants within a module/feature.
@@ -668,12 +686,14 @@ The variable names are short and meaningful. Any new observer can understand the
 ## Referring to Class Variables and Methods
 
 Always use the class name to call the static method. For example,
-```
+
+```java
 LogFactory.getLogger();
 ```
 ## Constants
 
 Numerical values should not be used in the code directly. Declare them and use it in the code. For example,
+
 ```java
 int MAX_AGE = 60;
 while (age > MAX_AGE) {
@@ -683,6 +703,7 @@ while (age > MAX_AGE) {
 ## Variable Assignments
 
 * Avoid multiple assignments in the same line. For example,
+
 ```java
 int a, b = 10 // AVOID
 
@@ -710,6 +731,7 @@ Function<Employee, String> = employee::getName // PREFER
 ```
 * Keep Lambda Expressions Short and Self-explanatory so that it is easy to understand. . Provide clear understandable name to the parameters in Lambda Expressions.
 * Always use parameter type inference. For example,
+
     ```java
     (employee, requesterEmployee) -> employee.name.compareTo(requesterEmployee.name) // PREFER
     (Employee employee, Employee requesterEmployee) -> {employee.name.compareTo(requesterEmployee.name)} // PREFER
@@ -721,7 +743,8 @@ Function<Employee, String> = employee::getName // PREFER
     ```
 * Use “Effectively Final” Variables in Lambda Expressions. It is not required to mark every target variable as final.
 * Avoid mutating Object Variables in Lambda Expression.
-* Avoid using the block lambdas wherever an expression lambda are used. For example,
+* Avoid using the block lambdas wherever an expression lambda are used. For example:
+
     ```java
     // PREFER
     someVar -> someVar.toUpperCase(Constants.SOME_CONST);
@@ -735,7 +758,8 @@ Function<Employee, String> = employee::getName // PREFER
 * Prefer Standard Functional Interfaces over creating a similar one unless it is really required. Use Standard Functional interfaces, which are gathered in the `java.util.function` package, satisfy most developers' needs in providing target types for lambda expressions and method references.
 * On a new Functional Interface declaration always use `@FunctionalInterface` annotation. This is not only for the documentation purpose but also to avoid accidentally breaking the Functional Interface behavior.
 * Instantiate Functional Interfaces with Lambda Expressions instead of creating anonymous inner class instances for that.
-* Whenever calling the functional interface, place them at last in the parameter list. For example,
+* Whenever calling the functional interface, place them at last in the parameter list. For example
+
 ```java
 // PREFER
 public Foo parse(Locale locale, **Function<Locale,Foo> fn** );
@@ -761,6 +785,7 @@ public Foo parse( **Function<Locale,Foo> fn** , Locale locale);
 ### Throwing exceptions
 
 Throw specific exceptions in a method, rather than generic exceptions. For example,
+
 ```java
 public void myMethod()throws Exception{  // AVOID
 public void myMethod()throws NumberFormatException{  // PREFER
@@ -769,6 +794,7 @@ public void myMethod()throws NumberFormatException{  // PREFER
 ### Documenting exceptions
 
 The exceptions are documented clearly. For example,
+
 ```java
 /**
  * The method description goes here ...
@@ -784,6 +810,7 @@ public void myMethod(String someInput) throws PacketNotValidException {
 ### Catching exceptions
 * Always prefer to use **try-with-resource** block when applicable like instantiating a Input or Output stream/reader or Connection, which are AutoCloseable.
 * The following example uses a try-with-resources statement to automatically close a `java.sql.Statement` object:
+
 ```java
 public static void viewTable(Connection con) throws SQLException {
     String query = "select COF_NAME, SUP_ID, PRICE, SALES, TOTAL from COFFEES";
@@ -799,6 +826,7 @@ public static void viewTable(Connection con) throws SQLException {
 * A try-with-resources statement can have catch and finally blocks just like an ordinary try statement.
 
 * Always catch specific exceptions over a more generic exceptions like Exception/Throwable class. For example,
+
 ```java
 // AVOID BELOW
 try {
@@ -815,6 +843,7 @@ try {
 }
 ```
 * Never leave a catch block empty. Either handle the exception, or say proper reason for doing nothing in it.
+
 ```java
 // AVOID BELOW
 try {
@@ -831,6 +860,7 @@ try {
 ```
 * Use multi-catch blocks wherever possible to club common handling of multiple exceptions.
 * Always log exceptions to file in a catch block for debugging purpose.
+
 ```java
 try {
    ...
@@ -867,6 +897,7 @@ The log levels are configured according to the environment such as Development, 
 MOSIP's log component from the core-kernel is used to log entries. The log module in the core-kernel is used to log all the log entries.
 
 * First create a logger utility class under the core module of the feature like below:
+
 ```java
 
 import io.mosip.kernel.core.logger.spi.Logger;
@@ -965,13 +996,15 @@ Parenthesis are used in the code liberally to improve the readability and for pr
 
 ### Generics:
 * Avoid using Generic classes without Parameter types. 
-For example,
+For example
+
 ```java
 List nameList = new ArrayList(); // AVOID
 List<String> nameList = new ArrayList<>(); //PREFER
 ```
 * Use diamond operator while constructing Generic objects.
-For example,
+For example
+
 ```java
 new HashMap<String, List<String>>() //AVOID
 new HashMap<>() //PREFER
@@ -980,6 +1013,7 @@ new HashMap<>() //PREFER
 ### Method Calls Chaining
 * While chaining multiple method calls, keep one method call per line for better clarity and easy debugging of any issue (especially to get line number in exception stack trace where exactly is the error/exception occurs).
 For example:
+
 ```java
 MessageDialog.makeText(text)
 	.setGravity(Gravity.TOP, 0, 0)
