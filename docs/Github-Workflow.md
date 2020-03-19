@@ -65,7 +65,7 @@
     ```
     $ git push 
     ```
-1. Build and test your code.  Make sure if follows coding guidelines.
+1. Build and test your code.  Make sure it follows the coding guidelines.
 
 1. Create a pull request: On Github page of your forked repo (example: `https://github.com/<your_github_id>/common`) select your branch (example: `issue-id`) and create a new pull request.
 	
