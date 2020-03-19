@@ -43,7 +43,7 @@
     ```
     $ git commit -m "[issue-id] <meaningful commit message>.." 
     ```
-Note that specifying issue-id tags the commit with Jira. Example:
+    Note that specifying issue-id tags the commit with Jira. Example:
     ```
     $ git commit -m "[MOS-2346] Adding new upload feature in Pre registration module for POA documents"
     ```
