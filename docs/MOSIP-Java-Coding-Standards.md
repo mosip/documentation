@@ -418,6 +418,7 @@ void myMethod() {
 * Closing brace "}" starts a line by itself indented to match its corresponding opening statement, 
 * Except when it is a null statement the "}" should appear immediately after the "{"
 * An empty line is there in between the method declarations.
+
 ```java
 class Sample extends Object {
     int ivar1;
@@ -432,7 +433,6 @@ class Sample extends Object {
 
     ...
 }
-
 ```
 
 ## Methods
