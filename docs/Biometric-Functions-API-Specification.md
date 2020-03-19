@@ -186,7 +186,7 @@ MOSIP uses biometrics in the registration and the authentication processes. As p
 
 ## Behavior
 
-###Fingerprint
+### Fingerprint
 * Input will contain unsegmented image such as left slap or right slap or two thumbs
 * Output will be biometrics of each finger present in the input image
 
@@ -363,6 +363,7 @@ interface IBioApi
    BIR[] segment(BIR sample, KeyValuePair[] flags);
 }
 ```
+The above code snippets can be referred to from here - [CBEFF-util](https://github.com/mosip/commons/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/cbeffutil) and [Bio API](https://github.com/mosip/commons/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/bioapi)
 
 # Error Codes
 
@@ -374,5 +375,3 @@ KER-BIO-003	|Quality check of Biometric data failed	|Thrown when data provided i
 KER-BIO-004	|Matching of Biometric data failed	|Thrown when data provided is valid, but matching cannot be performed
 KER-BIO-005	|Unknown error occurred	|Thrown when some other error occurred (eg. licensing issue)
 
-
-The above code snippets can be referred to from here - [CBEFF-util](https://github.com/mosip/commons/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/cbeffutil) and [Bio API](https://github.com/mosip/commons/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/bioapi)
