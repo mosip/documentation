@@ -43,7 +43,7 @@
     ```
     $ git commit -m "[issue-id] <meaningful commit message>.." 
     ```
-Note that specifying issue-id tags the commit with Jira. Example:
+    Note that specifying issue-id tags the commit with Jira. Example:
     ```
     $ git commit -m "[MOS-2346] Adding new upload feature in Pre registration module for POA documents"
     ```
@@ -65,10 +65,8 @@ Note that specifying issue-id tags the commit with Jira. Example:
     ```
     $ git push 
     ```
+1. Build and test your code.  Make sure it follows the coding guidelines.
 
-1. Create a pull request
-
-    1.  Before creating a pull request ensure that your code builds and follows coding guidelines.
-    1.  On Github page of your forked repo (example: `https://github.com/<your_github_id>/common`) select your branch (example: `issue-id`) and create a new pull request.
+1. Create a pull request: On Github page of your forked repo (example: `https://github.com/<your_github_id>/common`) select your branch (example: `issue-id`) and create a new pull request.
 	
 1. The pull request shall be reviewed by reviewers.

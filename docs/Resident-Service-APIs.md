@@ -323,9 +323,6 @@ RES-DOW-001| OTP Authentication Failed.
 RES-DOW-002| Data entered is not valid.
 RES-DOW-004| No Registered Mobile/email ID found.
 
-
-
-
 ## POST /resident/v1/req/print-uin
 This request will authenticate an Individual based on provided OTP and post a request for UIN re-print to Postal Service. Notification will be sent to phone/email.
 
@@ -742,7 +739,6 @@ RES-UIU-001| OTP Authentication Failed.
 RES-UIU-002| Data entered does not match or not valid.
 RES-UIU-004| No Registered Mobile/email ID found.
 RES-UIU-005| Status of UIN Update is UnSuccessful.
-
 
 
 ## POST /resident/v1/vid
