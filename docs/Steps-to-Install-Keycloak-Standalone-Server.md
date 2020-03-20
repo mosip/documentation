@@ -1,9 +1,7 @@
-## Setup Keycloak Standalone Server setup 6.0.1
-Dcumentation for setting up keycloak server
 
-### Prerequisites
+# Prerequisites
 
-#### Install Java
+## Install Java
 Install java (java-8-openjdk) in all the machines in the cluster and setup the `JAVA_HOME` environment variable for the same.
 ```
 sudo yum install java-1.8.0-openjdk-devel
@@ -18,20 +16,20 @@ Take the value of the current link and remove the trailing `/bin/java`.
 For example, on RHEL 7, the link is `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre/bin/java`,
 So, `JAVA_HOME` should be `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre.`
 
-#### Edit ~/bashrc.sh:
+## Edit ~/bashrc.sh:
 Export `JAVA_HOME={path-tojava}` with your actual java installation path. 
 For example on a Debian with open-jdk-8:
 ```
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre
 ```
 
-### Download & install keycloak 
+# Download & install keycloak 
 Download and unzip Keycloak
 ```  
 sudo wget "https://downloads.jboss.org/keycloak/6.0.1/keycloak-6.0.1.tar.gz" 
 sudo tar xzf keycloak-6.0.1.tar.gz
 ```
-#### Install a database supproted by keycloak
+## Install a database supproted by keycloak
 
 We have installed postgres as the database for keycloak; you can use any database supported by Keycloak**
 
@@ -67,7 +65,7 @@ After you have done this, open up the `module.xml` file and create the following
 The module name should match the directory structure of your module. So, `org/postgresql` maps to `org.postgresql`. The `resource-root path` attribute should specify the JAR filename of the driver. The rest are just the normal dependencies that any JDBC driver JAR would have.
 
 
-#### Create a service to start Keycloak
+## Create a service to start Keycloak
 ```
 sudo cat > /etc/systemd/system/keycloak.service <<EOF
 
@@ -87,7 +85,7 @@ TimeoutStopSec=600
 WantedBy=multi-user.target
 ```
 
-#### Enable SSL for Keycloak server
+## Enable SSL for Keycloak server
 
 To enable SSL we need a certificate which here in example we will use Lets encrypt.
 
@@ -98,7 +96,7 @@ We will create a keystore in which we will store certificate chain and private k
 openssl pkcs12 -export -inkey{{private key pem path}} -in {{certificate pem path}} -password pass:{{keystore password}} -out {{output keystore name}} -name {{alias}}
 ```
 
-#### Configure standalone xml
+## Configure standalone xml
 
 * Go to `{{keycloak folder}}/standalone/configuration`
 * Open `Standalone.xml` and make following changes
@@ -161,26 +159,26 @@ openssl pkcs12 -export -inkey{{private key pem path}} -in {{certificate pem path
 		</ssl>
 		```
 		
-#### Add Keycloak Admin user
+## Add Keycloak Admin user
 
 From keycloak bin directory run 
 ```
 ./add-user-keycloak.sh -u {{username}} -p {{password}}
 ```
 
-#### Keycloak server start
+## Keycloak server start
 ```
  systemctl start keycloak
 ```
 
-### Configure Keycloak
+# Configure Keycloak
 * Create a new Realm(eg. mosip).   
 * Create clients for every module(i.e. ida,pre-registration,registration-processor,registration-client,auth,resident,mosip-client).
 * Enable Authorization and Service Account for every Client and provide valid redirect uri. These clients will be used by all modules to get client tokens. 
 
 ![Client_Service Account](_images/kernel/keycloak/clients.jpg)
  
-#### Configure User Federation
+## Configure User Federation
 For this Example we will be configuring LDAP as user federation 
 * Go to User Federation.
 * Create a new User Federation for LDAP.
@@ -225,16 +223,16 @@ Pre-Registration => PRE_REGISTRATION
 Auth => AUTH
 ```
 
-#### Updation of Configuration for Keycloak
+## Updation of Configuration for Keycloak
 **_Note:_** <> is for variable properties with this sign need to be updated
 
-##### Global Config
+### Global Config
 ```
 auth.server.validate.url=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
 auth.server.admin.validate.url=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
 ``` 
 
-##### Kernel
+### Kernel
 ```
 mosip.keycloak.base-url=https://<keycloak.domain>
 mosip.kernel.realm-id=<Mosip realm id> (EX mosip)
@@ -285,7 +283,7 @@ mosip.kernel.ida.client.id=<Ida Client id>
 mosip.kernel.ida.secret.key=<Ida Secret id>
 ```
 
-##### Pre-Registration
+### Pre-Registration
 ```
 clientId=<pre-registration client id>
 secretKey=<pre-registration-secret>
@@ -293,14 +291,14 @@ mosip.batch.token.authmanager.userName=<pre-registration client id>
 mosip.batch.token.authmanager.password=<pre-registration-client-secret>
 ```
 
-##### Registration-processor
+### Registration-processor
 ```
 token.request.clientId=<registration-processor-client-id>
 token.request.secretKey=<registration-processor-client-secret>
 KEYBASEDTOKENAPI=${mosip.base.url}/v1/authmanager/authenticate/clientidsecretkey
 TOKENVALIDATE=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
 ```
-##### IDA
+### IDA
 ```
 auth-token-generator.rest.uri=${mosip.base.url}/v1/authmanager/authenticate/clientidsecretkey
 auth-token-validator.rest.uri=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
@@ -308,12 +306,12 @@ auth-token-generator.rest.clientId=<ida-client-id>
 auth-token-generator.rest.secretKey=<ida-secret-key>
 auth-token-generator.rest.appId=ida
 ```
-##### Registration-client
+### Registration-client
 ```
 AUTH_CLIENT_ID=<registration-client-id>
 AUTH_SECRET_KEY=<registration-client-secret>
 ```
-##### Resident
+### Resident
 ```
 `#Token generation app id
 resident.clientId=<resident-client-id>
