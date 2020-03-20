@@ -22,9 +22,17 @@ This release is with **proxy biometrics**. This means that the implementation of
 ## Documentation [**[↑]**](#table-of-contents)
 ### 1. Platform Documentation 
 Includes Functional requirements, Process flows, Architecture and High level design, Getting started and Deployment guide, Developer documentation etc.  
-   [**Link to Platform Documentation**](Platform-Documentation)
+   [**Link to Platform Documentation**](https://mosipdocs.gitbook.io/platform/)
 ### 2. Detailed Documentation
-[**Low Level design**](https://github.com/mosip/mosip-platform/tree/master/design) and [**Test cases excel**](https://github.com/mosip/mosip-functional-tests/wiki/_files/testing/Test_automation/MOSIP-TCs-V1.0.xlsx)
+#### Low Level design
+* [Admin](https://github.com/mosip/admin-services/tree/master/design)
+* [Pre Registration](https://github.com/mosip/pre-registration/tree/master/design)
+* [Registration](https://github.com/mosip/registration/tree/master/design)
+* [ID Authentication](https://github.com/mosip/id-authentication/tree/master/design)
+* [Commons](https://github.com/mosip/commons/tree/master/design)
+
+#### Test cases
+* [Functional Test Case](https://github.com/mosip/mosip-functional-tests)
 
 ## Key Points [**[↑]**](#table-of-contents)
 
@@ -46,7 +54,7 @@ Includes Functional requirements, Process flows, Architecture and High level des
 |Transliteration|	ICU4J (Library with French, Arabic languages)|
 
 ## Code [**[↑]**](#table-of-contents)
-The [code](https://github.com/mosip/mosip-platform) and [automation tests](https://github.com/mosip/mosip-functional-tests) are available on GitHub. The code needs to be built and deployed as per the procedure documented in [**Building And Deploying MOSIP**](Platform-Documentation#10-building-and-deploying-mosip). We will actively support System Integrators during their first deployment.
+The [code](https://github.com/mosip/) and [automation tests](https://github.com/mosip/mosip-functional-tests) are available on GitHub. The code needs to be built and deployed as per the procedure documented in [**Building And Deploying MOSIP**](Build-and-Deploy.md). We will actively support System Integrators during their first deployment.
 
 ## Tests [**[↑]**](#table-of-contents)
 **Testing Scope**
@@ -78,18 +86,18 @@ The [code](https://github.com/mosip/mosip-platform) and [automation tests](https
 |1|	Kernel	|<li> Test Automation	|PASS|	
 |2|	Pre-Registration|<li> Tested Manually <li> Test Automation|PASS |
 |3|	Registration Client|<li> Tested Manually <li> Test Automation|PASS|
-|4|Registration Processor|<li> Tested Manually <li> Test Automation	|PASS |
+|4| Registration Processor|<li> Tested Manually <li> Test Automation	|PASS |
 |5|	ID Authentication	|	<li>  Test Automation	|PASS|
 |6|	ID Repo	|	<li> Test Automation	|PASS|	
-|7|Pre-Registration to Registration Client integration testing|	<li> Tested Manually|PASS	|	
+|7| Pre-Registration to Registration Client integration testing|	<li> Tested Manually|PASS	|	
 |8|	Registration Client to Registration Processor integration testing|	<li> Tested Manually|PASS|	
 |9|	Registration Processor to Pre-Registration integration testing|<li>  Tested Manually|PASS	|	
-|10|	Registration Processor to Registration Client integration testing|<li> 	Tested Manually|PASS|
-|11|	Registration Client to IDA integration testing|<li> 	Tested Manually|PASS		|
-|12|	Registration Processor to IDA integration testing|<li> 	Tested Manually|PASS|
-|13|	IDA to ID Repo|<li> 	Tested Manually|PASS	|
-|14|Kernel API integration|	<li> Tested Manually <li> Test Automation|	PASS|
-|15|	End to end functional testing|	<li> Tested Manually|PASS|	
+|10| Registration Processor to Registration Client integration testing|<li> 	Tested Manually|PASS|
+|11| Registration Client to IDA integration testing|<li> 	Tested Manually|PASS		|
+|12| Registration Processor to IDA integration testing|<li> 	Tested Manually|PASS|
+|13| IDA to ID Repo|<li> 	Tested Manually|PASS	|
+|14| Kernel API integration|	<li> Tested Manually <li> Test Automation|	PASS|
+|15| End to end functional testing|	<li> Tested Manually|PASS|	
 
 #### 4. Types of Testing [**[↑]**](#table-of-contents)
 
@@ -103,17 +111,8 @@ The [code](https://github.com/mosip/mosip-platform) and [automation tests](https
 #### 5. Test Execution Summary [**[↑]**](#table-of-contents)
 ![Image](_images/test_rig_automation/Capture.JPG)  
 
-#### 6. Automation Test Reports [**[↑]**](#table-of-contents)
-[**Automation report run on 0.9.0 on QA env**](/mosip/mosip/tree/master/docs/testing/Automation%20Test%20Reports)
 ## Known Issues [**[↑]**](#table-of-contents)
 ![Image](_images/test_rig_automation/image4.jpg) 
 
 ## Support Process (To Be Determined) [**[↑]**](#table-of-contents)
 Process to be followed for support required, escalation matrix, etc.
-
-## List Of Acronyms [**[↑]**](#table-of-contents)
-[**Refer to List Of Acronyms**](Platform-Documentation#12-list-of-acronyms)
-
-
-
-
