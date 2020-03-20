@@ -1,19 +1,4 @@
-## Table Of Contents
 
-- [Scope](#scope-)
-- [Documentation](#documentation-)
-- [Key Points](#key-points-)
-- [Code](#code-)
-- [Test Reports](#test-reports-)
-  * [1. In scope](#1-in-scope-)
-  * [2. Not in scope](#2-out-of-scope--mosip-v01215-platform-)
-  * [3. Executive Summary – Consolidated Quality Status](#3-executive-summary--consolidated-quality-status-)
-  * [4. Types of Testing](#4-types-of-testing-)
-  * [5. Test Execution Summary](#5-test-execution-summary-)
-  * [6. Automation Test Reports](#6-automation-test-reports-)
-- [Known Issues](#known-issues-)
-- [Support Process (To Be Determined)](#support-process-to-be-determined-)
-- [List Of Acronyms](#list-of-acronyms-)
 ## Scope [**[↑]**](#table-of-contents)
 This release is with **proxy biometrics**. This means that the implementation of Print system, SDK, MDM (MOSIP  Device Manager), ABIS (Automated Biometrics Identification System) and Biometric devices has been stubbed. Also, this version is tested for functionality. Non-functional requirements (Performance, Scale and Security) will be taken up in subsequent releases.
 
