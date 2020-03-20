@@ -1,14 +1,16 @@
 
-## Scope [**[↑]**](#table-of-contents)
+## Scope
 This release is with **proxy biometrics**. This means that the implementation of Print system, SDK, MDM (MOSIP  Device Manager), ABIS (Automated Biometrics Identification System) and Biometric devices has been stubbed. Also, this version is tested for functionality. Non-functional requirements (Performance, Scale and Security) will be taken up in subsequent releases.
 
 * Features included – Pre-Registration, Registration Client, Registration Processor, ID Authentication, Reference GUI implementation of Pre-Registration and Registration Client. 
 * Features not included – Administration, Partner Management, Resident Services
-## Documentation [**[↑]**](#table-of-contents)
-### 1. Platform Documentation 
+## Documentation 
+
+### Platform Documentation 
 Includes Functional requirements, Process flows, Architecture and High level design, Getting started and Deployment guide, Developer documentation etc.  
    [**Link to Platform Documentation**](https://mosipdocs.gitbook.io/platform/)
-### 2. Detailed Documentation
+
+### Detailed Documentation
 #### Low Level design
 * [Admin](https://github.com/mosip/admin-services/tree/master/design)
 * [Pre Registration](https://github.com/mosip/pre-registration/tree/master/design)
@@ -19,8 +21,7 @@ Includes Functional requirements, Process flows, Architecture and High level des
 #### Test cases
 * [Functional Test Case](https://github.com/mosip/mosip-functional-tests)
 
-## Key Points [**[↑]**](#table-of-contents)
-
+## Key Points 
 |Key Points|	Details|
 |----|----|
 |Pre Registration - Browser support |	Chrome 74.0.3729)|
@@ -38,12 +39,13 @@ Includes Functional requirements, Process flows, Architecture and High level des
 |Supporting key based digital signatures, not using digital certificates||	
 |Transliteration|	ICU4J (Library with French, Arabic languages)|
 
-## Code [**[↑]**](#table-of-contents)
+## Code 
 The [code](https://github.com/mosip/) and [automation tests](https://github.com/mosip/mosip-functional-tests) are available on GitHub. The code needs to be built and deployed as per the procedure documented in [**Building And Deploying MOSIP**](Build-and-Deploy.md). We will actively support System Integrators during their first deployment.
 
-## Tests [**[↑]**](#table-of-contents)
+## Tests 
 **Testing Scope**
-#### 1. In Scope [**[↑]**](#table-of-contents)
+
+### In Scope 
 
 |Title	|Description|
 |------|------|
@@ -57,14 +59,14 @@ The [code](https://github.com/mosip/) and [automation tests](https://github.com/
 |OS Support|**Registration Client**    <li> Windows 10|
 |Language Support|French, Arabic, English|
 
-#### 2. Not in Scope [**[↑]**](#table-of-contents)
+### Not in Scope 
 
 |Title|	Description|
 |------|------|
 |NFR Testing| <li> Scalability Testing <li> Performance Testing <li> Security Testing|
 |Configuration Testing|<li> Testing is done for one set of approved production configuration <li> Changing the configuration parameters for various values (boundary values) and testing the impact of each such value on the platform code will be taken up in subsequent releases.|
 
-#### 3. Executive Summary – Consolidated Quality Status [**[↑]**](#table-of-contents)
+### Executive Summary – Consolidated Quality Status 
 
 |Sl. No.|	Module / Activity|Test Methodology|	Test Status|
 |------|------|------|------|
@@ -84,7 +86,7 @@ The [code](https://github.com/mosip/) and [automation tests](https://github.com/
 |14| Kernel API integration|	<li> Tested Manually <li> Test Automation|	PASS|
 |15| End to end functional testing|	<li> Tested Manually|PASS|	
 
-#### 4. Types of Testing [**[↑]**](#table-of-contents)
+### Types of Testing 
 
 |Testing Type| Description|
 |------|------|
@@ -93,11 +95,11 @@ The [code](https://github.com/mosip/) and [automation tests](https://github.com/
 |Integration Testing|Tests to ensure the inter module functionality works fine and in accordance with the integration requirements|
 |Regression Testing|Tests to ensure that any change doesn't break existing functionality|
 	
-#### 5. Test Execution Summary [**[↑]**](#table-of-contents)
+### Test Execution Summary 
 ![Image](_images/test_rig_automation/Capture.JPG)  
 
-## Known Issues [**[↑]**](#table-of-contents)
+## Known Issues 
 ![Image](_images/test_rig_automation/image4.jpg) 
 
-## Support Process (To Be Determined) [**[↑]**](#table-of-contents)
+## Support Process (To Be Determined) 
 Process to be followed for support required, escalation matrix, etc.
