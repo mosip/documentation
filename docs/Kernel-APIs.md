@@ -21,7 +21,6 @@ Common APIs
 - [OTP Manager Service](#otp-manager-private)
 - [Registration Center APIs](Registration-Center-APIs.md)
 
-
 # Key Manager (Private)
 
 * [GET /publickey](#get-publickey)
@@ -95,7 +94,7 @@ timeStamp (encryption timestamp) |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:
 
 #### Request
 
-```
+```json
 {	
   "id": "string",
   "version": "string",
@@ -116,7 +115,7 @@ timeStamp (encryption timestamp) |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:
 ##### Success Response:
 ###### Status code: '200'
 ###### Description: decrypt the encrypted symmetric key successfully
-```
+```json
 {
   "id": "string",
   "version": "string",
