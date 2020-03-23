@@ -15,7 +15,7 @@ ID Generator APIs
 - [Static Token Service](#static-token-generator-private)
 
 Common APIs
-- [Audit Service](#audit-manager-private)
+- [Audit Manager Service](#audit-manager-private)
 - [Data Sync Service](#sync-data-public)
 - [Applicant Types Service](#applicant-type-public)
 - [OTP Manager Service](#otp-manager-private)
@@ -62,11 +62,11 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
   "metadata": {},
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
-"response": {
+  "response": {
 		  "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwUAubI0cMDZMlalDYbzZj4G2UrWY0QDtmZQyqU_ER5CA1gbxlHDQIesm1DVyp6kf1sG-RcosKPqKIhe9vKLPx5pzQXinGdl_8e5bkPpg2RLlDoNju1ycohPrCk0VOd4eNU90-SRJZH_62QE1_MG2yIohI7e7cuC93Q9SHMD8jmJ7DX2zTui4zbo-c5g7vFAtzDgxJg0vSPGbap682xkWZNgzRA_ctrnHF_9_JMzP_6Equ8E_g5BaI3jkWnVmDNjDzzseBH9zHpfbx6wNYrzQZy8iqqywbUtbHWtM0ALkH7nLi4atVbL6a-ryFt6Tq7qfGzYhLtWN47t4GxwyOJC99QIDAQAB",
 		  "issuedAt": "2018-01-01T10:00:00",
 		  "expiryAt": "2018-12-10T06:12:51.994"
-	    }
+   }
 	
 }
 ```
@@ -100,12 +100,12 @@ timeStamp (encryption timestamp) |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:
   "version": "string",
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-	"request": {
-		  "applicationId": "REGISTRATION",
-		  "encryptedSymmetricKey": "encryptedSymmetricKey",
-		  "referenceId": "REF01",
-		  "timeStamp": "2018-12-10T06:12:52.994Z"
-	}
+       "request": {
+            "applicationId": "REGISTRATION",
+            "encryptedSymmetricKey": "encryptedSymmetricKey",
+            "referenceId": "REF01",
+            "timeStamp": "2018-12-10T06:12:52.994Z"
+       }
 }
 ```
 
@@ -122,15 +122,14 @@ timeStamp (encryption timestamp) |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:
   "metadata": {},
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
- "response": {
-	    "symmetricKey": "decryptedSymmetricKey"
-	}
+  "response": {
+    "symmetricKey": "decryptedSymmetricKey"
+  }
 }
-
 ```
 
 ##### Error Response:
-```
+```json
 {
   "id": "string",
   "version": "string",
@@ -182,40 +181,37 @@ Requires Authentication | Yes
 
 #### Request
 
-```
+```json
 {
   "id": "string",
   "version": "string",
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-	"request": {
-		"applicationId": "REGISTRATION",
-		"data": "string",
-		"referenceId": "REF01",
-		"salt": null,
-		"timeStamp": "2018-11-10T06:12:52.994Z"
-	}	  
+  "request": {
+    "applicationId": "REGISTRATION",
+    "data": "string",
+    "referenceId": "REF01",
+    "salt": null,
+    "timeStamp": "2018-11-10T06:12:52.994Z"
+  }       
 }
-```
 
 #### Responses:
 ##### Success Response:
 ###### Status code: '200'
 ###### Description: encrypted data successfully
-```
+```json
 {
   "id": "string",
   "version": "string",
   "metadata": {},
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
- "response": {
-		"data": "wk4RM2su2lBXuhx3_EtBijXTDp0Y20fJA6tmoONPjr6YBLqwu_YRWiSa10o-bQWesb-IobxPg-KsZq-Gc0L6Rq6besw-rMavg5a5nPU7b3pAug0N6Ek4B7S8v_tc5cu7LBRdBv1mRSS2onxXbT2R4qeEwl_11KtxPs_ek6g4vV6oEQRem2fPhop_21DaoWVEZFovHAAJDqSFj3R38A-fxvHHpVSa9BRTe-DeTKj_xZsNYXQixZR3jMdijtm8Q7lIT3E1x8LYp-hG3RhR_xC7trAOTqilzLjLfirE3Wjfor5bhLiG9eZyTb52ihKsDV1l2oBAhn9Aao_fYl3UD5QekSNLRVlfU1BMSVRURVIjeKen-3j5KhnE-93Qfe_pBfMBIKEkTJJ7pR-4cO7l-X0"
-	}
-}	
+  "response": {
+    "data": "wk4RM2su2lBXuhx3_EtBijXTDp0Y20fJA6tmoONPjr6YBLqwu_YRWiSa10o-bQWesb-IobxPg-KsZq-Gc0L6Rq6besw-rMavg5a5nPU7b3pAug0N6Ek4B7S8v_tc5cu7LBRdBv1mRSS2onxXbT2R4qeEwl_11KtxPs_ek6g4vV6oEQRem2fPhop_21DaoWVEZFovHAAJDqSFj3R38A-fxvHHpVSa9BRTe-DeTKj_xZsNYXQixZR3jMdijtm8Q7lIT3E1x8LYp-hG3RhR_xC7trAOTqilzLjLfirE3Wjfor5bhLiG9eZyTb52ihKsDV1l2oBAhn9Aao_fYl3UD5QekSNLRVlfU1BMSVRURVIjeKen-3j5KhnE-93Qfe_pBfMBIKEkTJJ7pR-4cO7l-X0"
+  } 
+}   
 ```
-
-
 
 ### POST v1/cryptomanager/decrypt
 
@@ -234,20 +230,19 @@ Requires Authentication | Yes
 
 
 #### Request
-
-```
+```json
 {
   "id": "string",
   "version": "string",
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-	"request": {
-		"applicationId": "REGISTRATION",
-		"data": "Fj3R38A-fxvHHpVSa9BRTe-DeTKj_xZsNYXQixZR3jMdijtm8Q7lIT3E1x8_xC7trAOTqilzLjLfirE3Wjfor5b",
-		"referenceId": "REF01",
-		"salt": null,
-		"timeStamp": "2018-12-10T06:12:52.994Z"
-	}
+  "request": {
+    "applicationId": "REGISTRATION",
+    "data": "Fj3R38A-fxvHHpVSa9BRTe-DeTKj_xZsNYXQixZR3jMdijtm8Q7lIT3E1x8_xC7trAOTqilzLjLfirE3Wjfor5b",
+    "referenceId": "REF01",
+    "salt": null,
+    "timeStamp": "2018-12-10T06:12:52.994Z"
+  } 
 }
 ```
 
