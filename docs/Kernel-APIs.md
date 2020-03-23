@@ -1,4 +1,3 @@
-
 Security APIs
 - [Key Manager Service](#key-manager-private)
 - [Crypto Manager Service](#crypto-manager-private)
@@ -22,38 +21,37 @@ Common APIs
 - [Registration Center APIs](Registration-Center-APIs.md)
 
 # Key Manager (Private)
-
 * [GET /publickey](#get-publickey)
 * [POST /decrypt](#post-decrypt)
 
-
-### GET /publickey
-
+## GET /publickey
 This service will provide the public key for the specific application. 
 
-#### Resource URL
-<div>https://mosip.io/v1/keymanager/publickey</div>
+### Resource URL
+`https://mosip.io/v1/keymanager/publickey`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description |  Example
 -----|----------|-------------|--------
 applicationId |Yes|Id of the application| REGISTRATION,IDA
 referenceId|No|Id of the Machine/MISP|
 timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
 
-#### Request
-<div>https://mosip.io/v1/keymanager/publickey/REGISTRATION?timeStamp=2018-12-09T06%3A39%3A03.683Z </div>
+### Request
+`https://mosip.io/v1/keymanager/publickey/REGISTRATION?timeStamp=2018-12-09T06%3A39%3A03.683Z `
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: public key issued successfully
+### Responses
+
+#### Success Response:
+** Status code: '200'**
+
+##### Description: public key is issued successfully
 ```JSON
 
 {
@@ -71,50 +69,47 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
 }
 ```
 
-### POST /decrypt
-
+## POST /decrypt
 This service will decrypt the encrypted symmetric key 
 
-#### Resource URL
-<div>https://mosip.io/v1/keymanager/decrypt </div>
+### Resource URL
+`https://mosip.io/v1/keymanager/decrypt `
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description |  Example
 -----|----------|-------------|--------
 applicationId |Yes|Id of the application| REGISTRATION,IDA
 referenceId|No|Id of the Machine/MISP|
 timeStamp (encryption timestamp) |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
 
-#### Request
-
+### Request
 ```json
 {	
   "id": "string",
   "version": "string",
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-       "request": {
-            "applicationId": "REGISTRATION",
-            "encryptedSymmetricKey": "encryptedSymmetricKey",
-            "referenceId": "REF01",
-            "timeStamp": "2018-12-10T06:12:52.994Z"
-       }
+    "request": {
+      "applicationId": "REGISTRATION",
+      "encryptedSymmetricKey": "encryptedSymmetricKey",
+      "referenceId": "REF01",
+      "timeStamp": "2018-12-10T06:12:52.994Z"
+    }
 }
 ```
 
+### Responses:
 
+#### Success Response:
+** Status code: '200'**
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: decrypt the encrypted symmetric key successfully
+##### Description: decrypt the encrypted symmetric key successfully
 ```json
 {
   "id": "string",
@@ -128,7 +123,7 @@ timeStamp (encryption timestamp) |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:
 }
 ```
 
-##### Error Response:
+#### Error Response:
 ```json
 {
   "id": "string",
@@ -141,12 +136,11 @@ timeStamp (encryption timestamp) |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:
       "message": "string"
     }
   ],
- "response": null
+  "response": null
 }
-
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 KER-KMS-001 |	Certificate is not valid	|   validity check fail
@@ -159,28 +153,22 @@ KER-KMS-007 | Exception occured in cypto library | Crypto exception
 KER-KMS-500 | Internal server error | Internal server error
 
 # Crypto Manager (Private)
-
 * [POST v1/cryptomanager/encrypt](#post-v1cryptomanagerencrypt)
 * [POST v1/cryptomanager/decrypt](#post-v1cryptomanagerdecrypt)
 
-### POST v1/cryptomanager/encrypt
-
+## POST v1/cryptomanager/encrypt
 This service will encrypt provided plain string data with session symmetric key and encrypt symmetric key with application specific public key based on given timestamp(current timestamp of encryption). This will respond combined encrypted data and symmetric key having a key splitter.  
 
-#### Resource URL
-<div>https://mosip.io/v1/cryptomanager/encrypt</div>
-
+### Resource URL
+`https://mosip.io/v1/cryptomanager/encrypt`
 
 #### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-
-#### Request
-
+### Request
 ```json
 {
   "id": "string",
@@ -195,11 +183,14 @@ Requires Authentication | Yes
     "timeStamp": "2018-11-10T06:12:52.994Z"
   }       
 }
+```
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: encrypted data successfully
+### Responses:
+
+#### Success Response:
+**Status code: '200'**
+
+##### Description: encrypted data successfully
 ```json
 {
   "id": "string",
@@ -213,23 +204,19 @@ Requires Authentication | Yes
 }   
 ```
 
-### POST v1/cryptomanager/decrypt
-
+## POST v1/cryptomanager/decrypt
 This service will decrypt encryted data along with symmetric key having splitter for given timestamp(encryption timestamp). 
 
-#### Resource URL
-<div>https://mosip.io/v1/cryptomanager/decrypt</div>
+### Resource URL
+`https://mosip.io/v1/cryptomanager/decrypt`
 
-
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-
-#### Request
+### Request
 ```json
 {
   "id": "string",
@@ -246,10 +233,12 @@ Requires Authentication | Yes
 }
 ```
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: decrypt encryted data along with symmetric key having splitter
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: decrypt encryted data along with symmetric key having splitter
 ```
 {
   "id": "string",
@@ -263,7 +252,7 @@ Requires Authentication | Yes
 }	
 ```
 
-##### Error Response:
+#### Error Response
 ```
 {
   "id": "string",
@@ -280,10 +269,10 @@ Requires Authentication | Yes
 }	
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
-KER-CRY-001 |	No Such algorithm is supported	|   No Such algorithm is supported
+KER-CRY-001 | No Such algorithm is supported | No Such algorithm is supported
 KER-CRY-002 | public key is invalid | public key is invalid
 KER-CRY-003 | data sent to decrypt is without key splitter or invalid | invalid data without key breaker
 KER-CRY-003 | or not base64 encoded | Invalid data
@@ -299,36 +288,33 @@ MISPs call the IDA to authenticate the Individuals. There can be various service
 
 This service facilitates generation of license key, mapping the license key to several permissions, and fetch permissions mapped to a license key.
 
-## License Key Generation
+**License Key Generation**
 
 This component generates a license key for a specified MISP ID.
 
 * [POST /license/generate](#post-licensegenerate)
-
 * [POST /license/permission](#post-licensepermission)
-
 * [GET /license/permission](#get-licensepermission)
-
 * [PUT /license/status](#put-licensestatus)
 
-### POST /license/generate
+## POST /license/generate
 
-#### Resource URL
-<div>https://mosip.io/v1/licensekeymanager/license/generate </div>
+### Resource URL
+`https://mosip.io/v1/licensekeymanager/license/generate `
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 licenseExpiryTime|Yes|The time at which the license will expire| |2019-03-07T10:00:00.000Z 
 MISPId|Yes|The MISP ID against which the license key generated will be mapped| |9837
 
-#### Request
+### Request
 ```JSON
 {
   "id": "string",
@@ -336,15 +322,18 @@ MISPId|Yes|The MISP ID against which the license key generated will be mapped| |
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "request": {
-		"licenseExpiryTime": "2019-03-07T10:00:00.000Z",
-		"MISPId": "9837"
-	     }
+    "licenseExpiryTime": "2019-03-07T10:00:00.000Z",
+	"MISPId": "9837"
+  }
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: license key generated successfully
+
+### Responses:
+
+####Success Response:
+**Status code: '200'**
+
+##### Description: license key generated successfully
 ```JSON
 {
   "id": "string",
@@ -352,52 +341,54 @@ MISPId|Yes|The MISP ID against which the license key generated will be mapped| |
   "metadata": {},
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
-"response": {
-	  "licenseKey": "gR7Mw7tA7S7qifkf"
-	}
+  "response": {
+    "licenseKey": "gR7Mw7tA7S7qifkf"
+  }
 }
 ```
-### POST /license/permission
 
+## POST /license/permission
 This component maps various permissions provided to a specified license key.
 
-#### Resource URL
-<div>https://mosip.io/v1/licensekeymanager/license/permission </div>
+### Resource URL
+`https://mosip.io/v1/licensekeymanager/license/permission `
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 licenseKey|Yes|The license key to which the permissions will be mapped| |gR7Mw7tA7S7qifkf 
 MISPId|Yes|The MISP ID against which the license key is mapped| |9837
 permissions|Yes|The list of permissions that will be mapped to the MISP-licensekey mentioned.| |OTP Trigger
 
-#### Request
+### Request
 ```JSON
 {
   "id": "string",
   "version": "string",
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-   "request": {
-		"licenseKey": "gR7Mw7tA7S7qifkf",
-		"permissions": [
-			"OTP Trigger","OTP Authentication"
-		],
-		"MISPId": "9837"
-	}
+  "request": {
+	"licenseKey": "gR7Mw7tA7S7qifkf",
+	"permissions": [
+	  "OTP Trigger","OTP Authentication"
+	],
+    "MISPId": "9837"
+  }
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: license key permission updated successfully
+
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: license key permission updated successfully
 ```JSON
 {
   "id": "string",
@@ -405,21 +396,19 @@ permissions|Yes|The list of permissions that will be mapped to the MISP-licensek
   "metadata": {},
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
-"response": {
-	  "status": "Mapped License with the permissions"
-	    }
+  "response": {
+    "status": "Mapped License with the permissions"
+  }
 }
 ```
 
-### GET /license/permission
-
+## GET /license/permission
 This component fetches various permission mapped to a license key.
 
-#### Resource URL
-<div>https://mosip.io/v1/licensekeymanager/license/permission </div>
+### Resource URL
+`https://mosip.io/v1/licensekeymanager/license/permission `
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -432,15 +421,14 @@ licenseKey|Yes|The license key for which the permissions need to be fetched| |gR
 MISPId|Yes|The MISP ID against which the license key is mapped| |9837
 
 ### Request
-<div>https://mosip.io/v1/licensekeymanager/license/permission?licenseKey=gR7Mw7tA7S7qifkf&MISPId=9837</div>
+`https://mosip.io/v1/licensekeymanager/license/permission?licenseKey=gR7Mw7tA7S7qifkf&MISPId=9837`
 
-```
-N/A
-```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: license key permissions fetched successfully
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: license key permissions fetched successfully
 ```JSON
 {
   "id": "string",
@@ -448,37 +436,34 @@ N/A
   "metadata": {},
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
-"response": {
-	     "permissions": [
-		          "OTP Trigger",
-		          "OTP Authentication"
-	                   ]
-	    }
+  "response": {
+    "permissions": [
+	  "OTP Trigger",
+	  "OTP Authentication"
+	]
+  }
 }
 ```
 
-
-### PUT /license/status
-
+## PUT /license/status
 This service moves the status of the license key to SUSPENDED status.
 
-#### Resource URL
-<div>https://mosip.io/v1/licensekeymanager/license/status </div>
+### Resource URL
+`https://mosip.io/v1/licensekeymanager/license/status `
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 licenseKey|Yes|The license key for which the permissions need to be fetched| |gR7Mw7tA7S7qifkf 
 status|Yes|The status of the license key. It is an enumeration {ACTIVE, SUSPENDED, BLOCKED}| |ACTIVE
 
-#### Request
+### Request
 ```
 {
   "id": "string",
@@ -486,17 +471,17 @@ status|Yes|The status of the license key. It is an enumeration {ACTIVE, SUSPENDE
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "request": {
-		"licensekey":"gR7Mw7tA7S7qifkf",
-		"status":"ACTIVE"
-	     }
+	"licensekey":"gR7Mw7tA7S7qifkf",
+	"status":"ACTIVE"
+  }
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: license key suspended successfully
-Sample Success Response:
+### Responses
 
+#### Success Response
+**Status code: '200'**
+
+##### Description: license key suspended successfully
 ```JSON
 {
   "id": "string",
@@ -504,15 +489,16 @@ Sample Success Response:
   "metadata": {},
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
-"response" : {
-		"message":"The status had been changed successfully. "
-	     }
+  "response" : {
+	"message":"The status had been changed successfully. "
+  }
 }	
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: Invalid license key
 
+#### Failure Response
+**Status code: '200'**
+
+##### Description: Invalid license key
 ```JSON
 {
   "id": "string",
@@ -523,13 +509,13 @@ Sample Success Response:
   "errors": [
     {
       "errorCode": "PRG_PAM_APP_001",
-     "message": "License key not found"
+      "message": "License key not found"
     }
   ]
 }
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 KER-LKM-001 |	TSP entered is null or empty	|   Illegal TSP
@@ -544,28 +530,24 @@ KER-LKM-009 | No Permissions has been mapped to the entered TSP-LicenseKey Pair.
 
 
 # Crypto Signature Service (Private)
-
 * [POST v1/signature/sign](#post-sign)
 * [POST v1/signature/validate](#post-validate)
 
-### POST v1/signature/sign
-
+## POST v1/signature/sign
 This service will sign  provided plain string data.  
 
-#### Resource URL
-<div>https://mosip.io/v1/signature/sign</div>
+### Resource URL
+`https://mosip.io/v1/signature/sign`
 
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
 
-#### Request
-
+### Request
 ```
 {
   "id": "string",
@@ -578,9 +560,11 @@ Requires Authentication | Yes
 }
 ```
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
+### Responses:
+
+#### Success Response:
+**Status code: '200'**
+
 ```
 {
     "id": null,
@@ -595,26 +579,20 @@ Requires Authentication | Yes
 }	
 ```
 
-
-
-### POST v1/signature/validate
-
+## POST v1/signature/validate
 This service will decrypt encryted data along with symmetric key having splitter for given timestamp(encryption timestamp). 
 
-#### Resource URL
-<div>https://mosip.io/v1/signature/validate</div>
+### Resource URL
+`https://mosip.io/v1/signature/validate`
 
-
-#### Resource details
+### Resource details
 
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-
-#### Request
-
+### Request
 ```
 {
   "id": "string",
@@ -629,10 +607,12 @@ Requires Authentication | Yes
 }
 ```
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: decrypt encryted data along with symmetric key having splitter
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: decrypt encryted data along with symmetric key having splitter
 ```
 {
     "id": null,
@@ -647,7 +627,7 @@ Requires Authentication | Yes
 }	
 ```
 
-##### Error Response:
+#### Error Response
 ```
 {
   "id": "string",
@@ -664,28 +644,24 @@ Requires Authentication | Yes
 }	
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
-KER-CSS-999 | Invalid request input | while passing Invalid input request
-KER-CSS-101 | Validation Unsuccessful| while sign response in not valid
+KER-CSS-999 | Invalid request input | While passing Invalid input request
+KER-CSS-101 | Validation Unsuccessful| While sign response in not valid
 KER-CSS-102 | Internal server error  | Internal server error
 
 
 # SMS Notification (Private)
-
 * [POST /sms/send](#post-sms-send)
 
-### POST /sms/send
-
+## POST /sms/send
 This service will send request to SMS gateway. 
 
-#### Resource URL
-<div>https://mosip.io/v1/smsnotifier/sms/send</div>
+### Resource URL
+`https://mosip.io/v1/smsnotifier/sms/send`
 
-
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Request format | JSON
@@ -705,18 +681,19 @@ number |Yes|Mobile number to which the SMS have to be sent| | 743764398
   "version": "string",
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-   "request": {
-		"message": "Your Booking Request accepted. B-Ref BI56793",
-		"number": "89900074454"
-	}
+  "request": {
+	"message": "Your Booking Request accepted. B-Ref BI56793",
+	"number": "89900074454"
+  }
 }
-
 ```
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: sms send successfully
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: sms send successfully
 ```
 {
   "id": "string",
@@ -725,13 +702,13 @@ number |Yes|Mobile number to which the SMS have to be sent| | 743764398
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-	  "message": "Sms Request Sent",
-	  "status": "success"
-	}
+	"message": "Sms Request Sent",
+	"status": "success"
+  }
 }	
 ```
 
-##### Error Response:
+#### Error Response:
 ```
 {
   "id": "string",
@@ -748,35 +725,30 @@ number |Yes|Mobile number to which the SMS have to be sent| | 743764398
 }	
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 KER-NOS-001 |	Number and message can't be empty, null	|   SMS Illegal Input
 KER-NOS-002 | Contact number cannot contains alphabet,special character or less than or more than | SMS Invalid Contact Number
 KER-NOS-500 | Internal server error | Internal server error
 
-
 # Email Notification (Private)
-
 * [POST /email/send](#post-email-send)
 
-### POST /email/send
-
+## POST /email/send
 This service will send request to Email/SMTP Service. 
 
-#### Resource URL
-<div>https://dev.mosip.io/v1/emailnotifier/email/send </div>
+### Resource URL
+`https://dev.mosip.io/v1/emailnotifier/email/send `
 
-
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Request format | Form Data
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 mailTo |Yes|Mail ID of the recepient| |```mosip@mindtree.com```
@@ -785,9 +757,7 @@ mailSubject |Yes|Mail ID of the recepient| | Sample mail subject
 mailContent |No|Mail ID of the recepient| | Sample mail content
 attachments |No|Mail ID of the recepient| | multipart/formdata
 
-
-#### Request
-
+### Request
 ```
 -H "Content-Type: multipart/form-data" 
 -F "attachments={}" 
@@ -797,10 +767,12 @@ attachments |No|Mail ID of the recepient| | multipart/formdata
 -F "mailTo=admin1@gmail.com"
 ```
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: sms send successfully
+### Responses
+
+#### Success Response:
+**Status code: '200'**
+
+##### Description: sms send successfully
 ```JSON
 {
   "id": "string",
@@ -808,14 +780,14 @@ attachments |No|Mail ID of the recepient| | multipart/formdata
   "metadata": {},
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
-"response": {
-	  "message": "Email Request sent",
-	  "status": "success"
-	}
+  "response": {
+	"message": "Email Request sent",
+	"status": "success"
+  }
 }	
 ```
 
-##### Error Response:
+#### Error Response:
 ```JSON
 {
   "id": "string",
@@ -828,11 +800,11 @@ attachments |No|Mail ID of the recepient| | multipart/formdata
       "message": "string"
     }
   ],
-"response": null
+  "response": null
 }	
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 KER-NOE-001 | To must be valid. It can't be empty or null. | Receiver Address not found
@@ -846,67 +818,16 @@ KER-NOE-500 |  | Internal Server Error
 
 
 # UIN  (External)
-
-## UIN-get service
-
 * [GET /uin](#uin-get-service)
-
 * [PUT /uin](#put-uin)
 
-
-### GET /uin
-
+## GET /uin
 This service will return unused UIN from UIN pool 
 
-#### Resource URL
-<div>https://mosip.io/v1/uingenerator/uin </div>
+### Resource URL
+`https://mosip.io/v1/uingenerator/uin `
  
-
-#### Resource details
-
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
-
-#### Request Part Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
-
-#### Request
-N/A
-
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: uin generated successfully
-```JSON
-{
-  "id": "string",
-  "version": "string",
-  "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-  "errors": null,
-"response": {
-	  "uin": "734168915279"
-	    }
-}
-```
-
-
-## UIN- Status Update service
-
-### PUT /uin
-
-This service will update the issued UN status to Assigned or Unassigned(Unused).  
-
-#### Resource URL
-<div>https://mosip.io/v1/uingenerator/uin</div>
- 
-
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -917,8 +838,46 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 -NA-
 
-#### Request
+### Request
+N/A
 
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: uin generated successfully
+```JSON
+{
+  "id": "string",
+  "version": "string",
+  "metadata": {},
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "errors": null,
+  "response": {
+	"uin": "734168915279"
+  }
+}
+```
+
+## PUT /uin
+This service will update the issued UN status to Assigned or Unassigned(Unused).  
+
+### Resource URL
+`https://mosip.io/v1/uingenerator/uin`
+ 
+### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Request Part Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+-NA-
+
+### Request
 ```JSON
 {
   "id": "string",
@@ -932,11 +891,12 @@ Name | Required | Description | Default Value | Example
 }
 ```
 
+### Responses
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: uin status updated successfully
+#### Success Response
+**Status code: '200'**
+
+##### Description: uin status updated successfully
 ```
 {
   "id": "string",
@@ -945,13 +905,13 @@ Name | Required | Description | Default Value | Example
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-                 "uin":"5193698130",
-                  "status":"ASSIGNED"
-              }
+    "uin":"5193698130",
+    "status":"ASSIGNED"
+  }
 }
 ```
 
-##### Error Response:
+#### Error Response:
 ```
 {
   "id": "string",
@@ -968,7 +928,7 @@ Name | Required | Description | Default Value | Example
 }
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 KER-UIG-001 | UIN could not be found | UIN could not be found
@@ -977,37 +937,35 @@ KER-UIG-004 | Given UIN is not in ISSUED status | UIN Not Issued
 KER-UIG-005 | Internal Server Error | Internal Server Error
 KER-UIG-006 | Error in retrieving from config server | Config Server Fetch failed
 
-
 # RID generator (Private)
-
 * [GET /v1/ridgenerator/generate/rid/10002/10032](#get-ridgenerator)
 
-### GET /generate/rid/{centerid}/{machineid}
-
+## GET /generate/rid/{centerid}/{machineid}
 This service returns a RID for the requested CenterID and MachineID. 
 
-#### Resource URL
-<div>https://mosip.io/v1//generate/rid/{centerid}/{machineid}/</div>
+### Resource URL
+`https://mosip.io/v1//generate/rid/{centerid}/{machineid}/`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 centerid|Yes|Centerid of registration| -NA- |10002
 machineid|Yes|Machineid of registration| -NA- |10032
 
-#### Request
+### Request
 ```JSON
 -NA-
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
+### Responses
+
+#### Success Response
+**Status code: '200'**
 ```JSON
 {
   "id": null,
@@ -1021,7 +979,7 @@ machineid|Yes|Machineid of registration| -NA- |10032
 }
 ```
 
-##### Error Response:
+#### Error Response:
 ```JSON
 {
   "id": null,
@@ -1038,7 +996,7 @@ machineid|Yes|Machineid of registration| -NA- |10032
 }
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|----------|-------------
 KER-RIG-002 | Empty input entered | Empty Input Error Code
@@ -1052,78 +1010,77 @@ KER-RIG-500 | | Runtime Exception
 
 
 # Static Token generator (Private)
-
 * [GET tokenidgenerator/{uin}/{partnercode}](#get-tokenidgeneratoruinpartnercode)
 
-### GET tokenidgenerator/{uin}/{partnercode}
+## GET tokenidgenerator/{uin}/{partnercode}
 
 This service returns a static token for the requested UIN and Partner ID. It will return the same Static Token for every call made with the same UIN and Partner ID. 
 
-#### Resource URL
-<div>https://mosip.io/v1/tokenidgenerator/{uin}/{partnercode}/</div>
+### Resource URL
+`https://mosip.io/v1/tokenidgenerator/{uin}/{partnercode}/`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 UIN|Yes|UIN of the individual.| -NA- |2345346532564566
 partnercode|Yes|ID of the partner.| -NA- |9373
 
-#### Request
+### Request
 ```JSON
 -NA-
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: token id generated successfully
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: token id generated successfully
 ```JSON
 {
-	"id": "mosip.kernel.tokenid.generate",
-	"version": "1.0",
-	"metadata": {},
-	"responsetime": "2019-04-04T05:03:18.287Z",
-	"response": {
-                  "tokenID": "268177021248100621690339355202974361"
-                     },
-        "errors": null
+  "id": "mosip.kernel.tokenid.generate",
+  "version": "1.0",
+  "metadata": {},
+  "responsetime": "2019-04-04T05:03:18.287Z",
+  "response": {
+  "tokenID": "268177021248100621690339355202974361"
+   },
+  "errors": null
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: Invalid parameters
+#### Failure Response:
+**Status code: '200'**
+##### Description: Invalid parameters
 ```JSON
 {
-	"id": "mosip.kernel.tokenid.generate",
-	"version": "1.0",
-	"metadata": {},
-	"responsetime": "2019-04-04T05:03:18.287Z",
-	"response": null,
-        "errors": [
-            {
-             "errorCode": "KER-TIG-010",
-             "message": "UIN and partner code cannot be empty"
-            }
-     ]
+  "id": "mosip.kernel.tokenid.generate",
+  "version": "1.0",
+  "metadata": {},
+  "responsetime": "2019-04-04T05:03:18.287Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "KER-TIG-010",
+      "message": "UIN and partner code cannot be empty"
+    }
+  ]
 }
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|----------|-------------
 KER-UIG-005 | Internal Server Error | Internal Server Error
 KER-TIG-010 | UIN and partner code cannot be empty | Empty UIN or PARTNERCODE Exception
 KER-RIG-500 | | Runtime Exception
 
-
 # Audit Manager (Private)
-
 Audits are events/transactions which need to be captured and stored to facilitate auditing. This data could further be used for reporting by the business.
 
 This includes auditing various event types like System events (Periodic scans), Business events/transactions (Change in demo data), Security Events etc.
@@ -1134,19 +1091,18 @@ It will also ensure audit data stored is archived based on the defined archival 
 
 * [POST /audits](#post-audits)
 
-### POST /audits
+## POST /audits
 
-#### Resource URL
-<div>https://mosip.io/v1/auditmanager/audits</div>
+### Resource URL
+`https://mosip.io/v1/auditmanager/audits`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 eventId|Yes|ID of the event| | 
@@ -1166,7 +1122,7 @@ moduleName|No|Name of the module| | Schedulor
 moduleId|No|ID of the module| | SCHE93
 description|No|Description of the event| |Example description 
 
-#### Request
+### Request
 ```JSON
 {
   "id": "string",
@@ -1174,29 +1130,32 @@ description|No|Description of the event| |Example description
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "request": {
-		"eventId": "string",
-		"eventName": "string",
-		"eventType": "string",
-		"actionTimeStamp": "2018-10-04T05:57:20.929Z",
-		"hostName": "string",
-		"hostIp": "string",
-		"applicationId": "string",
-		"applicationName": "string",
-		"sessionUserId": "string",
-		"sessionUserName": "string",
-		"id": "string",
-		"idType": "string",
-		"createdBy": "string",
-		"moduleName": "string",
-		"moduleId": "string",
-		"description": "string"
-	}
+	"eventId": "string",
+	"eventName": "string",
+	"eventType": "string",
+	"actionTimeStamp": "2018-10-04T05:57:20.929Z",
+	"hostName": "string",
+	"hostIp": "string",
+	"applicationId": "string",
+	"applicationName": "string",
+	"sessionUserId": "string",
+	"sessionUserName": "string",
+	"id": "string",
+	"idType": "string",
+	"createdBy": "string",
+	"moduleName": "string",
+	"moduleId": "string",
+	"description": "string"
+  }
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: audit request completed successfully
+
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: audit request completed successfully
 ```JSON
 {
   "id": "string",
@@ -1204,13 +1163,13 @@ description|No|Description of the event| |Example description
   "metadata": {},
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
-"response": {
-	  "status": true
-	   }
+  "response": {
+    "status": true
+  }
 }
 ```
 
-##### Error Response:
+#### Error Response:
 ```JSON
 {
   "id": "string",
@@ -1223,11 +1182,11 @@ description|No|Description of the event| |Example description
       "message": "string"
     }
   ],
-"response": null
+  "response": null
 }
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|----------|-------------
 KER-AUD-001 | Invalid Audit Request. Required parameters must be present | Handler Exception
@@ -1235,37 +1194,27 @@ KER-AUD-002 | Invalid Audit Request. Format is incorrect. | Invalid Format
 KER-AUD-500 | Internal server error | Internal server error
 
 # Sync data (Public)
-
 * [GET /masterdata](#get-masterdata)
-
 * [GET /masterdata/{registrationcenterid}](#get-masterdataregistrationcenterid)
-
 * [GET /configs](#get-configs)
-
 * [GET /roles](#get-roles)
-
 * [GET /userdetails/{regid}](#get-userdetailsregistrationcenterid)
-
 * [GET /publickey](#get-publickey)
-
 * [POST /tpm/publickey](#post-tpmpublickey)
 
-
 ## GET /masterdata
-
 This service will provides the list of all master data. This service is used mainly by the Enrolment client module. 
 
-#### Resource URL
-<div>https://mosip.io/v1/syncdata/masterdata</div>
+### Resource URL
+`https://mosip.io/v1/syncdata/masterdata`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 macaddress|No|MAC address of the machine| | 
@@ -1273,15 +1222,15 @@ serialnumber|No|serial number of the machine| |
 lastUpdated|No|Date in UTC ISO format| | 
 keyindex|Yes|Thumbprint of the public key corresponding to this machine| | 
 
+### Request
+`https://mosip.io/v1/syncdata/masterdata?macaddress=e1:01:2b:c2:1d:b0&serialnumber=NM5328114630&keyindex=ys6823u22 `
 
-#### Request
+### Responses
 
-<div>https://mosip.io/v1/syncdata/masterdata?macaddress=e1:01:2b:c2:1d:b0&serialnumber=NM5328114630&keyindex=ys6823u22 </div>
+#### Success Response
+**Status code: '200'**
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: latest masterdata for the provided machine.
+##### Description: latest masterdata for the provided machine.
 ```JSON
 {
   "id": "string",
@@ -1289,454 +1238,452 @@ keyindex|Yes|Thumbprint of the public key corresponding to this machine| |
   "metadata": {},
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": [
-     {
+    {
       "errorCode": "string",
       "message": "string"
-     }
-     ],
+    }
+  ],
   "response": {
-		"lastSyncTime": "2019-03-04T12:34:15.477Z",
-		 "registrationCenter": [
-    {
-      "id": "10007",
-      "name": "Center Sidi Taibi",
-      "centerTypeCode": "REG",
-      "addressLine1": "Rabat Road",
-      "addressLine2": "Sidi Taibi",
-      "addressLine3": "Morroco",
-      "latitude": "34.192861",
-      "longitude": "-6.683662",
-      "locationCode": "14025",
-      "holidayLocationCode": "KTA",
-      "contactPhone": "811552880",
-      "numberOfStations": null,
-      "workingHours": "8:00:00",
-      "numberOfKiosks": 1,
-      "perKioskProcessTime": "00:15:00",
-      "centerStartTime": "09:00:00",
-      "centerEndTime": "17:00:00",
-      "timeZone": "(GTM+01:00) CENTRAL EUROPEAN TIME",
-      "contactPerson": "Monty Carlo",
-      "lunchStartTime": "13:00:00",
-      "lunchEndTime": "14:00:00",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "registrationCenterTypes": [
-    {
-      "isDeleted": null,
-      "langCode": "fra",
-      "isActive": true,
-      "code": "REG",
-      "name": "Ordinaire",
-      "descr": "Centre dinscription rÃ©guliÃ¨re"
-    }
-  ],
-  "machineDetails": [
-    {
-      "id": "10007",
-      "name": "Machine 7",
-      "serialNum": "LK8186452621",
-      "macAddress": "6d:a6:30:56:66:9f",
-      "ipAddress": "192.168.0.227",
-      "machineSpecId": "1001",
-      "validityDateTime": null,
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "machineSpecification": [
-    {
-      "id": "1001",
-      "name": "Ø³ØªØ± Â ",
-      "brand": "Ø¯Ù„Ù‘ Â ",
-      "model": "3568",
-      "machineTypeCode": "DKS",
-      "minDriverversion": "1.454",
-      "description": "Ù„Ø£Ø®Ø° Ø§Ù„ØªØ³Ø¬ÙŠÙ„Ø§Øª",
-      "isDeleted": null,
-      "langCode": "ara",
-      "isActive": true
-    }
-  ],
-  "machineType": [
-    {
-      "code": "DKS",
-      "name": "Ø§Ù„Ø­Ø§Ø³ÙˆØ¨",
-      "description": "Ø£Ø¬Ù‡Ø²Ø© Ø§Ù„ÙƒÙ…Ø¨ÙŠÙˆØªØ± Ø§Ù„Ù…ÙƒØªØ¨ÙŠØ©",
-      "isDeleted": null,
-      "langCode": "ara",
-      "isActive": true
-    }
-  ],
-  "devices": [
-    {
-      "id": "3000027",
-      "name": "Finger Print Scanner 7",
-      "serialNum": "CX8481464983",
-      "deviceSpecId": "165",
-      "macAddress": "d4:98:44:dd:aa:f1",
-      "ipAddress": null,
-      "validityDateTime": null,
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "deviceTypes": [
-    {
-      "code": "FRS",
-      "name": "Finger Print Scanner",
-      "description": "For scanning fingerprints",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "deviceSpecifications": [
-    {
-      "id": "165",
-      "name": "Fingerprint Scanner",
-      "brand": "Safran Morpho",
-      "model": "1300 E2",
-      "deviceTypeCode": "FRS",
-      "minDriverversion": "1.12",
-      "description": "To scan fingerprint",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "holidays": [
-    {
-      "holidayId": "2000049",
-      "holidayDate": "2019-01-01",
-      "holidayDay": "2",
-      "holidayMonth": "1",
-      "holidayYear": "2019",
-      "holidayName": "Jour de lâ€™an",
-      "locationCode": "KTA",
-      "isDeleted": null,
-      "langCode": "fra",
-      "isActive": true
-    }
-  ],
-  "documentCategories": [
-    {
-      "code": "POA",
-      "name": "Proof of Address",
-      "description": "Address Proof",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "documentTypes": [
-    {
-      "code": "CIN",
-      "name": "CNIE card",
-      "description": "Moroccan National Electronic ID Card",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "validDocumentMapping": [
-    {
-      "docTypeCode": "CIN",
-      "docCategoryCode": "POI",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "templates": [
-    {
-      "id": "1101",
-      "name": "Template for authorization content",
-      "description": "Template for authorization content",
-      "fileFormatCode": "txt",
-      "model": null,
-      "fileText": "Dear $name\nYour Authentication of UIN $uin using $authType on $date at $time Hrs $status at a device deployed by MOSIP Services",
-      "moduleId": "10004",
-      "moduleName": "ID Authentication",
-      "templateTypeCode": "auth-email-content",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "templatesTypes": [
-    {
-      "code": "auth-email-content",
-      "description": "Template for authorization content",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "templateFileFormat": [
-    {
-      "code": "txt",
-      "description": "Text File",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "reasonCategory": [
-    {
-      "code": "MNA",
-      "name": "Manual Adjudication",
-      "description": "Rejection during Manual Adjudication",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "reasonList": [
-    {
-      "code": "APM",
-      "name": "Age-Photo Mismatch",
-      "description": "Mismatch between the Age and Photo",
-      "rsnCatCode": "CLR",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "blackListedWords": [
-    {
-      "word": "shit",
-      "description": "Blacklisted Word",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "locationHierarchy": [
-    {
-      "isDeleted": null,
-      "langCode": "ara",
-      "isActive": true,
-      "code": "MOR",
-      "name": "Ø§Ù„Ù’Ù€Ù…ÙŽØºÙ’Ø±Ù�Ø¨Ù�",
-      "hierarchyLevel": 0,
-      "hierarchyName": "Ø¨Ù„Ø¯",
-      "parentLocCode": null,
-      "createdBy": null,
-      "updatedBy": null
-    }
-  ],
-  "biometricattributes": [
-    {
-      "code": "LTM",
-      "name": "Left Thumb",
-      "description": "Print of Left Thumb",
-      "biometricTypeCode": "FNR",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "biometricTypes": [
-    {
-      "code": "FNR",
-      "name": "Fingerprint",
-      "description": "Finger prints of the applicant",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "applications": [
-    {
-      "code": "app01",
-      "name": "application 1",
-      "description": "app description",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "applicantValidDocuments": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "appTypeCode": "001",
-      "docTypeCode": "CIN",
-      "docCatCode": "POI"
-    }
-  ],
-  "individualTypes": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "code": "FR",
-      "name": "Foreigner"
-    }
-  ],
-  "appDetails": [
-    {
-      "id": "10001",
-      "name": "Pre-Registration",
-      "descr": "Web portal for pre-registrations",
-      "langCode": "eng",
-      "isDeleted": null,
-      "isActive": true
-    }
-  ],
-  "appRolePriorities": [
-    {
-      "appId": "10003",
-      "processId": "login_auth",
-      "roleCode": "SUPERADMIN",
-      "priority": 1,
-      "langCode": "eng",
-      "isDeleted": null,
-      "isActive": true
-    }
-  ],
-  "screenAuthorizations": [
-    {
-      "screenId": "approveRegistrationRoot",
-      "roleCode": "SUPERADMIN",
-      "isPermitted": true,
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "processList": [
-    {
-      "id": "login_auth",
-      "name": "Login authentication",
-      "descr": "Login authentication",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "registrationCenterMachines": [
-    {
-      "regCenterId": "10007",
-      "machineId": "10007",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "registrationCenterDevices": [
-    {
-      "regCenterId": "10007",
-      "deviceId": "3000027",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "registrationCenterMachineDevices": [
-    {
-      "regCenterId": "10007",
-      "machineId": "10007",
-      "deviceId": "3000027",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "registrationCenterUserMachines": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "cntrId": "10007",
-      "machineId": "10007",
-      "usrId": "110007"
-    }
-  ],
-  "registrationCenterUsers": [
-    {
-      "regCenterId": "10007",
-      "userId": "110007",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "registrationCenterMachineHistory": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "regCenterId": "10007",
-      "machineId": "10007",
-      "effectivetimes": "2019-02-27T10:50:57.626598"
-    }
-  ],
-  "registrationCenterDeviceHistory": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "regCenterId": "10007",
-      "deviceId": "3000027",
-      "effectivetimes": "2019-02-27T10:50:57.589Z"
-    }
-  ],
-  "registrationCenterMachineDeviceHistory": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "regCenterId": "10007",
-      "machineId": "10007",
-      "deviceId": "3000027",
-      "effectivetimes": "2019-02-27T10:50:57.607964"
-    }
-  ],
-  "registrationCenterUserMachineMappingHistory": [
-    {
-      "cntrId": "10007",
-      "machineId": "10007",
-      "usrId": "110007",
-      "effectivetimes": "2019-02-27T10:50:57.660Z"
-    }
-  ],
-  "registrationCenterUserHistory": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "regCntrId": "10007",
-      "userId": "110007",
-      "effectDateTimes": "2019-02-27T10:50:57.644336"
-    }
-  ]
-}
+    "lastSyncTime": "2019-03-04T12:34:15.477Z",
+	"registrationCenter": [
+	  {
+		"id": "10007",
+        "name": "Center Sidi Taibi",
+        "centerTypeCode": "REG",
+        "addressLine1": "Rabat Road",
+        "addressLine2": "Sidi Taibi",
+        "addressLine3": "Morroco",
+        "latitude": "34.192861",
+        "longitude": "-6.683662",
+        "locationCode": "14025",
+        "holidayLocationCode": "KTA",
+        "contactPhone": "811552880",
+		"numberOfStations": null,
+		"workingHours": "8:00:00",
+		"numberOfKiosks": 1,
+		"perKioskProcessTime": "00:15:00",
+		"centerStartTime": "09:00:00",
+		"centerEndTime": "17:00:00",
+		"timeZone": "(GTM+01:00) CENTRAL EUROPEAN TIME",
+		"contactPerson": "Monty Carlo",
+		"lunchStartTime": "13:00:00",
+		"lunchEndTime": "14:00:00",
+		"isDeleted": null,
+		"langCode": "eng",
+        "isActive": true  
+      }
+    ],
+    "registrationCenterTypes": [
+      {
+        "isDeleted": null,
+        "langCode": "fra",
+        "isActive": true,
+        "code": "REG",
+        "name": "Ordinaire",
+        "descr": "Centre dinscription rÃ©guliÃ¨re"
+      }
+    ],
+    "machineDetails": [
+	  {
+		"id": "10007",
+		"name": "Machine 7",
+		"serialNum": "LK8186452621",
+		"macAddress": "6d:a6:30:56:66:9f",
+		"ipAddress": "192.168.0.227",
+		"machineSpecId": "1001",
+		"validityDateTime": null,
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+    ],
+    "machineSpecification": [
+	  {
+	    "id": "1001",
+	    "name": "Ø³ØªØ± Â ",
+	    "brand": "Ø¯Ù„Ù‘ Â ",
+	    "model": "3568",
+	    "machineTypeCode": "DKS",
+	    "minDriverversion": "1.454",
+	    "description": "Ù„Ø£Ø®Ø° Ø§Ù„ØªØ³Ø¬ÙŠÙ„Ø§Øª",
+	    "isDeleted": null,
+	    "langCode": "ara",
+	    "isActive": true
+	  }
+    ],
+	"machineType": [
+	  {
+		"code": "DKS",
+		"name": "Ø§Ù„Ø­Ø§Ø³ÙˆØ¨",
+		"description": "Ø£Ø¬Ù‡Ø²Ø© Ø§Ù„ÙƒÙ…Ø¨ÙŠÙˆØªØ± Ø§Ù„Ù…ÙƒØªØ¨ÙŠØ©",
+		"isDeleted": null,
+		"langCode": "ara",
+		"isActive": true
+	  }
+	],
+	"devices": [
+	  {
+		"id": "3000027",
+		"name": "Finger Print Scanner 7",
+		"serialNum": "CX8481464983",
+		"deviceSpecId": "165",
+		"macAddress": "d4:98:44:dd:aa:f1",
+		"ipAddress": null,
+		"validityDateTime": null,
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"deviceTypes": [
+	  {
+		"code": "FRS",
+		"name": "Finger Print Scanner",
+		"description": "For scanning fingerprints",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"deviceSpecifications": [
+	  {
+		"id": "165",
+		"name": "Fingerprint Scanner",
+		"brand": "Safran Morpho",
+		"model": "1300 E2",
+		"deviceTypeCode": "FRS",
+		"minDriverversion": "1.12",
+		"description": "To scan fingerprint",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"holidays": [
+	  {
+		"holidayId": "2000049",
+		"holidayDate": "2019-01-01",
+		"holidayDay": "2",
+		"holidayMonth": "1",
+		"holidayYear": "2019",
+		"holidayName": "Jour de lâ€™an",
+		"locationCode": "KTA",
+		"isDeleted": null,
+		"langCode": "fra",
+		"isActive": true
+	  }
+	],
+	"documentCategories": [
+	  {
+		"code": "POA",
+		"name": "Proof of Address",
+		"description": "Address Proof",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"documentTypes": [
+	  {
+		"code": "CIN",
+		"name": "CNIE card",
+		"description": "Moroccan National Electronic ID Card",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"validDocumentMapping": [
+	  {
+		"docTypeCode": "CIN",
+		"docCategoryCode": "POI",
+		"isDeleted": null,
+		  "langCode": "eng",
+		  "isActive": true
+		}
+	  ],
+	"templates": [
+	  {
+		"id": "1101",
+		"name": "Template for authorization content",
+		"description": "Template for authorization content",
+		"fileFormatCode": "txt",
+		"model": null,
+		"fileText": "Dear $name\nYour Authentication of UIN $uin using $authType on $date at $time Hrs $status at a device deployed by MOSIP Services",
+		"moduleId": "10004",
+		"moduleName": "ID Authentication",
+		"templateTypeCode": "auth-email-content",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"templatesTypes": [
+	  {
+		"code": "auth-email-content",
+		"description": "Template for authorization content",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+      }
+	],
+	"templateFileFormat": [
+	  {
+		"code": "txt",
+		"description": "Text File",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"reasonCategory": [
+	  {
+		"code": "MNA",
+		"name": "Manual Adjudication",
+		"description": "Rejection during Manual Adjudication",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"reasonList": [
+      {
+		"code": "APM",
+		"name": "Age-Photo Mismatch",
+		"description": "Mismatch between the Age and Photo",
+		"rsnCatCode": "CLR",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"blackListedWords": [
+	  {
+		"word": "shit",
+		"description": "Blacklisted Word",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"locationHierarchy": [
+	  {
+		"isDeleted": null,
+		"langCode": "ara",
+		"isActive": true,
+		"code": "MOR",
+		"name": "Ø§Ù„Ù’Ù€Ù…ÙŽØºÙ’Ø±Ù�Ø¨Ù�",
+		"hierarchyLevel": 0,
+		"hierarchyName": "Ø¨Ù„Ø¯",
+		"parentLocCode": null,
+		"createdBy": null,
+		"updatedBy": null
+	  }
+	],
+	"biometricattributes": [
+	  {
+		"code": "LTM",
+		"name": "Left Thumb",
+		"description": "Print of Left Thumb",
+		"biometricTypeCode": "FNR",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"biometricTypes": [
+	  {
+		"code": "FNR",
+		"name": "Fingerprint",
+		"description": "Finger prints of the applicant",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"applications": [
+	  {
+		"code": "app01",
+		"name": "application 1",
+		"description": "app description",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"applicantValidDocuments": [
+	  {
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true,
+		"appTypeCode": "001",
+		"docTypeCode": "CIN",
+		"docCatCode": "POI"
+	  }
+	],
+	"individualTypes": [
+	  {
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true,
+		"code": "FR",
+		"name": "Foreigner"
+	  }
+	],
+	"appDetails": [
+	  {
+		"id": "10001",
+		"name": "Pre-Registration",
+		"descr": "Web portal for pre-registrations",
+		"langCode": "eng",
+		"isDeleted": null,
+		"isActive": true
+	  }
+	],
+	"appRolePriorities": [
+	  {
+		"appId": "10003",
+		"processId": "login_auth",
+		"roleCode": "SUPERADMIN",
+		"priority": 1,
+		"langCode": "eng",
+		"isDeleted": null,
+		"isActive": true
+	  }
+	],
+	"screenAuthorizations": [
+	  {
+		"screenId": "approveRegistrationRoot",
+		"roleCode": "SUPERADMIN",
+		"isPermitted": true,
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"processList": [
+	  {
+		"id": "login_auth",
+		"name": "Login authentication",
+		"descr": "Login authentication",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"registrationCenterMachines": [
+	  {
+		"regCenterId": "10007",
+		"machineId": "10007",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"registrationCenterDevices": [
+	  {
+		"regCenterId": "10007",
+		"deviceId": "3000027",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"registrationCenterMachineDevices": [
+	  {
+		"regCenterId": "10007",
+		"machineId": "10007",
+		"deviceId": "3000027",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"registrationCenterUserMachines": [
+	  {
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true,
+		"cntrId": "10007",
+		"machineId": "10007",
+		"usrId": "110007"
+	  }
+	],
+	"registrationCenterUsers": [
+	  {
+		"regCenterId": "10007",
+		"userId": "110007",
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true
+	  }
+	],
+	"registrationCenterMachineHistory": [
+	  {
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true,
+		"regCenterId": "10007",
+		"machineId": "10007",
+		"effectivetimes": "2019-02-27T10:50:57.626598"
+	  }
+	],
+	"registrationCenterDeviceHistory": [
+	  {
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true,
+		"regCenterId": "10007",
+		"deviceId": "3000027",
+		"effectivetimes": "2019-02-27T10:50:57.589Z"
+	  }
+	],
+	"registrationCenterMachineDeviceHistory": [
+	  {
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true,
+		"regCenterId": "10007",
+		"machineId": "10007",
+		"deviceId": "3000027",
+		"effectivetimes": "2019-02-27T10:50:57.607964"
+	  }
+	],
+	"registrationCenterUserMachineMappingHistory": [
+	  {
+		"cntrId": "10007",
+		"machineId": "10007",
+		"usrId": "110007",
+		"effectivetimes": "2019-02-27T10:50:57.660Z"
+	  }
+	],
+	"registrationCenterUserHistory": [
+	  {
+		"isDeleted": null,
+		"langCode": "eng",
+		"isActive": true,
+		"regCntrId": "10007",
+		"userId": "110007",
+		"effectDateTimes": "2019-02-27T10:50:57.644336"
+	  }
+	]
+  }
 }
 ```
 
-### GET /masterdata/{registrationcenterid}
-
+## GET /masterdata/{registrationcenterid}
 This service will provides the list of all master data. This service is used mainly by the Enrollment client module. 
 
-#### Resource URL
-<div>https://mosip.io/v1/syncdata/masterdata/10001?macaddress=e1:01:2b:c2:1d:b0&serialnumber=NM5328114630</div>
+### Resource URL
+`https://mosip.io/v1/syncdata/masterdata/10001?macaddress=e1:01:2b:c2:1d:b0&serialnumber=NM5328114630`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 regcenterId|Yes|Registration center id| |
@@ -1745,14 +1692,15 @@ serialnumber|No|Serial number of the machine| |
 lastUpdated|No|Date in UTC ISO format| | 
 keyindex|Yes|Thumbprint of the public key corresponding to this machine| | 
 
-
-#### Request
+### Request
 v1/syncdata/masterdata/10001?macaddress=e1:01:2b:c2:1d:b0&serialnumber=NM5328114630&keyindex=ys6823u22
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: latest masterdata for the provided machine.
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: latest masterdata for the provided machine.
 ```JSON
 {
   "id": "string",
@@ -1766,460 +1714,459 @@ v1/syncdata/masterdata/10001?macaddress=e1:01:2b:c2:1d:b0&serialnumber=NM5328114
     }
   ],
   "response": {
-		"lastSyncTime": "2019-03-04T12:34:15.477Z",
-		 "registrationCenter": [
-    {
-      "id": "10007",
-      "name": "Center Sidi Taibi",
-      "centerTypeCode": "REG",
-      "addressLine1": "Rabat Road",
-      "addressLine2": "Sidi Taibi",
-      "addressLine3": "Morroco",
-      "latitude": "34.192861",
-      "longitude": "-6.683662",
-      "locationCode": "14025",
-      "holidayLocationCode": "KTA",
-      "contactPhone": "811552880",
-      "numberOfStations": null,
-      "workingHours": "8:00:00",
-      "numberOfKiosks": 1,
-      "perKioskProcessTime": "00:15:00",
-      "centerStartTime": "09:00:00",
-      "centerEndTime": "17:00:00",
-      "timeZone": "(GTM+01:00) CENTRAL EUROPEAN TIME",
-      "contactPerson": "Monty Carlo",
-      "lunchStartTime": "13:00:00",
-      "lunchEndTime": "14:00:00",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "registrationCenterTypes": [
-    {
-      "isDeleted": null,
-      "langCode": "fra",
-      "isActive": true,
-      "code": "REG",
-      "name": "Ordinaire",
-      "descr": "Centre dinscription rÃ©guliÃ¨re"
-    }
-  ],
-  "machineDetails": [
-    {
-      "id": "10007",
-      "name": "Machine 7",
-      "serialNum": "LK8186452621",
-      "macAddress": "6d:a6:30:56:66:9f",
-      "ipAddress": "192.168.0.227",
-      "machineSpecId": "1001",
-      "validityDateTime": null,
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "machineSpecification": [
-    {
-      "id": "1001",
-      "name": "Ø³ØªØ± Â ",
-      "brand": "Ø¯Ù„Ù‘ Â ",
-      "model": "3568",
-      "machineTypeCode": "DKS",
-      "minDriverversion": "1.454",
-      "description": "Ù„Ø£Ø®Ø° Ø§Ù„ØªØ³Ø¬ÙŠÙ„Ø§Øª",
-      "isDeleted": null,
-      "langCode": "ara",
-      "isActive": true
-    }
-  ],
-  "machineType": [
-    {
-      "code": "DKS",
-      "name": "Ø§Ù„Ø­Ø§Ø³ÙˆØ¨",
-      "description": "Ø£Ø¬Ù‡Ø²Ø© Ø§Ù„ÙƒÙ…Ø¨ÙŠÙˆØªØ± Ø§Ù„Ù…ÙƒØªØ¨ÙŠØ©",
-      "isDeleted": null,
-      "langCode": "ara",
-      "isActive": true
-    }
-  ],
-  "devices": [
-    {
-      "id": "3000027",
-      "name": "Finger Print Scanner 7",
-      "serialNum": "CX8481464983",
-      "deviceSpecId": "165",
-      "macAddress": "d4:98:44:dd:aa:f1",
-      "ipAddress": null,
-      "validityDateTime": null,
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "deviceTypes": [
-    {
-      "code": "FRS",
-      "name": "Finger Print Scanner",
-      "description": "For scanning fingerprints",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "deviceSpecifications": [
-    {
-      "id": "165",
-      "name": "Fingerprint Scanner",
-      "brand": "Safran Morpho",
-      "model": "1300 E2",
-      "deviceTypeCode": "FRS",
-      "minDriverversion": "1.12",
-      "description": "To scan fingerprint",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "holidays": [
-    {
-      "holidayId": "2000049",
-      "holidayDate": "2019-01-01",
-      "holidayDay": "2",
-      "holidayMonth": "1",
-      "holidayYear": "2019",
-      "holidayName": "Jour de lâ€™an",
-      "locationCode": "KTA",
-      "isDeleted": null,
-      "langCode": "fra",
-      "isActive": true
-    }
-  ],
-  "documentCategories": [
-    {
-      "code": "POA",
-      "name": "Proof of Address",
-      "description": "Address Proof",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "documentTypes": [
-    {
-      "code": "CIN",
-      "name": "CNIE card",
-      "description": "Moroccan National Electronic ID Card",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "validDocumentMapping": [
-    {
-      "docTypeCode": "CIN",
-      "docCategoryCode": "POI",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "templates": [
-    {
-      "id": "1101",
-      "name": "Template for authorization content",
-      "description": "Template for authorization content",
-      "fileFormatCode": "txt",
-      "model": null,
-      "fileText": "Dear $name\nYour Authentication of UIN $uin using $authType on $date at $time Hrs $status at a device deployed by MOSIP Services",
-      "moduleId": "10004",
-      "moduleName": "ID Authentication",
-      "templateTypeCode": "auth-email-content",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "templatesTypes": [
-    {
-      "code": "auth-email-content",
-      "description": "Template for authorization content",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "templateFileFormat": [
-    {
-      "code": "txt",
-      "description": "Text File",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "reasonCategory": [
-    {
-      "code": "MNA",
-      "name": "Manual Adjudication",
-      "description": "Rejection during Manual Adjudication",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "reasonList": [
-    {
-      "code": "APM",
-      "name": "Age-Photo Mismatch",
-      "description": "Mismatch between the Age and Photo",
-      "rsnCatCode": "CLR",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "blackListedWords": [
-    {
-      "word": "shit",
-      "description": "Blacklisted Word",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "locationHierarchy": [
-    {
-      "isDeleted": null,
-      "langCode": "ara",
-      "isActive": true,
-      "code": "MOR",
-      "name": "Ø§Ù„Ù’Ù€Ù…ÙŽØºÙ’Ø±Ù�Ø¨Ù�",
-      "hierarchyLevel": 0,
-      "hierarchyName": "Ø¨Ù„Ø¯",
-      "parentLocCode": null,
-      "createdBy": null,
-      "updatedBy": null
-    }
-  ],
-  "biometricattributes": [
-    {
-      "code": "LTM",
-      "name": "Left Thumb",
-      "description": "Print of Left Thumb",
-      "biometricTypeCode": "FNR",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "biometricTypes": [
-    {
-      "code": "FNR",
-      "name": "Fingerprint",
-      "description": "Finger prints of the applicant",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "applications": [
-    {
-      "code": "app01",
-      "name": "application 1",
-      "description": "app description",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "applicantValidDocuments": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "appTypeCode": "001",
-      "docTypeCode": "CIN",
-      "docCatCode": "POI"
-    }
-  ],
-  "individualTypes": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "code": "FR",
-      "name": "Foreigner"
-    }
-  ],
-  "appDetails": [
-    {
-      "id": "10001",
-      "name": "Pre-Registration",
-      "descr": "Web portal for pre-registrations",
-      "langCode": "eng",
-      "isDeleted": null,
-      "isActive": true
-    }
-  ],
-  "appRolePriorities": [
-    {
-      "appId": "10003",
-      "processId": "login_auth",
-      "roleCode": "SUPERADMIN",
-      "priority": 1,
-      "langCode": "eng",
-      "isDeleted": null,
-      "isActive": true
-    }
-  ],
-  "screenAuthorizations": [
-    {
-      "screenId": "approveRegistrationRoot",
-      "roleCode": "SUPERADMIN",
-      "isPermitted": true,
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "processList": [
-    {
-      "id": "login_auth",
-      "name": "Login authentication",
-      "descr": "Login authentication",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "registrationCenterMachines": [
-    {
-      "regCenterId": "10007",
-      "machineId": "10007",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "registrationCenterDevices": [
-    {
-      "regCenterId": "10007",
-      "deviceId": "3000027",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "registrationCenterMachineDevices": [
-    {
-      "regCenterId": "10007",
-      "machineId": "10007",
-      "deviceId": "3000027",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "registrationCenterUserMachines": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "cntrId": "10007",
-      "machineId": "10007",
-      "usrId": "110007"
-    }
-  ],
-  "registrationCenterUsers": [
-    {
-      "regCenterId": "10007",
-      "userId": "110007",
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true
-    }
-  ],
-  "registrationCenterMachineHistory": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "regCenterId": "10007",
-      "machineId": "10007",
-      "effectivetimes": "2019-02-27T10:50:57.626598"
-    }
-  ],
-  "registrationCenterDeviceHistory": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "regCenterId": "10007",
-      "deviceId": "3000027",
-      "effectivetimes": "2019-02-27T10:50:57.589Z"
-    }
-  ],
-  "registrationCenterMachineDeviceHistory": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "regCenterId": "10007",
-      "machineId": "10007",
-      "deviceId": "3000027",
-      "effectivetimes": "2019-02-27T10:50:57.607964"
-    }
-  ],
-  "registrationCenterUserMachineMappingHistory": [
-    {
-      "cntrId": "10007",
-      "machineId": "10007",
-      "usrId": "110007",
-      "effectivetimes": "2019-02-27T10:50:57.660Z"
-    }
-  ],
-  "registrationCenterUserHistory": [
-    {
-      "isDeleted": null,
-      "langCode": "eng",
-      "isActive": true,
-      "regCntrId": "10007",
-      "userId": "110007",
-      "effectDateTimes": "2019-02-27T10:50:57.644336"
-    }
-  ]
-}
+	"lastSyncTime": "2019-03-04T12:34:15.477Z",
+	"registrationCenter": [
+      {
+        "id": "10007",
+        "name": "Center Sidi Taibi",
+        "centerTypeCode": "REG",
+        "addressLine1": "Rabat Road",
+        "addressLine2": "Sidi Taibi",
+        "addressLine3": "Morroco",
+        "latitude": "34.192861",
+        "longitude": "-6.683662",
+        "locationCode": "14025",
+        "holidayLocationCode": "KTA",
+        "contactPhone": "811552880",
+        "numberOfStations": null,
+        "workingHours": "8:00:00",
+        "numberOfKiosks": 1,
+        "perKioskProcessTime": "00:15:00",
+        "centerStartTime": "09:00:00",
+        "centerEndTime": "17:00:00",
+        "timeZone": "(GTM+01:00) CENTRAL EUROPEAN TIME",
+        "contactPerson": "Monty Carlo",
+        "lunchStartTime": "13:00:00",
+        "lunchEndTime": "14:00:00",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "registrationCenterTypes": [
+      {
+        "isDeleted": null,
+        "langCode": "fra",
+        "isActive": true,
+        "code": "REG",
+        "name": "Ordinaire",
+        "descr": "Centre dinscription rÃ©guliÃ¨re"
+      }
+    ],
+    "machineDetails": [
+      {
+        "id": "10007",
+        "name": "Machine 7",
+        "serialNum": "LK8186452621",
+        "macAddress": "6d:a6:30:56:66:9f",
+        "ipAddress": "192.168.0.227",
+        "machineSpecId": "1001",
+        "validityDateTime": null,
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "machineSpecification": [
+      {
+        "id": "1001",
+        "name": "Ø³ØªØ± Â ",
+        "brand": "Ø¯Ù„Ù‘ Â ",
+        "model": "3568",
+        "machineTypeCode": "DKS",
+        "minDriverversion": "1.454",
+        "description": "Ù„Ø£Ø®Ø° Ø§Ù„ØªØ³Ø¬ÙŠÙ„Ø§Øª",
+        "isDeleted": null,
+        "langCode": "ara",
+        "isActive": true
+      }
+    ],
+    "machineType": [
+      {
+        "code": "DKS",
+        "name": "Ø§Ù„Ø­Ø§Ø³ÙˆØ¨",
+        "description": "Ø£Ø¬Ù‡Ø²Ø© Ø§Ù„ÙƒÙ…Ø¨ÙŠÙˆØªØ± Ø§Ù„Ù…ÙƒØªØ¨ÙŠØ©",
+        "isDeleted": null,
+        "langCode": "ara",
+        "isActive": true
+      }
+    ],
+    "devices": [
+      {
+        "id": "3000027",
+        "name": "Finger Print Scanner 7",
+        "serialNum": "CX8481464983",
+        "deviceSpecId": "165",
+        "macAddress": "d4:98:44:dd:aa:f1",
+        "ipAddress": null,
+        "validityDateTime": null,
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "deviceTypes": [
+      {
+        "code": "FRS",
+        "name": "Finger Print Scanner",
+        "description": "For scanning fingerprints",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "deviceSpecifications": [
+      {
+        "id": "165",
+        "name": "Fingerprint Scanner",
+        "brand": "Safran Morpho",
+        "model": "1300 E2",
+        "deviceTypeCode": "FRS",
+        "minDriverversion": "1.12",
+        "description": "To scan fingerprint",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "holidays": [
+      {
+        "holidayId": "2000049",
+        "holidayDate": "2019-01-01",
+        "holidayDay": "2",
+        "holidayMonth": "1",
+        "holidayYear": "2019",
+        "holidayName": "Jour de lâ€™an",
+        "locationCode": "KTA",
+        "isDeleted": null,
+        "langCode": "fra",
+        "isActive": true
+      }
+    ],
+    "documentCategories": [
+      {
+        "code": "POA",
+        "name": "Proof of Address",
+        "description": "Address Proof",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "documentTypes": [
+      {
+        "code": "CIN",
+        "name": "CNIE card",
+        "description": "Moroccan National Electronic ID Card",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "validDocumentMapping": [
+      {
+        "docTypeCode": "CIN",
+        "docCategoryCode": "POI",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "templates": [
+      {
+        "id": "1101",
+        "name": "Template for authorization content",
+        "description": "Template for authorization content",
+        "fileFormatCode": "txt",
+        "model": null,
+        "fileText": "Dear $name\nYour Authentication of UIN $uin using $authType on $date at $time Hrs $status at a device deployed by MOSIP Services",
+        "moduleId": "10004",
+        "moduleName": "ID Authentication",
+        "templateTypeCode": "auth-email-content",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "templatesTypes": [
+      {
+        "code": "auth-email-content",
+        "description": "Template for authorization content",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "templateFileFormat": [
+      {
+        "code": "txt",
+        "description": "Text File",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "reasonCategory": [
+      {
+        "code": "MNA",
+        "name": "Manual Adjudication",
+        "description": "Rejection during Manual Adjudication",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "reasonList": [
+      {
+        "code": "APM",
+        "name": "Age-Photo Mismatch",
+        "description": "Mismatch between the Age and Photo",
+        "rsnCatCode": "CLR",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "blackListedWords": [
+      {
+        "word": "shit",
+        "description": "Blacklisted Word",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "locationHierarchy": [
+      {
+        "isDeleted": null,
+        "langCode": "ara",
+        "isActive": true,
+        "code": "MOR",
+        "name": "Ø§Ù„Ù’Ù€Ù…ÙŽØºÙ’Ø±Ù�Ø¨Ù�",
+        "hierarchyLevel": 0,
+        "hierarchyName": "Ø¨Ù„Ø¯",
+        "parentLocCode": null,
+        "createdBy": null,
+        "updatedBy": null
+      }
+    ],
+    "biometricattributes": [
+      {
+        "code": "LTM",
+        "name": "Left Thumb",
+        "description": "Print of Left Thumb",
+        "biometricTypeCode": "FNR",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "biometricTypes": [
+      {
+        "code": "FNR",
+        "name": "Fingerprint",
+        "description": "Finger prints of the applicant",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "applications": [
+      {
+        "code": "app01",
+        "name": "application 1",
+        "description": "app description",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "applicantValidDocuments": [
+      {
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true,
+        "appTypeCode": "001",
+        "docTypeCode": "CIN",
+        "docCatCode": "POI"
+      }
+    ],
+    "individualTypes": [
+      {
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true,
+        "code": "FR",
+        "name": "Foreigner"
+      }
+    ],
+    "appDetails": [
+      {
+        "id": "10001",
+        "name": "Pre-Registration",
+        "descr": "Web portal for pre-registrations",
+        "langCode": "eng",
+        "isDeleted": null,
+        "isActive": true
+      }
+    ],
+    "appRolePriorities": [
+      {
+        "appId": "10003",
+        "processId": "login_auth",
+        "roleCode": "SUPERADMIN",
+        "priority": 1,
+        "langCode": "eng",
+        "isDeleted": null,
+        "isActive": true
+      }
+    ],
+    "screenAuthorizations": [
+      {
+        "screenId": "approveRegistrationRoot",
+        "roleCode": "SUPERADMIN",
+        "isPermitted": true,
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "processList": [
+      {
+        "id": "login_auth",
+        "name": "Login authentication",
+        "descr": "Login authentication",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "registrationCenterMachines": [
+      {
+        "regCenterId": "10007",
+        "machineId": "10007",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "registrationCenterDevices": [
+      {
+        "regCenterId": "10007",
+        "deviceId": "3000027",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "registrationCenterMachineDevices": [
+      {
+        "regCenterId": "10007",
+        "machineId": "10007",
+        "deviceId": "3000027",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "registrationCenterUserMachines": [
+      {
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true,
+        "cntrId": "10007",
+        "machineId": "10007",
+        "usrId": "110007"
+      }
+    ],
+    "registrationCenterUsers": [
+      {
+        "regCenterId": "10007",
+        "userId": "110007",
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ],
+    "registrationCenterMachineHistory": [
+      {
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true,
+        "regCenterId": "10007",
+        "machineId": "10007",
+        "effectivetimes": "2019-02-27T10:50:57.626598"
+      }
+    ],
+    "registrationCenterDeviceHistory": [
+      {
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true,
+        "regCenterId": "10007",
+        "deviceId": "3000027",
+        "effectivetimes": "2019-02-27T10:50:57.589Z"
+      }
+    ],
+    "registrationCenterMachineDeviceHistory": [
+      {
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true,
+        "regCenterId": "10007",
+        "machineId": "10007",
+        "deviceId": "3000027",
+        "effectivetimes": "2019-02-27T10:50:57.607964"
+      }
+    ],
+    "registrationCenterUserMachineMappingHistory": [
+      {
+        "cntrId": "10007",
+        "machineId": "10007",
+        "usrId": "110007",
+        "effectivetimes": "2019-02-27T10:50:57.660Z"
+      }
+    ],
+    "registrationCenterUserHistory": [
+      {
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true,
+        "regCntrId": "10007",
+        "userId": "110007",
+        "effectDateTimes": "2019-02-27T10:50:57.644336"
+      }
+    ]
+  }
 }
 ```
 
-### GET /configs
-
+## GET /configs
 This service will return back the global and registration configuration data of the MOSIP platform. 
 
-#### Resource URL
-<div>https://mosip.io/v1/syncdata/configs </div>
+### Resource URL
+`https://mosip.io/v1/syncdata/configs `
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 -NA-
 
-#### Request
-
+### Request
 N/A
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: latest configuration details.
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: latest configuration details.
 ```JSON
 {
   "id": "string",
@@ -2232,134 +2179,134 @@ N/A
       "message": "string"
     }
   ],
-	"response": {
-	  "registrationConfiguration": {
-		"keyValidityPeriodPreRegPack": "3",
-		"smsNotificationTemplateRegCorrection": "OTP for your request is $otp",
-		"defaultDOB": "1-Jan",
-		"smsNotificationTemplateOtp": "OTP for your request is $otp",
-		"supervisorVerificationRequiredForExceptions": "true",
-		"keyValidityPeriodRegPack": "3",
-		"irisRetryAttempts": "10",
-		"fingerprintQualityThreshold": "120",
-		"multifactorauthentication": "true",
-		"smsNotificationTemplateUpdateUIN": "OTP for your request is $otp",
-		"supervisorAuthType": "password",
-		"maxDurationRegPermittedWithoutMasterdataSyncInDays": "10",
-		"modeOfNotifyingIndividual": "mobile",
-		"emailNotificationTemplateUpdateUIN": "Hello $user the OTP is $otp",
-		"maxDocSizeInMB": "150",
-		"emailNotificationTemplateOtp": "Hello $user the OTP is $otp",
-		"emailNotificationTemplateRegCorrection": "Hello $user the OTP is $otp",
-		"faceRetry": "12",
-		"noOfFingerprintAuthToOnboardUser": "10",
-		"smsNotificationTemplateLostUIN": "OTP for your request is $otp",
-		"supervisorAuthMode": "IRIS",
-		"operatorRegSubmissionMode": "fingerprint",
-		"officerAuthType": "password",
-		"faceQualityThreshold": "25",
-		"gpsDistanceRadiusInMeters": "3",
-		"automaticSyncFreqServerToClient": "25",
-		"maxDurationWithoutMasterdataSyncInDays": "7",
-		"loginMode": "bootable dongle",
-		"irisQualityThreshold": "25",
-		"retentionPeriodAudit": "3",
-		"fingerprintRetryAttempts": "234",
-		"emailNotificationTemplateNewReg": "Hello $user the OTP is $otp",
-		"passwordExpiryDurationInDays": "3",
-		"emailNotificationTemplateLostUIN": "Hello $user the OTP is $otp",
-		"blockRegistrationIfNotSynced": "10",
-		"noOfIrisAuthToOnboardUser": "10",
-		"smsNotificationTemplateNewReg": "OTP for your request is $otp"
-	  },
-	  "globalConfiguration": {
-		"mosip.kernel.email.max-length": "50",
-		"mosip.kernel.email.domain.ext-max-lenght": "7",
-		"mosip.kernel.rid.sequence-length": "5",
-		"mosip.kernel.uin.uin-generation-cron": "0 * * * * *",
-		"mosip.kernel.email.special-char": "!#$%&'*+-/=?^_`{|}~.",
-		"mosip.kernel.prid.sequence-limit": "3",
-		"mosip.kernel.email.domain.ext-min-lenght": "2",
-		"mosip.kernel.machineid.length": "4",
-		"mosip.supported-languages": "eng,ara,fra",
-		"auth.header.name": "Authorization",
-		"mosip.kernel.phone.min-length": "9",
-		"mosip.kernel.virus-scanner.host": "104.211.209.102",
-		"mosip.kernel.email.min-length": "7",
-		"mosip.kernel.uin.length.conjugative-even-digits-limit": "3",
-		"mosip.kernel.rid.machineid-length": "5",
-		"mosip.kernel.prid.repeating-block-limit": "3",
-		"mosip.kernel.vid.length.repeating-block-limit": "2",
-		"mosip.kernel.rid.length": "29",
-		"mosip.kernel.uin.restricted-numbers": "786,666",
-		"mosip.kernel.keygenerator.asymmetric-algorithm-name": "RSA ",
-		"mosip.kernel.email.domain.special-char": "-",
-		"mosip.kernel.vid.length.repeating-limit": "2",
-		"mosip.kernel.uin.length.reverse-digits-limit": "5",
-		"mosip.kernel.vid.not-start-with": "0,1",
-		"mosip.kernel.registrationcenterid.length": "4",
-		"mosip.kernel.phone.special-char": "+ -",
-		"mosip.kernel.uin.uins-to-generate": "200000",
-		"mosip.kernel.vid.length": "16",
-		"mosip.kernel.uin.length.repeating-block-limit": "2",
-		"mosip.kernel.uin.length.sequence-limit": "3",
-		"mosip.kernel.keygenerator.symmetric-algorithm-length": "256",
-		"mosip.kernel.keygenerator.symmetric-algorithm-name": "AES",
-		"mosip.kernel.crypto.symmetric-algorithm-name": "AES",
-		"mosip.kernel.virus-scanner.port": "3310",
-		"mosip.kernel.rid.centerid-length": "5",
-		"mosip.kernel.uin.length.digits-limit": "5",
-		"mosip.kernel.rid.timestamp-length": "14",
-		"mosip.kernel.vid.length.sequence-limit": "3",
-		"mosip.kernel.keygenerator.asymmetric-algorithm-length": "2048",
-		"mosip.kernel.uin.min-unused-threshold": "100000",
-		"auth.role.prefix": "ROLE_",
-		"auth.server.validate.url": "https://integ.mosip.io/authmanager/validate_token",
-		"mosip.kernel.prid.length": "14",
-		"mosip.kernel.syncdata.registration-center-config-file": 
-                "registration-${spring.profiles.active}.properties",
-		"mosip.kernel.crypto.asymmetric-algorithm-name": "RSA",
-		"mosip.kernel.uin.length": "12",
-		"mosip.kernel.phone.max-length": "15",
-		"mosip.kernel.prid.repeating-limit": "2",
-	        "mosip.kernel.tokenid.length": "36",
-		"mosip.kernel.MISPid.length": "4",
-		"mosip.kernel.syncdata.global-config-file": "application-${spring.profiles.active}.properties",
-		"mosip.kernel.prid.not-start-with": "0,1",
-		"mosip.kernel.tokenid.sequence-limit": "3",
-		"mosip.kernel.uin.length.repeating-limit": "2",
-		"mosip.kernel.data-key-splitter": "#KEY_SPLITTER#"
-	  }
-	}
+  "response": {
+    "registrationConfiguration": {
+	  "keyValidityPeriodPreRegPack": "3",
+	  "smsNotificationTemplateRegCorrection": "OTP for your request is $otp",
+	  "defaultDOB": "1-Jan",
+	  "smsNotificationTemplateOtp": "OTP for your request is $otp",
+	  "supervisorVerificationRequiredForExceptions": "true",
+	  "keyValidityPeriodRegPack": "3",
+	  "irisRetryAttempts": "10",
+	  "fingerprintQualityThreshold": "120",
+	  "multifactorauthentication": "true",
+	  "smsNotificationTemplateUpdateUIN": "OTP for your request is $otp",
+	  "supervisorAuthType": "password",
+	  "maxDurationRegPermittedWithoutMasterdataSyncInDays": "10",
+	  "modeOfNotifyingIndividual": "mobile",
+	  "emailNotificationTemplateUpdateUIN": "Hello $user the OTP is $otp",
+	  "maxDocSizeInMB": "150",
+	  "emailNotificationTemplateOtp": "Hello $user the OTP is $otp",
+	  "emailNotificationTemplateRegCorrection": "Hello $user the OTP is $otp",
+	  "faceRetry": "12",
+	  "noOfFingerprintAuthToOnboardUser": "10",
+	  "smsNotificationTemplateLostUIN": "OTP for your request is $otp",
+	  "supervisorAuthMode": "IRIS",
+	  "operatorRegSubmissionMode": "fingerprint",
+	  "officerAuthType": "password",
+	  "faceQualityThreshold": "25",
+	  "gpsDistanceRadiusInMeters": "3",
+	  "automaticSyncFreqServerToClient": "25",
+	  "maxDurationWithoutMasterdataSyncInDays": "7",
+	  "loginMode": "bootable dongle",
+	  "irisQualityThreshold": "25",
+	  "retentionPeriodAudit": "3",
+	  "fingerprintRetryAttempts": "234",
+	  "emailNotificationTemplateNewReg": "Hello $user the OTP is $otp",
+	  "passwordExpiryDurationInDays": "3",
+	  "emailNotificationTemplateLostUIN": "Hello $user the OTP is $otp",
+	  "blockRegistrationIfNotSynced": "10",
+	  "noOfIrisAuthToOnboardUser": "10",
+	  "smsNotificationTemplateNewReg": "OTP for your request is $otp"
+    },
+    "globalConfiguration": {
+	  "mosip.kernel.email.max-length": "50",
+	  "mosip.kernel.email.domain.ext-max-lenght": "7",
+	  "mosip.kernel.rid.sequence-length": "5",
+	  "mosip.kernel.uin.uin-generation-cron": "0 * * * * *",
+	  "mosip.kernel.email.special-char": "!#$%&'*+-/=?^_`{|}~.",
+	  "mosip.kernel.prid.sequence-limit": "3",
+	  "mosip.kernel.email.domain.ext-min-lenght": "2",
+	  "mosip.kernel.machineid.length": "4",
+	  "mosip.supported-languages": "eng,ara,fra",
+	  "auth.header.name": "Authorization",
+	  "mosip.kernel.phone.min-length": "9",
+	  "mosip.kernel.virus-scanner.host": "104.211.209.102",
+	  "mosip.kernel.email.min-length": "7",
+	  "mosip.kernel.uin.length.conjugative-even-digits-limit": "3",
+	  "mosip.kernel.rid.machineid-length": "5",
+	  "mosip.kernel.prid.repeating-block-limit": "3",
+	  "mosip.kernel.vid.length.repeating-block-limit": "2",
+	  "mosip.kernel.rid.length": "29",
+	  "mosip.kernel.uin.restricted-numbers": "786,666",
+	  "mosip.kernel.keygenerator.asymmetric-algorithm-name": "RSA ",
+	  "mosip.kernel.email.domain.special-char": "-",
+	  "mosip.kernel.vid.length.repeating-limit": "2",
+	  "mosip.kernel.uin.length.reverse-digits-limit": "5",
+	  "mosip.kernel.vid.not-start-with": "0,1",
+	  "mosip.kernel.registrationcenterid.length": "4",
+	  "mosip.kernel.phone.special-char": "+ -",
+	  "mosip.kernel.uin.uins-to-generate": "200000",
+	  "mosip.kernel.vid.length": "16",
+	  "mosip.kernel.uin.length.repeating-block-limit": "2",
+	  "mosip.kernel.uin.length.sequence-limit": "3",
+	  "mosip.kernel.keygenerator.symmetric-algorithm-length": "256",
+	  "mosip.kernel.keygenerator.symmetric-algorithm-name": "AES",
+	  "mosip.kernel.crypto.symmetric-algorithm-name": "AES",
+	  "mosip.kernel.virus-scanner.port": "3310",
+	  "mosip.kernel.rid.centerid-length": "5",
+	  "mosip.kernel.uin.length.digits-limit": "5",
+	  "mosip.kernel.rid.timestamp-length": "14",
+	  "mosip.kernel.vid.length.sequence-limit": "3",
+	  "mosip.kernel.keygenerator.asymmetric-algorithm-length": "2048",
+	  "mosip.kernel.uin.min-unused-threshold": "100000",
+	  "auth.role.prefix": "ROLE_",
+	  "auth.server.validate.url": "https://integ.mosip.io/authmanager/validate_token",
+	  "mosip.kernel.prid.length": "14",
+	  "mosip.kernel.syncdata.registration-center-config-file": 
+			"registration-${spring.profiles.active}.properties",
+	  "mosip.kernel.crypto.asymmetric-algorithm-name": "RSA",
+	  "mosip.kernel.uin.length": "12",
+	  "mosip.kernel.phone.max-length": "15",
+	  "mosip.kernel.prid.repeating-limit": "2",
+	  "mosip.kernel.tokenid.length": "36",
+	  "mosip.kernel.MISPid.length": "4",
+	  "mosip.kernel.syncdata.global-config-file": "application-${spring.profiles.active}.properties",
+	  "mosip.kernel.prid.not-start-with": "0,1",
+	  "mosip.kernel.tokenid.sequence-limit": "3",
+	  "mosip.kernel.uin.length.repeating-limit": "2",
+	  "mosip.kernel.data-key-splitter": "#KEY_SPLITTER#"
+    }
+  }
 }
 ```
 
-### GET /roles
-
+## GET /roles
 This service will return back the all roles of the applications. 
 
-#### Resource URL
-<div>https://mosip.io/v1/syncdata/roles </div>
+### Resource URL
+`https://mosip.io/v1/syncdata/roles `
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 -NA-
 
-#### Request
+### Request
 N/A
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: all roles of the application
+### Responses:
+
+#### Success Response:
+**Status code: '200'**
+
+##### Description: all roles of the application
 ```JSON
 {
   "id": "string",
@@ -2372,52 +2319,50 @@ N/A
       "message": "string"
     }
   ],
-"response": {
-	   "roles": [
-		  {
-		  "roleId": "REGISTRATION_ADMIN",
-		  "roleName": "REGISTRATION_ADMIN",
-		  "roleDescription": "Registration administrator"
-		},
-		{
-		  "roleId": "MISP",
-		  "roleName": "MISP",
-		  "roleDescription": "Trusted Service Provider"
-		}
-	  ]
-	}
+  "response": {
+    "roles": [
+	  {
+		"roleId": "REGISTRATION_ADMIN",
+		"roleName": "REGISTRATION_ADMIN",
+		"roleDescription": "Registration administrator"
+	  },
+	  {
+		"roleId": "MISP",
+		"roleName": "MISP",
+		"roleDescription": "Trusted Service Provider"
+	  }
+	] 
+  }
 }		
 ```
 
-### GET /userdetails/{registrationcenterid} 
-
+## GET /userdetails/{registrationcenterid} 
 This service will return back the list of users and its role-mapping based on the registration-center-id. 
 
-#### Resource URL
-<div>https://mosip.io/v1/syncdata/userdetails/{registrationcenterid} </div>
+### Resource URL
+`https://mosip.io/v1/syncdata/userdetails/{registrationcenterid} `
 
-
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 -NA-
 
-#### Request
-<div>https://mosip.io/v1/syncdata/userdetails/110011 </div>
+### Request
+`https://mosip.io/v1/syncdata/userdetails/110011 `
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: list of users and role-mapping 
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: list of users and role-mapping 
 ```JSON
-
 {
   "id": "string",
   "version": "string",
@@ -2429,54 +2374,53 @@ Name | Required | Description | Default Value | Example
       "message": "string"
     }
   ],
-"response": {
-	   "userDetails": [
-		 {
-		  "userName": "110001",
-		  "mail": "user@mosip.com",
-		  "mobile": "987654321",
-		  "langCode": null,
-		  "userPassword": "e1NIQTI1Nn05SmN0UmJRb01OR0FOZzhxSzE2U0hsOW5xaGl0Q2VsTjBjME1CQi90RXlrPQ==",
-		  "name": "user",
-		  "roles": [
-			"REGISTRATION_ADMIN"
-		  ]
-		}
-	  ]
-	}
+  "response": {
+    "userDetails": [
+	  {
+		"userName": "110001",
+		"mail": "user@mosip.com",
+		"mobile": "987654321",
+		"langCode": null,
+		"userPassword": "e1NIQTI1Nn05SmN0UmJRb01OR0FOZzhxSzE2U0hsOW5xaGl0Q2VsTjBjME1CQi90RXlrPQ==",
+		"name": "user",
+		"roles": [
+		  "REGISTRATION_ADMIN"
+		]
+	  }
+	]
+  }
 }	
 ```
-### GET /publickey/{applicationId}
 
-
+## GET /publickey/{applicationId}
 This service will provide the public key for the specific application fetched from key manager. 
 
-#### Resource URL
-<div>https://mosip.io/v1/syncdata/publickey/{applicationId}</div>
+### Resource URL
+`https://mosip.io/v1/syncdata/publickey/{applicationId}`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description |  Example
 -----|----------|-------------|--------
 applicationId |Yes|Id of the application| REGISTRATION,IDA
 referenceId|No|Id of the Machine/MISP|
 timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
 
-#### Request
-<div>https://mosip.io/v1/syncdata/publickey/REGISTRATION?timeStamp=2018-12-09T06%3A39%3A03.683Z </div>
+### Request
+`https://mosip.io/v1/syncdata/publickey/REGISTRATION?timeStamp=2018-12-09T06%3A39%3A03.683Z `
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: public key for the specified application
+### Responses:
+
+#### Success Response:
+**Status code: '200'**
+
+##### Description: public key for the specified application
 ```JSON
-
 {
   "id": "string",
   "version": "string",
@@ -2488,39 +2432,35 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
       "message": "string"
     }
   ],
-"response": {
-		  "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwUAubI0cMDZMlalDYbzZj4G2UrWY0QDtmZQyqU_ER5CA1gbxlHDQIesm1DVyp6kf1sG-RcosKPqKIhe9vKLPx5pzQXinGdl_8e5bkPpg2RLlDoNju1ycohPrCk0VOd4eNU90-SRJZH_62QE1_MG2yIohI7e7cuC93Q9SHMD8jmJ7DX2zTui4zbo-c5g7vFAtzDgxJg0vSPGbap682xkWZNgzRA_ctrnHF_9_JMzP_6Equ8E_g5BaI3jkWnVmDNjDzzseBH9zHpfbx6wNYrzQZy8iqqywbUtbHWtM0ALkH7nLi4atVbL6a-ryFt6Tq7qfGzYhLtWN47t4GxwyOJC99QIDAQAB",
-		  "issuedAt": "2018-01-01T10:00:00",
-		  "expiryAt": "2018-12-10T06:12:51.994"
-	    }
+  "response": {	   			
+	"publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwUAubI0cMDZMlalDYbzZj4G2UrWY0QDtmZQyqU_ER5CA1gbxlHDQIesm1DVyp6kf1sG-RcosKPqKIhe9vKLPx5pzQXinGdl_8e5bkPpg2RLlDoNju1ycohPrCk0VOd4eNU90-SRJZH_62QE1_MG2yIohI7e7cuC93Q9SHMD8jmJ7DX2zTui4zbo-c5g7vFAtzDgxJg0vSPGbap682xkWZNgzRA_ctrnHF_9_JMzP_6Equ8E_g5BaI3jkWnVmDNjDzzseBH9zHpfbx6wNYrzQZy8iqqywbUtbHWtM0ALkH7nLi4atVbL6a-ryFt6Tq7qfGzYhLtWN47t4GxwyOJC99QIDAQAB",
+	"issuedAt": "2018-01-01T10:00:00",
+	"expiryAt": "2018-12-10T06:12:51.994"
+  }
 }	
 ```
 
-### POST /tpm/publickey
-
+## POST /tpm/publickey
 This service will upload the public key corresponding to a particular machine which are used in the MOSIP platform. This service will be used specifically in the Registration Client machines. 
 
-#### Resource URL
-<div>https://mosip.io/v1/syncdata/tpm/publickey </div> TODO
+### Resource URL
+`https://mosip.io/v1/syncdata/tpm/publickey ` TODO
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Request format | application/json
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 machineName |Yes|Name of the machine| | MDLGE6273
 publickey |Yes|Base 64 encoded Public key of the passed machine| | 
 
-
-#### Request
-
-```
+### Request
+```JSON
 {
   "id": "string",
   "metadata": {},
@@ -2533,13 +2473,13 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
 }
 ```
 
+### Responses
 
+#### Success Response
+**Status code: '200'**
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: The public key had been mapped to the machine
-```
+##### Description: The public key had been mapped to the machine
+```JSON
 {
   "id": "mosip.kernel.sync.publickeytomachine",
   "version": "1.0",
@@ -2551,15 +2491,13 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
       "message": "string"
     }
   ],
- "response": {
-	    "keyIndex": "ThumbprintOfThePublickey"
-	}
+  "response": {
+	"keyIndex": "ThumbprintOfThePublickey"
+  }
 }
-
 ```
 
-##### Error Response:
-
+#### Error Response:
 ```JSON
 {
   "id": "string",
@@ -2572,11 +2510,11 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
       "message": "string"
     }
   ],
-"response": null
+  "response": null
 }		
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|----------|-------------
 KER-SNC-100 | Error occurred while parsing lastUpdated timesatamp | last updated parse exception
@@ -2639,26 +2577,22 @@ KER-SNC-154 | Error occured while parsing the response | SYNC  JOB  DEF  Parse E
 
 
 # Applicant type (Public)
-
 These set of services does various operations regarding the applicant type.
-
 * [GET /applicanttype/getApplicantType](#get-applicanttypegetApplicantType)
 
-
-### GET /applicanttype/getApplicantType
-
+## GET /applicanttype/getApplicantType
 This service finds the Applicant type for the combination of Individual type code,Gender code ,DOB ,Biometric available and Language code. If there is a combination entry exists for these combinations, the corresponding Applicant Type code is returned. 
 
-#### Resource URL
-<div>https://mosip.io/v1/applicanttype/getApplicantType</div>
+### Resource URL
+`https://mosip.io/v1/applicanttype/getApplicantType`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 individualTypeCode|Yes|The code of the individual type| -NA- |INDTYP_002
@@ -2667,7 +2601,7 @@ dateofbirth|Yes|Date of birth in UTC standard ISO8601 format| -NA- |2008-10-04T0
 biometricAvailable|No|Is the biometric details available| -NA- |true
 languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
 
-#### Request
+### Request
 ```JSON
 {
   "id": "string",
@@ -2693,15 +2627,16 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
         "value": false
       }
     ]
-
-	}
+  }
 }
 ```
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: applicant type code fetched successfully
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: applicant type code fetched successfully
 ```JSON
 {
   "id": "string",
@@ -2709,13 +2644,13 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
   "metadata": {},
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
-"response" : {
-		"applicationtypecode": "002"
-	}
+  "response" : {
+	"applicationtypecode": "002"
+  }
 }
 ```
 
-##### Failure Response:
+#### Failure Response:
 ```JSON
 {
   "id": "string",
@@ -2728,11 +2663,11 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
       "message": "string"
     }
   ],
-"response" : null
+  "response" : null
 }
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|----------|-------------
 KER-MSD-147 | Applicant Type data does not exist | No Application Found
@@ -2741,7 +2676,7 @@ KER-MSD-148 | One or more input parameter is invalid or does not exist | Invalid
 
 # OTP Manager (Private)
 
-### POST OTP Generator
+## POST OTP Generator
 This component facilitates generation of OTP for various purposes. EG: Login in Pre-registration
 
 The OTP Generator component will receive a request to generate OTP, validate if the OTP generation request is from an authorized source, call OTP generator API with the input parameters (Key), receive the OTP from the OTP generator API which is generated based on the OTP generation policy and respond to the source with the OTP.
@@ -2749,10 +2684,9 @@ The OTP Generator component will receive a request to generate OTP, validate if 
 The OTP Generator can also reject a request from a blocked/frozen account and assign a validity to each OTP that is generated, based on the defined policy
 
 ### Resource URL
-### `POST /generate`
+`POST /generate`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2763,25 +2697,24 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 key |Yes|Key| | 9820173642
 
+### Request
+`v1/otpmanager/otp/generate`
 
-
-### Example Request
-
-v1/otpmanager/otp/generate
-
-```
+```JSON
 {
   "id": "string",
   "version": "string",
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-	"request": {
-		"key": "9820173642"
-	}	
+  "request": {
+	"key": "9820173642"
+  }
 }
 ```
-### Example:
-##### Success Response
+
+### Response
+
+#### Success Response
 ```JSON
 {
   "id": "string",
@@ -2789,10 +2722,10 @@ v1/otpmanager/otp/generate
   "metadata": {},
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
-"response": {
-	  "otp": "849004",
-	  "status": "GENERATION_SUCCESSFUL"
-	   }
+  "response": {
+    "otp": "849004",
+	"status": "GENERATION_SUCCESSFUL"
+  }
 }
 ```
 
@@ -2809,11 +2742,11 @@ v1/otpmanager/otp/generate
       "message": "string"
     }
   ],
-"response": null
+  "response": null
 }
 ```
 
-### Validator
+## OTP Validator
 This component facilitates basic validation of an OTP. 
 
 This includes: Receiving a request for OTP validation with required input parameters (Key), Validating the pattern of OTP generated based on defined policy, validating if the OTP is active/inactive and responding to the source with a response (Valid/Invalid)
@@ -2821,7 +2754,7 @@ This includes: Receiving a request for OTP validation with required input parame
 This component also facilitates deletion of every successfully validated OTP when consumed and freezing an account for exceeding the number of retries/wrong input of OTP. 
 
 ### Resource URL
-### `GET /validate`
+`GET /validate`
 
 ### Resource details
 
@@ -2836,12 +2769,11 @@ Name | Required | Description | Default Value | Example
 key |Yes|Key| | 9820173642
 otp|Yes|OTP| | 123456
 
-### Example Request
+### Request
+`v1/otpmanager/validate?key=9820173642&otp=123456`
 
-v1/otpmanager/validate?key=9820173642&otp=123456
-
-### Example Response
-```
+### Response
+```JSON
 {
   "id": "string",
   "version": "string",
@@ -2853,14 +2785,14 @@ v1/otpmanager/validate?key=9820173642&otp=123456
       "message": "string"
     }
   ],
-"response": {
-	  "status": "success",
-	  "message": "VALIDATION SUCCESSFUL"
-	   }
+  "response": {
+	"status": "success",
+	"message": "VALIDATION SUCCESSFUL"
+  }
 }	
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|----------|-------------
 KER-OTG-001 | Key length should be in the range of 3-64. | Illegal Key Input

@@ -18,8 +18,8 @@ Includes Functional requirements, Process flows, Architecture and High level des
 * [ID Authentication](https://github.com/mosip/id-authentication/tree/master/design)
 * [Commons](https://github.com/mosip/commons/tree/master/design)
 
-#### Test cases
-* [Functional Test Case](https://github.com/mosip/mosip-functional-tests)
+### Test cases
+* [Functional Test Case](https://github.com/mosip/mosip-functional-tests/tree/0.9.0)
 
 ## Key Points 
 |Key Points|	Details|
@@ -40,7 +40,7 @@ Includes Functional requirements, Process flows, Architecture and High level des
 |Transliteration|	ICU4J (Library with French, Arabic languages)|
 
 ## Code 
-The [code](https://github.com/mosip/) and [automation tests](https://github.com/mosip/mosip-functional-tests) are available on GitHub. The code needs to be built and deployed as per the procedure documented in [**Building And Deploying MOSIP**](Build-and-Deploy.md). We will actively support System Integrators during their first deployment.
+The [code](https://github.com/mosip/mosip-platform-mt/tree/0.9.0) and [automation tests](https://github.com/mosip/mosip-functional-tests/tree/0.9.0) are available on GitHub. The code needs to be built and deployed as per the procedure documented in [**Building And Deploying MOSIP**](Build-and-Deploy.md). We will actively support System Integrators during their first deployment.
 
 ## Tests 
 **Testing Scope**
@@ -54,7 +54,7 @@ The [code](https://github.com/mosip/) and [automation tests](https://github.com/
 |Test Methodology| <li>  Manual <li>  Test Automation|
 |Types of testing|<li>	 Smoke <li> Functional <li>  Integration <li> 	Regression|
 |Testing Levels|![Image](_images/test_rig_automation/image1.jpg) |
-|Configuration Parameters tested for| Refer to QA env properties file with suffix ‘qa’ in the filename, at [**Link**](https://github.com/mosip/mosip-config)|
+|Configuration Parameters tested for| Refer to QA env properties file with suffix ‘qa’ in the filename, at [**Link**](https://github.com/mosip/mosip-config-mt/tree/master/config)|
 |Browser Support|**Pre-Registration**    <li> Chrome – 74.0.3729.169|
 |OS Support|**Registration Client**    <li> Windows 10|
 |Language Support|French, Arabic, English|

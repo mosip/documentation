@@ -1,32 +1,27 @@
-## Table Of Content
 
-- [Scope](#scope-)
-- [Documentation](#documentation-)
-- [Key Points](#key-points-)
-- [Code](#code-)
-- [Test Reports](#test-reports-)
-  * [1. In scope](#1-in-scope-)
-  * [2. Not in scope](#2-out-of-scope--mosip-v01215-platform-)
-  * [3. Executive Summary – Consolidated Quality Status](#3-executive-summary--consolidated-quality-status-)
-  * [4. Types of Testing](#4-types-of-testing-)
-  * [5. Test Execution Summary](#5-test-execution-summary-)
-  * [6. Automation Test Reports](#6-automation-test-reports-)
-- [Known Issues](#known-issues-)
-- [Support Process (To Be Determined)](#support-process-to-be-determined-)
-- [List Of Acronyms](#list-of-acronyms-)
-## Scope [**[↑]**](#table-of-content)
+## Scope 
 This release is with **proxy biometrics**. This means that the implementation of Print system, SDK, MDM (MOSIP  Device Manager), ABIS (Automated Biometrics Identification System) and Biometric devices has been stubbed. Also, this version is tested for functionality. Non-functional requirements (Performance, Scale and Security) will be taken up in subsequent releases.
 
 * Features included – Pre-Registration, Registration Client, Registration Processor, ID Authentication, Reference GUI implementation of Pre-Registration and Registration Client. 
 * Features not included – Administration, Partner Management, Resident Services
-## Documentation [**[↑]**](#table-of-content)
-### 1. Platform Documentation 
-Includes Functional requirements, Process flows, Architecture and High level design, Getting started and Deployment guide, Developer documentation etc.  
-   [**Link to Platform Documentation**](Platform-Documentation)
-### 2. Detailed Documentation
-[**Low Level design**](/mosip/mosip/tree/0.12.0/docs/design) and [**Test cases excel**](/mosip/mosip/blob/master/docs/testing/Test%20automation/MOSIP-TCs-V1.0xlsx.xlsx)
+## Documentation
 
-## Key Points [**[↑]**](#table-of-content)
+### Platform Documentation 
+Includes Functional requirements, Process flows, Architecture and High level design, Getting started and Deployment guide, Developer documentation etc.  
+   [**Link to Platform Documentation**](https://mosipdocs.gitbook.io/platform/)
+
+### Detailed Documentation
+#### Low Level design
+* [Admin](https://github.com/mosip/admin-services/tree/master/design)
+* [Pre Registration](https://github.com/mosip/pre-registration/tree/master/design)
+* [Registration](https://github.com/mosip/registration/tree/master/design)
+* [ID Authentication](https://github.com/mosip/id-authentication/tree/master/design)
+* [Commons](https://github.com/mosip/commons/tree/master/design)
+
+### Test cases
+* [Functional Test Case](https://github.com/mosip/mosip-functional-tests)
+
+## Key Points 
 
 |Key Points|	Details|
 |----|----|
@@ -45,12 +40,12 @@ Includes Functional requirements, Process flows, Architecture and High level des
 |Supporting key based digital signatures, not using digital certificates||	
 |Transliteration|	ICU4J (Library with French, Arabic languages)|
 
-## Code [**[↑]**](#table-of-content)
-The code and automation tests are available on [**GitHub**](/mosip/mosip/tree/0.12.15). The code needs to be built and deployed as per the procedure documented in [**Building And Deploying MOSIP**](Platform-Documentation#10-building-and-deploying-mosip). We will actively support System Integrators during their first deployment.
+## Code 
+The code and automation tests are available on [**GitHub**](https://github.com/mosip/mosip-platform-mt/tree/0.12.15). The code needs to be built and deployed as per the procedure documented in [**Building And Deploying MOSIP**](Platform-Documentation#10-building-and-deploying-mosip). We will actively support System Integrators during their first deployment.
 
-## Tests [**[↑]**](#table-of-content)
+## Tests 
 **Testing Scope**
-#### 1. In Scope [**[↑]**](#table-of-content)
+#### 1. In Scope 
 
 |Title	|Description|
 |------|------|
@@ -64,14 +59,14 @@ The code and automation tests are available on [**GitHub**](/mosip/mosip/tree/0.
 |OS Support|**Registration Client**    <li> Windows 10|
 |Language Support|French, Arabic, English|
 
-#### 2. Not in Scope [**[↑]**](#table-of-content)
+#### 2. Not in Scope 
 
 |Title|	Description|
 |------|------|
 |NFR Testing| <li> Scalability Testing <li> Performance Testing <li> Security Testing|
 |Configuration Testing|<li> Testing is done for one set of approved production configuration <li> Changing the configuration parameters for various values (boundary values) and testing the impact of each such value on the platform code will be taken up in subsequent releases.|
 
-#### 3. Executive Summary – Consolidated Quality Status [**[↑]**](#table-of-content)
+#### 3. Executive Summary – Consolidated Quality Status 
 
 |Sl. No.|	Module / Activity|Test Methodology|	Test Status|
 |------|------|------|------|
@@ -91,7 +86,7 @@ The code and automation tests are available on [**GitHub**](/mosip/mosip/tree/0.
 |14|Kernel API integration|	<li> Tested Manually <li> Test Automation|	PASS|
 |15|	End to end functional testing|	<li> Tested Manually|PASS|	
 
-#### 4. Types of Testing [**[↑]**](#table-of-content)
+#### 4. Types of Testing 
 
 |Testing Type| Description|
 |------|------|
@@ -100,18 +95,18 @@ The code and automation tests are available on [**GitHub**](/mosip/mosip/tree/0.
 |Integration Testing|Tests to ensure the inter module functionality works fine and in accordance with the integration requirements|
 |Regression Testing|Tests to ensure that any change doesn't break existing functionality|
 	
-#### 5. Test Execution Summary [**[↑]**](#table-of-content)
+#### 5. Test Execution Summary 
 ![Image](_images/test_rig_automation/Capture.JPG)  
 
-#### 6. Automation Test Reports [**[↑]**](#table-of-content)
+#### 6. Automation Test Reports 
 [**Automation report run on 0.12.15 on QA env**](/mosip/mosip/tree/master/docs/testing/Automation%20Test%20Reports)
-## Known Issues [**[↑]**](#table-of-content)
+## Known Issues 
 ![Image](_images/test_rig_automation/image4.jpg) 
 
-## Support Process (To Be Determined) [**[↑]**](#table-of-content)
+## Support Process (To Be Determined) 
 Process to be followed for support required, escalation matrix, etc.
 
-## List Of Acronyms [**[↑]**](#table-of-content)
+## List Of Acronyms 
 [**Refer to List Of Acronyms**](Platform-Documentation#12-list-of-acronyms)
 
 
