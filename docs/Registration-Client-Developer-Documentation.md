@@ -5,7 +5,7 @@ This document guide the developer to find the traceability between functionality
 
 It doesn't detail about each methods level information since that are covered in Javadoc of each component.   
 
-## Functionality Vs Technical Component mapping: 
+## Functionality Vs technical component mapping
 
 |**Functionality:**| Login with UserName and Password/ OTP/ BIO  |  
 |:------:|-----|  
@@ -171,7 +171,7 @@ These configuration would be downloaded to the client machine through the 'confi
   - {registration property key : 'mosip.registration.max_age'}	
 
 
-## Table Detail
+## Table Details
 Below find the list of tables used in Registration client application. Based on use cases, the table data gets updated during either sync process or transaction in local machine.  
 There are few jobs are configured to clean the transactions histories from local tables and also pushing the audit data to server.  
 
@@ -225,7 +225,7 @@ There are few jobs are configured to clean the transactions histories from local
 |46.|pre_registration_list| It contains list of Pre Registration details[Pre Registration Id, Status..] | During Pre Registration Sync |
 |47.|audit_log_control| It contains data of Audit logging[From Time, To Time..] | During local transaction. | 
 
-## UI - Labels and messages :  
+## UI - labels and messages  
 The UI specific labels and messages are maintained in the language specific property file. Based on the primary and secondary language the respective bundle would be loaded during runtime and displayed in the screen. 
    
    messages_en.properties	- Messages are in English language.   
@@ -235,7 +235,7 @@ The UI specific labels and messages are maintained in the language specific prop
    labels_ar.properties     - Labels are in Arabic language.  
    labels_fn.properties     - Labels are in French language.
 
-## Error code and Description :
+## Error code and description
 Below find the list of error code and description which are thrown from application during the process.  
 
 |**Class Name**| **Error Codes** | **Description**|
