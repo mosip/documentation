@@ -96,7 +96,7 @@
     * [MOSIP REST API guidelines](MOSIP-REST-API-guidelines.md)
     * [Partner Management Functionality](Partner-Management-Functionality.md)
     * [Pre Registration Functionality](Pre-Registration-Functionality.md)
-    * [Reg client implementation](Reg-client-implementation.md)
+    * [Registration Client Developer Documentation](Registration-Client-Developer-Documentation.md)
     * [Registration Client Biometrics Service Integration](Registration-Client-Biometrics-Service-Integration.md)
     * [Registration Client Setup](Registration-Client-Setup.md)
     * [Registration Client UI Developer Document](Registration-Client-UI-Developer-Document.md)
