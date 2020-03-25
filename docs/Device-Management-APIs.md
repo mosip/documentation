@@ -537,9 +537,12 @@ If any request comes after 5 mins, then we would throw an exception.
 The response received is grouped into three parts as Header, Payload and Signature which is in JWT (Java Web Token) format.
 	
 ##### Header
-* Encoded Header: 
+Encoded Header: 
+
 ```eyJhbGciOiJSUzI1NiIsInR5cGUiOiJKV1MifQ==```
-* Decoded Header: 
+
+Decoded Header: 
+
 ```JSON
 {
   "alg": "RS256",
@@ -548,10 +551,13 @@ The response received is grouped into three parts as Header, Payload and Signatu
 ```
 
 ##### Payload
-* Encoded Payload: 
+Encoded Payload: 
+
 ```	eyJzdGF0dXMiOiJSRUdJU1RFUkVEIiwiZGlnaXRhbElkIjoiZXlKelpYSnBZV3hPYnlJNklqRTRNREV4TmpBNU9USWlMQ0prWlhacFkyVlFjbTkyYVdSbGNpSTZJbE5aVGtOQ1dWUkZJaXdpWkdWMmFXTmxVSEp2ZG1sa1pYSkpaQ0k2SWxOWlRrTkNXVlJGTGsxRE1ERkJJaXdpYldGclpTSTZJazFETURGQklpd2liVzlrWld3aU9pSlRUVWxFUTB3aUxDSmtZWFJsVkdsdFpTSTZJakl3TWpBdE1ERXRNVE5VTURjNk1qQTZOREl1TVRrMVdpSXNJblI1Y0dVaU9pSkdhVzVuWlhKd2NtbHVkQ0lzSW5OMVlsUjVjR1VpT2lKVGFXNW5iR1VpZlEiLCJkZXZpY2VDb2RlIjoiOGNkNDI4NjQtMmNkYy00MDY3LThkMTEtNDBiMjVmZjhjNzYwIiwiZW52IjoibG9jYWwiLCJ0aW1lU3RhbXAiOiIyMDIwLTAxLTEzVDEyOjU1OjI5LjkxOFoifQ==
 ```
-* Decoded Payload: 
+
+Decoded Payload: 
+
 ```JSON
 {
   "status": "REGISTERED",
@@ -561,11 +567,15 @@ The response received is grouped into three parts as Header, Payload and Signatu
   "timeStamp": "2020-01-13T12:55:29.918Z"
 }
 ```
-* Digital ID extracted from payload will be unsigned and will be base64 encoded.
-	* Encoded digital ID:
+
+Digital ID extracted from payload will be unsigned and will be base64 encoded.
+Encoded digital ID:
+
 ```	eyJzZXJpYWxObyI6IjE4MDExNjA5OTIiLCJkZXZpY2VQcm92aWRlciI6IlNZTkNCWVRFIiwiZGV2aWNlUHJvdmlkZXJJZCI6IlNZTkNCWVRFLk1DMDFBIiwibWFrZSI6Ik1DMDFBIiwibW9kZWwiOiJTTUlEQ0wiLCJkYXRlVGltZSI6IjIwMjAtMDEtMTNUMDc6MjA6NDIuMTk1WiIsInR5cGUiOiJGaW5nZXJwcmludCIsInN1YlR5cGUiOiJTaW5nbGUifQ
 ```
-	* Decoded Digital ID: 
+
+Decoded Digital ID: 
+
 ```JSON   
 {
   "serialNo": "1801160992",
@@ -580,7 +590,8 @@ The response received is grouped into three parts as Header, Payload and Signatu
 ```
 
 ##### Signed Response
-* Signed response from signature API:
+Signed response from signature API:
+
 ```	dkd3Mlo2TStDT2JpM1lHY2Q1OFNJRkJ6T0E5bFZ6dUFlZnN3NHhQZzEzWE42LzAvWVZ6Qm0yNnpmZXFPRXdmWHNKQUN4aC9QNExuM2RHcjhSR2diZjEvRXgwNktCOEhhbEM1VjhPMFh4VGxmK3ZSZFlJeTZhbFh0cS8rY0s0VjRSYUpHYjVDL2kweHdzMFF3bHh0UEo4cFIvbnVrb1d5dzNNTmRDSkNZaVlGSkxVUUpKbnhyaEtYR3dvM1ZlcVNkaEYrMStjS1ZpSzFWSlQ5OHFsMjFhTUp0MGd4Wko1Rzg5V0lSbi9yTnU1Slg1N0c0dnNya1JhN3JEUURsNDI5dEdkT3RYYVJYK3dOb0FESmI5V0psOFlLOW5hUFkyNExkZ3FkOXRydEw2VUoyaTc5ek1Qclk0cjhIQWFQaXlxc0REQmRPVFdhanN5VmhOODFuU0JCQ0tBPT0=
 ```
 
@@ -618,7 +629,7 @@ MSD-RDS-001 | Time Stamp input is %s min after the current timestamp | When time
 MSD-RDS-001 | Time Stamp input is %s min before the current timestamp | When timestamp in device info is before the configured timestamp range
 
 
-## DELETE deregister
+## DELETE /deregister
 This service deregisters a device from the platform and also created a history record for the device.
 
 ### Resource URL
