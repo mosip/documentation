@@ -779,7 +779,7 @@ deviceServiceVersion | Yes | Device service version of the MDS | |
       "make": "MC01A",
       "model" : "TVSFD",
       "type": "Fingerprint",
-	  "subType": "Single"
+	  "subType": "Single",
       "dp": "Test Vendor",
       "dpId": "0e90bb45-cc9b-4521-9644-72755f6aa1e9",
       "dateTime": "2020-02-16T07:20:42.195Z"
@@ -881,7 +881,7 @@ timeStamp | Yes | Timestamp in local data time format of history table | |
       "make": "MC01A",
       "model": "TVSFD",
       "type": "Fingerprint",
-	  "subType": "Single"
+	  "subType": "Single",
       "dp": "Test Vendor",
       "dpId": "0e90bb45-cc9b-4521-9644-72755f6aa1e9",
       "dateTime": "2020-02-16T07:20:42.195Z"
