@@ -38,11 +38,11 @@
     $ git commit -m "[MOS-2346] Adding new upload feature in Pre registration module for POA documents"
     ```
 
-1. Once again makesure you are up-to-date with upstream repo as the upstream may have moved forward. 
+1. Once again ensure that you are up-to-date with upstream repo as it may have moved forward. 
     ```
     $ git pull upstream master 
     ```
-
+    
 1. Build and test your code.  Make sure it follows the coding guidelines.
 
 1. Push to your forked repo (origin).
