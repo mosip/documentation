@@ -87,7 +87,7 @@ isActive | Yes | This field represents whether this entity is active or not| NA 
 	"errorCode": "KER-ATH-401",
 	"message": "Authentication Failed"
   }],
-  "response" : null
+  "response": null
 }
 ```
 **Response code: 200**
@@ -277,7 +277,7 @@ certAlias | Yes | This is the certificate alias of the vendor| NA | NA
 	"errorCode": "KER-ATH-401",
 	"message": "Authentication Failed"
   }],
-  "response" : null
+  "response": null
 }
 ```
 **Response code: 200**
@@ -373,7 +373,7 @@ id | Yes | This is the Unique ID that was generated for the foundational trust p
 	"errorCode": "KER-ATH-401",
 	"message": "Authentication Failed"
   }],
-  "response" : null
+  "response": null
 }
 ```
 **Response code: 200**
@@ -609,7 +609,7 @@ dkd3Mlo2TStDT2JpM1lHY2Q1OFNJRkJ6T0E5bFZ6dUFlZnN3NHhQZzEzWE42LzAvWVZ6Qm0yNnpmZXFP
 	"errorCode": "KER-ATH-401",
 	"message": "Authentication Failed"
   }],
-  "response" : null
+  "response": null
 }
 ```
 **Response code: 200**
@@ -659,7 +659,7 @@ deviceCode | Yes | This is the code of the device | NA | NA
   "metadata": {},
   "responsetime": "2020-02-16T07:20:42.195Z",
   "errors": null,
-  "response" : {
+  "response": {
 	"status": "success",
 	"message": "Device de-register successfully"
   }
@@ -678,7 +678,7 @@ deviceCode | Yes | This is the code of the device | NA | NA
 	"errorCode": "KER-ATH-401",
 	"message": "Authentication Failed"
   }],
-  "response" : null
+  "response": null
 }
 ```
 **Response code: 200**
@@ -712,7 +712,7 @@ status | Yes | This is the code of the device| NA | REGISTERED or RETIRED or REV
 	"metadata": {},
 	"responsetime": "2020-02-16T07:20:42.195Z",
 	"errors": null,
-	"response" : {
+	"response": {
 		"status": "success",
 		"message": "Device de-register successfully"
 	}
@@ -731,7 +731,7 @@ status | Yes | This is the code of the device| NA | REGISTERED or RETIRED or REV
 		"errorCode": "KER-ATH-401",
 		"message": "Authentication Failed"
 	}],
-	"response" : null
+	"response": null
 }
 ```
 **Response code: 200**
@@ -769,24 +769,24 @@ deviceServiceVersion | Yes | Device service version of the MDS | |
 ### Request
 ```JSON
 {
-  "id":"io.mosip.masterdata.device.validate",
-  "metadata":null,
-  "request":{
-    "deviceCode":"70959dd5-e45f-438a-9ff8-9b263908e572",
-    "deviceServiceVersion":"TestSwVersion1",
-    "digitalId":{
+  "id": "io.mosip.masterdata.device.validate",
+  "metadata": null,
+  "request": {
+    "deviceCode": "70959dd5-e45f-438a-9ff8-9b263908e572",
+    "deviceServiceVersion": "TestSwVersion1",
+    "digitalId": {
       "serialNo": "1801160992",
       "make": "MC01A",
-      "model" : "TVSFD",
+      "model": "TVSFD",
       "type": "Fingerprint",
-	  "subType": "Single",
+      "subType": "Single",
       "dp": "Test Vendor",
       "dpId": "0e90bb45-cc9b-4521-9644-72755f6aa1e9",
       "dateTime": "2020-02-16T07:20:42.195Z"
     }
   },
-  "version":"1.0",
-  "requesttime":"2020-02-16T16:34:22.890Z"
+  "version": "1.0",
+  "requesttime": "2020-02-16T16:34:22.890Z"
 }
 ```
 
@@ -870,25 +870,25 @@ timeStamp | Yes | Timestamp in local data time format of history table | |
 ### Request
 ```JSON
 {
-  "id":"io.mosip.masterdata.device.validate.history",
-  "metadata":null,
-  "request":{
-    "deviceCode":"70959dd5-e45f-438a-9ff8-9b263908e572",
-    "deviceServiceVersion":"TestSwVersion1",
-    "timestamp":"2020-02-16T07:20:42.195Z"
-    "digitalId":{
+  "id": "io.mosip.masterdata.device.validate.history",
+  "metadata": null,
+  "request": {
+    "deviceCode": "70959dd5-e45f-438a-9ff8-9b263908e572",
+    "deviceServiceVersion": "TestSwVersion1",
+    "timestamp": "2020-02-16T07:20:42.195Z"
+    "digitalId": {
       "serialNo": "1801160992",
       "make": "MC01A",
       "model": "TVSFD",
       "type": "Fingerprint",
-	  "subType": "Single",
+      "subType": "Single",
       "dp": "Test Vendor",
       "dpId": "0e90bb45-cc9b-4521-9644-72755f6aa1e9",
       "dateTime": "2020-02-16T07:20:42.195Z"
     }
   },
-  "version":"1.0",
-  "requesttime":"2019-08-21T16:34:22.890Z"
+  "version": "1.0",
+  "requesttime": "2019-08-21T16:34:22.890Z"
 }
 ```
 
@@ -902,7 +902,7 @@ timeStamp | Yes | Timestamp in local data time format of history table | |
   "metadata": {},
   "responsetime": "2020-02-16T07:20:42.195Z",
   "errors": null,
-  "response":  [
+  "response": [
     {
       "status": "Valid",
       "message": "Device details history validated successfully"
