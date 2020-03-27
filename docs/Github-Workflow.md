@@ -2,7 +2,7 @@
 1. Fork MOSIP repository of interest from 
     https://github.com/mosip/
 
-1. Clone the fork to your local machine. Example: 
+1. Clone the fork to your local machine. Eg: 
     ```
     $ git clone https://github.com/<your_github_id>/commons.git
     ```
@@ -33,7 +33,7 @@
     $ git pull upstream master 
     ```
 
-1. Once you are done with the work, commit your changes referring to Jira number in the commit message. Example:
+1. Once you are done with the work, commit your changes referring to Jira number in the commit message. Eg:
     ```
     $ git commit -m "[MOS-2346] Adding new upload feature in Pre registration module for POA documents"
     ```
