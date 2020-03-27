@@ -45,7 +45,7 @@
 
 1. Build and test your code.  Make sure it follows the coding guidelines.
 
-1. Push to your forked repo. 
+1. Push to your forked repo (origin).
     ``` 
     $ git push 
     ```
