@@ -6,25 +6,25 @@
     ```
     $ git clone https://github.com/<your_github_id>/commons.git
     ```
-1. Set upstream project as the original from where you forked: 
+1. Set upstream project as the original from where you forked.
     ```
     $ cd commons
     $ git remote add upstream https://github.com/mosip/commons.git
     ```
 
-1. Make sure you never directly push to upstream:
+1. Make sure you never directly push to upstream.
     ```
     $ git remote set-url --push upstream no_push
     ```
 
-1. Confirm the origin and upstream with: 
+1. Confirm the origin and upstream.
     ```
     $ git remote -v
     ```
 
 ## Code changes
 
-1. Create a new issue in [MOSIP Jira](https://mosip.atlassian.net/)
+1. Create a new issue in [MOSIP Jira](https://mosip.atlassian.net/).
 
 1. You may work on `master` or create a new branch.
 
