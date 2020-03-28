@@ -6,7 +6,7 @@
     ```
     $ git clone https://github.com/<your_github_id>/commons.git
     ```
-1. Set upstream project as the original from where you forked.
+1. Set upstream project as the original from where you forked. Eg:
     ```
     $ cd commons
     $ git remote add upstream https://github.com/mosip/commons.git
