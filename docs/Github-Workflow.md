@@ -1,3 +1,6 @@
+## Purpose
+The recommended Github work flow here is for developers to submit pull-requests to MOSIP open source repositories.  
+
 ## Setup
 1. Fork MOSIP repository of interest from 
     https://github.com/mosip/
