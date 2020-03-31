@@ -29,7 +29,7 @@ The recommended Github work flow here is for developers to submit code and docum
 
 1. Create a new issue in [MOSIP Jira](https://mosip.atlassian.net/).
 
-1. You may work on `master` or create a new branch.
+1. You may work on `master`, switch to a branch (like Release branch) or create a new branch.
 
 1. Make sure you are up-to-date with upstream repo. 
     ```
