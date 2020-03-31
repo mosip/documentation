@@ -53,7 +53,7 @@ The recommended Github work flow here is for developers to submit pull-requests 
     $ git push 
     ```
 
-1. Create a pull-request on your forked repo.
+1. Create a pull-request on your forked repo.  Direct the pull-request to `master` or any specific branch on upstream (like a Release branch).
 	
 1. Make sure the automatic tests on Github for your pull-request pass.
 
