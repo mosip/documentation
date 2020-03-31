@@ -33,7 +33,7 @@ The recommended Github work flow here is for developers to submit code and docum
 
 1. Make sure you are up-to-date with upstream repo. 
     ```
-    $ git pull upstream master 
+    $ git pull upstream <branch> 
     ```
 
 1. Once you are done with the work, commit your changes referring to Jira number in the commit message. Eg:
@@ -43,7 +43,7 @@ The recommended Github work flow here is for developers to submit code and docum
 
 1. Once again ensure that you are up-to-date with upstream repo as it may have moved forward. 
     ```
-    $ git pull upstream master 
+    $ git pull upstream <branch> 
     ```
     
 1. Build and test your code.  Make sure it follows the coding guidelines.
