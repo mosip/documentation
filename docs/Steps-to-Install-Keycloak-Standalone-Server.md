@@ -235,7 +235,7 @@ auth.server.admin.validate.url=${mosip.base.url}/v1/authmanager/authorize/admin/
 ### Kernel
 ```
 mosip.keycloak.base-url=https://<keycloak.domain>
-mosip.kernel.realm-id=<Mosip realm id> (EX mosip)
+mosip.kernel.realm-id=<Mosip realm id> (EX mosip, should always be in lowercase)
 mosip.kernel.open-id-url=${mosip.keycloak.base-url}/auth/realms/{realmId}/protocol/openid-connect/
 mosip.kernel.base-url=${mosip.keycloak.base-url}/auth/realms/{realmId}
 mosip.kernel.admin-url=${mosip.keycloak.base-url}/auth/admin/
