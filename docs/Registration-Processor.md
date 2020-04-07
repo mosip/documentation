@@ -6,7 +6,7 @@ Registration Processor processes the data (demographic and biometric) of an Indi
 Important considerations are as follows:
 
 * Once the packet is received on the server packets should not be lost.  
-* MOSIP defines and implement the basics registration packet processing flow. However, every country will have their own processing requirements  like integration with their existing ID system and fetch data for validation.  Registrataion processor provides options to add such stages.
+* MOSIP defines and implement the basic registration packet processing flow. However, every country will have their own processing requirements  like integration with their existing ID system and fetch data for validation.  Registrataion processor provides options to add such stages.
 * Registration processor has the capability to integrate with multiple ABIS providers.
 * Each processing stage is scalable independently based on the load.
 * Each stage in the processor is independent of other stages such that logic of a stage can be changed to improve efficiency without affecting the overall flow
