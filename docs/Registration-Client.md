@@ -1,5 +1,5 @@
 # Introduction
-Registration client application captures the demographic and biometric details of an individual along with supporting information (proof documents & information about parten/guardian/introducer) and packages the information in a secure way. The information packet is sent to the server in online or offline mode for processing. 
+Registration client application captures the demographic and biometric details of an individual along with supporting information (proof documents & information about parent/guardian/introducer) and packages the information in a secure way. The information packet is sent to the server in online or offline mode for processing. 
 
 Important considerations are as follows.  Registration client must provide the following:
 * **Secure** way of capturing an individual's demographic and biometric data. An individual's demographic and biometric data is private. So, ensuring security and privacy of the data during capture is very important. The captured data must be cryptographically secure such that the data cannot be tampered with. 
