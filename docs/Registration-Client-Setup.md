@@ -115,7 +115,8 @@ JDK 8u181 [Oracle] or later version to build the application.
    * Once download completed then communicate with TPM to decrypt the key{if TPM enabled}, which is used to decrypt the UI and service jars and start the application.   
    
 **Application Startup:**  
-   
+   * Once after application launches a reg.key,reg.pub,readme.txt will be created in your user.home directory with under .mosipkeys      folder.
+   * from readme.txt copy the KeyIndex:<key_index> and use it in machine create POST API.
    * User should initially be online to validate their authentication against the MOSIP server. Post which, the sync process would be initiated.     
    * Once the sync process completed then restart the application to pick the local configuration.  
    * User should perform the self onboarding before start using the application.  
