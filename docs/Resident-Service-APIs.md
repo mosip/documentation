@@ -475,7 +475,7 @@ request: demographics|N| Demographic data of an Individual| |
   "version": "v1",
   "responseTime": "2018-12-09T06:39:04.683Z",
   "response": {
-	"id": "989768897876565",
+    "id": "989768897876565",
     "message": "Notification has been sent to the provided contact detail(s)"
   },
   "errors": null
