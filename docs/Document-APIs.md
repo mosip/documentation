@@ -1178,6 +1178,7 @@ KER-MSD-092 | Error occurred while deleting Document Type details
 # Valid documents API
 
 * [GET /validdocuments/{languagecode}](#get-validdocumentslanguagecode)
+* [GET /validdocuments/{doccategorycode}/{languagecode}](#get-validdocumentsdocCategorycode)
 * [POST /validdocuments/search](#post-validdocumentssearch)
 * [POST /validdocuments/filtervalues](#post-validdocumentsfiltervalues)
 * [POST /validdocuments/map/{doccategorycode}/{doctypecode}](#post-validdocumentsmapdoccategorycodedoctypecode)
@@ -1234,6 +1235,72 @@ languagecode|Yes|Language code in ISO 639-2|-NA-|fra
 		}
 	  ]
 	}
+}
+```
+
+
+### Example Failure Response
+```JSON
+{
+  "id": "string",
+  "version": "string",
+  "metadata": {},
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "errors": [
+	{
+		"errorCode": "KER-VLDDOC-001",
+		"message": "Mandatory fields are missing"
+	}  
+  ],
+  "response": null
+}
+```
+
+## GET /validdocuments/{languagecode}
+
+### Resource URL
+
+`GET /validdocuments/{docCategoryCode}/{languagecode}`
+
+### Resource details
+
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+languagecode|Yes|Language code in ISO 639-2|-NA-|fra
+
+### Example Request
+```JSON
+-NA-
+```
+
+### Example Success Response
+```JSON
+{
+  "errors": [
+    {
+      "errorCode": "string",
+      "message": "string"
+    }
+  ],
+  "id": "string",
+  "metadata": {},
+  "response": [
+    {
+      "docCategoryCode": "string",
+      "docTypeCode": "string",
+      "docTypeName": "string",
+      "isActive": true,
+      "langCode": "string"
+    }
+  ],
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "version": "string"
 }
 ```
 

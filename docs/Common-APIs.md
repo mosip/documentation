@@ -3091,6 +3091,7 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   "response": {
   "filters": [
 	{
+		"fieldCode": "string"
 		"fieldID": "string",
 		"fieldValue": "string"
 	}
@@ -3379,9 +3380,165 @@ KER-MSD-XXX | Error occured while deleting Language | language delete exception
 
 # Individual Types API
 
+* [POST /individualtypes](#post-individualtypes)
+
+* [PUT /individualtypes](#post-individualtypes)
+
 * [GET /individualtypes](#get-individualtypes)
 
 * [GET /individualtypes/all](#get-individualtypes-all)
+
+# POST /individualtypes
+Master data is required across the platform. 
+
+This service will create the list of individualtypes which are used in the MOSIP platform. 
+
+### Resource URL
+### `POST /individualtypes`
+
+### Resource details
+
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+code|Yes|code of individualtype| |
+name|Yes | name of individualtype| |
+
+### Example Request
+```JSON
+{
+  "id": "string",
+  "metadata": {},
+  "request": {
+    "code": "string",
+    "isActive": true,
+    "langCode": "eng",
+    "name": "string"
+  },
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
+}
+```
+### Example Response
+```JSON
+{
+  "id": "string",
+  "version": "string",
+  "responsetime": "2020-04-10T03:15:33.555Z",
+  "metadata": null,
+  "response": {
+    "isActive": true,
+    "createdBy": "string",
+    "createdDateTime": "2020-04-10T03:15:33.565Z",
+    "updatedBy": null,
+    "updatedDateTime": null,
+    "isDeleted": null,
+    "deletedDateTime": null,
+    "code": "string",
+    "langCode": "eng",
+    "name": "string"
+  },
+  "errors": null
+}
+```
+### Response codes
+201
+
+Description: Created
+
+400
+
+Description: Bad request
+
+401
+
+Description: Unauthorized
+
+403
+
+Description: Forbidden
+
+
+# PUT /individualtypes
+Master data is required across the platform. 
+
+This service will update the list of individualtypes which are used in the MOSIP platform. 
+
+### Resource URL
+### `PUT /individualtypes`
+
+### Resource details
+
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+code|Yes|code of individualtype| |
+name|Yes | name of individualtype| |
+
+### Example Request
+```JSON
+{
+  "id": "string",
+  "metadata": {},
+  "request": {
+    "code": "string",
+    "isActive": false,
+    "langCode": "eng",
+    "name": "string"
+  },
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
+}
+```
+### Example Response
+```JSON
+{
+  "id": "string",
+  "version": "string",
+  "responsetime": "2020-04-10T03:21:09.959Z",
+  "metadata": null,
+  "response": {
+    "isActive": false,
+    "createdBy": "string",
+    "createdDateTime": "2020-04-10T03:15:33.565Z",
+    "updatedBy": "string",
+    "updatedDateTime": "2020-04-10T03:21:09.996Z",
+    "isDeleted": null,
+    "deletedDateTime": null,
+    "code": "string",
+    "langCode": "eng",
+    "name": "string"
+  },
+  "errors": null
+} 
+```
+### Response codes
+201
+
+Description: Created
+
+400
+
+Description: Bad request
+
+401
+
+Description: Unauthorized
+
+403
+
+Description: Forbidden
+
 
 # GET /individualtypes
 

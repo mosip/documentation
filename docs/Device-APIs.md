@@ -39,6 +39,7 @@ This API is used by the Administrator Portal UI to populate filter dropdowns on 
 # Devices Master API
 
 * [POST /devices](#post-devices)
+* [PUT /devices](#put-devices)
 * [GET /devices/{languagecode}](#get-deviceslanguagecode)
 * [GET /devices/{languagecode}/{deviceType}](#get-deviceslanguagecodedevicetype)
 * [PUT /devices](#put-devices-1)
@@ -123,6 +124,118 @@ zoneCode|Yes|Zone code of device| |
     "deletedDateTime": null
   },
   "errors": null
+}
+```
+### Response codes
+
+200 Ok
+
+### Error Response:
+```JSON
+{
+  "id": "string",
+  "version": "string",
+  "metadata": {},
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "errors": [
+    {
+      "errorCode": "string",
+      "message": "string"
+    }
+  ],
+ "response": null
+}
+
+```
+
+### Failure details
+Error Code  | Error Message | Error Description
+-----|----------|-------------
+KER-MSD-500 |Internal Server Error|If system error occurs
+KER-ATH-403 |Forbidden|If unauthorized role detected
+KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
+KER-MSD-069 |Error occurred while inserting Device details
+
+
+## PUT /devices
+
+This service will update the list of Devices which are used in the MOSIP platform. 
+
+Please find the steps to create primary/secondary languages in [Registration Center Create/Update API](Registration-Center-APIs.md#createupdate-api)
+
+### Resource URL
+`https://mosip.io/v1/masterdata/devices`
+
+### Resource details
+
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+id|Yes|Id of the device| | 
+macAddress|Yes|Mac Address of the device| | 
+name|Yes|Name of the device| | 
+deviceSpecId|Yes|Device specification Id of the device| | 
+serialNum|Yes|Serial number of the device| | 
+langCode|Yes|Language code of the device| | 
+ipAddress|No|Ip Address of the device| | 
+isActive|Yes|Is the device active?| | 
+validityDateTime|Yes|Validity date of device| | 
+zoneCode|Yes|Zone code of device| | 
+
+### Example Request
+```JSON
+{
+  "id": "string",
+  "metadata": {},
+  "request": {
+    "deviceSpecId": "string",
+    "id": "string",
+    "ipAddress": "string",
+    "isActive": true,
+    "langCode": "string",
+    "macAddress": "string",
+    "name": "string",
+    "serialNum": "string",
+    "validityDateTime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+    "zoneCode": "string"
+  },
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
+}
+```
+### Example Response
+```JSON
+{
+  "errors": [
+    {
+      "errorCode": "string",
+      "message": "string"
+    }
+  ],
+  "id": "string",
+  "metadata": {},
+  "response": {
+    "createdBy": "string",
+    "deviceSpecId": "string",
+    "id": "string",
+    "ipAddress": "string",
+    "isActive": true,
+    "isDeleted": true,
+    "langCode": "string",
+    "macAddress": "string",
+    "name": "string",
+    "serialNum": "string",
+    "updatedBy": "string",
+    "validityDateTime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+    "zoneCode": "string"
+  },
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "version": "string"
 }
 ```
 ### Response codes
@@ -433,6 +546,8 @@ KER-MSD-147 | Cannot delete as dependency found | Deletion Issue because of depe
 
 * [POST /devicetypes](#post-devicetypes)
 
+* [PUT /devicetypes](#put-devicetypes)
+
 ## POST /devicetypes
 
 This service will create the list of Device types which are used in the MOSIP platform. 
@@ -490,6 +605,86 @@ isactive|Yes|Is the device type active?| |
 
 ### Response codes
 202
+
+Description: Accepted
+
+400
+
+Description: Bad request
+
+401
+
+Description: Unauthorized
+
+403
+
+Description: Forbidden
+
+### Failure details
+Error Code | Error Message | Error Description
+------------|------------------------------|-------------
+KER-MSD-053 |  Error occurred while inserting Device Type details | Insertion Issue
+KER-MSD-003 |  Required Device Type detail Not Found | Data Not Found
+KER-MSD-002 |  Error occurred while mapping Device Type details | Mapping Issue
+KER-MSD-054 |  Error occurred while fetching Device Type details | Fetch Issue
+
+## PUT /devicetypes
+
+This service will update the list of Device types which are used in the MOSIP platform. 
+
+### Resource URL
+`PUT /devicetypes`
+
+### Resource details
+
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+devicetypecode|Yes|Code of the device type| | 
+devicename|Yes|Name of the device type| | 
+description|Yes|Description of the device type| | 
+languagecode|Yes|Language code of the device type| | 
+isactive|Yes|Is the device type active?| | 
+
+### Example Request
+```JSON
+{
+  "id": "string",
+  "metadata": {},
+  "request": {
+    "code": "string",
+    "description": "string",
+    "isActive": true,
+    "langCode": "string",
+    "name": "string"
+  },
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
+}
+```
+
+### Example Response
+```JSON
+{
+  "id": "string",
+  "version": "string",
+  "metadata": {},
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "errors": null,
+  "response":{
+      "code": "string",
+      "langCode": "string"
+  }
+}
+```
+
+### Response codes
+200
 
 Description: Accepted
 
@@ -1290,6 +1485,7 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   "response": {
   "filters": [
 	{
+		"fieldCode": "string",
 		"fieldID": "string",
 		"fieldValue": "string"
 	}

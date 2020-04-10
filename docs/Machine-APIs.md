@@ -33,7 +33,7 @@ This API is used by the Administrator Portal UI to populate filter dropdowns on 
 
 
 # POST /machines
-z
+
 This service will create the list of Machines which are used in the MOSIP platform. 
 
 Please find the steps to create primary/secondary languages 
@@ -478,6 +478,7 @@ KER-MSD-148 | Cannot delete as dependency found | Deletion Issue because of depe
 # Machine Types Master API
 
 * [POST /machinetypes](#post-machinetypes)
+* [PUT /machinetypes](#put-machinetypes)
 * [GET /machinetypes](#get-machinetypes)
 * [GET /machinetypes/{languagecode}](#get-machinetypeslanguagecodee)
 * [POST /machinetypes/search](#post-machinetypessearch)
@@ -552,6 +553,77 @@ Description: Unauthorized
 403
 
 Description: Forbidden
+
+# PUT /machinetypes
+
+This service will update the list of Machine types which are used in the MOSIP platform. 
+
+### Resource URL
+### `PUT /machinetypes`
+
+### Resource details
+
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+machinetypecode|Yes|Code of the machine type| | 
+machinename|Yes|Name of the machine type| | 
+description|Yes|Description of the machine type| | 
+languagecode|Yes|Language code of the machine type| | 
+isactive|Yes|Is the machine type active?| | 
+
+### Example Request
+```JSON
+{
+  "id": "string",
+  "version": "string",
+  "metadata": {},
+  "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "request": {
+       "code": "string",
+       "description": "string",
+      "isActive": true,
+      "langCode": "string",
+      "name": "string"
+  }
+}
+```
+### Example Response
+```JSON
+{
+  "id": "string",
+  "version": "string",
+  "metadata": {},
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "errors": null,
+  "response": {
+            "code": "string",
+            "langCode": "string"
+             }
+}
+```
+### Response codes
+202
+
+Description: Accepted
+
+400
+
+Description: Bad request
+
+401
+
+Description: Unauthorized
+
+403
+
+Description: Forbidden
+
 
 # GET /machinetypes
 
@@ -1327,6 +1399,7 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   "response": {
   "filters": [
 	{
+		"fieldCode": "string",
 		"fieldID": "string",
 		"fieldValue": "string"
 	}
@@ -1498,6 +1571,7 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   "response": {
   "filters": [
 	{
+		"fieldCode": "string",
 		"fieldID": "string",
 		"fieldValue": "string"
 	}
