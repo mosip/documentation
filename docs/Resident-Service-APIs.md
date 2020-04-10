@@ -223,7 +223,7 @@ request: individualIdType| Y | Allowed Type of Individual ID - RID | RID
   },
   "errors": [
     {
-      "errorCode": "XXX-XXX-002",
+      "errorCode": "RES-SER-012",
       "errorMessage": "Invalid RID"
     }
   ]
@@ -309,8 +309,8 @@ request: otp| Y | OTP | |
   },
   "errors": [
     {
-      "errorCode": "XXX-XXX-002",
-      "errorMessage": "OTP Authentication Failed"
+      "errorCode": "RES-SER-004",
+      "errorMessage": "OTP validation failed"
     }
   ]
 }
@@ -319,9 +319,9 @@ request: otp| Y | OTP | |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-DOW-001| OTP Authentication Failed.
-RES-DOW-002| Data entered is not valid.
-RES-DOW-004| No Registered Mobile/email ID found.
+RES-SER-004| OTP validation failed.
+RES-SER-009| Invalid Input Parameter- .
+RES-SER-017| Sending notification(Email and SMS) to resident failed.
 
 ## POST /resident/v1/req/print-uin
 This request will authenticate an Individual based on provided OTP and post a request for UIN re-print to Postal Service. Notification will be sent to phone/email.
@@ -398,8 +398,8 @@ request: otp| Y | OTP | |
   },
   "errors": [
     {
-      "errorCode": "XXX-XXX-002",
-      "errorMessage": "OTP Authentication Failed"
+      "errorCode": "RES-SER-004",
+      "errorMessage": "OTP validation failed"
     }
   ]
 }
@@ -408,16 +408,16 @@ request: otp| Y | OTP | |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-REP-001| OTP Authentication Failed.
-RES-REP-002| Data entered is not valid.
-RES-REP-004| No Registered Mobile/email ID found.
+RES-SER-004| OTP validation failed.
+RES-SER-009| Invalid Input Parameter-
+RES-SER-017|Sending notification(Email and SMS) to resident failed.
 
 
 ## POST /resident/v1/req/uin
 This request will authenticate an Individual based on provided OTP and respond with UIN. Notification will be sent to phone/email.
 
 ### Resource URL
-`https://mosip.io/resident/v1/req/uin`
+`https://mosip.io/resident/v1/req/lost`
 
 ### Resource details
 Resource Details | Description
@@ -428,7 +428,7 @@ Requires Authentication | Yes
 ### Request Body Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
-id | Y | API Id | | mosip.resident.lostuin
+id | Y | API Id | | mosip.resident.lost
 version | Y | API version | | v1
 requestTime| Y |Time when Request was captured| | 2018-12-09T06:39:04.683Z
 request: transactionID| Y | Transaction ID of request | | dabed834-974f-11e9-bc42-526af7764f64
@@ -439,42 +439,25 @@ request: demographics|N| Demographic data of an Individual| |
 ### Request Body
 ```JSON
 {
-  "id": "mosip.resident.lostuin",
+  "id": "mosip.resident.lost",
   "version": "v1",
   "requestTime": "2018-12-09T06:39:04.683Z",
   "request": {
   "transactionID": "dabed834-974f-11e9-bc42-526af7764f64",
-  "individualIdType": "demo",
+  "idType": "uin",
   "otp": "123456",
   "demographics": {
-      "name": [
-        {
-          "language": "ara",
-          "value": "ابراهيم بن علي"
-        },
-        {
-          "language": "fra",
+      "name": {
           "value": "Ibrahim Ibn Ali"
-        }
-      ],
-      "gender": [
-        {
-          "language": "ara",
-          "value": "الذكر"
         },
-        {
-          "language": "fra",
-          "value": "mâle"
-        }
-      ],
       "postalCode": {
-          "type": "10004"
+          "value": "10004"
         },
       "phone": {
-          "type": "998989989809"
+          "value": "998989989809"
         },
       "email": {
-          "type": "abcdefgh@xyz.com"
+          "value": "abcdefgh@xyz.com"
         }
     }
   }
@@ -488,11 +471,11 @@ request: demographics|N| Demographic data of an Individual| |
 ##### Status Code : 200 (OK)
 ```JSON
 {
-  "id": "mosip.resident.lostuin",
+  "id": "mosip.resident.lost",
   "version": "v1",
   "responseTime": "2018-12-09T06:39:04.683Z",
   "response": {
-	"uin": "989768897876565",
+	"id": "989768897876565",
     "message": "Notification has been sent to the provided contact detail(s)"
   },
   "errors": null
@@ -504,7 +487,7 @@ request: demographics|N| Demographic data of an Individual| |
 ##### Status Code : 200 (OK)    
 ```JSON
 {
-  "id": "mosip.resident.lostuin",
+  "id": "mosip.resident.lost",
   "version": "v1",
   "responseTime": "2018-12-09T06:39:04.683Z",
   "response": {
@@ -512,8 +495,8 @@ request: demographics|N| Demographic data of an Individual| |
   },
   "errors": [
     {
-      "errorCode": "XXX-XXX-002",
-      "errorMessage": "OTP Authentication Failed"
+      "errorCode": "RES-SER-004",
+      "errorMessage": "OTP Validation Failed"
     }
   ]
 }
@@ -522,15 +505,15 @@ request: demographics|N| Demographic data of an Individual| |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-LOU-001|OTP Validation Failed.
-RES-LOU-002|Data entered does not match.
-RES-LOU-004|No Registered Mobile/email ID found.
+RES-SER-004| OTP validation failed.
+RES-SER-009| Invalid Input Parameter-
+RES-SER-017|Sending notification(Email and SMS) to resident failed.
 
 ## POST /resident/v1/req/rid
 This request will authenticate an Individual based on provided OTP and respond with RID. Notification will be sent to phone/email.
 
 ### Resource URL
-`https://mosip.io/resident/v1/req/rid`
+`https://mosip.io/resident/v1/req/lost`
 
 ### Resource details
 Resource Details | Description
@@ -541,7 +524,7 @@ Requires Authentication | Yes
 ### Request Body Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
-id | Y | API Id | | mosip.resident.lostrid
+id | Y | API Id | | mosip.resident.lost
 version | Y | API version | | v1
 requestTime| Y |Time when Request was captured| | 2018-12-09T06:39:04.683Z
 request: transactionID| Y | Transaction ID of request | | dabed834-974f-11e9-bc42-526af7764f64
@@ -553,42 +536,25 @@ request: demographics|N| Demographic data of an Individual| |
 ### Request Body
 ```JSON
 {
-  "id": "mosip.resident.lostrid",
+  "id": "mosip.resident.lost",
   "version": "v1",
   "requestTime": "2018-12-09T06:39:04.683Z",
   "request": {
   "transactionID": "dabed834-974f-11e9-bc42-526af7764f64",
-  "individualIdType": "demo",
+  "individualIdType": "rid",
   "otp": "123456",
   "demographics": {
-      "name": [
-        {
-          "language": "ara",
-          "value": "ابراهيم بن علي"
-        },
-        {
-          "language": "fra",
+      "name": {
           "value": "Ibrahim Ibn Ali"
-        }
-      ],
-      "gender": [
-        {
-          "language": "ara",
-          "value": "الذكر"
         },
-        {
-          "language": "fra",
-          "value": "mâle"
-        }
-      ],
       "postalCode": {
-          "type": "10004"
+          "value": "10004"
         },
       "phone": {
-          "type": "998989989809"
+          "value": "998989989809"
         },
       "email": {
-          "type": "abcdefgh@xyz.com"
+          "value": "abcdefgh@xyz.com"
         }
     }
   }
@@ -603,11 +569,11 @@ request: demographics|N| Demographic data of an Individual| |
 
 ```JSON
 {
-  "id": "mosip.resident.lostrid",
+  "id": "mosip.resident.lost",
   "version": "v1",
   "responseTime": "2018-12-09T06:39:04.683Z",
   "response": {
-    "rid": "989768897876565",
+    "id": "989768897876565",
     "message": "Notification has been sent to the provided contact detail(s)"
   },
   "errors": null
@@ -620,7 +586,7 @@ request: demographics|N| Demographic data of an Individual| |
 
 ```JSON
 {
-  "id": "mosip.resident.lostrid",
+  "id": "mosip.resident.lost",
   "version": "v1",
   "responseTime": "2018-12-09T06:39:04.683Z",
   "response": {
@@ -628,8 +594,8 @@ request: demographics|N| Demographic data of an Individual| |
   },
   "errors": [
     {
-      "errorCode": "XXX-XXX-002",
-      "errorMessage": "OTP Authentication Failed"
+      "errorCode": "RES-SER-004",
+      "errorMessage": "OTP validation failed"
     }
   ]
 }
@@ -638,9 +604,9 @@ request: demographics|N| Demographic data of an Individual| |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-LOR-001|OTP Validation Failed.
-RES-LOR-002|Data entered does not match.
-RES-LOR-004|No Registered Mobile/email ID found.
+RES-SER-004| OTP validation failed.
+RES-SER-009| Invalid Input Parameter-
+RES-SER-017|Sending notification(Email and SMS) to resident failed.
 
 
 ## POST /resident/v1/req/update-uin
@@ -725,8 +691,8 @@ request: demographics|Y| Demographic data of an Individual| |
   },
   "errors": [
     {
-      "errorCode": "XXX-XXX-002",
-      "errorMessage": "OTP Authentication Failed"
+      "errorCode": "RES-SER-004",
+      "errorMessage": "OTP validation failed"
     }
   ]
 }
@@ -735,10 +701,10 @@ request: demographics|Y| Demographic data of an Individual| |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-UIU-001| OTP Authentication Failed.
-RES-UIU-002| Data entered does not match or not valid.
-RES-UIU-004| No Registered Mobile/email ID found.
-RES-UIU-005| Status of UIN Update is UnSuccessful.
+RES-SER-004| OTP validation failed.
+RES-SER-009| Invalid Input Parameter-
+RES-SER-017| Sending notification(Email and SMS) to resident failed.
+RES-SER-22 | Resident UIN update failed
 
 
 ## POST /resident/v1/vid
@@ -814,8 +780,8 @@ request: otp| Y | OTP | |
   },
   "errors": [
     {
-      "errorCode": "XXX-XXX-002",
-      "errorMessage": "OTP Authentication Failed"
+      "errorCode": "RES-SER-004",
+      "errorMessage": "OTP validation failed"
     }
   ]
 }
@@ -824,9 +790,9 @@ request: otp| Y | OTP | |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-VID-002| OTP Authentication Failed.
-RES-VID-003| Data entered is not valid.
-RES-VID-004| No Registered Mobile/email ID found.
+RES-SER-004| OTP validation failed.
+RES-SER-009| Invalid Input Parameter-
+RES-SER-017| Sending notification(Email and SMS) to resident failed.
 
 
 ## PATCH /resident/v1/vid/{vid}
@@ -901,8 +867,8 @@ request: otp| Y | OTP | |
   },
   "errors": [
     {
-      "errorCode": "XXX-XXX-002",
-      "errorMessage": "OTP Authentication Failed"
+      "errorCode": "RES-SER-004",
+      "errorMessage": "OTP validation failed"
     }
   ]
 }
@@ -911,10 +877,10 @@ request: otp| Y | OTP | |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-RID-002| OTP Authentication Failed.
-RES-RID-003| Data entered is not valid.
-RES-RID-004| No Registered Mobile/email ID found.
-RES-RID-005| VID revocation request failed. Please visit the nearest registration center for assistance.
+RES-SER-004 | OTP validation failed.
+RES-SER-009 | Invalid Input Parameter-
+RES-SER-017 | Sending notification(Email and SMS) to resident failed.
+RES-RID-005 | VID revocation request failed. Please visit the nearest registration center for assistance.
 
 
 ## POST /resident/v1/req/auth-lock
@@ -990,8 +956,8 @@ request: otp| Y | OTP | |
   },
   "errors": [
     {
-      "errorCode": "XXX-XXX-002",
-      "errorMessage": "OTP Authentication Failed"
+      "errorCode": "RES-SER-004",
+      "errorMessage": "OTP validation failed"
     }
   ]
 }
@@ -1000,10 +966,10 @@ request: otp| Y | OTP | |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-LOC-001|OTP Authentication Failed.
-RES-LOC-002| Data entered is not valid.
-RES-LOC-004| No Registered Mobile/email ID found.
-RES-LOC-005| Locking for the Authentication type(s) is Unsuccessful.
+RES-SER-004 | OTP validation failed.
+RES-SER-009 | Invalid Input Parameter-
+RES-SER-017 | Sending notification(Email and SMS) to resident failed.
+RES-SER-014 | Your request is not successful, please try again later.
 
 
 ## POST /resident/v1/req/auth-unlock
@@ -1079,8 +1045,8 @@ request: otp| Y | OTP | |
   },
   "errors": [
     {
-      "errorCode": "XXX-XXX-002",
-      "errorMessage": "OTP Authentication Failed"
+      "errorCode": "RES-SER-004",
+      "errorMessage": "OTP validation failed"
     }
   ]
 }
@@ -1089,10 +1055,10 @@ request: otp| Y | OTP | |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-ULC-001| OTP Authentication Failed.
-RES-ULC-002| Data entered is not Valid.
-RES-ULC-004| No Registered Mobile/email ID found.
-RES-ULC-005| Unlocking for the Authentication type is Unsuccessful.
+RES-SER-004 | OTP validation failed.
+RES-SER-009 | Invalid Input Parameter-
+RES-SER-017 | Sending notification(Email and SMS) to resident failed.
+RES-SER-014 | Your request is not successful, please try again later.
 
 
 ## POST /resident/v1/req/auth-history
@@ -1166,8 +1132,8 @@ request: otp| Y | OTP | |
   },
   "errors": [
     {
-      "errorCode": "XXX-XXX-002",
-      "errorMessage": "OTP Authentication Failed"
+      "errorCode": "RES-SER-004",
+      "errorMessage": "OTP validation failed"
     }
   ]
 }
@@ -1175,7 +1141,7 @@ request: otp| Y | OTP | |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-AUT-001| OTP Authentication Failed.
-RES-AUT-002| Data entered is not valid.
-RES-AUT-004| No Registered Mobile/email ID found.
-RES-AUT-005| Mandatory values not entered.
+RES-SER-004 | OTP validation failed.
+RES-SER-009 | Invalid Input Parameter-
+RES-SER-017 | Sending notification(Email and SMS) to resident failed.
+RES-SER-014 | Your request is not successful, please try again later.
