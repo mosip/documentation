@@ -5,8 +5,7 @@ This document guide the developer to find the traceability between functionality
 
 It doesn't detail about each methods level information since that are covered in Javadoc of each component.   
 
-
-## Functionality Vs Technical Component mapping: 
+## Functionality Vs technical component mapping
 
 |**Functionality:**| Login with UserName and Password/ OTP/ BIO  |  
 |:------:|-----|  
@@ -15,7 +14,6 @@ It doesn't detail about each methods level information since that are covered in
 |**Input parameter:**| UserDTO – It should contain info of id, name, roles, center-id. loginMethod – possible values are PWD, OTP, FINGERPRINT, FACE, IRIS. isInitialSetUp – true/false, isUserNewToMachine – true/false,  AuthenticationValidatorDTO – should contain id, password, otp|  
 |**Auth:**| Not required. |  
 |**External Connectivity:**| Service and DB |  
-
 
 |**Functionality:**| Packet Creation - New Registration / Update UIN/ Lost UIN |   
 |:------:|-----|  
@@ -37,7 +35,6 @@ It doesn't detail about each methods level information since that are covered in
 |**Input Parameter:**|    packetsToBeSynced – The packet details which needs to be Synced. |  
 |**Auth:**| Authentication token required. |  
 |**External Connectivity:**| Packet Sync service REST call |  
-
      
 |**Functionality:**| Packet Upload |   
 |:------:|-----|  
@@ -45,7 +42,6 @@ It doesn't detail about each methods level information since that are covered in
 |**Input Parameter:**|	File object, which contains the packet to be uploaded.  |  
 |**Auth:**| Authentication token required while doing file upload. Based on the SessionContext object the advice would attach the token and invoke the required service call. |  
 |**External Connectivity:**| Service, DB, File system |  
-
 
 |**Functionality:**| Packet Export |  
 |:------:|-----|  
@@ -69,7 +65,6 @@ It doesn't detail about each methods level information since that are covered in
 |**Auth:**| NA |  
 |**External Connectivity:**| DB |
 
-
 |**Functionality:**| Sync Data from Server to Client and Vice Versa. |   
 |:------:|-----|  
 |**Technical Detail:**| This functionality will be executed as specified as sync-frequency in local DB. During start of the application, the scheduler would be loaded with the jobs configured in db and trigger the job. The scheduler would trigger the jobs at the configured frequency. While running the jobs, based on the functionality it would invoke the respective services and invoke the required external services to sync the data from server to client and vice versa. Post completion or every state of the job execution, the status would be updated in local db.|  
@@ -77,7 +72,6 @@ It doesn't detail about each methods level information since that are covered in
 |**Input Parameter:**|  - |    
 |**Auth:**| Auth token required for external services. This would be automatically taken care within this method. Nothing explicitly to be passed.|  
 |**External Connectivity:**| REST API calls, DB|
-
 
 |**Functionality:**|  MDM Integration – Register Device |   
 |:------:|-----|  
@@ -87,14 +81,12 @@ It doesn't detail about each methods level information since that are covered in
 |**Auth:**| Not required |  
 |**External Connectivity:**| deviceInfo - MDM service REST call |  
 
-
 |**Functionality:**|  MDM Integration -Capture bio-metric |   
 |:------:|-----|  
 |**Main Service class and method:**| BioServiceImpl  - getFingerPrintImageAsDTOWithMdm(FingerprintDetailsDTO fpDetailsDTO, String fingerType) |  
 |**Input Parameter:**|    FingerprintDetailsDTO – dto contains the finger print related details, fingerType – Type of the device like Fingerprint/ Iris/Face etc |  
 |**Auth:**| Not required |  
 |**External Connectivity:**| Capture - MDM service REST call |  
-
 
 |**Functionality:**|  MDM Integration  - Validate bio-metric against the bio value already captured and stored in Database. |   
 |:------:|-----|  
@@ -103,14 +95,12 @@ It doesn't detail about each methods level information since that are covered in
 |**Auth:**| Not required |  
 |**External Connectivity:**| DB, Capture - MDM service REST call |  
 
-
 |**Functionality:**|  MDM Integration  - Display video stream |   
 |:------:|-----|  
 |**Main Service class and method:**| Yet to be implemented |  
 |**Input Parameter:**|    |  
 |**Auth:**| Not required |  
 |**External Connectivity:**| |  
-
 
 |**Functionality:**| TPM Public Key Sync |   
 |:------:|-----|  
@@ -121,15 +111,13 @@ It doesn't detail about each methods level information since that are covered in
 |**External Connectivity:**| TPM, Web Service |
 
 
-## Packet Structure :
-   The packets are created during individual registration process are structured and secured. The detail of the same can be found in this link. 
+## Packet Structure
+The packets are created during individual registration process are structured and secured. The detail of the same can be found in this link. 
    
    [Packet Structure](https://github.com/mosip/mosip-docs/wiki/Registration-Packet)   
    
-## Packet Status :  
-
-   List of packet status maintained in client db while moving the packet to the different state before and after pushing to the server.  
-
+## Packet Status
+List of packet status maintained in client db while moving the packet to the different state before and after pushing to the server.  
 
 |**Packet Status Desc**|  **Status in Client** |   
 |:------:|-----|  
@@ -141,8 +129,6 @@ It doesn't detail about each methods level information since that are covered in
 |Packet pushed to Server| PUSHED |     
 |Packet exported to device| EXPORTED |     
 
-
-
 |**Packet Status Desc**|  **Status from Server** |   
 |:------:|-----|  
 |Packet in processing state| PROCESSING   |  
@@ -152,9 +138,7 @@ It doesn't detail about each methods level information since that are covered in
 |Packet is received but not uploaded in LANDING_ZONE| RECEIVED    |     
 |Duplicate found in abis| REJECTED  |     
     
-
-## List of Jobs :  
-
+## List of Jobs
 Below provided jobs are executed in batch mode through spring batch. The job execution frequencies are mentioned in the DB job related table. These jobs can also be triggered through manual process using 'Sync' option in the Menu, During initial login after successful online authentication and While starting the application if initial sync already completed.  
 
 |**Sl.No:**|**Service Desc.**|**Dependent Module**|**Under 'Sync' Menu**| **Initial Login**| **Application Launch** | 
@@ -174,13 +158,12 @@ Below provided jobs are executed in batch mode through spring batch. The job exe
 | 13. | User Salt Sync service				| Kernel | Y | Y | Y | 
  
 
-## Configuration Rule: 
-
+## Configuration Rule
 As 'configurability' is the one of the major NFR being considered while designing the application, here listed out the required files where the configurations can be modified that will get reflected in application during runtime.  
   - 'registration-qa.properties' - Registration application specific configuration.  
   - 'application-qa.properties' - Overall application level common configuration.  
   
-  These configuration would be downloaded to the client machine through the 'config' sync service.  If there is any change with respect to 'kernel' properties then after downloading the properties the application will ask for 'restart'. 
+These configuration would be downloaded to the client machine through the 'config' sync service.  If there is any change with respect to 'kernel' properties then after downloading the properties the application will ask for 'restart'. 
   
 **Age configuration:**  
   - Age limit is configurable in the application. User should modify the max age limit in both 'application' and 'registration' properties file.      
@@ -188,8 +171,7 @@ As 'configurability' is the one of the major NFR being considered while designin
   - {registration property key : 'mosip.registration.max_age'}	
 
 
-## Table Detail :
-
+## Table Details
 Below find the list of tables used in Registration client application. Based on use cases, the table data gets updated during either sync process or transaction in local machine.  
 There are few jobs are configured to clean the transactions histories from local tables and also pushing the audit data to server.  
 
@@ -243,8 +225,8 @@ There are few jobs are configured to clean the transactions histories from local
 |46.|pre_registration_list| It contains list of Pre Registration details[Pre Registration Id, Status..] | During Pre Registration Sync |
 |47.|audit_log_control| It contains data of Audit logging[From Time, To Time..] | During local transaction. | 
 
-## UI - Labels and messages :  
-   The UI specific labels and messages are maintained in the language specific property file. Based on the primary and secondary language the respective bundle would be loaded during runtime and displayed in the screen. 
+## UI - labels and messages  
+The UI specific labels and messages are maintained in the language specific property file. Based on the primary and secondary language the respective bundle would be loaded during runtime and displayed in the screen. 
    
    messages_en.properties	- Messages are in English language.   
    messages_ar.properties   - Messages are in Arabic language.  
@@ -253,8 +235,7 @@ There are few jobs are configured to clean the transactions histories from local
    labels_ar.properties     - Labels are in Arabic language.  
    labels_fn.properties     - Labels are in French language.
 
-## Error code and Description :
-
+## Error code and description
 Below find the list of error code and description which are thrown from application during the process.  
 
 |**Class Name**| **Error Codes** | **Description**|

@@ -17,7 +17,7 @@ An individual is authenticated based on the following:
 * Biometrics
     * fingerprint
     * iris 
-    * face (_future versions_) 
+    * face
 
 To enhance security a second factor of authentication is supported:
 * OTP based 
@@ -30,34 +30,34 @@ To analyze and generate authentication patterns, all authentication requests are
 [ID Authentication Functionality](ID-Authentication-Functionality.md)
 
 # Process flow
-## Demographic auth
+## Demographic authentication
 ![](_images/auth/id_auth_demo_auth_flow.jpg)
 
-## Biometric auth 
+## Biometric authentication 
 ![](_images/auth/id_auth_biometric_auth_flow.jpg)
 
-## Multifactor auth 
+## Multifactor authentication 
 ![](_images/auth/id_auth_multifactor_auth_flow.jpg)
 
-## OTP auth
+## OTP authentication
 ![](_images/auth/id_auth_otp_auth_flow.jpg)
 
-## Partner auth
+## Partner and MISP authentication
 ![](_images/auth/id_auth_partner_auth_flow.jpg)
 
-## eKYC service
+## eKYC authentication
 ![](_images/auth/id_auth_ekyc_service_flow.jpg)
 
 # Logical View    
-![ID Authentication Logical view](_images/auth/id_auth_logical_view.png)
+![](_images/auth/id_auth_logical_view.png)
 
 # Services
 
-For detailed description of ID Auth services, code and design refer to [ID auth repo](https://github.com/mosip/id-authentication)
+For detailed description of ID Auth services, code and design refer to [ID authentication repo](https://github.com/mosip/id-authentication)
 
 # Build and deploy
 
-Refer to build and deploy instructions in [ID auth repo](https://github.com/mosip/id-authentication)
+Refer to build and deploy instructions in [ID authentication repo](https://github.com/mosip/id-authentication)
 
 # APIs
 [ID Authentication APIs](ID-Authentication-APIs.md)

@@ -1,71 +1,60 @@
-### Setup
+## Purpose
+The recommended Github work flow here is for developers to submit code and documentation contributions to MOSIP open source repositories.  
+
+## Setup
 1. Fork MOSIP repository of interest from 
     https://github.com/mosip/
 
-1. Clone the fork to your local machine. Example: 
+1. Clone the fork to your local machine. Eg: 
     ```
     $ git clone https://github.com/<your_github_id>/commons.git
-    $ cd commons
     ```
-1. Set upstream project as the original from where you forked: 
+1. Set upstream project as the original from where you forked. Eg:
     ```
     $ cd commons
     $ git remote add upstream https://github.com/mosip/commons.git
     ```
 
-1. Make sure you never directly push to upstream:
+1. Make sure you never directly push to upstream.
     ```
     $ git remote set-url --push upstream no_push
     ```
-1. Make sure you don't pull from the origin (don't use `git pull`):
+
+1. Confirm the origin and upstream.
     ```
-    $ git config branch.autoSetupRebase always
-    ```
-1. Confirm the origin and upstream with: 
-    ```
-    git remote -v
+    $ git remote -v
     ```
 
-### Code changes
+## Code changes
 
-1. First, update your master with the latest changes from the community.
-    ```
-    git fetch upstream
-    git checkout master
-    git rebase upstream/master
-    ```
+1. Create a new issue in [MOSIP Jira](https://mosip.atlassian.net/).
 
-1. Create a new issue in [MOSIP Jira](https://mosip.atlassian.net/)
+1. You may work on `master`, switch to a branch (like Release branch) or create a new branch.
 
-1. Create a branch to work on your changes. Example: 
+1. Make sure you are up-to-date with upstream repo. 
     ```
-    git checkout -b <issue-id> 
+    $ git pull upstream <branch> 
     ```
 
-1. Keeping your branch synced with upstream:
+1. Once you are done with the work, commit your changes referring to Jira number in the commit message. Eg:
     ```
-    git fetch upstream
-    git rebase upstream/master
-    ```
-
-1. Once you are done with the work, commit your changes:
-    ```
-    git commit -m "[issue-id] <meaningful commit message>.." 
-    ```
-Note that specifying issue-id tags the commit with Jira. Example:
-
-    ```
-    git commit -m "[MOS-2346] Adding new upload feature in Pre registration module for POA documents"
+    $ git commit -m "[MOS-2346] Adding new upload feature in Pre registration module for POA documents"
     ```
 
-1. Push to origin your branch
+1. Once again ensure that you are up-to-date with upstream repo as it may have moved forward. 
     ```
-    git push -u origin <issue-id>
+    $ git pull upstream <branch> 
+    ```
+    
+1. Build and test your code.  Make sure it follows the coding guidelines.
+
+1. Push to your forked repo (origin).
+    ``` 
+    $ git push 
     ```
 
-1. Create a pull request
-
-    1.  Before creating a pull request ensure that your code builds and follows coding guidelines.
-    1.  On Github page of your forked repo (example: `https://github.com/<your_github_id>/common`) select your branch (example: `issue-id`) and create a new pull request.
+1. Create a pull-request on your forked repo.  Direct the pull-request to `master` or any specific branch on upstream (like a Release branch).
 	
-1. The pull request shall be reviewed by reviewers.
+1. Make sure the automatic tests on Github for your pull-request pass.
+
+1. The pull-request shall be reviewed by reviewers.

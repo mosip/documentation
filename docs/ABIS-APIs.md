@@ -33,7 +33,7 @@ Code | Reason
 ## ABIS Operations
 All the below operations send biometric data in CBEFF format. (Please refer to the [link](MOSIP-Biometric-Data-Specifications.md#cbeff) for sample cbeff data)
 ### Insert 
-```
+```json
 //Request
 {
     "id" : "mosip.abis.insert",
@@ -69,7 +69,7 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
  - MOSIP must provide CBEFF format biometric data to ABIS
 
 ### Identify
-```
+```json
 {
     "id" : "mosip.abis.identify",
     "ver" : "1.0",
@@ -183,7 +183,7 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
  - If referenceID and reference URL both are NULL, then, ABIS throws an error (error code 5)
 
 ### Delete
-```
+```json
 //Request
 {
     "id" : "mosip.abis.delete",
@@ -216,7 +216,7 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
 - This operation can be used to remove duplicates found by Identify
 
 ### Ping
-```
+```json
 //Request
 {
     "id" : "mosip.abis.ping",
@@ -238,7 +238,7 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
 - A Ping request should respond with a response on the liveness of the ABIS system
 
 ### Pending Jobs
-```
+```json
 //Request
 {
     "id" : "mosip.abis.pendingJobs",
@@ -261,7 +261,7 @@ All the below operations send biometric data in CBEFF format. (Please refer to t
 - ABIS responds with the count of requests that are still pending
 
 ### Reference Count
-```
+```json
 //Request
 {
     "id" : "mosip.abis.referenceCount",

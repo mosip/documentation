@@ -276,7 +276,7 @@ Upon receiving the Registration Center Id, Date Range (Start Date, End Date) for
 ## 2.7 List of Configurable Parameters and Processes [**[↑]**](#table-of-contents)
 1. Configurable Parameters [**[↑]**](#table-of-contents)
 
-   [**Link to Configurable Parameters of Pre-registration**](/mosip/mosip-config/tree/master/config-templates/pre-registration-env.properties)
+   [**Link to Configurable Parameters of Pre-registration**](https://github.com/mosip/mosip-config/blob/master/config-templates/pre-registration-env.properties)
 
 2. Configurable Processes 
 * (Work in Progress)

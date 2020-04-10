@@ -1,16 +1,3 @@
-# Introduction
-## Context
-
-MOSIP is developed as an open source framework project. The code developed complied to the Java standards and best practices.
-
-## Purpose of this document
-
-This document gives various MOSIP Java development coding standards and Java coding standards which are followed during the MOSIP development.
-
-## Scope of this document
-
-This document covers the coding standards, which are followed by the Java developers.
-
 # MOSIP - Java Development Coding Standard
 
 ## Repository Structure
@@ -30,14 +17,12 @@ If a new source code module is planned to be added, and if it is a reusable libr
  
     
 ## Source Code Organization in a MOSIP Repository
-Source code of any feature in MOSIP will be organized as below. 
-```
-- feature-parent
-    - feature-core - jar 
-    - feature-common - jar
-    - feature-service-1 - SpringBoot service
-    - feature-service-2 - SpringBoot service
-```
+Source code of any feature in MOSIP will be organized as below:
+* feature-parent
+  * feature-core - jar 
+  * feature-common - jar
+  * feature-service-1 - SpringBoot service
+  *  feature-service-2 - SpringBoot service
 
 ### Feature-Parent Module
 This should be a POM module that aggregates all the sub-modules. This should contain
@@ -115,7 +100,8 @@ This should be a POM module that aggregates all the sub-modules. This should con
 * Any request/response body should have proper meta-data such as `"id`, `"version"` and `"requestTime"`/`"responseTime"`, etc... .
 
 For example:
-````
+
+```java
 {
   //API Metadata
   "id": "mosip.identity.auth.transactions.read",
@@ -129,7 +115,7 @@ For example:
     }
   ]
 }
-````
+```
 
 # Java Coding Standard
 
@@ -152,6 +138,7 @@ When a java file is written, the following order is maintained,
 ### Beginning documentation comment
 
 The beginning comment should be in a C-style comment. Following is the format of the comment.
+
 ```
 /*  
  * Firstname Lastname
@@ -166,6 +153,7 @@ The first non-comment line is the package statement.
 ### Import statement
 
 - After a line-break below the package statement, import statements are placed. The import statements are grouped and segregated by a line-break. For example,
+
 ```
 import java.util.List;
 import java.util.Map;
@@ -179,7 +167,8 @@ import org.mosip.kernel.core.exception.UnauthenticatedException;
 ### Class or Interface comment for documentation
 
 This comment will be going in to the Javadocs
-```
+
+```java
 /**
  * Class/Interface description goes here
  *
@@ -187,7 +176,7 @@ This comment will be going in to the Javadocs
  * @author Rajkumar Mahanty
  *
  */
- ```
+```
 
 ### Public class or interface definition
 
@@ -264,8 +253,9 @@ Both the comment types are used in the source code of MOSIP.
 
 ### Block Comments
 
-When the developer needs to explain in detail about some functionality, block comments are used. Block comments are used anywhere in the code. It can be for the class or interface declarations or it can be within the java methods also. Example of block comments,
-```
+When the developer needs to explain in detail about some functionality, block comments are used. Block comments are used anywhere in the code. It can be for the class or interface declarations or it can be within the java methods also. Example of block comments:
+
+```java
 /*
  * This is the block comment. This is the block comment.
  * This is the block comment. This is the block comment. This is                
@@ -275,7 +265,8 @@ When the developer needs to explain in detail about some functionality, block co
 ### Single-Line Comments
 
 Single line comments are used for short description. For example,
-```
+
+```java
 /* This is short description */
 if( height > 45) {
     ...
@@ -285,7 +276,8 @@ if( height > 45) {
 ### Trailing Comments
 
 Trailing comments are given in the same line where the source code resides. For example,
-```
+
+```java
 if(height > 45) { /* This is the trailing comment */
     ...
 
@@ -294,7 +286,8 @@ if(height > 45) { /* This is the trailing comment */
 ### End-Of-Line comments
 
 The end-of-line comments are also used in the source file. For example,
-```
+
+```java
 if(width > 45) {
     return false; // some description
 }
@@ -307,20 +300,24 @@ if(width > 45) {
 * All Classes, Interfaces, Methods, Fields should have appropriate clear description about each. 
 * A method documentation should have description about all parameters, exceptions thrown and return value.
 * Documentation comments can be of two kinds:
-    1. Single line documentation comment:
-        `/** COMMENT */`
-        Or 
 
-    2. Multi-line documentation comment:
-       ````
-       /** 
-        * COMMENT 
-        */
-       ````
-	 
-## Example
+  * Single line documentation comment: 
 
+`/** COMMENT */`
+
+Or 
+
+  *  Multi-line documentation comment:
+
+```java
+/** 
+ * COMMENT 
+ */
 ```
+	 
+Example:
+
+```java
 /*
  * Copyright 2002-2018 the original author or authors.
  *
@@ -410,7 +407,7 @@ Variables are declared at the beginning of the code block.
 
 For example,
 
-```
+```java
 void myMethod() {
     int int1 = 0;         // beginning of method block
 
@@ -428,7 +425,8 @@ void myMethod() {
 * Closing brace "}" starts a line by itself indented to match its corresponding opening statement, 
 * Except when it is a null statement the "}" should appear immediately after the "{"
 * An empty line is there in between the method declarations.
-````
+
+```java
 class Sample extends Object {
     int ivar1;
     int ivar2;
@@ -442,8 +440,7 @@ class Sample extends Object {
 
     ...
 }
-
-````
+```
 
 ## Methods
 
@@ -458,40 +455,42 @@ class Sample extends Object {
 3. Prefer method parameter type to be more generic such as a Super Interface or Super Class. For example, `List` instead of `ArrayList`.
 	
 ### Method Return Statement
+
 1.	Never return null for an Array return type. Return an empty array of 0 like `return new String[0]`.
-2.	Never return null for a Set/List/Map collection return types. Return corresponding empty values such as `Collections.emptySet()`, `Collections.emptyList()` or `Collections.emptyMap()`;
-3. Prefer method return type to be more generic such as a Super Interface or Super Class. For example, `List` instead of `ArrayList`.
-4.	Avoid having multiple return statements in a method. Prefer to provide a single point of exit to a method. For example,
+1.	Never return null for a Set/List/Map collection return types. Return corresponding empty values such as `Collections.emptySet()`, `Collections.emptyList()` or `Collections.emptyMap()`;
+1. Prefer method return type to be more generic such as a Super Interface or Super Class. For example, `List` instead of `ArrayList`.
+1.	Avoid having multiple return statements in a method. Prefer to provide a single point of exit to a method. For example:
 
-        ```
-        //AVOID BELOW
-        private int getStatus() {
-            if(condition1) {
-                return Status.SUCCESS;
-            } else if (condition2) {
-                return Status.FAILURE;
-            } else {
-                return Status.UNKNOWN;
-            }
-        }
+``` java
+//AVOID BELOW
+private int getStatus() {
+    if(condition1) {
+        return Status.SUCCESS;
+    } else if (condition2) {
+        return Status.FAILURE;
+    } else {
+        return Status.UNKNOWN;
+    }
+}
 
-        //PREFER BELOW
-        private int getStatus() {
-            int status;
+//PREFER BELOW
+private int getStatus() {
+    int status;
 
-            if(condition1) {
-                status = Status.SUCCESS;
-            } else if (condition2) {
-                status = Status.FAILURE;
-            } else {
-                status = Status.UNKNOWN;
-            }
+    if(condition1) {
+        status = Status.SUCCESS;
+    } else if (condition2) {
+        status = Status.FAILURE;
+    } else {
+        status = Status.UNKNOWN;
+    }
 
-            return status;
-        }
+    return status;
+}
 
-        ```
+```
 5. Use `Optional` return type to avoid null checking. When there is possible to return `null` for a method, return `Optional.empty()`.
+
 6. Use `OptionalInt`, `OptionalLong` return types for a method when there is an unknown value of Integer/Long to be returned like `-1`;
 
 
@@ -501,7 +500,8 @@ class Sample extends Object {
 
 Each line should contain at most one statement. 
 Example:
-```
+
+```java
 argv++;         // Correct
 argc--;         // Correct  
 argv++; argc--; // AVOID!
@@ -509,7 +509,8 @@ argv++; argc--; // AVOID!
 
 ## Compound Statements
 * Compound statements are statements that contain lists of statements enclosed in braces 
-```
+
+```java
 { 
 	Statement1;
 	Statement2;
@@ -518,9 +519,9 @@ argv++; argc--; // AVOID!
 ```
 * The enclosed statements should be indented one more level than the compound statement.
 * The opening brace should be at the end of the line that begins the compound statement; the closing brace should begin a line and be indented to the beginning of the compound statement.
-* Braces are used around all statements, even single statements, when they are part of a control structure, such as an if-else or for statement. This makes it easier to add statements without accidentally introducing bugs due to forgetting to add braces.
-For example,
-```
+* Braces are used around all statements, even single statements, when they are part of a control structure, such as an if-else or for statement. This makes it easier to add statements without accidentally introducing bugs due to forgetting to add braces.  For example:
+
+```java
 //COMPOUND STATEMENT
 if(list.size() == 2) {
     list.remove(0)
@@ -544,11 +545,11 @@ if(list.isEmpty()) {
 }
 ```
 
-
 ## "return" Statements
 
 * A return statement with a value should not use parentheses unless they make the return value more obvious in some way. Example:
-```
+
+```java
 return;
 return myDisk.size();
 return (size ? size : defaultSize);
@@ -559,7 +560,8 @@ return (size ? size : defaultSize);
 ## if, if-else, if-else if-else Statements
 
 * Always curly braces are used in the if-else statements. Even though there is a single statement below the if-else statement, curly braces is used. For example,
-```
+
+```java
 if(width > 45) {
     return false; // some description
 }
@@ -567,7 +569,8 @@ if(width > 45) {
 
 * If there is a Boolean value to be returned in a method or assigned to a variable based on an if-else condition, the condition itself should be returned or assigned instead of `true` or `false` for the condition.
 For example, 
-```
+
+```java
 if(isEmpty()) return true; else return false; //AVOID
 
 return isEmpty(); //PREFER
@@ -577,16 +580,18 @@ return isEmpty(); //PREFER
 
 ## Conditional Expressions
 * If any binary operator is used before "?" in the ternary operator, then parentheses is used.
-    ```
-    (age >= 25) ? "VALID" : "INVALID" ;
-    ```
+
+```java
+(age >= 25) ? "VALID" : "INVALID" ;
+```
 * Prefer if-else statement over conditional expressions if it gets complex with the condition or the statements.
 * Avoid using nested conditional expressions for better readability.
 
 
 ## "switch" Statements
 * A switch statement should have the following form:
-```
+
+```java
 switch (condition) {
 case ABC:
     statements;
@@ -615,26 +620,27 @@ default:
 Only for the following situations 2 blank lines are used,
 
 1. Between 2 different sections of the source file
-2. If you have more than one class or interface, use 2 blank lines
+1. If you have more than one class or interface, use 2 blank lines
 
 Only for the following situations, 1 blank line is used,
 
 1. Between method declarations.
-2. Between the variable declarations and the method code.
-3. Before the block comment or line comment.
-4. To provide a better readability in between logical blocks, an empty line are used, wherever applicable.
+1. Between the variable declarations and the method code.
+1. Before the block comment or line comment.
+1. To provide a better readability in between logical blocks, an empty line are used, wherever applicable.
 
 ## Blank Spaces
 
 Under the following circumstances, blank space are used,
 
 1. When a keyword followed by parenthesis, a blank space should be given after the keyword. For example,
-```
+
+```java
 while(age > 60)  {
     ...
 }
 ```
-2. In the argument list, the parameters are given a space after comma.
+1. In the argument list, the parameters are given a space after comma.
 
 # Naming Conventions
 ## Package names
@@ -651,12 +657,13 @@ The names given to interface is always noun and in camel case. Refer to [Classes
 
 ## Methods
 
-The method names are always verbs and in camel case. For example,
-```
+The method names are always verbs and in camel case. For example
+
+```java
 public void deleteFromCache(String cacheName, String key) {
     ...
 }
-````
+```
 
 ## Variables
 
@@ -664,7 +671,7 @@ The variable names are short and meaningful. Any new observer can understand the
 
 ## Constants
 
-* The constants are given the name in capital letters. The words in the names are separated by underscore("_").
+* The constants are given the name in capital letters. The words in the names are separated by underscore.
 * String literals should not be used in the code directly. Declare them as constant in the class.
 * Magic Numbers should not be used in code, they should be declared as constants.
 * Create Xyz**Constants** class to group related and reused constants within a module/feature.
@@ -679,13 +686,15 @@ The variable names are short and meaningful. Any new observer can understand the
 ## Referring to Class Variables and Methods
 
 Always use the class name to call the static method. For example,
-```
+
+```java
 LogFactory.getLogger();
 ```
 ## Constants
 
 Numerical values should not be used in the code directly. Declare them and use it in the code. For example,
-```
+
+```java
 int MAX_AGE = 60;
 while (age > MAX_AGE) {
     ...
@@ -694,7 +703,8 @@ while (age > MAX_AGE) {
 ## Variable Assignments
 
 * Avoid multiple assignments in the same line. For example,
-```
+
+```java
 int a, b = 10 // AVOID
 
 // PREFER
@@ -714,25 +724,28 @@ int b = 10;
 
 ### Lambda Expressions
 * Prefer Method Reference over a Lambda Expression
-    ```
-   Function<Employee, String> = employee -> employee.getName() // AVOID
-    Function<Employee, String> = employee::getName // PREFER
-    ```
+
+```java
+Function<Employee, String> = employee -> employee.getName() // AVOID
+Function<Employee, String> = employee::getName // PREFER
+```
 * Keep Lambda Expressions Short and Self-explanatory so that it is easy to understand. . Provide clear understandable name to the parameters in Lambda Expressions.
 * Always use parameter type inference. For example,
-    ```
+
+    ```java
     (employee, requesterEmployee) -> employee.name.compareTo(requesterEmployee.name) // PREFER
     (Employee employee, Employee requesterEmployee) -> {employee.name.compareTo(requesterEmployee.name)} // PREFER
     ```
 * Do not use the parenthesis for a single parameter lambda expression.
-    ```
+    ```java
     (employee) -> employee.getName().compareTo("ABC") // AVOID
     employee -> employee.getName().compareTo("ABC") // PREFER
     ```
 * Use “Effectively Final” Variables in Lambda Expressions. It is not required to mark every target variable as final.
 * Avoid mutating Object Variables in Lambda Expression.
-* Avoid using the block lambdas wherever an expression lambda are used. For example,
-    ```
+* Avoid using the block lambdas wherever an expression lambda are used. For example:
+
+    ```java
     // PREFER
     someVar -> someVar.toUpperCase(Constants.SOME_CONST);
 
@@ -745,8 +758,9 @@ int b = 10;
 * Prefer Standard Functional Interfaces over creating a similar one unless it is really required. Use Standard Functional interfaces, which are gathered in the `java.util.function` package, satisfy most developers' needs in providing target types for lambda expressions and method references.
 * On a new Functional Interface declaration always use `@FunctionalInterface` annotation. This is not only for the documentation purpose but also to avoid accidentally breaking the Functional Interface behavior.
 * Instantiate Functional Interfaces with Lambda Expressions instead of creating anonymous inner class instances for that.
-* Whenever calling the functional interface, place them at last in the parameter list. For example,
-```
+* Whenever calling the functional interface, place them at last in the parameter list. For example
+
+```java
 // PREFER
 public Foo parse(Locale locale, **Function<Locale,Foo> fn** );
 
@@ -771,7 +785,8 @@ public Foo parse( **Function<Locale,Foo> fn** , Locale locale);
 ### Throwing exceptions
 
 Throw specific exceptions in a method, rather than generic exceptions. For example,
-```
+
+```java
 public void myMethod()throws Exception{  // AVOID
 public void myMethod()throws NumberFormatException{  // PREFER
 ```
@@ -779,7 +794,8 @@ public void myMethod()throws NumberFormatException{  // PREFER
 ### Documenting exceptions
 
 The exceptions are documented clearly. For example,
-```
+
+```java
 /**
  * The method description goes here ...
  *
@@ -794,7 +810,8 @@ public void myMethod(String someInput) throws PacketNotValidException {
 ### Catching exceptions
 * Always prefer to use **try-with-resource** block when applicable like instantiating a Input or Output stream/reader or Connection, which are AutoCloseable.
 * The following example uses a try-with-resources statement to automatically close a `java.sql.Statement` object:
-```
+
+```java
 public static void viewTable(Connection con) throws SQLException {
     String query = "select COF_NAME, SUP_ID, PRICE, SALES, TOTAL from COFFEES";
     try (Statement stmt = con.createStatement()) {
@@ -809,7 +826,8 @@ public static void viewTable(Connection con) throws SQLException {
 * A try-with-resources statement can have catch and finally blocks just like an ordinary try statement.
 
 * Always catch specific exceptions over a more generic exceptions like Exception/Throwable class. For example,
-```
+
+```java
 // AVOID BELOW
 try {
     ...
@@ -825,7 +843,8 @@ try {
 }
 ```
 * Never leave a catch block empty. Either handle the exception, or say proper reason for doing nothing in it.
-```
+
+```java
 // AVOID BELOW
 try {
    ...
@@ -841,7 +860,8 @@ try {
 ```
 * Use multi-catch blocks wherever possible to club common handling of multiple exceptions.
 * Always log exceptions to file in a catch block for debugging purpose.
-```
+
+```java
 try {
    ...
 } catch(NumberFormatException e) {
@@ -865,10 +885,10 @@ try {
 Logs are classified and logged accordingly. Following are the various log levels used in the MOSIP application.
 
 1. TRACE
-2. DEBUG
-3. INFO
-4. WARN
-5. ERROR
+1. DEBUG
+1. INFO
+1. WARN
+1. ERROR
 
 The log levels are configured according to the environment such as Development, Testing, UAT or Production. For example, the log levels in production is from WARN. Whereas in Development and Testing environment, it is from TRACE.
 
@@ -877,7 +897,8 @@ The log levels are configured according to the environment such as Development, 
 MOSIP's log component from the core-kernel is used to log entries. The log module in the core-kernel is used to log all the log entries.
 
 * First create a logger utility class under the core module of the feature like below:
-````
+
+```java
 
 import io.mosip.kernel.core.logger.spi.Logger;
 import io.mosip.kernel.logger.logback.appender.RollingFileAppender;
@@ -924,7 +945,7 @@ public final class XYZLogger {
 	}
 }
 
-````
+```
 * To log any information/error/debug in a class, 
 	* create a logger instance in that class as below:
 		`private static Logger mosipLogger = XYZLogger.getLogger(MyClass.class);`
@@ -961,7 +982,6 @@ Apache Commons is used to handle the common utilities like StringUtil, FileUtil,
 In case if Apache Commons doesn't have the necessary utilities, the util project from mosip-core is used.
 
 
-
 ## Miscellaneous Practices
 
 Following are the miscellaneous practices which are followed in MOSIP.
@@ -976,14 +996,16 @@ Parenthesis are used in the code liberally to improve the readability and for pr
 
 ### Generics:
 * Avoid using Generic classes without Parameter types. 
-For example,
-```
+For example
+
+```java
 List nameList = new ArrayList(); // AVOID
 List<String> nameList = new ArrayList<>(); //PREFER
 ```
 * Use diamond operator while constructing Generic objects.
-For example,
-```
+For example
+
+```java
 new HashMap<String, List<String>>() //AVOID
 new HashMap<>() //PREFER
 ```
@@ -991,7 +1013,8 @@ new HashMap<>() //PREFER
 ### Method Calls Chaining
 * While chaining multiple method calls, keep one method call per line for better clarity and easy debugging of any issue (especially to get line number in exception stack trace where exactly is the error/exception occurs).
 For example:
-```
+
+```java
 MessageDialog.makeText(text)
 	.setGravity(Gravity.TOP, 0, 0)
 	.setView(layout)

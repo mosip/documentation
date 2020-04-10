@@ -15,7 +15,6 @@
 * [MDS](MOSIP-Device-Service-Specification.md) 
 * [Privacy & Security](Privacy-and-Security.md)
 * [Build & Deploy](Build-and-Deploy.md)
-* [Contribute](Contributor-Guide.md)
 * APIs
     * [ABIS APIs](ABIS-APIs.md)
     * [Admin APIs](Admin-APIs.md)
@@ -43,6 +42,7 @@
     * [Resident Service APIs](Resident-Service-APIs.md)
     * [Template APIs](Template-APIs.md)
     * [Zone APIs](Zone-APIs.md)
+* [Contribute](Contributor-Guide.md)
 * [LICENSE](License.md)
 
 ## OTHER PAGES 
@@ -96,7 +96,7 @@
     * [MOSIP REST API guidelines](MOSIP-REST-API-guidelines.md)
     * [Partner Management Functionality](Partner-Management-Functionality.md)
     * [Pre Registration Functionality](Pre-Registration-Functionality.md)
-    * [Reg client implementation](Reg-client-implementation.md)
+    * [Registration Client Developer Documentation](Registration-Client-Developer-Documentation.md)
     * [Registration Client Biometrics Service Integration](Registration-Client-Biometrics-Service-Integration.md)
     * [Registration Client Setup](Registration-Client-Setup.md)
     * [Registration Client UI Developer Document](Registration-Client-UI-Developer-Document.md)
