@@ -24,12 +24,14 @@ The identity data stored inside the ID Repo is encrypted. This is the most criti
 ## Store identity data and documents 
 
 Upon receiving the request to store identity details of individual, the system validates input ID attributes in the request against MOSIP ID defined for the country
+
 1. Stores ID Json, biometric documents, proof documents of an individual generated during registration.
 1. On successful storage of identity for an individual, status of UIN of the individual is marked as 'ACTIVATED'.
 
 ## Retrieve stored identity details by UIN or RID 
 
 Upon receiving a request to retrieve identity details of an individual based on input UIN or RID and type as an optional parameter, the system performs the following steps:
+
 1. Validates if input UIN is 'ACTIVATED'.
 1. Retrieves latest ID of individual.
 1. The system retrieves and sends demographic or biometric details or both. 
@@ -37,6 +39,7 @@ Upon receiving a request to retrieve identity details of an individual based on 
 ## Update identity data and documents 
 
 Upon receiving a request to update identity details of an individual, the system performs the following steps:
+
 1. Validates if input UIN is 'ACTIVATED'
 1. Updates input ID attributes of individual.
 1. Updates demographic/biometric/both 
