@@ -16,22 +16,26 @@ Important considerations are as follows:
 
 # Process flow
 
-![](_images/reg_processor/reg_processor_new_packet_flow.jpg)
-&nbsp;  
-&nbsp; 
-![](_images/reg_processor/reg_processor_packet_pre_processing_flow.jpg)
-&nbsp;  
-&nbsp;
-![](_images/reg_processor/reg_processor_lost_uin_flow.jpg)
-&nbsp;  
-&nbsp;
-![](_images/reg_processor/reg_processor_activate_deactivate_flow.jpg)
-&nbsp;  
-&nbsp;
-![](_images/reg_processor/reg_processor_update_packet_flow.jpg)
+## Packet Pre-Processing
+![](_images/reg_processor/packet_pre-processing_part_1.jpg)
+![](_images/reg_processor/packet_pre-processing_part_2.jpg)
+
+## New Packet Processing
+![](_images/reg_processor/new_packet_processing_part_1.jpg)
+![](_images/reg_processor/new_packet_processing_part_2.jpg)
+
+## Update Packet Processsing
+![](_images/reg_processor/update_packet_processing_part_1.jpg)
+![](_images/reg_processor/update_packet_processing_part_2.jpg)
+
+## Lost UIN Packet Processing
+![](_images/reg_processor/lost_uin_packet_processing_part_1.jpg)
+![](_images/reg_processor/lost_uin_packet_processing_part_2.jpg)
+
+## Activate/De-Activate Packet Processing
+![](_images/reg_processor/activate_deactivate_uin.jpg)
 
 # Logical View
-
 ![Registration Processor Logical view](_images/reg_processor/reg-proc-logical-view.png)
 
 # Services
