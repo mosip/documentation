@@ -27,7 +27,7 @@ Upon receiving the request to store identity details of individual, the system v
 1. Stores ID Json, biometric documents, proof documents of an individual generated during registration.
 1. On successful storage of identity for an individual, status of UIN of the individual is marked as 'ACTIVATED'.
 
-##  Retrieve stored identity details by UIN or RID 
+## Retrieve stored identity details by UIN or RID 
 
 Upon receiving a request to retrieve identity details of an individual based on input UIN or RID and type as an optional parameter, the system performs the following steps:
 1. Validates if input UIN is 'ACTIVATED'.
@@ -49,8 +49,14 @@ An individual's UIN/VIDS can be de-activated or re-activated.
 
 # Process flow
 
-## Identity service
-![](_images/id_repo/id_repo_identity_service_flow.jpg) 
+## Identity service - Store identity data and documents
+![](_images/id_repo/id_repo_identity_service_store_identity_flow.jpg) 
+
+## Identity service - Retrieve stored identity details by UIN or RID 
+![](_images/id_repo/id_repo_identity_service_retrieve_identity_flow.jpg) 
+
+## Identity service - Update identity data and documents 
+![](_images/id_repo/id_repo_identity_service_update_identity_flow.jpg) 
 
 ## VID service
 ![](_images/id_repo/id_repo_vid_service_flow.jpg) 
