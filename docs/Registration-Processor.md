@@ -18,18 +18,22 @@ Important considerations are as follows:
 
 ## Packet Pre-Processing
 ![](_images/reg_processor/packet_pre-processing_part_1.jpg)
+
 ![](_images/reg_processor/packet_pre-processing_part_2.jpg)
 
 ## New Packet Processing
 ![](_images/reg_processor/new_packet_processing_part_1.jpg)
+
 ![](_images/reg_processor/new_packet_processing_part_2.jpg)
 
 ## Update Packet Processsing
 ![](_images/reg_processor/update_packet_processing_part_1.jpg)
+
 ![](_images/reg_processor/update_packet_processing_part_2.jpg)
 
 ## Lost UIN Packet Processing
 ![](_images/reg_processor/lost_uin_packet_processing_part_1.jpg)
+
 ![](_images/reg_processor/lost_uin_packet_processing_part_2.jpg)
 
 ## Activate/De-Activate Packet Processing
