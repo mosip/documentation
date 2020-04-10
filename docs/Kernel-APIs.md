@@ -1201,10 +1201,8 @@ KER-AUD-500 | Internal server error | Internal server error
 * [GET /userdetails/{regid}](#get-userdetailsregistrationcenterid)
 * [GET /publickey](#get-publickey)
 * [POST /tpm/publickey](#post-tpmpublickey)
-
-
+* [POST /tpm/publickey/verify](#post-tpmpublickey)
 * [GET /clientsettings](#get-clientsettings)
-
 * [GET /clientsettings/{regcenterid}](#get-clientsettingsregcenterid)
 
 
@@ -2427,7 +2425,7 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
 #### Success Response:
 **Status code: '200'**
 
-##### Description: public key for the specified application
+##### Description: public key and current active profile for the specified application
 ```JSON
 {
   "id": "string",
@@ -2443,7 +2441,8 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
   "response": {	   			
 	"publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwUAubI0cMDZMlalDYbzZj4G2UrWY0QDtmZQyqU_ER5CA1gbxlHDQIesm1DVyp6kf1sG-RcosKPqKIhe9vKLPx5pzQXinGdl_8e5bkPpg2RLlDoNju1ycohPrCk0VOd4eNU90-SRJZH_62QE1_MG2yIohI7e7cuC93Q9SHMD8jmJ7DX2zTui4zbo-c5g7vFAtzDgxJg0vSPGbap682xkWZNgzRA_ctrnHF_9_JMzP_6Equ8E_g5BaI3jkWnVmDNjDzzseBH9zHpfbx6wNYrzQZy8iqqywbUtbHWtM0ALkH7nLi4atVbL6a-ryFt6Tq7qfGzYhLtWN47t4GxwyOJC99QIDAQAB",
 	"issuedAt": "2018-01-01T10:00:00",
-	"expiryAt": "2018-12-10T06:12:51.994"
+	"expiryAt": "2018-12-10T06:12:51.994",
+	"profile" : "prod"
   }
 }	
 ```
@@ -2452,7 +2451,7 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
 This service will upload the public key corresponding to a particular machine which are used in the MOSIP platform. This service will be used specifically in the Registration Client machines. 
 
 ### Resource URL
-`https://mosip.io/v1/syncdata/tpm/publickey ` TODO
+`https://mosip.io/v1/syncdata/tpm/publickey`
 
 ### Resource details
 Resource Details | Description
@@ -2522,13 +2521,87 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
 }		
 ```
 
+## POST /tpm/publickey/verify
+This service will only verify the public key corresponding to a particular machine which are used in the MOSIP platform. This service will be used specifically in the Registration Client machines. 
+
+### Resource URL
+`https://mosip.io/v1/syncdata/tpm/publickey/verify`
+
+### Resource details
+Resource Details | Description
+------------ | -------------
+Request format | application/json
+Response format | JSON
+Requires Authentication | Yes
+
+### Request Part Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+machineName |Yes|Name of the machine| | MDLGE6273
+publickey |Yes|Base 64 encoded Public key of the passed machine| | 
+
+### Request
+```JSON
+{
+  "id": "string",
+  "metadata": {},
+  "request": {
+    "machineName": "Machine name",
+    "publicKey": "Base 64 encoded public key"
+  },
+  "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "version": "string"
+}
+```
+
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: Verifies if the public key has been mapped to the machine
+```JSON
+{
+  "id": "mosip.kernel.sync.publickeytomachine",
+  "version": "1.0",
+  "metadata": {},
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "errors": [
+    {
+      "errorCode": "string",
+      "message": "string"
+    }
+  ],
+  "response": {
+	"keyIndex": "ThumbprintOfThePublickey"
+  }
+}
+```
+
+#### Error Response:
+```JSON
+{
+  "id": "string",
+  "version": "string",
+  "metadata": {},
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "errors": [
+    {
+      "errorCode": "string",
+      "message": "string"
+    }
+  ],
+  "response": null
+}		
+```
+
 
 ## GET /clientsettings
 
 This service will provides the list of all clientsettings. This service is used mainly by the Enrollment client module. 
 
 #### Resource URL
-<div>https://mosip.io/v1/syncdata/clientsettings?keyindex=ys6823u22&lastupdated=2018-12-10T11:42:52.994Z</div>
+<div>https://mosip.io/v1/syncdata/clientsettings?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24&lastupdated=2018-12-10T11:42:52.994Z</div>
 
 #### Resource details
 
@@ -2546,7 +2619,7 @@ keyindex|Yes|Thumbprint of the public key corresponding to this machine| |
 
 #### Request
 
-<div>https://mosip.io/v1/syncdata/clientsettings?keyindex=ys6823u22</div>
+<div>https://mosip.io/v1/syncdata/clientsettings?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24</div>
 
 #### Responses:
 ##### Success Response:
@@ -2922,7 +2995,7 @@ keyindex|Yes|Thumbprint of the public key corresponding to this machine| |
 This service will provides the list of all master data. This service is used mainly by the Enrollment client module. 
 
 #### Resource URL
-<div>https://mosip.io/v1/syncdata/clientsettings/10001?keyindex=NM5328114630&lastupdated=2018-12-10T11:42:52.994Z</div>
+<div>https://mosip.io/v1/syncdata/clientsettings/10001?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24&lastupdated=2018-12-10T11:42:52.994Z</div>
 
 #### Resource details
 
@@ -2940,7 +3013,7 @@ keyindex|Yes|Thumbprint of the public key corresponding to this machine| |
 
 
 #### Request
-v1/syncdata/clientsettings/10001?keyindex=ys6823u22
+v1/syncdata/clientsettings/10001?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24
 
 #### Responses:
 ##### Success Response:
