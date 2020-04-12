@@ -1,5 +1,5 @@
 
-**Draft 3 (August, 2019)**
+**Draft 4 (April, 2020)**
 
 MOSIP uses biometrics in the registration and the authentication processes. As part of this it requires specialized processing of the biometrics data for different types of biometrics. This document defines the interface for the Java Library providing the functional support for processing biometrics.
 
@@ -52,6 +52,7 @@ MOSIP uses biometrics in the registration and the authentication processes. As p
 * Used for matching a biometric received in an auth transaction with the biometrics on record
 * Used for authentication of operators in offline mode
 * Used for prevention of erroneous submission of operator biometrics in place of registrant’s biometric on registration client
+* Match is expected to be capable of image-image, extract-extract and extract-image comparisons
 
 ## Signature
 
@@ -61,7 +62,8 @@ MOSIP uses biometrics in the registration and the authentication processes. As p
 * Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
 
 ### Output Parameters
-* List of MatchScore object with Match score and Analytics. The match score is on a scale of 100 - Higher is better.
+* List of Decision object with Match decision and Analytics.
+* Each Decision object will contain a match - yes/no decision and an Analytics object with key value pairs
 
 ### Errors / Exceptions
 * Unsupported biometric type
@@ -82,55 +84,19 @@ MOSIP uses biometrics in the registration and the authentication processes. As p
 * The match score will return a score specific to the library as well as a confidence score on a scale of 100.
 
 ### Iris
-* Input and on record images are jpeg2000 format lossless images
+* Input and on record images are jpeg2000 format lossless images or matchers own extract as provided by the extarctor API
 * The matcher uses its own algorithm to perform extraction, segmentation and identifying patterns on the images being compared.
 * Typical comparisons are 1 : 2 for a person and 1 : n for multiple people. (deduplication scenario)
 * The match score will return a score specific to the library as well as a confidence score on a scale of 100.
 
 ### Face
-* Input and on record images are jpeg2000 format lossless images
+* Input and on record images are jpeg2000 format lossless images or matchers own extract as provided by the extarctor API
 * The matcher uses its own algorithm to perform extraction, segmentation and identifying landmarks on the images being compared.
 * Typical comparisons are 1 : 1 for one person and 1 : n for multiple people (deduplication scenario)
 * The match score will return a score specific to the library as well as a confidence score on a scale of 100.
 
 **_Note:_** As new biometrics come up the matching score will be as per the sample set and standards defined for that biometric.
 
-# Composite Matcher
-
-## Use Cases
-* Used for matching multiple modes of biometrics of an individual
-
-## Signature
-
-### Input Parameters
-* Sample List of Input Image Records (1 set) - This is a Biometric Image Record list with metadata and image data belonging to an individual. This is the freshly received input which needs to be matched.
-* Match List of Image Records (1 set) - This is the set of biometrics on record that the input images needs to be matched against belonging to an individual.
-* Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
-
-### Output Parameters
-* A MatchScore object with Match score and Analytics. The match score is on a scale of 100 - Higher is better.
-
-### Errors/Exceptions
-* Unsupported biometric type
-* Unsupported image format
-* Mismatch in biometric types (sample to record)
-* Processing error
-
-## Behavior
-
-### Multiple Fingerprints
-* The biometric record will have a jpeg2000 format lossless image or minutiae in an ISO template (FMR).
-* There will be multiple fingers in the input based on which the composite match has to be done.
-* A 1 : 1 composite match is done when comparing one set of fingers received to a set of fingers on record for that person.
-* The match score will return a score specific to the library as well as a confidence score on a scale of 100.
-
-### Multiple Biometric Types
-* Input and on record images are jpeg2000 format lossless images
-* The data consists of mixed biometric type like Iris + Fingerprint etc. The data on record should have the biometric elements being passed in for a match to happen.
-* The match is a 1 : 1 composite match.
-* The match score will return a score specific to the library as well as a confidence score on a scale of 100.
-
-**_Note:_** As new biometrics come up the matching score will be as per the sample set and standards defined for that biometric.
 
 # Extractor
 
@@ -232,18 +198,15 @@ The quality score object will have two sections. One is the score section and th
 # Appendix A - Java Specifications
 
 ```java
-class Score
+class MatchDecision
 {
-   float scaledScore; //0 - 100, used for internal classification and efficacy analysis
-   long internalScore; // used against threshold specified in config file
+   boolean match; //true or false indicates matchers decision
    KeyValuePair[] analyticsInfo; // detailed breakdown and other information
 }
 
-class CompositeScore
+class QualityScore
 {
-   float scaledScore; //0 - 100, used for internal classification and efficacy analysis
-   long internalScore; // used against threshold specified in config file
-   Score[] individualScores; // List of score for individual matches. Array size matches the input sample array size.
+   float score; //0 - 100 score that represents quality as a percentage
    KeyValuePair[] analyticsInfo; // detailed breakdown and other information
 }
 
@@ -356,8 +319,7 @@ enum PurposeType
 
 interface IBioApi
 {
-   Score[] match(BIR sample, BIR[] gallery, KeyValuePair[] flags);
-   CompositeScore compositeMatch(BIR[] sampleList, BIR[] recordList, KeyValuePair[] flags);
+   MatchDecision[] match(BIR sample, BIR[] gallery, KeyValuePair[] flags);
    QualityScore checkQuality(BIR sample, KeyValuePair[] flags);
    BIR extractTemplate(BIR sample, KeyValuePair[] flags);
    BIR[] segment(BIR sample, KeyValuePair[] flags);
