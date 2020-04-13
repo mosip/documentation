@@ -18,11 +18,9 @@ MOSIP uses ISO specified formats to represent the biometric data, while CBEFF XM
 ## Fingerprint
 Fingerprint Image Record (FIR):
  * Image specification: ISO/IEC 19794-4 
- * Number of Fingers: maximum 10, minimum 1
- * Format: JPEG2000 (lossless)
+ * Number of fingers: maximum 10, minimum 1
  * Quality: NIST Fingerprint Quality (NFIQ) value of 1, 2 and 3 is acceptable
- * Transmission format: JPEG2000
- * Storage: JPEG2000 or PNG
+ * Format: JPEG2000 Lossless
 
 ## IRIS
 MOSIP will use Iris images only for registration
@@ -30,9 +28,7 @@ MOSIP will use Iris images only for registration
 IRIS Image Record (IIR):
  * Image specification: ISO/IEC 19794-6
  * Number of eyes: 2
- * Format: JPEG2000 (lossless) 
- * Transmission format: JPEG2000
- * Storage: JPEG2000
+ * Format: JPEG2000 Lossless
 
 ## Face
 MOSIP will use face image for registration
@@ -41,8 +37,6 @@ Face Image Data (FID):
  * Image specification: ISO/IEC 19794-5
  * Image details: Full frontal image, +/- 5 degrees rotation, 24 bit RGB, white background, 35 mm width, 45 mm height
  * Format: JPEG2000 (lossless) 
- * Transmission format: JPEG2000
- * Storage: JPEG2000
 
 # Data standards for Authentication
 
