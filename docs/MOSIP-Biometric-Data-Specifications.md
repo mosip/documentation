@@ -2,7 +2,7 @@
 
 Multi modal biometrics (Fingerprint, Iris, Face) is key component in MOSIP to identify and provide a unique identity to an individual. The page details out the specifications for Biometrics data during data acquisition and verification.
 
-MOSIP uses ISO specified formats to represent the biometric data, while CBEFF XML is used as a container to store and exchange multiple biometric data. All the biometrics data captured for an individual is stored in a single XML file. The ISO binary data withing XML is base64 encoded.
+MOSIP uses ISO specified formats to represent the biometric data, while CBEFF XML is used as a container to store and exchange multiple biometric data. All the biometrics data captured for an individual is stored in a single XML file. The ISO binary data within XML is base64 encoded.
 	
 # CBEFF
 * Standards:
