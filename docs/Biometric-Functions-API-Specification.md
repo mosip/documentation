@@ -81,21 +81,19 @@ MOSIP uses biometrics in the registration and the authentication processes. As p
 * In case the sample is not an image but minutiae (FMR) then the match accuracy and efficacy might be lower as the extraction templates and algorithms might not be the same
 * In case the on record extract is a format that the matcher does not understand the match will not happen. Also if the comparison is between two extracts (Minutiae) the False Rejection and False Acceptance cases might be high
 * A typical 1 : n match is used when comparing one finger received to a set of fingers (upto 10) on record for that person or a limited set of people (upto 10 per person).
-* The match score will return a score specific to the library as well as a confidence score on a scale of 100.
+* The match decision will return a yes/no and optional anaytics with details such a confidence level.
 
 ### Iris
 * Input and on record images are jpeg2000 format lossless images or matchers own extract as provided by the extarctor API
 * The matcher uses its own algorithm to perform extraction, segmentation and identifying patterns on the images being compared.
 * Typical comparisons are 1 : 2 for a person and 1 : n for multiple people. (deduplication scenario)
-* The match score will return a score specific to the library as well as a confidence score on a scale of 100.
+* The match decision will return a yes/no and optional anaytics with details such a confidence level.
 
 ### Face
 * Input and on record images are jpeg2000 format lossless images or matchers own extract as provided by the extarctor API
 * The matcher uses its own algorithm to perform extraction, segmentation and identifying landmarks on the images being compared.
 * Typical comparisons are 1 : 1 for one person and 1 : n for multiple people (deduplication scenario)
-* The match score will return a score specific to the library as well as a confidence score on a scale of 100.
-
-**_Note:_** As new biometrics come up the matching score will be as per the sample set and standards defined for that biometric.
+* The match decision will return a yes/no and optional anaytics with details such a confidence level.
 
 
 # Extractor
@@ -184,12 +182,11 @@ The Security Block will be as per CBEFF specification. It is optional.
 
 The cbeff format reference is here - [CBEFF Reference](http://docs.oasis-open.org/bioserv/BIAS/v2.0/csprd01/schemas/cbeff_ed2.xsd)
 
-# Score Object
+# Quality Score Object
 The quality score object will have two sections. One is the score section and the other is the analytics section.
 
 ## Score Parameters
 * Graded score on a scale of 100. This is an unsigned float that represents a % and can have values between 0 and 100 including decimals like 82.45.
-* Internal Score as defined on the scale of the implementing library. This is an unsigned long
 
 ## Analytics
 * List of name value pairs that can be used to convey additional information. The values filled are specific to the implementing library. This could contain information about the aspects where quality is failing for e.g. ICAO compliance for tilt or lighting. In case of matches it could contain information like the NIST score, the algorithm used for matching and more.
