@@ -10,7 +10,7 @@
 
 # CBEFF Sample
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <BIR xmlns="http://standards.iso.org/iso-iec/19785/-3/ed-2/">
    <BIRInfo>
