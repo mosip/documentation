@@ -1,3 +1,15 @@
+# CBEFF
+
+* Standards:
+  * ISO 19785-3
+  * [OASIS patron format ISO/IEC JTC 1 SC 37 - biometrics](https://www.ibia.org/cbeff/iso/bir-header-identifiers), patron identifier 257, patron format identifier 11
+  * [OASIS Binary Data Block Format Identifiers](https://www.ibia.org/cbeff/iso/bdb-format-identifiers) for Format Type ISO/IEC JTC 1 SC 37-biometrics, patron identifier 257, BDB patron format identifier 7 for finger image, 8 for face image and 9 for iris image.
+* [Schema](https://docs.oasis-open.org/bioserv/BIAS/v2.0/csprd01/schemas/cbeff_ed2.xsd) 
+* [CBEFF XML Sample](CBEFF-XML-Sample.md)
+* MOSIP's [CBEFF Utility](https://github.com/mosip/commons/tree/master/kernel/kernel-cbeffutil-api) to create, update, search and validate CBEFF XML data.
+
+# CBEFF Sample
+
 ```
 <?xml version="1.0" encoding="UTF-8"?>
 <BIR xmlns="http://standards.iso.org/iso-iec/19785/-3/ed-2/">
