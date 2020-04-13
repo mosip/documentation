@@ -2,7 +2,7 @@
 
 An ABIS system that integrates with MOSIP should support the following operations. All ABIS operations are via a message queue and asynchronous.
 
-# Parameters and return values
+# Parameters
 
 ## Parameters
 
