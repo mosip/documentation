@@ -1,8 +1,10 @@
+# Introduction
+
 Multi modal biometrics (Fingerprint, Iris, Face) is key component in MOSIP to identify and provide a unique identity to an individual. The page details out the specifications for Biometrics data during data acquisition and verification.
 
 MOSIP uses ISO specified formats to represent the biometric data, while CBEFF XML is used as a container to store and exchange multiple biometric data. All the biometrics data captured for an individual is stored in a single XML file. The ISO binary data withing XML is base64 encoded.
 	
-## CBEFF
+# CBEFF
 * Standards:
   * ISO 19785-3
   * [OASIS patron format ISO/IEC JTC 1 SC 37 - biometrics](https://www.ibia.org/cbeff/iso/bir-header-identifiers), patron identifier 257, patron format identifier 11
@@ -11,9 +13,9 @@ MOSIP uses ISO specified formats to represent the biometric data, while CBEFF XM
 * [CBEFF XML Sample](CBEFF-XML-Sample.md)
 * MOSIP's [CBEFF Utility](https://github.com/mosip/commons/tree/master/kernel/kernel-cbeffutil-api) to create, update, search and validate CBEFF XML data.
 
-## Data standards for Registration
+# Data standards for Registration
 
-### Fingerprint
+## Fingerprint
 Fingerprint Image Record (FIR):
  * Image specification: ISO/IEC 19794-4 
  * Number of Fingers: maximum 10, minimum 1
@@ -22,7 +24,7 @@ Fingerprint Image Record (FIR):
  * Transmission format: JPEG2000
  * Storage: JPEG2000 or PNG
 
-### IRIS
+## IRIS
 MOSIP will use Iris images only for registration
 
 IRIS Image Record (IIR):
@@ -32,7 +34,7 @@ IRIS Image Record (IIR):
  * Transmission format: JPEG2000
  * Storage: JPEG2000
 
-### Face
+## Face
 MOSIP will use face image for registration
 
 Face Image Data (FID):
@@ -42,9 +44,9 @@ Face Image Data (FID):
  * Transmission format: JPEG2000
  * Storage: JPEG2000
 
-## Data standards for Authentication
+# Data standards for Authentication
 
-### Fingerprint
+## Fingerprint
 Minutiae based authentication  
 
 Fingerprint Minutiae Record (FMR):
@@ -54,7 +56,7 @@ Fingerprint Minutiae Record (FMR):
  * Transmission format: minutiae
  * Storage: minutiae
 
-### IRIS
+## IRIS
 Iris image based authentication
 
 IRIS Image Record (IIR):
@@ -63,5 +65,5 @@ IRIS Image Record (IIR):
  * Transmission format: JPEG2000 (lossless)
  * Storage: JPEG2000
 
-### Face
+## Face
 Face authentication - future release of MOSIP.
