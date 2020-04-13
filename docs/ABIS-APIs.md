@@ -2,7 +2,9 @@
 
 An ABIS system that integrates with MOSIP should support the following operations. All ABIS operations are via a message queue and asynchronous.
 
-# Parameters
+# Parameters and return values
+
+## Parameters
 
 Common parameters used for all ABIS operations:
 
@@ -18,14 +20,14 @@ scaledScore | Score of the match against the population | None | None | Integer
 targetFPIR | FPIR score as per the formula | None | None | Integer
 maxResults | maximum number of results returned for IDENTIFY operation | 30 | 30 | Integer
 
-# Standard return codes
+## Standard return codes
 
 0 | not used
 --|---------
 1 | Success
 2 | Failed
 
-# Failure reasons
+## Failure reasons
 
 Code | Reason
 -----| ------
