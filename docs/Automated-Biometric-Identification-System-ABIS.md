@@ -16,19 +16,10 @@ MOSIP ABIS middleware has the following components
 MOSIP interacts with ABIS only via message queues.  JSON format is used for all control messages.  Biometrics data is exchanged as per [MOSIP Biometric Data Specifications](MOSIP-Biometric-Data-Specifications.md) 
 
 ABIS must support the following types of biometric images
-* Unsegmented fingerprint images (4-4-2), (4-1-4-1) and (2-2-2-2-2).
+* Unsegmented fingerprint images (4-4-2), (4-1-4-1) and (2-2-2-2-2)
 * Individual fingerprint images (segmented)
 * IRIS images (left, right)
 * Face photograph
-
-ABIS must support the following requests
-
-Management | Registration
------------|-------------
-Ping   | Insert
-GetPendingRequests      | Identify
-GetReferenceCounts      | Delete
-Configure| Ping
 
 ABIS must support  [ABIS APIs](ABIS-APIs.md).
 
