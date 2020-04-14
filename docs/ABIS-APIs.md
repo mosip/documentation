@@ -116,7 +116,7 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
   "responsetime": "2020-03-29T07:01:24.692Z",
   "returnValue": 1,
   "candidateList": {
-    "count": 1,
+    "count": "1",
     "candidates": [
       {
         "referenceId": "7acce7b7d-b58a-4466-a006-c79297281456",
