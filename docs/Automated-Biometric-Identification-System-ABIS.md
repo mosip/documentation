@@ -4,6 +4,14 @@ Providing unique identity for an individual is one of key features of any identi
 
 ![](_images/arch_diagrams/ABIS_middleware.png)
 
+**_Notes:_**
+* It is recommended that the MOSIP adopters deploy ABIS on the same secure zone (military zone) where the registration processor runs. 
+* ABIS system will connect to the queue using a pre-defined user id and password. 
+* ABIS system is not recommended to connect to any external network. 
+* ABIS system will never come to know about the resident’s identity. 
+* No RID (Request ID for Registration) or any demographic information will get into the ABIS system. 
+* MOSIP maintains a mapping between the ABIS specific referenceID and RID of a resident.
+
 ## MOSIP ABIS Middleware
 MOSIP ABIS middleware has the following components
 - MOSIP ABIS request handler 
@@ -16,7 +24,6 @@ MOSIP ABIS middleware has the following components
 MOSIP interacts with ABIS only via message queues.  JSON format is used for all control messages.  Biometrics data is exchanged as per formats defined in [MDS Specification](MOSIP-Device-Service-Specification.md).  The biometric data is wrapped in [CBEFF XML](CBEFF-XML.md) and sent to ABIS.
 
 ABIS must support the following types of biometric images
-* Unsegmented fingerprint images (4-4-2), (4-1-4-1) and (2-2-2-2-2)
 * Individual fingerprint images (segmented)
 * IRIS images (left, right)
 * Face photograph

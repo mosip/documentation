@@ -17,7 +17,6 @@ biometricType | Type of biometric data sent in the request | FMR/FIR/IIR | |
 Return Value | Response | None | None | Integer
 failureReason | Response | None | None | Integer
 
-
 ## Standard return codes
 
 0 | not used
@@ -85,7 +84,7 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
   "referenceUrl": "https://mosip.io/registrationprocessor/v1/bio-dedupe/biometricfile/2cce7b7d-b58a-4466-a006-c79297281789",
   "flags": { //Optional
 	"maxResults": 10, //maxResults is an example and not a prescribed flag
-  	"targetFPIR": 30, //targetFPIR is an example and not a prescribed flag
+	"targetFPIR": 30, //targetFPIR is an example and not a prescribed flag
 	"flag1": "value1",
 	"flag2": "value2" // there can be more following this
   },
@@ -175,6 +174,7 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
 }
 ```
 
+- All INSERT requests added to the queue earlier must be serviced by ABIS when performing an IDENTIFY request.  
 - Identify request provides a 1:N comparison. The given input is compared either against the gallery passed or if the gallery is not specified the entire database.
 - The input for comparison can be provided by referenceID or referenceUrl. If the referenceID is given it is used as the preferred option. The given referenceID must be existing in the ABIS database else ABIS will throw and error. If the referenceID is omitted or NULL and the referenceURL is passed the ABIS retrieves the biometrics provided in the referenceURL and compares the same against either a gallery or its database. In case both referenceID and referenceURL are missing ABIS throws an error.
 - Identify should give all candidates which are considered as a match based on ABIS thresholds.

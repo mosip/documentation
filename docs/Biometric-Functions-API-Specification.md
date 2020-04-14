@@ -1,7 +1,7 @@
 
 **Draft 4 (April, 2020)**
 
-MOSIP uses biometrics in the registration and the authentication processes. As part of this it requires specialized processing of the biometrics data for different types of biometrics. This document defines the interface for the Java Library providing the functional support for processing biometrics.
+MOSIP uses biometrics in the registration and the authentication processes. As part of this it requires specialized processing of the biometrics data for different types of biometrics using Biometric SDKs. Such SDKs can support one more modalities or a set of functionalities as required by the MOSIP adopter or the specific implementation. This document defines the interface for the Java Library providing the functional support for processing biometrics.
 
 # Quality Check
 
@@ -333,4 +333,10 @@ KER-BIO-002	|Missing Input Parameter - %s	|Thrown when data required as input is
 KER-BIO-003	|Quality check of Biometric data failed	|Thrown when data provided is valid but quality check cannot be performed
 KER-BIO-004	|Matching of Biometric data failed	|Thrown when data provided is valid, but matching cannot be performed
 KER-BIO-005	|Unknown error occurred	|Thrown when some other error occurred (eg. licensing issue)
+
+# Biometric SDK Integration Points (Example)
+
+![](_images/arch_diagrams/biometric_sdk_integration_points_table.png)
+
+![](_images/arch_diagrams/biometric_sdk_integration_points.png)
 
