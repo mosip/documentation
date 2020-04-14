@@ -1,94 +1,51 @@
 This section contains detail about the service APIs in the Common Masterdata module
-
 * [Titles API](#titles-master-api)
-
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Title functionality. Fetch APIs are used by IDA to separate out Name from the title.
-
-* [Titles- Search API](#post-titlessearch)
-
+* [Titles - Search API](#post-titlessearch)
 This API is used by the Administrator Portal to fetch list of Titles based on a given filter criteria to display the list of Titles on the Portal UI.
-
-* [Titles- Filter values](#post-titlesfiltervalues)
-
+* [Titles - Filter values](#post-titlesfiltervalues)
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Title List View UI Screen.
-
 * [Gender API](#gender-master-api)
-
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Gender functionality. Fetch API is used by Pre-Registration to display the Genders on the demographic form page for the applicant to select one gender while filling out the form.
-
-* [Genders- Search API](#post-genderssearch)
-
+* [Genders - Search API](#post-genderssearch)
 This API is used by the Administrator Portal to fetch list of Genders based on a given filter criteria to display the list of Genders on the Portal UI.
-
-* [Genders- Filter values](#post-gendersfiltervalues)
-
+* [Genders - Filter values](#post-gendersfiltervalues)
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Gender List View UI Screen.
-
 * [Age Groups API](#age-group-types-api)
-
 This service will provide the age group based on the passed age.
-
 * [ID Types API](#id-types-master-api)
-
 These API contains the Create and Fetch ID types API.
-
 * [Holidays API](#holiday-master-api) 
-
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Holiday functionality. Fetch API is used by Pre-Registration to refer the list of Holiday for a Registration Center while generating booking appointments.
-
 * [Holiday filtervalues APIs](#post-holidaysfiltervalues)
-
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Holiday List View UI Screen.
-
 * [Holiday Search API](#post-holidayssearch)
-
 This API is used by the Administrator Portal to fetch list of Holidays based on a given filter criteria to display the list of Holidays on the Portal UI.
-
 * [Locations API](#locations-master-api)
-
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Location functionality. Fetch API is used by Pre-Registration and ID objected validator. Pre-Registration uses this API to display locations in the demographic form page for applicant to select locations from the dropdown while filling in the address. ID object validator uses the fetch API to validate the value of location received in the packet against the Masterdata.
-
 * [Locations - Search API](#post-locationssearch)
-
 This API is used by the Administrator Portal to fetch list of Locations based on a given filter criteria to display the list of Locations on the Portal UI.
-
 * [Locations - Filter values](#post-locationsfiltervalues)
-
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Location List View UI Screen.
-
 * [Languages API](#languages-master-api)
-
 These include APIs to create, update and fetch MOSIP supported languages.
-
 * [Individual Types API](#individual-types-api)
-
 These includes the APIs to fetch list of Individual Types. This API is used by Pre-Registration to display the list of Individual type for an applicant to select on the Demographic page.
-
 * [Application Types API](#application-types-master-api)
-
 These include APIs to create, update and fetch name of MOSIP Applications.
-
 * [Blacklisted Words API](#blacklisted-words-master-api)
-
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Blacklisted Word functionality. Fetch API is used by Pre-Registration to verify if a Blacklisted word in entered by the Applicant in the Demographic form.
-
 * [BlackListed Words - Search API](#post-blacklistedwordssearch)
-
 This API is used by the Administrator Portal to fetch list of Locations based on a given filter criteria to display the list of Blacklisted Words on the Portal UI.
-
 * [BlackListed Words - Filter values](#post-blacklistedwordsfiltervalues)
-
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Blacklisted Word List View UI Screen.
-
 * [Working days](#working-days)
-
 This API is fetches the defined working days of a week for a Registration Center. It is used by Pre-Registration to consider working days while generating booking appointments for a Registration Center.
-
 * [Exceptional holidays](#exceptional-holidays)
-
 This API is fetches the list of exceptional holidays if any defined for a Registration Center. It is used by Pre-Registration to consider exceptional holidays while generating booking appointments for a Registration Center.
 
 # Titles Master API
+These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Title functionality. Fetch APIs are used by IDA to separate out Name from the title.
 
 * [POST /title](#post-title)
 * [GET /title](#get-title)
@@ -97,16 +54,13 @@ This API is fetches the list of exceptional holidays if any defined for a Regist
 * [DELETE /title/{code}](#delete-titlecode)
 * [GET /title/all](#get-titleall)
 
-# POST /title
-Master data is required across the platform. 
-
+## POST /title
 This service will create the list of Title which are used in the MOSIP platform. 
 
 ### Resource URL
-### `POST /title`
+`POST /title`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -125,14 +79,15 @@ titletype|Yes|Name of the title| |
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "request":  {
-              "code": "cvf",
-              "isActive": true,
-              "langCode": "ghf",
-              "titleDescription": "string",
-              "titleName": "string"
-             }
+    "code": "cvf",
+    "isActive": true,
+    "langCode": "ghf",
+    "titleDescription": "string",
+    "titleName": "string"
+  }
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -143,40 +98,30 @@ titletype|Yes|Name of the title| |
   "errors": [ {
       "errorCode": "string",
       "message": "string"
-    } ],
+    } 
+  ],
   "response": {
-              "code": "cvf",
-              "langCode": "ghf"
-              }
+    "code": "cvf",
+    "langCode": "ghf"
+  }
 }
 ```
+
 ### Response codes
-201
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-Description: Created
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-# GET /title
-Master data is required across the platform. 
-
+## GET /title
 This service will provides the service for  list of all titles.
 
 ### Resource URL
-### `GET /title`
+`GET /title`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -185,7 +130,7 @@ Requires Authentication | Yes
 ### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
-NA ||
+NA | NA | NA | NA | NA
 
 
 ### Example Response
@@ -200,45 +145,34 @@ NA ||
       "message": "string"
     }],
   "response": {
-          "titleList": [ {
-                        "code": "43",
-                        "titleName": "string",
-                        "titleDescription": "string",
-                        "isActive": true,
-                        "langCode": "ENG"
-                       } ]
-             }
+    "titleList": [ {
+      "code": "43",
+      "titleName": "string",
+      "titleDescription": "string",
+      "isActive": true,
+      "langCode": "ENG"
+      }
+	]
+  }
 }
 ```
-200
 
-Description: Success
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
+### Response codes
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
 
-# GET /title/{langcode}
-Master data is required across the platform. 
-
+## GET /title/{langcode}
 This service will provides the service for the List of Titles. 
 
-
-
 ### Resource URL
-### `GET /title/{langcode}`
+`GET /title/{langcode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -262,44 +196,33 @@ langcode|Yes|Code of the language| |
       "message": "string"
     }],
   "response": {
-              "titleList": [{
-                            "code": "xcv",
-                            "titleName": "string",
-                            "titleDescription": "string",
-                            "isActive": true,
-                            "langCode": "qwe"
-                            }]
-              }
+    "titleList": [{
+      "code": "xcv",
+      "titleName": "string",
+      "titleDescription": "string",
+      "isActive": true,
+      "langCode": "qwe"
+      }
+	]
+  }
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-# PUT /title
-Master data is required across the platform. 
-
+## PUT /title
 This service will provides the service for updating a particular title. 
 
-
-
 ### Resource URL
-### `PUT /title`
+`PUT /title`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -313,7 +236,6 @@ titleName|Yes|Name of the title| |
 isActive|Yes|Name of the title| |
 langCode|Yes|Name of the title| |
 titleDescription|Yes|Name of the title| |
-
 
 ### Example Response
 ```JSON
@@ -334,34 +256,23 @@ titleDescription|Yes|Name of the title| |
   "version": "string"
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-400
 
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-# DELETE /title/{code}
-Master data is required across the platform. 
-
+## DELETE /title/{code}
 This service will provides the service for deleting a particular title. 
 
-
-
 ### Resource URL
-### `DELETE /title/{code}`
+`DELETE /title/{code}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -371,7 +282,6 @@ Requires Authentication | Yes
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 code|Yes|Code of the title| | 
-
 
 ### Example Response
 ```JSON
@@ -391,21 +301,15 @@ code|Yes|Code of the title| |
   "version": "string"
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
 
 ### Failure Response
 ```JSON
@@ -422,17 +326,13 @@ Description: Not Found
 }
 ```
 
-# GET /title/all
-
-Master data is required across the platform. 
-
+## GET /title/all
 This service will provides the service for  list of all titles.
 
 ### Resource URL
-### `GET /title/all`
+`GET /title/all`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -445,7 +345,6 @@ orderBy | optional |order the requested data based on param ||
 pageNumber | optional | page no for the requested data ||
 pageSize | optional |page size for the requested data ||
 sortBy | optional | sort the requested data based on param value ||
-
 
 ### Example Response
 ```JSON
@@ -479,23 +378,16 @@ sortBy | optional | sort the requested data based on param value ||
   "version": "string"
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-047 | Error occured while fetching Titles | Fetch Issue
@@ -505,8 +397,11 @@ KER-MSD-103 | Error occurred while updating Title details | Update Issue
 KER-MSD-104 | Error occurred while deleting Title details | Deletion Issue
 
 
+## POST /titles/search
+
+
 ### Resource URL
-### `POST /titles/search`
+`POST /titles/search`
 
 ### Resource details
 
@@ -541,34 +436,32 @@ status|["equals"]
 ### Example Request
 ```JSON
 {
-	"id": "string",
-	"metadata": {},
-	"requesttime": "2018-12-10T06:12:52.994Z",
-	"version": "string",
-	"request": {
-		"filters" : [
-			{
-				"columnName": "",
-				"type": "in",
-				"value": "",  
-				"fromValue": "",    
-				"toValue": ""
-				
-			}
-		],
-		"sort":[
-			{
-				"sortfield":"string",
-				"sorttype":"ASC"
-			}
-		],
-		"pagination":{
-			"pageStart":"number",
-			"pageFetch":"number"
-		},
-               "languageCode":""
-		
-	}
+  "id": "string",
+  "metadata": {},
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string",
+  "request": {
+	"filters" : [
+	  {
+		"columnName": "",
+		"type": "in",
+		"value": "",  
+		"fromValue": "",    
+		"toValue": ""	
+	  }
+	],
+	"sort":[
+	  {
+		"sortfield":"string",
+		"sorttype":"ASC"
+	  }
+	],
+	"pagination":{
+	  "pageStart":"number",
+	  "pageFetch":"number"
+	},
+  "languageCode":""	
+  }
 }
 ```
 
@@ -581,7 +474,7 @@ status|["equals"]
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-  "titleList": [
+    "titleList": [
       {
         "code": "string",
         "isActive": true,
@@ -590,25 +483,24 @@ status|["equals"]
         "titleName": "string"
       }
     ],
-	"fromRecord" : "number",
-	"toRecord":"number",
-	"totalRecord":"number"
- }
+    "fromRecord" : "number",
+    "toRecord":"number",
+    "totalRecord":"number"
+  }
 }
 ```
-# Titles filter values
 
+# Titles filter values
 * [POST /titles/filtervalues](#post-titlesfiltervalues)
 
-# POST /titles/filtervalues
+## POST /titles/filtervalues
 
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
-### `POST /titles/filtervalues`
+`POST /titles/filtervalues`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -622,23 +514,22 @@ columnName|No|The column name in the JSON response| -NA- |
 type|No|The value have to be in ["unique","all"]| unique | unique
 languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
 
-
 ### Example Request
 ```JSON
 {
-	"id": "string",
-	"metadata": {},
-	"requesttime": "2018-12-10T06:12:52.994Z",
-	"version": "string"
-	"request": {
-		"filters" : [
-			{
-				"columnName": ""
-				"type": "unique"
-			}
-		],
-		"languageCode": "string",
-	}
+  "id": "string",
+  "metadata": {},
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
+  "request": {
+	"filters" : [
+	  {
+		"columnName": ""
+		"type": "unique"
+	  }
+	],
+    "languageCode": "string",
+  }
 }
 ```
 
@@ -651,13 +542,13 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-  "filters": [
-	{
-		"fieldID": "string",
-		"fieldValue": "string"
-	}
-   ]
- }
+    "filters": [
+	  {
+	    "fieldID": "string",
+	    "fieldValue": "string"
+	  }
+    ]
+  }
 }
 ```
 
@@ -671,15 +562,14 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 * [GET /gendertypes/{gendername}](#get-gendertypesgendername)
 * [GET /gendertypes/all](#get-gendertypesall)
 
-# POST /gendertypes
+## POST /gendertypes
 
 This service will create the list of Gender which are used in the MOSIP platform. 
 
 ### Resource URL
-### `POST /gendertypes`
+`POST /gendertypes`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -698,13 +588,14 @@ gendertype|Yes|Name of the gender| |
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "request": {
-              "code": "GC002",
-              "genderName": "Male",
-              "isActive": true,
-             "langCode": "ENG"
-             }
+    "code": "GC002",
+    "genderName": "Male",
+    "isActive": true,
+    "langCode": "ENG"
+  }
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -714,34 +605,25 @@ gendertype|Yes|Name of the gender| |
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-               "code": "GC002",
-               "langCode": "ENG"
-              }
+    "code": "GC002",
+    "langCode": "ENG"
+  }
 }
 ```
+
 ### Response codes
-202
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-Description: Accepted
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-# PUT/gendertypes
-
+## PUT/gendertypes
 This service will update Gender which are used in the MOSIP platform. 
 
 ### Resource URL
-### `PUT/gendertypes`
+`PUT/gendertypes`
 
 ### Resource details
 
@@ -766,13 +648,14 @@ code|Yes|language code of gender| |
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "request":  {
-               "code": "GC001",
-               "genderName": "Male",
-               "isActive": true,
-               "langCode": "ENG"
-             }
+    "code": "GC001",
+    "genderName": "Male",
+    "isActive": true,
+    "langCode": "ENG"
+  }
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -782,37 +665,27 @@ code|Yes|language code of gender| |
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-                 "code": "GC001",
-                 "langCode": "ENG"
-              }
+    "code": "GC001",
+    "langCode": "ENG"
+  }
 }
 ```
+
 ### Response codes
-200
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-Description: OK
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-# DELETE /gendertypes/{code}
-
+## DELETE /gendertypes/{code}
 This service will delete Gender which are used in the MOSIP platform. 
 
 ### Resource URL
-### `DELETE/gendertypes/{code}`
+`DELETE/gendertypes/{code}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -832,39 +705,26 @@ code|Yes|Code of gender type| |
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-               "code": "GC001",
-              }
+    "code": "GC001",
+  }
 }
 ```
+
 ### Response codes
-200
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-Description: OK
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-# GET /gendertypes
-Master data is required across the platform. 
-
+## GET /gendertypes
 This service will provides the service for the List of Genders. 
 
-
-
 ### Resource URL
-### `GET /gendertypes`
+`GET /gendertypes`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -873,8 +733,7 @@ Requires Authentication | Yes
 ### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
-NA ||
-
+NA | NA | NA | NA | NA
 
 ### Example Response
 ```JSON
@@ -885,41 +744,33 @@ NA ||
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {  
-               "genderType": [{
-                               "code": "GC001",
-                               "genderName": "Female",
-                               "langCode": "eu",
-                               "isActive": true
-                               }]
+    "genderType": [
+	  {
+        "code": "GC001",
+        "genderName": "Female",
+        "langCode": "eu",
+        "isActive": true
+      }
+    ]
+  }
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-
-# GET /gendertypes/{langcode}
-
+## GET /gendertypes/{langcode}
 This service will provides the service for the List of Genders. 
 
-
 ### Resource URL
-### `GET /gendertypes/{langcode}`
+`GET /gendertypes/{langcode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -929,8 +780,6 @@ Requires Authentication | Yes
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 langcode|Yes|Code of the language| | 
- 
-
 
 ### Example Response
 ```JSON
@@ -941,45 +790,33 @@ langcode|Yes|Code of the language| |
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-             "genderType": [{
-                           "code": "GC002",
-                           "genderName": "Male",
-                           "langCode": "ENG",
-                           "isActive": true
-                           }]
-           }
+    "genderType": [
+	  {
+        "code": "GC002",
+        "genderName": "Male",
+        "langCode": "eng",
+        "isActive": true
+      }
+	]
+  }
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-
-
-# GET /gendertypes/{gendername}
-Master data is required across the platform. 
-
+## GET /gendertypes/{gendername}
 This service will provides the gender based on the gender name. 
 
-
-
 ### Resource URL
-### `GET /gendertypes/{gendername}`
+`GET /gendertypes/{gendername}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1000,16 +837,13 @@ gendername|Yes|Name of the gender| |
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-	       "code": "GC001",
-	       "genderName": "Female",
-	       "langCode": "eu",
-	       "isActive": true
-              }
+	"code": "GC001",
+	"genderName": "Female",
+	"langCode": "eu",
+	"isActive": true
+  }
 }
 ```
-200
-
-Description: Success
 
 ### Failure Response
 ```JSON
@@ -1025,17 +859,22 @@ Description: Success
   "response": null
 }
 ```
-# GET gendertypes/all
-Master data is required across the platform. 
 
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
+
+## GET gendertypes/all
 This service will provides all gendertypes details. 
 
 ### Resource URL
-
-### `GET gendertypes/all`
+`GET gendertypes/all`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1048,7 +887,6 @@ orderBy | optional |order the requested data based on param ||
 pageNumber | optional | page no for the requested data ||
 pageSize | optional |page size for the requested data ||
 sortBy | optional | sort the requested data based on param value ||
-
 
 ### Example Response
 ```JSON
@@ -1081,21 +919,14 @@ sortBy | optional | sort the requested data based on param value ||
   "version": "string"
 }
 ```
-200
 
-Description: Success
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
 #### Failure details
 Error Code | Error Message | Error Description
@@ -1106,12 +937,12 @@ KER-MSD-068 | Could not insert Gender Data | Insert Issue
 KER-MSD-101 | Error occurred while updating Gender Type details | Update Issue
 KER-MSD-102 | Error occurred while deleting Gender Type details | Delete Issue
 
+## POST /genders/search
 
 ### Resource URL
-### `POST /genders/search`
+`POST /genders/search`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1138,33 +969,32 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
 ### Example Request
 ```JSON
 {
-	"id": "string",
-	"metadata": {},
-	"requesttime": "2018-12-10T06:12:52.994Z",
-	"version": "string",
-	"request": {
-		"filters" : [
-			{
-				"columnName": "",
-				"type": "in",
-				"value": "",  
-				"fromValue": "",    
-				"toValue": ""
-			}
-		],
-		"sort":[
-			{
-				"sortfield":"string",
-				"sorttype":"ASC"
-			}
-		],
-		"pagination":{
-			"pageStart":"number",
-			"pageFetch":"number"
-		},
-	        "languageCode":""
-		
-	}
+  "id": "string",
+  "metadata": {},
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string",
+  "request": {
+	"filters" : [
+	  {
+		"columnName": "",
+		"type": "in",
+		"value": "",  
+		"fromValue": "",    
+		"toValue": ""
+	  }
+	],
+	"sort":[
+	  {
+		"sortfield":"string",
+		"sorttype":"ASC"
+	  }
+	],
+	"pagination":{
+	  "pageStart":"number",
+	  "pageFetch":"number"
+	},
+	"languageCode":""	
+  }
 }
 ```
 
@@ -1177,30 +1007,29 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-  "genderType": [
+    "genderType": [
       {
         "code": "GC001",
         "genderName": "Male",
         "isActive": true,
-        "langCode": "ENG"
+        "langCode": "eng"
       }
     ],
-	"fromRecord" : "number",
-	"toRecord":"number",
-	"totalRecord":"number"
- }
+    "fromRecord" : "number",
+    "toRecord":"number",
+    "totalRecord":"number"
+  }
 }
 ```
-# Genders filter values
 
+# Genders filter values
 * [POST /genders/filtervalues](#post-gendersfiltervalues)
 
-# POST /genders/filtervalues
-
+## POST /genders/filtervalues
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
-### `POST /genders/filtervalues`
+`POST /genders/filtervalues`
 
 ### Resource details
 
@@ -1217,23 +1046,22 @@ columnName|No|The column name in the JSON response| -NA- |
 type|No|The value have to be in ["unique","all"]| unique | unique
 languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
 
-
 ### Example Request
 ```JSON
 {
-	"id": "string",
-	"metadata": {},
-	"requesttime": "2018-12-10T06:12:52.994Z",
-	"version": "string"
-	"request": {
-		"filters" : [
-			{
-				"columnName": ""
-				"type": "unique"
-			}
-		],
-		"languageCode": "string",
-	}
+  "id": "string",
+  "metadata": {},
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
+  "request": {
+	"filters" : [
+	  {
+		"columnName": ""
+		"type": "unique"
+	  }
+	],
+  "languageCode": "string",
+  }
 }
 ```
 
@@ -1248,28 +1076,24 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   "response": {
   "filters": [
 	{
-		"fieldID": "string",
-		"fieldValue": "string"
+	  "fieldID": "string",
+	  "fieldValue": "string"
 	}
    ]
  }
 }
 ```
 
-# Age group Types API
-
+# Age group types API
 * [GET /agegrouptype/{age}](#get-agegrouptypeage)
 
-# GET /agegrouptype/{age}
-
+## GET /agegrouptype/{age}
 This service will provides the age group based on the passed age. 
 
-
 ### Resource URL
-### `GET /agegrouptype/{age}`
+`GET /agegrouptype/{age}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1279,11 +1103,6 @@ Requires Authentication | Yes
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 -NA-
-
-### Example Request
-```JSON
--NA-
-```
 
 ### Example Response
 ```JSON
@@ -1295,7 +1114,8 @@ Name | Required | Description | Default Value | Example
   "errors": [{
       "errorCode": "string",
       "message": "string"
-    }],
+    }
+  ],
   "response":  {
 	"agegrouptypecode": "string",
 	"name": "string",
@@ -1307,12 +1127,6 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
-
-### Response codes
-200
-
-Description: Success
-
 
 ### Failure Response
 ```JSON
@@ -1329,22 +1143,25 @@ Description: Success
 }
 ```
 
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
 # ID Types Master API
-
 * [POST /idtypes](#post-idtypes)
 * [GET /idtypes/{languagecode}](#get-idtypeslanguagecode)
 
-# POST /idtypes
-Master data is required across the platform. 
-
+## POST /idtypes
 This service will create the list of Id types which are used in the MOSIP platform. 
 
 ### Resource URL
-### `POST /idtypes`
+`POST /idtypes`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1372,6 +1189,7 @@ languagecode|Yes|Language of the id type| |
               }
  }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -1386,36 +1204,22 @@ languagecode|Yes|Language of the id type| |
               }
 }
 ```
+
 ### Response codes
-202
-
-Description: Accepted
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
 # GET /idtypes/{langcode}
-Master data is required across the platform. 
-
 This service will provides the service for the List of id types based on language. 
 
-
-
 ### Resource URL
-### `GET /idtypes/{langcode}`
+`GET /idtypes/{langcode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1425,7 +1229,6 @@ Requires Authentication | Yes
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 langcode|Yes|Code of the language| | 
-
 
 ### Example Response
 ```JSON
@@ -1453,21 +1256,6 @@ langcode|Yes|Code of the language| |
   "version": "string"
 }
 ```
-200
-
-Description: Success
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
 
 ### Failure Response
 ```JSON
@@ -1484,7 +1272,16 @@ Description: Not Found
 }
 ```
 
-#### Failure details
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
+
+
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-022 | ID Type not found. | Not Found
@@ -1493,7 +1290,6 @@ KER-MSD-059 | Error occurred while inserting ID Type details. | Insert Issue
 
 
 # Holiday Master API
-
 * [GET /holidays](#get-holidays)
 * [POST /holidays](#post-holidays)
 * [PUT /holidays](#put-holidays)
@@ -1504,16 +1300,13 @@ KER-MSD-059 | Error occurred while inserting ID Type details. | Insert Issue
 * [POST /holidays/filtervalues](#post-holidaysfiltervalues)
 * [POST /holidays/search](#post-holidayssearch)
 
-
 ## GET /holidays
-
 This service will get all the holidays. 
 
 ### Resource URL
-### `GET /holidays`
+`GET /holidays`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1523,7 +1316,6 @@ Requires Authentication | Yes
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 --NA-- 
-
 
 ### Example Response
 ```JSON
@@ -1551,34 +1343,22 @@ Name | Required | Description | Default Value | Example
   "errors": null
 }
 ```
+
 ### Response codes
-
-200
-
-Description: Success
-
-404
-
-Description: Not Found
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
------
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
 ## POST /holidays
 This service will create a new holiday. 
 
 ### Resource URL
-### `POST /holidays`
+`POST /holidays`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1617,6 +1397,7 @@ isActive |Yes | is active? ||
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -1638,32 +1419,21 @@ isActive |Yes | is active? ||
   "version": "string"
 }
 ```
+
 ### Response codes
-
-201
-
-Description: Created
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-204 
-
-Description: Not Found
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
 
------
 ## PUT /holidays
-
 This service will update a holiday. 
 
 ### Resource URL
-### `PUT /holidays`
+`PUT /holidays`
 
 ### Resource details
 
@@ -1706,6 +1476,7 @@ newHolidayDesc | Yes | new description ||
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -1715,37 +1486,22 @@ newHolidayDesc | Yes | new description ||
   "locationCode": "string"
 }
 ```
+
 ### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-200
-
-Description: Success
-
-201
-
-Description: Created
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not Found
-
------
 
 ## DELETE /holidays
-
 This service will provides the service to delete a holiday. 
 
 
 ### Resource URL
-### `DELETE /holidays`
+`DELETE /holidays`
 
 ### Resource details
 
@@ -1784,36 +1540,23 @@ locationCode | Yes | location code ||
   "locationCode": "string"
 }
 ```
+
 ### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-200
-
-Description: Success
-
-204
-
-Description: No Content
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-----
 
 ## GET /holidays/{holidayid}
-
 This service will provides the service to get all holidays by Id. 
 
-
 ### Resource URL
-### `GET /holidays/{holidayid}`
+`GET /holidays/{holidayid}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1855,36 +1598,23 @@ holidayid | yes | holiday Id ||
   "version": "string"
 }
 ```
+
 ### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-200
-
-Description: Success
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not found
-
-------
 
 ## GET /holidays/{holidayid}/{langcode}
-
 This service will get all the holidays by holidayid and language code. 
 
-
 ### Resource URL
-### `GET /holidays/{holidayid}/{langcode}`
+`GET /holidays/{holidayid}/{langcode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1895,7 +1625,6 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 holidayid | yes | holiday Id ||||
 langCode | Yes | language code ||
-
 
 ### Example Response
 ```JSON
@@ -1928,35 +1657,23 @@ langCode | Yes | language code ||
   "version": "string"
 }
 ```
+
 ### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-200
-
-Description: Success
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404 
-
-Description: Not Found
-
-----
 
 ## GET /holidays/all
-
 This service will retrieve all the holidays with additional metadata. 
 
 ### Resource URL
-### `GET /holidays/all`
+`GET /holidays/all`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2008,29 +1725,14 @@ sortBy | optional | sort the requested data based on param value | createdDateTi
   "version": "string"
 }
 ```
-### Response Codes
 
-200
-
-Description: Success
-
-500
-
-Description: Error occured while retrieving holidays
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not found
-
-----
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
 ## Failure details
 Error Code | Error Message | Error Description
@@ -2042,20 +1744,18 @@ KER-MSD-099 | Error occurred while updating holiday | Update Issue
 KER-MSD-100 | Error occurred while deleting holiday | Deletion Issue
 KER-MSD-025 | Error occured while fetching Location Hierarchy | fetch issue
 KER-MSD-026 | Location not found | Data Not Found
-----
+
 
 # Holiday filtervalues APIs
-
 * [POST /holidays/filtervalues](#post-holidaysfiltervalues)
-## POST /holidays/filtervalues
 
+## POST /holidays/filtervalues
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
-### `POST /holidays/filtervalues`
+`POST /holidays/filtervalues`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2068,7 +1768,6 @@ filters | No| Array of the filter applied. In case of "list" screen, this array 
 columnName |No | The column name in the JSON response | -NA- |
 type | No | The value have to be in ["unique","all"] | unique | unique
 languagecode | Yes | Language code in Language code in ISO 639-2 format | | 
-
 
 ### Example Request
 ```JSON
@@ -2122,38 +1821,25 @@ languagecode | Yes | Language code in Language code in ISO 639-2 format | |
   "version": "string"
 }
 ```
+
 ### Response codes
-200
-
-Description: Success
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not found
-
-----
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
 # Holiday search APIs
-
 * [POST /holidays/search](#post-holidayssearch)
 
-# POST /holidays/search
-
+## POST /holidays/search
 This service is for the holidays search functionality. All the filter parameters are passed and the holidays are searched and the matching results are returned.
 
 ### Resource URL
-### `POST /holidays/search`
+`POST /holidays/search`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2185,32 +1871,32 @@ Please find the filter columns used in search
 ### Example Request
 ```JSON
 {
-	"id": "string",
-	"metadata": {},
-	"requesttime": "2018-12-10T06:12:52.994Z",
-	"version": "string",
-	"request": {
-		"filters" : [
-			{
-				"columnName": "",
-				"type": "in",
-				"value": "",
-				"fromValue": "",
-				"toValue": ""
-			}
-		],
-		"sort":[
-			{
-				"sortfield":"string",
-				"sorttype":"ASC"
-			}
-		],
-		"pagination":{
-			"pageStart":"number",
-			"pageFetch":"number"
-		},
-		"languageCode":""
-	}
+  "id": "string",
+  "metadata": {},
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string",
+  "request": {
+	"filters" : [
+	  {
+		"columnName": "",
+		"type": "in",
+		"value": "",
+		"fromValue": "",
+		"toValue": ""
+	  }
+	],
+	"sort":[
+	  {
+		"sortfield":"string",
+		"sorttype":"ASC"
+	  }
+	],
+	"pagination":{
+	  "pageStart":"number",
+	  "pageFetch":"number"
+	},
+	"languageCode":""
+  }
 }
 ```
 
@@ -2244,9 +1930,7 @@ Please find the filter columns used in search
 }
 ```
 
-
 # Locations Master API
-
 * [POST /locations](#post-locations)
 * [PUT /locations](#put-locations)
 * [DELETE /locations/{locationcode}](#delete-locationslocationcode)
@@ -2257,19 +1941,14 @@ Please find the filter columns used in search
 * [GET /locations/validate/{locationname}](#get-locations-validate-locationname)
 * [GET /locations/all](#get-locations-all)
 
-# `POST /locations`
-
+## `POST /locations`
 This masterdata service creates the location.
-
-Please find the steps to create primary/secondary languages 
-
-https://github.com/mosip/mosip-docs/wiki/Registration-Center-APIs#createupdate-api
+Please find the steps to create primary/secondary languages in the [link](Registration-Center-APIs.md#createupdate-api).
 
 ### Resource URL
-### `POST /locations`
+`POST /locations`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2305,36 +1984,35 @@ isActive|Yes|Is this location active| |
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
-    "id": "string",
-    "version": "string",
-    "responsetime": "2019-11-19T12:34:43.989Z",
-    "metadata": null,
-    "response": {
-        "code": "d2382b5a-6f7b-44c0-98b7-85e289b3f6e0",
-        "name": "Souissi1",
-        "hierarchyLevel": 4,
-        "hierarchyName": "Zone",
-        "parentLocCode": "",
-        "langCode": "eng",
-        "registrationCenters": null,
-        "isActive": false,
-        "createdBy": "110005",
-        "createdDateTime": "2019-11-19T12:34:43.944Z",
-        "updatedBy": null,
-        "updatedDateTime": null,
-        "isDeleted": null,
-        "deletedDateTime": null
-    },
-    "errors": null
-	}
+  "id": "string",
+  "version": "string",
+  "responsetime": "2019-11-19T12:34:43.989Z",
+  "metadata": null,
+  "response": {
+    "code": "d2382b5a-6f7b-44c0-98b7-85e289b3f6e0",
+    "name": "Souissi1",
+    "hierarchyLevel": 4,
+    "hierarchyName": "Zone",
+    "parentLocCode": "",
+    "langCode": "eng",
+    "registrationCenters": null,
+    "isActive": false,
+    "createdBy": "110005",
+    "createdDateTime": "2019-11-19T12:34:43.944Z",
+    "updatedBy": null,
+    "updatedDateTime": null,
+    "isDeleted": null,
+    "deletedDateTime": null
+  },
+  "errors": null
+}
 ```
-### Response codes
-200 Ok
 
-##### Error Response:
+### Error Response:
 ```
 {
   "id": "string",
@@ -2349,8 +2027,15 @@ isActive|Yes|Is this location active| |
   ],
  "response": null
 }
-
 ```
+
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
 #### Failure details
 Error Code  | Error Message | Error Description
@@ -2362,13 +2047,13 @@ KER-MSD-389 |Parent location not found
 KER-MSD-385 |Location already exist under the hierarchy
 KER-MSD-064 |Error occured while inserting location hierarchy details
 
-# PUT /locations
+
+## PUT /locations
 
 ### Resource URL
-### `PUT /locations`
+`PUT /locations`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2384,7 +2069,6 @@ hierarchyName|Yes|Hierarchy level name of the location| |
 parentLocCode|Yes|Parent location code of the location| | 
 langCode|Yes|Language Code of the location| | 
 isActive|Yes|Is this location active| | 
-
 
 ### Example Request
 ```JSON
@@ -2404,35 +2088,33 @@ isActive|Yes|Is this location active| |
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
-    "id": "string",
-    "version": "string",
-    "responsetime": "2019-11-19T12:34:43.989Z",
-    "metadata": null,
-    "response": {
-        "code": "d2382b5a-6f7b-44c0-98b7-85e289b3f6e0",
-        "name": "Souissi1",
-        "hierarchyLevel": 4,
-        "hierarchyName": "Zone",
-        "parentLocCode": "",
-        "langCode": "eng",
-        "registrationCenters": null,
-        "isActive": false,
-        "createdBy": "110005",
-        "createdDateTime": "2019-11-19T12:34:43.944Z",
-        "updatedBy": "110005",
-        "updatedDateTime": "2019-11-19T12:34:43.944Z",
-        "isDeleted": null,
-        "deletedDateTime": null
-    },
-    "errors": null
-	}
+  "id": "string",
+  "version": "string",
+  "responsetime": "2019-11-19T12:34:43.989Z",
+  "metadata": null,
+  "response": {
+    "code": "d2382b5a-6f7b-44c0-98b7-85e289b3f6e0",
+    "name": "Souissi1",
+    "hierarchyLevel": 4,
+    "hierarchyName": "Zone",
+    "parentLocCode": "",
+    "langCode": "eng",
+    "registrationCenters": null,
+    "isActive": false,
+    "createdBy": "110005",
+    "createdDateTime": "2019-11-19T12:34:43.944Z",
+    "updatedBy": "110005",
+    "updatedDateTime": "2019-11-19T12:34:43.944Z",
+    "isDeleted": null,
+    "deletedDateTime": null
+  },
+  "errors": null
+}
 ```
-### Response codes
-
-200 Ok
 
 ##### Error Response:
 ```
@@ -2449,10 +2131,17 @@ isActive|Yes|Is this location active| |
   ],
  "response": null
 }
-
 ```
 
-#### Failure details
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
+
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
@@ -2461,24 +2150,21 @@ KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 KER-MSD-097 |Error occured while updating location hierarchy details
 
 
-# DELETE /locations/{locationcode}
+## DELETE /locations/{locationcode}
 
 ### Resource URL
-### `DELETE /locations/{locationcode}`
+`DELETE /locations/{locationcode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-
 ### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 locationcode | Yes | location code ||
-
 
 ### Example Response
 ```JSON
@@ -2489,42 +2175,26 @@ locationcode | Yes | location code ||
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response":  {
-                "code": "string"
-               }
+    "code": "string"
+  }
 }
 ```
+
 ### Response codes
+Response Code | Description
+--------------|------------
+202 | Accepted
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-202
-
-Description: Accepted
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-
-
-# GET /locations/{langcode}
-Master data is required across the platform. 
-
+## GET /locations/{langcode}
 This service will provides the service for the List of Locations. 
 
-
-
 ### Resource URL
-### `GET /locations/{langcode}`
+`GET /locations/{langcode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2545,54 +2215,37 @@ Name | Required | Description | Default Value | Example
   "errors": null,
   "response":{
     "locations": [
-        {
-            "locationHierarchylevel": number,
-            "locationHierarchyName": "string",
-            "isActive":true
-        },
-        {
-           "locationHierarchylevel": number,
-           "locationHierarchyName": "string",
-           "isActive":true
-        }
+      {
+        "locationHierarchylevel": number,
+        "locationHierarchyName": "string",
+        "isActive":true
+      },
+      {
+        "locationHierarchylevel": number,
+        "locationHierarchyName": "string",
+        "isActive":true
+      }
     ]
   }
 }
 ```
-200
-
-Description: Success
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-500
-
-Description: Internal Server Error
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
+500 | Internal Server Error
 
 
-
-# GET /locations/{locationcode}/{languagecode}
-Master data is required across the platform. 
-
+## GET /locations/{locationcode}/{languagecode}
 This service will provides the service for the List of Locations. 
 
-
-
 ### Resource URL
-### `GET /locations/{locationcode}/{languagecode}`
+`GET /locations/{locationcode}/{languagecode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2612,60 +2265,46 @@ Name | Required | Description | Default Value | Example
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response":{
-       "locations": [
-		    {
-			"code":"string",
-			"name":"string",
-			"hierarchyLevel":"number",
-			"hierarchyLevelName":"string",
-			"parentLocCode":"",
-			"langCode":"string",
-			"isActive":"boolean",
-			
-		   },
-		   {
-			"code":"string",
-			"name":"string",
-			"hierarchyLevel":"number",
-			"hierarchyLevelName":"string",
-			"parentLocCode":"",
-			"langCode":"string",
-			"isActive":"boolean",
-			
-		   }
-	     ] 
-       }
+    "locations": [
+	  {
+		"code":"string",
+		"name":"string",
+		"hierarchyLevel":"number",
+		"hierarchyLevelName":"string",
+		"parentLocCode":"",
+		"langCode":"string",
+		"isActive":"boolean",
+	  },
+	  {
+		"code":"string",
+		"name":"string",
+		"hierarchyLevel":"number",
+		"hierarchyLevelName":"string",
+		"parentLocCode":"",
+		"langCode":"string",
+		"isActive":"boolean"		
+	  }
+	] 
+  }
 }
 ```
-200
 
-Description: Success
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
 
 
-# GET /locations/immediatechildren/{locationcode}/{langcode}
-Master data is required across the platform. 
-
+## GET /locations/immediatechildren/{locationcode}/{langcode}
 This service will provides the service for the List of Locations. 
 
-
-
 ### Resource URL
-### `GET /locations/immediatechildren/{locationcode}/{langcode}`
+`GET /locations/immediatechildren/{locationcode}/{langcode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2685,59 +2324,45 @@ Name | Required | Description | Default Value | Example
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-          "locations": [ 
-                       {
-			"code":"string",
-			"name":"string",
-			"hierarchyLevel":"number",
-			"hierarchyLevelName":"string",
-			"parentLocCode":"",
-			"langCode":"string",
-			"isActive":"boolean"	
-		      },
-		      {
-			"code":"string",
-			"name":"string",
-			"hierarchyLevel":"number",
-			"hierarchyLevelName":"string",
-			"parentLocCode":"",
-			"langCode":"string",
-			"isActive":"boolean"
-		      }
-	  ]
-    }
+    "locations": [ 
+      {
+		"code":"string",
+		"name":"string",
+		"hierarchyLevel":"number",
+		"hierarchyLevelName":"string",
+		"parentLocCode":"",
+		"langCode":"string",
+		"isActive":"boolean"	
+	  },
+	  {
+		"code":"string",
+		"name":"string",
+		"hierarchyLevel":"number",
+		"hierarchyLevelName":"string",
+		"parentLocCode":"",
+		"langCode":"string",
+		"isActive":"boolean"
+	  }
+	]
+  }
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
 
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-
-
-# GET /locations/locationhierarchy/{hierarchyname}
-Master data is required across the platform. 
-
+## GET /locations/locationhierarchy/{hierarchyname}
 This service will provides the service for the List of Locations based on the location hierarchy name. 
 
-
-
 ### Resource URL
-### `GET /locations/locationhierarchy/{hierarchyname}`
+`GET /locations/locationhierarchy/{hierarchyname}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2757,55 +2382,45 @@ Name | Required | Description | Default Value | Example
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response":{
-           "locations": [
-	         	{
-			"code":"string",
-			"name":"string",
-			"hierarchyLevel":"number",
-			"hierarchyLevelName":"string",
-			"parentLocCode":"",
-			"langCode":"string",
-			"isActive":"boolean"	
-		        },
-		       {
-			"code":"string",
-			"name":"string",
-			"hierarchyLevel":"number",
-			"hierarchyLevelName":"string",
-			"parentLocCode":"",
-			"langCode":"string",
-			"isActive":"boolean"
-		       }
-	        ]
-        }
+    "locations": [
+	  {
+		"code":"string",
+		"name":"string",
+		"hierarchyLevel":"number",
+		"hierarchyLevelName":"string",
+		"parentLocCode":"",
+		"langCode":"string",
+		"isActive":"boolean"	
+	  },
+	  {
+		"code":"string",
+		"name":"string",
+		"hierarchyLevel":"number",
+		"hierarchyLevelName":"string",
+		"parentLocCode":"",
+		"langCode":"string",
+		"isActive":"boolean"
+	  }
+	]
+  }
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-# GET /locations/validate/{locationname}
-
+## GET /locations/validate/{locationname}
 This service whether the given location name is valid or not. 
 
-
 ### Resource URL
-### `GET /locations/validate/{locationname}`
+`GET /locations/validate/{locationname}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2834,31 +2449,22 @@ locationname|yes|This is the location name. | -NA- |
   "version": "string"
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-403
-
-Description: Forbidden
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-# GET /locations/all
-
+## GET /locations/all
 This service will provide all locations
 
 ### Resource URL
-### `GET /locations/all`
+`GET /locations/all`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2900,23 +2506,16 @@ orderBy | optional | order the requested data based on param | -NA- |
   "version": "string"
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
 
-403
-
-Description: Forbidden
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-025 | Error occured while fetching Location Hierarchy | Fetch Issue
@@ -2931,18 +2530,15 @@ KER-MSD-385 | Location already exist under the hierarchy | insertion issue
 
 
 # Locations Search APIs
-
 * [POST /locations/search](#post-locationssearch)
 
-# POST /locations/search
-
+## POST /locations/search
 This service is for the locations search functionality. All the filter parameters are passed and the locations  are searched and the matching results are returned. 
 
 ### Resource URL
-### `POST /locations/search`
+`POST /locations/search`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2967,44 +2563,42 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
 
 ### Filter Values
 Please find the filter columns used in search
-1) isActive
-2) region
-3) province
-4) city
-5) Zone
-6) postalCode
+* isActive
+* region
+* province
+* city
+* Zone
+* postalCode
 
 ### Example Request
 ```JSON
 {
-	"id": "string",
-	"metadata": {},
-	"requesttime": "2018-12-10T06:12:52.994Z",
-	"version": "string",
-	"request": {
-		"filters" : [
-			{
-				"columnName": "",
-				"type": "in",
-				"value": "",  
-				"fromValue": "",    
-				"toValue": ""
-				
-			}
-		],
-		"sort":[
-			{
-				"sortfield":"string",
-				"sorttype":"ASC"
-			}
-		],
-		"pagination":{
-			"pageStart":"number",
-			"pageFetch":"number"
-		},
-                "languageCode":""
-		
-	}
+  "id": "string",
+  "metadata": {},
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string",
+  "request": {
+	"filters" : [
+	  {
+		"columnName": "",
+		"type": "in",
+		"value": "",  
+		"fromValue": "",    
+		"toValue": ""	
+	  }
+	],
+	"sort":[
+	  {
+		"sortfield":"string",
+		"sorttype":"ASC"
+	  }
+	],
+	"pagination":{
+	  "pageStart":"number",
+	  "pageFetch":"number"
+	},
+    "languageCode":""
+  }
 }
 ```
 
@@ -3017,7 +2611,7 @@ Please find the filter columns used in search
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-  "data": [
+    "data": [
       {
         "code": "string",
         "hierarchyLevel": 0,
@@ -3028,25 +2622,23 @@ Please find the filter columns used in search
         "parentLocCode": "string"
       }
     ],
-	"fromRecord" : "number",
-	"toRecord":"number",
-	"totalRecord":"number"
- }
+    "fromRecord" : "number",
+    "toRecord":"number",
+    "totalRecord":"number"
+  }
 }
 ```
-# Locations filter values
 
+# Locations filter values
 * [POST /locations/filtervalues](#post-locationsfiltervalues)
 
-# POST /locations/filtervalues
-
+## POST /locations/filtervalues
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
-### `POST /locations/filtervalues`
+`POST /locations/filtervalues`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -3060,23 +2652,22 @@ columnName|No|The column name in the JSON response| -NA- |
 type|No|The value have to be in ["unique","all"]| unique | unique
 languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
 
-
 ### Example Request
 ```JSON
 {
-	"id": "string",
-	"metadata": {},
-	"requesttime": "2018-12-10T06:12:52.994Z",
-	"version": "string"
-	"request": {
-		"filters" : [
-			{
-				"columnName": ""
-				"type": "unique"
-			}
-		],
-		"languageCode": "string",
-	}
+  "id": "string",
+  "metadata": {},
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
+  "request": {
+	"filters" : [
+	  {
+		"columnName": ""
+		"type": "unique"
+	  }
+	],
+	"languageCode": "string",
+  }
 }
 ```
 
@@ -3091,32 +2682,28 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   "response": {
   "filters": [
 	{
-		"fieldCode": "string"
-		"fieldID": "string",
-		"fieldValue": "string"
+	  "fieldCode": "string"
+	  "fieldID": "string",
+	  "fieldValue": "string"
 	}
    ]
  }
 }
 ```
-	
 
 # Languages Master API
-
 * [POST /languages](#post-languages)
 * [GET /languages](#get-languages)
 * [PUT /languages](#put-languages)
 * [DELETE /languages/{code}](#delete-languagescode)
 
-# POST /languages
-
+## POST /languages
 This service will create a Language which is used in the MOSIP platform. 
 
 ### Resource URL
-### `POST /languages`
+`POST /languages`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -3136,14 +2723,15 @@ name|Yes|Name of the language| |
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "request":  {
-		"code": "string",
-		"name": "string"
-		"family": "string",
-		"native_name": "string",
-		"is_active": boolean
-	      }
+	"code": "string",
+	"name": "string"
+	"family": "string",
+	"native_name": "string",
+	"is_active": boolean
+  }
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -3154,34 +2742,26 @@ name|Yes|Name of the language| |
   "errors": null,
   "response": {
 	"code": "string"
+  }
 }
 ```
+
 ### Response codes
-201
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-Description: Created
 
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-# GET /languages
-
+## GET /languages
 This service will provides the service for the List of languages. 
 
 ### Resource URL
-### `GET /languages`
+`GET /languages`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -3206,40 +2786,32 @@ NA ||
   "errors": null,
   "response": {
 	"languages": [{
-		      "code": "string",
-		      "name": "string",
-		      "family": "string",
-		      "native_name": "string",
-		      "is_active": "boolean"
-	            }]
-             }
+	  "code": "string",
+	  "name": "string",
+	  "family": "string",
+	  "native_name": "string",
+	  "is_active": "boolean"
+	  }
+	]
+  }
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
 
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-# PUT /languages
-
+## PUT /languages
 This service will update a Language which is used in the MOSIP platform. 
 
 ### Resource URL
-### `PUT /languages`
+`PUT /languages`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -3259,14 +2831,15 @@ name|Yes|Name of the language| |
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "request":  {
-		"code": "string",
-		"name": "string"
-		"family": "string",
-		"native_name": "string",
-		"is_active": boolean
-	      }
+	"code": "string",
+	"name": "string"
+	"family": "string",
+	"native_name": "string",
+	"is_active": boolean
+  }
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -3276,37 +2849,26 @@ name|Yes|Name of the language| |
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-	       "code": "string"
-              }
+	"code": "string"
+  }
 }
 ```
+
 ### Response codes
-200
-
-Description: Ok
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
+Response Code | Description
+--------------|------------
+200 | Ok
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
 
 # DELETE /languages/{code}
-
 This service will delete a Language which is used in the MOSIP platform. 
 
 ### Resource URL
-### `DELETE /languages/{code}`
+`DELETE /languages/{code}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -3317,10 +2879,9 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 code|Yes|Code of the language| | 
 
-
 ### Example Request
 -NA-
-```
+
 ### Example Response
 ```JSON
 {
@@ -3330,30 +2891,14 @@ code|Yes|Code of the language| |
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-	      "code": "string"
-              }
+	"code": "string"
+  }
 }
 ```
-### Response codes
-200
-
-Description: Ok
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
 
 ### Failure Response:
 ```JSON
- {
+{
   "id": "string",
   "version": "string",
   "metadata": {},
@@ -3368,7 +2913,15 @@ Description: Forbidden
 }
 ```
 
-#### Failure details
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Ok
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
+
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-24 | Language not found | no language found exception
@@ -3379,25 +2932,18 @@ KER-MSD-XXX | Error occured while deleting Language | language delete exception
 
 
 # Individual Types API
-
 * [POST /individualtypes](#post-individualtypes)
-
 * [PUT /individualtypes](#post-individualtypes)
-
 * [GET /individualtypes](#get-individualtypes)
-
 * [GET /individualtypes/all](#get-individualtypes-all)
 
-# POST /individualtypes
-Master data is required across the platform. 
-
+## POST /individualtypes
 This service will create the list of individualtypes which are used in the MOSIP platform. 
 
 ### Resource URL
-### `POST /individualtypes`
+`POST /individualtypes`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -3424,6 +2970,7 @@ name|Yes | name of individualtype| |
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -3446,34 +2993,22 @@ name|Yes | name of individualtype| |
   "errors": null
 }
 ```
+
 ### Response codes
-201
+Response Code | Description
+--------------|------------
+201 | created
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
 
-Description: Created
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-
-# PUT /individualtypes
-Master data is required across the platform. 
-
+## PUT /individualtypes
 This service will update the list of individualtypes which are used in the MOSIP platform. 
 
 ### Resource URL
-### `PUT /individualtypes`
+`PUT /individualtypes`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -3500,6 +3035,7 @@ name|Yes | name of individualtype| |
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -3523,47 +3059,31 @@ name|Yes | name of individualtype| |
 } 
 ```
 ### Response codes
-201
-
-Description: Created
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
 
 
-# GET /individualtypes
-
+## GET /individualtypes
 This service will provides the complete list of all individual types in the MOSIP platform
 
-
 ### Resource URL
-### `GET /individualtypes`
+`GET /individualtypes`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
 ### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
 -NA-
 
 ### Example Request
-```JSON
 -NA-
-```
 
 ### Example Response
 ```JSON
@@ -3588,9 +3108,12 @@ Name | Required | Description | Default Value | Example
 ```
 
 ### Response codes
-200
-
-Description: Success
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
 
 ### Failure Response:
 ```JSON
@@ -3608,15 +3131,14 @@ Description: Success
   "response" : null
 }
 ```
-# GET /individualtypes/all
 
+## GET /individualtypes/all
 This service will get all the individualtypes. 
 
 ### Resource URL
-### `GET /individualtypes/all`
+`GET /individualtypes/all`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -3629,7 +3151,6 @@ orderBy|optional|order the requested data based on param| |
 pageNumber|optional|page no for the requested data| | 
 pageSize|optional|page size for the requested data| | 
 sortBy|optional|sort the requested data based on param value| | 
-
 
 ### Example Response
 ```JSON
@@ -3662,26 +3183,15 @@ sortBy|optional|sort the requested data based on param value| |
   "version": "string"
 }
 ```
+
 ### Response codes
-200
-
-Description: Success
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not found
-
-500
-
-Description: Internal Error
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
+500 | Internal Server Error
 
 #### Failure details
 Error Code | Error Message | Error Description
@@ -3689,15 +3199,14 @@ Error Code | Error Message | Error Description
 KER-MSD-151 | Individual Type not found | no individual type found exception
 KER-MSD-152 | Error occurred while fetching Individual Type | individual type fetch exception
 	
-# POST /individualtypes/search
+## POST /individualtypes/search
 
 This service is for the individual types search functionality. All the filter parameters are passed and the individual types are searched and the matching results are returned. 
 
 ### Resource URL
-### `POST /individualtypes/search`
+`POST /individualtypes/search`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -3720,37 +3229,35 @@ pagination|The pagination parameter object| |
 pageStart|This is the start index | 0 | 0
 pageFetch| This is the amount of records to be fetched | 10 | 10
 
-
 ### Example Request
 ```JSON
 {
-	"id": "string",
-	"metadata": {},
-	"requesttime": "2018-12-10T06:12:52.994Z",
-	"version": "string",
-	"request": {
-		"filters" : [
-			{
-				"columnName": "",
-				"type": "in",
-				"value": "",  
-				"fromValue": "",   
-				"toValue": ""
-			}
-		],
-		"sort":[
-			{
-				"sortfield":"string",
-				"sorttype":"ASC"
-			}
-		],
-		"pagination":{
-			"pageStart":"number",
-			"pageFetch":"number"
-		},
-		"languageCode":""
-		
-	}
+  "id": "string",
+  "metadata": {},
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string",
+  "request": {
+	"filters" : [
+	  {
+	    "columnName": "",
+		"type": "in",
+		"value": "",  
+		"fromValue": "",   
+		"toValue": ""
+	  }
+	],
+	"sort":[
+	  {
+		"sortfield":"string",
+		"sorttype":"ASC"
+	  }
+	],
+	"pagination":{
+	  "pageStart":"number",
+	  "pageFetch":"number"
+	},
+	"languageCode":""	
+  }
 }
 ```
 
@@ -3763,7 +3270,7 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-     "individualTypes": [
+    "individualTypes": [
       {
         "code": "string",
         "isActive": true,
@@ -3775,27 +3282,25 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
         "updatedDateTime": "string",
         "isDeleted": "boolean",
         "deletedDateTime": "string",
- }
+      }
     ],
 	"fromRecord" : "number",
 	"toRecord":"number",
 	"totalRecord":"number"
- }
+  }
 }
 ```
-# Individual Types filter values
 
+# Individual Types filter values
 * [POST /individualtypes/filtervalues](#post-individualtypesfiltervalues)
 
-# POST /individualtypes/filtervalues
-
+## POST /individualtypes/filtervalues
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
-### `POST /individualtypes/filtervalues`
+`POST /individualtypes/filtervalues`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -3809,23 +3314,22 @@ columnName|No|The column name in the JSON response| -NA- |
 type|No|The value have to be in ["unique","all"]| unique | unique
 languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
 
-
 ### Example Request
 ```JSON
 {
-	"id": "string",
-	"metadata": {},
-	"requesttime": "2018-12-10T06:12:52.994Z",
-	"version": "string"
-	"request": {
-		"filters" : [
-			{
-				"columnName": ""
-				"type": "unique"
-			}
-		],
-		"languageCode": "string",
-	}
+  "id": "string",
+  "metadata": {},
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
+  "request": {
+	"filters" : [
+	  {
+		"columnName": ""
+		"type": "unique"
+	  }
+	],
+	"languageCode": "string",
+  }
 }
 ```
 
@@ -3848,24 +3352,19 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-
 # Application Types Master API
-
 * [POST /applicationtypes](#post-applicationtypes)
 * [GET /applicationtypes](#get-applicationtypes)
 * [GET /applicationtypes/{code}/{langcode}](#get-applicationtypes-code-languagecode)
 * [GET /applicationtypes/{langcode}](#get-applicationtypes-languagecode)
 
-# POST /applicationtypes
-Master data is required across the platform. 
-
+## POST /applicationtypes
 This service will create the list of ApplicationTypes which are used in the MOSIP platform. 
 
 ### Resource URL
-### `POST /applicationtypes`
+`POST /applicationtypes`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -3893,6 +3392,7 @@ description|Yes | description of applicationtype| |
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -3912,45 +3412,30 @@ description|Yes | description of applicationtype| |
   "version": "string"
 }
 ```
+
 ### Response codes
-201
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
+500 | Internal Server Error
 
-Description: Created
-
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-# GET /applicationtypes
-Master data is required across the platform. 
-
+## GET /applicationtypes
 This service will provides the service for the List of ApplicationTypes. 
 
-
-
 ### Resource URL
-### `GET /applicationtypes`
+`GET /applicationtypes`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
 ### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-NA ||
-
+-NA-
 
 ### Example Response
 ```JSON
@@ -3978,35 +3463,23 @@ NA ||
   "version": "string"
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
+500 | Internal Server Error
 
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-
-# GET /applicationtypes/{code}/{langcode}
-Master data is required across the platform. 
-
+## GET /applicationtypes/{code}/{langcode}
 This service will provides the service for the List of ApplicationTypes. 
 
-
-
 ### Resource URL
-### `GET /applicationtypes/{code}/{languagecode}`
+`GET /applicationtypes/{code}/{languagecode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -4018,7 +3491,6 @@ Name | Required | Description | Default Value | Example
 code |Yes|Code of the applicationtype| | 
 langcode|Yes|Name of the language| | 
 
-
 ### Example Response
 ```JSON
 {
@@ -4045,31 +3517,23 @@ langcode|Yes|Name of the language| |
   "version": "string"
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
+500 | Internal Server Error
 
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-# GET /applicationtypes/{langcode}
-
+## GET /applicationtypes/{langcode}
 This service is used to fetch all Application details by language code
 
 ### Resource URL
-### `GET /applicationtypes/{languagecode}`
+`GET /applicationtypes/{languagecode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -4106,23 +3570,17 @@ langcode|Yes|Name of the language| |
   "version": "string"
 }
 ```
-200
 
-Description: Success
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
+500 | Internal Server Error
 
-400
-
-Description: Bad request
-
-401
-
-Description: Unauthorized
-
-404
-
-Description: Not Found
-
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-001 | Error occurred while fetching Applications | application fetch exception 
@@ -4132,7 +3590,6 @@ KER-MSD-201 | Bad Request Found | application request exception
 
 
 # Blacklisted words Master API
-
 * [POST /blacklistedwords](#post-blacklistedwords)
 * [PUT /blacklistedwords](#put-blacklistedwords)
 * [GET /blacklistedwords/{langcode}](#get-blacklistedwordslangcode)
@@ -4143,16 +3600,13 @@ KER-MSD-201 | Bad Request Found | application request exception
 * [POST /blacklistedwords/filtervalues](#post-blacklistedwordsfiltervalues)
 * [POST /blacklistedwords/search](#post-blacklistedwordssearch)
 
-
 ## POST /blacklistedwords
-
 This service will create a blacklistedword which will be used in the MOSIP platform. 
 
 ### Resource URL
-### `POST /blacklistedwords`
+`POST /blacklistedwords`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -4181,6 +3635,7 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -4200,34 +3655,23 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
+
 ### Response codes
-
-201
-
-Description: Created
-
-404
-
-Description: Not Found
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
------
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
+500 | Internal Server Error
 
 ## PUT /blacklistedwords
 This service will update the blacklisted word which is used in the MOSIP platform. 
 
 ### Resource URL
-### `PUT /blacklistedwords`
+`PUT /blacklistedwords`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -4258,6 +3702,7 @@ word |Yes |blacklisted word ||
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -4277,35 +3722,24 @@ word |Yes |blacklisted word ||
   "version": "string"
 }
 ```
+
 ### Response codes
-
-201
-
-Description: Created
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404 
-
-Description: Not Found
+Response Code | Description
+--------------|------------
+201 | Created
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
+500 | Internal Server Error
 
 
------
 ## GET /blacklistedwords/{langcode}
-
 This service will provides the service for the List of blacklisted words based on the passed language code. 
 
 ### Resource URL
-### `GET /blacklistedwords/{langcode}`
+`GET /blacklistedwords/{langcode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -4341,35 +3775,23 @@ langcode|Yes| language code ||
   "version": "string"
 }
 ```
+
 ### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
+500 | Internal Server Error
 
-200
-
-Description: Success
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not Found
-
------
 ## DELETE /blacklistedwords/{word}
-
 This service will provides the service to delete the blacklisted word. 
 
-
 ### Resource URL
-### `DELETE /blacklistedwords/{word}`
+`DELETE /blacklistedwords/{word}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -4398,35 +3820,23 @@ word | Yes | blacklisted word to be deleted ||
   "version": "string"
 }
 ```
+
 ### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
+500 | Internal Server Error
 
-200
-
-Description: Success
-
-204
-
-Description: No Content
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-----
 ## GET /blacklistedwords/all 
-
 This service will provides the service for the List of blacklistedwords. 
 
-
 ### Resource URL
-### `GET /blacklistedwords/all`
+`GET /blacklistedwords/all`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -4471,40 +3881,23 @@ sortBy | optional | sort the requested data based on param value | createdDateTi
   "version": "string"
 }
 ```
+
 ### Response codes
-
-200
-
-Description: Success
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not found
-
-500
-
-Description: Error occured while retrieving blacklisted words
-
-------
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
+500 | Internal Server Error
 
 ## PUT /blacklistedwords/details
-
 This service will update the blacklisted word details except the word itself. 
 
-
 ### Resource URL
-### `PUT /blacklistedwords/details`
+`PUT /blacklistedwords/details`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -4533,6 +3926,7 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -4552,39 +3946,24 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
+
 ### Response codes
-
-200
-
-Description: Success
-
-201
-
-Description: Created
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404 
-
-Description: Not Found
-
-----
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
+500 | Internal Server Error
 
 ## POST /blacklistedwords/words
 
 This service will validate list of words if they are blacklisted or not. 
 
 ### Resource URL
-### `POST /blacklistedwords/words`
+`POST /blacklistedwords/words`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -4623,31 +4002,17 @@ blacklisted words | Yes | blacklisted words to be validated  ||
   "errors": null
 }
 ```
-### Response Codes
 
-200
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+404 | Not Found
+500 | Internal Server Error
 
-Description: Success
-
-201
-
-Description: Created
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not found
-
-----
-
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-008 | Blacklisted word not found | no blacklisted words found
@@ -4657,18 +4022,15 @@ KER-MSD-105 | Error occurred while updating Blacklisted Word | blacklisted words
 KER-MSD-106 | Error occurred while deleting Blacklisted Word | blacklisted words delete exception
 	
 # BlackListed Words Search APIs
-
 * [POST /blacklistedwords/search](#post-blacklistedwordssearch)
 
-# POST /blacklistedwords/search
-
+## POST /blacklistedwords/search
 This service is for the blacklisted words search functionality. All the filter parameters are passed and the blacklisted words are searched and the matching results are returned. 
 
 ### Resource URL
-### `POST /blacklistedwords/search`
+`POST /blacklistedwords/search`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -4691,12 +4053,11 @@ pagination|The pagination parameter object| |
 pageStart|This is the start index | 0 | 0
 pageFetch| This is the amount of records to be fetched | 10 | 10
 
-
 ### Filter Values
 Please find the filter columns used in search
-1) word
-2) langCode
-3) isActive
+* word
+* langCode
+* isActive
 
 ### Example Request
 ```JSON
@@ -4742,37 +4103,36 @@ Please find the filter columns used in search
   "response": {
   "data": [
 	{
-                "isActive": boolean,
-                "createdBy": "string",
-                "createdDateTime": "string",
-                "updatedBy": boolean,
-                "updatedDateTime": "string",
-                "isDeleted": boolean,
-                "deletedDateTime": "string",
-                "word": "string",
-                "langCode": "string",
-                "description": "string"
+      "isActive": boolean,
+      "createdBy": "string",
+      "createdDateTime": "string",
+      "updatedBy": boolean,
+      "updatedDateTime": "string",
+      "isDeleted": boolean,
+      "deletedDateTime": "string",
+      "word": "string",
+      "langCode": "string",
+      "description": "string"
 	}
    ],
-	"fromRecord" : "number",
-	"toRecord":"number",
-	"totalRecord":"number"
+  "fromRecord" : "number",
+  "toRecord":"number",
+  "totalRecord":"number"
  }
 }
 ```
-# BlackListed Words filter values
 
+# BlackListed Words filter values
 * [POST /blacklistedwords/filtervalues](#post-blacklistedwordsfiltervalues)
 
-# POST /blacklistedwords/filtervalues
+## POST /blacklistedwords/filtervalues
 
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
-### `POST /blacklistedwords/filtervalues`
+`POST /blacklistedwords/filtervalues`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -4823,44 +4183,40 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
-# Working days
 
+# Working days
 * [GET /weekdays](#get-weekdays)
 * [GET /workingdays](#get-workingdays)
 
-### GET /weekdays
+## GET /weekdays
 
 This service returns all the week days.
 
-#### Resource URL
-<div>https://mosip.io/v1/masterdata/weekdays/{registrationCenterId}/{languagecode} </div>
+### Resource URL
+https://mosip.io/v1/masterdata/weekdays/{registrationCenterId}/{languagecode}
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description |  Example
 -----|----------|-------------|--------
 registrationCenterID |Yes|Id of the registration center| 
 languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
 
-
-#### Response Part Parameters
+### Response Part Parameters
 Name | Required | Description |  Example
 -----|----------|-------------|--------
 name |Yes|Id of the registration center| 
 order |Yes|This is the order of the weekdays. If the weekdays are in the order of Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday. The order will be 1-Sunday, 2-Monday, 3-Tuesday, 4-Wednesday, 5-Thursday, 6-Friday, 7-Saturday and 8-Sunday.| 
 languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
 
+### Responses
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: decrypt the encrypted symmetric key successfully
+#### Success Response
 ```
 {
 	"id": "mosip.kernel.weekdays",
@@ -4901,7 +4257,7 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
 
 ```
 
-##### Error Response:
+#### Error Response:
 ```
 {
   "id": "mosip.kernel.weekdays",
@@ -4916,41 +4272,35 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
   ],
  "response": null
 }
-
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 KER-WKDS-001 |	reg_working_nonworking table not accessible | Table not accessible
 KER-WKDS-002 |	No week day found | No data present in week day table 
 
 
-
-### GET /workingdays/{registrationCenterID}
-
+## GET /workingdays/{registrationCenterID}
 This service returns the working days of a particular registration center. 
 
-#### Resource URL
-<div>https://mosip.io/v1/masterdata/workingdays/{registrationCenterId}/{languagecode}</div>
+### Resource URL
+`https://mosip.io/v1/masterdata/workingdays/{registrationCenterId}/{languagecode}`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description |  Example
 -----|----------|-------------|--------
 registrationCenterID |Yes|Id of the registration center| 
 languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: decrypt the encrypted symmetric key successfully
+### Responses:
+#### Success Response:
 ```
 {
 	"id": "mosip.kernel.workingdays",
@@ -5012,10 +4362,9 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
         ]
     }
 }
-
 ```
 
-##### Error Response:
+#### Error Response:
 ```
 {
   "id": "mosip.kernel.workingdays",
@@ -5030,43 +4379,38 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
   ],
  "response": null
 }
-
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 KER-WKDS-001 |	reg_working_nonworking table not accessible | Table not accessible
 KER-WKDS-003 |	No working/non working day data found | No Data present in Working days table.
 
 # Exceptional holidays
-
 * [GET /exceptionholidays](#get-exceptionholidays)
 
 ### GET /exceptionholidays
-
 This service returns the exceptional holidays of a particular registration center. 
 
-#### Resource URL
-<div>https://mosip.io/v1/masterdata/exceptionholidays/{registrationCenterId}/{languagecode} </div>
+### Resource URL
+`https://mosip.io/v1/masterdata/exceptionholidays/{registrationCenterId}/{languagecode}`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description |  Example
 -----|----------|-------------|--------
 registrationCenterID |Yes|Id of the registration center| 
 languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: decrypt the encrypted symmetric key successfully
+### Responses
+
+#### Success Response
 ```
 {
   "id": "mosip.kernel.weekdays",
@@ -5103,10 +4447,9 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
         ]
     }
 }
-
 ```
 
-##### Error Response:
+#### Error Response:
 ```
 {
   "id": "mosip.kernel.weekdays",
@@ -5121,14 +4464,10 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
   ],
  "response": null
 }
-
 ```
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 KER-EHD-001 |	Error occured while fetching Exceptional Holidays | Database exception
 KER-EHD-002 |	Exceptional Holiday not founds | Exceptional holidays data not present for registration center id and language code
-
-
-	
