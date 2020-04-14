@@ -16,9 +16,7 @@ referenceURL | URL to the biometrics data stored in MOSIP. This URL will have re
 biometricType | Type of biometric data sent in the request | FMR/FIR/IIR | |
 Return Value | Response | None | None | Integer
 failureReason | Response | None | None | Integer
-scaledScore | Score of the match against the population | None | None | Integer
-targetFPIR | FPIR score as per the formula | None | None | Integer
-maxResults | maximum number of results returned for IDENTIFY operation | 30 | 30 | Integer
+
 
 ## Standard return codes
 
