@@ -336,7 +336,7 @@ KER-BIO-005	|Unknown error occurred	|Thrown when some other error occurred (eg. 
 
 # Biometric SDK Integration Points (Example)
 
-![](_images/arch_diagrams/biometric_sdk_integration_points_table.png)
+![](_images/biometrics/biometric_sdk_integration_points_table.png)
 
-![](_images/arch_diagrams/biometric_sdk_integration_points.png)
+![](_images/biometrics/biometric_sdk_integration_points.png)
 
