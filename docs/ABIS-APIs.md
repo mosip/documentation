@@ -45,7 +45,7 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
   "id": "mosip.abis.insert",
   "ver: "1.1",
   "requestId": "91234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717",
+  "requesttime": "2020-03-29T07:01:24.692Z",
   "referenceId": "01234567-89AB-CDEF-0123-456789ABCDEF",
   "referenceURL": "https://mosip.io/biometric/45678"
 }
@@ -54,7 +54,7 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
 {
   "id": "mosip.abis.insert",
   "requestId": "91234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717",
+  "responsetime": "2020-03-29T07:01:24.692Z",
   "returnValue": 1
 }
 
@@ -62,7 +62,7 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
 {
   "id": "mosip.abis.insert",
   "requestId": "91234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717",
+  "responsetime": "2020-03-29T07:01:24.692Z",
   "returnValue": 2,
   "failureReason": 7
 }
@@ -79,7 +79,7 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
   "id": "mosip.abis.identify",
   "ver": "1.1",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717",
+  "requesttime": "2020-03-29T07:01:24.692Z",
   "referenceId": "987654321-89AB-CDEF-0123-456789ABCDEF",
   "referenceUrl": "https://mosip.io/registrationprocessor/v1/bio-dedupe/biometricfile/2cce7b7d-b58a-4466-a006-c79297281789",
   "flags": { //Optional
@@ -113,17 +113,17 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
 {
   "id": "mosip.abis.identify",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717",
+  "responsetime": "2020-03-29T07:01:24.692Z",
   "returnValue": 1,
   "candidateList": {
-    "count": "",
+    "count": 1,
     "candidates": [
       {
         "referenceId": "7acce7b7d-b58a-4466-a006-c79297281456",
         "analytics":
           {
-		  	"internalScore": "112", // example and not prescribed
-        	"confidence": "90", // example and not prescribed
+	    "internalScore": "112", // example and not prescribed
+            "confidence": "90", // example and not prescribed
             "key1": "value1",
             "key2": "value2"
           },
@@ -168,7 +168,7 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
 {
   "id": "mosip.id.identify",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717",
+  "responsetime": "2020-03-29T07:01:24.692Z",
   "returnValue": 2,
   "failureReason": 7
 }
@@ -191,7 +191,7 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
   "id": "mosip.abis.delete",
   "ver": "1.1",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717",
+  "requesttime": "2020-03-29T07:01:24.692Z",
   "referenceId": ""
 }
 
@@ -199,7 +199,7 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
 {
   "id": "mosip.abis.delete",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717",
+  "responsetime": "2020-03-29T07:01:24.692Z",
   "returnValue": 1
 }
 
@@ -207,7 +207,7 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
 {
   "id": "mosip.abis.delete",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717",
+  "responsetime": "2020-03-29T07:01:24.692Z",
   "returnValue": 2,
   "failureReason": 1
 }
@@ -224,14 +224,14 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
   "id": "mosip.abis.ping",
   "ver": "1.1",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717"
+  "requesttime": "2020-03-29T07:01:24.692Z",
 }
 
 //Success response
 {
   "id": "mosip.abis.ping",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717",
+  "responsetime": "2020-03-29T07:01:24.692Z",
   "returnValue": 1
 }
 ```
@@ -247,14 +247,14 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
   "id": "mosip.abis.pendingJobs",
   "ver": "1.1",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717"
+  "requesttime": "2020-03-29T07:01:24.692Z",
 }
 
 //Success response
 {
   "id": "mosip.abis.pendingJobs",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717",
+  "responsetime": "2020-03-29T07:01:24.692Z",
   "jobscount": "",
   "returnValue": 1
 }
@@ -270,14 +270,14 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
   "id": "mosip.abis.referenceCount",
   "ver": "1.1",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717"
+  "requesttime": "2020-03-29T07:01:24.692Z",
 }
 
 //Success response
 {
   "id": "mosip.abis.referenceCount",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "timestamp": "1539777717",
+  "responsetime": "2020-03-29T07:01:24.692Z",
   "count": "",
   "returnValue": 1
 }
