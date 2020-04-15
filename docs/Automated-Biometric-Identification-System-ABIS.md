@@ -4,7 +4,7 @@ Providing unique identity for a resident is one of key features of any identity 
 
 MOSIP is designed to integrate with multiple ABISs to leverage expertise of different ABIS providers. A country may use one ABIS for fingerprint and another for Iris or use multiple ABISs for the same biometric data and evaluate the best ABIS based on de-duplication quality. 
 
-The ABIS system will never come to know about hte resident's identity. Any PII information such as demographic details of the resident or RID (Request ID for Registration) will be shared with the ABIS system. But, MOSIP maintains a mapping between the ABIS specific referenceID and RID of the resident.
+The ABIS system never comes to know about resident's identity. Any Personally Idenfiable Information (PII) such as demographic details or RID (Request ID for Registration) is not shared with the ABIS system. But, MOSIP maintains a mapping between the ABIS specific referenceID and RID of the resident.
 
 {% hint style="info" %}
 ABIS is used for deduplication during registration, but not for authentication.
