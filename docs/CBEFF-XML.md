@@ -1,5 +1,4 @@
 # CBEFF
-
 * Standards:
   * ISO 19785-3
   * [OASIS patron format ISO/IEC JTC 1 SC 37 - biometrics](https://www.ibia.org/cbeff/iso/bir-header-identifiers), patron identifier 257, patron format identifier 11
@@ -9,7 +8,6 @@
 * MOSIP's [CBEFF Utility](https://github.com/mosip/commons/tree/master/kernel/kernel-cbeffutil-api) to create, update, search and validate CBEFF XML data.
 
 # CBEFF Sample
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <BIR xmlns="http://standards.iso.org/iso-iec/19785/-3/ed-2/">

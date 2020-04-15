@@ -1,16 +1,12 @@
 
 **Draft 4 (April, 2020)**
 
-MOSIP uses biometrics in the registration and the authentication processes. As part of this it requires specialized processing of the biometrics data for different types of biometrics using Biometric SDKs. Such SDKs can support one more modalities or a set of functionalities as required by the MOSIP adopter or the specific implementation. This document defines the interface for the Java Library providing the functional support for processing biometrics.
+This document defines the interface for the Java Library providing the functional support for processing biometrics.
 
 # Quality Check
 
-## Use Cases
-* When a biometric  image is received by MOSIP in the registration client using a forced capture, this method is used to check the quality of the image.
-* Server side validation of quality of biometric images uses this method
-* When external biometric images are received to be put on record this method is used to determine the quality of the received biometric image|
-
 ## Signature 
+`QualityScore checkQuality(BIR sample, KeyValuePair[] flags)`
 
 ### Input Parameters
 * Biometric Image in “Biometric Image Record” format. This could be FIR, IIR etc.
@@ -48,13 +44,8 @@ MOSIP uses biometrics in the registration and the authentication processes. As p
 
 # Matcher
 
-## Use Cases
-* Used for matching a biometric received in an auth transaction with the biometrics on record
-* Used for authentication of operators in offline mode
-* Used for prevention of erroneous submission of operator biometrics in place of registrant’s biometric on registration client
-* Match is expected to be capable of image-image, extract-extract and extract-image comparisons
-
 ## Signature
+`MatchDecision[] match(BIR sample, BIR[] gallery, KeyValuePair[] flags)`
 
 ### Input Parameters
 * Sample Input Image Record (1) - This is a Biometric Image Record with metadata and image data. This is the freshly received input which needs to be matched.
@@ -98,11 +89,8 @@ MOSIP uses biometrics in the registration and the authentication processes. As p
 
 # Extractor
 
-## Use Cases
-* Used to extract salient features and patterns of a biometric to use in fast comparison
-* In case of fingerprints this is called Minutiae and a standard representation of minutiae is an ISO template for FMR
-
 ## Signature
+`BIR extractTemplate(BIR sample, KeyValuePair[] flags)`
 
 ### Input Parameters
 * Biometric Image in “Biometric Image Record” format. This could be FIR, IIR, FaceIR etc.
@@ -131,10 +119,8 @@ MOSIP uses biometrics in the registration and the authentication processes. As p
 
 # Segmenter
 
-## Use Cases
-* Used to split images into individual biometric segments when received from external sources
-
 ## Signature
+`BIR[] segment(BIR sample, KeyValuePair[] flags)`
 
 ### Input Parameters
 * Biometric Image in “Biometric Image Record” format. This could be FIR, IIR, FaceIR etc.
@@ -164,23 +150,8 @@ MOSIP uses biometrics in the registration and the authentication processes. As p
 **_Note:_** The segmenter will identify the individual fingers present.
 
 
-# Image Record Formats
-
-Image Records will have three parts:
-* Header Information
-* Image Block
-* Security Block
-
-## Header Information
-The header information will comply to the standard specified here: [ISO/IEC 19785-3:2015 Standard](https://www.iso.org/standard/60458.html)
-
-## Image Block
-The image block itself will comply to formats specified here: [MOSIP-Biometric-Data-Specifications](MOSIP-Biometric-Data-Specifications.md#data-standards-for-registration)
-
-## Security Block
-The Security Block will be as per CBEFF specification. It is optional.
-
-The cbeff format reference is here - [CBEFF Reference](http://docs.oasis-open.org/bioserv/BIAS/v2.0/csprd01/schemas/cbeff_ed2.xsd)
+# Biometric Image Record (BIR) Formats
+Biometrics data is exchanged as per formats defined in [MDS Specification](MOSIP-Device-Service-Specification.md). The biometric data is wrapped in [CBEFF XML](CBEFF-XML.md)
 
 # Quality Score Object
 The quality score object will have two sections. One is the score section and the other is the analytics section.
@@ -192,7 +163,7 @@ The quality score object will have two sections. One is the score section and th
 * List of name value pairs that can be used to convey additional information. The values filled are specific to the implementing library. This could contain information about the aspects where quality is failing for e.g. ICAO compliance for tilt or lighting. In case of matches it could contain information like the NIST score, the algorithm used for matching and more.
 
 
-# Appendix A - Java Specifications
+# Appendix A - Java API Specifications
 
 ```java
 class MatchDecision
@@ -322,7 +293,6 @@ interface IBioApi
    BIR[] segment(BIR sample, KeyValuePair[] flags);
 }
 ```
-The above code snippets can be referred to from here - [CBEFF-util](https://github.com/mosip/commons/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/cbeffutil) and [Bio API](https://github.com/mosip/commons/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/bioapi)
 
 # Error Codes
 
@@ -333,10 +303,4 @@ KER-BIO-002	|Missing Input Parameter - %s	|Thrown when data required as input is
 KER-BIO-003	|Quality check of Biometric data failed	|Thrown when data provided is valid but quality check cannot be performed
 KER-BIO-004	|Matching of Biometric data failed	|Thrown when data provided is valid, but matching cannot be performed
 KER-BIO-005	|Unknown error occurred	|Thrown when some other error occurred (eg. licensing issue)
-
-# Biometric SDK Integration Points (Example)
-
-![](_images/biometrics/biometric_sdk_integration_points_table.png)
-
-![](_images/biometrics/biometric_sdk_integration_points.png)
 
