@@ -27,7 +27,7 @@ Biometric authentication for officer and supervisor can be enabled by updating t
 	* eod_auth (Authentication for apporoving EOD packets)
 	* onboard_auth (Authentication during on-boarding)    
 
-Currently, username password based authentication is enabled.
+By default, username password based authentication is enabled for all the above processes.
 
 ### Enabling local de-duplication
 Below properties should be enabled for performing local de-duplication. These properties are present in config file [registration-env.properties](https://github.com/mosip/mosip-config/tree/master/config-templates/registration-env.properties)     
