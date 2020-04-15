@@ -1,5 +1,7 @@
 
-MOSIP uses biometrics in the registration and the authentication processes. As part of this it requires specialized processing of the biometrics data for different types of biometrics using biometric SDKs. Such SDKs can support one more modalities or a set of functionalities as required by the MOSIP adopter or the specific implementation. 
+# Introduction
+
+MOSIP uses biometrics - fingerprint, iris, face - in registration and authentication processes.  This requires specialized processing of biometrics data for biometric quality check and matching two biometric images.  Biometric SDK consists of software libaries that provide these functions.  Note that MOSIP platform does not include such an SDK.  
 
 # Biometric SDK integration points
 
@@ -42,6 +44,7 @@ Segmenter, segments single biometric record into multiple biometric records and 
 * Used to split images into individual biometric segments when received from external sources
 
 # Biometric SDK API Specification
-Please go to [Biometric SDK API Specification](Biometric-SDK-API-Specification.md) for details on APIs Specifications for the above features.
+
+The SDK needs to comply to [Biometric SDK API Specification](Biometric-SDK-API-Specification.md)
 
 
