@@ -151,7 +151,7 @@ This document defines the interface for the Java Library providing the functiona
 
 
 # Biometric Image Record (BIR) Formats
-Biometrics data is exchanged as per formats defined in [MDS Specification](MOSIP-Device-Service-Specification.md). The biometric data is wrapped in [CBEFF XML](CBEFF-XML.md)
+Biometrics data is exchanged as per formats defined in [Biometric Data Specification](Biometric-Data-Specification.md). The biometric data is wrapped in [CBEFF XML](CBEFF-XML.md)
 
 # Quality Score Object
 The quality score object will have two sections. One is the score section and the other is the analytics section.

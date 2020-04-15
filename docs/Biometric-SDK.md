@@ -42,6 +42,6 @@ Segmenter, segments single biometric record into multiple biometric records and 
 * Used to split images into individual biometric segments when received from external sources
 
 # Biometric SDK API Specification
-Please go to this page for details on [Biometric SDK API Specification](Biometric-SDK-API-Specification.md)
+Please go to [Biometric SDK API Specification](Biometric-SDK-API-Specification.md) for details on APIs Specifications for the above features.
 
 

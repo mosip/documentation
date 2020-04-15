@@ -15,7 +15,7 @@ MOSIP's ABIS middleware has the following components
 ![MOSIP ABIS Middleware](_images/arch_diagrams/MOSIP_ABIS_middleware.png)
 
 ## ABIS interface
-MOSIP interacts with ABIS only via message queues. JSON format is used for all control messages. Biometrics data is exchanged as per formats defined in [MDS Specification](MOSIP-Device-Service-Specification.md). The biometric data is wrapped in [CBEFF XML](CBEFF-XML.md) and sent to ABIS.
+MOSIP interacts with ABIS only via message queues. JSON format is used for all control messages. Biometrics data is exchanged as per formats defined in [Biometric Data Specification](Biometric-Data-Specification.md). The biometric data is wrapped in [CBEFF XML](CBEFF-XML.md) and sent to ABIS.
 
 ABIS must support the following types of biometric images
 * Individual fingerprint images (segmented)

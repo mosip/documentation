@@ -48,7 +48,6 @@
 ## OTHER PAGES 
 
 * All
-
     * [Admin Services Functionality](Admin-Services-Functionality.md)
     * [Apache Directory Studio User Guide](Apache-Directory-Studio-User-Guide.md)
     * [ApacheDs Server Installation and Configuration](ApacheDs-Server-Installation-and-Configuration.md)
@@ -58,6 +57,7 @@
     * [Auth Implementation](Auth-Implementation.md)
     * [Auth SpringBoot User Guide](Auth-SpringBoot-User-Guide.md)
     * [Authentication and Authorization Functionality](Authentication-and-Authorization-Functionality.md)
+	* [Biometric Data Specification](Biometric-Data-Specification.md)
     * [CBEFF XML](CBEFF-XML.md)
     * [Code of Conduct](Code-of-Conduct.md)
     * [Common Services Functionality](Common-Services-Functionality.md)
@@ -95,7 +95,6 @@
     * [Partner Management Functionality](Partner-Management-Functionality.md)
     * [Pre Registration Functionality](Pre-Registration-Functionality.md)
     * [Registration Client Developer Documentation](Registration-Client-Developer-Documentation.md)
-    * [Registration Client Biometrics Service Integration](Registration-Client-Biometrics-Service-Integration.md)
     * [Registration Client Setup](Registration-Client-Setup.md)
     * [Registration Client UI Developer Document](Registration-Client-UI-Developer-Document.md)
     * [Registration Client](Registration-Client.md)
