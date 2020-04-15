@@ -8,7 +8,10 @@ Biometric Windows SDK (jar file) should be placed in `lib` folder after extracti
 
 ### Enabling MDS integration
 The below property should updated to enable MDS integration. This property is present in [registration-env.properties](https://github.com/mosip/mosip-config/tree/master/config-templates/registration-env.properties) file. 
-```mosip.mdm.enabled=Y```
+
+```
+mosip.mdm.enabled=Y
+```
  
 ### Registering biometric devices for registration
 * `Register Device Provider` - Device Provider can be registered with MOSIP using [Register Device Provider API](Device-Management-APIs.md#post-deviceprovider)    
@@ -31,6 +34,7 @@ By default, username password based authentication is enabled for all the above 
 
 ### Enabling local de-duplication
 Below properties should be enabled for performing local de-duplication. These properties are present in config file [registration-env.properties](https://github.com/mosip/mosip-config/tree/master/config-templates/registration-env.properties)     
+
 ```
 mosip.registration.mds.fingerprint.dedup.enable.flag=Y    
 mosip.registration.mds.iris.dedup.enable.flag=Y    
@@ -46,6 +50,7 @@ ABIS queue can be configured in [RegistrationProcessorAbis-env.json](https://git
 
 ### Adding SDK in classpath
 Below properties should be set in id-authentication-{env}.properties. The classes configured below will be loaded in classpath during application initialization.
+
 ````
 ida.fingerprint.provider=<fully qualified classname of Biometric SDK>
 ida.face.provider=<fully qualified classname of Biometric SDK>  
