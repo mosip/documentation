@@ -20,21 +20,23 @@ MOSIP's ABIS middleware has the following components
 
 ![MOSIP ABIS Middleware](_images/arch_diagrams/MOSIP_ABIS_middleware.png)
 
-## ABIS interface
-MOSIP interacts with ABIS only via message queues. JSON format is used for all control messages in the queue for details go through the [ABIS API Specifications](ABIS-APIs.md).
+## MOSIP-ABIS interface
 
-ABIS must support the following types of biometric images,
+MOSIP interacts with ABIS only via message queues. JSON format is used for all control messages in the queue. MOSIP ABIS middleware requests to inbound queue address and receives responses from outbound queue address.
+For details refer to the [ABIS API Specifications](ABIS-APIs.md).
+
+ABIS must support the following types of biometric images:
 * Individual fingerprint images (segmented)
-* IRIS images (left, right)
-* Face photograph
+* Iris images (left, right)
+* Face image
 
-Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Data Specification](Biometric-Data-Specification.md). The biometric data is wrapped in [CBEFF XML](CBEFF-XML.md) and sent to ABIS.
+Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Data Specification](Biometric-Data-Specification.md). 
 
-## ABIS queue
-ABIS queue can be configured in [RegistrationProcessorAbis-env.json](https://github.com/mosip/mosip-config/blob/master/config-templates/RegistrationProcessorAbis-env.json) file. MOSIP ABIS middleware communicates to ABIS through queues configured by sending requests to inbound queue address and receiving responses from outbound queue address.
 
 ## ABIS deployment
-* It is recommended that the MOSIP adopters deploy ABIS on the same secure zone (military zone) where the registration processor is deployed. 
-* ABIS system will connect to the queue using a pre-defined user id and password. 
+* ABIS must comply to [ABIS API Specifications](ABIS-APIs.md).
+* The queques can be configured in [RegistrationProcessorAbis-env.json](https://github.com/mosip/mosip-config/blob/master/config-templates/RegistrationProcessorAbis-env.json) file.
+ ABIS system connects to the queues using a pre-defined user id and password. 
+* It is recommended that ABIS is deployed in the same secure zone (military zone) where the registration processor is deployed. 
 * ABIS system is not recommended to connect to any external network.
 
