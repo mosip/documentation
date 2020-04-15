@@ -1,10 +1,9 @@
+# Introduction
+
 This section details about the service APIs in the Biometric types and biometric attributes modules
 
-
 * [Biometric Types API](#biometric-types-master-api)
-
 * [Biometrics Attributes API](#biometric-attributes-master-api)
-
 
 
 # Biometric types Master API
