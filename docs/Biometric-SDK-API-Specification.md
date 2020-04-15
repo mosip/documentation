@@ -6,7 +6,8 @@ API specification version:  **Draft 4 (April, 2020)**
 
 # Quality Check
 
-* **Signature** 
+* **Signature**  
+
 `QualityScore checkQuality(BIR sample, KeyValuePair[] flags)`
 
 * **Input Parameters**
@@ -45,7 +46,8 @@ API specification version:  **Draft 4 (April, 2020)**
 
 # Matcher
 
-* **Signature**
+* **Signature**  
+
 `MatchDecision[] match(BIR sample, BIR[] gallery, KeyValuePair[] flags)`
 
 * **Input Parameters**
@@ -58,11 +60,11 @@ API specification version:  **Draft 4 (April, 2020)**
   * Each Decision object will contain a match - yes/no decision and an Analytics object with key value pairs
 
 * **Errors/Exceptions**
-* Unsupported biometric type
-* Unsupported image format
-* Mismatch in biometric types (sample to record)
-* Mixed biometric types (mix of types in the on records list)
-* Processing error
+  * Unsupported biometric type
+  * Unsupported image format
+  * Mismatch in biometric types (sample to record)
+  * Mixed biometric types (mix of types in the on records list)
+  * Processing error
 
 ## Behavior
 
@@ -87,10 +89,10 @@ API specification version:  **Draft 4 (April, 2020)**
 * Typical comparisons are 1 : 1 for one person and 1 : n for multiple people (deduplication scenario)
 * The match decision will return a yes/no and optional anaytics with details such a confidence level.
 
-
 # Extractor
 
 * **Signature**
+
 `BIR extractTemplate(BIR sample, KeyValuePair[] flags)`
 
 * **Input Parameters**
@@ -121,6 +123,7 @@ API specification version:  **Draft 4 (April, 2020)**
 # Segmenter
 
 * **Signature**
+
 `BIR[] segment(BIR sample, KeyValuePair[] flags)`
 
 * **Input Parameters**
