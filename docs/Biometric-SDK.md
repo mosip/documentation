@@ -3,18 +3,10 @@
 
 MOSIP uses biometrics - fingerprint, iris, face - in registration and authentication processes.  This requires specialized processing of biometrics data for biometric quality check and matching two biometric images.  Biometric SDK consists of software libaries that provide these functions.  Note that MOSIP platform does not include such an SDK.  
 
-# Biometric SDK integration points
-
-![](_images/biometrics/biometric_sdk_integration_points.png)
-
-Below are the list of integration points where we are currently using biometric SDKs in MOSIP.
-
-![](_images/biometrics/biometric_sdk_integration_points_table.png)
-
 # Biometric SDK Features 
 
 ## Quality Checker
-Quality checker, checks the quality of input biometrics and returns quality score for the same.
+Checks the quality of input biometrics and returns quality score for the same.
 
 ### Use Cases
 * When a biometric  image is received by MOSIP in the registration client using a forced capture, this method is used to check the quality of the image
@@ -33,15 +25,23 @@ Matcher, matches the captured biometric record or a list of biometric records (b
 ## Extractor
 Extractor, extracts salient features and patterns of input biometric record to use in fast comparison. It returns the extracted biometric record.
 
-## Use Cases
+### Use Cases
 * Used to extract salient features and patterns of a biometric to use in fast comparison
 * In case of fingerprints this is called Minutiae and a standard representation of minutiae is an ISO template for FMR
 
-# Segmenter
+## Segmenter
 Segmenter, segments single biometric record into multiple biometric records and returns list of segmented biometric records. Eg: Split thumb slab into multiple fingers and eyes into left and right eye.
 
-## Use Cases
+### Use Cases
 * Used to split images into individual biometric segments when received from external sources
+
+# Biometric SDK integration points
+
+![](_images/biometrics/biometric_sdk_integration_points.png)
+
+Below are the list of integration points where we are currently using biometric SDKs in MOSIP.
+
+![](_images/biometrics/biometric_sdk_integration_points_table.png)
 
 # Biometric SDK API Specification
 
