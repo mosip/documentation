@@ -69,7 +69,7 @@
     * [First User Registration and Onboarding](First-User-Registration-and-Onboarding.md)
     * [FRS MISP Self Service Portal](FRS-MISP-Self-Service-Portal.md)
     * [Github Workflow](Github-Workflow.md)
-    * [Guide to configure MOSIP for Biometrics](Guide-to-configure-MOSIP-for-Biometrics.md)
+    * [Guide to Configure MOSIP for Biometrics](Guide-to-Configure-MOSIP-for-Biometrics.md)
     * [Guidelines for Adding Centers, Machine, User and Devices](Guidelines-for-Adding-Centers,-Machine,-User-and-Devices.md)
     * [Hardware Security Module HSM Specifications](Hardware-Security-Module-HSM-Specifications.md)
     * [Hardware Sizing](Hardware-Sizing.md)

@@ -27,8 +27,7 @@ Biometric authentication for officer and supervisor can be enabled by updating t
 * packet_auth (Authentication when packet is created)
 * login_auth (Login to registration client)
 * exception_auth (Authentication when an exception packet is created)
-* eod_auth (Authentication for apporoving EOD packets)
-* onboard_auth (Authentication during on-boarding)    
+* eod_auth (Authentication for apporoving EOD packets) 
 
 By default, username password based authentication is enabled for all the above processes.
 
