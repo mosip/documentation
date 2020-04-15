@@ -8,6 +8,8 @@ The ABIS system will never come to know about hte resident's identity. Any PII i
 
 **_Note:_** ABIS is used for deduplication during registration, but not for authentication.
 
+>ABIS is used for deduplication during registration, but not for authentication.
+
 {% hint style="info" %}
 ABIS is used for deduplication during registration, but not for authentication.
 {% endhint %}
