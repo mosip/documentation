@@ -39,7 +39,8 @@ Segmenter, segments single biometric record into multiple biometric records and 
 
 ![](_images/biometrics/biometric_sdk_integration_points.png)
 
-Below are the list of integration points where we are currently using biometric SDKs in MOSIP.
+&nbsp;
+&nbsp;
 
 ![](_images/biometrics/biometric_sdk_integration_points_table.png)
 
