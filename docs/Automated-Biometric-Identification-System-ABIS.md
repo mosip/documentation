@@ -6,10 +6,6 @@ MOSIP is designed to integrate with multiple ABISs to leverage expertise of diff
 
 The ABIS system will never come to know about hte resident's identity. Any PII information such as demographic details of the resident or RID (Request ID for Registration) will be shared with the ABIS system. But, MOSIP maintains a mapping between the ABIS specific referenceID and RID of the resident.
 
-**_Note:_** ABIS is used for deduplication during registration, but not for authentication.
-
->ABIS is used for deduplication during registration, but not for authentication.
-
 {% hint style="info" %}
 ABIS is used for deduplication during registration, but not for authentication.
 {% endhint %}
