@@ -1,24 +1,25 @@
-
-**Draft 4 (April, 2020)**
+# Introduction
 
 This document defines the interface for the Java Library providing the functional support for processing biometrics.
 
+API specification version:  **Draft 4 (April, 2020)**
+
 # Quality Check
 
-## Signature 
+* **Signature** 
 `QualityScore checkQuality(BIR sample, KeyValuePair[] flags)`
 
-### Input Parameters
-* Biometric Image in “Biometric Image Record” format. This could be FIR, IIR etc.
-* Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
+* **Input Parameters**
+  * Biometric Image in “Biometric Image Record” format. This could be FIR, IIR etc.
+  * Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
 
-### Output Parameters
-* QualityScore object with Quality score and Analytics. The quality score is on a scale of 100 - Higher is better.
+* **Output Parameters**
+  * QualityScore object with Quality score and Analytics. The quality score is on a scale of 100 - Higher is better.
 
-### Errors/Exceptions
-* Unsupported biometric type
-* Unsupported image format
-* Processing error
+* **Errors/Exceptions**
+  * Unsupported biometric type
+  * Unsupported image format
+  * Processing error
 
 ## Behavior
 
@@ -44,19 +45,19 @@ This document defines the interface for the Java Library providing the functiona
 
 # Matcher
 
-## Signature
+* **Signature**
 `MatchDecision[] match(BIR sample, BIR[] gallery, KeyValuePair[] flags)`
 
-### Input Parameters
-* Sample Input Image Record (1) - This is a Biometric Image Record with metadata and image data. This is the freshly received input which needs to be matched.
-* Match List of Image Records (n) - This is the set of biometrics on record that the input images needs to be matched against. The smaller this list the better the performance. Also there will be outer limits to the size of this list based on the library used.
-* Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
+* **Input Parameters**
+  * Sample Input Image Record (1) - This is a Biometric Image Record with metadata and image data. This is the freshly received input which needs to be matched.
+  * Match List of Image Records (n) - This is the set of biometrics on record that the input images needs to be matched against. The smaller this list the better the performance. Also there will be outer limits to the size of this list based on the library used.
+  * Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
 
-### Output Parameters
-* List of Decision object with Match decision and Analytics.
-* Each Decision object will contain a match - yes/no decision and an Analytics object with key value pairs
+* **Output Parameters**
+  * List of Decision object with Match decision and Analytics.
+  * Each Decision object will contain a match - yes/no decision and an Analytics object with key value pairs
 
-### Errors / Exceptions
+* **Errors/Exceptions**
 * Unsupported biometric type
 * Unsupported image format
 * Mismatch in biometric types (sample to record)
@@ -89,20 +90,20 @@ This document defines the interface for the Java Library providing the functiona
 
 # Extractor
 
-## Signature
+* **Signature**
 `BIR extractTemplate(BIR sample, KeyValuePair[] flags)`
 
-### Input Parameters
-* Biometric Image in “Biometric Image Record” format. This could be FIR, IIR, FaceIR etc.
-* Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
+* **Input Parameters**
+  * Biometric Image in “Biometric Image Record” format. This could be FIR, IIR, FaceIR etc.
+  * Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
 
-### Output Parameters
-* Biometric Extract Record in the form of FMR or a proprietary structure. The extract also contains a quality score.
+* **Output Parameters**
+  * Biometric Extract Record in the form of FMR or a proprietary structure. The extract also contains a quality score.
 
-### Errors/Exceptions
-* Unsupported biometric type
-* Unsupported image format
-* Processing error
+* **Errors/Exceptions**
+  * Unsupported biometric type
+  * Unsupported image format
+  * Processing error
 
 ## Behavior
 
@@ -119,20 +120,20 @@ This document defines the interface for the Java Library providing the functiona
 
 # Segmenter
 
-## Signature
+* **Signature**
 `BIR[] segment(BIR sample, KeyValuePair[] flags)`
 
-### Input Parameters
-* Biometric Image in “Biometric Image Record” format. This could be FIR, IIR, FaceIR etc.
-* Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
+* **Input Parameters**
+  * Biometric Image in “Biometric Image Record” format. This could be FIR, IIR, FaceIR etc.
+  * Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
 
-### Output Parameters
-* List of Biometric Image Record that contains the individual biometrics
+* **Output Parameters**
+  * List of Biometric Image Record that contains the individual biometrics
 
-### Errors/Exceptions
-* Unsupported biometric type
-* Unsupported image format
-* Processing error
+* **Errors/Exceptions**
+  * Unsupported biometric type
+  * Unsupported image format
+  * Processing error
 
 ## Behavior
 
@@ -151,7 +152,8 @@ This document defines the interface for the Java Library providing the functiona
 
 
 # Biometric Image Record (BIR) Formats
-Biometrics data is exchanged as per formats defined in [Biometric Data Specification](Biometric-Data-Specification.md). The biometric data is wrapped in [CBEFF XML](CBEFF-XML.md)
+
+Biometrics data is exchanged as per formats defined in [Biometric Data Specification](Biometric-Data-Specification.md). 
 
 # Quality Score Object
 The quality score object will have two sections. One is the score section and the other is the analytics section.
@@ -303,4 +305,3 @@ KER-BIO-002	|Missing Input Parameter - %s	|Thrown when data required as input is
 KER-BIO-003	|Quality check of Biometric data failed	|Thrown when data provided is valid but quality check cannot be performed
 KER-BIO-004	|Matching of Biometric data failed	|Thrown when data provided is valid, but matching cannot be performed
 KER-BIO-005	|Unknown error occurred	|Thrown when some other error occurred (eg. licensing issue)
-
