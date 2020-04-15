@@ -4,7 +4,7 @@ Providing unique identity for a resident is one of key features of any identity 
 
 MOSIP is designed to integrate with multiple ABISs to leverage expertise of different ABIS providers. A country may use one ABIS for fingerprint and another for Iris or use multiple ABISs for the same biometric data and evaluate the best ABIS based on de-duplication quality. 
 
-The ABIS system never comes to know about resident's identity. Any Personally Idenfiable Information (PII) such as demographic details or RID (Request ID for Registration) is not shared with the ABIS system. But, MOSIP maintains a mapping between the ABIS specific referenceID and RID of the resident.
+The ABIS system never comes to know about resident's identity. Any Personally Idenfiable Information (PII) such as demographic details or RID (Request ID for Registration) is not shared with the ABIS system. Internally, MOSIP maintains a mapping between the ABIS specific referenceID and RID of the resident.
 
 {% hint style="info" %}
 ABIS is used for deduplication during registration, but not for authentication.
@@ -22,7 +22,7 @@ MOSIP's ABIS middleware has the following components
 
 ## MOSIP-ABIS interface
 
-MOSIP interacts with ABIS only via message queues. JSON format is used for all control messages in the queue. MOSIP ABIS middleware requests to inbound queue address and receives responses from outbound queue address.
+MOSIP interacts with ABIS only via message queues. JSON format is used for all control messages in the queue. MOSIP ABIS middleware sends requests to inbound queue address and receives responses from outbound queue address.
 For details refer to the [ABIS API Specifications](ABIS-APIs.md).
 
 ABIS must support the following types of biometric images:
