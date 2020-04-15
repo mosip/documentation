@@ -4,8 +4,10 @@ MOSIP can be configured to work with proxy implementation and multiple biometric
 ## Registration Client   
 
 ### Adding SDK in classpath
-Biometric Windows SDK (jar file) should be placed in `lib` folder after extracting Registration-Client zip file, and then execute `run.bat` file     
-* **Enable MDS** - Below property should updated to enable MDS integration. This property is present in [registration-env.properties](https://github.com/mosip/mosip-config/tree/master/config-templates/registration-env.properties) file. 
+Biometric Windows SDK (jar file) should be placed in `lib` folder after extracting Registration-Client zip file, and then execute `run.bat` file.     
+
+### Enabling MDS integration
+The below property should updated to enable MDS integration. This property is present in [registration-env.properties](https://github.com/mosip/mosip-config/tree/master/config-templates/registration-env.properties) file. 
 ```mosip.mdm.enabled=Y```
  
 ### Registering biometric devices for registration
