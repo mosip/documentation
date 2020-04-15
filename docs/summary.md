@@ -32,7 +32,7 @@
     * [ID Repository APIs](ID-Repository-APIs.md)
     * [Kernel APIs](Kernel-APIs.md)
     * [Machine APIs](Machine-APIs.md)
-	* [Master Data Biometric APIs](Master-Data-Biometric-APIs)
+	* [Master Data Biometric APIs](Master-Data-Biometric-APIs.md)
     * [MOSIP REST API guidelines](MOSIP-REST-API-guidelines.md)
     * [Packet APIs](Packet-APIs.md)
     * [Partner Management Service APIs](Partner-Management-Service-APIs.md)
