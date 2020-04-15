@@ -1,5 +1,5 @@
 
-MOSIP uses biometrics in the registration and the authentication processes. As part of this it requires specialized processing of the biometrics data for different types of biometrics using Biometric SDKs. Such SDKs can support one more modalities or a set of functionalities as required by the MOSIP adopter or the specific implementation. 
+MOSIP uses biometrics in the registration and the authentication processes. As part of this it requires specialized processing of the biometrics data for different types of biometrics using biometric SDKs. Such SDKs can support one more modalities or a set of functionalities as required by the MOSIP adopter or the specific implementation. 
 
 # Biometric SDK integration points
 
@@ -15,12 +15,12 @@ Below are the list of integration points where we are currently using biometric 
 Quality checker, checks the quality of input biometrics and returns quality score for the same.
 
 ### Use Cases
-* When a biometric  image is received by MOSIP in the registration client using a forced capture, this method is used to check the quality of the image.
+* When a biometric  image is received by MOSIP in the registration client using a forced capture, this method is used to check the quality of the image
 * Server side validation of quality of biometric images uses this method
 * When external biometric images are received to be put on record this method is used to determine the quality of the received biometric image
 
 ## Matcher
-Matcher captures a biometric record or a list of biometric records (based on single match or composite match), matches it against list of stored biometric records. It then returns a matching score against each stored biometric record or a composite matching score for the list of input biometric records. 
+Matcher, matches the captured biometric record or a list of biometric records (based on single match or composite match), matches it against list of stored biometric records. It then returns a matching score against each stored biometric record or a composite matching score for the list of input biometric records. 
 
 ### Use Cases
 * Used for matching one or multiple modes of biometric received in an auth transaction with a list of biometrics record

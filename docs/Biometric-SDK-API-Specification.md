@@ -157,10 +157,10 @@ Biometrics data is exchanged as per formats defined in [Biometric Data Specifica
 The quality score object will have two sections. One is the score section and the other is the analytics section.
 
 ## Score Parameters
-* Graded score on a scale of 100. This is an unsigned float that represents a % and can have values between 0 and 100 including decimals like 82.45.
+Graded score on a scale of 100. This is an unsigned float that represents a % and can have values between 0 and 100 including decimals like 82.45.
 
 ## Analytics
-* List of name value pairs that can be used to convey additional information. The values filled are specific to the implementing library. This could contain information about the aspects where quality is failing for e.g. ICAO compliance for tilt or lighting. In case of matches it could contain information like the NIST score, the algorithm used for matching and more.
+List of name value pairs that can be used to convey additional information. The values filled are specific to the implementing library. This could contain information about the aspects where quality is failing for e.g. ICAO compliance for tilt or lighting. In case of matches it could contain information like the NIST score, the algorithm used for matching and more.
 
 
 # Appendix A - Java API Specifications
