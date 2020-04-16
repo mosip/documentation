@@ -3,7 +3,7 @@
 
 MOSIP uses biometrics - fingerprint, iris, face - in registration and authentication processes.  This requires specialized processing of biometrics data for biometric quality check and matching two biometric images.  Biometric SDK consists of software libaries that provide these functions.  Note that MOSIP platform does not include such an SDK.  
 
-# Biometric SDK Features 
+# Biometric SDK Functions 
 
 ## Quality Checker
 Checks the quality of input biometrics and returns quality score for the same.
