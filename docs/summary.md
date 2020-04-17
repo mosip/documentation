@@ -48,7 +48,8 @@
 ## OTHER PAGES 
 
 * All
-    * [Admin Services Functionality](Admin-Services-Functionality.md)
+    * [API Documentation](API-Documentation.md)
+	* [Admin Services Functionality](Admin-Services-Functionality.md)
     * [Apache Directory Studio User Guide](Apache-Directory-Studio-User-Guide.md)
     * [ApacheDs Server Installation and Configuration](ApacheDs-Server-Installation-and-Configuration.md)
     * [Audit Manager Functionality](Audit-Manager-Functionality.md)
