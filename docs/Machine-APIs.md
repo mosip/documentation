@@ -9,7 +9,7 @@ These APIs includes create, update and fetch APIs. Create and Update API is used
 
 These APIs includes Create, Update, Search and Filter API which are used by the Administrator Portal. Create and Update API is used for the Create and Update Machine Type functionality. Search API is used by the portal to fetch the list of Machine Types based on a filter criterion to display the list of Machine Types on the UI and Filter API is used by the portal to populate Machine Type Filter Dropdowns on the Portal UI.
 
-* [Machine Specifications API](#machine-specifications)
+* [Machine Specification API](#machine-specification)
 
 These APIs include Create, Update, Search and Filter API which are used by the Administrator Portal. Create and Update API is used for the Create and Update Machine Specification functionality. Search API is used by the portal to fetch the list of Machine Specification based on a filter criterion to display the list of Machine Specification on the UI and Filter API is used to populate Machine Specification Filter Dropdowns on the Portal UI.
 

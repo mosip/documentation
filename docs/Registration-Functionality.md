@@ -389,7 +389,7 @@ While registering an individual, a registration officer captures the face photo 
 1. When the retry limit is reached and photo of sufficient quality is not obtained, the best quality photo is retained. The best photo will be displayed on screen along with its quality score.
 1. All the above rules apply to exception photo capture as well.
 
-#### K. Capture Iris as per defined specifications
+#### K. Capture Iris as per defined specification
 When the registration officer scans the individual’s irises either individually or together, the system performs the following steps:
 1. Displays the quality score and threshold for each captured iris.
 1. Allows the registration officer to re-try each capture up to a maximum number of times (as configured) if threshold score is not met for one or both irises.
@@ -409,13 +409,13 @@ All devices that collect biometric data for MOSIP should operate within the defi
 - If the system is offline, then the validation will be executed against the master data synced locally in the machine from which devices are being connected (Master data relevant to the registered devices)
 - If the device is identified to be registered as part of the Master data, then the device can be used & Operator is allowed to proceed with biometrics capture. Subsequently, the connected device(s) are then mapped to the machine from which the devices are connected - [Backend mapping of Machine with connected device(s)]
 - If the device is identified to be un-registered as part of the Master data of registered devices, then the Operator cannot proceed with biometrics capture
-For details on the specifications of the API and validation, refer [**here**](/mosip/mosip-docs/wiki/FRS-Administrator-Services#105-device-detail-validation-)
+For details on the specification of the API and validation, refer [**here**](/mosip/mosip-docs/wiki/FRS-Administrator-Services#105-device-detail-validation-)
 
 #### N. Restrict registration if the duration since the last export or upload is more than the configured limit
 When the registration officer opts to start a new registration or UIN update. The system determines the time of the most recent export or upload (automatic uploads and manual uploads) of registration packets.
 If the duration since the last export or upload is not more than the configured limit, then system displays the demographic details page or UIN update page. If the configured limit is exceeded, then system displays an error message.
 
-_Note_: Once all the required demographic and biometric data is captured, the registration packet is created as per the defined specifications. For New Registration, UIN Update or Lost UIN packet, the Registration Client Version Number will also be sent as part of the packet metadata information (As part of the Optional parameter)
+_Note_: Once all the required demographic and biometric data is captured, the registration packet is created as per the defined specification. For New Registration, UIN Update or Lost UIN packet, the Registration Client Version Number will also be sent as part of the packet metadata information (As part of the Optional parameter)
 
 [**Link to design**](/mosip/mosip-platform/blob/master/design/registration/registration-New.md)
 
