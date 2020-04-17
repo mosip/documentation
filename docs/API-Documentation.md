@@ -3,9 +3,9 @@ This document talks about the API Documentation Standards in MOSIP.
 **Sample API Documentation**
 
 # Authorization and Authentication APIs
-<Description of APIs>
+<Description>
 * [Send OTP](#send-otp)
-* List of APIs
+* [Authenticate UserId and OTP](#authenticate-userid-and-otp)
 
 {% hint style="info" %}
 **Swagger URL:** `https://<env>.mosip.io/v1/authmanager/swagger-ui.html#`
@@ -33,12 +33,12 @@ Requires Authentication | <Yes/No>; <Roles>
 ### Parameters
 Name | Required | Description | Values 
 -----|----------|-------------|---------------
-userid | Yes | This is the userid of the user. Based on the useridtype, this will vary.| Example - M392380
-otpchannel | Yes | This is the channel in which the OTP will be sent. It is an array of the enumeration {"EMAIL", "MOBILE"}. If the channel is not found, ChannelNotSupported error will be sent back. | EMAIL or MOBILE
-useridtype | Yes | This field is the user id type. It should be one the {"UIN", "USERID"}. Based on the combination of "appid" and "useridtype" the system identifies from which system to pickup the channel's recipient address | UIN or VID or USERID
+userid | Yes | This is the userid of the user. Based on the useridtype, this will vary. | Example - M392380
+otpchannel | Yes | This is the channel in which the OTP will be sent. | EMAIL or MOBILE
+useridtype | Yes | This field is the user id type. | UIN or VID or USERID
 appid | Yes | This is the application ID of the caller of this service. | PREREGISTRATION, REGISTRATIONCLIENT, REGISTRATIONPROCESSOR, IDA
 templateVariables | No | This is the map of custom template variables | Example - {"UIN":"2530192395"}
-context|Yes|This shows the purpose of the sending otp like Login,notification etc|auth-otp(default), auth-login-otp
+context|Yes|This shows the purpose of the sending otp | auth-otp(default), auth-login-otp
 {% hint style="info" %}
 * Name - name of the request parameter
 * Required - Yes/No (for mandatory or optional)
@@ -78,30 +78,29 @@ context|Yes|This shows the purpose of the sending otp like Login,notification et
 
 ```JSON
 {
-	"id": "mosip.authentication.sendotp",
-	"ver": "1.0",
-	"responsetime": "2007-12-03T10:15:30Z",
-	"response": {
-                "status": "success",
-		"message":"OTP had been sent successfully"
-	}
+  "id": "mosip.authentication.sendotp",
+  "ver": "1.0",
+  "responsetime": "2007-12-03T10:15:30Z",
+  "response": {
+    "status": "success",
+	"message":"OTP had been sent successfully"
+  }
 }
 ```
 
 #### Error Response 
 ```JSON
 {
-	"id": "mosip.authentication.sendotp",
-	"ver": "1.0",
-	"responsetime": "2007-12-03T10:15:30Z",
-	"errors":[
-			{
-				"errorCode": "KER-AUTH-CHANNEL_INVALID",
-				"message": "The passed channel is invalid."
-		  }	
-		]
+  "id": "mosip.authentication.sendotp",
+  "ver": "1.0",
+  "responsetime": "2007-12-03T10:15:30Z",
+  "errors":[
+	{
+	  "errorCode": "KER-AUTH-CHANNEL_INVALID",
+	  "message": "The passed channel is invalid."
+	}	
+  ]
 }
-
 ```
 
 ### Failure Details
@@ -126,20 +125,20 @@ Requires Authentication | No
 
 ### Parameters
 Name | Required | Description | Values
------|----------|-------------|---------------|--------
-userid|Yes|This is the userid of the user against which the OTP had been sent. Based on the useridtype, this will vary.| Example - M392380
-otp|Yes|This is OTP which is sent to the userid's preferred channel| -NA- | Example - 6473
+-----|----------|-------------|---------------
+userid | Yes | This is the userid of the user against which the OTP had been sent. | Example - M392380
+otp | Yes | This is OTP which is sent to the userid's preferred channel | Example - 6473
 
 ### Sample Request
 ```JSON
 {
-	"id": "mosip.authentication.useridOTP",
-	"version":"1.0",	
-	"requesttime":"2007-12-03T10:15:30Z",
-	"request": {
-		"userid": "M392380",
-		"otp": "6473"
-	}
+  "id": "mosip.authentication.useridOTP",
+  "version":"1.0",	
+  "requesttime":"2007-12-03T10:15:30Z",
+  "request": {
+	"userid": "M392380",
+	"otp": "6473"
+  }
 }
 ```
 
@@ -168,17 +167,16 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
 ```JSON
 
 {
-	"id": "mosip.authentication.useridOTP",
-	"ver": "1.0",
-	"responsetime": "2007-12-03T10:15:30Z",
-	"errors":[
-			{
-				"errorCode": "AUTH_ERR_INVALIDOTP",
-				"message": "The passed in OTP is invalid"
-		  }	
-		]
+  "id": "mosip.authentication.useridOTP",
+  "ver": "1.0",
+  "responsetime": "2007-12-03T10:15:30Z",
+  "errors":[
+	{
+	  "errorCode": "AUTH_ERR_INVALIDOTP",
+	  "message": "The passed in OTP is invalid"
+	}	
+  ]
 }
-
 ```
 
 ### Failure Details
