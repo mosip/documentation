@@ -3,6 +3,8 @@
 
 MOSIP uses biometrics - fingerprint, iris, face - in registration and authentication processes.  This requires specialized processing of biometrics data for biometric quality check and matching two biometric images.  Biometric SDK consists of software libaries that provide these functions.  Note that MOSIP platform does not include such an SDK.  
 
+% hint style="info" %} ABIS is used for 1:N deduplication while Biometric SDK is primarily used for 1:1 authentication and quality check. MOSIP does not recommend using an ABIS system for 1:1 authentication.{% endhint %}
+
 # Biometric SDK Functions 
 
 ## Quality Checker
