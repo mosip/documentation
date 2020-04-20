@@ -43,13 +43,14 @@ After hitting api, you will get the authorization token in the cookie.
 This service would be used by MOSIP admin for MISP(MOSIP Infrastructure Service Provider) management.
 
 * [POST /misps](#post-misps)
-* [POST /misps/{mispId}](#post-mispsmispid)
-* [POST /misps/{mispId}/licenseKey](#post-mispsmispidlicensekey)
-* [PUT /misps/{mispId}](#put-mispsmispid)
+* [PATCH /misps/{mispId}/status](#PATCH-mispsmispIdstatus)
+* [PUT /misps/{mispId}](#post-mispsmispid)
+* [PATCH /misps/{mispId}/licenseKey](#post-mispsmispidlicensekey)
+* [PATCH /misps/{mispId}](#put-mispsmispid)
 * [PUT /misps/{mispId}/licenseKey](#put-mispsmispidlicensekey)
 * [GET /misps](#get-misps)
-* [GET /misps/{mispId}](#get-mispsmispId)
-* [GET /misps/{mispOrgName}](#get-mispsmispOrgName)
+* [GET /misps/mispId/{mispId}](#get-mispsmispId)
+* [GET /misps/name/{mispOrgName}](#get-mispsmispOrgName)
 * [GET /misps/{mispId}/licenseKey](#get-mispsmispidlicensekey)
 
 
@@ -152,7 +153,100 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-### POST /misps/{mispId}
+### PATCH /misps/{mispId}/status
+This API would be used to approve or reject the misp.
+
+#### Resource URL
+`https://mosip.io/partnermanagement/v1/misps/{mispId}/status`
+
+#### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+#### Request Path Parameters
+Name | Required | Description | Comment
+-----|----------|-------------|--------
+mispId |Yes| id of the misp|64269837502851
+
+#### Request Header 
+Name | Required | Description | Comment
+-----|----------|-------------|--------
+Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
+
+#### Request Body Parameters
+Name | Required | Description | Comment
+-----|----------|-------------|--------
+id |Yes|id |mosip.partnermanagement.misp.update
+version |Yes|version of the application|1.0
+requesttime |Yes|Time of the request|2019-07-02T05:23:08.019Z
+request |Yes|Request for the application|
+request.mispStatus|Yes|MISP Status |Approved or Rejected
+
+#### Request:
+```JSON
+{
+  "id": "mosip.partnermanagement.misp.status",
+  "version": "1.0",
+  "requesttime": "2019-05-20T09:48:43.394Z",
+  "metadata": {},
+  "request": {
+      "mispStatus": "approved"
+  }
+}
+```
+#### Responses:
+
+##### Success Response:
+
+###### Status code: '200'
+```JSON
+{
+    "id": "mosip.partnermanagement.misp.status",
+    "version": "1.0",
+    "responsetime": "2020-04-15T10:38:33.745Z",
+    "metadata": null,
+    "response": {
+        "mispStatus": "Active",
+        "mispLicenseKey": "xNwJeS3vf6UL5b7QbGCDLfBxi8Ower4x0S0LwU14aXrZ2ngv5m",
+        "mispLicenseKeyExpiry": "2020-05-15T16:08:33.767993400",
+        "mispLicenseKeyStatus": "active",
+        "mispID": "109",
+        "mispStatusCode": "approved",
+        "message": "MISP approved successfully"
+    },
+    "errors": []
+}
+```
+##### Failure Response:
+###### Status code: '200'
+###### Description: MISP ID does not exist
+```JSON
+{
+    "id": null,
+    "version": null,
+    "responsetime": "2020-04-15T10:39:57.415Z",
+    "metadata": null,
+    "response": null,
+    "errors": [
+        {
+            "errorCode": "PMS_MSP_005",
+            "message": "MISP ID does not exist  110"
+        }
+    ]
+}
+```
+#### Other Failure details
+Error Code | Error Message | Error Description
+-----|----------|-------------
+PMS_MSP_001|MOSIP Admin does not exist|Unauthorized MOSIP Admin- UserName not available in database
+PMS_MSP_002|Mismatch of the MOSIP Admin Credentials|User Name and Password of the Admin does not match
+PMS_MSP_004|No information provided for update|No information provided for update
+PMS_MSP_005|MISP ID does not exist|MISP ID not available in database
+PMS_COR_003|Could not process the request|Any Internal Error
+
+### PUT /misps/{mispId}
 This API would be used to update MISP for given mispID.
 
 #### Resource URL
@@ -249,7 +343,7 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-### POST /misps/{mispId}/licenseKey
+### PATCH /misps/{mispId}/licenseKey
 This API would be used for validating MISPs license key.
 
    1. Validate license key pattern.
@@ -350,7 +444,7 @@ PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attr
 PMS_COR_003|Could not process the request|Any Internal Error
 
 
-### PUT /misps/{mispId}
+### PATCH /misps/{mispId}
 This API would be used to update MISP status for given MISP ID.
 
 #### Resource URL
@@ -619,11 +713,11 @@ PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attr
 PMS_COR_003|Could not process the request|Any Internal Error
 
 
-### GET /misps/{mispId}
+### GET /misps/mispId/{mispId}
 This API would be used to retrieve the MISPs details based on given misp id.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/misps/{mispId}`
+`https://mosip.io/partnermanagement/v1/misps/mispId/{mispId}`
 
 #### Resource details
 Resource Details | Description
@@ -691,13 +785,13 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-### GET /misps/{mispOrgName}
+### GET /misps/name/{mispOrgName}
 This API would be used to retrieve MISPs details based on given name
 1. If MISP organization name present, then retrieve all misp details for matching organization name.
 2. If MISP organization name not present, then retrieve all misp details. 
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/misps/{mispOrgName}`
+`https://mosip.io/partnermanagement/v1/misps/name/{mispOrgName}`
 
 #### Resource details
 Resource Details | Description
@@ -861,11 +955,11 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This service would be used by Policy Manager to manage policies for his Policy Group.
 
 * [POST /policies](#post-policies)
-* [POST /policies/{policyID}](#post-policiespolicyid)
 * [PUT /policies/{policyID}](#put-policiespolicyid)
+* [PATCH /policies/{policyID}](#patch-policiespolicyid)
 * [GET /policies](#get-policies)
-* [GET /policies/{policyID}](#get-policiespolicyid)
-* [GET /policies/{PartnerAPIKey}](#get-policiespartnerapikey)
+* [GET /policies/policyId/{policyID}](#get-policiespolicyIdpolicyid)
+* [GET /policies/partnerApiKey/{PartnerAPIKey}](#get-policiespartnerApiKeypartnerapikey)
 
 ### POST /policies
 This API would be used to create new Policy for policy group
@@ -999,7 +1093,7 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-### POST /policies/{policyID}
+### PUT /policies/{policyID}
 This API would be used to update existing policy for a policy group
 
 #### Resource URL
@@ -1136,7 +1230,7 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-### PUT /policies/{policyID}
+### PATCH /policies/{policyID}
 This API would be used to update the status (activate/deactivate) for the given policy id.
 
 #### Resource URL
@@ -1368,11 +1462,11 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-### GET /policies/{policyID}
+### GET /policies/policyId/{policyID}
 This API would be used to retrieve existing policy for a policy group based on the policy id.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/policies/{policyID}`
+`https://mosip.io/partnermanagement/v1/policies/policyId/{policyID}`
 
 #### Resource details
 Resource Details | Description
@@ -1472,11 +1566,11 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-### GET /policies/{PartnerAPIKey}
+### GET /policies/partnerApiKey/{PartnerAPIKey}
 This API would be used to retrieve the partner policy details for given PartnerAPIKey. 
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/policies/fa604-affcd-33201-04770`
+`https://mosip.io/partnermanagement/v1/policies/partnerApiKey/fa604-affcd-33201-04770`
 
 #### Resource details
 Resource Details | Description
@@ -1577,10 +1671,11 @@ PMS_COR_003|Could not process the request|Any Internal Error
 ## Partner Management Service
 This service enables partner managers to manage respective partners, manage partner API Key requests, manage PartnerAPIKeys to Policies mappings.
 
-* [POST /pmpartners/{partnerID}/{PartnerAPIKey}](#post-pmpartnerspartneridpartnerapikey)
-* [PUT /pmpartners/{partnerID}](#put-pmpartnerspartnerid)
 * [PUT /pmpartners/{partnerID}/{PartnerAPIKey}](#put-pmpartnerspartneridpartnerapikey)
-* [PUT /pmpartners/PartnerAPIKeyRequests/{APIKeyReqID}](#put-pmpartnerspartnerapikeyrequestsapikeyreqid)
+* [PATCH /pmpartners/{partnerID}](#patch-pmpartnerspartnerid)
+* [PATCH /pmpartners/{partnerID}/{PartnerAPIKey}](#patch-pmpartnerspartneridpartnerapikey)
+* [PATCH /pmpartners/PartnerAPIKeyRequests/{APIKeyReqID}](#patch-pmpartnerspartnerapikeyrequestsapikeyreqid)
+* [GET /pmpartners/validatePartnerMisp/partnerId/{partnerId}/partnerApiKey/{partner_api_key}/mispLicenseKey/{misp_license_key}]
 * [GET /pmpartners](#get-pmpartners)
 * [GET /pmpartners/{partnerID}](#get-pmpartnerspartnerid)
 * [GET /pmpartners/{partnerID}/{PartnerAPIKey}](#get-pmpartnerspartneridpartnerapikey)
@@ -1588,7 +1683,7 @@ This service enables partner managers to manage respective partners, manage part
 * [GET /pmpartners/PartnerAPIKeyRequests/{APIKeyReqID}](#get-pmpartnerspartnerapikeyrequestsapikeyreqid)
 
 
-### POST /pmpartners/{partnerID}/{PartnerAPIKey}
+### PUT /pmpartners/{partnerID}/{PartnerAPIKey}
 This API would be used by partner Manager, to update Partner api key to Policy Mappings.
 
 #### Resource URL
@@ -1690,7 +1785,7 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-### PUT /pmpartners/{partnerID}
+### PATCH /pmpartners/{partnerID}
 This API would be used to activate/deactivate Auth/E-KYC Partners
 
 #### Resource URL
@@ -1784,7 +1879,7 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-### PUT /pmpartners/{partnerID}/{PartnerAPIKey}
+### PATCH /pmpartners/{partnerID}/{PartnerAPIKey}
 Partner Manager would be using this API to activate OR de-activate PartnerAPIKey for given partner.
 
 #### Resource URL
@@ -1883,7 +1978,7 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-### PUT /pmpartners/PartnerAPIKeyRequests/{APIKeyReqID}
+### PATCH /pmpartners/PartnerAPIKeyRequests/{APIKeyReqID}
 Partner Manager would be using this API to approve OR reject partner API key requests based on API key request id. During approval process of the request unique PartnerAPI Key is generated in Partner Management module, which is mapped to requested policies. Partner API Key would be having default active status, expiry of which would configurable.
 
 #### Resource URL
@@ -1975,6 +2070,127 @@ PMS_PMP_011|Partner api key Request ID does not exist|Partner api key Request ID
 PMS_PMP_012|Partner Manager is denied permission to approve or reject the request|Partner Manager is denied permission to approve or reject the request
 PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all mandatory attributes
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
+PMS_COR_003|Could not process the request|Any Internal Error
+
+### GET /pmpartners/validatePartnerMisp/partnerId/{partnerId}/partnerApiKey/{partner_api_key}/mispLicenseKey/{misp_license_key}
+Partner managers would be using this request to retrive the policy mapping to partner and partner api key. Partner management system would be able to validate 	the following.
+
+		1.Validates if the status of the MISP License Key is active.
+		2.Retrieves the MISP status corresponding to the MISP License key in the request.
+		3.Validates if the status of MISP is active.
+		4.Validates if the status of the Partner ID is active
+		5.Validates the length and pattern of the Partner API Key.
+		6.Validates if the status of Partner API Key is active.
+		7.Validates if the Partner API key belong to the partner.
+		8.Retrieves the policy ID mapped to the Partner API key.
+		
+#### Resource URL
+`https://mosip.io/partnermanagement/v1/pmpartners/validatePartnerMisp/partnerId/{partnerId}/partnerApiKey/{partner_api_key}/mispLicenseKey/{misp_license_key}`
+
+### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+#### Request Path Parameters
+Name | Required | Description | Comment 
+-----|----------|-------------|--------
+partnerId | Yes | partnerId | 87965675766
+partner_api_key | Yes | partner_api_key | fa604-affcd-33201-04770
+misp_license_key | Yes | misp_license_key | dfgtgfghgv
+
+#### Request Header
+Name | Required | Description | Comment
+-----|----------|-------------|--------
+Authorization | Yes | authentication token |
+Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
+
+#### Responses:
+##### Success Response:
+###### Status Code: '200'
+###### Description: Successfully retrives policies mapped to partner and partner api key.
+```JSON
+{
+    "id": null,
+    "version": null,
+    "responsetime": "2020-04-15T11:47:55.578Z",
+    "metadata": null,
+    "response": {
+        "policyId": "31",
+        "policyName": "Full Kyc",
+        "policyDescription": "Desc about policy",
+        "policyStatus": true,
+        "policy": {
+            "policyId": "31",
+            "policies": {
+                "authPolicies": [
+                    {
+                        "authType": "otp",
+                        "authSubType": null,
+                        "mandatory": false
+                    },
+                    {
+                        "authType": "demo",
+                        "authSubType": null,
+                        "mandatory": true
+                    },                   
+                    {
+                        "authType": "kyc",
+                        "authSubType": null,
+                        "mandatory": false
+                    }
+                ],
+                "allowedKycAttributes": [
+                    {
+                        "attributeName": "fullName",
+                        "required": true
+                    },
+                    {
+                        "attributeName": "dateOfBirth",
+                        "required": true
+                    },
+                    {
+                        "attributeName": "gender",
+                        "required": true
+                    }                  
+                ]
+            }
+        },
+        "partnerId": "320216",
+        "partnerName": "Vodafone"
+    },
+    "errors": null
+}
+```
+
+##### Failure Response:
+###### Status Code: '200'
+###### Description: misp license expired.
+```JSON
+{
+    "id": "mosip.partnermanagement.partners.retrieve",
+    "version": "1.0",
+    "responsetime": "2020-04-15T12:04:27.367Z",
+    "metadata": null,
+    "response": null,
+    "errors": [
+        {
+            "errorCode": "PMS_PMP_021",
+            "message": "MISP license key is expired."
+        }
+    ]
+}
+```
+
+#### Other Failure details
+Error Code | Error Message | Error Description
+-----------|---------------|------------------
+PMS_PMP_001|Partner Manager does not exist|Not a authorized Partner Manager- UserName not available in database
+PMS_PMP_002|Mismatch of the Partner Manager Credentials|User Name and Password of the Partner Manager does not match
+PMS_PMP_003|Your password has expired. Please reset your password|Password expired
+PMS_PMP_007|Partner API Key does not exist|Requested Partner API Key does not exist
+PMS_PMP_021|MISP license key is expired|MISP license key is expired
 PMS_COR_003|Could not process the request|Any Internal Error
 
 ### GET /pmpartners
@@ -2378,8 +2594,8 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This service enables partners to do self registration, submit request for respective authentication policies, sharing of digital certificate for secure communication: 
 
 * [POST /partners](#post-partners)
-* [POST /partners/{partnerID}/partnerAPIKeyRequests}](#post-partnerspartneridpartnerapikeyrequests)
-* [POST /partners/{partnerID}/partnerAPIKeyRequests/{APIKeyReqID}](#post-partnerspartneridpartnerapikeyrequestsapikeyreqid)
+* [PATCH /partners/{partnerID}/partnerAPIKeyRequests}](#patch-partnerspartneridpartnerapikeyrequests)
+* [GET /partners/{partnerID}/partnerAPIKeyRequests/{APIKeyReqID}](#get-partnerspartneridpartnerapikeyrequestsapikeyreqid)
 * [POST /partners/digitalcertificate](#post-partnersdigitalcertificate)
 * [PUT /partners/{partnerID}](#put-partnerspartnerid)
 * [PUT /partners/digitalcertificate](#put-partnersdigitalcertificate)
@@ -2486,7 +2702,7 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-### POST /partners/{partnerID}/partnerAPIKeyRequests
+### PATCH /partners/{partnerID}/partnerAPIKeyRequests
 This API would be used to submit Partner api key request.
 
 #### Resource URL
@@ -2585,7 +2801,7 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-### POST /partners/{partnerID}/partnerAPIKeyRequests/{APIKeyReqID}
+### GET /partners/{partnerID}/partnerAPIKeyRequests/{APIKeyReqID}
 This API would be used to download Partner API key for the given APIKeyReqID
 
 #### Resource URL
