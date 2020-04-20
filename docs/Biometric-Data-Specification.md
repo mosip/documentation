@@ -25,7 +25,7 @@ Image Format | JPEG 2000 lossless | JPEG 2000 lossless
 Image Quality | ICAO - Full frontal image, +/- 5 degrees rotation, 24 bit RGB, white background
 
 {% hint style="info" %}
-Note: For full specifications refer to [MOSIP Device Service Specifications](MOSIP-Device-Service-Specification.md).
+For full specifications refer to [MOSIP Device Service Specifications](MOSIP-Device-Service-Specification.md).
 {% endhint %}
 
 # XML Container
