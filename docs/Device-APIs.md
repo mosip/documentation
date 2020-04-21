@@ -657,11 +657,11 @@ isactive|Yes|Is the device type active?| |
   "id": "string",
   "metadata": {},
   "request": {
-    "code": "string",
-    "description": "string",
-    "isActive": true,
-    "langCode": "string",
-    "name": "string"
+    "code": "1234",
+    "description": "test123",
+    "isActive": false,
+    "langCode": "eng",
+    "name": "test"
   },
   "requesttime": "2018-12-10T06:12:52.994Z",
   "version": "string"
@@ -677,8 +677,8 @@ isactive|Yes|Is the device type active?| |
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response":{
-      "code": "string",
-      "langCode": "string"
+      "code": "1234",
+      "langCode": "eng"
   }
 }
 ```
@@ -703,14 +703,11 @@ Description: Forbidden
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-KER-MSD-053 |  Error occurred while inserting Device Type details | Insertion Issue
 KER-MSD-003 |  Required Device Type detail Not Found | Data Not Found
-KER-MSD-002 |  Error occurred while mapping Device Type details | Mapping Issue
-KER-MSD-054 |  Error occurred while fetching Device Type details | Fetch Issue
+KER-MSD-054 |  Error occurred while updating Device Type details | while updating Issue will occur 
 
 
-# Device Specifications
-
+# Device Specification
 * [POST /devicespecifications](#post-devicespecifications)
 * [PUT /devicespecifications](#put-devicespecifications)
 * [DELETE /devicespecifications/{id}](#delete-devicespecificationsid)

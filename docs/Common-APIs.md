@@ -2961,10 +2961,10 @@ name|Yes | name of individualtype| |
   "id": "string",
   "metadata": {},
   "request": {
-    "code": "string",
+    "code": "123",
     "isActive": true,
     "langCode": "eng",
-    "name": "string"
+    "name": "test"
   },
   "requesttime": "2018-12-10T06:12:52.994Z",
   "version": "string"
@@ -2976,19 +2976,19 @@ name|Yes | name of individualtype| |
 {
   "id": "string",
   "version": "string",
-  "responsetime": "2020-04-10T03:15:33.555Z",
+  "responsetime": "2020-04-21T11:34:04.253Z",
   "metadata": null,
   "response": {
     "isActive": true,
-    "createdBy": "string",
-    "createdDateTime": "2020-04-10T03:15:33.565Z",
+    "createdBy": "110006",
+    "createdDateTime": "2020-04-21T11:34:04.253Z",
     "updatedBy": null,
     "updatedDateTime": null,
     "isDeleted": null,
     "deletedDateTime": null,
-    "code": "string",
+    "code": "123",
     "langCode": "eng",
-    "name": "string"
+    "name": "test"
   },
   "errors": null
 }
@@ -3001,6 +3001,12 @@ Response Code | Description
 400 | Bad request
 401 | Unauthorized
 404 | Not Found
+
+#### Failure details
+Error Code | Error Message | Error Description
+------------|------------------------------|-------------
+KER-MSD-153 | Data insertion in IndividualTypeRepository is failed | create individualType is failed
+
 
 ## PUT /individualtypes
 This service will update the list of individualtypes which are used in the MOSIP platform. 
@@ -3026,10 +3032,10 @@ name|Yes | name of individualtype| |
   "id": "string",
   "metadata": {},
   "request": {
-    "code": "string",
+    "code": "123",
     "isActive": false,
     "langCode": "eng",
-    "name": "string"
+    "name": "test"
   },
   "requesttime": "2018-12-10T06:12:52.994Z",
   "version": "string"
@@ -3041,22 +3047,22 @@ name|Yes | name of individualtype| |
 {
   "id": "string",
   "version": "string",
-  "responsetime": "2020-04-10T03:21:09.959Z",
+  "responsetime": "2020-04-21T11:35:49.691Z",
   "metadata": null,
   "response": {
     "isActive": false,
-    "createdBy": "string",
-    "createdDateTime": "2020-04-10T03:15:33.565Z",
-    "updatedBy": "string",
-    "updatedDateTime": "2020-04-10T03:21:09.996Z",
+    "createdBy": "110006",
+    "createdDateTime": "2020-04-21T11:34:04.253Z",
+    "updatedBy": "110006",
+    "updatedDateTime": "2020-04-21T11:35:49.706Z",
     "isDeleted": null,
     "deletedDateTime": null,
-    "code": "string",
+    "code": "123",
     "langCode": "eng",
-    "name": "string"
+    "name": "test"
   },
   "errors": null
-} 
+}
 ```
 ### Response codes
 Response Code | Description
@@ -3065,6 +3071,12 @@ Response Code | Description
 400 | Bad request
 401 | Unauthorized
 404 | Not Found
+
+#### Failure details
+Error Code | Error Message | Error Description
+------------|------------------------------|-------------
+KER-MSD-151 | Individual Type not found | no individual type found exception
+KER-MSD-154 | Data updation in IndividualTypeRepository is failed | Data updation in individualType is failed
 
 
 ## GET /individualtypes

@@ -554,6 +554,13 @@ Description: Unauthorized
 
 Description: Forbidden
 
+#### Failure details
+Error Code | Error Message | Error Description
+------------|------------------------------|-------------
+KER-MSD-061 | Error occurred while inserting Machine Type details | Insertion Issue
+
+
+
 # PUT /machinetypes
 
 This service will update the list of Machine types which are used in the MOSIP platform. 
@@ -585,11 +592,11 @@ isactive|Yes|Is the machine type active?| |
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "request": {
-       "code": "string",
-       "description": "string",
-      "isActive": true,
-      "langCode": "string",
-      "name": "string"
+       "code": "123",
+       "description": "test123",
+      "isActive": false,
+      "langCode": "eng",
+      "name": "test"
   }
 }
 ```
@@ -602,8 +609,8 @@ isactive|Yes|Is the machine type active?| |
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-            "code": "string",
-            "langCode": "string"
+            "code": "123",
+            "langCode": "eng"
              }
 }
 ```
@@ -623,6 +630,13 @@ Description: Unauthorized
 403
 
 Description: Forbidden
+
+#### Failure details
+Error Code | Error Message | Error Description
+------------|------------------------------|-------------
+KER-MSD-063 | Machine Type Not Found | Data Not Found
+KER-MSD-064 | Error occurred while updating Machine Type details | updation Issue
+
 
 
 # GET /machinetypes
