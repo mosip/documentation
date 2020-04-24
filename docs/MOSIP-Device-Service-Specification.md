@@ -909,10 +909,10 @@ This API is exposed by the MOSIP server to the device providers.
 
 **Version:** v1
 
-**Device Registration Request URL**
+**Device Registration Request URL:** <br>
 `POST https://{base_url}/v1/masterdata/registereddevices`
 
-**Device Registration Request**
+**Device Registration Request:**
 ```
 {
   "id": "io.mosip.deviceregister",
@@ -947,11 +947,14 @@ deviceId - Unique device id that the device provider uses to identify the device
 digitalId - Digital id is signed by the FTM chip key in L1. In case of L0 the digital id is signed by the device key. 
 ```
 {% hint style="info" %}
-During the registration of L0 devices please sign using the key thats generated inside the device and send the public key in x509 encoded spec form. After successful registration the management server should issue a certificate against the same public key as a response to the registration call.
+During the registration of L0 devices please sign using the key thats generated inside the device and send the public key in x509 encoded spec form. <br>
+After successful registration the management server should issue a certificate against the same public key as a response to the registration call.
 {% endhint %}
 
-* Device data is sent in the following format:
+* The entire device data is sent as a JWT format. So the it will look like:
+```
 "deviceData" : base64urlencode(header).base64urlencode(payload).base64urlencode(signature)
+```
 * Payload is the object in deviceData.
 * The request is signed with the device provider key at the management server.
 
@@ -962,8 +965,8 @@ During the registration of L0 devices please sign using the key thats generated 
   "version": "registration server API version as defined above",
   "responsetime": "iso time format",
   "response": "JWT of the below device data",
-  "error": [
-	{ //Filled in case of error. remaining keys above are dropped in case of errors.
+  "error": [ //Filled in case of error. Remaining keys above are dropped in case of errors.
+	{ 
       "errorCode": "error code if registration fails",
    	  "message": "description of the error code",
     } 
@@ -982,7 +985,7 @@ During the registration of L0 devices please sign using the key thats generated 
 }
 ```
 
-The response is of the following format:
+The entire response is sent as a JWT format. So the final response will look like:
 ```
 "response" : base64urlencode(header).base64urlencode(payload).base64urlencode(signature)
 ```
@@ -998,7 +1001,7 @@ The MOSIP server would provide the following device de-registration API which is
 
 **Version:** v1
 
-**Device De-Registration Request URL**
+**Device De-Registration Request URL**<br>
 `POST https://{base_url}/v1/masterdata/device/deregister`
 
 **Device De-Registration Request:**
@@ -1051,14 +1054,14 @@ The entire request is sent as a JWT format. So the final request will look like:
 The entire response is sent as a JWT format. So the final response will look like:
 
 ```
-  "response" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
+"response" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
 ```
 ---
 
 ## Certificates
 The MOSIP server would provide the following retrieve encryption certificate API which is white-listed to the management servers of the device provider or their partners.
 
-**Encryption Certificate Request URL**
+**Encryption Certificate Request URL:**<br>
 `GET https://{base_url}/v1/masterdata/device/encryptioncertficates`
 
 **Version:** v1
@@ -1098,7 +1101,7 @@ request : {
 
 The entire response is sent as a JWT format. So the final response will look like:
 ```
-  "response" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
+"response" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
 ```
 ---
 
@@ -1139,13 +1142,12 @@ Management client is the interface that connects the device with the respective 
 ---
 
 # Compliance
-L2 Certified Device / L2 Device - A device certified as capable of performing encryption on the device inside its trusted zone with tamper responsive features
-L1 Certified Device / L1 Device - A device certified as capable of performing encryption on the device inside its trusted zone.
+L2 Certified Device / L2 Device - A device certified as capable of performing encryption on the device inside its trusted zone with tamper responsive features. <br>
+L1 Certified Device / L1 Device - A device certified as capable of performing encryption on the device inside its trusted zone. <br>
 L0 Certified Device / L0 Device - A device certified as one where the encryption is done on the host inside its device driver or the MOSIP device service.
 
 ## Secure Provisioning
-Secure provisioning is applicable to both the FTM and the Device providers. 
-
+Secure provisioning is applicable to both the FTM and the Device providers. <br>
 1. The devices and FTM should have a mechanism to protect against fraudulent attempts to create or replicate.
 1. The device and FTM trust should be programmed in a secure facility which is certified by the respective MOSIP adopters. 
 1. Organization should have mechanism to segregate the FTM's and Devices built for MOSIP using cryptographically valid and repeatable process.
