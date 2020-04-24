@@ -92,10 +92,8 @@ Quality Score | NFIQ 2 | NFIQ 1
 FTM | L0 - Use host based security, L1 - FTM supported security | L1 - FTM supported security, L2 - with tamper protection.
 
 {% hint style="info" %}
-\*  Sufficiency to be validated for registration
-
-\*\*  MOSIP adapters can change this if needed 
-
+\*  Sufficiency to be validated for registration \n
+\*\*  MOSIP adapters can change this if needed <br>
 \*\*\*  MOSIP adapters to decide on the availability of this feature
 {% endhint %}
 
@@ -153,7 +151,9 @@ We recommend that countries look at ergonomics, accessibility, ease of usage, an
 MOSIP compliant devices provide a trust environment for the devices to be used in registration, KYC and AUTH scenarios. The trust level is established based on the device support for trusted execution.
 
 L1 - The trust is provided by a secure chip with secure execution environment.
+
 L2 - The trust is provided by a secure chip with secure execution environment and complete tamper protection and responsive across the entire device.
+
 L0 - The trust is provided at the software level. No hardware related trust exist. This type of compliance is used in controlled environments.  
 
 ## Foundational Trust Module (FTM)
@@ -252,7 +252,9 @@ The validity for the chip certificate can not exceed 20 years from the date of m
 Mosip devices are most often used to collect biometrics. The devices are expected to follow the specification for all level of compliance and its usage. The mosip devices fall under the category of Trust Level 3 (TL3) as defined in MOSIP architecture. At TL3 device is expected to be whitelisted with a fully capable PKI and secure storage of keys at the hardware. 
 
 L0 - A device can obtain L0 certification when it uses software level cryptographic library with no secure boot or FTM.  These devices will follow different device identity and the same would be mentioned as part of exception flows.
+
 L1 - A device can obtain L1 certification when its built in secure facility with one of the certified FTM.
+
 L2 - A device can obtain L2 certification when its build in secure facility with one of the certified FTM with tamper responsiveness. Also the device should be capable of demonstrating tamper responsiveness during its entire life time.
 
 **Device Identity:** It is imperative that all devices that connect to MOSIP are identifiable. MOSIP believes in cryptographic Identity as its basis for trust.
@@ -319,19 +321,19 @@ List of keys used in the device and their explanation.
 
 * **Device Key** 
 
-Each biometric device would contain an authorized private key after the device registration. This key is rotated frequently based on the requirement from the respective adopter of MOSIP. By default MOSIP recommends 30 days key rotation policy for the device key. The device keys are created by the device providers inside the FTM during a successful registration.
+	Each biometric device would contain an authorized private key after the device registration. This key is rotated frequently based on the requirement from the respective adopter of MOSIP. By default MOSIP recommends 30 days key rotation policy for the device key. The device keys are created by the device providers inside the FTM during a successful registration.
 
-The device keys are used for signing the biometric. More details of the signing and its usage will be [here](#devicecommunication)
+	The device keys are used for signing the biometric. More details of the signing and its usage will be [here](#devicecommunication).
 
-This key is issued by the device provider and the certificate of the device key is issued by the device provider key which in turn is issued by the MOSIP adopter after approval of the device providers specific model.
+	This key is issued by the device provider and the certificate of the device key is issued by the device provider key which in turn is issued by the MOSIP adopter after approval of the device providers specific model.
 
 * **FTM Key**
 
-The FTM key is the root of the identity. This key is created by the FTM provider during the manufacturing/provisioning stage. This is a permanent key and would never be rotated. This key is used to sign the Digital ID.
+	The FTM key is the root of the identity. This key is created by the FTM provider during the manufacturing/provisioning stage. This is a permanent key and would never be rotated. This key is used to sign the Digital ID.
 
 * **MOSIP Key**
 
-The MOSIP key is the public key provided by the MOSIP adopter. This key is used to encrypt the biometric biometric. Details of the encryption is listed below.
+	The MOSIP key is the public key provided by the MOSIP adopter. This key is used to encrypt the biometric biometric. Details of the encryption is listed below.
 
 We recommend to rotate this key every 1 year. 
 
@@ -350,7 +352,7 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 **Device Discovery Request:**
 ```JSON
 {
-	"type": "type of the device"
+  "type": "type of the device"
 }
 ```
 
@@ -461,9 +463,11 @@ CallbackId would be set to the device service appname. So, the caller has to cal
 The device information API would be used to identify the MOSIP compliant devices and their status by the applications.
 
 **Device Info Request:**
+
 NONE
 
 **Accepted Values for Device Info Request:**
+
 NA
 
 **Device Info Response:**
@@ -686,7 +690,7 @@ The entire data object is stored as follows:
 payload - is defined as the entire byte array of data block. 
 ```
 
-### Windows/Linux:
+### Windows/Linux
 The applications that requires to capture biometric data from a MOSIP devices could do so by sending the HTTP request to the supported port range.
 
 **_HTTP Request:_**
@@ -710,12 +714,12 @@ Connection: Closed
 The pay loads are JSON in both the cases and are part of the body.
 {% endhint %}
 
-### Android:
+### Android
 All device on an android device should listen to the following intent appid.capture
 
 Upon this intend the devices are expected to respond back with the JSON response filtered by the respective type.
 
-### IOS:
+### IOS
 All device on an IOS device would respond to the URL schema as follows.
 ```
 APPIDCAPTURE://<call-back-app-url>?ext=<caller app name>&type=<type as defined in mosip device request>
