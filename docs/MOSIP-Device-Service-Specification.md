@@ -1147,7 +1147,8 @@ L1 Certified Device / L1 Device - A device certified as capable of performing en
 L0 Certified Device / L0 Device - A device certified as one where the encryption is done on the host inside its device driver or the MOSIP device service.
 
 ## Secure Provisioning
-Secure provisioning is applicable to both the FTM and the Device providers. <br>
+Secure provisioning is applicable to both the FTM and the Device providers.
+
 1. The devices and FTM should have a mechanism to protect against fraudulent attempts to create or replicate.
 1. The device and FTM trust should be programmed in a secure facility which is certified by the respective MOSIP adopters. 
 1. Organization should have mechanism to segregate the FTM's and Devices built for MOSIP using cryptographically valid and repeatable process.
