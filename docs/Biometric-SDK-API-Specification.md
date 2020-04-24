@@ -55,6 +55,8 @@ API specification version:  **Draft 4 (April, 2020)**
   * Match List of Image Records (n) - This is the set of biometrics on record that the input images needs to be matched against. The smaller this list the better the performance. Also there will be outer limits to the size of this list based on the library used.
   * Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
 
+_**Note:_** One of the example for the behaviour is threshold for match using which the SDK can take a decision.
+
 * **Output Parameters**
   * List of Decision object with Match decision and Analytics.
   * Each Decision object will contain a match - yes/no decision and an Analytics object with key value pairs
