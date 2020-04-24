@@ -4,26 +4,29 @@
 
 # Table of Contents 
 
-1. [Introduction & Background](#1-introduction-and-background)
-1. [Glossary of Terms](#2-glossary-of-terms)
-1. [Device Specification](#3-device-specification)
+1. [Introduction & Background](#introduction-and-background)
+1. [Glossary of Terms](#glossary-of-terms)
+1. [Device Specification](#device-specification)
 1. [Device Trust](#4-device-trust)
-1. [Device Service - Communication Interfaces](#5-device-service---communication-interfaces)
-    5.1. [Device Discovery](#51-device-discovery) 
-    5.2. [Device Info](#52-device-info) 
-    5.3. [Capture](#53-capture) 
-    5.4. [Device Stream](#54-device-stream) 
-    5.5. [Device Registration Capture](#55-device-registration-capture) 
-1. [Device Server](#6-device-server)
-    6.1. [Registration](#61-registration)
-    6.2. [De-Register](#62-de-register)
-1. [Management Server](#7-management-server)
-1. [Compliance](#8-compliance)
-1. [Cryptography](#9-cryptography)
-1. [Error Codes](#10-error-codes)
+1. [Device Service - Communication Interfaces](#device-service-communication-interfaces)
+    5.1. [Device Discovery](#device-discovery) 
+    5.2. [Device Info](#device-info) 
+    5.3. [Capture](#capture) 
+    5.4. [Device Stream](#device-stream) 
+    5.5. [Device Registration Capture](#device-registration-capture) 
+1. [Device Server](#device-server)
+    6.1. [Registration](#registration)
+    6.2. [De-Register](#de-register)
+	6.3. [Certificates](#certificates)
+1. [Management Server and Client](#management-server)
+	7.1. [Management Server Functionalities and Interactions](#management-server-functionalities-and-interactions)
+	7.2. [Management Client](#management-client)
+1. [Compliance](#compliance)
+1. [Cryptography](#cryptography)
+1. [Error Codes](#error-codes)
 ---
 
-# 1. Introduction & Background 
+# Introduction & Background 
 
 ## Objective
 The objective of this specification document is to establish the technical and compliance standards/ protocols that are necessary for a biometric device to be used in MOSIP solutions.
@@ -37,7 +40,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 
 ---
 
-# 2. Glossary of Terms
+# Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
 * Foundational Trust Provider - An entity that manufactures the foundational trust module.
 * Device - A hardware capable of capturing biometric information.
@@ -59,10 +62,10 @@ All devices that collect biometric data for MOSIP should operate within the spec
 
 ---
 
-# 3. Device Specification
+# Device Specification
 The MOSIP device specification provides compliance guidelines to devices for them to work with MOSIP. The compliance is based on device capability, trust and communication protocols. A MOSIP compliant device would follow the standards established in this document. It is expected that the devices are compliant to this specification and tested and validated. The details of each of these are outlined in the subsequent sections.
 
-## Device Capability:
+## Device Capability
 The MOSIP compliant device is expected to perform the following:
 *   Should have the ability to collect one or more biometric
 *   Should have the ability to sign the captured biometric image or template.
@@ -92,7 +95,7 @@ Quality Score | NFIQ 2 | NFIQ 1
 FTM | L0 - Use host based security, L1 - FTM supported security | L1 - FTM supported security, L2 - with tamper protection.
 
 {% hint style="info" %}
-\*  Sufficiency to be validated for registration \n
+\*  Sufficiency to be validated for registration <br>
 \*\*  MOSIP adapters can change this if needed <br>
 \*\*\*  MOSIP adapters to decide on the availability of this feature
 {% endhint %}
@@ -147,7 +150,7 @@ We recommend that countries look at ergonomics, accessibility, ease of usage, an
 
 ---
 
-# 4. Device Trust
+# Device Trust
 MOSIP compliant devices provide a trust environment for the devices to be used in registration, KYC and AUTH scenarios. The trust level is established based on the device support for trusted execution.
 
 L1 - The trust is provided by a secure chip with secure execution environment.
@@ -339,14 +342,14 @@ We recommend to rotate this key every 1 year.
 
 ---
 
-# 5. Device Service - Communication Interfaces
+# Device Service - Communication Interfaces
 The section explains the necessary details of the biometric device connectivity, accessibility, discover-ability and protocols used to build and communicate with the device.
 
 The device should implement only the following set of APIs.  All the API’s are independent of the physical layer and the operating system, with the invocation being different across operating systems. While the operating system names are defined in this spec a similar technology can be used for unspecified operating systems.
 
 It is expected that the device service ensures that the device is connected  locally to the host.
 
-## 5.1 Device Discovery:
+## Device Discovery
 Device discovery would be used to identify MOSIP compliant devices in a system by the applications. The protocol is designed as simple plug and play with all the necessary abstraction to the specifics.
 
 **Device Discovery Request:**
@@ -403,12 +406,12 @@ errorCode - standardized error code.
 errorInfo - description of the error that can be displayed to end user. Multi lingual support. 
 ```
 {% hint style="info" %}
-* The response is an array that we could have a single device enumerating with multiple biometric options.
-* The service should ensure to respond only if the type parameter matches the type of device or the type parameter is a "Biometric Device".
-* This response is a direct JSON as show in the response.
+The response is an array that we could have a single device enumerating with multiple biometric options.<br>
+The service should ensure to respond only if the type parameter matches the type of device or the type parameter is a "Biometric Device".<br>
+This response is a direct JSON as show in the response.
 {% endhint %}
 
-### Windows/Linux:
+### Windows/Linux
 All the device API will be based on the HTTP specification. The device always binds to 127.0.0.1 with any of the available ports ranging from 4501 - 4600.  The IP address used for binding has to be 127.0.0.1 and not localhost.
 
 The applications that require access to MOSIP devices could discover them by sending the HTTP request to the supported port range. We will call this port as the device_service_port in the rest of the document.
@@ -431,8 +434,7 @@ Connection: Closed
 ```
 
 {% hint style="info" %}
-The pay loads are JSON in both the cases and are part of the body.
-
+The pay loads are JSON in both the cases and are part of the body.<br>
 CallbackId would be set to the [http://127.0.0.1:<device_service_port>](http://127.0.0.1:<device_service_port>). So, the caller will use the respective HTTP verb/method and the URL to call the service.
 {% endhint %}
 
@@ -454,20 +456,17 @@ MOSIPDISC://<call-back-app-url>?ext=<caller app name>&type=<type as defined in m
 If a MOSIP compliant device service app exist then the URL would launch the service. The service in return should respond back to the caller using the call-back-app-url with the base64 encoded json as the URL parameter for the key data.
 
 {% hint style="info" %}
-In IOS there are restrictions to have multiple apps registering to the same URL schema.
-
+In IOS there are restrictions to have multiple apps registering to the same URL schema.<br>
 CallbackId would be set to the device service appname. So, the caller has to call appnameInfo or appnameCapture as the URL scheme.
 {% endhint %}
 
-## 5.2 Device Info
+## Device Info
 The device information API would be used to identify the MOSIP compliant devices and their status by the applications.
 
-**Device Info Request:**
-
+**Device Info Request:**<br>
 NONE
 
-**Accepted Values for Device Info Request:**
-
+**Accepted Values for Device Info Request:**<br>
 NA
 
 **Device Info Response:**
@@ -529,8 +528,8 @@ error - relevant errors as defined under the "Error section" of this document.
 ```
 
 {% hint style="info" %}
-* The response is an array that we could have a single device enumerating with multiple biometric options.
-* The service should ensure to respond only if the type parameter matches the type of device or the type parameter is a "Biometric Device".
+The response is an array that we could have a single device enumerating with multiple biometric options.<br>
+The service should ensure to respond only if the type parameter matches the type of device or the type parameter is a "Biometric Device".
 {% endhint %}
 
 ### Windows/Linux
@@ -574,7 +573,7 @@ If a MOSIP compliant device service app exist then the URL would launch the serv
 In IOS there are restrictions to have multiple app registering to the same URL schema.
 {% endhint %}
 
-## 5.3 Capture
+## Capture
 The capture request would be used to capture a biometric from MOSIP compliant devices by the applications.  The capture call will respond with success to only one call at a time. So in case of a parallel call the device info details are sent with status as "Busy"
 
 **Capture Request:**
@@ -684,7 +683,7 @@ hash - the value of the previousHash attribute in the request object or the valu
 sessionKey - Random AES key used for the encryption of the bioValue. The encryption key is encrypted using the public key with recommended algorithm. Sent as base64urlencoded
 ```
 
-The entire data object is stored as follows: 
+The entire data object is sent as a JWT format. So the data object will look like:
 ```
 "data" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)
 payload - is defined as the entire byte array of data block. 
@@ -727,7 +726,7 @@ APPIDCAPTURE://<call-back-app-url>?ext=<caller app name>&type=<type as defined i
 
 If a MOSIP compliant device service app exist then the URL would launch the service. The service in return should respond back to the called using the call-back-app-url with the base64 encoded json as the URL parameter for the key data.
 
-## 5.4 Device Stream
+## Device Stream
 The device would open a stream channel to send the live video streams. This would help when there is an assisted operation to collect biometric. Please note the stream API’s are available only for registration environment.
 
 Used only for the registration module compatible devices. This API is visible only for the devices that are registered for the purpose as "Registration".
@@ -772,7 +771,7 @@ No support for streaming
 ### IOS
 No support for streaming
 
-## 5.5 Device Registration Capture
+## Device Registration Capture
 The registration client application will discover the device. Once the device is discovered the status of the device is obtained with the device info API. During the registration the registration client sends the RCAPTURE API and the response will provide the actual biometric data in a digitally signed non encrypted form.   When the Device Registration Capture API is called the frames should not be added to the stream. The device is expected to send the images in ISO format.
 
 The requestedScore is in the scale of 1-100. So, in cases where you have four fingers the average of all will be considered for capture threshold. The device would always send the best frame during the capture time even if the requested score is not met.
@@ -898,10 +897,10 @@ No support for Registration Capture
 
 ---
 
-# 6. Device Server
+# Device Server
 The device server exposes two external device APIs to manage devices. These will be consumed from Management Server created by the device provider. Refer to the subsequent section in this document.
 
-## 6.1 Registration
+## Registration
 The MOSIP server would provide the following device registration API which is white-listed to the management servers of the device provider or their partners.
 
 {% hint style="info" %}
@@ -994,7 +993,7 @@ The response should be sent to the device. The device is expected to store the d
 The device once registered for a specific purpose can not be changed after successful registration. The device can only be used for that specific mosip process.
 {% endhint %}
 
-## 6.2 De-Register
+## De-Register
 The MOSIP server would provide the following device de-registration API which is whitelisted to the management servers of the device provider or their partners.
 
 **Version:** v1
@@ -1023,7 +1022,7 @@ The MOSIP server would provide the following device de-registration API which is
 }
 ```
 
-The entire request is sent as a JWT format. So the final request will look like
+The entire request is sent as a JWT format. So the final request will look like:
 ```
 "request": {
   "device" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
@@ -1049,14 +1048,14 @@ The entire request is sent as a JWT format. So the final request will look like
 }
 ```
 
-The entire response is sent as a JWT format. So the final response will look like
+The entire response is sent as a JWT format. So the final response will look like:
 
 ```
   "response" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
 ```
 ---
 
-## 6.3 Certificates
+## Certificates
 The MOSIP server would provide the following retrieve encryption certificate API which is white-listed to the management servers of the device provider or their partners.
 
 **Encryption Certificate Request URL**
@@ -1076,7 +1075,7 @@ The MOSIP server would provide the following retrieve encryption certificate API
 }
 ```
 
-The request is sent as a JWT format. So the final request will look as below.
+The request is sent as a JWT format. So the final request will look like:
 ```
 request : {
   "country": "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
@@ -1097,14 +1096,15 @@ request : {
 }
 ```
 
-The entire response is sent as a JWT format. So the final response will look as below.
+The entire response is sent as a JWT format. So the final response will look like:
 ```
   "response" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
 ```
 ---
 
-# 7. Management Server Functionalities and Interactions
+# Management Server and Management Client
 
+## Management Server Functionalities and Interactions
 The management server has the following objectives.
 
 1. Validate the devices to ensure its a genuine device from the respective device provider. This can be achieved using the device info and the certificates for the Foundational Trust Module.
@@ -1138,7 +1138,7 @@ Management client is the interface that connects the device with the respective 
 
 ---
 
-# 8. Compliance
+# Compliance
 L2 Certified Device / L2 Device - A device certified as capable of performing encryption on the device inside its trusted zone with tamper responsive features
 L1 Certified Device / L1 Device - A device certified as capable of performing encryption on the device inside its trusted zone.
 L0 Certified Device / L0 Device - A device certified as one where the encryption is done on the host inside its device driver or the MOSIP device service.
@@ -1164,7 +1164,7 @@ Registration Capture | L0/L1/L2
 
 ---
 
-# 9. Cryptography
+# Cryptography
 Supported algorithm
 
 Usage | Algorithm | Key Size | Storage
@@ -1181,7 +1181,7 @@ Secure Boot | ECC curve 25519 | >=256 | FTM trusted memory
 No other ECC curves supported.
 {% endhint %}
 
-# 10. Error Codes
+# Error Codes
 
 Code | Message
 -----|--------
