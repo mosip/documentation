@@ -4,7 +4,7 @@
 
 # Table of Contents 
 
-1. [Introduction & Background](#1-introduction--background)
+1. [Introduction & Background](#1-introduction-and-background)
 1. [Glossary of Terms](#2-glossary-of-terms)
 1. [Device Specification](#3-device-specification)
 1. [Device Trust](#4-device-trust)
@@ -23,20 +23,21 @@
 1. [Error Codes](#10-error-codes)
 ---
 
-## 1. Introduction & Background 
+# 1. Introduction & Background 
 
-### Objective
+## Objective
 The objective of this specification document is to establish the technical and compliance standards/ protocols that are necessary for a biometric device to be used in MOSIP solutions.
 
-### Target Audience
+## Target Audience
 This is a biometric device specification document and aims to help the biometric device manufactures, their developers, and their designers in building MOSIP compliant devices.
 This document assumes that the readers are familiar with MOSIP registration and authentication services.
 
-### MOSIP Devices
+## MOSIP Devices
 All devices that collect biometric data for MOSIP should operate within the specification of this document.
+
 ---
 
-## 2. Glossary of Terms
+# 2. Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
 * Foundational Trust Provider - An entity that manufactures the foundational trust module.
 * Device - A hardware capable of capturing biometric information.
@@ -55,21 +56,22 @@ All devices that collect biometric data for MOSIP should operate within the spec
 * payload is the byte array of the actual data, always represented as base64urlencoded.
 * signature - base64urlencoded signature bytes
 * ISO Format Time - ISO 8601 with format yyyy-mm-dd HH:MM:ssZ
+
 ---
 
-## 3. Device Specification
+# 3. Device Specification
 The MOSIP device specification provides compliance guidelines to devices for them to work with MOSIP. The compliance is based on device capability, trust and communication protocols. A MOSIP compliant device would follow the standards established in this document. It is expected that the devices are compliant to this specification and tested and validated. The details of each of these are outlined in the subsequent sections.
 
-### Device Capability:
+## Device Capability:
 The MOSIP compliant device is expected to perform the following:
 *   Should have the ability to collect one or more biometric
 *   Should have the ability to sign the captured biometric image or template.
 *   Should have the ability to protect secret keys
 *   Should have no mechanism to inject the biometric
 
-### Base Specifications for Devices
+## Base Specifications for Devices
 
-#### Fingerprint Capture
+### Fingerprint Capture
 
 Refer ISO 19794-4:2011
 
@@ -90,9 +92,11 @@ Quality Score | NFIQ 2 | NFIQ 1
 FTM | L0 - Use host based security, L1 - FTM supported security | L1 - FTM supported security, L2 - with tamper protection.
 
 {% hint style="info" %}
-\* Sufficiency to be validated for registration
-\*\* MOSIP adapters can change this if needed 
-\*\*\* MOSIP adapters to decide on the availability of this feature
+\*  Sufficiency to be validated for registration
+
+\*\*  MOSIP adapters can change this if needed 
+
+\*\*\*  MOSIP adapters to decide on the availability of this feature
 {% endhint %}
 
 ### IRIS Capture
@@ -118,14 +122,15 @@ ISO Format | K3 | K7
 FTM | L0 - Use host based security, L1 - FTM supported security | L1 - FTM supported security, L2 - with tamper protection.
 
 {% hint style="info" %}
-\* MOSIP adopters to decide and finalize
+\*  MOSIP adopters to decide and finalize
 {% endhint %}
 
-3. Face Capture
+### Face Capture
 
 Refer ISO 19794-5:2011
 
 Factor | Registration Devices | Authentication Devices
+-------|----------------------|-----------------------
 Minimum Resolution | 1080 Pixels at 2.8 mm with 110 degree view | 1080 Pixels at 2.8 mm
 Skin Tone | All | All
 Operation Temperature\* | -30 C to +50 C | -30 C to +50 C
@@ -141,83 +146,85 @@ FTM | L0 - Use host based security, L1 - FTM supported security | L1 - FTM suppo
 {% endhint %}
 
 We recommend that countries look at ergonomics, accessibility, ease of usage, and common availability of devices while choosing devices for use in registration and authentication scenarios.
+
 ---
 
-### Device Trust
+# 4. Device Trust
 MOSIP compliant devices provide a trust environment for the devices to be used in registration, KYC and AUTH scenarios. The trust level is established based on the device support for trusted execution.
 
 L1 - The trust is provided by a secure chip with secure execution environment.
 L2 - The trust is provided by a secure chip with secure execution environment and complete tamper protection and responsive across the entire device.
 L0 - The trust is provided at the software level. No hardware related trust exist. This type of compliance is used in controlled environments.  
 
-### Foundational Trust Module (FTM)
+## Foundational Trust Module (FTM)
 The foundational trust module would be created using a secure microprocessor capable of performing all required biometric processing and secure storage of keys. The foundational device trust would satisfy the below requirements.
 
 1. The module has the ability to securely generate, store and process cryptographic keys.
-2. Generation of asymmetric keys and symmetric keys with TRNG.
-3. The module has the ability to protect keys from extraction.
-4. The module has to protect the keys from physical tampering, temperature, frequency and voltage related attacks.
-5. The module could withstand against Hardware cloning.
-6. The module could withstand probing attacks
-7. The module provides memory segregation for cryptographic operations and protection against buffer over flow attacks
-8. The module provides ability to withstand cryptographic side channel attacks like Differential Power analysis attacks, Timing attacks.
-9. CAVP validated implementation of the cryptographic algorithm.
-10. The module has the ability to perform a cryptographically validatable secure boot.
-11. The module has the ability to run trusted applications.
+1. Generation of asymmetric keys and symmetric keys with TRNG.
+1. The module has the ability to protect keys from extraction.
+1. The module has to protect the keys from physical tampering, temperature, frequency and voltage related attacks.
+1. The module could withstand against Hardware cloning.
+1. The module could withstand probing attacks
+1. The module provides memory segregation for cryptographic operations and protection against buffer over flow attacks
+1. The module provides ability to withstand cryptographic side channel attacks like Differential Power analysis attacks, Timing attacks.
+1. CAVP validated implementation of the cryptographic algorithm.
+1. The module has the ability to perform a cryptographically validatable secure boot.
+1. The module has the ability to run trusted applications.
 
 The foundational device trust derived from this module is used to enable trust-based computing for biometric capture.
-The foundational device trust module provides for a trusted execution environment based on the following.
-1. Secure Boot
-    1. Ability to cryptographically verify code before execution.
-    2. Ability to check for integrity violation of the module/device
-    3. Halt upon failure.
-    4. Ability to securely upgrade and perform forward only upgrades, to thwart downgrade attacks. 
-    5. SHA256 hash equivalent or above should be used for all hashing requirements
-    6. All root of trust is provisioned upon first boot or before
-    7. All upgrades would be considered success only after the successful boot with proper hash and signature verification. 
-    8. The boot should fail upon hash/signature failures and would never operate in a intermediary state. 
-    9. Maximum of 10 failed attempts should lock the upgrade process and brick the device. However chip manufactures can decide to be less than 10.
+The foundational device trust module provides for a trusted execution environment based on the following:
 
+1. Secure Boot
+	1. Ability to cryptographically verify code before execution.
+	1. Ability to check for integrity violation of the module/device
+	1. Halt upon failure.
+	1. Ability to securely upgrade and perform forward only upgrades, to thwart downgrade attacks. 
+	1. SHA256 hash equivalent or above should be used for all hashing requirements
+	1. All root of trust is provisioned upon first boot or before
+	1. All upgrades would be considered success only after the successful boot with proper hash and signature verification. 
+	1. The boot should fail upon hash/signature failures and would never operate in a intermediary state. 
+	1. Maximum of 10 failed attempts should lock the upgrade process and brick the device. However chip manufactures can decide to be less than 10.
 1. Secure application
-    1. Ability to run applications that are trusted.
-    2. Protect against downgrading of applications.
-    3. Isolated memory to support cryptographic operations. 
-    4. All trust are anchored during the first boot and not modifiable.
+	1. Ability to run applications that are trusted.
+	1. Protect against downgrading of applications.
+	1. Isolated memory to support cryptographic operations. 
+	1. All trust are anchored during the first boot and not modifiable.
 
 **Certification:**
 The FTM should have a at least one of the following certifications in each category to meet the given requirement.
 
-Category: Cryptographic Algorithm Implementation
+**Category: Cryptographic Algorithm Implementation**
 * CAVP (RSA, AES, SHA256, TRNG (DRBGVS), ECC)
 
 {% hint style="info" %}
 The supported algorithm and curves are listed [here](#9-cryptography)
 {% endhint %}
 
-Category: FTM Chip
+**Category: FTM Chip**
 * FIPS 140-2 L3 or above
 * PCI PTS 5 or above (Pre-certified)
 * Common Criteria (EAL4 and above)
 	* TODO:FILL IN
 
-Category: Tamper
+**Category: Tamper**
 * For L1 level compliance the FTM should support tamper evidence.
 * For L2 level compliance the FTM should support all of L1 and capabilities to adopt tamper responsiveness.
 
-**Threats to Protect**
+**Threats to Protect:**
+
 The FTM should protect against the following threats.
 
 1. Hardware cloning attacks - Ability to protect against attacks that could result in a duplicate with keys.
-2. Hardware Tamper attacks
+1. Hardware Tamper attacks
 	1. Physical tamper - No way to physically tamper and obtain it secrets. 
-	2. Voltage & frequency related attacks - Should shield against voltage leaks and should prevent against low voltage. The FTM should always be in either of the state operational normally or inoperable. The FTM should never be operable when its input voltages are not met.
-	3. Temperature attacks on crypto block - Low or High the FTM is expected to operate or reach inoperable state. No state in between.
-3. Differential Power Analysis attack 
-4. Probing attacks - FTM should protect its surface area against any probe related attacks.
-5. Segregation of memory for execution of cryptographic operation (crypto block should be protected from buffer overflow type attacks)
-6. Vulnerability of the cryptographic algorithm implementation
-7. Attacks against secure boot & secure upgrade
-8. TEE/Secure processor OS attack
+	1. Voltage & frequency related attacks - Should shield against voltage leaks and should prevent against low voltage. The FTM should always be in either of the state operational normally or inoperable. The FTM should never be operable when its input voltages are not met.
+	1. Temperature attacks on crypto block - Low or High the FTM is expected to operate or reach inoperable state. No state in between.
+1. Differential Power Analysis attack 
+1. Probing attacks - FTM should protect its surface area against any probe related attacks.
+1. Segregation of memory for execution of cryptographic operation (crypto block should be protected from buffer overflow type attacks)
+1. Vulnerability of the cryptographic algorithm implementation
+1. Attacks against secure boot & secure upgrade
+1. TEE/Secure processor OS attack
 
 **Foundational Trust Module Identity:**
 
@@ -238,9 +245,10 @@ This certificate and private key within the FTM chip is expected to be in it per
 {% hint style="info" %}
 The validity for the chip certificate can not exceed 20 years from the date of manufacturing.
 {% endhint %}
+
 ---
 
-### Device 
+## Device 
 Mosip devices are most often used to collect biometrics. The devices are expected to follow the specification for all level of compliance and its usage. The mosip devices fall under the category of Trust Level 3 (TL3) as defined in MOSIP architecture. At TL3 device is expected to be whitelisted with a fully capable PKI and secure storage of keys at the hardware. 
 
 L0 - A device can obtain L0 certification when it uses software level cryptographic library with no secure boot or FTM.  These devices will follow different device identity and the same would be mentioned as part of exception flows.
@@ -306,32 +314,38 @@ dateTime:  ISO format with timezone.  The time during the issuance of this iden
 ```
 
 **Keys**
+
 List of keys used in the device and their explanation.
 
-* **Device Key**
+* **Device Key** 
+
 Each biometric device would contain an authorized private key after the device registration. This key is rotated frequently based on the requirement from the respective adopter of MOSIP. By default MOSIP recommends 30 days key rotation policy for the device key. The device keys are created by the device providers inside the FTM during a successful registration.
+
 The device keys are used for signing the biometric. More details of the signing and its usage will be [here](#devicecommunication)
+
 This key is issued by the device provider and the certificate of the device key is issued by the device provider key which in turn is issued by the MOSIP adopter after approval of the device providers specific model.
 
 * **FTM Key**
+
 The FTM key is the root of the identity. This key is created by the FTM provider during the manufacturing/provisioning stage. This is a permanent key and would never be rotated. This key is used to sign the Digital ID.
 
 * **MOSIP Key**
+
 The MOSIP key is the public key provided by the MOSIP adopter. This key is used to encrypt the biometric biometric. Details of the encryption is listed below.
 
 We recommend to rotate this key every 1 year. 
+
 ---
 
-## 5. Device Service - Communication Interfaces
+# 5. Device Service - Communication Interfaces
 The section explains the necessary details of the biometric device connectivity, accessibility, discover-ability and protocols used to build and communicate with the device.
 
 The device should implement only the following set of APIs.  All the API’s are independent of the physical layer and the operating system, with the invocation being different across operating systems. While the operating system names are defined in this spec a similar technology can be used for unspecified operating systems.
 
 It is expected that the device service ensures that the device is connected  locally to the host.
 
-### 5.1 Device Discovery:
+## 5.1 Device Discovery:
 Device discovery would be used to identify MOSIP compliant devices in a system by the applications. The protocol is designed as simple plug and play with all the necessary abstraction to the specifics.
-Discovery Request:
 
 **Device Discovery Request:**
 ```JSON
@@ -392,8 +406,9 @@ errorInfo - description of the error that can be displayed to end user. Multi li
 * This response is a direct JSON as show in the response.
 {% endhint %}
 
-#### Windows/Linux:
+### Windows/Linux:
 All the device API will be based on the HTTP specification. The device always binds to 127.0.0.1 with any of the available ports ranging from 4501 - 4600.  The IP address used for binding has to be 127.0.0.1 and not localhost.
+
 The applications that require access to MOSIP devices could discover them by sending the HTTP request to the supported port range. We will call this port as the device_service_port in the rest of the document.
 
 **_HTTP Request:_**
@@ -419,15 +434,16 @@ The pay loads are JSON in both the cases and are part of the body.
 CallbackId would be set to the [http://127.0.0.1:<device_service_port>](http://127.0.0.1:<device_service_port>). So, the caller will use the respective HTTP verb/method and the URL to call the service.
 {% endhint %}
 
-#### Android
+### Android
 All devices on an android device should listen to the following intent io.mosip.device
+
 Upon invocation of this intent the devices are expected to respond back with the json response filtered by the respective type.
 
 {% hint style="info" %}
 CallbackId would be set to the appId. So, the caller will create the intent appId.Info or appId.Capture
 {% endhint %}
 
-#### IOS
+### IOS
 All device on an IOS device would respond to the URL schema as follows:
 ```
 MOSIPDISC://<call-back-app-url>?ext=<caller app name>&type=<type as defined in mosip device request>
@@ -441,7 +457,7 @@ In IOS there are restrictions to have multiple apps registering to the same URL 
 CallbackId would be set to the device service appname. So, the caller has to call appnameInfo or appnameCapture as the URL scheme.
 {% endhint %}
 
-### 5.2 Device Info:
+## 5.2 Device Info
 The device information API would be used to identify the MOSIP compliant devices and their status by the applications.
 
 **Device Info Request:**
@@ -513,7 +529,7 @@ error - relevant errors as defined under the "Error section" of this document.
 * The service should ensure to respond only if the type parameter matches the type of device or the type parameter is a "Biometric Device".
 {% endhint %}
 
-#### Windows/Linux
+### Windows/Linux
 The applications that require more details of the MOSIP devices could get them by sending the HTTP request to the supported port range.
 
 **_HTTP Request:_**
@@ -537,11 +553,12 @@ Connection: Closed
 The pay loads are JSON in both the cases and are part of the body.
 {% endhint %}
 
-#### Android
+### Android
 On an android device should listen to the following intent appId.Info
+
 Upon invocation of this intent the devices are expected to respond back with the JSON response filtered by the respective type.
 
-#### IOS
+### IOS
 On an IOS device would respond to the URL schema as follows:
 ```
 APPIDINFO://<call-back-app-url>?ext=<caller app name>&type=<type as defined in mosip device request>
@@ -553,7 +570,7 @@ If a MOSIP compliant device service app exist then the URL would launch the serv
 In IOS there are restrictions to have multiple app registering to the same URL schema.
 {% endhint %}
 
-### 5.3 Capture:
+## 5.3 Capture
 The capture request would be used to capture a biometric from MOSIP compliant devices by the applications.  The capture call will respond with success to only one call at a time. So in case of a parallel call the device info details are sent with status as "Busy"
 
 **Capture Request:**
@@ -669,7 +686,7 @@ The entire data object is stored as follows:
 payload - is defined as the entire byte array of data block. 
 ```
 
-#### Windows/Linux:
+### Windows/Linux:
 The applications that requires to capture biometric data from a MOSIP devices could do so by sending the HTTP request to the supported port range.
 
 **_HTTP Request:_**
@@ -693,12 +710,12 @@ Connection: Closed
 The pay loads are JSON in both the cases and are part of the body.
 {% endhint %}
 
-#### Android:
+### Android:
 All device on an android device should listen to the following intent appid.capture
 
 Upon this intend the devices are expected to respond back with the JSON response filtered by the respective type.
 
-#### IOS:
+### IOS:
 All device on an IOS device would respond to the URL schema as follows.
 ```
 APPIDCAPTURE://<call-back-app-url>?ext=<caller app name>&type=<type as defined in mosip device request>
@@ -706,7 +723,7 @@ APPIDCAPTURE://<call-back-app-url>?ext=<caller app name>&type=<type as defined i
 
 If a MOSIP compliant device service app exist then the URL would launch the service. The service in return should respond back to the called using the call-back-app-url with the base64 encoded json as the URL parameter for the key data.
 
-### 5.4 Device Stream
+## 5.4 Device Stream
 The device would open a stream channel to send the live video streams. This would help when there is an assisted operation to collect biometric. Please note the stream API’s are available only for registration environment.
 
 Used only for the registration module compatible devices. This API is visible only for the devices that are registered for the purpose as "Registration".
@@ -732,7 +749,7 @@ Live Video stream with quality of 3 frames per second or more using [M-JPEG2000]
 Preview should have the quality markings and segment marking. The preview would also be used to display any error message to the user screen. All error messages should be localized.
 {% endhint %}
 
-#### Windows/Linux
+### Windows/Linux
 The applications that require more details of the MOSIP devices could get them by sending the HTTP request to the supported port range.
 
 **_HTTP Request:_**
@@ -745,13 +762,13 @@ EXT: <app name>
 **_HTTP Response:_**
 HTTP Chunk of frames to be displayed. Minimum frames 3 per second.
 
-#### Android
+### Android
 No support for streaming
 
-#### IOS
+### IOS
 No support for streaming
 
-### 5.5 Device Registration Capture
+## 5.5 Device Registration Capture
 The registration client application will discover the device. Once the device is discovered the status of the device is obtained with the device info API. During the registration the registration client sends the RCAPTURE API and the response will provide the actual biometric data in a digitally signed non encrypted form.   When the Device Registration Capture API is called the frames should not be added to the stream. The device is expected to send the images in ISO format.
 
 The requestedScore is in the scale of 1-100. So, in cases where you have four fingers the average of all will be considered for capture threshold. The device would always send the best frame during the capture time even if the requested score is not met.
@@ -856,7 +873,7 @@ data.bioSubType - "LF_INDEX", "LF_MIDDLE", "LF_RING", "LF_LITTLE",  "LF_THUMB" "
 data.timestamp - Time as per the biometric device. Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
 ```
 
-#### Windows/Linux 
+### Windows/Linux 
 The applications that require more details of the MOSIP devices could get them by sending the HTTP request to the supported port range.
 
 **_HTTP Request:_**
@@ -869,18 +886,18 @@ EXT: <app name>
 **_HTTP Response:_**
 HTTP response.
 
-#### Android
+### Android
 No support for Registration Capture
 
-#### IOS
+### IOS
 No support for Registration Capture
 
 ---
 
-## 6. Device Server
+# 6. Device Server
 The device server exposes two external device APIs to manage devices. These will be consumed from Management Server created by the device provider. Refer to the subsequent section in this document.
 
-### 6.1 Registration:
+## 6.1 Registration
 The MOSIP server would provide the following device registration API which is white-listed to the management servers of the device provider or their partners.
 
 {% hint style="info" %}
@@ -973,7 +990,7 @@ The response should be sent to the device. The device is expected to store the d
 The device once registered for a specific purpose can not be changed after successful registration. The device can only be used for that specific mosip process.
 {% endhint %}
 
-### 6.2 De-Register:
+## 6.2 De-Register
 The MOSIP server would provide the following device de-registration API which is whitelisted to the management servers of the device provider or their partners.
 
 **Version:** v1
@@ -1035,7 +1052,7 @@ The entire response is sent as a JWT format. So the final response will look lik
 ```
 ---
 
-### 6.2 Certificates:
+## 6.3 Certificates
 The MOSIP server would provide the following retrieve encryption certificate API which is white-listed to the management servers of the device provider or their partners.
 
 **Encryption Certificate Request URL**
@@ -1082,7 +1099,7 @@ The entire response is sent as a JWT format. So the final response will look as 
 ```
 ---
 
-## 7. Management Server Functionalities and Interactions
+# 7. Management Server Functionalities and Interactions
 
 The management server has the following objectives.
 
@@ -1097,7 +1114,7 @@ The management server has the following objectives.
 The Management Server is created and hosted by the device provider outside of MOSIP software. The communication protocols between the MDS and the Management Server can be decided by the respective device provider. Such communication should be restricted to the above specified interactions only. No transactional information should be sent to this server.
 1. Should have the ability to push updates from the server to the client devices.
 
-### Management Client
+## Management Client
 Management client is the interface that connects the device with the respective management server. Its important that the communication between the management server and its clients are designed with scalability, robustness, performance and security. The management server may add many more capabilities than what is described here, But the basic security objectives should be met at all times irrespective of the offerings. 
 
 1. For better and efficient handling of device at large volume, we expect the devices to auto register to the Management server.
@@ -1117,12 +1134,12 @@ Management client is the interface that connects the device with the respective 
 
 ---
 
-## 8. Compliance
+# 8. Compliance
 L2 Certified Device / L2 Device - A device certified as capable of performing encryption on the device inside its trusted zone with tamper responsive features
 L1 Certified Device / L1 Device - A device certified as capable of performing encryption on the device inside its trusted zone.
 L0 Certified Device / L0 Device - A device certified as one where the encryption is done on the host inside its device driver or the MOSIP device service.
 
-### Secure Provisioning
+## Secure Provisioning
 Secure provisioning is applicable to both the FTM and the Device providers. 
 
 1. The devices and FTM should have a mechanism to protect against fraudulent attempts to create or replicate.
@@ -1132,7 +1149,7 @@ Secure provisioning is applicable to both the FTM and the Device providers.
 1. All key creations need for provisioning should happen automatically using FIPS 140-2 Level 3 or higher devices. No individual or a group or organization should have mechanism to influence this behavior.
 1. Before the devices/FTM leaving the secure provisioning facility all the necessary trust should be established and should not be re-programmable. 
 
-### Compliance Level
+## Compliance Level
 
 API	| Compatible
 ----|-----------
@@ -1143,7 +1160,7 @@ Registration Capture | L0/L1/L2
 
 ---
 
-## 9. Cryptography
+# 9. Cryptography
 Supported algorithm
 
 Usage | Algorithm | Key Size | Storage
@@ -1160,7 +1177,7 @@ Secure Boot | ECC curve 25519 | >=256 | FTM trusted memory
 No other ECC curves supported.
 {% endhint %}
 
-## 10. Error Codes
+# 10. Error Codes
 
 Code | Message
 -----|--------
