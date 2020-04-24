@@ -307,6 +307,8 @@ interface IBioApi
 }
 ```
 
+The above code snippets are available in - [CBEFF-util](https://github.com/mosip/commons/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/cbeffutil) and [Bio API](https://github.com/mosip/commons/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/bioapi)
+
 # Status Codes And Messages
 
 Status Code	|Status Message	|Scenario
