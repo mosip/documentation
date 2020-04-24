@@ -8,7 +8,7 @@ API specification version:  **Draft 4 (April, 2020)**
 
 * **Signature**  
 
-`QualityScore checkQuality(BIR sample, KeyValuePair[] flags)`
+`Response<QualityScore> checkQuality(BIR sample, KeyValuePair[] flags)`
 
 * **Input Parameters**
   * Biometric Image in “Biometric Image Record” format. This could be FIR, IIR etc.
@@ -48,12 +48,14 @@ API specification version:  **Draft 4 (April, 2020)**
 
 * **Signature**  
 
-`MatchDecision[] match(BIR sample, BIR[] gallery, KeyValuePair[] flags)`
+`Response<MatchDecision[]> match(BIR sample, BIR[] gallery, KeyValuePair[] flags)`
 
 * **Input Parameters**
   * Sample Input Image Record (1) - This is a Biometric Image Record with metadata and image data. This is the freshly received input which needs to be matched.
   * Match List of Image Records (n) - This is the set of biometrics on record that the input images needs to be matched against. The smaller this list the better the performance. Also there will be outer limits to the size of this list based on the library used.
   * Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
+
+**_Note:_** One of the example for the behaviour is threshold for match using which the SDK can take a decision.
 
 * **Output Parameters**
   * List of Decision object with Match decision and Analytics.
@@ -93,7 +95,7 @@ API specification version:  **Draft 4 (April, 2020)**
 
 * **Signature**
 
-`BIR extractTemplate(BIR sample, KeyValuePair[] flags)`
+`Response<BIR> extractTemplate(BIR sample, KeyValuePair[] flags)`
 
 * **Input Parameters**
   * Biometric Image in “Biometric Image Record” format. This could be FIR, IIR, FaceIR etc.
@@ -124,7 +126,7 @@ API specification version:  **Draft 4 (April, 2020)**
 
 * **Signature**
 
-`BIR[] segment(BIR sample, KeyValuePair[] flags)`
+`Response<BIR[]> segment(BIR sample, KeyValuePair[] flags)`
 
 * **Input Parameters**
   * Biometric Image in “Biometric Image Record” format. This could be FIR, IIR, FaceIR etc.
@@ -171,6 +173,12 @@ List of name value pairs that can be used to convey additional information. The 
 # Appendix A - Java API Specifications
 
 ```java
+class Response<T> {
+	Integer statusCode;
+	String statusMessage;
+	T response;
+}
+
 class MatchDecision
 {
    boolean match; //true or false indicates matchers decision
@@ -292,19 +300,24 @@ enum PurposeType
 
 interface IBioApi
 {
-   MatchDecision[] match(BIR sample, BIR[] gallery, KeyValuePair[] flags);
-   QualityScore checkQuality(BIR sample, KeyValuePair[] flags);
-   BIR extractTemplate(BIR sample, KeyValuePair[] flags);
-   BIR[] segment(BIR sample, KeyValuePair[] flags);
+   Response<MatchDecision[]> match(BIR sample, BIR[] gallery, KeyValuePair[] flags);
+   Response<QualityScore> checkQuality(BIR sample, KeyValuePair[] flags);
+   Response<BIR> extractTemplate(BIR sample, KeyValuePair[] flags);
+   Response<BIR[]> segment(BIR sample, KeyValuePair[] flags);
 }
 ```
 
-# Error Codes
+The above code snippets are available in - [CBEFF-util](https://github.com/mosip/commons/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/cbeffutil) and [Bio API](https://github.com/mosip/commons/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/bioapi)
 
-Error Code	|Error Message	|Scenario
+# Status Codes And Messages
+
+Status Code	|Status Message	|Scenario
 ----- |----- |-----
-KER-BIO-001	|Invalid Input Parameter - %s	|Thrown when data provided as input is invalid. (eg. Invalid Input Parameter - Gallery - FIR)
-KER-BIO-002	|Missing Input Parameter - %s	|Thrown when data required as input is missing. (eg. Missing Input Parameter - Probe - FIR)
-KER-BIO-003	|Quality check of Biometric data failed	|Thrown when data provided is valid but quality check cannot be performed
-KER-BIO-004	|Matching of Biometric data failed	|Thrown when data provided is valid, but matching cannot be performed
-KER-BIO-005	|Unknown error occurred	|Thrown when some other error occurred (eg. licensing issue)
+2XX (range 200 to 299)	|OK |When everything is Okay
+401	|Invalid Input Parameter - %s	|When data provided as input is invalid. (eg. Invalid Input Parameter - Gallery - FIR)
+402	|Missing Input Parameter - %s	|When data required as input is missing. (eg. Missing Input Parameter - Probe - FIR)
+403	|Quality check of Biometric data failed	|When data provided is valid but quality check cannot be performed
+404	|Biometrics not found in CBEFF	|When there is no data found in the input CBEFF
+405	|Matching of Biometric data failed	|When data provided is valid, but matching cannot be performed
+406	|Data provided is of poor quality	|When some other error occurred (eg. licensing issue)
+5XX (range 500 to 599)	|Unknown error occurred	|When some other error occurred (eg. licensing issue)

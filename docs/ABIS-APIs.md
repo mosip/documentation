@@ -180,7 +180,7 @@ All the below operations send biometric data in [CBEFF format](CBEFF-XML.md).
 - Identify should give all candidates which are considered as a match based on ABIS thresholds.
 - This request should not match against referenceID that is not in the reference database.
 - The flags section of the request can be used to customize or control ABIS behavior by sending specific key value pairs. targetFPIR or maxResults are examples of such flags that can alter the ABIS behavior. Implementations can agree with the ABIS on what these flags should be called and how they will be interpreted.
-- The response not has a section for Analytics that contains key value pairs. Values can be json objects also. The contents of the analytics section will be agreed upon by the implementation with the ABIS. Scores are also moved to this section and are not mandatory response parameters any more.
+- The response now has a section for Analytics that contains key value pairs. Values can be json objects also. The contents of the analytics section will be agreed upon by the implementation with the ABIS. Scores are also moved to this section and are not mandatory response parameters any more.
 - Ordering or ranking of results is not explicitly specified and can be agreed upon between the implementation and the ABIS. 
 
 ## Delete
