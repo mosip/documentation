@@ -5,25 +5,25 @@
 # Table of Contents 
 
 1. [Introduction & Background](#introduction-and-background)
-1. [Glossary of Terms](#glossary-of-terms)
-1. [Device Specification](#device-specification)
-1. [Device Trust](#4-device-trust)
-1. [Device Service - Communication Interfaces](#device-service-communication-interfaces)
+2. [Glossary of Terms](#glossary-of-terms)
+3. [Device Specification](#device-specification)
+4. [Device Trust](#4-device-trust)
+5. [Device Service - Communication Interfaces](#device-service-communication-interfaces)
     5.1. [Device Discovery](#device-discovery) 
     5.2. [Device Info](#device-info) 
     5.3. [Capture](#capture) 
     5.4. [Device Stream](#device-stream) 
     5.5. [Device Registration Capture](#device-registration-capture) 
-1. [Device Server](#device-server)
+6. [Device Server](#device-server)
     6.1. [Registration](#registration)
     6.2. [De-Register](#de-register)
 	6.3. [Certificates](#certificates)
-1. [Management Server and Client](#management-server)
+7. [Management Server and Client](#management-server)
 	7.1. [Management Server Functionalities and Interactions](#management-server-functionalities-and-interactions)
 	7.2. [Management Client](#management-client)
-1. [Compliance](#compliance)
-1. [Cryptography](#cryptography)
-1. [Error Codes](#error-codes)
+8. [Compliance](#compliance)
+9. [Cryptography](#cryptography)
+10. [Error Codes](#error-codes)
 ---
 
 # Introduction & Background 
@@ -55,7 +55,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 * Management Server - A server run by the device provider to manage the life cycle of the biometric devices.
 * Device Registration - The process of registering the device with MOSIP servers.
 * Signature - All signature should be as per RFC 7515.
-* header in signature - Header in signature means the attribute with "type" set to "MDSSign" "alg" set to RS256 and x5c set to base64encoded certificate.
+* header in signature - Header in signature means the attribute with "alg" set to RS256 and x5c set to base64encoded certificate.
 * payload is the byte array of the actual data, always represented as base64urlencoded.
 * signature - base64urlencoded signature bytes
 * ISO Format Time - ISO 8601 with format yyyy-mm-dd HH:MM:ssZ
@@ -1038,7 +1038,7 @@ The entire request is sent as a JWT format. So the final request will look like:
   "id": "io.mosip.devicederegister",
   "version": "de-registration server api version as defined above",
   "responsetime": "iso time format",
-  "response" {
+  "response": {
     "status": "Success",
     "deviceCode": "<device code>",
     "env": "<environment>",
@@ -1061,7 +1061,7 @@ The entire response is sent as a JWT format. So the final response will look lik
 ## Certificates
 The MOSIP server would provide the following retrieve encryption certificate API which is white-listed to the management servers of the device provider or their partners.
 
-**Encryption Certificate Request URL:**<br>
+**Retrieve Encryption Certificate Request URL:**<br>
 `GET https://{base_url}/v1/masterdata/device/encryptioncertficates`
 
 **Version:** v1
@@ -1070,9 +1070,11 @@ The MOSIP server would provide the following retrieve encryption certificate API
 ```
 {
   "id": "io.mosip.auth.country.certificate",
-  "version": "de-registration server api version as defined above",
+  "version": "certificate server api version as defined above",
   request: {
-    "country" : "if empty return the current certificate, if a country is defined then send out the countries keys"
+    "data" : {
+      "env":  "target environment", 
+      "domainUri": "uri of the auth server",     
   },
   "requesttime": "current timestamp in ISO format"
 }
@@ -1081,17 +1083,23 @@ The MOSIP server would provide the following retrieve encryption certificate API
 The request is sent as a JWT format. So the final request will look like:
 ```
 request : {
-  "country": "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
+  "data": "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
 }
+```
+
+**Accepted Values for Retrieve Certificate Request:**
+```
+env - Allowed values are Staging| Developer| Pre-Production | Production
+domainUri - unique uri per auth providers. This can be used to federate across multiple providers or countries or unions.
 ```
 
 **Encryption Certificate Response:**
 ```
 {
   "id": "io.mosip.auth.country.certificate",
-  "version": "de-registration server api version as defined above",
+  "version": "certificate server api version as defined above",
   "responsetime": "iso time format",
-  "response" [
+  "response": [
     {
       "certificate": "base64encoded certificate as x509 V3 format"
     }
