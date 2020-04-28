@@ -1201,6 +1201,12 @@ KER-AUD-500 | Internal server error | Internal server error
 * [GET /userdetails/{regid}](#get-userdetailsregistrationcenterid)
 * [GET /publickey](#get-publickey)
 * [POST /tpm/publickey](#post-tpmpublickey)
+* [POST /tpm/publickey/verify](#post-tpmpublickey)
+* [GET /clientsettings](#get-clientsettings)
+* [GET /clientsettings/{regcenterid}](#get-clientsettingsregcenterid)
+
+
+
 
 ## GET /masterdata
 This service will provides the list of all master data. This service is used mainly by the Enrolment client module. 
@@ -2419,7 +2425,7 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
 #### Success Response:
 **Status code: '200'**
 
-##### Description: public key for the specified application
+##### Description: public key and current active profile for the specified application
 ```JSON
 {
   "id": "string",
@@ -2435,7 +2441,8 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
   "response": {	   			
 	"publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwUAubI0cMDZMlalDYbzZj4G2UrWY0QDtmZQyqU_ER5CA1gbxlHDQIesm1DVyp6kf1sG-RcosKPqKIhe9vKLPx5pzQXinGdl_8e5bkPpg2RLlDoNju1ycohPrCk0VOd4eNU90-SRJZH_62QE1_MG2yIohI7e7cuC93Q9SHMD8jmJ7DX2zTui4zbo-c5g7vFAtzDgxJg0vSPGbap682xkWZNgzRA_ctrnHF_9_JMzP_6Equ8E_g5BaI3jkWnVmDNjDzzseBH9zHpfbx6wNYrzQZy8iqqywbUtbHWtM0ALkH7nLi4atVbL6a-ryFt6Tq7qfGzYhLtWN47t4GxwyOJC99QIDAQAB",
 	"issuedAt": "2018-01-01T10:00:00",
-	"expiryAt": "2018-12-10T06:12:51.994"
+	"expiryAt": "2018-12-10T06:12:51.994",
+	"profile" : "prod"
   }
 }	
 ```
@@ -2444,7 +2451,7 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
 This service will upload the public key corresponding to a particular machine which are used in the MOSIP platform. This service will be used specifically in the Registration Client machines. 
 
 ### Resource URL
-`https://mosip.io/v1/syncdata/tpm/publickey ` TODO
+`https://mosip.io/v1/syncdata/tpm/publickey`
 
 ### Resource details
 Resource Details | Description
@@ -2514,7 +2521,839 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
 }		
 ```
 
-### Failure details
+## POST /tpm/publickey/verify
+This service will only verify the public key corresponding to a particular machine which are used in the MOSIP platform. This service will be used specifically in the Registration Client machines. 
+
+### Resource URL
+`https://mosip.io/v1/syncdata/tpm/publickey/verify`
+
+### Resource details
+Resource Details | Description
+------------ | -------------
+Request format | application/json
+Response format | JSON
+Requires Authentication | Yes
+
+### Request Part Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+machineName |Yes|Name of the machine| | MDLGE6273
+publickey |Yes|Base 64 encoded Public key of the passed machine| | 
+
+### Request
+```JSON
+{
+  "id": "string",
+  "metadata": {},
+  "request": {
+    "machineName": "Machine name",
+    "publicKey": "Base 64 encoded public key"
+  },
+  "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "version": "string"
+}
+```
+
+### Responses
+
+#### Success Response
+**Status code: '200'**
+
+##### Description: Verifies if the public key has been mapped to the machine
+```JSON
+{
+  "id": "mosip.kernel.sync.publickeytomachine",
+  "version": "1.0",
+  "metadata": {},
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "errors": [
+    {
+      "errorCode": "string",
+      "message": "string"
+    }
+  ],
+  "response": {
+	"keyIndex": "ThumbprintOfThePublickey"
+  }
+}
+```
+
+#### Error Response:
+```JSON
+{
+  "id": "string",
+  "version": "string",
+  "metadata": {},
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "errors": [
+    {
+      "errorCode": "string",
+      "message": "string"
+    }
+  ],
+  "response": null
+}		
+```
+
+
+## GET /clientsettings
+
+This service will provides the list of all clientsettings. This service is used mainly by the Enrollment client module. 
+
+#### Resource URL
+<div>https://mosip.io/v1/syncdata/clientsettings?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24&lastupdated=2018-12-10T11:42:52.994Z</div>
+
+#### Resource details
+
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+#### Request Part Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+lastupdated|No|Date in UTC ISO format| | 
+keyindex|Yes|Thumbprint of the public key corresponding to this machine| | 
+
+
+#### Request
+
+<div>https://mosip.io/v1/syncdata/clientsettings?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24</div>
+
+#### Responses:
+##### Success Response:
+###### Status code: '200'
+###### Description: latest clientsettings for the provided machine.
+```JSON
+{
+  "id": null,
+  "version": null,
+  "responsetime": "2020-02-26T13:36:16.215Z",
+  "metadata": null,
+  "response": {
+    "lastSyncTime": "2020-02-26T13:36:16.056Z",
+    "dataToSync": [
+      {
+        "entityName": "Application",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "AppAuthenticationMethod",
+        "entityType": "structured",
+        "data": [
+          "{\"appId\":\"10003\",\"processId\":\"eod_auth\",\"roleCode\":\"REGISTRATION_OFFICER\",\"authMethodCode\":\"OTP\",\"methodSequence\":2,\"langCode\":\"eng\",\"isDeleted\":null,\"isActive\":false}"
+        ]
+      },
+      {
+        "entityName": "AppDetail",
+        "entityType": "structured",
+        "data": [
+          "{\"id\":\"10009\",\"name\":\"التحكم في الهوية\",\"descr\":\"بوابة الويب لتكوين التطبيقات\",\"langCode\":\"ara\",\"isDeleted\":null,\"isActive\":true}",
+          "{\"id\":\"10011\",\"name\":\"بوابة المقيمين\",\"descr\":\"البوابة الإلكترونية لخدمات إنشاء معرف المشاركة\",\"langCode\":\"ara\",\"isDeleted\":null,\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "AppRolePriority",
+        "entityType": "structured",
+        "data": [
+          "{\"appId\":\"10003\",\"processId\":\"eod_auth\",\"roleCode\":\"REGISTRATION_ADMIN\",\"priority\":1,\"langCode\":\"eng\",\"isDeleted\":null,\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "Machine",
+        "entityType": "structured",
+        "data": [
+          "{\"id\":\"10030\",\"name\":\"Machine 30\",\"serialNum\":\"FB5962911664\",\"macAddress\":\"70-5A-0F-8C-01-39\",\"ipAddress\":\"192.168.0.356\",\"machineSpecId\":\"1001\",\"validityDateTime\":null,\"keyIndex\":null,\"publicKey\":null,\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "MachineSpecification",
+        "entityType": "structured",
+        "data": [
+          "{\"id\":\"1001\",\"name\":\"Vostro\",\"brand\":\"Dell\",\"model\":\"3568\",\"machineTypeCode\":\"DKS\",\"minDriverversion\":\"1.454\",\"description\":\"To take enrollments\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "MachineType",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"DKS\",\"name\":\"Desktop\",\"description\":\"Desktop Computer\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterType",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true,\"code\":\"REG\",\"name\":\"منتظم\",\"descr\":\"مركز التسجيل العادي\"}",
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"code\":\"REG\",\"name\":\"Regular\",\"descr\":\"Regular Registration Center\"}",
+          "{\"isDeleted\":null,\"langCode\":\"fra\",\"isActive\":true,\"code\":\"REG\",\"name\":\"Ordinaire\",\"descr\":\"Centre dinscription régulière\"}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenter",
+        "entityType": "structured",
+        "data": [
+          "{\"id\":\"10001\",\"name\":\"Center A Ben Mansour\",\"centerTypeCode\":\"REG\",\"addressLine1\":\"P4238\",\"addressLine2\":\"Ben Mansour\",\"addressLine3\":\"Morocco\",\"latitude\":\"34.52117\",\"longitude\":\"-6.453275\",\"locationCode\":\"14022\",\"holidayLocationCode\":\"KTA\",\"contactPhone\":\"779517433\",\"numberOfStations\":null,\"workingHours\":\"8:00:00\",\"numberOfKiosks\":3,\"perKioskProcessTime\":[0,15],\"centerStartTime\":[9,0],\"centerEndTime\":[17,0],\"timeZone\":\"(GTM+01:00) CENTRAL EUROPEAN TIME\",\"contactPerson\":\"John Doe\",\"lunchStartTime\":[13,0],\"lunchEndTime\":[14,0],\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterMachine",
+        "entityType": "structured",
+        "data": [
+          "{\"regCenterId\":\"10001\",\"machineId\":\"10030\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}",
+          "{\"regCenterId\":\"10001\",\"machineId\":\"10001\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}",
+          "{\"regCenterId\":\"10001\",\"machineId\":\"10031\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterDevice",
+        "entityType": "structured",
+        "data": [
+          "{\"regCenterId\":\"10001\",\"deviceId\":\"3000170\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterMachineDevice",
+        "entityType": "structured",
+        "data": [
+          "{\"regCenterId\":\"10001\",\"machineId\":\"10030\",\"deviceId\":\"3000169\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterUserMachine",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"cntrId\":\"10001\",\"machineId\":\"10001\",\"usrId\":\"110001\"}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterUser",
+        "entityType": "structured",
+        "data": [
+          "{\"regCenterId\":\"10001\",\"userId\":\"110030\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "Device",
+        "entityType": "structured",
+        "data": [
+          "{\"id\":\"3000167\",\"name\":\"Dummy IRIS Scanner 30\",\"serialNum\":\"BS563Q2230815\",\"deviceSpecId\":\"327\",\"macAddress\":\"6D-58-E2-DF-74-34\",\"ipAddress\":null,\"validityDateTime\":[2018,12,10,11,42,52,994000000],\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "DeviceSpecification",
+        "entityType": "structured",
+        "data": [
+          "{\"id\":\"920\",\"name\":\"سِنل فُنتٍ ِنكجت\",\"brand\":\"َنّ\",\"model\":\"TS207\",\"deviceTypeCode\":\"PRT\",\"minDriverversion\":\"1.123\",\"description\":\"لطباعة الوثائق\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "DeviceType",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"FRS\",\"name\":\"ماسح بصمة الأصبع\",\"description\":\"لمسح بصمات الأصابع\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "DeviceTypeDPM",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"Finger\",\"name\":\"Finger\",\"descr\":\"Fingerprint Biometric\",\"isDeleted\":null,\"langCode\":null,\"isActive\":true}",
+          "{\"code\":\"Face\",\"name\":\"Face\",\"descr\":\"Face Biometric\",\"isDeleted\":null,\"langCode\":null,\"isActive\":true}",
+          "{\"code\":\"Iris\",\"name\":\"Iris\",\"descr\":\"Iris Biomertric\",\"isDeleted\":null,\"langCode\":null,\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "DeviceSubTypeDPM",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"SingleIris\",\"dtypeCode\":\"Iris\",\"name\":\"Single\",\"descr\":\"Single\",\"isDeleted\":null,\"langCode\":null,\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "DeviceProvider",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "DeviceService",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "RegisteredDevice",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "Template",
+        "entityType": "structured",
+        "data": [
+          "{\"id\":\"1173\",\"name\":\"فتح ناجح لأنواع مصادقة البريد الإلكتروني الموضوع\",\"description\":\"فتح ناجح لأنواع مصادقة البريد الإلكتروني الموضوع\",\"fileFormatCode\":\"txt\",\"model\":\"velocity\",\"fileText\":\"تم إلغاء تأمين نوع AUTH بنجاح\",\"moduleId\":\"10006\",\"moduleName\":\"Resident Services\",\"templateTypeCode\":\"RS_UNLOCK_AUTH_SUCCESS_EMAIL_SUB\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "TemplateFileFormat",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"xml\",\"description\":\"XML File\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "TemplateType",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"RS_VIN_GEN_SUCCESS_EMAIL_SUB\",\"description\":\"VID Generation Success Email Subject\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "Holiday",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "BlacklistedWords",
+        "entityType": "structured",
+        "data": [
+          "{\"word\":\"نيغا\",\"description\":\"كلمة القائمة السوداء\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "BiometricType",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"FNR\",\"name\":\"Fingerprint\",\"description\":\"Finger prints of the applicant\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "BiometricAttribute",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"LI\",\"name\":\"Iris gauche\",\"description\":\"Gravure de Iris Gauche\",\"biometricTypeCode\":\"IRS\",\"isDeleted\":null,\"langCode\":\"fra\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "Title",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"MRS\",\"titleName\":\"ست\",\"titleDescription\":\"عنوان أنثى\",\"langCode\":\"ara\",\"isDeleted\":null,\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "Language",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"eng\",\"name\":\"English\",\"family\":\"Indo-European\",\"nativeName\":\"English\",\"isDeleted\":null,\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "Gender",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"OTH\",\"genderName\":\"Others\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":false}"
+        ]
+      },
+      {
+        "entityName": "IdType",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"VID\",\"name\":\"ID virtuel\",\"descr\":\"Identifiant utilisé en remplacement de UIN\",\"isDeleted\":null,\"langCode\":\"fra\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "Location",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"code\":\"SOUS\",\"name\":\"Souissi\",\"hierarchyLevel\":4,\"hierarchyName\":\"Zone\",\"parentLocCode\":\"RAB\"}"
+        ]
+      },
+      {
+        "entityName": "ReasonCategory",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"CLR\",\"name\":\"رفض العميل\",\"description\":\"رفض تسجيل العميل\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "ReasonList",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"ADM\",\"name\":\"يتم مطابقة جميع التفاصيل\",\"description\":\"يتم مطابقة جميع التفاصيل\",\"rsnCatCode\":\"MNA\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "IndividualType",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true,\"code\":\"FR\",\"name\":\"أجنبي\"}",
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"code\":\"NFR\",\"name\":\"Non-Foreigner\"}"
+        ]
+      },
+      {
+        "entityName": "DocumentCategory",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"POI\",\"name\":\"إثبات هوية\",\"description\":\"إثبات الهوية\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "DocumentType",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"DOC018\",\"name\":\"Water bill as long as it is not more than 3 months’ old\",\"description\":\"Water bill as long as it is not more than 3 months’ old\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "ValidDocument",
+        "entityType": "structured",
+        "data": [
+          "{\"docTypeCode\":\"DOC014\",\"docCategoryCode\":\"POA\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "ApplicantValidDocument",
+        "entityType": "structured",
+        "data": [
+             "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"appTypeCode\":\"003\",\"docTypeCode\":\"CRN\",\"docCatCode\":\"POR\"}"
+        ]
+      },
+      {
+        "entityName": "ScreenAuthorization",
+        "entityType": "structured",
+        "data": [
+          "{\"screenId\":\"uploadPacketRoot\",\"roleCode\":\"REGISTRATION_OFFICER\",\"isPermitted\":true,\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "ScreenDetail",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"id\":\"updateClientSoftwareRoot\",\"appId\":\"10003\",\"name\":\"updateClientSoftwareRoot\",\"descr\":\"updateClientSoftwareRoot\"}"
+        ]
+      },
+      {
+        "entityName": "ProcessList",
+        "entityType": "structured",
+        "data": [
+          "{\"id\":\"exception_auth\",\"name\":\"استثناء المصادقة\",\"descr\":\"استثناء المصادقة\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "FoundationalTrustProvider",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "RegistrationCenterUserHistory",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "RegistrationCenterUserMachineHistory",
+        "entityType": "structured",
+        "data": [
+          "{\"cntrId\":\"10001\",\"machineId\":\"10031\",\"usrId\":\"110031\",\"effectivetimes\":\"2018-12-10T11:42:52.994Z\"}",
+          "{\"cntrId\":\"10001\",\"machineId\":\"10001\",\"usrId\":\"110001\",\"effectivetimes\":\"2018-12-10T11:42:52.994Z\"}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterMachineDeviceHistory",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"regCenterId\":\"10001\",\"machineId\":\"10001\",\"deviceId\":\"3000101\",\"effectivetimes\":[2018,12,10,11,42,52,994000000]}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterDeviceHistory",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"regCenterId\":\"10001\",\"deviceId\":\"3000170\",\"effectivetimes\":\"2018-12-10T11:42:52.994Z\"}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterMachineHistory",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"regCenterId\":\"10001\",\"machineId\":\"10001\",\"effectivetimes\":[2018,12,10,11,42,52,994000000]}"
+        ]
+      },
+      {
+        "entityName": "SyncJobDef",
+        "entityType": "structured",
+        "data": []
+      }
+    ]
+  },
+  "errors": null
+}
+```
+
+### GET /clientsettings/{regcenterid}
+
+This service will provides the list of all master data. This service is used mainly by the Enrollment client module. 
+
+#### Resource URL
+<div>https://mosip.io/v1/syncdata/clientsettings/10001?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24&lastupdated=2018-12-10T11:42:52.994Z</div>
+
+#### Resource details
+
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+#### Request Part Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+regcenterid|Yes|Registration center id| |
+lastupdated|No|Date in UTC ISO format| | 
+keyindex|Yes|Thumbprint of the public key corresponding to this machine| | 
+
+
+#### Request
+v1/syncdata/clientsettings/10001?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24
+
+#### Responses:
+##### Success Response:
+###### Status code: '200'
+###### Description: latest masterdata for the provided machine.
+```JSON
+{
+  "id": null,
+  "version": null,
+  "responsetime": "2020-02-26T13:36:16.215Z",
+  "metadata": null,
+  "response": {
+    "lastSyncTime": "2020-02-26T13:36:16.056Z",
+    "dataToSync": [
+      {
+        "entityName": "Application",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "AppAuthenticationMethod",
+        "entityType": "structured",
+        "data": [
+          "{\"appId\":\"10003\",\"processId\":\"eod_auth\",\"roleCode\":\"REGISTRATION_OFFICER\",\"authMethodCode\":\"OTP\",\"methodSequence\":2,\"langCode\":\"eng\",\"isDeleted\":null,\"isActive\":false}"
+        ]
+      },
+      {
+        "entityName": "AppDetail",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "AppRolePriority",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "Machine",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "MachineSpecification",
+        "entityType": "structured",
+        "data": [
+          "{\"id\":\"1001\",\"name\":\"Vostro\",\"brand\":\"Dell\",\"model\":\"3568\",\"machineTypeCode\":\"DKS\",\"minDriverversion\":\"1.454\",\"description\":\"To take enrollments\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "MachineType",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"DKS\",\"name\":\"Desktop\",\"description\":\"Desktop Computer\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterType",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "RegistrationCenter",
+        "entityType": "structured",
+        "data": [
+          "{\"id\":\"10001\",\"name\":\"Center A Ben Mansour\",\"centerTypeCode\":\"REG\",\"addressLine1\":\"P4238\",\"addressLine2\":\"Ben Mansour\",\"addressLine3\":\"Morocco\",\"latitude\":\"34.52117\",\"longitude\":\"-6.453275\",\"locationCode\":\"14022\",\"holidayLocationCode\":\"KTA\",\"contactPhone\":\"779517433\",\"numberOfStations\":null,\"workingHours\":\"8:00:00\",\"numberOfKiosks\":3,\"perKioskProcessTime\":[0,15],\"centerStartTime\":[9,0],\"centerEndTime\":[17,0],\"timeZone\":\"(GTM+01:00) CENTRAL EUROPEAN TIME\",\"contactPerson\":\"John Doe\",\"lunchStartTime\":[13,0],\"lunchEndTime\":[14,0],\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterMachine",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "RegistrationCenterDevice",
+        "entityType": "structured",
+        "data": [
+          "{\"regCenterId\":\"10001\",\"deviceId\":\"3000170\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterMachineDevice",
+        "entityType": "structured",
+        "data": [
+          "{\"regCenterId\":\"10001\",\"machineId\":\"10030\",\"deviceId\":\"3000169\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterUserMachine",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"cntrId\":\"10001\",\"machineId\":\"10001\",\"usrId\":\"110001\"}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterUser",
+        "entityType": "structured",
+        "data": [
+          "{\"regCenterId\":\"10001\",\"userId\":\"110030\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "Device",
+        "entityType": "structured",
+        "data": [
+          "{\"id\":\"3000167\",\"name\":\"Dummy IRIS Scanner 30\",\"serialNum\":\"BS563Q2230815\",\"deviceSpecId\":\"327\",\"macAddress\":\"6D-58-E2-DF-74-34\",\"ipAddress\":null,\"validityDateTime\":[2018,12,10,11,42,52,994000000],\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "DeviceSpecification",
+        "entityType": "structured",
+        "data": [
+          "{\"id\":\"920\",\"name\":\"سِنل فُنتٍ ِنكجت\",\"brand\":\"َنّ\",\"model\":\"TS207\",\"deviceTypeCode\":\"PRT\",\"minDriverversion\":\"1.123\",\"description\":\"لطباعة الوثائق\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "DeviceType",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"FRS\",\"name\":\"ماسح بصمة الأصبع\",\"description\":\"لمسح بصمات الأصابع\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "DeviceTypeDPM",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"Finger\",\"name\":\"Finger\",\"descr\":\"Fingerprint Biometric\",\"isDeleted\":null,\"langCode\":null,\"isActive\":true}",
+          "{\"code\":\"Face\",\"name\":\"Face\",\"descr\":\"Face Biometric\",\"isDeleted\":null,\"langCode\":null,\"isActive\":true}",
+          "{\"code\":\"Iris\",\"name\":\"Iris\",\"descr\":\"Iris Biomertric\",\"isDeleted\":null,\"langCode\":null,\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "DeviceSubTypeDPM",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"SingleIris\",\"dtypeCode\":\"Iris\",\"name\":\"Single\",\"descr\":\"Single\",\"isDeleted\":null,\"langCode\":null,\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "DeviceProvider",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "DeviceService",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "RegisteredDevice",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "Template",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "TemplateFileFormat",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "TemplateType",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "Holiday",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "BlacklistedWords",
+        "entityType": "structured",
+        "data": [
+          "{\"word\":\"نيغا\",\"description\":\"كلمة القائمة السوداء\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "BiometricType",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"FNR\",\"name\":\"Fingerprint\",\"description\":\"Finger prints of the applicant\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "BiometricAttribute",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "Title",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "Language",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"eng\",\"name\":\"English\",\"family\":\"Indo-European\",\"nativeName\":\"English\",\"isDeleted\":null,\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "Gender",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"OTH\",\"genderName\":\"Others\",\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":false}"
+        ]
+      },
+      {
+        "entityName": "IdType",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"VID\",\"name\":\"ID virtuel\",\"descr\":\"Identifiant utilisé en remplacement de UIN\",\"isDeleted\":null,\"langCode\":\"fra\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "Location",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"code\":\"SOUS\",\"name\":\"Souissi\",\"hierarchyLevel\":4,\"hierarchyName\":\"Zone\",\"parentLocCode\":\"RAB\"}"
+        ]
+      },
+      {
+        "entityName": "ReasonCategory",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"CLR\",\"name\":\"رفض العميل\",\"description\":\"رفض تسجيل العميل\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "ReasonList",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"ADM\",\"name\":\"يتم مطابقة جميع التفاصيل\",\"description\":\"يتم مطابقة جميع التفاصيل\",\"rsnCatCode\":\"MNA\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "IndividualType",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true,\"code\":\"FR\",\"name\":\"أجنبي\"}",
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"code\":\"NFR\",\"name\":\"Non-Foreigner\"}"
+        ]
+      },
+      {
+        "entityName": "DocumentCategory",
+        "entityType": "structured",
+        "data": [
+          "{\"code\":\"POI\",\"name\":\"إثبات هوية\",\"description\":\"إثبات الهوية\",\"isDeleted\":null,\"langCode\":\"ara\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "DocumentType",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "ValidDocument",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "ApplicantValidDocument",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "ScreenAuthorization",
+        "entityType": "structured",
+        "data": [
+          "{\"screenId\":\"uploadPacketRoot\",\"roleCode\":\"REGISTRATION_OFFICER\",\"isPermitted\":true,\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true}"
+        ]
+      },
+      {
+        "entityName": "ScreenDetail",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "ProcessList",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "FoundationalTrustProvider",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "RegistrationCenterUserHistory",
+        "entityType": "structured",
+        "data": []
+      },
+      {
+        "entityName": "RegistrationCenterUserMachineHistory",
+        "entityType": "structured",
+        "data": [
+          "{\"cntrId\":\"10001\",\"machineId\":\"10031\",\"usrId\":\"110031\",\"effectivetimes\":\"2018-12-10T11:42:52.994Z\"}",
+          "{\"cntrId\":\"10001\",\"machineId\":\"10001\",\"usrId\":\"110001\",\"effectivetimes\":\"2018-12-10T11:42:52.994Z\"}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterMachineDeviceHistory",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"regCenterId\":\"10001\",\"machineId\":\"10001\",\"deviceId\":\"3000101\",\"effectivetimes\":[2018,12,10,11,42,52,994000000]}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterDeviceHistory",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"regCenterId\":\"10001\",\"deviceId\":\"3000170\",\"effectivetimes\":\"2018-12-10T11:42:52.994Z\"}"
+        ]
+      },
+      {
+        "entityName": "RegistrationCenterMachineHistory",
+        "entityType": "structured",
+        "data": [
+          "{\"isDeleted\":null,\"langCode\":\"eng\",\"isActive\":true,\"regCenterId\":\"10001\",\"machineId\":\"10001\",\"effectivetimes\":[2018,12,10,11,42,52,994000000]}"
+        ]
+      },
+      {
+        "entityName": "SyncJobDef",
+        "entityType": "structured",
+        "data": []
+      }
+    ]
+  },
+  "errors": null
+}
+```
+
+
+#### Failure details
+
+
+
 Error Code | Error Message | Error Description
 ------------|----------|-------------
 KER-SNC-100 | Error occurred while parsing lastUpdated timesatamp | last updated parse exception

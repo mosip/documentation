@@ -18,6 +18,8 @@ This section details about the service API in the Pre-Registration modules.
 
 * [Transliteration Service](#transliteration-service-public)
 
+* [Captcha Service](#captcha-service-public)
+
 **Note**: id, version and requesttime in request and responsetime in response bodies are optional fields and not consumed by pre-registration application unless defined. Though we need to pass these as part of the request, it should not be tested.
 Few of the error messages are intended for API consumer, who are mostly SI and developers. User friendly messages need to be mapped in the UI reference implementation. 
 
@@ -3276,3 +3278,86 @@ PRG_CORE_REQ_015|Error message will come accordingly to the exception occurred|T
 PRG_CORE_REQ_016|Error message will come accordingly to the exception occurred|This error code  will occur for Exception,RuntimeException
 KER-ATH-402|Token expired|If the auth token got expired
 KER-ATH-401|Invalid Token|If the auth token is invalid
+
+# Captcha Service (Public)
+This service is used in Pre-Registration portal to protects the website from spam and abuse. In this API we are google recaptcha V2 to authenticate.
+
+* [POST /captcha/validatecaptcha](#post-captchavalidatecaptcha)
+
+###  POST /captcha/validatecaptcha
+This request is used to validate the response from the google recaptcha v2 API used in the front end application.
+
+#### Resource URL
+<div>https://mosip.io/preregistration/v1/captcha/validatecaptcha</div>
+
+#### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | NO
+
+#### Parameters
+Name | Required | Description | Example
+-----|----------|-------------|--------
+id |Yes|Id of the application|mosip.pre-registration.captcha.id.validate
+version |Yes|version of the application|1.0
+requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
+request |Yes|Request for the application|
+request.captcha_token|Yes|token
+
+
+#### Request:
+```JSON
+{
+  "id": "mosip.pre-registration.captcha.id.validate",
+  "version": "1.0",
+  "requesttime": "2019-01-09T15:31:32.957Z",
+  "request": {
+    "captchaToken": "token_string",
+  }
+}
+```
+#### Responses:
+##### Success Response:
+###### Status code: '200'
+###### Description: Captcha successfully verified
+```JSON
+{
+   "id": "mosip.pre-registration.captcha.id.validate",
+   "version" : "1.0",
+   "responsetime": "2019-01-16T17:31:04.021Z",
+   "response": {
+    "success": "true",
+    "message": "Captcha successfully verified",
+  },
+  "errors":null
+}
+```
+##### Failure Response:
+###### Status code: '200'
+###### Description: Invalid Captcha 
+```JSON
+{
+   "id": "mosip.pre-registration.captcha.id.validate",
+   "version" : "1.0",
+   "responsetime": "2019-01-16T17:31:04.021Z",
+   "response": null,
+   "errors":[
+         {
+            "errorCode": "PRG_PAM_005",
+            "message": "Invalid Captcha entered"
+         }
+    ]
+}
+```
+#### Other Failure details
+Error Code | Error Message | Error Description
+-----|----------|-------------
+PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
+PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
+PRG_PAM_CORE_003|Invalid request time |Empty Request time
+PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
+PRG-PAM-006|Invalid request , Request can't be null or empty
+
+
+
