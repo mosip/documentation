@@ -18,8 +18,6 @@ MOSIP's ABIS middleware has the following components
 - Request router (based on routing policy, an ABIS request is routed to the correct ABIS system)
 - ABIS response handler
 
-![MOSIP ABIS Middleware](_images/arch_diagrams/MOSIP_ABIS_middleware.png)
-
 ![MOSIP ABIS Middleware Process Flow](_images/biometrics/abis_middleware-process_flow.png)
 
 ## MOSIP-ABIS interface
