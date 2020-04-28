@@ -10,7 +10,7 @@ The ABIS system never comes to know about resident's identity. Any Personally Id
 {% hint style="info" %} ABIS is used for 1:N deduplication. For 1:1 authentication [Biometric SDK](Biometric-SDK.md) is used. MOSIP does not recommend using an ABIS for 1:1 authentication.{% endhint %}
 {% endhint %}
 
-![](_images/arch_diagrams/ABIS_middleware.png)
+![](_images/biometrics/abis_middleware.png)
 
 ## ABIS middleware
 MOSIP's ABIS middleware has the following components
@@ -19,6 +19,8 @@ MOSIP's ABIS middleware has the following components
 - ABIS response handler
 
 ![MOSIP ABIS Middleware](_images/arch_diagrams/MOSIP_ABIS_middleware.png)
+
+![MOSIP ABIS Middleware Process Flow](_images/biometrics/abis_middleware-process_flow.png)
 
 ## MOSIP-ABIS interface
 
