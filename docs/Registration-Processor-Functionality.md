@@ -173,9 +173,9 @@ Deduplication is the process to find a duplicate by comparing the individual’s
 * Biometric deduplication 
 * The system performs biometric deduplication (1:N, where N indicates the whole set of biometric available in the system) by sending the data to ABIS 
 *  ABIS compares the biometric data received with the whole set of the data to find a potential match based on a configured threshold.
-* If a potential match is found in the ABIS, then the system sends the packet for manual verification.
-* If a manual verifier (experts who know more about biometrics) finds a duplicate, then the system rejects the packet.
-* If the manual verifier or ABIS does not find a duplicate, then the system sends the packet for UIN generation.
+* If a potential match is found in the ABIS, then the system sends the packet for manual adjudication.
+* If a manual adjudicator (experts who know more about biometrics) finds a duplicate, then the system rejects the packet.
+* If the manual adjudicator or ABIS does not find a duplicate, then the system sends the packet for UIN generation.
 
 ###  External system integration 
 _All the below functions can be plugged in by a System Integrator into MOSIP system.  MOSIP provides interfaces for integration._
