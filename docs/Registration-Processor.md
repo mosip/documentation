@@ -17,27 +17,27 @@ Important considerations are as follows:
 # Process flow
 
 ## Packet Pre-Processing
-![](_images/reg_processor/packet_pre-processing_part_1.png)
+![](_images/reg_processor/reg_proc_process_flow-packet_pre-processing_part_1.png)
 
-![](_images/reg_processor/packet_pre-processing_part_2.png)
+![](_images/reg_processor/reg_proc_process_flow-packet_pre-processing_part_2.png)
 
 ## New Packet Processing
-![](_images/reg_processor/new_packet_processing_part_1.png)
+![](_images/reg_processor/reg_proc_process_flow-new_packet_processing_part_1.png)
 
-![](_images/reg_processor/new_packet_processing_part_2.png)
+![](_images/reg_processor/reg_proc_process_flow-new_packet_processing_part_2.png)
 
 ## Update Packet Processsing
-![](_images/reg_processor/update_packet_processing_part_1.png)
+![](_images/reg_processor/reg_proc_process_flow-update_packet_processing_part_1.png)
 
-![](_images/reg_processor/update_packet_processing_part_2.png)
+![](_images/reg_processor/reg_proc_process_flow-update_packet_processing_part_2.png)
 
 ## Lost UIN Packet Processing
-![](_images/reg_processor/lost_uin_packet_processing_part_1.png)
+![](_images/reg_processor/reg_proc_process_flow-lost_uin_packet_processing_part_1.png)
 
-![](_images/reg_processor/lost_uin_packet_processing_part_2.png)
+![](_images/reg_processor/reg_proc_process_flow-lost_uin_packet_processing_part_2.png)
 
 ## Activate/De-Activate Packet Processing
-![](_images/reg_processor/activate_deactivate_uin.png)
+![](_images/reg_processor/reg_proc_process_flow-activate_deactivate_uin.png)
 
 # Logical View
 ![Registration Processor Logical view](_images/reg_processor/reg-proc-logical-view.png)
