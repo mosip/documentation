@@ -6,7 +6,7 @@ Registration Processor processes the data (demographic and biometric) of an Indi
 Important considerations are as follows:
 
 * Once the packet is received on the server packets should not be lost.  
-* MOSIP defines and implement the basic registration packet processing flow. However, every country will have their own processing requirements  like integration with their existing ID system and fetch data for validation.  Registrataion processor provides options to add such stages.
+* MOSIP defines and implement the basic registration packet processing flow. However, every country will have their own processing requirements  like integration with their existing ID system and fetch data for validation.  Registration processor provides options to add such stages.
 * Registration processor has the capability to integrate with multiple ABIS providers.
 * Each processing stage is scalable independently based on the load.
 * Each stage in the processor is independent of other stages such that logic of a stage can be changed to improve efficiency without affecting the overall flow
@@ -17,27 +17,27 @@ Important considerations are as follows:
 # Process flow
 
 ## Packet Pre-Processing
-![](_images/reg_processor/packet_pre-processing_part_1.jpg)
+![](_images/reg_processor/packet_pre-processing_part_1.png)
 
-![](_images/reg_processor/packet_pre-processing_part_2.jpg)
+![](_images/reg_processor/packet_pre-processing_part_2.png)
 
 ## New Packet Processing
-![](_images/reg_processor/new_packet_processing_part_1.jpg)
+![](_images/reg_processor/new_packet_processing_part_1.png)
 
-![](_images/reg_processor/new_packet_processing_part_2.jpg)
+![](_images/reg_processor/new_packet_processing_part_2.png)
 
 ## Update Packet Processsing
-![](_images/reg_processor/update_packet_processing_part_1.jpg)
+![](_images/reg_processor/update_packet_processing_part_1.png)
 
-![](_images/reg_processor/update_packet_processing_part_2.jpg)
+![](_images/reg_processor/update_packet_processing_part_2.png)
 
 ## Lost UIN Packet Processing
-![](_images/reg_processor/lost_uin_packet_processing_part_1.jpg)
+![](_images/reg_processor/lost_uin_packet_processing_part_1.png)
 
-![](_images/reg_processor/lost_uin_packet_processing_part_2.jpg)
+![](_images/reg_processor/lost_uin_packet_processing_part_2.png)
 
 ## Activate/De-Activate Packet Processing
-![](_images/reg_processor/activate_deactivate_uin.jpg)
+![](_images/reg_processor/activate_deactivate_uin.png)
 
 # Logical View
 ![Registration Processor Logical view](_images/reg_processor/reg-proc-logical-view.png)
