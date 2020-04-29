@@ -375,7 +375,7 @@ RPR-RGS-015 |	Invalid Request Value - Input Data is Incorrect	| Invalid Request 
 ## 4.1 Manual Verification Assignment API
 
 - #### `POST /registrationprocessor/v1/manualverification/assignment`
-This API is used to assign one single unassigned applicant record to the input user.
+This API is used to assign one single unassigned applicant record to the manual adjudicator.
 
 #### Resource URL
 https://mosip.io/registrationprocessor/v1/manualverification/assignment
@@ -459,7 +459,7 @@ RPR-MVS-022 | TablenotAccessibleException in Manual verification  | TablenotAcce
 
 - #### `POST /registrationprocessor/v1/manualverification/decision`
 
-This API is used to get the decision from manual verifier for an applicant and update the decision in table. The packet is sent for further processing based on decision.
+This API is used to get the decision from manual adjudicator for an applicant and update the decision in table. The packet is sent for further processing based on decision.
 
 #### Resource URL
 https://mosip.io/registrationprocessor/v1/manualverification/decision
@@ -550,7 +550,7 @@ RPR-MVS-022 | TablenotAccessibleException in Manual verification  | TablenotAcce
 
 - #### `POST /registrationprocessor/v1/manualverification/applicantBiometric`
 
-The manual verifier would need to verify the applicant biometric and demographic records. This API is used to get the applicant biometric file from packet.
+The manual adjudicator would need to verify the applicant biometric and demographic records. This API is used to get the applicant biometric file from packet.
 
 #### Resource URL
 
@@ -629,7 +629,7 @@ RPR-MVS-022 | TablenotAccessibleException   | TablenotAccessibleException
 
 - #### `POST /registrationprocessor/v1/manualverification/applicantDemographic`
 
-The manual verifier has to verify the applicant demographic information. This API is used to get the applicant demographic information from packet.
+The manual adjudicator has to verify the applicant demographic information. This API is used to get the applicant demographic information from packet.
 
 #### Resource URL
 https://mosip.io/registrationprocessor/v1/manualverification/applicantDemographic
