@@ -1,28 +1,17 @@
 This section details out all Resident Service REST APIs
 
-* [OTP Request API](#post-residentv1reqotp)
-
-* [Service Request Status Check API](#post-residentv1ridcheck-status)
-
-* [e-UIN API](#post-residentv1reqeuin)
-
-* [Re-print UIN API](#post-residentv1reqprint-uin)
-
-* [Retrieve Lost UIN API](#post-residentv1requin)
-
-* [Retrieve Lost RID API](#post-residentv1reqrid)
-
-* [UIN Update API](#post-residentv1requpdate-uin)
-
-* [VID Generate API](#post-/residentv1vid)
-
-* [VID Revoke API](#patch-residentv1vid{vid})
-
-* [Lock Authentication Type API](#post-residentv1reqauth-lock)
-
-* [UnLock Authentication Type API](#post-residentv1reqauth-unlock)
-
-* [Authentication History API](#post-residentv1reqauth-history)
+* [OTP Request API](post-resident-v-1-req-otp)
+* [Service Request Status Check API](#post-resident-v-1-rid-check-status)
+* [e-UIN API](#post-resident-v-1-req-euin)
+* [Re-print UIN API](#post-resident-v-1-req-print-uin)
+* [Retrieve Lost UIN API](#post-resident-v-1-req-uin)
+* [Retrieve Lost RID API](#post-resident-v-1-req-rid)
+* [UIN Update API](#post-resident-v-1-req-update-uin)
+* [VID Generate API](#post-resident-v-1-vid)
+* [VID Revoke API](#patch-resident-v-1-vid-vid)
+* [Lock Authentication Type API](#post-resident-v-1-req-auth-lock)
+* [UnLock Authentication Type API](#post-resident-v-1-req-auth-unlock)
+* [Authentication History API](#post-resident-v-1-req-auth-history)
 
 # Resident Services APIs
 
@@ -50,11 +39,9 @@ request: individualId| N | VID | | 9830872690593682
 request: individualIdType| Y | Allowed Type of Individual ID - VID, UIN, demo | VID 
 request: demographics|N| Demographic data of an Individual| |
 
-
-Mandatory fields for different types of authentications- 
+Mandatory fields for different types of authentications:
 * If individualIdType is  VID or UIN then individualId is Mandatory
 * If individualIdType is demo then  demographics is Mandatory
-
 
 ### Request Body - 1
 ```JSON
@@ -63,10 +50,10 @@ Mandatory fields for different types of authentications-
   "version": "v1",
   "requestTime": "2018-12-09T06:39:03.683Z",
   "request": {
-  "transactionID": "dabed834-974f-11e9-bc42-526af7764f64",
-  "individualId": "9830872690593682",
-  "individualIdType": "VID",
-  "demographics": null
+    "transactionID": "dabed834-974f-11e9-bc42-526af7764f64",
+    "individualId": "9830872690593682",
+    "individualIdType": "VID",
+    "demographics": null
   }
 }
 ```
@@ -108,12 +95,9 @@ Mandatory fields for different types of authentications-
 }
 ```
 
+### Responses
 
-### Responses:
-
-#### Success Response:
-
-##### Status Code : 200 (OK)
+#### Success Response
 ```JSON
 {
   "id": "mosip.resident.otp",
@@ -127,10 +111,9 @@ Mandatory fields for different types of authentications-
   "errors": null
 }
 ```
+**Status Code : 200 (OK)**
 
-#### Failed Response: 
-  
-##### Status Code : 200 (OK)   
+#### Failed Response:  
 ```JSON
 {
   "id": "mosip.resident.otp",
@@ -146,14 +129,13 @@ Mandatory fields for different types of authentications-
   ]
 }
 ```
+**Status Code : 200 (OK)**
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 XXX-XXX-001 | OTP Request failed | 
 XXX-XXX-002 | Invalid VID | No active VID found  
-
-
 
 ## POST /resident/v1/rid/check-status
 This service will respond with service request (UIN Generation/Updation,Reprint etc) status and notification will be sent to phone/email.
@@ -162,7 +144,6 @@ This service will respond with service request (UIN Generation/Updation,Reprint 
 `https://mosip.io/resident/v1/rid/check-status`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -191,12 +172,9 @@ request: individualIdType| Y | Allowed Type of Individual ID - RID | RID
 }
 ```
 
-### Responses:
+### Responses
 
-##### Success Response:
-
-###### Status Code : 200 (OK)   
-
+##### Success Response
 ```JSON
 {
   "id": "mosip.resident.checkstatus",
@@ -208,11 +186,9 @@ request: individualIdType| Y | Allowed Type of Individual ID - RID | RID
   "errors": null
 }
 ```
+**Status Code : 200 (OK)**
 
 ##### Failed Response:
-
-###### Status Code : 200 (OK)    
-
 ```JSON
 {
   "id": "mosip.resident.checkstatus",
@@ -229,13 +205,13 @@ request: individualIdType| Y | Allowed Type of Individual ID - RID | RID
   ]
 }
 ```
+**Status Code : 200 (OK)**
 
 #### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 RES-TUG-002| Data entered does not match or not valid or not found
 RES-TUG-004| No Registered Mobile/email ID found
-
 
 ## POST /resident/v1/req/euin
 This request will authenticate an Individual based on provided OTP and respond with e-UIN. Notification will be sent to phone/email.
@@ -244,7 +220,6 @@ This request will authenticate an Individual based on provided OTP and respond w
 `https://mosip.io/resident/v1/req/euin`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -278,11 +253,9 @@ request: otp| Y | OTP | |
 }
 ```
 
-### Responses:
+### Responses
 
-#### Success Response:
-
-##### Status Code : 200 (OK)
+#### Success Response
 ```JSON
 {
   "id": "mosip.resident.euin",
@@ -295,10 +268,9 @@ request: otp| Y | OTP | |
   "errors": null
 }
 ```
+**Status Code : 200 (OK)**
 
-##### Failed Response:
-
-###### Status Code : 200 (OK)
+#### Failed Response
 ```JSON
 {
   "id": "mosip.resident.euin",
@@ -315,6 +287,7 @@ request: otp| Y | OTP | |
   ]
 }
 ```
+**Status Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -348,7 +321,6 @@ request: individualIdType| Y | Allowed Type of Individual ID - VID, UIN | VID
 request: cardType| Y | Allowed Type of cardType - MASKED_UIN, UIN | 
 request: otp| Y | OTP | | 
 
-
 ### Request Body
 ```JSON
 {
@@ -365,12 +337,9 @@ request: otp| Y | OTP | |
 }
 ```
 
-### Responses:
+### Responses
 
-#### Success Response:
-
-##### Status Code : 200 (OK)   
-
+#### Success Response
 ```JSON
 {
   "id": "mosip.resident.reprintuin",
@@ -383,11 +352,9 @@ request: otp| Y | OTP | |
   "errors": null
 }
 ```
+**Status Code : 200 (OK)**
 
-#### Failed Response:
-
-##### Status Code : 200 (OK)    
-
+#### Failed Response
 ```JSON
 {
   "id": "mosip.resident.reprintuin",
@@ -404,6 +371,7 @@ request: otp| Y | OTP | |
   ]
 }
 ```
+**Status Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -411,7 +379,6 @@ Error Code | Error Message | Error Description
 RES-REP-001| OTP Authentication Failed.
 RES-REP-002| Data entered is not valid.
 RES-REP-004| No Registered Mobile/email ID found.
-
 
 ## POST /resident/v1/req/uin
 This request will authenticate an Individual based on provided OTP and respond with UIN. Notification will be sent to phone/email.
@@ -481,11 +448,9 @@ request: demographics|N| Demographic data of an Individual| |
 }
 ```
 
-### Responses:
+### Responses
 
-#### Success Response:
-
-##### Status Code : 200 (OK)
+#### Success Response
 ```JSON
 {
   "id": "mosip.resident.lostuin",
@@ -498,10 +463,9 @@ request: demographics|N| Demographic data of an Individual| |
   "errors": null
 }
 ```
+**Status Code : 200 (OK)**
 
-#### Failed Response:
-
-##### Status Code : 200 (OK)    
+#### Failed Response 
 ```JSON
 {
   "id": "mosip.resident.lostuin",
@@ -518,6 +482,7 @@ request: demographics|N| Demographic data of an Individual| |
   ]
 }
 ```
+**Status Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -548,7 +513,6 @@ request: transactionID| Y | Transaction ID of request | | dabed834-974f-11e9-bc4
 request: individualIdType| Y | Allowed Type of Individual ID - demo | demo 
 request: otp| Y | OTP | | 
 request: demographics|N| Demographic data of an Individual| |
-
 
 ### Request Body
 ```JSON
@@ -595,12 +559,9 @@ request: demographics|N| Demographic data of an Individual| |
 }
 ```
 
-### Responses:
+### Responses
 
-#### Success Response:
-
-##### Status Code : 200 (OK)
-
+#### Success Response
 ```JSON
 {
   "id": "mosip.resident.lostrid",
@@ -613,11 +574,9 @@ request: demographics|N| Demographic data of an Individual| |
   "errors": null
 }
 ```
+**Status Code : 200 (OK)**
 
-#### Failed Response:
-
-##### Status Code : 200 (OK)    
-
+#### Failed Response:  
 ```JSON
 {
   "id": "mosip.resident.lostrid",
@@ -634,6 +593,7 @@ request: demographics|N| Demographic data of an Individual| |
   ]
 }
 ```
+**Status Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -641,7 +601,6 @@ Error Code | Error Message | Error Description
 RES-LOR-001|OTP Validation Failed.
 RES-LOR-002|Data entered does not match.
 RES-LOR-004|No Registered Mobile/email ID found.
-
 
 ## POST /resident/v1/req/update-uin
 This request will authenticate an Individual based on provided OTP and respond with RID after successfully placing update request to Registration Processor. Notification will be sent to phone/email.
@@ -666,7 +625,6 @@ request: individualId| Y | UIN | | 9830872690593682
 request: individualIdType| Y | Allowed Type of Individual ID - VID, UIN | UIN 
 request: otp| Y | OTP | | 
 request: demographics|Y| Demographic data of an Individual| |
-
 
 ### Request Body
 ```JSON
@@ -694,11 +652,9 @@ request: demographics|Y| Demographic data of an Individual| |
 }
 ```
 
-### Responses:
+### Responses
 
-#### Success Response:
-
-##### Status Code : 200 (OK)
+#### Success Response
 ```JSON
 {
   "id": "mosip.resident.updateuin",
@@ -711,10 +667,9 @@ request: demographics|Y| Demographic data of an Individual| |
   "errors": null
 }
 ```
+**Status Code : 200 (OK)**
 
-#### Failed Response:
-
-##### Status Code : 200 (OK)    
+#### Failed Response  
 ```JSON
 {
   "id": "mosip.resident.uin",
@@ -731,6 +686,7 @@ request: demographics|Y| Demographic data of an Individual| |
   ]
 }
 ```
+**Status Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -739,7 +695,6 @@ RES-UIU-001| OTP Authentication Failed.
 RES-UIU-002| Data entered does not match or not valid.
 RES-UIU-004| No Registered Mobile/email ID found.
 RES-UIU-005| Status of UIN Update is UnSuccessful.
-
 
 ## POST /resident/v1/vid
 This request will authenticate an Individual based on provided OTP and will generate VID for the respective UIN.
@@ -765,7 +720,6 @@ request: individualId| Y | UIN | | 9830872690593682
 request: individualIdType| Y | Allowed Type of Individual ID - UIN | UIN 
 request: otp| Y | OTP | | 
 
-
 ### Request Body
 ```JSON
 {
@@ -781,12 +735,11 @@ request: otp| Y | OTP | |
   }
 }
 ```
+**Status Code : 200 (OK)**
 
-### Responses:
+### Responses
 
-#### Success Response:
-
-##### Status Code : 200 (OK)   
+#### Success Response  
 ```JSON
 {
   "id": "mosip.resident.vid",
@@ -799,11 +752,9 @@ request: otp| Y | OTP | |
   "errors": null
 }
 ```
+**Status Code : 200 (OK)**
 
-#### Failed Response:
-
-##### Status Code : 200 (OK)    
-
+#### Failed Response
 ```JSON
 {
   "id": "mosip.resident.vid",
@@ -820,6 +771,7 @@ request: otp| Y | OTP | |
   ]
 }
 ```
+**Status Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -827,7 +779,6 @@ Error Code | Error Message | Error Description
 RES-VID-002| OTP Authentication Failed.
 RES-VID-003| Data entered is not valid.
 RES-VID-004| No Registered Mobile/email ID found.
-
 
 ## PATCH /resident/v1/vid/{vid}
 This request will authenticate an Individual based on provided OTP and will revoke respective VID.
@@ -854,7 +805,6 @@ request: individualId| Y | VID | | 9830872690593682
 request: individualIdType| Y | Allowed Type of Individual ID - VID | VID 
 request: otp| Y | OTP | | 
 
-
 ### Request Body
 ```JSON
 {
@@ -871,11 +821,9 @@ request: otp| Y | OTP | |
 }
 ```
 
-### Responses:
+### Responses
 
-#### Success Response:
-
-##### Status Code : 200 (OK)   
+#### Success Response  
 ```JSON
 {
   "id": "mosip.resident.vidstatus",
@@ -888,9 +836,7 @@ request: otp| Y | OTP | |
 }
 ```
 
-#### Failed Response:
-
-##### Status Code : 200 (OK)    
+#### Failed Response   
 ```JSON
 {
   "id": "mosip.resident.vidstatus",
@@ -907,6 +853,7 @@ request: otp| Y | OTP | |
   ]
 }
 ```
+**Status Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -915,7 +862,6 @@ RES-RID-002| OTP Authentication Failed.
 RES-RID-003| Data entered is not valid.
 RES-RID-004| No Registered Mobile/email ID found.
 RES-RID-005| VID revocation request failed. Please visit the nearest registration center for assistance.
-
 
 ## POST /resident/v1/req/auth-lock
 This request will authenticate an Individual based on provided OTP and will lock provided authentication types.
@@ -942,7 +888,6 @@ request: individualId| Y | UIN | | 9830872690593682
 request: individualIdType| Y | Allowed Type of Individual ID - UIN,VID | UIN 
 request: otp| Y | OTP | | 
 
-
 ### Request Body
 ```JSON
 {
@@ -959,11 +904,9 @@ request: otp| Y | OTP | |
 }
 ```
 
-### Responses:
+### Responses
 
-#### Success Response:
-
-##### Status Code : 200 (OK)   
+#### Success Response  
 ```JSON
 {
   "id": "mosip.resident.authlock",
@@ -976,10 +919,9 @@ request: otp| Y | OTP | |
   "errors": null
 }
 ```
+**Status Code : 200 (OK)**
 
-#### Failed Response:
-
-##### Status Code : 200 (OK)    
+#### Failed Response  
 ```JSON
 {
   "id": "mosip.resident.authlock",
@@ -996,6 +938,7 @@ request: otp| Y | OTP | |
   ]
 }
 ```
+**Status Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -1005,7 +948,6 @@ RES-LOC-002| Data entered is not valid.
 RES-LOC-004| No Registered Mobile/email ID found.
 RES-LOC-005| Locking for the Authentication type(s) is Unsuccessful.
 
-
 ## POST /resident/v1/req/auth-unlock
 This request will authenticate an Individual based on provided OTP and will unlock provided locked authentication types.
 
@@ -1013,7 +955,6 @@ This request will authenticate an Individual based on provided OTP and will unlo
 `https://mosip.io/resident/v1/req/auth-unlock`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -1047,12 +988,9 @@ request: otp| Y | OTP | |
 }
 ```
 
-### Responses:
+### Responses
 
-#### Success Response:
-
-##### Status Code : 200 (OK) 
-
+#### Success Response 
 ```JSON
 {
   "id": "mosip.resident.authunlock",
@@ -1065,10 +1003,9 @@ request: otp| Y | OTP | |
   "errors": null
 }
 ```
+**Status Code : 200 (OK)**
 
-#### Failed Response:
-
-##### Status Code : 200 (OK)    
+#### Failed Response 
 ```JSON
 {
   "id": "mosip.resident.authunlock",
@@ -1085,6 +1022,7 @@ request: otp| Y | OTP | |
   ]
 }
 ```
+**Status Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -1093,7 +1031,6 @@ RES-ULC-001| OTP Authentication Failed.
 RES-ULC-002| Data entered is not Valid.
 RES-ULC-004| No Registered Mobile/email ID found.
 RES-ULC-005| Unlocking for the Authentication type is Unsuccessful.
-
 
 ## POST /resident/v1/req/auth-history
 This request will authenticate an Individual based on provided OTP and respond with auth history. Notification will be sent to phone/email.
@@ -1134,12 +1071,9 @@ request: otp| Y | OTP | |
 }
 ```
 
-### Responses:
+### Responses
 
-#### Success Response:
-
-##### Status Code : 200 (OK)   
-
+#### Success Response
 ```JSON
 {
   "id": "mosip.resident.authhistory",
@@ -1152,10 +1086,9 @@ request: otp| Y | OTP | |
   "errors": null
 }
 ```
+**Status Code : 200 (OK)**
 
-#### Failed Response:
-
-##### Status Code : 200 (OK)    
+#### Failed Response  
 ```JSON
 {
   "id": "mosip.resident.authhistory",
@@ -1172,6 +1105,8 @@ request: otp| Y | OTP | |
   ]
 }
 ```
+**Status Code : 200 (OK)**
+
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------

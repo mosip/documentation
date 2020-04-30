@@ -1,14 +1,25 @@
-# 1. Authentication
+This section contains all the Authentication and Authorization APIs.
+* [Authentication](#authentication)
+	* [Send OTP](#send-otp)
+	* [Authenticate using userID and OTP](#authenticate-using-userid-and-otp)
+	* [Authenticate using username and password](#authenticate-using-username-and-password)
+	* [Authenticate using clientid and secret key](#authenticate-using-clientid-and-secret-key)
+* [Authorization](#authorization)
+	* [Validate token](#validate-token)
+	* [Invalidate token](#invalidate-token)
+* [OTP services](#otp-services)
+	* [Generate OTP](#generate-otp)
+	* [Validate OTP](#validate-otp)
 
-## 1.1 Send OTP
+# Authentication
 
+## Send OTP
 This service sends an OTP to the user. The caller of this service have to send the channel in which the OTP will be sent. Based on the application ID, the corresponding channel's recipient address will be found out and the OTP is send accordingly. Note: At this point of time, no Auth Token will be generated. 
 
 ### Resource URL
-### `POST /v1/authenticate/sendotp`
+`POST /v1/authenticate/sendotp`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | A JSON message will be returned. 
@@ -43,9 +54,10 @@ context|Yes|This shows the purpose of the sending otp like Login,notification et
   "version": "string"
 }
 ```
+
 ### Example Response
 
-Success Response 
+#### Success Response 
 
 ```JSON
 {
@@ -60,10 +72,8 @@ Success Response
 
 ```
 
-Error Response 
-
+#### Error Response 
 1. Invalid Channel: This is the error response in case if the channel is not valid. 
-
 ```JSON
 {
 	"id": "mosip.authentication.sendotp",
@@ -76,11 +86,8 @@ Error Response
 		  }	
 		]
 }
-
 ```
-
 2. Multiple channels not supported: In case, if the caller can send only one channel, then this error will be sent. For example, Pre-Registration module cannot have multiple channels. 
-
 ```JSON
 {
 	"id": "mosip.authentication.sendotp",
@@ -93,13 +100,8 @@ Error Response
 		  }	
 		]
 }
-
 ```
-
-
-
 3. User not found: If the passed is not found in the system. 
-
 ```JSON
 {
 	"id": "mosip.authentication.sendotp",
@@ -112,12 +114,8 @@ Error Response
 		  }	
 		]
 }
-
 ```
-
-
 4. Channel path not found: If the channel's path is not found. For example, if the channel is email and the email ID is not found for that user. 
-
 ```JSON
 {
 	"id": "mosip.authentication.sendotp",
@@ -130,18 +128,16 @@ Error Response
 		  }	
 		]
 }
-
 ```
 
-## 1.2 Authenticate UserId and OTP
+## Authenticate using userID and OTP
 
 This service authenticates the use ID and the OTP. If the authentication is successful, an AuthToken will be sent in the Response header. 
 
 ### Resource URL
-### `POST /v1/authenticate/useridOTP`
+`POST /v1/authenticate/useridOTP`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | The response will be sent in the Response Header and also a JSON message will be returned. 
@@ -152,7 +148,6 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 userid|Yes|This is the userid of the user against which the OTP had been sent. Based on the useridtype, this will vary.| -NA- | M392380
 otp|Yes|This is OTP which is sent to the userid's preferred channel| -NA- | 6473
-
 
 ### Example Request
 ```JSON
@@ -166,11 +161,10 @@ otp|Yes|This is OTP which is sent to the userid's preferred channel| -NA- | 6473
 	}
 }
 ```
+
 ### Example Response
 
-Success Response 
-
-
+#### Success Response 
 ```
 Response Cookie:
 
@@ -190,10 +184,8 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
 
 ```
 
-Error Responses
-
+### Error Responses
 1. Invalid OTP: If the passed OTP is not valid. 
-
 ```JSON
 
 {
@@ -209,10 +201,7 @@ Error Responses
 }
 
 ```
-
-
 2. Expired OTP: If the passed OTP is expired. 
-
 ```JSON
 
 {
@@ -228,15 +217,13 @@ Error Responses
 }
 ```
 
-## 1.3 Authenticate using username and password
-
+## Authenticate using username and password
 This service will authenticate the username and password. 
 
 ### Resource URL
-### `POST /v/1authenticate/useridPwd`
+`POST /v/1authenticate/useridPwd`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | The response will be sent in the Response Header and also a JSON message will be returned. 
@@ -264,8 +251,7 @@ appid|Yes|This is the application ID of the caller of this service. It should be
 ```
 ### Example Response
 
-Success Response 
-
+#### Success Response 
 ```
 Response Cookie:
 
@@ -282,12 +268,9 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
 		"message":"Username and password combination had been validated successfully"
 	}
 }
-
 ```
 
-
-Error Responses
-
+#### Error Responses
 1. Invalid credentials: If the passed credentials is not correct. 
 ```JSON
 
@@ -304,10 +287,8 @@ Error Responses
 }
 
 ```
-
 2. Invalid application ID: If the passed in application is not correct. 
 ```JSON
-
 {
 	"id": "mosip.authentication.useridPwd",
 	"ver": "1.0",
@@ -319,20 +300,16 @@ Error Responses
 		  }	
 		]
 }
-
 ```
 
-
-## 1.4 Authenticate using clientid and secret key
-
+## Authenticate using clientid and secret key
 This service will authenticate the clientid and secret key. When an application try to call any service in the MOSIP system, the call have to be authenticated and authorized. For example, when Pre-registration application calls some master service, the call have to be authenticated first. This call can facilitate the call. 
 The clientid would have provided to the caller application before hand using another procedure. So, before making this call, the caller application have to have the clientid and the secret key.  
 
 ### Resource URL
-### `POST /v1/authenticate/clientidsecretkey`
+`POST /v1/authenticate/clientidsecretkey`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | The response will be sent in the Response Header and also a JSON message will be returned. 
@@ -343,7 +320,6 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 clientid|Yes|This is the client id, provided to the caller application upfront. | -NA- | D72HJDF8
 secretkey|Yes|This is the secret key which was provided to the application corresponding to the clientid| -NA- | JSlj8p789sdfjhlsJKDHFS
-
 
 ### Example Request
 ```JSON
@@ -357,10 +333,10 @@ secretkey|Yes|This is the secret key which was provided to the application corre
 	}
 }
 ```
+
 ### Example Response
 
-Success Response 
-
+#### Success Response 
 ```
 Response Cookie:
 
@@ -377,14 +353,10 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
 		"message":"Clientid and Token combination had been validated successfully"
 	}
 }
-
 ```
 
-
-Error Responses
-
+#### Error Responses
 1. Invalid credentials: If the passed credentials is not correct. 
-
 ```JSON
 {
 	"id": "mosip.authentication.clientidsecretkey",
@@ -397,21 +369,17 @@ Error Responses
 		  }	
 		]
 }
-
 ```
 
+# Authorization
 
-# 2. Authorization
-
-## 2.1 Validate Token
-
+## Validate token
 This service checks the validity of the Auth token.
 
 ### Resource URL
-### `POST /v1/authorize/validateToken`
+`POST /v1/authorize/validateToken`
 
 ### Resource detail
-
 Resource Details | Description
 ------------ | -------------
 Response format | The response will be sent in the Response Header and also a JSON message will be returned. 
@@ -427,10 +395,10 @@ Authorization|Yes|AuthToken passed in the request cookie| | Mosip-TokeneyeyJ0eXA
 Request Cookie:
 Authorization=Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ.-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM
 ```
+
 ### Example Response
 
-Success Response 
-
+#### Success Response 
 ```JSON
 {
 	"id": "mosip.authorize.validatetoken",
@@ -440,14 +408,10 @@ Success Response
 		"message":"Token had been validated successfully"
 	}
 }
-
 ```
 
-
-Error Responses
-
+#### Error Responses
 1. Invalid Token: If the passed token is not correct. 
-
 ```JSON
 {
 	"id": "mosip.authentication.validatetoken",
@@ -460,19 +424,15 @@ Error Responses
 		  }	
 		]
 }
-
 ```
 
-
-## 2.3 Invalidate Token
-
+## Invalidate token
 This service invalidates the token
 
 ### Resource URL
-### `POST /v1/authorize/invalidateToken`
+`POST /v1/authorize/invalidateToken`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | The response will be sent in the Response Cookies and also a JSON message will be returned. 
@@ -488,10 +448,10 @@ Authorization|Yes|AuthToken passed in the request cookie| | eyJ0eXAiOiJKV1QiLCJh
 Request Cookie:
 Authorization=Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ.-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM 
 ```
+
 ### Example Response
 
-Success Response 
-
+#### Success Response 
 ```JSON
 {
 	"id": "mosip.authorize.invalidatetoken",
@@ -501,13 +461,10 @@ Success Response
 		"message":"Token invalidated successfully"
 	}	
 }
-
 ```
 
-Error Responses
-
+#### Error Responses
 1. Empty Cookie: If the passed Cookie is empty. 
-
 ```JSON
 {
 	"id": "mosip.authentication.invalidatetoken",
@@ -520,23 +477,19 @@ Error Responses
 		  }	
 		]
 }
-
 ```
 
+# OTP services
 
-# 3. OTP services
-
-## 3.1 Generate OTP
-
+## Generate OTP
 The OTP Generator component will receive a request to generate OTP, validate if the OTP generation request is from an authorized source, call OTP generator API with the input parameters (Key), receive the OTP from the OTP generator API which is generated based on the OTP generation policy and respond to the source with the OTP.
 
 The OTP Generator can also reject a request from a blocked/frozen account and assign a validity to each OTP that is generated, based on the defined policy
 
 ### Resource URL
-### `POST /v1/otp/generate`
+`POST /v1/otp/generate`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | The response will be sent as a JSON response. 
@@ -558,10 +511,10 @@ Key|Yes|AuthToken passed in the request header| |
 	}
 }
 ```
+
 ### Example Response
 
-Success Response
-
+#### Success Response
 ```JSON
 {
 	"id": "mosip.otp.generateOTP",
@@ -572,14 +525,12 @@ Success Response
 		"status": "GENERATION_SUCCESSFUL"
 	}
 }
-
 ```
 
-Error Responses
+#### Error Responses
 -NA-
 
-## 3.2 Validate OTP
-
+## Validate OTP
 This component facilitates basic validation of an OTP.
 
 This includes: Receiving a request for OTP validation with required input parameters (Key), Validating the pattern of OTP generated based on defined policy, validating if the OTP is active/inactive and responding to the source with a response (Valid/Invalid)
@@ -587,10 +538,9 @@ This includes: Receiving a request for OTP validation with required input parame
 This component also facilitates deletion of every successfully validated OTP when consumed and freezing an account for exceeding the number of retries/wrong input of OTP.
 
 ### Resource URL
-### `POST /v1/otp/validate`
+`POST /v1/otp/validate`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | The response will be sent as a JSON response. 
@@ -614,10 +564,10 @@ otp|Yes|OTP which was sent to the user| -NA- | 849004
 	}
 }
 ```
+
 ### Example Response
 
-Success Response 
-
+#### Success Response 
 ```JSON
 {
 	"id": "mosip.otp.validateOTP",
@@ -628,13 +578,10 @@ Success Response
 		"message": "VALIDATION SUCCESSFUL"
 	}
 }
-
 ```
 
-Error Responses
-
+#### Error Responses
 1. Invalid OTP: If the passed OTP is not correct. 
-
 ```JSON
 {
 	"id": "mosip.authentication.validateOTP",
@@ -647,12 +594,9 @@ Error Responses
 		  }	
 		]
 }
-
 ```
 
-
 2. OTP Expired: If the passed OTP had been expired. 
-
 ```JSON
 {
 	"id": "mosip.authentication.validateOTP",
@@ -665,5 +609,4 @@ Error Responses
 		  }	
 		]
 }
-
 ```
