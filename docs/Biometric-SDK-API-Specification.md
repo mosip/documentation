@@ -4,8 +4,9 @@ This document defines the interface for the Java Library providing the functiona
 API specification version:  **Draft 4 (April, 2020)**
 
 # Quality Check
-* **Signature**
-  `Response<QualityScore> checkQuality(BIR sample, KeyValuePair[] flags)`
+
+##Signature
+`Response<QualityScore> checkQuality(BIR sample, KeyValuePair[] flags)`
 * **Input Parameters**
   * Biometric Image in “Biometric Image Record” format. This could be FIR, IIR etc.
   * Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
