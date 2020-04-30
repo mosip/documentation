@@ -13,7 +13,7 @@ The packet received from the Registration Client goes through various sanity che
 
 A new ID issuance requires an individual to visit a registration center and provide the required information to register himself/herself in MOSIP for the first time.
 
-When a registration officer captures an individual’s information, the Registration Client packages the captured information in the form of encrypted packets and sends it to Registration Processor. After the encrypted packet reaches the Registration Processor, the system tries to find a duplicate using the individual’s information (i.e. demographic and biometric information) in the system (this process is known as Deduplication). If the system does not find any duplicates of the individual’s information, then the system registers the individual and allocates a unique ID and sends his/her ID credential through the country's configured printing and postal service .
+When a registration officer captures an individual’s information, the Registration Client packages the captured information in the form of encrypted packets and sends it to Registration Processor. After the encrypted packet reaches the Registration Processor, the system tries to find a duplicate using the individual’s information (i.e. demographic and biometric information) in the system (this process is known as De-duplication). If the system does not find any duplicates of the individual’s information, then the system registers the individual and allocates a unique ID and sends his/her ID credential through the country's configured printing and postal service .
 
 During the allocation of the Unique Identification Number (UIN), the system also allocates a Virtual Identification Number (VID) to the individual. VID is an alternative to UIN and is a temporary number that can be used for authentications of an individual. The individual can provide the VID instead of UIN to authenticate themselves and protect their UIN from being accessed by someone else. 
 
@@ -47,8 +47,8 @@ When an individual forgets their ID information he/she can find it by providing 
 
 
 # Configurable workflow 
-## Orchestration 
 
+## Orchestration 
 Orchestration is the process of configuring various independent services, which will coordinate and manage to achieve a business goal.
 
 In Registration Processor, there are various independent stages (such as Packet Receiver Stage, Packet Validator Stage, Operator Supervisor and Introducer Validator Stage, Demographic Deduplication Stage, Biometric Deduplication Stage, UIN Allocator Stage, Notification Stage, Printing and Postal Stage, etc.), which will perform their own set of validations or operations. 
@@ -84,7 +84,9 @@ Having multiple workflow increase reusability of stages, readability of workflow
 MOSIP is scalable so that it can handle any kind of processing load or request in the future without disturbing the base architecture. MOSIP infrastructure can handle additional processing request based on the requirement of a country. The architecture is designed in such a way that it is flexible to support scalability and holds the request until the end goal is achieved.
 
 #  Processing of packet
+
 ## Pre-processing validations 
+
 ###  Sanity check 
 When Registration Processor receives a packet, the system performs various sanity checks on the packet, such as:
 
@@ -127,13 +129,15 @@ When a packet is created in Registration Client, the officer or supervisor will 
 In case of biometric authentication, Registration Processor authenticates the officer/supervisor again after receiving the packet from the Registration Client.
 
 ## Processing 
+
 ###  Individual's data validations* 
+
 #### Data quality check
 The system provides a feature to integrate with an SDK to identify and validate the age and gender captured by the registration officer against the photo of the resident. 
 
 This validation helps system to identify the mistake, that are performed by the registration officer. 
 
-_*This is factored for future releases and is not part of current implementation_
+_*This is factored for future releases and is not part of current implementation.*_
  
 #### Biometrics quality check 
 The biometrics captured (face, fingerprint or iris) for an individual is used to authenticate the individual. If the quality of the biometric image captured during registration were low, then authentication for the individual using biometrics will not be accurate.
@@ -143,13 +147,14 @@ Hence, the system provides a feature to integrate with an SDK to validate if the
 #### Doc validation - OCR* 
 When an individual visits the Registration Center to get an ID or update his/her information, the officer manually enters various demographic information for the individual, which might cause a human error. To avoid such issues, the system provides the feature to integrate with an SDK, which validates the fields that are manually entered against the corresponding documents.
 
-_*This is factored for future releases and is not part of current implementation._
+_*This is factored for future releases and is not part of current implementation.*_
 
 ###  Functional validations 
+
 ####  File & document validation 
 
 When the Registration Packets are received from Registration Client, the system checks if all the files listed in the packet are available. If available, the system verifies if the documents required for an individual are present in the packet as per the data captured. In order to perform this validation, the mapping of the data captured and mandatory document required can be configured by the country.
- 
+
 For Example:
 * If name is captured, the country can add a validation for Proof of Identity.
 * If address is captured, the country can add a validation for Proof of Address.
@@ -178,36 +183,33 @@ Deduplication is the process to find a duplicate by comparing the individual’s
 * If the manual adjudicator or ABIS does not find a duplicate, then the system sends the packet for UIN generation.
 
 ###  External system integration 
-_All the below functions can be plugged in by a System Integrator into MOSIP system.  MOSIP provides interfaces for integration._
+_*All the below functions can be plugged in by a System Integrator into MOSIP system.  MOSIP provides interfaces for integration.*_
 
-####  Data verification 
-
+####  Data verification
 Data verification is a process in which the system can verify the data captured during a registration with the data received from an external system to ensure accuracy and consistency. It helps to determine whether data was accurately translated, is complete and supports the interoperability standards.
 
-The System Integrator can plug-in a stage in the workflow, where the stage can communicate with any external system to receive some information and validate it with the information captured at the Registration Center.
+The System Integrator can plug-in a stage in the work flow, where the stage can communicate with any external system to receive some information and validate it with the information captured at the Registration Center.
 
-
-#### Data enrichment 
+#### Data enrichment
 Data enrichment is a value adding process, where external data from multiple sources is added to the existing data sets in MOSIP to enhance the quality and richness of the data.  MOSIP receives some data from the external system in the form of Packet (as per MOSIP Standards). The system has the capability to receive this updated packet from external sources and process it with the packet received from Registration Client.
 
-#### Manual verification for external system data update 
-When there are any discrepancies between the data received from external system vs. the data captured during registration, a country may opt to manually verify the data.  The System Integrator in such case may build a Manual Verification Module for external system data mismatch. 
+#### Manual verification for external system data update
+When there are any discrepancies between the data received from external system vs. the data captured during registration, a country may opt to manually verify the data. The System Integrator in such case may build a Manual Verification Module for external system data mismatch. 
 
-#### Manual adjudication 
-When biometric deduplicates are found in ABIS, the System Integrator can plug-in the Manual Adjudication Stage, which would send the biometric and demographic data of the duplicates to a Manual Adjudicator. The Manual Adjudicator now can perform various validations on the duplicate data and inform the MOSIP system if the two records are duplicates or not.
+#### Manual adjudication
+When biometric duplicates are found in ABIS, the System Integrator can plug-in the Manual Adjudication Stage, which would send the biometric and demographic data of the duplicates to a Manual Adjudicator. The Manual Adjudicator now can perform various validations on the duplicate data and inform the MOSIP system if the two records are duplicates or not.
 
 #### ABIS integration 
-The MOSIP System, in-order to perform biometric deduplication (validate if there are no biometric duplicates in system), integrates with an ABIS.
+The MOSIP System, in-order to perform biometric de-duplication (validate if there are no biometric duplicates in system), integrates with an ABIS.
 
 ABIS Middleware which is designed by MOSIP and MOSIP Middleware designed by ABIS is used to communicate between MOSIP system and ABIS.
 
 ###  ID issuance 
-####  Identity generation - UIN generation and association
 
+####  Identity generation - UIN generation and association
 After all the business validations are completed, the system gets a Unique Identification Number (UIN) from the UIN generation API and allocates the UIN by sending the new UIN number and the individual's information to ID Repository. 
 
-#### Store/update ID Repository 
-
+#### Store/update ID Repository
 After all the business validations are performed for a new ID issuance or updating an individual’s information, this information is sent to ID Repository for storing or updating the information respectively. 
 
 ####  Data extractor for ID authentication 
@@ -217,11 +219,11 @@ The system that extracts the latest copy of an individual’s data after the ind
 When any transaction is performed in MOSIP system or the packet fails any validations or any system level exception happens, then the same is captured as part of MOSIP audit trails, which can be further used for reporting/analytics as required.
 
 ##  Post-processing 
-###  Notification 
 
-Notification (SMS/Email as configured), which is received by an individual is the final step of all the life cycle processes. System sends a notification to the individual for various life cycle scenarios such as, successful or un-successful issuance of UIN, update of UIN data, activate or deactivate UIN, finding a lost UIN, etc. using templates defined in the system.
+###  Notification
+Notification (SMS/Email as configured), which is received by an individual is the final step of all the life cycle processes. System sends a notification to the individual for various life cycle scenarios such as, successful or unsuccessful issuance of UIN, update of UIN data, activate or deactivate UIN, finding a lost UIN, etc. using templates defined in the system.
  
-### Print & post 
+### Print & post
 When an individual’s ID is created or an individual’s data is updated, the system sends the individual’s physical ID credential to the individual’s registered address. 
 
 This feature is the post processing integration point for Registration Processor, where a country can generate the PDF of the individual’s ID and sends it to the country’s configured printing and postal service provider. The printing and postal service provider in turn would print the physical ID credential and deliver it to the individual’s registered address.
@@ -229,6 +231,7 @@ This feature is the post processing integration point for Registration Processor
 
 ###  Packet processing status 
 After the Registration Client sends the packet to Registration Processor, it starts processing the packet. Registration Processor enables the Registration Client to know the processing status of such packets. The probable packet statuses are as follows:
+
 * PROCESSING: The packet is under processing.
 * PROCESSED: The packet has been processed and Registration Client deletes the packet from its storage location.
 * RESEND: Initial validation like virus scan and packet integrity check have failed for the packet for a configured number of times and Registration Client needs to resend the packet for processing.

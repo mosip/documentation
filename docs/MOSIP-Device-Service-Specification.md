@@ -90,7 +90,7 @@ EMC compliance | FCC class A or equivalent | FCC class A or equivalent
 Operating Temperature\*\* |	0 - 50 C | -30 -to 50 C
 Liveness detection\*\*\* | As per IEEE 2790 | As per IEEE 2790
 Preview | > 3 FPS JPEG lossless frames with NFIQ 2 score superimposed | None
-Image Format | JPEG 2000 lossless | JPEG2000 lossless
+Image Format | JPEG 2000 lossless | JPEG 2000 lossless
 Quality Score | NFIQ 2 | NFIQ 1
 FTM | L0 - Use host based security, L1 - FTM supported security | L1 - FTM supported security, L2 - with tamper protection.
 
@@ -136,7 +136,7 @@ Minimum Resolution | 1080 Pixels at 2.8 mm with 110 degree view | 1080 Pixels at
 Skin Tone | All | All
 Operation Temperature\* | -30 C to +50 C | -30 C to +50 C
 EMC compliance | FCC Class A or equivalent | FCC Class A or equivalent
-Image Specification | ISO/IEC 19794 - 5 | ISO/IEC 19794 - 5
+Image Specification | ISO/IEC 19794-5 | ISO/IEC 19794-5
 Exception Image Specification | Full Frontal with FACE features, two palms next to the face, waist up photo. 6X4 mm	| NA
 Image quality | ICAO - Full frontal image, +/- 5 degrees rotation, 24 bit RGB, white background, 35 mm width, 45 mm height | 
 Image format | JPEG 2000 lossless | JPEG 2000 lossless
