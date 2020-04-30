@@ -1,48 +1,41 @@
 # Introduction
-
 This document defines the interface for the Java Library providing the functional support for processing biometrics.
 
 API specification version:  **Draft 4 (April, 2020)**
 
 # Quality Check
-
-* **Signature**  
-
-`Response<QualityScore> checkQuality(BIR sample, KeyValuePair[] flags)`
-
+* **Signature**
+  `Response<QualityScore> checkQuality(BIR sample, KeyValuePair[] flags)`
 * **Input Parameters**
   * Biometric Image in “Biometric Image Record” format. This could be FIR, IIR etc.
   * Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
-
 * **Output Parameters**
   * QualityScore object with Quality score and Analytics. The quality score is on a scale of 100 - Higher is better.
-
 * **Errors/Exceptions**
   * Unsupported biometric type
   * Unsupported image format
   * Processing error
 
 ## Behavior
+* **Fingerprint**
+  * The biometric image record is a Fingerprint Image Record. The FIR structure is explained in a later section
+  * The image is a jpeg2000 format lossless image
+  * The quality score will be using NFIQ2 for 500 dpi images and NFIQ for other densities
+  * The analytics data returned can have information on finger index, liveness, etc.
+* **Iris**
+  * The biometric image record is a Iris Image Record. The IIR structure is explained in a later section
+  * The image is a jpeg2000 format lossless image
+  * The quality score will be on a scale of 100 and will factor focus, blur, eyelid position etc.
+  * The analytics data returned can have information on eye index, eyelid position, iris obscuration, gaze angle etc.
+* **Face**
+  * The biometric image record is a Face Image Record. The FaceIR structure is explained in a later section
+  * The image is a jpeg2000 format lossless image
+  * The quality score will be on a scale of 100 and will factor ICAO standards
+  * The analytics data returned can have information on tilt, missing landmarks, lighting etc.
 
-### Fingerprint
-* The biometric image record is a Fingerprint Image Record. The FIR structure is explained in a later section
-* The image is a jpeg2000 format lossless image
-* The quality score will be using NFIQ2 for 500 dpi images and NFIQ for other densities
-* The analytics data returned can have information on finger index, liveness, etc.
-
-### Iris
-* The biometric image record is a Iris Image Record. The IIR structure is explained in a later section
-* The image is a jpeg2000 format lossless image
-* The quality score will be on a scale of 100 and will factor focus, blur, eyelid position etc.
-* The analytics data returned can have information on eye index, eyelid position, iris obscuration, gaze angle etc.
-
-### Face
-* The biometric image record is a Face Image Record. The FaceIR structure is explained in a later section
-* The image is a jpeg2000 format lossless image
-* The quality score will be on a scale of 100 and will factor ICAO standards
-* The analytics data returned can have information on tilt, missing landmarks, lighting etc.
-
-**_Note:_** For new biometrics that come up the quality check could be different. The quality score could be a single or composite score in the future.
+{% hint style="info" %}
+For new biometrics that come up the quality check could be different. The quality score could be a single or composite score in the future.
+{% endhint %}
 
 # Matcher
 
