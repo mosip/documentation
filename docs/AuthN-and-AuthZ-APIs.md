@@ -22,18 +22,18 @@ This service sends an OTP to the user. The caller of this service have to send t
 ### Resource details
 Resource Details | Description
 ------------ | -------------
-Response format | A JSON message will be returned. 
-Requires Authentication | no
+Response format | JSON Message
+Requires Authentication | No
 
 ### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
-userid|Yes|This is the userid of the user. Based on the useridtype, this will vary.| -NA- | M392380
-otpchannel|Yes|This is the channel in which the OTP will be sent. It is an array of the enumeration {"EMAIL", "MOBILE"}. If the channel is not found, ChannelNotSupported error will be sent back| -NA- | MOBILENUMBER
-useridtype|Yes|This field is the user id type. It should be one the {"UIN", "USERID"}. Based on the combination of "appid" and "useridtype" the system identifies from which system to pickup the channel's recipient address| -NA- | USERID
-appid|Yes|This is the application ID of the caller of this service. It should be on of the {"PREREGISTRATION", "REGISTRATIONCLIENT", "REGISTRATIONPROCESSOR", "IDA"}| -NA- | PREREGISTRATION
-templateVariables|No|This is the map of custom template variables|-NA-|{"UIN":"2530192395"}
-context|Yes|This shows the purpose of the sending otp like Login,notification etc|"auth-otp" for default OTP|auth-otp,auth-login-otp
+userid | Yes | This is the userid of the user. Based on the useridtype, this will vary.| NA | M392380
+otpchannel | Yes | This is the channel in which the OTP will be sent. It is an array of the enumeration {"EMAIL", "MOBILE"}. If the channel is not found, ChannelNotSupported error will be sent back| NA | MOBILENUMBER
+useridtype | Yes | This field is the user id type. It should be one the {"UIN", "USERID"}. Based on the combination of "appid" and "useridtype" the system identifies from which system to pickup the channel's recipient address | NA | USERID
+appid | Yes | This is the application ID of the caller of this service. It should be on of the {"PREREGISTRATION", "REGISTRATIONCLIENT", "REGISTRATIONPROCESSOR", "IDA"} | NA | PREREGISTRATION
+templateVariables | No| This is the map of custom template variables | NA | {"UIN":"2530192395"}
+context | Yes | This shows the purpose of the sending otp like Login, notification, etc. | "auth-otp" for default OTP| auth-otp, auth-login-otp
 
 ### Example Request
 ```JSON
@@ -140,14 +140,14 @@ This service authenticates the use ID and the OTP. If the authentication is succ
 ### Resource details
 Resource Details | Description
 ------------ | -------------
-Response format | The response will be sent in the Response Header and also a JSON message will be returned. 
-Requires Authentication | no
+Response format | Response Header and JSON Message 
+Requires Authentication | No
 
 ### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
-userid|Yes|This is the userid of the user against which the OTP had been sent. Based on the useridtype, this will vary.| -NA- | M392380
-otp|Yes|This is OTP which is sent to the userid's preferred channel| -NA- | 6473
+userid | Yes | This is the userid of the user against which the OTP had been sent. Based on the useridtype, this will vary. | NA | M392380
+otp | Yes| This is OTP which is sent to the userid's preferred channel | NA | 6473
 
 ### Example Request
 ```JSON
@@ -226,15 +226,15 @@ This service will authenticate the username and password.
 ### Resource details
 Resource Details | Description
 ------------ | -------------
-Response format | The response will be sent in the Response Header and also a JSON message will be returned. 
-Requires Authentication | no
+Response format | Response Header and JSON Message
+Requires Authentication | No
 
 ### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
-username|Yes|This is the username of the user. | -NA- | M392380
-password|Yes|This is the password of the user.| -NA- | ADGDAGADFF
-appid|Yes|This is the application ID of the caller of this service. It should be on of the {"PREREGISTRATION", "REGISTRATIONCLIENT", "REGISTRATIONPROCESSOR", "IDA"}| -NA- | PREREGISTRATION
+username | Yes | This is the username of the user. | NA | M392380
+password | Yes | This is the password of the user.| NA | ADGDAGADFF
+appid | Yes | This is the application ID of the caller of this service. It should be on of the {"PREREGISTRATION", "REGISTRATIONCLIENT", "REGISTRATIONPROCESSOR", "IDA"} | NA | PREREGISTRATION
 
 ### Example Request
 ```JSON
@@ -312,14 +312,14 @@ The clientid would have provided to the caller application before hand using ano
 ### Resource details
 Resource Details | Description
 ------------ | -------------
-Response format | The response will be sent in the Response Header and also a JSON message will be returned. 
-Requires Authentication | no
+Response format | Response Header and JSON Message
+Requires Authentication | No
 
 ### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
-clientid|Yes|This is the client id, provided to the caller application upfront. | -NA- | D72HJDF8
-secretkey|Yes|This is the secret key which was provided to the application corresponding to the clientid| -NA- | JSlj8p789sdfjhlsJKDHFS
+clientid|Yes|This is the client id, provided to the caller application upfront. | NA | D72HJDF8
+secretkey|Yes|This is the secret key which was provided to the application corresponding to the clientid| NA | JSlj8p789sdfjhlsJKDHFS
 
 ### Example Request
 ```JSON
@@ -435,8 +435,8 @@ This service invalidates the token
 ### Resource details
 Resource Details | Description
 ------------ | -------------
-Response format | The response will be sent in the Response Cookies and also a JSON message will be returned. 
-Requires Authentication | no
+Response format | Response Cookie and JSON Message
+Requires Authentication | No
 
 ### Parameters
 Name | Required | Description | Default Value | Example
@@ -492,8 +492,8 @@ The OTP Generator can also reject a request from a blocked/frozen account and as
 ### Resource details
 Resource Details | Description
 ------------ | -------------
-Response format | The response will be sent as a JSON response. 
-Requires Authentication | no
+Response format | JSON Message 
+Requires Authentication | No
 
 ### Parameters
 Name | Required | Description | Default Value | Example
@@ -528,7 +528,7 @@ Key|Yes|AuthToken passed in the request header| |
 ```
 
 #### Error Responses
--NA-
+NA
 
 ## Validate OTP
 This component facilitates basic validation of an OTP.
@@ -543,14 +543,14 @@ This component also facilitates deletion of every successfully validated OTP whe
 ### Resource details
 Resource Details | Description
 ------------ | -------------
-Response format | The response will be sent as a JSON response. 
+Response format | JSON Message
 Requires Authentication | no
 
 ### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
-Key|Yes|AuthToken passed in the request header| -NA- | 9820173642
-otp|Yes|OTP which was sent to the user| -NA- | 849004
+Key|Yes|AuthToken passed in the request header| NA | 9820173642
+otp|Yes|OTP which was sent to the user| NA | 849004
 
 ### Example Request
 ```JSON

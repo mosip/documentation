@@ -1,6 +1,6 @@
 This section details out all Resident Service REST APIs
 
-* [OTP Request API](post-resident-v-1-req-otp)
+* [OTP Request API](#post-resident-v-1-req-otp)
 * [Service Request Status Check API](#post-resident-v-1-rid-check-status)
 * [e-UIN API](#post-resident-v-1-req-euin)
 * [Re-print UIN API](#post-resident-v-1-req-print-uin)
@@ -10,19 +10,18 @@ This section details out all Resident Service REST APIs
 * [VID Generate API](#post-resident-v-1-vid)
 * [VID Revoke API](#patch-resident-v-1-vid-vid)
 * [Lock Authentication Type API](#post-resident-v-1-req-auth-lock)
-* [UnLock Authentication Type API](#post-resident-v-1-req-auth-unlock)
+* [Unlock Authentication Type API](#post-resident-v-1-req-auth-unlock)
 * [Authentication History API](#post-resident-v-1-req-auth-history)
 
 # Resident Services APIs
 
 ## POST /resident/v1/req/otp
-This service enables Individual to request for an OTP. The OTP will be send via registered message/email to the Individual. This OTP can then be used to authenticate in other resident services.
+This service enables the resident to request for an OTP. The OTP will be send via registered message/email to the resident. This OTP can then be used to authenticate in other resident services.
 
 ### Resource URL 
 `https://mosip.io/resident/v1/req/otp`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON

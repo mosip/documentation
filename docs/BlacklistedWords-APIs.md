@@ -1,31 +1,28 @@
 This section details about the service APIs for the BlacklistedWords 
 
 
-* [BlacklistedWords Master API](#BlacklistedWords-master-api)
+* [BlacklistedWords Master API](#blacklistedwords-master-api)
 
 
 # BlacklistedWords Master API
-
 * [POST /blacklistedwords](#post-blacklistedwords)
 * [PUT /blacklistedwords](#put-blacklistedwords)
-* [GET /blacklistedwords/{langcode}](#get-blacklistedwordslangcode)
-* [DELETE /blacklistedwords/{word}](#delete-blacklistedwordsword)
-* [GET /blacklistedwords/all](#get-blacklistedwordsall)
-* [PUT /blacklistedwords/details](#put-blacklistedwordsdetails)
-* [POST /blacklistedwords/words](#post-blacklistedwordswords)
-* [POST /blacklistedwords/filtervalues](#post-blacklistedwordsfiltervalues)
-* [POST /blacklistedwords/search](#post-blacklistedwordssearch)
+* [GET /blacklistedwords/{langcode}](#get-blacklistedwords-langcode)
+* [DELETE /blacklistedwords/{word}](#delete-blacklistedwords-word)
+* [GET /blacklistedwords/all](#get-blacklistedwords-all)
+* [PUT /blacklistedwords/details](#put-blacklistedwords-details)
+* [POST /blacklistedwords/words](#post-blacklistedwords-words)
+* [POST /blacklistedwords/filtervalues](#post-blacklistedwords-filtervalues)
+* [POST /blacklistedwords/search](#post-blacklistedword-ssearch)
 
 
 ## POST /blacklistedwords
-
-This service will create a blacklistedword which will be used in the MOSIP platform. 
+This service will create a blacklisted word which will be used in the MOSIP platform. 
 
 ### Resource URL
-### `POST /blacklistedwords`
+`POST /blacklistedwords`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -54,6 +51,7 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -73,34 +71,16 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
-### Response codes
+**Response code: 200 Ok**
 
-201
-
-Description: Created
-
-404
-
-Description: Not Found
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
------
 
 ## PUT /blacklistedwords
 This service will update the blacklisted word which is used in the MOSIP platform. 
 
 ### Resource URL
-### `PUT /blacklistedwords`
+`PUT /blacklistedwords`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -150,35 +130,15 @@ word |Yes |blacklisted word ||
   "version": "string"
 }
 ```
-### Response codes
+**Response code: 200 Ok**
 
-201
-
-Description: Created
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404 
-
-Description: Not Found
-
-
------
 ## GET /blacklistedwords/{langcode}
-
 This service will provides the service for the List of blacklisted words based on the passed language code. 
 
 ### Resource URL
-### `GET /blacklistedwords/{langcode}`
+`GET /blacklistedwords/{langcode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -214,35 +174,15 @@ langcode|Yes| language code ||
   "version": "string"
 }
 ```
-### Response codes
+**Response code: 200 Ok**
 
-200
-
-Description: Success
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not Found
-
------
 ## DELETE /blacklistedwords/{word}
-
 This service will provides the service to delete the blacklisted word. 
 
-
 ### Resource URL
-### `DELETE /blacklistedwords/{word}`
+`DELETE /blacklistedwords/{word}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -271,35 +211,15 @@ word | Yes | blacklisted word to be deleted ||
   "version": "string"
 }
 ```
-### Response codes
+**Response code: 200 Ok**
 
-200
-
-Description: Success
-
-204
-
-Description: No Content
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-----
 ## GET /blacklistedwords/all 
-
 This service will provides the service for the List of blacklistedwords. 
 
-
 ### Resource URL
-### `GET /blacklistedwords/all`
+`GET /blacklistedwords/all`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -344,40 +264,15 @@ sortBy | optional | sort the requested data based on param value | createdDateTi
   "version": "string"
 }
 ```
-### Response codes
-
-200
-
-Description: Success
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not found
-
-500
-
-Description: Error occured while retrieving blacklisted words
-
-------
+**Response code: 200 Ok**
 
 ## PUT /blacklistedwords/details
-
 This service will update the blacklisted word details except the word itself. 
 
-
 ### Resource URL
-### `PUT /blacklistedwords/details`
+`PUT /blacklistedwords/details`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -406,6 +301,7 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -425,39 +321,15 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
-### Response codes
-
-200
-
-Description: Success
-
-201
-
-Description: Created
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404 
-
-Description: Not Found
-
-----
+**Response code: 200 Ok**
 
 ## POST /blacklistedwords/words
-
 This service will validate list of words if they are blacklisted or not. 
 
 ### Resource URL
-### `POST /blacklistedwords/words`
+`POST /blacklistedwords/words`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -496,31 +368,9 @@ blacklisted words | Yes | blacklisted words to be validated  ||
   "errors": null
 }
 ```
-### Response Codes
+**Response code: 200 Ok**
 
-200
-
-Description: Success
-
-201
-
-Description: Created
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not found
-
-----
-
-## Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-007 | Error occurred while fetching Blacklisted words | Fetch Issue
@@ -529,14 +379,12 @@ KER-MSD-070 | Error occurred while inserting Blacklisted words | Insertion Issue
 KER-MSD-105 | Error occurred while updating Blacklisted Word | Update Issue
 KER-MSD-106 | Error occurred while deleting Blacklisted Word | Deletion Issue
 
-----
-
 ## POST /blacklistedwords/filtervalues
 
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
 ### Resource URL
-### `POST /blacklistedwords/filtervalues`
+`POST /blacklistedwords/filtervalues`
 
 ### Resource details
 
@@ -606,31 +454,14 @@ languagecode | Yes | Language code in Language code in ISO 639-2 format | |
   "version": "string"
 }
 ```
-### Response codes
-200
-
-Description: Success
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not found
-
-----
+**Response code: 200 Ok**
 
 ## POST /blacklistedwords/search
 
 This service is for the blacklisted words search functionality. All the filter parameters are passed and the blacklisted words are searched and the matching results are returned. 
 
 ### Resource URL
-### `POST /blacklistedwords/search`
+`POST /blacklistedwords/search`
 
 ### Resource details
 
@@ -655,7 +486,6 @@ sorttype| This should be either of ['ASC','DESC']| | ASC
 pagination|The pagination parameter object| |
 pageStart|This is the start index | 0 | 10
 pageFetch| This is the amount of records to be fetched | 10 | 10
-
 
 ### Example Request
 ```JSON
@@ -720,3 +550,4 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
   "version": "string"
 }
 ```
+**Response code: 200 Ok**
