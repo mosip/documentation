@@ -33,102 +33,85 @@ API specification version:  **Draft 4 (April, 2020)**
   * The image is a jpeg2000 format lossless image
   * The quality score will be on a scale of 100 and will factor ICAO standards
   * The analytics data returned can have information on tilt, missing landmarks, lighting etc.
-
 {% hint style="info" %}
 For new biometrics that come up the quality check could be different. The quality score could be a single or composite score in the future.
 {% endhint %}
 
 # Matcher
 
-* **Signature**  
-
+## Signature
 `Response<MatchDecision[]> match(BIR sample, BIR[] gallery, KeyValuePair[] flags)`
-
 * **Input Parameters**
   * Sample Input Image Record (1) - This is a Biometric Image Record with metadata and image data. This is the freshly received input which needs to be matched.
   * Match List of Image Records (n) - This is the set of biometrics on record that the input images needs to be matched against. The smaller this list the better the performance. Also there will be outer limits to the size of this list based on the library used.
   * Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
-
-**_Note:_** One of the example for the behaviour is threshold for match using which the SDK can take a decision.
-
 * **Output Parameters**
   * List of Decision object with Match decision and Analytics.
   * Each Decision object will contain a match - yes/no decision and an Analytics object with key value pairs
-
 * **Errors/Exceptions**
   * Unsupported biometric type
   * Unsupported image format
   * Mismatch in biometric types (sample to record)
   * Mixed biometric types (mix of types in the on records list)
   * Processing error
+{% hint style="info" %}
+One of the example for the behaviour is threshold for match using which the SDK can take a decision.
+{% endhint %}
 
 ## Behavior
-
-### Fingerprint
-* The biometric record will have a jpeg2000 format lossless image or minutiae in an ISO template (FMR).
-* The on record biometrics will be jpeg200 format lossless images or biometric extracts tagged to a specific extractor.
-* Best matches are provided for an image to image match. The sample and on records data are both images. The matcher uses its own extraction algorithm on the images to be compared.
-* In case the sample is not an image but minutiae (FMR) then the match accuracy and efficacy might be lower as the extraction templates and algorithms might not be the same
-* In case the on record extract is a format that the matcher does not understand the match will not happen. Also if the comparison is between two extracts (Minutiae) the False Rejection and False Acceptance cases might be high
-* A typical 1 : n match is used when comparing one finger received to a set of fingers (upto 10) on record for that person or a limited set of people (upto 10 per person).
-* The match decision will return a yes/no and optional anaytics with details such a confidence level.
-
-### Iris
-* Input and on record images are jpeg2000 format lossless images or matchers own extract as provided by the extarctor API
-* The matcher uses its own algorithm to perform extraction, segmentation and identifying patterns on the images being compared.
-* Typical comparisons are 1 : 2 for a person and 1 : n for multiple people. (deduplication scenario)
-* The match decision will return a yes/no and optional anaytics with details such a confidence level.
-
-### Face
-* Input and on record images are jpeg2000 format lossless images or matchers own extract as provided by the extarctor API
-* The matcher uses its own algorithm to perform extraction, segmentation and identifying landmarks on the images being compared.
-* Typical comparisons are 1 : 1 for one person and 1 : n for multiple people (deduplication scenario)
-* The match decision will return a yes/no and optional anaytics with details such a confidence level.
+* **Fingerprint**
+  * The biometric record will have a jpeg2000 format lossless image or minutiae in an ISO template (FMR).
+  * The on record biometrics will be jpeg200 format lossless images or biometric extracts tagged to a specific extractor.
+  * Best matches are provided for an image to image match. The sample and on records data are both images. The matcher uses its own extraction algorithm on the images to be compared.
+  * In case the sample is not an image but minutiae (FMR) then the match accuracy and efficacy might be lower as the extraction templates and algorithms might not be the same
+  * In case the on record extract is a format that the matcher does not understand the match will not happen. Also if the comparison is between two extracts (Minutiae) the False Rejection and False Acceptance cases might be high
+  * A typical 1 : n match is used when comparing one finger received to a set of fingers (upto 10) on record for that person or a limited set of people (upto 10 per person).
+  * The match decision will return a yes/no and optional anaytics with details such a confidence level.
+* **Iris**
+  * Input and on record images are jpeg2000 format lossless images or matchers own extract as provided by the extarctor API
+  * The matcher uses its own algorithm to perform extraction, segmentation and identifying patterns on the images being compared.
+  * Typical comparisons are 1 : 2 for a person and 1 : n for multiple people. (deduplication scenario)
+  * The match decision will return a yes/no and optional anaytics with details such a confidence level.
+* **Face**
+  * Input and on record images are jpeg2000 format lossless images or matchers own extract as provided by the extarctor API
+  * The matcher uses its own algorithm to perform extraction, segmentation and identifying landmarks on the images being compared.
+  * Typical comparisons are 1 : 1 for one person and 1 : n for multiple people (deduplication scenario)
+  * The match decision will return a yes/no and optional anaytics with details such a confidence level.
 
 # Extractor
 
-* **Signature**
-
+## Signature
 `Response<BIR> extractTemplate(BIR sample, KeyValuePair[] flags)`
-
 * **Input Parameters**
   * Biometric Image in “Biometric Image Record” format. This could be FIR, IIR, FaceIR etc.
   * Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
-
 * **Output Parameters**
   * Biometric Extract Record in the form of FMR or a proprietary structure. The extract also contains a quality score.
-
 * **Errors/Exceptions**
   * Unsupported biometric type
   * Unsupported image format
   * Processing error
 
 ## Behavior
-
-### Fingerprint
-* The extractor will extract either an ISO template FMR or extract a proprietary representation that can give better results. The extract record will be marked with the format and any additional metadata needed.
-
-### Iris
-* Currently there are no known IRIS extraction standards. Any template extracted can be consumed only by a corresponding matcher.
-
-### Face
-* Face analysis yields landmarks on face and these are typically stored in proprietary formats. Any template extracted can be used by a corresponding matcher.
-
-**_Note:_** For non fingerprint biometrics characteristics and patterns and landmarks might be identified and stored in a custom format. This format will be proprietary to each extractor and can be only consumed by its corresponding matcher. The extract will also contain meta information about the extractor and the version of the algorithm it uses and any other assumption it has made in the process of extraction that can be useful during matching.
+* **Fingerprint**
+  * The extractor will extract either an ISO template FMR or extract a proprietary representation that can give better results. The extract record will be marked with the format and any additional metadata needed.
+* **Iris**
+  * Currently there are no known IRIS extraction standards. Any template extracted can be consumed only by a corresponding matcher.
+* **Face**
+  * Face analysis yields landmarks on face and these are typically stored in proprietary formats. Any template extracted can be used by a corresponding matcher.
+{% hint style="info" %}
+For non fingerprint biometrics characteristics and patterns and landmarks might be identified and stored in a custom format. This format will be proprietary to each extractor and can be only consumed by its corresponding matcher. The extract will also contain meta information about the extractor and the version of the algorithm it uses and any other assumption it has made in the process of extraction that can be useful during matching.
+{% endhint %}
 
 # Segmenter
 
-* **Signature**
-
+## Signature
 `Response<BIR[]> segment(BIR sample, KeyValuePair[] flags)`
-
 * **Input Parameters**
   * Biometric Image in “Biometric Image Record” format. This could be FIR, IIR, FaceIR etc.
   * Control Flags is an optional list of name value pairs that can be used to configure the behavior of the library.
-
 * **Output Parameters**
   * List of Biometric Image Record that contains the individual biometrics
-
 * **Errors/Exceptions**
   * Unsupported biometric type
   * Unsupported image format
@@ -136,22 +119,19 @@ For new biometrics that come up the quality check could be different. The qualit
 
 ## Behavior
 
-### Fingerprint
-* Input will contain unsegmented image such as left slap or right slap or two thumbs
-* Output will be biometrics of each finger present in the input image
-
-### Iris
-* Input will contain unsegmented image such as both eyes
-* Output will be biometrics of each eye present in the input image
-
-### Face
-* Not applicable at present
-
-**_Note:_** The segmenter will identify the individual fingers present.
-
+* **Fingerprint**
+  * Input will contain unsegmented image such as left slap or right slap or two thumbs
+  * Output will be biometrics of each finger present in the input image
+* **Iris**
+  * Input will contain unsegmented image such as both eyes
+  * Output will be biometrics of each eye present in the input image
+* **Face**
+  * Not applicable at present
+{% hint style="info" %}
+The segmenter will identify the individual fingers present.
+{% endhint %}
 
 # Biometric Image Record (BIR) Formats
-
 Biometrics data is exchanged as per formats defined in [Biometric Data Specification](Biometric-Data-Specification.md). 
 
 # Quality Score Object
@@ -163,9 +143,7 @@ Graded score on a scale of 100. This is an unsigned float that represents a % an
 ## Analytics
 List of name value pairs that can be used to convey additional information. The values filled are specific to the implementing library. This could contain information about the aspects where quality is failing for e.g. ICAO compliance for tilt or lighting. In case of matches it could contain information like the NIST score, the algorithm used for matching and more.
 
-
 # Appendix A - Java API Specifications
-
 ```java
 class Response<T> {
 	Integer statusCode;
@@ -304,7 +282,6 @@ interface IBioApi
 The above code snippets are available in - [CBEFF-util](https://github.com/mosip/commons/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/cbeffutil) and [Bio API](https://github.com/mosip/commons/tree/master/kernel/kernel-core/src/main/java/io/mosip/kernel/core/bioapi)
 
 # Status Codes And Messages
-
 Status Code	|Status Message	|Scenario
 ----- |----- |-----
 2XX (range 200 to 299)	|OK |When everything is Okay
