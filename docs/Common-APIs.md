@@ -4360,7 +4360,7 @@ KER-WKDS-003 |	No working/non working day data found | No Data present in Workin
 # Exceptional holidays
 * [GET /exceptionholidays/{registrationCenterId}/{languagecode}](#get-exceptionholidays-registrationcenterid-languagecode)
 
-### GET /exceptionholidays/{registrationCenterId}/{languagecode}
+## GET /exceptionholidays/{registrationCenterId}/{languagecode}
 This service returns the exceptional holidays of a particular registration center. 
 
 ### Resource URL
