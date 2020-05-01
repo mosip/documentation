@@ -1,4 +1,4 @@
-This page represents the Device type and Device subtype API's.
+This page contains detail about the Device type and Device subtype API's.
 * [Device Types](#device-types)
 * [Device Subtypes](#device-subtypes)
 
@@ -301,7 +301,7 @@ KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 * [PUT /devicesubtypes](#put-devicesubtypes)
 * [DELETE /devicesubtypes/{code}](#delete-devicesubtypes-code)
 	
-# POST /devicesubtypes
+## POST /devicesubtypes
 This service will create the Device Subtypes which are used in the MOSIP platform. 
 
 ### Resource URL

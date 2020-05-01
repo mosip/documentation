@@ -1,4 +1,4 @@
-
+This page contains detail about the Device Provider Management API's.
 * [Device Providers](#device-providers)
 * [Foundational Trust Providers](#foundational-trust-providers)
 * [Devices](#devices)
@@ -12,9 +12,7 @@
 This service creates a device service provider in the device provider table as well as a record in the device provider history table.
 
 ### Resource URL
-`POST /deviceprovider`
-
-`https://mosip.io/v1/masterdata/deviceprovider`
+`POST https://{base_url}/v1/masterdata/deviceprovider`
 
 ### Resource details
 Resource Details | Description
@@ -100,12 +98,11 @@ ADM-DPM-010 | Mandatory input parameter is missing | If any mandatory input para
 ADM-DPM-011 | Device Provider already exist | If the Device provider details already exist
 ADM-DPM-012 | Error occurred while registering a Device Provider | If there an error from DB while storing details of Device Provider
 
-
 ## PUT /deviceprovider
 This service updates a device service provider in the device provider table as well as creates a record in the device provider history table.
 
 ### Resource URL
-`PUT /deviceprovider`
+`PUT https://{base_url}/v1/masterdata/deviceprovider`
 
 ### Resource details
 Resource Details | Description
@@ -201,7 +198,7 @@ ADM-DPM-014 | Error occurred while registering a Device Provider | If there an e
 This service creates a foundational trust provider. 
 
 ### Resource URL
-`POST /foundationaltrustprovider`
+`POST https://{base_url}/v1/masterdata/foundationaltrustprovider`
 
 ### Resource details
 Resource Details | Description
@@ -295,7 +292,7 @@ ADM-DPM-017 | Error occurred while registering a Foundational Trust Provider | I
 This service updates a foundational trust provider in the foundational trust provider table as well as creates a record in the foundational trust provider history table.
 
 ### Resource URL
-`PUT /foundationaltrustprovider`
+`PUT https://{base_url}/v1/masterdata/foundationaltrustprovider`
 
 ### Resource details
 Resource Details | Description
@@ -385,19 +382,20 @@ KER-ATH-401 | Authentication Failed | If no role/invalid token is detected
 ADM-DPM-018 | Mandatory input parameter is missing | If any mandatory input parameter is missing
 ADM-DPM-019 | Error occurred while registering a Foundational Trust Provider | If there an error from DB while storing details of Foundational Trust Provider
 
+----
 
 # Devices
 * [POST /registereddevices](#post-registereddevices)
-* [DELETE /deregister/{deviceCode}](#delete-deregister)
+* [DELETE /deregister/{deviceCode}](#delete-deregister-deviceCode)
 * [PUT /registereddevices/status](#put-registereddevices-status)
-* [POST/deviceprovidermanagement/validate](#post-deviceprovidermanagementvalidate)
-* [POST/deviceprovidermanagement/validate/history](#post-deviceprovidermanagementvalidatehistory)
+* [POST/deviceprovidermanagement/validate](#post-deviceprovidermanagement-validate)
+* [POST/deviceprovidermanagement/validate/history](#post-deviceprovidermanagement-validate-history)
 
 ## POST /registereddevices
 This service registers a device in MOSIP as well as creates a history record.
 
 ### Resource URL
-`POST /registereddevices`
+`POST https://{base_url}/v1/masterdata/registereddevices`
 
 ### Resource details
 Resource Details | Description
@@ -632,11 +630,11 @@ MSD-RDS-001 | Time Stamp input is %s min after the current timestamp | When time
 MSD-RDS-001 | Time Stamp input is %s min before the current timestamp | When timestamp in device info is before the configured timestamp range
 
 
-## DELETE /deregister
+## DELETE /deregister/{deviceCode}
 This service deregisters a device from the platform and also created a history record for the device.
 
 ### Resource URL
-`DELETE /registereddevices/deregister/{deviceCode}`
+`DELETE https://{base_url}/v1/masterdata/registereddevices/deregister/{deviceCode}`
 
 ### Resource details
 Resource Details | Description
@@ -749,9 +747,7 @@ ADM-DPM-038 | Error occurred while updating Device Status | If there an error fr
 This service will validate the device details from the list of registered devices.
 
 ### Resource URL
-`POST /deviceprovidermanagement/validate`
-
-`https://mosip.io/masterdata/deviceprovidermanagement/validate`
+`POST https://{base_url}/masterdata/deviceprovidermanagement/validate`
 
 ### Resource details
 Resource Details | Description
@@ -849,9 +845,7 @@ ADM-DPM-009 | Error occurred while checking a Device Details | If there an error
 This service will validate the device history details from the list of registered devices.
 
 ### Resource URL
-`POST/deviceprovidermanagement/validate/history`
-
-`https://mosip.io/masterdata/deviceprovidermanagement/validate/history`
+`https://{base_url}/masterdata/deviceprovidermanagement/validate/history`
 
 ### Resource details
 Resource Details | Description
@@ -955,9 +949,7 @@ ADM-DPM-009 |Error occurred while checking a Device Details| If there an error f
 This service will create the MDS which are used in the MOSIP platform. 
 
 ### Resource URL
-`POST /mosipdeviceservice`
-
-`https://qa.mosip.io/v1/masterdata/mosipdeviceservice`
+`POST https://{base_url}/v1/masterdata/mosipdeviceservice`
 
 ### Resource details
 Resource Details | Description
@@ -1067,7 +1059,7 @@ ADM-DPM-041 | Device Sub Type Code not found in the list of Device Sub Types | D
 This service will update the MDS which are used in the MOSIP platform. 
 
 ### Resource URL
-`PUT /mosipdeviceservice`
+`PUT https://{base_url}/v1/masterdata/mosipdeviceservice`
 
 ### Resource details
 Resource Details | Description

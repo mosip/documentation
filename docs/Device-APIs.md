@@ -1,4 +1,4 @@
-This section contains detail about the service APIs in the Device Master data:
+This page contains detail about the service APIs for Device Master data.
 * [Devices API](#devices)
 These APIs includes create and update APIs. These are used by the Administrator Portal for the Create and Update Device functionality.
 * [Device Types API](#device-types)
