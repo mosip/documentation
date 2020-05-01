@@ -5,7 +5,7 @@ These APIs includes create, update and fetch APIs. Create and Update API is used
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Gender functionality. Fetch API is used by Pre-Registration to display the Genders on the demographic form page for the applicant to select one gender while filling out the form.
 * [Age Group Types APIs](#age-group-types)
 This service will provide the age group based on the passed age.
-* [ID Types APIs](#id-types-master)
+* [ID Types APIs](#id-types)
 These API contains the Create and Fetch ID types API.
 * [Holidays APIs](#holidays) 
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Holiday functionality. Fetch API is used by Pre-Registration to refer the list of Holiday for a Registration Center while generating booking appointments.
@@ -31,7 +31,7 @@ This API is fetches the list of exceptional holidays if any defined for a Regist
 * [PUT /title](#put-title)
 * [DELETE /title/{code}](#delete-title-code)
 * [GET /title/all](#get-title-all)
-* [POST /titles/search]
+* [POST /titles/search](#post-titles-search)
 * [POST /titles/filtervalues](#post-titles-filtervalues)
 
 ## POST /title
