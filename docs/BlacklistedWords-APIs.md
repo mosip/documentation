@@ -13,7 +13,7 @@ This section details about the service APIs for the BlacklistedWords
 * [PUT /blacklistedwords/details](#put-blacklistedwords-details)
 * [POST /blacklistedwords/words](#post-blacklistedwords-words)
 * [POST /blacklistedwords/filtervalues](#post-blacklistedwords-filtervalues)
-* [POST /blacklistedwords/search](#post-blacklistedword-ssearch)
+* [POST /blacklistedwords/search](#post-blacklistedwords-search)
 
 
 ## POST /blacklistedwords

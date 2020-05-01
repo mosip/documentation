@@ -1,58 +1,38 @@
-This section contains detail about the service APIs in the Common Masterdata module
-* [Titles API](#titles-master-api)
+This section contains detail about the service APIs in the Common Master data module
+* [Title APIs](#title)
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Title functionality. Fetch APIs are used by IDA to separate out Name from the title.
-* [Titles - Search API](#post-titlessearch)
-This API is used by the Administrator Portal to fetch list of Titles based on a given filter criteria to display the list of Titles on the Portal UI.
-* [Titles - Filter values](#post-titlesfiltervalues)
-This API is used by the Administrator Portal UI to populate filter dropdowns on the Title List View UI Screen.
-* [Gender API](#gender-master-api)
+* [Gender APIs](#gender)
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Gender functionality. Fetch API is used by Pre-Registration to display the Genders on the demographic form page for the applicant to select one gender while filling out the form.
-* [Genders - Search API](#post-genderssearch)
-This API is used by the Administrator Portal to fetch list of Genders based on a given filter criteria to display the list of Genders on the Portal UI.
-* [Genders - Filter values](#post-gendersfiltervalues)
-This API is used by the Administrator Portal UI to populate filter dropdowns on the Gender List View UI Screen.
-* [Age Groups API](#age-group-types-api)
+* [Age Group Types APIs](#age-group-types)
 This service will provide the age group based on the passed age.
-* [ID Types API](#id-types-master-api)
+* [ID Types APIs](#id-types-master)
 These API contains the Create and Fetch ID types API.
-* [Holidays API](#holiday-master-api) 
+* [Holidays APIs](#holidays) 
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Holiday functionality. Fetch API is used by Pre-Registration to refer the list of Holiday for a Registration Center while generating booking appointments.
-* [Holiday filtervalues APIs](#post-holidaysfiltervalues)
-This API is used by the Administrator Portal UI to populate filter dropdowns on the Holiday List View UI Screen.
-* [Holiday Search API](#post-holidayssearch)
-This API is used by the Administrator Portal to fetch list of Holidays based on a given filter criteria to display the list of Holidays on the Portal UI.
-* [Locations API](#locations-master-api)
+* [Locations APIs](#locations)
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Location functionality. Fetch API is used by Pre-Registration and ID objected validator. Pre-Registration uses this API to display locations in the demographic form page for applicant to select locations from the dropdown while filling in the address. ID object validator uses the fetch API to validate the value of location received in the packet against the Masterdata.
-* [Locations - Search API](#post-locationssearch)
-This API is used by the Administrator Portal to fetch list of Locations based on a given filter criteria to display the list of Locations on the Portal UI.
-* [Locations - Filter values](#post-locationsfiltervalues)
-This API is used by the Administrator Portal UI to populate filter dropdowns on the Location List View UI Screen.
-* [Languages API](#languages-master-api)
+* [Languages APIs](#languages)
 These include APIs to create, update and fetch MOSIP supported languages.
-* [Individual Types API](#individual-types-api)
+* [Individual Types APIs](#individual-types)
 These includes the APIs to fetch list of Individual Types. This API is used by Pre-Registration to display the list of Individual type for an applicant to select on the Demographic page.
-* [Application Types API](#application-types-master-api)
+* [Application Types APIs](#application-types)
 These include APIs to create, update and fetch name of MOSIP Applications.
-* [Blacklisted Words API](#blacklisted-words-master-api)
+* [Blacklisted Words APIs](#blacklisted-words)
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Blacklisted Word functionality. Fetch API is used by Pre-Registration to verify if a Blacklisted word in entered by the Applicant in the Demographic form.
-* [BlackListed Words - Search API](#post-blacklistedwordssearch)
-This API is used by the Administrator Portal to fetch list of Locations based on a given filter criteria to display the list of Blacklisted Words on the Portal UI.
-* [BlackListed Words - Filter values](#post-blacklistedwordsfiltervalues)
-This API is used by the Administrator Portal UI to populate filter dropdowns on the Blacklisted Word List View UI Screen.
-* [Working days](#working-days)
+* [Working days APIs](#working-days)
 This API is fetches the defined working days of a week for a Registration Center. It is used by Pre-Registration to consider working days while generating booking appointments for a Registration Center.
-* [Exceptional holidays](#exceptional-holidays)
+* [Exceptional holidays APIs](#exceptional-holidays)
 This API is fetches the list of exceptional holidays if any defined for a Registration Center. It is used by Pre-Registration to consider exceptional holidays while generating booking appointments for a Registration Center.
 
-# Titles Master API
-These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Title functionality. Fetch APIs are used by IDA to separate out Name from the title.
-
+# Title
 * [POST /title](#post-title)
 * [GET /title](#get-title)
-* [GET /title/{langcode}](#get-titlelangcode)
+* [GET /title/{langcode}](#get-title-langcode)
 * [PUT /title](#put-title)
-* [DELETE /title/{code}](#delete-titlecode)
-* [GET /title/all](#get-titleall)
+* [DELETE /title/{code}](#delete-title-code)
+* [GET /title/all](#get-title-all)
+* [POST /titles/search]
+* [POST /titles/filtervalues](#post-titles-filtervalues)
 
 ## POST /title
 This service will create the list of Title which are used in the MOSIP platform. 
@@ -114,6 +94,7 @@ Response Code | Description
 400 | Bad request
 401 | Unauthorized
 403 | Forbidden
+
 
 ## GET /title
 This service will provides the service for  list of all titles.
@@ -265,7 +246,6 @@ Response Code | Description
 401 | Unauthorized
 403 | Forbidden
 
-
 ## DELETE /title/{code}
 This service will provides the service for deleting a particular title. 
 
@@ -396,9 +376,8 @@ KER-MSD-048 | Title not found | Data Not Found
 KER-MSD-103 | Error occurred while updating Title details | Update Issue
 KER-MSD-104 | Error occurred while deleting Title details | Deletion Issue
 
-
 ## POST /titles/search
-
+This API is used by the Administrator Portal to fetch list of Titles based on a given filter criteria to display the list of Titles on the Portal UI.
 
 ### Resource URL
 `POST /titles/search`
@@ -490,12 +469,8 @@ status|["equals"]
 }
 ```
 
-# Titles filter values
-* [POST /titles/filtervalues](#post-titlesfiltervalues)
-
 ## POST /titles/filtervalues
-
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+This API is used by the Administrator Portal UI to populate filter dropdowns on the Title List View UI Screen.
 
 ### Resource URL
 `POST /titles/filtervalues`
@@ -551,16 +526,18 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   }
 }
 ```
+----
 
-# Gender Master API
-
+# Gender
 * [POST /gendertypes](#post-gendertypes)
-* [PUT/gendertypes](#putgendertypes)
-* [DELETE/gendertypes/{code}](#deletegendertypescode)
+* [PUT /gendertypes](#putgendertypes)
+* [DELETE /gendertypes/{code}](#deletegendertypes-code)
 * [GET /gendertypes](#get-gendertypes)
-* [GET /gendertypes/{langcode}](#get-gendertypeslangcode)
-* [GET /gendertypes/{gendername}](#get-gendertypesgendername)
-* [GET /gendertypes/all](#get-gendertypesall)
+* [GET /gendertypes/{langcode}](#get-gendertypes-langcode)
+* [GET /gendertypes/{gendername}](#get-gendertypes-gendername)
+* [GET /gendertypes/all](#get-gendertypes-all)
+* [POST /genders/search](#post-gender-search)
+* [POST /genders/filtervalues](#post-genders-filtervalues)
 
 ## POST /gendertypes
 
@@ -619,7 +596,7 @@ Response Code | Description
 401 | Unauthorized
 403 | Forbidden
 
-## PUT/gendertypes
+## PUT /gendertypes
 This service will update Gender which are used in the MOSIP platform. 
 
 ### Resource URL
@@ -938,6 +915,7 @@ KER-MSD-101 | Error occurred while updating Gender Type details | Update Issue
 KER-MSD-102 | Error occurred while deleting Gender Type details | Delete Issue
 
 ## POST /genders/search
+This API is used by the Administrator Portal to fetch list of Genders based on a given filter criteria to display the list of Genders on the Portal UI.
 
 ### Resource URL
 `POST /genders/search`
@@ -964,7 +942,6 @@ sorttype| This should be either of ['ASC','DESC']| | ASC
 pagination|The pagination parameter object| |
 pageStart|This is the start index | 0 | 0
 pageFetch| This is the amount of records to be fetched | 10 | 10
-
 
 ### Example Request
 ```JSON
@@ -1022,11 +999,8 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
 }
 ```
 
-# Genders filter values
-* [POST /genders/filtervalues](#post-gendersfiltervalues)
-
 ## POST /genders/filtervalues
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+This API is used by the Administrator Portal UI to populate filter dropdowns on the Gender List View UI Screen.
 
 ### Resource URL
 `POST /genders/filtervalues`
@@ -1084,7 +1058,7 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-# Age group types API
+# Age Group Types
 * [GET /agegrouptype/{age}](#get-agegrouptypeage)
 
 ## GET /agegrouptype/{age}
@@ -1151,9 +1125,9 @@ Response Code | Description
 401 | Unauthorized
 403 | Forbidden
 
-# ID Types Master API
+# ID Types
 * [POST /idtypes](#post-idtypes)
-* [GET /idtypes/{languagecode}](#get-idtypeslanguagecode)
+* [GET /idtypes/{languagecode}](#get-idtypes-languagecode)
 
 ## POST /idtypes
 This service will create the list of Id types which are used in the MOSIP platform. 
@@ -1213,7 +1187,7 @@ Response Code | Description
 401 | Unauthorized
 403 | Forbidden
 
-# GET /idtypes/{langcode}
+## GET /idtypes/{langcode}
 This service will provides the service for the List of id types based on language. 
 
 ### Resource URL
@@ -1289,16 +1263,16 @@ KER-MSD-021 | Error occurred while fetching ID Types |Fetch Issue
 KER-MSD-059 | Error occurred while inserting ID Type details. | Insert Issue
 
 
-# Holiday Master API
+# Holidays
 * [GET /holidays](#get-holidays)
 * [POST /holidays](#post-holidays)
 * [PUT /holidays](#put-holidays)
 * [DELETE /holidays](#delete-holidays)
-* [GET /holidays/{holidayid}](#get-holidaysholidayid)
-* [GET /holidays/{holidayid}/{langcode}](#get-holidaysholidayidlangcode)
-* [GET /holidays/all](#get-holidaysall)
-* [POST /holidays/filtervalues](#post-holidaysfiltervalues)
-* [POST /holidays/search](#post-holidayssearch)
+* [GET /holidays/{holidayid}](#get-holidays-holidayid)
+* [GET /holidays/{holidayid}/{langcode}](#get-holidays-holidayid-langcode)
+* [GET /holidays/all](#get-holidays-all)
+* [POST /holidays/filtervalues](#post-holidays-filtervalues)
+* [POST /holidays/search](#post-holidays-search)
 
 ## GET /holidays
 This service will get all the holidays. 
@@ -1734,7 +1708,7 @@ Response Code | Description
 401 | Unauthorized
 403 | Forbidden
 
-## Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-019 | Error occured while fetching Holidays | Fetch Issue
@@ -1745,12 +1719,8 @@ KER-MSD-100 | Error occurred while deleting holiday | Deletion Issue
 KER-MSD-025 | Error occured while fetching Location Hierarchy | fetch issue
 KER-MSD-026 | Location not found | Data Not Found
 
-
-# Holiday filtervalues APIs
-* [POST /holidays/filtervalues](#post-holidaysfiltervalues)
-
 ## POST /holidays/filtervalues
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+This API is used by the Administrator Portal UI to populate filter dropdowns on the Holiday List View UI Screen.
 
 ### Resource URL
 `POST /holidays/filtervalues`
@@ -1830,11 +1800,8 @@ Response Code | Description
 401 | Unauthorized
 403 | Forbidden
 
-# Holiday search APIs
-* [POST /holidays/search](#post-holidayssearch)
-
 ## POST /holidays/search
-This service is for the holidays search functionality. All the filter parameters are passed and the holidays are searched and the matching results are returned.
+This API is used by the Administrator Portal to fetch list of Holidays based on a given filter criteria to display the list of Holidays on the Portal UI.
 
 ### Resource URL
 `POST /holidays/search`
@@ -1929,8 +1896,9 @@ Please find the filter columns used in search
   }
 }
 ```
+----
 
-# Locations Master API
+# Locations
 * [POST /locations](#post-locations)
 * [PUT /locations](#put-locations)
 * [DELETE /locations/{locationcode}](#delete-locationslocationcode)
@@ -1940,10 +1908,11 @@ Please find the filter columns used in search
 * [GET /locations/locationhierarchy/{hierarchyname}](#get-locationslocationhierarchyhierarchyname)
 * [GET /locations/validate/{locationname}](#get-locations-validate-locationname)
 * [GET /locations/all](#get-locations-all)
+* [POST /locations/search](#post-locations-search)
+* [POST /locations/filtervalues](#post-locations-filtervalues)
 
 ## `POST /locations`
-This masterdata service creates the location.
-Please find the steps to create primary/secondary languages in the [link](Registration-Center-APIs.md#createupdate-api).
+This masterdata service creates the location. Please find the steps to create primary/secondary languages in the [link](Registration-Center-APIs.md#createupdate-api).
 
 ### Resource URL
 `POST /locations`
@@ -2037,7 +2006,7 @@ Response Code | Description
 401 | Unauthorized
 403 | Forbidden
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
@@ -2090,6 +2059,8 @@ isActive|Yes|Is this location active| |
 ```
 
 ### Example Response
+
+#### Success Response
 ```JSON
 {
   "id": "string",
@@ -2116,7 +2087,7 @@ isActive|Yes|Is this location active| |
 }
 ```
 
-##### Error Response:
+#### Error Response:
 ```
 {
   "id": "string",
@@ -2148,7 +2119,6 @@ KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 KER-MSD-097 |Error occured while updating location hierarchy details
-
 
 ## DELETE /locations/{locationcode}
 
@@ -2238,7 +2208,6 @@ Response Code | Description
 403 | Forbidden
 500 | Internal Server Error
 
-
 ## GET /locations/{locationcode}/{languagecode}
 This service will provides the service for the List of Locations. 
 
@@ -2296,7 +2265,6 @@ Response Code | Description
 400 | Bad request
 401 | Unauthorized
 404 | Not Found
-
 
 ## GET /locations/immediatechildren/{locationcode}/{langcode}
 This service will provides the service for the List of Locations. 
@@ -2528,12 +2496,8 @@ KER-MSD-027 | Error occured while fetching Location Hierarchy Levels | Fetch Iss
 KER-MSD-389 | Parent location not found | Data Not Found
 KER-MSD-385 | Location already exist under the hierarchy | insertion issue
 
-
-# Locations Search APIs
-* [POST /locations/search](#post-locationssearch)
-
 ## POST /locations/search
-This service is for the locations search functionality. All the filter parameters are passed and the locations  are searched and the matching results are returned. 
+This API is used by the Administrator Portal to fetch list of Locations based on a given filter criteria to display the list of Locations on the Portal UI.
 
 ### Resource URL
 `POST /locations/search`
@@ -2629,11 +2593,8 @@ Please find the filter columns used in search
 }
 ```
 
-# Locations filter values
-* [POST /locations/filtervalues](#post-locationsfiltervalues)
-
 ## POST /locations/filtervalues
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+This API is used by the Administrator Portal UI to populate filter dropdowns on the Location List View UI Screen.  
 
 ### Resource URL
 `POST /locations/filtervalues`
@@ -2690,8 +2651,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+----
 
-# Languages Master API
+# Languages
 * [POST /languages](#post-languages)
 * [GET /languages](#get-languages)
 * [PUT /languages](#put-languages)
@@ -2862,7 +2824,7 @@ Response Code | Description
 401 | Unauthorized
 404 | Not Found
 
-# DELETE /languages/{code}
+## DELETE /languages/{code}
 This service will delete a Language which is used in the MOSIP platform. 
 
 ### Resource URL
@@ -2930,12 +2892,15 @@ KER-MSD-049 | Error occurred while inserting Language details | language create 
 KER-MSD-XXX | Error occured while updating Language | language update exception
 KER-MSD-XXX | Error occured while deleting Language | language delete exception
 
+----
 
-# Individual Types API
+# Individual Types
 * [POST /individualtypes](#post-individualtypes)
 * [PUT /individualtypes](#post-individualtypes)
 * [GET /individualtypes](#get-individualtypes)
 * [GET /individualtypes/all](#get-individualtypes-all)
+* [POST /individualtypes/search](#post-individualtypes-search)
+* [POST /individualtypes/filtervalues](#post-individualtypes-filtervalues)
 
 ## POST /individualtypes
 This service will create the list of individualtypes which are used in the MOSIP platform. 
@@ -3303,9 +3268,6 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
 }
 ```
 
-# Individual Types filter values
-* [POST /individualtypes/filtervalues](#post-individualtypesfiltervalues)
-
 ## POST /individualtypes/filtervalues
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
 
@@ -3363,8 +3325,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+----
 
-# Application Types Master API
+# Application Types
 * [POST /applicationtypes](#post-applicationtypes)
 * [GET /applicationtypes](#get-applicationtypes)
 * [GET /applicationtypes/{code}/{langcode}](#get-applicationtypes-code-languagecode)
@@ -3600,17 +3563,18 @@ KER-MSD-101 | Error occurred while inserting application details | application i
 KER-MSD-002 | Application not found | application not found exception
 KER-MSD-201 | Bad Request Found | application request exception
 
+----
 
-# Blacklisted words Master API
+# Blacklisted Words
 * [POST /blacklistedwords](#post-blacklistedwords)
 * [PUT /blacklistedwords](#put-blacklistedwords)
-* [GET /blacklistedwords/{langcode}](#get-blacklistedwordslangcode)
-* [DELETE /blacklistedwords/{word}](#delete-blacklistedwordsword)
-* [GET /blacklistedwords/all](#get-blacklistedwordsall)
-* [PUT /blacklistedwords/details](#put-blacklistedwordsdetails)
-* [POST /blacklistedwords/words](#post-blacklistedwordswords)
-* [POST /blacklistedwords/filtervalues](#post-blacklistedwordsfiltervalues)
-* [POST /blacklistedwords/search](#post-blacklistedwordssearch)
+* [GET /blacklistedwords/{langcode}](#get-blacklistedwords-langcode)
+* [DELETE /blacklistedwords/{word}](#delete-blacklistedwords-word)
+* [GET /blacklistedwords/all](#get-blacklistedwords-all)
+* [PUT /blacklistedwords/details](#put-blacklistedwords-details)
+* [POST /blacklistedwords/words](#post-blacklistedwords-words)
+* [POST /blacklistedwords/filtervalues](#post-blacklistedwords-filtervalues)
+* [POST /blacklistedwords/search](#post-blacklistedwords-search)
 
 ## POST /blacklistedwords
 This service will create a blacklistedword which will be used in the MOSIP platform. 
@@ -4032,12 +3996,9 @@ KER-MSD-007 | Error occurred while fetching Blacklisted words | blacklisted word
 KER-MSD-070 | Error occurred while inserting Blacklisted words | blacklisted words insert exception
 KER-MSD-105 | Error occurred while updating Blacklisted Word | blacklisted words update exception
 KER-MSD-106 | Error occurred while deleting Blacklisted Word | blacklisted words delete exception
-	
-# BlackListed Words Search APIs
-* [POST /blacklistedwords/search](#post-blacklistedwordssearch)
 
 ## POST /blacklistedwords/search
-This service is for the blacklisted words search functionality. All the filter parameters are passed and the blacklisted words are searched and the matching results are returned. 
+This API is used by the Administrator Portal to fetch list of Locations based on a given filter criteria to display the list of Blacklisted Words on the Portal UI.
 
 ### Resource URL
 `POST /blacklistedwords/search`
@@ -4134,12 +4095,8 @@ Please find the filter columns used in search
 }
 ```
 
-# BlackListed Words filter values
-* [POST /blacklistedwords/filtervalues](#post-blacklistedwordsfiltervalues)
-
 ## POST /blacklistedwords/filtervalues
-
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+This API is used by the Administrator Portal UI to populate filter dropdowns on the Blacklisted Word List View UI Screen.  
 
 ### Resource URL
 `POST /blacklistedwords/filtervalues`
@@ -4195,17 +4152,17 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+----
 
 # Working days
-* [GET /weekdays](#get-weekdays)
-* [GET /workingdays](#get-workingdays)
+* [GET /weekdays/{registrationCenterID}/{languagecode}](#get-weekdays-registrationcenterid-languagecode)
+* [GET /workingdays/{registrationCenterID}/{languagecode}](#get-workingdays-registrationcenterid-languagecode)
 
-## GET /weekdays
-
+## GET /weekdays/{registrationCenterID}/{languagecode}
 This service returns all the week days.
 
 ### Resource URL
-https://mosip.io/v1/masterdata/weekdays/{registrationCenterId}/{languagecode}
+`https://mosip.io/v1/masterdata/weekdays/{registrationCenterId}/{languagecode}`
 
 ### Resource details
 Resource Details | Description
@@ -4269,7 +4226,7 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
 
 ```
 
-#### Error Response:
+#### Error Response
 ```
 {
   "id": "mosip.kernel.weekdays",
@@ -4293,7 +4250,7 @@ KER-WKDS-001 |	reg_working_nonworking table not accessible | Table not accessibl
 KER-WKDS-002 |	No week day found | No data present in week day table 
 
 
-## GET /workingdays/{registrationCenterID}
+## GET /workingdays/{registrationCenterID}/{languagecode}
 This service returns the working days of a particular registration center. 
 
 ### Resource URL
@@ -4311,8 +4268,9 @@ Name | Required | Description |  Example
 registrationCenterID |Yes|Id of the registration center| 
 languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
 
-### Responses:
-#### Success Response:
+### Responses
+
+#### Success Response
 ```
 {
 	"id": "mosip.kernel.workingdays",
@@ -4376,7 +4334,7 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
 }
 ```
 
-#### Error Response:
+#### Error Response
 ```
 {
   "id": "mosip.kernel.workingdays",
@@ -4400,9 +4358,9 @@ KER-WKDS-001 |	reg_working_nonworking table not accessible | Table not accessibl
 KER-WKDS-003 |	No working/non working day data found | No Data present in Working days table.
 
 # Exceptional holidays
-* [GET /exceptionholidays](#get-exceptionholidays)
+* [GET /exceptionholidays/{registrationCenterId}/{languagecode}](#get-exceptionholidays-registrationcenterid-languagecode)
 
-### GET /exceptionholidays
+### GET /exceptionholidays/{registrationCenterId}/{languagecode}
 This service returns the exceptional holidays of a particular registration center. 
 
 ### Resource URL
