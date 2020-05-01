@@ -1,22 +1,20 @@
-This page represents the Device type and Device subtype API's
+This page represents the Device type and Device subtype API's.
+* [Device Types](#device-types)
+* [Device Subtypes](#device-subtypes)
 
-# Device Types API
-
+# Device Types
 * [POST /devicetypes](#post-devicetypes)
-* [GET /devicetypes/{code}](#get-devicetypescode)
+* [GET /devicetypes/{code}](#get-devicetypes-code)
 * [PUT /devicetypes](#put-devicetypes)
-* [DELETE /devicetypes/{code}](#delete-devicetypescode)
+* [DELETE /devicetypes/{code}](#delete-devicetypes-code)
 	
-# POST /devicetypes
-Master data is required across the platform. 
-
+## POST /devicetypes 
 This service will create the Device Types which are used in the MOSIP platform. 
 
 ### Resource URL
-### `POST /devicetypes`
+`POST /devicetypes`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -45,8 +43,7 @@ descr|No|description of the device type| |
 ```
 ### Example Response
 
-200 Ok
-
+#### Success Response
 ```JSON
 {
   "id": "string",
@@ -61,10 +58,10 @@ descr|No|description of the device type| |
     }
   ],
 }
-
 ```
+**Response Code: 200 Ok**
 
-##### Error Response:
+#### Error Response
 
 ```JSON
 {
@@ -80,26 +77,23 @@ descr|No|description of the device type| |
   ],
  "response": null
 }
-
 ```
+**Response Code: 200 Ok**
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 
-# GET /devicetypes/{code}
-Master data is required across the platform. 
-
+## GET /devicetypes/{code}
 This service will provides the service to get the device types. 
 
 ### Resource URL
-### `GET /devicetypes/{code}`
+`GET /devicetypes/{code}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -110,8 +104,9 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 -NA-
 
-
 ### Example Response
+
+#### Success Response
 ```JSON
 {
   "id": "string",
@@ -133,7 +128,9 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
-##### Error Response:
+**Response Code: 200 Ok**
+
+#### Error Response
 
 ```JSON
 {
@@ -149,26 +146,23 @@ Name | Required | Description | Default Value | Example
   ],
  "response": null
 }
-
 ```
+**Response Code: 200 Ok**
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 
-# PUT /devicetypes
-Master data is required across the platform. 
-
+## PUT /devicetypes
 This service will update the Device Types which are used in the MOSIP platform. 
 
 ### Resource URL
-### `PUT /devicetypes`
+`PUT /devicetypes`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -197,8 +191,7 @@ descr|No|description of the device type| |
 ```
 ### Example Response
 
-200 Ok
-
+#### Success Response
 ```JSON
 {
   "id": "string",
@@ -213,10 +206,10 @@ descr|No|description of the device type| |
     }
   ],
 }
-
 ```
+**Response Code: 200 Ok**
 
-##### Error Response:
+#### Error Response
 
 ```JSON
 {
@@ -232,26 +225,23 @@ descr|No|description of the device type| |
   ],
  "response": null
 }
-
 ```
+**Response Code: 200 Ok**
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 
-# DELETE /devicetypes/{code}
-Master data is required across the platform. 
-
+## DELETE /devicetypes/{code}
 This service will provides the service to delete the device types. 
 
 ### Resource URL
-### `DELETE /devicetypes/{code}`
+`DELETE /devicetypes/{code}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -265,7 +255,7 @@ Name | Required | Description | Default Value | Example
 
 ### Example Response
 
-200 Ok
+#### Success Response
 ```JSON
 {
   "id": "string",
@@ -278,8 +268,9 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
-##### Error Response:
+**Response Code: 200 Ok**
 
+#### Error Response
 ```JSON
 {
   "id": "string",
@@ -294,33 +285,29 @@ Name | Required | Description | Default Value | Example
   ],
  "response": null
 }
-
 ```
+**Response Code: 200 Ok**
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 
-# Device Subtypes API
-
+# Device Subtypes
 * [POST /devicesubtypes](#post-devicesubtypes)
-* [GET /devicesubtypes/{code}](#get-devicesubtypes)
+* [GET /devicesubtypes/{code}](#get-devicesubtypes-code)
 * [PUT /devicesubtypes](#put-devicesubtypes)
-* [DELETE /devicesubtypes/{code}](#delete-devicesubtypes)
+* [DELETE /devicesubtypes/{code}](#delete-devicesubtypes-code)
 	
 # POST /devicesubtypes
-Master data is required across the platform. 
-
 This service will create the Device Subtypes which are used in the MOSIP platform. 
 
 ### Resource URL
-### `POST /devicesubtypes`
+`POST /devicesubtypes`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -351,8 +338,7 @@ descr|No|description of the device subtype| |
 ```
 ### Example Response
 
-200 Ok
-
+#### Success Response
 ```JSON
 {
   "id": "string",
@@ -367,11 +353,10 @@ descr|No|description of the device subtype| |
     }
   ],
 }
-
 ```
+**Response Code: 200 Ok**
 
-##### Error Response:
-
+#### Error Response
 ```JSON
 {
   "id": "string",
@@ -386,26 +371,23 @@ descr|No|description of the device subtype| |
   ],
  "response": null
 }
-
 ```
+**Response Code: 200 Ok**
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 
-# GET /devicesubtypes/{code}
-Master data is required across the platform. 
-
+## GET /devicesubtypes/{code}
 This service will provides the service to get the device subtypes. 
 
 ### Resource URL
-### `GET /devicesubtypes/{code}`
+`GET /devicesubtypes/{code}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -416,8 +398,9 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 -NA-
 
-
 ### Example Response
+
+#### Success Response
 ```JSON
 {
   "id": "string",
@@ -440,8 +423,9 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
-##### Error Response:
+**Response Code: 200 Ok**
 
+#### Error Response
 ```JSON
 {
   "id": "string",
@@ -456,26 +440,23 @@ Name | Required | Description | Default Value | Example
   ],
  "response": null
 }
-
 ```
+**Response Code: 200 Ok**
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 
-# PUT /devicesubtypes
-Master data is required across the platform. 
-
+## PUT /devicesubtypes
 This service will update the Device Subtypes which are used in the MOSIP platform. 
 
 ### Resource URL
-### `PUT /devicesubtypes`
+`PUT /devicesubtypes`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -506,8 +487,7 @@ descr|No|description of the device subtype| |
 ```
 ### Example Response
 
-200 Ok
-
+#### Success Response
 ```JSON
 {
   "id": "string",
@@ -522,11 +502,9 @@ descr|No|description of the device subtype| |
     }
   ],
 }
-
 ```
 
-##### Error Response:
-
+#### Error Response
 ```JSON
 {
   "id": "string",
@@ -541,26 +519,22 @@ descr|No|description of the device subtype| |
   ],
  "response": null
 }
-
 ```
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 
-# DELETE /devicesubtypes/{code}
-Master data is required across the platform. 
-
+## DELETE /devicesubtypes/{code}
 This service will provides the service to delete the device subtypes. 
 
 ### Resource URL
-### `DELETE /devicesubtypes/{code}`
+`DELETE /devicesubtypes/{code}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -571,10 +545,9 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 -NA-
 
-
 ### Example Response
 
-200 Ok
+#### Success Response
 ```JSON
 {
   "id": "string",
@@ -587,8 +560,9 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
-##### Error Response:
+**Response Code: 200 Ok**
 
+#### Error Response
 ```JSON
 {
   "id": "string",
@@ -603,10 +577,10 @@ Name | Required | Description | Default Value | Example
   ],
  "response": null
 }
-
 ```
+**Response Code: 200 Ok**
 
-#### Failure details
+### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-500 |Internal Server Error|If system error occurs
