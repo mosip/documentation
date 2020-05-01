@@ -11,16 +11,16 @@ These APIs includes create and update APIs. These are used by the Administrator 
 * [PUT /devices](#put-devices)
 * [GET /devices/{languagecode}](#get-devices-languagecode)
 * [GET /devices/{languagecode}/{deviceType}](#get-devices-languagecode-devicetype)
-* [PUT /devices](#put-devices)
+* [PUT /devices/decommission/{id}](#put-devices-decommission-id)
 * [DELETE /devices/{id}](#delete-devices-id)
 * [POST /devices/search](#post-devices-search)
 * [POST /devices/filtervalues](#post-devices-filtervalues)
 
 ## POST /devices
-This service will create the list of devices which are used in the MOSIP platform. Please find the steps to create primary/secondary languages in [Registration Center Create/Update API](Registration-Center-APIs.md#createupdate-api).
+This service will create a device which will be used in the MOSIP platform. Please find the steps to create primary/secondary languages in [Registration Center Create/Update API](Registration-Center-APIs.md#create-update-api).
 
 ### Resource URL
-`https://mosip.io/v1/masterdata/devices`
+`https://{base_url}/v1/masterdata/devices`
 
 ### Resource details
 
@@ -56,8 +56,8 @@ zoneCode|Yes|Zone code of device| |
     "macAddress": "85-BB-97-4B-14-05",
     "ipAddress": "10.4.6.8",
     "langCode": "eng",
-    "validityDateTime": "2019-08-07T09:13:22.221Z",
-    "zoneCode": "NTH",
+    "validityDateTime": "2021-08-07T09:13:22.221Z",
+    "zoneCode": "ORT",
     "isActive": true
   },
   "requesttime": "2018-12-10T06:12:52.994Z",
@@ -70,23 +70,21 @@ zoneCode|Yes|Zone code of device| |
 {
   "id": "string",
   "version": "string",
-  "responsetime": "2019-11-25T06:22:33.367Z",
+  "responsetime": "2020-05-01T13:39:30.996Z",
   "metadata": null,
   "response": {
-    "id": "7b40b97c-2db6-4e2c-b11f-dd5d5fd0ca79",
-    "langCode": "eng",
+    "id": "5f1cfd87-f078-41f0-aea9-d205ca715e68",
     "name": "Test device1",
     "serialNum": "BS563Q2230898",
-    "ipAddress": "10.4.6.8",
-    "macAddress": "85-BB-97-4B-14-05",
     "deviceSpecId": "165",
-    "validityDateTime": "2019-08-07T09:13:22.221Z",
-    "zoneCode": "NTH",
-    "deviceSpecification": null,
-    "mapStatus": "unassigned",
+    "macAddress": "85-BB-97-4B-14-05",
+    "ipAddress": "10.4.6.8",
+    "langCode": "eng",
+    "validityDateTime": "2021-08-07T09:13:22.221Z",
+    "zoneCode": "ORT",
     "isActive": false,
-    "createdBy": "110005",
-    "createdDateTime": "2019-11-25T06:22:33.382Z",
+    "createdBy": "110006",
+    "createdDateTime": "2020-05-01T13:39:31.057Z",
     "updatedBy": null,
     "updatedDateTime": null,
     "isDeleted": null,
@@ -103,11 +101,11 @@ zoneCode|Yes|Zone code of device| |
   "id": "string",
   "version": "string",
   "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "responsetime": "2020-05-01T13:39:31.057Z",
   "errors": [
     {
-      "errorCode": "string",
-      "message": "string"
+      "errorCode": "KER-MSD-439",
+      "message": "Admin not authorized to access this Device for this Zone"
     }
   ],
  "response": null
@@ -118,16 +116,17 @@ zoneCode|Yes|Zone code of device| |
 ### Failure details
 Error Code  | Error Message | Error Description
 -----|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MSD-069 |Error occurred while inserting Device details
+KER-MSD-500 | Internal Server Error|If system error occurs
+KER-ATH-403 | Forbidden | If unauthorized role detected
+KER-ATH-401 | Authentication Failed | If no role/invalid token is detected
+KER-MSD-069 | Error occurred while inserting Device details
+KER-MSD-439 | Admin not authorized to access this Device for this Zone | When Admin is not allowed to created a device for a Zone
 
 ## PUT /devices
 This service will update the list of devices which are used in the MOSIP platform. Please find the steps to create primary/secondary languages in [Registration Center Create/Update API](Registration-Center-APIs.md#createupdate-api)
 
 ### Resource URL
-`https://mosip.io/v1/masterdata/devices`
+`https://{base_url}/v1/masterdata/devices`
 
 ### Resource details
 
@@ -156,16 +155,16 @@ zoneCode|Yes|Zone code of device| |
   "id": "string",
   "metadata": {},
   "request": {
-    "deviceSpecId": "string",
-    "id": "string",
-    "ipAddress": "string",
-    "isActive": true,
-    "langCode": "string",
-    "macAddress": "string",
-    "name": "string",
-    "serialNum": "string",
-    "validityDateTime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-    "zoneCode": "string"
+    "id": "5f1cfd87-f078-41f0-aea9-d205ca715e68",
+    "name": "Test device2",
+    "serialNum": "BS563Q2230898",
+    "deviceSpecId": "165",
+    "macAddress": "85-BB-97-4B-14-05",
+    "ipAddress": "10.4.6.8",
+    "langCode": "eng",
+    "validityDateTime": "2022-08-07T09:13:22.221Z",
+    "zoneCode": "ORT",
+    "isActive": true
   },
   "requesttime": "2018-12-10T06:12:52.994Z",
   "version": "string"
@@ -175,31 +174,29 @@ zoneCode|Yes|Zone code of device| |
 ### Example Response
 ```JSON
 {
-  "errors": [
-    {
-      "errorCode": "string",
-      "message": "string"
-    }
-  ],
   "id": "string",
-  "metadata": {},
+  "version": "string",
+  "responsetime": "2020-05-01T13:45:58.054Z",
+  "metadata": null,
   "response": {
-    "createdBy": "string",
-    "deviceSpecId": "string",
-    "id": "string",
-    "ipAddress": "string",
-    "isActive": true,
-    "isDeleted": true,
-    "langCode": "string",
-    "macAddress": "string",
-    "name": "string",
-    "serialNum": "string",
-    "updatedBy": "string",
-    "validityDateTime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-    "zoneCode": "string"
+    "id": "5f1cfd87-f078-41f0-aea9-d205ca715e68",
+    "name": "Test device2",
+    "serialNum": "BS563Q2230898",
+    "deviceSpecId": "165",
+    "macAddress": "85-BB-97-4B-14-05",
+    "ipAddress": "10.4.6.8",
+    "langCode": "eng",
+    "validityDateTime": "2022-08-07T09:13:22.221Z",
+    "zoneCode": "ORT",
+    "isActive": false,
+    "createdBy": "110006",
+    "createdDateTime": "2020-05-01T13:39:31.057Z",
+    "updatedBy": "110006",
+    "updatedDateTime": "2020-05-01T13:45:58.086Z",
+    "isDeleted": null,
+    "deletedDateTime": null
   },
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-  "version": "string"
+  "errors": null
 }
 ```
 **Response codes: 200 Ok**
@@ -210,11 +207,11 @@ zoneCode|Yes|Zone code of device| |
   "id": "string",
   "version": "string",
   "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "responsetime": "2020-05-01T13:39:31.057Z",
   "errors": [
     {
-      "errorCode": "string",
-      "message": "string"
+      "errorCode": "KER-MSD-439",
+      "message": "Admin not authorized to access this Device for this Zone"
     }
   ],
  "response": null
@@ -229,12 +226,13 @@ KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 KER-MSD-069 |Error occurred while inserting Device details
+KER-MSD-439 |Admin not authorized to access this Device for this Zone |When Admin is not allowed to created a device for a Zone
 
 ## GET /devices/{languagecode}
 This service will provides the service for the list of devices. 
 
 ### Resource URL
-`GET /devices`
+`GET https://{base_url}/v1/masterdata/devices/{languagecode}`
 
 ### Resource details
 Resource Details | Description
@@ -250,23 +248,24 @@ Name | Required | Description | Default Value | Example
 ### Example Response
 ```JSON
 {
-  "id": "string",
-  "version": "string",
-  "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "id": null,
+  "version": null,
+  "metadata": null,
+  "responsetime": "2020-05-01T14:10:38.512Z",
   "errors": null,
   "response": {
 	"devices": [
 	  {
-	    "deviceSpecId": "string",
-        "id": "string",
-        "ipAddress": "string",
+	   "id": "3000023",
+        "name": "Dummy Finger Print Scanner 3",
+        "serialNum": "AT8075685650",
+        "deviceSpecId": "165",
+        "macAddress": "6B-D5-10-4B-3A-9E",
+        "ipAddress": null,
+        "langCode": "eng",
         "isActive": true,
-        "langCode": "string",
-        "macAddress": "string",
-        "name": "string",
-        "serialNum": "string",
-        "validityDateTime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        "validityDateTime": null,
+        "zoneCode": "NTH"
 	  }
 	] 
   }
@@ -274,134 +273,20 @@ Name | Required | Description | Default Value | Example
 ```
 **Response codes: 200 Ok**
 
-## GET /devices/{languagecode}/{deviceType}
-This service will provides the list of devices based on device type and language code. 
-
-### Resource URL
-`GET /devices/{languagecode}/{deviceType}`
-
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
-
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
-
-### Example Response
-```JSON
-{
-  "id": "string",
-  "version": "string",
-  "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-  "errors": null,
-  "response": {
-	"devices": [
-	  {
-	    "deviceSpecId": "string",
-        "deviceTypeCode": "string",
-        "id": "string",
-        "ipAddress": "string",
-        "isActive": true,
-        "langCode": "string",
-        "macAddress": "string",
-        "name": "string",
-        "serialNum": "string",
-        "validityEndDateTime": "2019-04-05T09:30:13.608Z"
-	  }
-	]
-  }
-}
+### Error Response
 ```
-**Response codes: 200 Ok**
-
-## PUT /devices
-This service will update existing devices. 
-
-### Resource URL
-`PUT /devices`
-
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
-
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
-
-### Example Request
-```JSON
 {
-  "id": "string",
-  "metadata": {},
-  "request": {
-    "id": "7b40b97c-2db6-4e2c-b11f-dd5d5fd0ca79",
-    "name": "Test device2",
-    "serialNum": "BS563Q2230898",
-    "deviceSpecId": "165",
-    "macAddress": "85-BB-97-4B-14-05",
-    "ipAddress": "10.4.6.8",
-    "langCode": "eng",
-    "validityDateTime": "2019-08-07T09:13:22.221Z",
-    "zoneCode": "NTH",
-    "isActive": true
-  },
-  "requesttime": "2018-12-10T06:12:52.994Z",
-  "version": "string"
-}
-```
-
-### Example Response
-```JSON
-{
-  "id": "string",
-  "version": "string",
-  "responsetime": "2019-11-25T06:22:33.367Z",
+  "id": null,
+  "version": null,
+  "responsetime": "2020-05-01T14:20:17.569Z",
   "metadata": null,
-  "response": {
-    "id": "7b40b97c-2db6-4e2c-b11f-dd5d5fd0ca79",
-    "langCode": "eng",
-    "name": "Test device1",
-    "serialNum": "BS563Q2230898",
-    "ipAddress": "10.4.6.8",
-    "macAddress": "85-BB-97-4B-14-05",
-    "deviceSpecId": "165",
-    "validityDateTime": "2019-08-07T09:13:22.221Z",
-    "zoneCode": "NTH",
-    "isActive": false,
-    "createdBy": "110005",
-    "createdDateTime": "2019-11-25T06:22:33.382Z",
-    "updatedBy": "110005",
-    "updatedDateTime": "2019-11-25T06:22:33.382Z",
-    "isDeleted": null,
-    "deletedDateTime": null
-  },
-  "errors": null
-}
-```
-**Response codes: 200 Ok**
-
-### Error Response:
-```
-{
-  "id": "string",
-  "version": "string",
-  "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "response": null,
   "errors": [
     {
-      "errorCode": "string",
-      "message": "string"
+      "errorCode": "KER-MSD-010",
+      "message": "Device not Found"
     }
-  ],
- "response": null
+  ]
 }
 ```
 **Response codes: 200 Ok**
@@ -412,13 +297,147 @@ Error Code  | Error Message | Error Description
 KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MSD-083 |Error occurred while updating Device details
+KER-MSD-010 | Device not Found | Data Not Found
+
+## GET /devices/{languagecode}/{deviceType}
+This service will provides the list of devices based on device type and language code. 
+
+### Resource URL
+`GET https://{base_url}/v1/masterdata/devices/{languagecode}/{deviceType}`
+
+### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+-NA-
+
+### Example Response
+```JSON
+{
+  "id": null,
+  "version": null,
+  "metadata": null,
+  "responsetime": "2020-05-01T14:10:38.512Z",
+  "errors": null,
+  "response": {
+	"devices": [
+	  {
+	   "id": "3000023",
+        "name": "Dummy Finger Print Scanner 3",
+        "serialNum": "AT8075685650",
+        "deviceSpecId": "165",
+        "macAddress": "6B-D5-10-4B-3A-9E",
+        "ipAddress": null,
+        "langCode": "eng",
+        "isActive": true,
+        "validityDateTime": null,
+        "zoneCode": "NTH"
+	  }
+	] 
+  }
+}
+```
+**Response codes: 200 Ok**
+
+### Error Response
+```
+{
+  "id": null,
+  "version": null,
+  "responsetime": "2020-05-01T14:20:17.569Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "KER-MSD-010",
+      "message": "Device not Found"
+    }
+  ]
+}
+```
+**Response codes: 200 Ok**
+
+### Failure details
+Error Code  | Error Message | Error Description
+-----|----------|-------------
+KER-MSD-500 |Internal Server Error|If system error occurs
+KER-ATH-403 |Forbidden|If unauthorized role detected
+KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
+KER-MSD-010 | Device not Found | Data Not Found
+
+## PUT /devices/decommission/{id}
+This service will update existing devices. 
+
+### Resource URL
+`PUT /devices/decommission/{id}`
+
+### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+id | Yes | Device ID | -NA- | -NA-
+
+### Example Request
+-NA-
+
+### Example Response
+```JSON
+{
+    "id": null,
+    "version": null,
+    "responsetime": "2020-05-01T15:10:33.831Z",
+    "metadata": null,
+    "response": {
+        "id": "663bf60a-bd29-4e77-a128-7f281f8de21c"
+    },
+    "errors": null
+}
+```
+**Response codes: 200 Ok**
+
+### Error Response
+```
+{
+  "id": null,
+  "version": null,
+  "responsetime": "2020-05-01T14:20:17.569Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "KER-MSD-010",
+      "message": "Device not Found"
+    }
+  ]
+}
+```
+**Response codes: 200 Ok**
+
+### Failure details
+Error Code  | Error Message | Error Description
+-----|----------|-------------
+KER-MSD-500 | Internal Server Error| If system error occurs
+KER-ATH-403 | Forbidden| If unauthorized role detected
+KER-ATH-401 | Authentication Failed| If no role/invalid token is detected
+KER-MSD-083 | Error occurred while updating Device details
+KER-MSD-010 | Device not Found | Data Not Found
+KER-MSD-439 | Admin not authorized to access this Device for this Zone | When Admin is not allowed to created a device for a Zone
 
 ## DELETE /devices/{id}
 This service will delete the devices. 
 
 ### Resource URL
-`DELETE /devices/{id}`
+`DELETE https://{base_url}/v1/masterdata/devices/{id}`
 
 ### Resource details
 Resource Details | Description
@@ -434,14 +453,14 @@ deviceId|Yes|The device Id| |
 ### Example Response
 ```JSON
 {
-  "id": "string",
-  "version": "string",
-  "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-  "errors": null,
-  "response":{
-    "id": "string"
-  }
+  "id": null,
+  "version": null,
+  "responsetime": "2020-05-01T14:07:52.929Z",
+  "metadata": null,
+  "response": {
+    "id": "5f1cfd87-f078-41f0-aea9-d205ca715e68"
+  },
+  "errors": null
 }
 ```
 **Response codes: 200 Ok**
@@ -449,17 +468,17 @@ deviceId|Yes|The device Id| |
 ### Failure Response:
 ```JSON
 {
-  "id": "string",
-  "version": "string",
-  "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "id": null,
+  "version": null,
+  "responsetime": "2020-05-01T13:50:48.733Z",
+  "metadata": null,
+  "response": null,
   "errors": [
     {
-      "errorCode": "string",
-      "message": "string"
+      "errorCode": "KER-MSD-010",
+      "message": "Device not Found"
     }
-  ],
-  "response":null
+  ]
 }
 ```
 
@@ -472,6 +491,7 @@ KER-MSD-010 | Device not Found | Data Not Found
 KER-MSD-083 | Error while updating | Update Issue
 KER-MSD-084 | Error while deleting | Deletion Issue
 KER-MSD-147 | Cannot delete as dependency found | Deletion Issue because of dependency
+KER-MSD-439 | Admin not authorized to access this Device for this Zone | When Admin is not allowed to created a device for a Zone
 
 ## POST /devices/search
 This service is for the devices search functionality. All the filter parameters are passed and the devices are searched and the matching results are returned.
@@ -501,7 +521,6 @@ sorttype| This should be either of ['ASC','DESC']| | ASC
 pagination|The pagination parameter object| |
 pageStart|This is the start index | 0 | 0
 pageFetch| This is the amount of records to be fetched | 10 | 10
-
 
 ### Filter Values
 Please find the filter columns used in search
@@ -927,14 +946,14 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 
 ----
 
-# Device Specification
+# Device Specifications
 * [POST /devicespecifications](#post-devicespecifications)
 * [PUT /devicespecifications](#put-devicespecifications)
-* [DELETE /devicespecifications/{id}](#delete-devicespecificationsid)
-* [GET /devicespecifications/{langcode}/{devicetypecode}](#get-devicespecificationslangcodedevicetypecode)
-* [GET /devicespecifications/{lang_code}](#get-devicespecificationslang_code)
-* [POST /devicespecifications/search](#post-devicespecificationssearch)
-* [POST /devicespecifications/filtervalues](#post-devicespecificationsfiltervalues)
+* [DELETE /devicespecifications/{id}](#delete-devicespecifications-id)
+* [GET /devicespecifications/{langcode}/{devicetypecode}](#get-devicespecifications-langcode-devicetypecode)
+* [GET /devicespecifications/{lang_code}](#get-devicespecifications-lang_code)
+* [POST /devicespecifications/search](#post-devicespecifications-search)
+* [POST /devicespecifications/filtervalues](#post-devicespecifications-filtervalues)
 
 ## POST /devicespecifications
 This service will create a Device Specification which are used in the MOSIP platform. 
