@@ -38,7 +38,7 @@ MOSIP offers high configurability to customise and deploy for a country. Many co
 |---|---|---|
 |UIN Generator|Yes||
 |Token Generator|Yes||
-|Partner Management|Yes|[Partner Management APIs](Partner-Management-Service-APIs.md) are available.  Portal to be created by SI|
+|Partner Management|Yes|[Partner Management Service APIs](Partner-Management-Service-APIs.md) are available.  Portal to be created by SI|
 |Device Management|Yes|Admin portal allows managing registered devices. Device registration API is available. Device vendor to provide Device Management Server which takes care of registering devices and Key rotation|
 |SMS Notification|Yes|Interface available.  SMS Gateway/service to be provided by SI|
 |Email Notification|Yes|Interface available.  SMS Gateway/service to be provided by SI|
@@ -65,7 +65,7 @@ MOSIP offers high configurability to customise and deploy for a country. Many co
 |Grievance Reporting|No||
 |Lock UIN against Auth|Yes||
 |Transaction History Generator|No|Audit logs, DB records, and Resident Services APIs available|
-|Enrollment Status/Update|Yes|[Resident Services APIs](Resident-Service-APIs.md) available.  Portal to be made by SI|
+|Enrollment Status/Update|Yes|[Resident Service APIs](Resident-Service-APIs.md) available.  Portal to be made by SI|
 |Payment Gateway|No||
 |Mobile/Table Registration App|No||
 |Virus Scanner|No|Integration hooks provided. SI to procure and integrate|
