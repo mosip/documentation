@@ -366,6 +366,7 @@ Please find the filter columns used in search
  }
 }
 ```
+**Response code: 200 Ok**
 
 ## POST /documentcategories/filtervalues
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
@@ -424,8 +425,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+**Response code: 200 Ok**
 
-### Failure Response:
+### Failure Response
 ```JSON
 {
   "id": "string",
@@ -439,6 +441,7 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   "response": null
 }
 ```
+**Response code: 200 Ok**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -450,8 +453,9 @@ KER-MSD-089 | Error occurred while updating Document Category details | Update I
 KER-MSD-090 | Error occurred while deleting Document Category details | Deletion Issue
 KER-MSD-123 | Cannot delete dependency found | Deletion Issue because of dependency
 
+----
 
-# Documents Types API
+# Documents Types
 * [POST /documenttype](#post-documenttype)
 * [PUT /documenttype](#put-documenttype)
 * [GET /documenttypes/{documentcategorycode}/{langcode}](#get-documenttypesdocumentcategorycodelangcode)
@@ -523,7 +527,9 @@ isActive|Yes|Active field of the document type| |
   "errors": null
 }
 ```
-### Error Response:
+**Response code: 200 Ok**
+
+### Error Response
 ```
 {
   "id": "string",
@@ -539,6 +545,7 @@ isActive|Yes|Active field of the document type| |
  "response": null
 }
 ```
+**Response code: 200 Ok**
 
 ### Failure details
 Error Code  | Error Message | Error Description
@@ -585,6 +592,7 @@ isActive|Yes|Active field of the document type| |
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -608,6 +616,7 @@ isActive|Yes|Active field of the document type| |
   "errors": null
 }
 ```
+**Response code: 200 Ok**
 
 ### Error Response
 ```
@@ -625,6 +634,7 @@ isActive|Yes|Active field of the document type| |
  "response": null
 }
 ```
+**Response code: 200 Ok**
 
 ### Failure details
 Error Code  | Error Message | Error Description
@@ -673,6 +683,7 @@ langcode | Yes | language code | |
   }
 }
 ```
+**Response code: 200 Ok**
 
 ## GET /documentcategorytypes
 This service will provides the service for the List of documents types. 
@@ -715,6 +726,7 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+**Response code: 200 Ok**
 
 ## GET /doccattypes
 This service will give back the document category and it's corresponding category types based on Individual type code, Age group type code and Gender type code. 
@@ -777,6 +789,7 @@ gendertypecode |Yes| Code of Gender type | |
   ]
 }
 ```
+**Response code: 200 Ok**
 
 ## GET /checkapptypedoccattypedoctype
 This service checks the mapping between the Applicant type code, Document category and the Document type mapping. Result message will be success, if the mapping exists. 
@@ -810,12 +823,14 @@ documenttypecode |Yes| Code of Document type | |
   }
 }
 ```
+
 ### Example Response
 ```JSON
 {
-	"resultMessage":"Success"
+  "resultMessage":"Success"
 }
 ```
+**Response code: 200 Ok**
 
 ## POST /documenttypes/search
 This service is for the document type search functionality. All the filter parameters are passed and the document type are searched and the matching results are returned. 
@@ -916,6 +931,7 @@ status|["contains","equals","startsWith"]
  }
 }
 ```
+**Response code: 200 Ok**
 
 ## POST /documenttypes/filtervalues
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
@@ -974,8 +990,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+**Response code: 200 Ok**
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 KER-MSD-015 | Error occurred while fetching Document Types
@@ -986,7 +1003,7 @@ KER-MSD-124 | Cannot delete dependency found
 KER-MSD-092 | Error occurred while deleting Document Type details
 
 
-# Valid documents API
+# Valid documents
 * [GET /validdocuments/{languagecode}](#get-validdocumentslanguagecode)
 * [GET /validdocuments/{doccategorycode}/{languagecode}](#get-validdocumentsdocCategorycode)
 * [POST /validdocuments/search](#post-validdocumentssearch)
@@ -995,6 +1012,7 @@ KER-MSD-092 | Error occurred while deleting Document Type details
 * [PUT /validdocuments/unmap/{doccategorycode}/{doctypecode}](#put-validdocumentsunmapdoccategorycodedoctypecode)
 
 ## GET /validdocuments/{languagecode}
+This API fetches all the valid documents based on language code.
 
 ### Resource URL
 `GET /validdocuments/{languagecode}`
@@ -1023,29 +1041,29 @@ languagecode|Yes|Language code in ISO 639-2|-NA-|fra
   "metadata": {},
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
-  "response":   {
-	  "documentcategories": [
-		{
+  "response": {
+	"documentcategories": [
+	  {
+		"code": "string",
+		"description": "string",
+		"isActive": true,
+		"langCode": "string",
+		"name": "string", 
+		"documenttypes": [
+		  {
 			"code": "string",
 			"description": "string",
 			"isActive": true,
 			"langCode": "string",
-			"name": "string", 
-			"documenttypes": [
-					{
-						"code": "string",
-						"description": "string",
-						"isActive": true,
-						"langCode": "string",
-						"name": "string"
-					}
-			]
-		}
-	  ]
-	}
+			"name": "string"
+		  }
+		]
+	  }
+	]
+  }
 }
 ```
-
+**Response code: 200 Ok**
 
 ### Example Failure Response
 ```JSON
@@ -1063,6 +1081,7 @@ languagecode|Yes|Language code in ISO 639-2|-NA-|fra
   "response": null
 }
 ```
+**Response code: 200 Ok**
 
 ## GET /validdocuments/{languagecode}
 
@@ -1109,7 +1128,7 @@ languagecode|Yes|Language code in ISO 639-2|-NA-|fra
   "version": "string"
 }
 ```
-
+**Response code: 200 Ok**
 
 ### Example Failure Response
 ```JSON
@@ -1127,6 +1146,7 @@ languagecode|Yes|Language code in ISO 639-2|-NA-|fra
   "response": null
 }
 ```
+**Response code: 200 Ok**
 
 ## POST /validdocuments/search
 This service is for the valid document search functionality. All the filter parameters are passed and the valid document are searched and the matching results are returned. 
@@ -1160,33 +1180,32 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
 ### Example Request
 ```JSON
 {
-	"id": "string",
-	"metadata": {},
-	"requesttime": "2018-12-10T06:12:52.994Z",
-	"version": "string",
-	"request": {
-		"filters" : [
-			{
-				"columnName": "",
-				"type": "in",
-				"value": "",  
-				"fromValue": "",  
-				"toValue": ""
-				
-			}
-		],
-		"sort":[
-			{
-				"sortfield":"string",
-				"sorttype":"ASC"
-			}
-		],
-		"pagination":{
-			"pageStart":"number",
-			"pageFetch":"number"
-		},
-		"languageCode":""
-	}
+  "id": "string",
+  "metadata": {},
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string",
+  "request": {
+	"filters" : [
+	  {
+		"columnName": "",
+		"type": "in",
+		"value": "",  
+		"fromValue": "",  
+		"toValue": ""
+	  }
+	],
+	"sort":[
+	  {
+		"sortfield":"string",
+		"sorttype":"ASC"
+	  }
+	],
+	"pagination":{
+	  "pageStart":"number",
+	  "pageFetch":"number"
+	},
+	"languageCode":""
+  }
 }
 ```
 
@@ -1199,8 +1218,8 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-  "data": [
-	{
+    "data": [
+	  {
         "code": "string",
         "description": "string",
         "documentType": {
@@ -1220,13 +1239,14 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
         "langCode": "string",
         "name": "string"
       }
-   ],
-	"fromRecord" : "number",
+    ],
+    "fromRecord" : "number",
 	"toRecord":"number",
 	"totalRecord":"number"
- }
+  }
 }
 ```
+**Response code: 200 Ok**
 
 ## POST /validdocuments/filtervalues
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
@@ -1251,19 +1271,19 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 ### Example Request
 ```JSON
 {
-	"id": "string",
-	"metadata": {},
-	"requesttime": "2018-12-10T06:12:52.994Z",
-	"version": "string"
-	"request": {
-		"filters" : [
-			{
-				"columnName": ""
-				"type": "unique"
-			}
-		],
-		"languageCode": "string",
-	}
+  "id": "string",
+  "metadata": {},
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
+  "request": {
+	"filters" : [
+	  {
+		"columnName": ""
+		"type": "unique"
+	  }
+	],
+	"languageCode": "string",
+  }
 }
 ```
 
@@ -1276,13 +1296,13 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-  "filters": [
-	{
-		"fieldID": "string",
-		"fieldValue": "string"
-	}
-   ]
- }
+    "filters": [
+	  {
+	    "fieldID": "string",
+	    "fieldValue": "string"
+	  }
+    ]
+  }
 }
 ```
 **Response code: 200 Ok**
@@ -1332,8 +1352,9 @@ https://{base_url}/v1/masterdata/validdocuments/map/POE/POC
   "errors": null
 }
 ```
+**Response code: 200 Ok**
 
-### Error Response:
+### Error Response
 ``` JSON
 {
   "id": "string",
@@ -1348,8 +1369,8 @@ https://{base_url}/v1/masterdata/validdocuments/map/POE/POC
   ],
  "response": null
 }
-
 ```
+**Response code: 200 Ok**
 
 ### Failure details
 Error Code  | Error Message | Error Description
@@ -1384,7 +1405,7 @@ doctypecode|Yes|document type code| |-NA-|
 https://{base_url}/v1/masterdata/validdocuments/unmap/CIN/POB
 ```
 
-### Response 
+### Success Response 
 ```JSON
 {
   "id": null,
@@ -1398,6 +1419,7 @@ https://{base_url}/v1/masterdata/validdocuments/unmap/CIN/POB
   "errors": null
 }
 ```
+**Response code: 200 Ok**
 
 ### Error Response
 ``` JSON
@@ -1415,6 +1437,7 @@ https://{base_url}/v1/masterdata/validdocuments/unmap/CIN/POB
  "response": null
 }
 ```
+**Response code: 200 Ok**
 
 ### Failure details
 Error Code  | Error Message | Error Description
