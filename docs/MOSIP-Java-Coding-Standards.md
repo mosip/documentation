@@ -651,22 +651,23 @@ Function<Employee, String> = employee::getName // PREFER
     ```
 * Use “Effectively Final” Variables in Lambda Expressions. It is not required to mark every target variable as final.
 * Avoid mutating Object Variables in Lambda Expression.
-* Avoid using the block lambdas wherever an expression lambda are used. For example:
-    ```java
-    // PREFER
-    someVar -> someVar.toUpperCase(Constants.SOME_CONST);
-
-    // AVOID
-    someVar -> {
-    **return** someVar.toUpperCase(Constants.SOME_CONST);
-    }
-    ```
+* Avoid using the block lambdas wherever an expression lambda are used. 
+For example:
+```java
+// PREFER
+someVar -> someVar.toUpperCase(Constants.SOME_CONST);
+// AVOID
+someVar -> {
+**return** someVar.toUpperCase(Constants.SOME_CONST);
+}
+```
 	
 ## Functional Interfaces
 * Prefer Standard Functional Interfaces over creating a similar one unless it is really required. Use Standard Functional interfaces, which are gathered in the `java.util.function` package, satisfy most developers' needs in providing target types for lambda expressions and method references.
 * On a new Functional Interface declaration always use `@FunctionalInterface` annotation. This is not only for the documentation purpose but also to avoid accidentally breaking the Functional Interface behavior.
 * Instantiate Functional Interfaces with Lambda Expressions instead of creating anonymous inner class instances for that.
-* Whenever calling the functional interface, place them at last in the parameter list. For example
+* Whenever calling the functional interface, place them at last in the parameter list. 
+For example:
 ```java
 // PREFER
 public Foo parse(Locale locale, **Function<Locale,Foo> fn** );
