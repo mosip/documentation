@@ -846,12 +846,14 @@ public final class XYZLogger {
 
 ### MOSIP log format
 Every log entry contains the following format,
-
+```
 <date_iso> - <application_id> - <module_id> - <component_id> - <id_type> - <idvalue> - <description>
+```
 
 For example,
-
+```
 2008-09-15T15:53:00+05:00 - ENROLMENT – PACKET_VALIDATOR - VALIDATE – EnrolmentId - 829329 – Packet validator had been called and now we are going to validate the packets.
+```
 
 ### No sensitive information is logged
 * Never log any sensitive information such as user credentials, individual identity information to the log, mask the data if required before logging.
