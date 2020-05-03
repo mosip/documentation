@@ -209,6 +209,7 @@ When the number of characters exceed the limit, the line should be broken into m
 
 # Comments
 There are two types of comments in Java.
+
 1. Implementation comments
 2. Documentation comments
 
@@ -399,11 +400,13 @@ class Sample extends Object {
 * Methods are separated by a blank line.
 
 ### Method Parameters
+
 1. Never re-assign a parameter value. This may lead to unpredictable bugs.
 2. Don't use too many number of parameters. Keep the maximum number of method parameters to 5 for simplicity.
 3. Prefer method parameter type to be more generic such as a Super Interface or Super Class. For example, `List` instead of `ArrayList`.
 	
 ### Method Return Statement
+
 1.	Never return null for an Array return type. Return an empty array of 0 like `return new String[0]`.
 2.	Never return null for a Set/List/Map collection return types. Return corresponding empty values such as `Collections.emptySet()`, `Collections.emptyList()` or `Collections.emptyMap()`;
 3. Prefer method return type to be more generic such as a Super Interface or Super Class. For example, `List` instead of `ArrayList`.
@@ -545,10 +548,12 @@ default:
 
 ## Blank Lines
 Only for the following situations 2 blank lines are used,
+
 1. Between 2 different sections of the source file
 1. If you have more than one class or interface, use 2 blank lines
 
 Only for the following situations, 1 blank line is used,
+
 1. Between method declarations.
 1. Between the variable declarations and the method code.
 1. Before the block comment or line comment.
@@ -556,6 +561,7 @@ Only for the following situations, 1 blank line is used,
 
 ## Blank Spaces
 Under the following circumstances, blank space are used,
+
 1. When a keyword followed by parenthesis, a blank space should be given after the keyword. For example,
 ```java
 while(age > 60)  {
