@@ -2,12 +2,8 @@
 
 ## MOSIP Architecture
 * [Architecture](MOSIP-Architecture.md)
-	* [MOSIP Architecture Principles](MOSIP-Architecture-Principles.md)
-	* [Technology Stack](Technology-Stack.md)
 * [Data Architecture](MOSIP-Data-Architecture.md)
-    * [MOSIP Data Model](MOSIP-Data-Model.md)
-* [Privacy & Security](Privacy-and-Security.md)
-	* [Security Tools](Security-Tools.md)	
+* [Privacy & Security](Privacy-and-Security.md)	
 
 ## Functionalities
 * Modules
@@ -45,13 +41,13 @@
 	* [Resident Service APIs](Resident-Service-APIs.md)
 	* [Template APIs](Template-APIs.md)
 	* [Zone APIs](Zone-APIs.md)
-
-## Biometric Integration
-* Biometric Integration Points
+* Biometric 
 	* [ABIS](Automated-Biometric-Identification-System-ABIS.md)
 	* [Biometric SDK](Biometric-SDK.md)
 	* [MDS Specification](MOSIP-Device-Service-Specification.md)
-
+	* [Biometric Data Specification](Biometric-Data-Specification.md)
+    * [CBEFF XML](CBEFF-XML.md)
+	
 ## Installing MOSIP
 * [Build & Deploy](Build-and-Deploy.md)
 * Other Installation Guides
@@ -65,28 +61,25 @@
 
 ## MOSIP Contributors	
 * [Contributor's Guide](Contributor-Guide.md)
-	* [Code of Conduct](Code-of-Conduct.md)
-	* [Issue Reporting Guideline](Issue-Reporting-Guideline.md)
 * MOSIP Coding Standards
 	* [Auth Angular User Guide](Auth-Angular-User-Guide.md)
 	* [Auth SpringBoot User Guide](Auth-SpringBoot-User-Guide.md)
 	* [Data Model Naming Standards](Data-Model-Naming-Standards.md)
 	* [Encryption in DTO Layer](Encryption-in-DTO-layer.md)
 	* [Gitub Workflow](Github-Workflow.md)
+	* [MOSIP Data Model](MOSIP-Data-Model.md)
 	* [MOSIP Java Coding Standards](MOSIP-Java-Coding-Standards.md)
     * [MOSIP REST API guidelines](MOSIP-REST-API-guidelines.md)
 	* [Registration Client UI Developer Document](Registration-Client-UI-Developer-Document.md)
 	* [Registration Client Developer Documentation](Registration-Client-Developer-Documentation.md)
+	* [Technology Stack](Technology-Stack.md)
+	* [Security Tools](Security-Tools.md)
 
 ## MOSIP Testing
 * MOSIP Testing
 	* [Test Rig Design](Test-Rig-Design.md)
 	* [Tester Documentation](Tester-Documentation.md)
 	* [Testing Attachments   Kernel](Testing-Attachments---Kernel.md)
-	
-## MOSIP Roadmap
-*[Roadmap](Roadmap.md)
-	* [Roadmap Activities](Roadmap-Activities.md)
 
 ## Other Pages 
 * Others
@@ -95,9 +88,8 @@
     * [Auth Adapter](Auth-Adapter.md)
     * [Auth Implementation](Auth-Implementation.md)
     * [Authentication and Authorization Functionality](Authentication-and-Authorization-Functionality.md)
-	* [Biometric Data Specification](Biometric-Data-Specification.md)
-    * [CBEFF XML](CBEFF-XML.md)
-    * [Common Services Functionality](Common-Services-Functionality.md)
+    * [Code of Conduct](Code-of-Conduct.md)
+	* [Common Services Functionality](Common-Services-Functionality.md)
 	* [Customizations for a Country](Customisations-for-a-Country.md)
     * [Data Services Functionality](Data-Services-Functionality.md)
     * [Device Integration Specifications](Device-Integration-Specifications.md)
@@ -111,10 +103,12 @@
     * [Home](Home.md)
     * [ID Authentication Functionality](ID-Authentication-Functionality.md)
     * [Interdependent components and services](Interdependent-components-and-services.md)
+	* [Issue Reporting Guideline](Issue-Reporting-Guideline.md)
     * [Kernel](Kernel.md)
     * [Master Data Services Functionality](Master-Data-Services-Functionality.md)
     * [Masterdata generic api spec](Masterdata-generic-api-spec.md)
     * [Masterdata generic](Masterdata-generic.md)
+	* [MOSIP Architecture Principles](MOSIP-Architecture-Principles.md)
     * [MOSIP ID Object Definition](MOSIP-ID-Object-Definition.md)
     * [MOSIP Partner Secure Communication](MOSIP-Partner-Secure-Communication.md)
     * [Partner Management Functionality](Partner-Management-Functionality.md)
@@ -127,7 +121,7 @@
     * [Resident Services Functionality](Resident-Services-Functionality.md)
     * [syncapi generic api spec](syncapi-generic-api-spec.md)
     * [syncapi generic api](syncapi-generic-api.md)
-    * [UIN and VID Generation Service Functionality](UIN-and-VID-Generation-Service-Functionality.md)
+	* [UIN and VID Generation Service Functionality](UIN-and-VID-Generation-Service-Functionality.md)
     * [VID Generator](VID-Generator.md)
     * [Scribble Page](Scribble-Page.md)
 	
@@ -138,3 +132,5 @@
     * [Release Notes 1.0.0](Release-Notes-1.0.0.md)
     * [Release Notes 1.0.5](Release-Notes-1.0.5.md)
     * [Release Notes 1.0.6](Release-Notes-1.0.6.md)
+*[Roadmap](Roadmap.md)
+	* [Roadmap Activities](Roadmap-Activities.md)
