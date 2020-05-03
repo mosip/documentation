@@ -1,13 +1,15 @@
 # Table of contents
 
-## QUICK LINKS
+## MOSIP Architecture
 * [Architecture](MOSIP-Architecture.md)
 	* [MOSIP Architecture Principles](MOSIP-Architecture-Principles.md)
 	* [Technology Stack](Technology-Stack.md)
-* [MOSIP Data Architecture](MOSIP-Data-Architecture.md)
+* [Data Architecture](MOSIP-Data-Architecture.md)
     * [MOSIP Data Model](MOSIP-Data-Model.md)
 * [Privacy & Security](Privacy-and-Security.md)
 	* [Security Tools](Security-Tools.md)	
+
+## Functionalities
 * Modules
 	* [Pre-Registration](Pre-Registration.md)
 	* [Registration Client](Registration-Client.md)
@@ -17,42 +19,6 @@
 	* [Resident Services](Resident-Services.md)
 	* [Partner Management](Partner-Management.md)
 	* [Admin](Admin.md)
-* Biometric Integration
-	* [Biometric Data Specification](Biometric-Data-Specification.md)
-	* [MDS Specification](MOSIP-Device-Service-Specification.md) 
-	* [Biometric SDK](Biometric-SDK.md)
-	* [ABIS](Automated-Biometric-Identification-System-ABIS.md)
-* Installing MOSIP
-	* [Build & Deploy](Build-and-Deploy.md)
-	* [Interdependent components and services](Interdependent-components-and-services.md)
-* Other Installation Guides
-    * [Steps to Install and Configure LDAP](Steps-to-Install-and-Configure-LDAP.md)
-    * [Steps to Install and Configure HDFS](Steps-to-Install-and-Configure-HDFS.md)
-    * [Steps to Install and use PostgreSql Version 10.2 on RHEL 7.5](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md)
-    * [Steps to Install Clam AntiVirus Version 0.101.0](Steps-to-Install-Clam-AntiVirus-Version-0.101.0.md)
-    * [Steps to Install Keycloak Standalone Server](Steps-to-Install-Keycloak-Standalone-Server.md)
-	* [Apache Directory Studio User Guide](Apache-Directory-Studio-User-Guide.md)
-	* [ApacheDs Server Installation and Configuration](ApacheDs-Server-Installation-and-Configuration.md)
-* MOSIP Contributors	
-	* [Contributor's Guide ](Contributor-Guide.md)
-	* [Code of Conduct](Code-of-Conduct.md)
-	* [Issue Reporting Guideline](Issue-Reporting-Guideline.md)
-* MOSIP Coding Standards
-	* [Auth Angular User Guide](Auth-Angular-User-Guide.md)
-	* [Auth SpringBoot User Guide](Auth-SpringBoot-User-Guide.md)
-	* [Data Model Naming Standards](Data-Model-Naming-Standards.md)
-	* [Encryption in DTO Layer](Encryption-in-DTO-layer.md)
-	* [Gitub Workflow](Github-Workflow.md)
-	* [MOSIP Java Coding Standards](MOSIP-Java-Coding-Standards.md)
-    * [MOSIP REST API guidelines](MOSIP-REST-API-guidelines.md)
-	* [Registration Client UI Developer Document](Registration-Client-UI-Developer-Document.md)
-	* [Registration Client Developer Documentation](Registration-Client-Developer-Documentation.md)
-* MOSIP Testing
-	* [Test Rig Design](Test-Rig-Design.md)
-	* [Tester Documentation](Tester-Documentation.md)
-	* [Testing Attachments   Kernel](Testing-Attachments---Kernel.md)
-* [MOSIP Roadmap](Roadmap.md)
-	* [Roadmap Activities](Roadmap-Activities.md)
 * APIs
 	* [ABIS APIs](ABIS-APIs.md)
 	* [Admin APIs](Admin-APIs.md)
@@ -79,6 +45,48 @@
 	* [Resident Service APIs](Resident-Service-APIs.md)
 	* [Template APIs](Template-APIs.md)
 	* [Zone APIs](Zone-APIs.md)
+
+## Biometric Integration
+* Biometric Integration Points
+	* [Biometric Data Specification](Biometric-Data-Specification.md)
+	* [MDS Specification](MOSIP-Device-Service-Specification.md) 
+	* [Biometric SDK](Biometric-SDK.md)
+	* [ABIS](Automated-Biometric-Identification-System-ABIS.md)
+
+## Installing MOSIP
+* [Build & Deploy](Build-and-Deploy.md)
+* Other Installation Guides
+    * [Steps to Install and Configure LDAP](Steps-to-Install-and-Configure-LDAP.md)
+    * [Steps to Install and Configure HDFS](Steps-to-Install-and-Configure-HDFS.md)
+    * [Steps to Install and use PostgreSql Version 10.2 on RHEL 7.5](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md)
+    * [Steps to Install Clam AntiVirus Version 0.101.0](Steps-to-Install-Clam-AntiVirus-Version-0.101.0.md)
+    * [Steps to Install Keycloak Standalone Server](Steps-to-Install-Keycloak-Standalone-Server.md)
+	* [Apache Directory Studio User Guide](Apache-Directory-Studio-User-Guide.md)
+	* [ApacheDs Server Installation and Configuration](ApacheDs-Server-Installation-and-Configuration.md)
+
+## MOSIP Contributors	
+* [Contributor's Guide](Contributor-Guide.md)
+	* [Code of Conduct](Code-of-Conduct.md)
+	* [Issue Reporting Guideline](Issue-Reporting-Guideline.md)
+* MOSIP Coding Standards
+	* [Auth Angular User Guide](Auth-Angular-User-Guide.md)
+	* [Auth SpringBoot User Guide](Auth-SpringBoot-User-Guide.md)
+	* [Data Model Naming Standards](Data-Model-Naming-Standards.md)
+	* [Encryption in DTO Layer](Encryption-in-DTO-layer.md)
+	* [Gitub Workflow](Github-Workflow.md)
+	* [MOSIP Java Coding Standards](MOSIP-Java-Coding-Standards.md)
+    * [MOSIP REST API guidelines](MOSIP-REST-API-guidelines.md)
+	* [Registration Client UI Developer Document](Registration-Client-UI-Developer-Document.md)
+	* [Registration Client Developer Documentation](Registration-Client-Developer-Documentation.md)
+
+## MOSIP Testing
+* MOSIP Testing
+	* [Test Rig Design](Test-Rig-Design.md)
+	* [Tester Documentation](Tester-Documentation.md)
+	* [Testing Attachments   Kernel](Testing-Attachments---Kernel.md)
+## MOSIP Roadmap
+*[Roadmap](Roadmap.md)
+	* [Roadmap Activities](Roadmap-Activities.md)
 
 ## Other Pages 
 * Others
