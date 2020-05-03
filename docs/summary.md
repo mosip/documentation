@@ -48,10 +48,9 @@
 
 ## Biometric Integration
 * Biometric Integration Points
-	* [Biometric Data Specification](Biometric-Data-Specification.md)
-	* [MDS Specification](MOSIP-Device-Service-Specification.md) 
-	* [Biometric SDK](Biometric-SDK.md)
 	* [ABIS](Automated-Biometric-Identification-System-ABIS.md)
+	* [Biometric SDK](Biometric-SDK.md)
+	* [MDS Specification](MOSIP-Device-Service-Specification.md)
 
 ## Installing MOSIP
 * [Build & Deploy](Build-and-Deploy.md)
@@ -84,6 +83,7 @@
 	* [Test Rig Design](Test-Rig-Design.md)
 	* [Tester Documentation](Tester-Documentation.md)
 	* [Testing Attachments   Kernel](Testing-Attachments---Kernel.md)
+	
 ## MOSIP Roadmap
 *[Roadmap](Roadmap.md)
 	* [Roadmap Activities](Roadmap-Activities.md)
@@ -95,6 +95,7 @@
     * [Auth Adapter](Auth-Adapter.md)
     * [Auth Implementation](Auth-Implementation.md)
     * [Authentication and Authorization Functionality](Authentication-and-Authorization-Functionality.md)
+	* [Biometric Data Specification](Biometric-Data-Specification.md)
     * [CBEFF XML](CBEFF-XML.md)
     * [Common Services Functionality](Common-Services-Functionality.md)
 	* [Customizations for a Country](Customisations-for-a-Country.md)
