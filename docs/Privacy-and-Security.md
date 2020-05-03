@@ -4,7 +4,6 @@ In MOSIP, privacy and security are highest priorities and this document details 
 MOSIP's approach on privacy and security is determined by the [framework principles](https://www.mosip.io/uploads/resources/5cc84b0a08284Country%20Engagement%20Principles_v2.pdf) under which it operates.
 
 # MOSIP Security Design Key Features
-
 - Direct access to data stored in database not permitted - data accessed via APIs only.
 - Zero-Knowledge Administration principle used so administrators can manage data without seeing the actual data. Data can be accessed only via APIs
 - The integrity of each database row protected to prevent any malicious tampering like swapping identities, for instance.
@@ -16,7 +15,6 @@ MOSIP's approach on privacy and security is determined by the [framework princip
 
 # MOSIP Cryptography Algorithms
 MOSIP uses following algorithms:
-
 1. RSA OAEP 2048 bit minimum for all PKI based encryption.
 2. AES GCM 256 bit minimum for all Symmetric key encryption.
 3. SHA256 as the standard hashing algorithm.
@@ -26,7 +24,6 @@ MOSIP uses following algorithms:
 
 # Database encryption
 As a principle, MOSIP does not use any mechanism in-built in a database for encryption. All sensitive data to be stored in a DB is encrypted/decrypted outside the DB at the application layer.
-
 - All sensitive (configurable) data is encrypted using a symmetric key algorithm. MOSIP supports AES 256 algorithm by default. 
 - Each cell is encrypted using its own symmetric key and the keys are selected randomly.
 - By default, we generate 10,000 symmetric keys for the database encryption. This is a soft limit and that can be increased.
@@ -35,10 +32,8 @@ As a principle, MOSIP does not use any mechanism in-built in a database for encr
 
 ![](_images/arch_diagrams/DB_encryption.png)
 
-
 # Registration data encryption
 Registration Client is used to collect all the personal and biometric information for MOSIP. The client is designed to work on TPM compatible machines. The client follows the following principles
-
 - All machines are registered using the TPM identity keys. The public part of these keys are pre whitelisted in the MOSIP database.
 - An SK from SRK key is created to encrypt all the other keys used by MOSIP.
 - All local configurations are encrypted using the same mechanism.
@@ -56,21 +51,17 @@ MOSIP uses AES and RSA keys. By default, the MOSIP is designed to have the expir
 - Every key has an expiry date upon creation. (It's defined by the configuration, Default set to 6 Months)
 
 There are two modes of operation for key management. </br>  
-
-  **Inline**
+**Inline**
 - In this mode the system would look at a configuration to see 
 - When a data is written back to the database a new active key is used.
 - When a data is read where the encryption key is expired the system notifies the key management that the expired key is used and has to be re-encrypted with an active key. </br>  
-
-
 **Batch**
 - In this mode, the system would search for all the tables for encrypted data with expired keys.
 - Re-encrypt them with the new active keys.
 - This mode is scheduled to run upon need basis or bi-monthly so there is no huge data crunch and the inline mode would have re-encrypted most of the data.
 
 # Registration data encryption
-Registration Client is used to collect all the personal and biometric information for MOSIP. The client is designed to work on TPM compatible machines. The client follows the following principles
-
+Registration Client is used to collect all the personal and biometric information for MOSIP. The client is designed to work on TPM compatible machines. The client follows the following principles:
 - All machines are registered using the TPM identity keys. The public part of these keys are pre whitelisted in the MOSIP database.
 - An SK from SRK key is created to encrypt all the other keys used by MOSIP.
 - All local configurations are encrypted using the same mechanism.
@@ -99,5 +90,4 @@ A country will have its own hierarchy of system users especially the Registratio
 ![Authentication](_images/auth/authn_authz.png)
 
 # Security tools
-
 [Security Tools](Security-Tools.md)
