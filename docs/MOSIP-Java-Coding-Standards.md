@@ -264,13 +264,13 @@ if(width > 45) {
 * A method documentation should have description about all parameters, exceptions thrown and return value.
 * Documentation comments can be of two kinds:
 	* Single line documentation comment: 
-`/** COMMENT */`
+		`/** COMMENT */`
 	*  Multi-line documentation comment:
-```java
-/** 
- * COMMENT 
- */
-```
+		```java
+		/** 
+		 * COMMENT 
+		 */
+		```
 
 Example:
 ```java
@@ -411,33 +411,33 @@ class Sample extends Object {
 2.	Never return null for a Set/List/Map collection return types. Return corresponding empty values such as `Collections.emptySet()`, `Collections.emptyList()` or `Collections.emptyMap()`;
 3. Prefer method return type to be more generic such as a Super Interface or Super Class. For example, `List` instead of `ArrayList`.
 4.	Avoid having multiple return statements in a method. Prefer to provide a single point of exit to a method. For example:
-``` java
-//AVOID BELOW
-private int getStatus() {
-    if(condition1) {
-        return Status.SUCCESS;
-    } else if (condition2) {
-        return Status.FAILURE;
-    } else {
-        return Status.UNKNOWN;
-    }
-}
+	``` java
+	//AVOID BELOW
+	private int getStatus() {
+		if(condition1) {
+			return Status.SUCCESS;
+		} else if (condition2) {
+			return Status.FAILURE;
+		} else {
+			return Status.UNKNOWN;
+		}
+	}
 
-//PREFER BELOW
-private int getStatus() {
-    int status;
+	//PREFER BELOW
+	private int getStatus() {
+		int status;
 
-    if(condition1) {
-        status = Status.SUCCESS;
-    } else if (condition2) {
-        status = Status.FAILURE;
-    } else {
-        status = Status.UNKNOWN;
-    }
+		if(condition1) {
+			status = Status.SUCCESS;
+		} else if (condition2) {
+			status = Status.FAILURE;
+		} else {
+			status = Status.UNKNOWN;
+		}
 
-    return status;
-}
-```
+		return status;
+	}
+	```
 5. Use `Optional` return type to avoid null checking. When there is possible to return `null` for a method, return `Optional.empty()`.
 6. Use `OptionalInt`, `OptionalLong` return types for a method when there is an unknown value of Integer/Long to be returned like `-1`;
 
@@ -455,63 +455,63 @@ argv++; argc--; // AVOID!
 
 ## Compound Statements
 * Compound statements are statements that contain lists of statements enclosed in braces 
-```java
-{ 
-	Statement1;
-	Statement2;
-	Statement3;
-}
-```
+	```java
+	{ 
+		Statement1;
+		Statement2;
+		Statement3;
+	}
+	```
 * The enclosed statements should be indented one more level than the compound statement.
 * The opening brace should be at the end of the line that begins the compound statement; the closing brace should begin a line and be indented to the beginning of the compound statement.
 * Braces are used around all statements, even single statements, when they are part of a control structure, such as an if-else or for statement. This makes it easier to add statements without accidentally introducing bugs due to forgetting to add braces.  For example:
-```java
-//COMPOUND STATEMENT
-if(list.size() == 2) {
-    list.remove(0)
-    list.remove(0)
-} else {
-    list.add("element1");
-    list.add("element2");
-}
+	```java
+	//COMPOUND STATEMENT
+	if(list.size() == 2) {
+		list.remove(0)
+		list.remove(0)
+	} else {
+		list.add("element1");
+		list.add("element2");
+	}
 
-//AVOID BELOW
-if(list.isEmpty()) 
-    list.add("element")
-else 
-    list.remove(0);
+	//AVOID BELOW
+	if(list.isEmpty()) 
+		list.add("element")
+	else 
+		list.remove(0);
 
-//PREFERRED WAY
-if(list.isEmpty()) {
-    list.add("element")
-} else {
-    list.remove(0);
-}
-```
+	//PREFERRED WAY
+	if(list.isEmpty()) {
+		list.add("element")
+	} else {
+		list.remove(0);
+	}
+	```
 
 ## "return" Statements
 * A return statement with a value should not use parentheses unless they make the return value more obvious in some way. Example:
-```java
-return;
-return myDisk.size();
-return (size ? size : defaultSize);
-```
+	```java
+	return;
+	return myDisk.size();
+	return (size ? size : defaultSize);
+	```
 * Refer to [Method return statement](#method-return-statement) for more information.
 
 ## if, if-else, if-else if-else Statements
 * Always curly braces are used in the if-else statements. Even though there is a single statement below the if-else statement, curly braces is used. For example,
-```java
-if(width > 45) {
-    return false; // some description
-}
-```
+	```java
+	if(width > 45) {
+		return false; // some description
+	}
+	```
 * If there is a Boolean value to be returned in a method or assigned to a variable based on an if-else condition, the condition itself should be returned or assigned instead of `true` or `false` for the condition.
 For example, 
-```java
-if(isEmpty()) return true; else return false; //AVOID
+	```java
+	if(isEmpty()) return true; else return false; //AVOID
 
-return isEmpty(); //PREFER
-```
+	return isEmpty(); //PREFER
+	```
 * Prefer "switch" statement when possible over having multiple “if-else if-else if-else” statements.
 
 ## Conditional Expressions
