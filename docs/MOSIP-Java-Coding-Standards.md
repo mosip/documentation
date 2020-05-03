@@ -128,7 +128,6 @@ When a java file is written, the following order is maintained,
 
 ### Beginning documentation comment
 The beginning comment should be in a C-style comment. Following is the format of the comment.
-
 ```
 /*  
  * Firstname Lastname
@@ -136,6 +135,7 @@ The beginning comment should be in a C-style comment. Following is the format of
  * Copyright notice
  */   
 ```
+
 ### Package statement
 The first non-comment line is the package statement.
 
@@ -411,7 +411,6 @@ class Sample extends Object {
 2.	Never return null for a Set/List/Map collection return types. Return corresponding empty values such as `Collections.emptySet()`, `Collections.emptyList()` or `Collections.emptyMap()`;
 3. Prefer method return type to be more generic such as a Super Interface or Super Class. For example, `List` instead of `ArrayList`.
 4.	Avoid having multiple return statements in a method. Prefer to provide a single point of exit to a method. For example:
-
 ``` java
 //AVOID BELOW
 private int getStatus() {
@@ -673,6 +672,7 @@ someVar -> {
 * On a new Functional Interface declaration always use `@FunctionalInterface` annotation. This is not only for the documentation purpose but also to avoid accidentally breaking the Functional Interface behavior.
 * Instantiate Functional Interfaces with Lambda Expressions instead of creating anonymous inner class instances for that.
 * Whenever calling the functional interface, place them at last in the parameter list. 
+
 For example:
 ```java
 // PREFER
@@ -782,6 +782,7 @@ try {
 
 ### Log levels
 Logs are classified and logged accordingly. Following are the various log levels used in the MOSIP application.
+
 1. TRACE
 1. DEBUG
 1. INFO
@@ -913,5 +914,5 @@ MessageDialog.makeText(text)
 * It should be made sure to track the above comments, perform action accordingly and remove them when they become irrelevant.
 
 # References
-* <div>http://www.oracle.com/technetwork/java/codeconventions-150003.pdf</div>
-* <div>https://www.jfokus.se/jfokus17/preso/Java-SE-8-best-practices.pdf</div>
+* http://www.oracle.com/technetwork/java/codeconventions-150003.pdf
+* https://www.jfokus.se/jfokus17/preso/Java-SE-8-best-practices.pdf
