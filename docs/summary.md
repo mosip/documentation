@@ -65,7 +65,7 @@
 	* [Auth Angular User Guide](Auth-Angular-User-Guide.md)
 	* [Auth SpringBoot User Guide](Auth-SpringBoot-User-Guide.md)
 	* [Data Model Naming Standards](Data-Model-Naming-Standards.md)
-	* [Encryption in DTO Layer](Encryption-in-DTO-layer.md)
+	* [Encryption in DTO Layer](Encryption-in-DTO-Layer.md)
 	* [Gitub Workflow](Github-Workflow.md)
 	* [MOSIP Data Model](MOSIP-Data-Model.md)
 	* [MOSIP Java Coding Standards](MOSIP-Java-Coding-Standards.md)
