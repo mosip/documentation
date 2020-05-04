@@ -92,6 +92,7 @@
 	* [Common Services Functionality](Common-Services-Functionality.md)
 	* [Customizations for a Country](Customisations-for-a-Country.md)
     * [Data Services Functionality](Data-Services-Functionality.md)
+	* [Deduplication and Manual Adjudication](Deduplication-and-Manual-Adjudication.md)
     * [Device Integration Specifications](Device-Integration-Specifications.md)
     * [Encryption in DTO Layer](Encryption-in-DTO-Layer.md)
     * [First User Registration and Onboarding](First-User-Registration-and-Onboarding.md)
