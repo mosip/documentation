@@ -46,7 +46,7 @@ In our current implementation we have kept Manual Adjudication only after biomet
 
 The Manual Adjudication stage can be plugged-in after demographic de-duplication also but we have done so for our current implementation because, we already do a two step verification i.e. demo match and then ABIS gallery match to confirm a duplicate.
 
-### Manual Verification APIs
+### Manual Adjudication APIs
 * **Assignment API** - This API is used to assign one single unassigned applicant record to the manual adjudicator. The Assignement logic is based on First come First server based on the logged in Manual Adjudicator.
 * **Fetch Demographic** - The manual adjudicator has to verify the applicant demographic information. This API is used to get the applicant demographic information from packet.
 * **Fetch Biometrics** - The manual adjudicator would need to verify the applicant biometric and demographic records. This API is used to get the applicant biometric file from packet.
