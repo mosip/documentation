@@ -7,32 +7,33 @@ This section details about the REST services in ID Authentication module.
 * [Authentication Transactions Service](#authentication-transactions-service-internal) - This service can be used by MOSIP modules to retrieve authentication transactions.
 * [Authentication Type Status Service](#authentication-types-status-service-internal) - This service can be used by MOSIP modules to store/update/retrieve status of authentication types.
 
-## Authentication Service (Public)
-This service details authentication (yes/no auth) that can be used by Partners to authenticate an Individual. Below are various authentication types supported by this service - 
+# Authentication Service (Public)
+This service details authentication (yes/no auth) that can be used by Partners to authenticate an Individual. Below are various authentication types supported by this service:
+
 1. OTP based - OTP (Time based OTP)
 2. Demographic based - Name, DOB, Age, Gender, Address, FullAddress
 3. Biometric based - Fingerprint, IRIS and Face
 
-#### Users of Authentication service -
-1. `MISP (MOSIP Infrastructure Service Provider)` - MISP's role is limited to infrastructure provisioning and acting as a gate keeper for all authentication requests sent to this service. The MISP is also responsible for the policy creation on the MOSIP servers so their partners will follow the set policy.
-2. `Partners` - *Auth-Partners* register themselves with MOSIP, under a MISP. Authentication requests are captured by Auth-Partners and sent to MOSIP, via MISP.
+## Users of Authentication service
+
+1. **MISP (MOSIP Infrastructure Service Provider)** - MISP's role is limited to infrastructure provisioning and acting as a gate keeper for all authentication requests sent to this service. The MISP is also responsible for the policy creation on the MOSIP servers so their partners will follow the set policy.
+2. **Partners** - Auth-Partners register themselves with MOSIP, under a MISP. Authentication requests are captured by Auth-Partners and sent to MOSIP, via MISP.
 
 * [POST /idauthentication/v1/auth/](#post-idauthenticationv1auth) 
 
-### POST /idauthentication/v1/auth/
+## POST /idauthentication/v1/auth/
 This request will authenticate an Individual, based on provided authentication type(s).
 
-#### Resource URL
-<div>https://mosip.io/idauthentication/v1/auth/:Auth-Partner-ID/:MISP-LicenseKey</div>
+### Resource URL
+`https://mosip.io/idauthentication/v1/auth/:Auth-Partner-ID/:MISP-LicenseKey`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Body Parameters
+### Request Body Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 id | Y | API Id | | mosip.identity.auth
@@ -58,13 +59,13 @@ request: biometrics: data|Y| JWS format of Biometric data of an Individual with 
 request: biometrics: hash|Y| SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format. While calculating the hash for the first biometrics.data entry assume empty string as previous data block.| |
 request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.2](https://github.com/mosip/mosip-docs/wiki/MOSIP-Device-Service-Specification/5495eff4efe79718b4bb57cd95178e917d517671#53-capture) to encrypt above biometric data attribute. This symmetric key is encrypted by MOSIP Public Key shared to Device Providers using asymmetric key algorithm - RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING, and then Base64-url-encoded| |
 
+Mandatory fields for different types of authentications: 
 
-Mandatory fields for different types of authentications- 
 1. **OTP Auth** - request: **otp** attribute is mandatory 
 2. **Demographic Auth** - request: **demographics**  attribute is mandatory
 2. **Biometric Auth** - request: **biometrics** attribute is mandatory
 
-#### Request Body
+### Request Body
 ```JSON
 {
   "id": "mosip.identity.auth",
@@ -136,10 +137,9 @@ Mandatory fields for different types of authentications-
 }
 ```
 
-#### Responses:
-##### Success Response:
-###### Status Code : 200 (OK)
-###### Description : Successfully authenticated an Individual    
+### Responses
+
+#### Success Response   
 
 ```JSON
 {
@@ -157,11 +157,9 @@ Mandatory fields for different types of authentications-
   "errors": null
 }
 ```
+**Response Code : 200 (OK)**
 
-##### Failed Response:
-###### Status Code : 200 (OK)    
-###### Description : Authentication of an Individual failed
-
+#### Failed Response:
 ```JSON
 {
   //API Metadata
@@ -184,7 +182,9 @@ Mandatory fields for different types of authentications-
   ]
 }
 ```
-##### Failure Details
+**Response Code : 200 (OK)**
+
+### Failure Details
 Error Code|Error Message|Description|Action Message
 -----------|-------------|-----------|----------------
 IDA-BIA-001| Biometric data &ndash; &lt;Biometric Attribute&gt; did not match|FIR,IIR,FACE Mismatch|Please give your biometrics again.
@@ -232,31 +232,30 @@ IDA-OTA-005|Input transactionID does not match transactionID of OTP Request|Inva
 IDA-OTA-007|UIN is locked for OTP validation due to exceeding no of invalid OTP trials |Validate wrong OTP for exceeding no of retries|
 IDA-OTA-010|Input Identity Type does not match Identity Type of OTP Request|Invalid Identity Type|
 
-## eKYC Service (Public)
+# eKYC Service (Public)
 This service details authentication (eKYC auth) that can be used by Partners to authenticate an Individual and send Individual's KYC details as response. Below are various authentication types supported by eKYC Authentication - 
 1. OTP Authentication - OTP
 2. Biometric Authentication - Fingerprint, IRIS and Face
 
-#### Users of KYC service -
+## Users of KYC service
 1. `MISP (MOSIP Infrastructure Service Provider)` - MISP's role is limited to infrastructure provisioning and acting as a gate keeper for all KYC requests sent to this service. The MISP is also responsible for policy creation on the MOSIP servers so their partners will follow the set policy.
 2. `Partners` - *eKYC-Partners* register themselves with MOSIP, under a MISP. KYC requests are captured by eKYC-Partners and sent to MOSIP, via MISP.
 
 * [POST /idauthentication/v1/kyc/](#post-idauthenticationv1kyc) 
 
-### POST /idauthentication/v1/kyc/
+## POST /idauthentication/v1/kyc/
 This request will provide KYC details of Individual, once an Individual is successfully authenticated.
 
-#### Resource URL
-<div>https://mosip.io/idauthentication/v1/kyc/:eKYC-Partner-ID/:MISP-LicenseKey</div>
+### Resource URL
+`https://mosip.io/idauthentication/v1/kyc/:eKYC-Partner-ID/:MISP-LicenseKey`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Body Parameters
+### Request Body Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 id | Y | API Id | | mosip.identity.kyc
@@ -284,7 +283,7 @@ request: biometrics: hash|Y| SHA-256 hash of (SHA-256 hash of previous data bloc
 request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.2](https://github.com/mosip/mosip-docs/wiki/MOSIP-Device-Service-Specification/5495eff4efe79718b4bb57cd95178e917d517671#53-capture) to encrypt above biometric data attribute. This symmetric key is encrypted by MOSIP Public Key shared to Device Providers using asymmetric key algorithm - RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING, and then Base64-url-encoded| |
 
 
-#### Request Body
+### Request Body
 ```JSON
 {
   "id": "mosip.identity.kyc",
@@ -323,11 +322,9 @@ request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.2](https://gi
 }
 ```
 
-#### Responses:
-##### Success Response:
-###### Status Code : 200 (OK)
-###### Description : Successful KYC Authentication of an Individual    
+### Responses
 
+#### Success Response
 ```JSON
 {
   //API Metadata
@@ -395,11 +392,9 @@ request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.2](https://gi
   "errors": null
 }
 ```
+**Response Code : 200 (OK)**
 
-##### Failed Response:
-###### Status Code : 200 (OK)
-###### Description : KYC Authentication of an Individual failed    
-
+#### Failed Response
 ```JSON
 {
   //API Metadata
@@ -422,7 +417,9 @@ request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.2](https://gi
     ]
 }
 ```
-##### Failure Details
+**Response Code : 200 (OK)**
+
+### Failure Details
 Error Code|Error Message|Description|Action Message
 -----------|-------------|-----------|----------------
 IDA-BIA-001| Biometric data &ndash; &lt;Biometric Attribute&gt; did not match|FIR,IIR,FACE Mismatch|Please give your biometrics again.
@@ -469,29 +466,28 @@ IDA-OTA-005|Input transactionID does not match transactionID of OTP Request|Inva
 IDA-OTA-007|UIN is locked for OTP validation due to exceeding no of invalid OTP trials |Validate wrong OTP for exceeding no of retries|
 IDA-OTA-010|Input Identity Type does not match Identity Type of OTP Request|Invalid Identity Type|
 
-## OTP Request Service (Public)
+# OTP Request Service (Public)
 This service enables Partners to request for an OTP for an Individual. The OTP will be send via message or email as requested to the Individual. This OTP can then be used to authenticate an Individual using Authentication or eKYC service.
 
-#### Users of OTP Request service -
+## Users of OTP Request service
 1. `MISP (MOSIP Infrastructure Service Provider)` - MISP acts as a gate keeper for any OTP requests sent to this service. MISP is also responsible for the policy creation on the MOSIP servers so their partners will follow the set policy.
 2. `Partners` - *Auth-Partners* and *eKYC-Partners* can send OTP Request to MOSIP on behalf of Individual for Authentication and eKYC requests respectively, via MISP.
 
 * [POST /idauthentication/v1/otp/](#post-idauthenticationv1otp) 
 
-### POST /idauthentication/v1/otp/
+## POST /idauthentication/v1/otp/
 This request will send an OTP to the Individual.
 
-#### Resource URL 
-<div>https://mosip.io/idauthentication/v1/otp/:Partner-ID/:MISP-LicenseKey</div>
+### Resource URL 
+`https://mosip.io/idauthentication/v1/otp/:Partner-ID/:MISP-LicenseKey`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Body Parameters
+### Request Body Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 id | Y | API Id | mosip.identity.otp | 
@@ -502,8 +498,7 @@ individualId| Y | VID | | 9830872690593682
 individualIdType| Y | Allowed Type of Individual ID - VID, UIN | VID
 otpChannel| Y | Allowed OTP Channels - EMAIL, PHONE| | true
 
-
-#### Request Body
+### Request Body
 ```JSON
 {
   "id": "mosip.identity.otp",
@@ -519,11 +514,9 @@ otpChannel| Y | Allowed OTP Channels - EMAIL, PHONE| | true
 }
 ```
 
-#### Responses:
-##### Success Response:
-###### Status Code : 200 (OK)
-###### Description : OTP for Authentication or KYC Service was successfully sent to the Individual        
+### Responses
 
+#### Success Response
 ```JSON
 {
   //API Metadata
@@ -540,11 +533,9 @@ otpChannel| Y | Allowed OTP Channels - EMAIL, PHONE| | true
   "errors": null
 }
 ```
+**Response Code : 200 (OK)**
 
-##### Failed Response:   
-###### Status Code : 200 (OK)
-###### Description : Failed to send OTP to the Individual   
-
+#### Failed Response  
 ```JSON
 {
   //API Metadata
@@ -564,7 +555,9 @@ otpChannel| Y | Allowed OTP Channels - EMAIL, PHONE| | true
   ]
 }
 ```
-##### Failure Details
+**Response Code : 200 (OK)**
+
+### Failure Details
 Error Code|Error Message|Description|Action Message
 -----------|-------------|-----------|----------------
 IDA-MLC-001|Request to be received at MOSIP within&lt;x&gt; hrs/min|Invalid Time stamp|Please send the request within &lt;x&gt; hrs/min
@@ -596,30 +589,28 @@ IDA-OTA-006|UIN is locked for OTP generation. Please try again later |Try to gen
 IDA-OTA-008|OTP Notification Channel not provided.|No OTP Channel is provided in the input|
 IDA-OTA-009|&lt;Notification Channel&gt; not configured for the country|&lt;Notification Channel&gt; not configured (Phone/e-mail/both)|
 
-
-## Authentication Service (Internal)
+# Authentication Service (Internal)
 This service details authentication (yes/no auth) that can be used by MOSIP modules to authenticate an Individual using UserID/VID/UIN. Below are various authentication types supported by this service - Biometric based - Fingerprint, IRIS and Face
 
-#### Users of Internal Authentication service -
+## Users of Internal Authentication service -
 1. `Registration Client` - Registration Client can authenticate biometrics of Operator or Supervisor while onboarding them.
 2. `Registration Processor` - Registration Processor can authenticate biometrics of Operator or Supervisor while processing registration packets.
 
 * [POST /idauthentication/v1/internal/auth](#post-idauthenticationv1internalauth) 
 
-### POST /idauthentication/v1/internal/auth
+## POST /idauthentication/v1/internal/auth
 This request will authenticate an Operator/Supervisor using Biometric authentication.
 
-#### Resource URL
-<div>https://mosip.io/idauthentication/v1/internal/auth</div>
+### Resource URL
+`https://mosip.io/idauthentication/v1/internal/auth`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Body Parameters
+### Request Body Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 id | Y | API Id | | mosip.identity.auth.internal
@@ -648,8 +639,7 @@ request: biometrics: data: timestamp|Y| This timestamp is used in encryption of 
 request: biometrics: hash|Y| SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format. While calculating the hash for the first biometrics.data entry assume empty string as previous data block.| |
 request: biometrics: sessionKey|Y| Symmetric key used to encrypt above biometric data attribute. This symmetric key is encrypted by MOSIP Public Key shared to Device Providers using asymmetric key algorithm - RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING, and then Base64-url-encoded| |
 
-
-#### Request Body
+### Request Body
 ```JSON
 {
   "id": "mosip.identity.auth.internal",
@@ -694,11 +684,9 @@ request: biometrics: sessionKey|Y| Symmetric key used to encrypt above biometric
 }
 ```
 
-#### Responses:
-##### Success Response:
-###### Status Code : 200 (OK)
-###### Description : Successfully authenticated an Individual    
+### Responses
 
+#### Success Response
 ```JSON
 {
   //API Metadata
@@ -714,11 +702,9 @@ request: biometrics: sessionKey|Y| Symmetric key used to encrypt above biometric
   "errors": null
 }
 ```
+**Response Code : 200 (OK)**
 
-##### Failed Response:
-###### Status Code : 200 (OK)    
-###### Description : Authentication of an Individual failed
-
+#### Failed Response
 ```JSON
 {
   //API Metadata
@@ -740,7 +726,9 @@ request: biometrics: sessionKey|Y| Symmetric key used to encrypt above biometric
   ]
 }
 ```
-##### Failure Details
+**Response Code : 200 (OK)**
+
+### Failure Details
 Error Code|Error Message|Description|Action Message
 -----------|-------------|-----------|----------------
 IDA-BIA-001| Biometric data &ndash; &lt;Biometric Attribute&gt; did not match|FIR,IIR,FACE Mismatch|Please give your biometrics again.
@@ -767,30 +755,28 @@ IDA-MLC-018|%s not available in database|UIN, User ID not available in database|
 IDA-MPA-003|Unable to decrypt Request.|Invalid encryption of session key/request|
 IDA-MPA-004|MOSIP Public key expired. |MOSIP Public key expired|Please reinitiate the request with updated public key
 
-
-## Authentication Transactions Service (Internal)
+# Authentication Transactions Service (Internal)
 Authentication Transactions Service can be used by Resident Services to retrieve authentication history of an Individual initiated by Partners. Authentications done by MOSIP's internal modules for any verification will not be returned. 
 
-#### Users of Authentication Transactions Service -
+## Users of Authentication Transactions Service -
 1. `Resident Services` - Resident Services will send UIN or VID to retrieve all authentication transactions of an Individual, that are initiated by Partners.
  
 
 * [GET /idauthentication/v1/internal/authTransactions/individualIdType/:IDType/individualId/:ID?pageStart=1&pageFetch=10](#get-idauthenticationv1internalauthtransactionsindividualidtypeidtypeindividualididpagestart1pagefetch10) 
 
-### GET /idauthentication/v1/internal/authTransactions/individualIdType/:IDType/individualId/:ID?pageStart=1&pageFetch=10
+## GET /idauthentication/v1/internal/authTransactions/individualIdType/:IDType/individualId/:ID?pageStart=1&pageFetch=10
 This request will retrieve authentication transactions for the given UIN/VID, alongwith pageStart and pageFetch parameters.
 
-#### Resource URL
-<div>https://mosip.io/idauthentication/v1/internal/authTransactions/individualIdType/:IDType/individualId/:ID?pageStart=1&pageFetch=10</div>
+### Resource URL
+`https://mosip.io/idauthentication/v1/internal/authTransactions/individualIdType/:IDType/individualId/:ID?pageStart=1&pageFetch=10`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Query Parameters
+### Request Query Parameters
 The authentication transactions can be queried using this REST service for certain count of transactions which can be retrieved for given pageStart number with pageFetch. The default pageStart value is 1. The default pageFetch value is 10. This default pageFetch value will be taken into account only if the pageStart is provided. If both pageStart and pageFetch values are not provided, all the authentication transactions for the UIN/VID are returned in the response.
 
 Name | Required | Description | Default Value | Example
@@ -798,47 +784,44 @@ Name | Required | Description | Default Value | Example
 pageStart | N | The page number to start | 1 | 2
 pageFetch | N | The number of entries per page | 10 | 20
 
-#### Responses:
-##### Success Response:
-###### Status Code : 200 (OK)
-###### Description : Successfully retrieved authentication transactions    
+### Responses
 
+#### Success Response
 ```JSON
 {
-        //API Metadata
-	"id": "mosip.identity.auth.transactions.read",
-	"responseTime": "2019-07-11T07:30:59.383",
-	"version": "v1",
-	"errors": [],
-        //Response
-	"response": {
-		"authTransactions": [{
-				"transactionID": "1234567890",
-				"requestdatetime": "2019-07-10T07:28:59.383",
-				"authtypeCode": "FINGERPRINT-AUTH",
-				"statusCode": "Y",
-				"statusComment": "Finger Authentication Success",
-				"referenceIdType": "UIN",
-				"entityName": ""
-			},
-			{
-				"transactionID": "1234567891",
-				"requestdatetime": "2019-07-11T07:29:59.383",
-				"authtypeCode": "OTP-REQUEST",
-				"statusCode": "F",
-				"statusComment": "OTP Authentication Failed",
-				"referenceIdType": "UIN",
-				"entityName": ""
-			}
-		]
-	}
+  //API Metadata
+  "id": "mosip.identity.auth.transactions.read",
+  "responseTime": "2019-07-11T07:30:59.383",
+  "version": "v1",
+  "errors": [],
+  //Response
+  "response": {
+	"authTransactions": [
+	  {
+		"transactionID": "1234567890",
+		"requestdatetime": "2019-07-10T07:28:59.383",
+		"authtypeCode": "FINGERPRINT-AUTH",
+		"statusCode": "Y",
+		"statusComment": "Finger Authentication Success",
+		"referenceIdType": "UIN",
+		"entityName": ""
+	  },
+	  {
+		"transactionID": "1234567891",
+		"requestdatetime": "2019-07-11T07:29:59.383",
+		"authtypeCode": "OTP-REQUEST",
+		"statusCode": "F",
+		"statusComment": "OTP Authentication Failed",
+		"referenceIdType": "UIN",
+		"entityName": ""
+	  }
+	]
+  }
 }
 ```
+**Response Code : 200 (OK)**
 
-##### Failed Response:
-###### Status Code : 200 (OK)    
-###### Description : Failed to retrieve authentication transactions
-
+#### Failed Response:
 ```JSON
 {
   //API Metadata
@@ -854,7 +837,9 @@ pageFetch | N | The number of entries per page | 10 | 20
   ]
 }
 ```
-##### Failure Details
+**Response Code : 200 (OK)**
+
+### Failure Details
 Error Code|Error Message|Description|Action Message
 -----------|-------------|-----------|----------------
 IDA-MLC-001|Request to be received at MOSIP within&lt;x&gt; hrs/min|Invalid Time stamp|Please send the request within &lt;x&gt; hrs/min
@@ -865,41 +850,36 @@ IDA-MLC-009|Invalid Input parameter- attribute  |Invalid Input parameter- attrib
 IDA-MLC-015| Identity Type - &lt;Identity Type&gt; not configured for the country|ID Type (UIN/USERID) not supported for a country|
 IDA-MLC-018|%s not available in database|UIN, VID not available in database|
 
-
-## Authentication Types Status Service (Internal)
+# Authentication Types Status Service (Internal)
 Authentication Types Status Service can be used by Resident Services to retrieve or update status (locked or unlocked) of Auth Types of an Individual using VID/UIN. 
 
-#### Users of Retrieve Authentication Types Status Service -
-1. `Resident Services` - Individual can request to lock or unlock one or more authentication types using Resident Services, which in turn calls this service to store or retrieve the auth type status.
-  
+## Users of Retrieve Authentication Types Status Service -
+1. **Resident Services** - Individual can request to lock or unlock one or more authentication types using Resident Services, which in turn calls this service to store or retrieve the auth type status.  
 
 * [GET /idauthentication/v1/internal/authtypes/status/individualIdType/:IDType/individualId/:ID](#get-idauthenticationv1internalauthtypesstatusindividualidtypeidtypeindividualidid) 
 * [PUT /idauthentication/v1/internal/authtypes/status](#put-idauthenticationv1internalauthtypesstatus) 
 
-### GET /idauthentication/v1/internal/authtypes/status/individualIdType/:IDType/individualId/:ID
+## GET /idauthentication/v1/internal/authtypes/status/individualIdType/:IDType/individualId/:ID
 This request will retrieve status (locked or unlocked) of Auth Types of an Individual using VID/UIN. 
 
-#### Resource URL
-<div>https://mosip.io/idauthentication/v1/internal/authtypes/status/individualIdType/:IDType/individualId/:ID</div>
+### Resource URL
+`https://mosip.io/idauthentication/v1/internal/authtypes/status/individualIdType/:IDType/individualId/:ID`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
-IDType | Y | UIN or VID |   | VID
+ID Type | Y | UIN or VID |   | VID
 ID | Y | The value of IDType - UIN or VID |   | 1234567890
 
-#### Responses:
-##### Success Response:
-###### Status Code : 200 (OK)
-###### Description : Successfully retrieved auth type status list    
+### Responses
 
+#### Success Response
 ```JSON
 {
   "id": "mosip.identity.authtype.status.read",
@@ -937,11 +917,9 @@ ID | Y | The value of IDType - UIN or VID |   | 1234567890
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-##### Failed Response:
-###### Status Code : 200 (OK)    
-###### Description : Failed to retrieve auth type status
-
+#### Failed Response:
 ```JSON
 {
   //API Metadata
@@ -957,7 +935,9 @@ ID | Y | The value of IDType - UIN or VID |   | 1234567890
   ]
 }
 ```
-##### Failure Details
+**Response Code : 200 (OK)**
+
+### Failure Details
 Error Code|Error Message|Description|Action Message
 -----------|-------------|-----------|----------------
 IDA-MLC-001|Request to be received at MOSIP within&lt;x&gt; hrs/min|Invalid Time stamp|Please send the request within &lt;x&gt; hrs/min
@@ -968,21 +948,19 @@ IDA-MLC-009|Invalid Input parameter- attribute  |Invalid Input parameter- attrib
 IDA-MLC-015| Identity Type - &lt;Identity Type&gt; not configured for the country|ID Type (UIN/USERID) not supported for a country|
 IDA-MLC-018|%s not available in database|UIN, VID not available in database|
 
-
-### PUT /idauthentication/v1/internal/authtypes/status
+## PUT /idauthentication/v1/internal/authtypes/status
 This request will lock or unlock one or more authenticate types for an Individual using VID/UIN. 
 
-#### Resource URL
-<div>https://mosip.io/idauthentication/v1/internal/authtypes/status</div>
+### Resource URL
+`https://mosip.io/idauthentication/v1/internal/authtypes/status`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Body Parameters
+### Request Body Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 consentObtained | Y | Individual's consent | | 
@@ -998,7 +976,7 @@ request: authTypes: authType| Y | Auth type to lock - otp, demo, bio | | bio
 request: authTypes: authSubType| N | Auth sub type to lock (if applicable for the selected autType) | | FIR
 request: authTypes: isLocked|Y| Boolean value (`true` or `false`) whether to lock or unlock the selected authType (and authSubType) | | true
 
-#### Request Body
+### Request Body
 ```JSON
 {
   "id": "mosip.identity.authtype.status.update",
@@ -1038,11 +1016,9 @@ request: authTypes: isLocked|Y| Boolean value (`true` or `false`) whether to loc
 }
 ```
 
-#### Responses:
-##### Success Response:
-###### Status Code : 200 (OK)
-###### Description : Successfully updated auth type status    
+### Responses
 
+#### Success Response
 ```JSON
 {
   //API Metadata
@@ -1052,11 +1028,9 @@ request: authTypes: isLocked|Y| Boolean value (`true` or `false`) whether to loc
   "errors": null
 }
 ```
+**Response Code : 200 (OK)**
 
-##### Failed Response:
-###### Status Code : 200 (OK)    
-###### Description : Failed to update auth type status
-
+#### Failed Response
 ```JSON
 {
   //API Metadata
@@ -1072,7 +1046,9 @@ request: authTypes: isLocked|Y| Boolean value (`true` or `false`) whether to loc
   ]
 }
 ```
-##### Failure Details
+**Response Code : 200 (OK)**
+
+### Failure Details
 Error Code|Error Message|Description|Action Message
 -----------|-------------|-----------|----------------
 IDA-MLC-001|Request to be received at MOSIP within&lt;x&gt; hrs/min|Invalid Time stamp|Please send the request within &lt;x&gt; hrs/min
