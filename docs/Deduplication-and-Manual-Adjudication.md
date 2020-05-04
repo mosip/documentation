@@ -39,19 +39,21 @@ Any Packet irrespective of it has gone through demographic de-duplication or ABI
 
 ![](_images/biometrics/deduplication-biometric_deduplication.png)
 
-## Manual Adjudication
+# Manual Adjudication
 When biometric duplicates are found in ABIS, the system integrator can plug-in the Manual Adjudication Stage, which would send the biometric and demographic data of the duplicates to a Manual Adjudicator. The Manual Adjudicator now can perform various validations on the duplicate data and inform the MOSIP system if the two records are duplicates or not.
 
 In our current implementation we have kept Manual Adjudication only after biometric de-duplication in-order to confirm if the duplicates marked by the ABIS will be not issued a UIN. 
 
 The Manual Adjudication stage can be plugged-in after demographic de-duplication also but we have done so for our current implementation because, we already do a two step verification i.e. demo match and then ABIS gallery match to confirm a duplicate.
 
-### Manual Adjudication APIs
+## Manual Adjudication APIs
 * **Assignment API** - This API is used to assign one single unassigned applicant record to the manual adjudicator. The Assignement logic is based on First come First server based on the logged in Manual Adjudicator.
 * **Fetch Demographic** - The manual adjudicator has to verify the applicant demographic information. This API is used to get the applicant demographic information from packet.
 * **Fetch Biometrics** - The manual adjudicator would need to verify the applicant biometric and demographic records. This API is used to get the applicant biometric file from packet.
 * **Fetch Packet Meta Information** - The manual adjudicator has to verify the operator/supervisor/introducer etc.; information. This API fetches the additional information from packet.
 * **Desion API** - This API is used to get the decision from manual adjudicator for an applicant and update the decision in table. The packet is sent for further processing based on decision.
+
+For details about the APIs are available in [Registration Processor - Manual Adjudication APIs](registration-processor-apis.md#4-manual-verification-apis).
 
 {% hint style="info" %}
 In the current implementation we have the API, assuming that there will be only one Manual Adjudication layer. The APIs for Manual Adjudication can be changed based on the country's need.

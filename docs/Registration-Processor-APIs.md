@@ -6,7 +6,7 @@ This section details about the service APIs in the Registration-Processor module
 
 [3. Sync Registration API](#3-sync-registration-api)
 
-[4. Manual Verification APIs](#4-manual-verification-apis)
+[4. Manual Adjudication APIs](#4-manual-adjudication-apis)
 
 [5. Bio Dedupe API](#5-bio-dedupe-api)
 
@@ -371,14 +371,15 @@ RPR-DBE-001 |	Data integrity violation exception	| Data integrity violation exce
 RPR-AUT-01 |	Invalid Token Present	| Invalid Token Present
 RPR-RGS-015 |	Invalid Request Value - Input Data is Incorrect	| Invalid Request Value - Input Data is Incorrect
 
-# 4 Manual Verification APIs
-## 4.1 Manual Verification Assignment API
+# 4 Manual Adjudication APIs
 
-- #### `POST /registrationprocessor/v1/manualverification/assignment`
+## 4.1 Manual Adjudication Assignment API
+`POST /registrationprocessor/v1/manualverification/assignment`
+
 This API is used to assign one single unassigned applicant record to the manual adjudicator.
 
 #### Resource URL
-https://mosip.io/registrationprocessor/v1/manualverification/assignment
+`https://{base_url}/registrationprocessor/v1/manualverification/assignment`
 
 #### Resource details
 
@@ -455,7 +456,7 @@ RPR-MVS-015 | User is not in ACTIVE status  | User is not in ACTIVE status
 RPR-MVS-020 | Match Type is Invalid  | Match Type is Invalid
 RPR-MVS-022 | TablenotAccessibleException in Manual verification  | TablenotAccessibleException in Manual verification
 
-## 4.2 Manual Verification Decision API
+## 4.2 Manual Adjudication Decision API
 
 - #### `POST /registrationprocessor/v1/manualverification/decision`
 
@@ -546,7 +547,7 @@ RPR-MVS-016 | Reg Id should not be null or empty  | Reg Id should not be null or
 RPR-MVS-021 | Manual verification rejected  | Manual verification rejected
 RPR-MVS-022 | TablenotAccessibleException in Manual verification  | TablenotAccessibleException in Manual verification
 
-## 4.3 Manual Verification Applicant Biometric API
+## 4.3 Manual Adjudication Applicant Biometric API
 
 - #### `POST /registrationprocessor/v1/manualverification/applicantBiometric`
 
@@ -625,7 +626,7 @@ RPR-MVS-013 | Request Decoding Exception  |  Request Decoding Exception
 RPR-MVS-016 | Reg Id should not be null or empty  | Reg Id should not be null or empty
 RPR-MVS-022 | TablenotAccessibleException   | TablenotAccessibleException 
 
-## 4.4 Manual Verification Applicant Demographic API
+## 4.4 Manual Adjudication Applicant Demographic API
 
 - #### `POST /registrationprocessor/v1/manualverification/applicantDemographic`
 
@@ -702,7 +703,7 @@ RPR-MVS-013 | Request Decoding Exception  |  Request Decoding Exception
 RPR-MVS-016 | Reg Id should not be null or empty  | Reg Id should not be null or empty
 RPR-MVS-022 | TablenotAccessibleException in Manual verification  | TablenotAccessibleException in Manual verification
 
-## 4.5 Manual Verification Packet Info API
+## 4.5 Manual Adjudication Packet Info API
 
 - #### `POST /registrationprocessor/v1/manualverification/packetInfo`
 
