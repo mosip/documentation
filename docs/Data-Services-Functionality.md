@@ -1,4 +1,4 @@
-## Table Of Contents
+# Table Of Contents
 - [Data Services](#data-services) 
   * [1. Data mapper](#1-data-mapper-) _(DAT_FR_1)_
   * [2. Data Access Manager](#2-data-access-manager-) _(DAT_FR_2)_
@@ -22,14 +22,17 @@
       * [4.2.6 License Key Status Validator](#426-license-key-status-validator-) _(DAT_FR_4.15)_
 - [List of Configurable Parameters and Processes](#list-of-configurable-parameters-and-processes-)
 - [Kernel API](#kernel-api-)
+
 # Data services
+
 ## 1. Data mapper [**[↑]**](#table-of-contents)
 Data mapper is used across MOSIP to facilitate mapping between DTO (Data Transfer Object) and entity. 
 
 [**Link to design**](/mosip/mosip-platform/blob/master/design/kernel/kernel-datamapper.md)
 
 ## 2. Data Access Manager [**[↑]**](#table-of-contents)
-Data Access Manager provides a DAO (Data Access Object) interface to do the following
+Data Access Manager provides a DAO (Data Access Object) interface to do the following:
+
 1. Provide an interface for connection to a Database
 1. Provide an interface to support Database CRUD (Create, Read, Update, Delete) operation
 1. Provide an interface to support a custom SQL
@@ -38,6 +41,7 @@ Data Access Manager provides a DAO (Data Access Object) interface to do the foll
 [**Link to design**](/mosip/mosip-platform/blob/master/design/kernel/kernel-dataaccess.md)
 
 ## 3. Sync Handler [**[↑]**](#table-of-contents)
+
 1. Sync Handler allows registration client to sync Master data, List of User, Roles and Respective Mappings and Configurations (Registration Client specific and Global Configs).
 1. Sync Handler also allows Registration Client to push data from Client local database to Master Database.
 1. As part of Masterdata Sync, the service receives a Machine ID and Timestamp, looks for a mapped Center ID to that Machine ID and responds to the Registration Client with the Center specific Master data for the following tables.
@@ -73,8 +77,11 @@ Data Access Manager provides a DAO (Data Access Object) interface to do the foll
 1. For User, Roles and Respective User-Role mappings, Sync handler receives Center ID and Timestamp and will respond to the Registration Client with Center specific incremental changes.
 
 [**Link to design**](/mosip/mosip-platform/blob/master/design/kernel/kernel-syncservices.md)
+
 ## 4. ID Generator and Validator
+
 ### 4.1 ID Generator [**[↑]**](#table-of-contents)
+
 #### 4.1.1 Machine ID Generator [**[↑]**](#table-of-contents)
 
 Upon receiving a request to generate Machine ID, the system generates Machine ID as per default Machine ID generation logic as mentioned below:
@@ -91,7 +98,6 @@ Raises an alert in case of exceptions.
 [**Link to design**](/mosip/mosip-platform/blob/master/design/kernel/kernel-idgenerator-machineid.md)
 
 #### 4.1.2 Registration Center ID Generator [**[↑]**](#table-of-contents)
-
 Upon receiving a request to generate Registration Center ID, the system generates it as per default Registration Center ID generation logic
 
 Refer below for the process:
@@ -101,14 +107,13 @@ Refer below for the process:
    * Each new Registration Center ID should be incremented by 1 for each new request
    * Registration Center ID generation should start from 10000
    * The number should not contain the restricted numbers defined by the ADMIN
-2. In case of exceptions, system triggers relevant error messages
+1. In case of exceptions, system triggers relevant error messages
 1. Responds with the Registration Center ID to the source
 1. Raises an alert in case of exceptions.
 
 [**Link to design**](/mosip/mosip-platform/blob/master/design/kernel/kernel-idgenerator-regcenterid.md)
 
 #### 4.1.3 RID Generator [**[↑]**](#table-of-contents)
-
 Upon receiving a request to generate RID with Machine ID and Center ID as input, the system generates it as per default RID generation logic.
 
 Refer below for the process:
@@ -123,10 +128,9 @@ Refer below for the process:
 8. Responds with the RID to the source
 9. Raises an alert in case of exceptions and triggers the messages.
 
-
 [**Link to design**](/mosip/mosip-platform/blob/master/design/kernel/kernel-ridgenerator.md)
-#### 4.1.4 MISP ID Generator [**[↑]**](#table-of-contents)
 
+#### 4.1.4 MISP ID Generator [**[↑]**](#table-of-contents)
 Upon receiving a request to generate MISP ID, the system generates it as per default MISP ID generation logic.
 
 Refer below for the process:
@@ -143,10 +147,10 @@ Refer below for the process:
 [**Link to design**](/mosip/mosip-platform/blob/master/design/kernel/kernel-idgenerator-mispid.md)
 
 #### 4.1.5 PRID Generator [**[↑]**](#table-of-contents)
-
 Upon receiving a request to generate PRID with input parameters, the system generates PRID as per default PRID generation logic.
 
 Refer below for the process:
+
 1. PRID generated should contain number of digits as configured by the ADMIN
 1. PRID is generated as per the defined logic mentioned below:
    * The number should not contain any alphanumeric characters
@@ -157,13 +161,12 @@ Refer below for the process:
    * The number should not contain the restricted numbers defined by the ADMIN
    * The last digit in the number should be reserved for a checksum
    * The number should not contain '0' or '1' as the first digit
-4. Responds with the PRID to the source
+1. Responds with the PRID to the source
 1. Raises an alert in case of exceptions. 
 
 [**Link to design**](/mosip/mosip-platform/blob/master/design/kernel/kernel-idgenerator-prid.md)
 
 #### 4.1.6 VID Generator [**[↑]**](#table-of-contents)
-
 Upon receiving a request to generate VID, the system generates PRID as per default PRID generation logic
 
 Refer below for the process:
@@ -182,12 +185,12 @@ Refer below for the process:
    * The number should not contain the restricted numbers defined by the ADMIN
    * The last digit in the number should be reserved for a checksum
    * The number should not contain '0' or '1' as the first digit.
-4. Expired VID should not be sent in response.
+1. Expired VID should not be sent in response.
 
 
 [**Link to design**](/mosip/mosip-platform/blob/master/design/kernel/Kernel-idgenerator-vid.md)
-#### 4.1.7 Token ID Generator [**[↑]**](#table-of-contents)
 
+#### 4.1.7 Token ID Generator [**[↑]**](#table-of-contents)
 Upon receiving a request to generate Token ID (with input parameters (TSP ID, UIN), the system generates token ID as per default Token ID generation logic
 
 Refer below for the process:
@@ -201,7 +204,6 @@ Refer below for the process:
 
 [**Link to design**](/mosip/mosip-platform/blob/master/design/kernel/kernel-idgenerator-tokenid.md)
 
-
 #### 4.1.8 Partner ID Generator [**[↑]**](#table-of-contents)
 Upon receiving a request to generate partner ID, the system generates it as per default partner ID generation logic.
 
@@ -214,8 +216,6 @@ Refer below for the process:
 1. Partner ID generation is start from 1000
 1. In case of exceptions, system triggers relevant error messages. 
 
-
-
 #### 4.1.9 MISP License Key Generator [**[↑]**](#table-of-contents)
 Upon receiving a request to generate License Key, the system generates it as per default License Key generation logic and responds with the License Key to the source
 
@@ -227,11 +227,12 @@ Upon receiving a request to generate License Key, the system generates it as per
 2. In case of exceptions, system triggers relevant error messages
 
 ### 4.2 ID Validator [**[↑]**](#table-of-contents)
-#### 4.2.1  UIN Validator [**[↑]**](#table-of-contents)
 
+#### 4.2.1  UIN Validator [**[↑]**](#table-of-contents)
 Upon receiving a request to validate the UIN, the system validates the UIN against the defined policy
 
 Refer below for the process:
+
 1. Validates if the UIN is of configured length.
 1. Validates the UIN by verifying the checksum
 1. Validates if the UIN received as per the UIN generation logic
@@ -239,20 +240,20 @@ Refer below for the process:
 1. Raises an alert in case of exceptions. 
 
 #### 4.2.2 PRID Validator [**[↑]**](#table-of-contents)
-
 Upon receiving a request to validate the PRID, the system validates the PRID against the defined policy
 
 Refer below for the process:
+
 1. Validates if the received PRID contains number of digits as configured by the ADMIN
 1. Validates the PRID received as per the PRID generation logic 
 1. Responds to the source with an appropriate message 
 1. Raises an alert in case of exceptions. 
 
 #### 4.2.3 VID Validator [**[↑]**](#table-of-contents)
-
 Upon receiving a request to validate the VID with input parameters (UIN), the system validates the VID against the defined VID policy
 
 Refer below for the process:
+
 1. Validates if the VID is of configured length.
 1. Validates the VID by verifying the checksum
 1. Validates if the VID received as per the VID generation logic
@@ -268,11 +269,13 @@ RID is generated in the following manner:
 * Total: 29 Digits
 
 RID Validation performs pattern validation on RID and provides three methods to validate RID.
+
 1. Receive a RID, check whether RID is of configured length or not and respond with whether RID is valid or invalid
 1. Receive a RID along with Registration Center ID and Machine ID. Check whether RID is of configured length or not and whether Registration Center ID and Machine ID are attached to the RID or not. Respond with whether RID is valid or invalid
 1. Receive a RID along with Registration Center ID, Machine ID, Sequence Length and Timestamp Length. Check whether RID is proper or not as per the input received. Respond with whether RID is valid or invalid.
 
 #### 4.2.5 Partner ID Validator [**[↑]**](#table-of-contents)
+
 1. The system receives a request to check status of a Partner with an input parameter (Partner ID)
 2. Checks the length of the Partner ID
 3. Checks the status of the Partner ID
@@ -287,6 +290,7 @@ RID Validation performs pattern validation on RID and provides three methods to 
 #### 4.2.6 License Key Status Validator [**[↑]**](#table-of-contents)
 
 The system receives a request to check status of the License Key with an input parameter (License Key)
+
 1. Checks the length of the License Key
 2. Fetches the status of the License Key
 3. Throw an error if an input parameter is empty
