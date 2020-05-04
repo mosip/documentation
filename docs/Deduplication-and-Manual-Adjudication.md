@@ -17,7 +17,7 @@ In demographic de-duplication the MOSIP system compares some of the demographic 
 4. Now the list of Potential Matches for Person A (here, we only have Person C as the only potential match, there can be a scenario where there are multiple potential matches for Person A) are sent to ABIS to perform de-duplication against the potential matches.
 5. As here, we ask ABIS to just perform match of Person A's biometrics with Person C's biometrics, we call this process a Gallery Match in ABIS. As we are asking ABIS to perform biometric de-duplication of Person A against the gallery that we have sent.
 
-![](_images\biometrics\deduplication-deographic_deduplication.png)
+![](_images/biometrics/deduplication-deographic_deduplication.png)
 
 ## Biometric De-Duplication
 In biometric de-duplication the MOSIP system sends the biometrics of the resident to an ABIS System (Automated Biometrics Identification System). Here, the expectation from the ABIS system is to perform biometric de-duplication (1:N match) against all the records that it has stored earlier. 
@@ -37,7 +37,7 @@ Any Packet irrespective of it has gone through demographic de-duplication or ABI
 	ii. If Person C's registration is completed and a UIN is associated then we consider Person C to be a potential match for Person A.
 7. Not the list of Potential Matches for Person A (here, we only have Person C as the only potential match, there can be a scenario where there are multiple potential matches for Person A) are sent to Manual Adjudicator to take the final decision.
 
-![](_images\biometrics\deduplication-biometric_deduplication.png)
+![](_images/biometrics/deduplication-biometric_deduplication.png)
 
 ## Manual Adjudication
 When biometric duplicates are found in ABIS, the system integrator can plug-in the Manual Adjudication Stage, which would send the biometric and demographic data of the duplicates to a Manual Adjudicator. The Manual Adjudicator now can perform various validations on the duplicate data and inform the MOSIP system if the two records are duplicates or not.
