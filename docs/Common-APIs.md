@@ -86,14 +86,7 @@ titletype|Yes|Name of the title| |
   }
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+**Response Code : 200 (OK)**
 
 
 ## GET /title
@@ -137,14 +130,7 @@ NA | NA | NA | NA | NA
   }
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+**Response Code : 200 (OK)**
 
 
 ## GET /title/{langcode}
@@ -188,14 +174,8 @@ langcode|Yes|Code of the language| |
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## PUT /title
 This service will provides the service for updating a particular title. 
@@ -237,14 +217,8 @@ titleDescription|Yes|Name of the title| |
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## DELETE /title/{code}
 This service will provides the service for deleting a particular title. 
@@ -281,15 +255,7 @@ code|Yes|Code of the title| |
   "version": "string"
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
-
+**Response Code : 200 (OK)**
 
 ### Failure Response
 ```JSON
@@ -305,6 +271,8 @@ Response Code | Description
   "response": null
 }
 ```
+**Response Code : 200 (OK)**
+
 
 ## GET /title/all
 This service will provides the service for  list of all titles.
@@ -358,14 +326,7 @@ sortBy | optional | sort the requested data based on param value ||
   "version": "string"
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -468,6 +429,8 @@ status|["equals"]
   }
 }
 ```
+**Response Code : 200 (OK)**
+
 
 ## POST /titles/filtervalues
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Title List View UI Screen.
@@ -526,6 +489,8 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   }
 }
 ```
+**Response Code : 200 (OK)**
+
 ----
 
 # Gender
@@ -587,14 +552,8 @@ gendertype|Yes|Name of the gender| |
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## PUT /gendertypes
 This service will update Gender which are used in the MOSIP platform. 
@@ -647,14 +606,8 @@ code|Yes|language code of gender| |
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## DELETE /gendertypes/{code}
 This service will delete Gender which are used in the MOSIP platform. 
@@ -686,14 +639,8 @@ code|Yes|Code of gender type| |
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## GET /gendertypes
 This service will provides the service for the List of Genders. 
@@ -732,14 +679,8 @@ NA | NA | NA | NA | NA
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## GET /gendertypes/{langcode}
 This service will provides the service for the List of Genders. 
@@ -778,14 +719,8 @@ langcode|Yes|Code of the language| |
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## GET /gendertypes/{gendername}
 This service will provides the gender based on the gender name. 
@@ -821,6 +756,7 @@ gendername|Yes|Name of the gender| |
   }
 }
 ```
+**Response Code : 200 (OK)**
 
 ### Failure Response
 ```JSON
@@ -836,14 +772,8 @@ gendername|Yes|Name of the gender| |
   "response": null
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## GET gendertypes/all
 This service will provides all gendertypes details. 
@@ -896,16 +826,10 @@ sortBy | optional | sort the requested data based on param value ||
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-017 | Error occured while fetching gender types | Fetch Issue
@@ -998,6 +922,7 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
   }
 }
 ```
+**Response Code : 200 (OK)**
 
 ## POST /genders/filtervalues
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Gender List View UI Screen.
@@ -1057,6 +982,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+**Response Code : 200 (OK)**
+
+----
 
 # Age Group Types
 * [GET /agegrouptype/{age}](#get-agegrouptypeage)
@@ -1116,14 +1044,9 @@ Name | Required | Description | Default Value | Example
   "response":  null
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+----
 
 # ID Types
 * [POST /idtypes](#post-idtypes)
@@ -1178,14 +1101,8 @@ languagecode|Yes|Language of the id type| |
               }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## GET /idtypes/{langcode}
 This service will provides the service for the List of id types based on language. 
@@ -1230,6 +1147,7 @@ langcode|Yes|Code of the language| |
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
 ### Failure Response
 ```JSON
@@ -1245,14 +1163,7 @@ langcode|Yes|Code of the language| |
   "response": null
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+**Response Code : 200 (OK)**
 
 
 ### Failure details
@@ -1262,6 +1173,7 @@ KER-MSD-022 | ID Type not found. | Not Found
 KER-MSD-021 | Error occurred while fetching ID Types |Fetch Issue
 KER-MSD-059 | Error occurred while inserting ID Type details. | Insert Issue
 
+----
 
 # Holidays
 * [GET /holidays](#get-holidays)
@@ -1317,14 +1229,8 @@ Name | Required | Description | Default Value | Example
   "errors": null
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## POST /holidays
 This service will create a new holiday. 
@@ -1393,14 +1299,7 @@ isActive |Yes | is active? ||
   "version": "string"
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+**Response Code : 200 (OK)**
 
 
 ## PUT /holidays
@@ -1460,19 +1359,11 @@ newHolidayDesc | Yes | new description ||
   "locationCode": "string"
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+**Response Code : 200 (OK)**
 
 
 ## DELETE /holidays
 This service will provides the service to delete a holiday. 
-
 
 ### Resource URL
 `DELETE /holidays`
@@ -1514,14 +1405,7 @@ locationCode | Yes | location code ||
   "locationCode": "string"
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+**Response Code : 200 (OK)**
 
 
 ## GET /holidays/{holidayid}
@@ -1572,14 +1456,7 @@ holidayid | yes | holiday Id ||
   "version": "string"
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+**Response Code : 200 (OK)**
 
 
 ## GET /holidays/{holidayid}/{langcode}
@@ -1631,14 +1508,7 @@ langCode | Yes | language code ||
   "version": "string"
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+**Response Code : 200 (OK)**
 
 
 ## GET /holidays/all
@@ -1699,14 +1569,7 @@ sortBy | optional | sort the requested data based on param value | createdDateTi
   "version": "string"
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -1718,6 +1581,7 @@ KER-MSD-099 | Error occurred while updating holiday | Update Issue
 KER-MSD-100 | Error occurred while deleting holiday | Deletion Issue
 KER-MSD-025 | Error occured while fetching Location Hierarchy | fetch issue
 KER-MSD-026 | Location not found | Data Not Found
+
 
 ## POST /holidays/filtervalues
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Holiday List View UI Screen.
@@ -1791,14 +1655,8 @@ languagecode | Yes | Language code in Language code in ISO 639-2 format | |
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## POST /holidays/search
 This API is used by the Administrator Portal to fetch list of Holidays based on a given filter criteria to display the list of Holidays on the Portal UI.
@@ -1896,6 +1754,8 @@ Please find the filter columns used in search
   }
 }
 ```
+**Response Code : 200 (OK)**
+
 ----
 
 # Locations
@@ -1980,6 +1840,7 @@ isActive|Yes|Is this location active| |
   "errors": null
 }
 ```
+**Response Code : 200 (OK)**
 
 ### Error Response:
 ```
@@ -1997,14 +1858,7 @@ isActive|Yes|Is this location active| |
  "response": null
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code  | Error Message | Error Description
@@ -2086,8 +1940,9 @@ isActive|Yes|Is this location active| |
   "errors": null
 }
 ```
+**Response Code : 200 (OK)**
 
-#### Error Response:
+#### Error Response
 ```
 {
   "id": "string",
@@ -2103,14 +1958,7 @@ isActive|Yes|Is this location active| |
  "response": null
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code  | Error Message | Error Description
@@ -2119,6 +1967,7 @@ KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
 KER-MSD-097 |Error occured while updating location hierarchy details
+
 
 ## DELETE /locations/{locationcode}
 
@@ -2149,14 +1998,8 @@ locationcode | Yes | location code ||
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-202 | Accepted
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## GET /locations/{langcode}
 This service will provides the service for the List of Locations. 
@@ -2199,14 +2042,8 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
-500 | Internal Server Error
+**Response Code : 200 (OK)**
+
 
 ## GET /locations/{locationcode}/{languagecode}
 This service will provides the service for the List of Locations. 
@@ -2257,14 +2094,8 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
 
 ## GET /locations/immediatechildren/{locationcode}/{langcode}
 This service will provides the service for the List of Locations. 
@@ -2315,14 +2146,8 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
 
 ## GET /locations/locationhierarchy/{hierarchyname}
 This service will provides the service for the List of Locations based on the location hierarchy name. 
@@ -2373,14 +2198,8 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## GET /locations/validate/{locationname}
 This service whether the given location name is valid or not. 
@@ -2417,14 +2236,8 @@ locationname|yes|This is the location name. | -NA- |
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
 
 ## GET /locations/all
 This service will provide all locations
@@ -2474,14 +2287,7 @@ orderBy | optional | order the requested data based on param | -NA- |
   "version": "string"
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -2495,6 +2301,7 @@ KER-MSD-028 | Location Hierarchy Level not found | Data Not Found
 KER-MSD-027 | Error occured while fetching Location Hierarchy Levels | Fetch Issue
 KER-MSD-389 | Parent location not found | Data Not Found
 KER-MSD-385 | Location already exist under the hierarchy | insertion issue
+
 
 ## POST /locations/search
 This API is used by the Administrator Portal to fetch list of Locations based on a given filter criteria to display the list of Locations on the Portal UI.
@@ -2592,6 +2399,8 @@ Please find the filter columns used in search
   }
 }
 ```
+**Response Code : 200 (OK)**
+
 
 ## POST /locations/filtervalues
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Location List View UI Screen.  
@@ -2651,6 +2460,8 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+**Response Code : 200 (OK)**
+
 ----
 
 # Languages
@@ -2707,14 +2518,7 @@ name|Yes|Name of the language| |
   }
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+**Response Code : 200 (OK)**
 
 
 ## GET /languages
@@ -2758,14 +2562,8 @@ NA ||
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
 
 ## PUT /languages
 This service will update a Language which is used in the MOSIP platform. 
@@ -2815,14 +2613,8 @@ name|Yes|Name of the language| |
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Ok
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
 
 ## DELETE /languages/{code}
 This service will delete a Language which is used in the MOSIP platform. 
@@ -2858,7 +2650,7 @@ code|Yes|Code of the language| |
 }
 ```
 
-### Failure Response:
+### Failure Response
 ```JSON
 {
   "id": "string",
@@ -2874,14 +2666,7 @@ code|Yes|Code of the language| |
   "response" : null
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-200 | Ok
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -2958,14 +2743,7 @@ name|Yes | name of individualtype| |
   "errors": null
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-201 | created
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
+**Response Code : 200 (OK)**
 
 #### Failure details
 Error Code | Error Message | Error Description
@@ -3029,15 +2807,9 @@ name|Yes | name of individualtype| |
   "errors": null
 }
 ```
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
+**Response Code : 200 (OK)**
 
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-151 | Individual Type not found | no individual type found exception
@@ -3083,16 +2855,9 @@ Requires Authentication | Yes
  }
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
-
-### Failure Response:
+### Failure Response
 ```JSON
  {
   "id": "string",
@@ -3108,6 +2873,8 @@ Response Code | Description
   "response" : null
 }
 ```
+**Response Code : 200 (OK)**
+
 
 ## GET /individualtypes/all
 This service will get all the individualtypes. 
@@ -3160,24 +2927,16 @@ sortBy|optional|sort the requested data based on param value| |
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
-500 | Internal Server Error
-
-#### Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-151 | Individual Type not found | no individual type found exception
 KER-MSD-152 | Error occurred while fetching Individual Type | individual type fetch exception
+
 	
 ## POST /individualtypes/search
-
 This service is for the individual types search functionality. All the filter parameters are passed and the individual types are searched and the matching results are returned. 
 
 ### Resource URL
@@ -3267,6 +3026,7 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
   }
 }
 ```
+**Response Code : 200 (OK)**
 
 ## POST /individualtypes/filtervalues
 This service returns the filter values which are required in the dropdown entries of the filter screen.  
@@ -3325,6 +3085,8 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+**Response Code : 200 (OK)**
+
 ----
 
 # Application Types
@@ -3387,15 +3149,8 @@ description|Yes | description of applicationtype| |
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
-500 | Internal Server Error
 
 ## GET /applicationtypes
 This service will provides the service for the List of ApplicationTypes. 
@@ -3438,15 +3193,8 @@ Requires Authentication | Yes
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
-500 | Internal Server Error
 
 ## GET /applicationtypes/{code}/{langcode}
 This service will provides the service for the List of ApplicationTypes. 
@@ -3492,15 +3240,8 @@ langcode|Yes|Name of the language| |
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
-500 | Internal Server Error
 
 ## GET /applicationtypes/{langcode}
 This service is used to fetch all Application details by language code
@@ -3545,15 +3286,8 @@ langcode|Yes|Name of the language| |
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
-500 | Internal Server Error
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -3631,15 +3365,8 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
-500 | Internal Server Error
 
 ## PUT /blacklistedwords
 This service will update the blacklisted word which is used in the MOSIP platform. 
@@ -3698,15 +3425,7 @@ word |Yes |blacklisted word ||
   "version": "string"
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-201 | Created
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
-500 | Internal Server Error
+**Response Code : 200 (OK)**
 
 
 ## GET /blacklistedwords/{langcode}
@@ -3751,15 +3470,8 @@ langcode|Yes| language code ||
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
-500 | Internal Server Error
 
 ## DELETE /blacklistedwords/{word}
 This service will provides the service to delete the blacklisted word. 
@@ -3796,15 +3508,8 @@ word | Yes | blacklisted word to be deleted ||
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
-500 | Internal Server Error
 
 ## GET /blacklistedwords/all 
 This service will provides the service for the List of blacklistedwords. 
@@ -3857,15 +3562,8 @@ sortBy | optional | sort the requested data based on param value | createdDateTi
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
-500 | Internal Server Error
 
 ## PUT /blacklistedwords/details
 This service will update the blacklisted word details except the word itself. 
@@ -3922,18 +3620,10 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
+**Response Code : 200 (OK)**
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
-500 | Internal Server Error
 
 ## POST /blacklistedwords/words
-
 This service will validate list of words if they are blacklisted or not. 
 
 ### Resource URL
@@ -3978,15 +3668,7 @@ blacklisted words | Yes | blacklisted words to be validated  ||
   "errors": null
 }
 ```
-
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-404 | Not Found
-500 | Internal Server Error
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -3996,6 +3678,7 @@ KER-MSD-007 | Error occurred while fetching Blacklisted words | blacklisted word
 KER-MSD-070 | Error occurred while inserting Blacklisted words | blacklisted words insert exception
 KER-MSD-105 | Error occurred while updating Blacklisted Word | blacklisted words update exception
 KER-MSD-106 | Error occurred while deleting Blacklisted Word | blacklisted words delete exception
+
 
 ## POST /blacklistedwords/search
 This API is used by the Administrator Portal to fetch list of Locations based on a given filter criteria to display the list of Blacklisted Words on the Portal UI.
@@ -4035,33 +3718,32 @@ Please find the filter columns used in search
 ### Example Request
 ```JSON
 {
-	"id": "string",
-	"metadata": {},
-	"requesttime": "2018-12-10T06:12:52.994Z",
-	"version": "string",
-	"request": {
-		"filters" : [
-			{
-				"columnName": "",
-				"type": "in",
-				"value": "", 
-				"fromValue": "", 
-				"toValue": ""
-			}
-		],
-		"sort":[
-			{
-				"sortfield":"string",
-				"sorttype":"ASC"
-			}
-		],
-		"pagination":{
-			"pageStart":"number",
-			"pageFetch":"number"
-		},
-	        "languageCode":""
-		
-	}
+  "id": "string",
+  "metadata": {},
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string",
+  "request": {
+	"filters" : [
+	  {
+		"columnName": "",
+		"type": "in",
+		"value": "", 
+		"fromValue": "", 
+		"toValue": ""
+	  }
+	],
+	"sort":[
+	  {
+		"sortfield":"string",
+		"sorttype":"ASC"
+	  }
+	],
+	"pagination": {
+	  "pageStart":"number",
+	  "pageFetch":"number"
+	},
+	"languageCode":"eng"	
+  }
 }
 ```
 
@@ -4094,6 +3776,8 @@ Please find the filter columns used in search
  }
 }
 ```
+**Response Code : 200 (OK)**
+
 
 ## POST /blacklistedwords/filtervalues
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Blacklisted Word List View UI Screen.  
@@ -4118,19 +3802,19 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 ### Example Request
 ```JSON
 {
-	"id": "string",
-	"metadata": {},
-	"requesttime": "2018-12-10T06:12:52.994Z",
-	"version": "string"
-	"request": {
-		"filters" : [
-			{
-				"columnName": ""
-				"type": "unique"
-			}
-		],
-		"languageCode": "string",
-	}
+  "id": "string",
+  "metadata": {},
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
+  "request": {
+	"filters" : [
+	  {
+		"columnName": ""
+		"type": "unique"
+	  }
+	],
+  "languageCode": "string",
+  }
 }
 ```
 
@@ -4152,6 +3836,8 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+**Response Code : 200 (OK)**
+
 ----
 
 # Working days
@@ -4188,43 +3874,43 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
 #### Success Response
 ```
 {
-	"id": "mosip.kernel.weekdays",
-	"version": "1.0",
-	"metadata": {},
-	"responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-	"errors": null,
-	"response": {
-        "weekdays": [
-            {
-                "name": "MON",
-                "order": 2,
-                "languageCode": "eng"
-            },
-            {
-                "name": "TUE",
-                "order": 3,
-                "languageCode": "eng"
-            },
-            {
-                "name": "WED",
-                "order": 4,
-                "languageCode": "eng"
-            },
-            {
-                "name": "THU",
-                "order": 5,
-                "languageCode": "eng"
-            },
-            {
-                "name": "FRI",
-                "order": 6,
-                "languageCode": "eng"
-            }
-        ]
-    }
+  "id": "mosip.kernel.weekdays",
+  "version": "1.0",
+  "metadata": {},
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "errors": null,
+  "response": {
+    "weekdays": [
+      {
+        "name": "MON",
+        "order": 2,
+        "languageCode": "eng"
+      },
+      {
+        "name": "TUE",
+        "order": 3,
+        "languageCode": "eng"
+      },
+      {
+        "name": "WED",
+        "order": 4,
+        "languageCode": "eng"
+      },
+      {
+        "name": "THU",
+        "order": 5,
+        "languageCode": "eng"
+      },
+      {
+        "name": "FRI",
+        "order": 6,
+        "languageCode": "eng"
+      }
+    ]
+  }
 }
-
 ```
+**Response Code : 200 (OK)**
 
 #### Error Response
 ```
@@ -4242,6 +3928,7 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
  "response": null
 }
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -4273,66 +3960,67 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
 #### Success Response
 ```
 {
-	"id": "mosip.kernel.workingdays",
-	"version": "1.0",
-	"metadata": {},
-	"responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-	"errors": null,
-	"response": {
-        "workingdays": [
-            {
-                "name": "SUN",
-                "dayCode": "101",
-                "languagecode": "eng",
-                "working": false,
-                "globalWorking": false
-            },
-            {
-                "name": "MON",
-                "dayCode": "102",
-                "languagecode": "eng",
-                "working": true,
-                "globalWorking": true
-            },
-            {
-                "name": "TUE",
-                "dayCode": "103",
-                "languagecode": "eng",
-                "working": true,
-                "globalWorking": true
-            },
-            {
-                "name": "WED",
-                "dayCode": "104",
-                "languagecode": "eng",
-                "working": true,
-                "globalWorking": true
-            },
-            {
-                "name": "THU",
-                "dayCode": "105",
-                "languagecode": "eng",
-                "working": true,
-                "globalWorking": true
-            },
-            {
-                "name": "FRI",
-                "dayCode": "106",
-                "languagecode": "eng",
-                "working": true,
-                "globalWorking": true
-            },
-            {
-                "name": "SAT",
-                "dayCode": "107",
-                "languagecode": "eng",
-                "working": false,
-                "globalWorking": false
-            }
-        ]
-    }
+  "id": "mosip.kernel.workingdays",
+  "version": "1.0",
+  "metadata": {},
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "errors": null,
+  "response": {
+    "workingdays": [
+      {
+        "name": "SUN",
+        "dayCode": "101",
+        "languagecode": "eng",
+        "working": false,
+        "globalWorking": false
+      },
+      {
+        "name": "MON",
+        "dayCode": "102",
+        "languagecode": "eng",
+        "working": true,
+        "globalWorking": true
+      },
+      {
+        "name": "TUE",
+        "dayCode": "103",
+        "languagecode": "eng",
+        "working": true,
+        "globalWorking": true
+      },
+      {
+        "name": "WED",
+        "dayCode": "104",
+        "languagecode": "eng",
+        "working": true,
+        "globalWorking": true
+      },
+      {
+        "name": "THU",
+        "dayCode": "105",
+        "languagecode": "eng",
+        "working": true,
+        "globalWorking": true
+      },
+      {
+        "name": "FRI",
+        "dayCode": "106",
+        "languagecode": "eng",
+        "working": true,
+        "globalWorking": true
+      },
+      {
+        "name": "SAT",
+        "dayCode": "107",
+        "languagecode": "eng",
+        "working": false,
+        "globalWorking": false
+      }
+    ]
+  }
 }
 ```
+**Response Code : 200 (OK)**
 
 #### Error Response
 ```
@@ -4350,12 +4038,14 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
  "response": null
 }
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 KER-WKDS-001 |	reg_working_nonworking table not accessible | Table not accessible
 KER-WKDS-003 |	No working/non working day data found | No Data present in Working days table.
+
 
 # Exceptional holidays
 * [GET /exceptionholidays/{registrationCenterId}/{languagecode}](#get-exceptionholidays-registrationcenterid-languagecode)
@@ -4389,37 +4079,38 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
   "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
   "response": {
-        "exceptionalHolidayList": [
-            {
-                "holidayDate": "2019-09-24",
-                "holidayDay": "2",
-                "holidayMonth": "9",
-                "holidayYear": "2019",
-                "holidayName": "Emergency Holiday",
-                "holidayReason": "Emergency Holiday",
-                "registrationCenterID": null,
-                "isDeleted": null,
-                "langCode": "eng",
-                "isActive": true
-            },
-            {
-                "holidayDate": "2019-09-25",
-                "holidayDay": "3",
-                "holidayMonth": "9",
-                "holidayYear": "2019",
-                "holidayName": "Emergency Holiday",
-                "holidayReason": "Emergency Holiday",
-                "registrationCenterID": null,
-                "isDeleted": null,
-                "langCode": "eng",
-                "isActive": true
-            }
-        ]
-    }
+    "exceptionalHolidayList": [
+      {
+        "holidayDate": "2019-09-24",
+        "holidayDay": "2",
+        "holidayMonth": "9",
+        "holidayYear": "2019",
+        "holidayName": "Emergency Holiday",
+        "holidayReason": "Emergency Holiday",
+        "registrationCenterID": null,
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      },
+      {
+        "holidayDate": "2019-09-25",
+        "holidayDay": "3",
+        "holidayMonth": "9",
+        "holidayYear": "2019",
+        "holidayName": "Emergency Holiday",
+        "holidayReason": "Emergency Holiday",
+        "registrationCenterID": null,
+        "isDeleted": null,
+        "langCode": "eng",
+        "isActive": true
+      }
+    ]
+  }
 }
 ```
+**Response Code : 200 (OK)**
 
-#### Error Response:
+#### Error Response
 ```
 {
   "id": "mosip.kernel.weekdays",
@@ -4435,6 +4126,7 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
  "response": null
 }
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description

@@ -1,26 +1,23 @@
-This section details about the service APIs for the Holidays 
+This section details about the service APIs for the Holidays.
 
-# Holidays Master API
+# Holidays
 * [GET /holidays](#get-holidays)
 * [POST /holidays](#post-holidays)
 * [PUT /holidays](#put-holidays)
 * [DELETE /holidays](#delete-holidays)
-* [GET /holidays/{holidayid}](#get-holidaysholidayid)
-* [GET /holidays/{holidayid}/{langcode}](#get-holidaysholidayidlangcode)
-* [GET /holidays/all](#get-holidaysall)
-* [POST /holidays/filtervalues](#post-holidaysfiltervalues)
-* [POST /holidays/search](#post-holidayssearch)
-
+* [GET /holidays/{holidayid}](#get-holidays-holidayid)
+* [GET /holidays/{holidayid}/{langcode}](#get-holidays-holidayid-langcode)
+* [GET /holidays/all](#get-holidays-all)
+* [POST /holidays/filtervalues](#post-holidays-filtervalues)
+* [POST /holidays/search](#post-holidays-search)
 
 ## GET /holidays
-
 This service will get all the holidays. 
 
 ### Resource URL
-### `GET /holidays`
+`GET /holidays`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -30,7 +27,6 @@ Requires Authentication | Yes
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 --NA-- 
-
 
 ### Example Response
 ```JSON
@@ -58,34 +54,15 @@ Name | Required | Description | Default Value | Example
   "errors": null
 }
 ```
-### Response codes
-
-200
-
-Description: Success
-
-404
-
-Description: Not Found
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
------
+**Response Code : 200 (OK)**
 
 ## POST /holidays
 This service will create a new holiday. 
 
 ### Resource URL
-### `POST /holidays`
+`POST /holidays`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -124,6 +101,7 @@ isActive |Yes | is active? ||
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -145,32 +123,13 @@ isActive |Yes | is active? ||
   "version": "string"
 }
 ```
-### Response codes
+**Response Code : 200 (OK)**
 
-201
-
-Description: Created
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-204 
-
-Description: Not Found
-
-
------
 ## PUT /holidays
-
 This service will update a holiday. 
 
 ### Resource URL
-### `PUT /holidays`
+`PUT /holidays`
 
 ### Resource details
 
@@ -213,6 +172,7 @@ newHolidayDesc | Yes | new description ||
   "version": "string"
 }
 ```
+
 ### Example Response
 ```JSON
 {
@@ -222,37 +182,15 @@ newHolidayDesc | Yes | new description ||
   "locationCode": "string"
 }
 ```
-### Response codes
+**Response Code : 200 (OK)**
 
-200
-
-Description: Success
-
-201
-
-Description: Created
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not Found
-
------
 
 ## DELETE /holidays
-
 This service will provides the service to delete a holiday. 
 
 
 ### Resource URL
-### `DELETE /holidays`
+`DELETE /holidays`
 
 ### Resource details
 
@@ -291,36 +229,16 @@ locationCode | Yes | location code ||
   "locationCode": "string"
 }
 ```
-### Response codes
+**Response Code : 200 (OK)**
 
-200
-
-Description: Success
-
-204
-
-Description: No Content
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-----
 
 ## GET /holidays/{holidayid}
-
 This service will provides the service to get all holidays by Id. 
 
-
 ### Resource URL
-### `GET /holidays/{holidayid}`
+`GET /holidays/{holidayid}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -362,36 +280,16 @@ holidayid | yes | holiday Id ||
   "version": "string"
 }
 ```
-### Response codes
+**Response Code : 200 (OK)**
 
-200
-
-Description: Success
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not found
-
-------
 
 ## GET /holidays/{holidayid}/{langcode}
-
 This service will get all the holidays by holidayid and language code. 
 
-
 ### Resource URL
-### `GET /holidays/{holidayid}/{langcode}`
+`GET /holidays/{holidayid}/{langcode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -402,7 +300,6 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 holidayid | yes | holiday Id ||||
 langCode | Yes | language code ||
-
 
 ### Example Response
 ```JSON
@@ -435,35 +332,16 @@ langCode | Yes | language code ||
   "version": "string"
 }
 ```
-### Response codes
+**Response Code : 200 (OK)**
 
-200
-
-Description: Success
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404 
-
-Description: Not Found
-
-----
 
 ## GET /holidays/all
-
 This service will retrieve all the holidays with additional metadata. 
 
 ### Resource URL
-### `GET /holidays/all`
+`GET /holidays/all`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -515,31 +393,16 @@ sortBy | optional | sort the requested data based on param value | createdDateTi
   "version": "string"
 }
 ```
-### Response Codes
 
-200
+### Response codes
+Response Code | Description
+--------------|------------
+200 | Success
+400 | Bad request
+401 | Unauthorized
+403 | Forbidden
 
-Description: Success
-
-500
-
-Description: Error occured while retrieving holidays
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not found
-
-----
-
-## Failure details
+### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-019 | Error occured while fetching Holidays | Fetch Issue
@@ -549,17 +412,14 @@ KER-MSD-099 | Error occurred while updating holiday | Update Issue
 KER-MSD-100 | Error occurred while deleting holiday | Deletion Issue
 KER-MSD-025 | Error occured while fetching Location Hierarchy | fetch issue
 KER-MSD-026 | Location not found | Data Not Found
-----
 
 ## POST /holidays/filtervalues
-
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+This API is used by the Administrator Portal UI to populate filter dropdowns on the Holiday List View UI Screen.
 
 ### Resource URL
-### `POST /holidays/filtervalues`
+`POST /holidays/filtervalues`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -572,7 +432,6 @@ filters | No| Array of the filter applied. In case of "list" screen, this array 
 columnName |No | The column name in the JSON response | -NA- |
 type | No | The value have to be in ["unique","all"] | unique | unique
 languagecode | Yes | Language code in Language code in ISO 639-2 format | | 
-
 
 ### Example Request
 ```JSON
@@ -626,34 +485,15 @@ languagecode | Yes | Language code in Language code in ISO 639-2 format | |
   "version": "string"
 }
 ```
-### Response codes
-200
-
-Description: Success
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
-404
-
-Description: Not found
-
-----
+**Response Code : 200 (OK)**
 
 ## POST /holidays/search
-
-This service is for the holdays  search functionality. All the filter parameters are passed and the holidays  are searched and the matching results are returned. 
+This API is used by the Administrator Portal to fetch list of Holidays based on a given filter criteria to display the list of Holidays on the Portal UI.
 
 ### Resource URL
-### `POST /holidays/search`
+`POST /holidays/search`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -664,79 +504,85 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
 columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in  ["contains","equals","startsWith","between"]| -NA- |
+type|No|The value have to be in ["contains","equals","startsWith","between"]| -NA- |
 value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the start range| -NA- |
-toValue|No|If the type is "between", this field is the value of the end range| -NA- |
+fromValue|No|If the type is "between", this field is the value of the fromName| -NA- |
+toValue|No|If the type is "between", this field is the value of the toName| -NA- |
 languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
 sort|No|This is an array of the sort field and type| | 
 sortfield| The field on which the sort is applied | | modifiedDate
 sorttype| This should be either of ['ASC','DESC']| | ASC
 pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 10
+pageStart|This is the start index | 0 | 0
 pageFetch| This is the amount of records to be fetched | 10 | 10
 
+### Filter Values
+Please find the filter columns used in search
+1) holidayName
+2) holidayDate|["between"]
+3) isActive
 
 ### Example Request
 ```JSON
 {
   "id": "string",
   "metadata": {},
-  "request": {
-    "filters": [
-      {
-        "value": "string",
-        "fromValue": "string",
-        "toValue": "string",
-        "columnName": "string",
-        "type": "string"
-      }
-    ],
-    "sort": [
-      {
-        "sortField": "string",
-        "sortType": "string"
-      }
-    ],
-    "pagination": {
-      "pageStart": 0,
-      "pageFetch": 0
-    },
-    "languageCode": "string"
-  },
   "requesttime": "2018-12-10T06:12:52.994Z",
-  "version": "string"
+  "version": "string",
+  "request": {
+	"filters" : [
+	  {
+		"columnName": "",
+		"type": "in",
+		"value": "",
+		"fromValue": "",
+		"toValue": ""
+	  }
+	],
+	"sort":[
+	  {
+		"sortfield":"string",
+		"sorttype":"ASC"
+	  }
+	],
+	"pagination":{
+	  "pageStart":"number",
+	  "pageFetch":"number"
+	},
+	"languageCode":""
+  }
 }
 ```
 
 ### Example Response
 ```JSON
 {
-  "errors": [
-    {
-      "errorCode": "string",
-      "message": "string"
-    }
-  ],
   "id": "string",
+  "version": "string",
   "metadata": {},
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "errors": null,
   "response": {
-    "data": [
+    "holidays": [
       {
-        "createdBy": "string",
-        "description": "string",
+        "holidayDate": "string",
+        "holidayDay": "string",
+        "holidayDesc": "string",
+        "holidayMonth": "string",
+        "holidayName": "string",
+        "holidayYear": "string",
+        "id": 0,
         "isActive": true,
-        "isDeleted": true,
         "langCode": "string",
-        "updatedBy": "string",
-        "word": "string"
+        "locationCode": "string"
       }
     ],
-    "fromRecord": 0,
-    "toRecord": 0,
-    "totalRecord": 0
-  },
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-  "version": "string"
+	"fromRecord" : "number",
+	"toRecord":"number",
+	"totalRecord":"number"
+  }
 }
 ```
+**Response Code : 200 (OK)**
+
+----
