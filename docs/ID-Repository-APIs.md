@@ -4,10 +4,10 @@ This section details about the REST services in ID Repository module.
 
 # Identity Services (Private)
 These services is used by Registration Processor to store/update during registration process and ID Authentication to retrieve Identity of an Individual for their authentication.
-* [POST /idrepository/v1/identity/](#post-idrepository-v1-identity)
-* [GET /idrepository/v1/identity/uin/{uin}?type=bio](#get-idrepository-v1-identity-uin-uin-type-bio)
-* [GET /idrepository/v1/identity/rid/{rid}?type=bio](#get-idrepository-v1-identity-rid-rid-type-bio)
-* [PATCH /idrepository/v1/identity/](#patch-idrepository-v1-identity)     
+* [POST /idrepository/v1/identity/](#post-idrepository-v-1-identity)
+* [GET /idrepository/v1/identity/uin/{uin}?type=bio](#get-idrepository-v-1-identity-uin-uin-type-bio)
+* [GET /idrepository/v1/identity/rid/{rid}?type=bio](#get-idrepository-v-1-identity-rid-rid-type-bio)
+* [PATCH /idrepository/v1/identity/](#patch-idrepository-v-1-identity)     
 
 ## Users of Identity service
 1. `Registration Processor` - *Registration Processor* will create a new ID record or update an existing ID record in ID repository and store corresponding demographic and bio-metric documents. *Registration Processor* can also retrieve Identity details of an Individual using RID.
@@ -711,12 +711,12 @@ IDR-IDS-007|Failed to retrieve data from kernel Masterdata|Error while retrievin
 
 # VID Services (Private)
 These services can be used to perform various operations on VID like generate or re-generate VID, update VID status, etc.
-* [POST /idrepository/v1/vid](#post-idrepository-v1-vid)
-* [GET /idrepository/v1/vid/{vid}](#get-idrepository-v1-vid-vid)
-* [PATCH /idrepository/v1/vid/{vid}](#patch-idrepository-v1-vid-vid)
-* [POST /idrepository/v1/vid/{vid}/regenerate](#post-idrepository-v1-vid-vid-regenerate)
-* [PATCH /idrepository/v2/vid/deactivate](#patch-idrepository-v2-vid-deactivate)
-* [PATCH /idrepository/v2/vid/reactivate](#patch-idrepository-v2-vid-reactivate)
+* [POST /idrepository/v1/vid](#post-idrepository-v-1-vid)
+* [GET /idrepository/v1/vid/{vid}](#get-idrepository-v-1-vid-vid)
+* [PATCH /idrepository/v1/vid/{vid}](#patch-idrepository-v-1-vid-vid)
+* [POST /idrepository/v1/vid/{vid}/regenerate](#post-idrepository-v-1-vid-vid-regenerate)
+* [PATCH /idrepository/v2/vid/deactivate](#patch-idrepository-v-2-vid-deactivate)
+* [PATCH /idrepository/v2/vid/reactivate](#patch-idrepository-v-2-vid-reactivate)
 
 ## Users of VID services
 1. `Registration Processor` - *Registration Processor* will create a new perpetual VID once UIN is generated successfully.
