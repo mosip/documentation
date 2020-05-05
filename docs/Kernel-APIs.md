@@ -1,24 +1,21 @@
-Security APIs
-- [Key Manager Service](#key-manager-private)
-- [Crypto Manager Service](#crypto-manager-private)
-- [License Key Service](#license-key-manager-private)
-- [Crypto Signature Service](#crypto-signature-service-private)
-
-Notification APIs
-- [SMS Notification Service](#sms-notification-private)
-- [Email Notification Service](#email-notification-private)
-
-ID Generator APIs
-- [UIN Service](#uin--external)
-- [RID Service](#rid-generator-private)
-- [Static Token Service](#static-token-generator-private)
-
-Common APIs
-- [Audit Manager Service](#audit-manager-private)
-- [Data Sync Service](#sync-data-public)
-- [Applicant Types Service](#applicant-type-public)
-- [OTP Manager Service](#otp-manager-private)
-- [Registration Center APIs](Registration-Center-APIs.md)
+* Security APIs
+	* [Key Manager Service](#key-manager-private)
+	* [Crypto Manager Service](#crypto-manager-private)
+	* [License Key Service](#license-key-manager-private)
+	* [Crypto Signature Service](#crypto-signature-service-private)
+* Notification APIs
+	* [SMS Notification Service](#sms-notification-private)
+	* [Email Notification Service](#email-notification-private)
+* ID Generator APIs
+	* [UIN Service](#uin--external)
+	* [RID Service](#rid-generator-private)
+	* [Static Token Service](#static-token-generator-private)
+* Common APIs
+	* [Audit Manager Service](#audit-manager-private)
+	* [Data Sync Service](#sync-data-public)
+	* [Applicant Types Service](#applicant-type-public)
+	* [OTP Manager Service](#otp-manager-private)
+	* [Registration Center APIs](Registration-Center-APIs.md)
 
 # Key Manager (Private)
 * [GET /publickey](#get-publickey)
@@ -48,8 +45,7 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
 
 ### Responses
 
-#### Success Response:
-** Status code: '200'**
+#### Success Response
 
 ##### Description: public key is issued successfully
 ```JSON
@@ -68,6 +64,7 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
 	
 }
 ```
+**Response Code : 200 (OK)**
 
 ## POST /decrypt
 This service will decrypt the encrypted symmetric key 
@@ -104,10 +101,9 @@ timeStamp (encryption timestamp) |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:
 }
 ```
 
-### Responses:
+### Responses
 
-#### Success Response:
-** Status code: '200'**
+#### Success Response
 
 ##### Description: decrypt the encrypted symmetric key successfully
 ```json
@@ -122,8 +118,9 @@ timeStamp (encryption timestamp) |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-#### Error Response:
+#### Error Response
 ```json
 {
   "id": "string",
@@ -139,6 +136,7 @@ timeStamp (encryption timestamp) |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:
   "response": null
 }
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -153,8 +151,8 @@ KER-KMS-007 | Exception occured in cypto library | Crypto exception
 KER-KMS-500 | Internal server error | Internal server error
 
 # Crypto Manager (Private)
-* [POST v1/cryptomanager/encrypt](#post-v1cryptomanagerencrypt)
-* [POST v1/cryptomanager/decrypt](#post-v1cryptomanagerdecrypt)
+* [POST v1/cryptomanager/encrypt](#post-v-1-cryptomanager-encrypt)
+* [POST v1/cryptomanager/decrypt](#post-v-1-cryptomanager-decrypt)
 
 ## POST v1/cryptomanager/encrypt
 This service will encrypt provided plain string data with session symmetric key and encrypt symmetric key with application specific public key based on given timestamp(current timestamp of encryption). This will respond combined encrypted data and symmetric key having a key splitter.  
@@ -162,7 +160,7 @@ This service will encrypt provided plain string data with session symmetric key 
 ### Resource URL
 `https://mosip.io/v1/cryptomanager/encrypt`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -185,10 +183,7 @@ Requires Authentication | Yes
 }
 ```
 
-### Responses:
-
-#### Success Response:
-**Status code: '200'**
+### Responses
 
 ##### Description: encrypted data successfully
 ```json
@@ -203,6 +198,7 @@ Requires Authentication | Yes
   } 
 }   
 ```
+**Response Code : 200 (OK)**
 
 ## POST v1/cryptomanager/decrypt
 This service will decrypt encryted data along with symmetric key having splitter for given timestamp(encryption timestamp). 
@@ -236,7 +232,6 @@ Requires Authentication | Yes
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: decrypt encryted data along with symmetric key having splitter
 ```
@@ -251,6 +246,7 @@ Requires Authentication | Yes
              }
 }	
 ```
+**Response Code : 200 (OK)**
 
 #### Error Response
 ```
@@ -268,6 +264,7 @@ Requires Authentication | Yes
  "response": null
 }	
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -292,10 +289,10 @@ This service facilitates generation of license key, mapping the license key to s
 
 This component generates a license key for a specified MISP ID.
 
-* [POST /license/generate](#post-licensegenerate)
-* [POST /license/permission](#post-licensepermission)
-* [GET /license/permission](#get-licensepermission)
-* [PUT /license/status](#put-licensestatus)
+* [POST /license/generate](#post-license-generate)
+* [POST /license/permission](#post-license-permission)
+* [GET /license/permission](#get-license-permission)
+* [PUT /license/status](#put-license-status)
 
 ## POST /license/generate
 
@@ -328,10 +325,9 @@ MISPId|Yes|The MISP ID against which the license key generated will be mapped| |
 }
 ```
 
-### Responses:
+### Responses
 
-####Success Response:
-**Status code: '200'**
+#### Success Response
 
 ##### Description: license key generated successfully
 ```JSON
@@ -346,6 +342,7 @@ MISPId|Yes|The MISP ID against which the license key generated will be mapped| |
   }
 }
 ```
+**Response Code : 200 (OK)**
 
 ## POST /license/permission
 This component maps various permissions provided to a specified license key.
@@ -386,7 +383,6 @@ permissions|Yes|The list of permissions that will be mapped to the MISP-licensek
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: license key permission updated successfully
 ```JSON
@@ -401,6 +397,7 @@ permissions|Yes|The list of permissions that will be mapped to the MISP-licensek
   }
 }
 ```
+**Response Code : 200 (OK)**
 
 ## GET /license/permission
 This component fetches various permission mapped to a license key.
@@ -426,7 +423,6 @@ MISPId|Yes|The MISP ID against which the license key is mapped| |9837
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: license key permissions fetched successfully
 ```JSON
@@ -444,6 +440,7 @@ MISPId|Yes|The MISP ID against which the license key is mapped| |9837
   }
 }
 ```
+**Response Code : 200 (OK)**
 
 ## PUT /license/status
 This service moves the status of the license key to SUSPENDED status.
@@ -479,7 +476,6 @@ status|Yes|The status of the license key. It is an enumeration {ACTIVE, SUSPENDE
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: license key suspended successfully
 ```JSON
@@ -494,9 +490,8 @@ status|Yes|The status of the license key. It is an enumeration {ACTIVE, SUSPENDE
   }
 }	
 ```
-
+**Response Code : 200 (OK)**
 #### Failure Response
-**Status code: '200'**
 
 ##### Description: Invalid license key
 ```JSON
@@ -514,6 +509,7 @@ status|Yes|The status of the license key. It is an enumeration {ACTIVE, SUSPENDE
   ]
 }
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -530,8 +526,8 @@ KER-LKM-009 | No Permissions has been mapped to the entered TSP-LicenseKey Pair.
 
 
 # Crypto Signature Service (Private)
-* [POST v1/signature/sign](#post-sign)
-* [POST v1/signature/validate](#post-validate)
+* [POST v1/signature/sign](#post-v-1-signature-sign)
+* [POST v1/signature/validate](#post-v-1-signature-validate)
 
 ## POST v1/signature/sign
 This service will sign  provided plain string data.  
@@ -560,24 +556,23 @@ Requires Authentication | Yes
 }
 ```
 
-### Responses:
+### Responses
 
-#### Success Response:
-**Status code: '200'**
-
+#### Success Response
 ```
 {
-    "id": null,
-    "version": null,
-    "responsetime": "2019-05-20T10:12:43.624Z",
-    "metadata": null,
-    "response": {
-        "signature": "DrgkF2vm4WvBe04UNe-RePRcrg77uQpsH3GENRcglBsid-K0UDReeeZVKwimOdwV7Ht1j-_D1BFf2sCrM8ni7ztE5Xc_3TEaniOAnOgZDRSI0GG-uSqjH51AwTSl1PYdStfXtOn6HEfEU68JG7TdAliDI5C7thJ1YNmPnHusIsZzX6sW_VfvSpLeA_RzCqnUDH_VaEzZt_5zRYiQv9van4wt0P7HTfIBlQ5zaeO3wXOc3Pogct3ssKwqdaMmZdc7QTDOFqDZZVceMTIXKyiH-ZVs_u3QXRysiLVdXoz7d7yXHdWxQtzsfMjY7alMJNgbmu4X26LYNRemn65Mmn6ixA",
-        "timestamp": "2019-05-20T10:12:43.082Z"
-    },
-    "errors": null
+  "id": null,
+  "version": null,
+  "responsetime": "2019-05-20T10:12:43.624Z",
+  "metadata": null,
+  "response": {
+    "signature": "DrgkF2vm4WvBe04UNe-RePRcrg77uQpsH3GENRcglBsid-K0UDReeeZVKwimOdwV7Ht1j-_D1BFf2sCrM8ni7ztE5Xc_3TEaniOAnOgZDRSI0GG-uSqjH51AwTSl1PYdStfXtOn6HEfEU68JG7TdAliDI5C7thJ1YNmPnHusIsZzX6sW_VfvSpLeA_RzCqnUDH_VaEzZt_5zRYiQv9van4wt0P7HTfIBlQ5zaeO3wXOc3Pogct3ssKwqdaMmZdc7QTDOFqDZZVceMTIXKyiH-ZVs_u3QXRysiLVdXoz7d7yXHdWxQtzsfMjY7alMJNgbmu4X26LYNRemn65Mmn6ixA",
+    "timestamp": "2019-05-20T10:12:43.082Z"
+  },
+  "errors": null
 }	
 ```
+**Response Code : 200 (OK)**
 
 ## POST v1/signature/validate
 This service will decrypt encryted data along with symmetric key having splitter for given timestamp(encryption timestamp). 
@@ -610,7 +605,6 @@ Requires Authentication | Yes
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: decrypt encryted data along with symmetric key having splitter
 ```
@@ -626,6 +620,7 @@ Requires Authentication | Yes
     "errors": null
 }	
 ```
+**Response Code : 200 (OK)**
 
 #### Error Response
 ```
@@ -643,6 +638,7 @@ Requires Authentication | Yes
  "response": null
 }	
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -691,7 +687,6 @@ number |Yes|Mobile number to which the SMS have to be sent| | 743764398
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: sms send successfully
 ```
@@ -707,8 +702,9 @@ number |Yes|Mobile number to which the SMS have to be sent| | 743764398
   }
 }	
 ```
+**Response Code : 200 (OK)**
 
-#### Error Response:
+#### Error Response
 ```
 {
   "id": "string",
@@ -724,6 +720,7 @@ number |Yes|Mobile number to which the SMS have to be sent| | 743764398
   "response": null
 }	
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -769,8 +766,7 @@ attachments |No|Mail ID of the recepient| | multipart/formdata
 
 ### Responses
 
-#### Success Response:
-**Status code: '200'**
+#### Success Response
 
 ##### Description: sms send successfully
 ```JSON
@@ -786,8 +782,9 @@ attachments |No|Mail ID of the recepient| | multipart/formdata
   }
 }	
 ```
+**Response Code : 200 (OK)**
 
-#### Error Response:
+#### Error Response
 ```JSON
 {
   "id": "string",
@@ -803,6 +800,7 @@ attachments |No|Mail ID of the recepient| | multipart/formdata
   "response": null
 }	
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -818,7 +816,7 @@ KER-NOE-500 |  | Internal Server Error
 
 
 # UIN  (External)
-* [GET /uin](#uin-get-service)
+* [GET /uin](#uin-get)
 * [PUT /uin](#put-uin)
 
 ## GET /uin
@@ -844,7 +842,6 @@ N/A
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: uin generated successfully
 ```JSON
@@ -859,6 +856,7 @@ N/A
   }
 }
 ```
+**Response Code : 200 (OK)**
 
 ## PUT /uin
 This service will update the issued UN status to Assigned or Unassigned(Unused).  
@@ -885,16 +883,15 @@ Name | Required | Description | Default Value | Example
   "metadata": {},
   "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "request" : {
-                 "uin":"5193698130",
-                 "status":"ASSIGNED"
-              }
+    "uin":"5193698130",
+    "status":"ASSIGNED"
+  }
 }
 ```
 
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: uin status updated successfully
 ```
@@ -910,8 +907,9 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-#### Error Response:
+#### Error Response
 ```
 {
   "id": "string",
@@ -927,6 +925,7 @@ Name | Required | Description | Default Value | Example
   "response": null
 }
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -938,9 +937,9 @@ KER-UIG-005 | Internal Server Error | Internal Server Error
 KER-UIG-006 | Error in retrieving from config server | Config Server Fetch failed
 
 # RID generator (Private)
-* [GET /v1/ridgenerator/generate/rid/10002/10032](#get-ridgenerator)
+* [GET /v1/ridgenerator/generate/rid/{centerid}/{machineid}](#get-v-1-ridgenerator-generate-rid-centerid-machineid)
 
-## GET /generate/rid/{centerid}/{machineid}
+## GET /v1/ridgenerator/generate/rid/{centerid}/{machineid}
 This service returns a RID for the requested CenterID and MachineID. 
 
 ### Resource URL
@@ -965,7 +964,6 @@ machineid|Yes|Machineid of registration| -NA- |10032
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 ```JSON
 {
   "id": null,
@@ -979,7 +977,7 @@ machineid|Yes|Machineid of registration| -NA- |10032
 }
 ```
 
-#### Error Response:
+#### Error Response
 ```JSON
 {
   "id": null,
@@ -995,6 +993,7 @@ machineid|Yes|Machineid of registration| -NA- |10032
   ]
 }
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -1010,7 +1009,7 @@ KER-RIG-500 | | Runtime Exception
 
 
 # Static Token generator (Private)
-* [GET tokenidgenerator/{uin}/{partnercode}](#get-tokenidgeneratoruinpartnercode)
+* [GET tokenidgenerator/{uin}/{partnercode}](#get-tokenidgenerator-uin-partnercode)
 
 ## GET tokenidgenerator/{uin}/{partnercode}
 
@@ -1038,7 +1037,6 @@ partnercode|Yes|ID of the partner.| -NA- |9373
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: token id generated successfully
 ```JSON
@@ -1053,9 +1051,10 @@ partnercode|Yes|ID of the partner.| -NA- |9373
   "errors": null
 }
 ```
+**Response Code : 200 (OK)**
 
-#### Failure Response:
-**Status code: '200'**
+#### Failure Response
+
 ##### Description: Invalid parameters
 ```JSON
 {
@@ -1072,6 +1071,7 @@ partnercode|Yes|ID of the partner.| -NA- |9373
   ]
 }
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -1153,7 +1153,6 @@ description|No|Description of the event| |Example description
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: audit request completed successfully
 ```JSON
@@ -1168,8 +1167,9 @@ description|No|Description of the event| |Example description
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-#### Error Response:
+#### Error Response
 ```JSON
 {
   "id": "string",
@@ -1185,6 +1185,7 @@ description|No|Description of the event| |Example description
   "response": null
 }
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -1195,18 +1196,15 @@ KER-AUD-500 | Internal server error | Internal server error
 
 # Sync data (Public)
 * [GET /masterdata](#get-masterdata)
-* [GET /masterdata/{registrationcenterid}](#get-masterdataregistrationcenterid)
+* [GET /masterdata/{registrationcenterid}](#get-masterdata-registrationcenterid)
 * [GET /configs](#get-configs)
 * [GET /roles](#get-roles)
-* [GET /userdetails/{regid}](#get-userdetailsregistrationcenterid)
+* [GET /userdetails/{registrationcenterid}](#get-userdetails-registrationcenterid)
 * [GET /publickey](#get-publickey)
-* [POST /tpm/publickey](#post-tpmpublickey)
-* [POST /tpm/publickey/verify](#post-tpmpublickey)
+* [POST /tpm/publickey](#post-tpm-publickey)
+* [POST /tpm/publickey/verify](#post-tpm-publickey)
 * [GET /clientsettings](#get-clientsettings)
-* [GET /clientsettings/{regcenterid}](#get-clientsettingsregcenterid)
-
-
-
+* [GET /clientsettings/{regcenterid}](#get-clientsettings-regcenterid)
 
 ## GET /masterdata
 This service will provides the list of all master data. This service is used mainly by the Enrolment client module. 
@@ -1234,7 +1232,6 @@ keyindex|Yes|Thumbprint of the public key corresponding to this machine| |
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: latest masterdata for the provided machine.
 ```JSON
@@ -1676,6 +1673,7 @@ keyindex|Yes|Thumbprint of the public key corresponding to this machine| |
   }
 }
 ```
+**Response Code : 200 (OK)**
 
 ## GET /masterdata/{registrationcenterid}
 This service will provides the list of all master data. This service is used mainly by the Enrollment client module. 
@@ -1704,7 +1702,6 @@ v1/syncdata/masterdata/10001?macaddress=e1:01:2b:c2:1d:b0&serialnumber=NM5328114
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: latest masterdata for the provided machine.
 ```JSON
@@ -2146,12 +2143,13 @@ v1/syncdata/masterdata/10001?macaddress=e1:01:2b:c2:1d:b0&serialnumber=NM5328114
   }
 }
 ```
+**Response Code : 200 (OK)**
 
 ## GET /configs
 This service will return back the global and registration configuration data of the MOSIP platform. 
 
 ### Resource URL
-`https://mosip.io/v1/syncdata/configs `
+`https://mosip.io/v1/syncdata/configs`
 
 ### Resource details
 Resource Details | Description
@@ -2170,7 +2168,6 @@ N/A
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: latest configuration details.
 ```JSON
@@ -2286,6 +2283,7 @@ N/A
   }
 }
 ```
+**Response Code : 200 (OK)**
 
 ## GET /roles
 This service will return back the all roles of the applications. 
@@ -2307,10 +2305,9 @@ Name | Required | Description | Default Value | Example
 ### Request
 N/A
 
-### Responses:
+### Responses
 
-#### Success Response:
-**Status code: '200'**
+#### Success Response
 
 ##### Description: all roles of the application
 ```JSON
@@ -2341,6 +2338,7 @@ N/A
   }
 }		
 ```
+**Response Code : 200 (OK)**
 
 ## GET /userdetails/{registrationcenterid} 
 This service will return back the list of users and its role-mapping based on the registration-center-id. 
@@ -2365,7 +2363,6 @@ Name | Required | Description | Default Value | Example
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: list of users and role-mapping 
 ```JSON
@@ -2397,6 +2394,7 @@ Name | Required | Description | Default Value | Example
   }
 }	
 ```
+**Response Code : 200 (OK)**
 
 ## GET /publickey/{applicationId}
 This service will provide the public key for the specific application fetched from key manager. 
@@ -2420,10 +2418,9 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
 ### Request
 `https://mosip.io/v1/syncdata/publickey/REGISTRATION?timeStamp=2018-12-09T06%3A39%3A03.683Z `
 
-### Responses:
+### Responses
 
-#### Success Response:
-**Status code: '200'**
+#### Success Response
 
 ##### Description: public key and current active profile for the specified application
 ```JSON
@@ -2446,6 +2443,7 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
   }
 }	
 ```
+**Response Code : 200 (OK)**
 
 ## POST /tpm/publickey
 This service will upload the public key corresponding to a particular machine which are used in the MOSIP platform. This service will be used specifically in the Registration Client machines. 
@@ -2483,7 +2481,6 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: The public key had been mapped to the machine
 ```JSON
@@ -2503,8 +2500,9 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-#### Error Response:
+#### Error Response
 ```JSON
 {
   "id": "string",
@@ -2520,6 +2518,7 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
   "response": null
 }		
 ```
+**Response Code : 200 (OK)**
 
 ## POST /tpm/publickey/verify
 This service will only verify the public key corresponding to a particular machine which are used in the MOSIP platform. This service will be used specifically in the Registration Client machines. 
@@ -2557,7 +2556,6 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: Verifies if the public key has been mapped to the machine
 ```JSON
@@ -2577,8 +2575,9 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-#### Error Response:
+#### Error Response
 ```JSON
 {
   "id": "string",
@@ -2594,37 +2593,37 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
   "response": null
 }		
 ```
-
+**Response Code : 200 (OK)**
 
 ## GET /clientsettings
 
 This service will provides the list of all clientsettings. This service is used mainly by the Enrollment client module. 
 
-#### Resource URL
-<div>https://mosip.io/v1/syncdata/clientsettings?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24&lastupdated=2018-12-10T11:42:52.994Z</div>
+### Resource URL
+`https://mosip.io/v1/syncdata/clientsettings?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24&lastupdated=2018-12-10T11:42:52.994Z`
 
-#### Resource details
+### Resource details
 
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 lastupdated|No|Date in UTC ISO format| | 
 keyindex|Yes|Thumbprint of the public key corresponding to this machine| | 
 
 
-#### Request
+### Request
+`https://mosip.io/v1/syncdata/clientsettings?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24`
 
-<div>https://mosip.io/v1/syncdata/clientsettings?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24</div>
+### Responses
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: latest clientsettings for the provided machine.
+#### Success Response
+
+##### Description: latest clientsettings for the provided machine.
 ```JSON
 {
   "id": null,
@@ -2989,36 +2988,35 @@ keyindex|Yes|Thumbprint of the public key corresponding to this machine| |
   "errors": null
 }
 ```
+**Response Code : 200 (OK)**
 
-### GET /clientsettings/{regcenterid}
-
+## GET /clientsettings/{regcenterid}
 This service will provides the list of all master data. This service is used mainly by the Enrollment client module. 
 
-#### Resource URL
-<div>https://mosip.io/v1/syncdata/clientsettings/10001?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24&lastupdated=2018-12-10T11:42:52.994Z</div>
+### Resource URL
+`https://mosip.io/v1/syncdata/clientsettings/10001?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24&lastupdated=2018-12-10T11:42:52.994Z`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 regcenterid|Yes|Registration center id| |
 lastupdated|No|Date in UTC ISO format| | 
 keyindex|Yes|Thumbprint of the public key corresponding to this machine| | 
 
+### Request
+`v1/syncdata/clientsettings/10001?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24`
 
-#### Request
-v1/syncdata/clientsettings/10001?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24
+### Responses
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: latest masterdata for the provided machine.
+#### Success Response
+
+##### Description: latest masterdata for the provided machine.
 ```JSON
 {
   "id": null,
@@ -3348,12 +3346,9 @@ v1/syncdata/clientsettings/10001?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66
   "errors": null
 }
 ```
-
+**Response Code : 200 (OK)**
 
 #### Failure details
-
-
-
 Error Code | Error Message | Error Description
 ------------|----------|-------------
 KER-SNC-100 | Error occurred while parsing lastUpdated timesatamp | last updated parse exception
@@ -3417,7 +3412,7 @@ KER-SNC-154 | Error occured while parsing the response | SYNC  JOB  DEF  Parse E
 
 # Applicant type (Public)
 These set of services does various operations regarding the applicant type.
-* [GET /applicanttype/getApplicantType](#get-applicanttypegetApplicantType)
+* [GET /applicanttype/getApplicantType](#get-applicanttype-getApplicantType)
 
 ## GET /applicanttype/getApplicantType
 This service finds the Applicant type for the combination of Individual type code,Gender code ,DOB ,Biometric available and Language code. If there is a combination entry exists for these combinations, the corresponding Applicant Type code is returned. 
@@ -3473,7 +3468,6 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
 ### Responses
 
 #### Success Response
-**Status code: '200'**
 
 ##### Description: applicant type code fetched successfully
 ```JSON
@@ -3488,8 +3482,9 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-#### Failure Response:
+#### Failure Response
 ```JSON
 {
   "id": "string",
@@ -3505,6 +3500,7 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
   "response" : null
 }
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
@@ -3514,8 +3510,10 @@ KER-MSD-148 | One or more input parameter is invalid or does not exist | Invalid
 
 
 # OTP Manager (Private)
+* [OTP Generator](#otp-generator)
+* [OTP validator](#otp-validator)
 
-## POST OTP Generator
+## OTP Generator
 This component facilitates generation of OTP for various purposes. EG: Login in Pre-registration
 
 The OTP Generator component will receive a request to generate OTP, validate if the OTP generation request is from an authorized source, call OTP generator API with the input parameters (Key), receive the OTP from the OTP generator API which is generated based on the OTP generation policy and respond to the source with the OTP.
@@ -3567,8 +3565,9 @@ key |Yes|Key| | 9820173642
   }
 }
 ```
+**Response Code : 200 (OK)**
 
-##### Failure Response
+#### Failure Response
 ```JSON
 {
   "id": "string",
@@ -3584,6 +3583,7 @@ key |Yes|Key| | 9820173642
   "response": null
 }
 ```
+**Response Code : 200 (OK)**
 
 ## OTP Validator
 This component facilitates basic validation of an OTP. 
@@ -3630,6 +3630,7 @@ otp|Yes|OTP| | 123456
   }
 }	
 ```
+**Response Code : 200 (OK)**
 
 ### Failure details
 Error Code | Error Message | Error Description
