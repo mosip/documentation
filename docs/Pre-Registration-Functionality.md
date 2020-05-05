@@ -139,9 +139,6 @@ The user opts to view the available slots for a selected registration center.
 * In such case the system notifies the user about the successful cancellation 
 * Following a successful appointment Cancellation the system unlocks the time slot of the registration center
 
-### Auto-cancel appointment based on change in working days/holidays 
-Additionally, in case of any change made by the administrator in terms of updating a working day/Non-holiday day to a non-working day/holiday for a registration center or updating the working hours of a registration center, the system will automatically cancel the affected appointment(s) and trigger a notification to the mobile number or email id of the associated PRID, notifying regarding cancellation of appointment. 
-
 ## Re-book appointment 
 * The system provides the user with the list of available appointment Slots
 * An user can select any of the appointment Date available and any of the appointment Slot available
