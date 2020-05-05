@@ -3412,7 +3412,7 @@ KER-SNC-154 | Error occured while parsing the response | SYNC  JOB  DEF  Parse E
 
 # Applicant type (Public)
 These set of services does various operations regarding the applicant type.
-* [GET /applicanttype/getApplicantType](#get-applicanttype-getApplicantType)
+* [GET /applicanttype/getApplicantType](#get-applicanttype-getapplicanttype)
 
 ## GET /applicanttype/getApplicantType
 This service finds the Applicant type for the combination of Individual type code,Gender code ,DOB ,Biometric available and Language code. If there is a combination entry exists for these combinations, the corresponding Applicant Type code is returned. 
