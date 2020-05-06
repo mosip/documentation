@@ -1,13 +1,7 @@
-# Introduction & Background 
+# Introduction
 An ABIS system that integrates with MOSIP should support the following operations. All ABIS operations are via a message queue and asynchronous.
 
-## Objective
 The objective of this specification document is to establish the technical and compliance standards/ protocols that are necessary for a ABIS solution to be used in MOSIP.
-
-## Target Audience
-This is a ABIS API specification document and aims to help the ABIS manufactures, their developers, and their designers in integrating with MOSIP.
-
-This document assumes that the readers are familiar with [MOSIP's de-duplication process](Deduplication-and-Manual-Adjudication.md).
 
 # Parameters
 
@@ -316,3 +310,4 @@ Code | Reason
 * [Biometric Data Specification](Biometric-Data-Specification.md) to know about biometric specification in MOSIP
 * [CBEFF XML](CBEFF-XML.md) to how MOSIP stores biometric data
 * [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token
+* [MOSIP's de-duplication process](Deduplication-and-Manual-Adjudication.md) for deatils about De-Duplication process in MOSIP.
