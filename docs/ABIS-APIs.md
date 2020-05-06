@@ -10,9 +10,9 @@ This is a ABIS API specification document and aims to help the ABIS manufactures
 This document assumes that the readers are familiar with [MOSIP's de-duplication process](Deduplication-and-Manual-Adjudication.md).
 
 ## References 
-> [Biometric Data Specification](Biometric-Data-Specification.md) to know about biometric specification in MOSIP
-> [CBEFF XML](CBEFF-XML.md) to how MOSIP stores biometric data
-> [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token
+* [Biometric Data Specification](Biometric-Data-Specification.md) to know about biometric specification in MOSIP
+* [CBEFF XML](CBEFF-XML.md) to how MOSIP stores biometric data
+* [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token
 
 # Parameters
 
