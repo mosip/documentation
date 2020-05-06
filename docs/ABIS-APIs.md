@@ -9,11 +9,6 @@ This is a ABIS API specification document and aims to help the ABIS manufactures
 
 This document assumes that the readers are familiar with [MOSIP's de-duplication process](Deduplication-and-Manual-Adjudication.md).
 
-## References 
-* [Biometric Data Specification](Biometric-Data-Specification.md) to know about biometric specification in MOSIP
-* [CBEFF XML](CBEFF-XML.md) to how MOSIP stores biometric data
-* [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token
-
 # Parameters
 
 ## Common Parameters
@@ -110,12 +105,15 @@ Code | Reason
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
   "requesttime": "2020-03-29T07:01:24.692Z",
   "referenceId": "987654321-89AB-CDEF-0123-456789ABCDEF",
-  "referenceURL": "https://mosip.io/registrationprocessor/v1/bio-dedupe/biometricfile/2cce7b7d-b58a-4466-a006-c79297281789",
+  "referenceURL": "https://mosip.io/biometric/45678",
   "flags": { //optional
-	"maxResults": "10", //maxResults is an example and not a prescribed flag
-	"targetFPIR": "30", //targetFPIR is an example and not a prescribed flag
+    //maxResults is an example and not a prescribed flag
+	"maxResults": "10", 
+	//targetFPIR is an example and not a prescribed flag
+	"targetFPIR": "30",
+    //there can be more following this	
 	"flag1": "value1",
-	"flag2": "value2" // there can be more following this
+	"flag2": "value2" 
   },
   "gallery": {
     "referenceIds": [
@@ -152,12 +150,16 @@ Code | Reason
       {
         "referenceId": "7acce7b7d-b58a-4466-a006-c79297281456",
         "analytics": {
-		  "internalScore": "112", // example and not prescribed
-          "confidence": "90", // example and not prescribed
+		  //internalScore is an example and not prescribed
+		  "internalScore": "112", 
+		  //confidence is an example and not prescribed
+          "confidence": "90",
+		  //there can be more following this	
 		  "key1": "value1",
 		  "key2": "value2"
         },
-        "modalities": [ // modality wise analytics
+		// modality wise analytics
+        "modalities": [ 
           {
             "biometricType": "FIR",
             "analytics": {
@@ -309,3 +311,8 @@ Code | Reason
   "returnValue": "1"
 }
 ```
+
+# References 
+* [Biometric Data Specification](Biometric-Data-Specification.md) to know about biometric specification in MOSIP
+* [CBEFF XML](CBEFF-XML.md) to how MOSIP stores biometric data
+* [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token
