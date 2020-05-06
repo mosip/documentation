@@ -1,5 +1,15 @@
 # Introduction
-An ABIS system that integrates with MOSIP should support the operations listed below. All ABIS operations are via. a message queue and are asynchronous.
+An ABIS system that integrates with MOSIP should support the following operations. 
+* [Insert](#insert)
+* [Identify](#identify)
+* [Delete](#delete)
+* [Ping](#ping)
+* [Pending Jobs](#pending-jobs)
+* [Reference Count](#reference-count)
+
+{% hint style="info" %}
+All ABIS operations are via. a message queue and are asynchronous.
+{% endhint %}
 
 # Parameters
 
