@@ -1,7 +1,5 @@
 # Introduction
-An ABIS system that integrates with MOSIP should support the following operations. All ABIS operations are via a message queue and asynchronous.
-
-The objective of this specification document is to establish the technical and compliance standards/ protocols that are necessary for a ABIS solution to be used in MOSIP.
+An ABIS system that integrates with MOSIP should support the operations listed below. All ABIS operations are via. a message queue and are asynchronous.
 
 # Parameters
 
@@ -33,6 +31,13 @@ Code | Reason
 7 | Unable to fetch biometric details
 
 # ABIS Operations
+The following operations are supported by MOSIP:
+* [Insert](#insert)
+* [Identify](#identify)
+* [Delete](#delete)
+* [Ping](#ping)
+* [Pending Jobs](#pending-jobs)
+* [Reference Count](#reference-count)
 
 ## Insert 
 * ABIS must get biometric data from referenceURL, process it and store it locally within the ABIS reference database 
