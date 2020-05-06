@@ -59,3 +59,6 @@ For details about the APIs are available in [Registration Processor - Manual Adj
 In the current implementation we have the API, assuming that there will be only one Manual Adjudication layer. The APIs for Manual Adjudication can be changed based on the country's need.
 {% endhint %}
 
+# Process Flow for Biometric Deduplication
+
+![](_images/biometrics/abis_middleware-process_flow.png)
