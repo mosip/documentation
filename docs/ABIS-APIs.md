@@ -79,7 +79,7 @@ Code | Reason
 ```
 
 ## Identify
-* All Insert requests added to the queue earlier must be serviced by ABIS when performing an IDENTIFY request.  
+* All Insert requests added to the queue earlier must be serviced by ABIS when performing an Identify request.  
 * Identify request provides a 1:N comparison. The given input is compared either against the gallery passed or if the gallery is not specified the entire database.
 * The input for comparison can be provided by referenceID or referenceURL. 
 	* If the referenceID is given it is used as the preferred option. The given referenceID must be existing in the ABIS database else ABIS will throw and error. 
@@ -310,4 +310,4 @@ Code | Reason
 * [Biometric Data Specification](Biometric-Data-Specification.md) to know about biometric specification in MOSIP
 * [CBEFF XML](CBEFF-XML.md) to how MOSIP stores biometric data
 * [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token
-* [MOSIP's de-duplication process](Deduplication-and-Manual-Adjudication.md) for deatils about De-Duplication process in MOSIP.
+* [MOSIP's de-duplication process](Deduplication-and-Manual-Adjudication.md) for deatils about De-Duplication process in MOSIP
