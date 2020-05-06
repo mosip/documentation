@@ -18,14 +18,14 @@ This document assumes that the readers are familiar with [MOSIP's de-duplication
 
 ## Common Parameters
 Common parameters used for all ABIS operations:
-Name | Description | Restrictions | Default Value | Example
------|----------|-------------|--------------|---------------
-requestID | ID that is associated with each request sent to ABIS | ABIS should not use this ID in any other context outside the request | | 80bd41f8-31b2-46ac-ac9c-3534fc1b220e (UUID)
-referenceID |  Id of a single registration record. Registration record is maintained in MOSIP. This ID is the mapping between MOSIP and ABIS | None | | 80bd41f8-31b2-46ac-ac9c-3534fc1b220e (UUID)
-referenceURL | URL to the biometrics data stored in MOSIP. This URL will have read only access | None | | 
-biometricType | Type of biometric data sent in the request | FMR/FIR/IIR | |
-Return Value | Code for response | None | None | String
-failureReason | Code for failure reason | None | None | String
+Name | Description | Restrictions | Type
+-----|-------------|--------------|------
+requestID | ID that is associated with each request sent to ABIS | ABIS should not use this ID in any other context outside the request | UUID
+referenceID | ID of a single registration record. Registration record is maintained in MOSIP. This ID is the mapping between MOSIP and ABIS | None | UUID
+referenceURL | URL to the biometrics data stored in MOSIP. This URL will have read only access | None | HTTPS URL
+biometricType | Type of biometric data sent in the request | FMR/FIR/IIR | String
+returnValue | Code for response | [Standard Return Codes](#standard-return-codes) | String
+failureReason | Code for failure reason | [Failure Reasons](#failure-reasons) | String
 
 ## Standard Return Codes
 Code | Status
