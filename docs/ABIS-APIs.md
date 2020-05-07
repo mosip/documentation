@@ -119,7 +119,7 @@ We are not using the referenceURL in Identify request for our current implementa
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
   "requesttime": "2020-03-29T07:01:24.692Z",
   "referenceId": "987654321-89AB-CDEF-0123-456789ABCDEF",
-  "referenceURL": "",//will be an empty string
+  "referenceURL": "",//will be an empty string, if not used
   "flags": { //optional
     //maxResults is an example and not a prescribed flag
 	"maxResults": "10", 
