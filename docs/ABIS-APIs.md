@@ -100,11 +100,16 @@ The following operations are supported by MOSIP:
 	* If the referenceID is given it is used as the preferred option. The given referenceID must be existing in the ABIS database else ABIS will throw and error. 
 	* If the referenceID is omitted or NULL and the referenceURL is passed the ABIS retrieves the biometrics provided in the referenceURL and compares the same against either a gallery or its database. 
 	* If in case, both referenceID and referenceURL are missing ABIS throws an error.
+
+{% hint style="info" %}
+We are not using the referenceURL in Identify request for our current implementation. Hence it will be an empty string for Identify request.
+{% endhint %}
+
 * Identify request should give all candidates which are considered as a match based on ABIS thresholds.
 * This request should not match against referenceID that is not in the reference database.
 * The flags section of the request can be used to customize or control ABIS behavior by sending specific key value pairs. "targetFPIR" or "maxResults" are examples of such flags that can alter the ABIS behavior. Implementations can agree with the ABIS on what these flags should be called and how they will be interpreted.
 * The response now has a section for analytics that contains key value pairs. Values can be json objects also. The contents of the analytics section will be agreed upon by the implementation with the ABIS. Scores are also moved to this section and are not mandatory response parameters any more.
-* Ordering or ranking of results is not explicitly specified and can be agreed upon between the implementation and the ABIS. 
+* Ordering or ranking of results is not explicitly specified and can be agreed upon between the implementation and the ABIS.
 
 ### Identify Request
 ```JSON
@@ -114,7 +119,7 @@ The following operations are supported by MOSIP:
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
   "requesttime": "2020-03-29T07:01:24.692Z",
   "referenceId": "987654321-89AB-CDEF-0123-456789ABCDEF",
-  "referenceURL": "https://mosip.io/biometric/45678",
+  "referenceURL": "",//will be an empty string
   "flags": { //optional
     //maxResults is an example and not a prescribed flag
 	"maxResults": "10", 
