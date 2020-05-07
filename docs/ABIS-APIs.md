@@ -53,12 +53,12 @@ The following operations are supported by MOSIP:
 * ABIS must get biometric data from referenceURL, process it and store it locally within the ABIS reference database 
 	* The referenceURL is authenticated and authorized; ABIS needs to send a JWT token inside the request header COOKIE
 	* The referenceURL is secure (HTTPS)
-	* The referenceURL will be active for a certain time as decided by the Implementor 
+	* The referenceURL will be active for a certain time as decided by the MOSIP adoptor 
 * referenceId must not be active prior to this operation i.e., it must not have been used before this operation
 * De-duplication must not be performed in this operation
 * MOSIP will provide biometric data in [CBEFF format](CBEFF-XML.md) to ABIS as a response of referenceURL and the data in CBEFF will not be encrypted
 
-> Refer to [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token. Request JSON expects clientid, secretkey and appid which will be provided by the Implementor's System Integrator(SI).
+> Refer to [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token. Request JSON expects clientid, secretkey and appid which will be provided by the MOSIP adoptor's System Integrator(SI).
 
 ### Insert Request
 ```JSON
@@ -102,14 +102,15 @@ The following operations are supported by MOSIP:
 	* If in case, both referenceID and referenceURL are missing ABIS throws an error.
 
 {% hint style="info" %}
-We are not using the referenceURL in Identify request for our current implementation. Hence it will be an empty string for Identify request.
+We are not using the referenceURL in Identify request for our current implementation. Hence, it will be an empty string for Identify request. MOSIP 
+Aadoptors can have customized workflows where the referenceURL can be used.
 {% endhint %}
 
 * Identify request should give all candidates which are considered as a match based on ABIS thresholds.
 * This request should not match against referenceID that is not in the reference database.
-* The flags section of the request can be used to customize or control ABIS behavior by sending specific key value pairs. "targetFPIR" or "maxResults" are examples of such flags that can alter the ABIS behavior. Implementations can agree with the ABIS on what these flags should be called and how they will be interpreted.
-* The response now has a section for analytics that contains key value pairs. Values can be json objects also. The contents of the analytics section will be agreed upon by the implementation with the ABIS. Scores are also moved to this section and are not mandatory response parameters any more.
-* Ordering or ranking of results is not explicitly specified and can be agreed upon between the implementation and the ABIS.
+* The flags section of the request can be used to customize or control ABIS behavior by sending specific key value pairs. "targetFPIR" or "maxResults" are examples of such flags that can alter the ABIS behavior. MOSIP adoptor can agree with the ABIS on what these flags should be called and how they will be interpreted.
+* The response now has a section for analytics that contains key value pairs. Values can be json objects also. The contents of the analytics section will be agreed upon by the MOSIP adoptor with the ABIS. Scores are also moved to this section and are not mandatory response parameters any more.
+* Ordering or ranking of results is not explicitly specified and can be agreed upon between the MOSIP adoptor and the ABIS.
 
 ### Identify Request
 ```JSON
