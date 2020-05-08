@@ -1,5 +1,4 @@
-﻿# Generic Master Data
-
+﻿
 ## Background
 There can be new master data added to the system. The common service API can cater to the fetch operations of the master data. This API accepts the entity and the selection criteria as input and returns back the necessary master data.
 

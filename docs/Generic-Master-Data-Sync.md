@@ -1,5 +1,4 @@
-﻿# Generic Master Data Sync
-
+﻿
 ## Background
 There can be new master data added to the system at any point of time. This API can be used by the Registration Client module to sync the master data in the registered machine. If there is any change in the master data, no change is required in the Service call to the master data sync API. No new logic have to be written as part of this API. 
 
