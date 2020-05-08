@@ -81,46 +81,42 @@ type|Yes|This is the data type of the filter.| -NA- | string
 1. Invalid credentials: If the passed credentials is not correct. 
 ```JSON
 {
-    "id": "mosip.admin.masterdata.fetch",
-    "ver": "1.0",
-    "responsetime": "2007-12-03T10:15:30Z",
-    "errors":[
-        {
-            "errorCode": "ADMN_MST_FTCH_AUTH_ERR_INVALIDCREDENTIALS",
-            "message": "The passed in credentials is not correct"
-        }    
-    ]
+  "id": "mosip.admin.masterdata.fetch",
+  "ver": "1.0",
+  "responsetime": "2007-12-03T10:15:30Z",
+  "errors":[
+    {
+      "errorCode": "ADMN_MST_FTCH_AUTH_ERR_INVALIDCREDENTIALS",
+      "message": "The passed in credentials is not correct"
+    }    
+  ]
 }
 ```
-
 2. Invalid entity: If the passed in entity is not correct. 
 ```JSON
-
 {
-    "id": "mosip.admin.masterdata.fetch",
-    "ver": "1.0",
-    "responsetime": "2007-12-03T10:15:30Z",
-    "errors":[
-        {
-            "errorCode": "ADMN_MST_FTCH_AUTH_ENTITY_INVALID",
-            "message": "The passed in entity is not correct"
-        }    
-    ]
+  "id": "mosip.admin.masterdata.fetch",
+  "ver": "1.0",
+  "responsetime": "2007-12-03T10:15:30Z",
+  "errors":[
+    {
+      "errorCode": "ADMN_MST_FTCH_AUTH_ENTITY_INVALID",
+      "message": "The passed in entity is not correct"
+    }    
+  ]
 }
 ```
-
 3. Invalid fields: If the passed fields are not correct. 
 ```JSON
-
 {
-    "id": "mosip.admin.masterdata.fetch",
-    "ver": "1.0",
-    "responsetime": "2007-12-03T10:15:30Z",
-    "errors":[
-        {
-            "errorCode": "ADMN_MST_FTCH_AUTH_FLDS_INVALID",
-            "message": "The passed in fields are not correct"
-        }    
-    ]
+  "id": "mosip.admin.masterdata.fetch",
+  "ver": "1.0",
+  "responsetime": "2007-12-03T10:15:30Z",
+  "errors":[
+    {
+      "errorCode": "ADMN_MST_FTCH_AUTH_FLDS_INVALID",
+      "message": "The passed in fields are not correct"
+    }    
+  ]
 }
 ```

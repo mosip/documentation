@@ -122,10 +122,10 @@ lastUpdated|Yes|Date in UTC ISO format|-NA-|-NA-
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "errors":[
-	{
-	  "errorCode": "MST_GNRC_FTCH_AUTH_ERR_INVALIDCREDENTIALS",
-	  "message": "The passed in credentials is not correct"
-	}	
+    {
+      "errorCode": "MST_GNRC_FTCH_AUTH_ERR_INVALIDCREDENTIALS",
+      "message": "The passed in credentials is not correct"
+    }	
   ]
 }
 ```
@@ -137,10 +137,10 @@ lastUpdated|Yes|Date in UTC ISO format|-NA-|-NA-
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "errors":[
-	{
-	  "errorCode": "MST_GNRC_RGCNTRID_INVALID",
-	  "message": "The passed in registration center ID is not correct"
-	}	
+    {
+      "errorCode": "MST_GNRC_RGCNTRID_INVALID",
+      "message": "The passed in registration center ID is not correct"
+    }	
   ]
 }
 ```
