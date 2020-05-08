@@ -15,10 +15,10 @@ Following are the key considerations for the generic master data functionality,
 * The OPERATORS in the CONDITION is passed in the parameters. For example, =, !=, >, < etc.,
 * Also the necessary CLAUSE OPERATORS are passed. For example, AND, OR, NOT etc., 
 
->I/p:
->	Entity name. Eg., table_name
->	Condition & Operators. Eg.,  date > '12-oct-2019'
->	Clause operators. Eg., AND
+>Input:
+>	* Entity name. Eg., table_name
+>	* Condition & Operators. Eg.,  date > '12-oct-2019'
+>	* Clause operators. Eg., AND
 
 Please refer the [API spec](Generic-Master-Data-API.md) for further details. 
 
