@@ -1,23 +1,19 @@
-
 # Search
-
 * [POST /search](#post-fetch)
 
-### POST /search
-
+## POST /search
 This service searches the master data details. 
 
-#### Resource URL
-<div>https://mosip.io/v1/admin/search</div>
+### Resource URL
+`https://mosip.io/v1/admin/search`
 
-#### Resource details
-
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | The response will be sent in the Response Header and also a JSON message will be returned. 
 Requires Authentication | no
 
-#### Parameters
+### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 entity|Yes|This is the entity name. | -NA- | machines
@@ -29,60 +25,58 @@ column_value|Yes|This is the column value for which the filter is applied.| -NA-
 type|Yes|This is the data type of the filter.| -NA- | string
 
 
-#### Example Request
+### Example Request
 ```JSON
 {
-    "id": "mosip.admin.masterdata.fetch",
-    "version":"1.0",
-    "requesttime":"2007-12-03T10:15:30Z",
-    "request": {
-        "entity": "machines",
-        "conditionandoperators":[
-            {   
-                "order":1,
-                "column_name":"machinename",
-                "operator":"EQUALS",
-                "column_value":"DYJD7252",
-                "type":"string"
-            },
-            {   
-                "order":2,
-                "column_name":"is_active",
-                "operator":"EQUALS",
-                "column_value":"false"
-                "type":"boolean"
-            }
-        ],
-        "operator" : "AND"
-    }
+  "id": "mosip.admin.masterdata.fetch",
+  "version":"1.0",
+  "requesttime":"2007-12-03T10:15:30Z",
+  "request": {
+    "entity": "machines",
+    "conditionandoperators":[
+      {   
+        "order":1,
+        "column_name":"machinename",
+        "operator":"EQUALS",
+        "column_value":"DYJD7252",
+        "type":"string"
+      },
+      {   
+        "order":2,
+        "column_name":"is_active",
+        "operator":"EQUALS",
+        "column_value":"false"
+        "type":"boolean"
+      }
+    ],
+    "operator" : "AND"
+  }
 }
 ```
-#### Example Response
 
-Success Response 
+### Example Response
 
-```
-JSON:
+#### Success Response 
+```JSON
 {
-    "id": "mosip.admin.masterdata.fetch",
-    "ver": "1.0",
-    "responsetime": "2007-12-03T10:15:30Z",
-    "response": {
-        "machines": [
-            {
-                "machineid":"string",
-                "machinename":"string",
-                "macid":"string",
-                "serialnumber":"string",
-                "isactive":"string"
-            }
-        ]
-    }
+  "id": "mosip.admin.masterdata.fetch",
+  "ver": "1.0",
+  "responsetime": "2007-12-03T10:15:30Z",
+  "response": {
+    "machines": [
+      {
+        "machineid":"string",
+        "machinename":"string",
+        "macid":"string",
+        "serialnumber":"string",
+        "isactive":"string"
+      }
+    ]
+  }
 }
-
 ```
 
-Error Responses
+### Error Responses
 
 1. Invalid credentials: If the passed credentials is not correct. 
 ```JSON
@@ -113,7 +107,6 @@ Error Responses
         }    
     ]
 }
-
 ```
 
 3. Invalid fields: If the passed fields are not correct. 
@@ -130,5 +123,4 @@ Error Responses
         }    
     ]
 }
-
 ```
