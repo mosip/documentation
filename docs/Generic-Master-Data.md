@@ -24,20 +24,20 @@ Please refer the [API spec](Generic-Master-Data-API.md) for further details.
 
 ## Criteria and Limitations
 
-i. Following data types are supported, 
-	i. string
-	ii. int
-	iii. boolean
-	iv. date
-ii. Following are the OPERATORS in CONDITION are supported, 
-	i. EQUALS
-	ii. GREATER THAN
-	iii. LESS THAN 
-iii. Following are the clause operatos are supported, 
-	i. AND
-	ii. OR
-iv. Return JSON will be of flat structure. No nested structure is supported.
-v. Return JSON structure will not have any types such as number, boolean or string.
+* Following data types are supported, 
+	* string
+	* int
+	* boolean
+	* date
+* Following are the OPERATORS in CONDITION are supported, 
+	* EQUALS
+	* GREATER THAN
+	* LESS THAN 
+* Following are the clause operatos are supported, 
+	* AND
+	* OR
+* Return JSON will be of flat structure. No nested structure is supported.
+* Return JSON structure will not have any types such as number, boolean or string.
 
 ## Addition of new master data
 * Database
