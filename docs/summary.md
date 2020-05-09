@@ -1,9 +1,9 @@
 # Table of contents
 
 * MOSIP Architecture
-	* [Architecture](MOSIP-Architecture.md)
-		* [MOSIP Architecture Principles](MOSIP-Architecture-Principles.md)
-	* [Data Architecture](MOSIP-Data-Architecture.md)
+	* [Architecture](Architecture.md)
+	* [Architecture Principles](Architecture-Principles.md)
+	* [Data Architecture](Data-Architecture.md)
 	* [Privacy & Security](Privacy-and-Security.md)	
 * Modules
 	* [Pre-Registration](Pre-Registration.md)
@@ -61,7 +61,6 @@
 	* [Kernel APIs](Kernel-APIs.md)
 	* [Machine APIs](Machine-APIs.md)
 	* [Master Data Biometric APIs](Master-Data-Biometric-APIs.md)
-	* [MOSIP REST API guidelines](MOSIP-REST-API-guidelines.md)
 	* [Packet APIs](Packet-APIs.md)
 	* [Partner Management Service APIs](Partner-Management-Service-APIs.md)
 	* [Pre Registration APIs](Pre-Registration-APIs.md)
