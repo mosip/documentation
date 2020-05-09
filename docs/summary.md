@@ -6,9 +6,11 @@
 	* [Data Architecture](Data-Architecture.md)
 	* [Privacy & Security](Privacy-and-Security.md)	
 * Modules
-	* [Pre-Registration](Pre-Registration.md)
+	* Pre-Registration	
+		* [Pre-Registration](Pre-Registration.md)
 		* [Pre Registration Functionality](Pre-Registration-Functionality.md)
-	* [Registration Client](Registration-Client.md)
+	* Registration Client	
+		* [Registration Client](Registration-Client.md)
 		* [Registration Functionality](Registration-Functionality.md)
 		* [Registration Packet](Registration-Packet.md)
 		* [Registration Client Setup](Registration-Client-Setup.md)
@@ -16,25 +18,31 @@
 		* [Guide to Configure MOSIP for Biometrics](Guide-to-Configure-MOSIP-for-Biometrics.md)
 		* [Guidelines for Adding Centers, Machine, User and Devices](Guidelines-for-Adding-Centers,-Machine,-User-and-Devices.md)
 		* [Device Integration Specifications](Device-Integration-Specifications.md)  
-	* [Registration Processor](Registration-Processor.md)
+	* Registration Processor	
+		* [Registration Processor](Registration-Processor.md)
 		* [Registration Processor Functionality](Registration-Processor-Functionality.md)
 		* [Deduplication and Manual Adjudication](Deduplication-and-Manual-Adjudication.md)
 	* [ID Repository](ID-Repository.md)
-	* [ID Authentication](ID-Authentication.md)
+	* ID Authentication	
+		* [ID Authentication](ID-Authentication.md)
 		* [ID Authentication Functionality](ID-Authentication-Functionality.md)
-	* [Resident Services](Resident-Services.md)
+	* Resident Services	
+		* [Resident Services](Resident-Services.md)
 		* [Resident Services Functionality](Resident-Services-Functionality.md)
-	* [Partner Management](Partner-Management.md)
+	* Partner Management	
+		* [Partner Management](Partner-Management.md)
 		* [Partner Management Functionality](Partner-Management-Functionality.md)
 		* [MOSIP Partner Secure Communication](MOSIP-Partner-Secure-Communication.md)
 		* [FRS MISP Self Service Portal](FRS-MISP-Self-Service-Portal.md) 
-	* [Admin](Admin.md)
+	* Admin
+		* [Admin](Admin.md)
 		* [Admin Services Functionality](Admin-Services-Functionality.md)
-	* [Kernel](Kernel.md)
+	* Kernel
+		* [Kernel](Kernel.md)
 		* [Audit Manager Functionality](Audit-Manager-Functionality.md)
 		* [Authentication and Authorization Functionality](Authentication-and-Authorization-Functionality.md)
-			* [Auth Adapter](Auth-Adapter.md)
-			* [Auth Implementation](Auth-Implementation.md)  	
+		* [Auth Adapter](Auth-Adapter.md)
+		* [Auth Implementation](Auth-Implementation.md)  	
 		* [Common Services Functionality](Common-Services-Functionality.md)
 		* [Data Services Functionality](Data-Services-Functionality.md)
 		* [Generic Master Data Sync](Generic-Master-Data-Sync.md)
@@ -76,7 +84,10 @@
 	* [Biometric Data Specification](Biometric-Data-Specification.md)
     * [CBEFF XML](CBEFF-XML.md)
 * Installing MOSIP
-	* [Build & Deploy](Build-and-Deploy.md)
+	* Build & Deploy
+		* [Build & Deploy](Build-and-Deploy.md)
+		* [Hardware Security Module HSM Specifications](Hardware-Security-Module-HSM-Specifications.md)
+		* [Hardware Sizing](Hardware-Sizing.md)
 	* Other Installation Guides
 		* [Steps to Install and Configure LDAP](Steps-to-Install-and-Configure-LDAP.md)
 		* [Steps to Install and Configure HDFS](Steps-to-Install-and-Configure-HDFS.md)
@@ -85,9 +96,7 @@
 		* [Steps to Install Keycloak Standalone Server](Steps-to-Install-Keycloak-Standalone-Server.md)
 		* [Apache Directory Studio User Guide](Apache-Directory-Studio-User-Guide.md)
 		* [ApacheDs Server Installation and Configuration](ApacheDs-Server-Installation-and-Configuration.md)
-
-## MOSIP Contributors	
-* Contributor's Guide
+* MOSIP Contributors
 	* [Contributor's Guide](Contributor-Guide.md)
 	* [Code of Conduct](Code-of-Conduct.md)
 	* [Issue Reporting Guideline](Issue-Reporting-Guideline.md)
@@ -114,10 +123,7 @@
 ## Other Pages 
 * Others
 	* [Customizations for a Country](Customisations-for-a-Country.md)
-	* [Hardware Security Module HSM Specifications](Hardware-Security-Module-HSM-Specifications.md)
-    * [Hardware Sizing](Hardware-Sizing.md)
     * [Home](Home.md)
-    * [Interdependent components and services](Interdependent-components-and-services.md)
     * [MOSIP ID Object Definition](MOSIP-ID-Object-Definition.md)
     * [Scribble Page](Scribble-Page.md)
 	
