@@ -33,6 +33,8 @@
 	* [Kernel](Kernel.md)
 		* [Audit Manager Functionality](Audit-Manager-Functionality.md)
 		* [Authentication and Authorization Functionality](Authentication-and-Authorization-Functionality.md)
+			* [Auth Adapter](Auth-Adapter.md)
+			* [Auth Implementation](Auth-Implementation.md)  	
 		* [Common Services Functionality](Common-Services-Functionality.md)
 		* [Data Services Functionality](Data-Services-Functionality.md)
 		* [Generic Master Data Sync](Generic-Master-Data-Sync.md)
@@ -112,8 +114,6 @@
 
 ## Other Pages 
 * Others
-    * [Auth Adapter](Auth-Adapter.md)
-    * [Auth Implementation](Auth-Implementation.md)  
 	* [Customizations for a Country](Customisations-for-a-Country.md)
 	* [Hardware Security Module HSM Specifications](Hardware-Security-Module-HSM-Specifications.md)
     * [Hardware Sizing](Hardware-Sizing.md)
