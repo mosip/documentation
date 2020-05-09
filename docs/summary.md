@@ -1,8 +1,8 @@
 # Table of contents
 
 ## MOSIP Architecture
-* [Architecture](MOSIP-Architecture.md)
-* [Data Architecture](MOSIP-Data-Architecture.md)
+* [Architecture](Architecture.md)
+* [Data Architecture](Data-Architecture.md)
 * [Privacy & Security](Privacy-and-Security.md)	
 
 ## Functionalities
@@ -86,6 +86,7 @@
 ## Other Pages 
 * Others
     * [Admin Services Functionality](Admin-Services-Functionality.md)
+	* [Architecture Principles](Architecture-Principles.md)
 	* [Audit Manager Functionality](Audit-Manager-Functionality.md)
     * [Auth Adapter](Auth-Adapter.md)
     * [Auth Implementation](Auth-Implementation.md)
@@ -111,7 +112,6 @@
 	* [Issue Reporting Guideline](Issue-Reporting-Guideline.md)
     * [Kernel](Kernel.md)
     * [Master Data Services Functionality](Master-Data-Services-Functionality.md)
-	* [MOSIP Architecture Principles](MOSIP-Architecture-Principles.md)
     * [MOSIP ID Object Definition](MOSIP-ID-Object-Definition.md)
     * [MOSIP Partner Secure Communication](MOSIP-Partner-Secure-Communication.md)
     * [Partner Management Functionality](Partner-Management-Functionality.md)
