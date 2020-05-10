@@ -1,3 +1,5 @@
+# Introduction
+
 In MOSIP, privacy and security are highest priorities and this document details the measures that have been implemented in the platform so far. As an open source project we aim to continuously improve the security features and incorporate new developments through collaborations and community contributions.
 
 # Governing Principles
@@ -14,16 +16,19 @@ MOSIP's approach on privacy and security is determined by the [framework princip
 - Every artifact (including JSON data sent over API) digitally signed.
 
 # MOSIP Cryptography Algorithms
+
 MOSIP uses following algorithms:
+
 1. RSA OAEP 2048 bit minimum for all PKI based encryption.
-2. AES GCM 256 bit minimum for all Symmetric key encryption.
-3. SHA256 as the standard hashing algorithm.
-4. X509 V3 as the certificate standard.
-5. FIPS 140-2 Level 3 as the minimum Hardware Security Module (HSM) standard.
-6. PKCS11 is used for HSM communication.
+1. AES GCM 256 bit minimum for all Symmetric key encryption.
+1. SHA256 as the standard hashing algorithm.
+1. X509 V3 as the certificate standard.
+1. FIPS 140-2 Level 3 as the minimum Hardware Security Module (HSM) standard.
+1. PKCS11 is used for HSM communication.
 
 # Database encryption
 As a principle, MOSIP does not use any mechanism in-built in a database for encryption. All sensitive data to be stored in a DB is encrypted/decrypted outside the DB at the application layer.
+
 - All sensitive (configurable) data is encrypted using a symmetric key algorithm. MOSIP supports AES 256 algorithm by default. 
 - Each cell is encrypted using its own symmetric key and the keys are selected randomly.
 - By default, we generate 10,000 symmetric keys for the database encryption. This is a soft limit and that can be increased.
