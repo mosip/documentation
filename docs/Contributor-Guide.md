@@ -36,11 +36,8 @@ Well, there are many things that you could get involved with, like
 ### Can you fix an issue?
 Very good!  Submit a pull request.  See the [code submission guidelines](Github-Workflow.md).
 
-### Don't know which bug to fix?
-Don't worry!  Here are some [GOOD FIRST BUGS](https://mosip.atlassian.net/issues/?jql=issuetype%20%3D%20Bug%20AND%20project%20%3D%20MOSIP%20AND%20resolution%20%3D%20Unresolved%20AND%20labels%20%3D%20GOOD-FIRST-BUG%20ORDER%20BY%20priority%20DESC#) that you can try to work on. These are simple ones and wouldn't take long time to fix.  But they are great to start with.
-
 ### Did you find an issue OR do you have an enhancement request?
-Great!  We would love to hear from you.  Submit it in our [issues repository](https://mosip.atlassian.net). Please see the [issue reporting guidelines](Issue-Reporting-Guideline.md).
+Great!  We would love to hear from you.  Submit it in our [issues repository](https://github.com/mosip). Please see the [issue reporting guidelines](Issue-Reporting-Guideline.md).
 
 ### Running and enhancing tests 
 For the quality gurus and the testing geeks!  Join the MOSIP testers group where you get to contribute towards  improving the quality of MOSIP releases making it stable and better adoptable.  Lots of material about [MOSIP functional test rig](https://github.com/mosip/mosip-functional-tests) such as building and running the test rig, documentation to modify code, test scripts, test data generation have been made available.
