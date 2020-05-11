@@ -1,7 +1,7 @@
 ## Issues/Enhancements/Features Reporting Guideline
 
 #### Pre-requisite 
-MOSIP stories and issues are maintained in JIRA (https://mosip.atlassian.net).  Before you log an issue, it is necesary to sign-up to get a JIRA ID.  However, JIRA ID is not required for viewing issues.
+MOSIP issues are maintained in [Github](https://github.com/mosip).  File the issue against the right repository.
 
 #### Reporting Issues 
 1. Check if the issue is already reported.
@@ -35,21 +35,6 @@ MOSIP stories and issues are maintained in JIRA (https://mosip.atlassian.net).  
 
 >**Additional context**
 >Add any other context about the problem here.
-
-#### Issues Workflow
-Status flow from the time an issue is reported till it is resolved and closed.
-
-![Issue Workflow](_images/contribution_documentation/issueworkflow.PNG)
-
-1. Any issue created will be in NEW status 
-1. NEW issues are triaged and if deemed to be fixed, they are marked "TO BE FIXED".  If not, then are closed directly as CLOSED.
-1. It may be decided to defer to fix the issue in which case the issue is marked as "ON HOLD" which would be re-triaged at a later date.
-1. When a potential taker is identifie, the issue is ASSIGNED to the taker.
-1. When the issue is fixed, it is marked as "READY FOR QA".  It indicates that the issue is ready for testing.
-1. If the tests fail, the issue is RE-OPENED.  RE-OPENED issues can be reassigned to the same assignee or a different assignee.
-1. If the tests pass, the issue is marked "READY FOR ACCEPTANCE".  This is an indication to the maintainer(s) to accept the fix.  The maintainer verifies the fix, reviews code, runs acceptance tests to check the fix.
-1. The maintainer(s) would either reopen the bug if the fix is not satisfactory and mark the status as REOPENED or accept the fix.
-1. One of the maintainer merges the accepted code with the master branch and marks the issue as CLOSED.
 
 ***
 
