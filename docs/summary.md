@@ -113,21 +113,14 @@
 	* [Registration Client Developer Documentation](Registration-Client-Developer-Documentation.md)
 	* [Technology Stack](Technology-Stack.md)
 	* [Security Tools](Security-Tools.md)
-
-## MOSIP Testing
 * MOSIP Testing
 	* [Test Rig Design](Test-Rig-Design.md)
 	* [Tester Documentation](Tester-Documentation.md)
 	* [Testing Attachments   Kernel](Testing-Attachments---Kernel.md)
-
-## Other Pages 
 * Others
 	* [Customizations for a Country](Customisations-for-a-Country.md)
-    * [Home](Home.md)
     * [MOSIP ID Object Definition](MOSIP-ID-Object-Definition.md)
     * [Scribble Page](Scribble-Page.md)
-	
-## Release Notes
 * [MOSIP Releases](MOSIP-Releases.md)
 	* [Release Notes 0.12.15](Release-Notes-0.12.15.md)
     * [Release Notes 0.9.0](Release-Notes-0.9.0.md)
