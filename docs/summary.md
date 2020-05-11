@@ -51,7 +51,7 @@
 		* [Master Data Services Functionality](Master-Data-Services-Functionality.md)
 		* [UIN and VID Generation Service Functionality](UIN-and-VID-Generation-Service-Functionality.md)
 		* [VID Generator](VID-Generator.md)
-* Biometric 
+* Biometrics 
 	* [ABIS](Automated-Biometric-Identification-System-ABIS.md)
 	* [Biometric SDK](Biometric-SDK.md)
 	* [MDS Specification](MOSIP-Device-Service-Specification.md)
