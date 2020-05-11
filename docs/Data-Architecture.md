@@ -1,7 +1,7 @@
 ## Data Architecture Principles
 * PII of an individual like name, age, gender, address etc... and other sensitive information must be signed and stored in an encrypted form
 * Documents and images must not be stored in a database table. They must be stored in a file system and referenced in DB.
-* No business logic applied at database level, only Primary, Unique, foreign keys and not-null are applied. Foreign keys are applied within the same database, if a table is referenced in another database then no FK is applied
+* No business logic applied at database level, only Primary, Unique, foreign keys and not-null are applied. Foreign keys are applied within the same database, if a table is referenced in another database then no FK is applied.
 * Database specific features like triggers, DB functions like sequence generators etc.… must not be used in MOSIP. This avoids vendor lock-in
 * Surrogate key, wherever used, must be a random number and not be generated based on the record data.
 * Direct queries on the database by a human must not be made. Database administrators must ensure this control during database configuration setup
