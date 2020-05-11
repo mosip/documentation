@@ -9,8 +9,8 @@
 	* Pre-Registration Module	
 		* [Pre-Registration](Pre-Registration.md)
 		* [Pre Registration Functionality](Pre-Registration-Functionality.md)
-	* Registration Client Module
-		* [Registration Client](Registration-Client.md)
+	* Registration Module
+		* [Registration](Registration-Client.md)
 		* [Registration Functionality](Registration-Functionality.md)
 		* [Registration Packet](Registration-Packet.md)
 		* [Registration Client Setup](Registration-Client-Setup.md)
@@ -22,6 +22,7 @@
 		* [Registration Processor](Registration-Processor.md)
 		* [Registration Processor Functionality](Registration-Processor-Functionality.md)
 		* [Deduplication and Manual Adjudication](Deduplication-and-Manual-Adjudication.md)
+		* [MOSIP ID Object Definition](MOSIP-ID-Object-Definition.md)
 	* [ID Repository Module](ID-Repository.md)
 	* ID Authentication	Module
 		* [ID Authentication](ID-Authentication.md)
@@ -50,6 +51,45 @@
 		* [Master Data Services Functionality](Master-Data-Services-Functionality.md)
 		* [UIN and VID Generation Service Functionality](UIN-and-VID-Generation-Service-Functionality.md)
 		* [VID Generator](VID-Generator.md)
+* Biometric 
+	* [ABIS](Automated-Biometric-Identification-System-ABIS.md)
+	* [Biometric SDK](Biometric-SDK.md)
+	* [MDS Specification](MOSIP-Device-Service-Specification.md)
+	* [Biometric Data Specification](Biometric-Data-Specification.md)
+    * [CBEFF XML](CBEFF-XML.md)
+* Build & Deploy
+	* [Build & Deploy](Build-and-Deploy.md)
+	* [Hardware Security Module HSM Specifications](Hardware-Security-Module-HSM-Specifications.md)
+	* [Hardware Sizing](Hardware-Sizing.md)
+	* [Customizations for a Country](Customisations-for-a-Country.md)
+	* Other Installation Guides
+		* [Steps to Install and Configure LDAP](Steps-to-Install-and-Configure-LDAP.md)
+		* [Steps to Install and Configure HDFS](Steps-to-Install-and-Configure-HDFS.md)
+		* [Steps to Install and use PostgreSql Version 10.2 on RHEL 7.5](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md)
+		* [Steps to Install Clam AntiVirus Version 0.101.0](Steps-to-Install-Clam-AntiVirus-Version-0.101.0.md)
+		* [Steps to Install Keycloak Standalone Server](Steps-to-Install-Keycloak-Standalone-Server.md)
+		* [Apache Directory Studio User Guide](Apache-Directory-Studio-User-Guide.md)
+		* [ApacheDs Server Installation and Configuration](ApacheDs-Server-Installation-and-Configuration.md)
+* Contribute
+	* [Contributor's Guide](Contributor-Guide.md)
+	* [Code of Conduct](Code-of-Conduct.md)
+	* [Issue Reporting Guideline](Issue-Reporting-Guideline.md)
+	* Coding Standards
+		* [Auth Angular User Guide](Auth-Angular-User-Guide.md)
+		* [Auth SpringBoot User Guide](Auth-SpringBoot-User-Guide.md)
+		* [Data Model Naming Standards](Data-Model-Naming-Standards.md)
+		* [Encryption in DTO Layer](Encryption-in-DTO-Layer.md)
+		* [Gitub Workflow](Github-Workflow.md)
+		* [MOSIP Java Coding Standards](MOSIP-Java-Coding-Standards.md)
+		* [MOSIP REST API guidelines](MOSIP-REST-API-guidelines.md)
+		* [Registration Client UI Developer Document](Registration-Client-UI-Developer-Document.md)
+		* [Registration Client Developer Documentation](Registration-Client-Developer-Documentation.md)
+		* [Technology Stack](Technology-Stack.md)
+		* [Security Tools](Security-Tools.md)
+	* Testing
+		* [Test Rig Design](Test-Rig-Design.md)
+		* [Tester Documentation](Tester-Documentation.md)
+		* [Testing Attachments   Kernel](Testing-Attachments---Kernel.md)
 * APIs
 	* [ABIS APIs](ABIS-APIs.md)
 	* [Admin APIs](Admin-APIs.md)
@@ -77,51 +117,7 @@
 	* [Resident Service APIs](Resident-Service-APIs.md)
 	* [Template APIs](Template-APIs.md)
 	* [Zone APIs](Zone-APIs.md)
-* Biometric 
-	* [ABIS](Automated-Biometric-Identification-System-ABIS.md)
-	* [Biometric SDK](Biometric-SDK.md)
-	* [MDS Specification](MOSIP-Device-Service-Specification.md)
-	* [Biometric Data Specification](Biometric-Data-Specification.md)
-    * [CBEFF XML](CBEFF-XML.md)
-* Installing MOSIP
-	* Build & Deploy
-		* [Build & Deploy](Build-and-Deploy.md)
-		* [Hardware Security Module HSM Specifications](Hardware-Security-Module-HSM-Specifications.md)
-		* [Hardware Sizing](Hardware-Sizing.md)
-	* Other Installation Guides
-		* [Steps to Install and Configure LDAP](Steps-to-Install-and-Configure-LDAP.md)
-		* [Steps to Install and Configure HDFS](Steps-to-Install-and-Configure-HDFS.md)
-		* [Steps to Install and use PostgreSql Version 10.2 on RHEL 7.5](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md)
-		* [Steps to Install Clam AntiVirus Version 0.101.0](Steps-to-Install-Clam-AntiVirus-Version-0.101.0.md)
-		* [Steps to Install Keycloak Standalone Server](Steps-to-Install-Keycloak-Standalone-Server.md)
-		* [Apache Directory Studio User Guide](Apache-Directory-Studio-User-Guide.md)
-		* [ApacheDs Server Installation and Configuration](ApacheDs-Server-Installation-and-Configuration.md)
-* Contribute
-	* [Contributor's Guide](Contributor-Guide.md)
-	* [Code of Conduct](Code-of-Conduct.md)
-	* [Issue Reporting Guideline](Issue-Reporting-Guideline.md)
-* Coding Standards
-	* [Auth Angular User Guide](Auth-Angular-User-Guide.md)
-	* [Auth SpringBoot User Guide](Auth-SpringBoot-User-Guide.md)
-	* [Data Model Naming Standards](Data-Model-Naming-Standards.md)
-	* [Encryption in DTO Layer](Encryption-in-DTO-Layer.md)
-	* [Gitub Workflow](Github-Workflow.md)
-	* [MOSIP Data Model](MOSIP-Data-Model.md)
-	* [MOSIP Java Coding Standards](MOSIP-Java-Coding-Standards.md)
-    * [MOSIP REST API guidelines](MOSIP-REST-API-guidelines.md)
-	* [Registration Client UI Developer Document](Registration-Client-UI-Developer-Document.md)
-	* [Registration Client Developer Documentation](Registration-Client-Developer-Documentation.md)
-	* [Technology Stack](Technology-Stack.md)
-	* [Security Tools](Security-Tools.md)
-	* Testing
-		* [Test Rig Design](Test-Rig-Design.md)
-		* [Tester Documentation](Tester-Documentation.md)
-		* [Testing Attachments   Kernel](Testing-Attachments---Kernel.md)
-* Others
-	* [Customizations for a Country](Customisations-for-a-Country.md)
-    * [MOSIP ID Object Definition](MOSIP-ID-Object-Definition.md)
-    * [Scribble Page](Scribble-Page.md)
-* [MOSIP Releases](MOSIP-Releases.md)
+* [Releases](MOSIP-Releases.md)
 	* [Release Notes 0.12.15](Release-Notes-0.12.15.md)
     * [Release Notes 0.9.0](Release-Notes-0.9.0.md)
     * [Release Notes 1.0.0](Release-Notes-1.0.0.md)
@@ -129,5 +125,4 @@
     * [Release Notes 1.0.6](Release-Notes-1.0.6.md)
 * [Roadmap](Roadmap.md)
 	* [Roadmap Activities](Roadmap-Activities.md)
-
-* [Licence](License.md)
+* [License](License.md)
