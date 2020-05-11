@@ -1,6 +1,6 @@
 # Table of contents
 
-* MOSIP Architecture
+* Architecture
 	* [Architecture](Architecture.md)
 	* [Architecture Principles](Architecture-Principles.md)
 	* [Data Architecture](Data-Architecture.md)
@@ -96,11 +96,11 @@
 		* [Steps to Install Keycloak Standalone Server](Steps-to-Install-Keycloak-Standalone-Server.md)
 		* [Apache Directory Studio User Guide](Apache-Directory-Studio-User-Guide.md)
 		* [ApacheDs Server Installation and Configuration](ApacheDs-Server-Installation-and-Configuration.md)
-* MOSIP Contributors
+* Contribute
 	* [Contributor's Guide](Contributor-Guide.md)
 	* [Code of Conduct](Code-of-Conduct.md)
 	* [Issue Reporting Guideline](Issue-Reporting-Guideline.md)
-* MOSIP Coding Standards
+* Coding Standards
 	* [Auth Angular User Guide](Auth-Angular-User-Guide.md)
 	* [Auth SpringBoot User Guide](Auth-SpringBoot-User-Guide.md)
 	* [Data Model Naming Standards](Data-Model-Naming-Standards.md)
@@ -113,10 +113,10 @@
 	* [Registration Client Developer Documentation](Registration-Client-Developer-Documentation.md)
 	* [Technology Stack](Technology-Stack.md)
 	* [Security Tools](Security-Tools.md)
-* MOSIP Testing
-	* [Test Rig Design](Test-Rig-Design.md)
-	* [Tester Documentation](Tester-Documentation.md)
-	* [Testing Attachments   Kernel](Testing-Attachments---Kernel.md)
+	* Testing
+		* [Test Rig Design](Test-Rig-Design.md)
+		* [Tester Documentation](Tester-Documentation.md)
+		* [Testing Attachments   Kernel](Testing-Attachments---Kernel.md)
 * Others
 	* [Customizations for a Country](Customisations-for-a-Country.md)
     * [MOSIP ID Object Definition](MOSIP-ID-Object-Definition.md)
@@ -129,3 +129,5 @@
     * [Release Notes 1.0.6](Release-Notes-1.0.6.md)
 * [Roadmap](Roadmap.md)
 	* [Roadmap Activities](Roadmap-Activities.md)
+
+* [Licence](License.md)
