@@ -1,7 +1,7 @@
 # Introduction
 Registration client application captures the demographic and biometric details of an individual along with supporting information (proof documents & information about parent/guardian/introducer) and packages the information in a secure way. The information packet is sent to the server in online or offline mode for processing. 
 
-Important considerations are as follows.  Registration client must provide the following:
+Important considerations are as follows. Registration client must provide the following:
 * **Secure** way of capturing an individual's demographic and biometric data. An individual's demographic and biometric data is private. So, ensuring security and privacy of the data during capture is very important. The captured data must be cryptographically secure such that the data cannot be tampered with. 
 * **Interfaces to biometric devices** that comply to industry standards. Since there are many manufacturers of biometric devices around the world, best way to ensure compatibility with a device is to comply to industry standards. This ensure that any device manufactured as per standards will work with MOSIP.
 * Work in **online and offline** mode. In remote areas where Internet connectivity is a challenge, registration client must work in an offline mode to capture data. Client must provide option to transfer data to server when online. This helps in uninterrupted registrations. 
@@ -43,15 +43,12 @@ Important considerations are as follows.  Registration client must provide the f
 ![Registration client component architecture](_images/registration/reg_client_component_architecture.png)
 
 # Registration packet structure
-
-All the registration information is zipped and encrypted in a packet and send to the server. The structure of the packet is given [here](Registration-Packet.md)
+All the registration information is zipped and encrypted in a packet and send to the server. The structure of the packet is given [here](Registration-Packet.md).
 
 # Registration client reference App
-
-MOSIP provides an Windows based reference implementation of the client that has UI and business logic to perform the above process flows.  The code, design, App setup, build documentation is available in [registration client repo](https://github.com/mosip/registration/tree/master/registration).  The App may be modified according to a country's need.  
+MOSIP provides an Windows based reference implementation of the client that has UI and business logic to perform the above process flows.  The code, design, App setup, build documentation is available in [registration client repo](https://github.com/mosip/registration/tree/master/registration).  The App may be modified according to a country's need.
 
 [App setup guide](Registration-Client-Setup.md)
-
 
 # First user on-boarding
 TBD
