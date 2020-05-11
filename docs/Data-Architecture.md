@@ -52,8 +52,12 @@ To support performance, following database design features are to be considered
 ## Data Model Naming Standards
 [Naming Standards](Data-Model-Naming-Standards.md)
 
-## Data Model
-[Data Model](MOSIP-Data-Model.md)
+## Data Model Consideration
+* **Meaningful Naming:** DB objects that are being created will have a meaningful naming.
+* **Flexible model:** No business rules are set at database level other than few mapping data. Most of the business logic is applied at application layer.
+* **Database specific features:** Use of DB specific features like defaults, DB sequences, identify fields are not used.
+* **No business logic at DB:** No business logic implemented at database level other than PK, UK, FKs. 
+* **Data Security:** Individual and security related information is encrypted.
 
-## Data encryption
+## Data Encryption
 [Encryption in DTO Layer](Encryption-in-DTO-Layer.md)
