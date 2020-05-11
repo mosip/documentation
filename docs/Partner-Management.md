@@ -1,5 +1,4 @@
 # Introduction
-
 Partner Management provides services for Partner and MISP (MOSIP Infrastructure Service Provider) Registration and Authentication. Registered Partners and MISP are only allowed to access MOSIP Authentication services. Partners and MISP are registered using Partner Management Services.  Authentication services of MOSIP will internally use the Partner Management Services to authenticate Partner and MISP and validate if only the registered entities are accessing the services.
 
 Partner Management also involves policy management for Partners. Each partner can access Authentication services only based on a defined policy. Authentication services of MOSIP will internally use the Partner Management Services to authenticate a partner based on the policy.
@@ -9,7 +8,6 @@ Partner Management also includes License Key Management services. Authentication
 Partners will utilize MOSIP’s resigned digital certificate from Partner Management Services for signing the authentication request.
 
 # Detailed functionality 
-
 [Parter Management Functionality](Partner-Management-Functionality.md)
 
 # Entities and their relation 
@@ -88,15 +86,12 @@ After successful authentication, KYC response is sent back to Partner for the in
 ```
 
 ## Policy Group
-
 A Policy Group is a sector or domain like banking, insurance, telecom etc, specific to a country. Any policy manager, partner manager and partner can belong to a specific policy group.  MOSIP would require Policy Group master data prepared and defined beforehand by country, before creation of Partner, Partner Manager and Policy Manager.
  
 ## Policy Manager
-
 Policy Manager would be creating and managing policies for the policy group he/she belongs to.
  
 ## PartnerAPIKey
-
 For a partner to opt for an authentication policy, they have to generate PartnerAPIKey request with following sample parameters - PartnerCode, UseCaseDescription, SupportingInfo, Status etc. Once the PartnerAPIKey request is approved by Partner Manager, Partner is provided PartnerAPIKey that contains details like - PartnerAPIKey (combination of PartnerCode, policy group and policy), issuedOn, validTill, isActive etc)
 
 ## Logical View
@@ -108,11 +103,10 @@ For a partner to opt for an authentication policy, they have to generate Partner
 [MOSIP Partner Secure Communication](MOSIP-Partner-Secure-Communication.md)
 
 # Services
-
 For detailed description of Partner Management Services, high and low level design refer to [partner management repo](https://github.com/mosip/mosip-partner-portal-api).
 
 # Build and deploy
-Refer to build and deploy instructions in [partner management repo](https://github.com/mosip/mosip-partner-portal-api)
+Refer to build and deploy instructions in [partner management repo](https://github.com/mosip/mosip-partner-portal-api).
 
 # APIs
 [Partner Management](Partner-Management-Service-APIs.md)
