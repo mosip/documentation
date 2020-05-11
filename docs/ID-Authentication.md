@@ -1,5 +1,4 @@
 # Overview
-
 ID Authentication (ID Auth) provides an API based authentication mechanism for entities to validate individuals. ID Authentication is the primary mode for entities to validate an individual before providing any service.
 
 Following are the pre-requisites for an entity to do authentication of an individual
@@ -30,6 +29,7 @@ To analyze and generate authentication patterns, all authentication requests are
 [ID Authentication Functionality](ID-Authentication-Functionality.md)
 
 # Process flow
+
 ## Demographic authentication
 ![](_images/auth/id_auth_demo_auth_flow.jpg)
 
@@ -52,12 +52,10 @@ To analyze and generate authentication patterns, all authentication requests are
 ![](_images/auth/id_auth_logical_view.png)
 
 # Services
-
-For detailed description of ID Auth services, code and design refer to [ID authentication repo](https://github.com/mosip/id-authentication)
+For detailed description of ID Auth services, code and design refer to [ID authentication repo](https://github.com/mosip/id-authentication).
 
 # Build and deploy
-
-Refer to build and deploy instructions in [ID authentication repo](https://github.com/mosip/id-authentication)
+Refer to build and deploy instructions in [ID authentication repo](https://github.com/mosip/id-authentication).
 
 # APIs
 [ID Authentication APIs](ID-Authentication-APIs.md)
