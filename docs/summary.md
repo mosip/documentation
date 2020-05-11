@@ -123,7 +123,6 @@
     * [Release Notes 1.0.0](Release-Notes-1.0.0.md)
     * [Release Notes 1.0.5](Release-Notes-1.0.5.md)
     * [Release Notes 1.0.6](Release-Notes-1.0.6.md)
-* Roadmap
-	* [Roadmap](Roadmap.md)
+* [Roadmap](Roadmap.md)
 	* [Roadmap Activities](Roadmap-Activities.md)
 * [License](License.md)
