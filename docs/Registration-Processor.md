@@ -9,7 +9,7 @@ Important considerations are as follows:
 * MOSIP defines and implement the basic registration packet processing flow. However, every country will have their own processing requirements  like integration with their existing ID system and fetch data for validation.  Registration processor provides options to add such stages.
 * Registration processor has the capability to integrate with multiple ABIS providers.
 * Each processing stage is scalable independently based on the load.
-* Each stage in the processor is independent of other stages such that logic of a stage can be changed to improve efficiency without affecting the overall flow
+* Each stage in the processor is independent of other stages such that logic of a stage can be changed to improve efficiency without affecting the overall flow.
 
 # Detailed functionality
 [Registration Processor Functionality](Registration-Processor-Functionality.md)
