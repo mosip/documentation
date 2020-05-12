@@ -30,4 +30,4 @@ For detailed description of Resident Services, code and design refer to [residen
 Refer to build and deploy instructions in [resident services repo](https://github.com/mosip/resident-services). 
 
 # APIs
-[Resident Services APIs](Resident-Services-APIs.md)
+[Resident Services APIs](Resident-Service-APIs.md)
