@@ -1,5 +1,5 @@
 # Overview
-Resident services are the self services which is used by the resident themselves via a portal.  Functionalities  such as lock/unlock authentication types, reprint UIN, view authentication history etc. are availabl. The services use OTP method of authentication. 
+Resident services are the self services which is used by the resident themselves via a portal.  Functionalities  such as lock/unlock authentication types, reprint UIN, view authentication history etc. are available. The services use OTP method of authentication. 
 
 The backend is a set of services with REST API interface (provided by MOSIP) and front end is a portal to be developed by an SI/country according to the requirements. 
 
