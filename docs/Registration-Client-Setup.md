@@ -2,7 +2,7 @@ This document contains the 'Registration client (Reg Client App)' application in
 
 Registration Client application is a desktop based application, that can be used to captures the demographic and biometric details of a resident along with supporting information (like. proof documents & information about parent/guardian/introducer) and packages the information in a secure way using RSA based algorithm. The information packet can be sent to the server in an online or offline mode for processing.  
 
-The registration client application leverages the TPM capabilities and secure the data and mark the senders identity in the request before sending to external system. The MOSIP server would validate the request and make sure that the request received from the right source. Every individual machine's TPM public key should be registered at MOSIP server to accept and process the data send by them.   
+The registration client application leverages the TPM capabilities and secure the data and mark the senders identity in the request before sending to external system. The MOSIP server would validate the request and make sure that the request is received from the right source. Every individual machine's TPM public key should be registered at MOSIP server to accept and process the data send by them.   
 
 A Trusted Platform Module (TPM) is a specialized chip on a local machines that stores RSA encryption keys specific to the host system for hardware authentication. Each TPM chip contains an RSA key pair called the Endorsement Key (EK). The pair is maintained inside the chip and cannot be accessed by software. By leveraging this security feature every individual machine would be uniquely registered and identified by the MOSIP server component. 
 
