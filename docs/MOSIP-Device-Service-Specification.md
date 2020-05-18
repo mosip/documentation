@@ -315,6 +315,7 @@ dateTime:  ISO format with timezone.  The time during the issuance of this iden
 List of keys used in the device and their explanation.
 
 * **Device Key** 
+
 	Each biometric device would contain an authorized private key after the device registration. This key is rotated frequently based on the requirement from the respective adopter of MOSIP. By default MOSIP recommends 30 days key rotation policy for the device key. The device keys are created by the device providers inside the FTM during a successful registration.
 
 	The device keys are used for signing the biometric. More details of the signing and its usage will be [here](#device-service-communication-interfaces).
@@ -322,9 +323,11 @@ List of keys used in the device and their explanation.
 	This key is issued by the device provider and the certificate of the device key is issued by the device provider key which in turn is issued by the MOSIP adopter after approval of the device providers specific model.
 
 * **FTM Key**
+
 	The FTM key is the root of the identity. This key is created by the FTM provider during the manufacturing/provisioning stage. This is a permanent key and would never be rotated. This key is used to sign the Digital ID.
 
 * **MOSIP Key**
+
 	The MOSIP key is the public key provided by the MOSIP adopter. This key is used to encrypt the biometric biometric. Details of the encryption is listed below. We recommend to rotate this key every 1 year. 
 
 ---
