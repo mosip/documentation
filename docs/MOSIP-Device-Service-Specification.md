@@ -7,7 +7,10 @@
 1. [Introduction & Background](#introduction-and-background)
 2. [Glossary of Terms](#glossary-of-terms)
 3. [Device Specification](#device-specification)
-4. [Device Trust](#4-device-trust)
+4. [Device Trust](#device-trust)
+	4.1. [Foundational Trust Module](#foundational-trust-module-ftm)
+	4.2. [Device](#device)
+	4.3. [Keys](#keys)
 5. [Device Service - Communication Interfaces](#device-service-communication-interfaces)
     5.1. [Device Discovery](#device-discovery) 
     5.2. [Device Info](#device-info) 
@@ -18,12 +21,13 @@
     6.1. [Registration](#registration)
     6.2. [De-Register](#de-register)
 	6.3. [Certificates](#certificates)
-7. [Management Server and Client](#management-server)
+7. [Management Server and Client](#management-server-and-management-client)
 	7.1. [Management Server Functionalities and Interactions](#management-server-functionalities-and-interactions)
 	7.2. [Management Client](#management-client)
 8. [Compliance](#compliance)
 9. [Cryptography](#cryptography)
 10. [Error Codes](#error-codes)
+
 ---
 
 # Introduction & Background 
@@ -67,15 +71,14 @@ The MOSIP device specification provides compliance guidelines to devices for the
 
 ## Device Capability
 The MOSIP compliant device is expected to perform the following:
-*   Should have the ability to collect one or more biometric
-*   Should have the ability to sign the captured biometric image or template.
-*   Should have the ability to protect secret keys
-*   Should have no mechanism to inject the biometric
+* Should have the ability to collect one or more biometric
+* Should have the ability to sign the captured biometric image or template.
+* Should have the ability to protect secret keys
+* Should have no mechanism to inject the biometric
 
 ## Base Specifications for Devices
 
 ### Fingerprint Capture
-
 Refer ISO 19794-4:2011
 
 Factor | Registration Devices | Authentication Devices
@@ -90,18 +93,17 @@ EMC compliance | FCC class A or equivalent | FCC class A or equivalent
 Operating Temperature\*\* |	0 - 50 C | -30 -to 50 C
 Liveness detection\*\*\* | As per IEEE 2790 | As per IEEE 2790
 Preview | > 3 FPS JPEG lossless frames with NFIQ 2 score superimposed | None
-Image Format | JPEG 2000 lossless | JPEG 2000 lossless
+Image Format | JPEG 2000 lossless | JPEG 2000 lossless, WSQ (Compression upto 10:1)\*\*
 Quality Score | NFIQ 2 | NFIQ 1
 FTM | L0 - Use host based security, L1 - FTM supported security | L1 - FTM supported security, L2 - with tamper protection.
 
 {% hint style="info" %}
 \*  Sufficiency to be validated for registration <br>
-\*\*  MOSIP adapters can change this if needed <br>
-\*\*\*  MOSIP adapters to decide on the availability of this feature
+\*\*  MOSIP adopters can change this if needed <br>
+\*\*\*  MOSIP adopters to decide on the availability of this feature
 {% endhint %}
 
 ### IRIS Capture
-
 Refer ISO 19796-6:2011 Part 6 Specifications.
 
 Factor | Registration Devices | Authentication Devices
@@ -127,7 +129,6 @@ FTM | L0 - Use host based security, L1 - FTM supported security | L1 - FTM suppo
 {% endhint %}
 
 ### Face Capture
-
 Refer ISO 19794-5:2011
 
 Factor | Registration Devices | Authentication Devices
@@ -153,11 +154,9 @@ We recommend that countries look at ergonomics, accessibility, ease of usage, an
 # Device Trust
 MOSIP compliant devices provide a trust environment for the devices to be used in registration, KYC and AUTH scenarios. The trust level is established based on the device support for trusted execution.
 
-L1 - The trust is provided by a secure chip with secure execution environment.
-
-L2 - The trust is provided by a secure chip with secure execution environment and complete tamper protection and responsive across the entire device.
-
-L0 - The trust is provided at the software level. No hardware related trust exist. This type of compliance is used in controlled environments.  
+* L1 - The trust is provided by a secure chip with secure execution environment.
+* L2 - The trust is provided by a secure chip with secure execution environment and complete tamper protection and responsive across the entire device.
+* L0 - The trust is provided at the software level. No hardware related trust exist. This type of compliance is used in controlled environments.  
 
 ## Foundational Trust Module (FTM)
 The foundational trust module would be created using a secure microprocessor capable of performing all required biometric processing and secure storage of keys. The foundational device trust would satisfy the below requirements.
@@ -193,28 +192,27 @@ The foundational device trust module provides for a trusted execution environmen
 	1. Isolated memory to support cryptographic operations. 
 	1. All trust are anchored during the first boot and not modifiable.
 
-**Certification:**
+### Certification
 The FTM should have a at least one of the following certifications in each category to meet the given requirement.
 
-**Category: Cryptographic Algorithm Implementation**
+#### Category: Cryptographic Algorithm Implementation
 * CAVP (RSA, AES, SHA256, TRNG (DRBGVS), ECC)
 
 {% hint style="info" %}
-The supported algorithm and curves are listed [here](#9-cryptography)
+The supported algorithm and curves are listed [here](#cryptography)
 {% endhint %}
 
-**Category: FTM Chip**
+#### Category: FTM Chip
 * FIPS 140-2 L3 or above
 * PCI PTS 5 or above (Pre-certified)
 * Common Criteria (EAL4 and above)
 	* TODO:FILL IN
 
-**Category: Tamper**
+#### Category: Tamper
 * For L1 level compliance the FTM should support tamper evidence.
 * For L2 level compliance the FTM should support all of L1 and capabilities to adopt tamper responsiveness.
 
-**Threats to Protect:**
-
+### Threats to Protect
 The FTM should protect against the following threats.
 
 1. Hardware cloning attacks - Ability to protect against attacks that could result in a duplicate with keys.
@@ -229,8 +227,7 @@ The FTM should protect against the following threats.
 1. Attacks against secure boot & secure upgrade
 1. TEE/Secure processor OS attack
 
-**Foundational Trust Module Identity:**
-
+### Foundational Trust Module Identity
 Upon an FTM provider approved by the MOSIP adopters, the FTM provider would submit a self signed public certificate to the adopter. Let us call this as the FTM root.
 
 The adopter would use this certificate to seed their device trust database.The FTM root and their key pairs should be generated and stored in FIPS 140-2 Level 3 or more compliant devices with no possible mechanism to extract the keys.
@@ -249,16 +246,12 @@ This certificate and private key within the FTM chip is expected to be in it per
 The validity for the chip certificate can not exceed 20 years from the date of manufacturing.
 {% endhint %}
 
----
-
 ## Device 
 Mosip devices are most often used to collect biometrics. The devices are expected to follow the specification for all level of compliance and its usage. The mosip devices fall under the category of Trust Level 3 (TL3) as defined in MOSIP architecture. At TL3 device is expected to be whitelisted with a fully capable PKI and secure storage of keys at the hardware. 
 
-L0 - A device can obtain L0 certification when it uses software level cryptographic library with no secure boot or FTM.  These devices will follow different device identity and the same would be mentioned as part of exception flows.
-
-L1 - A device can obtain L1 certification when its built in secure facility with one of the certified FTM.
-
-L2 - A device can obtain L2 certification when its build in secure facility with one of the certified FTM with tamper responsiveness. Also the device should be capable of demonstrating tamper responsiveness during its entire life time.
+* L0 - A device can obtain L0 certification when it uses software level cryptographic library with no secure boot or FTM.  These devices will follow different device identity and the same would be mentioned as part of exception flows.
+* L1 - A device can obtain L1 certification when its built in secure facility with one of the certified FTM.
+* L2 - A device can obtain L2 certification when its build in secure facility with one of the certified FTM with tamper responsiveness. Also the device should be capable of demonstrating tamper responsiveness during its entire life time.
 
 **Device Identity:** It is imperative that all devices that connect to MOSIP are identifiable. MOSIP believes in cryptographic Identity as its basis for trust.
 
@@ -318,8 +311,7 @@ deviceProviderId: Device provider Id issued by MOSIP adopters
 dateTime:  ISO format with timezone.  The time during the issuance of this identity
 ```
 
-**Keys**
-
+## Keys
 List of keys used in the device and their explanation.
 
 * **Device Key** 
@@ -832,7 +824,7 @@ bio.previousHash - For the first capture the previousHash is hash of empty utf8 
         "bioSubType": "LF_INDEX",
         "purpose": "Auth  or Registration",
         "env": "target environment",
-        "bioValue": "<base64urlencoded extracted biometric (ISO format)>",
+        "bioValue": "<base64urlencoded biometrics (ISO format)>",
         "registrationId": "1234567890",
         "timestamp": "2019-02-15T10:01:57.086+05:30",
         "requestedScore": "<floating point number to represent the minimum required score for the capture. This ranges from 0-100>",
@@ -1150,9 +1142,9 @@ Management client is the interface that connects the device with the respective 
 ---
 
 # Compliance
-L2 Certified Device / L2 Device - A device certified as capable of performing encryption on the device inside its trusted zone with tamper responsive features. <br>
-L1 Certified Device / L1 Device - A device certified as capable of performing encryption on the device inside its trusted zone. <br>
-L0 Certified Device / L0 Device - A device certified as one where the encryption is done on the host inside its device driver or the MOSIP device service.
+**L2 Certified Device / L2 Device** - A device certified as capable of performing encryption on the device inside its trusted zone with tamper responsive features. <br>
+**L1 Certified Device / L1 Device** - A device certified as capable of performing encryption on the device inside its trusted zone. <br>
+**L0 Certified Device / L0 Device** - A device certified as one where the encryption is done on the host inside its device driver or the MOSIP device service.
 
 ## Secure Provisioning
 Secure provisioning is applicable to both the FTM and the Device providers.
@@ -1165,7 +1157,6 @@ Secure provisioning is applicable to both the FTM and the Device providers.
 1. Before the devices/FTM leaving the secure provisioning facility all the necessary trust should be established and should not be re-programmable. 
 
 ## Compliance Level
-
 API	| Compatible
 ----|-----------
 Device Discovery | L0/L1/L2
@@ -1176,7 +1167,7 @@ Registration Capture | L0/L1/L2
 ---
 
 # Cryptography
-Supported algorithm
+Supported algorithms:
 
 Usage | Algorithm | Key Size | Storage
 ------|-----------|----------|---------
@@ -1193,7 +1184,6 @@ No other ECC curves supported.
 {% endhint %}
 
 # Error Codes
-
 Code | Message
 -----|--------
 0 | Success

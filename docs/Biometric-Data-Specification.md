@@ -8,7 +8,7 @@ Biometrics images for various modalities are represented and exchanged as per th
 Factor | Registration | Authentication
 -------|--------------|---------------- 
 Image Specification | ISO 19794-4 B.1 AFIS Normative | ISO 19794-4 B.2 Personal Verification
-Image Format | JPEG 2000 lossless | JPEG 2000 lossless
+Image Format | JPEG 2000 lossless | JPEG 2000 lossless, WSQ (Compression upto 10:1)
 Image Quality | NFIQ 2 | NFIQ 1
 
 {% hint style="info" %}
