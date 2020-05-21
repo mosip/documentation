@@ -239,7 +239,7 @@ Property attributes and the respective sample values are provided below. Before 
 # Dependent services
 
 In Registration client application, only user mapping to the local machine can be performed. Rest of the data setup should be performed at MOSIP Admin portal.
-Through sync process the data would be sync between local machine and server based on machine's mac-id and center id.  There are other services are available to send the created packet from local machine to remote system.   
+Through sync process the data would be sync between local machine and server based on machine's mac-id and center id.  There are other services that are available to send the created packet from local machine to remote system.   
 
 
 |**S.No.**| **Service Name**| **Service Description**| **Module Name**|
