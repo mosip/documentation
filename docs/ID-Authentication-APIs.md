@@ -26,7 +26,7 @@ This service details authentication (yes/no auth) that can be used by Partners t
 This request will authenticate an Individual, based on provided authentication type(s).
 
 ### Resource URL
-`https://mosip.io/idauthentication/v1/auth/:MISP-LK /:Auth-Partner-ID/:Partner-Api-Key`
+`https://mosip.io/idauthentication/v1/auth/::MISP-LicenseKey/:Auth-Partner-ID/:Partner-Api-Key`
 
 ### Resource details
 Resource Details | Description
