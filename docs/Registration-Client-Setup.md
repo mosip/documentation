@@ -22,10 +22,15 @@ JDK 8u181 [Oracle] or later version to build the application.
 **Following files to be modified before building the application:**    
 	
 	* spring.properties - [registration-services module] - It contains the environment based REST client URL to make different service calls and all the required properties.  
+	
 	* mosip-application.properties - [registration-libs module] - It contains Reg-Client Download, Configuration URL and Properties to check application online/offline status and Reg client download url from JFrog repository and all the required properties.
+	
 	* As part of the Jenkins, the required environment should be passed as run time argument **environment** for the build. Ex: "mvn clean install -Denvironment=mosip.hostname".
+	
 	* Post completion of above-mentioned changes, build 'mosip-parent' pom.xml file to build the application.  
+	
 	* Make sure that 'maven-metadata.xml' is generated under the '**registration-client**' module, post successful build generation. Which is referred by the reg-client application to download the required jars based on the version.   
+	
 	* Post-build process 'META-INF.MF' file also should be present in the Secure JFROG repository[Https --> Hostname], which consists of the jar files checksum.   
 
 # Prerequisites
