@@ -112,15 +112,15 @@ JDK 8u181 [Oracle] or later version to build the application.
    
 **When the user clicks on the 'run.bat' it does the following:**
    
-   * Loads the binary repository URL from a property file.  
+   * Load the binary repository URL from a property file.  
    * Communicate with the  Secure JFrog repository[Https --> Hostname] through a secured connection and download the maven-metadata.xml file to identify the latest jar versions.    
    * Download the latest build Manifest.mf file from the server, where all the jars (including shared lib) name and checksums are provided.  
    * Compare the checksum of the local version of jar files with the data present in the latest downloaded Manifest.mf file.    
    * Identify the list of binary files and Download the required jars.  
-   * Once download completed then communicate with TPM to decrypt the key{if TPM enabled}, which is used to decrypt the UI and service jars and start the application.   
+   * Once download completed, then communicate with TPM to decrypt the key (if TPM enabled), which is used to decrypt the UI and service jars and start the application.   
    
 **Application Startup:**  
-   * Once after application launches a reg.key,reg.pub,readme.txt will be created in your user.home directory with under .mosipkeys      folder.
+   * Once after application launches, the files 'reg.key', 'reg.pub', and 'readme.txt' will be created in your user.home directory with under .mosipkeys      folder.
    * from readme.txt copy the KeyIndex:<key_index> and use it in machine create POST API.
    * User should initially be online to validate their authentication against the MOSIP server. Post which, the sync process would be initiated.     
    * Once the sync process completed then restart the application to pick the local configuration.  
