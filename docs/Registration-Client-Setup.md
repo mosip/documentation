@@ -25,7 +25,7 @@ JDK 8u181 [Oracle] or later version to build the application.
 	
 * mosip-application.properties - [registration-libs module] - It contains Reg-Client Download, Configuration URL and Properties to check application online/offline status and Reg client download url from JFrog repository and all the required properties.
 	
-* As part of the Jenkins, the required environment should be passed as run time argument **environment** for the build. Ex: "mvn clean install -Denvironment=mosip.hostname".
+* As part of the Jenkins, the required environment should be passed as run time argument **environment** for the build. Ex: "mvn clean install -Denvironment=mosip.hostname". The variable "mosip.hostname" should be the server where your mosip setup is running on. This property can also be defined in the aforementioned file spring.properties of the registration-services module.
 	
 * Post completion of above-mentioned changes, build 'mosip-parent' pom.xml file to build the application.  
 	
