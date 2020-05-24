@@ -13,7 +13,7 @@ If the resident wishes to logout of the pre-registration system, he/she can opt 
 
 ##  Provide demographic data 
 
-The user is provided with demographic form based on the [ID Object Definition](#MOSIP-ID-Object-Definition.md) for new pre-registration application, user fills demographic details (e.g., Full Name, Age/DOB, Gender, Residential status, Address, mobile number, email id, etc.). The system validates the fields entered, the system also checks for the mandatory fields. Additionally, the system validates for any blacklisted words entered (as configured by the country). Once validated a pre-registration request id (PRID) is generated and the demographic details provided gets mapped to that PRID.
+The user is provided with demographic form based on the [ID Object Definition](MOSIP-ID-Object-Definition.md) for new pre-registration application, user fills demographic details (e.g., Full Name, Age/DOB, Gender, Residential status, Address, mobile number, email id, etc.). The system validates the fields entered, the system also checks for the mandatory fields. Additionally, the system validates for any blacklisted words entered (as configured by the country). Once validated a pre-registration request id (PRID) is generated and the demographic details provided gets mapped to that PRID.
 
 Note: Consent is sought from the user for every new application created in the system.
 
