@@ -1,17 +1,13 @@
 #  Login/create a user account
 
-##  Login using email
-User can login to the pre-registration portal by providing their email id. The system validates the email id, once validated sends an OTP to the email id as provided. The user enters the OTP as received. The system validates the OTP entered and redirects the user to fill demographic form (if first-time) or Dashboard (if existing user).
-
-## Login using phone number 
-The user can login to the pre-registration portal by providing their mobile number. The system validates the mobile number, once validated sends an OTP to the mobile number as provided. The user enters the OTP as received. The system validates the OTP entered and redirects the user to fill demographic form (if first-time) or Dashboard (if existing user).
+##  Login using email or phone number
+Residenets can login to the pre-registration portal by providing their email id or mobile number. The system validates the email id or phone number, once validated sends an OTP which the resident enters. The system validates the OTP redirects the user to enter or edit the details for booking an appointment.
 
 ## Automatic user id creation on first login 
-The user logs in to the pre-registration portal with their mobile number or email id. After successful Authentication, the system checks if the user is first-time user or not. If the user is first-time user, the system creates a new record in the database. All the pre-registration ids created from there on will be mapped to this user id.
+The resident logs in to the pre-registration portal with their mobile number or email id. After successful Authentication, the system checks if the user is first-time user or not. If the user is first-time user, the system creates a new record in the database. All the pre-registration ids created from there on will be mapped to this user id.
 
 ## Logout/session timeout 
-If the user wishes to logout of the pre-registration system, he/she can opt to select the Logout option. The token issued during the Authentication of user Login is deleted and the user gets logged out of the system.
-If the user is inactive for X minutes (X is configurable), the system notifies the user one minute before the configured timeout limit. In such case, the system will not save any user data.
+If the resident wishes to logout of the pre-registration system, he/she can opt to select the Logout option. The token issued during the Authentication of user Login is deleted and the user gets logged out of the system.  If the user is inactive for X minutes (X is configurable), the system notifies the user one minute before the configured timeout limit and logs out after a minute. In such case, the system will not save any user data.
 
 #  Creating an application
 
@@ -23,7 +19,7 @@ Note: Consent is sought from the user for every new application created in the s
 
 ## Provide consent 
 
-An user Logs in to the pre-registration system with mobile number or email id and then opts to create a new application form. Before filling the form, the user is advised to provide their consent for storage and utilization of their personal information. The consent is sought from the user for every new application created in the system. On providing their consent, the system redirects the user to start the pre-registration application (demographic details). The data as part of the consent form is rendered as setup by the admin.
+Before filling the application form, the user is advised to provide their consent for storage and utilization of their personally identfiable information (PII). The consent is sought from the user for every new application created in the system. On providing their consent, the system redirects the user to start the pre-registration application (demographic details). The data as part of the consent form is rendered as setup by the admin.
 
 In case of closure of the Consent Pop-up, the following scenarios may arise:
 
