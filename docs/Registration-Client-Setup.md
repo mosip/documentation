@@ -216,16 +216,16 @@ Registration client verifies the below-configured URL to check whether the syste
 Property attributes and the respective sample values are provided below. Before building the **registration-services**, the required below properties needs to be changed.
    
 **File Location:** registration-services/src/main/resources/spring.properties       
-     - mosip.reg.logpath=../logs  
-     - mosip.reg.packetstorepath={where the registration packet should be stored}
-     - mosip.reg.healthcheck.url={Application uses this url to perform the health check before communicating with the external services. Default value: https://${environment}/v1/authmanager/actuator/health }  
-     - mosip.reg.rollback.path={where the application backup should be taken during software update} [Default: ../BackUp]  
-     - mosip.reg.db.key={contains the key to be used to connect to the derby database and decrypt the data}
-     - mosip.reg.cerpath=/cer//mosip_cer.cer
-     - mosip.reg.xml.file.url={Secure JFrog repository[Https --> Hostname] url with maven-metadata.xml file}  
-     - mosip.reg.dbpath=db/reg
-     - mosip.reg.app.key={contains the key to be used to decrypt the application binaries during run time}  
-     - mosip.reg.client.tpm.availability={ Y - to enable the TPM, N - to disable the TPM, default N}
+* mosip.reg.logpath=../logs  
+* mosip.reg.packetstorepath={where the registration packet should be stored}
+* mosip.reg.healthcheck.url={Application uses this url to perform the health check before communicating with the external services. Default value: https://${environment}/v1/authmanager/actuator/health }  
+* mosip.reg.rollback.path={where the application backup should be taken during software update} [Default: ../BackUp]  
+* mosip.reg.db.key={contains the key to be used to connect to the derby database and decrypt the data}
+* mosip.reg.cerpath=/cer//mosip_cer.cer
+* mosip.reg.xml.file.url={Secure JFrog repository[Https --> Hostname] url with maven-metadata.xml file}  
+* mosip.reg.dbpath=db/reg
+* mosip.reg.app.key={contains the key to be used to decrypt the application binaries during run time}  
+* mosip.reg.client.tpm.availability={ Y - to enable the TPM, N - to disable the TPM, default N}
 
 **File Location:** /registration-libs/src/main/resources/props/mosip-application.properties 
      - mosip.reg.client.url={Reg client download url from JFrog }
