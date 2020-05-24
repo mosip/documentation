@@ -52,8 +52,7 @@ Registration Client enables capturing an officer's biometrics during on-boarding
 
 Initially, a machine will have no officers onboarded. The first registration officer or supervisor will be on-boarded by an administrator. Thereafter this registration officer or supervisor can on-board other registration officers.
 The system allows the following to occur for a successful on-boarding of a registration officer: 
-1. The system will on-board an officer using biometrics.
-   * The quality threshold of  the biometrics is predefined.
+1. The system will on-board an officer using biometrics (The quality threshold of  the biometrics is predefined).
 1. The system will only allow to onboard an active registration officer. 
 1. Onboarding is allowed only when the machine is online. 
 1. The system will not allow to onboard a blacklisted officer/supervisor. 
@@ -62,15 +61,13 @@ The system allows the following to occur for a successful on-boarding of a regis
 1. The system does not allow onboarding officers/supervisors who belong to different center.
 1. Multiple officers can be onboarded but only one supervisor would be allowed to onboard.
 
-[**Link to design**](/mosip/mosip-platform/blob/master/design/registration/registrtaion-on-board-user.md)
+[**Link to design**](https://github.com/mosip/registration/blob/master/design/registration/registrtaion-on-board-user.md)
 
 ### 1.2 Login/Authentication [**[↑]**](#table-of-contents)
 
 #### A. Allows biometric login of the Registration Officer or Supervisor to the client application
 
-MOSIP supports single factor and multi factor login including iris, fingerprint, and face capture. An admin configuration setting determines the mode of login.
-
-System allows registration officer to provide their username, iris, fingerprint, face photo to login. The system validates the registration officer’s provided details and logs in the registration officer on successful validation.
+A registration officer or a supervisor should provide their username and one or more of the biometric mode for logging in.  The biometric mode can be an IRIS or fingerprint or face photo or a combination of these. The system validates the provided details and logs upon successful validation.
 
 _Note_: While a User attempts to login to Registration Client, the system will match the Username and compare it with the locally stored usernames using a case-insensitive logic
 
