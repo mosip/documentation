@@ -52,6 +52,7 @@ Registration Client enables capturing an officer's biometrics during on-boarding
 
 Initially, a machine will have no officers onboarded. The first registration officer or supervisor will be on-boarded by an administrator. Thereafter this registration officer or supervisor can on-board other registration officers.
 The system allows the following to occur for a successful on-boarding of a registration officer: 
+
 1. The system will on-board an officer using biometrics (The quality threshold of  the biometrics is predefined).
 1. The system will only allow to onboard an active registration officer. 
 1. Onboarding is allowed only when the machine is online. 
