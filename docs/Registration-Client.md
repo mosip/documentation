@@ -1,12 +1,12 @@
 # Overview
-In the registration process we captures the demographic and biometric details of an individual along with supporting information (proof documents & information about parent/guardian/introducer) and packages the information in a secure way. The information packet is sent to the server in online or offline mode for processing. We use a thick client to perform all the above operations and call it the "Registration client". 
+The registration client is a thick Java-based client where the resident's demographic and biometric details are captured along with the supporting documents in online or offline mode.   The captured information is packaged in a secure tamper-proof way and send to the server for processing.
 
-Important considerations are as follows. Registration client must provide the following:
-* **Secure** way of capturing an individual's private demographic and biometric data. The captured data must be cryptographically secure such that the data cannot be tampered with. 
+Registration client must provide the following :
+* **Secure** way of capturing an individual's demographic and biometric data. The captured data must be cryptographically secure such that the data cannot be tampered with.   This is called a registration packet.
 * **Interfaces to biometric devices** that comply to industry standards. This ensure that any device manufactured as per standards will work with MOSIP.
-* Works in **online and offline** mode. In remote areas where internet connectivity is a challenge, the client application must work in offline mode to capture data inorder to perform uninterrupted registrations.
-* **Remote software update** capability. The client application must have the ability to update itself for patch upgrades (bug fixes/enhancements) in a remote way. There could be hundreds of client instances running on laptops/desktops. Updates on all of them must be controlled by the client and a central server.
-* **Tamper-proof client software**. Since the client application must work in offline mode, there is a possibility of client software itself being tampered with. There must be enough checks and balances to detect tampering and reject such packets.
+* Works in **online and offline** mode. In remote areas where internet connectivity is a challenge, the registration client must work in offline mode.
+* **Remote software update** capability.  There must be a way to self-update to latest patches/upgrades (bug fixes/enhancements) in a remote way. There could be hundreds of client instances running on laptops/desktops. Updates on all of them must be controlled a central server.
+* **Tamper-proof client software**.  The registration client must have an ability to validate the structure of the information captured so that it could detect any anomoly due to a possible manual tampering and reject the captured packet.
 
 # Detailed functionality
 [Registration Functionality](Registration-Functionality.md)
@@ -44,10 +44,10 @@ Important considerations are as follows. Registration client must provide the fo
 ![Registration client component architecture](_images/registration/reg_client_component_architecture.png)
 
 # Registration packet structure
-All the registration information is zipped and encrypted in a packet and send to the server. The structure of the packet is given [here](Registration-Packet.md).
+All the registration information is zipped and encrypted in a packet and sent to the server. The structure of the packet is given [here](Registration-Packet.md).
 
 # Registration client reference application
-MOSIP provides an Windows based reference implementation of the client that has UI and business logic to perform the above process flows.  The code, design, App setup, build documentation is available in [registration client repo](https://github.com/mosip/registration/tree/master/registration).  The App may be modified according to a country's need.
+MOSIP provides an Windows-based reference implementation of the client that has a UI and the business logic to perform the above process flows.  The code, design, App setup, build documentation is available in [registration client repo](https://github.com/mosip/registration/tree/master/registration).  The App may be modified according to a country's need.
 
 [Registation client setup guide](Registration-Client-Setup.md)
 
