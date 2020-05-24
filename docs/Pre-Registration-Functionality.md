@@ -32,9 +32,9 @@ In case of closure of the Consent Pop-up, the following scenarios may arise:
 
 Once the demographic details are filled and the Documents are uploaded, if the user wishes to add an applicant, he/she can opt to select 'Add An Applicant' option on the preview page or 'Create New Application' option on the Dashboard. The system provides the user with demographic form based on the defined [ID Object Definition](MOSIP-ID-Object-Definition.md) to fill. The system associates the pre-registration id to the new Application(s) created.
 
-## Provide data in prreferred language 
+## Provide data in preferred language 
 
-The user can select their language of preference, which is referred as Primary (from a list of 2 languages as set by Admin) from the Login screen, the other language from the list is considered as secondary. The user can then provide data in the preferred language (primary) as selected. The data in the right side of the demographic page will be Transliterated to secondary language. The labels in the right hand side will be translated to the Secondary language. The user can verify the transliterated data and edit if required. The data will subsequently be stored in the database along with the respective language codes.
+The user can select their language of preference, which is referred as Primary (from a list of 2 languages as set by Admin) from the Login screen, the other language from the list is considered as secondary. The user can then provide data in the preferred language (primary) as selected. The data in the right side of the demographic page will be transliterated to secondary language. The labels in the right hand side will be translated to the Secondary language. The user can verify the transliterated data and edit if required. The data will subsequently be stored in the database along with the respective language codes.
 
 _Language Configuration_: 
 
@@ -50,9 +50,8 @@ then:
 	- The system will render the demographic page (with both left and right side for Primary and Secondary lnaguage) in the same language
 	- Values entered on the left side (Primary Language) will not be transliterated but auto-copied on the right side
 	- Values on the right side will remain un-editable
-	- As part of the packet, system will send/store data in one language only, if language code is identified to be the same – eg. ENG (English)
+	- As part of the packet, system will send/store data in one language only, if language code is identified to be the same – eg. en (English)
 
-Therefore, it is important for the administrator to setup the configurations appropriately.
 
 ##  Viewing "My Applications" (covers status) 
 The pre-registrations created will be associated with user id. The user can view all the pre-registrations created by him/her in the Dashboard. The pre-registration can be in 3 different status (Pending appointment, Booked, Expired)
@@ -83,12 +82,12 @@ The user can discard the pre-registration by clicking on the Delete icon for the
 * Based on the parameters (from Config file) for example - gender, age and residential status (Foreigner, National) from the demographic data, applicant types are determined. The pre-registration system then sends the id to the mapping.
 * Based on the Applicant type, the Applicable Document categories are received from the mapping. The pre-registration system then displays only applicable categories.
 * The Document Category and type of documents in each category to be uploaded varies based on the applicant type. pre-registration system displays only those types to the applicant.
-* Once the documents are uploaded by applicant the system performs virus scan to check the integrity of the document. Once the virus scan is done the document is encrypted and stored in the database
+* Once the documents are uploaded by applicant the system performs virus scan to check the integrity of the document. Once the virus scan is successful, the document is encrypted and stored in the database
 
 ## Referring to already uploaded documents
 * The POA (Proof of Address) document could be uploaded or can be referred to an already uploaded POA of an existing applicant
 * The user could select a particular applicant document to which he wants to refer 
-* When Pre-registering for a family  living at the same address  it is not required to upload same POA ,instead could refer to the document as uploaded by the first family member
+* When Pre-registering for a family  living at the same address  it is not required to upload same POA again and again,instead could refer to the document as uploaded by the first family member saving space and time.
 
 
 #  Booking an appointment
@@ -102,8 +101,8 @@ The user can discard the pre-registration by clicking on the Delete icon for the
 
 ###  Nearby centers based on user geo-location 
 * An user can  enable location services, in the device/machine in order to select nearby centers
-* The system checks for Lat-Long values of the user and  fetches all the registration centers within 2 Km radius (configurable)
-* The first registration center as per the search criteria is shown to the user on map by default
+* The system checks for the lattitude and Longitude values of the user and  fetches all the registration centers within 2 Km radius (configurable)
+* The first registration center as per the search criteria is shown to the user on map by default.
 
 ### Find a center 
 * An user may opt to perform text search to find a center based on which the system displays the registration centers
@@ -112,10 +111,10 @@ The user can discard the pre-registration by clicking on the Delete icon for the
 
 ## Get appointment for the day 
 * An user logs in to the pre-registration system  and opts to book appointment for pre-registration application or Modify appointment
-* The system presents a  list of Centers to the user to select the required registration center 
-* The Time selection with calendar days along with number of slots available per calendar day will be displayed 
-* user can select any of the calendar day which he\she wishes to book appointment.
-* Time slots of 15 minutes each are displayed.
+* The system presents a list of Centers to the user to select the required registration center 
+* The time selection with calendar days along with number of slots available per calendar day will be displayed 
+* The user can select any of the calendar day which he/she wishes to book an appointment.
+* Time slots of 15 minutes each are displayed (configurable).
 * Each time slot with available slots will be displayed.
 * The user can select a slot and proceed to book appointment or can go back to select another registration center
 
@@ -124,16 +123,16 @@ The user can discard the pre-registration by clicking on the Delete icon for the
 ###  Get slots availability 
 The user opts to view the available slots for a selected registration center.
 * The system displays 7 calendar days (configurable) for the user to select a slot in the chosen center
-* Calendar day\s which are  Holidays or non-working days for the selected registration center are greyed out or not shown to the user
-* For a Selected registration center 8 hours (configurable) are considered as working hours
-* An user can view time slots of 15 minutes (configurable) each for the selected calendar day and view available slots for every time slot shown in the selected calendar day
+* Calendar days which are  Holidays or non-working days for the selected registration center are greyed out or not shown to the user
+* For a selected registration center 8 hours (configurable) are considered as working hours
+* A user can view time slots of 15 minutes (configurable) each for the selected calendar day and view available slots for every time slot shown in the selected calendar day
 * An applicant can further choose the preferred timeslot
 * An user can confirm the appointment selection of the preferred/chosen time slot – Subsequently the timeslot(s) are locked
 
 ##  Cancel appointment 
-* An user can opt to cancel selected appointment\s against application which is\are in Booked Status.
+* An user can opt to cancel selected appointment\s against application which is/are in Booked Status.
 * In such case the system notifies the user about the successful cancellation 
-* Following a successful appointment Cancellation the system unlocks the time slot of the registration center
+* Following a successful appointment cancellation the system unlocks the time slot of the registration center so that someone else can book it.
 
 ## Re-book appointment 
 * The system provides the user with the list of available appointment Slots
@@ -146,19 +145,15 @@ The user opts to view the available slots for a selected registration center.
 
 # Appointment acknowledgement 
 
-* An Acknowledgement is triggered after cuccessful completion of pre-registration (booking an appointment)
+* An Acknowledgement is triggered after successful completion of pre-registration (booking an appointment)
 * The acknowledgement contains the following information: name, pre-registration id, age/DoB, mobile number, email id and registration center details, appointment date, appointment time)
-* A QR code is generated based on the demographic details and the pre-registration ID. This QR code can be scanned at the registration center to fetch the details of the user provided during pre-registration process
+* A QR code is generated based on the demographic details and the pre-registration ID. **This QR code can be scanned at the registration center to fetch the details to be used during the registration process*.
 
 ## Download acknowledgement 
-User can choose to print the acknowledgement or can download the acknowledgement as PDF and print later.
-
-The acknowledgement template is language and channel (email, sms, on screen) specific.
+User can choose to print or download the acknowledgement as PDF.
 
 ##  Send acknowledgement to email/phone
-The system sends an acknowledgement to the  applicant through SMS/email as per the details provided in demographic form. However, the trigger of notification is driven by the Notification configuration setup by the administrator, to allow a notification to be triggered by SMS/email/both or none.
-
-In case of multiple applications, the system sends notifications for each applicant to the details provided in the demographic form of that applicant.
+The system sends an acknowledgement to the  applicant to the registered phone (SMS) or email as per the details provided in demographic form.  In case of multiple applications, the system sends notifications for each applicant to the details provided in the demographic form of that applicant.
 
 Additionally, user can opt to manually trigger notification(s) to the contact details of additional recipients. However, this is driven by the Notification configuration setup by the administrator, to allow a notification to be triggered by SMS/email/both or none.
 
@@ -170,11 +165,11 @@ The confirmation acknowledgement is also rendered on screen with a confirmation 
 
 Upon receiving the registration center id, date range (start date, end date) for the List of pre-registrations, user id (Registration Officer/Supervisor) from Registration client, the pre-registration system processes the information.
 * The system generates a Transaction id
-* The system then Fetches all the pre-registrations within the Date Range (Start Range, End Date) and for the registration center id received and calculates the count of the pre-registration ids being sent.
+* The system then fetches all the pre-registrations within the Date Range (Start Range, End Date) and for the registration center id received and calculates the count of the pre-registration ids being sent.
 * The system sends the List of pre-registration ids along with count of pre-registrations.
 * The system receives the pre-registration id/ids for which pre-registration Data has to be sent.
 * The system sends the zip file per pre-registration id consisting of Demo Data, Files, and appointment Time.
 
 #  Audit 
 
-When any transaction is performed, then the same is captured as part of MOSIP Audit Trails, which can be further used for Reporting/Analytics as required.
+When any transaction is performed, then the same is captured as part of MOSIP Audit Trails, which can be further used for reporting and analytics as required.
