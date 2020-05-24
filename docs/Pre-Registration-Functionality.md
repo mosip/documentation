@@ -1,7 +1,7 @@
 #  Login/create a user account
 
 ##  Login using email or phone number
-Residenets can login to the pre-registration portal by providing their email id or mobile number. The system validates the email id or phone number, once validated sends an OTP which the resident enters. The system validates the OTP redirects the user to enter or edit the details for booking an appointment.
+Residents can login to the pre-registration portal by providing their email id or mobile number. The system validates the email id or phone number, once validated sends an OTP which the resident enters. The system validates the OTP redirects the user to enter or edit the details for booking an appointment.
 
 ## Automatic user id creation on first login 
 The resident logs in to the pre-registration portal with their mobile number or email id. After successful Authentication, the system checks if the user is first-time user or not. If the user is first-time user, the system creates a new record in the database. All the pre-registration ids created from there on will be mapped to this user id.
