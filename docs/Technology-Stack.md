@@ -2,7 +2,7 @@ This page lists all the technologies used in building MOSIP
 
 Category | Tool/Technology | Version | License | Remarks
 ---------|-----------------|---------|---------|---------
-Operating System | Red Hat | 7.5 | |
+Operating System | CentOS | 7 | |
 Programming language | Java | 1.8 | GNU V2 | 
 Application development framework | Spring family | various versions | Apache License 2.0
 Microservices development framework | Spring boot | | Apache License 2.0
