@@ -293,8 +293,11 @@ Unsigned digital Id would look as follows:
 ```
 "digitalId": "base64urlencoded(payload)"
 ```
-
 Payload is the Digital ID JSON object.
+
+{% hint style="info" %}
+For a L0 unregistered device the digital id will be unsigned. In all other scenarios the digital id will be signed either by the chip key (L1) or the device key (L0).
+{% endhint %}
 
 **Accepted Values for Digital ID**:
 ```
@@ -618,7 +621,7 @@ customOpts - If in case the device vendor has additional parameters that they ca
   {
     "specVersion" : "MDS spec version",
     "data": {	
-      "digitalId" : "Digital Id as described in this document",
+      "digitalId" : "digital Id as described in this document",
       "deviceCode": "A unique code given by MOSIP after successful registration",
       "deviceServiceVersion": "Service version",
       "bioType": "FIR",
@@ -634,7 +637,8 @@ customOpts - If in case the device vendor has additional parameters that they ca
     },
     "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
     "sessionKey": "encrypted with MOSIP public key (dynamically selected based on the uri) and encoded session key biometric",
-    "error": {
+    "thumbprint": "SHA256 thumbprint of the certificate that was used for encryption of session key",
+	"error": {
       "errorcode": "101",
       "errorinfo": "Invalid JSON Value"
     }
@@ -652,7 +656,9 @@ customOpts - If in case the device vendor has additional parameters that they ca
       "domainUri": "uri of the auth server",          
       "bioValue": "encrypted with session key and base64urlencoded biometric data",
       "transactionId": "unique transaction id",
-      "timestamp": "ISO Format date time with timezone"
+      "timestamp": "ISO Format date time with timezone",
+	  "requestedScore": "Floating point number to represent the minimum required score for the capture",
+      "qualityScore": "Floating point number representing the score for the current capture"
     },
     "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
     "sessionKey": "encrypted with MOSIP public key and encoded session key biometric",
@@ -736,11 +742,21 @@ deviceSubId - The sub id of the device thats responsible to stream the data.
 ```
 
 **Device Stream Response:**
-Live Video stream with quality of 3 frames per second or more using [M-JPEG2000](https://en.wikipedia.org/wiki/Motion_JPEG).
+Live Video stream with quality of 3 frames per second or more using [M-JPEG](https://en.wikipedia.org/wiki/Motion_JPEG).
 
 {% hint style="info" %}
 Preview should have the quality markings and segment marking. The preview would also be used to display any error message to the user screen. All error messages should be localized.
 {% endhint %}
+
+**Error Response for Device Stream**
+```
+{
+  "error": {
+    "errorCode": "202",
+    "errorInfo": "No Device Connected."
+  }
+}
+```
 
 ### Windows/Linux
 The applications that require more details of the MOSIP devices could get them by sending the HTTP request to the supported port range.
@@ -846,7 +862,9 @@ bio.previousHash - For the first capture the previousHash is hash of empty utf8 
         "env":  "<target environment>",             
         "bioValue": "<base64urlencoded extracted biometric (ISO format)>",
         "registrationId": "1234567890",
-        "timestamp": "2019-02-15T10:01:57.086+05:30"
+        "timestamp": "2019-02-15T10:01:57.086+05:30",
+		"requestedScore": "<floating point number to represent the minimum required score for the capture. This ranges from 0-100>",
+        "qualityScore": "<floating point number representing the score for the current capture. This ranges from 0-100>"
 	  },
       "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
       "error": {
