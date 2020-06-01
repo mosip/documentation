@@ -637,7 +637,7 @@ customOpts - If in case the device vendor has additional parameters that they ca
     },
     "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
     "sessionKey": "encrypted with MOSIP public key (dynamically selected based on the uri) and encoded session key biometric",
-    "thumbprint": "SHA256 thumbprint of the certificate that was used for encryption of session key",
+    "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
 	"error": {
       "errorcode": "101",
       "errorinfo": "Invalid JSON Value"
@@ -662,7 +662,7 @@ customOpts - If in case the device vendor has additional parameters that they ca
     },
     "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
     "sessionKey": "encrypted with MOSIP public key and encoded session key biometric",
-    "thumbprint": "SHA256 thumbprint of the certificate that was used for encryption of session key",
+    "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
     "error": {
       "errorcode": "101",
       "errorinfo": "Invalid JSON Value"
@@ -675,8 +675,11 @@ customOpts - If in case the device vendor has additional parameters that they ca
 ```
 data.bioValue - Encrypted and Encoded to base64urlencode biometric value. AES GCM encryption with a random key. The IV for the encryption is set to last 16 digits of the timestamp. ISO formatted bioValue. Look at the Authentication document to understand more about the encryption.  
 data.timestamp - Time as per the biometric device. Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
+data.requestedScore - Floating point number to represent the minimum required score for the capture.
+data.qualityScore - Floating point number representing the score for the current capture.
 hash - the value of the previousHash attribute in the request object or the value of hash attribute of the previous data block (used to chain every single data block) concatenated with the hex encode sha256 hash of the current data block before encryption.  
 sessionKey - Random AES key used for the encryption of the bioValue. The encryption key is encrypted using the public key with recommended algorithm. Sent as base64urlencoded
+thumbprint - SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens
 ```
 
 The entire data object is sent as a JWT format. So the data object will look like:
