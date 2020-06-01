@@ -3,7 +3,7 @@ Instructions to compile code and build docker images are given in respective rep
 
 # Deploy
 ## Sandbox deployment
-[Single machine installer](https://github.com/mosip/mosip-infra/tree/master/deployment/sandbox) based on MiniKube and Docker is available.  The installer has Ansible scripts to install MOSIP with a single click.
+[Multi-VM Sandbox Installer](https://github.com/mosip/mosip-infra/tree/master/deployment/sandbox-v2) is a completely automated deployer that packs all MOSIP modules in a Kubernetes cluster of virtual machines that may be either on cloud or on-premise.  The automation is written in Ansible and Helm.
 
 ## Production deployment - Cell based approach
 * [Architecture diagram](https://github.com/mosip/mosip-infra/blob/master/deployment/production/images/mosip-cell-deployment.jpg)

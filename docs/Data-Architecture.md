@@ -47,7 +47,7 @@ To support performance, following database design features are to be considered
 * All tables will have a primary key index on the primary key field. This will help in faster retrievals and joins
 * All foreign keys will have indexes defined so that it will help in faster joins
 * No referential integrity is applied on tables across databases
-* Partitioning: Partitioning design to be discussed as PostgreSQL has certain limitation / different way of implementation that requires specific database features to be applied. 
+* Partitioning: Partitioning design is database-specific.   Depending upon the chosen database,  the  country may employ the partitioning approach as prescribed by the database engine"
 
 ## Data Model Naming Standards
 [Naming Standards](Data-Model-Naming-Standards.md)
