@@ -866,7 +866,7 @@ bio.previousHash - For the first capture the previousHash is hash of empty utf8 
         "bioValue": "<base64urlencoded extracted biometric (ISO format)>",
         "registrationId": "1234567890",
         "timestamp": "2019-02-15T10:01:57.086+05:30",
-		"requestedScore": "<floating point number to represent the minimum required score for the capture. This ranges from 0-100>",
+        "requestedScore": "<floating point number to represent the minimum required score for the capture. This ranges from 0-100>",
         "qualityScore": "<floating point number representing the score for the current capture. This ranges from 0-100>"
 	  },
       "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
