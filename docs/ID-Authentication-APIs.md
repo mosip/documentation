@@ -1063,8 +1063,8 @@ IDA-MLC-012|Individual's Consent is not available|Invalid resident consent for e
 IDA-MLC-015| Identity Type - &lt;Identity Type&gt; not configured for the country|ID Type (UIN/USERID) not supported for a country|
 IDA-MLC-018|%s not available in database|UIN, VID not available in database|
 
-# Identity Update Notificcation Service (Internal)
-Whenever an UIN/VID is inserted or updated in ID-Repository module it will notify ID-Authentication using this Identity Update Notificcation Service.
+# Identity Update Event Notificcation Service (Internal)
+Whenever an UIN/VID is inserted or updated in ID-Repository module that event will be notifid to ID-Authentication using this Identity Update Event Notificcation Service.
 
 ## Users of Retrieve Authentication Types Status Service -
 1. **ID-Repository** -  For any UIN/VID create/update event in ID-Repository module will notify ID-Authentication with this service.
