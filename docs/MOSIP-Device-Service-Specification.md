@@ -1,5 +1,5 @@
-** Aug 2019 | Version: 0.9.5 **
-** Status: Draft **
+** Aug 2019 | Version: 0.9.5 |**
+** Status: Draft |**
 ** Last updated date: 24th April 2020 **
 
 # Table of Contents 
@@ -12,14 +12,14 @@
 	4.2. [Device](#device)
 	4.3. [Keys](#keys)
 5. [Device Service - Communication Interfaces](#device-service-communication-interfaces)
-    5.1. [Device Discovery](#device-discovery) 
-    5.2. [Device Info](#device-info) 
-    5.3. [Capture](#capture) 
-    5.4. [Device Stream](#device-stream) 
-    5.5. [Device Registration Capture](#device-registration-capture) 
+	5.1. [Device Discovery](#device-discovery) 
+	5.2. [Device Info](#device-info) 
+	5.3. [Capture](#capture) 
+	5.4. [Device Stream](#device-stream) 
+	5.5. [Device Registration Capture](#device-registration-capture) 
 6. [Device Server](#device-server)
-    6.1. [Registration](#registration)
-    6.2. [De-Register](#de-register)
+	6.1. [Registration](#registration)
+	6.2. [De-Register](#de-register)
 	6.3. [Certificates](#certificates)
 7. [Management Server and Client](#management-server-and-management-client)
 	7.1. [Management Server Functionalities and Interactions](#management-server-functionalities-and-interactions)
@@ -345,22 +345,21 @@ It is expected that the device service ensures that the device is connected  loc
 ## Device Discovery
 Device discovery would be used to identify MOSIP compliant devices in a system by the applications. The protocol is designed as simple plug and play with all the necessary abstraction to the specifics.
 
-**Device Discovery Request:**
+### Device Discovery Request
 ```JSON
 {
   "type": "type of the device"
 }
 ```
 
-**Accepted Values for Device Discovery Request:**
-```
-type: "Biometric Device", "Fingerprint", "Face", "Iris"
-```
+### Accepted Values for Device Discovery Request
+* type - "Biometric Device", "Fingerprint", "Face", "Iris"
+
 {% hint style="info" %}
 "Biometric Device" - is a special type and used in case if you are looking for any biometric device.
 {% endhint %}
 
-**Device Discovery Response:**
+### Device Discovery Response
 ```JSON
 [
   {    
@@ -375,29 +374,28 @@ type: "Biometric Device", "Fingerprint", "Face", "Iris"
     "specVersion": ["Array of supported MDS specification version"],
     "purpose": "Auth  or Registration or empty if not registered",
     "error": {
-        "errorcode": "101",
-        "errorinfo": "Invalid JSON Value Type For Discovery.." 
-        }
-    },
-    ...
+      "errorcode": "101",
+      "errorinfo": "Invalid JSON Value Type For Discovery.." 
+    }
+  },
+  ...
 ]
 ```
 
-**Accepted Values for Device Discovery Response:**
-```
-deviceStatus - "Ready", "Busy", "Not Ready", "Not Registered"
-certification - "L0", "L1", "L2" - Level of certification
-serviceVersion - Version of the MDS specification that is supported.
-deviceId - Internal Id to identify the actual biometric device within the device service.
-deviceSubId - is the internal Id of the device. For example in case of iris capture, the device can have two modules in a single device, it is possible to address each device with a sub Id so we can identify or command each of it in isolation. Sub Id is a simple index which always starts with 1 and increases sequentially for each sub device present.
-callbackId - this differs as per the OS. In case of Linux and windows operating systems it is a HTTP URL. In the case of android, it is the intent name. In IOS it is the URL scheme. The call back URL takes precedence over future request as a base URL.
-digitalId - Digital id as per the Digital Id definition.  
-deviceCode - A unique code given by MOSIP after successful registration,
-specVersion - Array of supported MDS specification version",
-purpose - Purpose of the device in the MOSIP ecosystem.
-errorCode - standardized error code.
-errorInfo - description of the error that can be displayed to end user. Multi lingual support. 
-```
+### Accepted Values for Device Discovery Response
+* deviceStatus - "Ready", "Busy", "Not Ready", "Not Registered"
+* certification - "L0", "L1", "L2" - Level of certification
+* serviceVersion - Version of the MDS specification that is supported.
+* deviceId - Internal Id to identify the actual biometric device within the device service.
+* deviceSubId - is the internal Id of the device. For example in case of iris capture, the device can have two modules in a single device, it is possible to address each device with a sub Id so we can identify or command each of it in isolation. Sub Id is a simple index which always starts with 1 and increases sequentially for each sub device present.
+* callbackId - this differs as per the OS. In case of Linux and windows operating systems it is a HTTP URL. In the case of android, it is the intent name. In IOS it is the URL scheme. The call back URL takes precedence over future request as a base URL.
+* digitalId - Digital id as per the Digital Id definition.  
+* deviceCode - A unique code given by MOSIP after successful registration,
+* specVersion - Array of supported MDS specification version",
+* purpose - Purpose of the device in the MOSIP ecosystem.
+* errorCode - Standardized error code.
+* errorInfo - Description of the error that can be displayed to end user. Multi lingual support. 
+
 {% hint style="info" %}
 The response is an array that we could have a single device enumerating with multiple biometric options.<br>
 The service should ensure to respond only if the type parameter matches the type of device or the type parameter is a "Biometric Device".<br>
@@ -456,13 +454,13 @@ CallbackId would be set to the device service appname. So, the caller has to cal
 ## Device Info
 The device information API would be used to identify the MOSIP compliant devices and their status by the applications.
 
-**Device Info Request:**<br>
-NONE
-
-**Accepted Values for Device Info Request:**<br>
+### Device Info Request
 NA
 
-**Device Info Response:**
+### Accepted Values for Device Info Request
+NA
+
+### Device Info Response
 ```
 [
   {
@@ -494,31 +492,29 @@ The final JSON is Signed with the JSON Web Signature using the "Foundational Tru
 So the API would respond in the following format.
 ```
 [
- {
-  "deviceInfo": "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
-  "error": {
-     "errorcode": "100",
-     "errorinfo": "Device not registered. In this case the device info will be only base64urlencode(payload)"
-   }
- }
+  {
+    "deviceInfo": "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
+    "error": {
+      "errorcode": "100",
+      "errorinfo": "Device not registered. In this case the device info will be only base64urlencode(payload)"
+    }
+  }
 ]
 ```
 
-**Allowed values for Device Info Response:**
-```
-deviceInfo.deviceStatus - ["Ready", "Busy", "Not Ready", "Not Registered"]. This is the status of the device.
-deviceInfo.deviceId - Internal Id to identify the actual biometric device within the device service.
-deviceInfo.firmware - Exact version of the firmware, In case of L0 this is same as serviceVersion.
-deviceInfo.certification - "L0", "L1" - Level of certification.
-deviceInfo.serviceVersion - Version of the current service.
-deviceInfo.deviceSubId - is the internal id of the device. In case of iris when we have two iris capture modules in a single device, it is possible to address each device with a sub Id so we can identify or command each of it in isolation. This in an index that always starts with 1 and increments sequentially.
-deviceInfo.callbackId - base URL to communicate.
-deviceInfo.digitalId - as defined under the digital id section.
-deviceInfo.env - "None" if not registered. If registered, then send the registered env "Staging", "Developer", "Pre-Production", "Production"
-deviceInfo.purpose - "Auth" or "Registration" or empty in case the status is "Not Registered".
-deviceInfo.specVersion - "Array of MDS specification version".
-error - relevant errors as defined under the "Error section" of this document.
-```
+### Allowed values for Device Info Response
+* deviceInfo.deviceStatus - ["Ready", "Busy", "Not Ready", "Not Registered"]. This is the status of the device.
+* deviceInfo.deviceId - Internal Id to identify the actual biometric device within the device service.
+* deviceInfo.firmware - Exact version of the firmware, In case of L0 this is same as serviceVersion.
+* deviceInfo.certification - "L0", "L1" - Level of certification.
+* deviceInfo.serviceVersion - Version of the current service.
+* deviceInfo.deviceSubId - is the internal id of the device. In case of iris when we have two iris capture modules in a single device, it is possible to address each device with a sub Id so we can identify or command each of it in isolation. This in an index that always starts with 1 and increments sequentially.
+* deviceInfo.callbackId - base URL to communicate.
+* deviceInfo.digitalId - as defined under the digital id section.
+* deviceInfo.env - "None" if not registered. If registered, then send the registered env "Staging", "Developer", "Pre-Production", "Production"
+* deviceInfo.purpose - "Auth" or "Registration" or empty in case the status is "Not Registered".
+* deviceInfo.specVersion - "Array of MDS specification version".
+* error - relevant errors as defined under the "Error section" of this document.
 
 {% hint style="info" %}
 The response is an array that we could have a single device enumerating with multiple biometric options.<br>
@@ -567,67 +563,72 @@ In IOS there are restrictions to have multiple app registering to the same URL s
 {% endhint %}
 
 ## Capture
-The capture request would be used to capture a biometric from MOSIP compliant devices by the applications.  The capture call will respond with success to only one call at a time. So in case of a parallel call the device info details are sent with status as "Busy"
+The capture request would be used to capture a biometric from MOSIP compliant devices by the applications.  The capture call will respond with success to only one call at a time. So in case of a parallel call the device info details are sent with status as "Busy".
 
-**Capture Request:**
+### Capture Request
 ```
 {
-  "env":  "Target environment",
+  "env": "Target environment",
   "purpose": "Auth  or Registration",
   "specVersion": "Expected version of the MDS spec",
-  "timeout" : <Timeout for capture>,
-  "captureTime": <Time of capture request in ISO format including timezone>,
-  "domainUri": <URI of the auth server>,
-  "transactionId": <Transaction Id for the current capture>,
+  "timeout" : "Timeout for capture",
+  "captureTime": "Time of capture request in ISO format including timezone",
+  "domainUri": "URI of the auth server",
+  "transactionId": "Transaction Id for the current capture",
   "bio": [
     {
-      "type": <type of the biometric data>,
-      "count":  <fingerprint/Iris count, in case of face max is set to 1>,
+      "type": "Type of the biometric data",
+      "count":  "Fingerprint/Iris count, in case of face max is set to 1",
       "bioSubType": ["Array of subtypes"],
-      "requestedScore": <expected quality score that should match to complete a successful capture>,
-      "deviceId": <internal Id>,
-      "deviceSubId": <specific device Id>,
-      "previousHash": <hash of the previous block>
+      "requestedScore": "Expected quality score that should match to complete a successful capture",
+      "deviceId": "Internal Id",
+      "deviceSubId": "Specific Device Sub Id",
+      "previousHash": "Hash of the previous block"
     }
   ],
   customOpts: {
-    //max of 50 key value pair. This is so that vendor specific parameters can be sent if necessary. The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications. Vendors are free to include additional parameters and fine-tuning parameters. None of these values should go undocumented by the vendor. No sensitive data should be available in the customOpts.
+    //Max of 50 key value pair. This is so that vendor specific parameters can be sent if necessary. The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications. Vendors are free to include additional parameters and fine-tuning parameters. None of these values should go undocumented by the vendor. No sensitive data should be available in the customOpts.
   }
 }
 ```
 
-**Allowed Values for Capture Request:**
-```
-env - Allowed values are Staging| Developer| Pre-Production | Production
-purpose - Allowed values are Auth| Registration
-specVersion - version of the biometric block as specified in the authentication or customer registration specification.
-timeout - Max time the app will wait for the capture. Its expected that the api will respond back before timeout with the best frame. All timeouts are in milliseconds
-captureTime - time of capture in ISO format with timezone. The time is as per the requesting application.
-domainUri - unique uri per auth providers. This can be used to federate across multiple providers or countries or unions.
-transactionId - unique Id of the transaction. This is an internal Id to the application thats providing the service. Use different id for every successful auth. So even if the transaction fails after auth we expect this number to be unique.
-bio.type -  "FIR" , "IIR", "Face"
-bio.count - number of biometric data that is collected for a given type. The device should validate and ensure that this number is in line with the type of biometric that's captured.
-bio.bioSubType - "LF_INDEX", "LF_MIDDLE", "LF_RING", "LF_LITTLE", "LF_THUMB", "RF_INDEX", "RF_MIDDLE", "RF_RING", "RF_LITTLE", "RF_THUMB", "L_IRIS", "R_IRIS", "UNKNOWN"
-bio.requestedScore - what is the expected quality? Upon reaching the necessary quality the biometric device is expected to auto capture the image.
-bio.deviceId - a unique Id per device service. In case a single device handles both face and iris the device Id will identify iris and camera uniquely. In case the Id is sent as 0 then the device is expected to capture biometric from both the devices.
-bio.deviceSubId  - a specific device sub Id.  Should be set to 0 if we don't know any specific device sub Id.
-bio.previousHash - For the first capture the previousHash is hash of empty utf8 string. From the second capture the previous captures hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period. 
-customOpts - If in case the device vendor has additional parameters that they can take and act accordingly then those values can be sent by the application developers to the device service.
-```
+{% hint style="info" %}
+Count value should be driven by the count of the bioSubType for Iris and Finger. For Face, there will be no bioSubType but the count should be "1".
+{% endhint %}
 
-**Capture Response:**
+### Allowed Values for Capture Request
+* env - Allowed values are Staging| Developer| Pre-Production | Production
+* purpose - Allowed values are Auth| Registration
+* specVersion - Version of the biometric block as specified in the authentication or customer registration specification.
+* timeout - Max time the app will wait for the capture. Its expected that the api will respond back before timeout with the best frame. All timeouts are in milliseconds
+* captureTime - time of capture in ISO format with timezone. The time is as per the requesting application.
+* domainUri - unique uri per auth providers. This can be used to federate across multiple providers or countries or unions.
+* transactionId - unique Id of the transaction. This is an internal Id to the application thats providing the service. Use different id for every successful auth. So even if the transaction fails after auth we expect this number to be unique.
+* bio.type - "FIR" , "IIR", "Face"
+* bio.count - Number of biometric data that is collected for a given type. The device should validate and ensure that this number is in line with the type of biometric that's captured.
+* bio.bioSubType - 
+	* For FIR: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"] 
+	* For IIR: ["Left", "Right", "UNKNOWN"]
+	* For FID: No bioSubType
+* bio.requestedScore - what is the expected quality? Upon reaching the necessary quality the biometric device is expected to auto capture the image.
+* bio.deviceId - A unique Id per device service. In case a single device handles both face and iris the device Id will identify iris and camera uniquely. In case the Id is sent as 0 then the device is expected to capture biometric from both the devices.
+* bio.deviceSubId  - A specific device sub Id. Should be set to 0 if we don't know any specific device sub Id.
+* bio.previousHash - For the first capture the previousHash is hash of empty utf8 string. From the second capture the previous captures hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period. 
+* customOpts - If in case the device vendor has additional parameters that they can take and act accordingly then those values can be sent by the application developers to the device service.
+
+### Capture Response
 ```
 [
   {
-    "specVersion" : "MDS spec version",
+    "specVersion": "MDS spec version",
     "data": {	
-      "digitalId" : "digital Id as described in this document",
+      "digitalId": "digital Id as described in this document",
       "deviceCode": "A unique code given by MOSIP after successful registration",
       "deviceServiceVersion": "Service version",
       "bioType": "FIR",
       "bioSubType": "UNKNOWN",
       "purpose": "Auth  or Registration",
-      "env":  "Target environment",
+      "env": "Target environment",
       "domainUri": "URI of the auth server",
       "bioValue": "Encrypted with session key and base64urlencoded biometric data",
       "transactionId": "Unique transaction id",
@@ -646,13 +647,13 @@ customOpts - If in case the device vendor has additional parameters that they ca
   {
     "specVersion" : "MDS spec version",
     "data": {
-      "digitalId": "digital Id as described in this document",
+      "digitalId": "Digital Id as described in this document",
       "deviceCode": "A unique code given by MOSIP after successful registration",
       "deviceServiceVersion": "Service version",
       "bioType": "FIR",
       "bioSubType": "LEFT",
       "purpose": "Auth  or Registration",
-      "env":  "target environment", 
+      "env": "target environment", 
       "domainUri": "uri of the auth server",          
       "bioValue": "encrypted with session key and base64urlencoded biometric data",
       "transactionId": "unique transaction id",
@@ -671,16 +672,20 @@ customOpts - If in case the device vendor has additional parameters that they ca
 ]
 ```
 
-**Accepted Values for Capture Response:**
-```
-data.bioValue - Encrypted and Encoded to base64urlencode biometric value. AES GCM encryption with a random key. The IV for the encryption is set to last 16 digits of the timestamp. ISO formatted bioValue. Look at the Authentication document to understand more about the encryption.  
-data.timestamp - Time as per the biometric device. Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
-data.requestedScore - Floating point number to represent the minimum required score for the capture.
-data.qualityScore - Floating point number representing the score for the current capture.
-hash - the value of the previousHash attribute in the request object or the value of hash attribute of the previous data block (used to chain every single data block) concatenated with the hex encode sha256 hash of the current data block before encryption.  
-sessionKey - Random AES key used for the encryption of the bioValue. The encryption key is encrypted using the public key with recommended algorithm. Sent as base64urlencoded
-thumbprint - SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens
-```
+### Accepted Values for Capture Response
+* data.bioType - "FIR" , "IIR", "Face"
+* data.bioSubType - 
+	* For FIR: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"] 
+	* For IIR: ["Left", "Right", "UNKNOWN"]
+	* For Face: No bioSubType
+* data.purpose - "Auth"  or "Registration"
+* data.bioValue - Encrypted and Encoded to base64urlencode biometric value. AES GCM encryption with a random key. The IV for the encryption is set to last 16 digits of the timestamp. ISO formatted bioValue. Look at the Authentication document to understand more about the encryption.
+* data.timestamp - Time as per the biometric device. Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
+* data.requestedScore - Floating point number to represent the minimum required score for the capture.
+* data.qualityScore - Floating point number representing the score for the current capture.
+* hash - The value of the previousHash attribute in the request object or the value of hash attribute of the previous data block (used to chain every single data block) concatenated with the hex encode sha256 hash of the current data block before encryption.  
+* sessionKey - Random AES key used for the encryption of the bioValue. The encryption key is encrypted using the public key with recommended algorithm. Sent as base64urlencoded
+* thumbprint - SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens
 
 The entire data object is sent as a JWT format. So the data object will look like:
 ```
@@ -730,7 +735,7 @@ The device would open a stream channel to send the live video streams. This woul
 
 Used only for the registration module compatible devices. This API is visible only for the devices that are registered for the purpose as "Registration".
 
-**Device Stream Request:**
+### Device Stream Request
 ```
 {
   "deviceId": "internal Id",
@@ -738,20 +743,18 @@ Used only for the registration module compatible devices. This API is visible on
 }
 ```
 
-**Allowed Values for device Stream Request:**
-```
-deviceId - Internal Id
-deviceSubId - The sub id of the device thats responsible to stream the data.
-```
+### Allowed Values for device Stream Request
+* deviceId - Internal Id
+* deviceSubId - The sub id of the device thats responsible to stream the data.
 
-**Device Stream Response:**
+### Device Stream Response
 Live Video stream with quality of 3 frames per second or more using [M-JPEG](https://en.wikipedia.org/wiki/Motion_JPEG).
 
 {% hint style="info" %}
 Preview should have the quality markings and segment marking. The preview would also be used to display any error message to the user screen. All error messages should be localized.
 {% endhint %}
 
-**Error Response for Device Stream**
+### Error Response for Device Stream
 ```
 {
   "error": {
@@ -787,7 +790,7 @@ The requestedScore is in the scale of 1-100. So, in cases where you have four fi
 
 The API is used by the devices that are compatible for the registration module. This API should not be supported by the devices that are compatible for authentication.
 
-**Device Registration Capture Request:**
+### Device Registration Capture Request
 ```
 {
   "env":  "target environment",
@@ -812,22 +815,22 @@ The API is used by the devices that are compatible for the registration module. 
 }
 ```
 
-**Accepted Values for Device Registration Request:**
-```
-env - Allowed values are Staging| Developer| Pre-Production | Production
-specVersion - version of the biometric block as specified in the registration specification.
-timeout - Max time the app will wait for the capture.
-captureTime - time of capture in ISO format with timezone, This is time as per the request application.
-bio.type - "FIR" , "IIR", "Face"
-bio.count - number of biometric data that is collected for a given type. The device should validate and ensure this number is in line with the type of biometric that's captured.
-bio.exception: "LF_INDEX", "LF_MIDDLE", "LF_RING", "LF_LITTLE",  "LF_THUMB" "RF_INDEX", "RF_MIDDLE", "RF_RING", "RF_LITTLE",  "RF_THUMB", "L_IRIS", "R_IRIS". This is an array and all the exceptions are marked. In case of an empty element assume there is no exception. In case exceptions are sent for face then follow the exception photo specification above.
-bio.requestedScore - what is the expected quality? Upon reaching the necessary quality the biometric device is expected to auto capture the image.
-bio.deviceId - a unique Id per device service. In case a single device handles both face and iris the device Id will identify iris and camera uniquely. In case the Id is sent as 0 then the device is expected to capture biometric from both the devices.
-bio.deviceSubId  - a specific device sub Id.  Should be set to nothing if we don't know any specific device sub Id. In case of Fingerprint/IRIS its 1 for left and 2 for right fingerprint/iris. 3 for thumb/two iris. The device id could be used to enable a specific feature in the scanner appropriate for that biometric feature. For eg. if we need to get only a left Iris in a binocular scanner then we can use the sub id.
-bio.previousHash - For the first capture the previousHash is hash of empty utf8 string. From the second capture the previous captures hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.
-```
+### Accepted Values for Device Registration Request
+* env - Allowed values are Staging| Developer| Pre-Production | Production
+* specVersion - version of the biometric block as specified in the registration specification.
+* timeout - Max time the app will wait for the capture.
+* captureTime - time of capture in ISO format with timezone, This is time as per the request application.
+* bio.type - "FIR" , "IIR", "Face"
+* bio.count - number of biometric data that is collected for a given type. The device should validate and ensure this number is in line with the type of biometric that's captured.
+* bio.exception - This is an array and all the exceptions are marked. In case of an empty element assume there is no exception. In case exceptions are sent for face then follow the exception photo specification above.
+	* For FIR: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb"] 
+	* For IIR: ["Left", "Right"]
+* bio.requestedScore - what is the expected quality? Upon reaching the necessary quality the biometric device is expected to auto capture the image.
+* bio.deviceId - a unique Id per device service. In case a single device handles both face and iris the device Id will identify iris and camera uniquely. In case the Id is sent as 0 then the device is expected to capture biometric from both the devices.
+* bio.deviceSubId  - a specific device sub Id. Should be set to nothing if we don't know any specific device sub Id. In case of Fingerprint/IRIS its 1 for left and 2 for right fingerprint/iris. 3 for thumb/two iris. The device id could be used to enable a specific feature in the scanner appropriate for that biometric feature. For eg. if we need to get only a left Iris in a binocular scanner then we can use the sub id.
+* bio.previousHash - For the first capture the previousHash is hash of empty utf8 string. From the second capture the previous captures hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.
 
-**Device Registration Response:**
+### Device Registration Response
 ```
 {
   "biometrics": [
@@ -838,7 +841,7 @@ bio.previousHash - For the first capture the previousHash is hash of empty utf8 
         "bioType": "Biometric type",
         "deviceCode": "A unique code given by MOSIP after successful registration",
         "deviceServiceVersion": "",
-        "bioSubType": "LF_INDEX",
+        "bioSubType": "Left IndexFinger",
         "purpose": "Auth  or Registration",
         "env": "target environment",
         "bioValue": "<base64urlencoded biometrics (ISO format)>",
@@ -860,14 +863,14 @@ bio.previousHash - For the first capture the previousHash is hash of empty utf8 
         "bioType" : "Iris",
         "digitalId": "digital id of the device as per the Digital Id definition.", 
         "deviceServiceVersion": "",
-        "bioSubType": "L_IRIS",
+        "bioSubType": "Left",
         "purpose": "Auth  or Registration",
-        "env":  "<target environment>",             
-        "bioValue": "<base64urlencoded extracted biometric (ISO format)>",
+        "env":  "Target environment",             
+        "bioValue": "base64urlencoded extracted biometric (ISO format)",
         "registrationId": "1234567890",
         "timestamp": "2019-02-15T10:01:57.086+05:30",
-        "requestedScore": "<floating point number to represent the minimum required score for the capture. This ranges from 0-100>",
-        "qualityScore": "<floating point number representing the score for the current capture. This ranges from 0-100>"
+        "requestedScore": "floating point number to represent the minimum required score for the capture. This ranges from 0-100",
+        "qualityScore": "floating point number representing the score for the current capture. This ranges from 0-100"
 	  },
       "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
       "error": {
@@ -879,13 +882,14 @@ bio.previousHash - For the first capture the previousHash is hash of empty utf8 
 }
 ```
 
-**Allowed Values for Device Registration Response:**
-```
-data - base64urlencode(header).base64urlencode(payload).base64urlencode(signature)
-data.bioType - "FIR" , "IIR", "Face"
-data.bioSubType - "LF_INDEX", "LF_MIDDLE", "LF_RING", "LF_LITTLE",  "LF_THUMB" "RF_INDEX", "RF_MIDDLE", "RF_RING", "RF_LITTLE",  "RF_THUMB", "L_IRIS", "R_IRIS"
-data.timestamp - Time as per the biometric device. Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
-```
+### Allowed Values for Device Registration Response
+* data - base64urlencode(header).base64urlencode(payload).base64urlencode(signature)
+* data.bioType - "FIR" , "IIR", "Face"
+* data.bioSubType - 
+	* For FIR: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"] 
+	* For IIR: ["Left", "Right", "UNKNOWN"]
+	* For Face: No bioSubType
+* data.timestamp - Time as per the biometric device. Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
 
 ### Windows/Linux 
 The applications that require more details of the MOSIP devices could get them by sending the HTTP request to the supported port range.
@@ -920,10 +924,10 @@ This API is exposed by the MOSIP server to the device providers.
 
 **Version:** v1
 
-**Device Registration Request URL:** <br>
+### Device Registration Request URL
 `POST https://{base_url}/v1/masterdata/registereddevices`
 
-**Device Registration Request:**
+### Device Registration Request
 ```
 {
   "id": "io.mosip.deviceregister",
@@ -935,7 +939,7 @@ This API is exposed by the MOSIP server to the device providers.
 }
 ```
 
-**Decoded Device Data:**
+### Decoded Device Data
 ```
 "deviceData": { 
   "deviceId": "unique Id to identify a biometric capture device",
@@ -952,11 +956,10 @@ This API is exposed by the MOSIP server to the device providers.
 }
 ```
 
-**Accepted Values for Device Data:**
-```
-deviceId - Unique device id that the device provider uses to identify the device. (This can also be serial no if the device provider is sure of maintaining the uniqueness across all their devices)
-digitalId - Digital id is signed by the FTM chip key in L1. In case of L0 the digital id is signed by the device key. 
-```
+### Accepted Values for Device Data
+* deviceId - Unique device id that the device provider uses to identify the device. (This can also be serial no if the device provider is sure of maintaining the uniqueness across all their devices)
+* digitalId - Digital id is signed by the FTM chip key in L1. In case of L0 the digital id is signed by the device key. 
+
 {% hint style="info" %}
 During the registration of L0 devices please sign using the key thats generated inside the device and send the public key in x509 encoded spec form. <br>
 After successful registration the management server should issue a certificate against the same public key as a response to the registration call.
@@ -969,7 +972,7 @@ After successful registration the management server should issue a certificate a
 * Payload is the object in deviceData.
 * The request is signed with the device provider key at the management server.
 
-**Device Registration Response:**
+### Device Registration Response
 ```
 {
   "id": "io.mosip.deviceregister",
@@ -985,7 +988,7 @@ After successful registration the management server should issue a certificate a
 }
 ```
 
-**Definition of Device Registration Response:**
+### Definition of Device Registration Response
 ```
 "response": {
     "status":  "registration status",
@@ -1012,10 +1015,10 @@ The MOSIP server would provide the following device de-registration API which is
 
 **Version:** v1
 
-**Device De-Registration Request URL**<br>
+### Device De-Registration Request URL
 `POST https://{base_url}/v1/masterdata/device/deregister`
 
-**Device De-Registration Request:**
+### Device De-Registration Request
 ```
 {
   "id": "io.mosip.devicederegister",
@@ -1043,7 +1046,7 @@ The entire request is sent as a JWT format. So the final request will look like:
 }
 ```
 
-**Device De-Registration Response:**
+### Device De-Registration Response
 ```
 {
   "id": "io.mosip.devicederegister",
@@ -1067,17 +1070,18 @@ The entire response is sent as a JWT format. So the final response will look lik
 ```
 "response" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
 ```
+
 ---
 
 ## Certificates
 The MOSIP server would provide the following retrieve encryption certificate API which is white-listed to the management servers of the device provider or their partners.
 
-**Retrieve Encryption Certificate Request URL:**<br>
+### Retrieve Encryption Certificate Request URL
 `GET https://{base_url}/v1/masterdata/device/encryptioncertficates`
 
 **Version:** v1
 
-**Retrieve Encryption Certificate Request:**
+### Retrieve Encryption Certificate Request
 ```
 {
   "id": "io.mosip.auth.country.certificate",
@@ -1098,13 +1102,13 @@ request : {
 }
 ```
 
-**Accepted Values for Retrieve Certificate Request:**
+### Accepted Values for Retrieve Certificate Request
 ```
 env - Allowed values are Staging| Developer| Pre-Production | Production
 domainUri - unique uri per auth providers. This can be used to federate across multiple providers or countries or unions.
 ```
 
-**Encryption Certificate Response:**
+### Encryption Certificate Response
 ```
 {
   "id": "io.mosip.auth.country.certificate",
@@ -1122,6 +1126,7 @@ The entire response is sent as a JWT format. So the final response will look lik
 ```
 "response" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
 ```
+
 ---
 
 # Management Server and Management Client
