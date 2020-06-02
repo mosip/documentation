@@ -968,8 +968,7 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 consentObtained | Y | Individual's consent | | 
 id | Y | API Id | mosip.identity.otp | 
-version | Y | API version |  | v1 
-transactionID| Y | Transaction ID of request | | 1234567890
+version | Y | API version |  | 1.0 
 requestTime| Y |Time when Request was captured| | 2019-02-15T10:01:57.086+05:30
 individualId| Y | VID | | 9830872690593682
 individualIdType| Y | Allowed Type of Individual ID - VID, UIN | VID
@@ -1063,3 +1062,116 @@ IDA-MLC-009|Invalid Input parameter- attribute  |Invalid Input parameter- attrib
 IDA-MLC-012|Individual's Consent is not available|Invalid resident consent for eKYC/Auth|
 IDA-MLC-015| Identity Type - &lt;Identity Type&gt; not configured for the country|ID Type (UIN/USERID) not supported for a country|
 IDA-MLC-018|%s not available in database|UIN, VID not available in database|
+
+# Identity Update Event Notificcation Service (Internal)
+Whenever an UIN/VID is inserted or updated in ID-Repository module that event will be notifid to ID-Authentication using this Identity Update Event Notificcation Service.
+
+## Users of Retrieve Authentication Types Status Service -
+1. **ID-Repository** -  For any UIN/VID create/update event in ID-Repository module will notify ID-Authentication with this service.
+
+* [POST /idauthentication/v1/internal/notify](#post-idauthenticationv1internalnotify) 
+
+## POST /idauthentication/v1/internal/notify
+This request will post the notification for VID/UIN create/update event. 
+
+### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Request Body Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+consentObtained | Y | Individual's consent | | 
+id | Y | API Id | mosip.identity.event.notify | 
+version | Y | API version |  | 1.0 
+timestamp| Y |Time when Request was captured| | 2019-02-15T10:01:57.086+05:30
+request| Y | Auth type status attributes to be applied for the Individual | | 
+request: events| Y | List of events each for UIN/VID create/update | | 
+request: events: event_type| Y | Event type - CREATE_UIN, UPDATE_UIN, CREATE_VID, UPDATE_VID | | CREATE_UIN
+request: events: uin| atlease one of request:events:uin/request:events:vid field should be present, or both can be present | UIN value | | 9830872690
+request: events: vid| atlease one of request:events:uin/request:events:vid field should be present, or both can be present | VID value | | 5603872690593682
+request: events: expiryTimestamp|N| The expiry time of the UIN/VID on which the event is sent (as per the event_type). If not provided or `null` it is assumed as no expiry | | 2020-02-15T10:01:57.086+05:30
+request: events: transactionLimit|N| The transaction limit of VID only for VID based event_type. If not provided or `null` it is assumed as no-limit | | 1
+
+### Request Body
+```JSON
+{
+	"id": "moip.ida.notification.event",
+	"timestamp": "2019-02-15T10:01:57.086+05:30",
+	"version": "1.0",
+	"request": {
+		"events": [
+			{
+				"event_type ": "CREATE_UIN",
+				"uin": "9830872690 ",
+				"expiryTimestamp": null,
+				"transactionLimit": null
+			},
+			{
+				"event_type ": "CREATE_VID",
+				"vid": "5603872690593682",
+				"uin": "9830872690",
+				"expiryTimestamp": "2020-02-15T10:01:57.086+05:30",
+				"transactionLimit": 1
+			},
+			{
+				"event_type ": "UPDATE_UIN",
+				"uin": "9830872690",
+				"vid": "5603872690593682",
+				"expiryTimestamp": null,
+				"transactionLimit": null
+			},
+			{
+				"event_type ": "UPDATE_VID",
+				"vid": "5603872690593682",
+				"uin": "9830872690",
+				"expiryTimestamp": "2020-02-15T10:01:57.086+05:30",
+				"transactionLimit": 1
+			}
+		]
+	}
+}
+```
+
+### Responses
+
+#### Success Response
+```JSON
+{
+  //API Metadata
+  "id": "moip.ida.notification.event",
+  "version": "1.0",
+  "responseTime": "2019-02-15T07:23:19.590+05:30",
+  "errors": null
+}
+```
+**Response Code : 200 (OK)**
+
+#### Failed Response
+```JSON
+{
+  //API Metadata
+  "id": "moip.ida.notification.event",
+  "version": "v1",
+  "responseTime": "2019-02-15T07:23:19.590+05:30",
+  "errors": [
+    {
+      "errorCode": "IDA-MLC-002",
+      "errorMessage": "Invalid UIN",
+      "actionMessage": "Please retry with the correct UIN"
+    }
+  ]
+}
+```
+**Response Code : 200 (OK)**
+
+### Failure Details
+Error Code|Error Message|Description|Action Message
+-----------|-------------|-----------|----------------
+IDA-MLC-001|Request to be received at MOSIP within&lt;x&gt; hrs/min|Invalid Time stamp|Please send the request within &lt;x&gt; hrs/min
+IDA-MLC-002|Invalid UIN|Invalid UIN|Please retry with the correct UIN.
+IDA-MLC-006|Missing Input parameter- &lt;attribute&gt;  Example: Missing Input parameter- version|Missing Input parameter- attribute - all the mandatory attributes |
+IDA-MLC-007|Request could not be processed. Please try again|Could not process request/Unknown error; Invalid Auth Request|
+IDA-MLC-009|Invalid Input parameter- attribute  |Invalid Input parameter- attribute|
