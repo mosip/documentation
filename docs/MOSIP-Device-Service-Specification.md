@@ -604,12 +604,12 @@ Count value should be driven by the count of the bioSubType for Iris and Finger.
 * captureTime - time of capture in ISO format with timezone. The time is as per the requesting application.
 * domainUri - unique uri per auth providers. This can be used to federate across multiple providers or countries or unions.
 * transactionId - unique Id of the transaction. This is an internal Id to the application thats providing the service. Use different id for every successful auth. So even if the transaction fails after auth we expect this number to be unique.
-* bio.type - "FIR" , "IIR", "Face"
+* bio.type - "Finger" , "Iris", "Face"
 * bio.count - Number of biometric data that is collected for a given type. The device should validate and ensure that this number is in line with the type of biometric that's captured.
 * bio.bioSubType - 
-	* For FIR: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"] 
-	* For IIR: ["Left", "Right", "UNKNOWN"]
-	* For FID: No bioSubType
+	* For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"] 
+	* For Iris: ["Left", "Right", "UNKNOWN"]
+	* For Face: No bioSubType
 * bio.requestedScore - what is the expected quality? Upon reaching the necessary quality the biometric device is expected to auto capture the image.
 * bio.deviceId - A unique Id per device service. In case a single device handles both face and iris the device Id will identify iris and camera uniquely. In case the Id is sent as 0 then the device is expected to capture biometric from both the devices.
 * bio.deviceSubId  - A specific device sub Id. Should be set to 0 if we don't know any specific device sub Id.
@@ -625,7 +625,7 @@ Count value should be driven by the count of the bioSubType for Iris and Finger.
       "digitalId": "digital Id as described in this document",
       "deviceCode": "A unique code given by MOSIP after successful registration",
       "deviceServiceVersion": "Service version",
-      "bioType": "FIR",
+      "bioType": "Finger",
       "bioSubType": "UNKNOWN",
       "purpose": "Auth  or Registration",
       "env": "Target environment",
@@ -650,7 +650,7 @@ Count value should be driven by the count of the bioSubType for Iris and Finger.
       "digitalId": "Digital Id as described in this document",
       "deviceCode": "A unique code given by MOSIP after successful registration",
       "deviceServiceVersion": "Service version",
-      "bioType": "FIR",
+      "bioType": "Finger",
       "bioSubType": "LEFT",
       "purpose": "Auth  or Registration",
       "env": "target environment", 
@@ -673,10 +673,10 @@ Count value should be driven by the count of the bioSubType for Iris and Finger.
 ```
 
 ### Accepted Values for Capture Response
-* data.bioType - "FIR" , "IIR", "Face"
+* data.bioType - "Finger" , "Iris", "Face"
 * data.bioSubType - 
-	* For FIR: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"] 
-	* For IIR: ["Left", "Right", "UNKNOWN"]
+	* For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"] 
+	* For Iris: ["Left", "Right", "UNKNOWN"]
 	* For Face: No bioSubType
 * data.purpose - "Auth"  or "Registration"
 * data.bioValue - Encrypted and Encoded to base64urlencode biometric value. AES GCM encryption with a random key. The IV for the encryption is set to last 16 digits of the timestamp. ISO formatted bioValue. Look at the Authentication document to understand more about the encryption.
@@ -820,11 +820,11 @@ The API is used by the devices that are compatible for the registration module. 
 * specVersion - version of the biometric block as specified in the registration specification.
 * timeout - Max time the app will wait for the capture.
 * captureTime - time of capture in ISO format with timezone, This is time as per the request application.
-* bio.type - "FIR" , "IIR", "Face"
+* bio.type - "Finger" , "Iris", "Face"
 * bio.count - number of biometric data that is collected for a given type. The device should validate and ensure this number is in line with the type of biometric that's captured.
 * bio.exception - This is an array and all the exceptions are marked. In case of an empty element assume there is no exception. In case exceptions are sent for face then follow the exception photo specification above.
-	* For FIR: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb"] 
-	* For IIR: ["Left", "Right"]
+	* For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb"] 
+	* For Iris: ["Left", "Right"]
 * bio.requestedScore - what is the expected quality? Upon reaching the necessary quality the biometric device is expected to auto capture the image.
 * bio.deviceId - a unique Id per device service. In case a single device handles both face and iris the device Id will identify iris and camera uniquely. In case the Id is sent as 0 then the device is expected to capture biometric from both the devices.
 * bio.deviceSubId  - a specific device sub Id. Should be set to nothing if we don't know any specific device sub Id. In case of Fingerprint/IRIS its 1 for left and 2 for right fingerprint/iris. 3 for thumb/two iris. The device id could be used to enable a specific feature in the scanner appropriate for that biometric feature. For eg. if we need to get only a left Iris in a binocular scanner then we can use the sub id.
@@ -884,10 +884,10 @@ The API is used by the devices that are compatible for the registration module. 
 
 ### Allowed Values for Device Registration Response
 * data - base64urlencode(header).base64urlencode(payload).base64urlencode(signature)
-* data.bioType - "FIR" , "IIR", "Face"
+* data.bioType - "Finger" , "Iris", "Face"
 * data.bioSubType - 
-	* For FIR: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"] 
-	* For IIR: ["Left", "Right", "UNKNOWN"]
+	* For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"] 
+	* For Iris: ["Left", "Right", "UNKNOWN"]
 	* For Face: No bioSubType
 * data.timestamp - Time as per the biometric device. Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
 

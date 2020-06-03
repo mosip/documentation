@@ -59,6 +59,7 @@ request: biometrics|N| Biometric data of an Individual which is sent in the resp
 request: biometrics: data|Y| JWS format of Biometric data of an Individual with X509 certificate. The payload present in JWS is encrypted by below biometrics.sessionKey using symmetric encryption algorithm - AES/GCM/PKCS5Padding | |
 request: biometrics: hash|Y| SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format. While calculating the hash for the first biometrics.data entry assume empty string as previous data block.| |
 request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.5](https://docs.mosip.io/platform/biometrics/mosip-device-service-specification#capture) to encrypt above biometric data attribute. This symmetric key is encrypted by MOSIP Public Key shared to Device Providers using asymmetric key algorithm - RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING, and then Base64-url-encoded| |
+request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.5](https://docs.mosip.io/platform/biometrics/mosip-device-service-specification#capture) to encrypt above biometric data attribute. This symmetric key is encrypted by MOSIP Public Key shared to Device Providers using asymmetric key algorithm - RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING, and then Base64-url-encoded| |
 
 Mandatory fields for different types of authentications: 
 
@@ -188,13 +189,13 @@ Mandatory fields for different types of authentications:
 ### Failure Details
 Error Code|Error Message|Description|Action Message
 -----------|-------------|-----------|----------------
-IDA-BIA-001| Biometric data &ndash; &lt;Biometric Attribute&gt; did not match|FIR,IIR,FACE Mismatch|Please give your biometrics again.
+IDA-BIA-001| Biometric data &ndash; &lt;Biometric Attribute&gt; did not match|Finger,Iris,Face Mismatch|Please give your biometrics again.
 IDA-BIA-002|Duplicate fingers in request.|Duplicate fingers|Please try again with distinct fingers
 IDA-BIA-003|Number of Fingers should not exceed 10.|Fingers exceeding 10|
 IDA-BIA-006|Biometric data &lt;Biometric Attribute&gt; not available in database.|Missing biometric data in MOSIP database |Your Biometric data is not available in MOSIP
 IDA-BIA-007|Duplicate Irises in request.|Duplicate Irises used|Please try again with distinct Irises
-IDA-BIA-008|Number of IIR should not exceed 2.|Irises exceeding 2|
-IDA-BIA-009|Number of FACE records should not exceed 1.|Face exceeding 1|
+IDA-BIA-008|Number of Iris should not exceed 2.|Irises exceeding 2|
+IDA-BIA-009|Number of Face records should not exceed 1.|Face exceeding 1|
 IDA-DEA-001|Demographic data  &lt;demo attribute&gt;  in  &lt;Language Code&gt; (if applicable) did not match|name, Full Address, Address line Items, Gender, Phone,e-mail,DOB,DOB Type, and age Mismatch in any language|Please re-enter your  &lt;demo attribute&gt;  in &lt;Language Code&gt; 
 IDA-DEA-002|Unsupported Language Code &lt;XX&gt;|Unsupported language Code used in the Lang attribute|
 IDA-DEA-003|Demographic data  &lt;Demographic Attribute&gt; in &lt;Language Code&gt; (if applicable)  not available in database.|Individual&rsquo;s data not available|
@@ -216,7 +217,7 @@ IDA-MLC-015| Identity Type - &lt;Identity Type&gt; not configured for the countr
 IDA-MLC-018|%s not available in database|UIN,VID, User ID not available in database|
 IDA-MPA-003|Unable to decrypt Request.|Invalid encryption of session key/request|
 IDA-MPA-004|MOSIP Public key expired. |MOSIP Public key expired|Please reinitiate the request with updated public key
-IDA-MPA-006|&lt;Auth Type&gt; - &lt;Sub Type&gt; (if applicable) Authentication Usage not allowed as per policy (Eg: OTP/Demo/Bio - FIR)|All Authentication Usages not allowed as per policy|
+IDA-MPA-006|&lt;Auth Type&gt; - &lt;Sub Type&gt; (if applicable) Authentication Usage not allowed as per policy (Eg: OTP/Demo/Bio - Finger)|All Authentication Usages not allowed as per policy|
 IDA-MPA-007|License key does not belong to a registered MISP|License key does not belong to a registered MISP/ License key invalid|
 IDA-MPA-008|License key of MISP has expired|License key expired|
 IDA-MPA-009|Partner is not registered|PartnerID Invalid|
@@ -224,7 +225,7 @@ IDA-MPA-010|MISP and Partner not mapped|MISP and Partner not |
 IDA-MPA-011|License key of MISP is suspended|License key status of MISP is suspended|
 IDA-MPA-012|Partner is deactivated|PartnerID is not active|
 IDA-MPA-014|Partner is not assigned with any policy|PartnerID is not mapped to a policy|
-IDA-MPA-015|&lt;Auth Type&gt; - &lt;Sub Type&gt; (if applicable) Authentiation Usage is mandatory as per policy (Eg: OTP/Demo/Bio - FIR)|Mandatory Auth Type as per policy of the partner is not available in the auth request|
+IDA-MPA-015|&lt;Auth Type&gt; - &lt;Sub Type&gt; (if applicable) Authentiation Usage is mandatory as per policy (Eg: OTP/Demo/Bio - Finger)|Mandatory Auth Type as per policy of the partner is not available in the auth request|
 IDA-MPA-016|HMAC Validation failed|HMAC value does not match|
 IDA-MPA-017|License key of MISP is blocked|License key status of MISP is blocked|
 IDA-OTA-003|OTP has expired|OTP expired|Please regenerate OTP and try again after sometime.
@@ -424,13 +425,13 @@ request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.5](https://do
 ### Failure Details
 Error Code|Error Message|Description|Action Message
 -----------|-------------|-----------|----------------
-IDA-BIA-001| Biometric data &ndash; &lt;Biometric Attribute&gt; did not match|FIR,IIR,FACE Mismatch|Please give your biometrics again.
+IDA-BIA-001| Biometric data &ndash; &lt;Biometric Attribute&gt; did not match|Finger,Iris,Face Mismatch|Please give your biometrics again.
 IDA-BIA-002|Duplicate fingers in request.|Duplicate fingers|Please try again with distinct fingers
-IDA-BIA-003|Number of FIR should not exceed 10.|Fingers exceeding 10|
+IDA-BIA-003|Number of Finger should not exceed 10.|Fingers exceeding 10|
 IDA-BIA-006|Biometric data &lt;Biometric Attribute&gt; not available in database.|Missing biometric data in MOSIP database |Your Biometric data is not available in MOSIP
 IDA-BIA-007|Duplicate Irises in request.|Duplicate Irises used|Please try again with distinct Irises
-IDA-BIA-008|Number of IIR should not exceed 2.|Irises exceeding 2|
-IDA-BIA-009|Number of FACE records should not exceed 1.|Face exceeding 1|
+IDA-BIA-008|Number of Iris should not exceed 2.|Irises exceeding 2|
+IDA-BIA-009|Number of Face records should not exceed 1.|Face exceeding 1|
 IDA-EKA-001|Unable to encrypt eKYC response|Invalid encryption of eKYC response|
 IDA-MLC-001|Request to be received at MOSIP within&lt;x&gt; hrs/min|Invalid Time stamp|Please send the request within &lt;x&gt; hrs/min
 IDA-MLC-002|Invalid UIN|Invalid UIN|Please retry with the correct UIN.
@@ -450,7 +451,7 @@ IDA-MLC-015| Identity Type - &lt;Identity Type&gt; not configured for the countr
 IDA-MLC-018|%s not available in database|UIN,VID, User ID not available in database|
 IDA-MPA-003|Unable to decrypt Request.|Invalid encryption of session key/request|
 IDA-MPA-004|MOSIP Public key expired. |MOSIP Public key expired|Please reinitiate the request with updated public key
-IDA-MPA-006|&lt;Auth Type&gt; - &lt;Sub Type&gt; (if applicable) Authentication Usage not allowed as per policy (Eg: OTP/Demo/Bio - FIR)|All Authentication Usages not allowed as per policy|
+IDA-MPA-006|&lt;Auth Type&gt; - &lt;Sub Type&gt; (if applicable) Authentication Usage not allowed as per policy (Eg: OTP/Demo/Bio - Finger)|All Authentication Usages not allowed as per policy|
 IDA-MPA-007|License key does not belong to a registered MISP|License key does not belong to a registered MISP/ License key invalid|
 IDA-MPA-008|License key of MISP has expired|License key expired|
 IDA-MPA-009|Partner is not registered|PartnerID Invalid|
@@ -459,7 +460,7 @@ IDA-MPA-011|License key of MISP is suspended|License key status of MISP is suspe
 IDA-MPA-012|Partner is deactivated|PartnerID is not active|
 IDA-MPA-013|Partner is unauthorised for eKYC|Partner has no permission for e-KYC|
 IDA-MPA-014|Partner is not assigned with any policy|PartnerID is not mapped to a policy|
-IDA-MPA-015|&lt;Auth Type&gt; - &lt;Sub Type&gt; (if applicable) Authentiation Usage is mandatory as per policy (Eg: OTP/Demo/Bio - FIR)|Mandatory Auth Type as per policy of the partner is not available in the auth request|
+IDA-MPA-015|&lt;Auth Type&gt; - &lt;Sub Type&gt; (if applicable) Authentiation Usage is mandatory as per policy (Eg: OTP/Demo/Bio - Finger)|Mandatory Auth Type as per policy of the partner is not available in the auth request|
 IDA-MPA-016|HMAC Validation failed|HMAC value does not match|
 IDA-MPA-017|License key of MISP is blocked|License key status of MISP is blocked|
 IDA-OTA-003|OTP has expired|OTP expired|Please regenerate OTP and try again after sometime.
@@ -635,7 +636,7 @@ request: otp| N | OTP | |
 request: timestamp| N | Timestamp when request block was captured| | 
 request: biometrics|N| Biometric data of an Individual| |
 request: biometrics: data|Y| Base-64-URL encoded Biometric data of an Individual which is encrypted by below biometrics.sessionKey using symmetric encryption algorithm - AES/GCM/PKCS5Padding | |
-request: biometrics: data: bioType|Y| Biometric data type - FIR,IIR,FACE | |
+request: biometrics: data: bioType|Y| Biometric data type - Finger,Iris,Face | |
 request: biometrics: data: bioSubType|Y| Biometric data sub-types: <p> - For Finger Modality: "Left IndexFinger", "Left MiddleFinger","Left RingFinger","Left LittleFinger","Left Thumb","Right IndexFinger", "Right MiddleFinger","Right RingFinger","Right LittleFinger","Right Thumb", "UNKNOWN"</p> <p> - For Iris Modality: "Left","Right", "UNKNOWN"</p> <p> - For Face Modality:  No sub type </p>| |
 request: biometrics: data: bioValue|Y| Biometric data encrypted with session key and base-64-URL encoded. For symmetric key encryption of bioValue, base64 encoded value of last 16 digits of biometrics.data.timestamp should be used as aad parameter,  and base 64 encoded value of last 12 digits of biometrics.data.timestamp should be used as iv (salt) parameter.| |
 request: biometrics: data: timestamp|Y| This timestamp is used in encryption of biometrics.data.bioValue as described above. | | 2019-02-15T10:01:57.086+05:30
@@ -664,7 +665,7 @@ request: biometrics: sessionKey|Y| Symmetric key used to encrypt above biometric
     "biometrics": [
       {
         "data": { // Base-64-URL encoded
-          "bioType": "FIR",
+          "bioType": "Finger",
           "bioSubType": "UNKNOWN",
           "bioValue": "<encrypted with session key and base-64-URL encoded biometric data>",
           "timestamp": "2019-02-15T10:01:57.086+05:30"
@@ -674,7 +675,7 @@ request: biometrics: sessionKey|Y| Symmetric key used to encrypt above biometric
       },
       {
         "data": { // Base-64-URL encoded
-          "bioType": "IIR",
+          "bioType": "Iris",
           "bioSubType": "RIGHT",
           "bioValue": "<encrypted with session key and base-64-URL encoded biometric data>",
           "timestamp": "2019-02-15T10:01:57.086+05:30"
@@ -734,13 +735,13 @@ request: biometrics: sessionKey|Y| Symmetric key used to encrypt above biometric
 ### Failure Details
 Error Code|Error Message|Description|Action Message
 -----------|-------------|-----------|----------------
-IDA-BIA-001| Biometric data &ndash; &lt;Biometric Attribute&gt; did not match|FIR,IIR,FACE Mismatch|Please give your biometrics again.
+IDA-BIA-001| Biometric data &ndash; &lt;Biometric Attribute&gt; did not match|Finger,Iris,Face Mismatch|Please give your biometrics again.
 IDA-BIA-002|Duplicate fingers in request.|Duplicate fingers|Please try again with distinct fingers
 IDA-BIA-003|Number of Fingers should not exceed 10.|Fingers exceeding 10|
 IDA-BIA-006|Biometric data &lt;Biometric Attribute&gt; not available in database.|Missing biometric data in MOSIP database |Your Biometric data is not available in MOSIP
 IDA-BIA-007|Duplicate Irises in request.|Duplicate Irises used|Please try again with distinct Irises
-IDA-BIA-008|Number of IIR should not exceed 2.|Irises exceeding 2|
-IDA-BIA-009|Number of FACE records should not exceed 1.|Face exceeding 1|
+IDA-BIA-008|Number of Iris should not exceed 2.|Irises exceeding 2|
+IDA-BIA-009|Number of Face records should not exceed 1.|Face exceeding 1|
 IDA-MLC-001|Request to be received at MOSIP within&lt;x&gt; hrs/min|Invalid Time stamp|Please send the request within &lt;x&gt; hrs/min
 IDA-MLC-002|Invalid UIN|Invalid UIN|Please retry with the correct UIN.
 IDA-MLC-003|UIN has been deactivated|UIN Deactivated|Your UIN status is not active.
@@ -903,17 +904,17 @@ ID | Y | The value of IDType - UIN or VID |   | 1234567890
       },
       {
         "authType": "bio",
-        "authSubType": "FIR",
+        "authSubType": "Finger",
         "isLocked": true
       },
       {
         "authType": "bio",
-        "authSubType": "IIR",
+        "authSubType": "Iris",
         "isLocked": true
       },
       {
         "authType": "bio",
-        "authSubType": "FACE",
+        "authSubType": "Face",
         "isLocked": true
       }
     ]
@@ -975,7 +976,7 @@ individualIdType| Y | Allowed Type of Individual ID - VID, UIN | VID
 request| Y | Auth type status attributes to be applied for the Individual | | 
 request: authTypes| Y | List of auth type status attributes to be applied for the Individual | | 
 request: authTypes: authType| Y | Auth type to lock - otp, demo, bio | | bio
-request: authTypes: authSubType| N | Auth sub type to lock (if applicable for the selected autType) | | FIR
+request: authTypes: authSubType| N | Auth sub type to lock (if applicable for the selected autType) | | Finger
 request: authTypes: isLocked|Y| Boolean value (`true` or `false`) whether to lock or unlock the selected authType (and authSubType) | | true
 
 ### Request Body
@@ -1000,17 +1001,17 @@ request: authTypes: isLocked|Y| Boolean value (`true` or `false`) whether to loc
       },
       {
         "authType": "bio",
-        "authSubType": "FIR",
+        "authSubType": "Finger",
         "isLocked": true
       },
       {
         "authType": "bio",
-        "authSubType": "IIR",
+        "authSubType": "Iris",
         "isLocked": true
       },
       {
         "authType": "bio",
-        "authSubType": "FACE",
+        "authSubType": "Face",
         "isLocked": true
       }
     ]
