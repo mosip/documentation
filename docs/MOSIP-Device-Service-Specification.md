@@ -618,58 +618,60 @@ Count value should be driven by the count of the bioSubType for Iris and Finger.
 
 ### Capture Response
 ```
-[
-  {
-    "specVersion": "MDS spec version",
-    "data": {	
-      "digitalId": "digital Id as described in this document",
-      "deviceCode": "A unique code given by MOSIP after successful registration",
-      "deviceServiceVersion": "Service version",
-      "bioType": "Finger",
-      "bioSubType": "UNKNOWN",
-      "purpose": "Auth  or Registration",
-      "env": "Target environment",
-      "domainUri": "URI of the auth server",
-      "bioValue": "Encrypted with session key and base64urlencoded biometric data",
-      "transactionId": "Unique transaction id",
-      "timestamp": "ISO format datetime with time zone",
-      "requestedScore": "Floating point number to represent the minimum required score for the capture",
-      "qualityScore": "Floating point number representing the score for the current capture"
+{
+  "biometrics": [
+    {
+      "specVersion": "MDS spec version",
+      "data": {	
+        "digitalId": "digital Id as described in this document",
+        "deviceCode": "A unique code given by MOSIP after successful registration",
+        "deviceServiceVersion": "Service version",
+        "bioType": "Finger",
+        "bioSubType": "UNKNOWN",
+        "purpose": "Auth  or Registration",
+        "env": "Target environment",
+        "domainUri": "URI of the auth server",
+        "bioValue": "Encrypted with session key and base64urlencoded biometric data",
+        "transactionId": "Unique transaction id",
+        "timestamp": "ISO format datetime with time zone",
+        "requestedScore": "Floating point number to represent the minimum required score for the capture",
+        "qualityScore": "Floating point number representing the score for the current capture"
+      },
+      "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
+      "sessionKey": "encrypted with MOSIP public key (dynamically selected based on the uri) and encoded session key biometric",
+      "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
+	  "error": {
+        "errorcode": "101",
+        "errorinfo": "Invalid JSON Value"
+      }
     },
-    "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
-    "sessionKey": "encrypted with MOSIP public key (dynamically selected based on the uri) and encoded session key biometric",
-    "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
-	"error": {
-      "errorcode": "101",
-      "errorinfo": "Invalid JSON Value"
+    {
+      "specVersion" : "MDS spec version",
+      "data": {
+        "digitalId": "Digital Id as described in this document",
+        "deviceCode": "A unique code given by MOSIP after successful registration",
+        "deviceServiceVersion": "Service version",
+        "bioType": "Finger",
+        "bioSubType": "Left IndexFinger",
+        "purpose": "Auth  or Registration",
+        "env": "target environment", 
+        "domainUri": "uri of the auth server",          
+        "bioValue": "encrypted with session key and base64urlencoded biometric data",
+        "transactionId": "unique transaction id",
+        "timestamp": "ISO Format date time with timezone",
+	    "requestedScore": "Floating point number to represent the minimum required score for the capture",
+        "qualityScore": "Floating point number representing the score for the current capture"
+      },
+      "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
+      "sessionKey": "encrypted with MOSIP public key and encoded session key biometric",
+      "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
+      "error": {
+        "errorcode": "101",
+        "errorinfo": "Invalid JSON Value"
+      }
     }
-  },
-  {
-    "specVersion" : "MDS spec version",
-    "data": {
-      "digitalId": "Digital Id as described in this document",
-      "deviceCode": "A unique code given by MOSIP after successful registration",
-      "deviceServiceVersion": "Service version",
-      "bioType": "Finger",
-      "bioSubType": "LEFT",
-      "purpose": "Auth  or Registration",
-      "env": "target environment", 
-      "domainUri": "uri of the auth server",          
-      "bioValue": "encrypted with session key and base64urlencoded biometric data",
-      "transactionId": "unique transaction id",
-      "timestamp": "ISO Format date time with timezone",
-	  "requestedScore": "Floating point number to represent the minimum required score for the capture",
-      "qualityScore": "Floating point number representing the score for the current capture"
-    },
-    "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
-    "sessionKey": "encrypted with MOSIP public key and encoded session key biometric",
-    "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
-    "error": {
-      "errorcode": "101",
-      "errorinfo": "Invalid JSON Value"
-    }
-  }
-]
+  ]
+}
 ```
 
 ### Accepted Values for Capture Response
@@ -793,20 +795,22 @@ The API is used by the devices that are compatible for the registration module. 
 ### Device Registration Capture Request
 ```
 {
-  "env":  "target environment",
-  "specVersion": "expected MDS spec version",
-  "timeout": "timeout for registration capture",
-  "captureTime": "time of capture request in ISO format including timezone",
-  "registrationId": "registration Id for the current capture",
+  "env":  "Target environment",
+  "purpose": "Auth  or Registration",
+  "specVersion": "Expected MDS spec version",
+  "timeout": "Timeout for registration capture",
+  "captureTime": "Time of capture request in ISO format including timezone",
+  "transactionId": "Transaction Id for the current capture",
   "bio": [
     {
-      "type": "type of the biometric data",
-      "count":  "fingerprint/Iris count, in case of face max is set to 1",
-	  "exception": ["finger or iris to be excluded"],
-	  "requestedScore": "expected quality score that should match to complete a successful capture.",
-	  "deviceId": "internal Id",
-	  "deviceSubId": "specific device Id",
-	  "previousHash": "hash of the previous block"
+      "type": "Type of the biometric data",
+      "count":  "Fingerprint/Iris count, in case of face max is set to 1",
+      "bioSubType": ["Array of subtypes"],
+      "exception": ["Finger or Iris to be excluded"],
+      "requestedScore": "Expected quality score that should match to complete a successful capture.",
+      "deviceId": "Internal Id",
+      "deviceSubId": "Specific device Id",
+      "previousHash": "Hash of the previous block"
   	}
   ],
   customOpts: {
@@ -816,18 +820,24 @@ The API is used by the devices that are compatible for the registration module. 
 ```
 
 ### Accepted Values for Device Registration Request
-* env - Allowed values are Staging| Developer| Pre-Production | Production
+* env - Allowed values are Staging | Developer | Pre-Production | Production
+* purpose - Allowed values are Auth | Registration
 * specVersion - version of the biometric block as specified in the registration specification.
 * timeout - Max time the app will wait for the capture.
-* captureTime - time of capture in ISO format with timezone, This is time as per the request application.
+* captureTime - Time of capture in ISO format with timezone, This is time as per the request application.
+* transactionId - Unique transaction Id for the current capture request
 * bio.type - "Finger" , "Iris", "Face"
-* bio.count - number of biometric data that is collected for a given type. The device should validate and ensure this number is in line with the type of biometric that's captured.
+* bio.count - Number of biometric data that is collected for a given type. The device should validate and ensure this number is in line with the type of biometric that's captured.
+* bio.bioSubType - Array of bioSubType for respective biometric type
+	* For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb"]
+	* For Iris: ["Left", "Right"]
+	* For Face: No bioSubType
 * bio.exception - This is an array and all the exceptions are marked. In case of an empty element assume there is no exception. In case exceptions are sent for face then follow the exception photo specification above.
 	* For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb"] 
 	* For Iris: ["Left", "Right"]
-* bio.requestedScore - what is the expected quality? Upon reaching the necessary quality the biometric device is expected to auto capture the image.
-* bio.deviceId - a unique Id per device service. In case a single device handles both face and iris the device Id will identify iris and camera uniquely. In case the Id is sent as 0 then the device is expected to capture biometric from both the devices.
-* bio.deviceSubId  - a specific device sub Id. Should be set to nothing if we don't know any specific device sub Id. In case of Fingerprint/IRIS its 1 for left and 2 for right fingerprint/iris. 3 for thumb/two iris. The device id could be used to enable a specific feature in the scanner appropriate for that biometric feature. For eg. if we need to get only a left Iris in a binocular scanner then we can use the sub id.
+* bio.requestedScore - What is the expected quality? Upon reaching the necessary quality the biometric device is expected to auto capture the image.
+* bio.deviceId - A unique Id per device service. In case a single device handles both face and iris the device Id will identify iris and camera uniquely. In case the Id is sent as 0 then the device is expected to capture biometric from both the devices.
+* bio.deviceSubId  - A specific device sub Id. Should be set to nothing if we don't know any specific device sub Id. In case of Fingerprint/IRIS its 1 for left and 2 for right fingerprint/iris. 3 for thumb/two iris. The device id could be used to enable a specific feature in the scanner appropriate for that biometric feature. For eg. if we need to get only a left Iris in a binocular scanner then we can use the sub id.
 * bio.previousHash - For the first capture the previousHash is hash of empty utf8 string. From the second capture the previous captures hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.
 
 ### Device Registration Response
@@ -845,7 +855,7 @@ The API is used by the devices that are compatible for the registration module. 
         "purpose": "Auth  or Registration",
         "env": "target environment",
         "bioValue": "<base64urlencoded biometrics (ISO format)>",
-        "registrationId": "1234567890",
+        "transactionId": "Unique transaction id sent in request",
         "timestamp": "2019-02-15T10:01:57.086+05:30",
         "requestedScore": "<floating point number to represent the minimum required score for the capture. This ranges from 0-100>",
         "qualityScore": "<floating point number representing the score for the current capture. This ranges from 0-100>"
