@@ -4,29 +4,29 @@
 
 # Table of Contents 
 
-1. [Introduction & Background](#introduction-and-background)
-2. [Glossary of Terms](#glossary-of-terms)
-3. [Device Specification](#device-specification)
-4. [Device Trust](#device-trust)
-	4.1. [Foundational Trust Module](#foundational-trust-module-ftm)
-	4.2. [Device](#device)
-	4.3. [Keys](#keys)
-5. [Device Service - Communication Interfaces](#device-service-communication-interfaces)
-	5.1. [Device Discovery](#device-discovery) 
-	5.2. [Device Info](#device-info) 
-	5.3. [Capture](#capture) 
-	5.4. [Device Stream](#device-stream) 
-	5.5. [Device Registration Capture](#device-registration-capture) 
-6. [Device Server](#device-server)
-	6.1. [Registration](#registration)
-	6.2. [De-Register](#de-register)
-	6.3. [Certificates](#certificates)
-7. [Management Server and Client](#management-server-and-management-client)
-	7.1. [Management Server Functionalities and Interactions](#management-server-functionalities-and-interactions)
-	7.2. [Management Client](#management-client)
-8. [Compliance](#compliance)
-9. [Cryptography](#cryptography)
-10. [Error Codes](#error-codes)
+* [Introduction & Background](#introduction-and-background)
+* [Glossary of Terms](#glossary-of-terms)
+* [Device Specification](#device-specification)
+* [Device Trust](#device-trust)
+	* [Foundational Trust Module](#foundational-trust-module-ftm)
+	* [Device](#device)
+	* [Keys](#keys)
+* [Device Service - Communication Interfaces](#device-service-communication-interfaces)
+	* [Device Discovery](#device-discovery) 
+	* [Device Info](#device-info) 
+	* [Capture](#capture) 
+	* [Device Stream](#device-stream) 
+	* [Device Registration Capture](#device-registration-capture) 
+* [Device Server](#device-server)
+	* [Registration](#registration)
+	* [De-Register](#de-register)
+	* [Certificates](#certificates)
+* [Management Server and Client](#management-server-and-management-client)
+	* [Management Server Functionalities and Interactions](#management-server-functionalities-and-interactions)
+	* [Management Client](#management-client)
+* [Compliance](#compliance)
+* [Cryptography](#cryptography)
+* [Error Codes](#error-codes)
 
 ---
 
@@ -640,7 +640,7 @@ Count value should be driven by the count of the bioSubType for Iris and Finger.
       "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
       "sessionKey": "encrypted with MOSIP public key (dynamically selected based on the uri) and encoded session key biometric",
       "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
-	  "error": {
+      "error": {
         "errorcode": "101",
         "errorinfo": "Invalid JSON Value"
       }
