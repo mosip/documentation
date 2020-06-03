@@ -155,6 +155,7 @@ Error Code  | Error Message | Error Description
 KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
+KER-MDS-003 |Requiered Device Type details Not Found|Device code is not found
 
 ## PUT /devicetypes
 This service will update the Device Types which are used in the MOSIP platform. 
@@ -234,6 +235,7 @@ Error Code  | Error Message | Error Description
 KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
+KER-MDS-003 |Requiered Device Type details Not Found|Device code is not found
 
 ## DELETE /devicetypes/{code}
 This service will provides the service to delete the device types. 
@@ -294,6 +296,7 @@ Error Code  | Error Message | Error Description
 KER-MSD-500 |Internal Server Error|If system error occurs
 KER-ATH-403 |Forbidden|If unauthorized role detected
 KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
+KER-MDS-003 |Requiered Device Type details Not Found|Device code is not found
 
 # Device Subtypes
 * [POST /devicesubtypes](#post-devicesubtypes)
