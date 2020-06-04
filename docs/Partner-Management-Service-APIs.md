@@ -151,7 +151,7 @@ PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attr
 PMS_COR_003|Could not process the request|Any Internal Error
 
 ### PATCH /misps/{mispId}/status
-This API would be used to approve or reject the misp.Post successful MISP approval, MISP License key is generated and set to active status.MISP License key is configurable and set to expire in 3 months, 6 months OR any configurable period.
+This API would be used to approve or reject the MISP.Post successful MISP approval, MISP License key is generated and set to active status.MISP License key is configurable and set to expire in 3 months, 6 months OR any configurable period.
 
 #### Resource URL
 `https://mosip.io/partnermanagement/v1/misps/{mispId}/status`
