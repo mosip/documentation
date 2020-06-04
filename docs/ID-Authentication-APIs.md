@@ -1,5 +1,6 @@
 
 This section details about the REST services in ID Authentication module.
+
 * [Authentication Service](#authentication-service-public) - This service can be used by Partners to authenticate an Individual using OTP, Demographic or Biometric-based authentication.
 * [eKYC Service](#ekyc-service-public) - This service can be used by Partners to retrieve KYC details of an Individual, after authenticating them using OTP or Biometric-based authentication.
 * [OTP Request Service](#otp-request-service-public) - This service can be used by Partners to send OTP on behalf of Individual, which can then be used for OTP-based authentication.
