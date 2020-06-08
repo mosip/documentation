@@ -879,7 +879,7 @@ The API is used by the devices that are compatible for the registration module. 
         "purpose": "Auth  or Registration",
         "env":  "Target environment",             
         "bioValue": "base64urlencoded extracted biometric (ISO format)",
-        "registrationId": "1234567890",
+        "transactionId": "Unique transaction id sent in request",
         "timestamp": "2019-02-15T10:01:57.086+05:30",
         "requestedScore": "floating point number to represent the minimum required score for the capture. This ranges from 0-100",
         "qualityScore": "floating point number representing the score for the current capture. This ranges from 0-100"
