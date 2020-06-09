@@ -849,18 +849,18 @@ The API is used by the devices that are compatible for the registration module. 
     {
       "specVersion": "MDS Spec version",
       "data": {	
-        "digitalId": "digital id of the device as per the Digital Id definition..",
+        "digitalId": "Digital id of the device as per the Digital Id definition..",
         "bioType": "Biometric type",
         "deviceCode": "A unique code given by MOSIP after successful registration",
-        "deviceServiceVersion": "",
+        "deviceServiceVersion": "Device service version",
         "bioSubType": "Left IndexFinger",
         "purpose": "Auth  or Registration",
-        "env": "target environment",
-        "bioValue": "<base64urlencoded biometrics (ISO format)>",
+        "env": "Target environment",
+        "bioValue": "base64urlencoded biometrics (ISO format)",
         "transactionId": "Unique transaction id sent in request",
         "timestamp": "2019-02-15T10:01:57.086+05:30",
-        "requestedScore": "<floating point number to represent the minimum required score for the capture. This ranges from 0-100>",
-        "qualityScore": "<floating point number representing the score for the current capture. This ranges from 0-100>"
+        "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100.",
+        "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100."
       },
       "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block)",         
       "error": {
@@ -871,18 +871,18 @@ The API is used by the devices that are compatible for the registration module. 
     {
       "specVersion" : "MDS Spec version",
       "data": {
-        "deviceCode": "",
-        "bioType" : "Iris",
-        "digitalId": "digital id of the device as per the Digital Id definition.", 
-        "deviceServiceVersion": "",
-        "bioSubType": "Left",
+        "deviceCode": "A unique code given by MOSIP after successful registration",
+        "bioType" : "Finger",
+        "digitalId": "Digital id of the device as per the Digital Id definition.", 
+        "deviceServiceVersion": "Device service version",
+        "bioSubType": "Left MiddleFinger",
         "purpose": "Auth  or Registration",
         "env":  "Target environment",             
         "bioValue": "base64urlencoded extracted biometric (ISO format)",
         "transactionId": "Unique transaction id sent in request",
         "timestamp": "2019-02-15T10:01:57.086+05:30",
-        "requestedScore": "floating point number to represent the minimum required score for the capture. This ranges from 0-100",
-        "qualityScore": "floating point number representing the score for the current capture. This ranges from 0-100"
+        "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100",
+        "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100"
       },
       "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
       "error": {
@@ -947,25 +947,25 @@ This API is exposed by the MOSIP server to the device providers.
   "request": {
     "deviceData": "JWT of the below device data"
   },
-  "requesttime": "current timestamp in ISO format from management server",
-  "version": "registration server api version as defined above"
+  "requesttime": "Current timestamp in ISO format from management server",
+  "version": "Registration server api version as defined above"
 }
 ```
 
 ### Decoded Device Data
 ```
 "deviceData": { 
-  "deviceId": "unique Id to identify a biometric capture device",
-  "purpose": "Auth  or Registration. Can not be empty",
+  "deviceId": "Unique Id to identify a biometric capture device",
+  "purpose": "Auth or Registration. Can not be empty.",
   "deviceInfo": {
-    "deviceSubId": "an array of sub Ids that are available",
+    "deviceSubId": "An array of sub Ids that are available",
     "certification":  "certification level",
-    "digitalId": "signed digital id of the device",
-    "firmware": "firmware version",
-    "deviceExpiry": "device expiry date",
+    "digitalId": "Signed digital id of the device",
+    "firmware": "Firmware version",
+    "deviceExpiry": "Device expiry date",
     "timestamp":  "ISO format datetime with timezone from device"
   },
-  "foundationalTrustProviderId" : "foundation trust provider Id, in case of L0 this is empty"
+  "foundationalTrustProviderId" : "Foundation trust provider Id, in case of L0 this is empty"
 }
 ```
 
@@ -989,13 +989,13 @@ After successful registration the management server should issue a certificate a
 ```
 {
   "id": "io.mosip.deviceregister",
-  "version": "registration server API version as defined above",
-  "responsetime": "iso time format",
+  "version": "Registration server API version as defined above",
+  "responsetime": "ISO time format",
   "response": "JWT of the below device data",
-  "error": [ //Filled in case of error. Remaining keys above are dropped in case of errors.
+  "error": [
     { 
-      "errorCode": "error code if registration fails",
-   	  "message": "description of the error code"
+      "errorCode": "Error code if registration fails. Remaining keys above are dropped in case of errors.",
+   	  "message": "Description of the error code"
     }
   ]
 }
@@ -1004,10 +1004,10 @@ After successful registration the management server should issue a certificate a
 ### Definition of Device Registration Response
 ```
 "response": {
-  "status":  "registration status",
-  "digitalId": "digital id of the device a sent by the request", 
+  "status":  "Registration status",
+  "digitalId": "Digital id of the device a sent by the request", 
   "deviceCode": "UUID RFC4122 Version 4 for the device issued by the mosip server",
-  "timestamp": "timestamp in ISO format",
+  "timestamp": "Timestamp in ISO format",
   "env": "prod/development/stage"
 }
 ```
@@ -1042,13 +1042,7 @@ The MOSIP server would provide the following device de-registration API which is
       "env": "<environment>"
     }
   }
-  "requesttime": "current timestamp in ISO format",
-  "error": [ //Filled in case of error. Remaining keys above are dropped in case of errors.
-    {
-   	  "errorCode": "error code if registration fails",
-   	  "message": "description of the error code"
-    }
-  ]
+  "requesttime": "current timestamp in ISO format"
 }
 ```
 
@@ -1070,10 +1064,12 @@ The entire request is sent as a JWT format. So the final request will look like:
     "deviceCode": "<device code>",
     "env": "<environment>",
     "timestamp": "timestamp in ISO format",
-    "error": {
-      "code" : "<error code if de-registration fails>",
-      "message" : "<human readable description of the error code>"
-    }
+    "error": [
+	  {
+        "errorCode" : "<error code if de-registration fails>",
+        "message" : "<human readable description of the error code>"
+      }
+	
   }       
 }
 ```
