@@ -364,7 +364,7 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 ```JSON
 [
   {    
-	"deviceId": "Internal ID",
+    "deviceId": "Internal ID",
     "deviceStatus": "Device status",
     "certification": "Certification level",
     "serviceVersion": "Device service version",
@@ -660,7 +660,7 @@ Count value should be driven by the count of the bioSubType for Iris and Finger.
         "bioValue": "encrypted with session key and base64urlencoded biometric data",
         "transactionId": "unique transaction id",
         "timestamp": "ISO Format date time with timezone",
-	    "requestedScore": "Floating point number to represent the minimum required score for the capture",
+        "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
       },
       "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
@@ -813,7 +813,7 @@ The API is used by the devices that are compatible for the registration module. 
       "deviceId": "Internal Id",
       "deviceSubId": "Specific device Id",
       "previousHash": "Hash of the previous block"
-  	}
+    }
   ],
   customOpts: {
     //max of 50 key value pair. This is so that vendor specific parameters can be sent if necessary. The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications. Vendors are free to include additional parameters and fine-tuning parameters. None of these values should go undocumented by the vendor. No sensitive data should be available in the customOpts.
@@ -883,7 +883,7 @@ The API is used by the devices that are compatible for the registration module. 
         "timestamp": "2019-02-15T10:01:57.086+05:30",
         "requestedScore": "floating point number to represent the minimum required score for the capture. This ranges from 0-100",
         "qualityScore": "floating point number representing the score for the current capture. This ranges from 0-100"
-	  },
+      },
       "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
       "error": {
         "errorcode": "101",
@@ -993,10 +993,10 @@ After successful registration the management server should issue a certificate a
   "responsetime": "iso time format",
   "response": "JWT of the below device data",
   "error": [ //Filled in case of error. Remaining keys above are dropped in case of errors.
-	{ 
+    { 
       "errorCode": "error code if registration fails",
-   	  "message": "description of the error code",
-    } 
+   	  "message": "description of the error code"
+    }
   ]
 }
 ```
@@ -1004,11 +1004,11 @@ After successful registration the management server should issue a certificate a
 ### Definition of Device Registration Response
 ```
 "response": {
-    "status":  "registration status",
-    "digitalId": "digital id of the device a sent by the request", 
-    "deviceCode": "UUID RFC4122 Version 4 for the device issued by the mosip server",
-    "timestamp": "timestamp in ISO format",
-    "env": "prod/development/stage"
+  "status":  "registration status",
+  "digitalId": "digital id of the device a sent by the request", 
+  "deviceCode": "UUID RFC4122 Version 4 for the device issued by the mosip server",
+  "timestamp": "timestamp in ISO format",
+  "env": "prod/development/stage"
 }
 ```
 
@@ -1043,10 +1043,10 @@ The MOSIP server would provide the following device de-registration API which is
     }
   }
   "requesttime": "current timestamp in ISO format",
-  "error": [
-    { //Filled in case of error. Remaining keys above are dropped in case of errors.
+  "error": [ //Filled in case of error. Remaining keys above are dropped in case of errors.
+    {
    	  "errorCode": "error code if registration fails",
-   	  "message": "description of the error code",
+   	  "message": "description of the error code"
     }
   ]
 }
@@ -1099,10 +1099,11 @@ The MOSIP server would provide the following retrieve encryption certificate API
 {
   "id": "io.mosip.auth.country.certificate",
   "version": "certificate server api version as defined above",
-  request: {
-    "data" : {
+  "request": {
+    "data": {
       "env":  "target environment", 
-      "domainUri": "uri of the auth server",     
+      "domainUri": "uri of the auth server"
+    }
   },
   "requesttime": "current timestamp in ISO format"
 }
@@ -1110,7 +1111,7 @@ The MOSIP server would provide the following retrieve encryption certificate API
 
 The request is sent as a JWT format. So the final request will look like:
 ```
-request : {
+"request": {
   "data": "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
 }
 ```
