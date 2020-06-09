@@ -108,9 +108,22 @@ Aadoptors can have customized workflows where the referenceURL can be used.
 
 * Identify request should give all candidates which are considered as a match based on ABIS thresholds.
 * This request should not match against referenceID that is not in the reference database.
-* The flags section of the request can be used to customize or control ABIS behavior by sending specific key value pairs. "targetFPIR" or "maxResults" are examples of such flags that can alter the ABIS behavior. MOSIP adoptor can agree with the ABIS on what these flags should be called and how they will be interpreted.
 * The response now has a section for analytics that contains key value pairs. Values can be json objects also. The contents of the analytics section will be agreed upon by the MOSIP adoptor with the ABIS. Scores are also moved to this section and are not mandatory response parameters any more.
 * Ordering or ranking of results is not explicitly specified and can be agreed upon between the MOSIP adoptor and the ABIS.
+* The flags section of the request can be used to customize or control ABIS behavior by sending specific key value pairs.
+* "targetFPIR" or "maxResults" are examples of such flags that can alter the ABIS behavior. These are optional attributes for MOSIP during an identify request. MOSIP expects the adoptors to define these parameters based on the accuracy expectations and the workflow requirements. These can be set at the ABIS configuration level and need not be part of the individual request at all.
+
+To give an example, please find the following calculation for targetFPIR - which is the error rate at which identification requests are expected to return non-empty candidate list.
+
+`round (-10 * log10 (target false positive identification rate))`
+
+With this calculation:
+
+Target False Positive Identification Rate	| targetFPIR
+--------------------------------------------|------------------
+1 in 1,000                                  | 30
+1 in 10,000                                 | 40
+1 in 100,000                                | 50
 
 ### Identify Request
 ```JSON

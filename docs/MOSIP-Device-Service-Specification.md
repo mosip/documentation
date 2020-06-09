@@ -370,7 +370,7 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
     "serviceVersion": "Device service version",
     "deviceSubId": ["Array of supported device sub Ids"],
     "callbackId": "Base URL to reach to the device",
-    "digitalId": "Digital ID of the device",
+    "digitalId": "Unsigned Digital ID of the device",
     "deviceCode": "A unique code given by MOSIP after successful registration",
     "specVersion": ["Array of supported MDS specification version"],
     "purpose": "Auth  or Registration or empty if not registered",
@@ -390,7 +390,7 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 * deviceId - Internal ID to identify the actual biometric device within the device service.
 * deviceSubId - [1,2,3]; The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of fingerprint/iris its 1 for left fingerprint slap/iris, 2 for right fingerprint slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id. 
 * callbackId - This differs as per the OS. In case of Linux and windows operating systems it is a HTTP URL. In the case of android, it is the intent name. In IOS it is the URL scheme. The call back URL takes precedence over future request as a base URL.
-* digitalId - Digital ID as per the Digital ID definition.  
+* digitalId - Digital ID as per the Digital ID definition but it will not be signed.  
 * deviceCode - A unique code given by MOSIP after successful registration.
 * specVersion - Array of supported MDS specification version.
 * purpose - Purpose of the device in the MOSIP ecosystem. Allowed values are "Auth" | "Registration".
@@ -473,7 +473,7 @@ NA
       "serviceVersion": "Device service version",
       "deviceSubId": ["Array of supported device sub Ids"],
       "callbackId": "Baseurl to reach to the device",
-      "digitalId": "Signed digital id as described in the digital id section of this document",
+      "digitalId": "Signed digital id as described in the digital id section of this document.",
       "deviceCode": "A unique code given by MOSIP after successful registration",
       "env": "Target environment",
       "purpose": "Auth  or Registration",
@@ -511,7 +511,7 @@ So the API would respond in the following format.
 * deviceInfo.serviceVersion - Version of the current service.
 * deviceInfo.deviceSubId - [1,2,3]; The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of fingerprint/iris its 1 for left fingerprint slap/iris, 2 for right fingerprint slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id. 
 * deviceInfo.callbackId - Base URL to communicate.
-* deviceInfo.digitalId - As defined under the digital id section.
+* deviceInfo.digitalId - As defined under the digital id section. The digital id will be unsigned if the device is L0 and the the status of the device is "Not Registered".
 * deviceInfo.env - "None" if not registered. If registered, then send the registered enviornment "Staging" | "Developer" | "Pre-Production" | "Production".
 * deviceInfo.purpose - Allowed values are "Auth" or "Registration" or empty in case the status is "Not Registered".
 * deviceInfo.specVersion - "Array of MDS specification version".
