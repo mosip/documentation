@@ -568,7 +568,8 @@ Requires Authentication | Yes
 #### Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|---------------|
-FileRequestDto|Yes|Dto containing registration id and file name|
+regId|Yes|registration id|
+source|No|Optional source field. Values are - id, optional, evidence|If source is not passed default source will be used
 
 #### Request
 ```JSON
@@ -577,7 +578,8 @@ FileRequestDto|Yes|Dto containing registration id and file name|
   "version" : "1.0",
   "requesttime": "2019-02-14T12:40:59.768Z",
   "request" : {
-	  "regId": "27847657360002520181208123456"
+	  "regId": "27847657360002520181208123456",
+	  "source": "id"
 	}
 }
 ```
@@ -647,7 +649,8 @@ Requires Authentication | Yes
 #### Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|---------------|
-FileRequestDto|Yes|Dto containing registration id and file name|
+regId|Yes|The registration id|
+source|No|Optional source field. Values are - id, optional, evidence|If source is not passed default source will be used
 
 #### Request
 ```JSON
@@ -656,7 +659,8 @@ FileRequestDto|Yes|Dto containing registration id and file name|
   "version" : "1.0",
   "requesttime": "2019-02-14T12:40:59.768Z",
   "request" : {
-	  "regId": "27847657360002520181208123456"
+	  "regId": "27847657360002520181208123456",
+	  "source": "id"
 	}
 }
 ```
@@ -724,7 +728,8 @@ Requires Authentication | Yes
 #### Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|---------------|
-FileRequestDto|Yes|Dto containing registration id and file name|
+regId|Yes|The registration id|
+source|No|Optional source field. Values are - id, optional, evidence|If source is not passed default source will be used
 
 #### Request
 ```JSON
@@ -733,7 +738,8 @@ FileRequestDto|Yes|Dto containing registration id and file name|
   "version" : "1.0",
   "requesttime": "2019-02-14T12:40:59.768Z",
   "request" : {
-	  "regId": "27847657360002520181208123456"
+	  "regId": "27847657360002520181208123456",
+	  "source": "id"
 	}
 }
 ```
