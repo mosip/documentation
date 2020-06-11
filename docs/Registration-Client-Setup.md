@@ -16,17 +16,22 @@ JDK 8u181 [Oracle] or later version to build the application.
 
 	* registration-client - it contains only UI related code.  
 	* registration-libs - it contains the code to generate the initial run.bat.   
-    * registration-MDM-service - Mosip Device Manager service to integrate with BIO device and render the required data in a standard format and that will be consumed by the 'registration-services' module.   
-    * registration-services - it contains the Java API, which would be called from UI module to render the services to the User and capture the detail from User and store it in DB or send to external systems through services.    
+	* registration-MDM-service - Mosip Device Manager service to integrate with BIO device and render the required data in a standard format and that will be consumed by the 'registration-services' module.   
+	* registration-services - it contains the Java API, which would be called from UI module to render the services to the User and capture the detail from User and store it in DB or send to external systems through services.    
 
 **Following files to be modified before building the application:**    
 	
-	*  spring.properties - [registration-services module] - It contains the environment based REST client URL to make different service calls and all the required properties.  
-	*  mosip-application.properties - [registration-libs module] - It contains Reg-Client Download , Configuration URL and Properties to check application online/offline status and Reg client download url from JFrog repository and all the required properties.
-    *  As part of the Jenkins, the required environment should be passed as run time argument **environment** for the build. Ex: "mvn clean install -Denvironment=mosip.hostname".
-    *  Post completion of above-mentioned changes, build 'mosip-parent' pom.xml file to build the application.  
-    *  Make sure that 'maven-metadata.xml' is generated under the '**registration-client**' module, post successful build generation. Which is referred by the reg-client application to download the required jars based on the version.   
-    * Post-build process 'META-INF.MF' file also should be present in the Secure JFROG repository[Https --> Hostname], which consists of the jar files checksum.   
+* spring.properties - [registration-services module] - It contains the environment based REST client URL to make different service calls and all the required properties.  
+	
+* mosip-application.properties - [registration-libs module] - It contains Reg-Client Download, Configuration URL and Properties to check application online/offline status and Reg client download url from JFrog repository and all the required properties.
+	
+* As part of the Jenkins, the required environment should be passed as run time argument **environment** for the build. Ex: "mvn clean install -Denvironment=mosip.hostname". The variable "mosip.hostname" should be the server where your mosip setup is running on. This property can also be defined in the aforementioned file spring.properties of the registration-services module.
+	
+* Post completion of above-mentioned changes, build 'mosip-parent' pom.xml file to build the application.  
+	
+* Make sure that 'maven-metadata.xml' is generated under the '**registration-client**' module, post successful build generation. Which is referred by the reg-client application to download the required jars based on the version.   
+	
+* Post-build process 'META-INF.MF' file also should be present in the Secure JFROG repository[Https --> Hostname], which consists of the jar files checksum.   
 
 # Prerequisites
   
@@ -107,15 +112,15 @@ JDK 8u181 [Oracle] or later version to build the application.
    
 **When the user clicks on the 'run.bat' it does the following:**
    
-   * Loads the binary repository URL from a property file.  
+   * Load the binary repository URL from a property file.  
    * Communicate with the  Secure JFrog repository[Https --> Hostname] through a secured connection and download the maven-metadata.xml file to identify the latest jar versions.    
    * Download the latest build Manifest.mf file from the server, where all the jars (including shared lib) name and checksums are provided.  
    * Compare the checksum of the local version of jar files with the data present in the latest downloaded Manifest.mf file.    
    * Identify the list of binary files and Download the required jars.  
-   * Once download completed then communicate with TPM to decrypt the key{if TPM enabled}, which is used to decrypt the UI and service jars and start the application.   
+   * Once download completed, then communicate with TPM to decrypt the key (if TPM enabled), which is used to decrypt the UI and service jars and start the application.   
    
 **Application Startup:**  
-   * Once after application launches a reg.key,reg.pub,readme.txt will be created in your user.home directory with under .mosipkeys      folder.
+   * Once after application launches, the files 'reg.key', 'reg.pub', and 'readme.txt' will be created in your user.home directory with under .mosipkeys      folder.
    * from readme.txt copy the KeyIndex:<key_index> and use it in machine create POST API.
    * User should initially be online to validate their authentication against the MOSIP server. Post which, the sync process would be initiated.     
    * Once the sync process completed then restart the application to pick the local configuration.  
@@ -211,31 +216,30 @@ Registration client verifies the below-configured URL to check whether the syste
 Property attributes and the respective sample values are provided below. Before building the **registration-services**, the required below properties needs to be changed.
    
 **File Location:** registration-services/src/main/resources/spring.properties       
-     - mosip.reg.logpath=../logs  
-     - mosip.reg.packetstorepath={where the registration packet should be stored}
-     - mosip.reg.healthcheck.url={Application uses this url to perform the health check before communicating with the external services. Default value: https://${environment}/v1/authmanager/actuator/health }  
-     - mosip.reg.rollback.path={where the application backup should be taken during software update} [Default: ../BackUp]  
-     - mosip.reg.db.key={contains the key to be used to connect to the derby database and decrypt the data}
-     - mosip.reg.cerpath=/cer//mosip_cer.cer
-     - mosip.reg.xml.file.url={Secure JFrog repository[Https --> Hostname] url with maven-metadata.xml file}  
-     - mosip.reg.dbpath=db/reg
-     - mosip.reg.app.key={contains the key to be used to decrypt the application binaries during run time}  
-     - mosip.reg.client.tpm.availability={ Y - to enable the TPM, N - to disable the TPM, default N}
+* mosip.reg.logpath=../logs  
+* mosip.reg.packetstorepath={where the registration packet should be stored}
+* mosip.reg.healthcheck.url={Application uses this url to perform the health check before communicating with the external services. Default value: https://${environment}/v1/authmanager/actuator/health }  
+* mosip.reg.rollback.path={where the application backup should be taken during software update} [Default: ../BackUp]  
+* mosip.reg.db.key={contains the key to be used to connect to the derby database and decrypt the data}
+* mosip.reg.cerpath=/cer//mosip_cer.cer
+* mosip.reg.xml.file.url={Secure JFrog repository[Https --> Hostname] url with maven-metadata.xml file}  
+* mosip.reg.dbpath=db/reg
+* mosip.reg.app.key={contains the key to be used to decrypt the application binaries during run time}  
+* mosip.reg.client.tpm.availability={ Y - to enable the TPM, N - to disable the TPM, default N}
 
 **File Location:** /registration-libs/src/main/resources/props/mosip-application.properties 
-     - mosip.reg.client.url={Reg client download url from JFrog }
-     - mosip.reg.logpath=../logs  
-     - mosip.reg.packetstorepath={where the registration packet should be stored}. 
-     - mosip.reg.healthcheck.url={Application uses this url to perform the health check before communicating with the external services. Default value: https://${environment}/v1/authmanager/actuator/health }  
-     - mosip.reg.rollback.path={where the application backup should be taken during software update} [Default: ../BackUp]  
-     - mosip.reg.db.key={contains the key to be used to connect to the derby database and decrypt the data}
-     - mosip.reg.cerpath=/cer//mosip_cer.cer
-     - mosip.reg.xml.file.url={Secure JFrog repository[Https --> Hostname] url with maven-metadata.xml file}  
-     - mosip.reg.dbpath=db/reg
-     - mosip.reg.app.key={contains the key to be used to decrypt the application binaries during run time}
-     - mosip.reg.client.tpm.availability={ Y - to enable the TPM, N - to disable the TPM, default N}
-     	    	
-     	
+* mosip.reg.client.url={Reg client download url from JFrog }
+* mosip.reg.logpath=../logs  
+* mosip.reg.packetstorepath={where the registration packet should be stored}. 
+* mosip.reg.healthcheck.url={Application uses this url to perform the health check before communicating with the external services. Default value: https://${environment}/v1/authmanager/actuator/health }  
+* mosip.reg.rollback.path={where the application backup should be taken during software update} [Default: ../BackUp]  
+* mosip.reg.db.key={contains the key to be used to connect to the derby database and decrypt the data}
+* mosip.reg.cerpath=/cer//mosip_cer.cer
+* mosip.reg.xml.file.url={Secure JFrog repository[Https --> Hostname] url with maven-metadata.xml file}  
+* mosip.reg.dbpath=db/reg
+* mosip.reg.app.key={contains the key to be used to decrypt the application binaries during run time}
+* mosip.reg.client.tpm.availability={ Y - to enable the TPM, N - to disable the TPM, default N}
+     	    	   	
 # Dependent services
 
 In Registration client application, only user mapping to the local machine can be performed. Rest of the data setup should be performed at MOSIP Admin portal.
