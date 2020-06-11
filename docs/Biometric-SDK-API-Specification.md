@@ -1,4 +1,4 @@
-# About this document
+# Biometrics SDK API Specifications
 This document defines the interface for the Java Library providing the functional support for processing biometrics.
 
 API specification version:  **0.9**
