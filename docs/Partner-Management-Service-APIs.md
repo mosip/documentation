@@ -1,4 +1,4 @@
-This section details about the service API in the Partner Management module.
+﻿This section details about the service API in the Partner Management module.
 
 #### Note:
 For securely accessing any API in MOSIP, you must gain auth token from kernel authmanager
@@ -55,7 +55,7 @@ This service would be used by MOSIP admin for MISP(MOSIP Infrastructure Service 
 
 
 ### POST /misps
-MOSIP Admin would be able to create MISP using this API. At the time of creation of MISP, MISP ID and MISP License Key are generated,mapped and shared back in response. Post successful MISP creation, by default MISP is set to active status,  MISP License key is to active status. MISP License key is configurable and set to expire in 3 months, 6 months OR any configurable period.  Kernel ID generator API would be used to generate unique id as mentioned in [Kernel ID Generator](https://github.com/mosip/commons/tree/master/kernel/kernel-idgenerator-mispid)
+MOSIP Admin would be able to create MISP using this API. At the time of creation of MISP, MISP ID is generated and shared back in response. Post successful MISP creation, by default MISP is set to active status.Kernel ID generator API would be used to generate unique id as mentioned in [Kernel ID Generator](https://github.com/mosip/commons/tree/master/kernel/kernel-idgenerator-mispid)
 
 #### Resource URL
 `https://mosip.io/partnermanagement/v1/misps`
@@ -91,7 +91,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-      "organizationName": "telecom",
+      "name": "telecom",
       "contactNumber": "9876998888",
       "emailId": "prm@telecom.com",
       "address": "India"
@@ -110,17 +110,14 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 {
   "id": "mosip.partnermanagement.misp.create",
   "version": "1.0",
-  "responsetime": "2019-05-20T09:48:43.394Z",
+  "responsetime": "2020-06-04T04:10:38.348Z",
+  "metadata": null,
   "response": {
-    "mispId": "64269837502851",
     "mispStatus": "Active",
-    "mispLicenseKey": "fa604-affcd-33201-04770",
-    "mispLicenseKeyExpiry": "2022-12-31",
-    "mispLicenseKeyStatus": "Active"
+    "mispID": "100"
   },
-  "errors": null
+  "errors": []
 }
-
 ```
 
 ##### Failure Response:
@@ -138,7 +135,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "errors": [
     {
       "errorCode": "PMS_MSP_003",
-      "message": "A MISP is already registered with name - organizationName"
+      "message": "A MISP is already registered with name - name"
     }
   ]
 }
@@ -154,7 +151,7 @@ PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attr
 PMS_COR_003|Could not process the request|Any Internal Error
 
 ### PATCH /misps/{mispId}/status
-This API would be used to approve or reject the misp.
+This API would be used to approve or reject the MISP.Post successful MISP approval, MISP License key is generated and set to active status.MISP License key is configurable and set to expire in 3 months, 6 months OR any configurable period.
 
 #### Resource URL
 `https://mosip.io/partnermanagement/v1/misps/{mispId}/status`
@@ -665,20 +662,20 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": {
     "mispDetails":[
         {
-	  "id": "64269837502851",
+      "id": "64269837502851",
           "organizationName": "telecom",
           "contactNumber": "9876998888",
           "emailID": "prm@telecom.com",
           "address": "India"
         },
         {
-	  "id": "98869837502654",
+      "id": "98869837502654",
           "organizationName": "airtelInd",
           "contactNumber": "9488998800",
           "emailID": "agm@airtelInd.com",
           "address": "India"
-	}	
-      ]	  
+    }    
+      ]      
   },
   "errors": null
 }
@@ -1002,29 +999,29 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
        "name": "Insurance Policy",
        "desc": "Desc about policy",
        "policies": {
-            "authPolicies": [ 	
-				{"authType": "otp","mandatory": true},
-				{"authType": "demo","mandatory": false},
-				{"authType": "bio","authSubType": "FINGER","mandatory": true},
-				{"authType": "bio","authSubType": "IRIS","mandatory": false},
-				{"authType": "bio","authSubType": "FACE","mandatory": false},
-				{"authType": "kyc","mandatory": false}
-		    ],
+            "authPolicies": [     
+                {"authType": "otp","mandatory": true},
+                {"authType": "demo","mandatory": false},
+                {"authType": "bio","authSubType": "FINGER","mandatory": true},
+                {"authType": "bio","authSubType": "IRIS","mandatory": false},
+                {"authType": "bio","authSubType": "FACE","mandatory": false},
+                {"authType": "kyc","mandatory": false}
+            ],
             "allowedKycAttributes": [  
-				{"attributeName": "fullName","required": true},
-				{"attributeName": "dateOfBirth","required": true},
-				{"attributeName": "gender","required": true},
-				{"attributeName": "phone","required": true},
-				{"attributeName": "email","required": true},
-				{"attributeName": "addressLine1","required": true},
-				{"attributeName": "addressLine2","required": true},
-				{"attributeName": "addressLine3","required": true},
-				{"attributeName": "location1","required": true},
-				{"attributeName": "location2","required": true},
-				{"attributeName": "location3","required": true},
-				{"attributeName": "postalCode","required": false},
-				{"attributeName": "photo","required": true}
-			]
+                {"attributeName": "fullName","required": true},
+                {"attributeName": "dateOfBirth","required": true},
+                {"attributeName": "gender","required": true},
+                {"attributeName": "phone","required": true},
+                {"attributeName": "email","required": true},
+                {"attributeName": "addressLine1","required": true},
+                {"attributeName": "addressLine2","required": true},
+                {"attributeName": "addressLine3","required": true},
+                {"attributeName": "location1","required": true},
+                {"attributeName": "location2","required": true},
+                {"attributeName": "location3","required": true},
+                {"attributeName": "postalCode","required": false},
+                {"attributeName": "photo","required": true}
+            ]
         }
     }
 }
@@ -1139,29 +1136,29 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
       "name": "Loan Policy",
       "desc": "Desc about policy",
       "policies": {
-            "authPolicies": [ 	
-					{"authType": "otp","mandatory": true},
-					{"authType": "demo","mandatory": false},
-					{"authType": "bio","authSubType": "FINGER","mandatory": true},
-					{"authType": "bio","authSubType": "IRIS","mandatory": true},
-					{"authType": "bio","authSubType": "FACE","mandatory": false},
-					{"authType": "kyc","mandatory": false}
-			],
+            "authPolicies": [     
+                    {"authType": "otp","mandatory": true},
+                    {"authType": "demo","mandatory": false},
+                    {"authType": "bio","authSubType": "FINGER","mandatory": true},
+                    {"authType": "bio","authSubType": "IRIS","mandatory": true},
+                    {"authType": "bio","authSubType": "FACE","mandatory": false},
+                    {"authType": "kyc","mandatory": false}
+            ],
             "allowedKycAttributes": [  
-					{"attributeName": "fullName","required": true},
-					{"attributeName": "dateOfBirth","required": true},
-					{"attributeName": "gender","required": true},
-					{"attributeName": "phone","required": true},
-					{"attributeName": "email","required": true},
-					{"attributeName": "addressLine1","required": true},
-					{"attributeName": "addressLine2","required": true},
-					{"attributeName": "addressLine3","required": true},
-					{"attributeName": "location1","required": true},
-					{"attributeName": "location2","required": true},
-					{"attributeName": "location3","required": true},
-					{"attributeName": "postalCode","required": false},
-					{"attributeName": "photo","required": true}
-			]
+                    {"attributeName": "fullName","required": true},
+                    {"attributeName": "dateOfBirth","required": true},
+                    {"attributeName": "gender","required": true},
+                    {"attributeName": "phone","required": true},
+                    {"attributeName": "email","required": true},
+                    {"attributeName": "addressLine1","required": true},
+                    {"attributeName": "addressLine2","required": true},
+                    {"attributeName": "addressLine3","required": true},
+                    {"attributeName": "location1","required": true},
+                    {"attributeName": "location2","required": true},
+                    {"attributeName": "location3","required": true},
+                    {"attributeName": "postalCode","required": false},
+                    {"attributeName": "photo","required": true}
+            ]
         }
     }
 }
@@ -1182,13 +1179,13 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response":{
         "id": "45678451034176",
         "name": "Loan Policy",
-		"desc": "Desc about policy",
-		"is_Active": true,
-		"cr_by": "MOSIP",
-		"cr_dtimes": "2019-05-14T16:01:20.534Z",
-		"up_by": "MOSIP",
-		"upd_dtimes": "2019-05-15T16:01:20.534Z"
-	},
+        "desc": "Desc about policy",
+        "is_Active": true,
+        "cr_by": "MOSIP",
+        "cr_dtimes": "2019-05-14T16:01:20.534Z",
+        "up_by": "MOSIP",
+        "upd_dtimes": "2019-05-15T16:01:20.534Z"
+    },
   "errors": null
 }
 ```
@@ -1269,7 +1266,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-15T16:01:20.534Z",
   "metadata": {},
   "request": {
-		"status":"De-Active"
+        "status":"De-Active"
    }
 }
 ```
@@ -1355,80 +1352,80 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response": {
      "policies": [
-	   {
-		"id": "32058251034176",
-		"name": "Insurance Policy",
-		"desc": "Desc about policy",
-		"is_Active": true,
-		"policyManagerId": "898778899",
-		"cr_by": "MOSIP",
-		"cr_dtimes": "2019-05-14T16:01:20.534Z",
-		"up_by": null,
-		"upd_dtimes": null,
-		"policies": {
-            "authPolicies": [ 	
-					{"authType": "otp","mandatory": true},
-					{"authType": "demo","mandatory": false},
-					{"authType": "bio","authSubType": "FINGER","mandatory": true},
-					{"authType": "bio","authSubType": "IRIS","mandatory": false},
-					{"authType": "bio","authSubType": "FACE","mandatory": false},
-					{"authType": "kyc","mandatory": false}
-			],
+       {
+        "id": "32058251034176",
+        "name": "Insurance Policy",
+        "desc": "Desc about policy",
+        "is_Active": true,
+        "policyManagerId": "898778899",
+        "cr_by": "MOSIP",
+        "cr_dtimes": "2019-05-14T16:01:20.534Z",
+        "up_by": null,
+        "upd_dtimes": null,
+        "policies": {
+            "authPolicies": [     
+                    {"authType": "otp","mandatory": true},
+                    {"authType": "demo","mandatory": false},
+                    {"authType": "bio","authSubType": "FINGER","mandatory": true},
+                    {"authType": "bio","authSubType": "IRIS","mandatory": false},
+                    {"authType": "bio","authSubType": "FACE","mandatory": false},
+                    {"authType": "kyc","mandatory": false}
+            ],
             "allowedKycAttributes": [  
-					{"attributeName": "fullName","required": true},
-					{"attributeName": "dateOfBirth","required": true},
-					{"attributeName": "gender","required": true},
-					{"attributeName": "phone","required": true},
-					{"attributeName": "email","required": true},
-					{"attributeName": "addressLine1","required": true},
-					{"attributeName": "addressLine2","required": true},
-					{"attributeName": "addressLine3","required": true},
-					{"attributeName": "location1","required": true},
-					{"attributeName": "location2","required": true},
-					{"attributeName": "location3","required": true},
-					{"attributeName": "postalCode","required": false},
-					{"attributeName": "photo","required": true}
-			 ]
+                    {"attributeName": "fullName","required": true},
+                    {"attributeName": "dateOfBirth","required": true},
+                    {"attributeName": "gender","required": true},
+                    {"attributeName": "phone","required": true},
+                    {"attributeName": "email","required": true},
+                    {"attributeName": "addressLine1","required": true},
+                    {"attributeName": "addressLine2","required": true},
+                    {"attributeName": "addressLine3","required": true},
+                    {"attributeName": "location1","required": true},
+                    {"attributeName": "location2","required": true},
+                    {"attributeName": "location3","required": true},
+                    {"attributeName": "postalCode","required": false},
+                    {"attributeName": "photo","required": true}
+             ]
           }
        },
        {
-		"id": "45678451034176",
-		"name": "Loan Policy",
-		"desc": "Desc about policy",
-		"is_Active": true,
-		"policyManagerId": "898778899",
-		"cr_by": "MOSIP",
-		"cr_dtimes": "2019-05-14T16:01:20.534Z",
-		"up_by": "MOSIP",
-		"upd_dtimes": "2019-05-15T16:01:20.534Z",
-		"policies": {
-            "authPolicies": [ 	
-					{"authType": "otp","mandatory": true},
-					{"authType": "demo","mandatory": false},
-					{"authType": "bio","authSubType": "FINGER","mandatory": true},
-					{"authType": "bio","authSubType": "IRIS","mandatory": true},
-					{"authType": "bio","authSubType": "FACE","mandatory": false},
-					{"authType": "kyc","mandatory": false}
-			],
+        "id": "45678451034176",
+        "name": "Loan Policy",
+        "desc": "Desc about policy",
+        "is_Active": true,
+        "policyManagerId": "898778899",
+        "cr_by": "MOSIP",
+        "cr_dtimes": "2019-05-14T16:01:20.534Z",
+        "up_by": "MOSIP",
+        "upd_dtimes": "2019-05-15T16:01:20.534Z",
+        "policies": {
+            "authPolicies": [     
+                    {"authType": "otp","mandatory": true},
+                    {"authType": "demo","mandatory": false},
+                    {"authType": "bio","authSubType": "FINGER","mandatory": true},
+                    {"authType": "bio","authSubType": "IRIS","mandatory": true},
+                    {"authType": "bio","authSubType": "FACE","mandatory": false},
+                    {"authType": "kyc","mandatory": false}
+            ],
             "allowedKycAttributes": [  
-					{"attributeName": "fullName","required": true},
-					{"attributeName": "dateOfBirth","required": true},
-					{"attributeName": "gender","required": true},
-					{"attributeName": "phone","required": true},
-					{"attributeName": "email","required": true},
-					{"attributeName": "addressLine1","required": true},
-					{"attributeName": "addressLine2","required": true},
-					{"attributeName": "addressLine3","required": true},
-					{"attributeName": "location1","required": true},
-					{"attributeName": "location2","required": true},
-					{"attributeName": "location3","required": true},
-					{"attributeName": "postalCode","required": false},
-					{"attributeName": "photo","required": true}
-			]
+                    {"attributeName": "fullName","required": true},
+                    {"attributeName": "dateOfBirth","required": true},
+                    {"attributeName": "gender","required": true},
+                    {"attributeName": "phone","required": true},
+                    {"attributeName": "email","required": true},
+                    {"attributeName": "addressLine1","required": true},
+                    {"attributeName": "addressLine2","required": true},
+                    {"attributeName": "addressLine3","required": true},
+                    {"attributeName": "location1","required": true},
+                    {"attributeName": "location2","required": true},
+                    {"attributeName": "location3","required": true},
+                    {"attributeName": "postalCode","required": false},
+                    {"attributeName": "photo","required": true}
+            ]
         }
        }
      ]
-	},
+    },
   "errors": null
 }
 ```
@@ -1497,40 +1494,40 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "version": "1.0",
   "responsetime": "2019-05-15T16:01:20.534Z",
   "response":{
-		"id": "45678451034176",
-		"name": "Loan Policy",
-		"desc": "Desc about policy",
-		"is_Active": true,
-		"cr_by": "MOSIP",
-		"cr_dtimes": "2019-05-14T16:01:20.534Z",
-		"up_by": "MOSIP",
-		"upd_dtimes": "2019-05-15T16:01:20.534Z",
-		"policies": {
-            "authPolicies": [ 	
-					{"authType": "otp","mandatory": true},
-					{"authType": "demo","mandatory": false},
-					{"authType": "bio","authSubType": "FINGER","mandatory": true},
-					{"authType": "bio","authSubType": "IRIS","mandatory": false},
-					{"authType": "bio","authSubType": "FACE","mandatory": false},
-					{"authType": "kyc","mandatory": false}
-			],
+        "id": "45678451034176",
+        "name": "Loan Policy",
+        "desc": "Desc about policy",
+        "is_Active": true,
+        "cr_by": "MOSIP",
+        "cr_dtimes": "2019-05-14T16:01:20.534Z",
+        "up_by": "MOSIP",
+        "upd_dtimes": "2019-05-15T16:01:20.534Z",
+        "policies": {
+            "authPolicies": [     
+                    {"authType": "otp","mandatory": true},
+                    {"authType": "demo","mandatory": false},
+                    {"authType": "bio","authSubType": "FINGER","mandatory": true},
+                    {"authType": "bio","authSubType": "IRIS","mandatory": false},
+                    {"authType": "bio","authSubType": "FACE","mandatory": false},
+                    {"authType": "kyc","mandatory": false}
+            ],
             "allowedKycAttributes": [  
-					{"attributeName": "fullName","required": true},
-					{"attributeName": "dateOfBirth","required": true},
-					{"attributeName": "gender","required": true},
-					{"attributeName": "phone","required": true},
-					{"attributeName": "email","required": true},
-					{"attributeName": "addressLine1","required": true},
-					{"attributeName": "addressLine2","required": true},
-					{"attributeName": "addressLine3","required": true},
-					{"attributeName": "location1","required": true},
-					{"attributeName": "location2","required": true},
-					{"attributeName": "location3","required": true},
-					{"attributeName": "postalCode","required": false},
-					{"attributeName": "photo","required": true}
-			]
+                    {"attributeName": "fullName","required": true},
+                    {"attributeName": "dateOfBirth","required": true},
+                    {"attributeName": "gender","required": true},
+                    {"attributeName": "phone","required": true},
+                    {"attributeName": "email","required": true},
+                    {"attributeName": "addressLine1","required": true},
+                    {"attributeName": "addressLine2","required": true},
+                    {"attributeName": "addressLine3","required": true},
+                    {"attributeName": "location1","required": true},
+                    {"attributeName": "location2","required": true},
+                    {"attributeName": "location3","required": true},
+                    {"attributeName": "postalCode","required": false},
+                    {"attributeName": "photo","required": true}
+            ]
         }
-	},
+    },
   "errors": null
 }
 ```
@@ -1601,40 +1598,40 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-		"id": "32058251034176",
-		"name": "Insurance Policy",
-		"desc": "Desc about policy",
-		"is_Active": true,
-		"cr_by": "MOSIP",
-		"cr_dtimes": "2019-05-14T16:01:20.534Z",
-		"up_by": null,
-		"upd_dtimes": null,
-		"policies": {
-            "authPolicies": [ 	
-					{"authType": "otp","mandatory": true},
-					{"authType": "demo","mandatory": false},
-					{"authType": "bio","authSubType": "FINGER","mandatory": true},
-					{"authType": "bio","authSubType": "IRIS","mandatory": false},
-					{"authType": "bio","authSubType": "FACE","mandatory": false},
-					{"authType": "kyc","mandatory": false}
-			],
+        "id": "32058251034176",
+        "name": "Insurance Policy",
+        "desc": "Desc about policy",
+        "is_Active": true,
+        "cr_by": "MOSIP",
+        "cr_dtimes": "2019-05-14T16:01:20.534Z",
+        "up_by": null,
+        "upd_dtimes": null,
+        "policies": {
+            "authPolicies": [     
+                    {"authType": "otp","mandatory": true},
+                    {"authType": "demo","mandatory": false},
+                    {"authType": "bio","authSubType": "FINGER","mandatory": true},
+                    {"authType": "bio","authSubType": "IRIS","mandatory": false},
+                    {"authType": "bio","authSubType": "FACE","mandatory": false},
+                    {"authType": "kyc","mandatory": false}
+            ],
             "allowedKycAttributes": [  
-					{"attributeName": "fullName","required": true},
-					{"attributeName": "dateOfBirth","required": true},
-					{"attributeName": "gender","required": true},
-					{"attributeName": "phone","required": true},
-					{"attributeName": "email","required": true},
-					{"attributeName": "addressLine1","required": true},
-					{"attributeName": "addressLine2","required": true},
-					{"attributeName": "addressLine3","required": true},
-					{"attributeName": "location1","required": true},
-					{"attributeName": "location2","required": true},
-					{"attributeName": "location3","required": true},
-					{"attributeName": "postalCode","required": false},
-					{"attributeName": "photo","required": true}
-			]
+                    {"attributeName": "fullName","required": true},
+                    {"attributeName": "dateOfBirth","required": true},
+                    {"attributeName": "gender","required": true},
+                    {"attributeName": "phone","required": true},
+                    {"attributeName": "email","required": true},
+                    {"attributeName": "addressLine1","required": true},
+                    {"attributeName": "addressLine2","required": true},
+                    {"attributeName": "addressLine3","required": true},
+                    {"attributeName": "location1","required": true},
+                    {"attributeName": "location2","required": true},
+                    {"attributeName": "location3","required": true},
+                    {"attributeName": "postalCode","required": false},
+                    {"attributeName": "photo","required": true}
+            ]
         }
-	},
+    },
   "errors": null
 }
 ```
@@ -1726,7 +1723,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "metadata": {},
   "request": {
      "oldPolicyID":"54662345634232", 
-	 "newPolicyID":"45662345639999"
+     "newPolicyID":"45662345639999"
   }
 }
 ```
@@ -2073,17 +2070,17 @@ PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attr
 PMS_COR_003|Could not process the request|Any Internal Error
 
 ### GET /pmpartners/validatePartnerMisp/partnerId/{partnerId}/partnerApiKey/{partner_api_key}/mispLicenseKey/{misp_license_key}
-Partner managers would be using this request to retrive the policy mapping to partner and partner api key. Partner management system would be able to validate 	the following.
+Partner managers would be using this request to retrive the policy mapping to partner and partner api key. Partner management system would be able to validate     the following.
 
-		1.Validates if the status of the MISP License Key is active.
-		2.Retrieves the MISP status corresponding to the MISP License key in the request.
-		3.Validates if the status of MISP is active.
-		4.Validates if the status of the Partner ID is active
-		5.Validates the length and pattern of the Partner API Key.
-		6.Validates if the status of Partner API Key is active.
-		7.Validates if the Partner API key belong to the partner.
-		8.Retrieves the policy ID mapped to the Partner API key.
-		
+        1.Validates if the status of the MISP License Key is active.
+        2.Retrieves the MISP status corresponding to the MISP License key in the request.
+        3.Validates if the status of MISP is active.
+        4.Validates if the status of the Partner ID is active
+        5.Validates the length and pattern of the Partner API Key.
+        6.Validates if the status of Partner API Key is active.
+        7.Validates if the Partner API key belong to the partner.
+        8.Retrieves the policy ID mapped to the Partner API key.
+        
 #### Resource URL
 `https://mosip.io/partnermanagement/v1/pmpartners/validatePartnerMisp/partnerId/{partnerId}/partnerApiKey/{partner_api_key}/mispLicenseKey/{misp_license_key}`
 
@@ -2224,23 +2221,23 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
          "partners" : [
-		    {
-			   "partnerID":"65432345634232", 
-		       "status":"Active", 
-		       "organizationName":"telecomAirtel",
-		       "contactNumber":"9876545654", 
-		       "emailID":"telecomAirtel@gmail.com", 
-		       "address":"India"
-			},
-			{
-			   "partnerID":"87652345634232", 
-		       "status":"Active", 
-		       "organizationName":"telecomJio",
-		       "contactNumber":"9988774654", 
-		       "emailID":"telecomJio@gmail.com", 
-		       "address":"India"
-			}
-		]	
+            {
+               "partnerID":"65432345634232", 
+               "status":"Active", 
+               "organizationName":"telecomAirtel",
+               "contactNumber":"9876545654", 
+               "emailID":"telecomAirtel@gmail.com", 
+               "address":"India"
+            },
+            {
+               "partnerID":"87652345634232", 
+               "status":"Active", 
+               "organizationName":"telecomJio",
+               "contactNumber":"9988774654", 
+               "emailID":"telecomJio@gmail.com", 
+               "address":"India"
+            }
+        ]    
   },
   "errors": null
 }
@@ -2313,11 +2310,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
         "partnerID":"87652345634232", 
-		"status":"Active", 
-		"organizationName":"telecomJio",
-		"contactNumber":"9988774654", 
-		"emailID":"telecomJio@gmail.com", 
-		"address":"India"	
+        "status":"Active", 
+        "organizationName":"telecomJio",
+        "contactNumber":"9988774654", 
+        "emailID":"telecomJio@gmail.com", 
+        "address":"India"    
   },
   "errors": null
 }
@@ -2461,23 +2458,23 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
        "apikeyRequests" : [
-	     {
-			"partnerID":"87652345634232", 
-			"status":"Active", 
-			"organizationName":"telecomJio",
-			"policyName": "Insurance Policy",
-			"policyDesc": "Desc about policy",
-			"apiKeyReqNo":"873276828663"
-		 },
-		 {
-			"partnerID":"67678856342329", 
-			"status":"Active", 
-			"organizationName":"airtelInd",
-			"policyName": "Banking Policy",
-			"policyDesc": "Desc about policy",
-			"apiKeyReqNo":"903276828609"
-		 }
-       ]	  
+         {
+            "partnerID":"87652345634232", 
+            "status":"Active", 
+            "organizationName":"telecomJio",
+            "policyName": "Insurance Policy",
+            "policyDesc": "Desc about policy",
+            "apiKeyReqNo":"873276828663"
+         },
+         {
+            "partnerID":"67678856342329", 
+            "status":"Active", 
+            "organizationName":"airtelInd",
+            "policyName": "Banking Policy",
+            "policyDesc": "Desc about policy",
+            "apiKeyReqNo":"903276828609"
+         }
+       ]      
   },
   "errors": null
 }
@@ -2549,11 +2546,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-			"partnerID":"87652345634232", 
-			"status":"Active", 
-			"organizationName":"telecomJio",
-			"policyName": "Insurance Policy",
-			"policyDesc": "Desc about policy"
+            "partnerID":"87652345634232", 
+            "status":"Active", 
+            "organizationName":"telecomJio",
+            "policyName": "Insurance Policy",
+            "policyDesc": "Desc about policy"
   },
   "errors": null
 }
@@ -2646,11 +2643,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-		"organizationName":"airtelInd", 
-		"contactNumber":"9886779980", 
-		"emailID":"airtelInd@gmail.com", 
-		"address":"INDIA",
-		"policyGroup":"Banking"
+        "organizationName":"airtelInd", 
+        "contactNumber":"9886779980", 
+        "emailID":"airtelInd@gmail.com", 
+        "address":"INDIA",
+        "policyGroup":"Banking"
   }
 }
 ```
@@ -2668,8 +2665,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-		"partnerID":"6565655443544", 
-		"status":"Active"
+        "partnerID":"6565655443544", 
+        "status":"Active"
   },
   "errors": null
 }
@@ -2686,8 +2683,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-		"errorCode": "PMS_PRT_001",
-		"message": "A Partner is already registered with name 'airtelInd' in the policy Group 'Banking'.
+        "errorCode": "PMS_PRT_001",
+        "message": "A Partner is already registered with name 'airtelInd' in the policy Group 'Banking'.
     }
   ]
 }
@@ -2743,8 +2740,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-		"policyName":"airtelIndPolicy", 
-		"useCaseDescription":"Need to submit the payment"
+        "policyName":"airtelIndPolicy", 
+        "useCaseDescription":"Need to submit the payment"
   }
 }
 ```
@@ -2762,8 +2759,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-		"apiRequestId":"873276828663",
-		"message":"partnerAPIKeyRequest successfully created"
+        "apiRequestId":"873276828663",
+        "message":"partnerAPIKeyRequest successfully created"
   },
   "errors": null
 }
@@ -2782,8 +2779,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-		"errorCode": "PMS_PRT_001",
-		"message": "A Partner is already registered with name 'airtelInd' in the policy Group 'Banking'.
+        "errorCode": "PMS_PRT_001",
+        "message": "A Partner is already registered with name 'airtelInd' in the policy Group 'Banking'.
     }
   ]
 }
@@ -2837,7 +2834,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-		"partnerAPIKey":"fa604-affcd-33201-04770"
+        "partnerAPIKey":"fa604-affcd-33201-04770"
   },
   "errors": null
 }
@@ -2856,8 +2853,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-		"errorCode": "PMS_PRT_005",
-		"message": "APIKeyReqID does not exist"
+        "errorCode": "PMS_PRT_005",
+        "message": "APIKeyReqID does not exist"
     }
   ]
 }
@@ -2918,7 +2915,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-		"partnerCertificate":"MIIFtjCCA56gAwIBAgIJAP1p0BePP1CFMA0GCSqGSIb3DQEBCwUAMHAxCzAJBgNV
+        "partnerCertificate":"MIIFtjCCA56gAwIBAgIJAP1p0BePP1CFMA0GCSqGSIb3DQEBCwUAMHAxCzAJBgNV
                             UUTHNkNaMRcwFQYDVQQIDA5DemVjaCBSZXB1YmxpYzELMAkGA1UEBwwCQ0IxITAf
                             BgNVBAoMGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDEYMBYGA1UEAwwPUkVTVCBB
                             UEkgU0VSVkVSMB4XDTE4MTAwNjIxMTQyMVoXDTI4MTAwMzIxMTQyMVowcDELMAkG
@@ -2944,7 +2941,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-		"message":"successfully uploaded partner's digital certificate"
+        "message":"successfully uploaded partner's digital certificate"
   },
   "errors": null
 }
@@ -2963,8 +2960,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-		"errorCode": "PMS_PRT_007",
-		"message": "Partner digital certificate is not valid"
+        "errorCode": "PMS_PRT_007",
+        "message": "Partner digital certificate is not valid"
     }
   ]
 }
@@ -3023,10 +3020,10 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-		"organizationName":"airtelInd", 
-		"contactNumber":"9886779980", 
-		"emailID":"airtelInd@gmail.com", 
-		"address":"Bangalore,INDIA",
+        "organizationName":"airtelInd", 
+        "contactNumber":"9886779980", 
+        "emailID":"airtelInd@gmail.com", 
+        "address":"Bangalore,INDIA",
   }
 }
 ```
@@ -3044,8 +3041,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-		"partnerID":"6565655443544", 
-		"status":"Active"
+        "partnerID":"6565655443544", 
+        "status":"Active"
   },
   "errors": null
 }
@@ -3062,8 +3059,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-		"errorCode": "PMS_PRT_001",
-		"message": "A Partner is already registered with name 'airtelInd' in the policy Group 'Banking'.
+        "errorCode": "PMS_PRT_001",
+        "message": "A Partner is already registered with name 'airtelInd' in the policy Group 'Banking'.
     }
   ]
 }
@@ -3116,7 +3113,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-		"partnerCertificate":"MIIFtjCCA56gAwIBAgIJAP1p0BePP1CFMA0GCSqGSIb3DQEBCwUAMHAxCzAJBgNV
+        "partnerCertificate":"MIIFtjCCA56gAwIBAgIJAP1p0BePP1CFMA0GCSqGSIb3DQEBCwUAMHAxCzAJBgNV
                             UUTHNkNaMRcwFQYDVQQIDA5DemVjaCBSZXB1YmxpYzELMAkGA1UEBwwCQ0IxITAf
                             BgNVBAoMGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDEYMBYGA1UEAwwPUkVTVCBB
                             UEkgU0VSVkVSMB4XDTE4MTAwNjIxMTQyMVoXDTI4MTAwMzIxMTQyMVowcDELMAkG
@@ -3142,7 +3139,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-		"message":"successfully validated partner's digital certificate"
+        "message":"successfully validated partner's digital certificate"
   },
   "errors": null
 }
@@ -3161,8 +3158,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-		"errorCode": "PMS_PRT_007",
-		"message": "Partner digital certificate is not valid"
+        "errorCode": "PMS_PRT_007",
+        "message": "Partner digital certificate is not valid"
     }
   ]
 }
@@ -3214,13 +3211,13 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-		"partnerID":"6565655443544", 
-		"status":"Active", 
-		"organizationName":"airtelInd", 
-	    "contactNumber":"9886779980", 
-	    "emailID":"airtelInd@gmail.com", 
-	    "address":"INDIA",
-	    "policyGroup":"Banking"
+        "partnerID":"6565655443544", 
+        "status":"Active", 
+        "organizationName":"airtelInd", 
+        "contactNumber":"9886779980", 
+        "emailID":"airtelInd@gmail.com", 
+        "address":"INDIA",
+        "policyGroup":"Banking"
   },
   "errors": null
 }
@@ -3239,8 +3236,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-		"errorCode": "PMS_PRT_005",
-		"message": "Partner does not exist"
+        "errorCode": "PMS_PRT_005",
+        "message": "Partner does not exist"
     }
   ]
 }
@@ -3292,18 +3289,18 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
        "APIkeyRequests":[
-			{
-				"apiKeyReqID":"873276828663",
-				"apiKeyRequestStatus":"approved", 
-				"partnerApiKey":"fa604-affcd-33201-04770",
-				"validityTill":"2019-11-01"
-			},
-			{
-				"apiKeyReqID":"900876828663",
-				"apiKeyRequestStatus":"in-progress"
-			}
-		]
-	},
+            {
+                "apiKeyReqID":"873276828663",
+                "apiKeyRequestStatus":"approved", 
+                "partnerApiKey":"fa604-affcd-33201-04770",
+                "validityTill":"2019-11-01"
+            },
+            {
+                "apiKeyReqID":"900876828663",
+                "apiKeyRequestStatus":"in-progress"
+            }
+        ]
+    },
   "errors": null
 }
 ```
@@ -3321,8 +3318,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-		"errorCode": "PMS_PRT_008",
-		"message": "No API Key Request found"
+        "errorCode": "PMS_PRT_008",
+        "message": "No API Key Request found"
     }
   ]
 }
@@ -3375,9 +3372,9 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-		"apiKeyRequestStatus":"approved", 
-		"partnerApiKey":"fa604-affcd-33201-04770",
-		"validityTill":"2019-11-01"
+        "apiKeyRequestStatus":"approved", 
+        "partnerApiKey":"fa604-affcd-33201-04770",
+        "validityTill":"2019-11-01"
   },
   "errors": null
 }
@@ -3396,8 +3393,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-		"errorCode": "PMS_PRT_006",
-		"message": "APIKeyReqID does not exist"
+        "errorCode": "PMS_PRT_006",
+        "message": "APIKeyReqID does not exist"
     }
   ]
 }
@@ -3472,8 +3469,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-		"errorCode": "PMS_PRT_005",
-		"message": "Partner does not exist"
+        "errorCode": "PMS_PRT_005",
+        "message": "Partner does not exist"
     }
   ]
 }
