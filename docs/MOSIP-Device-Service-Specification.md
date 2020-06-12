@@ -299,16 +299,16 @@ Unsigned digital ID would look as follows:
 Payload is the Digital ID JSON object.
 
 {% hint style="info" %}
-For a L0 unregistered device the digital id will be unsigned. In all other scenarios the digital ID will be signed either by the chip key (L1) or the device key (L0).
+For a L0 unregistered device the digital id will be unsigned. In all other scenarios, except for a discovery call, the digital ID will be signed either by the chip key (L1) or the device key (L0).
 {% endhint %}
 
 #### Accepted Values for Digital ID
 * serialNo - Serial number of the device. This value should be same as printed on the device (Refer [Physical ID](#physical-id))
 * make - Brand name. This value should be same as printed on the device (Refer [Physical ID](#physical-id))
 * model - Model of the device. This value should be same as printed on the device (Refer [Physical ID](#physical-id))
-* type - ["Fingerprint", "Iris", "Face"], //More types can be added based on Adoptor's implementation
+* type - ["Finger", "Iris", "Face"], //More types can be added based on Adoptor's implementation
 * deviceSubType - Subtype is based on the type 
-	* For Fingerprint - "Slap", "Single", "Touchless"
+	* For Finger - "Slap", "Single", "Touchless"
 	* For Iris - "Single", "Double",
     * For Face - "Full face"
 * deviceProvider - Device provider name - This would be a legal entity in the country.
@@ -354,7 +354,7 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 ```
 
 ### Accepted Values for Device Discovery Request
-* type - "Biometric Device", "Fingerprint", "Face", "Iris"
+* type - "Biometric Device", "Finger", "Face", "Iris"
 
 {% hint style="info" %}
 "Biometric Device" - is a special type and used in case if you are looking for any biometric device.
@@ -375,8 +375,8 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
     "specVersion": ["Array of supported MDS specification version"],
     "purpose": "Auth  or Registration or empty if not registered",
     "error": {
-      "errorcode": "101",
-      "errorinfo": "Invalid JSON Value Type For Discovery.." 
+      "errorCode": "101",
+      "errorInfo": "Invalid JSON Value Type For Discovery.." 
     }
   },
   ...
@@ -388,7 +388,7 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 * certification - Allowed values are "L0" | "L1" | "L2" based on level of certification.
 * serviceVersion - Version of the MDS specification that is supported.
 * deviceId - Internal ID to identify the actual biometric device within the device service.
-* deviceSubId - [1,2,3]; The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of fingerprint/iris its 1 for left fingerprint slap/iris, 2 for right fingerprint slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id. 
+* deviceSubId - [1,2,3]; The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id. 
 * callbackId - This differs as per the OS. In case of Linux and windows operating systems it is a HTTP URL. In the case of android, it is the intent name. In IOS it is the URL scheme. The call back URL takes precedence over future request as a base URL.
 * digitalId - Digital ID as per the Digital ID definition but it will not be signed.  
 * deviceCode - A unique code given by MOSIP after successful registration.
@@ -480,8 +480,8 @@ NA
       "specVersion": ["Array of supported MDS specification version"],
     },
     "error": {
-      "errorcode": "101",
-      "errorinfo": "Invalid JSON Value "
+      "errorCode": "101",
+      "errorInfo": "Invalid JSON Value "
     }
   }
   ...
@@ -496,8 +496,8 @@ So the API would respond in the following format.
   {
     "deviceInfo": "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
     "error": {
-      "errorcode": "100",
-      "errorinfo": "Device not registered. In this case the device info will be only base64urlencode(payload)"
+      "errorCode": "100",
+      "errorInfo": "Device not registered. In this case the device info will be only base64urlencode(payload)"
     }
   }
 ]
@@ -509,7 +509,7 @@ So the API would respond in the following format.
 * deviceInfo.firmware - Exact version of the firmware, In case of L0 this is same as serviceVersion.
 * deviceInfo.certification - Allowed values are "L0", "L1" based on the level of certification.
 * deviceInfo.serviceVersion - Version of the current service.
-* deviceInfo.deviceSubId - [1,2,3]; The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of fingerprint/iris its 1 for left fingerprint slap/iris, 2 for right fingerprint slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id. 
+* deviceInfo.deviceSubId - [1,2,3]; The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id. 
 * deviceInfo.callbackId - Base URL to communicate.
 * deviceInfo.digitalId - As defined under the digital id section. The digital id will be unsigned if the device is L0 and the the status of the device is "Not Registered".
 * deviceInfo.env - "None" if not registered. If registered, then send the registered enviornment "Staging" | "Developer" | "Pre-Production" | "Production".
@@ -579,7 +579,7 @@ The capture request would be used to capture a biometric from MOSIP compliant de
   "bio": [
     {
       "type": "Type of the biometric data",
-      "count":  "Fingerprint/Iris count, in case of face max is set to 1",
+      "count":  "Finger/Iris count, in case of face max is set to 1",
       "bioSubType": ["Array of subtypes"],
       "requestedScore": "Expected quality score that should match to complete a successful capture",
       "deviceId": "Internal Id",
@@ -613,7 +613,7 @@ Count value should be driven by the count of the bioSubType for Iris and Finger.
 	* For Face: No bioSubType
 * bio.requestedScore - Upon reaching the quality score the biometric device is expected to auto capture the image.
 * bio.deviceId - Internal Id to identify the actual biometric device within the device service.
-* bio.deviceSubId  - Specific sub id of the device that is responsible to capture the data. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of fingerprint/iris its 1 for left fingerprint slap/iris, 2 for right fingerprint slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id.
+* bio.deviceSubId  - Specific sub id of the device that is responsible to capture the data. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id.
 * bio.previousHash - For the first capture the previousHash is hash of empty utf8 string. From the second capture the previous captures hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period. 
 * customOpts - If in case the device vendor has additional parameters that they can take and act accordingly then those values can be sent by the application developers to the device service.
 
@@ -642,8 +642,8 @@ Count value should be driven by the count of the bioSubType for Iris and Finger.
       "sessionKey": "encrypted with MOSIP public key (dynamically selected based on the uri) and encoded session key biometric",
       "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
       "error": {
-        "errorcode": "101",
-        "errorinfo": "Invalid JSON Value"
+        "errorCode": "101",
+        "errorInfo": "Invalid JSON Value"
       }
     },
     {
@@ -667,8 +667,8 @@ Count value should be driven by the count of the bioSubType for Iris and Finger.
       "sessionKey": "encrypted with MOSIP public key and encoded session key biometric",
       "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
       "error": {
-        "errorcode": "101",
-        "errorinfo": "Invalid JSON Value"
+        "errorCode": "101",
+        "errorInfo": "Invalid JSON Value"
       }
     }
   ]
@@ -749,7 +749,7 @@ Used only for the registration module compatible devices. This API is visible on
 
 ### Allowed Values for device Stream Request
 * deviceId - Internal Id to identify the actual biometric device within the device service.
-* deviceSubId - Specific sub id of the device thats responsible to stream the data. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of fingerprint/iris its 1 for left fingerprint slap/iris, 2 for right fingerprint slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id.
+* deviceSubId - Specific sub id of the device thats responsible to stream the data. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id.
 
 ### Device Stream Response
 Live Video stream with quality of 3 frames per second or more using [M-JPEG](https://en.wikipedia.org/wiki/Motion_JPEG).
@@ -806,7 +806,7 @@ The API is used by the devices that are compatible for the registration module. 
   "bio": [
     {
       "type": "Type of the biometric data",
-      "count":  "Fingerprint/Iris count, in case of face max is set to 1",
+      "count":  "Finger/Iris count, in case of face max is set to 1",
       "bioSubType": ["Array of subtypes"], //Optional
       "exception": ["Finger or Iris to be excluded"],
       "requestedScore": "Expected quality score that should match to complete a successful capture.",
@@ -839,7 +839,7 @@ The API is used by the devices that are compatible for the registration module. 
 	* For Iris: ["Left", "Right"]
 * bio.requestedScore - Upon reaching the requested quality score the biometric device is expected to auto capture the image.
 * bio.deviceId - Internal Id to identify the actual biometric device within the device service.
-* bio.deviceSubId  - Specific sub id of the device that is responsible to capture the data. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of fingerprint/iris its 1 for left fingerprint slap/iris, 2 for right fingerprint slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id.
+* bio.deviceSubId  - Specific sub id of the device that is responsible to capture the data. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id.
 * bio.previousHash - For the first capture the previousHash is hash of empty utf8 string. From the second capture the previous captures hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.
 
 ### Registration Capture Response
@@ -864,8 +864,8 @@ The API is used by the devices that are compatible for the registration module. 
       },
       "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block)",         
       "error": {
-        "errorcode": "101",
-        "errorinfo": "Invalid JSON Value Type For Discovery.. ex: {type: 'Biometric Device' or 'Fingerprint' or 'Face' or 'Iris' } "
+        "errorCode": "101",
+        "errorInfo": "Invalid JSON Value Type For Discovery.. ex: {type: 'Biometric Device' or 'Finger' or 'Face' or 'Iris' } "
       }
     },
     {
@@ -886,8 +886,8 @@ The API is used by the devices that are compatible for the registration module. 
       },
       "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
       "error": {
-        "errorcode": "101",
-        "errorinfo": "Invalid JSON Value Type For Discovery.. ex: {type: 'Biometric Device' or 'Fingerprint' or 'Face' or 'Iris' } "
+        "errorCode": "101",
+        "errorInfo": "Invalid JSON Value Type For Discovery.. ex: {type: 'Biometric Device' or 'Finger' or 'Face' or 'Iris' }"
       }
     }
   ]
