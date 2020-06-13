@@ -178,11 +178,11 @@ The foundational device trust module provides for a trusted execution environmen
 
 1. Secure Boot
 	1. Ability to cryptographically verify code before execution.
-	1. Ability to check for integrity violation of the module/device
+	1. Ability to check for integrity violation of the module/device.
 	1. Halt upon failure.
 	1. Ability to securely upgrade and perform forward only upgrades, to thwart downgrade attacks. 
 	1. SHA256 hash equivalent or above should be used for all hashing requirements
-	1. All root of trust is provisioned upon first boot or before
+	1. All root of trust is provisioned upon first boot or before.
 	1. All upgrades would be considered success only after the successful boot with proper hash and signature verification. 
 	1. The boot should fail upon hash/signature failures and would never operate in a intermediary state. 
 	1. Maximum of 10 failed attempts should lock the upgrade process and brick the device. However chip manufactures can decide to be less than 10.
@@ -220,12 +220,12 @@ The FTM should protect against the following threats.
 	1. Physical tamper - No way to physically tamper and obtain it secrets. 
 	1. Voltage & frequency related attacks - Should shield against voltage leaks and should prevent against low voltage. The FTM should always be in either of the state operational normally or inoperable. The FTM should never be operable when its input voltages are not met.
 	1. Temperature attacks on crypto block - Low or High the FTM is expected to operate or reach inoperable state. No state in between.
-1. Differential Power Analysis attack 
+1. Differential Power Analysis attack. 
 1. Probing attacks - FTM should protect its surface area against any probe related attacks.
-1. Segregation of memory for execution of cryptographic operation (crypto block should be protected from buffer overflow type attacks)
-1. Vulnerability of the cryptographic algorithm implementation
-1. Attacks against secure boot & secure upgrade
-1. TEE/Secure processor OS attack
+1. Segregation of memory for execution of cryptographic operation (crypto block should be protected from buffer overflow type attacks).
+1. Vulnerability of the cryptographic algorithm implementation.
+1. Attacks against secure boot & secure upgrade.
+1. TEE/Secure processor OS attack.
 
 ### Foundational Trust Module Identity
 Upon an FTM provider approved by the MOSIP adopters, the FTM provider would submit a self signed public certificate to the adopter. Let us call this as the FTM root.
