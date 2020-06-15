@@ -39,7 +39,7 @@ The quality check method is used to determine if the biometrics data is of suffi
 `Response<QualityCheck> checkQuality(BiometricRecord sample, List<BiometricType> modalitiesToCheck, Map<String, String> flags)`
 
 **Input Parameters**
-* sample - Biometric Record of a person containing a list of biometric segments in the BIR format. The segments could correspond to multiple modalities and could be FIR, IIR, or Face Image Record.
+* sample - Biometric Record of a person containing a list of biometric segments in the BIR format. The segments could correspond to multiple modalities and could be Finger, Iris, or Face Image Record.
 * modalitiesToCheck - List of biometric types to perform the quality check on. If this is null or empty all biometric types that the SDK supports can be checked. If present the modalities specified alone should be processed and the others present in the sample should be ignored.
 * flags - An optional list of control flags as name value pairs that can be used to configure the behavior of the library.
 
@@ -58,7 +58,7 @@ The input biometric record has segments from multiple biometric types. The metho
 
 ## Behavior per biometric type
 
-**Fingerprint Segments**
+**Finger Segments**
 * The biometric image record is a Fingerprint Image Record. The FIR structure is explained in a later section
 * The image is a jpeg2000 format lossless image
 * The quality score will be using NFIQ2 for 500 dpi images and NFIQ for other densities
@@ -87,7 +87,7 @@ The matcher is used to perform checks if the provided input biometrics belong to
 `Response<MatchDecision[]> match(BiometricRecord sample, BiometricRecord[] gallery, List<BiometricType> modalitiesToMatch, Map<String, String> flags)`
 
 **Input Parameters**
-* sample - Biometric Record of a person containing a list of biometric segments in the BIR format. The segments could correspond to multiple modalities and could be FIR, IIR, or Face Image Record.
+* sample - Biometric Record of a person containing a list of biometric segments in the BIR format. The segments could correspond to multiple modalities and could be Finger, Iris, or Face Image Record.
 * gallery - List of biometric records of people to match against. Each biometric record in this list will contain multiple segments that can be used in the match process. The smaller the gallery size the better the performance. This list will have one entry in a 1:1 match case and multiple entries in a 1:n(few) case.
 * modalitiesToMatch - List of biometric types to perform the match on. If this is null or empty all biometric types that the SDK supports should be matched. If present the modalities specified alone should be processed and the others present in the sample can be ignored.
 * flags - An optional list of control flags as name value pairs that can be used to configure the behavior of the library.
@@ -105,7 +105,7 @@ One of the example for the behaviour is threshold for match using which the SDK 
 {% endhint %}
 
 ## Behavior per biometric type
-**Fingerprint**
+**Finger**
 * The biometric segment will have a jpeg2000 format lossless image or minutiae in an ISO template (FMR).
 * The on record biometrics will be jpeg200 format lossless images or biometric extracts tagged to a specific extractor.
 * Best matches are provided for an image to image match. The sample and on records data are both images. The matcher uses its own extraction algorithm on the images to be compared.
@@ -138,10 +138,11 @@ The matcher is capable of performing 1:1 and 1:n(few) matches with multipe biome
 # Extractor
 
 ## Signature
-`Response<BiometricRecord> extractTemplate(BiometricRecord sample, Map<String, String> flags)`
+`Response<BiometricRecord> extractTemplate(BiometricRecord sample, List<BiometricType> modalitiesToExtract, Map<String, String> flags)`
 
 **Input Parameters**
-* sample - Biometric Record of a person containing a list of biometric segments in the BIR format. The segments could correspond to multiple modalities and could be FIR, IIR, or Face Image Record.
+* sample - Biometric Record of a person containing a list of biometric segments in the BIR format. The segments could correspond to multiple modalities and could be Finger, Iris, or Face Image Record.
+* modalitiesToExtract - List of biometric types to perform the extract on. If this is null or empty, all biometric types that the SDK supports should be extracted. If present, the modalities specified alone should be extracted and the others present in the sample can be ignored.
 * flags - An optional list of control flags as name value pairs that can be used to configure the behavior of the library.
 
 **Output Parameters**
@@ -153,7 +154,7 @@ The matcher is capable of performing 1:1 and 1:n(few) matches with multipe biome
 * Processing error
 
 ## Behavior
-**Fingerprint**
+**Finger**
 * The extractor will extract either an ISO template FMR or extract a proprietary representation that can give better results. The extract record will be marked with the format and any additional metadata needed.
 
 **Iris**
@@ -166,15 +167,16 @@ For non fingerprint biometrics characteristics and patterns and landmarks might 
 {% endhint %}
 
 ## Implementatin notes
-The extractor is expected to create a data set that is used in the actual match process. This data set could be a standard format such as FMR in case fingerprint or a custom extract. The BDBInfo and BIRInfo variable should be filled in appropriately in the BiometricRecord returned. The signature block has to be filled with the hash computed and signed by the SDK. These extracts can be passed to the matcher.
+The extractor is expected to create a data set that is used in the actual match process. This data set could be a standard format such as FMR in case fingerprint or a custom extract. The BDBInfo and BIRInfo variable should be filled in appropriately in the BiometricRecord returned. The signature block has to be filled with the hash computed and signed by the SDK (sb and sbInfo in each BIR). These extracts can be passed to the matcher.
 
 # Segmenter
 
 ## Signature
-`Response<BiometricRecord> segment(BIR sample, Map<String, String> flags)`
+`Response<BiometricRecord> segment(BIR sample, List<BiometricType> modalitiesToSegment, Map<String, String> flags)`
 
 **Input Parameters**
-* sample - Biometric Record of a person containing a list of BIR objects. The BIR would containt the unsegmented biometric in FIR, IIR, or Face Image Record.
+* sample - Biometric Record of a person containing a list of BIR objects. The BIR would containt the unsegmented biometric in Finger, Iris, or Face Image Record.
+* modalitiesToSegment - List of biometric types to perform segmentation. If this is null or empty, all biometric types that the SDK supports should be segmented. If present, the modalities specified alone should be segmented and the others present in the sample can be ignored.
 * flags - An optional list of control flags as name value pairs that can be used to configure the behavior of the library.
 
 **Output Parameters**
@@ -187,7 +189,7 @@ The extractor is expected to create a data set that is used in the actual match 
 
 ## Behavior per biometric type
 
-**Fingerprint**
+**Finger**
 * Input will contain unsegmented image such as left slap or right slap or two thumbs
 * Output will be biometrics of each finger present in the input image
 
@@ -202,19 +204,20 @@ The segmenter will identify the individual fingers present.
 {% endhint %}
 
 ## Implementation notes
-The segmented biometrics should be stored in the BIR objects with the correct BDBInfo and BIRInfo attributes. Each segment should specify its biometric type, sub type. The signature block has to be filled with the hash computed and signed by the SDK.
+The segmented biometrics should be stored in the BIR objects with the correct BDBInfo and BIRInfo attributes. Each segment should specify its biometric type, sub type. The signature block has to be filled with the hash computed and signed by the SDK (sb and sbInfo in each BIR).
 
 # Converter
 
 ## Signature
-`BiometricRecord convertFormat(BiometricRecord sample, String sourceFormat, String targetFormat, Map<String, String> sourceParams, Map<String, String> targetParams)`
+`BiometricRecord convertFormat(BiometricRecord sample, String sourceFormat, String targetFormat, Map<String, String> sourceParams, Map<String, String> targetParams, List<BiometricType> modalitiesToConvert)`
 
 **Input Parameters**
-* sample - Biometric Record of a person containing a list of BIR objects. The BIR would containt the unsegmented biometric in FIR, IIR, or Face Image Record.
+* sample - Biometric Record of a person containing a list of BIR objects. The BIR would containt the unsegmented biometric in Finger, Iris, or Face Image Record.
 * sourceFormat - Specifies the input format. This could be JPEG, BMP, WSQ or other data formats based on the biometric type.
 * sourceParams - An optional additional list that specifies more information about the source data such as "dpi", "fps", etc.
 * targetFormat - Specifies the output format. This could be JPEG, BMP, WSQ or other data formats based on the biometric type.
 * targetParams - An optional additional list that specifies more information about the output data such as "dpi", "fps", etc.
+* modalitiesToConvert - List of biometric types to convert. If this is null or empty, all biometric types that the SDK supports should be converted. If present, the modalities specified alone should be converted and the others present in the sample can be ignored.
 
 **Output Parameters**
 * BiometricRecord with the biometric image data converted to the target format.
@@ -225,7 +228,8 @@ The segmented biometrics should be stored in the BIR objects with the correct BD
 * Processing error
 
 ## Implementation notes
-The converter will convert images in all segments in the biometric record. The signature block in the response has to be filled with the signed hash of the data.
+The converter will convert images in all segments in the biometric record. The signature block in the response has to be filled with the signed hash of the data (sb and sbInfo in each BIR).
+
 {% hint style="info" %}
 More documentation will be shared on the source and target params as well as source and target formats for standardaization. Review inputs are welcome.
 {% endhint %}
@@ -422,9 +426,9 @@ public interface IBioApi {
   SDKInfo init(Map<String, String> initParams);
 	Response<QualityCheck> checkQuality(BiometricRecord sample, List<BiometricType> modalitiesToCheck, Map<String, String> flags);
 	Response<MatchDecision[]> match(BiometricRecord sample, BiometricRecord[] gallery, List<BiometricType> modalitiesToMatch, Map<String, String> flags);
-	Response<BiometricRecord> extractTemplate(BiometricRecord sample, Map<String, String> flags);
-	Response<BiometricRecord> segment(BIR sample, Map<String, String> flags);
-	BiometricRecord convertFormat(BiometricRecord sample, String sourceFormat, String targetFormat, Map<String, String> sourceParams, Map<String, String> targetParams);
+	Response<BiometricRecord> extractTemplate(BiometricRecord sample, List<BiometricType> modalitiesToExtract, Map<String, String> flags);
+	Response<BiometricRecord> segment(BIR sample, List<BiometricType> modalitiesToSegment, Map<String, String> flags);
+	BiometricRecord convertFormat(BiometricRecord sample, String sourceFormat, String targetFormat, Map<String, String> sourceParams, Map<String, String> targetParams, List<BiometricType> modalitiesToConvert);
 }
 ```
 
@@ -434,8 +438,8 @@ The above code snippets are available in - (https://github.com/mosip/commons/tre
 Status Code	|Status Message	|Scenario
 ----- |----- |-----
 2XX (range 200 to 299)	|OK |When everything is Okay
-401	|Invalid Input Parameter - %s	|When data provided as input is invalid. (eg. Invalid Input Parameter - Gallery - FIR)
-402	|Missing Input Parameter - %s	|When data required as input is missing. (eg. Missing Input Parameter - Probe - FIR)
+401	|Invalid Input Parameter - %s	|When data provided as input is invalid. (eg. Invalid Input Parameter - Gallery - Finger)
+402	|Missing Input Parameter - %s	|When data required as input is missing. (eg. Missing Input Parameter - Probe - Finger)
 403	|Quality check of Biometric data failed	|When data provided is valid but quality check cannot be performed
 404	|Biometrics not found in CBEFF	|When there is no data found in the input CBEFF
 405	|Matching of Biometric data failed	|When data provided is valid, but matching cannot be performed
