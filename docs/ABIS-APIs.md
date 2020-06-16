@@ -1,6 +1,7 @@
 This document defines the APIs specifications for various operations that ABIS can perform to integrate with MOSIP.
 
 API specification version: **0.9**
+
 Published Date: June 9, 2020
 
 # Introduction
