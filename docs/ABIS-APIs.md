@@ -2,7 +2,7 @@ This document defines the APIs specifications for various operations that ABIS c
 
 API specification version: **0.9**
 
-Published Date: June 9, 2020
+Published Date: June 15, 2020
 
 # Introduction
 An ABIS system that integrates with MOSIP should support the following operations. 
