@@ -1,4 +1,4 @@
-**Aug 2019 | Version: 0.9.5 **
+**Aug 2019 | Version: 0.9.5**
 
 **Status: Draft**
 
