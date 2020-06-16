@@ -1,6 +1,8 @@
-** Aug 2019 | Version: 0.9.5 |**
-** Status: Draft |**
-** Last updated date: 24th April 2020 |**
+**Aug 2019 | Version: 0.9.5 **
+
+**Status: Draft**
+
+**Last updated date: 13th June 2020**
 
 # Table of Contents 
 
