@@ -3,7 +3,7 @@ This document defines the interface for the Java Library providing the functiona
 
 API specification version:  **0.9**
 
-Published Date: June 11, 2020
+Published Date: June 15, 2020
 
 ## Revision Note
 This is the first formal publication of the interface as a versioned specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
