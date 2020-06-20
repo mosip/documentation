@@ -12,9 +12,9 @@ Resident data is sent to the designated registration center before appointment t
 
 # Process flow
 
-![](_images/pre_registration/pre_registration_process_flow-create_or_update_applications.png
+![](_images/pre_registration/pre_registration_process_flow-create_or_update_applications.png)
 
-![](_images/pre_registration/pre_registration_process_flow-cancel_or_discard_applications.png
+![](_images/pre_registration/pre_registration_process_flow-cancel_or_discard_applications.png)
 
 # Services
 For detailed description of Pre-Registration Services refer to [pre-registration repo](https://github.com/mosip/pre-registration).
