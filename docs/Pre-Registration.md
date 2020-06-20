@@ -1,9 +1,9 @@
 # Overview
 This module enables a resident to:
-* Book an appointment for one or many users for registration by choosing a suitable registration center and time slot.
-* Enter demographic data & upload supporting documents.
-* Receive appointment notifications.
-* Reschedule and cancel appointments.
+* Book an appointment for one or many users for registration by choosing a suitable registration center and time slot
+* Enter demographic data & upload supporting documents
+* Receive appointment notifications
+* Reschedule and cancel appointments
 
 Resident data is sent to the designated registration center before appointment that can be used during the registration process,
 
@@ -12,7 +12,10 @@ Resident data is sent to the designated registration center before appointment t
 
 # Process flow
 
-![](_images/pre_registration/pre-registration_process_flow.jpg
+![](_images/pre_registration/pre_registration_process_flow-create_or_update_applications.png
+
+![](_images/pre_registration/pre_registration_process_flow-cancel_or_discard_applications.png
+
 # Services
 For detailed description of Pre-Registration Services refer to [pre-registration repo](https://github.com/mosip/pre-registration).
 
