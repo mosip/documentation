@@ -22,9 +22,9 @@ We estimate 30% additional compute capacitiy for administration, monitoring and 
 
    1. Database
    1. HDFS/CEPH
-   1. Bio SDK 
-   1. HSM
-   1. ABIS
+   1. [Bio SDK](Biometric-SDK.md)
+   1. [HSM](Hardware-Security-Module-HSM-Specifications.md)
+   1. [ABIS](Automated-Biometric-Identification-System-ABIS.md)
    1. Virus scan
    1. Load balancers
    1. External IAM
