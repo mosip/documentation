@@ -13,7 +13,7 @@ Compute hardware estimates for a production deployment:
 
 \* VCPU:  Virtual CPU
 
-We estimate 30% additional compute capacitiy for administration, monitoring and maintenance. This may be optimized by the System Integrator.
+We estimate 30% (approx) additional compute capacitiy for administration, monitoring and maintenance. This may be optimized by the System Integrator.
 
 **Notes**
 
