@@ -125,4 +125,5 @@
     * [Release Notes 1.0.6](Release-Notes-1.0.6.md)
 * [Roadmap](Roadmap.md)
 	* [Roadmap Activities](Roadmap-Activities.md)
+* [Revision History](Revision-History.md)
 * [License](License.md)
