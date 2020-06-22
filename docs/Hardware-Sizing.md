@@ -39,7 +39,7 @@ Storage estimates for production deployment:
 ## Dev, QA, Staging, Preprod
 Additional compute and storage may be needed for the following setups.
 
-| Environment | Setup | n Severs | Configuration | Storage |
+| Environment | Setup | n Servers | Configuration | Storage |
 |---|---|---|---|---|
 | Dev | Sandbox | 13 | 4 VCPU, 16 GB RAM | 128 GB SSD|
 | QA | Sandbox | 13 | 4 VCPU, 16 GB RAM | 128 GB SSD|
