@@ -6,10 +6,10 @@ Compute hardware estimates for a production deployment:
 
 |Module|Capacity|n Servers|Configuration|
 |---|---|---|---|
-Pre-registration | 300 concurrent users | 20 | 4 VCPU*, 16 GB RAM |
-Registration Processor | 200,000 registrations per day | 80 | 4 VCPU, 16 GB RAM|
-ID Authentication | 2,000,000 auth requests per day | 20 | 4 VCPU, 16 GB RAM |
-Resident Services | 300 concurrent users | 30 | 4 VCPU*, 16 GB RAM |
+Pre-registration | 300 concurrent users | 20 | 4 VCPU*, 16 GB RAM | 
+Registration Processor | 200,000 registrations per day | 80 | 4 VCPU, 16 GB RAM| 
+ID Authentication | 2,000,000 auth requests per day | 20 | 4 VCPU, 16 GB RAM | 
+Resident Services | 300 concurrent users | 30 | 4 VCPU*, 16 GB RAM | 
 
 \* VCPU:  Virtual CPU
 
