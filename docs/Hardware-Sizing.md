@@ -1,49 +1,45 @@
+The hardware compute and storage requirements for MOSIP core platform are estimated as below.
 
-This document provides estimates for server machines and other hardware needed for a given production deployment.  _This is work-in-progress_.  Performance tuning of MOSIP is in progress so these figures are **rough estimates** at this point time.
+## Production
+### Compute
+Compute hardware estimates for a production deployment:
 
-# ID Authentication
-* Peak load assumption:  2 million auth requests per day 
-* Number of servers needed:  20  (4 CPU, 16 GB RAM)
+|Module|Capacity|n Servers|Configuration|
+|---|---|---|---|
+Pre-registration | 300 concurrent users | 20 | 4 VCPU*, 16 GB RAM |
+Registration Processor | 200,000 registrations per day | 80 | 4 VCPU, 16 GB RAM|
+ID Authentication | 2,000,000 auth requests per day | 20 | 4 VCPU, 16 GB RAM |
+Resident Services | 300 concurrent users | 30 | 4 VCPU*, 16 GB RAM |
 
-# Registration Processor
-* Peak load assumption:  200,000 registration packets per day 
-* Number of servers needed:  80 (4 core, 16 GB RAM)
+\* VCPU:  Virtual CPU
 
-**Important notes**:
+We estimate 30% additional compute capacitiy for administration, monitoring and maintenance. This may be optimized by the System Integrator.
 
-1.  The above are rough estimates we must add a margin of 30% for the unknowns.
-1.  High availability is taken into consideration.
-1.  The above estimates do not include hardware/servers needed for
-    1. Data storage 
-    1. Bio SDK:  compute requirements should be provided by the SDK vendor.
-    1. HSM
-    1. ABIS
-    1. Virus scan
-    1. Load balancers
-    1. External IAM
-    1. Disaster recovery:  Setup will be replicated, hence, double the number of servers.
+**Notes**
+1. High availability is taken into consideration with assumed replication factor of 2 per service pod/docker
+1. The above estimates **do not** include compute servers needed for
+   1. Database
+   1. HDFS/CEPH
+   1. Bio SDK:  compute requirements should be provided by the SDK vendor.
+   1. HSM
+   1. ABIS
+   1. Virus scan
+   1. Load balancers
+   1. External IAM
+   1. Disaster recovery:  Setup will be replicated, hence, double the number of servers.
 
-# Bill of Material
-The section below lists all the hardware that is needed for deploying MOSIP.  Only hardware components are listed.  Quantity will depend on specific deployments (based on above estimates).
-
-Hardware item|Spec|Quantity
----|---|---
-Compute machines (VM/Bare Metal)|4 Core, 16GB RAM
-DB machines| 4 Core, 32 GB 
-Storage SAN/NAS|| 
-HSM (Hardware Security Module)||
-Load Balancers||
-Firewalls||
-Routers/Software Defined Network||
-IDS/IPS||
-Laptops with TPM (for registrations)||
-Fingerprint slap scanners||
-Iris scanners||
-Camera||
-Document scanners (optional)||
-Printers (optional)||
+### Storage
+Storage estimates for production deployment:
 
 
+## Dev, QA, Staging, Preprod
+Additional compute and storage may be needed for the following setups.
 
+| Environment | Setup | n Severs | Configuration | Storage |
+|---|---|---|---|---|
+| Dev | Sandbox | 13 | 4 VCPU, 16 GB RAM | 128 GB SSD|
+| QA | Sandbox | 13 | 4 VCPU, 16 GB RAM | 128 GB SSD|
+| Staging | Sandbox | 13 | 4 VCPU, 16 GB RAM | 128 GB SSD|
+| Pre-production | Cell | * | 4 VCPU, 16 GB RAM | * |
 
-
+\* To be decided by the country/System Integrator.
