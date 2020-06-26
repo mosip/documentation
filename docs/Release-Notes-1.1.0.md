@@ -44,7 +44,7 @@ MOSIP 1.0 was a functional release of mosip with the core modules tested with bi
 ### 1. Platform Documentation
 Includes functional requirements, process flows, architecture and high level design.  
 
-[**Link to Modules Documentation**](https://docs.mosip.io/platform/modules).
+[**Link to documentation for MOSIP modules**](https://docs.mosip.io/platform/modules).
 
 ### 2. API Specifications
 API specifciations for the MOSIP APIs is available [here](https://docs.mosip.io/platform/apis)
