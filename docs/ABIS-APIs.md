@@ -2,7 +2,11 @@ This document defines the APIs specifications for various operations that ABIS c
 
 API specification version: **0.9**
 
-Published Date: June 15, 2020
+Published Date: June 26, 2020
+
+**Revision Note**
+
+New [failure reason](#failure-reasons) (code - 6, 8, 9, 10, 11, 12) for ABIS have been added.
 
 # Introduction
 An ABIS system that integrates with MOSIP should support the following operations. 
@@ -38,13 +42,19 @@ Code | Status
 
 ## Failure Reasons
 Code | Reason
------| ------
+-----|-------
 1 | Internal error - Unknown
 2 | Aborted
 3 | Unexpected error
 4 | Unable to serve the request
 5 | Missing reference id
+6 | Missing request id
 7 | Unable to fetch biometric details
+8 | Missing reference URL
+9 | Missing requesttime
+10 | Unable to server insert request - reference id already exists
+11 | Unable to server insert request - CBEFF has no data
+12 | Unable to server identify request - reference id not found
 
 # ABIS Operations
 The following operations are supported by MOSIP:
