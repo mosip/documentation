@@ -11,9 +11,9 @@
   * [4. Types of Testing](#4-types-of-testing-)
   * [5. Test Execution Summary](#5-test-execution-summary-)
 - [Known Issues](#known-issues-)
-- [Support Process (To Be Determined)](#support-process-to-be-determined-)
 - [List Of Acronyms](#list-of-acronyms-)
 - [Highlights](#highlights)
+
 ## Scope [**[↑]**](#table-of-contents)
 
 Version **1.0.6** of MOSIP Platform is a feature and stability release.
@@ -29,16 +29,20 @@ Highlights of the 1.0.6 release include:
 * Bug Fixes across all modules
 * Repository structure changes
 
-Module-wise features released as part of this release can be found [here](https://github.com/mosip/mosip-docs/wiki/_files/MOSIP_Feature_Release_v1.0.6.xlsx)
+Module-wise features released as part of this release can be found [here](_files/release/1.0.6/MOSIP_Feature_Release_v1.0.6.xlsx)
 
 ## Documentation [**[↑]**](#table-of-contents)
+
 ### 1. Platform Documentation 
-Includes Functional requirements, Process flows, Architecture and High level design, Getting started and Deployment guide, Developer documentation etc.  
-   [**Link to Platform Documentation**](Platform-Documentation)
+Includes Functional requirements, Process flows, Architecture and High level design, Getting started and Deployment guide, Developer documentation etc. 
+
+[**Link to Platform Documentation**](https://docs.mosip.io/platform/)
+
 ### 2. Detailed Documentation
-[**Low Level design**](https://github.com/mosip/mosip-platform/tree/master/design)
+Available in respective repositories in design section.
+
 ### 3. Platform Configurability for RBR    
-MOSIP Platform can be configured to be used for Real Biometrics.  [Guide to configure MOSIP for Real Biometrics](https://github.com/mosip/mosip-docs/wiki/Guide-to-configure-MOSIP-for-Real-Biometrics)
+MOSIP Platform can be configured to be used for Real Biometrics. [Guide to configure MOSIP for Real Biometrics](Guide-to-configure-MOSIP-for-Biometrics.md)
 
 ## Key Points [**[↑]**](#table-of-contents)
 
@@ -64,10 +68,10 @@ MOSIP Platform can be configured to be used for Real Biometrics.  [Guide to conf
 
 
 ## Code [**[↑]**](#table-of-contents)
-The [code](https://github.com/mosip/commons/releases) and [automation tests](https://github.com/mosip/mosip-functional-tests) are available on GitHub. The code needs to be built and deployed as per the procedure documented in [**Building And Deploying MOSIP**](Platform-Documentation#9-building-and-deploying-mosip). We will actively support System Integrators during their first deployment.
+The [code](https://github.com/mosip/commons/releases) and [automation tests](https://github.com/mosip/mosip-functional-tests) are available on GitHub. The code needs to be built and deployed as per the procedure documented in [Building And Deploying MOSIP](https://github.com/mosip/mosip-infra-mt/tree/master/releases/1.0.0). We will actively support System Integrators during their first deployment.
 
 ## Test Reports [**[↑]**](#table-of-contents)
-**Testing Scope**
+
 #### 1. In scope [**[↑]**](#table-of-contents)
 
 |Title	|Description|
@@ -102,8 +106,8 @@ The [code](https://github.com/mosip/commons/releases) and [automation tests](htt
 |7|	Resident Services	|	<li> Test Automation	|PASS|	
 |8|Pre-Registration to Registration Client integration testing|	<li> Tested Manually|PASS	|	
 |9|	Registration Client to Registration Processor integration testing|	<li> Tested Manually|PASS|	
-|10|	Registration Processor to IDA integration testing|<li> 	Tested Manually|PASS|
-|11|	IDA to ID Repo|<li> 	Tested Manually|PASS	|
+|10| Registration Processor to IDA integration testing|<li> 	Tested Manually|PASS|
+|11| IDA to ID Repo|<li> 	Tested Manually|PASS	|
 
 #### 4. Types of Testing [**[↑]**](#table-of-contents)
 
@@ -120,13 +124,22 @@ The [code](https://github.com/mosip/commons/releases) and [automation tests](htt
 ## Known Issues [**[↑]**](#table-of-contents)
 ![Image](_images/test_rig_automation/KnownIssues_1.0.6.jpg) 
 
-## Support Process (To Be Determined) [**[↑]**](#table-of-contents)
-Process to be followed for support required, escalation matrix, etc.
-
 ## List Of Acronyms [**[↑]**](#table-of-contents)
-[**Refer to List Of Acronyms**](Platform-Documentation#12-list-of-acronyms)
 
-## Highlights
-
-
-
+Acronym | Expanded Form
+-----|-----------------
+ABIS | Automated Biometric Identification System
+API | Application Programming Interface
+ID | Identity
+IDA | Identity Authentication
+MOSIP | Modular Open Source Identity Platform
+NFR | Non-Functional Requirements
+OTP | One Time Password
+SDK | Software Development Kit
+TBD | To Be Determined
+TOTP| Temporary One Time Password
+UIN | Unique Identification Number
+WIP | Work In Progress
+CBEFF | Common Biometric Exchange Formats Framework
+HSM | Hardware Security Module
+TPM | Trusted Platform Module
