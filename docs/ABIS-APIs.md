@@ -4,7 +4,7 @@ API specification version: **0.9**
 
 Published Date: June 26, 2020
 
-** Revision Note**
+**Revision Note**
 
 New [failure reason](#failure-reasons) (code - 6, 8, 9, 10, 11, 12) for ABIS have been added.
 
