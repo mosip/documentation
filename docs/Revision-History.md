@@ -2,6 +2,7 @@ This page contains the details of recent documentation updates.
 
 ### 26th June 2020
 * New failure codes were added for [ABIS APIs](ABIS-APIs.md).
+* [Hardware Sizing](Hardware-Sizing.md): Pre Reg and Resident Services performance figures updated.
 
 ### 25th June 2020
 * subType was changed to deviceSubType in digital signature for [Device Management APIs](Device-Management-APIs.md).
