@@ -43,13 +43,14 @@ MOSIP 1.0 was a functional release of mosip with the core modules tested with bi
 ## Documentation [**[↑]**](#table-of-contents)
 ### 1. Platform Documentation
 Includes functional requirements, process flows, architecture and high level design.  
-[**Link to Modules Documentation**](modules)
+
+[**Link to Modules Documentation**](https://docs.mosip.io/platform/modules).
 
 ### 2. API Specifications
-Includes API specifciations.
+API specifciations for the MOSIP APIs is available [here](https://docs.mosip.io/platform/apis)
 
 ### 3. Design Documentation
-Inclues low level design documents for a 
+Low level design documents for each modules are available in respective repositories.
 
 ## Key Points [**[↑]**](#table-of-contents)
 
@@ -70,7 +71,7 @@ Registration Client – face capture | OpenImaj - This is licensed for demo purp
 Keystore | SoftHSM
 Antivirus | ClamAV
 Maps | OpenstreetMap
-Supporting key based digital signatures, not using digital certificates||	
+Supporting key based digital signatures, not using digital certificates | 
 Transliteration | ICU4J (Library with French, Arabic languages)
 
 ## Code [**[↑]**](#table-of-contents)
@@ -134,4 +135,21 @@ Regression Testing|Tests to ensure that any change doesn't break existing functi
 Process to be followed for support required, escalation matrix, etc.
 
 ## List Of Acronyms [**[↑]**](#table-of-contents)
-[**Refer to List Of Acronyms**](Platform-Documentation#12-list-of-acronyms)
+
+Acronym | Expanded Form
+-----|-----------------
+ABIS | Automated Biometric Identification System
+API | Application Programming Interface
+ID | Identity
+IDA | Identity Authentication
+MOSIP | Modular Open Source Identity Platform
+NFR | Non-Functional Requirements
+OTP | One Time Password
+SDK | Software Development Kit
+TBD | To Be Determined
+TOTP| Temporary One Time Password
+UIN | Unique Identification Number
+WIP | Work In Progress
+CBEFF | Common Biometric Exchange Formats Framework
+HSM | Hardware Security Module
+TPM | Trusted Platform Module
