@@ -6,12 +6,14 @@ Compute hardware estimates for a production deployment:
 
 |Module|Capacity|n Servers|Configuration|
 |---|---|---|---|
-|Pre-registration | 7200 pre-regs/hour | 10 | 4 VCPU*, 16 GB RAM | 
+|Pre-registration | 7200 pre-regs/hour\* | 10 | 4 VCPU\**, 16 GB RAM | 
 |Registration Processor | 200,000 registrations per day | 80 | 4 VCPU, 16 GB RAM| 
 |ID Authentication | 2,000,000 auth requests per day | 20 | 4 VCPU, 16 GB RAM | 
-|Resident Services | 7200 resident services/hour | 10 | 4 VCPU, 16 GB RAM | 
+|Resident Services | 7200 resident services/hour\* | 10 | 4 VCPU, 16 GB RAM | 
 
-\* VCPU:  Virtual CPU
+\* Average throughput </br>
+\** VCPU:  Virtual CPU
+
 
 We estimate 30% (approx) additional compute capacitiy for administration, monitoring and maintenance. This may be optimized by the System Integrator.
 
