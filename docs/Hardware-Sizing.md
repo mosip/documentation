@@ -11,7 +11,8 @@ Compute hardware estimates for a production deployment:
 |ID Authentication | 2,000,000 auth requests per day | 20 | 4 VCPU, 16 GB RAM | 
 |Resident Services | 7200 resident services/hour\* | 10 | 4 VCPU, 16 GB RAM | 
 
-\* Average throughput </br>
+\* Average throughput 
+
 \** VCPU:  Virtual CPU
 
 
