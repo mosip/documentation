@@ -1,7 +1,7 @@
 This page lists all the technologies used in building MOSIP
 |Domain|Tools/Technologies|Version|Licence Type|
 |---|---|---|---|
-|Operating System|CentOS|7|MIT License|
+|Operating System|CentOS|7.7|MIT License|
 |Infrastructure|Cloud - Microsoft Azure|NA - Cloud tool|Commercial|
 |Development - Language Runtime|Java 8|1.8x|Oracle Binary Code License |
 |Development - Language Runtime|J2EE|JAVA EE 8|Oracle Binary Code License |
