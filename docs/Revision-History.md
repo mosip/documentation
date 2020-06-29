@@ -1,5 +1,8 @@
 This page contains the details of recent documentation updates.
 
+### 29th June 2020
+* [Technology Stack](Technology-Stack.md) updated.
+
 ### 26th June 2020
 * New failure codes were added for [ABIS APIs](ABIS-APIs.md).
 * [Hardware Sizing](Hardware-Sizing.md): Pre Reg and Resident Services performance figures updated.
