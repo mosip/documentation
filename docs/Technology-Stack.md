@@ -45,7 +45,6 @@ This page lists all the technologies used in building MOSIP
 |DevOps tools|GitHub|2.7.x|Commercial - Github |
 |DevOps tools|SonarQube|6.7.3 LTS|GNU GPL|
 |DevOps tools|Maven|3.53.x|Apache License 2.0|
-|DevOps tools|Selenium|3.x|Apache License 2.0|
 |DevOps tools|Cobertura|1.12 and above|GNU GPL|
 |DevOps tools|JFrog Artifactory (OSS)|5.9|Unknown|
 |DevOps tools|Docker |18.03.x CE|Apache 2.0|
