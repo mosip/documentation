@@ -8,8 +8,7 @@ This page lists all the technologies used in building MOSIP
 |Development - UI Application framework|JavaFX|9|Oracle Binary Code License Agreement for the Java SE|
 |Development - Application Framework|Vert.x|3.5.1|Apache License 2.0 |
 |Development - Application Framework|Spring |5|Apache License 2.0 |
-|Development - Utilities|"Apache commons |
-|(60+ to be considered)"|Latest version|Apache License 2.0 |
+|Development - Utilities|Apache commons(60+ to be considered)|Latest version|Apache License 2.0 |
 |Development - Data Grid|Apache Ignite|2.4.0|Apache License 2.0|
 |Development - Object Mapper|Orika|1.5.2 |Apache License 2.0 |
 |Development - validator|Hibernate validator |5.4.2|Apache Software License 2.0|
