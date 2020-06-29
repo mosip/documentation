@@ -1,25 +1,62 @@
 This page lists all the technologies used in building MOSIP
-
-Category | Tool/Technology | Version | License | Remarks
----------|-----------------|---------|---------|---------
-Operating System | CentOS | 7 | |
-Programming language | Java | 1.8 | GNU V2 | 
-Application development framework | Spring family | various versions | Apache License 2.0
-Microservices development framework | Spring boot | | Apache License 2.0
-Thick client framework | JavaFX | 9 | GPL V2 with linking exception |
-Web application framework | Angular | 5 | MIT | 
-SEDA framework | vert.x | 3.5.1 | Apache License 2.0 |
-Database for server | PostgreSQL | 10.5 | PostgreSQL license | Permissive open source similar to BSD or MIT
-Database for client | DerbyDB | 10.4 | Apache License 2.0 | 
-File system storage | CEPH | 13.2.0 | LGPL 2.1 | 
-Build tool | Apache Maven | 3.53 | Apache License 2.0 | 
-Containerization | Docker | 18.03.x CE | Apache License 2.0 | 
-Reg-client-Automation | TestFx | 4.0.15-alpha | Apache License 2.0|
-Reg-client-Automation | Awaitility| 3.0.0 | Apache License 2.0|
-Reg-client-Automation | Junit-platform-launcher|1.3.2 | EPL 2.0|
-Reg-client-Automation | Extentreports | 2.41.2 | BSD 3-clause|
-Reg-client-Automation | Junit-jupiter-engine| 5.0.0 | EPL 1.0|
-Reg-client-Automation | Apiguardian-api| 1.0.0| Apache 2.0| 
-Rest API test automation |Rest Assured|3.0.7||
-Framework to run  test cases|TestNG|6.11||
-Test Management | Zephyr | Cloud Jira & Zephyr | Cloud Jira & Zephyr
+|Domain|Tools/Technologies|Version|Licence Type|
+|---|---|---|---|
+|Operating System|CentOS|7|MIT License|
+|Infrastructure|Cloud - Microsoft Azure|NA - Cloud tool|Commercial|
+|Development - Language Runtime|Java 8|1.8x|Oracle Binary Code License |
+|Development - Language Runtime|J2EE|JAVA EE 8|Oracle Binary Code License |
+|Development - UI Application framework|JavaFX|9|Oracle Binary Code License Agreement for the Java SE|
+|Development - Application Framework|Vert.x|3.5.1|Apache License 2.0 |
+|Development - Application Framework|Spring |5|Apache License 2.0 |
+|Development - Utilities|"Apache commons |
+|(60+ to be considered)"|Latest version|Apache License 2.0 |
+|Development - Data Grid|Apache Ignite|2.4.0|Apache License 2.0|
+|Development - Object Mapper|Orika|1.5.2 |Apache License 2.0 |
+|Development - validator|Hibernate validator |5.4.2|Apache Software License 2.0|
+|Development - Encryption|BouncyCastle |1.59|Adaptation of MIT X11 License |
+|Development - JSON marshal/unmarshal|Jackson |2.9.5 |Apache License  2.0 |
+|Development - Device Driver|RXTX |RXTX-2-2-20081207|LGPL v 2.1|
+|Development - Unit Testing |Junit|5.x and above|Common Public License - v 1.0|
+|Development - Log|logback|1.2.3|GNU Lesser GPL Version 2.1|
+|Development - Templating|velocity|2|Apache License  2.0 |
+|Development - Tools|Open street view|NA - Cloud tool|Open Database License (ODbL)|
+|Development - IDE|Eclipse Oxygen|4.7.3|Eclipse Public License Version 2.0|
+|Development - Webapp|Angular|4+|MIT License|
+|Development - Unit Testing |Karma|2.0.x|MIT License|
+|Development - Unit Testing |Jasmine|2.6.1|MIT License|
+|Development - API Documentation |Swagger|3.13.2 |Apache License 2.0 |
+|Development - Application Server|Tomcat server|8|Apache License 2.0 |
+|Development - Orchestration|Apache Camel|2.19.3|Apache License 2.0|
+|Development - Database|H2 DB|1.4.197||
+|Development - Database|PostgreSQL|Server: 10|Postgres License| 
+|Development - Database|PostgreSQL| Driver: 42.2.2|BSD 2-clause "Simplified License"|
+|Development - Database Modeling tool|PG Data Modeler|0.9.2|Commercial|
+|Development - Postgres admin/scripts/query development tool|pgadmin4|3|Free|
+|Development - Code quality|Sonar|7.2|Open Source license|
+|Development - UI Designs|Pencil Project|3.0.4|GNU Public License version 2|
+|Biometric Devices|TBD|||
+|Biometric APIs|TBD|||
+|Testing tools|Rest-assured|3.0.0|Apache License 2.0|
+|Testing tools|WireMock or Citrus framework|2.16.0 or respectively|Apache License 2.0|
+|Testing tools|JMeter|4.x|Apache License 2.0|
+|Testing tools|Burp suite Professional +|9.0.3.7|PortSwigger - Burp suite Professional + / V1.7.33|
+|Testing tools|TestNG|6.11|Apache License 2.0|
+|DevOps tools|Jira|6.4 and above|Not Open source|
+|DevOps tools|SonarLint|v3.5|GNU GPL|
+|DevOps tools|GitHub|2.7.x|Commercial - Github |
+|DevOps tools|SonarQube|6.7.3 LTS|GNU GPL|
+|DevOps tools|Maven|3.53.x|Apache License 2.0|
+|DevOps tools|Selenium|3.x|Apache License 2.0|
+|DevOps tools|Cobertura|1.12 and above|GNU GPL|
+|DevOps tools|JFrog Artifactory (OSS)|5.9|Unknown|
+|DevOps tools|Docker |18.03.x CE|Apache 2.0|
+|DevOps tools|Ansible|2.2|GNU GPL v3.0|
+|DevOps tools|Github actions|NA - Cloud tool||
+|DevOps tools|Travis|NA - Cloud tool|MIT License|
+|DevOps tools|Glowroot||Apache License 2.0 |
+|DevOps tools|Prometheus||Apache License 2.0 |
+|DevOps tools|Grafana||Apache License 2.0 |
+|Messaging|ActiveMQ||Apache License 2.0 |
+|Secure Code Scanning|SonarQube with OWASP plugin will be used|||
+|Web Server/HTTP proxy server|Nginx|NA - Cloud tool||
+|IAM|Keycloak|||
