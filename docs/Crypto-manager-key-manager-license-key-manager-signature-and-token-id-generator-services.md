@@ -138,13 +138,6 @@ String hashedData = cryptoCore.hash(datatoHash.getBytes(),salt.getBytes());
 
 [Background & Design KEYMANAGER](https://github.com/mosip/commons/blob/master/design/kernel/kernel-keymanager.md)
 
-[Background & Design CRYPTOMANAGER](https://github.com/mosip/commons/blob/master/design/kernel/kernel-cryptomanager.md)
-
-[Background & Design SIGNATURE](https://github.com/mosip/commons/blob/master/design/kernel/kernel-cryptography-digitalsignature.md)
-
-[Background & Design TOKENIDGENERATOR](https://github.com/mosip/commons/blob/master/design/kernel/kernel-idgenerator-statictoken.md)
-
-[Background & Design -TBA- LICENSEKEYMANAGER](https://github.com/mosip/commons/blob/master/design/kernel/kernel-licensekeymanager.md)
 
 
 Default Port and Context Path
