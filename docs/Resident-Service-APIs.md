@@ -85,8 +85,21 @@ request: individualIdType| Y | Allowed Type of Individual ID - RID | RID
 #### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-TUG-002| Data entered does not match or not valid or not found
-RES-TUG-004| No Registered Mobile/email ID found
+RES-SER-001|RID not found|
+RES-SER-002|One or more input parameter is invalid or does not exist|
+RES-SER-003|Token generation failed|
+RES-SER-005|API resource is not available|
+RES-SER-006|Unable to access API resource|
+RES-SER-009|Invalid Input Parameter|
+RES-SER-012|Invalid RID|
+RES-SER-015|Template exception|
+RES-SER-016|Template subject exception|
+RES-SER-017|Sending notification(Email and SMS) to resident failed.|
+RES-SER-020|Bad Request|
+RES-SER-021|Invalid APi response |
+RES-SER-SYS-001|System exception occured|
+RES-SER-SYS-002|IO Exception occured|
+RES-SER-SYS-003|JSON Processing Exception occured|
 
 ## POST /resident/v1/req/euin
 This request will authenticate an Individual based on provided OTP and respond with e-UIN. Notification will be sent to phone/email.
@@ -167,9 +180,26 @@ request: otp| Y | OTP | |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-DOW-001| OTP Authentication Failed.
-RES-DOW-002| Data entered is not valid.
-RES-DOW-004| No Registered Mobile/email ID found.
+RES-SER-002|One or more input parameter is invalid or does not exist|
+RES-SER-003|Token generation failed|
+RES-SER-004|Invalid OTP|
+RES-SER-005|API resource is not available|
+RES-SER-006|Unable to access API resource|
+RES-SER-009|Invalid Input Parameter|
+RES-SER-010|Invalid VID|
+RES-SER-011|Invalid UIN|
+RES-SER-013|Invalid UIN for given VID|
+RES-SER-014|Your request is not successful, please try again later.|
+RES-SER-015|Template exception|
+RES-SER-016|Template subject exception|
+RES-SER-017|Sending notification(Email and SMS) to resident failed.|
+RES-SER-018|Invalid individualId|
+RES-SER-020|Bad Request|
+RES-SER-021|Invalid APi response |
+RES-SER-023|Could not find the submitted document|
+RES-SER-SYS-001|System exception occured|
+RES-SER-SYS-002|IO Exception occured|
+RES-SER-SYS-003|JSON Processing Exception occured|
 
 ## POST /resident/v1/req/print-uin
 This request will authenticate an Individual based on provided OTP and post a request for UIN re-print to Postal Service. Notification will be sent to phone/email.
@@ -192,9 +222,9 @@ version | Y | API version | | v1
 requestTime| Y |Time when Request was captured| | 2018-12-09T06:39:04.683Z
 request: transactionID| Y | Transaction ID of request | | dabed834-974f-11e9-bc42-526af7764f64
 request: individualId| Y | VID | | 9830872690593682
-request: individualIdType| Y | Allowed Type of Individual ID - VID, UIN | VID
-request: cardType| Y | Allowed Type of cardType - MASKED_UIN, UIN | 
-request: otp| Y | OTP | | 
+request: individualIdType| Y | Allowed Type of Individual ID - VID, UIN | VID|
+request: cardType| Y | Allowed Type of cardType - MASKED_UIN, UIN|
+request: otp| Y | OTP | |
 
 ### Request Body
 ```JSON
@@ -251,9 +281,26 @@ request: otp| Y | OTP | |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-REP-001| OTP Authentication Failed.
-RES-REP-002| Data entered is not valid.
-RES-REP-004| No Registered Mobile/email ID found.
+RES-SER-002|One or more input parameter is invalid or does not exist|
+RES-SER-003|Token generation failed|
+RES-SER-004|OTP validation failed|
+RES-SER-005|API resource is not available|
+RES-SER-006|Unable to access API resource|
+RES-SER-009|Invalid Input Parameter|
+RES-SER-010|Invalid VID|
+RES-SER-011|Invalid UIN|
+RES-SER-013|Invalid UIN for given VID|
+RES-SER-014|Your request is not successful, please try again later.|
+RES-SER-015|Template exception|
+RES-SER-016|Template subject exception|
+RES-SER-017|Sending notification(Email and SMS) to resident failed.|
+RES-SER-018|Invalid individualId|
+RES-SER-019|Re print UIN request failed|
+RES-SER-020|Bad Request|
+RES-SER-021|Invalid APi response |
+RES-SER-SYS-001|System exception occured|
+RES-SER-SYS-002|IO Exception occured|
+RES-SER-SYS-003|JSON Processing Exception occured|
 
 ## POST /resident/v1/req/uin
 This request will authenticate an Individual based on provided OTP and respond with UIN. Notification will be sent to phone/email.
@@ -362,9 +409,21 @@ request: demographics|N| Demographic data of an Individual| |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-LOU-001|OTP Validation Failed.
-RES-LOU-002|Data entered does not match.
-RES-LOU-004|No Registered Mobile/email ID found.
+RES-SER-002|One or more input parameter is invalid or does not exist|
+RES-SER-003|Token generation failed|
+RES-SER-004|OTP validation failed|
+RES-SER-005|API resource is not available|
+RES-SER-006|Unable to access API resource|
+RES-SER-009|Invalid Input Parameter|
+RES-SER-014|Your request is not successful, please try again later.|
+RES-SER-015|Template exception|
+RES-SER-016|Template subject exception|
+RES-SER-017|Sending notification(Email and SMS) to resident failed.|
+RES-SER-020|Bad Request|
+RES-SER-021|Invalid APi response |
+RES-SER-SYS-001|System exception occured|
+RES-SER-SYS-002|IO Exception occured|
+RES-SER-SYS-003|JSON Processing Exception occured|
 
 ## POST /resident/v1/req/rid
 This request will authenticate an Individual based on provided OTP and respond with RID. Notification will be sent to phone/email.
@@ -473,9 +532,22 @@ request: demographics|N| Demographic data of an Individual| |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-LOR-001|OTP Validation Failed.
-RES-LOR-002|Data entered does not match.
-RES-LOR-004|No Registered Mobile/email ID found.
+RES-SER-001|RID not found|
+RES-SER-002|One or more input parameter is invalid or does not exist|
+RES-SER-003|Token generation failed|
+RES-SER-004|OTP validation failed|
+RES-SER-005|API resource is not available|
+RES-SER-006|Unable to access API resource|
+RES-SER-009|Invalid Input Parameter|
+RES-SER-014|Your request is not successful, please try again later.|
+RES-SER-015|Template exception|
+RES-SER-016|Template subject exception|
+RES-SER-017|Sending notification(Email and SMS) to resident failed.|
+RES-SER-020|Bad Request|
+RES-SER-021|Invalid APi response |
+RES-SER-SYS-001|System exception occured|
+RES-SER-SYS-002|IO Exception occured|
+RES-SER-SYS-003|JSON Processing Exception occured|
 
 ## POST /resident/v1/req/update-uin
 This request will authenticate an Individual based on provided OTP and respond with RID after successfully placing update request to Registration Processor. Notification will be sent to phone/email.
@@ -566,10 +638,27 @@ request: demographics|Y| Demographic data of an Individual| |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-UIU-001| OTP Authentication Failed.
-RES-UIU-002| Data entered does not match or not valid.
-RES-UIU-004| No Registered Mobile/email ID found.
-RES-UIU-005| Status of UIN Update is UnSuccessful.
+RES-SER-002|One or more input parameter is invalid or does not exist|
+RES-SER-003|Token generation failed|
+RES-SER-004|OTP validation failed|
+RES-SER-005|API resource is not available|
+RES-SER-006|Unable to access API resource|
+RES-SER-009|Invalid Input Parameter|
+RES-SER-010|Invalid VID|
+RES-SER-011|Invalid UIN|
+RES-SER-013|Invalid UIN for given VID|
+RES-SER-014|Your request is not successful, please try again later.|
+RES-SER-015|Template exception|
+RES-SER-016|Template subject exception|
+RES-SER-017|Sending notification(Email and SMS) to resident failed.|
+RES-SER-018|Invalid individualId|
+RES-SER-020|Bad Request|
+RES-SER-021|Invalid APi response |
+RES-SER-022|Resident UIN update failed|
+RES-SER-023|Could not find the submitted document|
+RES-SER-SYS-001|System exception occured|
+RES-SER-SYS-002|IO Exception occured|
+RES-SER-SYS-003|JSON Processing Exception occured|
 
 ## POST /resident/v1/vid
 This request will authenticate an Individual based on provided OTP and will generate VID for the respective UIN.
@@ -651,9 +740,25 @@ request: otp| Y | OTP | |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-VID-002| OTP Authentication Failed.
-RES-VID-003| Data entered is not valid.
-RES-VID-004| No Registered Mobile/email ID found.
+RES-SER-002|One or more input parameter is invalid or does not exist|
+RES-SER-003|Token generation failed|
+RES-SER-004|OTP validation failed|
+RES-SER-005|API resource is not available|
+RES-SER-006|Unable to access API resource|
+RES-SER-007|Exception while creating VID|
+RES-SER-009|Invalid Input Parameter|
+RES-SER-011|Invalid UIN|
+RES-SER-014|Your request is not successful, please try again later.|
+RES-SER-015|Template exception|
+RES-SER-016|Template subject exception|
+RES-SER-017|Sending notification(Email and SMS) to resident failed.|
+RES-SER-018|Invalid individualId|
+RES-SER-020|Bad Request|
+RES-SER-021|Invalid APi response |
+RES-SER-022|Resident UIN update failed|
+RES-SER-SYS-001|System exception occured|
+RES-SER-SYS-002|IO Exception occured|
+RES-SER-SYS-003|JSON Processing Exception occured|
 
 ## PATCH /resident/v1/vid/{vid}
 This request will authenticate an Individual based on provided OTP and will revoke respective VID.
@@ -733,10 +838,24 @@ request: otp| Y | OTP | |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-RID-002| OTP Authentication Failed.
-RES-RID-003| Data entered is not valid.
-RES-RID-004| No Registered Mobile/email ID found.
-RES-RID-005| VID revocation request failed. Please visit the nearest registration center for assistance.
+RES-SER-002|One or more input parameter is invalid or does not exist|
+RES-SER-003|Token generation failed|
+RES-SER-004|OTP validation failed|
+RES-SER-005|API resource is not available|
+RES-SER-006|Unable to access API resource|
+RES-SER-009|Invalid Input Parameter|
+RES-SER-010|Invalid VID|
+RES-SER-013|Invalid UIN for given VID|
+RES-SER-014|Your request is not successful, please try again later.|
+RES-SER-015|Template exception|
+RES-SER-016|Template subject exception|
+RES-SER-017|Sending notification(Email and SMS) to resident failed.|
+RES-SER-018|Invalid individualId|
+RES-SER-020|Bad Request|
+RES-SER-021|Invalid APi response |
+RES-SER-SYS-001|System exception occured|
+RES-SER-SYS-002|IO Exception occured|
+RES-SER-SYS-003|JSON Processing Exception occured|
 
 ## POST /resident/v1/req/auth-lock
 This request will authenticate an Individual based on provided OTP and will lock provided authentication types.
@@ -818,10 +937,25 @@ request: otp| Y | OTP | |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-LOC-001|OTP Authentication Failed.
-RES-LOC-002| Data entered is not valid.
-RES-LOC-004| No Registered Mobile/email ID found.
-RES-LOC-005| Locking for the Authentication type(s) is Unsuccessful.
+RES-SER-002|One or more input parameter is invalid or does not exist|
+RES-SER-003|Token generation failed|
+RES-SER-004|OTP validation failed|
+RES-SER-005|API resource is not available|
+RES-SER-006|Unable to access API resource|
+RES-SER-009|Invalid Input Parameter|
+RES-SER-010|Invalid VID|
+RES-SER-011|Invalid UIN|
+RES-SER-013|Invalid UIN for given VID|
+RES-SER-014|Your request is not successful, please try again later.|
+RES-SER-015|Template exception|
+RES-SER-016|Template subject exception|
+RES-SER-017|Sending notification(Email and SMS) to resident failed.|
+RES-SER-018|Invalid individualId|
+RES-SER-020|Bad Request|
+RES-SER-021|Invalid APi response |
+RES-SER-SYS-001|System exception occured|
+RES-SER-SYS-002|IO Exception occured|
+RES-SER-SYS-003|JSON Processing Exception occured|
 
 ## POST /resident/v1/req/auth-unlock
 This request will authenticate an Individual based on provided OTP and will unlock provided locked authentication types.
@@ -902,10 +1036,25 @@ request: otp| Y | OTP | |
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-ULC-001| OTP Authentication Failed.
-RES-ULC-002| Data entered is not Valid.
-RES-ULC-004| No Registered Mobile/email ID found.
-RES-ULC-005| Unlocking for the Authentication type is Unsuccessful.
+RES-SER-002|One or more input parameter is invalid or does not exist|
+RES-SER-003|Token generation failed|
+RES-SER-004|OTP validation failed|
+RES-SER-005|API resource is not available|
+RES-SER-006|Unable to access API resource|
+RES-SER-009|Invalid Input Parameter|
+RES-SER-010|Invalid VID|
+RES-SER-011|Invalid UIN|
+RES-SER-013|Invalid UIN for given VID|
+RES-SER-014|Your request is not successful, please try again later.|
+RES-SER-015|Template exception|
+RES-SER-016|Template subject exception|
+RES-SER-017|Sending notification(Email and SMS) to resident failed.|
+RES-SER-018|Invalid individualId|
+RES-SER-020|Bad Request|
+RES-SER-021|Invalid APi response |
+RES-SER-SYS-001|System exception occured|
+RES-SER-SYS-002|IO Exception occured|
+RES-SER-SYS-003|JSON Processing Exception occured|
 
 ## POST /resident/v1/req/auth-history
 This request will authenticate an Individual based on provided OTP and respond with auth history. Notification will be sent to phone/email.
@@ -989,7 +1138,22 @@ pageFetch|N|Optional query param for paging||1
 ### Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
-RES-AUT-001| OTP Authentication Failed.
-RES-AUT-002| Data entered is not valid.
-RES-AUT-004| No Registered Mobile/email ID found.
-RES-AUT-005| Mandatory values not entered.
+RES-SER-002|One or more input parameter is invalid or does not exist|
+RES-SER-003|Token generation failed|
+RES-SER-004|OTP validation failed|
+RES-SER-005|API resource is not available|
+RES-SER-006|Unable to access API resource|
+RES-SER-009|Invalid Input Parameter|
+RES-SER-010|Invalid VID|
+RES-SER-011|Invalid UIN|
+RES-SER-013|Invalid UIN for given VID|
+RES-SER-014|Your request is not successful, please try again later.|
+RES-SER-015|Template exception|
+RES-SER-016|Template subject exception|
+RES-SER-017|Sending notification(Email and SMS) to resident failed.|
+RES-SER-018|Invalid individualId|
+RES-SER-020|Bad Request|
+RES-SER-021|Invalid APi response |
+RES-SER-SYS-001|System exception occured|
+RES-SER-SYS-002|IO Exception occured|
+RES-SER-SYS-003|JSON Processing Exception occured|
