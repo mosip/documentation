@@ -21,8 +21,8 @@ MOSIP 1.0 was a functional release of mosip with the core modules tested with bi
 
 **Highlights of the 1.1.0 release includes:**
 
-* New Module added – Partner Management and Master Data Administration, 
-* [Features added - New features added to MOSIP platform](Release-Notes-1.1.0-Features.md)
+* New Module added – Partner Management and Master Data Administration
+* [New features added to MOSIP platform](Release-Notes-1.1.0-Features.md)
 * [Bug Fixes across all modules](Release-Notes-1.1.0-Bug-Fixes.md)
 * Engineering Changes
   * Automated deployment scripts for development, testing environments on Kubernetes
