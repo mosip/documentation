@@ -22,12 +22,10 @@
 #### 2. Test Metrics
 ![Image](1.1-TestingMetrics.png) 
 
-#### 3. Health Dashboard
-![Image](1-1-HealthDasbhoard.png) 
+#### 3. Test Execution Report
+![Image](1-1TestExecutionReport.PNG) 
 
-#### 4. Test Execution Report
-
-#### 5. List of Known Issues
+#### 4. List of Known Issues
 |JIRA ID|Module|Description|
 |----------|:-------------:|------:|
 |MOSIP-7999|Pre-registration|No notification sent back when an booked appointment is cancelled| 
