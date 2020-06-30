@@ -8,7 +8,7 @@ Published Date: June 30, 2020
 ## Revision Note
 This is the first formal publication of the interface as a versioned specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
 
-The section related Possible Flags(#possible-flags) in Matcher(#matcher) has been added.
+The section related [Possible Flags](#possible-flags) in [Matcher](#matcher) has been added.
 
 # Introduction
 Mosip as a platform does not have any inbuilt capabilities to handle biometrics. It relies on external components and subsystems to perform all activities pertaining to biometrics. As a platform it defines formats, standards and interfaces for these external components and subsystems. The Biometrics SDK is a critical external component used for performing operations with biometric data in multiple mosip modules - Registration Client, Authentication and Registration Processor.
