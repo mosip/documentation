@@ -1,5 +1,5 @@
 ## MsterData Services
-[**Api Documentation**](https://github.com/mosip/documentation/blob/1.1.0/docs/Common-APIs.md)
+[**Api Documentation**](https://github.com/mosip/documentation/blob/master/docs/Common-APIs.md)
 #### Background
 
 This service can be used for Create, Fetch, Update and Delete operation on Master Data Entities.
