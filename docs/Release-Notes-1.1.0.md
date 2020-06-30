@@ -110,19 +110,19 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests)
 
 ### 4. Test Execution Report
 
-![Image](_images/release/1.1.0/Test_Execution_Report.png) 
+![](_images/release/1.1.0/Test_Execution_Report.png) 
 
 ## List of Known Issues
 |JIRA ID|Module|Description|
 |----------|-------------|------|
-|MOSIP-7999|Pre-registration|No notification sent back when an booked appointment is canceled| 
-|MOSIP-7676|Pre-registration|User is allowed to discard the application with in 24 hours / configured time|
-|MOSIP-7704|Pre-registration|On the pre-reg UI, a page reload results in session time-out discarding the data entered|
-|MOSIP-7704|Pre-registration|Unable to copy the documents for user of choice|
-|MOSIP-7942|ID Authentication|Device details not validated against the bio type/subtype| 
-|MOSIP-7842|Registration Client|Registration Client is not sending device details in the Packet|
+|MOSIP-7999|Pre-registration|Notification is not sent when an booked appointment is canceled| 
+|MOSIP-7676|Pre-registration|User is allowed to discard the application with in 24 hours i.e. the configured time|
+|MOSIP-7704|Pre-registration|On the Pre Registration UI, a page reload results in session time-out discarding the data entered|
+|MOSIP-7704|Pre-registration|User is not able to copy the documents of his/her choice|
+|MOSIP-7942|ID Authentication|Device details are not validated against the biomertic type| 
+|MOSIP-7842|Registration Client|Device details are not stored in Packet|
 |MOSIP-7915|Registration Client|Navigation issues in registration client UI|
-|MOSIP-31341|Registration Client|Keeps on streaming even though registration process is canceled|
+|MOSIP-31341|Registration Client|Streaming of device is turned on when registration flow is abruptly closed|
 
 ## List Of Acronyms
 
@@ -144,4 +144,4 @@ CBEFF | Common Biometric Exchange Formats Framework
 HSM | Hardware Security Module
 TPM | Trusted Platform Module
 SDK | Software Development Kit
-MDS | Mosip Device Service
+MDS | MOSIP Device Service
