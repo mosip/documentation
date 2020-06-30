@@ -1,6 +1,6 @@
 ## Test Reports 
 **Testing Scope**
-#### 1. In scope 
+### 1. In scope 
 
 |Title	|Description|
 |------|------|
@@ -12,20 +12,20 @@
 |Browser Support|**Pre-Registration** <ul><li>Chrome – latest</li><li>Edge – latest</li><li>Firefox – latest</li></ul>|
 |OS Support|**Registration Client** <ul><li>Windows 10</li></ul>|
 
-#### 2. Not in scope 
+### 2. Not in scope 
 |Title|	Description|
 |------|------|
 |Non-Functional Testing| <ul><li>Detailed Performance Testing</li><li>Reliability and Disaster recovery Testing</li></ul>|
 |Admin|<ul><li>Admin UI</li><li>Admin APIs</li></ul>|
 |UI|<ul><li>Dynamic UI</li></ul>|
 
-#### 2. Test Metrics
-![Image](1.1-TestingMetrics.png) 
+### 2. Test Metrics
+![Image](1.1-TestingMetrics.png)
 
-#### 3. Test Execution Report
+### 3. Test Execution Report
 ![Image](1-1TestExecutionReport.PNG) 
 
-#### 4. List of Known Issues
+### 4. List of Known Issues
 |JIRA ID|Module|Description|
 |----------|:-------------:|------:|
 |MOSIP-7999|Pre-registration|No notification sent back when an booked appointment is cancelled| 
