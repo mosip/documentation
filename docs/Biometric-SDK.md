@@ -7,6 +7,9 @@ MOSIP uses biometrics - fingerprint, iris, face - in registration and authentica
 
 # Biometric SDK Functions 
 
+## SDK Initialization
+Shares information about the SDK and performs any one time activities including initialization of internal variables and algorithms.
+
 ## Quality Checker
 Checks the quality of input biometrics and returns quality score for the same.
 
@@ -16,7 +19,7 @@ Checks the quality of input biometrics and returns quality score for the same.
 * When external biometric images are received to be put on record this method is used to determine the quality of the received biometric image
 
 ## Matcher
-Matcher, matches the captured biometric record or a list of biometric records (based on single match or composite match), matches it against list of stored biometric records. It then returns a matching score against each stored biometric record or a composite matching score for the list of input biometric records. 
+Matches the captured biometric record or a list of biometric records (based on single match or composite match), matches it against list of stored biometric records. It then returns a matching score against each stored biometric record or a composite matching score for the list of input biometric records. 
 
 ### Use Cases
 * Used for matching one or multiple modes of biometric received in an auth transaction with a list of biometrics record
@@ -25,17 +28,20 @@ Matcher, matches the captured biometric record or a list of biometric records (b
 * Match is expected to be capable of image-image, extract-extract and extract-image comparisons
 
 ## Extractor
-Extractor, extracts salient features and patterns of input biometric record to use in fast comparison. It returns the extracted biometric record.
+Extracts salient features and patterns of input biometric record to use in fast comparison. It returns the extracted biometric record.
 
 ### Use Cases
 * Used to extract salient features and patterns of a biometric to use in fast comparison
 * In case of fingerprints this is called Minutiae and a standard representation of minutiae is an ISO template for FMR
 
 ## Segmenter
-Segmenter, segments single biometric record into multiple biometric records and returns list of segmented biometric records. Eg: Split thumb slab into multiple fingers and eyes into left and right eye.
+Segments single biometric record into multiple biometric records and returns list of segmented biometric records. Eg: Split thumb slab into multiple fingers and eyes into left and right eye.
 
 ### Use Cases
 * Used to split images into individual biometric segments when received from external sources
+
+## Converter
+Converts images in all segments in the biometric record.
 
 # Biometric SDK integration points
 
@@ -49,5 +55,3 @@ Segmenter, segments single biometric record into multiple biometric records and 
 # Biometric SDK API Specification
 
 The SDK needs to comply to [Biometric SDK API Specification](Biometric-SDK-API-Specification.md)
-
-
