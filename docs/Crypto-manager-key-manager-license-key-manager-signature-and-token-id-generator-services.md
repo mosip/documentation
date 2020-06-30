@@ -1,9 +1,6 @@
 ## kernel-crypto-jce
-[Background & Design](../../docs/design/kernel/kernel-crypto.md)
+[Background & Design](https://github.com/mosip/commons/blob/master/design/kernel/kernel-crypto.md)
 
-**Api Documentation**
-
-[API Documentation <TBA>](TBA)
 
 ```
 mvn javadoc:javadoc
@@ -23,9 +20,6 @@ mvn javadoc:javadoc
  ```
 
 
-**Properties to be added in parent Spring Application environment** 
-
-[kernel-crypto-jce-dev.properties](../../config/kernel-crypto-jce-dev.properties)
 
 **The inputs which have to be provided are:**
 1. Key for encryption or decryption can be [SecretKey](https://docs.oracle.com/javase/8/docs/api/javax/crypto/SecretKey.html) or [PrivateKey](https://docs.oracle.com/javase/8/docs/api/java/security/PrivateKey.html) or [PublicKey](https://docs.oracle.com/javase/8/docs/api/java/security/PublicKey.html). 
@@ -142,25 +136,15 @@ String hashedData = cryptoCore.hash(datatoHash.getBytes(),salt.getBytes());
 
 ## kernel-keymanager-service
 
-[Background & Design KEYMANAGER](../../docs/design/kernel/kernel-keymanager.md)
+[Background & Design KEYMANAGER](https://github.com/mosip/commons/blob/master/design/kernel/kernel-keymanager.md)
 
-[Background & Design CRYPTOMANAGER](../../docs/design/kernel/kernel-cryptomanager.md)
+[Background & Design CRYPTOMANAGER](https://github.com/mosip/commons/blob/master/design/kernel/kernel-cryptomanager.md)
 
-[Background & Design SIGNATURE](../../docs/design/kernel/kernel-cryptography-digitalsignature.md)
+[Background & Design SIGNATURE](https://github.com/mosip/commons/blob/master/design/kernel/kernel-cryptography-digitalsignature.md)
 
-[Background & Design TOKENIDGENERATOR](../../docs/design/kernel/kernel-idgenerator-statictoken.md)
+[Background & Design TOKENIDGENERATOR](https://github.com/mosip/commons/blob/master/design/kernel/kernel-idgenerator-statictoken.md)
 
-[Background & Design -TBA- LICENSEKEYMANAGER](../../docs/design/kernel/kernel-licensekeymanager.md)
-
-[Api Documentation KEYMANAGER](https://github.com/mosip/mosip/wiki/Kernel-APIs#key-manager)
-
-[Api Documentation CRYPTOMANAGER](https://github.com/mosip/mosip/wiki/Kernel-APIs#crypto-manager)
-
-[Api Documentation SIGNATURE](https://github.com/mosip/mosip/wiki/Kernel-APIs#signature)
-
-[Api Documentation TOKENIDGENERATOR](https://github.com/mosip/mosip/wiki/Kernel-APIs#tokenid-generator)
-
-[Api Documentation -TBA- LICENSEKEYMANAGER](https://github.com/mosip/mosip/wiki/Kernel-APIs#licensekey-manager)
+[Background & Design -TBA- LICENSEKEYMANAGER](https://github.com/mosip/commons/blob/master/design/kernel/kernel-licensekeymanager.md)
 
 
 Default Port and Context Path
@@ -174,108 +158,7 @@ server.servlet.path=/keymanager
 localhost:8088/keymanager/swagger-ui.html
 
 
-**Application Properties**
 
-[application-dev.properties](../../config/application-dev.properties)
-
-[kernel-keymanager-service-dev.properties](../../config/kernel-keymanager-service-dev.properties)
-
-
-```
-
-mosip.kernel.keymanager.softhsm.config-path=B\:\\softhsm2\\etc\\softhsm2-demo.conf
-mosip.kernel.keymanager.softhsm.keystore-type=PKCS11
-mosip.kernel.keymanager.softhsm.keystore-pass=1234
-
-mosip.kernel.keymanager.softhsm.certificate.common-name=www.mosip.io
-mosip.kernel.keymanager.softhsm.certificate.organizational-unit=MOSIP
-mosip.kernel.keymanager.softhsm.certificate.organization=IITB
-mosip.kernel.keymanager.softhsm.certificate.country=IN
-
-#----------------------- Crypto --------------------------------------------------
-#Crypto asymmetric algorithm name
-mosip.kernel.crypto.asymmetric-algorithm-name=RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING
-#Crypto symmetric algorithm name
-mosip.kernel.crypto.symmetric-algorithm-name=AES/GCM/PKCS5Padding
-#Keygenerator asymmetric algorithm name
-mosip.kernel.keygenerator.asymmetric-algorithm-name=RSA
-#Keygenerator symmetric algorithm name
-mosip.kernel.keygenerator.symmetric-algorithm-name=AES
-#Asymmetric algorithm key length
-mosip.kernel.keygenerator.asymmetric-key-length=2048
-#Symmetric algorithm key length
-mosip.kernel.keygenerator.symmetric-key-length=256
-
-#Encrypted data and encrypted symmetric key separator
-mosip.kernel.data-key-splitter=#KEY_SPLITTER#
-#GCM tag length
-mosip.kernel.crypto.gcm-tag-length=128
-#Hash algo name
-mosip.kernel.crypto.hash-algorithm-name=PBKDF2WithHmacSHA512
-#Symmtric key length used in hash
-mosip.kernel.crypto.hash-symmetric-key-length=256
-#No of iterations in hash
-mosip.kernel.crypto.hash-iteration=100000
-#Sign algo name
-mosip.kernel.crypto.sign-algorithm-name=RS256
-
-
-keymanager.persistence.jdbc.driver=org.postgresql.Driver
-keymanager_database_url=jdbc:postgresql://localhost:9001/mosip_kernel
-keymanager_database_username=kerneluser
-keymanager_database_password=Mosip@dev123
-
-licensekeymanager.persistence.jdbc.driver=org.postgresql.Driver
-licensekeymanager_database_url=jdbc:postgresql://localhost:9001/mosip_master
-licensekeymanager_database_username=masteruser
-licensekeymanager_database_password=Mosip@dev123
-
-hibernate.hbm2ddl.auto=none
-hibernate.dialect=org.hibernate.dialect.PostgreSQL95Dialect
-hibernate.jdbc.lob.non_contextual_creation=true
-hibernate.show_sql=false
-hibernate.format_sql=false
-hibernate.connection.charSet=utf8
-hibernate.cache.use_second_level_cache=false
-hibernate.cache.use_query_cache=false
-hibernate.cache.use_structured_entries=false
-hibernate.generate_statistics=false
-hibernate.current_session_context_class=org.springframework.orm.hibernate5.SpringSessionContext
-
-auth.server.validate.url=https://dev.mosip.io/v1/authmanager/authorize/admin/validateToken
-auth.server.admin.validate.url=https://dev.mosip.io/v1/authmanager/authorize/admin/validateToken
-auth.role.prefix=ROLE_
-auth.header.name=Authorization
-
-mosip.kernel.pdf_owner_password=PDFADMIN
-#------
-mosip.kernel.signature.signature-request-id=SIGNATURE.REQUEST
-mosip.kernel.signature.signature-version-id=v1.0
-
-mosip.sign.applicationid=KERNEL
-mosip.sign.refid=SIGN
-mosip.sign-certificate-refid=SIGN
-mosip.signed.header=response-signature
-mosip.kernel.signature.encrypt-url=http://localhost:8088/v1/keymanager/sign
-mosip.kernel.keymanager-service-publickey-url=http://localhost:8088/v1/keymanager/publickey/{applicationId}
-mosip.kernel.keymanager-service-sign-url=http://localhost:8088/v1/keymanager/sign
-
-
-#---
-  
-mosip.kernel.tokenid.uin.salt=zHuDEAbmbxiUbUShgy6pwUhKh9DE0EZn9kQDKPPKbWscGajMwf
-mosip.kernel.tokenid.partnercode.salt=yS8w5Wb6vhIKdf1msi4LYTJks7mqkbmITk2O63Iq8h0bkRlD0d
-mosip.kernel.tokenid.length=36
-
-#---
-#Length of license key to be generated.
-mosip.kernel.licensekey.length=16
-#List of permissions
-# NOTE: ',' in the below list is used as splitter in the implementation. 
-# Use of ',' in the values for below key should be avoided.
-# Use of spaces before and after ',' also should be avoided.
-mosip.kernel.licensekey.permissions=OTP Trigger,OTP Authentication,Demo Authentication - Identity Data Match,Demo Authentication - Address Data Match,Demo Authentication - Full Address Data Match,Demo Authentication - Secondary Language Match,Biometric Authentication - FMR Data Match,Biometric Authentication - IIR Data Match,Biometric Authentication - FID Data Match,Static Pin Authentication,eKYC - limited,eKYC - Full,eKYC - No
-```
 
 **Usage Sample**
 
@@ -769,27 +652,11 @@ For more information, check https://github.com/opendnssec/SoftHSMv2
 
 ## kernel-keymanager-softhsm
 
-[Background & Design](../../docs/design/kernel/kernel-keymanager-softhsm.md)
-
-[Api Documentation]
+[Background & Design](https://github.com/mosip/commons/blob/master/design/kernel/kernel-keymanager-softhsm.md)
 
 
 ```
 mvn javadoc:javadoc
-```
-
-**Application Properties**
-
-```
-	mosip.kernel.keymanager.softhsm.config-path=/etc/softhsm2-demo.conf
-	#mosip.kernel.keymanager.softhsm.config-path=D\:\\SoftHSM2\\etc\\softhsm2-demo.conf
-	mosip.kernel.keymanager.softhsm.keystore-type PKCS11
-	mosip.kernel.keymanager.softhsm.keystore-pass=pwd
-	mosip.kernel.keymanager.softhsm.certificate.common-name=www.mosip.io
-	mosip.kernel.keymanager.softhsm.certificate.organizational-unit=MOSIP
-	mosip.kernel.keymanager.softhsm.certificate.organization=IITB
-	mosip.kernel.keymanager.softhsm.certificate.country=IN
-
 ```
 
 
@@ -1032,22 +899,14 @@ Slot 1
 
 ## kernel-licensekeygenerator-misp
 
-[Background & Design](../../docs/design/kernel/Kernel-licensekeygenerator-misp.md)
+[Background & Design](https://github.com/mosip/commons/blob/master/design/kernel/kernel-keymanager-softhsm.md/Kernel-licensekeygenerator-misp.md)
 
-[API Documentation]
+
 
 ```
  mvn javadoc:javadoc
 
  ```
- 
- **Properties to be added in Spring application environment using this component**
- 
-[application-dev.properties](../../config/application-dev.properties)
- 
-```
-mosip.kernel.idgenerator.misp.license-key-length=8
-```
  
  
 **Maven Dependency**
@@ -1087,10 +946,8 @@ mosip.kernel.idgenerator.misp.license-key-length=8
 
 ## kernel-responsesignature-api
 
-[Background & Design](../../docs/design/kernel/kernel-cryptography-digitalsignature.md)
+[Background & Design](https://github.com/mosip/commons/blob/master/design/kernel/kernel-cryptography-digitalsignature.md)
 
-
-**Api Documentation**
 
 ```
 mvn javadoc:javadoc
@@ -1106,29 +963,6 @@ mvn javadoc:javadoc
 		</dependency>
  ```
 
-
- **Application Properties**
- 
- ```
-mosip.kernel.keygenerator.asymmetric-algorithm-name=RSA
-mosip.kernel.keygenerator.asymmetric-key-length=2048
-mosip.kernel.keygenerator.symmetric-algorithm-name=AES
-mosip.kernel.keygenerator.symmetric-key-length=256
-mosip.kernel.crypto.symmetric-algorithm-name=AES
-mosip.kernel.crypto.asymmetric-algorithm-name=RSA
-
-mosip.kernel.signature.signature-request-id=SIGNATURE.REQUEST
-mosip.kernel.signature.signature-version-id=v1.0
-
-mosip.signed.header=response-signature
-
-mosip.sign.applicationid=KERNEL
-mosip.sign.refid=KER
-
-mosip.kernel.signature.cryptomanager-encrypt-url=https://host/v1/cryptomanager/private/encrypt
-mosip.kernel.keymanager-service-publickey-url=https://host/v1/keymanager/publickey/{applicationId}
-auth.server.validate.url=https://host/v1.0/authorize/validateToken
- ```
  
  **Sample Usage**
  
@@ -1188,9 +1022,7 @@ auth.server.validate.url=https://host/v1.0/authorize/validateToken
   
 ## kernel-idgenerator-tokenid
 
-[Background & Design](../../docs/design/kernel/kernel-idgenerator-tokenid.md)
-
-[API Documentation]
+[Background & Design](https://github.com/mosip/commons/blob/master/design/kernel/kernel-idgenerator-tokenid.md)
 
 
 ```
@@ -1209,21 +1041,7 @@ auth.server.validate.url=https://host/v1.0/authorize/validateToken
 
 ```
 
-** Properties to be added in parent Spring Application environment **
 
-```
-#-----------------------------TOKEN-ID Properties---------------------------------
-#lenght of the token id
-mosip.kernel.tokenid.length=36
-
-# Crypto asymmetric algorithm name
-mosip.kernel.crypto.asymmetric-algorithm-name=RSA
-
-#Crypto symmetric algorithm name
-mosip.kernel.crypto.symmetric-algorithm-name=AES
-```
-
-[application-dev.properties](../../config/application-dev.properties)
 
 
 ** Database Properties **
@@ -1253,7 +1071,9 @@ Tables : token_seed , token_seq
 Generated tokenId: 526900409300563849276960763148952762
 
 
-
+# List of Configurable Parameters
+* [**Link to Configurable Parameters of Kernel**](https://github.com/mosip/mosip-config/blob/master/config-templates/kernel-env.properties)
+* [**Link to Kernel Application Properties**](https://github.com/mosip/mosip-config/blob/master/config-templates/application-env.properties)
 
 
 
