@@ -1,7 +1,7 @@
 # MOSIP Roadmap
 As of Feb 2020
 
-The Roadmap consists of 5 bucket of features that we want to develope and contribute over the coming year: Functionality, Modularity, Testing, Security and Scale.
+The Roadmap consists of 5 bucket of features that we want to develop and contribute over the coming year: Functionality, Modularity, Testing, Security and Scale.
 
 ## Functionality
 * **Master Data sync**: allow different installations to have their own master data, and sync is without code changes with the Registration Cient
