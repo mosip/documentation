@@ -72,7 +72,8 @@ Supporting key based digital signatures, not using digital certificates |
 Transliteration | ICU4J (Library with French, Arabic languages)
 
 ## Code
-The code and [automation tests](https://github.com/mosip/mosip-functional-tests) are tagged to 1.1.0 and are available on GitHub. The code needs to be built and deployed as per the [Sandbox Installer](https://github.com/mosip/mosip-infra/blob/master/deployment/sandbox-v2/README.md). We will actively support System Integrators during their first deployment.
+
+The code and [automation tests](https://github.com/mosip/mosip-functional-tests) are tagged to 1.1.0 and are available on [here](https://github.com/mosip/). The code needs to be built and deployed as per the [Sandbox Installer](https://github.com/mosip/mosip-infra/blob/master/deployment/sandbox-v2/README.md). We will actively support System Integrators during their first deployment.
 * [Commons](https://github.com/mosip/commons/releases)
 * [Pre-registration](https://github.com/mosip/pre-registration/releases)
 * [Registration](https://github.com/mosip/registration/releases)
