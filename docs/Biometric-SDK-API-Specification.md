@@ -3,18 +3,22 @@ This document defines the interface for the Java Library providing the functiona
 
 API specification version:  **0.9**
 
-Published Date: June 15, 2020
+Published Date: June 30, 2020
 
 ## Revision Note
 This is the first formal publication of the interface as a versioned specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
+
+The section related Possible Flags(#possible-flags) in Matcher(#matcher) has been added.
 
 # Introduction
 Mosip as a platform does not have any inbuilt capabilities to handle biometrics. It relies on external components and subsystems to perform all activities pertaining to biometrics. As a platform it defines formats, standards and interfaces for these external components and subsystems. The Biometrics SDK is a critical external component used for performing operations with biometric data in multiple mosip modules - Registration Client, Authentication and Registration Processor.
 
 
 # SDK Initialization
+
 ## Purpose
 The SDK initialization methods serves the dual purpose of sharing information about the SDK and performing any one time activities including initialization of internal variables and algorithms.
+
 ## Signature
 `SDKInfo init(Map<String, String> initParams)`
 
@@ -33,8 +37,10 @@ The SDK initialization methods serves the dual purpose of sharing information ab
 The SDK can perform one time initialization activities such as license checks, initializing templates, caches and loggers. Initialization parameters can be configured in mosip and passed to the SDK during the Init call. These are typically Key-Value Pairs.
 
 # Quality Check
+
 ## Purpose
 The quality check method is used to determine if the biometrics data is of sufficient quality for uniqueness check and authentication matches.
+
 ## Signature
 `Response<QualityCheck> checkQuality(BiometricRecord sample, List<BiometricType> modalitiesToCheck, Map<String, String> flags)`
 
@@ -80,6 +86,7 @@ For new biometrics that come up the quality check could be different.
 {% endhint %}
 
 # Matcher
+
 ## Purpose
 The matcher is used to perform checks if the provided input biometrics belong to the same person. The matcher has several use cases within mosip. It is used for 1:1 matches where a person's identity is verified using a biometrics match. It is also used for 1:n(few) matches for uniqueness checks.
 
@@ -111,13 +118,13 @@ One of the example for the behaviour is threshold for match using which the SDK 
 * Best matches are provided for an image to image match. The sample and on records data are both images. The matcher uses its own extraction algorithm on the images to be compared.
 * In case the sample is not an image but minutiae (FMR) then the match accuracy and efficacy might be lower as the extraction templates and algorithms might not be the same
 * In case the on record extract is a format that the matcher does not understand the match will not happen. Also if the comparison is between two extracts (Minutiae) the False Rejection and False Acceptance cases might be high.
-* All fingers provided in the input are used for match. If the input finger segment is not identified as a particular finger, it is mathched against all fingers in the gallery record.
+* All fingers provided in the input are used for match. If the input finger segment is not identified as a particular finger (i.e. the subType is not provided) it is mathched against all fingers in the gallery record.
 * The match decision will return a yes/no and optional anaytics with details such a confidence level.
 
 **Iris**
 * Input and on record images are jpeg2000 format lossless images or matchers own extract as provided by the extarctor API
 * The matcher uses its own algorithm to perform extraction, segmentation and identifying patterns on the images being compared.
-* All iris segments passed are used in match. In case the segment is not identified as left or right iris, it is matched against both irises in the gallery record.
+* All iris segments passed are used in match. In case the segment is not identified as left or right iris, it is matched against both irises in the sample record.
 * The match decision will return a yes/no and optional anaytics with details such a confidence level.
 
 **Face**
@@ -125,13 +132,23 @@ One of the example for the behaviour is threshold for match using which the SDK 
 * The matcher uses its own algorithm to perform extraction, segmentation and identifying landmarks on the images being compared.
 * The match decision will return a yes/no and optional anaytics with details such a confidence level.
 
+## Possible Flags
+* **SubTypeHint**: This is a BIR level flag (refer "others" in BIR class) and it will contain subtype as value. This flag indicates that the SDK need to perform authentication against the particular sub-type first and then match with other sub-types available in gallery. 
+	* SubTypeHint is set as "Left Index"; so, authentication will be performed against "Left Index" in gallery.
+		* If match found, match decision is returned
+		* If match not found, then match is performed against all other sub-types available in gallery and match decision is returned
+	* SubTypeHint is not set in the BIR, and, 
+		* SubType is available then match will be performed against that subtype only and result will be returned
+		* SubType is not available then match will be performed against with all the subtypes available in gallery
+	* If both SubType and SubTypeHint are available then, SubType will take precedence (i.e. match will be performed against the subtype only)
+
 ## Implementation notes
-The matcher is capable of performing 1:1 and 1:n(few) matches with multipe biometric types. The following are the typical steps a matcher is expected to undertake.
+The matcher is capable of performing 1:1 and 1:n(few) matches with multiple biometric types. The following are the typical steps a matcher is expected to undertake.
 * Perform a 1:1 match between sample and each of the gallery records. Each match operation results in a MatchDecision output. The result is an array of MatchDecision objects of the same size as the input parameter gallery.
-* Each 1:1 match operation involves matchinf of multiple biometric types. Identify the list of biometric types for which the match is to be performed. This can be achieved by analysing the biometric segments in the sample input parameter and the modalitiesToMatch parameter.
+* Each 1:1 match operation involves matchinfo of multiple biometric types. Identify the list of biometric types for which the match is to be performed. This can be achieved by analyzing the biometric segments in the sample input parameter and the modalitiesToMatch parameter.
 * The match operation results in the creation of a MatchDecision object. This object contains a list of decisions. The decisions list has entries for each of the biometric types matched. For example if the modalities to match are iris and fingerprint, the decision list will have entries for those.
 * The match process for each biometric type will result in a Decision object with the match result as "MATCHED", "NOT_MATCHED" or "ERROR". Additional analytics information in case of a decisive match result, and an error list in case of an error can be specified.
-* A 1:n(few) match is seen essentially as multiple 1:1 match executed serially or parallely based on the SDK's threading capabilities.
+* A 1:n(few) match is seen essentially as multiple 1:1 match executed serially or parallel based on the SDK's threading capabilities.
 * The matcher can return an error for unsupported biometric type and method in case it cannot match a particular biometric type.
 * The actual match might work on Image-Image, Image-Extract or Extract-Extract combinations on what is present in the input segments in sample and gallery. When Extracts are used, they are either standard such as FMR or created by the SDK itself.
 
@@ -199,6 +216,7 @@ The extractor is expected to create a data set that is used in the actual match 
 
 **Face**
 * Not applicable at present
+
 {% hint style="info" %}
 The segmenter will identify the individual fingers present.
 {% endhint %}
