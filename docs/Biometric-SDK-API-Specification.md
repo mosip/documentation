@@ -134,14 +134,14 @@ One of the example for the behaviour is threshold for match using which the SDK 
 * The match decision will return a yes/no and optional anaytics with details such a confidence level.
 
 ## Possible Flags
-* **SubTypeHint**: This is a BIR level flag (refer "others" in BIR class) and it will contain subtype as value. This flag indicates that the SDK need to perform authentication against the particular sub-type first and then match with other sub-types available in gallery. 
-	* SubTypeHint is set as "Left Index"; so, authentication will be performed against "Left Index" in gallery.
+* **SubTypeHint**: This is a BIR level flag (refer "others" in BIR class) and it will contain subType as value. This flag indicates that the SDK need to perform authentication against the particular subType first and then match with other subTypes available in gallery. 
+	* SubTypeHint is set as "Left Index"; so, match will be performed against "Left Index" in gallery.
 		* If match found, match decision is returned
-		* If match not found, then match is performed against all other sub-types available in gallery and match decision is returned
+		* If match not found, then match is performed against all other subTypes available in gallery and match decision is returned
 	* SubTypeHint is not set in the BIR, and, 
-		* SubType is available then match will be performed against that subtype only and result will be returned
-		* SubType is not available then match will be performed against with all the subtypes available in gallery
-	* If both SubType and SubTypeHint are available then, SubType will take precedence (i.e. match will be performed against the subtype only)
+		* SubType is available then match will be performed against that subType only and result will be returned
+		* SubType is not available then match will be performed against all the subTypes available in gallery
+	* If both SubType and SubTypeHint are available then, SubType will take precedence (i.e. match will be performed against the subType only)
 
 ## Implementation notes
 The matcher is capable of performing 1:1 and 1:n(few) matches with multiple biometric types. The following are the typical steps a matcher is expected to undertake.
