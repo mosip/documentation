@@ -16,7 +16,7 @@ The following resources are shared across cells:
 * ID Repository HDFS/CEPH cluster
 * ID Repository DB
 
-The communication between Demiliatrized Zone (DMZ) and Militarized Zone (MZ) is strictly via a firewall.
+The communication between Demilitrized Zone (DMZ) and Militarized Zone (MZ) is strictly via a firewall.
 
-The encrypted packets from registration client first land into the Packet Landing Zone in the DMZ. Some of the Registration Processor stages run in the DMZ for initial packet handling.  
+The encrypted packets from registration client first land into Packet Landing Zone in the DMZ. Some of the Registration Processor stages run in the DMZ for initial packet handling.  
 
