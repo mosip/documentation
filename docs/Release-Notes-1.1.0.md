@@ -148,19 +148,43 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 |MOSIP-275|Registration Processor|Registration processor stages aren't working properly after restarting the K8 cluster|
 
 ### Acronyms
-MOSIP  Modular Open Source Identity Platform
-ABIS   Automated Biometric Identification System
-API    Application Programming Interface
-ID     Identity
-IDA    Identity Authentication
-NFR    Non-Functional Requirements
-OTP    One Time PasswordSDK | Software Development Kit
-UIN    Unique Identification Number
-VID    Virtual ID
-CBEFF  Common Biometric Exchange Formats Framework
-HSM    Hardware Security Module
-TPM    Trusted Platform Module
-SDK    Software Development Kit
-MDS    MOSIP Device Service
-WIP    Work In Progress
-TBD    To Be Determined/Done
+
+MOSIP  : Modular Open Source Identity Platform
+
+ABIS   : Automated Biometric Identification System
+
+API    : Application Programming Interface
+
+ID     : Identity
+
+IDA    : Identity Authentication
+
+NFR    : Non-Functional Requirements
+
+OTP    : One Time PasswordSDK | Software Development Kit
+
+JWT    : Java Web Token
+
+K8      : Kubernetes
+
+UIN    : Unique Identification Number
+
+VID    : Virtual ID
+
+CBEFF  : Common Biometric Exchange Formats Framework
+
+CORS   :  Cross Origin Resource Sharing
+
+HSM    : Hardware Security Module
+
+TPM    : Trusted Platform Module
+
+SDK    : Software Development Kit
+
+MDS    : MOSIP Device Service
+
+ICU4J   : International Components for Unicode for Java
+
+WIP    : Work In Progress
+
+TBD    : To Be Determined/Done
