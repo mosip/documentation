@@ -218,7 +218,7 @@ Property attributes and the respective sample values are provided below. Before 
 **File Location:** registration-services/src/main/resources/spring.properties       
 * mosip.reg.logpath=../logs  
 * mosip.reg.packetstorepath={where the registration packet should be stored}
-* mosip.reg.healthcheck.url={Application uses this url to perform the health check before communicating with the external services. Default value: https://${environment}/v1/authmanager/actuator/health }  
+* mosip.reg.healthcheck.url={Application uses this url to perform the health check before communicating with the external services. Default value: `https://${environment}/v1/authmanager/actuator/health`}  
 * mosip.reg.rollback.path={where the application backup should be taken during software update} [Default: ../BackUp]  
 * mosip.reg.db.key={contains the key to be used to connect to the derby database and decrypt the data}
 * mosip.reg.cerpath=/cer//mosip_cer.cer
@@ -231,7 +231,7 @@ Property attributes and the respective sample values are provided below. Before 
 * mosip.reg.client.url={Reg client download url from JFrog }
 * mosip.reg.logpath=../logs  
 * mosip.reg.packetstorepath={where the registration packet should be stored}. 
-* mosip.reg.healthcheck.url={Application uses this url to perform the health check before communicating with the external services. Default value: https://${environment}/v1/authmanager/actuator/health }  
+* mosip.reg.healthcheck.url={Application uses this url to perform the health check before communicating with the external services. Default value: `https://${environment}/v1/authmanager/actuator/health`}  
 * mosip.reg.rollback.path={where the application backup should be taken during software update} [Default: ../BackUp]  
 * mosip.reg.db.key={contains the key to be used to connect to the derby database and decrypt the data}
 * mosip.reg.cerpath=/cer//mosip_cer.cer
@@ -266,8 +266,6 @@ Through sync process the data would be sync between local machine and server bas
 |16|	Notification Service (SMS / EMAIL) | To send notification through SMS / Email channel at the end of Registration process. |Kernel|	
 |17|	ID-Authentication API | To on board the user based on user's bio authentication. Without this service, user onborading screen won't work if bio auth enabled. |ID-Authentication|
 
-   
-   
 # External hardware driver(s)
 
 This section covers the list of drivers required to communicate with the external devices.  
