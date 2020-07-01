@@ -102,6 +102,7 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests)
 
 ### 3. Test Metrics
 
+|Key|Value|
 |------|--------|
 |Test Coverage|Pre-Registration (100%), Registration Client (95%), Registration Processor (100%), Authentication (100%), Partner Management (100%), Resident Services (100%)|
 |Code Coverage|70% to 80%|
