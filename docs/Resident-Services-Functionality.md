@@ -1,23 +1,23 @@
 ## Table Of Contents
 * [1. Overview](#1-overview-)
 * [2. Features](#2-features-)
-  * [2.1 Track Status of UIN Generation by providing RID (Request ID for New Registration)](#21-track-status-of-uin-generation-by-providing-rid-request-id-for-new-registration-) _(RES_FR_1)_
-  * [2.2 Download e-UIN](#22-download-e-uin-) _(RES_FR_2)_
-  * [2.3 Retrieve Lost RID (Request ID for New Registration)](#23-retrieve-lost-rid-request-id-for-new-registration-) _(RES_FR_3)_
-  * [2.4 Retrieve Lost UIN](#24-retrieve-lost-uin-) _(RES_FR_4)_
-  * [2.5 Re-print Request of UIN](#25-re-print-request-of-uin-) _(RES_FR_5)_
-  * [2.6 Initiate UIN Update](#26-initiate-uin-update-) _(RES_FR_6)_
-  * [2.7 Track Status of UIN Update](#27-track-status-of-uin-update-) _(RES_FR_7)_
-  * [2.8 View History of Authentication Requests](#28-view-history-of-authentication-requests-) _(RES_FR_8)_
-  * [2.9 Lock/Unlock UIN](#29-lockunlock-uin-) _(RES_FR_9)_
+  * [2.1 Track Status of UIN Generation by providing RID (Request ID for New Registration)](#21-track-status-of-uin-generation-by-providing-rid-request-id-for-new-registration-)
+  * [2.2 Download e-UIN](#22-download-e-uin-)
+  * [2.3 Retrieve Lost RID (Request ID for New Registration)](#23-retrieve-lost-rid-request-id-for-new-registration-)
+  * [2.4 Retrieve Lost UIN](#24-retrieve-lost-uin-)
+  * [2.5 Re-print Request of UIN](#25-re-print-request-of-uin-)
+  * [2.6 Initiate UIN Update](#26-initiate-uin-update-)
+  * [2.7 Track Status of UIN Update](#27-track-status-of-uin-update-)
+  * [2.8 View History of Authentication Requests](#28-view-history-of-authentication-requests-)
+  * [2.9 Lock/Unlock UIN](#29-lockunlock-uin-)
   * [2.10 VID Service](#210-vid-service-)
-    * [2.10.1 Generate a VID](#2101-generate-a-vid-) _(RES_FR_10.1)_
-    * [2.10.2 Maintain the Status of a VID](#2102-maintain-the-status-of-a-vid-) _(RES_FR_10.2)_
-    * [2.10.3 Revoke a VID](#2103-revoke-a-vid-) _(RES_FR_10.3)_
-    * [2.10.4 Auto-restore a VID on Revocation and with Auto-restore Policy](#2104-auto-restore-a-vid-on-revocation-and-with-auto-restore-policy-) _(RES_FR_10.4)_
+    * [2.10.1 Generate a VID](#2101-generate-a-vid-)    
+    * [2.10.2 Maintain the Status of a VID](#2102-maintain-the-status-of-a-vid-)
+    * [2.10.3 Revoke a VID](#2103-revoke-a-vid-)
+    * [2.10.4 Auto-restore a VID on Revocation and with Auto-restore Policy](#2104-auto-restore-a-vid-on-revocation-and-with-auto-restore-policy-)
 * [List of Configurable Parameters and Processes](#list-of-configurable-parameters-and-processes-)
 * [Resident Services API](#resident-services-api-)
-* [Process View (WIP)](#process-view-wip-)
+* [Process View](#process-view-)
 
 # 1. Overview [**[↑]**](#table-of-contents)
 
@@ -89,14 +89,11 @@ This feature allows the system to maintain the status of all VIDs from the persp
 
 To prevent misuse of VID, an individual can request to revoke his/her VID using Resident Service if the individual feels his/her VID has been compromised. The individual provides the VID as input. The system will then validate the individual's VID, trigger an OTP to individual's registered mobile number and/or email ID, validate the OTP and then authenticate the individual. On successful authentication, the system revokes the provided VID. Based on the VID policy of the Country a new VID will be generated during revocation and provided to the individual on the registered mobile number and/or email ID. If validation fails, the system triggers the appropriate error message.
 
- Please refer Git for more details on the type of [**error messages**](_files/requirements/requirements_detailing_references/ID-Authentication/Sprint%2011/Consolidated%20error%20messages%20V2.4.xlsx)
-
 ### 2.10.4 Auto-restore a VID on Revocation and with Auto-restore Policy [**[↑]**](#table-of-contents)  
 This feature allows for a VID to be auto regenerated and given to an individual after he/she requests for an existing VID to be revoked. The VID regeneration happens based on the VID policy defined by Country (the regeneration policy for the revoked VID should be ‘Auto-restore’).
 
-[**Link to design**](/mosip/mosip-platform/blob/master/design/idrepository/vid-service.md)
+[Refer to Wiki for more details on **VID Services API**](ID-Repository-API.md#vid-services-private).
 
-[Refer to Wiki for more details on **VID Services API**](ID-Repository-API#vid-services-private).
 ### List of Configurable Parameters and Processes [**[↑]**](#table-of-contents)
 
 1. Configurable Parameters
@@ -105,8 +102,8 @@ This feature allows for a VID to be auto regenerated and given to an individual 
 * (Work in Progress) 
 
 ### Resident Services API [**[↑]**](#table-of-contents)
-* (Work in Progress) 
+[Link to Resident Services API](Resident-Service-APIs.md)
 
 
-### Process View (WIP) [**[↑]**](#table-of-contents)
-* (Work in Progress) 
+### Process View [**[↑]**](#table-of-contents)
+[Link to Resident Services Process Flow](Resident-Services.md#process-flow)
