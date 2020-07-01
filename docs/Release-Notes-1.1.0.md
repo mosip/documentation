@@ -13,7 +13,7 @@
 - [List Of Acronyms](#list-of-acronyms)
 
 ## Scope
-MOSIP Version **1.1.0** has several enhancements, security and performance-tuned and feature-rich.
+MOSIP Version **1.1.0** has several enhancements. It has additional security features and is performance-tuned and feature-rich.
 
 **Release Date:** July 01, 2020
 
