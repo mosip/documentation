@@ -112,7 +112,7 @@ An operator can initiate the process of registering an new applicant in the MOSI
 ### Enter demographic data and upload documents of a resident
 If the resident has a pre-registration id, the operator can auto-populate the demographic data and the documents by entering the pre-registration id.
 
-If the resident doesn't have a pre-registration id, the operator can enter the resident’s demographic details (such as Name, Gender, DOB, Residential Address, etc.) & upload the documents  (such as Proof of Address, Proof of Identity, Proof of Birth) based on the [ID Object defined](https://github.com/mosip/documentation/wiki/MOSIP-ID-Object-definition) by the country.
+If the resident doesn't have a pre-registration id, the operator can enter the resident’s demographic details (such as Name, Gender, DOB, Residential Address, etc.) & upload the documents  (such as Proof of Address, Proof of Identity, Proof of Birth) based on the [ID Object defined](MOSIP-ID-Object-Definition.md) by the country.
 
 After the demographic details are entered the registration client validates the entered demographic data as per the Id validation rules defined in the ID Object UI Specification and appropriate error messages are shown in case the validation fails.
 
