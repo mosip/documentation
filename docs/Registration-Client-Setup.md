@@ -209,7 +209,7 @@ Registration client verifies the below-configured URL to check whether the syste
    
 |**S.No.**| **Config Key**| **Sample Values and Description**|
 |:------:|-----|-----|
-|1|	mosip.reg.healthcheck.url={URL} | Ex: https\://domainname.com/v1/authmanager/actuator/health |  
+|1|	mosip.reg.healthcheck.url={URL} | Ex: `https\://domainname.com/v1/authmanager/actuator/health` |  
 
 # Property file
 
