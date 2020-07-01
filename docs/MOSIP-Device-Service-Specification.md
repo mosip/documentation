@@ -406,7 +406,8 @@ This response is a direct JSON as show in the response.
 {% endhint %}
 
 ### Windows/Linux
-All the device API will be based on the HTTP specification. The device always binds to 127.0.0.1 with any of the available ports ranging from 4501 - 4600.  The IP address used for binding has to be 127.0.0.1 and not localhost.
+All the device API will be based on the HTTP specification. The device always binds to 
+with any of the available ports ranging from 4501 - 4600.  The IP address used for binding has to be 127.0.0.1 and not localhost.
 
 The applications that require access to MOSIP devices could discover them by sending the HTTP request to the supported port range. We will call this port as the device_service_port in the rest of the document.
 
@@ -429,7 +430,7 @@ Connection: Closed
 
 {% hint style="info" %}
 The pay loads are JSON in both the cases and are part of the body.<br>
-CallbackId would be set to the [http://127.0.0.1:<device_service_port>](http://127.0.0.1:<device_service_port>). So, the caller will use the respective HTTP verb/method and the URL to call the service.
+CallbackId would be set to the `http://127.0.0.1:<device_service_port>`. So, the caller will use the respective HTTP verb/method and the URL to call the service.
 {% endhint %}
 
 ### Android
