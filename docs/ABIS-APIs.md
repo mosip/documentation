@@ -52,9 +52,9 @@ Code | Reason
 7 | Unable to fetch biometric details
 8 | Missing reference URL
 9 | Missing requesttime
-10 | Unable to server insert request - reference id already exists
-11 | Unable to server insert request - CBEFF has no data
-12 | Unable to server identify request - reference id not found
+10 | Unable to serve insert request - reference id already exists
+11 | Unable to serve insert request - CBEFF has no data
+12 | Unable to serve identify request - reference id not found
 
 # ABIS Operations
 The following operations are supported by MOSIP:
