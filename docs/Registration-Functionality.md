@@ -306,10 +306,10 @@ Once the server acknowledges that the packets have been received (which is uploa
 * Packets that remain in ‘Ready to Upload’ status will be exported again when the next export is executed.
 * Packets in ‘Uploaded’ or any other status will not be exported again.
 
-## 8. Analytics and Audit Logs
+# Analytics and Audit Logs
 System captures and stores details of each transaction during registration process for audit purpose (except PII data). The audit data is stored in the audit database. When the client machine is working in an offline mode, the audit log is synced with the server as when the client machine is online. 
 
-## 9. Data Security 
+# Data Security 
 Registration Client integrates with Trusted Platform Model (TPM) data integrity. For enhanced security and integrity purposes, data captured from individuals are saved securely in local system and then shared to server. The details saved locally will be encrypted. Database encryption is also mandatory.
 
 MOSIP performs the following:
@@ -322,9 +322,9 @@ MOSIP performs the following:
 
 The system uses a machine and centre specific public key to encrypt. Only the server which has the respective private key, machine id and centre id can decrypt the encrypted packet. The data stored in database and application binaries are encrypted using TPM public key and registration officers will not be able to access directly.
 
-## 10. Installation and Software Version Upgrade
+# Installation and Software Version Upgrade
 
-#### A. Registration Officer or Supervisor can download and unzip the client application set up kit
+## A. Registration Officer or Supervisor can download and unzip the client application set up kit
 
 For initial installation of the client software on a particular machine, supervisor or registration officer will download an installable software (setup kit). Then unzip the setup kit and install it in the client machine.
 
@@ -335,7 +335,7 @@ When a registration officer or supervisor opts to download setup kit and selects
 1. Allows the registration officer to verify that the files and folder structure are as described in the design document.
 1. System captures and stores the download transaction details for audit purpose (except PII data). 
 
-#### B. Update the client software from the server
+## B. Update the client software from the server
 If a software update is available, then the system will provide an option to supervisor or registration officer to update either immediately or later. If the maximum number of days without software update has been exceeded, then the system will mandate a registration officer to update the software.
 
 The system follows the following steps during the update process:
@@ -357,7 +357,7 @@ The system follows the following steps during the update process:
 1. If update is not successful, the client returns to its earlier version.
 1. System captures and stores the transaction details for audit purpose (except PII data).
 
-## 11. Clean up
+# Clean up
 
 Pre-registration and registration data are automatically deleted from the client machine upon consumption and upon intimation from the server respectively. 
 * Pre-registration data is deleted from the client machine immediately after consumption for a registration.
@@ -365,9 +365,9 @@ Pre-registration and registration data are automatically deleted from the client
 * Audit data is deleted after it is sent to the server.
 * All deletion is executed by a periodic process after retention of the data for a configured duration.
 
-### 11.1 Data retention policies
+## Data retention policies
 
-#### A. Read packet status and delete packets
+### A. Read packet status and delete packets
 
 When the Registration Client receives a request through manual trigger or scheduled job to sync data, the system performs the following steps to read a packet status and delete the packets:
 
@@ -384,7 +384,7 @@ When the Registration Client receives a request through manual trigger or schedu
 1. When the Registration Client is next launched and is online, checks if the previous scheduled sync was executed. If not executed earlier, then immediately starts the sync.
 1. System captures and stores the transaction details for audit purpose (except PII data).
 
-#### B. Delete transaction history (audit logs) post sync with server and the retention period
+### B. Delete transaction history (audit logs) post sync with server and the retention period
  
 When a set of audit data is uploaded to the server and the server has acknowledged receipt of the audit data, the system performs the following steps to delete transaction history (audit logs) post sync with server and the retention period:
 
@@ -396,10 +396,9 @@ When a set of audit data is uploaded to the server and the server has acknowledg
 4. Does not delete audit data, if that is yet to be sent to the server.
 1. System captures and stores the transaction details.
 
-### 11.2 Machine Retirement
+## Machine Retirement
 
 Machine is termed as machine retirement due to following reason:
-
 * If the machine has obsolete specification.
 * When the machine is moved from one center to another (re-mapped), then the machine will retire from that old center.
 
@@ -414,12 +413,12 @@ Re-mapping of Machine:
 If a Machine has been re-mapped to another center, then:
 
 1. Officer will not be allowed to do any operation in Registration Client except,
-- Login/Logout
-- Approve packets as part of End of Day Approval process
-- Upload Packets
-- Inform Residents to Re-Register and mark action accordingly
+    * Login/Logout
+    * Approve packets as part of End of Day Approval process
+    * Upload Packets
+    * Inform Residents to Re-Register and mark action accordingly
 2. Once Packet Approval and Informing Resident is Completed, then
-- Packets will be auto uploaded if anything is pending
-- Initial Sync Flag is Turned On
+    * Packets will be auto uploaded if anything is pending
+    * Initial Sync Flag is Turned On
 3. Once the Officer logs out and tries to login again, then
-- New Master data gets downloaded for the newly mapped Center
+    * New Master data gets downloaded for the newly mapped Center
