@@ -120,6 +120,7 @@
 * [Releases](MOSIP-Releases.md)
     * [Release Notes 0.9.0](Release-Notes-0.9.0.md)
     * [Release Notes 1.0.0](Release-Notes-1.0.0.md)
+		* [Release Notes 1.0.0 Features](Release-Notes-1.0.0-Features.md)
     * [Release Notes 1.0.5](Release-Notes-1.0.5.md)
     * [Release Notes 1.0.6](Release-Notes-1.0.6.md)
 	* [Release Notes 1.1.0](Release-Notes-1.1.0.md)

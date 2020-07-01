@@ -106,11 +106,27 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests)
 
 ### 3. Test Metrics
 
-![](_images/release/1.1.0/Testing_Metrics.png)
+|------|--------|
+|Test Coverage|Pre-Registration (100%), Registration Client (95%), Registration Processor (100%), Authentication (100%), Partner Management (100%), Resident Services (100%)|
+|Code Coverage|70% to 80%|
+|Automation Coverage|80%|
+|Number of Test Cases|Total Run (2818), Pass (2526), Pass Rate (90%)|
+|Number of Bugs Found|797 (Since December 2019)|
+|Number of Open Defects|Total (77), Blocked or Critical: 10 (7 fixed & 3 open for patch release)|
+|Number of Immediate Fixes|10 to 15|
 
 ### 4. Test Execution Report
 
-![](_images/release/1.1.0/Test_Execution_Report.png) 
+|Test Execution    |Version|Test Cases|Executed Tests|Pass|Fail|Pending Execution|Pass%|Fail%|
+|------------------|-------|----------|--------------|----|----|-----------------|-----|-----|
+|Kernel            |1.0.10 |372       |372           |341 |31  |0                |91.7%|8.3% |
+|Pre-Registration  |1.0.10 |829       |802           |774 |28  |27               |96.5%|3.5% |
+|Registration      |1.0.10 |316       |271           |263 |8   |45               |97.0%|3.0% |
+|Authnetication    |1.0.10 |1081      |1081          |1033|48  |0                |95.6%|4.4% |
+|ID Repository     |1.0.10 |152       |152           |142 |10  |0                |93.4%|6.6% |
+|Resident Services |1.0.10 |38        |33            |33  |0   |5                |100% |0.0% |
+|Partner Management|1.0.10 |84        |84            |84  |0   |0                |100% |0.0% |
+|**Total**         |1.0.10 |2872      |2795          |2670|125 |77               |95.5%|4.5% |
 
 ## List of Known Issues
 |JIRA ID|Module|Description|

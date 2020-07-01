@@ -15,9 +15,16 @@
 
 ## Scope [**[↑]**](#table-of-contents)
 This release is with **real biometrics**. This means that MOSIP Platform is now integrated with SDK, MDS (MOSIP  Device Service), ABIS (Automated Biometrics Identification System) and Biometric devices. Also, this version is tested for Biometric functionalities. Non-functional requirements (Performance, Scale and Security) will be taken up in subsequent releases.
-
-* Modules included – Pre-Registration, Registration Client, Registration Processor, ID Authentication, Administration, Reference GUI implementation of Pre-Registration, Registration Client and Administration. 
-* Modules not included – Partner Management and Resident Services
+* Modules included
+	* Pre-Registration
+	* Registration Client
+	* Registration Processor
+	* Authentication 
+	* Administration
+	* Reference GUI implementation of Pre-Registration, Registration Client and Administration
+* Modules not included
+	* Partner Management
+	* Resident Services
 * IAM - The Identity and Access Management(IAM) had been changed from custom implementation to Keycloak. 
 
 Module-wise features released as part of this release can be found [here](_files/release/1.0.5/MOSIP_Feature_Release_v1.0.5.xlsx)
@@ -127,7 +134,3 @@ WIP | Work In Progress
 CBEFF | Common Biometric Exchange Formats Framework
 HSM | Hardware Security Module
 TPM | Trusted Platform Module
-
-
-
-

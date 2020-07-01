@@ -16,19 +16,28 @@
 ## Scope [**[↑]**](#table-of-contents)
 This release is with **real biometrics**. This means that MOSIP Platform is now integrated with SDK, MDS (MOSIP  Device Service), ABIS (Automated Biometrics Identification System) and Biometric devices. Also, this version is tested for Biometric functionalities. Non-functional requirements (Performance, Scale and Security) will be taken up in subsequent releases.
 
-* Modules included – Pre-Registration, Registration Client, Registration Processor, ID Authentication, Administration, Reference GUI implementation of Pre-Registration and Registration Client. 
-* Modules not included – Partner Management, Resident Services, Reference GUI implementation of Administration
+* Modules included
+	* Pre-Registration 
+	* Registration Client 
+	* Registration Processor 
+	* ID Authentication
+	* Administration
+	* Reference GUI implementation of Pre-Registration and Registration Client. 
+* Modules not included
+	* Partner Management
+	* Resident Services
+	* Reference GUI implementation of Administration
 
 Module-wise features released as part of this release can be found [here](https://github.com/mosip/mosip-docs/wiki/_files/MOSIP_Feature_Release_v1.0.0.xlsx)
 
 ## Documentation [**[↑]**](#table-of-contents)
 ### 1. Platform Documentation 
 Includes Functional requirements, Process flows, Architecture and High level design, Getting started and Deployment guide, Developer documentation etc.  
-   [**Link to Platform Documentation**](Platform-Documentation)
+
 ### 2. Detailed Documentation
 [**Low Level design**](https://github.com/mosip/mosip-platform/tree/master/design) and [**Test cases**](https://github.com/mosip/mosip-functional-tests/wiki/_files/testing/Test_automation)
-### 3. Platform Configurability for RBR    
-MOSIP Platform can be configured to be used for Real Biometrics.  [Guide to configure MOSIP for Real Biometrics](https://github.com/mosip/mosip-docs/wiki/Guide-to-configure-MOSIP-for-Real-Biometrics)
+### 3. Platform Configurability for RBR
+MOSIP Platform can be configured to be used for Real Biometrics.  [Guide to configure MOSIP for Real Biometrics](Guide-to-configure-MOSIP-for-Real-Biometrics.md)
 
 ## Key Points [**[↑]**](#table-of-contents)
 

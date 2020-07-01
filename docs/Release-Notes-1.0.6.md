@@ -23,8 +23,8 @@ This release is with **real biometrics**. This means that MOSIP Platform is now 
 Release Date: February 11, 2020
 
 Highlights of the 1.0.6 release include:
-* New Module added – Resident Services
-* Features added - New features added to MOSIP platform 
+* New Module added – [Resident Services](Release-Notes-1.0.0-Features.md#residnet-services)
+* [New features added to MOSIP platform](Release-Notes-1.0.0-Features.md) 
 * UI/UX refinements for Administration Module
 * Bug Fixes across all modules
 * Repository structure changes
