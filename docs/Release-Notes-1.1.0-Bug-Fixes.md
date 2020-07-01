@@ -3,40 +3,40 @@ This document contains the bugs that were fixed as part of MOSIP 1.1 release.
 
 JIRA ID | Summary | Module
 --------|---------|-------
-[MOSIP-7900](https://mosip.atlassian.net/browse/MOSIP-7900) | kernel-masterdata-service pods are in CrashLoopBackOff | Commons
-[MOSIP-7830](https://mosip.atlassian.net/browse/MOSIP-7830) | Unable to Sync Data using the Role Default | Commons
-[MOSIP-7391](https://mosip.atlassian.net/browse/MOSIP-7391) | New Packet are failing at Print Service stage (PDF Signature error) | Commons
-[MOSIP-7241](https://mosip.atlassian.net/browse/MOSIP-7241) | Proxy OTP - Needs to be written into the transaction table like regular OTP | Commons
-[MOSIP-7160](https://mosip.atlassian.net/browse/MOSIP-7160) | ID Repo : UIN and VID number should be string | Commons
-[MOSIP-1202](https://mosip.atlassian.net/browse/MOSIP-1202) | Licencse Key APIs are giving authentication failed | Commons
-[MOSIP-1183](https://mosip.atlassian.net/browse/MOSIP-1183) | Kernel Encryption Decryption API is not working as expected | Commons
-[MOSIP-787](https://mosip.atlassian.net/browse/MOSIP-787) | TokenHandlerUtil returns token is valid but auth manager returns invalid token | Commons
-[MOSIP-764](https://mosip.atlassian.net/browse/MOSIP-764) | Machine History is giving 500 response | Commons
-[MOSIP-561](https://mosip.atlassian.net/browse/MOSIP-561) | Masterdata-service pod failing to start in preprod environment | Commons
-[MOSIP-534](https://mosip.atlassian.net/browse/MOSIP-534) | Updated keys are not present in Key_Store table after Master SYNC(Derby DB). | Commons
-[MOSIP-533](https://mosip.atlassian.net/browse/MOSIP-533) | Keymanager API in preprod is failing in preprod even for single user | Commons
+[MOSIP-7900](https://mosip.atlassian.net/browse/MOSIP-7900) | Kernel services are not working as kernel-masterdata-service pods are in CrashLoopBackOff | Commons
+[MOSIP-7830](https://mosip.atlassian.net/browse/MOSIP-7830) | Unable to Sync Data using the role "Default" | Commons
+[MOSIP-7391](https://mosip.atlassian.net/browse/MOSIP-7391) | Processing are failing at Print Service stage (PDF Signature Issue) | Commons
+[MOSIP-7241](https://mosip.atlassian.net/browse/MOSIP-7241) | Proxy OTP: needs to be written into the transaction table like regular OTP | Commons
+[MOSIP-7160](https://mosip.atlassian.net/browse/MOSIP-7160) | ID Repository: UIN and VID number should be string | Commons
+[MOSIP-1202](https://mosip.atlassian.net/browse/MOSIP-1202) | License Key APIs are giving authentication failed | Commons
+[MOSIP-1183](https://mosip.atlassian.net/browse/MOSIP-1183) | Kernel Encryption & Decryption API is not working as expected | Commons
+[MOSIP-787](https://mosip.atlassian.net/browse/MOSIP-787) | Valid tokens returned from TokenHandlerUtil are marked invalid when sent to Auth Manager | Commons
+[MOSIP-764](https://mosip.atlassian.net/browse/MOSIP-764) | Machine History API is returning 500 response | Commons
+[MOSIP-561](https://mosip.atlassian.net/browse/MOSIP-561) | Kernel services are not working as kernel-masterdata-service pods are fauling in preprod environment | Commons
+[MOSIP-534](https://mosip.atlassian.net/browse/MOSIP-534) | Updated keys are not present in Key_Store table after Master Sync in Registration Client | Commons
+[MOSIP-533](https://mosip.atlassian.net/browse/MOSIP-533) | Key Manager API in preprod enviornment is failing even for a single user | Commons
 [MOSIP-450](https://mosip.atlassian.net/browse/MOSIP-450) | Facing issue while deploying 1.0.6-rc in sandbox | Commons
-[MOSIP-369](https://mosip.atlassian.net/browse/MOSIP-369) | Remove unwanted properties for KeyCloak from Kernel properties file | Commons
-[MOSIP-285](https://mosip.atlassian.net/browse/MOSIP-285) | Error in Auth Manager when running Pre-registration | Commons
-[MOSIP-254](https://mosip.atlassian.net/browse/MOSIP-254) | Send OTP service of kernel is not working | Commons
-[MOSIP-131](https://mosip.atlassian.net/browse/MOSIP-131) | Global Config Properties - Non adequate comments per parameter | Commons
-[MOSIP-116](https://mosip.atlassian.net/browse/MOSIP-116) | Global Config Properties - Application IDs are both in DB and global file | Commons
+[MOSIP-369](https://mosip.atlassian.net/browse/MOSIP-369) | Unwanted properties for KeyCloak should be removed from Kernel properties file | Commons
+[MOSIP-285](https://mosip.atlassian.net/browse/MOSIP-285) | Auth Manager is throwing error in Pre Registration | Commons
+[MOSIP-254](https://mosip.atlassian.net/browse/MOSIP-254) | Send OTP service of Kernel is not working | Commons
+[MOSIP-131](https://mosip.atlassian.net/browse/MOSIP-131) | Global Configuration Properties - Non adequate comments per parameter | Commons
+[MOSIP-116](https://mosip.atlassian.net/browse/MOSIP-116) | Global Configuration Properties - Application IDs are both in DB and global file | Commons
 [MOS-31325](https://mosip.atlassian.net/browse/MOS-31325) | Send OTP is failing with type cast error | Commons
 [MOS-31236](https://mosip.atlassian.net/browse/MOS-31236) | Sync configuration failing for a gap of 30 mins because of which packet was not uploading | Commons
 [MOS-30494](https://mosip.atlassian.net/browse/MOS-30494) | Authentication using OTP is not working as expected | Commons
-[MOS-30250](https://mosip.atlassian.net/browse/MOS-30250) | Authentication should not happen for invalid type inside digitalId tag | Commons
-[MOS-29959](https://mosip.atlassian.net/browse/MOS-29959) | Expired kernel keys are not regenerated | Commons
-[MOS-29377](https://mosip.atlassian.net/browse/MOS-29377) | Registration Client is not getting response from Kernel . | Commons
-[MOS-28817](https://mosip.atlassian.net/browse/MOS-28817) | Token Generator failing intermittently to parse json - requesttime format issue | Commons
+[MOS-30250](https://mosip.atlassian.net/browse/MOS-30250) | Authentication should not happen for invalid type inside digital Id | Commons
+[MOS-29959](https://mosip.atlassian.net/browse/MOS-29959) | Expired kernel keys are not regenerating | Commons
+[MOS-29377](https://mosip.atlassian.net/browse/MOS-29377) | Registration Client is not getting response from Kernel | Commons
+[MOS-28817](https://mosip.atlassian.net/browse/MOS-28817) | Token Generator failing intermittently to parse json - requesttime format | Commons
 [MOS-27597](https://mosip.atlassian.net/browse/MOS-27597) | UTC Time validation for requestTime is not implemented in kernel services | Commons
 [MOS-24110](https://mosip.atlassian.net/browse/MOS-24110) | Notification channel names should be standardized in Send OTP service | Commons
-[MOS-24060](https://mosip.atlassian.net/browse/MOS-24060) | Kernel Services are returning 500 HTTP status in some scenarios | Commons
-[MOSIP-7331](https://mosip.atlassian.net/browse/MOSIP-7331) | Update Location api is not allowing to actiavte and deactivate a location | Administration
-[MOSIP-7247](https://mosip.atlassian.net/browse/MOSIP-7247) | Unable to Logout from the Upload document page | Administration
-[MOSIP-1203](https://mosip.atlassian.net/browse/MOSIP-1203) | Register Device Api is not working as expected | Administration
+[MOS-24060](https://mosip.atlassian.net/browse/MOS-24060) | Kernel services are returning 500 HTTP status in some scenarios | Commons
+[MOSIP-7331](https://mosip.atlassian.net/browse/MOSIP-7331) | Update Location API is not allowing actiavte and deactivate location | Administration
+[MOSIP-7247](https://mosip.atlassian.net/browse/MOSIP-7247) | Unable to logout from the Upload document page | Administration
+[MOSIP-1203](https://mosip.atlassian.net/browse/MOSIP-1203) | Register Device API is not working as expected | Administration
 [MOSIP-1024](https://mosip.atlassian.net/browse/MOSIP-1024) | Create and Update Machine have Issues related to optional and mandatory fields | Administration
-[MOSIP-1023](https://mosip.atlassian.net/browse/MOSIP-1023) | Unable to validate document in ara lang code after doing it for langcode eng | Administration
-[MOSIP-1021](https://mosip.atlassian.net/browse/MOSIP-1021) | Create and Update Machine Api is converting Machine name to lower case | Administration
+[MOSIP-1023](https://mosip.atlassian.net/browse/MOSIP-1023) | Unable to validate document in arabic language but validation is possible with english language | Administration
+[MOSIP-1021](https://mosip.atlassian.net/browse/MOSIP-1021) | Create and Update Machine API is converting Machine name to lower case | Administration
 [MOSIP-977](https://mosip.atlassian.net/browse/MOSIP-977) | Unable to create the registration center as throwing "ERROR: duplicate key value violates unique constraint" | Administration
 [MOSIP-803](https://mosip.atlassian.net/browse/MOSIP-803) | Unable to update the details for blacklisted words getting error KER-MSD-105 | Administration
 [MOSIP-598](https://mosip.atlassian.net/browse/MOSIP-598) | Getting Technical error occurred on Admin UI when login to pre-reg on another tab of browser | Administration
