@@ -145,23 +145,24 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 |MOSIP-7726|Registration Client|Operator should not be able to perform any registration activities when Center, User or Machine is In-Active|
 |MOSIP-7995|Registration Client|Registration data is not displayed when supervisor selects the option informed/can't informed|
 |MOSIP-7814|Registration Client|Multiple issues in the contents displayed in the registration  acknowledgement preview page| 
+|MOSIP-8006|Unable to go back to username field from password field in the registration client login window|
+|MOSIP-275|Registration Processor|Registration processor stages aren't working properly after restarting the K8 cluster|
 
 Acronym | Expanded Form
 -----|-----------------
+MOSIP | Modular Open Source Identity Platform
 ABIS | Automated Biometric Identification System
 API | Application Programming Interface
 ID | Identity
 IDA | Identity Authentication
-MOSIP | Modular Open Source Identity Platform
 NFR | Non-Functional Requirements
-OTP | One Time Password
-SDK | Software Development Kit
-TBD | To Be Determined
-TOTP| Temporary One Time Password
+OTP | One Time PasswordSDK | Software Development Kit
 UIN | Unique Identification Number
-WIP | Work In Progress
+VID | Virtual ID
 CBEFF | Common Biometric Exchange Formats Framework
 HSM | Hardware Security Module
 TPM | Trusted Platform Module
 SDK | Software Development Kit
 MDS | MOSIP Device Service
+WIP | Work In Progress
+TBD | To Be Determined
