@@ -35,22 +35,47 @@ MOSIP Version **1.1.0** has several enhancements. It has additional security fea
 
 ## Documentation
 
-### 1. Platform Documentation
-Includes functional requirements, process flows, architecture and high level design.  
+### 1. Platform 
+Includes functional requirements, process flows, architecture and high level design. 
 
-[**Link to documentation for MOSIP modules**](https://docs.mosip.io/platform/modules).
+[**Link to documentation**](https://docs.mosip.io/platform/modules).
 
-### 2. API Specifications
-API specifications for the MOSIP APIs is available [here](https://docs.mosip.io/platform/apis)
+### 2. APIs
+APIs are documented [here](https://docs.mosip.io/platform/apis)
 
-### 3. Design Documentation
-Low level design documents for each modules are available in respective repositories.
+### 3. Design 
+Low level design documents for each module are available in the respective github repos.
 
-## Key Points
+### 4. Code and Automated Tests
 
-Key Points| Details
+* [Commons](https://github.com/mosip/commons/releases)
+* [Pre-registration](https://github.com/mosip/pre-registration/releases)
+* [Registration](https://github.com/mosip/registration/releases)
+* [Authentication](https://github.com/mosip/id-authentication/releases)
+* [Partner Management Services](https://github.com/mosip/partner-management-services/releases)
+* [Admin Services](https://github.com/mosip/admin-services/releases)
+* [Resident Services](https://github.com/mosip/resident-services/releases)
+* [Reference Implementation](https://github.com/mosip/mosip-ref-impl/releases)
+* [Automation tests](https://github.com/mosip/mosip-functional-tests)
+
+__Note : Code needs to be built and deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/blob/master/deployment/sandbox-v2/README.md)__
+
+### 5. Tests 
+
+#### 1. In scope 
+
+|Title	|Description|
+|------|------|
+|Functional Testing|<ul><li>Pre-registration (UI & APIs)</li><li>Registration Client</li><li>Kernel (APIs)</li><li>Registration Processor (Server)</li><li>ID Authentication (APIs)</li><li>Partner Management (APIs)</li><li>ID Repo (APIs)</li><li>Resident Services (APIs)</li></ul>|
+|Non-Functional Testing|<li>Early Performance Testing</li><li>Security Testing</li></ul>|
+|Configuration Testing| <ul><li>Testing is done for default configuration. Changing the configuration parameters with various values will be taken up in subsequent releases.</li></ul>|
+|Version Tag Tested|1.1|
+|Types of testing|<ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li></ul>|
+|Browser Support|**Pre-Registration** <ul><li>Chrome – latest</li><li>Edge – latest</li><li>Firefox – latest</li></ul>|
+|OS Support|**Registration Client** <ul><li>Windows 10</li></ul>|
+
+|Areas |Technology used|
 ----|----
-Pre Registration - Browser support | Latest versions of Chrome, Firefox and Edge
 Deployment Script Environment |	Microsoft Azure and VMs deployed in on-premise hardware
 Registration Client with TPM 2.0 | Windows 10
 Document Scanner | Canon lide 120
@@ -67,40 +92,15 @@ Maps | OpenstreetMap
 Supporting key based digital signatures, not using digital certificates | 
 Transliteration | ICU4J (Library with French, Arabic languages)
 
-## Code
 
-The code and [automation tests](https://github.com/mosip/mosip-functional-tests) are tagged to 1.1.0 and are available on [here](https://github.com/mosip/). The code needs to be built and deployed as per the [Sandbox Installer](https://github.com/mosip/mosip-infra/blob/master/deployment/sandbox-v2/README.md). We will actively support System Integrators during their first deployment.
-* [Commons](https://github.com/mosip/commons/releases)
-* [Pre-registration](https://github.com/mosip/pre-registration/releases)
-* [Registration](https://github.com/mosip/registration/releases)
-* [Authentication](https://github.com/mosip/id-authentication/releases)
-* [Partner Management Services](https://github.com/mosip/partner-management-services/releases)
-* [Admin Services](https://github.com/mosip/admin-services/releases)
-* [Resident Services](https://github.com/mosip/resident-services/releases)
-* [Reference Implementation](https://github.com/mosip/mosip-ref-impl/releases)
-
-## Test Reports
-
-### 1. In scope 
-
-|Title	|Description|
-|------|------|
-|Functional Testing|<ul><li>Pre-registration (UI & APIs)</li><li>Registration Client</li><li>Kernel (APIs)</li><li>Registration Processor (Server)</li><li>ID Authentication (APIs)</li><li>Partner Management (APIs)</li><li>ID Repo (APIs)</li><li>Resident Services (APIs)</li></ul>|
-|Non-Functional Testing|<li>Early Performance Testing</li><li>Security Testing</li></ul>|
-|Configuration Testing| <ul><li>Testing is done for default configuration. Changing the configuration parameters with various values will be taken up in subsequent releases.</li></ul>|
-|Version Tag Tested|1.1|
-|Types of testing|<ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li></ul>|
-|Browser Support|**Pre-Registration** <ul><li>Chrome – latest</li><li>Edge – latest</li><li>Firefox – latest</li></ul>|
-|OS Support|**Registration Client** <ul><li>Windows 10</li></ul>|
-
-### 2. Not in scope 
+#### 2. Not in scope 
 |Title|	Description|
 |------|------|
 |Non-Functional Testing| <ul><li>Detailed Performance Testing</li><li>Reliability and Disaster recovery Testing</li></ul>|
 |Admin|<ul><li>Admin UI</li><li>Admin APIs</li></ul>|
 |UI|<ul><li>Dynamic UI</li></ul>|
 
-### 3. Test Metrics
+#### 3. Test Metrics
 
 |Key|Value|
 |------|--------|
@@ -112,7 +112,7 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests)
 |Number of Open Defects|Total (77), Blocker or Critical: 10 (7 fixed & 3 open for patch release)|
 |Number of Immediate Fixes|10 to 15|
 
-### 4. Test Execution Report
+#### 4. Test Execution Report
 
 |Test Execution    |Version|Test Cases|Executed Tests|Pass|Fail|Pending Execution|Pass%|Fail%|
 |------------------|-------|----------|--------------|----|----|-----------------|-----|-----|
@@ -125,7 +125,7 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests)
 |Partner Management|1.0.10 |84        |84            |84  |0   |0                |100% |0.0% |
 |**Total**         |1.0.10 |2872      |2795          |2670|125 |77               |95.5%|4.5% |
 
-## List of Known Issues
+### 6. List of Known Issues
 |JIRA ID|Module|Description|
 |----------|-------------|------|
 |MOSIP-7999|Pre-registration|Notification is not sent when an booked appointment is canceled| 
