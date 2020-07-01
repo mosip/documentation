@@ -306,9 +306,10 @@ Once the server acknowledges that the packets have been received (which is uploa
 * Packets that remain in ‘Ready to Upload’ status will be exported again when the next export is executed.
 * Packets in ‘Uploaded’ or any other status will not be exported again.
 
-## 8. Analytics and Audit Logs [**[↑]**](#table-of-contents) 
+## 8. Analytics and Audit Logs
 System captures and stores details of each transaction during registration process for audit purpose (except PII data). The audit data is stored in the audit database. When the client machine is working in an offline mode, the audit log is synced with the server as when the client machine is online. 
-## 9. Data Security [**[↑]**](#table-of-contents)
+
+## 9. Data Security 
 Registration Client integrates with Trusted Platform Model (TPM) data integrity. For enhanced security and integrity purposes, data captured from individuals are saved securely in local system and then shared to server. The details saved locally will be encrypted. Database encryption is also mandatory.
 
 MOSIP performs the following:
@@ -316,16 +317,12 @@ MOSIP performs the following:
 1. Signing the data (This process is called as Signature) using Private Key provided by the TPM
    * This process will ensure that the request to the server has been dispatched from a registered or trusted Registration Client machine
 2. Validates the signature against the actual data using the Public Key or Public Part. The application does not connect or access the underlying TPM to validate the Signature. This validation ensures that the request is from a registered or trusted Registration Client machine
-1. Encrypts and decrypts the data using RSA algorithm in TPM. [**Please refer to Wiki for more details on TPM**](Registration-Client.md).
-
+1. Encrypts and decrypts the data using RSA algorithm in TPM. 
 **System security and tampering of packets**
 
 The system uses a machine and centre specific public key to encrypt. Only the server which has the respective private key, machine id and centre id can decrypt the encrypted packet. The data stored in database and application binaries are encrypted using TPM public key and registration officers will not be able to access directly.
 
-
-[**Link to design**](/mosip/mosip-platform/blob/master/design/registration/registration-key-management.md)
-
-## 10. Installation and Software Version Upgrade [**[↑]**](#table-of-contents)
+## 10. Installation and Software Version Upgrade
 
 #### A. Registration Officer or Supervisor can download and unzip the client application set up kit
 
@@ -359,9 +356,6 @@ The system follows the following steps during the update process:
 1. If updates are not available, the system launches the application.
 1. If update is not successful, the client returns to its earlier version.
 1. System captures and stores the transaction details for audit purpose (except PII data).
-
-Refer to [**Wiki**](Registration-Client-Setup.md) for more details.
-
 
 ## 11. Clean up
 
