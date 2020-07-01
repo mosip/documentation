@@ -129,15 +129,22 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests)
 |JIRA ID|Module|Description|
 |----------|-------------|------|
 |MOSIP-7999|Pre-registration|Notification is not sent when an booked appointment is canceled| 
+|MOSIP-29972|Pre-registration|Application Allows to send multiple otp for a single user|
 |MOSIP-7676|Pre-registration|User is allowed to discard the application with in 24 hours i.e. the configured time|
 |MOSIP-7704|Pre-registration|On the Pre Registration UI, a page reload results in session time-out discarding the data entered|
 |MOSIP-7704|Pre-registration|User is not able to copy the documents of his/her choice|
+|MOSIP-7817|Pre-registration|Pre-registration application is allowing Cross Origin Resource Sharing (CORS)|
+|MOSIP-531|Pre-registration|User is navigated to blank page for center with no slots and date available for center selected|
 |MOSIP-7942|ID Authentication|Device details are not validated against the biomertic type| 
+|MOSIP-7993|ID Authentication|Arabic data displayed as junk characters in ekyc response|
+|MOSIP-7907|ID Authentication|Able to do OTP authentication with invalid transaction id|
 |MOSIP-7842|Registration Client|Device details are not stored in Packet|
 |MOSIP-7915|Registration Client|Navigation issues in registration client UI|
+|MOSIP-7970|Registration Client|Able to authenticate with devices registered for 'REGISTRATION'|
 |MOSIP-31341|Registration Client|Streaming of device stays turned on when registration flow is abruptly closed|
-
-## List Of Acronyms
+|MOSIP-7726|Registration Client|Operator should not be able to perform any registration activities when Center, User or Machine is In-Active|
+|MOSIP-7995|Registration Client|Registration data is not displayed when supervisor selects the option informed/can't informed|
+|MOSIP-7814|Registration Client|Multiple issues in the contents displayed in the registration  acknowledgement preview page| 
 
 Acronym | Expanded Form
 -----|-----------------
