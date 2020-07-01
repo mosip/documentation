@@ -117,4 +117,5 @@ Since we are exposing ClamAV on 3310 port, we need to allow incoming traffic thr
 
     $ sudo firewall-cmd --zone=public --add-port=3310/tcp --permanent 
     $ sudo firewall-cmd --reload
-Reference link: [link](https://www.golinuxcloud.com/steps-install-configure-clamav-antivirus-centos-linux</div>)
+
+Reference link: [link](https://www.golinuxcloud.com/steps-install-configure-clamav-antivirus-centos-linux/)
