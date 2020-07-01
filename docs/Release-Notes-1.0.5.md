@@ -32,13 +32,20 @@ Module-wise features released as part of this release can be found [here](_files
 ## Documentation [**[↑]**](#table-of-contents)
 
 ### 1. Platform Documentation 
-Includes Functional requirements, Process flows, Architecture and High level design, Getting started and Deployment guide, Developer documentation etc.  
+Includes Functional requirements, Process flows, Architecture and High level design, Getting started and Deployment guide, Developer documentation etc. Please find the [link to Platform Documentation](https://docs.mosip.io/platform/).
 
 ### 2. Detailed Documentation
-Low Level design is available in respective repository and [**Test cases**](https://github.com/mosip/mosip-functional-tests/tree/1.0.5)
-
-### 3. Platform Configurability for RBR    
-MOSIP Platform can be configured to be used for Real Biometrics.  [Guide to configure MOSIP for Real Biometrics](Guide-to-configure-MOSIP-for-Real-Biometrics.md)
+Low level design documents for respective modules is found below:
+	* [Pre-Registration](https://github.com/mosip/pre-registration/tree/master/design/pre-registration)
+	* [Registration Client](https://github.com/mosip/registration/tree/master/design/registration)
+	* [Registration Processor](https://github.com/mosip/registration/tree/master/design/registration-processor)
+	* [Authentication](https://github.com/mosip/id-authentication/tree/master/design/authentication)
+	* {Administration](https://github.com/mosip/admin-services/tree/master/design/admin)
+	* [ID Repository](https://github.com/mosip/commons/tree/master/design/kernel)
+	* [Kernel](https://github.com/mosip/commons/tree/master/design/idrepository)
+	
+### 3. Platform Configuration for RBR    
+MOSIP Platform can be configured to be used for Real Biometrics. Please find the [guide to configure MOSIP for real biometrics](Guide-to-configure-MOSIP-for-Real-Biometrics.md).
 
 ## Key Points [**[↑]**](#table-of-contents)
 
@@ -61,10 +68,10 @@ MOSIP Platform can be configured to be used for Real Biometrics.  [Guide to conf
 |Transliteration|	ICU4J (Library with French, Arabic languages)|
 
 ## Code [**[↑]**](#table-of-contents)
-The [code](https://github.com/mosip/mosip-platform/releases/tag/1.0.0) and [automation tests](https://github.com/mosip/mosip-functional-tests/tree/1.0.5) are available on GitHub. The code needs to be built and deployed as per the procedure documented in [**Building And Deploying MOSIP**](Platform-Documentation#9-building-and-deploying-mosip). We will actively support System Integrators during their first deployment.
+The code and [automation tests](https://github.com/mosip/mosip-functional-tests/tree/1.0.5) are available on [GitHub](https://github.com/mosip/). The code needs to be built and deployed as per the procedure documented in [**Building And Deploying MOSIP**](Build-and-Deploy.md). We will actively support System Integrators during their first deployment.
 
 ## Test Reports [**[↑]**](#table-of-contents)
-**Testing Scope**
+
 #### 1. In scope [**[↑]**](#table-of-contents)
 
 |Title	|Description|
@@ -74,7 +81,7 @@ The [code](https://github.com/mosip/mosip-platform/releases/tag/1.0.0) and [auto
 |Test Methodology|<ul><li>Manual</li><li>Test Automation</li></ul>|
 |Types of testing|<ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li></ul>|
 |Testing Levels|![Image](_images/test_rig_automation/image1.jpg) |
-|Configuration Parameters tested for| Refer to properties file at [**Link**](https://github.com/mosip/mosip-config/tree/master/config-templates)|
+|Configuration Parameters tested for| Refer to properties file at [**Link**](https://github.com/mosip/mosip-config/tree/1.0.5)|
 |Browser Support|**Pre-Registration** <ul><li>Chrome – 78.0.3904.108</li></ul>|
 |OS Support|**Registration Client** <ul><li>Windows 10</li></ul>|
 |Language Support|French, Arabic, English|
@@ -111,10 +118,10 @@ The [code](https://github.com/mosip/mosip-platform/releases/tag/1.0.0) and [auto
 |Regression Testing|Tests to ensure that any change doesn't break existing functionality|
 	
 #### 5. Test Execution Summary [**[↑]**](#table-of-contents)
-![Image](_images/test_rig_automation/ExecutionSummary_1.0.5.jpg)  
+![Image](_images/release/1.0.5/ExecutionSummary_1.0.5.jpg)
 
 ## Known Issues [**[↑]**](#table-of-contents)
-![Image](_images/test_rig_automation/KnownIssues_1.0.5.jpg) 
+![Image](_images/release/1.0.5/KnownIssues_1.0.5.jpg) 
 
 ## List Of Acronyms [**[↑]**](#table-of-contents)
 Acronym | Expanded Form

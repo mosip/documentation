@@ -5,12 +5,12 @@
 - [Key Points](#key-points)
 - [Code](#code)
 - [Test Reports](#test-reports)
-	* [1. In scope](#1-in-scope)
-	* [2. Not in scope](#2-not-in-scope)
-	* [3. Test Metrics](#3-test-metrics)
-	* [4. Test Execution Report](#4-test-execution-report)
-- [Known Issues](#known-issues)
-- [List Of Acronyms](#list-of-acronyms)
+	* [a. In scope](#1-in-scope)
+	* [b. Not in scope](#2-not-in-scope)
+	* [c. Test Metrics](#3-test-metrics)
+	* [d. Test Execution Report](#4-test-execution-report)
+- [List of Known Issues](#known-issues)
+- [Acronyms](#list-of-acronyms)
 
 ## Scope
 MOSIP Version **1.1.0** has several enhancements. It has additional security features and is performance-tuned and feature-rich.
@@ -37,11 +37,10 @@ MOSIP Version **1.1.0** has several enhancements. It has additional security fea
 
 ### 1. Platform 
 Includes functional requirements, process flows, architecture and high level design. 
-
 [**Link to documentation**](https://docs.mosip.io/platform/modules).
 
 ### 2. APIs
-APIs are documented [here](https://docs.mosip.io/platform/apis)
+All APIs are documented [here](https://docs.mosip.io/platform/apis)
 
 ### 3. Design 
 Low level design documents for each module are available in the respective github repos.
@@ -62,7 +61,7 @@ __Note : Code needs to be built and deployed as per the procedure depicted in [S
 
 ### 5. Tests 
 
-#### 1. In scope 
+#### a. In scope 
 
 |Title	|Description|
 |------|------|
@@ -93,14 +92,14 @@ Supporting key based digital signatures, not using digital certificates |
 Transliteration | ICU4J (Library with French, Arabic languages)
 
 
-#### 2. Not in scope 
+#### b. Not in scope 
 |Title|	Description|
 |------|------|
 |Non-Functional Testing| <ul><li>Detailed Performance Testing</li><li>Reliability and Disaster recovery Testing</li></ul>|
 |Admin|<ul><li>Admin UI</li><li>Admin APIs</li></ul>|
 |UI|<ul><li>Dynamic UI</li></ul>|
 
-#### 3. Test Metrics
+#### c. Test Metrics
 
 |Key|Value|
 |------|--------|
@@ -112,7 +111,7 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 |Number of Open Defects|Total (77), Blocker or Critical: 10 (7 fixed & 3 open for patch release)|
 |Number of Immediate Fixes|10 to 15|
 
-#### 4. Test Execution Report
+#### d. Test Execution Report
 
 |Test Execution    |Version|Test Cases|Executed Tests|Pass|Fail|Pending Execution|Pass%|Fail%|
 |------------------|-------|----------|--------------|----|----|-----------------|-----|-----|
@@ -125,7 +124,7 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 |Partner Management|1.0.10 |84        |84            |84  |0   |0                |100% |0.0% |
 |**Total**         |1.0.10 |2872      |2795          |2670|125 |77               |95.5%|4.5% |
 
-### 6. List of Known Issues
+### List of Known Issues
 |JIRA ID|Module|Description|
 |----------|-------------|------|
 |MOSIP-7999|Pre-registration|Notification is not sent when an booked appointment is canceled| 
@@ -145,23 +144,23 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 |MOSIP-7726|Registration Client|Operator should not be able to perform any registration activities when Center, User or Machine is In-Active|
 |MOSIP-7995|Registration Client|Registration data is not displayed when supervisor selects the option informed/can't informed|
 |MOSIP-7814|Registration Client|Multiple issues in the contents displayed in the registration  acknowledgement preview page| 
+|MOSIP-8006|Registration Client|Unable to go back to username field from password field in the registration client login window|
+|MOSIP-275|Registration Processor|Registration processor stages aren't working properly after restarting the K8 cluster|
 
-Acronym | Expanded Form
------|-----------------
-ABIS | Automated Biometric Identification System
-API | Application Programming Interface
-ID | Identity
-IDA | Identity Authentication
-MOSIP | Modular Open Source Identity Platform
-NFR | Non-Functional Requirements
-OTP | One Time Password
-SDK | Software Development Kit
-TBD | To Be Determined
-TOTP| Temporary One Time Password
-UIN | Unique Identification Number
-WIP | Work In Progress
-CBEFF | Common Biometric Exchange Formats Framework
-HSM | Hardware Security Module
-TPM | Trusted Platform Module
-SDK | Software Development Kit
-MDS | MOSIP Device Service
+### Acronyms
+MOSIP  Modular Open Source Identity Platform
+ABIS   Automated Biometric Identification System
+API    Application Programming Interface
+ID     Identity
+IDA    Identity Authentication
+NFR    Non-Functional Requirements
+OTP    One Time PasswordSDK | Software Development Kit
+UIN    Unique Identification Number
+VID    Virtual ID
+CBEFF  Common Biometric Exchange Formats Framework
+HSM    Hardware Security Module
+TPM    Trusted Platform Module
+SDK    Software Development Kit
+MDS    MOSIP Device Service
+WIP    Work In Progress
+TBD    To Be Determined/Done
