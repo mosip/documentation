@@ -109,7 +109,7 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests)
 |Automation Coverage|80%|
 |Number of Test Cases|Total Run (2818), Pass (2526), Pass Rate (90%)|
 |Number of Bugs Found|797 (Since December 2019)|
-|Number of Open Defects|Total (77), Blocked or Critical: 10 (7 fixed & 3 open for patch release)|
+|Number of Open Defects|Total (77), Blocker or Critical: 10 (7 fixed & 3 open for patch release)|
 |Number of Immediate Fixes|10 to 15|
 
 ### 4. Test Execution Report
