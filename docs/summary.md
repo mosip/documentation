@@ -63,13 +63,10 @@
 	* [Hardware Sizing](Hardware-Sizing.md)
 	* [Customizations for a Country](Customisations-for-a-Country.md)
 	* Other Installation Guides
-		* [Steps to Install and Configure LDAP](Steps-to-Install-and-Configure-LDAP.md)
 		* [Steps to Install and Configure HDFS](Steps-to-Install-and-Configure-HDFS.md)
 		* [Steps to Install and use PostgreSql Version 10.2 on RHEL 7.5](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md)
 		* [Steps to Install Clam AntiVirus Version 0.101.0](Steps-to-Install-Clam-AntiVirus-Version-0.101.0.md)
 		* [Steps to Install Keycloak Standalone Server](Steps-to-Install-Keycloak-Standalone-Server.md)
-		* [Apache Directory Studio User Guide](Apache-Directory-Studio-User-Guide.md)
-		* [ApacheDs Server Installation and Configuration](ApacheDs-Server-Installation-and-Configuration.md)
 * Contribute
 	* [Contributor's Guide](Contributor-Guide.md)
 	* [Code of Conduct](Code-of-Conduct.md)
