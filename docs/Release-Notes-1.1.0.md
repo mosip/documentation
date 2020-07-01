@@ -13,29 +13,25 @@
 - [List Of Acronyms](#list-of-acronyms)
 
 ## Scope
-Version **1.1.0** of MOSIP Platform is a feature and stability release.
+MOSIP Version **1.1.0** has several enhancements, security and performance-tuned and feature-rich.
 
-MOSIP 1.0 was a functional release of mosip with the core modules tested with biometrics. The 1.1 release of mosip builds upon the 1.0 version and adds more features, some new modules, engineering enhancements, performance and security tuning.
+**Release Date:** July 01, 2020
 
-**Release Date:** June 30, 2020
+**Key Highlights**
 
-**Highlights of the 1.1.0 release includes:**
-
-* New Module added – Partner Management and Master Data Administration
+* Includes Partner Management and Master Data Administration
 * [New features added to MOSIP platform](Release-Notes-1.1.0-Features.md)
 * [Bug Fixes across all modules](Release-Notes-1.1.0-Bug-Fixes.md)
 * Engineering Changes
-  * Automated deployment scripts for development, testing environments on Kubernetes
-  * Open build process using Travis
-  * GitHub actions, git commit id in builds
-  * Shift from private repository to public maven and  docker repositories
-  * Decoupling version of components from release version
-  * Gitbook based documentation
+  * Automated deployment scripts based on docker, ansible and kubernetes.
+  * Open build process using Travis and Github Actions.
+  * Git commit-ids in builds helps in traceability from binary to code.
+  * Built docker images are published into Maven and docker hub.
+  * Documentation now uses Gitbook (docs.mosip.io)
 * Technology Changes
-  * Keycloak for IAM
-  * ApacheDS ldap as user store deprecated
-  * Prometheus end points in all spring boot services
-  * Network HSM support added
+  * ApacheDS has been replaced with Keycloak for secure identity and access management.
+  * Prometheus end points for all MOSIP services for health monitoring
+  * Network HSM for strong security and data protection
 
 ## Documentation
 
@@ -54,10 +50,10 @@ Low level design documents for each modules are available in respective reposito
 
 Key Points| Details
 ----|----
-Pre Registration - Browser support | Chrome 74.0.3729
-Deployment Script Environment |	Microsoft Azure
-Registration Client – OS version | Windows 10 (English version) with TPM 2.0
-Scanner | Canon lide 120
+Pre Registration - Browser support | Latest versions of Chrome, Firefox and Edge
+Deployment Script Environment |	Microsoft Azure and VMs deployed in on-premise hardware
+Registration Client with TPM 2.0 | Windows 10
+Document Scanner | Canon lide 120
 GPS | GlobalSat BU-353-S4
 Biometrics Standard | CBEFF format (Version - 2.0)
 MOSIP Device Service (MDS) | MDS v0.9.5
