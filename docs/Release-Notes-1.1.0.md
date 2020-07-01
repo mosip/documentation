@@ -4,13 +4,13 @@
 - [Documentation](#documentation)
 - [Key Points](#key-points)
 - [Code](#code)
-- [Test Reports](#test-reports)
-	* [a. In scope](#1-in-scope)
-	* [b. Not in scope](#2-not-in-scope)
-	* [c. Test Metrics](#3-test-metrics)
-	* [d. Test Execution Report](#4-test-execution-report)
-- [List of Known Issues](#known-issues)
-- [Acronyms](#list-of-acronyms)
+- [Tests](#tests)
+	* [a. In scope](#a-in-scope)
+	* [b. Not in scope](#b-not-in-scope)
+	* [c. Test Metrics](#c-test-metrics)
+	* [d. Test Execution Report](#d-test-execution-report)
+- [List of Known Issues](#list-of-known-issues)
+- [Acronyms](#acronyms)
 
 ## Scope
 MOSIP Version **1.1.0** has several enhancements. It has additional security features and is performance-tuned and feature-rich.
@@ -59,9 +59,9 @@ Low level design documents for each module are available in the respective githu
 
 __Note : Code needs to be built and deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/blob/master/deployment/sandbox-v2/README.md)__
 
-### 5. Tests 
+## Tests 
 
-#### a. In scope 
+### a. In scope 
 
 |Title	|Description|
 |------|------|
@@ -92,14 +92,14 @@ Supporting key based digital signatures, not using digital certificates |
 Transliteration | ICU4J (Library with French, Arabic languages)
 
 
-#### b. Not in scope 
+### b. Not in scope 
 |Title|	Description|
 |------|------|
 |Non-Functional Testing| <ul><li>Detailed Performance Testing</li><li>Reliability and Disaster recovery Testing</li></ul>|
 |Admin|<ul><li>Admin UI</li><li>Admin APIs</li></ul>|
 |UI|<ul><li>Dynamic UI</li></ul>|
 
-#### c. Test Metrics
+### c. Test Metrics
 
 |Key|Value|
 |------|--------|
@@ -111,7 +111,7 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 |Number of Open Defects|Total (77), Blocker or Critical: 10 (7 fixed & 3 open for patch release)|
 |Number of Immediate Fixes|10 to 15|
 
-#### d. Test Execution Report
+### d. Test Execution Report
 
 |Test Execution    |Version|Test Cases|Executed Tests|Pass|Fail|Pending Execution|Pass%|Fail%|
 |------------------|-------|----------|--------------|----|----|-----------------|-----|-----|
@@ -124,7 +124,7 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 |Partner Management|1.0.10 |84        |84            |84  |0   |0                |100% |0.0% |
 |**Total**         |1.0.10 |2872      |2795          |2670|125 |77               |95.5%|4.5% |
 
-### List of Known Issues
+## List of Known Issues
 |JIRA ID|Module|Description|
 |----------|-------------|------|
 |MOSIP-7999|Pre-registration|Notification is not sent when an booked appointment is canceled| 
@@ -147,7 +147,7 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 |MOSIP-8006|Registration Client|Unable to go back to username field from password field in the registration client login window|
 |MOSIP-275|Registration Processor|Registration processor stages aren't working properly after restarting the K8 cluster|
 
-### Acronyms
+## Acronyms
 
 MOSIP  : Modular Open Source Identity Platform
 
@@ -165,7 +165,7 @@ OTP    : One Time PasswordSDK | Software Development Kit
 
 JWT    : Java Web Token
 
-K8      : Kubernetes
+K8     : Kubernetes
 
 UIN    : Unique Identification Number
 
@@ -183,7 +183,7 @@ SDK    : Software Development Kit
 
 MDS    : MOSIP Device Service
 
-ICU4J   : International Components for Unicode for Java
+ICU4J  : International Components for Unicode for Java
 
 WIP    : Work In Progress
 
