@@ -16,8 +16,9 @@ MOSIP 1.0 was a functional release of mosip with the core modules tested with bi
 **Deployment Guide:** To deploy and test mosip you can use our [single click sandbox deployer](https://github.com/mosip/mosip-infra/tree/master/deployment/sandbox-v2)
 
 ### Key Highlights on Release 1.1
+
 #### New Modules in MOSIP
-MOSIP 1.1 has added APIs for resident services, partner management, device registration, data administration.
+MOSIP 1.1 has added APIs for partner management, device registration, data administration.
 
 * **Partner Management**
     * Self-service authentication ecosystem partner (Relying party) on-boarding

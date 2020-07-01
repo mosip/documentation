@@ -8,7 +8,7 @@ This document contains the features that were developed or enhanced as part of M
 	* Master data and applicant type services are merged
 	* Crypto manager, key manager, license key manager, signature and token id generator services are merged
 * Kernel CBEFF utility has been updated to load XSD only once during application initialization. The design for the kernel CBEFF utility is available [here](https://github.com/mosip/commons/blob/master/design/kernel/kernel-cbeffutil.md).
-* Partner manager has been added in Keycloak.
+* Partner manager has been integrated with Keycloak.
 * "Preregistration" realm has been created in Keycloak to store Pre-registration users.
 * The design for UIN generator has been changed to move assigned UINs to a new table. The design for the kernel UIN generator implementation is available [here](https://github.com/mosip/commons/blob/master/design/kernel/kernel-idgenerator-uin.md).
 * The SMS implementation has changed to allow integration with any vendor. The design for the SMS implementation is available [here](https://github.com/mosip/commons/blob/master/design/kernel/kernel-smsnotification.md).
