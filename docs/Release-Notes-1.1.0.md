@@ -135,7 +135,7 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests)
 |MOSIP-7942|ID Authentication|Device details are not validated against the biomertic type| 
 |MOSIP-7842|Registration Client|Device details are not stored in Packet|
 |MOSIP-7915|Registration Client|Navigation issues in registration client UI|
-|MOSIP-31341|Registration Client|Streaming of device is turned on when registration flow is abruptly closed|
+|MOSIP-31341|Registration Client|Streaming of device stays turned on when registration flow is abruptly closed|
 
 ## List Of Acronyms
 
