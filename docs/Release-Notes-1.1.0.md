@@ -19,7 +19,7 @@ MOSIP Version **1.1.0** has several enhancements. It has additional security fea
 
 **Key Highlights**
 
-* Includes Partner Management and Master Data Administration
+* Includes Partner Management
 * [New features added to MOSIP platform](Release-Notes-1.1.0-Features.md)
 * [Bug Fixes across all modules](Release-Notes-1.1.0-Bug-Fixes.md)
 * Engineering Changes
@@ -52,10 +52,11 @@ Low level design documents for each module are available in the respective githu
 * [Registration](https://github.com/mosip/registration/releases)
 * [Authentication](https://github.com/mosip/id-authentication/releases)
 * [Partner Management Services](https://github.com/mosip/partner-management-services/releases)
-* [Admin Services](https://github.com/mosip/admin-services/releases)
 * [Resident Services](https://github.com/mosip/resident-services/releases)
 * [Reference Implementation](https://github.com/mosip/mosip-ref-impl/releases)
 * [Automation tests](https://github.com/mosip/mosip-functional-tests)
+
+The details related to artificatory versions is available [here](Release-Notes-1.1.0-Artifact-Version.md).
 
 __Note : Code needs to be built and deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/blob/master/deployment/sandbox-v2/README.md)__
 
