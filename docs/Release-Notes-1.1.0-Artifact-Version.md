@@ -1,121 +1,121 @@
 This document contains the artifacts & there versions that were released as part of MOSIP 1.1 release.
 
-Repository Name | Artifacts Name | Version
-----------------|----------------|---------- 
-commons/kernel | kernel-core | 1.1.0
-commons/kernel | kernel-logger-logback | 1.1.0
-commons/kernel | kernel-auth-adapter | 1.1.0
-commons/kernel | kernel-dataaccess-hibernate | 1.1.0
-commons/kernel | kernel-auditmanager-api | 1.1.0
-commons/kernel | kernel-idgenerator-prid | 1.1.0
-commons/kernel | kernel-idgenerator-vid | 1.1.0
-commons/kernel | kernel-idgenerator-tokenid | 1.1.0
-commons/kernel | kernel-idgenerator-machineid | 1.1.0
-commons/kernel | kernel-idgenerator-regcenterid | 1.1.0
-commons/kernel | kernel-idgenerator-mispid | 1.1.0
-commons/kernel | kernel-licensekeygenerator-misp | 1.1.0
-commons/kernel | kernel-idgenerator-rid | 1.1.0
-commons/kernel | kernel-idgenerator-partnerid | 1.1.0
-commons/kernel | kernel-idvalidator-prid | 1.1.0
-commons/kernel | kernel-idvalidator-rid | 1.1.0
-commons/kernel | kernel-idvalidator-uin | 1.1.0
-commons/kernel | kernel-idvalidator-vid | 1.1.0
-commons/kernel | kernel-idvalidator-mispid | 1.1.0
-commons/kernel | kernel-pinvalidator | 1.1.0
-commons/kernel | kernel-virusscanner-clamav | 1.1.0
-commons/kernel | kernel-keygenerator-bouncycastle | 1.1.0
-commons/kernel | kernel-crypto-jce | 1.1.0
-commons/kernel | kernel-keymanager-softhsm | 1.1.0
-commons/kernel | kernel-templatemanager-velocity | 1.1.0
-commons/kernel | kernel-pdfgenerator-itext | 1.1.0
-commons/kernel | kernel-datamapper-orika | 1.1.0
-commons/kernel | kernel-qrcodegenerator-zxing | 1.1.0
-commons/kernel | kernel-cbeffutil-api | 1.1.0
-commons/kernel | kernel-fsadapter-ceph | 1.1.0
-commons/kernel | kernel-fsadapter-hdfs | 1.1.0
-commons/kernel | kernel-transliteration-icu4j | 1.1.0
-commons/kernel | kernel-applicanttype-api | 1.1.0
-commons/kernel | kernel-crypto-signature | 1.1.0
-commons/kernel | kernel-idobjectvalidator | 1.1.0
-commons/kernel | kernel-bioapi-provider | 1.1.0
-commons/kernel | kernel-smsserviceprovider-msg91 | 1.1.0
-commons/kernel | kernel-fsadapter-proxy | 1.1.0
-commons/kernel | kernel-registration-packet-manager | 1.1.0
-commons/kernel | kernel-masterdata-service | 1.1.0
-commons/kernel | kernel-auditmanager-service | 1.1.0
-commons/kernel | kernel-otpmanager-service | 1.1.0
-commons/kernel | kernel-notification-service | 1.1.0
-commons/kernel | kernel-syncdata-service | 1.1.0
-commons/kernel | kernel-auth-service | 1.1.0
-commons/kernel | kernel-ridgenerator-service | 1.1.0
-commons/kernel | kernel-config-server | 1.1.0
-commons/kernel | kernel-keymanager-service | 1.1.0
-commons/kernel | kernel-idgenerator-service | 1.1.0
-commons/kernel | kernel-pridgenerator-service | 1.1.0
-commons/kernel | kernel-salt-generator | 1.1.0
-commons/kernel | kernel-biometrics-api | 1.1.0
-commons/kernel | kernel-biosdk-provider | 1.1.0
-commons/id-repository | id-repository-core | 1.1.0
-commons/id-repository | id-repository-vid-service | 1.1.0
-commons/id-repository | id-repository-identity-service | 1.1.0
-pre-registration/pre-registration | pre-registration-core | 1.1.0
-pre-registration/pre-registration | pre-registration-login-service | 1.1.0
-pre-registration/pre-registration | pre-registration-application-service-impl | 1.1.0
-pre-registration/pre-registration | pre-registration-demographic-service | 1.1.0
-pre-registration/pre-registration | pre-registration-document-service | 1.1.0
-pre-registration/pre-registration | pre-registration-booking-service | 1.1.0
-pre-registration/pre-registration | pre-registration-datasync-service | 1.1.0
-pre-registration/pre-registration | pre-registration-batchjob | 1.1.0
-pre-registration/pre-registration | pre-registration-transliteration-service | 1.1.0
-pre-registration/pre-registration | pre-registration-notification-service | 1.1.0
-pre-registration/pre-registration | pre-registration-generateqrcode-service | 1.1.0
-pre-registration/pre-registration | pre-registration-captcha-service | 1.1.0
-registration/registration | registration-services | 1.1.0
-registration/registration | registration-client | 1.1.0
-registration/registration | registration-libs | 1.1.0
-registration/registration-processor | registration-processor-core | 1.1.0
-registration/registration-processor | registration-processor-rest-client | 1.1.0
-registration/registration-processor | registration-processor-packet-manager | 1.1.0
-registration/registration-processor | registration-processor-common-camel-bridge | 1.1.0
-registration/registration-processor | registration-processor-bio-dedupe-service-impl | 1.1.0
-registration/registration-processor | registration-processor-print-service-impl | 1.1.0
-registration/registration-processor | registration-processor-info-storage-service | 1.1.0
-registration/registration-processor | registration-processor-registration-status-service-impl | 1.1.0
-registration/registration-processor | registration-processor-message-sender-impl | 1.1.0
-registration/registration-processor/init | registration-processor-packet-receiver-stage | 1.1.0
-registration/registration-processor/init | registration-processor-registration-status-service | 1.1.0
-registration/registration-processor/pre-processor | registration-processor-packet-validator-stage | 1.1.0
-registration/registration-processor/pre-processor | registration-processor-osi-validator-stage | 1.1.0
-registration/registration-processor/pre-processor | registration-processor-packet-uploader-stage | 1.1.0
-registration/registration-processor/pre-processor | registration-processor-external-stage | 1.1.0
-registration/registration-processor/pre-processor | registration-processor-external-integration-service | 1.1.0
-registration/registration-processor/pre-processor | registration-processor-quality-checker-stage | 1.1.0
-registration/registration-processor/pre-processor | registration-processor-request-handler-service | 1.1.0
-registration/registration-processor/pre-processor | registration-processor-securezone-notification-stage | 1.1.0
-registration/registration-processor/core-processor | registration-processor-demo-dedupe-stage | 1.1.0
-registration/registration-processor/core-processor | registration-processor-bio-dedupe-stage | 1.1.0
-registration/registration-processor/core-processor | registration-processor-uin-generator-stage | 1.1.0
-registration/registration-processor/core-processor | registration-processor-abis | 1.1.0
-registration/registration-processor/core-processor | registration-processor-bio-dedupe-service | 1.1.0
-registration/registration-processor/core-processor | registration-processor-manual-verification-stage | 1.1.0
-registration/registration-processor/core-processor | registration-processor-reprocessor-stage | 1.1.0
-registration/registration-processor/core-processor | registration-processor-abis-handler-stage | 1.1.0
-registration/registration-processor/core-processor | registration-processor-abis-middleware-stage | 1.1.0
-registration/registration-processor/core-processor | registration-processor-biometric-authentication-stage | 1.1.0
-registration/registration-processor/post-processor | registration-processor-message-sender-stage | 1.1.0
-registration/registration-processor/post-processor | registration-processor-printing-stage | 1.1.0
-registration/registration-processor/post-processor | registration-processor-print-service | 1.1.0
-registration/registration-processor/post-processor | registration-processor-registration-transaction-service | 1.1.0
-id-authentication/authentication | authentication-common | 1.1.0
-id-authentication/authentication | authentication-core | 1.1.0
-id-authentication/authentication | authentication-service | 1.1.0
-id-authentication/authentication | authentication-internal-service | 1.1.0
-id-authentication/authentication | authentication-kyc-service | 1.1.0
-id-authentication/authentication | authentication-otp-service | 1.1.0
-id-authentication/authentication | authentication-keys-generator | 1.1.0
-partner-management-services/partner | pmp-misp-service | 1.1.0
-partner-management-services/partner | pmp-policy-management-service | 1.1.0
-partner-management-services/partner | pmp-partner-management-service | 1.1.0
-partner-management-services/partner | pmp-partner-service | 1.1.0
-residnet-services/resident | resident-services | 1.1.0
-admin-services/admin | admin-services | 1.1.0
+|Repository Name | Artifacts Name | Version |
+|:---------------|:----------------|:---------- |
+| commons/kernel | kernel-core | 1.1.0 |
+| commons/kernel | kernel-logger-logback | 1.1.0 |
+| commons/kernel | kernel-auth-adapter | 1.1.0 |
+| commons/kernel | kernel-dataaccess-hibernate | 1.1.0 |
+| commons/kernel | kernel-auditmanager-api | 1.1.0 |
+| commons/kernel | kernel-idgenerator-prid | 1.1.0 |
+| commons/kernel | kernel-idgenerator-vid | 1.1.0 |
+| commons/kernel | kernel-idgenerator-tokenid | 1.1.0 |
+| commons/kernel | kernel-idgenerator-machineid | 1.1.0 |
+| commons/kernel | kernel-idgenerator-regcenterid | 1.1.0 |
+| commons/kernel | kernel-idgenerator-mispid | 1.1.0 |
+| commons/kernel | kernel-licensekeygenerator-misp | 1.1.0 |
+| commons/kernel | kernel-idgenerator-rid | 1.1.0 |
+| commons/kernel | kernel-idgenerator-partnerid | 1.1.0 |
+| commons/kernel | kernel-idvalidator-prid | 1.1.0 |
+| commons/kernel | kernel-idvalidator-rid | 1.1.0 |
+| commons/kernel | kernel-idvalidator-uin | 1.1.0 |
+| commons/kernel | kernel-idvalidator-vid | 1.1.0 |
+| commons/kernel | kernel-idvalidator-mispid | 1.1.0 |
+| commons/kernel | kernel-pinvalidator | 1.1.0 |
+| commons/kernel | kernel-virusscanner-clamav | 1.1.0 |
+| commons/kernel | kernel-keygenerator-bouncycastle | 1.1.0 |
+| commons/kernel | kernel-crypto-jce | 1.1.0 |
+| commons/kernel | kernel-keymanager-softhsm | 1.1.0 |
+| commons/kernel | kernel-templatemanager-velocity | 1.1.0 |
+| commons/kernel | kernel-pdfgenerator-itext | 1.1.0 |
+| commons/kernel | kernel-datamapper-orika | 1.1.0 |
+| commons/kernel | kernel-qrcodegenerator-zxing | 1.1.0 |
+| commons/kernel | kernel-cbeffutil-api | 1.1.0 |
+| commons/kernel | kernel-fsadapter-ceph | 1.1.0 |
+| commons/kernel | kernel-fsadapter-hdfs | 1.1.0 |
+| commons/kernel | kernel-transliteration-icu4j | 1.1.0 |
+| commons/kernel | kernel-applicanttype-api | 1.1.0 |
+| commons/kernel | kernel-crypto-signature | 1.1.0 |
+| commons/kernel | kernel-idobjectvalidator | 1.1.0 |
+| commons/kernel | kernel-bioapi-provider | 1.1.0 |
+| commons/kernel | kernel-smsserviceprovider-msg91 | 1.1.0 |
+| commons/kernel | kernel-fsadapter-proxy | 1.1.0 |
+| commons/kernel | kernel-registration-packet-manager | 1.1.0 |
+| commons/kernel | kernel-masterdata-service | 1.1.0 |
+| commons/kernel | kernel-auditmanager-service | 1.1.0 |
+| commons/kernel | kernel-otpmanager-service | 1.1.0 |
+| commons/kernel | kernel-notification-service | 1.1.0 |
+| commons/kernel | kernel-syncdata-service | 1.1.0 |
+| commons/kernel | kernel-auth-service | 1.1.0 |
+| commons/kernel | kernel-ridgenerator-service | 1.1.0 |
+| commons/kernel | kernel-config-server | 1.1.0 |
+| commons/kernel | kernel-keymanager-service | 1.1.0 |
+| commons/kernel | kernel-idgenerator-service | 1.1.0 |
+| commons/kernel | kernel-pridgenerator-service | 1.1.0 |
+| commons/kernel | kernel-salt-generator | 1.1.0 |
+| commons/kernel | kernel-biometrics-api | 1.1.0 |
+| commons/kernel | kernel-biosdk-provider | 1.1.0 |
+| commons/id-repository | id-repository-core | 1.1.0 |
+| commons/id-repository | id-repository-vid-service | 1.1.0 |
+| commons/id-repository | id-repository-identity-service | 1.1.0 |
+| pre-registration/pre-registration | pre-registration-core | 1.1.0 |
+| pre-registration/pre-registration | pre-registration-login-service | 1.1.0 |
+| pre-registration/pre-registration | pre-registration-application-service-impl | 1.1.0 |
+| pre-registration/pre-registration | pre-registration-demographic-service | 1.1.0 |
+| pre-registration/pre-registration | pre-registration-document-service | 1.1.0 |
+| pre-registration/pre-registration | pre-registration-booking-service | 1.1.0 |
+| pre-registration/pre-registration | pre-registration-datasync-service | 1.1.0 |
+| pre-registration/pre-registration | pre-registration-batchjob | 1.1.0 |
+| pre-registration/pre-registration | pre-registration-transliteration-service | 1.1.0 |
+| pre-registration/pre-registration | pre-registration-notification-service | 1.1.0 |
+| pre-registration/pre-registration | pre-registration-generateqrcode-service | 1.1.0 |
+| pre-registration/pre-registration | pre-registration-captcha-service | 1.1.0 |
+| registration/registration | registration-services | 1.1.0 |
+| registration/registration | registration-client | 1.1.0 |
+| registration/registration | registration-libs | 1.1.0 |
+| registration/registration-processor | registration-processor-core | 1.1.0 |
+| registration/registration-processor | registration-processor-rest-client | 1.1.0 |
+| registration/registration-processor | registration-processor-packet-manager | 1.1.0 |
+| registration/registration-processor | registration-processor-common-camel-bridge | 1.1.0 |
+| registration/registration-processor | registration-processor-bio-dedupe-service-impl | 1.1.0 |
+| registration/registration-processor | registration-processor-print-service-impl | 1.1.0 |
+| registration/registration-processor | registration-processor-info-storage-service | 1.1.0 |
+| registration/registration-processor | registration-processor-registration-status-service-impl | 1.1.0 |
+| registration/registration-processor | registration-processor-message-sender-impl | 1.1.0 |
+| registration/registration-processor/init | registration-processor-packet-receiver-stage | 1.1.0 |
+| registration/registration-processor/init | registration-processor-registration-status-service | 1.1.0 |
+| registration/registration-processor/pre-processor | registration-processor-packet-validator-stage | 1.1.0 |
+| registration/registration-processor/pre-processor | registration-processor-osi-validator-stage | 1.1.0 |
+| registration/registration-processor/pre-processor | registration-processor-packet-uploader-stage | 1.1.0 |
+| registration/registration-processor/pre-processor | registration-processor-external-stage | 1.1.0 |
+| registration/registration-processor/pre-processor | registration-processor-external-integration-service | 1.1.0 |
+| registration/registration-processor/pre-processor | registration-processor-quality-checker-stage | 1.1.0 |
+| registration/registration-processor/pre-processor | registration-processor-request-handler-service | 1.1.0 |
+| registration/registration-processor/pre-processor | registration-processor-securezone-notification-stage | 1.1.0 |
+| registration/registration-processor/core-processor | registration-processor-demo-dedupe-stage | 1.1.0 |
+| registration/registration-processor/core-processor | registration-processor-bio-dedupe-stage | 1.1.0 |
+| registration/registration-processor/core-processor | registration-processor-uin-generator-stage | 1.1.0 |
+| registration/registration-processor/core-processor | registration-processor-abis | 1.1.0 |
+| registration/registration-processor/core-processor | registration-processor-bio-dedupe-service | 1.1.0 |
+| registration/registration-processor/core-processor | registration-processor-manual-verification-stage | 1.1.0 |
+| registration/registration-processor/core-processor | registration-processor-reprocessor-stage | 1.1.0 |
+| registration/registration-processor/core-processor | registration-processor-abis-handler-stage | 1.1.0 |
+| registration/registration-processor/core-processor | registration-processor-abis-middleware-stage | 1.1.0 |
+| registration/registration-processor/core-processor | registration-processor-biometric-authentication-stage | 1.1.0 |
+| registration/registration-processor/post-processor | registration-processor-message-sender-stage | 1.1.0 |
+| registration/registration-processor/post-processor | registration-processor-printing-stage | 1.1.0 |
+| registration/registration-processor/post-processor | registration-processor-print-service | 1.1.0 |
+| registration/registration-processor/post-processor | registration-processor-registration-transaction-service | 1.1.0 |
+| id-authentication/authentication | authentication-common | 1.1.0 |
+| id-authentication/authentication | authentication-core | 1.1.0 |
+| id-authentication/authentication | authentication-service | 1.1.0 |
+| id-authentication/authentication | authentication-internal-service | 1.1.0 |
+| id-authentication/authentication | authentication-kyc-service | 1.1.0 |
+| id-authentication/authentication | authentication-otp-service | 1.1.0 |
+| id-authentication/authentication | authentication-keys-generator | 1.1.0 |
+| partner-management-services/partner | pmp-misp-service | 1.1.0 |
+| partner-management-services/partner | pmp-policy-management-service | 1.1.0 |
+| partner-management-services/partner | pmp-partner-management-service | 1.1.0 |
+| partner-management-services/partner | pmp-partner-service | 1.1.0 |
+| residnet-services/resident | resident-services | 1.1.0 |
+| admin-services/admin | admin-services | 1.1.0 |
