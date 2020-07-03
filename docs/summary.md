@@ -6,7 +6,7 @@
 	* [Data Architecture](Data-Architecture.md)
 	* [Privacy & Security](Privacy-and-Security.md)	
 * Modules
-	* Pre-Registration Module	
+	* Pre-Registration Module
 		* [Pre-Registration](Pre-Registration.md)
 		* [Pre Registration Functionality](Pre-Registration-Functionality.md)
 	* Registration Module
@@ -64,13 +64,10 @@
 	* [Hardware Sizing](Hardware-Sizing.md)
 	* [Customizations for a Country](Customisations-for-a-Country.md)
 	* Other Installation Guides
-		* [Steps to Install and Configure LDAP](Steps-to-Install-and-Configure-LDAP.md)
 		* [Steps to Install and Configure HDFS](Steps-to-Install-and-Configure-HDFS.md)
 		* [Steps to Install and use PostgreSql Version 10.2 on RHEL 7.5](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md)
 		* [Steps to Install Clam AntiVirus Version 0.101.0](Steps-to-Install-Clam-AntiVirus-Version-0.101.0.md)
 		* [Steps to Install Keycloak Standalone Server](Steps-to-Install-Keycloak-Standalone-Server.md)
-		* [Apache Directory Studio User Guide](Apache-Directory-Studio-User-Guide.md)
-		* [ApacheDs Server Installation and Configuration](ApacheDs-Server-Installation-and-Configuration.md)
 * Contribute
 	* [Contributor's Guide](Contributor-Guide.md)
 	* [Code of Conduct](Code-of-Conduct.md)
@@ -119,11 +116,15 @@
 	* [Template APIs](Template-APIs.md)
 	* [Zone APIs](Zone-APIs.md)
 * [Releases](MOSIP-Releases.md)
-	* [Release Notes 0.12.15](Release-Notes-0.12.15.md)
     * [Release Notes 0.9.0](Release-Notes-0.9.0.md)
     * [Release Notes 1.0.0](Release-Notes-1.0.0.md)
+		* [Release Notes 1.0.0 Features](Release-Notes-1.0.0-Features.md)
     * [Release Notes 1.0.5](Release-Notes-1.0.5.md)
     * [Release Notes 1.0.6](Release-Notes-1.0.6.md)
+	* [Release Notes 1.1.0](Release-Notes-1.1.0.md)
+		* [Release Notes 1.1.0 Features](Release-Notes-1.1.0-Features.md)
+		* [Release Notes 1.1.0 Bug Fixes](Release-Notes-1.1.0-Bug-Fixes.md)
+		* [Release Notes 1.1.2 Features](Release-Notes-1.2.0-Features.md)
 * [Roadmap](Roadmap.md)
 	* [Roadmap Activities](Roadmap-Activities.md)
 * [Revision History](Revision-History.md)

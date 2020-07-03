@@ -1,16 +1,32 @@
+## Table Of Contents
 
-## Scope
+- [Scope](#scope-)
+- [Documentation](#documentation-)
+- [Key Points](#key-points-)
+- [Code](#code-)
+- [Test Reports](#test-reports-)
+  * [1. In scope](#1-in-scope-)
+  * [2. Not in scope](#2-Not-in-scope-)
+  * [3. Executive Summary – Consolidated Quality Status](#3-executive-summary--consolidated-quality-status-)
+  * [4. Types of Testing](#4-types-of-testing-)
+  * [5. Test Execution Summary](#5-test-execution-summary-)
+- [Known Issues](#known-issues-)
+- [List Of Acronyms](#list-of-acronyms-)
+
+## Scope [**[↑]**](#table-of-contents)
 This release is with **proxy biometrics**. This means that the implementation of Print system, SDK, MDM (MOSIP  Device Manager), ABIS (Automated Biometrics Identification System) and Biometric devices has been stubbed. Also, this version is tested for functionality. Non-functional requirements (Performance, Scale and Security) will be taken up in subsequent releases.
 
 * Features included – Pre-Registration, Registration Client, Registration Processor, ID Authentication, Reference GUI implementation of Pre-Registration and Registration Client. 
 * Features not included – Administration, Partner Management, Resident Services
-## Documentation 
+
+## Documentation [**[↑]**](#table-of-contents)
 
 ### Platform Documentation 
 Includes Functional requirements, Process flows, Architecture and High level design, Getting started and Deployment guide, Developer documentation etc.  
-   [**Link to Platform Documentation**](https://mosipdocs.gitbook.io/platform/)
+[**Link to Platform Documentation**](https://docs.mosip.io/platform)
 
 ### Detailed Documentation
+
 #### Low Level design
 * [Admin](https://github.com/mosip/admin-services/tree/master/design)
 * [Pre Registration](https://github.com/mosip/pre-registration/tree/master/design)
@@ -21,7 +37,7 @@ Includes Functional requirements, Process flows, Architecture and High level des
 ### Test cases
 * [Functional Test Case](https://github.com/mosip/mosip-functional-tests/tree/0.9.0)
 
-## Key Points 
+## Key Points [**[↑]**](#table-of-contents)
 |Key Points|	Details|
 |----|----|
 |Pre Registration - Browser support |	Chrome 74.0.3729)|
@@ -39,10 +55,10 @@ Includes Functional requirements, Process flows, Architecture and High level des
 |Supporting key based digital signatures, not using digital certificates||	
 |Transliteration|	ICU4J (Library with French, Arabic languages)|
 
-## Code 
+## Code [**[↑]**](#table-of-contents)
 The [code](https://github.com/mosip/mosip-platform-mt/tree/0.9.0) and [automation tests](https://github.com/mosip/mosip-functional-tests/tree/0.9.0) are available on GitHub. The code needs to be built and deployed as per the procedure documented in [**Building And Deploying MOSIP**](Build-and-Deploy.md). We will actively support System Integrators during their first deployment.
 
-## Tests 
+## Tests [**[↑]**](#table-of-contents)
 **Testing Scope**
 
 ### In Scope 
@@ -54,7 +70,7 @@ The [code](https://github.com/mosip/mosip-platform-mt/tree/0.9.0) and [automatio
 |Test Methodology| <li>  Manual <li>  Test Automation|
 |Types of testing|<li>	 Smoke <li> Functional <li>  Integration <li> 	Regression|
 |Testing Levels|![Image](_images/test_rig_automation/image1.jpg) |
-|Configuration Parameters tested for| Refer to QA env properties file with suffix ‘qa’ in the filename, at [**Link**](https://github.com/mosip/mosip-config-mt/tree/master/config)|
+|Configuration Parameters tested for| Refer to QA env properties file with suffix ‘qa’ in the filename, at [**Link**](https://github.com/mosip/mosip-config/tree/0.9.1_23092019)|
 |Browser Support|**Pre-Registration**    <li> Chrome – 74.0.3729.169|
 |OS Support|**Registration Client**    <li> Windows 10|
 |Language Support|French, Arabic, English|
@@ -96,10 +112,26 @@ The [code](https://github.com/mosip/mosip-platform-mt/tree/0.9.0) and [automatio
 |Regression Testing|Tests to ensure that any change doesn't break existing functionality|
 	
 ### Test Execution Summary 
-![Image](_images/test_rig_automation/Capture.JPG)  
+![Image](_images/release/0.9.0/ExecutionSummary_0.9.0.jpg)  
 
-## Known Issues 
-![Image](_images/test_rig_automation/image4.jpg) 
+## Known Issues [**[↑]**](#table-of-contents)
+![Image](_images/release/0.9.0/KnownIssues_0.9.0.jpg) 
 
-## Support Process (To Be Determined) 
-Process to be followed for support required, escalation matrix, etc.
+## List Of Acronyms [**[↑]**](#table-of-contents)
+Acronym | Expanded Form
+-----|-----------------
+ABIS | Automated Biometric Identification System
+API | Application Programming Interface
+ID | Identity
+IDA | Identity Authentication
+MOSIP | Modular Open Source Identity Platform
+NFR | Non-Functional Requirements
+OTP | One Time Password
+SDK | Software Development Kit
+TBD | To Be Determined
+TOTP| Temporary One Time Password
+UIN | Unique Identification Number
+WIP | Work In Progress
+CBEFF | Common Biometric Exchange Formats Framework
+HSM | Hardware Security Module
+TPM | Trusted Platform Module
