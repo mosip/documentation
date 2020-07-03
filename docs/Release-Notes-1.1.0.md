@@ -67,12 +67,12 @@ __Note : Code needs to be built and deployed as per the procedure depicted in [S
 |Title	|Description|
 |------|------|
 |Functional Testing|<ul><li>Pre-registration (UI & APIs)</li><li>Registration Client</li><li>Kernel (APIs)</li><li>Registration Processor (Server)</li><li>ID Authentication (APIs)</li><li>Partner Management (APIs)</li><li>ID Repo (APIs)</li><li>Resident Services (APIs)</li></ul>|
-|Non-Functional Testing|<li>Early Performance Testing</li><li>Security Testing</li></ul>|
-|Configuration Testing| <ul><li>Testing is done for default configuration. Changing the configuration parameters with various values will be taken up in subsequent releases.</li></ul>|
-|Version Tag Tested|1.1|
+|Non-Functional Testing|<ul><li>Early Performance Testing</li><li>Security Testing</li></ul>|
+|Configuration Testing| Testing is done for default configuration. Changing the configuration parameters with various values will be taken up in subsequent releases.|
+|Version Tag Tested|v1.1.0|
 |Types of testing|<ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li></ul>|
-|Browser Support|**Pre-Registration** <ul><li>Chrome – latest</li><li>Edge – latest</li><li>Firefox – latest</li></ul>|
-|OS Support|**Registration Client** <ul><li>Windows 10</li></ul>|
+|Browser Support|**Pre-Registration** (Latest Versions of Chrome, Edge & Firefox)|
+|OS Support|**Registration Client** (Windows 10)|
 
 |Areas |Technology used|
 ----|----
@@ -150,44 +150,26 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 
 ## Acronyms
 
-MOSIP  : Modular Open Source Identity Platform
-
-ABIS   : Automated Biometric Identification System
-
-API    : Application Programming Interface
-
-ID     : Identity
-
-IDA    : Identity Authentication
-
-NFR    : Non-Functional Requirements
-
-OTP    : One Time Password
-
-SDK	   : Software Development Kit
-
-JWT    : Java Web Token
-
-K8     : Kubernetes
-
-UIN    : Unique Identification Number
-
-VID    : Virtual ID
-
-CBEFF  : Common Biometric Exchange Formats Framework
-
-CORS   :  Cross Origin Resource Sharing
-
-HSM    : Hardware Security Module
-
-TPM    : Trusted Platform Module
-
-SDK    : Software Development Kit
-
-MDS    : MOSIP Device Service
-
-ICU4J  : International Components for Unicode for Java
-
-WIP    : Work In Progress
-
-TBD    : To Be Determined/Done
+Achronyms | Full Form
+----------|-----------
+MOSIP | Modular Open Source Identity Platform
+ABIS | Automated Biometric Identification System
+API | Application Programming Interface
+ID | Identity
+IDA | Identity Authentication
+NFR | Non-Functional Requirements
+OTP | One Time Password
+SDK	| Software Development Kit
+JWT | Java Web Token
+K8 | Kubernetes
+UIN | Unique Identification Number
+VID | Virtual ID
+CBEFF | Common Biometric Exchange Formats Framework
+CORS | Cross Origin Resource Sharing
+HSM | Hardware Security Module
+TPM | Trusted Platform Module
+SDK | Software Development Kit
+MDS | MOSIP Device Service
+ICU4J | International Components for Unicode for Java
+WIP | Work In Progress
+TBD | To Be Determined/Done
