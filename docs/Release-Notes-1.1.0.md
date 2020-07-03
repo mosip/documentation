@@ -47,18 +47,18 @@ Low level design documents for each module are available in the respective githu
 
 ### 4. Code and Automated Tests
 
-* [Commons](https://github.com/mosip/commons/releases)
-* [Pre-registration](https://github.com/mosip/pre-registration/releases)
-* [Registration](https://github.com/mosip/registration/releases)
-* [Authentication](https://github.com/mosip/id-authentication/releases)
-* [Partner Management Services](https://github.com/mosip/partner-management-services/releases)
-* [Resident Services](https://github.com/mosip/resident-services/releases)
-* [Reference Implementation](https://github.com/mosip/mosip-ref-impl/releases)
-* [Automation tests](https://github.com/mosip/mosip-functional-tests)
+* [Commons](https://github.com/mosip/commons/tree/v1.1.0)
+* [Pre-registration](https://github.com/mosip/pre-registration/tree/v1.1.0)
+* [Registration](https://github.com/mosip/registration/tree/v1.1.0)
+* [Authentication](https://github.com/mosip/id-authentication/tree/v1.1.0)
+* [Partner Management Services](https://github.com/mosip/partner-management-services/tree/v1.1.0)
+* [Resident Services](https://github.com/mosip/resident-services/tree/v1.1.0)
+* [Reference Implementation](https://github.com/mosip/mosip-ref-impl/tree/v1.1.0)
+* [Automation tests](https://github.com/mosip/mosip-functional-tests/tree/v1.1.0)
 
 The details related to artificatory versions is available [here](Release-Notes-1.1.0-Artifact-Version.md).
 
-__Note : Code needs to be built and deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/blob/master/deployment/sandbox-v2/README.md)__
+__Note : Code needs to be built and deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/blob/master/deployment/sandbox-v2/README.md).
 
 ## Tests 
 
@@ -162,7 +162,9 @@ IDA    : Identity Authentication
 
 NFR    : Non-Functional Requirements
 
-OTP    : One Time PasswordSDK | Software Development Kit
+OTP    : One Time Password
+
+SDK	   : Software Development Kit
 
 JWT    : Java Web Token
 
