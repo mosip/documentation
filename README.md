@@ -9,7 +9,7 @@ For more details on MOSIP documentation visit our documentation website, [docs.m
 ## Release 1.1
 MOSIP 1.0 was a functional release of mosip with the core modules tested with biometrics. The 1.1 release of mosip builds upon the 1.0 version and adds more features, some new modules, engineering enhancements, performance and security tuning.
 
-**Release Date:** June 30th, 2020
+**Release Date:** July 03, 2020
 
 **Code Base:** [github.com/mosip](https://github.com/mosip)
 
@@ -18,18 +18,13 @@ MOSIP 1.0 was a functional release of mosip with the core modules tested with bi
 ### Key Highlights on Release 1.1
 
 #### New Modules in MOSIP
-MOSIP 1.1 has added APIs for partner management, device registration, data administration.
+MOSIP 1.1 has added APIs for partner management.
 
 * **Partner Management**
     * Self-service authentication ecosystem partner (Relying party) on-boarding
     * API Key request and issue to partner with administrative approval
     * Administrative policy groups with support for multiple policies allowing various levels of authentication calls
     * De-activation and Re-activation support at partner and API key level
-
-* **Master Data Administration**
-    * APIs for adding, removing, mapping master data
-    * Support for new master data entities with the dynamic master data API
-    * Multi language support for data
 
 #### New Features
 * **Commons**
@@ -78,4 +73,4 @@ MOSIP 1.1 has added APIs for partner management, device registration, data admin
 (For more details on release 1.1 and older releases you can look at our [release documentation](https://docs.mosip.io/platform/mosip-releases))
 
 ### Next Release
-Our next release 1.2 will be tentatively available in October 2020. The features for the same will be published at [Release 1.2.0 Features](Release-Notes-1.2.0-Features.md) soon.
+Our next release 1.2 will be tentatively available in October 2020. The features for the same will be published at [Release 1.2.0 Features](https://docs.mosip.io/platform/mosip-releases/release-notes-1.1.0/release-notes-1.2.0-features) soon.

@@ -15,7 +15,7 @@
 ## Scope
 MOSIP Version **1.1.0** has several enhancements. It has additional security features and is performance-tuned and feature-rich.
 
-**Release Date:** July 01, 2020
+**Release Date:** July 03, 2020
 
 **Key Highlights**
 

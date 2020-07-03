@@ -43,6 +43,7 @@ This document contains the features that were developed or enhanced as part of M
 * Machine master table has been updated to store public key and key index. Validation for public key to machine for TPM and non-TPM machines has been added. The detailed about this design has been updated [here]().
 * Support for generic master data sync has been added. For details on generic master data sync API find the API specification [here](Generic-Master-Data-Sync-API.md).
 * Registration Client UI and flow now can be dynamically created using ID schema and UI specification. The design for creating and updating Registration Client UI & flow is available [here]().
+* Registration Packet structure has changed to store id, evidence and optional data separately in different folders. 
 * Implementation has been changed to support [MDS 0.9.5 specification](MOSIP-Device-Service-Specification.md).
 * Implementation has been changed to support [SDK 0.9.0 specification](Biometric-SDK-API-Specification.md).
 
@@ -56,7 +57,7 @@ This document contains the features that were developed or enhanced as part of M
 * Digital signature has been added to the UIN card.
 * Packet processing is stopped for a packet which is marked as "Rejected" by the supervisor in packet validator stage.
 * Registration client audit logs are now being sent to audit table after packet is decrypted in registration processor.
-* Packet reader utility has been created and the design for the same is available [here]().
+* Packet reader utility has been created to read the data in the new packet structure.
 
 # Authentication
 * Feature for multi-factor authentication is now added.
@@ -66,7 +67,7 @@ This document contains the features that were developed or enhanced as part of M
 * Authentication Transaction History table has been upgraded to support capture of entity ID and name of partners.
 * Auto-revocation has been added for perpetual VIDs when regeneration is called.
 * Audit logs for IDA events and ID Repository has been added for all failure and transactions.
-* The design for IDA has been changed to make it Monolithic. Details about the design are available [here]().
+* The design for IDA has been changed to make it Monolithic. Details about the design are available [here](https://github.com/mosip/id-authentication/blob/v1.1.0/design/authentication/Id-Authentication-Monolothic-Design.md).
     * Authentication as a separate module
     * Performance changes to IDA - Combining services for reduced network calls
     * Separate database for Authentication from the ID Repository
