@@ -37,10 +37,11 @@ MOSIP Version **1.1.0** has several enhancements. It has additional security fea
 
 ### 1. Platform 
 Includes functional requirements, process flows, architecture and high level design. 
-[**Link to documentation**](https://docs.mosip.io/platform/modules).
+
+[Link to documentation](https://docs.mosip.io/platform/modules).
 
 ### 2. APIs
-All APIs are documented [here](https://docs.mosip.io/platform/apis)
+All APIs are documented [here](https://docs.mosip.io/platform/apis).
 
 ### 3. Design 
 Low level design documents for each module are available in the respective github repos.
@@ -56,9 +57,11 @@ Low level design documents for each module are available in the respective githu
 * [Reference Implementation](https://github.com/mosip/mosip-ref-impl/tree/v1.1.0)
 * [Automation tests](https://github.com/mosip/mosip-functional-tests/tree/v1.1.0)
 
-The details related to artificatory versions is available [here](Release-Notes-1.1.0-Artifact-Version.md).
+The details related to artifactory versions is available [here](Release-Notes-1.1.0-Artifact-Version.md).
 
-__Note : Code needs to be built and deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/blob/master/deployment/sandbox-v2/README.md).
+{% hint style="info" %}
+Code needs to be built and deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/blob/master/deployment/sandbox-v2/README.md).
+{% endhint %}
 
 ## Tests 
 
