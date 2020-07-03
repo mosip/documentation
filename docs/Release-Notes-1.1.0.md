@@ -60,7 +60,7 @@ Low level design documents for each module are available in the respective githu
 The details related to artifactory versions is available [here](Release-Notes-1.1.0-Artifact-Version.md).
 
 {% hint style="info" %}
-Code needs to be built and deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/blob/master/deployment/sandbox-v2/README.md).
+Code needs to be deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/blob/master/deployment/sandbox-v2/README.md).
 {% endhint %}
 
 ## Tests 
