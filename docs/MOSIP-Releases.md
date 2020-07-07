@@ -2,7 +2,7 @@
 
 ### Version: 1.1.0 (Stable)
 - Name: Real Biometrics
-- Date: July 30, 2020
+- Date: July 03, 2020
 - [Release Notes](Release-Notes-1.1.0.md)
 
 ## Older Releases
