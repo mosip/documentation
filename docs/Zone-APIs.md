@@ -1,21 +1,47 @@
 This section details about the service APIs for the Zones
 
 # Zone Master API
+* [GET /zones/authorize/{rid}](#get-zones-authorize-rid)
+* [GET /zones/hierarchy/{langCode}](#get-zones-hierarchy-langcode)
+* [GET /zones/leafs/{langCode}](#get-zones-leafs-langcode)
+* [GET /zones/zonename](#get-zones-zonename)
 
-* [GET /zones/hierarchy/{langCode}](#get-zoneshierarchylangcode)
-* [GET /zones/leafs/{langCode}](#get-zonesleafslangcode)
-* [GET /zones/zonename](#get-zoneszonename)
+## GET /zones/authorize/{rid}
+This service will verify if the logged-in user is authorized to view the RID history.
 
+### Resource URL
+`GET /zones/authorize/{rid}`
+
+### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+rid | yes | rid for which user wants to know the history ||
+
+### Example Response
+```JSON
+{
+  "id": null,
+  "version": null,
+  "responsetime": "2020-07-08T06:08:26.654Z",
+  "metadata": null,
+  "response": true,
+  "errors": null
+}
+```
 
 ## GET /zones/hierarchy/{langCode}
-
 This service will fetch the logged-in user zone hierarchy. 
 
 ### Resource URL
-### `GET /zones/hierarchy/{langCode}`
+`GET /zones/hierarchy/{langCode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -25,7 +51,6 @@ Requires Authentication | Yes
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 langCode | yes | user language code ||
-
 
 ### Example Response
 ```JSON
@@ -55,35 +80,14 @@ langCode | yes | user language code ||
   "errors": []
 }
 ```
-### Response codes
-
-200
-
-Description: Success
-
-404
-
-Description: Not Found
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
------
 
 ## GET /zones/leafs/{langCode}
-
 This service will fetch the logged-in user zone hierarchy leaf zones. 
 
 ### Resource URL
-### `GET /zones/leafs/{langCode}`
+`GET /zones/leafs/{langCode}`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -93,7 +97,6 @@ Requires Authentication | Yes
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 langCode | yes | user language code ||
-
 
 ### Example Response
 ```JSON
@@ -123,35 +126,14 @@ langCode | yes | user language code ||
   "errors": []
 }
 ```
-### Response codes
-
-200
-
-Description: Success
-
-404
-
-Description: Not Found
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
------
 
 ## GET /zones/zonename
-
 This service will fetch the logged-in user zone hierarchy leaf zones. 
 
 ### Resource URL
-### `GET /zones/zonename`
+`GET /zones/zonename`
 
 ### Resource details
-
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -162,7 +144,6 @@ Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 langCode | yes | user language code ||
 userID | yes | user id ||
-
 
 ### Example Response
 ```JSON
@@ -177,27 +158,8 @@ userID | yes | user id ||
   "errors": []
 }
 ```
-### Response codes
 
-200
-
-Description: Success
-
-404
-
-Description: Not Found
-
-401
-
-Description: Unauthorized
-
-403
-
-Description: Forbidden
-
------
-
-## Failure details
+# Failure details
 Error Code | Error Message | Error Description
 ------------|------------------------------|-------------
 KER-MSD-337 | Error occured while fetching zone | Fetch Issue
