@@ -1,7 +1,15 @@
 This page contains the details of recent documentation updates.
 
+* 3rd July 2020
+  * Release document for [Release 1.1.0](Release-Notes-1.1.0.md) was published.
+
+* 1st July 2020
+  * Multiple issues with links were fixed.
+
 * 30th June 2020
-  * [Reg proc cell based deployment architecture](Cell-Based-Deployment-Architecture.md) added.
+  * [Registration processor cell based deployment architecture](Cell-Based-Deployment-Architecture.md) added.
+  * Error Codes for [Resident Services API](Resident-Service-APIs.md) was updated.
+  * [Possible Flag](Biometric-SDK-API-Specification.md#possible-flags) section was added for [Matcher](Biometric-SDK-API-Specification.md#matcher) in [Biometric SDK Specification](Biometric-SDK-API-Specification.md).
 
 * 29th June 2020
   * [Technology Stack](Technology-Stack.md) updated.
