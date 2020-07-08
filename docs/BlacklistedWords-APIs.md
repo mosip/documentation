@@ -324,7 +324,7 @@ word | Yes | blacklisted word name ||
 **Response code: 200 Ok**
 
 ## POST /blacklistedwords/words
-This service will validate list of words if they are blacklisted or not. 
+This service will return "Invalid" when the word is a blacklisted word and retrun "valid" when the word is not a blacklist word.  
 
 ### Resource URL
 `POST /blacklistedwords/words`
