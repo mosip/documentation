@@ -389,7 +389,6 @@ ADM-DPM-019 | Error occurred while registering a Foundational Trust Provider | I
 * [DELETE /deregister/{deviceCode}](#delete-deregister-deviceCode)
 * [PUT /registereddevices/status](#put-registereddevices-status)
 * [POST/deviceprovidermanagement/validate](#post-deviceprovidermanagement-validate)
-* [POST/deviceprovidermanagement/validate/history](#post-deviceprovidermanagement-validate-history)
 
 ## POST /registereddevices
 This service registers a device in MOSIP as well as creates a history record.
@@ -761,6 +760,11 @@ Name | Required | Description | Default Value | Example
 deviceCode | Yes | Device ID of the device | | 
 digitalId | Yes | JSON object consists of device details | | 
 deviceServiceVersion | Yes | Device service version of the MDS | | 
+timeStamp | No | Timestamp in local data time format of history table | | 
+purpose | No | This is the purpose of the device | NA | AUTH or REGISTRATION
+
+If timestamp is provided, then validate device using history data
+If purpose is provided, then validate purpose of device
 
 ### Request
 ```JSON
@@ -770,6 +774,8 @@ deviceServiceVersion | Yes | Device service version of the MDS | |
   "request": {
     "deviceCode": "70959dd5-e45f-438a-9ff8-9b263908e572",
     "deviceServiceVersion": "TestSwVersion1",
+    "timestamp": "2020-02-16T07:20:42.195Z"
+    "purpose": "AUTH"
     "digitalId": {
       "serialNo": "1801160992",
       "make": "MC01A",
@@ -839,106 +845,6 @@ ADM-DPM-006 | MDS is marked Inactive | If the MDS exist and is in Inactive State
 ADM-DPM-007 | Software version does not match against the Service ID | If the Software version does not match the Service ID received
 ADM-DPM-008 | Device Provider ID does not match against the Service ID | If the Device provider ID does not match the Service ID received
 ADM-DPM-009 | Error occurred while checking a Device Details | If there an error from DB while checking device details
-
-
-## POST /deviceprovidermanagement/validate/history
-This service will validate the device history details from the list of registered devices.
-
-### Resource URL
-`https://{base_url}/masterdata/deviceprovidermanagement/validate/history`
-
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
-
-### Request Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-deviceCode | Yes | Device ID of the device | | 
-digitalId | Yes | JSON object of the device details | | 
-deviceServiceVersion | Yes | Device service version of the MDS | |
-timeStamp | Yes | Timestamp in local data time format of history table | | 
-
-### Request
-```JSON
-{
-  "id": "io.mosip.masterdata.device.validate.history",
-  "metadata": null,
-  "request": {
-    "deviceCode": "70959dd5-e45f-438a-9ff8-9b263908e572",
-    "deviceServiceVersion": "TestSwVersion1",
-    "timestamp": "2020-02-16T07:20:42.195Z"
-    "digitalId": {
-      "serialNo": "1801160992",
-      "make": "MC01A",
-      "model": "TVSFD",
-      "type": "Fingerprint",
-      "deviceSubType": "Single",
-      "dp": "Test Vendor",
-      "dpId": "0e90bb45-cc9b-4521-9644-72755f6aa1e9",
-      "dateTime": "2020-02-16T07:20:42.195Z"
-    }
-  },
-  "version": "1.0",
-  "requesttime": "2019-08-21T16:34:22.890Z"
-}
-```
-
-### Response
-
-#### Success Response
-```JSON
-{
-  "id": "io.mosip.masterdata.device.validate.history",
-  "version": "1.0",
-  "metadata": {},
-  "responsetime": "2020-02-16T07:20:42.195Z",
-  "errors": null,
-  "response": [
-    {
-      "status": "Valid",
-      "message": "Device details history validated successfully"
-    }
-  ],
-}
-```
-**Response code: 200**
-
-#### Failure Response:
-```JSON
-{
-  "id": "io.mosip.masterdata.device.validate.history",
-  "version": "1.0",
-  "metadata": {},
-  "responsetime": "2020-02-16T07:20:42.195Z",
-  "errors": [
-    {
-      "errorCode": "KER-MSD-500",
-      "message": "Internal Server Error"
-    }
-  ],
- "response": null
-}
-```
-**Response code: 200**
-
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-ADM-DPM-001 |Device does not exist|If the Device does not exist 
-ADM-DPM-002 |Device is Revoked/Retired|If the Device exist and is in Revoked/Retired
-ADM-DPM-003 |Device Provider does not exist|If the Device Provider does not exist
-ADM-DPM-004 |Device Provider is marked Inactive|If the Device Provider exist and is in Inactive State
-ADM-DPM-005 |MDS does not exist|If the MDS does not exist
-ADM-DPM-006 |MDS is marked Inactive|If the MDS exist and is in Inactive State
-ADM-DPM-007 |Software version does not match against the Service ID|If the Software version does not match the Service ID received
-ADM-DPM-008 |Device Provider ID does not match against the Service ID|If the Device provider ID does not match the Service ID received
-ADM-DPM-009 |Error occurred while checking a Device Details| If there an error from DB while checking device details
 
 
 # MDS API
