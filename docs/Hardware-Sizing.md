@@ -36,8 +36,11 @@ We estimate 30% (approx) additional compute capacitiy for administration, monito
 ### Storage
 Storage estimates for production deployment:
 
+#### Database and HDFS/CEPH 
 [MOSIP Storage Requirement Calculator XLS]( https://github.com/mosip/documentation/blob/master/docs/_sources/hardware_sizing/MOSIP_Storage_Estimate-v1.1.xlsx)
 
+#### Appication and system logs
+TBD
 
 ## Dev, QA, Staging, Preprod
 Additional compute and storage may be needed for the following setups.
