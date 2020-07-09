@@ -1049,7 +1049,7 @@ The MOSIP server would provide the following device de-registration API which is
 }
 ```
 
-The entire request is sent as a JWT format. So the final request will look like:
+The device data in request is sent as a JWT format. So the final request will look like:
 ```
 "request": {
   "device" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
@@ -1066,14 +1066,14 @@ The entire request is sent as a JWT format. So the final request will look like:
     "status": "Success",
     "deviceCode": "<device code>",
     "env": "<environment>",
-    "timestamp": "timestamp in ISO format",
-    "error": [
-	  {
-        "errorCode" : "<error code if de-registration fails>",
-        "message" : "<human readable description of the error code>"
-      }
-	
-  }       
+    "timestamp": "timestamp in ISO format"
+  },
+  "error": [
+	{
+      "errorCode" : "<error code if de-registration fails>",
+      "message" : "<human readable description of the error code>"
+    }
+  ]       
 }
 ```
 
