@@ -74,3 +74,19 @@ MOSIP 1.1 has added APIs for partner management.
 
 ### Next Release
 Our next release 1.2 will be tentatively available in October 2020. The features for the same will be published at [Release 1.2.0 Features](https://docs.mosip.io/platform/mosip-releases/release-notes-1.1.0/release-notes-1.2.0-features) soon.
+
+---
+
+## Contribute
+You can contribute to MOSIP! 
+
+We want to engage constructively with the community.  If you find a **vulnerability** or issue, please file a bug with the respective repository.  We welcome pull requests with fixes too.  Please see the [Contributor Guide](https://docs.mosip.io/platform/contribute/contributor-guide) on how to file bugs, contribute code, and more.
+
+## License
+This project is licensed under the terms of [Mozilla Public License 2.0](https://github.com/mosip/commons/blob/master/LICENSE)
+
+## Communication
+Join the [developer mailing list](https://groups.io/g/mosip-dev)
+
+
+You may also be interested in joining our community room on Gitter via [![Gitter](https://badges.gitter.im/mosip-community/community.svg)](https://gitter.im/mosip-community/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)  where you could get some great community support
