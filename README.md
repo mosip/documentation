@@ -1,7 +1,7 @@
 # MOSIP
 <div align="center">
     <a href="https://mosip.io">
-        <img src="https://github.com/mosip/documentation/blob/master/docs/_images/mosip_logo.png" width="800px" />
+        <img src="https://github.com/mosip/documentation/blob/master/docs/_images/mosip_logo.png"/>
     </a>
 </div>
 
