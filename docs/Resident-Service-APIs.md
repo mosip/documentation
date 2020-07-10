@@ -4,8 +4,8 @@ This section details out all Resident Service REST APIs
 * [Service Request Status Check API](#post-resident-v-1-rid-check-status)
 * [e-UIN API](#post-resident-v-1-req-euin)
 * [Re-print UIN API](#post-resident-v-1-req-print-uin)
-* [Retrieve Lost UIN API](#post-resident-v-1-req-uin)
-* [Retrieve Lost RID API](#post-resident-v-1-req-rid)
+* [Retrieve Lost UIN API - yet to be developed](#post-resident-v-1-req-uin)
+* [Retrieve Lost RID API - yet to be developed](#post-resident-v-1-req-rid)
 * [UIN Update API](#post-resident-v-1-req-update-uin)
 * [VID Generate API](#post-resident-v-1-vid)
 * [VID Revoke API](#patch-resident-v-1-vid-vid)
@@ -14,6 +14,8 @@ This section details out all Resident Service REST APIs
 * [Authentication History API](#post-resident-v-1-req-auth-history)
 
 # Resident Services APIs
+
+## POST /resident/v1/rid/check-status
 
 ### Resource URL
 `https://mosip.io/resident/v1/rid/check-status`
@@ -305,6 +307,10 @@ RES-SER-SYS-003|JSON Processing Exception occured|
 ## POST /resident/v1/req/uin
 This request will authenticate an Individual based on provided OTP and respond with UIN. Notification will be sent to phone/email.
 
+{% hint style="warning" %}
+This API is yet to be developed.
+{% endhint %}
+
 ### Resource URL
 `https://mosip.io/resident/v1/req/uin`
 
@@ -387,7 +393,7 @@ request: demographics|N| Demographic data of an Individual| |
 ```
 **Status Code : 200 (OK)**
 
-#### Failed Response 
+#### Failed Response
 ```JSON
 {
   "id": "mosip.resident.lostuin",
@@ -427,6 +433,10 @@ RES-SER-SYS-003|JSON Processing Exception occured|
 
 ## POST /resident/v1/req/rid
 This request will authenticate an Individual based on provided OTP and respond with RID. Notification will be sent to phone/email.
+
+{% hint style="warning" %}
+This API is yet to be developed.
+{% endhint %}
 
 ### Resource URL
 `https://mosip.io/resident/v1/req/rid`

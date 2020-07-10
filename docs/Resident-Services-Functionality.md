@@ -34,12 +34,11 @@ The Resident Service module will provide a host of services to an individual whi
 All these features are detailed in the following features section.
   
 # 2. Features [**[↑]**](#table-of-contents)
-## 2.1 Track status of UIN Generation by providing RID (Request ID for New Registration) [**[↑]**](#table-of-contents)
 
+## 2.1 Track status of UIN Generation by providing RID (Request ID for New Registration) [**[↑]**](#table-of-contents)
 This feature will allow an individual to track status of his/her UIN generation. The individual needs to provide the RID (Request ID received during UIN registration) as input. The system will validate this RID. On successful validation, the system will send the status of UIN generation to the individual's registered mobile number and/or email ID. The system will also send a notification message to individual’s mobile number and/or email ID after a successful transaction or appropriate error message if the transaction was not successful.
 
 ## 2.2 Download e-UIN [**[↑]**](#table-of-contents)
-
 This feature will allow an individual to download his/her electronic UIN. The individual needs to provide the UIN/VID, full name, postal code, and security code as input. The system will validate the provided data, trigger an OTP to individual's registered mobile number and/or email ID, validate the OTP and then authenticate the individual. On successful authentication, system will send a link to the individual's registered mobile number and/or email ID to download his/her password-protected e-UIN in pdf format. The system will also trigger a notification message  to the individual's registered mobile number and/or email id after the transaction or appropriate error message if the transaction was not successful.
 
 ## 2.3 Retrieve Lost RID (Request ID for New Registration) [**[↑]**](#table-of-contents)
@@ -55,21 +54,18 @@ This feature will allow an individual to raise reprint request of his/her UIN. T
 This feature will allow an individual to initiate update of his/her demographic details. Currently, an individual can initiate an update of the address associated to the provided UIN/VID. However, this service can be extended to further update any other aspect of the demographic data (EG: Mobile, Email, etc). The individual needs to provide the UIN/VID as input. The system will first validate the individual's UIN/VID, trigger an OTP to individual's registered mobile number and/or email ID, validate the OTP and then authenticate the individual. On successful authentication, the system will generate and send a Request ID (RID) for UIN update to individual's registered mobile number and/or email ID. The system will also trigger a notification message to the registered mobile number and/or email ID after a successful transaction or appropriate error message if the transaction was not successful.
 
 ## 2.7 Track Status of UIN Update [**[↑]**](#table-of-contents)
-
 This feature will allow an individual to track status of his/her UIN update. The individual needs to provide the RID ( Request ID for UIN Update) as input. The system will first validate the RID, trigger an OTP to individual's registered mobile number and/or email ID, validate the OTP and then authenticate the individual. On successful authentication, the system will send the status of UIN Update to individual's registered mobile number and/or email ID. The system will also send a notification message to individual’s mobile number and/or email ID after a successful transaction or appropriate error message if the transaction was not successful.
 
 ## 2.8 View History of Authentication Requests [**[↑]**](#table-of-contents)
 This feature will allow an individual to view history of the authentication request(s) associated to his/her UIN. The individual needs to provide the UIN/VID as input. The system will first validate the UIN/VID, trigger an OTP to individual's registered mobile number and/or email ID, validate the OTP and then authenticate the individual. On successful authentication, the system will send unarchived Authentication History data of the individual associated to the provided UIN and all its associated VIDs. The system will also send a notification message to individual’s mobile number and/or email ID after a successful transaction or appropriate error message if the transaction was not successful.
 
 ## 2.9 Lock/Unlock UIN [**[↑]**](#table-of-contents)
-
 An individual can decide to lock specific Authentication Types (Demographic/Biometrics) of his/her UIN/VID for security reasons. It can be for one or more Authentication types. The locked Authentication Type(s) cannot be used for any future authentication request. Similarly at any point he/she may also request to unlock one or more locked Authentication types which was locked earlier.
 
 ### 2.9.1 Lock the UIN
 This feature will allow an individual to lock the requested Authentication Type (Demographic, Biometrics (FP/Iris/Face/All)) associated with his/her UIN/VID. The individual needs to provide the UIN/VID as input. The system will first validate the individual's UIN/VID, trigger an OTP to individual's registered mobile number and/or email ID, validate the OTP and then authenticate the individual. On successful authentication, the system will first send the details of all Authentication Types to the individual. The individual will then select which Authentication Type(s) will need to be locked. The system takes the request, locks the specified Authentication Type(s) and then notifies the individual. The system will also send a notification message to individual’s mobile number and/or email ID after a successful transaction or appropriate error message if the transaction was not successful.
 
 ### 2.9.2 Unlock the UIN
-
 This feature will allow an individual to unlock requested Authentication Types (Demographic, Biometrics (FP/Iris/Face/All)) which is/are in locked status associated with his/her UIN/VID. Once unlocked, the individual can again use these Authentication Type(s) for any future authentication purpose. The individual needs to provide the UIN/VID as input. The system will first validate the individual's UIN/VID, trigger an OTP to individual's registered mobile number and/or email ID, validate the OTP and then authenticate the individual. On successful authentication, the system will first send the details of all Authentication Type(s) to the individual which is/are in locked status. The individual will then select which Authentication Type(s) need to be unlocked. The system takes the request and accordingly unlocks the Authentication Type(s) and notifies the individual. The system will also send a notification message to individual’s mobile number and/or email ID after a successful transaction or appropriate error message if the transaction was not successful.
 
 ## 2.10. VID Service [**[↑]**](#table-of-contents)
@@ -82,11 +78,9 @@ VID services comprise of the below.
 An individual can request to generate a Virtual ID via Resident Service by providing his/her UIN. The system will first validate the individual's UIN, trigger an OTP to individual's registered mobile number and/or email ID, validate the OTP and then authenticate the individual. On successful authentication the VID is generated based on the VID policy of the respective Country. The system will also send a notification message to individual’s mobile number and/or email ID after a successful transaction or appropriate error message if the transaction was not successful.
 
 ### 2.10.2 Maintain the status of a VID [**[↑]**](#table-of-contents)
-
 This feature allows the system to maintain the status of all VIDs from the perspective of Time Validity, Transactions, and VID Revocation. The feature will be used by system's authentication module (called IDA - ID Authentication) whenever a VID is used for an authentication transaction (VID status will change to ‘USED’). Also when Resident Services is used for VID Revoke feature the status of VID changes to ‘REVOKED'. 
 
 ### 2.10.3 Revoke a VID [**[↑]**](#table-of-contents)
-
 To prevent misuse of VID, an individual can request to revoke his/her VID using Resident Service if the individual feels his/her VID has been compromised. The individual provides the VID as input. The system will then validate the individual's VID, trigger an OTP to individual's registered mobile number and/or email ID, validate the OTP and then authenticate the individual. On successful authentication, the system revokes the provided VID. Based on the VID policy of the Country a new VID will be generated during revocation and provided to the individual on the registered mobile number and/or email ID. If validation fails, the system triggers the appropriate error message.
 
 ### 2.10.4 Auto-restore a VID on Revocation and with Auto-restore Policy [**[↑]**](#table-of-contents)  
@@ -95,15 +89,10 @@ This feature allows for a VID to be auto regenerated and given to an individual 
 [Refer to Wiki for more details on **VID Services API**](ID-Repository-API.md#vid-services-private).
 
 ### List of Configurable Parameters and Processes [**[↑]**](#table-of-contents)
-
-1. Configurable Parameters
-* (Work in Progress) 
-2. Configurable Processes 
-* (Work in Progress) 
+All the configurations related to resident services are available [here](https://github.com/mosip/mosip-config/blob/master/config-templates/resident-env.properties)
 
 ### Resident Services API [**[↑]**](#table-of-contents)
 [Link to Resident Services API](Resident-Service-APIs.md)
-
 
 ### Process View [**[↑]**](#table-of-contents)
 [Link to Resident Services Process Flow](Resident-Services.md#process-flow)
