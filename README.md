@@ -1,5 +1,9 @@
 # MOSIP
-![](https://github.com/mosip/documentation/blob/master/docs/_images/mosip_logo.png)
+<div align="center">
+    <a href="https://mosip.io">
+        <img src="https://github.com/mosip/documentation/blob/master/docs/_images/mosip_logo.png" width="800px" />
+    </a>
+</div>
 
 ## Introduction
 The Modular Open Source Identity Platform (MOSIP) helps Governments and other user organizations implement a digital, foundational identity system. Nations can use MOSIP freely as a core to build their own identity systems. Being modular in its architecture, MOSIP provides flexibility to countries in how they implement and configure their systems, and helps avoid vendor lock-in.
@@ -73,7 +77,7 @@ MOSIP 1.1 has added APIs for partner management.
 (For more details on release 1.1 and older releases you can look at our [release documentation](https://docs.mosip.io/platform/mosip-releases))
 
 ### Next Release
-Our next release 1.2 will be tentatively available in October 2020. The features for the same will be published at [Release 1.2.0 Features](https://docs.mosip.io/platform/mosip-releases/release-notes-1.1.0/release-notes-1.2.0-features) soon.
+Our next release 1.2 is a long term support release which will be tentatively available in Q4 of 2020. The features for the same will be published at [Release 1.2.0 Features](https://docs.mosip.io/platform/mosip-releases/release-notes-1.1.0/release-notes-1.2.0-features) soon.
 
 ---
 
