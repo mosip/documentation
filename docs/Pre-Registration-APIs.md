@@ -1,38 +1,29 @@
 This section details about the service API in the Pre-Registration modules.
 
 * [Login Service](#login-service-public)
-
 * [Demographic Service](#demographic-service-public)
-
 * [Document Service](#document-service-public)
-
 * [DataSync Service](#datasync-service-external)
-
 * [Booking Service](#booking-service-public)
-
 * [BatchJob Service](#batchjob-service-private)
-
 * [Generate QR code service](#generate-qr-code-service-public)
-
 * [Notification Service](#notification-service-public)
-
 * [Transliteration Service](#transliteration-service-public)
-
 * [Captcha Service](#captcha-service-public)
 
-**Note**: id, version and requesttime in request and responsetime in response bodies are optional fields and not consumed by pre-registration application unless defined. Though we need to pass these as part of the request, it should not be tested.
-Few of the error messages are intended for API consumer, who are mostly SI and developers. User friendly messages need to be mapped in the UI reference implementation. 
+{% hint style="info" %}
+id, version and requesttime in request and responsetime in response bodies are optional fields and not consumed by pre-registration application unless defined. Though we need to pass these as part of the request, it should not be tested.
+Few of the error messages are intended for API consumer, who are mostly SI and developers. User friendly messages need to be mapped in the UI reference implementation.
+{% endhint %}
 
-API testing Prerequisites
-~~~
-1. Generate a Authorization Token by using following Kernel AuthManager APIs
-     a. To send an OTP [/authmanager/sendOTPUsingPOST](https://github.com/mosip/mosip/wiki/AuthN-&-AuthZ-APIs#post-v10authenticatesendotp)
-     b. To validate the OTP [/authmanager/userIdOTPUsingPOST](https://github.com/mosip/mosip/wiki/AuthN-&-AuthZ-APIs#post-v10authenticateuseridotp)
+{% hint style="info" %}
+**API testing Prerequisites**
+* Generate a Authorization Token by using following Kernel AuthManager APIs
+	* To send an OTP [/authmanager/sendOTPUsingPOST](AuthN-&-AuthZ-APIs.md#post-v10authenticatesendotp)
+	* To validate the OTP [/authmanager/userIdOTPUsingPOST](AuthN-&-AuthZ-APIs.md#post-v10authenticateuseridotp)
    Once OTP get validate successfully you will get the Authorization token. 
-2. Use this Authorization token in the every request header of all pre-registration APIs.
-~~~
-***
-
+* Use this Authorization token in the every request header of all pre-registration APIs.
+{% endhint %}
 
 # Login Service (Public)
 This service details used by Pre-Registration portal to authenticate user by sending OTP to the user, validating with userid and OTP.
@@ -43,19 +34,19 @@ This service details used by Pre-Registration portal to authenticate user by sen
 * [GET /login/config](#get-loginconfig)
 * [GET /login/refreshconfig](#get-loginrefreshconfig)
 
-### POST /login/sendOtp
+## POST /login/sendOtp
 This request will send the OTP to the requested user in the preferred channel(sms/email)
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/login/sendOtp</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/login/sendOtp`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | No
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 id |Yes|id |mosip.pre-registration.login.sendotp
@@ -64,10 +55,9 @@ requesttime |Yes|Time of the request|2019-01-16T05:23:08.019Z
 request |Yes|Request for the application|
 request.userid |Yes|user id of the applicant(mobile number/email address)|8907654778
 
+### For SMS
 
-#### Request:
-###### For SMS:
-
+#### Request for SMS
 ```JSON
 {
   "id": "mosip.pre-registration.login.sendotp",
@@ -78,10 +68,14 @@ request.userid |Yes|user id of the applicant(mobile number/email address)|890765
   }
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: OTP sent successfully to specified channel
+
+#### Responses for SMS
+
+##### Success Response
+**Status code**: 200
+
+**Description**: OTP sent successfully to specified channel
+
 ```JSON
 {
   "id": "mosip.pre-registration.login.sendotp",
@@ -94,22 +88,28 @@ request.userid |Yes|user id of the applicant(mobile number/email address)|890765
   "errors": null
 }
 ```
-###### For Email:
 
+### For Email
+
+#### Request for Email
 ```JSON
 {
   "id": "mosip.pre-registration.login.sendotp",
   "version": "1.0",
   "requesttime": "2019-05-14T07:24:47.605Z",
   "request": {
-    "userId": "tapaswini.behera3@mindtree.com"
+	"userId": "info@mosip.io"
   }
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: OTP sent successfully to specified channel
+
+#### Responses for Email
+
+##### Success Response
+**Status code**: 200
+
+**Description**: OTP sent successfully to specified channel
+
 ```JSON
 {
   "id": "mosip.pre-registration.login.sendotp",
@@ -123,9 +123,11 @@ request.userid |Yes|user id of the applicant(mobile number/email address)|890765
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: Invalid parameters
+##### Failure Response
+**Status code**: 200
+
+**Description**: Invalid parameters
+
 ```JSON
 {
   "id": "mosip.pre-registration.login.sendotp",
@@ -140,7 +142,8 @@ request.userid |Yes|user id of the applicant(mobile number/email address)|890765
   ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_LGN_008|Invalid Request userId received|if requested userId is empty or invalid
@@ -149,19 +152,19 @@ PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
 PRG_PAM_CORE_003|Invalid request time |Empty Request time
 PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
 
-### POST /login/validateOtp
+## POST /login/validateOtp
 This request will validate the OTP with respect to userid and provide the authorize token in the browser cookies.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/login/validateOtp</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/login/validateOtp`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | No
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 id |Yes|id |mosip.pre-registration.login.useridotp
@@ -171,7 +174,7 @@ request |Yes|Request for the application|
 request.userid |Yes|user id of the applicant (mobile number/email address)|8907654778
 request.OTP|Yes| received OTP  |345674
 
-#### Request:
+### Request
 ```JSON
 {
   "id": "mosip.pre-registration.login.useridotp",
@@ -183,10 +186,13 @@ request.OTP|Yes| received OTP  |345674
   }
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: sms sent successfully
+
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: sms sent successfully
 ```JSON
 {
   "id": "mosip.pre-registration.login.useridotp",
@@ -199,9 +205,11 @@ request.OTP|Yes| received OTP  |345674
   "errors": null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: Invalid parameters
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: Invalid parameters
 ```JSON
 {
   "id": "mosip.pre-registration.login.useridotp",
@@ -216,7 +224,8 @@ request.OTP|Yes| received OTP  |345674
   ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 KER-ATH-003|User Detail doesn't exist.|If userId is empty or invalid
@@ -229,22 +238,25 @@ PRG_CORE_REQ_013|Request date should be current date|If request date is not curr
 PRG_PAM_LGN_013|VALIDATION_UNSUCCESSFUL|If incorrect otp is entered
 PRG_PAM_LGN_014|Token is not present in the header |When token does not come from kernel service in the header
 
-### POST /login/invalidateToken
+## POST /login/invalidateToken
 This request will invalidate the authorization token when force logout is done.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/login/invalidateToken</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/login/invalidateToken`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Token invalidated successfully
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Token invalidated successfully
+
 ```JSON
 {
   "id": "mosip.pre-registration.login.invalidate",
@@ -257,9 +269,12 @@ Requires Authentication | Yes
   "errors": null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: Token is not present in cookies
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: Token is not present in cookies
+
 ```JSON
 {
   "id": "mosip.pre-registration.login.invalidate",
@@ -274,30 +289,35 @@ Requires Authentication | Yes
   ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
-KER-ATH-008|Token is not present in datastore,Please try with new token|If token is not present in datastore
+KER-ATH-008|Token is not present in datastore, Please try with new token|If token is not present in datastore
 KER-ATH-006|Cookies are empty|When no Cookie is passed in the header
 
-### GET /login/config
+## GET /login/config
 This request will load the configuration parameters while loading the pre-registration portal page.
 
-##### Note: All the values are retrieving from the pre-registration config properties file. If any value get changed in the config properties file it will get reflected in the response of this API. Following mentioned response is the sample of that.
+{% hint style="info" %}
+All the values are retrieving from the pre-registration config properties file. If any value get changed in the config properties file it will get reflected in the response of this API. Following mentioned response is the sample of that.
+{% endhint %}
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/login/config</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/login/config`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | No
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Config parameter retrieved sucessfully 
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Config parameter retrieved sucessfully 
 ```JSON
 {
   "id": "mosip.pre-registration.login.config",
@@ -351,29 +371,35 @@ Requires Authentication | No
   "errors": null
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_AUTH_012|	Config file not found in the config server|	If config file is missing in the config server
 
-### GET /login/refreshconfig
+## GET /login/refreshconfig
 This request will reload the configuration parameters.
 
-##### Note: When ever there is change in the property file, then this rest end point should be called manually,so that the property get reflected. 
+{% hint style="info" %}
+When ever there is change in the property file, then this rest end point should be called manually,so that the property get reflected.
+{% endhint %}
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/login/refreshconfig</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/login/refreshconfig`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | No
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Config parameter retrieved sucessfully 
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Config parameter retrieved sucessfully 
+
 ```JSON
 {
   "id": "mosip.pre-registration.login.config",
@@ -383,14 +409,14 @@ Requires Authentication | No
   "errors": null
 } 
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_AUTH_012|	Config file not found in the config server|	If config file is missing in the config server
 
 # Demographic Service (public)
 This service details used by Pre-Registration portal to maintain the demographic data by providing his/her basic details.
-
 * [POST /applications](#post-applications)
 * [PUT /applications/{preRegistrationId}](#put-applicationspreRegistrationid)
 * [GET /applications/{preRegistrationId}](#get-applicationspreRegistrationid)
@@ -398,19 +424,19 @@ This service details used by Pre-Registration portal to maintain the demographic
 * [GET /applications](#get-applications)
 * [DELETE /applications/{preRegistrationId}](#delete-applicationspreRegistrationid)
 
-### POST /applications
+## POST /applications
 This request is used to create new pre-registration with demographic details, which generates pre-registration id and associates it with demographic details.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/applications</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/applications`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Body Parameters
+### Request Body Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 id |Yes|Id of the application|mosip.pre-registration.demographic.create
@@ -437,7 +463,7 @@ request.demographicDetails.identity.residenceStatus|Yes|residence status of the 
 request.demographicDetails.identity.zone |Yes|zone of the applicant| value will be derived from the domain metadata
 request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentityNumber Number of the applicant|
 
-#### Request:
+### Request
 ```JSON
 {
   "id": "mosip.pre-registration.demographic.create",
@@ -558,10 +584,14 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
   "requesttime": "2019-08-19T11:18:48.393Z"
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Pre-Registration successfully Created
+
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Pre-Registration successfully Created
+
 ```JSON
 {
   "id": "mosip.pre-registration.demographic.create",
@@ -686,24 +716,28 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
   "errors": null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: invalid or empty request id
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: invalid or empty request id
+
 ```JSON
 {
-    "id": "mosip-registration.demographic.create",
-    "version": "1.0",
-    "responsetime": "2019-05-20T05:52:20.435Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_CORE_001",
-            "message": "Request id is invalid"
-        }
-    ]
+  "id": "mosip-registration.demographic.create",
+  "version": "1.0",
+  "responsetime": "2019-05-20T05:52:20.435Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_CORE_001",
+      "message": "Request id is invalid"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
@@ -748,24 +782,24 @@ KER-IOV-004|Invalid input parameter - identity/zone/{*}/value|If value is empty 
 KER-IOV-004|Invalid input parameter - identity/postalCode|If postalCode is empty or invalid 
 KER-IOV-004|Invalid input parameter - identity/referenceIdentityNumber|If referenceIdentityNumber is empty or invalid
 
-### PUT /applications/{preRegistrationId}
+## PUT /applications/{preRegistrationId}
 This request is used to update pre-registration's demographic details by providing pre-registration id in the path parameter and updated demographic details in request body.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/applications/{preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/applications/{preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 preRegistrationId |Yes|pre-registration id of the application|64269837502851
 
-#### Request Body Parameters
+### Request Body Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 id |Yes|Id of the application|mosip.pre-registration.demographic.create
@@ -792,7 +826,7 @@ request.demographicDetails.identity.residenceStatus|Yes|residence status of the 
 request.demographicDetails.identity.zone |Yes|zone of the applicant| value will be derived from the domain metadata
 request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentityNumber Number of the applicant|
 
-#### Request:
+### Request
 ```JSON
 {
   "id": "mosip.pre-registration.demographic.update",
@@ -913,10 +947,13 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
   "requesttime": "2019-08-19T11:18:48.393Z"
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Pre-Registration demographic details successfully updated
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Pre-Registration demographic details successfully updated
+
 ```JSON
 {
   "id": "mosip.pre-registration.demographic.update",
@@ -1041,24 +1078,28 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
   "errors": null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: Invalid preregistration id(non-empty) or data is not found for that preregistration id.
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: Invalid preregistration id(non-empty) or data is not found for that preregistration id.
+
 ```JSON
 {
-    "id": "mosip.pre-registration.demographic.update",
-    "version": "1.0",
-    "responsetime": "2019-05-20T06:31:35.160Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_APP_005",
-            "message": "No data found for the requested pre-registration id"
-        }
-    ]
+  "id": "mosip.pre-registration.demographic.update",
+  "version": "1.0",
+  "responsetime": "2019-05-20T06:31:35.160Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_APP_005",
+      "message": "No data found for the requested pre-registration id"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
@@ -1102,173 +1143,179 @@ KER-IOV-004|Invalid input parameter - identity/zone/{*}/value|If value is empty 
 KER-IOV-004|Invalid input parameter - identity/postalCode|If postalCode is empty or invalid 
 KER-IOV-004|Invalid input parameter - identity/referenceIdentityNumber|If referenceIdentityNumber is empty or invalid
 
-### GET /applications/{preRegistrationId}
+## GET /applications/{preRegistrationId}
 This request is used to retrieve Pre-Registration demographic data by pre-Registration id provided in request path parameter.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/applications/{preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/applications/{preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 preRegistrationId |Yes|Id of the application|32042841521591
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Demographic data successfully retrieved
+### Responses
+
+#### Success Response:
+**Status code**: 200
+
+**Description**: Demographic data successfully retrieved
+
 ```JSON
 {
-    "id": "mosip.pre-registration.demographic.retrieve.details",
-    "version": "1.0",
-    "responsetime": "2019-05-20T06:33:08.516Z",
-    "response": {
-        "preRegistrationId": "32042841521591",
-        "createdBy": "8754462073",
-        "createdDateTime": "2019-05-20T06:25:00.262Z",
-        "updatedBy": "8754462073",
-        "updatedDateTime": "2019-05-20T06:30:37.900Z",
-        "statusCode": "Pending_Appointment",
-        "langCode": "fra",
-        "demographicDetails": {
-            "identity": {
-                "referenceIdentityNumber": "9182345678456",
-                "gender": [
-                    {
-                        "language": "fra",
-                        "value": "MLE"
-                    },
-                    {
-                        "language": "ara",
-                        "value": "MLE"
-                    }
-                ],
-                "city": [
-                    {
-                        "language": "fra",
-                        "value": "BNMR"
-                    },
-                    {
-                        "language": "ara",
-                        "value": "BNMR"
-                    }
-                ],
-                "postalCode": "56059",
-                "fullName": [
-                    {
-                        "language": "fra",
-                        "value": "Rakesh P"
-                    },
-                    {
-                        "language": "ara",
-                        "value": "سهَسهَنك "
-                    }
-                ],
-                "zone": [
-                    {
-                        "language": "fra",
-                        "value": "14022"
-                    },
-                    {
-                        "language": "ara",
-                        "value": "14022"
-                    }
-                ],
-                "dateOfBirth": "1993/12/12",
-                "IDSchemaVersion": 1,
-                "province": [
-                    {
-                        "language": "fra",
-                        "value": "KTA"
-                    },
-                    {
-                        "language": "ara",
-                        "value": "KTA"
-                    }
-                ],
-                "phone": "9680958812",
-                "addressLine1": [
-                    {
-                        "language": "fra",
-                        "value": "005-DS Max Silicon"
-                    },
-                    {
-                        "language": "ara",
-                        "value": "٠٠٥-دس مَكس سِلِكُن"
-                    }
-                ],
-                "residenceStatus": [
-                    {
-                        "language": "fra",
-                        "value": "NFR"
-                    },
-                    {
-                        "language": "ara",
-                        "value": "NFR"
-                    }
-                ],
-                "addressLine2": [
-                    {
-                        "language": "fra",
-                        "value": "Global Village"
-                    },
-                    {
-                        "language": "ara",
-                        "value": "گلُبَل ڤِللَگِ"
-                    }
-                ],
-                "addressLine3": [
-                    {
-                        "language": "fra",
-                        "value": "Karnataka"
-                    },
-                    {
-                        "language": "ara",
-                        "value": "كَرنَتَكَ"
-                    }
-                ],
-                "region": [
-                    {
-                        "language": "fra",
-                        "value": "RSK"
-                    },
-                    {
-                        "language": "ara",
-                        "value": "RSK"
-                    }
-                ],
-                "email": "rak@gmail.com"
-            }
-        }
-    },
-    "errors": null
+  "id": "mosip.pre-registration.demographic.retrieve.details",
+  "version": "1.0",
+  "responsetime": "2019-05-20T06:33:08.516Z",
+  "response": {
+    "preRegistrationId": "32042841521591",
+    "createdBy": "8754462073",
+    "createdDateTime": "2019-05-20T06:25:00.262Z",
+    "updatedBy": "8754462073",
+    "updatedDateTime": "2019-05-20T06:30:37.900Z",
+    "statusCode": "Pending_Appointment",
+    "langCode": "fra",
+    "demographicDetails": {
+      "identity": {
+        "referenceIdentityNumber": "9182345678456",
+        "gender": [
+          {
+            "language": "fra",
+            "value": "MLE"
+          },
+          {
+            "language": "ara",
+            "value": "MLE"
+          }
+        ],
+        "city": [
+          {
+            "language": "fra",
+            "value": "BNMR"
+          },
+          {
+            "language": "ara",
+            "value": "BNMR"
+          }
+        ],
+        "postalCode": "56059",
+        "fullName": [
+          {
+            "language": "fra",
+            "value": "Rakesh P"
+          },
+          {
+            "language": "ara",
+            "value": "سهَسهَنك "
+          }
+        ],
+        "zone": [
+          {
+            "language": "fra",
+            "value": "14022"
+          },
+          {
+            "language": "ara",
+            "value": "14022"
+          }
+        ],
+        "dateOfBirth": "1993/12/12",
+        "IDSchemaVersion": 1,
+        "province": [
+          {
+            "language": "fra",
+            "value": "KTA"
+          },
+          {
+            "language": "ara",
+            "value": "KTA"
+          }
+        ],
+        "phone": "9680958812",
+        "addressLine1": [
+          {
+            "language": "fra",
+            "value": "005-DS Max Silicon"
+          },
+          {
+            "language": "ara",
+            "value": "٠٠٥-دس مَكس سِلِكُن"
+          }
+        ],
+        "residenceStatus": [
+          {
+            "language": "fra",
+            "value": "NFR"
+          },
+          {
+            "language": "ara",
+            "value": "NFR"
+          }
+        ],
+        "addressLine2": [
+          {
+            "language": "fra",
+            "value": "Global Village"
+          },
+          {
+            "language": "ara",
+            "value": "گلُبَل ڤِللَگِ"
+          }
+        ],
+        "addressLine3": [
+          {
+            "language": "fra",
+            "value": "Karnataka"
+          },
+          {
+            "language": "ara",
+            "value": "كَرنَتَكَ"
+          }
+        ],
+        "region": [
+          {
+            "language": "fra",
+            "value": "RSK"
+          },
+          {
+            "language": "ara",
+            "value": "RSK"
+          }
+        ],
+        "email": "rak@gmail.com"
+      }
+    }
+  },
+  "errors": null
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: No data found for the requested pre-registration id(non-empty).
+#### Failure Response
+**Status code**: '200'
+
+**Description**: No data found for the requested pre-registration id(non-empty).
+
 ```JSON
 {
-    "id": "mosip.pre-registration.demographic.retrieve.details",
-    "version": "1.0",
-    "responsetime": "2019-05-20T06:35:18.678Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_APP_005",
-            "message": "No data found for the requested pre-registration id"
-        }
-    ]
+  "id": "mosip.pre-registration.demographic.retrieve.details",
+  "version": "1.0",
+  "responsetime": "2019-05-20T06:35:18.678Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_APP_005",
+      "message": "No data found for the requested pre-registration id"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_CORE_010|hashing failed|demographic data hashing failed
@@ -1276,65 +1323,70 @@ PRG_PAM_CORE_012|decryption failes|decryption of demographic data failed
 PRG_PAM_APP_007|json parsing is failed|demographic json parsing failed
 PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
 
-### GET /applications/status/{preRegistrationId}
+## GET /applications/status/{preRegistrationId}
 This request is used to retrieve pre-registration application status by providing the pre-registration id in request path parameter.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/applications/status/{preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/applications/status/{preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameter
+### Request Path Parameter
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 preRegistrationId |Yes|Id of the application|62076019780925
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: All applications status fetched successfully
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: All applications status fetched successfully
 
 ```JSON
 {
-    "id": "mosip.pre-registration.demographic.retrieve.status",
-    "version": "1.0",
-    "responsetime": "2019-05-14T16:17:19.601Z",
-    "response": {
-        "preRegistartionId": "29810389154051",
-        "statusCode": "Pending_Appointment"
-    },
-    "errors": null
+  "id": "mosip.pre-registration.demographic.retrieve.status",
+  "version": "1.0",
+  "responsetime": "2019-05-14T16:17:19.601Z",
+  "response": {
+    "preRegistartionId": "29810389154051",
+    "statusCode": "Pending_Appointment"
+  },
+  "errors": null
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: No data found for the requested pre-registration id(non-empty).
+#### Failure Response
+**Status code**: 200
+
+**Description**: No data found for the requested pre-registration id(non-empty).
+
 ```JSON
 {
-    "id": "mosip.pre-registration.demographic.retrieve.status",
-    "version": "1.0",
-    "responsetime": "2019-05-14T16:17:34.330Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_APP_005",
-            "message": "No data found for the requested pre-registration id"
-        }
-    ]
+  "id": "mosip.pre-registration.demographic.retrieve.status",
+  "version": "1.0",
+  "responsetime": "2019-05-14T16:17:34.330Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_APP_005",
+      "message": "No data found for the requested pre-registration id"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_CORE_010|hashing failed|demographic data hashing failed
 PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
 
-### GET /applications
+## GET /applications
 This request is used to retrieve all Pre-Registration id, Full name in both language, Status Code, Document details(Only for Proof Of Address), Appointment details and Postal Code by user id from authorization token.
 
 * [Without Pagination](#without-pagination)
@@ -1344,7 +1396,7 @@ This request is used to retrieve all Pre-Registration id, Full name in both lang
 if pageIndex parameter is not passed as query param, then all the demographic data for the user will be retrieved without applying pagination mechanism.
 
 #### Resource URL
-<div>https://mosip.io/preregistration/v1/applications</div>
+`https://{base_url}/preregistration/v1/applications`
 
 #### Resource details
 Resource Details | Description
@@ -1352,92 +1404,98 @@ Resource Details | Description
 Response format | JSON
 Requires Authentication | Yes
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: All applications fetched successfully
+#### Responses
+
+##### Success Response
+**Status code**: 200
+
+**Description**: All applications fetched successfully
+
 ```JSON
 {
-    "id": "mosip.pre-registration.demographic.retrieve.basic",
-    "version": "1.0",
-    "responsetime": "2019-06-27T10:44:18.988Z",
-    "response": {
-        "basicDetails": [
+  "id": "mosip.pre-registration.demographic.retrieve.basic",
+  "version": "1.0",
+  "responsetime": "2019-06-27T10:44:18.988Z",
+  "response": {
+    "basicDetails": [
+      {
+        "preRegistrationId": "26501647251326",
+        "statusCode": "Pending_Appointment",
+        "bookingMetadata": null,
+        "demographicMetadata": {
+          "proofOfAddress": null,
+          "postalCode": "14022",
+          "fullName": [
             {
-                "preRegistrationId": "26501647251326",
-                "statusCode": "Pending_Appointment",
-                "bookingMetadata": null,
-                "demographicMetadata": {
-                    "proofOfAddress": null,
-                    "postalCode": "14022",
-                    "fullName": [
-                        {
-                            "language": "fra",
-                            "value": "jagadishwari"
-                        },
-                        {
-                            "language": "ara",
-                            "value": "جَگَدِسهوَرِ سِلڤَرَج"
-                        }
-                    ]
-                }
+              "language": "fra",
+              "value": "jagadishwari"
             },
             {
-                "preRegistrationId": "31601973604129",
-                "statusCode": "Booked",
-                "bookingMetadata": {
-                    "registration_center_id": "10003",
-                    "appointment_date": "2019-07-01",
-                    "time_slot_from": "14:15",
-                    "time_slot_to": "14:30"
-                },
-                "demographicMetadata": {
-                    "proofOfAddress": {
-                        "docCatCode": "POA",
-                        "docTypCode": "RNC",
-                        "docName": "Rajath.pdf",
-                        "langCode": "eng",
-                        "documentId": "ef51cd37-98c7-11e9-8fd2-6fbffb0a0035"
-                    },
-                    "postalCode": "14023",
-                    "fullName": [
-                        {
-                            "language": "eng",
-                            "value": "Rajath"
-                        },
-                        {
-                            "language": "ara",
-                            "value": "رَجَته"
-                        }
-                    ]
-                }
+              "language": "ara",
+              "value": "جَگَدِسهوَرِ سِلڤَرَج"
             }
-        ],
-        "totalRecords": "2",
-        "noOfRecords": "0",
-        "pageIndex": "0"
-    },
-    "errors": null
+          ]
+        }
+      },
+      {
+        "preRegistrationId": "31601973604129",
+        "statusCode": "Booked",
+        "bookingMetadata": {
+          "registration_center_id": "10003",
+          "appointment_date": "2019-07-01",
+          "time_slot_from": "14:15",
+          "time_slot_to": "14:30"
+        },
+        "demographicMetadata": {
+          "proofOfAddress": {
+            "docCatCode": "POA",
+            "docTypCode": "RNC",
+            "docName": "Rajath.pdf",
+            "langCode": "eng",
+            "documentId": "ef51cd37-98c7-11e9-8fd2-6fbffb0a0035"
+          },
+          "postalCode": "14023",
+          "fullName": [
+            {
+              "language": "eng",
+              "value": "Rajath"
+            },
+            {
+              "language": "ara",
+              "value": "رَجَته"
+            }
+          ]
+        }
+      }
+    ],
+    "totalRecords": "2",
+    "noOfRecords": "0",
+    "pageIndex": "0"
+  },
+  "errors": null
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: No record found for the requested user id.
+##### Failure Response
+**Status code**: 200
+
+**Description**: No record found for the requested user id.
+
 ```JSON
 {
-    "id": "mosip.pre-registration.demographic.retrieve.basic",
-    "version": "1.0",
-    "responsetime": "2019-05-20T07:12:37.316Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_APP_005",
-            "message": "No record found for the requested user id"
-        }
-    ]
+  "id": "mosip.pre-registration.demographic.retrieve.basic",
+  "version": "1.0",
+  "responsetime": "2019-05-20T07:12:37.316Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_APP_005",
+      "message": "No record found for the requested user id"
+    }
+  ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -1447,14 +1505,12 @@ PRG_PAM_APP_007|json parsing is failed|demographic json parsing failed
 PRG_PAM_APP_018|Failed to read the identity json from the server|If the configured identity json file is unreachable
 
 ### With pagination
-if pageIndex parameter is passed as query param, then all the demographic data for the user will be retrieved in terms of pages.
-
-pageSize parameter is configurable.
-
-pageIndex is by default 0 if no value is passed for query param.
+If pageIndex parameter is passed as query param, then all the demographic data for the user will be retrieved in terms of pages.
+* PageSize parameter is configurable.
+* PageIndex is by default 0 if no value is passed for query param.
 
 #### Resource URL
-<div>https://mosip.io/preregistration/v1/applications?pageIndex=0</div>
+`https://{base_url}/preregistration/v1/applications?pageIndex=0`
 
 #### Resource details
 Resource Details | Description
@@ -1467,78 +1523,83 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 pageIndex |Yes|page index of the application|0(By default)
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: All applications fetched successfully
+#### Responses
+
+##### Success Response
+**Status code**: 200
+
+**Description**: All applications fetched successfully
+
 ```JSON
 {
-    "id": "mosip.pre-registration.demographic.retrieve.basic",
-    "version": "1.0",
-    "responsetime": "2019-06-27T10:44:18.988Z",
-    "response": {
-        "basicDetails": [
+  "id": "mosip.pre-registration.demographic.retrieve.basic",
+  "version": "1.0",
+  "responsetime": "2019-06-27T10:44:18.988Z",
+  "response": {
+    "basicDetails": [
+      {
+        "preRegistrationId": "26501647251326",
+        "statusCode": "Pending_Appointment",
+        "bookingMetadata": null,
+        "demographicMetadata": {
+          "proofOfAddress": null,
+          "postalCode": "14022",
+          "fullName": [
             {
-                "preRegistrationId": "26501647251326",
-                "statusCode": "Pending_Appointment",
-                "bookingMetadata": null,
-                "demographicMetadata": {
-                    "proofOfAddress": null,
-                    "postalCode": "14022",
-                    "fullName": [
-                        {
-                            "language": "fra",
-                            "value": "jagadishwari"
-                        },
-                        {
-                            "language": "ara",
-                            "value": "جَگَدِسهوَرِ سِلڤَرَج"
-                        }
-                    ]
-                }
+              "language": "fra",
+              "value": "jagadishwari"
             },
             {
-                "preRegistrationId": "31601973604129",
-                "statusCode": "Booked",
-                "bookingMetadata": {
-                    "registration_center_id": "10003",
-                    "appointment_date": "2019-07-01",
-                    "time_slot_from": "14:15",
-                    "time_slot_to": "14:30"
-                },
-                "demographicMetadata": {
-                    "proofOfAddress": {
-                        "docCatCode": "POA",
-                        "docTypCode": "RNC",
-                        "docName": "Rajath.pdf",
-                        "langCode": "eng",
-                        "documentId": "ef51cd37-98c7-11e9-8fd2-6fbffb0a0035"
-                    },
-                    "postalCode": "14023",
-                    "fullName": [
-                        {
-                            "language": "eng",
-                            "value": "Rajath"
-                        },
-                        {
-                            "language": "ara",
-                            "value": "رَجَته"
-                        }
-                    ]
-                }
+              "language": "ara",
+              "value": "جَگَدِسهوَرِ سِلڤَرَج"
             }
-        ],
-        "totalRecords": "2",
-        "noOfRecords": "2",
-        "pageIndex": "0"
-    },
-    "errors": null
+          ]
+        }
+      },
+      {
+        "preRegistrationId": "31601973604129",
+        "statusCode": "Booked",
+        "bookingMetadata": {
+          "registration_center_id": "10003",
+          "appointment_date": "2019-07-01",
+          "time_slot_from": "14:15",
+          "time_slot_to": "14:30"
+        },
+        "demographicMetadata": {
+          "proofOfAddress": {
+            "docCatCode": "POA",
+            "docTypCode": "RNC",
+            "docName": "Rajath.pdf",
+            "langCode": "eng",
+            "documentId": "ef51cd37-98c7-11e9-8fd2-6fbffb0a0035"
+          },
+          "postalCode": "14023",
+          "fullName": [
+            {
+              "language": "eng",
+              "value": "Rajath"
+            },
+            {
+              "language": "ara",
+              "value": "رَجَته"
+            }
+          ]
+        }
+      }
+    ],
+    "totalRecords": "2",
+    "noOfRecords": "2",
+    "pageIndex": "0"
+  },
+  "errors": null
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: No record found for the requested user id.
+##### Failure Response
+**Status code**: 200
+
+**Description**: No record found for the requested user id.
+
 ```JSON
 {
     "id": "mosip.pre-registration.demographic.retrieve.basic",
@@ -1553,6 +1614,7 @@ pageIndex |Yes|page index of the application|0(By default)
     ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -1564,61 +1626,67 @@ PRG_PAM_CORE_012|decryption failed|decryption of demographic data failed
 PRG_PAM_APP_007|json parsing is failed|demographic json parsing failed
 PRG_PAM_APP_018|Failed to read the identity json from the server|If the configured identity json file is unreachable
 
-### DELETE /applications/{preRegistrationId}
+## DELETE /applications/{preRegistrationId}
 This request is used to discard the entire pre-registration details based pre-registration id provided in request path parameter.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/applications/{preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/applications/{preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 preRegistrationId |Yes|pre-registration id of the application|29605371807216
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Deletion of individual is successfully
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Deletion of individual is successfully
 
 ```JSON
 {
-    "id": "mosip.pre-registration.demographic.delete",
-    "version": "1.0",
-    "errors": null,
-    "responsetime": "2019-05-20T10:28:37.488Z",
-    "response": [
-        {
-            "preRegistrationId": "29605371807216",
-            "deletedBy": "9886442073",
-            "deletedDateTime": "2019-05-20T10:28:37.485+0000"
-        }
-    ]
+  "id": "mosip.pre-registration.demographic.delete",
+  "version": "1.0",
+  "errors": null,
+  "responsetime": "2019-05-20T10:28:37.488Z",
+  "response": [
+    {
+      "preRegistrationId": "29605371807216",
+      "deletedBy": "9886442073",
+      "deletedDateTime": "2019-05-20T10:28:37.485+0000"
+    }
+  ]
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: No data found for the requested pre-registration id(non-empty)
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: No data found for the requested pre-registration id(non-empty)
+
 ```JSON
 {
-    "id": "mosip.pre-registration.demographic.delete",
-    "version": "1.0",
-    "responsetime": "2019-05-20T07:25:04.305Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_APP_005",
-            "message": "No data found for the requested pre-registration id"
-        }
-    ]
+  "id": "mosip.pre-registration.demographic.delete",
+  "version": "1.0",
+  "responsetime": "2019-05-20T07:25:04.305Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_APP_005",
+      "message": "No data found for the requested pre-registration id"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_APP_003|delete operation is not allowed|Deletion of Preregistration fails if its status is neither pending appointment nor booked
@@ -1628,8 +1696,7 @@ PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when th
 
 # Document Service (public)
 This service enables Pre-Registration portal to request for uploading the document for a particular pre-registration.
-If any one upload file greater than specified size which is allowed by ngnix config [Link] (https://github.com/mosip/mosip-docs/wiki/Getting-Started#6-installing-external-dependencies-) it will give 413 Request Entity Too Large error.
-
+If any one upload file greater than specified size which is allowed by ngnix config; it will give 413 Request Entity Too Large error.
 * [POST /documents/{preRegistrationId}](#post-documentspreregistrationid)
 * [PUT /documents/{preRegistrationId}](#put-documentspreregistrationid)
 * [GET /documents/preregistration/{preRegistrationId}](#get-documentspreregistrationpreregistrationid)
@@ -1637,37 +1704,37 @@ If any one upload file greater than specified size which is allowed by ngnix con
 * [DELETE /documents/preregistration/{preRegistrationId}](#delete-documentspreregistrationpreregsitrationid)
 * [DELETE /documents/{documentId}?preRegistrationId={preRegistrationId}](#delete-documentsdocumentidpreregistrationidpreregistrationid)
 
-
-### POST /documents/{preRegistrationId}
+## POST /documents/{preRegistrationId}
 This request is used to upload document with the metadata which include document category code, document type code and document format for a pre-registration Id.
 
-Note: document category code, document type code and language code are derived from kernel master data.
-Document API(Master data) spec found in following link: https://github.com/mosip/mosip/wiki/Document-APIs
+{% hint style="info" %}
+Document category code, document type code and language code are derived from kernel master data. Specification for the same can be found in [Document APIs](Document-APIs.md).
+{% endhint %}
 
 URL:
 1. For valid Document category code refer below GET method for respective language code : /documentcategories/{langcode}
 2. For valid Document type code refer below GET method for respective language and document category code: /documenttypes/{documentcategorycode}/{langcode}
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/documents/{preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/documents/{preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 preRegistrationId |Yes|Pre-registration id of the application|32042841521591
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 file |Yes|Document which we need to upload|
 
-#### Request Part (Document request) Parameters
+### Request Part (Document request) Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 id |Yes|Id of the application|mosip.pre-registration.document.upload
@@ -1678,7 +1745,7 @@ request.docCatCode |Yes|Document category code|POA
 request.docTypCode |Yes|Document type code|RNC
 request.langCode |Yes|Language code of the application|fra
 
-#### Request:
+### Request
 ```JSON
 {
   "id": "mosip.pre-registration.document.upload",
@@ -1692,44 +1759,51 @@ request.langCode |Yes|Language code of the application|fra
 }
 ```
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Document uploaded successfully
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Document uploaded successfully
+
 ```JSON
 {
-    "id": "mosip.pre-registration.document.upload",
-    "version": "1.0",
-    "responsetime": "2019-06-18T10:03:15.828Z",
-    "response": {
-        "preRegistrationId": "63418297368795",
-        "docId": "91a1e0ac-91af-11e9-a605-d9ae0e3774a9",
-        "docName": "Doc.pdf",
-        "docCatCode": "POA",
-        "docTypCode": "RNC",
-        "docFileFormat": "pdf"
-    },
-    "errors": null
+  "id": "mosip.pre-registration.document.upload",
+  "version": "1.0",
+  "responsetime": "2019-06-18T10:03:15.828Z",
+  "response": {
+    "preRegistrationId": "63418297368795",
+    "docId": "91a1e0ac-91af-11e9-a605-d9ae0e3774a9",
+    "docName": "Doc.pdf",
+    "docCatCode": "POA",
+    "docTypCode": "RNC",
+    "docFileFormat": "pdf"
+  },
+  "errors": null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: Invalid document format supported
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: Invalid document format supported
+
 ```JSON
 {
-    "id": "mosip.pre-registration.document.upload",
-    "version": "1.0",
-    "responsetime": "2019-05-20T09:55:27.008Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_DOC_004",
-            "message": "Invalid document format supported"
-        }
-    ]
+  "id": "mosip.pre-registration.document.upload",
+  "version": "1.0",
+  "responsetime": "2019-05-20T09:55:27.008Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_DOC_004",
+      "message": "Invalid document format supported"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
@@ -1749,67 +1823,74 @@ PRG_PAM_DOC_012|Document table not accessible|access to document table fails
 PRG_PAM_DOC_009|Document upload failed|if the document & document details are failed to store
 PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
 
-### PUT /documents/{preRegistrationId}
+## PUT /documents/{preRegistrationId}
 This request is used to copy the document from source pre-registration id to destination pre-registration id with the specified document category code.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/documents/{preRegistrationId}?catCode={doc_cat_code}&sourcePreId={preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/documents/{preRegistrationId}?catCode={doc_cat_code}&sourcePreId={preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 preRegistrationId |Yes|Destination Pre-registration id of the application|67531403498547
 
-#### Request Query Parameters
+### Request Query Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 catCode|Yes|Document category code|POA
 sourcePreId |Yes|Source Pre-registration id of the application|97285429827016
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Document successfully copied
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Document successfully copied
+
 ```JSON
 {
   "id": "mosip.pre-registration.document.copy",
-  "version" : "1.0",
+  "version": "1.0",
   "responsetime": "2019-01-16T17:31:04.021Z",
   "response": {
-      "preRegsitrationId": "67531403498547",
-      "docId": "8196222-5fb0-11e9-rg3b-7d108980f456",
-      "docName": "address.pdf",
-      "docCatCode": "POA",
-      "docTypCode": "RNC",
-      "docFileFormat": "pdf"
+    "preRegsitrationId": "67531403498547",
+    "docId": "8196222-5fb0-11e9-rg3b-7d108980f456",
+    "docName": "address.pdf",
+    "docCatCode": "POA",
+    "docTypCode": "RNC",
+    "docFileFormat": "pdf"
   },
-  "errors":null
+  "errors": null
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: If Document has not been uploaded for the source pre-registration Id(non-empty)
+#### Failure Response
+**Status code**: 200
+
+**Description**: If Document has not been uploaded for the source pre-registration Id(non-empty)
+
 ```JSON
 {
-    "id": "mosip.pre-registration.document.copy",
-    "version": "1.0",
-    "responsetime": "2019-05-20T11:09:14.246Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_DOC_005",
-            "message": "Documents is not found for the requested pre-registration id"
-        }
-    ]
+  "id": "mosip.pre-registration.document.copy",
+  "version": "1.0",
+  "responsetime": "2019-05-20T11:09:14.246Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_DOC_005",
+      "message": "Documents is not found for the requested pre-registration id"
+    }
+  ]
 }
 ```
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_CORE_REQ_001|request parameter is missing|If source or destination preregistration id is empty
@@ -1821,72 +1902,78 @@ PRG_PAM_DOC_011|Document copy failed from source to destination|when document is
 PRG_CORE_REQ_010|hashing failed|document data hashing failed
 PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
 
-### GET /documents/preregistration/{preRegistrationId}
+## GET /documents/preregistration/{preRegistrationId}
 This request used to retrieve all documents metadata associated with particular pre-registration.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/documents/preregistration/{preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/documents/preregistration/{preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 preRegistrationId |Yes|Pre-registration id of the application|97285429827016
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Documents retrieved successfully
-```JSON
-{
-    "id": "mosip.pre-registration.document.fetch.metadata",
-    "version": "1.0",
-    "responsetime": "2019-06-18T10:26:02.622Z",
-    "response": {
-        "documentsMetaData": [
-            {
-                "docName": "Doc.pdf",
-                "documentId": "d4585c1e-91b1-11e9-a605-eb637a690b50",
-                "docCatCode": "POA",
-                "docTypCode": "RNC",
-                "langCode": "fra"
-            },
-            {
-                "docName": "Passport.pdf",
-                "documentId": "6f036ecf-91b3-11e9-a605-cd68a2d40011",
-                "docCatCode": "POI",
-                "docTypCode": "CIN",
-                "langCode": "fra"
-            }
-        ]
-    },
-    "errors": null
-}
-```
-##### Failure Response:
-###### Status code: '200'
-###### Description: if pre-registration id is invalid(non-empty)
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Documents retrieved successfully
 
 ```JSON
 {
-    "id": "mosip.pre-registration.document.fetch.metadata",
-    "version": "1.0",
-    "responsetime": "2019-05-20T11:17:54.743Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_APP_005",
-            "message": "No data found for the requested pre-registration id"
-        }
+  "id": "mosip.pre-registration.document.fetch.metadata",
+  "version": "1.0",
+  "responsetime": "2019-06-18T10:26:02.622Z",
+  "response": {
+    "documentsMetaData": [
+      {
+        "docName": "Doc.pdf",
+        "documentId": "d4585c1e-91b1-11e9-a605-eb637a690b50",
+        "docCatCode": "POA",
+        "docTypCode": "RNC",
+        "langCode": "fra"
+      },
+      {
+        "docName": "Passport.pdf",
+        "documentId": "6f036ecf-91b3-11e9-a605-cd68a2d40011",
+        "docCatCode": "POI",
+        "docTypCode": "CIN",
+        "langCode": "fra"
+      }
     ]
+  },
+  "errors": null
 }
 ```
-#### Other Failure details
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: if pre-registration id is invalid(non-empty)
+
+```JSON
+{
+  "id": "mosip.pre-registration.document.fetch.metadata",
+  "version": "1.0",
+  "responsetime": "2019-05-20T11:17:54.743Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_APP_005",
+      "message": "No data found for the requested pre-registration id"
+    }
+  ]
+}
+```
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_DOC_012|Document table not accessible|access to document table fails
@@ -1897,62 +1984,68 @@ PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when th
 PRG_PAM_DOC_005|Documents is not found for the requested pre-registration id|when the document is not uploaded for the preregistration id
 PRG_PAM_APP_005|No data found for the requested pre-registration id|When the application is deleted and trying to fetch the document of that pre-registration-id
 
-### GET /documents/{documentId}?preRegistrationId={preRegistrationId}
+## GET /documents/{documentId}?preRegistrationId={preRegistrationId}
 This request used to retrieve the document for a particular document id from the File System server.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/documents/{documentId}?preRegistrationId={preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/documents/{documentId}?preRegistrationId={preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 documentId |Yes|document id of the application|0748c439-4f83-11e9-ae3b-7b0aa1318f48
 
-#### Request Query Parameters
+### Request Query Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 preRegistrationId |Yes|pre-registration id of the application|74843948119371
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Document successfully retrieved
-```JSON
-{
-   "id": "mosip.pre-registration.document.fetch.content",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response":{
-      "document": "ByteArray"
-    },
-   "errors": null
-}
-```
-##### Failure Response:
-###### Status code: '200'
-###### Description: if pre-registration id is invalid(non-empty)
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Document successfully retrieved
 
 ```JSON
 {
-    "id": "mosip.pre-registration.document.fetch.metadata",
-    "version": "1.0",
-    "responsetime": "2019-05-20T11:17:54.743Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_APP_005",
-            "message": "No data found for the requested pre-registration id"
-        }
-    ]
+  "id": "mosip.pre-registration.document.fetch.content",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response":{
+    "document": "ByteArray"
+  },
+  "errors": null
 }
 ```
-#### Other Failure details
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: if pre-registration id is invalid(non-empty)
+
+```JSON
+{
+  "id": "mosip.pre-registration.document.fetch.metadata",
+  "version": "1.0",
+  "responsetime": "2019-05-20T11:17:54.743Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_APP_005",
+      "message": "No data found for the requested pre-registration id"
+    }
+  ]
+}
+```
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_DOC_012|Document table not accessible|access to document table fails
@@ -1962,56 +2055,63 @@ PRG_CORE_REQ_010|hashing failed|document data hashing failed
 PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
 PRG_PAM_DOC_022|DocumentId is not belongs to the pre-registration Id|If document id is not related to the pre-registration id or if document is not found for the pre-registration id
 
-### DELETE /documents/preregistration/{preRegsitrationId}
+## DELETE /documents/preregistration/{preRegsitrationId}
 This request used to delete all the documents which are associated with requested pre-registration id.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/documents/preregistration/{preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/documents/preregistration/{preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 preRegsitrationId |Yes|pre-registration id of the application|37802950913289
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Documents successfully deleted
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Documents successfully deleted
+
 ```JSON
 {
-   "id": "mosip.pre-registration.document.delete",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": {
-       "message": "All documents assosiated with requested pre-registration id deleted sucessfully"
-    },
-   "errors":null
+  "id": "mosip.pre-registration.document.delete",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": {
+    "message": "All documents assosiated with requested pre-registration id deleted sucessfully"
+  },
+  "errors":null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: if the pre-registration id is invalid(non-empty)
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: if the pre-registration id is invalid(non-empty)
+
 ```JSON
 {
-    "id": "mosip.pre-registration.document.fetch.metadata",
-    "version": "1.0",
-    "responsetime": "2019-07-03T10:28:02.252Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_APP_005",
-            "message": "No data found for the requested pre-registration id"
-        }
-    ]
+  "id": "mosip.pre-registration.document.fetch.metadata",
+  "version": "1.0",
+  "responsetime": "2019-07-03T10:28:02.252Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_APP_005",
+      "message": "No data found for the requested pre-registration id"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_DOC_006|Documents failed to delete|if the document & document details are failed to delete
@@ -2020,61 +2120,68 @@ PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when th
 PRG_PAM_DOC_005|Documents is not found for the requested pre-registration id|If document is not uploaded for the pre-registration id
 PRG_PAM_APP_005|No data found for the requested pre-registration id|When the application is deleted and trying to fetch the document of that pre-registration-id
 
-### DELETE /documents/{documentId}?preRegistrationId={preRegistrationId}
+## DELETE /documents/{documentId}?preRegistrationId={preRegistrationId}
 This request used to delete the document for a particular document id from database and File System server.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/documents/{documentId}?preRegistrationId={preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/documents/{documentId}?preRegistrationId={preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 documentId |Yes|document id of the application|0748c439-4f83-11e9-ae3b-7b0aa1318f48
 
-#### Request Query Parameters
+### Request Query Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 preRegistrationId |Yes|pre-registration id of the application|74843948119371
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Document successfully deleted
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Document successfully deleted
+
 ```JSON
 {
-   "id": "mosip.pre-registration.document.delete.specific",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": {
-      "message": "Document successfully deleted"
-    },
-    "errors": null
+  "id": "mosip.pre-registration.document.delete.specific",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": {
+    "message": "Document successfully deleted"
+  },
+  "errors": null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: if the pre-registration id is invalid(non-empty)
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: if the pre-registration id is invalid(non-empty)
+
 ```JSON
 {
-    "id": "mosip.pre-registration.document.fetch.metadata",
-    "version": "1.0",
-    "responsetime": "2019-07-03T10:28:02.252Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_APP_005",
-            "message": "No data found for the requested pre-registration id"
-        }
-    ]
+  "id": "mosip.pre-registration.document.fetch.metadata",
+  "version": "1.0",
+  "responsetime": "2019-07-03T10:28:02.252Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_APP_005",
+      "message": "No data found for the requested pre-registration id"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_DOC_006|Documents failed to delete|if the document & document details are failed to delete
@@ -2084,24 +2191,23 @@ PRG_PAM_DOC_022|DocumentId is not belongs to the pre-registration Id|If document
 
 # DataSync Service (External)
 This service enables Pre-Registration to a registration client, request to retrieve all pre-registration ids based on registration client id, appointment date and an user type.
-
 * [POST /sync](#post-sync)
 * [POST /sync/consumedPreRegIds](#post-syncconsumedpreregids)
 * [GET /sync/{preRegistrationId}](#get-syncpreregistrationid)
 
-### POST /sync
+## POST /sync
 This request is used by registration client to retrieve all the pre-registration Ids by the date range of appointment done.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/sync</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/sync`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Body Parameters
+### Request Body Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 id |Yes|Id of the application|mosip.pre-registration.datasync
@@ -2112,7 +2218,7 @@ request.registrationCenterId|Yes|Registration Center Id for which the data is re
 request.fromDate |Yes|From date of the appointment|2019-02-09
 request.toDate |Yes|To date of the appointment|2019-02-12
 
-#### Request:
+### Request
 ```JSON
 {
   "id": "mosip.pre-registration.datasync.fetch.ids",
@@ -2125,46 +2231,52 @@ request.toDate |Yes|To date of the appointment|2019-02-12
   }
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: All Pre-Registration Ids fetched successfully
-```JSON
-{
-    "id": "mosip.pre-registration.datasync.fetch.ids",
-    "version": "1.0",
-    "responsetime": "2019-05-16T08:34:01.315",
-    "response": {
-        "transactionId": "5afbfbae-77b5-11e9-8dea-e342188bfd4e",
-        "countOfPreRegIds": "2",
-        "preRegistrationIds": {
-            "47184958619749": "2019-05-15T11:44:28.966",
-            "76426186439718": "2019-05-16T05:54:01.999"
-        }
-    },
-    "errors": null
-}
 
-```
-##### Failure Response:
-###### Status code: '200'
-###### Description: If appointment is not booked under the registration center and requested date range.
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: All Pre-Registration Ids fetched successfully
 
 ```JSON
 {
-    "id": "mosip.pre-registration.datasync.fetch.ids",
-    "version": "1.0",
-    "responsetime": "2019-05-16T08:32:19.732Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_BOOK_RCI_032",
-            "message": "Record not found for date range and reg center id"
-        }
-    ]
+  "id": "mosip.pre-registration.datasync.fetch.ids",
+  "version": "1.0",
+  "responsetime": "2019-05-16T08:34:01.315",
+  "response": {
+    "transactionId": "5afbfbae-77b5-11e9-8dea-e342188bfd4e",
+    "countOfPreRegIds": "2",
+    "preRegistrationIds": {
+      "47184958619749": "2019-05-15T11:44:28.966",
+      "76426186439718": "2019-05-16T05:54:01.999"
+    }
+  },
+  "errors": null
 }
 ```
-#### Other Failure details
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: If appointment is not booked under the registration center and requested date range.
+
+```JSON
+{
+  "id": "mosip.pre-registration.datasync.fetch.ids",
+  "version": "1.0",
+  "responsetime": "2019-05-16T08:32:19.732Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_BOOK_RCI_032",
+      "message": "Record not found for date range and reg center id"
+    }
+  ]
+}
+```
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
@@ -2178,19 +2290,19 @@ PRG_DATA_SYNC_016|booking data not found|when rest service to booking service fa
 PRG_CORE_REQ_019|Invalid date time format|If from date or to date is invalid
 PRG_CORE_REQ_020|From date is greater than To date|If from date is greater than to date
 
-### POST /sync/consumedPreRegIds
+## POST /sync/consumedPreRegIds
 This request is used by registration processor, to retrieve all processed pre-registration ids and store in pre-registration database so that after batch jon run , job will delete records from main table and move to history table(consumed).
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/sync/consumedPreRegIds</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/sync/consumedPreRegIds`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Body Parameters
+### Request Body Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 id |Yes|Id of the application|mosip.pre-registration.datasync.store
@@ -2199,7 +2311,7 @@ requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
 request |Yes|Request for the application|
 request.preRegistrationIds |Yes|List of Preregistration Ids|42973267563920
 
-#### Request:
+### Request
 ```JSON
 {
   "id": "mosip.pre-registration.datasync.store",
@@ -2213,42 +2325,49 @@ request.preRegistrationIds |Yes|List of Preregistration Ids|42973267563920
   }
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Consumed Pre-Registrations saved
+
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Consumed Pre-Registrations saved
+
 ```JSON
 {
-   "id": "mosip.pre-registration.datasync.store",
-   "version" : "1.0",
-   "responsetime": "2019-02-16T17:31:04.021Z",
-   "response": {
-       "transactionId": "26fde349-0e56-11e9-99e1-f7683fbbce99",
-       "countOfPreRegIds": "2",
-       "preRegistrationIds": "2"
-    },
-    "errors":null
+  "id": "mosip.pre-registration.datasync.store",
+  "version" : "1.0",
+  "responsetime": "2019-02-16T17:31:04.021Z",
+  "response": {
+    "transactionId": "26fde349-0e56-11e9-99e1-f7683fbbce99",
+    "countOfPreRegIds": "2",
+    "preRegistrationIds": "2"
+  },
+  "errors":null
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: No pre-registration ids passed in request body or all the preregistration ids are invalid
+#### Failure Response
+**Status code**: 200
+
+**Description**: No pre-registration ids passed in request body or all the preregistration ids are invalid
+
 ```JSON
 {
-    "id": "mosip.pre-registration.datasync.store",
-    "version": "1.0",
-    "responsetime": "2019-05-16T08:41:48.546Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_DATA_SYNC_011",
-            "message": "requested preregistration ids are not valid"
-        }
-    ]
+  "id": "mosip.pre-registration.datasync.store",
+  "version": "1.0",
+  "responsetime": "2019-05-16T08:41:48.546Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_DATA_SYNC_011",
+      "message": "requested preregistration ids are not valid"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
@@ -2257,67 +2376,73 @@ PRG_PAM_CORE_003|Invalid request time |Empty Request time
 PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
 PRG_DATA_SYNC_007|Demographic record failed to fetch|when rest service to demographic service fails
 
-### GET /sync/{preRegistrationId}
+## GET /sync/{preRegistrationId}
 This request is used by registration client to retrieve particular pre-registration data based on a pre-registration id.
 
-Note: ID.json will include both demographic and uploaded document metadata content
+{% hint style="info" %}
+ID.json will include both demographic and uploaded document metadata content.
+{% endhint %}
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/sync/{preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/sync/{preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 preRegistrationId |Yes|Pre Registration id|41342175487213
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Data Sync records fetched
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Data Sync records fetched
 
 ```JSON
 {
-    "id": "mosip.pre-registration.datasync.fetch",
-    "version": "1.0",
-    "responsetime": "2019-05-16T08:34:56.440",
-    "response": {
-        "pre-registration-id": "47184958619749",
-        "registration-client-id": "10001",
-        "appointment-date": "2019-05-17",
-        "from-time-slot": "09:00",
-        "to-time-slot": "09:15",
-        "zip-filename": "47184958619749",
-        "zip-bytes": "ByteArray"
-    },
-    "errors": null
+  "id": "mosip.pre-registration.datasync.fetch",
+  "version": "1.0",
+  "responsetime": "2019-05-16T08:34:56.440",
+  "response": {
+    "pre-registration-id": "47184958619749",
+    "registration-client-id": "10001",
+    "appointment-date": "2019-05-17",
+    "from-time-slot": "09:00",
+    "to-time-slot": "09:15",
+    "zip-filename": "47184958619749",
+    "zip-bytes": "ByteArray"
+  },
+  "errors": null
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: No demographic data exists for the requested pre-registration id or if the pre-registration id is invalid(non-empty)
+#### Failure Response
+**Status code**: 200
+
+**Description**: No demographic data exists for the requested pre-registration id or if the pre-registration id is invalid(non-empty)
 
 ```JSON
 {
-    "id": "mosip.pre-registration.datasync.fetch",
-    "version": "1.0",
-    "responsetime": "2019-05-20T12:10:36.682Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_APP_005",
-            "message": "No data found for the requested pre-registration id"
-        }
-    ]
+  "id": "mosip.pre-registration.datasync.fetch",
+  "version": "1.0",
+  "responsetime": "2019-05-20T12:10:36.682Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_APP_005",
+      "message": "No data found for the requested pre-registration id"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_BOOK_RCI_013|booking data not found|If appointment is not booked against the preregistration id
@@ -2329,7 +2454,6 @@ PRG_DATA_SYNC_006|unable to fetch the document|when rest service to document ser
 
 # Booking Service (Public)
 This service details used by Pre-Registration portal to book an appointment by providing his/her basic appointment details.
-
 * [GET appointment/availability/sync](#get-appointmentavailabilitysync)
 * [POST /appointment/{preRegistrationId}](#post-appointmentpreregistrationid)
 * [POST /appointment](#post-appointment)
@@ -2338,33 +2462,36 @@ This service details used by Pre-Registration portal to book an appointment by p
 * [GET /appointment/availability/{registrationCenterId}](#get-appointmentavailabilityregistrationcenterid)
 * [GET /appointment/preRegistrationId/{registrationCenterId}?from_date=:date&to_date=:date](#get-appointmentpreregistrationidregistrationcenteridfrom_datedateto_datedate)
 
-### GET /appointment/availability/sync
+## GET /appointment/availability/sync
 This request is used to synchronize booking slots availability table with master data.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/appointment/availability/sync</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/appointment/availability/sync`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Master Data Sync is successful
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Master Data Sync is successful
 
 ```JSON
 {
-    "id": "mosip.pre-registration.appointment.availability.sync",
-    "version": "1.0",
-    "responsetime": "2019-05-20T09:48:43.394Z",
-    "response": "MASTER_DATA_SYNCED_SUCCESSFULLY",
-    "errors": null
+  "id": "mosip.pre-registration.appointment.availability.sync",
+  "version": "1.0",
+  "responsetime": "2019-05-20T09:48:43.394Z",
+  "response": "MASTER_DATA_SYNCED_SUCCESSFULLY",
+  "errors": null
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_BOOK_RCI_015|No available slots found for specified registration center| If no slots are available in the specified registration center
@@ -2373,25 +2500,24 @@ PRG_BOOK_RCI_034|Json processing exception| Json parse exception while sending n
 PRG_BOOK_RCI_033|Notification service call failed| Notification service call fail
 PRG_BOOK_RCI_020|Master data not found| Master date service call fail
 
-
-### POST /appointment/{preRegistrationId}
+## POST /appointment/{preRegistrationId}
 This request is used to book an registration center. If the appointment data exists for the requested pre-registration id, it will cancel it and update the new appointment data. If no appointment data then it will book an appointment for specified registration center and time slot.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/appointment/{preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/appointment/{preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 preRegsitrationId |Yes|pre-registration id of the application|37802950913289
 
-#### Request Body Parameters
+### Request Body Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 id |Yes|Id of the application|mosip.pre-registration.booking.book
@@ -2403,72 +2529,81 @@ request.appointment_date |Yes|Date of the appointment|2019-01-19
 request.time_slot_from |Yes|Time Slot From|12:15:00
 request.time_slot_to |Yes|Time Slot To|12:28:00
 
-#### Request:
+### Request
 ```JSON
 {
   "id": "mosip.pre-registration.booking.book",
   "version": "1.0",
   "requesttime": "2019-05-16T15:31:32.957Z",
   "request": {
-        "registration_center_id": "10001",
-        "appointment_date": "2019-05-17",
-        "time_slot_from": "09:30:00",
-        "time_slot_to": "09:45:00"
-   }
+    "registration_center_id": "10001",
+    "appointment_date": "2019-05-17",
+    "time_slot_from": "09:30:00",
+    "time_slot_to": "09:45:00"
+  }
 }
 ```
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Appointment booked successfully
-```JSON
-{
-    "id": "mosip.pre-registration.booking.book",
-    "version": "1.0",
-    "responsetime": "2019-05-16T09:57:38.433Z",
-    "response": {
-        "bookingMessage": "Appointment booked successfully"
-    },
-    "errors": null
-}
-```
-##### Failure Response:
-###### Status code: '200'
-###### Description: If demographic data not found for the preregistration id or if Pre Registration Id is invalid(non-empty).
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Appointment booked successfully
 
 ```JSON
 {
-    "id": "mosip.pre-registration.booking.book",
-    "version": "1.0",
-    "responsetime": "2019-05-16T09:58:41.110Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_PAM_APP_005",
-            "message": "No data found for the requested pre-registration id"
-        }
-    ]
+  "id": "mosip.pre-registration.booking.book",
+  "version": "1.0",
+  "responsetime": "2019-05-16T09:57:38.433Z",
+  "response": {
+    "bookingMessage": "Appointment booked successfully"
+  },
+  "errors": null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: Slot availability not found for selected time.
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: If demographic data not found for the preregistration id or if Pre Registration Id is invalid(non-empty).
+
 ```JSON
 {
-    "id": "mosip.pre-registration.booking.book",
-    "version": "1.0",
-    "responsetime": "2019-05-15T10:12:07.623Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_BOOK_RCI_002",
-            "message": "Availability not found for the selected time"
-        }
-    ]
+  "id": "mosip.pre-registration.booking.book",
+  "version": "1.0",
+  "responsetime": "2019-05-16T09:58:41.110Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_PAM_APP_005",
+      "message": "No data found for the requested pre-registration id"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: Slot availability not found for selected time.
+
+```JSON
+{
+  "id": "mosip.pre-registration.booking.book",
+  "version": "1.0",
+  "responsetime": "2019-05-15T10:12:07.623Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_BOOK_RCI_002",
+      "message": "Availability not found for the selected time"
+    }
+  ]
+}
+```
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
@@ -2489,19 +2624,19 @@ PRG_BOOK_RCI_028|Failed to delete the pre-registration record|while rebooking, f
 PRG_BOOK_RCI_031| Invalid Booking Date Time found for preregistration id - 37513708391357| If appointment date is past date and also when appointment date is present date but the appointment time is past. If the date format is other than YYYY-MM-DD.
 PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
 
-### POST /appointment
+## POST /appointment
 This request is used to book mulitple registration centers. If the appointment data exists for the requested pre-registration ids, it will cancel it and update the new appointment data. If no appointment data then it will book an appointment for specified registration center and time slot.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/appointment</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/appointment`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Body Parameters
+### Request Body Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 id |Yes|Id of the application|mosip.pre-registration.booking.book
@@ -2514,7 +2649,7 @@ request.appointment_date |Yes|Date of the appointment|2019-04-22
 request.time_slot_from |Yes|Time Slot From|15:30:00
 request.time_slot_to |Yes|Time Slot To|15:45:00
 
-#### Request:
+### Request
 ```JSON
 {
   "id": "mosip.pre-registration.booking.book",
@@ -2539,67 +2674,74 @@ request.time_slot_to |Yes|Time Slot To|15:45:00
     ]
   }
 }
-
 ```
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Appointment booked successfully
-```JSON
-{
-    "id": "mosip.pre-registration.booking.book",
-    "version": "1.0",
-    "responsetime": "2019-05-15T10:58:35.546Z",
-    "response": {
-        "bookingStatusResponse": [
-            {
-                "bookingMessage": "Appointment booked successfully"
-            },
-            {
-                "bookingMessage": "Appointment booked successfully"
-            }
-        ]
-    },
-    "errors": null
-}
-```
-##### Failure Response:
-###### Status code: '200'
-###### Description: If demographic data is not found for any of the preregistration id or if Pre Registration Id is invalid(non-empty).
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Appointment booked successfully
 
 ```JSON
 {
-   "id": "mosip.pre-registration.booking.book",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": null,
-   "errors":[ 
-         {
-            "errorCode": "PRG_PAM_APP_005",
-            "message": "No data found for the requested pre-registration id"
-         }
+  "id": "mosip.pre-registration.booking.book",
+  "version": "1.0",
+  "responsetime": "2019-05-15T10:58:35.546Z",
+  "response": {
+    "bookingStatusResponse": [
+      {
+        "bookingMessage": "Appointment booked successfully"
+      },
+      {
+        "bookingMessage": "Appointment booked successfully"
+      }
     ]
+  },
+  "errors": null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: Slot availability not found for selected time.
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: If demographic data is not found for any of the preregistration id or if Pre Registration Id is invalid(non-empty).
+
 ```JSON
 {
-   "id": "mosip.pre-registration.booking.book",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": null,
-   "errors":[ 
-         {
-            "errorCode": "PRG_BOOK_RCI_002",
-            "message": "Availability not found for the selected time"
-         }
-    ]
+  "id": "mosip.pre-registration.booking.book",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": null,
+  "errors":[ 
+    {
+      "errorCode": "PRG_PAM_APP_005",
+      "message": "No data found for the requested pre-registration id"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: Slot availability not found for selected time.
+```JSON
+{
+  "id": "mosip.pre-registration.booking.book",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": null,
+  "errors":[ 
+    {
+      "errorCode": "PRG_BOOK_RCI_002",
+      "message": "Availability not found for the selected time"
+    }
+  ]
+}
+```
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
@@ -2618,53 +2760,59 @@ PRG_BOOK_RCI_028|Failed to delete the pre-registration record|while rebooking, f
 PRG_BOOK_RCI_031| Invalid Booking Date Time found for preregistration id - 37513708391357| If appointment date is past date and also when appointment date is present date but the appointment time is past.If the date format is other than YYYY-MM-DD.
 PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
 
-### PUT /appointment/{preRegistrationId}
+## PUT /appointment/{preRegistrationId}
 This request used to cancel the appointment. Which will retrieve the appointment details for the specified pre-registration id,if appointment data exists update the availability for the slot by increasing the value and delete the record from the table and update the demographic record status "Pending_Appointment".
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/appointment/{preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/appointment/{preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Appointment cancelled successfully
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Appointment cancelled successfully
 
 ```JSON
 {
-    "id": "mosip.pre-registration.appointment.cancel",
-    "version": "1.0",
-    "responsetime": "2019-05-31T09:26:05.870Z",
-    "response": {
-        "transactionId": "1da8f8b8-8386-11e9-a18f-cb89ed940c1b",
-        "message": "Appointment for the selected application has been successfully cancelled"
-    },
-    "errors": null
+  "id": "mosip.pre-registration.appointment.cancel",
+  "version": "1.0",
+  "responsetime": "2019-05-31T09:26:05.870Z",
+  "response": {
+    "transactionId": "1da8f8b8-8386-11e9-a18f-cb89ed940c1b",
+    "message": "Appointment for the selected application has been successfully cancelled"
+  },
+  "errors": null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: Appointment cancellation failed.
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: Appointment cancellation failed.
+
 ```JSON
 {
-    "id": "mosip.pre-registration.appointment.cancel",
-    "version": "1.0",
-    "responsetime": "2019-05-15T11:05:30.680Z",
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PRG_BOOK_RCI_018",
-            "message": "Appointment cannot be canceled"
-        }
-    ]
+  "id": "mosip.pre-registration.appointment.cancel",
+  "version": "1.0",
+  "responsetime": "2019-05-15T11:05:30.680Z",
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PRG_BOOK_RCI_018",
+      "message": "Appointment cannot be canceled"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_BOOK_RCI_013|Booking data not found|if appointment is not booked against the requested preregistration id
@@ -2676,33 +2824,36 @@ PRG_BOOK_RCI_018|Appointment cannot be canceled|If status is other than booked
 PRG_PAM_APP_005 |No data found for the requested pre-registration id | If no demographic data found for the requested preregistration id or if the preregistration id is invalid(non-empty)
 PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
 
-### GET /appointment/{preRegistrationId}
+## GET /appointment/{preRegistrationId}
 This request is to retrieve Pre-Registration appointment details by pre-Registration id.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/appointment/{preRegistrationId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/appointment/{preRegistrationId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 preRegistrationId |Yes|Id of the application|37802950913289
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Appointment details successfully retrieved
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Appointment details successfully retrieved
+
 ```JSON
 {
-   "id": "mosip.pre-registration.appointment.fetch",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": {
+  "id": "mosip.pre-registration.appointment.fetch",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": {
     "registration_center_id": "10005",
     "appointment_date": "2019-02-13",
     "time_slot_from": "16:10",
@@ -2711,178 +2862,198 @@ preRegistrationId |Yes|Id of the application|37802950913289
   "errors":null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: No Appointment record found for the specified pre-registration id
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: No Appointment record found for the specified pre-registration id
+
 ```JSON
 {
-   "id": "mosip.pre-registration.appointment.fetch",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": null,
-   "errors":[ 
-         {
-            "errorCode": "PRG_BOOK_RCI_013",
-            "message": "Booking data not found"
-         }
-    ]
+  "id": "mosip.pre-registration.appointment.fetch",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": null,
+  "errors":[ 
+    {
+      "errorCode": "PRG_BOOK_RCI_013",
+      "message": "Booking data not found"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_BOOK_RCI_013|Booking data not found|if appointment is not booked against the requested preregistration id
 PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
 
-### GET /appointment/availability/{registrationCenterId}
+## GET /appointment/availability/{registrationCenterId}
 This request is used to retrieve all appointment slots available for booking based on the specified registration center id.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/appointment/availability/{registrationCenterId}</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/appointment/availability/{registrationCenterId}`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 registrationCenterId |Yes|Registration Center Id|10004
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Availability details fetched successfully
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Availability details fetched successfully
 ```JSON
 {
-   "id": "mosip.pre-registration.appointment.availability",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": {
-        "regCenterId": "10004",
-        "centerDetails": [
-         {
-            "date": "2019-02-13",
-            "timeSlots": [
-              {
-                "fromTime": "09:00:00",
-                "toTime": "09:15:00",
-                "availability": 4
-              },
-             {
-               "fromTime": "09:15:00",
-               "toTime": "09:30:00",
-                "availability": 3
-             }
-             ],
-            "holiday": false
-         },
-        {
-            "date": "2019-02-14",
-            "timeSlots": [
-              {
-                "fromTime": "09:00:00",
-                "toTime": "09:15:00",
-                "availability": 4
-              },
-             {
-               "fromTime": "09:15:00",
-               "toTime": "09:30:00",
-                "availability": 3
-             }
-             ],
-            "holiday": false
-         }
+  "id": "mosip.pre-registration.appointment.availability",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": {
+    "regCenterId": "10004",
+    "centerDetails": [
+      {
+        "date": "2019-02-13",
+        "timeSlots": [
+          {
+            "fromTime": "09:00:00",
+            "toTime": "09:15:00",
+            "availability": 4
+          },
+          {
+            "fromTime": "09:15:00",
+            "toTime": "09:30:00",
+            "availability": 3
+          }
+        ],
+        "holiday": false
+      },
+      {
+        "date": "2019-02-14",
+        "timeSlots": [
+          {
+            "fromTime": "09:00:00",
+            "toTime": "09:15:00",
+            "availability": 4
+          },
+          {
+            "fromTime": "09:15:00",
+            "toTime": "09:30:00",
+            "availability": 3
+          }
+        ],
+        "holiday": false
+      }
     ]
   },
   "errors":null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: No available slots found for specified registration center.
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: No available slots found for specified registration center.
+
 ```JSON
 {
-   "id": "mosip.pre-registration.appointment.availability",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": null,
-   "errors":[ 
-         {
-            "errorCode": "PRG_BOOK_RCI_015",
-            "message": "No available slots found for specified registration center"
-         }
-    ]
+  "id": "mosip.pre-registration.appointment.availability",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": null,
+  "errors":[ 
+    {
+      "errorCode": "PRG_BOOK_RCI_015",
+      "message": "No available slots found for specified registration center"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_BOOK_RCI_016|Availability table not accessible|access to availability table fails
 
-### GET /appointment/preRegistrationId/{registrationCenterId}?from_date=:Date&to_date=:Date
+## GET /appointment/preRegistrationId/{registrationCenterId}?from_date=:Date&to_date=:Date
 This request is used to retrieve all pre-registration ids available for specified registration center and date range.
-Note: If toDate parameter value is not passed in the request, fromDate will be considered as toDate.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/appointment/preRegistrationId/{registrationCenterId}?from_date=:Date&to_date=:Date</div>
+{% hint style="info" %}
+If toDate parameter value is not passed in the request, fromDate will be considered as toDate.
+{% endhint %}
 
-#### Resource details
+### Resource URL
+`https://{base_url}/preregistration/v1/appointment/preRegistrationId/{registrationCenterId}?from_date=:Date&to_date=:Date`
+
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Path Parameters
+### Request Path Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 registrationCenterId |Yes|Registration Center Id|10002
 
-#### Request Query Parameters
+### Request Query Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 fromDate |Yes|From Date | 2019-02-12
 toDate |Yes|To Date | 2019-06-15
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Availability details fetched successfully
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Availability details fetched successfully
+
 ```JSON
 
 {
-    "id": "mosip.pre-registration.appointment.ids",
-    "version": "1.0",
-    "responsetime": "2019-05-15T11:21:39.328Z",
-    "response": {
-        "registration_center_id": "10002",
-        "pre_registration_ids": [
-            "76426186439718"
-        ]
-    },
-    "errors": null
+  "id": "mosip.pre-registration.appointment.ids",
+  "version": "1.0",
+  "responsetime": "2019-05-15T11:21:39.328Z",
+  "response": {
+    "registration_center_id": "10002",
+    "pre_registration_ids": [
+      "76426186439718"
+    ]
+  },
+  "errors": null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: No available slots found for specified registration center with date range.
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: No available slots found for specified registration center with date range.
+
 ```JSON
 {
-   "id": "mosip.pre-registration.appointment.ids",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": null,
-   "errors":[ 
-         {
-            "errorCode": "PRG_BOOK_RCI_032",
-            "message": "Record not found for date range and reg center id"
-         }
-    ]
+  "id": "mosip.pre-registration.appointment.ids",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": null,
+  "errors":[ 
+    {
+      "errorCode": "PRG_BOOK_RCI_032",
+      "message": "Record not found for date range and reg center id"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_BOOK_RCI_005|Booking table not found|access to appointment table fails
@@ -2893,27 +3064,33 @@ PRG_CORE_REQ_020|From date is greater than To date|If from date is greater than 
 # BatchJob Service (Private)
 This service is used by Pre-Registration portal to update an expired pre-registration id  and consumed pre-registration id.
 
-NOTE :- Below are privileged APIs cannot be operate with individuals credentials.
+{% hint style="info" %}
+Below are privileged APIs cannot be operate with individuals credentials.
+{% endhint %}
 
 * [PUT batch/expiredStatus](#put-expiredstatus)
 * [PUT batch/consumedStatus](#put-consumedstatus)
 
-### PUT /expiredStatus
+## PUT /expiredStatus
 This request is used to update status of pre-registration ids appointment to expired status in database.
 Batch service will expire all the appointments from date before exceution date till the last execution date of batch job.
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/batch/expiredStatus</div>
 
-#### Resource details
+### Resource URL
+`https://{base_url}/preregistration/v1/batch/expiredStatus`
+
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Expired status updated successfully
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Expired status updated successfully
+
 ```JSON
 {
   "id": "mosip.pre-registration.batchjob.service.expired",
@@ -2923,57 +3100,65 @@ Requires Authentication | Yes
   "errors": null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: No pre-registration record found to update expired status
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: No pre-registration record found to update expired status
 ```JSON
 {
-   "id": "mosip.pre-registration.batchjob.service.expired",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": null,
-   "errors":[ 
-         {
-            "errorCode": "PRG_PAM_BAT_001",
-            "message": "No pre-registration id found to update status"
-         } 
-    ]
+  "id": "mosip.pre-registration.batchjob.service.expired",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": null,
+  "errors":[ 
+    {
+      "errorCode": "PRG_PAM_BAT_001",
+      "message": "No pre-registration id found to update status"
+    } 
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_BAT_004|Demographic table not accessible|If data is not found for preRegistrationId
 PRG_PAM_BAT_005|Reg appointment table not accessible|If Reg appointment table not accessible
 
-### PUT /consumedStatus
+## PUT /consumedStatus
 This request is used to update the consumed status for all pre-Registration ids given by registration processor.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/batch/consumedStatus</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/batch/consumedStatus`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Consumed status updated successfully
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Consumed status updated successfully
+
 ```JSON
 {
-   "id": "mosip.pre-registration.batchjob.service.consumed",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": "Demographic status to consumed updated successfully",
-   "errors":null
+  "id": "mosip.pre-registration.batchjob.service.consumed",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": "Demographic status to consumed updated successfully",
+  "errors":null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: No pre-registration record found to update consumed status
+#### Failure Response
+**Status code**: 200
+
+**Description**: No pre-registration record found to update consumed status
+
 ```JSON
 {
   "id": "mosip.pre-registration.batchjob.service.consumed",
@@ -2988,7 +3173,8 @@ Requires Authentication | Yes
   ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_BAT_004   |Demographic table not accessible|If data is not found for preRegistrationId
@@ -3004,19 +3190,19 @@ This service details used by Pre-Registration portal to generate QR Code.
 
 * [POST qrCode/generate](#post-qrcodegenerate)
 
-### POST qrCode/generate
+## POST qrCode/generate
 This request is used to generate QR Code for the pre-registration acknowledgement.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/qrCode/generate</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/qrCode/generate`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 id |Yes|Id of the application|mosip.pre-registration.qrcode.generate
@@ -3025,8 +3211,12 @@ requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
 request |Yes|Request for the application|
 request.value |Yes|Any string that you want to generate QR code|
 
-#### Request:
-##### Note: below is the sample request with no validation for request value
+### Request
+
+{% hint style="info" %}
+Below is the sample request with no validation for request value
+{% endhint %}
+
 ```JSON
 {
   "id": "mosip.pre-registration.qrcode.generate",
@@ -3035,39 +3225,46 @@ request.value |Yes|Any string that you want to generate QR code|
   "request": "37802950913289"	
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: QR Code generated  successfully
+
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: QR Code generated  successfully
+
 ```JSON
 {
-   "id": "mosip.pre-registration.qrcode.generate",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": {
-	"qrcode":"ByteArray"
-    },
-   "errors":null
+  "id": "mosip.pre-registration.qrcode.generate",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": {
+    "qrcode":"ByteArray"
+  },
+  "errors":null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: Failed to generate QR code
+#### Failure Response
+**Status code**: 200
+
+**Description**: Failed to generate QR code
+
 ```JSON
 {
-   "id": "mosip.pre-registration.qrcode.generate",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": null,
-   "errors":[ 
-         {
-    	    "errorCode": "PRG_QRC_002",
-    	    "message": "Failed to generate QR code"
-	 }
-    ]
+  "id": "mosip.pre-registration.qrcode.generate",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": null,
+  "errors":[ 
+    {
+      "errorCode": "PRG_QRC_002",
+	  "message": "Failed to generate QR code"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
@@ -3083,20 +3280,20 @@ This service details used by Pre-Registration portal to trigger notification via
 
 * [POST notification/notify](#post-notificationnotify)
 
-### POST notification/notify
+## POST notification/notify
 This request is used to notify the pre-registration acknowledgement via Email and SMS.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/notification/notify</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/notification/notify`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Request format | multipart/form-data
 Response format | JSON
 Requires Authentication | Yes
 
-#### Request Part (NotificationRequestDTO) Parameters
+### Request Part (NotificationRequestDTO) Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 id |Yes|Id of the application|mosip.pre-registration.notification.notify
@@ -3112,13 +3309,13 @@ request.emailID| Optional(If mobNum is non empty)|applicant email Id |`sanober@g
 request.additionalRecipient|Yes|additional recipient| It is a Boolean value(true/false). If it is **true** then **request.mobNum** and **request.emailId** get validated otherwise even though value is present for those values validation will not happen and it will get the mobile number/email address from the identity json from the database.  
 request.isBatch|Yes|Required for batch job | It is a Boolean value(true/false). If it is **true** then it consider this call as a cancel appointment only otherwise it will considered as a normal notification call and validate appointment details.
 
-#### Request Part Parameters
+### Request Part Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 attachment| Yes| pdf file of acknowledgment page|37802950913289.pdf
 langCode| Yes| language code whatever user choose while login|eng
 
-#### Request:
+### Request
 ```JSON
 {
   "id": "mosip.pre-registration.notification.notify",
@@ -3131,44 +3328,52 @@ langCode| Yes| language code whatever user choose while login|eng
 	"appointmentTime": "09:15 AM",
 	"mobNum": "9748107386",
 	"emailID": "sanober.noor2@mindtree.com",
-        "additionalRecipient":"true",
-        "isBatch":"false"
-   }
+    "additionalRecipient":"true",
+    "isBatch":"false"
+  }
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Email and sms request successfully submitted
+
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Email and sms request successfully submitted
+
 ```JSON
 {
-   "id": "mosip.pre-registration.notification.notify",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": {
-      "message": "Email and sms request successfully submitted"
-    },
-   "errors":null
+  "id": "mosip.pre-registration.notification.notify",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": {
+    "message": "Email and sms request successfully submitted"
+  },
+  "errors":null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: Mobile number or Email Id is missing
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: Mobile number or Email Id is missing
+
 ```JSON
 {
-   "id": "mosip.pre-registration.notification.notify",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": null,
-   "errors":[ 
-         {
-            "errorCode": "PRG_ACK_001",
-            "message": "Mobile number or Email Id is missing"
-         }
-    ]
+  "id": "mosip.pre-registration.notification.notify",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": null,
+  "errors":[ 
+    {
+      "errorCode": "PRG_ACK_001",
+      "message": "Mobile number or Email Id is missing"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
@@ -3186,22 +3391,21 @@ PRG_PAM_ACK_007|Phone number is not valid|If additionalRecipient is true and pho
 
 # Transliteration Service (Public)
 This service is used by Pre-Registration portal to transliterate given value from one language to another language. In this API transliteration is using IDB ICU4J library , so accuracy will be less.
-
 * [POST /transliteration/transliterate](#post-transliterationtransliterate)
 
-###  POST /transliteration/transliterate
+##  POST /transliteration/transliterate
 This request is used to transliterate from_Field_value to to_field_value based on given valid from_lang_code to to_lang_code.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/transliteration/transliterate</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/transliteration/transliterate`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | Yes
 
-#### Parameters
+### Parameters
 Name | Required | Description | Example
 -----|----------|-------------|--------
 id |Yes|Id of the application|mosip.pre-registration.transliteration.transliterate
@@ -3212,7 +3416,7 @@ request.from_field_lang|Yes|From language code|eng
 request.from_field_value |Yes|From field value |Kishan
 request.to_field_lang |Yes|To language code|ara
 
-#### Request:
+### Request
 ```JSON
 {
   "id": "mosip.pre-registration.transliteration.transliterate",
@@ -3225,16 +3429,19 @@ request.to_field_lang |Yes|To language code|ara
   }
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Given key is transliterated successfully
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Given key is transliterated successfully
+
 ```JSON
 {
-   "id": "mosip.pre-registration.transliteration.transliterate",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": {
+  "id": "mosip.pre-registration.transliteration.transliterate",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": {
     "from_field_lang": "eng",
     "from_field_value": "Kishan",
     "to_field_lang": "ara",
@@ -3243,24 +3450,27 @@ request.to_field_lang |Yes|To language code|ara
   "errors":null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: Failed to transliterate
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: Failed to transliterate
 ```JSON
 {
-   "id": "mosip.pre-registration.transliteration.transliterate",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": null,
-   "errors":[
-         {
-            "errorCode": "PRG_TRL_APP_001",
-            "message": "Failed to transliterate"
-         }
-    ]
+  "id": "mosip.pre-registration.transliteration.transliterate",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": null,
+  "errors":[
+    {
+      "errorCode": "PRG_TRL_APP_001",
+      "message": "Failed to transliterate"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
@@ -3270,33 +3480,23 @@ PRG_CORE_REQ_013|Request date should be current date|If request date is not curr
 PRG_TRL_APP_008|Unsupported language|If langCode is other than ara,eng and fra
 PRG_TRL_APP_002|Incorrect mandatory Fields|If any of the request is null
 
-#### Common Exception Details for all Preregistration API
-
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_CORE_REQ_015|Error message will come accordingly to the exception occurred|This error code  will occur for MethodArgumentNotValidException,HttpMessageNotReadableException
-PRG_CORE_REQ_016|Error message will come accordingly to the exception occurred|This error code  will occur for Exception,RuntimeException
-KER-ATH-402|Token expired|If the auth token got expired
-KER-ATH-401|Invalid Token|If the auth token is invalid
-
 # Captcha Service (Public)
 This service is used in Pre-Registration portal to protects the website from spam and abuse. In this API we are google recaptcha V2 to authenticate.
-
 * [POST /captcha/validatecaptcha](#post-captchavalidatecaptcha)
 
-###  POST /captcha/validatecaptcha
+##  POST /captcha/validatecaptcha
 This request is used to validate the response from the google recaptcha v2 API used in the front end application.
 
-#### Resource URL
-<div>https://mosip.io/preregistration/v1/captcha/validatecaptcha</div>
+### Resource URL
+`https://{base_url}/preregistration/v1/captcha/validatecaptcha`
 
-#### Resource details
+### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
 Requires Authentication | NO
 
-#### Parameters
+### Parameters
 Name | Required | Description | Example
 -----|----------|-------------|--------
 id |Yes|Id of the application|mosip.pre-registration.captcha.id.validate
@@ -3305,8 +3505,7 @@ requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
 request |Yes|Request for the application|
 request.captcha_token|Yes|token
 
-
-#### Request:
+### Request
 ```JSON
 {
   "id": "mosip.pre-registration.captcha.id.validate",
@@ -3317,40 +3516,48 @@ request.captcha_token|Yes|token
   }
 }
 ```
-#### Responses:
-##### Success Response:
-###### Status code: '200'
-###### Description: Captcha successfully verified
+
+### Responses
+
+#### Success Response
+**Status code**: 200
+
+**Description**: Captcha successfully verified
+
 ```JSON
 {
-   "id": "mosip.pre-registration.captcha.id.validate",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": {
+  "id": "mosip.pre-registration.captcha.id.validate",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": {
     "success": "true",
     "message": "Captcha successfully verified",
   },
   "errors":null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: Invalid Captcha 
+
+#### Failure Response
+**Status code**: 200
+
+**Description**: Invalid Captcha 
+
 ```JSON
 {
-   "id": "mosip.pre-registration.captcha.id.validate",
-   "version" : "1.0",
-   "responsetime": "2019-01-16T17:31:04.021Z",
-   "response": null,
-   "errors":[
-         {
-            "errorCode": "PRG_PAM_005",
-            "message": "Invalid Captcha entered"
-         }
-    ]
+  "id": "mosip.pre-registration.captcha.id.validate",
+  "version" : "1.0",
+  "responsetime": "2019-01-16T17:31:04.021Z",
+  "response": null,
+  "errors":[
+    {
+      "errorCode": "PRG_PAM_005",
+      "message": "Invalid Captcha entered"
+    }
+  ]
 }
 ```
-#### Other Failure details
+
+### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
 PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
@@ -3359,5 +3566,11 @@ PRG_PAM_CORE_003|Invalid request time |Empty Request time
 PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
 PRG-PAM-006|Invalid request , Request can't be null or empty
 
-
+# Common Exception Details for all Preregistration API
+Error Code | Error Message | Error Description
+-----|----------|-------------
+PRG_CORE_REQ_015|Error message will come accordingly to the exception occurred|This error code  will occur for MethodArgumentNotValidException,HttpMessageNotReadableException
+PRG_CORE_REQ_016|Error message will come accordingly to the exception occurred|This error code  will occur for Exception,RuntimeException
+KER-ATH-402|Token expired|If the auth token got expired
+KER-ATH-401|Invalid Token|If the auth token is invalid
 
