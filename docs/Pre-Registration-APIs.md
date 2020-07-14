@@ -19,8 +19,8 @@ Few of the error messages are intended for API consumer, who are mostly SI and d
 {% hint style="info" %}
 **API testing Prerequisites**
 * Generate a Authorization Token by using following Kernel AuthManager APIs
-	* To send an OTP [/authmanager/sendOTPUsingPOST](AuthN-&-AuthZ-APIs.md#post-v10authenticatesendotp)
-	* To validate the OTP [/authmanager/userIdOTPUsingPOST](AuthN-&-AuthZ-APIs.md#post-v10authenticateuseridotp)
+	* To send an OTP [/authmanager/sendOTPUsingPOST](AuthN-and-AuthZ-APIs.md#generate-otp)
+	* To validate the OTP [/authmanager/userIdOTPUsingPOST](AuthN-and-AuthZ-APIs.md#validate-otp)
    Once OTP get validate successfully you will get the Authorization token. 
 * Use this Authorization token in the every request header of all pre-registration APIs.
 {% endhint %}

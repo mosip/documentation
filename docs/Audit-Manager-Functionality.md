@@ -1,8 +1,9 @@
-* **Audit Manager** _(AMG_FR_1)_
+## Audit Manager
 
-The Audit Manager component receives a request to audit and store data, validates if the request is from an authorized source, securely store the requested data and respond back with an acknowledgement of storage (Success/Failure). 
+The Audit Manager component receives a request to audit and store data, validates if the request is from an authorized source, securely store the requested data and respond back with an acknowledgment of storage (Success/Failure). 
 
 Upon receiving a request to store audit logs with the input parameters, the audit manager performs the following steps:
+
 1. Validates if all required input parameters have been received as listed below for each specific request
    * Audit Event ID - Mandatory
    * Audit Event name - Mandatory
@@ -49,12 +50,9 @@ Log manager provides following functionalities:
 1. Support for reading the logger configurations through as external file
 1. Support addition log level to a particular logger dynamically
 
-### List of Configurable Parameters and Processes 
+## List of Configurable Parameters
+[**Link to Configurable Parameters of Kernel**](https://github.com/mosip/mosip-config/blob/master/config-templates/kernel-env.properties)
 
-1. Configurable Parameters
-
-   [**Link to Configurable Parameters of Kernel**](/mosip/mosip-config/tree/master/config-templates/kernel-env.properties)
-
-### Kernel API 
+## Kernel API 
 [**Refer to Wiki for more details on Kernel API**](Kernel-APIs.md)
 

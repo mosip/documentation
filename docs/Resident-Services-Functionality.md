@@ -86,7 +86,7 @@ To prevent misuse of VID, an individual can request to revoke his/her VID using 
 ### 2.10.4 Auto-restore a VID on Revocation and with Auto-restore Policy [**[↑]**](#table-of-contents)  
 This feature allows for a VID to be auto regenerated and given to an individual after he/she requests for an existing VID to be revoked. The VID regeneration happens based on the VID policy defined by Country (the regeneration policy for the revoked VID should be ‘Auto-restore’).
 
-[Refer to Wiki for more details on **VID Services API**](ID-Repository-API.md#vid-services-private).
+[Refer to Wiki for more details on **VID Services API**](ID-Repository-APIs.md#vid-services-private).
 
 ### List of Configurable Parameters and Processes [**[↑]**](#table-of-contents)
 All the configurations related to resident services are available [here](https://github.com/mosip/mosip-config/blob/master/config-templates/resident-env.properties)

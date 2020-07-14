@@ -50,13 +50,11 @@
 
 1. A user will have a maximum configured number of tries to get the OTP wrong after which he/she will be blocked for a configured amount of time. During this blocked period, he/she cannot generate or validate another OTP.
 
-[**Link to design**](/mosip/mosip/blob/master/docs/design/kernel/kernel-otpmanager.md)
-
 ## 2. QR Code Generator [**[↑]**](#table-of-contents)
 QR code generator takes the content received along with the version number and converts the content into a QR code. The version number is configurable and determines how much data a QR code can store. The more the version number, the more data can be stored in a QR Code.
 
-[**Link to design**](/mosip/mosip/blob/master/docs/design/kernel/kernel-qrcodegenerator.md)
 ## 3. Crypto Services [**[↑]**](#table-of-contents)
+
 ### 3.1 Cryptography Services [**[↑]**](#table-of-contents)
 Crypto service encrypts or decrypts data across MOSIP with the help of Public/Private Keys.
 
@@ -67,6 +65,7 @@ The Service then calls the Key Generator API to get a symmetric Key and encrypts
 The Service then calls the Key Manager Service with the Application ID and Timestamp received in the input parameters and gets the public key. 
 
 The Service then encrypts the symmetric key using the Public key and joins the Encrypted data and Encrypted Symmetric Key using a Key splitter and respond to the source with the joined data.
+
 #### B. For Decryption
 The Crypto Service will receive a request from an application with input parameters – Application ID, Reference ID, Timestamp and Data that needs to be decrypted. 
 
@@ -79,15 +78,14 @@ The Crypto Service then splits the received data into Encrypted Content and Encr
 
 The Key Manager instead of responding with the private key, decrypts the symmetric itself and send it back to the crypto service. The service then uses this symmetric key to decrypt data and send the decrypted data back to the source.
 
-[**Link to design**](/mosip/mosip/blob/master/docs/design/kernel/kernel-crypto.md)
 ### 3.2 Key Generator [**[↑]**](#table-of-contents)
+
 #### A. Generate a Symmetric Key
 
 Upon receiving a request to generate symmetric key pair the system generates a key pair (public and private key) as defined below and responds with the symmetric key
 * The symmetric key generated supports AES algorithm
 * The symmetric key generated is of 256 bit size
 * The symmetric will be returned as a byte array
-
 
 #### B. Generate an Asymmetric Key
 
@@ -96,8 +94,6 @@ Upon receiving a request to generate asymmetric key pair the system generates a 
 * The asymmetric key pair generated is of 2048 bit size
 * The asymmetric is returned as a byte array
 
-[**Link to design**](/mosip/mosip/blob/master/docs/design/kernel/kernel-keygenerator.md)
-
 ### 3.3 Key Management [**[↑]**](#table-of-contents)
 
 1. The Key Manager Service works together with the Crypto Service. 
@@ -105,8 +101,6 @@ Upon receiving a request to generate asymmetric key pair the system generates a 
 1. Key Manager Service then sends a valid Public key against the application ID received to Crypto Service. 
 1. In case, the public key is expired against that Application ID, it will generate a new Public Key and respond with it.
 1. When there is a request to decrypt data, the private key of the application id or reference id is used. The Key manager will not respond with Private Key but instead takes the encrypted data from the source and decrypts it itself and responds with decrypted content
-
-[**Link to design**](/mosip/mosip/blob/master/docs/design/kernel/kernel-keymanager.md)
 
 ### 3.4 Crypto Utility [**[↑]**](#table-of-contents)
 
@@ -123,7 +117,9 @@ The crypto utility is supports encryption and decryption. It provides a utility 
 A HMAC/checksum function is a way to create a compact representation of an arbitrarily large amount of data 
 
 ## 4. Notification [**[↑]**](#table-of-contents)
+
 ### 4.1 OTP Notification Services [**[↑]**](#table-of-contents)
+
 1. OTP Notification Services is a combined service, which receives a request to generate an OTP and responds directly to the User using SMS or Email Notification. 
 1. The service receives a request to generate and send OTP with User ID, OTP Channel (MOBILE and/or EMAIL), Template Variables, and Template Context (SMS and/or Email). 
 1. It then calls OTP Generator Service to generate an OTP against a Key (Mobile Number or Email). 
@@ -133,17 +129,13 @@ A HMAC/checksum function is a way to create a compact representation of an arbit
 1. The system responds with the error message if a particular User ID does not have an Email or Mobile number registered against it if the otp channel received is Email or Mobile number respectively 
 
 ### 4.2 Email Notification [**[↑]**](#table-of-contents)
+
 1. This service triggers an Email Notification upon receiving a request to trigger notification with Recipient Email-ID, CC Recipients Email-IDs, Subject, Email Content, and Attachment as input parameter. 
 1. The restriction on Attachment and its size is configurable. 
 1. The Third-Party Email Vendor is configurable and any country specific vendor can be used.
 
-[**Link to design**](/mosip/mosip/blob/master/docs/design/kernel/kernel-emailnotification.md)
-
 ### 4.3 SMS Notification [**[↑]**](#table-of-contents)
-
 This service triggers an SMS Notification upon receiving a request to trigger notification with Phone Number and Content as input parameter. The third-party SMS Vendor is configurable and any country specific vendor can be used.
-
-[**Link to design**](/mosip/mosip/blob/master/docs/design/kernel/kernel-smsnotification.md)
 
 ### 4.4 PDF Generator [**[↑]**](#table-of-contents)
 This utility enables creation of PDF from the content received. It will receive a content in input parameter, convert it into a PDF document, and respond with it to the source.
@@ -152,15 +144,12 @@ PDF Generator also supports the feature to generate a Password Protected PDF wit
 
 **NOTE**: If a Password is not received, then PDF Generator will generate the PDF of received content without the password protection.
 
-[**Link to design**](/mosip/mosip/blob/master/docs/design/kernel/kernel-pdfgenerator.md)
-
 ### 4.5 Template Merger [**[↑]**](#table-of-contents)
 This utility merges a Template with Placeholders with the dynamic values to form the content to be sent as Notifications or Acknowledgement. The Utility will receive a template and dynamic values from a source. It will merge the values and template and respond with the processed content.
 
-[**Link to design**](/mosip/mosip/blob/master/docs/design/kernel/kernel-templatemanager.md)
-
 ## 5. Transliteration [**[↑]**](#table-of-contents)
 MOSIP system can facilitate transliteration by integrating with a third party service provider. Receive a request for transliteration with the required input parameters (Word, Input Language Code, and Output Language Code)
+
 1. Validates if all required input parameters have been received as listed below for each specific request
    * User Input Word - Mandatory
    * Input Language Code - Mandatory
@@ -168,12 +157,13 @@ MOSIP system can facilitate transliteration by integrating with a third party se
 2. Transliterates the Word received from Input Language to Output Language
 1. In case of Exceptions, system triggers relevant error messages.
 
-[**Link to design**](/mosip/mosip/blob/master/docs/design/kernel/kernel-transliteration.md)
 
 ## 6. MOSIP Utils [**[↑]**](#table-of-contents)
+
 ### 6.1 Mobile Data Validator [**[↑]**](#table-of-contents)
 
 Upon receiving a request to validate a mobile number against configured mobile number policy, the system validates the mobile number against the policy
+
 1. Validates if all required input parameters have been received as listed below for each specific request
    * Mobile number
 2. Validates if the mobile no. against the following policies
@@ -201,35 +191,47 @@ Upon receiving a request to validate an Email ID against the standard Email ID p
 1. Responds to the source with the result (Valid/Invalid)
 1. Raises an alert in case of exceptions 
 
-[**Design Link to mobile and email data validator**](/mosip/mosip/blob/master/docs/design/kernel/kernel-datavalidator.md)
 ### 6.3 Exception Framework [**[↑]**](#table-of-contents)
 MOSIP system provides base exception framework.
+
 ### 6.4 Calendar Utility [**[↑]**](#table-of-contents)
+
 1. Identifies Calendar util methods
 1. Creates wrapper class for methods defined in apache-commons Calendar util
 1. Raises an alert in case of listed exceptions 
 
 ### 6.5 Date Utility [**[↑]**](#table-of-contents)
+
 1. Identifies File util methods
 1. Creates wrapper class for methods defined in apache-commons date and time util
 1. Raises an alert in case of listed exceptions 
+
 ### 6.6 File Utility [**[↑]**](#table-of-contents)
+
 1. Identifies File util methods
 1. Creates wrapper class for methods defined in apache-commons File util
 1. Raises an alert in case of listed exceptions 
+
 ### 6.7 Json Utility [**[↑]**](#table-of-contents)
+
 1. Identifies Json util methods
 1. Creates wrapper class for methods defined in apache-commons Json util
 1. Raises an alert in case of listed exceptions 
+
 ### 6.8 Math Utility [**[↑]**](#table-of-contents)
+
 1. Identifies Math util methods
 1. Creates wrapper class for methods defined in apache-commons Math util
 1. Raises an alert in case of listed exceptions 
+
 ### 6.9 String Utility [**[↑]**](#table-of-contents)
+
 1. Identifies String util methods
 1. Creates wrapper class for methods defined in apache-commons String util
 1. Raises an alert in case of listed exceptions
+
 ### 6.10 UUID Utility [**[↑]**](#table-of-contents)
+
 1. Upon receiving a request to generate UUID the system generates UUID as per default UUID generation logic
 1. UUID generated should be as per UUID Version 5
 1. UUID generated should be of 36 characters (32 alphanumeric characters and four hyphens e.g. 123e4567-e89b-12d3-a456-426655440000)
@@ -237,22 +239,20 @@ MOSIP system provides base exception framework.
 1. Responds with the UUID to the source
 1. Raises an alert in case of listed exceptions
 
-[**Link to design**](/mosip/mosip/blob/master/docs/design/kernel/kernel-uuid-generator.md)
 ### 6.11 Zip-Unzip Utility [**[↑]**](#table-of-contents)
+
 1. Identifies Zip-Unzip util methods
 1. Creates wrapper class for methods defined in apache-commons Zip-Unzip util
 1. Raises an alert in case of listed exceptions
 
-[**Link to design for Utilities**](/mosip/mosip/blob/master/docs/design/kernel/kernel-utils.md)
-
 ### 6.12 Log Utility [**[↑]**](#table-of-contents)
+
 1. Generate logs across the application
 1. Store generated logs in configured location
 1. Raises an alert in case of listed exceptions
 
-[**Link to design for Utilities**](/mosip/mosip/blob/master/docs/design/kernel/kernel-utils.md)
-
 ### 6.13 ID Object Validator Utility [**[↑]**](#table-of-contents)
+
 1. Validate the Attributes in ID object against the Pre-Defined pattern and Master data values
    * Validate Gender Types against country defined Masterdata
    * Validate Document Categories against country defined Masterdata
@@ -270,6 +270,7 @@ MOSIP system provides base exception framework.
 
 ## 7 Virus Scanner [**[↑]**](#table-of-contents)
 Virus Scanner utility allows for virus scanning across MOSIP at various places. This includes:
+
 1. Scanning of Document uploaded in Pre-registration
 2. Scanning in Registration Client Software
 3. Scanning of Registration packet in Registration Processor
@@ -279,13 +280,9 @@ A Country may integrate their own Licensed version of antivirus as per their req
 
 ### List of Configurable Parameters and Processes [**[↑]**](#table-of-contents)
 
-1. Configurable Parameters
+[**Link to Configurable Parameters of Kernel**](https://github.com/mosip/mosip-config/blob/master/config-templates/kernel-env.properties)
 
-   [**Link to Configurable Parameters of Kernel**](/mosip/mosip-configuration/blob/0.12.0/config/kernel-dev.properties)
-
-   [**Link to Kernel Application Properties**](/mosip/mosip-configuration/blob/0.12.0/config/application-dev.properties)
-2. Configurable Processes 
-* (Work in Progress) 
+[**Link to Kernel Application Properties**](https://github.com/mosip/mosip-config/blob/master/config-templates/application-env.properties)
 
 ### Kernel API [**[↑]**](#table-of-contents)
 [**Refer to Wiki for more details on Kernel API**](Kernel-APIs.md)

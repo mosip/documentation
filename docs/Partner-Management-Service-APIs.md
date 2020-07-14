@@ -1,13 +1,12 @@
 ﻿This section details about the service API in the Partner Management module.
 
-#### Note:
-For securely accessing any API in MOSIP, you must gain auth token from kernel authmanager
+For securely accessing any API in MOSIP, you must gain authentication token from kernel authentication manager.
 
 1. Authenticate through client-id/Secret or User Id/Password having respective roles assigned in IAM.
 2. After successful authentication access token will set as Authorization cookies.
 3. Access API through postman by passing the access token in cookies.
 
-MOSIP common [authentication and authorization APIs](authn-and-authz-apis.md) would be used for authentication and generation of secured auth token.
+MOSIP common [authentication and authorization APIs](AuthN-and-AuthZ-APIs.md) would be used for authentication and generation of secured authentication token.
 ```
 {
   "id": "string",
@@ -21,27 +20,30 @@ MOSIP common [authentication and authorization APIs](authn-and-authz-apis.md) wo
   }
 }
 ```
-After hitting api, you will get the authorization token in the cookie. 
+After hitting the API, you will get the authorization token in the cookie. 
 
-#### Prerequisite for Partner Management Module:
+## Prerequisite for Partner Management Module
 
 1. Digital certificate sharing between MOSIP and Partners
 2. MISP (MOSIP Infrastructure Service Provider) Creation
 3. Master data related to Partner Management - like Policy Groups, Partner Manager mappings to Policy Groups, Policy Manager mappings to Policy Groups, Master policy for the country
 
-## Partner Management APIs are categorized into following services
+## Partner Management APIs 
+Partner Management APIs are categorized into following services
+* [MISP Management Service](#misp-management-service)
+This service would be used by MOSIP Admin for management of MISP(MOSIP Infrastructure Service Provider), management of MISP license keys issued to MISP, activation and deactivation of MISP and MISP license keys, getting details about MISP and MISP license keys
 
-* [MISP Management Service](#misp-management-service) - This service would be used by MOSIP Admin for management of MISP(MOSIP Infrastructure Service Provider), management of MISP license keys issued to MISP, activation and deactivation of MISP and MISP license keys, getting details about MISP and MISP license keys
+* [Policy Management Service](#policy-management-service)
+This service would be used by Policy Manager for management of Policies. Policy manager would be able to create, update and get policy details. 
 
-* [Policy Management Service](#policy-management-service) - This service would be used by Policy Manager for management of Policies. Policy manager would be able to create, update and get policy details. 
+* [Partner Management Service](#partner-management-service)
+This service would be used by Partner Manager for management of partner requests. Partners belonging to specific policy group would be able to raise request for issuance of Partner API Keys. Partner Manager would be able to approve OR reject such partner requests. Before approving the partner request for API keys, partner manager would review the request, generate partner API key and map the API key with the policy(ies). By using this service, partner manager would be able to view partner details for given partner API Key, along with the policy mapping for the API key, and its status (active/deactive)
 
-* [Partner Management Service](#partner-management-service) - This service would be used by Partner Manager for management of partner requests. Partners belonging to specific policy group would be able to raise request for issuance of Partner API Keys. Partner Manager would be able to approve OR reject such partner requests. Before approving the partner request for API keys, partner manager would review the request, generate partner API key and map the API key with the policy(ies). By using this service, partner manager would be able to view partner details for given partner API Key, along with the policy mapping for the API key, and its status (active/deactive)
-
-* [Partner Service](#partner-service) - This service enables partners to do self registration, submit request for respective authentication policies available for the policy group, sharing of digital certificate for secure communication helping individual authentication through partners.
+* [Partner Service](#partner-service)
+This service enables partners to do self registration, submit request for respective authentication policies available for the policy group, sharing of digital certificate for secure communication helping individual authentication through partners.
 
 ## MISP Management Service
 This service would be used by MOSIP admin for MISP(MOSIP Infrastructure Service Provider) management.
-
 * [POST /misps](#post-misps)
 * [PATCH /misps/{mispId}/status](#PATCH-mispsmispIdstatus)
 * [PUT /misps/{mispId}](#post-mispsmispid)
@@ -53,12 +55,11 @@ This service would be used by MOSIP admin for MISP(MOSIP Infrastructure Service 
 * [GET /misps/name/{mispOrgName}](#get-mispsmispOrgName)
 * [GET /misps/{mispId}/licenseKey](#get-mispsmispidlicensekey)
 
-
 ### POST /misps
-MOSIP Admin would be able to create MISP using this API. At the time of creation of MISP, MISP ID is generated and shared back in response. Post successful MISP creation, by default MISP is set to active status.Kernel ID generator API would be used to generate unique id as mentioned in [Kernel ID Generator](https://github.com/mosip/commons/tree/master/kernel/kernel-idgenerator-mispid)
+MOSIP Admin would be able to create MISP using this API. At the time of creation of MISP, MISP ID is generated and shared back in response. Post successful MISP creation, by default MISP is set to active status.Kernel ID generator API would be used to generate unique id as mentioned in [Kernel ID Generator](https://github.com/mosip/commons/tree/master/kernel/kernel-idgenerator-mispid).
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/misps`
+`https://{base_url}/partnermanagement/v1/misps`
 
 #### Resource details
 Resource Details | Description
@@ -83,7 +84,7 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.create",
@@ -99,13 +100,13 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 }
 
 ```
-#### Responses:
 
-##### Success Response:
+#### Responses
 
-###### Status code: '200'
+##### Success Response
+**Status code**: 200
 
-###### Description: MISP successfully created
+**Description**: MISP successfully created
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.create",
@@ -120,12 +121,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
 }
 ```
 
-##### Failure Response:
+##### Failure Response
 
-###### Status code: '200'
+**Status code**: 200
 
-###### Description: MISP already registered
-
+**Description**: MISP already registered
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.create",
@@ -140,6 +140,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -154,7 +155,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to approve or reject the MISP.Post successful MISP approval, MISP License key is generated and set to active status.MISP License key is configurable and set to expire in 3 months, 6 months OR any configurable period.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/misps/{mispId}/status`
+`https://{base_url}/partnermanagement/v1/misps/{mispId}/status`
 
 #### Resource details
 Resource Details | Description
@@ -181,7 +182,7 @@ requesttime |Yes|Time of the request|2019-07-02T05:23:08.019Z
 request |Yes|Request for the application|
 request.mispStatus|Yes|MISP Status |Approved or Rejected
 
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.status",
@@ -193,47 +194,51 @@ request.mispStatus|Yes|MISP Status |Approved or Rejected
   }
 }
 ```
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
 ```JSON
 {
-    "id": "mosip.partnermanagement.misp.status",
-    "version": "1.0",
-    "responsetime": "2020-04-15T10:38:33.745Z",
-    "metadata": null,
-    "response": {
-        "mispStatus": "Active",
-        "mispLicenseKey": "xNwJeS3vf6UL5b7QbGCDLfBxi8Ower4x0S0LwU14aXrZ2ngv5m",
-        "mispLicenseKeyExpiry": "2020-05-15T16:08:33.767993400",
-        "mispLicenseKeyStatus": "active",
-        "mispID": "109",
-        "mispStatusCode": "approved",
-        "message": "MISP approved successfully"
-    },
-    "errors": []
+  "id": "mosip.partnermanagement.misp.status",   
+  "version": "1.0",
+  "responsetime": "2020-04-15T10:38:33.745Z",
+  "metadata": null,
+  "response": {
+    "mispStatus": "Active",
+    "mispLicenseKey": "xNwJeS3vf6UL5b7QbGCDLfBxi8Ower4x0S0LwU14aXrZ2ngv5m",
+    "mispLicenseKeyExpiry": "2020-05-15T16:08:33.767993400",
+    "mispLicenseKeyStatus": "active",
+    "mispID": "109",
+    "mispStatusCode": "approved",
+    "message": "MISP approved successfully"
+  },
+  "errors": []
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: MISP ID does not exist
+
+##### Failure Response
+**Status code**: 200
+
+**Description**: MISP ID does not exist
+
 ```JSON
 {
-    "id": null,
-    "version": null,
-    "responsetime": "2020-04-15T10:39:57.415Z",
-    "metadata": null,
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PMS_MSP_005",
-            "message": "MISP ID does not exist  110"
-        }
-    ]
+  "id": null,
+  "version": null,
+  "responsetime": "2020-04-15T10:39:57.415Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PMS_MSP_005",
+      "message": "MISP ID does not exist  110"
+    }
+  ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -247,7 +252,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to update MISP for given mispID.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/misps/{mispId}`
+`https://{base_url}/partnermanagement/v1/misps/{mispId}`
 
 #### Resource details
 Resource Details | Description
@@ -277,7 +282,7 @@ request.contactNumber|Optional|MISP contact number|9876998888
 request.emailId|Optional|MISP emailId|prm@telecom.com
 request.address|Optional|MISP address|India
 
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.update",
@@ -285,36 +290,38 @@ request.address|Optional|MISP address|India
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-      "organizationName": "telecom",
-      "contactNumber": "9876998888",
-      "emailID": "prm@telecom.com",
-      "address": "India"
+    "organizationName": "telecom",
+    "contactNumber": "9876998888",
+    "emailID": "prm@telecom.com",
+    "address": "India"
   }
 }
 ```
-#### Responses:
 
-##### Success Response:
+#### Responses
 
-###### Status code: '200'
+##### Success Response
+
+**Status code**: 200
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.update",
   "version": "1.0",
   "responsetime": "2019-06-03T06:47:10.838Z",
   "response": {
-      "id": "64269837502851",
-      "organizationName": "telecom",
-      "contactNumber": "9876998888",
-      "emailID": "prm@telecom.com",
-      "address": "India"
+    "id": "64269837502851",
+    "organizationName": "telecom",
+    "contactNumber": "9876998888",
+    "emailID": "prm@telecom.com",
+    "address": "India"
   },
   "errors": null
 }
 ```
-##### Failure Response:
-###### Status code: '200'
-###### Description: MISP Organization Name, MISP Contact Number, MISP Email ID, MISP Address - None available in request
+##### Failure Response
+**Status code**: 200
+
+**Description**: MISP Organization Name, MISP Contact Number, MISP Email ID, MISP Address - None available in request
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.update",
@@ -329,6 +336,7 @@ request.address|Optional|MISP address|India
   ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -348,7 +356,7 @@ This API would be used for validating MISPs license key.
    3. Validate license key is Active or not.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/misps/{mispId}/licenseKey`
+`https://{base_url}/partnermanagement/v1/misps/{mispId}/licenseKey`
 
 #### Resource details
 Resource Details | Description
@@ -361,7 +369,6 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 mispId |Yes| id of the misp|64269837502851
 
-
 #### Request Body Parameters
 Name | Required | Description | Comment
 -----|----------|-------------|--------
@@ -371,14 +378,12 @@ requesttime |Yes|Time of the request|2019-05-20T09:48:43.394Z
 request |Yes|Request for the application|
 request.mispLicenseKey|Yes|MISP license key|fa604-affcd-33201-04234
 
-
 #### Request Header 
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.license.validate",
@@ -386,18 +391,17 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-      "mispLicenseKey": "fa604-affcd-33201-04234"
+    "mispLicenseKey": "fa604-affcd-33201-04234"
   }
 }
 ```
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: MISP License validated successfully
+**Description**: MISP License validated successfully
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.license.validate",
@@ -409,11 +413,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "errors": null
 }
 ```
-##### Failure Response:
 
-###### Status code: '200'
+##### Failure Response
+**Status code**: 200
 
-###### Description: MISP ID/MISP License Key not available in database
+**Description**: MISP ID/MISP License Key not available in database
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.license.validate",
@@ -440,12 +444,11 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-
 ### PATCH /misps/{mispId}
 This API would be used to update MISP status for given MISP ID.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/misps/{mispId}`
+`https://{base_url}/partnermanagement/v1/misps/{mispId}`
 
 #### Resource details
 Resource Details | Description
@@ -472,7 +475,7 @@ requesttime |Yes|Time of the request|2019-07-02T05:23:08.019Z
 request |Yes|Request for the application|
 request.mispStatus|Yes|MISP status|De-Active
 
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.status.update",
@@ -480,31 +483,31 @@ request.mispStatus|Yes|MISP status|De-Active
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-      "mispStatus": "De-Active"
+    "mispStatus": "De-Active"
   }
 }
 ```
-#### Responses:
 
-##### Success Response:
+#### Responses
 
-###### Status code: '200'
+##### Success Response
+**Status code**: 200
+
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.status.update",
   "version": "1.0",
   "responsetime": "2019-06-03T06:47:10.838Z",
   "response": {
-      "message": "MISP deactivated successfully"
+    "message": "MISP deactivated successfully"
   },
   "errors": null
 }
 ```
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: MISP Organization Name, MISP Contact Number, MISP Email ID, MISP Address - None available in request
+**Description**: MISP Organization Name, MISP Contact Number, MISP Email ID, MISP Address - None available in request
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.status.update",
@@ -519,6 +522,7 @@ request.mispStatus|Yes|MISP status|De-Active
   ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -536,7 +540,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to activate/deactivate MISPs License Key for the MSIP ID.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/misps/{mispId}/licenseKey`
+`https://{base_url}/partnermanagement/v1/misps/{mispId}/licenseKey`
 
 #### Resource details
 Resource Details | Description
@@ -565,7 +569,7 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.license.update",
@@ -573,20 +577,20 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-      "mispStatus": "Active",
-      "mispLicenseKey": "fa604-affcd-33201-04770",
-      "mispLicenseKeyStatus": "De-Active"
+    "mispStatus": "Active",
+    "mispLicenseKey": "fa604-affcd-33201-04770",
+    "mispLicenseKeyStatus": "De-Active"
   }
 }
 ```
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
 
-###### Status code: '200'
+**Status code**: 200
 
-###### Description: MISP License updated successfully
+**Description**: MISP License updated successfully
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.license.update",
@@ -598,11 +602,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "errors": null
 }
 ```
-##### Failure Response:
 
-###### Status code: '200'
+##### Failure Response
+**Status code**: 200
 
-###### Description: MISP status,  MISP License key status - None available in request
+**Description**: MISP status,  MISP License key status - None available in request
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.license.update",
@@ -617,6 +621,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -633,7 +638,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve all MISPs details.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/misps`
+`https://{base_url}/partnermanagement/v1/misps`
 
 #### Resource details
 Resource Details | Description
@@ -641,18 +646,15 @@ Resource Details | Description
 Response format | JSON
 Requires Authentication | Yes
 
-
 #### Request Header 
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
+#### Responses
 
-#### Responses:
-
-##### Success Response:
-
-###### Status code: '200'
+##### Success Response
+**Status code**: 200
 
 ```JSON
 {
@@ -661,30 +663,30 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "responsetime": "2019-06-03T06:47:10.838Z",
   "response": {
     "mispDetails":[
-        {
-      "id": "64269837502851",
-          "organizationName": "telecom",
-          "contactNumber": "9876998888",
-          "emailID": "prm@telecom.com",
-          "address": "India"
-        },
-        {
-      "id": "98869837502654",
-          "organizationName": "airtelInd",
-          "contactNumber": "9488998800",
-          "emailID": "agm@airtelInd.com",
-          "address": "India"
-    }    
-      ]      
+      {
+        "id": "64269837502851",
+        "organizationName": "telecom",
+        "contactNumber": "9876998888",
+        "emailID": "prm@telecom.com",
+        "address": "India"
+      },
+      {
+        "id": "98869837502654",
+        "organizationName": "airtelInd",
+        "contactNumber": "9488998800",
+        "emailID": "agm@airtelInd.com",
+        "address": "India"
+      }    
+    ]      
   },
   "errors": null
 }
 ```
-##### Failure Response:
 
-###### Status code: '200'
+##### Failure Response
+**Status code**: 200
 
-###### Description: No MISP details found
+**Description**: No MISP details found
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.status.update",
@@ -699,6 +701,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -714,7 +717,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve the MISPs details based on given misp id.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/misps/mispId/{mispId}`
+`https://{base_url}/partnermanagement/v1/misps/mispId/{mispId}`
 
 #### Resource details
 Resource Details | Description
@@ -732,11 +735,11 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
 
-###### Status code: '200'
+**Status code**: 200
 
 ```JSON
 {
@@ -753,11 +756,12 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "errors": null
 }
 ```
-##### Failure Response:
 
-###### Status code: '200'
+##### Failure Response
 
-###### Description: MISP ID does not exist
+**Status code**: 200
+
+**Description**: MISP ID does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.status.update",
@@ -788,7 +792,7 @@ This API would be used to retrieve MISPs details based on given name
 2. If MISP organization name not present, then retrieve all misp details. 
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/misps/name/{mispOrgName}`
+`https://{base_url}/partnermanagement/v1/misps/name/{mispOrgName}`
 
 #### Resource details
 Resource Details | Description
@@ -806,50 +810,50 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
 
-###### Status code: '200'
+**Status code**: 200
 
-###### Description: Config parameter retrieved successfully 
+**Description**: Config parameter retrieved successfully 
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.retrieve",
   "version": "1.0",
   "responsetime": "2019-05-14T16:01:20.534Z",
   "response": {
-     "telecom": {
-        "id": "64269837502851",
-        "organizationName": "telecom",
-        "contactNumber": "9876998888",
-        "emailID": "prm@telecom.com",
-        "address": "India",
-        "status": "Active",
-        "licenseKey": "fa604-affcd-33201-04770",
-        "licenseKeyExpiry": "2022-12-31",
-        "licenseKeyStatus": "Active"
-     },
-     "telecomIndia": {
-        "id": "93469837502851",
-        "organizationName": "telecomIndia",
-        "contactNumber": "9876995433",
-        "emailID": "srs@telecomInd.com",
-        "address": "India",
-        "status": "Active",
-        "licenseKey": "ty604-affcd-33201-04770",
-        "licenseKeyExpiry": "2022-12-31",
-        "licenseKeyStatus": "Active"
-      }
-   },
+    "telecom": {
+      "id": "64269837502851",
+      "organizationName": "telecom",
+      "contactNumber": "9876998888",
+      "emailID": "prm@telecom.com",
+      "address": "India",
+      "status": "Active",
+      "licenseKey": "fa604-affcd-33201-04770",
+      "licenseKeyExpiry": "2022-12-31",
+      "licenseKeyStatus": "Active"
+    },
+    "telecomIndia": {
+      "id": "93469837502851",
+      "organizationName": "telecomIndia",
+      "contactNumber": "9876995433",
+      "emailID": "srs@telecomInd.com",
+      "address": "India",
+      "status": "Active",
+      "licenseKey": "ty604-affcd-33201-04770",
+      "licenseKeyExpiry": "2022-12-31",
+      "licenseKeyStatus": "Active"
+    }
+  },
   "errors": null
 }
 ```
-##### Failure Response:
 
-###### Status code: '200'
+##### Failure Response
+**Status code**: 200
 
-###### Description: No MISP found for the organization
+**Description**: No MISP found for the organization
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.retrieve",
@@ -864,6 +868,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -878,7 +883,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used by MISP Admin / MOSIP Admin for download MISPs license key. In case where license key got expired then user would be able to get a new license key. New license key thus generated would be mapped with given MISP ID . Older license keys would be updated with inactive status. 
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/misps/{mispId}/licenseKey`
+`https://{base_url}/partnermanagement/v1/misps/{mispId}/licenseKey`
 
 #### Resource details
 Resource Details | Description
@@ -891,20 +896,17 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 mispId |Yes| id of the misp|64269837502851
 
-
 #### Request Header 
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
+#### Responses
 
-#### Responses:
+##### Success Response
+**Status code**: 200
 
-##### Success Response:
-
-###### Status code: '200'
-
-###### Description: MISP License retrieved successfully
+**Description**: MISP License retrieved successfully
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.license.retrieve",
@@ -918,11 +920,11 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "errors": null
 }
 ```
-##### Failure Response:
 
-###### Status code: '200'
+##### Failure Response
+**Status code**: 200
 
-###### Description: MISP status,  MISP License key status - None available in request
+**Description**: MISP status,  MISP License key status - None available in request
 ```JSON
 {
   "id": "mosip.partnermanagement.misp.license.retrieve",
@@ -937,6 +939,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -947,10 +950,8 @@ PMS_COR_001|Missing Input Parameter - %d|Missing Input Parameter - for all manda
 PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attributes not as per defined data definition
 PMS_COR_003|Could not process the request|Any Internal Error
 
-
 ## Policy Management Service
 This service would be used by Policy Manager to manage policies for his Policy Group.
-
 * [POST /policies](#post-policies)
 * [PUT /policies/{policyID}](#put-policiespolicyid)
 * [PATCH /policies/{policyID}](#patch-policiespolicyid)
@@ -962,7 +963,7 @@ This service would be used by Policy Manager to manage policies for his Policy G
 This API would be used to create new Policy for policy group
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/policies`
+`https://{base_url}/partnermanagement/v1/policies`
 
 #### Resource details
 Resource Details | Description
@@ -988,7 +989,7 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.policy.create",
@@ -996,72 +997,70 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-       "name": "Insurance Policy",
-       "desc": "Desc about policy",
-       "policies": {
-            "authPolicies": [     
-                {"authType": "otp","mandatory": true},
-                {"authType": "demo","mandatory": false},
-                {"authType": "bio","authSubType": "FINGER","mandatory": true},
-                {"authType": "bio","authSubType": "IRIS","mandatory": false},
-                {"authType": "bio","authSubType": "FACE","mandatory": false},
-                {"authType": "kyc","mandatory": false}
-            ],
-            "allowedKycAttributes": [  
-                {"attributeName": "fullName","required": true},
-                {"attributeName": "dateOfBirth","required": true},
-                {"attributeName": "gender","required": true},
-                {"attributeName": "phone","required": true},
-                {"attributeName": "email","required": true},
-                {"attributeName": "addressLine1","required": true},
-                {"attributeName": "addressLine2","required": true},
-                {"attributeName": "addressLine3","required": true},
-                {"attributeName": "location1","required": true},
-                {"attributeName": "location2","required": true},
-                {"attributeName": "location3","required": true},
-                {"attributeName": "postalCode","required": false},
-                {"attributeName": "photo","required": true}
-            ]
-        }
+    "name": "Insurance Policy",
+    "desc": "Desc about policy",
+    "policies": {
+      "authPolicies": [     
+        {"authType": "otp","mandatory": true},
+        {"authType": "demo","mandatory": false},
+        {"authType": "bio","authSubType": "FINGER","mandatory": true},
+        {"authType": "bio","authSubType": "IRIS","mandatory": false},
+        {"authType": "bio","authSubType": "FACE","mandatory": false},
+        {"authType": "kyc","mandatory": false}
+      ],
+      "allowedKycAttributes": [  
+        {"attributeName": "fullName","required": true},
+        {"attributeName": "dateOfBirth","required": true},
+        {"attributeName": "gender","required": true},
+        {"attributeName": "phone","required": true},
+        {"attributeName": "email","required": true},
+        {"attributeName": "addressLine1","required": true},
+        {"attributeName": "addressLine2","required": true},
+        {"attributeName": "addressLine3","required": true},
+        {"attributeName": "location1","required": true},
+        {"attributeName": "location2","required": true},
+        {"attributeName": "location3","required": true},
+        {"attributeName": "postalCode","required": false},
+        {"attributeName": "photo","required": true}
+      ]
     }
+  }
 }
 ```
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: create new Policy for policy group is successful
+**Description**: create new Policy for policy group is successful
 ```JSON
 {
   "id": "mosip.partnermanagement.policy.create",
   "version": "1.0",
   "responsetime": "2019-05-14T16:01:20.534Z",
   "response": {
-       "policies": [
-          {
-            "id": "32058251034176",
-            "name": "Insurance Policy",
-            "desc": "Desc about policy",
-            "is_Active": true,
-            "cr_by": "MOSIP",
-            "cr_dtimes": "2019-05-14T16:01:20.534Z",
-            "up_by": null,
-            "upd_dtimes": null
-          }
-        ]
-   },
+    "policies": [
+      {
+        "id": "32058251034176",
+        "name": "Insurance Policy",
+        "desc": "Desc about policy",
+        "is_Active": true,
+        "cr_by": "MOSIP",
+        "cr_dtimes": "2019-05-14T16:01:20.534Z",
+        "up_by": null,
+        "upd_dtimes": null
+      }
+    ]
+  },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: If policy name already exists in the policy group
+**Description**: If policy name already exists in the policy group
 ```JSON
 {
   "id": "mosip.partnermanagement.policy.create",
@@ -1094,7 +1093,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to update existing policy for a policy group
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/policies/{policyID}`
+`https://{base_url}/partnermanagement/v1/policies/{policyID}`
 
 #### Resource details
 Resource Details | Description
@@ -1125,7 +1124,7 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.policy.update",
@@ -1133,69 +1132,67 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-15T16:01:20.534Z",
   "metadata": {},
   "request": {
-      "name": "Loan Policy",
-      "desc": "Desc about policy",
-      "policies": {
-            "authPolicies": [     
-                    {"authType": "otp","mandatory": true},
-                    {"authType": "demo","mandatory": false},
-                    {"authType": "bio","authSubType": "FINGER","mandatory": true},
-                    {"authType": "bio","authSubType": "IRIS","mandatory": true},
-                    {"authType": "bio","authSubType": "FACE","mandatory": false},
-                    {"authType": "kyc","mandatory": false}
-            ],
-            "allowedKycAttributes": [  
-                    {"attributeName": "fullName","required": true},
-                    {"attributeName": "dateOfBirth","required": true},
-                    {"attributeName": "gender","required": true},
-                    {"attributeName": "phone","required": true},
-                    {"attributeName": "email","required": true},
-                    {"attributeName": "addressLine1","required": true},
-                    {"attributeName": "addressLine2","required": true},
-                    {"attributeName": "addressLine3","required": true},
-                    {"attributeName": "location1","required": true},
-                    {"attributeName": "location2","required": true},
-                    {"attributeName": "location3","required": true},
-                    {"attributeName": "postalCode","required": false},
-                    {"attributeName": "photo","required": true}
-            ]
-        }
+    "name": "Loan Policy",
+    "desc": "Desc about policy",
+    "policies": {
+      "authPolicies": [     
+        {"authType": "otp","mandatory": true},
+        {"authType": "demo","mandatory": false},
+        {"authType": "bio","authSubType": "FINGER","mandatory": true},
+        {"authType": "bio","authSubType": "IRIS","mandatory": true},
+        {"authType": "bio","authSubType": "FACE","mandatory": false},
+        {"authType": "kyc","mandatory": false}
+      ],
+      "allowedKycAttributes": [  
+        {"attributeName": "fullName","required": true},
+        {"attributeName": "dateOfBirth","required": true},
+        {"attributeName": "gender","required": true},
+        {"attributeName": "phone","required": true},
+        {"attributeName": "email","required": true},
+        {"attributeName": "addressLine1","required": true},
+        {"attributeName": "addressLine2","required": true},
+        {"attributeName": "addressLine3","required": true},
+        {"attributeName": "location1","required": true},
+        {"attributeName": "location2","required": true},
+        {"attributeName": "location3","required": true},
+        {"attributeName": "postalCode","required": false},
+        {"attributeName": "photo","required": true}
+      ]
     }
+  }
 }
 ```
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
 
-###### Status code: '200'
+**Status code**: 200
 
-###### Description: update existing policy for policy group is successful
+**Description**: update existing policy for policy group is successful
 ```JSON
 {
   "id": "mosip.partnermanagement.policy.update",
   "version": "1.0",
   "responsetime": "2019-05-15T16:01:20.534Z",
   "response":{
-        "id": "45678451034176",
-        "name": "Loan Policy",
-        "desc": "Desc about policy",
-        "is_Active": true,
-        "cr_by": "MOSIP",
-        "cr_dtimes": "2019-05-14T16:01:20.534Z",
-        "up_by": "MOSIP",
-        "upd_dtimes": "2019-05-15T16:01:20.534Z"
-    },
+    "id": "45678451034176",
+    "name": "Loan Policy",
+    "desc": "Desc about policy",
+    "is_Active": true,
+    "cr_by": "MOSIP",
+    "cr_dtimes": "2019-05-14T16:01:20.534Z",
+    "up_by": "MOSIP",
+    "upd_dtimes": "2019-05-15T16:01:20.534Z"
+  },
   "errors": null
 }
 ```
 
+##### Failure Response
+**Status code**: 200
 
-##### Failure Response:
-
-###### Status code: '200'
-
-###### Description: If policy ID does not exist
+**Description**: If policy ID does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.policy.update",
@@ -1231,7 +1228,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to update the status (activate/deactivate) for the given policy id.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/policies/{policyID}`
+`https://{base_url}/partnermanagement/v1/policies/{policyID}`
 
 #### Resource details
 Resource Details | Description
@@ -1258,7 +1255,7 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.policy.update.status",
@@ -1266,35 +1263,33 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-15T16:01:20.534Z",
   "metadata": {},
   "request": {
-        "status":"De-Active"
-   }
+    "status":"De-Active"
+  }
 }
 ```
-#### Responses:
 
-##### Success Response:
+#### Responses
 
-###### Status code: '200'
+##### Success Response
+**Status code**: 200
 
-###### Description: update the existing policy status successful
+**Description**: update the existing policy status successful
 ```JSON
 {
   "id": "mosip.partnermanagement.policy.update.status",
   "version": "1.0",
   "responsetime": "2019-05-15T16:01:20.534Z",
   "response":{
-        "message" : "status updated successfully"
-   },
+    "message" : "status updated successfully"
+  },
   "errors": null
 }
 ```
 
+##### Failure Response
+**Status code**: 200
 
-##### Failure Response:
-
-###### Status code: '200'
-
-###### Description: If policy ID does not exist
+**Description**: If policy ID does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.policy.update.status",
@@ -1309,6 +1304,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -1325,7 +1321,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 Policy manager would require this service to get details for the policies in the policy group he belongs to. All the policy groups are required to be back filled in the partner management database through an offline process based on country specific requirements. Partner Manager and Policy Manager assigned for the Policy group are also required to be back filled along with creation of the policy group. Partner management would depend on Kernel IAM module services for all user management related activities. User ID and Password are shared using off-line process.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/policies`
+`https://{base_url}/partnermanagement/v1/policies`
 
 #### Resource details
 Resource Details | Description
@@ -1338,21 +1334,20 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: retrieve the policies available for my policy group successful
+**Description**: retrieve the policies available for my policy group successful
 ```JSON
 {
   "id": "mosip.partnermanagement.partner.policies",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response": {
-     "policies": [
-       {
+    "policies": [
+      {
         "id": "32058251034176",
         "name": "Insurance Policy",
         "desc": "Desc about policy",
@@ -1363,32 +1358,32 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
         "up_by": null,
         "upd_dtimes": null,
         "policies": {
-            "authPolicies": [     
-                    {"authType": "otp","mandatory": true},
-                    {"authType": "demo","mandatory": false},
-                    {"authType": "bio","authSubType": "FINGER","mandatory": true},
-                    {"authType": "bio","authSubType": "IRIS","mandatory": false},
-                    {"authType": "bio","authSubType": "FACE","mandatory": false},
-                    {"authType": "kyc","mandatory": false}
-            ],
-            "allowedKycAttributes": [  
-                    {"attributeName": "fullName","required": true},
-                    {"attributeName": "dateOfBirth","required": true},
-                    {"attributeName": "gender","required": true},
-                    {"attributeName": "phone","required": true},
-                    {"attributeName": "email","required": true},
-                    {"attributeName": "addressLine1","required": true},
-                    {"attributeName": "addressLine2","required": true},
-                    {"attributeName": "addressLine3","required": true},
-                    {"attributeName": "location1","required": true},
-                    {"attributeName": "location2","required": true},
-                    {"attributeName": "location3","required": true},
-                    {"attributeName": "postalCode","required": false},
-                    {"attributeName": "photo","required": true}
-             ]
-          }
-       },
-       {
+          "authPolicies": [     
+            {"authType": "otp","mandatory": true},
+            {"authType": "demo","mandatory": false},
+            {"authType": "bio","authSubType": "FINGER","mandatory": true},
+            {"authType": "bio","authSubType": "IRIS","mandatory": false},
+            {"authType": "bio","authSubType": "FACE","mandatory": false},
+            {"authType": "kyc","mandatory": false}
+          ],
+          "allowedKycAttributes": [  
+            {"attributeName": "fullName","required": true},
+            {"attributeName": "dateOfBirth","required": true},
+            {"attributeName": "gender","required": true},
+            {"attributeName": "phone","required": true},
+            {"attributeName": "email","required": true},
+            {"attributeName": "addressLine1","required": true},
+            {"attributeName": "addressLine2","required": true},
+            {"attributeName": "addressLine3","required": true},
+            {"attributeName": "location1","required": true},
+            {"attributeName": "location2","required": true},
+            {"attributeName": "location3","required": true},
+            {"attributeName": "postalCode","required": false},
+            {"attributeName": "photo","required": true}
+          ]
+        }
+      },
+      {
         "id": "45678451034176",
         "name": "Loan Policy",
         "desc": "Desc about policy",
@@ -1399,42 +1394,41 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
         "up_by": "MOSIP",
         "upd_dtimes": "2019-05-15T16:01:20.534Z",
         "policies": {
-            "authPolicies": [     
-                    {"authType": "otp","mandatory": true},
-                    {"authType": "demo","mandatory": false},
-                    {"authType": "bio","authSubType": "FINGER","mandatory": true},
-                    {"authType": "bio","authSubType": "IRIS","mandatory": true},
-                    {"authType": "bio","authSubType": "FACE","mandatory": false},
-                    {"authType": "kyc","mandatory": false}
-            ],
-            "allowedKycAttributes": [  
-                    {"attributeName": "fullName","required": true},
-                    {"attributeName": "dateOfBirth","required": true},
-                    {"attributeName": "gender","required": true},
-                    {"attributeName": "phone","required": true},
-                    {"attributeName": "email","required": true},
-                    {"attributeName": "addressLine1","required": true},
-                    {"attributeName": "addressLine2","required": true},
-                    {"attributeName": "addressLine3","required": true},
-                    {"attributeName": "location1","required": true},
-                    {"attributeName": "location2","required": true},
-                    {"attributeName": "location3","required": true},
-                    {"attributeName": "postalCode","required": false},
-                    {"attributeName": "photo","required": true}
-            ]
+          "authPolicies": [     
+            {"authType": "otp","mandatory": true},
+            {"authType": "demo","mandatory": false},
+            {"authType": "bio","authSubType": "FINGER","mandatory": true},
+            {"authType": "bio","authSubType": "IRIS","mandatory": true},
+            {"authType": "bio","authSubType": "FACE","mandatory": false},
+            {"authType": "kyc","mandatory": false}
+          ],
+          "allowedKycAttributes": [  
+            {"attributeName": "fullName","required": true},
+            {"attributeName": "dateOfBirth","required": true},
+            {"attributeName": "gender","required": true},
+            {"attributeName": "phone","required": true},
+            {"attributeName": "email","required": true},
+            {"attributeName": "addressLine1","required": true},
+            {"attributeName": "addressLine2","required": true},
+            {"attributeName": "addressLine3","required": true},
+            {"attributeName": "location1","required": true},
+            {"attributeName": "location2","required": true},
+            {"attributeName": "location3","required": true},
+            {"attributeName": "postalCode","required": false},
+            {"attributeName": "photo","required": true}
+          ]
         }
-       }
-     ]
-    },
+      }
+    ]
+  },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: No Active policy available in the Policy Group
+**Description**: No Active policy available in the Policy Group
 ```JSON
 {
   "id": "mosip.partnermanagement.partner.policies",
@@ -1449,6 +1443,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -1463,7 +1458,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve existing policy for a policy group based on the policy id.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/policies/policyId/{policyID}`
+`https://{base_url}/partnermanagement/v1/policies/policyId/{policyID}`
 
 #### Resource details
 Resource Details | Description
@@ -1481,62 +1476,60 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: policy retrieved successfully
+**Description**: policy retrieved successfully
 ```JSON
 {
   "id": "mosip.partnermanagement.policy.retrieve",
   "version": "1.0",
   "responsetime": "2019-05-15T16:01:20.534Z",
   "response":{
-        "id": "45678451034176",
-        "name": "Loan Policy",
-        "desc": "Desc about policy",
-        "is_Active": true,
-        "cr_by": "MOSIP",
-        "cr_dtimes": "2019-05-14T16:01:20.534Z",
-        "up_by": "MOSIP",
-        "upd_dtimes": "2019-05-15T16:01:20.534Z",
-        "policies": {
-            "authPolicies": [     
-                    {"authType": "otp","mandatory": true},
-                    {"authType": "demo","mandatory": false},
-                    {"authType": "bio","authSubType": "FINGER","mandatory": true},
-                    {"authType": "bio","authSubType": "IRIS","mandatory": false},
-                    {"authType": "bio","authSubType": "FACE","mandatory": false},
-                    {"authType": "kyc","mandatory": false}
-            ],
-            "allowedKycAttributes": [  
-                    {"attributeName": "fullName","required": true},
-                    {"attributeName": "dateOfBirth","required": true},
-                    {"attributeName": "gender","required": true},
-                    {"attributeName": "phone","required": true},
-                    {"attributeName": "email","required": true},
-                    {"attributeName": "addressLine1","required": true},
-                    {"attributeName": "addressLine2","required": true},
-                    {"attributeName": "addressLine3","required": true},
-                    {"attributeName": "location1","required": true},
-                    {"attributeName": "location2","required": true},
-                    {"attributeName": "location3","required": true},
-                    {"attributeName": "postalCode","required": false},
-                    {"attributeName": "photo","required": true}
-            ]
-        }
-    },
+    "id": "45678451034176",
+    "name": "Loan Policy",
+    "desc": "Desc about policy",
+    "is_Active": true,
+    "cr_by": "MOSIP",
+    "cr_dtimes": "2019-05-14T16:01:20.534Z",
+    "up_by": "MOSIP",
+    "upd_dtimes": "2019-05-15T16:01:20.534Z",
+    "policies": {
+      "authPolicies": [     
+        {"authType": "otp","mandatory": true},
+        {"authType": "demo","mandatory": false},
+        {"authType": "bio","authSubType": "FINGER","mandatory": true},
+        {"authType": "bio","authSubType": "IRIS","mandatory": false},
+        {"authType": "bio","authSubType": "FACE","mandatory": false},
+        {"authType": "kyc","mandatory": false}
+      ],
+      "allowedKycAttributes": [  
+        {"attributeName": "fullName","required": true},
+        {"attributeName": "dateOfBirth","required": true},
+        {"attributeName": "gender","required": true},
+        {"attributeName": "phone","required": true},
+        {"attributeName": "email","required": true},
+        {"attributeName": "addressLine1","required": true},
+        {"attributeName": "addressLine2","required": true},
+        {"attributeName": "addressLine3","required": true},
+        {"attributeName": "location1","required": true},
+        {"attributeName": "location2","required": true},
+        {"attributeName": "location3","required": true},
+        {"attributeName": "postalCode","required": false},
+        {"attributeName": "photo","required": true}
+      ]
+    }
+  },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: If policy ID does not exist
+**Description**: If policy ID does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.policy.retrieve",
@@ -1551,6 +1544,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -1567,7 +1561,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve the partner policy details for given PartnerAPIKey. 
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/policies/partnerApiKey/fa604-affcd-33201-04770`
+`https://{base_url}/partnermanagement/v1/policies/partnerApiKey/fa604-affcd-33201-04770`
 
 #### Resource details
 Resource Details | Description
@@ -1585,62 +1579,60 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: retrieve the partner policy details for given PartnerAPIKey successful
+**Description**: retrieve the partner policy details for given PartnerAPIKey successful
 ```JSON
 {
   "id": "mosip.partnermanagement.policies.retrieve.partnerAPIKey",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-        "id": "32058251034176",
-        "name": "Insurance Policy",
-        "desc": "Desc about policy",
-        "is_Active": true,
-        "cr_by": "MOSIP",
-        "cr_dtimes": "2019-05-14T16:01:20.534Z",
-        "up_by": null,
-        "upd_dtimes": null,
-        "policies": {
-            "authPolicies": [     
-                    {"authType": "otp","mandatory": true},
-                    {"authType": "demo","mandatory": false},
-                    {"authType": "bio","authSubType": "FINGER","mandatory": true},
-                    {"authType": "bio","authSubType": "IRIS","mandatory": false},
-                    {"authType": "bio","authSubType": "FACE","mandatory": false},
-                    {"authType": "kyc","mandatory": false}
-            ],
-            "allowedKycAttributes": [  
-                    {"attributeName": "fullName","required": true},
-                    {"attributeName": "dateOfBirth","required": true},
-                    {"attributeName": "gender","required": true},
-                    {"attributeName": "phone","required": true},
-                    {"attributeName": "email","required": true},
-                    {"attributeName": "addressLine1","required": true},
-                    {"attributeName": "addressLine2","required": true},
-                    {"attributeName": "addressLine3","required": true},
-                    {"attributeName": "location1","required": true},
-                    {"attributeName": "location2","required": true},
-                    {"attributeName": "location3","required": true},
-                    {"attributeName": "postalCode","required": false},
-                    {"attributeName": "photo","required": true}
-            ]
-        }
-    },
+    "id": "32058251034176",
+    "name": "Insurance Policy",
+    "desc": "Desc about policy",
+    "is_Active": true,
+    "cr_by": "MOSIP",
+    "cr_dtimes": "2019-05-14T16:01:20.534Z",
+    "up_by": null,
+    "upd_dtimes": null,
+    "policies": {
+      "authPolicies": [     
+        {"authType": "otp","mandatory": true},
+        {"authType": "demo","mandatory": false},
+        {"authType": "bio","authSubType": "FINGER","mandatory": true},
+        {"authType": "bio","authSubType": "IRIS","mandatory": false},
+        {"authType": "bio","authSubType": "FACE","mandatory": false},
+        {"authType": "kyc","mandatory": false}
+      ],
+      "allowedKycAttributes": [  
+        {"attributeName": "fullName","required": true},
+        {"attributeName": "dateOfBirth","required": true},
+        {"attributeName": "gender","required": true},
+        {"attributeName": "phone","required": true},
+        {"attributeName": "email","required": true},
+        {"attributeName": "addressLine1","required": true},
+        {"attributeName": "addressLine2","required": true},
+        {"attributeName": "addressLine3","required": true},
+        {"attributeName": "location1","required": true},
+        {"attributeName": "location2","required": true},
+        {"attributeName": "location3","required": true},
+        {"attributeName": "postalCode","required": false},
+        {"attributeName": "photo","required": true}
+      ]
+    }
+  },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: No policy available for given PartnerAPIKey
+**Description**: No policy available for given PartnerAPIKey
 ```JSON
 {
   "id": "mosip.partnermanagement.policies.retrieve.partnerAPIKey",
@@ -1655,6 +1647,7 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   ]
 }
 ```
+
 #### Other Failure details
 Error Code | Error Message | Error Description
 -----|----------|-------------
@@ -1684,7 +1677,7 @@ This service enables partner managers to manage respective partners, manage part
 This API would be used by partner Manager, to update Partner api key to Policy Mappings.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}/{PartnerAPIKey}`
+`https://{base_url}/partnermanagement/v1/pmpartners/{partnerID}/{PartnerAPIKey}`
 
 #### Resource details
 Resource Details | Description
@@ -1714,7 +1707,7 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.policy.mapping",
@@ -1722,36 +1715,34 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-     "oldPolicyID":"54662345634232", 
-     "newPolicyID":"45662345639999"
+    "oldPolicyID":"54662345634232", 
+    "newPolicyID":"45662345639999"
   }
 }
 ```
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: Partner api key to Policy Mappings updated successfully.
+**Description**: Partner api key to Policy Mappings updated successfully.
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.policy.mapping",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-       "message": "Partner api key to Policy Mappings updated successfully"
+    "message": "Partner api key to Policy Mappings updated successfully"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: old/new Policy %d does not exist
+**Description**: old/new Policy %d does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.policy.mapping",
@@ -1786,7 +1777,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to activate/deactivate Auth/E-KYC Partners
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}`
+`https://{base_url}/partnermanagement/v1/pmpartners/{partnerID}`
 
 #### Resource details
 Resource Details | Description
@@ -1813,8 +1804,7 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.status.update",
@@ -1822,33 +1812,34 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-      "status": "De-Active"
+    "status": "De-Active"
   }
 }
 ```
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
 
-###### Status code: '200'
+**Status code**: 200
 
-###### Description: Partner status updated successfully.
+**Description**: Partner status updated successfully.
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.status.update",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-       "message": "Partner status updated successfully"
+    "message": "Partner status updated successfully"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: Requested partner ID does not exist
+##### Failure Response
+**Status code**: 200
+
+**Description**: Requested partner ID does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.status.update",
@@ -1880,7 +1871,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 Partner Manager would be using this API to activate OR de-activate PartnerAPIKey for given partner.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}/{PartnerAPIKey}`
+`https://{base_url}/partnermanagement/v1/pmpartners/{partnerID}/{PartnerAPIKey}`
 
 #### Resource details
 Resource Details | Description
@@ -1908,8 +1899,7 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.apikeystatus.update",
@@ -1917,33 +1907,33 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-      "status": "Active"
+    "status": "Active"
   }
 }
 ```
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: PartnerAPIKey status updated successfully.
+**Description**: PartnerAPIKey status updated successfully.
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.apikeystatus.update",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-       "message": "Partner API Key status updated successfully"
+    "message": "Partner API Key status updated successfully"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: Requested Partner API Key does not exist
+##### Failure Response
+**Status code**: 200
+
+**Description**: Requested Partner API Key does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.apikeystatus.update",
@@ -1979,7 +1969,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 Partner Manager would be using this API to approve OR reject partner API key requests based on API key request id. During approval process of the request unique PartnerAPI Key is generated in Partner Management module, which is mapped to requested policies. Partner API Key would be having default active status, expiry of which would configurable.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/pmpartners/PartnerAPIKeyRequests/{APIKeyReqID}`
+`https://{base_url}/partnermanagement/v1/pmpartners/PartnerAPIKeyRequests/{APIKeyReqID}`
 
 #### Resource details
 Resource Details | Description
@@ -2006,8 +1996,7 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.apikey.approval",
@@ -2015,33 +2004,33 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-      "status": "Approved"
+    "status": "Approved"
   }
 }
 ```
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: PartnerAPIKey approved successfully.
+**Description**: PartnerAPIKey approved successfully.
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.apikeystatus.update",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-       "message": "PartnerAPIKey approved successfully"
+    "message": "PartnerAPIKey approved successfully"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: Requested Partner API Key Request ID does not exist
+##### Failure Response
+**Status code**: 200
+
+**Description**: Requested Partner API Key Request ID does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.apikeystatus.update",
@@ -2070,21 +2059,21 @@ PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attr
 PMS_COR_003|Could not process the request|Any Internal Error
 
 ### GET /pmpartners/validatePartnerMisp/partnerId/{partnerId}/partnerApiKey/{partner_api_key}/mispLicenseKey/{misp_license_key}
-Partner managers would be using this request to retrive the policy mapping to partner and partner api key. Partner management system would be able to validate     the following.
+Partner managers would be using this request to retrive the policy mapping to partner and partner api key. Partner management system would be able to validate the following.
 
-        1.Validates if the status of the MISP License Key is active.
-        2.Retrieves the MISP status corresponding to the MISP License key in the request.
-        3.Validates if the status of MISP is active.
-        4.Validates if the status of the Partner ID is active
-        5.Validates the length and pattern of the Partner API Key.
-        6.Validates if the status of Partner API Key is active.
-        7.Validates if the Partner API key belong to the partner.
-        8.Retrieves the policy ID mapped to the Partner API key.
+1. Validates if the status of the MISP License Key is active.
+2. Retrieves the MISP status corresponding to the MISP License key in the request.
+3. Validates if the status of MISP is active.
+4. Validates if the status of the Partner ID is active
+5. Validates the length and pattern of the Partner API Key.
+6. Validates if the status of Partner API Key is active.
+7. Validates if the Partner API key belong to the partner.
+8. Retrieves the policy ID mapped to the Partner API key.
         
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/pmpartners/validatePartnerMisp/partnerId/{partnerId}/partnerApiKey/{partner_api_key}/mispLicenseKey/{misp_license_key}`
+`https://{base_url}/partnermanagement/v1/pmpartners/validatePartnerMisp/partnerId/{partnerId}/partnerApiKey/{partner_api_key}/mispLicenseKey/{misp_license_key}`
 
-### Resource details
+#### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
@@ -2103,80 +2092,83 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token |
 Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
-##### Success Response:
-###### Status Code: '200'
-###### Description: Successfully retrives policies mapped to partner and partner api key.
+#### Responses
+
+##### Success Response
+**Status code**: 200
+
+**Description**: Successfully retrives policies mapped to partner and partner api key.
 ```JSON
 {
-    "id": null,
-    "version": null,
-    "responsetime": "2020-04-15T11:47:55.578Z",
-    "metadata": null,
-    "response": {
-        "policyId": "31",
-        "policyName": "Full Kyc",
-        "policyDescription": "Desc about policy",
-        "policyStatus": true,
-        "policy": {
-            "policyId": "31",
-            "policies": {
-                "authPolicies": [
-                    {
-                        "authType": "otp",
-                        "authSubType": null,
-                        "mandatory": false
-                    },
-                    {
-                        "authType": "demo",
-                        "authSubType": null,
-                        "mandatory": true
-                    },                   
-                    {
-                        "authType": "kyc",
-                        "authSubType": null,
-                        "mandatory": false
-                    }
-                ],
-                "allowedKycAttributes": [
-                    {
-                        "attributeName": "fullName",
-                        "required": true
-                    },
-                    {
-                        "attributeName": "dateOfBirth",
-                        "required": true
-                    },
-                    {
-                        "attributeName": "gender",
-                        "required": true
-                    }                  
-                ]
-            }
-        },
-        "partnerId": "320216",
-        "partnerName": "Vodafone"
+  "id": null,
+  "version": null,
+  "responsetime": "2020-04-15T11:47:55.578Z",
+  "metadata": null,
+  "response": {
+    "policyId": "31",
+    "policyName": "Full Kyc",
+    "policyDescription": "Desc about policy",
+    "policyStatus": true,
+    "policy": {
+      "policyId": "31",
+      "policies": {
+        "authPolicies": [
+          {
+            "authType": "otp",
+            "authSubType": null,
+            "mandatory": false
+          },
+          {
+            "authType": "demo",
+            "authSubType": null,
+            "mandatory": true
+          },
+          {
+            "authType": "kyc",
+            "authSubType": null,
+            "mandatory": false
+          }
+        ],
+        "allowedKycAttributes": [
+          {
+            "attributeName": "fullName",
+            "required": true
+          },
+          {
+            "attributeName": "dateOfBirth",
+            "required": true
+          },
+          {
+            "attributeName": "gender",
+            "required": true
+          }
+        ]
+      }
     },
-    "errors": null
+    "partnerId": "320216",
+    "partnerName": "Vodafone"
+  },
+  "errors": null
 }
 ```
 
-##### Failure Response:
-###### Status Code: '200'
-###### Description: misp license expired.
+##### Failure Response
+**Status code**: 200
+
+**Description**: misp license expired.
 ```JSON
 {
-    "id": "mosip.partnermanagement.partners.retrieve",
-    "version": "1.0",
-    "responsetime": "2020-04-15T12:04:27.367Z",
-    "metadata": null,
-    "response": null,
-    "errors": [
-        {
-            "errorCode": "PMS_PMP_021",
-            "message": "MISP license key is expired."
-        }
-    ]
+  "id": "mosip.partnermanagement.partners.retrieve",
+  "version": "1.0",
+  "responsetime": "2020-04-15T12:04:27.367Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "PMS_PMP_021",
+      "message": "MISP license key is expired."
+    }
+  ]
 }
 ```
 
@@ -2194,7 +2186,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve all Auth/E-KYC Partners for the policy group.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/pmpartners`
+`https://{base_url}/partnermanagement/v1/pmpartners`
 
 #### Resource details
 Resource Details | Description
@@ -2207,47 +2199,45 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: retrieve the partner details for the particular policy group.
+**Description**: retrieve the partner details for the particular policy group.
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.retrieve",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
-  "response":{
-         "partners" : [
-            {
-               "partnerID":"65432345634232", 
-               "status":"Active", 
-               "organizationName":"telecomAirtel",
-               "contactNumber":"9876545654", 
-               "emailID":"telecomAirtel@gmail.com", 
-               "address":"India"
-            },
-            {
-               "partnerID":"87652345634232", 
-               "status":"Active", 
-               "organizationName":"telecomJio",
-               "contactNumber":"9988774654", 
-               "emailID":"telecomJio@gmail.com", 
-               "address":"India"
-            }
-        ]    
+  "response": {
+    "partners": [
+      {
+        "partnerID": "65432345634232",
+        "status": "Active",
+        "organizationName": "telecomAirtel",
+        "contactNumber": "9876545654",
+        "emailID": "telecomAirtel@gmail.com",
+        "address": "India"
+      },
+      {
+        "partnerID": "87652345634232",
+        "status": "Active",
+        "organizationName": "telecomJio",
+        "contactNumber": "9988774654",
+        "emailID": "telecomJio@gmail.com",
+        "address": "India"
+      }
+    ]
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: No partner Registered in the policy Group
+**Description**: No partner Registered in the policy Group
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.retrieve",
@@ -2278,7 +2268,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve the particular Auth/E-KYC Partner details for given partner id. 
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}`
+`https://{base_url}/partnermanagement/v1/pmpartners/{partnerID}`
 
 #### Resource details
 Resource Details | Description
@@ -2296,35 +2286,33 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: retrieve the partner details for the particular policy group.
+**Description**: retrieve the partner details for the particular policy group.
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.retrieve",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-        "partnerID":"87652345634232", 
-        "status":"Active", 
-        "organizationName":"telecomJio",
-        "contactNumber":"9988774654", 
-        "emailID":"telecomJio@gmail.com", 
-        "address":"India"    
+    "partnerID":"87652345634232", 
+    "status":"Active", 
+    "organizationName":"telecomJio",
+    "contactNumber":"9988774654", 
+    "emailID":"telecomJio@gmail.com", 
+    "address":"India"    
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: Requested partner does not exist
+**Description**: Requested partner does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.retrieve",
@@ -2355,7 +2343,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 Partner managers would be using this request to retrieve the Partner API key to Policy Mappings. Partner management system would be able to validate Partner API Key pattern, validate expiry for Partner API Key and status details in background, while fetching Policy to Partner API mappings.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/pmpartners/{partnerID}/{PartnerAPIKey}`
+`https://{base_url}/partnermanagement/v1/pmpartners/{partnerID}/{PartnerAPIKey}`
 
 #### Resource details
 Resource Details | Description
@@ -2369,37 +2357,34 @@ Name | Required | Description | Comment
 partnerID |Yes| partnerID |87652345634232
 PartnerAPIKey|Yes|PartnerAPIKey|fa604-affcd-33201-04770
 
-
 #### Request Header 
 Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: successfully retrieved the Partner API key to Policy Mappings.
+**Description**: successfully retrieved the Partner API key to Policy Mappings.
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.retrieve.policy",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-        "partnerID":"87652345634232",
-        "policyId":"77862345634232"
+    "partnerID":"87652345634232",
+    "policyId":"77862345634232"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: Requested partner does not exist
+**Description**: Requested partner does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.retrieve.policy",
@@ -2431,7 +2416,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve all Partner API Key requests as received by partner manager
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/pmpartners/PartnerAPIKeyRequests`
+`https://{base_url}/partnermanagement/v1/pmpartners/PartnerAPIKeyRequests`
 
 #### Resource details
 Resource Details | Description
@@ -2444,47 +2429,45 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: successfully retrieved the Partner API key to Policy Mappings.
+**Description**: successfully retrieved the Partner API key to Policy Mappings.
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.apikey.request.retrieve",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
-  "response":{
-       "apikeyRequests" : [
-         {
-            "partnerID":"87652345634232", 
-            "status":"Active", 
-            "organizationName":"telecomJio",
-            "policyName": "Insurance Policy",
-            "policyDesc": "Desc about policy",
-            "apiKeyReqNo":"873276828663"
-         },
-         {
-            "partnerID":"67678856342329", 
-            "status":"Active", 
-            "organizationName":"airtelInd",
-            "policyName": "Banking Policy",
-            "policyDesc": "Desc about policy",
-            "apiKeyReqNo":"903276828609"
-         }
-       ]      
+  "response": {
+    "apikeyRequests": [
+      {
+        "partnerID": "87652345634232",
+        "status": "Active",
+        "organizationName": "telecomJio",
+        "policyName": "Insurance Policy",
+        "policyDesc": "Desc about policy",
+        "apiKeyReqNo": "873276828663"
+      },
+      {
+        "partnerID": "67678856342329",
+        "status": "Active",
+        "organizationName": "airtelInd",
+        "policyName": "Banking Policy",
+        "policyDesc": "Desc about policy",
+        "apiKeyReqNo": "903276828609"
+      }
+    ]
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: No Partner api key requests for the Policy Group
+**Description**: No Partner api key requests for the Policy Group
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.apikey.request.retrieve",
@@ -2515,7 +2498,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve the request for Partner API key to Policy Mappings for given request id
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/pmpartners/PartnerAPIKeyRequests/{APIKeyReqID}`
+`https://{base_url}/partnermanagement/v1/pmpartners/PartnerAPIKeyRequests/{APIKeyReqID}`
 
 #### Resource details
 Resource Details | Description
@@ -2533,34 +2516,32 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: successfully retrieved the Partner API key requests for the partner manager.
+**Description**: successfully retrieved the Partner API key requests for the partner manager.
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.apikey.requests.retrieve",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
-  "response":{
-            "partnerID":"87652345634232", 
-            "status":"Active", 
-            "organizationName":"telecomJio",
-            "policyName": "Insurance Policy",
-            "policyDesc": "Desc about policy"
+  "response": {
+    "partnerID": "87652345634232",
+    "status": "Active",
+    "organizationName": "telecomJio",
+    "policyName": "Insurance Policy",
+    "policyDesc": "Desc about policy"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: No Partner api key requests for the Policy Group
+**Description**: No Partner api key requests for the Policy Group
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.apikey.request.retrieve",
@@ -2601,14 +2582,13 @@ This service enables partners to do self registration, submit request for respec
 * [GET /partners/{partnerID}/partnerAPIKeyRequests/{APIKeyReqID}](#get-partnerspartneridpartnerapikeyrequestsapikeyreqid)
 * [GET /partners/digitalcertificate](#get-partnersdigitalcertificate)
 
-
 ### POST /partners
 This API would be used for self registration by partner to create Auth/E-KYC Partners. Partner Management module would be integrating with Kernel IAM module for generation of userid and password for partners. 
 * User id, as received in response from Kernel IAM module, are stored in partner management database as reference and shared back to partners in response for further communication with MOSIP systems.
 * Password for any userid would be shared via an off-line process.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/partners`
+`https://{base_url}/partnermanagement/v1/partners`
 
 #### Resource details
 Resource Details | Description
@@ -2634,8 +2614,7 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.create",
@@ -2643,38 +2622,38 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-        "organizationName":"airtelInd", 
-        "contactNumber":"9886779980", 
-        "emailID":"airtelInd@gmail.com", 
-        "address":"INDIA",
-        "policyGroup":"Banking"
+    "organizationName":"airtelInd", 
+    "contactNumber":"9886779980", 
+    "emailID":"airtelInd@gmail.com", 
+    "address":"INDIA",
+    "policyGroup":"Banking"
   }
 }
 ```
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: Partner successfully created.
+**Description**: Partner successfully created.
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.create",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-        "partnerID":"6565655443544", 
-        "status":"Active"
+    "partnerID":"6565655443544", 
+    "status":"Active"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: A Partner is already registered with name ”+ Partner Organization Name+ “ in the policy Group +Policy Group
+##### Failure Response
+**Status code**: 200
+
+**Description**: A Partner is already registered with name ”+ Partner Organization Name+ “ in the policy Group +Policy Group
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.create",
@@ -2683,8 +2662,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-        "errorCode": "PMS_PRT_001",
-        "message": "A Partner is already registered with name 'airtelInd' in the policy Group 'Banking'.
+      "errorCode": "PMS_PRT_001",
+      "message": "A Partner is already registered with name 'airtelInd' in the policy Group 'Banking'.
     }
   ]
 }
@@ -2703,7 +2682,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to submit Partner api key request.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests`
+`https://{base_url}/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests`
 
 #### Resource details
 Resource Details | Description
@@ -2731,8 +2710,7 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.partnerAPIKeyRequest.create",
@@ -2740,37 +2718,35 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-        "policyName":"airtelIndPolicy", 
-        "useCaseDescription":"Need to submit the payment"
+    "policyName":"airtelIndPolicy", 
+    "useCaseDescription":"Need to submit the payment"
   }
 }
 ```
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: partnerAPIKeyRequest successfully created.
+**Description**: partnerAPIKeyRequest successfully created.
 ```JSON
 {
   "id": "mosip.partnermanagement.partnerAPIKeyRequest.create",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-        "apiRequestId":"873276828663",
-        "message":"partnerAPIKeyRequest successfully created"
+    "apiRequestId":"873276828663",
+    "message":"partnerAPIKeyRequest successfully created"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: A Partner is already registered with name ”+ Partner Organization Name+ “ in the policy Group +Policy Group
+**Description**: A Partner is already registered with name ”+ Partner Organization Name+ “ in the policy Group +Policy Group
 ```JSON
 {
   "id": "mosip.partnermanagement.partnerAPIKeyRequest.create",
@@ -2779,8 +2755,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-        "errorCode": "PMS_PRT_001",
-        "message": "A Partner is already registered with name 'airtelInd' in the policy Group 'Banking'.
+      "errorCode": "PMS_PRT_001",
+      "message": "A Partner is already registered with name 'airtelInd' in the policy Group 'Banking'.
     }
   ]
 }
@@ -2802,7 +2778,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to download Partner API key for the given APIKeyReqID
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests/{APIKeyReqID}`
+`https://{base_url}/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests/{APIKeyReqID}`
 
 #### Resource details
 Resource Details | Description
@@ -2821,30 +2797,28 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: successfully retrieved the partnerAPIKey.
+**Description**: successfully retrieved the partnerAPIKey.
 ```JSON
 {
   "id": "mosip.partnermanagement.partnerAPIKey.download",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-        "partnerAPIKey":"fa604-affcd-33201-04770"
+    "partnerAPIKey":"fa604-affcd-33201-04770"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: APIKeyReqID does not exist
+**Description**: APIKeyReqID does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.partnerAPIKey.download",
@@ -2853,8 +2827,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-        "errorCode": "PMS_PRT_005",
-        "message": "APIKeyReqID does not exist"
+      "errorCode": "PMS_PRT_005",
+      "message": "APIKeyReqID does not exist"
     }
   ]
 }
@@ -2878,13 +2852,12 @@ Partners would be procuring digital certificates from Certification Authority (C
 * IDA would be using partner provided public keys for encryption of e-kyc response. Partner management module would be using Kernel services for partner key management, encryption/decryption and sharing of keys.
 
 Following Kernel services would be utilized for certificate and key management activities:
-* [Kernel Key Manager](https://github.com/mosip/mosip-docs/wiki/Kernel-APIs#key-manager-private)
-* [Kernel Crypto Manager](https://github.com/mosip/mosip-docs/wiki/Kernel-APIs#crypto-manager-private)
-* [Crypto Signature Service](https://github.com/mosip/mosip-docs/wiki/Kernel-APIs#crypto-signature-service-private)
+* [Kernel Key Manager](Kernel-APIs.md#key-manager-private)
+* [Kernel Crypto Manager](Kernel-APIs.md#crypto-manager-private)
+* [Crypto Signature Service](Kernel-APIs.md#crypto-signature-service-private)
 
-   
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/partners/digitalcertificate`
+`https://{base_url}/partnermanagement/v1/partners/digitalcertificate`
 
 #### Resource details
 Resource Details | Description
@@ -2906,8 +2879,7 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.certificate.upload",
@@ -2915,43 +2887,41 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-        "partnerCertificate":"MIIFtjCCA56gAwIBAgIJAP1p0BePP1CFMA0GCSqGSIb3DQEBCwUAMHAxCzAJBgNV
-                            UUTHNkNaMRcwFQYDVQQIDA5DemVjaCBSZXB1YmxpYzELMAkGA1UEBwwCQ0IxITAf
-                            BgNVBAoMGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDEYMBYGA1UEAwwPUkVTVCBB
-                            UEkgU0VSVkVSMB4XDTE4MTAwNjIxMTQyMVoXDTI4MTAwMzIxMTQyMVowcDELMAkG
-                            A1UEBhMCQ1oxFzAVBgNVBAgMDkN6ZWNoIFJlcHVibGljMQswCQYDVQQHDAJDQjEh
-                            MB8GA1UECgwYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMRgwFgYDVQQDDA9SRVNU
-                            IEFQSSBTRVJWRVIwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDF0BqJ
-                            htgl5JJZM3zwDNN5l7rWcnN0Gp0A0fKY/rfyuSR/mQJ2W2DkX2ISvvRHaNsVwpVb
-                            9Z1T0Dqa3RxgaGbgdc1AtTAAMzHWiPzCNtU="
+    "partnerCertificate":"MIIFtjCCA56gAwIBAgIJAP1p0BePP1CFMA0GCSqGSIb3DQEBCwUAMHAxCzAJBgNV
+						  UUTHNkNaMRcwFQYDVQQIDA5DemVjaCBSZXB1YmxpYzELMAkGA1UEBwwCQ0IxITAf
+                          BgNVBAoMGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDEYMBYGA1UEAwwPUkVTVCBB
+                          UEkgU0VSVkVSMB4XDTE4MTAwNjIxMTQyMVoXDTI4MTAwMzIxMTQyMVowcDELMAkG
+                          A1UEBhMCQ1oxFzAVBgNVBAgMDkN6ZWNoIFJlcHVibGljMQswCQYDVQQHDAJDQjEh
+                          MB8GA1UECgwYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMRgwFgYDVQQDDA9SRVNU
+                          IEFQSSBTRVJWRVIwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDF0BqJ
+                          htgl5JJZM3zwDNN5l7rWcnN0Gp0A0fKY/rfyuSR/mQJ2W2DkX2ISvvRHaNsVwpVb
+                          9Z1T0Dqa3RxgaGbgdc1AtTAAMzHWiPzCNtU="
   }
 }
 ```
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: successfully uploaded partner's digital certificate
+**Description**: successfully uploaded partner's digital certificate
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.certificate.upload",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-        "message":"successfully uploaded partner's digital certificate"
+    "message":"successfully uploaded partner's digital certificate"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: Partner digital certificate is not valid
+**Description**: Partner digital certificate is not valid
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.retrieve",
@@ -2960,8 +2930,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-        "errorCode": "PMS_PRT_007",
-        "message": "Partner digital certificate is not valid"
+      "errorCode": "PMS_PRT_007",
+      "message": "Partner digital certificate is not valid"
     }
   ]
 }
@@ -2981,7 +2951,7 @@ PMS_COR_002|Invalid Input Parameter - %d |Invalid Input Parameter - for all attr
 This API would be used to update Auth/E-KYC Partner's details.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/partners/{partnerID}`
+`https://{base_url}/partnermanagement/v1/partners/{partnerID}`
 
 #### Resource details
 Resource Details | Description
@@ -3012,7 +2982,7 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.update",
@@ -3020,37 +2990,37 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-        "organizationName":"airtelInd", 
-        "contactNumber":"9886779980", 
-        "emailID":"airtelInd@gmail.com", 
-        "address":"Bangalore,INDIA",
+    "organizationName":"airtelInd", 
+    "contactNumber":"9886779980", 
+    "emailID":"airtelInd@gmail.com", 
+    "address":"Bangalore,INDIA",
   }
 }
 ```
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: Partner successfully updated.
+**Description**: Partner successfully updated.
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.update",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-        "partnerID":"6565655443544", 
-        "status":"Active"
+    "partnerID":"6565655443544", 
+    "status":"Active"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
-###### Status code: '200'
-###### Description: A Partner is already registered with name ”+ Partner Organization Name+ “ in the policy Group +Policy Group
+##### Failure Response
+**Status code**: 200
+
+**Description**: A Partner is already registered with name ”+ Partner Organization Name+ “ in the policy Group +Policy Group
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.update",
@@ -3059,8 +3029,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-        "errorCode": "PMS_PRT_001",
-        "message": "A Partner is already registered with name 'airtelInd' in the policy Group 'Banking'.
+      "errorCode": "PMS_PRT_001",
+	  "message": "A Partner is already registered with name 'airtelInd' in the policy Group 'Banking'.
     }
   ]
 }
@@ -3080,9 +3050,10 @@ PMS_COR_003|Could not process the request|Any Internal Error
 ### PUT /partners/digitalcertificate
 As the MOSIP system Partner Management module would integrate with Kernel for validation of partner's digital certificate.
 In case where MOSIP would act as certification authority for partners, MOSIP would be able to sign and resign partner digital certificates. Partner management module would depend on Kernel services for signing and re-signing of partner digital certificates.
-Kernel Signature service would be utilized to validate signature : [Kernel Signature Service](https://github.com/mosip/mosip-platform/tree/master/kernel/kernel-signature-service)
+Kernel Signature service would be utilized to validate signature : [Kernel Signature Service](https://github.com/mosip/commons/tree/master/kernel/kernel-crypto-signature)
+
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/partners/digitalcertificate`
+`https://{base_url}/partnermanagement/v1/partners/digitalcertificate`
 
 #### Resource details
 Resource Details | Description
@@ -3105,7 +3076,7 @@ Name | Required | Description | Comment
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
 
-#### Request:
+#### Request
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.certificate.validate",
@@ -3113,43 +3084,41 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "requesttime": "2019-05-20T09:48:43.394Z",
   "metadata": {},
   "request": {
-        "partnerCertificate":"MIIFtjCCA56gAwIBAgIJAP1p0BePP1CFMA0GCSqGSIb3DQEBCwUAMHAxCzAJBgNV
-                            UUTHNkNaMRcwFQYDVQQIDA5DemVjaCBSZXB1YmxpYzELMAkGA1UEBwwCQ0IxITAf
-                            BgNVBAoMGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDEYMBYGA1UEAwwPUkVTVCBB
-                            UEkgU0VSVkVSMB4XDTE4MTAwNjIxMTQyMVoXDTI4MTAwMzIxMTQyMVowcDELMAkG
-                            A1UEBhMCQ1oxFzAVBgNVBAgMDkN6ZWNoIFJlcHVibGljMQswCQYDVQQHDAJDQjEh
-                            MB8GA1UECgwYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMRgwFgYDVQQDDA9SRVNU
-                            IEFQSSBTRVJWRVIwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDF0BqJ
-                            htgl5JJZM3zwDNN5l7rWcnN0Gp0A0fKY/rfyuSR/mQJ2W2DkX2ISvvRHaNsVwpVb
-                            9Z1T0Dqa3RxgaGbgdc1AtTAAMzHWiPzCNtU="
+    "partnerCertificate":"MIIFtjCCA56gAwIBAgIJAP1p0BePP1CFMA0GCSqGSIb3DQEBCwUAMHAxCzAJBgNV
+                        UUTHNkNaMRcwFQYDVQQIDA5DemVjaCBSZXB1YmxpYzELMAkGA1UEBwwCQ0IxITAf
+                        BgNVBAoMGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDEYMBYGA1UEAwwPUkVTVCBB
+                        UEkgU0VSVkVSMB4XDTE4MTAwNjIxMTQyMVoXDTI4MTAwMzIxMTQyMVowcDELMAkG
+                        A1UEBhMCQ1oxFzAVBgNVBAgMDkN6ZWNoIFJlcHVibGljMQswCQYDVQQHDAJDQjEh
+                        MB8GA1UECgwYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMRgwFgYDVQQDDA9SRVNU
+                        IEFQSSBTRVJWRVIwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDF0BqJ
+                        htgl5JJZM3zwDNN5l7rWcnN0Gp0A0fKY/rfyuSR/mQJ2W2DkX2ISvvRHaNsVwpVb
+                        9Z1T0Dqa3RxgaGbgdc1AtTAAMzHWiPzCNtU="
   }
 }
 ```
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: successfully validated partner's digital certificate
+**Description**: successfully validated partner's digital certificate
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.certificate.upload",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-        "message":"successfully validated partner's digital certificate"
+    "message":"successfully validated partner's digital certificate"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: Partner digital certificate is not valid
+**Description**: Partner digital certificate is not valid
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.retrieve",
@@ -3158,8 +3127,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-        "errorCode": "PMS_PRT_007",
-        "message": "Partner digital certificate is not valid"
+      "errorCode": "PMS_PRT_007",
+      "message": "Partner digital certificate is not valid"
     }
   ]
 }
@@ -3180,7 +3149,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve Auth/E-KYC Partner details.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/partners/{partnerID}`
+`https://{base_url}/partnermanagement/v1/partners/{partnerID}`
 
 #### Resource details
 Resource Details | Description
@@ -3198,36 +3167,34 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: successfully retrieved the Partner details.
+**Description**: successfully retrieved the Partner details.
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.retrieve",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-        "partnerID":"6565655443544", 
-        "status":"Active", 
-        "organizationName":"airtelInd", 
-        "contactNumber":"9886779980", 
-        "emailID":"airtelInd@gmail.com", 
-        "address":"INDIA",
-        "policyGroup":"Banking"
+    "partnerID":"6565655443544", 
+    "status":"Active", 
+    "organizationName":"airtelInd", 
+    "contactNumber":"9886779980", 
+    "emailID":"airtelInd@gmail.com", 
+    "address":"INDIA",
+    "policyGroup":"Banking"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: Partner does not exist
+**Description**: Partner does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.retrieve",
@@ -3236,8 +3203,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-        "errorCode": "PMS_PRT_005",
-        "message": "Partner does not exist"
+      "errorCode": "PMS_PRT_005",
+      "message": "Partner does not exist"
     }
   ]
 }
@@ -3257,7 +3224,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to retrieve all API key requests submitted by partner till date.
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests`
+`https://{base_url}/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests`
 
 #### Resource details
 Resource Details | Description
@@ -3275,41 +3242,39 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
-#### Responses:
+#### Responses
 
-##### Success Response:
+##### Success Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: successfully retrieved all Active policies available for my policy group.
+**Description**: successfully retrieved all Active policies available for my policy group.
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.retrieve.apiKeyRequests",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
-  "response":{
-       "APIkeyRequests":[
-            {
-                "apiKeyReqID":"873276828663",
-                "apiKeyRequestStatus":"approved", 
-                "partnerApiKey":"fa604-affcd-33201-04770",
-                "validityTill":"2019-11-01"
-            },
-            {
-                "apiKeyReqID":"900876828663",
-                "apiKeyRequestStatus":"in-progress"
-            }
-        ]
-    },
+  "response": {
+    "APIkeyRequests": [
+      {
+        "apiKeyReqID":"873276828663",
+        "apiKeyRequestStatus":"approved", 
+        "partnerApiKey":"fa604-affcd-33201-04770",
+        "validityTill":"2019-11-01"
+      },
+      {
+        "apiKeyReqID":"900876828663",
+        "apiKeyRequestStatus":"in-progress"
+      }
+    ]
+  },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: No API Key Request found for the partner
+**Description**: No API Key Request found for the partner
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.retrieve.apiKeyRequests",
@@ -3318,8 +3283,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-        "errorCode": "PMS_PRT_008",
-        "message": "No API Key Request found"
+      "errorCode": "PMS_PRT_008",
+      "message": "No API Key Request found"
     }
   ]
 }
@@ -3340,7 +3305,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 This API would be used to view API key request status and API key (in case request is approved).
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests/{APIKeyReqID}`
+`https://{base_url}/partnermanagement/v1/partners/{partnerID}/partnerAPIKeyRequests/{APIKeyReqID}`
 
 #### Resource details
 Resource Details | Description
@@ -3358,33 +3323,30 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
+#### Responses
 
-#### Responses:
+##### Success Response
+**Status code**: 200
 
-##### Success Response:
-
-###### Status code: '200'
-
-###### Description: successfully retrieved Partner api key/partner api key request status
+**Description**: successfully retrieved Partner api key/partner api key request status
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.apikey.status",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-        "apiKeyRequestStatus":"approved", 
-        "partnerApiKey":"fa604-affcd-33201-04770",
-        "validityTill":"2019-11-01"
+    "apiKeyRequestStatus":"approved", 
+    "partnerApiKey":"fa604-affcd-33201-04770",
+    "validityTill":"2019-11-01"
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: APIKeyReqID does not exist
+**Description**: APIKeyReqID does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.apikey.status",
@@ -3393,8 +3355,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-        "errorCode": "PMS_PRT_006",
-        "message": "APIKeyReqID does not exist"
+      "errorCode": "PMS_PRT_006",
+      "message": "APIKeyReqID does not exist"
     }
   ]
 }
@@ -3415,7 +3377,7 @@ PMS_COR_003|Could not process the request|Any Internal Error
 Partners would be required to download MOSIP digital certificates. Partner would be using MOSIP public key (part of MOSIP digital certificate) and MOSIP digital certificate, for establishing secure communication with MOSIP. Partner management module would depend on Kernel services to manage MOSIP digital certificate, sharing and re-issue of digital certificate post expiry, validation, encryption/decryption activities. 
 
 #### Resource URL
-`https://mosip.io/partnermanagement/v1/partners/digitalcertificate`
+`https://{base_url}/partnermanagement/v1/partners/digitalcertificate`
 
 #### Resource details
 Resource Details | Description
@@ -3428,39 +3390,36 @@ Name | Required | Description | Comment
 -----|----------|-------------|--------
 Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyYXZpLmJhbGFqaUBtaW5kdHJlZS5jb20iLCJtb2JpbGUiOiIiLCJtYWlsIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwicm9sZSI6IklORElWSURVQUwiLCJuYW1lIjoicmF2aS5iYWxhamlAbWluZHRyZWUuY29tIiwiaXNPdHBSZXF1aXJlZCI6dHJ1ZSwiaXNPdHBWZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNTYyNTgwMzg0LCJleHAiOjE1NjI1ODYzODR9.eycrDnzPFBnx57wp6v-iXHtFnRxPgOysG3QETnElSswBUH5ojUUCLsn6SeYukIy-rEZ0SOdr9jkLE6A8tNkj4w
 
+#### Responses
 
-#### Responses:
+##### Success Response
+**Status code**: 200
 
-##### Success Response:
-
-###### Status code: '200'
-
-###### Description: successfully retrieved mosip digital certificate
+**Description**: successfully retrieved mosip digital certificate
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.mosip.certificate.download",
   "version": "1.0",
   "responsetime": "2019-05-16T16:01:20.534Z",
   "response":{
-        "moispCertificate":"MIIFtjCCA56gAwIBAgIJAP1p0BePP1CFMA0GCSqGSIb3DQEBCwUAMHAxCzAJBgNV
-                            UUTHNkNaMRcwFQYDVQQIDA5DemVjaCBSZXB1YmxpYzELMAkGA1UEBwwCQ0IxITAf
-                            BgNVBAoMGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDEYMBYGA1UEAwwPUkVTVCBB
-                            UEkgU0VSVkVSMB4XDTE4MTAwNjIxMTQyMVoXDTI4MTAwMzIxMTQyMVowcDELMAkG
-                            A1UEBhMCQ1oxFzAVBgNVBAgMDkN6ZWNoIFJlcHVibGljMQswCQYDVQQHDAJDQjEh
-                            MB8GA1UECgwYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMRgwFgYDVQQDDA9SRVNU
-                            IEFQSSBTRVJWRVIwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDF0BqJ
-                            htgl5JJZM3zwDNN5l7rWcnN0Gp0A0fKY/rfyuSR/mQJ2W2DkX2ISvvRHaNsVwpVb
-                            9Z1T0Dqa3RxgaGbgdc1AtTAAMzHWiPzCNtU="
+    "moispCertificate":"MIIFtjCCA56gAwIBAgIJAP1p0BePP1CFMA0GCSqGSIb3DQEBCwUAMHAxCzAJBgNV
+                        UUTHNkNaMRcwFQYDVQQIDA5DemVjaCBSZXB1YmxpYzELMAkGA1UEBwwCQ0IxITAf
+                        BgNVBAoMGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDEYMBYGA1UEAwwPUkVTVCBB
+                        UEkgU0VSVkVSMB4XDTE4MTAwNjIxMTQyMVoXDTI4MTAwMzIxMTQyMVowcDELMAkG
+                        A1UEBhMCQ1oxFzAVBgNVBAgMDkN6ZWNoIFJlcHVibGljMQswCQYDVQQHDAJDQjEh
+                        MB8GA1UECgwYSW50ZXJuZXQgV2lkZ2l0cyBQdHkgTHRkMRgwFgYDVQQDDA9SRVNU
+                        IEFQSSBTRVJWRVIwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQDF0BqJ
+                        htgl5JJZM3zwDNN5l7rWcnN0Gp0A0fKY/rfyuSR/mQJ2W2DkX2ISvvRHaNsVwpVb
+                        9Z1T0Dqa3RxgaGbgdc1AtTAAMzHWiPzCNtU="
   },
   "errors": null
 }
 ```
 
-##### Failure Response:
+##### Failure Response
+**Status code**: 200
 
-###### Status code: '200'
-
-###### Description: Partner does not exist
+**Description**: Partner does not exist
 ```JSON
 {
   "id": "mosip.partnermanagement.partners.mosip.certificate.download",
@@ -3469,8 +3428,8 @@ Authorization | Yes | authentication token | Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJ
   "response": null,
   "errors": [
     {
-        "errorCode": "PMS_PRT_005",
-        "message": "Partner does not exist"
+      "errorCode": "PMS_PRT_005",
+      "message": "Partner does not exist"
     }
   ]
 }

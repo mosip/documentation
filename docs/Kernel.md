@@ -6,7 +6,7 @@ Kernel is not a  distinct module but a bunch of services and libraries that are 
 
 # Components
 
-Refer to [commons repo/kernel](https://github.com/mosip/commons/kernel) for all components of Kernel.
+Refer to [commons repo/kernel](https://github.com/mosip/commons/tree/master/kernel) for all components of Kernel.
 
 # Detailed functionality
 
@@ -20,15 +20,15 @@ Kernel has many services and functions.  Details of some of them are mentioned b
 
 # Logical view
 
-![Logical Diagram](_images/kernel/kernel_logical_diagram.jpg)
+![](_images/kernel/kernel_logical_diagram.jpg)
 
 # Services and libraries
 
-Details of all services and libraries along with code, design are availabe in [commons repo/kernel](https://github.com/mosip/commons/kernel).
+Details of all services and libraries along with code, design are availabe in [commons repo/kernel](https://github.com/mosip/commons/tree/master/kernel).
 
 # Build and deploy
 
-Refer to build and deploy instructions in [commons repo/kernel](https://github.com/mosip/commons/kernel).
+Refer to build and deploy instructions in [commons repo/kernel](https://github.com/mosip/commons/tree/master/kernel).
 
 # APIs
 
