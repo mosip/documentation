@@ -43,7 +43,7 @@ Storage estimates for production deployment:
 TBD
 
 ## Dev, QA, Staging, Preprod
-Additional compute and storage may be needed for the following setups.
+Additional compute and storage is needed for the following setups.
 
 | Environment | Setup | n Servers | Configuration | Storage |
 |---|---|---|---|---|
