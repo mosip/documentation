@@ -7,7 +7,7 @@
 |Open Scap|	We will need to create a custom profile and should be able to scan for hardened OS|	Hardening|	Free|	Yes|
 |Open Scap|	Docker scanning|	Docker scan|	Free|	Yes|
 |Nessus Vulnerability Scanner	|Vulnerability Scanning	|Vulnerability Scanning|	Commercial|	No|
-|Kali linux|	OS with all the necessary tools to perform a pentest. This would be a lab setup and would be used as part of UAT testing|	Swiss Knife|	Open Source|	No|
+|Kali linux|	OS with all the necessary tools to perform a pentest. This would be a lab setup and would be used as part of UAT testing|	Penetration Testing|	Open Source|	No|
 |Skipfish|	Hacking tool set from google.| 	DAST|	Open Source|	No|
 |Burp suite|	A web proxy used for penetration testing of web applications|	DAST|	Commercial|	No|
 
