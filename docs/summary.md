@@ -69,6 +69,7 @@
 		* [Steps to Install Clam AntiVirus Version 0.101.0](Steps-to-Install-Clam-AntiVirus-Version-0.101.0.md)
 		* [Steps to Install Keycloak Standalone Server](Steps-to-Install-Keycloak-Standalone-Server.md)
 * Contribute
+	* [Call for Contribution](Call-for-Contribution.md)
 	* [Contributor's Guide](Contributor-Guide.md)
 	* [Code of Conduct](Code-of-Conduct.md)
 	* [Issue Reporting Guideline](Issue-Reporting-Guideline.md)
