@@ -164,10 +164,9 @@ MOSIP would like to share this data in an encrypted model where the authenticati
 Is it possible to use Homomorphic encryption in this case?
 
 
----
+-
+--
 ----------------------------------------------------------------------------
-
-
 
 Please see the [Contributor Guide](Contributor-Guide.md) on how to file bugs, contribute code, and more.
 
