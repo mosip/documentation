@@ -12,7 +12,7 @@ To organize this effort to work with technology enthusiasts from around the worl
 
 TCC contributors will work closely with the MOSIP team on identified modules, features, or problems, or suggest new modules and enhancements to MOSIP. The key areas of contribution will include enhancements related to privacy, security, interoperability, service delivery, improved user experience etc. A suggested set of ideas for collaboration are appended below.
 
-#1 Reporting Framework
+#1. Reporting Framework
 Mosip in its operation generates system data, seed data and transaction data along with audit logs. Reporting and analytics are required to monitor the operations of the system.
 
 **Use cases**
@@ -33,7 +33,7 @@ Mosip in its operation generates system data, seed data and transaction data alo
 		* Number of new registrations, UIN updates, lost UIN, UIN updates via. Resident Services & Re-Prints done every day.
 		* Number of packets stuck at processing state or failed for a specific date
 
-#2 Registration App on a Tablet 
+#2. Registration App on a Tablet 
 The registration services contain the required functionalities to capture and record demographic and biometric details of individuals.  A native UI has been provided as a reference implementation for demo and customization. It is required to provide the same functionality on an iOS and Android tablets.  
 
 **Use cases**
@@ -41,7 +41,7 @@ The registration services contain the required functionalities to capture and re
 * Work with peripherals for capture of other fingerprint and Iris
 * Use MDS specifications for interacting with the devices to capture biometrics securely
 
-#3 Resident Portal
+#3. Resident Portal
 Resident portal offers residents to avail self-service features for managing their identity data, controlling and viewing usage of their identity. A set of REST API provided by MOSIP is available for the portal to use. A portal is required with a human-centric design.
 
 **Use cases**
@@ -56,10 +56,10 @@ Resident portal offers residents to avail self-service features for managing the
 
 You can view the features for Resident Services [here](Resident-Services-Functionality.md).
 
-#4  Resident Portal App
+#4. Resident Portal App
 The resident self-service app offers the same set of features offered in the portal as an app on the phone or tablet. Refer to Problem 3 for use cases.
 
-#5 Log Manager
+#5. Log Manager
 Log manager provides following functionalities:
 * Create a logging system reference implementation with stacks such as elk, splunk, kafka etc.
 * Logging features should support
@@ -76,7 +76,7 @@ These logs come handy for analyzing the system behavior and debugging. More deta
  
 We need a visual dashboard that would display the logs using tools like Kibana.
 
-#6 Consent Framework
+#6. Consent Framework
 MOSIP is a custodian of user’s identity data. A user consent framework is needed that allows users to wield varying degrees of control of different types of their data and their uses.
 
 Consent is required from the user for the following:
@@ -96,7 +96,7 @@ No action is taken without user’s continued consent and knowledge.
 
 A data clearinghouse setup can be set up to facilitate the exchange of information between the functional system based on user consent. This will help keep user information current and relevant and avoid sharing of data via third-party agents or an unsecured procurement chain.
 
-#7 Fraud Analytics
+#7. Fraud Analytics
 The objective of a fraud management system is to ensure frauds in various stages are identified and prevented. Some examples of tagging for possibility of frauds are below.
 * Fake supporting documents such as Proof of Identity, Address proof, age proof etc.
 * Registration in the name of an individual who is dead
@@ -109,7 +109,7 @@ The objective of a fraud management system is to ensure frauds in various stages
 * A registration operator has been disabled, but there could be attempted registrations that are denied by MOSIP, but the data would be useful for further analysis.
 * Frequent registrations happening from one or more centers using manual adjudication process regularly could be a case of possible frauds.
 
-#8 System Health Monitoring
+#8. System Health Monitoring
 Users need to monitor the health of various services running on the MOSIP server to manage them efficiently.   The foundational ID Systems needs to run 24x7 for long period of time.
 
 Common health monitoring use cases are,
@@ -134,7 +134,7 @@ Tools sets that may be used could be,
 * InfluxdB can be used to store these collected metrics in time-series database
 * Grafana or Prometheus to aggregate the collected information
 
-#9 Homomorphic encryptions for offline validation
+#9. Homomorphic encryptions for offline validation
 An offline authentication mode is a powerful way to prove identity with very less traceability by a central system. We would like to avoid any card-based technology in performing such authentication as carrying and keeping its pin safe is specific to the culture of the country. The better model would be to print an ID card themselves (like QR code) who can then take it anywhere for validation without losing the privacy. One example use case is defined below.
 * Login to the MOSIP from a internet connected computer.
 * Perform a biometric/biographic authentication and receive the ekyc data.
@@ -145,18 +145,18 @@ An offline authentication mode is a powerful way to prove identity with very les
 * Bank validates if the homomorphic data contains the given information and the photo matches the person standing in front.
 * If all is OK then the bank stores the entire QR Code and opens the account.
 
-#10 Transparency of data integrity in custodian’s environment
+#10. Transparency of data integrity in custodian’s environment
 The initial adopters of MOSIP are developing nations with huge aspirations to go digital. While MOSIP plays a vital role in establishing a foundational digital id its essential that MOSIP brings transparency to the demographic and biometric data stored. 
 * We want to ensure that every individual’s record is updated only after his consent. 
 * A means of cryptography through which we could ensure that internal hackers cannot alter records and hide the evidence.
 * A mechanism for MOSIP to auto-publish a hash (or something similar) which could be used to validate that the data has not tampered.
 
-#11 False Finger/IRIS/Face detection
+#11. False Finger/IRIS/Face detection
 While biometric has proven to be unique it also suffers from attacks related to false fingers/non-live photos. It’s important to build a mechanism over which we can detect such fraudulent activities. While the device on the field would bring in liveness validation it would not be enough just to depend on that alone.
 
 All our images are JPEG lossless, so it would be good to have a mechanism to identify false biometrics on the server.
 
-#12 Advanced demographic storage
+#12. Advanced demographic storage
 One of the important services in MOSIP is to provide authentication - An online verification. MOSIP plans to federate this service across multiple players. We expect the residents to choose a service provider to whom MOSIP can share data.
 
 MOSIP would like to share this data in an encrypted model where the authentication provider has no access to the original data but still be non-reputable, and is able to provide an online verification service.
