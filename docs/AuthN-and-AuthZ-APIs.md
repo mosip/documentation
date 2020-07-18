@@ -221,7 +221,7 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
 This service will authenticate the username and password. 
 
 ### Resource URL
-`POST /v/1authenticate/useridPwd`
+`POST /v1/authenticate/useridPwd`
 
 ### Resource details
 Resource Details | Description
