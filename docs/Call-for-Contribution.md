@@ -151,7 +151,7 @@ The initial adopters of MOSIP are developing nations with huge aspirations to go
 * A means of cryptography through which we could ensure that internal hackers cannot alter records and hide the evidence.
 * A mechanism for MOSIP to auto-publish a hash (or something similar) which could be used to validate that the data has not tampered.
 
-#11. False Finger/IRIS/Face detection
+#11. False Finger/Iris/Face detection
 While biometric has proven to be unique it also suffers from attacks related to false fingers/non-live photos. It’s important to build a mechanism over which we can detect such fraudulent activities. While the device on the field would bring in liveness validation it would not be enough just to depend on that alone.
 
 All our images are JPEG lossless, so it would be good to have a mechanism to identify false biometrics on the server.

@@ -66,7 +66,7 @@ context | Yes | This shows the purpose of the sending otp like Login, notificati
   "responsetime": "2007-12-03T10:15:30Z",
   "response": {
     "status": "success",
-	"message":"OTP had been sent successfully"
+    "message":"OTP had been sent successfully"
   }
 }
 ```
@@ -79,10 +79,10 @@ context | Yes | This shows the purpose of the sending otp like Login, notificati
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "errors":[
-	{
-	  "errorCode": "KER-AUTH-CHANNEL_INVALID",
-	  "message": "The passed channel is invalid."
-	}	
+    {
+      "errorCode": "KER-AUTH-CHANNEL_INVALID",
+      "message": "The passed channel is invalid."
+    }	
   ]
 }
 ```
@@ -94,10 +94,10 @@ context | Yes | This shows the purpose of the sending otp like Login, notificati
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "errors":[
-	{
-	  "errorCode": "AUTH_ERR_MULTIPLE_CHANNELS",
-	  "message": "Multiple channels are not supported in your module."
-	}	
+    {
+      "errorCode": "AUTH_ERR_MULTIPLE_CHANNELS",
+      "message": "Multiple channels are not supported in your module."
+    }	
   ]
 }
 ```
@@ -108,10 +108,10 @@ context | Yes | This shows the purpose of the sending otp like Login, notificati
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "errors":[
-	{
-	  "errorCode": "AUTH_ERR_USER_NOT_FOUND",
-	  "message": "The passed in user is not found"
-	}	
+    {
+      "errorCode": "AUTH_ERR_USER_NOT_FOUND",
+      "message": "The passed in user is not found"
+    }	
   ]
 }
 ```
@@ -122,10 +122,10 @@ context | Yes | This shows the purpose of the sending otp like Login, notificati
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "errors":[
-	{
-	  "errorCode": "AUTH_ERR_CHANNELPATH_NOT_FOUND",
-	  "message": "The passed in user is not found"
-	}	
+    {
+      "errorCode": "AUTH_ERR_CHANNELPATH_NOT_FOUND",
+      "message": "The passed in user is not found"
+    }	
   ]
 }
 ```
@@ -156,8 +156,8 @@ otp | Yes| This is OTP which is sent to the userid's preferred channel | NA | 64
   "version":"1.0",	
   "requesttime":"2007-12-03T10:15:30Z",
   "request": {
-	"userid": "M392380",
-	"otp": "6473"
+    "userid": "M392380",
+    "otp": "6473"
   }
 }
 ```
@@ -178,7 +178,7 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
   "responsetime": "2007-12-03T10:15:30Z",
   "response": {
     "status": "success",
-	"message":"OTP validation is successfull"
+    "message":"OTP validation is successfull"
   }
 }
 ```
@@ -192,10 +192,10 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "errors":[
-	{
-	  "errorCode": "AUTH_ERR_INVALIDOTP",
-	  "message": "The passed in OTP is invalid"
-	}	
+    {
+      "errorCode": "AUTH_ERR_INVALIDOTP",
+      "message": "The passed in OTP is invalid"
+    }	
   ]
 }
 ```
@@ -207,10 +207,10 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "errors":[
-	{
-	  "errorCode": "AUTH_ERR_EXPIREDOTP",
-	  "message": "The passed OTP is expired"
-	}	
+    {
+      "errorCode": "AUTH_ERR_EXPIREDOTP",
+      "message": "The passed OTP is expired"
+    }	
   ]
 }
 ```
@@ -241,9 +241,9 @@ appid | Yes | This is the application ID of the caller of this service. It shoul
   "version":"1.0",	
   "requesttime":"2007-12-03T10:15:30Z",
   "request": {
-	"username": "M392380",
-	"password": "fdkj943lkj32k32ew$8Kf",
-	"appid": "registrationclient"
+    "username": "M392380",
+    "password": "fdkj943lkj32k32ew$8Kf",
+    "appid": "registrationclient"
   }
 }
 ```
@@ -264,7 +264,7 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
   "responsetime": "2007-12-03T10:15:30Z",
   "response": {
     "status": "success",
-	"message":"Username and password combination had been validated successfully"
+    "message":"Username and password combination had been validated successfully"
   }
 }
 ```
@@ -277,10 +277,10 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "errors":[
-	{
-	  "errorCode": "AUTH_ERR_INVALIDCREDENTIALS",
-	  "message": "The passed in credentials is not correct"
-	}	
+    {
+      "errorCode": "AUTH_ERR_INVALIDCREDENTIALS",
+      "message": "The passed in credentials is not correct"
+    }	
   ]
 }
 ```
@@ -292,10 +292,10 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "errors":[
-	{
-	  "errorCode": "AUTH_ERR_INVALIDAPPID",
-	  "message": "The passed in application ID is not correct"
-	}	
+    {
+      "errorCode": "AUTH_ERR_INVALIDAPPID",
+      "message": "The passed in application ID is not correct"
+    }	
   ]
 }
 ```
@@ -326,8 +326,8 @@ secretkey|Yes|This is the secret key which was provided to the application corre
   "version":"1.0",	
   "requesttime":"2007-12-03T10:15:30Z",
   "request": {
-	"clientid": "D72HJDF8",
-	"secretkey": "JSlj8p789sdfjhlsJKDHFS"
+    "clientid": "D72HJDF8",
+    "secretkey": "JSlj8p789sdfjhlsJKDHFS"
   }
 }
 ```
@@ -348,7 +348,7 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
   "responsetime": "2007-12-03T10:15:30Z",
   "response": {
     "status": "success",
-	"message":"Clientid and Token combination had been validated successfully"
+    "message":"Clientid and Token combination had been validated successfully"
   }
 }
 ```
@@ -361,10 +361,10 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "errors":[
-	{
-	  "errorCode": "AUTH_ERR_INVALIDCLIENTIDCREDENTIALS",
-	  "message": "The passed in credentials is not correct"
-	}	
+    {
+      "errorCode": "AUTH_ERR_INVALIDCLIENTIDCREDENTIALS",
+      "message": "The passed in credentials is not correct"
+    }	
   ]
 }
 ```
@@ -403,7 +403,7 @@ Authorization=Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJi
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "response": {
-	"message":"Token had been validated successfully"
+    "message":"Token had been validated successfully"
   }
 }
 ```
@@ -416,10 +416,10 @@ Authorization=Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJi
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "errors":[
-	{
-	  "errorCode": "AUTH_ERR_TOKENNOTVALID",
-	  "message": "The passed in Token is not correct"
-	}	
+    {
+      "errorCode": "AUTH_ERR_TOKENNOTVALID",
+      "message": "The passed in Token is not correct"
+    }	
   ]
 }
 ```
@@ -456,7 +456,7 @@ Authorization=Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJi
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "response": {
-	"message":"Token invalidated successfully"
+    "message":"Token invalidated successfully"
   }	
 }
 ```
@@ -469,10 +469,10 @@ Authorization=Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJi
   "ver": "1.0",
   "responsetime": "2007-12-03T10:15:30Z",
   "errors":[
-	{
-	  "errorCode": "AUTH_ERR_COOKIEEMPTY",
-	  "message": "The passed in Cookie is empty"
-	}	
+    {
+      "errorCode": "AUTH_ERR_COOKIEEMPTY",
+      "message": "The passed in Cookie is empty"
+    }	
   ]
 }
 ```
@@ -485,7 +485,7 @@ The OTP Generator component will receive a request to generate OTP, validate if 
 The OTP Generator can also reject a request from a blocked/frozen account and assign a validity to each OTP that is generated, based on the defined policy
 
 ### Resource URL
-`POST /v1/otp/generate`
+`POST https://{base_url}/v1/otpmanager/otp/generate`
 
 ### Resource details
 Resource Details | Description
@@ -496,17 +496,17 @@ Requires Authentication | No
 ### Parameters
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
-Key|Yes|AuthToken passed in the request header| | 
+key|Yes|AuthToken passed in the request header| | 
 
 ### Example Request
 ```JSON
 {
-	"id": "mosip.otp.generateOTP",
-	"version":"1.0",	
-	"requesttime":"2007-12-03T10:15:30Z",
-	"request": {
-	   "key": "9820173642"
-	}
+  "id": "mosip.otp.generateOTP",
+  "version":"1.0",	
+  "requesttime":"2007-12-03T10:15:30Z",
+  "request": {
+    "key": "9820173642"
+  }
 }
 ```
 
@@ -515,13 +515,13 @@ Key|Yes|AuthToken passed in the request header| |
 #### Success Response
 ```JSON
 {
-	"id": "mosip.otp.generateOTP",
-	"ver": "1.0",
-	"responsetime": "2007-12-03T10:15:30Z",
-	"response": {
-		"otp": "849004",
-		"status": "GENERATION_SUCCESSFUL"
-	}
+  "id": "mosip.otp.generateOTP",
+  "ver": "1.0",
+  "responsetime": "2007-12-03T10:15:30Z",
+  "response": {
+    "otp": "849004",
+    "status": "GENERATION_SUCCESSFUL"
+  }
 }
 ```
 
@@ -536,7 +536,7 @@ This includes: Receiving a request for OTP validation with required input parame
 This component also facilitates deletion of every successfully validated OTP when consumed and freezing an account for exceeding the number of retries/wrong input of OTP.
 
 ### Resource URL
-`POST /v1/otp/validate`
+`https://dev-test.southindia.cloudapp.azure.com/v1/otpmanager/otp/validate?key=87637740607&otp=123456`
 
 ### Resource details
 Resource Details | Description
@@ -551,30 +551,20 @@ Key|Yes|AuthToken passed in the request header| NA | 9820173642
 otp|Yes|OTP which was sent to the user| NA | 849004
 
 ### Example Request
-```JSON
-{
-	"id": "mosip.otp.validateOTP",
-	"timestamp": "2019-01-24T10:27:48.628Z",
-	"ver": "1.0",
-	"request": {
-		"key": "9820173642", 
-		"otp":"849004"
-	}
-}
-```
+NA
 
 ### Example Response
 
 #### Success Response 
 ```JSON
 {
-	"id": "mosip.otp.validateOTP",
-	"ver": "1.0",
-	"responsetime": "2007-12-03T10:15:30Z",
-	"response": {
-		"status": "success",
-		"message": "VALIDATION SUCCESSFUL"
-	}
+  "id": "mosip.otp.validateOTP",
+  "ver": "1.0",
+  "responsetime": "2007-12-03T10:15:30Z",
+  "response": {
+    "status": "success",
+    "message": "VALIDATION SUCCESSFUL"
+  }
 }
 ```
 
@@ -582,29 +572,29 @@ otp|Yes|OTP which was sent to the user| NA | 849004
 1. Invalid OTP: If the passed OTP is not correct. 
 ```JSON
 {
-	"id": "mosip.authentication.validateOTP",
-	"ver": "1.0",
-	"responsetime": "2007-12-03T10:15:30Z",
-	"errors":[
-			{
-				"errorCode": "AUTH_ERR_OTPNOTVALID",
-				"message": "The passed in OTP is not valid"
-		  }	
-		]
+  "id": "mosip.authentication.validateOTP",
+  "ver": "1.0",
+  "responsetime": "2007-12-03T10:15:30Z",
+  "errors":[
+    {
+      "errorCode": "AUTH_ERR_OTPNOTVALID",
+      "message": "The passed in OTP is not valid"
+    }	
+  ]
 }
 ```
 
 2. OTP Expired: If the passed OTP had been expired. 
 ```JSON
 {
-	"id": "mosip.authentication.validateOTP",
-	"ver": "1.0",
-	"responsetime": "2007-12-03T10:15:30Z",
-	"errors":[
-			{
-				"errorCode": "AUTH_ERR_OTPEXPIRED",
-				"message": "The passed in OTP is expired"
-		  }	
-		]
+  "id": "mosip.authentication.validateOTP",
+  "ver": "1.0",
+  "responsetime": "2007-12-03T10:15:30Z",
+  "errors":[
+    {
+      "errorCode": "AUTH_ERR_OTPEXPIRED",
+      "message": "The passed in OTP is expired"
+    }	
+  ]
 }
 ```
