@@ -1,11 +1,3 @@
-
-The UN Sustainable Development Goal 16.9 has prioritized “legal identity for all” by 2030. There is now a focus by countries and development actors to reach this goal. Until now, this has often meant that countries go through a formal tendering process and find a vendor who can build the ID system. This has led to two kinds of challenges: 
-
-1.	From a governance perspective, lack of adequate privacy and safeguards in law, and 
-2.	From a technology perspective, technology and vendor lock-in. 
-
-In a survey conducted by ID4Africa, several members of the ID community identified Vendor lock-in is their main problem. To quote the ID4Africa survey findings here: “It shows vendor lock-in as a top problem. The majority feels they were held hostage by the solution provider.”
-
 The Modular Open Source Identity Platform ([MOSIP](https://www.mosip.io/)) effort started about 20 months ago as a response to the technology challenge identified by the ID community.  MOSIP has launched the [1.1 version](https://github.com/mosip) on Github and continues to improve the platform with fixes and enhancements. However, there are several additional important modules that need to be built to shape this open-source layer. The MOSIP team has curated a list of modules/ problems that would require the best minds in the technology world to take up and solve for. 
 
 To organize this effort to work with technology enthusiasts from around the world, the MOSIP team is proposing the Technology Contributors Coalition (TCC). The TCC is being set-up as a coalition of individuals and organizations who are keen on shaping the evolution of MOSIP. Organizations can encourage their resources to collaborate on specific projects by contributing code and documentation or second their resources to work full time with the MOSIP team. 
