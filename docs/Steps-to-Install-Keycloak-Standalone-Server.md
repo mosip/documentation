@@ -40,6 +40,7 @@ Install Postgres in your VM. Guide to install PostgreSQL is available [here](Ste
 Within the  `…​/modules/`  directory of your Keycloak distribution, you need to create a directory structure to hold your module definition. The convention is use the Java package name of the JDBC driver for the name of the directory structure. For PostgreSQL, create the directory  `org/postgresql/main`. Copy your database driver JAR into this directory and create an empty `module.xml` file within it too.
 
 **Module Directory**
+
 ![](https://www.keycloak.org/docs/latest/server_installation/keycloak-images/db-module.png)
 
 After you have done this, open up the `module.xml` file and create the following XML:
@@ -227,23 +228,23 @@ If you find that a particular service will take more time to complete the proces
 
 {% hint style="info" %}
 SSL in keycloak is enabled by default but it can be toggled for all request, external request, and none.
-![](_images/kernel/keycloak/keycloak_ssl.jpg)
 {% endhint %}
 
-## Update of Configuration for Keycloak
+![](_images/kernel/keycloak/keycloak_ssl.jpg)
+
+## Update of configuration for keycloak
 
 {% hint style="info" %}
 <> is for variable properties with this sign need to be updated.
 {% endhint %}
 
-### Global Config
+### Global configuration
 ```
 auth.server.validate.url=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
 auth.server.admin.validate.url=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
 ``` 
 
-### Kernel
-
+### Kernel configuration
 ```
 mosip.keycloak.base-url=https://<keycloak.domain>
 mosip.kernel.realm-id=<Mosip realm id> (EX mosip, should always be in lowercase)
@@ -294,7 +295,7 @@ mosip.kernel.ida.client.id=<Ida Client id>
 mosip.kernel.ida.secret.key=<Ida Secret id>
 ```
 
-### Pre-Registration
+### Pre-registration configuration
 ```
 clientId=<pre-registration client id>
 secretKey=<pre-registration-secret>
@@ -302,7 +303,7 @@ mosip.batch.token.authmanager.userName=<pre-registration client id>
 mosip.batch.token.authmanager.password=<pre-registration-client-secret>
 ```
 
-### Registration Processor
+### Registration processor configuration
 ```
 token.request.clientId=<registration-processor-client-id>
 token.request.secretKey=<registration-processor-client-secret>
@@ -310,7 +311,7 @@ KEYBASEDTOKENAPI=${mosip.base.url}/v1/authmanager/authenticate/clientidsecretkey
 TOKENVALIDATE=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
 ```
 
-### ID Authentication
+### ID authentication configuration
 ```
 auth-token-generator.rest.uri=${mosip.base.url}/v1/authmanager/authenticate/clientidsecretkey
 auth-token-validator.rest.uri=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
@@ -319,13 +320,13 @@ auth-token-generator.rest.secretKey=<ida-secret-key>
 auth-token-generator.rest.appId=ida
 ```
 
-### Registration Client
+### Registration client configuration
 ```
 AUTH_CLIENT_ID=<registration-client-id>
 AUTH_SECRET_KEY=<registration-client-secret>
 ```
 
-### Resident Services
+### Resident services configuration
 ```
 `#Token generation app id
 resident.clientId=<resident-client-id>
