@@ -11,10 +11,11 @@ Get your Java installation path.
 update-alternatives --display java
 ```
 
-**_Note:_**
+{% hint style="info" %}
 Take the value of the current link and remove the trailing `/bin/java`.
 For example, on RHEL 7, the link is `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre/bin/java`,
 So, `JAVA_HOME` should be `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.191.b12-1.el7_6.x86_64/jre.`
+{% endhint %}
 
 ## Edit ~/bashrc.sh:
 Export `JAVA_HOME={path-tojava}` with your actual java installation path. 
@@ -30,31 +31,26 @@ sudo wget "https://downloads.jboss.org/keycloak/6.0.1/keycloak-6.0.1.tar.gz"
 sudo tar xzf keycloak-6.0.1.tar.gz
 ```
 ## Install a database supproted by keycloak
+We have installed postgres as the database for keycloak; you can use any database supported by Keycloak.
 
-We have installed postgres as the database for keycloak; you can use any database supported by Keycloak**
+Documentation for Keycloak Database Setup is available [here](https://www.keycloak.org/docs/latest/server_installation/index.html#_database).
 
-* [Documentation for Keycloak Database Setup is available here.](https://www.keycloak.org/docs/latest/server_installation/index.html#_database)
-
-Install Postgres in your vm
-[Guide to Install PostgreSQL is available here.](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md)
+Install Postgres in your VM. Guide to install PostgreSQL is available [here](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md).
 
 Within the  `…​/modules/`  directory of your Keycloak distribution, you need to create a directory structure to hold your module definition. The convention is use the Java package name of the JDBC driver for the name of the directory structure. For PostgreSQL, create the directory  `org/postgresql/main`. Copy your database driver JAR into this directory and create an empty `module.xml` file within it too.
 
 **Module Directory**
-
-![db module](https://www.keycloak.org/docs/latest/server_installation/keycloak-images/db-module.png)
+![](https://www.keycloak.org/docs/latest/server_installation/keycloak-images/db-module.png)
 
 After you have done this, open up the `module.xml` file and create the following XML:
 
 **Module XML**
-```
+```XML
 <?xml version="1.0" ?>
 <module xmlns="urn:jboss:module:1.3" name="org.postgresql">
-
     <resources>
         <resource-root path="postgresql-9.4.1212.jar"/>
     </resources>
-
     <dependencies>
         <module name="javax.api"/>
         <module name="javax.transaction.api"/>
@@ -63,7 +59,6 @@ After you have done this, open up the `module.xml` file and create the following
 ```
 
 The module name should match the directory structure of your module. So, `org/postgresql` maps to `org.postgresql`. The `resource-root path` attribute should specify the JAR filename of the driver. The rest are just the normal dependencies that any JDBC driver JAR would have.
-
 
 ## Create a service to start Keycloak
 ```
@@ -158,10 +153,9 @@ openssl pkcs12 -export -inkey{{private key pem path}} -in {{certificate pem path
 		<keystore  path="your key store pass relative to the next property"  relative-to="jboss.server.config.dir"  keystore-password="yourpassword"  alias="your alias"/>
 		</ssl>
 		```
-		
-## Add Keycloak Admin user
-
-From keycloak bin directory run 
+	
+## Add keycloak admin user
+Add Keycload admin user from keycloak bin directory run 
 ```
 ./add-user-keycloak.sh -u {{username}} -p {{password}}
 ```
@@ -171,24 +165,24 @@ From keycloak bin directory run
  systemctl start keycloak
 ```
 
-# Configure Keycloak
-* Create a new Realm(eg. mosip).   
-* Create clients for every module(i.e. ida,pre-registration,registration-processor,registration-client,auth,resident,mosip-client).
-* Enable Authorization and Service Account for every Client and provide valid redirect uri. These clients will be used by all modules to get client tokens. 
+# Configure keycloak
+* Create a new Realm (eg. mosip).
+* Create clients for every module (i.e. ida, pre-registration, registration-processor, registration-client, auth, resident, mosip-client).
+* Enable authorization and service account for every client and provide valid redirect uri. These clients will be used by all modules to get client tokens. 
 
-![Client_Service Account](_images/kernel/keycloak/clients.jpg)
+![](_images/kernel/keycloak/clients.jpg)
  
 ## Configure User Federation
-For this Example we will be configuring LDAP as user federation 
-* Go to User Federation.
+For this example we will be configuring LDAP as user federation 
+* Go to "User Federation".
 * Create a new User Federation for LDAP.
 * Make Edit Mode Writable.
 * Configure field based on your LDAP(There are many vendors for ldap you can connect to any ldap vendor based on configurations).
 * Go to Mappers and Create mappers for each field you want keycloak to take from LDAP.
 
-![User_Federation _A](_images/kernel/keycloak/userfed.jpg)
+![](_images/kernel/keycloak/userfed.jpg)
 
-![User_Federation _B](_images/kernel/keycloak/userfed1.jpg)
+![](_images/kernel/keycloak/userfed1.jpg)
 
 ```
 isActive : user-attribute-ldap-mapper
@@ -204,7 +198,7 @@ first name : user-attribute-ldap-mapper
 email : user-attribute-ldap-mapper
  ```
 
-![Role_Mapper](_images/kernel/keycloak/rolemapper.jpg)
+![](_images/kernel/keycloak/rolemapper.jpg)
 
 * Sync Users and Roles from LDAP .
 * Create INDIVIDUAL, RESIDENT Role from Keycloak in Realm Roles
@@ -225,16 +219,22 @@ Auth => AUTH
 
 ## Access token expiration action
 
-**_Note:_** if you find that a particular service will take more time to complete the process within stipulated time period, your token perhaps will get invalidated. Use refresh token mechanism to get latest token or if that is not implemented you can increase the access token lifespan at client level or realm level.
+{% hint style="info" %}
+If you find that a particular service will take more time to complete the process within stipulated time period, your token perhaps will get invalidated. Use refresh token mechanism to get latest token or if that is not implemented you can increase the access token lifespan at client level or realm level.
+{% endhint %}
 
 ## SSL enable at keycloak
-**_Note:_** SSL in keycloak is enabled by default but it can be toggeled for all request, external request, and none.
-![SSL Enable](_images/kernel/keycloak/keycloak_ssl.jpg)
 
-## Updation of Configuration for Keycloak
+{% hint style="info" %}
+SSL in keycloak is enabled by default but it can be toggled for all request, external request, and none.
+![](_images/kernel/keycloak/keycloak_ssl.jpg)
+{% endhint %}
 
-**_Note:_** <> is for variable properties with this sign need to be updated
+## Update of Configuration for Keycloak
 
+{% hint style="info" %}
+<> is for variable properties with this sign need to be updated.
+{% endhint %}
 
 ### Global Config
 ```
@@ -243,6 +243,7 @@ auth.server.admin.validate.url=${mosip.base.url}/v1/authmanager/authorize/admin/
 ``` 
 
 ### Kernel
+
 ```
 mosip.keycloak.base-url=https://<keycloak.domain>
 mosip.kernel.realm-id=<Mosip realm id> (EX mosip, should always be in lowercase)
@@ -301,14 +302,15 @@ mosip.batch.token.authmanager.userName=<pre-registration client id>
 mosip.batch.token.authmanager.password=<pre-registration-client-secret>
 ```
 
-### Registration-processor
+### Registration Processor
 ```
 token.request.clientId=<registration-processor-client-id>
 token.request.secretKey=<registration-processor-client-secret>
 KEYBASEDTOKENAPI=${mosip.base.url}/v1/authmanager/authenticate/clientidsecretkey
 TOKENVALIDATE=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
 ```
-### IDA
+
+### ID Authentication
 ```
 auth-token-generator.rest.uri=${mosip.base.url}/v1/authmanager/authenticate/clientidsecretkey
 auth-token-validator.rest.uri=${mosip.base.url}/v1/authmanager/authorize/admin/validateToken
@@ -316,12 +318,14 @@ auth-token-generator.rest.clientId=<ida-client-id>
 auth-token-generator.rest.secretKey=<ida-secret-key>
 auth-token-generator.rest.appId=ida
 ```
-### Registration-client
+
+### Registration Client
 ```
 AUTH_CLIENT_ID=<registration-client-id>
 AUTH_SECRET_KEY=<registration-client-secret>
 ```
-### Resident
+
+### Resident Services
 ```
 `#Token generation app id
 resident.clientId=<resident-client-id>
