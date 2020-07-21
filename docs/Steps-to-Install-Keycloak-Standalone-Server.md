@@ -227,6 +227,10 @@ Auth => AUTH
 
 **_Note:_** if you find that a particular service will take more time to complete the process within stipulated time period, your token perhaps will get invalidated. Use refresh token mechanism to get latest token or if that is not implemented you can increase the access token lifespan at client level or realm level.
 
+## SSL enable at keycloak
+**_Note:_** SSL in keycloak is enabled by default but it can be toggeled for all request, external request, and none.
+![SSL Enable](_images/kernel/keycloak/keycloak_ssl.jpg)
+
 ## Updation of Configuration for Keycloak
 
 **_Note:_** <> is for variable properties with this sign need to be updated
