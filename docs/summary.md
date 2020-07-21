@@ -126,6 +126,7 @@
 		* [Release Notes 1.1.0 Features](Release-Notes-1.1.0-Features.md)
 		* [Release Notes 1.1.0 Bug Fixes](Release-Notes-1.1.0-Bug-Fixes.md)
 		* [Release Notes 1.2.0 Features](Release-Notes-1.2.0-Features.md)
+		* [Release Notes 1.1.0 Artifact Version](Release-Notes-1.1.0-Artifact-Version.md)
 * [Roadmap](Roadmap.md)
 	* [Roadmap Activities](Roadmap-Activities.md)
 * [Revision History](Revision-History.md)
