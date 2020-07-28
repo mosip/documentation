@@ -15,8 +15,8 @@ All devices that collect biometric data for MOSIP should operate within the spec
 ## Revision History
 |Version|State|Date|Changes|
 ---|---|---|---|
-|0.9.2|Frozen|28-Aug-2019||
-|0.9.3|Frozen|||
+|0.9.2|Frozen|Aug-2019||
+|0.9.3|Frozen|Feb-2020||
 |0.9.5|Draft|13-Jun-2020||
 
 ## Glossary of Terms
