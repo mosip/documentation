@@ -10,6 +10,7 @@ Publish Date|Revison
 ------------|-------
 June 15, 2020|This is the first formal publication of the interface as a versioned specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
 June 30, 2020|The section related to [Possible Flags](#possible-flags) in [Matcher](#matcher) has been added.
+July 28, 2020|Currently the segmentation API is expecting a BIR sample in the request. In order to standardise this interface and to bring in some more flexibility on the usage, we are changing the input format to BiometricRecord sample.
 
 # Introduction
 Mosip as a platform does not have any inbuilt capabilities to handle biometrics. It relies on external components and subsystems to perform all activities pertaining to biometrics. As a platform it defines formats, standards and interfaces for these external components and subsystems. The Biometrics SDK is a critical external component used for performing operations with biometric data in multiple mosip modules - Registration Client, Authentication and Registration Processor.
@@ -190,10 +191,10 @@ The extractor is expected to create a data set that is used in the actual match 
 # Segmenter
 
 ## Signature
-`Response<BiometricRecord> segment(BIR sample, List<BiometricType> modalitiesToSegment, Map<String, String> flags)`
+`Response<BiometricRecord> segment(BiometricRecord sample, List<BiometricType> modalitiesToSegment, Map<String, String> flags)`
 
 **Input Parameters**
-* sample - Biometric Record of a person containing a list of BIR objects. The BIR would containt the unsegmented biometric in Finger, Iris, or Face Image Record.
+* sample - Biometric Record of a person containing a list of biometric segments in the BIR format. The segments could correspond to multiple modalities and could be Finger, Iris, or Face Image Record.
 * modalitiesToSegment - List of biometric types to perform segmentation. If this is null or empty, all biometric types that the SDK supports should be segmented. If present, the modalities specified alone should be segmented and the others present in the sample can be ignored.
 * flags - An optional list of control flags as name value pairs that can be used to configure the behavior of the library.
 
@@ -446,7 +447,7 @@ public interface IBioApi {
 	Response<QualityCheck> checkQuality(BiometricRecord sample, List<BiometricType> modalitiesToCheck, Map<String, String> flags);
 	Response<MatchDecision[]> match(BiometricRecord sample, BiometricRecord[] gallery, List<BiometricType> modalitiesToMatch, Map<String, String> flags);
 	Response<BiometricRecord> extractTemplate(BiometricRecord sample, List<BiometricType> modalitiesToExtract, Map<String, String> flags);
-	Response<BiometricRecord> segment(BIR sample, List<BiometricType> modalitiesToSegment, Map<String, String> flags);
+	Response<BiometricRecord> segment(BiometricRecord sample, List<BiometricType> modalitiesToSegment, Map<String, String> flags);
 	BiometricRecord convertFormat(BiometricRecord sample, String sourceFormat, String targetFormat, Map<String, String> sourceParams, Map<String, String> targetParams, List<BiometricType> modalitiesToConvert);
 }
 ```
