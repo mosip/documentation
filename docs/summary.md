@@ -59,6 +59,7 @@
     * [CBEFF XML](CBEFF-XML.md)
 * Build & Deploy
 	* [Build & Deploy](Build-and-Deploy.md)
+        * [Deployment Architectures](Deployment-Architectures.md)
 	* [Cell Based Deployment Architecture](Cell-Based-Deployment-Architecture.md)
 	* [Hardware Security Module HSM Specifications](Hardware-Security-Module-HSM-Specifications.md)
 	* [Hardware Sizing](Hardware-Sizing.md)
