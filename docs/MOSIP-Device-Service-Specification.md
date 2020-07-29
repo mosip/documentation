@@ -6,8 +6,7 @@
 The objective of this specification document is to establish the technical and compliance standards/ protocols that are necessary for a biometric device to be used in MOSIP solutions.
 
 ### Target Audience
-This is a biometric device specification document and aims to help the biometric device manufactures, their developers, and their designers in building MOSIP compliant devices.
-This document assumes that the readers are familiar with MOSIP registration and authentication services.
+This is a biometric device specification document and aims to help the biometric device manufactures, their developers, and their designers in building MOSIP compliant devices.  It is assumed that the readers are familiar with MOSIP registration and authentication services.
 
 ### MOSIP Devices
 All devices that collect biometric data for MOSIP should operate within the specification of this document.
