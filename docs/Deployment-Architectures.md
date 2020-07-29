@@ -35,7 +35,7 @@ For linear scaling of capacity and provisioning of hardware, a cell based archit
 [Cell based architecture](https://docs.mosip.io/platform/build-and-deploy/cell-based-deployment-architecture)
 
 ## Rapid deployment: Hybrid architecture
-A hybrid architecture may be considered where benefits of cloud and on-premise are leveraged. While cloud provides rapid deployment and ease of  management, on-premise sovereignty and contorl of sensitive data.  
+A hybrid architecture may be considered where benefits of cloud and on-premise are leveraged. While cloud provides rapid deployment and ease of  management, on-premise provides sovereignty and contorl of sensitive data.  
 
 An example of hybrid architecture is given below:
 
