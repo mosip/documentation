@@ -1,5 +1,8 @@
 This page contains the details of recent documentation updates.
 
+* 29th July 2020
+  * [Deployment architectures](Deployment-Architectures.md) publised.
+
 * 3rd July 2020
   * Release document for [Release 1.1.0](Release-Notes-1.1.0.md) was published.
 
