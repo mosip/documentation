@@ -40,7 +40,20 @@ Storage estimates for production deployment:
 [MOSIP Storage Requirement Calculator XLS]( https://github.com/mosip/documentation/blob/master/docs/_sources/hardware_sizing/MOSIP_Storage_Estimate-v1.1.xlsx)
 
 #### Appication and system logs
-TBD
+* Application logs
+
+|Module|Unit|RAW Log size|
+|---|---|---|
+|Pre-Reg|100 preregs|20 MB|
+|Reg Proc|100 registrations| 200 MB|
+
+The above estimates are approximate, and may inflate if, for example, there are too many exception traces.  
+
+The logs may be compressed and archived after a period, say 7 days.  The compression ratio achieved with tar/gz utility is 15-20.
+
+* System logs
+
+To be estimated by System Integrator according to the deployment
 
 ## Dev, QA, Staging, Preprod
 Additional compute and storage is needed for the following setups.
