@@ -4,7 +4,7 @@ The hardware compute and storage requirements for MOSIP core platform are estima
 ### Compute
 Compute hardware estimates for a production deployment:
 
-|Module|Capacity|n Servers|Configuration|
+|Module|Capacity|n rServers|Configuration|
 |---|---|---|---|
 |Pre-registration | 7200 pre-regs/hour\* | 10 | 4 VCPU\**, 16 GB RAM | 
 |Registration Processor | 200,000 registrations per day | 80 | 4 VCPU, 16 GB RAM| 
@@ -49,7 +49,7 @@ Storage estimates for production deployment:
 
 The above estimates are approximate, and may inflate if, for example, there are too many exception traces.  
 
-The logs may be compressed and archived after a week or so, as considered suitable.  The compression ratio achieved with tar/gz utility is 15-20.
+The logs may be compressed and archived after a week or so.  The compression ratio achieved with tar+gz utility is 15-20.
 
 * System logs
 
