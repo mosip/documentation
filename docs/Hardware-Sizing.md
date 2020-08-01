@@ -49,7 +49,7 @@ Storage estimates for production deployment:
 
 The above estimates are approximate, and may inflate if, for example, there are too many exception traces.  
 
-The logs may be compressed and archived after a period, say 7 days.  The compression ratio achieved with tar/gz utility is 15-20.
+The logs may be compressed and archived after a week or so, as considered suitable.  The compression ratio achieved with tar/gz utility is 15-20.
 
 * System logs
 
