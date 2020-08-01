@@ -42,9 +42,9 @@ Storage estimates for production deployment:
 #### Appication and system logs
 * Application logs
 
-|Module|Unit|RAW Log size|
+|Module|Unit|Raw log size|
 |---|---|---|
-|Pre-Reg|100 preregs|20 MB|
+|Pre-Reg|100 pre-regs|20 MB|
 |Reg Proc|100 registrations| 200 MB|
 
 The above estimates are approximate, and may inflate if, for example, there are too many exception traces.  
