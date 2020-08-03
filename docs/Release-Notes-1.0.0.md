@@ -50,7 +50,7 @@ Includes Functional requirements, Process flows, Architecture and High level des
 * Functional test documentation is found [here](https://github.com/mosip/mosip-functional-tests/tree/1.0.0).
 
 ### 3. Platform Configuration for RBR
-MOSIP Platform can be configured to be used for Real Biometrics. Please find the [guide to configure MOSIP for real biometrics](Guide-to-configure-MOSIP-for-Real-Biometrics.md).
+MOSIP Platform can be configured to be used for Real Biometrics. Please find the [guide to configure MOSIP for real biometrics](Guide-to-Configure-MOSIP-for-Biometrics.md).
 
 ## Key Points [**[↑]**](#table-of-contents)
 
@@ -85,7 +85,7 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 | Version Tag Tested|	1.0.0|
 |Test Methodology| <li>  Manual <li>  Test Automation|
 |Types of testing|<li>	 Smoke <li> Functional <li> Integration <li> Regression|
-|Testing Levels|![Image](_images/releases/1.0.0/Testing_levels.jpg) |
+|Testing Levels|![](_images/release/1.0.0/Testing_levels.jpg) |
 |Configuration Parameters tested for| Refer to properties file at [**Link**](https://github.com/mosip/mosip-config/tree/1.0.0)|
 |Browser Support|**Pre-Registration**    <li> Chrome – 78.0.3904.108|
 |OS Support|**Registration Client**    <li> Windows 10|
@@ -123,10 +123,10 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 |Regression Testing|Tests to ensure that any change doesn't break existing functionality|
 	
 #### 5. Test Execution Summary [**[↑]**](#table-of-contents)
-![Image](_images/release/1.0.0/ExecutionSummary_1.0.0.jpg)  
+![](_images/release/1.0.0/ExecutionSummary_1.0.0.jpg)  
 
 ## Known Issues [**[↑]**](#table-of-contents)
-![Image](_images/release/1.0.0/KnownIssues_1.0.0.jpg) 
+![](_images/release/1.0.0/KnownIssues_1.0.0.jpg) 
 
 ## List Of Acronyms [**[↑]**](#table-of-contents)
 

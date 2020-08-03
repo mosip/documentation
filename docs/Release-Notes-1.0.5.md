@@ -118,10 +118,10 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 |Regression Testing|Tests to ensure that any change doesn't break existing functionality|
 	
 #### 5. Test Execution Summary [**[↑]**](#table-of-contents)
-![Image](_images/release/1.0.5/ExecutionSummary_1.0.5.jpg)
+![](_images/release/1.0.5/ExecutionSummary_1.0.5.jpg)
 
 ## Known Issues [**[↑]**](#table-of-contents)
-![Image](_images/release/1.0.5/KnownIssues_1.0.5.jpg) 
+![](_images/release/1.0.5/KnownIssues_1.0.5.jpg) 
 
 ## List Of Acronyms [**[↑]**](#table-of-contents)
 Acronym | Expanded Form

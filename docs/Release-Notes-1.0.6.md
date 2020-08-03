@@ -124,10 +124,10 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests)
 |Regression Testing|Tests to ensure that any change doesn't break existing functionality|
 	
 #### 5. Test Execution Summary [**[↑]**](#table-of-contents)
-![Image](_images/release/1.0.6/ExecutionSummary_1.0.6.jpg)  
+![](_images/release/1.0.6/ExecutionSummary_1.0.6.jpg)  
 
 ## Known Issues [**[↑]**](#table-of-contents)
-![Image](_images/release/1.0.6/KnownIssues_1.0.6.jpg) 
+![](_images/release/1.0.6/KnownIssues_1.0.6.jpg) 
 
 ## List Of Acronyms [**[↑]**](#table-of-contents)
 
