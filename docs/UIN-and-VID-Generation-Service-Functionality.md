@@ -23,9 +23,10 @@ The number of UINs to be generated in a pool depends on a configuration to be do
 # VID Generation
 MOSIP will generate a pool of VIDs through a Batch Job. The number of VIDs generated will be configurable by the country. All the VIDs generated will be assigned a status _“Available”_ which means that the VID is available for allocation to a UIN. Any request for VID allocation will pick up VIDs which have this status. The Batch Job to generate the pool will run every time the number of VIDs in the pool reduces to a configured number.
 
-VID generation will happen according to the below logic.
-1.  VID generated should contain the number of digits as configured.
-2.  A generated VID should follow the below logic
+VID generation will happen according to the below logic:
+
+1. VID generated should contain the number of digits as configured.
+2. A generated VID should follow the below logic
     a.	The number should not contain any alphanumeric characters
     b.	The number should not contain any repeating numbers for 2 or more than 2 digits
     c.	The number should not contain any sequential number for 3 or more than 3 digits
@@ -43,8 +44,3 @@ MOSIP also has a batch Job to auto-expire VIDs and mark expired VIDs as to be av
 
 1.	All the VIDs will be marked as ‘Expired’ through the batch job based on the expiry period assigned to them
 2.	All the VIDs which are in expired state for a configured amount of days should be marked as ‘Available’ through a daily batch job thus enabling re-usability of them
-
-
-# List of Configurable Parameters
-* [**Link to Configurable Parameters of Kernel**](https://github.com/mosip/mosip-config/blob/master/config-templates/kernel-env.properties)
-* [**Link to Kernel Application Properties**](https://github.com/mosip/mosip-config/blob/master/config-templates/application-env.properties)

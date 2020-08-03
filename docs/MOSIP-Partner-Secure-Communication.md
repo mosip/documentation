@@ -6,6 +6,7 @@ MOSIP and Partners communicate with each other when indviduals avail services of
 * Integrity:  The integrity of the communication should be maintained.  
 
 # Security at various levels
+
 ##  Network Layer
 * All communication from Partners to MOSIP is routed via the MISP.
 * The communication is protected via the secured network protocol suite of IPSec. 
@@ -14,6 +15,7 @@ MOSIP and Partners communicate with each other when indviduals avail services of
 	
 ## Presentation Layer
 Process flow for communication at Presentation Layer:
+
 1. Partner pings MOSIP. 
 1. Partner gets the MOSIP certificate which is signed by the Root CA.
 1. Partner then verifies the MOSIP certificate with the Root CA.
@@ -40,6 +42,7 @@ Process flow for communication at Presentation Layer:
 
 ## Certificates used
 Altogether, 3 certificates are used in the communication: 
+
 1. SSL certificate: Used in the Presentation Layer
 1. Encryption certificate: Used in the Application Layer
 1. Signature certificate: Used in the Application Layer

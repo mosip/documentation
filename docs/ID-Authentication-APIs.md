@@ -1,4 +1,3 @@
-
 This section details about the REST services in ID Authentication module.
 
 * [Authentication Service](#authentication-service-public) - This service can be used by Partners to authenticate an Individual using OTP, Demographic or Biometric-based authentication.
@@ -21,13 +20,14 @@ This service details authentication (yes/no auth) that can be used by Partners t
 2. **Partners** - Auth-Partners register themselves with MOSIP, under a MISP. Authentication requests are captured by Auth-Partners and sent to MOSIP, via MISP.
 3. **Partner-API-Key** - Associated against a policy.
 
+
 * [POST /idauthentication/v1/auth/](#post-idauthenticationv1auth) 
 
 ## POST /idauthentication/v1/auth/
 This request will authenticate an Individual, based on provided authentication type(s).
 
 ### Resource URL
-`https://mosip.io/idauthentication/v1/auth/::MISP-LicenseKey/:Auth-Partner-ID/:Partner-Api-Key`
+`https://{base_url}/idauthentication/v1/auth/{:MISP-LicenseKey}/{:Auth-Partner-ID}/{:Partner-Api-Key}`
 
 ### Resource details
 Resource Details | Description
@@ -56,13 +56,13 @@ request| Y | Request block to be used for authenticating Individual, encrypted w
 request: otp| N | OTP | | 
 request: timestamp| N | Timestamp when request block was captured| | 
 request: demographics|N| Demographic data of an Individual| |
-request: biometrics|N| Biometric data of an Individual which is sent in the response from the Capture API of MDS v0.9.5. Refer to the [MDS v0.9.5](https://docs.mosip.io/platform/biometrics/mosip-device-service-specification#capture) specification for complete information. | |
+request: biometrics|N| Biometric data of an Individual which is sent in the response from the Capture API of MDS v0.9.5. Refer to the [MDS v0.9.5](MOSIP-Device-Service-Specification.md#capture) specification for complete information. | |
 request: biometrics: data|Y| JWS format of Biometric data of an Individual with X509 certificate. The payload present in JWS is encrypted by below biometrics.sessionKey using symmetric encryption algorithm - AES/GCM/PKCS5Padding | |
 request: biometrics: hash|Y| SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format. While calculating the hash for the first biometrics.data entry assume empty string as previous data block.| |
-request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.5](https://docs.mosip.io/platform/biometrics/mosip-device-service-specification#capture) to encrypt above biometric data attribute. This symmetric key is encrypted by MOSIP Public Key shared to Device Providers using asymmetric key algorithm - RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING, and then Base64-url-encoded| |
-request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.5](https://docs.mosip.io/platform/biometrics/mosip-device-service-specification#capture) to encrypt above biometric data attribute. This symmetric key is encrypted by MOSIP Public Key shared to Device Providers using asymmetric key algorithm - RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING, and then Base64-url-encoded| |
+request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.5](MOSIP-Device-Service-Specification.md#capture) to encrypt above biometric data attribute. This symmetric key is encrypted by MOSIP Public Key shared to Device Providers using asymmetric key algorithm - RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING, and then Base64-url-encoded| |
+request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.5](MOSIP-Device-Service-Specification.md#capture) to encrypt above biometric data attribute. This symmetric key is encrypted by MOSIP Public Key shared to Device Providers using asymmetric key algorithm - RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING, and then Base64-url-encoded| |
 
-Mandatory fields for different types of authentications: 
+Mandatory fields for different types of authentications:
 
 1. **OTP Auth** - request: **otp** attribute is mandatory 
 2. **Demographic Auth** - request: **demographics**  attribute is mandatory
@@ -236,7 +236,8 @@ IDA-OTA-007|UIN is locked for OTP validation due to exceeding no of invalid OTP 
 IDA-OTA-010|Input Identity Type does not match Identity Type of OTP Request|Invalid Identity Type|
 
 # eKYC Service (Public)
-This service details authentication (eKYC auth) that can be used by Partners to authenticate an Individual and send Individual's KYC details as response. Below are various authentication types supported by eKYC Authentication - 
+This service details authentication (eKYC auth) that can be used by Partners to authenticate an Individual and send Individual's KYC details as response. Below are various authentication types supported by eKYC Authentication:
+
 1. OTP Authentication - OTP
 2. Biometric Authentication - Fingerprint, IRIS and Face
 
@@ -245,13 +246,14 @@ This service details authentication (eKYC auth) that can be used by Partners to 
 2. `Partners` - *eKYC-Partners* register themselves with MOSIP, under a MISP. KYC requests are captured by eKYC-Partners and sent to MOSIP, via MISP.
 3. `Partner-Api-Key` - Associated against a policy.
 
+
 * [POST /idauthentication/v1/kyc/](#post-idauthenticationv1kyc) 
 
 ## POST /idauthentication/v1/kyc/
 This request will provide KYC details of Individual, once an Individual is successfully authenticated.
 
 ### Resource URL
-`https://mosip.io/idauthentication/v1/kyc/:MISP-LicenseKey/:eKYC-Partner-ID/:Partner-Api-Key`
+`https://{base_url}/idauthentication/v1/kyc/:MISP-LicenseKey/:eKYC-Partner-ID/:Partner-Api-Key`
 
 ### Resource details
 Resource Details | Description
@@ -281,11 +283,10 @@ request| Y | Request block to be used for authenticating Individual, encrypted w
 request: otp| N | OTP | | 
 request: timestamp| N | Timestamp when request block was captured| | 
 request: demographics|N| Demographic data of an Individual| |
-request: biometrics|N| Biometric data of an Individual which is sent in the response from the Capture API of MDS v0.9.5. Refer to the [MDS v0.9.5](https://docs.mosip.io/platform/biometrics/mosip-device-service-specification#capture) specification for complete information. | |
+request: biometrics|N| Biometric data of an Individual which is sent in the response from the Capture API of MDS v0.9.5. Refer to the [MDS v0.9.5](MOSIP-Device-Service-Specification.md#capture) specification for complete information. | |
 request: biometrics: data|Y| JWS format of Biometric data of an Individual with X509 certificate. The payload present in JWS is encrypted by below biometrics.sessionKey using symmetric encryption algorithm - AES/GCM/PKCS5Padding | |
 request: biometrics: hash|Y| SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format. While calculating the hash for the first biometrics.data entry assume empty string as previous data block.| |
-request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.5](https://docs.mosip.io/platform/biometrics/mosip-device-service-specification#capture) to encrypt above biometric data attribute. This symmetric key is encrypted by MOSIP Public Key shared to Device Providers using asymmetric key algorithm - RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING, and then Base64-url-encoded| |
-
+request: biometrics: sessionKey|Y| Symmetric key used by [MDS v0.9.5](MOSIP-Device-Service-Specification.md#capture) to encrypt above biometric data attribute. This symmetric key is encrypted by MOSIP Public Key shared to Device Providers using asymmetric key algorithm - RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING, and then Base64-url-encoded| |
 
 ### Request Body
 ```JSON
@@ -484,7 +485,7 @@ This service enables Partners to request for an OTP for an Individual. The OTP w
 This request will send an OTP to the Individual.
 
 ### Resource URL 
-`https://mosip.io/idauthentication/v1/otp/:MISP-LicenseKey/:Partner-ID/:Partner-Api-Key`
+`https://{base_url}/idauthentication/v1/otp/:MISP-LicenseKey/:Partner-ID/:Partner-Api-Key`
 
 ### Resource details
 Resource Details | Description
@@ -601,13 +602,14 @@ This service details authentication (yes/no auth) that can be used by MOSIP modu
 1. `Registration Client` - Registration Client can authenticate biometrics of Operator or Supervisor while onboarding them.
 2. `Registration Processor` - Registration Processor can authenticate biometrics of Operator or Supervisor while processing registration packets.
 
+
 * [POST /idauthentication/v1/internal/auth](#post-idauthenticationv1internalauth) 
 
 ## POST /idauthentication/v1/internal/auth
 This request will authenticate an Operator/Supervisor using Biometric authentication.
 
 ### Resource URL
-`https://mosip.io/idauthentication/v1/internal/auth`
+`https://{base_url}/idauthentication/v1/internal/auth`
 
 ### Resource details
 Resource Details | Description
@@ -773,7 +775,7 @@ Authentication Transactions Service can be used by Resident Services to retrieve
 This request will retrieve authentication transactions for the given UIN/VID, alongwith pageStart and pageFetch parameters.
 
 ### Resource URL
-`https://mosip.io/idauthentication/v1/internal/authTransactions/individualIdType/:IDType/individualId/:ID?pageStart=1&pageFetch=10`
+`https://{base_url}/idauthentication/v1/internal/authTransactions/individualIdType/:IDType/individualId/:ID?pageStart=1&pageFetch=10`
 
 ### Resource details
 Resource Details | Description
@@ -868,7 +870,7 @@ Authentication Types Status Service can be used by Resident Services to retrieve
 This request will retrieve status (locked or unlocked) of Auth Types of an Individual using VID/UIN. 
 
 ### Resource URL
-`https://mosip.io/idauthentication/v1/internal/authtypes/status/individualIdType/:IDType/individualId/:ID`
+`https://{base_url}/idauthentication/v1/internal/authtypes/status/individualIdType/:IDType/individualId/:ID`
 
 ### Resource details
 Resource Details | Description
@@ -957,7 +959,7 @@ IDA-MLC-018|%s not available in database|UIN, VID not available in database|
 This request will lock or unlock one or more authenticate types for an Individual using VID/UIN. 
 
 ### Resource URL
-`https://mosip.io/idauthentication/v1/internal/authtypes/status`
+`https://{base_url}/idauthentication/v1/internal/authtypes/status`
 
 ### Resource details
 Resource Details | Description
@@ -1100,40 +1102,40 @@ request: events: transactionLimit|N| The transaction limit of VID only for VID b
 ### Request Body
 ```JSON
 {
-	"id": "moip.ida.notification.event",
-	"timestamp": "2019-02-15T10:01:57.086+05:30",
-	"version": "1.0",
-	"request": {
-		"events": [
-			{
-				"event_type ": "CREATE_UIN",
-				"uin": "9830872690 ",
-				"expiryTimestamp": null,
-				"transactionLimit": null
-			},
-			{
-				"event_type ": "CREATE_VID",
-				"vid": "5603872690593682",
-				"uin": "9830872690",
-				"expiryTimestamp": "2020-02-15T10:01:57.086+05:30",
-				"transactionLimit": 1
-			},
-			{
-				"event_type ": "UPDATE_UIN",
-				"uin": "9830872690",
-				"vid": "5603872690593682",
-				"expiryTimestamp": null,
-				"transactionLimit": null
-			},
-			{
-				"event_type ": "UPDATE_VID",
-				"vid": "5603872690593682",
-				"uin": "9830872690",
-				"expiryTimestamp": "2020-02-15T10:01:57.086+05:30",
-				"transactionLimit": 1
-			}
-		]
-	}
+  "id": "moip.ida.notification.event",
+  "timestamp": "2019-02-15T10:01:57.086+05:30",
+  "version": "1.0",
+  "request": {
+    "events": [
+      {
+        "event_type ": "CREATE_UIN",
+        "uin": "9830872690 ",
+        "expiryTimestamp": null,
+        "transactionLimit": null
+      },
+      {
+        "event_type ": "CREATE_VID",
+        "vid": "5603872690593682",
+        "uin": "9830872690",
+        "expiryTimestamp": "2020-02-15T10:01:57.086+05:30",
+        "transactionLimit": 1
+      },
+      {
+        "event_type ": "UPDATE_UIN",
+        "uin": "9830872690",
+        "vid": "5603872690593682",
+        "expiryTimestamp": null,
+        "transactionLimit": null
+      },
+      {
+        "event_type ": "UPDATE_VID",
+        "vid": "5603872690593682",
+        "uin": "9830872690",
+        "expiryTimestamp": "2020-02-15T10:01:57.086+05:30",
+        "transactionLimit": 1
+      }
+    ]
+  }
 }
 ```
 
