@@ -4,7 +4,7 @@ The hardware compute and storage requirements for MOSIP core platform are estima
 ### Compute
 Compute hardware estimates for a production deployment:
 
-|Module|Capacity|n Servers|Configuration|
+|Module|Capacity|n rServers|Configuration|
 |---|---|---|---|
 |Pre-registration | 7200 pre-regs/hour\* | 10 | 4 VCPU\**, 16 GB RAM | 
 |Registration Processor | 200,000 registrations per day | 80 | 4 VCPU, 16 GB RAM| 
@@ -40,7 +40,20 @@ Storage estimates for production deployment:
 [MOSIP Storage Requirement Calculator XLS]( https://github.com/mosip/documentation/blob/master/docs/_sources/hardware_sizing/MOSIP_Storage_Estimate-v1.1.xlsx)
 
 #### Appication and system logs
-TBD
+* Application logs
+
+|Module|Unit|Raw log size|
+|---|---|---|
+|Pre-Reg|100 pre-regs|20 MB|
+|Reg Proc|100 registrations| 200 MB|
+
+The above estimates are approximate, and may inflate if, for example, there are too many exception traces.  
+
+The logs may be compressed and archived after a week or so.  The compression ratio achieved with tar+gz utility is 15-20.
+
+* System logs
+
+To be estimated by System Integrator according to the deployment
 
 ## Dev, QA, Staging, Preprod
 Additional compute and storage is needed for the following setups.

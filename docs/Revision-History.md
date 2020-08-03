@@ -1,5 +1,8 @@
 This page contains the details of recent documentation updates.
 
+* 01st Aug 2020
+  * Log size estimates added for Pre-reg and Reg Proc in [Hardware Sizing](Hardware-Sizing.md)
+  
 * 29th July 2020
   * [Deployment architectures](Deployment-Architectures.md) publised.
 

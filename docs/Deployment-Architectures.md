@@ -14,7 +14,7 @@ In order to get the best out of mosip and keep manageability high the deployment
 
 * Infrastructure choices
   * Option ‘On Premises’ - Deploy in a private or own data center
-  * Option ‘Cloud’ - Deploy in a public cloud
+  * Option ‘Cloud’ - Deploy in a cloud
   * Option ‘Hybrid’ - Cloud + On Premises
 
 * Platform choices
@@ -35,7 +35,7 @@ For linear scaling of capacity and provisioning of hardware, a cell based archit
 [Cell based architecture](https://docs.mosip.io/platform/build-and-deploy/cell-based-deployment-architecture)
 
 ## Rapid deployment: Hybrid architecture
-A hybrid architecture may be considered where benefits of cloud and on-premise are leveraged. While cloud provides rapid deployment and ease of  management, on-premise provides sovereignty and contorl of sensitive data.  
+A hybrid architecture may be considered where benefits of cloud and on-premise are leveraged. While cloud provides rapid deployment and ease of  management, on-premise can facilitate data localization and any other policy requirements. 
 
 An example of hybrid architecture is given below:
 
