@@ -12,7 +12,6 @@
   * [5. Test Execution Summary](#5-test-execution-summary-)
 - [Known Issues](#known-issues-)
 - [List Of Acronyms](#list-of-acronyms-)
-- [Deployment instructions](#deployment-instructions-)
 
 ## Scope [**[↑]**](#table-of-contents)
 This release is with **real biometrics**. This means that MOSIP Platform is now integrated with SDK, MDS (MOSIP  Device Service), ABIS (Automated Biometrics Identification System) and Biometric devices. Also, this version is tested for Biometric functionalities. Non-functional requirements (Performance, Scale and Security) will be taken up in subsequent releases.
@@ -149,6 +148,3 @@ HSM | Hardware Security Module
 TPM | Trusted Platform Module
 SDK | Software Development Kit
 MDS | MOSIP Device Service
-
-## Deployment instructions [**[↑]**](#deployment-instructions)
-Deployment instructions are available [here](https://github.com/mosip/mosip-infra-mt/tree/master/releases/1.0.0).

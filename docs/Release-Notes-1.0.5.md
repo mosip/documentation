@@ -45,7 +45,7 @@ Low level design documents for respective modules is found below:
 	* [Kernel](https://github.com/mosip/commons/tree/master/design/idrepository)
 	
 ### 3. Platform Configuration for RBR    
-MOSIP Platform can be configured to be used for Real Biometrics. Please find the [guide to configure MOSIP for real biometrics](Guide-to-configure-MOSIP-for-Real-Biometrics.md).
+MOSIP Platform can be configured to be used for Real Biometrics. Please find the [guide to configure MOSIP for real biometrics](Guide-to-Configure-MOSIP-for-Real-Biometrics.md).
 
 ## Key Points [**[↑]**](#table-of-contents)
 
