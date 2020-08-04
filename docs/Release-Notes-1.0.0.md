@@ -43,13 +43,13 @@ Includes Functional requirements, Process flows, Architecture and High level des
 	* [Registration Client](https://github.com/mosip/registration/tree/master/design/registration)
 	* [Registration Processor](https://github.com/mosip/registration/tree/master/design/registration-processor)
 	* [Authentication](https://github.com/mosip/id-authentication/tree/master/design/authentication)
-	* {Administration](https://github.com/mosip/admin-services/tree/master/design/admin)
+	* [Administration](https://github.com/mosip/admin-services/tree/master/design/admin)
 	* [ID Repository](https://github.com/mosip/commons/tree/master/design/kernel)
 	* [Kernel](https://github.com/mosip/commons/tree/master/design/idrepository)
 * Functional test documentation is found [here](https://github.com/mosip/mosip-functional-tests/tree/1.0.0).
 
 ### 3. Platform Configuration for RBR
-MOSIP Platform can be configured to be used for Real Biometrics. Please find the [guide to configure MOSIP for real biometrics](Guide-to-Configure-MOSIP-for-Biometrics.md).
+MOSIP Platform can be configured to be used for Real Biometrics. Please find the [guide to configure MOSIP for  biometrics](Guide-to-Configure-MOSIP-for-Biometrics.md).
 
 ## Key Points [**[↑]**](#table-of-contents)
 

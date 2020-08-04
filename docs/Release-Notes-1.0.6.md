@@ -47,7 +47,7 @@ Low level design documents for respective modules is found below:
 	* [Resident Services](https://github.com/mosip/resident-services/tree/master/design/resident-service)
 
 ### 3. Platform Configuration for RBR    
-MOSIP Platform can be configured to be used for Real Biometrics. Please find the [guide to configure MOSIP for real biometrics](Guide-to-configure-MOSIP-for-Real-Biometrics.md).
+MOSIP Platform can be configured to be used for Real Biometrics. Please find the [guide to configure MOSIP for biometrics](Guide-to-Configure-MOSIP-for-Biometrics.md).
 
 ## Key Points [**[↑]**](#table-of-contents)
 

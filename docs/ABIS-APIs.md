@@ -2,11 +2,19 @@ This document defines the APIs specifications for various operations that ABIS c
 
 API specification version: **0.9**
 
-Published Date: June 26, 2020
+Published Date: August 04, 2020
 
 **Revision Note**
 
 New [failure reason](#failure-reasons) (code - 6, 8, 9, 10, 11, 12) for ABIS have been added.
+
+## Revision Note
+Publish Date|Revision
+------------|-------
+May 07, 2020|This is the first formal publication of the interface as a versioned specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
+June 09, 2020|A note related to targetFPIR was added
+June 26, 2020|New [failure reason](#failure-reasons) (code - 6, 8, 9, 10, 11, 12) for ABIS have been added.
+August 04, 2020|Analytics section has been added to the overall response for Identify
 
 # Introduction
 An ABIS system that integrates with MOSIP should support the following operations. 
@@ -234,6 +242,10 @@ Target False Positive Identification Rate	| targetFPIR
         ]
       }
     ]
+    "analytics": {
+      //This is a optional section
+      //Data in this section can be agreed upon between the MOSIP adoptor and the ABIS
+	}
   }
 }
 ```

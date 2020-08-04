@@ -10,7 +10,7 @@ Publish Date|Revison
 ------------|-------
 June 15, 2020|This is the first formal publication of the interface as a versioned specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
 June 30, 2020|The section related to [Possible Flags](#possible-flags) in [Matcher](#matcher) has been added.
-July 28, 2020|The segmentation API was expecting a BIR sample in the request. In order to standardise this interface and to bring in some more flexibility on the usage, we are changing the input format to BiometricRecord sample.
+July 28, 2020|The segmentation API was expecting a BIR sample in the request. In order to standardize this interface and to bring in some more flexibility on the usage, we are changing the input format to BiometricRecord sample.
 
 # Introduction
 Mosip as a platform does not have any inbuilt capabilities to handle biometrics. It relies on external components and subsystems to perform all activities pertaining to biometrics. As a platform it defines formats, standards and interfaces for these external components and subsystems. The Biometrics SDK is a critical external component used for performing operations with biometric data in multiple mosip modules - Registration Client, Authentication and Registration Processor.
