@@ -40,7 +40,7 @@ Low level design documents for respective modules is found below:
 	* [Registration Client](https://github.com/mosip/registration/tree/master/design/registration)
 	* [Registration Processor](https://github.com/mosip/registration/tree/master/design/registration-processor)
 	* [Authentication](https://github.com/mosip/id-authentication/tree/master/design/authentication)
-	* {Administration](https://github.com/mosip/admin-services/tree/master/design/admin)
+	* [Administration](https://github.com/mosip/admin-services/tree/master/design/admin)
 	* [ID Repository](https://github.com/mosip/commons/tree/master/design/kernel)
 	* [Kernel](https://github.com/mosip/commons/tree/master/design/idrepository)
 	
