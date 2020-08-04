@@ -1,11 +1,10 @@
-# Biometrics SDK API Specifications
 This document defines the interface for the Java Library providing the functional support for processing biometrics.
 
 API specification version:  **0.9**
 
 Published Date: July 28, 2020
 
-## Revision Note
+# Revision Note
 Publish Date|Revison
 ------------|-------
 June 15, 2020|This is the first formal publication of the interface as a versioned specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
