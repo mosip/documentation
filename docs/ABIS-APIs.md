@@ -4,7 +4,7 @@ API specification version: **0.9**
 
 Published Date: August 04, 2020
 
-## Revision Note
+# Revision Note
 Publish Date|Revision
 ------------|-------
 May 07, 2020|This is the first formal publication of the interface as a versioned specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
