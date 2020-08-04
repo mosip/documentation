@@ -9,7 +9,6 @@
 	* [b. Not in scope](#b-not-in-scope)
 	* [c. Test Metrics](#c-test-metrics)
 	* [d. Test Execution Report](#d-test-execution-report)
-- [List of Known Issues](#list-of-known-issues)
 - [Acronyms](#acronyms)
 
 ## Scope
@@ -61,7 +60,7 @@ Code needs to be deployed as per the procedure depicted in [Sandbox Installer](h
 |Functional Testing|<ul><li>Pre-registration (UI & APIs)</li><li>Registration Client</li><li>Kernel (APIs)</li><li>Registration Processor (Server)</li><li>ID Authentication (APIs)</li><li>Partner Management (APIs)</li><li>ID Repo (APIs)</li><li>Resident Services (APIs)</li></ul>|
 |Non-Functional Testing|<ul><li>Early Performance Testing</li><li>Security Testing</li></ul>|
 |Configuration Testing| Testing is done for default configuration. Changing the configuration parameters with various values will be taken up in subsequent releases.|
-|Version Tag Tested|v1.1.0|
+|Version Tag Tested|v1.1.1|
 |Types of testing|<ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li></ul>|
 |Browser Support|**Pre-Registration** (Latest Versions of Chrome, Edge & Firefox)|
 |OS Support|**Registration Client** (Windows 10)|
@@ -98,28 +97,22 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 |Test Coverage|Pre-Registration (100%), Registration Client (95%), Registration Processor (100%), Authentication (100%), Partner Management (100%), Resident Services (100%)|
 |Code Coverage|70% to 80%|
 |Automation Coverage|80%|
-|Number of Test Cases|Total Run (2818), Pass (2526), Pass Rate (90%)|
-|Number of Bugs Found|797 (Since December 2019)|
-|Number of Open Defects|Total (77), Blocker or Critical: 10 (7 fixed & 3 open for patch release)|
-|Number of Immediate Fixes|10 to 15|
+|Number of Test Cases|Total Run (2262), Pass (2260), Pass Rate (96.5%)|
+|Number of Open Blocker or Critical Defects|0|
 
 ### d. Test Execution Report
 
 |Test Execution    |Version|Test Cases|Executed Tests|Pass|Fail|Pending Execution|Pass%|Fail%|
 |------------------|-------|----------|--------------|----|----|-----------------|-----|-----|
-|Kernel            |1.1.0 |372       |372           |341 |31  |0                |91.7%|8.3% |
-|Pre-Registration  |1.1.0 |829       |802           |774 |28  |27               |96.5%|3.5% |
-|Registration      |1.1.0 |316       |271           |263 |8   |45               |97.0%|3.0% |
-|Authnetication    |1.1.0 |1081      |1081          |1033|48  |0                |95.6%|4.4% |
-|ID Repository     |1.1.0 |152       |152           |142 |10  |0                |93.4%|6.6% |
-|Resident Services |1.1.0 |38        |33            |33  |0   |5                |100% |0.0% |
-|Partner Management|1.1.0 |84        |84            |84  |0   |0                |100% |0.0% |
-|**Total**         |1.1.0 |2872      |2795          |2670|125 |77               |95.5%|4.5% |
+|Kernel            |1.1.1 |372       |372           |354 |18  |0                |95.2%|4.8% |
+|Pre-Registration  |1.1.1 |350       |348           |342 |6   |2                |97.7%|2.3% |
+|Registration      |1.1.1 |194       |194           |165 |29  |0                |85.1%|14.9% |
+|Authnetication    |1.1.1 |1055      |1055          |1037|18  |0                |98.3%|1.7% |
+|ID Repository     |1.1.1 |147       |147           |147 |0   |0                |100%|0.0% |
+|Resident Services |1.1.1 |33        |33            |32  |1   |0                |97.0% |3.0% |
+|Partner Management|1.1.1 |111       |111           |106 |5   |0                |95.5% |4.5% |
+|**Total**         |1.1.1 |2262      |2260          |2183|77  |2                |96.5%|3.4% |
 
-## List of Known Issues
-|JIRA ID|Module|Description|
-|----------|-------------|------|
-|TBD|TBD|TBD| 
 
 ## Acronyms
 
