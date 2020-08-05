@@ -7,7 +7,7 @@ Published Date: August 04, 2020
 # Revision Note
 Publish Date|Revision
 ------------|-------
-May 07, 2020|This is the first formal publication of the interface as a versioned specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
+May 07, 2020|This is the first formal publication of the interface as a version-ed specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
 June 09, 2020|A note related to targetFPIR was added
 June 26, 2020|New [failure reason](#failure-reasons) (code - 6, 8, 9, 10, 11, 12) for ABIS have been added.
 August 04, 2020|Analytics section has been added to the overall response for Identify
@@ -73,12 +73,12 @@ The following operations are supported by MOSIP:
 * ABIS must get biometric data from referenceURL, process it and store it locally within the ABIS reference database 
 	* The referenceURL is authenticated and authorized; ABIS needs to send a JWT token inside the request header COOKIE
 	* The referenceURL is secure (HTTPS)
-	* The referenceURL will be active for a certain time as decided by the MOSIP adoptor 
+	* The referenceURL will be active for a certain time as decided by the MOSIP adopter 
 * referenceId must not be active prior to this operation i.e., it must not have been used before this operation
 * De-duplication must not be performed in this operation
 * MOSIP will provide biometric data in [CBEFF format](CBEFF-XML.md) to ABIS as a response of referenceURL and the data in CBEFF will not be encrypted
 
-> Refer to [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token. Request JSON expects clientid, secretkey and appid which will be provided by the MOSIP adoptor's System Integrator(SI).
+> Refer to [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token. Request JSON expects clientid, secretkey and appid which will be provided by the MOSIP adopter's System Integrator(SI).
 
 ### Insert Request
 ```JSON
@@ -122,16 +122,15 @@ The following operations are supported by MOSIP:
 	* If in case, both referenceID and referenceURL are missing ABIS throws an error.
 
 {% hint style="info" %}
-We are not using the referenceURL in Identify request for our current implementation. Hence, it will be an empty string for Identify request. MOSIP 
-Aadoptors can have customized workflows where the referenceURL can be used.
+We are not using the referenceURL in Identify request for our current implementation. Hence, it will be an empty string for Identify request. MOSIP adopters can have customized work-flows where the referenceURL can be used.
 {% endhint %}
 
 * Identify request should give all candidates which are considered as a match based on ABIS thresholds.
 * This request should not match against referenceID that is not in the reference database.
-* The response now has a section for analytics that contains key value pairs. Values can be json objects also. The contents of the analytics section will be agreed upon by the MOSIP adoptor with the ABIS. Scores are also moved to this section and are not mandatory response parameters any more.
-* Ordering or ranking of results is not explicitly specified and can be agreed upon between the MOSIP adoptor and the ABIS.
+* The response now has a section for analytics that contains key value pairs. Values can be JSON objects also. The contents of the analytics section will be agreed upon by the MOSIP adopter with the ABIS provider. Scores are also moved to this section and are not mandatory response parameters any more.
+* Ordering or ranking of results is not explicitly specified and can be agreed upon between the MOSIP adopter and the ABIS provider.
 * The flags section of the request can be used to customize or control ABIS behavior by sending specific key value pairs.
-* "targetFPIR" or "maxResults" are examples of such flags that can alter the ABIS behavior. These are optional attributes for MOSIP during an identify request. MOSIP expects the adoptors to define these parameters based on the accuracy expectations and the workflow requirements. These can be set at the ABIS configuration level and need not be part of the individual request at all.
+* "targetFPIR" or "maxResults" are examples of such flags that can alter the ABIS behavior. These are optional attributes for MOSIP during an identify request. MOSIP expects the adopters to define these parameters based on the accuracy expectations and the work-flow requirements. These can be set at the ABIS configuration level and need not be part of the individual request at all.
 
 To give an example, please find the following calculation for targetFPIR - which is the error rate at which identification requests are expected to return non-empty candidate list.
 
@@ -240,7 +239,7 @@ Target False Positive Identification Rate	| targetFPIR
     ]
     "analytics": {
       //This is a optional section
-      //Data in this section can be agreed upon between the MOSIP adoptor and the ABIS
+      //Data in this section can be agreed upon between the MOSIP adopter and the ABIS Provider
 	}
   }
 }
