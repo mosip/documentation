@@ -10,7 +10,7 @@ Publish Date|Revision
 May 07, 2020|This is the first formal publication of the interface as a version-ed specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
 June 09, 2020|A note related to targetFPIR was added
 June 26, 2020|New [failure reason](#failure-reasons) (code - 6, 8, 9, 10, 11, 12) for ABIS have been added.
-August 04, 2020|Analytics section has been added to the overall response for Identify
+August 04, 2020|Analytics section has been added to the overall response for Identify and the [failure reason](#failure-reasons) have been updated.
 
 # Introduction
 An ABIS system that integrates with MOSIP should support the following operations. 
@@ -50,15 +50,19 @@ Code | Reason
 1 | Internal error - Unknown
 2 | Aborted
 3 | Unexpected error
-4 | Unable to serve the request
-5 | Missing reference id
-6 | Missing request id
-7 | Unable to fetch biometric details
-8 | Missing reference URL
-9 | Missing requesttime
-10 | Unable to serve insert request - reference id already exists
-11 | Unable to serve insert request - CBEFF has no data
-12 | Unable to serve identify request - reference id not found
+4 | Unable to serve the request - Invalid request Structure
+5 | Missing referenceId (in request body)
+6 | Missing requestId (in request body)
+7 | Unable to fetch biometric details (using referenceURL)
+8 | Missing reference URL (in request body)
+9 | Missing requesttime (in request body)
+10 | referenceId already exists (in ABIS)
+11 | CBEFF has no data
+12 | referenceId not found (in ABIS)
+13 | invalid version
+14 | invalid id
+15 | invalid requesttime format
+16 | invalid CBEFF format
 
 # ABIS Operations
 The following operations are supported by MOSIP:
