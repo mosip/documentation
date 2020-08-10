@@ -41,7 +41,7 @@ This document contains the features that were developed or enhanced as part of M
 * Login for user with role "Default" has been added, so that this user can skip on-boarding and register as the 1st user in MOSIP system.
 * Client setting sync has been updated to fetch data only when key index and center id is sent. The updated API specification for client setting sync is available [here](Kernel-APIs.md#sync-data-public).
 * Machine master table has been updated to store public key and key index. Validation for public key to machine for TPM and non-TPM machines has been added.
-* Support for generic master data sync has been added. For details on generic master data sync API find the API specification [here](Generic-Master-Data-Sync-API.md).
+* Support for dynamic fields in sync has been added. For details on dynamic fields find the API specification [here](Dynamic-Fields-APIs.md).
 * Registration Client UI and flow now can be dynamically created using ID schema and UI specification. The guide to create the registration client UI specification is available [here](UI-Specification-for-Registration-Client.md). The APIs to create and publish MOSIP ID Schema is available [here](ID-Schema-APIs.md).
 * Registration Packet structure has changed to store id, evidence and optional data separately in different folders. 
 * Implementation has been changed to support [MDS 0.9.5 specification](MOSIP-Device-Service-Specification.md).

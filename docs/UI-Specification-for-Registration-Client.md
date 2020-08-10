@@ -1087,3 +1087,14 @@ This is a mandatory property which is needed to identify if the ID attribute is 
   }
 ]
 ```
+
+# Steps to create your own ID schema and UI specification
+* Along with the above attributes which are available in the platform, the adopter can choose to add new attributes specific to it's requirement
+* Some of the attributes might need to have pre-defined master data
+	* The adopter can use our [Dynamic Fields API](Dynamic-Fields-APIs.md) to create dynamic master data
+	* Then the adopter can add this field in the UI specification and mark the field type as dynamic
+* Once all the attributes are added, the adopter can choose to create the ID Schema using the UI specification defined for registration client using the [ID Schema APIs](ID-Schema-APIs.md).
+* Once the ID Schema is created it needs to be published.
+* Then the [UI specification for Pre-registration](UI-Specification-for-Pre-Registration.md) needs to be created which is nearly similar to UI specification for Registration Client and should be added to the properties file of pre-registration (file name: pre-registration-demographic.json).
+* Once the file is placed the property "mosip.idschema.version" in pre-registration should be updated to the latest ID schema version.
+* All the services needs to be re-started to use the new UI.

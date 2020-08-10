@@ -103,6 +103,7 @@
     * [Device Type and Subtype APIs](Device-Type-and-Subtype-APIs.md)
     * [Device Management APIs](Device-Management-APIs.md)
     * [Document APIs](Document-APIs.md)
+	* [Dynamic Fields APIs](Dynamic-Fields-APIs.md)
     * [Generic Master Data API](Generic-Master-Data-API.md)
     * [Generic Master Data Sync API](Generic-Master-Data-Sync-API.md)
     * [Holiday APIs](Holiday-APIs.md)
