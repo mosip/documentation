@@ -9,6 +9,7 @@
     * Pre-Registration Module
         * [Pre-Registration](Pre-Registration.md)
         * [Pre Registration Functionality](Pre-Registration-Functionality.md)
+		* [UI Specification for Pre-registration](UI-Specification-for-Pre-Registration.md)
     * Registration Module
         * [Registration](Registration-Client.md)
         * [Registration Functionality](Registration-Functionality.md)
@@ -17,7 +18,8 @@
         * [First User Registration and Onboarding](First-User-Registration-and-Onboarding.md)
         * [Guide to Configure MOSIP for Biometrics](Guide-to-Configure-MOSIP-for-Biometrics.md)
         * [Guidelines for Adding Centers, Machine, User and Devices](Guidelines-for-Adding-Centers,-Machine,-User-and-Devices.md)
-        * [Device Integration Specifications](Device-Integration-Specifications.md)  
+        * [Device Integration Specifications](Device-Integration-Specifications.md)
+		* [UI Specification for Registration Client](UI-Specification-for-Registration-Client.md)
     * Registration Processor Module    
         * [Registration Processor](Registration-Processor.md)
         * [Registration Processor Functionality](Registration-Processor-Functionality.md)
@@ -106,6 +108,7 @@
     * [Holiday APIs](Holiday-APIs.md)
     * [ID Authentication APIs](ID-Authentication-APIs.md)
     * [ID Repository APIs](ID-Repository-APIs.md)
+	* [ID Schema APIs](ID-Schema-APIs.md)
     * [Kernel APIs](Kernel-APIs.md)
     * [Machine APIs](Machine-APIs.md)
     * [Master Data Biometric APIs](Master-Data-Biometric-APIs.md)

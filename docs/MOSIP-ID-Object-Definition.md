@@ -1,6 +1,7 @@
 ID definition is the key to use MOSIP. ID definition describes the attributes a country or entity will capture from an Individual. Since, MOSIP is a generic Identity platform the attributes of an ID cannot be predefined by MOSIP. One country may capture 5 attributes and another 10 attributes. So, to accommodate this flexibility MOSIP provides a feature where a country defines an ID object definition schema. This will be the first step in using MOSIP. Once an ID object schema is defined, all applications built on top of MOSIP platform to capture data MUST conform to the ID object schema.
 
-* As a rule of thumb, only attributes related to an individual (demographic and biometric), his/her parent/guardian attributes (demographic and biometric) should be captured in the ID object
+* As a rule of thumb, only attributes related to an individual (demographic and biometric or documents), his/her parent/guardian attributes (demographic and biometric) should be captured in the ID object
+* The above data captured can also be categorized as private, evidence and optional using the property field category; so that the data is stored in different sub-packets (i.e. private, evidence and optional)
 * All other data captured in the field like operator/supervisor data should not be part of the ID object
 * Schema can use predefined JSON data types to define attributes
 * Schema can also create User Defined Types (UDTs) to specify the format of data to be captured. For example, biometrics data should always be in CBEFF ISO 19795 - 1 format. This helps in specifying the format of the data that is captured
@@ -9,116 +10,23 @@ ID definition is the key to use MOSIP. ID definition describes the attributes a 
 Below is a sample ID object definition schema and a sample of a JSON object based on the schema:
 ```JSON
 {
-  "$id": "http://mosip.io/id_object/1.0/id_object.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "MOSIP ID schema",
-  "description": "Sample ID schema",
-  "type": "object",
+  "description": "MOSIP Sample identity",
   "additionalProperties": false,
-  "properties": {
-    "identity": {
-      "title": "identity",
-      "description": "This schema holds all the attributes of an Identity",
-      "type": "object",
-      "additionalProperties": true,
-      "properties": {
-        "IDSchemaVersion": {
-          "type": "number",
-          "minimum": 0
-        },
-        "UIN": {
-          "type": "integer",
-          "minimum": 0
-        },
-        "fullName": {
-          "$ref": "#/definitions/simpleType"
-        },
-        "dateOfBirth": {
-          "type": "string"
-        },
-        "age": {
-          "type": "integer"
-        },
-        "gender": {
-          "$ref": "#/definitions/simpleType"
-        },
-        "addressLine1": {
-          "$ref": "#/definitions/simpleType"
-        },
-        "addressLine2": {
-          "$ref": "#/definitions/simpleType"
-        },
-        "addressLine3": {
-          "$ref": "#/definitions/simpleType"
-        },
-        "region": {
-          "$ref": "#/definitions/simpleType"
-        },
-        "province": {
-          "$ref": "#/definitions/simpleType"
-        },
-        "city": {
-          "$ref": "#/definitions/simpleType"
-        },
-        "postalCode": {
-          "type": "string"
-        },
-        "phone": {
-          "type": "string"
-        },
-        "email": {
-          "type": "string"
-        },
-        "residenceStatus": {
-          "$ref": "#/definitions/simpleType"
-        },
-        "parentOrGuardianName": {
-          "$ref": "#/definitions/simpleType"
-        },
-        "parentOrGuardianRID": {
-          "type": "integer",
-          "minimum": 0
-        },
-        "parentOrGuardianUIN": {
-          "type": "integer",
-          "minimum": 0
-        },
-        "proofOfAddress": {
-          "$ref": "#/definitions/documentType"
-        },
-        "proofOfIdentity": {
-          "$ref": "#/definitions/documentType"
-        },
-        "proofOfRelationship": {
-          "$ref": "#/definitions/documentType"
-        },
-        "proofOfDateOfBirth": {
-          "$ref": "#/definitions/documentType"
-        },
-        "proofOfException": {
-          "$ref": "#/definitions/documentType"
-        },
-        "individualBiometrics": {
-          "$ref": "#/definitions/biometricsType"
-        },
-        "parentOrGuardianBiometrics": {
-          "$ref": "#/definitions/biometricsType"
-        }
-      }
-    }
-  },
+  "title": "MOSIP identity",
+  "type": "object",
   "definitions": {
     "simpleType": {
-      "type": "array",
-      "additionalItems": false,
       "uniqueItems": true,
+      "additionalItems": false,
+      "type": "array",
       "items": {
+        "additionalProperties": false,
         "type": "object",
         "required": [
           "language",
           "value"
         ],
-        "additionalProperties": false,
         "properties": {
           "language": {
             "type": "string"
@@ -130,6 +38,7 @@ Below is a sample ID object definition schema and a sample of a JSON object base
       }
     },
     "documentType": {
+      "additionalProperties": false,
       "type": "object",
       "properties": {
         "format": {
@@ -141,10 +50,10 @@ Below is a sample ID object definition schema and a sample of a JSON object base
         "value": {
           "type": "string"
         }
-      },
-      "additionalProperties": false
+      }
     },
     "biometricsType": {
+      "additionalProperties": false,
       "type": "object",
       "properties": {
         "format": {
@@ -157,139 +66,497 @@ Below is a sample ID object definition schema and a sample of a JSON object base
         "value": {
           "type": "string"
         }
-      },
-      "additionalProperties": false
+      }
+    }
+  },
+  "properties": {
+    "identity": {
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "IDSchemaVersion",
+        "fullName",
+        "dateOfBirth",
+        "gender",
+        "addressLine1",
+        "addressLine2",
+        "addressLine3",
+        "region",
+        "province",
+        "city",
+        "zone",
+        "postalCode",
+        "phone",
+        "email",
+        "proofOfIdentity",
+        "individualBiometrics"
+      ],
+      "properties": {
+        "proofOfAddress": {
+          "bioAttributes": [],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/documentType"
+        },
+        "gender": {
+          "bioAttributes": [],
+          "fieldCategory": "pvt",
+          "format": "",
+          "fieldType": "default",
+          "$ref": "#/definitions/simpleType"
+        },
+        "city": {
+          "bioAttributes": [],
+          "validators": [
+            {
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": [],
+              "type": "regex"
+            }
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/simpleType"
+        },
+        "postalCode": {
+          "bioAttributes": [],
+          "validators": [
+            {
+              "validator": "^[(?i)A-Z0-9]{5}$|^NA$",
+              "arguments": [],
+              "type": "regex"
+            }
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "type": "string",
+          "fieldType": "default"
+        },
+        "proofOfException-1": {
+          "bioAttributes": [],
+          "fieldCategory": "evidence",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/documentType"
+        },
+        "referenceIdentityNumber": {
+          "bioAttributes": [],
+          "validators": [
+            {
+              "validator": "^([0-9]{10,30})$",
+              "arguments": [],
+              "type": "regex"
+            }
+          ],
+          "fieldCategory": "pvt",
+          "format": "kyc",
+          "type": "string",
+          "fieldType": "default"
+        },
+        "individualBiometrics": {
+          "bioAttributes": [
+            "leftEye",
+            "rightEye",
+            "rightIndex",
+            "rightLittle",
+            "rightRing",
+            "rightMiddle",
+            "leftIndex",
+            "leftLittle",
+            "leftRing",
+            "leftMiddle",
+            "leftThumb",
+            "rightThumb",
+            "face"
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/biometricsType"
+        },
+        "province": {
+          "bioAttributes": [],
+          "validators": [
+            {
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": [],
+              "type": "regex"
+            }
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/simpleType"
+        },
+        "zone": {
+          "bioAttributes": [],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/simpleType"
+        },
+        "proofOfDateOfBirth": {
+          "bioAttributes": [],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/documentType"
+        },
+        "addressLine1": {
+          "bioAttributes": [],
+          "validators": [
+            {
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": [],
+              "type": "regex"
+            }
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/simpleType"
+        },
+        "addressLine2": {
+          "bioAttributes": [],
+          "validators": [
+            {
+              "validator": "^(?=.{3,50}$).*",
+              "arguments": [],
+              "type": "regex"
+            }
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/simpleType"
+        },
+        "residenceStatus": {
+          "bioAttributes": [],
+          "fieldCategory": "kyc",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/simpleType"
+        },
+        "addressLine3": {
+          "bioAttributes": [],
+          "validators": [
+            {
+              "validator": "^(?=.{3,50}$).*",
+              "arguments": [],
+              "type": "regex"
+            }
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/simpleType"
+        },
+        "email": {
+          "bioAttributes": [],
+          "validators": [
+            {
+              "validator": "^[A-Za-z0-9_\\-]+(\\.[A-Za-z0-9_]+)*@[A-Za-z0-9_-]+(\\.[A-Za-z0-9_]+)*(\\.[a-zA-Z]{2,})$",
+              "arguments": [],
+              "type": "regex"
+            }
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "type": "string",
+          "fieldType": "default"
+        },
+        "parentOrGuardianRID": {
+          "bioAttributes": [],
+          "fieldCategory": "evidence",
+          "format": "none",
+          "type": "string",
+          "fieldType": "default"
+        },
+        "parentOrGuardianBiometrics": {
+          "bioAttributes": [
+            "leftEye",
+            "rightEye",
+            "rightIndex",
+            "rightLittle",
+            "rightRing",
+            "rightMiddle",
+            "leftIndex",
+            "leftLittle",
+            "leftRing",
+            "leftMiddle",
+            "leftThumb",
+            "rightThumb",
+            "face"
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/biometricsType"
+        },
+        "fullName": {
+          "bioAttributes": [],
+          "validators": [
+            {
+              "validator": "^(?=.{3,50}$).*",
+              "arguments": [],
+              "type": "regex"
+            }
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/simpleType"
+        },
+        "dateOfBirth": {
+          "bioAttributes": [],
+          "validators": [
+            {
+              "validator": "^(1869|18[7-9][0-9]|19[0-9][0-9]|20[0-9][0-9])/([0][1-9]|1[0-2])/([0][1-9]|[1-2][0-9]|3[01])$",
+              "arguments": [],
+              "type": "regex"
+            }
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "type": "string",
+          "fieldType": "default"
+        },
+        "individualAuthBiometrics": {
+          "bioAttributes": [
+            "leftEye",
+            "rightEye",
+            "rightIndex",
+            "rightLittle",
+            "rightRing",
+            "rightMiddle",
+            "leftIndex",
+            "leftLittle",
+            "leftRing",
+            "leftMiddle",
+            "leftThumb",
+            "rightThumb",
+            "face"
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/biometricsType"
+        },
+        "parentOrGuardianUIN": {
+          "bioAttributes": [],
+          "fieldCategory": "evidence",
+          "format": "none",
+          "type": "string",
+          "fieldType": "default"
+        },
+        "proofOfIdentity": {
+          "bioAttributes": [],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/documentType"
+        },
+        "IDSchemaVersion": {
+          "bioAttributes": [],
+          "fieldCategory": "none",
+          "format": "none",
+          "type": "number",
+          "fieldType": "default",
+          "minimum": 0
+        },
+        "proofOfException": {
+          "bioAttributes": [],
+          "fieldCategory": "evidence",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/documentType"
+        },
+        "phone": {
+          "bioAttributes": [],
+          "validators": [
+            {
+              "validator": "^[+]*([0-9]{1})([0-9]{9})$",
+              "arguments": [],
+              "type": "regex"
+            }
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "type": "string",
+          "fieldType": "default"
+        },
+        "parentOrGuardianName": {
+          "bioAttributes": [],
+          "fieldCategory": "evidence",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/simpleType"
+        },
+        "proofOfRelationship": {
+          "bioAttributes": [],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/documentType"
+        },
+        "UIN": {
+          "bioAttributes": [],
+          "fieldCategory": "none",
+          "format": "none",
+          "type": "string",
+          "fieldType": "default"
+        },
+        "region": {
+          "bioAttributes": [],
+          "validators": [
+            {
+              "validator": "^(?=.{0,50}$).*",
+              "arguments": [],
+              "type": "regex"
+            }
+          ],
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "$ref": "#/definitions/simpleType"
+        }
+      }
     }
   }
 }
 ```
-Below is a sample JSON as per the schema defined above: 
+
+Below is a sample JSON for Private packet as per the schema defined above: 
 ```JSON
 {
   "identity": {
-    "IDSchemaVersion": 1,
-    "UIN": 9687061394,
-    "fullName": [
-      {
-        "language": "ara",
-        "value": "ابراهيم بن علي"
-      },
-      {
-        "language": "fra",
-        "value": "Ibrahim Ibn Ali"
-      }
-    ],
-    "dateOfBirth": "1955/04/15",
-    "age": 45,
+    "proofOfAddress": {
+      "value": "proofOfAddress",
+      "type": "ECR",
+      "format": "pdf"
+    },
     "gender": [
       {
-        "language": "fra",
-        "value": "Femelle"
-      }
-    ],
-    "addressLine1": [
-      {
-        "language": "ara",
-        "value": "عنوان العينة سطر 1"
+        "language": "eng",
+        "value": "Male"
       },
       {
-        "language": "fra",
-        "value": "exemple d'adresse ligne 1"
-      }
-    ],
-    "addressLine2": [
-      {
         "language": "ara",
-        "value": "عنوان العينة سطر 2"
-      },
-      {
-        "language": "fra",
-        "value": "exemple d'adresse ligne 2"
-      }
-    ],
-    "addressLine3": [
-      {
-        "language": "ara",
-        "value": "عنوان العينة سطر 2"
-      },
-      {
-        "language": "fra",
-        "value": "exemple d'adresse ligne 2"
-      }
-    ],
-    "region": [
-      {
-        "language": "fra",
-        "value": "RSK"
-      }
-    ],
-    "province": [
-      {
-        "language": "fra",
-        "value": "Kénitra"
+        "value": "الذكر"
       }
     ],
     "city": [
       {
-        "language": "fra",
-        "value": "Kénitra"
-      }
-    ],
-    "postalCode": "10111",
-    "phone": "9876543210",
-    "email": "abc@xyz.com",
-    "localAdministrativeAuthority": [
-      {
-        "language": "fra",
-        "value": "QRHS"
-      }
-    ],
-    "parentOrGuardianRID": 212124324784912,
-    "parentOrGuardianUIN": 212124324784912,
-    "parentOrGuardianName": [
-      {
-        "language": "ara",
-        "value": "سلمى"
+        "language": "eng",
+        "value": "Kenitra"
       },
       {
-        "language": "fra",
-        "value": "salma"
+        "language": "ara",
+        "value": "القنيطرة"
       }
     ],
-    "residenceStatus": "abc",
-    "proofOfAddress": {
-      "format": "pdf",
-      "type": "RNC",
-      "value": "fileReferenceID"
-    },
-    "proofOfIdentity": {
-      "format": "txt",
-      "type": "PAN card",
-      "value": "fileReferenceID"
-    },
-    "proofOfRelationship": {
-      "format": "pdf",
-      "type": "Passeport",
-      "value": "fileReferenceID"
-    },
-    "proofOfDateOfBirth": {
-      "format": "pdf",
-      "type": "passport",
-      "value": "fileReferenceID"
-    },
+    "postalCode": "14022",
+    "fullName": [
+      {
+        "language": "eng",
+        "value": "Hassan Ali"
+      },
+      {
+        "language": "ara",
+        "value": "حسن علي"
+      }
+    ],
+    "dateOfBirth": "2000/01/07",
+    "referenceIdentityNumber": "5465665454",
     "individualBiometrics": {
       "format": "cbeff",
       "version": 1,
-      "value": "fileReferenceID"
+      "value": "individualBiometrics_bio_CBEFF"
     },
-    "parentOrGuardianBiometrics": {
-      "format": "cbeff",
-      "version": 1.1,
-      "value": "fileReferenceID"
-    }
+    "proofOfIdentity": {
+      "value": "proofOfIdentity",
+      "type": "CAN",
+      "format": "pdf"
+    },
+    "IDSchemaVersion": 0.1,
+    "province": [
+      {
+        "language": "eng",
+        "value": "Kenitra"
+      },
+      {
+        "language": "ara",
+        "value": "القنيطرة"
+      }
+    ],
+    "zone": [
+      {
+        "language": "eng",
+        "value": "Ben Mansour"
+      },
+      {
+        "language": "ara",
+        "value": "بن منصور"
+      }
+    ],
+    "phone": "6352000101",
+    "addressLine1": [
+      {
+        "language": "eng",
+        "value": "HSR Conlony"
+      },
+      {
+        "language": "ara",
+        "value": "هسر كُنلُني"
+      }
+    ],
+    "addressLine2": [
+      {
+        "language": "eng",
+        "value": "SECTOR-2"
+      },
+      {
+        "language": "ara",
+        "value": "سِكتُر-٢"
+      }
+    ],
+    "residenceStatus": [
+      {
+        "language": "eng",
+        "value": "Foreigner"
+      },
+      {
+        "language": "ara",
+        "value": "أجنبي"
+      }
+    ],
+    "addressLine3": [
+      {
+        "language": "eng",
+        "value": "HSRR"
+      },
+      {
+        "language": "ara",
+        "value": "هسرر"
+      }
+    ],
+    "region": [
+      {
+        "language": "eng",
+        "value": "Rabat Sale Kenitra"
+      },
+      {
+        "language": "ara",
+        "value": "جهة الرباط سلا القنيطرة"
+      }
+    ],
+    "email": "hassan.ali2000@gmail.com"
   }
 }
 ```
+
 All operations related to ID will have a place holder to receive the ID Object as per the schema, validate it as per the schema and store it AS IS. For example, when an Individual creates a Pre-Registration, the API for Pre-Registration will look as below:
 ```
 //CREATE Pre-Registration
