@@ -1,19 +1,19 @@
 This document contains the features that were developed or enhanced as part of MOSIP 1.1 release.
 
 # Commons
-* Auth Manager implementation has changed. The design for the kernel auth manager implementation change is available [here](https://github.com/mosip/commons/blob/master/design/kernel/kernel-authn.md).
+* Auth Manager implementation has changed. The design for the kernel auth manager implementation change is available [here](https://github.com/mosip/commons/blob/v1.1.0/design/kernel/kernel-authn.md).
 * Similar kernel services have been merged
 	* UIN generator and VID generator are merged
 	* Email and SMS services are merged
 	* Master data and applicant type services are merged
 	* Crypto manager, key manager, license key manager, signature and token id generator services are merged
-* Kernel CBEFF utility has been updated to load XSD only once during application initialization. The design for the kernel CBEFF utility is available [here](https://github.com/mosip/commons/blob/master/design/kernel/kernel-cbeffutil.md).
+* Kernel CBEFF utility has been updated to load XSD only once during application initialization. The design for the kernel CBEFF utility is available [here](https://github.com/mosip/commons/blob/v1.1.0/design/kernel/kernel-cbeffutil.md).
 * Partner manager has been integrated with Keycloak.
 * "Preregistration" realm has been created in Keycloak to store Pre-registration users.
-* The design for UIN generator has been changed to move assigned UINs to a new table. The design for the kernel UIN generator implementation is available [here](https://github.com/mosip/commons/blob/master/design/kernel/kernel-idgenerator-uin.md).
-* The SMS implementation has changed to allow integration with any vendor. The design for the SMS implementation is available [here](https://github.com/mosip/commons/blob/master/design/kernel/kernel-smsnotification.md).
+* The design for UIN generator has been changed to move assigned UINs to a new table. The design for the kernel UIN generator implementation is available [here](https://github.com/mosip/commons/blob/v1.1.0/design/kernel/kernel-idgenerator-service.md).
+* The SMS implementation has changed to allow integration with any vendor. The design for the SMS implementation is available [here](https://github.com/mosip/commons/blob/v1.1.0/design/kernel/kernel-notification-service.md#sms-notification-service).
 * New APIs have been created,
-	* For creating, updating and fetching dynamic master data. API specification for dynamic master data is available [here]().
+	* For creating, updating and fetching dynamic master data.
 	* Dynamic master data has been added as part of registration client master data sync
 
 # Administration
