@@ -17,6 +17,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 |0.9.2|Frozen|Aug-2019||
 |0.9.3|Frozen|Feb-2020||
 |0.9.5|Draft|13-Jun-2020||
+|0.9.5|Draft|10-Aug-2020| Signature for API to retrieve encryption certificate has been changed from GET to POST and Device Stream now supports an optional paramter - timeout
 
 ## Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
@@ -343,7 +344,7 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 * certification - Allowed values are "L0" | "L1" | "L2" based on level of certification.
 * serviceVersion - Version of the MDS specification that is supported.
 * deviceId - Internal ID to identify the actual biometric device within the device service.
-* deviceSubId - [1,2,3]; The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id.
+* deviceSubId - [1,2,3]; The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).
 * callbackId - This differs as per the OS. In case of Linux and windows operating systems it is a HTTP URL. In the case of android, it is the intent name. In IOS it is the URL scheme. The call back URL takes precedence over future request as a base URL.
 * digitalId - Digital ID as per the Digital ID definition but it will not be signed.
 * deviceCode - A unique code given by MOSIP after successful registration.
@@ -465,7 +466,7 @@ So the API would respond in the following format.
 * deviceInfo.firmware - Exact version of the firmware, In case of L0 this is same as serviceVersion.
 * deviceInfo.certification - Allowed values are "L0", "L1" based on the level of certification.
 * deviceInfo.serviceVersion - Version of the current service.
-* deviceInfo.deviceSubId - [1,2,3]; The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id.
+* deviceInfo.deviceSubId - [1,2,3]; The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).
 * deviceInfo.callbackId - Base URL to communicate.
 * deviceInfo.digitalId - As defined under the digital id section. The digital id will be unsigned if the device is L0 and the the status of the device is "Not Registered".
 * deviceInfo.env - "None" if not registered. If registered, then send the registered enviornment "Staging" | "Developer" | "Pre-Production" | "Production".
@@ -569,7 +570,7 @@ Count value should be driven by the count of the bioSubType for Iris and Finger.
     * For Face: No bioSubType
 * bio.requestedScore - Upon reaching the quality score the biometric device is expected to auto capture the image.
 * bio.deviceId - Internal Id to identify the actual biometric device within the device service.
-* bio.deviceSubId  - Specific sub id of the device that is responsible to capture the data. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id.
+* bio.deviceSubId  - Specific sub id of the device that is responsible to capture the data. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).
 * bio.previousHash - For the first capture the previousHash is hash of empty utf8 string. From the second capture the previous captures hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.
 * customOpts - If in case the device vendor has additional parameters that they can take and act accordingly then those values can be sent by the application developers to the device service.
 
@@ -697,13 +698,15 @@ Used only for the registration module compatible devices. This API is visible on
 ```
 {
   "deviceId": "Internal Id",
-  "deviceSubId": "Specific device sub Id"
+  "deviceSubId": "Specific device sub Id",
+  "timeout": "Timeout for stream"
 }
 ```
 
 #### Allowed Values for device Stream Request
 * deviceId - Internal Id to identify the actual biometric device within the device service.
-* deviceSubId - Specific sub id of the device thats responsible to stream the data. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id.
+* deviceSubId - Specific sub id of the device thats responsible to stream the data. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).
+* timeout - Max time after which the stream should close. This is an optional paramter and by default the value will be 5 minutes. All timeouts are in milliseconds.
 
 #### Device Stream Response
 Live Video stream with quality of 3 frames per second or more using [M-JPEG](https://en.wikipedia.org/wiki/Motion_JPEG).
@@ -793,7 +796,7 @@ The API is used by the devices that are compatible for the registration module. 
     * For Iris: ["Left", "Right"]
 * bio.requestedScore - Upon reaching the requested quality score the biometric device is expected to auto capture the image.
 * bio.deviceId - Internal Id to identify the actual biometric device within the device service.
-* bio.deviceSubId  - Specific sub id of the device that is responsible to capture the data. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id.
+* bio.deviceSubId  - Specific sub id of the device that is responsible to capture the data. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).
 * bio.previousHash - For the first capture the previousHash is hash of empty utf8 string. From the second capture the previous captures hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.
 
 #### Registration Capture Response
@@ -925,7 +928,12 @@ This API is exposed by the MOSIP server to the device providers.
 
 #### Accepted Values for Device Data
 * deviceId - Unique device id that the device provider uses to identify the device. (This can also be serial no if the device provider is sure of maintaining the uniqueness across all their devices)
-* digitalId - Digital id is signed by the FTM chip key in L1. In case of L0 the digital id is signed by the device key.
+* deviceinfo.digitalId - Digital id is signed by the FTM chip key in L1. In case of L0 the digital id is signed by the device key.
+* deviceInfo.deviceSubID - Specific sub id of the device that is responsible to capture the data. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.
+* deviceInfo.certification - The certificate level of the device
+* deviceInfo.firmware - Version of the firmware of the device
+* deviceInfo.deviceExpiry - Expiry date of the device. Device will not work post that expiry date and it cannot be registered again.
+* deviceInfo.timestamp - The timestamp when the request was created. For device registration the request should reach within 5 mins of this timestamp to MOSIP or the request will be rejected.
 
 {% hint style="info" %}
 During the registration of L0 devices please sign using the key thats generated inside the device and send the public key in x509 encoded spec form. <br>
@@ -1040,7 +1048,7 @@ The entire response is sent as a JWT format. So the final response will look lik
 The MOSIP server would provide the following retrieve encryption certificate API which is white-listed to the management servers of the device provider or their partners.
 
 #### Retrieve Encryption Certificate Request URL
-`GET https://{base_url}/v1/masterdata/device/encryptioncertficates`
+`POST https://{base_url}/v1/masterdata/device/encryptioncertficates`
 
 **Version:** v1
 
@@ -1115,7 +1123,7 @@ Management client is the interface that connects the device with the respective 
 1. For better and efficient handling of device at large volume, we expect the devices to auto register to the Management server.
 1. All communication to the server and from the server should follow that below properties.
     1. All communication are digitally signed with the approved algorithms
-    1. All communication to the server are encrypted using one of the approved public key cryptography.
+    1. All communication to the server are encrypted using one of the approved public key cryptography (HTTPS – TLS1.2/1.3 is required with one of the [approved algorithms](#cryptography).
     1. All request has timestamps attached in ISO format to the milliseconds inside the signature.
     1. All communication back and fourth should have the signed digital id as one of the attribute.
 1. Its expected that the auto registration has an absolute way to identify and validate the devices.
