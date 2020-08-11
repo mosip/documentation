@@ -17,7 +17,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 |0.9.2|Frozen|Aug-2019||
 |0.9.3|Frozen|Feb-2020||
 |0.9.5|Draft|13-Jun-2020||
-|0.9.5|Draft|10-Aug-2020| Signature for API to retrieve encryption certificate has been changed from GET to POST and Device Stream now supports an optional paramter - timeout
+|0.9.5|Draft|10-Aug-2020| Signature for API to retrieve encryption certificate has been changed from GET to POST and Device Stream now supports an optional parameter - timeout
 
 ## Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
