@@ -639,7 +639,7 @@ Count value should be driven by the count of the bioSubType for Iris and Finger.
     * For Iris: ["Left", "Right", "UNKNOWN"]
     * For Face: No bioSubType
 * data.purpose - Allowed values are "Auth" | "Registration".
-* data.bioValue - Encrypted and Encoded to base64urlencode biometric value. AES GCM encryption with a random key. The IV for the encryption is set to last 16 digits of the timestamp. ISO formatted bioValue. Look at the Authentication document to understand more about the encryption.
+* data.bioValue - Biometric data is encrypted with session key and base-64-URL encoded (AES GCM encryption with a random key). For symmetric key encryption of bioValue, base64 encoded value of last 16 digits of biometrics.data.timestamp should be used as aad parameter, and base64 encoded value of last 12 digits of biometrics.data.timestamp should be used as IV (salt) parameter. Look at the Authentication document to understand more about the encryption.
 * data.timestamp - Time as per the biometric device. Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
 * data.requestedScore - Floating point number to represent the minimum required score for the capture.
 * data.qualityScore - Floating point number representing the score for the current capture.
