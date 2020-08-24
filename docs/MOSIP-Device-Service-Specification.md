@@ -1180,7 +1180,7 @@ No other ECC curves supported.
 {% endhint %}
 
 ## Signature
-In all the above interfaces, we were signing the request and response with various keys for verifying the integrity of the request and response. Here we have detailed the key used for signing a particular block in a request or response body.
+In all the above APIs, some of the requests and responses are signed with various keys to verify the requester's authenticity. Here we have detailed the key used for signing a particular block in a request or response body of various APIs.
 
 Request/Response | Block | Signature Key
 -----------------|-------|---------------
