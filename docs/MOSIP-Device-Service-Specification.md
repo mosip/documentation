@@ -655,7 +655,7 @@ data.timestamp | <ul><li>Time as per the biometric device.</li><li>Note: The bio
 data.requestedScore | Floating point number to represent the minimum required score for the capture.
 data.qualityScore | Floating point number representing the score for the current capture.
 hash | The value of the previousHash attribute in the request object or the value of hash attribute of the previous data block (used to chain every single data block) concatenated with the hex encode sha256 hash of the current data block before encryption.
-sessionKey | <ul><li>Random AES key used for the encryption of the bioValue.</li><li>The encryption key is encrypted using the public key with recommended algorithm and then base64-URL-encoded.</li></ul>
+sessionKey | The session key (used for the encrypting of the bioValue) is encrypted using the MOSIP public certificate with RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING algorithm and then base64-URL-encoded.
 thumbprint | <ul><li>SHA256 representation of thumbprint of the certificate that was used for encryption of session key.</li><li>All texts to be treated as uppercase without any spaces or hyphens.</li></ul>
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
 error.errorCode | Standardized error code defined in the [error code section](#error-codes).
