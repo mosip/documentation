@@ -587,7 +587,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
       "data": {
         "digitalId": "digital Id as described in this document",
         "deviceCode": "A unique code given by MOSIP after successful registration",
-        "deviceServiceVersion": "Service version",
+        "deviceServiceVersion": "MDS version",
         "bioType": "Finger",
         "bioSubType": "UNKNOWN",
         "purpose": "Auth  or Registration",
@@ -612,7 +612,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
       "data": {
         "digitalId": "Digital Id as described in this document",
         "deviceCode": "A unique code given by MOSIP after successful registration",
-        "deviceServiceVersion": "Service version",
+        "deviceServiceVersion": "MDS version",
         "bioType": "Finger",
         "bioSubType": "Left IndexFinger",
         "purpose": "Auth  or Registration",
@@ -643,7 +643,7 @@ specVersion | Version of the MDS specification using which the response was gene
 data | <ul><li>The data object is sent as JSON Web Token (JWT).</li><li>The data block will be signed using the device key.</li></ul>
 data.digitalId | <ul><li>The digital id as per the digital id definition in JWT format.</li><li>For L0 devices, the digital id will be signed using the device key.</li><li>For L1 or L2 devices, the digital id will be signed using the FTM key.</li></ul>
 data.deviceCode | A unique code given by MOSIP after successful registration
-data.deviceServiceVersion | Service version of the device
+data.deviceServiceVersion | MDS version
 data.bioType | Allowed values are "Finger", "Iris" or "Face".
 data.bioSubType | <ul><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"]</li><li>For Iris: ["Left", "Right", "UNKNOWN"]</li><li>For Face: No bioSubType</li></ul>
 data.purpose | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>Allowed values is "Auth".</li></ul>
@@ -822,7 +822,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
         "digitalId": "Digital id of the device as per the Digital Id definition..",
         "bioType": "Biometric type",
         "deviceCode": "A unique code given by MOSIP after successful registration",
-        "deviceServiceVersion": "Device service version",
+        "deviceServiceVersion": "MDS version",
         "bioSubType": "Left IndexFinger",
         "purpose": "Auth  or Registration",
         "env": "Target environment",
@@ -844,7 +844,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
         "deviceCode": "A unique code given by MOSIP after successful registration",
         "bioType" : "Finger",
         "digitalId": "Digital id of the device as per the Digital Id definition.",
-        "deviceServiceVersion": "Device service version",
+        "deviceServiceVersion": "MDS version",
         "bioSubType": "Left MiddleFinger",
         "purpose": "Auth  or Registration",
         "env":  "Target environment",
@@ -872,7 +872,7 @@ data | <ul><li>The data object is sent as JSON Web Token (JWT).</li><li>The data
 data.bioType | Allowed values are "Finger", "Iris" or "Face".
 data.digitalId | <ul><li>The digital id as per the digital id definition in JWT format.</li><li>For L0 devices, the digital id will be signed using the device key.</li><li>For L1 or L2 devices, the digital id will be signed using the FTM key.</li></ul>
 data.bioSubType | <ul><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"]</li><li>For Iris: ["Left", "Right", "UNKNOWN"]</li><li>For Face: No bioSubType</li></ul>
-data.deviceServiceVersion | Service version of the device
+data.deviceServiceVersion | MDS Version
 data.env | <ul><li>The target environment.</li><li>Allowed values are "Staging", "Developer", "Pre-Production" or "Production".</li></ul>
 data.purpose | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>Allowed values are "Auth" or "Registration".</li></ul>
 data.bioValue | Base64-URL-encoded biometrics (in ISO format)
