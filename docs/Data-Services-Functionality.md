@@ -25,8 +25,6 @@
 # 1. Data mapper [**[↑]**](#table-of-contents)
 Data mapper is used across MOSIP to facilitate mapping between DTO (Data Transfer Object) and entity. 
 
-[**Link to design**](https://github.com/mosip/commons/tree/master/design/kernel/kernel-datamapper.md)
-
 # 2. Data Access Manager [**[↑]**](#table-of-contents)
 Data Access Manager provides a DAO (Data Access Object) interface to do the following:
 
@@ -34,8 +32,6 @@ Data Access Manager provides a DAO (Data Access Object) interface to do the foll
 1. Provide an interface to support Database CRUD (Create, Read, Update, Delete) operation
 1. Provide an interface to support a custom SQL
 1. Provide an interface to call Database functions.
-
-[**Link to design**](https://github.com/mosip/commons/tree/master/design/kernel/kernel-dataaccess.md)
 
 # 3. Sync Handler [**[↑]**](#table-of-contents)
 
@@ -73,8 +69,6 @@ Data Access Manager provides a DAO (Data Access Object) interface to do the foll
 1. For configuration, sync handler receives a request to sync configurations and will respond back with Registration Client specific and Global Configurations.
 1. For User, Roles and Respective User-Role mappings, Sync handler receives Center ID and Timestamp and will respond to the Registration Client with Center specific incremental changes.
 
-[**Link to design**](https://github.com/mosip/commons/tree/master/design/kernel/kernel-syncservices.md)
-
 # 4. ID Generator and Validator
 
 ## 4.1 ID Generator [**[↑]**](#table-of-contents)
@@ -92,8 +86,6 @@ Responds with the Machine ID to the source.
 
 Raises an alert in case of exceptions. 
 
-[**Link to design**](https://github.com/mosip/commons/tree/master/design/kernel/kernel-idgenerator-machineid.md)
-
 ### 4.1.2 Registration Center ID Generator [**[↑]**](#table-of-contents)
 Upon receiving a request to generate Registration Center ID, the system generates it as per default Registration Center ID generation logic.
 
@@ -108,8 +100,6 @@ Refer below for the process:
 1. In case of exceptions, system triggers relevant error messages
 1. Responds with the Registration Center ID to the source
 1. Raises an alert in case of exceptions.
-
-[**Link to design**](https://github.com/mosip/commons/tree/master/design/kernel/kernel-idgenerator-regcenterid.md)
 
 ### 4.1.3 RID Generator [**[↑]**](#table-of-contents)
 Upon receiving a request to generate RID with Machine ID and Center ID as input, the system generates it as per default RID generation logic.
@@ -126,8 +116,6 @@ Refer below for the process:
 8. Responds with the RID to the source
 9. Raises an alert in case of exceptions and triggers the messages.
 
-[**Link to design**](https://github.com/mosip/commons/tree/master/design/kernel/kernel-ridgenerator.md)
-
 ### 4.1.4 MISP ID Generator [**[↑]**](#table-of-contents)
 Upon receiving a request to generate MISP ID, the system generates it as per default MISP ID generation logic.
 
@@ -141,8 +129,6 @@ Refer below for the process:
 4. The number should not contain the restricted numbers defined by the ADMIN
 5. Responds with the MISP ID to the source
 6. Raises an alert in case of exceptions and triggers the messages.
-
-[**Link to design**](https://github.com/mosip/commons/tree/master/design/kernel/kernel-idgenerator-mispid.md)
 
 ### 4.1.5 PRID Generator [**[↑]**](#table-of-contents)
 Upon receiving a request to generate PRID with input parameters, the system generates PRID as per default PRID generation logic.
@@ -161,8 +147,6 @@ Refer below for the process:
    * The number should not contain '0' or '1' as the first digit
 1. Responds with the PRID to the source
 1. Raises an alert in case of exceptions. 
-
-[**Link to design**](https://github.com/mosip/commons/tree/master/design/kernel/kernel-idgenerator-prid.md)
 
 ### 4.1.6 VID Generator [**[↑]**](#table-of-contents)
 Upon receiving a request to generate VID, the system generates PRID as per default PRID generation logic.
@@ -187,8 +171,6 @@ Refer below for the process:
    * The number should not contain '0' or '1' as the first digit.
 1. Expired VID should not be sent in response.
 
-[**Link to design**](https://github.com/mosip/commons/tree/master/design/kernel/Kernel-idgenerator-vid.md)
-
 ### 4.1.7 Token ID Generator [**[↑]**](#table-of-contents)
 Upon receiving a request to generate Token ID (with input parameters (TSP ID, UIN), the system generates token ID as per default Token ID generation logic
 
@@ -201,8 +183,6 @@ Refer below for the process:
    * Partner ID - Mandatory
 4. Raise an exception if input parameter is missing. Refer messages section
 5. Token ID length should be of 36 digits
-
-[**Link to design**](https://github.com/mosip/commons/tree/master/design/kernel/kernel-idgenerator-tokenid.md)
 
 ### 4.1.8 Partner ID Generator [**[↑]**](#table-of-contents)
 Upon receiving a request to generate partner ID, the system generates it as per default partner ID generation logic.
@@ -286,7 +266,6 @@ RID Validation performs pattern validation on RID and provides three methods to 
    * If the Partner ID is of configured length and is Active, respond with "ACTIVE"
 5. Throws an error if an input parameter is empty
 6. In case of exceptions, system triggers relevant error messages.
-
 
 ### 4.2.6 License Key Status Validator [**[↑]**](#table-of-contents)
 

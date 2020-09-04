@@ -1,7 +1,7 @@
 # Operators in MOSIP
 The operators is the one who can login to the registration client application and perform various activities. The roles associated to an operator in MOSIP can be of a Supervisor or an Officer. Below are features accessed by a supervisor and an officer in the registration client.
 
-![Role to Feature Mapping](_images/registration/role_to_feature_mapping.png)
+![](_images/registration/role_to_feature_mapping.png)
 
 {% hint style="info" %}
 The list given above corresponds to the default configuration and can be changed by the MOSIP adoptor.
@@ -25,7 +25,7 @@ On-boarding is successful for an operator if and only if,
 ## Login & Logout
 
 ### First time login
-When an operator whats to login to the registration client for the first time, he/she needs to have the registration client in online mode. The first time login for any user in registration client is mandated to be using user name and and password based login. After the first login and successful on-boarding; the registration client would mandate the operator to login with the configured mode deceided by the administrator.
+When an operator whats to login to the registration client for the first time, he/she needs to have the registration client in online mode. The first time login for any user in registration client is mandated to be using user name and and password based login. After the first login and successful on-boarding; the registration client would mandate the operator to login with the configured mode decided by the administrator.
 
 {% hint style="info" %}
 Any number of officers or supervisors can login to a registration client but,
