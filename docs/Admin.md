@@ -1,5 +1,5 @@
 # Overview 
-The MOSIP platform is configured via the Admin application. This application can be accessed only by the privileged group of admin personnel. When the MOSIP platform gets initialized, there are default configurations and seed data are setup. Post installation, following operations can be done using the Admin application:  
+The MOSIP platform is configured via the Admin application. This application can be accessed only by the privileged group of administration personnel. When the MOSIP platform gets initialized, there are default configurations and seed data are setup. Post installation, following operations can be done using the Admin application:  
 * Configuration entry changes 
 * Master data management
 * User management 
@@ -17,13 +17,13 @@ Admin application contains UI layer and Service layer. All the components in bot
 ![Logical Diagram](_images/admin/admin_logical_diagram.jpg)
 
 # Backend Services 
-Admin uses many services available as part of Kernel in [commons repo](https://github.com/mosip/commons).  There are a few Admin specific services available in [admin repo](https://github.com/mosip/admin-services).  The code and design documentation is available in the repos.
+The administrator uses many services available as part of Kernel in [commons repository](https://github.com/mosip/commons).  There are a few administrator specific services available in [admin repository](https://github.com/mosip/admin-services).  The code and design documentation is available in the reposistories.
 
 # Frontend - Admin portal 
 Reference implementation of Admin portal is available in [ref impl repo](https://github.com/mosip/mosip-ref-impl)
 
 # Build and Deploy
-Build and deploy instructions available in the above repos.
+Build and deploy instructions available in the above repositories.
 
 # APIs
 APIs from multiple services are used for Admin as follows:
@@ -35,4 +35,3 @@ APIs from multiple services are used for Admin as follows:
 * [Common APIs](Common-APIs.md)
 * [Zone APIs](Zone-APIs.md) 
 * [Device Management APIs](Device-Management-APIs.md)
-
