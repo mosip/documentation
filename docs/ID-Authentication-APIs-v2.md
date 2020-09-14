@@ -40,20 +40,20 @@ Signature | Y | For signature of the authentication request
 ### Request Path Parameters
 Name | Required | Description
 -----|----------|-------------
-MISP-LicenseKey | Y | Licence key provided to the MISP
+MISP-LicenseKey | Y | License key provided to the MISP
 eKYC-Partner-ID | Y | Partner ID of the authentication partner sending the request
-Partner-Api-Key | Y | API Key associated to the partner and the policy
+Partner-API-Key | Y | API Key associated to the partner and the policy
 
 ### Request Body Parameters
 Name | Required | Description
------|----------|--------
+-----|----------|-------------
 id | Y | This represents the API ID. The value here should be "mosip.identity.auth".
 version | Y | This represents the version of the API.
-transactionID | Y | This represnets the Transaction ID of the request.
+transactionID | Y | This represents the Transaction ID of the request.
 requestTime | Y | This represents the time when request was created. Ex: "2019-02-15T10:01:57.086+05:30".
-env | Y | This represents the enviornment. Allowed values are "Staging" | "Developer" | "Pre-Production" | "Production".
-domainUri | Y | This represnts the Unique URI per auth providers. This can be used to federate across multiple providers or countries or unions.
-requestedAuth | Y | This represnts the authentication types requested.
+env | Y | This represents the environment. Allowed values are "Staging" | "Developer" | "Pre-Production" | "Production".
+domainUri | Y | This represents the Unique URI per auth providers. This can be used to federate across multiple providers or countries or unions.
+requestedAuth | Y | This represents the authentication types requested.
 requestedAuth.otp | Y | This is used to inform that OTP authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
 requestedAuth.demo | Y | This is used to inform that demographic authentication was performed as part of this request. Default value here is false. Allowed values are true or false.
 requestedAuth.bio | Y | This is used to inform that biometric authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
@@ -223,20 +223,20 @@ Signature | Y | For signature of the authentication request
 ### Request Path Parameters
 Name | Required | Description
 -----|----------|-------------
-MISP-LicenseKey | Y | Licence key provided to the MISP
+MISP-LicenseKey | Y | License key provided to the MISP
 eKYC-Partner-ID | Y | Partner ID of the authentication partner sending the request
-Partner-Api-Key | Y | API Key associated to the partner and the policy
+Partner-API-Key | Y | API Key associated to the partner and the policy
 
 ### Request Body Parameters
-Name | Description
------|--------------------
+Name | Required | Description
+-----|----------|-------------
 id | Y | This represents the API ID. The value here should be "mosip.identity.kyc".
 version | Y | This represents the version of the API.
-transactionID | Y | This represnets the Transaction ID of the request.
+transactionID | Y | This represents the Transaction ID of the request.
 requestTime | Y | This represents the time when request was created. Ex: "2019-02-15T10:01:57.086+05:30".
-env | Y | This represents the enviornment. Allowed values are "Staging" | "Developer" | "Pre-Production" | "Production".
-domainUri | Y | This represnts the Unique URI per auth providers. This can be used to federate across multiple providers or countries or unions.
-requestedAuth | Y | This represnts the authentication types requested.
+env | Y | This represents the environment. Allowed values are "Staging" | "Developer" | "Pre-Production" | "Production".
+domainUri | Y | This represents the Unique URI per authentication providers. This can be used to federate across multiple providers or countries or unions.
+requestedAuth | Y | This represents the authentication types requested.
 requestedAuth.otp | Y | This is used to inform that OTP authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
 requestedAuth.demo | Y | This is used to inform that demographic authentication was performed as part of this request. Default value here is false. Allowed values are true or false.
 requestedAuth.bio | Y | This is used to inform that biometric authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
@@ -556,8 +556,8 @@ version | Y | This represents the version of the API.
 transactionID | Y | This represnets the Transaction ID of the request.
 requestTime | Y | This represents the time when request was created. Ex: "2019-02-15T10:01:57.086+05:30".
 env | Y | This represents the enviornment. Allowed values are "Staging" | "Developer" | "Pre-Production" | "Production".
-domainUri | Y | This represnts the Unique URI per auth providers. This can be used to federate across multiple providers or countries or unions.
-requestedAuth | Y | This represnts the authentication types requested.
+domainUri | Y | This represents the Unique URI per auth providers. This can be used to federate across multiple providers or countries or unions.
+requestedAuth | Y | This represents the authentication types requested.
 requestedAuth.otp | Y | This is used to inform that OTP authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
 requestedAuth.demo | Y | This is used to inform that demographic authentication was performed as part of this request. Default value here is false. Allowed values are true or false.
 requestedAuth.bio | Y | This is used to inform that biometric authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
@@ -925,8 +925,8 @@ IDA-MLC-007|Request could not be processed. Please try again|Could not process r
 IDA-MLC-009|Invalid Input parameter- attribute  |Invalid Input parameter- attribute|
 
 # Common Error Codes and Messages
-Error Code|Error Message|Description|Action Message
------------|-------------|-----------|----------------
+Error Code | Error Message | Description | Action Message
+-----------|---------------|-------------|----------------
 IDA-BIA-001| Biometric data &ndash; &lt;Biometric Attribute&gt; did not match|Finger,Iris,Face Mismatch|Please give your biometrics again.
 IDA-BIA-002|Duplicate fingers in request.|Duplicate fingers|Please try again with distinct fingers
 IDA-BIA-003|Number of Fingers should not exceed 10.|Fingers exceeding 10|
