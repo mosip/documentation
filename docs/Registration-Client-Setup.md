@@ -1,6 +1,6 @@
 This document contains the 'Registration Client' application initial setup, update and configuration process.       
 
-Registration Client application is a desktop based application, that can be used to captures the demographic and biometric details of a resident along with supporting information (like. proof documents & information about parent/guardian/introducer) and packages the information in a secure way using RSA based algorithm. The information packet can be sent to the server in an online or offline mode for processing.  
+Registration Client application is a desktop based application, that can be used to captures the demographic and biometric details of a resident along with supporting information (like proof documents & information about parent/guardian/introducer) and packages the information in a secure way using RSA based algorithm. The information packet can be sent to the server in an online or offline mode for processing.  
 
 The registration client application leverages the TPM capabilities and secure the data and mark the senders identity in the request before sending to external system. The MOSIP server would validate the request and make sure that the request is received from the right source. Every individual machine's TPM public key should be registered at MOSIP server to accept and process the data send by them.   
 

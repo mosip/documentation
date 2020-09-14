@@ -194,7 +194,7 @@ request.biometrics.thumbprint | <ul><li>SHA256 representation of thumbprint of t
 ```
 
 ### Failure Details
-For details about the error codes view the section [common error codes and message]().
+For details about the error codes view the section [common error codes and messages](#common-error-codes-and-messages).
 
 # e-KYC Service (Public)
 This service details authentication (eKYC auth) that can be used by authentication partners to authenticate a resident and send resident's KYC details as response. Below are various authentication types supported by e-KYC authentication:
@@ -404,7 +404,7 @@ request.biometrics.thumbprint | <ul><li>SHA256 representation of thumbprint of t
 ```
 
 ### Failure Details
-For details about the error codes view the section [common error codes and message]().
+For details about the error codes view the section [common error codes and message](#common-error-codes-and-messages).
 
 # OTP Request Service (Public)
 This service enables authentication partners to request for an OTP for a resident. The OTP will be send via message or email as requested to the resident. This OTP can then be used to authenticate the resident using authentication or eKYC service.
@@ -583,7 +583,6 @@ request.biometrics | <ul><li>Biometric data of an Individual which is sent in th
 request.biometrics.specVersion | <ul><li>SBI spec version used to capture the biometrics</li><li>This is mandatory when requestedAuth.bio is true</li></ul>
 request.biometrics.data | <ul><li>JWS format of Biometric data of an Individual with X509 certificate.</li><li>The payload present in JWS is encrypted by below request.biometrics.sessionKey</li><li>symmetric encryption algorithm is used - AES/GCM/PKCS5Padding</li><li>This is mandatory when requestedAuth.bio is true</li></ul>
 request.biometrics.data.bioType | <ul><li>Biometric data type - Finger,Iris,Face.</li><li>This is mandatory when requestedAuth.bio is true</li></ul>
-
 request.biometrics.data.bioSubType | <ul><li>Biometric data sub-types for respective biometric types.</li><li>For Finger Modality: "Left IndexFinger", "Left MiddleFinger","Left RingFinger","Left LittleFinger","Left Thumb","Right IndexFinger", "Right MiddleFinger","Right RingFinger","Right LittleFinger","Right Thumb","UNKNOWN"</li><li>For Iris Modality: "Left","Right","UNKNOWN"</li><li>For Face Modality:  No sub type</li><li>This is mandatory when requestedAuth.bio is true</li></ul>
 request.biometrics.data.bioValue | <ul><li>Biometric data encrypted with session key and base-64-URL encoded</li><li>For symmetric key encryption of bioValue, base64 encoded value of last 16 digits of biometrics.data.timestamp should be used as aad parameter, and base 64 encoded value of last 12 digits of biometrics.data.timestamp should be used as iv(salt) parameter.</li><li>This is mandatory when requestedAuth.bio is true</li></ul>
 request.biometrics.data.timestamp | <ul><li>This timestamp is used in encryption of biometrics.data.bioValue as described above.</li><li>This is mandatory when requestedAuth.bio is true</li><li>**Ex:** 2019-02-15T10:01:57.086+05:30</li></ul>
@@ -1112,10 +1111,58 @@ request: events: transactionLimit|N| The transaction limit of VID only for VID b
 ```
 
 ### Failure Details
-Error Code|Error Message|Description|Action Message
------------|-------------|-----------|----------------
+Error Code | Error Message | Description | Action Message
+-----------|---------------|-------------|----------------
 IDA-MLC-001|Request to be received at MOSIP within&lt;x&gt; hrs/min|Invalid Time stamp|Please send the request within &lt;x&gt; hrs/min
 IDA-MLC-002|Invalid UIN|Invalid UIN|Please retry with the correct UIN.
 IDA-MLC-006|Missing Input parameter- &lt;attribute&gt;  Example: Missing Input parameter- version|Missing Input parameter- attribute - all the mandatory attributes |
 IDA-MLC-007|Request could not be processed. Please try again|Could not process request/Unknown error; Invalid Auth Request|
 IDA-MLC-009|Invalid Input parameter- attribute  |Invalid Input parameter- attribute|
+
+# Common Error Codes and Messages
+Error Code|Error Message|Description|Action Message
+-----------|-------------|-----------|----------------
+IDA-BIA-001| Biometric data &ndash; &lt;Biometric Attribute&gt; did not match|Finger,Iris,Face Mismatch|Please give your biometrics again.
+IDA-BIA-002|Duplicate fingers in request.|Duplicate fingers|Please try again with distinct fingers
+IDA-BIA-003|Number of Fingers should not exceed 10.|Fingers exceeding 10|
+IDA-BIA-006|Biometric data &lt;Biometric Attribute&gt; not available in database.|Missing biometric data in MOSIP database |Your Biometric data is not available in MOSIP
+IDA-BIA-007|Duplicate Irises in request.|Duplicate Irises used|Please try again with distinct Irises
+IDA-BIA-008|Number of Iris should not exceed 2.|Irises exceeding 2|
+IDA-BIA-009|Number of Face records should not exceed 1.|Face exceeding 1|
+IDA-DEA-001|Demographic data  &lt;demo attribute&gt;  in  &lt;Language Code&gt; (if applicable) did not match|name, Full Address, Address line Items, Gender, Phone,e-mail,DOB,DOB Type, and age Mismatch in any language|Please re-enter your  &lt;demo attribute&gt;  in &lt;Language Code&gt; 
+IDA-DEA-002|Unsupported Language Code &lt;XX&gt;|Unsupported language Code used in the Lang attribute|
+IDA-DEA-003|Demographic data  &lt;Demographic Attribute&gt; in &lt;Language Code&gt; (if applicable)  not available in database.|Individual&rsquo;s data not available|
+IDA-MLC-001|Request to be received at MOSIP within&lt;x&gt; hrs/min|Invalid Time stamp|Please send the request within &lt;x&gt; hrs/min
+IDA-MLC-002|Invalid UIN|Invalid UIN|Please retry with the correct UIN.
+IDA-MLC-003|UIN has been deactivated|UIN Deactivated|Your UIN status is not active.
+IDA-MLC-004|Invalid VID|Invalid VID|Please retry with correct VID.
+IDA-MLC-005|%s VID|Expired,Used,Revoked VID|Please regenerate VID and try again
+IDA-MLC-006|Missing Input parameter- &lt;attribute&gt;  Example: Missing Input parameter- version|Missing Input parameter- attribute - all the mandatory attributes |
+IDA-MLC-007|Request could not be processed. Please try again|Could not process request/Unknown error; Invalid Auth Request; Unable to encrypt eKYC response|
+IDA-MLC-008|No authentication type selected|No authentication type selected in the request|
+IDA-MLC-009|Invalid Input parameter- attribute  |Invalid Input parameter- attribute|
+IDA-MLC-010|VID has been deactivated|VID corresponding to a deactivated UIN|
+IDA-MLC-011|Unsupported Authentication Type - &lt;Auth Type&gt; - &lt;SubType&gt; if applicable|Auth Type not supported for a country|Please use other Authentication Types in the request
+IDA-MLC-012|Individual's Consent is not available|Invalid resident consent for eKYC/Auth|
+IDA-MLC-013|Missing  &lt;authtype&gt; auth attribute  |Missing authtype parameter &ndash; when &lt;auth-type&gt; = &lsquo;True&rsquo; and corresponding auth attribute missing (OTP,Demo and Bio)|
+IDA-MLC-014|&lt;Notification Channel&gt; not registered. Individual has to register and try again|&lt;Notification Channel&gt; not Registered (Phone/e-mail/both)|Please register your &lt;Notification Channel&gt; and try again
+IDA-MLC-015| Identity Type - &lt;Identity Type&gt; not configured for the country|ID Type (UIN/VID) not supported for a country|
+IDA-MLC-018|%s not available in database|UIN,VID, User ID not available in database|
+IDA-MPA-003|Unable to decrypt Request.|Invalid encryption of session key/request|
+IDA-MPA-004|MOSIP Public key expired. |MOSIP Public key expired|Please reinitiate the request with updated public key
+IDA-MPA-006|&lt;Auth Type&gt; - &lt;Sub Type&gt; (if applicable) Authentication Usage not allowed as per policy (Eg: OTP/Demo/Bio - Finger)|All Authentication Usages not allowed as per policy|
+IDA-MPA-007|License key does not belong to a registered MISP|License key does not belong to a registered MISP/ License key invalid|
+IDA-MPA-008|License key of MISP has expired|License key expired|
+IDA-MPA-009|Partner is not registered|PartnerID Invalid|
+IDA-MPA-010|MISP and Partner not mapped|MISP and Partner not |
+IDA-MPA-011|License key of MISP is suspended|License key status of MISP is suspended|
+IDA-MPA-012|Partner is deactivated|PartnerID is not active|
+IDA-MPA-014|Partner is not assigned with any policy|PartnerID is not mapped to a policy|
+IDA-MPA-015|&lt;Auth Type&gt; - &lt;Sub Type&gt; (if applicable) Authentiation Usage is mandatory as per policy (Eg: OTP/Demo/Bio - Finger)|Mandatory Auth Type as per policy of the partner is not available in the auth request|
+IDA-MPA-016|HMAC Validation failed|HMAC value does not match|
+IDA-MPA-017|License key of MISP is blocked|License key status of MISP is blocked|
+IDA-OTA-003|OTP has expired|OTP expired|Please regenerate OTP and try again after sometime.
+IDA-OTA-004|OTP is invalid|OTP Invalid|Please provide correct OTP value.
+IDA-OTA-005|Input transactionID does not match transactionID of OTP Request|Invalid Transaction ID|
+IDA-OTA-007|UIN is locked for OTP validation due to exceeding no of invalid OTP trials |Validate wrong OTP for exceeding no of retries|
+IDA-OTA-010|Input Identity Type does not match Identity Type of OTP Request|Invalid Identity Type|
