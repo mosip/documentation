@@ -46,8 +46,8 @@ eKYC-Partner-ID | Partner ID of the authentication partner sending the request
 Partner-Api-Key | API Key associated to the partner and the policy
 
 ### Request Body Parameters
-Name | Requiered | Description
------|-----------|--------
+Name | Required | Description
+-----|----------|--------
 id | Y | This represents the API ID. The value here should be "mosip.identity.auth".
 version | Y | This represents the version of the API.
 transactionID | Y | This represnets the Transaction ID of the request.
@@ -132,13 +132,13 @@ request.biometrics | N | Biometric data of an Individual which is sent in the re
     "biometrics": [
       {
         "specVersion" : "<SBI specification version>",
-		"data": "<JWS signature format of data containing encrypted biometrics and device details>",
+        "data": "<JWS signature format of data containing encrypted biometrics and device details>",
         "hash": "<SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format>", // For the first entry assume empty string as previous data block
         "sessionKey": "<Encrypted and base64-URL-encoded session key>",
         "thumbprint": "<SHA256 representation of thumbprint of the certificate that was used for encryption of session key>"
       },
       {
-	    "specVersion" : "<SBI specification version>",
+        "specVersion" : "<SBI specification version>",
         "data": "<JWS signature format of data containing encrypted biometrics and device details>",
         "hash": "<SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format>",
         "sessionKey": "<Encrypted and base64-URL-encoded session key>",
@@ -283,17 +283,17 @@ request.biometrics | N | Biometric data of an Individual which is sent in the re
     "biometrics": [
       {
         "specVersion" : "<SBI specification version>",
-		"data": "<JWS signature format of data containing encrypted biometrics and device details>",
+        "data": "<JWS signature format of data containing encrypted biometrics and device details>",
         "hash": "<SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format>", // For the first entry assume empty string as previous data block
         "sessionKey": "<Encrypted with MOSIP public key and base64-URL-encoded session key>",
-		"thumbprint": "<SHA256 representation of thumb-print of the MOSIP public key that was used for encryption of session key>"
+        "thumbprint": "<SHA256 representation of thumb-print of the MOSIP public key that was used for encryption of session key>"
       },
       {
-	    "specVersion" : "<SBI specification version>",
+        "specVersion" : "<SBI specification version>",
         "data": "<JWS signature format of data containing encrypted biometrics and device details>",
         "hash": "<SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format>",
         "sessionKey": "<Encrypted and base64-URL-encoded session key>",
-		"thumbprint": "<SHA256 representation of thumb-print of the MOSIP public key that was used for encryption of session key>"
+        "thumbprint": "<SHA256 representation of thumb-print of the MOSIP public key that was used for encryption of session key>"
       }
     ]
   }
@@ -365,7 +365,7 @@ request.biometrics | N | Biometric data of an Individual which is sent in the re
         }
       ]
     },
-	"thumbnail": "<SHA256 representation of thumb-print of the Partner's public key used for encryption of identity block>"
+    "thumbnail": "<SHA256 representation of thumb-print of the Partner's public key used for encryption of identity block>"
   },
   "errors": null
 }
@@ -382,8 +382,8 @@ request.biometrics | N | Biometric data of an Individual which is sent in the re
   "response": {
     "kycStatus": false,
     "authResponseToken": null,
-	"identity": null,
-	"thumbnail": null
+    "identity": null,
+    "thumbnail": null
   },
   "errors": [
     {
@@ -425,17 +425,17 @@ Authorization | This is for sending the consent token
 Signature | This is for sending the signature of the authentication request
 
 ### Request Body Parameters
-Name | Description
------|-------------
-id | <ul><li>API ID</li><li>This is a mandatory parameter</li><li>**Ex:** mosip.identity.otp</li></ul>
-version | <ul><li>API version</li><li>This is a mandatory parameter</li><li>**Ex:** v1</li></ul>
-transactionID | <ul><li>Transaction ID of the request</li><li>This is a mandatory parameter</li><li>**Ex:** 1234567890</li></ul>
-requestTime | <ul><li>Time when request was captured</li><li>This is a mandatory parameter</li><li>**Ex:** 2019-02-15T10:01:57.086+05:30</li></ul>
-env | <ul><li>Target environment</li><li>Allowed values are "Staging" | "Developer" | "Pre-Production" | "Production"</li><li>This is a mandatory parameter</li></ul>
-domainUri | <ul><li>Unique URI per auth providers.</li><li>This can be used to federate across multiple providers or countries or unions.</li><li>This is a mandatory parameter</li></ul>
-individualId | <ul><li>ID of resident (VID or UIN)</li><li>This is a mandatory parameter</li><li>**Ex:** 9830872690593682</li></ul>
-individualIdType | <ul><li>ID Type of resident used</li><li>This is a mandatory parameter</li><li>Allowed Types of ID - VID, UIN</li><li>**Default Value:** VID</li></ul>
-otpChannel | <ul><li>OTP channel for sending OTP request</li><li>This is a mandatory parameter</li><li>Allowed OTP Channels - EMAIL, PHONE</li></ul>
+Name | Required | Description
+-----|----------|-------------
+id | Y | This represents the API ID. The value here would be "mosip.identity.otp".
+version | Y | This represents the API version.
+transactionID | Y | Transaction ID of the request. Ex: "1234567890".
+requestTime | Y | Time when request was captured. Ex:"2019-02-15T10:01:57.086+05:30"
+env | Y | Target environment. Allowed values are "Staging" | "Developer" | "Pre-Production" | "Production".
+domainUri | Y | Unique URI per auth providers. This can be used to federate across multiple providers or countries or unions.
+individualId | Y | ID of resident (VID or UIN). Ex: "9830872690593682".
+individualIdType | Y | ID Type of resident used. Allowed Types of ID - VID, UIN. Default Value here is VID.
+otpChannel | Y | OTP channel for sending OTP request. Allowed OTP Channels - EMAIL, PHONE.
 
 ### Request Body
 ```JSON
@@ -551,8 +551,8 @@ Authorization | This is for sending the consent token
 Signature | This is for sending the signature of the authentication request
 
 ### Request Body Parameters
-Name | Description
------|--------------------
+Name | Required | Description
+-----|----------|---------
 id | Y | This represents the API ID. The value here should be "mosip.identity.auth.internal".
 version | Y | This represents the version of the API.
 transactionID | Y | This represnets the Transaction ID of the request.
@@ -740,7 +740,7 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Request Path Parameters
-Name | Requiered | Description
+Name | Required | Description
 -----|-----------|-------------
 ID Type | Y | Allowed values here can be UIN or VID.
 ID | Y | This is the value of ID Type - UIN or VID.
@@ -748,7 +748,7 @@ ID | Y | This is the value of ID Type - UIN or VID.
 ### Request Query Parameters
 The authentication transactions can be queried using this REST service for certain count of transactions which can be retrieved for given pageStart number with pageFetch. The default pageStart value is 1. The default pageFetch value is 10. This default pageFetch value will be taken into account only if the pageStart is provided. If both pageStart and pageFetch values are not provided, all the authentication transactions for the UIN/VID are returned in the response.
 
-Name | Requiered | Description
+Name | Required | Description
 -----|-----------|------------
 pageStart | N | The page number to start. Default value here is "1".
 pageFetch | N | The number of entries per page. Default value here is "10".
