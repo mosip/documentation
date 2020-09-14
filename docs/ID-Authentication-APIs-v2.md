@@ -15,7 +15,6 @@ This service details authentication methods that can be used by authentication p
 * Biometric based - Fingerprint, Iris and Face
 
 ## Users of Authentication service
-
 1. **MISP (MOSIP Infrastructure Service Provider)** - MISP's role is limited to infrastructure provisioning and acting as a gate keeper for all authentication requests sent to this service. The MISP is also responsible for the policy creation on the MOSIP servers so their partners will follow the set policy.
 2. **Authentication Partners** - Authentication Partners register themselves with MOSIP, under a MISP. Authentication requests are captured by authentication partners and sent to MOSIP, via MISP.
 3. **Partner-API-Key** - Associated against a policy.
@@ -28,22 +27,22 @@ This request will authenticate a resident, based on provided authentication type
 
 ### Resource Details
 Resource Details | Description
------------- | -------------
+-----------------|--------------
 Response format | JSON
 Requires Authentication | Yes
 
 ### Request Header Parameters
-Name | Description
------|-------------
-Authorization | This is for sending the consent token
-Signature | This is for sending the signature of the authentication request
+Name | Required | Description
+-----|----------|-------------
+Authorization | Y | For consent token
+Signature | Y | For signature of the authentication request
 
 ### Request Path Parameters
-Name | Description
------|------------
-MISP-LicenseKey | Licence key provided to the MISP
-eKYC-Partner-ID | Partner ID of the authentication partner sending the request
-Partner-Api-Key | API Key associated to the partner and the policy
+Name | Required | Description
+-----|----------|-------------
+MISP-LicenseKey | Y | Licence key provided to the MISP
+eKYC-Partner-ID | Y | Partner ID of the authentication partner sending the request
+Partner-Api-Key | Y | API Key associated to the partner and the policy
 
 ### Request Body Parameters
 Name | Required | Description
@@ -199,7 +198,6 @@ This service details authentication (eKYC auth) that can be used by authenticati
 2. Biometric Authentication - Fingerprint, IRIS and Face
 
 ## Users of KYC service
-
 1. `MISP (MOSIP Infrastructure Service Provider)` - MISP's role is limited to infrastructure provisioning and acting as a gate keeper for all KYC requests sent to this service. The MISP is also responsible for policy creation on the MOSIP servers so their partners will follow the set policy.
 2. `Partners` - *eKYC-Partners* register themselves with MOSIP, under a MISP. KYC requests are captured by eKYC-Partners and sent to MOSIP, via MISP.
 3. `Partner-Api-Key` - Associated against a policy.
@@ -217,17 +215,17 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Request Header Parameters
-Name | Description
------|-------------
-Authorization | This is for sending the consent token
-Signature | This is for sending the signature of the authentication request
+Name | Required | Description
+-----|----------|-------------
+Authorization | Y | For consent token
+Signature | Y | For signature of the authentication request
 
 ### Request Path Parameters
-Name | Description
------|------------
-MISP-LicenseKey | Licence key provided to the MISP
-eKYC-Partner-ID | Partner ID of the authentication partner sending the request
-Partner-Api-Key | API Key associated to the partner and the policy
+Name | Required | Description
+-----|----------|-------------
+MISP-LicenseKey | Y | Licence key provided to the MISP
+eKYC-Partner-ID | Y | Partner ID of the authentication partner sending the request
+Partner-Api-Key | Y | API Key associated to the partner and the policy
 
 ### Request Body Parameters
 Name | Description
@@ -419,10 +417,10 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Request Header Parameters
-Name | Description
------|-------------
-Authorization | This is for sending the consent token
-Signature | This is for sending the signature of the authentication request
+Name | Required | Description
+-----|----------|-------------
+Authorization | Y | This is for sending the consent token
+Signature | Y | This is for sending the signature of the authentication request
 
 ### Request Body Parameters
 Name | Required | Description
@@ -545,10 +543,10 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Request Header Parameters
-Name | Description
------|-------------
-Authorization | This is for sending the consent token
-Signature | This is for sending the signature of the authentication request
+Name | Required | Description
+-----|----------|-------------
+Authorization | Y | This is for sending the consent token
+Signature | Y | This is for sending the signature of the authentication request
 
 ### Request Body Parameters
 Name | Required | Description
@@ -599,7 +597,7 @@ request.biometrics | N | Biometric data of an Individual which is sent in the re
   "request": {
     "timestamp": "2019-02-15T10:01:56.086+05:30 - ISO format timestamp",
     "otp": "123456",
-	"demographics": {
+    "demographics": {
       "name": [
         {
           "language": "ara",
@@ -637,13 +635,13 @@ request.biometrics | N | Biometric data of an Individual which is sent in the re
     "biometrics": [
       {
         "specVersion" : "<SBI specification version>",
-		"data": "<JWS signature format of data containing encrypted biometrics and device details>",
+        "data": "<JWS signature format of data containing encrypted biometrics and device details>",
         "hash": "<SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format>", // For the first entry assume empty string as previous data block
         "sessionKey": "<Encrypted and base64-URL-encoded session key>",
         "thumbprint": "<SHA256 representation of thumbprint of the certificate that was used for encryption of session key>"
       },
       {
-	    "specVersion" : "<SBI specification version>",
+        "specVersion" : "<SBI specification version>",
         "data": "<JWS signature format of data containing encrypted biometrics and device details>",
         "hash": "<SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format>",
         "sessionKey": "<Encrypted and base64-URL-encoded session key>",
@@ -764,26 +762,26 @@ pageFetch | N | The number of entries per page. Default value here is "10".
   "version": "v1",
   "errors": [],
   "response": {
-	"authTransactions": [
-	  {
-		"transactionID": "1234567890",
-		"requestdatetime": "2019-07-10T07:28:59.383",
-		"authtypeCode": "FINGERPRINT-AUTH",
-		"statusCode": "Y",
-		"statusComment": "Finger Authentication Success",
-		"referenceIdType": "UIN",
-		"entityName": ""
+    "authTransactions": [
+      {
+        "transactionID": "1234567890",
+        "requestdatetime": "2019-07-10T07:28:59.383",
+        "authtypeCode": "FINGERPRINT-AUTH",
+        "statusCode": "Y",
+        "statusComment": "Finger Authentication Success",
+        "referenceIdType": "UIN",
+        "entityName": ""
 	  },
 	  {
-		"transactionID": "1234567891",
-		"requestdatetime": "2019-07-11T07:29:59.383",
-		"authtypeCode": "OTP-REQUEST",
-		"statusCode": "F",
-		"statusComment": "OTP Authentication Failed",
-		"referenceIdType": "UIN",
-		"entityName": ""
-	  }
-	]
+        "transactionID": "1234567891",
+        "requestdatetime": "2019-07-11T07:29:59.383",
+        "authtypeCode": "OTP-REQUEST",
+        "statusCode": "F",
+        "statusComment": "OTP Authentication Failed",
+        "referenceIdType": "UIN",
+        "entityName": ""
+      }
+    ]
   }
 }
 ```
