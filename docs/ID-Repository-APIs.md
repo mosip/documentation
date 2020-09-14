@@ -1085,3 +1085,210 @@ IDR-IDC-008|4XX - Client Error occurred|4XX error from Kernel APIs
 IDR-IDC-009|5XX - Server Error occurred|5XX error from Kernel APIs
 IDR-IDC-010|Connection timed out|Connection timed out while invoking REST APIs
 IDR-IDC-011|Authorization Failed|Input role is not authorized to access the service   
+
+# Authentication Types Status Service (Internal)
+Authentication Types Status Service can be used by Resident Services to retrieve or update status (locked or unlocked) of Auth Types of an Individual using VID/UIN. 
+
+## Users of Retrieve Authentication Types Status Service -
+1. **Resident Services** - Individual can request to lock or unlock one or more authentication types using Resident Services, which in turn calls this service to store or retrieve the auth type status.  
+
+## GET /idauthentication/v1/internal/authtypes/status/individualIdType/:IDType/individualId/:ID
+This request will retrieve status (locked or unlocked) of Auth Types of an Individual using VID/UIN. 
+
+### Resource URL
+`https://{base_url}/idauthentication/v1/internal/authtypes/status/individualIdType/:IDType/individualId/:ID`
+
+### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Request Path Parameters
+Name | Description 
+-----|-------------
+ID Type | <ul><li>The page number to start</li><li>This is a mandatory parameter</li><li>**Default Value:** VID</li></ul>
+ID | <ul><li>The value of IDType - UIN or VID</li><li>This is a mandatory parameter</li></ul>
+
+### Responses
+
+#### Success Response
+**Response Code : 200 (OK)**
+```JSON
+{
+  "id": "mosip.identity.authtype.status.read",
+  "version": "1.0",
+  "requestTime": "2019-02-15T10:01:57.086+05:30",
+  "individualId": "9830872690593682",
+  "individualIdType": "VID",
+  "request": {
+    // Status of AuthTypes and AuthSubTypes
+    "authTypes": [
+      {
+        "authType": "otp",
+        "isLocked": false
+      },
+      {
+        "authType": "demo",
+        "isLocked": false
+      },
+      {
+        "authType": "bio",
+        "authSubType": "Finger",
+        "isLocked": true
+      },
+      {
+        "authType": "bio",
+        "authSubType": "Iris",
+        "isLocked": true
+      },
+      {
+        "authType": "bio",
+        "authSubType": "Face",
+        "isLocked": true
+      }
+    ]
+  }
+}
+```
+
+#### Failed Response
+**Response Code : 200 (OK)**
+```JSON
+{
+  //API Metadata
+  "id": "mosip.identity.authtype.status.read",
+  "version": "v1",
+  "responseTime": "2019-02-15T07:23:19.590+05:30",
+  "errors": [
+    {
+      "errorCode": "IDA-MLC-002",
+      "errorMessage": "Invalid UIN",
+      "actionMessage": "Please retry with the correct UIN"
+    }
+  ]
+}
+```
+
+### Failure Details
+Error Code|Error Message|Description|Action Message
+-----------|-------------|-----------|----------------
+IDA-MLC-001|Request to be received at MOSIP within&lt;x&gt; hrs/min|Invalid Time stamp|Please send the request within &lt;x&gt; hrs/min
+IDA-MLC-002|Invalid UIN|Invalid UIN|Please retry with the correct UIN.
+IDA-MLC-003|UIN has been deactivated|UIN Deactivated|Your UIN status is not active.
+IDA-MLC-007|Request could not be processed. Please try again|Could not process request/Unknown error; Invalid Auth Request|
+IDA-MLC-009|Invalid Input parameter- attribute  |Invalid Input parameter- attribute|
+IDA-MLC-015| Identity Type - &lt;Identity Type&gt; not configured for the country|ID Type (UIN/USERID) not supported for a country|
+IDA-MLC-018|%s not available in database|UIN, VID not available in database|
+
+## PUT /idauthentication/v1/internal/authtypes/status
+This request will lock or unlock one or more authenticate types for an Individual using VID/UIN. 
+
+### Resource URL
+`https://{base_url}/idauthentication/v1/internal/authtypes/status`
+
+### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Request Body Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+consentObtained | Y | Individual's consent | | 
+id | Y | API Id | mosip.identity.otp | 
+version | Y | API version |  | 1.0 
+requestTime| Y |Time when Request was captured| | 2019-02-15T10:01:57.086+05:30
+individualId| Y | VID | | 9830872690593682
+individualIdType| Y | Allowed Type of Individual ID - VID, UIN | VID
+request| Y | Auth type status attributes to be applied for the Individual | | 
+request: authTypes| Y | List of auth type status attributes to be applied for the Individual | | 
+request: authTypes: authType| Y | Auth type to lock - otp, demo, bio | | bio
+request: authTypes: authSubType| N | Auth sub type to lock (if applicable for the selected autType) | | Finger
+request: authTypes: isLocked|Y| Boolean value (`true` or `false`) whether to lock or unlock the selected authType (and authSubType) | | true
+
+### Request Body
+```JSON
+{
+  "id": "mosip.identity.authtype.status.update",
+  "version": "1.0",
+  "requestTime": "2019-02-15T10:01:57.086+05:30",
+  "consentObtained": true,
+  "individualId": "9830872690593682",
+  "individualIdType": "VID",
+  "request": {
+    // AuthTypes and AuthSubTypes present in the below list can be locked or unlocked
+    "authTypes": [
+      {
+        "authType": "otp",
+        "isLocked": false
+      },
+      {
+        "authType": "demo",
+        "isLocked": false
+      },
+      {
+        "authType": "bio",
+        "authSubType": "Finger",
+        "isLocked": true
+      },
+      {
+        "authType": "bio",
+        "authSubType": "Iris",
+        "isLocked": true
+      },
+      {
+        "authType": "bio",
+        "authSubType": "Face",
+        "isLocked": true
+      }
+    ]
+  }
+}
+```
+
+### Responses
+
+#### Success Response
+**Response Code : 200 (OK)**
+```JSON
+{
+  //API Metadata
+  "id": "mosip.identity.authtype.status.update",
+  "version": "1.0",
+  "responseTime": "2019-02-15T07:23:19.590+05:30",
+  "errors": null
+}
+```
+
+#### Failed Response
+**Response Code : 200 (OK)**
+```JSON
+{
+  //API Metadata
+  "id": "mosip.identity.authtype.status.update",
+  "version": "v1",
+  "responseTime": "2019-02-15T07:23:19.590+05:30",
+  "errors": [
+    {
+      "errorCode": "IDA-MLC-002",
+      "errorMessage": "Invalid UIN",
+      "actionMessage": "Please retry with the correct UIN"
+    }
+  ]
+}
+```
+
+### Failure Details
+Error Code|Error Message|Description|Action Message
+-----------|-------------|-----------|----------------
+IDA-MLC-001|Request to be received at MOSIP within&lt;x&gt; hrs/min|Invalid Time stamp|Please send the request within &lt;x&gt; hrs/min
+IDA-MLC-002|Invalid UIN|Invalid UIN|Please retry with the correct UIN.
+IDA-MLC-003|UIN has been deactivated|UIN Deactivated|Your UIN status is not active.
+IDA-MLC-006|Missing Input parameter- &lt;attribute&gt;  Example: Missing Input parameter- version|Missing Input parameter- attribute - all the mandatory attributes |
+IDA-MLC-007|Request could not be processed. Please try again|Could not process request/Unknown error; Invalid Auth Request|
+IDA-MLC-009|Invalid Input parameter- attribute  |Invalid Input parameter- attribute|
+IDA-MLC-012|Individual's Consent is not available|Invalid resident consent for eKYC/Auth|
+IDA-MLC-015| Identity Type - &lt;Identity Type&gt; not configured for the country|ID Type (UIN/USERID) not supported for a country|
+IDA-MLC-018|%s not available in database|UIN, VID not available in database|
