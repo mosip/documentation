@@ -23,16 +23,16 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Request Body Parameters
-Name | Description 
------|-------------
-id | <ul><li>ID for the API</li></ul>
-metadata | <ul><li>Meta Data for the API</li></ul>
-requesttime | <ul><li>Request time for the API</li></ul>
-version | <ul><li>Version for the API</li></ul>
-request.bypassCache | <ul><li>Used to fetch data from cache or </li></ul>
-request.id | ID of the Packet
-request.process | 
-request.source |
+Name | Required | Description 
+-----|----------|------------
+id | Y | ID for the API.
+metadata | N | Meta Data for the API.
+requesttime | Y | Request time for the API.
+version | Y | Version for the API.
+request.bypassCache | Y | Used to fetch data from cache or from object store.
+request.id | Y | ID of the Packet.
+request.process | Y | Process of the Packet.
+request.source | Y | Source of the Packet.
 
 ### Request
 ```JSON
@@ -54,6 +54,7 @@ request.source |
 ### Response
 
 #### Success Response
+**Response Code : 200 (OK)**
 ```JSON
 {
   "errors": [
@@ -79,6 +80,7 @@ request.source |
 ```
 
 #### Failure Response
+**Response Code : 200 (OK)**
 ```JSON
 {
   "id": null,
@@ -113,26 +115,22 @@ Resource Details | Description
 Response format | JSON
 Requires Authentication | Yes
 
-### Request Header Parameters
-Name | Description 
------|-------------
-
-
 ### Request Body Parameters
-Name | Description 
------|-------------
-id |
-metadata |
-requesttime |
-version |
-request.bypassCache |
-request.id |
-request.modalities |
-request.person |
-request.process |
-request.source |
+Name | Required | Description 
+-----|----------|-------------
+id | Y | ID of the API.
+metadata | N | Metadata of the API.
+requesttime | Y | Request time of the API.
+version | Y | Version of the API.
+request.bypassCache | Used to fetch data from cache or from object store.
+request.id | Y | ID of the Packet.
+request.modalities | Modalities of biometrics to be fetched.
+request.person | Entity for whom the biometrics is to be fetched.
+request.process | Process of the Packet.
+request.source | Source of the Packet.
 
 ### Request
+**Response Code : 200 (OK)**
 ```JSON
 {
   "id": "string",
@@ -314,16 +312,16 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Request Body Parameters
-Name | Description 
------|-------------
-id |
-metadata |
-requesttime |
-version |
-request.documentName |
-request.id |
-request.process |
-request.source |
+Name | Required | Description 
+-----|----------|-------------
+id | Y | ID of the API.
+metadata | N | Metadata of the API.
+requesttime | Y | Request time of the API.
+version | Y | Version of the API.
+request.documentName | Y | Name of the document to be fetched.
+request.id | Y | ID of the Packet.
+request.process | Y | Process of the Packet.
+request.source | Y | Source of the Packet.
 
 ### Request
 ```JSON
@@ -399,16 +397,16 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Request Body Parameters
-Name | Description 
------|-------------
-id |
-metadata |
-requesttime |
-version |
-request.bypassCache |
-request.id |
-request.process |
-request.source |
+Name | Required | Description 
+-----|----------|-------------
+id | Y | ID of the API.
+metadata | N | Metadata of the API.
+requesttime | Y | Request time of the API.
+version | Y | Version of the API.
+request.bypassCache | Y | Used to fetch data from cache or from object store.
+request.id | Y | ID of the Packet.
+request.process | Y | Process of the Packet.
+request.source | Y | Source of the Packet.
 
 ### Request
 ```JSON
@@ -485,17 +483,17 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Request Body Parameters
-Name | Description 
------|-------------
-id |
-metadata |
-requesttime |
-version |
-request.bypassCache |
-request.field |
-request.id |
-request.process |
-request.source |
+Name | Required | Description 
+-----|----------|-------------
+id | Y | ID of the API.
+metadata | N | Metadata of the API.
+requesttime | Y | Request time of the API.
+version | Y | Version of the API.
+request.bypassCache | Y | Used to fetch data from cache or from object store.
+request.field | Y | Field Name for which data needs to be fetched.
+request.id | Y | ID of the Packet.
+request.process | Y | Process of the Packet.
+request.source | Y | Source of the Packet.
 
 ### Request
 ```JSON
@@ -573,17 +571,17 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Request Body Parameters
-Name | Description 
------|-------------
-id |
-metadata |
-requesttime |
-version |
-request.bypassCache |
-request.fields |
-request.id |
-request.process |
-request.source |
+Name | Required | Description 
+-----|----------|-------------
+id | Y | ID of the API.
+metadata | Y | Metadata of the API.
+requesttime | Y | Request time of the API.
+version | Y | Version of the API.
+request.bypassCache | Y | Used to fetch data from cache or from object store.
+request.fields | Y | List of fields to be fetched.
+request.id | Y | ID of the Packet.
+request.process | Y | Process of the Packet.
+request.source | Y | Source of the Packet.
 
 ### Request
 ```JSON
@@ -663,16 +661,16 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Request Body Parameters
-Name | Description 
------|-------------
-id |
-metadata |
-requesttime |
-version |
-request.bypassCache |
-request.id |
-request.process |
-request.source |
+Name | Required | Description 
+-----|----------|-------------
+id | Y | ID of the API.
+metadata | N | Metadata of the API.
+requesttime | Y | Request time of the API.
+version | Y | Version of the API.
+request.bypassCache | Y | Used to fetch data from cache or from object store.
+request.id | Y | ID of the Packet.
+request.process | Y | Process of the Packet.
+request.source | Y | Source of the Packet.
 
 ### Request
 ```JSON
@@ -749,22 +747,22 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Request Body Parameters
-Name | Description 
------|-------------
-id |
-metadata |
-requesttime |
-version |
-request.audits |
-request.biometrics |
-request.documents |
-request.id |
-request.fields |
-request.metaInfo |
-request.schemaJson |
-request.schemaVersion |
-request.process |
-request.source |
+Name | Required | Description 
+-----|----------|-------------
+id | Y | ID of the API.
+metadata | N | Metadata of the API.
+requesttime | Y | Request time of the API.
+version | Y | Version of the API.
+request.audits | Y | Audit trail of the packet.
+request.biometrics | N | Biometrics in the packet.
+request.documents | N | Documents in the packet.
+request.id | Y | ID of the packet.
+request.fields | Y | Fields in the packet.
+request.metaInfo | Y | Metainfo of the packet.
+request.schemaJson | Y | Schema JSON to use inorder to create the Packet.
+request.schemaVersion | Y | Schema Version to use inorder to create the Packet.
+request.process | Y | Process of the Packet.
+request.source | Y | Source of the Packet.
 
 ### Request
 ```JSON
