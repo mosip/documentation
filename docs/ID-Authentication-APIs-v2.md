@@ -1,11 +1,11 @@
 This section details about the REST services in ID Authentication module.
 
-* [Authentication Service](#authentication-service-public) - This service can be used by authentication partners to authenticate a resident using OTP, demographic or biometric-based authentication.
-* [eKYC Service](#ekyc-service-public) - This service can be used by authentication partners to retrieve KYC details of a resident, after authenticating them using OTP or biometric-based authentication.
-* [OTP Request Service](#otp-request-service-public) - This service can be used by authentication partners to send OTP on behalf of resident, which can then be used for OTP-based authentication.
-* [Internal Authentication Service](#authentication-service-internal) - This service can be used by MOSIP modules to authenticate a resident using OTP or demographic or biometric-based authentication.
-* [Authentication Transactions Service](#authentication-transactions-service-internal) - This service can be used by MOSIP modules to retrieve authentication transactions.
-* [Authentication Type Status Service](#authentication-types-status-service-internal) - This service can be used by MOSIP modules to store/update/retrieve status of authentication types.
+* [Authentication Service](#authentication-service-public)
+* [eKYC Service](#ekyc-service-public)
+* [OTP Request Service](#otp-request-service-public)
+* [Internal Authentication Service](#authentication-service-internal)
+* [Authentication Transactions Service](#authentication-transactions-service-internal)
+* [Authentication Type Status Service](#authentication-types-status-service-internal)
 
 # Authentication Service (Public)
 This service details authentication methods that can be used by authentication partners to authenticate a resident. Below are various authentication types currently supported by this service:
@@ -308,6 +308,25 @@ request.biometrics.thumbprint | <ul><li>SHA256 representation of thumbprint of t
 }
 ```
 
+**Data Block**
+```JSON
+"data": {
+  "digitalId": "digital Id as described in this document",
+  "deviceCode": "A unique code given by MOSIP after successful registration",
+  "deviceServiceVersion": "MDS version",
+  "bioType": "Finger",
+  "bioSubType": "UNKNOWN",
+  "purpose": "Auth  or Registration",
+  "env": "Target environment",
+  "domainUri": "URI of the auth server",
+  "bioValue": "Encrypted with session key and base64urlencoded biometric data",
+  "transactionId": "Unique transaction id",
+  "timestamp": "ISO format datetime with time zone",
+  "requestedScore": "Floating point number to represent the minimum required score for the capture",
+  "qualityScore": "Floating point number representing the score for the current capture"
+}
+```
+
 ### Responses
 
 #### Success Response
@@ -596,42 +615,73 @@ request.biometrics.thumbprint | <ul><li>SHA256 representation of thumbprint of t
   "id": "mosip.identity.auth.internal",
   "version": "v1",
   "requestTime": "2019-02-15T10:01:57.086+05:30",
-  "transactionID": "1234567890",
+  "env": "<Target environment>",
+  "domainUri": "<URI of the authentication server>",
+  "transactionID": "<Transaction ID of the authentication request>",
   "requestedAuth": {
-    "bio": true,
-    "demo": false
+    "otp": true,
+    "demo": false,
+    "bio": false
   },
   "consentObtained": true,
   "individualId": "9830872690593682",
-  "individualIdType": "USERID",
-  "keyIndex": "<Thumbprint of the public key certficate used for enryption of sessionKey. This is necessary for key rotaion>",
+  "individualIdType": "VID",
+  "thumbprint": "<Thumbprint of the public key certficate used for enryption of sessionKey. This is necessary for key rotaion>",
   "requestSessionKey": "<Encrypted and Base64-URL-encoded session key>",
   "requestHMAC": "<SHA-256 of request block before encryption and then hash is encrypted using the requestSessionKey>",
   //Encrypted with session key and base-64-URL encoded
   "request": {
     "timestamp": "2019-02-15T10:01:56.086+05:30 - ISO format timestamp",
+    "otp": "123456",
+	"demographics": {
+      "name": [
+        {
+          "language": "ara",
+          "value": "ابراهيم بن علي"
+        },
+        {
+          "language": "fra",
+          "value": "Ibrahim Ibn Ali"
+        }
+      ],
+      "gender": [
+        {
+          "language": "ara",
+          "value": "الذكر"
+        },
+        {
+          "language": "fra",
+          "value": "mâle"
+        }
+      ],
+      "age": "25",
+      "dob": "25/11/1990",
+      "fullAddress": [
+        {
+          "language": "ara",
+          "value": "عنوان العينة سطر 1, عنوان العينة سطر 2"
+        },
+        {
+          "language": "fra",
+          "value": "exemple d'adresse ligne 1, exemple d'adresse ligne 2"
+        }
+      ]
+    },
+    //Same as the response from the Capture API of SBI v1.0. Refer to the [SBI v1.0 specification]() for complete information.
     "biometrics": [
       {
-        //base-64-URL encoded
-		"data": {
-          "bioType": "Finger",
-          "bioSubType": "UNKNOWN",
-          "bioValue": "<encrypted with session key and base-64-URL encoded biometric data>",
-          "timestamp": "2019-02-15T10:01:57.086+05:30"
-        },
-        "hash": "<SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format>",
-        "sessionKey": "<Encrypted and Base64 url-encoded session key>",
+        "specVersion" : "<SBI specification version>",
+		"data": "<JWS signature format of data containing encrypted biometrics and device details>",
+        "hash": "<SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format>", // For the first entry assume empty string as previous data block
+        "sessionKey": "<Encrypted and base64-URL-encoded session key>",
+        "thumbprint": "<SHA256 representation of thumbprint of the certificate that was used for encryption of session key>"
       },
       {
-        //base-64-URL encoded
-		"data": {
-          "bioType": "Iris",
-          "bioSubType": "RIGHT",
-          "bioValue": "<encrypted with session key and base-64-URL encoded biometric data>",
-          "timestamp": "2019-02-15T10:01:57.086+05:30"
-        },
+	    "specVersion" : "<SBI specification version>",
+        "data": "<JWS signature format of data containing encrypted biometrics and device details>",
         "hash": "<SHA-256 hash of (SHA-256 hash of previous data block in hex format + SHA-256 of current data block before encrypting in hex format) in hex format>",
-        "sessionKey": "<Encrypted and Base64 url-encoded session key>",
+        "sessionKey": "<Encrypted and base64-URL-encoded session key>",
+        "thumbprint": "<SHA256 representation of thumbprint of the certificate that was used for encryption of session key>"
       }
     ]
   }
