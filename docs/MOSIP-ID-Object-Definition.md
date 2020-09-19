@@ -572,5 +572,5 @@ request body
 ```
 Also, please refer to, 
 * [ID Repository API](ID-Repository-APIs.md) on how an ID Object is managed in MOSIP
-* [UI Specification for Registration Client] on how ID data is collected from Registration Client UI
-* [UI Specification for Pre-registration] on how ID data is collected from Pre-registration UI
+* [UI Specification for Registration Client](UI-Specification-for-Registration-Client.md) on how ID data is collected from Registration Client UI
+* [UI Specification for Pre-registration](UI-Specification-for-Pre-Registration.md) on how ID data is collected from Pre-registration UI
