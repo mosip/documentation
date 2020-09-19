@@ -1,445 +1,76 @@
-
-The below diagram depicts the packet creation flow along with the encryption process.
-
-![Packet Creation Flow](_images/registration/packet-creation-flow.png)  
+This document describes the registration packet structure and the packet encryption procedure.
  
-This document describes the following aspects
-- Registration packet structure
-- Packet encryption procedure
+# Registration Packet
+Once a resident visits the registration center and provides their demographic & biometric details an encrypted zip file is created which is called a "Packet". This packet can only be decrypted by the registration processor using a private key available in the Kernel Key Manager.
+ 
+The below diagram depicts the packet creation flow along with the encryption process.
+![To be updated](_images/registration/packet-creation-flow.png)
 
-**Registration Packet Structure**
-	![Packet Design view](_images/registration/packet_creation_overview.png)
+## Packet Structure
+The packet is created using the Commons Packet Manager, which creates a packet in the below structure using the [ID Schema](MOSIP-ID-Object-Definition.md).
 
-   Create the Registration packet in the below format. 
-	![Packet Design view](_images/registration/packet_zip_format.png)
+### Encrypted ZIP File
 
-1.  **Folder structure inside the packet zip.**
-	![Inside Packet Design view](_images/registration/packet_struct_inside_zip.png)
-	
-2.  **Biometric and Demographic folders should have the below sub folder structure.**
-    -   Applicant
-    -   Introducer [Either HOF/Parent/Introducer  data will be captured for the packet]
-    
-    **Biometric Folder:**
-    
-    Each folder contains the respective biometric detail in [**CBEFF XML**](CBEFF-XML.md) format.
-    It contains the applicant's IRIS, Finger Print and Face bio in XML format.
+![](_images/registration/packet_zip_format.png)
 
-    **Demographic Folder:**
-    
-    This folder contains the Applicant document image and demographic data.
-     
-     **a. Applicant**  
-        - POI_drivinglicense.jpg  
-        - POR_Relation.jpg  
-        - POA_passport.jpg  
-        - POB_date_Of_birth.jpg  
-        - ApplicantPhoto.jpg  
-        - ExceptionPhoto.jpg \[If Exceptional cases\]  
-        
-        
-     **b.  Demographic\_info.json**  
-        - Follwed the Mosip [**ID Spec**](MOSIP-ID-Object-definition) and generated this JSON structure. It contains the entire text data captured in the UI application. 
-	
-3.  **registration_id.txt**
-    -   It contains the generated Registration id which is having the length of 29 digit.  
-        [Eg: 10001782130002201811011002010]  
-        [Eg: Center ID + Machine ID + Packet Random Seq Number + Timestamp[14]]
+The packet name here is also the request ID that is generated for a request created when a resident enrolls into MOSIP, requests for updating data or request for finding his/her lost id. The request ID is a 29 digit number derived from the Center ID (5 digits), Machine ID (5 digits), sequence number (5 digits), timestamp (14 digits).
 
-4.  **packet_data_hash.txt**
-    -   Generate the Hash for the Biometric, Demographic and RID of
-        Resident Information.
-	-   Store the generated Hash in a file and append to the created Zip
-	    object.
+### Folder Structure
 
-5.  **packet_osi_hash.txt**
-    -   Generate Hash for the Biometric of Officer and Supervisor who provided authentication to the registration.
-	-   Store the generated Hash in a file and append to the created Zip object.
-    
-6.  **packet_meta_info.json**  
-    It contains the following attributes.
+![](_images/registration/mosip_packet_structure.png)
 
-***
-```{
-  "identity" : {
-    "biometric" : {
-      "applicant" : {
-        "leftEye" : {
-          "language" : "en",
-          "label" : "label",
-          "imageName" : "LeftEye",
-          "type" : "iris",
-          "qualityScore" : 79.0,
-          "numRetry" : 2,
-          "forceCaptured" : false
-        },
-        "rightEye" : null,
-        "leftIndex" : {
-          "language" : "en",
-          "label" : "label",
-          "imageName" : "LeftIndex",
-          "type" : "fingerprint",
-          "qualityScore" : 80.0,
-          "numRetry" : 3,
-          "forceCaptured" : false
-        },
-		"leftMiddle" : {
-          "language" : "en",
-          "label" : "label",
-          "imageName" : "LeftMiddle",
-          "type" : "fingerprint",
-          "qualityScore" : 80.0,
-          "numRetry" : 3,
-          "forceCaptured" : false
-        },
-		"leftRing" : {
-          "language" : "en",
-          "label" : "label",
-          "imageName" : "LeftRing",
-          "type" : "fingerprint",
-          "qualityScore" : 80.0,
-          "numRetry" : 3,
-          "forceCaptured" : false
-        },
-		"leftLittle" : {
-          "language" : "en",
-          "label" : "label",
-          "imageName" : "LeftLitle",
-          "type" : "fingerprint",
-          "qualityScore" : 80.0,
-          "numRetry" : 3,
-          "forceCaptured" : false
-        },
-		"leftThumb" : {
-          "language" : "en",
-          "label" : "label",
-          "imageName" : "LeftThumb",
-          "type" : "fingerprint",
-          "qualityScore" : 80.0,
-          "numRetry" : 3,
-          "forceCaptured" : false
-        },
-        "rightIndex" : {
-          "language" : "en",
-          "label" : "label",
-          "imageName" : "RightIndex",
-          "type" : "fingerprint",
-          "qualityScore" : 95.0,
-          "numRetry" : 2,
-          "forceCaptured" : false
-        },
-		"rightMiddle" : {
-          "language" : "en",
-          "label" : "label",
-          "imageName" : "RightMiddle",
-          "type" : "fingerprint",
-          "qualityScore" : 95.0,
-          "numRetry" : 2,
-          "forceCaptured" : false
-        },
-		"rightRing" : {
-          "language" : "en",
-          "label" : "label",
-          "imageName" : "RightRing",
-          "type" : "fingerprint",
-          "qualityScore" : 95.0,
-          "numRetry" : 2,
-          "forceCaptured" : false
-        },
-		"rightLittle" : {
-          "language" : "en",
-          "label" : "label",
-          "imageName" : "RightLittle",
-          "type" : "fingerprint",
-          "qualityScore" : 95.0,
-          "numRetry" : 2,
-          "forceCaptured" : false
-        },
-        "rightThumb" : {
-          "language" : "en",
-          "label" : "label",
-          "imageName" : "rightThumb",
-          "type" : "fingerprint",
-          "qualityScore" : 85.0,
-          "numRetry" : 0,
-          "forceCaptured" : false
-        }
-      },
-      "introducer" : {
-        "introducerFingerprint" : {
-          "language" : "en",
-          "label" : "label",
-          "imageName" : "introducerLeftThumb",
-          "type" : "fingerprint",
-          "qualityScore" : 0.0,
-          "numRetry" : 0,
-          "forceCaptured" : false
-        },
-        "introducerIris" : null,
-        "introducerImage" : null
-      }
-    },
-    "exceptionBiometrics" : [ {
-      "language" : "en",
-      "type" : "fingerprint",
-      "missingBiometric" : "LeftThumb",
-      "exceptionDescription" : "Due to accident",
-      "exceptionType" : "Permananent"
-    }, {
-      "language" : "en",
-      "type" : "fingerprint",
-      "missingBiometric" : "LeftForefinger",
-      "exceptionDescription" : "Due to accident",
-      "exceptionType" : "Permananent"
-    }, {
-      "language" : "en",
-      "type" : "iris",
-      "missingBiometric" : "RightEye",
-      "exceptionDescription" : "By birth",
-      "exceptionType" : "Permananent"
-    } ],
-    "applicantPhotograph" : {
-      "language" : "en",
-      "label" : "label",
-      "photographName" : "ApplicantPhoto",
-      "numRetry" : 1,
-      "qualityScore" : 89.0
-    },
-    "exceptionPhotograph" : {
-      "language" : "en",
-      "label" : "label",
-      "photographName" : "ExceptionPhoto",
-      "numRetry" : 0,
-      "qualityScore" : 0.0
-    },
-    "documents" : [ {
-      "documentName" : "ProofOfIdentity",
-      "documentCategory" : "PoI",
-      "documentOwner" : "Self",
-      "documentType" : "PAN"
-    }, {
-      "documentName" : "ProofOfAddress",
-      "documentCategory" : "PoA",
-      "documentOwner" : "hof",
-      "documentType" : "passport"
-    }, {
-      "documentName" : "RegistrationAcknowledgement",
-      "documentCategory" : "RegistrationAcknowledgement",
-      "documentOwner" : "Self",
-      "documentType" : "RegistrationAcknowledgement"
-    } ],
-    "metaData" : [ {
-      "label" : "geoLocLatitude",
-      "value" : "13.0049"
-    }, {
-      "label" : "geoLoclongitude",
-      "value" : "80.24492"
-    }, {
-      "label" : "registrationType",
-      "value" : "Child"
-    }, {
-      "label" : "applicantType",
-      "value" : "New"
-    }, {
-      "label" : "preRegistrationId",
-      "value" : "PEN1345T"
-    }, {
-      "label" : "registrationId",
-      "value" : "20187821300001211120181030160"
-    }, {
-      "label" : "machineId",
-      "value" : "yyeqy26356"
-    },
-	{
-      "label" : "dongleId",
-      "value" : "yyeqy26356"
-    },
-	{
-      "label" : "macID",
-      "value" : "8F-23-12-45-FG-56"
-    },
-	{
-      "label" : "centerId",
-      "value" : "12245"
-    }, {
-      "label" : "uin",
-      "value" : null
-    }, {
-      "label" : "previousRID",
-      "value" : null
-    }, {
-      "label" : "introducerType",
-      "value" : "Parent"
-    }, {
-      "label" : "introducerRID",
-      "value" : "2018234500321157812"
-    }, {
-      "label" : "introducerUIN",
-      "value" : null
-    }, {
-      "label" : "officerFingerprintType",
-      "value" : "leftThumb"
-    }, {
-      "label" : "officerIrisType",
-      "value" : null
-    }, {
-      "label" : "supervisorFingerprintType",
-      "value" : "leftThumb"
-    }, {
-      "label" : "supervisorIrisType",
-      "value" : null
-    }, {
-      "label" : "introducerFingerprintType",
-      "value" : "leftThumb"
-    }, {
-      "label" : "introducerIrisType",
-      "value" : null
-    }],
-    "osiData" : [ {
-      "label" : "officerId",
-      "value" : "op0r0s12"
-    }, {
-      "label" : "officerFingerprintImage",
-      "value" : "officerLeftThumb"
-    }, {
-      "label" : "officerIrisImage",
-      "value" : null
-    }, {
-      "label" : "supervisorId",
-      "value" : "s9ju2jhu"
-    }, {
-      "label" : "supervisorFingerprintImage",
-      "value" : "supervisorLeftThumb"
-    }, {
-      "label" : "supervisorIrisImage",
-      "value" : null
-    }, {
-      "label" : "supervisorPassword",
-      "value" : null
-    }, {
-      "label" : "officerPassword",
-      "value" : null
-    }, {
-      "label" : "supervisorPIN",
-      "value" : null
-    }, {
-      "label" : "officerPIN",
-      "value" : null
-    }, {
-      "label" : "supervisorFaceImage",
-      "value" : null
-    }, 
-	{
-      "label" : "officerFaceImage",
-      "value" : null
-    }, 
-	{
-      "label" : "officerOTPAuthentication",
-      "value" : true/false
-    },
-	{
-      "label" : "supervisiorOTPAuthentication",
-      "value" : true/false
-    }
-	],
-    "hashSequence1" : [ {
-      "label" : "applicantBiometricSequence",
-      "value" : [ "applicant_bio_CBEFF.xml" ]
-    }, {
-      "label" : "introducerBiometricSequence",
-      "value" : [ "introducer_bio_CBEFF.xml" ]
-    }, {
-      "label" : "applicantDemographicSequence",
-      "value" : [ "DemographicInfo", "ProofOfIdentity", "ProofOfAddress", "ApplicantPhoto", "ExceptionPhoto", "ProofOfBirth", "ProofOfRelation" ]
-    } ],
-	"hashSequence2" : [ {
-      "label" : "otherFiles",
-      "value" : [ "officerCBEFF", "supervisiorCBEFF", "Audit"]
-    } ],
-	"capturedRegiseredDevices" : [ {
-      "label" : "fingerprint",
-      "value" : "123455YRHTIFHKJI8U90U2334"
-    },
-	"label" : "iris",
-      "value" : "123455YRHTIFHKJI8U90U5476"
-    },
-	"label" : "photo",
-      "value" : "123455YRHTIFHKJI8U90U4648"
-    }	
-	],
-	"capturedNonRegisteredDevices" : [ {
-      "label" : "GPS",
-      "value" : "123455YRHTIFHKJI8U90U2334"
-    },
-	"label" : "scanner",
-      "value" : "123455YRHTIFHKJI8U90U5476"
-    },
-	"label" : "printer",
-      "value" : "123455YRHTIFHKJI8U90U6786"
-    }	
-	],
-    "checkSum" : [ {
-      "label" : "registration-service.jar",
-      "value" : "65gfhab67586cjhsabcjk78"
-    }, {
-      "label" : "registration-ui.jar",
-      "value" : "uygdfajkdjkHHD56TJHASDJKA"
-    } ]
-  }
+* **Container**: The container is the base folder in which the sub-packets are stored with their respective JSON files containing meta information.
+
+* **Sub-Packets**: Inside the container we ideally have three packets named as ID Packet, Evidence Packet and Optional Packet. Data inside each packet is stored based on a property in ID Schema called "Field Category".
+
+* **Packet JSON**: Each sub packet has a JSON file associated with it which contains the meta information of the respective sub-packet.
+
+```JSON
+{
+	"process": "NEW",
+	"providerVersion": "v1.0",
+	"schemaVersion": "0.0",
+	"signature": "eyJhbGciOiJSUzI1NiJ9..adXTYgQe2_KLeretI2Qrp1BQNobqiZ4RpcMonxGdb6ZVL5eXX5-a2pVaspk69ujZ7W7z9wPTd54ogy8Mne6hTJeQ4f3OQiJ-MZwbf0mNr1PgeL14a7wHgzHOdR23gFZv6oEVL3IGGTA52SCIXAFJgrp7F4FRZ3nNcHCiP5FJtRMwKG9iGFiqHNii0ZGKOongWwibJihd5-xMW1VWWnxV-eDwVRE2S2W-KOrgOl5oiX5a0Uk4XeEMQ27l20Xvv60YiThUogKLZtwWTp3y2CxYF7X5qrZudjdewS0WVil4ePoTzqCZEi29BptlfJGCF1xaJywFS0nQxdOCnMsrM9SSsg",
+	"encryptedHash": "��BC& �c!\u0016\u0019�(jZFh���\"\n}�r\u0018{���",
+	"id": "10001100770000320200720092256",
+	"source": "registration",
+	"packetName": "10001100770000320200720092256_id",
+	"creationDate": "2020-08-06T06:05:20.839Z",
+	"providerName": "PacketWriterImpl"
 }
 ```
 
-    -   Biometric image detail  
-    -   Exceptional Biometric detail
-    -   Geo Location detail
-    -   Applicant Type [New/ UIN Update/ Lost UIN]
-    -   Pre Registration Id
-    -   osiData {Operator and Supervisor authentication info.}
-    -   HashSequence for both applicant and OSI detail.{It provides the hash created sequence}
+* **ID Object**: Each packet has an ID JSON attached with it which has basic demographic data of the resident, document names that were uploaded, information about the introdcers or guardians, biometrics file names (of applicant, introducer, guardians) and the version of the ID schema used. Data for each ID JSON is populated based on the ID Schema property, "Field Category". 
 
-7.  **Registration Officer authentication Bio [officer_bio_cbeff.xml]**
-    -   Officer bio should be captured in standard [**CBEFF xml**](CBEFF-XML.md) format.
-7.  **Registration Supervisor authentication Bio [supervisor_bio_cbeff.xml]**
-    -   Supervisor bio should be captured in standard [**CBEFF xml**](CBEFF-XML.md) format.
+{% hint style="info" %}
+You can find the more about ID Object in our [**ID Object definition**](MOSIP-ID-Object-Definition.md) document.
+{% endhint %}
 
--   Capture the Registration Officer/Supervisor Authentication finger
-    image and append to the Zip object.
+* **Biometric Files**: The biometric data of the resident, officer, supervisor, intorducer or guardian is stored in respective [**CBEFF XML**](CBEFF-XML.md) and in respective folders as driven by ID schema.
 
--   Create the Packet Info JSON file, which contains the **Meta data**
-    information about packet and appended to the existing Zip object.
+* **Documents**: The documents uploaded by the resident during registration or pre-registration is stored in respective folders as driven by ID schema.
 
-**Packet Encryption Procedure**
+* **Packet Meta Information**: A bunch of meta data is generated during the registration process like the officer's or supervisor's id, machine details, device details, gps location, etc. which is stored in the Packet Meta Info file in JSON format.
 
-Before writing the packet into the local disk, the zipped content should be encrypted using Session and RSA public key [center specific] to secure the data. The same data can only be decrypted at server end where the private key is available. 
+* **Audit**: The audit trails created during packet creation is logged and sent to registration processor to be uploaded in the audit database for analytics. 
+
+{% hint style="info" %}
+No PII (Personally Identifiable Information) data is captured in the audit logs.
+{% endhint %}
+
+* **Packet Hash**: During the packet creation a hash of the data being collected is stored in these files so that the data can be verified when the packet reaches the server. We have two types of hash file, Packet Data Hash file & Pakcet Operation Hash file.
+
+# Packet Encryption Procedure
+Before writing the packet into the local disk, the zipped content should be encrypted using Session and RSA public key (center specific) to secure the data. The same data can only be decrypted at server end where the private key is available. 
     
 -   Session Key Encryption:
-
-    -   Session key generation is \[MAC of machine + RO Id + Timestamp\]
-        should not exceed 32 characters.
-
-    -   Pass the created Zip object \[in-memory\] through the AES-256
-        bit encryption.
-
+    -   Session key generation is \[MAC of machine + RO Id + Timestamp\] should not exceed 32 characters.
+    -   Pass the created Zip object \[in-memory\] through the AES-256 bit encryption.
     -   Pass the Random Session Key as a seed to this AES encryption.
-
     -   Get the Registration Officer Id from user context object. 
-
 -   RSA Public Key Encryption:
-
-    -   AES Session key bytes pass through the RSA public key
-        encryption.
-
--   Use the "\#KEY\_SPLITTER\#" as a key separator for the AES encrypted
-    bytes and the RSA Public key encrypted Session key seed.
-
--   Append the RSA Public key Encrypted Session Key, Key Separator to
-    the AES encrypted bytes.
-
--   Append the EO and machine information as a META-INFO JSON file and
-    create another ZIP out of it. \[Packet Zip + META-INFO JSON\]
-
--   Save the encrypted data as a ZIP in local file system under the
-    defined location in configuration file.
-
-
-***
+    -   AES Session key bytes pass through the RSA public key encryption.
+-   Use the "\#KEY\_SPLITTER\#" as a key separator for the AES encrypted bytes and the RSA Public key encrypted Session key seed.
+-   Append the RSA Public key Encrypted Session Key, Key Separator to the AES encrypted bytes.
+-   Append the EO and machine information as a META-INFO JSON file and create another ZIP out of it. \[Packet Zip + META-INFO JSON\]
+-   Save the encrypted data as a ZIP in local file system under the defined location in configuration file.
