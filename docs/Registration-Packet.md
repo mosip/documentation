@@ -4,6 +4,7 @@ This document describes the registration packet structure and the packet encrypt
 Once a resident visits the registration center and provides their demographic & biometric details an encrypted zip file is created which is called a "Packet". This packet can only be decrypted by the registration processor using a private key available in the Kernel Key Manager.
  
 The below diagram depicts the packet creation flow along with the encryption process.
+
 ![To be updated](_images/registration/packet-creation-flow.png)
 
 ## Packet Structure
