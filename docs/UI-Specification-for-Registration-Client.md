@@ -36,7 +36,7 @@ Here is one of the attributes in the Registration Client UI Specification.
 ```
 
 # UI Specification Properties
-Below are the properties in registration client UI specification that define various ID attributes of the MOSIP ID Object.
+Below are the properties in registration client UI specification that are used to store ID attributes in an ID object.
 
 Name | Description | Example
 -----|-------------|--------
@@ -1070,14 +1070,17 @@ This is a mandatory property which is needed to identify if the ID attribute is 
   }
 ]
 ```
+The above attributes which are available in the current MOSIP platform, adopters can choose to add new attributes or remove attributes based on their requirement.
 
-# Steps to create your own ID schema and UI specification
-* Along with the above attributes which are available in the platform, the adopters can choose to add new attributes or remove attributes their requirement
-* Some of the attributes might need pre-defined master data (example: Blood Group)
+# Steps to create your own UI specification
+
+1. Create the basic ID Object definition & ID Schema as per your requirement.
+2. If any of your attributes needs pre-defined master data (example: Blood Group)
 	* The adopters can use our [Dynamic Fields API](Dynamic-Fields-APIs.md) to create dynamic master data
 	* Then the adopter can add this field in the UI specification and mark the field type as dynamic
-* Once all the attributes are added, the adopter can choose to create the ID Schema using the UI specification defined for registration client using the [ID Schema APIs](ID-Schema-APIs.md).
-* Once the UI Specification is created it needs to be published.
-* Then the [UI specification for Pre-registration](UI-Specification-for-Pre-Registration.md) needs to be created which is nearly similar to UI specification for Registration Client and should be added to the properties file of pre-registration (file name: pre-registration-demographic.json).
-* Once the file is placed the property "mosip.idschema.version" in pre-registration should be updated to the latest ID schema version.
-* All the services needs to be re-started to use the new UI.
+3. Once all the attributes are added, the adopter can create the UI Specification for registration client  using the [ID Schema APIs](ID-Schema-APIs.md).
+4. Once the UI Specification is created it needs to be published. Once published, the ID schema version is updated & an ID Schema is generated from the registration client UI specification for verification.
+5. The adopters now can verify the structure of the ID schema derived against the one that they had defined earlier & make modifications as required.
+6. Then the [UI specification for Pre-registration](UI-Specification-for-Pre-Registration.md) needs to be created and should be updated in the file "pre-registration-demographic.json".
+7. Once the file is placed the property "mosip.idschema.version" in pre-registration properties file should be updated to the latest ID schema version.
+8. All the services needs to be re-started to use the new UI.
