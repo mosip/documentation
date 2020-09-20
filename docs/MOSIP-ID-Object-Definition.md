@@ -2,7 +2,7 @@ ID definition is the key to use MOSIP. ID definition describes the attributes a 
 
 # ID Object Definition
 
-In order to define the ID object, MOSIP adopters need to analyze the attributes that they need in the MOSIP ID object. We have provided a [sample excel](https://github.com/mosip/documentation/tree/master/docs/_sources/id_schema/Sample_ID_Object_Definition.xlsx) which might help an adopter to analyze their ID attributes. The items that the adopter needs to analyze as part of tis exercise are:
+In order to define the ID object, MOSIP adopters need to analyze the attributes that they need in their ID object. We have provided a [sample excel](https://github.com/mosip/documentation/tree/master/docs/_sources/id_schema/Sample_ID_Object_Definition.xlsx) which might be helpful for adopter to analyze their ID attributes. The items that the adopter needs to analyze as part of tis exercise are:
 
 * ID attributes that would be collected to identify a resident uniquely. Example: Attributes such as, Name, Gender, DateOfBirth, Address, Biometrics etc.
 * Additional evidence attributes that would be collected as evidence. Example: Attributes such as proof documents (Identity, Address, Date of Birth, Relationship, etc) or Introducer.
@@ -10,13 +10,19 @@ In order to define the ID object, MOSIP adopters need to analyze the attributes 
 * Validations for the above attributes. Example: Basic reg-ex validations for text fields, flow validations for capturing evidence data.
 * Various work flows for various types of applicants (say, a minor or a resident without any evidence, etc.)
 
-Once the adopter has the clear picture of the above topics, it is very easy to construct an ID schema. 
+Once an adopter has proper clarity on the above topics, it is very easy for them to construct an ID schema. 
 
 # ID Schema JSON
 
-ID Schema is the JSON schema for an ID Object which would be used for defining the structure, content, and (to some extent) semantics of ID objects. It lets us specify metadata (data about data) about what an ID object’s attributes mean and what values are valid for those attributes.
+ID schema is a JSON schema which would be used for defining the structure, content, and (to some extent) semantics of an ID object. It lets us specify metadata (data about data) about what an ID object’s attributes mean and what values are valid for those attributes.
 
-Below is a sample ID Schema JSON.
+We use the ID schema JSON to validate the ID object when, 
+* ID object is created in Pre-registration
+* ID object is created in Registration Client
+* Packet is opened in Registration Processor
+* ID data is stored in ID Repository
+
+Below is a sample ID schema JSON.
 
 ```JSON
 {
