@@ -1,6 +1,96 @@
 This section details about the REST services for Dynamic fields.
 
-MOSIP consists of various types of master data like, gender, location, individual type as part of its pre-defined schema. Now if a country wants to add more master data for its UI screens, they can choose to use our dynamic fields APIs which are designed to support master data in JSON format in a single table.
+MOSIP consists of various types of master data like, gender, location, individual type as part of its pre-defined schema. Now if a MOSIP adopter wants to add more master data for its UI screens, they can choose to use our dynamic fields APIs which are designed to support master data in JSON format in a single table.
+
+Our implementation for dynamic field allows MOSIP adopters to store ina key value pair in single/multiple languages. Below is an example of Blood Group in english.
+```JSON
+[
+  {
+    "code": "101",
+    "value": "A",
+    "langCode": "eng",
+    "active": true
+  },
+  {
+    "code": "102",
+    "value": "A+",
+    "langCode": "eng",
+    "active": true
+  },
+  {
+    "code": "103",
+    "value": "A-",
+    "langCode": "eng",
+    "active": true
+  },
+  {
+    "code": "104",
+    "value": "B",
+    "langCode": "eng",
+    "active": true
+  },
+  {
+    "code": "105",
+    "value": "B+",
+    "langCode": "eng",
+    "active": true
+  },
+  {
+    "code": "106",
+    "value": "B-",
+    "langCode": "eng",
+    "active": true
+  },
+  {
+    "code": "107",
+    "value": "AB",
+    "langCode": "eng",
+    "active": true
+  },
+  {
+    "code": "108",
+    "value": "AB+",
+    "langCode": "eng",
+    "active": true
+  },
+  {
+    "code": "109",
+    "value": "AB-",
+    "langCode": "eng",
+    "active": true
+  },
+  {
+    "code": "110",
+    "value": "O",
+    "langCode": "eng",
+    "active": true
+  },
+  {
+    "code": "111",
+    "value": "O+",
+    "langCode": "eng",
+    "active": true
+  },
+  {
+    "code": "112",
+    "value": "O-",
+    "langCode": "eng",
+    "active": true
+  },
+  {
+    "code": "113",
+    "value": "Don't Know",
+    "langCode": "eng",
+    "active": true
+  },
+  {
+    "code": "114",
+    "value": "Not Applicable",
+    "langCode": "eng",
+    "active": true
+  }
+]
+```
 
 ## Create Dynamic Field
 This API is used to create a dynamic field.
