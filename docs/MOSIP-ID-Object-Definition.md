@@ -14,6 +14,8 @@ Once the adopter has the clear picture of the above topics, it is very easy to c
 
 # ID Schema JSON
 
+ID Schema is the JSON schema for an ID Object which would be used for defining the structure, content, and (to some extent) semantics of ID objects. It lets us specify metadata (data about data) about what an ID object’s attributes mean and what values are valid for those attributes.
+
 Below is a sample ID Schema JSON.
 
 ```JSON
@@ -436,7 +438,8 @@ Below is a sample ID Schema JSON.
 }
 ```
 
-## Sample ID Object
+# ID Object
+ID object is an instance of the ID Schema (derived from ID Schema). It contains the basic details of an individual so that we can uniquely identify them in MOSIP.
 
 Below is a sample ID JSON for private packet as per the schema defined above: 
 ```JSON
@@ -569,7 +572,7 @@ Below is a sample ID JSON for private packet as per the schema defined above:
 
 # UI Specification
 
-UI specification helps us identify how the an ID attribute is going to be retrieved from the UI. The UI screens in registration client application and pre-registration application are rendered using their respective UI specification JSON. We have different UI Specification documents for Registration Client & Pre-registration which is derived from the ID Schema.
+UI specification helps us identify how the data in an ID attribute (attributes of an ID object) is going to be retrieved from the UI. The UI screens in registration client application and pre-registration application are rendered using their respective UI specification JSON. We have different UI Specifications for Registration Client & Pre-registration which is derived from the ID Schema.
 
 For details about the UI specification of registration client & pre-registration please visit the respective pages,
 * [UI Specification for Registration Client](UI-Specification-for-Registration-Client.md)
@@ -578,3 +581,5 @@ For details about the UI specification of registration client & pre-registration
 # Relationship between ID Schema, ID Object & UI Specification
 
 ![](_images/id_schema/id_schema_concept.png)
+
+
