@@ -1,4 +1,4 @@
-ID definition is the key to use MOSIP. ID definition describes the attributes a country or entity will capture from an Individual. Since, MOSIP is a generic identity platform, the attributes of an ID cannot be predefined by MOSIP. One country may capture 5 attributes and another 10 attributes. So, to accommodate this flexibility MOSIP provides a feature where a country defines an ID object definition schema. This will be the first step in using MOSIP. Once an ID object schema is defined, all applications built on top of MOSIP platform to capture data must conform to the ID object schema.
+ID Object describes attributes that a country or entity will capture from an Individual. Since MOSIP is a generic identity platform the attributes of an ID cannot be predefined by MOSIP. One country may capture, say, 5 attributes and another 10. So to accommodate this flexibility MOSIP provides a feature to define ID Object. This will be the first step in using MOSIP. Once an ID Object is defined all applications built on top of MOSIP platform must conform to the same.
 
 # ID Object Definition
 
@@ -444,8 +444,8 @@ Below is a sample ID schema JSON.
 }
 ```
 
-# ID Object
-ID object is an instance of the ID Schema (derived from ID Schema). It contains the basic details of an individual so that we can uniquely identify them in MOSIP.
+# ID JSON
+ID JSON is an instance of the ID Schema (derived from ID Schema). It contains the basic details of an individual so that we can uniquely identify them in MOSIP.
 
 Below is a sample ID JSON for private packet as per the schema defined above: 
 ```JSON
