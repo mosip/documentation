@@ -12,7 +12,7 @@ In order to define the ID object, MOSIP adopters need to analyze the attributes 
 
 Once an adopter has proper clarity on the above topics, it is very easy for them to construct an ID schema. 
 
-# ID Schema JSON
+# ID Schema
 
 ID schema is a JSON schema which would be used for defining the structure, content, and (to some extent) semantics of an ID object. It lets us specify metadata (data about data) about what an ID object’s attributes mean and what values are valid for those attributes.
 
@@ -587,5 +587,3 @@ For details about the UI specification of registration client & pre-registration
 # Relationship between ID Schema, ID Object & UI Specification
 
 ![](_images/id_schema/id_schema_concept.png)
-
-
