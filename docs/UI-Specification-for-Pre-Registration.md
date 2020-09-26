@@ -1,52 +1,27 @@
-This section contains the details about the UI specification that is currently being used in Pre-registration.
+UI specification helps us identify how the data in an ID attribute (attributes of an ID object) is going to be retrieved from the UI. The UI screens in registration client application and pre-registration application are rendered using their respective UI specification JSON. We have different UI Specifications for Registration Client & Pre-registration which is derived from the ID Schema. Here we would be discussing about the properties used in the UI specification of Pre-registration.
 
-# UI Specification
-Below are the properties in pre-registration UI specification that define the ID attributes.
+# UI Specification Properties
+
+Below are the properties in pre-registration UI specification that are used to store ID attributes in an ID object.
 
 Name | Description | Example
 -----|-------------|--------
-id | unique Ids for each field in ID Schema | fullname
-description | description for the ID field | Full Name of Resident
-labelName | label used for display in the UI | 
-labelName.eng | label value in English | Full Name
-labelName.ara | label value in Arabic | الاسم الكامل
-labelName.fra | label value in French | Nom complet
+id | Unique Ids for each attribute in ID Schema | fullname
+description | Description for the ID attribute | Full Name of Resident
+labelName | Label used for displaying the ID attribute in the UI | 
+labelName.eng | Label value in English | Full Name
+labelName.ara | Label value in Arabic | الاسم الكامل
+labelName.fra | Label value in French | Nom complet
 controlType | UI element used for displaying the attribute | textbox, dropdown, date, fileupload
-inputRequired | to identify if UI input is needed or not | true or false
-validators | list of validators for the attribute |
-validators.type | type of validaton engine | regex
-validators.validator | pattern / methodName / scriptName / expression for the validation |
-validators.arguments | list of arguments needed for the validator |
-required | to decide if it is mandatory or not | true or false
+inputRequired | Used to identify if UI input is needed or not | true or false
+validators | List of validators for the attribute |
+validators.type | Type of validaton engine | regex
+validators.validator | Pattern / methodName / scriptName / expression for the validation |
+validators.arguments | List of arguments needed for the validator |
+required | Used to decide if it is mandatory or not | true or false
 
 ## ID
 The id property is the unique id provided to a fields to uniquely identify it. The fields can be alpha-numeric without any spaces between them.
-
-The ID attributes currently being used for our current UI specifications are:
-
-Attribute | Description
-----------|---------------------
-IDSchemaVersion | This attribute is used to store the version of the ID Schema
-fullName | This attribute is used to store the full name of the resident
-dateOfBirth | This attribute is used to store the date of birth of the resident
-gender | This attriute is used to store the gender of the resident
-residenceStatus | This attribute is used to store the resident status of the resident
-addressLine1 | This attribute is used to store the address of the resident
-addressLine2 | This attribute is used to store the address of the resident
-addressLine3 | This attribute is used to store the address of the resident
-region | This attribute is used to store the region of the resident
-province | This attribute is used to store the province of the resident
-city | This attribute is used to store the city of the resident
-zone | This attribute is used to store the zone of the resident
-postalCode | This attribute is used to store the postal code of the resident
-phone | This attribute is used to store the phone number of the resident
-email | This attribute is used to store the email id of the resident
-proofOfAddress | This attribute is used to store the details for Proof of Address document
-proofOfIdentity | This attribute is used to store the details for Proof of Identity document
-proofOfRelationship | This attribute is used to store the details for Proof of Relationship document, in case of a minor
-proofOfDateOfBirth | This attribute is used to store the details for Proof of Birth document
-proofOfException | This attribute is used to store the details for Proof of Exception document, if the resident has an biometric exception
-proofOfException-1 | This attribute is used to store the details for Proof of Exception document, if the resident has an biometric exception
 
 ## Description
 This is a non-mandatory property used to describe the ID attribute.

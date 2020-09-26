@@ -1,72 +1,73 @@
-This section contains the details about the UI specification that is currently being used in Registration Client. Using this UI specification the ID Schema for MOSIP is generated.
+UI specification helps us identify how the data in an ID attribute (attributes of an ID object) is going to be retrieved from the UI. The UI screens in registration client application and pre-registration application are rendered using their respective UI specification JSON. We have different UI Specifications for Registration Client & Pre-registration which is derived from the ID Schema. Here we would be discussing about the properties used in the UI specification of Registration Client.
 
-# UI Specification
-Below are the properties in registration client UI specification that define the ID attributes.
+# Registration Client UI Specification
+Here is one of the attributes in the Registration Client UI Specification.
+
+```JSON
+{
+  "id": "fullName",
+  "description": "Full Name",
+  "label": {
+    "primary": "Full Name",
+    "secondary": "الاسم الكامل"
+  },
+  "type": "simpleType",
+  "minimum": 0,
+  "maximum": 0,
+  "controlType": "textbox",
+  "fieldType": "default",
+  "format": "none",
+  "fieldCategory": "pvt",
+  "inputRequired": true,
+  "validators": [
+    {
+      "type": "regex",
+      "validator": "^(?=.{3,50}$).*",
+      "arguments": []
+    }
+  ],
+  "bioAttributes": null,
+  "requiredOn": [],
+  "subType": "name",
+  "contactType": null,
+  "group": "FullName",
+  "required": true
+}
+```
+
+# UI Specification Properties
+Below are the properties in registration client UI specification that are used to store ID attributes in an ID object.
 
 Name | Description | Example
 -----|-------------|--------
-id | unique Ids for each field in ID Schema | fullname
-description | description for the ID field | ID Schema Version
-label | label used for display in the UI |
-label.primary | label in primary language | 
-label.secondary | label in secondary language
-type | data type | number, string, documentType, biometricType, simpleType 
-minimum | minimum value if the data type is number | 0
-maximum | maximum value if the data type is number | 0
-controlType | UI element used for displaying the attribute | textbox, checkbox, dropdown, date 
-fieldType | used to identify if it is a default field or a dynamic field | default, dynamic
-format | to validate the format should be in upper or lower case | lowercase, uppercase, none
-fieldCategory | to decide in which packet the data will be placed | kyc, pvt, evidence, optional, none
-inputRequired | to identify if UI input is needed or not | true or false
-validators | list of validators for the attribute |
-validators.type | type of validation engine | regex
-validators.validator | pattern / methodName / scriptName / expression for the validation |
-validators.arguments | list of arguments needed for the validator |
-bioAttributes | list of biometric attributes | 
-requiredOn | list of rules using which system can decide to make the attribute mandatory | 
-requiredOn.engine | rule engine used | 
-requiredOn.expr | expression for the rule | 
-subType | to identify it is which type of field | location
-contactType | to identify the attributes belong to which contact type | email, phone or postal
-group | we can use it to group together the list of id attributes for update operation | 
-required | to decide if it is mandatory or not | true or false
+id | Unique ID for each attribute in ID Object | fullName
+description | Description for the ID attribute | ID Schema Version
+label | Label used for displaying the ID attribute in the UI | 
+label.primary | Label in primary language | Full Name
+label.secondary | Label in secondary language | الاسم الكامل
+type | Data type | number, string, documentType, biometricType, simpleType 
+minimum | Minimum value if the data type is number | 0
+maximum | Maximum value if the data type is number | 0
+controlType | UI element used for displaying the ID attribute | textbox, checkbox, dropdown, date 
+fieldType | Used to identify if it is a default field or a dynamic field | default, dynamic
+format | To validate the format should be in upper or lower case | lowercase, uppercase, none
+fieldCategory | Used to decide in which sub-packet the data will be placed | kyc, pvt, evidence, optional, none
+inputRequired | Used to identify if UI input is needed or not | true or false
+validators | List of validators for the ID attribute |
+validators.type | Type of validation engine | regex
+validators.validator | Pattern / methodName / scriptName / expression for the validation |
+validators.arguments | List of arguments needed for the validator |
+bioAttributes | List of biometric attributes | 
+requiredOn | List of rules using which system can decide to make the attribute mandatory | 
+requiredOn.engine | Rule engine used | 
+requiredOn.expr | Expression for the rule | 
+subType | Used to identify it is which type of field | location
+contactType | Used to identify if the ID attributes belong to one of the contact types | email, phone or postal
+group | Used to group together the list of id attributes for update operation | 
+required | Used to decide if the ID attribute is mandatory or not | true or false
 
 ## ID
 The id property is the unique id provided to a fields to uniquely identify it. The fields can be alpha-numeric without any spaces between them.
-
-The ID attributes currently being used for our current UI specifications are:
-
-Attribute | Description
-----------|---------------------
-IDSchemaVersion | This attribute is used to store the version of the ID Schema
-UIN | This attribute is used to store the UIN of the resident in case of Update Scenario
-fullName | This attribute is used to store the full name of the resident
-dateOfBirth | This attribute is used to store the date of birth of the resident
-gender | This attribute is used to store the gender of the resident
-addressLine1 | This attribute is used to store the address of the resident
-addressLine2 | This attribute is used to store the address of the resident
-addressLine3 | This attribute is used to store the address of the resident
-residenceStatus | This attribute is used to store the resident status of the resident
-referenceIdentityNumber | This attribute is used to store the reference ID of the resident
-region | This attribute is used to store the region of the resident
-province | This attribute is used to store the province of the resident
-city | This attribute is used to store the city of the resident
-zone | This attribute is used to store the zone of the resident
-postalCode | This attribute is used to store the postal code of the resident
-phone | This attribute is used to store the phone number of the resident
-email | This attribute is used to store the email id of the resident
-parentOrGuardianName | This attribute is used to store the guardian's name, if the resident is a minor
-parentOrGuardianRID | This attribute is used to store the RID of the guardian, if the resident is a minor
-parentOrGuardianUIN | This attribute is used to store the UIN of the guardian, if the resident is a minor
-proofOfAddress | This attribute is used to store the details for Proof of Address document
-proofOfIdentity | This attribute is used to store the details for Proof of Identity document
-proofOfRelationship | This attribute is used to store the details for Proof of Relationship document, in case of a minor
-proofOfDateOfBirth | This attribute is used to store the details for Proof of Birth document
-proofOfException | This attribute is used to store the details for Proof of Exception document, if the resident has an biometric exception
-proofOfException-1 | This attribute is used to store the details for Proof of Exception document, if the resident has an biometric exception
-individualBiometrics | This attribute is used to store the details for file containing the resident's biometrics 
-individualAuthBiometrics | This attribute is used to store the details for file containing the resident's biometrics for authentication during demographic update scenario
-parentOrGuardianBiometrics | This attribute is used to store the details for file containing the guardian's biometrics for authentication
 
 ## Description
 This is a non-mandatory property used to describe the ID attribute.
@@ -160,7 +161,13 @@ This property defines what kind of UI component to be used to capture data in UI
 This property identifies if the ID attribute is country specific (specified as dynamic) or is already defined in the platform (specified as default).
 
 ## Format
-This property is used to add a simple validation in the UI level. Currently, the allowed values here is "lowercased" or "uppercased" to validate if the data entered by the user is in lower case or upper case respectively. The adopter can choose to add more values for different types of validations.
+This property is used to add a simple validation in the UI level. 
+
+Currently, the allowed values here are 
+* lowercased - To validate if the data entered by the user is in lower case
+* uppercased - To validate if the data entered by the user is in upper case
+
+MOSIP adopter can choose to add more values for different types of validations.
 
 ## Field Category
 This property defines where the ID attributes will be placed in packet structure. Currently, the new packet structure has three parts; private, evidence and optional. For more details on packet structure please go through our documentation on [Registration Packet](Registration-Packet.md).
@@ -399,7 +406,7 @@ This is a mandatory property which is needed to identify if the ID attribute is 
     "validators": [
       {
         "type": "regex",
-        "validator": "^(?=.{0,50}$).*",
+        "validator": "^(?=.{3,50}$).*",
         "arguments": []
       }
     ],
@@ -437,7 +444,7 @@ This is a mandatory property which is needed to identify if the ID attribute is 
     "subType": "addressLine2",
     "contactType": "Postal",
     "group": "Address",
-    "required": true
+    "required": false
   },
   {
     "id": "addressLine3",
@@ -466,7 +473,7 @@ This is a mandatory property which is needed to identify if the ID attribute is 
     "subType": "addressLine3",
     "contactType": "Postal",
     "group": "Address",
-    "required": true
+    "required": false
   },
   {
     "id": "residenceStatus",
@@ -481,7 +488,7 @@ This is a mandatory property which is needed to identify if the ID attribute is 
     "controlType": "dropdown",
     "fieldType": "default",
     "format": "none",
-    "fieldCategory": "kyc",
+    "fieldCategory": "pvt",
     "inputRequired": true,
     "validators": [],
     "bioAttributes": null,
@@ -535,13 +542,7 @@ This is a mandatory property which is needed to identify if the ID attribute is 
     "format": "none",
     "fieldCategory": "pvt",
     "inputRequired": true,
-    "validators": [
-      {
-        "type": "regex",
-        "validator": "^(?=.{0,50}$).*",
-        "arguments": []
-      }
-    ],
+    "validators": [],
     "bioAttributes": null,
     "requiredOn": [],
     "subType": "Region",
@@ -564,13 +565,7 @@ This is a mandatory property which is needed to identify if the ID attribute is 
     "format": "none",
     "fieldCategory": "pvt",
     "inputRequired": true,
-    "validators": [
-      {
-        "type": "regex",
-        "validator": "^(?=.{0,50}$).*",
-        "arguments": []
-      }
-    ],
+    "validators": [],
     "bioAttributes": null,
     "requiredOn": [],
     "subType": "Province",
@@ -593,13 +588,7 @@ This is a mandatory property which is needed to identify if the ID attribute is 
     "format": "none",
     "fieldCategory": "pvt",
     "inputRequired": true,
-    "validators": [
-      {
-        "type": "regex",
-        "validator": "^(?=.{0,50}$).*",
-        "arguments": []
-      }
-    ],
+    "validators": [],
     "bioAttributes": null,
     "requiredOn": [],
     "subType": "City",
@@ -645,13 +634,7 @@ This is a mandatory property which is needed to identify if the ID attribute is 
     "format": "none",
     "fieldCategory": "pvt",
     "inputRequired": true,
-    "validators": [
-      {
-        "type": "regex",
-        "validator": "^[(?i)A-Z0-9]{5}$|^NA$",
-        "arguments": []
-      }
-    ],
+    "validators": [],
     "bioAttributes": null,
     "requiredOn": [],
     "subType": "Postal Code",
@@ -1087,14 +1070,16 @@ This is a mandatory property which is needed to identify if the ID attribute is 
   }
 ]
 ```
+The above attributes which are available in the current MOSIP platform, adopters can choose to add new attributes or remove attributes based on their requirement.
 
-# Steps to create your own ID schema and UI specification
-* Along with the above attributes which are available in the platform, the adopters can choose to add new attributes or remove attributes their requirement
-* Some of the attributes might need pre-defined master data (example: Blood Group)
+# Steps to create your own UI specification
+1. Create the basic ID Object definition & ID Schema as per your requirement.
+2. If any of your attributes needs pre-defined master data (example: Blood Group)
 	* The adopters can use our [Dynamic Fields API](Dynamic-Fields-APIs.md) to create dynamic master data
 	* Then the adopter can add this field in the UI specification and mark the field type as dynamic
-* Once all the attributes are added, the adopter can choose to create the ID Schema using the UI specification defined for registration client using the [ID Schema APIs](ID-Schema-APIs.md).
-* Once the UI Specification is created it needs to be published.
-* Then the [UI specification for Pre-registration](UI-Specification-for-Pre-Registration.md) needs to be created which is nearly similar to UI specification for Registration Client and should be added to the properties file of pre-registration (file name: pre-registration-demographic.json).
-* Once the file is placed the property "mosip.idschema.version" in pre-registration should be updated to the latest ID schema version.
-* All the services needs to be re-started to use the new UI.
+3. Once all the attributes are added, the adopter can create the UI Specification for registration client  using the [ID Schema APIs](ID-Schema-APIs.md).
+4. Once the UI Specification is created it needs to be published. Once published, the ID schema version is updated & an ID Schema is generated from the registration client UI specification for verification.
+5. The adopters now can verify the structure of the ID schema derived against the one that they had defined earlier & make modifications as required.
+6. Then the [UI specification for Pre-registration](UI-Specification-for-Pre-Registration.md) needs to be created and should be updated in the file "pre-registration-demographic.json".
+7. Once the file is placed the property "mosip.idschema.version" in pre-registration properties file should be updated to the latest ID schema version.
+8. All the services needs to be re-started to use the new UI.

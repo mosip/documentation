@@ -1,13 +1,29 @@
-ID definition is the key to use MOSIP. ID definition describes the attributes a country or entity will capture from an Individual. Since, MOSIP is a generic Identity platform the attributes of an ID cannot be predefined by MOSIP. One country may capture 5 attributes and another 10 attributes. So, to accommodate this flexibility MOSIP provides a feature where a country defines an ID object definition schema. This will be the first step in using MOSIP. Once an ID object schema is defined, all applications built on top of MOSIP platform to capture data MUST conform to the ID object schema.
+ID Object describes attributes that a country or entity will capture from an Individual. Since MOSIP is a generic identity platform the attributes of an ID cannot be predefined by MOSIP. One country may capture, say, 5 attributes and another 10. So to accommodate this flexibility MOSIP provides a feature to define ID Object. This will be the first step in using MOSIP. Once an ID Object is defined all applications built on top of MOSIP platform must conform to the same.
 
-* As a rule of thumb, only attributes related to an individual (demographic and biometric or documents), his/her parent/guardian attributes (demographic and biometric) should be captured in the ID object
-* The above data captured can also be categorized as private, evidence and optional using the property field category; so that the data is stored in different sub-packets (i.e. private, evidence and optional)
-* All other data captured in the field like operator/supervisor data should not be part of the ID object
-* Schema can use predefined JSON data types to define attributes
-* Schema can also create User Defined Types (UDTs) to specify the format of data to be captured. For example, biometrics data should always be in CBEFF ISO 19795 - 1 format. This helps in specifying the format of the data that is captured
-* MOSIP will provide in-built validators for certain data types like CBEFF which can be used for data validation
+# ID Object Definition
 
-Below is a sample ID object definition schema and a sample of a JSON object based on the schema:
+In order to define the ID object, MOSIP adopters need to analyze the attributes that they need in their ID object. We have provided a [sample excel](https://github.com/mosip/documentation/tree/master/docs/_sources/id_schema/Sample_ID_Object_Definition.xlsx) which might be helpful for adopter to analyze their ID attributes. The items that the adopter needs to analyze as part of tis exercise are:
+
+* ID attributes that would be collected to identify a resident uniquely. Example: Attributes such as, Name, Gender, DateOfBirth, Address, Biometrics etc.
+* Additional evidence attributes that would be collected as evidence. Example: Attributes such as proof documents (Identity, Address, Date of Birth, Relationship, etc) or Introducer.
+* Optional attributes that would be collected for processing purpose but might need to discarded later.
+* Validations for the above attributes. Example: Basic reg-ex validations for text fields, flow validations for capturing evidence data.
+* Various work flows for various types of applicants (say, a minor or a resident without any evidence, etc.)
+
+Once an adopter has proper clarity on the above topics, it is very easy for them to construct an ID schema. 
+
+# ID Schema
+
+ID schema is a JSON schema which would be used for defining the structure, content, and (to some extent) semantics of an ID object. It lets us specify metadata (data about data) about what an ID object’s attributes mean and what values are valid for those attributes.
+
+We use the ID schema JSON to validate the ID object when, 
+* ID object is created in Pre-registration
+* ID object is created in Registration Client
+* Packet is opened in Registration Processor
+* ID data is stored in ID Repository
+
+Below is a sample ID schema JSON.
+
 ```JSON
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
@@ -428,7 +444,10 @@ Below is a sample ID object definition schema and a sample of a JSON object base
 }
 ```
 
-Below is a sample JSON for Private packet as per the schema defined above: 
+# ID JSON
+ID JSON is an instance of the ID Schema (derived from ID Schema). It contains the basic details of an individual so that we can uniquely identify them in MOSIP.
+
+Below is a sample ID JSON for private packet as per the schema defined above: 
 ```JSON
 {
   "identity": {
@@ -557,17 +576,14 @@ Below is a sample JSON for Private packet as per the schema defined above:
 }
 ```
 
-All operations related to ID will have a place holder to receive the ID Object as per the schema, validate it as per the schema and store it AS IS. For example, when an Individual creates a Pre-Registration, the API for Pre-Registration will look as below:
-```
-//CREATE Pre-Registration
-request body
-{
-	"id" : "mosip.pre-registration.create",
-	"version" : "1.0",	
-	"request" : 
-	{
-		//JSON request as per the id object schema defined by the country				
-	}
-}
-```
-Also, please refer to [ID Repository API](ID-Repository-APIs.md) on how an ID Object is managed in MOSIP.
+# UI Specification
+
+UI specification helps us identify how the data in an ID attribute (attributes of an ID object) is going to be retrieved from the UI. The UI screens in registration client application and pre-registration application are rendered using their respective UI specification JSON. We have different UI Specifications for Registration Client & Pre-registration which is derived from the ID Schema.
+
+For details about the UI specification of registration client & pre-registration please visit the respective pages,
+* [UI Specification for Registration Client](UI-Specification-for-Registration-Client.md)
+* [UI Specification for Pre-registration](UI-Specification-for-Pre-Registration.md)
+
+# Relationship between ID Schema, ID Object & UI Specification
+
+![](_images/id_schema/id_schema_concept.png)
