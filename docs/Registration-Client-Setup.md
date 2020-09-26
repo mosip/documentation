@@ -1,6 +1,5 @@
 This document contains the 'Registration Client' application initial setup, update and configuration process.       
-
-Registration Client application is a desktop based application, that can be used to captures the demographic and biometric details of a resident along with supporting information (like. proof documents & information about parent/guardian/introducer) and packages the information in a secure way using RSA based algorithm. The information packet can be sent to the server in an online or offline mode for processing.  
+Registration Client application is a desktop based application, that can be used to captures the demographic and biometric details of a resident along with supporting information (like proof documents & information about parent/guardian/introducer) and packages the information in a secure way using RSA based algorithm. The information packet can be sent to the server in an online or offline mode for processing.  
 
 The registration client application leverages the TPM capabilities and secure the data and mark the senders identity in the request before sending to external system. The MOSIP server would validate the request and make sure that the request is received from the right source. Every individual machine's TPM public key should be registered at MOSIP server to accept and process the data send by them.   
 
@@ -16,7 +15,7 @@ JDK 8u181 [Oracle] or later version to build the application.
 
 	* registration-client - it contains only UI related code.  
 	* registration-libs - it contains the code to generate the initial run.bat.   
-	* registration-MDM-service - Mosip Device Manager service to integrate with BIO device and render the required data in a standard format and that will be consumed by the 'registration-services' module.   
+	* registration-MDM-service - MOSIP Device Manager service to integrate with BIO device and render the required data in a standard format and that will be consumed by the 'registration-services' module.   
 	* registration-services - it contains the Java API, which would be called from UI module to render the services to the User and capture the detail from User and store it in DB or send to external systems through services.    
 
 **Following files to be modified before building the application:**    
@@ -40,25 +39,24 @@ JDK 8u181 [Oracle] or later version to build the application.
 
 ## Application prerequisites
    
-Before running the 'Registration client' application, following prerequisites to be completed:
+Before running the 'Registration Client' application, following prerequisites to be completed:
 
 * Before building the 'registration-services' module, all the external [dependent services](#dependent-services) URLs should be configured in the **'spring.properties'** and **'mosip-application.properties'** files.     
 * [Property file](#property-file) - **[spring.properties]** should be updated with right environment [env] and other detail.     
-* All **Master data** should be loaded at MOSIP kernel database.  
-* User, machine, center mapping, and all other required table and data setup should exist in MOSIP kernel database along with the profile and desired roles configuration in LDAP server.[This is required until the Admin module is delivered. Post-delivery, all the configuration can be done through the Admin module.]   
+* All **Master data** should be loaded at MOSIP Master database.  
+* User, machine, center mapping, and all other required table and data setup should exist in MOSIP Master database along with the profile and desired roles configuration in IAM server.[This is required until the Admin module is delivered. Post-delivery, all the configuration can be done through the Admin module.]   
 * User's machine should have online connectivity to access the Secure JFrog artifactory repository[Https --> Hostname], where the application binaries are available.   
 * If TPM enabled, a logged-in user to windows machine should have permission to get the public key from TPM device.  
 * The initial DB embedded with the setup process should contain all the required tables along with the data for few tables.    
 * Through the sync process, the data would be updated into the local database from the server.  
 * All the required [dependent services](#dependent-services) should be installed, up and running before running the client application.    
-       
-# Anti Virus - ClamAV Setup and Configuration in local machine 
 
+# Anti Virus - ClamAV Setup and Configuration in local machine 
 Installation of Open Source Anti Virus Software [ClamAV]:   
 * Download the ClamAV (Version: 0.101.2) Anti Virus Software - [link](http://www.clamav.net/downloads)  
 * Install the downloaded .exe file.  
    	
-ClamAV Config Setup:
+**ClamAV Config Setup:**
 * Rename the **clamd.conf.sample** to **clamd.conf** from the installed directory of ClamAV.   
     Ex: C:\Program Files\ClamAV\conf_examples\clamd.conf.sample file   
     save as  C:\Program Files\ClamAV\conf_examples\clamd.conf   
@@ -125,7 +123,6 @@ mosip.rollback.path - Make sure that the rollback path is provided in this varia
 
 ## Database update
 The database update can be rolled out through the binary update process. If any changes in the script then the respective script would be attached inside 'registration-service/resource/sql/version folder [like: 0.12.8]' and deliver the jar with the newer version. During the update process, the jar would be downloaded and script inside the jar would be executed.  It would also contains the 'rollback' {registration-service/resource/sql/version folder_rollback [like: 0.12.8_rollback]} script if update process to be rollbacked due to any technical error.  
-
 
 # Configuration
 The application provided with the facility of multiple configurations for a different set of parameters. Each attribute level configuration changes should be performed at 'Config' server and same should be sync to the local machine through kernel services.  Here few of the configurations are listed out that provide the facility to enable and disable the biometric. 

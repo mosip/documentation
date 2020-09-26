@@ -1073,7 +1073,6 @@ This is a mandatory property which is needed to identify if the ID attribute is 
 The above attributes which are available in the current MOSIP platform, adopters can choose to add new attributes or remove attributes based on their requirement.
 
 # Steps to create your own UI specification
-
 1. Create the basic ID Object definition & ID Schema as per your requirement.
 2. If any of your attributes needs pre-defined master data (example: Blood Group)
 	* The adopters can use our [Dynamic Fields API](Dynamic-Fields-APIs.md) to create dynamic master data
