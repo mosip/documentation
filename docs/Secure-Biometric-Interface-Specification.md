@@ -1,5 +1,9 @@
 This specification document is to establish the technical and compliance standards/protocols that are necessary for a biometric device to be used in MOSIP solutions.
 
+API specification version:  **1.0**
+
+Published Date: September 28, 2020
+
 ## Revision Note
 Publish Date | Revision
 -------------|--------
@@ -124,7 +128,7 @@ The validity for the chip certificate can not exceed 20 years from the date of m
 ### Device
 Mosip devices are most often used to collect biometrics. The devices are expected to follow the specification for all level of compliance and its usage. The mosip devices fall under the category of Trust Level 3 (TL3) as defined in MOSIP architecture. At TL3 device is expected to be whitelisted with a fully capable PKI and secure storage of keys at the hardware.
 
-* SBI 1.0 - A device can obtain SBI 1.0 certification when it uses software level cryptographic library with no secure boot or FTM.  These devices will follow different device identity and the same would be mentioned as part of exception flows.
+* SBI 1.0 - A device can obtain SBI 1.0 certification when it uses software level cryptographic library with no secure boot or FTM. These devices will follow different device identity and the same would be mentioned as part of exception flows.
 * SBI 2.0 - A device can obtain SBI 2.0 certification when its built in secure facility with one of the certified FTM.
 
 #### Device Identity
@@ -303,6 +307,7 @@ In Android, the CallbackId would be set to the appId. So, the caller will create
 
 #### IOS
 All device on an IOS device would respond to the URL schema as follows:
+
 ```
 MOSIPDISC://<call-back-app-url>?ext=<caller app name>&type=<type as defined in mosip device request>
 ```
@@ -456,7 +461,12 @@ The capture request would be used to capture a biometric from MOSIP compliant de
     }
   ],
   customOpts: {
-    //Max of 50 key value pair. This is so that vendor specific parameters can be sent if necessary. The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications. Vendors are free to include additional parameters and fine-tuning parameters. None of these values should go undocumented by the vendor. No sensitive data should be available in the customOpts.
+	//max of 50 key value pair.
+	//This is so that vendor specific parameters can be sent if necessary.
+	//The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications.
+	//Vendors are free to include additional parameters and fine-tuning parameters.
+	//None of these values should go undocumented by the vendor.
+	//No sensitive data should be available in the customOpts.
   }
 }
 ```
@@ -570,8 +580,9 @@ error.errorInfo | Description of the error that can be displayed to end user. It
 The entire data object is sent as a JWT format. So, the data object will look like:
 ```
 "data" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)
-payload - is defined as the entire byte array of data block.
 ```
+The payload is defined as the entire byte array of data block.
+
 
 #### Windows/Linux
 The applications that requires to capture biometric data from a MOSIP devices could do so by sending the HTTP request to the supported port range.
@@ -602,6 +613,7 @@ All device on an android device should listen to the following intent appid.cap
 
 #### IOS
 All device on an IOS device would respond to the URL schema as follows.
+
 ```
 APPIDCAPTURE://<call-back-app-url>?ext=<caller app name>&type=<type as defined in mosip device request>
 ```
@@ -630,7 +642,7 @@ deviceSubId | Allowed values are 1, 2 or 3. The device sub id could be used to e
 timeout | Max time after which the stream should close. This is an optional paramter and by default the value will be 5 minutes. All timeouts are in milliseconds.
 
 #### Device Stream Response
-Live Video stream with quality of 3 frames per second or more using [M-JPEG](https://en.wikipedia.org/wiki/Motion_JPEG).
+Live video stream with quality of 3 frames per second or more using [M-JPEG](https://en.wikipedia.org/wiki/Motion_JPEG).
 
 {% hint style="info" %}
 Preview should have the quality markings and segment marking. The preview would also be used to display any error message to the user screen. All error messages should be localized.
@@ -694,7 +706,12 @@ The API is used by the devices that are compatible for the registration module. 
     }
   ],
   customOpts: {
-    //max of 50 key value pair. This is so that vendor specific parameters can be sent if necessary. The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications. Vendors are free to include additional parameters and fine-tuning parameters. None of these values should go undocumented by the vendor. No sensitive data should be available in the customOpts.
+    //max of 50 key value pair.
+	//This is so that vendor specific parameters can be sent if necessary.
+	//The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications.
+	//Vendors are free to include additional parameters and fine-tuning parameters.
+	//None of these values should go undocumented by the vendor.
+	//No sensitive data should be available in the customOpts.
   }
 }
 ```
@@ -780,7 +797,7 @@ data.digitalId | The digital id as per the digital id definition in JWT format. 
 data.bioSubType | <ul><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"]</li><li>For Iris: ["Left", "Right", "UNKNOWN"]</li><li>For Face: No bioSubType</li></ul>
 data.deviceServiceVersion | SBI version
 data.env | The target environment. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
-data.purpose | The purpose of the device in the MOSIP ecosystem.</li><li>Allowed values are "Auth" or "Registration".
+data.purpose | The purpose of the device in the MOSIP ecosystem. Allowed values are "Auth" or "Registration".
 data.bioValue | Base64-URL-encoded biometrics (in ISO format)
 data.transactionId | Unique transaction id sent in request
 data.timestamp | Time as per the biometric device. Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
@@ -847,7 +864,7 @@ This API is exposed by the MOSIP server to the device providers.
     }
   },
   "requesttime": "Current timestamp in ISO format from management server",
-  "version": "Registration server api version as defined above"
+  "version": "Registration server API version as defined above"
 }
 ```
 
@@ -889,7 +906,7 @@ After successful registration the management server should issue a certificate a
     "digitalId": "Digital id of the device a sent by the request",
     "deviceCode": "UUID RFC4122 Version 4 for the device issued by the mosip server",
     "timestamp": "Timestamp in ISO format",
-    "env": "prod/development/stage"
+    "env": "Production/Developer/Staging/Pre-Production"
   },
   "error": [
     {
@@ -1091,10 +1108,10 @@ Secure provisioning is applicable to both the FTM and the Device providers.
 ### Compliance Level
 API     | Compatible
 --------|-----------
-Device Discovery | SBI 1.0/SBI 2.0
-Device Info | SBI 1.0/SBI 2.0
+Device Discovery | SBI 1.0 / SBI 2.0
+Device Info | SBI 1.0 / SBI 2.0
 Capture | SBI 2.0
-Registration Capture | SBI 1.0/SBI 2.0
+Registration Capture | SBI 1.0 / SBI 2.0
 
 ---
 
