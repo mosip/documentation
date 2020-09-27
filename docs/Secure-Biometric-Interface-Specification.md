@@ -180,7 +180,7 @@ Payload is the Digital ID JSON object.
 For a SBI 1.0 unregistered device the digital id will be unsigned. In all other scenarios, except for a discovery call, the digital ID will be signed either by the FTM key (SBI 2.0) or the device key (SBI 1.0).
 {% endhint %}
 
-##### Accepted Values for Digital ID
+##### Allowed Values
 Parameters | Description
 -----------|-------------
 serialNo | This represents the serial number of the device. This value should be same as printed on the device (Refer [Physical ID](#physical-id)).
@@ -218,7 +218,7 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 }
 ```
 
-#### Accepted Values
+#### Allowed Values
 Parameters | Description
 -----------|-------------
 type | This represents the type of device. Allowed values here are "Biometric Device", "Finger", "Face" or "Iris". "Biometric Device" - is a special type and used in case if you are looking for any biometric device.
@@ -325,7 +325,7 @@ The device information API would be used to identify the MOSIP compliant devices
 #### Device Info Request
 NA
 
-#### Accepted Values
+#### Allowed Values
 NA
 
 #### Device Info Response
@@ -370,7 +370,7 @@ So the API would respond in the following format.
 ]
 ```
 
-#### Allowed values
+#### Allowed Values
 Parameters | Description
 -----------|-------------
 deviceInfo | The deviceInfo object is sent as JSON Web Token (JWT). For device which is not registered, the deviceInfo will be unsigned. For device which is registered, the deviceInfo will be signed using the device key.
@@ -475,7 +475,7 @@ The capture request would be used to capture a biometric from MOSIP compliant de
 Count value should be driven by the count of the bioSubType for Iris and Finger. For Face, there will be no bioSubType but the count should be "1".
 {% endhint %}
 
-#### Accepted Values
+#### Allowed Values
 Parameters | Description
 -----------|-------------
 env | This represents the target environment. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
@@ -552,7 +552,7 @@ customOpts | In case, the device vendor wants to send additional parameters they
 }
 ```
 
-#### Accepted Values
+#### Allowed Values
 Parameters | Description
 -----------|------------- 
 specVersion | Version of the SBI specification using which the response was generated.
@@ -634,7 +634,7 @@ Used only for the registration module compatible devices. This API is visible on
 }
 ```
 
-#### Allowed Values for device Stream Request
+#### Allowed Values
 Parameters | Description
 -----------|--------------
 deviceId | Internal Id to identify the actual biometric device within the device service.
@@ -716,7 +716,7 @@ The API is used by the devices that are compatible for the registration module. 
 }
 ```
 
-#### Accepted Values
+#### Allowed Values
 Parameters | Description
 -----------|-------------
 env | The target environment. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
@@ -787,7 +787,7 @@ customOpts | In case, the device vendor wants to send additional parameters they
 }
 ```
 
-#### Allowed Values for Registration Capture Response
+#### Allowed Values
 Parameters | Description
 -----------|-------------
 specVersion | Version of the SBI specification using which the response was generated.
@@ -868,7 +868,7 @@ This API is exposed by the MOSIP server to the device providers.
 }
 ```
 
-#### Accepted Values
+#### Allowed Values
 Parameters | Description
 -----------|-------------
 deviceData | The device data object is sent as JSON Web Token (JWT). The device data block will be signed using the device provider certificate.
@@ -922,7 +922,7 @@ The entire response is sent as a JWT format. So the final response will look lik
 "response" : base64urlencode(header).base64urlencode(payload).base64urlencode(signature)
 ```
 
-### Accepted Values in Device Registration Response
+### Accepted Values
 Parameters | Description
 -----------|-------------
 response | The entire response block will be sent in JWT format. This will be signed by MOSIP using their public signature certificate.
@@ -968,6 +968,13 @@ The device data in request is sent as a JWT format. So the final request will lo
 }
 ```
 
+##### Allowed Values
+Parameters | Description
+-----------|-------------
+request.device | The device object is sent as JSON Web Token (JWT). The device block will be signed using the device provider certificate.
+request.device.deviceCode | This is the device code issued by MOSIP server during device registration, which needs to be de-registered.
+request.device.env | The target environment where the device is registered. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
+
 #### Device De-Registration Response
 ```
 {
@@ -994,6 +1001,15 @@ The entire response is sent as a JWT format. So the final response will look lik
 ```
 "response" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
 ```
+
+##### Allowed Values
+Parameters | Description
+-----------|-------------
+response | The entire response block will be sent in JWT format. This will be signed by MOSIP using their public signature certificate.
+response.status | The status of de-registration request. The status will be "Success" for successful de-registration.
+response.deviceCOde | This is the deviceCode for the device that got de-registered.
+response.env | The target environment where the device is de-registered. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
+response.timestamp | The time when the device got de-registered. Timestamp is in ISO format.
 
 ---
 
@@ -1027,11 +1043,12 @@ The request is sent as a JWT format. So the final request will look like:
 }
 ```
 
-#### Accepted Values
-```
-env - Allowed values are Staging| Developer| Pre-Production | Production
-domainUri - unique uri per auth providers. This can be used to federate across multiple providers or countries or unions.
-```
+##### Allowed Values
+Parameters | Description
+-----------|-------------
+request.data | The data object is sent as JSON Web Token (JWT).
+request.data.env | The target environment for which you want to fetch the certificate. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
+request.data.domainUri | unique URI per auth providers. This can be used to federate across multiple providers or countries or unions.
 
 #### Encryption Certificate Response
 ```
