@@ -3,8 +3,7 @@ This specification document is to establish the technical and compliance standar
 ## Revision Note
 Publish Date | Revision
 -------------|--------
-13-Jun-2020 | This is the first formal publication of this document as a version-ed specification. Earlier draft are superseded by this document.
-10-Aug-2020 | Signature for API to retrieve encryption certificate has been changed from GET to POST and Device Stream now supports an optional parameter - timeout
+28-Sep-2020 | This is the first formal publication of this document as a version-ed specification. Earlier draft are superseded by this document.
 
 ## Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
@@ -39,78 +38,7 @@ The MOSIP compliant device is expected to perform the following:
 * Should have the ability to protect secret keys
 * Should have no mechanism to inject the biometric
 
-### Base Specifications for Devices
-
-#### Fingerprint Capture
-Refer ISO 19794-4:2011
-
-Factor | Registration Devices | Authentication Devices
--------|----------------------|-----------------------
-Minimum Resolution | > 500 native dpi. Bare minimum recommended. Higher densities are preferred | > 500 native dpi. Bare minimum recommended. Higher densities are preferred
-FRR\*\* | < 2% FRR in respective country | < 2% FRR in respective country
-FAR\*\* | 0.01% | 0.01%
-DPI     | 500\* | 500
-Image Specification | ISO 19794-4 B.1 AFIS Normative | ISO 19794-4 B.2 Personal Verification
-ESD | >= 8kv | >= 8kv
-EMC compliance | FCC class A or equivalent | FCC class A or equivalent
-Operating Temperature\*\* |     0 - 50 C | -30 -to 50 C
-Liveness detection\*\*\* | As per IEEE 2790 | As per IEEE 2790
-Preview | > 3 FPS JPEG lossless frames with NFIQ 2 score superimposed | None
-Image Format | JPEG 2000 lossless | JPEG 2000 lossless, WSQ (Compression upto 10:1)\*\*
-Quality Score | NFIQ 2 | NFIQ 1
-FTM | SBI 1.0 - Use host based security, SBI 2.0 - FTM supported security | SBI 2.0 - FTM supported security, SBI 2.0 – PT - with tamper protection.
-
-{% hint style="info" %}
-\*  Sufficiency to be validated for registration <br>
-\*\*  MOSIP adopters can change this if needed <br>
-\*\*\*  MOSIP adopters to decide on the availability of this feature
-{% endhint %}
-
-#### IRIS Capture
-Refer ISO 19796-6:2011 Part 6 Specifications.
-
-Factor | Registration Devices | Authentication Devices
--------|----------------------|-----------------------
-Rotation angle | Before compression, the Iris image will have to be preprocessed to calculate rotation angle. Refer section 6.3.1 of ISO 19794-6 for rotation angle calculation for rectilinear images.|
-Rotation Uncertainty | Refer ISO 19794-6 |
-Minimum Diameter | As per ISO 19794-6:2011 medium and higher quality images are only acceptable,. Hence for this Standard, minimum acceptable Iris diameter will be 150 pixels | Same
-Margin | Same as ISO |
-Color | The iris images shall be captured and stored in gray scale with pixel depth of 8 bits/pixel |
-Illumination | The eye should be illuminated using infrared or any other source that could produce high quality gray scale image |
-Image Format | JPEG 2000 lossless | JPEG 2000 lossless
-Aspect Ratio | 1:1 |
-Image Quality | ISO/IEC 29794-6 | ISO/IEC 29794-6
-Operation Temperature\* | -30 C to +50 C | -30 C to +50 C
-EMC compliance | FCC Class A or equivalent | FCC Class A or equivalent
-Preview | > 3 FPS Jpeg lossless frames with quality score superimposed | Not Applicable
-Image Specification | ISO 19794-6 | ISO 19794-6
-ISO Format | K3 | K7
-FTM | SBI 1.0 - Use host based security, SBI 2.0 - FTM supported security | SBI 2.0 - FTM supported security, SBI 2.0 – PT - with tamper protection.
-
-{% hint style="info" %}
-\*  MOSIP adopters to decide and finalize
-{% endhint %}
-
-#### Face Capture
-Refer ISO 19794-5:2011
-
-Factor | Registration Devices | Authentication Devices
--------|----------------------|-----------------------
-Minimum Resolution | 1080 Pixels at 2.8 mm with 110 degree view | 1080 Pixels at 2.8 mm
-Skin Tone | All | All
-Operation Temperature\* | -30 C to +50 C | -30 C to +50 C
-EMC compliance | FCC Class A or equivalent | FCC Class A or equivalent
-Image Specification | ISO/IEC 19794-5 | ISO/IEC 19794-5
-Exception Image Specification | Full Frontal with FACE features, two palms next to the face, waist up photo. 6X4 mm     | NA
-Image quality | ICAO - Full frontal image, +/- 5 degrees rotation, 24 bit RGB, white background, 35 mm width, 45 mm height |
-Image format | JPEG 2000 lossless | JPEG 2000 lossless
-FTM | SBI 1.0 - Use host based security, SBI 2.0 - FTM supported security | SBI 2.0 - FTM supported security, SBI 2.0 – PT - with tamper protection.
-
-{% hint style="info" %}
-\* MOSIP adopters to decide and finalize
-{% endhint %}
-
-We recommend that countries look at ergonomics, accessibility, ease of usage, and common availability of devices while choosing devices for use in registration and authentication scenarios.
+For details about bometric data specifications please view the page [MOSIP Biometric Data Specification](Biometric-Data-Specification.md).
 
 ---
 
@@ -119,8 +47,6 @@ MOSIP compliant devices provide a trust environment for the devices to be used i
 
 * SBI 1.0 - The trust is provided at the software level. No hardware related trust exist. This type of compliance is used in controlled environments.
 * SBI 2.0 - The trust is provided by a secure chip with secure execution environment.
-* SBI 2.0 - PT - The trust is provided by a secure chip with secure execution environment and complete tamper protection and responsive across the entire device.
-
 
 ### Foundational Trust Module (FTM)
 The foundational trust module would be created using a secure microprocessor capable of performing all required biometric processing and secure storage of keys. The foundational device trust would satisfy the below requirements.
@@ -166,15 +92,12 @@ The supported algorithm and curves are listed [here](#cryptography)
 {% endhint %}
 
 ##### Category: FTM Chip
-
 * FIPS 140-2 L3 or above
 * PCI PTS 5 or above (Pre-certified)
 * Common Criteria (EAL4 and above)
-  * TODO:FILL IN
 
 ##### Category: Tamper
 * For SBI 2.0 level compliance the FTM should support tamper evidence.
-* For SBI 2.0 - PT level compliance the FTM should support all of SBI 2.0 and capabilities to adopt tamper responsiveness.
 
 #### Threats to Protect
 The FTM should protect against the following threats.
@@ -182,8 +105,8 @@ The FTM should protect against the following threats.
 * Hardware cloning attacks - Ability to protect against attacks that could result in a duplicate with keys.
 * Hardware Tamper attacks
     * Physical tamper - No way to physically tamper and obtain it secrets. 
-    * Voltage & frequency related attacks - Should shield against voltage leaks and should prevent against low voltage. The FTM should always be in either of the state operational normally or inoperable. The FTM should never be operable when its input voltages are not met.
-    * Temperature attacks on crypto block - Low or High the FTM is expected to operate or reach inoperable state. No state in between.
+    * Voltage & frequency related attacks - Should shield against voltage leaks and should prevent against low voltage. The FTM should always be in either of the state - "operational normally" or "inoperable". The FTM should never be operable when its input voltages are not met.
+    * Temperature attacks on crypto block - Low or high the FTM is expected to operate or reach inoperable state and no state in between.
 * Differential Power Analysis attack.
 * Probing attacks - FTM should protect its surface area against any probe related attacks.
 * Segregation of memory for execution of cryptographic operation (crypto block should be protected from buffer overflow type attacks).
@@ -203,7 +126,6 @@ Mosip devices are most often used to collect biometrics. The devices are expecte
 
 * SBI 1.0 - A device can obtain SBI 1.0 certification when it uses software level cryptographic library with no secure boot or FTM.  These devices will follow different device identity and the same would be mentioned as part of exception flows.
 * SBI 2.0 - A device can obtain SBI 2.0 certification when its built in secure facility with one of the certified FTM.
-* SBI 2.0 - PT - A device can obtain SBI 2.0 - PT certification when its build in secure facility with one of the certified FTM with tamper responsiveness. Also the device should be capable of demonstrating tamper responsiveness during its entire life time.
 
 #### Device Identity
 It is imperative that all devices that connect to MOSIP are identifiable. MOSIP believes in cryptographic Identity as its basis for trust.
@@ -257,27 +179,24 @@ For a SBI 1.0 unregistered device the digital id will be unsigned. In all other 
 ##### Accepted Values for Digital ID
 Parameters | Description
 -----------|-------------
-serialNo | <ul><li>Serial number of the device.</li><li>This value should be same as printed on the device (Refer [Physical ID](#physical-id)).</li></ul>
-make | <ul><li>Brand name.</li><li>This value should be same as printed on the device (Refer [Physical ID](#physical-id)).</li><ul>
-model | <ul><li>Model of the device.</li><li>This value should be same as printed on the device (Refer [Physical ID](#physical-id)).</li></ul>
-type | <ul><li>Currently allowed values for device type are "Finger", "Iris" or "Face".</li><li>More types can be added based on Adopter's implementation.</li></ul>
-deviceSubType | <ul><li>Device Sub type is based on the device type.</li><li>For Finger - "Slap", "Single" or "Touchless"</li><li>For Iris - "Single" or "Double"</li><li>For Face - "Full face"</li></ul>
-deviceProvider | <ul><li>Name of the device provider.</li><li>Device provider should be a legal entity in the country.</li></ul>
-dateTime | <ul><li>The time during the issuance of this identity.</li><li>This is in ISO format with timezone.</li></ul>
+serialNo | This represents the serial number of the device. This value should be same as printed on the device (Refer [Physical ID](#physical-id)).
+make | This represents the brand name of the device. This value should be same as printed on the device (Refer [Physical ID](#physical-id)).
+model | This represents the model of the device. This value should be same as printed on the device (Refer [Physical ID](#physical-id)).
+type | This represets the type of the device. Currently, the allowed values here are "Finger", "Iris" or "Face". More types can be added based on adopter's implementation.
+deviceSubType | This represnts the device Sub type is based on the device type.<br><ul><li>For Finger - "Slap", "Single" or "Touchless"</li><li>For Iris - "Single" or "Double"</li><li>For Face - "Full face"</li></ul>
+deviceProvider | This represnets the name of the device provider. The device provider should be a legal entity in the country.
+dateTime | This contains the time during the issuance of an identity. This is in ISO format with timezone.
 
 ### Keys
 List of keys used in the device and their explanation.
 
-* **Device Key**
-
+#### Device Key
 Each biometric device would contain an authorized private key after the device registration. This key is rotated frequently based on the requirement from the respective adopter of MOSIP. By default MOSIP recommends 30 days key rotation policy for the device key. The device keys are created by the device providers inside the FTM during a successful registration.  The device keys are used for signing the biometric. More details of the signing and its usage will be [here](#device-service-communication-interfaces).  This key is issued by the device provider and the certificate of the device key is issued by the device provider key which in turn is issued by the MOSIP adopter after approval of the device providers specific model.
 
-* **FTM Key**
-
+#### FTM Key
 The FTM key is the root of the identity. This key is created by the FTM provider during the manufacturing/provisioning stage. This is a permanent key and would never be rotated. This key is used to sign the Digital ID.
 
-* **MOSIP Key**
-
+#### MOSIP Key
 The MOSIP key is the public key provided by the MOSIP adopter. This key is used to encrypt the biometric biometric. Details of the encryption is listed below. We recommend to rotate this key every 1 year.
 
 ## Device Service - Communication Interfaces
@@ -295,12 +214,10 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 }
 ```
 
-#### Accepted Values for Device Discovery Request
-* type - "Biometric Device", "Finger", "Face", "Iris"
-
-{% hint style="info" %}
-"Biometric Device" - is a special type and used in case if you are looking for any biometric device.
-{% endhint %}
+#### Accepted Values
+Parameters | Description
+-----------|-------------
+type | This represents the type of device. Allowed values here are "Biometric Device", "Finger", "Face" or "Iris". "Biometric Device" - is a special type and used in case if you are looking for any biometric device.
 
 #### Device Discovery Response
 ```JSON
@@ -325,22 +242,22 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 ]
 ```
 
-#### Accepted Values for Device Discovery Response
+#### Allowed Values
 Parameters | Description
 -----------|-------------
 deviceStatus | Allowed values are "Ready", "Busy", "Not Ready" or "Not Registered".
-certification | Allowed values are "L0", "L1" or "L2" based on level of certification.
-serviceVersion | Version of the MDS specification that is supported.
+certification | Allowed values are "SBI 1.0" or "SBI 2.0" based on level of certification.
+serviceVersion | Version of the SBI specification that is supported.
 deviceId | Internal ID to identify the actual biometric device within the device service.
-deviceSubId | <ul><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
-callbackId | <ul><li>This differs as per the OS.</li><li>In case of Linux and windows operating systems it is a HTTP URL.</li><li>In the case of android, it is the intent name.</li><li>In IOS, it is the URL scheme.</li><li>The call back URL takes precedence over future request as a base URL.</li></ul>
+deviceSubId | Allowed values are 1, 2 or 3. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).
+callbackId | This differs as per the OS. In case of Linux and windows operating systems it is a HTTP URL. In the case of android, it is the intent name. In IOS, it is the URL scheme. The call back URL takes precedence over future request as a base URL.
 digitalId | Digital ID as per the Digital ID definition but it will not be signed.
 deviceCode | A unique code given by MOSIP after successful registration.
-specVersion | Array of supported MDS specification version.
+specVersion | Array of supported SBI specification version.
 purpose | Purpose of the device in the MOSIP ecosystem. Allowed values are "Auth" or "Registration".
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
-error.errorCode | Standardized error code defined in the [error code section](#error-codes).
-error.errorInfo | Description of the error that can be displayed to end user. Multi lingual support.
+error.errorCode | Standardized error code.
+error.errorInfo | Description of the error that can be displayed to end user. It should have multi-lingual support.
 
 {% hint style="info" %}
 * The response is an array that we could have a single device enumerating with multiple biometric options.
@@ -403,7 +320,7 @@ The device information API would be used to identify the MOSIP compliant devices
 #### Device Info Request
 NA
 
-#### Accepted Values for Device Info Request
+#### Accepted Values
 NA
 
 #### Device Info Response
@@ -417,7 +334,7 @@ NA
       "certification": "Certification level",
       "serviceVersion": "Device service version",
       "deviceSubId": ["Array of supported device sub Ids"],
-      "callbackId": "Baseurl to reach to the device",
+      "callbackId": "BaseURL to reach to the device",
       "digitalId": "Signed digital id as described in the digital id section of this document.",
       "deviceCode": "A unique code given by MOSIP after successful registration",
       "env": "Target environment",
@@ -448,25 +365,25 @@ So the API would respond in the following format.
 ]
 ```
 
-#### Allowed values for Device Info Response
+#### Allowed values
 Parameters | Description
 -----------|-------------
-deviceInfo | <ul><li>The deviceInfo object is sent as JSON Web Token (JWT).</li><li>For device which is not registered, the deviceInfo will be unsigned.</li><li>For device which is registered, the deviceInfo will be signed using the device key.</li></ul>
-deviceInfo.deviceStatus | <ul><li>This is the status of the device.</li><li>Allowed values are "Ready", "Busy", "Not Ready" or "Not Registered".</li></ul>
+deviceInfo | The deviceInfo object is sent as JSON Web Token (JWT). For device which is not registered, the deviceInfo will be unsigned. For device which is registered, the deviceInfo will be signed using the device key.
+deviceInfo.deviceStatus | This is the current status of the device. Allowed values are "Ready", "Busy", "Not Ready" or "Not Registered".
 deviceInfo.deviceId | Internal Id to identify the actual biometric device within the device service.
-deviceInfo.firmware | <ul><li>Exact version of the firmware.</li><li>In case of L0 this is same as serviceVersion.</li></ul>
-deviceInfo.certification | <ul><li>Allowed values are "L0", "L1" or "L2" based on the level of certification.</li></ul>
-deviceInfo.serviceVersion | Version of the MDS specification that is supported.
+deviceInfo.firmware | Exact version of the firmware. In case of SBI 1.0 this is same as serviceVersion.
+deviceInfo.certification | Allowed values are "SBI 1.0" or "SBI 2.0" based on the level of certification.
+deviceInfo.serviceVersion | Version of the SBI specification that is supported.
 deviceInfo.deviceId | Internal ID to identify the actual biometric device within the device service.
-deviceSubId | <ul><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
-deviceInfo.callbackId | <ul><li>This differs as per the OS.</li><li>In case of Linux and windows operating systems it is a HTTP URL.</li><li>In the case of android, it is the intent name.</li><li>In IOS, it is the URL scheme.</li><li>The call back URL takes precedence over future request as a base URL.</li></ul>
-deviceInfo.digitalId | <ul><li>The digital id as per the digital id definition.</li><li>For L0 devices which is not registered, the digital id will be unsigned.</li><li>For L0 devices which is registered, the digital id will be signed using the device key.</li><li>For L1 devices, the digital id will be signed using the FTM key.</li></ul>
-deviceInfo.env | <ul><li>The target enviornment.</li><li>For devices that are not registered the enviornment is "None".</li><li>For device that is registered, then send the enviornment in which it is registered.</li><li>Allowed values are "Staging", "Developer", "Pre-Production" or "Production".</li></ul>
-deviceInfo.purpose | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>For devices that are not registered the purpose is empty.</li><li>Allowed values are "Auth" or "Registration".</li></ul>
-deviceInfo.specVersion | Array of supported MDS specification version.
+deviceSubId | Allowed values are 1, 2 or 3. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).
+deviceInfo.callbackId | This differs as per the OS. In case of linux and windows operating systems it is a HTTP URL. In the case of android, it is the intent name. In IOS, it is the URL scheme. The call back URL takes precedence over future request as a base URL.
+deviceInfo.digitalId | The digital id as per the digital id definition. For SBI 1.0 devices which is not registered, the digital id will be unsigned. For SBI 1.0 devices which is registered, the digital id will be signed using the device key. For SBI 2.0 devices, the digital id will be signed using the FTM key.
+deviceInfo.env | This represents the target enviornment. For devices that are not registered the enviornment is "None". For device that is registered, then send the enviornment in which it is registered. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
+deviceInfo.purpose | The purpose of the device in the MOSIP ecosystem. For devices that are not registered the purpose is empty. Allowed values are "Auth" or "Registration".
+deviceInfo.specVersion | Array of supported SBI specification version.
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
-error.errorCode | Standardized error code defined in the [error code section](#error-codes).
-error.errorInfo | Description of the error that can be displayed to end user. Multi lingual support.
+error.errorCode | Standardized error code.
+error.errorInfo | Description of the error that can be displayed to end user. It should have multi-lingual support.
 
 {% hint style="info" %}
 * The response is an array that we could have a single device enumerating with multiple biometric options.
@@ -548,24 +465,24 @@ The capture request would be used to capture a biometric from MOSIP compliant de
 Count value should be driven by the count of the bioSubType for Iris and Finger. For Face, there will be no bioSubType but the count should be "1".
 {% endhint %}
 
-#### Allowed Values for Capture Request
+#### Accepted Values
 Parameters | Description
 -----------|-------------
-env | <ul><li>The target environment.</li><li>Allowed values are "Staging", "Developer", "Pre-Production" or "Production".</li></ul>
-purpose | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>For devices that are not registered the purpose is empty.</li><li>Allowed values are "Auth" or "Registration".</li></ul>
-specVersion | Expected version of MDS specification.
-timeout | <ul><li>Max time the app will wait for the capture.</li><li>Its expected that the API will respond back before timeout with the best frame.</li><li>All timeouts are in milliseconds.</li></ul>
-captureTime | <ul><li>Time of capture in ISO format with timezone.</li><li>The time is as per the requesting application.</li></ul>
-domainUri | <ul><li>URI of the authentication server.</li><li>This can be used to federate across multiple providers or countries or unions.</li></ul>
-transactionId | <ul><li>Unique Id of the transaction.</li><li>This is an internal Id to the application thats providing the service.</li><li>Different id should be used for every successful auth.</li><li>So even if the transaction fails after auth we expect this number to be unique.</li></ul>
+env | This represents the target environment. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
+purpose | The purpose of the device in the MOSIP ecosystem. For devices that are not registered the purpose is empty. Allowed values are "Auth" or "Registration".
+specVersion | Expected version of SBI specification.
+timeout | Max time the app will wait for the capture. Its expected that the API will respond back before timeout with the best frame. All timeouts are in milliseconds.
+captureTime | Time of capture in ISO format with timezone. The time is as per the requesting application.
+domainUri | URI of the authentication server. This can be used to federate across multiple providers or countries or unions.
+transactionId | Unique ID for the transaction. This is an internal Id to the application thats providing the service. Different id should be used for every transaction. So, even if the transaction fails after auth we expect this number to be unique.
 bio.type | Allowed values are "Finger", "Iris" or "Face".
-bio.count | <ul><li>Number of biometric data that is collected for a given type.</li><li>The device should validate and ensure that this number is in line with the type of biometric that's captured.</li></ul>
+bio.count | Number of biometric data that is collected for a given type. The device should validate and ensure that this number is in line with the type of biometric that's captured.
 bio.bioSubType | <ul><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"]</li><li>For Iris: ["Left", "Right", "UNKNOWN"]</li><li>For Face: No bioSubType</li></ul>
 bio.requestedScore | Upon reaching the quality score the biometric device is expected to auto capture the image.
 bio.deviceId | Internal Id to identify the actual biometric device within the device service.
-bio.deviceSubId | <ul><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
-bio.previousHash | <ul><li>For the first capture the previousHash is hash of empty UTF-8 string.</li><li>From the second capture the previous captures hash (as hex encoded) is used as input.</li><li>This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.</li></ul>
-customOpts | <ul><li>In case, the device vendor wants to send additional parameters they can use this to send key value pair if necessary.</li><li>The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications.</li><li>Vendors are free to include additional parameters and fine-tuning the process.</li><li>None of these values should go undocumented by the vendor.</li><li>No sensitive data should be available in the customOpts.</li></ul>
+bio.deviceSubId | Allowed values are 1, 2 or 3. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).
+bio.previousHash | For the first capture the previousHash is hash of empty UTF-8 string. From the second capture the previous captures hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.
+customOpts | In case, the device vendor wants to send additional parameters they can use this to send key value pair if necessary. The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications. Vendors are free to include additional parameters and fine-tuning the process. None of these values should go undocumented by the vendor. No sensitive data should be available in the customOpts.
 
 #### Capture Response
 ```
@@ -576,7 +493,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
       "data": { //data block in JWT format signed using device key
         "digitalId": "digital Id as described in this document signed using FTM chip key",
         "deviceCode": "A unique code given by MOSIP after successful registration",
-        "deviceServiceVersion": "MDS version",
+        "deviceServiceVersion": "SBI version",
         "bioType": "Finger",
         "bioSubType": "UNKNOWN",
         "purpose": "Auth  or Registration",
@@ -598,17 +515,17 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
     },
     {
       "specVersion" : "SBI spec version",
-      "data": { //data block in JWT format
-        "digitalId": "Digital Id as described in this document",
+      "data": { //data block in JWT format signed using device key
+        "digitalId": "Digital Id as described in this document signed using FTM chip key",
         "deviceCode": "A unique code given by MOSIP after successful registration",
-        "deviceServiceVersion": "MDS version",
+        "deviceServiceVersion": "SBI version",
         "bioType": "Finger",
         "bioSubType": "Left IndexFinger",
         "purpose": "Auth  or Registration",
-        "env": "target environment",
-        "domainUri": "uri of the auth server",
-        "bioValue": "encrypted with session key and base64urlencoded biometric data",
-        "transactionId": "unique transaction id",
+        "env": "Target environment",
+        "domainUri": "URI of the auth server",
+        "bioValue": "Encrypted with session key and base64urlencoded biometric data",
+        "transactionId": "Unique transaction id",
         "timestamp": "ISO Format date time with timezone",
         "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
@@ -625,32 +542,32 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
 }
 ```
 
-#### Accepted Values for Capture Response
+#### Accepted Values
 Parameters | Description
 -----------|------------- 
-specVersion | Version of the MDS specification using which the response was generated.
-data | <ul><li>The data object is sent as JSON Web Token (JWT).</li><li>The data block will be signed using the device key.</li></ul>
-data.digitalId | <ul><li>The digital id as per the digital id definition in JWT format.</li><li>For L0 devices, the digital id will be signed using the device key.</li><li>For L1 or L2 devices, the digital id will be signed using the FTM key.</li></ul>
+specVersion | Version of the SBI specification using which the response was generated.
+data | The data object is sent as JSON Web Token (JWT). The data block will be signed using the device key.
+data.digitalId | The digital id as per the digital id definition in JWT format. For SBI 1.0 devices, the digital id will be signed using the device key. For SBI 2.0 devices, the digital id will be signed using the FTM key.
 data.deviceCode | A unique code given by MOSIP after successful registration
-data.deviceServiceVersion | MDS version
+data.deviceServiceVersion | SBI version
 data.bioType | Allowed values are "Finger", "Iris" or "Face".
 data.bioSubType | <ul><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"]</li><li>For Iris: ["Left", "Right", "UNKNOWN"]</li><li>For Face: No bioSubType</li></ul>
-data.purpose | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>Allowed values is "Auth".</li></ul>
-data.env | <ul><li>The target environment.</li><li>Allowed values are "Staging", "Developer", "Pre-Production" or "Production".</li></ul>
-data.domainUri | <ul><li>URI of the authentication server.</li><li>This can be used to federate across multiple providers or countries or unions.</li></ul>
-data.bioValue | <ul><li>Biometric data is encrypted with random symmetric (AES GCM) key and base-64-URL encoded.</li><li>For symmetric key encryption of bioValue, (biometrics.data.timestamp XOR transactoinId) is computed and the last 16 bytes and the last 12  bytes of the results are set as the aad and the IV(salt) respectively.</li><li>Look at the Authentication document to understand more about the encryption.</li></ul>
+data.purpose | The purpose of the device in the MOSIP ecosystem. Allowed values is "Auth".
+data.env | The target environment. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
+data.domainUri | URI of the authentication server. This can be used to federate across multiple providers or countries or unions.
+data.bioValue | Biometric data is encrypted with random symmetric (AES GCM) key and base-64-URL encoded. For symmetric key encryption of bioValue, (biometrics.data.timestamp XOR transactoinId) is computed and the last 16 bytes and the last 12  bytes of the results are set as the aad and the IV(salt) respectively. Look at the Authentication document to understand more about the encryption.
 data.transactionId | Unique transaction id sent in request
-data.timestamp | <ul><li>Time as per the biometric device.</li><li>Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.</li></ul>
+data.timestamp | Time as per the biometric device. Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
 data.requestedScore | Floating point number to represent the minimum required score for the capture.
 data.qualityScore | Floating point number representing the score for the current capture.
 hash | The value of the previousHash attribute in the request object or the value of hash attribute of the previous data block (used to chain every single data block) concatenated with the hex encode sha256 hash of the current data block before encryption.
 sessionKey | The session key (used for the encrypting of the bioValue) is encrypted using the MOSIP public certificate with RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING algorithm and then base64-URL-encoded.
-thumbprint | <ul><li>SHA256 representation of thumbprint of the certificate that was used for encryption of session key.</li><li>All texts to be treated as uppercase without any spaces or hyphens.</li></ul>
+thumbprint | SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
-error.errorCode | Standardized error code defined in the [error code section](#error-codes).
-error.errorInfo | Description of the error that can be displayed to end user. Multi lingual support.
+error.errorCode | Standardized error code.
+error.errorInfo | Description of the error that can be displayed to end user. It should have multi-lingual support.
 
-The entire data object is sent as a JWT format. So the data object will look like:
+The entire data object is sent as a JWT format. So, the data object will look like:
 ```
 "data" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)
 payload - is defined as the entire byte array of data block.
@@ -709,8 +626,8 @@ Used only for the registration module compatible devices. This API is visible on
 Parameters | Description
 -----------|--------------
 deviceId | Internal Id to identify the actual biometric device within the device service.
-deviceSubId | <ul><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
-timeout | <ul><li>Max time after which the stream should close.</li><li>This is an optional paramter and by default the value will be 5 minutes.</li><li>All timeouts are in milliseconds.</li></ul>
+deviceSubId | Allowed values are 1, 2 or 3. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).
+timeout | Max time after which the stream should close. This is an optional paramter and by default the value will be 5 minutes. All timeouts are in milliseconds.
 
 #### Device Stream Response
 Live Video stream with quality of 3 frames per second or more using [M-JPEG](https://en.wikipedia.org/wiki/Motion_JPEG).
@@ -782,24 +699,24 @@ The API is used by the devices that are compatible for the registration module. 
 }
 ```
 
-#### Accepted Values for Registration Capture Request
+#### Accepted Values
 Parameters | Description
 -----------|-------------
-env | <ul><li>The target environment.</li><li>Allowed values are "Staging", "Developer", "Pre-Production" or "Production".</li></ul>
-purpose | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>For devices that are not registered the purpose is empty.</li><li>Allowed values are "Auth" or "Registration".</li></ul>
-specVersion | Expected version of MDS specification.
-timeout | <ul><li>Max time the app will wait for the capture.</li><li>Its expected that the API will respond back before timeout with the best frame.</li><li>All timeouts are in milliseconds.</li></ul>
-captureTime | <ul><li>Time of capture in ISO format with timezone.</li><li>The time is as per the requesting application.</li></ul>
-transactionId | <ul><li>Unique Id of the transaction.</li><li>This is an internal Id to the application thats providing the service.</li><li>Different id should be used for every successful auth.</li><li>So even if the transaction fails after auth we expect this number to be unique.</li></ul>
+env | The target environment. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
+purpose | The purpose of the device in the MOSIP ecosystem. For devices that are not registered the purpose is empty.</li><li>Allowed values are "Auth" or "Registration".
+specVersion | Expected version of SBI specification.
+timeout | Max time the app will wait for the capture. It is expected that the API will respond back before timeout with the best frame. All timeouts are in milliseconds.
+captureTime | Time of capture in ISO format with timezone. The time is as per the requesting application.
+transactionId | Unique ID of the transaction. This is an internal Id to the application thats providing the service. Different id should be used for every transaction. So, even if the transaction fails we expect this number to be unique.
 bio.type | Allowed values are "Finger", "Iris" or "Face".
-bio.count | <ul><li>Number of biometric data that is collected for a given type.</li><li>The device should validate and ensure that this number is in line with the type of biometric that's captured.</li></ul>
+bio.count | Number of biometric data that is collected for a given type. The device should validate and ensure that this number is in line with the type of biometric that's captured.
 bio.bioSubType | <ul><li>Array of bioSubType for respective biometric type.</li><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"]</li><li>For Iris: ["Left", "Right", "UNKNOWN"]</li><li>For Face: No bioSubType</li><li>This is an optional parameter.</li></ul>
 bio.exception | <ul><li>This is an array and all the exceptions are marked.</li><li>In case exceptions are sent for face then follow the exception photo specification above.</li><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb"]</li><li>For Iris: ["Left", "Right"]</li></ul>
 bio.requestedScore | Upon reaching the quality score the biometric device is expected to auto capture the image.
 bio.deviceId | Internal Id to identify the actual biometric device within the device service.
-bio.deviceSubId | <ul><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
-bio.previousHash | <ul><li>For the first capture the previousHash is hash of empty UTF-8 string.</li><li>From the second capture the previous captures hash (as hex encoded) is used as input.</li><li>This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.</li></ul>
-customOpts | <ul><li>In case, the device vendor wants to send additional parameters they can use this to send key value pair if necessary.</li><li>The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications.</li><li>Vendors are free to include additional parameters and fine-tuning the process.</li><li>None of these values should go undocumented by the vendor.</li><li>No sensitive data should be available in the customOpts.</li></ul>
+bio.deviceSubId | Allowed values are 1, 2 or 3. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).
+bio.previousHash | For the first capture the previousHash is hash of empty UTF-8 string. From the second capture the previous captures hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.
+customOpts | In case, the device vendor wants to send additional parameters they can use this to send key value pair if necessary. The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications. Vendors are free to include additional parameters and fine-tuning the process. None of these values should go undocumented by the vendor. No sensitive data should be available in the customOpts.
 
 #### Registration Capture Response
 ```
@@ -811,7 +728,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
         "digitalId": "Digital id of the device as per the Digital Id definition..",
         "bioType": "Biometric type",
         "deviceCode": "A unique code given by MOSIP after successful registration",
-        "deviceServiceVersion": "MDS version",
+        "deviceServiceVersion": "SBI version",
         "bioSubType": "Left IndexFinger",
         "purpose": "Auth  or Registration",
         "env": "Target environment",
@@ -833,7 +750,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
         "deviceCode": "A unique code given by MOSIP after successful registration",
         "bioType" : "Finger",
         "digitalId": "Digital id of the device as per the Digital Id definition.",
-        "deviceServiceVersion": "MDS version",
+        "deviceServiceVersion": "SBI version",
         "bioSubType": "Left MiddleFinger",
         "purpose": "Auth  or Registration",
         "env":  "Target environment",
@@ -856,23 +773,23 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
 #### Allowed Values for Registration Capture Response
 Parameters | Description
 -----------|-------------
-specVersion | Version of the MDS specification using which the response was generated.
-data | <ul><li>The data object is sent as JSON Web Token (JWT).</li><li>The data block will be signed using the device key.</li></ul>
+specVersion | Version of the SBI specification using which the response was generated.
+data | The data object is sent as JSON Web Token (JWT). The data block will be signed using the device key.
 data.bioType | Allowed values are "Finger", "Iris" or "Face".
-data.digitalId | <ul><li>The digital id as per the digital id definition in JWT format.</li><li>For L0 devices, the digital id will be signed using the device key.</li><li>For L1 or L2 devices, the digital id will be signed using the FTM key.</li></ul>
+data.digitalId | The digital id as per the digital id definition in JWT format. For SBI 1.0 devices, the digital id will be signed using the device key. For SBI 2.0 devices, the digital id will be signed using the FTM key.
 data.bioSubType | <ul><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"]</li><li>For Iris: ["Left", "Right", "UNKNOWN"]</li><li>For Face: No bioSubType</li></ul>
-data.deviceServiceVersion | MDS version
-data.env | <ul><li>The target environment.</li><li>Allowed values are "Staging", "Developer", "Pre-Production" or "Production".</li></ul>
-data.purpose | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>Allowed values are "Auth" or "Registration".</li></ul>
+data.deviceServiceVersion | SBI version
+data.env | The target environment. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
+data.purpose | The purpose of the device in the MOSIP ecosystem.</li><li>Allowed values are "Auth" or "Registration".
 data.bioValue | Base64-URL-encoded biometrics (in ISO format)
 data.transactionId | Unique transaction id sent in request
-data.timestamp | <ul><li>Time as per the biometric device.</li><li>Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.</li></ul>
+data.timestamp | Time as per the biometric device. Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
 data.requestedScore | Floating point number to represent the minimum required score for the capture.
 data.qualityScore | Floating point number representing the score for the current capture.
 hash | The value of the previousHash attribute in the request object or the value of hash attribute of the previous data block (used to chain every single data block) concatenated with the hex encode sha256 hash of the current data block before encryption.
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
-error.errorCode | Standardized error code defined in the [error code section](#error-codes).
-error.errorInfo | Description of the error that can be displayed to end user. Multi lingual support.
+error.errorCode | Standardized error code.
+error.errorInfo | Description of the error that can be displayed to end user. It should have multi-lingual support..
 
 #### Windows/Linux
 The applications that require more details of the MOSIP devices could get them by sending the HTTP request to the supported port range.
@@ -926,7 +843,7 @@ This API is exposed by the MOSIP server to the device providers.
         "deviceExpiry": "Device expiry date",
         "timestamp":  "ISO format datetime with timezone from device"
       },
-      "foundationalTrustProviderId" : "Foundation trust provider Id, in case of L0 this is empty"
+      "foundationalTrustProviderId" : "Foundation trust provider Id, in case of SBI 1.0 this is empty"
     }
   },
   "requesttime": "Current timestamp in ISO format from management server",
@@ -934,20 +851,20 @@ This API is exposed by the MOSIP server to the device providers.
 }
 ```
 
-#### Accepted Values for Registration Request
+#### Accepted Values
 Parameters | Description
 -----------|-------------
-deviceData | <ul><li>The device data object is sent as JSON Web Token (JWT).</li><li>The device data block will be signed using the device provider certificate.</li></ul>
-deviceData.deviceId | <ul><li>Unique device id that the device provider uses to identify the device.</li><li>This can also be serial no if the device provider is sure of maintaining the uniqueness across all their devices.</li></ul>
-purpose | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>For devices that are not registered the purpose is empty.</li><li>Allowed values are "Auth" or "Registration".</li></ul>
-deviceData.deviceInfo | <ul><li>The device info object is sent as JSON Web Token (JWT).</li><li>The device info block will be signed using the device key.</li></ul>
-deviceInfo.deviceSubId | <ul><li>An array of sub Ids that are supported for the device.</li><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
-deviceInfo.certification | <ul><li>The certificate level of the device.</li><li>Allowed values are L0, L1 or L2</li></ul>
-deviceInfo.digitalId | <ul><li>The digital id as per the digital id definition.</li><li>For L0 devices, the digital id will be signed using the device key.</li><li>For L1 devices, the digital id will be signed using the FTM key.</li></ul>
+deviceData | The device data object is sent as JSON Web Token (JWT). The device data block will be signed using the device provider certificate.
+deviceData.deviceId | Unique device id that the device provider uses to identify the device. This can also be serial no if the device provider is sure of maintaining the uniqueness across all their devices.
+purpose | The purpose of the device in the MOSIP ecosystem. For devices that are not registered the purpose is empty. Allowed values are "Auth" or "Registration".
+deviceData.deviceInfo | The device info object is sent as JSON Web Token (JWT). The device info block will be signed using the device key.
+deviceInfo.deviceSubId | An array of sub Ids that are supported for the device. Allowed values are 1, 2 or 3. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).
+deviceInfo.certification | The certificate level of the device. Allowed values are SBI 1.0 or SBI 2.0.
+deviceInfo.digitalId | The digital id as per the digital id definition. For SBI 1.0 devices, the digital id will be signed using the device key. For SBI 2.0 devices, the digital id will be signed using the FTM key.
 deviceInfo.firmware | Version of the firmware of the device.
-deviceInfo.deviceExpiry | <ul><li>Expiry date of the device.</li><li>Device will not work post that expiry date and it cannot be registered again.</li></ul>
-deviceInfo.timestamp | <ul><li>The timestamp when the request was created.</li><li>For device registration the request should reach within 5 mins of this timestamp to MOSIP or the request will be rejected.</li></ul>
-foundationalTrustProviderId | <ul><li>Foundation trust provider id whoes chip is in the device.</li><li>For L0 device, this is empty.</li></ul>
+deviceInfo.deviceExpiry | Expiry date of the device. Device will not work post that expiry date and it cannot be registered again.
+deviceInfo.timestamp | The timestamp when the request was created. For device registration the request should reach within 5 mins of this timestamp to MOSIP or the request will be rejected.
+foundationalTrustProviderId | Foundation trust provider id whoes chip is in the device. For SBI 1.0 device, this is empty.
 
 {% hint style="info" %}
 During the registration of SBI 1.0 devices please sign using the key thats generated inside the device and send the public key in x509 encoded spec form. <br>
@@ -991,17 +908,17 @@ The entire response is sent as a JWT format. So the final response will look lik
 ### Accepted Values in Device Registration Response
 Parameters | Description
 -----------|-------------
-response | <ul><li>The entire response block will be sent in JWT format.</li><li>This will be signed by MOSIP using their public signature certificate.</li></ul>
-response.status | <ul><li>This is the status of the device.</li><li>After successful registration the status will sent as "Registered".</li></ul>
+response | The entire response block will be sent in JWT format. This will be signed by MOSIP using their public signature certificate.
+response.status | This is the status of the device. After successful registration the status will sent as "Registered".
 response.digitalId | This is the same digital ID that was sent in the request.
-response.deviceCode | <ul><li>This is the device code issued by MOSIP server post registration.</li><li>This will be in UUID RFC4122 Version 4 format</li><li>Once device is registered the device code needs to be set in the device.</li></ul>
-response.timestamp | <ul><li>This is the timestamp when the device was registered.</li><li>This will be in ISO format.</li></ul>
-response.env | <ul><li>The target environment where the device is registered.</li><li>Allowed values are "Staging", "Developer", "Pre-Production" or "Production".</li></ul>
+response.deviceCode | This is the device code issued by MOSIP server post registration. This will be in UUID RFC4122 Version 4 format. Once device is registered the device code needs to be set in the device.
+response.timestamp | This is the timestamp when the device was registered. This will be in ISO format.
+response.env | The target environment where the device is registered. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
 
 The response should be sent to the device. The device is expected to store the deviceCode within its storage in a safe manner. This device code is used during the capture stage.
 
 {% hint style="info" %}
-The device once registered for a specific purpose can not be changed after successful registration. The device can only be used for that specific mosip process.
+The device once registered for a specific purpose can not be changed after successful registration. The device can only be used for that specific MOSIP process.
 {% endhint %}
 
 ### De-Register
@@ -1093,7 +1010,7 @@ The request is sent as a JWT format. So the final request will look like:
 }
 ```
 
-#### Accepted Values for Retrieve Certificate Request
+#### Accepted Values
 ```
 env - Allowed values are Staging| Developer| Pre-Production | Production
 domainUri - unique uri per auth providers. This can be used to federate across multiple providers or countries or unions.
@@ -1161,8 +1078,6 @@ Management client is the interface that connects the device with the respective 
 
 **SBI 2.0 Certified Device / SBI 2.0 Device** - A device certified as capable of performing encryption on the device inside its trusted zone with tamper responsive features.
 
-**SBI 2.0 - PT Certified Device / SBI 2.0 - PT Device** - A device certified as capable of performing encryption on the device inside its trusted zone.
-
 ### Secure Provisioning
 Secure provisioning is applicable to both the FTM and the Device providers.
 
@@ -1176,10 +1091,10 @@ Secure provisioning is applicable to both the FTM and the Device providers.
 ### Compliance Level
 API     | Compatible
 --------|-----------
-Device Discovery | SBI 1.0/SBI 2.0/SBI 2.0 - PT
-Device Info | SBI 1.0/SBI 2.0/SBI 2.0 - PT
-Capture | SBI 2.0/SBI 2.0 - PT
-Registration Capture | SBI 1.0/SBI 2.0/SBI 2.0 - PT
+Device Discovery | SBI 1.0/SBI 2.0
+Device Info | SBI 1.0/SBI 2.0
+Capture | SBI 2.0
+Registration Capture | SBI 1.0/SBI 2.0
 
 ---
 
