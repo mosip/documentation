@@ -1,7 +1,7 @@
 # Overview
-Resident services are the self services which is used by the resident themselves via a portal.  Functionalities  such as lock/unlock authentication types, reprint UIN, view authentication history etc. are available. The services use OTP method of authentication. 
+Resident services are the self services which is used by the resident themselves via a portal. Functionalities such as lock/unlock authentication types, reprint UIN, view authentication history etc. are available. The services use OTP method of authentication.
 
-The backend is a set of services with REST API interface (provided by MOSIP) and front end is a portal to be developed by an SI/country according to the requirements. 
+The back-end is a set of services with REST API interface (provided by MOSIP) and front end is a portal to be developed by the adopter according to their requirements.
 
 # Detailed functionality
 [Resident Services Functionality](Resident-Services-Functionality.md)
@@ -15,9 +15,9 @@ The backend is a set of services with REST API interface (provided by MOSIP) and
 * [Retrieve lost UIN](_images/resident_services/resident_services_retrieve_lost_uin_flow.jpg)
 * [Generate VID](_images/resident_services/resident_services_generate_vid_flow.jpg)
 * [Revoke VID](_images/resident_services/resident_services_revoke_vid_flow.jpg)
-* [Downlad e-UIN](_images/resident_services/resident_services_download_euin_flow.jpg)
+* [Download e-UIN](_images/resident_services/resident_services_download_euin_flow.jpg)
 * [Reprint e-UIN](_images/resident_services/resident_services_reprint_euin_flow.jpg)
-* [Retreive lost RID](_images/resident_services/resident_services_retrieve_lost_rid_flow.jpg)
+* [Retrieve lost RID](_images/resident_services/resident_services_retrieve_lost_rid_flow.jpg)
 
 # Logical view
 
