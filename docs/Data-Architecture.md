@@ -17,7 +17,7 @@
 
 ## Logical view of MOSIP data system
 
-![MOSIP Data Architecture](_images/arch_diagrams/mosip_data_architecture.jpg)
+![](_images/arch_diagrams/mosip_data_architecture_v1.jpg)
 
 ## Security
 In MOSIP, the following users are defined to perform various activities and have control over the DB objects that are defined
