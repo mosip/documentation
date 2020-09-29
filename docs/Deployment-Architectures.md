@@ -10,12 +10,12 @@ In order to get the best out of mosip and keep manageability high the deployment
 
 * Packaging choices
   * Option 'Jar' - Spring boot services in Virtual Machines|
-  * Option ‘Docker’ - Dockers on a Kubernetes container management setup
+  * Option 'Docker' - Dockers on a Kubernetes container management setup
 
 * Infrastructure choices
-  * Option ‘On Premise’ - Deploy in a private or own data center
-  * Option ‘Cloud’ - Deploy in a cloud
-  * Option ‘Hybrid’ - Cloud + On Premises
+  * Option 'On-Premise' - Deploy in a private or own data center
+  * Option 'Cloud' - Deploy in a cloud
+  * Option 'Hybrid' - Cloud + On Premises
 
 * Platform choices
   * Option 'Open Source' - Proven community favored platforms

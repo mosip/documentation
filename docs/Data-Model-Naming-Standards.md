@@ -26,7 +26,7 @@ The database names will follow the below naming convention
 **Ex: mosip_prereg**
 
 ## Schema Naming Standards
-Schema name is named after the DB name, by default, without mosip_. If there are more than one schemas in a DB, then a proper single word name is assigned, either full word or an abbreviated word.
+Schema name is named after the DB name, by default, without mosip_. If there are more than one schema in a DB, then a proper single word name is assigned, either full word or an abbreviated word.
 **Ex: prereg**
 
 ## Table Naming Standards

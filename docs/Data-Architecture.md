@@ -6,7 +6,7 @@
 * Surrogate key, wherever used, must be a random number and not be generated based on the record data.
 * Direct queries on the database by a human must not be made. Database administrators must ensure this control during database configuration setup
 * Database is setup in UTF-8*** file format to support multiple languages
-* Following datatypes are used
+* Following data types are used
 	* Character Varying
     * Timestamp
     * Date
@@ -17,7 +17,7 @@
 
 ## Logical view of MOSIP data system
 
-![MOSIP Data Architecture](_images/arch_diagrams/MOSIP_DataArchitecture.jpg)
+![MOSIP Data Architecture](_images/arch_diagrams/mosip_data_architecture.jpg)
 
 ## Security
 In MOSIP, the following users are defined to perform various activities and have control over the DB objects that are defined
