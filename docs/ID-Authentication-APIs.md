@@ -8,7 +8,7 @@ This section details about the REST services in ID Authentication module.
 * [Authentication Type Status Service](#authentication-types-status-service-internal)
 
 # Authentication Service (Public)
-This service details authentication methods that can be used by authentication partners to authenticate a resident. Below are various authentication types currently supported by this service:
+This service details authentication methods that can be used by authentication partners to authenticate an individual. Below are various authentication types currently supported by this service:
 
 * OTP based - OTP (Time based OTP)
 * Demographic based - Name, Date of Birth, Age, Gender, Address, Full Address
@@ -20,7 +20,7 @@ This service details authentication methods that can be used by authentication p
 3. **Partner-API-Key** - Associated against a policy.
 
 ## POST /idauthentication/v1/auth/
-This request will authenticate a resident, based on provided authentication type(s).
+This request will authenticate an individual, based on provided authentication type(s).
 
 ### Resource URL
 `https://{base_url}/idauthentication/v1/auth/{:MISP-LicenseKey}/{:Auth-Partner-ID}/{:Partner-Api-Key}`
@@ -194,7 +194,7 @@ For details about the error codes view the section [common error codes and messa
 
 
 # e-KYC Service (Public)
-This service details authentication (eKYC auth) that can be used by authentication partners to authenticate a resident and send resident's KYC details as response. Below are various authentication types supported by e-KYC authentication:
+This service details authentication (eKYC auth) that can be used by authentication partners to authenticate an individual and send individual's KYC details as response. Below are various authentication types supported by e-KYC authentication:
 
 1. OTP Authentication - OTP
 2. Biometric Authentication - Fingerprint, IRIS and Face
@@ -205,7 +205,7 @@ This service details authentication (eKYC auth) that can be used by authenticati
 3. `Partner-Api-Key` - Associated against a policy.
 
 ## POST /idauthentication/v1/kyc/
-This request will provide KYC details of a resident, once the resident is successfully authenticated.
+This request will provide KYC details of an individual, once the individual is successfully authenticated.
 
 ### Resource URL
 `https://{base_url}/idauthentication/v1/kyc/:MISP-LicenseKey/:eKYC-Partner-ID/:Partner-Api-Key`
@@ -400,15 +400,15 @@ For details about the error codes view the section [common error codes and messa
 
 
 # OTP Request Service (Public)
-This service enables authentication partners to request for an OTP for a resident. The OTP will be send via message or email as requested to the resident. This OTP can then be used to authenticate the resident using authentication or eKYC service.
+This service enables authentication partners to request for an OTP for an individual. The OTP will be send via message or email as requested to the individual. This OTP can then be used to authenticate the individual using authentication or eKYC service.
 
 ## Users of OTP Request service
 1. `MISP (MOSIP Infrastructure Service Provider)` - MISP acts as a gate keeper for any OTP requests sent to this service. MISP is also responsible for the policy creation on the MOSIP servers so their partners will follow the set policy.
-2. `Partners` - *Auth-Partners* and *eKYC-Partners* can send OTP Request to MOSIP on behalf of the resident for Authentication and eKYC requests respectively, via MISP.
+2. `Partners` - *Auth-Partners* and *eKYC-Partners* can send OTP Request to MOSIP on behalf of the individual for Authentication and eKYC requests respectively, via MISP.
 3. `Partner-Api-Key` - Associated against a policy.
 
 ## POST /idauthentication/v1/otp/
-This request will send an OTP to the resident.
+This request will send an OTP to the individual whoes UIN/VID is entered.
 
 ### Resource URL 
 `https://{base_url}/idauthentication/v1/otp/:MISP-LicenseKey/:Partner-ID/:Partner-Api-Key`
@@ -526,7 +526,7 @@ IDA-OTA-008|OTP Notification Channel not provided.|No OTP Channel is provided in
 IDA-OTA-009|&lt;Notification Channel&gt; not configured for the country|&lt;Notification Channel&gt; not configured (Phone/e-mail/both)|
 
 # Authentication Service (Internal)
-This service details authentication (yes/no) that can be used by MOSIP modules to authenticate a resident using UserID/VID/UIN. Below are various authentication types supported by this service - Biometric based - Fingerprint, IRIS and Face.
+This service details authentication (yes/no) that can be used by MOSIP modules to authenticate an individual using UserID/VID/UIN. Below are various authentication types supported by this service - Biometric based - Fingerprint, IRIS and Face.
 
 ## Users of Internal Authentication service
 
