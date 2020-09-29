@@ -1,8 +1,8 @@
 # Table of contents
 
 * Architecture
-    * [Architecture](Architecture.md)
-    * [Architecture Principles](Architecture-Principles.md)
+    * [Guiding Principles](Architecture-Principles.md)
+    * [MOSIP Architecture](Architecture.md)
     * [Data Architecture](Data-Architecture.md)
     * [Privacy & Security](Privacy-and-Security.md)    
 * Modules
