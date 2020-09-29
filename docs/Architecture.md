@@ -26,7 +26,7 @@ From a MOSIP perspective, several actors are involved in the ID system.
 
 The diagram shows the functional architecture of mosip with the actors.
 
-![](_images/arch_diagrams/mosip_functional_architecture.png)
+![](_images/arch_diagrams/mosip_functional_architecture_v1.png)
 
 
 # Modular Architecture
@@ -47,5 +47,5 @@ Note: All user interface modules are reference implementations and can be uses a
 
 The diagram below show the various modules of mosip with their respective service bouquets and their interaction.
 
-![](_images/arch_diagrams/mosip_logical_architecture_v0.1.png)
+![](_images/arch_diagrams/mosip_logical_architecture_v1.png)
 
