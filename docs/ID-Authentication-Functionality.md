@@ -1,4 +1,4 @@
-Authentication is the process of verifying an identity claim against the registered identity information. Such information could be a personal identification information (PII) such as demographic details, biometric data such as a fingerprint, iris or face and OTP on the registered email or phone number. MOSIP provides APIs using which a resident can perform such authentications after registering in MOSIP.
+Authentication is the process of verifying an identity claim against the registered identity information. Such information could be a personal identification information (PII) such as demographic details, biometric data such as a fingerprint, iris or face and OTP on the registered email or phone number. MOSIP provides APIs using which an individual can perform such authentications after registering in MOSIP.
 
 Authentication can be performed in MOSIP by a registered authentication partner over a secure network provided by MOSIP Infrastructure Service Provider (MISP). You can know more about these MOSIP partners on MOISP's Partner Management. 
 
@@ -16,11 +16,11 @@ MOSIP connects with a biometric SDK, to perform biometric authentication. Refer 
 
 Using the MOSIP's authentication service a registered authentication partner can request for demographic authentication. Currently, we support demographic authentication for the following id attributes - Name, DOB, Age, Gender, Address and FullAddress.
 
-1. Name - the name received in authentication request is compared with the resident's name saved in the authentication database
-2. DOB - the DOB received in authentication request is compared with the resident's date of birth saved in the authentication database
-3. Age - the age received in authentication request is compared with the age of the resident which is derived from the date of birth stored in the authentication database
-4. Gender - the gender received in authentication request is compared with the resident's gender saved in the authentication database
-5. Address - the address attributes received in authentication request is compared with the resident's address attributes saved in the authentication database
+1. Name - the name received in authentication request is compared with the individual's name saved in the authentication database
+2. DOB - the DOB received in authentication request is compared with the individual's date of birth saved in the authentication database
+3. Age - the age received in authentication request is compared with the age of the individual which is derived from the date of birth stored in the authentication database
+4. Gender - the gender received in authentication request is compared with the individual's gender saved in the authentication database
+5. Address - the address attributes received in authentication request is compared with the individual's address attributes saved in the authentication database
 
 MOSIP supports only exact match for the demographic authentication of the individual and does not perform any validations related to partial match and phonetics match. No error messages related to partial match and phonetics match are triggered.
 
@@ -31,7 +31,7 @@ MOSIP supports only exact match for the demographic authentication of the indivi
 
 ## OTP Based Authentication
 
-Using the MOSIP's authentication service a registered authentication partner can request for OTP authentication. Before performing OTP based authentication the Partner needs to request for an OTP using the resident's ID and use it for OTP based authentication. 
+Using the MOSIP's authentication service a registered authentication partner can request for OTP authentication. Before performing OTP based authentication the Partner needs to request for an OTP using the individual's ID and use it for OTP based authentication. 
 
 For details about the OTP request service go through the [OTP request API specification](ID-Authentication-APIs.md#otp-request-service-public).
 
@@ -50,7 +50,7 @@ The partner who is requesting for these authentications must make sure that all 
 
 # e-KYC Service
 
-Based on the policy linked to a MOSIP authentication partner, a partner can be eligible to perform e-KYC. In an e-KYC request, the MOSIP authentication partner can request to fetch the KYC details of the resident based on a pre-defined policy. KYC details in MOSIP is only provided to the partners after the resident's consent using OTP or biometric authentication.
+Based on the policy linked to a MOSIP authentication partner, a partner can be eligible to perform e-KYC. In an e-KYC request, the MOSIP authentication partner can request to fetch the KYC details of the individual based on a pre-defined policy. KYC details in MOSIP is only provided to the partners after the individual's consent using OTP or biometric authentication.
 
 The request for e-KYC service is similar to that of authentication service, you can view the details about the API specification in our [ID Authentication API Specification](ID-Authentication-APIs.md#e-kyc-service-public) document.
 
@@ -62,7 +62,7 @@ Various internal MOSIP modules for need to use the authentication services. The 
 2. Processing of packets in registration processor where,
 	1. The officer or supervisor has performed biometric authentication.
 	2. The introducer's biometrics are collected for authentication in the server side.
-	3. The resident's biometrics are collected for authentication when he/she is trying to update his/her demographic details. 
+	3. The individual's biometrics are collected for authentication when he/she is trying to update his/her demographic details. 
 
 The internal authentication service supports authentication for all the modalities mentioned as part of authentication service but is only accessible bby the internal modules post authorization. The details about the internal authentication API specification is available in our [ID Authentication API Specification](ID-Authentication-APIs.md#e-kyc-service-public) document.
 
@@ -87,8 +87,8 @@ Below are the various validations that are performed in the authentication serve
 
 ## Generation of Authentication Token
 
-After every authentication performed in MOSIP, an authentication token is generated in MOSIP. This token is generated based on policy defined for the partner. The token is basically a random id which can be unique per authetication transaction, unique per partner and resident or unique per partner policy group and resident.
+After every authentication performed in MOSIP, an authentication token is generated in MOSIP. This token is generated based on policy defined for the partner. The token is basically a random id which can be unique per authentication transaction, unique per partner and individual or unique per partner policy group and individual.
 
 ## Trigger of Notification
 
-After every authentication a notification is trigger to the registered email id or phone number of the resident based on the configuration defined for mode of communication. The notification to be sent to the resident can also be single or bi-lingual based on the configurations and templated used. 
+After every authentication a notification is trigger to the registered email id or phone number of the individual based on the configuration defined for mode of communication. The notification to be sent to the individual can also be single or bi-lingual based on the configurations and template used. 

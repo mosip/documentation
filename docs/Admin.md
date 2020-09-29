@@ -17,7 +17,7 @@ Admin application contains UI layer and Service layer. All the components in bot
 ![Logical Diagram](_images/admin/admin_logical_diagram.jpg)
 
 # Backend Services 
-The administrator uses many services available as part of Kernel in [commons repository](https://github.com/mosip/commons).  There are a few administrator specific services available in [admin repository](https://github.com/mosip/admin-services).  The code and design documentation is available in the reposistories.
+The administrator uses many services available as part of Kernel in [commons repository](https://github.com/mosip/commons).  There are a few administrator specific services available in [admin repository](https://github.com/mosip/admin-services).  The code and design documentation is available in the repositories.
 
 # Frontend - Admin portal 
 Reference implementation of Admin portal is available in [ref impl repo](https://github.com/mosip/mosip-ref-impl)

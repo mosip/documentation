@@ -19,7 +19,7 @@ The MOSIP philisophy is to provide a "Good ID". As part of this MOSIP embraces a
 The key design aspects considered for MOSIP are
 
 ### Ecosystem approach
-The MOSIP platorm is a framework and an end-to-end solution needs additional components. For example, biometric devices and ABIS solutions are key to process an individual's data and prove uniqueness. Through a well defined set of standard interfaces MOSIP allows for integration of such components and offers choice of providers for the same. MOSIP also needs to cater to a diverse set of institutions wanting to authenticate an Individual against the data stored in MOSIP.
+The MOSIP platform is a framework and an end-to-end solution needs additional components. For example, biometric devices and ABIS solutions are key to process an individual's data and prove uniqueness. Through a well defined set of standard interfaces MOSIP allows for integration of such components and offers choice of providers for the same. MOSIP also needs to cater to a diverse set of institutions wanting to authenticate an Individual against the data stored in MOSIP.
 So, key parameters are
 * All public/external facing interfaces of MOSIP must be standards-based for interoperability.
 * 3rd party components should be integrated via standard interfaces and offer a provider model where needed. 
