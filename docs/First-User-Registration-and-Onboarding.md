@@ -1,6 +1,6 @@
 Steps to generate the first User in MOSIP eco-system, refer below for the process:
 
-### 1. Creating the First User in LDAP
+### 1. Creating the First User in KeyCloak
 * First the role "Default" need to be created in KeyCloak with all other roles.
 * A User say 'X' has to be created in KeyCloak and the role “Default” needs to be mapped to it.
 
@@ -15,7 +15,7 @@ Steps to generate the first User in MOSIP eco-system, refer below for the proces
 * The User authentication method for User 'X' will be always User ID and Password as it is the default user.
 * The User now can register himself/herself in MOSIP and will get an RID and UIN.
 
-### 4. Allocating the RID to the User Created in LDAP
+### 4. Allocating the RID to the User Created in KeyCloak
 * The RID created for the User 'X' needs to be updated in KeyCloak.
 
 ### 5. User On-boarding
