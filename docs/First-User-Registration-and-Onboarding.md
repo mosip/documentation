@@ -10,7 +10,7 @@ Steps to generate the first User in MOSIP eco-system, refer below for the proces
 * All necessary center-machine-device-user mappings should be completed through the CSV Utility for the first user.
 
 ### 3. Creating the First User in MOSIP
-* The User 'X' should now download the latest Registration Client and login with the credentials set in LDAP.
+* The User 'X' should now download the latest Registration Client and login with the credentials set in KeyCloak.
 * The User will automatically skip Operator/Supervisor On-boarding and will reach the home page of Registration Client.
 * The User authentication method for User 'X' will be always User ID and Password as it is the default user.
 * The User now can register himself/herself in MOSIP and will get an RID and UIN.
