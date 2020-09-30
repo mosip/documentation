@@ -425,13 +425,13 @@ String|Yes|The user id|
          {
             "matchedRegId":"27847657360002520181208123451",
             "url":"<data share for matchedRegId>",
-			"matchedRefType":"UIN",
+			"matchedRefType":"RID",
 			"reasonCode":null
          },
          {
             "matchedRegId":"27847657360002520181208123452",
             "url":"<data share for matchedRegId>",
-			"matchedRefType":"UIN",
+			"matchedRefType":"RID",
 			"reasonCode":null
          }
       ],
