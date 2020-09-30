@@ -9,7 +9,7 @@ The credential share is a functional service that interacts with the id reposito
 * Biometric data extraction policies are used by ID Repository and the credential service will only look at cryptography and TTL as defined in the policy.
 * All shared data is signed before encryption.
 
-## Credential Share process flow for Print
+## Credential Share Process Flow for Print
 
 * User requests for credentials via resident service with VID, provider(subscriber/partner), pin(password), Authentication request(bio or OTP based auth request)
 * Resident service will authenticate the user using IDA
