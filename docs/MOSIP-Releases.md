@@ -1,11 +1,16 @@
 ## Latest Release
 
+### Version: 1.1.1 (Stable)
+- Name: Patch Release
+- Date: September 14, 2020
+- [Release Notes](Release-Notes-1.1.1.md)
+
+## Older Releases
+
 ### Version: 1.1.0 (Stable)
 - Name: Real Biometrics
 - Date: July 03, 2020
 - [Release Notes](Release-Notes-1.1.0.md)
-
-## Older Releases
 
 ### Version: 1.0.6 (Stable)
 - Name: Real Biometrics
