@@ -1,8 +1,8 @@
 ## Introduction
 
-Running a national ID system is no mean task and involves numerous challenging aspects. The software system at the core is a critical infrastucture and needs to address high availability, reliability, scalability, security, resilience, and manageability. Choosing the right deployment architecture plays an important role  in helping achieving architectural goals while also catering to the law of the land. Cost of implementing such an architecture also matters.
+Running a national ID system is no mean task and involves numerous challenging aspects. The software system at the core is a critical infrastructure and needs to address high availability, reliability, scalability, security, resilience, and manageability. Choosing the right deployment architecture plays an important role  in helping achieving architectural goals while also catering to the law of the land. Cost of implementing such an architecture also matters.
 
-Mosip has a microservices architecture that organizes functionality into myriad small services and execution units. Each of these can be scaled separately as well as replaced / upgraded. This makes the platform powerful and provides plenty of flexibility  and configurability in the hands of the implementor. There is also the corresponding complexity of dealing with a higher number of components in the system in the areas of configuration, security, deployment, dependency management, monitoring and testing.
+Mosip has a micro-services architecture that organizes functionality into myriad small services and execution units. Each of these can be scaled separately as well as replaced / upgraded. This makes the platform powerful and provides plenty of flexibility  and configurability in the hands of the implementor. There is also the corresponding complexity of dealing with a higher number of components in the system in the areas of configuration, security, deployment, dependency management, monitoring and testing.
 
 ## Deployment architecture choices
 
@@ -10,16 +10,16 @@ In order to get the best out of mosip and keep manageability high the deployment
 
 * Packaging choices
   * Option 'Jar' - Spring boot services in Virtual Machines|
-  * Option ‘Docker’ - Dockers on a Kubernetes container management setup
+  * Option 'Docker' - Dockers on a Kubernetes container management setup
 
 * Infrastructure choices
-  * Option ‘On Premises’ - Deploy in a private or own data center
-  * Option ‘Cloud’ - Deploy in a cloud
-  * Option ‘Hybrid’ - Cloud + On Premises
+  * Option 'On-Premise' - Deploy in a private or own data center
+  * Option 'Cloud' - Deploy in a cloud
+  * Option 'Hybrid' - Cloud + On Premises
 
 * Platform choices
   * Option 'Open Source' - Proven community favored platforms
-  * Option ‘Cloud Native’ - Cutting edge supported cloud technolgies from AWS, Azure, GCP et al
+  * Option 'Cloud Native' - Cutting edge supported cloud technologies from AWS, Azure, GCP et al
   * Option 'Commercial' - Established and well supported priced packages
 
 

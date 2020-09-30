@@ -1,6 +1,6 @@
 # Design choices
 The MOSIP architecture decisions have been based on the [Guiding Principles](Architecture-Principles.md) defined in the charter. The design choices are in line with the need for modularity, loose coupling and scalability of it components, and being API first.
-* Microservice based architecture for all platform services for modularity and scalability.
+* Micro-service based architecture for all platform services for modularity and scalability.
 * Staged Event Driven Architecture (SEDA) for processing Registration data for extensibility.
 * Thick client architecture for the registration client to support offline operations as well as process security.
 
@@ -22,11 +22,11 @@ From a MOSIP perspective, several actors are involved in the ID system.
     * The **Device Provider** is a partner who provides biometric devices.
     * The **FTM Provider** is a partner who provides foundational trust modules for devices.
     * The **Partner Application** is a system that relies on mosip or one that mosip relies on. This could be a CRVS system or a Functional ID system such a Passport or a Drivers License.
-    * The **ID System** is a system that mosip integrates with for interoperable ID 
+    * The **ID System** is a system that mosip integrates with for inter-operable ID 
 
 The diagram shows the functional architecture of mosip with the actors.
 
-![](_images/arch_diagrams/MOSIP_functional_architecture.png)
+![](_images/arch_diagrams/mosip_functional_architecture_v1.png)
 
 
 # Modular Architecture
@@ -47,5 +47,5 @@ Note: All user interface modules are reference implementations and can be uses a
 
 The diagram below show the various modules of mosip with their respective service bouquets and their interaction.
 
-![](_images/arch_diagrams/MOSIP_logical_architecture_v0.1.png)
+![](_images/arch_diagrams/mosip_logical_architecture_v1.png)
 

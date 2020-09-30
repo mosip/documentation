@@ -1,6 +1,6 @@
 # Overview
 
-ID Repository contains the record of identity for a resident, and provides API based mechanism to store, retrieve and update identity details by other MOSIP modules. ID Repository is used by: 
+ID Repository contains the record of identity for an individual, and provides API based mechanism to store, retrieve and update identity details by other MOSIP modules. ID Repository is used by: 
 * Registration Processor
 * ID Authentication
 * Resident services
@@ -23,36 +23,36 @@ The identity data stored inside the ID Repository is encrypted. This is the most
 
 ## Store identity data and documents 
 
-Upon receiving the request to store identity details of resident, the system validates input ID attributes in the request against MOSIP ID defined for the country.
+Upon receiving the request to store identity details of an individual, the system validates input ID attributes in the request against MOSIP ID defined for the country.
 
-1. Stores ID JSON, biometric documents, proof documents of a resident generated during registration.
-1. On successful storage of identity for a resident, status of UIN of the resident by default is marked as 'ACTIVATED'.
+1. Stores ID JSON, biometric documents, proof documents of an individual generated during registration.
+1. On successful storage of identity for an individual, status of UIN of the individual by default is marked as 'ACTIVATED'.
 
 ## Retrieve stored identity details by UIN or RID 
 
-Upon receiving a request to retrieve identity details of a resident based on input UIN or RID and type as an optional parameter, the system performs the following steps:
+Upon receiving a request to retrieve identity details of an individual based on input UIN or RID and type as an optional parameter, the system performs the following steps:
 
 1. Validates if input UIN is 'ACTIVATED'.
-1. Retrieves latest ID attributes of the resident.
+1. Retrieves latest ID attributes of the individual.
 1. The system retrieves and sends demographic or biometric details or both. 
 
 ## Update identity data and documents 
 
-Upon receiving a request to update identity details of a resident, the system performs the following steps:
+Upon receiving a request to update identity details of an individual, the system performs the following steps:
 
 1. Validates if input UIN is 'ACTIVATED'
-1. Updates input ID attributes of the resident.
+1. Updates input ID attributes of the individual.
 1. Updates demographic/biometric/both 
 1. Updates status of UIN as 'DEACTIVATED' or 'BLOCKED' if requested.
-1. Sends the response with updated ID details of resident.
+1. Sends the response with updated ID details of the individual.
 
 ## De-activate/re-activate UIN and its associated VIDs 
 
-A resident's UIN/VIDS can be de-activated or re-activated.  
+An individual's UIN/VIDS can be de-activated or re-activated.  
 
 ## Lock/Unlock of authentication types
 
-A resident can lock or unlock a particular authentication type using resident services, for example, locking demographic and/or biometric authentication, the system locks the requested authentication type after certain validations. After the requested authentication type is locked for the resident, then he/she will not be able to authenticate himself/herself by using locked authentication type. Similarly, the resident can choose to unlock these authentication types.
+An individual can lock or unlock a particular authentication type using resident services, for example, locking demographic and/or biometric authentication, the system locks the requested authentication type after certain validations. After the requested authentication type is locked for the individual, then he/she will not be able to authenticate himself/herself by using locked authentication type. Similarly, the individual can choose to unlock these authentication types.
 
 # Process flow
 
