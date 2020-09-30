@@ -14,7 +14,7 @@
 ## Scope
 MOSIP Version **1.1.1** is a patch release on top of **1.1.0** release. It is more stable and most of the critical issues identified in [Release 1.1.0](Release-Notes-1.1.0.md#list-of-known-issues) have been fixed and retested.
 
-**Release Date:** July 22, 2020
+**Release Date:** September 14, 2020
 
 **Key Highlights**
 
@@ -43,7 +43,6 @@ Low level design documents for each module are available in the respective githu
 * [Partner Management Services](https://github.com/mosip/partner-management-services/tree/v1.1.1)
 * [Resident Services](https://github.com/mosip/resident-services/tree/v1.1.1)
 * [Reference Implementation](https://github.com/mosip/mosip-ref-impl/tree/v1.1.1)
-* [Automation tests](https://github.com/mosip/mosip-functional-tests/tree/v1.1.1)
 
 The details related to artifactory versions is available [here](Release-Notes-1.1.1-Artifact-Version.md).
 
