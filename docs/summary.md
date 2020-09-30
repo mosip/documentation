@@ -6,12 +6,10 @@
     * [Data Architecture](Data-Architecture.md)
     * [Privacy & Security](Privacy-and-Security.md)    
 * Modules
-    * Pre-Registration Module
-        * [Pre-Registration](Pre-Registration.md)
+    * [Pre-Registration](Pre-Registration.md)
         * [Pre Registration Functionality](Pre-Registration-Functionality.md)
 		* [UI Specification for Pre-registration](UI-Specification-for-Pre-Registration.md)
-    * Registration Module
-        * [Registration](Registration-Client.md)
+    * [Registration](Registration-Client.md)
         * [Registration Functionality](Registration-Functionality.md)
         * [Registration Packet](Registration-Packet.md)
         * [Registration Client Setup](Registration-Client-Setup.md)
@@ -20,28 +18,22 @@
         * [Guidelines for Adding Centers, Machine, User and Devices](Guidelines-for-Adding-Centers,-Machine,-User-and-Devices.md)
         * [Device Integration Specifications](Device-Integration-Specifications.md)
 		* [UI Specification for Registration Client](UI-Specification-for-Registration-Client.md)
-    * Registration Processor Module    
-        * [Registration Processor](Registration-Processor.md)
+    * [Registration Processor](Registration-Processor.md)
         * [Registration Processor Functionality](Registration-Processor-Functionality.md)
         * [Deduplication and Manual Adjudication](Deduplication-and-Manual-Adjudication.md)
         * [MOSIP ID Object Definition](MOSIP-ID-Object-Definition.md)
-    * [ID Repository Module](ID-Repository.md)
-    * ID Authentication    Module
-        * [ID Authentication](ID-Authentication.md)
+    * [ID Repository](ID-Repository.md)
+    * [ID Authentication](ID-Authentication.md)
         * [ID Authentication Functionality](ID-Authentication-Functionality.md)
-    * Resident Services    Module
-        * [Resident Services](Resident-Services.md)
+    * [Resident Services](Resident-Services.md)
         * [Resident Services Functionality](Resident-Services-Functionality.md)
-    * Partner Management Module
-        * [Partner Management](Partner-Management.md)
+    * [Partner Management](Partner-Management.md)
         * [Partner Management Functionality](Partner-Management-Functionality.md)
         * [MOSIP Partner Secure Communication](MOSIP-Partner-Secure-Communication.md)
         * [FRS MISP Self Service Portal](FRS-MISP-Self-Service-Portal.md) 
-    * Admin Module
-        * [Admin](Admin.md)
+    * [Administration](Admin.md)
         * [Admin Services Functionality](Admin-Services-Functionality.md)
-    * Kernel Module
-        * [Kernel](Kernel.md)
+    * [Kernel](Kernel.md)
         * [Audit Manager Functionality](Audit-Manager-Functionality.md)
         * [Authentication and Authorization Functionality](Authentication-and-Authorization-Functionality.md)
         * [Auth Adapter](Auth-Adapter.md)
@@ -69,6 +61,7 @@
         * [Steps to Install and use PostgreSql Version 10.2 on RHEL 7.5](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md)
         * [Steps to Install Clam AntiVirus Version 0.101.0](Steps-to-Install-Clam-AntiVirus-Version-0.101.0.md)
         * [Steps to Install Keycloak Standalone Server](Steps-to-Install-Keycloak-Standalone-Server.md)
+* [Glossary](Glossary.md)
 * Contribute
     * [Call for Contribution](Call-for-Contribution.md)
     * [Contributor's Guide](Contributor-Guide.md)
