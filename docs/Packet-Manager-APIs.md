@@ -3,12 +3,12 @@ This section details about the REST services in Commons Packet Manager.
 # Packet Reader APIs
 These APIs are used to read packet from object store -
 1. [Get Audits](#1-get-audits)
-2. [Get Biometrics](#1-get-biometrics)
-3. [Get Documents](#1-get-documents)
-4. [Get Meta Info](#1-get-meta-info)
-5. [Search Field](#1-search-field)
-6. [Search Fields](#1-search-fields)
-7. [Validate Packet](#1-validate-packet)
+2. [Get Biometrics](#2-get-biometrics)
+3. [Get Documents](#3-get-documents)
+4. [Get Meta Info](#4-get-meta-info)
+5. [Search Field](#5-search-field)
+6. [Search Fields](#6-search-fields)
+7. [Validate Packet](#7-validate-packet)
 
 
 # 1 Get Audits
