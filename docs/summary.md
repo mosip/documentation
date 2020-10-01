@@ -3,6 +3,7 @@
 * Architecture
     * [Guiding Principles](Architecture-Principles.md)
     * [MOSIP Architecture](Architecture.md)
+    * [Technology Stack](Technology-Stack.md)
     * [Data Architecture](Data-Architecture.md)
     * [Privacy & Security](Privacy-and-Security.md)    
 * Modules
@@ -77,7 +78,6 @@
         * [MOSIP REST API guidelines](MOSIP-REST-API-guidelines.md)
         * [Registration Client UI Developer Document](Registration-Client-UI-Developer-Document.md)
         * [Registration Client Developer Documentation](Registration-Client-Developer-Documentation.md)
-        * [Technology Stack](Technology-Stack.md)
         * [Security Tools](Security-Tools.md)
     * Testing
         * [Test Rig Design](Test-Rig-Design.md)

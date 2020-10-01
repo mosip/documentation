@@ -1,11 +1,12 @@
-This page lists all the technologies used in building MOSIP
+This page lists all the technologies used in building MOSIP. As far as possible free and open source software with clear long term support availability have been chosen. For a deployment certain choices can be replaced with other free or commercial options.
+
 |Domain|Tools/Technologies|Version|Licence Type|
 |---|---|---|---|
 |Operating System|CentOS|7.7|MIT License|
-|Infrastructure|Cloud - Microsoft Azure|NA - Cloud tool|Commercial|
-|Development - Language Runtime|Java 8|1.8x|Oracle Binary Code License |
-|Development - Language Runtime|J2EE|JAVA EE 8|Oracle Binary Code License |
-|Development - UI Application framework|JavaFX|9|Oracle Binary Code License Agreement for the Java SE|
+|Infrastructure|Cloud - Azure/AWS|NA - Cloud tool|Commercial|
+|Development - Language Runtime|Java SE 11|OpenJDK 11|Oracle Binary Code License |
+|Development - Language Runtime|J2EE|JAVA EE 8|GPL |
+|Development - UI Application framework|JavaFx|OpenJFX 11|GPL v2 + Classpath|
 |Development - Application Framework|Vert.x|3.5.1|Apache License 2.0 |
 |Development - Application Framework|Spring |5|Apache License 2.0 |
 |Development - Utilities|Apache commons(60+ to be considered)|Latest version|Apache License 2.0 |
@@ -26,6 +27,7 @@ This page lists all the technologies used in building MOSIP
 |Development - API Documentation |Swagger|3.13.2 |Apache License 2.0 |
 |Development - Application Server|Tomcat server|8|Apache License 2.0 |
 |Development - Orchestration|Apache Camel|2.19.3|Apache License 2.0|
+|Development - WebSub|Ballerina Websub|1.2.8|Apache License 2.0|
 |Development - Database|H2 DB|1.4.197||
 |Development - Database|PostgreSQL|Server: 10|Postgres License| 
 |Development - Database|PostgreSQL| Driver: 42.2.2|BSD 2-clause "Simplified License"|
