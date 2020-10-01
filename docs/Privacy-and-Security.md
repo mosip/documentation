@@ -1,6 +1,6 @@
 # Introduction
 
-In MOSIP, privacy and security are highest priorities and this document details the measures that have been implemented in the platform so far. As an open source project we aim to continuously improve the security features and incorporate new developments through collaborations and community contributions.
+In MOSIP, privacy and security are highest priorities and this document details the measures that have been implemented in the platform so far. As an open source project we aim to continuously improve the security features and incorporate new developments through collaborations and community contributions. We use a variety of [security tools](Security-Tools.md) to assess security, discover vlulnerabilities and address them. 
 
 # Governing Principles
 MOSIP's approach on privacy and security is determined by the [framework principles](https://www.mosip.io/uploads/resources/5cc84b0a08284Country%20Engagement%20Principles_v2.pdf) under which it operates.
@@ -93,6 +93,3 @@ In MOSIP Authorization falls into the below categories:
 A country will have its own hierarchy of system users especially the Registration staff and system administration staff. So, instead of defining a fixed hierarchy, by default MOSIP will depend on an LDAP implementation to manage users, organizational hierarchy and roles for users in the hierarchy. MOSIP will use an open source LDAP server as the LDAP implementation. Administrators can create hierarchy and users using Apache Directory Studio.
 
 ![Authentication](_images/auth/authn_authz.png)
-
-# Security tools
-[Security Tools](Security-Tools.md)

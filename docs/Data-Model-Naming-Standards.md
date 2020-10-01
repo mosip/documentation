@@ -1,6 +1,6 @@
 ## Audience
 * Data Modelers
-* DBAs
+* Dadabase Administrators
 * Database Developers
 * Application Developers
 
@@ -41,11 +41,11 @@ Indexes are named as idx_(table-alias)_(column-abbreviation)
 
 ## Key Naming Standards (Primary, Unique, Foreign Keys)
 
-**Primary Key:** Each table should have a primary key, the key should be named as “pk_(table-alias)_(column-name)”. If it is a composite key, then in place of column name any meaning full name can be provided. 
+**Primary Key:** Each table should have a primary key, the key should be named as “pk_table-alias_column-name”. If it is a composite key, then in place of column name any meaning full name can be provided. 
 
-**Unique Key:** If a surrogate is used as PK then create a unique key, on fields that uniquely defines a business key. The naming of the unique key should be “uk_(table-alias)_(column-names)”.
+**Unique Key:** If a surrogate is used as PK then create a unique key, on fields that uniquely defines a business key. The naming of the unique key should be “uk_table-alias_column-names”.
 
-**Foreign Key:** Any references from a table with the other tables, the creating a foreign key is mandatory. This helps maintain referential integrity. Foreign key can be named as fk__(table-alias1)_(table-alias2)
+**Foreign Key:** Any references from a table with the other tables, the creating a foreign key is mandatory. This helps maintain referential integrity. Foreign key can be named as fk__table-alias1_table-alias2
 
 ## Attribute Standards
 
