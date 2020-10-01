@@ -3,9 +3,11 @@
 * Architecture
     * [Guiding Principles](Architecture-Principles.md)
     * [MOSIP Architecture](Architecture.md)
-    * [Technology Stack](Technology-Stack.md)
-    * [Data Architecture](Data-Architecture.md)
+        * [Technology Stack](Technology-Stack.md)
+    * [MOSIP and Data](Data-Architecture.md)
+        * [Naming Standards](Data-Model-Naming-Standards.md)
     * [Privacy & Security](Privacy-and-Security.md)    
+        * [Cryptography in MOSIP](Encryption-in-DTO-Layer.md)
 * Modules
     * [Pre-Registration](Pre-Registration.md)
         * [Pre Registration Functionality](Pre-Registration-Functionality.md)

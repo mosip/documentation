@@ -1,4 +1,4 @@
-# Encryption in DTO layer
+# Encryption of Data
 
 #### Background
 
