@@ -1,4 +1,5 @@
 # Design choices
+
 The MOSIP architecture decisions have been based on the [Guiding Principles](Architecture-Principles.md) defined in the charter. The design choices are in line with the need for modularity, loose coupling and scalability of it components, and being API first.
 * Micro-service based architecture for all platform services for modularity and scalability.
 * Staged Event Driven Architecture (SEDA) for processing Registration data for extensibility.
@@ -8,6 +9,7 @@ The MOSIP architecture decisions have been based on the [Guiding Principles](Arc
 The sections below provide different views of the logical architecture of MOSIP.
 
 # Functional Architecture
+
 From a MOSIP perspective, several actors are involved in the ID system.
 * The **Individual** or the **Resident** is the at the center of it all. It is their identity that the system deals with.
 * The **Officer** is a representative of the ID issuer. There are several specialized roles for the officer.
@@ -30,6 +32,7 @@ The diagram shows the functional architecture of mosip with the actors.
 
 
 # Modular Architecture
+
 Mosip has several modules that offer related functionality. These include the core modules of
 * Pre-registration
 * Registration client
@@ -43,7 +46,7 @@ and the support modules
 * Administration
 * Reporting
 
-Note: All user interface modules are reference implementations and can be uses as is, refactored or customized or replaced with alternative implementations in the actual deployment.
+**Note**: All user interface modules are reference implementations and can be uses as is, refactored or customized or replaced with alternative implementations in the actual deployment.
 
 The diagram below show the various modules of mosip with their respective service bouquets and their interaction.
 

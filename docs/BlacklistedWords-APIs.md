@@ -1,9 +1,5 @@
 This section details about the service APIs for the BlacklistedWords 
 
-
-* [BlacklistedWords Master API](#blacklistedwords-master-api)
-
-
 # BlacklistedWords Master API
 * [POST /blacklistedwords](#post-blacklistedwords)
 * [PUT /blacklistedwords](#put-blacklistedwords)
