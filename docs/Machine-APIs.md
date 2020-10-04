@@ -1,10 +1,10 @@
-This section contains detail about the service APIs in the Machine Masterdata module
+This section contains detail about the service APIs in the Machine Master data module
 * [Machines API](#machines-master-api)
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Machine functionality. Fetch APIs are used by Registration Processor to validate the Machine data received in packet to make sure the packet is generated in an authorized Machine.
 * [Machine Types Master API](#machine-types-master-api)
-These APIs includes Create, Update, Search and Filter API which are used by the Administrator Portal. Create and Update API is used for the Create and Update Machine Type functionality. Search API is used by the portal to fetch the list of Machine Types based on a filter criterion to display the list of Machine Types on the UI and Filter API is used by the portal to populate Machine Type Filter Dropdowns on the Portal UI.
+These APIs includes Create, Update, Search and Filter API which are used by the Administrator Portal. Create and Update API is used for the Create and Update Machine Type functionality. Search API is used by the portal to fetch the list of Machine Types based on a filter criterion to display the list of Machine Types on the UI and Filter API is used by the portal to populate Machine Type Filter Drop downs on the Portal UI.
 * [Machine Specification API](#machine-specification)
-These APIs include Create, Update, Search and Filter API which are used by the Administrator Portal. Create and Update API is used for the Create and Update Machine Specification functionality. Search API is used by the portal to fetch the list of Machine Specification based on a filter criterion to display the list of Machine Specification on the UI and Filter API is used to populate Machine Specification Filter Dropdowns on the Portal UI.
+These APIs include Create, Update, Search and Filter API which are used by the Administrator Portal. Create and Update API is used for the Create and Update Machine Specification functionality. Search API is used by the portal to fetch the list of Machine Specification based on a filter criterion to display the list of Machine Specification on the UI and Filter API is used to populate Machine Specification Filter Drop downs on the Portal UI.
 
 # Machines Master API
 * [POST /machines](#post-machines)
@@ -15,12 +15,13 @@ These APIs include Create, Update, Search and Filter API which are used by the A
 * [PUT /machines](#put-machines)
 * [POST /machines/search](#post-machines-search)
 * [POST /machines/filtervalues](#post-machines-filtervalues)
+* [GET /machines/mappedmachines/{regCenterId}](#get-machines-mappedmachines-regcenterid)
 
 ## POST /machines
-This service will create the list of Machines which are used in the MOSIP platform. Please find the steps to create primary/secondary languages in this [link](Registration-Center-APIs.md#create-update-api).
+This service will create the list of Machines which are used in the MOSIP platform. The record needs to be created in primary and secondary language with the same ID so that it becomes active.
 
 ### Resource URL
-`POST /machines`
+`POST https://{base_url}/v1/masterdata/machines`
 
 ### Resource details
 Resource Details | Description
@@ -32,13 +33,15 @@ Requires Authentication | Yes
 Name | Required | Description | Default Value | Example
 -----|----------|-------------|---------------|--------
 id|Yes|Id of the machine| | 
-name|Yes|Name of the machine| | 
-machineSpecId|Yes|Machine specification Id of the machine| | 
-serialNum|Yes|Serial number of the machine| | 
-langCode|Yes|Language code of the machine| | 
-ipAddress|No|Ip Address of the machine| | 
+ipAddress|No|IP Address of the machine| | 
 isActive|Yes|Is the machine active?| | 
-validityDateTime|Yes|Validity date of machine| | 
+langCode|Yes|Language code of the machine| | 
+macAddress|No|Mac Address of the machine| |
+machineSpecId|Yes|Machine specification Id of the machine| | 
+name|Yes|Name of the machine| | 
+publicKey|Yes|Public Key of the machine| | 
+serialNum|Yes|Serial number of the machine| | 
+validityDateTime|No|Validity date of machine| | 
 zoneCode|Yes|Zone code of machine| | 
 
 ### Example Request
@@ -47,16 +50,18 @@ zoneCode|Yes|Zone code of machine| |
   "id": "string",
   "metadata": {},
   "request": {
-  	"id":"10091",
+    "id": "string",
     "ipAddress": "192.168.0.150",
     "isActive": true,
     "langCode": "eng",
-    "macAddress": "8C-16-45-5A-5D-0D",
+    "macAddress": "E8-6A-64-1F-27-E7",
     "machineSpecId": "1001",
-    "name": "test machine1",
+    "name": "a2ml30847",
+    "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq5TnNAD1FMWWektYigmUMGw+MtNqjqLWaOZU9focDPT+nwMdw9vOs6S+Szw9Vd+zKVQ3AWkRSyfVD0qxHsPX5N6M6eS/UXvz72WF336MbbInfwzNP+uGfkprMQMt5qg21/rPSqWPU1NA9xN8lO2uPmUH4JNRBGRyvq6X1ETTDhqPsuKDwl9ciBScCMJxf/0bv2Dx7yI8lvYUaApqpoHNbBGVgDcq4f/KRZIU2kO0Ng1ESbj6D5fm0F8ZmFx3NVCKaSbBC8NUeltIRJ6+c9Csw1o23WSFTotViWeIDelsfQDq+tMmx9i9qlX3bcPZdcb7g2wm+4cywK1K5oOf3BEBxwIDAQAB",
+    "regCenterId": "10005",
     "serialNum": "NM5328114630",
-    "validityDateTime": "2018-12-10T06:12:52.994Z",
-    "zoneCode": "NTH"
+    "validityDateTime": "2020-10-01T05:47:13.367Z",
+    "zoneCode": "CST"
   },
   "requesttime": "2018-12-10T06:12:52.994Z",
   "version": "string"
@@ -69,24 +74,24 @@ zoneCode|Yes|Zone code of machine| |
 {
   "id": "string",
   "version": "string",
-  "responsetime": "2019-11-26T04:26:01.049Z",
+  "responsetime": "2020-10-01T05:52:44.871Z",
   "metadata": null,
   "response": {
     "isActive": false,
-    "createdBy": "110006",
-    "createdDateTime": "2019-11-26T04:26:01.179Z",
+    "createdBy": "110005",
+    "createdDateTime": "2020-10-01T05:52:44.894Z",
     "updatedBy": null,
     "updatedDateTime": null,
     "isDeleted": null,
     "deletedDateTime": null,
-    "id": "10100",
-    "name": "test machine1",
+    "id": "10000",
+    "name": "a2ml30847",
     "serialNum": "NM5328114630",
-    "macAddress": "8C-16-45-5A-5D-0D",
+    "macAddress": "E8-6A-64-1F-27-E7",
     "ipAddress": "192.168.0.150",
     "machineSpecId": "1001",
     "langCode": "eng",
-    "validityDateTime": "2018-12-10T06:12:52.994Z"
+    "validityDateTime": "2020-10-01T05:47:13.367Z"
   },
   "errors": null
 }
@@ -97,7 +102,7 @@ zoneCode|Yes|Zone code of machine| |
 This service will provides the service to fetch the complete List of machines with the machine details. 
 
 ### Resource URL
-`GET /machines`
+`GET https://{base_url}/v1/masterdata/machines`
 
 ### Resource details
 Resource Details | Description
@@ -120,16 +125,17 @@ Name | Required | Description | Default Value | Example
   "errors": null,
   "response": {
     "machines": [
-	  {
-        "id": "string",
-        "ipAddress": "string",
+      {
+        "id": "10001",
+        "name": "a2ml30846",
+        "serialNum": "NM5328114630",
+        "macAddress": "E8-6A-64-1F-27-E6",
+        "ipAddress": "192.168.0.150",
+        "machineSpecId": "1001",
+        "regCenterId": "10001",
+        "langCode": "eng",
         "isActive": true,
-        "langCode": "string",
-        "macAddress": "string",
-        "machineSpecId": "string",
-        "name": "string",
-        "serialNum": "string",
-        "validityDateTime": "2018-12-24T05:54:42.097Z"
+        "validityDateTime": null
       }
 	]
   }
@@ -141,7 +147,7 @@ Name | Required | Description | Default Value | Example
 This service will provides the service to fetch the List of machines with the machine details based on the language.
 
 ### Resource URL
-`GET /machines/{languagecode}`
+`GET https://{base_url}/v1/masterdata/machines/{lang_Code}`
 
 ### Resource details
 Resource Details | Description
@@ -165,15 +171,16 @@ languagecode| Yes | Machine Languge Code|
   "response": {
     "machines": [
 	  {
-        "id": "string",
-        "ipAddress": "string",
+        "id": "10001",
+        "name": "a2ml30846",
+        "serialNum": "NM5328114630",
+        "macAddress": "E8-6A-64-1F-27-E6",
+        "ipAddress": "192.168.0.150",
+        "machineSpecId": "1001",
+        "regCenterId": "10001",
+        "langCode": "eng",
         "isActive": true,
-        "langCode": "string",
-        "macAddress": "string",
-        "machineSpecId": "string",
-        "name": "string",
-        "serialNum": "string",
-        "validityDateTime": "2018-12-24T05:58:03.286Z"
+        "validityDateTime": null
       }
 	]
   }
@@ -182,10 +189,10 @@ languagecode| Yes | Machine Languge Code|
 **Response Code : 200 (OK)**
 
 ## GET /machineshistory/{id}/{languagecode}/{eff_dtimes}
-This service will provides the service for the List of machines with their history. 
+This service will provides the service will verify if a machine (id) was active at a particular time (eff_dtime). 
 
 ### Resource URL
-`GET /machineshistory/{id}/{languagecode}/{eff_dtimes}`
+`GET https://{base_url}/v1/masterdata/machineshistories/{id}/{lang_code}/{eff_dtimes}`
 
 ### Resource details
 Resource Details | Description
@@ -211,16 +218,16 @@ eff_dtimes|Yes |Effective Date and Time of the Machine|
   "response": {
     "machineHistoryDetails": [
       {
-        "effectDateTime": "2018-12-24T06:05:26.304Z",
-        "id": "string",
-        "ipAddress": "string",
+        "id": "10001",
+        "name": "a2ml30846",
+        "serialNum": "NM5328114630",
+        "ipAddress": "192.168.0.150",
+        "macAddress": "E8-6A-64-1F-27-E6",
+        "machineSpecId": "1001",
+        "langCode": "eng",
         "isActive": true,
-        "langCode": "string",
-        "macAddress": "string",
-        "machineSpecId": "string",
-        "name": "string",
-        "serialNum": "string",
-        "validityDateTime": "2018-12-24T06:05:26.304Z"
+        "effectDateTime": "2020-10-01T04:21:44.587Z",
+        "validityDateTime": null
       }
     ]
   }
@@ -232,7 +239,7 @@ eff_dtimes|Yes |Effective Date and Time of the Machine|
 This service will delete the machines. 
 
 ### Resource URL
-`DELETE /machines/{id}`
+`DELETE https://dev.mosip.net/v1/masterdata/machines/decommission/{id}`
 
 ### Resource details
 Resource Details | Description
@@ -248,14 +255,14 @@ machineId|Yes|The machineId| |
 ### Example Response
 ```JSON
 {
-  "id": "string",
-  "version": "string",
-  "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-  "errors": null,
+  "id": null,
+  "version": null,
+  "responsetime": "2020-10-04T17:14:36.127Z",
+  "metadata": null,
   "response": {
-    "id": "string"
-  }
+    "id": "10001"
+  },
+  "errors": null
 }
 ```
 **Response Code : 200 (OK)**
@@ -291,16 +298,17 @@ zoneCode|Yes|Zone code of machine| |
   "id": "string",
   "metadata": {},
   "request": {
-  	"id":"10100",
+    "id": "10000",
     "ipAddress": "192.168.0.150",
     "isActive": true,
-    "langCode": "eng",
-    "macAddress": "8C-16-45-5A-5D-0D",
+    "langCode": "ara",
+    "macAddress": "E8-6A-64-1F-27-E7",
     "machineSpecId": "1001",
-    "name": "test machine1",
-    "serialNum": "NM5328114630",
-    "validityDateTime": "2018-12-10T06:12:52.994Z",
-    "zoneCode": "NTH"
+    "name": "a2ml30847",
+    "regCenterId": "10005",
+    "serialNum": "string",
+    "validityDateTime": "2020-10-01T05:47:13.367Z",
+    "zoneCode": "BSN"
   },
   "requesttime": "2018-12-10T06:12:52.994Z",
   "version": "string"
@@ -312,24 +320,24 @@ zoneCode|Yes|Zone code of machine| |
 {
   "id": "string",
   "version": "string",
-  "responsetime": "2019-11-26T04:31:08.982Z",
+  "responsetime": "2020-10-01T06:04:48.156Z",
   "metadata": null,
   "response": {
     "isActive": true,
-    "createdBy": "110006",
-    "createdDateTime": "2019-11-26T04:31:15.344Z",
-    "updatedBy": "110006",
-    "updatedDateTime": "2019-11-26T04:31:15.344Z",
+    "createdBy": "110005",
+    "createdDateTime": "2020-10-01T05:52:44.894Z",
+    "updatedBy": "110005",
+    "updatedDateTime": "2020-10-01T06:04:48.176Z",
     "isDeleted": null,
     "deletedDateTime": null,
-    "id": "10100",
-    "name": "test machine1",
-    "serialNum": "NM5328114630",
-    "macAddress": "8C-16-45-5A-5D-0D",
+    "id": "10000",
+    "name": "a2ml30847",
+    "serialNum": "string",
+    "macAddress": "E8-6A-64-1F-27-E7",
     "ipAddress": "192.168.0.150",
     "machineSpecId": "1001",
-    "langCode": "eng",
-    "validityDateTime": "2018-12-10T06:12:52.994Z"
+    "langCode": "ara",
+    "validityDateTime": "2020-10-01T05:47:13.367Z"
   },
   "errors": null
 }
@@ -347,7 +355,7 @@ zoneCode|Yes|Zone code of machine| |
       "errorCode": "string",
       "message": "string"
     }],
-"response": null
+  "response": null
 }
 ```
 **Response Code : 200 (OK)**
@@ -394,41 +402,43 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
 ### Filter Values
 Please find the filter columns used in search
 1) name
-2) isActive
+2) id
 3) macAddress
 4) serialNum
-5) mapStatus
-6) machineTypeName
+5) machineSpecId
+6) ipAddress
+7) langCode
+8) regCenterId
 
 ### Example Request
 ```JSON
 {
   "id": "string",
   "metadata": {},
-  "requesttime": "2018-12-10T06:12:52.994Z",
-  "version": "string",
   "request": {
-	"filters": [
-	  {
-		"columnName": "",
-		"type": "in",
-		"value": "", 
-		"fromValue": "",  
-		"toValue": ""
-	  }
-	],
-	"sort": [
-	  {
-		"sortfield":"string",
-		"sorttype":"ASC"
-	  }
-	],
-	"pagination": {
-	  "pageStart":"number",
-	  "pageFetch":"number"
-	},
-	"languageCode":""
-  }
+    "filters": [
+      {
+        "columnName": "id",
+        "fromValue": null,
+        "toValue": null,
+        "type": "equals",
+        "value": "10000"
+      }
+    ],
+    "languageCode": "ara",
+    "pagination": {
+      "pageFetch": 10,
+      "pageStart": 0
+    },
+    "sort": [
+      {
+        "sortField": "name",
+        "sortType": "ASC"
+      }
+    ]
+  },
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
 }
 ```
 
@@ -437,27 +447,38 @@ Please find the filter columns used in search
 {
   "id": "string",
   "version": "string",
-  "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-  "errors": null,
+  "responsetime": "2020-10-01T06:08:35.133Z",
+  "metadata": null,
   "response": {
-     "data": [
+    "fromRecord": 1,
+    "toRecord": 1,
+    "totalRecord": 1,
+    "data": [
       {
-        "id": "string",
-        "ipAddress": "string",
         "isActive": true,
-        "langCode": "string",
-        "macAddress": "string",
-        "machineSpecId": "string",
-        "name": "string",
+        "createdBy": "110005",
+        "createdDateTime": "2020-10-01T05:54:02.667Z",
+        "updatedBy": "110005",
+        "updatedDateTime": "2020-10-01T06:08:20.040Z",
+        "isDeleted": null,
+        "deletedDateTime": null,
+        "id": "10000",
+        "name": "a2ml30847",
         "serialNum": "string",
-        "validityDateTime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        "macAddress": "E8-6A-64-1F-27-E7",
+        "ipAddress": "192.168.0.150",
+        "machineSpecId": "1001",
+        "langCode": "ara",
+        "validityDateTime": "2020-10-01T05:47:13.367Z",
+        "regCenterId": "10005",
+        "zoneCode": "BSN",
+        "zone": "بنسليمان",
+        "machineTypeName": "الحاسوب",
+        "mapStatus": "مركز مهدية"
       }
-    ],
-	"fromRecord" : "number",
-	"toRecord":"number",
-	"totalRecord":"number"
-  }
+    ]
+  },
+  "errors": null
 }
 ```
 **Response Code : 200 (OK)**
@@ -487,17 +508,18 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 {
   "id": "string",
   "metadata": {},
+  "request": {
+    "filters": [
+      {
+        "columnName": "zoneCode",
+        "text": "S",
+        "type": "unique"
+      }
+    ],
+    "languageCode": "eng"
+  },
   "requesttime": "2018-12-10T06:12:52.994Z",
   "version": "string"
-  "request": {
-	"filters" : [
-	  {
-		"columnName": ""
-		"type": "unique"
-	  }
-	],
-	"languageCode": "string",
-  }
 }
 ```
 
@@ -506,21 +528,109 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 {
   "id": "string",
   "version": "string",
-  "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-  "errors": null,
+  "responsetime": "2020-10-01T06:14:25.624Z",
+  "metadata": null,
   "response": {
     "filters": [
-	  {
-		"fieldCode": "string",
-		"fieldID": "string",
-		"fieldValue": "string"
-	  }
-	]
-  }
+      {
+        "fieldID": "zoneCode",
+        "fieldValue": "BSN",
+        "fieldCode": "10000"
+      },
+      {
+        "fieldID": "zoneCode",
+        "fieldValue": "CST",
+        "fieldCode": "10005"
+      }
+    ]
+  },
+  "errors": null
 }
 ```
 **Response Code : 200 (OK)**
+
+## GET /machines/mappedmachines/{regCenterId}
+This service will fetch all the machines mapped to a registration center.
+
+### Resource URL
+`POST https://{base_url}/v1/masterdata/machines/mappedmachines/{reg_center_id}?direction=DESC&orderBy={field_name}&pageNumber=1&pageSize=10`
+
+### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Query Parameters
+Name | Required | Description | Default Value | Example
+-----|----------|-------------|---------------|--------
+direction|No|ASC or DESC| |
+orderBy|No|Column Name| |
+pageNumber|No|Page Number| 1 | 
+pageSize|No|Page Size| 10| 
+
+### Request Body
+-NA-
+
+### Response Body
+
+#### Success Response
+```JSON
+{
+  "id": null,
+  "version": null,
+  "responsetime": "2020-10-04T17:34:33.334Z",
+  "metadata": null,
+  "response": {
+    "pageNo": 1,
+    "pageSize": 10,
+    "sort": {
+      "sorted": true,
+      "unsorted": false
+    },
+    "totalItems": 1,
+    "totalPages": 1,
+    "data": [
+      {
+        "isActive": true,
+        "createdBy": "superadmin",
+        "createdDateTime": "2020-10-01T04:21:44.266Z",
+        "updatedBy": null,
+        "updatedDateTime": null,
+        "isDeleted": null,
+        "deletedDateTime": null,
+        "regCentId": "10002",
+        "id": "10032",
+        "name": "a2ml29106",
+        "serialNum": "FB5962911665",
+        "macAddress": "38-BA-F8-53-C7-8F",
+        "ipAddress": "192.168.0.358",
+        "machineSpecId": "1001",
+        "langCode": "fra"
+      }
+    ]
+  },
+  "errors": null
+}
+```
+**Response Code : 200 (OK)**
+
+#### Failure Response
+```JSON
+{
+  "id": null,
+  "version": null,
+  "responsetime": "2020-10-04T17:36:11.928Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "KER-MSD-030",
+      "message": "Machine not Found"
+    }
+  ]
+}
+```
 
 ----
 
