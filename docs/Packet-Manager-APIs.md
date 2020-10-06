@@ -1,17 +1,17 @@
 This section details about the REST services in Commons Packet Manager.
 
 # Packet Reader APIs
-These APIs are used to read packet from object store -
-1. [Get Audits](#1-get-audits)
-2. [Get Biometrics](#2-get-biometrics)
-3. [Get Documents](#3-get-documents)
-4. [Get Meta Info](#4-get-meta-info)
-5. [Search Field](#5-search-field)
-6. [Search Fields](#6-search-fields)
-7. [Validate Packet](#7-validate-packet)
+These APIs are used to read packet from object store:
 
+1. [Get Audits](#get-audits)
+2. [Get Biometrics](#get-biometrics)
+3. [Get Documents](#get-documents)
+4. [Get Meta Info](#get-meta-info)
+5. [Search Field](#search-field)
+6. [Search Fields](#search-fields)
+7. [Validate Packet](#validate-packet)
 
-# 1 Get Audits
+## Get Audits
 API to fetch the audit details from a packet.
 
 ### Resource URL
@@ -122,7 +122,7 @@ KER-PUT-014|Packet keeper exception occured.|
 KER-PUT-019|Packet Integrity check failed|
 
 
-# 2 Get Biometrics
+## Get Biometrics
 API to fetch the biometric details from a packet.
 
 ### Resource URL
@@ -959,7 +959,7 @@ KER-PUT-005|Unable to fetch identity json from all sub packets|
 KER-PUT-008|Unable to fetch meta information from all sub packets|
 
 
-# 3 Get Documents
+## Get Documents
 
 ### Resource URL
 `POST https://{base_url}/commons/v1/packetmanager/document`
@@ -1052,7 +1052,7 @@ KER-PUT-005|Unable to fetch identity json from all sub packets|
 KER-PUT-008|Unable to fetch meta information from all sub packets|
 KER-PUT-011|Failed to get document|
 
-# 4 Get Meta Info
+## Get Meta Info
 
 ### Resource URL
 `POST https://{base_url}/commons/v1/packetmanager/metaInfo`
@@ -1141,7 +1141,7 @@ request.source | Y | Source of the Packet.
 ### Failure Details
 Error Code | Message | Scenario
 -----------|---------|---------
-KER-ATH-401 | Authentication Failed | Authentication Failure
+KER-ATH-401|Authentication Failed|Authentication Failure
 KER-PUT-002|Unable to Find File in Destination Folder|
 KER-PUT-003|Packet decryption failed|
 KER-PUT-005|API not accessible|
@@ -1153,7 +1153,7 @@ KER-PUT-019|Packet Integrity check failed|
 KER-PUT-005|Unable to fetch identity json from all sub packets|
 KER-PUT-008|Unable to fetch meta information from all sub packets|
 
-# 5 Search Field
+## Search Field
 
 ### Resource URL
 `POST https://{base_url}/commons/v1/packetmanager/searchField`
@@ -1245,7 +1245,7 @@ KER-PUT-014|Packet keeper exception occured.|
 KER-PUT-019|Packet Integrity check failed|
 KER-PUT-005|Unable to fetch identity json from all sub packets|
 
-# 6 Search Fields
+## Search Fields
 
 ### Resource URL
 `POST https://{base_url}/commons/v1/packetmanager/searchFields`
@@ -1340,7 +1340,7 @@ KER-PUT-014|Packet keeper exception occured.|
 KER-PUT-019|Packet Integrity check failed|
 KER-PUT-005|Unable to fetch identity json from all sub packets|
 
-# 7 Validate Packet
+## Validate Packet
 
 ### Resource URL
 `POST https://{base_url}/commons/v1/packetmanager/validatePacket`
@@ -1433,7 +1433,7 @@ KER-PUT-008|Unable to fetch meta information from all sub packets|
 # Packet Writer API
 This service is used to create registration packet and store it in object-store.
 
-# 1 Create Packet
+## Create Packet
 
 ### Resource URL
 `PUT https://{base_url}/commons/v1/packetmanager/createPacket`
