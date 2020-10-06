@@ -1,64 +1,29 @@
-## Table Of Contents
-- [Common Services](#common-services)
-  * [1. OTP Manager](#1-otp-manager-) _(CMN_FR_1)_
-  * [2. QR Code Generator](#2-qr-code-generator-) _(CMN_FR_2)_
-  * [3. Crypto Services](#3-crypto-services-)
-    * [3.1 Cryptography Services](#31-cryptography-services-) _(CMN_FR_3.1)_
-    * [3.2 Key Generator](#32-key-generator-) _(CMN_FR_3.2)_
-    * [3.3 Key Management](#33-key-management-) _(CMN_FR_3.3)_
-    * [3.4 Crypto Utility](#34-crypto-utility-) _(CMN_FR_3.4)_
-    * [3.5 Hash Utility](#35-hash-utility-) _(CMN_FR_3.5)_
-    * [3.6 HMAC Utility/Checksum Utility](#36-hmac-utilitychecksum-utility-) _(CMN_FR_3.6)_
-  * [4. Notification](#4-notification-) 
-    * [4.1 OTP Notification Services](#41-otp-notification-services-) _(CMN_FR_4.1)_
-    * [4.2 Email Notification](#42-email-notification-) _(CMN_FR_4.2)_
-    * [4.3 SMS Notification](#43-sms-notification-) _(CMN_FR_4.3)_
-    * [4.4 PDF Generator](#44-pdf-generator-) _(CMN_FR_4.4)_
-    * [4.5 Template Merger](#45-template-merger-) _(CMN_FR_4.5)_
-  * [5. Transliteration](#5-transliteration-) _(CMN_FR_5)_
-  * [6. MOSIP Utils](#6-mosip-utils-) 
-    * [6.1 Mobile Data Validator](#61-mobile-data-validator-) _(CMN_FR_6.1)_
-    * [6.2 Email Data Validator](#62-email-data-validator-) _(CMN_FR_6.2)_
-    * [6.3 Exception Framework](#63-exception-framework-) _(CMN_FR_6.3)_
-    * [6.4 Calendar Utility](#64-calendar-utility-) _(CMN_FR_6.4)_
-    * [6.5 Date Utility](#65-date-utility-) _(CMN_FR_6.5)_
-    * [6.6 File Utility](#66-file-utility-) _(CMN_FR_6.6)_
-    * [6.7 Json Utility](#67-json-utility-) _(CMN_FR_6.7)_
-    * [6.8 Math Utility](#68-math-utility-) _(CMN_FR_6.8)_
-    * [6.9 String Utility](#69-string-utility-) _(CMN_FR_6.9)_
-    * [6.10 UUID Utility](#610-uuid-utility-) _(CMN_FR_6.10)_
-    * [6.11 Zip-Unzip Utility](#611-zip-unzip-utility-) _(CMN_FR_6.11)_
-    * [6.12 Log Utility](#612-log-utility-) _(CM_FR_6.12)_
-    * [6.13 ID Object Validator Utility](#613-id-object-validator-utility-) _(CM_FR_6.13)_
-   * [7. Virus Scaner](#7-virus-scanner-) _(CMN_FR_7)_
-- [List of Configurable Parameters and Processes](#list-of-configurable-parameters-and-processes-)
-- [Kernel API](#kernel-api-)
-# Common Services
-## 1. OTP Manager [**[↑]**](#table-of-contents)
-### A. OTP Generation
+# OTP Manager
+
+## OTP Generation
+
 1. OTP Manager Component handles OTP Generation and OTP Validation
 1. For OTP Generation, system receives a request to generate an OTP along with a Key in input parameter. 
 1. This Key can be a Mobile number, Email ID or a combination of Mobile Number and Email ID. 
 1. The component generates an OTP as per the configured length and responds back with the OTP to the source. OTP manager maps an expiry period with the OTP as configured by the Admin.
 
-### B. OTP Validation
+## OTP Validation
+
 1. For OTP Validation, system receives a request to validate an OTP with a Key and OTP in input parameter. 
-
 1. The component validates the OTP against the expiry and then validates the OTP against the Key if the OTP is not expired. 
-
 1. If the OTP is not expired and is valid against the Key, it will respond with message “Valid” else responds with “Invalid”. 
-
 1. A user will have a maximum configured number of tries to get the OTP wrong after which he/she will be blocked for a configured amount of time. During this blocked period, he/she cannot generate or validate another OTP.
 
-## 2. QR Code Generator [**[↑]**](#table-of-contents)
+# QR Code Generator
+
 QR code generator takes the content received along with the version number and converts the content into a QR code. The version number is configurable and determines how much data a QR code can store. The more the version number, the more data can be stored in a QR Code.
 
-## 3. Crypto Services [**[↑]**](#table-of-contents)
+# Crypto Services
 
-### 3.1 Cryptography Services [**[↑]**](#table-of-contents)
+## Cryptography Services
 Crypto service encrypts or decrypts data across MOSIP with the help of Public/Private Keys.
 
-#### A. For Encryption
+### For Encryption
 The Crypto Service receives a request from an application with input parameters – Application ID, Reference ID, Timestamp and the Data which needs to be encrypted. 
 The Service then calls the Key Generator API to get a symmetric Key and encrypts the data using that symmetric Key. 
 
@@ -66,35 +31,32 @@ The Service then calls the Key Manager Service with the Application ID and Times
 
 The Service then encrypts the symmetric key using the Public key and joins the Encrypted data and Encrypted Symmetric Key using a Key splitter and respond to the source with the joined data.
 
-#### B. For Decryption
+### For Decryption
 The Crypto Service will receive a request from an application with input parameters – Application ID, Reference ID, Timestamp and Data that needs to be decrypted. 
-
 
 The Application ID received will be the one, which was sent for encryption of data in the above flow. 
 
-
 The Crypto Service then splits the received data into Encrypted Content and Encrypted Symmetric Key using the Key Splitter and then calls the Key Manager Service with the Encrypted Symmetric Key, Application ID and Timestamp to decrypt the data using private key.
-
 
 The Key Manager instead of responding with the private key, decrypts the symmetric itself and send it back to the crypto service. The service then uses this symmetric key to decrypt data and send the decrypted data back to the source.
 
-### 3.2 Key Generator [**[↑]**](#table-of-contents)
+## Key Generator
 
-#### A. Generate a Symmetric Key
+### Generate a Symmetric Key
 
 Upon receiving a request to generate symmetric key pair the system generates a key pair (public and private key) as defined below and responds with the symmetric key
 * The symmetric key generated supports AES algorithm
 * The symmetric key generated is of 256 bit size
 * The symmetric will be returned as a byte array
 
-#### B. Generate an Asymmetric Key
+### Generate an Asymmetric Key
 
 Upon receiving a request to generate asymmetric key pair the system generates a key pair (public and private key) as defined below and responds with the Asymmetric key
 * The asymmetric key pair is generated using the RSA encryption
 * The asymmetric key pair generated is of 2048 bit size
 * The asymmetric is returned as a byte array
 
-### 3.3 Key Management [**[↑]**](#table-of-contents)
+## Key Management
 
 1. The Key Manager Service works together with the Crypto Service. 
 1. It receives a request from Crypto Service from Public Key with the Application ID and Timestamp. 
@@ -102,23 +64,26 @@ Upon receiving a request to generate asymmetric key pair the system generates a 
 1. In case, the public key is expired against that Application ID, it will generate a new Public Key and respond with it.
 1. When there is a request to decrypt data, the private key of the application id or reference id is used. The Key manager will not respond with Private Key but instead takes the encrypted data from the source and decrypts it itself and responds with decrypted content
 
-### 3.4 Crypto Utility [**[↑]**](#table-of-contents)
+## Crypto Utility
 
-The crypto utility is supports encryption and decryption. It provides a utility called as key splitter which performs following functions
+The crypto utility is supports encryption and decryption. It provides a utility called as key splitter which performs following functions:
+
 1. It combines the encrypted data and encrypted the symmetric key while sending encrypted content to the source
 2. It also splits the encrypted data and encrypted the symmetric key while receiving the content for decryption
  
-### 3.5 Hash Utility [**[↑]**](#table-of-contents)
+## Hash Utility 
+
 1. Identifies hash util methods
 1. Creates wrapper class for methods defined in apache-commons hash util
 1. Raises an alert in case of listed
-### 3.6 HMAC Utility/Checksum Utility [**[↑]**](#table-of-contents)
+
+## HMAC Utility/Checksum Utility
 
 A HMAC/checksum function is a way to create a compact representation of an arbitrarily large amount of data 
 
-## 4. Notification [**[↑]**](#table-of-contents)
+# Notification
 
-### 4.1 OTP Notification Services [**[↑]**](#table-of-contents)
+## OTP Notification Services
 
 1. OTP Notification Services is a combined service, which receives a request to generate an OTP and responds directly to the User using SMS or Email Notification. 
 1. The service receives a request to generate and send OTP with User ID, OTP Channel (MOBILE and/or EMAIL), Template Variables, and Template Context (SMS and/or Email). 
@@ -128,26 +93,30 @@ A HMAC/checksum function is a way to create a compact representation of an arbit
 1. The choice of sending SMS and/or Email depends on the Notification Type Flag received in Input.
 1. The system responds with the error message if a particular User ID does not have an Email or Mobile number registered against it if the otp channel received is Email or Mobile number respectively 
 
-### 4.2 Email Notification [**[↑]**](#table-of-contents)
+## Email Notification
 
 1. This service triggers an Email Notification upon receiving a request to trigger notification with Recipient Email-ID, CC Recipients Email-IDs, Subject, Email Content, and Attachment as input parameter. 
 1. The restriction on Attachment and its size is configurable. 
 1. The Third-Party Email Vendor is configurable and any country specific vendor can be used.
 
-### 4.3 SMS Notification [**[↑]**](#table-of-contents)
+## SMS Notification
+
 This service triggers an SMS Notification upon receiving a request to trigger notification with Phone Number and Content as input parameter. The third-party SMS Vendor is configurable and any country specific vendor can be used.
 
-### 4.4 PDF Generator [**[↑]**](#table-of-contents)
+## PDF Generator
+
 This utility enables creation of PDF from the content received. It will receive a content in input parameter, convert it into a PDF document, and respond with it to the source.
 
 PDF Generator also supports the feature to generate a Password Protected PDF with an additional input parameter “Password”, which is an optional parameter.
 
 **NOTE**: If a Password is not received, then PDF Generator will generate the PDF of received content without the password protection.
 
-### 4.5 Template Merger [**[↑]**](#table-of-contents)
+## Template Merger
+
 This utility merges a Template with Placeholders with the dynamic values to form the content to be sent as Notifications or Acknowledgement. The Utility will receive a template and dynamic values from a source. It will merge the values and template and respond with the processed content.
 
-## 5. Transliteration [**[↑]**](#table-of-contents)
+# Transliteration
+
 MOSIP system can facilitate transliteration by integrating with a third party service provider. Receive a request for transliteration with the required input parameters (Word, Input Language Code, and Output Language Code)
 
 1. Validates if all required input parameters have been received as listed below for each specific request
@@ -158,9 +127,9 @@ MOSIP system can facilitate transliteration by integrating with a third party se
 1. In case of Exceptions, system triggers relevant error messages.
 
 
-## 6. MOSIP Utils [**[↑]**](#table-of-contents)
+# MOSIP Utils
 
-### 6.1 Mobile Data Validator [**[↑]**](#table-of-contents)
+## Mobile Data Validator
 
 Upon receiving a request to validate a mobile number against configured mobile number policy, the system validates the mobile number against the policy
 
@@ -173,7 +142,7 @@ Upon receiving a request to validate a mobile number against configured mobile n
 1. Responds to the source with the result (Valid/Invalid)
 1. Raises an alert in case of exceptions.
 
-### 6.2 Email Data Validator [**[↑]**](#table-of-contents)
+## Email Data Validator
 
 Upon receiving a request to validate an Email ID against the standard Email ID policy, system validates the Email ID against the Standard Email ID format
 
@@ -191,46 +160,47 @@ Upon receiving a request to validate an Email ID against the standard Email ID p
 1. Responds to the source with the result (Valid/Invalid)
 1. Raises an alert in case of exceptions 
 
-### 6.3 Exception Framework [**[↑]**](#table-of-contents)
+## Exception Framework
+
 MOSIP system provides base exception framework.
 
-### 6.4 Calendar Utility [**[↑]**](#table-of-contents)
+## Calendar Utility
 
 1. Identifies Calendar util methods
 1. Creates wrapper class for methods defined in apache-commons Calendar util
 1. Raises an alert in case of listed exceptions 
 
-### 6.5 Date Utility [**[↑]**](#table-of-contents)
+## Date Utility
 
 1. Identifies File util methods
 1. Creates wrapper class for methods defined in apache-commons date and time util
 1. Raises an alert in case of listed exceptions 
 
-### 6.6 File Utility [**[↑]**](#table-of-contents)
+## File Utility
 
 1. Identifies File util methods
 1. Creates wrapper class for methods defined in apache-commons File util
 1. Raises an alert in case of listed exceptions 
 
-### 6.7 Json Utility [**[↑]**](#table-of-contents)
+## JSON Utility
 
-1. Identifies Json util methods
-1. Creates wrapper class for methods defined in apache-commons Json util
+1. Identifies JSON util methods
+1. Creates wrapper class for methods defined in apache-commons JSON util
 1. Raises an alert in case of listed exceptions 
 
-### 6.8 Math Utility [**[↑]**](#table-of-contents)
+## Math Utility
 
 1. Identifies Math util methods
 1. Creates wrapper class for methods defined in apache-commons Math util
 1. Raises an alert in case of listed exceptions 
 
-### 6.9 String Utility [**[↑]**](#table-of-contents)
+## String Utility
 
 1. Identifies String util methods
 1. Creates wrapper class for methods defined in apache-commons String util
 1. Raises an alert in case of listed exceptions
 
-### 6.10 UUID Utility [**[↑]**](#table-of-contents)
+## UUID Utility
 
 1. Upon receiving a request to generate UUID the system generates UUID as per default UUID generation logic
 1. UUID generated should be as per UUID Version 5
@@ -239,19 +209,19 @@ MOSIP system provides base exception framework.
 1. Responds with the UUID to the source
 1. Raises an alert in case of listed exceptions
 
-### 6.11 Zip-Unzip Utility [**[↑]**](#table-of-contents)
+## Zip-Unzip Utility
 
 1. Identifies Zip-Unzip util methods
 1. Creates wrapper class for methods defined in apache-commons Zip-Unzip util
 1. Raises an alert in case of listed exceptions
 
-### 6.12 Log Utility [**[↑]**](#table-of-contents)
+## Log Utility
 
 1. Generate logs across the application
 1. Store generated logs in configured location
 1. Raises an alert in case of listed exceptions
 
-### 6.13 ID Object Validator Utility [**[↑]**](#table-of-contents)
+## ID Object Validator Utility
 
 1. Validate the Attributes in ID object against the Pre-Defined pattern and Master data values
    * Validate Gender Types against country defined Masterdata
@@ -268,21 +238,12 @@ MOSIP system provides base exception framework.
    * Validate Country Code against country configured pattern
 2. Respond with proper error messages in case of any validation faliure
 
-## 7 Virus Scanner [**[↑]**](#table-of-contents)
+# Virus Scanner
+
 Virus Scanner utility allows for virus scanning across MOSIP at various places. This includes:
 
 1. Scanning of Document uploaded in Pre-registration
 2. Scanning in Registration Client Software
 3. Scanning of Registration packet in Registration Processor
 
-Currently for Virus Scanner, MOSIP has integrated with Clam Antivirus which allows for 290 concurrent users.
-A Country may integrate their own Licensed version of antivirus as per their requirement.
-
-### List of Configurable Parameters and Processes [**[↑]**](#table-of-contents)
-
-[**Link to Configurable Parameters of Kernel**](https://github.com/mosip/mosip-config/blob/master/config-templates/kernel-env.properties)
-
-[**Link to Kernel Application Properties**](https://github.com/mosip/mosip-config/blob/master/config-templates/application-env.properties)
-
-### Kernel API [**[↑]**](#table-of-contents)
-[**Refer to Wiki for more details on Kernel API**](Kernel-APIs.md)
+Currently for Virus Scanner, MOSIP has integrated with Clam Antivirus which allows for 290 concurrent users. A Country may integrate their own Licensed version of antivirus as per their requirement.

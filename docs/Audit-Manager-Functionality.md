@@ -50,9 +50,3 @@ Log manager provides following functionalities:
 1. Support for reading the logger configurations through as external file
 1. Support addition log level to a particular logger dynamically
 
-## List of Configurable Parameters
-[**Link to Configurable Parameters of Kernel**](https://github.com/mosip/mosip-config/blob/master/config-templates/kernel-env.properties)
-
-## Kernel API 
-[**Refer to Wiki for more details on Kernel API**](Kernel-APIs.md)
-
