@@ -1,52 +1,9 @@
-# Table Of Contents
+# Master Data Management
 
-  * [1. Master Data Management](#1-master-data-management-) 
-    * [1.1 Location Hierarchy - Create/Read/Update/Delete](#11-location-hierarchy---createreadupdatedelete-)
-    * [1.2 List of Holidays - Create/Read/Update](#12-list-of-holidays---createreadupdate-)
-    * [1.3 Biometric Authentication Type - Create/Read (WIP)](#13-biometric-authentication-type---createread-)
-    * [1.4 Biometric Attribute Type - Create/Read (WIP)](#14-biometric-attribute-type---createread-)
-    * [1.5 Gender - Create/Read/Update](#15-gender---createreadupdate-)
-    * [1.6 Document Category - Create/Read/Update (WIP)](#16-document-category---createreadupdate-)
-    * [1.7 Document Type - Create/Update/Delete](#17-document-type---createupdatedelete-)
-    * [1.8 Applicant Type - Document Category - Document Type Mapping - Read (WIP)](#18-applicant-type---document-category---document-type-mapping---read-)
-    * [1.9 List of Rejection Reasons - Create/Read (WIP)](#19-list-of-rejection-reasons---createread-)
-    * [1.10 List of Languages - Create/Read/Update/Delete (WIP)](#110-list-of-languages---createreadupdatedelete-)
-    * [1.11 List of Titles - Create/Read/Update](#111-list-of-titles---createreadupdate-)
-    * [1.12 Template File Format - Create/Update/Delete (WIP)](#112-template-file-format---createupdatedelete-)
-    * [1.13 List of Template Types - Create (WIP)](#113-list-of-template-types---create-)
-    * [1.14 List of Templates - Create/Read/Update](#114-list-of-templates---createreadupdate-)
-    * [1.15 List of Blacklisted Words - Create/Read/Update/Delete](#115-list-of-blacklisted-words---createreadupdatedelete-)
-    * [1.16 List of Reason Categories - Create (WIP)](#116-list-of-reason-categories---create-)
-    * [1.17 List of Applications - Create/Read (WIP)](#117-list-of-applications---createread-)
-    * [1.18 List of ID Types - Create/Read (WIP)](#118-list-of-id-types---createread-)
-    * [1.19 User Details](#119-user-details-)
-    * [1.20 Document Type - Category Mapping](#120-document-type-to-category-mapping---mapunmap-)
-    * [1.21 Working and Non-Working Days](#121-working-and-non-working-days-)
-    * [1.22 Exceptional Holidays for a Center](#122-exceptional-holidays-for-a-center-)
-  * [2. Registration Management](#2-registration-management-)
-    * [2.1 Registration Center Type - Create/Update](#21-registration-center-type---createupdate-)
-    * [2.2 Registration Center - Create/Read/Update/Delete](#22-registration-center---createreadupdatedecommission-)
-    * [2.3 List of Machine Types - Create/Update](#23-list-of-machine-types---createupdate-)
-    * [2.4 List of Machine Specifications - Create/Update](#24-list-of-machine-specifications---createupdate-)
-    * [2.5 List of Machines - Create/Read/Update/Decommission](#25-list-of-machines---createreadupdatedecommission-)
-    * [2.6 Mappings of Registration Center, Machine and User Mappings - Create/Read/Delete (WIP)](#26-mappings-of-registration-center-machine-and-user-mappings---createreaddelete-)
-    * [2.7 List of Devices - Create/Read/Update/Decommission](#27-list-of-devices---createreadupdatedecommission-)
-    * [2.8 List of Device Specifications - Create/Read/Update](#28-list-of-device-specifications---createreadupdate-)
-    * [2.9 List of Device Types - Create/Update](#29-list-of-device-types---createupdate-)
-    * [2.10 Mappings of Registration Center and Machine - Create/Delete](#210-mappings-of-registration-center-and-machine---mapunmap-)
-    * [2.11 Mappings of Registration Center and Device - Create/Read/Delete](#211-mappings-of-registration-center-and-device---mapunmapread-)
-    * [2.12 Mappings of Registration Center, Machine and Device - Create/Delete (WIP)](#212-mappings-of-registration-center-machine-and-device---createdelete-)
-    * [2.13 Mappings of Registration Center and User- Create/Delete](#213-mappings-of-registration-center-and-user---mapunmap-)
-  * [3. MISP Management](#3-MISP-management--) 
-    * [3.1 MISP - Create/Read/Update/Delete](#31-misp---createreadupdatedelete-)
-      * [3.1.1 License Key Allocation- Create/Read/Update/Delete](#311-license-key-allocation--createreadupdatedelete)
-  *  [Kernel API](#kernel-api-)
-  
-# 1. Master Data Management
+## Location Hierarchy
 
-## 1.1 Location Hierarchy - Create/Read/Update/Delete [**[↑]**](#table-of-contents)
+### Create Location Hierarchy
 
-### A. Create Location Hierarchy in the Master database 
 Upon receiving a request to add Location hierarchy (e.g., Country - Region - Province - City- LAA) with the input parameters (code, name, hierarchy_level, hierarchy_level_name, parent_loc_code ,lang_code and is_active), the system stores the Location hierarchy in the Database
 
 While storing the location hierarchy in the database, the system performs the following steps:
@@ -71,8 +28,9 @@ While storing the location hierarchy in the database, the system performs the fo
 8. The component restricts the bulk creation of Master Data through API. However it could be done through a script as need be depending on the requirement of the country.
 9. In case of exceptions, system triggers error messages as received from the Database
 
-### B. Update a Location in Location Master Database
-On receiving a  request to update a Location with the input parameters (code, name, hierarchy_level, hierarchy_level_name, parent_loc_code, lang_code and is_active), the system updates the Location in the Location Database
+### Update a Location
+
+On receiving a request to update a Location with the input parameters (code, name, hierarchy_level, hierarchy_level_name, parent_loc_code, lang_code and is_active), the system updates the Location in the Location Database
 for the code received.
 
 The system performs the following steps to update the location in the Master Database:
@@ -99,7 +57,8 @@ The system performs the following steps to update the location in the Master Dat
 12. Responds with appropriate message if the Location is updated successfully
 13. In case of Exceptions, system triggers relevant error messages
 
-### C. Check the existence of a Location in Master Database
+### Verify Location
+
 Upon receiving a request to validate the Location Name with input parameters (Location Name), the system checks the Location Name in the Master Database
 
 While checking the location in the Database, the system performs the following steps:
@@ -109,7 +68,8 @@ While checking the location in the Database, the system performs the following s
 2. If the mandatory input parameters are missing, throw the appropriate message
 1. In case of Exceptions, system triggers relevant error messages
 
-### D. Fetch Location Hierarchy Levels based on a Language Code
+#### Fetch Location Hierarchy Levels based on a Language Code
+
 Upon receiving a request to fetch the Location Hierarchy Levels with input parameters (Language Code), the system fetches the Location Hierarchy Levels in the requested language. The following steps are performed by the system: 
 
 1. Validates if the request contains following input parameters (Language Code)
@@ -120,7 +80,8 @@ Upon receiving a request to fetch the Location Hierarchy Levels with input param
 	* IsActive
 3. In case of Exceptions, system triggers relevant error messages
 
-### E. Fetch the Location Hierarchy Data based on a Location Code and a Language Code
+#### Fetch the Location Hierarchy Data based on a Location Code and a Language Code
+
 Upon receiving a  request to fetch all the Location Hierarchy Data with input parameters (Location Code and Language Code), the system fetches the Location Hierarchy Data based on requested Location code and language code. The following steps are performed by the system:
 
 1. Validates if the request contains the following input parameters
@@ -159,7 +120,8 @@ Upon receiving a  request to fetch all the Location Hierarchy Data with input pa
 4. Responds to the source with all the Location Hierarchy Data based on the Location Code
 1. In case of Exceptions, system triggers relevant error messages. 
 
-### F. Fetch the Location Hierarchy Data for the bottom next hierarchy based on a Location Code and a Language Code
+#### Fetch the Location Hierarchy Data for the bottom next hierarchy based on a Location Code and a Language Code
+
 Upon receiving a request to fetch all the Location Hierarchy Data with input parameters (Location Code and Language Code), the system fetches the Location Hierarchy Data for the next hierarchy level. The following steps are performed by the system:
 
 1. Validates if the request contains the following input parameters
@@ -170,7 +132,8 @@ Upon receiving a request to fetch all the Location Hierarchy Data with input par
 1. Responds to the source with the data fetched
 1. In case of Exceptions, system should trigger an error message. 
 
-### G. Delete a Location in Location Master Database
+#### Delete a Location
+
 On receiving a request to delete a Location with the input parameters (code), the system updates the is_deleted flag to true in the Location Database against the code received. 
 
 The system performs the following steps in order to delete the loaction received in the code:
@@ -185,9 +148,10 @@ The system performs the following steps in order to delete the loaction received
 7. In case of Exceptions, system triggers relevant error messages. 
 
 
-## 1.2 List of Holidays - Create/Read/Update [**[↑]**](#table-of-contents)
+## List of Holidays
 
-### A. Create Holiday data in Master Database
+### Create Holiday
+
 Upon receiving a request to add Holiday Data with the input parameters (location_code, holiday_date, holiday_name, holiday_desc, lang_code and is_active), the system stores the Holiday in the Database. The following steps are performed by the system:
 
 1. This API should only be accessible to Global Admin
@@ -211,7 +175,7 @@ Upon receiving a request to add Holiday Data with the input parameters (location
 12. API should only allow creation of one record at a time and should restrict bulk creation
 13. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-### B. Update Holiday data in Master Database
+### Update Holiday
 
 1. This API should only be accessible to Global Admin
 2. The API should accept only the below parameter
@@ -235,7 +199,8 @@ Upon receiving a request to add Holiday Data with the input parameters (location
 12. API should only allow creation of one record at a time and should restrict bulk creation
 13. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-### C. Fetch List of Holidays based on a Registration Center ID, a Year and a Language Code
+### Fetch List of Holidays based on a Registration Center ID, a Year and a Language Code
+
 On receiving a request to fetch the list of Holidays with the input parameters (Registration Center ID, Year and Language Code), the system fetches the list of Holidays  mapped to a Registration Center and for the year and Language Code received in input parameter as per the below steps:
 
 1. Validates if the received request contains the following input parameters
@@ -251,9 +216,9 @@ On receiving a request to fetch the list of Holidays with the input parameters (
 4. Responds to the source with the List of Holidays
 1. In case of Exceptions, system triggers relevant error messages
 
-## 1.3 Biometric Authentication Type - Create/Read [**[↑]**](#table-of-contents)
+## Biometric Authentication Type
 
-### A. Create Biometric Authentication Type in Master Database
+### Create Biometric Authentication Type
 On receiving a request to add Biometric Authentication Type (e.g., Fingerprint, Iris) with the input parameters (code, name, descr, lang_code and is_active), the system stores the Biometric Authentication Type in the Database as per the below steps:
 
 1. Validates if all required input parameters have been received as listed below for each specific request
@@ -266,7 +231,7 @@ On receiving a request to add Biometric Authentication Type (e.g., Fingerprint, 
 1. The component restricts the bulk creation of Master Data
 1. In case of Exceptions, system triggers error messages as received from the Database.
 
-### B. Fetch the List of Biometric Authentication Type based on a Language Code
+### Fetch the List of Biometric Authentication Type based on a Language Code
 On receiving a request to fetch the List of Biometric Authentication Type with input parameters (Language Code), the system fetches the List of Biometric Authentication Type against the Language Code as per the below steps:
 
 1. Validates if the request to add Biometric Authentication Type contains the following parameters
@@ -276,9 +241,9 @@ On receiving a request to fetch the List of Biometric Authentication Type with i
 1. Responds to the source with List of Biometric Authentication Type
 1. In case of Exceptions, system triggers relevant error messages
 
-## 1.4 Biometric Attribute Type - Create/Read [**[↑]**](#table-of-contents)
+## Biometric Attribute Type
 
-### A. Create Biometric Attribute in Master Database
+### Create Biometric Attribute
 On receiving a request to add Biometric Attribute (e.g., Right Thumb, Left Thumb) with the input parameters (code, name, descr, bmtyp_code, lang_code and is_active), the system stores the Biometric Attribute in the Database as per the below steps:
 
 1. Validates if all required input parameters have been received as listed below for each specific request
@@ -293,7 +258,7 @@ On receiving a request to add Biometric Attribute (e.g., Right Thumb, Left Thumb
 1. Responds to the source with the appropriate message.
 1. In case of Exceptions, system triggers error messages as received from the Database
 
-### B. Fetch the List of Biometric Attributes based on the Biometric Authentication Type and a Language Code
+### Fetch the List of Biometric Attributes based on the Biometric Authentication Type and a Language Code
 On receiving a request to fetch the List of Biometric Attributes with input parameters (Biometric Authentication Type and Language Code), the system fetches the List of Biometric Attributes against the Biometric Authentication Type and the Language Code Received as per the below steps:
 
 1. Validates if the request contains the following input parameters
@@ -310,9 +275,9 @@ On receiving a request to fetch the List of Biometric Attributes with input para
 6. Responds to the source with the Fetched Data
 1. In case of Exceptions, system triggers relevant error messages
 
-## 1.5 Gender - Create/Read/Update [**[↑]**](#table-of-contents)
+## Gender
 
-### A. Create Gender Types in Master Database
+### Create Gender Types
 
 1. This API should only be accessible to Global Admin
 2. The API should accept only the below parameters
@@ -332,7 +297,7 @@ Gender Type Code should be generated at the back-end for any Gender Type added u
 12. API should only allow creation of one record at a time and should restrict bulk creation
 13. API should audit the relevant data when the API is called successfully or when an error is encountered
  
-### B. Update a Gender Type in Gender Type Master Database
+### Update a Gender Type
 On receiving a request to update a Gender Type with the input parameters (code, name, lang_code and is_active), the system updates the Gender Type in the Gender Type Database for the code received as per the below steps:
 
 1. This API should only be accessible to Global Admin
@@ -352,7 +317,7 @@ On receiving a request to update a Gender Type with the input parameters (code, 
 11. API should only allow creation of one record at a time and should restrict bulk creation
 12. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-### C. Check the existence of a Gender in Master Database
+### Check the existence of a Gender in Master Database
 On receiving a request to validate the Gender Name with input parameters (Gender Name), the system checks the Gender Name in the Master Database as per the below listed steps:
 
 1. Validates if the request contains the following input parameters
@@ -361,7 +326,7 @@ On receiving a request to validate the Gender Name with input parameters (Gender
 1. Responds to the source with the appropriate message
 1. In case of Exceptions, system triggers relevant error messages
 
-### D. Fetch the List of Gender Types based on a Language Code
+### Fetch the List of Gender Types based on a Language Code
 On receiving a request to fetch the List of Gender Types with the input parameters (Language Code), the system fetches the List of Gender Types against the Language Code received as per the below listed steps:
 
 1. Validates if the request contains the following input parameters
@@ -374,9 +339,9 @@ On receiving a request to fetch the List of Gender Types with the input paramete
 4. Responds to the source with the List of Gender Types
 5. In case of Exceptions, system triggers relevant error messages
 
-## 1.6 Document Category - Create/Read/Update [**[↑]**](#table-of-contents)
+## Document Category
 
-### A. Create Document Category in Master Database
+### Create Document Category in Master Database
 On receiving a request to add Document Category with the input parameters (code, name, descr, lang_code and is_active), the system stores the Document Category in the Database as per the below listed steps:
 
 1. This API should only be accessible to Global Admin
@@ -399,7 +364,7 @@ API should not allow creation of the Document Category and throw an error messag
 13. API should only allow creation of one record at a time and should restrict bulk creation
 14. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-### B. Update a Document Category in the Document Category Master Database
+### Update a Document Category in the Document Category Master Database
 On receiving a request to update a Document Category with the input parameters (code, name, descr, lang_code and is_active), the system update the Document Category in the Document Category Database for the Code received as per the below listed steps:
 
 1. The API should only be accessible to Global Admin
@@ -420,7 +385,7 @@ On receiving a request to update a Document Category with the input parameters (
 11. API should only allow creation of one record at a time and should restrict bulk creation
 12. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-### C. Fetch list of Document Categories based on a Language Code
+### Fetch list of Document Categories based on a Language Code
 On receiving a request to fetch Document Category Details with the input parameters (Language Code), the system fetches all the Document Categories for the Language Code Received as per the below listed steps:
 
 1. Validates if all required input parameters have been received as listed below for each specific request
@@ -433,9 +398,9 @@ On receiving a request to fetch Document Category Details with the input paramet
    * IsActive - Mandatory
 4. In case of Exceptions, system triggers relevant error messages
 
-## 1.7 Document Type - Create/Update/Delete [**[↑]**](#table-of-contents)
+## Document Type
 
-### A. Create Document Type in Master Database
+### Create Document Type
 On receiving a request to add Document Type with the input parameters (code, name, descr, lang_code and is_active), the system stores the Document Type in the Database
 
 Refer below for the process:
@@ -455,7 +420,7 @@ Refer below for the process:
 8. Responds with an appropriate message for the Document Type created successfully
 9. In case of Exceptions, system triggers relevant error messages
 
-### B. Update a Document Type in the Document Type Master Database
+### Update a Document Type
 On receiving a request to update a Document Type with the input parameters (code, name, descr, lang_code and is_active), the system updates the Document Type in the Document Type Database for the Code received
 
 Refer below for the process:
@@ -477,7 +442,7 @@ upd_dtimes should be the date-time when the user updates the Document Type Detai
 9. Responds with the appropriate message for the Document Category updated successfully
 10. In case of Exceptions, system triggers relevant error messages
 
-### C. Delete a Document Type in the Document Type Master Database
+### Delete a Document Type
 On receiving a request to delete a Document Type with the input parameters (code), the system updates the is_deleted flag to true in the Document Type Database against the code received
 
 Refer below for the process:
@@ -491,9 +456,9 @@ Refer below for the process:
 1. Responds with the Document Category Code for the Document Category deleted successfully
 1. In case of Exceptions, system triggers relevant error messages
 
-## 1.8 Applicant Type - Document Category - Document Type Mapping - Read [**[↑]**](#table-of-contents)
+## Applicant Type - Document Category - Document Type Mapping
 
-### A. Fetch list of Document Categories based on Applicant Type from Master Database
+### Fetch list of Document Categories based on Applicant Type from Master Database
 Upon receiving a request  to fetch List of Document Categories with the input parameters (Applicant Type Code), the system fetches all the Document Categories for the Applicant Type Code Received
 
 While fetching the list of documents, the system performs the following steps:
@@ -510,7 +475,7 @@ While fetching the list of documents, the system performs the following steps:
 4. In case of Exceptions, system triggers relevant error messages
 
 
-### B. Fetch List of Document Category-Document Type mappings based on Applicant Type and a List of Language Codes
+### Fetch List of Document Category-Document Type mappings based on Applicant Type and a List of Language Codes
 
 Upon receiving a request to fetch List of Document Category-Document Type mappings with input parameters (Applicant Type and List of Language Codes), the system fetches the required data
 
@@ -536,7 +501,7 @@ While fetching the data, the system performs the following steps:
 	* Is Active
 7. In case of Exceptions, system triggers relevant error messages
 
-### C. Delete a Document Category-Type mapping in the Document Category-Type mapping Master Database
+### Delete a Document Category-Type mapping in the Document Category-Type mapping Master Database
 On receiving a request to delete a Document Category-Type mapping with the input parameters (doccat_code, doctyp_code), the system updates the is_deleted flag to true in the Document Category-Type mapping Database against the input received
 
 The system performs the following steps:
@@ -547,7 +512,7 @@ The system performs the following steps:
 3. Responds with the doc_type Code and doccat_code for the Document Category-Type mapping deleted successfully
 1. In case of Exceptions, system triggers relevant error messages. 
 
-### D. Fetch applicant type based on Individual Type Code, Date of Birth, Gender Type Code and Biometric Exception Type
+### Fetch applicant type based on Individual Type Code, Date of Birth, Gender Type Code and Biometric Exception Type
 On receiving a request to get Applicant type with input parameters (Individual Type Code, Date of Birth, Gender Type Code and Biometric Exception Type), the system derives the Applicant Type from the input parameter and performs the following steps:
 
 1. Validates if the request contains the following input parameters
@@ -562,7 +527,7 @@ On receiving a request to get Applicant type with input parameters (Individual T
 1. Derives the applicant type as per the define logic
 1. In case of Exceptions, system triggers relevant error messages
 
-### E. Check the mapping of Applicant Type-Document Category Name-Document Type Name
+### Check the mapping of Applicant Type-Document Category Name-Document Type Name
 On receiving a request to check the mapping of Applicant Type-Document Category-Document Type mapping parameters (Applicant Type, Document Category Name and Document Type Name), the system checks the mapping and performs the following steps:
 
 1. Validates if the request contains the following input parameters
@@ -574,9 +539,9 @@ On receiving a request to check the mapping of Applicant Type-Document Category-
 1. If the mapping does not exist, responds with "Invalid".
 1. In case of Exceptions, system triggers relevant error messages
 
-## 1.9 List of Rejection Reasons - Create/Read [**[↑]**](#table-of-contents)
+## List of Rejection Reasons
 
-### A. Create a Rejection Reason in Reason List Master Database
+### Create a Rejection Reason in Reason List Master Database
 Upon receiving a request to add a Reason with the input parameters (code, name, descr, rsncat_code, lang_code and is_active), the system stores the Reason in the Database
 
 The system performs the following steps:
@@ -595,7 +560,7 @@ The system performs the following steps:
 3. Responds to the source with the appropriate message.
 4. In case of Exceptions, system triggers relevant error messages. 
 
-### B. Fetch the requested list of reasons based on Reason Category Code and Language Code
+### Fetch the requested list of reasons based on Reason Category Code and Language Code
 Upon receiving a request to Fetch the requested List of Reasons with the required input parameters (Reason 1. Category Code, Language Code), the system fetches the requested List of reasons stored against the Reason Category Code and Language Code received.
 
 The system performs the following steps:
@@ -615,9 +580,10 @@ The system performs the following steps:
 4. Responds to the source with the relevant List of Reasons, as per the stated business rules
 1. In case of Exceptions, system triggers relevant error messages as listed below
 
-## 1.10 List of Languages - Create/Read/Update/Delete [**[↑]**](#table-of-contents)
+## List of Languages
 
-### A. Create List of Languages in Master Database
+### Create List of Languages
+
 After receiving a request to add Language Details with the input parameters (code, name, family, native_name and is_active), the system stores the Language Details in the Database and performs the following steps:
 
 1. Validates if all required input parameters have been received as listed below for each specific request
@@ -629,7 +595,8 @@ After receiving a request to add Language Details with the input parameters (cod
 2. Responds with the Language Code for the language successfully created
 1. In case of Exceptions, system triggers relevant error messages
 
-### B. Fetch the List of Languages
+### Fetch the List of Languages
+
 After receiving a request to fetch the List of Languages, the system fetches the List of Languages and performs the following steps:
 
 1. Validates if the response contains the List of all Languages with the following attributes
@@ -639,9 +606,9 @@ After receiving a request to fetch the List of Languages, the system fetches the
 2. Responds to the source with the List of Languages
 1. In case of Exceptions, system triggers relevant error messages
 
-### C. Update and Delete a Language in the List of Languages Master Database
+### Update and Delete a Language in the List of Languages Master Database
 
-#### (i) Update
+#### Update
 
 After receiving a request to update a Language with the input parameters (code, name, family, native_name and is_active), the system updates the Language Details in the List of languages Database for the Code received in request
 
@@ -659,7 +626,7 @@ The system performs the following steps:
 1. Responds with the Language Code for the language successfully updated
 1. In case of Exceptions, system triggers relevant error messages
 
-#### (ii) Delete
+#### Delete
 After receiving a request to delete a Language with the input parameters (code), the system updates the is_deleted flag to true in the List of languages Database against the code received in request
 
 The system performs the following steps:
@@ -671,9 +638,9 @@ The system performs the following steps:
 1. Responds with the Language Code for the language successfully deleted
 1. In case of Exceptions, system triggers relevant error messages. 
 
-## 1.11 List of Titles - Create/Read/Update [**[↑]**](#table-of-contents)
+## List of Titles
 
-### A.	Create a Title in Master Database
+### Create a Title
 On receiving a request to add a Title (e.g., MR., Mrs.) with the input parameters (code, name, descr, lang_code and is_active), the system stores the Title in the Database and performs the following steps:
 
 1. The API should only be accessible to Global Admin
@@ -695,7 +662,7 @@ On receiving a request to add a Title (e.g., MR., Mrs.) with the input parameter
 13. API should only allow creation of one record at a time and should restrict bulk creation
 14. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-### B.	Update a Title in Title Master Database
+### Update a Title
 On receiving a request to update a Title with the input parameters (code, name, descr, lang_code and is_active), the system updates the Title in the Title Database for the code received and performs the following steps:
 
 1. This API should only be accessible to Global Admin
@@ -716,7 +683,7 @@ On receiving a request to update a Title with the input parameters (code, name, 
 11. API should only allow creation of one record at a time and should restrict bulk creation
 12. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-### C. Fetch the List of Titles based on a Language Code
+### Fetch the List of Titles
 On receiving a request to fetch Title Details with the input parameters (Language Code), the system fetches all the Titles with all the attributes for the Language Code Received
 
 The system performs the following steps:
@@ -731,9 +698,10 @@ The system performs the following steps:
 	* IsActive - Mandatory
 4. In case of Exceptions, system triggers relevant error messages
 
-## 1.12 Template File Format - Create/Update/Delete [**[↑]**](#table-of-contents)
+## Template File Format
 
-### A. Create Template File Format in Master Database
+### Create Template File Format
+
 On receiving a request to add Template File Format with the input parameters (code, descr, lang_code and is_active), the system stores the Template File Format in the Database and performs the following steps:
 
 1. Validates if all required input parameters have been received as listed below for each specific request
@@ -747,10 +715,10 @@ On receiving a request to add Template File Format with the input parameters (co
 3. Responds with the Template File Format Code and Language Code for the Template File Format created successfully
 1. In case of Exceptions, system triggers relevant error messages. 
 
-### B. Create Template File Format in Master Database
+### Create Template File Format
 Update and Delete a Template File Format in Template File Format Master Database
 
-#### (i) Update
+#### Update
 On receiving  a request to update a Template File Format with the input parameters (code, descr, lang_code and is_active), the system updates the Template File Format in the Template File Format Database for the Code received
 
 While updating the Template File Format, the system performs the following steps:
@@ -765,7 +733,7 @@ While updating the Template File Format, the system performs the following steps
 1. Responds with the Template File Format Code and Language Code for the Template File Format updated successfully
 1. In case of Exceptions, system triggers relevant error messages
 
-#### (ii) Delete
+#### Delete
 On receiving  a request to delete a Template File Format with the input parameters (code), the system updates the is_deleted flag to true in the Template File Format Database against the code received
 
 While deleting the Template File Format, the system performs the following steps:
@@ -779,7 +747,7 @@ While deleting the Template File Format, the system performs the following steps
 1. Responds with the Template File Format Code for the Template File Format deleted successfully
 1. In case of Exceptions, system triggers relevant error messages. 
 
-## 1.13 List of Template Types - Create [**[↑]**](#table-of-contents)
+## List of Template Types
 MOSIP system can create Template Type in the Master Database.
 
 Upon receiving a request to add Template Type (e.g., SMS Notification template - New Registration) with the input 
@@ -794,9 +762,9 @@ parameters (code, descr, lang_code and is_active), the system stores the Templat
 3. This component also restricts the bulk creation of Master Database
 4. In case of Exceptions, system triggers relevant error messages as listed below.
 
-## 1.14 List of Templates - Create/Read/Update [**[↑]**](#table-of-contents)
+## List of Templates
 
-### A. Create Template in the Master Database
+### Create Template
 On receiving a request to add a Template with the input parameters (id, name, descr, file_format_code, model, file_txt, module_id, module_name, template_typ_code, lang_code and is_active), the system stores the Template in the Database and performs the following steps:
 
 1. This API should only be accessible to Global Admin
@@ -826,7 +794,7 @@ On receiving a request to add a Template with the input parameters (id, name, de
 13. API should only allow creation of one record at a time and should restrict bulk creation
 14. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-### B. Fetch Template based on a Template Type and a Language Code
+### Fetch Template based on a Template Type and a Language Code
 On receiving a request to fetch a Template with the input parameters (Template Type Code and List of Language Code), the system fetches the Template for the Template Type Code and all Language Codes received
 
 Refer below for the process:
@@ -842,7 +810,7 @@ Refer below for the process:
 	* IsActive
 5. In case of Exceptions, system triggers relevant error messages
 
-### C. Update a Template in Template Master Database
+### Update a Template
 On receiving a request to update a Template with the input parameters (id, name, descr, file_format_code, model, file_txt, module_id, module_name, template_typ_code, lang_code and is_active), the system updates the Template in the Template Database for the id received and performs the following steps:
 
 1. This API should only be accessible to Global Admin
@@ -873,9 +841,9 @@ On receiving a request to update a Template with the input parameters (id, name,
 13. API should only allow creation of one record at a time and should restrict bulk creation
 14. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-## 1.15 List of Blacklisted Words - Create/Read/Update/Delete [**[↑]**](#table-of-contents)
+## List of Blacklisted Words
 
-### A. Create Blacklisted Words in Master Database
+### Create Blacklisted Words
 
 Upon receiving a request to add a Blacklisted Word with the input parameters (code, name, descr, lang_code and is_active), the system stores the Blacklisted Word in the Database and performs the following steps:
 
@@ -891,7 +859,7 @@ Upon receiving a request to add a Blacklisted Word with the input parameters (co
 4. In case of Exceptions, system triggers error messages as received from the Database. 
 
 
-### B. Update a Blacklisted Word in Blacklisted Word Master Database
+### Update a Blacklisted Word
 
 Upon receiving request to update a Blacklisted Word with the input parameters (code, name, descr, lang_code and is_active), the system updates the Blacklisted Word in the Blacklisted Word Database for the code received and performs the following steps:
 1. Validates if all required input parameters have been received as listed below for each specific request
@@ -907,7 +875,7 @@ Upon receiving request to update a Blacklisted Word with the input parameters (c
 7. Responds with the appropriate message for the Blacklisted word updated successfully
 8. In case of Exceptions, system triggers relevant error messages as listed below
 
-### C. Delete a Blacklisted Word in Blacklisted Word Master Database
+### Delete a Blacklisted Word
 
 Upon receiving a request to delete a Blacklisted Word with the input parameters (code), the system updates the is_deleted flag to true in the Blacklisted Word Database against the code received and performs the following steps:
 
@@ -919,7 +887,7 @@ Upon receiving a request to delete a Blacklisted Word with the input parameters 
 1. In case of Exceptions, system triggers relevant error messages as listed below
 
 
-### D. Fetch List of Blacklisted words based on a Language Code
+### Fetch List of Blacklisted words based on a Language Code
 Upon receiving a  request to Fetch the List of Blacklisted words with input parameters (Language Code), the system fetches the List of Blacklisted words against the Language Code received
 
 While fetching the black listed words, the system performs the following steps:
@@ -932,7 +900,8 @@ While fetching the black listed words, the system performs the following steps:
 	* IsActive
 4. In case of Exceptions, system triggers relevant error messages. 
 
-## 1.16 List of Reason Categories - Create [**[↑]**](#table-of-contents)
+## List of Reason Categories
+
 MOSIP system can create a Reason Category in Master Database
 
 Upon receiving a request to add Reason Category with the input parameters (code, name, descr, lang_code and is_active), the system stores the Reason Category in the Database and performs the following steps:
@@ -950,9 +919,9 @@ Upon receiving a request to add Reason Category with the input parameters (code,
 4. In case of Exceptions, system triggers relevant error messages as listed below
 
 
-## 1.17 List of Applications - Create/Read [**[↑]**](#table-of-contents)
+## List of Applications
 
-### A. Create a List of Applications in Master Database
+### Create a List of Applications
 Upon receiving a request to add Application with the input parameters (code, name, descr, lang_code and is_active), the system stores the Application in the Database
 
 Refer below for the process:
@@ -969,9 +938,9 @@ Refer below for the process:
 3. Responds with the Application ID and Language Code for the Application created successfully
 1. In case of Exceptions, system triggers relevant error messages as listed below
 
-### B. Fetch List of Applications based on received input parameter
+### Fetch List of Applications based on received input parameter
 
-### (i) Fetch the List of all Applications
+#### Fetch the List of all Applications
 Upon receiving a request to Fetch List of Applications, the system fetches all the List of Applications and performs the following steps:
 
 1. Validates if the response contains the following attributes for each Application
@@ -981,7 +950,7 @@ Upon receiving a request to Fetch List of Applications, the system fetches all t
 2. The response must contain the list of applications in all the languages present in the Database
 1. Responds to the source with all the Application attributes.
 
-### (ii) Fetch the Application detail based on a Language Code and Application ID
+#### Fetch the Application detail based on a Language Code and Application ID
 Upon receiving a request to Fetch List of Applications with the required input parameters (Application ID, Language Code), the system fetches the Application Detail based on the Application ID and Language Code received
 
 Refer below for the process:
@@ -998,9 +967,9 @@ Refer below for the process:
 1. If the mandatory input parameters are missing, responds with all the data.
 1. In case of Exceptions, system triggers relevant error messages as listed below
 
-## 1.18 List of ID Types - Create/Read [**[↑]**](#table-of-contents)
+## List of ID Types
 
-### A. Create an ID type in Master Database
+### Create an ID type
 Upon receiving a request to add an ID Type with the input parameters (code, name, descr, lang_code and is_active), the system stores the ID Type in the Database
 
 Refer below for the process:
@@ -1017,7 +986,7 @@ Refer below for the process:
 3. Responds with the ID Type Code and Language Code for the ID type created successfully
 4. In case of Exceptions, system triggers relevant error messages as listed below.
 
-### B. Fetch the List of ID Types based on Language Code
+### Fetch the List of ID Types based on Language Code
 Upon receiving a request to fetch the List of ID Types with input parameters (Language Code), the system fetches the List of ID Types against the Language Code Received
 
 Refer below for the process:
@@ -1031,9 +1000,9 @@ Refer below for the process:
 	* IsActive
 4. In case of Exceptions, system triggers relevant error messages. 
 
-## 1.19 User Details [**[↑]**](#table-of-contents)
+## User Details
 
-### A. User Details
+### User Details
 Upon receiving a request to fetch the user history record with input parameters (User ID and Date Timestamp), the system
 fetches all the attributes of the user from the history table and performs the following steps:
 
@@ -1045,7 +1014,7 @@ fetches all the attributes of the user from the history table and performs the f
 1. Response will contain all the attributes for the user including the Active/Inactive status.
 1. In case of exceptions, system triggers relevant error messages.
 
-### B. Fetch RID based on a User ID
+### Fetch RID based on a User ID
 
 1. Receive request to retrieve RID based on input parameter (User ID, App ID)
 	* User ID and App ID both will be mandatory
@@ -1053,9 +1022,9 @@ fetches all the attributes of the user from the history table and performs the f
 3. Respond to the source with the fetched data
 4. Respond with error 'User doesn't exist' if no user is found for User ID received
 
-## 1.20 Document Type to Category Mapping - Map/Unmap [**[↑]**](#table-of-contents)
+## Document Type to Category Mapping
 
-### A. Create a mapping record of Document Type and Document Category in Valid Document Mapping Master Database
+### Create a mapping record of Document Type and Document Category in Valid Document Mapping Master Database
 Upon receiving a request to add a mapping of Document Type and Document Category with the input parameters (doctyp_code, doccat_code) the system stores the Mapping of Document type and Document category in the Database
 
 Refer below for the process:
@@ -1076,7 +1045,7 @@ Refer below for the process:
 6. The API restricts the bulk creation of Master Data
 7. In case of Exceptions, system triggers error messages as received from the Database. 
 
-### B. Remove a mapping record of Document Type and Document Category in Valid Document Mapping Master Database
+### Remove a mapping record of Document Type and Document Category in Valid Document Mapping Master Database
 Upon receiving a request to add a mapping of Document Type and Document Category with the input parameters (doctyp_code, doccat_code) the system stores the Mapping of Document type and Document category in the Database
 
 Refer below for the process:
@@ -1092,9 +1061,9 @@ Refer below for the process:
 7. The API restricts the bulk creation of Master Data
 8. In case of Exceptions, system triggers error messages as received from the Database.
 
-## 1.21 Working and Non-Working Days [**[↑]**](#table-of-contents)
+## Working and Non-Working Days
 
-### A. API should be able to fetch working days for a Center based on a Center ID
+### API should be able to fetch working days for a Center based on a Center ID
 
 Refer below for the process:
 
@@ -1107,9 +1076,9 @@ If the working days are not defined against the Center, the API should fetch the
 
 The API should throw error messages in scenarios mentioned in error messages section.
 
-## 1.22 Exceptional Holidays for a Center [**[↑]**](#table-of-contents)
+## Exceptional Holidays for a Center
 
-### A. API should be able to fetch any defined exceptional holiday dates for a Center based on a Center ID
+### API should be able to fetch any defined exceptional holiday dates for a Center based on a Center ID
 
 Refer below for the process:
 
@@ -1118,11 +1087,11 @@ Refer below for the process:
 2.  API should respond to the source with all the exceptional holiday dates for the Center ID received
 3.  API should throw relevant error messages in any error scenarios
 
-# 2. Registration Management
+# Registration Management
 
-## 2.1 Registration Center Type - Create/Update [**[↑]**](#table-of-contents)
+## Registration Center Type
 
-### A. Create Registration Center Type in Master Database
+### Create Registration Center Type
 On receiving a request to add Registration Center Type with the input parameters (code, name, descr, lang_code and is_active), the system stores the Registration Center Type in the Database
 
 Refer below for the process:
@@ -1145,7 +1114,7 @@ Refer below for the process:
 13. API should only allow creation of one record at a time and should restrict bulk creation
 14. API should audit the relevant data when the API is called successfully or when an error is encountered
 	
-### B. Update a Registration Center Type in the Registration Center Type Master Database
+### Update a Registration Center Type
 On receiving a request to update a Registration Center Type with the input parameters (code, name, descr, lang_code and is_active), the system Updates the Registration Center Type Details in the Registration Center Type Database for the Code received
 
 Refer below for the process:
@@ -1167,9 +1136,9 @@ Refer below for the process:
 11. API should only allow creation of one record at a time and should restrict bulk creation
 12. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-## 2.2 Registration Center - Create/Read/Update/Decommission [**[↑]**](#table-of-contents)
+## Registration Center
 
-### A. Create a Registration Center record in Master Database
+### Create a Registration Center
 Upon receiving a request to add Registration Center with the input parameters, the system Stores the Registration Center in the Database
 
 Refer below for the process:
@@ -1212,7 +1181,7 @@ Refer below for the process:
 14. The API should restricts the bulk creation of Master Data
 15. In case of Exceptions, system triggers error messages as received from the Database. 
 
-### B. Update a Registration Center in the List of Registration Center Master Database
+### Update a Registration Center
 On receiving a request to update a Registration Center with the input parameters, the system updates the Registration Center Details in the List of Registration Center Database for the center_id received
 
 Refer below for the process:
@@ -1255,7 +1224,7 @@ Refer below for the process:
 13. Responds with the Registration Center Code and Language Code for the Registration Center updated successfully
 14. In case of Exceptions, system triggers relevant error messages
 
-### C. Decommission a Registration Center in the List of Registration Center Master Database
+### Decommission a Registration Center
 Upon receiving a request to Decommission a Registration Center with the input parameters (center_id), the system updates the is_deleted flag to true in the List of Registration Center Database against the center_id received
 
 Refer below for the process:
@@ -1272,7 +1241,7 @@ Refer below for the process:
 8. Responds with the appropriate message for the Registration Center decommissioned successfully
 9. In case of Exceptions, system triggers relevant error messages
 
-### D. Fetch Registration Center details based on a Registration Center ID and Language Code.
+### Fetch Registration Center details based on a Registration Center ID and Language Code.
 On receiving a request to fetch Registration Center Details with the input parameters (Registration Center ID and Language Code), the system fetches all the Registration Center attributes for the Registration Center ID and Language Code received. The system only fetches active Registration Centers.
 
 Refer below for the process:
@@ -1298,7 +1267,7 @@ Refer below for the process:
 	* IsActive
 4. In case of Exceptions, system triggers relevant error messages. 
 
-### E. Fetch Registration Center record based on a Registration center ID, Date and Language Code from the Registration Center Updation/Creation History table
+### Fetch Registration Center record based on a Registration center ID, Date and Language Code from the Registration Center Updation/Creation History table
 On receiving a request to fetch Registration Center Creation/Updation History Detail with the input parameters (Registration Center ID, Date and Language Code), the system fetches all the attributes of Registration Center from the history table for the Registration Center ID, Date and Language Code received
 
 Refer below for the process:
@@ -1326,7 +1295,7 @@ Refer below for the process:
 	* IsActive
 5. In case of Exceptions, system triggers relevant error messages.
 
-### F. Fetch Registration Center details based on a Location Code and a Language Code
+### Fetch Registration Center details based on a Location Code and a Language Code
 Upon receiving a  request to fetch the List of Registration Centers with the input parameter (Location Code and Language Code), the system fetches the list of all the Registration Centers against the Location Code and Language Code received with all the attributes for each Registration Center. The system only fetches active Registration Centers.
 
 Refer below for the process:
@@ -1352,7 +1321,7 @@ Refer below for the process:
 	* IsActive
 4. In case of Exceptions, system triggers relevant error messages
 
-### G. Fetch Registration Center details based on a Longitude and a Latitude, Proximity Distance and Language Code
+### Fetch Registration Center details based on a Longitude and a Latitude, Proximity Distance and Language Code
 On receiving a request  to fetch the List of Registration Centers with the input parameter (Longitude and Latitude, Proximity distance and Language Code), the system fetches the  List of Registration Centers against the input parameters received. The system only fetches active Registration Centers.
 
 Refer below for the process:
@@ -1382,11 +1351,10 @@ Refer below for the process:
 	* IsActive
 6. In case of Exceptions, system triggers relevant error messages
 
-### H. Fetch the List of Registration Centers based on Location Hierarchy Level, text input and a Language Code
+### Fetch the List of Registration Centers based on Location Hierarchy Level, text input and a Language Code
 Upon receiving a request to fetch the List of Registration centers with input parameters (Location Hierarchy Level, Text Input and a Language Code), the system fetches the List of Registration centers. The system only fetches active Registration Centers.
 
 Refer below for the process:
-
 
 1. While fetching the list of registration centers the system validates if the request contains the following input parameters
 	* Location Hierarchy Level - Mandatory
@@ -1412,7 +1380,7 @@ Refer below for the process:
 	* IsActive
 6. In case of Exceptions, system triggers relevant error messages. 
 
-### I. Validates whether a Registration Center is under working hours based on a timestamp received
+### Validates whether a Registration Center is under working hours based on a timestamp received
 On receiving a request to fetch Registration Center Details with the input parameters (Registration Center ID and Date-Timestamp), the system determines the status of the Registration center as per the logic defined. 
 
 Refer below for the process:
@@ -1432,9 +1400,9 @@ Refer below for the process:
 	* Timestamp - 6:01 PM - Rejected
 6. In case of Exceptions, system triggers relevant error messages
 
-## 2.3 List of Machine Types - Create/Update [**[↑]**](#table-of-contents)
+## List of Machine Types 
 
-### A. Creation of a Machine Type
+### Creation of a Machine Type
 Upon receiving a request to add Machine Type (e.g., Dongle/Desktop) with the input parameters (code, name, descr, lang_code and is_active), the system stores the Machine Type in the Database
 
 Refer below for the process:
@@ -1458,7 +1426,7 @@ Refer below for the process:
 13. API should only allow creation of one record at a time and should restrict bulk creation
 14. API should audit the relevant data when the API is called successfully or when an error is encountered 
 
-### B. Update of a Machine Type
+### Update of a Machine Type
 1. This API should only be accessible to Global Admin
 2. The API should accept only the below parameters
 	* code - Character - 36 - Mandatory
@@ -1477,9 +1445,9 @@ Refer below for the process:
 11. API should only allow creation of one record at a time and should restrict bulk creation
 12. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-## 2.4 List of Machine Specifications - Create/Update [**[↑]**](#table-of-contents)
+## List of Machine Specifications
 
-### A. Create Machine Specifications in the Master Database
+### Create Machine Specifications
 On receiving a request to add Machine Specifications with the input parameters (name, brand, model, mtyp_code, min_driver_ver, descr, lang_code and is_active) the system stores the Machine Specifications in the Database 
 
 Refer below for the process:
@@ -1509,7 +1477,7 @@ Refer below for the process:
 14. API should only allow creation of one record at a time and should restrict bulk creation
 15. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-### B. Update a Machine Specification in the Machine Specification Master Database
+### Update a Machine Specification
 On receiving a request to update a Machine Specification with the input parameters (id, name, brand, model, mtyp_code, min_driver_ver, descr, lang_code and is_active), the system updates the Machine Specification Details in the Machine Specification Database for the id received
 
 1. This API should only be accessible to Global Admin
@@ -1536,9 +1504,9 @@ On receiving a request to update a Machine Specification with the input paramete
 12. API should only allow creation of one record at a time and should restrict bulk creation
 13. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-## 2.5 List of Machines - Create/Read/Update/Decommission [**[↑]**](#table-of-contents)
+## List of Machines
 
-### A. Create a Machine in Master Database
+### Create a Machine in Master Database
 On receiving a request to add Machine with the input parameters, the system Stores the Machine Details in the Database
 
 Refer below for the process:
@@ -1567,7 +1535,7 @@ Refer below for the process:
 12. The API should restricts the bulk creation of Master Data
 13. In case of Exceptions, system triggers error messages as received from the Database. 
 
-### B. Update a Machine in the List of Machines Master Database
+### Update a Machine in the List of Machines Master Database
 On receiving a request to update a Machine with the input parameters, the system Updates the Machine Details in the List of Machines Database for the machine_id received
 
 Refer below for the process:
@@ -1594,7 +1562,7 @@ Refer below for the process:
 10. Responds with the Registration Center Code and Language Code for the Machine updated successfully
 11. In case of Exceptions, system triggers relevant error messages
 
-### C. Decommission a Machine in the List of Machines Master Database
+### Decommission a Machine in the List of Machines Master Database
 On receiving a request to decommission a Machine with the input parameters (machine_id), the system Updates the is_deleted flag to true in the List of Machines Database against the machine_id received
 
 Refer below for the process:
@@ -1611,7 +1579,7 @@ Refer below for the process:
 8. Responds with the appropriate message for the Machine decommissioned successfully
 9. In case of Exceptions, system triggers relevant error messages
 
-### D. Fetch Machine Registration/Updation History detail based on a Machine ID and Language Code
+### Fetch Machine Registration/Updation History detail based on a Machine ID and Language Code
 Upon receiving a request to fetch Machine History Registration/Updation Detail with the input parameters (Machine ID, Date and Language Code), the system Fetches all the attributes of Machine from the history table for the Machine ID, Date and Language Code received
 
 The record fetched is the latest record existing on or before the date received in the input parameter
@@ -1633,7 +1601,7 @@ Refer below for the process:
 	* IsActive
 4. In case of Exceptions, system triggers relevant error messages
 
-### E. Fetch Machine Details based on a Machine ID and a Language Code
+### Fetch Machine Details based on a Machine ID and a Language Code
 On receiving a request to Fetch Machine Details with the input parameters (Machine ID and Language Code), the system Fetches all the Machine attributes for the Machine ID and the Language Code Received
 
 Refer below for the process:
@@ -1653,9 +1621,9 @@ Refer below for the process:
 	* IsActive
 5. In case of Exceptions, system triggers relevant error messages. 
 
-## 2.6 Mappings of Registration Center, Machine and User Mappings - Create/Read/Delete [**[↑]**](#table-of-contents)
+## Mappings of Registration Center, Machine and User Mappings
 
-### A. Create a mapping record of Center, User and Machine in Center-User-Machine Mapping Master Database
+### Create a mapping record of Center, User and Machine in Center-User-Machine Mapping Master Database
 On receiving a request to add a mapping of Center, User and Machine with the input parameters (regcntr_id, usr_id, machine_id and is_active), the system Stores the Mapping of Center, User and Machine in the Database
 
 Refer below for the process:
@@ -1669,7 +1637,7 @@ Refer below for the process:
 1. The component restricts the bulk creation of Master Data
 1. In case of Exceptions, system triggers error messages as received from the Database.
 
-### B. Delete a Center-Machine-User mapping in the Center-Machine-User mapping Master Database
+### Delete a Center-Machine-User mapping in the Center-Machine-User mapping Master Database
 On receiving a request to delete a Center-Machine-User mapping with the input parameters (regcntr_id, machine_id, usr_id), the system Updates the is_deleted flag to true in the Center-Machine-User mapping Database against the input received
 
 Refer below for the process:
@@ -1681,7 +1649,7 @@ Refer below for the process:
 2. Responds with the Center ID, Machine ID ad User ID for the Center, User and Machine mapping deleted successfully
 1. In case of Exceptions, system triggers relevant error messages. 
 
-### C. Fetch Mapping History of Registration Center, Machine and User based on Registration Centre ID, Machine ID, User ID and Date
+### Fetch Mapping History of Registration Center, Machine and User based on Registration Centre ID, Machine ID, User ID and Date
 On receiving a request to fetch Mapping History of Registration, Machine and User with input parameters (Registration Centre ID, Machine ID, User ID and Date), the system  Fetches all the attributes of Registration, Machine and User Mapping from the history table for the Machine ID and Date received
 
 The record fetched is the latest record existing on or before the date received in the input parameter
@@ -1701,9 +1669,9 @@ Refer below for the process:
 	* IsActive
 4. In case of Exceptions, system triggers relevant error messages. 
 
-## 2.7 List of Devices - Create/Read/Update/Decommission [**[↑]**](#table-of-contents)
+## List of Devices
 
-### A. Create a Device in Master Database
+### Create a Device
 On receiving request to add a device with the input parameters, the system Stores the device in the Database
 
 Refer below for the process:
@@ -1728,7 +1696,7 @@ Refer below for the process:
 10. The API should restricts the bulk creation of Master Data
 11. In case of Exceptions, system triggers error messages as received from the Database. 
 
-### B. Update a Device in the List of Devices Master Database
+### Update a Device
 Upon receiving a request update a Device with the input parameters, the system Updates the Device Details in the List of Devices Database for the id received
 
 Refer below for the process:
@@ -1754,7 +1722,7 @@ Refer below for the process:
 10. Responds with the Registration Center Code and Language Code for the Device updated successfully
 11. In case of Exceptions, system triggers relevant error messages 
 
-### C. Decommission a Device in the List of Devices Master Database
+### Decommission a Device
 Upon receiving a request to decommission a Device with the input parameters (id) and Update the is_deleted flag to true in the List of Devices Database against the id received
 
 Refer below for the process:
@@ -1771,7 +1739,7 @@ Refer below for the process:
 8. Responds with the appropriate message for the Machine decommissioned successfully
 9. In case of Exceptions, system triggers relevant error messages
 
-### D. Fetch all the List of Devices based on Device Type and Language Code
+### Fetch all the List of Devices based on Device Type and Language Code
 On receiving request to Fetch list of all Device with the requirement input parameter (Language Code and/or Device Type), the system Fetches all the Devices against the Language Code and/or Device Type as requested
 
 Refer below for the process:
@@ -1804,7 +1772,7 @@ Refer below for the process:
 	* IsActive - Mandatory
 8. In case of Exceptions, system triggers relevant error messages. 
 
-### E. Fetch Device Registration/Update History detail based on a Device ID and Language Code
+### Fetch Device Registration/Update History detail based on a Device ID and Language Code
 On receiving request to fetch Device History Registration/Update Detail with the input parameters (Device ID, Date and Language Code), the system fetches all the attributes of Device from the history table for the Device ID, Date and Language Code received
 
 The record fetched is the latest record existing on or before the date received in the input parameter
@@ -1828,9 +1796,9 @@ Refer below for the process:
 	* IsActive - Mandatory
 4. In case of Exceptions, system triggers relevant error messages. 
 
-## 2.8 List of Device Specifications - Create/Read/Update [**[↑]**](#table-of-contents)
+## List of Device Specifications
 
-### A. Create Device Specifications in Master Database
+### Create Device Specifications
 On receiving request to add Device Specifications with the input parameters (name, brand, model, dtype_code, min_driver_ver, descr, lang_code and is_active), the system Stores the Device Specifications in the Database
 
 Refer below for the process:
@@ -1860,7 +1828,7 @@ Refer below for the process:
 14. API should only allow creation of one record at a time and should restrict bulk creation
 15. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-### B. Fetch List of Device Specifications based on a Language Code
+### Fetch List of Device Specifications based on a Language Code
 
 On receiving request to fetch the List of Device Specifications with input parameters (Language Code and/or Device Type) the system fetches the List of Device Specifications against the Language Code and/or Device Type
 
@@ -1892,7 +1860,7 @@ While fetching the List of Device Specifications against the Language Code and/o
    * IsActive
 7. In case of Exceptions, system triggers relevant error messages
 
-### C. Update a Device Specification in the Device Specification Master Database
+### Update a Device Specification
 On receiving a request to update a Device Specification with the input parameters (id, name, brand, model, dtype_code, min_driver_ver, descr, lang_code and is_active) the system updates the Device Specification Details in the Device Specification Database for the id received
 
 1. This API should only be accessible to Global Admin
@@ -1919,9 +1887,10 @@ On receiving a request to update a Device Specification with the input parameter
 12. API should only allow creation of one record at a time and should restrict bulk creation
 13. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-## 2.9 List of Device Types - Create/Update [**[↑]**](#table-of-contents)
+## List of Device Types
 
-### A. Create Device Type in Master Database
+### Create Device Type
+
 Upon receiving a request to add Device Type with the input parameters (code, name, descr, lang_code and is_active), the system Stores the Device Type in the Database
 
 Refer below for the process:
@@ -1945,7 +1914,7 @@ Refer below for the process:
 13. API should only allow creation of one record at a time and should restrict bulk creation
 14. API should audit the relevant data when the API is called successfully or when an error is encountered 
 
-### B. Update Device Type in Master Database
+### Update Device Type
 
 1. This API should only be accessible to Global Admin
 2. The API should accept only the below parameters
@@ -1965,9 +1934,9 @@ Refer below for the process:
 11. API should only allow creation of one record at a time and should restrict bulk creation
 12. API should audit the relevant data when the API is called successfully or when an error is encountered
 
-## 2.10 Mappings of Registration Center and Machine - Map/Unmap [**[↑]**](#table-of-contents)
+## Mappings of Registration Center and Machine
 
-### A. Create a mapping record of Machine and Center in Machine-Center Mapping Master Database
+### Create a mapping record of Machine and Center
 Upon receiving a request to add a mapping of Machine and Center with the input parameters (regcntr_id, machine_id, and is_active), the system stores the Mapping of Machine and Center in the Database
 
 Refer below for the process:
@@ -1987,7 +1956,7 @@ Refer below for the process:
 10. If the Registration Center ID - Machine ID mapping already exist but is in Inactive state, re-activate the mapping
 11. In case of Exceptions/Success, system should trigger relevant messages. Refer “Messages” sectione. 
 
-### B. Delete a Center-Machine mapping in the Center-Machine mapping Master Database
+### Delete a Center-Machine mapping
 Upon receiving a request to delete a Center-Machine mapping with the input parameters (regcntr_id, machine_id), the system updates the is_active flag to false in the Center-Machine mapping Database against the input received
 
 Refer below for the process:
@@ -2001,9 +1970,9 @@ Refer below for the process:
 5. If the mapping does not exist or is in inactive state, throw an appropriate error
 6. In case of Exceptions/Success, system should trigger relevant messages. Refer “Messages” section
 
-## 2.11 Mappings of Registration Center and Device - Map/Unmap/Read [**[↑]**](#table-of-contents)
+## Mappings of Registration Center and Device
 
-### A. Create a mapping record of Device and Center in Device-Center Mapping Master Database
+### Create a mapping record of Device and Center
 Upon receiving a request to add a mapping of Device and Center with the input parameters (regcntr_id, device_id), the system stores the Mapping of Device and Center in the Database
 
 Refer below for the process:
@@ -2022,7 +1991,7 @@ Refer below for the process:
 10. If the Registration Center ID - Device ID mapping already exist but is in Inactive state, re-activate the mapping
 11. In case of Exceptions/Success, system should trigger relevant messages. Refer “Messages” section
 
-### B. Unmap a Center-Device mapping in the Center-Device mapping Master Database
+### Unmap a Center-Device mapping
 Upon receiving a request to delete a Center-Device mapping with the input parameters (regcntr_id, device_id), the system updates the is_active flag to false in the Center-Device mapping Database against the input received
 
 Refer below for the process:
@@ -2036,7 +2005,7 @@ Refer below for the process:
 5 If the mapping does not exist or is in inactive state, throw an appropriate error
 6. In case of Exceptions/Success, system should trigger relevant messages. Refer “Messages” section
 
-### C. Fetch Device-Center History record based on the timestamp received
+### Fetch Device-Center History record based on the timestamp received
 On receiving a request to fetch Mapping History of Center and Device with input parameters (Registration Center ID, Device ID and Date Timestamp) the system fetches all the attributes of Center and Device Mapping from the history table for the Registration Center ID, Device ID and Date received
 
 The record fetched is the latest record existing on or before the date received in the input parameter
@@ -2055,9 +2024,9 @@ While fetching the attributes of Center and Device Mapping from the history tabl
    * Effective date
 4. In case of Exceptions, system triggers relevant error messages
 
-## 2.12 Mappings of Registration Center, Machine, and Device - Create/Delete [**[↑]**](#table-of-contents)
+## Mappings of Registration Center, Machine, and Device
 
-### A. Create a mapping record of Center, Machine and Device in Center-Machine-Device Mapping Master Database
+### Create a mapping record of Center, Machine and Device
 Upon receiving a request to add a mapping of Center, Machine and Device with the input parameters (regcntr_id, machine_id, device_id, and is_active), the system stores the Mapping of Center, Machine and Device in the Database
 
 Refer below for the process:
@@ -2071,7 +2040,7 @@ Refer below for the process:
 1. The component restricts the bulk creation of Master Data
 1. In case of Exceptions, system triggers error messages as received from the Database. 
 
-### B. Delete a Center-Machine-Device mapping in the Center-Machine-Device mapping Master Database
+### Delete a Center-Machine-Device mapping
 Upon receiving a request to delete a Center-Machine-Device mapping with the input parameters (regcntr_id, machine_id, device_id), the system updates the is_deleted flag to true in the Center-Machine-Device mapping Database against the input received
 
 Refer below for the process:
@@ -2085,9 +2054,9 @@ Refer below for the process:
 1. Responds with the Device Id, Machine ID and Center ID for the mapping of Center, Machine and Device deleted successfully
 1. In case of Exceptions, system triggers relevant error messages. 
 
-## 2.13 Mappings of Registration Center and User - Map/Unmap [**[↑]**](#table-of-contents)
+## Mappings of Registration Center and User
 
-### A. Create a mapping record of User and Center in User-Center Mapping Master Database
+### Create a mapping record of User and Center
 Upon receiving a request to add a mapping of User and Center with the input parameters (regcntr_id, usr_id, and is_active), the system stores the Mapping of User and Center in the Database
 
 Refer below for the process:
@@ -2107,7 +2076,7 @@ Refer below for the process:
 10. If the Registration Center ID - User ID mapping already exist but is in Inactive state, re-activate the mapping
 11. In case of Exceptions/Success, system should trigger relevant messages. Refer “Messages” section
 
-### B. Delete a Center-User mapping in the Center-User mapping Master Database
+### Delete a Center-User mapping
 Upon receiving a request to delete a Center-User mapping with the input parameters (regcntr_id, usr_id), the system updates the is_active flag to false in the Center-User mapping Database against the input received
 
 Refer below for the process:
@@ -2121,13 +2090,11 @@ Refer below for the process:
 5. If the mapping does not exist or is in inactive state, throw an appropriate error
 6. In case of Exceptions/Success, system should trigger relevant messages. Refer “Messages” section
 
-# 3. MISP Management  [**[↑]**](#table-of-contents)
+# MISP Management
 
-## 3.1 MISP - Create/Read/Update/Delete [**[↑]**](#table-of-contents)
+## License Key Allocation
 
-### 3.1.1 License Key Allocation- Create/Read/Update/Delete 
-
-### A. Create MISP
+### Create MISP
 
 1. The system receives a request to create a MISP with input parameters (MISP ID, MISP Organization Name, MISP Contact Number, MISP Email ID, MISP Address, MISP User name, MISP Password, MISP License Key, MISP License Key Status, IsActive)
 2. Stores the data in the database
@@ -2135,7 +2102,7 @@ Refer below for the process:
 4. If the mandatory input parameters are missing, throws the appropriate message. 
 5. In case of exceptions, system triggers relevant error messages. 
 
-### B. Read MISP
+### Read MISP
 
 1. The system receives a request to fetch a MISP with input parameters (MISP ID and/or MISP Organization Name)
 2. Fetches the data existing against the input parameter received. 
@@ -2148,7 +2115,7 @@ Refer below for the process:
 1. If the data does not exist for input parameters received, throws the appropriate message. 
 1. In case of Exceptions, system triggers relevant error messages. 
 
-### C. Update MISP
+### Update MISP
 
 1. The system receives a request to update a MISP with input parameters (MISP ID, MISP Organization Name, MISP Contact Number, MISP Email ID, MISP Address, MISP User name, MISP Password, MISP License Key, MISP License Key Status, IsActive
 2. Updates the data and Responds to the source with the required message
@@ -2157,7 +2124,7 @@ Refer below for the process:
 1. If the mandatory input parameters are missing, throws the appropriate message. 
 1. In case of Exceptions, system triggers relevant error messages. 
 
-### D. Delete MISP
+### Delete MISP
 
 1. The system receives a request to delete a MISP with input parameters (MISP ID)
 1. Deletes the data as mentioned as requested
