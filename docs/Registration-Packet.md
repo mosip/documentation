@@ -44,7 +44,9 @@ The packet name here is also the request ID that is generated for a request crea
 * **ID Object**: Each packet has an ID JSON attached with it which has basic demographic data of the resident, document names that were uploaded, information about the introdcers or guardians, biometrics file names (of applicant, introducer, guardians) and the version of the ID schema used. Data for each ID JSON is populated based on the ID Schema property, "Field Category". 
 
 {% hint style="info" %}
+
 You can find the more about ID Object in our [**ID Object definition**](MOSIP-ID-Object-Definition.md) document.
+
 {% endhint %}
 
 * **Biometric Files**: The biometric data of the resident, officer, supervisor, intorducer or guardian is stored in respective [**CBEFF XML**](CBEFF-XML.md) and in respective folders as driven by ID schema.
@@ -64,14 +66,14 @@ No PII (Personally Identifiable Information) data is captured in the audit logs.
 # Packet Encryption Procedure
 Before writing the packet into the local disk, the zipped content should be encrypted using Session and RSA public key (center specific) to secure the data. The same data can only be decrypted at server end where the private key is available. 
     
--   Session Key Encryption:
-    -   Session key generation is \[MAC of machine + RO Id + Timestamp\] should not exceed 32 characters.
-    -   Pass the created Zip object \[in-memory\] through the AES-256 bit encryption.
-    -   Pass the Random Session Key as a seed to this AES encryption.
-    -   Get the Registration Officer Id from user context object. 
--   RSA Public Key Encryption:
-    -   AES Session key bytes pass through the RSA public key encryption.
--   Use the "\#KEY\_SPLITTER\#" as a key separator for the AES encrypted bytes and the RSA Public key encrypted Session key seed.
--   Append the RSA Public key Encrypted Session Key, Key Separator to the AES encrypted bytes.
--   Append the EO and machine information as a META-INFO JSON file and create another ZIP out of it. \[Packet Zip + META-INFO JSON\]
--   Save the encrypted data as a ZIP in local file system under the defined location in configuration file.
+* Session Key Encryption:
+    * Session key generation is a randomly generated and sent to client as part of sync from server.
+    * Pass the created Zip object \[in-memory\] through the AES-256 bit encryption.
+    * Pass the Random Session Key as a seed to this AES encryption.
+    * Get the Registration Officer Id from user context object. 
+* RSA Public Key Encryption:
+    * AES Session key bytes pass through the RSA public key encryption.
+* Use the "\#KEY\_SPLITTER\#" as a key separator for the AES encrypted bytes and the RSA Public key encrypted Session key seed.
+* Append the RSA Public key Encrypted Session Key, Key Separator to the AES encrypted bytes.
+* Append the EO and machine information as a META-INFO JSON file and create another ZIP out of it. \[Packet Zip + META-INFO JSON\]
+* Save the encrypted data as a ZIP in local file system under the defined location in configuration file.

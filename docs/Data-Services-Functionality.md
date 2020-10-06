@@ -1,31 +1,9 @@
-# Table Of Contents 
-* [1. Data mapper](#1-data-mapper)
-* [2. Data Access Manager](#2-data-access-manager)
-* [3. Sync Handler](#3-sync-handler)
-* [4. ID Generator and Validator](#4-id-generator-and-validator) 
-	* [4.1 ID Generator](#4-1-id-generator) 
-		* [4.1.1 Machine ID Generator](#4-1-1-machine-id-generator)
-		* [4.1.2 Registration Center ID Generator](#4-1-2-registration-center-id-generator)
-		* [4.1.3 RID Generator](#4-1-3-rid-generator)
-		* [4.1.4 MISP ID Generator](#4-1-4-misp-id-generator)
-		* [4.1.5 PRID Generator](#4-1-5-prid-generator)
-		* [4.1.6 Token ID Generator](#4-1-7-token-id-generator)
-		* [4.1.7 Partner ID Generator](#4-1-8-partner-id-generator)
-		* [4.1.8 MISP License Key Generator](#4-1-9-misp-license-key-generator)
-	* [4.2 ID Validator](#4-2-id-validator) 
-		* [4.2.1 UIN Validator](#4-2-1-uin-validator)
-		* [4.2.2 PRID Validator](#4-2-2-prid-validator)
-		* [4.2.3 VID Validator](#4-2-3-vid-validator)
-		* [4.2.4 RID Validator](#4-2-4-rid-validator)
-		* [4.2.5 Partner ID Validator](#4-2-5-partner-id-validator)
-		* [4.2.6 License Key Status Validator](#4-2-6-license-key-status-validator)
-* [List of Configurable Parameters and Processes](#list-of-configurable-parameters-and-processes)
-* [Kernel API](#kernel-api)
+# Data mapper
 
-# 1. Data mapper [**[↑]**](#table-of-contents)
 Data mapper is used across MOSIP to facilitate mapping between DTO (Data Transfer Object) and entity. 
 
-# 2. Data Access Manager [**[↑]**](#table-of-contents)
+# Data Access Manager
+
 Data Access Manager provides a DAO (Data Access Object) interface to do the following:
 
 1. Provide an interface for connection to a Database
@@ -33,11 +11,11 @@ Data Access Manager provides a DAO (Data Access Object) interface to do the foll
 1. Provide an interface to support a custom SQL
 1. Provide an interface to call Database functions.
 
-# 3. Sync Handler [**[↑]**](#table-of-contents)
+# Sync Handler
 
 1. Sync Handler allows registration client to sync Master data, List of User, Roles and Respective Mappings and Configurations (Registration Client specific and Global Configs).
 1. Sync Handler also allows Registration Client to push data from Client local database to Master Database.
-1. As part of Masterdata Sync, the service receives a Machine ID and Timestamp, looks for a mapped Center ID to that Machine ID and responds to the Registration Client with the Center specific Master data for the following tables.
+1. As part of Master data Sync, the service receives a Machine ID and Timestamp, looks for a mapped Center ID to that Machine ID and responds to the Registration Client with the Center specific Master data for the following tables.
    * Registration Center Type
    * List of Registration Center
    * Template File Format
@@ -69,11 +47,11 @@ Data Access Manager provides a DAO (Data Access Object) interface to do the foll
 1. For configuration, sync handler receives a request to sync configurations and will respond back with Registration Client specific and Global Configurations.
 1. For User, Roles and Respective User-Role mappings, Sync handler receives Center ID and Timestamp and will respond to the Registration Client with Center specific incremental changes.
 
-# 4. ID Generator and Validator
+# ID Generator and Validator
 
-## 4.1 ID Generator [**[↑]**](#table-of-contents)
+## ID Generator
 
-### 4.1.1 Machine ID Generator [**[↑]**](#table-of-contents)
+### Machine ID Generator
 Upon receiving a request to generate Machine ID, the system generates Machine ID as per default Machine ID generation logic as mentioned below:
 
 1. Machine ID should only be numeric
@@ -86,7 +64,7 @@ Responds with the Machine ID to the source.
 
 Raises an alert in case of exceptions. 
 
-### 4.1.2 Registration Center ID Generator [**[↑]**](#table-of-contents)
+### Registration Center ID Generator
 Upon receiving a request to generate Registration Center ID, the system generates it as per default Registration Center ID generation logic.
 
 Refer below for the process:
@@ -101,7 +79,7 @@ Refer below for the process:
 1. Responds with the Registration Center ID to the source
 1. Raises an alert in case of exceptions.
 
-### 4.1.3 RID Generator [**[↑]**](#table-of-contents)
+### RID Generator
 Upon receiving a request to generate RID with Machine ID and Center ID as input, the system generates it as per default RID generation logic.
 
 Refer below for the process:
@@ -116,7 +94,7 @@ Refer below for the process:
 8. Responds with the RID to the source
 9. Raises an alert in case of exceptions and triggers the messages.
 
-### 4.1.4 MISP ID Generator [**[↑]**](#table-of-contents)
+### MISP ID Generator
 Upon receiving a request to generate MISP ID, the system generates it as per default MISP ID generation logic.
 
 Refer below for the process:
@@ -130,7 +108,7 @@ Refer below for the process:
 5. Responds with the MISP ID to the source
 6. Raises an alert in case of exceptions and triggers the messages.
 
-### 4.1.5 PRID Generator [**[↑]**](#table-of-contents)
+### PRID Generator
 Upon receiving a request to generate PRID with input parameters, the system generates PRID as per default PRID generation logic.
 
 Refer below for the process:
@@ -148,7 +126,7 @@ Refer below for the process:
 1. Responds with the PRID to the source
 1. Raises an alert in case of exceptions. 
 
-### 4.1.6 VID Generator [**[↑]**](#table-of-contents)
+### VID Generator
 Upon receiving a request to generate VID, the system generates PRID as per default PRID generation logic.
 
 Refer below for the process:
@@ -171,7 +149,7 @@ Refer below for the process:
    * The number should not contain '0' or '1' as the first digit.
 1. Expired VID should not be sent in response.
 
-### 4.1.7 Token ID Generator [**[↑]**](#table-of-contents)
+### Token ID Generator
 Upon receiving a request to generate Token ID (with input parameters (TSP ID, UIN), the system generates token ID as per default Token ID generation logic
 
 Refer below for the process:
@@ -184,7 +162,7 @@ Refer below for the process:
 4. Raise an exception if input parameter is missing. Refer messages section
 5. Token ID length should be of 36 digits
 
-### 4.1.8 Partner ID Generator [**[↑]**](#table-of-contents)
+### Partner ID Generator
 Upon receiving a request to generate partner ID, the system generates it as per default partner ID generation logic.
 
 Refer below for the process:
@@ -196,7 +174,7 @@ Refer below for the process:
 1. Partner ID generation is start from 1000
 1. In case of exceptions, system triggers relevant error messages. 
 
-### 4.1.9 MISP License Key Generator [**[↑]**](#table-of-contents)
+### MISP License Key Generator
 Upon receiving a request to generate License Key, the system generates it as per default License Key generation logic and responds with the License Key to the source
 
 1. License Key is generated as per the defined logic mentioned below:
@@ -206,9 +184,9 @@ Upon receiving a request to generate License Key, the system generates it as per
    * License Key is mapped to expiry (Expiry to be configured by admin).
 2. In case of exceptions, system triggers relevant error messages
 
-## 4.2 ID Validator [**[↑]**](#table-of-contents)
+## ID Validator
 
-### 4.2.1  UIN Validator [**[↑]**](#table-of-contents)
+### UIN Validator
 Upon receiving a request to validate the UIN, the system validates the UIN against the defined policy
 
 Refer below for the process:
@@ -219,7 +197,7 @@ Refer below for the process:
 1. Responds to the source with an appropriate message 
 1. Raises an alert in case of exceptions. 
 
-### 4.2.2 PRID Validator [**[↑]**](#table-of-contents)
+### PRID Validator
 Upon receiving a request to validate the PRID, the system validates the PRID against the defined policy
 
 Refer below for the process:
@@ -229,7 +207,7 @@ Refer below for the process:
 1. Responds to the source with an appropriate message 
 1. Raises an alert in case of exceptions. 
 
-### 4.2.3 VID Validator [**[↑]**](#table-of-contents)
+### VID Validator
 Upon receiving a request to validate the VID with input parameters (UIN), the system validates the VID against the defined VID policy
 
 Refer below for the process:
@@ -239,7 +217,7 @@ Refer below for the process:
 1. Validates if the VID received as per the VID generation logic
 1. Responds to the source with an appropriate message and raises an alert in case of exceptions.
 
-### 4.2.4 RID Validator [**[↑]**](#table-of-contents)
+### RID Validator
 
 RID is generated in the following manner:
 
@@ -255,7 +233,7 @@ RID Validation performs pattern validation on RID and provides three methods to 
 1. Receive a RID along with Registration Center ID and Machine ID. Check whether RID is of configured length or not and whether Registration Center ID and Machine ID are attached to the RID or not. Respond with whether RID is valid or invalid
 1. Receive a RID along with Registration Center ID, Machine ID, Sequence Length and Timestamp Length. Check whether RID is proper or not as per the input received. Respond with whether RID is valid or invalid.
 
-### 4.2.5 Partner ID Validator [**[↑]**](#table-of-contents)
+### Partner ID Validator
 
 1. The system receives a request to check status of a Partner with an input parameter (Partner ID)
 2. Checks the length of the Partner ID
@@ -267,7 +245,7 @@ RID Validation performs pattern validation on RID and provides three methods to 
 5. Throws an error if an input parameter is empty
 6. In case of exceptions, system triggers relevant error messages.
 
-### 4.2.6 License Key Status Validator [**[↑]**](#table-of-contents)
+### License Key Status Validator
 
 The system receives a request to check status of the License Key with an input parameter (License Key)
 
@@ -283,10 +261,3 @@ The system receives a request to check status of the License Key with an input p
    * License Key should be mapped to expiry (Expiry to be configured by admin).
 5. In case of exceptions, system triggers relevant error messages. 
 
-# List of Configurable Parameters and Processes [**[↑]**](#table-of-contents)
-[**Link to Configurable Parameters of Kernel**](https://github.com/mosip/mosip-config/blob/master/config-templates/kernel-env.properties)
-
-[**Link to Kernel Application Properties**](https://github.com/mosip/mosip-config/blob/master/config-templates/application-env.properties)
-
-# Kernel API [**[↑]**](#table-of-contents)
-[**Refer to Wiki for more details on Kernel API**](Kernel-APIs.md)
