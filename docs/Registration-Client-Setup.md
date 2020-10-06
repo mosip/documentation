@@ -9,7 +9,7 @@ A Trusted Platform Module (TPM) is a specialized chip on a local machines that s
 
 # Application build
 
-JDK 8u181 [Oracle] or later version to build the application.  
+OpenJDK version "11.0.8" version to build the application.  
 
 **Registration client application is built with four different modules:**
 
@@ -17,15 +17,6 @@ JDK 8u181 [Oracle] or later version to build the application.
 	* registration-libs - it contains the code to generate the initial run.bat.   
 	* registration-MDM-service - MOSIP Device Manager service to integrate with BIO device and render the required data in a standard format and that will be consumed by the 'registration-services' module.   
 	* registration-services - it contains the Java API, which would be called from UI module to render the services to the User and capture the detail from User and store it in DB or send to external systems through services.    
-
-**Following files to be modified before building the application:**    
-	
-* spring.properties - [registration-services module] - It contains the environment based REST client URL to make different service calls and all the required properties.  	
-* mosip-application.properties - [registration-libs module] - It contains Reg-Client Download, Configuration URL and Properties to check application online/offline status and Reg client download url from JFrog repository and all the required properties.
-* As part of the Jenkins, the required environment should be passed as run time argument **environment** for the build. Ex: "mvn clean install -Denvironment=mosip.hostname". The variable "mosip.hostname" should be the server where your mosip setup is running on. This property can also be defined in the aforementioned file spring.properties of the registration-services module.
-* Post completion of above-mentioned changes, build 'mosip-parent' pom.xml file to build the application.  
-* Make sure that 'maven-metadata.xml' is generated under the '**registration-client**' module, post successful build generation. Which is referred by the reg-client application to download the required jars based on the version.   
-* Post-build process 'META-INF.MF' file also should be present in the Secure JFROG repository[Https --> Hostname], which consists of the jar files checksum.   
 
 # Prerequisites
   
@@ -45,9 +36,7 @@ Before running the 'Registration Client' application, following prerequisites to
 * [Property file](#property-file) - **[spring.properties]** should be updated with right environment [env] and other detail.     
 * All **Master data** should be loaded at MOSIP Master database.  
 * User, machine, center mapping, and all other required table and data setup should exist in MOSIP Master database along with the profile and desired roles configuration in IAM server.[This is required until the Admin module is delivered. Post-delivery, all the configuration can be done through the Admin module.]   
-* User's machine should have online connectivity to access the Secure JFrog artifactory repository[Https --> Hostname], where the application binaries are available.   
-* If TPM enabled, a logged-in user to windows machine should have permission to get the public key from TPM device.  
-* The initial DB embedded with the setup process should contain all the required tables along with the data for few tables.    
+* User's machine should have online connectivity to access the client_upgrade_server, where the application binaries are available.  * If TPM enabled, a logged-in user to windows machine should have permission to get the public key from TPM device.  
 * Through the sync process, the data would be updated into the local database from the server.  
 * All the required [dependent services](#dependent-services) should be installed, up and running before running the client application.    
 
@@ -85,39 +74,40 @@ Installation of Open Source Anti Virus Software [ClamAV]:
 
 **Download - Application Initial Setup file:**  
    
-* User login to the Secure JFROG artifactory[Https --> Hostname] portal and download the client application initial setup ZIP file [mosip-sw-0.12.*.zip].   
+* User downloads registration client zip from https://<sandbox-domain-name>/registration-client/<version-of-reg-client>/reg-client.zip. 
 * Once downloaded then unzip the file into a particular location. It contains the following folder structure.  
     * bin: It contains the client UI and service binaries in an encrypted format.
     * lib: It contains the library required for the application to run.  
-    * cer: It contains the certificate used to communicate with the MOSIP server.  
-    * db: It contains the encrypted derby database.   
+    * cer: It contains the certificate used to communicate with the MOSIP server. 
     * run.bat: batch file to launch the application.  
     * jre: It contains the java runtime engine along with the required DLLs. 
+* Set "mosip.hostname" environment variable, with domain name being the value to be used by registration-client.
 * Click the 'run.bat' to initiate the setup process.  
+
+Note: "mosip.hostname" property can also be defined in the aforementioned file spring.properties of the registration-services module.
    
 **When the user clicks on the 'run.bat' it does the following:**
-   
-* Load the binary repository URL from a property file.  
-* Communicate with the  Secure JFrog repository[Https --> Hostname] through a secured connection and download the maven-metadata.xml file to identify the latest jar versions.    
-* Download the latest build Manifest.mf file from the server, where all the jars (including shared lib) name and checksums are provided.  
-* Compare the checksum of the local version of jar files with the data present in the latest downloaded Manifest.mf file.    
+  
+* Communicate with client_upgrade_server through a secured connection and download the maven-metadata.xml file to identify the latest jar versions.  
+* Compare the checksum of the local version of jar files with the data present in the Manifest.mf file.    
 * Identify the list of binary files and Download the required jars.  
-* Once download completed, then communicate with TPM to decrypt the key (if TPM enabled), which is used to decrypt the UI and service jars and start the application.   
+* Once download completed, decrypts the UI and service jars and start the application.   
    
 **Application Startup:**  
-* Once after application launches, the files 'reg.key', 'reg.pub', and 'readme.txt' will be created in your user.home directory with under .mosipkeys      folder.
-* from readme.txt copy the KeyIndex:<key_index> and use it in machine create POST API.
+* Once after application launches, TPM is initialized with RSA endorsement keys when TPM mode enabled / fallback implementation is initialzed ('reg.key', 'reg.pub', and 'readme.txt' will be created in your user.home directory with under .mosipkeys folder).
+* On initial startup, DB and DB pwd is autogenerated. DB password is secured using TPM key and encrypted db.conf is saved under .mosipkeys folder inside user.home directory.
+* Use TPM public key / from readme.txt copy the public key and machine name (hostname) and use it in machine create POST API.
 * User should initially be online to validate their authentication against the MOSIP server. Post which, the sync process would be initiated.     
 * Once the sync process completed then restart the application to pick the local configuration.  
 * User should perform the self onboarding before start using the application.  
 
 # Update process
-The application refers to the 'maven-metadata.xml' to verifies any new version exists or not. [Which is generated under the '**registration-client**' module post successful Jenkins build.]
+The application refers to the 'maven-metadata.xml' to verifies any new version exists or not.
 
 mosip.rollback.path - Make sure that the rollback path is provided in this variable, which is available in 'spring.properties' file; as part of the **registration-services** module. 
        
 ## Application update
-* During the startup of the application, the software check will be validating against the maven-metadata.xml file from artifactory repository. If any diffs found, the application prompts the user with 'Update Now' or 'Update Later' options to install immediately or later. Apart from this, there is another menu option available in the application to trigger the 'Update' process post login to the application. The update process would update both the application binaries and DB.
+* During the startup of the application, the software check will be validating against the maven-metadata.xml file from client_upgrade_server. If any diffs found, the application prompts the user with 'Update Now' or 'Update Later' options to install immediately or later. Apart from this, there is another menu option available in the application to trigger the 'Update' process post login to the application. The update process would update both the application binaries and DB.
 * During the update process, the running application refer to the 'rollback' path and take the back up of 'lib, bin, MANIFEST.MF' files inside rollback folder with the new folder as 'Version_timstamp' format. 
 * Download and Update the required binary libraries and DB script into the existing running folder and restart the application.  
 
@@ -132,10 +122,6 @@ Refer the **registration configuration** maintained in [Configuration Repository
 
 |**S.No.**| **Config Key**| **Sample Values**|**Description**|
 |:------:|-----|----|----|
-|1|mosip.registration.fingerprint_enable_flag						|Y/N| To disable the fingerprint capture |	
-|2|mosip.registration.iris_enable_flag								|Y/N| To disable the IRIS capture |	
-|3|mosip.registration.face_enable_flag								|Y/N| To disable the Face capture |	
-|4|mosip.registration.document_enable_flag							|Y/N| To disable the document capture | 	
 |5|mosip.registration.iris_threshold								|0 - 100|	
 |6|mosip.registration.leftslap_fingerprint_threshold				|0 - 100|	
 |7|mosip.registration.rightslap_fingerprint_threshold				|0 - 100|	
@@ -158,8 +144,7 @@ Refer the **registration configuration** maintained in [Configuration Repository
 |24|mosip.registration.lost_uin_disable_flag						|Y/N| Enable / Disable Lost UIN functionality |
 |25|mosip.registration.webcam_name									|logitech|
 |26|mosip.registration.document_scanner_enabled						|Y/N|
-|27|mosip.registration.send_notification_disable_flag				|Y/N| Enable/ Disable additional notification |  
-|28|mosip.registration.onboarduser_ida_auth							|Y/N| To enable the bio auth validation during user 'On Boarding' process and validated against the IDA Auth service| 
+|27|mosip.registration.onboarduser_ida_auth							|Y/N| To enable the bio auth validation during user 'On Boarding' process and validated against the IDA Auth service| 
 
 ## Global Configurations
 Refer the **global configuration** maintained in [Configuration Repository](https://github.com/mosip/mosip-config/blob/master/config-templates/application-env.properties) environment. 
@@ -170,16 +155,16 @@ Refer the **global configuration** maintained in [Configuration Repository](http
 |2|	mosip.secondary-language        |fra / ara/ eng| French/ Arabic/ English |
 
 ## TPM [Trusted Platform Module]
-To enable or disable the TPM functionality, modify the mentioned key in 'registrtaion-services/src/main/resources/spring.properties' file.    
-    - mosip.client.tpm.registration = { Y - to enable the TPM, N - to disable the TPM}
+To enable or disable the TPM functionality, modify the mentioned key in 'registrtaion-libs/props/mosip-application.properties' file.    
+    - mosip.reg.client.tpm.availability = { Y - to enable the TPM, N - to disable the TPM}
 
 ## MDM [Mosip Device Manager] Service  
 It integrates the Registration application with Bio-devices [IRIS/ Finger Print/ Face]
    
 |**S.No.**| **Config Key**| **Sample Values and Description**|
 |:------:|-----|-----|
-|1|	mosip.mdm.enabled=N				| Y - Enable , N - Disable |  
-|2|	mosip.reg.mdm.server.port=8080	| To run the MDM service in local machine's port |
+|1|	mosip.registration.mdm.default.portRangeFrom=4501	| To run the MDM service in local machine's port |
+|2| mosip.registration.mdm.default.portRangeTo=4600 | To run the MDM service in local machine's port |
 
 ## Network Connectivity Check
 Registration client verifies the below-configured URL to check whether the system is in online or not. The application uses this URL to perform the health check before communicating with the external services.
@@ -192,34 +177,20 @@ Registration client verifies the below-configured URL to check whether the syste
 # Property file
 Property attributes and the respective sample values are provided below. Before building the **registration-services**, the required below properties needs to be changed.
    
-**File Location:** registration-services/src/main/resources/spring.properties       
-* mosip.reg.logpath=../logs  
-* mosip.reg.packetstorepath={where the registration packet should be stored}
-* mosip.reg.healthcheck.url={Application uses this url to perform the health check before communicating with the external services. Default value: `https://${environment}/v1/authmanager/actuator/health`}  
-* mosip.reg.rollback.path={where the application backup should be taken during software update} [Default: ../BackUp]  
-* mosip.reg.db.key={contains the key to be used to connect to the derby database and decrypt the data}
-* mosip.reg.cerpath=/cer//mosip_cer.cer
-* mosip.reg.xml.file.url={Secure JFrog repository[Https --> Hostname] url with maven-metadata.xml file}  
-* mosip.reg.dbpath=db/reg
-* mosip.reg.app.key={contains the key to be used to decrypt the application binaries during run time}  
-* mosip.reg.client.tpm.availability={ Y - to enable the TPM, N - to disable the TPM, default N}
-
 **File Location:** /registration-libs/src/main/resources/props/mosip-application.properties 
-* mosip.reg.client.url={Reg client download url from JFrog }
+* mosip.reg.client.url={Reg client download url from client_upgrade_server }
 * mosip.reg.logpath=../logs  
 * mosip.reg.packetstorepath={where the registration packet should be stored}. 
 * mosip.reg.healthcheck.url={Application uses this url to perform the health check before communicating with the external services. Default value: `https://${environment}/v1/authmanager/actuator/health`}  
 * mosip.reg.rollback.path={where the application backup should be taken during software update} [Default: ../BackUp]  
-* mosip.reg.db.key={contains the key to be used to connect to the derby database and decrypt the data}
 * mosip.reg.cerpath=/cer//mosip_cer.cer
-* mosip.reg.xml.file.url={Secure JFrog repository[Https --> Hostname] url with maven-metadata.xml file}  
-* mosip.reg.dbpath=db/reg
+* mosip.reg.xml.file.url={client_upgrade_server url with maven-metadata.xml file}  
 * mosip.reg.app.key={contains the key to be used to decrypt the application binaries during run time}
 * mosip.reg.client.tpm.availability={ Y - to enable the TPM, N - to disable the TPM, default N}
   	
 # Dependent services
 In Registration client application, only user mapping to the local machine can be performed. Rest of the data setup should be performed at MOSIP Admin portal.
-Through sync process the data would be sync between local machine and server based on machine's mac-id and center id.  There are other services that are available to send the created packet from local machine to remote system.   
+Through sync process the data would be sync between local machine and server based on machine's public key and center id.  There are other services that are available to send the created packet from local machine to remote system.   
 
 |**S.No.**| **Service Name**| **Service Description**| **Module Name**|
 |:------:|-----|---|----|
@@ -238,8 +209,7 @@ Through sync process the data would be sync between local machine and server bas
 |13|	Auth Service - UserName and OTP | To get the auth token based on user provided user name and OTP. |Kernel|
 |14|	Auth Service - Client id and Secret Key  | To get the auth token based on client id and secret key. |Kernel|
 |15|	Validate / Invalidate auth Token  | To validate and invalidate the generated token. |Kernel|
-|16|	Notification Service (SMS / EMAIL) | To send notification through SMS / Email channel at the end of Registration process. |Kernel|	
-|17|	ID-Authentication API | To on board the user based on user's bio authentication. Without this service, user onborading screen won't work if bio auth enabled. |ID-Authentication|
+|16|	ID-Authentication API | To on board the user based on user's bio authentication. Without this service, user onborading screen won't work if bio auth enabled. |ID-Authentication|
 
 # External hardware driver(s)
 This section covers the list of drivers required to communicate with the external devices.  
