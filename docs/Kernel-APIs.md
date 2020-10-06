@@ -1,5 +1,5 @@
 * Security APIs
-	* [Key Manager Service](#key-manager-private)
+	* [Key Manager Service](#key-manager-service-private)
 	* [Crypto Manager Service](#crypto-manager-private)
 	* [License Key Service](#license-key-manager-private)
 	* [Crypto Signature Service](#crypto-signature-service-private)
@@ -17,60 +17,101 @@
 	* [OTP Manager Service](#otp-manager-private)
 	* [Registration Center APIs](Registration-Center-APIs.md)
 
-# Key Manager (Private)
-* [GET /publickey](#get-publickey)
-* [POST /decrypt](#post-decrypt)
+# Key Manager Service (Private)
+This service in MOSIP are used for operations related to key management and interaction with SoftHSM or RealHSM for key generation.
+* [POST /generateCSR](#post-generatecsr)
+* [POST /generateMasterKey/{objectType}](#post-generatemasterkey-objecttype)
+* [GET /getCertificate](#get-getcertificate)
+* [POST /uploadCertificate](#post-uploadcertificate)
+* [POST /uploadOtherDomainCertificate](#post-uploadotherdomaincertificate)
 
-## GET /publickey
-This service will provide the public key for the specific application. 
+## POST /generateCSR
+This service will generate CSRs for a MOSIP application. 
 
 ### Resource URL
-`https://mosip.io/v1/keymanager/publickey`
+`https://{base_url}/v1/keymanager/generateCSR`
 
 ### Resource details
 Resource Details | Description
 ------------ | -------------
 Response format | JSON
-Requires Authentication | Yes
+Requires Authentication | No
 
 ### Request Part Parameters
 Name | Required | Description |  Example
 -----|----------|-------------|--------
-applicationId |Yes|Id of the application| REGISTRATION,IDA
-referenceId|No|Id of the Machine/MISP|
-timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
+applicationId | Yes | ID of the MOSIP Application for which we want to generate the CSR | KERNEL
+commonName | Yes | The fully qualified domain name (FQDN) of your server. | MOSIP
+country | Yes | The two-letter ISO code for the country where your organization is location. | IN for India
+state | Yes | The state/region where your organization is located. | KA
+location | Yes | The city where your organization is located. | BANGALORE
+organization | Yes | The legal name of your organization. This should not be abbreviated and should include suffixes such as Inc, Corp, or LLC. | IIITB
+organizationUnit | Yes | The division of your organization handling the certificate. | MOSIP-TECH-CENTER
 
 ### Request
-`https://mosip.io/v1/keymanager/publickey/REGISTRATION?timeStamp=2018-12-09T06%3A39%3A03.683Z `
+```JSON
+{
+  "id": "io.mosip.keymanager.generateCSR",
+  "metadata": {},
+  "request": {
+    "applicationId": "KERNEL",
+    "commonName": "MOSIP",
+    "country": "IN",
+    "location": "BANGALORE",
+    "organization": "IIITB",
+    "organizationUnit": "MOSIP-TECH-CENTER",
+    "referenceId": "string",
+    "state": "KA"
+  },
+  "requesttime": "2020-10-05T13:14:56.696Z",
+  "version": "1.0"
+}
+```
 
 ### Responses
 
 #### Success Response
-
-##### Description: public key is issued successfully
 ```JSON
-
 {
-  "id": "string",
-  "version": "string",
-  "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
+  "id": "io.mosip.keymanager.generateCSR",
+  "metadata": {},
   "response": {
-		  "publicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwUAubI0cMDZMlalDYbzZj4G2UrWY0QDtmZQyqU_ER5CA1gbxlHDQIesm1DVyp6kf1sG-RcosKPqKIhe9vKLPx5pzQXinGdl_8e5bkPpg2RLlDoNju1ycohPrCk0VOd4eNU90-SRJZH_62QE1_MG2yIohI7e7cuC93Q9SHMD8jmJ7DX2zTui4zbo-c5g7vFAtzDgxJg0vSPGbap682xkWZNgzRA_ctrnHF_9_JMzP_6Equ8E_g5BaI3jkWnVmDNjDzzseBH9zHpfbx6wNYrzQZy8iqqywbUtbHWtM0ALkH7nLi4atVbL6a-ryFt6Tq7qfGzYhLtWN47t4GxwyOJC99QIDAQAB",
-		  "issuedAt": "2018-01-01T10:00:00",
-		  "expiryAt": "2018-12-10T06:12:51.994"
-   }
-	
+    "certSignRequest": "string",
+    "certificate": "string",
+    "expiryAt": "string",
+    "issuedAt": "string",
+    "timestamp": "2020-10-05T13:14:56.696Z"
+  },
+  "responsetime": "2020-10-05T13:14:56.696Z",
+  "version": "1.0"
 }
 ```
 **Response Code : 200 (OK)**
 
-## POST /decrypt
-This service will decrypt the encrypted symmetric key 
+#### Failure Response
+```JSON
+{
+  "id": "io.mosip.keymanager.generateCSR",
+  "version": "1.0",
+  "responsetime": "2020-10-05T13:14:56.696Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "KER-KMS-012",
+      "message": "Key Generation Process is not completed."
+    }
+  ]
+}
+```
+**Response Code : 200 (OK)**
+
+## POST /generateMasterKey/{objectType}
+This service will generate master keys for a MOSIP application.
 
 ### Resource URL
-`https://mosip.io/v1/keymanager/decrypt `
+`https://{base_url}/v1/keymanager/generateMasterKey/{objectType}`
 
 ### Resource details
 Resource Details | Description
@@ -78,77 +119,311 @@ Resource Details | Description
 Response format | JSON
 Requires Authentication | Yes
 
+### Path Parameters
+Name | Required | Description |  Example
+-----|----------|-------------|--------
+objectType | Yes | Object Type can be Response Type Certificate or CSR |
+
 ### Request Part Parameters
 Name | Required | Description |  Example
 -----|----------|-------------|--------
-applicationId |Yes|Id of the application| REGISTRATION,IDA
-referenceId|No|Id of the Machine/MISP|
-timeStamp (encryption timestamp) |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
+applicationId | Yes | ID of the MOSIP Application for which we want to generate the Master Key | REGISTRATION
+commonName | Yes | The fully qualified domain name (FQDN) of your server. | MOSIP
+country | Yes | The two-letter ISO code for the country where your organization is location. | IN for India
+state | Yes | The state/region where your organization is located. | KA
+location | Yes | The city where your organization is located. | BANGALORE
+organization | Yes | The legal name of your organization. This should not be abbreviated and should include suffixes such as Inc, Corp, or LLC. | IIITB
+organizationUnit | Yes | The division of your organization handling the certificate. | MOSIP-TECH-CENTER
+referenceId | No | ID of the Machine or Partner for whom the Key is getting generated |
+force | Yes | Force attribute will force key rotation. | true or false
 
 ### Request
-```json
-{	
-  "id": "string",
-  "version": "string",
+```JSON
+{
+  "id": "io.mosip.keymanager.generateMasterKey",
   "metadata": {},
-  "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-    "request": {
-      "applicationId": "REGISTRATION",
-      "encryptedSymmetricKey": "encryptedSymmetricKey",
-      "referenceId": "REF01",
-      "timeStamp": "2018-12-10T06:12:52.994Z"
-    }
+  "request": {
+    "applicationId": "KERNEL",
+    "commonName": "MOSIP",
+    "country": "IN",
+    "force": false,
+    "location": "BANGALORE",
+    "organization": "IIITB",
+    "organizationUnit": "MOSIP-TECH-CENTER",
+    "referenceId": "string",
+    "state": "KA"
+  },
+  "requesttime": "2020-10-05T13:44:48.123Z",
+  "version": "1.0"
 }
 ```
 
 ### Responses
 
 #### Success Response
-
-##### Description: decrypt the encrypted symmetric key successfully
-```json
+```JSON
 {
-  "id": "string",
-  "version": "string",
-  "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "errors": null,
+  "id": "io.mosip.keymanager.generateMasterKey",
+  "metadata": {},
   "response": {
-    "symmetricKey": "decryptedSymmetricKey"
-  }
+    "certSignRequest": "string",
+    "certificate": "string",
+    "expiryAt": "string",
+    "issuedAt": "string",
+    "timestamp": "2020-10-05T13:44:48.123Z"
+  },
+  "responsetime": "2020-10-05T13:44:48.123Z",
+  "version": "1.0"
 }
 ```
 **Response Code : 200 (OK)**
 
 #### Error Response
-```json
+```JSON
 {
-  "id": "string",
-  "version": "string",
-  "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "id": "io.mosip.keymanager.generateMasterKey",
+  "version": "1.0",
+  "responsetime": "2020-10-05T13:44:48.123Z",
+  "metadata": null,
+  "response": null,
   "errors": [
     {
-      "errorCode": "string",
-      "message": "string"
+      "errorCode": "KER-KMS-010",
+      "message": "Reference Id Not Supported for the Application ID."
     }
-  ],
-  "response": null
+  ]
 }
 ```
 **Response Code : 200 (OK)**
 
-### Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-KER-KMS-001 |	Certificate is not valid	|   validity check fail
-KER-KMS-002 |   ApplicationId not found in Key Policy | ApplicationId not valid
-KER-KMS-003 | No unique alias is found| No unique alias
-KER-KMS-004 | No Such algorithm is supported| No such algorithm exception
-KER-KMS-005 | Invalid request | Invalid request
-KER-KMS-006 | timestamp should be in ISO 8601 format yyyy-MM-ddTHH::mm:ss.SSSZ | date time parse exception
-KER-KMS-007 | Exception occured in cypto library | Crypto exception
-KER-KMS-500 | Internal server error | Internal server error
+## GET /getCertificate
+This service will retrieve a certificate using the application id and reference id.
+
+### Resource URL
+`https://{base_url}/v1/keymanager/getCertificate?applicationId={application_id}&referenceId={reference_id}`
+
+### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | Yes
+
+### Query Parameters
+Name | Required | Description |  Example
+-----|----------|-------------|--------
+applicationId | Yes | ID of the MOSIP Application for which we want to fetch the certificate  |
+referenceId | No | ID of the Machine or Partner for whom we want to fetch the certificate |
+
+### Request Part Parameters
+-NA-
+
+### Request
+-NA-
+
+### Responses
+
+#### Success Response
+```JSON
+{
+  "errors": null,
+  "id": "string",
+  "metadata": {},
+  "response": {
+    "certSignRequest": "string",
+    "certificate": "string",
+    "expiryAt": "string",
+    "issuedAt": "string",
+    "timestamp": "string"
+  },
+  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "version": "string"
+}
+```
+**Response Code : 200 (OK)**
+
+#### Error Response
+```JSON
+{
+  "id": null,
+  "version": null,
+  "responsetime": "2020-10-05T13:53:53.799Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "KER-KMS-005",
+      "message": "Required String parameter 'applicationId' is not present"
+    }
+  ]
+}
+```
+**Response Code : 200 (OK)**
+
+### Failure Details
+Error Code | Error Message
+-----------|---------------
+KER-KMS-002 | ApplicationId not found in Key Policy
+KER-KMS-005 | Required String parameter 'applicationId' is not present
+KER-KMS-012 | Key Generation Process is not completed.
+
+## POST /uploadCertificate
+This service will be used to upload a certificate.
+
+### Resource URL
+`https://{base_url}/v1/keymanager/uploadCertificate`
+
+### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | No
+
+### Request Part Parameters
+Name | Required | Description |  Example
+-----|----------|-------------|--------
+applicationId | Yes | ID of the MOSIP Application for which we want to fetch the certificate  |
+certificateData | Yes | The certificate data |
+referenceId | No | ID of the Machine or Partner for which we want to upload the certificate |
+
+### Request
+```JSON
+{
+  "id": "io.mosip.keymanager.uploadCertificate",
+  "metadata": {},
+  "request": {
+    "applicationId": "KERNEL",
+    "certificateData": "<certificate data>",
+    "referenceId": "10001"
+  },
+  "requesttime": "2020-10-05T14:05:34.658Z",
+  "version": "1.0"
+}
+```
+
+### Responses
+
+#### Success Response
+```JSON
+{
+  "errors": null,
+  "id": "io.mosip.keymanager.uploadCertificate",
+  "metadata": {},
+  "response": {
+    "status": "success",
+    "timestamp": "2020-10-05T14:01:51.588Z"
+  },
+  "responsetime": "2020-10-05T14:05:34.658Z",
+  "version": "1.0"
+}
+```
+**Response Code : 200 (OK)**
+
+#### Error Response
+```JSON
+{
+  "id": "io.mosip.keymanager.uploadCertificate",
+  "version": "1.0",
+  "responsetime": "2020-10-05T14:05:34.658Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "KER-KMS-003",
+      "message": "No unique alias is found"
+    }
+  ]
+}
+```
+**Response Code : 200 (OK)**
+
+### Failure Details
+Error Code | Error Message
+-----------|---------------
+KER-KMS-002 | ApplicationId not found in Key Policy
+KER-KMS-005 | Required String parameter 'applicationId' is not present
+KER-KMS-012 | Key Generation Process is not completed.
+KER-KMS-003 | No unique alias is found
+KER-KMS-013 | Certificate Parsing Error.
+
+## POST /uploadOtherDomainCertificate
+This service will be used to upload a certificate which is of other domains with in MOSIP system.
+
+### Resource URL
+`https://{base_url}/v1/keymanager/uploadOtherDomainCertificate`
+
+### Resource details
+Resource Details | Description
+------------ | -------------
+Response format | JSON
+Requires Authentication | No
+
+### Request Part Parameters
+Name | Required | Description |  Example
+-----|----------|-------------|--------
+applicationId | Yes | ID of the MOSIP Application for which we want to fetch the certificate  |
+certificateData | Yes | The certificate data |
+referenceId | No | ID of the Machine or Partner for which we want to upload the certificate |
+
+### Request
+```JSON
+{
+  "id": "io.mosip.keymanager.uploadOtherDomainCertificate",
+  "metadata": {},
+  "request": {
+    "applicationId": "KERNEL",
+    "certificateData": "<certificate data>",
+    "referenceId": "10001"
+  },
+  "requesttime": "2020-10-05T14:05:34.658Z",
+  "version": "1.0"
+}
+```
+
+### Responses
+
+#### Success Response
+```JSON
+{
+  "errors": null,
+  "id": "io.mosip.keymanager.uploadOtherDomainCertificate",
+  "metadata": {},
+  "response": {
+    "status": "success",
+    "timestamp": "2020-10-05T14:01:51.588Z"
+  },
+  "responsetime": "2020-10-05T14:05:34.658Z",
+  "version": "1.0"
+}
+```
+**Response Code : 200 (OK)**
+
+#### Error Response
+```JSON
+{
+  "id": "io.mosip.keymanager.uploadOtherDomainCertificate",
+  "version": "1.0",
+  "responsetime": "2020-10-05T14:11:11.810Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "KER-KMS-013",
+      "message": "Certificate Parsing Error."
+    }
+  ]
+}
+```
+**Response Code : 200 (OK)**
+
+### Failure Details
+Error Code | Error Message
+-----------|---------------
+KER-KMS-002 | ApplicationId not found in Key Policy
+KER-KMS-005 | Required String parameter 'applicationId' is not present
+KER-KMS-012 | Key Generation Process is not completed.
+KER-KMS-003 | No unique alias is found
+KER-KMS-013 | Certificate Parsing Error.
 
 # Crypto Manager (Private)
 * [POST v1/cryptomanager/encrypt](#post-v-1-cryptomanager-encrypt)
@@ -158,7 +433,7 @@ KER-KMS-500 | Internal server error | Internal server error
 This service will encrypt provided plain string data with session symmetric key and encrypt symmetric key with application specific public key based on given timestamp(current timestamp of encryption). This will respond combined encrypted data and symmetric key having a key splitter.  
 
 ### Resource URL
-`https://mosip.io/v1/cryptomanager/encrypt`
+`https://{base_url}/v1/cryptomanager/encrypt`
 
 ### Resource details
 Resource Details | Description
@@ -167,31 +442,32 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Request
-```json
+```JSON
 {
-  "id": "string",
-  "version": "string",
+  "id": "io.mosip.cryptomanager.encrypt",
   "metadata": {},
-  "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "request": {
+    "aad": "VGhpcyBpcyBzYW1wbGUgYWFk",
     "applicationId": "REGISTRATION",
     "data": "string",
     "referenceId": "REF01",
-    "salt": null,
-    "timeStamp": "2018-11-10T06:12:52.994Z"
-  }       
+    "salt": "LA7YcvP9DdLIVI5CwFt1SQ",
+    "timeStamp": "2018-12-10T06:12:52.994Z"
+  },
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "1.0"
 }
 ```
 
 ### Responses
 
-##### Description: encrypted data successfully
-```json
+#### Success Response
+```JSON
 {
-  "id": "string",
-  "version": "string",
+  "id": "io.mosip.cryptomanager.encrypt",
+  "version": "1.0",
   "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "responsetime": "2018-12-10T06:12:52.994Z",
   "errors": null,
   "response": {
     "data": "wk4RM2su2lBXuhx3_EtBijXTDp0Y20fJA6tmoONPjr6YBLqwu_YRWiSa10o-bQWesb-IobxPg-KsZq-Gc0L6Rq6besw-rMavg5a5nPU7b3pAug0N6Ek4B7S8v_tc5cu7LBRdBv1mRSS2onxXbT2R4qeEwl_11KtxPs_ek6g4vV6oEQRem2fPhop_21DaoWVEZFovHAAJDqSFj3R38A-fxvHHpVSa9BRTe-DeTKj_xZsNYXQixZR3jMdijtm8Q7lIT3E1x8LYp-hG3RhR_xC7trAOTqilzLjLfirE3Wjfor5bhLiG9eZyTb52ihKsDV1l2oBAhn9Aao_fYl3UD5QekSNLRVlfU1BMSVRURVIjeKen-3j5KhnE-93Qfe_pBfMBIKEkTJJ7pR-4cO7l-X0"
@@ -213,48 +489,47 @@ Response format | JSON
 Requires Authentication | Yes
 
 ### Request
-```json
+```JSON
 {
-  "id": "string",
-  "version": "string",
+  "id": "io.mosip.cryptomanager.decrypt",
   "metadata": {},
-  "requesttime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
   "request": {
+    "aad": "VGhpcyBpcyBzYW1wbGUgYWFk",
     "applicationId": "REGISTRATION",
-    "data": "Fj3R38A-fxvHHpVSa9BRTe-DeTKj_xZsNYXQixZR3jMdijtm8Q7lIT3E1x8_xC7trAOTqilzLjLfirE3Wjfor5b",
+    "data": "string",
     "referenceId": "REF01",
-    "salt": null,
+    "salt": "LA7YcvP9DdLIVI5CwFt1SQ",
     "timeStamp": "2018-12-10T06:12:52.994Z"
-  } 
+  },
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "1.0"
 }
 ```
 
 ### Responses
 
 #### Success Response
-
-##### Description: decrypt encryted data along with symmetric key having splitter
-```
+```JSON
 {
-  "id": "string",
-  "version": "string",
+  "id": "io.mosip.cryptomanager.decrypt",
+  "version": "1.0",
   "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "responsetime": "2018-12-10T06:12:52.994Z",
   "errors": null,
- "response": {
- 		"data": "string"
-             }
+  "response": {
+    "data": "string"
+  }
 }	
 ```
 **Response Code : 200 (OK)**
 
 #### Error Response
-```
+```JSON
 {
-  "id": "string",
-  "version": "string",
+  "id": "io.mosip.cryptomanager.decrypt",
+  "version": "1.0",
   "metadata": {},
-  "responsetime": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+  "responsetime": "2018-12-10T06:12:52.994Z",
   "errors": [
     {
       "errorCode": "string",
