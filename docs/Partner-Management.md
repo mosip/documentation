@@ -55,31 +55,70 @@ A Policy is a document in MOSIP which dictates various actions between the partn
 ### Sample Authentication Policy JSON
 ```JSON
 {
-  "policies": {
-    "authPolicies": [
-      {"authType": "otp","mandatory": true},
-      {"authType": "demo","mandatory": false},
-      {"authType": "bio","authSubType": "FINGER","mandatory": true},
-      {"authType": "bio","authSubType": "IRIS","mandatory": false},
-      {"authType": "bio","authSubType": "FACE","mandatory": false},
-      {"authType": "kyc","mandatory": false}     
-    ],
-    "allowedKycAttributes": [  
-      {"attributeName": "fullName"},
-      {"attributeName": "dateOfBirth"},
-      {"attributeName": "gender"},
-      {"attributeName": "phone"},
-      {"attributeName": "email"},
-      {"attributeName": "addressLine1"},
-      {"attributeName": "addressLine2"},
-      {"attributeName": "addressLine3"},
-      {"attributeName": "location1"},
-      {"attributeName": "location2"},
-      {"attributeName": "location3"},
-      {"attributeName": "postalCode"},
-      {"attributeName": "photo"}
-    ]
-  }
+  "allowedAuthTypes": [
+    {
+      "authType": "otp",
+      "mandatory": true
+    },
+    {
+      "authType": "demo",
+      "mandatory": false
+    },
+    {
+      "authType": "bio",
+      "authSubType": "FINGER",
+      "mandatory": true
+    },
+    {
+      "authType": "bio",
+      "authSubType": "IRIS",
+      "mandatory": false
+    },
+    {
+      "authType": "bio",
+      "authSubType": "FACE",
+      "mandatory": false
+    }
+  ],
+  "authTokenType": "random/partner/policy/policyGroup",
+  "allowedKYCAttributes": [
+    {
+      "attributeName": "fullName"
+    },
+    {
+      "attributeName": "dateOfBirth"
+    },
+    {
+      "attributeName": "gender"
+    },
+    {
+      "attributeName": "phone"
+    },
+    {
+      "attributeName": "email"
+    },
+    {
+      "attributeName": "addressLine1"
+    },
+    {
+      "attributeName": "addressLine2"
+    },
+    {
+      "attributeName": "addressLine3"
+    },
+    {
+      "attributeName": "location1"
+    },
+    {
+      "attributeName": "location2"
+    },
+    {
+      "attributeName": "location3"
+    },
+    {
+      "attributeName": "postalCode"
+    }
+  ]
 }
 ```
 
