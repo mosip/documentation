@@ -176,7 +176,6 @@ Values | Description
 -------|------------
 none | The ID attribute will be stored in all the packets.
 pvt | It is for private information which will be used for authentication & will be stored in private packet.
-kyc | It is information that that can be disclosed to partner and used in auth. This data will be stored in private packet.
 evidence | This data is treated as proof and can be later removed by the adopter. This data will be stored in evidence packet.
 optional | This data is also treated as proof data for the registration and can be removed later by the adopter based on policy. This data will be stored in optional packet.
 
