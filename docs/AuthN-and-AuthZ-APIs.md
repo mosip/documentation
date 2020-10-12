@@ -326,6 +326,7 @@ secretkey|Yes|This is the secret key which was provided to the application corre
   "version":"1.0",	
   "requesttime":"2007-12-03T10:15:30Z",
   "request": {
+    "appId": "regproc",
     "clientid": "D72HJDF8",
     "secretkey": "JSlj8p789sdfjhlsJKDHFS"
   }
