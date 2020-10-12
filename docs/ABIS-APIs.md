@@ -22,7 +22,7 @@ An ABIS system that integrates with MOSIP should support the following operation
 * [Reference Count](#reference-count)
 
 {% hint style="info" %}
-All ABIS operations are via. a message queue and are asynchronous.
+All ABIS operations are via. a message queue and are asynchronous. The data sent in ABIS can be byte array or text based on a configure in registration processor. 
 {% endhint %}
 
 # Parameters
