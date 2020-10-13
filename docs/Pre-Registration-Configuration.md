@@ -119,25 +119,6 @@ Thanks
 **Attributes**:
 This template doesn't support any attributes.
 
-## Email Content for OTP ???
-This template is for the OTP message sent on the email for logging into the pre-registration application. This notification is sent to the resident's email id using which he/she is trying to login into the pre-registration portal. 
-
-**Template type code**: otp-email-content-template
-
-**Sample template**:
-```TXT
-Dear $name,
-
-OTP for Pre-Registration  $PRID is $otp and is valid for $validTime minutes. (Generated on $date at $time Hrs)
-```
-
-**Attributes**: 
-* $name - Name of the applicant 
-* $otp - OTP for the OTP request
-* $validTime - Validatity time of the OTP in minutes
-* $date - Date when the OTP was generated
-* $time - Time when the OTP was generated
-
 # Pre-Registration UI Specification
 
 **File Name**: [pre-registration-demographic.json]()
