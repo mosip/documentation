@@ -144,13 +144,14 @@ The user opts to view the available slots for a selected registration center.
 * An user at this stage may opt to search registration center. In this case the appointment-booking (Time Slot selected) done is removed
 * An user cannot  Re-book the appointment if the appointment booking is less than 48 hours (configurable) from time of booking
 
-# Appointment acknowledgement 
+# Appointment acknowledgement
 
 * An Acknowledgement is triggered after successful completion of pre-registration (booking an appointment)
 * The acknowledgement contains the following information: name, pre-registration id, age/DoB, mobile number, email id and registration center details, appointment date, appointment time)
-* A QR code is generated based on the demographic details and the pre-registration ID. **This QR code can be scanned at the registration center to fetch the details to be used during the registration process*.
+* A QR code which contains the pre-registration ID. 
+* This QR code can be scanned at the registration center to fetch the details to be used during the registration process.
 
-## Download acknowledgement 
+## Download acknowledgement
 User can choose to print or download the acknowledgement as PDF.
 
 ##  Send acknowledgement to email/phone
