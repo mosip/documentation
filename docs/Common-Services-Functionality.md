@@ -5,7 +5,7 @@
 1. OTP Manager Component handles OTP Generation and OTP Validation
 1. For OTP Generation, system receives a request to generate an OTP along with a Key in input parameter. 
 1. This Key can be a Mobile number, Email ID or a combination of Mobile Number and Email ID. 
-1. The component generates an OTP as per the configured length and responds back with the OTP to the source. OTP manager maps an expiry period with the OTP as configured by the Admin.
+1. The component generates an OTP as per the configured length and responds back with the OTP to the source. OTP manager maps an expiry period with the OTP as configured by the Administrator.
 
 ## OTP Validation
 
@@ -27,7 +27,7 @@ Crypto service encrypts or decrypts data across MOSIP with the help of Public/Pr
 The Crypto Service receives a request from an application with input parameters – Application ID, Reference ID, Timestamp and the Data which needs to be encrypted. 
 The Service then calls the Key Generator API to get a symmetric Key and encrypts the data using that symmetric Key. 
 
-The Service then calls the Key Manager Service with the Application ID and Timestamp received in the input parameters and gets the public key. 
+The Service then calls the Key Manager Service with the Application ID and timestamp received in the input parameters and gets the public key. 
 
 The Service then encrypts the symmetric key using the Public key and joins the Encrypted data and Encrypted Symmetric Key using a Key splitter and respond to the source with the joined data.
 

@@ -11,8 +11,9 @@
         * [Cryptography in MOSIP](Encryption-in-DTO-Layer.md)
 * Modules
     * [Pre-Registration](Pre-Registration.md)
-        * [Pre Registration Functionality](Pre-Registration-Functionality.md)
+        * [Pre-Registration Functionality](Pre-Registration-Functionality.md)
 		* [UI Specification for Pre-registration](UI-Specification-for-Pre-Registration.md)
+		* [Pre-Registration Configuration](Pre-Registration-Configuration.md)
     * [Registration](Registration-Client.md)
         * [Registration Functionality](Registration-Functionality.md)
         * [Registration Packet](Registration-Packet.md)
