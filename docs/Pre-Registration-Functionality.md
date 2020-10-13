@@ -63,7 +63,8 @@ The pre-registrations created will be associated with user id. The user can view
 |Booked|  Filled demographic details, uploaded documents, and booked appointment|Visit the registration center on the appointment date and time|
 |Expired| Appointed date has passed|N/A
 
-The applications are sorted and displayed by the order of creation of application. The first application created appears first, latest created/modified application appears at the end. If the user visits the registration centre and consumes the appointment, then the application will be removed from the list. If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
+
+The applications are sorted and displayed by the order of creation of application. The first application created appears first, latest created/modified application appears at the end. If the user visits the registration center and consumes the appointment, then the application will be removed from the list. If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
 
 
 ## Modify application data 
