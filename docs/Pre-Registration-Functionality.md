@@ -63,18 +63,14 @@ The pre-registrations created will be associated with user id. The user can view
 |Booked|  Filled demographic details, uploaded documents, and booked appointment|Visit the registration center on the appointment date and time|
 |Expired| Appointed date has passed|N/A
 
-
 The applications are sorted and displayed by the order of creation of application. The first application created appears first, latest created/modified application appears at the end. If the user visits the registration center and consumes the appointment, then the application will be removed from the list. If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
 
 
 ## Modify application data 
 The user can modify the pre-registration data by opting to select the “Modify” option for a specific application. The system provides the demographic form with pre-filled demo details and allows the user to edit the details as required. The system associates the modified demo details with the pre-registration id for which Modify information is initiated.
 
-Note: Modify application data cannot be done for an expired application
-
 ## Discard application 
 The user can discard the pre-registration by clicking on the Delete icon for the pre-registration id for which he/she wishes to discard. The system provides the user with two options: ‘Discard entire Application’ or ‘Cancel appointment.' The user chooses to discard entire application. The system deletes all the data mapped to the pre-registration id and cancels the appointment (if any).
-
 
 #  Attaching documents to the application
 
@@ -89,7 +85,6 @@ The user can discard the pre-registration by clicking on the Delete icon for the
 * The POA (Proof of Address) document could be uploaded or can be referred to an already uploaded POA of an existing applicant
 * The user could select a particular applicant document to which he wants to refer 
 * When Pre-registering for a family  living at the same address  it is not required to upload same POA again and again,instead could refer to the document as uploaded by the first family member saving space and time.
-
 
 #  Booking an appointment
 
