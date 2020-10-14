@@ -63,7 +63,8 @@ The pre-registrations created will be associated with user id. The user can view
 |Booked|  Filled demographic details, uploaded documents, and booked appointment|Visit the registration center on the appointment date and time|
 |Expired| Appointed date has passed|N/A
 
-The applications are sorted and displayed by the order of creation of application. The first application created appears first, latest created/modified application appears at the end. If the user visits the registration centre and consumes the appointment, then the application will be removed from the list. If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
+
+The applications are sorted and displayed by the order of creation of application. The first application created appears first, latest created/modified application appears at the end. If the user visits the registration center and consumes the appointment, then the application will be removed from the list. If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
 
 
 ## Modify application data 
@@ -82,7 +83,7 @@ The user can discard the pre-registration by clicking on the Delete icon for the
 * Based on the parameters (from Config file) for example - gender, age and residential status (Foreigner, National) from the demographic data, applicant types are determined. The pre-registration system then sends the id to the mapping.
 * Based on the Applicant type, the Applicable Document categories are received from the mapping. The pre-registration system then displays only applicable categories.
 * The Document Category and type of documents in each category to be uploaded varies based on the applicant type. pre-registration system displays only those types to the applicant.
-* Once the documents are uploaded by applicant the system performs virus scan to check the integrity of the document. Once the virus scan is successful, the document is encrypted and stored in the database
+* Once the documents are uploaded by applicant the system performs virus scan to check the integrity of the document. Once the virus scan is successful, the document is encrypted and stored in the object store.
 
 ## Referring to already uploaded documents
 * The POA (Proof of Address) document could be uploaded or can be referred to an already uploaded POA of an existing applicant
@@ -143,13 +144,14 @@ The user opts to view the available slots for a selected registration center.
 * An user at this stage may opt to search registration center. In this case the appointment-booking (Time Slot selected) done is removed
 * An user cannot  Re-book the appointment if the appointment booking is less than 48 hours (configurable) from time of booking
 
-# Appointment acknowledgement 
+# Appointment acknowledgement
 
 * An Acknowledgement is triggered after successful completion of pre-registration (booking an appointment)
 * The acknowledgement contains the following information: name, pre-registration id, age/DoB, mobile number, email id and registration center details, appointment date, appointment time)
-* A QR code is generated based on the demographic details and the pre-registration ID. **This QR code can be scanned at the registration center to fetch the details to be used during the registration process*.
+* A QR code which contains the pre-registration ID. 
+* This QR code can be scanned at the registration center to fetch the details to be used during the registration process.
 
-## Download acknowledgement 
+## Download acknowledgement
 User can choose to print or download the acknowledgement as PDF.
 
 ##  Send acknowledgement to email/phone
