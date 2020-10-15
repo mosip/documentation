@@ -30,7 +30,7 @@ For high level and low level design refer to [pre-registration repo/design](http
 
 # Logical View
 
-Below is the diagram for on the logical architecture of Pre-registration,
+Below is the diagram depicts the logical architecture of Pre-registration,
 
 ![](_images/pre_registration/pre_registration-logic_architecture_diagram.png)
 
