@@ -1,13 +1,13 @@
+## Credentials
 Credential share is responsible to share the user's data to a credential partner for printing, issuing cards, verifying data, etc.
 
 The credential share is a functional service that interacts with the id repository and collects the user attributes as per policy defined for the credential partner. The service responsibilities are as follows.
 
-* Get the user attributes from ID Repository
-* If required collect the biometrics from Data Share service.
+* Retrive an individual's details from ID repository as per policy.
+* If required collect the biometrics of the individual; based on policy the extracted biometrics are collected from ID repository.
 * Encrypt the data as per the policy.
-* Construct a simple Map and store the details of the user attributes.
-* Biometric data extraction policies are used by ID Repository and the credential service will only look at cryptography and TTL as defined in the policy.
-* All shared data is signed before encryption.
+* Construct a simple map and store the details of the individual.
+* All shared data is signed before encryption and shared as a Data Share URL (configurable as per policy).
 
 ## Credential Share Process Flow for Print
 

@@ -1,5 +1,6 @@
 # Introduction
 Partner Management provides services for various types of partners associated with the MOSIP system. Currently, in MOSIP we have identified some types of partners, but the adopters can choose to add many more partners.
+
 1. Authentication Partners who provide authentication services to individuals who have registered in the MOSIP system.
 2. MISP (MOSIP Infrastructure Service Provider) who provide infrastructure to send authentication request through as secure channel.
 3. Device providers to provide MOSIP compliant devices for authentication & registration.
