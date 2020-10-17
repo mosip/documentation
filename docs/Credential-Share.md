@@ -3,7 +3,7 @@ Credential share is responsible to share the user's data to a credential partner
 
 The credential share is a functional service that interacts with the id repository and collects the user attributes as per policy defined for the credential partner. The service responsibilities are as follows.
 
-* Retrive an individual's details from ID repository as per policy.
+* Retrieve an individual's details from ID repository as per policy.
 * If required collect the biometrics of the individual; based on policy the extracted biometrics are collected from ID repository.
 * Encrypt the data as per the policy.
 * Construct a simple map and store the details of the individual.
@@ -11,7 +11,7 @@ The credential share is a functional service that interacts with the id reposito
 
 ## Credential Share Process Flow for Print
 
-* User requests for credentials via resident service with VID, provider(subscriber/partner), pin(password), Authentication request(bio or OTP based auth request)
+* User requests for credentials via resident service with VID, provider(subscriber/partner), pin(password), Authentication request(biometric or OTP based authentication request)
 * Resident service will authenticate the user using IDA
 * Upon successful authentication, residential services will call credential service create API
 	* We get VID, Credential Type (Policy), Provider as details, User-provided encryption pin, list of data to be shared
