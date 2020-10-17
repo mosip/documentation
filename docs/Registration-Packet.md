@@ -1,11 +1,12 @@
+
 This document describes the registration packet structure and the packet encryption procedure.
  
 # Registration Packet
 Once a resident visits the registration center and provides their demographic & biometric details an encrypted zip file is created which is called a "Packet". This packet can only be decrypted by the registration processor using a private key available in the Kernel Key Manager.
  
-The below diagram depicts the packet creation flow along with the encryption process.
+The below diagram depicts the packet creation flow using the packet manager.
 
-![To be updated](_images/registration/packet-creation-flow.png)
+![](_images/registration/packet_creation_using_packet_manager.png)
 
 ## Packet Structure
 The packet is created using the Commons Packet Manager, which creates a packet in the below structure using the [ID Schema](MOSIP-ID-Object-Definition.md).
