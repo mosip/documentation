@@ -168,13 +168,23 @@ Upon receiving the registration center id, date range (start date, end date) for
 
 # Batch Job Services
 
-Based on a cron scehduler three specific batch jobs run in Pre-registration.
+There are three batch jobs that run in Pre-registration based on a cron scheduler.
 
 ## Consumed Status Batch Job
 
+This batch job identifies the pre-registrations for which registration packets are created and are under processing in server. The details about these pre-registration are removed from pre-registration database and are moved to an archival tables in pre-registration called as consumed tables. Later the data in consumed tables can be archived or removed based on the adopter's need.
+
 ## Expiered Status Batch Job
 
+This batch job identifies the pre-registrations which have expiered and updates the status of these pre-registrations as "Expiered".
+
 ## Booking Batch Job
+
+Booking batch job, runs every day to perform some standard tasks:
+
+1. Creating the booking slots (if not available) for next 140 days (configurable) using the details available for the centers like, center working hours, lunch breaks, no. of Kiosks, slot booking times & holidays.
+
+2. Canceling bookings & sending notifications to the residents, if any emergency holiday has been declared for a center.
 
 #  Audit 
 
