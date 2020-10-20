@@ -101,3 +101,53 @@ The device provider can be registered in MOSIP using the partner self-registrati
 
 ## Approving Device Provider Registration
 The device provider needs to be approved by the MOSIP's Partner administrator. 
+
+{% hint style="info" %}
+
+The device provider details can be approved by the partner administrator using the partern approval API.
+
+{% endhint %}
+
+## Registering Device's Make and Model
+Once the device providers are approved, they need to register their device's make and model information in the partner management portal. The make and model are basic device meta information that will be come as part of device registration request.
+
+{% hint style="info" %}
+
+The device provider can register the make and model details using the device make and model API.
+
+{% endhint %}
+
+## Approving Device's Make and Model Registration
+The device's make and model details needs to be approved by the MOSIP's Partner administrator. 
+
+{% hint style="info" %}
+
+The device's make and model details can be approved by the partner administrator using the device make and model approval API.
+
+{% endhint %}
+
+## Registering Device's Secure Biometric Interface (SBI)
+Once the device's make and models are approved, the device providers need to register their device's secure biometric interface in the partner management portal. The secure biometric interface is the vendor software which would be interfacing with the devices and the registration client application. The below details would be collected when the device provider tries to register a SBI,
+* Device details (from the device's make and model)
+* Software creation time
+* Software binary hash
+* Software expiry time
+* Software version
+
+{% hint style="info" %}
+
+The device provider can register the Secure biometric in details using the device make and model API.
+
+{% endhint %}
+
+## Approving Device's Secure Biometric Interface Registration
+The device's Secure Biometric Interface details needs to be approved by the MOSIP's Partner administrator. 
+
+{% hint style="info" %}
+
+The device's secure biometric interface details can be approved by the partner administrator using the device's make and model approval API.
+
+{% endhint %}
+
+## Registering the Device
+The devices would be registered in MOSIP by the Device Provider's Management server. The management server can send a device registration request using the device registration API provided by MOSIP. Details about the API is available [here](MOSIP-Device-Service-Specification.md#registration). 
