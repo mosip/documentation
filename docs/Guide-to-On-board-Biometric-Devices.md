@@ -5,12 +5,12 @@ White-listing is an activity performed by the MOSIP administrator. As part of th
 
 1. The device type should be available
 2. The device specification should be available
-3. The device should created and mapped to the center where it would be used
+3. The device should be created and mapped to a registration center
 
 ## Adding Device Types
-The device type is the type of device that we one to create. Ideally in case of biometrics devices, we would be using only three types of devices, i.e. iris scanner, finger print slap scanner and a camera. This is an one type activity for the administrator.
+The device type is a master data which specifies the type of device. Ideally in case of biometrics devices, there would be only three types of devices, i.e. iris scanner, fingerprint slap scanner and a camera. This is an one-time activity that can be performed by the administrator for different types of devices.
 
-Make sure the device type is available for a device, before we create any device specification. If the device type is not available then create one.
+The administrator should make sure that, the device type is available for a device, before creating any device specification. If the device type is not available then the administrator can create one.
 
 {% hint style="info" %}
 
@@ -23,14 +23,14 @@ The device type can be created in MOSIP by three ways:
 {% endhint %}
 
 ## Adding Device Specification
-The device specification is the meta information about the device that we want to use for registration. This contains basic details about the device like:
+The device specification is meta information about the device that the administrator want to use for registration. This contains basic details about the device like:
 * Unique name of the device specification
 * Brand name or make of the device
 * Model of the device
 * Device Type (from the device type created earlier)
 * Driver version for the device (optional)
 
-Make sure the specification is available for white-listing the device. If the device specification is not available then create one.
+The administrator should make sure that, the specification is available for white-listing a device. If the device specification is not available then the administrator can create one.
 
 {% hint style="info" %}
 
@@ -43,13 +43,13 @@ The device specification can be created in MOSIP by three ways:
 {% endhint %}
 
 ## Adding Device
-This is the step to white-list a device. Here, we need to capture the basic details about the device like,
-* Serial Number of the device
-* IP of the device (optional)
+After the device specification is available the administrator can white-list a device. Here, the administrator needs to capture the basic details about the device like,
+* Serial number of the device
+* IP Address of the device (optional)
 * MAC Address of the device (optional)
 * Validity of the device
 * Administrative zone of the device
-* Center to which the device will be mapped to
+* Registration Center where the device will be used
 
 {% hint style="info" %}
 
@@ -62,7 +62,8 @@ The device can be created in MOSIP by three ways:
 {% endhint %}
 
 # Registering Devices in MOSIP
-All the devices using which biometrics would be captured for registration or authentication need to be registered via. the management server before use. Before the management server makes a call to MOSIP for device registration various pre-requisites need to be performed,
+All the devices using which biometrics would be captured in MOSIP, need to be registered in MOSIP via. the management server before use. Before the management server makes a call to MOSIP for device registration various pre-requisites need to be performed,
+
 * Policy group for device providers should be available
 * Device provider should self-register in MOSIP as Partner using the Partner Management Portal
 * Request for registration should be approved by the Partner administrator
@@ -75,7 +76,7 @@ All the devices using which biometrics would be captured for registration or aut
 After the above mentioned steps, the device registration request can come from the device management server when the device is connected with the SBI.
 
 ## Adding a Policy Group
-A policy group needs to be created for all the device vendors so that they can register into the MOSIP's partner management portal. Creation of policy group is an administrative activity which would be performed by the Policy administrator.
+A single policy group should be created for all the device vendors so that they can register into the MOSIP's partner management portal. Creation of policy group is an administrative activity which would be performed by the Policy administrator.
 
 {% hint style="info" %}
 
@@ -104,12 +105,16 @@ The device provider needs to be approved by the MOSIP's Partner administrator.
 
 {% hint style="info" %}
 
-The device provider details can be approved by the partner administrator using the partern approval API.
+The device provider details can be approved by the partner administrator using the partner approval API.
 
 {% endhint %}
 
 ## Registering Device's Make and Model
-Once the device providers are approved, they need to register their device's make and model information in the partner management portal. The make and model are basic device meta information that will be come as part of device registration request.
+Once the device provider is approved, he/she needs to register his/her device's make and model information in the partner management portal. The make and model is basic device meta information that will be collected as part of device registration request. Here are the details that are captured as part of registering the device's make and model,
+* Device provider's organization name and ID
+* Brand Name or Make
+* Model
+* Device Type and Sub-Type (this is master data available in MOSIP for various types of devices)
 
 {% hint style="info" %}
 
@@ -127,7 +132,7 @@ The device's make and model details can be approved by the partner administrator
 {% endhint %}
 
 ## Registering Device's Secure Biometric Interface (SBI)
-Once the device's make and models are approved, the device providers need to register their device's secure biometric interface in the partner management portal. The secure biometric interface is the vendor software which would be interfacing with the devices and the registration client application. The below details would be collected when the device provider tries to register a SBI,
+Once the device's make and models are approved, the device provider needs to register his/her device's secure biometric interface in the partner management portal. The secure biometric interface is the software which would be interfacing with the devices and the registration client application. The below details would be collected when the device provider tries to register a SBI,
 * Device details (from the device's make and model)
 * Software creation time
 * Software binary hash
@@ -150,4 +155,4 @@ The device's secure biometric interface details can be approved by the partner a
 {% endhint %}
 
 ## Registering the Device
-The devices would be registered in MOSIP by the Device Provider's Management server. The management server can send a device registration request using the device registration API provided by MOSIP. Details about the API is available [here](MOSIP-Device-Service-Specification.md#registration). 
+The devices would be registered in MOSIP by the Device Provider's Management server. The management server can send a device registration request using the device registration API provided by MOSIP. Details about the API is available [here](MOSIP-Device-Service-Specification.md#registration).
