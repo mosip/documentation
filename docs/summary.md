@@ -1,8 +1,8 @@
 # Table of contents
 
-* Architecture
+* [Architecture](Architecture.md)
     * [Guiding Principles](Architecture-Principles.md)
-    * [MOSIP Architecture](Architecture.md)
+    * [MOSIP Architecture](Mosip-Architecture.md)
         * [Technology Stack](Technology-Stack.md)
     * [MOSIP and Data](Data-Architecture.md)
         * [Naming Standards](Data-Model-Naming-Standards.md)
