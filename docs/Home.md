@@ -19,27 +19,18 @@ The key objectives of MOSIP are to:
 
 **Current Release**
 Version: 1.1.1
-
 Release Date: September 14, 2020
-
 You can find the release notes [here](Release-Notes-1.1.1.md).
-
 Check out our [releases page](MOSIP-Releases.md) for a history of all public releases till date.
 
 ## MOSIP Resources
 
-**Source Code**: [github repos](https://github.com/mosip)
-
+**Source Code**: [GitHub Repositories](https://github.com/mosip)
 **Containers**: [Docker Repository](https://hub.docker.com/u/mosipid)
-
 **Maven Repository**: [Nexus Repository](https://oss.sonatype.org/service/local/repositories/snapshots/content/io/mosip/)
-
 **Presentations**: [mosip.io](https://www.mosip.io/resources.php)
-
 **Learning Videos**: [YouTube Channel](https://www.youtube.com/channel/UCKFSVO6BO1QLvBzc4voziDg)
-
 **Community**: [Gitter Channel](https://gitter.im/mosip-community/community)
-
 
 ## Roadmap
 
