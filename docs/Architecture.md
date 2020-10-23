@@ -10,12 +10,11 @@ Pillars of a digital future
 * Digital Identity and Trust
 * Interoperability and Standards
 * Transparency and Auditability
-The above allow systems to enact digital transactions which are essentially flow of all forms of data or money. The 
-* Digital Transactions (Data and Money)
-* Consent, Privacy, and Security
+The above allow systems to enact digital transactions which are essentially flow of all forms of data or money. These transactions will need to factor identity assurance, consent, user privacy, and information security. MOSIP offers identity assurance to such transactions.
 
-Building a National ID System using MOSIP
+## Building a National ID System using MOSIP
 
 National ID systems can leverage MOSIP as the base platform and configure, customize, extend it to build their systems just they way the need it. The picture below depicts how mosip is visualized as a national id platform.
 
 ![](_images/arch_diagrams/layers.png)
+
