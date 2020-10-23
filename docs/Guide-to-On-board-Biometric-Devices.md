@@ -542,7 +542,7 @@ The devices would be registered in MOSIP by the Device Provider's Management ser
 
 ** API Request Body **
 ```JSON
-POST https://{base_url}/partnermanagement/v1/partners/securebiometricinterface
+POST https://{base_url}/partnermanagement/v1/partners/registereddevices
 
 {
   "id": "string",
