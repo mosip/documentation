@@ -20,7 +20,7 @@
         * [Registration Client Setup](Registration-Client-Setup.md)
         * [First User Registration and Onboarding](First-User-Registration-and-Onboarding.md)
         * [Guide to Configure MOSIP for Biometrics](Guide-to-Configure-MOSIP-for-Biometrics.md)
-        * [Guidelines for Adding Centers, Machine, User and Devices](Guidelines-for-Adding-Centers,-Machine,-User-and-Devices.md)
+        * [Guide to On-board Biometric Devices](Guide-to-On-board-Biometric-Devices.md)
         * [Device Integration Specifications](Device-Integration-Specifications.md)
 		* [UI Specification for Registration Client](UI-Specification-for-Registration-Client.md)
     * [Registration Processor](Registration-Processor.md)
