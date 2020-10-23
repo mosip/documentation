@@ -18,20 +18,18 @@ The key objectives of MOSIP are to:
 ## Releases
 
 **Current Release**
-Version: 1.1.1 <br>
-Release Date: September 14, 2020 <br>
+Version: 1.1.1<br>Release Date: September 14, 2020<br>
 
-You can find the release notes [here](Release-Notes-1.1.1.md). <br>
-Check out our [releases page](MOSIP-Releases.md) for a history of all public releases till date.<br>
+You can find the release notes [here](Release-Notes-1.1.1.md).<br>Check out our [releases page](MOSIP-Releases.md) for a history of all public releases till date.<br>
 
 ## MOSIP Resources
 
-**Source Code**: [GitHub Repositories](https://github.com/mosip) <br>
-**Containers**: [Docker Repository](https://hub.docker.com/u/mosipid) <br>
+ **Source Code**: [GitHub Repositories](https://github.com/mosip)<br>
+**Containers**: [Docker Repository](https://hub.docker.com/u/mosipid)<br>
 **Maven Repository**: [Nexus Repository](https://oss.sonatype.org/service/local/repositories/snapshots/content/io/mosip/) <br>
-**Presentations**: [mosip.io](https://www.mosip.io/resources.php) <br>
-**Learning Videos**: [YouTube Channel](https://www.youtube.com/channel/UCKFSVO6BO1QLvBzc4voziDg) <br>
-**Community**: [Gitter Channel](https://gitter.im/mosip-community/community) <br>
+**Presentations**: [mosip.io](https://www.mosip.io/resources.php)<br>
+**Learning Videos**: [YouTube Channel](https://www.youtube.com/channel/UCKFSVO6BO1QLvBzc4voziDg)<br>
+**Community**: [Gitter Channel](https://gitter.im/mosip-community/community)<br>
 
 ## Roadmap
 
