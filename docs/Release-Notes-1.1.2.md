@@ -2,7 +2,6 @@
 
 - [Scope](#scope)
 - [Documentation](#documentation)
-- [Key Points](#key-points)
 - [Code](#code)
 - [Tests](#tests)
 	* [a. In scope](#a-in-scope)
@@ -34,7 +33,7 @@ All APIs are documented [here](https://docs.mosip.io/platform/apis).
 ### 3. Design 
 Low level design documents for each module are available in the respective github repos.
 
-### 4. Code and Automated Tests
+## Code
 
 * [Commons](https://github.com/mosip/commons/tree/v1.1.2)
 * [Pre-registration](https://github.com/mosip/pre-registration/tree/v1.1.2)
