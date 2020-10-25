@@ -4,79 +4,36 @@
     </a>
 </div>
 
-## Introduction
-The Modular Open Source Identity Platform (MOSIP) helps Governments and other user organizations implement a digital, foundational identity system. Nations can use MOSIP freely as a core to build their own identity systems. Being modular in its architecture, MOSIP provides flexibility to countries in how they implement and configure their systems, and helps avoid vendor lock-in.
+## The MOSIP Program
+The MOSIP program was conceived to help build global digital public goods in the space of digital governance. The flagship of the program is the MOSIP platform that provides the core for a foundational identity system that can be used by countries to build their national identity programs. Anchored at the International Institute of Information Technology, Bangalore ([IIIT-B](https://www.iiitb.ac.in/)), MOSIP harnesses the power of open source and embraces the best practices of scalability, security and privacy. [Learn more >>](https://www.mosip.io/)
 
-For more details on MOSIP documentation visit our documentation website, [docs.mosip.io](https://docs.mosip.io).
+## About MOSIP
 
-## Release 1.1
-MOSIP 1.0 was a functional release of mosip with the core modules tested with biometrics. The 1.1 release of mosip builds upon the 1.0 version and adds more features, some new modules, engineering enhancements, performance and security tuning.
+The **Modular Open Source Identity Platform** is an open source, open standards based foundational identity platform. MOSIP is an API first platform that can be used by countries to build their own national id platform. MOSIP offers id lifecycle management features and identity verification capabilities out of the box.
 
-**Release Date:** July 03, 2020
+The key objectives of MOSIP are to:
+* Provide the basic framework to create a fully functional foundational identity system
+* Provide flexibility for a country to choose and customize the features from the basic framework according to their requirements
+* Maintain privacy, security and confidentiality of an individual's data
+* Provide a scalable and accessible solution to cater to a wide range of population (a few thousands to sevral hundreds of millions)
 
-**Code Base:** [github.com/mosip](https://github.com/mosip)
+## Releases
 
-**Deployment Guide:** To deploy and test mosip you can use our [single click sandbox deployer](https://github.com/mosip/mosip-infra/tree/master/deployment/sandbox-v2)
+The latest release of MOSIP, version 1.1.2 is here! We have migrated from Java 8 to Java 11 as part of this release and also incorporated some software infrastructure changes as part of paring the technical debt. Check out the exciting new services and enhancements in the documentation.
 
-### Key Highlights on Release 1.1
+**Current Release**<br>Version: 1.1.2<br>Release Date: October 25, 2020<br>You can find the release notes [here](Release-Notes-1.1.2.md).
 
-#### New Modules in MOSIP
-MOSIP 1.1 has added APIs for partner management.
+**Previous Release**<br>Version: 1.1.1<br>Release Date: September 14, 2020<br>You can find the release notes [here](Release-Notes-1.1.1.md).
 
-* **Partner Management**
-    * Self-service authentication ecosystem partner (Relying party) on-boarding
-    * API Key request and issue to partner with administrative approval
-    * Administrative policy groups with support for multiple policies allowing various levels of authentication calls
-    * De-activation and Re-activation support at partner and API key level
+Check out our [releases page](MOSIP-Releases.md) for a history of all public releases till date.
 
-#### New Features
-* **Commons**
-    * ID Schema enhanced to support validators
-    * UI Spec support added for dynamic UI
-* **Pre-Registration**
-    * Dynamic UI using ID Schema and UI Specification
-    * Captcha Implementation during login
-* **Registration Client**
-    * Dynamic UI using ID Schema and UI Specification
-    * Registering first user in MOSIP ecosystem
-    * Public Key and Machine mapping checks for TPM and non-TPM machines
-    * Generic master data sync
-    * Spec changes for MDS (support for 0.9.5)
-    * Spec changes for SDK (support for 0.9.0)
-    * Implementation for new packet structure
-* **Registration Processor**
-    * Spec changes for ABIS (0.9.0)
-    * Spec changes for SDK (0.9.0)
-    * Device validation for registered devices
-    * Packet reader utility to read packet with new packet structure
-    * Input load throttling for SEDA bus through additional stage
-* **Authentication**
-    * Authentication as a separate module
-    * Performance changes to IDA - Combining services for reduced network calls
-    * Separate database for Authentication from the ID Repository
-    * Zero knowledge storage
-    * Caching for validations
-    * Spec changes for SDK (support for 0.9.0)
-    * Ecosystem support - Partner and API Key capabilities
+## MOSIP Resources
 
-#### Engineering Changes
-* Automated deployment scripts for development, testing environments on Kubernetes
-* Open build process using Travis
-* GitHub actions, git commit id in builds
-* Shift from private repository to public maven and  docker repositories
-* Decoupling version of components from release version
-* Gitbook based documentation
+**Source Code**: [GitHub Repositories](https://github.com/mosip)<br>**Containers**: [Docker Repository](https://hub.docker.com/u/mosipid)<br>**Maven Repository**: [Nexus Repository](https://oss.sonatype.org/service/local/repositories/snapshots/content/io/mosip/) <br>**Presentations**: [mosip.io](https://www.mosip.io/resources.php)<br>**Learning Videos**: [YouTube Channel](https://www.youtube.com/channel/UCKFSVO6BO1QLvBzc4voziDg)<br>**Community**: [Gitter Channel](https://gitter.im/mosip-community/community)
 
-#### Technology Changes
-* Keycloak for IAM
-* ApacheDS ldap as user store deprecated
-* Prometheus end points in all spring boot services
-* Network HSM support added
+## Roadmap
 
-(For more details on release 1.1 and older releases you can look at our [release documentation](https://docs.mosip.io/platform/mosip-releases))
-
-### Next Release
-Our next release 1.2 is a long term support release which will be tentatively available in Q4 of 2020. The features for the same will be published at [Release 1.2.0 Features](https://docs.mosip.io/platform/mosip-releases/release-notes-1.1.0/release-notes-1.2.0-features) soon.
+The MOSIP roadmap in the short term is the release of our **Long Term Support Version**. Our medium term focus is to enable reference implementations of identity usage, integrations and interoperability. The long term focus is to offer a set of core components for digital governance. Check out our [roadmap](Roadmap.md) and [call for contribution](Call-for-Contribution.md) to see how you can be part of the MOSIP journey.
 
 ---
 
