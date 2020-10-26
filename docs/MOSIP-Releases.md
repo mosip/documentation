@@ -1,8 +1,8 @@
 ## Latest Release
 
 ### Version: 1.1.2 (Stable)
-- Name: Interm Release
-- Date: October 25, 2020
+- Name: Interim Release
+- Date: October 24, 2020
 - [Release Notes](Release-Notes-1.1.2.md)
 
 ## Older Releases

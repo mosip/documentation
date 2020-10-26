@@ -19,7 +19,7 @@ The key objectives of MOSIP are to:
 
 The latest release of MOSIP, version 1.1.2 is here! We have migrated from Java 8 to Java 11 as part of this release and also incorporated some software infrastructure changes as part of paring the technical debt. Check out the exciting new services and enhancements in the documentation.
 
-**Current Release**<br>Version: 1.1.2<br>Release Date: October 25, 2020<br>You can find the release notes [here](Release-Notes-1.1.2.md).
+**Current Release**<br>Version: 1.1.2<br>Release Date: October 24, 2020<br>You can find the release notes [here](Release-Notes-1.1.2.md).
 
 **Previous Release**<br>Version: 1.1.1<br>Release Date: September 14, 2020<br>You can find the release notes [here](Release-Notes-1.1.1.md).
 

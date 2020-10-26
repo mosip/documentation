@@ -11,14 +11,15 @@
 - [Acronyms](#acronyms)
 
 ## Scope
-MOSIP Version **1.1.2** is an interm release on top of **1.1.1** release. It has some of the new features which were planned for release **1.2** and some critical bug fixes which were identified in [Release 1.1.1](Release-Notes-1.1.1.md#list-of-known-issues).
+MOSIP Version **1.1.2** is an interim release on top of **1.1.1** release. It has some of the new features which were planned for release **1.2** and some critical bug fixes which were identified in [Release 1.1.1](Release-Notes-1.1.1.md#list-of-known-issues).
 
-**Release Date:** October 25, 2020
+**Release Date:** October 24, 2020
 
 **Key Highlights**
 
-* [New features added to MOSIP platform](Release-Notes-1.1.2-Features.md)
-* [Bug Fixes across all modules](Release-Notes-1.1.2-Bug-Fixes.md)
+We have migrated from Java 8 to Java 11 as part of this release and also incorporated some software infrastructure changes as part of paring the technical debt.
+* [New features added to MOSIP are listed here](Release-Notes-1.1.2-Features.md)
+* [All the bug fixes are listed here](Release-Notes-1.1.2-Bug-Fixes.md)
 
 ## Documentation
 

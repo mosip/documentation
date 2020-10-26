@@ -31,9 +31,9 @@ OpenJDK version "11.0.8" version to build the application.
 ## Application Prerequisites
    
 Before running the 'Registration Client' application, following prerequisites to be completed:
-* Before building the 'registration-services' module, all the external [dependent services](#dependent-services) URLs should be configured in the **'spring.properties'** and **'mosip-application.properties'** files.     
-* [Property file](#property-file) - **[spring.properties]** should be updated with right environment [env] and other detail.     
-* All **Master data** should be loaded at MOSIP Master database.  
+* Before building the 'registration-services' module, all the external [dependent services](#dependent-services) URLs should be configured in the **'spring.properties'** and **'mosip-application.properties'** files.
+* [Property file](#property-file) - **[spring.properties]** should be updated with right environment [env] and other details.
+* All **Master data** should be loaded at MOSIP Master database.
 * User, machine, device & center mapping, and all other required table and data setup should exist in MOSIP Master database along with the profile and desired roles configuration in IAM server.
 
 {% hint style="info" %}
@@ -171,10 +171,11 @@ Refer the **global configuration** maintained in [Configuration Repository](http
 
 ## TPM [Trusted Platform Module]
 To enable or disable the TPM functionality, modify the mentioned key in 'registrtaion-libs/props/mosip-application.properties' file.    
-    - mosip.reg.client.tpm.availability = { Y - to enable the TPM, N - to disable the TPM}
 
-## MDM [Mosip Device Manager] Service  
-It integrates the Registration application with Bio-devices [IRIS/ Finger Print/ Face]
+`mosip.reg.client.tpm.availability = { Y - to enable the TPM, N - to disable the TPM}`
+
+## MDS [Mosip Device Service]  
+It integrates the Registration application with biometric devices (Iris/ Fingerprint/ Face).
    
 |**S.No.**| **Config Key**| **Sample Values and Description**|
 |:------:|-----|-----|
