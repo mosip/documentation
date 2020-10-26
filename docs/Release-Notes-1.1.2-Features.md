@@ -76,15 +76,3 @@ This document contains the features that were developed or enhanced as part of M
 * Demographic update implementation has been updated to create update packet using the new Packet Manager.
 * Credential Issuance has been added using ID Repository's credential issuance module.
 * API for verifying the credential issuance and print request status has been added.
-
-# Reporting
-* Reference Reporting Framework has been added. It uses the below tool for real-time steaming data and visualization.
-	* Postgres for MOSIP data source enabled with binary or write ahead logs
-	* Debezium for change data capture from postgres, This is used along with Kafka connect as plugin
-	* Kafka connect to connect data source and stream data
-	* Kafka server for message broker which will stream data from kafka connect
-	* Zookepere for Kafka brokers co-ordination of the jobs
-	* Spark streaming to process the data received from kafka topic in real-time
-	* Spark uses pyspark for data processing and processing job are written in python.
-	* Elastic search as data-index and persistence store
-	* Kibana as visualization to create and view dashboards and reports.
