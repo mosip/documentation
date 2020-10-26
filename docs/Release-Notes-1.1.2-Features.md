@@ -36,7 +36,6 @@ This document contains the features that were developed or enhanced as part of M
 
 # Registration Client
 * Packet creation is now being performed using the new Packet Manager.
-* Monera library has been added to integrate with any Scanner.
 * UI has been modified to resolve usability issues.
 	* Back button has been added in login screen to update the username.
 	* Biometric capture screens have been updated.
