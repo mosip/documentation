@@ -1,8 +1,8 @@
 # Table of contents
 
-* Architecture
+* [Architecture](Architecture.md)
     * [Guiding Principles](Architecture-Principles.md)
-    * [MOSIP Architecture](Architecture.md)
+    * [MOSIP Architecture](Mosip-Architecture.md)
         * [Technology Stack](Technology-Stack.md)
     * [MOSIP and Data](Data-Architecture.md)
         * [Naming Standards](Data-Model-Naming-Standards.md)
@@ -130,6 +130,9 @@
 	* [Release Notes 1.1.1](Release-Notes-1.1.1.md)
         * [Release Notes 1.1.1 Bug Fixes](Release-Notes-1.1.1-Bug-Fixes.md)
         * [Release Notes 1.1.1 Artifact Version](Release-Notes-1.1.1-Artifact-Version.md)
+	* [Release Notes 1.1.2](Release-Notes-1.1.2.md)
+	    * [Release Notes 1.1.2 Features](Release-Notes-1.1.2-Features.md)
+        * [Release Notes 1.1.2 Bug Fixes](Release-Notes-1.1.2-Bug-Fixes.md)
 * [Roadmap](Roadmap.md)
     * [Roadmap Activities](Roadmap-Activities.md)
 * [Revision History](Revision-History.md)

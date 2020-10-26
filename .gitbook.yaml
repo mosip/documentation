@@ -4,3 +4,6 @@ structure:
     readme: Home.md
     summary: summary.md
 
+redirects:  
+    architecture/architecture: Mosip-Architecture.md
+    
