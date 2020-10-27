@@ -103,8 +103,7 @@
 * [MOSIP Guides](Guides.md)
     * [Getting Started Guide](Getting-Started.md)
     	* Planning
-        * Deploying
-            * [Build & Deploy](Build-and-Deploy.md)
+        * [Deploying](Build-and-Deploy.md)
             * [Deployment Architectures](Deployment-Architectures.md)
             * [Cell Based Deployment Architecture](Cell-Based-Deployment-Architecture.md)
             * [Hardware Security Module HSM Specifications](Hardware-Security-Module-HSM-Specifications.md)
