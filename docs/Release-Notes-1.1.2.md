@@ -47,7 +47,7 @@ Low level design documents for each module are available in the respective githu
 
 {% hint style="info" %}
 
-Code needs to be deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/tree/v1.1.2/deployment/sandbox-v2).
+Code needs to be deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/tree/1.1.2/deployment/sandbox-v2).
 
 {% endhint %}
 
