@@ -1,6 +1,48 @@
 # Table of contents
 
-* [Architecture](Architecture.md)
+* [MOSIP Platform](Platform.md)
+    *  [MOSIP Documentation](Home.md)
+        * [Revision History](Revision-History.md)
+        * [Planned Updates](Documentation-Updates.md)
+    * [Releases](MOSIP-Releases.md)
+        * [Release Notes 0.9.0](Release-Notes-0.9.0.md)
+        * [Release Notes 1.0.0](Release-Notes-1.0.0.md)
+            * [Release Notes 1.0.0 Features](Release-Notes-1.0.0-Features.md)
+        * [Release Notes 1.0.5](Release-Notes-1.0.5.md)
+        * [Release Notes 1.0.6](Release-Notes-1.0.6.md)
+        * [Release Notes 1.1.0](Release-Notes-1.1.0.md)
+            * [Release Notes 1.1.0 Features](Release-Notes-1.1.0-Features.md)
+            * [Release Notes 1.1.0 Bug Fixes](Release-Notes-1.1.0-Bug-Fixes.md)
+            * [Release Notes 1.2.0 Features](Release-Notes-1.2.0-Features.md)
+            * [Release Notes 1.1.0 Artifact Version](Release-Notes-1.1.0-Artifact-Version.md)
+        * [Release Notes 1.1.1](Release-Notes-1.1.1.md)
+            * [Release Notes 1.1.1 Bug Fixes](Release-Notes-1.1.1-Bug-Fixes.md)
+            * [Release Notes 1.1.1 Artifact Version](Release-Notes-1.1.1-Artifact-Version.md)
+        * [Release Notes 1.1.2](Release-Notes-1.1.2.md)
+            * [Release Notes 1.1.2 Features](Release-Notes-1.1.2-Features.md)
+            * [Release Notes 1.1.2 Bug Fixes](Release-Notes-1.1.2-Bug-Fixes.md)
+    * [Glossary](Glossary.md)
+    * Contribute
+        * [Call for Contribution](Call-for-Contribution.md)
+        * [Contributor's Guide](Contributor-Guide.md)
+        * [Code of Conduct](Code-of-Conduct.md)
+        * [Issue Reporting Guideline](Issue-Reporting-Guideline.md)
+        * Coding Standards
+            * [Auth Angular User Guide](Auth-Angular-User-Guide.md)
+            * [Auth SpringBoot User Guide](Auth-SpringBoot-User-Guide.md)
+            * [Data Model Naming Standards](Data-Model-Naming-Standards.md)
+            * [Encryption in DTO Layer](Encryption-in-DTO-Layer.md)
+            * [Gitub Workflow](Github-Workflow.md)
+            * [MOSIP Java Coding Standards](MOSIP-Java-Coding-Standards.md)
+            * [MOSIP REST API guidelines](MOSIP-REST-API-guidelines.md)
+            * [Registration Client UI Developer Document](Registration-Client-UI-Developer-Document.md)
+            * [Registration Client Developer Documentation](Registration-Client-Developer-Documentation.md)
+            * [Security Tools](Security-Tools.md)
+    * [Roadmap](Roadmap.md)
+        * [Roadmap Activities](Roadmap-Activities.md)
+    * [Revision History](Revision-History.md)
+    * [License](License.md)
+* [Architecture and Design](Architecture.md)
     * [Guiding Principles](Architecture-Principles.md)
     * [MOSIP Architecture](Mosip-Architecture.md)
         * [Technology Stack](Technology-Stack.md)
@@ -9,7 +51,7 @@
 		* [Data-Model](MOSIP-Data-Model.md)
     * [Privacy & Security](Privacy-and-Security.md)    
         * [Cryptography in MOSIP](Encryption-in-DTO-Layer.md)
-* Modules
+* Functionality
     * [Pre-Registration](Pre-Registration.md)
         * [Pre-Registration Functionality](Pre-Registration-Functionality.md)
 		* [UI Specification for Pre-registration](UI-Specification-for-Pre-Registration.md)
@@ -48,46 +90,52 @@
         * [Master Data Services Functionality](Master-Data-Services-Functionality.md)
         * [UIN and VID Generation Service Functionality](UIN-and-VID-Generation-Service-Functionality.md)
         * [VID Generator](VID-Generator.md)
+    * Testing
+        * [Test Rig Design](Test-Rig-Design.md)
+        * [Tester Documentation](Tester-Documentation.md)
+        * [Testing Attachments   Kernel](Testing-Attachments---Kernel.md)
 * Biometrics 
     * [ABIS](Automated-Biometric-Identification-System-ABIS.md)
     * [Biometric SDK](Biometric-SDK.md)
     * [MDS Specification](MOSIP-Device-Service-Specification.md)
     * [Biometric Data Specification](Biometric-Data-Specification.md)
     * [CBEFF XML](CBEFF-XML.md)
-* Build & Deploy
-    * [Build & Deploy](Build-and-Deploy.md)
-    * [Deployment Architectures](Deployment-Architectures.md)
-    * [Cell Based Deployment Architecture](Cell-Based-Deployment-Architecture.md)
-    * [Hardware Security Module HSM Specifications](Hardware-Security-Module-HSM-Specifications.md)
-    * [Hardware Sizing](Hardware-Sizing.md)
-    * [Customizations for a Country](Customisations-for-a-Country.md)
-    * Other Installation Guides
-        * [Steps to Install and Configure HDFS](Steps-to-Install-and-Configure-HDFS.md)
-        * [Steps to Install and use PostgreSql Version 10.2 on RHEL 7.5](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md)
-        * [Steps to Install Clam AntiVirus Version 0.101.0](Steps-to-Install-Clam-AntiVirus-Version-0.101.0.md)
-        * [Steps to Install Keycloak Standalone Server](Steps-to-Install-Keycloak-Standalone-Server.md)
-* [Glossary](Glossary.md)
-* Contribute
-    * [Call for Contribution](Call-for-Contribution.md)
-    * [Contributor's Guide](Contributor-Guide.md)
-    * [Code of Conduct](Code-of-Conduct.md)
-    * [Issue Reporting Guideline](Issue-Reporting-Guideline.md)
-    * Coding Standards
-        * [Auth Angular User Guide](Auth-Angular-User-Guide.md)
-        * [Auth SpringBoot User Guide](Auth-SpringBoot-User-Guide.md)
-        * [Data Model Naming Standards](Data-Model-Naming-Standards.md)
-        * [Encryption in DTO Layer](Encryption-in-DTO-Layer.md)
-        * [Gitub Workflow](Github-Workflow.md)
-        * [MOSIP Java Coding Standards](MOSIP-Java-Coding-Standards.md)
-        * [MOSIP REST API guidelines](MOSIP-REST-API-guidelines.md)
-        * [Registration Client UI Developer Document](Registration-Client-UI-Developer-Document.md)
-        * [Registration Client Developer Documentation](Registration-Client-Developer-Documentation.md)
-        * [Security Tools](Security-Tools.md)
-    * Testing
-        * [Test Rig Design](Test-Rig-Design.md)
-        * [Tester Documentation](Tester-Documentation.md)
-        * [Testing Attachments   Kernel](Testing-Attachments---Kernel.md)
-* APIs
+* MOSIP Guides[Guides.md]
+    * Getting Started Guide[Getting-Started.md]
+    	* Planning
+        * Deploying
+            * [Build & Deploy](Build-and-Deploy.md)
+            * [Deployment Architectures](Deployment-Architectures.md)
+            * [Cell Based Deployment Architecture](Cell-Based-Deployment-Architecture.md)
+            * [Hardware Security Module HSM Specifications](Hardware-Security-Module-HSM-Specifications.md)
+            * [Hardware Sizing](Hardware-Sizing.md)
+            * [Customizations for a Country](Customisations-for-a-Country.md)
+            * Other Installation Guides
+                * [Steps to Install and Configure HDFS](Steps-to-Install-and-Configure-HDFS.md)
+                * [Steps to Install and use PostgreSql Version 10.2 on RHEL 7.5](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md)
+                * [Steps to Install Clam AntiVirus Version 0.101.0](Steps-to-Install-Clam-AntiVirus-Version-0.101.0.md)
+                * [Steps to Install Keycloak Standalone Server](Steps-to-Install-Keycloak-Standalone-Server.md)
+        * Configuring
+        * Customizing
+        * Extending
+        * Integrating
+        * Testing
+        * Scaling
+        * Monitoring
+        * Securing
+        * Maintaining
+        * Upgrading
+        * Auditing
+        * Troubleshooting
+    * [Building On Mosip](Using-Mosip.md)
+        * Identity Verification
+        * Credentials and KYC
+        * Service Delivery
+        * Functional IDs
+    * [Troubleshooting MOSIP](Troubleshooting.md)
+        * Known issues and limitations
+        * Frequenty asked questions
+* API Docs
     * [ABIS APIs](ABIS-APIs.md)
     * [Admin APIs](Admin-APIs.md)
     * [AuthN and AuthZ APIs](AuthN-and-AuthZ-APIs.md)
@@ -116,24 +164,3 @@
 	* [Sync Data APIs](Sync-Data-APIs.md)
     * [Template APIs](Template-APIs.md)
     * [Zone APIs](Zone-APIs.md)
-* [Releases](MOSIP-Releases.md)
-    * [Release Notes 0.9.0](Release-Notes-0.9.0.md)
-    * [Release Notes 1.0.0](Release-Notes-1.0.0.md)
-        * [Release Notes 1.0.0 Features](Release-Notes-1.0.0-Features.md)
-    * [Release Notes 1.0.5](Release-Notes-1.0.5.md)
-    * [Release Notes 1.0.6](Release-Notes-1.0.6.md)
-    * [Release Notes 1.1.0](Release-Notes-1.1.0.md)
-        * [Release Notes 1.1.0 Features](Release-Notes-1.1.0-Features.md)
-        * [Release Notes 1.1.0 Bug Fixes](Release-Notes-1.1.0-Bug-Fixes.md)
-        * [Release Notes 1.2.0 Features](Release-Notes-1.2.0-Features.md)
-        * [Release Notes 1.1.0 Artifact Version](Release-Notes-1.1.0-Artifact-Version.md)
-	* [Release Notes 1.1.1](Release-Notes-1.1.1.md)
-        * [Release Notes 1.1.1 Bug Fixes](Release-Notes-1.1.1-Bug-Fixes.md)
-        * [Release Notes 1.1.1 Artifact Version](Release-Notes-1.1.1-Artifact-Version.md)
-	* [Release Notes 1.1.2](Release-Notes-1.1.2.md)
-	    * [Release Notes 1.1.2 Features](Release-Notes-1.1.2-Features.md)
-        * [Release Notes 1.1.2 Bug Fixes](Release-Notes-1.1.2-Bug-Fixes.md)
-* [Roadmap](Roadmap.md)
-    * [Roadmap Activities](Roadmap-Activities.md)
-* [Revision History](Revision-History.md)
-* [License](License.md)

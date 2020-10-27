@@ -1,3 +1,5 @@
+Note: This is a duplicate of Home.md as of now
+
 # MOSIP
 
 ![](_images/mosip_logo.png)

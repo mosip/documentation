@@ -6,4 +6,4 @@ structure:
 
 redirects:  
     architecture/architecture: Mosip-Architecture.md
-    
+    build-and-deploy/*: guides/getting-started/build-and-deploy/*

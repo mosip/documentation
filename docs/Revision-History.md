@@ -1,5 +1,8 @@
 This page contains the details of recent documentation updates.
 
+* 24th October
+  * Documentation has been updated to reflect 1.1.2 changes. Almost all pages are affected as part of this update.
+
 * 10th August 2020
   * Document for [UI Specification for Registration Client](UI-Specification-for-Registration-Client.md) was published.
   * Document for [UI Specification for Pre-registration](UI-Specification-for-Pre-Registration.md) was published.
