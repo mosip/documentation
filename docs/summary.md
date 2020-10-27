@@ -101,7 +101,7 @@
     * [Biometric Data Specification](Biometric-Data-Specification.md)
     * [CBEFF XML](CBEFF-XML.md)
 * [MOSIP Guides](Guides.md)
-    * Getting Started Guide[Getting-Started.md]
+    * [Getting Started Guide](Getting-Started.md)
     	* Planning
         * Deploying
             * [Build & Deploy](Build-and-Deploy.md)
