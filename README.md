@@ -21,9 +21,9 @@ The key objectives of MOSIP are to:
 
 The latest release of MOSIP, version 1.1.2 is here! We have migrated from Java 8 to Java 11 as part of this release and also incorporated some software infrastructure changes as part of paring the technical debt. Check out the exciting new services and enhancements in the documentation.
 
-**Current Release**<br>Version: 1.1.2<br>Release Date: October 25, 2020<br>You can find the release notes [here](Release-Notes-1.1.2.md).
+**Current Release**<br>Version: 1.1.2<br>Release Date: October 25, 2020<br>You can find the release notes [here](https://docs.mosip.io/platform/mosip-releases/release-notes-1.1.2).
 
-**Previous Release**<br>Version: 1.1.1<br>Release Date: September 14, 2020<br>You can find the release notes [here](Release-Notes-1.1.1.md).
+**Previous Release**<br>Version: 1.1.1<br>Release Date: September 14, 2020<br>You can find the release notes [here](https://docs.mosip.io/platform/mosip-releases/release-notes-1.1.1).
 
 Check out our [releases page](MOSIP-Releases.md) for a history of all public releases till date.
 
@@ -33,7 +33,7 @@ Check out our [releases page](MOSIP-Releases.md) for a history of all public rel
 
 ## Roadmap
 
-The MOSIP roadmap in the short term is the release of our **Long Term Support Version**. Our medium term focus is to enable reference implementations of identity usage, integrations and interoperability. The long term focus is to offer a set of core components for digital governance. Check out our [roadmap](Roadmap.md) and [call for contribution](Call-for-Contribution.md) to see how you can be part of the MOSIP journey.
+The MOSIP roadmap in the short term is the release of our **Long Term Support Version**. Our medium term focus is to enable reference implementations of identity usage, integrations and interoperability. The long term focus is to offer a set of core components for digital governance. Check out our [roadmap](https://docs.mosip.io/platform/roadmap) and [call for contribution](https://docs.mosip.io/platform/contribute/contributor-guide) to see how you can be part of the MOSIP journey.
 
 ---
 
