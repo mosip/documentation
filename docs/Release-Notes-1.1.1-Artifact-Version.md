@@ -1,6 +1,7 @@
 This document contains the artifacts & there versions that were released as part of MOSIP 1.1.1 release.
 
-Repository | Artificat Name | Version
+|Repository | Artificat Name | Version
+|-----------|----------------|---------
 | [commons/kernel](https://github.com/mosip/commons/tree/v1.1.1/kernel/) | [kernel-core](https://github.com/mosip/commons/tree/v1.1.1/kernel/kernel-core) | 1.1.1 |
 | [commons/kernel](https://github.com/mosip/commons/tree/v1.1.1/kernel/) | [kernel-logger-logback](https://github.com/mosip/commons/tree/v1.1.1/kernel/kernel-logger-logback) | 1.0.6 |
 | [commons/kernel](https://github.com/mosip/commons/tree/v1.1.1/kernel/) | [kernel-auth-adapter](https://github.com/mosip/commons/tree/v1.1.1/kernel/kernel-auth-adapter) | 1.1.1 |
