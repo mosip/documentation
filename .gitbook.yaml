@@ -1,6 +1,7 @@
 root: ./docs/
 
 structure:
+    readme: Home.md
     summary: summary.md
 
 redirects:  
