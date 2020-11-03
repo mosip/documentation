@@ -19,7 +19,6 @@
             * [Bug Fixes](Release-Notes-1.1.2-Bug-Fixes.md)
     * [Roadmap](Roadmap.md)
         * [Roadmap Activities](Roadmap-Activities.md)
-    * [Glossary](Glossary.md)
     * [Revision History](Revision-History.md)
     * [Planned Updates](Documentation-Updates.md)
 * Community
@@ -53,6 +52,7 @@
         * [Privacy & Security](Privacy-and-Security.md)    
             * [Cryptography in MOSIP](Encryption-in-DTO-Layer.md)
     * Features
+    * [Terminology and Definitions](Glossary.md)
 * Standards and Specifications
     * Biometrics 
         * [ABIS](Automated-Biometric-Identification-System-ABIS.md)
@@ -67,7 +67,7 @@
         * [VID Policy Schema](VID-Policy-Schema.md)
         * [Authentication Policy Schema](Auth-Policy-Schema.md)
         * [Data Share Policy Schema](Data-Share-Policy-Schema.md)
-* Functionality
+* Modules
     * MOSIP Core
     * [MOSIP Commons](Kernel.md)
         * [Audit Manager Functionality](Audit-Manager-Functionality.md)
