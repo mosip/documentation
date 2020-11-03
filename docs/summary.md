@@ -73,6 +73,7 @@
         * [Registration Processor Functionality](Registration-Processor-Functionality.md)
         * [Deduplication and Manual Adjudication](Deduplication-and-Manual-Adjudication.md)
     * [ID Repository](ID-Repository.md)
+        * [Credentails](design/Credential.md)
 	    * [Credential Share Functionality](Credential-Share-Functionality.md)
     * [ID Authentication](ID-Authentication.md)
         * [ID Authentication Functionality](ID-Authentication-Functionality.md)
