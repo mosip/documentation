@@ -1,6 +1,6 @@
 # Table of contents
 
-* [MOSIP Platform](Home.md)
+* [MOSIP Platform](Platform.md)
     * [Releases](MOSIP-Releases.md)
         * [Release Notes 0.9.0](Release-Notes-0.9.0.md)
         * [Release Notes 1.0.0](Release-Notes-1.0.0.md)
