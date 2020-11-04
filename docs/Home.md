@@ -7,13 +7,13 @@ The MOSIP program was conceived to help build global digital public goods in the
 
 ## About MOSIP
 
-The **Modular Open Source Identity Platform** is an open source, open standards based foundational identity platform. MOSIP is an API first platform that can be used by countries to build their own national id platform. MOSIP offers id lifecycle management features and identity verification capabilities out of the box.
+The **Modular Open Source Identity Platform** is an open source, open standards based foundational identity platform. MOSIP is an API first platform that can be used by countries to build their own national id platform. MOSIP offers id life-cycle management features and identity verification capabilities out of the box.
 
 The key objectives of MOSIP are to:
 * Provide the basic framework to create a fully functional foundational identity system
 * Provide flexibility for a country to choose and customize the features from the basic framework according to their requirements
 * Maintain privacy, security and confidentiality of an individual's data
-* Provide a scalable and accessible solution to cater to a wide range of population (a few thousands to sevral hundreds of millions)
+* Provide a scalable and accessible solution to cater to a wide range of population (a few thousands to several hundreds of millions)
 
 ## Releases
 

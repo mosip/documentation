@@ -17,7 +17,7 @@ This section details about the service APIs in the Packet modules
 This service will create the list of Packet Rejection Reasons which are used in the MOSIP platform. 
 
 ### Resource URL
-### `POST /packetrejectionreasons/reasoncategory`
+`POST /packetrejectionreasons/reasoncategory`
 
 ### Resource details
 
