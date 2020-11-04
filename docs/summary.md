@@ -50,21 +50,21 @@
             * [Data Model](overview/design/MOSIP-Data-Model.md)
         * [Privacy & Security](overview/design/Privacy-and-Security.md)
     * Features
-    * [Terminology and Definitions](Glossary.md)
+    * [Terminology and Definitions](overview/Glossary.md)
 * Standards and Specifications
     * Biometrics 
-        * [ABIS](Automated-Biometric-Identification-System-ABIS.md)
-        * [Biometric SDK](Biometric-SDK.md)
-        * [MDS Specification](MOSIP-Device-Service-Specification.md)
-        * [Biometric Data Specification](Biometric-Data-Specification.md)
-        * [CBEFF XML](CBEFF-XML.md)
-    * [MOSIP Schema](MOSIP-Schema.md)
-        * [ID Object Definition](MOSIP-ID-Object-Definition.md)
-        * [UI Specification for Pre-registration](UI-Specification-for-Pre-Registration.md)
-        * [UI Specification for Registration Client](UI-Specification-for-Registration-Client.md)
-        * [VID Policy Schema](VID-Policy-Schema.md)
-        * [Authentication Policy Schema](Auth-Policy-Schema.md)
-        * [Data Share Policy Schema](Data-Share-Policy-Schema.md)
+        * [ABIS](standards/biometrics/Automated-Biometric-Identification-System-ABIS.md)
+        * [Biometric SDK](standards/biometrics/Biometric-SDK.md)
+        * [MDS Specification](standards/biometrics/MOSIP-Device-Service-Specification.md)
+        * [Biometric Data Specification](standards/biometrics/Biometric-Data-Specification.md)
+        * [CBEFF XML](standards/biometrics/CBEFF-XML.md)
+    * MOSIP Schema
+        * [ID Object Definition](standards/schemas/MOSIP-ID-Object-Definition.md)
+        * [UI Specification for Pre-registration](standards/schemas/UI-Specification-for-Pre-Registration.md)
+        * [UI Specification for Registration Client](standards/schemas/UI-Specification-for-Registration-Client.md)
+        * [VID Policy Schema](standards/schemas/VID-Policy-Schema.md)
+        * [Authentication Policy Schema](standards/schemas/Auth-Policy-Schema.md)
+        * [Data Share Policy Schema](standards/schemas/Data-Share-Policy-Schema.md)
 * Modules
     * MOSIP Core
     * [MOSIP Commons](modules/mosip-commons/Kernel.md)
@@ -108,8 +108,8 @@
     * Automation Testing
         * Proxies and Test Kits
         * Test Rigs
-            * [Test Rig Design](Test-Rig-Design.md)
-            * [Tester Documentation](Tester-Documentation.md)
+            * [Test Rig Design](modules/testing/Test-Rig-Design.md)
+            * [Tester Documentation](modules/testing/Tester-Documentation.md)
 * API Docs
     * [ABIS APIs](api-reference/ABIS-APIs.md)
     * [Admin APIs](api-reference/Admin-APIs.md)
