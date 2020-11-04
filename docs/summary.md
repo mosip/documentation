@@ -33,7 +33,7 @@
             * [Auth Angular User Guide](community/contributions/coding-standards/Auth-Angular-User-Guide.md)
             * [Auth SpringBoot User Guide](community/contributions/coding-standards/Auth-SpringBoot-User-Guide.md)
             * [Data Model Naming Standards](community/contributions/coding-standards/Data-Model-Naming-Standards.md)
-            * [GitHub Workflow](community/contributions/coding-standards/Github-Workflow.md)
+            * [GitHub Work-flow](community/contributions/coding-standards/Github-Workflow.md)
             * [MOSIP Java Coding Standards](community/contributions/coding-standards/MOSIP-Java-Coding-Standards.md)
             * [MOSIP REST API guidelines](community/contributions/coding-standards/MOSIP-REST-API-guidelines.md)
             * [Registration Client UI Developer Document](community/contributions/coding-standards/Registration-Client-UI-Developer-Document.md)
@@ -42,7 +42,7 @@
 * Overview
     * [Architecture and Design](overview/architecture/Architecture.md)
         * [Guiding Principles](overview/architecture/Architecture-Principles.md)
-        * [MOSIP Architecture](overview/architecture/Mosip-Architecture.md)
+        * [MOSIP Architecture](overview/architecture/MOSIP-Architecture.md)
             * [Technology Stack](overview/architecture/Technology-Stack.md)
     * Design Patterns
         * [MOSIP and Data](overview/design/Data-Architecture.md)

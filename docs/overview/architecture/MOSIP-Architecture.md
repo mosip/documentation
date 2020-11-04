@@ -23,10 +23,10 @@ From a MOSIP perspective, several actors are involved in the ID system.
     * The **Credential Provider** is a print service provider for credential issue.
     * The **Device Provider** is a partner who provides biometric devices.
     * The **FTM Provider** is a partner who provides foundational trust modules for devices.
-    * The **Partner Application** is a system that relies on mosip or one that mosip relies on. This could be a CRVS system or a Functional ID system such a Passport or a Drivers License.
-    * The **ID System** is a system that mosip integrates with for inter-operable ID 
+    * The **Partner Application** is a system that relies on MOSIP or one that MOSIP relies on. This could be a CRVS system or a Functional ID system such a Passport or a Drivers License.
+    * The **ID System** is a system that MOSIP integrates with for inter-operable ID 
 
-The diagram shows the functional architecture of mosip with the actors.
+The diagram shows the functional architecture of MOSIP with the actors.
 
 ![](_images/arch_diagrams/mosip_functional_architecture_v1.png)
 

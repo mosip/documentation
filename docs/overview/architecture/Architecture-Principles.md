@@ -1,6 +1,6 @@
 ## Architectural Principles
 
-The MOSIP philisophy is to provide a "Good ID". As part of this MOSIP embraces a core set of design and architecture principles that allow the platform to offer best practices for a Good ID system. MOSIP is built on the following architecture principles
+The MOSIP philosophy is to provide a "Good ID". As part of this MOSIP embraces a core set of design and architecture principles that allow the platform to offer best practices for a Good ID system. MOSIP is built on the following architecture principles
 
 * MOSIP must follow **platform based approach** so that all common features are abstracted as reusable components and frameworks into a common layer
 * MOSIP must follow **API first** approach and expose the business functions as RESTful services
@@ -9,7 +9,7 @@ The MOSIP philisophy is to provide a "Good ID". As part of this MOSIP embraces a
 * Each MOSIP component must be independently **scalable** (scale out) to meet varying load requirements
 * MOSIP must use **commodity computing** hardware & software to build the platform
 * Data must be **encrypted** in-flight and at-rest. All requests must be authenticated and authorized. Privacy of Identity Data is an absolute must in MOSIP
-* MOSIP must follow the following manageability principles – **Auditability** & monitor ability of every event in the system, testability of every feature of the platform & easy upgrade ability of the platform
+* MOSIP must follow the following manageability principles – **Audit-ability** & monitor ability of every event in the system, testability of every feature of the platform & easy upgrade ability of the platform
 * MOSIP must follow the principles of **Zero-Knowledge** which means that the services know nothing about the Personally Identifiable Information (PII) data stored.
 * MOSIP components must be **loosely coupled** so that they can be composed to build the identity solution as per the requirements of a country
 * MOSIP must support **i18n** capability

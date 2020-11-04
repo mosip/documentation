@@ -1,6 +1,6 @@
 This page lists all the technologies used in building MOSIP. As far as possible free and open source software with clear long term support availability have been chosen. For a deployment certain choices can be replaced with other free or commercial options.
 
-|Domain|Tools/Technologies|Version|Licence Type|
+|Domain|Tools/Technologies|Version|License Type|
 |---|---|---|---|
 |Operating System|CentOS|7.7|MIT License|
 |Infrastructure|Cloud - Azure/AWS|NA - Cloud tool|Commercial|

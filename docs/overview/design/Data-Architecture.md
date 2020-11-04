@@ -1,5 +1,5 @@
 ## Data Architecture Principles
-MOSIP deals with sensitive information pertaining to the identity of people. It is a central repository of identity data and extra attention is paid to ensure the security and privacy of this data. MOSIP advocates minimalism in the data collected and incorporates features to minimise interpretation of this data as information. A low to zero knowledge design paradigm is used to achieve this.
+MOSIP deals with sensitive information pertaining to the identity of people. It is a central repository of identity data and extra attention is paid to ensure the security and privacy of this data. MOSIP advocates minimalism in the data collected and incorporates features to minimize interpretation of this data as information. A low to zero knowledge design paradigm is used to achieve this.
 
 ## Data Sets in MOSIP
 * Master Data - This includes lookups, locations, centers, devices, zones etc. This is not sensitive information
