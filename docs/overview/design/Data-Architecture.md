@@ -36,7 +36,7 @@ MOSIP deals with sensitive information pertaining to the identity of people. It 
 
 ## Logical view of MOSIP data system
 
-![](_images/arch_diagrams/mosip_data_architecture_v1.jpg)
+![](_images/mosip_data_architecture.jpg)
 
 ## Access Control to Data
 In MOSIP, the following users are defined to perform various activities and have control over the DB objects that are defined
@@ -46,7 +46,9 @@ In MOSIP, the following users are defined to perform various activities and have
 * **Application User:** Each module will have a user created to perform DML tasks like CRUD operations. Will have masteruser, prereguser, idauser, idrepouser, idmapuser, kerneluser, audituser, regprcuser, keymgruser, regdeviceuser, authdeviceuser to perform tasks in respective modules.
 
 {% hint style="info" %}
+
 From the above set of roles only application user is specific to a module. The other users are common which needs to be created per PostgreSQL db instance.
+
 {% endhint %}
 
 ## Multi-Language

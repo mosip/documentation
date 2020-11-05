@@ -1,6 +1,6 @@
 ## Audience
 * Data Modelers
-* Dadabase Administrators
+* Database Administrators
 * Database Developers
 * Application Developers
 

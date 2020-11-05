@@ -16,7 +16,7 @@ The MOSIP philosophy is to provide a "Good ID". As part of this MOSIP embraces a
 * All modules of MOSIP should be resilient such that the solution as a whole is **fault tolerant**
 * The key sub-systems of MOSIP should be designed for **extensibility**. For example, if an external system has to be integrated for fingerprint data, it should be easy to do so.
 
-The key design aspects considered for MOSIP are
+The key design aspects considered for MOSIP are,
 
 ### Ecosystem approach
 The MOSIP platform is a framework and an end-to-end solution needs additional components. For example, biometric devices and ABIS solutions are key to process an individual's data and prove uniqueness. Through a well defined set of standard interfaces MOSIP allows for integration of such components and offers choice of providers for the same. MOSIP also needs to cater to a diverse set of institutions wanting to authenticate an Individual against the data stored in MOSIP.
@@ -25,20 +25,20 @@ So, key parameters are
 * 3rd party components should be integrated via standard interfaces and offer a provider model where needed. 
 
 ### Configurability
-MOSIP should be flexible for countries to configure the base platform according to their specific requirements. Some of the examples of configurability are
+MOSIP should be flexible for countries to configure the base platform according to their specific requirements. Some of the examples of configurability are,
 
 * Country should be able to choose the features required. For example, it must be possible for a country to turn off Finger Print capture
 * Country should be able to configure the attributes of an ID Object
 * Country should be able to define the length of the UIN number
 
 ### Extensibility
-MOSIP should be flexible to extend functionality on top of the basic platform. Some of the examples of extensibility are
+MOSIP should be flexible to extend functionality on top of the basic platform. Some of the examples of extensibility are,
 
 * A country should be able to introduce a new step in processing data
 * Integrate MOSIP with other ID systems and include it as part of the MOSIP data processing flow
 
 ### Modularity
-All components in MOSIP should be modular and their features exposed via interfaces such that the implementation behind the interface can be changed without affecting other modules. Some examples of modularity are
+All components in MOSIP should be modular and their features exposed via interfaces such that the implementation behind the interface can be changed without affecting other modules. Some examples of modularity are,
 
 * UIN generator algorithm provided by the platform can be replaced by a country with their own implementation
-* The default demographic deduplication algorithm provided by MOSIP can be changed to a different one without impacting the process flow
+* The default demographic de-duplication algorithm provided by MOSIP can be changed to a different one without impacting the process flow

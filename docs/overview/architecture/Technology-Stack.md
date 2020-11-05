@@ -12,7 +12,7 @@ This page lists all the technologies used in building MOSIP. As far as possible 
 |Development - Utilities|Apache commons(60+ to be considered)|Latest version|Apache License 2.0 |
 |Development - Data Grid|Apache Ignite|2.4.0|Apache License 2.0|
 |Development - Object Mapper|Orika|1.5.2 |Apache License 2.0 |
-|Development - validator|Hibernate validator |5.4.2|Apache Software License 2.0|
+|Development - Validator|Hibernate validator |5.4.2|Apache Software License 2.0|
 |Development - Encryption|BouncyCastle |1.59|Adaptation of MIT X11 License |
 |Development - JSON marshal/unmarshal|Jackson |2.9.5 |Apache License  2.0 |
 |Development - Device Driver|RXTX |RXTX-2-2-20081207|LGPL v 2.1|

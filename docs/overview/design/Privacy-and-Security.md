@@ -1,6 +1,6 @@
 # Introduction
 
-In MOSIP, privacy and security are highest priorities and this document details the measures that have been implemented in the platform so far. As an open source project we aim to continuously improve the security features and incorporate new developments through collaborations and community contributions. We use a variety of [security tools](Security-Tools.md) to assess security, discover vlulnerabilities and address them. 
+In MOSIP, privacy and security are highest priorities and this document details the measures that have been implemented in the platform so far. As an open source project we aim to continuously improve the security features and incorporate new developments through collaborations and community contributions. We use a variety of [security tools](Security-Tools.md) to assess security, discover vulnerabilities and address them.
 
 # Governing Principles
 MOSIP's approach on privacy and security is determined by the [framework principles](https://www.mosip.io/uploads/resources/5cc84b0a08284Country%20Engagement%20Principles_v2.pdf) under which it operates.
@@ -35,7 +35,7 @@ As a principle, MOSIP does not use any mechanism in-built in a database for encr
 - The symmetric keys are encrypted using a master key in HSM. 
 - Every key has an expiry and application follows the expiry to update the data with new keys.
 
-![](_images/arch_diagrams/DB_encryption.png)
+![](_images/db_encryption.png)
 
 # Registration data encryption
 Registration Client is used to collect all the personal and biometric information for MOSIP. The client is designed to work on TPM compatible machines. The client follows the following principles:

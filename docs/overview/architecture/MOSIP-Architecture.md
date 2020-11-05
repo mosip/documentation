@@ -28,12 +28,12 @@ From a MOSIP perspective, several actors are involved in the ID system.
 
 The diagram shows the functional architecture of MOSIP with the actors.
 
-![](_images/arch_diagrams/mosip_functional_architecture_v1.png)
+![](_images/mosip_functional_architecture.png)
 
 
 # Modular Architecture
 
-Mosip has several modules that offer related functionality. These include the core modules of
+MOSIP has several modules that offer related functionality. These include the core modules of
 * Pre-registration
 * Registration client
 * Registration processor
@@ -46,9 +46,13 @@ and the support modules
 * Administration
 * Reporting
 
-**Note**: All user interface modules are reference implementations and can be uses as is, refactored or customized or replaced with alternative implementations in the actual deployment.
+{% hint style="info" %}
 
-The diagram below show the various modules of mosip with their respective service bouquets and their interaction.
+**Note**: All user interface modules are reference implementations and can be uses as is, re-factored or customized or replaced with alternative implementations in the actual deployment.
 
-![](_images/arch_diagrams/mosip_logical_architecture_v1.png)
+{% endhint %}
+
+The diagram below show the various modules of MOSIP with their respective service bouquets and their interaction.
+
+![](_images/mosip_logical_architecture.png)
 
