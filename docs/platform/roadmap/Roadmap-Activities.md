@@ -5,14 +5,14 @@ The Roadmap consists of 5 bucket of features that we want to develop and contrib
 
 ## Functionality
 * **Master Data sync**: allow different installations to have their own master data, and sync is without code changes with the Registration Cient
-* **Interoperatbility of MOSIP auth** with other instances (eIDAS Connector). Support for credential management.
+* **Interoperability of MOSIP auth** with other instances (eIDAS Connector). Support for credential management.
 * **Configurable UI**: A simple UI for the Human User Facing API of MOSIP that responds to changes in configuration as without need for reprogramming.
 * **Mobile App**:
    * Android Reg Client
    * IOS Reg Client
    * Online Registration
    * Resident app
-* **Reporting and Analytics Framework**: to support canned reports and realtime dashboard atop a common data infrastructure.
+* **Reporting and Analytics Framework**: to support canned reports and real-time dashboard atop a common data infrastructure.
 * Other **Functional Backlog** in Registration Processor, Auth and Admin
 
 ## Modularity

@@ -70,7 +70,7 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 |Test Methodology| <li>  Manual <li>  Test Automation|
 |Types of testing|<li>	 Smoke <li> Functional <li>  Integration <li> 	Regression|
 |Testing Levels|![Image](_images/test_rig_automation/image1.jpg) |
-|Configuration Parameters tested for| Refer to QA env properties file with suffix ‘qa’ in the filename, at [**Link**](https://github.com/mosip/mosip-config/tree/0.9.1_23092019)|
+|Configuration Parameters tested for| Refer to QA env properties file with suffix 'qa' in the filename, at [**Link**](https://github.com/mosip/mosip-config/tree/0.9.1_23092019)|
 |Browser Support|**Pre-Registration**    <li> Chrome – 74.0.3729.169|
 |OS Support|**Registration Client**    <li> Windows 10|
 |Language Support|French, Arabic, English|
@@ -112,10 +112,10 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 |Regression Testing|Tests to ensure that any change doesn't break existing functionality|
 	
 ### Test Execution Summary 
-![Image](_images/release/0.9.0/ExecutionSummary_0.9.0.jpg)  
+![](_images/release/0.9.0/ExecutionSummary_0.9.0.jpg)  
 
 ## Known Issues [**[↑]**](#table-of-contents)
-![Image](_images/release/0.9.0/KnownIssues_0.9.0.jpg) 
+![](_images/release/0.9.0/KnownIssues_0.9.0.jpg) 
 
 ## List Of Acronyms [**[↑]**](#table-of-contents)
 Acronym | Expanded Form
