@@ -1,4 +1,4 @@
-This section contains details related to MOSIP data model design.The section also provides the data dictionary of the tables and columns defined by MOSIP databases.
+This section contains details related to MOSIP data model design. The section also provides the data dictionary of the tables and columns defined by MOSIP databases.
 
 ## Data Model Considerations
 
@@ -7,9 +7,10 @@ This section contains details related to MOSIP data model design.The section als
 * **Database specific features:** Use of DB specific features like defaults, DB sequences, identify fields are not used
 * **No business logic at DB:** No business logic implemented at database level other than PK, UK, FKs. 
 * **Data Security:** Individual and security related information is encrypted
+
 ## Data Model
 
-Databases inventory in MOSIP
+Databases inventory in MOSIP.
 
 Database Name|Schema Name|Description|Data Model|Data Dictionary
 -------------|-----------|-----------|----------|---------------
@@ -25,7 +26,7 @@ mosip_credential|credential|Credential request from MOSIP applications related e
 mosip_idmap|idmap|Database to store and manage all the data related to mapping between various IDs, like vid with UIN of an individual|<div>[DBM File](https://github.com/mosip/id-repository/tree/master/design/data_model/_sources/mosip_idmap.dbm)</div> <div>[Image File ](https://github.com/mosip/id-repository/tree/master/design/data_model/_images/mosip_idmap.png)</div>|<div>[mosip_idmap_dd.xlsx](https://github.com/mosip/id-repository/tree/master/design/data_model/mosip_idmap_dd.xlsx)</div>
 mosip_keymgr|keymgr|Key Manager database maintains common system configurations, data related to key services like encryption, decryption keys, certificates..etc|<div> [DBM File](https://github.com/mosip/commons/tree/master/design/data_model/_sources/mosip_keymgr.dbm) </div> <div> [Image File ](https://github.com/mosip/commons/tree/master/design/data_model/_images/mosip_keymgr.png) </div>|<div> [mosip_keymgr_dd.xlsx](https://github.com/mosip/commons/tree/master/design/data_model/mosip_keymgr_dd.xlsx) </div>
 mosip_regdevice|regdevice|Database to store all registration device management data, look-up data, configuration data, metadata...etc|<div> [DBM File](https://github.com/mosip/commons/tree/master/design/data_model/_sources/mosip_regdevice.dbm) </div> <div> [Image File](https://github.com/mosip/commons/tree/master/design/data_model/_images/mosip_regdevice.png) </div>|<div> [mosip_regdevice_dd.xlsx](https://github.com/mosip/commons/tree/master/design/data_model/mosip_regdevice_dd.xlsx) </div>
-|13|mosip_authdevice|authdevice|Database to store all partner authentication device management data, look-up data, configuration data, metadata...etc|<div> [DBM File](https://github.com/mosip/commons/tree/master/design/data_model/_sources/mosip_authdevice.dbm) </div> <div> [Image File](https://github.com/mosip/commons/tree/master/design/data_model/_images/mosip_authdevice.png) </div>|<div> [mosip_authdevice_dd.xlsx](https://github.com/mosip/commons/tree/master/design/data_model/mosip_authdevice_dd.xlsx) </div>
+mosip_authdevice|authdevice|Database to store all partner authentication device management data, look-up data, configuration data, metadata...etc|<div> [DBM File](https://github.com/mosip/commons/tree/master/design/data_model/_sources/mosip_authdevice.dbm) </div> <div> [Image File](https://github.com/mosip/commons/tree/master/design/data_model/_images/mosip_authdevice.png) </div>|<div> [mosip_authdevice_dd.xlsx](https://github.com/mosip/commons/tree/master/design/data_model/mosip_authdevice_dd.xlsx) </div>
 mosip_pms|pms|Partner Management Service related entities and its data is stored in this database'|<div> [DBM File](https://github.com/mosip/partner-management-services/tree/master/design/data_model/_sources/mosip_pms.dbm) </div> <div> [Image File ](https://github.com/mosip/partner-management-services/tree/master/design/data_model/_images/mosip_pms.png) </div>|<div> [mosip_pms_dd.xlsx](https://github.com/mosip/partner-management-services/tree/master/design/data_model/mosip_pms_dd.xlsx) </div>
 
 
