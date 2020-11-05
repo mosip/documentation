@@ -19,5 +19,5 @@ The above allow systems to enact digital transactions which are essentially flow
 
 National ID systems can leverage MOSIP as the base platform and configure, customize, extend it to build their systems just they way the need it. The picture below depicts how MOSIP is visualized as a national id platform.
 
-![](_images/overview/architecture/layers.png)
+![](_images/layers.png)
 
