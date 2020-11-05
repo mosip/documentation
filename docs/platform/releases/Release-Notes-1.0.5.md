@@ -80,7 +80,7 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 | Version Tag Tested|	1.0.5|
 |Test Methodology|<ul><li>Manual</li><li>Test Automation</li></ul>|
 |Types of testing|<ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li></ul>|
-|Testing Levels|![Image](_images/test_rig_automation/image1.jpg) |
+|Testing Levels|![Image](_images/release/1.0.5/testing_levels.jpg) |
 |Configuration Parameters tested for| Refer to properties file at [**Link**](https://github.com/mosip/mosip-config/tree/1.0.5)|
 |Browser Support|**Pre-Registration** <ul><li>Chrome – 78.0.3904.108</li></ul>|
 |OS Support|**Registration Client** <ul><li>Windows 10</li></ul>|

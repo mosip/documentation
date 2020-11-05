@@ -69,7 +69,7 @@ The code and [automation tests](https://github.com/mosip/mosip-functional-tests/
 | Version Tag Tested|	0.9.0|
 |Test Methodology| <li>  Manual <li>  Test Automation|
 |Types of testing|<li>	 Smoke <li> Functional <li>  Integration <li> 	Regression|
-|Testing Levels|![Image](_images/test_rig_automation/image1.jpg) |
+|Testing Levels|![Image](_images/release/0.9.0/testing_levels.jpg) |
 |Configuration Parameters tested for| Refer to QA env properties file with suffix 'qa' in the filename, at [**Link**](https://github.com/mosip/mosip-config/tree/0.9.1_23092019)|
 |Browser Support|**Pre-Registration**    <li> Chrome – 74.0.3729.169|
 |OS Support|**Registration Client**    <li> Windows 10|
