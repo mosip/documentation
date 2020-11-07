@@ -6,122 +6,122 @@ This document defines the public and private services of MOSIP.
 
 MOSIP Service | Private Service | Public Service
 --------------|-----------------|----------------
-Admin   /Bulk Upload | <img src='_images/tick.png' width=48 height=48 /> |  
-Admin   /Login | <img src='_images/tick.png' width=48 height=48 /> |  
-Admin   /AuditManager | <img src='_images/tick.png' width=48 height=48 /> |  
-Admin   /PacketUpdateStatus | <img src='_images/tick.png' width=48 height=48 /> |  
-Commons   /PacketReader-Writer | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /AuditManager | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /AuthManager | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /Login | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /Refresh |   | <img src='_images/tick.png' width=48 height=48 />
-Kernel   /Jasperreport | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /ClientCrypto | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /CryptoManager | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /KeyManager | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /LicenceKey | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /PartnerCertManager | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /Signature | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /TokenIDGenerator | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /ZKCryptoManager | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /ApplicantType | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /ApplicantValidDocument | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /Application | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /BiometricAttribute | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /BiometricType | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /BlacklistedWords | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /Device | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /DeviceHistory | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /DeviceProvider | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /DeviceProviderManagement | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /DeviceRegister | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /DeviceSpecification | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /DeviceType | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /DocumentCategory | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /DocumentType | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /DynamicField | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /ExceptionalHoliday | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /FoundationalTrustProvider | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /GenderType |   | <img src='_images/tick.png' width=48 height=48 />
-Kernel   /Holiday |   | <img src='_images/tick.png' width=48 height=48 />
-Kernel   /IdType | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /IndividualType |   | <img src='_images/tick.png' width=48 height=48 />
-Kernel   /Language |   | <img src='_images/tick.png' width=48 height=48 />
-Kernel   /Location |   | <img src='_images/tick.png' width=48 height=48 />
-Kernel   /LocationHierarchy | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /Machine | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /MachineHistory | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /MachineSpecification | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /MachineType | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /Module | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /MOSIPDeviceService | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /PacketRejectionReason | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /RegisteredDevice | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /RegistrationCenter | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /RegistrationCenterDevice | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /RegistrationCenterHistory | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /RegistrationCenterType | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /RegistrationCenterUserMachineHistory | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /Schema | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /Template |   | <img src='_images/tick.png' width=48 height=48 />
-Kernel   /TemplateFileFormat | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /TemplateType |   | <img src='_images/tick.png' width=48 height=48 />
-Kernel   /Title |   | <img src='_images/tick.png' width=48 height=48 />
-Kernel   /UserDetailsHistory | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /ValidDocument | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /WorkingDay | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /Zone | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /EmailNotification | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /SmsNotification | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /OtpGenerator | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /OtpValidator | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /RidGenerator | <img src='_images/tick.png' width=48 height=48 /> |  
-Kernel   /SyncData | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Authentication   /AuditTest | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Authentication   /Test | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Authentication   /CredentialIssueanceCallback | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Authentication   /Cryptomanager | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Authentication   /InternalAuth | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Authentication   /InternalAuthTxn | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Authentication   /InternalOTP | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Authentication   /InternalUpdateAuthType | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Authentication   /Keymanager | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Authentication   /Signature | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Authentication   /WebSub | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Authentication   /KycAuth |   | <img src='_images/tick.png' width=48 height=48 />
-ID Authentication   /OTP |   | <img src='_images/tick.png' width=48 height=48 />
-ID Authentication   /Auth |   | <img src='_images/tick.png' width=48 height=48 />
-ID Authentication   /StaticPin |   | <img src='_images/tick.png' width=48 height=48 />
-ID Authentication   /VID |   | <img src='_images/tick.png' width=48 height=48 />
-ID Repository   /BiometricExtractor | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Repository   /CredentialRequestGenerator | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Repository   /CredentialStore | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Repository   /ID Repository | <img src='_images/tick.png' width=48 height=48 /> |  
-ID Repository   /Vid | <img src='_images/tick.png' width=48 height=48 /> |  
-Partner Management Service   /Misp |   | <img src='_images/tick.png' width=48 height=48 />
-Partner Management Service   /PartnerManagement |   | <img src='_images/tick.png' width=48 height=48 />
-Partner Management Service   /DeviceDetail |   | <img src='_images/tick.png' width=48 height=48 />
-Partner Management Service   /FTPChipDetail |   | <img src='_images/tick.png' width=48 height=48 />
-Partner Management Service   /RegisteredDevice |   | <img src='_images/tick.png' width=48 height=48 />
-Partner Management Service   /SecureBiometricInterface | <img src='_images/tick.png' width=48 height=48 /> |  
-Partner Management Service   /PartnerService |   | <img src='_images/tick.png' width=48 height=48 />
-Partner Management Service   /PolicyManagement |   | <img src='_images/tick.png' width=48 height=48 />
-Pre Registration   /Demographic |   | <img src='_images/tick.png' width=48 height=48 />
-Pre Registration   /Document |   | <img src='_images/tick.png' width=48 height=48 />
-Pre Registration   /GenerateQRcode |   | <img src='_images/tick.png' width=48 height=48 />
-Pre Registration   /Login |   | <img src='_images/tick.png' width=48 height=48 />
-Pre Registration  /Notification |   | <img src='_images/tick.png' width=48 height=48 />
-Pre Registration   /Transliteration |   | <img src='_images/tick.png' width=48 height=48 />
-Pre Registration   /Booking |   | <img src='_images/tick.png' width=48 height=48 />
-Pre Registration   /Captcha |   | <img src='_images/tick.png' width=48 height=48 />
-Pre Registration   /DataSync | <img src='_images/tick.png' width=48 height=48 /> |  
-Registration Processor   /BioDedupe | <img src='_images/tick.png' width=48 height=48 /> |  
-Registration Processor   /RegistrationStatus | <img src='_images/tick.png' width=48 height=48 /> |  
-Registration Processor   /RegistrationSync | <img src='_images/tick.png' width=48 height=48 /> |  
-Registration Processor   /PrintApi |   | <img src='_images/tick.png' width=48 height=48 />
-Registration Processor   /RegistrationTransaction | <img src='_images/tick.png' width=48 height=48 /> |  
-Registration Processor   /External |   | <img src='_images/tick.png' width=48 height=48 />
-Registration Processor   /QCUsers | <img src='_images/tick.png' width=48 height=48 /> |  
-Registration Processor   /QualityChecker | <img src='_images/tick.png' width=48 height=48 /> |  
-Resident Services  /Resident |   | <img src='_images/tick.png' width=48 height=48 />
-Resident Services  /ResidentVid |   | <img src='_images/tick.png' width=48 height=48 />
+Admin   /Bulk Upload | ![](_images/tick.png) |  
+Admin   /Login | ![](_images/tick.png) |  
+Admin   /AuditManager | ![](_images/tick.png) |  
+Admin   /PacketUpdateStatus | ![](_images/tick.png) |  
+Commons   /PacketReader-Writer | ![](_images/tick.png) |  
+Kernel   /AuditManager | ![](_images/tick.png) |  
+Kernel   /AuthManager | ![](_images/tick.png) |  
+Kernel   /Login | ![](_images/tick.png) |  
+Kernel   /Refresh |   | ![](_images/tick.png)
+Kernel   /Jasperreport | ![](_images/tick.png) |  
+Kernel   /ClientCrypto | ![](_images/tick.png) |  
+Kernel   /CryptoManager | ![](_images/tick.png) |  
+Kernel   /KeyManager | ![](_images/tick.png) |  
+Kernel   /LicenceKey | ![](_images/tick.png) |  
+Kernel   /PartnerCertManager | ![](_images/tick.png) |  
+Kernel   /Signature | ![](_images/tick.png) |  
+Kernel   /TokenIDGenerator | ![](_images/tick.png) |  
+Kernel   /ZKCryptoManager | ![](_images/tick.png) |  
+Kernel   /ApplicantType | ![](_images/tick.png) |  
+Kernel   /ApplicantValidDocument | ![](_images/tick.png) |  
+Kernel   /Application | ![](_images/tick.png) |  
+Kernel   /BiometricAttribute | ![](_images/tick.png) |  
+Kernel   /BiometricType | ![](_images/tick.png) |  
+Kernel   /BlacklistedWords | ![](_images/tick.png) |  
+Kernel   /Device | ![](_images/tick.png) |  
+Kernel   /DeviceHistory | ![](_images/tick.png) |  
+Kernel   /DeviceProvider | ![](_images/tick.png) |  
+Kernel   /DeviceProviderManagement | ![](_images/tick.png) |  
+Kernel   /DeviceRegister | ![](_images/tick.png) |  
+Kernel   /DeviceSpecification | ![](_images/tick.png) |  
+Kernel   /DeviceType | ![](_images/tick.png) |  
+Kernel   /DocumentCategory | ![](_images/tick.png) |  
+Kernel   /DocumentType | ![](_images/tick.png) |  
+Kernel   /DynamicField | ![](_images/tick.png) |  
+Kernel   /ExceptionalHoliday | ![](_images/tick.png) |  
+Kernel   /FoundationalTrustProvider | ![](_images/tick.png) |  
+Kernel   /GenderType |   | ![](_images/tick.png)
+Kernel   /Holiday |   | ![](_images/tick.png)
+Kernel   /IdType | ![](_images/tick.png) |  
+Kernel   /IndividualType |   | ![](_images/tick.png)
+Kernel   /Language |   | ![](_images/tick.png)
+Kernel   /Location |   | ![](_images/tick.png)
+Kernel   /LocationHierarchy | ![](_images/tick.png) |  
+Kernel   /Machine | ![](_images/tick.png) |  
+Kernel   /MachineHistory | ![](_images/tick.png) |  
+Kernel   /MachineSpecification | ![](_images/tick.png) |  
+Kernel   /MachineType | ![](_images/tick.png) |  
+Kernel   /Module | ![](_images/tick.png) |  
+Kernel   /MOSIPDeviceService | ![](_images/tick.png) |  
+Kernel   /PacketRejectionReason | ![](_images/tick.png) |  
+Kernel   /RegisteredDevice | ![](_images/tick.png) |  
+Kernel   /RegistrationCenter | ![](_images/tick.png) |  
+Kernel   /RegistrationCenterDevice | ![](_images/tick.png) |  
+Kernel   /RegistrationCenterHistory | ![](_images/tick.png) |  
+Kernel   /RegistrationCenterType | ![](_images/tick.png) |  
+Kernel   /RegistrationCenterUserMachineHistory | ![](_images/tick.png) |  
+Kernel   /Schema | ![](_images/tick.png) |  
+Kernel   /Template |   | ![](_images/tick.png)
+Kernel   /TemplateFileFormat | ![](_images/tick.png) |  
+Kernel   /TemplateType |   | ![](_images/tick.png)
+Kernel   /Title |   | ![](_images/tick.png)
+Kernel   /UserDetailsHistory | ![](_images/tick.png) |  
+Kernel   /ValidDocument | ![](_images/tick.png) |  
+Kernel   /WorkingDay | ![](_images/tick.png) |  
+Kernel   /Zone | ![](_images/tick.png) |  
+Kernel   /EmailNotification | ![](_images/tick.png) |  
+Kernel   /SmsNotification | ![](_images/tick.png) |  
+Kernel   /OtpGenerator | ![](_images/tick.png) |  
+Kernel   /OtpValidator | ![](_images/tick.png) |  
+Kernel   /RidGenerator | ![](_images/tick.png) |  
+Kernel   /SyncData | ![](_images/tick.png) |  
+ID Authentication   /AuditTest | ![](_images/tick.png) |  
+ID Authentication   /Test | ![](_images/tick.png) |  
+ID Authentication   /CredentialIssueanceCallback | ![](_images/tick.png) |  
+ID Authentication   /Cryptomanager | ![](_images/tick.png) |  
+ID Authentication   /InternalAuth | ![](_images/tick.png) |  
+ID Authentication   /InternalAuthTxn | ![](_images/tick.png) |  
+ID Authentication   /InternalOTP | ![](_images/tick.png) |  
+ID Authentication   /InternalUpdateAuthType | ![](_images/tick.png) |  
+ID Authentication   /Keymanager | ![](_images/tick.png) |  
+ID Authentication   /Signature | ![](_images/tick.png) |  
+ID Authentication   /WebSub | ![](_images/tick.png) |  
+ID Authentication   /KycAuth |   | ![](_images/tick.png)
+ID Authentication   /OTP |   | ![](_images/tick.png)
+ID Authentication   /Auth |   | ![](_images/tick.png)
+ID Authentication   /StaticPin |   | ![](_images/tick.png)
+ID Authentication   /VID |   | ![](_images/tick.png)
+ID Repository   /BiometricExtractor | ![](_images/tick.png) |  
+ID Repository   /CredentialRequestGenerator | ![](_images/tick.png) |  
+ID Repository   /CredentialStore | ![](_images/tick.png) |  
+ID Repository   /ID Repository | ![](_images/tick.png) |  
+ID Repository   /Vid | ![](_images/tick.png) |  
+Partner Management Service   /Misp |   | ![](_images/tick.png)
+Partner Management Service   /PartnerManagement |   | ![](_images/tick.png)
+Partner Management Service   /DeviceDetail |   | ![](_images/tick.png)
+Partner Management Service   /FTPChipDetail |   | ![](_images/tick.png)
+Partner Management Service   /RegisteredDevice |   | ![](_images/tick.png)
+Partner Management Service   /SecureBiometricInterface | ![](_images/tick.png) |  
+Partner Management Service   /PartnerService |   | ![](_images/tick.png)
+Partner Management Service   /PolicyManagement |   | ![](_images/tick.png)
+Pre Registration   /Demographic |   | ![](_images/tick.png)
+Pre Registration   /Document |   | ![](_images/tick.png)
+Pre Registration   /GenerateQRcode |   | ![](_images/tick.png)
+Pre Registration   /Login |   | ![](_images/tick.png)
+Pre Registration  /Notification |   | ![](_images/tick.png)
+Pre Registration   /Transliteration |   | ![](_images/tick.png)
+Pre Registration   /Booking |   | ![](_images/tick.png)
+Pre Registration   /Captcha |   | ![](_images/tick.png)
+Pre Registration   /DataSync | ![](_images/tick.png) |  
+Registration Processor   /BioDedupe | ![](_images/tick.png) |  
+Registration Processor   /RegistrationStatus | ![](_images/tick.png) |  
+Registration Processor   /RegistrationSync | ![](_images/tick.png) |  
+Registration Processor   /PrintApi |   | ![](_images/tick.png)
+Registration Processor   /RegistrationTransaction | ![](_images/tick.png) |  
+Registration Processor   /External |   | ![](_images/tick.png)
+Registration Processor   /QCUsers | ![](_images/tick.png) |  
+Registration Processor   /QualityChecker | ![](_images/tick.png) |  
+Resident Services  /Resident |   | ![](_images/tick.png)
+Resident Services  /ResidentVid |   | ![](_images/tick.png)
