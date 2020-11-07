@@ -4,8 +4,8 @@ This document defines the public and private services of MOSIP.
 
 **Private Services**: MOSIP services available for service to service call and should be accessed by service token or restricted user.
 
-MOSIP Service | Private Service | Public Service
---------------|-----------------|----------------
+MOSIP Service | Private Service | Public Service |
+--------------|:---------------:|:--------------:|
 Admin   /Bulk Upload | ![](_images/tick.png) |  
 Admin   /Login | ![](_images/tick.png) |  
 Admin   /AuditManager | ![](_images/tick.png) |  
