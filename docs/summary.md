@@ -66,6 +66,7 @@
         * [Steps to Install and use PostgreSql Version 10.2 on RHEL 7.5](Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md)
         * [Steps to Install Clam AntiVirus Version 0.101.0](Steps-to-Install-Clam-AntiVirus-Version-0.101.0.md)
         * [Steps to Install Keycloak Standalone Server](Steps-to-Install-Keycloak-Standalone-Server.md)
+	* [Services in MOSIP](Services-in-MOSIP.md)
 * [Glossary](Glossary.md)
 * Contribute
     * [Call for Contribution](Call-for-Contribution.md)
