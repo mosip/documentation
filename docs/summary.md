@@ -156,6 +156,14 @@
                 * [Steps to Install Clam AntiVirus Version 0.101.0](guides/getting-started/Steps-to-Install-Clam-AntiVirus-Version-0.101.0.md)
                 * [Steps to Install Keycloak Standalone Server](guides/getting-started/Steps-to-Install-Keycloak-Standalone-Server.md)
         * Configuring
+        * Required Integrations
+            * ABIS
+            * Notifications
+            * Biometrics SDK
+            * HSM
+            * Print Service
+            * Antivirus
+            * Reference Integrations
         * Customizing
         * Extending
         * Integrating
