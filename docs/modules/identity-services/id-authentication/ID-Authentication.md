@@ -31,25 +31,25 @@ To analyze and generate authentication patterns, all authentication requests are
 # Process flow
 
 ## Demographic authentication
-![](_images/auth/id_auth_demo_auth_flow.jpg)
+![](_images/id_auth_demo_auth_flow.jpg)
 
 ## Biometric authentication 
-![](_images/auth/id_auth_biometric_auth_flow.jpg)
+![](_images/id_auth_biometric_auth_flow.jpg)
 
 ## Multifactor authentication 
-![](_images/auth/id_auth_multifactor_auth_flow.jpg)
+![](_images/id_auth_multifactor_auth_flow.jpg)
 
 ## OTP authentication
-![](_images/auth/id_auth_otp_auth_flow.jpg)
+![](_images/id_auth_otp_auth_flow.jpg)
 
 ## Partner and MISP authentication
-![](_images/auth/id_auth_partner_auth_flow.jpg)
+![](_images/id_auth_partner_auth_flow.jpg)
 
 ## eKYC authentication
-![](_images/auth/id_auth_ekyc_service_flow.jpg)
+![](_images/id_auth_ekyc_service_flow.jpg)
 
 # Logical View    
-![](_images/auth/id_auth_logical_view.png)
+![](_images/id_auth_logical_view.png)
 
 # Services
 For detailed description of ID Auth services, code and design refer to [ID authentication repo](https://github.com/mosip/id-authentication).

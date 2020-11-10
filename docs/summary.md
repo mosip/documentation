@@ -155,6 +155,7 @@
                 * [Steps to Install and use PostgreSql Version 10.2 on RHEL 7.5](guides/getting-started/Steps-to-Install-and-use-PostgreSql-Version-10.2-on-RHEL-7.5.md)
                 * [Steps to Install Clam AntiVirus Version 0.101.0](guides/getting-started/Steps-to-Install-Clam-AntiVirus-Version-0.101.0.md)
                 * [Steps to Install Keycloak Standalone Server](guides/getting-started/Steps-to-Install-Keycloak-Standalone-Server.md)
+			* [Services in MOSIP](guides/getting-started/Services-in-MOSIP.md)
         * Configuring
         * Required Integrations
             * ABIS
