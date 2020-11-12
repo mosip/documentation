@@ -28,6 +28,7 @@ Reporting framework uses below tool for batch processing and real-time streaming
 ### 1.	Reference Reports / Dashboards
 #### a.	Pre Registration Reports
 Pre Registration is the module in mosip used for residents to pre-register themselves for registration to get the ID. Resident can login to application and provide required information, upload required document and book an appointment for the registration with convenient registration center. During the process of pre-registration individuals go through may steps by providing details and all the steps are captured by system with proper status of each pre-registration. Reporting system will capture the details and created to provide below reference reports.
+
 		##### * Total No. of pre registrations application created per day/month/overall
 		##### * No. of pre registrations consumed per day/month/overall
 		##### * No. of pre registrations expired per day/month/overall
@@ -38,6 +39,7 @@ Pre Registration is the module in mosip used for residents to pre-register thems
 
 #### b.	Registration Report at Center Level
 The registration client is a thick Java-based client where the resident's demographic and biometric details are captured along with the supporting documents in online or offline mode.   The captured information is packaged in a secure tamper-proof way and send to the server for processing. During registration process all the stage and activity data is captured with proper registration status. Reporting system will capture the details and created to provide below reference reports.
+
 		##### * Total number of registrations attempted
 		##### * Total number of registrations attempted by registration center
 		##### * No. of registration approved
@@ -48,6 +50,7 @@ The registration client is a thick Java-based client where the resident's demogr
 
 #### b.	Registration Report at Processing
 Registration Processor processes the data (demographic and biometric) of an Individual for quality and uniqueness and then issues a Unique Identification Number (UIN). It also provides functionality to update demographic and biometric data and issue a new UIN if lost.  The source of data are primarily from MOSIP Registration Client, Existing ID system(s) of a country and Processor transaction data. Reporting system will capture the details and created to provide below reference reports.
+
 		##### * No. of new registrations per day/month/overall
 		##### * No. of update registration per day/month/overall
 		##### * No. of lost UIN registration per day/month/overall
@@ -64,6 +67,7 @@ ID Authentication provides an API based authentication mechanism for entities to
 * ID Authentication requests must come to MOSIP only via trusted parties who are white listed in MOSIP. The trusted parties are referred to as partners in MOSIP.
 * The biometric devices used for authentication must be registered with MOSIP.
 All the authentication request and response details captured and used for auditing and reporting. Reporting system will capture the details and created to provide below reference reports.
+
 		##### * No. of authentication done per day/month/overall
 		##### * No. of authentication failures per day/month/overall
 		##### * No. of authentication by type per day/month/overall
