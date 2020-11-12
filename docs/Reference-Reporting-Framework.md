@@ -9,7 +9,7 @@ Reporting framework uses below tool for batch processing and real-time streaming
 ##### * Elastic search as data-index and persistence store
 ##### * Kibana as visualization to create and view dashboards and reports. Reference dashboards and reports are provided as part of this deployment.
 
-![MOSIP Reference Reporting Architecture - Batch Data Processing](reporting-framework/reporting-architecture-batch.png)
+![MOSIP Reference Reporting Architecture - Batch Data Processing](_images/reporting/reporting-architecture-batch.png)
 
 #### Real time stream data processing, Persistant Store and Visualisation
 
