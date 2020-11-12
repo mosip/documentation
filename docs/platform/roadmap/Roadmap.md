@@ -1,6 +1,6 @@
-## MOSIP 1.x
+## MOSIP v1
 
-The first MOSIP version is v1 (1.x.x releases) and includes feature and functionality described in other sections of this documentation. Below is a list of things that are in the pipeline or will be in the next few months.
+The first MOSIP version is v1 (1.x.x releases) and ir focuses on ID issuance, lifecycle managament and identity verification via authentication. Detailed capabilities can be found in the features section of the documentation. Below is a list of things that are in the pipeline and slated for upcoming releases.
 
 Note: Scope and avaialbility dates are subject to change
 
@@ -32,44 +32,3 @@ Note: Scope and avaialbility dates are subject to change
 * Security: Starter test rig, deployment guidelines
 * More reference apps
 * Reference integrations
-
-## MOSIP 2.0
-
-### Feature Enhancements
-* Realtime ID Issue
-* Interactive multi-step registration / update process
-* Workload Management and Distribution
-* Enhanced Workflow Engine
-* Tablet / Browser based Registration client
-
-### Reference Applications
-* Resident App
-* Authentication App
-* Registry
-* Civil Registry Integration
-* Payment Systems Integration
-
-### Identity Verification Models
-* Credentials and KYC
-* Federated authentication - oAuth and SAML
-* Offline verification app
-* Zero Knowledge Proofs
-* IOT and Appliances
-* Government Login ID
-
-### Interoperability
-* ID interoperability and Trust Framework
-* eIDAS connector
-* Consented Data Share
-
-### Privacy and Security
-* Consent Management
-* User Data Pod
-* Trusted Audit Log
-* Homomorphic Verification
-
-### Rapid Implementation
-* Manageability
-* Automation
-* Bundles and templates
-* Upgrade tools
