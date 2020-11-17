@@ -48,7 +48,7 @@ The registration client is a thick Java-based client where the resident's demogr
 
 ![Registration at Center Level Dashboard](_images/reporting/reistration-client-dashboard.png) 
 
-#### b.	Registration Report at Processing
+#### c.	Registration Report at Processing
 Registration Processor processes the data (demographic and biometric) of an Individual for quality and uniqueness and then issues a Unique Identification Number (UIN). It also provides functionality to update demographic and biometric data and issue a new UIN if lost.  The source of data are primarily from MOSIP Registration Client, Existing ID system(s) of a country and Processor transaction data. Reporting system will capture the details and created to provide below reference reports.
 
 ##### * No. of new registrations per day/month/overall
@@ -62,7 +62,7 @@ Registration Processor processes the data (demographic and biometric) of an Indi
 
 ![Registration Report at Processing Dashboard](_images/reporting/registration-pro-dashboard.png) 
 
-#### b.	Authentication Reports
+#### d.	Authentication Reports
 ID Authentication provides an API based authentication mechanism for entities to validate individuals. ID Authentication is the primary mode for entities to validate an individual before providing any service.Following are the pre-requisites for an entity to do authentication of an individual
 * ID Authentication requests must come to MOSIP only via trusted parties who are white listed in MOSIP. The trusted parties are referred to as partners in MOSIP.
 * The biometric devices used for authentication must be registered with MOSIP.
@@ -76,7 +76,7 @@ All the authentication request and response details captured and used for auditi
 
 ![Authentication Dashboard](_images/reporting/authentication-dashboard.png) 
 
-#### b.	Search and Export reports to CSV
+#### e.	Search and Export reports to CSV
 Reporting framework and visualisation tool will provide flexibility to create the reports required by the country and export those reports as CSV format. This reports can be configured, pre viewed and saved for future view and updates. Exported CSV reports can be shared with other users as required.
 
 ![Reports in Search and CSV](_images/reporting/csv-reports.png) 
