@@ -5,6 +5,7 @@ Reporting framework uses below tool for batch processing and real-time streaming
 
 #### Batch data processing, Persistant Store and Visualisation
 
+##### * Postgres for MOSIP data source enabled with read-replicas for reporting purpose
 ##### * Logstash is part of elastic stack and used to crawl data from database transform and index to elastic search (Batch processing). Logstash is not required if Debezium, Kafka and spark used (real-time processing).
 ##### * Elastic search as data-index and persistence store
 ##### * Kibana as visualization to create and view dashboards and reports. Reference dashboards and reports are provided as part of this deployment.
