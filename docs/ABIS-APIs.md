@@ -81,7 +81,7 @@ The following operations are supported by MOSIP:
 	* The data sent in the referenceURL will be encrypted
 * referenceId must not be active prior to this operation i.e., it must not have been used before this operation
 * De-duplication must not be performed in this operation
-* MOSIP will provide biometric data in [CBEFF format](CBEFF-XML.md) to ABIS as a response of referenceURL and the data in CBEFF will not be encrypted
+* MOSIP will provide biometric data in [CBEFF format](CBEFF-XML.md) to ABIS as a response of referenceURL and the data will be encrypted and encoded as mentioned below.
 
 > Refer to [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token. Request JSON expects clientid, secretkey and appid which will be provided by the MOSIP adopter's System Integrator(SI).
 
@@ -110,7 +110,7 @@ Encrypted 256 bit AES key (Encrypted by the provided public key) | #KEY_SPLITTER
   "requestId": "91234567-89AB-CDEF-0123-456789ABCDEF",
   "requesttime": "2020-03-29T07:01:24.692Z",
   "referenceId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "referenceURL": "https://mosip.io/biometric/45678"
+  "referenceURL": "http://mosip.io/biometric/45678"
 }
 ```
 
