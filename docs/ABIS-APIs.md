@@ -2,7 +2,7 @@ This document defines the APIs specifications for various operations that ABIS c
 
 API specification version: **0.9**
 
-Published Date: August 04, 2020
+Published Date: November 19, 2020
 
 # Revision Note
 Publish Date|Revision
