@@ -552,20 +552,20 @@ POST https://{base_url}/partnermanagement/v1/partners/registereddevices
       "deviceId": "Unique ID coming from device",
       "purpose": "REGISTRATION",
       "deviceInfo": {  //The Device Info block is a JWT Token signed using Device Key
-	    "deviceSubId": "Sub-ID of Device",
-	    "certification": "Certification level of Device - L0",
-	    "digitalId": { //The Digital ID block is a JWT Token signed using Device Key
-	      "serialNo": "Serial Number in the Device",
-	      "deviceProvider": "Device Provider Name",
-	      "deviceProviderId": "Device Provider ID",
-	      "make": "Brand or Make Name",
-	      "model": "Model",
-	      "dateTime": "2020-10-09T08:48:31.158Z", // Digital ID creation time (should be with in 5 mins when request is sent)
-	      "type": "Device Type",
-	      "deviceSubType": "Device Sub Type"
-        },
-	    "deviceExpiry": "2021-12-16T09:06:38.161Z",
-	    "timeStamp": "2020-10-09T08:48:31.158Z"
+	  "deviceSubId": "Sub-ID of Device",
+	  "certification": "Certification level of Device - L0",
+	  "digitalId": { //The Digital ID block is a JWT Token signed using Device Key
+	    "serialNo": "Serial Number in the Device",
+	    "deviceProvider": "Device Provider Name",
+	    "deviceProviderId": "Device Provider ID",
+	    "make": "Brand or Make Name",
+	    "model": "Model",
+	    "dateTime": "2020-10-09T08:48:31.158Z", // Digital ID creation time (should be with in 5 mins when request is sent)
+	    "type": "Device Type",
+	    "deviceSubType": "Device Sub Type"
+          },
+	  "deviceExpiry": "2021-12-16T09:06:38.161Z",
+	  "timestamp": "2020-10-09T08:48:31.158Z"
       },
       "foundationalTrustProviderId": ""
     }
@@ -595,7 +595,7 @@ POST https://{base_url}/partnermanagement/v1/partners/registereddevices
     },
     "deviceCode": "unique device code for the device",
     "env": "Developer",
-    "timeStamp": "2020-10-06T07:01:30.374Z"
+    "timestamp": "2020-10-06T07:01:30.374Z"
   },
   "responsetime": "2020-10-09T08:48:31.158Z",
   "version": "string"
