@@ -74,6 +74,9 @@
     * MOSIP Core
     * [MOSIP Commons](modules/mosip-commons/Kernel.md)
         * [Audit Manager Functionality](modules/mosip-commons/Audit-Manager-Functionality.md)
+			* [Admin Service Audits](modules/mosip-commons/Admin-Service-Audits.md)
+			* [Resident Service Audits](modules/mosip-commons/Resident-Service-Audits.md)
+			* [Partner Management Audits](modules/mosip-commons/Partner-Management-Audits.md)
         * [Authentication and Authorization Functionality](modules/mosip-commons/Authentication-and-Authorization-Functionality.md)      
         * [Common Services Functionality](modules/mosip-commons/Common-Services-Functionality.md)
         * [Data Services Functionality](modules/mosip-commons/Data-Services-Functionality.md)
