@@ -2,7 +2,7 @@ This document defines the APIs specifications for various operations that ABIS c
 
 API specification version: **0.9**
 
-Published Date: August 04, 2020
+Published Date: November 19, 2020
 
 # Revision Note
 Publish Date|Revision
@@ -11,6 +11,7 @@ May 07, 2020|This is the first formal publication of the interface as a version-
 June 09, 2020|A note related to targetFPIR was added
 June 26, 2020|New [failure reason](#failure-reasons) (code - 6, 8, 9, 10, 11, 12) for ABIS have been added.
 August 04, 2020|Analytics section has been added to the overall response for Identify and the [failure reason](#failure-reasons) have been updated.
+November 19, 2020|Note on encryption of biometric data share using referenceURL has been added.
 
 # Introduction
 An ABIS system that integrates with MOSIP should support the following operations. 
@@ -76,13 +77,30 @@ The following operations are supported by MOSIP:
 ## Insert 
 * ABIS must get biometric data from referenceURL, process it and store it locally within the ABIS reference database 
 	* The referenceURL is authenticated and authorized; ABIS needs to send a JWT token inside the request header COOKIE
-	* The referenceURL is secure (HTTPS)
 	* The referenceURL will be active for a certain time as decided by the MOSIP adopter 
+	* The data sent in the referenceURL will be encrypted
 * referenceId must not be active prior to this operation i.e., it must not have been used before this operation
 * De-duplication must not be performed in this operation
-* MOSIP will provide biometric data in [CBEFF format](CBEFF-XML.md) to ABIS as a response of referenceURL and the data in CBEFF will not be encrypted
+* MOSIP will provide biometric data in [CBEFF format](CBEFF-XML.md) to ABIS as a response of referenceURL and the data will be encrypted and encoded as mentioned below.
 
 > Refer to [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token. Request JSON expects clientid, secretkey and appid which will be provided by the MOSIP adopter's System Integrator(SI).
+
+{% hint style="info" %}
+
+**The structure of the encrypted data downloaded from referenceURL **
+
+The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format.
+
+Encrypted 256 bit AES key (Encrypted by the provided public key) | #KEY_SPLITTER# |           | AES Encrypted Data
+-----------------------------------------------------------------|----------------|-----------|--------------------
+1 | 2 | 3 | 4
+
+1. Encrypted with RSA OAEP - SHA256-MFG1
+2. Static value which will be shared by the adopter
+3. Random IV 32 bytes which will be used for AES
+4. AES GCM PKCS5Padding with null AAD and IV as of point 3
+
+{% endhint %}
 
 ### Insert Request
 ```JSON
@@ -92,7 +110,7 @@ The following operations are supported by MOSIP:
   "requestId": "91234567-89AB-CDEF-0123-456789ABCDEF",
   "requesttime": "2020-03-29T07:01:24.692Z",
   "referenceId": "01234567-89AB-CDEF-0123-456789ABCDEF",
-  "referenceURL": "https://mosip.io/biometric/45678"
+  "referenceURL": "http://mosip.io/biometric/45678"
 }
 ```
 
