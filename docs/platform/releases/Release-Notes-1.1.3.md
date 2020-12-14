@@ -6,8 +6,8 @@
 - [Tests](#tests)
 	* [a. In scope](#a-in-scope)
 	* [b. Not in scope](#b-not-in-scope)
-	* [c. Test Metrics](#c-test-metrics)
-	* [d. Test Execution Report](#d-test-execution-report)
+	* [c. Test Execution Metrics](#c-test-execution-metrics)
+- [Known Issues](#known-issues)
 - [Acronyms](#acronyms)
 
 ## Scope
@@ -62,45 +62,36 @@ Basic integration testing was done covering the below modules.
 |Title	|Description|
 |------|------|
 |Functional Testing|<ul><li>Pre-registration (Dynamic UI & APIs)</li><li>Registration Client (Dynamic UI)</li><li>Kernel (APIs)</li><li>Registration Processor (Server)</li><li>ID Authentication (APIs)</li><li>Partner Management (APIs)</li><li>ID Repository (APIs)</li><li>Resident Services (APIs)</li><li>Admin (UI & APIs)</li></ul>|
-|Configuration Testing| Testing is done for default configuration. Changing the configuration parameters with various values will be taken up in subsequent releases.|
-|Version Tag Tested|v1.1.3|
+|Configuration Testing| Testing was done for default configuration (two languages) and single language with changed ui specification for pre-registration and registration client (Further more we have changed the seed data to single language).|
+|Version Tested|v1.1.3|
 |Types of testing|<ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li></ul>|
-|Browser Support|**Pre-Registration** (Latest Versions of Chrome, Edge & Firefox)|
-|OS Support|**Registration Client** (Windows 10)|
+|Browser Support|Pre-Registration (Latest Versions of Chrome)|
+|OS Support|Registration Client (Windows 10)|
 
 |Areas |Technology Used|
 ----|----
-Deployment Script Environment |	Microsoft Azure and VMs deployed in on-premise hardware
+Deployment Script Environment |	AWS
 Registration Client with TPM 2.0 | Windows 10
-Document Scanner | Canon lide 120
-GPS | GlobalSat BU-353-S4
 Biometrics Standard | CBEFF format (Version - 2.0)
-MOSIP Device Service (MDS) | MDS v0.9.5
-ABIS | ABIS Spec Version v0.9
-SDK | SDK Spec Version v0.9
-Registration Client – face capture | OpenImaj - This is licensed for demo purpose only
+MDS (Proxy) | MDS v0.9.5
+ABIS (Proxy) | ABIS Spec Version v0.9
+SDK (Proxy) | SDK Spec Version v0.9
 Key-store | SoftHSM
 Anti-virus | ClamAV
 Maps | OpenstreetMap
-Supporting key based digital signatures, not using digital certificates | 
 Transliteration | ICU4J (Library with French, Arabic languages)
 
 ### b. Not in scope 
 |Title|	Description|
-|------|------|
+|-----|------------|
 |Non-Functional Testing| <ul><li>Performance Testing</li><li>Reliability and Disaster recovery Testing</li></ul>|
+|Non-Biometrics Device Testing | Testing was not done for GPS Device, Docuemnt Scanner and Docuemnt Printer |
+|HSM | Testing was done only using SoftHSM |
+|Biometric Devices | Testing was done only with Proxy components |
+|ABIS & Biometric SDKs | Testing was done only with Proxy components |
+|Automation Testing | Automation Testing is going through enhancement and is skipped for this version |
 
-### c. Test Metrics
-
-|Key|Value|
-|------|--------|
-|Test Coverage|<ul><li>Pre-Registration (80%)</li><li>Registration Client (95%)</li><li>Registration Processor (100%)</li><li>Authentication (100%)</li><li>Partner Management (100%)</li><li>Resident Services (100%)</li><li>Admin Services(100%)</li></ul>|
-|Code Coverage|70% to 80%|
-|Automation Coverage|80%|
-|Number of Test Cases|Total Run (522), Pass (501), Pass Rate (96%)|
-|Number of Open Blocker or Critical Defects|0|
-
-### d. Test Execution Report
+### c. Test Execution Metrics
 
 Test Execution | Test Cases | Executed Tests | Pass | Fail | Pending Execution | Pass% | Fail% |
 ---------------|:----------:|:--------------:|:----:|:----:|:-----------------:|:-----:|:-----:|
@@ -211,3 +202,4 @@ MDS | MOSIP Device Service
 ICU4J | International Components for Unicode for Java
 WIP | Work In Progress
 TBD | To Be Determined/Done
+MDS | MOSIP Device Specification
