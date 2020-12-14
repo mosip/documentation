@@ -5,7 +5,7 @@
 - [Code](#code)
 - [Tests](#tests)
 	* [a. In scope](#a-in-scope)
-	* [b. Not in scope](#b-not-in-scope)
+	* [b. Not in scope or in progress](#b-not-in-scope-or-in-progress)
 	* [c. Test Execution Metrics](#c-test-execution-metrics)
 - [Known Issues](#known-issues)
 - [Acronyms](#acronyms)
