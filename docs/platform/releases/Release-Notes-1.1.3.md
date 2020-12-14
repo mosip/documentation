@@ -47,7 +47,12 @@ Low level design documents for each module are available in the respective githu
 * [Config Respository](https://github.com/mosip/mosip-config/tree/v1.1.3)
 * [Reference Implementation](https://github.com/mosip/mosip-ref-impl/tree/v1.1.3)
 
+{% hint style="info" %}
+
 Code needs to be deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/tree/1.1.3/deployment/sandbox-v2).
+
+{% endhint %}
+
 
 ## Tests 
 
@@ -57,24 +62,12 @@ Basic integration testing was done covering the below modules.
 
 |Title	|Description|
 |------|------|
-|Functional Testing|
-<ul>
-	<li>Pre-registration (Dynamic UI & APIs)</li>
-	<li>Registration Client (Dynamic UI, functionality and upgrade)</li>
-	<li>Kernel (APIs)</li>
-	<li>Registration Processor (All flows have been covered)</li>
-	<li>ID Authentication (APIs)</li>
-	<li>Partner Management (APIs)</li>
-	<li>ID Repository (APIs)</li>
-	<li>Resident Services (APIs)</li>
-	<li>Admin (UI & APIs)</li>
-</ul>
-|
+|Functional Testing|<ul><li>Pre-registration (Dynamic UI & APIs)</li><li>Registration Client (Dynamic UI, functionality and upgrade)</li><li>Kernel (APIs)</li>	<li>Registration Processor (All flows have been covered)</li><li>ID Authentication (APIs)</li><li>Partner Management (APIs)</li><li>ID Repository (APIs)</li><li>Resident Services (APIs)</li>	<li>Admin (UI & APIs)</li></ul>|
 |Configuration Testing| Testing was done for default configuration (two languages) and single language with changed ui specification for pre-registration and registration client (Further more we have changed the seed data to single language).|
 |Version Tested|v1.1.3|
 |Types of testing|<ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li></ul>|
-|Browser Support|Pre-Registration (Latest Versions of Chrome)|
-|OS Support|Registration Client (Windows 10)|
+|Browser|Pre-Registration and Admin UI (Tested with the latest version of Chrome browser)|
+|OS Support|Registration Client on Windows 10|
 
 |Areas |Technology Used|
 ----|----
