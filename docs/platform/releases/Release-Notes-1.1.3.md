@@ -94,10 +94,10 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 
 |Key|Value|
 |------|--------|
-|Test Coverage|Pre-Registration (80%), Registration Client (95%), Registration Processor (100%), Authentication (100%), Partner Management (100%), Resident Services (100%), Admin (100%)|
+|Test Coverage|<ul><li>Pre-Registration (80%)</li><li>Registration Client (95%)</li><li>Registration Processor (100%)</li><li>Authentication (100%)</li><li>Partner Management (100%)</li><li>Resident Services (100%)</li><li>Admin Services(100%)</li></ul>|
 |Code Coverage|70% to 80%|
 |Automation Coverage|80%|
-|Number of Test Cases|Total Run (2804), Pass (2332), Pass Rate (83.17%)|
+|Number of Test Cases|Total Run (522), Pass (501), Pass Rate (96%)|
 |Number of Open Blocker or Critical Defects|0|
 
 ### d. Test Execution Report
