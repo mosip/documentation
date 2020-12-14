@@ -90,6 +90,7 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 |Biometric Devices | Testing was done only with Proxy components |
 |ABIS & Biometric SDKs | Testing was done only with Proxy components |
 |Automation Testing | Automation Testing is going through enhancement and is skipped for this version |
+|Browser Support | Testing for Pre-registration and Admin UI was done only on Chrome (latest version) |
 
 ### c. Test Execution Metrics
 

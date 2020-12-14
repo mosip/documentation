@@ -2,7 +2,7 @@ This document contains the bugs that were fixed as part of MOSIP 1.1.2 release.
 
 Bug ID | Summary | Module
 -------|---------|-------
-[[MOSIP-10712](https://mosip.atlassian.net/browse/MOSIP-10712) | Password and Iris login screen overlay if auth token expires, and unbale to do password login to get fresh auth token  | Registration Client
+[MOSIP-10712](https://mosip.atlassian.net/browse/MOSIP-10712) | Password and Iris login screen overlay if auth token expires, and unbale to do password login to get fresh auth token  | Registration Client
 [MOSIP-10702](https://mosip.atlassian.net/browse/MOSIP-10702) | Sync request Decryption Failure in Packet Validator Stage  | Registration Processor
 [MOSIP-10691](https://mosip.atlassian.net/browse/MOSIP-10691) | Packet is getting failed at OSI (ida internal service time out  error a OSI stage) | Registration Processor
 [MOSIP-10570](https://mosip.atlassian.net/browse/MOSIP-10570) | "Internal System Error" while trying to log in to the reg-client | Registration Client
