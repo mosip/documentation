@@ -18,7 +18,7 @@ MOSIP **1.1.3** succeeds **1.1.2** with enhancements and important defect fixes 
 **Key Highlights**
 
 * [Enhancements](Release-Notes-1.1.3-Features.md)
-* [Defect fixes](Release-Notes-1.1.3-Bug-Fixes.md)
+* [Defec	t fixes](Release-Notes-1.1.3-Bug-Fixes.md)
 
 ## Documentation
 
@@ -53,7 +53,6 @@ Code needs to be deployed as per the procedure depicted in [Sandbox Installer](h
 
 {% endhint %}
 
-
 ## Tests 
 
 ### a. In scope 
@@ -65,30 +64,29 @@ Basic integration testing was done covering the below modules.
 |Functional Testing|<ul><li>Pre-registration (Dynamic UI & APIs)</li><li>Registration Client (Dynamic UI, functionality and upgrade)</li><li>Kernel (APIs)</li>	<li>Registration Processor (All flows have been covered)</li><li>ID Authentication (APIs)</li><li>Partner Management (APIs)</li><li>ID Repository (APIs)</li><li>Resident Services (APIs)</li>	<li>Admin (UI & APIs)</li></ul>|
 |Configuration Testing| Testing was done for default configuration (two languages) and single language with changed ui specification for pre-registration and registration client (Further more we have changed the seed data to single language).|
 |Version Tested|v1.1.3|
-|Types of testing|<ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li></ul>|
+|Types of testing|<ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li><li>Security</li></ul>|
 |Browser|Pre-Registration and Admin UI (Tested with the latest version of Chrome browser)|
-|OS Support|Registration Client on Windows 10|
+|OS Support|Registration Client on Windows 10, MOSIP server components run as micro-services encapsulated as docker images|
 
 |Areas |Technology Used|
 ----|----
-Deployment Script Environment |	AWS
+Deployment Script Environment | CentOS on AWS
 Registration Client with TPM 2.0 | Windows 10
 Biometrics Standard | CBEFF format (Version - 2.0)
 MDS | MDS v0.9.5
 ABIS | ABIS Spec Version v0.9
 SDK  | SDK Spec Version v0.9
-Key-store | SoftHSM
+Key-store | HSM
 Anti-virus | ClamAV
 Maps | OpenstreetMap
 Transliteration | ICU4J (Library with French, Arabic languages)
 
-### b. Not in scope 
+### b. Not in scope or in progress
 |Title|	Description|
 |-----|------------|
 |Non-Functional Testing| <ul><li>Performance Testing</li><li>Reliability and Disaster recovery Testing</li></ul>|
-|Non-Biometrics Device Testing | Testing was not done for GPS Device, Docuemnt Scanner and Docuemnt Printer |
-|HSM | Testing was done only using SoftHSM |
-|Browser Support | Testing for Pre-registration and Admin UI was done only on Chrome (latest version) |
+|HSM | Testing was done using SoftHSM |
+|Browser Support | Testing for Pre-registration and Admin UI was done using Chrome (latest version) |
 
 ### c. Test Execution Metrics
 
@@ -111,33 +109,21 @@ Bug ID | Summary | Module
 -------|---------|-------
 [MOSIP-10604](https://mosip.atlassian.net/browse/MOSIP-10604) | Wrong location data getting populated for demographic details in Reg-Client | Registration Client
 [MOSIP-10729](https://mosip.atlassian.net/browse/MOSIP-10729) | Document upload page showing the Documents Categories even though they are inactive | Registration Client
-[MOSIP-10725](https://mosip.atlassian.net/browse/MOSIP-10725) | We should display an informative message when the upgrade process is running. | Registration Client
-[MOSIP-10724](https://mosip.atlassian.net/browse/MOSIP-10724) | Able to close the application by clicking on 'X' button top right corner when the upgrade is running | Registration Client
 [MOSIP-10719](https://mosip.atlassian.net/browse/MOSIP-10719) | In Update-UIN flow, if the Name fields are not filled and continued then "Mandatory Fields should be highlighted" | Registration Client
 [MOSIP-10718](https://mosip.atlassian.net/browse/MOSIP-10718) | Incorrect error message while onboarding for "expired token" | Registration Client
 [MOSIP-10716](https://mosip.atlassian.net/browse/MOSIP-10716) | UIN Update process should not make the DOB as mandatory field | Registration Client
 [MOSIP-10715](https://mosip.atlassian.net/browse/MOSIP-10715) | Incorrect error message thrown for "Onboarding process" when RID is not assigned to user | Registration Client
-[MOSIP-10689](https://mosip.atlassian.net/browse/MOSIP-10689) | Center-Machine-RefId=null_null in header for registrationprocessor/v1/registrationstatus/sync API call | Registration Client
 [MOSIP-10605](https://mosip.atlassian.net/browse/MOSIP-10605) | DoB is not handled like the age for displaying Parent/Guardian details in an adult packet. | Registration Client
 [MOSIP-10568](https://mosip.atlassian.net/browse/MOSIP-10568) | Template Bugs for Preview, Acknowledgement pages of Reg-Client | Registration Client
 [MOSIP-10503](https://mosip.atlassian.net/browse/MOSIP-10503) | In registration client packet upload page, packets uploaded from admin portal are not getting cleared leading to confusion | Registration Client
-[MOSIP-10496](https://mosip.atlassian.net/browse/MOSIP-10496) | mosip.registration.onboarduser_ida_auth=Y - is not required in registration client-mz file. | Registration Client
-[MOSIP-10004](https://mosip.atlassian.net/browse/MOSIP-10004) | EOD table must include the operator ID who created the packet | Registration Client
-[MOSIP-10520](https://mosip.atlassian.net/browse/MOSIP-10520) | Navigation using "tab" is skipping couple of attributes in Reg-Client | Registration Client
-[MOSIP-10480](https://mosip.atlassian.net/browse/MOSIP-10480) | The DOB validations are not happening correctly. | Registration Client
 [MOSIP-9783](https://mosip.atlassian.net/browse/MOSIP-9783) | Visible images during registration process and a part of created packet is hidden in the UI. | Registration Client
-[MOSIP-10593](https://mosip.atlassian.net/browse/MOSIP-10593) | The URL is coming as null in manual adjudication assignment response. | Registration Processor
-[MOSIP-10851](https://mosip.atlassian.net/browse/MOSIP-10851) | Reg-Proc sending email notification using SMS template and vice~versa | Registration Processor
 [MOSIP-10849](https://mosip.atlassian.net/browse/MOSIP-10849) | Notification not working when a packet is reprocessed. | Registration Processor
-[MOSIP-10590](https://mosip.atlassian.net/browse/MOSIP-10590) | Double entries happening for Registration track in Audit log with different log-ID | Registration Processor
+[MOSIP-10590](https://mosip.atlassian.net/browse/MOSIP-10590) | Double entries in Audit log | Registration Processor
 [MOSIP-10587](https://mosip.atlassian.net/browse/MOSIP-10587) | Unable to upload more than 200 packets | Admin Services
 [MOSIP-10469](https://mosip.atlassian.net/browse/MOSIP-10469) | Unable to create machine from admin console | Admin Services
 [MOSIP-10241](https://mosip.atlassian.net/browse/MOSIP-10241) | While performing Bulk Upload for a table using Admin master Bulk Upload history table associated with it should also be updated | Admin Services
 [MOSIP-10854](https://mosip.atlassian.net/browse/MOSIP-10854) | Unable to upload the data using bulk upload from zoneUserHistory Table | Admin Services
 [MOSIP-10720](https://mosip.atlassian.net/browse/MOSIP-10720) | Unable to create the Reg center as Region is not loading | Admin Services
-[MOSIP-10603](https://mosip.atlassian.net/browse/MOSIP-10603) | User is getting error while trying to upload the data with JSON text inside the cell and that is comma seperated | Admin Services
-[MOSIP-10588](https://mosip.atlassian.net/browse/MOSIP-10588) | The page is not getting refreshed when the non existing RID is entered | Admin Services
-[MOSIP-10565](https://mosip.atlassian.net/browse/MOSIP-10565) | Proper error message to be shown when the data violation happens from DB side | Admin Services
 [MOSIP-10561](https://mosip.atlassian.net/browse/MOSIP-10561) | Admin Role to be defined for KeyManager | Admin Services
 [MOSIP-10515](https://mosip.atlassian.net/browse/MOSIP-10515) | Unable to upload data in History Tables via bulk Upload | Admin Services
 [MOSIP-10509](https://mosip.atlassian.net/browse/MOSIP-10509) | The response for packet upload should not contain table name as packet | Admin Services
@@ -168,7 +154,7 @@ Bug ID | Summary | Module
 [MOSIP-10834](https://mosip.atlassian.net/browse/MOSIP-10834) | The preregistartion.identity.name property should be present under UI PARAM | Pre-registration
 [MOSIP-10833](https://mosip.atlassian.net/browse/MOSIP-10833) | When the resident status is not filled the document page gives Technical error occured | Pre-registration
 [MOSIP-10713](https://mosip.atlassian.net/browse/MOSIP-10713) | Unable to search for Center using Filter Country as Philippines | Pre-registration
-[MOSIP-10492](https://mosip.atlassian.net/browse/MOSIP-10492) | The Age field is populated as NaN | Pre-registration
+[MOSIP-10492](https://mosip.atlassian.net/browse/MOSIP-10492) | The Age field is populated as NaN when navigated using keyboard| Pre-registration
 
 {% hint style="info" %}
 
