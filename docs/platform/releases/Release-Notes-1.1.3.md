@@ -17,8 +17,8 @@ MOSIP **1.1.3** succeeds **1.1.2** with enhancements and important defect fixes 
 
 **Key Highlights**
 
-* [New features added to MOSIP are listed here](Release-Notes-1.1.3-Features.md)
-* [All the bug fixes are listed here](Release-Notes-1.1.3-Bug-Fixes.md)
+* [Enhancements](Release-Notes-1.1.3-Features.md)
+* [Defect fixes](Release-Notes-1.1.3-Bug-Fixes.md)
 
 ## Documentation
 
