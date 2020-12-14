@@ -13,12 +13,12 @@
 ## Scope
 MOSIP **1.1.3** succeeds **1.1.2** with enhancements and important defect fixes which were identified in [Release 1.1.2](Release-Notes-1.1.2.md#list-of-known-issues).
 
-**Release Date:** December 14, 2020
+**Release Date:** December 10, 2020
 
 **Key Highlights**
 
 * [Enhancements](Release-Notes-1.1.3-Features.md)
-* [Defec	t fixes](Release-Notes-1.1.3-Bug-Fixes.md)
+* [Defect fixes](Release-Notes-1.1.3-Bug-Fixes.md)
 
 ## Documentation
 
@@ -31,7 +31,7 @@ Includes functional requirements, process flows, architecture and high level des
 All APIs are documented [here](https://docs.mosip.io/platform/apis).
 
 ### 3. Design 
-Low level design documents for each module are available in the respective GitHub repositories.
+Low level design documents for each module are available in the respective github repos.
 
 ## Code
 
@@ -113,22 +113,19 @@ Bug ID | Summary | Module
 [MOSIP-10718](https://mosip.atlassian.net/browse/MOSIP-10718) | Incorrect error message while onboarding for "expired token" | Registration Client
 [MOSIP-10716](https://mosip.atlassian.net/browse/MOSIP-10716) | UIN Update process should not make the DOB as mandatory field | Registration Client
 [MOSIP-10715](https://mosip.atlassian.net/browse/MOSIP-10715) | Incorrect error message thrown for "Onboarding process" when RID is not assigned to user | Registration Client
-[MOSIP-10605](https://mosip.atlassian.net/browse/MOSIP-10605) | DoB is not handled like the age for displaying Parent/Guardian details in an adult packet. | Registration Client
-[MOSIP-10568](https://mosip.atlassian.net/browse/MOSIP-10568) | Template Bugs for Preview, Acknowledgement pages of Reg-Client | Registration Client
+[MOSIP-10605](https://mosip.atlassian.net/browse/MOSIP-10605) | DoB is not handled like the age for displaying Parent/Guardian details in an adult packet | Registration Client
+[MOSIP-10568](https://mosip.atlassian.net/browse/MOSIP-10568) | Registration client Preview and acknowledgement pages have issues due to templates | Registration Client
 [MOSIP-10503](https://mosip.atlassian.net/browse/MOSIP-10503) | In registration client packet upload page, packets uploaded from admin portal are not getting cleared leading to confusion | Registration Client
-[MOSIP-9783](https://mosip.atlassian.net/browse/MOSIP-9783) | Visible images during registration process and a part of created packet is hidden in the UI. | Registration Client
-[MOSIP-10849](https://mosip.atlassian.net/browse/MOSIP-10849) | Notification not working when a packet is reprocessed. | Registration Processor
-[MOSIP-10590](https://mosip.atlassian.net/browse/MOSIP-10590) | Double entries in Audit log | Registration Processor
+[MOSIP-9783](https://mosip.atlassian.net/browse/MOSIP-9783) | Sometimes images are displayed in inappropriate areas leading to restart of the registration client | Registration Client
+[MOSIP-10849](https://mosip.atlassian.net/browse/MOSIP-10849) | Notification not working when a packet is reprocessed | Registration Processor
+[MOSIP-10590](https://mosip.atlassian.net/browse/MOSIP-10590) | Double entries in Audit log for registration | Registration Client
 [MOSIP-10587](https://mosip.atlassian.net/browse/MOSIP-10587) | Unable to upload more than 200 packets | Admin Services
 [MOSIP-10469](https://mosip.atlassian.net/browse/MOSIP-10469) | Unable to create machine from admin console | Admin Services
 [MOSIP-10241](https://mosip.atlassian.net/browse/MOSIP-10241) | While performing Bulk Upload for a table using Admin master Bulk Upload history table associated with it should also be updated | Admin Services
-[MOSIP-10854](https://mosip.atlassian.net/browse/MOSIP-10854) | Unable to upload the data using bulk upload from zoneUserHistory Table | Admin Services
-[MOSIP-10720](https://mosip.atlassian.net/browse/MOSIP-10720) | Unable to create the Reg center as Region is not loading | Admin Services
-[MOSIP-10561](https://mosip.atlassian.net/browse/MOSIP-10561) | Admin Role to be defined for KeyManager | Admin Services
-[MOSIP-10515](https://mosip.atlassian.net/browse/MOSIP-10515) | Unable to upload data in History Tables via bulk Upload | Admin Services
-[MOSIP-10509](https://mosip.atlassian.net/browse/MOSIP-10509) | The response for packet upload should not contain table name as packet | Admin Services
-[MOSIP-10484](https://mosip.atlassian.net/browse/MOSIP-10484) | The role displayed in Admin UI should be specific to Admin only | Admin Services
-[MOSIP-10397](https://mosip.atlassian.net/browse/MOSIP-10397) | API doesn't handle Insertion of TPM keys in Machine Master | Admin Services
+[MOSIP-10515](https://mosip.atlassian.net/browse/MOSIP-10515) | Unable to upload data in History tables via bulk Upload | Admin Services
+[MOSIP-10854](https://mosip.atlassian.net/browse/MOSIP-10854) | Unable to upload the data using bulk upload from zoneUserHistory table | Admin Services
+[MOSIP-10484](https://mosip.atlassian.net/browse/MOSIP-10484) | Incorrect role displayed in Admin UI when logged in as admin | Admin Services
+[MOSIP-10397](https://mosip.atlassian.net/browse/MOSIP-10397) | API for Machine Master Create/Update doesn't handle the TPM Key updates | Admin Services
 [MOSIP-10386](https://mosip.atlassian.net/browse/MOSIP-10386) | The centerType should not be removed from the already created center if it is deactivated | Admin Services
 [MOSIP-10294](https://mosip.atlassian.net/browse/MOSIP-10294) | Unable to Activate or Deactivate the Holiday Master Data | Admin Services
 [MOSIP-9255](https://mosip.atlassian.net/browse/MOSIP-9255) | The transaction is logged when only the table is selected with no csv and operation mentioned | Admin Services
@@ -145,11 +142,7 @@ Bug ID | Summary | Module
 [MOSIP-10834](https://mosip.atlassian.net/browse/MOSIP-10834) | The preregistartion.identity.name property should be present under UI  | Pre-registration
 [MOSIP-10492](https://mosip.atlassian.net/browse/MOSIP-10492) | The Age field is populated as NaN when navigated using keyboard| Pre-registration
 
-{% hint style="info" %}
-
-All our open defects are available in [JIRA](https://mosip.atlassian.net/). Please [click on this link](https://mosip.atlassian.net/issues/?filter=10709) to view all the open defects.
-
-{% endhint %}
+To see all open defects, see https://mosip.atlassian.net/issues/?filter=10709
 
 ## Acronyms
 
