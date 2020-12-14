@@ -11,7 +11,7 @@
 - [Acronyms](#acronyms)
 
 ## Scope
-MOSIP Version **1.1.3** is an interim release on top of **1.1.2** release. It has some of the new features which were planned for release **1.2** and some critical bug fixes which were identified in [Release 1.1.2](Release-Notes-1.1.2.md#list-of-known-issues).
+MOSIP **1.1.3** succeeds **1.1.2** with enhancements and important defect fixes which were identified in [Release 1.1.2](Release-Notes-1.1.2.md#list-of-known-issues).
 
 **Release Date:** December 10, 2020
 
