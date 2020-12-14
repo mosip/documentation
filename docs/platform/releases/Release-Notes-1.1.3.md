@@ -129,31 +129,20 @@ Bug ID | Summary | Module
 [MOSIP-10509](https://mosip.atlassian.net/browse/MOSIP-10509) | The response for packet upload should not contain table name as packet | Admin Services
 [MOSIP-10484](https://mosip.atlassian.net/browse/MOSIP-10484) | The role displayed in Admin UI should be specific to Admin only | Admin Services
 [MOSIP-10397](https://mosip.atlassian.net/browse/MOSIP-10397) | API doesn't handle Insertion of TPM keys in Machine Master | Admin Services
-[MOSIP-10386](https://mosip.atlassian.net/browse/MOSIP-10386) | The centerType should not be removed from the already created center if it deactivated | Admin Services
-[MOSIP-10331](https://mosip.atlassian.net/browse/MOSIP-10331) | Audit logs issues for Device and Machine | Admin Services
-[MOSIP-10296](https://mosip.atlassian.net/browse/MOSIP-10296) | The Location field should be dropdown under create Holiday MasterData | Admin Services
+[MOSIP-10386](https://mosip.atlassian.net/browse/MOSIP-10386) | The centerType should not be removed from the already created center if it is deactivated | Admin Services
 [MOSIP-10294](https://mosip.atlassian.net/browse/MOSIP-10294) | Unable to Activate or Deactivate the Holiday Master Data | Admin Services
-[MOSIP-10072](https://mosip.atlassian.net/browse/MOSIP-10072) | While Uploading the .csv file the response should throw proper row and mistake done under file uploaded | Admin Services
 [MOSIP-9255](https://mosip.atlassian.net/browse/MOSIP-9255) | The transaction is logged when only the table is selected with no csv and operation mentioned | Admin Services
 [MOSIP-600](https://mosip.atlassian.net/browse/MOSIP-600) | Lunch Start time and Lunch End time is not visible in UI | Admin Services
-[MOSIP-10733](https://mosip.atlassian.net/browse/MOSIP-10733) | The masterdata service is breaking frequently on use of Pre-reg UI | Admin Services
-[MOSIP-9034](https://mosip.atlassian.net/browse/MOSIP-9034) | Inconsistency in Templates across all the modules. | Commons
 [MOSIP-10621](https://mosip.atlassian.net/browse/MOSIP-10621) | Websub Subscription fails with error for one or more topics when 4 topics are subscribed in a row. | Commons
-[MOSIP-534](https://mosip.atlassian.net/browse/MOSIP-534) | Updated keys are not present in Key_Store table after Master SYNC(mastersync does not update the keys in local DB if keys expire or deleted or duplicate or not found). | Commons
+[MOSIP-534](https://mosip.atlassian.net/browse/MOSIP-534) | Updated keys are not present (updated keys) in the Key_Store table in derby DB| Commons
 [MOSIP-10408](https://mosip.atlassian.net/browse/MOSIP-10408) | Able to do OTP authentication with a different partner | Authentication
-[MOSIP-9496](https://mosip.atlassian.net/browse/MOSIP-9496) | IDA repo is not notifying IDA on UIN creation | Authentication
-[MOSIP-10732](https://mosip.atlassian.net/browse/MOSIP-10732) | Incorrect ID schema validations | Authentication
-[MOSIP-10658](https://mosip.atlassian.net/browse/MOSIP-10658) | IDA notification templates are cached | Authentication
-[MOSIP-10396](https://mosip.atlassian.net/browse/MOSIP-10396) | Issues in eKYC response | Authentication
-[MOSIP-10244](https://mosip.atlassian.net/browse/MOSIP-10244) | Code change required to perform IDA with new fields added in the schema | Authentication
+[MOSIP-10732](https://mosip.atlassian.net/browse/MOSIP-10732) | Able to insert values as string in id repo when they are defined as simpleType in the ID schema | Authentication
+[MOSIP-10658](https://mosip.atlassian.net/browse/MOSIP-10658) | Changes in IDA templates are not reflected until service restart | Authentication
 [MOSIP-10252](https://mosip.atlassian.net/browse/MOSIP-10252) | Change in policy/partner is not notified to IDA | Partner Management
 [MOSIP-10843](https://mosip.atlassian.net/browse/MOSIP-10843) | Booking are getting created for Non-working days but not Working days | Pre-registration
-[MOSIP-10586](https://mosip.atlassian.net/browse/MOSIP-10586) | SEND OTP remains disabled even after entering Captcha | Pre-registration
-[MOSIP-10326](https://mosip.atlassian.net/browse/MOSIP-10326) | Audit logs are missing for multiple action performed in pre-reg under the Audit log table | Pre-registration
+[MOSIP-10586](https://mosip.atlassian.net/browse/MOSIP-10586) | SEND OTP remains disabled even after entering Captcha if Captcha is enabled | Pre-registration
 [MOSIP-9852](https://mosip.atlassian.net/browse/MOSIP-9852) | No email is received after booking appointment | Pre-registration
-[MOSIP-10834](https://mosip.atlassian.net/browse/MOSIP-10834) | The preregistartion.identity.name property should be present under UI PARAM | Pre-registration
-[MOSIP-10833](https://mosip.atlassian.net/browse/MOSIP-10833) | When the resident status is not filled the document page gives Technical error occured | Pre-registration
-[MOSIP-10713](https://mosip.atlassian.net/browse/MOSIP-10713) | Unable to search for Center using Filter Country as Philippines | Pre-registration
+[MOSIP-10834](https://mosip.atlassian.net/browse/MOSIP-10834) | The preregistartion.identity.name property should be present under UI  | Pre-registration
 [MOSIP-10492](https://mosip.atlassian.net/browse/MOSIP-10492) | The Age field is populated as NaN when navigated using keyboard| Pre-registration
 
 {% hint style="info" %}
