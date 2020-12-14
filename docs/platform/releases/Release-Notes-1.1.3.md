@@ -73,9 +73,9 @@ Basic integration testing was done covering the below modules.
 Deployment Script Environment |	AWS
 Registration Client with TPM 2.0 | Windows 10
 Biometrics Standard | CBEFF format (Version - 2.0)
-MDS (Proxy) | MDS v0.9.5
-ABIS (Proxy) | ABIS Spec Version v0.9
-SDK (Proxy) | SDK Spec Version v0.9
+MDS | MDS v0.9.5
+ABIS | ABIS Spec Version v0.9
+SDK  | SDK Spec Version v0.9
 Key-store | SoftHSM
 Anti-virus | ClamAV
 Maps | OpenstreetMap
@@ -87,9 +87,6 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 |Non-Functional Testing| <ul><li>Performance Testing</li><li>Reliability and Disaster recovery Testing</li></ul>|
 |Non-Biometrics Device Testing | Testing was not done for GPS Device, Docuemnt Scanner and Docuemnt Printer |
 |HSM | Testing was done only using SoftHSM |
-|Biometric Devices | Testing was done only with Proxy components |
-|ABIS & Biometric SDKs | Testing was done only with Proxy components |
-|Automation Testing | Automation Testing is going through enhancement and is skipped for this version |
 |Browser Support | Testing for Pre-registration and Admin UI was done only on Chrome (latest version) |
 
 ### c. Test Execution Metrics
