@@ -63,7 +63,7 @@ Basic integration testing was done covering the below modules.
 |------|------|
 |Functional Testing|<ul><li>Pre-registration (Dynamic UI & APIs)</li><li>Registration Client (Dynamic UI)</li><li>Kernel (APIs)</li><li>Registration Processor (Server)</li><li>ID Authentication (APIs)</li><li>Partner Management (APIs)</li><li>ID Repository (APIs)</li><li>Resident Services (APIs)</li><li>Admin (UI & APIs)</li></ul>|
 |Configuration Testing| Testing is done for default configuration. Changing the configuration parameters with various values will be taken up in subsequent releases.|
-|Version Tag Tested|v1.1.2|
+|Version Tag Tested|v1.1.3|
 |Types of testing|<ul><li>Smoke</li><li>Functional</li><li>Integration</li><li>Regression</li></ul>|
 |Browser Support|**Pre-Registration** (Latest Versions of Chrome, Edge & Firefox)|
 |OS Support|**Registration Client** (Windows 10)|
@@ -79,8 +79,8 @@ MOSIP Device Service (MDS) | MDS v0.9.5
 ABIS | ABIS Spec Version v0.9
 SDK | SDK Spec Version v0.9
 Registration Client – face capture | OpenImaj - This is licensed for demo purpose only
-Keystore | SoftHSM
-Antivirus | ClamAV
+Key-store | SoftHSM
+Anti-virus | ClamAV
 Maps | OpenstreetMap
 Supporting key based digital signatures, not using digital certificates | 
 Transliteration | ICU4J (Library with French, Arabic languages)
@@ -103,7 +103,7 @@ Transliteration | ICU4J (Library with French, Arabic languages)
 ### d. Test Execution Report
 
 Test Execution | Test Cases | Executed Tests | Pass | Fail | Pending Execution | Pass% | Fail% |
----------------|------------|----------------|------|------|-------------------|-------|-------|
+---------------|:----------:|:--------------:|:----:|:----:|:-----------------:|:-----:|:-----:|
 Pre-registration | 111 | 107 | 103 | 4 | 4 | 96% | 4%
 Resident Services | 47 | 37 | 34 | 3 | 10 | 92% | 8%
 Admin Services | 165 | 160 | 153 | 7 | 5 | 96% | 4%
@@ -182,7 +182,7 @@ Bug ID | Summary | Module
 
 {% hint style="info" %}
 
-All our open defects are available in JIRA. Please [clik on this link](https://mosip.atlassian.net/issues/?jql=issuetype%20%3D%20Bug%20AND%20project%20in%20(MOSIP%2C%20MOS)%20AND%20status%20not%20in%20(Closed)%20AND%20(labels%20not%20in%20(PERF_TEST_DEFECT%2C%20Country-GoP%2C%20TestRig)%20OR%20labels%20is%20EMPTY)%20AND%20%22Epic%20Link%22%20not%20in%20(MOS-29972)%20ORDER%20BY%20priority%20DESC) to view all the open defects.
+All our open defects are available in [JIRA](https://mosip.atlassian.net/). Please [click on this link](https://mosip.atlassian.net/issues/?filter=10709) to view all the open defects.
 
 {% endhint %}
 
