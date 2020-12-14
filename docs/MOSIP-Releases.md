@@ -1,11 +1,16 @@
 ## Latest Release
 
+### Version: 1.1.3 (Stable)
+- Name: Interim Release
+- Date: December 14, 2020
+- [Release Notes](Release-Notes-1.1.3.md)
+
+## Older Releases
+
 ### Version: 1.1.2 (Stable)
 - Name: Interim Release
 - Date: October 24, 2020
 - [Release Notes](Release-Notes-1.1.2.md)
-
-## Older Releases
 
 ### Version: 1.1.1 (Stable)
 - Name: Patch Release
