@@ -13,7 +13,7 @@
 ## Scope
 MOSIP **1.1.3** succeeds **1.1.2** with enhancements and important defect fixes which were identified in [Release 1.1.2](Release-Notes-1.1.2.md#list-of-known-issues).
 
-**Release Date:** December 10, 2020
+**Release Date:** December 14, 2020
 
 **Key Highlights**
 
@@ -31,7 +31,7 @@ Includes functional requirements, process flows, architecture and high level des
 All APIs are documented [here](https://docs.mosip.io/platform/apis).
 
 ### 3. Design 
-Low level design documents for each module are available in the respective github repos.
+Low level design documents for each module are available in the respective GitHub repositories.
 
 ## Code
 
