@@ -1,4 +1,4 @@
-### Audit Manager
+## Audit Manager
 
 The Audit Manager component receives a request to audit and store data, validates if the request is from an authorized source, securely store the requested data and respond back with an acknowledgment of storage (Success/Failure). 
 
