@@ -1,5 +1,69 @@
 Partner Management provides services for various types of partners associated with the MOSIP system. Currently, in MOSIP we have identified some types of partners, but the adopters can choose to add many more partners.
 
+# Partner Management Service
+Partners in MOSIP are created in a self-service mode. The partner visit the MOSIP partner management portal and requests for collaborating with MOSIP by providing basic details such as organization name & email id, purpose of registration (how they want to collaborate with MOSIP as a device provider, authentication partner, print partner, etc), basic credentials and performing an OTP based verification.
+
+## User Event Type
+The following events are triggered as part of User Event Type in Partner Management Service module
+
+### Request Information for User Event Type
+
+Sl No. | Event ID | Event Type | Event Name | Description | Reference ID | Reference ID Type
+-------|----------|------------|------------|-------------|--------------|-------------------
+1 | PMS_PRT_101 | User | Register Partner | This event triggers an API call to create Partner in mosip database | No ID | No ID Type
+2 | PMS_PRT_112 | User | Register Partner | This event triggers an API call to create Partner Key in mosip database | Partner ID | Partner ID
+
+### Success Response for User Event Type
+
+Sl No. | Event ID | Event Type | Event Name | Description | Reference ID | Reference ID Type
+-------|----------|------------|------------|-------------|--------------|-------------------
+1 | PMS_PRT_200 | User | Register Partner | This event describes that the API call to create Partner in Mosip DB is successful | No ID | No ID Type
+2 | PMS_PRT_212 | User | Create Partner Key | This event describes that the creation of Partner Key for - (Partner ID) in Mosip DB is Successful | Partner ID | Partner ID
+
+## System Event Type
+The following events are triggered as part of System Event Type in Partner Management Service module.
+
+### Request Information for System Event Type
+
+Sl No. | Event ID | Event Type | Event Name | Description | Reference ID | Reference ID Type
+-------|----------|------------|------------|-------------|--------------|-------------------
+1 | PMS_PRT_122 | System | Create Partner | This event triggers an API call to create Partner API key in mosip database. | No ID | No ID Type
+2 | PMS_PRT_111 | System | Create Partner |	This event triggers an API call to create Partner Biometrics in mosip database. | No ID | No ID Type
+3 | PMS_PRT_121 | System | Create Partner Policy Map | This event triggers an API call to create Partner Policy mapping in mosip database. | No ID | No ID Type
+4 | PMS_PRT_144 | System | Create Partner Policy Map | This event triggers an API call to create or update Partner contact details in mosip database. |	No ID |	No ID Type
+5 | PMS_PRT_149 | System | Get Partner | This event triggers an API call to fetch the Partner details. | No ID | No ID Type
+6 | PMS_PRT_159 | System | Get Partner | This event triggers an API call to fetch the Partner API key details. | No ID | No ID Type
+7 | PMS_PRT_169 | System | Get Partner | This event triggers an API call to fetch the Partner certificate. | No ID | No ID Type
+
+### Success Response for System Event Type
+
+Sl No. | Event ID | Event Type | Event Name | Description | Reference ID | Reference ID Type
+-------|----------|------------|------------|-------------|--------------|-------------------
+1 | PMS_PRT_222 | System | Create Partner | This event describes that the Partner API key with id - (Partner ID) is approved successfully. | No ID | No ID Type
+2 | PMS_PRT_211 | System | Create Partner | This event describes that the Partner Biometrics are created successfully. | No ID | No ID Type
+3 | PMS_PRT_221 | System | Create Partner Policy Mapping | This event describes that the Partner Policy mapping is created successfully. | No ID | No ID Type
+4 | PMS_PRT_244 | System | Create Partner Policy Mapping | This event describes that the API call to Create or update partner contact details is successful. | No ID | No ID Type
+5 | PMS_PRT_249 | System | Get Partner | This event describes that the API call to fetch partner details is successful. | No ID | No ID Type
+6 | PMS_PRT_259 | System | Get Partner | This event describes that the API call to fetch partner API keys is successful. | No ID | No ID Type
+7 | PMS_PRT_269 | System | Get Partner | This event describes that the API call to fetch partner Certificate is successful. | No ID | No ID Type
+
+### Failure Response for System Event Type
+
+Sl No. | Event ID | Event Type | Event Name | Description | Reference ID | Reference ID Type
+-------|----------|------------|------------|-------------|--------------|-------------------
+1 | PMS_PRT_401 | System | Create Partner Request | This event validates for Invalid email id while creating the partner. | No ID |	No ID Type
+2 | PMS_PRT_416 | System | Update Partner Request | This event validates the email ID for a (partner ID). | Partner ID | Partner ID
+3 | PMS_PRT_402 | System | Update Partner Request | This event validates if the Partner is already registered for a (partner ID). | Partner ID | Partner ID
+4 | PMS_PRT_417 | System | Create Partner Request | This event validates the create partner request for already registered partner with organization name. | No ID | No ID Type
+5 | PMS_PRT_419 | System | Create Partner Request | This event describes that the policy group does not exist. | No ID | No ID Type
+6 | PMS_PRT_421 | System | Create Partner API Key request |	This event specifies that the partner does not exist. |	No ID |	No ID Type
+7 | PMS_PRT_423 | System | Add Biometric Extractors Request | This event specifies that the partner policy mapping does not exist. | No ID | No ID Type
+8 | PMS_PRT_425 | System | Partner not allowed | This event specifies that the partner is not allowed to register. | No ID | No ID Type
+9 | PMS_PRT_429 | System | Email not allowed | This event specifies that the partner email ID is not allowed. | No ID |	No ID Type
+10 | PMS_PRT_431 | System |	Create Partner | This event specifies that the API call to upload the partner certificate failed. | No ID |	No ID Type
+11 | PMS_PRT_452 | System |	Create Partner | This event specifies that the API call to upload the partner certificate failed. | No ID |	No ID Type
+
+
 # MISP Management Service
 MISP (MOSIP Infrastructure Service Provider) who provides infrastructure to send authentication request through a secure channel.
 
