@@ -14,13 +14,13 @@ This document contains the features that were developed or enhanced as part of M
 	* Support for Offline encryption & decryption has been added for encryption in Registration Client.
 	* Support for PIN based encryption and decryption has been added.
 * Integration with multiple Real HSMs was done.
-* Web Sub has been added to integrate with external componets like Print & Postal service providers.
+* Web Sub has been added to integrate with external components like Print & Postal service providers.
 * Open ID Adapter was developed, so that MOSIP would be able to connect with any IAM provider.
 * Commons repository re-structuring has been done to merge common components.
 
 # Administration
 * Feature to upload exported packets from Registration Client has been added.
-* Feature to bulk insert, upload or delete - master data using csvs has been added.
+* Feature to bulk insert, upload or delete - master data using CSVs has been added.
 * The APIs for Devices, Machines and Users have been modified to support mapping & unmapping of Registration Centers.
 * The database for master data has been modified.
 	* Unwanted tables have been reviewed to removed.

@@ -17,7 +17,8 @@ All devices that collect biometric data for MOSIP should operate within the spec
 |0.9.2|Frozen|Aug-2019||
 |0.9.3|Frozen|Feb-2020||
 |0.9.5|Draft|13-Jun-2020||
-|0.9.5|Draft|10-Aug-2020| Signature for API to retrieve encryption certificate has been changed from GET to POST and Device Stream now supports an optional parameter - timeout
+|0.9.5|Draft|10-Aug-2020|Signature for API to retrieve encryption certificate has been changed from GET to POST and Device Stream now supports an optional parameter - timeout
+|0.9.5|Draft|04-Dec-2020|In the header of JWT Signature, the key to store the type has been changed to "typ" from "type" as per JWT standards. Kindly view the digital id specification for the change.  
 
 ## Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
@@ -249,7 +250,7 @@ Signed Digital ID would look as follows:
 The header in the digital id would have:
 ```
 "alg": "RS256",
-"type": "JWT",
+"typ": "JWT",
 "x5c": "<Certificate of the FTM chip, If in case the chain of certificates are sent then the same will be ignored">
 ```
 

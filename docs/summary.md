@@ -17,10 +17,18 @@
         * [Release Notes 1.1.2](platform/releases/Release-Notes-1.1.2.md)
             * [Features](platform/releases/Release-Notes-1.1.2-Features.md)
             * [Bug Fixes](platform/releases/Release-Notes-1.1.2-Bug-Fixes.md)
+		* [Release Notes 1.1.3](platform/releases/Release-Notes-1.1.3.md)
+            * [Features](platform/releases/Release-Notes-1.1.3-Features.md)
+            * [Bug Fixes](platform/releases/Release-Notes-1.1.3-Bug-Fixes.md)
     * [Roadmap](platform/roadmap/Roadmap.md)
-        * [Roadmap Activities](platform/roadmap/Roadmap-Activities.md)
-    * [Revision History](platform/Revision-History.md)
-    * [Planned Updates](platform/Documentation-Updates.md)
+        * [MOSIP v2](platform/roadmap/Roadmap-v2.md)
+    * [Versions and Support](platform/support/Versions.md)
+        * [Release Process](platform/support/Release-Process.md)
+        * [Branches and Tags](platform/support/Branching.md)
+        * [Support Policy](platform/support/Support-Policy.md)
+    * [Resources](platform/Resources.md)
+        * [Revision History](platform/Revision-History.md)
+        * [Planned Updates](platform/Documentation-Updates.md)
 * Community
     * [License](community/License.md)
     * [Code of Conduct](community/Code-of-Conduct.md)
@@ -69,6 +77,9 @@
     * MOSIP Core
     * [MOSIP Commons](modules/mosip-commons/Kernel.md)
         * [Audit Manager Functionality](modules/mosip-commons/Audit-Manager-Functionality.md)
+			* [Admin Service Audits](modules/mosip-commons/Admin-Service-Audits.md)
+			* [Resident Service Audits](modules/mosip-commons/Resident-Service-Audits.md)
+			* [Partner Management Audits](modules/mosip-commons/Partner-Management-Audits.md)
         * [Authentication and Authorization Functionality](modules/mosip-commons/Authentication-and-Authorization-Functionality.md)      
         * [Common Services Functionality](modules/mosip-commons/Common-Services-Functionality.md)
         * [Data Services Functionality](modules/mosip-commons/Data-Services-Functionality.md)
@@ -157,6 +168,14 @@
                 * [Steps to Install Keycloak Standalone Server](guides/getting-started/Steps-to-Install-Keycloak-Standalone-Server.md)
 			* [Services in MOSIP](guides/getting-started/Services-in-MOSIP.md)
         * Configuring
+        * Required Integrations
+            * ABIS
+            * Notifications
+            * Biometrics SDK
+            * HSM
+            * Print Service
+            * Antivirus
+            * Reference Integrations
         * Customizing
         * Extending
         * Integrating

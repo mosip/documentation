@@ -42,7 +42,7 @@ The packet name here is also the request ID that is generated for a request crea
 }
 ```
 
-* **ID Object**: Each packet has an ID JSON attached with it which has basic demographic data of the resident, document names that were uploaded, information about the introdcers or guardians, biometrics file names (of applicant, introducer, guardians) and the version of the ID schema used. Data for each ID JSON is populated based on the ID Schema property, "Field Category". 
+* **ID Object**: Each packet has an ID JSON attached with it which has basic demographic data of the resident, document names that were uploaded, information about the introducers or guardians, biometrics file names (of applicant, introducer, guardians) and the version of the ID schema used. Data for each ID JSON is populated based on the ID Schema property, "Field Category". 
 
 {% hint style="info" %}
 
@@ -62,7 +62,7 @@ You can find the more about ID Object in our [**ID Object definition**](MOSIP-ID
 No PII (Personally Identifiable Information) data is captured in the audit logs.
 {% endhint %}
 
-* **Packet Hash**: During the packet creation a hash of the data being collected is stored in these files so that the data can be verified when the packet reaches the server. We have two types of hash file, Packet Data Hash file & Pakcet Operation Hash file.
+* **Packet Hash**: During the packet creation a hash of the data being collected is stored in these files so that the data can be verified when the packet reaches the server. We have two types of hash file, Packet Data Hash file & Packet Operation Hash file.
 
 # Packet Encryption Procedure
 Before writing the packet into the local disk, the zipped content should be encrypted using Session and RSA public key (center specific) to secure the data. The same data can only be decrypted at server end where the private key is available. 
