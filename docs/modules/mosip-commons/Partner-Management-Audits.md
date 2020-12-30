@@ -68,3 +68,4 @@ Sl No. | Event ID | Event Type | Event Name | Description | Reference ID | Refer
 10 | PMS_MSP_407 | System | Update MISP status request | This event specifies that the MISP status must either be active or de-active for id - <misp_id> for updating MISP status request | <misp_id> | MISP ID
 
  
+ 
