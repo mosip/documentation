@@ -376,7 +376,7 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
 This service checks the validity of the Auth token.
 
 ### Resource URL
-`POST https://{base_url}/v1/authmanager/authorize/validateToken`
+`GET https://{base_url}/v1/authmanager/authorize/admin/validateToken`
 
 ### Resource detail
 Resource Details | Description
@@ -392,7 +392,7 @@ Authorization|Yes|AuthToken passed in the request cookie| | Mosip-TokeneyeyJ0eXA
 ### Example Request
 ```
 Request Cookie:
-Authorization=Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ.-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM
+authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBLWZRRDZYVVpYeFlldk5UZWtYcnZKVXN1RG5TeHJjZ0tZIn0.eyJqdGkiOiIxZmUxYjQxNS1kY2NjLTQ2NmQtYTc5My03MTI5MGYzYmNmM2IiLCJleHAiOjE2MDk5NDc5ODgsIm5iZiI6MCwiaWF0IjoxNjA5OTExOTg4LCJpc3MiOiJodHRwczovL3FhMi5tb3NpcC5uZXQva2V5Y2xvYWsvYXV0aC9yZWFsbXMvbW9zaXAiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiODdmMDU3NjQtNzg5ZC00ZTZiLTljMWUtYzU2YmJkYzI5NTYzIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibW9zaXAtYWJpcy1jbGllbnQiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiIyZjc1YjdkZS0zMjJkLTRjOGUtYmE4Yi0xNmI4M2UzMTYyMmIiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vcWEyLm1vc2lwLm5ldCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1vc2lwLWFiaXMtY2xpZW50Ijp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6Im1vc2lwLWFiaXMtY2xpZW50IiwiY2xpZW50SG9zdCI6IjEwLjI0NC4zLjM1IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbW9zaXAtYWJpcy1jbGllbnQiLCJjbGllbnRBZGRyZXNzIjoiMTAuMjQ0LjMuMzUifQ.mQncxuxncDlvkCY6YxrC9DK3ACx27ArjzGMuKUjLl9Z4qPKdyio9zMPiZdCiOgEp75ctmoG5iIEVmeYZnNgv05enxaGHBqAmGC3S9-X_QeWA3bSSIjvpSh0w9hnSlLDN5UoYxnM9uSshGAfaCmJffbwKNqIMgOQxk4AdsGErTaUo8nf_Ugn76GTHH5iJb7mALuoqHgpYsr_lZfn5_N53B-NRdY_EjZ58fPdBFP9wPaJqmmTEfn4gDYvp_dB6vYD0l0MQVi_5CsBmqdQYgspH2m3DH9gtgdkbb3Wo84U0j-CwMgtIz2CTpCv3Ds_4r13XGgd7TIjLKQ2BhCxZ1G-KGg 
 ```
 
 ### Example Response
@@ -400,27 +400,40 @@ Authorization=Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJi
 #### Success Response 
 ```JSON
 {
-  "id": "mosip.authorize.validatetoken",
-  "ver": "1.0",
-  "responsetime": "2007-12-03T10:15:30Z",
+  "id": null,
+  "version": null,
+  "responsetime": "2021-01-06T05:47:46.359Z",
+  "metadata": null,
   "response": {
-    "message":"Token had been validated successfully"
-  }
+    "userId": "service-account-mosip-abis-client",
+    "mobile": null,
+    "mail": null,
+    "langCode": null,
+    "userPassword": null,
+    "name": "service-account-mosip-abis-client",
+    "role": "offline_access,uma_authorization,",
+    "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBLWZRRDZYVVpYeFlldk5UZWtYcnZKVXN1RG5TeHJjZ0tZIn0.eyJqdGkiOiIxZmUxYjQxNS1kY2NjLTQ2NmQtYTc5My03MTI5MGYzYmNmM2IiLCJleHAiOjE2MDk5NDc5ODgsIm5iZiI6MCwiaWF0IjoxNjA5OTExOTg4LCJpc3MiOiJodHRwczovL3FhMi5tb3NpcC5uZXQva2V5Y2xvYWsvYXV0aC9yZWFsbXMvbW9zaXAiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiODdmMDU3NjQtNzg5ZC00ZTZiLTljMWUtYzU2YmJkYzI5NTYzIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibW9zaXAtYWJpcy1jbGllbnQiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiIyZjc1YjdkZS0zMjJkLTRjOGUtYmE4Yi0xNmI4M2UzMTYyMmIiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vcWEyLm1vc2lwLm5ldCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1vc2lwLWFiaXMtY2xpZW50Ijp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6Im1vc2lwLWFiaXMtY2xpZW50IiwiY2xpZW50SG9zdCI6IjEwLjI0NC4zLjM1IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbW9zaXAtYWJpcy1jbGllbnQiLCJjbGllbnRBZGRyZXNzIjoiMTAuMjQ0LjMuMzUifQ.mQncxuxncDlvkCY6YxrC9DK3ACx27ArjzGMuKUjLl9Z4qPKdyio9zMPiZdCiOgEp75ctmoG5iIEVmeYZnNgv05enxaGHBqAmGC3S9-X_QeWA3bSSIjvpSh0w9hnSlLDN5UoYxnM9uSshGAfaCmJffbwKNqIMgOQxk4AdsGErTaUo8nf_Ugn76GTHH5iJb7mALuoqHgpYsr_lZfn5_N53B-NRdY_EjZ58fPdBFP9wPaJqmmTEfn4gDYvp_dB6vYD0l0MQVi_5CsBmqdQYgspH2m3DH9gtgdkbb3Wo84U0j-CwMgtIz2CTpCv3Ds_4r13XGgd7TIjLKQ2BhCxZ1G-KGg",
+    "rid": null
+  },
+  "errors": null
 }
+Response he
 ```
 
 #### Error Responses
 1. Invalid Token: If the passed token is not correct. 
 ```JSON
 {
-  "id": "mosip.authentication.validatetoken",
-  "ver": "1.0",
-  "responsetime": "2007-12-03T10:15:30Z",
-  "errors":[
+  "id": null,
+  "version": null,
+  "responsetime": "2021-01-06T05:45:34.203Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
     {
-      "errorCode": "AUTH_ERR_TOKENNOTVALID",
-      "message": "The passed in Token is not correct"
-    }	
+      "errorCode": "KER-ATH-401",
+      "message": "Authentication Failed : Invalid Token :Token verification failed"
+    }
   ]
 }
 ```
