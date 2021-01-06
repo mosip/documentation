@@ -101,6 +101,7 @@ context | Yes | This shows the purpose of the sending otp like Login, notificati
   ]
 }
 ```
+
 3. User not found: If the passed is not found in the system. 
 ```JSON
 {
@@ -115,6 +116,7 @@ context | Yes | This shows the purpose of the sending otp like Login, notificati
   ]
 }
 ```
+
 4. Channel path not found: If the channel's path is not found. For example, if the channel is email and the email ID is not found for that user. 
 ```JSON
 {
@@ -387,6 +389,7 @@ authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBL
   ]
 }
 ```
+
 2. Incorrect Application ID: If wrong application ID is passed
 ```JSON
 {
@@ -470,6 +473,7 @@ authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBL
   ]
 }
 ```
+
 2. Cookie is empty: If the cookie is not set
 ```JSON
 {
@@ -528,14 +532,16 @@ Authorization=Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJi
 1. Empty Cookie: If the passed Cookie is empty. 
 ```JSON
 {
-  "id": "mosip.authentication.invalidatetoken",
-  "ver": "1.0",
-  "responsetime": "2007-12-03T10:15:30Z",
-  "errors":[
+  "id": null,
+  "version": null,
+  "responsetime": "2021-01-06T05:56:46.127Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
     {
-      "errorCode": "AUTH_ERR_COOKIEEMPTY",
-      "message": "The passed in Cookie is empty"
-    }	
+      "errorCode": "KER-ATH-006",
+      "message": "Cookies are empty"
+    }
   ]
 }
 ```
