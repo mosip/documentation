@@ -152,13 +152,17 @@ otp | Yes| This is OTP which is sent to the userid's preferred channel | NA | 64
 ### Example Request
 ```JSON
 {
-  "id": "mosip.authentication.useridOTP",
-  "version":"1.0",	
-  "requesttime":"2007-12-03T10:15:30Z",
+  "id": "string",
+  "metadata": {},
   "request": {
-    "userid": "M392380",
-    "otp": "6473"
-  }
+    "appId": "admin",
+    "clientId": "mosip-admin-client",
+    "clientSecret": "xyz123",
+    "password": "mosip",
+    "userName": "110006"
+  },
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
 }
 ```
 
@@ -219,7 +223,7 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
 This service will authenticate the username and password. 
 
 ### Resource URL
-`POST https://dev.mosip.io/v1/authmanager/authenticate/useridPwd`
+`https://{base_url}/v1/authmanager/authenticate/internal/useridPwd`
 
 ### Resource details
 Resource Details | Description
@@ -237,14 +241,17 @@ appid | Yes | This is the application ID of the caller of this service. It shoul
 ### Example Request
 ```JSON
 {
-  "id": "mosip.authentication.useridPwd",
-  "version":"1.0",	
-  "requesttime":"2007-12-03T10:15:30Z",
+  "id": "string",
+  "metadata": {},
   "request": {
-    "username": "M392380",
-    "password": "fdkj943lkj32k32ew$8Kf",
-    "appid": "registrationclient"
-  }
+    "appId": "admin",
+    "clientId": "mosip-admin-client",
+    "clientSecret": "xyz123",
+    "password": "mosip",
+    "userName": "110006"
+  },
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
 }
 ```
 
@@ -252,20 +259,21 @@ appid | Yes | This is the application ID of the caller of this service. It shoul
 
 #### Success Response 
 ```
-Response Cookie:
-
-Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlkdWFsIiwibW9iaWxlIjoiOTY2MzE3NTkyOCIsIm1haWwiOiJpbmRpdmlkdWFsQGdtYWlsLmNvbSIsInJvbGUiOiJwZXJzb24iLCJpYXQiOjE1NTEzNDU1NjUsImV4cCI6MTU1MTM1MTU2NX0.pCyibViXo31enOgRD60BnKjEpEA-78yzbWnZGChxCIZ5lTpYnhgm-0dtoT3neFebTJ8eAI7-o8jDWMCMqq6uSw; Max-Age=6000000; Expires=Wed, 08-May-2019 19:59:43 GMT; Path=/; Secure; HttpOnly
-```
-
-```JSON
 {
-  "id": "mosip.authentication.useridPwd",
-  "ver": "1.0",
-  "responsetime": "2007-12-03T10:15:30Z",
+  "id": "string",
+  "version": "string",
+  "responsetime": "2021-01-06T05:52:26.667Z",
+  "metadata": null,
   "response": {
+    "token": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBLWZRRDZYVVpYeFlldk5UZWtYcnZKVXN1RG5TeHJjZ0tZIn0.eyJqdGkiOiJkZDRhMjEwOS02MjVmLTRjYmItOWIzNy1iMzkxNzFjNzMyMTIiLCJleHAiOjE2MDk5NDgzNDYsIm5iZiI6MCwiaWF0IjoxNjA5OTEyMzQ2LCJpc3MiOiJodHRwczovL3FhMi5tb3NpcC5uZXQva2V5Y2xvYWsvYXV0aC9yZWFsbXMvbW9zaXAiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiMjM0ZWM5M2YtNmFmZC00N2JkLTk0MmEtM2Q1NDFiNzQ2YmU0IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibW9zaXAtYWRtaW4tY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiMzk4YTZiMjktNWMyOS00YzdiLTg3MWQtZjQ2MzU0MjMwMjk1IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwczovL3FhMi5tb3NpcC5uZXQiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIlJFR0lTVFJBVElPTl9BRE1JTiIsIlJFR0lTVFJBVElPTl9PRkZJQ0VSIiwiUkVHSVNUUkFUSU9OX1NVUEVSVklTT1IiLCJaT05BTF9BRE1JTiIsIlJFU0lERU5UIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsIkdMT0JBTF9BRE1JTiIsIklORElWSURVQUwiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJUZXN0MTEwMDA2IEF1dG8xMTAwMDYiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiIxMTAwMDYiLCJnaXZlbl9uYW1lIjoiVGVzdDExMDAwNiIsImZhbWlseV9uYW1lIjoiQXV0bzExMDAwNiIsImVtYWlsIjoiMTEwMDA2QHh5ei5jb20ifQ.lA9U1PP4gMAQxnLmM9AACv8tR4Y48ixkZDalNrkeA8LXcZxvAEr3f9ETb3OwYfVUIDk-soG44PrEVOvzV8gMYFWaL7UaD6djk9OciPzebyzB-nLzjPfDYm3a6AmP1y62Wplqd_p_lfGqpGt0_CAKweMlLpKAExu9XYe6cArtWjZzjIKkun_kiPuFdJyYeRNWY4Fj1Z7y-TijmihD1XPH4QRNxmv-prSNCUt9d4RElhMWB-xaPEhxcaSgQVnmbPdeF_wBIbBvUAuye2iaXlZ3AcETQHm5wJIO_0Wfh-7Dj24sB9QkjZWHTq62l2AgjN-t-jPp3mf3hyhUJVttzl2wmA",
+    "message": "Username and password combination had been validated successfully",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIyMDA1NWFmYS1mNDRkLTQ2ZWItYjFhZC03NzdlOTBjN2ZlYmMifQ.eyJqdGkiOiIyNmRlOWMyMy02MTVhLTRhZDQtOWYxMC05MmMxZTljOWU4MzgiLCJleHAiOjE2MDk5NDgzNDYsIm5iZiI6MCwiaWF0IjoxNjA5OTEyMzQ2LCJpc3MiOiJodHRwczovL3FhMi5tb3NpcC5uZXQva2V5Y2xvYWsvYXV0aC9yZWFsbXMvbW9zaXAiLCJhdWQiOiJodHRwczovL3FhMi5tb3NpcC5uZXQva2V5Y2xvYWsvYXV0aC9yZWFsbXMvbW9zaXAiLCJzdWIiOiIyMzRlYzkzZi02YWZkLTQ3YmQtOTQyYS0zZDU0MWI3NDZiZTQiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoibW9zaXAtYWRtaW4tY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiMzk4YTZiMjktNWMyOS00YzdiLTg3MWQtZjQ2MzU0MjMwMjk1IiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIlJFR0lTVFJBVElPTl9BRE1JTiIsIlJFR0lTVFJBVElPTl9PRkZJQ0VSIiwiUkVHSVNUUkFUSU9OX1NVUEVSVklTT1IiLCJaT05BTF9BRE1JTiIsIlJFU0lERU5UIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsIkdMT0JBTF9BRE1JTiIsIklORElWSURVQUwiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUifQ.EKBfxRRfRiPMf6mKQINwgmblvRfRkAjviIddfncEZ2o",
+    "expiryTime": 36000,
+    "userId": null,
     "status": "success",
-    "message":"Username and password combination had been validated successfully"
-  }
+    "refreshExpiryTime": 36000
+  },
+  "errors": null
 }
 ```
 
@@ -273,14 +281,16 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
 1. Invalid credentials: If the passed credentials is not correct. 
 ```JSON
 {
-  "id": "mosip.authentication.useridPwd",
-  "ver": "1.0",
-  "responsetime": "2007-12-03T10:15:30Z",
-  "errors":[
+  "id": "string",
+  "version": "string",
+  "responsetime": "2021-01-06T05:54:39.952Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
     {
-      "errorCode": "AUTH_ERR_INVALIDCREDENTIALS",
-      "message": "The passed in credentials is not correct"
-    }	
+      "errorCode": "KER-ATH-023",
+      "message": "Invalid Credentials"
+    }
   ]
 }
 ```
@@ -288,14 +298,16 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
 2. Invalid application ID: If the passed in application is not correct. 
 ```JSON
 {
-  "id": "mosip.authentication.useridPwd",
-  "ver": "1.0",
-  "responsetime": "2007-12-03T10:15:30Z",
-  "errors":[
+  "id": "string",
+  "version": "string",
+  "responsetime": "2021-01-06T05:55:11.849Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
     {
-      "errorCode": "AUTH_ERR_INVALIDAPPID",
-      "message": "The passed in application ID is not correct"
-    }	
+      "errorCode": "KER-ATH-026",
+      "message": "Realm not found:: admin11"
+    }
   ]
 }
 ```
@@ -322,14 +334,15 @@ secretkey|Yes|This is the secret key which was provided to the application corre
 ### Example Request
 ```JSON
 {
-  "id": "mosip.authentication.clientidsecretkey",
-  "version":"1.0",	
-  "requesttime":"2007-12-03T10:15:30Z",
+  "id": "string",
+  "metadata": {},
   "request": {
-    "appId": "regproc",
-    "clientid": "D72HJDF8",
-    "secretkey": "JSlj8p789sdfjhlsJKDHFS"
-  }
+    "appId": "admin",
+    "clientId": "mosip-abis-client",
+    "secretKey": "abc123"
+  },
+  "requesttime": "2018-12-10T06:12:52.994Z",
+  "version": "string"
 }
 ```
 
@@ -339,18 +352,21 @@ secretkey|Yes|This is the secret key which was provided to the application corre
 ```
 Response Cookie:
 
-Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlkdWFsIiwibW9iaWxlIjoiOTY2MzE3NTkyOCIsIm1haWwiOiJpbmRpdmlkdWFsQGdtYWlsLmNvbSIsInJvbGUiOiJwZXJzb24iLCJpYXQiOjE1NTEzNDU1NjUsImV4cCI6MTU1MTM1MTU2NX0.pCyibViXo31enOgRD60BnKjEpEA-78yzbWnZGChxCIZ5lTpYnhgm-0dtoT3neFebTJ8eAI7-o8jDWMCMqq6uSw; Max-Age=6000000; Expires=Wed, 08-May-2019 19:59:43 GMT; Path=/; Secure; HttpOnly
+Set-Cookie 
+authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBLWZRRDZYVVpYeFlldk5UZWtYcnZKVXN1RG5TeHJjZ0tZIn0.eyJqdGkiOiI2Yzg0ZDMyNi04NjZhLTRmZTQtOGJiMy02NGY0YWVjNmZiZDAiLCJleHAiOjE2MDk5NDg3NTAsIm5iZiI6MCwiaWF0IjoxNjA5OTEyNzUwLCJpc3MiOiJodHRwczovL3FhMi5tb3NpcC5uZXQva2V5Y2xvYWsvYXV0aC9yZWFsbXMvbW9zaXAiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiODdmMDU3NjQtNzg5ZC00ZTZiLTljMWUtYzU2YmJkYzI5NTYzIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibW9zaXAtYWJpcy1jbGllbnQiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJiNjZjMjBiMy03OTY1LTQ0ZDUtODg3Ny00Zjk2MDNlNzI5OTEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vcWEyLm1vc2lwLm5ldCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1vc2lwLWFiaXMtY2xpZW50Ijp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6Im1vc2lwLWFiaXMtY2xpZW50IiwiY2xpZW50SG9zdCI6IjEwLjI0NC4zLjM1IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbW9zaXAtYWJpcy1jbGllbnQiLCJjbGllbnRBZGRyZXNzIjoiMTAuMjQ0LjMuMzUifQ.ntez3ZkbDsjWi467JVj9d3kfktbUc7e6zQhHv0bVJfmiQA0N1QGyXAiZdqZrHj3cgFo0Lft54jgEtCGZZAma8nAw9IDICet9TA2A_u5hZ3oAq6HwYMS1pWb43jx5K9RRr_Yc-hdNnma754KzHhJgU1A7e_y0m88MT_oohHpRQ16jItEfC0AUQUvOAsxPwn-mmhu4uFFEq9e05ftBDIEBr24t-8feWN92uCJVMrSYHHjFL2ayg03I4Zkw1IupfLa-HACIlIToUmAk00aPxLtyWMFpOHVcLKBS2i9gEeqCEiUzklwuEp0B4aCqk5_M-Ng2X6VcGsCUJ8ACWRG4lCQQYA 
 ```
 
 ```JSON
 {
-  "id": "mosip.authentication.clientidsecretkey",
-  "ver": "1.0",
-  "responsetime": "2007-12-03T10:15:30Z",
+  "id": "string",
+  "version": "string",
+  "responsetime": "2021-01-06T05:59:10.695Z",
+  "metadata": null,
   "response": {
-    "status": "success",
-    "message":"Clientid and Token combination had been validated successfully"
-  }
+    "status": "Success",
+    "message": "Clientid and Token combination had been validated successfully"
+  },
+  "errors": null
 }
 ```
 
@@ -358,14 +374,32 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
 1. Invalid credentials: If the passed credentials is not correct. 
 ```JSON
 {
-  "id": "mosip.authentication.clientidsecretkey",
-  "ver": "1.0",
-  "responsetime": "2007-12-03T10:15:30Z",
-  "errors":[
+  "id": "string",
+  "version": "string",
+  "responsetime": "2021-01-06T06:00:17.962Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
     {
-      "errorCode": "AUTH_ERR_INVALIDCLIENTIDCREDENTIALS",
-      "message": "The passed in credentials is not correct"
-    }	
+      "errorCode": "500",
+      "message": "401 Unauthorized"
+    }
+  ]
+}
+```
+2. Incorrect Application ID: If wrong application ID is passed
+```JSON
+{
+  "id": "string",
+  "version": "string",
+  "responsetime": "2021-01-06T06:00:45.374Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "KER-ATH-026",
+      "message": "Realm not found:: adminXX"
+    }
   ]
 }
 ```
@@ -417,7 +451,6 @@ authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBL
   },
   "errors": null
 }
-Response he
 ```
 
 #### Error Responses
@@ -433,6 +466,22 @@ Response he
     {
       "errorCode": "KER-ATH-401",
       "message": "Authentication Failed : Invalid Token :Token verification failed"
+    }
+  ]
+}
+```
+2. Cookie is empty: If the cookie is not set
+```JSON
+{
+  "id": null,
+  "version": null,
+  "responsetime": "2021-01-06T05:56:46.127Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "KER-ATH-006",
+      "message": "Cookies are empty"
     }
   ]
 }
