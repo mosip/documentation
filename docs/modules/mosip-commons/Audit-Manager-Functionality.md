@@ -24,8 +24,8 @@ Parameters | Description | Example
 * [Partner Management Audits](Partner-Management-Audits.md)
 * [Registration Client Audits](Registration-Client-Audits.md)
 * Registration Processor Audits - TBD
-* ID Repository Audits - TBD
-* ID Authentication Audits - TBD
+* [ID Repository Audits] - (ID-Repository-Audits.md)
+* [ID Authentication Audits] - (ID-Authentication-Audits.md)
 * Pre-registration Audits - TBD
 * Admin Portal Audits - TBD
 
