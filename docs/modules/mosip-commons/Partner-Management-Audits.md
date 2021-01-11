@@ -63,6 +63,45 @@ Sl No. | Event ID | Event Type | Event Name | Description | Reference ID | Refer
 10 | PMS_PRT_431 | System |	Create Partner | This event specifies that the API call to upload the partner certificate failed. | No ID |	No ID Type
 11 | PMS_PRT_452 | System |	Create Partner | This event specifies that the API call to upload the partner certificate failed. | No ID |	No ID Type
 
+# Policy Management Service
+The Partner Management service also involves policy management for Partners. Each partner can access various services only based on a defined policy.In order to create a policy we must have a policy group first. The policy admin needs to first create a policy group using the partner management portal.
+
+## System Event Type
+The following events are triggered as part of System Event Type in Policy Management Service.
+
+### Request Information for System Event Type
+
+Sl No. | Event ID | Event Type | Event Name | Description | Reference ID | Reference ID Type
+-------|----------|------------|------------|-------------|--------------|-------------------
+1 | PMS_PRT_115 | System | Create Policy Group | This event triggers an API call to create a policy group in MOSIP database. | No ID | No ID Type
+2 | PMS_PRT_116 | System | Create Policy Group | This event triggers an API call to fetch the policy group details. | No ID | No ID Type
+3 | PMS_PRT_156 | System | Update Policy Group | This event triggers an API call to update a policy group in MOSIP database | No ID | No ID Type
+4 | PMS_PRT_137 | System | Create Policy | This event triggers an API call to create the policy for a policy group in MOSIP database. | No ID | No ID Type
+5 | PMS_PRT_187 | System | Create Policy | This event triggers an API call to fetch the policy details. | No ID | No ID Type
+6 | PMS_PRT_183 | System | Update Policy | This event triggers an API call to update a particular policy inside a policy group in MOSIP database. | No ID | No ID Type
+
+### Success Response for System Event Type
+
+Sl No. | Event ID | Event Type | Event Name | Description | Reference ID | Reference ID Type
+-------|----------|------------|------------|-------------|--------------|-------------------
+1 | PMS_PRT_215 | System | Create Policy Group | This event describes that the API call to create policy group is successful. | No ID | No ID Type
+2 | PMS_PRT_216 | System | Create Policy Group | This event specifies that the API call to fetch the policy group details is successful. | Policy Group ID | Policy Group ID 
+3 | PMS_PRT_256 | System | Update Policy Group | This event describes that the API call to update policy group is successful. | Policy Group ID | Policy Group ID
+4 | PMS_PRT_237 | System | Create Policy | This event describes that the API call to create a policy for a policy group is successful. | No ID | No ID Type
+5 | PMS_PRT_287 | System | Create Policy | This event specifies that the API call to fetch the policy details is successful. | Policy ID | Policy ID
+6 | PMS_PRT_283 | System | Update Policy | This event describes that the API call to update a policy for a policy group is successful. | Policy ID | Policy ID
+
+### Failure Response for System Event Type
+
+Sl No. | Event ID | Event Type | Event Name | Description | Reference ID | Reference ID Type
+-------|----------|------------|------------|-------------|--------------|-------------------
+1 | PMS_PRT_475 | System | Create Policy Group | This event describes that the API call to create policy group has failed. | No ID | No ID Type
+2 | PMS_PRT_416 | System | Create Policy Group | This event specifies that the API call to fetch the policy group details has failed. | Policy Group ID | Policy Group ID 
+3 | PMS_PRT_456 | System | Update Policy Group | This event describes that the API call to update policy group has failed. | Policy Group ID | Policy Group ID
+4 | PMS_PRT_437 | System | Create Policy | This event describes that the API call to create a policy for a policy group has failed. | No ID | No ID Type
+5 | PMS_PRT_487 | System | Create Policy | This event specifies that the API call to fetch the policy details has failed. | Policy ID | Policy ID
+6 | PMS_PRT_483 | System | Update Policy | This event describes that the API call to update a policy for a policy group has failed. | Policy ID | Policy ID
+
 
 # MISP Management Service
 MISP (MOSIP Infrastructure Service Provider) who provides infrastructure to send authentication request through a secure channel.

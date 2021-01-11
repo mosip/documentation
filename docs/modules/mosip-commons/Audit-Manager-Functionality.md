@@ -22,10 +22,10 @@ Parameters | Description | Example
 * [Admin Service Audits](Admin-Service-Audits.md)
 * [Resident Service Audits](Resident-Service-Audits.md)
 * [Partner Management Audits](Partner-Management-Audits.md)
-* Registration Client Audits - TBD
+* [Registration Client Audits](Registration-Client-Audits.md)
 * Registration Processor Audits - TBD
-* ID Repository Audits - TBD
-* ID Authentication Audits - TBD
+* [ID Repository Audits] - (ID-Repository-Audits.md)
+* [ID Authentication Audits] - (ID-Authentication-Audits.md)
 * Pre-registration Audits - TBD
 * Admin Portal Audits - TBD
 
@@ -33,11 +33,19 @@ Parameters | Description | Example
 Abbreviation | Definition
 -------------|-------------
 ADM | Admin
-PKT	| Packet
+AUTH | Authentication
 BLK	| Bulk
-RID	| Registration ID
-RES	| Resident
+EVT | Event
+EXPT | Export
 MISP | MOSIP Infrastructure Service Provider
+NAV | Navigation
+PKT	| Packet
 PMS | Partner Management System
+PRT | Partner
+RES	| Resident
+RID	| Registration ID
+SCH | Scheduler
+SYNC | Synchronization
 UIN	| Unique Identification Number
+UPL | Upload
 VID	| Virtual ID
