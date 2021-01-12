@@ -1,6 +1,6 @@
 This specification document is to establish the technical and compliance standards/protocols that are necessary for a biometric device to be used in MOSIP solutions.
 
-API specification version:  **1.0**
+API specification version:  **1.0 <Draft>**
 
 Published Date: January 14, 2021
 
