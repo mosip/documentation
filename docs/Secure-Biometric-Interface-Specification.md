@@ -22,7 +22,7 @@ Device Provider Certificate | A digital certificate issued to the "Device Provid
 Management Server | A server run by the device provider to manage the life cycle of the biometric devices.
 FPS | Frames Per Second
 Device Registration | The process of registering the device with MOSIP servers.
-Signature - All signature should be as per RFC 7515.<br><ul><li>Header - The attribute with "alg" set to RS256 and x5c set to base64encoded certificate.</li><li>Payload - Byte array of the actual data, always represented as base64urlencoded.</li><li>Signature - Base64urlencoded signature bytes</li></ul>
+Signature | All signature should be as per RFC 7515.<br><ul><li>Header - The attribute with "alg" set to RS256 and x5c set to base64encoded certificate.</li><li>Payload - Byte array of the actual data, always represented as base64urlencoded.</li><li>Signature - Base64urlencoded signature bytes</li></ul>
 ISO Format Time | ISO 8601 with format yyyy-mm-dd HH:MM:ssZ
 Registration | The process of applying for a Foundational Id.
 Auth | The process of verifying one’s identity.
@@ -101,7 +101,7 @@ The FTM should have at least one of the following certifications in each categor
 
 {% hint style="info" %}
 
-The supported algorithm and curves are listed [here](#cryptography)
+The supported algorithm and curves are listed [here](#cryptography).
 
 {% endhint %}
 
@@ -513,7 +513,7 @@ Count value should be driven by the count of the bioSubType for Iris and Finger.
 Parameters | Description
 -----------|-------------
 env | This represents the target environment. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
-purpose | The purpose of the device in the MOSIP ecosystem. For devices that are not registered the purpose is empty. Allowed values are "Auth" or "Registration".
+purpose | The purpose of the device in the MOSIP ecosystem. For devices that are not registered the purpose is empty. Allowed value is "Registration".
 specVersion | Expected version of SBI specification.
 timeout | Max time the app will wait for the capture. It's expected that the API will respond back before timeout if the requestedScore is met, or with the best frame at the timeout. All timeouts are in milliseconds.
 captureTime | Time of capture in ISO format with timezone. The time is as per the requesting application.
@@ -766,7 +766,7 @@ The API is used by the devices that are compatible for the registration module. 
 Parameters | Description
 -----------|-------------
 env | The target environment. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
-purpose | The purpose of the device in the MOSIP ecosystem. For devices that are not registered the purpose is empty.</li><li>Allowed value is "Auth".
+purpose | The purpose of the device in the MOSIP ecosystem. For devices that are not registered the purpose is empty. Allowed value is "Registration".
 specVersion | Expected version of SBI specification.
 timeout | Max time the app will wait for the capture. It is expected that the API will respond back before timeout with the best frame. All timeouts are in milliseconds.
 captureTime | Time of capture in ISO format with timezone. The time is as per the requesting application.
