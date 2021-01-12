@@ -3,73 +3,81 @@ Biometrics images for various modalities are represented and exchanged as per th
 
 # Image formats
 
-#### Fingerprint Capture
+## Fingerprint
 Refer ISO 19794-4:2011
 
 Factor | Registration Devices | Authentication Devices
 -------|----------------------|-----------------------
-Minimum Resolution | > 500 native DPI. Bare minimum recommended. Higher densities are preferred | > 500 native DPI. Bare minimum recommended. Higher densities are preferred
-FRR\*\* | < 2% FRR in respective country | < 2% FRR in respective country
-FAR\*\* | 0.01% | 0.01%
-DPI     | 500\* | 500
-Image Specification | ISO 19794-4 B.1 AFIS Normative | ISO 19794-4 B.2 Personal Verification
+Minimum Resolution | >= 500 native DPI. Higher densities are preferred | >= 500 native DPI. Higher densities are preferred
+Minimum Active Platen Area or Capture area |1.6 x 1.5 inches for 1 to 2 fingers<br>3.2 x 2.0 inches for 4 fingers | 0.5 x 0.65 inches
+Image Specification | ISO 19794-4 Annex B1 | ISO 19794-4 Annex B2
+Greyscale Density | 8 bits (256 grey levels) | 8 bits (256 grey levels) 
 ESD | >= 8kv | >= 8kv
 EMC compliance | FCC class A or equivalent | FCC class A or equivalent
-Operating Temperature\*\* |     0 - 50 C | -30 -to 50 C
-Liveness detection\*\*\* | As per IEEE 2790 | As per IEEE 2790
-Preview | > 3 FPS JPEG lossless frames with NFIQ 2 score superimposed | None
-Image Format | JPEG 2000 lossless | JPEG 2000 lossless, WSQ (Compression upto 10:1)\*\*
+Operating Temperature\* |     0 to 50 &deg;C | 0 to 50 &deg;C
+Capture Mode | Auto Capture | Auto Capture
+Preview | > 3 FPS JPEG Lossless frames with NFIQ 2.0 score superimposed | Not Applicable
+Image Format | JPEG 2000 Lossless | JPEG 2000 Lossy or WSQ 
+Compression Ratio | Lossless | Up to 15:1
 Quality Score | NFIQ 2 | NFIQ 1
-FTM | SBI 1.0 - Use host based security, SBI 2.0 - FTM supported security | SBI 2.0 - FTM supported security
+FTM\*\* | SBI 1.0 - Use host based security and above. | SBI 2.0 - FTM supported security and above.
 
 {% hint style="info" %}
-* \*  Sufficiency to be validated for registration.
-* \*\*  MOSIP adopters can change this if needed.
-* \*\*\*  MOSIP adopters to decide on the availability of this feature
+
+\* MOSIP adopters can change this if needed.<br>\*\* Please refer [SBI specification documentation](Secure-Biometric-Interface-Specification.md).
+
 {% endhint %}
 
-#### IRIS Capture
-Refer ISO 19796-6:2011 Part 6 Specifications.
+## Iris
+RRefer to ISO/IEC 19796-6:2011 Specifications.
 
 Factor | Registration Devices | Authentication Devices
 -------|----------------------|-----------------------
-Rotation angle | Before compression, the Iris image will have to be preprocessed to calculate rotation angle. Refer section 6.3.1 of ISO 19794-6 for rotation angle calculation for rectilinear images.|
-Rotation Uncertainty | Refer ISO 19794-6 |
-Minimum Diameter | As per ISO 19794-6:2011 medium and higher quality images are only acceptable,. Hence for this Standard, minimum acceptable Iris diameter will be 150 pixels | Same
-Margin | Same as ISO |
-Color | The iris images shall be captured and stored in gray scale with pixel depth of 8 bits/pixel |
-Illumination | The eye should be illuminated using infrared or any other source that could produce high quality gray scale image |
-Image Format | JPEG 2000 lossless | JPEG 2000 lossless
-Aspect Ratio | 1:1 |
-Image Quality | ISO/IEC 29794-6 | ISO/IEC 29794-6
-Operation Temperature\* | -30 C to +50 C | -30 C to +50 C
-EMC compliance | FCC Class A or equivalent | FCC Class A or equivalent
-Preview | > 3 FPS Jpeg lossless frames with quality score superimposed | Not Applicable
-Image Specification | ISO 19794-6 | ISO 19794-6
-ISO Format | K3 | K7
-FTM | SBI 1.0 - Use host based security, SBI 2.0 - FTM supported security | SBI 2.0 - FTM supported security
+Minimum Iris Diameter | >=210 pixels | >=150 pixels
+Greyscale Density | 8 bits (256 grey levels) | 8 bits (256 grey levels)	
+Spatial Resolution | >=50% @ 1Lp/mm | >= 60% @ 2.0 Lp/mm	
+Pixel Resolution | >10 pixels/mm | >10 pixels/mm	
+Capture Distance | >=10CM | >=10CM	
+Imaging Wavelength | Approximately 700-900 nm | Approximately 700-900 nm	
+Image Frame Rates | The camera should support >=3FPS | The camera should support >=3FPS 	
+Illumination | The eye should be illuminated using infrared or any other source that could produce high-quality gray scale image | The eye should be illuminated using infrared or any other source that could produce high-quality gray scale image
+Image Format | JPEG 2000 Lossless | JPEG 2000 Lossy
+Aspect Ratio | 1:1 | 1:1	
+Image Specification | ISO 19796-6:2011 Annex B | ISO 19796-6:2011 Annex B	
+Operating Temperature\* | 0 to 50 &deg;C | 0 to &deg;50 C	
+Capture Mode | Auto Capture | Auto Capture	
+Scan Type | Progressive | Progressive	
+EMC compliance | FCC Class A or equivalent | FCC Class A or equivalent	
+Preview	| > 3 FPS JPEG Lossless frames with quality score superimposed | Not Applicable
+Image Format | IMAGE_TYPE_CROPPED (K3) | IMAGE_TYPE_CROPPED_AND_MASKED (K7)	
+FTM\*\* | SBI 1.0  - Use host-based security and above. | SBI 2.0 - FTM supported security and above.	
 
 {% hint style="info" %}
-\*  MOSIP adopters to decide and finalize.
+
+\* MOSIP adopters can change this if needed.<br>\*\* Please refer [SBI specification documentation](Secure-Biometric-Interface-Specification.md).
+
 {% endhint %}
 
-#### Face Capture
+## Face Capture
 Refer ISO 19794-5:2011
 
 Factor | Registration Devices | Authentication Devices
 -------|----------------------|-----------------------
-Minimum Resolution | 1080 Pixels at 2.8 mm with 110 degree view | 1080 Pixels at 2.8 mm
-Skin Tone | All | All
-Operation Temperature\* | -30 C to +50 C | -30 C to +50 C
-EMC compliance | FCC Class A or equivalent | FCC Class A or equivalent
-Image Specification | ISO/IEC 19794-5 | ISO/IEC 19794-5
-Exception Image Specification | Full Frontal with FACE features, two palms next to the face, waist up photo. 6X4 mm     | NA
-Image quality | ICAO - Full frontal image, +/- 5 degrees rotation, 24 bit RGB, white background, 35 mm width, 45 mm height |
-Image format | JPEG 2000 lossless | JPEG 2000 lossless
-FTM | SBI 1.0 - Use host based security, SBI 2.0 - FTM supported security | SBI 2.0 - FTM supported security
+Camera Specification | 1080 Pixels at 2.8 mm with 110-degree view. (Can the view angle be reduced further for device availability and pricing reasons?) | 1080 Pixels at 2.8 mm	
+Skin Tone | All | All	
+Capture Mode | Auto Capture | Auto Capture	
+Operation Temperature\*	| 0 to 50 &deg;C | 0 to 50 &deg;C	
+EMC compliance | FCC Class A or equivalent | FCC Class A or equivalent	
+Image Specification	| ISO/IEC 19794-5:2011 | ISO/IEC 19794-5:2011	
+Exception Image Specification | Full Frontal with FACE features, two palms next to the face, waist up photo.<br>60mm(width) X 40mm(height) | Not Applicable	
+Image quality | ICAO - Full frontal image, +/- 5 degrees rotation, 24 bit RGB, white background<br>35 mm(width) X 45mm(height) | ICAO is not mandated	
+Image format | JPEG 2000 Lossless | JPEG 2000 Lossless	
+FTM\*\*	| SBI 1.0 - Use host based security and above. | SBI 2.0 - FTM supported security and above.
 
 {% hint style="info" %}
-\* MOSIP adopters to decide and finalize
+
+\* MOSIP adopters can change this if needed.<br>\*\* Please refer [SBI specification documentation](Secure-Biometric-Interface-Specification.md).
+
 {% endhint %}
 
 We recommend that countries look at ergonomics, accessibility, ease of usage, and common availability of devices while choosing devices for use in registration and authentication scenarios.

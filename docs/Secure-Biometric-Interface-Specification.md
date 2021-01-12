@@ -22,7 +22,7 @@ Device Provider Certificate | A digital certificate issued to the "Device Provid
 Management Server | A server run by the device provider to manage the life cycle of the biometric devices.
 FPS | Frames Per Second
 Device Registration | The process of registering the device with MOSIP servers.
-Signature | All signature should be as per RFC 7515.<br>Header - The attribute with "alg" set to RS256 and x5c set to base64encoded certificate.<br>Payload - Byte array of the actual data, always represented as base64urlencoded.<br>Signature - Base64urlencoded signature bytes</li></ul>
+Signature | All signature should be as per RFC 7515.<br>Header - The attribute with "alg" set to RS256 and x5c set to base64encoded certificate.<br>Payload - Byte array of the actual data, always represented as base64urlencoded.<br>Signature - Base64urlencoded signature bytes
 ISO Format Time | ISO 8601 with format yyyy-mm-dd HH:MM:ssZ
 Registration | The process of applying for a Foundational Id.
 Auth | The process of verifying one’s identity.
@@ -75,8 +75,7 @@ The foundational trust module would be created using a secure microprocessor cap
 * The module has the ability to perform a cryptographically validate-able secure boot.
 * The module has the ability to run trusted applications.
 
-The foundational device trust derived from this module is used to enable trust-based computing for biometric capture. The foundational device trust module provides a trusted execution environment based on the following:
-
+The foundational device trust derived from this module is used to enable trust-based computing for biometric capture. The foundational device trust module provides a trusted execution environment based on the following,
 * Secure Boot
     * Ability to cryptographically verify code before execution.
     * Ability to check for integrity violation of the module/device.
@@ -152,7 +151,7 @@ It is imperative that all devices that connect to MOSIP are identifiable. MOSIP 
 An identification mark that shows MOSIP compliance and a readable unique device serial number (minimum of 12 digits), make and model. The same information has to be available over a 2D QR Code or Barcode. This is to help field support and validation.
 
 ##### Digital ID
-A digital device ID in MOSIP would be a signed JSON (RFC 7515) as follows:
+A digital device ID in MOSIP would be a signed JSON (RFC 7515) as follows,
 ```JSON
 {
   "serialNo": "Serial number",
@@ -226,7 +225,7 @@ More details of the signing and its usage will be [here](#device-service-communi
 
 #### FTM Key
 
-Applicable for SBI 2.0.
+Applicable for SBI 2.0 and above.
 
 The FTM key is the root of the identity. This key is created by the FTM provider during the manufacturing/provisioning stage. This is a permanent key and would never be rotated. This key is used to sign the Digital ID.
 
@@ -262,7 +261,7 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 #### Allowed Values
 Parameters | Description
 -----------|-------------
-type | This represents the type of device. Allowed values here are "Biometric Device", "Finger", "Face" or "Iris". "Biometric Device" - is a special type and used in case you are looking for "any" biometric device.
+type | This represents the type of device. Allowed values here are "Biometric Device", "Finger", "Face" or "Iris".<br>"Biometric Device" - is a special type and used in case you are looking for "any" biometric device.
 
 #### Device Discovery Response
 ```JSON
@@ -347,7 +346,7 @@ In Android, the CallbackId would be set to the appId. So, the caller will create
 {% endhint %}
 
 #### IOS
-All device on an IOS device would respond to the URL schema as follows:
+All device on an IOS device would respond to the URL schema as follows,
 ```
 MOSIPDISC://<call-back-app-url>?ext=<caller app name>&type=<type as defined in MOSIP device request>
 ```
@@ -464,7 +463,7 @@ On an android device should listen to the following intent "appId.Info".
 Upon invocation of this intent the devices are expected to respond back with the JSON response filtered by the respective type.
 
 #### IOS
-On an IOS device would respond to the URL schema as follows:
+On an IOS device would respond to the URL schema as follows,
 ```
 APPIDINFO://<call-back-app-url>?ext=<caller app name>&type=<type as defined in MOSIP device request>
 ```
@@ -537,7 +536,7 @@ customOpts | In case, the device vendor wants to send additional parameters they
 
 "bio.bioSubType" is a mandatory parameter for Capture request. For cases where “any” biometrics are expected, an array of UNKNOWN can be passed equal to the count specified in bio.count.
 
-The SBI must make sure of the following:
+The SBI must make sure of the following,
 * Must not allow the capture of the same biometrics segment  wherever possible. 
 * In case of fingerprint, if a multi finger scanner is used,and if bioSubType is passed as UNKNOWN, capture must return fingers in the order starting from IndexFinger to LittleFinger. 
 
@@ -849,7 +848,7 @@ data.env | The target environment. Allowed values are "Staging", "Developer", "P
 data.purpose | The purpose of the device in the MOSIP ecosystem. Allowed values are "Auth" or "Registration".
 data.bioValue | Base64-URL-encoded biometrics (in ISO format)
 data.transactionId | Unique transaction id sent in request
-data.timestamp | Time as per the biometric device. Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
+data.timestamp | Time as per the biometric device. The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
 data.requestedScore | Floating point number to represent the minimum required score for the capture.
 data.qualityScore | Floating point number representing the score for the current capture.
 hash | The value of the previousHash attribute in the request object or the value of hash attribute of the previous data block (used to chain every single data block) concatenated with the hex encode sha256 hash of the current data block before encryption.
@@ -907,7 +906,7 @@ The MOSIP server would provide the following retrieve encryption certificate API
 }
 ```
 
-The request is sent as a JWT format. So the final request will look like:
+The request is sent as a JWT format. So the final request will look like,
 ```
 "request": {
   "data": "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
@@ -935,7 +934,7 @@ request.data.domainUri | unique URI per auth providers. This can be used to fede
 }
 ```
 
-The entire response is sent as a JWT format. So the final response will look like:
+The entire response is sent as a JWT format. So the final response will look like,
 ```
 "response" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
 ```
@@ -1009,7 +1008,7 @@ Registration Capture | SBI 1.0 / SBI 2.0
 ---
 
 ## Cryptography
-Supported algorithms:
+Supported algorithms,
 
 Usage | Algorithm | Key Size | Storage
 ------|-----------|----------|---------
