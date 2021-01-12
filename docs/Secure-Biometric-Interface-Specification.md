@@ -22,7 +22,7 @@ Device Provider Certificate | A digital certificate issued to the "Device Provid
 Management Server | A server run by the device provider to manage the life cycle of the biometric devices.
 FPS | Frames Per Second
 Device Registration | The process of registering the device with MOSIP servers.
-Signature | All signature should be as per RFC 7515.<br><ul><li>Header - The attribute with "alg" set to RS256 and x5c set to base64encoded certificate.</li><li>Payload - Byte array of the actual data, always represented as base64urlencoded.</li><li>Signature - Base64urlencoded signature bytes</li></ul>
+Signature | All signature should be as per RFC 7515.<br>Header - The attribute with "alg" set to RS256 and x5c set to base64encoded certificate.<br>Payload - Byte array of the actual data, always represented as base64urlencoded.<br>Signature - Base64urlencoded signature bytes</li></ul>
 ISO Format Time | ISO 8601 with format yyyy-mm-dd HH:MM:ssZ
 Registration | The process of applying for a Foundational Id.
 Auth | The process of verifying one’s identity.
@@ -43,7 +43,7 @@ The MOSIP compliant device is expected to perform the following,
 
 {% hint style="info" %}
 
-For details about bometric data specifications please view the page [MOSIP Biometric Data Specification](Biometric-Data-Specification.md).
+For details about biometric data specifications please view the page [MOSIP Biometric Data Specification](Biometric-Data-Specification.md).
 
 {% endhint %}
 
@@ -201,7 +201,7 @@ serialNo | This represents the serial number of the device. This value should be
 make | This represents the brand name of the device. This value should be the same as printed on the device (Refer [Physical ID](#physical-id)).
 model | This represents the model of the device. This value should be same the as printed on the device (Refer [Physical ID](#physical-id)).
 type | This represents the type of the device. Currently, the allowed values here are "Finger", "Iris" or "Face". More types can be added based on the adopter's implementation.
-deviceSubType | This represents the device sub type that is based on the device type.<br><ul><li>For Finger - "Slap", "Single" or "Touchless"</li><li>For Iris - "Single" or "Double"</li><li>For Face - "Full face"</li></ul>
+deviceSubType | This represents the device sub type that is based on the device type.<br>For Finger - "Slap", "Single" or "Touchless"<br>For Iris - "Single" or "Double"<br>For Face - "Full face"
 deviceProvider | This represents the name of the device provider. The device provider should be a legal entity in the country.
 dateTime | This contains the time during the issuance of an identity. This is in ISO format with timezone.
 
@@ -237,8 +237,11 @@ The MOSIP key is the public key provided by the MOSIP adopter. This key is used 
 Following is an example device trust validation flow illustrated using an imaginary company “ABC” for SBI 1.0.
 
 ![](_images/biometrics/device_trust_validation-part1.png)
+
 ![](_images/biometrics/device_trust_validation-part2.png)
+
 ![](_images/biometrics/device_trust_validation-part3.png)
+
 ![](_images/biometrics/device_trust_validation-part4.png)
 
 ## Device Service - Communication Interfaces
@@ -506,7 +509,9 @@ The capture request would be used to capture a biometric from MOSIP compliant de
 ```
 
 {% hint style="info" %}
+
 Count value should be driven by the count of the bioSubType for Iris and Finger. For Face, there will be no bioSubType but the count should be "1".
+
 {% endhint %}
 
 #### Allowed Values
