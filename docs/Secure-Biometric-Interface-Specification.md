@@ -883,8 +883,8 @@ No support for Registration Capture
 ## Device Server
 Device management server is maintained by the device provider for the lifecycle management of the biometric devices. MOSIP exposes three different APIs with a management server. 
 * Certificates API
-* Deny-device API
-	* Allow-device API (If a device is already in deny list, provider can use this API to remove from the deny list)
+* Block device API
+	* Un-block device API (If a device is already in deny list, provider can use this API to remove from the deny list)
 
 ### Certificates
 The MOSIP server would provide the following retrieve encryption certificate API which is white-listed to the management servers of the device provider or their partners.
@@ -942,9 +942,11 @@ The entire response is sent as a JWT format. So the final response will look lik
 "response" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
 ```
 
-### Deny-device API
+### Block device API
+TBD
 
-### Alow-device API
+### Un-block device API
+TBD
 
 ---
 
