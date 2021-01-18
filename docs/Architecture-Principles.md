@@ -12,7 +12,7 @@ The MOSIP philisophy is to provide a "Good ID". As part of this MOSIP embraces a
 * MOSIP must follow the following manageability principles – **Auditability** & monitor ability of every event in the system, testability of every feature of the platform & easy upgrade ability of the platform
 * MOSIP must follow the principles of **Zero-Knowledge** which means that the services know nothing about the Personally Identifiable Information (PII) data stored.
 * MOSIP components must be **loosely coupled** so that they can be composed to build the identity solution as per the requirements of a country
-* MOSIP must support **i18n** capability
+* MOSIP should work with different locales so that that ID systems can be localized for languages and cultures easily.
 * All modules of MOSIP should be resilient such that the solution as a whole is **fault tolerant**
 * The key sub-systems of MOSIP should be designed for **extensibility**. For example, if an external system has to be integrated for fingerprint data, it should be easy to do so.
 
