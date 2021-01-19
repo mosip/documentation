@@ -69,7 +69,7 @@ The data sent to the Manual Adjudication system is driven by a policy defined in
 }
 ```
 
-## Response sent to Manual Adjudication System
+## Response received from Manual Adjudication System
 ```JSON
 {
   "id": "mosip.manual.adjudication.adjudicate",
