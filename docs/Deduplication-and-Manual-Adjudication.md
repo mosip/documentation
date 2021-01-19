@@ -72,16 +72,30 @@ The data sent to the Manual Adjudication system is driven by a policy defined in
 ## Response sent to Manual Adjudication System
 ```JSON
 {
-  "id": "mosip.manual.verification.decision",
-  "version": "1.0",
-  "responsetime": "2021-01-19T07:29:27.206277300Z",
-  "response": {
-    "mvUsrId": "MVUSER_1101",
-    "reasonCode": "Verified",
-    "regId": "10002100741000320210107125533",
-    "statusCode": "APPROVED"
-  },
-  "errors": []
+  "id": "mosip.manual.adjudication.adjudicate",
+  "requestId": "4d4f27d3-ec73-41c4-a384-bf87fce4969e",
+  "responsetime": "2021-01-19T13:16:22.930Z",
+  "returnValue": "1",
+  "candidateList": {
+    "count": "1",
+    "candidates": [
+      {
+        "referenceId": "10002100741000120210107111325",
+        "analytics": { //This section is optional and can be decided by the System Integrator
+          "primaryOperatorID": "110011",
+          "primaryOperatorComments": "<comments provided by operator>",
+          "secondaryOperatorID": "110012",
+          "secondaryOperatorComments": "<comments provided by operator>",
+          "key1": "value1",
+          "key2": "value2"
+        }
+      }
+    ],
+    "analytics": { //This section is optional and can be decided by the System Integrator
+      "key1": "value1",
+      "key2": "value2"
+    }
+  }
 }
 ```
 
