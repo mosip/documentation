@@ -41,4 +41,3 @@ Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Data 
 * ABIS system connects to the queues using a pre-defined user id and password. 
 * It is recommended that ABIS is deployed in the same secure zone (military zone) where the registration processor is deployed. 
 * ABIS system is not recommended to connect to any external network.
-
