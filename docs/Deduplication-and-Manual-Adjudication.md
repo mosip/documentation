@@ -9,13 +9,16 @@ In demographic de-duplication the MOSIP system compares some of the demographic 
 ### Process Flow
 1. MOSIP System receives a request to perform demographic de-duplication for Person A.
 2. MOSIP System performs demographic de-duplication for Person A by,
-	i. Adding Person A's details (i.e. name, date of birth and gender) in the database.
+	i. Adding Person A's hashed demographic details (i.e. name, date of birth and gender) in the database.
 	ii. Comparing Person's details against all the records in the database.
-3. Let's say the MOSIP System find duplicates against two records - Person B and Person C.
+3. Let's say the MOSIP System find duplicates against three records - Person B, Person C and Person D.
 	i. If Person B's registration has failed we consider Person B not to be a potential match for Person A.
-	ii. If Person C's registration is completed and a UIN is associated then we consider Person C to be a potential match for Person A.
-4. Now the list of Potential Matches for Person A (here, we only have Person C as the only potential match, there can be a scenario where there are multiple potential matches for Person A) are sent to ABIS to perform de-duplication against the potential matches.
-5. As here, we ask ABIS to just perform match of Person A's biometrics with Person C's biometrics, we call this process a Gallery Match in ABIS. As we are asking ABIS to perform biometric de-duplication of Person A against the gallery that we have sent.
+	ii. If Person C's registration process in not complete, i.e. UIN is not generated for person C yet, we do not consider Person C to be a potential match for Person A in Demo Deduplication.
+	iii. If Person D's registration is completed and a UIN is associated then we consider Person D to be a potential match for Person A.
+4. Now the list of Potential Matches for Person A (here, we only have Person D as the only potential match, there can be a scenario where there are multiple potential matches for Person A) are sent to ABIS to perform de-duplication against the potential matches.
+5. Here, we ask ABIS to just perform match of Person A's biometrics with Person D's biometrics, we call this process a Gallery Match in ABIS. As we are asking ABIS to perform biometric de-duplication of Person A against the gallery that we have sent.
+	i. If the ABIS confirms that Person D's biometrics matches with Person A's biometrics, MOSIP would REJECT Person A's packet.
+	ii. If the ABIS says that Person A's and Person D's biometrics are different, we move the packet for biometric deduplication.
 
 ![](_images/biometrics/deduplication-deographic_deduplication.png)
 
@@ -23,41 +26,64 @@ In demographic de-duplication the MOSIP system compares some of the demographic 
 In biometric de-duplication the MOSIP system sends the biometrics of the resident to an ABIS System (Automated Biometrics Identification System). Here, the expectation from the ABIS system is to perform biometric de-duplication (1:N match) against all the records that it has stored earlier. 
 
 {% hint style="info" %}
-Any Packet irrespective of it has gone through demographic de-duplication or ABIS gallery match, will go through the biometric de-duplication stage.
+Any Packet irrespective of it has gone through demographic de-duplication or ABIS gallery match, will have to go through the biometric de-duplication stage.
 {% endhint %}
 
 ### Process Flow
 1. MOSIP system receives a request to perform biometric de-duplication for Person A.
-2. MOSIP system sends an insert request to the ABIS system to insert Person A's biometrics in ABIS via. a queue.
-3. ABIS system processes the request sent by MOSIP and sends a response back to MOSIP via. a queue.
-4. MOSIP system now sends a identify request to the ABIS system to perform de-duplication for Person A in ABIS via. a queue.
-5. ABIS System processes the request and sends the list of potential matches back to MOSIP via. a queue.
-6. Let's say the ABIS system has found duplicates against two records - Person B and Person C.
-	i. If Person B's registration has failed we consider Person B not to be a potential match for Person A.
-	ii. If Person C's registration is completed and a UIN is associated then we consider Person C to be a potential match for Person A.
-7. Not the list of Potential Matches for Person A (here, we only have Person C as the only potential match, there can be a scenario where there are multiple potential matches for Person A) are sent to Manual Adjudicator to take the final decision.
+2. MOSIP system sends an insert request to the ABIS system to insert Person A's biometrics in ABIS via. MOSIP-to-ABIS queue.
+3. ABIS system processes the request sent by MOSIP and sends a response back to MOSIP via. ABIS-to-MOSIP queue.
+4. MOSIP system now sends a identify request to the ABIS system to perform de-duplication for Person A in ABIS via. MOSIP-to-ABIS queue.
+5. ABIS System processes the request and sends the list of potential matches back to MOSIP via. a ABIS-to-MOSIP queue.
+6. Let's say the ABIS system has found duplicates against three records - Person B, Person C and Person D.
+	i. If Person B's registration has been REJECTED, we consider Person B not to be a potential match for Person A.
+	ii. If Person C's registration is under processing, we consider Person C to be a potential match for Person A.
+	iii. If Person D's registration is completed and a UIN is associated, we consider Person D to be a potential match for Person A.
+7. Now the list of Potential Matches for Person A (here, we have Person C and Person D as the potential matches) are sent to Manual Adjudication System to take the final decision.
 
 ![](_images/biometrics/deduplication-biometric_deduplication.png)
 
 # Manual Adjudication
-When biometric duplicates are found in ABIS, the system integrator can plug-in the Manual Adjudication Stage, which would send the biometric and demographic data of the duplicates to a Manual Adjudicator. The Manual Adjudicator now can perform various validations on the duplicate data and inform the MOSIP system if the two records are duplicates or not.
+When biometric duplicates are found in ABIS, MOSIP system sends a request for Manual Adjudication to the Manual Adjudication System via. a queue. The system integrator can build the Manual Adjudication System, which would be listening to the MOSIP-to-ManualAdjudication queue for any Manual Adjudication requests and send a response back in the ManualAdjudication-to-MOSIP system after verifying the data.
 
-In our current implementation we have kept Manual Adjudication only after biometric de-duplication in-order to confirm if the duplicates marked by the ABIS will be not issued a UIN. 
+The data sent to the Manual Adjudication system is driven by a policy defined in MOSIP.
 
-The Manual Adjudication stage can be plugged-in after demographic de-duplication also but we have done so for our current implementation because, we already do a two step verification i.e. demo match and then ABIS gallery match to confirm a duplicate.
+## Request sent to Manual Adjudication System
+```JSON
+{
+  "id": "mosip.manual.adjudication.adjudicate",
+  "version": "1.0",
+  "requestId": "4d4f27d3-ec73-41c4-a384-bf87fce4969e",
+  "referenceId": "10002100741000320210107125533",
+  "requesttime": "2021-01-19T07:16:22.930Z",
+  "referenceURL": "http://datashare-service/v1/datashare/get/mpolicy-default-adjudication/mpartner-default-adjudication/mpartner-default-adjudicationmpolicy-default-adjudication202011110619201EpLEjvD",
+  "addtional": null,
+  "gallery": {
+    "referenceIds": [
+      {
+        "referenceId": "10002100741000120210107111325",
+        "referenceURL": "http://datashare-service/v1/datashare/get/mpolicy-default-adjudication/mpartner-default-adjudication/mpartner-default-adjudicationmpolicy-default-adjudication202137493575474iefnvvsD"
+      }
+    ]
+  }
+}
+```
 
-## Manual Adjudication APIs
-* **Assignment API** - This API is used to assign one single unassigned applicant record to the manual adjudicator. The Assignement logic is based on First come First server based on the logged in Manual Adjudicator.
-* **Fetch Demographic** - The manual adjudicator has to verify the applicant demographic information. This API is used to get the applicant demographic information from packet.
-* **Fetch Biometrics** - The manual adjudicator would need to verify the applicant biometric and demographic records. This API is used to get the applicant biometric file from packet.
-* **Fetch Packet Meta Information** - The manual adjudicator has to verify the operator/supervisor/introducer etc.; information. This API fetches the additional information from packet.
-* **Desion API** - This API is used to get the decision from manual adjudicator for an applicant and update the decision in table. The packet is sent for further processing based on decision.
-
-For details about the APIs are available in [Registration Processor - Manual Adjudication APIs](Registration-Processor-APIs.md#4-manual-verification-apis).
-
-{% hint style="info" %}
-In the current implementation we have the API, assuming that there will be only one Manual Adjudication layer. The APIs for Manual Adjudication can be changed based on the country's need.
-{% endhint %}
+## Response sent to Manual Adjudication System
+```JSON
+{
+  "id": "mosip.manual.verification.decision",
+  "version": "1.0",
+  "responsetime": "2021-01-19T07:29:27.206277300Z",
+  "response": {
+    "mvUsrId": "MVUSER_1101",
+    "reasonCode": "Verified",
+    "regId": "10002100741000320210107125533",
+    "statusCode": "APPROVED"
+  },
+  "errors": []
+}
+```
 
 # Process Flow for Biometric Deduplication
 
