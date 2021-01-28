@@ -2,7 +2,7 @@
 * Standards:
   * ISO 19785-3
   * [OASIS patron format ISO/IEC JTC 1 SC 37 - biometrics](https://www.ibia.org/cbeff/iso/bir-header-identifiers), patron identifier 257, patron format identifier 11
-  * [OASIS Binary Data Block Format Identifiers](https://www.ibia.org/cbeff/iso/bdb-format-identifiers) for Format Type ISO/IEC JTC 1 SC 37-biometrics, patron identifier 257, BDB patron format identifier 7 for finger image, 8 for face image and 9 for iris image.
+  * [OASIS Binary Data Block Format Identifiers](https://www.ibia.org/cbeff/iso/bdb-format-identifiers) for Format Type ISO/IEC JTC 1 SC 37-biometrics, patron identifier 257, BDB patron format identifier 7 for finger image, 2 for finger minutiae, 8 for face image and 9 for iris image.
 * [Schema](https://docs.oasis-open.org/bioserv/BIAS/v2.0/csprd01/schemas/cbeff_ed2.xsd) 
 * MOSIP's [CBEFF Utility](https://github.com/mosip/commons/tree/master/kernel/kernel-cbeffutil-api) to create, update, search and validate CBEFF XML data.
 
@@ -29,7 +29,7 @@
       <BDBInfo>
          <Format>
             <Organization>Mosip</Organization>
-            <Type>257</Type>
+            <Type>7</Type>
          </Format>
          <CreationDate>2019-06-27T13:40:06.209Z</CreationDate>
          <Type>Finger</Type>
@@ -62,7 +62,7 @@
       <BDBInfo>
          <Format>
             <Organization>Mosip</Organization>
-            <Type>257</Type>
+            <Type>7</Type>
          </Format>
          <CreationDate>2019-06-27T13:40:06.211Z</CreationDate>
          <Type>Finger</Type>
@@ -95,7 +95,7 @@
       <BDBInfo>
          <Format>
             <Organization>Mosip</Organization>
-            <Type>257</Type>
+            <Type>7</Type>
          </Format>
          <CreationDate>2019-06-27T13:40:06.211Z</CreationDate>
          <Type>Finger</Type>
@@ -128,7 +128,7 @@
       <BDBInfo>
          <Format>
             <Organization>Mosip</Organization>
-            <Type>257</Type>
+            <Type>7</Type>
          </Format>
          <CreationDate>2019-06-27T13:40:06.211Z</CreationDate>
          <Type>Finger</Type>
@@ -161,7 +161,7 @@
       <BDBInfo>
          <Format>
             <Organization>Mosip</Organization>
-            <Type>257</Type>
+            <Type>7</Type>
          </Format>
          <CreationDate>2019-06-27T13:40:06.211Z</CreationDate>
          <Type>Finger</Type>
@@ -194,7 +194,7 @@
       <BDBInfo>
          <Format>
             <Organization>Mosip</Organization>
-            <Type>257</Type>
+            <Type>7</Type>
          </Format>
          <CreationDate>2019-06-27T13:40:06.211Z</CreationDate>
          <Type>Finger</Type>
@@ -227,7 +227,7 @@
       <BDBInfo>
          <Format>
             <Organization>Mosip</Organization>
-            <Type>257</Type>
+            <Type>7</Type>
          </Format>
          <CreationDate>2019-06-27T13:40:06.211Z</CreationDate>
          <Type>Finger</Type>
@@ -260,7 +260,7 @@
       <BDBInfo>
          <Format>
             <Organization>Mosip</Organization>
-            <Type>257</Type>
+            <Type>7</Type>
          </Format>
          <CreationDate>2019-06-27T13:40:06.211Z</CreationDate>
          <Type>Finger</Type>
@@ -293,7 +293,7 @@
       <BDBInfo>
          <Format>
             <Organization>Mosip</Organization>
-            <Type>257</Type>
+            <Type>7</Type>
          </Format>
          <CreationDate>2019-06-27T13:40:06.211Z</CreationDate>
          <Type>Finger</Type>
@@ -326,7 +326,7 @@
       <BDBInfo>
          <Format>
             <Organization>Mosip</Organization>
-            <Type>257</Type>
+            <Type>7</Type>
          </Format>
          <CreationDate>2019-06-27T13:40:06.211Z</CreationDate>
          <Type>Finger</Type>
@@ -359,7 +359,7 @@
       <BDBInfo>
          <Format>
             <Organization>Mosip</Organization>
-            <Type>257</Type>
+            <Type>8</Type>
          </Format>
          <CreationDate>2019-06-27T13:40:06.211Z</CreationDate>
          <Type>Face</Type>
@@ -391,7 +391,7 @@
       <BDBInfo>
          <Format>
             <Organization>Mosip</Organization>
-            <Type>257</Type>
+            <Type>9</Type>
          </Format>
          <CreationDate>2019-06-27T13:40:06.211Z</CreationDate>
          <Type>Iris</Type>
@@ -424,7 +424,7 @@
       <BDBInfo>
          <Format>
             <Organization>Mosip</Organization>
-            <Type>257</Type>
+            <Type>9</Type>
          </Format>
          <CreationDate>2019-06-27T13:40:06.211Z</CreationDate>
          <Type>Iris</Type>
