@@ -2,7 +2,7 @@ This document defines the APIs specifications for various operations that ABIS c
 
 API specification version: **0.9**
 
-Published Date: November 19, 2020
+Published Date: February 05, 2021
 
 # Revision Note
 Publish Date|Revision
@@ -12,6 +12,7 @@ June 09, 2020|A note related to targetFPIR was added
 June 26, 2020|New [failure reason](#failure-reasons) (code - 6, 8, 9, 10, 11, 12) for ABIS have been added.
 August 04, 2020|Analytics section has been added to the overall response for Identify and the [failure reason](#failure-reasons) have been updated.
 November 19, 2020|Note on encryption of biometric data share using referenceURL has been added.
+February 05,2021|Note on [refernceURL](#reference-url) and [authentication token](#authentication-token) was added for Insert Request 
 
 # Introduction
 An ABIS system that integrates with MOSIP should support the following operations. 
@@ -75,9 +76,9 @@ The following operations are supported by MOSIP:
 * [Reference Count](#reference-count)
 
 ## Insert 
-* ABIS must get biometric data from referenceURL, process it and store it locally within the ABIS reference database. More details about the refernceURL is mentioned in our [referenceURL section](ABIS-APIs.md#reference-url) 
-* referenceId must not be active prior to this operation i.e., it must not have been used before this operation
-* De-duplication must not be performed in this operation
+* ABIS must get biometric data from referenceURL, process it and store it locally within the ABIS reference database. More details about the refernceURL is mentioned in our [referenceURL section](#reference-url). 
+* referenceId must not be active prior to this operation i.e., it must not have been used before this operation.
+* De-duplication must not be performed in this operation.
 * MOSIP will provide biometric data in [CBEFF format](CBEFF-XML.md) to ABIS as a response of referenceURL and the data will be encrypted and encoded as mentioned below.
 
 ### Request and Response Structre for Insert
@@ -154,20 +155,20 @@ authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBL
 
 ```JSON
 {
-    "id": "string",
-    "version": "string",
-    "responsetime": "2021-02-05T06:31:36.885Z",
-    "metadata": null,
-    "response": {
-        "status": "Success",
-        "message": "Clientid and Token combination had been validated successfully"
-    },
-    "errors": null
+  "id": "string",
+  "version": "string",
+  "responsetime": "2021-02-05T06:31:36.885Z",
+  "metadata": null,
+  "response": {
+    "status": "Success",
+    "message": "Clientid and Token combination had been validated successfully"
+  },
+  "errors": null
 }
 ```
 
 #### DataShare URL 
-Below is the sample API detail for accessing the reference URL. 
+Below is the sample API detail for reference URL. 
 
 ##### Sample Request URL
 `GET https://{base_url}/v1/datashare/get/mpolicy-default-abis/mpartner-default-abis/mpartner-default-abismpolicy-default-abis20210205062412BlQo0rJB`
@@ -632,6 +633,22 @@ Encrypted 256 bit AES key (Encrypted by the provided public key) | #KEY_SPLITTER
 </BIR>
 ```
 
+##### Sample Response in case of Authentication Failure
+```JSON
+{
+  "id": null,
+  "version": null,
+  "responsetime": "2021-02-05T06:29:48.257Z",
+  "metadata": null,
+  "response": null,
+  "errors": [
+    {
+      "errorCode": "KER-ATH-401",
+      "message": "Authentication Failed"
+    }
+  ]
+}
+```
 
 ## Identify
 * All Insert requests added to the queue earlier must be serviced by ABIS when performing an Identify request.  
