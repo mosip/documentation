@@ -699,7 +699,7 @@ Preview should have the quality markings and segment marking. The preview would 
 
 Preview must guide the resident on the correct placement of biometric on the sensor. It is recommended to use colour coding (Green for good placement, Red for incorrect placement) and audio, visual cues must be used. 
 
-![](_images/biometrics/finger_print_stream.png)
+![](_images/biometrics/device_stream_response.png)
 
 #### Error Response for Device Stream
 ```
@@ -881,10 +881,7 @@ No support for Registration Capture
 ---
 
 ## Device Server
-Device management server is maintained by the device provider for the lifecycle management of the biometric devices. MOSIP exposes three different APIs with a management server. 
-* Certificates API
-* Block device API
-	* Un-block device API (If a device is already in deny list, provider can use this API to remove from the deny list)
+Device management server is maintained by the device provider for the lifecycle management of the biometric devices. MOSIP exposes only the get certificate API with the management server.
 
 ### Certificates
 The MOSIP server would provide the following retrieve encryption certificate API which is white-listed to the management servers of the device provider or their partners.
@@ -941,12 +938,6 @@ The entire response is sent as a JWT format. So the final response will look lik
 ```
 "response" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
 ```
-
-### Block device API
-TBD
-
-### Un-block device API
-TBD
 
 ---
 
