@@ -1,4 +1,4 @@
-This document contains the bugs that were fixed as part of MOSIP 1.1.2 release.
+This document contains the bugs that were fixed as part of MOSIP 1.1.3 release.
 
 Bug ID | Summary | Module
 -------|---------|-------
