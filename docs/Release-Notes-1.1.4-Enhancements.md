@@ -51,3 +51,4 @@ This document contains the features that were developed or enhanced as part of M
 * User details sync in now integrated with the new sync data API; this API (`/userdetails?keyindex=<keyindex>`) now returns encrypted user details.
 * Operator details are now added in the EOD action page.
 * We are now display date & time in local timezone where the registration client is running.
+* Support for document number has been added during document capture.
