@@ -106,7 +106,6 @@ The supported algorithm and curves are listed [here](#cryptography).
 ##### Category: FTM Chip
 * FIPS 140-2 L3 or above
 * PCI PTS 5 or above (Pre-certified)
-* Common Criteria (EAL4 and above)
 
 ##### Category: Tamper
 * For SBI 2.0 level compliance the FTM should support tamper evidence. Tamper responsiveness is recommended for the whole device/system.
@@ -268,7 +267,7 @@ type | This represents the type of device. Allowed values here are "Biometric De
 ```JSON
 [
   {
-    "deviceId": "Internal ID, same as the printed serialNumber",
+    "serialNo": "Printed Serial Number of the device",
     "deviceStatus": "Device status",
     "certification": "Certification level",
     "serviceVersion": "Device service version",
@@ -292,7 +291,7 @@ Parameters | Description
 deviceStatus | Allowed values are "Ready", "Busy", "Not Ready", and "Not Registered".<br><br>"Not Registered" denotes that the device does not have a valid certificate issued by the device provider for the device key.
 certification | Allowed values are "SBI 1.0" or "SBI 2.0" based on level of certification.
 serviceVersion | Version of the SBI specification that is supported.
-deviceId | Internal ID to identify the actual biometric device within the device service.
+serialNo | This represents the serial number of the device. This value should be the same as printed on the device (Refer [Physical ID](#physical-id)).
 deviceSubId | Allowed values are 0, 1, 2 or 3. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In the case of Finger/Iris it's 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).
 callbackId | This differs as per the OS. In the case of Linux and windows operating systems it is a HTTP URL. In the case of android, it is the intent name. In IOS, it is the URL scheme. The call back URL takes precedence over future request as a base URL. (If there are multiple devices supported by the same SBI, connected at the same time, a combination of the port, call backId and the serial number, along with deviceSubId will invoke the right device)
 digitalId | Digital ID as per the Digital ID definition but it will not be signed.
@@ -317,7 +316,7 @@ The applications that require access to MOSIP devices could discover them by sen
 
 **_HTTP Request:_**
 ```
-MOSIPDISC http://127.0.0.1:<device_service_port>/device
+SBIDISC http://127.0.0.1:<device_service_port>/device
 HOST: 127.0.0.1: <device_service_port>
 EXT: <app name>
 ```
@@ -351,7 +350,7 @@ In Android, the CallbackId would be set to the appId. So, the caller will create
 #### IOS
 All device on an IOS device would respond to the URL schema as follows,
 ```
-MOSIPDISC://<call-back-app-url>?ext=<caller app name>&type=<type as defined in MOSIP device request>
+SBIDISC://<call-back-app-url>?ext=<caller app name>&type=<type as defined in MOSIP device request>
 ```
 
 If a MOSIP compliant device service app exists then the URL would launch the service. The service in return should respond back to the caller using the call-back-app-url with the base64 encoded json as the URL parameter for the key data.
@@ -376,7 +375,7 @@ NA
   {
     "deviceInfo": {
       "deviceStatus": "Current status",
-      "deviceId": "Internal ID",
+      "serialNo": "Printed Serial Number of the device",
       "firmware": "Firmware version",
       "certification": "Certification level",
       "serviceVersion": "Device service version",
@@ -416,11 +415,10 @@ Parameters | Description
 -----------|-------------
 deviceInfo | The deviceInfo object is sent as JSON Web Token (JWT). For devices which do not have a valid certificate issued by device provider (deviceStatus = Not Registered), the deviceInfo will be unsigned. For devices which are registered, the deviceInfo will be signed using the device key.
 deviceInfo.deviceStatus | This is the current status of the device. Allowed values are "Ready", "Busy", "Not Ready", and "Not Registered".<br><br>"Not Registered" denotes that the device does not have a valid certificate issued by the device provider against the device key.
-deviceInfo.deviceId | Internal Id to identify the actual biometric device within the device service.
 deviceInfo.firmware | Exact version of the firmware (SBI 2.0). In case of SBI 1.0 this is the same as serviceVersion.
 deviceInfo.certification | Allowed values are "SBI 1.0" or "SBI 2.0" based on the level of certification.
 deviceInfo.serviceVersion | Version of the SBI specification that is supported.
-deviceInfo.deviceId | Internal ID to identify the actual biometric device within the device service.
+deviceInfo.serialNo | This represents the serial number of the device. This value should be the same as printed on the device (Refer [Physical ID](#physical-id)).
 deviceInfo.deviceSubId | Allowed values are 0, 1, 2 or 3. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In the case of Finger/Iris it's 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).
 deviceInfo.callbackId | This differs as per the OS. In case of linux and windows operating systems it is a HTTP URL. In the case of android, it is the intent name. In IOS, it is the URL scheme. The call back URL takes precedence over future requests as a base URL. (If there are multiple devices supported by the same SBI, connected at the same time, a combination of the port, call backId and the serial number, along with deviceSubId will invoke the right device)
 deviceInfo.digitalId | The digital id as per the digital id definition. For SBI 1.0 devices which are yet to obtain a certificate from the device provider (deviceStatus = Not Registered), the digitalId will be unsigned.  For SBI 1.0 devices with valid certificates issued by the provider, the digital id will be signed using the device key. For SBI 2.0 devices, the digital id will be always signed using the FTM key.
@@ -443,7 +441,7 @@ The applications that require more details of the MOSIP devices could get them 
 
 **_HTTP Request:_**
 ```
-MOSIPDINFO http://127.0.0.1:<device_service_port>/info
+SBIINFO http://127.0.0.1:<device_service_port>/info
 HOST: 127.0.0.1:<device_service_port>
 EXT: <app name>
 ```
@@ -472,7 +470,7 @@ Upon invocation of this intent the devices are expected to respond back with the
 #### IOS
 On an IOS device would respond to the URL schema as follows,
 ```
-APPIDINFO://<call-back-app-url>?ext=<caller app name>&type=<type as defined in MOSIP device request>
+SBIINFO://<call-back-app-url>?ext=<caller app name>&type=<type as defined in MOSIP device request>
 ```
 
 If a MOSIP compliant device service app exists then the URL would launch the service. The service in return should respond back to the call using the call-back-app-url with the base64 encoded JSON as the URL parameter for the key data.
@@ -498,7 +496,7 @@ The capture request would be used to capture a biometric from MOSIP compliant de
       "count":  "Finger/Iris count, in case of face max is set to 1",
       "bioSubType": ["Array of subtypes"],
       "requestedScore": "Expected quality score that should match to complete a successful capture",
-      "deviceId": "Internal Id",
+      "serialNo": "Physical Serial Number of the device",
       "deviceSubId": "Specific Device Sub Id",
       "previousHash": "Hash of the previous block"
     }
@@ -534,7 +532,7 @@ bio.type | Allowed values are "Finger", "Iris" or "Face".
 bio.count | Number of biometric data that is collected for a given type. The device should validate and ensure that this number is in line with the type of biometric that's captured.
 bio.bioSubType | <ul><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"]</li><li>For Iris: ["Left", "Right", "UNKNOWN"]</li><li>For Face: No bioSubType</li></ul>
 bio.requestedScore | Upon reaching the quality score the biometric device is expected to auto capture the image. If the requested score is not met, until the timeout, the best frame during the capture sequence must be captured/returned.
-bio.deviceId | Internal Id to identify the actual biometric device within the device service.
+bio.serialNo | This represents the serial number of the device. This value should be the same as printed on the device (Refer [Physical ID](#physical-id)).
 bio.deviceSubId | Allowed values are 0, 1, 2 or 3. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In the case of Finger/Iris it's 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).<br><br>Wherever possible SBI must detect if the placement of biometrics is not in sync with the deviceSubId. For example, if the deviceSubId is selected as 1 and if a right slap is presented instead of left, SBI must provide appropriate messages.
 bio.previousHash | For the first capture the previousHash is a hash of an empty UTF-8 string. From the second capture the previous captured hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.
 customOpts | In case, the device vendor wants to send additional parameters they can use this to send key value pairs if necessary. The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications. Vendors are free to include additional parameters and fine-tuning the process. None of these values should go undocumented by the vendor. No sensitive data should be available in the customOpts.
@@ -576,7 +574,14 @@ The SBI must make sure of the following,
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value"
-      }
+      },
+	  "additionalInfo": {
+	    //Additional information can be sent by the SBI in key value pair.
+		//max of 50 key value pair.
+		//Vendors are free to include any number of additional parameters.
+		//None of these values should go undocumented by the vendor.
+		//No sensitive data should be available here.
+	  }
     },
     {
       "specVersion" : "SBI spec version",
@@ -600,7 +605,14 @@ The SBI must make sure of the following,
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value"
-      }
+      },
+	  "additionalInfo": {
+	    //Additional information can be sent by the SBI in key value pair.
+		//max of 50 key value pair.
+		//Vendors are free to include any number of additional parameters.
+		//None of these values should go undocumented by the vendor.
+		//No sensitive data should be available here.
+	  }
     }
   ]
 }
@@ -642,7 +654,7 @@ The applications that require to capture biometric data from a MOSIP device coul
 
 **_HTTP Request:_**
 ```
-CAPTURE [http://127.0.0.1:<device_service_port>/capture](http://127.0.0.1/capture)
+CAPTURE http://127.0.0.1:<device_service_port>/capture
 HOST: 127.0.0.1: <apps port>
 EXT: <app name>
 ```
@@ -651,7 +663,7 @@ EXT: <app name>
 ```
 HTTP/1.1 200 OK
 CACHE-CONTROL:no-store
-LOCATION:[http://127.0.0.1](http://127.0.0.1):<device_service_port>
+LOCATION:http://127.0.0.1:<device_service_port>
 Content-Length: length in bytes of the body
 Content-Type: application/json
 Connection: Closed
@@ -681,7 +693,7 @@ This API is visible only for the devices that are registered for the purpose as 
 #### Device Stream Request
 ```
 {
-  "deviceId": "Internal Id",
+  "serialNo": "Printed Serial Number of the device",
   "deviceSubId": "Specific device sub Id",
   "timeout": "Timeout for stream"
   "dimensions": "Optional parameter for handling specific requirements such as exception photo stream. Please refer to the stream frame guidelines."
@@ -691,7 +703,7 @@ This API is visible only for the devices that are registered for the purpose as 
 #### Allowed Values
 Parameters | Description
 -----------|--------------
-deviceId | Internal Id to identify the actual biometric device within the device service.
+serialNo | This represents the serial number of the device. This value should be the same as printed on the device (Refer [Physical ID](#physical-id)).
 deviceSubId | Allowed values are 0, 1, 2 or 3. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In the case of Finger/Iris it's 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).<br><br>Wherever possible SBI must detect if the placement of biometrics is not in sync with the deviceSubId. For example, if the deviceSubId is selected as 1 and if a right slap is presented instead of left, SBI must provide appropriate messages.
 timeout | Max time after which the stream should close. This is an optional parameter and by default the value will be 5 minutes. All timeouts are in milliseconds.
 dimensions | This is an optional parameter for handling specific requirements such as photo stream during exception. Please refer to the stream frame guidelines.<br><br>Format: mmmm. For example, value 6040 denotes 60mm(width) X 40mm(height) of the stream window.
@@ -720,7 +732,7 @@ The applications that require more details of the MOSIP devices could get them b
 
 **_HTTP Request:_**
 ```
-STREAM   http://127.0.0.1:<device_service_port>/stream
+STREAM http://127.0.0.1:<device_service_port>/stream
 HOST: 127.0.0.1: <apps port>
 EXT: <app name>
 ```
@@ -757,7 +769,7 @@ The API is used by the devices that are compatible for the registration module. 
       "bioSubType": ["Array of subtypes"], //Optional
       "exception": ["Finger or Iris to be excluded"],
       "requestedScore": "Expected quality score that should match to complete a successful capture.",
-      "deviceId": "Internal Id",
+      "serialNo": "Printed Serial Number of the device",
       "deviceSubId": "Specific device Id",
       "previousHash": "Hash of the previous block"
     }
@@ -787,7 +799,7 @@ bio.count | Number of biometric data that is collected for a given type. The dev
 bio.bioSubType | <ul><li>Array of bioSubType for respective biometric type.</li><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"]</li><li>For Iris: ["Left", "Right", "UNKNOWN"]</li><li>For Face: No bioSubType</li><li>This is an optional parameter.</li></ul>
 bio.exception | <ul><li>This is an array and all the exceptions are marked.</li><li>In case exceptions are sent for face then follow the exception photo specification above.</li><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb"]</li><li>For Iris: ["Left", "Right"]</li><li>This is a mandatory parameter.</li><li> For cases where "any" biometrics are expected, an array of UNKNOWN can be passed equal to the count specified in bio.count.</li><li>The SBI must make sure not to allow the capture of the same biometrics segment wherever possible and in case of fingerprint, if a multi finger scanner is used, and if bioSubType is passed as UNKNOWN, capture must return fingers in the order starting from IndexFinger to LittleFinger.</li></ul>
 bio.requestedScore | Upon reaching the quality score the biometric device is expected to auto capture the image. If the requested score is not met, until the timeout, the best frame during the capture sequence must be captured/returned.
-bio.deviceId | Internal Id to identify the actual biometric device within the device service.
+bio.serialNo | This represents the serial number of the device. This value should be the same as printed on the device (Refer [Physical ID](#physical-id)).
 bio.deviceSubId | Allowed values are 0, 1, 2 or 3. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In the case of Finger/Iris it's 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).<br><br>Wherever possible SBI must detect if the placement of biometrics is not in sync with the deviceSubId. For example, if the deviceSubId is selected as 1 and if a right slap is presented instead of left, SBI must provide appropriate messages.<br/>SBI must detect if the placement of biometrics is no insync with the deviceSubId. For example, if the deviceSubId is selected as 1 and if a right slap is presented instead of left, SBI must provide appropriate messages.
 bio.previousHash | For the first capture the previousHash is a hash of an empty UTF-8 string. From the second capture the previous captured hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.
 customOpts | In case, the device vendor wants to send additional parameters they can use this to send key value pairs if necessary. The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications. Vendors are free to include additional parameters and fine-tuning the process. None of these values should go undocumented by the vendor. No sensitive data should be available in the customOpts.
@@ -815,8 +827,15 @@ customOpts | In case, the device vendor wants to send additional parameters they
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value Type For Discovery.. ex: {type: 'Biometric Device' or 'Finger' or 'Face' or 'Iris' } "
-      }
-    },
+      },
+	  "additionalInfo": {
+	    //Additional information can be sent by the SBI in key value pair.
+		//max of 50 key value pair.
+		//Vendors are free to include any number of additional parameters.
+		//None of these values should go undocumented by the vendor.
+		//No sensitive data should be available here.
+	  }    
+	},
     {
       "specVersion" : "SBI Spec version",
       "data": {
@@ -836,7 +855,14 @@ customOpts | In case, the device vendor wants to send additional parameters they
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value Type For Discovery.. ex: {type: 'Biometric Device' or 'Finger' or 'Face' or 'Iris' }"
-      }
+      },
+	"additionalInfo": {
+	    //Additional information can be sent by the SBI in key value pair.
+		//max of 50 key value pair.
+		//Vendors are free to include any number of additional parameters.
+		//None of these values should go undocumented by the vendor.
+		//No sensitive data should be available here.
+	  }
     }
   ]
 }
@@ -868,7 +894,7 @@ The applications that require more details of the MOSIP devices could get them 
 
 **_HTTP Request:_**
 ```
-RCAPTURE  http://127.0.0.1:<device_service_port>/capture
+RCAPTURE http://127.0.0.1:<device_service_port>/capture
 HOST: 127.0.0.1: <apps port>
 EXT: <app name>
 ```
