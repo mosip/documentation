@@ -7,7 +7,8 @@ Published Date: January 18, 2021
 ## Revision Note
 Publish Date | Revision
 -------------|--------
-18-Jan-2020 | This is the first formal publication of this document as a version-ed specification. Earlier drafts are superseded by this document.
+18-Jan-2021 | This is the first formal publication of this document as a version-ed specification. Earlier drafts are superseded by this document.
+26-Feb-2021 | Updated the [FTM criteria](#certification) to include PCI PED 2.0 and CC.
 
 ## Glossary of Terms
 Key | Description
@@ -111,7 +112,6 @@ The supported algorithm and curves are listed [here](#cryptography).
 * One of following Common Criteria (CC) certification
 	* https://www.commoncriteriaportal.org/files/ppfiles/pp0035a.pdf
 	* https://www.commoncriteriaportal.org/files/ppfiles/pp0084a_pdf.pdf
-
 
 ##### Category: Tamper
 * For SBI 2.0 level compliance the FTM should support tamper evidence. Tamper responsiveness is recommended for the whole device/system.

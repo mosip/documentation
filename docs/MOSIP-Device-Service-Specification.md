@@ -19,7 +19,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 |0.9.5|Draft|13-Jun-2020||
 |0.9.5|Draft|10-Aug-2020|Signature for API to retrieve encryption certificate has been changed from GET to POST and Device Stream now supports an optional parameter - timeout
 |0.9.5|Draft|04-Dec-2020|In the header of JWT Signature, the key to store the type has been changed to "typ" from "type" as per JWT standards. Kindly view the digital id specification for the change.
-|0.9.5|Draft|26-Feb-2021|Section on [Certification category for FTM chip](#certification) has been updated. We have added few more certification categories.
+|0.9.5|Draft|26-Feb-2021|Updated the [FTM criteria](#certification) to include PCI PED 2.0 and CC.
 
 ## Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
