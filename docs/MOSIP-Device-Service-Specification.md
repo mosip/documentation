@@ -18,7 +18,8 @@ All devices that collect biometric data for MOSIP should operate within the spec
 |0.9.3|Frozen|Feb-2020||
 |0.9.5|Draft|13-Jun-2020||
 |0.9.5|Draft|10-Aug-2020|Signature for API to retrieve encryption certificate has been changed from GET to POST and Device Stream now supports an optional parameter - timeout
-|0.9.5|Draft|04-Dec-2020|In the header of JWT Signature, the key to store the type has been changed to "typ" from "type" as per JWT standards. Kindly view the digital id specification for the change.  
+|0.9.5|Draft|04-Dec-2020|In the header of JWT Signature, the key to store the type has been changed to "typ" from "type" as per JWT standards. Kindly view the digital id specification for the change.
+|0.9.5|Draft|26-Feb-2021|Section on [Certification category for FTM chip](#certification) has been updated. We have added few more certification categories.
 
 ## Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
@@ -178,11 +179,13 @@ The supported algorithm and curves are listed [here](#cryptography)
 {% endhint %}
 
 ##### Category: FTM Chip
-
+(ONE of the following certifications)
 * FIPS 140-2 L3 or above
 * PCI PTS 5 or above (Pre-certified)
-* Common Criteria (EAL4 and above)
-  * TODO:FILL IN
+* PCI - PED 2.0 or above (Pre-Certified)
+* One of following Common Criteria (CC) certification
+	* https://www.commoncriteriaportal.org/files/ppfiles/pp0035a.pdf
+	* https://www.commoncriteriaportal.org/files/ppfiles/pp0084a_pdf.pdf
 
 ##### Category: Tamper
 * For L1 level compliance the FTM should support tamper evidence.

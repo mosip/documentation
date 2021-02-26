@@ -104,8 +104,14 @@ The supported algorithm and curves are listed [here](#cryptography).
 {% endhint %}
 
 ##### Category: FTM Chip
+(ONE of the following certifications)
 * FIPS 140-2 L3 or above
 * PCI PTS 5 or above (Pre-certified)
+* PCI - PED 2.0 or above (Pre-Certified)
+* One of following Common Criteria (CC) certification
+	* https://www.commoncriteriaportal.org/files/ppfiles/pp0035a.pdf
+	* https://www.commoncriteriaportal.org/files/ppfiles/pp0084a_pdf.pdf
+
 
 ##### Category: Tamper
 * For SBI 2.0 level compliance the FTM should support tamper evidence. Tamper responsiveness is recommended for the whole device/system.
