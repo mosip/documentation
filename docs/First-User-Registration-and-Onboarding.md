@@ -25,3 +25,8 @@ Steps to generate the first User in MOSIP eco-system, refer below for the proces
 * The User now would need to On-board as his/her role would be changed.
 * Once on-boarding is completed User 'X' can register the subsequent  Officers and Supervisors.
 * The User details of the subsequent Officers and Supervisor must be created in KeyCloak with appropriate roles assigned (as per Step 1) and their RIDs should be mapped in KeyCloak (as per Step 4) so that they can login to Registration Client.
+
+### Flow chart describing first user onboarding
+
+![First-user-onboarding](https://user-images.githubusercontent.com/38644228/109414421-dc3fd600-79d8-11eb-99d2-205e65205040.png)
+
