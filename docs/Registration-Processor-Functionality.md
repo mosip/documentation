@@ -54,13 +54,12 @@ Orchestration is the process of configuring various independent services, which 
 
 In Registration Processor, there are various independent stages (such as Packet Receiver Stage, Packet Validator Stage, Operator Supervisor and Introducer Validator Stage, Demographic Deduplication Stage, Biometric Deduplication Stage, UIN Allocator Stage, Notification Stage, Printing and Postal Stage, etc.), which will perform their own set of validations or operations. 
 
-These all stages are connected to each other using a workflow manager to perform various ID lifecycles events for an individual. 
+These stages are connected to each other using a workflow manager to perform various ID lifecycles events for an individual. 
 
-## Retry processing (in case of exceptions/failures) 
-When multiple systems interact with each other, there might be a communication issues due to a network lag. Registration Processor interacts with multiple external systems (Printing and Postal Service Provider, ABIS system, country’s external ID systems). Hence, there is high probability of having network failures between the two systems. 
+## Retry processing 
+Registration Processor interacts with multiple external systems where there is a certain probability of failures due to various reasons such as network issues, unavaibility of external systems etc.   
 
-Instead of failing to process the packets because of such network issues, Registration Processor provides a feature to retry connecting with the external system after a second or two for a certain number of times (which is configurable).
-
+Registration Processor retries processing of the stage after a configurable period of time.  
 
 ## Resume workflow 
 MOSIP system has the capability to recover and continue packet processing if any incident happens which stops processing of some of the packets. These incidents can be: an external/internal stage is not responding, database connection is lost, dependent packets have not been processed, etc.
