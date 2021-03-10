@@ -164,22 +164,22 @@ If a message prompting you for password, enter default vault password **"foo"** 
 
 This section provides the following major sections to describe how to configure and verify the proper interface. The sandbox installs with default general configuration. To configure MOSIP differently, refer to the following sections:
 
-* [DNS](dns-configurations.md)
-* [Local docker registry](local-docker-registry.md)
-* [Private dockers](private-dockers.md)
-* [Sandbox access](sandbox-access.md)
-* [Secrets](secrets.md)
-* [Config server](config-server.md)
-* [Pre-Reg captcha](pre-registration-captcha.md)
-* [OTP](otp-setting.md)
-* [Master data](master-data.md)
-* [Pod replication](pod-replication.md)
-* [Taints](taints.md)
-* [TPM](tpm-for-reg-client.md)
-* [Pre-Registration Schema](configure-pre-reg-for-id-schema.md)
-* [Registration client](tpm-for-reg-client.md)
+* [DNS](#domain-name-system-dns)
+* [Local docker registry](#local-docker-registry)
+* [Private dockers](#private-dockers)
+* [Sandbox access](#sandbox-access)
+* [Secrets](#secrets)
+* [Config server](#config-server)
+* [Pre-Reg captcha](#pre-reg-captcha)
+* [OTP](#otp-setting)
+* [Master data](#master-data)
+* [Pod replication](#pod-replication)
+* [Taints](#taints)
+* [TPM](#tpm-for-reg-client)
+* [Pre-Registration Schema](#configure-pre-reg-for-id-schema)
+* [Registration client](#registration-client-with-mock-mds-and-mock-sdk)
 
-### Domain Name System\(DNS\)
+### Domain Name System (DNS)
 
 DNS translates human readable domain names to machine readable IP addresses. A private DNS _\(CoreDNS\)_ is mounted on the console machine by default, and **`/etc/resolv.conf`** refers to this DNS on all machines.
 
