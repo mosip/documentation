@@ -107,7 +107,7 @@ $ source ~/.bashrc
 
 ## Sandbox Architectural View
 
-![](https://github.com/manishpandey0108/documentation/tree/ba25538dc3253d700443e69193b6a61831c602db/docs/sandbox-installer/Link)
+![](_images/arch_diagrams/sandbox_architecture.png)
 
 ## Installing MOSIP
 
