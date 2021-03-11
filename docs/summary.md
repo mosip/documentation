@@ -56,7 +56,7 @@
     * [Biometric Data Specification](Biometric-Data-Specification.md)
     * [CBEFF XML](CBEFF-XML.md)
 * Build & Deploy
-    * [Build & Deploy](Build-and-Deploy.md)
+	* [Sandbox Installer](Sandbox-Installer.md)
     * [Deployment Architectures](Deployment-Architectures.md)
     * [Cell Based Deployment Architecture](Cell-Based-Deployment-Architecture.md)
     * [Hardware Security Module HSM Specifications](Hardware-Security-Module-HSM-Specifications.md)
