@@ -4,7 +4,7 @@ Biometrics images for various modalities are represented and exchanged as per th
 # Image formats
 
 ## Fingerprint
-Refer ISO 19794-4:2011
+Refer ISO 19794-4:2011 Specifications.
 
 Factor | Registration Devices | Authentication Devices
 -------|----------------------|-----------------------
@@ -29,7 +29,7 @@ FTM\*\* | SBI 1.0 - Use host based security and above. | SBI 2.0 - FTM supported
 {% endhint %}
 
 ## Iris
-RRefer to ISO/IEC 19796-6:2011 Specifications.
+RRefer to ISO 19794-6:2011 Specifications.
 
 Factor | Registration Devices | Authentication Devices
 -------|----------------------|-----------------------
@@ -59,7 +59,7 @@ FTM\*\* | SBI 1.0  - Use host-based security and above. | SBI 2.0 - FTM supporte
 {% endhint %}
 
 ## Face Capture
-Refer ISO 19794-5:2011
+Refer ISO 19794-5:2011 Specifications.
 
 Factor | Registration Devices | Authentication Devices
 -------|----------------------|-----------------------

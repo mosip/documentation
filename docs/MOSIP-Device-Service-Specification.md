@@ -81,7 +81,7 @@ FTM | L0 - Use host based security, L1 - FTM supported security | L1 - FTM suppo
 {% endhint %}
 
 #### IRIS Capture
-Refer ISO 19796-6:2011 Part 6 Specifications.
+Refer ISO 19794-6:2011 Part 6 Specifications.
 
 Factor | Registration Devices | Authentication Devices
 -------|----------------------|-----------------------
