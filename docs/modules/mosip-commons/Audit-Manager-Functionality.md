@@ -24,10 +24,9 @@ Parameters | Description | Example
 * [Partner Management Audits](Partner-Management-Audits.md)
 * [Registration Client Audits](Registration-Client-Audits.md)
 * [Registration Processor Audits](Registration-Processor-Audits.md)
-* [ID Repository Audits] - (ID-Repository-Audits.md)
-* [ID Authentication Audits] - (ID-Authentication-Audits.md)
-* [Pre-registration Audits] - (Pre-Registration-Audits.md)
-* Admin Portal Audits - TBD
+* [ID Repository Audits](ID-Repository-Audits.md)
+* [ID Authentication Audits](ID-Authentication-Audits.md)
+* [Pre-registration Audits](Pre-Registration-Audits.md)
 
 ## Abbreviations
 Abbreviation | Definition
