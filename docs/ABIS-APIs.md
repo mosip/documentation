@@ -12,7 +12,8 @@ June 09, 2020|A note related to targetFPIR was added
 June 26, 2020|New [failure reason](#failure-reasons) (code - 6, 8, 9, 10, 11, 12) for ABIS have been added.
 August 04, 2020|Analytics section has been added to the overall response for Identify and the [failure reason](#failure-reasons) have been updated.
 November 19, 2020|Note on encryption of biometric data share using referenceURL has been added.
-February 05,2021|Note on [refernceURL](#reference-url) and [authentication token](#authentication-token) was added for Insert Request 
+February 05, 2021|Note on [refernceURL](#reference-url) and [authentication token](#authentication-token) was added for Insert Request 
+March 23, 2021|New [failure reason](#failure-reasons) (code - 17) for ABIS has been added.
 
 # Introduction
 An ABIS system that integrates with MOSIP should support the following operations. 
@@ -49,15 +50,15 @@ Code | Status
 ## Failure Reasons
 Code | Reason
 -----|-------
-1 | Internal error - Unknown
-2 | Aborted
-3 | Unexpected error
-4 | Unable to serve the request - Invalid request Structure
-5 | Missing referenceId (in request body)
-6 | Missing requestId (in request body)
-7 | Unable to fetch biometric details (using referenceURL)
-8 | Missing reference URL (in request body)
-9 | Missing requesttime (in request body)
+1 | internal error - Unknown
+2 | aborted
+3 | unexpected error
+4 | unable to serve the request - invalid request structure
+5 | missing referenceId (in request body)
+6 | missing requestId (in request body)
+7 | unable to fetch biometric details (using referenceURL)
+8 | missing reference URL (in request body)
+9 | missing requesttime (in request body)
 10 | referenceId already exists (in ABIS)
 11 | CBEFF has no data
 12 | referenceId not found (in ABIS)
@@ -65,6 +66,7 @@ Code | Reason
 14 | invalid id
 15 | invalid requesttime format
 16 | invalid CBEFF format
+17 | data share URL has expired
 
 # ABIS Operations
 The following operations are supported by MOSIP:
