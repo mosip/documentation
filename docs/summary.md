@@ -52,8 +52,9 @@
     * [ABIS](Automated-Biometric-Identification-System-ABIS.md)
     * [Biometric SDK](Biometric-SDK.md)
     * [MDS Specification](MOSIP-Device-Service-Specification.md)
+		* [0.9.5 Biometric Specification](0.9.5-Biometric-Specification.md)
 	* [SBI Specification](Secure-Biometric-Interface-Specification.md)
-    * [Biometric Data Specification](Biometric-Data-Specification.md)
+    * [Biometric Specification](Biometric-Specification.md)
     * [CBEFF XML](CBEFF-XML.md)
 * Build & Deploy
 	* [Sandbox Installer](Sandbox-Installer.md)
