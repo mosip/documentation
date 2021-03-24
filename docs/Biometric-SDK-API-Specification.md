@@ -268,7 +268,7 @@ More documentation will be shared on the source and target params as well as sou
 * Flags - Some mosip specific flags might be passed to method calls. These are to be logged. Specific flags supported by the SDK to tap specific behavior of the SDK can be documented and provided. The default behavior in the absence of flags should be specified and the optimal behavior should be the default behavior.
 * Analytics - List of name value pairs that can be used to convey additional information. The values filled are specific to the implementing library. This could contain information about the aspects where quality is failing for e.g. ICAO compliance for tilt or lighting. In case of matches it could contain information like the NIST score, the algorithm used for matching and more.
 * Errors - The error list can be used to list out specific causes of failure of the method called. This is useful for debugging and analysis.
-* The Biometrics segments stored in BIR instances and the BIR class is modeled along the lines of CBEFF format and more information be found here: [Biometric Data Specification](Biometric-Data-Specification.md). 
+* The Biometrics segments stored in BIR instances and the BIR class is modeled along the lines of CBEFF format and more information be found here: [Biometric Specification](Biometric-Specification.md). 
 
 
 # Appendix A - Java API Specifications

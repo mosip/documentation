@@ -55,3 +55,7 @@ Converts images in all segments in the biometric record.
 # Biometric SDK API Specification
 
 The SDK needs to comply to [Biometric SDK API Specification](Biometric-SDK-API-Specification.md)
+
+# Biometric Specification
+
+For details about biometric specifications in MOSIP please view the page [MOSIP Biometric Specification](Biometric-Specification.md).

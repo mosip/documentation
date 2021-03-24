@@ -903,7 +903,7 @@ Target False Positive Identification Rate	| targetFPIR
 ```
 
 # References 
-* [Biometric Data Specification](Biometric-Data-Specification.md) to know about biometric specification in MOSIP
+* [Biometric Specification](Biometric-Specification.md) to know about biometric specification in MOSIP
 * [CBEFF XML](CBEFF-XML.md) to how MOSIP stores biometric data
 * [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token
 * [MOSIP's de-duplication process](Deduplication-and-Manual-Adjudication.md) for deatils about De-Duplication process in MOSIP

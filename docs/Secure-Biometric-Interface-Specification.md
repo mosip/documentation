@@ -2,6 +2,10 @@ This specification document is to establish the technical and compliance standar
 
 API specification version:  **1.0 (Draft)**
 
+{% hint style="warning" %}
+This document is under review and is not meant for consumption as of now.
+{% endhint %}
+
 Published Date: January 18, 2021
 
 ## Revision Note
@@ -43,7 +47,7 @@ The MOSIP compliant device is expected to perform the following,
 
 {% hint style="info" %}
 
-For details about biometric data specifications please view the page [MOSIP Biometric Data Specification](Biometric-Data-Specification.md).
+For details about biometric specifications in MOSIP please view the page [MOSIP Biometric Specification](Biometric-Specification.md).
 
 {% endhint %}
 

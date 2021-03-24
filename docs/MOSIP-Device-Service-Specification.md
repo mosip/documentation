@@ -20,6 +20,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 |0.9.5|Draft|10-Aug-2020|Signature for API to retrieve encryption certificate has been changed from GET to POST and Device Stream now supports an optional parameter - timeout
 |0.9.5|Draft|04-Dec-2020|In the header of JWT Signature, the key to store the type has been changed to "typ" from "type" as per JWT standards. Kindly view the digital id specification for the change.
 |0.9.5|Draft|26-Feb-2021|Updated the [FTM criteria](#certification) to include PCI PED 2.0 and CC.
+|0.9.5|Draft|24-Mar-2021|The reference to L2 devices has been removed from this document.<br>The biometric specification listed here has been moved to a new section [Biometric Specification](Biometric-Specification.md) and the old specification is now in [0.9.5 Biometric Specifications](0.9.5-Biometric-Specification.md) for reference.
 
 ## Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
@@ -54,75 +55,7 @@ The MOSIP compliant device is expected to perform the following:
 * Should have no mechanism to inject the biometric
 
 ### Base Specifications for Devices
-
-#### Fingerprint Capture
-Refer ISO 19794-4:2011
-
-Factor | Registration Devices | Authentication Devices
--------|----------------------|-----------------------
-Minimum Resolution | > 500 native dpi. Bare minimum recommended. Higher densities are preferred | > 500 native dpi. Bare minimum recommended. Higher densities are preferred
-FRR\*\* | < 2% FRR in respective country | < 2% FRR in respective country
-FAR\*\* | 0.01% | 0.01%
-DPI     | 500\* | 500
-Image Specification | ISO 19794-4 B.1 AFIS Normative | ISO 19794-4 B.2 Personal Verification
-ESD | >= 8kv | >= 8kv
-EMC compliance | FCC class A or equivalent | FCC class A or equivalent
-Operating Temperature\*\* |     0 - 50 C | -30 -to 50 C
-Liveness detection\*\*\* | As per IEEE 2790 | As per IEEE 2790
-Preview | > 3 FPS JPEG lossless frames with NFIQ 2 score superimposed | None
-Image Format | JPEG 2000 lossless | JPEG 2000 lossless, WSQ (Compression upto 10:1)\*\*
-Quality Score | NFIQ 2 | NFIQ 1
-FTM | L0 - Use host based security, L1 - FTM supported security | L1 - FTM supported security, L2 - with tamper protection.
-
-{% hint style="info" %}
-\*  Sufficiency to be validated for registration <br>
-\*\*  MOSIP adopters can change this if needed <br>
-\*\*\*  MOSIP adopters to decide on the availability of this feature
-{% endhint %}
-
-#### IRIS Capture
-Refer ISO 19794-6:2011 Part 6 Specifications.
-
-Factor | Registration Devices | Authentication Devices
--------|----------------------|-----------------------
-Rotation angle | Before compression, the Iris image will have to be preprocessed to calculate rotation angle. Refer section 6.3.1 of ISO 19794-6 for rotation angle calculation for rectilinear images.|
-Rotation Uncertainty | Refer ISO 19794-6 |
-Minimum Diameter | As per ISO 19794-6:2011 medium and higher quality images are only acceptable,. Hence for this Standard, minimum acceptable Iris diameter will be 150 pixels | Same
-Margin | Same as ISO |
-Color | The iris images shall be captured and stored in gray scale with pixel depth of 8 bits/pixel |
-Illumination | The eye should be illuminated using infrared or any other source that could produce high quality gray scale image |
-Image Format | JPEG 2000 lossless | JPEG 2000 lossless
-Aspect Ratio | 1:1 |
-Image Quality | ISO/IEC 29794-6 | ISO/IEC 29794-6
-Operation Temperature\* | -30 C to +50 C | -30 C to +50 C
-EMC compliance | FCC Class A or equivalent | FCC Class A or equivalent
-Preview | > 3 FPS Jpeg lossless frames with quality score superimposed | Not Applicable
-Image Specification | ISO 19794-6 | ISO 19794-6
-ISO Format | K3 | K7
-FTM | L0 - Use host based security, L1 - FTM supported security | L1 - FTM supported security, L2 - with tamper protection.
-
-{% hint style="info" %}
-\*  MOSIP adopters to decide and finalize
-{% endhint %}
-
-#### Face Capture
-Refer ISO 19794-5:2011
-
-Factor | Registration Devices | Authentication Devices
--------|----------------------|-----------------------
-Minimum Resolution | 1080 Pixels at 2.8 mm with 110 degree view | 1080 Pixels at 2.8 mm
-Skin Tone | All | All
-Operation Temperature\* | -30 C to +50 C | -30 C to +50 C
-EMC compliance | FCC Class A or equivalent | FCC Class A or equivalent
-Image Specification | ISO/IEC 19794-5 | ISO/IEC 19794-5
-Exception Image Specification | Full Frontal with FACE features, two palms next to the face, waist up photo. 6X4 mm     | NA
-Image quality | ICAO - Full frontal image, +/- 5 degrees rotation, 24 bit RGB, white background, 35 mm width, 45 mm height |
-Image format | JPEG 2000 lossless | JPEG 2000 lossless
-FTM | L0 - Use host based security, L1 - FTM supported security | L1 - FTM supported security, L2 - with tamper protection.
-
-{% hint style="info" %}
-\* MOSIP adopters to decide and finalize
-{% endhint %}
+For details about biometric data specifications please view the page [MOSIP Biometric Specification](Biometric-Specification.md).
 
 We recommend that countries look at ergonomics, accessibility, ease of usage, and common availability of devices while choosing devices for use in registration and authentication scenarios.
 
@@ -132,7 +65,6 @@ We recommend that countries look at ergonomics, accessibility, ease of usage, an
 MOSIP compliant devices provide a trust environment for the devices to be used in registration, KYC and AUTH scenarios. The trust level is established based on the device support for trusted execution.
 
 * L1 - The trust is provided by a secure chip with secure execution environment.
-* L2 - The trust is provided by a secure chip with secure execution environment and complete tamper protection and responsive across the entire device.
 * L0 - The trust is provided at the software level. No hardware related trust exist. This type of compliance is used in controlled environments.
 
 ### Foundational Trust Module (FTM)
@@ -189,7 +121,6 @@ The supported algorithm and curves are listed [here](#cryptography)
 
 ##### Category: Tamper
 * For L1 level compliance the FTM should support tamper evidence.
-* For L2 level compliance the FTM should support all of L1 and capabilities to adopt tamper responsiveness.
 
 #### Threats to Protect
 The FTM should protect against the following threats.
@@ -218,7 +149,6 @@ Mosip devices are most often used to collect biometrics. The devices are expecte
 
 * L0 - A device can obtain L0 certification when it uses software level cryptographic library with no secure boot or FTM.  These devices will follow different device identity and the same would be mentioned as part of exception flows.
 * L1 - A device can obtain L1 certification when its built in secure facility with one of the certified FTM.
-* L2 - A device can obtain L2 certification when its build in secure facility with one of the certified FTM with tamper responsiveness. Also the device should be capable of demonstrating tamper responsiveness during its entire life time.
 
 #### Device Identity
 It is imperative that all devices that connect to MOSIP are identifiable. MOSIP believes in cryptographic Identity as its basis for trust.
@@ -344,7 +274,7 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 Parameters | Description
 -----------|-------------
 deviceStatus | Allowed values are "Ready", "Busy", "Not Ready" or "Not Registered".
-certification | Allowed values are "L0", "L1" or "L2" based on level of certification.
+certification | Allowed values are "L0" or "L1" based on level of certification.
 serviceVersion | Version of the MDS specification that is supported.
 deviceId | Internal ID to identify the actual biometric device within the device service.
 deviceSubId | <ul><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
@@ -470,7 +400,7 @@ deviceInfo | <ul><li>The deviceInfo object is sent as JSON Web Token (JWT).</li>
 deviceInfo.deviceStatus | <ul><li>This is the status of the device.</li><li>Allowed values are "Ready", "Busy", "Not Ready" or "Not Registered".</li></ul>
 deviceInfo.deviceId | Internal Id to identify the actual biometric device within the device service.
 deviceInfo.firmware | <ul><li>Exact version of the firmware.</li><li>In case of L0 this is same as serviceVersion.</li></ul>
-deviceInfo.certification | <ul><li>Allowed values are "L0", "L1" or "L2" based on the level of certification.</li></ul>
+deviceInfo.certification | <ul><li>Allowed values are "L0" or "L1" based on the level of certification.</li></ul>
 deviceInfo.serviceVersion | Version of the MDS specification that is supported.
 deviceInfo.deviceId | Internal ID to identify the actual biometric device within the device service.
 deviceSubId | <ul><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
@@ -645,7 +575,7 @@ Parameters | Description
 -----------|------------- 
 specVersion | Version of the MDS specification using which the response was generated.
 data | <ul><li>The data object is sent as JSON Web Token (JWT).</li><li>The data block will be signed using the device key.</li></ul>
-data.digitalId | <ul><li>The digital id as per the digital id definition in JWT format.</li><li>For L0 devices, the digital id will be signed using the device key.</li><li>For L1 or L2 devices, the digital id will be signed using the FTM key.</li></ul>
+data.digitalId | <ul><li>The digital id as per the digital id definition in JWT format.</li><li>For L0 devices, the digital id will be signed using the device key.</li><li>For L1 devices, the digital id will be signed using the FTM key.</li></ul>
 data.deviceCode | A unique code given by MOSIP after successful registration
 data.deviceServiceVersion | MDS version
 data.bioType | Allowed values are "Finger", "Iris" or "Face".
@@ -874,7 +804,7 @@ Parameters | Description
 specVersion | Version of the MDS specification using which the response was generated.
 data | <ul><li>The data object is sent as JSON Web Token (JWT).</li><li>The data block will be signed using the device key.</li></ul>
 data.bioType | Allowed values are "Finger", "Iris" or "Face".
-data.digitalId | <ul><li>The digital id as per the digital id definition in JWT format.</li><li>For L0 devices, the digital id will be signed using the device key.</li><li>For L1 or L2 devices, the digital id will be signed using the FTM key.</li></ul>
+data.digitalId | <ul><li>The digital id as per the digital id definition in JWT format.</li><li>For L0 devices, the digital id will be signed using the device key.</li><li>For L1 devices, the digital id will be signed using the FTM key.</li></ul>
 data.bioSubType | <ul><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"]</li><li>For Iris: ["Left", "Right", "UNKNOWN"]</li><li>For Face: No bioSubType</li></ul>
 data.deviceServiceVersion | MDS Version
 data.env | <ul><li>The target environment.</li><li>Allowed values are "Staging", "Developer", "Pre-Production" or "Production".</li></ul>
@@ -957,7 +887,7 @@ deviceData.deviceId | <ul><li>Unique device id that the device provider uses to 
 purpose | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>For devices that are not registered the purpose is empty.</li><li>Allowed values are "Auth" or "Registration".</li></ul>
 deviceData.deviceInfo | <ul><li>The device info object is sent as JSON Web Token (JWT).</li><li>The device info block will be signed using the device key.</li></ul>
 deviceInfo.deviceSubId | <ul><li>An array of sub Ids that are supported for the device.</li><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
-deviceInfo.certification | <ul><li>The certificate level of the device.</li><li>Allowed values are L0, L1 or L2</li></ul>
+deviceInfo.certification | <ul><li>The certificate level of the device.</li><li>Allowed values are L0 or L1</li></ul>
 deviceInfo.digitalId | <ul><li>The digital id as per the digital id definition.</li><li>For L0 devices, the digital id will be signed using the device key.</li><li>For L1 devices, the digital id will be signed using the FTM key.</li></ul>
 deviceInfo.firmware | Version of the firmware of the device.
 deviceInfo.deviceExpiry | <ul><li>Expiry date of the device.</li><li>Device will not work post that expiry date and it cannot be registered again.</li></ul>
@@ -1172,7 +1102,6 @@ Management client is the interface that connects the device with the respective 
 ---
 
 ## Compliance
-**L2 Certified Device / L2 Device** - A device certified as capable of performing encryption on the device inside its trusted zone with tamper responsive features. <br>
 **L1 Certified Device / L1 Device** - A device certified as capable of performing encryption on the device inside its trusted zone. <br>
 **L0 Certified Device / L0 Device** - A device certified as one where the encryption is done on the host inside its device driver or the MOSIP device service.
 
@@ -1189,10 +1118,10 @@ Secure provisioning is applicable to both the FTM and the Device providers.
 ### Compliance Level
 API     | Compatible
 ----|-----------
-Device Discovery | L0/L1/L2
-Device Info | L0/L1/L2
-Capture | L1/L2
-Registration Capture | L0/L1/L2
+Device Discovery | L0/L1
+Device Info | L0/L1
+Capture | L1
+Registration Capture | L0/L1
 
 ---
 
