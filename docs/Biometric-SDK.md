@@ -58,4 +58,4 @@ The SDK needs to comply to [Biometric SDK API Specification](Biometric-SDK-API-S
 
 # Biometric Specification
 
-For details about biometric specifications in MOSIP please view the page [MOSIP Biometric Specification](Biometric-Specification.md).
+For details about biometric specifications in MOSIP please view the page [Biometric Specification](Biometric-Specification.md).

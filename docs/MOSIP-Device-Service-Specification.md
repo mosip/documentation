@@ -22,6 +22,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 |0.9.5|Draft|26-Feb-2021|Updated the [FTM criteria](#certification) to include PCI PED 2.0 and CC.
 |0.9.5|Draft|24-Mar-2021|The reference to L2 devices has been removed from this document.<br>The biometric specification listed here has been moved to a new section [Biometric Specification](Biometric-Specification.md) and the old specification is now in [0.9.5 Biometric Specifications](0.9.5-Biometric-Specification.md) for reference.
 
+
 ## Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
 * Foundational Trust Provider - An entity that manufactures the foundational trust module.
