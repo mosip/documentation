@@ -6,5 +6,5 @@ structure:
 
 redirects:  
     architecture/architecture: Mosip-Architecture.md
-    biometrics/biometric-data-specification: biometrics/biometric-specification
+    biometric-data-specification: Biometric-Specification.md
     
