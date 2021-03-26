@@ -8,7 +8,7 @@ Refer ISO 19794-4:2011 Specifications.
 
 Factor | Registration Devices | Authentication Devices
 -------|----------------------|-----------------------
-Iamge Specification | ISO 19794-4:2011 Annex B1 | ISO 19794-4:2011 Annex B2
+Image Specification | ISO 19794-4:2011 Annex B1 | ISO 19794-4:2011 Annex B2
 Minimum Resolution | >= 500 native DPI. Higher densities are preferred. | >= 500 native DPI.
 Minimum Active Platen Area or Capture area\* | >=1.6 x 1.5 inches for 1 to 2 fingers<br>>=3.2 x 2.0 inches for 4 fingers | >=0.5 x 0.65 inches\*
 Greyscale Density | 8 bits (256 grey levels) | 8 bits (256 grey levels) 
