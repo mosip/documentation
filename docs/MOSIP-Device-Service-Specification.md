@@ -21,7 +21,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 |0.9.5|Draft|04-Dec-2020|In the header of JWT Signature, the key to store the type has been changed to "typ" from "type" as per JWT standards. Kindly view the digital id specification for the change.
 |0.9.5|Draft|26-Feb-2021|Updated the [FTM criteria](#certification) to include PCI PED 2.0 and CC.
 |0.9.5|Draft|24-Mar-2021|The reference to L2 devices has been removed from this document.<br>The biometric specification listed here has been moved to a new section [Biometric Specification](Biometric-Specification.md) and the old specification is now in [0.9.5 Biometric Specifications](0.9.5-Biometric-Specification.md) for reference.
-
+|0.9.5|Draft|07-Apr-2021|Device Deregistration API spec was incorrected. Hence, it was fixed as per the API definition.
 
 ## Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
@@ -967,7 +967,8 @@ The MOSIP server would provide the following device de-registration API which is
     "device": {
       "deviceCode": "<device code>",
       "env": "<environment>"
-    }
+    },
+    "isItForRegistrationDevice": true
   }
   "requesttime": "current timestamp in ISO format"
 }
@@ -978,6 +979,13 @@ The device data in request is sent as a JWT format. So the final request will lo
 "request": {
   "device" : "base64urlencode(header).base64urlencode(payload).base64urlencode(signature)"
 }
+```
+
+#### Accepted Values for Device De-Registration Request
+```
+env - Allowed values are Staging| Developer| Pre-Production | Production
+deviceCode - This is the device code issued by MOSIP server post registration. This will be in UUID RFC4122 Version 4 format. Once device is registered the device code needs to be set in the device.
+isItForRegistrationDevice - It is set as true when it is a registration device and false when it is an authentication device.
 ```
 
 #### Device De-Registration Response
