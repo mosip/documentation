@@ -1,5 +1,6 @@
 # MOSIP Device Specification
 
+
 ## Introduction & Background
 
 ### Objective
