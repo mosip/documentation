@@ -41,7 +41,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 * header in signature - Header in signature means the attribute with "alg" set to RS256 and x5c set to base64encoded certificate.
 * payload is the byte array of the actual data, always represented as base64urlencoded.
 * signature - base64urlencoded signature bytes
-* ISO Format Time - ISO 8601 with format yyyy-mm-dd HH:MM:ssZ
+* ISO Format Time - ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ (Example: 2020-12-08T09:39:37Z)
 
 ---
 
