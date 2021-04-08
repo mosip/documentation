@@ -21,7 +21,8 @@ All devices that collect biometric data for MOSIP should operate within the spec
 |0.9.5|Draft|04-Dec-2020|In the header of JWT Signature, the key to store the type has been changed to "typ" from "type" as per JWT standards. Kindly view the digital id specification for the change.
 |0.9.5|Draft|26-Feb-2021|Updated the [FTM criteria](#certification) to include PCI PED 2.0 and CC.
 |0.9.5|Draft|24-Mar-2021|The reference to L2 devices has been removed from this document.<br>The biometric specification listed here has been moved to a new section [Biometric Specification](Biometric-Specification.md) and the old specification is now in [0.9.5 Biometric Specifications](0.9.5-Biometric-Specification.md) for reference.
-|0.9.5|Draft|07-Apr-2021|Device De registration API spec needed correction. Hence, it was fixed as per the API definition.
+|0.9.5|Draft|07-Apr-2021|Device De registration API spec was updated.
+|0.9.5|Draft|08-Apr-2021|We will be following datetime values in ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ. The same has been updated throughout the document.
 
 ## Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
@@ -41,7 +42,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 * header in signature - Header in signature means the attribute with "alg" set to RS256 and x5c set to base64encoded certificate.
 * payload is the byte array of the actual data, always represented as base64urlencoded.
 * signature - base64urlencoded signature bytes
-* ISO Format Time - ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ (Example: 2020-12-08T09:39:37Z)
+* ISO format timestamp - ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ (Example: 2020-12-08T09:39:37Z)
 
 ---
 
@@ -121,7 +122,7 @@ The supported algorithm and curves are listed [here](#cryptography)
 	* https://www.commoncriteriaportal.org/files/ppfiles/pp0084a_pdf.pdf
 
 ##### Category: Tamper
-* For L1 level compliance the FTM should support tamper evidence.
+* For L1 level compliance the FTM should support tamper evidence. Tamper responsiveness is recommended for the whole device/system.
 
 #### Threats to Protect
 The FTM should protect against the following threats.
@@ -168,7 +169,7 @@ A digital device ID in MOSIP would be a signed JSON (RFC 7515) as follows:
   "deviceSubType": "Subtypes of the biometric device",
   "deviceProvider": "Device provider name",
   "deviceProviderId": "Device provider id",
-  "dateTime": "Datetime in ISO format with timezone. Identity request time"
+  "dateTime": "Current datetime in ISO format"
 }
 ```
 
@@ -209,7 +210,7 @@ model | <ul><li>Model of the device.</li><li>This value should be same as printe
 type | <ul><li>Currently allowed values for device type are "Finger", "Iris" or "Face".</li><li>More types can be added based on Adopter's implementation.</li></ul>
 deviceSubType | <ul><li>Device Sub type is based on the device type.</li><li>For Finger - "Slap", "Single" or "Touchless"</li><li>For Iris - "Single" or "Double"</li><li>For Face - "Full face"</li></ul>
 deviceProvider | <ul><li>Name of the device provider.</li><li>Device provider should be a legal entity in the country.</li></ul>
-dateTime | <ul><li>The time during the issuance of this identity.</li><li>This is in ISO format with timezone.</li></ul>
+dateTime | <ul><li>Current time during the issuance of the request.</li><li>This is in ISO format.</li></ul>
 
 ### Keys
 List of keys used in the device and their explanation.
@@ -470,7 +471,7 @@ The capture request would be used to capture a biometric from MOSIP compliant de
   "purpose": "Auth  or Registration",
   "specVersion": "Expected version of the MDS spec",
   "timeout" : "Timeout for capture",
-  "captureTime": "Time of capture request in ISO format including timezone",
+  "captureTime": "Capture request time in ISO format",
   "domainUri": "URI of the auth server",
   "transactionId": "Transaction Id for the current capture",
   "bio": [
@@ -501,7 +502,7 @@ env | <ul><li>The target environment.</li><li>Allowed values are "Staging", "Dev
 purpose | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>For devices that are not registered the purpose is empty.</li><li>Allowed values are "Auth" or "Registration".</li></ul>
 specVersion | Expected version of MDS specification.
 timeout | <ul><li>Max time the app will wait for the capture.</li><li>Its expected that the API will respond back before timeout with the best frame.</li><li>All timeouts are in milliseconds.</li></ul>
-captureTime | <ul><li>Time of capture in ISO format with timezone.</li><li>The time is as per the requesting application.</li></ul>
+captureTime | <ul><li>Time of capture in ISO format.</li><li>The time is as per the requesting application.</li></ul>
 domainUri | <ul><li>URI of the authentication server.</li><li>This can be used to federate across multiple providers or countries or unions.</li></ul>
 transactionId | <ul><li>Unique Id of the transaction.</li><li>This is an internal Id to the application thats providing the service.</li><li>Different id should be used for every successful auth.</li><li>So even if the transaction fails after auth we expect this number to be unique.</li></ul>
 bio.type | Allowed values are "Finger", "Iris" or "Face".
@@ -530,7 +531,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
         "domainUri": "URI of the auth server",
         "bioValue": "Encrypted with session key and base64urlencoded biometric data",
         "transactionId": "Unique transaction id",
-        "timestamp": "ISO format datetime with time zone",
+        "timestamp": "Capture datetime in ISO format",
         "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
       },
@@ -555,7 +556,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
         "domainUri": "uri of the auth server",
         "bioValue": "encrypted with session key and base64urlencoded biometric data",
         "transactionId": "unique transaction id",
-        "timestamp": "ISO Format date time with timezone",
+        "timestamp": "Capture datetime in ISO format",
         "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
       },
@@ -708,7 +709,7 @@ The API is used by the devices that are compatible for the registration module. 
   "purpose": "Auth  or Registration",
   "specVersion": "Expected MDS spec version",
   "timeout": "Timeout for registration capture",
-  "captureTime": "Time of capture request in ISO format including timezone",
+  "captureTime": "Time of capture request in ISO format",
   "transactionId": "Transaction Id for the current capture",
   "bio": [
     {
@@ -735,7 +736,7 @@ env | <ul><li>The target environment.</li><li>Allowed values are "Staging", "Dev
 purpose | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>For devices that are not registered the purpose is empty.</li><li>Allowed values are "Auth" or "Registration".</li></ul>
 specVersion | Expected version of MDS specification.
 timeout | <ul><li>Max time the app will wait for the capture.</li><li>Its expected that the API will respond back before timeout with the best frame.</li><li>All timeouts are in milliseconds.</li></ul>
-captureTime | <ul><li>Time of capture in ISO format with timezone.</li><li>The time is as per the requesting application.</li></ul>
+captureTime | <ul><li>Time of capture in ISO format.</li><li>The time is as per the requesting application.</li></ul>
 transactionId | <ul><li>Unique Id of the transaction.</li><li>This is an internal Id to the application thats providing the service.</li><li>Different id should be used for every successful auth.</li><li>So even if the transaction fails after auth we expect this number to be unique.</li></ul>
 bio.type | Allowed values are "Finger", "Iris" or "Face".
 bio.count | <ul><li>Number of biometric data that is collected for a given type.</li><li>The device should validate and ensure that this number is in line with the type of biometric that's captured.</li></ul>
@@ -763,7 +764,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
         "env": "Target environment",
         "bioValue": "base64urlencoded biometrics (ISO format)",
         "transactionId": "Unique transaction id sent in request",
-        "timestamp": "2019-02-15T10:01:57.086+05:30",
+        "timestamp": "2019-02-15T10:01:57.086Z",
         "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100.",
         "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100."
       },
@@ -785,7 +786,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
         "env":  "Target environment",
         "bioValue": "base64urlencoded extracted biometric (ISO format)",
         "transactionId": "Unique transaction id sent in request",
-        "timestamp": "2019-02-15T10:01:57.086+05:30",
+        "timestamp": "2019-02-15T10:01:57.086Z",
         "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100",
         "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100"
       },
@@ -870,7 +871,7 @@ This API is exposed by the MOSIP server to the device providers.
         "digitalId": "Signed digital id of the device",
         "firmware": "Firmware version",
         "deviceExpiry": "Device expiry date",
-        "timestamp":  "ISO format datetime with timezone from device"
+        "timestamp":  "Current time in ISO format"
       },
       "foundationalTrustProviderId" : "Foundation trust provider Id, in case of L0 this is empty"
     }
@@ -993,7 +994,7 @@ isItForRegistrationDevice - It is set as true when it is a registration device a
 {
   "id": "io.mosip.devicederegister",
   "version": "de-registration server api version as defined above",
-  "responsetime": "iso time format",
+  "responsetime": "Current time in ISO format",
   "response": {
     "status": "Success",
     "deviceCode": "<device code>",
@@ -1058,7 +1059,7 @@ domainUri - unique uri per auth providers. This can be used to federate across m
 {
   "id": "io.mosip.auth.country.certificate",
   "version": "certificate server api version as defined above",
-  "responsetime": "iso time format",
+  "responsetime": "Current time in ISO format",
   "response": [
     {
       "certificate": "base64encoded certificate as x509 V3 format"

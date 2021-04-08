@@ -13,6 +13,7 @@ Publish Date | Revision
 -------------|--------
 18-Jan-2021 | This is the first formal publication of this document as a version-ed specification. Earlier drafts are superseded by this document.
 26-Feb-2021 | Updated the [FTM criteria](#certification) to include PCI PED 2.0 and CC.
+08-Apr-2021 | We will be following datetime values in ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ. The same has been updated throughout the document.
 
 ## Glossary of Terms
 Key | Description
@@ -27,7 +28,7 @@ Device Provider Certificate | A digital certificate issued to the "Device Provid
 Management Server | A server run by the device provider to manage the life cycle of the biometric devices.
 FPS | Frames Per Second
 Signature | All signature should be as per RFC 7515.<br>Header - The attribute with "alg" set to RS256 and x5c set to base64urlencoded certificate.<br>Payload - Byte array of the actual data, always represented as base64urlencoded.<br>Signature - Base64urlencoded signature bytes
-ISO Format Time | ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ (Example: 2020-12-08T09:39:37Z)
+ISO format timestamp | ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ (Example: 2020-12-08T09:39:37Z)
 Registration | The process of applying for a Foundational Id.
 Auth | The process of verifying one’s identity.
 KYC | Know Your Customer is the process of providing consent to perform profile verification and update.
@@ -169,7 +170,7 @@ A digital device ID in MOSIP would be a signed JSON (RFC 7515) as follows,
   "deviceSubType": "Subtypes of the biometric device",
   "deviceProvider": "Device provider name",
   "deviceProviderId": "Device provider id",
-  "dateTime": "Datetime in ISO format with timezone. Identity request time"
+  "dateTime": "Current datetime in ISO format"
 }
 ```
 
@@ -212,7 +213,7 @@ model | This represents the model of the device. This value should be same as th
 type | This represents the type of the device. Currently, the allowed values here are "Finger", "Iris" or "Face". More types can be added based on the adopter's implementation.
 deviceSubType | This represents the device sub type that is based on the device type.<br>For Finger - "Slap", "Single" or "Touchless"<br>For Iris - "Single" or "Double"<br>For Face - "Full face"
 deviceProvider | This represents the name of the device provider. The device provider should be a legal entity in the country.
-dateTime | This contains the time during the issuance of an identity. This is in ISO format with timezone.
+dateTime | This contains the time during the issuance of an identity. This is in ISO format.
 
 ### Keys
 List of keys used in the device and their explanation.
@@ -497,7 +498,7 @@ The capture request would be used to capture a biometric from MOSIP compliant de
   "purpose": "Auth",
   "specVersion": "Expected version of the SBI spec",
   "timeout" : "Timeout for capture",
-  "captureTime": "Time of capture request in ISO format including timezone",
+  "captureTime": "Time of capture request in ISO format",
   "domainUri": "URI of the auth server",
   "transactionId": "Transaction Id for the current capture",
   "bio": [
@@ -535,7 +536,7 @@ env | This represents the target environment. Allowed values are "Staging", "Dev
 purpose | The purpose of the device in the MOSIP ecosystem. For devices that are not registered the purpose is empty. Allowed value is "Registration".
 specVersion | Expected version of SBI specification.
 timeout | Max time the app will wait for the capture. It's expected that the API will respond back before timeout if the requestedScore is met, or with the best frame at the timeout. All timeouts are in milliseconds.
-captureTime | Time of capture in ISO format with timezone. The time is as per the requesting application.
+captureTime | Time of capture in ISO format. The time is as per the requesting application.
 domainUri | URI of the authentication server. This can be used to federate across multiple providers or countries or unions.
 transactionId | Unique ID for the transaction. This is an internal Id to the application that's providing the service. Different id should be used for every transaction. So, even if the transaction fails after auth we expect this number to be unique.
 bio.type | Allowed values are "Finger", "Iris" or "Face".
@@ -574,7 +575,7 @@ The SBI must make sure of the following,
         "domainUri": "URI of the auth server",
         "bioValue": "Encrypted with session key and base64urlencoded biometric data",
         "transactionId": "Unique transaction id",
-        "timestamp": "ISO format datetime with time zone",
+        "timestamp": "Current datetime in ISO format",
         "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
       },
@@ -605,7 +606,7 @@ The SBI must make sure of the following,
         "domainUri": "URI of the auth server",
         "bioValue": "Encrypted with session key and base64urlencoded biometric data",
         "transactionId": "Unique transaction id",
-        "timestamp": "ISO Format date time with timezone",
+        "timestamp": "Current datetime in ISO format",
         "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
       },
@@ -770,7 +771,7 @@ The API is used by the devices that are compatible for the registration module. 
   "purpose": "Registration",
   "specVersion": "Expected SBI spec version",
   "timeout": "Timeout for registration capture",
-  "captureTime": "Time of capture request in ISO format including timezone",
+  "captureTime": "Time of capture request in ISO format",
   "transactionId": "Transaction Id for the current capture",
   "bio": [
     {
@@ -802,7 +803,7 @@ env | The target environment. Allowed values are "Staging", "Developer", "Pre-Pr
 purpose | The purpose of the device in the MOSIP ecosystem. For devices that are not registered the purpose is empty. Allowed value is "Registration".
 specVersion | Expected version of SBI specification.
 timeout | Max time the app will wait for the capture. It's expected that the API will respond back before timeout if the requestedScore is met, or with the best frame at the timeout. All timeouts are in milliseconds.
-captureTime | Time of capture in ISO format with timezone. The time is as per the requesting application.
+captureTime | Time of capture in ISO format. The time is as per the requesting application.
 transactionId | Unique ID of the transaction. This is an internal Id to the application that's providing the service. Different id should be used for every transaction. So, even if the transaction fails we expect this number to be unique.
 bio.type | Allowed values are "Finger", "Iris" or "Face".
 bio.count | Number of biometric data that is collected for a given type. The device should validate and ensure that this number is in line with the type of biometric that's captured.
@@ -829,7 +830,7 @@ customOpts | In case, the device vendor wants to send additional parameters they
         "env": "Target environment",
         "bioValue": "base64urlencoded biometrics (ISO format)",
         "transactionId": "Unique transaction id sent in request",
-        "timestamp": "2019-02-15T10:01:57.086+05:30",
+        "timestamp": "2019-02-15T10:01:57.086Z",
         "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100.",
         "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100."
       },
@@ -857,7 +858,7 @@ customOpts | In case, the device vendor wants to send additional parameters they
         "env":  "Target environment",
         "bioValue": "base64urlencoded biometric (ISO format)",
         "transactionId": "Unique transaction id sent in request",
-        "timestamp": "2019-02-15T10:01:57.086+05:30",
+        "timestamp": "2019-02-15T10:01:57.086Z",
         "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100",
         "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100"
       },
@@ -965,7 +966,7 @@ request.data.domainUri | unique URI per auth providers. This can be used to fede
 {
   "id": "io.mosip.auth.country.certificate",
   "version": "certificate server api version as defined above",
-  "responsetime": "iso time format",
+  "responsetime": "current datettime in ISO time format",
   "response": [
     {
       "certificate": "base64urlencoded certificate as x509 V3 format"
