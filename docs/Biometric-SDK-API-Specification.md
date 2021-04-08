@@ -10,6 +10,7 @@ Publish Date|Revison
 June 15, 2020|This is the first formal publication of the interface as a versioned specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
 June 30, 2020|The section related to [Possible Flags](#possible-flags) in [Matcher](#matcher) has been added.
 July 28, 2020|The segmentation API was expecting a BIR sample in the request. In order to standardize this interface and to bring in some more flexibility on the usage, we are changing the input format to BiometricRecord sample.
+April 8, 2021|Note on SDK quality check has been added.
 
 # Introduction
 Mosip as a platform does not have any inbuilt capabilities to handle biometrics. It relies on external components and subsystems to perform all activities pertaining to biometrics. As a platform it defines formats, standards and interfaces for these external components and subsystems. The Biometrics SDK is a critical external component used for performing operations with biometric data in multiple mosip modules - Registration Client, Authentication and Registration Processor.
@@ -57,6 +58,10 @@ The quality check method is used to determine if the biometrics data is of suffi
 * Unsupported biometric type
 * Unsupported image format
 * Processing error
+
+{% hint style="info" %}
+SDK is expected to provide NFIQ V 2.0 scores for quality check.
+{% endhint %}
 
 ## Implementation notes
 The input biometric record has segments from multiple biometric types. The method is expected to process the segments of each biometric type together and return a single quality score for the biometric type. For example, if the record has the following segments - right iris, left iris, right thumb, left thumb - the method should return a quality score for biometric types iris and fingerprint. The iris quality score will factor the left iris and right iris segments, while the fingerprint quality will factor the left thumb and right thumb.
