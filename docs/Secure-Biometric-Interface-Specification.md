@@ -27,7 +27,7 @@ Device Provider Certificate | A digital certificate issued to the "Device Provid
 Management Server | A server run by the device provider to manage the life cycle of the biometric devices.
 FPS | Frames Per Second
 Signature | All signature should be as per RFC 7515.<br>Header - The attribute with "alg" set to RS256 and x5c set to base64urlencoded certificate.<br>Payload - Byte array of the actual data, always represented as base64urlencoded.<br>Signature - Base64urlencoded signature bytes
-ISO Format Time | ISO 8601 with format yyyy-mm-dd HH:MM:ssZ
+ISO Format Time | ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ (Example: 2020-12-08T09:39:37Z)
 Registration | The process of applying for a Foundational Id.
 Auth | The process of verifying one’s identity.
 KYC | Know Your Customer is the process of providing consent to perform profile verification and update.
