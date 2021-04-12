@@ -2,7 +2,7 @@ This document contains the features that were developed or enhanced as part of M
 
 # Commons
 * Web Sub Upgrade 
-	* Persistence of web sub messages is handled in database whenever a subscriber is down or unavailable and is not able to receive the 	messages due to lack of persistence.
+	* WebSub messages are now being persisted in database.
 	* Web sub notifications are handled after the restarts so that the subscriber should continue to receive the messages
 	
 * New script are created to handle the deployment of master dml data that convert the excel file to CSV format on the fly and upload the data.
@@ -11,11 +11,11 @@ This document contains the features that were developed or enhanced as part of M
 
 # ID Authentication
 * We have now added Certificate thumbprint has in ekyc response originating from ID Auth for encryption/decryption.
-* We have now integrated Bio-SDK in ID Repo to store the bio metric extracts instead of image.
 * We have now handled the failed Request in Credential modules with a new API to retrigger the failed record
 * The Bio Extractor is now removed, and the logic for bio-extraction for different formats and different SDK HTTP urls are applied in ID Repo.
-* Implemented retry mechanism for event handling when we fetch data from Authentication.
-* We have now handled bulk credential issuance of UIN through parallel processing of records in batch job.
+* We have now implemented retry mechanism for credential store with batch job when there is an error occurring in retrieving/storing credential data
+* We have now included retry logic in REST API calls and keymanager encryption/decryption in IDA and ID Repo
+* We are now capturing Auth Transaction History for authentication transactions with validation failures also.
 
 # Partner Management
 * We have now introduced a new search API in partner management system for fields such as policy, policy group, partner, partner type etc
@@ -28,14 +28,14 @@ This document contains the features that were developed or enhanced as part of M
 * The Resident services now has a new generate OTP api instead of generating otp via IDA.
 
 # Registration Processor
-* We have now included expiry in kafka event bus messages.
+* We have now included expiry in Vertx and kafka event bus messages.
 * We have now included Packet tagging based on specific criteria such as age group,Gender,Resident type, biometrics exception scenarios and also route the packets to various workflows based on tags.
 * We have moved away from one minio bucket for each packet to single bucket for all packets in minio and have one folder and corresponding files for each RID,the performance fix for this activity is also done.
 * Documented the audit event list for each stage in Registration Processor
 * We have now replaced the spring cache type with the Hazelcast in-memory caching mechanism provided by the spring boot.
 * We now have expiry time configured for any message sent in for ABIS Queue and Manual Adjudication Queue.Once the message has exceeded the expiry time then the packet is marked for reprocessing.
-* The registration processor is now able to retrieve the data based on the priority set in a policy defined by the stage. 
-* Upgraded Manual Adjudication in MOSIP so now the MA stage is now able to take a decision based on the results from MA System (Reject or Process the packet)
+* The packet manager in registration processor is now able to retrieve the data based on the priority set in a policy defined by the stage.
+* Upgraded Manual Verification stage in MOSIP to take a decision based on the results from Manual Verification System (Reject or Process the packet)
 
 # Registration Client
 * We have now enabled Forgot Password and Reset Password functionality in Registration client through integrated IAM.
