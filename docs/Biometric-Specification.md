@@ -80,7 +80,14 @@ FTM\*\*	| SBI 1.0 - Use host based security (and above) | SBI 2.0 - FTM supporte
 
 {% endhint %}
 
+{% hint style="info" %}
+
+*Capture Time across modalities should be less than 4 Seconds (time taken for providing a final capture response to the calling application, when the biometrics are well placed on the sensors)*
+
+{% endhint %}
+
 We recommend that countries look at ergonomics, accessibility, ease of usage, and common availability of devices while choosing devices for use in registration and authentication scenarios.
+
 
 # XML Container
 
