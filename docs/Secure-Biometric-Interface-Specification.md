@@ -991,11 +991,15 @@ The management server has the following objectives.
 1. Validate the devices to ensure it's a genuine device from the respective device provider. This can be achieved using the device info and the certificates of the Foundational Trust Module.
 1. Manage/Sync time between the end device and the server. The time to be synced should be the only trusted time accepted by the device.
 1. Ability to issue commands to the end device for
-    1. Cleanup of the devicekeys.
+    1. Cleanup of the device keys.
     1. Collect device information to maintain, manage, support and upgrade a device remotely.
 1. A central repository of all the approved devices from the device provider.
 1. Safe storage of keys using HSM FIPS 140-2 Level 3. These keys are used to issue the device certificate upon registration of the device with the Management Server. The Management Server is created and hosted by the device provider outside of MOSIP software. The communication protocols between the SBI and the Management Server can be decided by the respective device provider. Such communication should be restricted to the above specified interactions only. No transactional information should be sent to this server.
 1. Should have the ability to push updates from the server to the client devices.
+
+{% hint style="info" %}
+*As there are no adopter specific information being exchanged at the management server or at the FTM provisioning server, there are no mandates from MOSIP where these are located globally. However the adopter is recommended to have audit and contractual mechanisms to validate the compliance of these components at any point in time.*
+{% endhint %}
 
 ### Management Client
 Management client is the interface that connects the device with the respective management server. This could be a separate library running within the SBI or a simple set of API definitions talking to the management server over HTTPs. It's important that the communication between the management server and its clients are designed with scalability, robustness, performance and security. The management server may add many more capabilities than what is described here, But the basic security objectives should be met at all times irrespective of the offerings.
@@ -1033,6 +1037,10 @@ Secure provisioning is applicable to both the FTM and the Device providers.
 1. All debug options within the FTM or device should be disabled permanently
 1. All key creations needed for provisioning should happen automatically using FIPS 140-2 Level 3 or higher devices. No individual or a group or organization should have mechanisms to influence this behavior.
 1. Before the devices/FTM leave the secure provisioning facility all the necessary trust should be established and should not be re-programmable.
+
+{% hint style="info" %}
+*As there are no adopter specific information being exchanged at the management server or at the FTM provisioning server, there are no mandates from MOSIP where these are located globally. However the adopter is recommended to have audit and contractual mechanisms to validate the compliance of these components at any point in time.*
+{% endhint %}
 
 ### Compliance Level
 API     | Compatible

@@ -1091,6 +1091,10 @@ The management server has the following objectives.
 The Management Server is created and hosted by the device provider outside of MOSIP software. The communication protocols between the MDS and the Management Server can be decided by the respective device provider. Such communication should be restricted to the above specified interactions only. No transactional information should be sent to this server.
 1. Should have the ability to push updates from the server to the client devices.
 
+{% hint style="info" %}
+*As there are no adopter specific information being exchanged at the management server or at the FTM provisioning server, there are no mandates from MOSIP where these are located globally. However the adopter is recommended to have audit and contractual mechanisms to validate the compliance of these components at any point in time.*
+{% endhint %}
+
 ### Management Client
 Management client is the interface that connects the device with the respective management server. Its important that the communication between the management server and its clients are designed with scalability, robustness, performance and security. The management server may add many more capabilities than what is described here, But the basic security objectives should be met at all times irrespective of the offerings.
 
@@ -1124,6 +1128,10 @@ Secure provisioning is applicable to both the FTM and the Device providers.
 1. All debug options within the FTM or device should be disabled permanently
 1. All key creations need for provisioning should happen automatically using FIPS 140-2 Level 3 or higher devices. No individual or a group or organization should have mechanism to influence this behavior.
 1. Before the devices/FTM leaving the secure provisioning facility all the necessary trust should be established and should not be re-programmable.
+
+{% hint style="info" %}
+*As there are no adopter specific information being exchanged at the management server or at the FTM provisioning server, there are no mandates from MOSIP where these are located globally. However the adopter is recommended to have audit and contractual mechanisms to validate the compliance of these components at any point in time.*
+{% endhint %}
 
 ### Compliance Level
 API     | Compatible
