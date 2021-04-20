@@ -39,6 +39,7 @@ The ID Repository credential service will ask ID Repository for biometrics for a
 
 # Solution
 The key solution considerations are:
+
 TBD
 
 ## Class Diagram
