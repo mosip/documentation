@@ -1,5 +1,3 @@
-# Biometric Extractor Service
-
 # Overview
 
 This module enables a resident to:
