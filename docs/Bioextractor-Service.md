@@ -41,11 +41,11 @@ TBD
 
 ## Class Diagram
 
-![](_images/arch_diagrams/bioextractor-service-class-diagram.png)
+![](id-repository/design/id-repository/_images/bioextractor-service/bioextractor-service-class-diagram.png)
 
 ## Sequence Diagram
 
-![](_images/arch_diagrams/bioextractor-service-sequence-diagram.png)
+![](id-repository/design/id-repository/_images/bioextractor-service/bioextractor-service-sequence-diagram.png)
 
 
 
