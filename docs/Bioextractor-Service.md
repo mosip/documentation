@@ -41,8 +41,8 @@ TBD
 
 ## Class Diagram
 
-![](_images/biometrics/bioextractor-service-class-diagram.png)
+![](_images/arch_diagrams/bioextractor-service-class-diagram.png)
 
 ## Sequence Diagram
 
-![](_images/biometrics/bioextractor-service-sequence-diagram.png)
+![](_images/arch_diagrams/bioextractor-service-sequence-diagram.png)
