@@ -46,3 +46,6 @@ TBD
 ## Sequence Diagram
 
 ![](_images/arch_diagrams/bioextractor-service-sequence-diagram.png)
+
+
+
