@@ -1,3 +1,5 @@
+# Biometric Extractor Service
+
 # Abstract
 
 Biometrics is widely used in identification systems to improve their security. Despite the fact that biometric identification systems have reached a certain level of maturity, some difficult tasks still require further research. We presented three key aspects of biometric identification in this document: iris, face, and fingerprints, for which we proposed an efficient algorithm-based orientation deviation descriptor.
@@ -37,6 +39,7 @@ The ID Repository credential service will ask ID Repository for biometrics for a
 
 # Solution
 The key solution considerations are:
+
 TBD
 
 ## Class Diagram
