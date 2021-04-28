@@ -118,8 +118,8 @@ The supported algorithm and curves are listed [here](#cryptography).
 	* https://www.commoncriteriaportal.org/files/ppfiles/pp0035a.pdf
 	* https://www.commoncriteriaportal.org/files/ppfiles/pp0084a_pdf.pdf
 
-##### Category: Tamper
-* For SBI 2.0 level compliance the FTM should support tamper evidence. Tamper responsiveness is recommended for the whole device/system.
+##### System/Device Level Tamper (optional)
+System/Device Level Tamper Responsiveness is recommended (not mandatory). In this case, FTM should be capable of showcasing Tamper Responsiveness (keys must be erased) against a tamper at the system/device level.
 
 #### Threats to Protect
 The FTM should protect against the following threats.
