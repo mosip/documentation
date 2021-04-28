@@ -14,7 +14,7 @@
 ## Scope
 MOSIP **1.1.5** succeeds **1.1.4** with enhancements and important defect fixes which were identified in [Release 1.1.4](Release-Notes-1.1.4.md#list-of-known-issues).
 
-**Release Date:** March 10, 2021
+**Release Date:** April 23, 2021
 
 **Key Highlights**
 
@@ -38,7 +38,8 @@ Low level design documents for each module are available in the respective githu
 
 * [Commons](https://github.com/mosip/commons/tree/v1.1.5)
 * [Pre-registration](https://github.com/mosip/pre-registration/tree/v1.1.5)
-* [Registration](https://github.com/mosip/registration/tree/v1.1.5)
+* [Registration Client](https://github.com/mosip/registration-client/tree/1.1.5)
+* [Registration Processor](https://github.com/mosip/registration/tree/v1.1.5)
 * [ID Repository](https://github.com/mosip/id-repository/tree/v1.1.5)
 * [ID Authentication](https://github.com/mosip/id-authentication/tree/v1.1.5)
 * [Partner Management Services](https://github.com/mosip/partner-management-services/tree/v1.1.5)
@@ -46,11 +47,12 @@ Low level design documents for each module are available in the respective githu
 * [Admin Services](https://github.com/mosip/admin-services/tree/v1.1.5)
 * [Print Services](https://github.com/mosip/print/tree/v1.1.5)
 * [Config Respository](https://github.com/mosip/mosip-config/tree/v1.1.5)
+* [Durian](https://github.com/mosip/durian/tree/v1.1.5)
 * [Reference Implementation](https://github.com/mosip/mosip-ref-impl/tree/v1.1.5)
 
 {% hint style="info" %}
 
-Code needs to be deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/tree/1.1.5/deployment/sandbox-v2).
+Code needs to be deployed as per the procedure depicted in [Sandbox Installer](https://github.com/mosip/mosip-infra/tree/v1.1.5/deployment/sandbox-v2).
 
 {% endhint %}
 
