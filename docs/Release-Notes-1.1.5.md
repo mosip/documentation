@@ -115,7 +115,6 @@ Bug ID | Summary | Module
 [MOSIP-10497](https://mosip.atlassian.net/browse/MOSIP-10497) | After User and Machine re-map, Reg-client is not working | Registration
 [MOSIP-13227](https://mosip.atlassian.net/browse/MOSIP-13227) | Post-Remap and completion of pending activities still not able to remap | Registration
 [MOSIP-13160](https://mosip.atlassian.net/browse/MOSIP-13160) | The priority is not working when we donot add stage level priority it work | Registration
-[MOSIP-12875](https://mosip.atlassian.net/browse/MOSIP-12875) | UIN generation notification not being received | Registration
 
 ## Upgrade Testing
 
