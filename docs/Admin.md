@@ -1,10 +1,10 @@
 # Overview 
 The MOSIP platform is configured via the Admin application. This application can be accessed only by the privileged group of administration personnel. When the MOSIP platform gets initialized, there are default configurations and seed data are setup. Post installation, following operations can be done using the Admin application:  
-* Configuration entry changes 
+<!--* Configuration entry changes -->
 * Master data management
 * User management 
 * Mapping of the master data to various resources
-
+<!-- This is commented out. -->
 The module provides a single user interface to administer the MOSIP platform.  On initial platform installation, data and configurations may be uploaded from CSV files.  
 
 Admin application contains UI layer and Service layer. All the components in both Services and UI are secure and authenticated. Every component should be defined with the authorization module plugged in. For example, if a component's data is not supposed to be viewed except authorized personnel, no user will be able to view it. So is for creating, editing and deleting functionalities. 
