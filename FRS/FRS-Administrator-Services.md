@@ -1,5 +1,5 @@
 ## Table Of Contents
-- [1. Login](#1-login-) /******_(ASR_FR_1)_*****/
+- [1. Login](#1-login-) <!--_(ASR_FR_1)_-->
   * [1.1 Login](#11-login) _(ASR_FR_1.1)_
   * [1.2 Logout](#12-logout)
     * [1.2.1 Manual Logout](#121-manual-logout) _(ASR_FR_1.2)_
