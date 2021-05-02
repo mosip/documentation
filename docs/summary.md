@@ -90,7 +90,7 @@
 			* [Registration Client Audits](modules/commons/Registration-Client-Audits.md)
 			* [ID Repository Audits](modules/commons/ID-Repository-Audits.md)
 			* [ID Authentication Audits](modules/commons/ID-Authentication-Audits.md) 
-        * [Authentication and Authorization Functionality](modules/commons/Authentication-and-Authorization.md)      
+        * [Authentication and Authorization](modules/commons/Authentication-and-Authorization.md)      
         * [Common Services](modules/commons/Common-Services.md)
         * [Data Services](modules/commons/Data-Services.md)
 		* [Data Share](modules/commons/Data-Share.md)
