@@ -67,10 +67,11 @@
     * [Terminology and Definitions](overview/Glossary.md)
 * Standards and Specifications
     * Biometrics 
-        * [ABIS](standards/biometrics/Automated-Biometric-Identification-System-ABIS.md)
+        * [ABIS](standards/biometrics/ABIS.md)
         * [Biometric SDK](standards/biometrics/Biometric-SDK.md)
-        * [MDS Specification](standards/biometrics/MOSIP-Device-Service-Specification.md)
-        * [Biometric Data Specification](standards/biometrics/Biometric-Data-Specification.md)
+        * [MDS Specification](standards/interfaces/MOSIP-Device-Service-Specification.md)
+        * [Secure Biometric Interface](standards/biometrics/Secure-Biometric-Interface.md)
+        * [Biometric Specification](standards/biometrics/Biometric-Specification.md)
         * [CBEFF XML](standards/biometrics/CBEFF-XML.md)
     * MOSIP Schema
         * [ID Object Definition](standards/schemas/MOSIP-ID-Object-Definition.md)
@@ -137,10 +138,10 @@
             * [Test Rig Design](modules/testing/Test-Rig-Design.md)
             * [Tester Documentation](modules/testing/Tester-Documentation.md)
 * API Docs
-    * [ABIS APIs](api-reference/ABIS-APIs.md)
+    * [ABIS APIs](standards/interfaces/ABIS-APIs.md)
     * [Admin APIs](api-reference/Admin-APIs.md)
     * [Authentication and Authorization APIs](api-reference/AuthN-and-AuthZ-APIs.md)
-    * [Biometric SDK APIs](api-reference/Biometric-SDK-API-Specification.md)
+    * [Biometric SDK APIs](standards/interfaces/Biometric-SDK-APIs.md)
     * [BlacklistedWords APIs](api-reference/BlacklistedWords-APIs.md)
     * [Common APIs](api-reference/Common-APIs.md)
 	* [Credential Issuace APIs.md](api-reference/Credential-Issuance-APIs.md)
