@@ -102,15 +102,13 @@
     * Registration
         * [Pre-Registration](modules/registration/pre-registration/Pre-Registration.md)
             * [Functionality]
-            <!---
-                * Login/create a user account
-                * Creating an application
-                * Attaching documents to the application
-                * Booking an appointment
-                * Appointment acknowledgement
-                * Batch jobs
-                * Data sync to registration client 
-            --->
+                * [Login/create a user account](Login-or-create-a-user-account.md)
+                * [Creating an application](Creating-an-application.md)
+                * [Attaching documents to an application](Attaching-documents-to-an-application.md)
+                * [Booking an appointment](Booking-an-appointment.md)
+                * [Appointment acknowledgment](Appointment-acknowledgment.md)
+                * [Batch jobs](Batch-jobs.md)
+                * [Data sync](Data-sync.md)
             * [Configuration](modules/registration/pre-registration/Pre-Registration-Configuration.md)
         * [Registration](modules/registration/client/Registration-Client.md)
             * [Functionality](modules/registration/client/Registration-Functionality.md)
