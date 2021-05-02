@@ -14,8 +14,8 @@
 
 {% hint style="info" %}
 
-* For details on the low level design please follow the page,
+* Link to design documentation,
     * [Approach to pre-registration document service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-document-service.md)
-* For details on the API specification on pre-registration document upload follow this [page](../../../api-reference/Pre-Registration-APIs.md#document-service-public)
+* [Link to pre-registration document API specifications](../../../api-reference/Pre-Registration-APIs.md#document-service-public)
 
 {% endhint %}

@@ -24,7 +24,7 @@ FTM\*\* | SBI 1.0 - Use host based security (and above) | SBI 2.0 - FTM supporte
 
 {% hint style="info" %}
 
-\* MOSIP adopters can change this if needed.<br>\*\* Please refer [SBI specification documentation](Secure-Biometric-Interface-Specification.md).
+\* MOSIP adopters can change this if needed.<br>\*\* Please refer [SBI specification documentation](../interfaces/Secure-Biometric-Interface-Specification.md).
 
 {% endhint %}
 
@@ -54,7 +54,7 @@ FTM\*\* | SBI 1.0  - Use host-based security (and above) | SBI 2.0 - FTM support
 
 {% hint style="info" %}
 
-\* MOSIP adopters can change this if needed.<br>\*\* Please refer [SBI specification documentation](Secure-Biometric-Interface-Specification.md).
+\* MOSIP adopters can change this if needed.<br>\*\* Please refer [SBI specification documentation](../interfaces/Secure-Biometric-Interface-Specification.md).
 
 {% endhint %}
 

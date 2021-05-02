@@ -53,8 +53,8 @@ The user opts to view the available slots for a selected registration center
 
 {% hint style="info" %}
 
-* For details on the low level design please follow the page,
+* Link to design documentation,
     * [Approach to pre-registration booking service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-booking-service.md)
-* For details on the API specification on pre-registration booking follow this [page](../../../api-reference/Pre-Registration-APIs.md#booking-service-public)
+* [Link to pre-registration booking API specifications](../../../api-reference/Pre-Registration-APIs.md#booking-service-public)
 
 {% endhint %}

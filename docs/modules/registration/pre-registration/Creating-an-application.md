@@ -62,8 +62,8 @@ The user can discard the pre-registration by clicking on the Delete icon for the
 
 {% hint style="info" %}
 
-* For details on the low level design please follow the page,
+* Link to design documentation,
     * [Approach to pre-registration demographic service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-demographic-service.md)
-* For details on the API specification on pre-registration application follow this [page](../../../api-reference/Pre-Registration-APIs.md#demographic-service-public)
+* [Link to pre-registration demographics API specifications](../../../api-reference/Pre-Registration-APIs.md#demographic-service-public)
 
 {% endhint %}

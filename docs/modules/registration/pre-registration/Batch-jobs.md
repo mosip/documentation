@@ -20,7 +20,7 @@ Booking batch job runs every day to perform some standard tasks:
 
 {% hint style="info" %}
 
-* For details on the low level design please follow the page,
+* Link to design documentation,
     * [Approach to pre-registration batch job service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-batch-job.md)
 
 {% endhint %}
