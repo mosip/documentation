@@ -10,6 +10,7 @@ Publish Date|Revison
 June 15, 2020|This is the first formal publication of the interface as a versioned specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
 June 30, 2020|The section related to [Possible Flags](#possible-flags) in [Matcher](#matcher) has been added.
 July 28, 2020|The segmentation API was expecting a BIR sample in the request. In order to standardize this interface and to bring in some more flexibility on the usage, we are changing the input format to BiometricRecord sample.
+April 8, 2021|Note on SDK quality check has been added.
 
 # Introduction
 Mosip as a platform does not have any inbuilt capabilities to handle biometrics. It relies on external components and subsystems to perform all activities pertaining to biometrics. As a platform it defines formats, standards and interfaces for these external components and subsystems. The Biometrics SDK is a critical external component used for performing operations with biometric data in multiple mosip modules - Registration Client, Authentication and Registration Processor.
@@ -57,6 +58,10 @@ The quality check method is used to determine if the biometrics data is of suffi
 * Unsupported biometric type
 * Unsupported image format
 * Processing error
+
+{% hint style="info" %}
+SDK is expected to provide NFIQ V 2.0 scores for quality check.
+{% endhint %}
 
 ## Implementation notes
 The input biometric record has segments from multiple biometric types. The method is expected to process the segments of each biometric type together and return a single quality score for the biometric type. For example, if the record has the following segments - right iris, left iris, right thumb, left thumb - the method should return a quality score for biometric types iris and fingerprint. The iris quality score will factor the left iris and right iris segments, while the fingerprint quality will factor the left thumb and right thumb.
@@ -268,7 +273,7 @@ More documentation will be shared on the source and target params as well as sou
 * Flags - Some mosip specific flags might be passed to method calls. These are to be logged. Specific flags supported by the SDK to tap specific behavior of the SDK can be documented and provided. The default behavior in the absence of flags should be specified and the optimal behavior should be the default behavior.
 * Analytics - List of name value pairs that can be used to convey additional information. The values filled are specific to the implementing library. This could contain information about the aspects where quality is failing for e.g. ICAO compliance for tilt or lighting. In case of matches it could contain information like the NIST score, the algorithm used for matching and more.
 * Errors - The error list can be used to list out specific causes of failure of the method called. This is useful for debugging and analysis.
-* The Biometrics segments stored in BIR instances and the BIR class is modeled along the lines of CBEFF format and more information be found here: [Biometric Data Specification](Biometric-Data-Specification.md). 
+* The Biometrics segments stored in BIR instances and the BIR class is modeled along the lines of CBEFF format and more information be found here: [Biometric Specification](Biometric-Specification.md). 
 
 
 # Appendix A - Java API Specifications
