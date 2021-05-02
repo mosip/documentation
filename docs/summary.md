@@ -8,18 +8,24 @@
         * [Release Notes 1.0.5](platform/releases/Release-Notes-1.0.5.md)
         * [Release Notes 1.0.6](platform/releases/Release-Notes-1.0.6.md)
         * [Release Notes 1.1.0](platform/releases/Release-Notes-1.1.0.md)
-            * [Features](platform/releases/Release-Notes-1.1.0-Features.md)
-            * [Bug Fixes](platform/releases/Release-Notes-1.1.0-Bug-Fixes.md)
+            * [Enhancements](platform/releases/Release-Notes-1.1.0-Features.md)
+            * [Defect Fixes](platform/releases/Release-Notes-1.1.0-Bug-Fixes.md)
             * [Artifact Version](platform/releases/Release-Notes-1.1.0-Artifact-Version.md)
         * [Release Notes 1.1.1](platform/releases/Release-Notes-1.1.1.md)
-            * [Bug Fixes](platform/releases/Release-Notes-1.1.1-Bug-Fixes.md)
+            * [Defect Fixes](platform/releases/Release-Notes-1.1.1-Bug-Fixes.md)
             * [Artifact Version](platform/releases/Release-Notes-1.1.1-Artifact-Version.md)
         * [Release Notes 1.1.2](platform/releases/Release-Notes-1.1.2.md)
-            * [Features](platform/releases/Release-Notes-1.1.2-Features.md)
-            * [Bug Fixes](platform/releases/Release-Notes-1.1.2-Bug-Fixes.md)
+            * [Enhancements](platform/releases/Release-Notes-1.1.2-Features.md)
+            * [Defect Fixes](platform/releases/Release-Notes-1.1.2-Bug-Fixes.md)
 		* [Release Notes 1.1.3](platform/releases/Release-Notes-1.1.3.md)
-            * [Features](platform/releases/Release-Notes-1.1.3-Features.md)
-            * [Bug Fixes](platform/releases/Release-Notes-1.1.3-Bug-Fixes.md)
+            * [Enhancements](platform/releases/Release-Notes-1.1.3-Features.md)
+            * [Defect Fixes](platform/releases/Release-Notes-1.1.3-Bug-Fixes.md)
+        * [Release Notes 1.1.4](platform/releases/Release-Notes-1.1.4.md)
+	        * [Enhancements](platform/releases/Release-Notes-1.1.4-Enhancements.md)
+            * [Defect Fixes](platform/releases/Release-Notes-1.1.4-Defect-Fixes.md)
+        * [Release Notes 1.1.5](platform/releases/Release-Notes-1.1.5.md)
+	        * [Enhancements](platform/releases/Release-Notes-1.1.5-Enhancements.md)
+            * [Defect Fixes](platform/releases/Release-Notes-1.1.5-Defect-Fixes.md)
     * [Roadmap](platform/roadmap/Roadmap.md)
         * [MOSIP v2](platform/roadmap/Roadmap-v2.md)
     * [Versions and Support](platform/support/Versions.md)
@@ -76,7 +82,7 @@
 * Modules
     * MOSIP Core
     * [MOSIP Commons](modules/mosip-commons/Kernel.md)
-        * [Audit Manager Functionality](modules/mosip-commons/Audit-Manager-Functionality.md)
+        * [Audit Manager](modules/mosip-commons/Audit-Manager-Functionality.md)
 			* [Admin Service Audits](modules/mosip-commons/Admin-Service-Audits.md)
 			* [Resident Service Audits](modules/mosip-commons/Resident-Service-Audits.md)
 			* [Partner Management Audits](modules/mosip-commons/Partner-Management-Audits.md)
@@ -84,22 +90,31 @@
 			* [ID Repository Audits](modules/mosip-commons/ID-Repository-Audits.md)
 			* [ID Authentication Audits](modules/mosip-commons/ID-Authentication-Audits.md) 
         * [Authentication and Authorization Functionality](modules/mosip-commons/Authentication-and-Authorization-Functionality.md)      
-        * [Common Services Functionality](modules/mosip-commons/Common-Services-Functionality.md)
-        * [Data Services Functionality](modules/mosip-commons/Data-Services-Functionality.md)
-		* [Data Share Functionality](modules/mosip-commons/Data-Share-Functionality.md)
-        * [Master Data Services Functionality](modules/mosip-commons/Master-Data-Services-Functionality.md)
-		* [Packet Manager Functionality](modules/mosip-commons/Packet-Manager-Functionality.md)
-        * [UIN and VID Generation Service Functionality](modules/mosip-commons/UIN-and-VID-Generation-Service-Functionality.md)
+        * [Common Services](modules/mosip-commons/Common-Services-Functionality.md)
+        * [Data Services](modules/mosip-commons/Data-Services-Functionality.md)
+		* [Data Share](modules/mosip-commons/Data-Share-Functionality.md)
+        * [Master Data Services](modules/mosip-commons/Master-Data-Services-Functionality.md)
+		* [Packet Manager](modules/mosip-commons/Packet-Manager-Functionality.md)
+        * [UIN and VID Generation Service](modules/mosip-commons/UIN-and-VID-Generation-Service-Functionality.md)
 		* [Web Sub Functionality](modules/mosip-commons/Web-Sub-Functionality.md)
 	* [ID Repository](modules/id-repository/ID-Repository.md)
-	    * [Credential Share Functionality](modules/id-repository/Credential-Share-Functionality.md)
+	    * [Credential Share](modules/id-repository/Credential-Share-Functionality.md)
     * Registration
         * [Pre-Registration](modules/registration/pre-registration/Pre-Registration.md)
-            * [Pre-Registration Functionality](modules/registration/pre-registration/Pre-Registration-Functionality.md)
-            * [Pre-Registration Configuration](modules/registration/pre-registration/Pre-Registration-Configuration.md)
+            * [Functionality]
+            <!---
+                * Login/create a user account
+                * Creating an application
+                * Attaching documents to the application
+                * Booking an appointment
+                * Appointment acknowledgement
+                * Batch jobs
+                * Data sync to registration client 
+            --->
+            * [Configuration](modules/registration/pre-registration/Pre-Registration-Configuration.md)
         * [Registration](modules/registration/client/Registration-Client.md)
-            * [Registration Functionality](modules/registration/client/Registration-Functionality.md)
-            * [Registration Packet](modules/registration/client/Registration-Packet.md)
+            * [Functionality](modules/registration/client/Registration-Functionality.md)
+            * [Packet Structure](modules/registration/client/Registration-Packet.md)
             * [Registration Client Setup](modules/registration/client/Registration-Client-Setup.md)
             * [First User Registration and Onboarding](modules/registration/client/First-User-Registration-and-Onboarding.md)
             * [Guide to Configure MOSIP for Biometrics](modules/registration/client/Guide-to-Configure-MOSIP-for-Biometrics.md)
