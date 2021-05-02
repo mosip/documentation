@@ -70,7 +70,7 @@
         * [ABIS](standards/biometrics/ABIS.md)
         * [Biometric SDK](standards/biometrics/Biometric-SDK.md)
         * [MDS Specification](standards/interfaces/MOSIP-Device-Service-Specification.md)
-        * [Secure Biometric Interface](standards/biometrics/Secure-Biometric-Interface.md)
+        * [Secure Biometric Interface](standards/interfaces/Secure-Biometric-Interface.md)
         * [Biometric Specification](standards/biometrics/Biometric-Specification.md)
         * [CBEFF XML](standards/biometrics/CBEFF-XML.md)
     * MOSIP Schema
