@@ -45,7 +45,7 @@ Below is the diagram depicts the logical architecture of Pre-registration,
 Refer to build and deploy instructions in [pre-registration repo](https://github.com/mosip/pre-registration).
 
 # APIs
-For detailed functionality of Pre-registration APIs please view our page, [Pre-registration APIs](Pre-Registration-APIs.md)
+For detailed functionality of Pre-registration APIs please view our page, [Pre-registration APIs](../../../api-reference/Pre-Registration-APIs.md)
 
 # UI Reference Implementation
 MOSIP provides a reference implementation of the Pre-registration UI that may be customized as per country needs. The implementation is available on [reference implementation repository](https://github.com/mosip/mosip-ref-impl).

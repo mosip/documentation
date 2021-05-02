@@ -20,6 +20,6 @@ The confirmation acknowledgment is also rendered on screen with a confirmation m
 * For details on the low level design please follow the page,
     * [Approach to pre-registration appointment acknowledgment screen]()
     * [Approach to pre-registration notifications](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-notification-service.md)
-* For changing the email and SMS template please view our page on [pre-registration configurations](Pre-Registration-Configuration.md#templates-used-by-pre-registration)
+* For changing the email and SMS template please view our page on [pre-registration configurations](../../../api-reference/Pre-Registration-Configuration.md#templates-used-by-pre-registration)
 
 {% endhint %}

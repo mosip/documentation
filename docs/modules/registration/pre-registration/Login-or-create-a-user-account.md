@@ -16,6 +16,6 @@ If the resident wishes to log out of the pre-registration system, he/she can opt
 
 * For details on the low level design please follow the page,
     * [Approach to pre-registration login service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-login-service.md)
-* For details on the API specification on pre-registration login follow this [page](Pre-Registration-APIs.md#login-service-public)
+* For details on the API specification on pre-registration login follow this [page](../../../api-reference/Pre-Registration-APIs.md#login-service-public)
 
 {% endhint %}
