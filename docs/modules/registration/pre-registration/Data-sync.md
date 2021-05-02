@@ -18,6 +18,6 @@ Upon receiving the list of pre-registrations from the registration client, the p
 
 * For details on the low level design please follow the page,
     * [Approach to pre-registration data sync service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-data-sync-service.md)
-* For details on the API specification on pre-registration data sync follow this [page](api-reference/Pre-registration-APIs.md#datasync-service-external).
+* For details on the API specification on pre-registration data sync follow this [page](../api-reference/Pre-registration-APIs.md#datasync-service-external).
 
 {% endhint %}
