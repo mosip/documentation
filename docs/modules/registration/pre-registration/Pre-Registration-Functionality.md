@@ -1,191 +1,2212 @@
-#  Login/create a user account
+<!doctype html>
+<html>
 
-##  Login using email or phone number
-Residents can login to the pre-registration portal by providing their email id or mobile number. The system validates the email id or phone number, once validated sends an OTP which the resident enters. The system validates the OTP redirects the user to enter or edit the details for booking an appointment.
+<head>
+   <title data-react-helmet="true">Modules - MOSIP Docs</title>
+   <meta data-react-helmet="true" name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <meta data-react-helmet="true" charset="utf-8" />
+   <meta data-react-helmet="true" name="google" value="notranslate" />
+   <meta data-react-helmet="true" property="og:image"
+      content="https://app.gitbook.com/share/space/thumbnail/-M1R77ZUwR6XwtPjJIVm.png" />
+   <meta data-react-helmet="true" property="twitter:card" content="summary" />
+   <meta data-react-helmet="true" property="twitter:site" content="MOSIP Docs" />
+   <meta data-react-helmet="true" name="description" content="" />
+   <meta data-react-helmet="true" property="og:title" content="Modules" />
+   <meta data-react-helmet="true" property="og:description" content="" />
+   <link data-react-helmet="true" rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500&amp;display=swap" />
+   <link data-react-helmet="true" rel="stylesheet"
+      href="https://unpkg.com/emojione-assets@4.0.0/sprites/emojione-sprite-40.min.css" />
+   <link data-react-helmet="true" rel="preconnect" href="https://www.googleapis.com" />
+   <link data-react-helmet="true" rel="preconnect" href="https://api.amplitude.com" />
+   <link data-react-helmet="true" rel="preconnect" href="https://gblobscdn.gitbook.com/" />
+   <link data-react-helmet="true" rel="icon"
+      href="https://gblobscdn.gitbook.com/orgs%2F-M1FyzBr-VmticWYm8QI%2Favatar-1582980461659.png?alt=media" />
+   <link data-react-helmet="true" rel="canonical" href="https://docs.mosip.io/platform/modules" />
+   <style data-react-helmet="true" type="text/css">
+      @font-face {
+         font-family: "Roboto";
+         src: local("Roboto"), local("Roboto-Regular"), url(https://gstatic.gitbook.com/fonts/fc3d4b35e4d07d4e0485cc2db0e57c77.woff) format('woff');
+         font-weight: 400;
+         font-display: swap;
+      }
 
-## Automatic user id creation on first login 
-The resident logs in to the pre-registration portal with their mobile number or email id. After successful Authentication, the system checks if the user is first-time user or not. If the user is first-time user, the system creates a new record in the database. All the pre-registration ids created from there on will be mapped to this user id.
+      @font-face {
+         font-family: "Roboto";
+         src: local("Roboto Medium"), local("Roboto-Medium"), url(https://gstatic.gitbook.com/fonts/f4fa50c4003f87e7dc10459e500933c3.woff) format('woff');
+         font-weight: 500;
+         font-display: swap;
+      }
 
-## Logout/session timeout 
-If the resident wishes to logout of the pre-registration system, he/she can opt to select the Logout option. The token issued during the Authentication of user Login is deleted and the user gets logged out of the system.  If the user is inactive for X minutes (X is configurable), the system notifies the user one minute before the configured timeout limit and logs out after a minute. In such case, the system will not save any user data.
+      @font-face {
+         font-family: "Roboto";
+         src: local("Roboto Bold"), local("Roboto-Bold"), url(https://gstatic.gitbook.com/fonts/72e37e5bf95a8dba938c78b1d7d91253.woff) format('woff');
+         font-weight: 700;
+         font-display: swap;
+      }
+   </style>
+   <style data-react-helmet="true" type="text/css">
+      @font-face {
+         font-family: "Content-font";
+         src: local("Roboto"), local("Roboto-Regular"), url(https://gstatic.gitbook.com/fonts/fc3d4b35e4d07d4e0485cc2db0e57c77.woff) format('woff');
+         font-weight: 400;
+         font-display: swap;
+      }
 
-#  Creating an application
+      @font-face {
+         font-family: "Content-font";
+         src: local("Roboto Medium"), local("Roboto-Medium"), url(https://gstatic.gitbook.com/fonts/f4fa50c4003f87e7dc10459e500933c3.woff) format('woff');
+         font-weight: 500;
+         font-display: swap;
+      }
 
-##  Provide demographic data 
+      @font-face {
+         font-family: "Content-font";
+         src: local("Roboto Bold"), local("Roboto-Bold"), url(https://gstatic.gitbook.com/fonts/72e37e5bf95a8dba938c78b1d7d91253.woff) format('woff');
+         font-weight: 700;
+         font-display: swap;
+      }
+   </style>
+   <script data-react-helmet="true" type="text/javascript" defer="true"
+      src="https://polyfill.io/v3/polyfill.min.js?flags=gated&amp;features=Intl"></script>
+   <style>
+      #__GITBOOK__ROOT__SERVER__ {
+         width: 100%;
+         height: 100%;
+         display: flex;
+      }
+   </style>
+   <style>
+      #__GITBOOK__ROOT__CLIENT__ {
+         width: 100%;
+         min-height: 100%;
+         height: initial;
+         display: flex;
+      }
+   </style>
+   <style id="__GITBOOK__STYLE__">
+      html,
+      body {
+         color: #242A31;
+         width: 100%;
+         height: 100%;
+         margin: 0;
+         padding: 0;
+         font-size: 15px;
+         background: #F5F7F9;
+         box-sizing: border-box;
+         font-family: "Roboto", sans-serif;
+         line-height: 1em;
+         font-smoothing: antialiased;
+         text-size-adjust: 100%;
+         -ms-text-size-adjust: 100%;
+         -webkit-font-smoothing: antialiased;
+         -moz-osx-font-smoothing: grayscale;
+         -webkit-text-size-adjust: 100%;
+      }
 
-The user is provided with demographic form based on the [ID Object Definition](MOSIP-ID-Object-Definition.md) & [UI Specification](UI-Specification-for-Pre-Registration.md) for new pre-registration application, user fills demographic details (e.g., Full Name, Age/DOB, Gender, Residential status, Address, mobile number, email id, etc.). The system validates the fields entered, the system also checks for the mandatory fields. Additionally, the system validates for any blacklisted words entered (as configured by the country). Once validated a pre-registration request id (PRID) is generated and the demographic details provided gets mapped to that PRID.
+      @media screen and (min-width: 768px) {
 
-{% hint style="info" %}
-Consent is sought from the user for every new application created in the system.
-{% endhint %}
+         html,
+         body {
+            text-rendering: optimizeLegibility;
+         }
+      }
 
-## Provide consent 
+      @media print {
 
-Before filling the application form, the user is advised to provide their consent for storage and utilization of their personally identifiable information (PII). The consent is sought from the user for every new application created in the system. On providing their consent, the system redirects the user to start the pre-registration application (demographic details). The data as part of the consent form is rendered as setup by the administrator.
+         html,
+         body {
+            background: transparent;
+         }
+      }
 
-In case of closure of the Consent Pop-up, the following scenarios may arise:
+      *,
+      *:before,
+      *:after {
+         outline: none;
+         box-sizing: inherit;
+      }
 
-* First-time login: On closure, then system alerts the user that he will be logged out due to not providing consent.
-* Existing user login
-   * Scenario 1: Create new application from Dashboard: On closure, the user will be redirected to Dashboard page.
-   * Scenario 2: Add Applicant from Preview Page: On closure, the user will be redirected to Preview Page.
+      @font-face {
+         font-family: "Flow-Rounded";
+         src: url("https://gstatic.gitbook.com/fonts/bfc0a96537ceb0cad9e956b9f980fe88.woff") format('woff');
+         font-display: block;
+      }
 
-## Create multiple applications 
+      input,
+      select,
+      textarea {
+         font-size: 16px;
+      }
 
-Once the demographic details are filled and the Documents are uploaded, if the user wishes to add an applicant, he/she can opt to select 'Add An Applicant' option on the preview page or 'Create New Application' option on the Dashboard. The system associates unique pre-registration id to the new application(s) created.
+      input,
+      select,
+      textarea,
+      button {
+         font: inherit;
+      }
 
-## Provide data in preferred language 
+      input[type="search"] {
+         -webkit-appearance: none;
+      }
 
-The user can select their language of preference, which is referred as Primary (from a list of 2 languages as set by the administrator) from the login screen, the other language from the list is considered as secondary. The user can then provide data in the preferred language (primary) as selected. The data in the right side of the demographic page will be transliterated to secondary language. The labels in the right hand side will be translated to the Secondary language. The user can verify the transliterated data and edit if required. The data will subsequently be stored in the database along with the respective language codes.
+      .draggingElement,
+      .draggingElement *:hover {
+         cursor: grabbing !important;
+         pointer-events: auto !important;
+      }
 
-### Language Configuration 
+      .draggingElement .draggingHidden {
+         display: none;
+      }
 
-In the below listed scenarios, system will render an error message on the Login page and inhibit pre-registration, and hence, the language configurations should be appropriately setup by the administrator.
-* If Primary Language is set to a specific value and Secondary Language is marked as null/not set by administrator, or
-* If Secondary Language is set to a specific value and Primary Language is marked as null/not set by administrator, or
-* If both Primary and Secondary Language is marked as null/not set by administrator.
-	
-Example: Primary set to English and Secondary not set or vice-versa, then system will render the stated Error Message: "The system has encountered a technical error. Administrator to setup the necessary language configuration(s)." The error message will not have an option to exit, hence not allow the user to proceed further. On page refresh, the system will render the error message again and hence, inhibit pre-registrations. 
+      .reset-3c756112--body-68cac36c {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         color: #242A31;
+         width: 100%;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         background: #F5F7F9;
+         min-height: 100vh;
+         flex-direction: column;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+      }
 
-Considering a scenario, wherein if Primary language and Secondary language is configured to be the same, eg. English; then:
-*The system will render the demographic page (with both left and right side for Primary and Secondary lnaguage) in the same language
-* Values entered on the left side (Primary Language) will not be transliterated but auto-copied on the right side
-* Values on the right side will remain un-editable
-* As part of the packet, system will send/store data in one language only, if language code is identified to be the same – eg. en (English)
+      .reset-3c756112--header-07037613--header-09ef972a {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         height: 80px;
+         margin: 0;
+         display: none;
+         padding: 0;
+         z-index: 20;
+         position: relative;
+         box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+         border-bottom: 1px solid #d4dadf;
+         background-color: #FFFFFF;
+      }
 
-##  Viewing "My Applications" (covers status) 
-The pre-registrations created will be associated with user id. The user can view all the pre-registrations created by him/her in the Dashboard. The pre-registration can be in three different status (Pending appointment, Booked, Expired)
+      @media print {
+         .reset-3c756112--header-07037613--header-09ef972a {
+            display: none;
+         }
+      }
 
-|Status|Explanation|User Action|
-|------|-----|-----|
-|Pending appointment|Filled only demographic details|Upload documents and book an appointment|
-|Pending appointment|Filled demographic details and uploaded documents |Book an appointment|
-|Booked|  Filled demographic details, uploaded documents, and booked appointment|Visit the registration center on the appointment date and time|
-|Expired| Appointed date has passed|N/A
+      @media screen and (max-width: 1023px) {
+         .reset-3c756112--header-07037613--header-09ef972a {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            top: 0;
+            width: 100%;
+            display: flex;
+            position: fixed;
+            padding-left: 16px;
+            padding-right: 16px;
+         }
+      }
 
-The applications are sorted and displayed by the order of creation of application. The first application created appears first, latest created/modified application appears at the end. If the user visits the registration center and consumes the appointment, then the application will be removed from the list. If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
+      @media screen and (max-width: 767px) {
+         .reset-3c756112--header-07037613--header-09ef972a {
+            height: 60px;
+            padding-left: 8px;
+            padding-right: 8px;
+         }
+      }
 
-## Modify application data 
-The user can modify the pre-registration data by opting to select the "Modify" option for a specific application. The system provides the demographic form with pre-filled demo details and allows the user to edit the details as required. The system associates the modified demo details with the pre-registration id for which Modify information is initiated.
+      .reset-3c756112--headerContainer-bb8cc0bc {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         width: 100%;
+         margin: 0 auto;
+         display: flex;
+         padding: 0;
+         max-width: 1448px;
+      }
 
-## Discard application 
-The user can discard the pre-registration by clicking on the Delete icon for the pre-registration id for which he/she wishes to discard. The system provides the user with two options: 'Discard entire Application' or 'Cancel appointment'. The user chooses to discard entire application. The system deletes all the data mapped to the pre-registration id and cancels the appointment (if any).
+      .reset-3c756112--headerLeftColumn-4eae0bae--headerLeftColumn-7efc9f26 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         width: 100%;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         position: relative;
+         align-items: center;
+         justify-content: space-between;
+         -webkit-box-pack: justify;
+         -webkit-box-align: center;
+      }
 
-#  Attaching documents to the application
+      @media screen and (min-width: 1024px) {
+         .reset-3c756112--headerLeftColumn-4eae0bae--headerLeftColumn-7efc9f26 {
+            max-width: 298px;
+            justify-content: center;
+            -webkit-box-pack: center;
+         }
 
-## Document Categories and Applicable Document Types 
-* When user provides their demographic data, the pre-registration system captures the data. 
-* Based on the parameters (from the configuration) for example - gender, age and residential status (Foreigner, National) from the demographic data, applicant types are determined. The pre-registration system then sends the id to the mapping.
-* Based on the Applicant type, the Applicable Document categories are received from the mapping. The pre-registration system then displays only applicable categories.
-* The Document Category and type of documents in each category to be uploaded varies based on the applicant type. pre-registration system displays only those types to the applicant.
-* Once the documents are uploaded by applicant the system performs virus scan to check the integrity of the document. Once the virus scan is successful, the document is encrypted and stored in the object store.
+         .reset-3c756112--headerLeftColumn-4eae0bae--headerLeftColumn-7efc9f26:after {
+            top: 50%;
+            right: 0;
+            height: 40px;
+            content: " ";
+            position: absolute;
+            transform: translateY(-50%);
+            border-left: 1px solid #E6ECF1;
+         }
+      }
 
-## Referring to already uploaded documents
-* The POA (Proof of Address) document could be uploaded or can be referred to an already uploaded POA of an existing applicant
-* The user could select a particular applicant document to which he wants to refer 
-* When Pre-registering for a family  living at the same address  it is not required to upload same POA again and again,instead could refer to the document as uploaded by the first family member saving space and time.
+      .reset-3c756112--mobileButton-7a76d05f {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: 0 0 auto;
+         width: 30px;
+         cursor: pointer;
+         height: 30px;
+         margin: 0;
+         display: flex;
+         outline: none;
+         padding: 0;
+         font-size: 18px;
+         align-items: center;
+         justify-content: center;
+         -webkit-box-pack: center;
+         -webkit-box-align: center;
+      }
 
-#  Booking an appointment
+      @media screen and (min-width: 1024px) {
+         .reset-3c756112--mobileButton-7a76d05f {
+            display: none;
+         }
+      }
 
-##  Choosing a registration center for appointment
+      .icon-7f6730be--text-3f89f380--icon-1f8349b3 {
+         color: #242A31;
+         width: 1em;
+         height: 1em;
+         vertical-align: middle;
+      }
 
-###  Recommended centers based on postal code 
-* The system recommends registration centers based on the postal code(s) of all the applicants for whom the appointment is to be booked
-* The search results have the following information about the registration center: name, address, working hours, contact person, center type, and contact number
-* The first registration center as per the search criteria is shown to the user on map by default
+      .reset-3c756112--headerLogo-5c0b38e2 {
+         margin: 0;
+         display: block;
+         padding: 0px 24px;
+      }
 
-###  Nearby centers based on user geo-location 
-* An user can  enable location services, in the device/machine in order to select nearby centers
-* The system checks for the lattitude and Longitude values of the user and  fetches all the registration centers within 2 Km radius (configurable)
-* The first registration center as per the search criteria is shown to the user on map by default.
+      @media screen and (min-width: 1024px) {
+         .reset-3c756112--headerLogo-5c0b38e2 {
+            width: 250px;
+            padding: 0;
+         }
+      }
 
-### Find a center 
-* An user may opt to perform text search to find a center based on which the system displays the registration centers
-* It is a contextual search where the user selects a search criteria and based on the selected search criteria enters relevant text. 
-* The first registration center as per the search criteria is shown to the user on map by default
+      .reset-3c756112--mobileLogo-dacfd15c {
+         margin: 0;
+         display: none;
+         padding: 0;
+      }
 
-## Get appointment for the day 
-* An user logs in to the pre-registration system  and opts to book appointment for pre-registration application or Modify appointment
-* The system presents a list of Centers to the user to select the required registration center 
-* The time selection with calendar days along with number of slots available per calendar day will be displayed 
-* The user can select any of the calendar day which he/she wishes to book an appointment.
-* Time slots of 15 minutes each are displayed (configurable).
-* Each time slot with available slots will be displayed.
-* The user can select a slot and proceed to book appointment or can go back to select another registration center
+      @media screen and (max-width: 767px) {
+         .reset-3c756112--mobileLogo-dacfd15c {
+            display: block;
+         }
+      }
 
-## Choosing appointment slots
+      .link-a079aa82--primary-53a25e66--logoLink-10d08504 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         color: #3884FF;
+         cursor: pointer;
+         display: flex;
+         align-items: center;
+         text-decoration: none;
+         -webkit-box-align: center;
+      }
 
-###  Get slots availability 
-The user opts to view the available slots for a selected registration center.
-* The system displays 7 calendar days (configurable) for the user to select a slot in the chosen center
-* Calendar days which are  Holidays or non-working days for the selected registration center are greyed out or not shown to the user
-* For a selected registration center 8 hours (configurable) are considered as working hours
-* A user can view time slots of 15 minutes (configurable) each for the selected calendar day and view available slots for every time slot shown in the selected calendar day
-* An applicant can further choose the preferred timeslot
-* An user can confirm the appointment selection of the preferred/chosen time slot – Subsequently the timeslot(s) are locked
+      .reset-3c756112--tooltipContainer-7fdb9b70--small-2ec8ae1a {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         width: 30px;
+         height: 30px;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         border-radius: 3px;
+      }
 
-##  Cancel appointment 
-* An user can opt to cancel selected appointment\s against application which is/are in Booked Status.
-* In such case the system notifies the user about the successful cancellation 
-* Following a successful appointment cancellation the system unlocks the time slot of the registration center so that someone else can book it.
+      .reset-3c756112--avatarFrame-2f40cdc9--small-2ec8ae1a {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         -webkit-mask-image: -webkit-radial-gradient(white, black);
+         -webkit-mask-image: -moz-radial-gradient(white, black);
+         mask-image: -webkit-radial-gradient(white, black);
+         mask-image: -moz-radial-gradient(white, black);
+         width: 30px;
+         height: 30px;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         overflow: hidden;
+         position: relative;
+         mask-image: radial-gradient(white, black);
+         align-items: center;
+         border-radius: 3px;
+         justify-content: center;
+         -webkit-box-pack: center;
+         -webkit-box-align: center;
+         -webkit-mask-image: radial-gradient(white, black);
+      }
 
-## Re-book appointment 
-* The system provides the user with the list of available appointment Slots
-* An user can select any of the appointment Date available and any of the appointment Slot available
-* The user has to select against which pre-registration id the appointment slot is being booked
-* The system maps appointment slot with all the pre-registration ids, which are selected for appointment booking
-* If any pre-registration id does not have booking mapped, the user is notified if he wants to continue without booking
-* An user at this stage may opt to search registration center. In this case the appointment-booking (Time Slot selected) done is removed
-* An user cannot  Re-book the appointment if the appointment booking is less than 48 hours (configurable) from time of booking
+      .image-67b14f24--avatar-1c1d03ec {
+         width: 100%;
+         height: 100%;
+         max-width: 100%;
+         background-size: cover;
+         background-color: #FFFFFF;
+         background-repeat: no-repeat;
+      }
 
-# Appointment acknowledgement
+      .reset-3c756112--S100Left-7c8af13a--logoDisplayNameContainer-583bfe61--logoText-2f40da90 {
+         flex: 1;
+         color: #242A31;
+         margin: 0;
+         display: block;
+         padding: 0;
+         padding-left: 8px;
+      }
 
-* An Acknowledgement is triggered after successful completion of pre-registration (booking an appointment)
-* The acknowledgement contains the following information: name, pre-registration id, age/DoB, mobile number, email id and registration center details, appointment date, appointment time)
-* A QR code which contains the pre-registration ID. 
-* This QR code can be scanned at the registration center to fetch the details to be used during the registration process.
+      @media screen and (max-width: 1023px) {
+         .reset-3c756112--S100Left-7c8af13a--logoDisplayNameContainer-583bfe61--logoText-2f40da90 {
+            overflow: hidden;
+            max-width: 50vw;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+         }
+      }
 
-## Download acknowledgement
-User can choose to print or download the acknowledgement as PDF.
+      .reset-3c756112--S100Left-7c8af13a--logoDisplayNameContainer-583bfe61--logoText-2f40da90:hover {
+         color: #3884FF;
+      }
 
-##  Send acknowledgement to email/phone
-The system sends an acknowledgement to the  applicant to the registered phone (SMS) or email as per the details provided in demographic form.  In case of multiple applications, the system sends notifications for each applicant to the details provided in the demographic form of that applicant.
+      .text-4505230f--DisplayH700-a03ad9b4--textContentFamily-49a318e1--spaceNameText-677c2969 {
+         font-size: 24px;
+         font-family: Content-font, Roboto, sans-serif;
+         font-weight: 500;
+         line-height: 1.5;
+         overflow-wrap: break-word;
+      }
 
-Additionally, user can opt to manually trigger notification(s) to the contact details of additional recipients. However, this is driven by the Notification configuration setup by the administrator, to allow a notification to be triggered by SMS/email/both or none.
+      .reset-3c756112--desktopLogo-a594db90 {
+         margin: 0;
+         display: block;
+         padding: 0;
+      }
 
-The confirmation acknowledgement is also rendered on screen with a confirmation message of the notification being triggered. (Subject to the notification parameter configuration and if any mobile/email id was provided)
+      @media screen and (max-width: 767px) {
+         .reset-3c756112--desktopLogo-a594db90 {
+            display: none;
+         }
+      }
 
-# Registration Client Services
+      .reset-3c756112--tooltipContainer-7fdb9b70--medium-296350e4 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         width: 40px;
+         height: 40px;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         border-radius: 3px;
+      }
 
-## Retrieve application data by PRID
+      .reset-3c756112--avatarFrame-2f40cdc9--medium-296350e4 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         -webkit-mask-image: -webkit-radial-gradient(white, black);
+         -webkit-mask-image: -moz-radial-gradient(white, black);
+         mask-image: -webkit-radial-gradient(white, black);
+         mask-image: -moz-radial-gradient(white, black);
+         width: 40px;
+         height: 40px;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         overflow: hidden;
+         position: relative;
+         mask-image: radial-gradient(white, black);
+         align-items: center;
+         border-radius: 3px;
+         justify-content: center;
+         -webkit-box-pack: center;
+         -webkit-box-align: center;
+         -webkit-mask-image: radial-gradient(white, black);
+      }
 
-Upon receiving the registration center id, date range (start date, end date) for the List of pre-registrations, user id (Registration Officer/Supervisor) from Registration client, the pre-registration system processes the information.
-* The system generates a Transaction id
-* The system then fetches all the pre-registrations within the Date Range (Start Range, End Date) and for the registration center id received and calculates the count of the pre-registration ids being sent.
-* The system sends the List of pre-registration ids along with count of pre-registrations.
-* The system receives the pre-registration id/ids for which pre-registration Data has to be sent.
-* The system sends the zip file per pre-registration id consisting of Demo Data, Files, and appointment Time.
+      .reset-3c756112--headerInnerWrapper-629f79d1--headerInnerWrapper-4f99acea {
+         flex: 1 1 auto;
+         margin: 0px 88px;
+         display: block;
+         padding: 0;
+         overflow: hidden;
+         position: relative;
+         max-width: 750px;
+      }
 
-# Batch Job Services
+      .reset-3c756112--headerInnerWrapper-629f79d1--headerInnerWrapper-4f99acea:after {
+         background: -webkit-linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+         background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+         top: 0;
+         right: 0;
+         width: 32px;
+         height: 100%;
+         content: " ";
+         position: absolute;
+         background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+         pointer-events: none;
+      }
 
-There are three batch jobs that run in Pre-registration based on a cron scheduler.
+      @media screen and (max-width: 1439px) {
+         .reset-3c756112--headerInnerWrapper-629f79d1--headerInnerWrapper-4f99acea {
+            margin: 0px 24px 0px 88px;
+         }
+      }
 
-## Consumed Status Batch Job
+      @media screen and (max-width: 1023px) {
+         .reset-3c756112--headerInnerWrapper-629f79d1--headerInnerWrapper-4f99acea {
+            display: none;
+         }
+      }
 
-This batch job identifies the pre-registrations for which registration packets are created and are under processing in server. The details about these pre-registration are removed from pre-registration database and are moved to an archival tables in pre-registration called as consumed tables. Later the data in consumed tables can be archived or removed based on the adopter's need.
+      .reset-3c756112--withScrollbar-39338630--scrollAxisX-bf86cd6c--headerInner-c872fc48 {
+         display: -webkit-box;
+         overflow-x: auto;
+         height: 100%;
+         margin: 0;
+         display: flex;
+         opacity: 1;
+         padding: 0;
+         overflow-x: overlay;
+         overflow-y: hidden;
+         transition: flex 250ms ease, width 250ms ease, opacity 250ms ease;
+         -moz-transition: flex 250ms ease, width 250ms ease, opacity 250ms ease;
+         -webkit-transition: flex 250ms ease, width 250ms ease, opacity 250ms ease;
+         -webkit-overflow-scrolling: touch;
+      }
 
-## Expiered Status Batch Job
+      .reset-3c756112--withScrollbar-39338630--scrollAxisX-bf86cd6c--headerInner-c872fc48::-webkit-scrollbar {
+         width: 4px;
+         height: 4px;
+         display: none;
+      }
 
-This batch job identifies the pre-registrations which have expiered and updates the status of these pre-registrations as "Expiered".
+      .reset-3c756112--withScrollbar-39338630--scrollAxisX-bf86cd6c--headerInner-c872fc48::-webkit-scrollbar-track {
+         background: none;
+         border-width: 0;
+      }
 
-## Booking Batch Job
+      .reset-3c756112--withScrollbar-39338630--scrollAxisX-bf86cd6c--headerInner-c872fc48::-webkit-scrollbar-thumb {
+         background: rgba(0, 0, 0, .16);
+         transition: background 250ms ease;
+         border-radius: 2px;
+         -moz-transition: background 250ms ease;
+         -webkit-transition: background 250ms ease;
+      }
 
-Booking batch job, runs every day to perform some standard tasks:
+      .reset-3c756112--withScrollbar-39338630--scrollAxisX-bf86cd6c--headerInner-c872fc48::-webkit-scrollbar-button {
+         display: none;
+      }
 
-1. Creating the booking slots (if not available) for next 140 days (configurable) using the details available for the centers like, center working hours, lunch breaks, no. of Kiosks, slot booking times & holidays.
+      .reset-3c756112--withScrollbar-39338630--scrollAxisX-bf86cd6c--headerInner-c872fc48::-webkit-scrollbar-track-piece {
+         display: none;
+      }
 
-2. Canceling bookings & sending notifications to the residents, if any emergency holiday has been declared for a center.
+      .reset-3c756112--withScrollbar-39338630--scrollAxisX-bf86cd6c--headerInner-c872fc48::-webkit-scrollbar-corner {
+         display: none;
+      }
 
-#  Audit 
+      .reset-3c756112--withScrollbar-39338630--scrollAxisX-bf86cd6c--headerInner-c872fc48::-webkit-resizer {
+         display: none;
+      }
 
-When any transaction is performed, then the same is captured as part of MOSIP Audit Trails, which can be further used for reporting and analytics as required.
+      .reset-3c756112--withScrollbar-39338630--scrollAxisX-bf86cd6c--headerInner-c872fc48:hover::-webkit-scrollbar {
+         display: initial;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisX-bf86cd6c--headerInner-c872fc48:hover::-webkit-scrollbar-thumb {
+         background: rgba(0, 0, 0, .16);
+      }
+
+      .reset-3c756112--searchInputWrapper-ea7f3052--searchInputWrapper-0442d130 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         height: 80px;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         position: relative;
+         max-width: 224px;
+         align-items: center;
+         -webkit-box-align: center;
+      }
+
+      .reset-3c756112--searchInputWrapper-ea7f3052--searchInputWrapper-0442d130:before {
+         top: 50%;
+         left: 0;
+         height: 40px;
+         content: " ";
+         position: absolute;
+         transform: translateY(-50%);
+         border-left: 1px solid #E6ECF1;
+      }
+
+      @media screen and (max-width: 1023px) {
+         .reset-3c756112--searchInputWrapper-ea7f3052--searchInputWrapper-0442d130 {
+            display: none;
+         }
+      }
+
+      .reset-3c756112--inputContainer-b2cb171c {
+         margin: 0;
+         display: block;
+         padding: 0;
+         padding-left: 14px;
+         padding-right: 16px;
+      }
+
+      .inputInner-5c86b87d--medium-0bbed4bd--inputInner-4216b016--searchInputPlaceholder-936306be {
+         font: inherit;
+         color: #242A31;
+         width: 100%;
+         border: none;
+         cursor: inherit;
+         height: 38px;
+         margin: 0;
+         resize: none;
+         outline: none;
+         padding: 0px 8px;
+         background: transparent;
+         box-sizing: border-box;
+         text-align: left;
+         line-height: inherit;
+         border-radius: 3px;
+      }
+
+      .inputInner-5c86b87d--medium-0bbed4bd--inputInner-4216b016--searchInputPlaceholder-936306be::placeholder {
+         color: #9DAAB6;
+         font-size: 16px;
+         font-weight: 500;
+      }
+
+      .reset-3c756112--inputWrapper-63396dac--TextH400-3033861f--medium-4505230f--light-502263b4--input-6d442051--searchInput-3fa812d5 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         width: 100%;
+         border: none;
+         margin: 0;
+         display: flex;
+         outline: none;
+         padding: 0;
+         font-size: 16px;
+         background: #FFFFFF;
+         box-sizing: border-box;
+         font-weight: 400;
+         line-height: 1.625;
+         border-radius: 3px;
+         background-color: #FFFFFF;
+      }
+
+      .reset-3c756112--inputInnerSizer-756c9114 {
+         flex: 1;
+         margin: 0;
+         display: block;
+         padding: 0;
+      }
+
+      .reset-3c756112--inputAddOn-45de9ec1--inputAddOnPrefix-202fa60d--icon-1f8349b3 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: 0 0 auto;
+         color: #242A31;
+         order: -1;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         align-items: center;
+         line-height: 1.2;
+         white-space: nowrap;
+         padding-left: 8px;
+         -webkit-box-align: center;
+      }
+
+      .icon-7f6730be--text-3f89f380 {
+         width: 1em;
+         height: 1em;
+         vertical-align: middle;
+      }
+
+      .reset-3c756112--bodyContent-2f98451b {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: 1;
+         color: #3B454E;
+         width: 100%;
+         margin: 0 auto;
+         display: flex;
+         padding: 0;
+      }
+
+      .reset-3c756112--wholeContent-9fc567d4 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         width: 100%;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         position: relative;
+         min-height: 100%;
+         flex-direction: column;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+      }
+
+      .reset-3c756112--wholeContentBody-554be184 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: 1;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         transition: margin-bottom 250ms ease;
+         align-items: stretch;
+         -moz-transition: margin-bottom 250ms ease;
+         -webkit-box-align: stretch;
+         -webkit-transition: margin-bottom 250ms ease;
+      }
+
+      @media screen and (max-width: 1023px) {
+         .reset-3c756112--wholeContentBody-554be184 {
+            padding-top: 80px;
+         }
+      }
+
+      @media screen and (max-width: 767px) {
+         .reset-3c756112--wholeContentBody-554be184 {
+            padding-top: 60px;
+         }
+      }
+
+      @keyframes keyframes-animation-2f81d449-0-1-3301 {
+         0% {
+            background-color: rgba(24, 48, 85, 0);
+         }
+
+         100% {
+            background-color: rgba(24, 48, 85, 0.30000000000000004);
+         }
+      }
+
+      .reset-3c756112--backdrop-1322b68a--hidden-247382c3--overlay-29559ab8 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         z-index: 29;
+         position: absolute;
+         transition: background-color 250ms ease-out;
+         align-items: center;
+         animation-name: none;
+         pointer-events: none;
+         -moz-transition: background-color 250ms ease-out;
+         justify-content: center;
+         -webkit-box-pack: center;
+         background-color: rgba(24, 48, 85, 0);
+         -webkit-box-align: center;
+         -webkit-transition: background-color 250ms ease-out;
+         animation-duration: 0.2s;
+         animation-fill-mode: forwards;
+         animation-timing-function: ease-out;
+      }
+
+      @media screen and (min-width: 1024px) {
+         .reset-3c756112--backdrop-1322b68a--hidden-247382c3--overlay-29559ab8 {
+            z-index: 14;
+         }
+      }
+
+      .reset-3c756112--contentNavigation-dd3370a4 {
+         margin: 0;
+         display: block;
+         padding: 0;
+         z-index: 30;
+      }
+
+      @media print {
+         .reset-3c756112--contentNavigation-dd3370a4 {
+            display: none;
+         }
+      }
+
+      @media screen and (min-width: 1024px) {
+         .reset-3c756112--contentNavigation-dd3370a4 {
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            flex: 0 0 auto;
+            width: calc((100% - 1448px) / 2 + 298px);
+            display: flex;
+            z-index: 15;
+            min-width: 298px;
+            background: #F5F7F9;
+            align-items: stretch;
+            border-right: 1px solid #E6ECF1;
+            padding-left: calc((100% - 1448px) / 2);
+            flex-direction: column;
+            -webkit-box-align: stretch;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+         }
+      }
+
+      .reset-3c756112--contentNavigationInner-205d49ea--contentNavigationInnerCollapsed-7b4aca00 {
+         flex: 1;
+         margin: 0;
+         display: block;
+         padding: 0;
+      }
+
+      @media screen and (max-width: 1023px) {
+         .reset-3c756112--contentNavigationInner-205d49ea--contentNavigationInnerCollapsed-7b4aca00 {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 30;
+            position: fixed;
+            max-width: 298px;
+            transform: translateX(-100%) !important;
+            box-shadow: none;
+            overflow-y: auto;
+            transition: transform 250ms ease;
+            border-right: 1px solid #E6ECF1;
+            -moz-transition: transform 250ms ease;
+            background-color: #fff;
+            -webkit-transition: transform 250ms ease;
+         }
+      }
+
+      .reset-3c756112--sidebarWrapper-84a13d8e {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: auto;
+         width: 100%;
+         height: 100%;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         align-items: stretch;
+         flex-direction: column;
+         -webkit-box-align: stretch;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+      }
+
+      .reset-3c756112 {
+         margin: 0;
+         display: block;
+         padding: 0;
+      }
+
+      .reset-3c756112--sidebar-84a13d8e {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: auto;
+         width: 100%;
+         height: 100%;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         align-items: stretch;
+         flex-direction: column;
+         -webkit-box-align: stretch;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+      }
+
+      .reset-3c756112--navigationHeader-2c71cfec {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: 0 0 auto;
+         height: 80px;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         align-items: center;
+         margin-left: 24px;
+         border-bottom: 1px solid #E6ECF1;
+         padding-right: 12px;
+         flex-direction: row;
+         -webkit-box-align: center;
+         -webkit-box-orient: horizontal;
+         -webkit-box-direction: normal;
+      }
+
+      @media screen and (max-width: 1023px) {
+         .reset-3c756112--navigationHeader-2c71cfec {
+            display: none;
+         }
+      }
+
+      .reset-3c756112--navigationHeaderLogo-756c9114 {
+         flex: 1;
+         margin: 0;
+         display: block;
+         padding: 0;
+      }
+
+      .button-36063075--medium-6e2a217a--button-4b4c5088--medium-54db2ab3 {
+         display: -webkit-inline-box;
+         display: -moz-inline-box;
+         display: -ms-inline-flexbox;
+         display: -webkit-inline-flex;
+         color: #9DAAB6;
+         width: 40px;
+         border: 1px solid;
+         cursor: pointer;
+         height: 40px;
+         display: inline-flex;
+         outline: none;
+         padding: 0;
+         transition: all 250ms ease-out;
+         align-items: center;
+         line-height: 1em;
+         white-space: nowrap;
+         border-color: transparent;
+         border-radius: 3px;
+         -moz-transition: all 250ms ease-out;
+         justify-content: center;
+         text-decoration: none;
+         -webkit-box-pack: center;
+         background-color: transparent;
+         -webkit-box-align: center;
+         -webkit-transition: all 250ms ease-out;
+      }
+
+      .button-36063075--medium-6e2a217a--button-4b4c5088--medium-54db2ab3:disabled {
+         opacity: 0.5;
+         pointer-events: none;
+      }
+
+      .button-36063075--medium-6e2a217a--button-4b4c5088--medium-54db2ab3:hover {
+         color: #3884FF;
+      }
+
+      .medium-3bde6db7--iconOnly-bddce91a {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         margin: 0;
+         display: flex;
+         font-size: 18px;
+         align-items: center;
+         justify-content: center;
+         -webkit-box-pack: center;
+         -webkit-box-align: center;
+      }
+
+      .text-4505230f--UIH400-4e41e82a--textUIFamily-5ebd8e40--text-8ee2c8b2 {
+         font-size: 16px;
+         font-family: "Roboto", sans-serif;
+         font-weight: 500;
+         line-height: 1em;
+      }
+
+      .reset-3c756112--sidebarMain-13701e8f--sidebarMainWithHeader-7d9d70ef {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         height: calc(100% - 80px);
+         margin: 0;
+         display: flex;
+         padding: 0;
+         overflow-y: hidden;
+         flex-direction: column;
+         background-color: #F5F7F9;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+      }
+
+      @media screen and (max-width: 1023px) {
+         .reset-3c756112--sidebarMain-13701e8f--sidebarMainWithHeader-7d9d70ef {
+            height: 100%;
+         }
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--sidebarInner-18a1e7fe {
+         overflow-y: auto;
+         flex: 1 1 auto;
+         width: 100%;
+         margin: 0;
+         display: block;
+         padding: 0;
+         overflow-x: hidden;
+         overflow-y: overlay;
+         -webkit-overflow-scrolling: touch;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--sidebarInner-18a1e7fe::-webkit-scrollbar {
+         width: 4px;
+         height: 4px;
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--sidebarInner-18a1e7fe::-webkit-scrollbar-track {
+         background: none;
+         border-width: 0;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--sidebarInner-18a1e7fe::-webkit-scrollbar-thumb {
+         background: rgba(0, 0, 0, .16);
+         transition: background 250ms ease;
+         border-radius: 2px;
+         -moz-transition: background 250ms ease;
+         -webkit-transition: background 250ms ease;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--sidebarInner-18a1e7fe::-webkit-scrollbar-button {
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--sidebarInner-18a1e7fe::-webkit-scrollbar-track-piece {
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--sidebarInner-18a1e7fe::-webkit-scrollbar-corner {
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--sidebarInner-18a1e7fe::-webkit-resizer {
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--sidebarInner-18a1e7fe:hover::-webkit-scrollbar {
+         display: initial;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--sidebarInner-18a1e7fe:hover::-webkit-scrollbar-thumb {
+         background: rgba(0, 0, 0, .16);
+      }
+
+      .reset-3c756112--mobileHeader-4e2d4892 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         color: #74818D;
+         height: 59px;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         box-shadow: 0 1px 1px 0 rgba(116, 129, 141, 0.1);
+         align-items: stretch;
+         border-bottom: 1px solid #d4dadf;
+         background-color: #FFFFFF;
+         -webkit-box-align: stretch;
+      }
+
+      @media screen and (min-width: 768px) {
+         .reset-3c756112--mobileHeader-4e2d4892 {
+            display: none;
+         }
+      }
+
+      .reset-3c756112--mobileHeaderClose-47b8fa64 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         cursor: pointer;
+         margin: 0;
+         display: flex;
+         padding: 8px 16px;
+         font-size: 24px;
+         align-items: center;
+         -webkit-box-align: center;
+      }
+
+      .reset-3c756112--pagesTree-4b07cd56 {
+         margin: 0;
+         display: block;
+         padding: 0;
+         font-size: 15px;
+         margin-top: 32px;
+         padding-left: 16px;
+      }
+
+      @media screen and (min-width: 768px) {
+         .reset-3c756112--pagesTree-4b07cd56 {
+            padding-left: 24px;
+         }
+      }
+
+      .reset-3c756112--pageItem-01e3f344 {
+         margin: 0;
+         display: block;
+         padding: 0;
+         position: relative;
+         border-left: 1px solid transparent;
+      }
+
+      .reset-3c756112--pageComponent-7cc5301a {
+         margin: 0;
+         display: block;
+         padding: 0;
+         margin-left: -1px;
+      }
+
+      .navButton-94f2579c--navButtonClickable-161b88ca {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         color: inherit;
+         border: 1px solid transparent;
+         cursor: pointer;
+         display: flex;
+         padding: 7px 24px 7px 16px;
+         position: relative;
+         align-items: center;
+         border-right: 0;
+         text-decoration: none;
+         -webkit-box-align: center;
+      }
+
+      .navButton-94f2579c--navButtonClickable-161b88ca:hover {
+         background-color: #E6ECF1;
+      }
+
+      .text-4505230f--UIH300-2063425d--textContentFamily-49a318e1--navButtonLabel-14a4968f {
+         flex: 1;
+         font-size: 14px;
+         word-break: break-word;
+         font-family: Content-font, Roboto, sans-serif;
+         font-weight: 500;
+         line-height: 1.5;
+      }
+
+      .reset-3c756112--pageItemWithChildren-56f27afc {
+         margin: 0;
+         display: block;
+         padding: 0;
+         position: relative;
+      }
+
+      .reset-3c756112--navButtonIcon-433c72ce--navButtonIconClickable-11a89312 {
+         color: #9DAAB6;
+         cursor: pointer;
+         margin: -8px;
+         display: block;
+         padding: 8px;
+         position: relative;
+         font-size: 18px;
+         line-height: 1;
+         margin-left: 0;
+      }
+
+      .reset-3c756112--navButtonIcon-433c72ce--navButtonIconClickable-11a89312:hover {
+         color: #5C6975;
+      }
+
+      .navButton-94f2579c--navButtonClickable-161b88ca--navButtonOpened-6a88552e {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         color: inherit;
+         border: 1px solid transparent;
+         cursor: pointer;
+         display: flex;
+         padding: 7px 24px 7px 16px;
+         position: relative;
+         align-items: center;
+         border-color: #E6ECF1 !important;
+         border-right: 0;
+         text-decoration: none;
+         background-color: #FFFFFF;
+         -webkit-box-align: center;
+      }
+
+      .navButton-94f2579c--navButtonClickable-161b88ca--navButtonOpened-6a88552e:hover {
+         border-color: #E6ECF1;
+         background-color: #FFFFFF;
+      }
+
+      .icon-7f6730be--text-3f89f380--pageDocumentIconExpanded-014d853c {
+         width: 1em;
+         height: 1em;
+         transform: rotateZ(90deg);
+         vertical-align: middle;
+      }
+
+      .reset-3c756112--pageChildren-56f27afc--pageDocumentChildren-2add00e7 {
+         margin: 0;
+         display: block;
+         padding: 0;
+         position: relative;
+         margin-left: 16px;
+      }
+
+      .reset-3c756112--pageChildren-56f27afc--pageDocumentChildren-2add00e7:before {
+         top: 0;
+         left: 0;
+         width: 1px;
+         bottom: 0;
+         content: "";
+         position: absolute;
+         background: #E6ECF1;
+      }
+
+      .navButton-94f2579c--pageItemWithChildrenNested-2c5d8183--navButtonClickable-161b88ca {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         color: #9DAAB6;
+         border: 1px solid transparent;
+         cursor: pointer;
+         display: flex;
+         padding: 7px 24px 7px 16px;
+         position: relative;
+         align-items: center;
+         border-right: 0;
+         text-decoration: none;
+         -webkit-box-align: center;
+      }
+
+      .navButton-94f2579c--pageItemWithChildrenNested-2c5d8183--navButtonClickable-161b88ca:hover {
+         background-color: #E6ECF1;
+      }
+
+      .reset-3c756112--pageItemWithChildren-56f27afc--S300Bottom-9b4658d2 {
+         margin: 0;
+         display: block;
+         padding: 0;
+         position: relative;
+         margin-bottom: 24px;
+      }
+
+      .reset-3c756112--footer-68e6f18c {
+         margin: 0;
+         display: block;
+         padding: 0;
+         position: relative;
+      }
+
+      .reset-3c756112--footer-68e6f18c:before {
+         background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #F5F7F9 100%);
+         background: -moz-linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #F5F7F9 100%);
+         top: -24px;
+         width: 100%;
+         height: 24px;
+         content: "";
+         display: block;
+         position: absolute;
+         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #F5F7F9 100%);
+      }
+
+      .reset-3c756112--trademark-a8da4b94 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         color: #9DAAB6;
+         margin: 16px;
+         display: flex;
+         padding: 0;
+         align-items: center;
+         margin-left: 32px;
+         padding-top: 8px;
+         padding-left: 16px;
+         border-radius: 3px;
+         padding-right: 16px;
+         padding-bottom: 8px;
+         text-decoration: none;
+         background-color: #E6ECF1;
+         -webkit-box-align: center;
+      }
+
+      .reset-3c756112--trademark-a8da4b94:hover {
+         color: #3884FF;
+      }
+
+      .reset-3c756112--trademarkLogo-0d2d53bc {
+         margin: 0;
+         display: block;
+         padding: 0;
+         font-size: 40px;
+      }
+
+      .reset-3c756112--trademarkContent-04a01aea {
+         flex: 1;
+         margin: 0;
+         display: block;
+         padding: 0;
+         padding-left: 16px;
+      }
+
+      .text-4505230f--TextH200-a3425406--textUIFamily-5ebd8e40 {
+         font-size: 12px;
+         font-family: "Roboto", sans-serif;
+         font-weight: 400;
+         line-height: 1.625;
+      }
+
+      .reset-3c756112--wholeContentPage-6c3f1fc5 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: 1 1 auto;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         max-width: 100%;
+         min-width: 0;
+         background: #fff;
+         flex-direction: column;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+      }
+
+      .reset-3c756112--wholePageSticky-f53dafd2 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: 1 1 auto;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         position: relative;
+         min-width: 0;
+      }
+
+      .reset-3c756112--pageContainer-544d6e9c {
+         flex: 1 1 auto;
+         margin: 0px 16px;
+         display: block;
+         padding: 0;
+         max-width: 750px;
+         min-width: 0;
+         padding-bottom: 64px;
+      }
+
+      @media screen and (max-width: 1023px) {
+         .reset-3c756112--pageContainer-544d6e9c {
+            margin: 0px auto;
+            padding: 0px 24px 24px;
+         }
+      }
+
+      @media screen and (min-width: 1024px) {
+         .reset-3c756112--pageContainer-544d6e9c {
+            margin: 0px 88px;
+         }
+      }
+
+      .reset-3c756112--pageHeader-15724735 {
+         margin: 0;
+         display: block;
+         padding: 0;
+         border-bottom: 2px solid #E6ECF1;
+         margin-bottom: 32px;
+      }
+
+      .reset-3c756112--pageHeaderInner-7c0f0284 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: auto;
+         margin: 0;
+         display: flex;
+         padding: 40px 0px;
+      }
+
+      @media screen and (min-width: 768px) {
+         .reset-3c756112--pageHeaderInner-7c0f0284 {
+            flex-wrap: wrap;
+            align-items: baseline;
+            flex-direction: row;
+            -webkit-box-align: baseline;
+            -webkit-box-lines: multiple;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+         }
+      }
+
+      .reset-3c756112--pageHeaderWrapperContent-6897c946 {
+         flex: 1;
+         margin: 0;
+         display: block;
+         padding: 0;
+         position: relative;
+      }
+
+      .reset-3c756112--horizontalFlex-5a0077e0 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         align-items: stretch;
+         justify-content: space-between;
+         -webkit-box-pack: justify;
+         -webkit-box-align: stretch;
+      }
+
+      .reset-3c756112--pageHeaderIntro-0c1463da {
+         flex: 1 1 auto;
+         margin: 0;
+         display: block;
+         padding: 0;
+         padding-right: 16px;
+      }
+
+      .reset-3c756112--pageTitle-33dc39a3 {
+         color: #242A31;
+         width: 100%;
+         border: none;
+         margin: 0;
+         display: block;
+         outline: none;
+         padding: 0;
+         background: none;
+         border-radius: 3px;
+      }
+
+      .text-4505230f--DisplayH900-bfb998fa--textContentFamily-49a318e1 {
+         font-size: 32px;
+         font-family: Content-font, Roboto, sans-serif;
+         font-weight: 500;
+         line-height: 1.5;
+      }
+
+      .reset-3c756112--toolbar-a6a9f7d2--medium-8e46b02c--pageHeaderToolbar-6457a802--withControlsClosed-3e96e46c {
+         display: -ms-inline-grid;
+         margin: 0;
+         display: none;
+         padding: 0;
+         margin-top: 9px;
+         -ms-grid-rows: none;
+         grid-column-gap: 16px;
+         grid-template-rows: none;
+      }
+
+      @media screen and (max-width: 1279px) {
+         .reset-3c756112--toolbar-a6a9f7d2--medium-8e46b02c--pageHeaderToolbar-6457a802--withControlsClosed-3e96e46c {
+            display: block;
+         }
+      }
+
+      .button-36063075--small-30ceeddb--button-4b4c5088--small-54db2a94 {
+         display: -webkit-inline-box;
+         display: -moz-inline-box;
+         display: -ms-inline-flexbox;
+         display: -webkit-inline-flex;
+         color: #9DAAB6;
+         width: 30px;
+         border: 1px solid;
+         cursor: pointer;
+         height: 30px;
+         display: inline-flex;
+         outline: none;
+         padding: 0;
+         transition: all 250ms ease-out;
+         align-items: center;
+         line-height: 1em;
+         white-space: nowrap;
+         border-color: transparent;
+         border-radius: 3px;
+         -moz-transition: all 250ms ease-out;
+         justify-content: center;
+         text-decoration: none;
+         -webkit-box-pack: center;
+         background-color: transparent;
+         -webkit-box-align: center;
+         -webkit-transition: all 250ms ease-out;
+      }
+
+      .button-36063075--small-30ceeddb--button-4b4c5088--small-54db2a94:disabled {
+         opacity: 0.5;
+         pointer-events: none;
+      }
+
+      .button-36063075--small-30ceeddb--button-4b4c5088--small-54db2a94:hover {
+         color: #3884FF;
+      }
+
+      .small-3bde6db7--iconOnly-bddce91a {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         margin: 0;
+         display: flex;
+         font-size: 18px;
+         align-items: center;
+         justify-content: center;
+         -webkit-box-pack: center;
+         -webkit-box-align: center;
+      }
+
+      .text-4505230f--UIH300-2063425d--textUIFamily-5ebd8e40--text-8ee2c8b2 {
+         font-size: 14px;
+         font-family: "Roboto", sans-serif;
+         font-weight: 500;
+         line-height: 1em;
+      }
+
+      .reset-3c756112--pageHeaderDescription-22970244 {
+         flex: auto;
+         margin: 0;
+         display: block;
+         padding: 0;
+      }
+
+      .reset-3c756112--toaster-c029690e {
+         top: 16px;
+         left: 50%;
+         margin: 0;
+         display: block;
+         padding: 0;
+         z-index: 160;
+         position: fixed;
+         transform: translateX(-50%);
+      }
+
+      .reset-3c756112--pageBody-a91db4ac {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         position: relative;
+         font-size: 16px;
+         flex-direction: column;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+      }
+
+      .reset-3c756112--container-960c7c26 {
+         margin: 0;
+         display: block;
+         padding: 0;
+         position: relative;
+         margin-bottom: -24px;
+      }
+
+      .reset-3c756112--blankslateContainer-2135c5a2 {
+         margin: 0;
+         display: block;
+         padding: 40px 0;
+      }
+
+      .reset-3c756112--blankslateToCText-55bbb7a3 {
+         colors: #5C6975;
+         margin: 0 0 8px 0;
+         display: block;
+         padding: 0;
+      }
+
+      .text-4505230f--TextH400-3033861f--textContentFamily-49a318e1 {
+         font-size: 16px;
+         font-family: Content-font, Roboto, sans-serif;
+         font-weight: 400;
+         line-height: 1.625;
+      }
+
+      .reset-3c756112--emptyPageSummary-d13a13dc {
+         display: -ms-grid;
+         width: 100%;
+         margin: 24px 0;
+         display: grid;
+         padding: 0;
+         grid-row-gap: 24px;
+         -ms-grid-rows: auto;
+         margin-bottom: 24px;
+         grid-column-gap: 24px;
+         justify-content: center;
+         -ms-grid-columns:
+            calc(50% - 8px) calc(50% - 8px);
+         -webkit-box-pack: center;
+         grid-template-rows: auto;
+         grid-template-columns:
+            calc(50% - 8px) calc(50% - 8px);
+      }
+
+      @media screen and (max-width: 1279px) {
+         .reset-3c756112--emptyPageSummary-d13a13dc {
+            -ms-grid-columns: 100%;
+            grid-template-columns: 100%;
+         }
+      }
+
+      .reset-3c756112--card-6570f064--whiteCard-fff091a4--card-5e635eb5 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         color: #242A31;
+         border: 1px solid #E6ECF1;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         position: relative;
+         align-self: stretch;
+         box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+         transition: border 250ms ease;
+         align-items: center;
+         justify-self: stretch;
+         border-radius: 3px;
+         flex-direction: row;
+         -moz-transition: border 250ms ease;
+         text-decoration: none;
+         background-color: #FFFFFF;
+         -webkit-box-align: center;
+         page-break-inside: avoid;
+         -ms-grid-row-align: stretch;
+         -webkit-box-orient: horizontal;
+         -webkit-transition: border 250ms ease;
+         -ms-grid-column-align: stretch;
+         -webkit-box-direction: normal;
+      }
+
+      @media screen and (max-width: 1023px) {
+         .reset-3c756112--card-6570f064--whiteCard-fff091a4--card-5e635eb5 {
+            flex-wrap: wrap;
+            -webkit-box-lines: multiple;
+         }
+      }
+
+      .link-a079aa82--primary-53a25e66 {
+         color: #3884FF;
+         cursor: pointer;
+         text-decoration: underline;
+      }
+
+      .reset-3c756112--cardBody-25dca3b1 {
+         flex: 1;
+         margin: 0;
+         display: block;
+         padding: 16px;
+      }
+
+      .reset-3c756112--cardTitle-32aa092e {
+         margin: 0;
+         display: block;
+         padding: 0;
+         transition: color 250ms ease;
+         -moz-transition: color 250ms ease;
+         -webkit-transition: color 250ms ease;
+      }
+
+      .text-4505230f--UIH400-4e41e82a--textContentFamily-49a318e1 {
+         font-size: 16px;
+         font-family: Content-font, Roboto, sans-serif;
+         font-weight: 500;
+         line-height: 1.5;
+      }
+
+      .reset-3c756112--pageFooter-f1d5e2b0 {
+         margin: 0;
+         display: block;
+         padding: 0;
+         margin-top: 64px;
+      }
+
+      @media print {
+         .reset-3c756112--pageFooter-f1d5e2b0 {
+            display: none;
+         }
+      }
+
+      .reset-3c756112--navPagesLinks-67bea901 {
+         display: -ms-grid;
+         width: auto;
+         margin: 0;
+         display: grid;
+         padding: 0;
+         -ms-grid-rows: auto;
+         grid-column-gap: 24px;
+         -ms-grid-columns: 1fr 1fr;
+         grid-template-rows: auto;
+         grid-template-areas: "previous next";
+         grid-template-columns: 1fr 1fr;
+      }
+
+      @media screen and (max-width: 767px) {
+         .reset-3c756112--navPagesLinks-67bea901 {
+            grid-row-gap: 24px;
+            -ms-grid-columns: 1fr;
+            grid-template-areas: "next""previous";
+            grid-template-columns: 1fr;
+         }
+      }
+
+      .reset-3c756112--card-6570f064--whiteCard-fff091a4--cardPrevious-56a5e674 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         color: #242A31;
+         border: 1px solid #E6ECF1;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         position: relative;
+         grid-area: previous;
+         align-self: stretch;
+         box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+         transition: border 250ms ease;
+         align-items: center;
+         justify-self: stretch;
+         border-radius: 3px;
+         flex-direction: row;
+         -moz-transition: border 250ms ease;
+         text-decoration: none;
+         background-color: #FFFFFF;
+         -webkit-box-align: center;
+         page-break-inside: avoid;
+         -ms-grid-row-align: stretch;
+         -webkit-box-orient: horizontal;
+         -webkit-transition: border 250ms ease;
+         -ms-grid-column-align: stretch;
+         -webkit-box-direction: normal;
+      }
+
+      .reset-3c756112--cardIcon-5b647d22 {
+         flex: 0 0 auto;
+         color: #9DAAB6;
+         margin: 0;
+         display: block;
+         padding: 16px;
+         font-size: 24px;
+         transition: color 250ms ease;
+         -moz-transition: color 250ms ease;
+         -webkit-transition: color 250ms ease;
+      }
+
+      .reset-3c756112--cardIcon-5b647d22:first-child {
+         padding-right: 0;
+      }
+
+      .reset-3c756112--cardIcon-5b647d22:last-child {
+         padding-left: 0;
+      }
+
+      .reset-3c756112--cardBody-25dca3b1--cardPreviousBody-79f02c06 {
+         flex: 1;
+         margin: 0;
+         display: block;
+         padding: 16px;
+         text-align: right;
+      }
+
+      .reset-3c756112--cardHint-2c5d8183 {
+         color: #9DAAB6;
+         margin: 0;
+         display: block;
+         padding: 0;
+      }
+
+      .text-4505230f--TextH200-a3425406--textContentFamily-49a318e1 {
+         font-size: 12px;
+         font-family: Content-font, Roboto, sans-serif;
+         font-weight: 400;
+         line-height: 1.625;
+      }
+
+      .reset-3c756112--card-6570f064--whiteCard-fff091a4--cardNext-19241c42 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         color: #242A31;
+         border: 1px solid #E6ECF1;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         position: relative;
+         grid-area: next;
+         align-self: stretch;
+         box-shadow: 0 3px 8px 0 rgba(116, 129, 141, 0.1);
+         transition: border 250ms ease;
+         align-items: center;
+         justify-self: stretch;
+         border-radius: 3px;
+         flex-direction: row;
+         -moz-transition: border 250ms ease;
+         text-decoration: none;
+         background-color: #FFFFFF;
+         -webkit-box-align: center;
+         page-break-inside: avoid;
+         -ms-grid-row-align: stretch;
+         -webkit-box-orient: horizontal;
+         -webkit-transition: border 250ms ease;
+         -ms-grid-column-align: stretch;
+         -webkit-box-direction: normal;
+      }
+
+      .reset-3c756112--pageFooterColumns-ef8f347e {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         border-top: 2px solid #E6ECF1;
+         margin-top: 24px;
+         align-items: center;
+         padding-top: 24px;
+         flex-direction: row;
+         -webkit-box-align: center;
+         -webkit-box-orient: horizontal;
+         -webkit-box-direction: normal;
+      }
+
+      @media screen and (max-width: 767px) {
+         .reset-3c756112--pageFooterColumns-ef8f347e {
+            align-items: stretch;
+            flex-direction: column;
+            -webkit-box-align: stretch;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+         }
+      }
+
+      .reset-3c756112--pageFooterSummary-12074aff {
+         flex: 1;
+         margin: 0;
+         display: block;
+         padding: 0;
+      }
+
+      @media screen and (max-width: 767px) {
+         .reset-3c756112--pageFooterSummary-12074aff {
+            margin-bottom: 16px;
+         }
+      }
+
+      .reset-3c756112--pageChangesSummary-08821678 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: auto;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         align-items: center;
+         -webkit-box-align: center;
+      }
+
+      .reset-3c756112--pageEditedDate-b805c39a {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: auto;
+         color: #9DAAB6;
+         margin: 0;
+         display: flex;
+         padding: 0;
+      }
+
+      .reset-3c756112--pageSide-ad9fed26 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: 0 0 auto;
+         width: 224px;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         position: relative;
+         margin-right: auto;
+      }
+
+      @media print {
+         .reset-3c756112--pageSide-ad9fed26 {
+            display: none;
+         }
+      }
+
+      @media screen and (max-width: 1279px) {
+         .reset-3c756112--pageSide-ad9fed26 {
+            display: none;
+         }
+      }
+
+      .reset-3c756112--stickyContainer-2bed3a82 {
+         flex: 1;
+         margin: 0;
+         display: block;
+         padding: 0;
+         max-width: 100%;
+      }
+
+      .reset-3c756112--tocWrapper-506ea24c {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         height: 100%;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         padding-top: 40px;
+         flex-direction: column;
+         padding-bottom: 40px;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--scrollableContainer-756c9114 {
+         overflow-y: auto;
+         flex: 1;
+         margin: 0;
+         display: block;
+         padding: 0;
+         overflow-x: hidden;
+         overflow-y: overlay;
+         -webkit-overflow-scrolling: touch;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--scrollableContainer-756c9114::-webkit-scrollbar {
+         width: 4px;
+         height: 4px;
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--scrollableContainer-756c9114::-webkit-scrollbar-track {
+         background: none;
+         border-width: 0;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--scrollableContainer-756c9114::-webkit-scrollbar-thumb {
+         background: rgba(0, 0, 0, .16);
+         transition: background 250ms ease;
+         border-radius: 2px;
+         -moz-transition: background 250ms ease;
+         -webkit-transition: background 250ms ease;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--scrollableContainer-756c9114::-webkit-scrollbar-button {
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--scrollableContainer-756c9114::-webkit-scrollbar-track-piece {
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--scrollableContainer-756c9114::-webkit-scrollbar-corner {
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--scrollableContainer-756c9114::-webkit-resizer {
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--scrollableContainer-756c9114:hover::-webkit-scrollbar {
+         display: initial;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--scrollableContainer-756c9114:hover::-webkit-scrollbar-thumb {
+         background: rgba(0, 0, 0, .16);
+      }
+
+      .reset-3c756112--menu-5b8a7448--pageSideMenu-23bebfd3--pageSideSection-542f1fd5 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         flex: 0 0 auto;
+         margin: 0;
+         display: flex;
+         padding: 0;
+         overflow: hidden;
+         position: relative;
+         min-width: 220px;
+         margin-bottom: 24px;
+         flex-direction: column;
+         -webkit-box-orient: vertical;
+         -webkit-box-direction: normal;
+      }
+
+      .reset-3c756112--menu-5b8a7448--pageSideMenu-23bebfd3--pageSideSection-542f1fd5:before {
+         top: 0;
+         left: 0;
+         height: 100%;
+         content: " ";
+         position: absolute;
+         border-left: 1px solid #E6ECF1;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--menuItems-2e6f017b--pageSideMenuItems-67c61496--pageSideSection-542f1fd5 {
+         overflow-y: auto;
+         flex: 1;
+         margin: 0;
+         display: block;
+         padding: 0;
+         position: relative;
+         overflow-x: hidden;
+         overflow-y: overlay;
+         -webkit-overflow-scrolling: touch;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--menuItems-2e6f017b--pageSideMenuItems-67c61496--pageSideSection-542f1fd5::-webkit-scrollbar {
+         width: 4px;
+         height: 4px;
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--menuItems-2e6f017b--pageSideMenuItems-67c61496--pageSideSection-542f1fd5::-webkit-scrollbar-track {
+         background: none;
+         border-width: 0;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--menuItems-2e6f017b--pageSideMenuItems-67c61496--pageSideSection-542f1fd5::-webkit-scrollbar-thumb {
+         background: rgba(0, 0, 0, .16);
+         transition: background 250ms ease;
+         border-radius: 2px;
+         -moz-transition: background 250ms ease;
+         -webkit-transition: background 250ms ease;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--menuItems-2e6f017b--pageSideMenuItems-67c61496--pageSideSection-542f1fd5::-webkit-scrollbar-button {
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--menuItems-2e6f017b--pageSideMenuItems-67c61496--pageSideSection-542f1fd5::-webkit-scrollbar-track-piece {
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--menuItems-2e6f017b--pageSideMenuItems-67c61496--pageSideSection-542f1fd5::-webkit-scrollbar-corner {
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--menuItems-2e6f017b--pageSideMenuItems-67c61496--pageSideSection-542f1fd5::-webkit-resizer {
+         display: none;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--menuItems-2e6f017b--pageSideMenuItems-67c61496--pageSideSection-542f1fd5:hover::-webkit-scrollbar {
+         display: initial;
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--menuItems-2e6f017b--pageSideMenuItems-67c61496--pageSideSection-542f1fd5:hover::-webkit-scrollbar-thumb {
+         background: rgba(0, 0, 0, .16);
+      }
+
+      .reset-3c756112--withScrollbar-39338630--scrollAxisY-7680295e--menuItems-2e6f017b--pageSideMenuItems-67c61496--pageSideSection-542f1fd5:before {
+         top: 0;
+         left: 0;
+         height: 100%;
+         content: " ";
+         position: absolute;
+         border-left: 1px solid #E6ECF1;
+      }
+
+      .reset-3c756112--menuItem-aa02f6ec--menuItemLight-757d5235--menuItemInline-173bdf97--pageSideMenuItem-22949732 {
+         display: -webkit-box;
+         display: -moz-box;
+         display: -ms-flexbox;
+         display: -webkit-flex;
+         color: #242A31;
+         cursor: pointer;
+         margin: 0;
+         display: flex;
+         padding: 4px 16px;
+         align-items: center;
+         padding-left: 24px;
+         vertical-align: middle;
+         text-decoration: none;
+         -webkit-box-align: center;
+      }
+
+      .reset-3c756112--menuItem-aa02f6ec--menuItemLight-757d5235--menuItemInline-173bdf97--pageSideMenuItem-22949732:hover {
+         background: #F5F7F9;
+      }
+
+      .reset-3c756112--menuItemIcon-206eb252 {
+         display: -webkit-inline-box;
+         display: -moz-inline-box;
+         display: -ms-inline-flexbox;
+         display: -webkit-inline-flex;
+         color: #9DAAB6;
+         margin: 0;
+         display: inline-flex;
+         padding: 0;
+         font-size: 18px;
+         margin-right: 8px;
+      }
+
+      .reset-3c756112--menuItemContent-c44ec79e {
+         margin: 0;
+         display: block;
+         padding: 0;
+         overflow: hidden;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+      }
+
+      .text-4505230f--UIH300-2063425d--textUIFamily-5ebd8e40 {
+         font-size: 14px;
+         font-family: "Roboto", sans-serif;
+         font-weight: 500;
+         line-height: 1.5;
+      }
+
+      .reset-3c756112--pageSideSection-542f1fd5 {
+         margin: 0;
+         display: block;
+         padding: 0;
+         position: relative;
+      }
+
+      .reset-3c756112--pageSideSection-542f1fd5:before {
+         top: 0;
+         left: 0;
+         height: 100%;
+         content: " ";
+         position: absolute;
+         border-left: 1px solid #E6ECF1;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="reset-3c756112--blankslateContainer-2135c5a2">
+      <div class="reset-3c756112--blankslateToCText-55bbb7a3"><span
+            class="text-4505230f--TextH400-3033861f--textContentFamily-49a318e1">Here are the articles in this
+            section:</span></div>
+      <div class="reset-3c756112--emptyPageSummary-d13a13dc"><a
+            class="reset-3c756112--card-6570f064--whiteCard-fff091a4--card-5e635eb5" readonly=""
+            href="/platform/modules/pre-registration" style="">
+            <div class="reset-3c756112--cardBody-25dca3b1">
+               <div class="reset-3c756112--cardTitle-32aa092e" style=""><span
+                     class="text-4505230f--UIH400-4e41e82a--textContentFamily-49a318e1">Pre-Registration</span></div>
+            </div>
+         </a><a class="reset-3c756112--card-6570f064--whiteCard-fff091a4--card-5e635eb5" readonly=""
+            href="/platform/modules/registration-client" style="">
+            <div class="reset-3c756112--cardBody-25dca3b1">
+               <div class="reset-3c756112--cardTitle-32aa092e" style=""><span
+                     class="text-4505230f--UIH400-4e41e82a--textContentFamily-49a318e1">Registration</span></div>
+            </div>
+         </a><a class="reset-3c756112--card-6570f064--whiteCard-fff091a4--card-5e635eb5" readonly=""
+            href="/platform/modules/registration-processor" style="">
+            <div class="reset-3c756112--cardBody-25dca3b1">
+               <div class="reset-3c756112--cardTitle-32aa092e" style=""><span
+                     class="text-4505230f--UIH400-4e41e82a--textContentFamily-49a318e1">Registration Processor</span>
+               </div>
+            </div>
+         </a><a class="reset-3c756112--card-6570f064--whiteCard-fff091a4--card-5e635eb5" readonly=""
+            href="/platform/modules/id-repository" style="">
+            <div class="reset-3c756112--cardBody-25dca3b1">
+               <div class="reset-3c756112--cardTitle-32aa092e" style=""><span
+                     class="text-4505230f--UIH400-4e41e82a--textContentFamily-49a318e1">ID Repository</span></div>
+            </div>
+         </a><a class="reset-3c756112--card-6570f064--whiteCard-fff091a4--card-5e635eb5" readonly=""
+            href="/platform/modules/id-authentication" style="">
+            <div class="reset-3c756112--cardBody-25dca3b1">
+               <div class="reset-3c756112--cardTitle-32aa092e" style=""><span
+                     class="text-4505230f--UIH400-4e41e82a--textContentFamily-49a318e1">ID Authentication</span></div>
+            </div>
+         </a><a class="reset-3c756112--card-6570f064--whiteCard-fff091a4--card-5e635eb5" readonly=""
+            href="/platform/modules/resident-services">
+            <div class="reset-3c756112--cardBody-25dca3b1">
+               <div class="reset-3c756112--cardTitle-32aa092e"><span
+                     class="text-4505230f--UIH400-4e41e82a--textContentFamily-49a318e1">Resident Services</span></div>
+            </div>
+         </a><a class="reset-3c756112--card-6570f064--whiteCard-fff091a4--card-5e635eb5" readonly=""
+            href="/platform/modules/partner-management">
+            <div class="reset-3c756112--cardBody-25dca3b1">
+               <div class="reset-3c756112--cardTitle-32aa092e"><span
+                     class="text-4505230f--UIH400-4e41e82a--textContentFamily-49a318e1">Partner Management</span></div>
+            </div>
+         </a><a class="reset-3c756112--card-6570f064--whiteCard-fff091a4--card-5e635eb5" readonly=""
+            href="/platform/modules/admin">
+            <div class="reset-3c756112--cardBody-25dca3b1">
+               <div class="reset-3c756112--cardTitle-32aa092e"><span
+                     class="text-4505230f--UIH400-4e41e82a--textContentFamily-49a318e1">Administration</span></div>
+            </div>
+         </a><a class="reset-3c756112--card-6570f064--whiteCard-fff091a4--card-5e635eb5" readonly=""
+            href="/platform/modules/kernel" style="">
+            <div class="reset-3c756112--cardBody-25dca3b1">
+               <div class="reset-3c756112--cardTitle-32aa092e" style=""><span
+                     class="text-4505230f--UIH400-4e41e82a--textContentFamily-49a318e1">Kernel</span></div>
+            </div>
+         </a></div>
+   </div>
+</body>
+
+</html>
