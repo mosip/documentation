@@ -21,11 +21,11 @@ Below are the links to detailed features of the pre-registration module,
 
 # Process flow
 
-The below process flow diagram provides a brief description on how to create or update a pre-Registration application.
+## Create or update a pre-registration application
 
 ![](_images/pre_registration_process_flow-create_or_update_applications.png)
 
-The below process flow diagram provides a brief description on how to cancel and discard a pre-registration application.
+## Cancel or discard a pre-registration application
 
 ![](_images/pre_registration_process_flow-cancel_or_discard_applications.png)
 
@@ -37,18 +37,16 @@ For high level and low level design refer to [pre-registration repository/design
 
 # Logical View
 
-The below diagram depicts the logical architecture of pre-registration,
-
 ![](_images/pre_registration-logic_architecture_diagram.png)
 
 # Build and deploy
 Refer to build and deploy instructions in [pre-registration repo](https://github.com/mosip/pre-registration).
 
 # APIs
-For detailed functionality of pre-registration APIs please view our page, [Pre-registration APIs](../../../api-reference/Pre-Registration-APIs.md)
+For detailed functionality of pre-registration APIs refer our page on [pre-registration APIs](../../../api-reference/Pre-Registration-APIs.md)
 
 # UI Reference Implementation
 MOSIP provides a reference implementation of the Pre-registration UI that may be customized as per country needs. The implementation is available on [reference implementation repository](https://github.com/mosip/mosip-ref-impl).
 
 # Configurations
-Refer to the [pre-registration configuration](Pre-Registration-Configuration.md) document for details about the configurations in pre-registration.
+For details related to pre-registration configurations refer our page on [pre-registration configuration](Pre-Registration-Configuration.md).
