@@ -14,6 +14,7 @@ August 04, 2020|Analytics section has been added to the overall response for Ide
 November 19, 2020|Note on encryption of biometric data share using referenceURL has been added.
 February 05, 2021|Note on [refernceURL](#reference-url) and [authentication token](#authentication-token) was added for Insert Request 
 March 23, 2021|New [failure reason](#failure-reasons) (code - 17) for ABIS has been added.
+May 3, 2021| The logic for encryption has been updated for ABIS data share URL
 
 # Introduction
 An ABIS system that integrates with MOSIP should support the following operations. 
