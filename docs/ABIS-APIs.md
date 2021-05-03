@@ -187,7 +187,7 @@ JeLlBHHTbA-c0YdoLpy7Ya8jXujwzj4gw3nyfwbDrHyY7sLrD7EC3yFLWI0KDO794vmagTOwWyNJhvJi
 
 The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format. It will be divided in two Parts after splitting using KEY_SPLITTER.
 
-VER_BYTES | KEY_SPLITTER | ADD
+Encrypted Key Data | KEY_SPLITTER | Encrypted Actual Data
 ----------|--------------|-----------
 Part 1    | KEY_SPLITTER | Part 2
 
