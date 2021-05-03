@@ -195,7 +195,7 @@ Part 1    | KEY_SPLITTER | Part 2
 
 1. VER_BYTES - Current version constant is - VER_R2  - first 6 bytes
 2. Certificate Thumbprint - Key Identifier - next 32 bytes
-3. Encrypted AES Session Key - Encrypted with RSA OAEP - SHA256-MFG1 - Remaining bytes (256 bytes)
+3. Encrypted Random AES Key - Encrypted with RSA OAEP - SHA256-MFG1 - Remaining bytes (256 bytes)
 
 **Part 2:**
 
