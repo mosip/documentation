@@ -191,11 +191,13 @@ VER_BYTES | KEY_SPLITTER | ADD
 Part 1    | KEY_SPLITTER | Part 2
 
 **Part 1:**
+
 1. VER_BYTES - Current version constant is - VER_R2  - first 6 bytes
 2. Certificate Thumbprint - Key Identifier - next 32 bytes
 3. Encrypted AES Session Key - Encrypted with RSA OAEP - SHA256-MFG1 - Remaining bytes (256 bytes)
 
 **Part 2:**
+
 1. Random 32 bytes which will be used as AAD in AES - first 32 bytes
 2. IV/Nonce - First 12 bytes from AAD
 3. Actual Encrypted data using AES GCM PKCS5Padding - Remaining bytes
