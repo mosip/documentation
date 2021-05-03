@@ -1,12 +1,12 @@
 # Overview
-This module enables a resident to:
 
+This module enables a resident to:
 * Enter demographic data & upload supporting documents
 * Book an appointment for one or many users for registration by choosing a suitable registration center and time slot
 * Receive appointment notifications
 * Reschedule and cancel appointments
 
-Resident data is sent to the designated registration center before the appointment that can be used during the registration process.
+Once the residnet completes the above process, their data will be synced to their respective registration centers before their appointment, so that it can be used during the registration process.
 
 # Detailed functionality
 
@@ -21,23 +21,23 @@ Below are the links to detailed features of the pre-registration module,
 
 # Process flow
 
-Process flow diagram for creating and update flows in Pre-registration.
+The below process flow diagram provides a brief description on how to create or update a pre-Registration application.
 
 ![](_images/pre_registration_process_flow-create_or_update_applications.png)
 
-Process flow diagram for cancel and discard flow is Pre-registration.
+The below process flow diagram provides a brief description on how to cancel and discard a pre-registration application.
 
 ![](_images/pre_registration_process_flow-cancel_or_discard_applications.png)
 
 # Services
 
-For detailed description of Pre-registration services refer to [pre-registration repo](https://github.com/mosip/pre-registration).
+For detailed description of pre-registration services refer to [pre-registration repository](https://github.com/mosip/pre-registration).
 
-For high level and low level design refer to [pre-registration repo/design](https://github.com/mosip/pre-registration/design)
+For high level and low level design refer to [pre-registration repository/design](https://github.com/mosip/pre-registration/design)
 
 # Logical View
 
-Below is the diagram depicts the logical architecture of Pre-registration,
+The below diagram depicts the logical architecture of pre-registration,
 
 ![](_images/pre_registration-logic_architecture_diagram.png)
 
@@ -45,7 +45,7 @@ Below is the diagram depicts the logical architecture of Pre-registration,
 Refer to build and deploy instructions in [pre-registration repo](https://github.com/mosip/pre-registration).
 
 # APIs
-For detailed functionality of Pre-registration APIs please view our page, [Pre-registration APIs](../../../api-reference/Pre-Registration-APIs.md)
+For detailed functionality of pre-registration APIs please view our page, [Pre-registration APIs](../../../api-reference/Pre-Registration-APIs.md)
 
 # UI Reference Implementation
 MOSIP provides a reference implementation of the Pre-registration UI that may be customized as per country needs. The implementation is available on [reference implementation repository](https://github.com/mosip/mosip-ref-impl).
