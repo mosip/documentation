@@ -184,16 +184,21 @@ JeLlBHHTbA-c0YdoLpy7Ya8jXujwzj4gw3nyfwbDrHyY7sLrD7EC3yFLWI0KDO794vmagTOwWyNJhvJi
 
 **The structure of the encrypted data downloaded from referenceURL **
 
-The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format.
+The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format. It will be divided in two Parts after splitting using KEY_SPLITTER.
 
-Encrypted 256 bit AES key (Encrypted by the provided public key) | #KEY_SPLITTER# |           | AES Encrypted Data
------------------------------------------------------------------|----------------|-----------|--------------------
-1 | 2 | 3 | 4
+VER_BYTES | KEY_SPLITTER | ADD
+----------|--------------|-----------
+Part 1    | KEY_SPLITTER | Part 2
 
-1. Encrypted with RSA OAEP - SHA256-MFG1
-2. Static value which will be shared by the adopter
-3. Random IV 32 bytes which will be used for AES
-4. AES GCM PKCS5Padding with null AAD and IV as of point 3
+**Part 1:**
+1. VER_BYTES - Current version constant is - VER_R2  - first 6 bytes
+2. Certificate Thumbprint - Key Identifier - next 32 bytes
+3. Encrypted AES Session Key - Encrypted with RSA OAEP - SHA256-MFG1 - Remaining bytes (256 bytes)
+
+**Part 2:**
+1. Random 32 bytes which will be used as AAD in AES - first 32 bytes
+2. IV/Nonce - First 12 bytes from AAD
+3. Actual Encrypted data using AES GCM PKCS5Padding - Remaining bytes
 
 {% endhint %}
 
