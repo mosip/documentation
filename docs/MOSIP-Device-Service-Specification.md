@@ -508,11 +508,21 @@ transactionId | <ul><li>Unique Id of the transaction.</li><li>This is an interna
 bio.type | Allowed values are "Finger", "Iris" or "Face".
 bio.count | <ul><li>Number of biometric data that is collected for a given type.</li><li>The device should validate and ensure that this number is in line with the type of biometric that's captured.</li></ul>
 bio.bioSubType | <ul><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"]</li><li>For Iris: ["Left", "Right", "UNKNOWN"]</li><li>For Face: No bioSubType</li></ul>
-bio.requestedScore | Upon reaching the quality score the biometric device is expected to auto capture the image.
+bio.requestedScore | Upon reaching the quality score the biometric device is expected to auto capture the image. If the requested score is not met, until the timeout, the best frame during the capture sequence must be captured/returned. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned below.
 bio.deviceId | Internal Id to identify the actual biometric device within the device service.
 bio.deviceSubId | <ul><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
 bio.previousHash | <ul><li>For the first capture the previousHash is hash of empty UTF-8 string.</li><li>From the second capture the previous captures hash (as hex encoded) is used as input.</li><li>This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.</li></ul>
 customOpts | <ul><li>In case, the device vendor wants to send additional parameters they can use this to send key value pair if necessary.</li><li>The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications.</li><li>Vendors are free to include additional parameters and fine-tuning the process.</li><li>None of these values should go undocumented by the vendor.</li><li>No sensitive data should be available in the customOpts.</li></ul>
+
+NFIQ v1.0 in the scale of 0-100 (quality score).
+
+Scale | NFIQ v1.0
+------|-----------
+81 - 100 | 1
+61 - 80 | 2
+41 - 60 | 3
+21 - 40 | 4
+0 - 20 | 5
 
 #### Capture Response
 ```
@@ -588,8 +598,8 @@ data.domainUri | <ul><li>URI of the authentication server.</li><li>This can be u
 data.bioValue | <ul><li>Biometric data is encrypted with random symmetric (AES GCM) key and base-64-URL encoded.</li><li>For symmetric key encryption of bioValue, (biometrics.data.timestamp XOR transactoinId) is computed and the last 16 bytes and the last 12  bytes of the results are set as the aad and the IV(salt) respectively.</li><li>Look at the Authentication document to understand more about the encryption.</li></ul>
 data.transactionId | Unique transaction id sent in request
 data.timestamp | <ul><li>Time as per the biometric device.</li><li>Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.</li></ul>
-data.requestedScore | Floating point number to represent the minimum required score for the capture.
-data.qualityScore | Floating point number representing the score for the current capture.
+data.requestedScore | Floating point number to represent the minimum required score for the capture. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned above.
+data.qualityScore | Floating point number representing the score for the current capture. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned above.
 hash | The value of the previousHash attribute in the request object or the value of hash attribute of the previous data block (used to chain every single data block) concatenated with the hex encode sha256 hash of the current data block before encryption.
 sessionKey | The session key (used for the encrypting of the bioValue) is encrypted using the MOSIP public certificate with RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING algorithm and then base64-URL-encoded.
 thumbprint | <ul><li>SHA256 representation of thumbprint of the certificate that was used for encryption of session key.</li><li>All texts to be treated as uppercase without any spaces or hyphens.</li></ul>
@@ -702,15 +712,6 @@ The requestedScore is in the scale of 1-100 (NFIQ v2.0 for fingerprints). So, in
 
 The API is used by the devices that are compatible for the registration module. This API should not be supported by the devices that are compatible for authentication.
 
-Rule for normalizing quality score in NFIQ v2.0,
-NFIQ v2.0 | Normalized value
-----------|------------------
-1         | 1 - 20
-2         | 20 - 40
-3         | 40 - 60
-4         | 60 - 80
-5         | 80 - 100
-
 #### Registration Capture Request
 ```
 {
@@ -726,7 +727,7 @@ NFIQ v2.0 | Normalized value
       "count":  "Finger/Iris count, in case of face max is set to 1",
       "bioSubType": ["Array of subtypes"], //Optional
       "exception": ["Finger or Iris to be excluded"],
-      "requestedScore": "Expected quality score that should match to complete a successful capture. This value will be as per NFIQ v2.0 and scaled from 1 to 100",
+      "requestedScore": "Expected quality score that should match to complete a successful capture",
       "deviceId": "Internal Id",
       "deviceSubId": "Specific device Id",
       "previousHash": "Hash of the previous block"

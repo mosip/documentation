@@ -509,7 +509,7 @@ The capture request would be used to capture a biometric from MOSIP compliant de
       "type": "Type of the biometric data",
       "count":  "Finger/Iris count, in case of face max is set to 1",
       "bioSubType": ["Array of subtypes"],
-      "requestedScore": "Expected quality score that should match to complete a successful capture",
+      "requestedScore": "Expected quality score that should match to complete a successful capture. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned below.",
       "serialNo": "Physical Serial Number of the device",
       "deviceSubId": "Specific Device Sub Id",
       "previousHash": "Hash of the previous block"
@@ -545,11 +545,21 @@ transactionId | Unique ID for the transaction. This is an internal Id to the app
 bio.type | Allowed values are "Finger", "Iris" or "Face".
 bio.count | Number of biometric data that is collected for a given type. The device should validate and ensure that this number is in line with the type of biometric that's captured.
 bio.bioSubType | <ul><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"]</li><li>For Iris: ["Left", "Right", "UNKNOWN"]</li><li>For Face: No bioSubType</li></ul>
-bio.requestedScore | Upon reaching the quality score the biometric device is expected to auto capture the image. If the requested score is not met, until the timeout, the best frame during the capture sequence must be captured/returned.
+bio.requestedScore | Upon reaching the quality score the biometric device is expected to auto capture the image. If the requested score is not met, until the timeout, the best frame during the capture sequence must be captured/returned. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned below.
 bio.serialNo | This represents the serial number of the device. This value should be the same as printed on the device (Refer [Physical ID](#physical-id)).
 bio.deviceSubId | Allowed values are 0, 1, 2 or 3. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present. In the case of Finger/Iris it's 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).<br><br>Wherever possible SBI must detect if the placement of biometrics is not in sync with the deviceSubId. For example, if the deviceSubId is selected as 1 and if a right slap is presented instead of left, SBI must provide appropriate messages.
 bio.previousHash | For the first capture the previousHash is a hash of an empty UTF-8 string. From the second capture the previous captured hash (as hex encoded) is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.
 customOpts | In case, the device vendor wants to send additional parameters they can use this to send key value pairs if necessary. The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications. Vendors are free to include additional parameters and fine-tuning the process. None of these values should go undocumented by the vendor. No sensitive data should be available in the customOpts.
+
+NFIQ v1.0 in the scale of 0-100 (quality score).
+
+Scale | NFIQ v1.0
+------|-----------
+81 - 100 | 1
+61 - 80 | 2
+41 - 60 | 3
+21 - 40 | 4
+0 - 20 | 5
 
 {% hint style="info" %}
 
@@ -763,18 +773,9 @@ No support for streaming
 ### Registration Capture
 The registration client application will discover the device. Once the device is discovered the status of the device is obtained with the device info API. During the registration the registration client sends the RCAPTURE API and the response will provide the actual biometric data in a digitally signed non encrypted form. When the Device Registration Capture API is called the frames should not be added to the stream. The device is expected to send the images in ISO format.
 
-The requestedScore is on the scale of 1-100 (NFIQ v2.0 for fingerprints). So, in cases where you have four fingers the average of all will be considered for capture threshold. The device would always send the best frame during the capture time even if the requested score is not met.
+The requestedScore is on the scale of 0-100 (NFIQ v2.0 for fingerprints). So, in cases where you have four fingers the average of all will be considered for capture threshold. The device would always send the best frame during the capture time even if the requested score is not met.
 
 The API is used by the devices that are compatible for the registration module. This API should not be supported by the devices that are compatible for authentication.
-
-Rule for normalizing quality score in NFIQ v2.0,
-FIQ v2.0 | Normalized value
-----------|------------------
-1         | 1 - 20
-2         | 20 - 40
-3         | 40 - 60
-4         | 60 - 80
-5         | 80 - 100
 
 #### Registration Capture Request
 ```
@@ -791,7 +792,7 @@ FIQ v2.0 | Normalized value
       "count":  "Finger/Iris count, in case of face max is set to 1",
       "bioSubType": ["Array of subtypes"], //Optional
       "exception": ["Finger or Iris to be excluded"],
-      "requestedScore": "Expected quality score that should match to complete a successful capture. This value will be as per NFIQ v2.0 and scaled from 1 to 100",
+      "requestedScore": "Expected quality score that should match to complete a successful capture.",
       "serialNo": "Printed Serial Number of the device",
       "deviceSubId": "Specific device Id",
       "previousHash": "Hash of the previous block"
