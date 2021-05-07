@@ -14,6 +14,7 @@ Publish Date | Revision
 18-Jan-2021 | This is the first formal publication of this document as a version-ed specification. Earlier drafts are superseded by this document.
 26-Feb-2021 | Updated the [FTM criteria](#certification) to include PCI PED 2.0 and CC.
 08-Apr-2021 | We will be following datetime values in ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ. The same has been updated throughout the document.
+07-May-2021 | An optional parameter called spec version has been added in device discovery request
 
 ## Glossary of Terms
 Key | Description
@@ -265,7 +266,8 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 #### Device Discovery Request
 ```JSON
 {
-  "type": "type of the device"
+  "type": "type of the device",
+  "serviceVersion": "SBI specification version"
 }
 ```
 
@@ -273,6 +275,7 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 Parameters | Description
 -----------|-------------
 type | This represents the type of device. Allowed values here are "Biometric Device", "Finger", "Face" or "Iris".<br>"Biometric Device" - is a special type and used in case you are looking for "any" biometric device.
+specVersion | This represents the spec version of the SBI. This is an optional parameter, but when requested the response the SBI supporting this spec version should respond to the discovery call.
 
 #### Device Discovery Response
 ```JSON
@@ -760,9 +763,18 @@ No support for streaming
 ### Registration Capture
 The registration client application will discover the device. Once the device is discovered the status of the device is obtained with the device info API. During the registration the registration client sends the RCAPTURE API and the response will provide the actual biometric data in a digitally signed non encrypted form. When the Device Registration Capture API is called the frames should not be added to the stream. The device is expected to send the images in ISO format.
 
-The requestedScore is on the scale of 1-100 (NFIQ2.0 for fingerprints). So, in cases where you have four fingers the average of all will be considered for capture threshold. The device would always send the best frame during the capture time even if the requested score is not met.
+The requestedScore is on the scale of 1-100 (NFIQ v2.0 for fingerprints). So, in cases where you have four fingers the average of all will be considered for capture threshold. The device would always send the best frame during the capture time even if the requested score is not met.
 
 The API is used by the devices that are compatible for the registration module. This API should not be supported by the devices that are compatible for authentication.
+
+Rule for normalizing quality score in NFIQ v2.0,
+FIQ v2.0 | Normalized value
+----------|------------------
+1         | 1 - 20
+2         | 20 - 40
+3         | 40 - 60
+4         | 60 - 80
+5         | 80 - 100
 
 #### Registration Capture Request
 ```
@@ -779,7 +791,7 @@ The API is used by the devices that are compatible for the registration module. 
       "count":  "Finger/Iris count, in case of face max is set to 1",
       "bioSubType": ["Array of subtypes"], //Optional
       "exception": ["Finger or Iris to be excluded"],
-      "requestedScore": "Expected quality score that should match to complete a successful capture.",
+      "requestedScore": "Expected quality score that should match to complete a successful capture. This value will be as per NFIQ v2.0 and scaled from 1 to 100",
       "serialNo": "Printed Serial Number of the device",
       "deviceSubId": "Specific device Id",
       "previousHash": "Hash of the previous block"
@@ -787,11 +799,11 @@ The API is used by the devices that are compatible for the registration module. 
   ],
   customOpts: {
     //max of 50 key value pair.
-	//This is so that vendor specific parameters can be sent if necessary.
-	//The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications.
-	//Vendors are free to include additional parameters and fine-tuning parameters.
-	//None of these values should go undocumented by the vendor.
-	//No sensitive data should be available in the customOpts.
+	  //This is so that vendor specific parameters can be sent if necessary.
+	  //The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications.
+	  //Vendors are free to include additional parameters and fine-tuning parameters.
+	  //None of these values should go undocumented by the vendor.
+	  //No sensitive data should be available in the customOpts.
   }
 }
 ```

@@ -1,6 +1,12 @@
 # Introduction
 Biometrics images for various modalities are represented and exchanged as per the below specifications.
 
+# Change History
+Date|Changes
+----|-------
+7th May 2021 | NFIQ v2.0 has been removed from the supported quality score for **fingerprint authentication device**
+
+
 # Image formats
 
 ## Fingerprint
@@ -14,7 +20,7 @@ Minimum Active Platen Area or Capture area\* | >=1.6 x 1.5 inches for 1 to 2 fin
 Greyscale Density | 8 bits (256 grey levels) | 8 bits (256 grey levels) 
 Image Format | JPEG 2000 Lossless | JPEG 2000 Lossy or WSQ
 Compression Ratio | Lossless | Up to 15:1
-Quality Score | NFIQ v2.0 | NFIQ v1.0 or NFIQ v2.0
+Quality Score | NFIQ v2.0 | NFIQ v1.0
 Capture Mode | Auto Capture | Auto Capture
 Preview | > 3 FPS M-JPEG frames with NFIQ 2.0 score superimposed | Not Applicable 
 ESD | >= 8kv | >= 8kv
@@ -35,7 +41,7 @@ Factor | Registration Devices | Authentication Devices
 -------|----------------------|-----------------------
 Image Specification | ISO 19794-6:2011 Annex B | ISO 19794-6:2011 Annex B	
 Minimum Iris Diameter | >=210 pixels | >=150 pixels
-Greyscale Density | 8 bits (256 grey levels) | 8 bits (256 grey levels)	
+Grey Scale Density | 8 bits (256 grey levels) | 8 bits (256 grey levels)	
 Spatial Resolution | >=60% @ 2Lp/mm | >= 50% @ 1Lp/mm	
 Pixel Resolution | >10 pixels/mm | >10 pixels/mm	
 Capture Distance | >=10CM | >=10CM	

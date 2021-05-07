@@ -698,9 +698,18 @@ No support for streaming
 ### Registration Capture
 The registration client application will discover the device. Once the device is discovered the status of the device is obtained with the device info API. During the registration the registration client sends the RCAPTURE API and the response will provide the actual biometric data in a digitally signed non encrypted form. When the Device Registration Capture API is called the frames should not be added to the stream. The device is expected to send the images in ISO format.
 
-The requestedScore is in the scale of 1-100. So, in cases where you have four fingers the average of all will be considered for capture threshold. The device would always send the best frame during the capture time even if the requested score is not met.
+The requestedScore is in the scale of 1-100 (NFIQ v2.0 for fingerprints). So, in cases where you have four fingers the average of all will be considered for capture threshold. The device would always send the best frame during the capture time even if the requested score is not met.
 
 The API is used by the devices that are compatible for the registration module. This API should not be supported by the devices that are compatible for authentication.
+
+Rule for normalizing quality score in NFIQ v2.0,
+NFIQ v2.0 | Normalized value
+----------|------------------
+1         | 1 - 20
+2         | 20 - 40
+3         | 40 - 60
+4         | 60 - 80
+5         | 80 - 100
 
 #### Registration Capture Request
 ```
@@ -717,7 +726,7 @@ The API is used by the devices that are compatible for the registration module. 
       "count":  "Finger/Iris count, in case of face max is set to 1",
       "bioSubType": ["Array of subtypes"], //Optional
       "exception": ["Finger or Iris to be excluded"],
-      "requestedScore": "Expected quality score that should match to complete a successful capture.",
+      "requestedScore": "Expected quality score that should match to complete a successful capture. This value will be as per NFIQ v2.0 and scaled from 1 to 100",
       "deviceId": "Internal Id",
       "deviceSubId": "Specific device Id",
       "previousHash": "Hash of the previous block"
