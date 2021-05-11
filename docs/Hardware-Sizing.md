@@ -4,7 +4,7 @@ The hardware compute and storage requirements for MOSIP core platform are estima
 ### Compute
 Compute hardware estimates for a production deployment:
 
-|Module|Capacity|n rServers|Configuration|
+|Module|Capacity|Servers|Configuration|
 |---|---|---|---|
 |Pre-registration | 7200 pre-regs/hour\* | 10 | 4 VCPU\**, 16 GB RAM | 
 |Registration Processor | 200,000 registrations per day | 80 | 4 VCPU, 16 GB RAM| 
