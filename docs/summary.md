@@ -1,4 +1,4 @@
-# Table of contents
+# Table of Contents
 
 * [MOSIP Platform](platform/Platform.md)
     * [Releases](platform/releases/MOSIP-Releases.md)
