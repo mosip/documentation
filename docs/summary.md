@@ -190,7 +190,7 @@
             * Print Service
             * Antivirus
             * Reference Integrations
-        * Customizing
+        * Customising
         * Extending
         * Integrating
         * Testing
