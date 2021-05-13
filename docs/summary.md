@@ -118,6 +118,8 @@
             * [ID Authentication Functionality](modules/identity-services/id-authentication/ID-Authentication-Functionality.md)
         * [Resident Services](modules/identity-services/resident-services/Resident-Services.md)
             * [Resident Services Functionality](modules/identity-services/resident-services/Resident-Services-Functionality.md)
+            * [Virtual ID / VID](modules/identity-services/resident-services/Virtual-Id.md)
+            * [Status Tracking](modules/identity-services/resident-services/Status-Tracking.md)
     * Operations
         * [Partner Management](modules/operations/partner-management/Partner-Management.md)
             * [Partner Management Functionality](modules/operations/partner-management/Partner-Management-Functionality.md)
