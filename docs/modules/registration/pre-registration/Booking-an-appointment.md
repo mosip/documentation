@@ -1,3 +1,8 @@
+# TODO
+# Booking and appointment
+
+## List of things to cover
+
 #  Booking an appointment
 
 ##  Choosing a registration center for an appointment
@@ -37,10 +42,22 @@ The user opts to view the available slots for a selected registration center
 * An applicant can further choose the preferred timeslot
 * An user can confirm the appointment selection of the preferred/chosen time slot – Subsequently, the timeslot(s) are locked
 
-##  Cancel appointment 
-* An user can opt to cancel selected appointment\s against the application which is/are in booked status
-* In such case the system notifies the user about the successful cancellation 
-* Following a successful appointment cancellation the system unlocks the time slot of the registration center so that someone else can book it
+# Appointment acknowledgment
+
+* An Acknowledgement is triggered after successful completion of pre-registration (booking an appointment)
+* The acknowledgment contains the following information: name, pre-registration id, age/DoB, mobile number, email id and registration center details, appointment date, appointment time)
+* A QR code that contains the pre-registration ID
+* This QR code can be scanned at the registration center to fetch the details to be used during the registration process
+
+## Download acknowledgment
+Users can choose to print or download the acknowledgment as a PDF.
+
+##  Send acknowledgment to email/phone
+The system sends an acknowledgment to the applicant to the registered phone (SMS) or email as per the details provided in the demographic form.  In the case of multiple applications, the system sends notifications for each applicant to the details provided in the demographic form of that applicant.
+
+Additionally, users can opt to manually trigger a notification(s) to the contact details of additional recipients. However, this is driven by the Notification configuration setup by the administrator, to allow notification to be triggered by SMS/email/both or none.
+
+The confirmation acknowledgment is also rendered on screen with a confirmation message of the notification being triggered (Subject to the notification parameter configuration and if any mobile/email id was provided).
 
 ## Re-book appointment 
 * The system provides the user with the list of available appointment slots
@@ -51,10 +68,24 @@ The user opts to view the available slots for a selected registration center
 * An user at this stage may opt to search the registration center. In this case, the appointment-booking (time slot selected) done is removed
 * An user cannot re-book the appointment if the appointment booking is less than 48 hours (configurable) from the time of booking
 
-{% hint style="info" %}
+##  Cancel appointment 
+* An user can opt to cancel selected appointment\s against the application which is/are in booked status
+* In such case the system notifies the user about the successful cancellation 
+* Following a successful appointment cancellation the system unlocks the time slot of the registration center so that someone else can book it
 
+## API Details
+### API 1 (repeated per API)
+* [Link to pre-registration booking API specifications](../../../api-reference/Pre-Registration-APIs.md#booking-service-public)
+* API Signature (links)
+* Success Response Sample  (links)
+* Failure Response Samples (links)
+* Error CodesTODO
+    List of error codes and explanation of what they mean
+* Configuration Parameters
+    List of parameters and how they alter the behaviour of the API
+
+## Links to related content
+* Links to API swagger documentation
 * Link to design documentation,
     * [Approach to pre-registration booking service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-booking-service.md)
-* [Link to pre-registration booking API specifications](../../../api-reference/Pre-Registration-APIs.md#booking-service-public)
-
-{% endhint %}
+* Links to How To articles
