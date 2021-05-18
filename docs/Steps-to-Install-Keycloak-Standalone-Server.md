@@ -30,7 +30,7 @@ Download and unzip Keycloak
 sudo wget "https://downloads.jboss.org/keycloak/6.0.1/keycloak-6.0.1.tar.gz" 
 sudo tar xzf keycloak-6.0.1.tar.gz
 ```
-## Install a database supproted by keycloak
+## Install a database supported by keycloak
 We have installed postgres as the database for keycloak; you can use any database supported by Keycloak.
 
 Documentation for Keycloak Database Setup is available [here](https://www.keycloak.org/docs/latest/server_installation/index.html#_database).
