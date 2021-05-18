@@ -1,12 +1,12 @@
+# TODO
+
+## List of things to cover
+
 #  Creating an application
 
-##  Provide demographic data 
+## Provide data in a preferred language 
 
-The user is provided with demographic form based on the [ID Object Definition](MOSIP-ID-Object-Definition.md) & [UI Specification](UI-Specification-for-Pre-Registration.md) for new pre-registration application, user fills demographic details (e.g., Full Name, Age/DOB, Gender, Residential status, Address, mobile number, email id, etc.). The system validates the fields entered, the system also checks for the mandatory fields. Additionally, the system validates for any blacklisted words entered (as configured by the country). Once validated a pre-registration request ID (PRID) is generated and the demographic details provided get mapped to that PRID.
-
-{% hint style="info" %}
-Consent is sought from the user for every new application created in the system.
-{% endhint %}
+The user can select their language of preference, which is referred to as Primary (from a list of 2 languages as set by the administrator) from the login screen, the other language from the list is considered as secondary. The user can then provide data in the preferred language (primary) as selected. The data on the right side of the demographic page will be transliterated to secondary language. The labels on the right-hand side will be translated to the Secondary language. The user can verify the transliterated data and edit it if required. The data will subsequently be stored in the database along with the respective language codes.
 
 ## Provide consent 
 
@@ -19,13 +19,17 @@ In case of closure of the Consent Pop-up, the following scenarios may arise:
    * Scenario 1: Create a new application from Dashboard: On closure, the user will be redirected to the dashboard page.
    * Scenario 2: Add Applicant from Preview Page: On closure, the user will be redirected to the preview page.
 
+##  Provide demographic data 
+
+The user is provided with demographic form based on the [ID Object Definition](MOSIP-ID-Object-Definition.md) & [UI Specification](UI-Specification-for-Pre-Registration.md) for new pre-registration application, user fills demographic details (e.g., Full Name, Age/DOB, Gender, Residential status, Address, mobile number, email id, etc.). The system validates the fields entered, the system also checks for the mandatory fields. Additionally, the system validates for any blacklisted words entered (as configured by the country). Once validated a pre-registration request ID (PRID) is generated and the demographic details provided get mapped to that PRID.
+
+{% hint style="info" %}
+Consent is sought from the user for every new application created in the system.
+{% endhint %}
+
 ## Create multiple applications 
 
 Once the demographic details are filled and the Documents are uploaded, if the user wishes to add an applicant, he/she can opt to select the 'Add An Applicant' option on the preview page or 'Create New Application' option on the Dashboard. The system associates a unique pre-registration id to the new application(s) created.
-
-## Provide data in a preferred language 
-
-The user can select their language of preference, which is referred to as Primary (from a list of 2 languages as set by the administrator) from the login screen, the other language from the list is considered as secondary. The user can then provide data in the preferred language (primary) as selected. The data on the right side of the demographic page will be transliterated to secondary language. The labels on the right-hand side will be translated to the Secondary language. The user can verify the transliterated data and edit it if required. The data will subsequently be stored in the database along with the respective language codes.
 
 ### Language Configuration 
 
@@ -42,6 +46,7 @@ Considering a scenario, wherein if Primary language and Secondary language is co
 * Values on the right side will remain un-editable
 * As part of the packet, the system will send/store data in one language only, if language code is identified to be the same – eg. en (English)
 
+##  Manage Applications
 ##  Viewing "My Applications" (covers status) 
 The pre-registrations created will be associated with the user id. The user can view all the pre-registrations created by him/her in the Dashboard. The pre-registration can be in three different status (Pending appointment, Booked, Expired)
 
@@ -57,13 +62,38 @@ The applications are sorted and displayed by the order of creation of an applica
 ## Modify application data 
 The user can modify the pre-registration data by opting to select the "Modify" option for a specific application. The system provides the demographic form with pre-filled demo details and allows the user to edit the details as required. The system associates the modified demo details with the pre-registration id for which Modify information is initiated.
 
+## Locked application 
+
 ## Discard application 
 The user can discard the pre-registration by clicking on the Delete icon for the pre-registration id for which he/she wishes to discard. The system provides the user with two options: 'Discard Entire Application' or 'Cancel appointment'. The user chooses to discard the entire application. The system deletes all the data mapped to the pre-registration id and cancels the appointment (if any).
 
-{% hint style="info" %}
+#  Attaching documents to an application
 
+## Document categories and applicable document types 
+* When a user provides their demographic data, the pre-registration system captures the data. 
+* Based on the parameters (from the configuration) for example - gender, age, and residential status (Foreigner, National) from the demographic data, applicant types are determined. The pre-registration system then sends the id to the mapping.
+* Based on the applicant type, the applicable document categories are received from the mapping. The pre-registration system then displays only applicable categories.
+* The document category and type of documents in each category to be uploaded varies based on the applicant type. pre-registration system displays only those types to the applicant.
+* Once the documents are uploaded by the applicant the system performs a virus scan to check the integrity of the document. Once the virus scan is successful, the document is encrypted and stored in the object-store.
+
+## Referring to already uploaded documents
+* The POA (Proof of Address) document could be uploaded or can be referred to an already uploaded POA of an existing applicant
+* The user could select a particular applicant document to which he wants to refer 
+* When Pre-registering for a family living at the same address it is not required to upload the same POA again and again, instead could refer to the document as uploaded by the first family member saving space and time.
+
+## API Details
+### API 1 (repeated per API)
+* [Link to pre-registration demographics API specifications](../../../api-reference/Pre-Registration-APIs.md#demographic-service-public)
+* API Signature (links)
+* Success Response Sample  (links)
+* Failure Response Samples (links)
+* Error CodesTODO
+    List of error codes and explanation of what they mean
+* Configuration Parameters
+    List of parameters and how they alter the behaviour of the API
+
+## Links to related content
+* Links to API swagger documentation
 * Link to design documentation,
     * [Approach to pre-registration demographic service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-demographic-service.md)
-* [Link to pre-registration demographics API specifications](../../../api-reference/Pre-Registration-APIs.md#demographic-service-public)
-
-{% endhint %}
+* Links to How To articles

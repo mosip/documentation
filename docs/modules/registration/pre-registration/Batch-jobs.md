@@ -1,4 +1,10 @@
-# Batch Jobs
+# TODO
+
+# Batch Job Services
+
+## List of things to cover
+
+## Batch Jobs
 
 Three batch jobs run in Pre-registration based on a cron scheduler.
 
@@ -18,9 +24,18 @@ Booking batch job runs every day to perform some standard tasks:
 
 2. Canceling bookings & sending notifications to the residents, if any emergency holiday has been declared for a center.
 
-{% hint style="info" %}
+## API Details
+### API 1 (repeated per API)
+* API Signature (links)
+* Success Response Sample  (links)
+* Failure Response Samples (links)
+* Error CodesTODO
+    List of error codes and explanation of what they mean
+* Configuration Parameters
+    List of parameters and how they alter the behaviour of the API
 
+## Links to related content
+* Links to API swagger documentation
 * Link to design documentation,
     * [Approach to pre-registration batch job service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-batch-job.md)
-
-{% endhint %}
+* Links to How To articles
