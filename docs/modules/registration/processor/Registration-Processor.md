@@ -11,8 +11,15 @@ Important considerations are as follows:
 * Each processing stage is scalable independently based on the load.
 * Each stage in the processor is independent of other stages such that logic of a stage can be changed to improve efficiency without affecting the overall flow.
 
+# [Design Principles]()
+
 # Detailed functionality
-[Registration Processor Functionality](Registration-Processor-Functionality.md)
+<!-- To Do: List of Functionality pointing to respective pages -->
+<!-- To Do: Remove Registration-Processor-Functionality.md -->
+* [Functional Flows]()
+	* [Pre Processing]()
+	* [Processing]()
+	* [Post Processing]()
 
 # Process flow
 
