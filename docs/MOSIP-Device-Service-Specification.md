@@ -23,6 +23,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 |0.9.5|Draft|24-Mar-2021|The reference to L2 devices has been removed from this document.<br>The biometric specification listed here has been moved to a new section [Biometric Specification](Biometric-Specification.md) and the old specification is now in [0.9.5 Biometric Specifications](0.9.5-Biometric-Specification.md) for reference.
 |0.9.5|Draft|07-Apr-2021|Device De registration API spec was updated.
 |0.9.5|Draft|08-Apr-2021|We will be following datetime values in ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ. The same has been updated throughout the document.
+|0.9.5|Draft|24-May-2021|Clarification on hash and previousHash definition has been provided 
 
 ## Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
@@ -277,7 +278,7 @@ Parameters | Description
 -----------|-------------
 deviceStatus | Allowed values are "Ready", "Busy", "Not Ready" or "Not Registered".
 certification | Allowed values are "L0" or "L1" based on level of certification.
-serviceVersion | Version of the MDS specification that is supported.
+serviceVersion | Device service version.
 deviceId | Internal ID to identify the actual biometric device within the device service.
 deviceSubId | <ul><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
 callbackId | <ul><li>This differs as per the OS.</li><li>In case of Linux and windows operating systems it is a HTTP URL.</li><li>In the case of android, it is the intent name.</li><li>In IOS, it is the URL scheme.</li><li>The call back URL takes precedence over future request as a base URL.</li></ul>
@@ -511,7 +512,7 @@ bio.bioSubType | <ul><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "
 bio.requestedScore | Upon reaching the quality score the biometric device is expected to auto capture the image. If the requested score is not met, until the timeout, the best frame during the capture sequence must be captured/returned. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned below.
 bio.deviceId | Internal Id to identify the actual biometric device within the device service.
 bio.deviceSubId | <ul><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
-bio.previousHash | <ul><li>For the first capture the previousHash is hash of empty UTF-8 string.</li><li>From the second capture the previous captures hash (as hex encoded) is used as input.</li><li>This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.</li></ul>
+bio.previousHash | For the first capture the previousHash is SHA256 hash of a empty UTF-8 string. From the second capture the previous capture's "hash" is used as input. This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.
 customOpts | <ul><li>In case, the device vendor wants to send additional parameters they can use this to send key value pair if necessary.</li><li>The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications.</li><li>Vendors are free to include additional parameters and fine-tuning the process.</li><li>None of these values should go undocumented by the vendor.</li><li>No sensitive data should be available in the customOpts.</li></ul>
 
 NFIQ v1.0 in the scale of 0-100 (quality score).
@@ -545,9 +546,9 @@ Scale | NFIQ v1.0
         "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
       },
-      "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
+      "hash": "sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO) before encryption)",
       "sessionKey": "encrypted with MOSIP public key (dynamically selected based on the uri) and encoded session key biometric",
-      "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
+      "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.",
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value"
@@ -570,9 +571,9 @@ Scale | NFIQ v1.0
         "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
       },
-      "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
+      "hash": "sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO) before encryption)",
       "sessionKey": "encrypted with MOSIP public key and encoded session key biometric",
-      "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
+      "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.",
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value"
@@ -600,9 +601,9 @@ data.transactionId | Unique transaction id sent in request
 data.timestamp | <ul><li>Time as per the biometric device.</li><li>Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.</li></ul>
 data.requestedScore | Floating point number to represent the minimum required score for the capture. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned above.
 data.qualityScore | Floating point number representing the score for the current capture. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned above.
-hash | The value of the previousHash attribute in the request object or the value of hash attribute of the previous data block (used to chain every single data block) concatenated with the hex encode sha256 hash of the current data block before encryption.
+hash | sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO) before encryption)
 sessionKey | The session key (used for the encrypting of the bioValue) is encrypted using the MOSIP public certificate with RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING algorithm and then base64-URL-encoded.
-thumbprint | <ul><li>SHA256 representation of thumbprint of the certificate that was used for encryption of session key.</li><li>All texts to be treated as uppercase without any spaces or hyphens.</li></ul>
+thumbprint | sha256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
 error.errorCode | Standardized error code defined in the [error code section](#error-codes).
 error.errorInfo | Description of the error that can be displayed to end user. Multi lingual support.
@@ -755,7 +756,7 @@ bio.exception | <ul><li>This is an array and all the exceptions are marked.</li>
 bio.requestedScore | Upon reaching the quality score the biometric device is expected to auto capture the image.
 bio.deviceId | Internal Id to identify the actual biometric device within the device service.
 bio.deviceSubId | <ul><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
-bio.previousHash | <ul><li>For the first capture the previousHash is hash of empty UTF-8 string.</li><li>From the second capture the previous captures hash (as hex encoded) is used as input.</li><li>This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.</li></ul>
+bio.previousHash | <ul><li>For the first capture the previousHash is SHA256 hash of a empty UTF-8 string.</li><li>From the second capture the previous capture's "hash" is used as input.</li><li>This is used to chain all the captures across modalities so all captures have happened for the same transaction and during the same time period.</li></ul>
 customOpts | <ul><li>In case, the device vendor wants to send additional parameters they can use this to send key value pair if necessary.</li><li>The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications.</li><li>Vendors are free to include additional parameters and fine-tuning the process.</li><li>None of these values should go undocumented by the vendor.</li><li>No sensitive data should be available in the customOpts.</li></ul>
 
 #### Registration Capture Response
@@ -778,7 +779,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
         "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100.",
         "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100."
       },
-      "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block)",    
+      "hash": "sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO))",    
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value Type For Discovery.. ex: {type: 'Biometric Device' or 'Finger' or 'Face' or 'Iris' } "
@@ -800,7 +801,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
         "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100",
         "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100"
       },
-      "hash": "sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)",
+      "hash": "sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO))",
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value Type For Discovery.. ex: {type: 'Biometric Device' or 'Finger' or 'Face' or 'Iris' }"
@@ -826,7 +827,7 @@ data.transactionId | Unique transaction id sent in request
 data.timestamp | <ul><li>Time as per the biometric device.</li><li>Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.</li></ul>
 data.requestedScore | Floating point number to represent the minimum required score for the capture.
 data.qualityScore | Floating point number representing the score for the current capture.
-hash | The value of the previousHash attribute in the request object or the value of hash attribute of the previous data block (used to chain every single data block) concatenated with the hex encode sha256 hash of the current data block before encryption.
+hash | sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO))
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
 error.errorCode | Standardized error code defined in the [error code section](#error-codes).
 error.errorInfo | Description of the error that can be displayed to end user. Multi lingual support.
