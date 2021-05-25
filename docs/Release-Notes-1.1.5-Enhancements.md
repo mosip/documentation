@@ -48,6 +48,8 @@ This document contains the features that were developed or enhanced as part of M
 * We have added a proxy layer between the pre-registration UI and master data API. All the calls are happening via. the pre-registration service.
 * We have removed keycloak integration for storing pre-registration user sessions. Pre-registration sessions are now created in pre-registration database.
 * Pre-registration now has its own OTP transaction table & service to perform OTP authentication.
+* Encryption of pre-registration data before storing in database was done using the root key for registaration (ApplicationID=REGISTRATION, ReferenceID=""), now the encryption is performed using the keys generated from pre-registration root key (ApplicationID=PRE_REGISTRATION, ReferenceID=INDIVIDUAL).
+* Support for encryption using preprend thumbprint has been added.
 * Gender and resident status attributes are now treated as dynamic fields in pre-registration.
 * We have added pagination option in the UI and API for list of registration centers.
 * We have now added new control types such as buttons to the UI specification.
