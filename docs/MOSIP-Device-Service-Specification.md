@@ -602,7 +602,7 @@ data.timestamp | <ul><li>Time as per the biometric device.</li><li>Note: The bio
 data.requestedScore | Floating point number to represent the minimum required score for the capture. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned above.
 data.qualityScore | Floating point number representing the score for the current capture. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned above.
 hash | sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO) before encryption)
-sessionKey | The session key (used to encrypt the biovalue) is encrypted using the MOSIP public key with RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING algorithm and encoded with base64 url safe encoding.
+sessionKey | The session key (used for the encryption of the bio data (ISO)) is encrypted using the MOSIP public certificate with RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING algorithm and then encode the encrypted session key with base64 URL safe encoding.
 thumbprint | SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
 error.errorCode | Standardized error code defined in the [error code section](#error-codes).
