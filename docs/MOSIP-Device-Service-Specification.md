@@ -540,15 +540,15 @@ Scale | NFIQ v1.0
         "purpose": "Auth  or Registration",
         "env": "Target environment",
         "domainUri": "URI of the auth server",
-        "bioValue": "Encrypted with session key and base64urlencoded biometric data",
+        "bioValue": "Encrypt bio data (ISO) with random 256 bit AES key (session key) and encode encrypted bio data with base64 URL safe encoding.",
         "transactionId": "Unique transaction id",
         "timestamp": "Capture datetime in ISO format",
         "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
       },
       "hash": "sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO) before encryption)",
-      "sessionKey": "encrypted with MOSIP public key (dynamically selected based on the uri) and encoded session key biometric",
-      "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.",
+      "sessionKey": "Encrypt the session key (used to encrypt the biovalue) with MOSIP public key and encode encrypted session key with base64 URL safe encoding.",
+      "thumbprint": SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.",
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value"
@@ -564,16 +564,16 @@ Scale | NFIQ v1.0
         "bioSubType": "Left IndexFinger",
         "purpose": "Auth  or Registration",
         "env": "target environment",
-        "domainUri": "uri of the auth server",
-        "bioValue": "encrypted with session key and base64urlencoded biometric data",
+        "domainUri": "URI of the auth server",
+        "bioValue": "Encrypt bio data (ISO) with random 256 bit AES key (session key) and encode encrypted bio data with base64 URL safe encoding.",
         "transactionId": "unique transaction id",
         "timestamp": "Capture datetime in ISO format",
         "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
       },
       "hash": "sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO) before encryption)",
-      "sessionKey": "encrypted with MOSIP public key and encoded session key biometric",
-      "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.",
+      "sessionKey": "Encrypt the session key (used to encrypt the biovalue) with MOSIP public key and encode encrypted session key with base64 url safe encoding.",
+      "thumbprint": SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.",
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value"
@@ -596,14 +596,14 @@ data.bioSubType | <ul><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", 
 data.purpose | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>Allowed values is "Auth".</li></ul>
 data.env | <ul><li>The target environment.</li><li>Allowed values are "Staging", "Developer", "Pre-Production" or "Production".</li></ul>
 data.domainUri | <ul><li>URI of the authentication server.</li><li>This can be used to federate across multiple providers or countries or unions.</li></ul>
-data.bioValue | <ul><li>Biometric data is encrypted with random symmetric (AES GCM) key and base-64-URL encoded.</li><li>For symmetric key encryption of bioValue, (biometrics.data.timestamp XOR transactoinId) is computed and the last 16 bytes and the last 12  bytes of the results are set as the aad and the IV(salt) respectively.</li><li>Look at the Authentication document to understand more about the encryption.</li></ul>
+data.bioValue | Biometric data is encrypted with random symmetric (AES GCM) key and base-64-URL encoded. For symmetric key encryption of bioValue, (biometrics.data.timestamp XOR transactoinId) is computed and the last 16 bytes and the last 12  bytes of the results are set as the aad and the IV(salt) respectively. Look at the Authentication document to understand more about the encryption.
 data.transactionId | Unique transaction id sent in request
 data.timestamp | <ul><li>Time as per the biometric device.</li><li>Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.</li></ul>
 data.requestedScore | Floating point number to represent the minimum required score for the capture. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned above.
 data.qualityScore | Floating point number representing the score for the current capture. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned above.
 hash | sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO) before encryption)
-sessionKey | The session key (used for the encrypting of the bioValue) is encrypted using the MOSIP public certificate with RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING algorithm and then base64-URL-encoded.
-thumbprint | sha256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.
+sessionKey | The session key (used to encrypt the biovalue) is encrypted using the MOSIP public key with RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING algorithm and encoded with base64 url safe encoding.
+thumbprint | SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
 error.errorCode | Standardized error code defined in the [error code section](#error-codes).
 error.errorInfo | Description of the error that can be displayed to end user. Multi lingual support.
