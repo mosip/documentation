@@ -546,7 +546,7 @@ Scale | NFIQ v1.0
         "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
       },
-      "hash": "sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO) before encryption)",
+      "hash": "sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data before encryption)",
       "sessionKey": "Encrypt the session key (used to encrypt the biovalue) with MOSIP public key and encode encrypted session key with base64 URL safe encoding.",
       "thumbprint": SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.",
       "error": {
@@ -571,7 +571,7 @@ Scale | NFIQ v1.0
         "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
       },
-      "hash": "sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO) before encryption)",
+      "hash": "sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data before encryption)",
       "sessionKey": "Encrypt the session key (used to encrypt the biovalue) with MOSIP public key and encode encrypted session key with base64 url safe encoding.",
       "thumbprint": SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.",
       "error": {
@@ -601,7 +601,7 @@ data.transactionId | Unique transaction id sent in request
 data.timestamp | <ul><li>Time as per the biometric device.</li><li>Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.</li></ul>
 data.requestedScore | Floating point number to represent the minimum required score for the capture. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned above.
 data.qualityScore | Floating point number representing the score for the current capture. This value will be scaled from 0 - 100 for NFIQ v1.0. The logic for scaling is mentioned above.
-hash | sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO) before encryption)
+hash | sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data before encryption)
 sessionKey | The session key (used for the encryption of the bio data (ISO)) is encrypted using the MOSIP public certificate with RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING algorithm and then encode the encrypted session key with base64 URL safe encoding.
 thumbprint | SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
@@ -779,7 +779,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
         "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100.",
         "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100."
       },
-      "hash": "sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO))",    
+      "hash": "sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data)",    
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value Type For Discovery.. ex: {type: 'Biometric Device' or 'Finger' or 'Face' or 'Iris' } "
@@ -801,7 +801,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
         "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100",
         "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100"
       },
-      "hash": "sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO))",
+      "hash": "sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data)",
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value Type For Discovery.. ex: {type: 'Biometric Device' or 'Finger' or 'Face' or 'Iris' }"
@@ -827,7 +827,7 @@ data.transactionId | Unique transaction id sent in request
 data.timestamp | <ul><li>Time as per the biometric device.</li><li>Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.</li></ul>
 data.requestedScore | Floating point number to represent the minimum required score for the capture.
 data.qualityScore | Floating point number representing the score for the current capture.
-hash | sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO))
+hash | sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data)
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
 error.errorCode | Standardized error code defined in the [error code section](#error-codes).
 error.errorInfo | Description of the error that can be displayed to end user. Multi lingual support.
