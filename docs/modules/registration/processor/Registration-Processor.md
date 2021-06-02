@@ -21,7 +21,7 @@ Details related to various design principles used in registration processor are 
 * [Post-Processing](Post-Processing.md)
 
 # MOSIP Stages
-* [ABIS Handler Stage](ABIS-Handler-Stage.md)
+* [ABIS Handler Stage](stages/ABIS-Handler-Stage.md)
 * [ABIS Middleware Stage](stages/ABIS-Middleware-Stage.md)
 * [Bio Deduplication Stage](stages/Bio-Deduplication-Stage.md)
 * [Demo Deduplication Stage](stages/Demo-Deduplication-Stage.md)
@@ -39,30 +39,30 @@ Details related to various design principles used in registration processor are 
 # Process flow
 
 ## Packet Pre-Processing
-![](_images/reg_processor/reg_proc_process_flow-packet_pre-processing_part_1.png)
+![](_images/reg_proc_process_flow-packet_pre-processing_part_1.png)
 
-![](_images/reg_processor/reg_proc_process_flow-packet_pre-processing_part_2.png)
+![](_images/reg_proc_process_flow-packet_pre-processing_part_2.png)
 
 ## New Packet Processing
-![](_images/reg_processor/reg_proc_process_flow-new_packet_processing_part_1.png)
+![](_images/reg_proc_process_flow-new_packet_processing_part_1.png)
 
-![](_images/reg_processor/reg_proc_process_flow-new_packet_processing_part_2.png)
+![](_images/reg_proc_process_flow-new_packet_processing_part_2.png)
 
 ## Update Packet Processsing
-![](_images/reg_processor/reg_proc_process_flow-update_packet_processing_part_1.png)
+![](_images/reg_proc_process_flow-update_packet_processing_part_1.png)
 
-![](_images/reg_processor/reg_proc_process_flow-update_packet_processing_part_2.png)
+![](_images/reg_proc_process_flow-update_packet_processing_part_2.png)
 
 ## Lost UIN Packet Processing
-![](_images/reg_processor/reg_proc_process_flow-lost_uin_packet_processing_part_1.png)
+![](_images/reg_proc_process_flow-lost_uin_packet_processing_part_1.png)
 
-![](_images/reg_processor/reg_proc_process_flow-lost_uin_packet_processing_part_2.png)
+![](_images/reg_proc_process_flow-lost_uin_packet_processing_part_2.png)
 
 ## Activate/De-Activate Packet Processing
-![](_images/reg_processor/reg_proc_process_flow-activate_deactivate_uin.png)
+![](_images/reg_proc_process_flow-activate_deactivate_uin.png)
 
 # Logical View
-![Registration Processor Logical view](_images/reg_processor/reg-proc-logical-view.png)
+![Registration Processor Logical view](_images/reg-proc-logical-view.png)
 
 # Services
 For detailed description of Registration Processor Services refer to [registration processor repo](https://github.com/mosip/registration/tree/master/registration-processor).
