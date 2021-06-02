@@ -21,7 +21,7 @@ Details related to various design principles used in registration processor are 
 * [Post-Processing](Packet-Post-Processing.md)
 
 # MOSIP Stages
-* [ABIS Handler Stage](stages/ABIS-Handler-Stage.md)
+* [ABIS Handler Stage](ABIS-Handler-Stage.md)
 * [ABIS Middleware Stage](stages/ABIS-Middleware-Stage.md)
 * [Bio Deduplication Stage](stages/Bio-Deduplication-Stage.md)
 * [Demo Deduplication Stage](stages/Demo-Deduplication-Stage.md)
