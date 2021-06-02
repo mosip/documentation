@@ -1,4 +1,9 @@
-# Booking an appointment
+# TODO
+# Booking and appointment
+
+## List of things to cover
+
+#  Booking an appointment
 
 ##  Choosing a registration center for an appointment
 
@@ -68,16 +73,19 @@ The confirmation acknowledgment is also rendered on screen with a confirmation m
 * In such case the system notifies the user about the successful cancellation 
 * Following a successful appointment cancellation the system unlocks the time slot of the registration center so that someone else can book it
 
-
 ## API Details
- * [API Documentation](https://nayakrounak.gitbook.io/mosip-docs/v/1.2.0/modules/registration/pre-registration/Pre-Reg-API-Documentation.md)
-
+### API 1 (repeated per API)
+* [Link to pre-registration booking API specifications](../../../api-reference/Pre-Registration-APIs.md#booking-service-public)
+* API Signature (links)
+* Success Response Sample  (links)
+* Failure Response Samples (links)
+* Error CodesTODO
+    List of error codes and explanation of what they mean
 * Configuration Parameters
-    * List of parameters and how they alter the behaviour of the API
+    List of parameters and how they alter the behaviour of the API
 
 ## Links to related content
+* Links to API swagger documentation
 * Link to design documentation,
+    * [Approach to pre-registration booking service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-booking-service.md)
 * Links to How To articles
-
-
-

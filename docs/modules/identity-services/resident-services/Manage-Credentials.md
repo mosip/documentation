@@ -1,35 +1,29 @@
+# TODO
 # Credential Management
 
-## What is a credential
-* Credentials are user's data or user attributes which can be shared with credential partner for printing, issuing cards and to verify their identity through authentication.
+## List of things to cover
 
-##  Types of credentials
-* Sharing of biometric data to ABIS systems 
-* Sharing of biometric and demographic credentials to authentication instances during issuance or update of Identity
-* Sharing of credentials to print partners when a resident requests for an ID
+* What is a credential
+* What are the types of credentials
+* Requesting a credential
+* Cancelling the crendetial request
+* Checking status of a credential request
 
-## Requesting a credential
-* User requests for credentials via resident service with VID, provider(subscriber/partner), pin(password), Authentication request(biometric or OTP based authentication request)
-
-## Cancelling the crendetial request
-* Users can cancel the requested credentials by providing the request Id received from the response
-
-## Checking status of a credential request
-* Users can get the credential status by providing the request Id.The credential status could be Requested,Issued,Stored,failed,Printing etc
-
-## Revoking Credentials
-* An individual can request to revoke his/her credentials using credential Service if the individual feels his/her credentials has been compromised. The individual provides the request Id as input
-
-## To Do
+* Revoking Credentials**
 
 ## API Details
-* [API Documentation](https://nayakrounak.gitbook.io/mosip-docs/v/1.2.0/modules/identity-services/resident-services/Resident-Service-API-Documentation.md)
-
+### API 1 (repeated per API)
+* API Signature (links)
+* Success Response Sample  (links)
+* Failure Response Samples (links)
+* Error CodesTODO
+    List of error codes and explanation of what they mean
 * Configuration Parameters
-    * List of parameters and how they alter the behaviour of the API
+    List of parameters and how they alter the behaviour of the API
 
 ## Links to related content
-* Link to design documentation,
+* Links to API swagger documentation
+* Links to design documentation
 * Links to How To articles
     * Setting up credential types in the system
 

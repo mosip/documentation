@@ -17,13 +17,9 @@ The confirmation acknowledgment is also rendered on screen with a confirmation m
 
 {% hint style="info" %}
 
-## To Do
-## API Details
- * [API Documentation](https://nayakrounak.gitbook.io/mosip-docs/v/1.2.0/modules/registration/pre-registration/Pre-Reg-API-Documentation.md)
-
-* Configuration Parameters
-    * List of parameters and how they alter the behaviour of the API
-
-## Links to related content
 * Link to design documentation,
-* Links to How To articles
+    * [Approach to pre-registration appointment acknowledgment screen]()
+    * [Approach to pre-registration notifications](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-notification-service.md)
+* [Link to configure pre-registration notification templates](../../../api-reference/Pre-Registration-Configuration.md#templates-used-by-pre-registration)
+
+{% endhint %}
