@@ -1,0 +1,69 @@
+IDA Features
+
+Multi-factor Authentication
+		OTP Based Authentication
+		Biometric Authentication
+		Demographic Authentication
+
+Generation of Authentication Token
+
+e-KYC Service
+	Masking of information/Formatting
+
+Data Validation
+
+Query Support
+
+Partners Authentication and Authorisation
+    MISP License Authentication 
+    Partner Policy Authentication 
+	How Policies work (Selective disclosure)
+
+History of Authentication Transactions
+
+Authentication failure scenarios
+	Hotlististing
+	Logged or not
+
+IDA	Design Concepts
+	Zero Knowledge Store
+	Lock/Unlock Authentication Types
+	Behaviour
+	Multiple Authentication Instances
+	Seeding of IDA Database
+
+Certificates
+
+Biometrics
+	Encrypted Biometrics
+	Integration of Biometric SDK's
+
+Support for Fraud Management
+
+Scalabilty of Authentication
+	Simultaneous Authentication
+	
+How to build the auth client to consume the IDA API
+
+Externalization of demo authentication
+
+Notifications
+
+----------------------------
+
+Internal Authentication Service (Part of Registration Service)
+	Authenticating an officer or supervisor 
+	Processing of packets
+
+Offline Authentication (Credential Based AUth)
+	QR Code Based Authentication
+	
+
+	
+
+
+
+	
+
+	
+	
