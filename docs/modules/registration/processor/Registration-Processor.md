@@ -16,9 +16,9 @@ Details related to various design principles used in registration processor are 
 
 # Detailed functionality
 * [Functional Flows](Functional-Flows.md)
-* [Pre-Processing](Packet-Pre-Processing.md)
-* [Processing](Packet-Processing.md)
-* [Post-Processing](Packet-Post-Processing.md)
+* [Pre-Processing](Pre-Processing.md)
+* [Processing](Processing.md)
+* [Post-Processing](Post-Processing.md)
 
 # MOSIP Stages
 * [ABIS Handler Stage](ABIS-Handler-Stage.md)
