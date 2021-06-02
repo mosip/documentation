@@ -1,9 +1,8 @@
-# Overview
-Data share service is used to share data across the MOSIP platform. The share understands the sensitivity of the information and applied for necessary protection and manages the roles. The roles decide who can access the data in what way.
+Data share service is used to share data across the MOSIP platform. The share understands the sensitivity of the information and applied for necessary protection, and manages the roles. The roles decide who can access the data in what way.
 
 # Functionality
 
-The basic functionality of data share is to construct objects and share them. This functionality can be used by module in MOSIP. Every data that the data share module receives will be treated as an object.
+The basic functionality of data share is to construct objects and share them. This can be used by any MOSIP module to share data. Every data that the data share module receives will be treated as an object.
 
 Below are the sub-features of data share:
 * Ability to create an object 
@@ -15,24 +14,24 @@ Below are the sub-features of data share:
 * Ability to set TTL (Time to Live) on data
 * Ability to set roles that can access the given URL
 * Ability to delete an object
-	* Delete upon first access
-	* Delete upon TTL (default defined by policy)
-	* Delete upon the creator's request (revoke)
+  * Delete upon first access
+  * Delete upon TTL (default defined by policy)
+  * Delete upon the creator's request (revoke)
 
 # Use Cases 
 
-As mentioned above data share can be used by any module in MOSIP. Here are some of the use cases where we use data share.
+As mentioned above data share can be used by any module in MOSIP. Here are some of the use cases where we use Data Share.
 
 ## ABIS Data Share
 
-ABIS system expects the biometric data to be shared by MOSIP via. a data share URL. In order to do so, ABIS middileware needs to share biometric data to ABIS systems (multiple ABISs eg: ABIS1, ABIS2, etc.) based on the policy defined for respective ABIS Systems.
+ABIS system expects the biometric data to be shared by MOSIP via. a data share URL. To do so, ABIS middleware needs to share biometric data to ABIS systems (multiple ABISs eg: ABIS1, ABIS2, etc.) based on the policy defined for respective ABIS Systems.
 
 The policy for data share defines,
 * What data should be shared with a particular ABIS Instance?
 * Should the data be encrypted? 
 * What is the encryption type?
 * From where should the data be picked?
-* What is the validity for the data share URL?
+* What is the validity of the data share URL?
 * How many times the data share URL be accessed?
 
 Below is a sample ABIS data share policy:
@@ -57,7 +56,7 @@ Below is a sample ABIS data share policy:
             {
               "type": "Iris"
             },
-			{
+      {
               "type": "Finger"
             }
           ]
@@ -209,9 +208,9 @@ Below is a sample Authentication data share policy:
 }
 ```
 
-## Credentical Data Share
+## Credential Data Share
 
-When any credential issuance is requested from a resident for generating a QR Code or printing of an id card, a data share URL is created for the print partners. Similar to ABIS middleware, the credential issuance module in MOSIP shares the residents  data to printing systems (based on multiple use cases) based on the policy defined for respective Printing systems & use cases.
+When any credential issuance is requested from a resident for generating a QR Code or printing of an id card, a data share URL is created for the print partners. Similar to ABIS middleware, the credential issuance module in MOSIP shares the resident's data to printing systems (based on multiple use cases) based on the policy defined for respective Printing systems & use cases.
 
 Below is a sample QR code data share policy:
 ```JSON

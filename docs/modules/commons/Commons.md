@@ -11,15 +11,15 @@ Refer to [commons repo/kernel](https://github.com/mosip/commons/tree/master/kern
 # Detailed functionality
 
 Commons has many services and functions. Details of some of them are mentioned below:
-* [Common Services](Common-Services.md) - To be separated
-* [UIN & VID Generation Service](UIN-and-VID-Generation-Service.md)
-* [Data Services](Data-Services.md)
-* [Master Data Services](Master-Data-Services.md)
-* [Key Manager](Key-Manager.md)
 * [Audit Manager](Audit-Manager.md)
-* [Authentication and Authorization](Authentication-and-Authorization.md)
-* [Packet Manager](Packet-Manager.md)
+* [Auth Manager](Auth-Manager.md)      
+* [Biometric Utilities](Biometric-Utilities.md)
+* [Crypto Services](Crypto-Services.md)
+* [Data Share](Data-Share.md)
+* [ID Generator](ID-Generator.md)
+* [Notification Manager](Notification-Manager.md)
 * [Web Sub](Web-Sub.md)
+* [Miscellaneous](Miscellaneous.md)
 
 # Services and libraries
 

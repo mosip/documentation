@@ -1,51 +1,50 @@
-# Data mapper
+# UIN Generation
+MOSIP generates a pool of UINs before the registration process and stores them. The UIN generation policies can be defined or modified by country as per their requirement.
 
-Data mapper is used across MOSIP to facilitate mapping between DTO (Data Transfer Object) and entity. 
+The UINs generated for the current implementation, follow the following policies:
 
-# Data Access Manager
+1. UIN should not contain any alphanumeric characters
+1. UIN should not contain any repeating numbers for 2 or more than 2 digits
+1. UIN should not contain any sequential number for 3 or more than 3 digits
+1. UIN should not be generated sequentially
+1. UIN should not have repeated block of numbers for 2 or more than 2 digits
+1. The last digit in the number should be reserved for a checksum
+1. The number should not contain '0' or '1' as the first digit.
+1. First 5 digits should be different from the last 5 digits (example - 4345643456)
+1. First 5 digits should be different to the last 5 digits reversed (example - 4345665434)
+1. UIN should not be a cyclic figure (example - 4567890123, 6543210987) 
+1. UIN should be different from the repetition of the first two digits 5 times (example - 3434343434)
+1. UIN should not contain three even adjacent digits (example - 3948613752)
+1. UIN should not contain admin defined restricted number
 
-Data Access Manager provides a DAO (Data Access Object) interface to do the following:
+**_Note:_**
+The number of UINs to be generated in a pool depends on a configuration to be done by the country depending on the peak registration requirements. UIN generation service will receive a request by Registration Processor to get a UIN. The service responds with an un-allocated UIN from the generated pool. When the pool reaches a configured number of minimum UINs, MOSIP generates another pool of UIN.
 
-1. Provide an interface for connection to a Database
-1. Provide an interface to support Database CRUD (Create, Read, Update, Delete) operation
-1. Provide an interface to support a custom SQL
-1. Provide an interface to call Database functions.
+# VID Generation
+MOSIP will generate a pool of VIDs through a Batch Job. The number of VIDs generated will be configurable by the country. All the VIDs generated will be assigned a status _“Available”_ which means that the VID is available for allocation to a UIN. Any request for VID allocation will pick up VIDs which have this status. The Batch Job to generate the pool will run every time the number of VIDs in the pool reduces to a configured number.
 
-# Sync Handler
+VID generation will happen according to the below logic:
 
-1. Sync Handler allows registration client to sync Master data, List of User, Roles and Respective Mappings and Configurations (Registration Client specific and Global Configs).
-1. Sync Handler also allows Registration Client to push data from Client local database to Master Database.
-1. As part of Master data Sync, the service receives a Machine ID and Timestamp, looks for a mapped Center ID to that Machine ID and responds to the Registration Client with the Center specific Master data for the following tables.
-   * Registration Center Type
-   * List of Registration Center
-   * Template File Format
-   * Template Type
-   * Templates
-   * Reason Category
-   * List of Reasons
-   * Document Category
-   * Document Type
-   * Mapping of Applicant Type-Document Category-Document Type (refer table "Valid Documents")
-   * Machine Type
-   * Machine Specifications
-   * List of Machines
-   * Device Types
-   * Device Specifications
-   * List of Devices
-   * Location Hierarchy
-   * List of Languages
-   * List of Genders
-   * Biometric Authentication Type
-   * Biometric Attribute
-   * Center-Machine Mapping
-   * Center-Device Mapping
-   * Center-Machine-Device Mapping
-   * Center-Machine-User Mapping
-   * Center-User Mapping
-   * Sync Job Definition
-1. The Sync Handler service only sends incremental changes based on the Timestamp received by the service.
-1. For configuration, sync handler receives a request to sync configurations and will respond back with Registration Client specific and Global Configurations.
-1. For User, Roles and Respective User-Role mappings, Sync handler receives Center ID and Timestamp and will respond to the Registration Client with Center specific incremental changes.
+1. VID generated should contain the number of digits as configured.
+2. A generated VID should follow the below logic
+    a.	The number should not contain any alphanumeric characters
+    b.	The number should not contain any repeating numbers for 2 or more than 2 digits
+    c.	The number should not contain any sequential number for 3 or more than 3 digits
+    d.	The numbers should not be generated sequentially
+    e.	The number should not have repeated block of numbers for 2 or more than 2 digits
+    f.	The number should not contain the restricted numbers defined by the ADMIN
+    g.	The last digit in the number should be reserved for a checksum
+    h.	The number should not contain '0' or '1' as the first digit.
+
+MOSIP has a VID generator service which will receive a call to generate a VID. The service will also support receiving an expiry period (optional Parameter). This service when called will pick up a VID from the pre-generated pool and respond it to the source. The Service will also mark that VID in the pool as _“Assigned”_ and attach the expiry period to the VID if received. The service will also make an asynchronous call to the batch job to check the remaining VIDs and generate the pool if needed.
+
+MOSIP also has a VID revoke service which will receive a VID and expire it. When received a request along with the VID, the service will change the status of the VID as _“Expired”_.
+
+MOSIP also has a batch Job to auto-expire VIDs and mark expired VIDs as to be available to be allocated again.
+
+1.	All the VIDs will be marked as ‘Expired’ through the batch job based on the expiry period assigned to them
+2.	All the VIDs which are in expired state for a configured amount of days should be marked as ‘Available’ through a daily batch job thus enabling re-usability of them
+
 
 # ID Generator and Validator
 
@@ -260,4 +259,3 @@ The system receives a request to check status of the License Key with an input p
    * If the status of License Key is "ACTIVE", respond with message "ACTIVE"
    * License Key should be mapped to expiry (Expiry to be configured by admin).
 5. In case of exceptions, system triggers relevant error messages. 
-
