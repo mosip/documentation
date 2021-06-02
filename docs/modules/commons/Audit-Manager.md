@@ -19,14 +19,14 @@ Parameters | Description | Example
 
 ## Application-Specific Audit Details
 
-* [Admin Service Audits](Admin-Service-Audits.md)
-* [Resident Service Audits](Resident-Service-Audits.md)
-* [Partner Management Audits](Partner-Management-Audits.md)
-* [Registration Client Audits](Registration-Client-Audits.md)
-* [Registration Processor Audits](audits/Registration-Processor-Audits.md)
-* [ID Repository Audits](audits/ID-Repository-Audits.md)
-* [ID Authentication Audits](audits/ID-Authentication-Audits.md)
-* [Pre-registration Audits](audits/Pre-Registration-Audits.md)
+* [Admin Service Audits](/audits/Admin-Service-Audits.md)
+* [Resident Service Audits](/audits/Resident-Service-Audits.md)
+* [Partner Management Audits](/audits/Partner-Management-Audits.md)
+* [Registration Client Audits](/audits/Registration-Client-Audits.md)
+* [Registration Processor Audits](/audits/Registration-Processor-Audits.md)
+* [ID Repository Audits](/audits/ID-Repository-Audits.md)
+* [ID Authentication Audits](/audits/ID-Authentication-Audits.md)
+* [Pre-registration Audits](/audits/Pre-Registration-Audits.md)
 
 ## Abbreviations
 Abbreviation | Definition
