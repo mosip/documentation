@@ -116,9 +116,9 @@
         * [Registration Processor](modules/registration/processor/Registration-Processor.md)
             * [Design Principles](modules/registration/processor/Design-Principles.md)
             * [Functional Flows](modules/registration/processor/Functional-Flows.md)
-            * [Pre Processing of Application](modules/registration/processor/Application-Pre-Processing.md)
-            * [Processing of Application](modules/registration/processor/Application-Processing.md)
-            * [Post Processing of Application](modules/registration/processor/Application-Post-Processing.md)            
+            * [Pre Processing](modules/registration/processor/Packet-Pre-Processing.md)
+            * [Processing](modules/registration/processor/Packet-Processing.md)
+            * [Post Processing](modules/registration/processor/Packet-Post-Processing.md)            
     * Identity Services
         * [ID Authentication](modules/identity-services/id-authentication/ID-Authentication.md)
             * [ID Authentication Functionality](modules/identity-services/id-authentication/ID-Authentication-Functionality.md)
