@@ -229,7 +229,7 @@
 	* [Partner Management Audits](modules/commons/Partner-Management-Audits.md)
 	* [Registration Client Audits](modules/commons/Registration-Client-Audits.md)
 	* [ID Repository Audits](modules/commons/ID-Repository-Audits.md)
-    * [ID Authentication Audits](modules/commons/ID-Authentication-Audits.md) 
+    * [ID Authentication Audits](modules/commons/ID-Authentication-Audits.md)             
     * [ABIS Handler Stage](modules/registration/processor/stages/ABIS-Handler-Stage.md)
     * [ABIS Middleware Stage](modules/registration/processor/stages/ABIS-Middleware-Stage.md)
     * [Bio Deduplication Stage](modules/registration/processor/stages/Bio-Deduplication-Stage.md)
