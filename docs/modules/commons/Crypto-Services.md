@@ -4,15 +4,15 @@
 Crypto service encrypts or decrypts data across MOSIP with the help of Public/Private Keys.
 
 ### For Encryption
-The Crypto Service receives a request from an application with input parameters – Application ID, Reference ID, Timestamp and the Data which needs to be encrypted. 
-The Service then calls the Key Generator API to get a symmetric Key and encrypts the data using that symmetric Key. 
+The Crypto Service receives a request from an application with input parameters – Application ID, Reference ID, Timestamp, and the Data which needs to be encrypted. 
+The service then calls the Key Generator API to get a symmetric Key and encrypts the data using that symmetric Key. 
 
-The Service then calls the Key Manager Service with the Application ID and timestamp received in the input parameters and gets the public key. 
+The service then calls the Key Manager Service with the Application ID and timestamp received in the input parameters and gets the public key. 
 
-The Service then encrypts the symmetric key using the Public key and joins the Encrypted data and Encrypted Symmetric Key using a Key splitter and respond to the source with the joined data.
+The service then encrypts the symmetric key using the Public key and joins the Encrypted data and Encrypted Symmetric Key using a Key splitter and responds to the source with the joined data.
 
 ### For Decryption
-The Crypto Service will receive a request from an application with input parameters – Application ID, Reference ID, Timestamp and Data that needs to be decrypted. 
+The Crypto Service will receive a request from an application with input parameters – Application ID, Reference ID, Timestamp, and Data that needs to be decrypted. 
 
 The Application ID received will be the one, which was sent for encryption of data in the above flow. 
 
