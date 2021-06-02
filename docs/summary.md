@@ -82,7 +82,7 @@
         * [Data Share Policy Schema](standards/schemas/Data-Share-Policy-Schema.md)
 * Modules
     * Core
-    * [Commons]
+    * Commons
         * [Audit Manager](modules/commons/Audit-Manager.md)
         * [Auth Manager](modules/commons/Auth-Manager.md)      
         * [Biometric Utilities](modules/commons/Biometric-Utilities.md)
