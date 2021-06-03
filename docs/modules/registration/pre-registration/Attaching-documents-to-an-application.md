@@ -12,10 +12,13 @@
 * The user could select a particular applicant document to which he wants to refer 
 * When Pre-registering for a family living at the same address it is not required to upload the same POA again and again, instead could refer to the document as uploaded by the first family member saving space and time.
 
-{% hint style="info" %}
+## To Do
+## API Details
+ * [API Documentation](https://nayakrounak.gitbook.io/mosip-docs/v/1.2.0/modules/registration/pre-registration/Pre-Reg-API-Documentation.md)
 
+* Configuration Parameters
+    * List of parameters and how they alter the behaviour of the API
+
+## Links to related content
 * Link to design documentation,
-    * [Approach to pre-registration document service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-document-service.md)
-* [Link to pre-registration document API specifications](../../../api-reference/Pre-Registration-APIs.md#document-service-public)
-
-{% endhint %}
+* Links to How To articles

@@ -1,5 +1,3 @@
-# TODO
-
 #  Login/create a user account
 
 ##  Preferred Language
@@ -16,21 +14,15 @@ In the login screen before requesting an OTP, the system asks the resident to pr
 ## Logout/session timeout 
 If the resident wishes to log out of the pre-registration system, he/she can opt to select the Logout option. The token issued during the Authentication of user Login is deleted and the user gets logged out of the system.  If the user is inactive for X minutes (X is configurable), the system notifies the user one minute before the configured timeout limit and logs out after a minute. In such a case, the system will not save any user data.
 
+# To Do
 
 ## API Details
-### API 1 (repeated per API)
-* [Link to pre-registration login API specifications](../../../api-reference/Pre-Registration-APIs.md#login-service-public)
-* API Signature (links)
-* Success Response Sample  (links)
-* Failure Response Samples (links)
-* Error CodesTODO
-    List of error codes and explanation of what they mean
+ * [API Documentation](https://nayakrounak.gitbook.io/mosip-docs/v/1.2.0/modules/registration/pre-registration/Pre-Reg-API-Documentation.md)
+
 * Configuration Parameters
-    List of parameters and how they alter the behaviour of the API
+    * List of parameters and how they alter the behaviour of the API
 
 ## Links to related content
-* Links to API swagger documentation
 * Link to design documentation,
-    * [Approach to pre-registration login service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-login-service.md)
 * Links to How To articles
 

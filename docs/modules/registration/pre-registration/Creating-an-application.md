@@ -1,7 +1,3 @@
-# TODO
-
-## List of things to cover
-
 #  Creating an application
 
 ## Provide data in a preferred language 
@@ -81,19 +77,13 @@ The user can discard the pre-registration by clicking on the Delete icon for the
 * The user could select a particular applicant document to which he wants to refer 
 * When Pre-registering for a family living at the same address it is not required to upload the same POA again and again, instead could refer to the document as uploaded by the first family member saving space and time.
 
+
 ## API Details
-### API 1 (repeated per API)
-* [Link to pre-registration demographics API specifications](../../../api-reference/Pre-Registration-APIs.md#demographic-service-public)
-* API Signature (links)
-* Success Response Sample  (links)
-* Failure Response Samples (links)
-* Error CodesTODO
-    List of error codes and explanation of what they mean
+ * [API Documentation](https://nayakrounak.gitbook.io/mosip-docs/v/1.2.0/modules/registration/pre-registration/Pre-Reg-API-Documentation.md)
+
 * Configuration Parameters
-    List of parameters and how they alter the behaviour of the API
+    * List of parameters and how they alter the behaviour of the API
 
 ## Links to related content
-* Links to API swagger documentation
 * Link to design documentation,
-    * [Approach to pre-registration demographic service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-demographic-service.md)
 * Links to How To articles

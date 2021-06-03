@@ -1,8 +1,4 @@
-# TODO
-
 # Data sync
-
-## List of things to cover
 
 # Registration Client Services
 
@@ -20,20 +16,16 @@ Upon receiving the list of pre-registrations from the registration client, the p
 * The system creates an encrypted zip file per pre-registration id consisting of demo data, documents, and appointment time
 * The system then sends this encrypted zip file to the requesting registration client
 
+## To Do
+
 ## API Details
-### API 1 (repeated per API)
-* [Link to pre-registration data sync API specifications](../../../api-reference/Pre-Registration-APIs.md#datasync-service-external).
-* API Signature (links)
-* Success Response Sample  (links)
-* Failure Response Samples (links)
-* Error CodesTODO
-    List of error codes and explanation of what they mean
+ * [API Documentation](https://nayakrounak.gitbook.io/mosip-docs/v/1.2.0/modules/registration/pre-registration/Pre-Reg-API-Documentation.md)
+
 * Configuration Parameters
-    List of parameters and how they alter the behaviour of the API
+    * List of parameters and how they alter the behaviour of the API
 
 ## Links to related content
-* Links to API swagger documentation
 * Link to design documentation,
-    * [Approach to pre-registration data sync service](https://github.com/mosip/pre-registration/blob/1.1.5/design/pre-registration/pre-registration-data-sync-service.md)
 * Links to How To articles
+
 
