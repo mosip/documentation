@@ -10,36 +10,36 @@ TODO
 
 ## List of error codes
 ## Login Service
-|Error Codes|Error Message|Error Description
-|------|-----|-----|
-PRG_PAM_LGN_001|OTP failed to send through a specified channel|
-PRG_PAM_LGN_002|Authentication failed|
-PRG_PAM_LGN_003|Failed to invalidate the auth token|
-PRG_PAM_LGN_004|Invalid Request Id received|
-PRG_PAM_LGN_005|Invalid Request version received|
-PRG_PAM_LGN_006|Invalid Request timestamp received|
-PRG_PAM_LGN_007|Invalid Request received|
-PRG_PAM_LGN_008|Invalid Request userId received|
-PRG_PAM_LGN_009|Invalid Request langcode received
-PRG_PAM_LGN_010|Invalid otp received|
-PRG_PAM_LGN_011|Error while Parsing the kernel response|
-PRG_PAM_LGN_012|Config file not found in the config server|
-PRG_PAM_LGN_013|Token is not present in the header|
-PRG_PAM_LGN_014|Mosip language properties not defined|
-PRG_PAM_LGN_015|Mosip language properties not defined|
-PRE-REG-OTP-101|Innumerous OTP requests received|
-PRE-REG-OTP-401|Could not generate/send OTP|
-PRE-REG-OTP-402|Please regenerate OTP and try again after sometime|
-PRE-REG-OTP-403|OTP is invalid - Please provide correct OTP value|
-PRE-REG-OTP-404|Invalid Input Parameter - %s|
-PRE-REG-OTP-405|Missing Input Parameter - %s|
-PRE-REG-OTP-406|Input Data Validation Failed|
-PRE-REG-OTP-407|Token generation failed|
+Error Codes|Error Message|Error Description
+------|-----|-----
+PRG_PAM_LGN_001 | OTP failed to send through a specified channel | 
+PRG_PAM_LGN_002 | Authentication failed | 
+PRG_PAM_LGN_003 | Failed to invalidate the auth token | 
+PRG_PAM_LGN_004 | Invalid Request Id received | 
+PRG_PAM_LGN_005 | Invalid Request version received | 
+PRG_PAM_LGN_006 | Invalid Request timestamp received | 
+PRG_PAM_LGN_007 | Invalid Request received | 
+PRG_PAM_LGN_008 | Invalid Request userId received | 
+PRG_PAM_LGN_009 | Invalid Request langcode received
+PRG_PAM_LGN_010 | Invalid otp received | 
+PRG_PAM_LGN_011 | Error while Parsing the kernel response | 
+PRG_PAM_LGN_012 | Config file not found in the config server | 
+PRG_PAM_LGN_013 | Token is not present in the header | 
+PRG_PAM_LGN_014 | Mosip language properties not defined | 
+PRG_PAM_LGN_015 | Mosip language properties not defined | 
+PRE-REG-OTP-101 | Innumerous OTP requests received | 
+PRE-REG-OTP-401 | Could not generate/send OTP | 
+PRE-REG-OTP-402 | Please regenerate OTP and try again after sometime | 
+PRE-REG-OTP-403 | OTP is invalid - Please provide correct OTP value | 
+PRE-REG-OTP-404 | Invalid Input Parameter - %s | 
+PRE-REG-OTP-405 | Missing Input Parameter - %s | 
+PRE-REG-OTP-406 | Input Data Validation Failed | 
+PRE-REG-OTP-407 | Token generation failed | 
 
 ## Demographic Service
-|Error Codes|Error Message|Error Description
-|------|-----|-----|
-|PRG_PAM_APP_001|Failed to create the pre-registration with demographic data provided| TO DO
+Error Codes|Error Message|Error Description
+------|-----|-----
+PRG_PAM_APP_001|Failed to create the pre-registration with demographic data provided| TO DO
 PRG_PAM_APP_002|Unable to access the pre-registration table|
 PRG_PAM_APP_003|Delete operation is not allowed|
 PRG_PAM_APP_004|Failed to delete the pre-registration data|
@@ -62,7 +62,7 @@ PRG_PAM_APP_021|Duplicate key for prid |
 PRG_PAM_APP_022 |Application can not be updated |
 
 ## Document Service
-|Error Codes|Error Message
+Error Codes|Error Message
 |------|-----
 PRG_PAM_DOC_001|Document failed in quality check|
 PRG_PAM_DOC_002|Document failed to encrypt|
