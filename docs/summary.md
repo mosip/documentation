@@ -241,7 +241,7 @@
         * Known issues and limitations
         * Frequently asked questions
 * All Pages
-
+    
     * [Admin Service Audits](modules/commons/audits/Admin-Service-Audits.md)
 	* [Resident Service Audits](modules/commons/audits/Resident-Service-Audits.md)
 	* [Partner Management Audits](modules/commons/audits/Partner-Management-Audits.md)
@@ -264,3 +264,5 @@
     * [Quality Check Stage](modules/registration/processor/stages/Quality-Check-Stage.md)
     * [Secure Zone Notification Stage](modules/registration/processor/stages/Secure-Zone-Notification-Stage.md)
     * [UIN Generator Stage](modules/registration/processor/stages/UIN-Generator-Stage.md)
+    * [Pre-Registration API's](modules/registration/pre-registration/Pre-Reg-API-Documentation.md)
+    * 
