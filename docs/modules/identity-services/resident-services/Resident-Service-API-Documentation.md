@@ -11,8 +11,8 @@ TODO
 ## List of error codes
 
 ## PMS Core Service
-Error Codes|Error Message|Error Description
-------|-----|-----
+Error Codes | Error Message | Error Description
+------ |----- |-----
 RES_SER_408 | RID not found | TO DO 
 RES-SER-002 | One or more input parameter is invalid or does not exist |
 RES-SER-409 | Token generation failed |
@@ -40,8 +40,8 @@ RES-SER-22 | Resident UIN update failed |
 RES-SER-23 | Could not find the submitted document |
 
 ## System Exceptions
-Error Codes|Error Message|Error Description|
-------|-----|-----
+Error Codes | Error Message | Error Description
+------ | ----- | -----
 RES_SER_SYS_001 | System exception occured | TO DO
 RES-SER-420 | IO Exception occured | 
 RES-SER-421 | JSON Processing Exception occured | 

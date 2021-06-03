@@ -145,11 +145,10 @@
         * [Resident Services](modules/identity-services/resident-services/Resident-Services.md)
             * [Status Tracking](modules/identity-services/resident-services/Status-Tracking.md)
             * [Manage ID](modules/identity-services/resident-services/Manage-Id.md)
-            * [Update ID Information](modules/identity-services/resident-services/Update-Id.md)
+            * [Update ID](modules/identity-services/resident-services/Update-Id.md)
             * [Virtual ID / VID](modules/identity-services/resident-services/Virtual-Id.md)
             * [Manage Credentials](modules/identity-services/resident-services/Manage-Credentials.md)
             * [ID Usage History](modules/identity-services/resident-services/Usage-History.md)
-            * [Resident Services Functionality](modules/identity-services/resident-services/Resident-Services-Functionality.md)
     * Operations
        * [Partner Management](modules/operations/partner-management/Partner-Management.md)
             * [User Management](modules/operations/partner-management/User-Management.md)
@@ -158,7 +157,7 @@
             * [Partner Types](modules/operations/partner-management/Partner-Types.md)
             * [Device Provider](modules/operations/partner-management/Device-Provider.md)
             * [Notifications](modules/operations/partner-management/Notifications.md)
-            
+
         * [Administration](modules/operations/administration/Admin.md)
             * [Admin Services Functionality](modules/operations/administration/Admin-Services-Functionality.md)
         * [Reporting](modules/operations/reporting/Reporting.md)
