@@ -33,7 +33,7 @@ MOSIP generates two types of VID such as Perpetual VID and Temporary VID.
 
 
 ## API Details
-* [API Documentation](https://nayakrounak.gitbook.io/mosip-docs/v/1.2.0/modules/identity-services/resident-services/Resident-Service-API-Documentation.md)
+* [API Documentation](Resident-Service-API-Documentation.md)
 
 ## TODO
 * Configuration Parameters

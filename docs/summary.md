@@ -145,11 +145,10 @@
         * [Resident Services](modules/identity-services/resident-services/Resident-Services.md)
             * [Status Tracking](modules/identity-services/resident-services/Status-Tracking.md)
             * [Manage ID](modules/identity-services/resident-services/Manage-Id.md)
-            * [Update ID Information](modules/identity-services/resident-services/Update-Id.md)
+            * [Update ID](modules/identity-services/resident-services/Update-Id.md)
             * [Virtual ID / VID](modules/identity-services/resident-services/Virtual-Id.md)
             * [Manage Credentials](modules/identity-services/resident-services/Manage-Credentials.md)
             * [ID Usage History](modules/identity-services/resident-services/Usage-History.md)
-            * [Resident Services Functionality](modules/identity-services/resident-services/Resident-Services-Functionality.md)
     * Operations
        * [Partner Management](modules/operations/partner-management/Partner-Management.md)
             * [User Management](modules/operations/partner-management/User-Management.md)
@@ -158,6 +157,7 @@
             * [Partner Types](modules/operations/partner-management/Partner-Types.md)
             * [Device Provider](modules/operations/partner-management/Device-Provider.md)
             * [Notifications](modules/operations/partner-management/Notifications.md)
+
         * [Administration](modules/operations/administration/Admin.md)
             * [Admin Services Functionality](modules/operations/administration/Admin-Services-Functionality.md)
         * [Reporting](modules/operations/reporting/Reporting.md)
@@ -241,7 +241,7 @@
         * Known issues and limitations
         * Frequently asked questions
 * All Pages
-
+    
     * [Admin Service Audits](modules/commons/audits/Admin-Service-Audits.md)
 	* [Resident Service Audits](modules/commons/audits/Resident-Service-Audits.md)
 	* [Partner Management Audits](modules/commons/audits/Partner-Management-Audits.md)
@@ -264,3 +264,8 @@
     * [Quality Check Stage](modules/registration/processor/stages/Quality-Check-Stage.md)
     * [Secure Zone Notification Stage](modules/registration/processor/stages/Secure-Zone-Notification-Stage.md)
     * [UIN Generator Stage](modules/registration/processor/stages/UIN-Generator-Stage.md)
+    * [Pre-Registration API's](modules/registration/pre-registration/Pre-Reg-API-Documentation.md)
+    * [Resident Service API's](modules/identity-services/resident-services/Resident-Service-API-Documentation.md)
+    * [ID Repository API's](modules/id-repository/Credential-Service-API-Documentation.md)
+    * [Partner Management API's](modules/operations/partner-management/PMS-API-Documentation.md)
+    * [ID Authentication API's](modules/identity-services/id-authentication/IDA-API-Documentation.md)

@@ -28,7 +28,7 @@ The chip key will be used to sign the digital id in the authentication request. 
 
 ## To Do
 ## API Details
- * [API Documentation](https://nayakrounak.gitbook.io/mosip-docs/v/1.2.0/modules/operations/partner-management/PMS-API-Documentation.md)
+ * [API Documentation](PMS-API-Documentation.md)
 
 * Configuration Parameters
     * List of parameters and how they alter the behaviour of the API
