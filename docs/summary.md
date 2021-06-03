@@ -158,6 +158,7 @@
             * [Partner Types](modules/operations/partner-management/Partner-Types.md)
             * [Device Provider](modules/operations/partner-management/Device-Provider.md)
             * [Notifications](modules/operations/partner-management/Notifications.md)
+            
         * [Administration](modules/operations/administration/Admin.md)
             * [Admin Services Functionality](modules/operations/administration/Admin-Services-Functionality.md)
         * [Reporting](modules/operations/reporting/Reporting.md)
