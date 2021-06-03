@@ -63,7 +63,7 @@ PRG_PAM_APP_022 |Application can not be updated |
 
 ## Document Service
 Error Codes|Error Message
-|------|-----
+------|-----|-----
 PRG_PAM_DOC_001|Document failed in quality check|
 PRG_PAM_DOC_002|Document failed to encrypt|
 PRG_PAM_DOC_003|Document failed to decrypt|
@@ -88,8 +88,8 @@ PRG_PAM_DOC_022|DocumentId is not belongs to the pre-registration Id|
 PRG_PAM_DOC_024|Document table not able to update by this status|
 
 ## Pre-Registration Core Service
-|Error Codes|Error Message
-|------|-----
+Error Codes|Error Message
+------|-----|-----
 PRG_PAM_CORE_001|Request parameter is missing,Request id is invalid
 PRG_PAM_CORE_002|Request version is invalid 
 PRG_PAM_CORE_003|Invalid request time
@@ -107,8 +107,8 @@ PRG_CORE_REQ_021|Error while Parsing the kernel response
 PRG_CORE_REQ_022|Error while calling masterdata
 
 ## Booking Service
-|Error Codes|Error Message
-|------|-----
+Error Codes|Error Message
+------|-----|-----
 PRG_BOOK_RCI_002|Appointment booking/re-booking cannot be done as | 
 PRG_BOOK_RCI_003|User has not selected time slot
 PRG_BOOK_RCI_006|Preregistration id not entered 
@@ -131,8 +131,8 @@ PRG_BOOK_RCI_035|Registration center id not found
 PRG_BOOK_RCI_036|Appointment cannot be booked for incomplete application
 
 ## Data Sync Service
-|Error Codes|Error Message|Error Description
-|------|-----|-----|
+Error Codes|Error Message|Error Description
+------|-----|-----
 PRG_DATA_SYNC_001|No data found for the requested date range|
 PRG_DATA_SYNC_005|Unable to create zip file|
 PRG_DATA_SYNC_006|Unable to fetch the document|
@@ -147,8 +147,8 @@ PRG_DATA_SYNC_018|Failed to fetch the info the preregistration Id
 PRG_DATA_SYNC_019|Failed to fetch machines encryption publickey
 
 ## UI Specification
-|Error Codes|Error Message|Error Description
-|------|-----|-----|
+Error Codes|Error Message|Error Description
+------|-----|-----
 PRG_APP_001|Failed to save the ui spec|TO DO
 PRG_APP_002|Failed to update the ui spec|
 PRG_APP_003|Failed to fetch the ui spec|
@@ -158,8 +158,8 @@ PRG_APP_006|Error while parsing json|
 PRG_APP_007|Audit Failed|
 
 ## Transliteration Service
-|Error Codes|Error Message|Error Description
-|------|-----|-----|
+Error Codes|Error Message|Error Description
+------|-----|-----
 PRG_TRL_APP_001|Failed to transliterate|
 PRG_TRL_APP_002|Incorrect mandatory Fields,Unsupported language|
 PRG_TRL_APP_004|Invalid Json request|
@@ -167,8 +167,8 @@ PRG_TRL_APP_005|PreReg transliteration table is not accessible|
 PRG_TRL_APP_006|Json parsing failed	|
 
 ## Notification Service
-|Error Codes|Error Message|Error Description
-|------|-----|-----|
+Error Codes|Error Message|Error Description
+------|-----|-----
 PRG_PAM_ACK_001|Mobile number or Email Id is missing|
 PRG_PAM_ACK_002|Mandatory fields are missing|
 PRG_PAM_ACK_003|Json http request exception|

@@ -265,4 +265,7 @@
     * [Secure Zone Notification Stage](modules/registration/processor/stages/Secure-Zone-Notification-Stage.md)
     * [UIN Generator Stage](modules/registration/processor/stages/UIN-Generator-Stage.md)
     * [Pre-Registration API's](modules/registration/pre-registration/Pre-Reg-API-Documentation.md)
-    * 
+    * [Resident Service API's](modules/identity-services/resident-services/Resident-Service-API-Documentation.md)
+    * [ID Repository API's](modules/id-repository/Credential-Service-API-Documentation.md)
+    * [Partner Management API's](modules/operations/partner-management/PMS-API-Documentation.md)
+    * [ID Authentication API's](modules/identity-services/id-authentication/IDA-API-Documentation.md)
