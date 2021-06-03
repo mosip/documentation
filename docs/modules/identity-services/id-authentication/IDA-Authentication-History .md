@@ -1,8 +1,6 @@
 ## To Do
 
-# Scalabilty of Authentication
-
-* ## Simultaneous Authentication
+# History of Authentication Transactions
 
 ## API Details
  * [API Documentation](IDA-API-Documentation.md)
