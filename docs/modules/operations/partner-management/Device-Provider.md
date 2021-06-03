@@ -16,7 +16,7 @@ During device registration MOSIP verifies the make and model detials. If a model
 
 ## To Do
 ## API Details
- * [API Documentation](https://nayakrounak.gitbook.io/mosip-docs/v/1.2.0/modules/operations/partner-management/PMS-API-Documentation.md)
+ * [API Documentation](PMS-API-Documentation.md)
 
 * Configuration Parameters
     * List of parameters and how they alter the behaviour of the API
