@@ -20,7 +20,7 @@ The credential share is a functional service that interacts with the id reposito
 
 ## To Do
 ## API Details
- * [API Documentation](https://nayakrounak.gitbook.io/mosip-docs/v/1.2.0/modules/id-repository/Credential-Service-API-Documentation.md)
+ * [API Documentation](Credential-Service-API-Documentation.md)
 
 * Configuration Parameters
     * List of parameters and how they alter the behaviour of the API
