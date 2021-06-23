@@ -30,7 +30,7 @@ Device Provider Certificate | A digital certificate issued to the "Device Provid
 Management Server | A server run by the device provider to manage the life cycle of the biometric devices.
 FPS | Frames Per Second
 Signature | All signature should be as per RFC 7515.<br>Header - The attribute with "alg" set to RS256 and x5c set to base64urlencoded certificate.<br>Payload - Byte array of the actual data, always represented as base64urlencoded.<br>Signature - Base64urlencoded signature bytes
-ISO format timestamp | ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ (Example: 2020-12-08T09:39:37Z)
+ISO format timestamp | ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ (Example: 2020-12-08T09:39:37Z). This value should be in UTC (Coordinated Universal Time).
 Registration | The process of applying for a Foundational Id.
 Auth | The process of verifying one’s identity.
 KYC | Know Your Customer is the process of providing consent to perform profile verification and update.
@@ -276,7 +276,7 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
 Parameters | Description
 -----------|-------------
 type | This represents the type of device. Allowed values here are "Biometric Device", "Finger", "Face" or "Iris".<br>"Biometric Device" - is a special type and used in case you are looking for "any" biometric device.
-specVersion | This represents the spec version of the SBI. This is an optional parameter, but when requested the response the SBI supporting this spec version should respond to the discovery call.
+specVersion | This represents the spec version of the SBI. This is a mandatory parameter in SBI 1.0, but when requested the response the SBI supporting this spec version should respond to the discovery call. 
 
 #### Device Discovery Response
 ```JSON
@@ -349,7 +349,7 @@ Connection: Closed
 {% hint style="info" %}
 
 * The payloads are JSON in both the cases and are part of the body.
-* CallbackId would be set to the `http://127.0.0.1:<device_service_port>`. So, the caller will use the respective HTTP verb / method and the URL to call the service.
+* CallbackId would be set to the `http://127.0.0.1:<device_service_port>/`. So, the caller will use the respective HTTP verb / method and the URL to call the service.
 
 {% endhint %}
 
@@ -593,9 +593,9 @@ The SBI must make sure of the following,
         "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
       },
-      "hash": "ssha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO) before encryption)",
+      "hash": "sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data before encryption)",
       "sessionKey": "Session key used for encrypting bioValue, encrypted with MOSIP public key (dynamically selected based on the uri) and base64urlencoded",
-      "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
+      "thumbprint": "SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value"
@@ -624,9 +624,9 @@ The SBI must make sure of the following,
         "requestedScore": "Floating point number to represent the minimum required score for the capture",
         "qualityScore": "Floating point number representing the score for the current capture"
       },
-      "hash": "sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO) before encryption)",
+      "hash": "sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data before encryption)",
       "sessionKey": "Session key used for encrypting bioValue, encrypted with MOSIP public key (dynamically selected based on the uri) and base64urlencoded",
-      "thumbprint": "SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
+      "thumbprint": "SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens",
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value"
@@ -660,9 +660,9 @@ data.transactionId | Unique transaction id sent in request
 data.timestamp | Time as per the biometric device. Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
 data.requestedScore | Floating point number to represent the minimum required score for the capture.
 data.qualityScore | Floating point number representing the score for the current capture.
-hash | sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO) before encryption)
+hash | sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data before encryption)
 sessionKey | The session key (used for the encrypting of the bioValue) is encrypted using the MOSIP public certificate with RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING algorithm and then base64-URL-encoded.
-thumbprint | SHA256 representation of the thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.
+thumbprint | SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
 error.errorCode | Standardized error code.
 error.errorInfo | Description of the error that can be displayed to the end user. It should have multi-lingual support.
@@ -848,7 +848,7 @@ customOpts | In case, the device vendor wants to send additional parameters they
         "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100.",
         "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100."
       },
-      "hash": "sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO))",    
+      "hash": "sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data)",    
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value Type For Discovery.. ex: {type: 'Biometric Device' or 'Finger' or 'Face' or 'Iris' } "
@@ -876,7 +876,7 @@ customOpts | In case, the device vendor wants to send additional parameters they
         "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100",
         "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100"
       },
-      "hash": "sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO))",
+      "hash": "sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data)",
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value Type For Discovery.. ex: {type: 'Biometric Device' or 'Finger' or 'Face' or 'Iris' }"
@@ -909,7 +909,7 @@ data.transactionId | Unique transaction id sent in request
 data.timestamp | Time as per the biometric device. The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.
 data.requestedScore | Floating point number to represent the minimum required score for the capture.
 data.qualityScore | Floating point number representing the score for the current capture. Return NFIQ 2.0 scores for fingerprint.
-hash | sha256 in hex format (previous "hash" + sha256 hash of the current biometric data (ISO))
+hash | sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data)
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
 error.errorCode | Standardized error code.
 error.errorInfo | Description of the error that can be displayed to the end user. It should have multi-lingual support.
