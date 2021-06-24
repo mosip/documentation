@@ -27,11 +27,11 @@ All devices that collect biometric data for MOSIP should operate within the spec
 
 ## Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
-* Foundational Trust Provider - An entity that manufactures the foundational trust module.
+* FTM Provider - An entity that manufactures or guarantees the trustworthiness of the foundational trust module. This can be the device provider as well.
 * Device - A hardware capable of capturing biometric information.
 * L1 Certified Device / L1 Device - A device certified as capable of performing encryption in line with this spec in its trusted zone.
 * L0 Certified Device / L0 Device - A device certified as one where the encryption is done on the host machine device driver or the MOSIP device service.
-* Foundational Trust Provider Certificate - A digital certificate issued to the "Foundational Trust Provider". This certificate proves that the provider has successfully gone through the required Foundational Trust Provider evaluation. The entity is expected to keep this certificate in secure possession in an HSM. All the individual trust certificates are issued using this certificate as the root. This certificate would be issued  by the countries in conjunction with MOSIP.
+* FTM Provider Certificate - A digital certificate issued to the "Foundational Trust Provider". This certificate proves that the provider has successfully gone through the required Foundational Trust Provider evaluation. The entity is expected to keep this certificate in secure possession in an HSM. All the individual FTM trust certificates are issued using this certificate as the root. This certificate would be issued by the countries in conjunction with MOSIP.
 * Device Provider Certificate - A digital certificate issued to the "Device Provider". This certificate proves that the provider has been certified for L0/L1 respective compliance. The entity is expected to keep this certificate in secure possession in an HSM. All the individual trust certificates are issued using this certificate as the root. This certificate is issued by the countries in conjunction with MOSIP.
 * Registration - The process of applying for a Foundational Id.
 * KYC - Know Your Customer. The process of providing consent to perform profile verification and update.
@@ -43,7 +43,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 * header in signature - Header in signature means the attribute with "alg" set to RS256 and x5c set to base64encoded certificate.
 * payload is the byte array of the actual data, always represented as base64urlencoded.
 * signature - base64urlencoded signature bytes
-* ISO format timestamp - ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ (Example: 2020-12-08T09:39:37Z)
+* ISO format timestamp | ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ (Example: 2020-12-08T09:39:37Z). This value should be in UTC (Coordinated Universal Time).
 
 ---
 
@@ -138,10 +138,10 @@ The FTM should protect against the following threats.
 * Segregation of memory for execution of cryptographic operation (crypto block should be protected from buffer overflow type attacks).
 * Vulnerability of the cryptographic algorithm implementation.
 * Attacks against secure boot & secure upgrade.
-* TEE/Secure processor OS attack.
+* TEE/Secure processor OS attack (if applicable).
 
 #### Foundational Trust Module Identity
-Upon an FTM provider approved by the MOSIP adopters, the FTM provider would submit a self signed public certificate to the adopter. Let us call this as the FTM root. The adopter would use this certificate to seed their device trust database. The FTM root and their key pairs should be generated and stored in FIPS 140-2 Level 3 or more compliant devices with no possible mechanism to extract the keys.  The foundational module upon its first boot is expected to generate a random asymmetric key pair and provide the public part of the key to obtain a valid certificate.  The FTM provider would validate to ensure that the chip is unique and would issue a certificate with the issuer set to FTM root.  The entire certificate issuance would be in a secured provisioning facility. Auditable upon notice by the adopters or its approved auditors.  The certificate issued to the module will have a defined validity period as per the MOSIP certificate policy document defined by the MOSIP adopters. This certificate and private key within the FTM chip is expected to be in it permanent memory.
+Upon an FTM provider approved by the MOSIP adopters, the FTM provider would submit a self signed public certificate to the adopter. Let us call this as the FTM root. The adopter would use this certificate to seed their device trust database. The FTM root and their key pairs should be generated and stored in FIPS 140-2 Level 3 or more compliant devices with no possible mechanism to extract the keys. The foundational module upon its first boot is expected to generate a random asymmetric key pair and provide the public part of the key to obtain a valid certificate.  The FTM provider would validate to ensure that the chip is unique and would issue a certificate with the issuer set to a FTM certificate chain. The entire certificate issuance would be in a secured provisioning facility. Auditable upon notice by the adopters or its approved auditors. The certificate issued to the module will have a defined validity period as per the MOSIP certificate policy document defined by the MOSIP adopters. This certificate and private key within the FTM chip is expected to be in it permanent memory.
 
 {% hint style="info" %}
 The validity for the chip certificate can not exceed 20 years from the date of manufacturing.
@@ -157,7 +157,7 @@ Mosip devices are most often used to collect biometrics. The devices are expecte
 It is imperative that all devices that connect to MOSIP are identifiable. MOSIP believes in cryptographic Identity as its basis for trust.
 
 ##### Physical ID
-An identification mark that shows MOSIP compliance and a readable unique device serial number (minimum of 12 digits), make and model. The same information has to be available over a 2D QR Code or Barcode. This is to help field support and validation.
+An identification mark that shows MOSIP compliance and a readable unique device serial number (minimum of 12 alphanumeric characters), make and model. The same information has to be available over a 2D QR Code or Barcode. This is to help field support and validation.
 
 ##### Digital ID
 A digital device ID in MOSIP would be a signed JSON (RFC 7515) as follows:
@@ -284,7 +284,7 @@ deviceSubId | <ul><li>Allowed values are 1, 2 or 3.</li><li>The device sub id co
 callbackId | <ul><li>This differs as per the OS.</li><li>In case of Linux and windows operating systems it is a HTTP URL.</li><li>In the case of android, it is the intent name.</li><li>In IOS, it is the URL scheme.</li><li>The call back URL takes precedence over future request as a base URL.</li></ul>
 digitalId | Digital ID as per the Digital ID definition but it will not be signed.
 deviceCode | A unique code given by MOSIP after successful registration.
-specVersion | Array of supported MDS specification version.
+specVersion | Array of supported MDS specification version. The array element zero will always contain the spec version using which the response is created.
 purpose | Purpose of the device in the MOSIP ecosystem. Allowed values are "Auth" or "Registration".
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
 error.errorCode | Standardized error code defined in the [error code section](#error-codes).
@@ -320,7 +320,7 @@ Connection: Closed
 
 {% hint style="info" %}
 * The pay loads are JSON in both the cases and are part of the body.
-* CallbackId would be set to the `http://127.0.0.1:<device_service_port>`. So, the caller will use the respective HTTP verb / method and the URL to call the service.
+* CallbackId would be set to the `http://127.0.0.1:<device_service_port>/`. So, the caller will use the respective HTTP verb / method and the URL to call the service.
 {% endhint %}
 
 #### Android
@@ -411,7 +411,7 @@ deviceInfo.callbackId | <ul><li>This differs as per the OS.</li><li>In case of L
 deviceInfo.digitalId | <ul><li>The digital id as per the digital id definition.</li><li>For L0 devices which is not registered, the digital id will be unsigned.</li><li>For L0 devices which is registered, the digital id will be signed using the device key.</li><li>For L1 devices, the digital id will be signed using the FTM key.</li></ul>
 deviceInfo.env | <ul><li>The target enviornment.</li><li>For devices that are not registered the enviornment is "None".</li><li>For device that is registered, then send the enviornment in which it is registered.</li><li>Allowed values are "Staging", "Developer", "Pre-Production" or "Production".</li></ul>
 deviceInfo.purpose | <ul><li>The purpose of the device in the MOSIP ecosystem.</li><li>For devices that are not registered the purpose is empty.</li><li>Allowed values are "Auth" or "Registration".</li></ul>
-deviceInfo.specVersion | Array of supported MDS specification version.
+deviceInfo.specVersion | Array of supported MDS specification version.  The array element Zero will always contain the spec version using which the response is created.
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
 error.errorCode | Standardized error code defined in the [error code section](#error-codes).
 error.errorInfo | Description of the error that can be displayed to end user. Multi lingual support.
@@ -486,7 +486,7 @@ The capture request would be used to capture a biometric from MOSIP compliant de
       "previousHash": "Hash of the previous block"
     }
   ],
-  customOpts: {
+  "customOpts": {
     //Max of 50 key value pair. This is so that vendor specific parameters can be sent if necessary. The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications. Vendors are free to include additional parameters and fine-tuning parameters. None of these values should go undocumented by the vendor. No sensitive data should be available in the customOpts.
   }
 }
@@ -548,7 +548,7 @@ Scale | NFIQ v1.0
       },
       "hash": "sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data before encryption)",
       "sessionKey": "Encrypt the session key (used to encrypt the biovalue) with MOSIP public key and encode encrypted session key with base64 URL safe encoding.",
-      "thumbprint": SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.",
+      "thumbprint": "SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.",
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value"
@@ -572,8 +572,8 @@ Scale | NFIQ v1.0
         "qualityScore": "Floating point number representing the score for the current capture"
       },
       "hash": "sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data before encryption)",
-      "sessionKey": "Encrypt the session key (used to encrypt the biovalue) with MOSIP public key and encode encrypted session key with base64 url safe encoding.",
-      "thumbprint": SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.",
+      "sessionKey": "Encrypt the session key (used to encrypt the biovalue) with MOSIP public key and encode encrypted session key with base64 URL safe encoding.",
+      "thumbprint": "SHA256 representation of the certificate (HEX encoded) that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens.",
       "error": {
         "errorCode": "101",
         "errorInfo": "Invalid JSON Value"
@@ -734,11 +734,15 @@ The API is used by the devices that are compatible for the registration module. 
       "previousHash": "Hash of the previous block"
     }
   ],
-  customOpts: {
+  "customOpts": {
     //max of 50 key value pair. This is so that vendor specific parameters can be sent if necessary. The values cannot be hard coded and have to be configured by the apps server and should be modifiable upon need by the applications. Vendors are free to include additional parameters and fine-tuning parameters. None of these values should go undocumented by the vendor. No sensitive data should be available in the customOpts.
   }
 }
 ```
+
+{% hint style="info" %}
+To capture the exception photo exception value for Iris or Finger should be send in bio.exception for bio.type = 'Face'. ICAO checks are not mandatory here but one face must be present within the frame.
+{% endhint %}
 
 #### Accepted Values for Registration Capture Request
 Parameters | Description
@@ -827,7 +831,7 @@ data.transactionId | Unique transaction id sent in request
 data.timestamp | <ul><li>Time as per the biometric device.</li><li>Note: The biometric device is expected to sync its time from the management server at regular intervals so accurate time could be maintained on the device.</li></ul>
 data.requestedScore | Floating point number to represent the minimum required score for the capture.
 data.qualityScore | Floating point number representing the score for the current capture.
-hash | sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data)
+hash | sha256 in hex format in upper case (previous "hash" + sha256 hash of the current biometric ISO data).
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
 error.errorCode | Standardized error code defined in the [error code section](#error-codes).
 error.errorInfo | Description of the error that can be displayed to end user. Multi lingual support.
@@ -853,10 +857,8 @@ No support for Registration Capture
 
 ---
 
-## Device Server
-The device server exposes two external device APIs to manage devices. These will be consumed from Management Server created by the device provider. Refer to the subsequent section in this document.
 
-### Registration
+## Registration
 The MOSIP server would provide the following device registration API which is white-listed to the management servers of the device provider or their partners.
 
 {% hint style="info" %}
@@ -865,10 +867,10 @@ This API is exposed by the MOSIP server to the device providers.
 
 **Version:** v1
 
-#### Device Registration Request URL
+### Device Registration Request URL
 `POST https://{base_url}/v1/masterdata/registereddevices`
 
-#### Device Registration Request
+### Device Registration Request
 ```
 {
   "id": "io.mosip.deviceregister",
@@ -892,7 +894,7 @@ This API is exposed by the MOSIP server to the device providers.
 }
 ```
 
-#### Accepted Values for Registration Request
+### Accepted Values for Registration Request
 Parameters | Description
 -----------|-------------
 deviceData | <ul><li>The device data object is sent as JSON Web Token (JWT).</li><li>The device data block will be signed using the device provider certificate.</li></ul>
@@ -919,7 +921,7 @@ After successful registration the management server should issue a certificate a
 * Payload is the object in deviceData.
 * The request is signed with the device provider key at the management server.
 
-#### Device Registration Response
+### Device Registration Response
 ```
 {
   "id": "io.mosip.deviceregister",
@@ -962,15 +964,15 @@ The response should be sent to the device. The device is expected to store the d
 The device once registered for a specific purpose can not be changed after successful registration. The device can only be used for that specific mosip process.
 {% endhint %}
 
-### De-Register
+## De-Register
 The MOSIP server would provide the following device de-registration API which is whitelisted to the management servers of the device provider or their partners.
 
 **Version:** v1
 
-#### Device De-Registration Request URL
+### Device De-Registration Request URL
 `POST https://{base_url}/v1/masterdata/device/deregister`
 
-#### Device De-Registration Request
+### Device De-Registration Request
 ```
 {
   "id": "io.mosip.devicederegister",
@@ -993,14 +995,14 @@ The device data in request is sent as a JWT format. So the final request will lo
 }
 ```
 
-#### Accepted Values for Device De-Registration Request
+### Accepted Values for Device De-Registration Request
 ```
 env - Allowed values are Staging| Developer| Pre-Production | Production
 deviceCode - This is the device code issued by MOSIP server post registration. This will be in UUID RFC4122 Version 4 format. Once device is registered the device code needs to be set in the device.
 isItForRegistrationDevice - It is set as true when it is a registration device and false when it is an authentication device.
 ```
 
-#### Device De-Registration Response
+### Device De-Registration Response
 ```
 {
   "id": "io.mosip.devicederegister",
@@ -1029,15 +1031,15 @@ The entire response is sent as a JWT format. So the final response will look lik
 
 ---
 
-### Certificates
+## Certificates
 The MOSIP server would provide the following retrieve encryption certificate API which is white-listed to the management servers of the device provider or their partners.
 
-#### Retrieve Encryption Certificate Request URL
+### Retrieve Encryption Certificate Request URL
 `POST https://{base_url}/v1/masterdata/device/encryptioncertficates`
 
 **Version:** v1
 
-#### Retrieve Encryption Certificate Request
+### Retrieve Encryption Certificate Request
 ```
 {
   "id": "io.mosip.auth.country.certificate",
@@ -1059,13 +1061,13 @@ The request is sent as a JWT format. So the final request will look like:
 }
 ```
 
-#### Accepted Values for Retrieve Certificate Request
+### Accepted Values for Retrieve Certificate Request
 ```
 env - Allowed values are Staging| Developer| Pre-Production | Production
 domainUri - unique uri per auth providers. This can be used to federate across multiple providers or countries or unions.
 ```
 
-#### Encryption Certificate Response
+### Encryption Certificate Response
 ```
 {
   "id": "io.mosip.auth.country.certificate",
