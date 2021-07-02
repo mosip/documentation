@@ -253,7 +253,7 @@ request.otp | N | OTP used for authentication. This is mandatory when requestedA
 request.timestamp | N | Timestamp when request block was captured.
 request.demographics | N | Demographic data of the residnet. This is mandatory when requestedAuth.demo is true.
 request.biometrics | N | Biometric data of an Individual which is sent in the response from the Capture API of SBI spec v1.0. Refer to the [SBI spec v1.0](Secure-Biometric-Interface-Specification.md#capture) specification for complete information. This is mandatory when requestedAuth.bio is true.
-
+secondaryLangCode | N | Optional Secondary Language code. If specified KYC response will return contain secondary language data for the specified language code if available, otherwise only primary language data will be returned.
 
 ### Request Body
 ```JSON
@@ -296,7 +296,8 @@ request.biometrics | N | Biometric data of an Individual which is sent in the re
         "thumbprint": "<SHA256 representation of thumb-print of the MOSIP public key that was used for encryption of session key>"
       }
     ]
-  }
+  },
+  "secondaryLangCode": "ara"
 }
 ```
 
