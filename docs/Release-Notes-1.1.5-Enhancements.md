@@ -20,6 +20,7 @@ This document contains the features that were developed or enhanced as part of M
 * We have now introduced a new search API in partner management system for fields such as policy, policy group, partner, partner type etc.
 * We have now merged all partner services by having separate grouping of poilcy related and partner related micro service.
 * We have updated the policy approval flow to enabale auto approval mechanism for subsequent API key request from same partner.
+* We have depricated the device register and deregister APIs as from now onwards we would be performing trust validation.
 
 # Resident Service
 * We are now able to identify and send the best two fingers to print partner.
@@ -40,7 +41,7 @@ This document contains the features that were developed or enhanced as part of M
 * We now store only operator's biometrics templates or extracts in registration client (not the images) for local authentication after onboarding of the operators.
 * We now support regex validations for primary and secondary languages for simple type attributes.
 * We now perform JWT verification of header and signature before accepting the payload data from MDS.
-* Registration client now performs the trust validation of the devices by verifying whether the digital id block and the data block are actually signed by a MOSIP verified device provider.
+* Registration client now performs the trust validation of the devices by verifying whether the digital id block and the data block are actually signed by a MOSIP verified device provider. Hence, storing device details in master database or device registration is not requiered for device validation.
 * Tracing of requests and event messages in registration processor stages with all logs in place.
 * We now handle deactivation or activation scenarios in registration client for user, machine and center.
 
