@@ -868,7 +868,7 @@ customOpts | In case, the device vendor wants to send additional parameters they
         "env": "Target environment",
         "bioValue": "base64urlencoded biometrics (ISO format)",
         "transactionId": "Unique transaction id sent in request",
-        "timestamp": "2019-02-15T10:01:57.086Z",
+        "timestamp": "2019-02-15T10:01:57Z",
         "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100.",
         "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100."
       },
@@ -896,7 +896,7 @@ customOpts | In case, the device vendor wants to send additional parameters they
         "env":  "Target environment",
         "bioValue": "base64urlencoded biometric (ISO format)",
         "transactionId": "Unique transaction id sent in request",
-        "timestamp": "2019-02-15T10:01:57.086Z",
+        "timestamp": "2019-02-15T10:01:57Z",
         "requestedScore": "Floating point number to represent the minimum required score for the capture. This ranges from 0-100",
         "qualityScore": "Floating point number representing the score for the current capture. This ranges from 0-100"
       },
