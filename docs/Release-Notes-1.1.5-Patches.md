@@ -71,7 +71,7 @@ This document contains the defect fixes and features that were released as part 
 * Registration Processor
     * Adjudication Stage
         * The stage can now handle multiple technical failures and redirects them for reprocessing. Scenarios,
-            * Any technical failures sent by the adjudication system, i.e. when return code is sent as 2
+            * Any technical failures sent by the adjudication system (when return code is sent as 2)
             * When an invalid reference ID is sent from the adjudication system
             * When there is a count mismatch between the count value and reference IDs
         * The stage also handles a scenario where multiple responses are received from the adjudication system, by just logging the response and not processing it
