@@ -14,12 +14,15 @@
 ## Scope
 MOSIP **1.1.5** succeeds **1.1.4** with enhancements and important defect fixes which were identified in [Release 1.1.4](Release-Notes-1.1.4.md#list-of-known-issues).
 
+We have also released some patch versions on top of 1.1.5, kindly view our patch documentation for the same.
+
 **Release Date:** April 23, 2021
 
 **Key Highlights**
 
 * [Enhancements](Release-Notes-1.1.5-Enhancements.md)
 * [Defect fixes](Release-Notes-1.1.5-Defect-Fixes.md)
+* [Patch versions](Release-Notes-1.1.5-Patches.md)
 
 ## Documentation
 
