@@ -90,6 +90,7 @@ This document contains the defect fixes and features that were released as part 
     * id-authentication: 1.1.5.4
     * id-repository: 1.1.5.3
     * resident-services: 1.1.5.1
+
 ### ID Repository
 * Aspect logs have been added
 * The column bio_ref_id in the idrepo.uin table has been deprecated
