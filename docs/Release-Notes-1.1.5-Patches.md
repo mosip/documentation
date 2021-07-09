@@ -55,41 +55,41 @@ This document contains the defect fixes and features that were released as part 
     * Thumbprint in IDA now supports both hex and base64URL encoding
     * Hash validation for biometrics has changed with an option to disable it
 
-* Registration Client
-    * Document Scanner
-        * Fix for creation of low-resolution image due to cropping has been resolved
-        * Zoom in and zoom out feature has been added in preview in document screen
-        * Document Scanner screen now has a horizontal and vertical scroll
-        * An option to change the crop area by dragging after crop selection has been added
-        * JPEG compression is done on the scanned or cropped image before converting it into a PDF, which decreases the document size
-    * Biometric Capture Screen
-        * Post capture of Iris and Face we are now showing the captured biometric image in the UI (not the last frame)
-        * Display issue related to good quality image replacing a lower-quality image during multiple capture attempts in biometric capture screen has been fixed
-        * Display issue related to the warning symbol not getting removed after a proper capture has been resolved
-        * The forced capture limit is now, same as the capture limit (it was earlier hardcoded to three)
+### Registration Client
+* Document Scanner
+    * Fix for creation of low-resolution image due to cropping has been resolved
+    * Zoom in and zoom out feature has been added in preview in document screen
+    * Document Scanner screen now has a horizontal and vertical scroll
+    * An option to change the crop area by dragging after crop selection has been added
+    * JPEG compression is done on the scanned or cropped image before converting it into a PDF, which decreases the document size
+* Biometric Capture Screen
+    * Post capture of Iris and Face we are now showing the captured biometric image in the UI (not the last frame)
+    * Display issue related to good quality image replacing a lower-quality image during multiple capture attempts in biometric capture screen has been fixed
+    * Display issue related to the warning symbol not getting removed after a proper capture has been resolved
+    * The forced capture limit is now, same as the capture limit (it was earlier hardcoded to three)
 
-* Registration Processor
-    * Adjudication Stage
-        * The stage can now handle multiple technical failures and redirects them for reprocessing. Scenarios,
-            * Any technical failures sent by the adjudication system (when return code is sent as 2)
-            * When an invalid reference ID is sent from the adjudication system
-            * When there is a count mismatch between the count value and reference IDs
-        * The stage also handles a scenario where multiple responses are received from the adjudication system, by just logging the response and not processing it
-        * The adjudication response now supports the modalities section for each reference ID
-    * Readiness Probe for registration processor stages
-        * The readiness probe details in all registration processor VertX stages have been modified to remove the null pointer exception during the restart of the VertX stages
-        * Prometheus endpoints have been added for all the stages
-    * Option to have multiple landing zone folders has been added
-    * Issues in stage level packet priority-based fetch for biometrics has been fixed for uin-generator-stage
-    * Issues related to packet validation failure to reprocessing of multi-source packets has been fixed 
+### Registration Processor
+* Adjudication Stage
+    * The stage can now handle multiple technical failures and redirects them for reprocessing. Scenarios,
+        * Any technical failures sent by the adjudication system (when return code is sent as 2)
+        * When an invalid reference ID is sent from the adjudication system
+        * When there is a count mismatch between the count value and reference IDs
+    * The stage also handles a scenario where multiple responses are received from the adjudication system, by just logging the response and not processing it
+    * The adjudication response now supports the modalities section for each reference ID
+* Readiness Probe for registration processor stages
+    * The readiness probe details in all registration processor VertX stages have been modified to remove the null pointer exception during the restart of the VertX stages
+    * Prometheus endpoints have been added for all the stages
+* Option to have multiple landing zone folders has been added
+* Issues in stage level packet priority-based fetch for biometrics has been fixed for uin-generator-stage
+* Issues related to packet validation failure to reprocessing of multi-source packets has been fixed 
 
-* Commons
-    * Packet manager has been modified to fetch proper biometric data during reprocessing of multiple packets
-    * A flag has been added for the UIN validator for disabling the validation for “repeating numbers for 2 or more than 2 digits”. Due to this change dependency in the below modules has been updated.
-        * registration-client: 1.1.5.4
-        * id-authentication: 1.1.5.4
-        * id-repository: 1.1.5.3
-        * resident-services: 1.1.5.1
-* ID Repository
-    * Aspect logs have been added
-    * The column bio_ref_id in the idrepo.uin table has been deprecated
+### Commons
+* Packet manager has been modified to fetch proper biometric data during reprocessing of multiple packets
+* A flag has been added for the UIN validator for disabling the validation for “repeating numbers for 2 or more than 2 digits”. Due to this change dependency in the below modules has been updated.
+    * registration-client: 1.1.5.4
+    * id-authentication: 1.1.5.4
+    * id-repository: 1.1.5.3
+    * resident-services: 1.1.5.1
+### ID Repository
+* Aspect logs have been added
+* The column bio_ref_id in the idrepo.uin table has been deprecated
