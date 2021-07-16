@@ -41,5 +41,5 @@ Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Speci
 * ABIS must comply to [ABIS API Specifications](ABIS-APIs.md).
 * The queues can be configured in [RegistrationProcessorAbis-env.json](https://github.com/mosip/mosip-config/blob/master/config-templates/RegistrationProcessorAbis-env.json) file. 
 * ABIS system connects to the queues using a pre-defined user id and password. 
-* It is recommended that ABIS is deployed in the same secure zone (military zone) where the registration processor is deployed. 
+* It is recommended that ABIS is deployed in a secure zone (military zone). 
 * ABIS system is not recommended to connect to any external network.
