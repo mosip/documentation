@@ -381,7 +381,6 @@ NA
 ]
 ```
 
-The final JSON is signed with the JSON web signature using the "Foundational Trust Module" Identity key, this data is the fundamental identity of the device. Every MOSIP compliant device will need the foundational trust module.
 
 So the API would respond in the following format.
 ```
