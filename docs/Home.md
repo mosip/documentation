@@ -17,7 +17,7 @@ The key objectives of MOSIP are to:
 
 ## Releases
 
-The latest release of MOSIP, version 1.1.5 is here! We have added may interesting features as part of this release and also incorporated some software infrastructure changes as part of paring the technical debt. Check out the exciting new services and enhancements in the documentation.
+The latest release of MOSIP, version 1.1.5 is here! We have added many interesting features as part of this release and also incorporated some software infrastructure changes as part of paring the technical debt. Check out the exciting new services and enhancements in the documentation.
 
 **Current Release**<br>Version: 1.1.5<br>Release Date: March 23, 2021<br>You can find the release notes [here](Release-Notes-1.1.5.md).
 
