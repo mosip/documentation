@@ -112,12 +112,14 @@ ID Repo | 97 | 97 | 97 | 0 | 100% | 100%
 
 The top issues identified in MOSIP 1.1.5 are listed below.
 
-Bug ID | Summary | Module
--------|---------|-------
-[MOSIP-13222](https://mosip.atlassian.net/browse/MOSIP-13222) | Websub message store is not getting populated for IDA, Resident | Commons
-[MOSIP-10497](https://mosip.atlassian.net/browse/MOSIP-10497) | After User and Machine re-map, Reg-client is not working | Registration
-[MOSIP-13227](https://mosip.atlassian.net/browse/MOSIP-13227) | Post-Remap and completion of pending activities still not able to remap | Registration
-[MOSIP-13160](https://mosip.atlassian.net/browse/MOSIP-13160) | The priority is not working when we donot add stage level priority it work | Registration
+Summary | Module | Work Around
+--------|--------|-------------
+Certificates are not getting populated in respective tables via websub causing trust validation or digital signature validation failures | Commons | [Support doc link](https://mosip.atlassian.net/l/c/F1Nisied)
+Post biometric exception operator is not able to proceed ahead | Registration Client | Fix available in [registration-client:1.1.5.5-rc1](https://github.com/mosip/registration-client/tree/v1.1.5.5-rc1)
+Registration Client syncs only ten dynamic fields | Registration Client | [Support doc link](https://mosip.atlassian.net/l/c/SnvBtN1u)
+Pre-registration UI works for only ten dynamic fields | Pre-registration |Fix is available in [pre-registration-ui:1.1.5.3](https://github.com/mosip/mosip-ref-impl/tree/1.1.5.3/pre-registration-ui)
+Pre-registration UI works properly only when we have full name as an attribute in id-schema | Pre-registration | Fix is available in [pre-registration-ui:1.1.5.3](https://github.com/mosip/mosip-ref-impl/tree/1.1.5.3/pre-registration-ui)
+Remapping of machines and users is not working as expected in Registration Client | Registration Client | NA
 
 ## Upgrade Testing
 
