@@ -1,4 +1,4 @@
-This document contains the features that were developed or enhanced as part of MOSIP LTS Pre-release 1.
+This document contains the features that were developed or enhanced as part of MOSIP LTS Pre-release.
 
 # Commons
 
