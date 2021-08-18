@@ -33,15 +33,14 @@ This page lists all the technologies used in building MOSIP. As far as possible 
 |Development - Database|PostgreSQL| Driver: 42.2.2|BSD 2-clause "Simplified License"|
 |Development - Database Modeling tool|PG Data Modeler|0.9.2|Commercial|
 |Development - Postgres admin/scripts/query development tool|pgadmin4|3|Free|
-|Development - Code quality|Sonar|7.2|Open Source license|
+|Development - Code quality|Sonar|7.2|Open Source License|
 |Development - UI Designs|Pencil Project|3.0.4|GNU Public License version 2|
-|Biometric Devices|TBD|||
-|Biometric APIs|TBD|||
 |Testing tools|Rest-assured|3.0.0|Apache License 2.0|
 |Testing tools|WireMock or Citrus framework|2.16.0 or respectively|Apache License 2.0|
 |Testing tools|JMeter|4.x|Apache License 2.0|
 |Testing tools|Burp suite Professional +|9.0.3.7|PortSwigger - Burp suite Professional + / V1.7.33|
 |Testing tools|TestNG|6.11|Apache License 2.0|
+|Testing tools|[Java profiler](https://www.ej-technologies.com/products/jprofiler/overview.html)|12.0.3|Open Source License|
 |DevOps tools|Jira|6.4 and above|Not Open source|
 |DevOps tools|SonarLint|v3.5|GNU GPL|
 |DevOps tools|GitHub|2.7.x|Commercial - Github |
