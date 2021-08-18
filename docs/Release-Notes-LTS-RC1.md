@@ -30,7 +30,7 @@ This is not a production-ready release. It has been tested but has some known is
 * [Print Services](https://github.com/mosip/print/tree/v1.2.0-rc1)
 * [Config Respository](https://github.com/mosip/mosip-config/tree/v1.2.0-rc1)
 * [Durian](https://github.com/mosip/durian/tree/v1.2.0-rc1)
-* [WebSub](https://github.com/mosip/websub/releases/tree/v1.2.0-rc1)
+* [WebSub](https://github.com/mosip/websub/tree/v1.2.0-rc1)
 * [Packet Manager](https://github.com/mosip/packet-manager/tree/v1.2.0-rc1)
 * [Reference Artifactory Implementation](https://github.com/mosip/artifactory-ref-impl/tree/1.2.0-rc1)
 * [Reference Implementation](https://github.com/mosip/mosip-ref-impl/tree/v1.2.0-rc1)
