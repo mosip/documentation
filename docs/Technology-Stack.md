@@ -32,7 +32,8 @@ This page lists all the technologies used in building MOSIP. As far as possible 
 |Development - Database|PostgreSQL|Server: 10|Postgres License| 
 |Development - Database|PostgreSQL| Driver: 42.2.2|BSD 2-clause "Simplified License"|
 |Development - Database Modeling tool|PG Data Modeler|0.9.2|Commercial|
-|Development - Postgres admin/scripts/query development tool|pgadmin4|3|Free|
+|Development - Database Modeling tool|PG Data Modeler|0.9.2|Commercial|
+|Development - Scanner library|[Morena scanner library](https://www.gnome.eu/)|7|Commercial|
 |Development - Code quality|Sonar|7.2|Open Source License|
 |Development - UI Designs|Pencil Project|3.0.4|GNU Public License version 2|
 |Testing tools|Rest-assured|3.0.0|Apache License 2.0|
