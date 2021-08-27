@@ -53,21 +53,21 @@ transactionID | Y | This represents the Transaction ID of the request.
 requestTime | Y | This represents the time when request was created. Ex: "2019-02-15T10:01:57.086+05:30".
 env | Y | This represents the environment. Allowed values are "Staging" | "Developer" | "Pre-Production" | "Production".
 domainUri | Y | This represents the Unique URI per auth providers. This can be used to federate across multiple providers or countries or unions.
-requestedAuth | Y | This represents the authentication types requested.
-requestedAuth.otp | Y | This is used to inform that OTP authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
-requestedAuth.demo | Y | This is used to inform that demographic authentication was performed as part of this request. Default value here is false. Allowed values are true or false.
-requestedAuth.bio | Y | This is used to inform that biometric authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
+requestedAuth [Deprecated since 1.2.0] | N | This represents the authentication types requested.
+requestedAuth.otp [Deprecated since 1.2.0] | N | This is used to inform that OTP authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
+requestedAuth.demo [Deprecated since 1.2.0] | N | This is used to inform that demographic authentication was performed as part of this request. Default value here is false. Allowed values are true or false.
+requestedAuth.bio [Deprecated since 1.2.0] | N | This is used to inform that biometric authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
 individualId | Y | This represents the ID of resident (VID or UIN). Ex: "9830872690593682".
-individualIdType | Y | ID Type used for authentication. Allowed Types of ID - VID, UIN. Default value here is VID.
+individualIdType [Deprecated since 1.2.0] | Y | ID Type used for authentication. Allowed Types of ID - VID, UIN. Default value here is VID.
 consentObtained | Y | If consent of residnet is obtained? Default value here is true.
 thumbprint | Y | Thumbprint of public key certificate used for encryption of sessionKey. This will be used during key rotation
 requestSessionKey | Y | Symmetric Key to be created, and then encrypt the generated Symmetric Key using 'MOSIP Public Key' shared to Partner, and then Base-64-URL encoded. Algorithm used for encryption can be  RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING.
 requestHMAC | Y | SHA-256 hash of request block before encryption. Encryption is done using 'requestSessionKey' and then base64URL encoded. Algorithm used for encryption can be AES/GCM/PKCS5Padding.
 request | Y | Request block to be used for authenticating the resident. This is encrypted using 'requestSessionKey' and then base64URL encoded. Algorithm used for encryption can be AES/GCM/PKCS5Padding.
-request.otp | N | OTP used for authentication. This is mandatory when requestedAuth.otp is true.
+request.otp | N | OTP used for authentication.
 request.timestamp | N | Timestamp when request block was captured.
-request.demographics | N | Demographic data of the residnet. This is mandatory when requestedAuth.demo is true.
-request.biometrics | N | Biometric data of an Individual which is sent in the response from the Capture API of SBI spec v1.0. Refer to the [SBI spec v1.0](Secure-Biometric-Interface-Specification.md#capture) specification for complete information. This is mandatory when requestedAuth.bio is true.
+request.demographics | N | Demographic data of the residnet.
+request.biometrics | N | Biometric data of an Individual which is sent in the response from the Capture API of SBI spec v1.0. Refer to the [SBI spec v1.0](Secure-Biometric-Interface-Specification.md#capture) specification for complete information.
 
 ### Request Body
 ```JSON
@@ -78,14 +78,8 @@ request.biometrics | N | Biometric data of an Individual which is sent in the re
   "env": "<Target environment>",
   "domainUri": "<URI of the authentication server>",
   "transactionID": "<Transaction ID of the authentication request>",
-  "requestedAuth": {
-    "otp": true,
-    "demo": false,
-    "bio": false
-  },
   "consentObtained": true,
   "individualId": "9830872690593682",
-  "individualIdType": "VID",
   "thumbprint": "<Thumbprint of the public key certficate used for enryption of sessionKey. This is necessary for key rotaion>",
   "requestSessionKey": "<Encrypted and Base64-URL-encoded session key>",
   "requestHMAC": "<SHA-256 of request block before encryption and then hash is encrypted using the requestSessionKey>",
@@ -238,21 +232,21 @@ transactionID | Y | This represents the Transaction ID of the request.
 requestTime | Y | This represents the time when request was created. Ex: "2019-02-15T10:01:57.086+05:30".
 env | Y | This represents the environment. Allowed values are "Staging" | "Developer" | "Pre-Production" | "Production".
 domainUri | Y | This represents the Unique URI per authentication providers. This can be used to federate across multiple providers or countries or unions.
-requestedAuth | Y | This represents the authentication types requested.
-requestedAuth.otp | Y | This is used to inform that OTP authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
-requestedAuth.demo | Y | This is used to inform that demographic authentication was performed as part of this request. Default value here is false. Allowed values are true or false.
-requestedAuth.bio | Y | This is used to inform that biometric authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
+requestedAuth [Deprecated since 1.2.0] | Y | This represents the authentication types requested.
+requestedAuth.otp [Deprecated since 1.2.0] | Y | This is used to inform that OTP authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
+requestedAuth.demo [Deprecate since 1.2.0] | Y | This is used to inform that demographic authentication was performed as part of this request. Default value here is false. Allowed values are true or false.
+requestedAuth.bio [Deprecated since 1.2.0] | Y | This is used to inform that biometric authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
 individualId | Y | This represents the ID of resident (VID or UIN). Ex: "9830872690593682".
-individualIdType | Y | ID Type used for authentication. Allowed Types of ID - VID, UIN. Default value here is VID.
+individualIdType [Deprecated since 1.2.0] | Y | ID Type used for authentication. Allowed Types of ID - VID, UIN. Default value here is VID.
 consentObtained | Y | If consent of residnet is obtained? Default value here is true.
 thumbprint | Y | Thumbprint of public key certificate used for encryption of sessionKey. This will be used during key rotation
 requestSessionKey | Y | Symmetric Key to be created, and then encrypt the generated Symmetric Key using 'MOSIP Public Key' shared to Partner, and then Base-64-URL encoded. Algorithm used for encryption can be  RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING.
 requestHMAC | Y | SHA-256 hash of request block before encryption. Encryption is done using 'requestSessionKey' and then base64URL encoded. Algorithm used for encryption can be AES/GCM/PKCS5Padding.
 request | Y | Request block to be used for authenticating the resident. This is encrypted using 'requestSessionKey' and then base64URL encoded. Algorithm used for encryption can be AES/GCM/PKCS5Padding.
-request.otp | N | OTP used for authentication. This is mandatory when requestedAuth.otp is true.
+request.otp | N | OTP used for authentication.
 request.timestamp | N | Timestamp when request block was captured.
-request.demographics | N | Demographic data of the residnet. This is mandatory when requestedAuth.demo is true.
-request.biometrics | N | Biometric data of an Individual which is sent in the response from the Capture API of SBI spec v1.0. Refer to the [SBI spec v1.0](Secure-Biometric-Interface-Specification.md#capture) specification for complete information. This is mandatory when requestedAuth.bio is true.
+request.demographics | N | Demographic data of the residnet.
+request.biometrics | N | Biometric data of an Individual which is sent in the response from the Capture API of SBI spec v1.0. Refer to the [SBI spec v1.0](Secure-Biometric-Interface-Specification.md#capture) specification for complete information.
 
 
 ### Request Body
@@ -264,14 +258,8 @@ request.biometrics | N | Biometric data of an Individual which is sent in the re
   "env": "<Target environment>",
   "domainUri": "<URI of the authentication server>",
   "transactionID": "<Transaction ID of the authentication request>",
-  "requestedAuth": {
-    "otp": true,
-    "demo": false,
-    "bio": true
-  },
   "consentObtained": true,
   "individualId": "9830872690593682",
-  "individualIdType": "VID",
   "thumbprint": "<SHA256 representation of thumb-print of the MOSIP public key certificate used for encryption of sessionKey>",
   "requestSessionKey": "<Encrypted using MOSIP public key and base64-URL-encoded session key>",
   "requestHMAC": "<SHA-256 of request block before encryption and then hash is encrypted using the requestSessionKey>",
@@ -312,9 +300,11 @@ request.biometrics | N | Biometric data of an Individual which is sent in the re
   "transactionID": "<Transaction ID received in request>",
   "response": {
     "kycStatus": true,
-    "authResponseToken": "<Authentication response token>",
+    "authToken": "<Authentication response token>",
+    "sessionKey": "<Encrypted and base64-URL-encoded session key>",
+    "thumbprint": "<SHA256 representation of thumb-print of the MOSIP public key that was used for encryption of session key>",
     //Encrypted KYC info using Partner's public key and base64-URL-encoded
-	"identity": {
+    "identity": {
       "name": [
         {
           "language": "ara",
@@ -364,8 +354,7 @@ request.biometrics | N | Biometric data of an Individual which is sent in the re
           "value": "exemple d'adresse ligne 3"
         }
       ]
-    },
-    "thumbnail": "<SHA256 representation of thumb-print of the Partner's public key used for encryption of identity block>"
+    }
   },
   "errors": null
 }
@@ -381,9 +370,10 @@ request.biometrics | N | Biometric data of an Individual which is sent in the re
   "transactionID": "<Transaction ID received in request>",
   "response": {
     "kycStatus": false,
-    "authResponseToken": null,
-    "identity": null,
-    "thumbnail": null
+    "sessionKey": null,
+    "thumbprint": null,
+    "authToken": null,
+    "identity": null
   },
   "errors": [
     {
@@ -435,7 +425,7 @@ requestTime | Y | Time when request was captured. Ex:"2019-02-15T10:01:57.086+05
 env | Y | Target environment. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
 domainUri | Y | Unique URI per auth providers. This can be used to federate across multiple providers or countries or unions.
 individualId | Y | ID of resident (VID or UIN). Ex: "9830872690593682".
-individualIdType | Y | ID Type of resident used. Allowed Types of ID - VID, UIN. Default Value here is VID.
+individualIdType [Deprecated since 1.2.0] | Y | ID Type of resident used. Allowed Types of ID - VID, UIN. Default Value here is VID.
 otpChannel | Y | OTP channel for sending OTP request. Allowed OTP Channels - EMAIL, PHONE.
 
 ### Request Body
@@ -448,7 +438,6 @@ otpChannel | Y | OTP channel for sending OTP request. Allowed OTP Channels - EMA
   "domainUri": "<URI of the authentication server>",
   "transactionID": "<Transaction ID of the authentication request>",
   "individualId": "9830872690593682",
-  "individualIdType": "VID",
   "otpChannel": [
     "EMAIL",
     "PHONE"
@@ -560,21 +549,21 @@ transactionID | Y | This represnets the Transaction ID of the request.
 requestTime | Y | This represents the time when request was created. Ex: "2019-02-15T10:01:57.086+05:30".
 env | Y | This represents the enviornment. Allowed values are "Staging" | "Developer" | "Pre-Production" | "Production".
 domainUri | Y | This represents the Unique URI per auth providers. This can be used to federate across multiple providers or countries or unions.
-requestedAuth | Y | This represents the authentication types requested.
-requestedAuth.otp | Y | This is used to inform that OTP authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
-requestedAuth.demo | Y | This is used to inform that demographic authentication was performed as part of this request. Default value here is false. Allowed values are true or false.
-requestedAuth.bio | Y | This is used to inform that biometric authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
+requestedAuth [Deprecated since 1.2.0] | Y | This represents the authentication types requested.
+requestedAuth.otp [Deprecated since 1.2.0] | Y | This is used to inform that OTP authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
+requestedAuth.demo [Deprecated since 1.2.0] | Y | This is used to inform that demographic authentication was performed as part of this request. Default value here is false. Allowed values are true or false.
+requestedAuth.bio [Deprecated since 1.2.0] | Y | This is used to inform that biometric authentication was performed as part of this request. Default Value here is false. Allowed values are true or false.
 individualId | Y | This represents the ID of resident (VID or UIN). Ex: "9830872690593682".
-individualIdType | Y | ID Type used for authentication. Allowed Types of ID - VID, UIN. Default value here is VID.
+individualIdType [Deprecated since 1.2.0] | Y | ID Type used for authentication. Allowed Types of ID - VID, UIN. Default value here is VID.
 consentObtained | Y | If consent of residnet is obtained? Default value here is true.
 thumbprint | Y | Thumbprint of public key certificate used for encryption of sessionKey. This will be used during key rotation
 requestSessionKey | Y | Symmetric Key to be created, and then encrypt the generated Symmetric Key using 'MOSIP Public Key' shared to Partner, and then Base-64-URL encoded. Algorithm used for encryption can be  RSA/ECB/OAEPWITHSHA-256ANDMGF1PADDING.
 requestHMAC | Y | SHA-256 hash of request block before encryption. Encryption is done using 'requestSessionKey' and then base64URL encoded. Algorithm used for encryption can be AES/GCM/PKCS5Padding.
 request | Y | Request block to be used for authenticating the resident. This is encrypted using 'requestSessionKey' and then base64URL encoded. Algorithm used for encryption can be AES/GCM/PKCS5Padding.
-request.otp | N | OTP used for authentication. This is mandatory when requestedAuth.otp is true.
+request.otp | N | OTP used for authentication.
 request.timestamp | N | Timestamp when request block was captured.
-request.demographics | N | Demographic data of the residnet. This is mandatory when requestedAuth.demo is true.
-request.biometrics | N | Biometric data of an Individual which is sent in the response from the Capture API of SBI spec v1.0. Refer to the [SBI spec v1.0](Secure-Biometric-Interface-Specification.md#capture) specification for complete information. This is mandatory when requestedAuth.bio is true.
+request.demographics | N | Demographic data of the residnet.
+request.biometrics | N | Biometric data of an Individual which is sent in the response from the Capture API of SBI spec v1.0. Refer to the [SBI spec v1.0](Secure-Biometric-Interface-Specification.md#capture) specification for complete information.
 
 ### Request Body
 ```JSON
@@ -585,14 +574,8 @@ request.biometrics | N | Biometric data of an Individual which is sent in the re
   "env": "<Target environment>",
   "domainUri": "<URI of the authentication server>",
   "transactionID": "<Transaction ID of the authentication request>",
-  "requestedAuth": {
-    "otp": true,
-    "demo": false,
-    "bio": false
-  },
   "consentObtained": true,
   "individualId": "9830872690593682",
-  "individualIdType": "VID",
   "thumbprint": "<Thumbprint of the public key certficate used for enryption of sessionKey. This is necessary for key rotaion>",
   "requestSessionKey": "<Encrypted and Base64-URL-encoded session key>",
   "requestHMAC": "<SHA-256 of request block before encryption and then hash is encrypted using the requestSessionKey>",
@@ -726,12 +709,12 @@ Authentication Transactions Service can be used by Resident Services to retrieve
 ## Users of Authentication Transactions Service
 `Resident Services` - Resident Services will send UIN or VID to retrieve all authentication transactions of an Individual, that are initiated by Partners.
 
-## GET /idauthentication/v1/internal/authTransactions/individualIdType/
+## GET /idauthentication/v1/internal/authTransactions/individualId/
 This request will retrieve authentication transactions for the given UIN/VID, alongwith pageStart and pageFetch parameters.
 
 ### Resource URL
 ```
-https://{base_url}/idauthentication/v1/internal/authTransactions/individualIdType/:IDType/individualId/:ID?pageStart=1&pageFetch=10
+https://{base_url}/idauthentication/v1/internal/authTransactions/individualId/:ID?pageStart=1&pageFetch=10
 ```
 
 ### Resource Details
@@ -773,7 +756,9 @@ pageFetch | N | The number of entries per page. Default value here is "10".
         "statusCode": "Y",
         "statusComment": "Finger Authentication Success",
         "referenceIdType": "UIN",
-        "entityName": ""
+        "entityName": "",
+	"requestSignature": "<JWT signature>",
+	"responseSignature": "<JWT signature>"
 	  },
 	  {
         "transactionID": "1234567891",
@@ -782,7 +767,9 @@ pageFetch | N | The number of entries per page. Default value here is "10".
         "statusCode": "F",
         "statusComment": "OTP Authentication Failed",
         "referenceIdType": "UIN",
-        "entityName": ""
+        "entityName": "",
+	"requestSignature": <JWT signature>,
+	"responseSignature": <JWT signature>
       }
     ]
   }
