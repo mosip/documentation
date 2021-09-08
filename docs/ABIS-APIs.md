@@ -14,7 +14,8 @@ August 04, 2020|Analytics section has been added to the overall response for Ide
 November 19, 2020|Note on encryption of biometric data share using referenceURL has been added.
 February 05, 2021|Note on [refernceURL](#reference-url) and [authentication token](#authentication-token) was added for Insert Request 
 March 23, 2021|New [failure reason](#failure-reasons) (code - 17) for ABIS has been added.
-May 3, 2021| The logic for encryption has been updated for ABIS data share URL
+May 3, 2021|The logic for encryption has been updated for ABIS data share URL
+September 8, 2021|All possible error codes for Data Share URL has been added.
 
 # Introduction
 An ABIS system that integrates with MOSIP should support the following operations. 
@@ -659,6 +660,22 @@ Part 1    | KEY_SPLITTER | Part 2
   ]
 }
 ```
+
+##### All Possible Error codes and Messages from Datashare URL
+Error Code  | Error Message
+------------|---------------
+DAT-SER-001 |	Data Encryption failed
+DAT-SER-002 |	API not accessible
+DAT-SER-003 |	File is not exists or File is empty
+DAT-SER-004 |	URL creation exception
+DAT-SER-005 |	Failed to generate digital signature
+DAT-SER-006 |	Data share not found
+DAT-SER-006 |	Data share usuage expired
+DAT-SER-007 |	Exception while fetching policy details
+KER-ATH-401 |	Authentication Failed
+KER-ATH-403 |	Forbidden
+KER-ATH-002 |	Fail to connect to auth service
+KER-ATH-001 |	Error occur while parsing error from response
 
 ## Identify
 * All Insert requests added to the queue earlier must be serviced by ABIS when performing an Identify request.  
