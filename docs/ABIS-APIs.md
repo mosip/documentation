@@ -666,11 +666,11 @@ Error Code  | Error Message
 ------------|---------------
 DAT-SER-001 |	Data Encryption failed
 DAT-SER-002 |	API not accessible
-DAT-SER-003 |	File is not exists or File is empty
+DAT-SER-003 |	File does not exists or File is empty
 DAT-SER-004 |	URL creation exception
-DAT-SER-005 |	Failed to generate digital signature
+DAT-SER-005 |	Failed to generate a digital signature
 DAT-SER-006 |	Data share not found
-DAT-SER-006 |	Data share usuage expired
+DAT-SER-006 |	Data share usage expired
 DAT-SER-007 |	Exception while fetching policy details
 KER-ATH-401 |	Authentication Failed
 KER-ATH-403 |	Forbidden
