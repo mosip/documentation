@@ -662,20 +662,13 @@ Part 1    | KEY_SPLITTER | Part 2
 ```
 
 ##### All Possible Error codes and Messages from Datashare URL
-Error Code  | Error Message
+Error Code  | 	Error Message
 ------------|---------------
-DAT-SER-001 |	Data Encryption failed
-DAT-SER-002 |	API not accessible
 DAT-SER-003 |	File does not exists or File is empty
-DAT-SER-004 |	URL creation exception
-DAT-SER-005 |	Failed to generate a digital signature
 DAT-SER-006 |	Data share not found
 DAT-SER-006 |	Data share usage expired
-DAT-SER-007 |	Exception while fetching policy details
 KER-ATH-401 |	Authentication Failed
 KER-ATH-403 |	Forbidden
-KER-ATH-002 |	Fail to connect to auth service
-KER-ATH-001 |	Error occur while parsing error from response
 
 {% hint style="info" %}
 Please note that, for all the functional failures MOSIP sends response code as 200.  
