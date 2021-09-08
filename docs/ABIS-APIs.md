@@ -677,6 +677,10 @@ KER-ATH-403 |	Forbidden
 KER-ATH-002 |	Fail to connect to auth service
 KER-ATH-001 |	Error occur while parsing error from response
 
+{% hint style="info" %}
+Please note that, for all the functional failures MOSIP sends response code as 200.  
+{% endhint %}
+
 ## Identify
 * All Insert requests added to the queue earlier must be serviced by ABIS when performing an Identify request.  
 * Identify request provides a 1:N comparison. The given input is compared either against the gallery passed or if the gallery is not specified the entire database.
