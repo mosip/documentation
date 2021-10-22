@@ -102,7 +102,7 @@ request.userid |Yes|user id of the applicant(mobile number/email address)|890765
   "version": "1.0",
   "requesttime": "2019-05-14T07:24:47.605Z",
   "request": {
-    "userId": "tapaswini.behera3@mindtree.com"
+    "userId": "mosip@mosip.io"
   }
 }
 ```
@@ -550,7 +550,7 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
         ],
         "postalCode": "14022",
         "phone":"9886442073",
-        "email": "jagadishwari.selvaraj@mindtree.com",
+        "email": "mosip@mosip.io",
         "referenceIdentityNumber": "12312312312312"
       }
     }
@@ -608,7 +608,7 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
         "dateOfBirth": "1996/01/01",
         "referenceIdentityNumber": "12312312312312",
         "phone":"9886442073",
-        "email": "jagadishwari.selvaraj@mindtree.com",
+        "email": "mosip@mosip.io",
         "IDSchemaVersion": 1,
         "province": [
           {
@@ -905,7 +905,7 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
         ],
         "postalCode": "14022",
         "phone":"9886442073",
-        "email": "jagadishwari.selvaraj@mindtree.com",
+        "email": "mosip@mosip.io",
         "referenceIdentityNumber": "12312312312312"
       }
     }
@@ -1034,7 +1034,7 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
           }
         ],
         "phone": "9886442073",
-        "email": "jagadishwari.selvaraj@mindtree.com"
+        "email": "mosip@mosip.io"
       }
     }
   },
@@ -3130,7 +3130,7 @@ langCode| Yes| language code whatever user choose while login|eng
 	"appointmentDate": "2019-01-22",
 	"appointmentTime": "09:15 AM",
 	"mobNum": "9748107386",
-	"emailID": "sanober.noor2@mindtree.com",
+	"emailID": "mosip@mosip.io",
         "additionalRecipient":"true",
         "isBatch":"false"
    }
