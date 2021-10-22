@@ -575,8 +575,8 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
           }
         ],
         "postalCode": "14022",
-        "phone":"9886442073",
-        "email": "jagadishwari.selvaraj@mindtree.com",
+        "phone":"9999999999",
+        "email": "mosip@mosip.io",
         "referenceIdentityNumber": "12312312312312"
       }
     }
@@ -637,8 +637,8 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
         ],
         "dateOfBirth": "1996/01/01",
         "referenceIdentityNumber": "12312312312312",
-        "phone":"9886442073",
-        "email": "jagadishwari.selvaraj@mindtree.com",
+        "phone":"999999999",
+        "email": "mosip@mosip.io",
         "IDSchemaVersion": 1,
         "province": [
           {
@@ -938,8 +938,8 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
           }
         ],
         "postalCode": "14022",
-        "phone":"9886442073",
-        "email": "jagadishwari.selvaraj@mindtree.com",
+        "phone":"9999999999",
+        "email": "mosip@mosip.io",
         "referenceIdentityNumber": "12312312312312"
       }
     }
@@ -1070,8 +1070,8 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
             "value": "RSK"
           }
         ],
-        "phone": "9886442073",
-        "email": "jagadishwari.selvaraj@mindtree.com"
+        "phone": "9999999999",
+        "email": "mosip@mosip.io"
       }
     }
   },
@@ -3326,8 +3326,8 @@ langCode| Yes| language code whatever user choose while login|eng
 	"preRegistrationId": "37802950913289",
 	"appointmentDate": "2019-01-22",
 	"appointmentTime": "09:15 AM",
-	"mobNum": "9748107386",
-	"emailID": "sanober.noor2@mindtree.com",
+	"mobNum": "9999999999",
+	"emailID": "mosip@mosip.io",
     "additionalRecipient":"true",
     "isBatch":"false"
   }
