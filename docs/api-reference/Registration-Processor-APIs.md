@@ -1203,7 +1203,7 @@ langCode|Yes|Language Code|Primary or secondary language as configured by countr
     "name": "Monobikash Das",
     "postalCode": "14022",
     "contactType": "EMAIL",
-    "contactValue": "monobikash.das@mindtree.com"
+    "contactValue": "mosip@mosip.io"
   }
 }
 ```
