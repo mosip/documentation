@@ -23,7 +23,7 @@ The latest release of MOSIP, version 1.1.5 is here! We have added many interesti
 
 **Previous Release**<br>Version: 1.1.4<br>Release Date: February 12, 2021<br>You can find the release notes [here](Release-Notes-1.1.4.md).
 
-Check out our [releases page](MOSIP-Releases.md) for a history of all public releases till date.
+To view the summary of our releases, click [here](MOSIP-Releases.md).
 
 ## MOSIP Resources
 
