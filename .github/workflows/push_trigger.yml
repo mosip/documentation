@@ -53,6 +53,7 @@ jobs:
         run: 'curl  args: -u ''${{secrets.reporting_user}}:${{secrets.reporting_user_secret}}'' --request POST -F file=@./audit-manager/kernel/kernel-auditmanager-service/target/audit-service.html -H ''Accept: application/json'' -H ''X-Atlassian-Token: no-check'' --url https://mosip.atlassian.net/wiki/rest/api/content/45285493/child/attachment'
 
   Upload_to_Documentation:
+    needs: Generate_Documentation
     runs-on: ubuntu-latest
     steps:
       - name: Set up JDK 11
