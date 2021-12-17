@@ -41,6 +41,6 @@ jobs:
                npm install -g redoc-cli
                redoc-cli bundle -o ./target/audit-service.html ./target/openapi.json
 
-#      #upload report
-#      - name: Upload report to confluence
-#        run: 'curl  args: -u ''${{secrets.reporting_user}}:${{secrets.reporting_user_secret}}'' --request POST -F file=@./kernel/kernel-auditmanager-service/target/audit-service.html -H ''Accept: application/json'' -H ''X-Atlassian-Token: no-check'' --url https://mosip.atlassian.net/wiki/rest/api/content/45285493/child/attachment'
+      #upload report
+      - name: Upload report to confluence
+        run: 'curl  args: -u ''${{secrets.reporting_user}}:${{secrets.reporting_user_secret}}'' --request POST -F file=@./audit-manager/kernel/kernel-auditmanager-service/target/audit-service.html -H ''Accept: application/json'' -H ''X-Atlassian-Token: no-check'' --url https://mosip.atlassian.net/wiki/rest/api/content/45285493/child/attachment'
