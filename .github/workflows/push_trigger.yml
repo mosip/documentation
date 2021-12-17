@@ -9,7 +9,7 @@ on: push
 #    - cron:  '30 5 * * *'
   
 jobs:
-  Generate Documentation:
+  Generate_Documentation:
     runs-on: ubuntu-latest
     steps:
       - name: Set up JDK 11
@@ -52,7 +52,7 @@ jobs:
       - name: Upload report to confluence
         run: 'curl  args: -u ''${{secrets.reporting_user}}:${{secrets.reporting_user_secret}}'' --request POST -F file=@./audit-manager/kernel/kernel-auditmanager-service/target/audit-service.html -H ''Accept: application/json'' -H ''X-Atlassian-Token: no-check'' --url https://mosip.atlassian.net/wiki/rest/api/content/45285493/child/attachment'
 
-  Upload to documentation:
+  Upload_to_Documentation:
     runs-on: ubuntu-latest
     steps:
       - name: Set up JDK 11
@@ -74,6 +74,6 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           default_author: github_actions
-          message: 'added documentation audit maanger'
+          message: 'added documentation audit manager'
           add: './audit-service.html'
 
