@@ -76,3 +76,4 @@ jobs:
           default_author: github_actions
           message: 'added documentation audit maanger'
           add: './audit-service.html'
+
