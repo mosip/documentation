@@ -77,6 +77,6 @@ jobs:
           default_author: github_actions
           message: 'added documentation audit manager'
           add: './audit-service.html'
-          cwd: './1.2.0/audit-service.html'
+          cwd: './1.2.0/'
 
 
