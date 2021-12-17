@@ -55,4 +55,4 @@ jobs:
         with:
           default_author: github_actions
           message: 'added documentation'
-          add: '../audit-manager/kernel/kernel-auditmanager-service/target/audit-service.html'
+          add: '/home/runner/work/audit-manager/audit-manager/kernel/kernel-auditmanager-service/target/audit-service.html'
