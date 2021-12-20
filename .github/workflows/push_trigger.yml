@@ -14,7 +14,7 @@ jobs:
   Generate_Documentation:
     runs-on: ubuntu-latest
     strategy:
-      repos:
+      matrix:
         names: [audit-manager, id-authentication]
 
     steps:
@@ -29,8 +29,8 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2
         with:
-          repository: mosip/${{ repos.names }}
-          path: ${{ repos.names }}
+          repository: mosip/${{ matrix.names }}
+          path: ${{ matrix.names }}
           ref: develop
           server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the settings.xml file
