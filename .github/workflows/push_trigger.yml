@@ -54,7 +54,7 @@ jobs:
         id: array
         run: |
           array=()
-          for i in "$(find . -name "*-openapi.json" -exec readlink -f {} \;)"
+          for i in "$(find . -name "openapi.json" -exec readlink -f {} \;)"
           do
             echo $1
             array+=$i
