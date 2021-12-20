@@ -3,6 +3,8 @@ name: Maven Package upon a push
 # Triggered when code is pushed to any branch in a repository
 on: push
 
+
+
 #on:
 #  schedule:
 #    # * is a special character in YAML so you have to quote this string
@@ -11,6 +13,10 @@ on: push
 jobs:
   Generate_Documentation:
     runs-on: ubuntu-latest
+    strategy:
+      repos:
+        names: [audit-manager, id-authentication]
+
     steps:
       - name: Set up JDK 11
         uses: actions/setup-java@v1
@@ -20,11 +26,11 @@ jobs:
       - name: Setup the settings file for ossrh server
         run: echo "<settings> <servers>  <server>  <id>ossrh</id>    <username>${{secrets.ossrh_user}}</username> <password>${{secrets.ossrh_secret}}</password> </server> </servers> <profiles> <profile>     <id>ossrh</id> <activation> <activeByDefault>true</activeByDefault> </activation>  <properties> <gpg.executable>gpg2</gpg.executable> <gpg.passphrase>${{secrets.gpg_secret}}</gpg.passphrase> </properties> </profile> <profile> <id>allow-snapshots</id>       <activation><activeByDefault>true</activeByDefault></activation> <repositories> <repository>        <id>snapshots-repo</id> <url>https://oss.sonatype.org/content/repositories/snapshots</url> <releases><enabled>false</enabled></releases> <snapshots><enabled>true</enabled></snapshots> </repository>  <repository>         <id>releases-repo</id>  <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>         <releases><enabled>false</enabled></releases>         <snapshots><enabled>false</enabled></snapshots> </repository> </repositories>  </profile> <profile> <id>sonar</id> <properties>  <sonar.sources>.</sonar.sources> <sonar.host.url>https://sonarcloud.io</sonar.host.url>  </properties> <activation> <activeByDefault>false</activeByDefault> </activation> </profile> </profiles> </settings>" > $GITHUB_WORKSPACE/settings.xml
 
-      - name: Checkout audit-manager repo
+      - name: Checkout repo
         uses: actions/checkout@v2
         with:
-          repository: mosip/audit-manager
-          path: audit-manager
+          repository: mosip/${{ repos.names }}
+          path: ${{ repos.names }}
           ref: develop
           server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the settings.xml file
@@ -36,45 +42,59 @@ jobs:
 
       - name: Build with Maven
         run: |
-               cd ./audit-manager/kernel/kernel-auditmanager-service
-               mvn -B -Dgpg.skip -DskipTests -Dgpg.skip clean verify --file pom.xml -s $GITHUB_WORKSPACE/settings.xml -P openapi-doc-generate-profile
                npm install -g redoc-cli
-               redoc-cli bundle -o ./target/audit-service.html ./target/openapi.json
+               find * -name pom.xml -mindepth 2 -maxdepth 3 -execdir mvn -B -Dgpg.skip -DskipTests -Dgpg.skip clean verify -s $GITHUB_WORKSPACE/settings.xml -P openapi-doc-generate-profile \;
+#               find . -name *-openapi.json -exec basename {} \;redoc-cli bundle -o $(find .. -name "*-openapi.json" -exec readlink -f {} \;) ./target/openapi.json
+#               cd ./audit-manager/kernel/kernel-auditmanager-service
+#               mvn -B -Dgpg.skip -DskipTests -Dgpg.skip clean verify --file pom.xml -s $GITHUB_WORKSPACE/settings.xml -P openapi-doc-generate-profile
+#               npm install -g redoc-cli
+#               redoc-cli bundle -o ./target/audit-service.html ./target/openapi.json
 
-      - name: Upload Report Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: audit-manager
-          path: ./audit-manager/kernel/kernel-auditmanager-service/target/audit-service.html
-          retention-days: 1
+      - name: create array of files
+        id: array
+        run: |
+          array=()
+          for i in "$(find . -name "*-openapi.json" -exec readlink -f {} \;)"
+          do
+            arr+=$i
+          done
+          echo ::set-output name=array::${array[@]}
 
-      #upload report
-      - name: Upload report to confluence
-        run: 'curl  args: -u ''${{secrets.reporting_user}}:${{secrets.reporting_user_secret}}'' --request POST -F file=@./audit-manager/kernel/kernel-auditmanager-service/target/audit-service.html -H ''Accept: application/json'' -H ''X-Atlassian-Token: no-check'' --url https://mosip.atlassian.net/wiki/rest/api/content/45285493/child/attachment'
 
-  Upload_to_Documentation:
-    needs: Generate_Documentation
-    runs-on: ubuntu-latest
-    steps:
-      - name: Set up JDK 11
-        uses: actions/setup-java@v1
-        with:
-          java-version: 11
-
-      - name: Checkout repo
-        uses: actions/checkout@v2
-        with:
-          ref: gh-pages
-
-      - name: Download Report Artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: audit-manager
-          path: ./1.2.0/
-
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v7
-        with:
-          default_author: github_actions
-          message: 'added documentation audit manager'
-          add: './1.2.0/audit-service.html'
+#      - name: Upload Report Artifact
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: audit-manager
+#          path: ./audit-manager/kernel/kernel-auditmanager-service/target/audit-service.html
+#          retention-days: 1
+#
+#      #upload report
+#      - name: Upload report to confluence
+#        run: 'curl  args: -u ''${{secrets.reporting_user}}:${{secrets.reporting_user_secret}}'' --request POST -F file=@./audit-manager/kernel/kernel-auditmanager-service/target/audit-service.html -H ''Accept: application/json'' -H ''X-Atlassian-Token: no-check'' --url https://mosip.atlassian.net/wiki/rest/api/content/45285493/child/attachment'
+#
+#  Upload_to_Documentation:
+#    needs: Generate_Documentation
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Set up JDK 11
+#        uses: actions/setup-java@v1
+#        with:
+#          java-version: 11
+#
+#      - name: Checkout repo
+#        uses: actions/checkout@v2
+#        with:
+#          ref: gh-pages
+#
+#      - name: Download Report Artifact
+#        uses: actions/download-artifact@v2
+#        with:
+#          name: audit-manager
+#          path: ./1.2.0/
+#
+#      - name: Commit changes
+#        uses: EndBug/add-and-commit@v7
+#        with:
+#          default_author: github_actions
+#          message: 'added documentation audit manager'
+#          add: './1.2.0/audit-service.html'
