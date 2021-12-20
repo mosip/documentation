@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        names: [audit-manager, id-authentication]
+        names: [audit-manager]
 
     steps:
       - name: Set up JDK 11
@@ -56,6 +56,7 @@ jobs:
           array=()
           for i in "$(find . -name "*-openapi.json" -exec readlink -f {} \;)"
           do
+            echo $1
             array+=$i
           done
           echo ::set-output name=array::${array[@]}
