@@ -43,7 +43,7 @@ jobs:
       - name: Build with Maven
         run: |
                npm install -g redoc-cli
-               find * -name pom.xml -mindepth 2 -maxdepth 3 -execdir mvn -B -Dgpg.skip -DskipTests -Dgpg.skip clean verify -s $GITHUB_WORKSPACE/settings.xml -P openapi-doc-generate-profile \;
+               find * -name pom.xml -mindepth 3 -maxdepth 5 -execdir mvn -B -Dgpg.skip -DskipTests -Dgpg.skip clean verify -s $GITHUB_WORKSPACE/settings.xml -P openapi-doc-generate-profile \;
 #               find . -name *-openapi.json -exec basename {} \;redoc-cli bundle -o $(find .. -name "*-openapi.json" -exec readlink -f {} \;) ./target/openapi.json
 #               cd ./audit-manager/kernel/kernel-auditmanager-service
 #               mvn -B -Dgpg.skip -DskipTests -Dgpg.skip clean verify --file pom.xml -s $GITHUB_WORKSPACE/settings.xml -P openapi-doc-generate-profile
@@ -56,7 +56,7 @@ jobs:
           array=()
           for i in "$(find . -name "*-openapi.json" -exec readlink -f {} \;)"
           do
-            arr+=$i
+            array+=$i
           done
           echo ::set-output name=array::${array[@]}
 
