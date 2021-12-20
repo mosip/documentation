@@ -62,7 +62,7 @@ jobs:
 
       - name: display array
         run: |
-          echo "The array is: ${{ steps.create_list.outputs.array[@] }}"
+          echo "The array is: ${{ steps.create_list.outputs.array }}"
 
 
 #      - name: Upload Report Artifact
