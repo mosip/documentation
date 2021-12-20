@@ -51,15 +51,18 @@ jobs:
 #               redoc-cli bundle -o ./target/audit-service.html ./target/openapi.json
 
       - name: create array of files
-        id: array
+        id: create_list
         run: |
           array=()
           for i in "$(find . -name "openapi.json" -exec readlink -f {} \;)"
           do
-            echo $1
             array+=$i
           done
-          echo ::set-output name=array::${array[@]}
+          echo "::set-output name=array::${array[@]}"
+
+      - name: display array
+        run: |
+          echo "The array is: ${{ steps.create_list.outputs.array[@] }}"
 
 
 #      - name: Upload Report Artifact
