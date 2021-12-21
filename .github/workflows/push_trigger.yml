@@ -50,18 +50,16 @@ jobs:
         run: |
           mkdir -p ./${{ matrix.names }}
           array=()
-          file_name=''
-          fname=''
           for i in "$(find . -name "openapi.json" -exec readlink -f {} \;)"
           do
             file_name="${i##*/}"
             fname="${file_name%.*}"
             redoc-cli bundle -o ./${{ fname }}.html $i
-            array+=$i
+#            array+=$i
           done
-          echo "::set-output name=array::${array[@]}"
-          echo "::set-output name=fname::${fname}"
-          echo "The file name is: ${{ steps.create_list.outputs.fname }}"
+#          echo "::set-output name=array::${array[@]}"
+#          echo "::set-output name=fname::${fname}"
+#          echo "The file name is: ${{ steps.create_list.outputs.fname }}"
 
       - name: display array
         run: |
