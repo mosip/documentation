@@ -1,0 +1,6591 @@
+{
+	"info": {
+		"_postman_id": "d2d6b769-aad7-4abe-9e89-491eeff59a00",
+		"name": "Admin Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ApplicantType",
+			"item": []
+		},
+		{
+			"name": "BiometricType ",
+			"item": [
+				{
+					"name": "GET /biometrictypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/biometrictypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"biometrictypes"
+							]
+						},
+						"description": "getAllBiometricTypes"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /biometrictypes/{code}/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/biometrictypes/FNR/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"biometrictypes",
+								"FNR",
+								"eng"
+							]
+						},
+						"description": "getBiometricTypeByCodeAndLangCode"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /biometrictypes/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/biometrictypes/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"biometrictypes",
+								"eng"
+							]
+						},
+						"description": "getAllBiometricTypesByLanguageCode"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /biometrictypes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"HAN\",\r\n    \"description\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"name\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/biometrictypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"biometrictypes"
+							]
+						},
+						"description": "\r\ncreateBiometricType"
+					},
+					"response": []
+				}
+			],
+			"description": "Biometric Type Controller"
+		},
+		{
+			"name": "Biometric attribute",
+			"item": [
+				{
+					"name": "GET /getbiometricattributesbyauthtype/{langcode}/{biometrictypecode}",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/getbiometricattributesbyauthtype/eng/FNR",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"getbiometricattributesbyauthtype",
+								"eng",
+								"FNR"
+							]
+						},
+						"description": "Fetch all the biometric attributes avialbale for specific BiometricType"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /biometricattributes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"biometricTypeCode\": \"string\",\r\n    \"code\": \"string\",\r\n    \"description\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"name\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/biometricattributes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"biometricattributes"
+							]
+						},
+						"description": "\r\nService to create Biometric Attributes"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "blcklisted word",
+			"item": [
+				{
+					"name": "GET /blacklistedwords/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/blacklistedwords/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"blacklistedwords",
+								"eng"
+							]
+						},
+						"description": "getAllBlackListedWordByLangCode"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /blacklistedwords/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/blacklistedwords/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"blacklistedwords",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						},
+						"description": "Retrieve all the blacklisted words with additional metadata"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /blacklistedwords",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"description\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"word\": \"fat\"\r\n  \r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/blacklistedwords/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"blacklistedwords",
+								""
+							]
+						},
+						"description": "createBlackListedWord"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /blacklistedwords",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"description\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"oldWord\": \"shit\",\r\n    \"word\": \"fatso\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/blacklistedwords",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"blacklistedwords"
+							]
+						},
+						"description": "update the blacklisted word"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /blacklistedwords/filtervalues",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"langCode\",\r\n        \"text\": \"eng\",\r\n        \"type\": \"all\"\r\n      }\r\n  \r\n      ],\r\n    \r\n    \"languageCode\": \"eng\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/blacklistedwords/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"blacklistedwords",
+								"filtervalues"
+							]
+						},
+						"description": "blackListedWordsFilterValues"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /blacklistedwords/{word}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/blacklistedwords/fatso",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"blacklistedwords",
+								"fatso"
+							]
+						},
+						"description": "delete the blacklisted word"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Device",
+			"item": [
+				{
+					"name": "Get device with Device Type and langcode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devices/fra/CMR",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devices",
+								"fra",
+								"CMR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Device By Langcode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devices/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devices",
+								"fra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Devices which are mapped to given Registration Center Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devices/mappeddevices/10001?direction=DESC&orderBy=name&pageNumber=0&pageSize=10",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devices",
+								"mappeddevices",
+								"10001"
+							],
+							"query": [
+								{
+									"key": "direction",
+									"value": "DESC"
+								},
+								{
+									"key": "orderBy",
+									"value": "name"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return Filter dropdown values of filter Field for Device",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"langCode\",\r\n        \"text\": \"eng\",\r\n        \"type\": \"all\"\r\n      }\r\n  \r\n      ],\r\n    \r\n    \"languageCode\": \"eng\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devicetypes/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devicetypes",
+								"filtervalues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Device",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"deviceSpecId\": \"736\",\r\n    \"id\": \"2a5c2535-122f-4871-9a98-dbaa08f210c7\",\r\n    \"ipAddress\": \"127.0.0.0\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\",\r\n    \"macAddress\": \"54-BF-64-4C-91-6c\",\r\n    \"name\": \"TestDev\",\r\n    \"serialNum\": \"22222\",\r\n    \"validityDateTime\": \"2020-12-06T09:41:35.082Z\",\r\n    \"zoneCode\": \"CK\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devices",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Device",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devices/2a5c2535-122f-4871-9a98-dbaa08f210c7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devices",
+								"2a5c2535-122f-4871-9a98-dbaa08f210c7"
+							]
+						},
+						"description": "It will make device is_active \"True or False\" but doesnot delete from DB as that is done by decomission api"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Device",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"deviceSpecId\": \"736\",\r\n    \"id\": \"2a5c2535-122f-4871-9a98-dbaa08f210c7\",\r\n    \"ipAddress\": \"127.0.0.0\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\",\r\n    \"macAddress\": \"54-BF-64-4C-91-6c\",\r\n    \"name\": \"TestDev\",\r\n    \"serialNum\": \"22222\",\r\n    \"validityDateTime\": \"2020-12-06T09:41:35.082Z\",\r\n    \"zoneCode\": \"CK\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devices",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Decommission Device",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"deviceSpecId\": \"736\",\r\n    \"id\": \"2a5c2535-122f-4871-9a98-dbaa08f210c7\",\r\n    \"ipAddress\": \"127.0.0.0\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\",\r\n    \"macAddress\": \"54-BF-64-4C-91-6c\",\r\n    \"name\": \"TestDev\",\r\n    \"serialNum\": \"22222\",\r\n    \"validityDateTime\": \"2020-12-06T09:41:35.082Z\",\r\n    \"zoneCode\": \"CK\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devices/decommission/2a5c2535-122f-4871-9a98-dbaa08f210c7",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devices",
+								"decommission",
+								"2a5c2535-122f-4871-9a98-dbaa08f210c7"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "DeviceHistory ",
+			"item": [
+				{
+					"name": "GET /deviceshistories/{id}/{langcode}/{effdatetimes}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/deviceshistories/3000508/eng/2020-12-06T09%3A41%3A35.082Z",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"deviceshistories",
+								"3000508",
+								"eng",
+								"2020-12-06T09%3A41%3A35.082Z"
+							]
+						},
+						"description": " Retrieve all Device History Details for the given Languge Code, ID and Effective date time"
+					},
+					"response": []
+				}
+			],
+			"description": "Device History Controller"
+		},
+		{
+			"name": "Device Provider",
+			"item": [
+				{
+					"name": "Create deviceprovider",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"io.mosip.masterdata.deviceprovider.create\",\n  \"metadata\": {},\n  \"request\": {\n    \"address\": \"Address of Test Vendor\",\n    \"certificateAlias\": \"Test\",\n    \"contactNumber\": \"9663175928\",\n    \"email\": \"test@mosip.io\",\n    \"isActive\": true,\n     \"vendorName\": \"Test Vendor09042020\"\n  },\n  \"requesttime\": \"{{requesttime}}\",\n  \"version\": \"1.0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/deviceprovider",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"deviceprovider"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DeviceRegister-Decomission",
+			"item": [
+				{
+					"name": "Update Device statuscode using deviceCode=Test1234&statusCode=Revoked",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registereddevices/update/status?deviceCode=&statusCode=Revoked",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registereddevices",
+								"update",
+								"status"
+							],
+							"query": [
+								{
+									"key": "deviceCode",
+									"value": ""
+								},
+								{
+									"key": "statusCode",
+									"value": "Revoked"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deregister the device Device code",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/device/deregister/{device code}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"device",
+								"deregister",
+								"{device code}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Device Specification",
+			"item": [
+				{
+					"name": "Get all the device specifications with additional metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devicespecifications/all?orderBy=desc&pageNumber=1&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devicespecifications",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get devicespecifications/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata//devicespecifications/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"",
+								"devicespecifications",
+								"eng"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get devicespecifications/{langcode}/{devicetypecode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata//devicespecifications/eng/IRS",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"",
+								"devicespecifications",
+								"eng",
+								"IRS"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create devicespecifications",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"string\",\n  \"metadata\": {},\n  \"request\": {\n    \"brand\": \"Technoforte\",\n    \"description\": \"Test DeviceSpec\",\n    \"deviceTypeCode\": \"CMR\",\n    \"id\": \"740\",\n    \"isActive\": true,\n    \"langCode\": \"fra\",\n    \"minDriverversion\": \"1.0\",\n    \"model\": \"2020\",\n    \"name\": \"Cam\"\n  },\n  \"requesttime\": \"{{requesttime}}\",\n  \"version\": \"1.0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devicespecifications",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devicespecifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get devicespecifications/filtervalues ",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"isActive\",\r\n        \"text\": \"true\",\r\n        \"type\": \"all\"\r\n      }\r\n    ],\r\n    \"languageCode\": \"eng\",\r\n    \"optionalFilters\": [\r\n      {\r\n        \"value\": \"4\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"columnName\": \"id\",\r\n        \"type\": \"contains\"\r\n      }\r\n    ]\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devicespecifications/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devicespecifications",
+								"filtervalues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " DeviceSpecificationSearch",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"value\": \"Fin\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"columnName\": \"name\",\r\n        \"type\": \"contains\"\r\n      }\r\n    ],\r\n    \"sort\": [\r\n      {\r\n        \"sortField\": \"id\",\r\n        \"sortType\": \"asc\"\r\n      }\r\n    ],\r\n    \"pagination\": {\r\n      \"pageStart\": 0,\r\n      \"pageFetch\": 10\r\n    },\r\n    \"languageCode\": \"eng\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devicespecifications/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devicespecifications",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update devicespecifications",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"string\",\n  \"version\": \"1.0\",\n  \"metadata\": {},\n  \"requesttime\": \"{{requesttime}}\",\n  \"request\": {\n    \"brand\": \"Technoforte\",\n    \"description\": \"Test DeviceSpec update\",\n    \"deviceTypeCode\": \"CMR\",\n    \"id\": \"740\",\n    \"isActive\": true,\n    \"langCode\": \"eng\",\n    \"minDriverversion\": \"1.0\",\n    \"model\": \"2020\",\n    \"name\": \"Cam\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devicespecifications",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devicespecifications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete  devicespecifications/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata//devicespecifications/740",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"",
+								"devicespecifications",
+								"740"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Device Types",
+			"item": [
+				{
+					"name": "Get all  devicetypes/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devicetypes/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devicetypes",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return the devicetypes filtervalues under filter field",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"isActive\",\r\n        \"text\": \"\",\r\n        \"type\": \"all\"\r\n      }\r\n    ],\r\n    \"languageCode\": \"eng\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devicetypes/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devicetypes",
+								"filtervalues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Devicetypes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n\r\n\"request\": {\r\n\"code\": \"FIRPRINT\",\r\n\"description\": \"Test\",\r\n\"isActive\": true,\r\n\"langCode\": \"fra\",\r\n\"name\": \"DeviceTypetest\"\r\n},\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devicetypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devicetypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Device Type",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"value\": \"Test\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"columnName\": \"name\",\r\n        \"type\": \"equals\"\r\n      }\r\n    ],\r\n    \"sort\": [\r\n      {\r\n        \"sortField\": \"code\",\r\n        \"sortType\": \"asc\"\r\n      }\r\n    ],\r\n    \"pagination\": {\r\n      \"pageStart\": 0,\r\n      \"pageFetch\": 10\r\n    },\r\n    \"languageCode\": \"eng\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devicetypes/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devicetypes",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update devicetypes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n      \"code\": \"FIRPRINT\",\r\n    \"description\": \"test 1.0.10 updated\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\",\r\n    \"name\": \"TEST\"\r\n  },\r\n  \"requesttime\": \"{{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/devicetypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"devicetypes"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Document category",
+			"item": [
+				{
+					"name": "GET /documentcategories/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documentcategories/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documentcategories",
+								"eng"
+							]
+						},
+						"description": "getAllDocumentCategoryByLaguageCode"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /documentcategories/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documentcategories/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documentcategories",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						},
+						"description": "Retrieve all the document category with metadata"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /documentcategories/{code}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documentcategories/doccat2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documentcategories",
+								"doccat2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /documentcategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documentcategories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documentcategories"
+							]
+						},
+						"description": "getAllDocumentCategory"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /documentcategories/{code}/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documentcategories/DD/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documentcategories",
+								"DD",
+								"eng"
+							]
+						},
+						"description": "getDocumentCategoryByCodeAndLangCode"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /documentcategories",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"mynewid\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"doccat2\",\r\n    \"description\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"name\": \"documint\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documentcategories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documentcategories"
+							]
+						},
+						"description": "Service to create document category"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /documentcategories/filtervalues",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"string\",\r\n        \"text\": \"string\",\r\n        \"type\": \"string\"\r\n      }\r\n    ],\r\n    \"languageCode\": \"eng\",\r\n    \"optionalFilters\": [\r\n      {\r\n        \"columnName\": \"string\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"type\": \"string\",\r\n        \"value\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documentcategories/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documentcategories",
+								"filtervalues"
+							]
+						},
+						"description": "docCategoriesFilterValues"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /documentcategories",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"mynewid\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"doccat2\",\r\n    \"description\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"name\": \"dokument\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documentcategories",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documentcategories"
+							]
+						},
+						"description": "Service to update document category"
+					},
+					"response": []
+				}
+			],
+			"description": "document category controller"
+		},
+		{
+			"name": "Doc type",
+			"item": [
+				{
+					"name": "GET /documenttypes/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documenttypes/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documenttypes",
+								"eng"
+							]
+						},
+						"description": "getAllDocumentTypeByLaguageCode"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /documenttypes/{documentcategorycode}/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documenttypes/Doc006/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documenttypes",
+								"Doc006",
+								"eng"
+							]
+						},
+						"description": "Fetch all the valid doucment type avialbale for specific document category code"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /documenttypes/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documenttypes/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documenttypes",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						},
+						"description": "Retrieve all the document types with additional metadata"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /documenttypes/search",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"value\": \"Test\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"columnName\": \"name\",\r\n        \"type\": \"equals\"\r\n      }\r\n    ],\r\n    \"sort\": [\r\n      {\r\n        \"sortField\": \"code\",\r\n        \"sortType\": \"asc\"\r\n      }\r\n    ],\r\n    \"pagination\": {\r\n      \"pageStart\": 0,\r\n      \"pageFetch\": 10\r\n    },\r\n    \"languageCode\": \"fra\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documenttypes/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documenttypes",
+								"search"
+							]
+						},
+						"description": "searchDocumentType"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /documenttypes/filtervalues",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"isActive\",\r\n        \"text\": \"\",\r\n        \"type\": \"all\"\r\n      }\r\n    ],\r\n    \"languageCode\": \"fra\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documenttypes/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documenttypes",
+								"filtervalues"
+							]
+						},
+						"description": "documentTypeFilterValues"
+					},
+					"response": []
+				},
+				{
+					"name": "Update documenttypes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"Test01\",\r\n    \"description\": \"Rental Agreement of address\",\r\n    \"isActive\": false,\r\n    \"langCode\": \"fra\",\r\n    \"name\": \"Test01\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documenttypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documenttypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Documenttypes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"Test01\",\r\n    \"description\": \"Test\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\",\r\n    \"name\": \"Type01\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documenttypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documenttypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /documenttypes/{code}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/documenttypes/dock",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"documenttypes",
+								"dock"
+							]
+						},
+						"description": "Service to delete document type"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exceptional Holidays",
+			"item": [
+				{
+					"name": "GET /exceptionalholidays/{registrationCenterId}/{languagecode} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/exceptionalholidays/10008/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"exceptionalholidays",
+								"10008",
+								"eng"
+							]
+						},
+						"description": "Retrieve all Exceptional Holidays for given Registration center ID and Languge Code"
+					},
+					"response": []
+				}
+			],
+			"description": "Retrieve all Exceptional Holidays for given Registration center ID and Languge Code"
+		},
+		{
+			"name": "Gender",
+			"item": [
+				{
+					"name": "Get gendertype",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/gendertypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"gendertypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get specific gender with langcode [eng,fra,ara]",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/gendertypes/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"gendertypes",
+								"fra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate the  gendertypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/gendertypes/validate/Test03",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"gendertypes",
+								"validate",
+								"Test03"
+							]
+						},
+						"description": "Use Gendername to see the valid and invalid"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Gender",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"version\": \"1.0\",\r\n  \"metadata\": {},\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"request\": {\r\n              \"code\": \"TST\",\r\n              \"genderName\": \"Doc falseDo\",\r\n              \"isActive\": true,\r\n             \"langCode\": \"fra\"\r\n             }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/gendertypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"gendertypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Gender",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"version\": \"1.0\",\r\n  \"metadata\": {},\r\n  \"requesttime\": \"{{requesttime}}\",\r\n\"request\": {\r\n              \"code\": \"TST\",\r\n              \"genderName\": \"TESTER\",\r\n              \"isActive\": true,\r\n             \"langCode\": \"fra\"\r\n             }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/gendertypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"gendertypes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Gender",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"version\": \"1.0\",\r\n  \"metadata\": {},\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"request\": {\r\n               \"code\": \"TST\",\r\n              \"genderName\": \"TestName Update\",\r\n              \"isActive\": true,\r\n             \"langCode\": \"eng\"\r\n             }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/gendertypes/TST",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"gendertypes",
+								"TST"
+							]
+						},
+						"description": "Takes Gender Code in URL"
+					},
+					"response": []
+				},
+				{
+					"name": "gendertypes filtervalues",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"id\": \"string\",\n        \"metadata\": {},\n        \"requesttime\": \"{{requesttime}}\",\n        \"version\": \"1.0\",\n        \"request\": {\n            \"filters\" : [\n                {\n                    \"columnName\": \"name\",\n                    \"type\": \"all\",\n                    \"text\": \"Test\" \n                }\n            ],\n            \"languageCode\": \"eng\"\n        }\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/gendertypes/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"gendertypes",
+								"filtervalues"
+							]
+						},
+						"description": "Returns the filter values which are required in the dropdown entries of the filter screen."
+					},
+					"response": []
+				},
+				{
+					"name": "Search GenderType",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      \r\n    ],\r\n    \"sort\": [\r\n      {\r\n        \"sortField\": \"genderName\",\r\n        \"sortType\": \"ASC\"\r\n      }\r\n    ],\r\n    \"pagination\": {\r\n      \"pageStart\": 0,\r\n      \"pageFetch\": 10\r\n    },\r\n    \"languageCode\": \"eng\"\r\n  }\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/gendertypes/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"gendertypes",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Holiday",
+			"item": [
+				{
+					"name": "Holiday",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/holidays",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"holidays"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Holiday by HolidayID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/holidays/2000075",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"holidays",
+								"2000075"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Holiday by ID and Langcode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/holidays/2000002/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"holidays",
+								"2000002",
+								"eng"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Holiday All with sorting",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/holidays/all?orderBy=desc&sortBy",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"holidays",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "sortBy",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Holiday Filter value",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"holidayName\",\r\n        \"type\": \"all\",\r\n        \"text\": \"a\"\r\n      }\r\n    ],\r\n    \"languageCode\": \"eng\",\r\n    \"optionalFilters\": [\r\n      {\r\n        \"value\": \"a\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"columnName\": \"holidayName\",\r\n        \"type\": \"all\"\r\n      }\r\n    ]\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/holidays/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"holidays",
+								"filtervalues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Holiday",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"value\": \"a\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"columnName\": \"name\",\r\n        \"type\": \"contains\"\r\n      }\r\n    ],\r\n    \"sort\": [\r\n      {\r\n        \"sortField\": \"holidayName\",\r\n        \"sortType\": \"asc\"\r\n      }\r\n    ],\r\n    \"pagination\": {\r\n      \"pageStart\": 0,\r\n      \"pageFetch\": 10\r\n    },\r\n    \"languageCode\": \"eng\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/holidays/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"holidays",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete holidays",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"string\",\n  \"metadata\": {},\n  \"request\": {\n    \"holidayDate\": \"2020-04-03\",\n    \"holidayName\": \"Local Holiday 2\",\n    \"locationCode\": \"KTA\"\n  },\n  \"requesttime\": \"{{requesttime}}\",\n  \"version\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/holidays",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"holidays"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "IDType",
+			"item": [
+				{
+					"name": "Get idtypes with Langcode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/idtypes/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"idtypes",
+								"eng"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create idtypes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"TST\",\r\n    \"descr\": \"Test IDTYPE\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"name\": \"TestIDTYP\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/idtypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"idtypes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Identity Schema",
+			"item": [
+				{
+					"name": "GET /idschema/all ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/idschema/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=cr_dtimes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"idschema",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "cr_dtimes"
+								}
+							]
+						},
+						"description": "Service to fetch all identity schema"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /idschema/latest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/idschema/latest?schemaVersion=0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"idschema",
+								"latest"
+							],
+							"query": [
+								{
+									"key": "schemaVersion",
+									"value": "0"
+								}
+							]
+						},
+						"description": " Service to fetch latest published identity schema"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /idschema ",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"todayid\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"description\": \"todaydescription\",\r\n    \"effectiveFrom\": \"2020-10-19T12:40:43.232Z\",\r\n    \"schema\": [\r\n      {\r\n        \"bioAttributes\": [\r\n          \"string\"\r\n        ],\r\n        \"contactType\": \"string\",\r\n        \"controlType\": \"string\",\r\n        \"description\": \"string\",\r\n        \"fieldCategory\": \"string\",\r\n        \"fieldType\": \"string\",\r\n        \"format\": \"string\",\r\n        \"group\": \"string\",\r\n        \"id\": \"\",\r\n        \"inputRequired\": true,\r\n        \"label\": {\r\n          \"additionalProp1\": \"string\",\r\n          \"additionalProp2\": \"string\",\r\n          \"additionalProp3\": \"string\"\r\n        },\r\n        \"maximum\": 0,\r\n        \"minimum\": 0,\r\n        \"required\": true,\r\n        \"requiredOn\": [\r\n          {\r\n            \"engine\": \"string\",\r\n            \"expr\": \"string\"\r\n          }\r\n        ],\r\n        \"subType\": \"string\",\r\n        \"type\": \"string\",\r\n        \"validators\": [\r\n          {\r\n            \"arguments\": [\r\n              \"string\"\r\n            ],\r\n            \"type\": \"string\",\r\n            \"validator\": \"string\"\r\n          }\r\n        ]\r\n      }\r\n    ],\r\n    \"schemaVersion\": 0,\r\n    \"title\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/idschema",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"idschema"
+							]
+						},
+						"description": "Service to create identity schema"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /idschema ",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/idschema?id=11772bbb-3add-4705-9149-97e094986789",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"idschema"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "11772bbb-3add-4705-9149-97e094986789"
+								}
+							]
+						},
+						"description": "Service to delete identity schema in draft status"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /idschema/publish ",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"effectiveFrom\": \"2020-10-28T13:05:07.869Z\",\r\n    \"id\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/idschema/publish",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"idschema",
+								"publish"
+							]
+						},
+						"description": "Service to publish identity schema in draft status"
+					},
+					"response": []
+				}
+			],
+			"description": " Schema Controller"
+		},
+		{
+			"name": "Individual type",
+			"item": [
+				{
+					"name": "GET /individualtypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/individualtypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"individualtypes"
+							]
+						},
+						"description": "get value from Caretory for the given id"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /individualtypes/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/individualtypes/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"individualtypes",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						},
+						"description": "Retrieve all the individual types with additional metadata"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /individualtypes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"name\": \"mytype\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/individualtypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"individualtypes"
+							]
+						},
+						"description": "Service to create Individual Type"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /individualtypes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\",\r\n    \"name\": \"mytypo\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/individualtypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"individualtypes"
+							]
+						},
+						"description": "Service to upadte IndividualType"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /individualtypes/filtervalues",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"isActive\",\r\n        \"text\": \"\",\r\n        \"type\": \"all\"\r\n      }\r\n    ],\r\n    \"languageCode\": \"fra\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/individualtypes/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"individualtypes",
+								"filtervalues"
+							]
+						},
+						"description": "individualsFilterValues"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /individualtypes/search",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"value\": \"Test\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"columnName\": \"name\",\r\n        \"type\": \"equals\"\r\n      }\r\n    ],\r\n    \"sort\": [\r\n      {\r\n        \"sortField\": \"code\",\r\n        \"sortType\": \"asc\"\r\n      }\r\n    ],\r\n    \"pagination\": {\r\n      \"pageStart\": 0,\r\n      \"pageFetch\": 10\r\n    },\r\n    \"languageCode\": \"fra\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/individualtypes/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"individualtypes",
+								"search"
+							]
+						},
+						"description": "searchIndividuals"
+					},
+					"response": []
+				}
+			],
+			"description": "Individual type controller"
+		},
+		{
+			"name": "language",
+			"item": [
+				{
+					"name": "GET /languages ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/languages",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"languages"
+							]
+						},
+						"description": "Retrieve all Languages"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /languages",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"new\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"odi\",\r\n    \"family\": \"imaginary\",\r\n    \"isActive\": true,\r\n    \"name\": \"mylang\",\r\n    \"nativeName\": \"mynative\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/languages",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"languages"
+							]
+						},
+						"description": " Service to save Language"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /languages ",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"eng\",\r\n    \"family\": \"string\",\r\n    \"isActive\": true,\r\n    \"name\": \"string\",\r\n    \"nativeName\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/languages",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"languages"
+							]
+						},
+						"description": "Service to update Language"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /languages/{code} ",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/languages/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"languages",
+								"fra"
+							]
+						},
+						"description": "Service to delete Language"
+					},
+					"response": []
+				}
+			],
+			"description": "Language Controller"
+		},
+		{
+			"name": "location",
+			"item": [
+				{
+					"name": "POST /locations",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"MORe\",\r\n    \"hierarchyLevel\": \"4\",\r\n    \"hierarchyName\": \"Zone\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"name\": \"newloc\",\r\n    \"parentLocCode\": \"MOR\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/locations",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"locations"
+							]
+						},
+						"description": " createLocationHierarchyDetails"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /locations ",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"MORe\",\r\n    \"hierarchyLevel\": 4,\r\n    \"hierarchyName\": \"Zone\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"name\": \"newerloc\",\r\n    \"parentLocCode\": \"MOR\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/locations",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"locations"
+							]
+						},
+						"description": "updateLocationHierarchyDetails"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /locations/{langcode} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/locations/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"locations",
+								"eng"
+							]
+						},
+						"description": "getLocationHierarchyDetails"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /locations/{locationcode}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/locations/MORe",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"locations",
+								"MORe"
+							]
+						},
+						"description": " deleteLocationHierarchyDetails"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /locations/{locationcode}/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/locations/10112/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"locations",
+								"10112",
+								"fra"
+							]
+						},
+						"description": " getLocationHierarchyByLangCode"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /locations/all ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/locations/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"locations",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						},
+						"description": "Retrieve all the location with additional metadata"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /locations/filtervalues",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"langCode\",\r\n        \"text\": \"eng\",\r\n        \"type\": \"all\"\r\n      }\r\n  \r\n      ],\r\n    \r\n    \"languageCode\": \"eng\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/locations/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"locations",
+								"filtervalues"
+							]
+						},
+						"description": " locationFilterValues"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /locations/immediatechildren/{locationcode}/{langcode} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/locations/immediatechildren/MOR/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"locations",
+								"immediatechildren",
+								"MOR",
+								"fra"
+							]
+						},
+						"description": "getImmediateChildrenByLocCodeAndLangCode"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /locations/level/{langcode} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/locations/level/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"locations",
+								"level",
+								"fra"
+							]
+						},
+						"description": "getLocationCodeByLangCode"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /locations/locationhierarchy/{hierarchyname} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/locations/locationhierarchy/Zone",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"locations",
+								"locationhierarchy",
+								"Zone"
+							]
+						},
+						"description": "getLocationDataByHierarchyName"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /locations/validate/{locationname} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/locations/validate/newerloc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"locations",
+								"validate",
+								"newerloc"
+							]
+						},
+						"description": "validateLocationName"
+					},
+					"response": []
+				}
+			],
+			"description": "location controller"
+		},
+		{
+			"name": "Location Hierarchy level Details",
+			"item": [
+				{
+					"name": "GET /locationHierarchyLevels/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/locationHierarchyLevels/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"locationHierarchyLevels",
+								"eng"
+							]
+						},
+						"description": "Retrieve all location Hierarchy Level details based on lanuage code"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /locationHierarchyLevels/{level}/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/locationHierarchyLevels/1/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"locationHierarchyLevels",
+								"1",
+								"eng"
+							]
+						},
+						"description": "Retrieve all Module Details for given Languge Code"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Machine",
+			"item": [
+				{
+					"name": "Get AllMachine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machines",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Machine",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machines/20001",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machines",
+								"20001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Machine with Langcode and machine id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machines/20001/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machines",
+								"20001",
+								"fra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Machine with Langcode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machines/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machines",
+								"eng"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Decommission machine",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machines/decommission/20001",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machines",
+								"decommission",
+								"20001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /machines/mappedmachines/{regCenterId} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machines/mappedmachines/regcenterid?direction=DESC&orderBy=createdDateTime&pageNumber=0&pageSize=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machines",
+								"mappedmachines",
+								"regcenterid"
+							],
+							"query": [
+								{
+									"key": "direction",
+									"value": "DESC"
+								},
+								{
+									"key": "orderBy",
+									"value": "createdDateTime"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Retrieve all Machines which are mapped to given Registration Center Id"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Machine",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"string\",\n  \"metadata\": {},\n  \"request\": {\n    \"id\":\"12312\",\n    \"ipAddress\": \"192.168.0.150\",\n    \"isActive\": true,\n    \"langCode\": \"fra\",\n    \"macAddress\": \"8C-16-45-5A-5D-0T\",\n    \"machineSpecId\": \"1001\",\n    \"name\": \"test mach1\",\n     \"publicKey\": \"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkQLjdwHpUv4tcJS6+6dJKrJ2flmd9/MkrvkIlb0eYJFTzY2AH+J8NxmV0NaY/EBLLMko2nnm3BI6b35RoSdZ2pRqcxEPd9bz1q23Y9wwbVlhEiQJpfqaEVk3vnv3RM8m7qo03fl4guCAor5UF2KQ4uqN611vCwzORJgw7q3EraIwKqeJkFPKK6YwjVLYUt5atHYFxavY1cFxHLyMM5PAAFU2OGWDpCAB9+Ib26lQnZbdqeX5okwejs4iJAyaXB6eb3ohawRgtzFLNm8oSJ0EnEtaf2zHZtpzWsxIrA8kItak918xPVby0MZBOJHIPYty5W7xxlarEKqVAfzhoUW1UwIDAQAB\",\n    \"serialNum\": \"NM5328114630\",\n    \"validityDateTime\": \"2018-12-10T06:12:52.994Z\",\n    \"zoneCode\": \"CK\"\n  },\n  \"requesttime\": \"{{requesttime}}\",\n  \"version\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machines",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Machine",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"id\":\"20001\",\r\n    \"ipAddress\": \"192.168.0.150\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\",\r\n    \"macAddress\": \"8C-16-45-5A-5D-0T\",\r\n    \"machineSpecId\": \"1001\",\r\n    \"name\": \"test mach1\",\r\n    \"serialNum\": \"NM5328114630\",\r\n    \"validityDateTime\": \"2018-12-10T06:12:52.994Z\",\r\n    \"zoneCode\": \"CK\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machines",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machines"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filtervalues machine",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"langCode\",\r\n        \"text\": \"fra\",\r\n        \"type\": \"all\"\r\n      }\r\n  \r\n      ],\r\n    \r\n    \"languageCode\": \"fra\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machines/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machines",
+								"filtervalues"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MachineHistory",
+			"item": [
+				{
+					"name": "GET /machineshistories/{id}/{langcode}/{effdatetimes}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machineshistories/1111/eng/sss",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machineshistories",
+								"1111",
+								"eng",
+								"sss"
+							]
+						},
+						"description": "Retrieve all Machine History Details for the given Languge Code, ID and Effective date time"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Machine Specs",
+			"item": [
+				{
+					"name": "POST /machinespecifications",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"brand\": \"string\",\r\n    \"description\": \"string\",\r\n    \"id\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\",\r\n    \"machineTypeCode\": \"string\",\r\n    \"minDriverversion\": \"string\",\r\n    \"model\": \"string\",\r\n    \"name\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machinespecifications",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machinespecifications"
+							]
+						},
+						"description": "Service to save Machine Specification"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /machinespecifications",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"brand\": \"string\",\r\n    \"description\": \"string\",\r\n    \"id\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\",\r\n    \"machineTypeCode\": \"string\",\r\n    \"minDriverversion\": \"string\",\r\n    \"model\": \"string\",\r\n    \"name\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machinespecifications",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machinespecifications"
+							]
+						},
+						"description": "Service to update Machine Specification"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /machinespecifications/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machinespecifications/sss",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machinespecifications",
+								"sss"
+							]
+						},
+						"description": "Service to delete Machine Specification"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /machinespecifications/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machinespecifications/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machinespecifications",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						},
+						"description": "Retrieve all the machine specification with additional metadata"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /machinespecifications/filtervalues",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"isActive\",\r\n        \"text\": \"\",\r\n        \"type\": \"all\"\r\n      }\r\n    ],\r\n    \"languageCode\": \"fra\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machinespecifications/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machinespecifications",
+								"filtervalues"
+							]
+						},
+						"description": "machineSpecificationFilterValues"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /machinespecifications/search",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"value\": \"Test\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"columnName\": \"name\",\r\n        \"type\": \"equals\"\r\n      }\r\n    ],\r\n    \"sort\": [\r\n      {\r\n        \"sortField\": \"code\",\r\n        \"sortType\": \"asc\"\r\n      }\r\n    ],\r\n    \"pagination\": {\r\n      \"pageStart\": 0,\r\n      \"pageFetch\": 10\r\n    },\r\n    \"languageCode\": \"fra\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machinespecifications/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machinespecifications",
+								"search"
+							]
+						},
+						"description": "Retrieve all machine specifications for the given Filter parameters"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Machine Type",
+			"item": [
+				{
+					"name": "GET /machinetypes/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machinetypes/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machinetypes",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						},
+						"description": "Retrieve all the machine types with additional metadata"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /machinetypes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"string\",\r\n    \"description\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"name\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machinetypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machinetypes"
+							]
+						},
+						"description": "Service to save Machine Type"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /machinetypes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"string\",\r\n    \"description\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\",\r\n    \"name\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machinetypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machinetypes"
+							]
+						},
+						"description": "Service to save Machine Type"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /machinetypes/filtervalues",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"isActive\",\r\n        \"text\": \"\",\r\n        \"type\": \"all\"\r\n      }\r\n    ],\r\n    \"languageCode\": \"eng\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machinetypes/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machinetypes",
+								"filtervalues"
+							]
+						},
+						"description": "machineTypesFilterValues"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /machinetypes/search",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"value\": \"Test\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"columnName\": \"name\",\r\n        \"type\": \"equals\"\r\n      }\r\n    ],\r\n    \"sort\": [\r\n      {\r\n        \"sortField\": \"code\",\r\n        \"sortType\": \"asc\"\r\n      }\r\n    ],\r\n    \"pagination\": {\r\n      \"pageStart\": 0,\r\n      \"pageFetch\": 10\r\n    },\r\n    \"languageCode\": \"fra\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/machinetypes/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"machinetypes",
+								"search"
+							]
+						},
+						"description": "Api to search Machine Types"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ModuleDetails",
+			"item": [
+				{
+					"name": "GET /modules/{id}/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/modules/1001/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"modules",
+								"1001",
+								"eng"
+							]
+						},
+						"description": "Retrieve all Module Details for given Languge Code"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /modules/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/modules/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"modules",
+								"eng"
+							]
+						},
+						"description": "Retrieve all Module Details for given Languge Code"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Registered Device",
+			"item": [
+				{
+					"name": "PUT /registereddevices/update/status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registereddevices/update/status?deviceCode= &statusCode=",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registereddevices",
+								"update",
+								"status"
+							],
+							"query": [
+								{
+									"key": "deviceCode",
+									"value": " "
+								},
+								{
+									"key": "statusCode",
+									"value": ""
+								}
+							]
+						},
+						"description": " Update status of the devive"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /registereddevices",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"deviceData\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registereddevices",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registereddevices"
+							]
+						},
+						"description": "\r\nsignedRegisteredDevice"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /registereddevices/deregister",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"device\": \"string\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registereddevices/deregister",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registereddevices",
+								"deregister"
+							]
+						},
+						"description": " DeRegister Device"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Registration center",
+			"item": [
+				{
+					"name": "Get center with Centercode and Langcode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcenters/20038/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcenters",
+								"20038",
+								"eng"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete center  /registrationcenters/{registrationCenterId}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcenters/12920",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcenters",
+								"12920"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Getcoordinatespecificregistrationcenters/Langcode/Latitude/Logitude/ proximitydistance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/getcoordinatespecificregistrationcenters/ara/-6.516428/34.287879/56",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"getcoordinatespecificregistrationcenters",
+								"ara",
+								"-6.516428",
+								"34.287879",
+								"56"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get  registrationcenters/{langcode}/{hierarchylevel}/{name}&{name}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcenters/eng/3/names?name=Kentria",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcenters",
+								"eng",
+								"3",
+								"names"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Kentria"
+								}
+							]
+						},
+						"description": "getRegistrationCenterByHierarchyLevelAndListTextAndlangCode with different name "
+					},
+					"response": []
+				},
+				{
+					"name": "Getlocspecificregistrationcenters with Langcode and Location code",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata//getlocspecificregistrationcenters/eng/14000",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"",
+								"getlocspecificregistrationcenters",
+								"eng",
+								"14000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Registrationcenters",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"addressLine1\": \"addressLine1\",\r\n    \"addressLine2\": \"addressLine1\",\r\n    \"addressLine3\": \"addressLine3\",\r\n    \"centerEndTime\": \"17:00:00\",\r\n    \"centerStartTime\": \"09:00:00\",\r\n    \"centerTypeCode\": \"REG\",\r\n    \"contactPerson\": \"Center Person\",\r\n    \"contactPhone\": \"9606139887\",\r\n    \"exceptionalHolidayPutPostDto\": [\r\n      {\r\n        \"exceptionHolidayDate\": \"2020-06-18\",\r\n        \"exceptionHolidayName\": \"Holiday Name\",\r\n        \"exceptionHolidayReson\": \"Holiday Reason\"\r\n      }\r\n    ],\r\n    \"holidayLocationCode\": \"KTA\",\r\n    \"id\": \"20004\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"latitude\": \"2.3434\",\r\n    \"locationCode\": \"14022\",\r\n    \"longitude\": \"2.2344\",\r\n    \"lunchEndTime\": \"15:30:00\",\r\n    \"lunchStartTime\": \"15:00:00\",\r\n    \"name\": \"centerTestb\",\r\n    \"perKioskProcessTime\": \"00:15:00\",\r\n    \"timeZone\": \"GTM + 01h00) HEURE EUROPEENNE CENTRALE\",\r\n    \"workingHours\": \"2:00:00\",\r\n    \"workingNonWorkingDays\": {\r\n      \"mon\": true,\r\n      \"tue\": false,\r\n      \"wed\": true,\r\n      \"thu\": false,\r\n      \"fri\": true,\r\n      \"sat\": false,\r\n      \"sun\": false\r\n    },\r\n    \"zoneCode\": \"\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"1.0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcenters",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcenters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get registrationcentershistory/33333/eng/2020-11-21T06:50:27.012Z",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcentershistory/33333/eng/2020-11-21T06:50:27.012Z",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcentershistory",
+								"33333",
+								"eng",
+								"2020-11-21T06:50:27.012Z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " Get registrationcenters/{langcode}/{hierarchylevel}/{name}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcenters/eng/3/Kenitra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcenters",
+								"eng",
+								"3",
+								"Kenitra"
+							]
+						},
+						"description": " getRegistrationCenterByHierarchyLevelAndTextAndlangCode"
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllExistingRegistrationCentersDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcenters/all?orderBy=desc&pageNumber=0&pageSize=2\n0",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcenters",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "2\n0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Registrationcenters",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"value\": \"Center\",\r\n        \"fromValue\": \"0\",\r\n        \"toValue\": \"1\",\r\n        \"columnName\": \"name\",\r\n        \"type\": \"contains\"\r\n      }\r\n    ],\r\n    \"sort\": [\r\n      {\r\n        \"sortField\": \"name\",\r\n        \"sortType\": \"asc\"\r\n      }\r\n    ],\r\n    \"pagination\": {\r\n      \"pageStart\": 0,\r\n      \"pageFetch\": 10\r\n    },\r\n    \"languageCode\": \"eng\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcenters/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcenters",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all registrationcenters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcenters",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcenters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetregistrationcenterholidaysFrom Langcode/Centercode/Year",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/getregistrationcenterholidays/tre/12912/20",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"getregistrationcenterholidays",
+								"tre",
+								"12912",
+								"20"
+							]
+						},
+						"description": "This will fetch data from table loc_holiday table , and is not related to exceptional or working non working holiday table.\n\nReturn generic holiday"
+					},
+					"response": []
+				},
+				{
+					"name": " Creation of Registration center",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"string\",\n  \"metadata\": {},\n  \"request\": {\n    \"addressLine1\": \"addressLine1\",\n    \"addressLine2\": \"addressLine1\",\n    \"addressLine3\": \"addressLine3\",\n    \"centerEndTime\": \"17:00:00\",\n    \"centerStartTime\": \"09:00:00\",\n    \"centerTypeCode\": \"REG\",\n    \"contactPerson\": \"Center Person\",\n    \"contactPhone\": \"9606139887\",\n    \"exceptionalHolidayPutPostDto\": [\n      {\n        \"exceptionHolidayDate\": \"2020-06-18\",\n        \"exceptionHolidayName\": \"Holiday Name\",\n        \"exceptionHolidayReson\": \"Holiday Reason\"\n      }\n    ],\n    \"holidayLocationCode\": \"KTA\",\n    \"id\": \"\",\n    \"isActive\": true,\n    \"langCode\": \"eng\",\n    \"latitude\": \"2.3434\",\n    \"locationCode\": \"14022\",\n    \"longitude\": \"2.2344\",\n    \"lunchEndTime\": \"15:30:00\",\n    \"lunchStartTime\": \"15:00:00\",\n    \"name\": \"centerTestb\",\n    \"perKioskProcessTime\": \"00:15:00\",\n    \"timeZone\": \"GTM + 01h00) HEURE EUROPEENNE CENTRALE\",\n    \"workingHours\": \"2:00:00\",\n    \"workingNonWorkingDays\": {\n      \"mon\": true,\n      \"tue\": false,\n      \"wed\": true,\n      \"thu\": false,\n      \"fri\": true,\n      \"sat\": false,\n      \"sun\": false\n    },\n    \"zoneCode\": \"KTA\"\n  },\n  \"requesttime\": \"{{requesttime}}\",\n  \"version\": \"1.0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcenters",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcenters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get filter dropdownvalue for registrationcenters Filter",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"name\",\r\n        \"text\": \"\",\r\n        \"type\": \"all\"\r\n      }\r\n    ],\r\n    \"languageCode\": \"eng\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata//registrationcenters/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"",
+								"registrationcenters",
+								"filtervalues"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get center types with additional metadata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcentertypes/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcentertypes",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "RegistrationCenterMachine",
+			"item": [
+				{
+					"name": "GET /registrationcentermachine/map/{regCenterId}/{machineId} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcentermachine/map/10002/45038",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcentermachine",
+								"map",
+								"10002",
+								"45038"
+							]
+						},
+						"description": "map center to machine map"
+					},
+					"response": []
+				}
+			],
+			"description": " Registration Center Machine Controller"
+		},
+		{
+			"name": "Registration_Center Type",
+			"item": [
+				{
+					"name": "GET /registrationcentertypes/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcentertypes/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcentertypes",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						},
+						"description": "Retrieve all the registration center types with additional metadata"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /registrationcentertypes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"string\",\r\n    \"descr\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"string\",\r\n    \"name\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcentertypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcentertypes"
+							]
+						},
+						"description": "createRegistrationCenterType"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /registrationcentertypes/search",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"string\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"type\": \"string\",\r\n        \"value\": \"string\"\r\n      }\r\n    ],\r\n    \"languageCode\": \"string\",\r\n    \"pagination\": {\r\n      \"pageFetch\": 0,\r\n      \"pageStart\": 0\r\n    },\r\n    \"sort\": [\r\n      {\r\n        \"sortField\": \"string\",\r\n        \"sortType\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcentertypes/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcentertypes",
+								"search"
+							]
+						},
+						"description": "searchRegistrationCenterType"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /registrationcentertypes/{code}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcentertypes/REGo",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcentertypes",
+								"REGo"
+							]
+						},
+						"description": "deleteRegistrationCenterType"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /registrationcentertypes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"str\",\r\n    \"descr\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"name\": \"strin\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcentertypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcentertypes"
+							]
+						},
+						"description": "updateRegistrationCenterType"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /registrationcentertypes/filtervalues",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"langCode\",\r\n        \"text\": \"eng\",\r\n        \"type\": \"all\"\r\n      }\r\n  \r\n      ],\r\n    \r\n    \"languageCode\": \"eng\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationcentertypes/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationcentertypes",
+								"filtervalues"
+							]
+						},
+						"description": "registrationCenterTypeFilterValues"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RegistrationCenterUserMachine",
+			"item": [
+				{
+					"name": "Delete mapping user,center,machine",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationmachineusermappings/M001/RC001/110005",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationmachineusermappings",
+								"M001",
+								"RC001",
+								"110005"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a mapping of registration center,user,and machine",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"machineId\": \"20002\",\r\n    \"regCenterId\": \"10000\"\r\n\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registration/machine",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registration",
+								"machine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update  a mapping of registration center,user,and machine",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": [\r\n    {\r\n      \"cntrId\": \"RC001\",\r\n      \"isActive\": true,\r\n      \"langCode\": \"string\",\r\n      \"machineId\": \"MC001\",\r\n      \"usrId\": \"QC001\"\r\n    }\r\n  ],\r\n  \"requesttime\": \"{{requesttime}}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/registrationmachineusermappings",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"registrationmachineusermappings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Rejection Reasons",
+			"item": [
+				{
+					"name": "GET /packetrejectionreasons ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/packetrejectionreasons",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"packetrejectionreasons"
+							]
+						},
+						"description": "getAllReasons"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /packetrejectionreasons/{reasoncategorycode}/{langcode} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/packetrejectionreasons/testcode/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"packetrejectionreasons",
+								"testcode",
+								"fra"
+							]
+						},
+						"description": "getReasonsBasedOnReasonCatgCodeAndlangCode"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /packetrejectionreasons/reasoncategory ",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"string\",\r\n    \"description\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"string\",\r\n    \"name\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/packetrejectionreasons/reasoncategory",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"packetrejectionreasons",
+								"reasoncategory"
+							]
+						},
+						"description": "createReasonCategories"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /packetrejectionreasons/reasonlist",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"NEWTEST\",\r\n    \"description\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\",\r\n    \"name\": \"TESTNAME\",\r\n    \"rsnCatCode\": \"testcode\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/packetrejectionreasons/reasonlist",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"packetrejectionreasons",
+								"reasonlist"
+							]
+						},
+						"description": " createReasonLists"
+					},
+					"response": []
+				}
+			],
+			"description": "Packet Rejection Reason Controller"
+		},
+		{
+			"name": "Templates",
+			"item": [
+				{
+					"name": "GET /templates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templates",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templates"
+							]
+						},
+						"description": "getAllTemplate"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /templates/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templates/234",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templates",
+								"234"
+							]
+						},
+						"description": " Service to delete template"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /templates/{langcode} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templates/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templates",
+								"fra"
+							]
+						},
+						"description": "getAllTemplateBylangCode"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /templates/{langcode}/{templatetypecode} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templates/fra/testing",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templates",
+								"fra",
+								"testing"
+							]
+						},
+						"description": "getAllTemplateBylangCodeAndTemplateTypeCode"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /templates/all ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templates/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templates",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						},
+						"description": "Retrieve all the templates with additional metadata"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /templates/templatetypecodes/{code} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templates/templatetypecodes/testing",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templates",
+								"templatetypecodes",
+								"testing"
+							]
+						},
+						"description": "getAllTemplateByTemplateTypeCode"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /templates ",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"description\": \"string\",\r\n    \"fileFormatCode\": \"testformat\",\r\n    \"fileText\": \"test\",\r\n    \"id\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\",\r\n    \"model\": \"string\",\r\n    \"moduleId\": \"10003\",\r\n    \"moduleName\": \"test\",\r\n    \"name\": \"tester\",\r\n    \"templateTypeCode\": \"testing\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}v1/masterdata/templates",
+							"host": [
+								"{{url}}v1"
+							],
+							"path": [
+								"masterdata",
+								"templates"
+							]
+						},
+						"description": "Service to create template"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /templates ",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"123321\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"description\": \"tesssst\",\r\n    \"fileFormatCode\": \"testformat\",\r\n    \"fileText\": \"string\",\r\n    \"id\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\",\r\n    \"model\": \"string\",\r\n    \"moduleId\": \"10003\",\r\n    \"moduleName\": \"test\",\r\n    \"name\": \"tester\",\r\n    \"templateTypeCode\": \"testing\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templates",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templates"
+							]
+						},
+						"description": "Service to update template"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /templates/filtervalues",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"langCode\",\r\n        \"text\": \"fra\",\r\n        \"type\": \"all\"\r\n      }\r\n  \r\n      ],\r\n    \r\n    \"languageCode\": \"fra\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templates/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templates",
+								"filtervalues"
+							]
+						},
+						"description": "filter template details"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /templates/search",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"string\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"type\": \"string\",\r\n        \"value\": \"string\"\r\n      }\r\n    ],\r\n    \"languageCode\": \"string\",\r\n    \"pagination\": {\r\n      \"pageFetch\": 0,\r\n      \"pageStart\": 0\r\n    },\r\n    \"sort\": [\r\n      {\r\n        \"sortField\": \"string\",\r\n        \"sortType\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templates/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templates",
+								"search"
+							]
+						},
+						"description": " Search template details"
+					},
+					"response": []
+				}
+			],
+			"description": "template controller.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "TemplateFileFormat",
+			"item": [
+				{
+					"name": "DELETE /templatefileformats/{code} ",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templatefileformats/d",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templatefileformats",
+								"d"
+							]
+						},
+						"description": "Service to delete TemplateFileFormat"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /templatefileformats/{code}/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templatefileformats/testformat/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templatefileformats",
+								"testformat",
+								"fra"
+							]
+						},
+						"description": " Retrieve all TemplateFileFormat Details for given Languge Code"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /templatefileformats/{langcode} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templatefileformats/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templatefileformats",
+								"fra"
+							]
+						},
+						"description": "Retrieve all TemplateFileFormat Details for given Languge Code"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /templatefileformats ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"testformat\",\r\n    \"description\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templatefileformats",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templatefileformats"
+							]
+						},
+						"description": "createTemplateFileFormat"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /templatefileformats",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"testformat\",\r\n    \"description\": \"testing\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templatefileformats",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templatefileformats"
+							]
+						},
+						"description": " Service to update TemplateFileFormat"
+					},
+					"response": []
+				}
+			],
+			"description": "Template File Format Controller"
+		},
+		{
+			"name": "TemplateType",
+			"item": [
+				{
+					"name": "GET /templatetypes/{code}/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templatetypes/testing/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templatetypes",
+								"testing",
+								"fra"
+							]
+						},
+						"description": " Retrieve all template type Details for given Languge Code"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /templatetypes/{langcode} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templatetypes/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templatetypes",
+								"fra"
+							]
+						},
+						"description": "Retrieve all template type Details for given Languge Code"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /templatetypes",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"testing\",\r\n    \"description\": \"string\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"fra\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/templatetypes",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"templatetypes"
+							]
+						},
+						"description": " Service to create template type"
+					},
+					"response": []
+				}
+			],
+			"description": "Template Type Controller"
+		},
+		{
+			"name": "Titles",
+			"item": [
+				{
+					"name": "GET /title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/title",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"title"
+							]
+						},
+						"description": "getAllTitles"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /title/{code}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/title/MIR",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"title",
+								"MIR"
+							]
+						},
+						"description": "Service to delete title"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /title/{langcode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/title/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"title",
+								"fra"
+							]
+						},
+						"description": "getTitlesBylangCode"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /title/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/title/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"title",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						},
+						"description": "Retrieve all the title with additional metadata"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /title",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"testtitle\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"titleDescription\": \"testio\",\r\n    \"titleName\": \"testttt\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/title",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"title"
+							]
+						},
+						"description": "saveTitle"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /title",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"code\": \"testtitle\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\",\r\n    \"titleDescription\": \"testdesc\",\r\n    \"titleName\": \"testname\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/title",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"title"
+							]
+						},
+						"description": "Service to update title"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /title/filtervalues",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"langCode\",\r\n        \"text\": \"fra\",\r\n        \"type\": \"all\"\r\n      }\r\n  \r\n      ],\r\n    \r\n    \"languageCode\": \"eng\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/title/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"title",
+								"filtervalues"
+							]
+						},
+						"description": "filter title details"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /title/search",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"string\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"type\": \"string\",\r\n        \"value\": \"string\"\r\n      }\r\n    ],\r\n    \"languageCode\": \"string\",\r\n    \"pagination\": {\r\n      \"pageFetch\": 0,\r\n      \"pageStart\": 0\r\n    },\r\n    \"sort\": [\r\n      {\r\n        \"sortField\": \"string\",\r\n        \"sortType\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/title/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"title",
+								"search"
+							]
+						},
+						"description": "Search title details"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Details",
+			"item": [
+				{
+					"name": "GET /users/{id}/{eff_dtimes}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/users/1234/2020-10-28T13:05:07.869Z",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"users",
+								"1234",
+								"2020-10-28T13:05:07.869Z"
+							]
+						},
+						"description": " getTitlesBylangCode"
+					},
+					"response": []
+				}
+			],
+			"description": " User Details History Controller"
+		},
+		{
+			"name": "ValidDocument",
+			"item": [
+				{
+					"name": "DELETE /validdocuments/{doccategorycode}/{doctypecode}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/validdocuments/POA/POI",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"validdocuments",
+								"POA",
+								"POI"
+							]
+						},
+						"description": " Service to delete valid document"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /validdocuments/{docCategoryCode}/{languagecode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/validdocuments/POA/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"validdocuments",
+								"POA",
+								"fra"
+							]
+						},
+						"description": " Service to fetch all valid document categories and associated document types for a docCategoryCode"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /validdocuments/{languagecode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/validdocuments/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"validdocuments",
+								"fra"
+							]
+						},
+						"description": " Service to fetch all valid document categories and associated document types for a languagecode"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /validdocuments/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/validdocuments/all?orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"validdocuments",
+								"all"
+							],
+							"query": [
+								{
+									"key": "orderBy",
+									"value": "desc"
+								},
+								{
+									"key": "pageNumber",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "sortBy",
+									"value": "createdDateTime"
+								}
+							]
+						},
+						"description": " Retrieve all the document categories and associated document types with additional metadata"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /validdocuments/unmap/{doccategorycode}/{doctypecode}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/validdocuments/unmap/POA/RNC",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"validdocuments",
+								"unmap",
+								"POA",
+								"RNC"
+							]
+						},
+						"description": " unmapDocCategoryAndDocType"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /validdocuments",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"docCategoryCode\": \"POA\",\r\n    \"docTypeCode\": \"POA\",\r\n    \"isActive\": true,\r\n    \"langCode\": \"eng\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/validdocuments",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"validdocuments"
+							]
+						},
+						"description": " Service to create valid document"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /validdocuments/filtervalues",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"langCode\",\r\n        \"text\": \"eng\",\r\n        \"type\": \"all\"\r\n      }\r\n  \r\n      ],\r\n    \r\n    \"languageCode\": \"fra\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/validdocuments/filtervalues",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"validdocuments",
+								"filtervalues"
+							]
+						},
+						"description": " categoryTypeFilterValues"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT /validdocuments/map/{doccategorycode}/{doctypecode}",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/validdocuments/map/POA/RNC",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"validdocuments",
+								"map",
+								"POA",
+								"RNC"
+							]
+						},
+						"description": " mapDocCategoryAndDocType"
+					},
+					"response": []
+				},
+				{
+					"name": "POST /validdocuments/search",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"filters\": [\r\n      {\r\n        \"columnName\": \"string\",\r\n        \"fromValue\": \"string\",\r\n        \"toValue\": \"string\",\r\n        \"type\": \"string\",\r\n        \"value\": \"string\"\r\n      }\r\n    ],\r\n    \"languageCode\": \"fra\",\r\n    \"pagination\": {\r\n      \"pageFetch\": 0,\r\n      \"pageStart\": 0\r\n    },\r\n    \"sort\": [\r\n      {\r\n        \"sortField\": \"string\",\r\n        \"sortType\": \"string\"\r\n      }\r\n    ]\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/masterdata/validdocuments/search",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"validdocuments",
+								"search"
+							]
+						},
+						"description": " searchValidDocument"
+					},
+					"response": []
+				}
+			],
+			"description": " Valid Document Controller"
+		},
+		{
+			"name": "Working Non Working Days",
+			"item": [
+				{
+					"name": "Get WorkingDay as per center and lang",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/workingdays/10002/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"workingdays",
+								"10002",
+								"fra"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get weekday as per center and lang",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/weekdays/20002/fra",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"weekdays",
+								"20002",
+								"fra"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ZONE",
+			"item": [
+				{
+					"name": "GET /zones/authorize",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/zones/authorize?rid=sss",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"zones",
+								"authorize"
+							],
+							"query": [
+								{
+									"key": "rid",
+									"value": "sss"
+								}
+							]
+						},
+						"description": " authorizeZone"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /zones/hierarchy/{langCode}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/zones/hierarchy/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"zones",
+								"hierarchy",
+								"eng"
+							]
+						},
+						"description": " getZoneHierarchy"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /zones/leafs/{langCode} ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/zones/leafs/eng",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"zones",
+								"leafs",
+								"eng"
+							]
+						},
+						"description": "getLeafZones"
+					},
+					"response": []
+				},
+				{
+					"name": "GET /zones/zonename",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/masterdata/zones/zonename?langCode=eng&userID=1001",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"masterdata",
+								"zones",
+								"zonename"
+							],
+							"query": [
+								{
+									"key": "langCode",
+									"value": "eng"
+								},
+								{
+									"key": "userID",
+									"value": "1001"
+								}
+							]
+						},
+						"description": " getZoneNameBasedOnUserIDAndLangCode"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth using username and pasword Copy 2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"Username and password combination had been validated successfully\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"string\",\n  \"metadata\": {},\n  \"request\": {\n    \"appId\": \"admin\",\n    \"password\": \"mosip\",\n    \"userName\": \"110005\"\n  },\n  \"requesttime\": \"{{requesttime}}\",\n  \"version\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/useridPwd",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"useridPwd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

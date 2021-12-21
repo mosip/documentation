@@ -1,0 +1,1183 @@
+{
+	"info": {
+		"_postman_id": "e5ff1263-0416-4606-812d-43eb7346b95c",
+		"name": "Automated Certificate Upload",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Clientid and Token combination has been validated successfully\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Clientid and Token combination had been validated successfully\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"ida\",\r\n    \"clientId\": \"mosip-ida-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"clientidsecretkey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET IDA Internal Root Certificate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.test(\"Got IDA Internal Root cert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"var data = JSON.stringify(jsonData.response.certificate);\r",
+							"console.log(data);\r",
+							"pm.environment.set(\"rootcert\",data);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/idauthentication/v1/internal/getCertificate?applicationId=ROOT",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"idauthentication",
+						"v1",
+						"internal",
+						"getCertificate"
+					],
+					"query": [
+						{
+							"key": "applicationId",
+							"value": "ROOT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST IDA Internal Root certificate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var jsonData = JSON.stringify(jsonData.errors);\r",
+							"if (jsonData==\"[]\")\r",
+							"{\r",
+							"    pm.test(\"Posted IDA-Internal-Rootcert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});}\r",
+							"else\r",
+							"{\r",
+							"pm.test(\"Certificate already exists in DB\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Certificate already exists \");\r",
+							"});\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\": {{rootcert}},\r\n    \"partnerDomain\": \"Auth\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"partnermanager",
+						"partners",
+						"certificate",
+						"ca",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET IDA certificate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var data = JSON.stringify(jsonData.response.certificate);\r",
+							"console.log(data);\r",
+							"pm.environment.set(\"IDAcert\",data);\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.test(\"Got IDA-cert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/idauthentication/v1/internal/getCertificate?applicationId=IDA",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"idauthentication",
+						"v1",
+						"internal",
+						"getCertificate"
+					],
+					"query": [
+						{
+							"key": "applicationId",
+							"value": "IDA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST  IDA Certificate",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var jsonData = JSON.stringify(jsonData.errors);\r",
+							"if (jsonData==\"[]\")\r",
+							"{\r",
+							"    pm.test(\"Posted IDA-Rootcert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});}\r",
+							"else\r",
+							"{\r",
+							"pm.test(\"Certificate already exists in DB\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Certificate already exists \");\r",
+							"});\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{IDAcert}},\r\n    \"partnerDomain\": \"Auth\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"partnermanager",
+						"partners",
+						"certificate",
+						"ca",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET  Mpartner default-auth certificate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var data = JSON.stringify(jsonData.response.certificate);\r",
+							"console.log(data);\r",
+							"pm.environment.set(\"MPDAcert\",data);\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.test(\"Got mpartner-default-auth-cert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/idauthentication/v1/internal/getCertificate?applicationId=IDA&referenceId=mpartner-default-auth",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"idauthentication",
+						"v1",
+						"internal",
+						"getCertificate"
+					],
+					"query": [
+						{
+							"key": "applicationId",
+							"value": "IDA"
+						},
+						{
+							"key": "referenceId",
+							"value": "mpartner-default-auth"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Mpartner-Deafult-AuthCertificate  certificate",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var jsonData = JSON.stringify(jsonData.errors);\r",
+							"if (jsonData==\"[]\")\r",
+							"{\r",
+							"    pm.test(\"Posted Mpartner-default-auth-cert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});}\r",
+							"else\r",
+							"{\r",
+							"pm.test(\"Certificate already exists in DB\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Certificate already exists \");\r",
+							"});\r",
+							"}\r",
+							"\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var data = JSON.stringify(jsonData.response.signedCertificateData);\r",
+							"//console.log(data);\r",
+							"pm.environment.set(\"Signedmpartnerdefaultauthcert\",data);\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.test(\"Got signed-certificate\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{MPDAcert}},\r\n\r\n    \"partnerDomain\": \"AUTH\",\r\n    \"partnerId\": \"mpartner-default-auth\" \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/partnermanager/partners/certificate/upload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"partnermanager",
+						"partners",
+						"certificate",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload the Signed certificate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"    pm.test(\"Posted Signed certificate\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"                     });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"applicationId\": \"IDA\",\r\n    \"certificateData\": {{Signedmpartnerdefaultauthcert}},\r\n    \"referenceId\": \"mpartner-default-auth\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/idauthentication/v1/internal/uploadCertificate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"idauthentication",
+						"v1",
+						"internal",
+						"uploadCertificate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get IDA-CRED SERVICE cert",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var data = JSON.stringify(jsonData.response.certificate);\r",
+							"console.log(data);\r",
+							"pm.environment.set(\"IDACREDcert\",data);\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.test(\"Got IDA CRED_SERVICE-cert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/idauthentication/v1/internal/getCertificate?applicationId=IDA&referenceId=CRED_SERVICE",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"idauthentication",
+						"v1",
+						"internal",
+						"getCertificate"
+					],
+					"query": [
+						{
+							"key": "applicationId",
+							"value": "IDA"
+						},
+						{
+							"key": "referenceId",
+							"value": "CRED_SERVICE"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST IDA-PUBLIC_KEY certificate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var jsonData = JSON.stringify(jsonData.errors);\r",
+							"if (jsonData==\"null\")\r",
+							"{\r",
+							"    pm.test(\"Posted IDA-PUBLIC_KEY\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql(null);\r",
+							"});}\r",
+							"else\r",
+							"{\r",
+							"pm.test(\"Certificate already exists in DB\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Certificate already exists \");\r",
+							"});\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"applicationId\": \"IDA\",\r\n    \"certificateData\":{{IDACREDcert}},\r\n    \"referenceId\": \"PUBLIC_KEY\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/keymanager/uploadOtherDomainCertificate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"keymanager",
+						"uploadOtherDomainCertificate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET RESIDENT Root Certificate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var data = JSON.stringify(jsonData.response.certificate);\r",
+							"console.log(data);\r",
+							"pm.environment.set(\"Resrootcert\",data);\r",
+							"\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.test(\"Got RESIDENT-ROOT-cert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/v1/keymanager/getCertificate?applicationId=ROOT",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"keymanager",
+						"getCertificate"
+					],
+					"query": [
+						{
+							"key": "applicationId",
+							"value": "ROOT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST RESIDENT_Root certificate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var jsonData = JSON.stringify(jsonData.errors);\r",
+							"if (jsonData==\"[]\")\r",
+							"{\r",
+							"    pm.test(\"Posted RESIDENT-ROOT-Cert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});}\r",
+							"else\r",
+							"{\r",
+							"pm.test(\"Certificate already exists in DB\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Certificate already exists \");\r",
+							"});\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{Resrootcert}},\r\n    \"partnerDomain\": \"AUTH\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"partnermanager",
+						"partners",
+						"certificate",
+						"ca",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET resident certificate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var data = JSON.stringify(jsonData.response.certificate);\r",
+							"console.log(data);\r",
+							"pm.environment.set(\"Rescert\",data);\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.test(\"Got Resident-cert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/v1/keymanager/getCertificate?applicationId=RESIDENT",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"keymanager",
+						"getCertificate"
+					],
+					"query": [
+						{
+							"key": "applicationId",
+							"value": "RESIDENT"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Resident  certificate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var jsonData = JSON.stringify(jsonData.errors);\r",
+							"if (jsonData==\"[]\")\r",
+							"{\r",
+							"    pm.test(\"Posted RESIDENT cert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);;\r",
+							"});}\r",
+							"else\r",
+							"{\r",
+							"pm.test(\"Certificate already exists in DB\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Certificate already exists \");\r",
+							"});\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{Rescert}},\r\n    \"partnerDomain\": \"AUTH\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"partnermanager",
+						"partners",
+						"certificate",
+						"ca",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Mpartner default resident cert",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var data = JSON.stringify(jsonData.response.certificate);\r",
+							"console.log(data);\r",
+							"pm.environment.set(\"MPDRcert\",data);\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.test(\"Got mpartner-default-resident-cert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/v1/keymanager/getCertificate?applicationId=RESIDENT&referenceId=mpartner-default-resident",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"keymanager",
+						"getCertificate"
+					],
+					"query": [
+						{
+							"key": "applicationId",
+							"value": "RESIDENT"
+						},
+						{
+							"key": "referenceId",
+							"value": "mpartner-default-resident"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST mpartner default resident cert",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var jsonData = JSON.stringify(jsonData.errors);\r",
+							"if (jsonData==\"[]\")\r",
+							"{\r",
+							"    pm.test(\"Posted Mpartner-default-resident cert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});}\r",
+							"else\r",
+							"{\r",
+							"pm.test(\"Certificate already exists in DB\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Certificate already exists \");\r",
+							"});\r",
+							"}\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var data = JSON.stringify(jsonData.response.signedCertificateData);\r",
+							"pm.environment.set(\"signedmpartnerdefaultresidentcert\",data);\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.test(\"Got signed-certificate\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{MPDRcert}},\r\n   \r\n    \"partnerDomain\": \"AUTH\",\r\n    \"partnerId\": \"mpartner-default-resident\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/partnermanager/partners/certificate/upload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"partnermanager",
+						"partners",
+						"certificate",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Signed Certificate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"    pm.test(\"Posted Signed certificate\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql(null);\r",
+							"                     });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"applicationId\": \"RESIDENT\",\r\n    \"certificateData\":{{signedmpartnerdefaultresidentcert}},\r\n    \"referenceId\": \"mpartner-default-resident\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/keymanager/uploadCertificate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"keymanager",
+						"uploadCertificate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST print   CA certificate",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var jsonData = JSON.stringify(jsonData.errors);\r",
+							"if (jsonData==\"[]\")\r",
+							"{\r",
+							"    pm.test(\"Posted Print-Rootcert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});}\r",
+							"else\r",
+							"{\r",
+							"pm.test(\"Certificate already exists in DB\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Certificate already exists \");\r",
+							"});\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\": \"-----BEGIN CERTIFICATE-----\\nMIIDFTCCAf2gAwIBAgIEG6DiGjANBgkqhkiG9w0BAQsFADA7MQswCQYDVQQGEwJJ\\nTjELMAkGA1UECBMCS0ExDTALBgNVBAoTBElJVEIxEDAOBgNVBAMTB1JPT1QtQ0Ew\\nHhcNMjEwMzE2MTIyNTIxWhcNMjQwMzE1MTIyNTIxWjA7MQswCQYDVQQGEwJJTjEL\\nMAkGA1UECBMCS0ExDTALBgNVBAoTBElJVEIxEDAOBgNVBAMTB1JPT1QtQ0EwggEi\\nMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC5CXtlh1auztC/rDJDzNojowau\\ny+etRWmlAFtnXllV287MWdYIg4hGOaPA3QAqcwxj1JdV7OX57SkWse33uWiCfkoi\\n9HmOpXrJTsMxrGWUnW1Fs+ZhNLrQbtX8K4kODtrDeqov8ylOxVixeSVDwMXho/+D\\nvH7UjYH4o3ch4LkObXC/4sogeHsYTTK+UDpwPmBsYFAu3b+dzTPP+LEmXcb0Gd3Q\\nCEdOUdebJchrk4ap+1BJWAVGN0yFedJmj/Rtv3PNhecc37oKn9iN+zjPhetLKKnq\\n2CKaim4NKH3YiNhE+QgRyBhW9tmw9l38YNQDxMo74DShr1gb8PXv/MffToJzAgMB\\nAAGjITAfMB0GA1UdDgQWBBT/ESM8XxLIsUs1bHaPj3tjMo3rzzANBgkqhkiG9w0B\\nAQsFAAOCAQEAUutt5AL/I0UpG0FfVF9dsZAMlRYRqWxCYlhOPKrInfEZAGQUez85\\nHHOlD0saYpypvIx9h8zH4ndotnalloGs1/rKuze/MiPdIRKu7ltcNe+OwQNd5dqB\\nhfzC5RLJnpShcmjq7w6eq3RfQMiDgMenLqlY1a+1mVMWB00ha/EcqbwizkuSr/AM\\nbB/GlOTmWQFyUEGHN536ALnX7zs+56kVm3BUzK+qcSfCD20v815HXEl8DoRgxoPD\\nwxJviKzXwb19qabhMGOGD3lqr2pByxqnJF/fgyoeH8GqoH3pLEmwlrMVc8yYP0Rc\\nZYSu5nQaIN2ZCvEDpdD3ieUpE653CfRFPQ==\\n-----END CERTIFICATE-----\",\r\n    \"partnerDomain\": \"Auth\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"partnermanager",
+						"partners",
+						"certificate",
+						"ca",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST  print partner certificate.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var jsonData = JSON.stringify(jsonData.errors);\r",
+							"console.log(jsonData);\r",
+							"if (jsonData==\"[]\")\r",
+							"{\r",
+							"    pm.test(\"Posted Print-partner-cert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});}\r",
+							"else\r",
+							"{\r",
+							"pm.test(\"Certificate already exists in DB\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Certificate already exists \");\r",
+							"});\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\": \"-----BEGIN CERTIFICATE-----\\nMIIDPTCCAiWgAwIBAgIEWUs5tjANBgkqhkiG9w0BAQsFADA7MQswCQYDVQQGEwJJ\\nTjELMAkGA1UECBMCS0ExDTALBgNVBAoTBElJVEIxEDAOBgNVBAMTB1JPT1QtQ0Ew\\nHhcNMjEwMzE2MTIyNzM4WhcNMjIwMzE2MTIyNzM4WjBCMQswCQYDVQQGEwJJTjEL\\nMAkGA1UECBMCS0ExDTALBgNVBAoTBElJVEIxFzAVBgNVBAMTDlNpZ25lZC1QYXJ0\\nbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6LVFKcOPnadipOOZ\\nVgA8nhaJos8CUGTqwjk4AF6gK3SY5f6W+wcuQR2SM8Q4K0MC1P5HLjdvXgYyoUAW\\nfAid98P15AdqihP9cM1ZhB+zGqyZc3nmfjJ4sstRRgbhEfgLI41uYEPaO6GXnZkN\\ndhSf5343VoNwQTTI1gpoc8XqT7w4naqaA4H+KR31a6lhnpUCoUHtfZxH+5cRXSv8\\n7Ul/qTCO9HG1zM3PIrVnod8e610AbPKJXf9RAMeZsnbXWm5EIilzwUJaleP6Bsbx\\np+9aTgImi4LA484eaS4AS9FExil/zWQrXr0Prox8u/Eenjt65Rt0iXwq0V0dJu6I\\nHNLRhQIDAQABo0IwQDAdBgNVHQ4EFgQUvv1XjfOlkamCtykSyo7uowL4OeswHwYD\\nVR0jBBgwFoAU/xEjPF8SyLFLNWx2j497YzKN688wDQYJKoZIhvcNAQELBQADggEB\\nAEl6BGIP2agU3fGBVGP+Hp1ANROa9A3tBCTo3Uggw+YoVqwuod852Da6K531owQh\\nyHWKt8VTVOVl/la/YyKDasgyuJ4pvSruN8YMgJBVPu7iIpBpfVrG7pE9//bzER+X\\nqB1StxLa0f05ZFFU5iWOixG14a/YYsqhauOtTtzwuMXHYyrtdCFx8VZRjqM40myw\\nhq7EvBxv/pbnaLKs8YUipSV1HNyvb8xej/Gx0abGMQHB3hJ/kNVilKx7ntkx33cJ\\nEHSlF+YbhEmc1mNG6D5Pr/l1YVOxOAH4Fa/fMDtGtTOuIKEDHwOJIvFNId4SPdJE\\nq26q8M+7WyNPU1l77eDPVzc=\\n-----END CERTIFICATE-----\",\r\n    \"partnerDomain\": \"Auth\",\r\n    \"partnerId\": \"mpartner-default-print\"\r\n \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/partnermanager/partners/certificate/upload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"partnermanager",
+						"partners",
+						"certificate",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ABIS CA cert",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var jsonData = JSON.stringify(jsonData.errors);\r",
+							"if (jsonData.errors==\"[]\")\r",
+							"{\r",
+							"    pm.test(\"Posted ABIS-Rootcert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});}\r",
+							"else\r",
+							"{\r",
+							"pm.test(\"Certificate already exists in DB\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Certificate already exists \");\r",
+							"});\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\": \"-----BEGIN CERTIFICATE-----\\nMIIDTjCCAjagAwIBAgIEYFrxXTANBgkqhkiG9w0BAQsFADBpMQswCQYDVQQGEwJJ\\nTjESMBAGA1UECAwJS2FybmF0YWthMRIwEAYDVQQHDAlCYW5nYWxvcmUxHjAcBgNV\\nBAoMFW1wYXJ0bmVyLWRlZmF1bHQtYWJpczESMBAGA1UEAwwJYWJpcy1yb290MB4X\\nDTIxMDMyNDA3NTkyNVoXDTIyMDMyNDA3NTkyNVowaTELMAkGA1UEBhMCSU4xEjAQ\\nBgNVBAgMCUthcm5hdGFrYTESMBAGA1UEBwwJQmFuZ2Fsb3JlMR4wHAYDVQQKDBVt\\ncGFydG5lci1kZWZhdWx0LWFiaXMxEjAQBgNVBAMMCWFiaXMtcm9vdDCCASIwDQYJ\\nKoZIhvcNAQEBBQADggEPADCCAQoCggEBANkwlDzNZTBi1fBF4GU4qFAJ3S+Ca0Kf\\ngfvg93rQlZ5LBTnZFwAxpCZtGHYb7vkqM9e7adYGC48EPWI0A+48QmF3Z6vSBXg9\\nKckINa/vFCTEYrctMHS8CcBjWBf9agJq4+wWqNu8sYHD9pOzDf1uMbQJTI5VvgGx\\nv890pZrXdIrR4MPTLB0rkl2sVOqbG7bts0Eqh8TO86126CDzoDrtBCj3RBP/j/dg\\nBmz7LWFkG6/by+mXzdZcS46v7P/Q366WrDbMCCtjKIRAA0HQD3vdKT0V03Eiw/EU\\nVxVh9sdbkO5h/T8VWI7ghEjr4PpJXPYWRbVlt6uPDpbX+yEiOWG/SsMCAwEAATAN\\nBgkqhkiG9w0BAQsFAAOCAQEAEj42FlN8LnNPv3iWttydxm9kEJemyJdw8nPLCC4y\\nxigXrcxPgNcoJiDBXLIAwhTmPK1hdn/BndAeUsX8mauuzf4V7Ydw1a999s8Vsj8S\\nOLa8voXAE2sjdYZm0cYID0y/ak3+ZrKqCXP6bcmPOLz2plnGJB7TUQ+d8gZXsLA6\\nCoopaJOlNM4jPNbX/k30vfFmyrXm2++5stErrSOix25J79DGdmJH896/pmGmB60/\\nXGnpyESrVTbhTE+cx0gDHdq5T47qHcXM6CVuH/uYNy5iLCaBRzVQ043gFj3ioym1\\nnZ60dsvdG8nEENBu9SzN3Mn24pz0BQ99Qn5ymsQwYAEeDQ==\\n-----END CERTIFICATE-----\\n\",\r\n    \"partnerDomain\": \"Auth\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"partnermanager",
+						"partners",
+						"certificate",
+						"ca",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST ABIS partner cert",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var jsonData = JSON.stringify(jsonData.errors);\r",
+							"console.log(jsonData);\r",
+							"if (jsonData==\"[]\")\r",
+							"{\r",
+							"    pm.test(\"Posted ABIS partnercert\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errors).to.eql([]);\r",
+							"});}\r",
+							"else\r",
+							"{\r",
+							"pm.test(\"Certificate already exists in DB\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Certificate already exists \");\r",
+							"});\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\": \"-----BEGIN CERTIFICATE-----\\nMIIDWjCCAkKgAwIBAgIEYFrz6DANBgkqhkiG9w0BAQsFADBpMQswCQYDVQQGEwJJ\\nTjESMBAGA1UECAwJS2FybmF0YWthMRIwEAYDVQQHDAlCYW5nYWxvcmUxHjAcBgNV\\nBAoMFW1wYXJ0bmVyLWRlZmF1bHQtYWJpczESMBAGA1UEAwwJYWJpcy1yb290MB4X\\nDTIxMDMyNDA4MTAxNloXDTIyMDMyNDA4MTAxNlowdTELMAkGA1UEBhMCSU4xEjAQ\\nBgNVBAgMCUthcm5hdGFrYTESMBAGA1UEBwwJQmFuZ2Fsb3JlMR4wHAYDVQQKDBVt\\ncGFydG5lci1kZWZhdWx0LWFiaXMxHjAcBgNVBAMMFW1wYXJ0bmVyLWRlZmF1bHQt\\nYWJpczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKuA8CuDIRQCUCl9\\nyVh/dGOb/CiMnbcL/lsLq+VeYo51yyycj5kH2wuTlnXRZAOJklCvhAIJP68q799S\\nW+aMr+pOLm4rCgMfPD30UVdcmza+dPfl7A3/YZ5UjALOqjVMmwcUxmh1k5yL9QRo\\n1LNLCGkwd0hfgT35Y9sC0CDxD3aOesaz0oP9dkGETpcv8nMW4VxWHvOekup1gqAi\\nEn1VBat6qVGjwBNKAVkq75Q8P477DyT+t9NRs9IW68ZQXvR+VQvofDNDk8PshXVQ\\nMjesEgQHs7bIhTb6hAmGJsQM97yBAA6+EEGGqvLTZDDXjTAtdNZpjml0jaaMnURl\\nzF+qh08CAwEAATANBgkqhkiG9w0BAQsFAAOCAQEAjdfHjKlrt7mV0MomYO7KkuCc\\naCscPAN74UZaCMRE5pXixeQVctsWE/KI7KdmJwZWqZvQrb/AX4VwZu5A1zcDNOJ6\\nB7UaDePCMBXRPcyUAAWWwr0AtV0JkEei3d2TbqiPXqlCM1fvvkKQqGZxa61CvSdN\\nz2XmY9W09gbAgkMx3svv6MHpZlJuWY8OZVr0ID1hW+ajEoCf5Adv2Iwuogg/Hs9D\\nlhhvYg4GzU/qWE9vFYO52UqtVPfrzQZTPBQE5Hrg0a32HBOwL3vu0ms2gf1lEt23\\nEf/8TZA5kT/0bMYlB6heGjIKEC90tEv645jbkgJoCI+GgazTTe9wYHXmgz9oPw==\\n-----END CERTIFICATE-----\\n\",\r\n   \r\n    \"partnerDomain\": \"AUTH\",\r\n    \"partnerId\": \"mpartner-default-abis\"\r\n   \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/partnermanager/partners/certificate/upload",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"partnermanager",
+						"partners",
+						"certificate",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

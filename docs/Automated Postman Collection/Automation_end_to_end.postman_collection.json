@@ -1,0 +1,4644 @@
+{
+	"info": {
+		"_postman_id": "e0e3d7f1-70bd-4795-9a6f-12ab4b183814",
+		"name": "Automation_end_to_end",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication and Get Certs",
+			"item": [
+				{
+					"name": "Authentication Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"ida\",\r\n    \"clientId\": \"mosip-ida-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n\t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"authmanager",
+								"authenticate",
+								"clientidsecretkey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get IDA-FIR cert",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.certificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"IDA-FIRcert\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/idauthentication/v1/internal/getCertificate?applicationId=IDA&referenceId=IDA-FIR",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idauthentication",
+								"v1",
+								"internal",
+								"getCertificate"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "IDA"
+								},
+								{
+									"key": "referenceId",
+									"value": "IDA-FIR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading IDA-FIR cert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"certData\": {{IDA-FIRcert}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/uploadIDACertificate?certificateType=IDA_FIR",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"uploadIDACertificate"
+							],
+							"query": [
+								{
+									"key": "certificateType",
+									"value": "IDA_FIR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get PARTNER cert",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.certificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"PARTNERcert\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/idauthentication/v1/internal/getCertificate?applicationId=IDA&referenceId=PARTNER",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idauthentication",
+								"v1",
+								"internal",
+								"getCertificate"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "IDA"
+								},
+								{
+									"key": "referenceId",
+									"value": "PARTNER"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading IDA-PARTNER cert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"certData\": {{PARTNERcert}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/uploadIDACertificate?certificateType=PARTNER",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"uploadIDACertificate"
+							],
+							"query": [
+								{
+									"key": "certificateType",
+									"value": "PARTNER"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Internal Cert",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.certificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"internalcert\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/idauthentication/v1/internal/getCertificate?applicationId=IDA&referenceId=INTERNAL",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idauthentication",
+								"v1",
+								"internal",
+								"getCertificate"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "IDA"
+								},
+								{
+									"key": "referenceId",
+									"value": "INTERNAL"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST internal cert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"certData\":{{internalcert}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/uploadIDACertificate?certificateType=INTERNAL",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"uploadIDACertificate"
+							],
+							"query": [
+								{
+									"key": "certificateType",
+									"value": "INTERNAL"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Creating/publishing policy",
+			"item": [
+				{
+					"name": "PartnerMgmt Auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"string\",\n  \"metadata\": {},\n  \"request\": {\n    \"appId\": \"partner\",\n    \"password\": \"Techno@123\",\n    \"userName\": \"110068\"\n  },\n  \"requesttime\": \"{{requesttime}}\",\n  \"version\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v1/authmanager/authenticate/useridPwd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"authmanager",
+								"authenticate",
+								"useridPwd"
+							]
+						},
+						"description": "RegClient Auth"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Policy Group",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('adding policy group',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('policygroupname',response.name);\r",
+									"})\r",
+									"pm.test('adding policy id',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('policygroupID',response.id);\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"desc\": \"PolicyGroup\",\r\n    \"name\": \"{{$randomInt}}\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/policymanager/policies/group/new",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"policymanager",
+								"policies",
+								"group",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Define Auth Policy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('adding policy name',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('policyname',response.name);\r",
+									"})\r",
+									"pm.test('adding policy id',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('policyID',response.id);\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"\r",
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"desc\": \"Auth Policy\",\r\n    \"name\": \"policy {{$randomInt}}\",\r\n    \"version\" : \"1.0\",\r\n    \"policies\": {\r\n      \"allowedAuthTypes\": [\r\n        {\r\n          \"authSubType\": \"IRIS\",\r\n          \"authType\": \"bio\",\r\n          \"mandatory\": false\r\n        },\r\n        {\r\n          \"authSubType\": \"FINGER\",\r\n          \"authType\": \"bio\",\r\n          \"mandatory\": false\r\n        },\r\n        {\r\n          \"authSubType\": \"FACE\",\r\n          \"authType\": \"bio\",\r\n          \"mandatory\": false\r\n        },\r\n        {\r\n          \"authSubType\": \"\",\r\n          \"authType\": \"otp\",\r\n          \"mandatory\": false\r\n        },\r\n        {\r\n           \"authSubType\": \"\",\r\n           \"authType\": \"otp-request\",\r\n           \"mandatory\": false\r\n        },       \r\n        {\r\n          \"authSubType\": \"\",\r\n          \"authType\": \"kyc\",\r\n          \"mandatory\": false\r\n        },\r\n        {\r\n          \"authSubType\": \"\",\r\n          \"authType\": \"demo\",\r\n          \"mandatory\": false\r\n        }         \r\n      ],\r\n      \"allowedKycAttributes\": [\r\n        {\r\n          \"attributeName\": \"fullName\"\r\n        },\r\n         {\r\n          \"attributeName\": \"gender\"\r\n        },\r\n         {\r\n          \"attributeName\": \"residenceStatus\"\r\n        },\r\n        {\r\n          \"attributeName\": \"dateOfBirth\"\r\n        },\r\n        {\r\n          \"attributeName\": \"photo\"\r\n        }\r\n      ],\r\n     \"authTokenType\": \"policy\"      \r\n    },\r\n    \"policyGroupName\": \"{{policygroupname}}\",\r\n    \"policyType\": \"Auth\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/policymanager/policies",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"policymanager",
+								"policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publish Policy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/policymanager/policies/{{policyID}}/group/{{policygroupID}}/publish",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"policymanager",
+								"policies",
+								"{{policyID}}",
+								"group",
+								"{{policygroupID}}",
+								"publish"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RELYING PARTY",
+			"item": [
+				{
+					"name": "PartnerMgmt Auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"string\",\n  \"metadata\": {},\n  \"request\": {\n    \"appId\": \"partner\",\n    \"password\": \"Techno@123\",\n    \"userName\": \"110068\"\n  },\n  \"requesttime\": \"{{requesttime}}\",\n  \"version\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v1/authmanager/authenticate/useridPwd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"authmanager",
+								"authenticate",
+								"useridPwd"
+							]
+						},
+						"description": "RegClient Auth"
+					},
+					"response": []
+				},
+				{
+					"name": "Partner Self Registration - Auth Partner Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const number = pm.variables.replaceIn('{{$randomInt}}') ;\r",
+									"pm.environment.set(\"PARTNERID\",number);\r",
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('PARTNERID',response.partnerId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"address\": \"testaddrd\",\r\n    \"contactNumber\": \"9232121222\",\r\n    \"emailId\": \"{{$randomEmail}}\",\r\n    \"organizationName\": \"{{PARTNERID}}\",\r\n    \"partnerId\": \"{{PARTNERID}}\",\r\n    \"partnerType\": \"Auth_Partner\",\r\n    \"policyGroup\": \"{{policygroupname}}\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL CERTIFICATES RP",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.caCertificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"CACERT\",data);\r",
+									"var data2 = JSON.stringify(jsonData.interCertificate);\r",
+									"console.log(data2);\r",
+									"pm.environment.set(\"INTERCERT\",data2);\r",
+									"var data3 = JSON.stringify(jsonData.partnerCertificate);\r",
+									"console.log(data3);\r",
+									"pm.environment.set(\"PARTNERCERT\",data3);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/generatePartnerKeys?partnerName={{PARTNERID}}&partnerType=RELYING_PARTY",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"generatePartnerKeys"
+							],
+							"query": [
+								{
+									"key": "partnerName",
+									"value": "{{PARTNERID}}"
+								},
+								{
+									"key": "partnerType",
+									"value": "RELYING_PARTY"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading CACERT",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{CACERT}},\r\n    \"partnerDomain\": \"Auth\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading INTERCERT",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{INTERCERT}},\r\n    \"partnerDomain\": \"Auth\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOADING PARTNER CERT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.signedCertificateData);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"SIGNEDPCERT\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{PARTNERCERT}},\r\n    \"partnerDomain\": \"Auth\",\r\n    \"partnerId\": \"{{PARTNERID}}\"\r\n \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authentication Copy 2",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"ida\",\r\n    \"clientId\": \"mosip-ida-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n\t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"authmanager",
+								"authenticate",
+								"clientidsecretkey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ROOT CERT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.certificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"ROOTCERT\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/getCertificate?applicationId=ROOT",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"getCertificate"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ROOT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading ROOT cert",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{ROOTCERT}},\r\n    \"partnerDomain\": \"Auth\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PMS CERT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.certificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"PMSCERT\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/getCertificate?applicationId=PMS",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"getCertificate"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "PMS"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading PMS cert",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{PMSCERT}},\r\n    \"partnerDomain\": \"Auth\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOADING SIGNED PARTNER CERT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"certData\": {{SIGNEDPCERT}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/updatePartnerCertificate?partnerType=RELYING_PARTY",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"updatePartnerCertificate"
+							],
+							"query": [
+								{
+									"key": "partnerType",
+									"value": "RELYING_PARTY"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOAD CERTIFICATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{SIGNEDPCERT}},\r\n    \"partnerDomain\": \"AUTH\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Relying _party partner _misp",
+			"item": [
+				{
+					"name": "PartnerMgmt Auth Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"string\",\n  \"metadata\": {},\n  \"request\": {\n    \"appId\": \"partner\",\n    \"password\": \"Techno@123\",\n    \"userName\": \"110068\"\n  },\n  \"requesttime\": \"{{requesttime}}\",\n  \"version\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v1/authmanager/authenticate/useridPwd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"authmanager",
+								"authenticate",
+								"useridPwd"
+							]
+						},
+						"description": "RegClient Auth"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit PartnerAPI Key request Copy 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('adding apikeyrequestID',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('APIkey',response.apiRequestId);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"policyName\": \"{{policyname}}\",\r\n    \"useCaseDescription\": \"mapping Partner to policyName\"\r\n  },\r\n  \"requesttime\": \"\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/{{PARTNERID}}/apikey/request",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"{{PARTNERID}}",
+								"apikey",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve/Reject Partner API Key request Copy 2",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"status\": \"Approved\"\r\n  },\r\n  \"requesttime\": \"\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/apikey/{{APIkey}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"apikey",
+								"{{APIkey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get PartnerAPIKEY Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/{{PARTNERID}}/apikey/request",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"{{PARTNERID}}",
+								"apikey",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generateMISPLicense Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('created',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('RPMISPkey',response.licenseKey);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"providerId\": \"{{PARTNERID}}\"\r\n  },\r\n  \"requesttime\": \"2021-03-12T05:19:24.856Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/misps",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"misps"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EKYC",
+			"item": [
+				{
+					"name": "Partner Self Registration - Auth Partner Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const number = pm.variables.replaceIn('{{$randomInt}}') ;\r",
+									"pm.environment.set(\"EKYCPARTNERID\",number);\r",
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('EKYCPARTNERID',response.partnerId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"address\": \"testaddrd\",\r\n    \"contactNumber\": \"9232121222\",\r\n    \"emailId\": \"{{$randomEmail}}\",\r\n    \"organizationName\": \"{{EKYCPARTNERID}}\",\r\n    \"partnerId\": \"{{EKYCPARTNERID}}\",\r\n    \"partnerType\": \"Auth_Partner\",\r\n    \"policyGroup\": \"{{policygroupname}}\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL CERTIFICATES EKYC",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.caCertificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"CACERT\",data);\r",
+									"var data2 = JSON.stringify(jsonData.interCertificate);\r",
+									"console.log(data2);\r",
+									"pm.environment.set(\"INTERCERT\",data2);\r",
+									"var data3 = JSON.stringify(jsonData.partnerCertificate);\r",
+									"console.log(data3);\r",
+									"pm.environment.set(\"PARTNERCERT\",data3);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/generatePartnerKeys?partnerName={{EKYCPARTNERID}}&partnerType=EKYC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"generatePartnerKeys"
+							],
+							"query": [
+								{
+									"key": "partnerName",
+									"value": "{{EKYCPARTNERID}}"
+								},
+								{
+									"key": "partnerType",
+									"value": "EKYC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading CACERT",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{CACERT}},\r\n    \"partnerDomain\": \"Auth\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading INTERCERT",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{INTERCERT}},\r\n    \"partnerDomain\": \"Auth\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOADING PARTNER CERT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.signedCertificateData);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"SIGNEDEKYCCERT\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{PARTNERCERT}},\r\n    \"partnerDomain\": \"Auth\",\r\n    \"partnerId\": \"{{EKYCPARTNERID}}\"\r\n \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOADING SIGNED PARTNER CERT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"certData\": {{SIGNEDEKYCCERT}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/updatePartnerCertificate?partnerType=EKYC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"updatePartnerCertificate"
+							],
+							"query": [
+								{
+									"key": "partnerType",
+									"value": "EKYC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOAD CERTIFICATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{SIGNEDEKYCCERT}},\r\n    \"partnerDomain\": \"AUTH\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EKYC partner _misp Copy",
+			"item": [
+				{
+					"name": "Submit PartnerAPI Key request Copy 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('adding apikeyrequestID',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('EKYCAPIkey',response.apiRequestId);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"policyName\": \"{{policyname}}\",\r\n    \"useCaseDescription\": \"mapping Partner to policyName\"\r\n  },\r\n  \"requesttime\": \"\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/{{EKYCPARTNERID}}/apikey/request",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"{{EKYCPARTNERID}}",
+								"apikey",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve/Reject Partner API Key request Copy 2",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"status\": \"Approved\"\r\n  },\r\n  \"requesttime\": \"\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/apikey/{{EKYCAPIkey}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"apikey",
+								"{{EKYCAPIkey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get PartnerAPIKEY Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/{{EKYCPARTNERID}}/apikey/request",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"{{EKYCPARTNERID}}",
+								"apikey",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generateMISPLicense Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('adding misp key',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('EKYCMISPkey',response.licenseKey);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"providerId\": \"{{EKYCPARTNERID}}\"\r\n  },\r\n  \"requesttime\": \"2021-03-12T05:19:24.856Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/misps",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"misps"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DEVICE",
+			"item": [
+				{
+					"name": "Partner Self Registration - DEVICE",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const number = pm.variables.replaceIn('{{$randomInt}}') ;\r",
+									"pm.environment.set(\"DEVICEPARTNERID\",number);\r",
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('DPARTNERID',response.partnerId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"address\": \"testaddrd\",\r\n    \"contactNumber\": \"9232121222\",\r\n    \"emailId\": \"{{$randomEmail}}\",\r\n    \"organizationName\": \"{{DEVICEPARTNERID}}\",\r\n    \"partnerId\": \"{{DEVICEPARTNERID}}\",\r\n    \"partnerType\": \"Auth_Partner\",\r\n    \"policyGroup\": \"{{policygroupname}}\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL CERTIFICATES DEVICE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.caCertificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"CACERT\",data);\r",
+									"var data2 = JSON.stringify(jsonData.interCertificate);\r",
+									"console.log(data2);\r",
+									"pm.environment.set(\"INTERCERT\",data2);\r",
+									"var data3 = JSON.stringify(jsonData.partnerCertificate);\r",
+									"console.log(data3);\r",
+									"pm.environment.set(\"PARTNERCERT\",data3);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/generatePartnerKeys?partnerName={{DEVICEPARTNERID}}&partnerType=DEVICE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"generatePartnerKeys"
+							],
+							"query": [
+								{
+									"key": "partnerName",
+									"value": "{{DEVICEPARTNERID}}"
+								},
+								{
+									"key": "partnerType",
+									"value": "DEVICE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading CACERT",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{CACERT}},\r\n    \"partnerDomain\": \"DEVICE\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading INTERCERT",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{INTERCERT}},\r\n    \"partnerDomain\": \"DEVICE\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOADING PARTNER CERT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.signedCertificateData);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"SIGNEDDEVICEPCERT\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{PARTNERCERT}},\r\n    \"partnerDomain\": \"DEVICE\",\r\n    \"partnerId\": \"{{DPARTNERID}}\"\r\n \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ROOT CERT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.certificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"DEVICEROOTCERT\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/getCertificate?applicationId=ROOT",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"getCertificate"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ROOT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading ROOT cert Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{DEVICEROOTCERT}},\r\n    \"partnerDomain\": \"DEVICE\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PMS CERT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.certificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"PMSROOTCERT\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/getCertificate?applicationId=PMS",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"getCertificate"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "PMS"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading PMS cert Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{PMSROOTCERT}},\r\n    \"partnerDomain\": \"DEVICE\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOADING SIGNED PARTNER CERT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"certData\": {{SIGNEDDEVICEPCERT}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/updatePartnerCertificate?partnerType=DEVICE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"updatePartnerCertificate"
+							],
+							"query": [
+								{
+									"key": "partnerType",
+									"value": "DEVICE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOAD CERTIFICATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{SIGNEDDEVICEPCERT}},\r\n    \"partnerDomain\": \"DEVICE\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DEVICE partner _misp",
+			"item": [
+				{
+					"name": "Submit PartnerAPI Key request Copy 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('adding apikeyrequestID',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('DEVICEAPIkey',response.apiRequestId);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"policyName\": \"{{policyname}}\",\r\n    \"useCaseDescription\": \"mapping Partner to policyName\"\r\n  },\r\n  \"requesttime\": \"\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/{{DPARTNERID}}/apikey/request",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"{{DPARTNERID}}",
+								"apikey",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve/Reject Partner API Key request Copy 2",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"status\": \"Approved\"\r\n  },\r\n  \"requesttime\": \"\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/apikey/{{DEVICEAPIkey}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"apikey",
+								"{{DEVICEAPIkey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get PartnerAPIKEY Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/{{DPARTNERID}}/apikey/request",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"{{DPARTNERID}}",
+								"apikey",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generateMISPLicense Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('adding misplicense',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('DEVICEMISPkey',response.licenseKey);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"providerId\": \"{{DPARTNERID}}\"\r\n  },\r\n  \"requesttime\": \"2021-03-12T05:19:24.856Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/misps",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"misps"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FTM",
+			"item": [
+				{
+					"name": "Partner Self Registration - Auth Partner Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const number = pm.variables.replaceIn('{{$randomInt}}') ;\r",
+									"pm.environment.set(\"FTMPARTNERID\",number);\r",
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('FTMPARTNERID',response.partnerId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"address\": \"testaddrd\",\r\n    \"contactNumber\": \"9232121222\",\r\n    \"emailId\": \"{{$randomEmail}}\",\r\n    \"organizationName\": \"{{FTMPARTNERID}}\",\r\n    \"partnerId\": \"{{FTMPARTNERID}}\",\r\n    \"partnerType\": \"Auth_Partner\",\r\n    \"policyGroup\": \"{{policygroupname}}\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL CERTIFICATES DEVICE",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.caCertificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"CACERT\",data);\r",
+									"var data2 = JSON.stringify(jsonData.interCertificate);\r",
+									"console.log(data2);\r",
+									"pm.environment.set(\"INTERCERT\",data2);\r",
+									"var data3 = JSON.stringify(jsonData.partnerCertificate);\r",
+									"console.log(data3);\r",
+									"pm.environment.set(\"PARTNERCERT\",data3);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/generatePartnerKeys?partnerName={{FTMPARTNERID}}&partnerType=FTM",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"generatePartnerKeys"
+							],
+							"query": [
+								{
+									"key": "partnerName",
+									"value": "{{FTMPARTNERID}}"
+								},
+								{
+									"key": "partnerType",
+									"value": "FTM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading CACERT",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{CACERT}},\r\n    \"partnerDomain\": \"FTM\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading INTERCERT",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{INTERCERT}},\r\n    \"partnerDomain\": \"FTM\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOADING PARTNER CERT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.signedCertificateData);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"SIGNEDFTMPCERT\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{PARTNERCERT}},\r\n    \"partnerDomain\": \"FTM\",\r\n    \"partnerId\": \"{{FTMPARTNERID}}\"\r\n \r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ROOT CERT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.certificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"FTMROOTCERT\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/getCertificate?applicationId=ROOT",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"getCertificate"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "ROOT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading ROOT cert Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{FTMROOTCERT}},\r\n    \"partnerDomain\": \"FTM\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET PMS CERT",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.certificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"PMSFTMCERT\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/getCertificate?applicationId=PMS",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"getCertificate"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "PMS"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Uploading PMS cert Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{PMSFTMCERT}},\r\n    \"partnerDomain\": \"FTM\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOADING SIGNED PARTNER CERT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"certData\": {{SIGNEDFTMPCERT}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/updatePartnerCertificate?partnerType=FTM",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"updatePartnerCertificate"
+							],
+							"query": [
+								{
+									"key": "partnerType",
+									"value": "FTM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPLOAD CERTIFICATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{SIGNEDFTMPCERT}},\r\n    \"partnerDomain\": \"FTM\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n  }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/ca/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"ca",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FTM partner _misp",
+			"item": [
+				{
+					"name": "Submit PartnerAPI Key request Copy 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('adding apikeyrequestID',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('FTMAPIkey',response.apiRequestId);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"policyName\": \"{{policyname}}\",\r\n    \"useCaseDescription\": \"mapping Partner to policyName\"\r\n  },\r\n  \"requesttime\": \"\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/{{FTMPARTNERID}}/apikey/request",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"{{FTMPARTNERID}}",
+								"apikey",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve/Reject Partner API Key request Copy 2",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"status\": \"Approved\"\r\n  },\r\n  \"requesttime\": \"\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/apikey/{{FTMAPIkey}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"apikey",
+								"{{FTMAPIkey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get PartnerAPIKEY Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/{{FTMPARTNERID}}/apikey/request",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"{{FTMPARTNERID}}",
+								"apikey",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generateMISPLicense Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('adding misp license',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('FTMMISPkey',response.licenseKey);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"providerId\": \"{{FTMPARTNERID}}\"\r\n  },\r\n  \"requesttime\": \"2021-03-12T05:19:24.856Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/misps",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"misps"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUTH using UIN  via OTP",
+			"item": [
+				{
+					"name": "RegProc Auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"regproc\",\r\n    \"clientId\": \"mosip-regproc-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"2020-12-09T04:45:46.079Z\",\r\n  \"version\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"authmanager",
+								"authenticate",
+								"clientidsecretkey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create otp request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable(\"signature\",postman.getResponseHeader(\"signature\") );\r",
+									"var resbody = pm.response.json();\r",
+									"console.log(resbody);\r",
+									"//postman.setEnvironmentVariable(\"reqbody\",resbody);\r",
+									"\r",
+									"//let reqbody=pm.environment.set(\"reqbody\",jsonData);\r",
+									"pm.environment.set(\"reqbodyOTP\", JSON.stringify(resbody));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/createOtpReqest?id={{UIN}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"createOtpReqest"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{UIN}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SendOTP Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRWFE5S0FyUlNpckJaSmVQQ2JyeFh1dl90ODNXUXdPTGVCYV8yWFhoQzk4In0.eyJqdGkiOiI0Y2QyYmVjYy0zNTNmLTQ5ZGYtYjExMy1kZDAyYzE2OGM5YjkiLCJleHAiOjE2MDU3MzY2MTUsIm5iZiI6MCwiaWF0IjoxNjA1NzAwNjE1LCJpc3MiOiJodHRwczovL3FhLm1vc2lwLm5ldC9rZXljbG9hay9hdXRoL3JlYWxtcy9tb3NpcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJiZjdlNGRjYS0yYWRhLTQzN2YtYTdjOC03Mzg1NzMwZjhmMDkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtb3NpcC1yZWdwcm9jLWNsaWVudCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjQwODVmZTc1LTkyYjItNGUyMS05ZjE1LTQwYjA1MThmMDY1NCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiUkVHSVNUUkFUSU9OX1BST0NFU1NPUiIsIlJFR0lTVFJBVElPTl9BRE1JTiIsIkNSRURFTlRJQUxfUkVRVUVTVCIsIkNSRUFURV9TSEFSRSIsIm9mZmxpbmVfYWNjZXNzIiwiREFUQV9SRUFEIiwiTUVUQURBVEFfUkVBRCIsIlBPTElDWU1BTkFHRVIiLCJET0NVTUVOVF9SRUFEIiwidW1hX2F1dGhvcml6YXRpb24iLCJCSU9NRVRSSUNfUkVBRCJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfSwibW9zaXAtcmVncHJvYy1jbGllbnQiOnsicm9sZXMiOlsidW1hX3Byb3RlY3Rpb24iXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6Im1vc2lwLXJlZ3Byb2MtY2xpZW50IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTAuMjQ0LjYuMTY5IiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LW1vc2lwLXJlZ3Byb2MtY2xpZW50IiwiY2xpZW50QWRkcmVzcyI6IjEwLjI0NC42LjE2OSJ9.EDNsIJ9BjUBZAqUGkbe6AmzXTXISNBiXZQNtDQ0Omne4bIFNBD8JGdtc3sMHPhnE0EXRIBerz6gcikc3gcwcXpLlZGzpRqzcNH-S8k4fi47RkW9S7ApmrqNpCxVp3-YMN4VpcXNZDKEkGXsJLlWfEQwAk-5d3q7L9fy_uiBDjdykm3dEB3x3Y6tFUeweE5j9DDB_8dQ9EioapJSc9lwwtgVleO7NhWdbSoXJqntnUTcjJO0EdNG0sfzgltHB3mfKAk0FpNtYmHJdv6kkReJoa40OHbyMDglaXCMKNP6KxB0zogOXkWkzxnb-7QxpSg-nYm9cV1ND1AC9wc2EHQx1-w",
+								"type": "text"
+							},
+							{
+								"key": "signature",
+								"value": "{{signature}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{reqbodyOTP}}"
+						},
+						"url": {
+							"raw": "{{url}}/idauthentication/v1/otp/{{RPMISPkey}}/{{PARTNERID}}/{{APIkey}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idauthentication",
+								"v1",
+								"otp",
+								"{{RPMISPkey}}",
+								"{{PARTNERID}}",
+								"{{APIkey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAuthRequestUIN",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable(\"signature\",postman.getResponseHeader(\"signature\") );\r",
+									"var resbody = pm.response.json();\r",
+									"console.log(resbody);\r",
+									"//postman.setEnvironmentVariable(\"reqbody\",resbody);\r",
+									"\r",
+									"//let reqbody=pm.environment.set(\"reqbody\",jsonData);\r",
+									"pm.environment.set(\"reqbodyAuth\", JSON.stringify(resbody));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"otp\": \"111111\",\r\n  \"transactionID\": \"1234567890\",\r\n  \"timestamp\": \"{{requesttime}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/v1/identity/createAuthRequest?id={{UIN}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"createAuthRequest"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{UIN}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IDAuth Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRWFE5S0FyUlNpckJaSmVQQ2JyeFh1dl90ODNXUXdPTGVCYV8yWFhoQzk4In0.eyJqdGkiOiI0Y2QyYmVjYy0zNTNmLTQ5ZGYtYjExMy1kZDAyYzE2OGM5YjkiLCJleHAiOjE2MDU3MzY2MTUsIm5iZiI6MCwiaWF0IjoxNjA1NzAwNjE1LCJpc3MiOiJodHRwczovL3FhLm1vc2lwLm5ldC9rZXljbG9hay9hdXRoL3JlYWxtcy9tb3NpcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJiZjdlNGRjYS0yYWRhLTQzN2YtYTdjOC03Mzg1NzMwZjhmMDkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtb3NpcC1yZWdwcm9jLWNsaWVudCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjQwODVmZTc1LTkyYjItNGUyMS05ZjE1LTQwYjA1MThmMDY1NCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiUkVHSVNUUkFUSU9OX1BST0NFU1NPUiIsIlJFR0lTVFJBVElPTl9BRE1JTiIsIkNSRURFTlRJQUxfUkVRVUVTVCIsIkNSRUFURV9TSEFSRSIsIm9mZmxpbmVfYWNjZXNzIiwiREFUQV9SRUFEIiwiTUVUQURBVEFfUkVBRCIsIlBPTElDWU1BTkFHRVIiLCJET0NVTUVOVF9SRUFEIiwidW1hX2F1dGhvcml6YXRpb24iLCJCSU9NRVRSSUNfUkVBRCJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfSwibW9zaXAtcmVncHJvYy1jbGllbnQiOnsicm9sZXMiOlsidW1hX3Byb3RlY3Rpb24iXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6Im1vc2lwLXJlZ3Byb2MtY2xpZW50IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJjbGllbnRIb3N0IjoiMTAuMjQ0LjYuMTY5IiwicHJlZmVycmVkX3VzZXJuYW1lIjoic2VydmljZS1hY2NvdW50LW1vc2lwLXJlZ3Byb2MtY2xpZW50IiwiY2xpZW50QWRkcmVzcyI6IjEwLjI0NC42LjE2OSJ9.EDNsIJ9BjUBZAqUGkbe6AmzXTXISNBiXZQNtDQ0Omne4bIFNBD8JGdtc3sMHPhnE0EXRIBerz6gcikc3gcwcXpLlZGzpRqzcNH-S8k4fi47RkW9S7ApmrqNpCxVp3-YMN4VpcXNZDKEkGXsJLlWfEQwAk-5d3q7L9fy_uiBDjdykm3dEB3x3Y6tFUeweE5j9DDB_8dQ9EioapJSc9lwwtgVleO7NhWdbSoXJqntnUTcjJO0EdNG0sfzgltHB3mfKAk0FpNtYmHJdv6kkReJoa40OHbyMDglaXCMKNP6KxB0zogOXkWkzxnb-7QxpSg-nYm9cV1ND1AC9wc2EHQx1-w",
+								"type": "text"
+							},
+							{
+								"key": "signature",
+								"value": "{{signature}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{reqbodyAuth}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/idauthentication/v1/auth/{{RPMISPkey}}/{{PARTNERID}}/{{APIkey}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idauthentication",
+								"v1",
+								"auth",
+								"{{RPMISPkey}}",
+								"{{PARTNERID}}",
+								"{{APIkey}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUth using UIN via Demo",
+			"item": [
+				{
+					"name": "RegProc Auth",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"regproc\",\r\n    \"clientId\": \"mosip-regproc-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"authmanager",
+								"authenticate",
+								"clientidsecretkey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Record from IDRepo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('DateofBirth ',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('DateofBirth', response.identity.dateOfBirth);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/idrepository/v1/identity/idvid/{{UIN}}?type=bio",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idrepository",
+								"v1",
+								"identity",
+								"idvid",
+								"{{UIN}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "bio"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAuthRequestUIN_demo",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable(\"signature\",postman.getResponseHeader(\"signature\") );\r",
+									"var resbody = pm.response.json();\r",
+									"console.log(resbody);\r",
+									"//postman.setEnvironmentVariable(\"reqbody\",resbody);\r",
+									"\r",
+									"//let reqbody=pm.environment.set(\"reqbody\",jsonData);\r",
+									"pm.environment.set(\"reqbody\", JSON.stringify(resbody));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"demographics\": {\r\n        \"dob\": \"{{DateofBirth}}\"\r\n                    },\r\n    \"timestamp\": \"{{requesttime}}\",\r\n    \"transactionID\": \"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/v1/identity/createAuthRequest?id={{UIN}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"createAuthRequest"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{UIN}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IDAuth Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRWFE5S0FyUlNpckJaSmVQQ2JyeFh1dl90ODNXUXdPTGVCYV8yWFhoQzk4In0.eyJqdGkiOiIxNTE4NzE2OS1jZmJmLTQwOTAtOTlkOS0wMzBjYjhiYTAwNTEiLCJleHAiOjE2MDMzOTE1OTUsIm5iZiI6MCwiaWF0IjoxNjAzMzU1NTk1LCJpc3MiOiJodHRwczovL3FhLm1vc2lwLm5ldC9rZXljbG9hay9hdXRoL3JlYWxtcy9tb3NpcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJiZjdlNGRjYS0yYWRhLTQzN2YtYTdjOC03Mzg1NzMwZjhmMDkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtb3NpcC1yZWdwcm9jLWNsaWVudCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjQyZTY0M2UwLWNlMmUtNDVmYi04ZGVjLWZiOWQxZGVkNWUxNCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiUkVHSVNUUkFUSU9OX1BST0NFU1NPUiIsIlJFR0lTVFJBVElPTl9BRE1JTiIsIkNSRURFTlRJQUxfUkVRVUVTVCIsIkNSRUFURV9TSEFSRSIsIm9mZmxpbmVfYWNjZXNzIiwiREFUQV9SRUFEIiwiTUVUQURBVEFfUkVBRCIsIkRPQ1VNRU5UX1JFQUQiLCJ1bWFfYXV0aG9yaXphdGlvbiIsIkJJT01FVFJJQ19SRUFEIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19LCJtb3NpcC1yZWdwcm9jLWNsaWVudCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImNsaWVudElkIjoibW9zaXAtcmVncHJvYy1jbGllbnQiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudEhvc3QiOiIxMC4yNDQuMy40NCIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1tb3NpcC1yZWdwcm9jLWNsaWVudCIsImNsaWVudEFkZHJlc3MiOiIxMC4yNDQuMy40NCJ9.Zg1D74pqKS46cPqU241_vKe7BinyLVqYxU2wE5glSVCEfpntUMi5QgxxMPdVqgi2gk9rFZS4qH3kCsTmptGkAL2LAZpM090tF7NPOtyfskR-pOvaY1nT08DnJkuaxdb9SsfSQRNUOTqqPbqlL08Zl0ItidypP_Ppt6ySH-VjLXWb_lE5TjCjcPHZvT4B24aqAW6_bAeDXJsf9QtX1dgUUA07pUxgWETq7MjtfFa3ZKfLlacm7wpyuYY5r5fBsxcaXAla9tkUjGB7QJK944feUZYuMzqEf-EznV8x2Lv-l7RnHcxWXr9te0ec9o6DqKSrEy030LoW-fMdrnSAWWAi2g"
+							},
+							{
+								"key": "signature",
+								"value": "{{signature}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{reqbody}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/idauthentication/v1/auth/{{RPMISPkey}}/{{PARTNERID}}/{{APIkey}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idauthentication",
+								"v1",
+								"auth",
+								"{{RPMISPkey}}",
+								"{{PARTNERID}}",
+								"{{APIkey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "One Step demo auth",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"demographics\": {\r\n        \"dob\": \"{{DateofBirth}}\"\r\n                    },\r\n    \"timestamp\":\"{{requesttime}}\",\r\n    \"transactionID\": \"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/authenticate?id={{UIN}}&idType=UIN&partnerUrlSuffix={{RPMISPkey}}/{{PARTNERID}}/{{APIkey}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"authenticate"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{UIN}}"
+								},
+								{
+									"key": "idType",
+									"value": "UIN"
+								},
+								{
+									"key": "partnerUrlSuffix",
+									"value": "{{RPMISPkey}}/{{PARTNERID}}/{{APIkey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth using UIN via biometrics.",
+			"item": [
+				{
+					"name": "RegProc Auth Copy",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"regproc\",\r\n    \"clientId\": \"mosip-regproc-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"authmanager",
+								"authenticate",
+								"clientidsecretkey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Record from IDRepo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var bioValue = jsonData.response.documents[0].value;\r",
+									"pm.environment.set(\"bioValue\",bioValue);\r",
+									"console.log (bioValue);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/idrepository/v1/identity/idvid/{{UIN}}?type=bio",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idrepository",
+								"v1",
+								"identity",
+								"idvid",
+								"{{UIN}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "bio"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DownloadCBEFFfile Iris",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const reply = xml2Json(pm.response.text());\r",
+									"for(var i=0;i<13;i++){\r",
+									"var val=reply.BIR.BIR[i].BDBInfo.Subtype;\r",
+									"if (val === \"Right\")\r",
+									"{\r",
+									"var any=reply.BIR.BIR[i].BDB\r",
+									"console.log(any,val);\r",
+									"var rightiris=pm.environment.set(\"rightiris\",any);\r",
+									"}\r",
+									"//else console.log(\"nope,not this one\")\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{{bioValue}}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/v1/identity/decodeFile?fileName=test8",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"decodeFile"
+							],
+							"query": [
+								{
+									"key": "fileName",
+									"value": "test8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAuthRequestUIN Iris",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable(\"signature\",postman.getResponseHeader(\"signature\") );\r",
+									"var resbody = pm.response.json();\r",
+									"pm.environment.set(\"requestbodyiris\", JSON.stringify(resbody));\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"biometrics\": [\r\n\r\n\t\t{\r\n\t\t\t\"data\": {\r\n\t\t\t\t\"bioSubType\": \"Right\",\r\n\t\t\t\t\"bioType\": \"Iris\",\r\n\t\t\t\t\"bioValue\": \"{{rightiris}}\",\r\n\t\t\t\t\"deviceCode\": \"TestDeviceToMapNew2\",\r\n\t\t\t\t\"deviceProviderID\": \"571203\",\r\n\t\t\t\t\"deviceServiceID\": \"\",\r\n\t\t\t\t\"deviceServiceVersion\": \"SB.WIN.001\",\r\n\t\t\t\t\"env\": \"{{url}}\",\r\n\t\t\t\t\"domainUri\": \"{{url}}\",\r\n\t\t\t\t\"digitalId\": {\r\n\t\t\t\t\t\"serialNo\": \"3456789012\",\r\n\t\t\t\t\t\"make\": \"MOSIP\",\r\n\t\t\t\t\t\"model\": \"IRIS01\",\r\n\t\t\t\t\t\"type\": \"Iris\",\r\n\t\t\t\t\t\"deviceSubType\": \"Double\",\r\n\t\t\t\t\t\"deviceProvider\": \"MOSIP\",\r\n\t\t\t\t\t\"deviceProviderId\": \"MOSIP.PROXY.SBI\",\r\n\t\t\t\t\t\"dateTime\": \"{{requesttime}}\"\r\n\t\t\t\t},\r\n\t\t\t\t\"mosipProcess\": \"Auth\",\r\n\t\t\t\t\"purpose\": \"Auth\",\r\n\t\t\t\t\"qualityScore\": 70,\r\n\t\t\t\t\"requestedScore\": 70,\r\n\t\t\t\t\"timestamp\": \"{{requesttime}}\",\r\n\t\t\t\t\"transactionId\": \"1234567890\"\r\n\t\t\t}\r\n\t\t}\r\n\t],\r\n\t\"timestamp\": \"{{requesttime}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/v1/identity/createAuthRequest?id={{UIN}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"createAuthRequest"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{UIN}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IDAuth Request Iris",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRWFE5S0FyUlNpckJaSmVQQ2JyeFh1dl90ODNXUXdPTGVCYV8yWFhoQzk4In0.eyJqdGkiOiIxNTE4NzE2OS1jZmJmLTQwOTAtOTlkOS0wMzBjYjhiYTAwNTEiLCJleHAiOjE2MDMzOTE1OTUsIm5iZiI6MCwiaWF0IjoxNjAzMzU1NTk1LCJpc3MiOiJodHRwczovL3FhLm1vc2lwLm5ldC9rZXljbG9hay9hdXRoL3JlYWxtcy9tb3NpcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJiZjdlNGRjYS0yYWRhLTQzN2YtYTdjOC03Mzg1NzMwZjhmMDkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtb3NpcC1yZWdwcm9jLWNsaWVudCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjQyZTY0M2UwLWNlMmUtNDVmYi04ZGVjLWZiOWQxZGVkNWUxNCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiUkVHSVNUUkFUSU9OX1BST0NFU1NPUiIsIlJFR0lTVFJBVElPTl9BRE1JTiIsIkNSRURFTlRJQUxfUkVRVUVTVCIsIkNSRUFURV9TSEFSRSIsIm9mZmxpbmVfYWNjZXNzIiwiREFUQV9SRUFEIiwiTUVUQURBVEFfUkVBRCIsIkRPQ1VNRU5UX1JFQUQiLCJ1bWFfYXV0aG9yaXphdGlvbiIsIkJJT01FVFJJQ19SRUFEIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19LCJtb3NpcC1yZWdwcm9jLWNsaWVudCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImNsaWVudElkIjoibW9zaXAtcmVncHJvYy1jbGllbnQiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudEhvc3QiOiIxMC4yNDQuMy40NCIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1tb3NpcC1yZWdwcm9jLWNsaWVudCIsImNsaWVudEFkZHJlc3MiOiIxMC4yNDQuMy40NCJ9.Zg1D74pqKS46cPqU241_vKe7BinyLVqYxU2wE5glSVCEfpntUMi5QgxxMPdVqgi2gk9rFZS4qH3kCsTmptGkAL2LAZpM090tF7NPOtyfskR-pOvaY1nT08DnJkuaxdb9SsfSQRNUOTqqPbqlL08Zl0ItidypP_Ppt6ySH-VjLXWb_lE5TjCjcPHZvT4B24aqAW6_bAeDXJsf9QtX1dgUUA07pUxgWETq7MjtfFa3ZKfLlacm7wpyuYY5r5fBsxcaXAla9tkUjGB7QJK944feUZYuMzqEf-EznV8x2Lv-l7RnHcxWXr9te0ec9o6DqKSrEy030LoW-fMdrnSAWWAi2g",
+								"type": "text"
+							},
+							{
+								"key": "Signature",
+								"value": "{{signature}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{requestbodyiris}}"
+						},
+						"url": {
+							"raw": "{{url}}/idauthentication/v1/auth/{{RPMISPkey}}/{{PARTNERID}}/{{APIkey}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idauthentication",
+								"v1",
+								"auth",
+								"{{RPMISPkey}}",
+								"{{PARTNERID}}",
+								"{{APIkey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DownloadCBEFFfile Finger",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const reply = xml2Json(pm.response.text());\r",
+									"for(var i=0;i<13;i++){\r",
+									"var val=reply.BIR.BIR[i].BDBInfo.Subtype;\r",
+									"if (val === \"Left MiddleFinger\")\r",
+									"{\r",
+									"var any=reply.BIR.BIR[i].BDB\r",
+									"console.log(any,val);\r",
+									"var rightiris=pm.environment.set(\"leftmiddle\",any);\r",
+									"}\r",
+									"//else console.log(\"nope,not this one\")\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{{bioValue}}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/v1/identity/decodeFile?fileName=test8",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"decodeFile"
+							],
+							"query": [
+								{
+									"key": "fileName",
+									"value": "test8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAuthRequestUIN Finger",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable(\"signature\",postman.getResponseHeader(\"signature\") );\r",
+									"var resbody = pm.response.json();\r",
+									"pm.environment.set(\"requestbodyfinger\", JSON.stringify(resbody));\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"biometrics\": [\r\n\r\n\t\t{\r\n\t\t\t\"data\": {\r\n\t\t\t\t\"bioSubType\": \"Left MiddleFinger\",\r\n\t\t\t\t\"bioType\": \"Finger\",\r\n\t\t\t\t\"bioValue\": \"{{leftmiddle}}\",\r\n\t\t\t\t\"deviceCode\": \"TestDeviceToMapNew2\",\r\n\t\t\t\t\"deviceProviderID\": \"571203\",\r\n\t\t\t\t\"deviceServiceID\": \"\",\r\n\t\t\t\t\"deviceServiceVersion\": \"SB.WIN.001\",\r\n\t\t\t\t\"env\": \"Staging\",\r\n\t\t\t\t\"domainUri\": \"{{url}}\",\r\n\t\t\t\t\"digitalId\": {\r\n\t\t\t\t\t\"serialNo\": \"SZ5912878988\",\r\n\t\t\t\t\t\"make\": \"mk002\",\r\n\t\t\t\t\t\"model\": \"md002\",\r\n\t\t\t\t\t\"type\": \"Finger\",\r\n\t\t\t\t\t\"deviceSubType\": \"Single\",\r\n\t\t\t\t\t\"deviceProvider\": \"Test001\",\r\n\t\t\t\t\t\"deviceProviderId\": \"571203\",\r\n\t\t\t\t\t\"dateTime\": \"{{requesttime}}\"\r\n\t\t\t\t},\r\n\t\t\t\t\"mosipProcess\": \"Auth\",\r\n\t\t\t\t\"purpose\": \"Auth\",\r\n\t\t\t\t\"qualityScore\": 70,\r\n\t\t\t\t\"requestedScore\": 70,\r\n\t\t\t\t\"timestamp\": \"{{requesttime}}\",\r\n\t\t\t\t\"transactionId\": \"1234567890\"\r\n\t\t\t}\r\n\t\t}\r\n\t],\r\n\t\"timestamp\": \"{{requesttime}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/v1/identity/createAuthRequest?id={{UIN}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"createAuthRequest"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{UIN}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IDAuth Request FInger",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRWFE5S0FyUlNpckJaSmVQQ2JyeFh1dl90ODNXUXdPTGVCYV8yWFhoQzk4In0.eyJqdGkiOiIxNTE4NzE2OS1jZmJmLTQwOTAtOTlkOS0wMzBjYjhiYTAwNTEiLCJleHAiOjE2MDMzOTE1OTUsIm5iZiI6MCwiaWF0IjoxNjAzMzU1NTk1LCJpc3MiOiJodHRwczovL3FhLm1vc2lwLm5ldC9rZXljbG9hay9hdXRoL3JlYWxtcy9tb3NpcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJiZjdlNGRjYS0yYWRhLTQzN2YtYTdjOC03Mzg1NzMwZjhmMDkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtb3NpcC1yZWdwcm9jLWNsaWVudCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjQyZTY0M2UwLWNlMmUtNDVmYi04ZGVjLWZiOWQxZGVkNWUxNCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiUkVHSVNUUkFUSU9OX1BST0NFU1NPUiIsIlJFR0lTVFJBVElPTl9BRE1JTiIsIkNSRURFTlRJQUxfUkVRVUVTVCIsIkNSRUFURV9TSEFSRSIsIm9mZmxpbmVfYWNjZXNzIiwiREFUQV9SRUFEIiwiTUVUQURBVEFfUkVBRCIsIkRPQ1VNRU5UX1JFQUQiLCJ1bWFfYXV0aG9yaXphdGlvbiIsIkJJT01FVFJJQ19SRUFEIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19LCJtb3NpcC1yZWdwcm9jLWNsaWVudCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImNsaWVudElkIjoibW9zaXAtcmVncHJvYy1jbGllbnQiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudEhvc3QiOiIxMC4yNDQuMy40NCIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1tb3NpcC1yZWdwcm9jLWNsaWVudCIsImNsaWVudEFkZHJlc3MiOiIxMC4yNDQuMy40NCJ9.Zg1D74pqKS46cPqU241_vKe7BinyLVqYxU2wE5glSVCEfpntUMi5QgxxMPdVqgi2gk9rFZS4qH3kCsTmptGkAL2LAZpM090tF7NPOtyfskR-pOvaY1nT08DnJkuaxdb9SsfSQRNUOTqqPbqlL08Zl0ItidypP_Ppt6ySH-VjLXWb_lE5TjCjcPHZvT4B24aqAW6_bAeDXJsf9QtX1dgUUA07pUxgWETq7MjtfFa3ZKfLlacm7wpyuYY5r5fBsxcaXAla9tkUjGB7QJK944feUZYuMzqEf-EznV8x2Lv-l7RnHcxWXr9te0ec9o6DqKSrEy030LoW-fMdrnSAWWAi2g",
+								"type": "text"
+							},
+							{
+								"key": "Signature",
+								"value": "{{signature}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{requestbodyfinger}}"
+						},
+						"url": {
+							"raw": "{{url}}/idauthentication/v1/auth/{{RPMISPkey}}/{{PARTNERID}}/{{APIkey}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idauthentication",
+								"v1",
+								"auth",
+								"{{RPMISPkey}}",
+								"{{PARTNERID}}",
+								"{{APIkey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DownloadCBEFFfile FACE",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const reply = xml2Json(pm.response.text());\r",
+									"for(var i=0;i<13;i++){\r",
+									"var val=reply.BIR.BIR[i].BDBInfo.Type;\r",
+									"if (val === \"Face\")\r",
+									"{\r",
+									"var any=reply.BIR.BIR[i].BDB\r",
+									"console.log(any,val);\r",
+									"var rightiris=pm.environment.set(\"facedata\",any);\r",
+									"}\r",
+									"//else console.log(\"nope,not this one\")\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{{bioValue}}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/v1/identity/decodeFile?fileName=test8",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"decodeFile"
+							],
+							"query": [
+								{
+									"key": "fileName",
+									"value": "test8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAuthRequestUIN FACE",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable(\"signature\",postman.getResponseHeader(\"signature\") );\r",
+									"var resbody = pm.response.json();\r",
+									"pm.environment.set(\"facedata\", JSON.stringify(resbody));\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"biometrics\": [\r\n\r\n\t\t{\r\n\t\t\t\"data\": {\r\n\t\t\t\t\"bioSubType\": \"\",\r\n                \"bioType\": \"Face\",\r\n\t\t\t\t\"bioValue\": \"{{facedata}}\",\r\n\t\t\t\t\"deviceCode\": \"TestDeviceToMapNew2\",\r\n                \"deviceProviderID\": \"571203\",\r\n                \"deviceServiceID\": \"\",\r\n                \"deviceServiceVersion\": \"SB.WIN.001\",\r\n                \"env\": \"Staging\",\r\n                \"domainUri\": \"{{url}}\",\r\n                \"digitalId\": {\r\n                    \"serialNo\": \"SZ5912878988\",\r\n                    \"make\": \"mk002\",\r\n                    \"model\": \"md002\",\r\n                    \"type\": \"Face\",\r\n                    \"deviceSubType\": \"Single\",\r\n                    \"deviceProvider\": \"Test001\",\r\n                    \"deviceProviderId\": \"571203\",\r\n                    \"dateTime\": \"{{requesttime}}\"\r\n                },\r\n                \"mosipProcess\": \"Auth\",\r\n                \"purpose\": \"Auth\",\r\n                \"qualityScore\": 70,\r\n                \"requestedScore\": 70,\r\n                \"timestamp\": \"{{requesttime}}\",\r\n                \"transactionId\": \"1234567890\"\r\n\t\t\t}\r\n\t\t}\r\n\t],\r\n\t\"timestamp\": \"{{requesttime}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/v1/identity/createAuthRequest?id={{UIN}}",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"createAuthRequest"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{UIN}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IDAuth Request Face",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRWFE5S0FyUlNpckJaSmVQQ2JyeFh1dl90ODNXUXdPTGVCYV8yWFhoQzk4In0.eyJqdGkiOiIxNTE4NzE2OS1jZmJmLTQwOTAtOTlkOS0wMzBjYjhiYTAwNTEiLCJleHAiOjE2MDMzOTE1OTUsIm5iZiI6MCwiaWF0IjoxNjAzMzU1NTk1LCJpc3MiOiJodHRwczovL3FhLm1vc2lwLm5ldC9rZXljbG9hay9hdXRoL3JlYWxtcy9tb3NpcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJiZjdlNGRjYS0yYWRhLTQzN2YtYTdjOC03Mzg1NzMwZjhmMDkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtb3NpcC1yZWdwcm9jLWNsaWVudCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjQyZTY0M2UwLWNlMmUtNDVmYi04ZGVjLWZiOWQxZGVkNWUxNCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiUkVHSVNUUkFUSU9OX1BST0NFU1NPUiIsIlJFR0lTVFJBVElPTl9BRE1JTiIsIkNSRURFTlRJQUxfUkVRVUVTVCIsIkNSRUFURV9TSEFSRSIsIm9mZmxpbmVfYWNjZXNzIiwiREFUQV9SRUFEIiwiTUVUQURBVEFfUkVBRCIsIkRPQ1VNRU5UX1JFQUQiLCJ1bWFfYXV0aG9yaXphdGlvbiIsIkJJT01FVFJJQ19SRUFEIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19LCJtb3NpcC1yZWdwcm9jLWNsaWVudCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImNsaWVudElkIjoibW9zaXAtcmVncHJvYy1jbGllbnQiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudEhvc3QiOiIxMC4yNDQuMy40NCIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1tb3NpcC1yZWdwcm9jLWNsaWVudCIsImNsaWVudEFkZHJlc3MiOiIxMC4yNDQuMy40NCJ9.Zg1D74pqKS46cPqU241_vKe7BinyLVqYxU2wE5glSVCEfpntUMi5QgxxMPdVqgi2gk9rFZS4qH3kCsTmptGkAL2LAZpM090tF7NPOtyfskR-pOvaY1nT08DnJkuaxdb9SsfSQRNUOTqqPbqlL08Zl0ItidypP_Ppt6ySH-VjLXWb_lE5TjCjcPHZvT4B24aqAW6_bAeDXJsf9QtX1dgUUA07pUxgWETq7MjtfFa3ZKfLlacm7wpyuYY5r5fBsxcaXAla9tkUjGB7QJK944feUZYuMzqEf-EznV8x2Lv-l7RnHcxWXr9te0ec9o6DqKSrEy030LoW-fMdrnSAWWAi2g",
+								"type": "text"
+							},
+							{
+								"key": "Signature",
+								"value": "{{signature}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{facedata}}"
+						},
+						"url": {
+							"raw": "{{url}}/idauthentication/v1/auth/{{RPMISPkey}}/{{PARTNERID}}/{{APIkey}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idauthentication",
+								"v1",
+								"auth",
+								"{{RPMISPkey}}",
+								"{{PARTNERID}}",
+								"{{APIkey}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "One step BIO auth",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"biometrics\": [\r\n\r\n\t\t{\r\n\t\t\t\"data\": {\r\n\t\t\t\t\"bioSubType\": \"Right\",\r\n\t\t\t\t\"bioType\": \"Iris\",\r\n\t\t\t\t\"bioValue\": \"{{rightiris}}\",\r\n\t\t\t\t\"deviceCode\": \"TestDeviceToMapNew2\",\r\n\t\t\t\t\"deviceProviderID\": \"571203\",\r\n\t\t\t\t\"deviceServiceID\": \"\",\r\n\t\t\t\t\"deviceServiceVersion\": \"SB.WIN.001\",\r\n\t\t\t\t\"env\": \"{{url}}\",\r\n\t\t\t\t\"domainUri\": \"{{url}}\",\r\n\t\t\t\t\"digitalId\": {\r\n\t\t\t\t\t\"serialNo\": \"3456789012\",\r\n\t\t\t\t\t\"make\": \"MOSIP\",\r\n\t\t\t\t\t\"model\": \"IRIS01\",\r\n\t\t\t\t\t\"type\": \"Iris\",\r\n\t\t\t\t\t\"deviceSubType\": \"Double\",\r\n\t\t\t\t\t\"deviceProvider\": \"MOSIP\",\r\n\t\t\t\t\t\"deviceProviderId\": \"MOSIP.PROXY.SBI\",\r\n\t\t\t\t\t\"dateTime\": \"{{requesttime}}\"\r\n\t\t\t\t},\r\n\t\t\t\t\"mosipProcess\": \"Auth\",\r\n\t\t\t\t\"purpose\": \"Auth\",\r\n\t\t\t\t\"qualityScore\": 70,\r\n\t\t\t\t\"requestedScore\": 70,\r\n\t\t\t\t\"timestamp\": \"{{requesttime}}\",\r\n\t\t\t\t\"transactionId\": \"1234567890\"\r\n\t\t\t}\r\n\t\t}\r\n\t],\r\n\t\"timestamp\": \"{{requesttime}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/v1/identity/authenticate?id={{UIN}}&idType=UIN&partnerUrlSuffix={{RPMISPkey}}/{{PARTNERID}}/{{APIkey}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"authenticate"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{UIN}}"
+								},
+								{
+									"key": "idType",
+									"value": "UIN"
+								},
+								{
+									"key": "partnerUrlSuffix",
+									"value": "{{RPMISPkey}}/{{PARTNERID}}/{{APIkey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth using UIN via kyc",
+			"item": [
+				{
+					"name": "RegProc Auth",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('timenow', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"regproc\",\r\n    \"clientId\": \"mosip-regproc-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"authmanager",
+								"authenticate",
+								"clientidsecretkey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Record from IDRepo",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('DateofBirth ',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('DateofBirth', response.identity.dateOfBirth);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/idrepository/v1/identity/idvid/{{UIN}}?type=bio",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idrepository",
+								"v1",
+								"identity",
+								"idvid",
+								"{{UIN}}"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "bio"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateeKYCRequestUIN",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setEnvironmentVariable(\"signature3\",postman.getResponseHeader(\"signature\") );\r",
+									"var resbody = pm.response.json();\r",
+									"pm.environment.set(\"reqbodyKYC\", JSON.stringify(resbody));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"demographics\": {\r\n        \"dob\": \"{{DateofBirth}}\"\r\n                    },\r\n    \"timestamp\": \"{{requesttime}}\",\r\n    \"transactionID\": \"1234567890\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/v1/identity/createAuthRequest?id={{UIN}}&isKyc=true",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"v1",
+								"identity",
+								"createAuthRequest"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{UIN}}"
+								},
+								{
+									"key": "isKyc",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EKYC Request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJDRTRGUjgyd0h4b1hmeHYzZHVvUmdxZVlZS2dvSmlwY25DazZpY2NtOFFNIn0.eyJqdGkiOiJlY2M4YzVjYy0xYzg4LTQ3Y2MtYTNhZi0yNWFhNDYzZmRhOTIiLCJleHAiOjE2MDEwNTAwODgsIm5iZiI6MCwiaWF0IjoxNjAxMDE0MDg4LCJpc3MiOiJodHRwczovL2Rldi5tb3NpcC5uZXQva2V5Y2xvYWsvYXV0aC9yZWFsbXMvbW9zaXAiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiOTZkZGIxMzMtNmJiZi00OGUxLTljNDItM2UwMjdlMjJlMDU5IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibW9zaXAtYWRtaW4tY2xpZW50IiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiNDA5Mjk5OWYtZGY1MS00ZDVlLWJiNzctOTNiYjVmZTA2YjQxIiwiYWNyIjoiMSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJTVVBFUkFETUlOIiwiUkVHSVNUUkFUSU9OX09GRklDRVIiLCJDUkVERU5USUFMX1JFUVVFU1QiLCJSRUdJU1RSQVRJT05fT1BFUkFUT1IiLCJSRVNJREVOVCIsIkNSRURFTlRJQUxfSVNTVUFOQ0UiLCJERVZJQ0VfUFJPVklERVIiLCJDRU5UUkFMX0FETUlOIiwiUkVHSVNUUkFUSU9OX1BST0NFU1NPUiIsIlJFR0lTVFJBVElPTl9BRE1JTiIsIlBSRV9SRUdJU1RSQVRJT04iLCJaT05BTF9BRE1JTiIsIklEX0FVVEhFTlRJQ0FUSU9OIiwiUkVHSVNUUkFUSU9OX1NVUEVSVklTT1IiLCJQUkVSRUciLCJvZmZsaW5lX2FjY2VzcyIsIkNFTlRSQUxfQVBQUk9WRVIiLCJaT05BTF9BUFBST1ZFUiIsIkNSRUFURV9TSEFSRSIsInVtYV9hdXRob3JpemF0aW9uIiwiR0xPQkFMX0FETUlOIiwiTUlTUCIsIlBSRV9SRUdJU1RSQVRJT05fQURNSU4iXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJQaXl1cyBUZXN0IiwicHJlZmVycmVkX3VzZXJuYW1lIjoiMTEwMTE5IiwiZ2l2ZW5fbmFtZSI6IlBpeXVzIiwiZmFtaWx5X25hbWUiOiJUZXN0IiwiZW1haWwiOiIxMTAxMTlAeHl6LmNvbSJ9.UXJIUA0MhWJsib4tGCngn4HiI-JesxQKZZ-7CEsNtXMmSieczZ6NAtbEeVwq13wQ8HdbO5-azhODpbExaZpJ5e3RvrlSHmlmn6rC_gZx3nFnP_RvTOGCqIvwjGkgyjs3uVXVBraOmwDxQ1sHQ1YeK27N3S6L8nZU_DGJ6fboi7I1N8BHlyl4cre2-SI9P8w6QXsLRcCDhcQlCfecC1uDVxhrC_0ZmjVyea3zI-zAOgAlPC3mKSvw6R8siFn9ud2FI7V6LRUaT1gIjMZhpcF-TZgUXlwoNmtXOPxhiiL5X3cJv7CzOGRoCZergf3PRh94MDVcdBu85prEbqVt6cyF7g"
+							},
+							{
+								"key": "Signature",
+								"value": "{{signature3}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{{reqbodyKYC}}"
+						},
+						"url": {
+							"raw": "{{url}}/idauthentication/v1/kyc/{{EKYCMISPkey}}/{{EKYCPARTNERID}}/{{EKYCAPIkey}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idauthentication",
+								"v1",
+								"kyc",
+								"{{EKYCMISPkey}}",
+								"{{EKYCPARTNERID}}",
+								"{{EKYCAPIkey}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RESIDENT functionalities",
+			"item": [
+				{
+					"name": "resident auth",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"resident\",\r\n    \"clientId\": \"mosip-resident-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"authmanager",
+								"authenticate",
+								"clientidsecretkey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send OTP 1.1.5",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"mosip.identity.otp.internal\",\r\n  \"individualId\": \"{{UIN}}\",\r\n  \"individualIdType\": \"UIN\",\r\n  \"metadata\": {},\r\n  \"otpChannel\": [\"PHONE\",\"EMAIL\"],\r\n  \"requestTime\": \"{{requesttime}}\",\r\n  \"transactionID\": \"1234567890\",\r\n  \"version\": \"1.0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/resident/v1/req/otp",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"resident",
+								"v1",
+								"req",
+								"otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth- History",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "Authorization=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRWFE5S0FyUlNpckJaSmVQQ2JyeFh1dl90ODNXUXdPTGVCYV8yWFhoQzk4In0.eyJqdGkiOiJiZDM4ODgwMC0xYTAzLTQ0YjYtYTMxYy1jNTdiODU4MTMwNDUiLCJleHAiOjE2MDM1NzIwNTIsIm5iZiI6MCwiaWF0IjoxNjAzNTM2MDUyLCJpc3MiOiJodHRwczovL3FhLm1vc2lwLm5ldC9rZXljbG9hay9hdXRoL3JlYWxtcy9tb3NpcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIzNzQyMjg4Yi00Mjc4LTQ0ZGItOTFjYi1mYjNjNTYxZmZhOGUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtb3NpcC1hZG1pbi1jbGllbnQiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJlM2E2NGNiYy1mNGVkLTRiNjItOWUyYy0yNzRlZjM5YjMxZTMiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIlJFR0lTVFJBVElPTl9QUk9DRVNTT1IiLCJSRUdJU1RSQVRJT05fQURNSU4iLCJSRUdJU1RSQVRJT05fT0ZGSUNFUiIsIlpPTkFMX0FETUlOIiwiUkVHSVNUUkFUSU9OX1NVUEVSVklTT1IiLCJNQVNURVJEQVRBX0FETUlOIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsIkdMT0JBTF9BRE1JTiIsIklORElWSURVQUwiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJUZXN0MTEwMDA2IEF1dG8xMTAwMDYiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiIxMTAwMDYiLCJnaXZlbl9uYW1lIjoiVGVzdDExMDAwNiIsImZhbWlseV9uYW1lIjoiQXV0bzExMDAwNiIsImVtYWlsIjoiMTEwMDA2QHh5ei5jb20ifQ.PI1ww0f8ym4mamZ_4-jmLEltwKLTHOF_LaughtmA1CdORMcHHEIlNPa8kuRKvO1r3vKbqKjXiXyXOywJUhnO16t0EVw6_5WjmkiuQ3sUZToLvVrQXTJ3SrhPmszdvR1F_ZUWqldwdcDGzYyKH994XDRF8k2-trV0DJ9VlxiVua6wnReBzjCQtKOXJm9yXN8DUaN2rAR1Sq7LcTVlwFX2M_4EpzDu_15p6Jjzs-OK0MobD4dquwDNfw_heB1Hf48VVvLBf3KdjJRGW48ekPwX_IdmBeHvZ10_gAgIMoZAqNygw76orBXryPE2a9p_4pm_4Xck2nxeuOU3eLTaNNiCiQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n  \"id\": \"mosip.resident.authhistory\",\r\n\r\n  \"request\": {\r\n\r\n    \"individualId\": \"{{UIN}}\",\r\n\r\n    \"otp\": \"111111\",\r\n\r\n    \"pageFetch\": \"50\",\r\n\r\n    \"pageStart\": \"1\",\r\n\r\n    \"transactionID\": \"1234567890\"\r\n\r\n  },\r\n\r\n  \"requesttime\": \"{{requesttime}}\",\r\n\r\n  \"version\": \"v1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/resident/v1/req/auth-history",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"resident",
+								"v1",
+								"req",
+								"auth-history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate VID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const {response} =pm.response.json();\r",
+									"    pm.environment.set('VID', response.vid);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookies",
+								"value": "Authorization=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJtdm9YQzNvdHpZT1U2QUl0WEZIODZIM1VrU1pOVjNpeG9zVnAzdXVweURRIn0.eyJqdGkiOiIwZDU1ZDZmNi0xMGJjLTQ1OGItYTc3Ni1hOTRlZDUyOGY0OTYiLCJleHAiOjE2MDI2MDMxNjgsIm5iZiI6MCwiaWF0IjoxNjAyNTY3MTY4LCJpc3MiOiJodHRwczovL3FhLm1vc2lwLm5ldC9rZXljbG9hay9hdXRoL3JlYWxtcy9tb3NpcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiI2ZmY1NThlMC0wYzIwLTQxNTYtOWE5MS1hZDZjYjM2MWZmYTIiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtb3NpcC1hZG1pbi1jbGllbnQiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiI1YjRhYTRjZS1mZmJmLTRjM2ItODgwNS1lYzFhZjkxYjQzMDIiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIlJFR0lTVFJBVElPTl9BRE1JTiIsIlJFR0lTVFJBVElPTl9PRkZJQ0VSIiwiUkVHSVNUUkFUSU9OX1NVUEVSVklTT1IiLCJaT05BTF9BRE1JTiIsIk1BU1RFUkRBVEFfQURNSU4iLCJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIiwiR0xPQkFMX0FETUlOIiwiSU5ESVZJRFVBTCJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoicHJvZmlsZSBlbWFpbCIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwibmFtZSI6IlRlc3QxMTAwMDYgQXV0bzExMDAwNiIsInByZWZlcnJlZF91c2VybmFtZSI6IjExMDAwNiIsImdpdmVuX25hbWUiOiJUZXN0MTEwMDA2IiwiZmFtaWx5X25hbWUiOiJBdXRvMTEwMDA2IiwiZW1haWwiOiIxMTAwMDZAeHl6LmNvbSJ9.MED2OvCIgs8aL2z9zPfvwxvCYU-zuywD5Mp9Z43nDwmYWbRBRp3jq2Y4JuY5uXFU-P-eC4FSER5213dWFOFOs6wF_eV9OP7r7eb397Nclq1N63Hsii1qvgPJ-NJ2q_ZjGucFJFRAj-WBVMsT4c2k_2AT0cCk4j8ZGoCIh2CJZSvH1QgOrU6_iEsgyc11uPZB9rxeYx2v-RQNgs0DD09K2hN5i25KIJtSctagQ0kyCHwESbU9LwtZhRbXIK1ph1capG8Wa_TNdAjWCGF6A7P109oJx-GqYqtjn8OWsn6iSkVX4h2tS9yzzJOHGKoJoXSLUGGXZJo_ZJ-2Vxr1a_vppg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"mosip.resident.vid\",\r\n  \"request\": {\r\n \"individualId\": \"{{UIN}}\",\r\n    \"individualIdType\": \"UIN\",\r\n    \"otp\": \"111111\",\r\n    \"transactionID\": \"1234567890\",\r\n    \"vidType\": \"Temporary\"\r\n  },\r\n  \"requesttime\": \"2020-09-30T06:20:22.404Z\",\r\n  \"version\": \"v1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/resident/v1/vid",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"resident",
+								"v1",
+								"vid"
+							]
+						},
+						"description": "1) perpetual VID is generated new number everytime you generated VID, by revoking the OLD one automatically.\r\n2) "
+					},
+					"response": []
+				},
+				{
+					"name": "Revoke VID",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"mosip.resident.vidstatus\",\r\n  \"version\": \"v1\",\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"request\": {\r\n  \"transactionID\": \"1234567890\",\r\n  \"individualId\": \"{{VID}}\",\r\n  \"individualIdType\": \"VID\",\r\n  \"otp\": \"111111\",\r\n  \"vidStatus\": \"REVOKED\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/resident/v1/vid/{{VID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"resident",
+								"v1",
+								"vid",
+								"{{VID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth-lock[BIO/DEMO/OTP]",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"mosip.resident.authlock\",\r\n  \"version\": \"v1\",\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"request\": {\r\n  \"transactionID\": \"1234567890\",\r\n \"individualId\": \"{{UIN}}\",\r\n  \"individualIdType\": \"UIN\",\r\n  \"otp\": \"111111\",\r\n  \"authType\": [\"demo\"]\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/resident/v1/req/auth-lock",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"resident",
+								"v1",
+								"req",
+								"auth-lock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "auth-unlock[BIO/DEMO/OTP]",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"mosip.resident.authunlock\",\r\n  \"version\": \"v1\",\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"request\": {\r\n  \"transactionID\": \"1234567890\",\r\n  \"individualId\": \"{{UIN}}\",\r\n    \"individualIdType\": \"UIN\",\r\n  \"otp\": \"111111\",\r\n  \"authType\": [\"demo\"]\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/resident/v1/req/auth-unlock",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"resident",
+								"v1",
+								"req",
+								"auth-unlock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update UIN",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRWFE5S0FyUlNpckJaSmVQQ2JyeFh1dl90ODNXUXdPTGVCYV8yWFhoQzk4In0.eyJqdGkiOiI4ZWRkNjU0MS0zODNiLTQxNTQtYTVlZS0wYjVlYzk2Y2E5YmMiLCJleHAiOjE2MDQ1OTM5NzQsIm5iZiI6MCwiaWF0IjoxNjA0NTU3OTc0LCJpc3MiOiJodHRwczovL3FhLm1vc2lwLm5ldC9rZXljbG9hay9hdXRoL3JlYWxtcy9tb3NpcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJkMDdhZDM1Mi1lMmU3LTQ0NDYtOTFlZC0yNTliYmViNTQ0YzgiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtb3NpcC1hZG1pbi1jbGllbnQiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJiMDkwY2EzNS02MzY1LTQ1MjEtOGM1MS0wM2Q4ZjQ4NDhhZjQiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIkNSRURFTlRJQUxfUkVRVUVTVCIsIkNSRURFTlRJQUxfSVNTVUFOQ0UiLCJSRUdJU1RSQVRJT05fUFJPQ0VTU09SIiwiUkVHSVNUUkFUSU9OX0FETUlOIiwiUFJFX1JFR0lTVFJBVElPTiIsIlJFR0lTVFJBVElPTl9TVVBFUlZJU09SIiwiWk9OQUxfQURNSU4iLCJJRF9BVVRIRU5USUNBVElPTiIsIlBNU19VU0VSIiwiQ1JFQVRFX1NIQVJFIiwib2ZmbGluZV9hY2Nlc3MiLCJaT05BTF9BUFBST1ZFUiIsIlBBUlRORVJfQURNSU4iLCJ1bWFfYXV0aG9yaXphdGlvbiIsIkdMT0JBTF9BRE1JTiIsIk1JU1AiLCJQQVJUTkVSIiwiU1VQRVJBRE1JTiIsIlJFU0lERU5UIiwiUEFSVE5FUk1BTkFHRVIiLCJERVZJQ0VfUFJPVklERVIiLCJDRU5UUkFMX0FETUlOIiwiUFJFUkVHIiwiQ0VOVFJBTF9BUFBST1ZFUiIsIlBPTElDWU1BTkFHRVIiLCJQUkVfUkVHSVNUUkFUSU9OX0FETUlOIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiUGl5dXMgVGVzdCIsInByZWZlcnJlZF91c2VybmFtZSI6IjExMDExOSIsImdpdmVuX25hbWUiOiJQaXl1cyIsImZhbWlseV9uYW1lIjoiVGVzdCIsImVtYWlsIjoiMTEwMTE5QHh5ei5jb20ifQ.Dtd9oAF7uzyvdcQj9PU7BDUI4KXppTQS6B_NVVHU0VTY3c5VMs1eGB27Zze5Y1tJXnWVZM-Ibi3lNYAAmu2byNb60Hl4WBKIJX4a5k5jUuDf5p1NddF7Wxm11as9MFnRFN_VsG2wTvtSH84sYP-attmjY26ojrQFgNapxiYJVIagLZ9DlwkilV-t6kEiEMk_jTxTfjm6NUOlcWM_yEQe_DxaXzWtFKJ28txgjJ7V-FsmAVRXZYSmgAGg6pNoj1dH0c07l5D0tyLt3YNSB9UcoF6uItsYqFHpXje0BHcW2lHin1b12wg22pcpRp6LOV3EwaJ-U8yD-Jt3-xwITok7EA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": \"mosip.resident.updateuin\",\r\n\t\"version\": \"v1\",\r\n\t\"requesttime\": \"{{requesttime}}\",\r\n\t\"request\": {\r\n\t\t\"transactionID\": \"1234567890\",\r\n\t    \"individualId\": \"{{UIN}}\",\r\n\t\t\"individualIdType\": \"UIN\",\r\n\t\t\"otp\": \"111111\",\r\n\t\t\"identityJson\": \"ewoJImlkZW50aXR5IjogewogImFkZHJlc3NMaW5lMSI6IFsKICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICAibGFuZ3VhZ2UiOiAiZW5nIiwKICAgICAgICAgICAgICAgICAgICAidmFsdWUiOiAiTGFuZSAxIgogICAgICAgICAgICAgICAgfQogICAgICAgICAgICBdLAoKCQkiSURTY2hlbWFWZXJzaW9uIjogMC4yLAoJCSJVSU4iOiAiNTgyMDY4NzM2MiIKCX0KfQ==\"\r\n\r\n\t}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/resident/v1/req/update-uin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"resident",
+								"v1",
+								"req",
+								"update-uin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Credential_ Req",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"requestId\",jsonData.response.requestId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRWFE5S0FyUlNpckJaSmVQQ2JyeFh1dl90ODNXUXdPTGVCYV8yWFhoQzk4In0.eyJqdGkiOiJjNGI3OTMyNi00YmEyLTQ2NTctODgxMy0xMTc3Nzc5ZTQ5YTYiLCJleHAiOjE2MDQwNzMwNzYsIm5iZiI6MCwiaWF0IjoxNjA0MDM3MDc2LCJpc3MiOiJodHRwczovL3FhLm1vc2lwLm5ldC9rZXljbG9hay9hdXRoL3JlYWxtcy9tb3NpcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJkMDdhZDM1Mi1lMmU3LTQ0NDYtOTFlZC0yNTliYmViNTQ0YzgiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtb3NpcC1hZG1pbi1jbGllbnQiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiIyMTMwNDFiMy0zZmFhLTRiNjMtOTBlOC0xMTFmNmQ5MzQ4N2UiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIkNSRURFTlRJQUxfUkVRVUVTVCIsIkNSRURFTlRJQUxfSVNTVUFOQ0UiLCJSRUdJU1RSQVRJT05fUFJPQ0VTU09SIiwiUkVHSVNUUkFUSU9OX0FETUlOIiwiUFJFX1JFR0lTVFJBVElPTiIsIlJFR0lTVFJBVElPTl9TVVBFUlZJU09SIiwiWk9OQUxfQURNSU4iLCJJRF9BVVRIRU5USUNBVElPTiIsIlBNU19VU0VSIiwiQ1JFQVRFX1NIQVJFIiwib2ZmbGluZV9hY2Nlc3MiLCJaT05BTF9BUFBST1ZFUiIsIlBBUlRORVJfQURNSU4iLCJ1bWFfYXV0aG9yaXphdGlvbiIsIkdMT0JBTF9BRE1JTiIsIk1JU1AiLCJQQVJUTkVSIiwiU1VQRVJBRE1JTiIsIlJFU0lERU5UIiwiUEFSVE5FUk1BTkFHRVIiLCJERVZJQ0VfUFJPVklERVIiLCJDRU5UUkFMX0FETUlOIiwiUFJFUkVHIiwiQ0VOVFJBTF9BUFBST1ZFUiIsIlBPTElDWU1BTkFHRVIiLCJQUkVfUkVHSVNUUkFUSU9OX0FETUlOIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJuYW1lIjoiUGl5dXMgVGVzdCIsInByZWZlcnJlZF91c2VybmFtZSI6IjExMDExOSIsImdpdmVuX25hbWUiOiJQaXl1cyIsImZhbWlseV9uYW1lIjoiVGVzdCIsImVtYWlsIjoiMTEwMTE5QHh5ei5jb20ifQ.DjmG7tRUQJAYBX4Bo4lNNel0wEcvo0EkTp9aA-sA8FaN1sL7w6tZbKyE05NJ2OiQzHFpSiQy24wwxv5fIQS6QG0Ug7uOewmuHDhjiB-xJGSNQoHlGzI5rqbOR3sUJKxlWxj-jt8MqEiG3EMbZe9Ew1iZt9r_OWTMTYJtg50irQOM3Kkf7ZJHL2-SQS3h5KALDUpjedqtgHJhnP6rdMHGwH6cH2Nsd6pnERGk8Hf8GEdjH4XJN5GRnrV1XG8YWFRjDnw_JaSA8WHfE_3EV6sFjvc1GOgqq833WI2PaHGoGxfstRtxiZxZNAnYovFD9rLEUYUDt6o6-rVQ8kEj6EhcBA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"request\": {\r\n    \"additionalData\": {},\r\n    \"credentialType\": \"euin\",\r\n    \"encrypt\": true,\r\n    \"encryptionKey\": \"abc123\",\r\n    \"individualId\": \"{{UIN}}\",\r\n    \"issuer\": \"mpartner-default-print\",\r\n    \"otp\": \"111111\",\r\n    \"recepiant\": \"\",\r\n    \"sharableAttributes\": [\r\n    ],\r\n    \"transactionID\": \"1234567890\",\r\n    \"user\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"v1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/resident/v1/req/credential",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"resident",
+								"v1",
+								"req",
+								"credential"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Credential Status With reqid",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/resident/v1/req/credential/status/{{requestId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"resident",
+								"v1",
+								"req",
+								"credential",
+								"status",
+								"{{requestId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel The credential req",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/resident/v1/req/credential/cancel{{requestId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"resident",
+								"v1",
+								"req",
+								"credential",
+								"cancel{{requestId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DownLoad EUIN with req",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/resident/v1/req/card/{{requestId}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"resident",
+								"v1",
+								"req",
+								"card",
+								"{{requestId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

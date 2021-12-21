@@ -1,0 +1,1382 @@
+{
+	"info": {
+		"_postman_id": "2101e31e-a17c-44dd-b7b6-69dc540bebbe",
+		"name": "KEY manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Client crypto",
+			"item": [
+				{
+					"name": "signData",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"data\": \"string\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/cssign",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"cssign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifySignature",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"data\": \"string\",\r\n    \"publicKey\": \"string\",\r\n    \"signature\": \"string\",\r\n    \"tpm\": true\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/csverifysign",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"csverifysign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tpmDecrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"publicKey\": \"string\",\r\n    \"tpm\": true,\r\n    \"value\": \"Any String\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/tpmdecrypt",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"tpmdecrypt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tpmEncrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"publicKey\": \"string\",\r\n    \"tpm\": true,\r\n    \"value\": \"Any String\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/tpmencrypt",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"tpmencrypt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEncPublicKey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"serverProfile\": \"string\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/tpmencryption/publickey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"tpmencryption",
+								"publickey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSigningPublicKey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"serverProfile\": \"string\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/tpmsigning/publickey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"tpmsigning",
+								"publickey"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Crypto manager",
+			"item": [
+				{
+					"name": "Encrypt with pin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"data\": \"thisisamerica\",\r\n    \"userPin\": \"A1234\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/encryptWithPin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"encryptWithPin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "decryptWithPin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"data\": \"DbSZS5zoWdK2-8oYzC7TnccJyMWNBcbsg_ywcySEzQSvO6INLUpONr6m0TyZdZS1NTW8CvpBHGdW5W-f1GCcnmAILNbA8mX96g\",\r\n    \"userPin\": \"1234\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/decryptWithPin",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"decryptWithPin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "encrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"aad\": \"pfxeERQk57XJBJ9JF0oBAtrTzofhAPw54HnJtwW36l4=\",\r\n    \"applicationId\": \"REGISTRATION\",\r\n    \"data\": \"aGVsbG9pYW1tYWhp\",\r\n    \"prependThumbprint\": false,\r\n    \"referenceId\": \"REF01\",\r\n    \"salt\": \"YiGFRjiV7WMFIscV\",\r\n    \"timeStamp\": \"2021-06-16T06:12:52.994Z\"\r\n  },\r\n  \"requesttime\": \"2021-06-16T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/encrypt",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"encrypt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Decrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"aad\": \"pfxeERQk57XJBJ9JF0oBAtrTzofhAPw54HnJtwW36l4=\",\r\n    \"applicationId\": \"REGISTRATION\",\r\n    \"data\":\"CC8RPpUoSdUlPMnyT_nPS3RtEZouPjc84n2I-VA37bLDbeVSBs67LNYrFu_vFGcN_t-tkV-fW49SPcOfPGeOUNfqM0jeJwc-ahwVFNvyMXi6m5INTv8hjwBnSrEydGs1wib5eie5WkxhFsdV6i9Zl-ja-1wOu-TjUDf-FgOkxHDZuvSja8e7TvO-pR00xf_Nj-vLcqdoqiREicXZSOYpkQNaRIbrMfT_9fRMCP2yQR5e7u3TX9oPXfusO1qdJfyjNi6_Ije82Z7nBthIUQqIiNgfKTvQYCj6Inbp9pl71K32r-QQfFi_-VEXmqccAYSSE488N6hgnzpu28m6VjuqyxBu6vIQtTbvlmisH45s4HfFRx0T0jvGealaIRx067URI0tFWV9TUExJVFRFUiNVs27dD7Q1YoXGq8s6-JME2fl6jMAqLvCnpfek\",\r\n    \"prependThumbprint\": false,\r\n    \"referenceId\": \"REF01\",\r\n    \"salt\": \"YiGFRjiV7WMFIscV\",\r\n    \"timeStamp\": \"2018-12-10T06:12:52.994Z\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/decrypt",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"decrypt"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Key manager",
+			"item": [
+				{
+					"name": "generateCSR",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"applicationId\": \"KERNEL\",\r\n    \"commonName\": \"MOSIP\",\r\n    \"country\": \"IN\",\r\n    \"location\": \"BANGALORE\",\r\n    \"organization\": \"IIITB\",\r\n    \"organizationUnit\": \"MOSIP-TECH-CENTER\",\r\n    \"referenceId\": \"string\",\r\n    \"state\": \"KA\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/generateCSR",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"generateCSR"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Generate Master Key",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"applicationId\": \"KERNEL\",\r\n    \"commonName\": \"MOSIP\",\r\n    \"country\": \"IN\",\r\n    \"force\": false,\r\n    \"location\": \"BANGALORE\",\r\n    \"organization\": \"IIITB\",\r\n    \"organizationUnit\": \"MOSIP-TECH-CENTER\",\r\n    \"referenceId\": \"string\",\r\n    \"state\": \"KA\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/generateMasterKey/undefined",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"generateMasterKey",
+								"undefined"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCertificate",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/getCertificate?applicationId= &referenceId= ",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"getCertificate"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": " "
+								},
+								{
+									"key": "referenceId",
+									"value": " "
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadCertificate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"applicationId\": \"KERNEL\",\r\n    \"certificateData\": \"string\",\r\n    \"referenceId\": \"string\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/uploadCertificate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"uploadCertificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadOtherDomainCertificate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"applicationId\": \"KERNEL\",\r\n    \"certificateData\": \"string\",\r\n    \"referenceId\": \"string\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/uploadOtherDomainCertificate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"uploadOtherDomainCertificate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "license Key controller",
+			"item": [
+				{
+					"name": "generateLicenseKey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"licenseExpiryTime\": \"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\",\r\n    \"tspId\": \"string\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/license/generate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"license",
+								"generate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "fetchLicenseKeyPermissions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/license/permission?licenseKey=a&tspId=b",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"license",
+								"permission"
+							],
+							"query": [
+								{
+									"key": "licenseKey",
+									"value": "a"
+								},
+								{
+									"key": "tspId",
+									"value": "b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mapLicenseKey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"licenseKey\": \"string\",\r\n    \"permissions\": [\r\n      \"string\"\r\n    ],\r\n    \"tspId\": \"string\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/license/permission",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"license",
+								"permission"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Operation Handler",
+			"item": [
+				{
+					"name": "GET /actuator/auditevents handle",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/auditevents",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"auditevents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/actuator/beans handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/v1/keymanager/actuator/beans",
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"beans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/conditions handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/conditions",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"conditions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/configprops handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/configprops",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"configprops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/env handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/v1/keymanager/actuator/env",
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"env"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /actuator/env handle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"additionalProp1\": \"string\",\r\n  \"additionalProp2\": \"string\",\r\n  \"additionalProp3\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/v1/keymanager/actuator/env",
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"env"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE /actuator/env handle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"additionalProp1\": \"string\",\r\n  \"additionalProp2\": \"string\",\r\n  \"additionalProp3\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/v1/keymanager/actuator/env",
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"env"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/env/{toMatch} handle",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/v1/keymanager/actuator/env/{toMatch}",
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"env",
+								"{toMatch}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/features handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/features",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"features"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/health handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/health",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"health"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/heapdump handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/heapdump",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"heapdump"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/httptrace handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/httptrace",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"httptrace"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/info handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/info",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/loggers handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/loggers",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"loggers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/loggers/{name} handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/loggers/{name}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"loggers",
+								"{name}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /actuator/loggers/{name} handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/v1/keymanager/actuator/loggers/{name}",
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"loggers",
+								"{name}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/mappings handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/mappings",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"mappings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/metrics handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/metrics",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"metrics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/metrics/{requiredMetricName} handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/metrics/{requiredMetricName}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"metrics",
+								"{requiredMetricName}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/prometheus handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/prometheus",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"prometheus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST /actuator/refresh handle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"additionalProp1\": \"string\",\r\n  \"additionalProp2\": \"string\",\r\n  \"additionalProp3\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/refresh",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/scheduledtasks handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/actuator/scheduledtasks",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"scheduledtasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET /actuator/threaddump handle",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/v1/keymanager/actuator/threaddump",
+							"path": [
+								"v1",
+								"keymanager",
+								"actuator",
+								"threaddump"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Partnercert manager",
+			"item": [
+				{
+					"name": "getPartnerCertificate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/getPartnerCertificate/{{partnercertID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"getPartnerCertificate",
+								"{{partnercertID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadCACertificate",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\": \"string\",\r\n    \"partnerDomain\": \"string\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/uploadCACertificate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"uploadCACertificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uploadPartnerCertificate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\": \"string\",\r\n    \"organizationName\": \"string\",\r\n    \"partnerDomain\": \"string\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/uploadPartnerCertificate",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"uploadPartnerCertificate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyCertificateTrust",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\": \"string\",\r\n    \"partnerDomain\": \"string\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/verifyCertificateTrust",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"verifyCertificateTrust"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "signature controller",
+			"item": [
+				{
+					"name": "jwtSign",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"applicationId\": \"KERNEL\",\r\n    \"certificateUrl\": \"string\",\r\n    \"dataToSign\": \"ewogICAiYW55S2V5IjogIlRlc3QgSnNvbiIKfQ\",\r\n    \"includeCertHash\": false,\r\n    \"includeCertificate\": false,\r\n    \"includePayload\": false,\r\n    \"referenceId\": \"SIGN\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/jwtSign",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"jwtSign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "jwtVerify",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"actualData\": \"ewogICAiYW55S2V5IjogIlRlc3QgSnNvbiIKfQ\",\r\n    \"applicationId\": \"KERNEL\",\r\n    \"certificateData\": \"string\",\r\n    \"domain\": \"string\",\r\n    \"jwtSignatureData\": \"eyJhbGciOiJIU.ewogICAiYW55S2V.5IjogIlRlc3QgSnNvbiIKfQ\",\r\n    \"referenceId\": \"SIGN\",\r\n    \"validateTrust\": false\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/jwtVerify",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"jwtVerify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign PDF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"applicationId\": \"REGISTRATION\",\r\n    \"data\": \"string\",\r\n    \"lowerLeftX\": 0,\r\n    \"lowerLeftY\": 0,\r\n    \"pageNumber\": 0,\r\n    \"password\": \"string\",\r\n    \"reason\": \"string\",\r\n    \"referenceId\": \"REF01\",\r\n    \"timeStamp\": \"2018-12-10T06:12:52.994Z\",\r\n    \"upperRightX\": 0,\r\n    \"upperRightY\": 0\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/pdf/sign",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"pdf",
+								"sign"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Token Id generator-controller",
+			"item": [
+				{
+					"name": "generateTokenID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/keymanager/{uin}/{partnercode} ",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"{uin}",
+								"{partnercode} "
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ZK crypto manager",
+			"item": [
+				{
+					"name": "zkEncrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"id\": \"123456789\",\r\n    \"zkDataAttributes\": [\r\n      {\r\n        \"identifier\": \"security\",\r\n        \"value\": \"CnsKIm5hbWUiOiJzZWN1cml0eSIKfQ\"\r\n      }\r\n    ]\r\n  },\r\n  \"requesttime\": \"2021-06-16T12:45:35.248Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/zkEncrypt",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"zkEncrypt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "zkDecrypt",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"id\": \"123456789\",\r\n    \"zkDataAttributes\": [\r\n      {\r\n        \"identifier\": \"security\",\r\n        \"value\": \"AAAEXmXoR4PdT8KbN-Udf2i9O1Sz1As7Z7VWGZixbSpI_TGNgQrqnUX8hiRCggW9mcWb0k0NOtPEncPrKSuz8S7sznts2hR4Ra6PEJ05Srxf6MxKpRLw9dcPL4Zh3A\"\r\n      }\r\n    ]\r\n  },\r\n  \"requesttime\": \"2021-06-16T12:45:35.248Z\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/keymanager/zkDecrypt",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"keymanager",
+								"zkDecrypt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "zkReEncryptRandomKey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/v1/keymanager/zkReEncryptRandomKey?encryptedKey=1",
+							"path": [
+								"v1",
+								"keymanager",
+								"zkReEncryptRandomKey"
+							],
+							"query": [
+								{
+									"key": "encryptedKey",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

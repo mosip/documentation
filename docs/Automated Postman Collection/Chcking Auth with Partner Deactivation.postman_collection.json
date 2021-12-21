@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "28c416a4-ffe2-4676-8337-8fe256a15a9b",
+		"name": "Chcking Auth with Partner Deactivation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PartnerMgmt Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"string\",\n  \"metadata\": {},\n  \"request\": {\n    \"appId\": \"partner\",\n    \"password\": \"Techno@123\",\n    \"userName\": \"110126\"\n  },\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\n  \"version\": \"string\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/useridPwd",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"useridPwd"
+					]
+				},
+				"description": "RegClient Auth"
+			},
+			"response": []
+		},
+		{
+			"name": "Deactivate a partner.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"status\": \"De-Active\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/partnermanager/partners/{{PARTNERID}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"partnermanager",
+						"partners",
+						"{{PARTNERID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegProc Auth",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"regproc\",\r\n    \"clientId\": \"mosip-regproc-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"clientidsecretkey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Record from IDRepo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('DateofBirth ',function(){\r",
+							"    const {response} =pm.response.json();\r",
+							"    pm.environment.set('DateofBirth', response.identity.dateOfBirth);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/idrepository/v1/identity/idvid/{{UIN}}?type=bio",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"idrepository",
+						"v1",
+						"identity",
+						"idvid",
+						"{{UIN}}"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "bio"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateAuthRequestUIN_demo",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"postman.setEnvironmentVariable(\"signature\",postman.getResponseHeader(\"signature\") );\r",
+							"var resbody = pm.response.json();\r",
+							"console.log(resbody);\r",
+							"//postman.setEnvironmentVariable(\"reqbody\",resbody);\r",
+							"\r",
+							"//let reqbody=pm.environment.set(\"reqbody\",jsonData);\r",
+							"pm.environment.set(\"reqbody\", JSON.stringify(resbody));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"demographics\": {\r\n        \"dob\": \"{{DateofBirth}}\"\r\n                    },\r\n    \"timestamp\": \"{{requesttime}}\",\r\n    \"transactionID\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/v1/identity/createAuthRequest?id={{UIN}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"identity",
+						"createAuthRequest"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{UIN}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IDAuth Request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRWFE5S0FyUlNpckJaSmVQQ2JyeFh1dl90ODNXUXdPTGVCYV8yWFhoQzk4In0.eyJqdGkiOiIxNTE4NzE2OS1jZmJmLTQwOTAtOTlkOS0wMzBjYjhiYTAwNTEiLCJleHAiOjE2MDMzOTE1OTUsIm5iZiI6MCwiaWF0IjoxNjAzMzU1NTk1LCJpc3MiOiJodHRwczovL3FhLm1vc2lwLm5ldC9rZXljbG9hay9hdXRoL3JlYWxtcy9tb3NpcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJiZjdlNGRjYS0yYWRhLTQzN2YtYTdjOC03Mzg1NzMwZjhmMDkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtb3NpcC1yZWdwcm9jLWNsaWVudCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjQyZTY0M2UwLWNlMmUtNDVmYi04ZGVjLWZiOWQxZGVkNWUxNCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiUkVHSVNUUkFUSU9OX1BST0NFU1NPUiIsIlJFR0lTVFJBVElPTl9BRE1JTiIsIkNSRURFTlRJQUxfUkVRVUVTVCIsIkNSRUFURV9TSEFSRSIsIm9mZmxpbmVfYWNjZXNzIiwiREFUQV9SRUFEIiwiTUVUQURBVEFfUkVBRCIsIkRPQ1VNRU5UX1JFQUQiLCJ1bWFfYXV0aG9yaXphdGlvbiIsIkJJT01FVFJJQ19SRUFEIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19LCJtb3NpcC1yZWdwcm9jLWNsaWVudCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImNsaWVudElkIjoibW9zaXAtcmVncHJvYy1jbGllbnQiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudEhvc3QiOiIxMC4yNDQuMy40NCIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1tb3NpcC1yZWdwcm9jLWNsaWVudCIsImNsaWVudEFkZHJlc3MiOiIxMC4yNDQuMy40NCJ9.Zg1D74pqKS46cPqU241_vKe7BinyLVqYxU2wE5glSVCEfpntUMi5QgxxMPdVqgi2gk9rFZS4qH3kCsTmptGkAL2LAZpM090tF7NPOtyfskR-pOvaY1nT08DnJkuaxdb9SsfSQRNUOTqqPbqlL08Zl0ItidypP_Ppt6ySH-VjLXWb_lE5TjCjcPHZvT4B24aqAW6_bAeDXJsf9QtX1dgUUA07pUxgWETq7MjtfFa3ZKfLlacm7wpyuYY5r5fBsxcaXAla9tkUjGB7QJK944feUZYuMzqEf-EznV8x2Lv-l7RnHcxWXr9te0ec9o6DqKSrEy030LoW-fMdrnSAWWAi2g"
+					},
+					{
+						"key": "signature",
+						"value": "{{signature}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{reqbody}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/idauthentication/v1/auth/{{RPMISPkey}}/{{PARTNERID}}/{{APIkey}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"idauthentication",
+						"v1",
+						"auth",
+						"{{RPMISPkey}}",
+						"{{PARTNERID}}",
+						"{{APIkey}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PartnerMgmt Auth Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"string\",\n  \"metadata\": {},\n  \"request\": {\n    \"appId\": \"partner\",\n    \"password\": \"Techno@123\",\n    \"userName\": \"110126\"\n  },\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\n  \"version\": \"string\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/useridPwd",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"useridPwd"
+					]
+				},
+				"description": "RegClient Auth"
+			},
+			"response": []
+		},
+		{
+			"name": "Reactivate the partner",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"status\": \"Active\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/partnermanager/partners/{{PARTNERID}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"partnermanager",
+						"partners",
+						"{{PARTNERID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "6ad2f388-b5ac-44df-8fef-2acf263c11c6",
+		"name": "AuthManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RegClient Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"mosip.authentication.useridPwd\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"registrationclient\",\r\n    \"password\": \"Techno@123\",\r\n    \"userName\": \"110126\"\r\n  },\r\n  \"requesttime\": \"2020-04-24T12:09:56.303Z\",\r\n  \"version\": \"1.0\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/useridPwd",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"useridPwd"
+					]
+				},
+				"description": "RegClient Auth"
+			},
+			"response": []
+		},
+		{
+			"name": "PartnerMgmt Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"string\",\n  \"metadata\": {},\n  \"request\": {\n    \"appId\": \"partner\",\n    \"password\": \"mosip\",\n    \"userName\": \"110006\"\n  },\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\n  \"version\": \"string\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/useridPwd",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"useridPwd"
+					]
+				},
+				"description": "RegClient Auth"
+			},
+			"response": []
+		},
+		{
+			"name": "RegProc Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"regproc\",\r\n    \"clientId\": \"mosip-regproc-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"clientidsecretkey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegProc Auth Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"regproc\",\r\n    \"clientId\": \"mosip-regproc-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"clientidsecretkey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resident auth",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('timenow', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"resident\",\r\n    \"clientId\": \"mosip-resident-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"clientidsecretkey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IDA Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"admin\",\r\n    \"clientId\": \"mosip-ida-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"clientidsecretkey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RegClient Batch Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"mosip.authentication.useridPwd\",\n  \"metadata\": {},\n  \"request\": {\n    \"clientId\": \"registrationclient_batch_user\",\n    \"secretKey\": \"mosip\",\n    \"appId\": \"REGISTRATIONCLIENT\"\n  },\n  \"requesttime\": \"2019-10-11T06:12:52.994Z\",\n  \"version\": \"1.0\"\n}"
+				},
+				"url": {
+					"raw": "https://nginxtf.southeastasia.cloudapp.azure.com/v1/authmanager/authenticate/clientidsecretkey",
+					"protocol": "https",
+					"host": [
+						"nginxtf",
+						"southeastasia",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"clientidsecretkey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PreReg Batch User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"mosip.authentication.useridPwd\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"preregistration\",\r\n    \"password\": \"b1037efeb700de8164e78ed51c3fe99e924eecd5e1046113e3a9cac56a3c8436\",\r\n    \"userName\": \"prereg_batch_user\"\r\n  },\r\n  \"requesttime\": \"2019-10-14T10:26:43.152Z\",\r\n  \"version\": \"1.0\"\r\n}"
+				},
+				"url": {
+					"raw": "https://nginxtf.southeastasia.cloudapp.azure.com/v1/authmanager/authenticate/useridPwd",
+					"protocol": "https",
+					"host": [
+						"nginxtf",
+						"southeastasia",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"useridPwd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "extint login Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"admin\",\r\n    \"password\": \"Techno@123\",\r\n    \"userName\": \"110136\"\r\n  },\r\n  \"requesttime\": \"2018-12-10T06:12:52.994Z\",\r\n  \"version\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/useridPwd",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"useridPwd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

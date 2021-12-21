@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "27078ae1-4f47-4ca7-b496-b7f5eab2b5dc",
+		"name": "Checking Auth History",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RegProc Authentication Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"regproc\",\r\n    \"clientId\": \"mosip-regproc-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"clientidsecretkey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Record from IDRepo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"var bioValue = jsonData.response.documents[0].value;\r",
+							"pm.environment.set(\"bioValue\",bioValue);\r",
+							"console.log (bioValue);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/idrepository/v1/identity/idvid/{{UIN}}?type=all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"idrepository",
+						"v1",
+						"identity",
+						"idvid",
+						"{{UIN}}"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "all"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DownloadCBEFFfile Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const reply = xml2Json(pm.response.text());\r",
+							"for(var i=0;i<13;i++){\r",
+							"var val=reply.BIR.BIR[i].BDBInfo.Subtype;\r",
+							"if (val === \"Right\")\r",
+							"{\r",
+							"var any=reply.BIR.BIR[i].BDB\r",
+							"console.log(any,val);\r",
+							"var rightiris=pm.environment.set(\"rightiris\",any);\r",
+							"}\r",
+							"//else console.log(\"nope,not this one\")\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{{bioValue}}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/v1/identity/decodeFile?fileName=test8",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"identity",
+						"decodeFile"
+					],
+					"query": [
+						{
+							"key": "fileName",
+							"value": "test8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateAuthRequestUIN Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"postman.setEnvironmentVariable(\"signature\",postman.getResponseHeader(\"signature\") );\r",
+							"var resbody = pm.response.json();\r",
+							"pm.environment.set(\"requestbody\", JSON.stringify(resbody));\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"biometrics\": [\r\n\r\n\t\t{\r\n\t\t\t\"data\": {\r\n\t\t\t\t\"bioSubType\": \"Right\",\r\n\t\t\t\t\"bioType\": \"Iris\",\r\n\t\t\t\t\"bioValue\": \"{{rightiris}}\",\r\n\t\t\t\t\"deviceCode\": \"TestDeviceToMapNew2\",\r\n\t\t\t\t\"deviceProviderID\": \"571203\",\r\n\t\t\t\t\"deviceServiceID\": \"\",\r\n\t\t\t\t\"deviceServiceVersion\": \"SB.WIN.001\",\r\n\t\t\t\t\"env\": \"{{url}}\",\r\n\t\t\t\t\"domainUri\": \"{{url}}\",\r\n\t\t\t\t\"digitalId\": {\r\n\t\t\t\t\t\"serialNo\": \"3456789012\",\r\n\t\t\t\t\t\"make\": \"MOSIP\",\r\n\t\t\t\t\t\"model\": \"IRIS01\",\r\n\t\t\t\t\t\"type\": \"Iris\",\r\n\t\t\t\t\t\"deviceSubType\": \"Double\",\r\n\t\t\t\t\t\"deviceProvider\": \"MOSIP\",\r\n\t\t\t\t\t\"deviceProviderId\": \"MOSIP.PROXY.SBI\",\r\n\t\t\t\t\t\"dateTime\": \"{{requesttime}}\"\r\n\t\t\t\t},\r\n\t\t\t\t\"mosipProcess\": \"Auth\",\r\n\t\t\t\t\"purpose\": \"Auth\",\r\n\t\t\t\t\"qualityScore\": 70,\r\n\t\t\t\t\"requestedScore\": 70,\r\n\t\t\t\t\"timestamp\": \"2021-06-15T12:49:17.773Z\",\r\n\t\t\t\t\"transactionId\": \"1234567890\"\r\n\t\t\t}\r\n\t\t}\r\n\t],\r\n\t\"timestamp\": \"2021-06-15T12:49:17.773Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/v1/identity/createAuthRequest?id={{UIN}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"identity",
+						"createAuthRequest"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "{{UIN}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IDAuth Request Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRWFE5S0FyUlNpckJaSmVQQ2JyeFh1dl90ODNXUXdPTGVCYV8yWFhoQzk4In0.eyJqdGkiOiIxNTE4NzE2OS1jZmJmLTQwOTAtOTlkOS0wMzBjYjhiYTAwNTEiLCJleHAiOjE2MDMzOTE1OTUsIm5iZiI6MCwiaWF0IjoxNjAzMzU1NTk1LCJpc3MiOiJodHRwczovL3FhLm1vc2lwLm5ldC9rZXljbG9hay9hdXRoL3JlYWxtcy9tb3NpcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiJiZjdlNGRjYS0yYWRhLTQzN2YtYTdjOC03Mzg1NzMwZjhmMDkiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtb3NpcC1yZWdwcm9jLWNsaWVudCIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjQyZTY0M2UwLWNlMmUtNDVmYi04ZGVjLWZiOWQxZGVkNWUxNCIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsiUkVHSVNUUkFUSU9OX1BST0NFU1NPUiIsIlJFR0lTVFJBVElPTl9BRE1JTiIsIkNSRURFTlRJQUxfUkVRVUVTVCIsIkNSRUFURV9TSEFSRSIsIm9mZmxpbmVfYWNjZXNzIiwiREFUQV9SRUFEIiwiTUVUQURBVEFfUkVBRCIsIkRPQ1VNRU5UX1JFQUQiLCJ1bWFfYXV0aG9yaXphdGlvbiIsIkJJT01FVFJJQ19SRUFEIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19LCJtb3NpcC1yZWdwcm9jLWNsaWVudCI6eyJyb2xlcyI6WyJ1bWFfcHJvdGVjdGlvbiJdfX0sInNjb3BlIjoiZW1haWwgcHJvZmlsZSIsImNsaWVudElkIjoibW9zaXAtcmVncHJvYy1jbGllbnQiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImNsaWVudEhvc3QiOiIxMC4yNDQuMy40NCIsInByZWZlcnJlZF91c2VybmFtZSI6InNlcnZpY2UtYWNjb3VudC1tb3NpcC1yZWdwcm9jLWNsaWVudCIsImNsaWVudEFkZHJlc3MiOiIxMC4yNDQuMy40NCJ9.Zg1D74pqKS46cPqU241_vKe7BinyLVqYxU2wE5glSVCEfpntUMi5QgxxMPdVqgi2gk9rFZS4qH3kCsTmptGkAL2LAZpM090tF7NPOtyfskR-pOvaY1nT08DnJkuaxdb9SsfSQRNUOTqqPbqlL08Zl0ItidypP_Ppt6ySH-VjLXWb_lE5TjCjcPHZvT4B24aqAW6_bAeDXJsf9QtX1dgUUA07pUxgWETq7MjtfFa3ZKfLlacm7wpyuYY5r5fBsxcaXAla9tkUjGB7QJK944feUZYuMzqEf-EznV8x2Lv-l7RnHcxWXr9te0ec9o6DqKSrEy030LoW-fMdrnSAWWAi2g",
+						"type": "text"
+					},
+					{
+						"key": "Signature",
+						"value": "{{signature}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{{requestbody}}"
+				},
+				"url": {
+					"raw": "{{url}}/idauthentication/v1/auth/{{RPMISPkey}}/{{PARTNERID}}/{{APIkey}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"idauthentication",
+						"v1",
+						"auth",
+						"{{RPMISPkey}}",
+						"{{PARTNERID}}",
+						"{{APIkey}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "resident auth Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"resident\",\r\n    \"clientId\": \"mosip-resident-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"v1",
+						"authmanager",
+						"authenticate",
+						"clientidsecretkey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send OTP 1.1.5 Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"mosip.identity.otp.internal\",\r\n  \"individualId\": \"{{UIN}}\",\r\n  \"individualIdType\": \"UIN\",\r\n  \"metadata\": {},\r\n  \"otpChannel\": [\"EMAIL\"],\r\n  \"requestTime\": \"{{requesttime}}\",\r\n  \"transactionID\": \"1234567890\",\r\n  \"version\": \"1.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/resident/v1/req/otp",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"resident",
+						"v1",
+						"req",
+						"otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Auth- History Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "Authorization=eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJRWFE5S0FyUlNpckJaSmVQQ2JyeFh1dl90ODNXUXdPTGVCYV8yWFhoQzk4In0.eyJqdGkiOiJiZDM4ODgwMC0xYTAzLTQ0YjYtYTMxYy1jNTdiODU4MTMwNDUiLCJleHAiOjE2MDM1NzIwNTIsIm5iZiI6MCwiaWF0IjoxNjAzNTM2MDUyLCJpc3MiOiJodHRwczovL3FhLm1vc2lwLm5ldC9rZXljbG9hay9hdXRoL3JlYWxtcy9tb3NpcCIsImF1ZCI6ImFjY291bnQiLCJzdWIiOiIzNzQyMjg4Yi00Mjc4LTQ0ZGItOTFjYi1mYjNjNTYxZmZhOGUiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJtb3NpcC1hZG1pbi1jbGllbnQiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJlM2E2NGNiYy1mNGVkLTRiNjItOWUyYy0yNzRlZjM5YjMxZTMiLCJhY3IiOiIxIiwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIlJFR0lTVFJBVElPTl9QUk9DRVNTT1IiLCJSRUdJU1RSQVRJT05fQURNSU4iLCJSRUdJU1RSQVRJT05fT0ZGSUNFUiIsIlpPTkFMX0FETUlOIiwiUkVHSVNUUkFUSU9OX1NVUEVSVklTT1IiLCJNQVNURVJEQVRBX0FETUlOIiwib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsIkdMT0JBTF9BRE1JTiIsIklORElWSURVQUwiXX0sInJlc291cmNlX2FjY2VzcyI6eyJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJUZXN0MTEwMDA2IEF1dG8xMTAwMDYiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiIxMTAwMDYiLCJnaXZlbl9uYW1lIjoiVGVzdDExMDAwNiIsImZhbWlseV9uYW1lIjoiQXV0bzExMDAwNiIsImVtYWlsIjoiMTEwMDA2QHh5ei5jb20ifQ.PI1ww0f8ym4mamZ_4-jmLEltwKLTHOF_LaughtmA1CdORMcHHEIlNPa8kuRKvO1r3vKbqKjXiXyXOywJUhnO16t0EVw6_5WjmkiuQ3sUZToLvVrQXTJ3SrhPmszdvR1F_ZUWqldwdcDGzYyKH994XDRF8k2-trV0DJ9VlxiVua6wnReBzjCQtKOXJm9yXN8DUaN2rAR1Sq7LcTVlwFX2M_4EpzDu_15p6Jjzs-OK0MobD4dquwDNfw_heB1Hf48VVvLBf3KdjJRGW48ekPwX_IdmBeHvZ10_gAgIMoZAqNygw76orBXryPE2a9p_4pm_4Xck2nxeuOU3eLTaNNiCiQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"mosip.resident.authhistory\",\r\n  \"version\": \"v1\",\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"request\": {\r\n  \"transactionID\": \"1234567890\",\r\n  \"individualId\": \"{{UIN}}\",\r\n  \"individualIdType\": \"UIN\",\r\n  \"otp\": \"111111\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/resident/v1/req/auth-history",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"resident",
+						"v1",
+						"req",
+						"auth-history"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

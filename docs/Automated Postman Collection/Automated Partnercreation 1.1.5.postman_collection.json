@@ -1,0 +1,706 @@
+{
+	"info": {
+		"_postman_id": "149e8312-f087-4e00-a214-629c56f9b77b",
+		"name": "Automated Partnercreation 1.1.5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Creating partner and MISP",
+			"item": [
+				{
+					"name": "RegProc Authentication",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"appId\": \"regproc\",\r\n    \"clientId\": \"mosip-regproc-client\",\r\n    \"secretKey\": \"abc123\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v1/authmanager/authenticate/clientidsecretkey",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"authmanager",
+								"authenticate",
+								"clientidsecretkey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get UIN from RID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const {response} =pm.response.json();\r",
+									"    pm.environment.set('UIN', response.identity.UIN);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/idrepository/v1/identity/idvid/10002100210000920210616051746?idType=rid",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idrepository",
+								"v1",
+								"identity",
+								"idvid",
+								"10002100210000920210616051746"
+							],
+							"query": [
+								{
+									"key": "idType",
+									"value": "rid"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PartnerMgmt Auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"string\",\n  \"metadata\": {},\n  \"request\": {\n    \"appId\": \"partner\",\n    \"password\": \"Techno@123\",\n    \"userName\": \"110068\"\n  },\n  \"requesttime\": \"{{requesttime}}\",\n  \"version\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/v1/authmanager/authenticate/useridPwd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"authmanager",
+								"authenticate",
+								"useridPwd"
+							]
+						},
+						"description": "RegClient Auth"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Policy Group",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('adding policy group',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('policygroupname',response.name);\r",
+									"})\r",
+									"pm.test('adding policy id',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('policygroupID',response.id);\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									"\r",
+									"//let ts = Math.round((new Date()).getTime() /10000000000 );\r",
+									"//console.log(ts);\r",
+									"//let reqname='policy group'+ \" \"+ts;\r",
+									"//pm.environment.set(\"groupname\",reqname);\r",
+									"const number = pm.variables.replaceIn('{{$randomInt}}') ;\r",
+									"let pgname=\"policy group\"+number ;\r",
+									"pm.environment.set(\"pgname\",pgname);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"desc\": \"Policy Group\",\r\n    \"name\": \"{{pgname}}\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/policymanager/policies/group/new",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"policymanager",
+								"policies",
+								"group",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Define Auth Policy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('adding policy name',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('policyname',response.name);\r",
+									"})\r",
+									"pm.test('adding policy id',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('policyID',response.id);\r",
+									"})\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"desc\": \"Auth Policy\",\r\n    \"name\": \"policy {{$randomInt}}\",\r\n    \"version\" : \"1.0\",\r\n    \"policies\": {\r\n      \"allowedAuthTypes\": [\r\n        {\r\n          \"authSubType\": \"IRIS\",\r\n          \"authType\": \"bio\",\r\n          \"mandatory\": false\r\n        },\r\n        {\r\n          \"authSubType\": \"FINGER\",\r\n          \"authType\": \"bio\",\r\n          \"mandatory\": false\r\n        },\r\n        {\r\n          \"authSubType\": \"FACE\",\r\n          \"authType\": \"bio\",\r\n          \"mandatory\": false\r\n        },\r\n        {\r\n          \"authSubType\": \"\",\r\n          \"authType\": \"otp\",\r\n          \"mandatory\": false\r\n        },\r\n        {\r\n           \"authSubType\": \"\",\r\n           \"authType\": \"otp-request\",\r\n           \"mandatory\": false\r\n        },       \r\n        {\r\n          \"authSubType\": \"\",\r\n          \"authType\": \"kyc\",\r\n          \"mandatory\": false\r\n        },\r\n        {\r\n          \"authSubType\": \"\",\r\n          \"authType\": \"demo\",\r\n          \"mandatory\": false\r\n        }         \r\n      ],\r\n      \"allowedKycAttributes\": [\r\n        {\r\n          \"attributeName\": \"fullName\"\r\n        },\r\n         {\r\n          \"attributeName\": \"gender\"\r\n        },\r\n         {\r\n          \"attributeName\": \"residenceStatus\"\r\n        },\r\n        {\r\n          \"attributeName\": \"dateOfBirth\"\r\n        },\r\n        {\r\n          \"attributeName\": \"photo\"\r\n        }\r\n      ],\r\n     \"authTokenType\": \"policy\"      \r\n    },\r\n    \"policyGroupName\": \"{{policygroupname}}\",\r\n    \"policyType\": \"Auth\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/policymanager/policies",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"policymanager",
+								"policies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publish Policy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/v1/policymanager/policies/{{policyID}}/group/{{policygroupID}}/publish",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"policymanager",
+								"policies",
+								"{{policyID}}",
+								"group",
+								"{{policygroupID}}",
+								"publish"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Partner Self Registration - Auth Partner",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const number = pm.variables.replaceIn('{{$randomInt}}') ;\r",
+									"pm.environment.set(\"PID\",number+0);\r",
+									"const pmail = pm.variables.replaceIn('{{$randomFirstName}}') ;\r",
+									"pm.environment.set(\"pmail\",pmail);\r",
+									"//\r",
+									"const org = pm.variables.replaceIn('{{$randomCompanyName}}') ;\r",
+									"pm.environment.set(\"org\",org);\r",
+									"console.log(org);\r",
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('partnerID',response.partnerId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"address\": \"testaddrd\",\r\n    \"contactNumber\": \"9232121222\",\r\n    \"emailId\": \"{{pmail}}@gmail.com\",\r\n    \"organizationName\": \"IITB\",\r\n    \"partnerId\": \"{{PID}}\",\r\n    \"partnerType\": \"Auth_Partner\",\r\n    \"policyGroup\": \"{{policygroupname}}\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET partner specific certificate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.certificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"partcert\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/idauthentication/v1/internal/getCertificate?applicationId=IDA&referenceId={{partnerID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idauthentication",
+								"v1",
+								"internal",
+								"getCertificate"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "IDA"
+								},
+								{
+									"key": "referenceId",
+									"value": "{{partnerID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adding partner specific cert",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{partcert}},\r\n    \"partnerDomain\": \"AUTH\",\r\n    \"partnerId\": \"{{partnerID}}\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MISP Partner Sellf registration",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"const number = pm.variables.replaceIn('{{$randomInt}}') ;\r",
+									"pm.environment.set(\"PID\",number+0);\r",
+									"const pmail = pm.variables.replaceIn('{{$randomFirstName}}') ;\r",
+									"pm.environment.set(\"pmail\",pmail);\r",
+									"//\r",
+									"const org = pm.variables.replaceIn('{{$randomCompanyName}}') ;\r",
+									"pm.environment.set(\"org\",org);\r",
+									"console.log(org);\r",
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('MISPpartnerID',response.partnerId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"address\": \"testaddrd\",\r\n    \"contactNumber\": \"9232121222\",\r\n    \"emailId\": \"{{pmail}}@gmail.com\",\r\n    \"organizationName\": \"IITB\",\r\n    \"partnerId\": \"{{PID}}\",\r\n    \"partnerType\": \"MISP_Partner\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}//v1/partnermanager/partners",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"",
+								"v1",
+								"partnermanager",
+								"partners"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET MISP partner specific cert",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"var data = JSON.stringify(jsonData.response.certificate);\r",
+									"console.log(data);\r",
+									"pm.environment.set(\"MISPcert\",data);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/idauthentication/v1/internal/getCertificate?applicationId=IDA&referenceId={{MISPpartnerID}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"idauthentication",
+								"v1",
+								"internal",
+								"getCertificate"
+							],
+							"query": [
+								{
+									"key": "applicationId",
+									"value": "IDA"
+								},
+								{
+									"key": "referenceId",
+									"value": "{{MISPpartnerID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST MISP partner specific cert",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"certificateData\":{{MISPcert}},\r\n    \"partnerDomain\": \"AUTH\",\r\n    \"partnerId\": \"{{MISPpartnerID}}\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/certificate/upload",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"certificate",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Genrate MISP license.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('just checking',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('MISPkey',response.licenseKey);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"providerId\": \"{{MISPpartnerID}}\"\r\n  },\r\n  \"requesttime\": \"\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/misps",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"misps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit PartnerAPI Key request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test('just checking',function(){\r",
+									"    const {response} =pm.response.json();\r",
+									"    pm.environment.set('APIkey',response.apiRequestId);\r",
+									"})"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"let pname=pm.environment.get(\"policyname\");\r",
+									"pm.environment.set(\"pname\",pname);\r",
+									"console.log(pname);\r",
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"policyName\": \"{{pname}}\",\r\n    \"useCaseDescription\": \"string\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/{{partnerID}}/apikey/request",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"{{partnerID}}",
+								"apikey",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "approve &  GET apikey",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"postman.setGlobalVariable('requesttime', (new Date()).toISOString());\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"string\",\r\n  \"metadata\": {},\r\n  \"request\": {\r\n    \"status\": \"Approved\"\r\n  },\r\n  \"requesttime\": \"{{requesttime}}\",\r\n  \"version\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/v1/partnermanager/partners/apikey/{{APIkey}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"v1",
+								"partnermanager",
+								"partners",
+								"apikey",
+								"{{APIkey}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
