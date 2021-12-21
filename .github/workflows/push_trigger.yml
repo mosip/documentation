@@ -50,11 +50,11 @@ jobs:
         run: |
           mkdir -p ./${{ matrix.names }}
           array=()
-          file_name=''
           for i in "$(find . -name "openapi.json" -exec readlink -f {} \;)"
           do
-            file_name="${i##*/}"
-            redoc-cli bundle -o ./${{file_name}}.html $i
+            echo "file_name=$(echo ${i##*/})" >> $GITHUB_ENV
+            echo "fname=$(echo ${file_name%.*})" >> $GITHUB_ENV
+            redoc-cli bundle -o ./$fname.html $i
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
