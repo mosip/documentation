@@ -48,13 +48,19 @@ jobs:
       - name: create array of files
         id: create_list
         run: |
+          mkdir -p ./${{ matrix.names }}
           array=()
+          file_name
           for i in "$(find . -name "openapi.json" -exec readlink -f {} \;)"
           do
-            redoc-cli bundle -o ./${{ matrix.names }}.html $i
+            file_name="${i##*/}"
+            fname="${file_name%.*}"
+            redoc-cli bundle -o ./${{ fname }}.html $i
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
+          echo "::set-output name=fname::${fname}"
+          echo "The file name is: ${{ steps.create_list.outputs.fname }}"
 
       - name: display array
         run: |
@@ -64,36 +70,39 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.names }}
-          path: ./${{ matrix.names }}.html
+          path: ./${{ matrix.names }}/
           retention-days: 1
 #
 #      #upload report
 #      - name: Upload report to confluence
 #        run: 'curl  args: -u ''${{secrets.reporting_user}}:${{secrets.reporting_user_secret}}'' --request POST -F file=@./audit-manager/kernel/kernel-auditmanager-service/target/audit-service.html -H ''Accept: application/json'' -H ''X-Atlassian-Token: no-check'' --url https://mosip.atlassian.net/wiki/rest/api/content/45285493/child/attachment'
 #
-#  Upload_to_Documentation:
-#    needs: Generate_Documentation
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Set up JDK 11
-#        uses: actions/setup-java@v1
-#        with:
-#          java-version: 11
-#
-#      - name: Checkout repo
-#        uses: actions/checkout@v2
-#        with:
-#          ref: gh-pages
-#
-#      - name: Download Report Artifact
-#        uses: actions/download-artifact@v2
-#        with:
-#          name: audit-manager
-#          path: ./1.2.0/
-#
-#      - name: Commit changes
-#        uses: EndBug/add-and-commit@v7
-#        with:
-#          default_author: github_actions
-#          message: 'added documentation audit manager'
-#          add: './1.2.0/audit-service.html'
+  Upload_to_Documentation:
+    needs: Generate_Documentation
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        names: [audit-manager]
+    steps:
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+
+      - name: Download Report Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: ${{ matrix.names }}
+          path: ./1.2.0/
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v7
+        with:
+          default_author: github_actions
+          message: 'added documentation'
+          add: './1.2.0/${{ matrix.names }}/*'
