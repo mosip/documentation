@@ -50,6 +50,7 @@ jobs:
         run: |
           mkdir -p ./${{ matrix.names }}
           array=()
+          file_name=''
           for i in "$(find . -name "openapi.json" -exec readlink -f {} \;)"
           do
             file_name="${i##*/}"
