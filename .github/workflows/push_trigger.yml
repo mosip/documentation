@@ -53,7 +53,7 @@ jobs:
           for i in "$(find . -name "openapi.json" -exec readlink -f {} \;)"
           do
             file_name="${i##*/}"
-            fname="${file_name%.*}"
+            fname="${{file_name%.*}}"
             redoc-cli bundle -o ./${{ fname }}.html $i
             array+=$i
           done
