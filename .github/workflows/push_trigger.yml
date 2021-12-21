@@ -55,9 +55,9 @@ jobs:
             file_name="${i##*/}"
             fname="${file_name%.*}"
             redoc-cli bundle -o ./${{ fname }}.html $i
-#            array+=$i
+            array+=$i
           done
-#          echo "::set-output name=array::${array[@]}"
+          echo "::set-output name=array::${array[@]}"
 #          echo "::set-output name=fname::${fname}"
 #          echo "The file name is: ${{ steps.create_list.outputs.fname }}"
 
