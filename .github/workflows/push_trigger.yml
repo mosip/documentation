@@ -44,11 +44,6 @@ jobs:
         run: |
                npm install -g redoc-cli
                find * -name pom.xml -mindepth 3 -maxdepth 5 -execdir mvn -B -Dgpg.skip -DskipTests -Dgpg.skip clean verify -s $GITHUB_WORKSPACE/settings.xml -P openapi-doc-generate-profile \;
-#               find . -name *-openapi.json -exec basename {} \;redoc-cli bundle -o $(find .. -name "*-openapi.json" -exec readlink -f {} \;) ./target/openapi.json
-#               cd ./audit-manager/kernel/kernel-auditmanager-service
-#               mvn -B -Dgpg.skip -DskipTests -Dgpg.skip clean verify --file pom.xml -s $GITHUB_WORKSPACE/settings.xml -P openapi-doc-generate-profile
-#               npm install -g redoc-cli
-#               redoc-cli bundle -o ./target/audit-service.html ./target/openapi.json
 
       - name: create array of files
         id: create_list
@@ -56,6 +51,7 @@ jobs:
           array=()
           for i in "$(find . -name "openapi.json" -exec readlink -f {} \;)"
           do
+            redoc-cli bundle -o ./${{ matrix.names }}.html $i
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
@@ -64,13 +60,12 @@ jobs:
         run: |
           echo "The array is: ${{ steps.create_list.outputs.array }}"
 
-
-#      - name: Upload Report Artifact
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: audit-manager
-#          path: ./audit-manager/kernel/kernel-auditmanager-service/target/audit-service.html
-#          retention-days: 1
+      - name: Upload Report Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.names }}
+          path: ./${{ matrix.names }}.html
+          retention-days: 1
 #
 #      #upload report
 #      - name: Upload report to confluence
