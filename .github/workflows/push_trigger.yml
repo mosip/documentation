@@ -48,16 +48,16 @@ jobs:
       - name: create array of files
         id: create_list
         run: |
-          mkdir -p ./${{ matrix.names }}
+          mkdir -p ./${{ matrix.names }}-report
           array=()
           for i in "$(find . -name "openapi.json" -exec readlink -f {} \;)"
           do
             echo "full path: " $i
-            echo "file_name=$(echo ${i##*/})" >> $GITHUB_ENV
-            echo "file name:   ${i##*/}"
-            echo "fname=$(echo ${file_name%.*})" >> $GITHUB_ENV
-            echo "this is final name:  ${{env.fname}}"
-            redoc-cli bundle -o ./${{env.fname}}.html $i
+            echo "filename=$(echo ${i##*/})" >> $GITHUB_ENV
+            echo "file name:   ${env.filename}"
+            echo "fname=$(echo ${env.filename%.*})" >> $GITHUB_ENV
+            echo "this is final name:  ${env.fname}"
+            redoc-cli bundle -o ./${{ matrix.names }}-report/${{env.fname}}.html $i
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
@@ -71,7 +71,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.names }}
-          path: ./${{ matrix.names }}/
+          path: ./${{ matrix.names }}-report/*.html
           retention-days: 1
 #
 #      #upload report
