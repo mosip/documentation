@@ -56,7 +56,7 @@ jobs:
             echo "file_name=$(echo ${i##*/})" >> $GITHUB_ENV
             echo "file name:   ${i##*/}"
             echo "fname=$(echo ${file_name%.*})" >> $GITHUB_ENV
-            echo "this is final name: ${env.fname%.*}"
+            echo "this is final name:  ${{env.fname}}"
             redoc-cli bundle -o ./${{env.fname}}.html $i
             array+=$i
           done
