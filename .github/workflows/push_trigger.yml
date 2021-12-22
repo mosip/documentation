@@ -54,10 +54,10 @@ jobs:
           do
             echo "full path: " $i
             echo "filename=$(echo ${i##*/})" >> $GITHUB_ENV
-            echo "file name:   ${env.filename}"
-            echo "fname=$(echo ${env.filename%.*})" >> $GITHUB_ENV
-            echo "this is final name:  ${env.fname}"
-            redoc-cli bundle -o ./${{ matrix.names }}-report/${{env.fname}}.html $i
+            echo "file name:   ${filename}"
+            echo "fname=$(echo ${filename%.*})" >> $GITHUB_ENV
+            echo "this is final name:  ${fname}"
+            redoc-cli bundle -o ./${{ matrix.names }}-report/${fname}.html $i
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
