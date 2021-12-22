@@ -56,7 +56,7 @@ jobs:
             FILE_NAME=${i##*/}
             echo "::set-output name=filename::${FILE_NAME}"
             echo "file name is = ${{ steps.create_list.outputs.filename }}"
-            NAME= ${{ steps.create_list.outputs.filename%.* }}
+            NAME= $(${{ steps.create_list.outputs.filename }}%.*)
             echo "::set-output name=name::${NAME}"
             echo "name is = ${{ steps.create_list.outputs.name }}"
             redoc-cli bundle -o ./${{ matrix.names }}-report/${{ steps.create_list.outputs.name }}.html $i
