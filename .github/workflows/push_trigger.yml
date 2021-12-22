@@ -53,11 +53,13 @@ jobs:
           for i in "$(find . -name "openapi.json" -exec readlink -f {} \;)"
           do
             echo "full path: " $i
-            echo "filename=$(echo ${i##*/})" >> $GITHUB_ENV
-            echo "file name:   ${filename}"
-            echo "fname=$(echo ${filename%.*})" >> $GITHUB_ENV
-            echo "this is final name:  ${fname}"
-            redoc-cli bundle -o ./${{ matrix.names }}-report/${fname}.html $i
+            echo "FILE_NAME=${i##*/}" >> $GITHUB_ENV
+#            filename=$(echo ${i##*/})" >> $GITHUB_ENV
+            echo "file name:   $FILE_NAME"
+            echo "NAME=${FILE_NAME%.*}" >> $GITHUB_ENV
+#            echo "fname=$(echo ${filename%.*})" >> $GITHUB_ENV
+            echo "this is final name:  $NAME"
+            redoc-cli bundle -o ./${{ matrix.names }}-report/$NAME.html $i
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
