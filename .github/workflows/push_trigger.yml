@@ -53,10 +53,11 @@ jobs:
           for i in "$(find . -name "openapi.json" -exec readlink -f {} \;)"
           do
             echo "full path " $i
-            echo "::set-output name=filename::${i##*/}"
+            filename=$(i##*/)
+            echo "::set-output name=filename::${filename}"
             echo "file name is = ${{ steps.create_list.outputs.filename }}"
-            NAME= ${{ steps.create_list.outputs.filename }}
-            echo "::set-output name=name::${NAME}"
+            name=$(basename ${steps.create_list.outputs.filename} .json)
+            echo "::set-output name=name::${name}"
             echo "name is = ${{ steps.create_list.outputs.name }}"
             redoc-cli bundle -o ./${{ matrix.names }}-report/${{ steps.create_list.outputs.name }}.html $i
             array+=$i
