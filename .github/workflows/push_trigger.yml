@@ -42,8 +42,8 @@ jobs:
 
       - name: Build with Maven
         run: |
-               npm install -g redoc-cli
-               find * -name pom.xml -mindepth 3 -maxdepth 5 -execdir mvn -B -Dgpg.skip -DskipTests -Dgpg.skip clean verify -s $GITHUB_WORKSPACE/settings.xml -P openapi-doc-generate-profile \;
+          npm install -g redoc-cli
+          find * -name pom.xml -mindepth 3 -maxdepth 5 -execdir mvn -B -Dgpg.skip -DskipTests -Dgpg.skip clean verify -s $GITHUB_WORKSPACE/settings.xml -P openapi-doc-generate-profile \;
 
       - name: create array of files
         id: create_list
@@ -55,10 +55,10 @@ jobs:
             echo "full path " $i
             echo "FILE_NAME=${i##*/}" >> $GITHUB_ENV
 #            filename=$(echo ${i##*/})" >> $GITHUB_ENV
-            echo "File name is " $FILE_NAME
+            echo "$FILE_NAME"
             echo "NAME=${FILE_NAME%.*}" >> $GITHUB_ENV
 #            echo "fname=$(echo ${filename%.*})" >> $GITHUB_ENV
-            echo "name is " $NAME"
+            echo "$NAME"
             redoc-cli bundle -o ./${{ matrix.names }}-report/$NAME.html $i
             array+=$i
           done
