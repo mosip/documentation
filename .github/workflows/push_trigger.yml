@@ -52,7 +52,7 @@ jobs:
           array=()
           for i in "$(find . -name "openapi.json" -exec readlink -f {} \;)"
           do
-            echo $i
+            echo "full path: " $i
             echo "file_name=$(echo ${i##*/})" >> $GITHUB_ENV
             echo "${i##*/}"
             echo "fname=$(echo ${file_name%.*})" >> $GITHUB_ENV
