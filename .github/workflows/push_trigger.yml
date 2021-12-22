@@ -47,20 +47,25 @@ jobs:
 
       - name: create array of files
         id: create_list
+        env:
+          FILE_NAME=''
+          NAME=''
         run: |
           mkdir -p ./${{ matrix.names }}-report
           array=()
           for i in "$(find . -name "openapi.json" -exec readlink -f {} \;)"
           do
             echo "full path " $i
-            echo "FILE_NAME=${i##*/}" >> $GITHUB_ENV
-            echo $FILE_NAME
-            echo "NAME=${FILE_NAME%.*}" >> $GITHUB_ENV
+            echo "FILE_NAME=${{i##*/}}" >> $GITHUB_ENV
+            echo ${{env.FILE_NAME}}
+            echo "NAME=${{env.FILE_NAME%.*}}" >> $GITHUB_ENV
             echo $NAME
-            redoc-cli bundle -o ./${{ matrix.names }}-report/$NAME.html $i
+            redoc-cli bundle -o ./${{ matrix.names }}-report/${{env.NAME}}.html $i
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
+
+
 
 
       - name: display array
