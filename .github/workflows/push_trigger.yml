@@ -54,15 +54,14 @@ jobs:
           do
             echo "full path: " $i
             echo "file_name=$(echo ${i##*/})" >> $GITHUB_ENV
-            echo "${i##*/}"
+            echo "file name:   ${i##*/}"
             echo "fname=$(echo ${file_name%.*})" >> $GITHUB_ENV
-            echo "${file_name%.*}"
+            echo "this is final name: ${env.fname%.*}"
             redoc-cli bundle -o ./${{env.fname}}.html $i
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
-#          echo "::set-output name=fname::${fname}"
-#          echo "The file name is: ${{ steps.create_list.outputs.fname }}"
+
 
       - name: display array
         run: |
@@ -107,4 +106,4 @@ jobs:
         with:
           default_author: github_actions
           message: 'added documentation'
-          add: './1.2.0/${{ matrix.names }}/*'
+          add: './1.2.0/${{ matrix.names }}/*.html'
