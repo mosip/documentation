@@ -14,7 +14,7 @@ Security of user data is given highest priority in MOSIP.  Data is protected in 
 
 ## Datashare
 ![](_images/cryptography-datashare.png)
-Data shared with all partners is encrypted using partners' public key.  Note that IDA is also a partner, however, a special partner in the sense that data is additionally zero-knowledge encrypted before sending to IDA (see section below).
+Data shared with all partners like ABIS, Print, Adjudication, IDA etc. is encrypted using partners' public key.  Note that IDA is also a partner, however, a special partner in the sense that data is additionally zero-knowledge encrypted before sending to IDA (see section below).
 
 ## Zero knowledge encryption
 ID Authentication module (IDA) is an independent module and may be hosted by several providers. IDA hosts all the biometric templates and demographic data. A unique additional protection is provided here to make sure that mass decryption of user data is very difficult to achieve.  The data can only be decrypted if user's UIN is provided.  Here is the encryption scheme: 
