@@ -24,7 +24,7 @@ To generate the first User in MOSIP eco-system, refer to the steps below:
 ## Who are the Operators in MOSIP?
 The operator is the one who can login to the Registration Client application and perform various activities. The roles associated to an operator in MOSIP can be that of a Supervisor or an Officer. Below are features accessed by a supervisor and an officer in the registration client.
 
-## On-boarding an Operator
+## On-boarding an operator
 
 When an operator tries to login to their Registration Client machine for the very first time, they need to be online and will be re-directed automatically to the on-boarding page. During on-boarding, the operator needs to provide their biometrics, which will be stored and mapped to the client machine locally post authentication.
 Operator's biometrics are captured during on-boarding to support login using biometrics, local duplicate checks, and registration submission via. biometric authentication in Registration Client.
@@ -52,3 +52,19 @@ Summarizing, on-boarding of an operator is successful only if,
 * The Registration Client can authenticate an operator in offline mode using the locally stored biometrics (face/finger/iris) & password, but it has to be online to authenticate an operator using OTP.
 
 **Note**: While a operator attempts to login to registration client, the system matches the user name with the locally stored user names using a case-insensitive logic.
+
+### Locking-in the Operator
+An operator can be temporarily locked in by the Registration Client if:
+* They are inactive for more than X minutes (X is configurable)
+* Provides invalid password or biometrics Y times during login (Y is configurable)
+
+### Logout
+An Operator can logout of the Registration Client by:
+* Clicking the Logout button, 
+* Closing the Registration Client, 
+* Being in-active on the Registration Client for configured amount of time after which they are automatically logged out.
+* Upon logout, any unsaved data will be lost. 
+* Data will not be automatically saved in the database and will not be retained in memory though transaction details which is used for auditing will be captured & stored (except for PII data).
+
+**Note**: Registration Client provides an alerts to the operator ‘X’ minutes before reaching the auto logout time limit. Registration Client displays a countdown timer in the alert. The operator can choose to dismiss the alert and continue working. This will also reset the timer to zero.
+
