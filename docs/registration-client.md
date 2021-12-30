@@ -55,31 +55,6 @@ Below is a sample UI implementation of the Registration Client and the various f
 To know more about each option present in the Registration Client sample UI implementation, click here.
 
 <<Reg client entity diagram>>
-
-### Operational Tasks
-
-* Synchronize Data: 
-* Download Pre-Registration Data:
-* Update Operator Biometrics: 
-* Application Upload:
-* Center Remap Sync:
-* Check Updates:
-
-### Registration Tasks
-
-* New Registration:
-* Update UIN:
-* Lost UIN:
-* Biometric Correction:
-
-For <refer to ID lifecycle management page>
-
-### End of day processes
-
-* Pending Approval:
-* Notification for Re-registration:
-* Dashboard:
-
 ## Biometrics SDK Implementation
   
   SDK integration guide
