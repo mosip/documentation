@@ -44,5 +44,10 @@ Decryption by IDA:
 ## ID authentication flow
 ![](_images/cryptography-ida-flow.png)
 
+1. L1 devices contain FTM chip to encrypt biometrics at source and send to Authentication client.  The FTM chip contains IDA provided FTM key. The data is also signed by device key.
+2. Authentication client further encrypts the auth request with IDA-PARTNER public key.
+3. IDA decrypts zero knowledge data as given above and the performs a demo and biometric
+4. Match result is returned to Auth client.  In case of KYC, the KYC attributes are encrypted with Partner's public key (as in Datashare).  
+
 
 
