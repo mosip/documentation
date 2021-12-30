@@ -2,7 +2,7 @@
 
 Registration Processor is a backend processing engine to enable the ID Lifecycle management. The diagram below shows the Registration Processor along with the other modules that contribute in generating an Unique Identification Number(UIN) for an individual.
 
-![](../_images/reg_proc.png)
+![](_images/reg-proc.png)
 
 ## Registration Processor functionality
 Below are some of the features associated with the Registration Processor
