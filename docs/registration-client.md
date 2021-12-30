@@ -2,7 +2,7 @@
 
 The Registration Client is a thick Java-based client where the resident's demographic and biometric details are captured along with the supporting documents in online or offline mode. The captured information is packaged and sent to the server for further processing.
 
-## Registration Client features
+## Registration Client key features
 
 1.	**Secure** - Registration Client captures an individual’ demographic and biometric data in a secure manner. Data is captured in the form of registration packets and is  cryptographically secured to ensure that there is no tampering. 
 2.	**Interfaces with Biometric Devices** – It interfaces with biometric devices that comply with the industry standards. 
@@ -18,10 +18,41 @@ To know more about the roles and the on-boarding process of an operator, click h
 Guide for First user creation https://docs.mosip.io/platform/modules/registration-client/first-user-registration-and-onboarding
 Operator Onboarding
 
-## What does a registration Client do?
+## Registration Client functionality
 
-Registration client collects the demographic and biometric details of a resident at the registration centers and sends the data to the Registration Processor for generating the UIN.
+Registration Client collects the demographic and biometric details of a resident at the registration centers and sends the data to the Registration Processor for generating the UIN. 
+
+### Functional features
+*	Registering an individual for ID issuance
+*	Updating a registered individual’s details
+*	Finding an individual’s ID
+*	Creating a correction packet
+*	Can serve individuals with Pre-registration ID or walk-ins
+*	Option to collect demographic, documents and biometric data
+*	Support for biometric exception scenario
+*	Support for a guardian for registering minors
+*	Support for an introducer for individuals without any mandatory documents
+*	Support for integration with devices such as a printer, scanner or GPS
+*	Issuance of application ID with QR code
+*	Officer and supervisor model
+*	Option to modify various settings
+
+### Technical features
+*	UI and layout can load dynamically based on a configurable UI specifications
+*	Data can be captured in multiple languages based on configuration
+*	Virtual keyboards can be added to capture data
+*	Transliteration engines can be integrated
+*	TPM (Trusted Platform Module) is necessary and is used to make sure it is secure and trusted
+*	Can collect data in offline mode
+*	Can sync the latest master data, configurations, UI-specs, encryption keys and pre-registrations from the server
+*	Operators (Officer or Supervisors) can log in using a password, OTP or biometrics
+*	Use of SBI (Secure Biometric Interface) for biometric device interfacing
+*	Tested on Windows with Oracle JDK 11
+*	Registration Client UI is a reference implementation and can be changed
+
 Below is a sample UI implementation of the Registration Client and the various functionalities involved.
+
+To know more about each option present in the Registration Client sample UI implementation, click here.
 
 <<Reg client entity diagram>>
 
