@@ -42,7 +42,7 @@ Decryption by IDA:
 1. Decrypt BIO by creating key ZKn' as in step 4 above.
 
 ## ID authentication flow
-![](_images/cryptopgraphy-ida-flow.png)
+![](_images/cryptography-ida-flow.png)
 
 
 
