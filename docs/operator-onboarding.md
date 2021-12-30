@@ -65,5 +65,6 @@ An Operator can logout of the Registration Client by:
 * Being in-active on the Registration Client for configured amount of time after which they are automatically logged out.
 * Upon logout, any unsaved data will be lost. 
 * Data will not be automatically saved in the database and will not be retained in memory though transaction details which is used for auditing will be captured & stored (except for PII data).
-**Note**: Registration Client provides an alerts to the operator, ‘x’ minutes before reaching the auto logout time limit. Registration Client displays a countdown timer in the alert. The operator can choose to dismiss the alert and continue working. This will also reset the timer to zero.
+
+**Note**: Registration Client provides an alerts to the operator ‘X’ minutes before reaching the auto logout time limit. Registration Client displays a countdown timer in the alert. The operator can choose to dismiss the alert and continue working. This will also reset the timer to zero.
 
