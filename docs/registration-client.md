@@ -20,7 +20,7 @@ Operator Onboarding
 
 ## Registration Client functionality
 
-Registration Client collects the demographic and biometric details of a resident at the registration centers and sends the data to the Registration Processor for generating the UIN. 
+Registration Client collects the demographic and biometric details of a resident at the registration centers and sends the data to the Registration Processor for generating the UIN. Below are some of the features associated with the Registration Client:
 
 ### Functional features
 *	Registering an individual for ID issuance
