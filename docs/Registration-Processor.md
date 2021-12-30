@@ -1,55 +1,19 @@
 # Overview
-Registration Processor processes the data (demographic and biometric) of an Individual for quality and uniqueness and then issues a Unique Identification Number (UIN). It also provides functionality to update demographic and biometric data and issue a new UIN if lost.  The source of data are primarily from
-- MOSIP Registration Client
-- Existing ID system(s) of a country
 
-Important considerations are as follows:
+Registration Processor is a backend processing engine to enable the ID Lifecycle management. The diagram below shows the Registration Processor along with the other modules that contribute in generating an Unique Identification Number(UIN) for an individual.
 
-* Once the packet is received on the server packets should not be lost.  
-* MOSIP defines and implement the basic registration packet processing flow. However, every country will have their own processing requirements  like integration with their existing ID system and fetch data for validation.  Registration processor provides options to add such stages.
-* Registration processor has the capability to integrate with multiple ABIS providers.
-* Each processing stage is scalable independently based on the load.
-* Each stage in the processor is independent of other stages such that logic of a stage can be changed to improve efficiency without affecting the overall flow.
+![](../_images/overview/Reg_proc_image.png)
 
-# Detailed functionality
-[Registration Processor Functionality](Registration-Processor-Functionality.md)
-
-# Process flow
-
-## Packet Pre-Processing
-![](_images/reg_processor/reg_proc_process_flow-packet_pre-processing_part_1.png)
-
-![](_images/reg_processor/reg_proc_process_flow-packet_pre-processing_part_2.png)
-
-## New Packet Processing
-![](_images/reg_processor/reg_proc_process_flow-new_packet_processing_part_1.png)
-
-![](_images/reg_processor/reg_proc_process_flow-new_packet_processing_part_2.png)
-
-## Update Packet Processsing
-![](_images/reg_processor/reg_proc_process_flow-update_packet_processing_part_1.png)
-
-![](_images/reg_processor/reg_proc_process_flow-update_packet_processing_part_2.png)
-
-## Lost UIN Packet Processing
-![](_images/reg_processor/reg_proc_process_flow-lost_uin_packet_processing_part_1.png)
-
-![](_images/reg_processor/reg_proc_process_flow-lost_uin_packet_processing_part_2.png)
-
-## Activate/De-Activate Packet Processing
-![](_images/reg_processor/reg_proc_process_flow-activate_deactivate_uin.png)
-
-# Logical View
-![Registration Processor Logical view](_images/reg_processor/reg-proc-logical-view.png)
-
-# Services
-For detailed description of Registration Processor Services refer to [registration processor repo](https://github.com/mosip/registration/tree/master/registration-processor).
-
-For high level and low level design refer to [registration processor repo](https://github.com/mosip/registration/tree/master/registration-processor)
+## Stages and services
+For a detailed description of Registration processor, refer to [registration repo](https://github.com/pjoshi751/registration/tree/develop)
 
 # Build and deploy
-Refer to build and deploy instructions in [registration processor repo](https://github.com/mosip/registration/tree/master/registration-processor).
+For more information on the build and deployment, refer to [registration processor repo](https://github.com/pjoshi751/registration/tree/develop).
 
 # APIs
+For detailed functionality of Registration Processor APIs, refer to [registration APIs](../../../api-reference/Pre-Registration-APIs.md).
 
-[Registration Processor APIs](Registration-Processor-APIs.md)  
+# Configurations
+For details related to registration processor configurations, refer to [registration processor configurations](https://github.com/pjoshi751/registration/blob/develop/docs/configuration.md).
+
+

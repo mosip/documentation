@@ -1,55 +1,71 @@
 # Overview
-The registration client is a thick Java-based client where the resident's demographic and biometric details are captured along with the supporting documents in online or offline mode.   The captured information is packaged in a secure tamper-proof way and send to the server for processing.
 
-Registration client must provide the following :
-* **Secure** way of capturing an individual's demographic and biometric data. The captured data must be cryptographically secure such that the data cannot be tampered with.   This is called a registration packet.
-* **Interfaces to biometric devices** that comply to industry standards. This ensure that any device manufactured as per standards will work with MOSIP.
-* Works in **online and offline** mode. In remote areas where internet connectivity is a challenge, the registration client must work in offline mode.
-* **Remote software update** capability.  There must be a way to self-update to latest patches/upgrades (bug fixes/enhancements) in a remote way. There could be hundreds of client instances running on laptops/desktops. Updates on all of them must be controlled a central server.
-* **Tamper-proof client software**.  The registration client must have an ability to validate the structure of the information captured so that it could detect any anomoly due to a possible manual tampering and reject the captured packet.
+The Registration Client is a thick Java-based client where the resident's demographic and biometric details are captured along with the supporting documents in online or offline mode. The captured information is packaged and sent to the server for further processing.
 
-# Detailed functionality
-[Registration Functionality](Registration-Functionality.md)
+## Registration Client features
 
-# Process flow
+1.	**Secure** - Registration Client captures an individual’ demographic and biometric data in a secure manner. Data is captured in the form of registration packets and is  cryptographically secured to ensure that there is no tampering. 
+2.	**Interfaces with Biometric Devices** – It interfaces with biometric devices that comply with the industry standards. 
+3.	Works in **Offline and online** modes - In remote areas where internet connectivity is a challenge, the registration client works in offline mode as well. 
+4.	**Remote Software updates**  – Registration Client has the capability of updating itself to the latest patches/upgrades in a remote manner. There could be multiple client instances running on laptops or desktops. Updates on all of them is controlled by a central server.
+5.	**Tamper-proof client software** - The registration client must have the ability to validate the structure of the information captured and be able to detect any anomaly due to a possible manual tampering and reject the captured packet.
 
-## Registration officer Onboarding
-![Registration Officer Onboarding](_images/registration/reg_client_registration_officer_onboarding.jpg)
+## Who operates the Registration Client?
 
-## Registration preparation
-![Registration Preparation](_images/registration/reg_client_registration_prep.jpg)
+The Registration Client can be operated by an operator who can be either a Supervisor or an Officer. They can login to the application and perform various activities.
+To know more about the roles and the on-boarding process of an operator, click here.
 
-## Individual registration
-![Registration](_images/registration/reg_client_registration.jpg)
+Guide for First user creation https://docs.mosip.io/platform/modules/registration-client/first-user-registration-and-onboarding
+Operator Onboarding
 
-## Packet upload
-![Packet Upload](_images/registration/reg_client_registration_packet_upload.jpg)
+## What does a registration Client do?
 
-## End of day (EOD) process
-![EOD process](_images/registration/reg_client_eod_process.jpg)
+Registration client collects the demographic and biometric details of a resident at the registration centers and sends the data to the Registration Processor for generating the UIN.
+Below is a sample UI implementation of the Registration Client and the various functionalities involved.
 
-## UIN update
-![UIN Update](_images/registration/reg_client_uin_update.jpg)
+<<Reg client entity diagram>>
 
-## Lost UIN
-![Lost UIN](_images/registration/reg_client_lost_uin.jpg)
+### Operational Tasks
 
-## Software update
-![Software Update](_images/registration/reg_client_software_update.jpg)
+* Synchronize Data: 
+* Download Pre-Registration Data:
+* Update Operator Biometrics: 
+* Application Upload:
+* Center Remap Sync:
+* Check Updates:
 
-## Logical view
-![Registration client logical view](_images/registration/reg_client_logical_architecture.png)
+### Registration Tasks
 
-## Component architecture  
-![Registration client component architecture](_images/registration/reg_client_component_architecture.png)
+* New Registration:
+* Update UIN:
+* Lost UIN:
+* Biometric Correction:
 
-# Registration packet structure
-All the registration information is zipped and encrypted in a packet and sent to the server. The structure of the packet is given [here](Registration-Packet.md).
+For <refer to ID lifecycle management page>
 
-# Registration client reference application
-MOSIP provides an Windows-based reference implementation of the client that has a UI and the business logic to perform the above process flows.  The code, design, App setup, build documentation is available in [registration client repo](https://github.com/mosip/registration/tree/master/registration).  The App may be modified according to a country's need.
+### End of day processes
 
-[Registation client setup guide](Registration-Client-Setup.md)
+* Pending Approval:
+* Notification for Re-registration:
+* Dashboard:
 
-# First user on-boarding
-TBD
+## Biometrics SDK Implementation
+  
+  SDK integration guide
+  
+
+## Packets
+
+
+## UI reference Implementation
+MOSIP provides a Windows-based reference implementation of the REgistration client that has a UI and the business logic to perform the above process flows. The code, design, App setup, build documentation is available in **registration client repo**. The App may be modified according to a country's need.
+
+## Configurations
+For details related to Registration Client configurations, refer to registration-Client configuration.
+
+
+## UI Specifications
+  What is UI Spec, where is the sample available .. 
+Default UI Specifications loaded with Sandbox installation is available [here](https://github.com/mosip/mosip-infra/blob/1.2.0_v3/deployment/v3/mosip/kernel/masterdata/xlsx/ui_spec.xlsx)
+
+
