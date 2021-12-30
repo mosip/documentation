@@ -14,37 +14,58 @@ MOSIP pre-registration module supports multiple languages.
 
 The pre-registration functionality helps the residents and the Government organizations by saving the time and efforts required for basic data collection of residents at the registration centers. The data pre-filled by the residents on the portal can be made available for use at the centers for quick access and seamless registration process.
 
-![](../_images/overview/ID_Registration_process.jpg)
+![](_images/id-registration-process.jpg)
+
+# Pre-Registration functionality
+Pre-registration is a resident facing web-based portal using which an individual can pre-enrol and book an appointment for registering in MOSIP. Below are some of the features associated with pre-registration.
+
+### Functional features
+
+* Email or phone number based login using OTP
+* Option to enable and configure captcha implementation is available 
+* Applications are associated with the email or phone number
+* Support for multiple applications and appointment booking using a single login
+* Ability to enter data beforehand
+* Option to upload documents
+* Booking or cancelling appointment slots for registration
+* Issuance of application ID with QR code
+* Data entered here is synced to the registration client based on the centre selected during the booking
+* Notification and the acknowledgement slip is sent to the registered email or phone number
+* Pre-registration application can be used in assisted or self-service mode
+
+### Technical features
+* Pre-registration UI loads dynamically based on configurable UI specification
+* Data can be captured in multiple languages based on configuration
+* Virtual keyboards are provided in the UI for data capture
+* Data can be transliterated using a transliteration library
+* Documents are scanned for viruses before uploading to the server
+* Documents are stored in a blob storage
+* Demographic data is stored as encrypted JSON in the database
+* Pre-registration UI is a reference implementation and can be changed
 
 # Pre-Registration Process
 
 ## Create an application
-
 * User provides consent
 * User provides demographic information
 * User uploads supporting documents (Proof of Address, Birth certificate, etc.)
 * a pre-registration request ID (PRID) is generated and provided to the user.
 
 ## Book an appointment
-
 * User selects a registration center based on postal code, geo-location, etc.
 * The available slots are displayed
 * An option to cancel and re-book the appointment is made available
 
-
 ## Receiving acknowledgement notifications
-
 * An acknowledgement is sent via email/SMS 
 * The user can print the acknowledgement containing PRID and QR code. 
 *  This QR code can be scanned at the in-person registration centers.
 
 ## Download of pre-registration data at Registration Centers
-
 * User provides the PRID/QR code at the registration center.
 * The registration form gets pre-filled with the pre-registration data.
 
 # Services
-
 Pre-registration module consists of the following services:
 * Application 
 * Booking
