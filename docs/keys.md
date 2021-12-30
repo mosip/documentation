@@ -29,3 +29,17 @@
 
 
 ## Partner keys 
+
+|SNo.|Partners|Application ID|ReferenceID|Partner Domain|Partner Type Code|
+|---|---|---|---|---|---||
+|1|ABIS|PARTNER|mpartner-default-abis (or partner ID)|AUTH|ABIS_Partner|
+|2|Device Providers|PARTNER|Partner ID|DEVICE|Device_Provider|
+|3|Print Service Provider|PARTNER|mpartner-default-print (or partner ID)|AUTH|Credential_Partner|
+|4|Auth Providers or Relying Party|PARTNER|Partner ID|AUTH|Auth_Partner|
+|5|FTM Providers (per Chip Model)|PARTNER|Partner ID|FTM|FTM_Provider|
+|6|MISP|PARTNER|Partner ID|AUTH|MISP_Partner|
+|7|Manual Adjudicator|PARTNER|mpartner-default-manual-adjudication (or partner ID)|AUTH|Manual_Adjudication|
+|8|IDA system|PARTNER|mpartner-default-auth (or partner ID)|AUTH|Online_Verification_Partner|
+|9|Resident Services|PARTNER|mpartner-default-resident (or partner ID)|AUTH|Credential_Partner|
+
+
