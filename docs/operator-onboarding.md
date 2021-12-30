@@ -24,7 +24,7 @@ To generate the first User in MOSIP eco-system, refer to the steps below:
 ## Who are the Operators in MOSIP?
 The operator is the one who can login to the Registration Client application and perform various activities. The roles associated to an operator in MOSIP can be that of a Supervisor or an Officer. Below are features accessed by a supervisor and an officer in the registration client.
 
-## On-boarding an Operator
+## On-boarding an operator
 
 When an operator tries to login to their Registration Client machine for the very first time, they need to be online and will be re-directed automatically to the on-boarding page. During on-boarding, the operator needs to provide their biometrics, which will be stored and mapped to the client machine locally post authentication.
 Operator's biometrics are captured during on-boarding to support login using biometrics, local duplicate checks, and registration submission via. biometric authentication in Registration Client.
