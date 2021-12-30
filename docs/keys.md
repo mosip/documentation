@@ -31,7 +31,7 @@
 ## Partner keys 
 
 |SNo.|Partners|Application ID|ReferenceID|Partner Domain|Partner Type Code|
-|---|---|---|---|---|---||
+|---|---|---|---|---|---|
 |1|ABIS|PARTNER|mpartner-default-abis (or partner ID)|AUTH|ABIS_Partner|
 |2|Device Providers|PARTNER|Partner ID|DEVICE|Device_Provider|
 |3|Print Service Provider|PARTNER|mpartner-default-print (or partner ID)|AUTH|Credential_Partner|
