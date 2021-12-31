@@ -32,7 +32,6 @@ Key MOSIP offerings are:
 ![](_images/mosip-offerings.jpg)
 
 ## Building a national ID system using MOSIP
-National ID systems can leverage MOSIP as the base platform and configure, customize, extend it to build their systems just the way the need it. T
-The image below depicts how MOSIP can be visualized as a national ID platform.
+National ID systems can leverage MOSIP as the base platform and configure, customize, extend it to build systems just the way needed. The image below depicts how MOSIP provides the base layer to build a national ID platform.
 
 ![](_images/layers.png)
