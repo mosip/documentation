@@ -25,12 +25,12 @@ Below are some of the features associated with the Registration Processor
 * Sends the ID information to external Printing & Delivery System
 
 ### Technical features 
-* VertX EventBus with lightweight messaging for stages
+* Kafka eventbus with lightweight messaging for stages
 * An apache camel bridge manages the flow of the packet through the stages
 * Each flow has its own camel specification
 * Integration stages can be added into the flow as needed
 * Failed packets are reprocessed by the flow
-* Stages have to be atomic and self-aware, but agnostic of other stages
+* Stages are atomic and self-aware, but agnostic of other stages
 * No transaction control at the flow level
 * Throughput for each stage is decided based on hardware available
 * Packets are decrypted in memory and used
