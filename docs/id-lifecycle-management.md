@@ -3,10 +3,10 @@
 Identity Lifecycle management refers to the **process of issuing and managing user identities** in a given system. 
 The various life cycle events are briefly explained below:
 
-* New ID issuance (for adults and infants).
-* ID data update/update individual’s information.
-* De-activate/re-activate individual’s ID.
-* Lost ID.
+* New ID issuance (for adults and infants)
+* ID data update/update individual’s information
+* De-activate/re-activate individual’s ID
+* Lost ID
 
 ## New ID issuance 
 
@@ -48,9 +48,9 @@ Once the resident completes the above process, their data will be downloaded at 
 
 ## De-activate\Re-activate individual’s ID
 
--	De-activate authentication against user' ID. <<check>>
--	Individual will not be able to authenticate themselves by using UIN or VID in case of deactivation or vice-versa for re-activation.
--	If a country wants to deactivate an individual’s ID for any specific reason, the system deactivates the individual’s ID after certain validations performed in Registration Processor. Likewise, a country can also re-activate an individual’ ID.
+-	De-activate ID means an individual will not be able to authenticate themselves by using the UIN or VID. 
+-	If a country wants to deactivate an individual’s ID for any specific reason, the system deactivates the individual’s ID after certain validations performed in the Registration Processor.
+-	 Likewise, a country can also re-activate an individual’ ID as need be.
 
 ## Finding a Lost ID
 -	Individual to provide their biometric information in the Registration center.
@@ -58,6 +58,12 @@ Once the resident completes the above process, their data will be downloaded at 
 -  Registration receipt containing Registration Identity(RID)), labels and data in the configured language, QR code (of the RID) provided to the resident.
 -  ID credentials sent to the resident via the country’ configured printing and postal service.
 - Notifications sent to the resident using the email ID and mobile number provided as a apart of demographic data collection
+
+## Correction flow
+- Incase the system finds an error in the demographic data, documents or biometric data provided by an individual, the correction flow is triggered.
+- Before issuing the UIN for the individual, the incorrect or incomplete information provided by the individual is intimated to them.
+- Once the corrected information is received by the system, a correction procedure is triggered.
+- Updated ID credentials sent to the resident via the country’ configured printing and postal service.
    
 
 
