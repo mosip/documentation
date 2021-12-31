@@ -1,6 +1,6 @@
 ## Overview
 
-## What is a Foundational ID system?
+## What is a foundational ID system?
 Governments are exploring the development of multipurpose foundational ID systems, in which the individuals receive a unique identifier from the government that they can use for identity assertion and verification. It can then be used to access a wide variety of government and private services.  
 
 Functional IDs are the IDs that are used in specific use cases. By design, they are created having an end usage in mind. The Functional ID systems can leverage the Foundational ID system.
@@ -13,25 +13,25 @@ MOSIP is **configurable** and flexible to adapt to a country’ national ID requ
 
 ![](_images/mosip-features.jpg)
 
-## Privacy and Security 
+## Privacy and security 
 ![](_images/privacy-and-security.jpg)
 
-## MOSIP Modules
+## MOSIP modules
 ![](_images/all-modules.jpg)
 
-## MOSIP ECOSYSTEM
+## MOSIP ecosystem
 
 MOSIP needs to work along with other ecosystem players to create a solution for a particular country.
 ![](_images/mosip-ecosystem.jpg)
 
-## MOSIP Offerings
+## MOSIP offerings
 Key MOSIP offerings are:
 * ID Lifecycle Management
 * ID Authentication
 
 ![](_images/mosip-offerings.jpg)
 
-## Building a National ID System using MOSIP
+## Building a national ID system using MOSIP
 National ID systems can leverage MOSIP as the base platform and configure, customize, extend it to build their systems just the way the need it. T
 The image below depicts how MOSIP can be visualized as a national ID platform.
 
