@@ -8,6 +8,28 @@ The key steps in this module are:
 * Book an Appointment
 * Receive a Confirmation
 
+#### Steps to create an Application and book an appointment
+
+1. Open the browser and visit the pre-registration portal.
+2. Select the preferred language.
+3. Enter your email address or phone number.
+4. Click **Send OTP**.
+The user receives an OTP on the registered email ID or the phone number.
+5. Enter the OTP and click **Verify**.
+Once the OTP is verified, you will see a pop up for selecting the languages for data entry.
+6. Select the languages and click **Submit**.
+7. Read through the Terms and Conditions to provide your consent. 
+Select the checkbox and click **Accept**.
+Once the user gives consent, they will be directed to the demographics page.
+8. On the Demographic Details page, enter the required data in the different tiles.
+Note: The fields/labels having * mark is mandatory to be filled.
+9. After filling the details, click Continue to proceed.
+10. Next, upload the required documents in the Upload documents page.
+Here, you also have the option to create multiples applications for your family or friends by clicking **Add an Applicant** or selecting **Create New Application** on the dashboard.
+11. Once this is done, you can preview the same and make modifications if required by clicking on modify.
+12. Now, you can proceed with booking an appointment.
+13. Select the Registration center and the time slot.
+
 Below is the description of the options available in the sample UI Implementation
 
 ## Login/create a user account
@@ -24,16 +46,6 @@ This is a configurable option provided to the ID issuer. Before requesting for a
 
 ### Logout/session timeout
 If the resident wishes to log out of the pre-registration system, they can do so by clicking on the Logout option. The token issued during the authentication of user login is deleted and the user gets logged out of the system. If the user is inactive for say X minutes (X is configurable), the system notifies the user a minute before the configured timeout limit and logs out after a minute. In such a case, no user data is saved.
-
-#### To login/ create a user account
-1. Open the browser and visit the pre-registration portal.
-2. Select the preferred language.
-3. Enter your email address or phone number.
-4. Click **Send OTP**.
-The user receives an OTP on the registered email ID or the phone number.
-5. Enter the OTP and click **Verify**.
-Once the OTP is verified, you will see a pop up for selecting the languages for data entry.
-6. Select the languages and click **Submit**.
 
 ## Create an Application
 This section includes some of the key steps for creating an application.
