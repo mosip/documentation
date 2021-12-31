@@ -6,21 +6,18 @@ This module enables a user/resident to:
 * Receive appointment notifications
 * Reschedule and Cancel appointments
 
-Once the resident completes the above process, their data will be downloaded at the respective registration centers prior to their appointment. This data will further be used during the registration process.
+Once the resident completes the above process, their data will be downloaded at the respective registration centers prior to their appointment. This data will further be used during the registration process. MOSIP pre-registration module supports multiple languages. 
 
-MOSIP pre-registration module supports multiple languages. 
-
-# Why do we need to pre-register on MOSIP?
+## Why do we need to pre-register on MOSIP?
 
 The pre-registration functionality helps the residents and the Government organizations by saving the time and efforts required for basic data collection of residents at the registration centers. The data pre-filled by the residents on the portal can be made available for use at the centers for quick access and seamless registration process.
 
 ![](_images/id-registration-process.jpg)
 
-# Pre-Registration functionality
+## Features
 Pre-registration is a resident facing web-based portal using which an individual can pre-enrol and book an appointment for registering in MOSIP. Below are some of the features associated with pre-registration.
 
 ### Functional features
-
 * Email or phone number based login using OTP
 * Option to enable and configure captcha implementation is available 
 * Applications are associated with the email or phone number
@@ -43,7 +40,7 @@ Pre-registration is a resident facing web-based portal using which an individual
 * Demographic data is stored as encrypted JSON in the database
 * Pre-registration UI is a reference implementation and can be changed
 
-# Pre-Registration Process
+# Pre-registration process
 
 ## Create an application
 * User provides consent
@@ -61,7 +58,7 @@ Pre-registration is a resident facing web-based portal using which an individual
 * The user can print the acknowledgement containing PRID and QR code. 
 *  This QR code can be scanned at the in-person registration centers.
 
-## Download of pre-registration data at Registration Centers
+## Download of pre-registration data at registration centers
 * User provides the PRID/QR code at the registration center.
 * The registration form gets pre-filled with the pre-registration data.
 
