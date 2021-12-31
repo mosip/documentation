@@ -1,5 +1,3 @@
-## Overview
-
 ## What is a foundational ID system?
 Governments are exploring the development of multipurpose foundational ID systems, in which the individuals receive a unique identifier from the government that they can use for identity assertion and verification. It can then be used to access a wide variety of government and private services.  
 
