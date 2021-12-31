@@ -1,6 +1,6 @@
 # Privacy & Security
 
-MOSIP's fundamental architecture and design resolves around highest levels of privacy and security.
+MOSIP's fundamental architecture and design incorporates highest levels of privacy and security.
 
 ## Security by design
 
