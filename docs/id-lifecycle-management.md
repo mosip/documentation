@@ -46,7 +46,7 @@ Once the resident completes the above process, their data will be downloaded at 
 -	Updated ID credentials sent to the resident via the country’ configured printing and postal service.
 -	Notifications sent to the resident using the email ID and mobile number provided as a apart of demographic data collection
 
-## De-activate\Re-activate individual’s ID
+## De-activate/Re-activate individual’s ID
 
 -	De-activate ID means an individual will not be able to authenticate themselves by using the UIN or VID. 
 -	If a country wants to deactivate an individual’s ID for any specific reason, the system deactivates the individual’s ID after certain validations performed in the Registration Processor.
