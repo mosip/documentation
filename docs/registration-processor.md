@@ -4,7 +4,7 @@ Registration Processor is a backend processing engine to enable the ID Lifecycle
 
 ![](_images/reg-proc.png)
 
-## Registration Processor functionality
+## Features
 Below are some of the features associated with the Registration Processor
 
 ### Functional features
