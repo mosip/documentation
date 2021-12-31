@@ -1,6 +1,6 @@
 # MOSIP
 
-![](_images/mosip_logo.png)
+![](_images/mosip-logo.png)
 
 ## The MOSIP Program
 The MOSIP program was conceived to help build global digital public goods in the space of digital governance. The flagship of the program is the MOSIP platform that provides the core for a foundational identity system that can be used by countries to build their national identity programs. Anchored at the International Institute of Information Technology, Bangalore ([IIIT-B](https://www.iiitb.ac.in/)), MOSIP harnesses the power of open source and embraces the best practices of scalability, security and privacy. [Learn more >>](https://www.mosip.io/)
