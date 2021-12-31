@@ -37,7 +37,7 @@ Once the resident completes the above process, their data will be downloaded at 
 -	Additionally, a **Proof of Relationship** document to be provided at the center.
 -	An acknowledgement receipt will be provided to the infant' parent/guardian.
 
-## ID Data update/Updating individual’s information
+## ID data update/Updating individual’s information
 
 -	Residents can update their information in two ways:
     * By visiting the registration center: The demographic and biometric information can be updated at the centers.
@@ -63,7 +63,7 @@ Once the resident completes the above process, their data will be downloaded at 
 - Incase the system finds an error in the demographic data, documents or biometric data provided by an individual, the correction flow is triggered.
 - Before issuing the UIN for the individual, the incorrect or incomplete information provided by the individual is intimated to them.
 - Once the corrected information is received by the system, a correction procedure is triggered.
-- Updated ID credentials sent to the resident via the country’ configured printing and postal service.
+- Updated ID credentials are sent to the resident via the country’ configured printing and postal service.
    
 
 
