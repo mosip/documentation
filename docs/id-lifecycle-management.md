@@ -3,10 +3,10 @@
 Identity Lifecycle management refers to the **process of issuing and managing user identities** in a given system. 
 The various life cycle events are briefly explained below:
 
-* New ID Issuance (for adults and infants)
-* ID Data Update/ Update individual’s information
-* De-activate/Re-activate individual’s ID
-* Lost ID
+* New ID issuance (for adults and infants).
+* ID data update/update individual’s information.
+* De-activate/re-activate individual’s ID.
+* Lost ID.
 
 ## New ID Issuance 
 
