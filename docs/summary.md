@@ -1,3 +1,4 @@
+* [Home](home.md)
 * [Overview](overview.md)
 * [ID Lifecycle Management](id-lifecycle-management.md)
     * [ID Schema](id-schema.md)
