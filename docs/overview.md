@@ -18,8 +18,8 @@ MOSIP is **configurable** and flexible to adapt to a country’ national ID requ
 ![](_images/all-modules.jpg)
 
 ## MOSIP ecosystem
-
 MOSIP needs to work along with other ecosystem players to create a solution for a particular country.
+
 ![](_images/mosip-ecosystem.jpg)
 
 ## MOSIP offerings
