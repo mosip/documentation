@@ -20,7 +20,7 @@
     * [Resident Services](resident-services.md)
     * [Administration](administration.md)
     * [Reporting](reporting.md)
-* Biometrics
+* [Biometrics](biometrics.md)
     * [ABIS](abis.md)
     * [Biometric SDK](biometric-sdk.md)
     * [Biometric Devices](biometric-devices.md)
