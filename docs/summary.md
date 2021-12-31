@@ -2,7 +2,7 @@
 * [ID Lifecycle Management](id-lifecycle-management.md)
     * [ID Schema](id-schema.md)
 *  [ID Authentication](id-authentication.md)
-*  Privacy and Security
+*  [Privacy and Security](privacy-and-security.md)
     * [Data Protection](data-protection.md)
     * [Keys](keys.md)
     * [Privacy](privacy.md)
