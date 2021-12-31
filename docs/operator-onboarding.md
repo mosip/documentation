@@ -1,24 +1,24 @@
-# Operator Onboarding 
+# Operator onboarding 
 This guide constitues all the details you may want to know about the operator operating the Registration Client.
 
-## First User Registration and Onboarding
+## First user registration and onboarding
 
 To generate the first User in MOSIP eco-system, refer to the steps below:
 
-### 1.	Creating the First User in KeyCloak
+### 1.	Creating the first user in KeyCloak
 *	First the role "Default" needs to be created in KeyCloak with all the other roles.
 *	The user account needs to be created in KeyCloak.
 *	This user should be assigned with the “Default” role.
 *	The user should be mapped to the registration center using the Admin Portal.
 *	The user machine should be onboarded using Admin Portal
 
-### 2. Creating the First User in MOSIP
-*	The First User should download the latest Registration Client and login with the credentials set in KeyCloak.
-*	The user will automatically skip Operator/Supervisor onboarding and will reach the home page of Registration Client.
+### 2. Creating the first user in MOSIP
+*	The First User should download the latest registration client and login with the credentials set in KeyCloak.
+*	The user will automatically skip Operator/Supervisor onboarding and will reach the home page of registration client.
 *	The user now can register themselves in MOSIP and will get an RID and UIN.
 
-### 3. User On-boarding
-*	The role for the User needs to be changed to either to Registration_Officer or Registration_Supervisor. 
+### 3. User on-boarding
+*	The role for the User needs to be changed to either to REGISTRATion_Officer or Registration supervisor. 
 *	The role "Default" needs to be removed from KeyCloak so that no other user has the role Default.   
 *	This user can now register and onboard other Supervisors and Officers.
 
