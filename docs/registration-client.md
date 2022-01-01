@@ -65,6 +65,6 @@ For details related to Registration Client configurations, refer to registration
 
 ## UI Specifications
   What is UI Spec, where is the sample available .. 
-Default UI Specifications loaded with Sandbox installation is available [here](https://github.com/mosip/mosip-infra/blob/1.2.0_v3/deployment/v3/mosip/kernel/masterdata/xlsx/ui_spec.xlsx)
+Default UI Specifications loaded with Sandbox installation is available [here](https://github.com/mosip/mosip-infra/blob/1.2.0-rc2/deployment/v3/mosip/kernel/masterdata/xlsx/ui_spec.xlsx)
 
 
