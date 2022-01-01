@@ -20,6 +20,7 @@ Key privacy features:
 * No biometrics based search on database (only with ID).
 * De-centralised ID usage and data (cannot profile based on usage).
 * Virtual ID and Tokens to prevent profiling across transactions.
+* Face data is not sent to ABIS for deduplication.
 
 
 
