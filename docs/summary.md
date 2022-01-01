@@ -24,7 +24,7 @@
     * [ABIS](abis.md)
     * [Biometric SDK](biometric-sdk.md)
     * [Biometric Devices](biometric-devices.md)
-* Partners
+* [Partners](partners.md)
     * [Types of MOSIP partners](partner-types.md)
     * [Partner On-boarding](partner-onboarding.md)
     * [Partner policies](partner-policies.md)
