@@ -5,7 +5,7 @@ MOSIP's fundamental architecture and design incorporates highest levels of priva
 ## Security by design
 
 Key security features: 
-* Encryption of data in-flight or rest.  See [Data Protection](data-protection.md)
+* Encryption of data in-flight or rest.  (See [Data Protection](data-protection.md))
 * Integration with trusted applications only.
 * Fraud avoidance - association of authentication only with specific transactions.
 * Misuse prevention - user can lock or unlock their authentication
