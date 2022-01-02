@@ -1,7 +1,7 @@
 # Partners
 
 ## Overview
-MOSIP is a platform that requires integration with several other systems.  Typically, a System Integrator (SI) would put all the pieces together to build a complete national ID solution.  All entities that participate in providing the external components are called MOSIP Partners. 
+The MOSIP platform requires integration with several other systems.  Typically, a System Integrator (SI) would put all the pieces together to build a complete national ID solution.  All entities that participate in providing the external components are called MOSIP Partners. 
 
 ![](_images/mosip-ecosystem.jpg)
 
