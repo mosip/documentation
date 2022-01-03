@@ -22,7 +22,7 @@ Data shared with all partners like ABIS, Print, Adjudication, IDA etc. is encryp
 ## Zero knowledge encryption
 ID Authentication module (IDA) is an independent module and may be hosted by several providers. IDA hosts all the biometric templates and demographic data. A unique additional protection is provided here to make sure that mass decryption of user data is very difficult to achieve.  The data can only be decrypted if user's UIN is provided.  Here is the encryption scheme: 
 
-### Encryption and share by Credential Service:
+### Encryption and share by Credential Service
 1. Generate master symmetric encryption key K9.
 1. Generate 10,000 symmetric keys' pool (ZKn). Encrypt each ZKn with K9 and store in DB. (K12)
 1. Randomly select one key from ZKn, decrypt using K9.
@@ -38,7 +38,7 @@ ID Authentication module (IDA) is an independent module and may be hosted by sev
     1. SHA-256 hash of UIN/VID/APPID
 1. Share data in step 7 via standard [Datashare encryption](#datashare) (which encrypts entire data with PK8). 
 
-### Decryption by IDA:
+### Decryption by IDA
 1. Generate master symmetric encryption key K18.
 1. Decrypt data in Step 8 above using PK8.
 1. Decrypt ZKn-IDA with K22 to get ZKn.
