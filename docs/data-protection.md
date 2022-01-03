@@ -1,6 +1,8 @@
 # Data Protection
 
-Security of user data is given highest priority in MOSIP.  Data is protected in flight and rest using strong cryptographic techniques.  All operations on decrypted data are done in-memory. The same is illustrated across various data flows below:
+Security of user data is given highest priority in MOSIP.  Data is protected in flight and rest using strong cryptographic techniques.  All operations on decrypted data are done in-memory. 
+
+Various flows with encryption are illustrated below.  Refer [Keys](keys.md) for all references of the type 'Kx' and 'KPx'.
 
 ## Registration data flow 
 ![](_images/cryptography-registration-flow.png)
