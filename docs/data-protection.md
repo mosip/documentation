@@ -14,6 +14,7 @@ Security of user data is given highest priority in MOSIP.  Data is protected in 
 
 ## Datashare
 ![](_images/cryptography-datashare.png)
+
 Data shared with all partners like ABIS, Print, Adjudication, IDA etc. is encrypted using partners' public key.  Note that IDA is also a partner, however, a special partner in the sense that data is additionally zero-knowledge encrypted before sending to IDA (see section below).
 
 ## Zero knowledge encryption
