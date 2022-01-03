@@ -22,6 +22,7 @@
     * [Reporting](reporting.md)
 * [Biometrics](biometrics.md)
     * [ABIS](abis.md)
+    * [ABIS API](abis-api.md)
     * [Biometric SDK](biometric-sdk.md)
     * [Biometric Devices](biometric-devices.md)
 * [Partners](partners.md)
