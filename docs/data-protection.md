@@ -13,7 +13,7 @@ Various flows with encryption are illustrated below.  Refer [Keys](keys.md) for 
 4. ID Repo encrypts biometrics, demographics and documents and stores them in Object Store. (K7.1,K7.2,K7.3)
 5. The UINs are hashed, encrypted and stored in `uin` table of `mosip_idrepo` DB. (K7.4)
 6. Biometrics are shared encrypted with ABIS partners key PK1. 
-7. Registration processor stores encrypted demographic data in `mosip_regprc` db. (K11 ?)
+7. Registration processor stores encrypted demographic data in `mosip_regprc` db. (K11)
 
 ## Datashare
 ![](_images/cryptography-datashare.png)
