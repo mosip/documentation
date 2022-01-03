@@ -32,7 +32,7 @@ Encryption and share by Credential Service:
     1. BIO
     1. Random index (1999) 
     1. Hash of UIN/VID/APPID
-1. Share data in step 7 via standard [Datashare mechanism](#Datashare) (which encrypts entire data with IDA's partner public key). 
+1. Share data in step 7 via standard [Datashare encryption](#datashare) (which encrypts entire data with IDA's partner public key). 
 
 Decryption by IDA:
 1. Generate master symmetric encryption key (ZK-IDA-MASTER).
