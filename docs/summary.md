@@ -37,7 +37,7 @@
  * [APIs](api.md)
  * Community
     * [Contribute](contribute.md)
-    * [Academic institutes](academic-institutes.md)
     * [Code of Conduct](code-of-conduct.md)
+    * [Academic institutes](academic-institutes.md)
  *  [License](license.md)
    
