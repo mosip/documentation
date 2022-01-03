@@ -35,7 +35,7 @@ Encryption and share by Credential Service:
 
 Decryption by IDA:
 1. Generate master symmetric encryption key (ZK-IDA-MASTER).
-1. Decrypt data in Step 7 above using IDA partner private key.
+1. Decrypt data in Step 8 above using IDA partner private key.
 1. Decrypt ZKn-IDA to get ZK-n
 1. Encrypt ZKn with ZK-IDA-MASTER and store at random index.
 1. BIO data is stored as is.
