@@ -5,12 +5,12 @@ Security of user data is given highest priority in MOSIP.  Data is protected in 
 ## Registration data flow 
 ![](_images/cryptography-registration-flow.png)
 
-1. Biometrics are signed by private key of device provider. The signature is verified by the registration client.
-2. Registration client signs packet using TPM key of the machine, and encrypts packet using MOSIP public key specific to (registration center, machine id) combination.   
-3. Registration processor stores received packets "as is" in Object Store.
-4. ID Repo encrypts biometrics and documents and stores them in Object Store.
-5. The UINs are hashed, encrypted and stored in `uin` table of `mosip_idrepo` DB.
-7. Registration processor stores encrypted demographic data in `mosip_regprc` db. 
+1. Biometrics are signed by private key of device provider. The signature is verified by the registration client. (PK2)
+2. Registration client signs packet using TPM key of the machine, and encrypts packet using MOSIP public key specific to (registration center, machine id) combination. (K10, K11).   
+3. Registration processor stores packets created in (2) "as is" in Object Store. 
+4. ID Repo encrypts biometrics, demographics and documents and stores them in Object Store. (K7.1,K7.2,K7.3)
+5. The UINs are hashed, encrypted and stored in `uin` table of `mosip_idrepo` DB. (K7.4)
+7. Registration processor stores encrypted demographic data in `mosip_regprc` db. (K11 ?)
 
 ## Datashare
 ![](_images/cryptography-datashare.png)
@@ -20,34 +20,35 @@ Data shared with all partners like ABIS, Print, Adjudication, IDA etc. is encryp
 ## Zero knowledge encryption
 ID Authentication module (IDA) is an independent module and may be hosted by several providers. IDA hosts all the biometric templates and demographic data. A unique additional protection is provided here to make sure that mass decryption of user data is very difficult to achieve.  The data can only be decrypted if user's UIN is provided.  Here is the encryption scheme: 
 
-Encryption and share by Credential Service:
-1. Generate master symmetric encryption key (ZK-MASTER)
-1. Generate 10,000 symmetric keys' pool (ZKn). Encrypt each ZKn with ZK-MASTER and store in DB.
-1. Randomly select one key from ZKn, decrypt using ZK-MASTER.
-1. Create new key ZKn' = ZKn + UIN/VID/APPID.
-1. Encrypt biometric templates using ZKn' (BIO).
-1. Encrypt ZKn with IDA-PUBLIC_KEY (ZKn-IDA)(this is to share the key with IDA) 
+### Encryption and share by Credential Service:
+1. Generate master symmetric encryption key K9.
+1. Generate 10,000 symmetric keys' pool (ZKn). Encrypt each ZKn with K9 and store in DB. (K12)
+1. Randomly select one key from ZKn, decrypt using K9.
+1. Derive new key ZKn' = ZKn + UIN/VID/APPID.
+1. Encrypt biometric templates and demographics.
+    *  BIO = encrypt(bio/demo with ZKn').
+1. Encrypt ZKn (this is done to share ZKn with IDA).
+    * ZKn-IDA = encrypt(ZKn with K22)
 1. Share the following with IDA:
     1. ZKn-IDA
     1. BIO
-    1. Random index (1999) 
-    1. Hash of UIN/VID/APPID
-1. Share data in step 7 via standard [Datashare encryption](#datashare) (which encrypts entire data with IDA's partner public key). 
+    1. Random index (0 - 9999) 
+    1. SHA-256 hash of UIN/VID/APPID
+1. Share data in step 7 via standard [Datashare encryption](#datashare) (which encrypts entire data with PK8). 
 
-Decryption by IDA:
-1. Generate master symmetric encryption key (ZK-IDA-MASTER).
-1. Decrypt data in Step 8 above using IDA partner private key.
-1. Decrypt ZKn-IDA to get ZK-n
-1. Encrypt ZKn with ZK-IDA-MASTER and store at random index.
+### Decryption by IDA:
+1. Generate master symmetric encryption key K18.
+1. Decrypt data in Step 8 above using PK8.
+1. Decrypt ZKn-IDA with K22 to get ZKn.
+1. Encrypt ZKn with K18 and store at random index.
 1. BIO data is stored as is.
-1. Decrypt BIO by creating key ZKn' as in step 4 above.
 
 ## ID authentication flow
 ![](_images/cryptography-ida-flow.png)
 
 1. L1 devices contain FTM chip to encrypt biometrics at source and send to Authentication client.  The FTM chip contains IDA provided FTM key. The data is also signed by device key.
 2. Authentication client further encrypts the auth request with IDA-PARTNER public key.
-3. IDA decrypts zero knowledge data as given above and the performs a demo and biometric
+3. IDA decrypts zero knowledge data as given in [Step 4](#encryption-and-share-by-credential-service) and the performs a demographic and/or biometric authentication.
 4. Match result is returned to Auth client.  In case of KYC, the KYC attributes are encrypted with Partner's public key (as in Datashare).  
 
 
