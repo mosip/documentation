@@ -53,7 +53,7 @@ jobs:
           for i in "$(find . -name "*.sql" -exec readlink -f {} \;)"
           do
             echo "full path " $i
-            echo "::set-output name=filename::${i}"
+            echo "::set-output name=filename::${i##*\/}"
             echo "File name is: ${{ steps.create_list.outputs.filename }}"
             array+=$i
           done
