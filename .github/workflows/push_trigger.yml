@@ -101,4 +101,4 @@ jobs:
         with:
           default_author: github_actions
           message: 'added documentation'
-          add: './1.2.0/${{ matrix.names }}/*.html'
+          add: './1.2.0/*.html'
