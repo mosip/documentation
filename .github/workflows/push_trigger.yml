@@ -55,8 +55,8 @@ jobs:
             echo "full path " $i
             echo "fullname=$(i##*/)" >> $GITHUB_ENV
             echo "env.fullname"
-            echo "::set-output name=filename::${env.fullname}"
-            echo "File name is: ${{ steps.create_list.outputs.filename }}"
+            echo "::set-output name=filename::env.fullname"
+            echo "File name is: ${{ steps.create_list.outputs.fullname }}"
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
