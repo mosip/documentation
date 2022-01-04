@@ -1,19 +1,19 @@
 name: Maven Package upon a push
 
 # Triggered when code is pushed to any branch in a repository
-on: push
+#on: push
 
-#on:
-#  schedule:
-#    # * is a special character in YAML so you have to quote this string
-#    - cron:  '30 5 * * *'
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 0 12 1 * ?'
   
 jobs:
   Generate_Documentation:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        names: [audit-manager, id-authentication]
+        names: [partner-management-service, registration, khazana, admin-services, resident-services, commons, audit-manager, pre-registration, print, id-authentication, mosip-openid-bridge, id-repository, durian, keymanager, packet-manager]
 
     steps:
       - name: Set up JDK 11
@@ -74,7 +74,7 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        names: [audit-manager, id-authentication]
+        names: [partner-management-service, registration, khazana, admin-services, resident-services, commons, audit-manager, pre-registration, print, id-authentication, mosip-openid-bridge, id-repository, durian, keymanager, packet-manager]
 
     steps:
       - name: Set up JDK 11
