@@ -40,22 +40,21 @@ jobs:
           # Strip git ref prefix from version
           echo "BRANCH_NAME=develop" >> $GITHUB_ENV
 
-      - name: Build with Maven
-        run: |
-          npm install -g redoc-cli
-          find * -name pom.xml -mindepth 3 -maxdepth 5 -execdir mvn -B -Dgpg.skip -DskipTests -Dgpg.skip clean verify -s $GITHUB_WORKSPACE/settings.xml -P openapi-doc-generate-profile \;
+#      - name: Build with Maven
+#        run: |
+#          npm install -g redoc-cli
+#          find * -name pom.xml -mindepth 3 -maxdepth 5 -execdir mvn -B -Dgpg.skip -DskipTests -Dgpg.skip clean verify -s $GITHUB_WORKSPACE/settings.xml -P openapi-doc-generate-profile \;
 
       - name: create array of files
         id: create_list
         run: |
           mkdir -p ./${{ matrix.names }}-report
           array=()
-          for i in "$(find . -name "*openapi.json" -exec readlink -f {} \;)"
+          for i in "$(find . -name "*.sql" -exec readlink -f {} \;)"
           do
             echo "full path " $i
             filename=$(i##*/)
-            echo "::set-output name=filename::${$(i##*/)}"
-            echo "file name is = ${{ steps.create_list.outputs.filename }}"
+            echo "File name is: " $filename
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
