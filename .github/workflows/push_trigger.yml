@@ -53,8 +53,8 @@ jobs:
           for i in "$(find . -name "*.sql" -exec readlink -f {} \;)"
           do
             echo "fullpath=$i" >> $GITHUB_ENV
-            echo "fullname=$(basename $fullpath)" >> $GITHUB_ENV
-            echo "$fullname"
+            echo "fullname=$(basename env.fullpath)" >> $GITHUB_ENV
+            echo env.fullname
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
