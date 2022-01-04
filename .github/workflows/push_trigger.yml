@@ -54,7 +54,7 @@ jobs:
           do
             echo "full path " $i
             filename=$(i##*/)
-            echo "::set-output name=filename::${i##*/}"
+            echo "::set-output name=filename::${$(i##*/)}"
             echo "file name is = ${{ steps.create_list.outputs.filename }}"
             array+=$i
           done
