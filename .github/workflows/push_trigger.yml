@@ -92,6 +92,10 @@ jobs:
           name: ${{ matrix.names }}
           path: ./1.2.0/
 
+      - name: check artifact
+        run: |
+          echo "$(find . -name "*openapi.html" -exec readlink -f {} \;)"
+
       - name: Commit changes
         uses: EndBug/add-and-commit@v7
         with:
