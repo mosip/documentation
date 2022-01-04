@@ -21,12 +21,12 @@ Once the OTP is verified, you will see a pop up for selecting the languages for 
 7. Read through the Terms and Conditions to provide your consent. 
 Select the checkbox and click **Accept**.
 Once the user gives consent, they will be directed to the demographics page.
-8. On the Demographic Details page, enter the required data in the different tiles.
+8. On the **Demographics Details** page, enter the required data in the different tiles.
 Note: The fields/labels having * mark is mandatory to be filled.
-9. After filling the details, click Continue to proceed.
-10. Next, upload the required documents in the Upload documents page.
-Here, you also have the option to create multiples applications for your family or friends by clicking **Add an Applicant** or selecting **Create New Application** on the dashboard.
-11. Once this is done, you can preview the same and make modifications if required by clicking on modify.
+9. After filling the details, click **Continue**.
+10. Next, upload the required documents in the **Upload Documents** page. Click **Continue**. 
+Now, there is an option to create multiple applications for your family/friends by clicking **Add an Applicant** or selecting **Create New Application** on the dashboard.
+11. Once this is done, you can preview the same and make modifications if required by clicking on **modify**.
 12. Now, you can proceed with booking an appointment.
 13. Select the Registration center and the time slot.
 
