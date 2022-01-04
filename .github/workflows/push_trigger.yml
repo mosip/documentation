@@ -52,11 +52,10 @@ jobs:
           array=()
           for i in "$(find . -name "*.sql" -exec readlink -f {} \;)"
           do
-            echo "fullpath=$i"
-            echo "fullname=${fullpath##*/}"
-            array+=$i
+            echo "::set-env name=fullpath::$i"
           done
-          echo "::set-output name=array::${array[@]}"
+
+
 
 
 #      - name: display array
