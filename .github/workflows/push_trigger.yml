@@ -52,7 +52,7 @@ jobs:
           array=()
           for i in "$(find . -name "*.sql" -exec readlink -f {} \;)"
           do
-            echo "fullpath::$i" >> $GITHUB_ENV
+            echo "fullpath=$(i)" >> $GITHUB_ENV
           done
 
 
