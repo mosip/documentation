@@ -28,9 +28,10 @@ Note: The fields/labels having * mark is mandatory to be filled.
 Now, there is an option to create multiple applications for your family/friends by clicking **Add an Applicant** or selecting **Create New Application** on the dashboard.
 11. Once this is done, you can preview the same and make modifications if required by clicking on **modify**.
 12. Now, you can proceed with booking an appointment.
-13. Select the Registration center and the time slot.
+13. Select the registration center and the time slot.
+14. Receive an acknowlegment on the registered phone number(SMS) or email address as per details provided in the demographic form.
 
-Below is the description of the options available in the sample UI Implementation
+Below is the detailed description of the options available in the sample UI implementation
 
 ## Login/create a user account
 
@@ -93,19 +94,31 @@ MOSIP also empowers the countries with an option to configure the documents whic
 
 **Referring to already uploaded documents**
 * The POA (Proof of Address) document could be uploaded or can be referred to an already uploaded POA of an existing applicant
-* The user could select a particular applicant document to which he wants to refer to.
-* When Pre-registering for a family living at the same address, it is not required to upload the same POA repeatedly, instead, they could refer to the document as uploaded by the first family member thereby saving time and space.
+* The user can select a particular applicant document to which he wants to refer to.
+* When pre-registering for a family living at the same address, it is not required to upload the same POA repeatedly, instead, they could refer to the document as uploaded by the first family member thereby saving time and space.
+
+![](_images/upload-docs.png)
 
 **Preview the Data**
-Once the user fills up the demographic details and uploads the required documents, they will be able to preview the data. On the Preview page, the residents can choose to **modify** the demographic details by clicking on the modify button at the top right corner. Similarly, they can modify the uploaded documents, but clicking modify at the bottom right corner.
+Once the user fills up the demographic details and uploads the required documents, they will be able to preview the data. On the Preview page, the residents can choose to modify the demographic details by clicking on the **modify** button at the top right corner. 
+Similarly, they can modify the uploaded documents, by clicking modify at the bottom right corner.
 On this page, the user also has an option to add another applicant by clicking **Add an Applicant**. Further, the user can click **Book Now** to book an appointment.
 
 **Create multiple applications**
-Once the demographic details are filled and the documents are uploaded, the user can add more applicants. To do so, they can select Add an Applicant option on the preview page or Create New Application option on the Dashboard. The system associates an unique pre-registration ID to the new application(s) created.
+Once the demographic details are filled and the documents are uploaded, the user can add more applicants. To do so, they can select **Add an Applicant** option on the preview page or **Create New Application** option on the Dashboard. The system associates an unique pre-registration ID to the new application(s) created.
 
 ### Viewing My Applications
 
 Once the application is created, there could be multiple statuses depending on the data filled by the user/resident or the actions performed by them. The user can view all the pre-registration applications created by them in the Dashboard. The different statuses with a brief explanation are mentioned below:
+
+|Status|Description|User Action|
+|------|-----|-----|
+|Incomplete|Filled only demographic details|Upload documents and book an appointment|
+|Pending appointment|Filled demographic details and uploaded documents |Book an appointment|
+|Booked|  Filled demographic details, uploaded documents, and booked appointment|Visit the registration center on the appointment date and time|
+|Expired| Appointment date has passed|Re-book an appointment
+|Cancelled| Appointment has been cancelled|Re-book an appointment
+
 
 The applications are sorted and displayed by the order of creation of application. The first application created appears first, latest created/modified application appears at the end. If the user visits the registration center and consumes the appointment, then the application will be removed from the list. If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
 
