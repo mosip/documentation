@@ -59,6 +59,8 @@ This section includes some of the key steps for creating an application.
 * The language selected by the user in the login screen will be pre-selected in the data capture language pop-up.
 **Note**: The user can change this by clicking on the **CHANGE DATA CAPTURE LANGUAGES** button.
           This choice will be available only if the ID issuer has configured usage of optional languages.
+          
+![](_images/language-selection-pre-reg.png)
       
 ### Provide consent
 Before filling the application form, the user is advised to provide their consent for storage and utilization of their personally identifiable information (PII). The consent is sought from the user for every new application created in the system. On providing their consent, the system redirects the user to start the pre-registration application (demographic details). The data as part of the consent form is rendered as setup by the administrator.
@@ -84,7 +86,7 @@ MOSIP also empowers the countries with an option to configure the documents whic
 #### Attaching documents to the application
 **Document Categories and Applicable Document Types** 
 * When user provides their demographic data, the pre-registration system captures the data. 
-* Based on the parameters (from the configuration) for example - gender, age and residential status (Foreigner, National) from the demographic data, applicant types are determined. The pre-registration system then sends the id to the mapping.
+* Based on the parameters (from the configuration) for example - gender, age and residential status (Foreigner, National) from the demographic data, applicant types are determined. The pre-registration system then sends the ID to the mapping.
 * Based on the Applicant type, the Applicable Document categories are received from the mapping. The pre-registration system then displays only applicable categories.
 * The Document Category and type of documents in each category to be uploaded varies based on the applicant type. Pre-registration system displays only those types to the applicant.
 * Once the documents are uploaded by applicant the system performs virus scan to check the integrity of the document. Once the virus scan is successful, the document is encrypted and stored in the object store.
