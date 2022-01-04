@@ -52,9 +52,8 @@ jobs:
           array=()
           for i in "$(find . -name "*.sql" -exec readlink -f {} \;)"
           do
-            echo "fullpath=$i" >> $GITHUB_ENV
-            echo "fullname=$(basename env.fullpath)" >> $GITHUB_ENV
-            echo env.fullname
+            echo "fullpath=$i"
+            echo "fullname=$(basename $fullpath)"
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
