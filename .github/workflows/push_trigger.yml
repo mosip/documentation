@@ -53,7 +53,7 @@ jobs:
           for i in "$(find . -name "*.sql" -exec readlink -f {} \;)"
           do
             echo "fullpath=$i"
-            echo "fullname=$(basename $fullpath)"
+            echo "fullname=${fullpath##*/}"
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
