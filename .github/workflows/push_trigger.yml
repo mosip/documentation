@@ -52,7 +52,9 @@ jobs:
           array=()
           for i in "$(find . -name "*.sql" -exec readlink -f {} \;)"
           do
-            filename=$(basename "$i")
+            fullname=$(basename "$i")
+            echo "$fullname"
+            filename=$(echo "$fullname" | cut -f 1 -d '.')
             echo "$filename"
           done
 
