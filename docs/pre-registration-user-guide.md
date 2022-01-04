@@ -47,6 +47,8 @@ This is a configurable option provided to the ID issuer. Before requesting for a
 ### Logout/session timeout
 If the resident wishes to log out of the pre-registration system, they can do so by clicking on the Logout option. The token issued during the authentication of user login is deleted and the user gets logged out of the system. If the user is inactive for say X minutes (X is configurable), the system notifies the user a minute before the configured timeout limit and logs out after a minute. In such a case, no user data is saved.
 
+![Pre-registartion login page](_images/pre-reg-login.png)
+
 ## Create an Application
 This section includes some of the key steps for creating an application.
 
@@ -74,7 +76,7 @@ There may be a situation where the user opts to close the Consent Pop-up. In thi
 The demographic data that needs to be collected from the residents is configurable as per a country’s requirement. The user is provided with a demographic form based on the ID Object Definition & UI Specification for new pre-registration application. The residents are expected to fills demographic details (e.g., Full Name, Age/DOB, Gender, Residential status, Address, mobile number, email id, etc.). The system validates the fields entered, the system also checks for the mandatory fields. Additionally, the system validates for any blocklisted words entered as configured by the country. Once validated a pre-registration request ID (PRID) is generated and the demographic details provided by the residents gets mapped to that PRID.
 On the Demographic Details page, the residents will be able to enter their data in their preferred language.   
 A sample image is shown below.
-![](_images/pre-registration-ui-sample.jpg)
+![](_images/demographic-details.png)
 
 ### Upload Documents
 MOSIP also empowers the countries with an option to configure the documents which needs to be uploaded by the residents for the registration process.
