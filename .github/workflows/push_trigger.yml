@@ -14,7 +14,6 @@ jobs:
     strategy:
       matrix:
         names: [audit-manager, id-authentication]
-        max-parallel: 1
 
     steps:
       - name: Set up JDK 11
@@ -73,9 +72,9 @@ jobs:
     needs: Generate_Documentation
     runs-on: ubuntu-latest
     strategy:
+      max-parallel: 1
       matrix:
         names: [audit-manager, id-authentication]
-        max-parallel: 1
 
     steps:
       - name: Set up JDK 11
