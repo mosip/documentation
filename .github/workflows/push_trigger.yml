@@ -53,7 +53,9 @@ jobs:
           for i in "$(find . -name "*.sql" -exec readlink -f {} \;)"
           do
             echo "full path " $i
-            echo "::set-output name=filename::${basename | $i }"
+            echo "fullname=$(i##*/)" >> $GITHUB_ENV
+            echo "env.fullname"
+            echo "::set-output name=filename::${env.fullname}"
             echo "File name is: ${{ steps.create_list.outputs.filename }}"
             array+=$i
           done
