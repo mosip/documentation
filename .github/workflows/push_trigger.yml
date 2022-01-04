@@ -52,16 +52,12 @@ jobs:
           array=()
           for i in "$(find . -name "*.sql" -exec readlink -f {} \;)"
           do
-            echo "full path " $i
-            echo "fullname=$(i##*/)" >> $GITHUB_ENV
-            echo "env.fullname"
-            echo "::set-output name=filename::env.fullname"
-            echo "File name is: ${{ steps.create_list.outputs.fullname }}"
+            echo "fullpath=$i" >> $GITHUB_ENV
+            echo "fullname=$(basename $fullpath)" >> $GITHUB_ENV
+            echo "$fullname"
             array+=$i
           done
           echo "::set-output name=array::${array[@]}"
-
-
 
 
 #      - name: display array
