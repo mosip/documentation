@@ -26,10 +26,10 @@
     * [Biometric SDK](biometric-sdk.md)
     * [Biometric Devices](biometric-devices.md)
 * [Partners](partners.md)
-    * [Types of MOSIP partners](partner-types.md)
+    * [Types of Partners](partner-types.md)
     * [Partner On-boarding](partner-onboarding.md)
-    * [Partner policies](partner-policies.md)
-    * [Data share mechanisms with partners](data-share-partners.md)
+    * [Partner Policies](partner-policies.md)
+    * [Data Share Partners](data-share-partners.md)
 * Deployment
     * [Sandbox deployment](sandbox-deployment.md)
     * [Hardware sizing](hardware-sizing.md)
