@@ -20,7 +20,7 @@ The MOSIP platform requires integration with several other systems.  Typically, 
 \* Label:  Reference in `partner_type` table of `mosip_pms` database.
 
 ## Partner onboarding
-Onboarding of a partner refers to registering a partner in a particular deployment of MOSIP.  Partners need to be onboarded to MOSIP system to establish trust.  The onboarding process consists of loading partner details in database, exchanging certificates etc, detailed in the later sections.  Such onboarding is required to be done on any fresh MOSIP installation.  For instance, if you install a sandbox, you would need to follow the onboarding process for each partner.
+Onboarding of a partner refers to registering a partner in a particular deployment of MOSIP.  Partners need to be onboarded establish trust.  The onboarding process consists of loading partner details in database, exchanging certificates etc, detailed in the later sections.  Such onboarding is required to be done on any fresh MOSIP installation.  For instance, if you install a sandbox, you would need to follow the onboarding process for each partner.
 
  MOSIP [Partner Management Services](partner-management.md)(PMS) offers functionality to onboard partners.  The front end of PMS - the PMS portal may be used by partners to onboard themselves.  
 
