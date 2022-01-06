@@ -18,11 +18,16 @@ To generate the first operator in MOSIP eco-system, refer to the steps below:
 ## On-boarding an operator
 * The admin needs to map the operator' UIN in KeyCloak under Attributes with attribute name as `individualId`.
 * The admin needs to remove the "Default" role mapping for the operator' user account if it exists.
-* The operator needs to login(password based) to the registration client using Keycloak credentials.
+* The operator needs to login (password based) to the registration client using Keycloak credentials.
 * The operator needs to ensure that the registration client machine is online.
-* The operator will land in the below page and needs click on **Get Onboarded**
-<< diagram>>
+* The operator will land into the below page and needs to click on **Get Onboarded**
+
+  ![](_images/reg-client-user-onboard.PNG)
+
 * The operator needs to provide their biometrics and click **Save**.
+
+  ![](_images/reg-client-biometric-page.png)
+
 * After successful onboarding, the operator is automatically re-directed to the registration client home page.
 
 **Note:**
