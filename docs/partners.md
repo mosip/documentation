@@ -6,7 +6,6 @@ The MOSIP platform requires integration with several other systems.  Typically, 
 ![](_images/mosip-ecosystem.jpg)
 
 ## Partner types
-
 |Partner type|Description|Label\*|
 |---|---|---|
 |Authentication Partner| Entities that use MOSIP for authentication like banks, telecom, Govt. institutes etc.|`Auth_Partner`|
@@ -28,6 +27,6 @@ The MOSIP Partner Programme (MPP) was initiated to help stakeholders connect wit
 
 Refer MPP document [here](https://www.mosip.io/uploads/resources/60914c1597184Program-partner-V7.pdf) for further details.
 
-## PMS Module
+## PMS module
 MOSIP provides Partner Management Services (PMS) module.   
 
