@@ -20,7 +20,9 @@ The MOSIP platform requires integration with several other systems.  Typically, 
 \* Label:  Reference in `partner_type` table of `mosip_pms` database.
 
 ## Partner onboarding
-Partners need to be onboarded to MOSIP system to establish trust.  MOSIP [Partner Management Services](partner-management.md)(PMS) offers functionality to onboard partners.  The front end of PMS - the PMS portal may be used by partners to onboard themselves.  See [Partner Onboarding](partner-onboarding.md) for further details.
+Onboarding of a partner refers to registering a partner in a particular deployment of MOSIP.  Partners need to be onboarded to MOSIP system to establish trust.  The onboarding process consists of loading partner details in database, exchanging certificates etc, detailed in the later sections.  Such onboarding is required to be done on any fresh MOSIP installation.  For instance, if you install a sandbox, you would need to follow the onboarding process for each partner.
+
+ MOSIP [Partner Management Services](partner-management.md)(PMS) offers functionality to onboard partners.  The front end of PMS - the PMS portal may be used by partners to onboard themselves.  
 
 ## MOSIP Partner Program
 The MOSIP Partner Programme (MPP) was initiated to help stakeholders connect with MOSIP, and become part of an ecosystem invested in building foundational digital ID systems that are trustworthy, secure, efficient, and interoperable, while being customised to specific needs. 
