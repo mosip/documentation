@@ -14,8 +14,8 @@ This guide highlights the various options provided in the reference UI implement
 
 ![Setting up the registration client](https://github.com/mosip/registration-client/blob/develop/README.md)
 
-### Lauching the registration client
-1. When the operator launches the registartion client for the first time, they will observe that the initial sync is being performed and the pre-loader would display teh following information.
+### Launching the registration client
+1. When the operator launches the registration client for the first time, they will observe that the initial sync is being performed and the pre-loader would display the following information.
 
 ![](_images/reg-client-pre-loader-success.png)
 
@@ -34,10 +34,13 @@ If the operator does not have "Default" role, they can refer to ![Operator onboa
 **Note**: On successful onboard of the operator, biometric templates of the operator are stored locally.
        Biometric authentication does not reach out to the server everytime instead it is validated based on the locally stored templates on the reg client machine. 
 
-### Operational Tasks
+### Registration client reference UI implementation
 
   Below is the image of the reference UI implementation of the registration client.
   ![](_images/reg-client-orig.png)
+      
+### Operational Tasks
+      
 * **Synchronize Data**: Synchronize data is the data required to make the registration client functional. Full sync is performed initially during the launch of the registration client for the first time. Post this, the registration client syncs only the changes from sever and this is called as the delta sync. Synchronize data is automated and can be triggered manually. 
 This happens automatically while launching the registration client and is also manually initiated by the operator.
  
