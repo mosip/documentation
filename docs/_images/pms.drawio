@@ -1,1 +1,52 @@
-<mxfile host="app.diagrams.net" modified="2022-01-06T03:26:15.314Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" version="16.2.2" etag="Um2d6YpiApqnZww7y8IF" type="github"><diagram id="r6IDNv6xsE6FicFiDBsw">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-01-06T03:33:26.346Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="A7IhfwHQLOc0nQkqmhIV" version="16.2.2" type="github">
+  <diagram id="r6IDNv6xsE6FicFiDBsw" name="Page-1">
+    <mxGraphModel dx="998" dy="631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="zuH0ebxx6mYs9fk7_g1I-1" target="zuH0ebxx6mYs9fk7_g1I-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="zuH0ebxx6mYs9fk7_g1I-1" target="zuH0ebxx6mYs9fk7_g1I-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="zuH0ebxx6mYs9fk7_g1I-1" target="zuH0ebxx6mYs9fk7_g1I-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.004;entryY=0.591;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="zuH0ebxx6mYs9fk7_g1I-1" target="zuH0ebxx6mYs9fk7_g1I-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-1" value="&lt;b&gt;Partner Management Service&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="370" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-2" value="Keymanager" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="670" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-4" value="Upload partner certs" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="750" y="300" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-5" value="Reg proc" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="285" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-6" value="Datashare" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="950" y="370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-7" value="Notifier (Kernel)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-8" value="Auditmanager" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-11" value="Audit logs" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="795" y="450" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-12" value="Partner notifications" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="630" y="450" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-13" value="Partner certs to IDA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="850" y="360" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
