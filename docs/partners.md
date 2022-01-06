@@ -46,7 +46,7 @@ Onboarding of a partner refers to registering a partner in a particular deployme
 1. DP uploades all certificates.
 1. Any approval from MOSIP? (TODO) 
 
-## FTM Partner (FTMP)
+### FTM Partner (FTMP)
 1. FTMP should have a trusted PKI (X.509?) certificate and chain of CA certificates.
 1. FTMP self-registers on PMS portal providing partner id, name, organisation name (same as in certificate), partner type (`FTM_Provider`) etc.
 1. FTMP uploades all certificates.
