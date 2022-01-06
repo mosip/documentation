@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-06T04:33:30.182Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="iD-n07K37Um9zM_VTbDT" version="16.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-06T05:01:28.515Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="VU-GJOiSVusvPgtboVu3" version="16.2.2" type="github">
   <diagram id="r6IDNv6xsE6FicFiDBsw" name="Page-1">
     <mxGraphModel dx="998" dy="631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
       <root>
@@ -34,7 +34,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="zuH0ebxx6mYs9fk7_g1I-1" value="&lt;b&gt;Partner Management Service&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="zuH0ebxx6mYs9fk7_g1I-1" value="&lt;b&gt;Partner Management Service&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=default;" vertex="1" parent="1">
           <mxGeometry x="640" y="370" width="180" height="70" as="geometry" />
         </mxCell>
         <mxCell id="zuH0ebxx6mYs9fk7_g1I-2" value="Keymanager" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
@@ -77,7 +77,7 @@
           <mxGeometry x="920" y="330" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="zuH0ebxx6mYs9fk7_g1I-22" value="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="685" y="315" width="25" height="25" as="geometry" />
+          <mxGeometry x="692.5" y="317.5" width="25" height="25" as="geometry" />
         </mxCell>
         <mxCell id="zuH0ebxx6mYs9fk7_g1I-23" value="2" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="577.5" y="410" width="25" height="25" as="geometry" />
