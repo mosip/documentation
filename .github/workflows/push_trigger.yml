@@ -1,12 +1,12 @@
 name: Maven Package upon a push
 
 # Triggered when code is pushed to any branch in a repository
-#on: push
+on: push
 
-on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '0 12 1 * ?'
+#on:
+#  schedule:
+#    * is a special character in YAML so you have to quote this string
+#    - cron:  '0 12 1 * ?'
   
 jobs:
   Generate_Documentation:
