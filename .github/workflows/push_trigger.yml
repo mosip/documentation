@@ -11,7 +11,7 @@ jobs:
   Generate_Documentation:
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 2
+      max-parallel: 1
       matrix:
         names: [partner-management-services, registration, khazana, admin-services, resident-services, commons, audit-manager, pre-registration, print, id-authentication, mosip-openid-bridge, id-repository, durian, keymanager, packet-manager]
         
@@ -68,7 +68,6 @@ jobs:
 
 
   Checkout_to_Documentation_Repository:
-    if: always()
     needs: Generate_Documentation
     runs-on: ubuntu-latest
     strategy:
