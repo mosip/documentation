@@ -4,11 +4,13 @@ The Registration client is a thick Java-based client where the resident's demogr
 
 ## Who operates the Registration client?
 
-The Registration Client can be operated by an operator who can be either a Supervisor or an Officer. They can login to the application and perform various activities.
-To know more about the roles and the on-boarding process of an operator, click here.
+The Registration client can be operated by an operator who can be either a Supervisor or an Officer. They can login to the application and perform various activities.
 
-Guide for First user creation https://docs.mosip.io/platform/modules/registration-client/first-user-registration-and-onboarding
-Operator Onboarding
+**Features accessible to Registration Officer and Supervisor**- Login/Logout, Onboarding, Synchronize Data, Upgrade software, Export packet, Upload packet, View Re-registration packets, Correction process, Exception authentication
+
+**Feature exclusive to Registration Supervisor**– Approve/reject registrations (end-of-day approvals)
+
+To know more about the roles and the onboarding process of an operator, refer to ![Operator onboarding](operator-onboarding.md).
 
 ## Features
 Registration Client collects the demographic and biometric details of a resident at the registration centers and sends the data to the Registration Processor for generating the UIN. Below are some of the features associated with the Registration client:
@@ -43,10 +45,6 @@ Registration Client collects the demographic and biometric details of a resident
 *	Tested on Windows with Oracle JDK 11
 *	Registration client UI is a reference implementation and can be changed
 
-Below is a sample UI implementation of the registration client and the various functionalities involved.
-
-To know more about each option present in the registration client sample UI implementation, click here.
-
 <<Reg client entity diagram>>
 ## Biometrics SDK Implementation
   
@@ -56,15 +54,15 @@ To know more about each option present in the registration client sample UI impl
 ## Packets
 
 
-## UI reference Implementation
-MOSIP provides a Windows-based reference implementation of the REgistration client that has a UI and the business logic to perform the above process flows. The code, design, App setup, build documentation is available in **registration client repo**. The App may be modified according to a country's need.
+## Registration client UI reference implementation
+MOSIP provides a Windows-based reference implementation of the registration client that has a UI and the business logic to perform the above process flows. The code, design, App setup, build documentation is available in **registration client repo**. The App may be modified according to a country's need.
+To know more about each option present in the registration client sample UI implementation, refer to ![Registration client user guide](registration-client-user-manual.md).
 
 ## Configurations
 For details related to Registration Client configurations, refer to registration-Client configuration.
 
-
 ## UI Specifications
-  What is UI Spec, where is the sample available .. 
+What is UI Spec, where is the sample available .. 
 Default UI Specifications loaded with Sandbox installation is available [here](https://github.com/mosip/mosip-infra/blob/1.2.0-rc2/deployment/v3/mosip/kernel/masterdata/xlsx/ui_spec.xlsx)
 
 
