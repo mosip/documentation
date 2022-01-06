@@ -13,8 +13,6 @@
     * [Biometric SDK](biometric-sdk.md)
     * [Biometric Devices](biometric-devices.md)
 * [Partners](partners.md)
-    * [Partner Policies](partner-policies.md)
-    * [Data Share Partners](data-share-partners.md)
 * Modules
     * [Commons](commons.md) 
     * [Pre-Registration](pre-registration.md) 

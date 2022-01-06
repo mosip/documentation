@@ -24,6 +24,8 @@ Onboarding of a partner refers to registering a partner in a particular deployme
 
  MOSIP [Partner Management Services](partner-management.md)(PMS) offers functionality to onboard partners.  The front end of PMS - the PMS portal may be used by partners to onboard themselves.  
 
+## Partner policies
+
 ## MOSIP Partner Program
 The MOSIP Partner Programme (MPP) was initiated to help stakeholders connect with MOSIP, and become part of an ecosystem invested in building foundational digital ID systems that are trustworthy, secure, efficient, and interoperable, while being customised to specific needs. 
 
