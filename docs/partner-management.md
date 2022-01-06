@@ -18,7 +18,17 @@ Provides various partner services like onboarding partners and providing partner
 6. All PMS data is stored in `mosip_pms` DB.
 7. Certificates of Authentication Partners are send to IDA module as IDA runs independently.  The certs are shared using [Datashare](datashare.md) (which futher uses Websub to share data with IDA).
 
+## Policy Management Service
 
+## Partner portal
+
+## Repository
+
+## Build and deploy
+
+## Configurations
+
+## API
 
 
 
