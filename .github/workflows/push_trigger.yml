@@ -12,8 +12,9 @@ jobs:
   Generate_Documentation:
     runs-on: ubuntu-latest
     strategy:
+      max-parallel: 2
       matrix:
-        names: [partner-management-service, registration, khazana, admin-services, resident-services, commons, audit-manager, pre-registration, print, id-authentication, mosip-openid-bridge, id-repository, durian, keymanager, packet-manager]
+        names: [partner-management-services, registration, khazana, admin-services, resident-services, commons, audit-manager, pre-registration, print, id-authentication, mosip-openid-bridge, id-repository, durian, keymanager, packet-manager]
 
     steps:
       - name: Set up JDK 11
@@ -74,7 +75,7 @@ jobs:
     strategy:
       max-parallel: 1
       matrix:
-        names: [partner-management-service, registration, khazana, admin-services, resident-services, commons, audit-manager, pre-registration, print, id-authentication, mosip-openid-bridge, id-repository, durian, keymanager, packet-manager]
+        names: [partner-management-services, registration, khazana, admin-services, resident-services, commons, audit-manager, pre-registration, print, id-authentication, mosip-openid-bridge, id-repository, durian, keymanager, packet-manager]
 
     steps:
       - name: Set up JDK 11
