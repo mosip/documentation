@@ -5,6 +5,8 @@ Partner Management Services (PMS) module provides the following services:
 1. Partner Management Service 
 1. Policy Management Service
 
+For an overview of role of partners in MOSIP refer [here](partners.md).
+
 ## Partner Management Service 
 Provides various partner services like onboarding partners and providing partner data to other modules. The diagram below illustrates the relationship of this service to other MOSIP services.
 
