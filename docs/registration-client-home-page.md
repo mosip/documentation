@@ -19,6 +19,8 @@ Below is the image of the reference UI implementation of the registration client
 
 ![](reg-client-menu.png)
       
+      
+
 ### Operational Tasks
       
 * **Synchronize Data**: Synchronize data is the data required to make the registration client functional. Full sync is performed initially during the launch of the registration client for the first time. Post this, the registration client syncs only the changes from sever and this is called as the delta sync. Synchronize data is automated and can be triggered manually. 
@@ -74,9 +76,13 @@ Refer <<operator onboarding link>> for more details.
 * **Center Remap Sync**:
       
 * **Check Updates**:
-
+   
+  
+ 
 ### Registration Tasks
-
+The operator can initiate New registrations, Update UIN, Lost UIN, Correction flow. 
+1. Select a language for data entry. the number of languages displayed in the UI is configurable and depends on the country.
+   
 ## New registration
 An operator can initiate the process of registering a new applicant in the MOSIP ecosystem by filling the new registration form with the resident.
 Below are few of the processes that needs to be completed for a new registration.
@@ -84,29 +90,21 @@ Below are few of the processes that needs to be completed for a new registration
 1. **Capture consent**- For every registration, the registration client provides an option for the operator to mark an individual's consent for data storage and utilization. 
 
 2. **Enter demographic data and upload documents**
-If the resident has a pre-registration ID, the operator can auto-populate the demographic data and the documents by entering the pre-registration ID.
+If the resident has a pre-registration application ID, the operator can auto-populate the demographic data and the documents by entering the pre-registration ID.
 If the resident does not have a pre-registration ID, the operator can enter the resident’s demographic details (such as Name, Gender, DOB, Residential Address, etc.) and upload the documents (such as Proof of Address, Proof of Identity, Proof of Birth) based on the [ID Object defined](MOSIP-ID-Object-Definition.md) by the country.
 
-After the demographic details are entered the registration client validates the entered demographic data as per the Id validation rules defined in the ID Object UI Specification and appropriate error messages are shown in case the validation fails.
-
 3. **Capture biometrics of a resident**
-The capture of biometrics is governed by the country, i.e. capture of each modality (fingerprint, iris or face) can be controlled by the country using the global configuration to turning on or off, capture of a particular biometrics.
+The capture of biometrics is governed by the country, i.e. capture of each modality (fingerprint, iris or face) can be controlled by the country using the global configuration.
 When the operator clicks on the **capture** button and tries to capture the biometrics of the resident, the device needs to make the capture when the quality of the biometrics is more than the threshold configured by the country. The device will try to capture the biometrics until the quality threshold has crossed or the device capture timeout has crossed which is also configurable. 
 
 Post the timeout has occurred and the captured quality of biometrics is less than the threshold, registration client provides an option to the operator to re-try capture of biometrics but for a particular number of times which is also configurable.
+If the resident has a biometric exception (resident is missing a finger/iris or quality of finger/iris is very poor) the operator can mark that particular biometrics as **exception** but the operator has to capture the resident's exception photo.
 
-If the resident has a biometric exception (resident is missing a finger/iris or quality of finger/iris is very poor) the resident can mark that particular biometrics as **exception** but the resident has provide an exception photo after providing the biometrics.
-
-### Device validation
-The biometric devices connected to the registration machine to perform registration needs to registered devices and hence device validation is a very important process. The devices are validated using the master data that is received from the server during sync. Once the validation is successful and the device is connected to the registration machine a three way mapping of the center, machine & device is created and synced back to the server.
-
-### New registration for an infant
-The registration flow for an infant is slightly different from that of registering an adult. The categorization of normal resident and infant is determined based on the age calculated by when the resident provides the date of birth. The age of infant is a configurable parameter (in the current configuration age of infant is set to 5 years).
-
-For an infant registration client doesn't collect the biometrics (except for photo) but it collects the parent/guardian UIN or RID and biometrics for authentication in the server side. Apart from parent/guardian details the resident need to provide a Proof of Relationship document defined by the country.
-
-## Update resident's details
-When a resident visits the registration center to update his/her demographic or biometrics details, the operator captures the updated data as provided by the resident in the registration client.
+ What is the difference between an adult' and an infant' biometric capture?
+ * For an adult, all the configured biometrics can be captured.
+ * For an infant, by default, only the face biometrics is allowed to be captured.   
+   
+## Update UIN When a resident visits the registration center to update his/her demographic or biometrics details, the operator captures the updated data as provided by the resident in the registration client.
 
 Process Flow using which data gets captured by registration client for updating a resident's data:
 
