@@ -10,7 +10,7 @@
 
 ## Reporting framework
 * What is MOSIP providing
-* Features and fucntions
+* Features and functions
 * Default dashboards and reports (with nice screen shots)
 * Pointer to repo and json where they are available
 
