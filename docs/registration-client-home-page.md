@@ -5,8 +5,19 @@ This guide describes the various funtions provided in the Home page of the refer
 Below is the image of the reference UI implementation of the registration client.
 ![](_images/reg-client-orig.png)
 
-Menu bar
-_ Mosip logo i s
+### Menu bar
+* The registration client menu bar displays the following:
+    * MOSIP logo
+    * Home button
+    * Logged in user name
+    * Center name
+    * Machine name
+    * Server connection status symbol(shows if the client is online or offline)
+    * Breadcrumbs (User Guide/Reser Password/Logout)
+
+
+
+![](reg-client-menu.png)
       
 ### Operational Tasks
       
@@ -38,20 +49,31 @@ Refer <<operator onboarding link>> for more details.
       
  **Client Status** : This column displays status of a registration packet based on the abpve mentioned operation.
       
+       * Approved
+       * Rejected
        * Synced
+       * Exported
  
- **Server Status**: 
+ **Server Status**:
       
-      * Pushed
-      * Duplicate  
- 
-  **Registration Type**:
+   On success,    
+      
+      * PUSHED
+      * PROCESSED 
+      * ACCEPTED
+      
+  On failure,
+      
+      * REREGISTER
+      * REJECTED
+      * RESEND
+      
+      
+  **Registration Type**: This column displays the type of registration packet(New packet, Lost packet, Update packet, Correction packet)
       
 * **Center Remap Sync**:
       
 * **Check Updates**:
-
-## Settings
 
 ### Registration Tasks
 
@@ -59,7 +81,7 @@ Refer <<operator onboarding link>> for more details.
 An operator can initiate the process of registering a new applicant in the MOSIP ecosystem by filling the new registration form with the resident.
 Below are few of the processes that needs to be completed for a new registration.
 
-1. **Capture consent**- For every registration, the registration client provides an option for the operator to mark an individual's consent from the resident for data storage and utilization. The operator marks consent in the checkbox provided after confirming the same with the resident. Whether the consent is marked as Yes or No, it will not have any impact on issuance of UIN for that resident and the registration processor will not execute any validations in this regard during packet processing.
+1. **Capture consent**- For every registration, the registration client provides an option for the operator to mark an individual's consent for data storage and utilization. 
 
 2. **Enter demographic data and upload documents**
 If the resident has a pre-registration ID, the operator can auto-populate the demographic data and the documents by entering the pre-registration ID.
@@ -67,14 +89,13 @@ If the resident does not have a pre-registration ID, the operator can enter the 
 
 After the demographic details are entered the registration client validates the entered demographic data as per the Id validation rules defined in the ID Object UI Specification and appropriate error messages are shown in case the validation fails.
 
-### Capture biometrics of a resident
+3. **Capture biometrics of a resident**
 The capture of biometrics is governed by the country, i.e. capture of each modality (fingerprint, iris or face) can be controlled by the country using the global configuration to turning on or off, capture of a particular biometrics.
+When the operator clicks on the **capture** button and tries to capture the biometrics of the resident, the device needs to make the capture when the quality of the biometrics is more than the threshold configured by the country. The device will try to capture the biometrics until the quality threshold has crossed or the device capture timeout has crossed which is also configurable. 
 
-When the operator clicks on the capture button and tries to capture the biometrics of the resident, the device needs to make the capture when the quality of the biometrics is more than the threshold configured by the country. The device will try to capture the biometrics until the quality threshold has crossed or the device capture timeout has crossed which is also configurable. 
+Post the timeout has occurred and the captured quality of biometrics is less than the threshold, registration client provides an option to the operator to re-try capture of biometrics but for a particular number of times which is also configurable.
 
-Post the timeout has occurred and the captured quality of biometrics is less than the threshold, registration client provide an option to the operator to retry capture of biometrics but for a particular number of times which is also configurable.
-
-If the resident has a biometric exception (resident is missing a finger/iris or quality of finger/iris is very poor) the resident can mark that particular biometrics as exception but the resident has provide an exception photo after providing the biometrics.
+If the resident has a biometric exception (resident is missing a finger/iris or quality of finger/iris is very poor) the resident can mark that particular biometrics as **exception** but the resident has provide an exception photo after providing the biometrics.
 
 ### Device validation
 The biometric devices connected to the registration machine to perform registration needs to registered devices and hence device validation is a very important process. The devices are validated using the master data that is received from the server during sync. Once the validation is successful and the device is connected to the registration machine a three way mapping of the center, machine & device is created and synced back to the server.
