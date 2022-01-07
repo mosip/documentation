@@ -6,7 +6,7 @@ Below is the image of the reference UI implementation of the registration client
 ![](_images/reg-client-orig.png)
 
 ### Menu bar
-* The registration client menu bar displays the following:
+The registration client menu bar displays the following:
     * MOSIP logo
     * Home button
     * Logged in user name
@@ -101,35 +101,38 @@ If the resident has a biometric exception (resident is missing a finger/iris or 
  * For an adult, all the configured biometrics can be captured.
  * For an infant, by default, only the face biometrics is allowed to be captured.   
      
-## Update UIN- When a resident visits the registration center to update his/her demographic or biometrics details, the operator captures the updated data as provided by the resident in the registration client.
+## Update UIN
+When a resident visits the registration center to update his/her demographic or biometrics details, the operator captures the updated data as provided by the resident in the registration client. 
 
 Process Flow using which data gets captured by registration client for updating a resident's data:
 
 {% hint style="info" %}
 *The UIN update feature is configurable by a country. The Admin can turn ON or OFF, the UIN update feature using the configuration.*
 {% endhint %}
-   
+The screenshot below shows that a resident can update one or more details in the UIN.   
     <<screenshot>>
 
-## Lost UIN -As biometrics play a crucial in identifying a person' indentity, hence it is mandatated to provide the biometrics as part of this lost UIN flow. Other details are optional.
-    
-There might be a situation when a resident might have lost his UIN and visits the registration center for retrieving the same, the operator then captures the biometrics and demographic details of the individual and processes a request to retrieve the lost UIN. The system sends a notification to the individual upon successful creation of the UIN retrieval request.  
+## Lost UIN
+There might be a situation when a resident might have lost his UIN and visits the registration center for retrieving the same, the operator then captures the biometrics and demographic details of the individual and processes a request to retrieve the lost UIN. As biometrics play a crucial in identifying a person' indentity, it is mandatated to provide the biometrics as part of this lost UIN flow. Other details like  are optional.
    
-## Correction process- For any resident whose UIN is yet not generated, can get a request intimation to re-provide his details with a RequestId.
-   The same addtional requestinfo id must be provided to the operator during the correction flow. 
+## Correction process
+For a resident whose UIN is yet not generated, they can get a request intimation to re-provide their details with a RequestId.
+The same addtional Requestinfo ID must be provided to the operator during the correction flow. 
    <<add screenshot?/
-  Note- the above mentioned Registration tasks are completely configurable through UI Specs<<link>>
+  Note- The above mentioned Registration tasks are completely configurable through UI Specs<<link>>
    
 ## Preview and operator' packet authentication
-  the operatir can preview the data filled and navigate back to the respective tabs in case of corrections
-  Once the resdint and operator are satisfied with the data being captured, the operator can proceed to the authentication tab and provide his valid credentials to mark the complete of the registration task.
    
-   Note- Mode of authentication is configurable.
+* The operator can preview the data filled and navigate back to the respective tabs in case of corrections.
+* Once the resident and the operator are satisfied with the data being captured, the operator can proceed to the authentication tab and provide his valid credentials to mark the complete of the registration task.
+
+{% hint style="info" %}
+* Mode of authentication is configurable by a country. The Admin can turn ON or OFF the UIN update feature using the configuration.*
+{% endhint %}
    
 ## Acknowledgement receipt and printing
 Once the registration process (new registration, UIN update or lost UIN, correction) is completed, the registration client generates an acknowledgement receipt.
 This receipt contains a QR code of the Registration application ID, captured demographic data in the selected language, photograph of the resident and ranking of each finger from 1 to 10 (1 being the finger with the best quality). This receipt is print friendly and can be used for printing using any printer.
-
 
 ### End of day processes
 
