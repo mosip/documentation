@@ -15,11 +15,8 @@ Below is the image of the reference UI implementation of the registration client
     * Server connection status symbol(shows if the client is online or offline)
     * Breadcrumbs (User Guide/Reser Password/Logout)
 
-
-
 ![](reg-client-menu.png)
-      
-      
+ 
 
 ### Operational Tasks
       
@@ -103,41 +100,42 @@ If the resident has a biometric exception (resident is missing a finger/iris or 
  What is the difference between an adult' and an infant' biometric capture?
  * For an adult, all the configured biometrics can be captured.
  * For an infant, by default, only the face biometrics is allowed to be captured.   
-   
-## Update UIN When a resident visits the registration center to update his/her demographic or biometrics details, the operator captures the updated data as provided by the resident in the registration client.
+     
+## Update UIN- When a resident visits the registration center to update his/her demographic or biometrics details, the operator captures the updated data as provided by the resident in the registration client.
 
 Process Flow using which data gets captured by registration client for updating a resident's data:
 
 {% hint style="info" %}
 *The UIN update feature is configurable by a country. The Admin can turn ON or OFF, the UIN update feature using the configuration.*
 {% endhint %}
+   
+    <<screenshot>>
 
-## Find a lost UIN
-There might be a situation when a resident might have lost his UIN and visits the registration center for retrieving the same, the operator then captures the biometrics and demographic details of the individual and processes a request to retrieve the lost UIN. The system sends a notification to the individual upon successful creation of the UIN retrieval request.
+## Lost UIN -As biometrics play a crucial in identifying a person' indentity, hence it is mandatated to provide the biometrics as part of this lost UIN flow. Other details are optional.
+    
+There might be a situation when a resident might have lost his UIN and visits the registration center for retrieving the same, the operator then captures the biometrics and demographic details of the individual and processes a request to retrieve the lost UIN. The system sends a notification to the individual upon successful creation of the UIN retrieval request.  
+   
+## Correction process- For any resident whose UIN is yet not generated, can get a request intimation to re-provide his details with a RequestId.
+   The same addtional requestinfo id must be provided to the operator during the correction flow. 
+   <<add screenshot?/
+  Note- the above mentioned Registration tasks are completely configurable through UI Specs<<link>>
+   
+## Preview and operator' packet authentication
+  the operatir can preview the data filled and navigate back to the respective tabs in case of corrections
+  Once the resdint and operator are satisfied with the data being captured, the operator can proceed to the authentication tab and provide his valid credentials to mark the complete of the registration task.
+   
+   Note- Mode of authentication is configurable.
+   
+## Acknowledgement receipt and printing
+Once the registration process (new registration, UIN update or lost UIN, correction) is completed, the registration client generates an acknowledgement receipt.
+This receipt contains a QR code of the Registration application ID, captured demographic data in the selected language, photograph of the resident and ranking of each finger from 1 to 10 (1 being the finger with the best quality). This receipt is print friendly and can be used for printing using any printer.
 
-## Acknowledgement and Notifications
-
-### Printing the registration receipt
-Once the registration process (new registration, UIN update or lost UIN) is completed, the registration client generates an unique request id and a registration receipt which contains labels & data in configured language. This data also contains a QR code of the RID, photograph of the resident and ranking of each finger from 1 to 10 (1 being the finger with the best quality). This receipt is print friendly and can be used for printing using any printer.
-
-### Sending email and SMS notifications
-Once a registration process is completed, a notification is sent to the resident using the email ID and mobile number that was provided as part of demographic data. This notification sent is driven by a template created as part of master data and the language selected (primary, secondary or both) & notification mode (SMS, Email or none) is driven by configurations.
-
-Registration Client also provides an option to send SMS and email notifications to additional recipient\s (other than the individual’s primary email ID and mobile number).
-
-
-* New Registration:
-* Update UIN:
-* Lost UIN:
-* Correction:
-
-For <refer to ID lifecycle management page>
 
 ### End of day processes
 
 * Pending Approval:
 * Re-registrations:
-  
+ 
   
 ### Dashboard:
       
