@@ -73,12 +73,11 @@ This happens automatically while launching the registration client and is also m
 An operator can initiate the process of registering a new applicant in the MOSIP ecosystem by filling the new registration form with the resident.
 Below are few of the processes that needs to be completed for a new registration.
 
-### 1. Capture consent- For every registration, the registration client provides an option for the operator to mark an individual's consent from the resident for data storage and utilization. The operator marks consent in the checkbox provided after confirming the same with the resident. Whether the consent is marked as Yes or No, it will not have any impact on issuance of UIN for that resident and the registration processor will not execute any validations in this regard during packet processing.
+1. **Capture consent**- For every registration, the registration client provides an option for the operator to mark an individual's consent from the resident for data storage and utilization. The operator marks consent in the checkbox provided after confirming the same with the resident. Whether the consent is marked as Yes or No, it will not have any impact on issuance of UIN for that resident and the registration processor will not execute any validations in this regard during packet processing.
 
-### 2. Enter demographic data and upload documents
-If the resident has a pre-registration ID, the operator can auto-populate the demographic data and the documents by entering the pre-registration id.
-
-If the resident doesn't have a pre-registration id, the operator can enter the resident’s demographic details (such as Name, Gender, DOB, Residential Address, etc.) & upload the documents  (such as Proof of Address, Proof of Identity, Proof of Birth) based on the [ID Object defined](MOSIP-ID-Object-Definition.md) by the country.
+2. **Enter demographic data and upload documents**
+If the resident has a pre-registration ID, the operator can auto-populate the demographic data and the documents by entering the pre-registration ID.
+If the resident does not have a pre-registration ID, the operator can enter the resident’s demographic details (such as Name, Gender, DOB, Residential Address, etc.) and upload the documents (such as Proof of Address, Proof of Identity, Proof of Birth) based on the [ID Object defined](MOSIP-ID-Object-Definition.md) by the country.
 
 After the demographic details are entered the registration client validates the entered demographic data as per the Id validation rules defined in the ID Object UI Specification and appropriate error messages are shown in case the validation fails.
 
