@@ -25,8 +25,12 @@ To generate the first operator in MOSIP eco-system, refer to the steps below:
   ![](_images/reg-client-user-onboard.PNG)
 
 * The operator needs to provide their biometrics and click **Save**.
+* All the biometric modalities displayed in the Operator biometrics page must be captured before clicking on Save.
+* Captured biometrics quality must be greater than or equal to the threshold displayed in the UI.
+* Note: The threshold values are configurable and can be set as per the ID issuer.
+<<link to reg client config.md>> refer to operator onboard config properties.
 
-  ![](_images/reg-client-biometric-page.png)
+  ![](_images/reg-client-biometric-page.png) ---  needs update
 
 * After successful onboarding, the operator is automatically re-directed to the registration client home page.
 
