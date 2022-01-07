@@ -42,9 +42,11 @@ Note: Deletion of the .mopsipkeys or the db folder makes the application get int
 << restart image>><< setup folder structure>>
 ![](_images/reg-client-pre-loader-success.png)
 
-2. On the next launch after the initial sync,  the operator can either land into the operator board page or the home page.
- - For more details on operator onboarding, refer to ![Operator onboarding guide](operator-onboarding.md).
- - For more details on Home page, refer to <>
+2. On the next launch after the initial sync,
+  - The registration client login page provides the operator an option to select the language for viewing the registration client UI.
+  - After successful login, the operator either lands into the operator onboard page or the home page.
+    For more details on operator onboarding, refer to ![Operator onboarding guide](operator-onboarding.md).
+    For more details on Home page, refer to <>
 
 ### Modes of operation
       
