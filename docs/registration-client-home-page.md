@@ -4,6 +4,9 @@ This guide describes the various funtions provided in the Home page of the refer
 ## Registration client reference UI implementation
 Below is the image of the reference UI implementation of the registration client.
 ![](_images/reg-client-orig.png)
+
+Menu bar
+_ Mosip logo i s
       
 ### Operational Tasks
       
@@ -23,13 +26,30 @@ This happens automatically while launching the registration client and is also m
      
   **Note**- Date Range of pre-registration data to be downloaded and storage location of pre-registration data in the registration machine is configurable. this is synced as a part of configuration sync.       
        
-* Update Operator Biometrics:  Using this option, the operator can onboard themselves anytime which in turn updates their biometric templates locally. The only pre-requisite being that the machine is online. 
-       
-* Application Upload: 
+* **Update Operator Biometrics**:  Using this option, the operator can onboard themselves anytime.  
+Refer <<operator onboarding link>> for more details.
+
+  ![](_images/reg-client-biometric-page.png)
+
+ * **Application Upload**: Application upload refers to upload of supervisor reviewed registration packets(approved and rejected). From this page, the operator can export the packets to any location on their machine. 
+      - Upload of registration packet from this page internally performs two operations in sequence:
+          * Sync registration metadata to server
+          * On successful sync of metadata, actual registration packets are uploaded to the server.
       
-* Center Remap Sync:
+ **Client Status** : This column displays status of a registration packet based on the abpve mentioned operation.
       
-* Check Updates:
+       * Synced
+ 
+ **Server Status**: 
+      
+      * Pushed
+      * Duplicate  
+ 
+  **Registration Type**:
+      
+* **Center Remap Sync**:
+      
+* **Check Updates**:
 
 ## Settings
 
