@@ -12,8 +12,8 @@ Supported devices
 1. Camera
 
 ## Security
-* L0
-* L1
+### L0
+### L1
 
 ### Key rotation
 
