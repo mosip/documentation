@@ -9,7 +9,7 @@ The MOSIP platform requires integration with several other systems.  Typically, 
 |Partner type|Description|Label\*|
 |---|---|---|
 |Authentication Partner| Entities that use MOSIP for authentication like banks, telecom, Govt. institutes etc.|`Auth_Partner`|
-|Online Verification Partner|Authorised and entrusted partners who host MOSIP Authentication module to provide authentication service to various partners. Even MOSIPs IDA module an is an Online Verification Partner.|`Online_Verification_Partner`|
+|Online Verification Partner|Authorised and entrusted partners who host [IDA](id-authentication.md) module to provide authentication service to various partners. Even MOSIPs IDA module an is an Online Verification Partner.|`Online_Verification_Partner`|
 |Credential Partner|Provider of credentials like printed ID card, QR code etc. to residents|`Credential_Partner`|
 |Device Partner| Provider of biometric devices that connect to registration client and authentication apps|`Device_Provider`|
 |FTM Partner|Providers of L1 compatible Foundational Trust Module (FTM) integrated in biometric devices|`FTM_Provider`|
