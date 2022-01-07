@@ -25,14 +25,14 @@ The MOSIP platform requires integration with several other systems.  Typically, 
 Onboarding of a partner refers to registering a partner in a particular deployment of MOSIP.  Partners need to be onboarded to establish trust.  The onboarding process consists of loading partner details in database, exchanging certificates etc, detailed in the later sections.  Such onboarding is required to be done on any fresh MOSIP installation.  For instance, if you install a sandbox, you would need to follow the onboarding process for each partner.
 
 ### MISP 
-1. MISP should have a trusted PKI (X.509?) certificate and chain of CA certificates.
+1. MISP should have a trusted X.509 certificate with chain of CA certificates.
 1. MISP self-registers on PMS portal providing partner id, name, organisation name (same as in certificate), partner type (`MISP_type`) (_This functionality will be available on the portal in 1.2.x version of MOSIP_)
 1. MISP uploades all certificates.
 1. MOSIP Admin generates MISP license key and provides to MISP.
 
 ### Authentication Partner (AP)
 1. Policy for the AP must be pre-defined (see [Partner policies](#partner-policies)). 
-1. AP should have a trusted PKI (X.509?) certificate and chain of CA certificates.
+1. AP should have a trusted X.509 certificate with chain of CA certificates.
 1. AP registers with MISP and obtains MISP license key (this steup is outside of MOSIP system).
 1. The MISP used by AP should have been already onboarded on to MOSIP.
 1. AP self-registers on PMS portal providing partner id, name, organisation name (same as in certificate), partner type (`Auth_Partner`) etc.
@@ -41,13 +41,13 @@ Onboarding of a partner refers to registering a partner in a particular deployme
 1. On approval, AP generates API key that can be used along with MISP license key to interact with IDA system. 
 
 ### Device Partner (DP)
-1. DP should have a trusted PKI (X.509?) certificate and chain of CA certificates.
+1. DP should have a trusted X.509 certificate with chain of CA certificates.
 1. DP self-registers on PMS portal providing partner id, name, organisation name (same as in certificate), partner type (`Device_Provider`) etc.
 1. DP uploades all certificates.
 1. Any approval from MOSIP? (TODO) 
 
 ### FTM Partner (FTMP)
-1. FTMP should have a trusted PKI (X.509?) certificate and chain of CA certificates.
+1. FTMP should have a trusted X.509 certificate with chain of CA certificates.
 1. FTMP self-registers on PMS portal providing partner id, name, organisation name (same as in certificate), partner type (`FTM_Provider`) etc.
 1. FTMP uploades all certificates.
 1. TODO
