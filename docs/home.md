@@ -31,7 +31,6 @@ The current documentation's source is available as markdown in the 'docs' folder
 To find out what has changed in the documentation, refer to our [revision history](Revision-History.md). To find details of upcoming improvements planned to the documentation check [here](Documentation-Updates.md). You can also help us improve the documentation by reviewing it, adding to it or by leaving suggestions.
 
 ## MOSIP Resources
-
 * Source Code: [GitHub Repositories](https://github.com/mosip)
 * Containers: [Docker Repository](https://hub.docker.com/u/mosipid)
 * Maven Repository: [Nexus Repository](https://oss.sonatype.org/service/local/repositories/snapshots/content/io/mosip/)
@@ -41,5 +40,4 @@ To find out what has changed in the documentation, refer to our [revision histor
 * Community: [Gitter Channel](https://gitter.im/mosip-community/community)
 
 ## Roadmap
-
 The MOSIP roadmap in the short term is the release of our **Long Term Support Version**. Our medium term focus is to enable reference implementations of identity usage, integrations and interoperability. The long term focus is to offer a set of core components for digital governance. View our [roadmap](roadmap.md) and [call for contribution](Call-for-Contribution.md) to see how you can be a part of the MOSIP journey.
