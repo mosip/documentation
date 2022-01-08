@@ -22,7 +22,7 @@ To generate the first operator in MOSIP eco-system, refer to the steps below:
 * The operator needs to ensure that the registration client machine is online.
 * The operator will land into the below page and needs to click on **Get Onboarded**
 
-  ![](_images/reg-client-user-onboard.PNG)
+  ![](_images/reg-client-user-onboard.png)
 
 * The operator needs to provide their biometrics and click **Save**.
 * All the biometric modalities displayed in the Operator biometrics page must be captured before clicking on Save.
