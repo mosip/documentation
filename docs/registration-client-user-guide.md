@@ -45,7 +45,9 @@ The client always launches with the pre-loader screen which displays the informa
 2. **On the next launch after the initial sync**,
   - The registration client login page provides the operator an option to select the language for viewing the registration client UI.
   - After successful login, the operator either lands into the operator onboard page or the home page.
+ 
     For more details on operator onboarding, refer to [Operator onboarding guide](operator-onboarding.md).
+    
     For more details on Home page, refer to [registration client home page](registration-client-home-page.md)
 
 ### Modes of operation
