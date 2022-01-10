@@ -64,10 +64,9 @@ This section includes some of the key steps for creating an application.
 * A user logging in for the first time and having no applications will be prompted with a data capture language pop-up.
 * The same set of languages will be used for the next set of applications created in the same session. 
 * The language selected by the user in the login screen will be pre-selected in the data capture language pop-up.
-**Note**: The user can change this by clicking on the **CHANGE DATA CAPTURE LANGUAGES** button.
-          This choice will be available only if the ID issuer has configured usage of optional languages.
+**Note**: The user can change this by clicking on the **CHANGE DATA CAPTURE LANGUAGES** button. This choice will be available only if the ID issuer has configured usage of optional languages.
           
-![](_images/pre-reg-language-selection.png)
+![](_images/pre-reg-language-selection.PNG)
       
 ### Provide consent
 Before filling the application form, the user is advised to provide their consent for storage and utilization of their personally identifiable information (PII). The consent is sought from the user for every new application created in the system. On providing their consent, the system redirects the user to start the pre-registration application (demographic details). The data as part of the consent form is rendered as setup by the administrator.
@@ -82,9 +81,14 @@ There may be a situation where the user opts to close the Consent Pop-up. In thi
 
 ### Provide Demographic data
 
-The demographic data that needs to be collected from the residents is configurable as per a country’s requirement. The user is provided with a demographic form based on the ID Object Definition and UI Specification for new pre-registration application. The residents are expected to fills demographic details (e.g., Full Name, Age/DOB, Gender, Residential status, Address, mobile number, email id, etc.). The system validates the fields entered, the system also checks for the mandatory fields. Additionally, the system validates for any blocklisted words entered as configured by the country. Once validated a pre-registration request ID (PRID) is generated and the demographic details provided by the residents gets mapped to that PRID.
-On the Demographic Details page, the residents will be able to enter their data in their preferred language.   
+* The demographic data that needs to be collected from the residents is configurable as per a country’s requirement. 
+* The user is provided with a demographic form based on the ID Object Definition and UI Specification for new pre-registration application. 
+* The residents are expected to fills demographic details (e.g., Full Name, Age/DOB, Gender, Residential status, Address, mobile number, email id, etc.). The system validates the fields entered, the system also checks for the mandatory fields. 
+* Additionally, the system validates for any blocklisted words entered as configured by the country. Once validated a pre-registration request ID (PRID) is generated and the demographic details provided by the residents gets mapped to that PRID.
+* On the Demographic Details page, the residents will be able to enter their data in their preferred language.  
+ 
 A sample image is shown below.
+
 ![](_images/demographic-details.png)
 
 ### Upload Documents
@@ -130,7 +134,6 @@ Once the application is created, there could be multiple statuses depending on t
 |Cancelled| Appointment has been cancelled|Re-book an appointment
 
 ![Dashboard](_images/pre-reg-application-status.JPG)
-
 
 The applications are sorted and displayed by the order of creation of application. The first application created appears first, latest created/modified application appears at the end. If the user visits the registration center and consumes the appointment, then the application will be removed from the list. If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
 
@@ -206,8 +209,8 @@ In this page, the user can view the available slots in a selected registration c
 
 ![](_images/pre-reg-acknowledgement.png) 
 
-## Receive a Confirmation
-### NOTIFICATIONS 
+## Receive a Confirmation Notification
+ 
 **Send acknowledgement to email/phone**
 * The system sends an acknowledgement to the applicant to the registered phone (SMS) or email as per the details provided in demographic form. In case of multiple applications, the system sends notifications for each applicant to the details provided in the demographic form of that applicant.
 * Additionally, user can opt to manually trigger notification(s) to the contact details of additional recipients. However, this is driven by the Notification configuration setup by the administrator to allow a notification to be triggered by SMS/email/both or none.
