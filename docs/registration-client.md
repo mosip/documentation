@@ -10,7 +10,7 @@ The Registration client can be operated by an operator who can be either a Super
 
 **Feature exclusive to Registration Supervisor**– Approve/reject registrations (end-of-day approvals)
 
-To know more about the roles and the onboarding process of an operator, refer to ![Operator onboarding](operator-onboarding.md).
+To know more about the roles and the onboarding process of an operator, refer to [Operator onboarding](operator-onboarding.md).
 
 ## Features
 Registration Client collects the demographic and biometric details of a resident at the registration centers and sends the data to the Registration Processor for generating the UIN. Below are some of the features associated with the Registration client:
@@ -45,7 +45,9 @@ Registration Client collects the demographic and biometric details of a resident
 *	Tested on Windows with Oracle JDK 11
 *	Registration client UI is a reference implementation and can be changed
 
-<<Reg client entity diagram>>
+## Registration client entity diagram
+
+
 ## Biometrics SDK Implementation
   
   SDK integration guide
@@ -56,8 +58,11 @@ Registration Client collects the demographic and biometric details of a resident
 
 ## Registration client UI reference implementation
 MOSIP provides a Windows-based reference implementation of the registration client that has a UI and the business logic to perform the above process flows. The code, design, App setup, build documentation is available in **registration client repo**. The App may be modified according to a country's need.
-To know more about each option present in the registration client sample UI implementation, refer to ![Registration client user guide](registration-client-user-manual.md).
+  
+To know more about setting up the registration client sample UI implementation, refer to [Registration client user guide](registration-client-user-manual.md).
 
+To know more about the functions present in the Home page of the registration client, refer to [Registration client home page](registration-client-home-page.md).
+  
 ## Configurations
 For details related to Registration Client configurations, refer to registration-Client configuration.
 
