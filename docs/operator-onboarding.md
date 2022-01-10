@@ -7,7 +7,7 @@ To generate the first operator in MOSIP eco-system, refer to the steps below:
 1. Create the operator' user account in KeyCloak.
 1. Assign the operator user account with the **Default** role.
 1. Perform Zone and center mapping for the operator using the Admin Portal.
-1. Onboard the operator machine using the Admin Portal. Machine' details can be extracted using the ![TPM utility](https://github.com/mosip/mosip-infra/blob/develop/deployment/sandbox-v2/utils/tpm/key_extractor/README.md)
+1. Onboard the operator machine using the Admin Portal. Machine' details can be extracted using the [TPM utility](https://github.com/mosip/mosip-infra/blob/develop/deployment/sandbox-v2/utils/tpm/key_extractor/README.md)
 1. The operator needs to download the latest registration client and login with the credentials set in KeyCloak.
 1. The operator will automatically skip Operator/Supervisor onboarding and reaches the home page of the registration client.
 1. The operator can now register themselves in MOSIP and will get an RID and UIN.
@@ -33,7 +33,7 @@ To generate the first operator in MOSIP eco-system, refer to the steps below:
 
   ![](_images/reg-client-biometric-page.png) 
 
-* After successful onboarding, the operator is automatically re-directed to the ![registration client home page](registration-client-home-page.md).
+* After successful onboarding, the operator is automatically re-directed to the [registration client home page](registration-client-home-page.md).
 
 **Note:**
 - After successful onboarding of the operator, the templates are extracted from the captured biometrics using configured Bio-SDK.
