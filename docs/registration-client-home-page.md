@@ -1,5 +1,5 @@
 # Overview
-This guide describes the various funtions provided in the Home page of the reference UI implementation of the registration client.
+This guide describes the various functions provided in the Home page of the reference UI implementation of the registration client.
 
 ## Registration client reference UI implementation
 Below is the image of the reference UI implementation of the registration client.
@@ -7,16 +7,16 @@ Below is the image of the reference UI implementation of the registration client
 
 ### Menu bar
 The registration client menu bar displays the following:
-    * MOSIP logo
-    * Home button
-    * Logged in user name
-    * Center name
-    * Machine name
-    * Server connection status symbol(shows if the client is online or offline)
-    * Breadcrumbs (User Guide/Reser Password/Logout)
 
-![](reg-client-menu.png)
- 
+     * MOSIP logo
+     * Home button
+     * Logged in username
+     * Center name
+     * Machine name
+     * Server connection status symbol(shows if the client is online or offline)
+     * Breadcrumbs (User Guide/Reser Password/Logout)
+    
+![](_images/reg-client-menu.png)
 
 ### Operational Tasks
       
@@ -34,10 +34,10 @@ This happens automatically while launching the registration client and is also m
           
 * **Download Pre-Registration Data**: An operator can download the pre-registration data of a machine mapped center while being online and store it locally in the registration machine for offline use. Now when the system is offline and the pre-registration data is already downloaded, the operator can enter the pre-registration ID to auto-populate the registration form. Provided the machine is online, any pre-registration application can be downloaded irrespective of the center booked by the resident.
      
-  **Note**- Date Range of pre-registration data to be downloaded and storage location of pre-registration data in the registration machine is configurable. this is synced as a part of configuration sync.       
+  **Note** - Date Range of pre-registration data to be downloaded and storage location of pre-registration data in the registration machine is configurable. Also, this is synced as a part of configuration sync.       
        
 * **Update Operator Biometrics**:  Using this option, the operator can onboard themselves anytime.  
-Refer <<operator onboarding link>> for more details.
+For more details, refer to [operator onboarding](operator_onboarding.md)
 
   ![](_images/reg-client-biometric-page.png)
 
@@ -46,22 +46,22 @@ Refer <<operator onboarding link>> for more details.
           * Sync registration metadata to server
           * On successful sync of metadata, actual registration packets are uploaded to the server.
       
- **Client Status** : This column displays status of a registration packet based on the abpve mentioned operation.
+   **Client Status** : This column displays the status of a registration packet based on the above mentioned operation.
       
        * Approved
        * Rejected
        * Synced
        * Exported
  
- **Server Status**:
+   **Server Status**:
       
-   On success,    
+     On success,    
       
       * PUSHED
       * PROCESSED 
       * ACCEPTED
       
-  On failure,
+    On failure,
       
       * REREGISTER
       * REJECTED
@@ -74,16 +74,16 @@ Refer <<operator onboarding link>> for more details.
       
 * **Check Updates**:
    
-  
- 
+   
 ### Registration Tasks
-The operator can initiate New registrations, Update UIN, Lost UIN, Correction flow. 
-1. Select a language for data entry. the number of languages displayed in the UI is configurable and depends on the country.
+The operator can initiate any task from amongst- New registrations, Update UIN, Lost UIN, Correction flow. To get started, the operator needs to select a language for data entry. The number of languages displayed in the UI is configurable and depends on the country.
    
 ## New registration
 An operator can initiate the process of registering a new applicant in the MOSIP ecosystem by filling the new registration form with the resident.
-Below are few of the processes that needs to be completed for a new registration.
 
+![](_images/reg-client-new-registration.png)
+
+Below are few of the processes that needs to be completed for a new registration.
 1. **Capture consent**- For every registration, the registration client provides an option for the operator to mark an individual's consent for data storage and utilization. 
 
 2. **Enter demographic data and upload documents**
@@ -102,24 +102,26 @@ If the resident has a biometric exception (resident is missing a finger/iris or 
  * For an infant, by default, only the face biometrics is allowed to be captured.   
      
 ## Update UIN
-When a resident visits the registration center to update his/her demographic or biometrics details, the operator captures the updated data as provided by the resident in the registration client. 
+When a resident visits the registration center to update their demographic or biometric details, the operator captures the updated data as provided by the resident in the registration client. The resident needs to give their UIN and also select the field(s) that needs an update.
+The image below gives an idea of the update UIN process Flow in the registration client.
 
-Process Flow using which data gets captured by registration client for updating a resident's data:
+![](_images/reg-client-update-uin.png)
 
 {% hint style="info" %}
 *The UIN update feature is configurable by a country. The Admin can turn ON or OFF, the UIN update feature using the configuration.*
 {% endhint %}
-The screenshot below shows that a resident can update one or more details in the UIN.   
-    <<screenshot>>
 
 ## Lost UIN
-There might be a situation when a resident might have lost his UIN and visits the registration center for retrieving the same, the operator then captures the biometrics and demographic details of the individual and processes a request to retrieve the lost UIN. As biometrics play a crucial in identifying a person' indentity, it is mandatated to provide the biometrics as part of this lost UIN flow. Other details like  are optional.
+There might be a situation when a resident might have lost his UIN and visits the registration center for retrieving the same. The operator then captures the biometrics and the demographic details of the individual and processes a request to retrieve the lost UIN. As biometrics play a crucial in identifying a person' indentity, it is mandated to provide the biometrics as a part of the Lost UIN flow. Other details like demographic data, documents are optional.
+![](_images/reg-client-lost-uin.png)
    
 ## Correction process
 For a resident whose UIN is yet not generated, they can get a request intimation to re-provide their details with a RequestId.
-The same addtional Requestinfo ID must be provided to the operator during the correction flow. 
-   <<add screenshot?/
-  Note- The above mentioned Registration tasks are completely configurable through UI Specs<<link>>
+The same *AddtionalInfo RequestId* must be provided to the operator during the correction flow. 
+
+![](_images/reg-client-lost-uin.png)
+
+**Note**- The above mentioned Registration tasks are completely configurable through UI Specs<<link>>
    
 ## Preview and operator' packet authentication
    
@@ -127,7 +129,7 @@ The same addtional Requestinfo ID must be provided to the operator during the co
 * Once the resident and the operator are satisfied with the data being captured, the operator can proceed to the authentication tab and provide his valid credentials to mark the complete of the registration task.
 
 {% hint style="info" %}
-* Mode of authentication is configurable by a country. The Admin can turn ON or OFF the UIN update feature using the configuration.*
+Mode of authentication is configurable by a country. The Admin can turn ON or OFF the UIN update feature using the configuration.
 {% endhint %}
    
 ## Acknowledgement receipt and printing
