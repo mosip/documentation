@@ -48,26 +48,25 @@ For more details, refer to [operator onboarding](operator_onboarding.md)
       
    **Client Status** : This column displays the status of a registration packet based on the above mentioned operation.
       
-       * Approved
-       * Rejected
-       * Synced
-       * Exported
+       * APPROVED
+       * REJECTED
+       * SYNCED
+       * EXPORTED
  
-   **Server Status**:
+   **Server Status** :
       
-     On success,    
-      
-      * PUSHED
-      * PROCESSED 
-      * ACCEPTED
+     On success,
+     
+       * PUSHED
+       * PROCESSED 
+       * ACCEPTED
       
     On failure,
       
-      * REREGISTER
-      * REJECTED
-      * RESEND
-      
-      
+       * REREGISTER
+       * REJECTED
+       * RESEND
+        
   **Registration Type**: This column displays the type of registration packet(New packet, Lost packet, Update packet, Correction packet)
       
 * **Center Remap Sync**:
@@ -94,7 +93,7 @@ If the resident does not have a pre-registration ID, the operator can enter the 
 The capture of biometrics is governed by the country, i.e. capture of each modality (fingerprint, iris or face) can be controlled by the country using the global configuration.
 When the operator clicks on the **capture** button and tries to capture the biometrics of the resident, the device needs to make the capture when the quality of the biometrics is more than the threshold configured by the country. The device will try to capture the biometrics until the quality threshold has crossed or the device capture timeout has crossed which is also configurable. 
 
-Post the timeout has occurred and the captured quality of biometrics is less than the threshold, registration client provides an option to the operator to re-try capture of biometrics but for a particular number of times which is also configurable.
+After the timeout has occurred and the captured quality of biometrics is less than the threshold, registration client provides an option to re-try capture of biometrics but for a particular number of times which is also configurable.
 If the resident has a biometric exception (resident is missing a finger/iris or quality of finger/iris is very poor) the operator can mark that particular biometrics as **exception** but the operator has to capture the resident's exception photo.
 
  What is the difference between an adult' and an infant' biometric capture?
