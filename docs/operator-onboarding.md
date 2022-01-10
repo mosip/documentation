@@ -3,16 +3,16 @@ This guide contains all the details you may want to know about the operator onbo
 
 ## Creating the first operator in MOSIP
 To generate the first operator in MOSIP eco-system, refer to the steps below:
-1. Create the role "Default" in KeyCloak with all the other roles.
+1. Create the role **Default** in KeyCloak with all the other roles.
 1. Create the operator' user account in KeyCloak.
-1. Assign the operator user account with the “Default” role.
+1. Assign the operator user account with the **Default** role.
 1. Perform Zone and center mapping for the operator using the Admin Portal.
 1. Onboard the operator machine using the Admin Portal. Machine' details can be extracted using the ![TPM utility](https://github.com/mosip/mosip-infra/blob/develop/deployment/sandbox-v2/utils/tpm/key_extractor/README.md)
 1. The operator needs to download the latest registration client and login with the credentials set in KeyCloak.
 1. The operator will automatically skip Operator/Supervisor onboarding and reaches the home page of the registration client.
 1. The operator can now register themselves in MOSIP and will get an RID and UIN.
-1. Now, the role for the operator needs to be changed to either REGISTRATION_OFFICER or REGISTRATION_SUPERVISOR. 
-1. Delete the role "Default" from KeyCloak so that no other user has the role Default.   
+1. Now, the role for the operator needs to be changed to either **REGISTRATION_OFFICER** or **REGISTRATION_SUPERVISOR**. 
+1. Delete the role **Default** from KeyCloak so that no other user has the role Default.   
 1. This operator can now register and onboard other Supervisors and Officers.
 
 ## On-boarding an operator
@@ -27,12 +27,13 @@ To generate the first operator in MOSIP eco-system, refer to the steps below:
 * The operator needs to provide their biometrics and click **Save**.
 * All the biometric modalities displayed in the Operator biometrics page must be captured before clicking on Save.
 * Captured biometrics quality must be greater than or equal to the threshold displayed in the UI.
-* Note: The threshold values are configurable and can be set as per the ID issuer.
+
+  **Note**: The threshold values are configurable and can be set as per the ID issuer.
 <<link to reg client config.md>> refer to operator onboard config properties.
 
-  ![](_images/reg-client-biometric-page.png) ---  needs update
+  ![](_images/reg-client-biometric-page.png) 
 
-* After successful onboarding, the operator is automatically re-directed to the registration client home page.
+* After successful onboarding, the operator is automatically re-directed to the ![registration client home page](registration-client-home-page.md).
 
 **Note:**
 - After successful onboarding of the operator, the templates are extracted from the captured biometrics using configured Bio-SDK.
@@ -53,7 +54,7 @@ Summarizing, on-boarding of an operator is successful only if,
 * The registration client can authenticate an operator in offline mode using the locally stored biometrics templates (face/finger/iris) and password hash.
 
 ### Temporarily lock the operator
-The registration client temporarily locks the operator’s account in case they provides an invalid password/fingerprint/iris/face for X times continuously to login(X is configurable). The temporarily account lock lasts for X minutes (X configurable).
+The registration client temporarily locks the operator’s account in case they provides an invalid password/fingerprint/iris/face for X times continuously to login(X is configurable). The temporary account lock lasts for X minutes (X is again configurable).
 
 ### Logout
 An Operator can logout of the registration client by:
