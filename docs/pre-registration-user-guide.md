@@ -67,7 +67,7 @@ This section includes some of the key steps for creating an application.
 **Note**: The user can change this by clicking on the **CHANGE DATA CAPTURE LANGUAGES** button.
           This choice will be available only if the ID issuer has configured usage of optional languages.
           
-![](_images/language-selection-pre-reg.png)
+![](_images/pre-reg-language-selection.png)
       
 ### Provide consent
 Before filling the application form, the user is advised to provide their consent for storage and utilization of their personally identifiable information (PII). The consent is sought from the user for every new application created in the system. On providing their consent, the system redirects the user to start the pre-registration application (demographic details). The data as part of the consent form is rendered as setup by the administrator.
