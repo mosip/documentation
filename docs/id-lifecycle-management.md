@@ -2,8 +2,6 @@
 
 Identity Lifecycle Management refers to the **process of issuing and managing user identities** in a given system. An individual can visit a registration center to get a new ID or update their ID details. A registration officer would typically capture the individual’s demographic (name, date of birth, gender, etc.) and biometric (face, iris, fingerprint image) details. 
 
-In MOSIP, the Registration Client captures the individual' details and packages the captured information in a secure way (in the form of encrypted packets) and sends it to Registration Processor for further processing. 
-
 The various life cycle events are briefly explained below:
 * New ID issuance (for adults and infants)
 * ID data update/update individual’s information
@@ -27,6 +25,8 @@ The residents can visit the pre-registration portal and do the following:
 Once the resident completes the above process, their data will be downloaded at the respective registration centers prior to their appointment.
 
 ### Registration
+Registration is the process in which an individual/resident can visit a registration center with or without a pre-registration application ID. They can do a walk-in at the center and give their demographic or biometric details to an operator. In MOSIP, the Registration client captures the individual' details and packages the captured information in a secure way (in the form of encrypted packets) and sends it to Registration Processor for further processing.  
+
 #### For adults
 -	Resident/individual needs to visit a registration center
 -	Residents need to provide required information to register themselves in MOSIP (first time)
