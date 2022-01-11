@@ -2,20 +2,27 @@
 This guide contains all the details you may want to know about the operator onboarding.
 
 ## Creating the first operator in MOSIP
-To generate the first operator in MOSIP eco-system, refer to the steps below:
+To generate the first operator in MOSIP eco-system, refer to the steps below.
+
+The Admin needs to:
 1. Create the role **Default** in KeyCloak with all the other roles.
 1. Create the operator' user account in KeyCloak.
 1. Assign the operator user account with the **Default** role.
-1. Perform Zone and center mapping for the operator using the Admin Portal.
+1. Perform Zone and Center mapping for the operator using the Admin Portal.
 1. Onboard the operator machine using the Admin Portal. Machine' details can be extracted using the [TPM utility](https://github.com/mosip/mosip-infra/blob/develop/deployment/sandbox-v2/utils/tpm/key_extractor/README.md)
-1. The operator needs to download the latest registration client and login with the credentials set in KeyCloak.
-1. The operator will automatically skip Operator/Supervisor onboarding and reaches the home page of the registration client.
-1. The operator can now register themselves in MOSIP and will get an RID and UIN.
-1. Now, the role for the operator needs to be changed to either **REGISTRATION_OFFICER** or **REGISTRATION_SUPERVISOR**. 
-1. Delete the role **Default** from KeyCloak so that no other user has the role Default.   
-1. This operator can now register and onboard other Supervisors and Officers.
+
+The operator will need to:
+1. Download the latest registration client and login with the credentials set in KeyCloak.
+   The operator will automatically skip Operator/Supervisor onboarding and reaches the home page of the registration client.
+2. Register themselves in MOSIP and get a RID and UIN.
+
+Once the operator is registered:
+* The Admin changes the role of the operator to either **REGISTRATION_OFFICER** or **REGISTRATION_SUPERVISOR**. 
+* Deletes the role **Default** from KeyCloak so that no other user has the role Default.   
+* This operator can now register and onboard other Supervisors and Officers.
 
 ## On-boarding an operator
+
 * The admin needs to map the operator' UIN in KeyCloak under Attributes with attribute name as `individualId`.
 * The admin needs to remove the "Default" role mapping for the operator' user account if it exists.
 * The operator needs to login (password based) to the registration client using Keycloak credentials.
