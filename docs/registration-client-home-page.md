@@ -87,11 +87,11 @@ Below are few of the processes that needs to be completed for a new registration
 
 2. **Enter demographic data and upload documents**
 If the resident has a pre-registration application ID, the operator can auto-populate the demographic data and the documents by entering the pre-registration ID.
-If the resident does not have a pre-registration ID, the operator can enter the resident’s demographic details (such as Name, Gender, DOB, Residential Address, etc.) and upload the documents (such as Proof of Address, Proof of Identity, Proof of Birth) based on the [ID Object defined](MOSIP-ID-Object-Definition.md) by the country.
+If the resident does not have a pre-registration ID, the operator can enter the resident’s demographic details (such as Name, Gender, DOB, Residential Address, etc.) and upload the documents (such as Proof of Address, Proof of Identity, Proof of Birth) based on the [ID Schema](id-schema.md) defined by the country.
 
 3. **Capture biometrics of a resident**
 The capture of biometrics is governed by the country, i.e. capture of each modality (fingerprint, iris or face) can be controlled by the country using the global configuration.
-When the operator clicks on the **capture** button and tries to capture the biometrics of the resident, the device needs to make the capture when the quality of the biometrics is more than the threshold configured by the country. The device will try to capture the biometrics until the quality threshold has crossed or the device capture timeout has crossed which is also configurable. 
+When the operator clicks on the **Capture** button and tries to capture the biometrics of the resident, the device needs to make the capture when the quality of the biometrics is more than the threshold configured by the country. The device will try to capture the biometrics until the quality threshold has crossed or the device capture timeout has crossed which is also configurable. 
 
 After the timeout has occurred and the captured quality of biometrics is less than the threshold, registration client provides an option to re-try capture of biometrics but for a particular number of times which is also configurable.
 If the resident has a biometric exception (resident is missing a finger/iris or quality of finger/iris is very poor) the operator can mark that particular biometrics as **exception** but the operator has to capture the resident's exception photo.
