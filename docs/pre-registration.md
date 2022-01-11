@@ -8,12 +8,6 @@ This module enables a user/resident to:
 
 Once the resident completes the above process, their data will be downloaded at the respective registration centers prior to their appointment. This data will further be used during the registration process. MOSIP pre-registration module supports multiple languages. 
 
-## Why do we need to pre-register on MOSIP?
-
-The pre-registration functionality helps the residents and the Government organizations by saving the time and efforts required for basic data collection of residents at the registration centers. The data pre-filled by the residents on the portal can be made available for use at the centers for quick access and seamless registration process.
-
-![](_images/id-registration-process.jpg)
-
 ## Features
 Pre-registration is a resident facing web-based portal using which an individual can pre-enrol and book an appointment for registering in MOSIP. Below are some of the features associated with pre-registration.
 
