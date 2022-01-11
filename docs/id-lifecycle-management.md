@@ -19,6 +19,7 @@ Pre-registration fundamentally helps the residents and Government organizations 
 
 Once the resident completes the above process, their data will be downloaded at the respective registration centers prior to their appointment.
 
+### Registration
 #### For adults
 -	Resident/individual needs to visit a registration center
 -	Residents need to provide required information to register themselves in MOSIP (first time)
