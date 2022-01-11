@@ -12,9 +12,6 @@ to onboard the machine and the operator, the Admin needs to:
 2. Create a user/operator account in Keycloak
 3. Assign the operator a role of either the Supervisor or Officer using the Admin portal.
 4. Finally, perform the **User Zone mapping** and **User Center mapping** in the Admin portal.
- 
- ## Registration client setup
-To setup the registration client:
 
 **System prerequisites**
 * CPU - Dual Core Processor - 2GHZ  
@@ -23,11 +20,15 @@ To setup the registration client:
 * USB 2.0 ports or equivalent hub.  
 * Physical machine with TPM 2.0 facility.   
 * Windows OS [10 v] 
-
-To know more, visit [Setting up the registration client](https://github.com/mosip/registration-client/blob/develop/README.md)
+ 
+ ## Registration client setup
+To setup the registration client:
+1. Download the `reg-client.zip` from the hosted server.
+2. Unzip the client. You can see the directory structure below.
+3. Click `run.bat` to launch registration client.
 
 ### Launching the registration client
-The operator needs to click `run.bat` to launch the client.
+
 The client always launches with the pre-loader screen which displays the information about the network status,  build status verification, online status, etc.
 ![](_images/reg-client-pre-loader-success.png)
 
