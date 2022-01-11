@@ -1,17 +1,17 @@
 # ID Lifecycle Management
 
-Identity Lifecycle management refers to the **process of issuing and managing user identities** in a given system. 
+Identity Lifecycle Management refers to the **process of issuing and managing user identities** in a given system. 
 The various life cycle events are briefly explained below:
-
 * New ID issuance (for adults and infants)
 * ID data update/update individual’s information
 * De-activate/re-activate individual’s ID
 * Lost ID
+* Correction process
 
 ## New ID issuance 
 
 ### Pre-Registration
-Pre-registration fundamentally helps the residents and Government organizations by saving the time and efforts required for basic data collection of the residents at the registration centers. The resident can visit the pre-registration portal and do the following:
+Pre-registration fundamentally helps the residents and Government organizations by saving the time and efforts required for basic data collection of the residents at the registration centers. The residents can visit the pre-registration portal and do the following:
 * Enter demographic data and upload supporting documents
 * Book an appointment for one or many users for registration by choosing a suitable registration center and a convinient time slot
 * Receive appointment notifications
@@ -21,18 +21,18 @@ Once the resident completes the above process, their data will be downloaded at 
 
 #### For adults
 -	Resident/individual needs to visit a registration center
--	Provide required information to register themselves in MOSIP (first time)
+-	Residents need to provide required information to register themselves in MOSIP (first time)
 -	Registration officer captures’ individual’s information
 -	The captured information is sent to the Registration Processor
 -	Various checks like biometrics quality, de-duplication, etc. performed in the Registration Processor with the individual's demographic data and biometrics
 -	If no duplicate is found, a Unique Identification Number(UIN) is allocated and ID credentials are sent to the individual via the country's configured printing and postal service.
 -	Registration receipt(acknowledgement) containing the Registration Identity(RID), labels and data in the configured language, QR code (of the RID) provided to the resident at the center.
--	Notifications sent to the resident using the email ID and mobile number provided as a apart of demographic data collection
+-	Notifications sent to the resident using the email ID and mobile number provided as a part of demographic data collection
 
 #### For infants/children
 
 -	Child needs to visit the Registration center along with a guardian/parent.
--	Child does not have to give biometrics but need to capture the child' photograph.
+-	Operator needs to capture only the child' face biometrics.
 -	Parent/guardian' UIN or RID and biometrics needed for authentication.
 -	Additionally, a **Proof of Relationship** document to be provided at the center.
 -	An acknowledgement receipt will be provided to the infant' parent/guardian.
@@ -44,7 +44,7 @@ Once the resident completes the above process, their data will be downloaded at 
     * Using Resident services: Update of only the demographic information.
 -  Registration receipt containing the Registration Identity(RID)), labels and data in the configured language, QR code (of the RID) provided to the resident at the center.
 -	Updated ID credentials sent to the resident via the country’ configured printing and postal service.
--	Notifications sent to the resident using the email ID and mobile number provided as a apart of demographic data collection
+-	Notifications sent to the resident using the email ID and mobile number provided as a part of demographic data collection
 
 ## De-activate/Re-activate individual’s ID
 
@@ -59,7 +59,7 @@ Once the resident completes the above process, their data will be downloaded at 
 -  ID credentials sent to the resident via the country’ configured printing and postal service.
 - Notifications sent to the resident using the email ID and mobile number provided as a apart of demographic data collection
 
-## Correction flow
+## Correction process
 - Incase the system finds an error in the demographic data, documents or biometric data provided by an individual, the correction flow is triggered.
 - Before issuing the UIN for the individual, the incorrect or incomplete information provided by the individual is intimated to them.
 - Once the corrected information is received by the system, a correction procedure is triggered.
