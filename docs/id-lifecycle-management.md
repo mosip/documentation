@@ -1,6 +1,9 @@
 # ID Lifecycle Management
 
-Identity Lifecycle Management refers to the **process of issuing and managing user identities** in a given system. 
+Identity Lifecycle Management refers to the **process of issuing and managing user identities** in a given system. An individual can visit a registration center to get a new ID or update their ID details. A registration officer would typically capture the individual’s demographic (name, date of birth, gender, etc.) and biometric (face, iris, fingerprint image) details. 
+
+In MOSIP, the Registration Client captures the individual' details and packages the captured information in a secure way (in the form of encrypted packets) and sends it to Registration Processor for further processing. 
+
 The various life cycle events are briefly explained below:
 * New ID issuance (for adults and infants)
 * ID data update/update individual’s information
@@ -10,8 +13,12 @@ The various life cycle events are briefly explained below:
 
 ## New ID issuance 
 
+![](_images/id-registration-process.jpg)
+
 ### Pre-Registration
-Pre-registration fundamentally helps the residents and Government organizations by saving the time and efforts required for basic data collection of the residents at the registration centers. The residents can visit the pre-registration portal and do the following:
+Pre-registration is a resident facing web-based portal using which an individual can pre-enrol and book an appointment for registering in MOSIP. Pre-registration fundamentally helps the residents and Government organizations by saving the time and efforts required for basic data collection of the residents at the registration centers. The data pre-filled by the residents on the portal can be made available for use at the centers for quick access and seamless registration process.
+
+The residents can visit the pre-registration portal and do the following:
 * Enter demographic data and upload supporting documents
 * Book an appointment for one or many users for registration by choosing a suitable registration center and a convinient time slot
 * Receive appointment notifications
