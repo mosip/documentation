@@ -26,7 +26,7 @@ This happens automatically while launching the registration client and is also m
    1. **Configuration sync**: Sync of properties which drives in deciding the registration client UI functionality. For example: Invalid login attempts, idle timeout, thresholds, etc
    1. **Masterdata sync** : As a part of this sync, supporting information like Dynamic fields data, templates, locations, screen authorization, block listed words, etc are pulled in.
    1. **UserDetails sync**: userID, user roles along witrh their status is synced. Only the user details belonging to machine mapped center will be synced. 
-   1. **Certificate sync**: Certificates used to validate the server signatures, device CA certificates, public key used to encrypt the registartion packet will be synced.
+   1. **Certificate sync**: Certificates used to validate the server signatures, device CA certificates, public key(specific to a center and machine, also called as policy key) used to encrypt the registartion packet will be synced.
    1. **Packet sync**: 
          * All the approved/rejected Registration IDs(RIDs) will be synced to the server.
          * All the synced RID packets will be uploaded to the server.
@@ -66,12 +66,31 @@ For more details, refer to [operator onboarding](operator_onboarding.md)
        * REREGISTER
        * REJECTED
        * RESEND
-        
+      
+      
+      <<screenshot>>
+    
   **Registration Type**: This column displays the type of registration packet(New packet, Lost packet, Update packet, Correction packet)
       
-* **Center Remap Sync**:
+* **Center Remap Sync**: 
+    * When a machine is re-mapped from one center to another center, all the pending activities in the machine related to the former center needs to be completed. 
+    * On successful completion of pending tasks, the former center's details will be deleted from the local Derby DB and a full sync will be initiated to pull in the new center details.
+    
+    ##### What are the pending tasks related to a center?
+    - Packet Approvals/rejections
+    - Packet upload
+    - Server confirmation on receiving a packet
+    - Deletion of packets after receiving a confirmation of them being sent
+    - Deletion of pre-registration packets 
+    - Deletion of center specific data like the public/policy key
+    
+    Note: After completing the above tasks, a restart will be prompted to initiate the full sync with new center details.
       
-* **Check Updates**:
+* **Check Updates**: Clicking on this button, triggers a check for any new client version availability in the upgrade server. 
+    The machine must be online to be able to check updates. 
+    If there is any new version available, a confirmation pop-up is displayed to the operator for starting the upgrade  or for reminding them later.
+    
+    <<screenshot required here- anusha>>
    
    
 ### Registration Tasks
@@ -137,10 +156,24 @@ This receipt contains a QR code of the Registration application ID, captured dem
 
 ### End of day processes
 
-* Pending Approval:
-* Re-registrations:
+* Pending Approval: The Supervisor has the exclusive authority to approve/reject packets.The supervisor is supposed to manually re-verify the 
+    registrations before uploading to the server. This page enables him to perform this activity. 
+    
+    Steps to approve/reject packets:
+    1. Click on any of the registrations listed in the left pane. The registration details are displayed on the right pane.
+    2. Supervisor needs to manually verify all the details in the right pane.
+    3. Supervisor can click Approve/Reject button nased on his verification.
+    4. To mark the completion of this approval process, they need to click on Authenticate and provide their credentials.
+    5. On successful authentication, approved/rejected packets will be removed from here and seen on the Application Upload page.
+   
+    
+* Re-registrations: All the registrations which is being marked with the RE-REGISTER status are listed here. 
  
   
-### Dashboard:
+### Dashboard: on clicking Dashboard, the Registration client dashboard HTML template is rendered. Default dashboard displays information about the operator, Packets and the Sync Activities.
+    
+   
+    <<screenhot>>
+
       
-### News and Updates: 
+### News and Updates: This section has been reserved for the country' to be able to display the live news and updates. This can be implemented as per a country' requirements.
