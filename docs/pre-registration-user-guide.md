@@ -12,16 +12,27 @@ The key steps in this process are:
 * Book an Appointment
 * Receive a Confirmation
 
-#### Create a pre-registration application and book an appointment
+## Create a pre-registration application and book an appointment
 
 To create an application, the resident or the operator can follow the steps below:
+
+### Login/create a user account
 1. Open the browser and visit the pre-registration portal.
-2. Select the **preferred language**.
-3. Enter their email address or phone number.
-4. Click **Send OTP**.
-The user will receive an OTP on the registered email ID or the phone number.
-5. Enter the OTP and click **Verify**.
+2. On the login page, click the language dropdown to see the list of languages. 
+3. Select the **language** of your preference.
+4. Enter your valid email address or phone number in the text box.
+5. Select the CAPTCHA field.
+6. Click **Send OTP** to receive an One Time Password (OTP) on your provided email address or mobile number.
+7. Enter the OTP and click **Verify**.
 Once the OTP is verified, they will see a pop up for selecting the languages for data entry.
+
+**Note**: In case you have not received OTP, click **Resend** to receive an OTP again. Enter the newly received OTP.
+When your OTP is verified, you can create, view, or modify your pre-registration application.
+
+![Pre-registartion login page](_images/pre-reg-login.png)
+
+## Create an Application
+
 6. Select the languages and click **Submit**.
 7. Read through the Terms and Conditions to provide their consent. 
 Select the checkbox and click **Accept**.
@@ -54,7 +65,7 @@ This is a configurable option provided to the ID issuer. Before requesting for a
 ### Logout/session timeout
 If the resident wishes to log out of the pre-registration system, they can do so by clicking on the Logout option. The token issued during the authentication of user login is deleted and the user gets logged out of the system. If the user is inactive for say X minutes (X is configurable), the system notifies the user a minute before the configured timeout limit and logs out after a minute. In such a case, no user data is saved.
 
-![Pre-registartion login page](_images/pre-reg-login.png)
+
 
 ## Create an Application
 This section includes some of the key steps for creating an application.
