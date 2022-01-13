@@ -25,6 +25,9 @@ to onboard the machine and the operator, the Admin needs to:
 To setup the registration client:
 1. Download the `reg-client.zip` from the hosted server.
 2. Unzip the client. You can see the directory structure below.
+
+![](_images/reg-client-folder.png)
+
 3. Click `run.bat` to launch registration client.
 
 ### Launching the registration client
@@ -41,16 +44,17 @@ The client always launches with the pre-loader screen which displays the informa
 
 **Note**: Deletion of either the **.mopsipkeys** or the **db** folder makes the application get into an invalid state and hence will fail to launch. To be able to launch the client again, the operator should make sure that both the folders are removed and then re-launch the client. 
 
-![](_images/reg-client-folder.png)
-
 2. **On the next launch after the initial sync**,
   - The registration client login page provides the operator an option to select the language for viewing the registration client UI.
   - After successful login, the operator either lands into the operator onboard page or the home page.
- 
-    For more details on operator onboarding, refer to [Operator onboarding guide](operator-onboarding.md).
+  
+  ![](_images/reg-client-language-selection.png)
+  
+   For more details on operator onboarding, refer to [Operator onboarding guide](operator-onboarding.md).
     
-    For more details on Home page, refer to [registration client home page](registration-client-home-page.md)
-
+   For more details on Home page, refer to [Registration client home page](registration-client-home-page.md).
+   
+   
 ### Modes of operation
       
 * **Offline**- Operator can use the registration client in offline mode to only do the registrations and EOD process. During offline mode, the operator authentication will be based on locally saved password hash. An operator can work in offline mode only if they have logged into to the registration client being online atleast once.
