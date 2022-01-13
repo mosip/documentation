@@ -12,34 +12,75 @@ The key steps in this process are:
 * Book an Appointment
 * Receive a Confirmation
 
-## Create a pre-registration application and book an appointment
-
 To create an application, the resident or the operator can follow the steps below:
 
-### Login/create a user account
+## Login/create a user account
+
+![Pre-registartion login page](_images/pre-reg-login.png)
+
 1. Open the browser and visit the pre-registration portal.
 2. On the login page, click the language dropdown to see the list of languages. 
 3. Select the **language** of your preference.
-4. Enter your valid email address or phone number in the text box.
-5. Select the CAPTCHA field.
+4. Enter your valid email address or phone number in the text box provided.
+5. Select the Captcha field.
 6. Click **Send OTP** to receive an One Time Password (OTP) on your provided email address or mobile number.
 7. Enter the OTP and click **Verify**.
-Once the OTP is verified, they will see a pop up for selecting the languages for data entry.
+Once the OTP is verified, you will see a pop up for selecting the languages for data entry.
 
 **Note**: In case you have not received OTP, click **Resend** to receive an OTP again. Enter the newly received OTP.
 When your OTP is verified, you can create, view, or modify your pre-registration application.
 
-![Pre-registartion login page](_images/pre-reg-login.png)
-
 ## Create an Application
 
-6. Select the languages and click **Submit**.
-7. Read through the Terms and Conditions to provide their consent. 
-Select the checkbox and click **Accept**.
-Once the user gives consent, they will be directed to the demographics page.
-8. On the **Demographics Details** page, enter the required data in the different tiles. The mandatory fields/labels have a "*" mark.
-9. After filling the details, click **Continue**.
-10. Next, upload the required documents in the **Upload Documents** page. Click **Continue**. 
+#### Select the data capture language
+
+![](_images/pre-reg-language-selection.PNG)
+
+* A user logging in for the first time and having no applications will be prompted with a data capture language pop-up. The same set of languages will be used for the next set of applications created in the same session.
+* The language selected by the user in the login screen will be pre-selected in the data capture language pop-up.
+* Select the languages and click **Submit**.
+* The user can change this by clicking on the **CHANGE DATA CAPTURE LANGUAGES** button.
+
+**Note**: This choice will be available only if the ID issuer has configured the usage of optional languages.
+
+#### Provide consent
+
+* On the Demographic Details page, read the **Terms and Conditions** and select the check box to agree. 
+* This agreement is to provide consent for the storage and processing of your personal information.
+* Click **Accept** and proceed.
+**Note**: User consent is mandatory for creating/updating applications. The contents on this page will be displayed in all data capture languages selected.
+
+#### Enter Demographic details
+
+* Enter all your demographic details, which includes Name, Age/DOB, Gender, Residential Status, Address, Mobile Number, Email Id, etc.
+* You can also change or verify your demographic details in the other selected language.
+* After you have filled and verified your demographic details, click **Continue**.
+  Note: The mandatory fields/labels have a `*` mark.
+  Field and button labels, error and information messages will be displayed in the user preferred language selected in the login screen.
+  
+#### Upload documents
+
+* On the Upload Documents page, select the document (e.g. Passport, Reference Identity Number, etc.) from the document drop-down list.
+* Click **Browse** to locate the scanned document on your machine.
+* Select the file that you want to upload.
+* When the file is uploaded successfully, the document will appear on the right side. Verify that you have uploaded the correct document.
+* Repeat the steps above to upload document(s) for each applicable document category.
+* When adding an applicant, if a newly added applicant’s Proof of Address (POA) document is same as that of the the existing user’s POA, which is an already uploaded POA document, then click **Same As** option and select the name of the applicant.
+* Click **Continue** to preview your application.
+
+#### Preview the data
+
+* To change your demographic details (Name, Age, etc.), click **Modify** at the top-right corner adjacent to the Demographic Details section.
+* To modify your uploaded documents, click **Modify** at the bottom-right corner adjacent to the Documents section and make changes.
+* To add a new applicant, click **Add Applicant**.
+**Note**: On clicking the **Add Applicant** option, you will be navigated to the Demographic Details page to provide Consent and proceed with providing the required demographic data/documents.
+* Click **Book Now** to book your appointment.
+
+## Book an Appointment
+
+#### Choose a Registartion center
+
+## Receive a confirmtaion
 11. To create multiple applications for family/friends, click **Add an Applicant** or select **Create New Application** on the Dashboard.
 11. Once this is done, preview the same and make modifications if required by clicking on **modify**.
 12. Now, proceed with booking an appointment.
@@ -47,24 +88,6 @@ Once the user gives consent, they will be directed to the demographics page.
 14. Receive an acknowlegment on the registered phone number(SMS) or email address as per details provided in the demographic form.
 
 Below is the detailed description of the functionality available in the sample UI implementation
-
-## Login/create a user account
-
-### Preferred Language selection
-* The Pre-registration module in MOSIP supports multiple languages.
-* On the login page, MOSIP provides the user an option to select the language of preference for accessing the pre-registration portal.  
-* The dropdown present on the login page displays the list of languages. 
-* Once the language is selected by the user, the field and button labels, error and information messages throughout the application will be displayed in the preferred language. 
-
-### Login using email or phone number
-Residents can log in to the portal by providing their email address or mobile number. The system validates the email ID or phone number entered, sends an OTP which the resident needs to enter. Once the OTP is validated, the user needs to fill the necessary details for booking an appointment. 
-
-### CAPTCHA support
-This is a configurable option provided to the ID issuer. Before requesting for an OTP, the system asks the resident to provide a CAPTCHA. CAPTCHA is used to mitigate DDoS attacks. Once the challenge provided in the CAPTCHA is solved by the resident, the request for an OTP is sent. 
-
-### Logout/session timeout
-If the resident wishes to log out of the pre-registration system, they can do so by clicking on the Logout option. The token issued during the authentication of user login is deleted and the user gets logged out of the system. If the user is inactive for say X minutes (X is configurable), the system notifies the user a minute before the configured timeout limit and logs out after a minute. In such a case, no user data is saved.
-
 
 
 ## Create an Application
@@ -77,7 +100,7 @@ This section includes some of the key steps for creating an application.
 * The language selected by the user in the login screen will be pre-selected in the data capture language pop-up.
 **Note**: The user can change this by clicking on the **CHANGE DATA CAPTURE LANGUAGES** button. This choice will be available only if the ID issuer has configured usage of optional languages.
           
-![](_images/pre-reg-language-selection.PNG)
+
       
 ### Provide consent
 Before filling the application form, the user is advised to provide their consent for storage and utilization of their personally identifiable information (PII). The consent is sought from the user for every new application created in the system. On providing their consent, the system redirects the user to start the pre-registration application (demographic details). The data as part of the consent form is rendered as setup by the administrator.
