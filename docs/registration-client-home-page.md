@@ -143,7 +143,7 @@ The same *AddtionalInfo RequestId* must be provided to the operator during the c
 
 **Note**- The above mentioned Registration tasks are completely configurable through UI Specs<<link>>
    
-## Preview and operator' packet authentication
+## Preview and Packet authentication
    
 * The operator can preview the data filled and navigate back to the respective tabs in case of corrections.
 * Once the resident and the operator are satisfied with the data being captured, the operator can proceed to the Authenticate tab and provide his valid credentials to mark the complete of the registration task.
@@ -160,7 +160,7 @@ The image below is that of a sample acknowlegement receipt.
 
 ### End of day processes
 
-* Pending Approval: The Supervisor has the exclusive authority to approve/reject packets.The supervisor is supposed to manually re-verify the 
+* **Pending Approval**: The Supervisor has the exclusive authority to approve/reject packets.The supervisor is supposed to manually re-verify the 
     registrations before uploading themto the server. This page enables them to perform this activity. 
     
     **Steps to approve/reject packets**:
@@ -170,7 +170,7 @@ The image below is that of a sample acknowlegement receipt.
     4. To mark the completion of this approval process, they need to click on **Authenticate** and provide their credentials.
     5. On successful authentication, approved/rejected packets will be removed from here and be seen on the **Application Upload** page.
    
-* Re-registrations: All the registrations which are being marked with the RE-REGISTER status is listed here. 
+* **Re-registrations**: All the registrations which are being marked with the RE-REGISTER status is listed here. 
  
 ### Dashboard: 
 On clicking Dashboard, the Registration client dashboard HTML template is rendered. Default dashboard displays information about the operator, Packets and the Sync Activities.  
