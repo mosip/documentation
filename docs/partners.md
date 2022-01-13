@@ -52,6 +52,24 @@ Onboarding of a partner refers to registering a partner in a particular deployme
 1. FTMP uploades all certificates.
 1. TODO
 
+### Credential Partner (CP)
+1. Datashare policy must be pre-defined (see [Partner policies](#partner-policies)). 
+1. CP should have a trusted X.509 certificate with chain of CA certificates.
+1. CP self-registers on PMS portal providing partner id, name, organisation name (same as in certificate), partner type (`Credential_Partner`) etc.
+1. CP uploades all certificates.
+1. CP selects the policy group and policy. 
+1. CP maps policy to one of the supported [credential types](https://github.com/mosip/id-repository/tree/1.2.0-rc2/id-repository/credential-service).
+1. CP adds biometric extractors for the policy.
+
+### Online Verification Partner (OVP)
+1. Datashare policy must be pre-defined (see [Partner policies](#partner-policies)). 
+1. OVP should have a trusted X.509 certificate with chain of CA certificates.
+1. OVP self-registers on PMS portal providing partner id, name, organisation name (same as in certificate), partner type (`Credential_Partner`) etc. _(Using APIs, as OVP support on PMS Portal is available in later version of MOSIP.)_
+1. OVP uploades all certificates.
+1. OVP selects the policy group and policy. 
+1. OVP maps policy to `auth` [credential type](https://github.com/mosip/id-repository/tree/1.2.0-rc2/id-repository/credential-service).
+1. OVP adds biometric extractors for the policy.
+
 ## MOSIP Partner Program
 The MOSIP Partner Programme (MPP) was initiated to help stakeholders connect with MOSIP, and become part of an ecosystem invested in building foundational digital ID systems that are trustworthy, secure, efficient, and interoperable, while being customised to specific needs. 
 
