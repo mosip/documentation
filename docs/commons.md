@@ -14,7 +14,7 @@ As the name suggests, Commons refers to all the common services (also called "ke
 * RID Generator
 
 ## Repository
-All the services are available in the [Commons repository](https://github.com/mosip/commons/tree/1.2.0-rc2)
+All the above services are available in the [Commons repository](https://github.com/mosip/commons/tree/1.2.0-rc2)
 
 
 
