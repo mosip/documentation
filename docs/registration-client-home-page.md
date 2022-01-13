@@ -41,7 +41,7 @@ For more details, refer to [operator onboarding](operator_onboarding.md)
 
   ![](_images/reg-client-biometric-page.png)
 
- * **Application Upload**: Application upload refers to upload of supervisor reviewed registration packets(approved and rejected). From this page, the operator can export the packets to any location on their machine. 
+ * **Application Upload**: Application upload refers to upload of supervisor reviewed registration packets(approved and rejected). From this page, the operator can export the packets to any location on their machine on clicking **Save to Device** button. 
       - Upload of registration packet from this page internally performs two operations in sequence:
           * Sync registration metadata to server
           * On successful sync of metadata, actual registration packets are uploaded to the server.
