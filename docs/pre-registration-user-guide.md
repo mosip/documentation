@@ -32,10 +32,9 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 
 ## Create an Application
 
-#### Select the data capture language
+#### Step 1: Select the data capture language
 
 ![](_images/pre-reg-language-selection.PNG)
-
 * A user logging in for the first time and having no applications will be prompted with a data capture language pop-up. The same set of languages will be used for the next set of applications created in the same session.
 * The language selected by the user in the login screen will be pre-selected in the data capture language pop-up.
 * Select the languages and click **Submit**.
@@ -43,14 +42,16 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 
 **Note**: This choice will be available only if the ID issuer has configured the usage of optional languages.
 
-#### Provide consent
+#### Step 2: Provide consent
 
 * On the Demographic Details page, read the **Terms and Conditions** and select the check box to agree. 
 * This agreement is to provide consent for the storage and processing of your personal information.
 * Click **Accept** and proceed.
 **Note**: User consent is mandatory for creating/updating applications. The contents on this page will be displayed in all data capture languages selected.
 
-#### Enter Demographic details
+#### Step 3: Enter Demographic details
+
+![](_images/demographic-details.png)
 
 * Enter all your demographic details, which includes Name, Age/DOB, Gender, Residential Status, Address, Mobile Number, Email Id, etc.
 * You can also change or verify your demographic details in the other selected language.
@@ -58,8 +59,8 @@ When your OTP is verified, you can create, view, or modify your pre-registration
   Note: The mandatory fields/labels have a `*` mark.
   Field and button labels, error and information messages will be displayed in the user preferred language selected in the login screen.
   
-#### Upload documents
-
+#### Step 4: Upload documents
+![](_images/upload-docs.png)
 * On the Upload Documents page, select the document (e.g. Passport, Reference Identity Number, etc.) from the document drop-down list.
 * Click **Browse** to locate the scanned document on your machine.
 * Select the file that you want to upload.
@@ -68,7 +69,7 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 * When adding an applicant, if a newly added applicant’s Proof of Address (POA) document is same as that of the the existing user’s POA, which is an already uploaded POA document, then click **Same As** option and select the name of the applicant.
 * Click **Continue** to preview your application.
 
-#### Preview the data
+#### Step 5: Preview the data
 
 * To change your demographic details (Name, Age, etc.), click **Modify** at the top-right corner adjacent to the Demographic Details section.
 * To modify your uploaded documents, click **Modify** at the bottom-right corner adjacent to the Documents section and make changes.
@@ -76,86 +77,12 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 **Note**: On clicking the **Add Applicant** option, you will be navigated to the Demographic Details page to provide Consent and proceed with providing the required demographic data/documents.
 * Click **Book Now** to book your appointment.
 
-## Book an Appointment
-
-#### Choose a Registartion center
-
-## Receive a confirmtaion
-11. To create multiple applications for family/friends, click **Add an Applicant** or select **Create New Application** on the Dashboard.
-11. Once this is done, preview the same and make modifications if required by clicking on **modify**.
-12. Now, proceed with booking an appointment.
-13. Select the convinient registration center and the time slot.
-14. Receive an acknowlegment on the registered phone number(SMS) or email address as per details provided in the demographic form.
-
-Below is the detailed description of the functionality available in the sample UI implementation
-
-
-## Create an Application
-This section includes some of the key steps for creating an application.
-
-### Language selection for Data capture
-* After successful login, based on the language configurations set by the ID issuer, the residents will have the option to select their language of preference to fill up the application details.  
-* A user logging in for the first time and having no applications will be prompted with a data capture language pop-up.
-* The same set of languages will be used for the next set of applications created in the same session. 
-* The language selected by the user in the login screen will be pre-selected in the data capture language pop-up.
-**Note**: The user can change this by clicking on the **CHANGE DATA CAPTURE LANGUAGES** button. This choice will be available only if the ID issuer has configured usage of optional languages.
-          
-
-      
-### Provide consent
-Before filling the application form, the user is advised to provide their consent for storage and utilization of their personally identifiable information (PII). The consent is sought from the user for every new application created in the system. On providing their consent, the system redirects the user to start the pre-registration application (demographic details). The data as part of the consent form is rendered as setup by the administrator.
-
-There may be a situation where the user opts to close the Consent Pop-up. In this case, the following scenarios may arise:
-1. **For a first-time login user**:  On clicking **Cancel**, the system will redirect the user to the Dashboard page which means that the user will not be allowed to fill up the details for further processing.
-2. **For existing user**s: The existing users could choose to create more applications for their family or acquaintances. This can be possible from two places on the portal:
-    a. Click **Create New Application** on the Dashboard: On cancelling the consent pop up while creating a new application, the user would be redirected to the Dashboard page.
-    b. Click **Add an Applicant** from **Preview** page: On cancelling the consent pop up while creating a new application, the user would be redirected to the Preview page.
-
-**Note**: Consent is sought from the user for every new application created in the system. The contents of the consent will be displayed in all data capture languages selected.
-
-### Provide Demographic data
-
-* The demographic data that needs to be collected from the residents is configurable as per a country’s requirement. 
-* The user is provided with a demographic form based on the ID Object Definition and UI Specification for new pre-registration application. 
-* The residents are expected to fills demographic details (e.g., Full Name, Age/DOB, Gender, Residential status, Address, mobile number, email id, etc.). The system validates the fields entered, the system also checks for the mandatory fields. 
-* Additionally, the system validates for any blocklisted words entered as configured by the country. Once validated a pre-registration request ID (PRID) is generated and the demographic details provided by the residents gets mapped to that PRID.
-* On the Demographic Details page, the residents will be able to enter their data in their preferred language.  
- 
-A sample image is shown below.
-
-![](_images/demographic-details.png)
-
-### Upload Documents
-MOSIP also empowers the countries with an option to configure the documents which needs to be uploaded by the residents for the registration process.
-
-#### Attaching documents to the application
-**Document Categories and Applicable Document Types** 
-* When user provides their demographic data, the pre-registration system captures the data. 
-* Based on the parameters (from the configuration) for example - gender, age and residential status (Foreigner, National) from the demographic data, applicant types are determined. The pre-registration system then sends the ID to the mapping.
-* Based on the Applicant type, the Applicable Document categories are received from the mapping. The pre-registration system then displays only applicable categories.
-* The Document Category and type of documents in each category to be uploaded varies based on the applicant type.
-* Pre-registration system displays only those types to the applicant.
-* Once the documents are uploaded by applicant, the system performs virus scan to check the integrity of the document. 
-* Once the virus scan is successful, the document is encrypted and stored in the object store.
-
-**Referring to already uploaded documents**
-* The POA (Proof of Address) document could be uploaded or can be referred to an already uploaded POA of an existing applicant.
-* The user can select a particular applicant document to which he wants to refer to.
-* When pre-registering for a family living at the same address, it is not required to upload the same POA repeatedly, instead, they could refer to the document as uploaded by the first family member thereby saving time and space.
-
-![](_images/upload-docs.png)
-
-**Preview the Data**
-* Once the user fills up the demographic details and uploads the required documents, they will be able to preview the data. 
-* On the Preview page, the residents can choose to modify the demographic details by clicking on the **modify** button at the top right corner. 
-* Similarly, they can modify the uploaded documents, by clicking modify at the bottom right corner.
-* On this page, the user also has an option to add another applicant by clicking **Add an Applicant**. 
-* Further, the user can click **Book Now** to book an appointment.
-
-**Create multiple applications**
-Once the demographic details are filled and the documents are uploaded, the user can add more applicants. To do so, they can select **Add an Applicant** option on the preview page or **Create New Application** option on the Dashboard. The system associates an unique pre-registration ID to the new application(s) created.
+**Add new Applicant**
+In Your Applications page, click **Create New Application** to generate a new application for the new applicant.
 
 ### Viewing My Applications
+
+![Dashboard](_images/pre-reg-application-status.JPG)
 
 Once the application is created, there could be multiple statuses depending on the data filled by the user/resident or the actions performed by them. The user can view all the pre-registration applications created by them in the Dashboard. The different statuses with a brief explanation are mentioned below:
 
@@ -167,87 +94,67 @@ Once the application is created, there could be multiple statuses depending on t
 |Expired| Appointment date has passed|Re-book an appointment
 |Cancelled| Appointment has been cancelled|Re-book an appointment
 
-![Dashboard](_images/pre-reg-application-status.JPG)
-
 The applications are sorted and displayed by the order of creation of application. The first application created appears first, latest created/modified application appears at the end. If the user visits the registration center and consumes the appointment, then the application will be removed from the list. If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
+
+## Book an Appointment
+
+#### Step 1: Choose a Registration center
+
+![](_images/pre-reg-recommended-center.png)
+
+* The recommended registration centers are automatically displayed based on your demographic details (Postal Code)
+* On the Book Appointment page, you can find a registration center through the three options as follows:
+    * Click **Nearby Centers** to view the registration centers based on your geographical location.
+    * Use the search box to find the registration center based on your search criteria.
+    * Click **Recommended Centers** to view registration centers based on your demographic details. (Postal Code)
+
+#### Step 2: Select a time slot
+* Select your preferred date from the list of available calendar days and the number of available bookings. 
+* The list of available time slots for your selected date is categorized between Morning and Afternoon. Select your preferred option.
+* Select your preferred time slot from the list.
+* Select the particular applicant name to book an appointment.
+Note: On clicking the **Add Applicant** option, you will be navigated to the Demographic Details page to provide Consent and proceed with providing the required demographic data/documents.
+* Verify the time slot(s) as selected against the applicant name(s).
+* Click **Submit** to view an acknowledgment of your application.
+
+![](_images/pre-reg-appointment-booking.png) 
+
+## Receive a Confirmation
+
+![](_images/pre-reg-acknowledgement.png) 
+
+* After successful completion of the Pre-registration application, you will receive an acknowledgmenon on the registered phone number(SMS) or email address as per details provided in the demographic form.
+* The acknowledgement contains the following information: name, pre-registration ID, age/DOB, mobile number, email id and registration center details, appointment date, appointment time)
+* A QR code containing the pre-registration ID is generated. This QR code can be scanned at the registration center to fetch the details to be used during the registration process.
+* You can print, download, email or SMS your acknowledgment.
+    * To print your acknowledgement, click **Print**.
+    * To download your acknowledgement, click **Download PDF**.
+* To add the additional recipient(s) to receive the acknowledgment of your application, follow these steps:
+    * Click **Send Email/SMS**.
+    * Enter the mobile number and/or enter the email ID.
+    * Click **Send** to receive the acknowledgement on your provided e-mail address or mobile number.
 
 ### Modify application data
 The user can modify the pre-registration data by opting to select the **modify** option for a specific application. The system provides the demographic form with pre-filled demo details and allows the user to edit the details as required. The system associates the modified demo details with the pre-registration id for which Modify information is initiated.
 
 ### Discard application
-The user can discard the pre-registration by clicking on the **Delete** icon for the pre-registration ID for which they wish to discard. The system provides the user with two options: **Discard entire Application** or **Cancel** appointment. If the user chooses to discard the entire application, the system deletes all the data mapped to the pre-registration ID and cancels the appointment (if any).
-
-## Booking an appointment
-
-### Choosing a registration center for an appointment
-#### Centers recommended based on postal code
-* The system recommends registration centers based on the postal code(s) of all the applicants for whom the appointment is to be booked
-* The search results have the following information about the registration center: name, address, working hours, contact person, center type, and contact number
-* The first registration center as per the search criteria is shown to the user on map by default
-
-#### Centers based on user geo-location
-* An user can enable location services, in the device/computer in order to select nearby centers
-* The system checks for the latitude and Longitude values of the user and  fetches all the registration centers within 2 Km radius (configurable)
-* The first registration center as per the search criteria is shown to the user on map by default.
-
-#### Centers based on search criteria selected 
-* An user may opt to perform a text search to find a center based on which the system displays the registration centers
-* It is a contextual search where the user selects a search criteria and based on the selected search criteria enters relevant text. 
-* The first registration center as per the search criteria is shown to the user on map by default
-
-#### Get appointment for the day
-* An user logs in to the pre-registration portal and opts to book appointment for pre-registration application or Modify the appointment
-* The system presents a list of centers to the user to select the required registration center 
-* The time selection with calendar days along with number of slots available per calendar day will be displayed 
-* The user can select any of the calendar day for which they wish to book an appointment.
-* Time slots of 15 minutes each are displayed (configurable).
-* Each time slot with available slots will be displayed.
-* The user can select a slot and proceed to book appointment or can go back to select another registration center
-
-![](_images/pre-reg-recommended-center.png)
-
-### Choosing appointment slots
-
-#### Get slots availability
-This is again a configurable option provided which can be set as according to a country’ requirements. 
-In this page, the user can view the available slots in a selected registration center.
-
-* The system displays the calendar days (configurable) for the user to select a slot in the chosen center
-* Calendar days which are Holidays or non-working days for the selected registration center are greyed out or not shown to the user
-* For a selected registration center, X hours (X isconfigurable) are considered as working hours
-* A user can view time slots of 15 minutes (configurable) each for the selected calendar day and view available slots for every time slot shown in the selected calendar day
-* An applicant can further choose the preferred timeslot
-* An user can confirm the appointment selection of the preferred time slot– Subsequently, the timeslot(s) are locked
+* On Your Applications page, click on the **delete** icon against pre-registration application of an applicant, a pop-up window appears on the screen.
+* Select the **Discard entire application** option in the pop-up window.
+* Click **SUBMIT** to discard your application.
 
 ### Cancel appointment
-* The user can opt to cancel the selected appointment(s) against the application which are in **Booked** Status.
-* In such a case, the system notifies the user about the successful cancellation 
+* On Your Applications page, click on the **delete** icon against pre-registration application of an applicant, a pop-up window appears on the screen.
+* Select **Cancel** appointment and save the details option in the pop-up window.
+* Click **SUBMIT** to cancel an appointment.
 * Following a successful appointment cancellation, the system unlocks the time slot of the registration center to ensure that someone else can book it.
 
 ### Re-book appointment
-* The system provides the user with the list of available appointment slots
+* On **Your Applications** page, select the check box for the applicable applicant.
+* Click **Book/Modify Appointment** to re-book an appointment.
 * The user can select any appointment date available and the appointment slot available
-* The user has to select against which pre-registration application ID the appointment slot is being booked
-* The system maps appointment slot with all the pre-registration application IDs, which are selected for appointment booking
-* If any pre-registration application ID does not have any bookings mapped, the user is notified if they want to continue without the booking
-* A user at this stage may opt to search for a registration center. In this case, the appointment-booking (time-slot selected) is removed
 * An user cannot Re-book the appointment if the appointment booking is less than 48 hours (configurable) from time of booking
 
-![](_images/pre-reg-appointment-booking.png) 
 
-#### Appointment acknowledgement
-* An Acknowledgement is triggered after successful completion of pre-registration (booking an appointment)
-* The acknowledgement contains the following information: name, pre-registration ID, age/DoB, mobile number, email id and registration center details, appointment date, appointment time)
-* A QR code containing the pre-registration ID is generated. This QR code can be scanned at the registration center to fetch the details to be used during the registration process.
-* User can choose to print or download the acknowledgement as PDF.
-
-![](_images/pre-reg-acknowledgement.png) 
-
-## Receive a Confirmation Notification
- 
-**Send acknowledgement to email/phone**
-* The system sends an acknowledgement to the applicant to the registered phone (SMS) or email as per the details provided in demographic form. In case of multiple applications, the system sends notifications for each applicant to the details provided in the demographic form of that applicant.
-* Additionally, user can opt to manually trigger notification(s) to the contact details of additional recipients. However, this is driven by the Notification configuration setup by the administrator to allow a notification to be triggered by SMS/email/both or none.
 
 
 
