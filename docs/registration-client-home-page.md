@@ -32,9 +32,9 @@ This happens automatically while launching the registration client and is also m
          * All the synced RID packets will be uploaded to the server.
          * All the uploaded packet status will be synced from server.
           
-* **Download Pre-Registration Data**: An operator can download the pre-registration data of a machine mapped center while being online and store it locally in the registration machine for offline use. Now when the system is offline and the pre-registration data is already downloaded, the operator can enter the pre-registration ID to auto-populate the registration form. Provided the machine is online, any pre-registration application can be downloaded irrespective of the center booked by the resident.
+* **Download Pre-Registration Data**: An operator can download the pre-registration data of a machine mapped center while being online and store it locally in the registration machine for offline use. Now, when the system is offline and the pre-registration data is already downloaded, the operator can enter the pre-registration ID to auto-populate the registration form. Provided the machine is online, any pre-registration application can be downloaded irrespective of the center booked by the resident.
      
-  **Note** - Date Range of pre-registration data to be downloaded and storage location of pre-registration data in the registration machine is configurable. Also, this is synced as a part of configuration sync.       
+  **Note**- Date Range of pre-registration data to be downloaded and storage location of pre-registration data in the registration machine is configurable. Also, this is synced as a part of configuration sync.       
        
 * **Update Operator Biometrics**:  Using this option, the operator can onboard themselves anytime.  
 For more details, refer to [operator onboarding](operator_onboarding.md)
@@ -67,7 +67,6 @@ For more details, refer to [operator onboarding](operator_onboarding.md)
        * REJECTED
        * RESEND
       
-      
       <<screenshot>>
     
   **Registration Type**: This column displays the type of registration packet(New packet, Lost packet, Update packet, Correction packet)
@@ -80,11 +79,11 @@ For more details, refer to [operator onboarding](operator_onboarding.md)
     - Packet Approvals/rejections
     - Packet upload
     - Server confirmation on receiving a packet
-    - Deletion of packets after receiving a confirmation of them being sent
+    - Deletion of packets after receiving a confirmation
     - Deletion of pre-registration packets 
     - Deletion of center specific data like the public/policy key
     
-    Note: After completing the above tasks, a restart will be prompted to initiate the full sync with new center details.
+    **Note**: After completing the above tasks, a *restart* will be prompted to initiate the full sync with new center details.
       
 * **Check Updates**: Clicking on this button, triggers a check for any new client version availability in the upgrade server. 
     The machine must be online to be able to check updates. 
@@ -126,11 +125,14 @@ The image below gives an idea of the update UIN process Flow in the registration
 ![](_images/reg-client-update-uin.png)
 
 {% hint style="info" %}
+    
 *The UIN update feature is configurable by a country. The Admin can turn ON or OFF, the UIN update feature using the configuration.*
+    
 {% endhint %}
 
 ## Lost UIN
-There might be a situation when a resident might have lost his UIN and visits the registration center for retrieving the same. The operator then captures the biometrics and the demographic details of the individual and processes a request to retrieve the lost UIN. As biometrics play a crucial in identifying a person' indentity, it is mandated to provide the biometrics as a part of the Lost UIN flow. Other details like demographic data, documents are optional.
+There might be a situation when a resident might have lost his UIN and visits the registration center for retrieving the same. The operator then captures the biometrics and the demographic details of the individual and processes a request to retrieve the lost UIN. As biometrics play a crucial in identifying a person' indentity, it is mandated to provide the biometrics as a part of the Lost UIN flow. Other details like demographic data, uploading documents are optional.
+    
 ![](_images/reg-client-lost-uin.png)
    
 ## Correction process
@@ -144,36 +146,36 @@ The same *AddtionalInfo RequestId* must be provided to the operator during the c
 ## Preview and operator' packet authentication
    
 * The operator can preview the data filled and navigate back to the respective tabs in case of corrections.
-* Once the resident and the operator are satisfied with the data being captured, the operator can proceed to the authentication tab and provide his valid credentials to mark the complete of the registration task.
+* Once the resident and the operator are satisfied with the data being captured, the operator can proceed to the Authenticate tab and provide his valid credentials to mark the complete of the registration task.
+ 
+![](_images/reg-client-preview.png)  
 
-{% hint style="info" %}
-Mode of authentication is configurable by a country. The Admin can turn ON or OFF the UIN update feature using the configuration.
-{% endhint %}
-   
 ## Acknowledgement receipt and printing
 Once the registration process (new registration, UIN update or lost UIN, correction) is completed, the registration client generates an acknowledgement receipt.
 This receipt contains a QR code of the Registration application ID, captured demographic data in the selected language, photograph of the resident and ranking of each finger from 1 to 10 (1 being the finger with the best quality). This receipt is print friendly and can be used for printing using any printer.
+    
+The image below is that of a sample acknowlegement receipt.
+
+![](_images/re-client-acknowledgement.png)  
 
 ### End of day processes
 
 * Pending Approval: The Supervisor has the exclusive authority to approve/reject packets.The supervisor is supposed to manually re-verify the 
-    registrations before uploading to the server. This page enables him to perform this activity. 
+    registrations before uploading themto the server. This page enables them to perform this activity. 
     
-    Steps to approve/reject packets:
+    **Steps to approve/reject packets**:
     1. Click on any of the registrations listed in the left pane. The registration details are displayed on the right pane.
     2. Supervisor needs to manually verify all the details in the right pane.
-    3. Supervisor can click Approve/Reject button nased on his verification.
-    4. To mark the completion of this approval process, they need to click on Authenticate and provide their credentials.
-    5. On successful authentication, approved/rejected packets will be removed from here and seen on the Application Upload page.
+    3. Supervisor can click **Approve/Reject** button based on their verification.
+    4. To mark the completion of this approval process, they need to click on **Authenticate** and provide their credentials.
+    5. On successful authentication, approved/rejected packets will be removed from here and be seen on the **Application Upload** page.
    
-    
-* Re-registrations: All the registrations which is being marked with the RE-REGISTER status are listed here. 
+* Re-registrations: All the registrations which are being marked with the RE-REGISTER status is listed here. 
  
-  
-### Dashboard: on clicking Dashboard, the Registration client dashboard HTML template is rendered. Default dashboard displays information about the operator, Packets and the Sync Activities.
-    
-   
-    <<screenhot>>
+### Dashboard: 
+On clicking Dashboard, the Registration client dashboard HTML template is rendered. Default dashboard displays information about the operator, Packets and the Sync Activities.  
 
+![](_images/reg-client-dashboard.png)
       
-### News and Updates: This section has been reserved for the country' to be able to display the live news and updates. This can be implemented as per a country' requirements.
+### News and Updates: 
+This section has been reserved for the country' to be able to display the live news and updates. This can be implemented as per a country' requirements.
