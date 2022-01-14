@@ -4,48 +4,16 @@ Registration Processor is a backend processing engine to enable the ID Lifecycle
 
 ![](_images/reg-proc.png)
 
-## Features
-Below are some of the features associated with the Registration Processor
-
-### Functional features
-* Processes packets containing individual’s data from multiple sources such as the Registration Client, Resident Services or other external systems
-* Performs various validations
-* Validates trust and security - Virus checks, machine and device checks
-* Validates the identity of the officer and supervisor
-* Validates the data received including quality of biometrics captured
-* Classifies packets into various groups and has the ability to tag and process them based on a configurable workflow
-* Performs uniqueness checks
-    * Identifies duplicate applicants - demographic and biographic
-    * Works with ABIS for biometric uniqueness check
-    * Works with manual adjudication systems for manual deduplication
-* Takes Actions on ID
-    * Supports ID creation and Issuance, ID update & Lost ID
-    * Supports extraction of templates from biometrics images
-    * Sends Notifications
-* Sends the ID information to external Printing & Delivery System
-
-### Technical features 
-* Kafka eventbus with lightweight messaging for stages
-* An apache camel bridge manages the flow of the packet through the stages
-* Each flow has its own camel specification
-* Integration stages can be added into the flow as needed
-* Failed packets are reprocessed by the flow
-* Stages are atomic and self-aware, but agnostic of other stages
-* No transaction control at the flow level
-* Throughput for each stage is decided based on hardware available
-* Packets are decrypted in memory and used
-* HTTP based stages are possible too
-
 ## Stages and services
-For a detailed description of Registration processor, refer to [registration repo](https://github.com/pjoshi751/registration/tree/develop)
+The Registration Processor contains several [stages and services](https://github.com/mosip/registration/tree/1.2.0-rc2#registration-stages-and-pipeline). 
+
+The registration packet flows through the various stages depending on the type of flow. Refer [flows](https://github.com/mosip/registration/blob/1.2.0-rc2/docs/flows.md) 
 
 # Build and deploy
-For more information on the build and deployment, refer to [registration processor repo](https://github.com/pjoshi751/registration/tree/develop).
+Refer to [repo](https://github.com/mosip/registration/blob/1.2.0-rc2/)
 
 # APIs
-For detailed functionality of Registration Processor APIs, refer to [registration APIs](../../../api-reference/Pre-Registration-APIs.md).
 
 # Configurations
-For details related to registration processor configurations, refer to [registration processor configurations](https://github.com/pjoshi751/registration/blob/develop/docs/configuration.md).
-
+Refer to [Configuration Guide](https://github.com/mosip/registration/blob/1.2.0-rc2/docs/configuration.md)
 
