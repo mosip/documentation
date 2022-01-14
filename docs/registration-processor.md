@@ -10,7 +10,7 @@ The Registration Processor contains several [stages and services](https://github
 The registration packet flows through the various stages depending on the type of flow. Refer [flows](https://github.com/mosip/registration/blob/1.2.0-rc2/docs/flows.md) 
 
 # Build and deploy
-Refer to [repo](https://github.com/mosip/registration/blob/1.2.0-rc2/)
+Refer to [repo](https://github.com/mosip/registration/tree/1.2.0-rc2)
 
 # APIs
 
