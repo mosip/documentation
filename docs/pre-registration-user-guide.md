@@ -32,7 +32,6 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 ## Create an Application
 
 #### Step 1: Select the data capture language
-
 ![](_images/pre-reg-language-selection.PNG)
 1. Once the OTP is verified, you will see a pop up for selecting the languages for data entry.
 2. Select the languages and click **Submit**.
@@ -41,17 +40,16 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 * A user logging in for the first time and having no applications will be prompted with a data capture language pop-up. The same set of languages will be used for the next set of applications created in the same session.
 * The language selected by the user in the login screen will be pre-selected in the data capture language pop-up.
 * The user can change this by clicking on the **CHANGE DATA CAPTURE LANGUAGES** button.
-
-**Note**: This choice will be available only if the ID issuer has configured the usage of optional languages.
+* This choice will be available only if the ID issuer has configured the usage of optional languages.
 
 #### Step 2: Provide consent
-
+![](_images/pre-reg-consent.PNG)
 1. On the Demographic Details page, read the **Terms and Conditions** and select the check box to agree. This agreement is to provide consent for the storage and processing of your personal information.
 2. Click **Accept** and proceed.
+
 **Note**: User consent is mandatory for creating/updating applications. The contents on this page will be displayed in all data capture languages selected.
 
 #### Step 3: Enter Demographic details
-
 ![](_images/demographic-details.png)
 
 1. Enter all your demographic details, which includes Name, Age/DOB, Gender, Residential Status, Address, Mobile Number, Email Id, etc.
@@ -68,19 +66,19 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 3. Select the file that you want to upload.
 4. When the file is uploaded successfully, the document will appear on the right side. Verify that you have uploaded the correct document.
 5. Repeat the steps above to upload document(s) for each applicable document category.
-6. When adding an applicant, if a newly added applicant’s Proof of Address (POA) document is same as that of the the existing user’s POA, which is an already uploaded POA document, then click **Same As** option and select the name of the applicant.
+6. When adding an applicant, if a newly added applicant’s Proof of Address (POA) document is same as that of the the existing user’s POA, which has been already uploaded, click **Same As** option and select the name of the applicant.
 7. Click **Continue** to preview your application.
 
 #### Step 5: Preview the data
 
-1. To change your demographic details (Name, Age, etc.), click **Modify** at the top-right corner adjacent to the Demographic Details section.
-2. To modify your uploaded documents, click **Modify** at the bottom-right corner adjacent to the Documents section and make changes.
+1. To change the demographic details (Name, Age, etc.), click **Modify** at the top-right corner adjacent to the Demographic Details section.
+2. To modify the uploaded documents, click **Modify** at the bottom-right corner adjacent to the Documents section and make changes.
 3. To add a new applicant, click **Add Applicant**.
 **Note**: On clicking the **Add Applicant** option, you will be navigated to the Demographic Details page to provide Consent and proceed with providing the required demographic data/documents.
-4. Click **Book Now** to book your appointment.
+4. Click **Book Now** to book appointment.
 
-**Add new Applicant**
-In Your Applications page, click **Create New Application** to generate a new application for the new applicant.
+### Add new Applicant: 
+On Your Applications page, click **Create New Application** to generate a new application.
 
 ### Viewing My Applications
 
@@ -125,7 +123,7 @@ Note: On clicking the **Add Applicant** option, you will be navigated to the Dem
 
 ![](_images/pre-reg-acknowledgement.png) 
 
-* After successful completion of the Pre-registration application, you will receive an acknowledgmenon on the registered phone number(SMS) or email address as per details provided in the demographic form.
+* After successful completion of the Pre-registration application, you will receive an acknowledgment on the registered phone number(SMS) or email address as per details provided in the demographic form.
 * The acknowledgement contains the following information: name, pre-registration ID, age/DOB, mobile number, email id and registration center details, appointment date, appointment time)
 * A QR code containing the pre-registration ID is generated. This QR code can be scanned at the registration center to fetch the details to be used during the registration process.
 * You can print, download, email or SMS your acknowledgment.
@@ -155,7 +153,7 @@ The user can modify the pre-registration data by opting to select the **modify**
 1. On **Your Applications** page, select the check box for the applicable applicant.
 2. Click **Book/Modify Appointment** to re-book an appointment.
 3. The user can select any appointment date available and the appointment slot available
-4. An user cannot Re-book the appointment if the appointment booking is less than 48 hours (configurable) from time of booking
+4. An user cannot Re-book the appointment if the appointment booking is less than 48 hours (configurable) from the time of booking
 
 
 
