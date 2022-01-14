@@ -9,7 +9,7 @@ In MOSIP [Kafka](https://kafka.apache.org/) message broker has been used to impl
 
 MOSIP shares data across services and partners using Websub. MOSIP implements W3C Websub standard.
 
-[Entity diagram]
+![](_images/websub.md)
 
 Refer [Websub repo](https://github.com/mosip/websub/tree/1.2.0-rc2) for further details.
 
