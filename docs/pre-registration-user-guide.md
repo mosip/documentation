@@ -32,7 +32,7 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 ## Create an Application
 
 #### Step 1: Select the data capture language
-![](_images/pre-reg-language-selection.PNG)
+![](_images/pre-reg-language-selection.png)
 1. Once the OTP is verified, you will see a pop up for selecting the languages for data entry.
 2. Select the languages and click **Submit**.
 
@@ -43,7 +43,7 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 * This choice will be available only if the ID issuer has configured the usage of optional languages.
 
 #### Step 2: Provide consent
-![](_images/pre-reg-consent.PNG)
+![](_images/pre-reg-consent.png)
 1. On the Demographic Details page, read the **Terms and Conditions** and select the check box to agree. This agreement is to provide consent for the storage and processing of your personal information.
 2. Click **Accept** and proceed.
 

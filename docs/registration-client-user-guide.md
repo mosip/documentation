@@ -26,7 +26,7 @@ To setup the registration client:
 1. Download the `reg-client.zip` from the hosted server.
 2. Unzip the client. You can see the directory structure below.
 3. Click `run.bat` to launch registration client.
-![](_images/reg-client-unzip.PNG)
+![](_images/reg-client-unzip.png)
 
 ### Launching the registration client
 
