@@ -4,7 +4,7 @@ Registration Processor (Regproc) is a backend processing engine to enable the ID
 
 ![](_images/reg-proc.png)
 
-The relationship of Regproc with other services is explained here. _NOTE: The numbers do not signify sequence operations or control flow_
+The relationship of Regproc with other services is explained here. _NOTE: The numbers do not signify sequence of operations or control flow_
 
 1. Registration packets are uploaded by [Registration Client](registration-client.md) to [Packet Receiver](https://github.com/mosip/registration/tree/1.2.0-rc2/registration-processor/init/registration-processor-packet-receiver-stage).
 2. User pre-registration data is downloaded using the pre-registration datasync service.
