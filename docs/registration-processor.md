@@ -1,5 +1,6 @@
-# Overview
+# Registration Processor
 
+## Overview
 Registration Processor (Regproc) is a backend processing engine to enable the ID Lifecycle management. The diagram below shows the Registration Processor along with the other modules that contribute in issuing a Unique Identification Number(UIN) for an individual. Internally, Regproc follows the [SEDA](https://en.wikipedia.org/wiki/Staged_event-driven_architecture) architecture where data flows via multiple stages till the UIN is issued.
 
 ![](_images/reg-proc.png)
@@ -20,11 +21,11 @@ The Registration Processor contains several [stages and services](https://github
 
 The registration packet flows through the various stages depending on the type of flow. Refer [flows](https://github.com/mosip/registration/blob/1.2.0-rc2/docs/flows.md) 
 
-# Build and deploy
+## Build and deploy
 Refer to [repo](https://github.com/mosip/registration/tree/1.2.0-rc2)
 
-# APIs
+## APIs
 
-# Configurations
+## Configurations
 Refer to [Configuration Guide](https://github.com/mosip/registration/blob/1.2.0-rc2/docs/configuration.md)
 
