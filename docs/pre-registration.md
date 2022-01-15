@@ -1,5 +1,6 @@
 # Overview
 
+Pre-registration is a resident facing web-based portal using which an individual can pre-enrol and book an appointment for registering in MOSIP. 
 This module enables a user/resident to:
 * Enter demographic data and upload supporting documents
 * Book an appointment for one or many users for registration by choosing a suitable registration center and a convinient time slot
@@ -9,7 +10,7 @@ This module enables a user/resident to:
 Once the resident completes the above process, their data will be downloaded at the respective registration centers prior to their appointment. This data will further be used during the registration process. MOSIP pre-registration module supports multiple languages. 
 
 ## Features
-Pre-registration is a resident facing web-based portal using which an individual can pre-enrol and book an appointment for registering in MOSIP. Below are some of the features associated with pre-registration.
+Below are some of the features associated with pre-registration.
 
 ### Functional features
 * Email or phone number based login using OTP
@@ -40,7 +41,7 @@ Pre-registration is a resident facing web-based portal using which an individual
 * User provides consent
 * User provides demographic information
 * User uploads supporting documents (Proof of Address, Birth certificate, etc.)
-* a pre-registration request ID (PRID) is generated and provided to the user.
+* A pre-registration request ID (PRID) is generated and provided to the user.
 
 ## Book an appointment
 * User selects a registration center based on postal code, geo-location, etc.
@@ -50,11 +51,16 @@ Pre-registration is a resident facing web-based portal using which an individual
 ## Receiving acknowledgement notifications
 * An acknowledgement is sent via email/SMS 
 * The user can print the acknowledgement containing PRID and QR code. 
-*  This QR code can be scanned at the in-person registration centers.
+* This QR code can be scanned at the in-person registration centers.
 
 ## Download of pre-registration data at registration centers
 * User provides the PRID/QR code at the registration center.
 * The registration form gets pre-filled with the pre-registration data.
+
+
+# UI Reference Implementation
+MOSIP provides a **reference** implementation of the Pre-registration UI that may be customized as per country needs. The sample implementation is available at [reference implementation repository](https://github.com/mosip/mosip-ref-impl).
+For getting started with the pre-registration, refer to the [Pre-registration user guide](pre-registration-user-guide.md) 
 
 # Services
 Pre-registration module consists of the following services:
@@ -71,9 +77,6 @@ To access the build and read through the deployment instructions, refer to [pre-
 
 # APIs
 For detailed functionality of pre-registration APIs, refer to [pre-registration APIs](../../../api-reference/Pre-Registration-APIs.md).
-
-# UI Reference Implementation
-MOSIP provides a **reference** implementation of the Pre-registration UI that may be customized as per country needs. The sample implementation is available at [reference implementation repository](https://github.com/mosip/mosip-ref-impl).
 
 # Configurations
 For details related to pre-registration configurations, refer to [pre-registration configuration](https://github.com/pjoshi751/pre-registration/blob/develop/docs/configuration.md).
