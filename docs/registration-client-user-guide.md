@@ -25,10 +25,8 @@ to onboard the machine and the operator, the Admin needs to:
 To setup the registration client:
 1. Download the `reg-client.zip` from the hosted server.
 2. Unzip the client. You can see the directory structure below.
-
-![](_images/reg-client-folder.png)
-
 3. Click `run.bat` to launch registration client.
+![](_images/reg-client-unzip.PNG)
 
 ### Launching the registration client
 
@@ -43,6 +41,8 @@ The client always launches with the pre-loader screen which displays the informa
 ![](_images/reg-client-restart.png)
 
 **Note**: Deletion of either the **.mopsipkeys** or the **db** folder makes the application get into an invalid state and hence will fail to launch. To be able to launch the client again, the operator should make sure that both the folders are removed and then re-launch the client. 
+
+![](_images/reg-client-folder.png)
 
 2. **On the next launch after the initial sync**,
   - The registration client login page provides the operator an option to select the language for viewing the registration client UI.
