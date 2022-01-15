@@ -1,4 +1,6 @@
-# Overview
+# Registration Client User Guide
+
+## Overview
 This guide helps the operator in setting up the registration client.
 
 ## Know your machine TPM keys
@@ -7,13 +9,13 @@ A Trusted Platform Module (TPM) is a specialized chip on a local machines that s
 To extract the TPM public key, use the [TPM key extractor utility](https://github.com/mosip/mosip-infra/blob/develop/deployment/sandbox-v2/utils/tpm/key_extractor/README.md).
 
 ## Pre-requisites 
-to onboard the machine and the operator, the Admin needs to:
+To onboard the machine and the operator, the Admin needs to:
 1. Create and activate the registration client machine using Admin portal.
 2. Create a user/operator account in Keycloak
 3. Assign the operator a role of either the Supervisor or Officer using the Admin portal.
 4. Finally, perform the **User Zone mapping** and **User Center mapping** in the Admin portal.
 
-**System prerequisites**
+**System prerequisites:**
 * CPU - Dual Core Processor - 2GHZ  
 * RAM - 16 GB  
 * Local Storage Disk Space - 500 GB 
@@ -21,7 +23,7 @@ to onboard the machine and the operator, the Admin needs to:
 * Physical machine with TPM 2.0 facility.   
 * Windows OS [10 v] 
  
- ## Registration client setup
+## Registration client setup
 To setup the registration client:
 1. Download the `reg-client.zip` from the hosted server.
 2. Unzip the client. You can see the directory structure below.
@@ -29,7 +31,6 @@ To setup the registration client:
 ![](_images/reg-client-unzip.png)
 
 ### Launching the registration client
-
 The client always launches with the pre-loader screen which displays the information about the network status,  build status verification, online status, etc.
 ![](_images/reg-client-pre-loader-success.png)
 
