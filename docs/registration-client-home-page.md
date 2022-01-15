@@ -1,25 +1,23 @@
-# Overview
+# Registration Client Home Page
+
+## Overview
 This guide describes the various functions provided in the Home page of the reference UI implementation of the registration client.
 
-## Registration client reference UI implementation
-Below is the image of the reference UI implementation of the registration client.
 ![](_images/reg-client-orig.png)
 
-### Menu bar
+## Menu bar
 The registration client menu bar displays the following:
-
-     * MOSIP logo
-     * Home button
-     * Logged in username
-     * Center name
-     * Machine name
-     * Server connection status symbol(shows if the client is online or offline)
-     * Breadcrumbs (User Guide/Reser Password/Logout)
+* MOSIP logo
+* Home button
+* Logged in username
+* Center name
+* Machine name
+* Server connection status symbol(shows if the client is online or offline)
+ * Breadcrumbs (User Guide/Reser Password/Logout)
     
 ![](_images/reg-client-menu.png)
 
-### Operational Tasks
-      
+## Operational Tasks
 * **Synchronize Data**: Synchronize data is the data required to make the registration client functional. Full sync is performed initially during the launch of the registration client for the first time. Post this, the registration client syncs only the changes from sever and this is called as the delta sync. Synchronize data is automated and can be triggered manually. 
 This happens automatically while launching the registration client and is also manually initiated by the operator.
  
@@ -92,7 +90,7 @@ For more details, refer to [operator onboarding](operator_onboarding.md)
     <<screenshot required here- anusha>>
    
    
-### Registration Tasks
+## Registration Tasks
 The operator can initiate any task from amongst- New registrations, Update UIN, Lost UIN, Correction flow. To get started, the operator needs to select a language for data entry. The number of languages displayed in the UI is configurable and depends on the country.
    
 ## New registration
@@ -158,7 +156,7 @@ The image below is that of a sample acknowlegement receipt.
 
 ![](_images/re-client-acknowledgement.png)  
 
-### End of day processes
+## End of day processes
 
 * **Pending Approval**: The Supervisor has the exclusive authority to approve/reject packets.The supervisor is supposed to manually re-verify the 
     registrations before uploading themto the server. This page enables them to perform this activity. 
@@ -172,10 +170,10 @@ The image below is that of a sample acknowlegement receipt.
    
 * **Re-registrations**: All the registrations which are being marked with the RE-REGISTER status is listed here. 
  
-### Dashboard: 
+## Dashboard: 
 On clicking Dashboard, the Registration client dashboard HTML template is rendered. Default dashboard displays information about the operator, Packets and the Sync Activities.  
 
 ![](_images/reg-client-dashboard.png)
       
-### News and Updates: 
+## News and Updates: 
 This section has been reserved for the country' to be able to display the live news and updates. This can be implemented as per a country' requirements.
