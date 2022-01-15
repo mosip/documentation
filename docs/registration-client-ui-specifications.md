@@ -120,22 +120,18 @@ Each process has multiple screens and each screen is rendered with one or more f
                   "fra" : "Groupe d'échantillons"
                 },
                 /*on change of the field value, configured Action will be triggered on other fields
-                Change action handlers should be implemented in registration client(default changeAction handlers are 
+                Change action handlers should be implemented in registration client*/
                 "changeAction": null,
+		//enable or disable auto-transliteration
                 "transliterate": false,
-                "templateName": "<applicable only for html fields>",
+		/*provide the templateName(applicable only for html controlType fields)
+		These templates should be configured in templates table*/
+                "templateName": null,
                 "fieldLayout": null,
                 "locationHierarchy": null,
-                "conditionalBioAttributes": [{
-                    "ageGroup": "INFANT",
-                    "process": "ALL",
-                    "validationExpr": "face",
-                    "bioAttributes": [
-                        "face"
-                    ]
-                }],                
-                "bioAttributes": [
-                //below are the supported biometric attributes
+		/*applicable only for BiometricsType field, defines the list of attributes to be captured
+		All the supported biometric attributes are listed down for reference*/
+	        "bioAttributes": [
                     "leftEye",
                     "rightEye",
                     "rightIndex",
@@ -150,19 +146,31 @@ Each process has multiple screens and each screen is rendered with one or more f
                     "rightThumb",
                     "face"
                 ],
-                //if requiredOn is defined, its result will take the priority over "required" attribute
+		//capture of above mentioned bioAttributes can be conditionally mandated based on age group
+                "conditionalBioAttributes": [{
+                    "ageGroup": "INFANT",
+                    "process": "ALL",
+                    "validationExpr": "face || (leftEye && rightEye)",
+                    "bioAttributes": [
+                        "face", "leftEye", "rightEye"
+                    ]
+                }],                 
+                //set true/false to mark the field as mandatory or optional
                 "required": true,
+		 //if requiredOn is defined, the evaluation result of requiredOn.expr takes the priority over "required" attribute
                 "requiredOn": [{
                     "engine": "MVEL",
                     "expr": "identity.get('ageGroup') == 'INFANT' && (identity.get('introducerRID') == nil || identity.get('introducerRID') == empty)"
                 }],
+		//used to identify the type of field
                 "subType": "<document types / applicant / heirarchy level names>"
-            }
-            ```
-   ### Sample Correction Process SPEC:  Biometric correction
-     
-     ```JSON
-     {
+            } 
+ ```
+ 
+ ### Sample Correction Process SPEC: Biometric Correction
+ 
+ ```JSON
+ {
     "id": "BIOMETRIC_CORRECTION",
     "order": 4,
     "flow": "CORRECTION"
@@ -400,4 +408,9 @@ Each process has multiple screens and each screen is rendered with one or more f
     "isActive": true,
     "autoSelectedGroups": null
 }
-```
+ ```
+
+
+
+
+
