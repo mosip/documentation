@@ -31,7 +31,7 @@
     * [Reporting](reporting.md)
     * [Automation Testing](automation-testing.md)
 * Deployment
-    * [Sandbox deployment](sandbox-deployment.md)
+    * [Sandbox Deployment](sandbox-deployment.md)
     * [Server Hardware Requirements](server-hardware-requirements.md)
     * [Country Implementation](country-implementation.md)
  * [APIs](api.md)
