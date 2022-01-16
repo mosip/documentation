@@ -43,7 +43,7 @@ Storage is dependent on population of a country (i.e. the number of UINs to be i
 
 |Data| Storage|
 |---|---|
-|Object Store (S3/Minio)|3.2 MB/packet/replication|
+|[Object Store](storage.md#object-store) (S3/Minio)|3.2 MB/packet/replication|
 |Postgres storage|30 GB/million packets|
 |[Landing zone](https://github.com/mosip/registration/blob/1.2.0-rc2/registration-processor/init/registration-processor-packet-receiver-stage/README.md#landing-zone)|Unprocessed packets x avg packet size\*| 
 |Logs (Elasticsearch)| 80 GB/day|
