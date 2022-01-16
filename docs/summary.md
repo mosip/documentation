@@ -30,6 +30,7 @@
     * [Administration](administration.md)
     * [Reporting](reporting.md)
     * [Automation Testing](automation-testing.md)
+    * [Storage](storage.md)
 * Deployment
     * [Sandbox Deployment](sandbox-deployment.md)
     * [Server Hardware Requirements](server-hardware-requirements.md)
