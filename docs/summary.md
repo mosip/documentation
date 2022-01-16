@@ -32,7 +32,7 @@
     * [Automation Testing](automation-testing.md)
 * Deployment
     * [Sandbox deployment](sandbox-deployment.md)
-    * [Hardware sizing](hardware-sizing.md)
+    * [Server Hardware Requirements](server-hardware-requirements.md)
     * [Country Implementation](country-implementation.md)
  * [APIs](api.md)
  * Community
