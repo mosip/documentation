@@ -22,15 +22,13 @@ The registration compute resource are dependent on the max rate of enrollment de
 
 The data here is based on actual field data of a MOSIP deployment.  
 
-
-### Compute requirements
 Assumptions:
 * Rate of enrollment: 216000 per day
+* Average packet size: 2MB
 * Biometric modalities: Finger, iris, face
 * Pod replication as given [here]()
 
-Requirements:
-
+### Compute requirements
 * Configuration of compute node: 8 VCPU, 64GB RAM, 64GB disk store.
 * Number of nodes: 21 
 
@@ -41,10 +39,6 @@ Requirements:
 |Node disk|64 GB|1344 GB|
 
 ### Storage requirements
-Assumptions:
-* Average packet size: 2MB
-* Biometric modalities: Finger, iris, face
-
 Storage is dependent on population of a country (i.e. the number of UINs to be issued).  Storage requirements for various types of data are listed below.
 
 |Data| Storage|
@@ -58,6 +52,5 @@ Storage is dependent on population of a country (i.e. the number of UINs to be i
 \* Once UINs are issued, the packets may be removed from the landing zone as a copy is already saved in Object Store.  Therefore, the size of landing zone depends on the estimated lag in packet processing and packet uploads. 
 
 ## ID authentication
-
 
 
