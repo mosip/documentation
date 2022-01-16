@@ -7,8 +7,9 @@ MOSIP deployment is split into two distinct parts:
    * Registration
 2. [ID Authentication](id-authentication.md)
 
-We provide server side hardware estimates for [MOSIP core modules](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/mosip) only. Estimates for [external components](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/external) are not in the scope. The requirements are specified at a high level in terms of **compute** (Virtual CPU, RAM) and **storage**.
+The requirements are specified at a high level in terms of **compute** (Virtual CPU, RAM) and **storage**.
 
+We provide server side hardware estimates for [MOSIP core modules](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/mosip) only. Estimates for [external components](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/external) are not in the scope. 
 The variables that largely determine the hardware requirements are:
 1. Population of a country
 1. Rate of enrollment
@@ -27,23 +28,24 @@ The data here is based on actual field data of a MOSIP deployment.
 * Pod replication as given [here]()
 
 ### Compute requirements
-Configuration of compute node: 8 VCPU, 64GB RAM, 64GB disk store.
-Number of nodes: 21 
+* Configuration of compute node: 8 VCPU, 64GB RAM, 64GB disk store.
+* Number of nodes: 21 
+
 |Resource|Per node|Total|
 |---|---|---|
-|VCPU|8|**168**|
-|RAM|64GB|**1344GB**|
-|Disk|64GB|**1344GB**|
+|VCPU|8|168|
+|RAM|64 GB|1344 GB|
+|Node disk|64 GB|1344 GB|
 
 ### Storage requirements
 Storage is dependent on population of a country (i.e. the number of UINs to be issued).  Storage requirements for various types of data are listed below.
 
 |Data| Storage|
 |---|---|
-|Logs (Elasticsearch)| 80GB/day|
+|Object Store (S3/Minio)|3.2 MB/packet/replication|
+|Postgres storage|30 GB/million packets|
+|Logs (Elasticsearch)| 80 GB/day|
 |Monitoring (Prometheus)|1.2 GB/day|
-|Object Store (S3/Minio)|3.2MB/packet/replication|
-|Postgres storage|30GB/million packets|
 
 ## ID authentication
 
