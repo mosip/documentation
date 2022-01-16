@@ -20,7 +20,7 @@ The variables that largely determine the hardware requirements are:
 
 
 
-## ID Authentication
+## ID authentication
 
 
 
