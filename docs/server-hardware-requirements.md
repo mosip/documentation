@@ -68,7 +68,7 @@ The compute and storage estimate for following components are not included:
 |Antvirus (AV)|Default scanner (ClamAV) in included, however, if you integrate your AV, the same needs to be estimated.|
 |Load balancers||
 |External IAM (for Rancher)||
-|Disaster recovery(DR)|{% hint style="warning" %}DR would significantly increase compute and storage requirements. It is expected that System Integrator works out the appropriate DR strategy and arrives at an estimate. {% endhint %}|
+|Disaster recovery(DR)||
 
 {% hint style="warning" %}DR would significantly increase compute and storage requirements. It is expected that System Integrator works out the appropriate DR strategy and arrives at an estimate. {% endhint %}
 
