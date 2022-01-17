@@ -14,7 +14,7 @@ The various life cycle events are briefly explained below:
 
 ![](_images/id-registration-process.jpg)
 
-### Pre-Registration
+### Pre-registration
 Pre-registration is a resident facing web-based portal using which an individual can pre-enrol and book an appointment for registering in MOSIP. Pre-registration fundamentally helps the residents and Government organizations by saving the time and efforts required for basic data collection of the residents at the registration centers. The data pre-filled by the residents on the portal can be made available for use at the centers for quick access and seamless registration process.
 
 The residents can visit the pre-registration portal and do the following:
@@ -46,7 +46,7 @@ Registration is the process in which an individual/resident can visit a registra
 -    Additionally, a **Proof of Relationship** document to be provided at the center.
 -    An acknowledgement receipt will be provided to the infant' parent/guardian.
 
-## ID data update/Updating individual’s information
+## ID data update/updating individual’s information
 
 -    Residents can update their information in two ways:
     * By visiting the registration center: The demographic and biometric information can be updated at the centers.
@@ -55,13 +55,13 @@ Registration is the process in which an individual/resident can visit a registra
 -    Updated ID credentials sent to the resident via the country’ configured printing and postal service.
 -    Notifications sent to the resident using the email ID and mobile number provided as a part of demographic data collection
 
-## De-activate/Re-activate individual’s ID
+## De-activate/re-activate individual’s ID
 
 -    De-activate ID means an individual will not be able to authenticate themselves by using the UIN or VID. 
 -    If a country wants to deactivate an individual’s ID for any specific reason, the system deactivates the individual’s ID after certain validations performed in the Registration Processor.
 -     Likewise, a country can also re-activate an individual’ ID as need be.
 
-## Finding a Lost ID
+## Finding a lost ID
 -    Individual to provide their biometric information in the Registration center.
 -  De-duplication performed to find the individual' ID.
 -  Registration receipt containing Registration Identity(RID)), labels and data in the configured language, QR code (of the RID) provided to the resident.
