@@ -33,11 +33,11 @@ Assumptions:
 * Configuration of compute node: 8 VCPU, 64GB RAM, 64GB disk store.
 * Number of nodes: 21 
 
-|Resource|Per node|Total|
-|---|---|---|
-|VCPU|8|168|
-|RAM|64 GB|1344 GB|
-|Node disk|64 GB|1344 GB|
+|Resource|Per node|Number of nodes|Total|
+|---|---|---|---|
+|VCPU|8|21|168|
+|RAM|64 GB|21|1344 GB|
+|Node disk|64 GB|21|1344 GB|
 
 ### Storage requirements
 Storage is dependent on population of a country (i.e. the number of UINs to be issued).  Storage requirements for various types of data are listed below.
