@@ -57,7 +57,7 @@ Storage is dependent on population of a country (i.e. the number of UINs to be i
 ## ID authentication
 
 
-## Exclusion
+## Exclusions
 The compute and storage estimate for following components are not included:
 
 |Component|Comments|
