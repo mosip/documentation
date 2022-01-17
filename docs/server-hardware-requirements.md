@@ -19,7 +19,7 @@ The variables that largely determine the hardware requirements are:
 ## Pre-registration
 
 ## Registration (enrollment)
-The registration compute resource are dependent on the max rate of enrollment desired. The processing throughput must match the enrollment rate to avoid pile up of pending registration packets. 
+The registration compute resources are related to the max rate of enrollment desired. The processing throughput must match the enrollment rate to avoid pile up of pending registration packets. 
 
 The data here is based on actual field data of a MOSIP deployment.  
 
