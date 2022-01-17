@@ -1,4 +1,6 @@
-# Overview
+# Pre-Registration User Guide
+
+## Overview
 This guide helps in understanding the pre-registration sample UI implementation. The pre-registration portal can be used in **self-service** as well as in **assisted** mode.
 
 **Self-service mode**- In this mode, a resident can select a language that is familiar to them for logging into the application. The same language might also be selected by them as one of the languages for data capture.
@@ -15,7 +17,6 @@ The key steps in this process are:
 To create an application, the resident or the operator can follow the steps below:
 
 ## Login/create a user account
-
 ![Pre-registartion login page](_images/pre-reg-login.png)
 
 1. Open the browser and visit the pre-registration portal.
@@ -86,13 +87,13 @@ On Your Applications page, click **Create New Application** to generate a new ap
 
 Once the application is created, there could be multiple statuses depending on the data filled by the user/resident or the actions performed by them. The user can view all the pre-registration applications created by them in the Dashboard. The different statuses with a brief explanation are mentioned below:
 
-|**Status**|**Description**|**User Action**|
+|Status|Description|User Action|
 |------|-----|-----|
 |Incomplete|Filled only demographic details|Upload documents and book an appointment|
 |Pending appointment|Filled demographic details and uploaded documents |Book an appointment|
-|Booked|  Filled demographic details, uploaded documents, and booked appointment|Visit the registration center on the appointment date and time|
-|Expired| Appointment date has passed|Re-book an appointment
-|Cancelled| Appointment has been cancelled|Re-book an appointment
+|Booked|Filled demographic details, uploaded documents, and booked appointment|Visit the registration center on the appointment date and time|
+|Expired|Appointment date has passed|Re-book an appointment|
+|Cancelled|Appointment has been cancelled|Re-book an appointment|
 
 The applications are sorted and displayed by the order of creation of application. The first application created appears first, latest created/modified application appears at the end. If the user visits the registration center and consumes the appointment, then the application will be removed from the list. If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
 
