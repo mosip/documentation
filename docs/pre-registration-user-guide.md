@@ -27,7 +27,7 @@ To create an application, the resident or the operator can follow the steps belo
 6. Click **Send OTP** to receive an One Time Password (OTP) on your provided email address or mobile number.
 7. Enter the OTP and click **Verify**.
 
-**Note**: In case you have not received OTP, click **Resend** to receive an OTP again. Enter the newly received OTP.
+*Note:* In case you have not received OTP, click **Resend** to receive an OTP again. Enter the newly received OTP.
 When your OTP is verified, you can create, view, or modify your pre-registration application.
 
 ## Create an Application
@@ -37,7 +37,7 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 1. Once the OTP is verified, you will see a pop up for selecting the languages for data entry.
 2. Select the languages and click **Submit**.
 
-**Note**:
+*Note*:
 * A user logging in for the first time and having no applications will be prompted with a data capture language pop-up. The same set of languages will be used for the next set of applications created in the same session.
 * The language selected by the user in the login screen will be pre-selected in the data capture language pop-up.
 * The user can change this by clicking on the **CHANGE DATA CAPTURE LANGUAGES** button.
@@ -48,7 +48,7 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 1. On the Demographic Details page, read the **Terms and Conditions** and select the check box to agree. This agreement is to provide consent for the storage and processing of your personal information.
 2. Click **Accept** and proceed.
 
-**Note**: User consent is mandatory for creating/updating applications. The contents on this page will be displayed in all data capture languages selected.
+*Note*: User consent is mandatory for creating/updating applications. The contents on this page will be displayed in all data capture languages selected.
 
 #### Step 3: Enter Demographic details
 ![](_images/demographic-details.png)
@@ -57,7 +57,7 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 2. You can also change or verify your demographic details in the other selected language.
 3. After you have filled and verified your demographic details, click **Continue**.
   
-  **Note** : The mandatory fields/labels have a `*` mark.
+  Note: The mandatory fields/labels have a `*` mark.
   Field and button labels, error and information messages will be displayed in the user preferred language selected in the login screen.
   
 #### Step 4: Upload documents
@@ -72,16 +72,15 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 
 #### Step 5: Preview the data
 
-1. To change the demographic details (Name, Age, etc.), click **Modify** at the top-right corner adjacent to the Demographic Details section.
-2. To modify the uploaded documents, click **Modify** at the bottom-right corner adjacent to the Documents section and make changes.
-3. To add a new applicant, click **Add Applicant**.
-**Note**: On clicking the **Add Applicant** option, you will be navigated to the Demographic Details page to provide Consent and proceed with providing the required demographic data/documents.
-4. Click **Book Now** to book appointment.
+1. To change the demographic details (Name, Age, etc.), click **modify** at the top-right corner adjacent to the Demographic Details section.
+2. To modify the uploaded documents, click **modify** at the bottom-right corner adjacent to the Documents Uploaded section and make changes.
+3. To add a new applicant, click **Add Applicant**. On clicking the **Add Applicant** option, you will be navigated to the Demographic Details page to provide Consent and proceed with providing the required demographic data/documents.
+4. Click **Continue**.
 
-### Add new Applicant: 
+### Add new Application 
 On Your Applications page, click **Create New Application** to generate a new application.
 
-### Viewing My Applications
+### Viewing my applications
 
 ![Dashboard](_images/pre-reg-application-status.JPG)
 
@@ -95,28 +94,34 @@ Once the application is created, there could be multiple statuses depending on t
 |Expired|Appointment date has passed|Re-book an appointment|
 |Cancelled|Appointment has been cancelled|Re-book an appointment|
 
-The applications are sorted and displayed by the order of creation of application. The first application created appears first, latest created/modified application appears at the end. If the user visits the registration center and consumes the appointment, then the application will be removed from the list. If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
+* The applications are sorted and displayed by the order of creation of application. 
+* The first application created appears first, latest created/modified application appears at the end. 
+* If the user visits the registration center and consumes the appointment, then the application will be removed from the list. 
+* If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
 
-## Book an Appointment
+## Book an appointment
 
-#### Step 1: Choose a Registration center
+#### Step 1: Choose a registration center
 
 ![](_images/pre-reg-recommended-center.png)
 
 * The recommended registration centers are automatically displayed based on your demographic details (Postal Code)
 * On the Book Appointment page, you can find a registration center through the three options as follows:
-    * Click **Nearby Centers** to view the registration centers based on your geographical location.
+    * Click **Nearby** centers to view the registration centers based on your geographical location.
     * Use the search box to find the registration center based on your search criteria.
     * Click **Recommended Centers** to view registration centers based on your demographic details. (Postal Code)
+* Click **Continue**.
 
 #### Step 2: Select a time slot
 * Select your preferred date from the list of available calendar days and the number of available bookings. 
-* The list of available time slots for your selected date is categorized between Morning and Afternoon. Select your preferred option.
+* The list of available time slots for your selected date is categorized between *Morning* and *Afternoon*. 
 * Select your preferred time slot from the list.
-* Select the particular applicant name to book an appointment.
+* Select the particular applicant name to book an appointment(Click + to add the applicant).
 Note: On clicking the **Add Applicant** option, you will be navigated to the Demographic Details page to provide Consent and proceed with providing the required demographic data/documents.
 * Verify the time slot(s) as selected against the applicant name(s).
-* Click **Submit** to view an acknowledgment of your application.
+* Click **Continue**.
+* On the confirmation pop-up, click **Confirm**.
+* Click **OK**.
 
 ![](_images/pre-reg-appointment-booking.png) 
 
@@ -135,26 +140,25 @@ Note: On clicking the **Add Applicant** option, you will be navigated to the Dem
     * Enter the mobile number and/or enter the email ID.
     * Click **Send** to receive the acknowledgement on your provided e-mail address or mobile number.
 
-### Modify application data
-The user can modify the pre-registration data by opting to select the **modify** option for a specific application. The system provides the demographic form with pre-filled demo details and allows the user to edit the details as required. The system associates the modified demo details with the pre-registration id for which Modify information is initiated.
+### Re-book appointment
+1. On **Your Applications** page, select the check box for the applicable applicant.
+2. Click **Book/Modify Appointment** to re-book an appointment(on the top right corner)..
+3. The user can select any appointment date available and the appointment slot available
+4. An user cannot re-book the appointment if the appointment booking is less than 48 hours (configurable) from the time of booking
 
 ### Discard application
-1. On Your Applications page, click on the **delete** icon against pre-registration application of an applicant, a pop-up window appears on the screen.
+1. On Your Applications page, click on **delete** icon against pre-registration application of an applicant, a pop-up window appears on the screen.
 2. Select the **Discard entire application** option in the pop-up window.
 3. Click **SUBMIT** to discard your application.
 
 ### Cancel appointment
-1. On Your Applications page, click on the **delete** icon against pre-registration application of an applicant, a pop-up window appears on the screen.
-2. Select **Cancel** appointment and save the details option in the pop-up window.
+1. On Your Applications page, click on **delete** icon against pre-registration application of an applicant, a pop-up window appears on the screen.
+2. Select **Cancel appointment and save the details** option in the pop-up window.
 3. Click **SUBMIT** to cancel an appointment.
 
  Following a successful appointment cancellation, the system unlocks the time slot of the registration center to ensure that someone else can book it.
 
-### Re-book appointment
-1. On **Your Applications** page, select the check box for the applicable applicant.
-2. Click **Book/Modify Appointment** to re-book an appointment.
-3. The user can select any appointment date available and the appointment slot available
-4. An user cannot Re-book the appointment if the appointment booking is less than 48 hours (configurable) from the time of booking
+
 
 
 
