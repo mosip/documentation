@@ -56,7 +56,7 @@ Storage is dependent on population of a country (i.e. the number of UINs to be i
 
 
 ## Exclusions
-The compute and storage estimate for following components are not included:
+The compute and storage estimates for following components are not included:
 
 |Component|Comments|
 |---|---|
