@@ -15,6 +15,7 @@
 * [Partners](partners.md)
 * Modules
     * [Pre-Registration](pre-registration.md) 
+        * [Pre-Registration User Guide](pre-registration-user-guide.md)
     * [Registration Processor](registration-processor.md) 
     * [Registration Client](registration-client.md)
         * [User Guide](registration-client-user-guide.md)
