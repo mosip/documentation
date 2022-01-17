@@ -51,12 +51,12 @@ jobs:
           find . -name "*openapi.json" -exec readlink -f {} \; > temp.txt
           while IFS= read -r line
           do
-            fullpath=$i
+            fullpath=$line
             echo "Pullpath: $fullpath"
-            fullname=$(basename "$i")
+            fullname=$(basename "$line")
             echo "Filename: $fullname"
             filename=$(echo "$fullname" | cut -f 1 -d '.')
-            redoc-cli bundle -o ./${{ matrix.names }}-report/$filename.html $i
+            redoc-cli bundle -o ./${{ matrix.names }}-report/$filename.html $line
             echo "Converting file: $filename"
             echo "$(find . -name "*openapi.html" -exec readlink -f {} \;)"
           done < temp.txt
