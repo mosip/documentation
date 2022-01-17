@@ -42,17 +42,15 @@ Assumptions:
 ### Storage requirements
 Storage is dependent on population of a country (i.e. the number of UINs to be issued).  Storage requirements for various types of data are listed below.
 
-|Data| Storage|
-|---|---|
-|[Object Store](storage.md#object-store) (S3/Minio)|3200 GB/million packets/replication|
-|Postgres storage|30 GB/million packets|
-|[Landing zone](https://github.com/mosip/registration/blob/1.2.0-rc2/registration-processor/init/registration-processor-packet-receiver-stage/README.md#landing-zone)|Unprocessed packets X avg packet size\*| 
-|Logs (Elasticsearch)| 80 GB/day|
-|Monitoring (Prometheus)|1.2 GB/day|
-|Kafka|TBD|
-|ActiveMQ|TBD|
-
-\* Once UINs are issued, the packets may be removed from the landing zone as a copy is already saved in Object Store.  Therefore, the size of landing zone depends on the estimated lag in packet processing and packet uploads. 
+|Data| Storage|Comments|
+|---|---|---|
+|[Object Store](storage.md#object-store) (S3/Minio)|3200 GB/million packets/replication|Replication factor to be applied based on replication strategy|
+|Postgres storage|30 GB/million packets|Includes all databases|
+|[Landing zone](https://github.com/mosip/registration/blob/1.2.0-rc2/registration-processor/init/registration-processor-packet-receiver-stage/README.md#landing-zone)|Unprocessed packets X avg packet size| Once UINs are issued, the packets may be removed from the landing zone as a copy is already saved in Object Store.  Therefore, the size of landing zone depends on the estimated lag in packet processing and packet uploads.|
+|Logs (Elasticsearch)| 80 GB/day|Logs maybe archived after, say, 2 weeks|
+|Monitoring (Prometheus)|1.2 GB/day||
+|Kafka|TBD||
+|ActiveMQ|TBD||
 
 ## ID authentication
 
