@@ -37,6 +37,8 @@ Below are some of the features associated with pre-registration.
 
 # Pre-registration process
 
+![](_images/pre-reg-process.png)
+
 ## Create an application
 * User provides consent
 * User provides demographic information
