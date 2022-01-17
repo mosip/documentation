@@ -14,8 +14,8 @@ jobs:
       fail-fast: false
       max-parallel: 2
       matrix:
-        names: [partner-management-services, registration, khazana, admin-services, resident-services, commons, audit-manager, pre-registration, print, id-authentication, mosip-openid-bridge, id-repository, durian, keymanager, packet-manager]
-        
+        #names: [partner-management-services, registration, khazana, admin-services, resident-services, commons, audit-manager, pre-registration, print, id-authentication, mosip-openid-bridge, id-repository, durian, keymanager, packet-manager]
+        names: [admin-services]        
     steps:
       - name: Set up JDK 11
         uses: actions/setup-java@v1
@@ -48,7 +48,8 @@ jobs:
         id: create_list
         run: |
           mkdir -p ./${{ matrix.names }}-report
-          for i in "$(find . -name "*openapi.json" -exec readlink -f {} \;)"
+          find . -name "*openapi.json" -exec readlink -f {} \; > temp.txt
+          while IFS= read -r line
           do
             fullpath=$i
             echo "Pullpath: $fullpath"
@@ -58,7 +59,7 @@ jobs:
             redoc-cli bundle -o ./${{ matrix.names }}-report/$filename.html $i
             echo "Converting file: $filename"
             echo "$(find . -name "*openapi.html" -exec readlink -f {} \;)"
-          done
+          done < temp.txt
 
       - name: Upload HTML Documents as Artifact
         uses: actions/upload-artifact@v2
@@ -75,8 +76,8 @@ jobs:
       fail-fast: false
       max-parallel: 1
       matrix:
-        names: [partner-management-services, registration, khazana, admin-services, resident-services, commons, audit-manager, pre-registration, print, id-authentication, mosip-openid-bridge, id-repository, durian, keymanager, packet-manager]
-
+        #names: [partner-management-services, registration, khazana, admin-services, resident-services, commons, audit-manager, pre-registration, print, id-authentication, mosip-openid-bridge, id-repository, durian, keymanager, packet-manager]
+        names: [admin-services] 
     steps:
       - name: Set up JDK 11
         uses: actions/setup-java@v1
