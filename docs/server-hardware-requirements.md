@@ -72,7 +72,7 @@ The compute and storage estimate for following components are not included:
 |External IAM (for Rancher)||
 |Disaster recovery(DR)||
 
-{% hint style="warning" %}DR would increase compute and storage requirements significantly. It is expected that System Integrator works out the appropriate DR strategy and arrive at an estimate. {% endhint %}
+{% hint style="warning" %}DR would significantly increase compute and storage requirements. It is expected that System Integrator works out the appropriate DR strategy and arrives at an estimate. {% endhint %}
 
 
 
