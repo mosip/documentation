@@ -10,6 +10,7 @@ MOSIP deployment is split into two distinct parts:
 The requirements are specified at a high level in terms of **compute** (Virtual CPU, RAM) and **storage**.
 
 We provide server side hardware estimates for [MOSIP core modules](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/mosip) only. Estimates for [external components](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/external) are not in the scope. See [Exclusions](#exclusions).
+
 The variables that largely determine the hardware requirements are:
 1. Population of a country
 1. Rate of enrollment
@@ -58,17 +59,18 @@ Storage is dependent on population of a country (i.e. the number of UINs to be i
 
 ## Exclusion
 The compute and storage estimate for following components are not included:
+
 |Component|Comments|
-|---|---|---|
-|1. Postgres| Only storage estimated above.|
-|1. Object store| Only storage estimated above. |
-|1. Bio SDK||
-|1. HSM||
-|1. [ABIS](abis.md)||
-|1. Antvirus (AV)|Default scanner (ClamAV) in included, however, if you integrate your AV, the same needs to be estimated.|
-|1. Load balancers||
-|1. External IAM (for Rancher)||
-|1. Disaster recovery(DR)||
+|---|---|
+|Postgres| Only storage estimated above.|
+|Object store| Only storage estimated above. |
+|Bio SDK||
+|HSM||
+|[ABIS](abis.md)||
+|Antvirus (AV)|Default scanner (ClamAV) in included, however, if you integrate your AV, the same needs to be estimated.|
+|Load balancers||
+|External IAM (for Rancher)||
+|Disaster recovery(DR)||
 
 {% hint style="warning" %}DR would increase compute and storage requirements significantly. It is expected that System Integrator works out the appropriate DR strategy and arrive at an estimate. {% endhint %}
 
