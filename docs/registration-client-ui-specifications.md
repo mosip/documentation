@@ -1,4 +1,4 @@
-# Registration client UI Specifications
+# Registration Client UI Specifications
 
 The registration UI forms are rendered using respective UI specification JSON. This is derived from the ID Schema defined by a country. Here, we would be discussing about the properties used in the UI specification of Registration Client.
 
