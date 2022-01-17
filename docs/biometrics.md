@@ -9,7 +9,7 @@ MOSIP platform integrates with various biometric devices and systems listed belo
 
 The biometrics systems need to comply to standard interfaces defined by MOSIP.  Test kits to verify compatibility of the systems are available.  
 
-Vendors who provide biometric systems are Partners of MOSIP.  
+Vendors who provide biometric systems are [Partners](partners.md) of MOSIP.  
 
 
    
