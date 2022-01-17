@@ -7,9 +7,7 @@ MOSIP deployment is split into two distinct parts:
    * Registration
 2. [ID Authentication](id-authentication.md)
 
-The requirements are specified at a high level in terms of **compute** (Virtual CPU, RAM) and **storage**.
-
-We provide server side hardware estimates for [MOSIP core modules](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/mosip) only. Estimates for [external components](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/external) are not in the scope. See [Exclusions](#exclusions).
+The server side hardware estimates for the above are specified at a high level in terms of **compute** (Virtual CPU, RAM) and **storage** requirements.  We provide estimates for [MOSIP core modules](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/mosip) only. [External components](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/external) are not in the scope. See [Exclusions](#exclusions).
 
 The variables that largely determine the hardware requirements are:
 1. Population of a country
