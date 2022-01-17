@@ -8,7 +8,7 @@ Each process has multiple screens and each screen is rendered with one or more f
 
 ## PROCESS/TASK SPEC JSON Template
 
-```JSON
+```jsonc
 {
 	"id": "<NEW/UPDATE/LOST/BIOMETRIC_CORRECTION process name as passed in the packet>",
   //order in which the process is displayed on the registration client home screen
@@ -38,7 +38,7 @@ Each process has multiple screens and each screen is rendered with one or more f
 
 ## SCREEN SPEC JSON Template
 
-```JSON
+```jsonc
 {
         //Order of the screen in registration page
         "order": 1,
@@ -67,7 +67,7 @@ Each process has multiple screens and each screen is rendered with one or more f
 
 ## FIELD SPEC JSON Template
 
-```JSON
+```jsonc
 {
                 "id": "<Unique identifier for the field, must be same as that described in the ID Schema>",
                 //inputRequired is used to identify if UI input is needed or not
@@ -169,7 +169,7 @@ Each process has multiple screens and each screen is rendered with one or more f
  
  ### Sample Correction Process SPEC: Biometric Correction
  
- ```JSON
+ ```jsonc
  {
     "id": "BIOMETRIC_CORRECTION",
     "order": 4,
