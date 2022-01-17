@@ -28,10 +28,12 @@ To setup the registration client:
 1. Download the `reg-client.zip` from the hosted server.
 2. Unzip the client. You can see the directory structure below.
 3. Click `run.bat` to launch registration client.
+
 ![](_images/reg-client-unzip.png)
 
 ### Launching the registration client
 The client always launches with the pre-loader screen which displays the information about the network status,  build status verification, online status, etc.
+
 ![](_images/reg-client-pre-loader-success.png)
 
 1. **First time launch**
@@ -39,6 +41,7 @@ The client always launches with the pre-loader screen which displays the informa
 - Any valid operator credentials can be provided to authenticate and start the initial sync.
 - On successful intial sync, the operator will be prompted to **restart** the application.
 - After the first launch, the operator can notice .**mosipkeys** and **db** folders created under the registration client setup folder.
+
 ![](_images/reg-client-restart.png)
 
 **Note**: Deletion of either the **.mopsipkeys** or the **db** folder makes the application get into an invalid state and hence will fail to launch. To be able to launch the client again, the operator should make sure that both the folders are removed and then re-launch the client. 
@@ -49,7 +52,7 @@ The client always launches with the pre-loader screen which displays the informa
   - The registration client login page provides the operator an option to select the language for viewing the registration client UI.
   - After successful login, the operator either lands into the operator onboard page or the home page.
   
-  ![](_images/reg-client-language-selection.png)
+![](_images/reg-client-language-selection.png)
   
    For more details on operator onboarding, refer to [Operator onboarding guide](operator-onboarding.md).
     
