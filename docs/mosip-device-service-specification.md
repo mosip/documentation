@@ -1,7 +1,7 @@
 # MDS Specification
 
 ## Overview
-MOSIP Device Service (MDS) specification establishes standards/protocols that are necessary for a biometric device to be used in MOSIP. The MDS specification is primarly intented for biometric device manufactures, developers and designers to build MOSIP compliant devices. It is assumed that the readers are familiar with MOSIP registration and authentication services.  All devices that collect biometric data should operate within the specification of this document.
+MOSIP Device Service (MDS) specification establishes standards/protocols that are necessary for a biometric device to be used in MOSIP. The MDS specification is primarly intented for biometric device manufactures, developers and designers to build MOSIP compliant devices. All devices that collect biometric data should operate within the specification of this document.
 
 ## Revision history
 |Version|Status|Date|
