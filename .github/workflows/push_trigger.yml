@@ -1,23 +1,23 @@
 name: Maven Package upon a push
 
 # Triggered when code is pushed to any branch in a repository
-#on: push
+on: push
 
 #on:
 #  schedule:
 #    - cron:  '0 12 1 * ?'
 
 
-on:
-  workflow_dispatch:
-    inputs:
-      message:
-        description: 'Trigger Documentation'
-        required: false
-        default: 'Document Preparation'
-      releaseTags:
-        description: 'tag to generate document'
-        required: true
+#on:
+#  workflow_dispatch:
+#    inputs:
+#      message:
+#        description: 'Trigger Documentation'
+#        required: false
+#        default: 'Document Preparation'
+#      releaseTags:
+#        description: 'tag to generate document'
+#        required: true
 
 jobs:
   Generate_Documentation:
@@ -43,14 +43,15 @@ jobs:
         with:
           repository: mosip/${{ matrix.names }}
           path: ${{ matrix.names }}
-          ref: ${{ github.event.inputs.releaseTags }}
+#          ref: ${{ github.event.inputs.releaseTags }}
+          ref: develop
           server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the settings.xml file
 
       - name: Setup Branch and Env
         run: |
           # Strip git ref prefix from version
-          echo "BRANCH_NAME=${{ github.event.inputs.releaseTags }}" >> $GITHUB_ENV
+          echo "BRANCH_NAME=develop" >> $GITHUB_ENV
 
       - name: Build with Maven
         run: |
