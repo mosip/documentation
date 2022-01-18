@@ -1,7 +1,7 @@
 # ID Authentication
 
 ## Overview
-Once a UIN is issued, a resident may be authenticated using MOSIP's ID Authentication (IDA) module. As MOSIP is a foundational ID system, different services (govt or private) may use the "single source of truth" to validate identity of a resident rather than implement multiple different authentication systems.  A typical authentication flow is illustrated below:
+Once a UIN is issued, a resident may be authenticated using MOSIP's ID Authentication (IDA) module. As MOSIP is a foundational ID system, different services (govt or private) may use the "single source of truth" to validate identity of a resident rather than implementing multiple different authentication systems.  A typical authentication flow is illustrated below:
 
 ![](_images/ida-process.png)
 
