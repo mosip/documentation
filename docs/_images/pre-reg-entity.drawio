@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-18T11:28:12.440Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="QgOQ4WPzs75SyEp442dA" version="16.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-18T11:28:42.219Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="POwT70DVHABEqTxv160M" version="16.2.2" type="github">
   <diagram id="aeCOM6R8oNLb_Fvaol1f" name="Page-1">
     <mxGraphModel dx="855" dy="541" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2336" pageHeight="1654" math="0" shadow="0">
       <root>
@@ -26,7 +26,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="c4K_Bumv6GerBLCT27ij-1" value="&lt;b&gt;Pre-registration&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="670" y="410" width="120" height="60" as="geometry" />
+          <mxGeometry x="670" y="410" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="c4K_Bumv6GerBLCT27ij-2" value="mosip_prereg" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
           <mxGeometry x="920" y="400" width="80" height="80" as="geometry" />
@@ -37,8 +37,9 @@
         <mxCell id="c4K_Bumv6GerBLCT27ij-3" value="OTPManager" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="690" y="270" width="100" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="c4K_Bumv6GerBLCT27ij-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.134;entryY=-0.012;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=none;startFill=0;" edge="1" parent="1" source="c4K_Bumv6GerBLCT27ij-4" target="c4K_Bumv6GerBLCT27ij-1">
+        <mxCell id="c4K_Bumv6GerBLCT27ij-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;" edge="1" parent="1" source="c4K_Bumv6GerBLCT27ij-4">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="686" y="409" as="targetPoint" />
             <Array as="points">
               <mxPoint x="686" y="330" />
             </Array>
