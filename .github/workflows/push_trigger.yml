@@ -1,12 +1,24 @@
 name: Maven Package upon a push
 
 # Triggered when code is pushed to any branch in a repository
-on: push
+#on: push
 
 #on:
 #  schedule:
 #    - cron:  '0 12 1 * ?'
-  
+
+
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'Trigger Documentation'
+        required: false
+        default: 'Document Preparation'
+      releaseTags:
+        description: 'tag to generate document'
+        required: true
+
 jobs:
   Generate_Documentation:
     runs-on: ubuntu-latest
@@ -31,14 +43,14 @@ jobs:
         with:
           repository: mosip/${{ matrix.names }}
           path: ${{ matrix.names }}
-          ref: develop
+          ref: ${{ github.event.inputs.releaseTags }}
           server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the settings.xml file
 
       - name: Setup Branch and Env
         run: |
           # Strip git ref prefix from version
-          echo "BRANCH_NAME=develop" >> $GITHUB_ENV
+          echo "BRANCH_NAME=${{ github.event.inputs.releaseTags }}" >> $GITHUB_ENV
 
       - name: Build with Maven
         run: |
@@ -100,6 +112,10 @@ jobs:
       - name: Check Downloaded Artifacts
         run: |
           echo "$(find . -name "*openapi.html" -exec readlink -f {} \;)"
+
+      - name: Create index html file
+        run: |
+          ./index-creator.sh > ./1.2.0/list.html
 
       - name: Commit Changes to Documenation Repository
         uses: EndBug/add-and-commit@v7
