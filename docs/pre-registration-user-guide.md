@@ -82,7 +82,7 @@ On Your Applications page, click **Create New Application** to generate a new ap
 
 ### Viewing my applications
 
-![Dashboard](_images/pre-reg-application-status.JPG)
+![Dashboard](_images/pre-reg-application-status.jpg)
 
 Once the application is created, there could be multiple statuses depending on the data filled by the user/resident or the actions performed by them. The user can view all the pre-registration applications created by them in the Dashboard. The different statuses with a brief explanation are mentioned below:
 
