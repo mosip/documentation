@@ -7,12 +7,12 @@ Various flows with encryption are illustrated below.  Refer [Keys](keys.md) for 
 ## Registration data flow 
 ![](_images/cryptography-registration-flow.png)
 
-1. Biometrics are signed by private key of device provider. The signature is verified by the registration client. (PK2)
-2. Registration client signs packet using TPM key of the machine, and encrypts packet using MOSIP public key specific to (registration center, machine id) combination. (K10, K11).   
+1. Biometrics are signed by private key of device provider (PK2). The signature is verified by the registration client. 
+2. Registration client signs packet using TPM key of the machine (K10), and encrypts packet using MOSIP public key specific to (registration center, machine id) combination (K11). 
 3. Registration processor stores packets created in (2) "as is" in Object Store. 
 4. ID Repo encrypts biometrics, demographics and documents and stores them in Object Store. (K7.1,K7.2,K7.3)
 5. The UINs are hashed, encrypted and stored in `uin` table of `mosip_idrepo` DB. (K7.4)
-6. Biometrics are shared encrypted with ABIS partners key PK1. 
+6. Biometrics are shared encrypted with ABIS partner's key (PK1). 
 7. Registration processor stores encrypted demographic data in `mosip_regprc` db. (K11)
 
 ## Datashare
