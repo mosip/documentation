@@ -94,14 +94,32 @@ Based on the role, following are the menu list accessible to the admin users:
 * A zonal admin/global admin can manage only centers under his/her administrative zone.
 
 **View Center**
+
+![](_images/admin-view-center.png)
+
+To view the list of centers,
+1. Click Resources-> Center
+2. Click on a particular center name for detailed view. 
+This detailed view shows all the details of a registration center in all the country configured languages.
+
 * The admin portal allows an admin to view the list of all registration centers available in the jurisdiction of his/her administrative zone. The system does not fetch the details of decommissioned registration centers but only active and inactive centers. 
 * Admin portal UI shows the list of registration centers in only the country configured primary language.
 * The administrator can filter the list of registration centers based on parameters like *Center name, Center type, Status, Location hierarchy (all location levels)*.
 * If the admin user does not find the center, they can check the *Center not available in other language*. Using this option, they can clone the information available, 
 otherwise they can create their own center.
-* For a detailed view, the admin can click on the center name in the list view. This detailed view shows all the details of a registration center in all the country configured languages.
+ 
+![](_images/admin-view-center-filter.png)
+
 
 **Create Center**
+
+![](_images/admin-view-center.png)
+
+To create a center,
+1. Click Resources-> Center
+2. Enter the mandatory details.
+3. Click **Create**.
+
 * An admin can create a center by providing data in the fields marked as mandatory. A center needs to be created in both configured primary and secondary language. Although the portal will allow creation of a center in only primary language but will not allow activation of that center until data for that center is not updated for all the languages.
 * A center is created with the following attributes: Center name, center type, address, latitude, longitude, location, contact phone, contact person, working hours, no. of kiosk, center start time, center end time, lunch start time, lunch end time, time zone, holiday zone and administrative zone the center belongs to.
 * A center can only be mapped to the administrative zone at the lowest zonal hierarchy. 
