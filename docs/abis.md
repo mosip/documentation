@@ -1,7 +1,6 @@
 # ABIS
 
 ## Overview
-
 Providing unique identity for a resident is one of key features of any identity platform. To achieve this, MOSIP interfaces with an **Automated Biometric Identification System (ABIS)** to perform de-duplication of a resident's biometric data. 
 
 The ABIS system never comes to know about resident's identity. Any Personally Idenfiable Information (PII) such as demographic details or APPID (application ID for applicant) is not shared with the ABIS system. Internally, MOSIP maintains a mapping between the ABIS specific referenceID and APPID of the resident.
@@ -24,6 +23,9 @@ For privacy and security considerations, face data **shall not be sent to ABIS**
 
 Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Data Specification](Biometric-Data-Specification.md). 
 
+## Test kits
+MOSIP provides kits the test the interface. Refer [abis-testing-kit repo](https://github.com/mosip/abis-testing-kit/tree/1.2.0)
+
 ## ABIS deployment
 * ABIS must comply to [ABIS API Specifications](abis-api.md).
 * The queques can be configured in [RegistrationProcessorAbis-env.json](https://github.com/mosip/mosip-config/blob/master/config-templates/RegistrationProcessorAbis-env.json) file.
@@ -31,3 +33,5 @@ Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Data 
 * It is recommended that ABIS is deployed in the same secure zone (military zone) where the registration processor is deployed. 
 * ABIS system is not recommended to connect to any external network.
 
+## Test kits
+MOSIP provides kits the test the interface.
