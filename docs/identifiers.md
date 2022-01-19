@@ -4,7 +4,7 @@
 The sections here describe various user identifiers used in MOSIP.
 
 ## UIN
-Unique Identification Number (UIN), as the name suggests, is a unique number assigned to resident. UIN is never changes and is unchanging and non-revocable.  UIN is randomized such that one should not be able to derive any Personal Identifyable Information (PII) from the number itself.
+Unique Identification Number (UIN), as the name suggests, is a unique number assigned to resident. UIN never changes and is non-revocable. UIN is randomized such that one should not be able to derive any Personal Identifyable Information (PII) from the number itself.
 
 * uin generation
 * uin configuration properties
