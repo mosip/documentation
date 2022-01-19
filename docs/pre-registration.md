@@ -5,37 +5,11 @@ This module enables a user/resident to:
 * Enter demographic data and upload supporting documents
 * Book an appointment for one or many users for registration by choosing a suitable registration center and a convinient time slot
 * Receive appointment notifications
-* Reschedule and Cancel appointments
+* Reschedule and cancel appointments
 
 Once the resident completes the above process, their data will be downloaded at the respective registration centers prior to their appointment. This data will further be used during the registration process. MOSIP pre-registration module supports multiple languages. 
 
-## Features
-Below are some of the features associated with pre-registration.
-
-### Functional features
-* Email or phone number based login using OTP
-* Option to enable and configure captcha implementation is available 
-* Applications are associated with the email or phone number
-* Support for multiple applications and appointment booking using a single login
-* Ability to enter data beforehand
-* Option to upload documents
-* Booking or cancelling appointment slots for registration
-* Issuance of application ID with QR code
-* Data entered here is synced to the registration client based on the centre selected during the booking
-* Notification and the acknowledgement slip is sent to the registered email or phone number
-* Pre-registration application can be used in assisted or self-service mode
-
-### Technical features
-* Pre-registration UI loads dynamically based on configurable UI specification
-* Data can be captured in multiple languages based on configuration
-* Virtual keyboards are provided in the UI for data capture
-* Data can be transliterated using a transliteration library
-* Documents are scanned for viruses before uploading to the server
-* Documents are stored in a blob storage
-* Demographic data is stored as encrypted JSON in the database
-* Pre-registration UI is a reference implementation and can be changed
-
-# Pre-registration process
+## Pre-registration process
 
 ![](_images/pre-reg-process.png)
 
@@ -60,11 +34,25 @@ Below are some of the features associated with pre-registration.
 * The registration form gets pre-filled with the pre-registration data.
 
 
-# UI Reference Implementation
-MOSIP provides a **reference** implementation of the Pre-registration UI that may be customized as per country needs. The sample implementation is available at [reference implementation repository](https://github.com/mosip/mosip-ref-impl).
-For getting started with the pre-registration, refer to the [Pre-registration user guide](pre-registration-user-guide.md) 
+## Pre-registration module
 
-# Services
+The relationship of pre-registration module  with other services is explained here.  _NOTE: The numbers do not signify sequence of operations or control flow_
+
+![](_images/pre-reg-entity.png)
+
+1. Fetch [ID Schema](id-schema) details.
+2. Fetch a new OTP for the user in login page.
+3. Pre-Registration service uses kernel-auditmanager-service to log all events to be audited.
+4. Pre-Registration interacts with Keycloak via `kernel-auth-adapater`.
+5. Database used by pre-reg.
+6. Generate a new [PRID]() for the application.
+7. Send OTP in the email/sms to the user.
+8. Registration Processor uses reverse sync to mark the pre-reg application as consumed.
+9. Registration clients uses [Datasync service](https://github.com/mosip/pre-registration/tree/1.2.0-rc2/pre-registration/pre-registration-datasync-service) to get the pre-reg application details for a given registration center, booking date and PRID.
+10. Fetch data for dropdowns, locations, consent form etc.
+
+## Services
+
 Pre-registration module consists of the following services:
 * Application 
 * Booking
@@ -73,6 +61,10 @@ Pre-registration module consists of the following services:
 * Datasync
 
 For more details, refer to [pre-registration repo](https://github.com/pjoshi751/pre-registration/tree/develop)
+
+# UI Reference Implementation
+MOSIP provides a **reference** implementation of the Pre-registration UI that may be customized as per country needs. The sample implementation is available at [reference implementation repository](https://github.com/mosip/mosip-ref-impl).
+For getting started with the pre-registration, refer to the [Pre-registration user guide](pre-registration-user-guide.md) 
 
 # Build and deploy
 To access the build and read through the deployment instructions, refer to [pre-registration repo](https://github.com/pjoshi751/pre-registration/tree/develop).

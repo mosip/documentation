@@ -51,6 +51,10 @@ Storage is dependent on population of a country (i.e. the number of UINs to be i
 |ActiveMQ|TBD||
 
 ## ID authentication
+Refer to [IDA Resource Calculator XLS]()
+
+Allow for 30% additional compute and storage for monitoring and any overheads.
+
 
 
 ## Exclusions
