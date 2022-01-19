@@ -42,7 +42,7 @@ The relationship of pre-registration module  with other services is explained he
 
 1. Fetch [ID Schema](id-schema) details.
 2. Fetch a new OTP for the user in login page.
-3. Pre-Registration service uses kernel-auditmanager-service to log all events to be audited.
+3. Log all events.
 4. Pre-Registration interacts with Keycloak via `kernel-auth-adapater`.
 5. Database used by pre-reg.
 6. Generate a new [PRID]() for the application.
