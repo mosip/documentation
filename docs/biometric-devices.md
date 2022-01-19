@@ -26,7 +26,8 @@ The MOSIP compliant device is expected to perform the following,
 * Should have no mechanism to inject the biometric
 
 ### Base Specifications for Devices
-For details about biometric data specifications please view the page [MOSIP Biometric Specification](Biometric-Specification.md).
+
+Refer [Biometric Image Specification](biometric-image-specification.md).
 
 We recommend that countries look at ergonomics, accessibility, ease of usage, and common availability of devices while choosing devices for use in registration and authentication scenarios.
 

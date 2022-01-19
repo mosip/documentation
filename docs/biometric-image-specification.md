@@ -1,4 +1,4 @@
-# Biometric Specification
+# Biometric Image Specification
 
 ## Introduction
 Biometrics images for various modalities are represented and exchanged as per the below specifications.
