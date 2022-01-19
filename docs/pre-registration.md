@@ -55,11 +55,10 @@ The relationship of pre-registration module  with other services is explained he
 ## Services
 
 Pre-registration module consists of the following services:
-* Application 
-* Booking
-* Batchjob
-* Captcha
-* Datasync
+* [Application](https://github.com/mosip/pre-registration/tree/1.2.0-rc2/pre-registration/pre-registration-application-service)
+* [Batchjob](https://github.com/mosip/pre-registration/tree/1.2.0-rc2/pre-registration/pre-registration-batchjob)
+* [Datasync](https://github.com/mosip/pre-registration/tree/1.2.0-rc2/pre-registration/pre-registration-datasync-service)
+* [Captcha](https://github.com/mosip/pre-registration/tree/1.2.0-rc2/pre-registration/pre-registration-captcha-service)
 
 For more details, refer to [pre-registration repo](https://github.com/pjoshi751/pre-registration/tree/develop)
 
