@@ -46,7 +46,7 @@ The relationship of pre-registration module  with other services is explained he
 3. Log all events.
 4. Pre-Registration interacts with Keycloak via `kernel-auth-adapater`.
 5. Database used by pre-reg.
-6. Generate a new [PRID]() for the application.
+6. Generate a new [PRID](identifiers.md#prid) for the application.
 7. Send OTP in the email/sms to the user.
 8. Registration Processor uses reverse sync to mark the pre-reg application as consumed.
 9. Registration clients uses [Datasync service](https://github.com/mosip/pre-registration/tree/1.2.0-rc2/pre-registration/pre-registration-datasync-service) to get the pre-reg application details for a given registration center, booking date and PRID.
