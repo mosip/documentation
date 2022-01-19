@@ -155,7 +155,7 @@ jobs:
 
 
   Create_View_page:
-    needs: Checkout_to_Documentation_Repository
+    needs: Generate_Documentation
     runs-on: ubuntu-latest
 
     steps:
