@@ -14,29 +14,28 @@ MOSIP provides backend APIs for this module along with a reference implementatio
 
 ![](_images/pre-reg-process.png)
 
-## Create an application
+### Create an application
 * User provides consent
 * User provides demographic information
 * User uploads supporting documents (Proof of Address, Birth certificate, etc.)
 * A pre-registration request ID (PRID) is generated and provided to the user.
 
-## Book an appointment
+### Book an appointment
 * User selects a registration center based on postal code, geo-location, etc.
 * The available slots are displayed
 * An option to cancel and re-book the appointment is made available
 
-## Receiving acknowledgement notifications
+### Receiving acknowledgement notifications
 * An acknowledgement is sent via email/SMS 
 * The user can print the acknowledgement containing PRID and QR code. 
 * This QR code can be scanned at the in-person registration centers.
 
-## Download of pre-registration data at registration centers
+### Download of pre-registration data at registration centers
 * User provides the PRID/QR code at the registration center.
 * The registration form gets pre-filled with the pre-registration data.
 
 
 ## Pre-registration module
-
 The relationship of pre-registration module  with other services is explained here.  _NOTE: The numbers do not signify sequence of operations or control flow_
 
 ![](_images/pre-reg-entity.png)
