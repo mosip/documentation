@@ -110,10 +110,9 @@ otherwise they can create their own center.
  
 ![](_images/admin-view-center-filter.png)
 
-
 **Create Center**
 
-![](_images/admin-view-center.png)
+![](_images/admin-create-center.png)
 
 To create a center,
 1. Click Resources-> Center
@@ -128,6 +127,15 @@ To create a center,
 
 
 **Update Center**
+
+![](_images/admin-edit-center.png)
+
+To update a center,
+1. Click Resources-> Center
+2. Select the Edit option from the Actions menu against the center name.
+3. Make the changes in the required fields.
+4. Click **Update**.
+
 * Once a center is created, an admin can edit a center deatail if required. The update can include adding the details in another required language that were missed during creation of the center or changing the details of a center itself.
 * All the attributes mentioned in the 'Create center' section can be updated for a center.
 
