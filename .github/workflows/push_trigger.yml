@@ -26,8 +26,8 @@ jobs:
       fail-fast: false
       max-parallel: 2
       matrix:
-        #names: [partner-management-services, registration, khazana, admin-services, resident-services, commons, audit-manager, pre-registration, print, id-authentication, mosip-openid-bridge, id-repository, durian, keymanager, packet-manager]
-        names: [admin-services]        
+        names: [partner-management-services, registration, admin-services, resident-services, commons, audit-manager, pre-registration, id-repository, durian, packet-manager]
+#        names: [admin-services]
 
     steps:
       - name: Set up JDK 11
@@ -90,8 +90,8 @@ jobs:
       fail-fast: false
       max-parallel: 1
       matrix:
-        #names: [partner-management-services, registration, khazana, admin-services, resident-services, commons, audit-manager, pre-registration, print, id-authentication, mosip-openid-bridge, id-repository, durian, keymanager, packet-manager]
-        names: [admin-services] 
+        names: [partner-management-services, registration, admin-services, resident-services, commons, audit-manager, pre-registration, id-repository, durian, packet-manager]
+        #names: [admin-services]
 
     steps:
       - name: Set up JDK 11
@@ -117,7 +117,7 @@ jobs:
       - name: Create index html file
         run: |
           chmod +x index-creator.sh
-          bash index-creator.sh > ./1.2.0/list.html
+          bash index-creator.sh ${{ matrix.names }}> ./1.2.0/list.html
 
       - name: Commit Changes to Documenation Repository
         uses: EndBug/add-and-commit@v7
