@@ -1,4 +1,4 @@
-# Pre-Registration User Guide
+# Pre-registration User Guide
 
 ## Overview
 This guide helps in understanding the pre-registration sample UI implementation. The pre-registration portal can be used in **self-service** as well as in **assisted** mode.
