@@ -44,7 +44,7 @@ The relationship of pre-registration module  with other services is explained he
 1. Fetch [ID Schema](id-schema) details.
 2. Fetch a new OTP for the user in login page.
 3. Log all events.
-4. Pre-Registration interacts with Keycloak via `kernel-auth-adapater`.
+4. Pre-Registration interacts with Keycloak via [`kernel-auth-adapater`](https://github.com/mosip/mosip-openid-bridge/tree/1.2.0-rc2).
 5. Database used by pre-reg.
 6. Generate a new [PRID](identifiers.md#prid) for the application.
 7. Send OTP in the email/sms to the user.
