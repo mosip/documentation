@@ -82,14 +82,11 @@ echo "<div class='content'>"
 echo "    <p1>API Documentation for release 1.2.0</p1>"
 echo "</div>"
 echo "<div class='sidenav'>"
-echo "    <button class='dropdown-btn'><b>MOSIP $1</b>"
+echo "    <button class='dropdown-btn'><b>Documentation links</b>"
 echo "        <i class='fa fa-caret-down'></i>"
 echo "    </button>"
-#echo "        <a href="admin-service-openapi.html">admin-service</a>"
-#echo "        <a href="hotlist-service-openapi.html">hotlist-service</a>"
-#echo "        <a href="kernel-masterdata-service-openapi.html">kernel-masterdata-service</a>"
 echo "    <div class='dropdown-container'>"
-for file in $root/*; do
+for file in $(ls $root/); do
   parentpath=${file#*/}
   filename=${file##*/}
   name=${filename%-openapi*}
