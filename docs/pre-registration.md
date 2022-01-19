@@ -6,7 +6,7 @@ Pre-registration module enables a resident to
 * receive appointment notifications,
 * reschedule and cancel appointments.
 
-Once the resident completes the above process, their data will be downloaded at the respective registration centers prior to their appointment. This data will further be used during the registration process. MOSIP pre-registration module supports multiple languages. 
+Once the resident completes the above process, their data is downloaded at the respective registration centers prior to their appointment, thus, saving enrollment time. The  module supports multiple languages. 
 
 MOSIP provides backend APIs for this module along with a reference implementation of [pre-registration portal](#pre-registration-portal).
 
