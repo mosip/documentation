@@ -1,13 +1,14 @@
 # Overview
 
-Pre-registration is a resident facing web-based portal using which an individual can pre-enrol and book an appointment for registering in MOSIP. 
-This module enables a user/resident to:
-* Enter demographic data and upload supporting documents
-* Book an appointment for one or many users for registration by choosing a suitable registration center and a convinient time slot
-* Receive appointment notifications
-* Reschedule and cancel appointments
+Pre-registration module enables a resident to 
+* enter demographic data and upload supporting documents,
+* book an appointment for one or many users for registration by choosing a suitable registration center and a convinient time slot,
+* receive appointment notifications,
+* reschedule and cancel appointments.
 
 Once the resident completes the above process, their data will be downloaded at the respective registration centers prior to their appointment. This data will further be used during the registration process. MOSIP pre-registration module supports multiple languages. 
+
+MOSIP provides backend APIs for this module along with a reference implementation of [pre-registration portal](#pre-registration-portal).
 
 ## Pre-registration process
 
@@ -62,8 +63,8 @@ Pre-registration module consists of the following services:
 
 For more details, refer to [pre-registration repo](https://github.com/pjoshi751/pre-registration/tree/develop)
 
-# UI Reference Implementation
-MOSIP provides a **reference** implementation of the Pre-registration UI that may be customized as per country needs. The sample implementation is available at [reference implementation repository](https://github.com/mosip/mosip-ref-impl).
+# Pre-registration portal
+MOSIP provides a **reference** implementation of the pre-registration portal that may be customized as per country needs. The sample implementation is available at [reference implementation repository](https://github.com/mosip/mosip-ref-impl).
 For getting started with the pre-registration, refer to the [Pre-registration user guide](pre-registration-user-guide.md) 
 
 # Build and deploy
