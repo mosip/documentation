@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name='view' content='width=device-width, initial-scale=1'>
+    <style>
+         .logo {
+         max-width: 700px;
+         margin: auto;
+         text-align: center;
+         margin-bottom: 50px;
+         }
+         .content {
+         max-width: 700px;
+         margin: auto;
+         text-align: center;
+         margin-bottom: 50px;
+         }
+         body {
+         font-family: 'Lato', sans-serif;
+         }
+         /* Fixed sidenav, full height */
+         .sidenav {
+         height: 100%;
+         width: 500px;
+         position: fixed;
+         overflow-x: hidden;
+         padding-top: 20px;
+         }
+         /* Style the sidenav links and the dropdown button */
+         .sidenav a, .dropdown-btn {
+         padding: 6px 8px 6px 16px;
+         text-decoration: none;
+         font-size: 16px;
+         color: black;
+         display: block;
+         border: none;
+         background: none;
+         width: 100%;
+         text-align: left;
+         cursor: pointer;
+         outline: none;
+         margin-left: 200px;
+         }
+         /* On mouse-over */
+         .sidenav a:hover, .dropdown-btn:hover {
+         }
+         /* Main content */
+         .main {
+         margin-left: 1000px; /* Same as the width of the sidenav */
+         font-size: 14px; /* Increased text to enable scrolling */
+         padding: 0px 10px;
+         }
+         /* Add an active class to the active dropdown button */
+         .active {
+         color: black;
+         }
+         /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+         .dropdown-container {
+         display: none;
+         padding-left: 8px;
+         font-weight: 200;
+         }
+         /* Optional: Style the caret down icon */
+         .fa-caret-down {
+         float: right;
+         padding-right: 8px;
+         }
+         /* Some media queries for responsiveness */
+         @media screen and (max-height: 450px) {
+         .sidenav {padding-top: 15px;}
+         .sidenav a {font-size: 18px;}
+         }
+      </style>
+</head>
+<body>
+<div class='logo'>
+    <img src='https://mosip.github.io/mosip-helm/mosip_logo.png'>
+    <h2 style='font-family:verdana;'>MOSIP API Documentation</h2>
+</div>
+<div class='content'>
+    <p1>API Documentation for release 1.2.0</p1>
+</div>
+<div class='sidenav'>
+    <button class='dropdown-btn'><b>MOSIP partner-management-services</b>
+        <i class='fa fa-caret-down'></i>
+    </button>
+    <div class='dropdown-container'>
+        <a href="admin-service-openapi.html">admin-service</a>
+        <a href="hotlist-service-openapi.html">hotlist-service</a>
+        <a href="kernel-masterdata-service-openapi.html">kernel-masterdata-service</a>
+        <a href="kernel-syncdata-service-openapi.html">kernel-syncdata-service</a>
+        <a href="partner-management-service-openapi.html">partner-management-service</a>
+        <a href="policy-management-service-openapi.html">policy-management-service</a>
+    </div>
+</div>
+<script>
+         var dropdown = document.getElementsByClassName('dropdown-btn');
+         var i;
+
+         for (i = 0; i < dropdown.length; i++) {
+           dropdown[i].addEventListener('click', function() {
+           this.classList.toggle('active');
+           var dropdownContent = this.nextElementSibling;
+           if (dropdownContent.style.display === 'block') {
+           dropdownContent.style.display = 'none';
+           } else {
+           dropdownContent.style.display = 'block';
+           }
+           });
+         }
+      </script>
+</body>
+</html>
