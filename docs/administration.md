@@ -238,6 +238,7 @@ The administrator can filter the list of machines based on parameters like *Mach
 * Admin portal UI shows the list of machines in only the country configured primary language.
 
  **Create Machines**
+ 
 ![](_images/admin-create-machine.png)
 
 To create a machine,
@@ -250,7 +251,7 @@ To create a machine,
 
 **Update Machines**
 
-![](_images/admin-edit-device.png)
+![](_images/admin-edit-machine.png)
 
 To update a Machine,
 1. Click Resources-> Machines
@@ -260,11 +261,76 @@ To update a Machine,
 
 Once a machine is created, an admin can edit a machine later if required. The update can include adding the details in another required language that were missed during creation of the machine or changing the details of a machine itself. All the attributes mentioned in the 'Create machine' section can be updated for a machine.
 
+**Activate/Deactivate/Decommission Machine**
 
+![](_images/admin-deactivate-machine.png)
 
+To activate/deactivate/decommission a Machine,
+1. Click Resources-> Machines
+2. Select the **Deactivate/Decommission** option from the Actions menu against the Machine name.
+3. On the confirmation pop-up, click **Confirm**.
 
+An admin can deactivate or decommission a machine through the admin portal.
 
+### User Management
 
+* MOSIP uses Keycloak as an IAM (Identity access management tool) for managing Users. These users are internal users of MOSIP including Registration Officers, Registration Supervisors, Zonal Admins, Global Admins etc.
+* User Management includes Viewing, Creating, Editing, Activating, Deactivating and Blacklisting of Users.
+
+#### User Zone Mapping
+* Once the user is created in KeyCloak, they need to be mapped to a zone to get access to specific information available in that zone.
+
+**View User Zone Mapping(s)**
+
+![](_images/admin-user-zone-list.png)
+
+**Map/Un-map/re-map user to a Zone**
+
+![](_images/admin-user-zone-map.png)
+
+To map a user to a zone,
+1. Click Resources-> User Zone mapping
+2. Click **+Map Zone**
+3. Select the *User Name, Administrative Zone* from the dropdown.
+4. Click **Save**.
+
+To re-map a user to a zone,
+1. Click Resources-> User Zone mapping
+2. Select **Remap** from the Actions menu against the mapped user.
+3. Update the *User Name/ Administrative Zone* from the dropdown.
+4. Click **Save**.
+
+Note: If the center is mapped already, the admin needs to unmap the center to remap the zone.
+
+* Admin portal allows an admin to map users to a zone. This mapping specifies as to which zone the user will belong to.
+* A user can only be mapped to a zone which belongs under the User’s Administrative Zone.
+* A user can later be un-mapped from the zone in case a user needs to be moved to another zone. In such cases, the user will later need to be mapped to the new zone. 
+
+![](_images/admin-user-zone-mapping.png)
+
+#### User Center Mapping
+
+Once the user is mapped to a zone, they will be listed in the screen below. Now, the user will be mapped to a center to be able to manage their assigned center.
+
+**View User Center Mapping(s)**
+
+![](_images/admin-user-center-list.png)
+
+**Map/Un-map/re-map user to a Registration Center**
+
+![](_images/admin-user-center-map.png)
+
+To map a user to a center,
+1. Click Resources-> User Center Mapping
+2. Select **Map** from the Actions menu against the mapped user.
+3. Select the *Center name* from the dropdown against the User Name, Administrative Zone.
+4. Click **Save**.
+
+* Admin portal allows an admin to map users to a center. This mapping specifies as to which center the user will be used in. 
+* A User can only be mapped to a center which belongs under the user’s Administrative Zone.
+* A User can later be un-mapped from the Center in cases where a User is needed to be moved to another Center. In such cases, the user will later need to be mapped to the new center. In case the user is required to be mapped to a Registration Center outside the Administrative Zonal restriction, the Administrative Zone of the user must be changed.
+
+![](_images/admin-user-center-mapping.png)
 
 
 
