@@ -15,6 +15,9 @@ The variables that largely determine the hardware requirements are:
 1. Usage of foundation ID by various services
 
 ## Pre-registration
+Refer to [Pre-registration Resource Calculator XLS](_files/pre-reg-resource-calculator.xls)
+
+Allow for 30% additional compute and storage for monitoring and any overheads.
 
 ## Registration (enrollment)
 The registration compute resources are related to the max rate of enrollment desired. The processing throughput must match the enrollment rate to avoid pile up of pending registration packets. 
@@ -51,11 +54,9 @@ Storage is dependent on population of a country (i.e. the number of UINs to be i
 |ActiveMQ|TBD||
 
 ## ID authentication
-Refer to [IDA Resource Calculator XLS]()
+Refer to [IDA Resource Calculator XLS](_files/ida-resource-calculator.xlsx)
 
 Allow for 30% additional compute and storage for monitoring and any overheads.
-
-
 
 ## Exclusions
 The compute and storage estimates for following components are not included:
