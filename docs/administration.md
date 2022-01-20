@@ -176,7 +176,7 @@ The Admin can filter the list of Registration Centers based on parameters like *
 * The system does not fetch the details of Decommissioned Devices but only Active and Inactive Devices. 
 * Admin portal UI shows the list of Devices in only the country configured Primary Language.
 
-**Create Device**
+**Create Devices**
 
 ![](_images/admin-create-device.png)
 
@@ -184,11 +184,12 @@ To create a device,
 1. Click Resources-> Devices
 2. Enter the mandatory details for creating the device.
 3. Click **Create**.
+
 A Device can be created without any language constraints.
 
 A Device is created can be created with the following attributes: Device ID, Device Name, Mac Address, Serial Number, Device Spec ID and Administrative Zone the Device belongs to. A Device can be mapped to the Administrative Zone it belongs to.
 
-**Update Device**
+**Update Devices**
 
 ![](_images/admin-edit-device.png)
 
@@ -243,7 +244,22 @@ To create a machine,
 1. Click Resources-> Machines
 2. Enter the mandatory details for creating the machine.
 3. Click **Create**.
-A Machine can be created 
+* A Machine can be created with the attributes like *Machine ID, machine name, mac address, serial number, machine spec ID and administrative zone* the machine belongs to.
+* While entering data through UI in multiple languages, the dropdown values and numeric values entered in primary language gets automatically captured in all language.
+* But the text fields (e.g., machine name) needs to be manually input in all the languages. A machine can be mapped to the administrative zone which is at the any zonal hierarchy.
+
+**Update Machines**
+
+![](_images/admin-edit-device.png)
+
+To update a Machine,
+1. Click Resources-> Machines
+2. Select the **Edit** option from the Actions menu against the machine name.
+3. Make the required changes in the fields.
+4. Click **Edit** and Confirm the changes.
+
+Once a machine is created, an admin can edit a machine later if required. The update can include adding the details in another required language that were missed during creation of the machine or changing the details of a machine itself. All the attributes mentioned in the 'Create machine' section can be updated for a machine.
+
 
 
 
