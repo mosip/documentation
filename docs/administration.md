@@ -327,10 +327,9 @@ To map a user to a center,
 4. Click **Save**.
 
 * Admin portal allows an admin to map users to a center. This mapping specifies as to which center the user will be used in. 
-* A User can only be mapped to a center which belongs under the user’s Administrative Zone.
-* A User can later be un-mapped from the Center in cases where a User is needed to be moved to another Center. In such cases, the user will later need to be mapped to the new center. In case the user is required to be mapped to a Registration Center outside the Administrative Zonal restriction, the Administrative Zone of the user must be changed.
+* A user can only be mapped to a center which belongs under the user’s Administrative Zone.
+* A user can later be un-mapped from the Center in cases where a User is needed to be moved to another Center. In such cases, the user will later need to be mapped to the new center. In case the user is required to be mapped to a Registration Center outside the Administrative Zonal restriction, the Administrative Zone of the user must be changed.
 
-![](_images/admin-user-center-mapping.png)
 
 
 
