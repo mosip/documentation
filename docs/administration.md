@@ -99,12 +99,13 @@ Based on the role, following are the menu list accessible to the admin users:
 
 To view the list of centers,
 1. Click Resources-> Center
-2. Click on a particular center name for detailed view. 
+2. For a detailed view, click on a particular center name. 
 This detailed view shows all the details of a registration center in all the country configured languages.
+3. To apply a filter, click **Filter**.
+The administrator can filter the list of registration centers based on parameters like *Center name, Center type, Status, Location hierarchy (all location levels)*.
 
 * The admin portal allows an admin to view the list of all registration centers available in the jurisdiction of his/her administrative zone. The system does not fetch the details of decommissioned registration centers but only active and inactive centers. 
 * Admin portal UI shows the list of registration centers in only the country configured primary language.
-* The administrator can filter the list of registration centers based on parameters like *Center name, Center type, Status, Location hierarchy (all location levels)*.
 * If the admin user does not find the center, they can check the *Center not available in other language*. Using this option, they can clone the information available, 
 otherwise they can create their own center.
  
@@ -132,7 +133,7 @@ To create a center,
 
 To update a center,
 1. Click Resources-> Center
-2. Select the Edit option from the Actions menu against the center name.
+2. Select the **Edit** option from the Actions menu against the center name.
 3. Make the changes in the required fields.
 4. Click **Update**.
 
@@ -141,11 +142,64 @@ To update a center,
 
 **Activate/Deactivate/Decommission center**
 
-* An admin can deactivate or decommission a center through the admin portal.
+![](_images/admin-deactivate-center.png)
+
+To activate/deactivate/decommission a center,
+1. Click Resources-> Center
+2. Select the **Deactivate/Decommission** option from the Actions menu against the center name.
+3. On the confirmation pop-up, click **Confirm**.
+
 * Deactivation refers to a temporary shut down while decommission refers to a permanent shut down of the center. 
 * Decommissioning a center also automatically deactivates the center. In cases where a center has some resources mapped to it (e.g. machines, devices or users), the portal will not allow the admin to decommission such a center.
 * The primary difference between *deactivated* and *decommissioned* center is that a deactivated center can be activated later through admin portal as required by the country. But a decommissioned center cannot be bought into commission again as decommission refers to a permanent shutdown. To reactivate such a center (if decommissioned by mistake), the admin must directly update the database through the back-end scripts.
 
+### Device Management
+* Admin Portal allows an administrator to manage the Devices a country will use for registering residents.
+* These include device for bio-metric capture (Fingerprint, Iris, Web camera etc.) 
+* Device management includes Viewing, Creating, Editing, Activating, Deactivating and Decommissioning of Devices.
+* An Administrator should have the role of a Zonal Admin/Global Admin to do this. A Zonal Admin can manage only Devices under his/her administrative zone.
+* Device information will listed irrespective of the logged in language. Its has all the functionality of CRUD.
+
+**View Devices**
+
+![](_images/admin-view-center.png)
+
+To view the list of devices,
+1. Click Resources-> Devices
+2. For a detailed view, click on a particular Device. 
+This detailed view shows all the details of a Device in all the country configured languages.
+3. To apply a filter, click **Filter**.
+The Admin can filter the list of Registration Centers based on parameters like *Device Name, Mac Address, Serial Number, Status, Map Status, Device Type, Device Spec ID.
+
+![](_images/admin-view-center-filter.png)
+
+* The Admin portal allows an administrator to view the list of all Devices available in the jurisdiction of his/her administrative zone. 
+* The system does not fetch the details of Decommissioned Devices but only Active and Inactive Devices. 
+* Admin portal UI shows the list of Devices in only the country configured Primary Language.
+
+#### Machine Management
+* Admin portal allows an administrator to manage machines the country will use for registering residents. 
+* In MOSIP, a machine is a device on which the registration client is installed.
+* Machine management includes viewing, creating, editing, activating, deactivating and decommissioning of machines. 
+* An administrator should have the role of a zonal admin/global admin to do this. An admin can manage only machines under his/her administrative zone.
+
+**View Machines**
+
+![](_images/admin-view-center.png)
+
+To view the list of machines,
+1. Click Resources-> Center
+2. For a detailed view, click on a particular center name. 
+This detailed view shows all the details of a registration center in all the country configured languages.
+3. To apply a filter, click **Filter**.
+The administrator can filter the list of registration centers based on parameters like *Center name, Center type, Status, Location hierarchy (all location levels)*.
+
+* The admin portal allows an admin to view the list of all registration centers available in the jurisdiction of his/her administrative zone. The system does not fetch the details of decommissioned registration centers but only active and inactive centers. 
+* Admin portal UI shows the list of registration centers in only the country configured primary language.
+* If the admin user does not find the center, they can check the *Center not available in other language*. Using this option, they can clone the information available, 
+otherwise they can create their own center.
+ 
+![](_images/admin-view-center-filter.png)
 
 
 
