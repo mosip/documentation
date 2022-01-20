@@ -103,13 +103,13 @@ To view the list of centers,
 This detailed view shows all the details of a registration center in all the country configured languages.
 3. To apply a filter, click **Filter**.
 The administrator can filter the list of registration centers based on parameters like *Center name, Center type, Status, Location hierarchy (all location levels)*.
+ 
+![](_images/admin-view-center-filter.png)
 
 * The admin portal allows an admin to view the list of all registration centers available in the jurisdiction of his/her administrative zone. The system does not fetch the details of decommissioned registration centers but only active and inactive centers. 
 * Admin portal UI shows the list of registration centers in only the country configured primary language.
 * If the admin user does not find the center, they can check the *Center not available in other language*. Using this option, they can clone the information available, 
 otherwise they can create their own center.
- 
-![](_images/admin-view-center-filter.png)
 
 **Create Center**
 
@@ -126,7 +126,6 @@ To create a center,
 * While defining centers, an admin can also define the working days of the week for a center and any exceptional holidays that might be applicable for a particular center.
 * While entering data through UI in multiple languages, the dropdown values and numeric values entered in primary language gets automatically captured in all language. But the text fields (e.g., center name) needs to be manually input in all the languages.
 
-
 **Update Center**
 
 ![](_images/admin-edit-center.png)
@@ -137,7 +136,7 @@ To update a center,
 3. Make the changes in the required fields.
 4. Click **Update**.
 
-* Once a center is created, an admin can edit a center deatail if required. The update can include adding the details in another required language that were missed during creation of the center or changing the details of a center itself.
+* Once a center is created, an admin can edit a center detail if required. The update can include adding the details in another required language that were missed during creation of the center or changing the details of a center itself.
 * All the attributes mentioned in the 'Create center' section can be updated for a center.
 
 **Activate/Deactivate/Decommission center**
@@ -162,7 +161,7 @@ To activate/deactivate/decommission a center,
 
 **View Devices**
 
-![](_images/admin-view-center.png)
+![](_images/admin-view-device.png)
 
 To view the list of devices,
 1. Click Resources-> Devices
@@ -171,11 +170,48 @@ This detailed view shows all the details of a Device in all the country configur
 3. To apply a filter, click **Filter**.
 The Admin can filter the list of Registration Centers based on parameters like *Device Name, Mac Address, Serial Number, Status, Map Status, Device Type, Device Spec ID.
 
-![](_images/admin-view-center-filter.png)
+![](_images/admin-view-device-filter.png)
 
 * The Admin portal allows an administrator to view the list of all Devices available in the jurisdiction of his/her administrative zone. 
 * The system does not fetch the details of Decommissioned Devices but only Active and Inactive Devices. 
 * Admin portal UI shows the list of Devices in only the country configured Primary Language.
+
+**Create Device**
+
+![](_images/admin-create-device.png)
+
+To create a device,
+1. Click Resources-> Devices
+2. Enter the mandatory details for creating the device.
+3. Click **Create**.
+A Device can be created without any language constraints.
+
+A Device is created can be created with the following attributes: Device ID, Device Name, Mac Address, Serial Number, Device Spec ID and Administrative Zone the Device belongs to. A Device can be mapped to the Administrative Zone it belongs to.
+
+**Update Device**
+
+![](_images/admin-edit-device.png)
+
+To update a Device,
+1. Click Resources-> Devices
+2. Select the **Edit** option from the Actions menu against the Device name.
+3. Make the required changes in the fields.
+4. Click **Edit** and Confirm the changes.
+
+**Activate/Deactivate/Decommission Device**
+
+![](_images/admin-deactivate-device.png)
+
+To activate/deactivate/decommission a Device,
+1. Click Resources-> Devices
+2. Select the **Deactivate/Decommission** option from the Actions menu against the Device name.
+3. On the confirmation pop-up, click **Confirm**.
+
+* Deactivation refers to a temporary shut down while Decommission refers to a permanent shut down of the Device. 
+* Decommissioning a Device also automatically deactivates the Machine.
+* In cases, where a Device is mapped to any Center, the portal will not allow the Admin to decommission such a Device.
+* Difference between Deactivated and Decommissioned Device is that a Deactivated Device can later be Activated through Admin Portal after a period as required by the country. But a Decommissioned Device cannot be bought into commission again as decommission refers to a permanent shutdown. To reactivate such a Device (if decommissioned by mistake), the Admin must directly update the database through the back-end scripts.
+
 
 #### Machine Management
 * Admin portal allows an administrator to manage machines the country will use for registering residents. 
@@ -185,21 +221,30 @@ The Admin can filter the list of Registration Centers based on parameters like *
 
 **View Machines**
 
-![](_images/admin-view-center.png)
+![](_images/admin-view-machine.png)
 
 To view the list of machines,
-1. Click Resources-> Center
-2. For a detailed view, click on a particular center name. 
-This detailed view shows all the details of a registration center in all the country configured languages.
+1. Click Resources-> Machines
+2. For a detailed view, click on a particular machine name. 
+This detailed view shows all the details of a registration machine in all the country configured languages.
 3. To apply a filter, click **Filter**.
-The administrator can filter the list of registration centers based on parameters like *Center name, Center type, Status, Location hierarchy (all location levels)*.
+The administrator can filter the list of machines based on parameters like *Machine name, Mac address, Serial number, Status, Machine type.*
 
-* The admin portal allows an admin to view the list of all registration centers available in the jurisdiction of his/her administrative zone. The system does not fetch the details of decommissioned registration centers but only active and inactive centers. 
-* Admin portal UI shows the list of registration centers in only the country configured primary language.
-* If the admin user does not find the center, they can check the *Center not available in other language*. Using this option, they can clone the information available, 
-otherwise they can create their own center.
- 
-![](_images/admin-view-center-filter.png)
+![](_images/admin-view-machine-filter.png)
+
+* The admin portal allows an admin to view the list of all the machines available in the jurisdiction of his/her administrative zone. 
+* The system does not fetch the details of decommissioned machines but only shows the active and inactive machines. 
+* Admin portal UI shows the list of machines in only the country configured primary language.
+
+ **Create Machines**
+![](_images/admin-create-machine.png)
+
+To create a machine,
+1. Click Resources-> Machines
+2. Enter the mandatory details for creating the machine.
+3. Click **Create**.
+A Machine can be created 
+
 
 
 
