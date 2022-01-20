@@ -214,7 +214,7 @@ To activate/deactivate/decommission a Device,
 * Difference between Deactivated and Decommissioned Device is that a Deactivated Device can later be Activated through Admin Portal after a period as required by the country. But a Decommissioned Device cannot be bought into commission again as decommission refers to a permanent shutdown. To reactivate such a Device (if decommissioned by mistake), the Admin must directly update the database through the back-end scripts.
 
 
-#### Machine Management
+#### MACHINE MANAGEMENT
 * Admin portal allows an administrator to manage machines the country will use for registering residents. 
 * In MOSIP, a machine is a device on which the registration client is installed.
 * Machine management includes viewing, creating, editing, activating, deactivating and decommissioning of machines. 
@@ -272,13 +272,16 @@ To activate/deactivate/decommission a Machine,
 
 An admin can deactivate or decommission a machine through the admin portal.
 
-### User Management
+### USER MANAGEMENT
 
 * MOSIP uses Keycloak as an IAM (Identity access management tool) for managing Users. These users are internal users of MOSIP including Registration Officers, Registration Supervisors, Zonal Admins, Global Admins etc.
 * User Management includes Viewing, Creating, Editing, Activating, Deactivating and Blacklisting of Users.
 
 #### User Zone Mapping
 * Once the user is created in KeyCloak, they need to be mapped to a zone to get access to specific information available in that zone.
+* Administrative Zones are virtual boundaries which a country can define to manage their resources better during registrations. These resources includes Centers, Users, Machines and Devices. 
+* These zones can be defined in a hierarchical fashion and a country can allocate resources to such zones based on their requirements.
+* Resources under each zone is managed by a Zonal Admin. This is done by assigning an Administrative zone to the Zonal Admin during user creation. These Zonal Admins can exist at any zonal hierarchy. (For e.g, a Zonal Admin can directly be mapped to the whole country as a Zone or can be mapped to a significantly smaller zone such as a city). Thus these resources when mapped to an Administrative Zone can only be managed by the Admin of that Zone.
 
 **View User Zone Mapping(s)**
 
@@ -310,7 +313,10 @@ Note: If the center is mapped already, the admin needs to unmap the center to re
 
 #### User Center Mapping
 
-Once the user is mapped to a zone, they will be listed in the screen below. Now, the user will be mapped to a center to be able to manage their assigned center.
+* Once the user is mapped to a zone, they will be listed in the screen below. Now, the user will be mapped to a center to be able to manage their assigned center.
+* Admin portal allows an admin to map users to a center. This mapping specifies as to which center the user will be used in. 
+* A user can only be mapped to a center which belongs under the user’s Administrative Zone.
+* A user can later be un-mapped from the Center in cases where a User is needed to be moved to another Center. In such cases, the user will later need to be mapped to the new center. In case the user is required to be mapped to a Registration Center outside the Administrative Zonal restriction, the Administrative Zone of the user must be changed.
 
 **View User Center Mapping(s)**
 
@@ -326,12 +332,34 @@ To map a user to a center,
 3. Select the *Center name* from the dropdown against the User Name, Administrative Zone.
 4. Click **Save**.
 
-* Admin portal allows an admin to map users to a center. This mapping specifies as to which center the user will be used in. 
-* A user can only be mapped to a center which belongs under the user’s Administrative Zone.
-* A user can later be un-mapped from the Center in cases where a User is needed to be moved to another Center. In such cases, the user will later need to be mapped to the new center. In case the user is required to be mapped to a Registration Center outside the Administrative Zonal restriction, the Administrative Zone of the user must be changed.
+### PACKET STATUS (based on RID)
+* A Registration packet generated in Registration Client is sent to Registration Processor for further processing and UIN generation. 
+* Using the Portal, A Registration Admin can view the status of a packet by entering the RID of the packet. 
+* The packet status will contain all the stages the packet has passed through along with the last stage the packet is in. 
+* In case the packet has not been processed or is marked for *Re-Send/Re-Register*, the admin will be able to view specific comments indicating the reason for that particular status.
 
+![](_images/admin-packet-status.png)
 
+### PAUSE/ RESUME RID 
+* The Registration Admin has the privilege to view the registration packets that gave been paused for getting processed further.
+* They make perform certain validations and if need be, they can resume the packet processing.
 
+![](_images/admin-packet-status.png)
+
+### RETRIEVE LOST RID
+The Registration Admin can use this feature to retrieve lost RID. For instance, if the resident did not provide any valid email and/or phone number and has lost the RID slip received during the registration, in order to find their RID details, the resident contact MOSIP helpline and share details such as name, centre name, registration date and postal code to the admin, who will use the lost RID feature and try to retrieve the RID number.
+
+A few filters may be applied to retrieve the RID.
+
+![](_images/admin-retrieve-lost-rid.png)
+
+Note: This feature is currently under development.
+
+### MASTER DATA MANAGEMENT
+* Admin portal allows an administrator to manage Masterdata applicable for a Country.
+* These data includes list of Genders, list of Holidays, Templates etc. This data is used by all the modules across MOSIP which includes Pre-Registration, Registration Client, Registration processor and ID-Authentication. An Administrator should have the role of a Global Admin to manage Masterdata.
+
+![](_images/admin-master-data.png)
 
 
 
