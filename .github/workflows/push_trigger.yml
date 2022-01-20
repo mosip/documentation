@@ -24,10 +24,10 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      max-parallel: 2
+      max-parallel: 4
       matrix:
-#        names: [partner-management-services, registration, admin-services, resident-services, commons, audit-manager, pre-registration, id-repository, durian, packet-manager]
-        names: [packet-manager, durian]
+        names: [partner-management-services, registration, admin-services, resident-services, commons, audit-manager, pre-registration, id-repository, durian, packet-manager]
+#        names: [packet-manager, durian]
 
     steps:
       - name: Set up JDK 11
