@@ -362,17 +362,75 @@ Note: This feature is currently under development.
 
 ![](_images/admin-master-data.png)
 
-**Manage Master Data**
+#### Manage Master Data**
 
-*Common
+***Common***
 
-Center Types
-Blocklisted Words
-List of Holidays
+**Center Types**
+* Registration Center Type indicates the type of Centers a country can have. Some examples can be Regular, Mobile, temporary etc. 
+* The Global Admin can view list of all the available Registration Center Types on the Admin UI portal. 
+* A registration center while creation, can be assigned to a Center Type as defined by the country. 
+* The portal shows both activated or deactivated Center Types. 
+* The Admin can filter the list of Center Types based on Status (Drop-down).
+
+View center type
+
+![](_images/admin-master-data.png)
+
+Create center type
+
+![](_images/admin-center-type-create.png)
+
+1. Click Master Data-> Center Types
+2. Click **+Create**
+3. Enter the necessary details
+4. Click **Save**
+
+
+
+Edit\Deactivate Center type
+Admin Portal also allows modification of any detail of a Registration Center Type. 
+
+(Although the Portal will allow creation of a Registration Center Type in only primary language but will not allow activation of that Registration Center Type until data for that Type is not updated for all the languages. While entering the data, the text fields (e.g., Registration Center Type Name) needs to be manually input in all the languages. After successful creation, a Registration Center Type code will be generated.)
+
+
+
+Blocklisted Words -
+* The Global Admin can view list of all the available Blocklisted words on the Admin UI portal. 
+* The portal shows both activated or deactivated Blocklisted words. Blocklisted words in the only Masterdata which is language independent and will show the data in all the languages unlike the rest of the Masterdata tables which will show data only in the logged in language. The Admin can filter the list of Blocklisted Words based on Status (Drop-down), Blocklisted Words (Search Box).
+* Admin can also add\edit\deactivate blocklisted words.
+* Deactivation of a Blocklisted Word can be done if the country feels the Blocklisted word is not applicable anymore. 
+
+![](_images/admin-blocklisted-words.png)
+
+
+
+
+
+List of Holidays 
+List of Holiday defines all the public holiday a applicable for a country. These holidays are on of the criteria for Pre-Registration to generate appointments. The holidays only define the public holidays and not the week-end days for the country. The Global Admin can view list of all the defined Holidays on the Admin UI portal. The portal shows both activated or deactivated Holidays. The Admin can filter the list of Holidays based on Status (Drop-down), Date Range (Search Box) and Name (Search Box).
+Create/Update Holidays
+Using the portal, the Global Admin can create a Holiday providing the Document Category name, date, location, and description if applicable. A Holiday needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Holiday in only primary language but will not allow activation of that Holiday until data for that Holiday is not updated for all the languages. A deactivated Holiday will not be considered for appointment generation in Pre-Registration While entering the data, the text fields (e.g., Holiday Name) needs to be manually input in all the languages. After successful creation, a Holiday ID will be generated.
+Admin Portal also allows modification of any detail of a Holiday. The modification includes either adding the details in another language that were missed during creation of the Holiday or changing the details of a Holiday itself including name, description etc.
+
 Templates
 
+List of Holiday defines all the public holiday a applicable for a country. These holidays are on of the criteria for Pre-Registration to generate appointments. The holidays only define the public holidays and not the week-end days for the country. The Global Admin can view list of all the defined Holidays on the Admin UI portal. The portal shows both activated or deactivated Holidays. The Admin can filter the list of Holidays based on Status (Drop-down), Date Range (Search Box) and Name (Search Box).
+Create/Update Holidays
+Using the portal, the Global Admin can create a Holiday providing the Document Category name, date, location, and description if applicable. A Holiday needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Holiday in only primary language but will not allow activation of that Holiday until data for that Holiday is not updated for all the languages. A deactivated Holiday will not be considered for appointment generation in Pre-Registration While entering the data, the text fields (e.g., Holiday Name) needs to be manually input in all the languages. After successful creation, a Holiday ID will be generated.
+Admin Portal also allows modification of any detail of a Holiday. The modification includes either adding the details in another language that were missed during creation of the Holiday or changing the details of a Holiday itself including name, description etc.
+
 Dynamic Field
+
 Create New Dynamin Field
+
+Gender
+View Gender Types
+List of Gender Types contains all the Gender types defined by a country. The Global Admin can view list of all the defined Genders on the Admin UI portal. The portal shows both Activated or Deactivated Gender types.
+Create/Update Gender Types
+Using the portal, the Global Admin can create a Gender Type providing the Gender Type nameand description if applicable. A Gender Type needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Gender Type in only primary language but will not allow activation of that Gender Type until data for that Gender Type is not updated for all the languages. A deactivated Gender Type will not show up on the Pre-Registration/Registration Client UI. While entering the data, the text fields (e.g., Gender Type Name) needs to be manually input in all the languages. After successful creation, a Gender Type code will be generated.
+Admin Portal also allows modification of any detail of a Gender Type. The modification includes either adding the details in another language that were missed during creation of the Gender Type or changing the details of a Gender Type itself including name, description etc.
+
 Registration Type 
 Mode of Claim
 User preferred language
@@ -385,13 +443,47 @@ Device Specs
 Device Types
 
 Machine Definitions
+
+
 Machine Specs
 Machine Types
+
+View Machine Types
+Machine Type indicates the type of Machines a country uses to take registrations. The Global Admin can view list of all the Machine Types on the Admin UI portal. A Machine while creation, can be assigned to a Machine Types as defined by the country. The portal shows both activated or deactivated Machine Types.
+Create/Update Machine Types
+Using the portal, the Global Admin can create a Machine type providing the Machine type name and description if applicable.
+A Machine type needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Machine type in only primary language but will not allow activation of that Machine type until data for that Type is not updated for all the languages. While entering the data, the text fields (e.g., Machine type Name) needs to be manually input in all the languages. After successful creation, a Machine type code will be generated.
+Admin Portal also allows modification of any detail of a Machine Type. The modification includes either adding the details in another language that were missed during creation of the Machine Type or changing the details of a Machine Type itself including name, description etc.
+View Machine Specifications
+Machine specification indicates the Brand, Make and Model of a Machine a country uses to take registrations. The Global Admin can view list of all the Machine Specifications on the Admin UI portal. A Machine while creation, can be assigned to a Machine Specification as required by the country. The portal shows both activated or deactivated Machine Specification. The Admin can filter the list of Machine Specifications based on Status (Drop-down), Name (Search Box), Brand (Search Box), Model (Search Box), and Machine type (Search Box).
+Create/Update Machine Specifications
+Using the portal, the Global Admin can create the Machine Specification providing the Machine Specification name, brand, make and model. A Machine Specification needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Machine Specification in only primary language but will not allow activation of that Machine Specification until data for that Specification is not updated for all the languages. While entering the data, the text fields (e.g., Machine Specification Name) needs to be manually input in all the languages. After successful creation, a Machine Specification ID will be generated.
+Admin Portal also allows modification of any detail of a Machine Specification. The modification includes either adding the details in another language that were missed during creation of the Machine Specification or changing the details of a Machine Specification itself including name, brand etc.
 
 Document Definitions
 Document Types
 Document Categories
 Document Categoty- Type Mapping
+
+Manage Document Type (View, Create, Update, Activate, Deactivate)
+Document types is the list of Documents a country will configure for the users to give during registrations.
+View Document Types
+The Global Admin can view list of all the available Document Types on the Admin UI portal. The portal shows both activated or deactivated Document Types. The Admin can filter the list of Document Types based on Document Name(Search box) and Status (Drop-down).
+Create/Update Document Types
+Using the portal, the Global Admin can create the document type providing the Document name and description if applicable. A Document type needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Document type in only primary language but will not allow activation of that Document type until data for that Type is not updated for all the languages. A deactivated document type will not show up on the Pre-Registration/Registration Client UI. While entering the data, the text fields (e.g., Document Type Name) needs to be manually input in all the languages. After successful creation, a Document type code will be generated.
+Admin Portal also allows modification of any detail of a Document type. The modification includes either adding the details in another language that were missed during creation of the Document type or changing the details of a Document Type itself including name, description etc.
+Activate/Deactivate Document types
+The portal allows Zonal Admin to activate or deactivate a document type. Deactivation of a document type can be done if the country feels the document type is not applicable anymore. Thus, deactivated documents does now show up on the Pre-Registration and Registration Client UI. The Activation/Deactivation functionality can be accessed from both the list view or the detail view page of Document Types
+View Document Categories
+The Global Admin can view list of all the available Document Categories as created by the Country in Masterdata. The portal shows both activated or deactivated Document Categories. The Admin can filter the list of Document Categories based on Status (Drop-down).
+Create/Update Document Categories
+Using the portal, the Global Admin can create the document category providing the Document Category name and description if applicable. A Document category needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Document category in only primary language but will not allow activation of that Document category until data for that Cateagory is not updated for all the languages. A deactivated document category will not show up on the Pre-Registration/Registration Client UI. While entering the data, the text fields (e.g., Document category Name) needs to be manually input in all the languages. After successful creation, a Document category code will be generated.
+Admin Portal also allows modification of any detail of a Document category . The modification includes either adding the details in another language that were missed during creation of the Document category or changing the details of a Document category itself including name, description etc.
+View mappings of Document Categories and Document Types
+The portal allows an Global Admin to view Document Categories along with its mapped and un-mapped Document Types. From the view screen itself, the Global Admin can map or un-map the Documents from a Document Category.
+Map/Un-map Document Type to Document Category
+The portal allows the Global Admin to map the available Document types to a Document category. This feature helps the country define as to which document falls under which category. Each Document can be mapped to multiple categories depending on the country's requirement.
+
 
 ### BULK UPLOAD
 
