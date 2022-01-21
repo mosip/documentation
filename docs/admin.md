@@ -16,6 +16,14 @@ Post setup, the following operations can be done using the Admin application:
 * Bulk operations
 * Packet Status check
 
+### Types of Master Data with their relationships 
+
+Relationship diagram
+
+Data Relationship 
+Explain type of data and roles required to manage them
+By default, the system provides the roles mentioned below
+
 ## Services
 
 Kernel Master Data Service
