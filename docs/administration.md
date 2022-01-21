@@ -1,31 +1,20 @@
 # Administrator' User Guide
 
 ## Overview
-Admin application is a web-based application used by a privileged group of administrative personnel to manage master data, resources, etc. Admin portal supports multiple languages. An admin user can login with their preferred language amongst the list of languages configured by the country.
+To get started with using the Admin portal, an admin user must be assigned to a zone.
 
-The MOSIP platform is configured via the Admin application. In MOSIP, a country is assumed to be divided into Zones and further into sub-zones(hierarchial data) to ensure that the zonal and sub-zonal data is handled by authoritative personnel belonging to that particular zone. Hierarchical zones enable you to establish **parent-child zone** relationships, allowing profile attributes, rights, and roles to be inherited down the zone hierarchy.
+### Creation of First Admin user
 
-The module provides a single user interface to administer the MOSIP platform.  On initial platform installation, data and configurations may be uploaded from CSV files.  To get started with using the Admin portal, an admin user must be assigned to a zone.
-
-### Types of data managed in Admin UI
-
-Data Relationship 
-Explain type of data and roles required to manage them
-By default, the system provides the roles mentioned below
-
-
-### Pre-requisites
-
-1. Setup of hierarchial zones(using DML scripts)
-2. Create Admin roles in KeyCloak(using scripts)
-3. Create first admin user in KeyCloak(scripts available)
-4. Assign first user to root zone(scripts available)
+1. Setup of hierarchial zones (using DML scripts)
+2. Create Admin roles in KeyCloak (using scripts)
+3. Create first admin user in KeyCloak (scripts available)
+4. Assign first user to root zone (scripts available)
 
 ### First user login
 
  ![](_images/admin-login.png)
  
-1. Select the preferred language in the login screen
+1. Select the preferred language in the Admin login screen
 2. Login with the KeyCloak credentials.
 3. Admin user can view the Home page.
 
@@ -45,9 +34,14 @@ Note: The admin portal integrates with the KeyCloak IAM to store users and provi
   
 The options seen on the left navigation pane is displayed or hidden based on the role of the logged in admin user.
 
-First user actions
+### First user actions
 
-When the MOSIP platform gets initialized, there are default configurations and seed data setup. Post installation, following operations can be done using the Admin application:
+1. Map the other users(admins/registration operators/supervisors) to respective zones
+2. Create centers and assign the users to a particular center
+
+Note: Ensure to revoke the first super user's zone mapping and role after first user actions are completed.
+
+Post setup, the following operations can be done using the Admin application:
 * Center management
 * Device management
 * Machine management
@@ -61,7 +55,7 @@ Registration related services
 * Retrieve Lost RID
 * Pause/ Resume RID
 
-### Admin Roles
+### Admin Roles and their default accessibility matrix
 
 * GLOBAL_ADMIN
 * ZONAL_ADMIN
@@ -83,15 +77,12 @@ Based on the role, following are the menu list accessible to the admin users:
 |UploadOtherDomainCertificate|UploadCertificate||||
 ||UploadOtherDomainCertificate||||
 
-### What and how to configure Admin UI
-
 ### RESOURCE MANAGEMENT
 
 #### Center Management
 * Admin portal allows an administrator to manage registration centers setup by the country for taking registrations of the residents.
 * Center management includes functionalities like viewing, creating, editing, activating, deactivating and decommission of centers. 
-* To be able to perform the above activites, an administrator should have the role of a zonal admin/global admin. 
-* A zonal admin/global admin can manage only centers under his/her administrative zone.
+* An admin can manage only centers under his/her administrative zone.
 
 **View Center**
 
@@ -100,16 +91,14 @@ Based on the role, following are the menu list accessible to the admin users:
 To view the list of centers,
 1. Click Resources-> Center
 2. For a detailed view, click on a particular center name. 
-This detailed view shows all the details of a registration center in all the country configured languages.
+This detailed view shows all the details of a registration center in the logged in language.
 3. To apply a filter, click **Filter**.
 The administrator can filter the list of registration centers based on parameters like *Center name, Center type, Status, Location hierarchy (all location levels)*.
  
 ![](_images/admin-view-center-filter.png)
 
-* The admin portal allows an admin to view the list of all registration centers available in the jurisdiction of his/her administrative zone. The system does not fetch the details of decommissioned registration centers but only active and inactive centers. 
-* Admin portal UI shows the list of registration centers in only the country configured primary language.
-* If the admin user does not find the center, they can check the *Center not available in other language*. Using this option, they can clone the information available, 
-otherwise they can create their own center.
+* The system does not fetch the details of decommissioned registration centers but only active and inactive centers. 
+* If the admin does not find a center, they can click the *Center not available in logged in language* button. Clicking on this button, displays the list of centers that are already created in other languages. On selecting a particular center, the information will be auto-populated data in the Create page and be made available to the admin to modify language specific fields to create a center in the current logged in language.
 
 **Create Center**
 
@@ -120,11 +109,10 @@ To create a center,
 2. Enter the mandatory details.
 3. Click **Create**.
 
-* An admin can create a center by providing data in the fields marked as mandatory. A center needs to be created in both configured primary and secondary language. Although the portal will allow creation of a center in only primary language but will not allow activation of that center until data for that center is not updated for all the languages.
+* An admin can create a center by providing data in the fields marked as mandatory. 
 * A center is created with the following attributes: Center name, center type, address, latitude, longitude, location, contact phone, contact person, working hours, no. of kiosk, center start time, center end time, lunch start time, lunch end time, time zone, holiday zone and administrative zone the center belongs to.
-* A center can only be mapped to the administrative zone at the lowest zonal hierarchy. 
+* A center can only be mapped to the configured location hierarchy level. 
 * While defining centers, an admin can also define the working days of the week for a center and any exceptional holidays that might be applicable for a particular center.
-* While entering data through UI in multiple languages, the dropdown values and numeric values entered in primary language gets automatically captured in all language. But the text fields (e.g., center name) needs to be manually input in all the languages.
 
 **Update Center**
 
@@ -132,12 +120,11 @@ To create a center,
 
 To update a center,
 1. Click Resources-> Center
-2. Select the **Edit** option from the Actions menu against the center name.
+2. Select the **Edit** option from the Actions menu against a center name.
 3. Make the changes in the required fields.
 4. Click **Update**.
 
-* Once a center is created, an admin can edit a center detail if required. The update can include adding the details in another required language that were missed during creation of the center or changing the details of a center itself.
-* All the attributes mentioned in the 'Create center' section can be updated for a center.
+*Note - Updates made to language specific fields updates data only for that language in the database while updates made to non-language dependent fileds updates data against all the language entries for that center. 
 
 **Activate/Deactivate/Decommission center**
 
@@ -150,14 +137,16 @@ To activate/deactivate/decommission a center,
 
 * Deactivation refers to a temporary shut down while decommission refers to a permanent shut down of the center. 
 * Decommissioning a center also automatically deactivates the center. In cases where a center has some resources mapped to it (e.g. machines, devices or users), the portal will not allow the admin to decommission such a center.
-* The primary difference between *deactivated* and *decommissioned* center is that a deactivated center can be activated later through admin portal as required by the country. But a decommissioned center cannot be bought into commission again as decommission refers to a permanent shutdown. To reactivate such a center (if decommissioned by mistake), the admin must directly update the database through the back-end scripts.
+* The primary difference between *deactivated* and *decommissioned* center is that a deactivated center can be activated later through admin portal as required by the country. But a decommissioned center cannot be bought into commission again as decommission refers to a permanent shutdown.
+* Activation/Deactivation/Decommission of a center in one language will be applied to same center created in all other languages.
 
 ### Device Management
+
+**Note: Device entity is language agnostic.**
+
 * Admin Portal allows an administrator to manage the Devices a country will use for registering residents.
-* These include device for bio-metric capture (Fingerprint, Iris, Web camera etc.) 
+* These include devices for bio-metric capture (Fingerprint, Iris, Web camera, etc.), printers, scanners.
 * Device management includes Viewing, Creating, Editing, Activating, Deactivating and Decommissioning of Devices.
-* An Administrator should have the role of a Zonal Admin/Global Admin to do this. A Zonal Admin can manage only Devices under his/her administrative zone.
-* Device information will listed irrespective of the logged in language. Its has all the functionality of CRUD.
 
 **View Devices**
 
@@ -166,7 +155,6 @@ To activate/deactivate/decommission a center,
 To view the list of devices,
 1. Click Resources-> Devices
 2. For a detailed view, click on a particular Device. 
-This detailed view shows all the details of a Device in all the country configured languages.
 3. To apply a filter, click **Filter**.
 The Admin can filter the list of Registration Centers based on parameters like *Device Name, Mac Address, Serial Number, Status, Map Status, Device Type, Device Spec ID.
 
@@ -174,7 +162,6 @@ The Admin can filter the list of Registration Centers based on parameters like *
 
 * The Admin portal allows an administrator to view the list of all Devices available in the jurisdiction of his/her administrative zone. 
 * The system does not fetch the details of Decommissioned Devices but only Active and Inactive Devices. 
-* Admin portal UI shows the list of Devices in only the country configured Primary Language.
 
 **Create Devices**
 
@@ -185,9 +172,8 @@ To create a device,
 2. Enter the mandatory details for creating the device.
 3. Click **Create**.
 
-A Device can be created without any language constraints.
-
-A Device is created can be created with the following attributes: Device ID, Device Name, Mac Address, Serial Number, Device Spec ID and Administrative Zone the Device belongs to. A Device can be mapped to the Administrative Zone it belongs to.
+* A Device can be created with the following attributes: Device ID, Device Name, Mac Address, Serial Number, Device Spec ID and Administrative Zone the Device belongs to. 
+* A Device needs to be mapped to the Administrative Zone it belongs to.
 
 **Update Devices**
 
@@ -211,14 +197,12 @@ To activate/deactivate/decommission a Device,
 * Deactivation refers to a temporary shut down while Decommission refers to a permanent shut down of the Device. 
 * Decommissioning a Device also automatically deactivates the Machine.
 * In cases, where a Device is mapped to any Center, the portal will not allow the Admin to decommission such a Device.
-* Difference between Deactivated and Decommissioned Device is that a Deactivated Device can later be Activated through Admin Portal after a period as required by the country. But a Decommissioned Device cannot be bought into commission again as decommission refers to a permanent shutdown. To reactivate such a Device (if decommissioned by mistake), the Admin must directly update the database through the back-end scripts.
-
+* Difference between Deactivated and Decommissioned Device is that a Deactivated Device can later be Activated through Admin Portal after a period as required by the country.   A Decommissioned Device cannot be bought into commission again as decommission refers to a permanent shutdown. 
 
 #### MACHINE MANAGEMENT
-* Admin portal allows an administrator to manage machines the country will use for registering residents. 
+* Admin portal allows an administrator to manage the machines a country will use for registering residents. 
 * In MOSIP, a machine is a device on which the registration client is installed.
 * Machine management includes viewing, creating, editing, activating, deactivating and decommissioning of machines. 
-* An administrator should have the role of a zonal admin/global admin to do this. An admin can manage only machines under his/her administrative zone.
 
 **View Machines**
 
@@ -245,6 +229,7 @@ To create a machine,
 1. Click Resources-> Machines
 2. Enter the mandatory details for creating the machine.
 3. Click **Create**.
+
 * A Machine can be created with the attributes like *Machine ID, machine name, mac address, serial number, machine spec ID and administrative zone* the machine belongs to.
 * While entering data through UI in multiple languages, the dropdown values and numeric values entered in primary language gets automatically captured in all language.
 * But the text fields (e.g., machine name) needs to be manually input in all the languages. A machine can be mapped to the administrative zone which is at the any zonal hierarchy.
@@ -253,7 +238,7 @@ To create a machine,
 
 ![](_images/admin-edit-machine.png)
 
-To update a Machine,
+To update a machine,
 1. Click Resources-> Machines
 2. Select the **Edit** option from the Actions menu against the machine name.
 3. Make the required changes in the fields.
