@@ -356,12 +356,58 @@ A few filters may be applied to retrieve the RID.
 Note: This feature is currently under development.
 
 ### MASTER DATA MANAGEMENT
-* Admin portal allows an administrator to manage Masterdata applicable for a Country.
-* These data includes list of Genders, list of Holidays, Templates etc. This data is used by all the modules across MOSIP which includes Pre-Registration, Registration Client, Registration processor and ID-Authentication. An Administrator should have the role of a Global Admin to manage Masterdata.
+* Admin portal allows an administrator to manage the Masterdata applicable for a country.
+* These data includes list of Genders, list of Holidays, Templates etc. This data is used by all the modules across MOSIP which includes Pre-Registration, Registration Client, Registration processor and ID-Authentication.
+* An Administrator should have the role of a Global Admin to manage Masterdata.
 
 ![](_images/admin-master-data.png)
 
+**Manage Master Data**
 
+*Common
+
+Center Types
+Blocklisted Words
+List of Holidays
+Templates
+
+Dynamic Field
+Create New Dynamin Field
+Registration Type 
+Mode of Claim
+User preferred language
+residenceStatus
+Blood Type
+Marital Status
+
+Device Definitions
+Device Specs
+Device Types
+
+Machine Definitions
+Machine Specs
+Machine Types
+
+Document Definitions
+Document Types
+Document Categories
+Document Categoty- Type Mapping
+
+### BULK UPLOAD
+
+Master Data
+
+Packets
+
+### KeyManager
+
+GenerateCSR
+
+GetCerificate
+
+UploadCertificate
+
+UploadOtherDocumentCertificate
 
 
 
