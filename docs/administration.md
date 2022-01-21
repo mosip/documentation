@@ -1,4 +1,4 @@
-# Admin User Guide
+# Administrator' User Guide
 
 ## Overview
 Admin application is a web-based application used by a privileged group of administrative personnel to manage master data, resources, etc. Admin portal supports multiple languages. An admin user can login with their preferred language amongst the list of languages configured by the country.
