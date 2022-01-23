@@ -199,6 +199,19 @@ To activate/deactivate/decommission a Device,
 * In cases, where a Device is mapped to any Center, the portal will not allow the Admin to decommission such a Device.
 * Difference between Deactivated and Decommissioned Device is that a Deactivated Device can later be Activated through Admin Portal after a period as required by the country.   A Decommissioned Device cannot be bought into commission again as decommission refers to a permanent shutdown. 
 
+**Map/Un-map/Re-map Device to a Center**
+
+![](_images/admin-map-device-center.png)
+
+To map/un-map/re-map device to a center,
+1. Click Resources-> Devices
+2. Select the device and choose **Center name** from the dropdowm.
+3. Click **Edit** and confirm.
+
+* Admin portal allows an Admin to map/un-map each Device to a Center.
+* This mapping specifies as to which Center the Device will be used in.
+* A Device can only be mapped to a Center which belongs under the Device’s Administrative Zone.
+
 #### MACHINE MANAGEMENT
 * Admin portal allows an administrator to manage the machines a country will use for registering residents. 
 * In MOSIP, a machine is a device on which the registration client is installed.
@@ -211,7 +224,7 @@ To activate/deactivate/decommission a Device,
 To view the list of machines,
 1. Click Resources-> Machines
 2. For a detailed view, click on a particular machine name. 
-This detailed view shows all the details of a registration machine in all the country configured languages.
+This detailed view shows all the details of a registration machine in the logged in language.
 3. To apply a filter, click **Filter**.
 The administrator can filter the list of machines based on parameters like *Machine name, Mac address, Serial number, Status, Machine type.*
 
@@ -219,7 +232,6 @@ The administrator can filter the list of machines based on parameters like *Mach
 
 * The admin portal allows an admin to view the list of all the machines available in the jurisdiction of his/her administrative zone. 
 * The system does not fetch the details of decommissioned machines but only shows the active and inactive machines. 
-* Admin portal UI shows the list of machines in only the country configured primary language.
 
  **Create Machines**
  
@@ -244,7 +256,7 @@ To update a machine,
 3. Make the required changes in the fields.
 4. Click **Edit** and Confirm the changes.
 
-Once a machine is created, an admin can edit a machine later if required. The update can include adding the details in another required language that were missed during creation of the machine or changing the details of a machine itself. All the attributes mentioned in the 'Create machine' section can be updated for a machine.
+*Note - Updates made to language specific fields updates data only for that language in the database while updates made to non-language dependent fileds updates data against all the language entries for that center. 
 
 **Activate/Deactivate/Decommission Machine**
 
@@ -256,6 +268,19 @@ To activate/deactivate/decommission a Machine,
 3. On the confirmation pop-up, click **Confirm**.
 
 An admin can deactivate or decommission a machine through the admin portal.
+
+**Map/Un-map/Re-map Machine to a Center**
+
+![](_images/admin-map-machine-center.png)
+
+To map/un-map/re-map machine to a center,
+1. Click Resources-> Machines
+2. Select the machine and choose **Center name** from the dropdowm.
+3. Click **Edit** and confirm.
+
+* Admin portal allows an Admin to map/un-map each Machine to a Center.
+* This mapping specifies as to which Center the Machine will be used in.
+* A Machine can only be mapped to a Center which belongs under the Machine’s Administrative Zone.
 
 ### USER MANAGEMENT
 
