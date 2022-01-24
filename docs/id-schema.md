@@ -10,7 +10,7 @@ The default schema used with MOSIP Sandbox installation is available [here](http
 ID schema is loaded as a part of master data to `identity_schema` table in `mosip_masterdata` DB.
 
 ## Customisation guide
-This guide helps an adopter customise the default ID Schema for information that are be collected from the residents.  
+This guide is intented for adopters who would customise the default ID Schema to suit the needs of a specific deployment.
 
 ### Terminology
 * **Field**: Unit of date collected from residents (eg. `fullName`, `dateOfBirth`, `proofOfIdentity` etc).   
