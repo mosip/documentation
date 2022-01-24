@@ -42,7 +42,7 @@ This guide helps an adopter customize the default ID Schema for information that
     * `validator`: Regex
     * `arguments`: Array to hold parameter or dependent field ids required for validation.
 
-## Dependency on ID Schema change
+## Dependencies
 If any changes are made to the default ID Schema, make sure the following dependencies are updated as well:
 1. UI Specification for Pre-registration and Registration Client
 1. [Identity Mapping JSON](https://github.com/mosip/mosip-config/blob/develop3-v3/identity-mapping.json)
