@@ -24,14 +24,14 @@ This guide helps an adopter customize the default ID Schema for information that
 ## JSON keys
 * `bioAttributes`:
 
-`leftEye`, `rightEye`, `leftIndex`, `leftRing`, `leftLittle`, `leftMiddle`, `rightIndex`, `rightRing`, `rightMiddle`, `rightLittle`, `rightThumb`, `leftThumb`, `face`,
+    * `leftEye`, `rightEye`, `leftIndex`, `leftRing`, `leftLittle`, `leftMiddle`, `rightIndex`, `rightRing`, `rightMiddle`, `rightLittle`, `rightThumb`, `leftThumb`, `face`,
 
 * `fieldCategory`
-    - `none`: Cannot be used for any purpose. But will be stored in id.json (default sub packet).
-    - `pvt`: Private information, can be used only auth.
-    - `kyc`: Information that can be disclosed to partners including IDA.
-    - `evidence`: Field is treated as proof and may be subjected to removal.
-    - `optional`: Field is treated as proof and will be removed after predefined interval (defined as policy).
+    * `none`: Cannot be used for any purpose. But will be stored in id.json (default sub packet).
+    * `pvt`: Private information, can be used only auth.
+    * `kyc`: Information that can be disclosed to partners including IDA.
+    * `evidence`: Field is treated as proof and may be subjected to removal.
+    * `optional`: Field is treated as proof and will be removed after predefined interval (defined as policy).
 
 * `format`
    * `lowercased` 
