@@ -21,7 +21,7 @@ ABIS must support the following types of biometric images:
 
 For privacy and security considerations, face data **shall not be sent to ABIS** for deduplication.
 
-Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Data Specification](Biometric-Data-Specification.md). 
+Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Image Specification](biometric-image-specification.md). 
 
 ## Test kits
 MOSIP provides kits the test the interface. Refer [abis-testing-kit repo](https://github.com/mosip/abis-testing-kit/tree/1.2.0)

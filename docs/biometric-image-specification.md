@@ -3,9 +3,7 @@
 ## Introduction
 Biometrics images for various modalities are represented and exchanged as per the below specifications.
 
-## Image formats
-
-### Fingerprint
+## Fingerprint
 Refer ISO 19794-4:2011 Specifications.
 
 Factor | Registration Devices | Authentication Devices
@@ -30,7 +28,7 @@ FTM\*\* | SBI 1.0 - Use host based security (and above) | SBI 2.0 - FTM supporte
 
 {% endhint %}
 
-### Iris
+## Iris
 RRefer to ISO 19794-6:2011 Specifications.
 
 Factor | Registration Devices | Authentication Devices
@@ -60,7 +58,7 @@ FTM\*\* | SBI 1.0  - Use host-based security (and above) | SBI 2.0 - FTM support
 
 {% endhint %}
 
-### Face Capture
+## Face
 Refer ISO 19794-5:2011 Specifications.
 
 Factor | Registration Devices | Authentication Devices
@@ -90,7 +88,3 @@ FTM\*\*	| SBI 1.0 - Use host based security (and above) | SBI 2.0 - FTM supporte
 
 We recommend that countries look at ergonomics, accessibility, ease of usage, and common availability of devices while choosing devices for use in registration and authentication scenarios.
 
-
-## XML Container
-
-The biometric data is wrapped in [CBEFF XML](CBEFF-XML.md).
