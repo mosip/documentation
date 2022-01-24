@@ -6,32 +6,32 @@ Biometric devices capture individuals biometric data (fingerprint, iris scan, ph
 ![](_images/sdk.png)
 
 ## Device types 
-Supported modalities
+
+### Purpose
+* Registration
+* Authentication
+
+### Modalities
 1. Fingerprint
 1. Iris
-1. Camera
+1. Face
 
-* Auth and registration devices.
+Typical selection of devices is given below.  An adopter may choose to have different sub-types, however, the certification needs to be adhered to.
 
-## Device recommendations
+|Purpose|Type|Sub Type|Certification|Specification|
+|---|---|---|---|---|
+|Registration|Fingerprint|Slap scanner|L0|[Fingerprint image spec](biometric-image-specification.md#fingerprint)|
+|Registration|Iris|Double eye scanner|L0|[Iris image spec](biometric-image-specification.md#iris)|
+|Registration|Facd|Camera|L0|[Face image spec](biometric-image-specification.md#face)|
+|Authentication|Fingerprint|Single finger scanner|L1|[Fingerprint image spec](biometric-image-specification.md#fingerprint)|
+|Authentication|Iris|Single eye scanner|L1|[Iris image spec](biometric-image-specification.md#iris)|
+|Authentication|Facd|Camera|L1|[Face image spec](biometric-image-specification.md#face)|
 
-### Device Specification
-The MOSIP device specification provides compliance guidelines to devices for them to work with MOSIP. The compliance is based on device capability, trust and communication protocols. A MOSIP compliant device would follow the standards established in this document. It is expected that the devices are compliant to this specification and tested and validated. The details of each of these are outlined in the subsequent sections.
 
-### Device Capability
-The MOSIP compliant device is expected to perform the following,
-* Should have the ability to collect one or more biometric
-* Should have the ability to sign the captured biometric image or template.
-* Should have the ability to protect secret keys
-* Should have no mechanism to inject the biometric
-
-### Base Specifications for Devices
-
-Refer [Biometric Image Specification](biometric-image-specification.md).
+## Image specification 
+[Biometric Image Specification](biometric-image-specification.md)
 
 We recommend that countries look at ergonomics, accessibility, ease of usage, and common availability of devices while choosing devices for use in registration and authentication scenarios.
-
----
 
 ## Device trust
 MOSIP compliant devices provide a trust environment for the devices to be used in registration, KYC and AUTH scenarios. The trust level is established based on the device support for trusted execution.
@@ -53,15 +53,19 @@ MOSIP compliant devices provide a trust environment for the devices to be used i
 
 ## Device onboarding
 
-## SBI
 
 ## Test kits
 
 ## Management server
 
+## Devices calculator for production
 
+## Partners
 
+Onboarding of these partners.
 
+* Device Provider
+* FTM Providers
  
 
 
