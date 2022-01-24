@@ -124,7 +124,7 @@ To update a center,
 3. Make the changes in the required fields.
 4. Click **Update**.
 
-*Note - Updates made to language specific fields updates data only for that language in the database while updates made to non-language dependent fileds updates data against all the language entries for that center. 
+*Note - Updates made to language specific fields updates data only for that language in the database while updates made to non-language dependent fields updates data against all the language entries for that center*. 
 
 **Activate/Deactivate/Decommission center**
 
@@ -138,7 +138,7 @@ To activate/deactivate/decommission a center,
 * Deactivation refers to a temporary shut down while decommission refers to a permanent shut down of the center. 
 * Decommissioning a center also automatically deactivates the center. In cases where a center has some resources mapped to it (e.g. machines, devices or users), the portal will not allow the admin to decommission such a center.
 * The primary difference between *deactivated* and *decommissioned* center is that a deactivated center can be activated later through admin portal as required by the country. But a decommissioned center cannot be bought into commission again as decommission refers to a permanent shutdown.
-* Activation/Deactivation/Decommission of a center in one language will be applied to same center created in all other languages.
+* Activation/Deactivation/Decommission of a center in one language will be applied to the same center created in all the languages.
 
 ### Device Management
 
@@ -383,11 +383,11 @@ Note: This feature is currently under development.
 * The portal shows both activated or deactivated Center Types. 
 * The Admin can filter the list of Center Types based on Status (Drop-down).
 
-View center type
+**View center type**
 
 ![](_images/admin-master-data.png)
 
-Create center type
+**Create center type**
 
 ![](_images/admin-center-type-create.png)
 
@@ -396,59 +396,58 @@ Create center type
 3. Enter the necessary details
 4. Click **Save**
 
-
-
-Edit\Deactivate Center type
+**Edit\Deactivate Center type**
 Admin Portal also allows modification of any detail of a Registration Center Type. 
 
-(Although the Portal will allow creation of a Registration Center Type in only primary language but will not allow activation of that Registration Center Type until data for that Type is not updated for all the languages. While entering the data, the text fields (e.g., Registration Center Type Name) needs to be manually input in all the languages. After successful creation, a Registration Center Type code will be generated.)
+* Although the Portal will allow creation of a Registration Center Type in only primary language but will not allow activation of that Registration Center Type until data for that Type is not updated for all the languages.
+* While entering the data, the text fields (e.g., Registration Center Type Name) needs to be manually input in all the languages.
+* After successful creation, a Registration Center Type code will be generated.
 
+**Blocklisted Words**
 
-
-Blocklisted Words -
-* The Global Admin can view list of all the available Blocklisted words on the Admin UI portal. 
-* The portal shows both activated or deactivated Blocklisted words. Blocklisted words in the only Masterdata which is language independent and will show the data in all the languages unlike the rest of the Masterdata tables which will show data only in the logged in language. The Admin can filter the list of Blocklisted Words based on Status (Drop-down), Blocklisted Words (Search Box).
+* The Admin can view the list of all the available Blocklisted words on the Admin UI portal. 
+* The portal shows both activated or deactivated Blocklisted words. Blocklisted words is the only Masterdata which is language independent and will show the data in all the languages unlike the rest of the Masterdata tables which will show data only in the logged in language. 
+* The Admin can filter the list of Blocklisted Words based on Status (Drop-down), Blocklisted Words (Search Box).
 * Admin can also add\edit\deactivate blocklisted words.
-* Deactivation of a Blocklisted Word can be done if the country feels the Blocklisted word is not applicable anymore. 
+* Deactivation of a Blocklisted word can be done if the country feels the Blocklisted word is not applicable anymore. 
 
 ![](_images/admin-blocklisted-words.png)
 
+This feature has all the functionality of CRUD.
 
-
-
-
-List of Holidays 
-List of Holiday defines all the public holiday a applicable for a country. These holidays are on of the criteria for Pre-Registration to generate appointments. The holidays only define the public holidays and not the week-end days for the country. The Global Admin can view list of all the defined Holidays on the Admin UI portal. The portal shows both activated or deactivated Holidays. The Admin can filter the list of Holidays based on Status (Drop-down), Date Range (Search Box) and Name (Search Box).
-Create/Update Holidays
-Using the portal, the Global Admin can create a Holiday providing the Document Category name, date, location, and description if applicable. A Holiday needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Holiday in only primary language but will not allow activation of that Holiday until data for that Holiday is not updated for all the languages. A deactivated Holiday will not be considered for appointment generation in Pre-Registration While entering the data, the text fields (e.g., Holiday Name) needs to be manually input in all the languages. After successful creation, a Holiday ID will be generated.
-Admin Portal also allows modification of any detail of a Holiday. The modification includes either adding the details in another language that were missed during creation of the Holiday or changing the details of a Holiday itself including name, description etc.
-
-Templates
+**List of Holidays**
 
 List of Holiday defines all the public holiday a applicable for a country. These holidays are on of the criteria for Pre-Registration to generate appointments. The holidays only define the public holidays and not the week-end days for the country. The Global Admin can view list of all the defined Holidays on the Admin UI portal. The portal shows both activated or deactivated Holidays. The Admin can filter the list of Holidays based on Status (Drop-down), Date Range (Search Box) and Name (Search Box).
 Create/Update Holidays
 Using the portal, the Global Admin can create a Holiday providing the Document Category name, date, location, and description if applicable. A Holiday needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Holiday in only primary language but will not allow activation of that Holiday until data for that Holiday is not updated for all the languages. A deactivated Holiday will not be considered for appointment generation in Pre-Registration While entering the data, the text fields (e.g., Holiday Name) needs to be manually input in all the languages. After successful creation, a Holiday ID will be generated.
 Admin Portal also allows modification of any detail of a Holiday. The modification includes either adding the details in another language that were missed during creation of the Holiday or changing the details of a Holiday itself including name, description etc.
 
-Dynamic Field
+**Templates**
 
-Create New Dynamin Field
+List of Holiday defines all the public holiday a applicable for a country. These holidays are on of the criteria for Pre-Registration to generate appointments. The holidays only define the public holidays and not the week-end days for the country. The Global Admin can view list of all the defined Holidays on the Admin UI portal. The portal shows both activated or deactivated Holidays. The Admin can filter the list of Holidays based on Status (Drop-down), Date Range (Search Box) and Name (Search Box).
+Create/Update Holidays
+Using the portal, the Global Admin can create a Holiday providing the Document Category name, date, location, and description if applicable. A Holiday needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Holiday in only primary language but will not allow activation of that Holiday until data for that Holiday is not updated for all the languages. A deactivated Holiday will not be considered for appointment generation in Pre-Registration While entering the data, the text fields (e.g., Holiday Name) needs to be manually input in all the languages. After successful creation, a Holiday ID will be generated.
+Admin Portal also allows modification of any detail of a Holiday. The modification includes either adding the details in another language that were missed during creation of the Holiday or changing the details of a Holiday itself including name, description etc.
 
-Gender
+**Dynamic Field**
+
+**Create New Dynamin Field**
+
+**Gender**
 View Gender Types
 List of Gender Types contains all the Gender types defined by a country. The Global Admin can view list of all the defined Genders on the Admin UI portal. The portal shows both Activated or Deactivated Gender types.
 Create/Update Gender Types
 Using the portal, the Global Admin can create a Gender Type providing the Gender Type nameand description if applicable. A Gender Type needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Gender Type in only primary language but will not allow activation of that Gender Type until data for that Gender Type is not updated for all the languages. A deactivated Gender Type will not show up on the Pre-Registration/Registration Client UI. While entering the data, the text fields (e.g., Gender Type Name) needs to be manually input in all the languages. After successful creation, a Gender Type code will be generated.
 Admin Portal also allows modification of any detail of a Gender Type. The modification includes either adding the details in another language that were missed during creation of the Gender Type or changing the details of a Gender Type itself including name, description etc.
 
-Registration Type 
-Mode of Claim
-User preferred language
-residenceStatus
-Blood Type
-Marital Status
+**Registration Type** 
+**Mode of Claim**
+**User preferred language**
+**residenceStatus**
+**Blood Type**
+**Marital Status**
 
-Device Definitions
+**Device Definitions**
 Device Specs
 Device Types
 
@@ -497,19 +496,37 @@ The portal allows the Global Admin to map the available Document types to a Docu
 
 ### BULK UPLOAD
 
-Master Data
+![](_images/admin-list-bulk-upload.png)
 
-Packets
+* If a country decides to insert the data through .csv files, they could use this feature to upload the existing data into the MOSIP platform.
+* The listing screen displays the uploaded data transaction information. 
+* As the information inside .csv files may be huge, it would go through the batch job to process the information and store it in the tables. Also, it may take to get some unique transaction ID against the particular action.
+
+**Master Data**
+
+![](_images/admin-upload-masterdata.png)
+
+**Packets**
+
+![](_images/admin-packet-bulkupload.png)
 
 ### KeyManager
+* The admin user can manage the key using various activity.
 
-GenerateCSR
+**GenerateMasterKey**
+![](_images/admin-generate-masterkey.png)
 
-GetCerificate
+**GenerateCSR**
+![](_images/admin-generatecsr.png)
 
-UploadCertificate
+**GetCertificate**
+![](_images/admin-get-certificate.png)
 
-UploadOtherDocumentCertificate
+**UploadCertificate**
+![](_images/admin-upload-certificate.png)
+
+**UploadOtherDomainCertificate**
+![](_images/admin-upload-otherdomain-certificate.png)
 
 
 
