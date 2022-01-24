@@ -33,5 +33,3 @@ MOSIP provides kits the test the interface. Refer [abis-testing-kit repo](https:
 * It is recommended that ABIS is deployed in the same secure zone (military zone) where the registration processor is deployed. 
 * ABIS system is not recommended to connect to any external network.
 
-## Test kits
-MOSIP provides kits the test the interface.
