@@ -13,8 +13,8 @@ ID schema is loaded as a part of master data to `identity_schema` table in `mosi
 This guide helps an adopter customise the default ID Schema for information that are be collected from the residents.  
 
 ## Terminology
-* **Field**: Unit of date collected from residents (eg. full name, last name, street address, proof of birth etc).   
-* **Field attribute**:  Qualification of Field (eg. category, type, etc). 
+* **Field**: Unit of date collected from residents (eg. `fullName`, `dateOfBirth`, `proofOfIdentity` etc).   
+* **Field attribute**:  Qualification of Field (eg. `fieldCategory`, `fieldType`, etc). 
 * **Definition**: Custom data types defined by MOSIP for collecting different types of data:
     * `simpleType`: Multiple langauages.
     * `documentType`: Document metdata.
