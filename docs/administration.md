@@ -448,34 +448,40 @@ Admin Portal also allows modification of any detail of a Gender Type. The modifi
 **Marital Status**
 
 **Device Definitions**
-Device Specs
-Device Types
+*Device Specs*
+*Device Types*
 
-Machine Definitions
+**Machine Definitions**
+*Machine Specs*
+* Machine specification indicates the Brand, Make and Model of a Machine a country uses to take registrations.
+* The Admin can view the list of all the Machine Specifications on the Admin UI portal. 
+* A Machine can be assigned to a Machine Specification while getting created as required by the country.
+* The portal shows both activated or deactivated Machine Specification. 
+* The Admin can filter the list of Machine Specifications based on Status (Drop-down), Name (Search Box), Brand (Search Box), Model (Search Box), and Machine type (Search Box).
 
+*Machine Types*
+* Machine Type indicates the type of Machines a country uses to take registrations. The Global admin can view list of all the Machine Types on the Admin UI portal. 
+* A Machine can be assigned to a Machine Type while getting created as required by the country.
+* The portal shows both activated or deactivated Machine Types.
 
-Machine Specs
-Machine Types
-
-View Machine Types
-Machine Type indicates the type of Machines a country uses to take registrations. The Global Admin can view list of all the Machine Types on the Admin UI portal. A Machine while creation, can be assigned to a Machine Types as defined by the country. The portal shows both activated or deactivated Machine Types.
 Create/Update Machine Types
 Using the portal, the Global Admin can create a Machine type providing the Machine type name and description if applicable.
 A Machine type needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Machine type in only primary language but will not allow activation of that Machine type until data for that Type is not updated for all the languages. While entering the data, the text fields (e.g., Machine type Name) needs to be manually input in all the languages. After successful creation, a Machine type code will be generated.
 Admin Portal also allows modification of any detail of a Machine Type. The modification includes either adding the details in another language that were missed during creation of the Machine Type or changing the details of a Machine Type itself including name, description etc.
+
 View Machine Specifications
-Machine specification indicates the Brand, Make and Model of a Machine a country uses to take registrations. The Global Admin can view list of all the Machine Specifications on the Admin UI portal. A Machine while creation, can be assigned to a Machine Specification as required by the country. The portal shows both activated or deactivated Machine Specification. The Admin can filter the list of Machine Specifications based on Status (Drop-down), Name (Search Box), Brand (Search Box), Model (Search Box), and Machine type (Search Box).
+
 Create/Update Machine Specifications
 Using the portal, the Global Admin can create the Machine Specification providing the Machine Specification name, brand, make and model. A Machine Specification needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Machine Specification in only primary language but will not allow activation of that Machine Specification until data for that Specification is not updated for all the languages. While entering the data, the text fields (e.g., Machine Specification Name) needs to be manually input in all the languages. After successful creation, a Machine Specification ID will be generated.
 Admin Portal also allows modification of any detail of a Machine Specification. The modification includes either adding the details in another language that were missed during creation of the Machine Specification or changing the details of a Machine Specification itself including name, brand etc.
 
-Document Definitions
-Document Types
-Document Categories
-Document Categoty- Type Mapping
+**Document Definitions**
+*Document Types*- Document types is the list of Documents a country will configure for the users to give during registrations.
+*Document Categories*
+*Document Categoty- Type Mapping*
 
 Manage Document Type (View, Create, Update, Activate, Deactivate)
-Document types is the list of Documents a country will configure for the users to give during registrations.
+
 View Document Types
 The Global Admin can view list of all the available Document Types on the Admin UI portal. The portal shows both activated or deactivated Document Types. The Admin can filter the list of Document Types based on Document Name(Search box) and Status (Drop-down).
 Create/Update Document Types
@@ -510,23 +516,29 @@ The portal allows the Global Admin to map the available Document types to a Docu
 
 ![](_images/admin-packet-bulkupload.png)
 
-### KeyManager
+### KeyManager (taheer)
 * The admin user can manage the key using various activity.
+* 
 
 **GenerateMasterKey**
+
 ![](_images/admin-generate-masterkey.png)
 
 **GenerateCSR**
-![](_images/admin-generatecsr.png)
+
+![](_images/admin-generate-csr.png)
 
 **GetCertificate**
+
 ![](_images/admin-get-certificate.png)
 
 **UploadCertificate**
+
 ![](_images/admin-upload-certificate.png)
 
 **UploadOtherDomainCertificate**
-![](_images/admin-upload-otherdomain-certificate.png)
+
+![](_images/admin-upload-anotherdomain-certificate.png)
 
 
 
