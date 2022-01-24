@@ -12,7 +12,7 @@ ID schema is loaded as a part of master data to `identity_schema` table in `mosi
 ## Customisation guide
 This guide helps an adopter customise the default ID Schema for information that are be collected from the residents.  
 
-## Terminology
+### Terminology
 * **Field**: Unit of date collected from residents (eg. `fullName`, `dateOfBirth`, `proofOfIdentity` etc).   
 * **Field attribute**:  Qualification of Field (eg. `fieldCategory`, `fieldType`, etc). 
 * **Definition**: Custom data types defined by MOSIP for collecting different types of data:
@@ -20,7 +20,7 @@ This guide helps an adopter customise the default ID Schema for information that
     * `documentType`: Document metdata.
     * `biometricType`: Biometric file [CBEFF XML]() metadata  
 
-## JSON keys
+### JSON keys
 * `bioAttributes`:
 
     * `leftEye`, `rightEye`, `leftIndex`, `leftRing`, `leftLittle`, `leftMiddle`, `rightIndex`, `rightRing`, `rightMiddle`, `rightLittle`, `rightThumb`, `leftThumb`, `face`,
@@ -41,7 +41,7 @@ This guide helps an adopter customise the default ID Schema for information that
     * `validator`: Regex
     * `arguments`: Array to hold parameter or dependent field ids required for validation.
 
-## Dependencies
+### Dependencies
 If any changes are made to the default ID Schema, make sure the following dependencies are updated as well:
 1. UI Specification for Pre-registration and Registration Client
 1. [Identity Mapping JSON](https://github.com/mosip/mosip-config/blob/develop3-v3/identity-mapping.json)
