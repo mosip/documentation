@@ -14,30 +14,32 @@ ID schema is loaded as a part of master data to `identity_schema` table in `mosi
 This guide helps an adopter customize the default ID Schema for information that are be collected from the residents.  
 
 ## Terminology
-* Field: Unit of date collected from residents (eg. full name, last name, street address, proof of birth etc).   
-* Field attribute:  Qualification of Field (eg. category, type, etc). 
-* Definition: Custom data types defined by MOSIP for collecting different types of data:
+* **Field**: Unit of date collected from residents (eg. full name, last name, street address, proof of birth etc).   
+* **Field attribute**:  Qualification of Field (eg. category, type, etc). 
+* **Definition**: Custom data types defined by MOSIP for collecting different types of data:
     * `simpleType`: Multiple langauages.
     * `documentType`: Document metdata.
     * `biometricType`: Biometric file [CBEFF XML]() metadata  
 
 ## JSON keys
-* `bioAttributes`
+* `bioAttributes`:
+
 `leftEye`, `rightEye`, `leftIndex`, `leftRing`, `leftLittle`, `leftMiddle`, `rightIndex`, `rightRing`, `rightMiddle`, `rightLittle`, `rightThumb`, `leftThumb`, `face`,
+
 * `fieldCategory`
-    * `none`: Cannot be used for any purpose. But will be stored in id.json (default sub packet).
-    * `pvt`: Private information, can be used only auth.
-    * `kyc`: Information that can be disclosed to partners including IDA.
-    * `evidence`: Field is treated as proof and may be subjected to removal.
-    * `optional`: Field is treated as proof and will be removed after predefined interval (defined as policy).
+    - `none`: Cannot be used for any purpose. But will be stored in id.json (default sub packet).
+    - `pvt`: Private information, can be used only auth.
+    - `kyc`: Information that can be disclosed to partners including IDA.
+    - `evidence`: Field is treated as proof and may be subjected to removal.
+    - `optional`: Field is treated as proof and will be removed after predefined interval (defined as policy).
 
 * `format`
    * `lowercased` 
    * `uppercased`
 
 * `validators`
-    * `type`: validation engine type
-    * `validator`: pattern/ methodName / scriptName / expression
+    * `type`: Validation engine type
+    * `validator`: Regex
     * `arguments`: Array to hold parameter or dependent field ids required for validation.
 
 ## Dependency on ID Schema change
