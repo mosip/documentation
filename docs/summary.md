@@ -34,8 +34,8 @@
     * [Packet Manager](packet-manager.md)
     * [WebSub](websub.md)
     * [Resident Services](resident-services.md)
-    * [Administration](administration.md)
-        * [Administrator' User Guide][admin.md]
+    * [Administration](admin.md)
+        * [Administrator' User Guide](admininstration.md)
     * [ID Authentication Services](id-authentication-services.md) 
     * [Reporting](reporting.md)
     * [Automation Testing](automation-testing.md)
