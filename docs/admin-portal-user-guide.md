@@ -3,7 +3,8 @@
 ## Overview
 To get started with using the Admin portal, an admin user must be assigned to a zone.
 
-## Creation of first Admin user
+## First Admin user
+
 1. Setup of hierarchial zones 
 2. Create Admin roles in KeyCloak
 3. Create first admin user in KeyCloak
@@ -11,7 +12,7 @@ To get started with using the Admin portal, an admin user must be assigned to a 
 
 The above are done automatically as part of [default sandbox installation](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3).
 
-## First user login
+### Login
 
 ![](_images/admin-login.png)
  
@@ -20,7 +21,7 @@ The above are done automatically as part of [default sandbox installation](https
 
 ![](_images/admin-home.png)
  
-## First user actions
+### Actions
 1. Map the other users(admins/registration operators/supervisors) to respective zones
 2. Create centers and assign the users to a particular center
 3. _Highly recommended_: Ensure to revoke the first super user's zone mapping and role after first user actions are completed.
