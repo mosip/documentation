@@ -1,0 +1,77 @@
+name: Maven Package upon a push
+
+# Triggered when code is pushed to any branch in a repository
+on: push
+
+jobs:
+  Generate_Documentation:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+#        names: [partner-management-services, registration, admin-services, resident-services, commons, audit-manager, pre-registration, id-repository, durian, packet-manager]
+        names: [packet-manager, durian]
+
+    steps:
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Setup the settings file for ossrh server
+        run: echo "<settings> <servers>  <server>  <id>ossrh</id>    <username>${{secrets.ossrh_user}}</username> <password>${{secrets.ossrh_secret}}</password> </server> </servers> <profiles> <profile>     <id>ossrh</id> <activation> <activeByDefault>true</activeByDefault> </activation>  <properties> <gpg.executable>gpg2</gpg.executable> <gpg.passphrase>${{secrets.gpg_secret}}</gpg.passphrase> </properties> </profile> <profile> <id>allow-snapshots</id>       <activation><activeByDefault>true</activeByDefault></activation> <repositories> <repository>        <id>snapshots-repo</id> <url>https://oss.sonatype.org/content/repositories/snapshots</url> <releases><enabled>false</enabled></releases> <snapshots><enabled>true</enabled></snapshots> </repository>  <repository>         <id>releases-repo</id>  <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>         <releases><enabled>false</enabled></releases>         <snapshots><enabled>false</enabled></snapshots> </repository> </repositories>  </profile> <profile> <id>sonar</id> <properties>  <sonar.sources>.</sonar.sources> <sonar.host.url>https://sonarcloud.io</sonar.host.url>  </properties> <activation> <activeByDefault>false</activeByDefault> </activation> </profile> </profiles> </settings>" > $GITHUB_WORKSPACE/settings.xml
+
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        with:
+          repository: mosip/${{ matrix.names }}
+          path: ${{ matrix.names }}
+          ref: 1.2.0-rc2
+          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+          settings-path: ${{ github.workspace }} # location for the settings.xml file
+
+      - name: Setup Branch and Env
+        run: |
+          # Strip git ref prefix from version
+          echo "BRANCH_NAME=1.2.0-rc2" >> $GITHUB_ENV
+
+      - name: Build with Maven
+        run: |
+          npm install -g redoc-cli
+          find * -name pom.xml -mindepth 3 -maxdepth 5 -execdir mvn -B -Dgpg.skip -DskipTests -Dgpg.skip clean verify -s $GITHUB_WORKSPACE/settings.xml -P openapi-doc-generate-profile \;
+
+      - name: Copying json Document
+        run: |
+          mkdir -p ./${{ matrix.names }}-json
+          find . -name "*openapi.json" -exec readlink -f {} \; > temp.txt
+          while IFS= read -r line
+          do
+            fullpath=$line
+            cp $fullpath ./${{ matrix.names }}-json
+          done < temp.txt
+
+      - name: Upload json Documents as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.names }}
+          path: ./${{ matrix.names }}-report/*.json
+          retention-days: 5
+
+      - name: Checkout Documentation Repository
+        uses: actions/checkout@v2
+        with:
+          ref: lts
+
+      - name: Download JSON Documents from Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: ${{ matrix.names }}
+          path: ./api/
+
+      - name: Commit Changes to Documenation Repository
+        uses: EndBug/add-and-commit@v7
+        with:
+          default_author: github_actions
+          message: 'added documentation for ${{ matrix.names }}'
+          add: './api/*.json'
