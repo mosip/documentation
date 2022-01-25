@@ -29,18 +29,12 @@ A Digital ID is represented as JSON:
   "dateTime": "string",
 }
 ```
-The Digital ID is signed with the [JSON Web Signature (RFC 7515)(https://datatracker.ietf.org/doc/html/rfc7515) using the [DKL0](keys.md#device-specific-keys) in SBI 1.0 devices and [DKL1](keys.md#device-specific-keys) in SBI 2.0 devices.
-This signature would look like this: 
-```
-"digitalId": "base64urlencoded(header).base64urlencoded(payload).base64urlencoded(signature)"
-```
-
 |Parameters|Description|
 |---|---|
 |`serialNo`|As printed on [Physical ID](#physical-id)
 |`make`|Brand name as printed on [Physical ID](#physical-id)|
 |`model`|Model of the device as printed on [Physical ID](#physical-id)|
-|`type|`Finger`, `Iris`, or `Face`|
+|`type`|`Finger`, `Iris`, or `Face`|
 |`deviceSubType`|Based on `type`. See note below|
 |`deviceProvider` | Name of the device provider|
 |`dateTime`| Time during the issuance of the request. This is in ISO format.|
@@ -50,8 +44,13 @@ This signature would look like this:
 * For `Iris`: `Single` or `Double`
 * For `Face`: `Full face`
 
-## Device service - communication interfaces
+The Digital ID is signed with the [JSON Web Signature RFC 7515](https://datatracker.ietf.org/doc/html/rfc7515) using the [DKL0](keys.md#device-specific-keys) in SBI 1.0 devices and [DKL1](keys.md#device-specific-keys) in SBI 2.0 devices.
+This signature would look like this: 
+```
+"digitalId": "base64urlencoded(header).base64urlencoded(payload).base64urlencoded(signature)"
+```
 
+## Device Service - Communication Interfaces
 The section explains the necessary details of the biometric device connectivity, accessibility, discover-ability and protocols used to build and communicate with the device.
 
 The device should implement only the following set of APIs.  All the API’s are independent of the physical layer and the operating system, with the invocation being different across operating systems. While the operating system names are defined in this spec a similar technology can be used for unspecified operating systems.  It is expected that the device service ensures that the device is connected  locally to the host.
