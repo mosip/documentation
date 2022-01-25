@@ -271,8 +271,6 @@ An admin can deactivate or decommission a machine through the admin portal.
 
 **Map/Un-map/Re-map Machine to a Center**
 
-![](_images/admin-map-machine-center.png)
-
 To map/un-map/re-map machine to a center,
 1. Click Resources-> Machines
 2. Select the machine and choose **Center name** from the dropdowm.
@@ -372,7 +370,7 @@ Note: This feature is currently under development.
 
 ![](_images/admin-master-data.png)
 
-#### Manage Master Data**
+#### Manage Master Data
 
 ***Common***
 
@@ -417,28 +415,46 @@ This feature has all the functionality of CRUD.
 
 **List of Holidays**
 
-List of Holiday defines all the public holiday a applicable for a country. These holidays are on of the criteria for Pre-Registration to generate appointments. The holidays only define the public holidays and not the week-end days for the country. The Global Admin can view list of all the defined Holidays on the Admin UI portal. The portal shows both activated or deactivated Holidays. The Admin can filter the list of Holidays based on Status (Drop-down), Date Range (Search Box) and Name (Search Box).
-Create/Update Holidays
-Using the portal, the Global Admin can create a Holiday providing the Document Category name, date, location, and description if applicable. A Holiday needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Holiday in only primary language but will not allow activation of that Holiday until data for that Holiday is not updated for all the languages. A deactivated Holiday will not be considered for appointment generation in Pre-Registration While entering the data, the text fields (e.g., Holiday Name) needs to be manually input in all the languages. After successful creation, a Holiday ID will be generated.
-Admin Portal also allows modification of any detail of a Holiday. The modification includes either adding the details in another language that were missed during creation of the Holiday or changing the details of a Holiday itself including name, description etc.
+* List of Holiday defines all the public holiday a applicable for a country.
+* These holidays are on of the criteria for Pre-Registration to generate appointments. 
+* The holidays only define the public holidays and not the week-end days for the country. 
+* The Global Admin can view list of all the defined Holidays on the Admin UI portal.
+* The portal shows both activated or deactivated Holidays. The Admin can filter the list of Holidays based on Status (Drop-down), Date Range (Search Box) and Name (Search Box).
+
+
+**Create/Update Holidays**
+
+* Using the portal, the Global Admin can create a Holiday providing the Document Category name, date, location, and description if applicable.
+* A Holiday needs to be created in both configured Primary and Secondary language.
+* Although the Portal will allow creation of a Holiday in only primary language but will not allow activation of that Holiday until data for that Holiday is not updated for all the languages. A deactivated Holiday will not be considered for appointment generation in Pre-Registration While entering the data, the text fields (e.g., Holiday Name) needs to be manually input in all the languages. After successful creation, a Holiday ID will be generated.
+* Admin Portal also allows modification of any detail of a Holiday. 
 
 **Templates**
 
-List of Holiday defines all the public holiday a applicable for a country. These holidays are on of the criteria for Pre-Registration to generate appointments. The holidays only define the public holidays and not the week-end days for the country. The Global Admin can view list of all the defined Holidays on the Admin UI portal. The portal shows both activated or deactivated Holidays. The Admin can filter the list of Holidays based on Status (Drop-down), Date Range (Search Box) and Name (Search Box).
-Create/Update Holidays
-Using the portal, the Global Admin can create a Holiday providing the Document Category name, date, location, and description if applicable. A Holiday needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Holiday in only primary language but will not allow activation of that Holiday until data for that Holiday is not updated for all the languages. A deactivated Holiday will not be considered for appointment generation in Pre-Registration While entering the data, the text fields (e.g., Holiday Name) needs to be manually input in all the languages. After successful creation, a Holiday ID will be generated.
-Admin Portal also allows modification of any detail of a Holiday. The modification includes either adding the details in another language that were missed during creation of the Holiday or changing the details of a Holiday itself including name, description etc.
+* List of Templates contains all the notification templates used by MOSIP to send notifications to the Users or Residents. 
+* This notification includes OTP notification, Acknowledgment Notifications etc. Even acknowledgement shown on the Pre-Registration UI is defined in the template Masterdata. * Each template in the Masterdata has a description defined for it which indicates as to where the template is being used in MOSIP.
+* The Admin can view list of all Activated or Deactivated Templates. The Admin can filter the list of Templates based on Status (Drop-down), Name (Search Box), Module Name (Drop-down) and Module ID (Drop-down).
+
+**Create/Update Templates**
+* Using the portal, the Admin can create a Template providing the Template name, Template Text, Template type and description if applicable.
+* A Template needs to be created in both configured Primary and Secondary language. 
+* Although the Portal will allow creation of a Template in only primary language but will not allow activation of that Template until data for that Template is not updated for all the languages. A deactivated Template will not be used thorughout MOSIP. While entering the data, the text fields (e.g., Template Name) needs to be manually input in all the languages. After successful creation, a Template ID will be generated.
+* Admin Portal also allows modification of any detail in a Template. The modification includes either adding the details in another language that were missed during creation of the Template or changing the details of a Template itself including name, description etc.
 
 **Dynamic Field**
 
 **Create New Dynamin Field**
 
 **Gender**
-View Gender Types
-List of Gender Types contains all the Gender types defined by a country. The Global Admin can view list of all the defined Genders on the Admin UI portal. The portal shows both Activated or Deactivated Gender types.
-Create/Update Gender Types
-Using the portal, the Global Admin can create a Gender Type providing the Gender Type nameand description if applicable. A Gender Type needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Gender Type in only primary language but will not allow activation of that Gender Type until data for that Gender Type is not updated for all the languages. A deactivated Gender Type will not show up on the Pre-Registration/Registration Client UI. While entering the data, the text fields (e.g., Gender Type Name) needs to be manually input in all the languages. After successful creation, a Gender Type code will be generated.
-Admin Portal also allows modification of any detail of a Gender Type. The modification includes either adding the details in another language that were missed during creation of the Gender Type or changing the details of a Gender Type itself including name, description etc.
+**View Gender Types**
+* List of Gender Types contains all the Gender types defined by a country. The Admin can view list of all the defined Genders(Activated or Deactivated) on the Admin UI portal. 
+
+**Create/Update Gender Types**
+* Using the portal, the Admin can create a Gender Type providing the Gender Type name and description if applicable.
+* A Gender Type needs to be created in both configured Primary and Secondary language.
+* Although the Portal will allow creation of a Gender Type in only primary language but will not allow activation of that Gender Type until data for that Gender Type is not updated for all the languages. 
+* A deactivated Gender Type will not show up on the Pre-Registration/Registration Client UI. While entering the data, the text fields (e.g., Gender Type Name) needs to be manually input in all the languages. After successful creation, a Gender Type code will be generated.
+* Admin Portal also allows modification of any detail of a Gender Type. The modification includes either adding the details in another language that were missed during creation of the Gender Type or changing the details of a Gender Type itself including name, description etc.
 
 **Registration Type** 
 **Mode of Claim**
