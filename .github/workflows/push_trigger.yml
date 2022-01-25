@@ -26,8 +26,8 @@ jobs:
       fail-fast: false
       max-parallel: 4
       matrix:
-        names: [partner-management-services, registration, admin-services, resident-services, commons, audit-manager, pre-registration, id-repository, durian, packet-manager]
-#        names: [packet-manager, durian]
+#        names: [partner-management-services, registration, admin-services, resident-services, commons, audit-manager, pre-registration, id-repository, durian, packet-manager]
+        names: [packet-manager, durian]
 
     steps:
       - name: Set up JDK 11
@@ -44,14 +44,14 @@ jobs:
           repository: mosip/${{ matrix.names }}
           path: ${{ matrix.names }}
 #          ref: ${{ github.event.inputs.releaseTags }}
-          ref: develop
+          ref: 1.2.0-rc2
           server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the settings.xml file
 
       - name: Setup Branch and Env
         run: |
           # Strip git ref prefix from version
-          echo "BRANCH_NAME=develop" >> $GITHUB_ENV
+          echo "BRANCH_NAME=1.2.0-rc2" >> $GITHUB_ENV
 
       - name: Build with Maven
         run: |
@@ -61,70 +61,107 @@ jobs:
       - name: Generate HTML Document with JSON
         id: create_list
         run: |
-          mkdir -p ./${{ matrix.names }}-report
+          mkdir -p ./${{ matrix.names }}-json
           find . -name "*openapi.json" -exec readlink -f {} \; > temp.txt
           while IFS= read -r line
           do
             fullpath=$line
-            echo "Pullpath: $fullpath"
-            fullname=$(basename "$line")
-            echo "Filename: $fullname"
-            filename=$(echo "$fullname" | cut -f 1 -d '.')
-            redoc-cli bundle -o ./${{ matrix.names }}-report/$filename.html $line
+            cp $fullpath ./${{ matrix.names }}-json
           done < temp.txt
 
-      - name: Upload HTML Documents as Artifact
+      - name: Upload json Documents as Artifact
         uses: actions/upload-artifact@v2
         with:
           name: ${{ matrix.names }}
-          path: ./${{ matrix.names }}-report/*.html
-          retention-days: 1
+          path: ./${{ matrix.names }}-report/*.json
+          retention-days: 5
 
       - name: Checkout Documentation Repository
         uses: actions/checkout@v2
         with:
-          ref: gh-pages
+          ref: lts
 
       - name: Download HTML Documents from Artifacts
         uses: actions/download-artifact@v2
         with:
           name: ${{ matrix.names }}
-          path: ./1.2.0/
+          path: ./api/
 
       - name: Commit Changes to Documenation Repository
         uses: EndBug/add-and-commit@v7
         with:
           default_author: github_actions
           message: 'added documentation for ${{ matrix.names }}'
-          add: './1.2.0/*.html'
+          add: './api/*.json'
 
-  Create_View_page:
-    needs: Generate_Documentation
-    runs-on: ubuntu-latest
 
-    steps:
-      - name: Set up JDK 11
-        uses: actions/setup-java@v1
-        with:
-          java-version: 11
+#      - name: Generate HTML Document with JSON
+#        id: create_list
+#        run: |
+#          mkdir -p ./${{ matrix.names }}-report
+#          find . -name "*openapi.json" -exec readlink -f {} \; > temp.txt
+#          while IFS= read -r line
+#          do
+#            fullpath=$line
+#            echo "Pullpath: $fullpath"
+#            fullname=$(basename "$line")
+#            echo "Filename: $fullname"
+#            filename=$(echo "$fullname" | cut -f 1 -d '.')
+#            redoc-cli bundle -o ./${{ matrix.names }}-report/$filename.html $line
+#          done < temp.txt
 
-      - name: Checkout Documentation Repository
-        uses: actions/checkout@v2
-        with:
-          ref: gh-pages
+#      - name: Upload HTML Documents as Artifact
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: ${{ matrix.names }}
+#          path: ./${{ matrix.names }}-report/*.html
+#          retention-days: 1
 
-      - name: Check All Files
-        run: |
-          echo "$(find . -name "*openapi.html" -exec readlink -f {} \;)"
+#      - name: Checkout Documentation Repository
+#        uses: actions/checkout@v2
+#        with:
+#          ref: gh-pages
+#
+#      - name: Download HTML Documents from Artifacts
+#        uses: actions/download-artifact@v2
+#        with:
+#          name: ${{ matrix.names }}
+#          path: ./1.2.0/
+#
+#      - name: Commit Changes to Documenation Repository
+#        uses: EndBug/add-and-commit@v7
+#        with:
+#          default_author: github_actions
+#          message: 'added documentation for ${{ matrix.names }}'
+#          add: './1.2.0/*.html'
 
-      - name: Create index html file
-        run: |
-          chmod +x index-creator.sh
-          bash index-creator.sh > ./1.2.0/list.html
-
-      - name: Commit Changes to Documenation Repository
-        uses: EndBug/add-and-commit@v7
-        with:
-          default_author: github_actions
-          message: 'added documentation for ${{ matrix.names }}'
-          add: './1.2.0/list.html'
+#  Create_View_page:
+#    needs: Generate_Documentation
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Set up JDK 11
+#        uses: actions/setup-java@v1
+#        with:
+#          java-version: 11
+#
+#      - name: Checkout Documentation Repository
+#        uses: actions/checkout@v2
+#        with:
+#          ref: gh-pages
+#
+#      - name: Check All Files
+#        run: |
+#          echo "$(find . -name "*openapi.html" -exec readlink -f {} \;)"
+#
+#      - name: Create index html file
+#        run: |
+#          chmod +x index-creator.sh
+#          bash index-creator.sh > ./1.2.0/list.html
+#
+#      - name: Commit Changes to Documenation Repository
+#        uses: EndBug/add-and-commit@v7
+#        with:
+#          default_author: github_actions
+#          message: 'added documentation for ${{ matrix.names }}'
+#          add: './1.2.0/list.html'
