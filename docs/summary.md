@@ -48,7 +48,7 @@
  * Community
     * [Contribute](contribute.md)
     * [Code of Conduct](code-of-conduct.md)
-    * [Academic institutes](academic-institutes.md)
+    * [Academic Institutes](academic-institutes.md)
  *  [License](license.md)
    
 
