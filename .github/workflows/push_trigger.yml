@@ -27,14 +27,14 @@ jobs:
         with:
           repository: mosip/${{ matrix.names }}
           path: ${{ matrix.names }}
-          ref: 1.2.0-rc2
+          ref: develop
           server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
           settings-path: ${{ github.workspace }} # location for the settings.xml file
 
       - name: Setup Branch and Env
         run: |
           # Strip git ref prefix from version
-          echo "BRANCH_NAME=1.2.0-rc2" >> $GITHUB_ENV
+          echo "BRANCH_NAME=develop" >> $GITHUB_ENV
 
       - name: Build with Maven
         run: |
@@ -48,6 +48,7 @@ jobs:
           while IFS= read -r line
           do
             fullpath=$line
+            echo "full path of file:  " $fullpath
             cp $fullpath ./${{ matrix.names }}-json
           done < temp.txt
 
