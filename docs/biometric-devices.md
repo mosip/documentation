@@ -53,11 +53,9 @@ MOSIP compliant devices provide a trust environment for the devices to be used i
 ## Devices calculator for production
 
 ## Partners
-
-Onboarding of these partners.
-
-* Device Provider
-* FTM Providers
+Providers of biometric devices are Partners of MOSIP and need to be onboarded to a given deployment of MOSIP. Specifically,
+* [Device Partner](partners.md#device-partner-dp)
+* [FTM Partner](partners.md#ftm-partner-ftmp)
  
 
 
