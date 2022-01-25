@@ -451,7 +451,7 @@ This feature has all the functionality of CRUD.
 
 **Create/Update Gender Types**
 * Using the portal, the Admin can create a Gender Type providing the Gender Type name and description if applicable.
-* A Gender Type needs to be created in both configured Primary and Secondary language.
+* A Gender Type needs to be created in all the country configured language.
 * Although the Portal will allow creation of a Gender Type in only primary language but will not allow activation of that Gender Type until data for that Gender Type is not updated for all the languages. 
 * A deactivated Gender Type will not show up on the Pre-Registration/Registration Client UI. While entering the data, the text fields (e.g., Gender Type Name) needs to be manually input in all the languages. After successful creation, a Gender Type code will be generated.
 * Admin Portal also allows modification of any detail of a Gender Type. The modification includes either adding the details in another language that were missed during creation of the Gender Type or changing the details of a Gender Type itself including name, description etc.
@@ -468,53 +468,71 @@ This feature has all the functionality of CRUD.
 *Device Types*
 
 **Machine Definitions**
-*Machine Specs*
+
+**Machine Specs**
 * Machine specification indicates the Brand, Make and Model of a Machine a country uses to take registrations.
 * The Admin can view the list of all the Machine Specifications on the Admin UI portal. 
 * A Machine can be assigned to a Machine Specification while getting created as required by the country.
 * The portal shows both activated or deactivated Machine Specification. 
 * The Admin can filter the list of Machine Specifications based on Status (Drop-down), Name (Search Box), Brand (Search Box), Model (Search Box), and Machine type (Search Box).
 
-*Machine Types*
+**Machine Types**
 * Machine Type indicates the type of Machines a country uses to take registrations. The Global admin can view list of all the Machine Types on the Admin UI portal. 
 * A Machine can be assigned to a Machine Type while getting created as required by the country.
 * The portal shows both activated or deactivated Machine Types.
 
-Create/Update Machine Types
-Using the portal, the Global Admin can create a Machine type providing the Machine type name and description if applicable.
-A Machine type needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Machine type in only primary language but will not allow activation of that Machine type until data for that Type is not updated for all the languages. While entering the data, the text fields (e.g., Machine type Name) needs to be manually input in all the languages. After successful creation, a Machine type code will be generated.
-Admin Portal also allows modification of any detail of a Machine Type. The modification includes either adding the details in another language that were missed during creation of the Machine Type or changing the details of a Machine Type itself including name, description etc.
+**Create/Update Machine Types**               
+* Using the portal, the Global Admin can create a Machine type providing the Machine type name and description if applicable.
+* A Machine type needs to be created in all the cpuntry configured language.
+* Although the Portal will allow creation of a Machine type in only primary language but will not allow activation of that Machine type until data for that Type is not updated for all the languages. While entering the data, the text fields (e.g., Machine type Name) needs to be manually input in all the languages. After successful creation, a Machine type code will be generated.
+* Admin Portal also allows modification of any detail of a Machine Type. 
 
-View Machine Specifications
+**View Machine Specifications
 
-Create/Update Machine Specifications
-Using the portal, the Global Admin can create the Machine Specification providing the Machine Specification name, brand, make and model. A Machine Specification needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Machine Specification in only primary language but will not allow activation of that Machine Specification until data for that Specification is not updated for all the languages. While entering the data, the text fields (e.g., Machine Specification Name) needs to be manually input in all the languages. After successful creation, a Machine Specification ID will be generated.
-Admin Portal also allows modification of any detail of a Machine Specification. The modification includes either adding the details in another language that were missed during creation of the Machine Specification or changing the details of a Machine Specification itself including name, brand etc.
+**Create/Update Machine Specifications**
+* Using the portal, the Admin can create the Machine Specification providing the Machine Specification name, brand, make and model. 
+* A Machine Specification needs to be created in both configured Primary and Secondary language.
+* Although the Portal will allow creation of a Machine Specification in only primary language but will not allow activation of that Machine Specification until data for that Specification is not updated for all the languages. While entering the data, the text fields (e.g., Machine Specification Name) needs to be manually input in all the languages. After successful creation, a Machine Specification ID will be generated.
+* Admin Portal also allows modification of any detail of a Machine Specification. 
 
 **Document Definitions**
+
 *Document Types*- Document types is the list of Documents a country will configure for the users to give during registrations.
 *Document Categories*
 *Document Categoty- Type Mapping*
 
 Manage Document Type (View, Create, Update, Activate, Deactivate)
 
-View Document Types
-The Global Admin can view list of all the available Document Types on the Admin UI portal. The portal shows both activated or deactivated Document Types. The Admin can filter the list of Document Types based on Document Name(Search box) and Status (Drop-down).
-Create/Update Document Types
-Using the portal, the Global Admin can create the document type providing the Document name and description if applicable. A Document type needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Document type in only primary language but will not allow activation of that Document type until data for that Type is not updated for all the languages. A deactivated document type will not show up on the Pre-Registration/Registration Client UI. While entering the data, the text fields (e.g., Document Type Name) needs to be manually input in all the languages. After successful creation, a Document type code will be generated.
-Admin Portal also allows modification of any detail of a Document type. The modification includes either adding the details in another language that were missed during creation of the Document type or changing the details of a Document Type itself including name, description etc.
-Activate/Deactivate Document types
-The portal allows Zonal Admin to activate or deactivate a document type. Deactivation of a document type can be done if the country feels the document type is not applicable anymore. Thus, deactivated documents does now show up on the Pre-Registration and Registration Client UI. The Activation/Deactivation functionality can be accessed from both the list view or the detail view page of Document Types
-View Document Categories
-The Global Admin can view list of all the available Document Categories as created by the Country in Masterdata. The portal shows both activated or deactivated Document Categories. The Admin can filter the list of Document Categories based on Status (Drop-down).
-Create/Update Document Categories
-Using the portal, the Global Admin can create the document category providing the Document Category name and description if applicable. A Document category needs to be created in both configured Primary and Secondary language. Although the Portal will allow creation of a Document category in only primary language but will not allow activation of that Document category until data for that Cateagory is not updated for all the languages. A deactivated document category will not show up on the Pre-Registration/Registration Client UI. While entering the data, the text fields (e.g., Document category Name) needs to be manually input in all the languages. After successful creation, a Document category code will be generated.
-Admin Portal also allows modification of any detail of a Document category . The modification includes either adding the details in another language that were missed during creation of the Document category or changing the details of a Document category itself including name, description etc.
-View mappings of Document Categories and Document Types
-The portal allows an Global Admin to view Document Categories along with its mapped and un-mapped Document Types. From the view screen itself, the Global Admin can map or un-map the Documents from a Document Category.
-Map/Un-map Document Type to Document Category
-The portal allows the Global Admin to map the available Document types to a Document category. This feature helps the country define as to which document falls under which category. Each Document can be mapped to multiple categories depending on the country's requirement.
+**View Document Types**
+The Admin can view the list of all the available Document Types(activated or deactivated) on the Admin UI portal. The Admin can filter the list of Document Types based on Document Name(Search box) and Status (Drop-down).
 
+**Create/Update Document Types**
+* Using the portal, the Admin can create the document type providing the Document name and description if applicable.
+* A Document type needs to be created in all the country languages. 
+* Although the Portal will allow creation of a Document type in only primary language but will not allow activation of that Document type until data for that Type is not updated for all the languages. 
+* A deactivated document type will not show up on the Pre-Registration/Registration Client UI. While entering the data, the text fields (e.g., Document Type Name) needs to be manually input in all the languages. After successful creation, a Document type code will be generated.
+* Admin Portal also allows modification of any detail of a Document type. The modification includes either adding the details in another language that were missed during creation of the Document type or changing the details of a Document Type itself including name, description etc.
+
+**Activate/Deactivate Document Types**
+The portal allows Zonal Admin to activate or deactivate a document type. Deactivation of a document type can be done if the country feels the document type is not applicable anymore. Thus, deactivated documents does now show up on the Pre-Registration and Registration Client UI. The Activation/Deactivation functionality can be accessed from both the list view or the detail view page of Document Types
+
+**View Document Categories**
+The Admin can view list of all the available Document Categories as created by the Country in Masterdata. The portal shows both activated or deactivated Document Categories. The Admin can filter the list of Document Categories based on Status (Drop-down).
+
+**Create/Update Document Categories**
+* Using the portal, the Admin can create the document category providing the Document Category name and description if applicable. 
+* A Document category needs to be created all the country configured languages. 
+* Although the Portal will allow creation of a Document category in only primary language but will not allow activation of that Document category until data for that Cateagory is not updated for all the languages. A deactivated document category will not show up on the Pre-Registration/Registration Client UI. While entering the data, the text fields (e.g., Document category Name) needs to be manually input in all the languages. 
+* After successful creation, a Document category code will be generated.
+Admin Portal also allows modification of any detail of a Document category. 
+
+**Document category- Type Mapping**
+
+**View mappings of Document Categories and Document Types**
+The portal allows an Admin to view Document Categories along with its mapped and un-mapped Document Types. From the view screen itself, the Admin can map or un-map the Documents from a Document Category.
+
+**Map/Un-map Document Type to Document Category**
+The portal allows the Admin to map the available Document types to a Document category. This feature helps the country define as to which document falls under which category. Each Document can be mapped to multiple categories depending on the country's requirement.
 
 ### BULK UPLOAD
 
