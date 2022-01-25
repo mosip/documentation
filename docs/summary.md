@@ -22,6 +22,7 @@
         * [Pre-registration User Guide](pre-registration-user-guide.md)
     * [Registration Processor](registration-processor.md) 
     * [Registration Client](registration-client.md)
+        * [Operator Onboarding](operator-onboarding.md)
         * [Registration Client User Guide](registration-client-user-guide.md)
         * [Registration Client Home Page](registration-client-home-page.md)
         * [Registration Client Configuration](registration-client-configuration.md)
@@ -34,6 +35,7 @@
     * [WebSub](websub.md)
     * [Resident Services](resident-services.md)
     * [Administration](administration.md)
+        * [Administrator' User Guide][admin.md]
     * [ID Authentication Services](id-authentication-services.md) 
     * [Reporting](reporting.md)
     * [Automation Testing](automation-testing.md)
