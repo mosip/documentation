@@ -13,8 +13,8 @@
     * [ABIS API](abis-api.md)
     * [Biometric SDK](biometric-sdk.md)
     * [Biometric Devices](biometric-devices.md)
+    * [SBI](secure-biometric-interface.md)
     * [Biometric Image Specification](biometric-image-specification.md)
-    * [MDS](mosip-device-service-specification.md)
     * [FTM](ftm.md)
 * [Partners](partners.md)
 * Modules
