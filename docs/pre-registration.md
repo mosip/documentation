@@ -1,6 +1,6 @@
 # Pre-registration 
 
-# Overview
+## Overview
 Pre-registration module enables a resident to 
 * enter demographic data and upload supporting documents,
 * book an appointment for one or many users for registration by choosing a suitable registration center and a convinient time slot,
@@ -35,7 +35,6 @@ MOSIP provides backend APIs for this module along with a reference implementatio
 * User provides the PRID/QR code at the registration center.
 * The registration form gets pre-filled with the pre-registration data.
 
-
 ## Pre-registration module
 The relationship of pre-registration module  with other services is explained here.  _NOTE: The numbers do not signify sequence of operations or control flow_
 
@@ -64,15 +63,15 @@ Pre-registration module consists of the following services:
 
 For more details, refer to [pre-registration repo](https://github.com/pjoshi751/pre-registration/tree/develop)
 
-# Pre-registration portal
+## Pre-registration portal
 MOSIP provides a **reference** implementation of the pre-registration portal that may be customized as per country needs. The sample implementation is available at [reference implementation repository](https://github.com/mosip/mosip-ref-impl).
 For getting started with the pre-registration, refer to the [Pre-registration user guide](pre-registration-user-guide.md) 
 
-# Build and deploy
+## Build and deploy
 To access the build and read through the deployment instructions, refer to [pre-registration repo](https://github.com/pjoshi751/pre-registration/tree/develop).
 
-# APIs
+## APIs
 For detailed functionality of pre-registration APIs, refer to [pre-registration APIs](../../../api-reference/Pre-Registration-APIs.md).
 
-# Configurations
+## Configurations
 For details related to pre-registration configurations, refer to [pre-registration configuration](https://github.com/pjoshi751/pre-registration/blob/develop/docs/configuration.md).
