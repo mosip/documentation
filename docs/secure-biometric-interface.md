@@ -29,7 +29,7 @@ A Digital ID is represented as JSON:
   "dateTime": "string",
 }
 ```
-The Digital ID is signed with the [JSON Web Signature (RFC 7515)(https://datatracker.ietf.org/doc/html/rfc7515) using the [DKL0](keys.md#device-specific-keys) in SBI 1.0 devices and [DKL1](keys.md#device-specific-keys) in SBI 2.0 devices.
+The Digital ID is signed with the [JSON Web Signature RFC 7515](https://datatracker.ietf.org/doc/html/rfc7515) using the [DKL0](keys.md#device-specific-keys) in SBI 1.0 devices and [DKL1](keys.md#device-specific-keys) in SBI 2.0 devices.
 This signature would look like this: 
 ```
 "digitalId": "base64urlencoded(header).base64urlencoded(payload).base64urlencoded(signature)"
@@ -40,7 +40,7 @@ This signature would look like this:
 |`serialNo`|As printed on [Physical ID](#physical-id)
 |`make`|Brand name as printed on [Physical ID](#physical-id)|
 |`model`|Model of the device as printed on [Physical ID](#physical-id)|
-|`type|`Finger`, `Iris`, or `Face`|
+|`type`|`Finger`, `Iris`, or `Face`|
 |`deviceSubType`|Based on `type`. See note below|
 |`deviceProvider` | Name of the device provider|
 |`dateTime`| Time during the issuance of the request. This is in ISO format.|
