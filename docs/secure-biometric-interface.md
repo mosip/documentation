@@ -29,12 +29,6 @@ A Digital ID is represented as JSON:
   "dateTime": "string",
 }
 ```
-The Digital ID is signed with the [JSON Web Signature RFC 7515](https://datatracker.ietf.org/doc/html/rfc7515) using the [DKL0](keys.md#device-specific-keys) in SBI 1.0 devices and [DKL1](keys.md#device-specific-keys) in SBI 2.0 devices.
-This signature would look like this: 
-```
-"digitalId": "base64urlencoded(header).base64urlencoded(payload).base64urlencoded(signature)"
-```
-
 |Parameters|Description|
 |---|---|
 |`serialNo`|As printed on [Physical ID](#physical-id)
@@ -49,6 +43,12 @@ This signature would look like this:
 * For `Finger`: `Slap`, `Single` or `Touchless`
 * For `Iris`: `Single` or `Double`
 * For `Face`: `Full face`
+
+The Digital ID is signed with the [JSON Web Signature RFC 7515](https://datatracker.ietf.org/doc/html/rfc7515) using the [DKL0](keys.md#device-specific-keys) in SBI 1.0 devices and [DKL1](keys.md#device-specific-keys) in SBI 2.0 devices.
+This signature would look like this: 
+```
+"digitalId": "base64urlencoded(header).base64urlencoded(payload).base64urlencoded(signature)"
+```
 
 ## Device Service - Communication Interfaces
 The section explains the necessary details of the biometric device connectivity, accessibility, discover-ability and protocols used to build and communicate with the device.
