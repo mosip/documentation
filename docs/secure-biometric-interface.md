@@ -1,34 +1,13 @@
-# MDS Specification
+# Secure Biometric Inteface  
 
 ## Overview
-MOSIP Device Service (MDS) specification establishes standards/protocols that are necessary for a biometric device to be used in MOSIP. The MDS specification is primarly intented for biometric device manufactures, developers and designers to build MOSIP compliant devices. All devices that collect biometric data should operate within the specification of this document.
+Secure Biometric Interface (SBI), previously called MOSIP Device Service (MDS) specification establishes standards/protocols that are necessary for a biometric device to be used in MOSIP. The MDS specification is primarly intented for biometric device manufactures, developers and designers to build MOSIP compliant devices. All devices that collect biometric data should operate within the specification of this document.
 
 ## Revision history
 |Version|Status|Date|
 |---|---|---|
 |0.9.5|Released|June-2020|
 
-
-## Glossary of Terms
-
-* Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
-* Foundational Trust Provider - An entity that manufactures the foundational trust module.
-* Device - A hardware capable of capturing biometric information.
-* L1 Certified Device / L1 Device - A device certified as capable of performing encryption in line with this spec in its trusted zone.
-* L0 Certified Device / L0 Device - A device certified as one where the encryption is done on the host machine device driver or the MOSIP device service.
-* Foundational Trust Provider Certificate - A digital certificate issued to the "Foundational Trust Provider". This certificate proves that the provider has successfully gone through the required Foundational Trust Provider evaluation. The entity is expected to keep this certificate in secure possession in an HSM. All the individual trust certificates are issued using this certificate as the root. This certificate would be issued  by the countries in conjunction with MOSIP.
-* Device Provider Certificate - A digital certificate issued to the "Device Provider". This certificate proves that the provider has been certified for L0/L1 respective compliance. The entity is expected to keep this certificate in secure possession in an HSM. All the individual trust certificates are issued using this certificate as the root. This certificate is issued by the countries in conjunction with MOSIP.
-* Registration - The process of applying for a Foundational Id.
-* KYC - Know Your Customer. The process of providing consent to perform profile verification and update.
-* Auth - The process of verifying one’s identity.
-* FPS - Frames Per Second
-* Management Server - A server run by the device provider to manage the life cycle of the biometric devices.
-* Device Registration - The process of registering the device with MOSIP servers.
-* Signature - All signature should be as per RFC 7515.
-* header in signature - Header in signature means the attribute with "alg" set to RS256 and x5c set to base64encoded certificate.
-* payload is the byte array of the actual data, always represented as base64urlencoded.
-* signature - base64urlencoded signature bytes
-* ISO format timestamp - ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ (Example: 2020-12-08T09:39:37Z)
 
 ## Device identity
 It is imperative that all devices that connect to MOSIP are identifiable. 
@@ -40,63 +19,36 @@ An identification mark that shows MOSIP compliance and a readable unique device 
 A Digital ID is represented as JSON:
 ```JSON
 {
-  "serialNo": "Serial number",
-  "make": "Make of the device",
-  "model": "Model of the device",
-  "type": "Type of the biometric device",
-  "deviceSubType": "Subtypes of the biometric device",
-  "deviceProvider": "Device provider name",
-  "deviceProviderId": "Device provider id",
-  "dateTime": "Current datetime in ISO format"
+  "serialNo": "string",
+  "make": "string",
+  "model": "string",
+  "type": "string",
+  "deviceSubType": "string",
+  "deviceProvider": "string",
+  "deviceProviderId": "string",
+  "dateTime": "string",
 }
 ```
-The Digital ID is signed with the JSON Web Signature (RFC 7515) using the [FTM key](ftm.md) in [L1](biometric-devices.md#l1) devices and [Device key](biometrics-devices.md) in [L0](). 
-
-Signed Digital ID would look as follows:
+The Digital ID is signed with the [JSON Web Signature (RFC 7515)(https://datatracker.ietf.org/doc/html/rfc7515) using the [DKL0](keys.md#device-specific-keys) in SBI 1.0 devices and [DKL1](keys.md#device-specific-keys) in SBI 2.0 devices.
+This signature would look like this: 
 ```
 "digitalId": "base64urlencoded(header).base64urlencoded(payload).base64urlencoded(signature)"
 ```
 
-The header in the digital id would have:
-```
-"alg": "RS256",
-"typ": "JWT",
-"x5c": "<Certificate of the FTM chip, If in case the chain of certificates are sent then the same will be ignored">
-```
+|Parameters|Description|
+|---|---|
+|`serialNo`|As printed on [Physical ID](#physical-id)
+|`make`|Brand name as printed on [Physical ID](#physical-id)|
+|`model`|Model of the device as printed on [Physical ID](#physical-id)|
+|`type|`Finger`, `Iris`, or `Face`|
+|`deviceSubType`|Based on `type`. See note below|
+|`deviceProvider` | Name of the device provider|
+|`dateTime`| Time during the issuance of the request. This is in ISO format.|
 
-MOSIP assumes that the first certificate in the x5c is the FTM's chip public certificate issued by the FTM root certificate.
-
-Unsigned digital ID would look as follows:
-```
-"digitalId": "base64urlencoded(payload)"
-```
-Payload is the Digital ID JSON object.
-
-{% hint style="info" %}
-For a L0 unregistered device the digital id will be unsigned. In all other scenarios, except for a discovery call, the digital ID will be signed either by the chip key (L1) or the device key (L0).
-{% endhint %}
-
-##### Accepted Values for Digital ID
-Parameters | Description
------------|-------------
-serialNo | <ul><li>Serial number of the device.</li><li>This value should be same as printed on the device (Refer [Physical ID](#physical-id)).</li></ul>
-make | <ul><li>Brand name.</li><li>This value should be same as printed on the device (Refer [Physical ID](#physical-id)).</li><ul>
-model | <ul><li>Model of the device.</li><li>This value should be same as printed on the device (Refer [Physical ID](#physical-id)).</li></ul>
-type | <ul><li>Currently allowed values for device type are "Finger", "Iris" or "Face".</li><li>More types can be added based on Adopter's implementation.</li></ul>
-deviceSubType | <ul><li>Device Sub type is based on the device type.</li><li>For Finger - "Slap", "Single" or "Touchless"</li><li>For Iris - "Single" or "Double"</li><li>For Face - "Full face"</li></ul>
-deviceProvider | <ul><li>Name of the device provider.</li><li>Device provider should be a legal entity in the country.</li></ul>
-dateTime | <ul><li>Current time during the issuance of the request.</li><li>This is in ISO format.</li></ul>
-
-### Keys
-List of keys used in the device and their explanation.
-
-* **Device Key**
-
-Each biometric device would contain an authorized private key after the device registration. This key is rotated frequently based on the requirement from the respective adopter of MOSIP. By default MOSIP recommends 30 days key rotation policy for the device key. The device keys are created by the device providers inside the FTM during a successful registration.  The device keys are used for signing the biometric. More details of the signing and its usage will be [here](#device-service-communication-interfaces).  This key is issued by the device provider and the certificate of the device key is issued by the device provider key which in turn is issued by the MOSIP adopter after approval of the device providers specific model.
-
-* **MOSIP Key**
-
-The MOSIP key is the public key provided by the MOSIP adopter. This key is used to encrypt the biometric biometric. Details of the encryption is listed below. We recommend to rotate this key every 1 year.
+`deviceSubType`:
+* For `Finger`: `Slap`, `Single` or `Touchless`
+* For `Iris`: `Single` or `Double`
+* For `Face`: `Full face`
 
 ## Device Service - Communication Interfaces
 The section explains the necessary details of the biometric device connectivity, accessibility, discover-ability and protocols used to build and communicate with the device.

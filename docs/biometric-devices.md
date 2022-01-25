@@ -22,16 +22,10 @@ Typical selection of devices is given below.  An adopter may choose to have diff
 |---|---|---|---|---|
 |Registration|Fingerprint|Slap scanner|L0|[Fingerprint image spec](biometric-image-specification.md#fingerprint)|
 |Registration|Iris|Double eye scanner|L0|[Iris image spec](biometric-image-specification.md#iris)|
-|Registration|Facd|Camera|L0|[Face image spec](biometric-image-specification.md#face)|
+|Registration|Face|Camera|L0|[Face image spec](biometric-image-specification.md#face)|
 |Authentication|Fingerprint|Single finger scanner|L1|[Fingerprint image spec](biometric-image-specification.md#fingerprint)|
 |Authentication|Iris|Single eye scanner|L1|[Iris image spec](biometric-image-specification.md#iris)|
-|Authentication|Facd|Camera|L1|[Face image spec](biometric-image-specification.md#face)|
-
-
-## Image specification 
-[Biometric Image Specification](biometric-image-specification.md)
-
-We recommend that countries look at ergonomics, accessibility, ease of usage, and common availability of devices while choosing devices for use in registration and authentication scenarios.
+|Authentication|Face|Camera|L1|[Face image spec](biometric-image-specification.md#face)|
 
 ## Device trust
 MOSIP compliant devices provide a trust environment for the devices to be used in registration, KYC and AUTH scenarios. The trust level is established based on the device support for trusted execution.
