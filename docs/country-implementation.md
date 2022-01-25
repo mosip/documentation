@@ -11,6 +11,7 @@
 * Procurement of biometric and other external components.
 * Sandbox, staging, development setups
 * ID schema design
+* Applicanttype MVEL
 * Masterdata 
 * Customisation of registration client, pre-registration, resident portal 
 * Production grade deployment design. Disaster Recovery strategy.

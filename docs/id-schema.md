@@ -46,5 +46,6 @@ If any changes are made to the default ID Schema, make sure the following depend
 1. UI Specification for Pre-registration and Registration Client
 1. [Identity Mapping JSON](https://github.com/mosip/mosip-config/blob/develop3-v3/identity-mapping.json)
 1. [ID Authentication Mapping JSON](https://github.com/mosip/mosip-config/blob/develop3-v3/id-authentication-mapping.json)
+1. [Applicanttype MVEL](https://github.com/mosip/mosip-config/blob/develop3-v3/applicanttype.mvel)
 
 ## Versions of ID Schema
