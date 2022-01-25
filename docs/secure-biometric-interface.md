@@ -50,7 +50,8 @@ This signature would look like this:
 * For `Iris`: `Single` or `Double`
 * For `Face`: `Full face`
 
-## Device Service - Communication Interfaces
+## Device service - communication interfaces
+
 The section explains the necessary details of the biometric device connectivity, accessibility, discover-ability and protocols used to build and communicate with the device.
 
 The device should implement only the following set of APIs.  All the API’s are independent of the physical layer and the operating system, with the invocation being different across operating systems. While the operating system names are defined in this spec a similar technology can be used for unspecified operating systems.  It is expected that the device service ensures that the device is connected  locally to the host.

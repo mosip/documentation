@@ -6,26 +6,24 @@ Biometric devices capture individuals biometric data (fingerprint, iris scan, ph
 ![](_images/sdk.png)
 
 ## Device types 
-
-### Purpose
-* Registration
-* Authentication
-
-### Modalities
-1. Fingerprint
-1. Iris
-1. Face
-
-Typical selection of devices is given below.  An adopter may choose to have different sub-types, however, the certification needs to be adhered to.
-
-|Purpose|Type|Sub Type|Certification|Specification|
+|Purpose|Type|Subtype\*|Certification|Specification|
 |---|---|---|---|---|
-|Registration|Fingerprint|Slap scanner|L0|[Fingerprint image spec](biometric-image-specification.md#fingerprint)|
-|Registration|Iris|Double eye scanner|L0|[Iris image spec](biometric-image-specification.md#iris)|
-|Registration|Face|Camera|L0|[Face image spec](biometric-image-specification.md#face)|
-|Authentication|Fingerprint|Single finger scanner|L1|[Fingerprint image spec](biometric-image-specification.md#fingerprint)|
-|Authentication|Iris|Single eye scanner|L1|[Iris image spec](biometric-image-specification.md#iris)|
-|Authentication|Face|Camera|L1|[Face image spec](biometric-image-specification.md#face)|
+|Registration|Fingerprint|Slap scanner|SBI 1.0|[Fingerprint image spec](biometric-image-specification.md#fingerprint)|
+|Registration|Iris|Double eye scanner|SBI 1.0|[Iris image spec](biometric-image-specification.md#iris)|
+|Registration|Face|Camera|SBI 1.0|[Face image spec](biometric-image-specification.md#face)|
+|Authentication|Fingerprint|Single finger scanner|SBI 2.0|[Fingerprint image spec](biometric-image-specification.md#fingerprint)|
+|Authentication|Iris|Single eye scanner|SBI 2.0|[Iris image spec](biometric-image-specification.md#iris)|
+|Authentication|Face|Camera|SBI 2.0|[Face image spec](biometric-image-specification.md#face)|
+
+\* An adopter may choose to have different sub-types, however, the certification needs to be adhered to.
+
+## Encrolment flow
+
+![](_images/devices-enrolment.png)
+
+## Authentication flow
+
+![](_images/devices-authentication.png)
 
 ## Device trust
 MOSIP compliant devices provide a trust environment for the devices to be used in registration, KYC and AUTH scenarios. The trust level is established based on the device support for trusted execution.
