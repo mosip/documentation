@@ -53,27 +53,27 @@ jobs:
             ls ./${{ matrix.names }}-json
           done < temp.txt
 
-#      - name: Upload json Documents as Artifact
-#        uses: actions/upload-artifact@v2
-#        with:
-#          name: ${{ matrix.names }}
-#          path: ./${{ matrix.names }}-report/*.json
-#          retention-days: 5
-#
-#      - name: Checkout Documentation Repository
-#        uses: actions/checkout@v2
-#        with:
-#          ref: lts
-#
-#      - name: Download JSON Documents from Artifacts
-#        uses: actions/download-artifact@v2
-#        with:
-#          name: ${{ matrix.names }}
-#          path: ./api/
-#
-#      - name: Commit Changes to Documenation Repository
-#        uses: EndBug/add-and-commit@v7
-#        with:
-#          default_author: github_actions
-#          message: 'added documentation for ${{ matrix.names }}'
-#          add: './api/*.json'
+      - name: Upload json Documents as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.names }}
+          path: ./${{ matrix.names }}-json/*.json
+          retention-days: 5
+
+      - name: Checkout Documentation Repository
+        uses: actions/checkout@v2
+        with:
+          ref: lts
+
+      - name: Download JSON Documents from Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: ${{ matrix.names }}
+          path: ./api/
+
+      - name: Commit Changes to Documenation Repository
+        uses: EndBug/add-and-commit@v7
+        with:
+          default_author: github_actions
+          message: 'added documentation for ${{ matrix.names }}'
+          add: './api/*.json'
