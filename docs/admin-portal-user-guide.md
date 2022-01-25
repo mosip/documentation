@@ -1,6 +1,14 @@
 # Admin Portal User Guide
 
 ## Overview
+Admin application is a web-based application used by a privileged group of administrative personnel to manage various master data. The various resources that can be managed by an Admin are:
+1. Center (registration centers)
+1. Device
+1. Machine
+1. Users (Admin, registration staff) 
+
+Along with the resource and data management, the admin can generate master keys, check registration status, retrieve lost application ID, resume processing of paused packets.
+
 To get started with using the Admin portal, an admin user must be assigned to a zone.
 
 ## First Admin user
@@ -45,13 +53,6 @@ The above are done automatically as part of [default sandbox installation](https
 |UploadOtherDomainCertificate|UploadCertificate||||
 ||UploadOtherDomainCertificate||||
 
-## Resources 
-The various resources that can be managed by an Admin are:
-1. Center (registration centers)
-1. Device
-1. Machine
-1. Users (Admin, registration staff) 
-
 ## Center 
 
 * This portal allows an Admin to view, create, edit, activate, deactivate and decommission registration centers.
@@ -79,10 +80,10 @@ The administrator can filter the list of registration centers based on parameter
 
 ![](_images/admin-edit-center.png)
 
-* An admin can update a center once a center is created. The updates can include adding the details that were missed during creation of the center or changing the details of a center as required.
+* An admin can update a center even after it has been created. The updates can include adding the details that were missed during creation of the center or changing the details of a center as required.
 * To update, click the **Edit** option from the Actions menu against a center name.
 
-*Note - Updates made to language specific fields updates data only for that language in the database while updates made to non-language dependent fields updates data against all the language entries for that center*. 
+*Note*- Updates made to language specific fields updates data only for that language in the database while updates made to non-language dependent fields updates data against all the language entries for that center. 
 
 ### Activate/deactivate/decommission center
 
@@ -95,12 +96,12 @@ To know more, refer [Activate/deactivate/decommission resources](administration.
 
 ## Devices
 
-**Note: Device entity is language agnostic.**
+* using this portal, An admin can manage the devices a country will use for registering residents like devices used for bio-metric capture (Fingerprint, Iris, Web camera, etc.), printers, scanners.
+* This portal allows an Admin to view, create, edit, activate, deactivate and decommission registration centers.
+* The admin portal allows an admin to view the list of all the devices available in the jurisdiction of his/her administrative zone. 
+* The system does not fetch the details of Decommissioned Devices but only Active and Inactive Devices.
 
-* Admin Portal allows an administrator to manage the Devices a country will use for registering residents like devices used for bio-metric capture (Fingerprint, Iris, Web camera, etc.), printers, scanners.
-* Device management includes Viewing, Creating, Editing, Activating, Deactivating and Decommissioning of Devices.
-* The Admin portal allows an administrator to view the list of all Devices available in the jurisdiction of their administrative zone. 
-* The system does not fetch the details of Decommissioned Devices but only Active and Inactive Devices. 
+*Note*: Device entity is language agnostic. 
 
 ![](_images/admin-view-device.png)
 
@@ -108,26 +109,26 @@ The Admin can filter the list of Registration Centers based on parameters like *
 
 ![](_images/admin-view-device-filter.png)
 
-**Create Devices**
+### Create devices
 
 ![](_images/admin-create-device.png)
 
 A Device can be created with the multiple attributes and be mapped to the Administrative Zone it belongs to. 
 
-**Update Devices**
+### Update devices
 
 ![](_images/admin-edit-device.png)
 
 * An admin can update missing information or change device details even after it is created.
 * To update, click the **Edit** option from the Actions menu against a device.
 
-**Activate/Deactivate/Decommission Device**
+### Activate/Deactivate/Decommission Device
 
 ![](_images/admin-deactivate-device.png)
 
-To Activate/Deactivate/Decommission Device, select the **Deactivate/Decommission** option from the Actions menu against the device.
+Select the **Deactivate/Decommission** option from the Actions menu against the device.
 
-**Map/Un-map/Re-map Device to a Center**
+### Map/Un-map/Re-map Device to a Center
 
 ![](_images/admin-map-device-center.png)
 
@@ -149,29 +150,29 @@ The administrator can filter the list of machines based on parameters like *Mach
 
 ![](_images/admin-view-machine-filter.png)
 
- **Create Machines**
+ ### Create machines
 ![](_images/admin-create-machine.png)
 
-* A Machine can be created with the attributes like *Machine ID, machine name, mac address, serial number, machine spec ID and administrative zone* the machine belongs to.
+* A machine can be created with the attributes like *Machine ID, machine name, mac address, serial number, machine spec ID and administrative zone* the machine belongs to.
 * While entering data through UI in multiple languages, the dropdown values and numeric values entered in primary language gets automatically captured in all language.
 * But the text fields (e.g., machine name) needs to be manually input in all the languages. A machine can be mapped to the administrative zone which is at the any zonal hierarchy.
 
-**Update Machines**
+### Update machines
 
 ![](_images/admin-edit-machine.png)
 
 * An admin can update missing details or make changes to machine details even after it is created. 
 * To update, click the **Edit** option from the Actions menu against a machine.
 
-*Note - Updates made to language specific fields updates data only for that language in the database while updates made to non-language dependent fileds updates data against all the language entries for that center.* 
+*Note* - Updates made to language specific fields updates data only for that language in the database while updates made to non-language dependent fileds updates data against all the language entries for that center.
 
-**Activate/Deactivate/Decommission Machine**
+### Activate/Deactivate/Decommission machine
 
 ![](_images/admin-deactivate-machine.png)
 
 An admin can deactivate or decommission a machine through the admin portal.
 
-**Map/Un-map/Re-map Machine to a Center**
+### Map/Un-map/Re-map machine to a center
 
 * Admin portal allows an Admin to map/un-map each Machine to a Center. This mapping specifies as to which Center the Machine will be used in.
 * A Machine can only be mapped to a Center which belongs under the Machine’s Administrative Zone.
@@ -188,7 +189,7 @@ An admin can deactivate or decommission a machine through the admin portal.
 
 Once the user is created in KeyCloak, they need to be mapped to a zone to get access to specific information available in that zone.
 
-**Map/Un-map/re-map user to a Zone**
+#### Map/Un-map/re-map user to a Zone
 
 ![](_images/admin-user-zone-map.png)
 
@@ -204,7 +205,7 @@ To re-map a user to a zone,
 3. Update the *User Name/ Administrative Zone* from the dropdown.
 4. Click **Save**.
 
-Note: If the center is mapped already, the admin needs to unmap the center to remap the zone.
+Note: If the center is already mapped, the admin needs to unmap the center to remap the zone.
 
 * Admin portal allows an admin to map users to a zone. This mapping specifies as to which zone the user will belong to.
 * A user can only be mapped to a zone which belongs under the user’s Administrative Zone.
@@ -303,7 +304,7 @@ To view the format for inserting data in a particular table, click on the Downlo
  
 *For uploading the packets through the Admin portal, ensure that the packets are available in the machine or the external hard disk connected from where the Admin Portal is being used.*
 
-## KeyManager (taheer)
+## KeyManager 
 * The admin user can manage the key using this feature.
 
 **GenerateMasterKey**
