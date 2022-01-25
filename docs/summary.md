@@ -46,9 +46,8 @@
     * [Country Implementation](country-implementation.md)
  * [APIs](api.md)
  * Community
-    * [Contribute](contribute.md)
+    * [Contributions](contributions.md)
     * [Code of Conduct](code-of-conduct.md)
-    * [Academic Institutes](academic-institutes.md)
  *  [License](license.md)
    
 
