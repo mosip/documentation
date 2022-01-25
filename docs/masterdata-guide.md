@@ -5,12 +5,12 @@ Masterdata is the necessary base data to run MOSIP services. The data resides in
 
 The tables to be customized for a country deployment are listed below. 
 
-## Common guideline
+## Common guidelines
 Applicable for all tables:
 
 * Add/remove rows for the [configured languages](). 
 
-## Document
+## Documents
 |Table|Guide|
 |---|---|
 |`doc_category`|Categories of documents to be captured|
