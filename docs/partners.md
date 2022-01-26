@@ -20,13 +20,13 @@ The MOSIP platform requires integration with several other systems.  Typically, 
 \* Label:  Reference in `partner_type` table of `mosip_pms` database.
 
 ## Partner policies
-Partner policies control the data needs to be shared with a partner. The policies reside in [`auth_policy` table](https://github.com/mosip/partner-management-services/blob/1.2.0-rc2/db_scripts/mosip_pms/ddl/pms-auth_policy.sql) of `mosip_pms` DB. 
+Partner policies control the data that needs to be shared with a partner. The policies reside in [`auth_policy` table](https://github.com/mosip/partner-management-services/blob/1.2.0-rc2/db_scripts/mosip_pms/ddl/pms-auth_policy.sql) of `mosip_pms` DB. 
 
 ### Policy types
 |Policy type|Partners|Description|
 |---|---|---|
-|Auth policy|AP|specifies [authentication types](id-authentication.md#authentication-types)and [KYC](id-authentication.md#kyc) fields to be shared during authentication.|
-|Datashare policy|all partners except AP|specifies data to be shared with partners|
+|Auth policy|AP|Specifies [authentication types](id-authentication.md#authentication-types) and [KYC](id-authentication.md#kyc) fields to be shared during authentication.|
+|Datashare policy|all partners except AP|Specifies data to be shared with partners|
 
 Refer to the [default policies](https://github.com/mosip/partner-management-services/blob/1.2.0-rc2/db_scripts/mosip_pms/dml/pms-auth_policy.csv) loaded while installing MOSIP.
 
