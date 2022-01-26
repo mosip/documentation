@@ -80,7 +80,7 @@ jobs:
       - name: Commit Changes to Documenation Repository
         uses: EndBug/add-and-commit@v7
         with:
-          branch: ${{ github.event.inputs.git-ref }}
+          branch: gh-pages
           default_author: github_actions
           message: 'added documentation for release ${{ github.event.inputs.git-ref }}'
           add: './${{ github.event.inputs.git-ref }}/*.html'
