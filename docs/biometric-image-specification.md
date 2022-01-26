@@ -19,8 +19,8 @@ Capture Mode | Auto Capture | Auto Capture
 Preview | > 3 FPS M-JPEG frames with NFIQ 2.0 score superimposed | Not Applicable 
 ESD | >= 8kv | >= 8kv
 EMC Compliance | FCC class A or equivalent | FCC class A or equivalent
-Operating Temperature\* |     0 to 50 &deg;C | 0 to 50 &deg;C
-FTM\*\* | SBI 1.0 - Use host based security (and above) | SBI 2.0 - FTM supported security
+Operating Temperature |0 to 50 &deg;C | 0 to 50 &deg;C
+FTM | SBI 1.0 - Use host based security (and above) | SBI 2.0 - FTM supported security
 
 \* MOSIP adopters may change this if needed.
 
@@ -46,7 +46,7 @@ Scan Type | Progressive | Progressive
 Preview	| >= 3 FPS M-JPEG frames with quality score superimposed | Not Applicable
 EMC compliance | FCC Class A or equivalent | FCC Class A or equivalent
 Operating Temperature\* | 0 to 50 &deg;C | 0 to &deg;50 C
-FTM\*\* | SBI 1.0  - Use host-based security (and above) | SBI 2.0 - FTM supported security	
+FTM | SBI 1.0  - Use host-based security (and above) | SBI 2.0 - FTM supported security	
 
 \* MOSIP adopters may change this if needed.
 
@@ -66,5 +66,6 @@ EMC compliance | FCC Class A or equivalent | FCC Class A or equivalent
 Operation Temperature\*	| 0 to 50 &deg;C | 0 to 50 &deg;C
 FTM | SBI 1.0 - Use host based security (and above) | SBI 2.0 - FTM supported security
 
-\* Capture Time across modalities should be less than 4 Seconds (time taken for providing a final capture response to the calling application, when the biometrics are well placed on the sensors)
+
+Capture Time across modalities should be less than 4 seconds (time taken for providing a final capture response to the calling application, when the biometrics are well placed on the sensors)
 
