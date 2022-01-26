@@ -50,7 +50,10 @@ MOSIP compliant devices provide a trust environment for the devices to be used i
 
 ## Management server
 
-## Devices calculator for production
+## Devices calculator 
+The following calculator may be used to estimate number of devices required for a rollout. 
+
+[MOSIPDevicesCalculator](_files/mosip-devices-calculator.xls)
 
 ## Partners
 Providers of biometric devices are Partners of MOSIP and need to be onboarded to a given deployment of MOSIP. Specifically,
