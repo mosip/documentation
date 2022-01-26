@@ -29,6 +29,8 @@ The MOSIP platform requires integration with several other systems.  Typically, 
 ## Partner onboarding
 Onboarding of a partner refers to registering a partner in a particular deployment of MOSIP.  Partners need to be onboarded to establish trust.  The onboarding process consists of loading partner details in database, exchanging certificates etc, detailed in the later sections.  Such onboarding is required to be done on any fresh MOSIP installation.  For instance, if you install a sandbox, you would need to follow the onboarding process for each partner.
 
+The sections below describe onboarding process for each type of partner.
+
 ### MISP 
 1. MISP should have a trusted X.509 certificate with chain of CA certificates.
 1. MISP self-registers on PMS portal providing partner id, name, organisation name (same as in certificate), partner type (`MISP_type`) (_This functionality will be available on the portal in 1.2.x version of MOSIP_)
