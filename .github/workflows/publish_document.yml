@@ -75,7 +75,7 @@ jobs:
       - name: Create index html file
         run: |
           chmod +x index-creator.sh
-          bash index-creator.sh > ./${{ github.event.inputs.git-ref }}/${{ github.event.inputs.git-ref }}.html
+          bash index-creator.sh ${{ github.event.inputs.git-ref }} > ./${{ github.event.inputs.git-ref }}/${{ github.event.inputs.git-ref }}.html
 
       - name: Commit Changes to Documenation Repository
         uses: EndBug/add-and-commit@v7
