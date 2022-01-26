@@ -10,7 +10,7 @@ The relationship of Regproc with other services is explained here. _NOTE: The nu
 1. Registration packets are uploaded by [Registration Client](registration-client.md) to [Packet Receiver](https://github.com/mosip/registration/tree/1.2.0-rc2/registration-processor/init/registration-processor-packet-receiver-stage).
 2. User pre-registration data is downloaded using the pre-registration datasync service.
 3. Quality of biometrics is checked using an external biometric SDK. This is done in Regproc's [Quality Classifier stage](https://github.com/mosip/registration/blob/1.2.0-rc2/registration-processor/pre-processor/registration-processor-quality-classifier-stage/README.md).
-4. Regproc shares biometric data with [ABIS](abis.md) and Manual adjudication System. The policy for sharing this data is fetched from [PMS](partner-management.md).
+4. Regproc shares biometric data with [ABIS](abis.md) and Manual adjudication System. The policy for sharing this data is fetched from [PMS](partner-management-services.md).
 5. The above data is shared by providing a URL that partners use to fetch data.  This URL is obtained from [Datashare](data-share.md) service.
 6. Regproc's [ABIS Middleware stage](https://github.com/mosip/registration/tree/1.2.0-rc2/registration-processor/core-processor/registration-processor-abis-middleware-stage) communicates with [ABIS](abis.md) via [Activemq](https://activemq.apache.org/). The ABIS performs deduplication and sends back result to the Q.  
 7.

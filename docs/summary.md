@@ -29,7 +29,7 @@
         * [Registration Client UI Spec](registration-client-ui-specifications.md)
     * [Commons](commons.md) 
     * [ID Repository](id-repository.md)
-    * [Partner Management](partner-management.md)
+    * [Partner Management](partner-management-services.md)
     * [Data Share](data-share.md)
     * [Packet Manager](packet-manager.md)
     * [WebSub](websub.md)

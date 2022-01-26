@@ -81,5 +81,5 @@ The MOSIP Partner Programme (MPP) was initiated to help stakeholders connect wit
 Refer MPP document [here](https://www.mosip.io/uploads/resources/60914c1597184Program-partner-V7.pdf) for further details.
 
 ## PMS module
-Refer [Partner Management Services](partner-management.md).
+Refer [Partner Management Services](partner-management-services.md).
 
