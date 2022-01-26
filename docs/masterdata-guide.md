@@ -1,7 +1,7 @@
 # Masterdata Guide
 
 ## Overview
-Masterdata is the necessary base data to run MOSIP services. The data resides in the [`mosip_master` DB](https://github.com/mosip/admin-services/tree/1.2.0-rc2/db_scripts/mosip_master). This data needs to be customized for a country specific deployment.  Masterdata is bulk uploaded one-time during the installation process (refer [sandbox install](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/mosip/kernel/masterdata)) and later may be updated using the [Admin Portal](admin-portal-guide.md). The default data uploaded during sandbox installation is available [here](https://github.com/mosip/mosip-data/tree/lts/mosip_master/xlsx). 
+Masterdata is the necessary base data to run MOSIP services. The data resides in the [`mosip_master` DB](https://github.com/mosip/admin-services/tree/1.2.0-rc2/db_scripts/mosip_master). This data needs to be customized for a country specific deployment.  Masterdata is bulk uploaded one-time during the [installation process](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/mosip/kernel/masterdata) and later may be updated using the [Admin Portal](admin-portal-guide.md). The default data uploaded during sandbox installation is available [here](https://github.com/mosip/mosip-data/tree/lts/mosip_master/xlsx). 
 
 The tables to be customized for a country deployment are listed below. 
 
