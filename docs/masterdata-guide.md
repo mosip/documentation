@@ -27,9 +27,11 @@ Applicable for all tables:
 1. machine_type
 
 ## ID schema and UI spec
-1. identity_schema
+1. `identity_schema`
+
 Refer to [ID Schema customisation](id-schema.md). Update the JSON in `schema_json` column of [`identity_schema.xlsx`](https://github.com/mosip/mosip-data/tree/lts/mosip_master/xlsx/identity_schema.xlsx)
-1. ui_spec
+
+1. `ui_spec`
 
 ## Registration center
 1. reg_center_type
