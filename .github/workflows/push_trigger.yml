@@ -1,0 +1,83 @@
+name: Maven Package upon a call
+
+# Triggered when code is pushed to any branch in a repository
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'Trigger HTML Documentation'
+        required: false
+        default: 'Document Preparation'
+      releaseTags:
+        description: 'tag to generate document'
+        required: true
+
+jobs:
+  Generate_Documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up JDK 11
+        uses: actions/setup-java@v1
+        with:
+          java-version: 11
+
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+          ref: ${{ github.event.inputs.releaseTags }}
+
+      - name: Setup Branch and Env
+        run: |
+          # Strip git ref prefix from version
+          echo "BRANCH_NAME=${{ github.event.inputs.releaseTags }}" >> $GITHUB_ENV
+
+      - name: Set up redoc cli
+        run: |
+          npm install -g redoc-cli
+
+      - name: Generate HTML Document with JSON
+        run: |
+          mkdir -p html_docs
+          find ./api -name "*openapi.json" -exec readlink -f {} \; > tmp.txt
+          while IFS= read -r line
+          do
+            fullpath=$line
+            echo "Pullpath: $fullpath"
+            fullname=$(basename "$line")
+            echo "Filename: $fullname"
+            filename=$(echo "$fullname" | cut -f 1 -d '.')
+            redoc-cli bundle -o ./html_docs/$filename.html $line
+          done < tmp.txt
+
+      - name: Upload HTML Documents as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: html-docs
+          path: ./html-docs/*.html
+          retention-days: 1
+
+      - name: Checkout branch for publishing
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+
+      - name: Download HTML Documents from Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: html-docs
+          path: ./${{ github.event.inputs.releaseTags }}/
+
+      - name: Check All Files
+        run: |
+          echo "$(find ./{{ github.event.inputs.releaseTags }} -name "*openapi.html" -exec readlink -f {} \;)"
+
+      - name: Create index html file
+        run: |
+          chmod +x index-creator.sh
+          bash index-creator.sh > ./${{ github.event.inputs.releaseTags }}/{{ github.event.inputs.releaseTags }}.html
+
+      - name: Commit Changes to Documenation Repository
+        uses: EndBug/add-and-commit@v7
+        with:
+          default_author: github_actions
+          message: 'added documentation for release ${{ github.event.inputs.releaseTags }}'
+          add: './${{ github.event.inputs.releaseTags }}/*.html'
