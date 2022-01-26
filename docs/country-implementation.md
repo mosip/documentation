@@ -10,6 +10,7 @@
 * Engement with SI. Terms and conditions
 * Procurement of biometric and other external components.
 * Sandbox, staging, development setups
+* Languages
 * ID schema design
 * Applicanttype MVEL
 * Masterdata 
