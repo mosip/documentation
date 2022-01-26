@@ -53,8 +53,8 @@ jobs:
       - name: Upload HTML Documents as Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: html-docs
-          path: ./html-docs/*.html
+          name: html_docs
+          path: ./html_docs/*.html
           retention-days: 1
 
       - name: Checkout branch for publishing
@@ -65,7 +65,7 @@ jobs:
       - name: Download HTML Documents from Artifacts
         uses: actions/download-artifact@v2
         with:
-          name: html-docs
+          name: html_docs
           path: ./${{ github.event.inputs.git-ref }}/
 
       - name: Check All Files
