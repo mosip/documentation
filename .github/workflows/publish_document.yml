@@ -1,4 +1,4 @@
-name: Maven Package upon a call
+name: Publish Document for a Release
 
 # Triggered when code is pushed to any branch in a repository
 on:
