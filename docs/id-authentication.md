@@ -32,3 +32,9 @@ Authentication may be biometric, demographic or OTP.
 -* Tokenization: random, partner or policy specific tokens are returned based on the policy after successful authentication
 
 
+## Authentication types
+* Biometric: Finger, face, iris
+* Demographic
+* OTP
+
+## KYC
