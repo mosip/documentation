@@ -15,7 +15,7 @@ Biometric devices capture individuals biometric data (fingerprint, iris scan, ph
 |Authentication|Iris|Single eye scanner|SBI 2.0|[Iris image spec](biometric-image-specification.md#iris)|
 |Authentication|Face|Camera|SBI 2.0|[Face image spec](biometric-image-specification.md#face)|
 
-\* An adopter may choose to have different sub-types, however, the certification needs to be adhered to.
+\* An adopter may choose to have different subtypes, however, the certification needs to be adhered to.
 
 ## Encrolment flow
 
