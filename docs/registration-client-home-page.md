@@ -12,46 +12,51 @@ The registration client menu bar displays the following:
 * Logged in username
 * Center name
 * Machine name
-* Server connection status symbol(shows if the client is online or offline)
-* Breadcrumbs (User Guide/Reser Password/Logout)
+* Server connection status symbol (shows if the client is online or offline)
+* Breadcrumbs (User Guide/Reset Password/Logout)
     
 ![](_images/reg-client-menu.png)
 
 ## Operational Tasks
-* **Synchronize Data**: Synchronize data is the data required to make the registration client functional. Full sync is performed initially during the launch of the registration client for the first time. Post this, the registration client syncs only the changes from sever and this is called as the delta sync. Synchronize data is automated and can be triggered manually. 
+
+### Synchronize Data
+Synchronize data is the data required to make the registration client functional. Full sync is performed initially during the launch of the registration client for the first time. Post this, the registration client syncs only the changes from sever and this is called as the delta sync. Synchronize data is automated and can be triggered manually. 
 This happens automatically while launching the registration client and is also manually initiated by the operator.
  
-   1. **Configuration sync**: Sync of properties which drives in deciding the registration client UI functionality. For example: Invalid login attempts, idle timeout, thresholds, etc
-   1. **Masterdata sync** : As a part of this sync, supporting information like Dynamic fields data, templates, locations, screen authorization, block listed words, etc are pulled in.
-   1. **UserDetails sync**: userID, user roles along witrh their status is synced. Only the user details belonging to machine mapped center will be synced. 
-   1. **Certificate sync**: Certificates used to validate the server signatures, device CA certificates, public key(specific to a center and machine, also called as policy key) used to encrypt the registartion packet will be synced.
+   1. **Configuration sync**: Sync of properties which drives in deciding the registration client UI functionality. For example: Invalid login attempts, idle timeout, thresholds, etc.
+   1. **Masterdata sync** : As a part of this sync, supporting information like Dynamic fields data, templates, locations, screen authorization, blocklisted words, etc. are pulled in.
+   1. **UserDetails sync**: userID, user roles along with their status is synced. Only the user details belonging to machine mapped center will be synced. 
+   1. **Certificate sync**: Certificates used to validate the server signatures, device CA certificates, public key (specific to a center and machine, also called as policy key) used to encrypt the registration packet will be synced.
    1. **Packet sync**: 
          * All the approved/rejected Registration IDs(RIDs) will be synced to the server.
          * All the synced RID packets will be uploaded to the server.
          * All the uploaded packet status will be synced from server.
           
-* **Download Pre-Registration Data**: An operator can download the pre-registration data of a machine mapped center while being online and store it locally in the registration machine for offline use. Now, when the system is offline and the pre-registration data is already downloaded, the operator can enter the pre-registration ID to auto-populate the registration form. Provided the machine is online, any pre-registration application can be downloaded irrespective of the center booked by the resident.
+### Download Pre-Registration Data
+An operator can download the pre-registration data of a machine mapped center while being online and store it locally in the registration machine for offline use. Now, when the system is offline and the pre-registration data is already downloaded, the operator can enter the pre-registration ID to auto-populate the registration form. Provided the machine is online, any pre-registration application can be downloaded irrespective of the center booked by the resident.
      
-  **Note**- Date Range of pre-registration data to be downloaded and storage location of pre-registration data in the registration machine is configurable. Also, this is synced as a part of configuration sync.       
+  *Note*- Date Range of pre-registration data to be downloaded and storage location of pre-registration data in the registration machine is configurable. Also, this is synced as a part of configuration sync.       
        
-* **Update Operator Biometrics**:  Using this option, the operator can onboard themselves anytime.  
+### Update Operator Biometrics
+Using this option, the operator can onboard themselves anytime.  
 For more details, refer to [operator onboarding](operator_onboarding.md)
 
 ![](_images/reg-client-biometric-page.png)
 
- * **Application Upload**: Application upload refers to upload of supervisor reviewed registration packets(approved and rejected). From this page, the operator can export the packets to any location on their machine on clicking **Save to Device** button. 
+### Application Upload
+Application upload refers to upload of supervisor reviewed registration packets (approved and rejected). From this page, the operator can export the packets to any location on their machine on clicking **Save to Device** button. 
       - Upload of registration packet from this page internally performs two operations in sequence:
           * Sync registration metadata to server
           * On successful sync of metadata, actual registration packets are uploaded to the server.
       
-   **Client Status** : This column displays the status of a registration packet based on the above mentioned operation.
+   **Client Status**: This column displays the status of a registration packet based on the above mentioned operation.
       
        * APPROVED
        * REJECTED
        * SYNCED
        * EXPORTED
  
-   **Server Status** :
+   **Server Status**:
       
      On success,
      
@@ -65,15 +70,15 @@ For more details, refer to [operator onboarding](operator_onboarding.md)
        * REJECTED
        * RESEND
       
-      <<screenshot>>
-    
-  **Registration Type**: This column displays the type of registration packet(New packet, Lost packet, Update packet, Correction packet)
+          
+### Registration Type
+This column displays the type of registration packet (New packet, Lost packet, Update packet, Correction packet)
       
-* **Center Remap Sync**: 
-    * When a machine is re-mapped from one center to another center, all the pending activities in the machine related to the former center needs to be completed. 
-    * On successful completion of pending tasks, the former center's details will be deleted from the local Derby DB and a full sync will be initiated to pull in the new center details.
+### Center Remap Sync
+* When a machine is re-mapped from one center to another center, all the pending activities in the machine related to the former center needs to be completed. 
+* On successful completion of pending tasks, the former center's details will be deleted from the local Derby DB and a full sync will be initiated to pull in the new center details.
     
-    ##### What are the pending tasks related to a center?
+#### What are the pending tasks related to a center?
     - Packet Approvals/rejections
     - Packet upload
     - Server confirmation on receiving a packet
@@ -81,19 +86,18 @@ For more details, refer to [operator onboarding](operator_onboarding.md)
     - Deletion of pre-registration packets 
     - Deletion of center specific data like the public/policy key
     
-    **Note**: After completing the above tasks, a *restart* will be prompted to initiate the full sync with new center details.
+*Note*- After completing the above tasks, a *restart* will be prompted to initiate the full sync with new center details.
       
-* **Check Updates**: Clicking on this button, triggers a check for any new client version availability in the upgrade server. 
-    The machine must be online to be able to check updates. 
-    If there is any new version available, a confirmation pop-up is displayed to the operator for starting the upgrade  or for reminding them later.
+### Check Updates
+* Clicking on this button, triggers a check for any new client version availability in the upgrade server. 
+* The machine must be online to be able to check updates. 
+* If there is any new version available, a confirmation pop-up is displayed to the operator for starting the upgrade or a reminder is displayed.
     
-    <<screenshot required here- anusha>>
-   
-   
+     
 ## Registration Tasks
 The operator can initiate any task from amongst- New registrations, Update UIN, Lost UIN, Correction flow. To get started, the operator needs to select a language for data entry. The number of languages displayed in the UI is configurable and depends on the country.
    
-## New registration
+### New registration
 An operator can initiate the process of registering a new applicant in the MOSIP ecosystem by filling the new registration form with the resident.
 
 ![](_images/reg-client-new-registration.png)
@@ -116,7 +120,7 @@ If the resident has a biometric exception (resident is missing a finger/iris or 
  * For an adult, all the configured biometrics can be captured.
  * For an infant, by default, only the face biometrics is allowed to be captured.   
      
-## Update UIN
+### Update UIN
 When a resident visits the registration center to update their demographic or biometric details, the operator captures the updated data as provided by the resident in the registration client. The resident needs to give their UIN and also select the field(s) that needs an update.
 The image below gives an idea of the update UIN process Flow in the registration client.
 
@@ -128,52 +132,53 @@ The image below gives an idea of the update UIN process Flow in the registration
     
 {% endhint %}
 
-## Lost UIN
-There might be a situation when a resident might have lost his UIN and visits the registration center for retrieving the same. The operator then captures the biometrics and the demographic details of the individual and processes a request to retrieve the lost UIN. As biometrics play a crucial in identifying a person' indentity, it is mandated to provide the biometrics as a part of the Lost UIN flow. Other details like demographic data, uploading documents are optional.
+### Lost UIN
+There might be a situation when a resident might have lost his UIN and visits the registration center for retrieving the same. The operator then captures the biometrics and the demographic details of the individual and processes a request to retrieve the lost UIN. As biometrics play a crucial in identifying a person's identity, it is mandated to provide the biometrics as a part of the Lost UIN flow. Other details like demographic data, uploading documents are optional.
     
 ![](_images/reg-client-lost-uin.png)
    
-## Correction process
+### Correction process
 For a resident whose UIN is yet not generated, they can get a request intimation to re-provide their details with a RequestId.
 The same *AddtionalInfo RequestId* must be provided to the operator during the correction flow. 
 
-![](_images/reg-client-lost-uin.png)
+![](_images/reg-client-biometric-correction.png)
 
-**Note**- The above mentioned Registration tasks are completely configurable through UI Specs<<link>>
+*Note*- The above mentioned Registration tasks are completely configurable through UI Specs<<link>>
    
-## Preview and Packet authentication
+### Preview and Packet authentication
    
 * The operator can preview the data filled and navigate back to the respective tabs in case of corrections.
 * Once the resident and the operator are satisfied with the data being captured, the operator can proceed to the Authenticate tab and provide his valid credentials to mark the complete of the registration task.
  
 ![](_images/reg-client-preview.png)  
 
-## Acknowledgement receipt and printing
+### Acknowledgement receipt and printing
 Once the registration process (new registration, UIN update or lost UIN, correction) is completed, the registration client generates an acknowledgement receipt.
 This receipt contains a QR code of the Registration application ID, captured demographic data in the selected language, photograph of the resident and ranking of each finger from 1 to 10 (1 being the finger with the best quality). This receipt is print friendly and can be used for printing using any printer.
     
-The image below is that of a sample acknowlegement receipt.
+The image below is that of a sample acknowledgement receipt.
 
 ![](_images/re-client-acknowledgement.png)  
 
 ## End of day processes
 
-* **Pending Approval**: The Supervisor has the exclusive authority to approve/reject packets.The supervisor is supposed to manually re-verify the 
-    registrations before uploading themto the server. This page enables them to perform this activity. 
+### Pending Approval
+The Supervisor has the exclusive authority to approve/reject packets. The supervisor is supposed to manually re-verify the registrations before uploading them to the server. This page enables them to perform this activity. 
     
-    **Steps to approve/reject packets**:
-    1. Click on any of the registrations listed in the left pane. The registration details are displayed on the right pane.
-    2. Supervisor needs to manually verify all the details in the right pane.
-    3. Supervisor can click **Approve/Reject** button based on their verification.
-    4. To mark the completion of this approval process, they need to click on **Authenticate** and provide their credentials.
-    5. On successful authentication, approved/rejected packets will be removed from here and be seen on the **Application Upload** page.
+**Steps to approve/reject packets**
+1. Click on any of the registrations listed in the left pane. The registration details are displayed on the right pane.
+2. Supervisor needs to manually verify all the details in the right pane.
+3. Supervisor can click **Approve/Reject** button based on their verification.
+4. To mark the completion of this approval process, they need to click on **Authenticate** and provide their credentials.
+5. On successful authentication, approved/rejected packets will be removed from here and be seen on the **Application Upload** page.
    
-* **Re-registrations**: All the registrations which are being marked with the RE-REGISTER status is listed here. 
+### Re-registrations
+All the registrations which are being marked with the RE-REGISTER status is listed here. 
  
-## Dashboard: 
+### Dashboard 
 On clicking Dashboard, the Registration client dashboard HTML template is rendered. Default dashboard displays information about the operator, Packets and the Sync Activities.  
 
 ![](_images/reg-client-dashboard.png)
       
-## News and Updates: 
-This section has been reserved for the country' to be able to display the live news and updates. This can be implemented as per a country' requirements.
+### News and updates
+This section has been reserved for the countries to be able to display their live news and updates. This can be implemented as per a country's requirements.
