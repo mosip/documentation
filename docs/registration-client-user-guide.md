@@ -3,9 +3,7 @@
 ## Overview
 This guide helps the operator in setting up the registration client.
 
-## Know your machine TPM keys
-A Trusted Platform Module (TPM) is a specialized chip on a local machines that stores RSA encryption keys specific to the host system for hardware authentication. The pair is maintained inside the chip and cannot be accessed by a software. By leveraging this security feature, every individual machine would be uniquely registered and identified by the MOSIP server component with it's TPM public key.
-
+### TPM keys
 To extract the TPM public key, use the [TPM key extractor utility](https://github.com/mosip/mosip-infra/blob/develop/deployment/sandbox-v2/utils/tpm/key_extractor/README.md).
 
 ### Pre-requisites 
@@ -44,11 +42,11 @@ The client always launches with the pre-loader screen which displays the informa
 
 ![](_images/reg-client-restart.png)
 
-**Note**: Deletion of either the **.mopsipkeys** or the **db** folder makes the application get into an invalid state and hence will fail to launch. To be able to launch the client again, the operator should make sure that both the folders are removed and then re-launch the client. 
+*Note*- Deletion of either the **.mopsipkeys** or the **db** folder makes the application get into an invalid state and hence will fail to launch. To be able to launch the client again, the operator should make sure that both the folders are removed and then re-launch the client. 
 
 ![](_images/reg-client-folder.png)
 
-2. **On next launch**(after the initial sync),
+2. **On next launch** (after the initial sync),
   - The registration client login page provides the operator an option to select the language for viewing the registration client UI.
   - After successful login, the operator either lands into the operator onboard page or the home page.
   
