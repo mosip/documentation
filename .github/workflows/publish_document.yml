@@ -95,4 +95,4 @@ jobs:
           branch: gh-pages
           default_author: github_actions
           message: 'added documentation for release ${{ github.event.inputs.git-ref }}'
-          add: './${{ github.event.inputs.git-ref }}/*.html'
+          add: './*.html'
