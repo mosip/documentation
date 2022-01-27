@@ -83,7 +83,11 @@ jobs:
 
       - name: Update index html file
         run: |
-          echo '<!DOCTYPE html>\n<html>\n<style>\n.content {\n\tmax-width: 700px;\n\tmargin: auto;\n\ttext-align: center;\n}\n</style>\n<body>\n\t<div class="content">\n\t\t<img src="https://mosip.github.io/mosip-helm/mosip_logo.png">\n\t\t<h2 style="font-family:verdana;">MOSIP API Documentation</h2>\n\t\t<a href="${{ github.event.inputs.git-ref }}/${{ github.event.inputs.git-ref }}.html" style="font-family:verdana;">MOSIP ${{ github.event.inputs.git-ref }}</a>\n\t</div>\n</body>\n</html>' > index.html
+          if grep -q ${{ github.event.inputs.git-ref }} index.html; then
+            echo "Already one entry"
+          else
+            sed  '/<\/h2>/a \\t<a href="${{ github.event.inputs.git-ref }}/${{ github.event.inputs.git-ref }}.html" style="font-family:verdana;">MOSIP ${{ github.event.inputs.git-ref }}</a>' index.html > temp.html && mv temp.html index.html
+          fi
 
       - name: Commit Changes to Documenation Repository
         uses: EndBug/add-and-commit@v7
