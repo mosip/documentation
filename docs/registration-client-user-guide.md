@@ -4,18 +4,18 @@
 This guide helps the operator in setting up the registration client.
 
 ## Know your machine TPM keys
-A Trusted Platform Module (TPM) is a specialized chip on a local machines that stores RSA encryption keys specific to the host system for hardware authentication.The pair is maintained inside the chip and cannot be accessed by software. By leveraging this security feature every individual machine would be uniquely registered and identified by the MOSIP server component with it's TPM public key.
+A Trusted Platform Module (TPM) is a specialized chip on a local machines that stores RSA encryption keys specific to the host system for hardware authentication. The pair is maintained inside the chip and cannot be accessed by a software. By leveraging this security feature, every individual machine would be uniquely registered and identified by the MOSIP server component with it's TPM public key.
 
 To extract the TPM public key, use the [TPM key extractor utility](https://github.com/mosip/mosip-infra/blob/develop/deployment/sandbox-v2/utils/tpm/key_extractor/README.md).
 
-## Pre-requisites 
+### Pre-requisites 
 To onboard the machine and the operator, the Admin needs to:
 1. Create and activate the registration client machine using Admin portal.
 2. Create a user/operator account in Keycloak
 3. Assign the operator a role of either the Supervisor or Officer using the Admin portal.
 4. Finally, perform the **User Zone mapping** and **User Center mapping** in the Admin portal.
 
-**System prerequisites:**
+**System prerequisites**
 * CPU - Dual Core Processor - 2GHZ  
 * RAM - 16 GB  
 * Local Storage Disk Space - 500 GB 
@@ -23,7 +23,7 @@ To onboard the machine and the operator, the Admin needs to:
 * Physical machine with TPM 2.0 facility.   
 * Windows OS [10 v] 
  
-## Registration client setup
+### Registration client setup
 To setup the registration client:
 1. Download the `reg-client.zip` from the hosted server.
 2. Unzip the client. You can see the directory structure below.
@@ -48,7 +48,7 @@ The client always launches with the pre-loader screen which displays the informa
 
 ![](_images/reg-client-folder.png)
 
-2. **On the next launch after the initial sync**,
+2. **On next launch**(after the initial sync),
   - The registration client login page provides the operator an option to select the language for viewing the registration client UI.
   - After successful login, the operator either lands into the operator onboard page or the home page.
   
@@ -64,6 +64,6 @@ The client always launches with the pre-loader screen which displays the informa
 * **Offline**- Operator can use the registration client in offline mode to only do the registrations and EOD process. During offline mode, the operator authentication will be based on locally saved password hash. An operator can work in offline mode only if they have logged into to the registration client being online atleast once.
 * **Online**- Machine must be online for the registration client first launch. For any server-client sync or vice-versa, the registration client must be online. In the online mode, the client reaches out to the server for password authentication.
        
-**Note**: On successful onboard of the operator, biometric templates of the operator are stored locally.
+*Note*- On successful onboard of the operator, biometric templates of the operator are stored locally.
        Biometric authentication does not reach out to the server everytime, instead it is validated based on the locally stored templates on the registration client machine. 
 
