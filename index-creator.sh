@@ -28,13 +28,16 @@ echo "         margin: auto;"
 echo "         margin-left: 250px;"
 echo "         overflow-x: hidden;"
 echo "         padding-top: 20px;"
-echo "         column-count: 3;"
-echo "         row-height: px"
 echo "         display: grid;"
 echo "         grid-template-columns: auto auto auto auto;"
-echo "         grid-gap: 10px;"
+echo "         grid-gap: auto;"
 echo "         padding: 10px;"
 echo "         }"
+echo "         .column {"
+echo "          float: left;"
+echo "          width: 33.33%;"
+echo "          padding: 10px;"
+echo "          }"
 echo "      </style>"
 echo "</head>"
 echo "<body>"
@@ -49,12 +52,12 @@ echo "<div class='nav'>"
 for file in $(ls $root/); do
   parentpath=${file#*/}
   filename=${file##*/}
-#  fname=${filename%-openapi*}
-  name=$(echo $filename | tr "-" " ")
+  fname=${filename%.*}
+  name=$(echo $fname | tr "-" " ")
   if [[ "$filename" == "$root.html" ]]; then
     continue
   fi
-  echo "        <div><a href=\"$parentpath\">$name</a></div>"
+  echo "    <div><a href=\"$parentpath\">$name</a></div>"
 done
 echo "</div>"
 echo "</body>"
