@@ -97,11 +97,11 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -150,11 +150,11 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -191,6 +191,9 @@
           "required": true
         },
         "responses": {
+          "201": {
+            "description": "Created"
+          },
           "200": {
             "description": "Given key is translitrated successfully",
             "content": {
@@ -201,14 +204,11 @@
               }
             }
           },
-          "201": {
-            "description": "Created"
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not Found"
-          },
-          "403": {
-            "description": "Forbidden"
           },
           "401": {
             "description": "Unauthorized"
@@ -238,11 +238,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -267,7 +267,7 @@
         ],
         "summary": "Master data proxy",
         "description": "Master data proxy",
-        "operationId": "masterDataProxyController",
+        "operationId": "masterDataProxyController_1",
         "parameters": [
           {
             "name": "body",
@@ -279,11 +279,11 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -306,7 +306,7 @@
         ],
         "summary": "Master data proxy",
         "description": "Master data proxy",
-        "operationId": "masterDataProxyController_1",
+        "operationId": "masterDataProxyController",
         "requestBody": {
           "content": {
             "application/json": {
@@ -317,11 +317,11 @@
           }
         },
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -375,11 +375,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -434,11 +434,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -478,11 +478,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -522,11 +522,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -567,11 +567,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -611,11 +611,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -642,11 +642,11 @@
         "description": "Refresh global and Pre-Registration config data",
         "operationId": "refreshConfigParams",
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -676,11 +676,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -710,11 +710,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "200": {
             "description": "global and Pre-Registration config data successfully retrieved",
@@ -754,11 +754,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -812,11 +812,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -866,11 +866,11 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -916,11 +916,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "200": {
             "description": "Document successfully copied",
@@ -990,11 +990,11 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -1029,11 +1029,11 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "200": {
             "description": "Documents reterived successfully",
@@ -1076,11 +1076,11 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "204": {
+            "description": "No Content"
           },
           "200": {
             "description": "Document successfully deleted",
@@ -1117,11 +1117,11 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "200": {
             "description": "Documents reterived successfully",
@@ -1156,11 +1156,11 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "204": {
+            "description": "No Content"
           },
           "200": {
             "description": "Documents successfully deleted",
@@ -1216,11 +1216,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "200": {
             "description": "Document Reference Id successfully updated",
@@ -1257,11 +1257,11 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -1298,11 +1298,11 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -1342,11 +1342,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -1383,6 +1383,9 @@
           }
         ],
         "responses": {
+          "403": {
+            "description": "Forbidden"
+          },
           "204": {
             "description": "No Content",
             "content": {
@@ -1392,9 +1395,6 @@
                 }
               }
             }
-          },
-          "403": {
-            "description": "Forbidden"
           },
           "401": {
             "description": "Unauthorized"
@@ -1431,11 +1431,11 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "200": {
             "description": "All applications status fetched successfully",
@@ -1472,11 +1472,11 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -1514,6 +1514,9 @@
           "201": {
             "description": "Created"
           },
+          "403": {
+            "description": "Forbidden"
+          },
           "200": {
             "description": "Pre-Registration successfully Created",
             "content": {
@@ -1526,9 +1529,6 @@
           },
           "404": {
             "description": "Not Found"
-          },
-          "403": {
-            "description": "Forbidden"
           },
           "401": {
             "description": "Unauthorized"
@@ -1565,11 +1565,11 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -1607,11 +1607,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -1646,6 +1646,9 @@
           }
         ],
         "responses": {
+          "403": {
+            "description": "Forbidden"
+          },
           "204": {
             "description": "No Content",
             "content": {
@@ -1655,9 +1658,6 @@
                 }
               }
             }
-          },
-          "403": {
-            "description": "Forbidden"
           },
           "200": {
             "description": "Deletion of individual is successfully",
@@ -1697,6 +1697,9 @@
           "201": {
             "description": "Created"
           },
+          "403": {
+            "description": "Forbidden"
+          },
           "200": {
             "description": "Updated Date Time successfully fetched for list of pre-registration ids",
             "content": {
@@ -1709,9 +1712,6 @@
           },
           "404": {
             "description": "Not Found"
-          },
-          "403": {
-            "description": "Forbidden"
           },
           "401": {
             "description": "Unauthorized"
@@ -1738,11 +1738,11 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "200": {
             "description": "All applications status fetched successfully",
@@ -1798,11 +1798,11 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -1832,11 +1832,11 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -1876,8 +1876,8 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
+          "403": {
+            "description": "Forbidden"
           },
           "200": {
             "description": "New application with booking type as LOST_FORGOTTEN_UIN successfully Created",
@@ -1889,8 +1889,8 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden"
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -1917,6 +1917,9 @@
           }
         ],
         "responses": {
+          "403": {
+            "description": "Forbidden"
+          },
           "204": {
             "description": "No Content",
             "content": {
@@ -1926,9 +1929,6 @@
                 }
               }
             }
-          },
-          "403": {
-            "description": "Forbidden"
           },
           "401": {
             "description": "Unauthorized"
@@ -1973,11 +1973,11 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -2024,6 +2024,9 @@
           "required": true
         },
         "responses": {
+          "201": {
+            "description": "Created"
+          },
           "200": {
             "description": "Appointment Booked Successfully",
             "content": {
@@ -2034,14 +2037,11 @@
               }
             }
           },
-          "201": {
-            "description": "Created"
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not Found"
-          },
-          "403": {
-            "description": "Forbidden"
           },
           "401": {
             "description": "Unauthorized"
@@ -2066,6 +2066,9 @@
           }
         ],
         "responses": {
+          "403": {
+            "description": "Forbidden"
+          },
           "204": {
             "description": "No Content",
             "content": {
@@ -2075,9 +2078,6 @@
                 }
               }
             }
-          },
-          "403": {
-            "description": "Forbidden"
           },
           "401": {
             "description": "Unauthorized"
@@ -2124,11 +2124,11 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -2166,11 +2166,11 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
@@ -2213,6 +2213,9 @@
           "required": true
         },
         "responses": {
+          "201": {
+            "description": "Created"
+          },
           "200": {
             "description": "Appointment Booked Successfully",
             "content": {
@@ -2223,14 +2226,11 @@
               }
             }
           },
-          "201": {
-            "description": "Created"
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not Found"
-          },
-          "403": {
-            "description": "Forbidden"
           },
           "401": {
             "description": "Unauthorized"
@@ -2257,8 +2257,8 @@
           }
         ],
         "responses": {
-          "404": {
-            "description": "Not Found"
+          "403": {
+            "description": "Forbidden"
           },
           "200": {
             "description": "Availablity details fetched successfully",
@@ -2270,8 +2270,8 @@
               }
             }
           },
-          "403": {
-            "description": "Forbidden"
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"

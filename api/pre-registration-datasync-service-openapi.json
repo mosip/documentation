@@ -45,6 +45,12 @@
           "required": true
         },
         "responses": {
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
           "200": {
             "description": "Success or you may find errors in error array in response",
             "content": {
@@ -55,14 +61,8 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         }
       }
@@ -86,6 +86,12 @@
           "required": true
         },
         "responses": {
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
           "200": {
             "description": "Success or you may find errors in error array in response",
             "content": {
@@ -96,14 +102,8 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         }
       }
@@ -127,6 +127,12 @@
           "required": true
         },
         "responses": {
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
           "200": {
             "description": "Success or you may find errors in error array in response",
             "content": {
@@ -137,14 +143,8 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         }
       }
@@ -168,6 +168,12 @@
           "required": true
         },
         "responses": {
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
           "200": {
             "description": "Success or you may find errors in error array in response",
             "content": {
@@ -178,14 +184,8 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         }
       }
@@ -209,8 +209,8 @@
           "required": true
         },
         "responses": {
-          "201": {
-            "description": "Created"
+          "403": {
+            "description": "Forbidden"
           },
           "200": {
             "description": "All PreRegistrationIds fetched successfully",
@@ -225,11 +225,11 @@
           "404": {
             "description": "Not Found"
           },
+          "201": {
+            "description": "Created"
+          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         }
       }
@@ -253,8 +253,11 @@
           }
         ],
         "responses": {
-          "201": {
-            "description": "Created"
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "200": {
             "description": "Data Sync records fetched",
@@ -266,14 +269,11 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
+          "201": {
+            "description": "Created"
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         }
       }
@@ -305,8 +305,11 @@
           }
         ],
         "responses": {
-          "201": {
-            "description": "Created"
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "200": {
             "description": "Data Sync records fetched",
@@ -318,14 +321,11 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
+          "201": {
+            "description": "Created"
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         }
       }
@@ -349,17 +349,11 @@
           "required": true
         },
         "responses": {
-          "201": {
-            "description": "Created"
+          "403": {
+            "description": "Forbidden"
           },
           "404": {
             "description": "Not Found"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           },
           "200": {
             "description": "Consumed Pre-Registrations saved",
@@ -370,6 +364,12 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }
@@ -393,6 +393,12 @@
           "required": true
         },
         "responses": {
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
           "200": {
             "description": "Success or you may find errors in error array in response",
             "content": {
@@ -403,14 +409,8 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         }
       }
@@ -434,6 +434,12 @@
           "required": true
         },
         "responses": {
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
           "200": {
             "description": "Success or you may find errors in error array in response",
             "content": {
@@ -444,14 +450,8 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
-          },
           "401": {
             "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           }
         }
       }
