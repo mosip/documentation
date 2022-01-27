@@ -41,9 +41,6 @@
           "required": true
         },
         "responses": {
-          "404": {
-            "description": "Not Found"
-          },
           "403": {
             "description": "Forbidden"
           },
@@ -56,6 +53,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
           },
           "401": {
             "description": "Unauthorized"
