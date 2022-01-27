@@ -20,7 +20,6 @@ jobs:
       max-parallel: 4
       matrix:
         names: [partner-management-services, registration, admin-services, resident-services, commons, audit-manager, pre-registration, id-repository, durian, packet-manager,print,id-authentication,websub,registration-client]
-
     steps:
       - name: Set up JDK 11
         uses: actions/setup-java@v1
@@ -57,7 +56,9 @@ jobs:
           do
             fullpath=$line
             echo "full path of file:  " $fullpath
-            cp $fullpath ./${{ matrix.names }}-json/
+            fullname=$(basename "$line")
+            echo $fullname
+            jq '.' $fullpath > ./${{ matrix.names }}-json/$fullname
             ls ./${{ matrix.names }}-json
           done < temp.txt
 
@@ -79,9 +80,11 @@ jobs:
           name: ${{ matrix.names }}
           path: ./api/
 
+
       - name: Commit Changes to Documenation Repository
         uses: EndBug/add-and-commit@v7
         with:
           default_author: github_actions
+          branch: ${{ github.event.inputs.git-ref }}
           message: 'added documentation for ${{ matrix.names }}'
           add: './api/*.json'
