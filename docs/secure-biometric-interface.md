@@ -907,23 +907,6 @@ Registration Capture | L0/L1
 
 ---
 
-## Cryptography
-Supported algorithms:
-
-Usage | Algorithm | Key Size | Storage
-------|-----------|----------|---------
-Encryption of biometrics - Session Key | AES | >=256 | No storage, Key is created with TRNG/DRBG inside FTM
-Encryption session key data outside of FTM | RSA OAEP | >=2048 | FTM trusted memory
-Encryption session key data outside of FTM | ECC curve 25519 | >=256 | FTM trusted memory
-Biometric Signature | RSA | >=2048 | Key never leaves FTM created and destroyed
-Biometric Signature | ECC curve 25519 | >=256 | Key never leaves FTM created and destroyed
-Secure Boot | RSA | >=256 | FTM trusted memory
-Secure Boot | ECC curve 25519 | >=256 | FTM trusted memory
-
-{% hint style="info" %}
-No other ECC curves supported.
-{% endhint %}
-
 ## Signature
 In all the above APIs, some of the requests and responses are signed with various keys to verify the requester's authenticity. Here we have detailed the key used for signing a particular block in a request or response body of various APIs.
 
