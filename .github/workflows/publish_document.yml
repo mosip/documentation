@@ -47,7 +47,10 @@ jobs:
             fullname=$(basename "$line")
             echo "Filename: $fullname"
             filename=$(echo "$fullname" | cut -f 1 -d '.')
-            redoc-cli bundle -o ./html_docs/$filename.html $line
+            fname=$(filename%-openapi*)
+            redoc-cli bundle -o ./html_docs/$filename.html $fullpath
+            sed '/\<body\>/a <div class="sc-iCoGMd gLxhOh">   <div class="sc-hKFxyN juinod"><h4><a href="${{ github.event.inputs.git-ref }}.html">Home</a>   </h4></div></div>' ./html_docs/$filename.html > ./html_docs/$fname.html
+            rm -fr ./html_docs/$filename.html
           done < tmp.txt
 
       - name: Upload HTML Documents as Artifact
@@ -72,10 +75,14 @@ jobs:
         run: |
           echo "$(find ./{{ github.event.inputs.git-ref }} -name "*openapi.html" -exec readlink -f {} \;)"
 
-      - name: Create index html file
+      - name: Create link html file
         run: |
           chmod +x index-creator.sh
           bash index-creator.sh ${{ github.event.inputs.git-ref }} > ./${{ github.event.inputs.git-ref }}/${{ github.event.inputs.git-ref }}.html
+
+      - name: Update index html file
+        run: |
+          echo "<!DOCTYPE html>\n<html>\n<style>\n.content {\n\tmax-width: 700px;\n\tmargin: auto;\n\ttext-align: center;\n}\n</style>\n<body>\n\t<div class='content'>\n\t\t<img src='https://mosip.github.io/mosip-helm/mosip_logo.png'>\n\t\t<h2 style='font-family:verdana;'>MOSIP API Documentation</h2>\n\t\t<a href='${{ github.event.inputs.git-ref }}/${{ github.event.inputs.git-ref }}.html' style='font-family:verdana;'>MOSIP ${{ github.event.inputs.git-ref }}</a>\n\t</div>\n</body>\n</html>" > index.html
 
       - name: Commit Changes to Documenation Repository
         uses: EndBug/add-and-commit@v7
