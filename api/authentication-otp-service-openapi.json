@@ -82,11 +82,8 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
-          "403": {
-            "description": "Forbidden"
+          "401": {
+            "description": "Unauthorized"
           },
           "200": {
             "description": "OK",
@@ -98,8 +95,11 @@
               }
             }
           },
-          "401": {
-            "description": "Unauthorized"
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           }
         },
         "security": [
@@ -131,17 +131,17 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
-          "403": {
-            "description": "Forbidden"
+          "401": {
+            "description": "Unauthorized"
           },
           "200": {
             "description": "OK"
           },
-          "401": {
-            "description": "Unauthorized"
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -174,17 +174,17 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
-          "403": {
-            "description": "Forbidden"
+          "401": {
+            "description": "Unauthorized"
           },
           "200": {
             "description": "OK"
           },
-          "401": {
-            "description": "Unauthorized"
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -217,17 +217,17 @@
           "201": {
             "description": "Created"
           },
-          "404": {
-            "description": "Not Found"
-          },
-          "403": {
-            "description": "Forbidden"
+          "401": {
+            "description": "Unauthorized"
           },
           "200": {
             "description": "OK"
           },
-          "401": {
-            "description": "Unauthorized"
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
