@@ -23,8 +23,8 @@ Once the operator is registered:
 
 ## On-boarding an operator
 
-* The admin needs to map the operator' UIN in KeyCloak under Attributes with attribute name as `individualId`.
-* The admin needs to remove the "Default" role mapping for the operator' user account if it exists.
+* Admin needs to map the operator' UIN in KeyCloak under Attributes with attribute name as `individualId`.
+* Admin needs to remove the "Default" role mapping for the operator' user account if it exists.
 * The operator needs to login (password based) to the registration client using Keycloak credentials.
 * The operator needs to ensure that the registration client machine is online.
 * The operator will land into the below page and needs to click on **Get Onboarded**
@@ -35,14 +35,13 @@ Once the operator is registered:
 * All the biometric modalities displayed in the Operator biometrics page must be captured before clicking on Save.
 * Captured biometrics quality must be greater than or equal to the threshold displayed in the UI.
 
-  **Note**: The threshold values are configurable and can be set as per the ID issuer.
-<<link to reg client config.md>> refer to operator onboard config properties.
+  *Note*- The threshold values are configurable and can be set as per the ID issuer.
 
   ![](_images/reg-client-biometric-page.png) 
 
 * After successful onboarding, the operator is automatically re-directed to the [registration client home page](registration-client-home-page.md).
 
-**Note:**
+*Note*:
 - After successful onboarding of the operator, the templates are extracted from the captured biometrics using configured Bio-SDK.
 The extracted templates are stored in Derby DB. This can be used later for operator' biometric-authentication and also for local de-duplication checks during registration.
 - After the first login and successful on-boarding, the registration client would mandate the operator to login with the configured authentication mode decided by the administrator.
@@ -61,17 +60,17 @@ Summarizing, on-boarding of an operator is successful only if,
 * The registration client can authenticate an operator in offline mode using the locally stored biometrics templates (face/finger/iris) and password hash.
 
 ### Temporarily lock the operator
-The registration client temporarily locks the operator’s account in case they provides an invalid password/fingerprint/iris/face for X times continuously to login(X is configurable). The temporary account lock lasts for X minutes (X is again configurable).
+The registration client temporarily locks the operator’s account in case they provides an invalid password/fingerprint/iris/face for X times continuously to login (X is configurable). The temporary account lock lasts for X minutes (X is again configurable).
 
 ### Logout
 An Operator can logout of the registration client by:
-* Clicking the Logout button, 
+* Clicking on the *Logout* button, 
 * Closing the registration client, 
 * Being in-active on the registration client for configured amount of time after which they are automatically logged out.
 * Upon logout, any unsaved data will be lost. 
 * Data will not be automatically saved in the database and will not be retained in memory though transaction details which is used for auditing will be captured and stored (except for PII data).
 
-**Note**: Registration client provides an alerts to the operator ‘X’ minutes before reaching the auto logout time limit. Registration client displays a countdown timer in the alert. The operator can choose to dismiss the alert and continue working. This will also reset the timer to zero.
+*Note*- Registration client provides an alerts to the operator ‘X’ minutes before reaching the auto logout time limit. Registration client displays a countdown timer in the alert. The operator can choose to dismiss the alert and continue working. This will also reset the timer to zero.
 
 
 
