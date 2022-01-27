@@ -1,1 +1,0 @@
-jq '.' /home/runner/work/documentation/documentation/partner-management-services/partner/policy-management-service/target/policy-management-service-openapi.json

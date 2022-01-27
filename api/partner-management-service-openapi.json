@@ -1,1 +1,0 @@
-jq '.' /home/runner/work/documentation/documentation/partner-management-services/partner/partner-management-service/target/partner-management-service-openapi.json
