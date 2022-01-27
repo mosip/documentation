@@ -37,6 +37,7 @@
     * [Administration](administration.md)
         * [Admin Portal User Guide](admin-portal-user-guide.md)
     * [ID Authentication Services](id-authentication-services.md) 
+    * [Module Configuration](module-configuration.md)
     * [Reporting](reporting.md)
     * [Automation Testing](automation-testing.md)
     * [Storage](storage.md)
