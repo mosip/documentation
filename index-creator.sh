@@ -49,8 +49,8 @@ echo "<div class='nav'>"
 for file in $(ls $root/); do
   parentpath=${file#*/}
   filename=${file##*/}
-  fname=${filename%-openapi*}
-  name=$(echo $fname | tr "-" " ")
+#  fname=${filename%-openapi*}
+  name=$(echo $filename | tr "-" " ")
   if [[ "$filename" == "$root.html" ]]; then
     continue
   fi
