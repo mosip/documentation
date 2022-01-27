@@ -47,7 +47,7 @@ jobs:
             fullname=$(basename "$line")
             echo "Filename: $fullname"
             filename=$(echo "$fullname" | cut -f 1 -d '.')
-            fname=$(filename%-openapi*)
+            fname=echo "${filename%-openapi*}"
             redoc-cli bundle -o ./html_docs/$filename.html $fullpath
             sed '/\<body\>/a <div class="sc-iCoGMd gLxhOh">   <div class="sc-hKFxyN juinod"><h4><a href="${{ github.event.inputs.git-ref }}.html">Home</a>   </h4></div></div>' ./html_docs/$filename.html > ./html_docs/$fname.html
             rm -fr ./html_docs/$filename.html
