@@ -71,6 +71,15 @@
           "required": true
         },
         "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "200": {
             "description": "Synchronizing Registration Entity successfully fetched",
             "content": {
@@ -91,15 +100,6 @@
                 }
               }
             }
-          },
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           },
           "404": {
             "description": "Not Found"
@@ -144,6 +144,15 @@
           "required": true
         },
         "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "200": {
             "description": "Synchronizing Registration Entity successfully fetched",
             "content": {
@@ -164,15 +173,6 @@
                 }
               }
             }
-          },
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
           },
           "404": {
             "description": "Not Found"
@@ -199,6 +199,9 @@
           "required": true
         },
         "responses": {
+          "400": {
+            "description": "Unable to fetch the Registration Entity"
+          },
           "201": {
             "description": "Created"
           },
@@ -207,6 +210,9 @@
           },
           "403": {
             "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "200": {
             "description": "Registration Entity successfully fetched",
@@ -229,12 +235,6 @@
                 }
               }
             }
-          },
-          "404": {
-            "description": "Not Found"
-          },
-          "400": {
-            "description": "Unable to fetch the Registration Entity"
           }
         }
       }
@@ -258,11 +258,20 @@
           "required": true
         },
         "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "400": {
             "description": "Unable to fetch the Packet external status"
           },
-          "201": {
-            "description": "Created"
+          "404": {
+            "description": "Not Found"
           },
           "200": {
             "description": "Packet external status successfully fetched",
@@ -285,15 +294,6 @@
                 }
               }
             }
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
           }
         }
       }
@@ -317,18 +317,6 @@
           "required": true
         },
         "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "description": "Unauthorized"
-          },
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
           "400": {
             "description": "Unable to fetch the Registration Entity"
           },
@@ -353,6 +341,18 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -436,12 +436,6 @@
           "403": {
             "description": "Forbidden"
           },
-          "400": {
-            "description": "Unable to fetch the registration external status"
-          },
-          "404": {
-            "description": "Not Found"
-          },
           "200": {
             "description": "Registration external status successfully fetched",
             "content": {
@@ -463,6 +457,12 @@
                 }
               }
             }
+          },
+          "400": {
+            "description": "Unable to fetch the registration external status"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
