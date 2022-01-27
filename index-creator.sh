@@ -26,17 +26,15 @@ echo "         white-space: nowrap;"
 echo "         overflow:hidden;"
 echo "         text-overflow: ellipsis;"
 echo "         margin: auto;"
+echo "         margin-left: 250px;"
 echo "         overflow-x: hidden;"
 echo "         padding-top: 20px;"
 echo "         column-count: 3;"
-echo "         column-gap: 20px;"
-echo "         }"
-echo "         .list {"
-echo "         box-sizing: 200px;"
-echo "         text-align: left;"
-echo "         }"
-echo "         .ulist {"
+echo "         row-height: px"
 echo "         display: grid;"
+echo "         grid-template-columns: auto auto auto auto;"
+echo "         grid-gap: 10px;"
+echo "         padding: 10px;"
 echo "         }"
 echo "      </style>"
 echo "</head>"
@@ -49,7 +47,6 @@ echo "<div class='content'>"
 echo "    <p1>API Documentation for release $root</p1>"
 echo "</div>"
 echo "<div class='nav'>"
-echo "  <ul class='ulist'>"
 for file in $(ls $root/); do
   parentpath=${file#*/}
   filename=${file##*/}
@@ -58,9 +55,8 @@ for file in $(ls $root/); do
   if [[ "$filename" == "$root.html" ]]; then
     continue
   fi
-  echo "        <li class='list'><a href=\"$parentpath\">$name</a></li>"
+  echo "        <div><a href=\"$parentpath\">$name</a></div>"
 done
-echo "  </ul>"
 echo "</div>"
 echo "</body>"
 echo "</html>"
