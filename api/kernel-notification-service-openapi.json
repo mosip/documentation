@@ -45,12 +45,6 @@
           "required": true
         },
         "responses": {
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
           "401": {
             "description": "Unauthorized"
           },
@@ -63,6 +57,12 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "403": {
+            "description": "Forbidden"
           }
         }
       }
@@ -128,12 +128,6 @@
           }
         ],
         "responses": {
-          "403": {
-            "description": "Forbidden"
-          },
-          "404": {
-            "description": "Not Found"
-          },
           "401": {
             "description": "Unauthorized"
           },
@@ -146,6 +140,12 @@
                 }
               }
             }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "403": {
+            "description": "Forbidden"
           }
         }
       }
