@@ -13,11 +13,11 @@ SBI is exposed via a service to be invoked by a host application (like registrat
 
 ## Device standards
 ### SBI 1.0 
-* The biometric capture, processing and signing are done at the host machine level (for example laptop/mobile). 
-* For the usage in controlled environments (registration).
+* The biometric capture, processing and signing is done at the host machine level (for example laptop/mobile). 
+* Used in controlled environments like registration.
 ### SBI 2.0
 * The biometric capture, processing, encryption and signing are done within the device FTM. 
-* For the usage in uncontrolled environments (authentication).
+* Used in uncontrolled environments like authentication.
 
 {% hint style="info" %}
 SBI 1.0 and SBI 2.0 were previously referred as **L0** and **L1** respectively.
