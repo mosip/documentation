@@ -101,7 +101,9 @@ To know more, refer [Activate/deactivate/decommission resources](administration.
 * The admin portal allows an admin to view the list of all the devices available in the jurisdiction of their administrative zone. 
 * The system does not fetch the details of decommissioned devices but only the active and inactive devices.
 
-*Note*- Device entity is language agnostic(independent of languages). 
+*Note*
+* Device entity is language agnostic (independent of languages). 
+* The data collected about Devices is used only for book keeping, i.e., MOSIP system does not use this data for any validation.
 
 ![](_images/admin-view-device.png)
 
@@ -143,6 +145,9 @@ Select the **Deactivate/Decommission** option from the Actions menu against the 
 * The admin portal allows an admin to view the list of all the machines available in the jurisdiction of their administrative zone. 
 * The system does not fetch the details of decommissioned machines but only shows the active and inactive machines. 
 
+*Note*:
+* Machine entity is also language agnostic. 
+
 ![](_images/admin-view-machine.png)
 
 The administrator can filter the list of machines based on parameters like *Machine name, Mac address, Serial number, Status, Machine type.*
@@ -152,8 +157,7 @@ The administrator can filter the list of machines based on parameters like *Mach
 ### Create machines
 
 * A machine can be created with the attributes like *Machine ID, machine name, mac address, serial number, machine spec ID and administrative zone* the machine belongs to.
-* While entering data through UI in multiple languages, the dropdown values and numeric values entered in primary language gets automatically captured in all language.
-* But the text fields (e.g., machine name) needs to be manually input in all the languages. A machine can be mapped to the administrative zone which is at the any zonal hierarchy.
+* A machine needs to be mapped to an administrative zone.
 
 ![](_images/admin-create-machine.png)
 
