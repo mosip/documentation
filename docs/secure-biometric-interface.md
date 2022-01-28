@@ -20,10 +20,7 @@ SBI is exposed via a service to be invoked by a host application (like registrat
 * For the usage in uncontrolled environments (authentication).
 
 {% hint style="info" %}
-|Standard|Legacy name|
-|---|---|
-|SBI 1.0|L0|
-|SBI 2.0|L1|
+SBI 1.0 and SBI 2.0 were previously referred at **L0** and **L1** respectively.
 {% endhint %}
 
 ## Device identity
