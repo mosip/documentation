@@ -16,11 +16,9 @@ To know more about the onboarding process of an operator, refer to [Operator onb
 
 ### Registration client entity diagram
 
-The relationship of Regproc with other services is explained here.
+The relationship of Regproc with other services is explained here. Please note, the numbers do not signify sequence of operations or control flow
 
 ![](_images/reg-client.drawio.png)
-
-*Note*: The numbers do not signify sequence of operations or control flow
 
 1. Registration client connects to the Upgrade Server to check on upgrades and patch downloads.
 2. All the synced packets are uploaded to packet receiver service one by one.
