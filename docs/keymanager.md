@@ -7,22 +7,24 @@ This includes keying material such as symmetric keys, asymmetric keys, certifica
 
 Keymanager interfaces with key store like Hardware Security Module (HSM) and Database (`mosip_keymgr` DB).
 
-![](_images/keymanager_hsm_integration.png)
+![](_images/keymanager-hsm-integration.png)
+
+Refer [Keys](keys.md) for all references of the type 'Kx' and 'KPx'.
 
 ## Encryption alrogithms
 * RSA-2048 for all data encryption
-* AES-256 for [zero-knowledge encryption](https://docs.mosip.io/1.2.0/privacy-and-security/data-protection#zero-knowledge-encryption)
+* AES-256 for [zero-knowledge encryption](data-protection.md#zero-knowledge-encryption)
 
 ## Key hierarcy
 |Key|Location|Issuer|Example|
 |---|---|---|---|
-|Root|HSM|Self signed|[K1](https://docs.mosip.io/1.2.0/privacy-and-security/keys)|
-|Module|HSM|Root|[K7](https://docs.mosip.io/1.2.0/privacy-and-security/keys)|
-|Encryption (Base)|Database|Module|[K7.5](https://docs.mosip.io/1.2.0/privacy-and-security/keys)|
+|Root|HSM|Self signed|[K1](keys.md)|
+|Module|HSM|Root|K7|
+|Encryption (Base)|Database|Module|K7.5|
 
 ## Chain of trust
 
-![](_images/keymanager_chain_of_trust.png)
+![](_images/keymanager-chain-of-trust.png)
 
 ## Key storage in database
 The [`key_alias`](db_scripts/mosip_keymgr/ddl/keymgr-key_alias.sql) table in `mosip_keymgr` DB contains metadata of all the keys used in MOSIP system.  The [`key_store`](db_scripts/mosip_keymgr/ddl/keymgr-key_store.sql) tables contains encrypted Base keys.
@@ -45,7 +47,7 @@ Key Manager helps you generate new key pairs and deploy them to endpoint servers
 *	key-generator job, and
 *	Rest API call
 
-![](_images/keymanager_hsm_keygenerator.png)
+![](_images/keymanager-hsm-keygenerator.png)
 
 The job generates option under ``` key-generator job ``` allows you to generate all the configured ```APP_IDs``` master keys in HSM. It associate only module keys.
 
