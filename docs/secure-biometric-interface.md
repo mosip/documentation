@@ -51,12 +51,9 @@ The Digital ID is signed with the [JSON Web Signature RFC 7515](https://datatrac
 "digitalId": "base64urlencoded(header).base64urlencoded(payload).base64urlencoded(signature)"
 ```
 
-## Device Service - Communication Interfaces
-The section explains the necessary details of the biometric device connectivity, accessibility, discover-ability and protocols used to build and communicate with the device.
+## API
 
-The device should implement only the following set of APIs.  All the API’s are independent of the physical layer and the operating system, with the invocation being different across operating systems. While the operating system names are defined in this spec a similar technology can be used for unspecified operating systems.  It is expected that the device service ensures that the device is connected  locally to the host.
-
-### Device Discovery
+## Device discovery
 Device discovery would be used to identify MOSIP compliant devices in a system by the applications. The protocol is designed as simple plug and play with all the necessary abstraction to the specifics.
 
 #### Device Discovery Request
@@ -663,27 +660,6 @@ No support for Registration Capture
 
 #### IOS
 No support for Registration Capture
-
-## Signature
-In all the above APIs, some of the requests and responses are signed with various keys to verify the requester's authenticity. Here we have detailed the key used for signing a particular block in a request or response body of various APIs.
-
-Request/Response | Block | Signature Key
------------------|-------|---------------
-Device Discovery Response | Device Info | NA as it will not be signed
-Device Discovery Response | Digital ID | NA as it will not be signed
-Device Info Response | Device Info | <ul><li>NA in case of unregistered device</li><li>Device Key in case of registered device</li></ul>
-Device Info Response | Digital ID | <ul><li>For L0 device using device key</li><li>For L1 device using FTM chip key</li></ul>
-Capture Response | Data | Device key is used
-Capture Response | Digital ID | FTM chip key is used
-Registration Capture Response | Data | Device key is used
-Registration Capture Response | Digital ID | <ul><li>For L0 device using device key</li><li>For L1 device using FTM chip key</li></ul>
-Device Registration Request | Device Data | Device Provider certificate is used
-Device Registration Request | Device Info | Device key is used
-Device Registration Request | Digital ID | <ul><li>For L0 device using device key</li><li>For L1 device using FTM chip key</li></ul>
-Device De-registration Request | Device | Device Provider certificate is used
-Device Registration Response | Response | MOSIP Signature certificate is used
-Device Registration Response | Digital ID | Should be same as request
-Device De-registration Response | Device | MOSIP Signature certificate is used
 
 ## Error Codes
 Code | Message
