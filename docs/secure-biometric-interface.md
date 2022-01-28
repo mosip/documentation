@@ -20,7 +20,7 @@ SBI is exposed via a service to be invoked by a host application (like registrat
 * Used in uncontrolled environments like [authentication](https://docs.mosip.io/1.2.0/id-authentication)
 
 {% hint style="info" %}
-SBI 1.0 and SBI 2.0 were previously referred as **L0** and **L1** respectively.
+SBI 1.0 and SBI 2.0 were previously referred to as **L0** and **L1** respectively.
 {% endhint %}
 
 ## Device identity
