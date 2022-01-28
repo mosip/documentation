@@ -50,7 +50,7 @@ jobs:
             redoc-cli bundle -o ./html_docs/$filename.html $fullpath
             fname=${filename%-openapi*}
             echo "Only name is: $fname"
-            sed '/\<body\>/a <div class="sc-iCoGMd gLxhOh">   <div class="sc-hKFxyN juinod"><h4><a href="${{ github.event.inputs.git-ref }}.html">Home</a>   </h4></div></div>' ./html_docs/$filename.html > ./html_docs/$fname.html
+            sed '/\<body\>/a <div class="sc-iBzEeX sc-cOifOu dFWqin OsmAW">   <div class="sc-hKFxyN juinod api-info"><h5><a href="${{ github.event.inputs.git-ref }}.html" class="sc-gsWcmt fgrWXj">Home</a>   </h5></div></div>' ./html_docs/$filename.html > ./html_docs/$fname.html
             rm -fr ./html_docs/$filename.html
           done < tmp.txt
 
@@ -86,7 +86,7 @@ jobs:
           if grep -q ${{ github.event.inputs.git-ref }} index.html; then
             echo "Already one entry"
           else
-            sed  '/<\/h2>/a \\t<a href="${{ github.event.inputs.git-ref }}/${{ github.event.inputs.git-ref }}.html" style="font-family:verdana;">MOSIP ${{ github.event.inputs.git-ref }}</a>' index.html > temp.html && mv temp.html index.html
+            sed  '/<ul>/a \\t<ul><a href="${{ github.event.inputs.git-ref }}/${{ github.event.inputs.git-ref }}.html" style="font-family:verdana;">MOSIP ${{ github.event.inputs.git-ref }}</a></li>' index.html > temp.html && mv temp.html index.html
           fi
 
       - name: Commit Changes to Documenation Repository
