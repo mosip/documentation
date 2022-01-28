@@ -1,4 +1,4 @@
-# Secure Biometric Inteface 
+# Secure Biometric Inteface (SBI)
 
 ## Revision history
 |Version|Status|Date|

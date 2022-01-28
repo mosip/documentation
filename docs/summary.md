@@ -13,7 +13,7 @@
     * [ABIS API](abis-api.md)
     * [Biometric SDK](biometric-sdk.md)
     * [Biometric Devices](biometric-devices.md)
-    * [SBI](secure-biometric-interface.md)
+    * [Secure Biometric Interface (SBI)](secure-biometric-interface.md)
     * [Biometric Image Specification](biometric-image-specification.md)
     * [FTM](ftm.md)
 * [Partners](partners.md)
