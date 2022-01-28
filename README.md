@@ -1,3 +1,3 @@
-This repo is dedicated to MOSIP Documentation.  All information that you see on docs.mosip.io are hosted here.
+This repo is dedicated to MOSIP Documentation.
 
-If you find a documentation issue, please raise an issue in this repo.
+Refer to respective branches for documentation of various MOSIP releases. 
