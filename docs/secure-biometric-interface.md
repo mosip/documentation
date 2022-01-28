@@ -65,7 +65,7 @@ The Digital ID is signed with the [JSON Web Signature RFC 7515](https://datatrac
 
 ## API
 
-## Device discovery
+### Device discovery
 Device discovery would be used to identify MOSIP compliant devices in a system by the applications. The protocol is designed as simple plug and play with all the necessary abstraction to the specifics.
 
 #### Device Discovery Request
