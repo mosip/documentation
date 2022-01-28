@@ -5,12 +5,6 @@ Biometric devices capture individuals biometric data (fingerprint, iris scan, ph
 
 ![](_images/sdk.png)
 
-## Modalities
-Modalities supported in MOSIP are
-1. [Fingerprint](biometric-image-specification.md#fingerprint)
-1. [Iris](biometric-image-specification.md#iris)
-1. [Face](biometric-image-specification.md#face)
-
 ## Device types 
 |Purpose|Type|Subtype\*|Certification|Specification|
 |---|---|---|---|---|
