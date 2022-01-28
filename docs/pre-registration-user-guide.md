@@ -3,9 +3,9 @@
 ## Overview
 This guide helps in understanding the pre-registration sample UI implementation. The pre-registration portal can be used in **self-service** as well as in **assisted** mode.
 
-**Self-service mode**- In this mode, residents can pre-register themselves by accessing the pre-registration portal. They can select a language that is familiar to them for logging into the application. After logging into the portal, they could select the same language for enterting data into the demographic form and create an application.
+**Self-service mode**- In this mode, residents can pre-register themselves by accessing the pre-registration portal. They can login with their email address or phone number and fill up the demographic form, upload relevant documents to book an appointment for themselves and their family/friends. Finally, they would receive an acknowledgement along with a pre-registration ID that can be used at the registration center.
 
-**Assisted mode**- When used in an assisted mode, the operator could be handling the portal and helping other residents in filling up the details. The languages that the operator and the resident understands, may or may not be the same. If we consider a country with linguistic diversity, the possibilities increase. In such cases, the operator might log in with a language that they are familiar with, and also select a data capture language that is understood by the resident. 
+**Assisted mode**- When used in an assisted mode, the operator could be handling the portal and helping other residents in filling up the details and creating an application on their behalf. The languages that the operator and the resident understands, may or may not be the same. If we consider a country with linguistic diversity, the possibilities increase. In such cases, the operator might log in with a language that they are familiar with, and also select a data capture language that is understood by the resident. 
 
 ## Pre-registration process
 The key steps in this process are:
@@ -14,7 +14,7 @@ The key steps in this process are:
 * Book an appointment
 * Receive appointment acknowledgement
 
-To create an application, the residentoperator can follow the steps below:
+To create an application, the resident/operator can follow the steps below:
 
 ### Login/create a user account
 ![Pre-registration login page](_images/pre-reg-login.png)
@@ -27,17 +27,19 @@ To create an application, the residentoperator can follow the steps below:
 6. Enter the OTP and click **Verify**.
 
 *Note:* In case you have not received OTP, click **Send** to receive a OTP again. Enter the newly received OTP.
+
 When your OTP is verified, you can create, view, or modify your pre-registration application.
 
 ### Create an application
 
-#### Step 1: Select the data capture language
+#### Step 1: Select the language for providing data
 ![](_images/pre-reg-language-selection.png)
 1. Once the OTP is verified, you will see a pop up for selecting the languages for data entry.
 2. Select the languages and click **Submit**.
 
 *Note*:
-This choice will be available only if the ID issuer has configured the usage of optional languages.
+* This choice will be available only if the ID issuer has configured the usage of optional languages. 
+* Countries will have multiple languagues some of which will be *mandatory* while others could be *optional(regional languages)*. MOSIP provides a configuration using which a country can mandate the capture of demographic data in required number of languages (combination of mandatory and optional).
 
 #### Step 2: Provide consent
 ![](_images/pre-reg-consent.png)
