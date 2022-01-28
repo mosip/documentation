@@ -46,7 +46,7 @@
     * [Server Hardware Requirements](server-hardware-requirements.md)
     * [Country Implementation](country-implementation.md)
     * [Masterdata Guide](masterdata-guide.md)
- * [APIs](api.md)
+ * [API](api.md)
  * Community
     * [Contributions](contributions.md)
     * [Code of Conduct](code-of-conduct.md)
