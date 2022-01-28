@@ -25,7 +25,8 @@ jobs:
         uses: actions/checkout@v2
         if: github.event.inputs.git-ref != ''
         with:
-          ref: ${{ github.event.inputs.git-ref }}
+         ref: develop
+#          ref: ${{ github.event.inputs.git-ref }}
 
       - name: Setup Branch and Env
         run: |
