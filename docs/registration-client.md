@@ -24,6 +24,16 @@ To know more about the onboarding process of an operator, refer to [Operator onb
 ### Registration client entity diagram
 
 
+![](_images/reg-client.drawio.png)
+
+1. Registration client connects to the Upgrade Server to check on upgrades and patch downloads.
+2. All the synced packets are uploaded to packet receiver service one by one.
+3. Packets ready to be uploaded meta-info are synced to sync status service and also the status of already uploaded packets are synced back to registration client.
+4. Registration client always connects to external biometric devices through [SBI](secure-biometric-interface.md).
+5. Registration client scans the document proofs from any document scanner.
+6. Acknowledgement receipt print request is raised to any connected printers.
+7. All the masterdata and configurations are downloaded from syncdata-service.
+
 ### Biometrics SDK Integration in client
   
   SDK integration guide
