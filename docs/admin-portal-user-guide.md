@@ -146,7 +146,7 @@ Select the **Deactivate/Decommission** option from the Actions menu against the 
 * The system does not fetch the details of decommissioned machines but only shows the active and inactive machines. 
 
 *Note*:
-* Device entity is language agnostic (independent of languages). 
+* Machine entity is also language agnostic. 
 
 ![](_images/admin-view-machine.png)
 
@@ -157,7 +157,7 @@ The administrator can filter the list of machines based on parameters like *Mach
 ### Create machines
 
 * A machine can be created with the attributes like *Machine ID, machine name, mac address, serial number, machine spec ID and administrative zone* the machine belongs to.
-* A machine can be mapped to the administrative zone which is at the any zonal hierarchy.
+* A machine needs to be mapped to an administrative zone.
 
 ![](_images/admin-create-machine.png)
 
