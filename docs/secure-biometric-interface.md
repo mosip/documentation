@@ -1,15 +1,30 @@
 # Secure Biometric Inteface 
 
-## Overview
-**Secure Biometric Interface (SBI)**, previously called **MOSIP Device Service (MDS)** specification establishes standards/protocols that are necessary for a biometric device to be used in MOSIP. The MDS specification is primarly intented for biometric device manufactures, developers and designers to build MOSIP compliant devices. All devices that collect biometric data should operate within the specification of this document.
-
-### SBI Service
-SBI is exposed via a service to be invoked by a host application (like registration client or authentication app). This service is a software module running on a host. 
-
 ## Revision history
 |Version|Status|Date|
 |---|---|---|
 |0.9.5|Released|June-2020|
+
+## Overview
+**Secure Biometric Interface (SBI)**, previously called **MOSIP Device Service (MDS)** specification establishes standards/protocols that are necessary for a biometric device to be used in MOSIP. The MDS specification is primarly intented for biometric device manufactures, developers and designers to build MOSIP compliant devices. All devices that collect biometric data should operate within the specification of this document.
+
+## SBI Service
+SBI is exposed via a service to be invoked by a host application (like registration client or authentication app). This service is a software module running on a host. 
+
+## Device standards
+### SBI 1.0 
+* The biometric capture, processing and signing are done at the host machine level (for example laptop/mobile). 
+* For the usage in controlled environments (registration).
+### SBI 2.0
+* The biometric capture, processing, encryption and signing are done within the device FTM. 
+* For the usage in uncontrolled environments (authentication).
+
+{% hint style="info" %}
+|Standard|Legacy name|
+|---|---|
+|SBI 1.0|L0|
+|SBI 2.0|L1|
+{% endhint %}
 
 ## Device identity
 It is imperative that all devices that connect to MOSIP are identifiable. 
