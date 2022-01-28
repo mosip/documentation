@@ -14,10 +14,10 @@ SBI is exposed via a service to be invoked by a host application (like registrat
 ## Device standards
 ### SBI 1.0 
 * The biometric capture, processing and signing is done at the host machine level (for example laptop/mobile). 
-* Used in controlled environments like registration.
+* Used in controlled environments like [registration](https://docs.mosip.io/1.2.0/id-lifecycle-management#registration-enrollment).
 ### SBI 2.0
-* The biometric capture, processing, encryption and signing are done within the device FTM. 
-* Used in uncontrolled environments like authentication.
+* The biometric capture, processing, encryption and signing is done within [FTM](ftm.md). 
+* Used in uncontrolled environments like [authentication](https://docs.mosip.io/1.2.0/id-authentication)
 
 {% hint style="info" %}
 SBI 1.0 and SBI 2.0 were previously referred as **L0** and **L1** respectively.
