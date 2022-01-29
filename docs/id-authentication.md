@@ -5,36 +5,28 @@ Once a UIN is issued, a resident may be authenticated using MOSIP's ID Authentic
 
 ![](_images/ida-process.png)
 
-* Federated auth
-* Authentication_Partner
-* Multi factor auth
-
-ID Authentication (ID Auth) provides an API based authentication mechanism for entities to validate individuals. ID Authentication is the primary model for entities to validate an individual before providing any service.
-
-* Main functions:  Authentication and KYC
-
-Authentication may be biometric, demographic or OTP.
-
-* Auth partners
-
-
--* Identity verification services
--    * Yes/No API confirms identity claimed
--    * Works with virtual ID
--* Supports multiple levels of confidence and trust  
--    * Single, as well as multi-factor authentication, is possible
--    * Supports OTP, demographic, biometric factors based authentication
--* e-KYC based authentication
--    * Selected non-biometric attributes excluding ID is returned
--    * Data is shared based on policy
--* Authorization/Consent
--    * OTP based consent mechanism linked to the transaction being authorized or consented to
--* Tokenization: random, partner or policy specific tokens are returned based on the policy after successful authentication
-
-
 ## Authentication types
 * Biometric: Finger, face, iris
 * Demographic
 * OTP
 
 ## KYC
+
+## Multifactor auth
+
+## VID
+
+## Tokenisation 
+
+## Authentication partners and policies
+1. Online Authentication Partners
+1. Auth Partners
+
+## Consent
+
+## Use cases
+
+## Federated Auth
+
+
+
