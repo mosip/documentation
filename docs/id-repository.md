@@ -10,5 +10,5 @@ ID Repository mdoule consists of following services:
 1. Credential
 1. Credential Request Generator
 
-## Salt
+## Salt generator
 
