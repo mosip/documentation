@@ -11,7 +11,7 @@ Applicable for all tables:
 * Add/remove rows for the [configured languages](). 
 
 ## Tables to be updated
-|Category|Table|Guide|
+|<div style="width:50px">Category</div>|Table|Guide|
 |---|---|---|
 |Documents|`doc_category`|Categories of documents to be captured|
 ||`doc_type`| Specific documents related to a country|
