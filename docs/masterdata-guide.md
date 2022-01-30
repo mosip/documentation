@@ -11,7 +11,7 @@ Applicable for all tables:
 * Add/remove rows for the [configured languages](). 
 
 |Category|Table|Guide|
-|---||---|---|
+|---|---|---|
 |**Documents**|`doc_category`|Categories of documents to be captured|
 ||`doc_type`| Specific documents related to a country|
 ||`applicant_valid_document`|Mapping of document category, type and [applicant type](https://github.com/mosip/mosip-config/blob/develop3-v3/applicanttype.mvel)|
