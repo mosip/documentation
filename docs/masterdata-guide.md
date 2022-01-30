@@ -21,16 +21,31 @@ Applicable for all tables:
 |Machine|`machine_type`|Type of registration machines|
 ||`machine_spec`|Specification of registration machine|
 |ID Schema|`identity_schema`| Refer to [ID Schema customisation](id-schema.md). Update the JSON in `schema_json` column of [`identity_schema.xlsx`](https://github.com/mosip/mosip-data/tree/lts/mosip_master/xlsx/identity_schema.xlsx)|
-||`ui_spec`|UI specification for registration and pre-registration UI screens. See [UI spec guides]()|
 ||`dynamic_field`|Dynamic dropdowns used during data capture|
+||`id_type`|Only `name` and `descr` can be changed based on language|
+||`ui_spec`|UI specification for registration and pre-registration UI screens. See [UI spec guides]()|
 |Registration client|`permitted_local_config`|List of changeable configurations by the operator|
+||`app_authentication_method`| Only `method_seq` can be changed|
+||`app_detail`|Only `name` and `descr` can be changed based on language|
+||`app_role_priority`|Only `priority` can be changed|
+||`authentication_method`|Only `method_seq` can be changed|
 ||`reason_list`|List of reasons for a reason category|
+||`reason_category`|Only `name` and `descr` can be changed based on language|
 |Registration center|`reg_center_type`|Type of center |
 ||`registration_center`|List of registration centers|
 ||`registration_center_h`|Historical data for any modification done on a registration center. One time intialization of this table identical to `registration_center`. Thereafter, the data will be system updated|
 ||`reg_exceptional_holiday`|Exception holiday for a registration center|
 ||`reg_working_nonworking`|Working and non-working day for a center|
+|Biometrics|`biometric_attribute`|Only `name` and `descr` can be changed based on language|
+||`biometric_type`|Only `name` and `descr` can be changed based on language|
+|Templates|`template`|Only `name`, `descr`, `file_txt` can be changed based on language|
+||`template_file_format`|Only `descr` can be changed based on language|
+||`template_type`|Only `descr` can be changed based on language|
 |Others|`blocklisted_words`|List of blocked words|
+||`daysofweek_list`|Only `name` can be changed based on language|
+||`module_detail`|Only `name` and `descr` can be changed based on language|
+||`process_list`|Only `name` and `descr` can be changed based on language|
+||`status_list`|Only `descr` can be changed based on language|
+||`status_type`|Only `name` and `descr` can be changed based on language|
 ||`title`|List of titles used in the country|
 ||`zone`|List of administrative zones in a country|
-
