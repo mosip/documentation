@@ -10,6 +10,7 @@ Applicable for all tables:
 
 * Add/remove rows for the [configured languages](). 
 
+## Tables to be updated
 |Category|Table|Guide|
 |---|---|---|
 |Documents|`doc_category`|Categories of documents to be captured|
