@@ -18,35 +18,44 @@ Applicable for all tables:
 |`applicant_valid_document`|Mapping of document category, type and [applicant type](https://github.com/mosip/mosip-config/blob/develop3-v3/applicanttype.mvel)|
 
 ## Location
-1. loc_hierarchy_list
-1. location
-1. loc_holiday
+|Table|Guide|
+|---|---|
+|`loc_hierarchy_list`|List of location hierarchy|
+|`location`|List of locations stored in a hierarchical format|
+|`loc_holiday`|Holidays specific to different locations|
 
 ## Machine
-1. machine_spec
-1. machine_type
+|Table|Guide|
+|---|---|
+|`machine_type`|Type of registration machines|
+|`machine_spec`|Specification of registration machine|
 
 ## ID schema and UI spec
-1. `identity_schema`
+|Table|Guide|
+|---|---|
+|`identity_schema`| Refer to [ID Schema customisation](id-schema.md). Update the JSON in `schema_json` column of [`identity_schema.xlsx`](https://github.com/mosip/mosip-data/tree/lts/mosip_master/xlsx/identity_schema.xlsx)|
+|`ui_spec`|UI specification for registration and pre-registration UI screens. See [UI spec guides]()|
+|`dynamic_field`|Dynamic dropdowns used during data capture|
 
-Refer to [ID Schema customisation](id-schema.md). Update the JSON in `schema_json` column of [`identity_schema.xlsx`](https://github.com/mosip/mosip-data/tree/lts/mosip_master/xlsx/identity_schema.xlsx)
-
-1. `ui_spec`
+## Registration client
+|Table|Guide|
+|---|---|
+|`permitted_local_config`|List of changeable configurations by the operator|
+|`reason_list`|List of reasons for a reason category|
 
 ## Registration center
-1. reg_center_type
-1. registration_center
-1. registration_center_h
-1. reg_exceptional_holiday
-1. reg_working_nonworking
+|Table|Guide|
+|---|---|
+|`reg_center_type`|Type of center |
+|`registration_center`|List of registration centers|
+|`registration_center_h`|Historical data for any modification done on a registration center. One time intialization of this table identical to `registration_center`. Thereafter, the data will be system updated|
+|`reg_exceptional_holiday`|Exception holiday for a registration center|
+|`reg_working_nonworking`|Working and non-working day for a center|
 
 ## Others
-1. blacklisted_words
-1. dynamic_field
-1. title
-1. zone
-1. reason_list
-
-
-
+|Table|Guide|
+|---|---|
+|`blocklisted_words`|List of blocked words|
+|`title`|List of titles used in the country|
+|`zone`|List of administrative zones in a country|
 
