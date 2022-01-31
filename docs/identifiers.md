@@ -1,27 +1,24 @@
 # Identifiers
 
 ## Overview
-The sections here describe various user identifiers used in MOSIP.
+In the context of MOSIP, identifiers are an alphanumeric digital handle to identities in the system. While a person's identity is represented as a collection of biographic and biometric attributes that can uniquely identify the person, the identity is referred to using identifiers.
 
 ## UIN
 Unique Identification Number (UIN), as the name suggests, is a unique number assigned to resident. UIN never changes and is non-revocable. UIN is randomized such that one should not be able to derive any Personal Identifyable Information (PII) from the number itself.
 
-The rules that govern generation of a UIN are listed [here](https://github.com/mosip/commons/blob/1.2.0-rc2/kernel/kernel-idgenerator-service/README.md)
+The rules that govern generation of a UIN are listed [here](https://github.com/mosip/commons/blob/1.2.0-rc2/kernel/kernel-idgenerator-service/README.md).
 
 * uin configuration properties
 * storage
 
 ## VID
+The VID / Virtual ID is an alias identifier that can be used for authentication transactions. The key characteristic of such an identifier is that it expires. This allows for free disclosure and usage of this identifier in various contexts. It is privacy friendly in that it can be revoked, configured for one time usage, not linkable. Since these are used for authentication transactions, such identifiers are to be known to the user only or generated with their participation.
 
-## RID
+## RID / APPID
+The RID is the registration ID that is used to refer to the registration process. It is interchangeably used with the APPID which represents the "Application Number" / registration ID that is used as the contexr for all communication with user for the registration.
 
 ## PRID
+The PRID is a specialized RID used in the pre-registration system.
 
-## APPID
-
-* What is appid
-* What is the relationship of appid, rid, prid (it at all)
-* Is appid seen by residents on receipts, email, messages.
-* Correction packet.  Multiple appids associated with RIDs.   
-
-## Token
+## Token ID
+The Token identifier is a system provided customer reference number for relying parties for identifying the user uniquely in their system. The token identifier is an alias meant for the relying party and us typically unique to them. This identifier is included in the response of the authentication transactions. One key differentiator is tha the token identifier is not accepted as an identifier for authentication transactions.
