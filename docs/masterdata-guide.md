@@ -1,14 +1,14 @@
 # Masterdata Guide
 
 ## Overview
-Masterdata is the necessary base data to run MOSIP services. The data resides in the [`mosip_master` DB](https://github.com/mosip/admin-services/tree/1.2.0-rc2/db_scripts/mosip_master). This data needs to be customized for a country specific deployment.  Masterdata is bulk uploaded one-time during the [installation process](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/mosip/kernel/masterdata) and later may be updated using the [Admin Portal](admin-portal-guide.md). The default data uploaded during sandbox installation is available [here](https://github.com/mosip/mosip-data/tree/lts/mosip_master/xlsx). 
+Masterdata is the necessary base data to run MOSIP services. The data resides in the [`mosip_master` DB](https://github.com/mosip/admin-services/tree/1.2.0-rc2/db_scripts/mosip_master). This data needs to be customized for a country specific deployment.  Masterdata is bulk uploaded one-time during the [installation process](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/mosip/kernel/masterdata) and later may be updated using the [Admin Portal](admin-portal-guide.md). The default data uploaded during sandbox installation is available in [mosip-data](https://github.com/mosip/mosip-data/tree/1.2.0-rc2/mosip_master/xlsx).
 
 The tables that would need to be modified are listed below.  Other tables in `mosip_master` DB are either system-filled or pre-filled and not to be modified.
 
 ## Common guidelines
-Applicable for all tables:
-
-* Add/remove rows for the [configured languages](). 
+* Copy Excel files from [mosip-data](https://github.com/mosip/mosip-data/tree/1.2.0-rc2/mosip_master/xlsx) to a folder.
+* Modify the files for your deployment as per guide below. 
+* For all tables listed below modify `lang_code` and add corresponding rows for your [configured languages](module-configuration#languages). 
 
 ## Tables to be updated
 |Category|Table|Guide|
@@ -18,9 +18,9 @@ Applicable for all tables:
 ||`applicant_valid_document`|Mapping of document category, type and [applicant type](https://github.com/mosip/mosip-config/blob/develop3-v3/applicanttype.mvel)|
 |Location|`loc_hierarchy_list`|List of location hierarchy|
 ||`location`|List of locations stored in a hierarchical format|
-||`loc_holiday`|Holidays specific to different locations|
-|Machine|`machine_type`|Type of registration machines|
-||`machine_spec`|Specification of registration machine|
+||`loc_holiday`|Holidays specific to different locations. Used in registration centre creation.|
+|Machine|`machine_type`|Example mobile, stationary. Refers to `machine_spec`.|
+||`machine_spec`|Model, make of the registration machine|
 |ID Schema|`identity_schema`| Refer to [ID Schema customisation](id-schema.md). Update the JSON in `schema_json` column of [`identity_schema.xlsx`](https://github.com/mosip/mosip-data/tree/lts/mosip_master/xlsx/identity_schema.xlsx)|
 ||`dynamic_field`|Dynamic dropdowns used during data capture|
 ||`id_type`|Only `name` and `descr` can be changed based on language|
