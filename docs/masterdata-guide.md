@@ -7,8 +7,10 @@ The tables that would need to be modified are listed below.  Other tables in `mo
 
 ## Common guidelines
 * Copy Excel files from [mosip-data](https://github.com/mosip/mosip-data/tree/1.2.0-rc2/mosip_master/xlsx) to a folder.
-* Modify the files for your deployment as per guide below. 
 * For all tables listed below modify `lang_code` and add corresponding rows for your [configured languages](module-configuration.md#languages). 
+* Modify the files for your deployment as per guide below. 
+* Upload **first time** using scripts given [here](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/mosip/kernel/masterdata).
+* Subsequently, update data ONLY using [Admin Portal](admin-portal-guide.md).
 
 ## Tables to be updated
 |Category|Table|Guide|
