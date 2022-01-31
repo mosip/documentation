@@ -92,8 +92,7 @@ Once the application is created, there could be multiple statuses depending on t
 |Expired|Appointment date has passed|Re-book an appointment|
 |Cancelled|Appointment has been cancelled|Re-book an appointment|
 
-* The applications are sorted and displayed by the order of creation of application. 
-* The first application created appears first, latest created/modified application appears at the end. 
+* The applications are sorted and displayed by the order of creation of application. The last application created appears first in the list.
 * If the user visits the registration center and consumes the appointment, then the application will be removed from the list. 
 * If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
 
