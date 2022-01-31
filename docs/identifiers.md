@@ -1,7 +1,7 @@
 # Identifiers
 
 ## Overview
-In the context if MOSIP, identifiers are an alphanumeric digital handle to identities in the system. While a person's identity is represented as a collection of biographic and biometric attributes that can uniquely identify the person, the identity is referred to using identifiers.
+In the context of MOSIP, identifiers are an alphanumeric digital handle to identities in the system. While a person's identity is represented as a collection of biographic and biometric attributes that can uniquely identify the person, the identity is referred to using identifiers.
 
 ## UIN
 Unique Identification Number (UIN), as the name suggests, is a unique number assigned to resident. UIN never changes and is non-revocable. UIN is randomized such that one should not be able to derive any Personal Identifyable Information (PII) from the number itself.
