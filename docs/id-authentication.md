@@ -7,8 +7,8 @@ Once a UIN is issued, a resident may be authenticated using MOSIP's ID Authentic
 
 ## Authentication types
 * Biometric: Finger, face, iris
-* Demographic
-* OTP
+* Demographic: Name, date of birth, age, gender etc.  
+* OTP: One Time Password
 
 ## KYC
 
