@@ -15,7 +15,7 @@ Once a UIN is issued, a resident may be authenticated using MOSIP's ID Authentic
 ## Multifactor auth
 
 ## VID
-* How [VID](Identifiers.md#vid) is used.  
+* How [VID](identifiers.md#vid) is used.  
 
 ## Tokenisation 
 
