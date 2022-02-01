@@ -40,4 +40,5 @@ In MOSIP sandbox the job is run [here](https://github.com/mosip/mosip-infra/blob
 ## Source code 
 [Github repo](https://github.com/mosip/id-repository/tree/1.2.0-rc2)
 
-
+## API
+Refer to [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html)
