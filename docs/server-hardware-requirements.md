@@ -34,17 +34,17 @@ Assumptions:
 * Configuration of compute node: 8 VCPU, 64GB RAM, 64GB disk store.
 * Number of nodes: 21 
 
-|Resource|Per node|Number of nodes|Total|
-|---|---|---|---|
-|VCPU|8|21|168|
-|RAM|64 GB|21|1344 GB|
-|Node disk|64 GB|21|1344 GB|
+|Resource|Per node|Nodes|Total|
+|---|---:|---:|---:|
+|VCPU|8|21|**168**|
+|RAM (GB)|64|21|**1344**|
+|Node disk (GB)|64|21|**1344**|
 
 ### Storage requirements
 Storage is dependent on population of a country (i.e. the number of UINs to be issued).  Storage requirements for various types of data are listed below.
 
 |Data| Storage|Comments|
-|---|---|---|
+|---|:---:|---|
 |[Object Store](storage.md#object-store) (S3/Minio)|3200 GB/million packets/replication|Replication factor to be applied based on replication strategy|
 |Postgres storage|30 GB/million packets|Includes all databases|
 |[Landing zone](https://github.com/mosip/registration/blob/1.2.0-rc2/registration-processor/init/registration-processor-packet-receiver-stage/README.md#landing-zone)|Unprocessed packets X avg packet size|The size of landing zone depends on the estimated lag in packet processing and packet uploads. Once UINs are issued, the packets may be removed from the landing zone as a copy is already saved in Object Store| 
