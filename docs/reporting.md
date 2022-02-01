@@ -1,7 +1,7 @@
 # Reporting 
 
 ## Overview
-*  Why do we need reporting
+*  Why do we need reporting <TODO>
 *  What kind of data we need to see in various steps of enrollment, authentication.
 *  Importance of data like gender, age, that needs to be anonymised 
 *  Real time enrollment pipeline performance
