@@ -34,7 +34,7 @@ Assumptions:
 * Configuration of compute node: 8 VCPU, 64GB RAM, 64GB disk store.
 * Number of nodes: 21 
 
-|Resource|Per node|nodes|Total|
+|Resource|Per node|Nodes|Total|
 |---|---:|---:|---:|
 |VCPU|8|21|**168**|
 |RAM (GB)|64|21|**1344**|
