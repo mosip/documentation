@@ -41,6 +41,11 @@ paths:
 
 components:
   schemas:
+    deviceSubId:
+      type: array
+      description: "Used to enable a specific sensor in the device. 0: unknown, 1: left iris/slap, 2: right iris/slap, 3: two thumbs/irises, 4 (onwards): any other sensors"
+      items:
+        type: integer
     deviceInfo:
       type: object
       properties:
@@ -60,10 +65,7 @@ components:
           type: string
           description: Device service version
         deviceSubId:
-          type: array
-          description: "Used to enable a specific sensor in the device. 0: unknown, 1: left iris/slap, 2: right iris/slap, 3: two thumbs/irises, 4 (onwards): any other sensors"
-          items:
-            type: integer
+          $ref: '#/components/schemas/deviceSubId'
         callbackId:
           type: string
           description: "Base URL to reach device.\n* Linux and windows: HTTP URL\n* Android: Intent name\n* IOS: URL schema"
@@ -90,16 +92,6 @@ components:
             errorInfo: 
               type: string
               description: ""
-     
-  parameters:
-    skipParam:
-      name: skip
-      in: query
-      description: number of items to skip
-      required: true
-      schema:
-        type: integer
-        format: int32
   responses:
     NotFound:
       description: Entity not found.
