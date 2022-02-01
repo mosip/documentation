@@ -1,6 +1,6 @@
 # FTM
 
-## Overiew
+## Overview
 Foundational Trust Module (FTM)...
 
 FTM is created using a secure microprocessor capable of performing all required biometric processing and secure storage of keys. The foundational device trust would satisfy the below requirements.

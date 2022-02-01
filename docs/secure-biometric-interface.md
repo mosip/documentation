@@ -1,15 +1,27 @@
-# Secure Biometric Inteface 
-
-## Overview
-**Secure Biometric Interface (SBI)**, previously called **MOSIP Device Service (MDS)** specification establishes standards/protocols that are necessary for a biometric device to be used in MOSIP. The MDS specification is primarly intented for biometric device manufactures, developers and designers to build MOSIP compliant devices. All devices that collect biometric data should operate within the specification of this document.
-
-### SBI Service
-SBI is exposed via a service to be invoked by a host application (like registration client or authentication app). This service is a software module running on a host. 
+# Secure Biometric Inteface (SBI)
 
 ## Revision history
 |Version|Status|Date|
 |---|---|---|
 |0.9.5|Released|June-2020|
+
+## Overview
+**Secure Biometric Interface (SBI)**, previously called **MOSIP Device Service (MDS)** specification establishes standards/protocols that are necessary for a biometric device to be used in MOSIP. The MDS specification is primarly intented for biometric device manufactures, developers and designers to build MOSIP compliant devices. All devices that collect biometric data should operate within the specification of this document.
+
+## SBI Service
+SBI is exposed via a service to be invoked by a host application (like registration client or authentication app). This service is a software module running on a host. The service must run on any of the ports in the range 4501-4600.
+
+## Device standards
+### SBI 1.0 
+* The biometric capture, processing and signing is done at the host machine level (for example laptop/mobile). 
+* Used in controlled environments like [registration](https://docs.mosip.io/1.2.0/id-lifecycle-management#registration-enrollment).
+### SBI 2.0
+* The biometric capture, processing, encryption and signing is done within [FTM](ftm.md). 
+* Used in uncontrolled environments like [authentication](https://docs.mosip.io/1.2.0/id-authentication)
+
+{% hint style="info" %}
+SBI 1.0 and SBI 2.0 were previously referred to as **L0** and **L1** respectively.
+{% endhint %}
 
 ## Device identity
 It is imperative that all devices that connect to MOSIP are identifiable. 
@@ -51,12 +63,9 @@ The Digital ID is signed with the [JSON Web Signature RFC 7515](https://datatrac
 "digitalId": "base64urlencoded(header).base64urlencoded(payload).base64urlencoded(signature)"
 ```
 
-## Device Service - Communication Interfaces
-The section explains the necessary details of the biometric device connectivity, accessibility, discover-ability and protocols used to build and communicate with the device.
+## API
 
-The device should implement only the following set of APIs.  All the API’s are independent of the physical layer and the operating system, with the invocation being different across operating systems. While the operating system names are defined in this spec a similar technology can be used for unspecified operating systems.  It is expected that the device service ensures that the device is connected  locally to the host.
-
-### Device Discovery
+### Device discovery
 Device discovery would be used to identify MOSIP compliant devices in a system by the applications. The protocol is designed as simple plug and play with all the necessary abstraction to the specifics.
 
 #### Device Discovery Request
@@ -664,39 +673,18 @@ No support for Registration Capture
 #### IOS
 No support for Registration Capture
 
-## Signature
-In all the above APIs, some of the requests and responses are signed with various keys to verify the requester's authenticity. Here we have detailed the key used for signing a particular block in a request or response body of various APIs.
-
-Request/Response | Block | Signature Key
------------------|-------|---------------
-Device Discovery Response | Device Info | NA as it will not be signed
-Device Discovery Response | Digital ID | NA as it will not be signed
-Device Info Response | Device Info | <ul><li>NA in case of unregistered device</li><li>Device Key in case of registered device</li></ul>
-Device Info Response | Digital ID | <ul><li>For L0 device using device key</li><li>For L1 device using FTM chip key</li></ul>
-Capture Response | Data | Device key is used
-Capture Response | Digital ID | FTM chip key is used
-Registration Capture Response | Data | Device key is used
-Registration Capture Response | Digital ID | <ul><li>For L0 device using device key</li><li>For L1 device using FTM chip key</li></ul>
-Device Registration Request | Device Data | Device Provider certificate is used
-Device Registration Request | Device Info | Device key is used
-Device Registration Request | Digital ID | <ul><li>For L0 device using device key</li><li>For L1 device using FTM chip key</li></ul>
-Device De-registration Request | Device | Device Provider certificate is used
-Device Registration Response | Response | MOSIP Signature certificate is used
-Device Registration Response | Digital ID | Should be same as request
-Device De-registration Response | Device | MOSIP Signature certificate is used
-
-## Error Codes
+## Error codes
 Code | Message
 -----|--------
-0 | Success
-100     | Device not registered
-101     | Unable to detect a biometric object
-102     | Technical error during extraction.
-103     | Device tamper detected
-104     | Unable to connect to management server
-105     | Image orientation error
-106     | Device not found
-107     | Device public key expired
-108     | Domain public key missing
-109     | Requested number of biometric (Finger/IRIS) not supported
-5xx     | Custom errors. The device provider is free to choose his error code and error messages.
+0   | Success
+100 | Device not registered
+101 | Unable to detect a biometric object
+102 | Technical error during extraction
+103 | Device tamper detected
+104 | Unable to connect to management server
+105 | Image orientation error
+106 | Device not found
+107 | Device public key expired
+108 | Domain public key missing
+109 | Requested number of biometric (Finger/IRIS) not supported
+5xx | Custom error codes implemented by Device Provider. 

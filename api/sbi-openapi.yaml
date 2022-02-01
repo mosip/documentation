@@ -1,0 +1,109 @@
+openapi: 3.0.1,
+info:
+  title: Secure Biometric Interface
+  description: "[Overview]()"
+  license:
+    name: Mozilla Public License Version 2.0]
+    url: https://www.mozilla.org/en-US/MPL/2.0/
+  version: 0.9.5
+
+paths:
+  /device:
+    post: 
+      summary: Device discovery
+      description: Device discovery is used to identify MOSIP compliant devices in a system.  
+      required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: ['type']
+              properties:
+                type:
+                  description: Type of device
+                  type: string 
+                  enum:
+                    - Finger
+                    - Face
+                    - Iris
+                    - Biometric Device
+      responses:
+        '200':
+          description: Array of discovered devices
+          content: 
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/deviceInfo'  
+
+components:
+  schemas:
+    deviceSubId:
+      type: array
+      description: "Used to enable a specific sensor in the device. 0: unknown, 1: left iris/slap, 2: right iris/slap, 3: two thumbs/irises, 4 (onwards): any other sensors"
+      items:
+        type: integer
+    deviceInfo:
+      type: object
+      properties:
+        deviceId:  
+          type: string
+          description: Internal id of the device
+        deviceStatus:  
+          type: string
+          description: Device status
+        certification:
+          type: string
+          description: Certification level
+          enum: 
+            - L0
+            - L1
+        serviceVersion:
+          type: string
+          description: Device service version
+        deviceSubId:
+          $ref: '#/components/schemas/deviceSubId'
+        callbackId:
+          type: string
+          description: "Base URL to reach device.\n* Linux and windows: HTTP URL\n* Android: Intent name\n* IOS: URL schema"
+        digitalId:
+          type: string
+          description: "[Reference](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#digital-id)"
+        deviceCode:
+          type: string
+          description: A unique code given by MOSIP after successful registration
+        specVersion:
+          type: array
+          description: Supported SBI versions
+          items:
+            type: string
+        purpose:
+          type: string
+          description: Auth or Registration or empty if not registered
+        error:
+          type: object 
+          properties:
+            errorCode:
+              type: string
+              description: "[Error codes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#error-codes)"
+            errorInfo: 
+              type: string
+              description: ""
+  responses:
+    NotFound:
+      description: Entity not found.
+    IllegalInput:
+      description: Illegal input for operation.
+    GeneralError:
+      description: General Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/GeneralError'
+
+
+
+

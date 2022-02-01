@@ -3,9 +3,9 @@
 ## Overview
 This guide helps in understanding the pre-registration sample UI implementation. The pre-registration portal can be used in **self-service** as well as in **assisted** mode.
 
-**Self-service mode**- In this mode, a resident can select a language that is familiar to them for logging into the application. The same language might also be selected by them as one of the languages for data capture.
+**Self-service mode**- In this mode, residents can pre-register themselves by accessing the pre-registration portal. They can login with their email address or phone number and fill up the demographic form, upload relevant documents to book an appointment for themselves and their family/friends. Finally, they would receive an acknowledgement along with a pre-registration ID that can be used at the registration center.
 
-**Assisted mode**- When used in an assisted mode, the operator could be handling the portal and helping other residents in filling up their details. The languages that the operator and the resident understands, may or may not be the same. If we consider a country with linguistic diversity, the possibilities increase. In such cases, the operator might log in with a language that they are familiar with, and also select a data capture language that is understood by the resident. 
+**Assisted mode**- When used in an assisted mode, the operator could be handling the portal and helping other residents in filling up the details and creating an application on their behalf. The languages that the operator and the resident understands, may or may not be the same. If we consider a country with linguistic diversity, the possibilities increase. In such cases, the operator might log in with a language that they are familiar with, and also select a language (data capture language) familiar to the resident for filling up the demographic form and other details. 
 
 ## Pre-registration process
 The key steps in this process are:
@@ -14,7 +14,7 @@ The key steps in this process are:
 * Book an appointment
 * Receive appointment acknowledgement
 
-To create an application, the residentoperator can follow the steps below:
+To create an application, the resident/operator can follow the steps below:
 
 ### Login/create a user account
 ![Pre-registration login page](_images/pre-reg-login.png)
@@ -26,21 +26,20 @@ To create an application, the residentoperator can follow the steps below:
 5. Click **Send OTP** to receive a One Time Password (OTP) on your provided email address or mobile number.
 6. Enter the OTP and click **Verify**.
 
-*Note:* In case you have not received OTP, click **Resend** to receive a OTP again. Enter the newly received OTP.
+*Note:* In case you have not received OTP, click **Send** to receive a OTP again. Enter the newly received OTP.
+
 When your OTP is verified, you can create, view, or modify your pre-registration application.
 
 ### Create an application
 
-#### Step 1: Select the data capture language
+#### Step 1: Select the language for providing data
 ![](_images/pre-reg-language-selection.png)
 1. Once the OTP is verified, you will see a pop up for selecting the languages for data entry.
 2. Select the languages and click **Submit**.
 
 *Note*:
-* A user logging in for the first time and having no applications will be prompted with a data capture language pop-up. The same set of languages will be used for the next set of applications created in the same session.
-* The language selected by the user in the login screen will be pre-selected in the data capture language pop-up.
-* The user can change this by clicking on the **CHANGE DATA CAPTURE LANGUAGES** button.
-* This choice will be available only if the ID issuer has configured the usage of optional languages.
+* This choice will be available only if the ID issuer has configured the usage of optional languages. 
+* Countries will have multiple languagues some of which will be *mandatory* while others could be *optional(regional languages)*. MOSIP provides a configuration using which a country can mandate the capture of demographic data in required number of languages (combination of mandatory and optional).
 
 #### Step 2: Provide consent
 ![](_images/pre-reg-consent.png)
@@ -50,13 +49,15 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 *Note*: User consent is mandatory for creating/updating applications. The contents on this page will be displayed in all data capture languages selected.
 
 #### Step 3: Enter Demographic details
-![](_images/demographic-details.png)
+![](_images/pre-reg-demo.png)
 
 1. Enter your demographic details, which includes Name, Age/DOB, Gender, Residential Status, Address, Mobile Number, Email Id, etc.
 2. You can also change or verify your demographic details in the other selected language.
 3. After you have filled and verified your demographic details, click **Continue**.
   
-  *Note*- The mandatory fields/labels have a `*` mark. Field and button labels, error and information messages will be displayed in the user preferred language selected in the login screen.
+*Note*: The mandatory fields/labels have a `*` mark. Field and button labels, error and information messages will be displayed in the user preferred language selected in the login screen. The fields displayed on this screen are configurable based on the [ID schema](id_schema.md) defined by the country.
+
+[UI specs](pre-registration-ui-specifications.md) of Pre-registration module are used to configure the form fields in the Demographic Details and Document Upload functionality pages. These specs are saved as a JSON file with a list of fields.
   
 #### Step 4: Upload documents
 ![](_images/upload-docs.png)
@@ -69,6 +70,7 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 7. Click **Continue** to preview your application.
 
 #### Step 5: Preview data
+![](_images/pre-reg-review.png)
 
 1. To change the demographic details (Name, Age, etc.), click **modify** at the top-right corner adjacent to the Demographic details section.
 2. To modify the uploaded documents, click **modify** at the bottom-right corner adjacent to the Documents Uploaded section and make changes.
@@ -92,8 +94,7 @@ Once the application is created, there could be multiple statuses depending on t
 |Expired|Appointment date has passed|Re-book an appointment|
 |Cancelled|Appointment has been cancelled|Re-book an appointment|
 
-* The applications are sorted and displayed by the order of creation of application. 
-* The first application created appears first, latest created/modified application appears at the end. 
+* The applications are sorted and displayed by the order of creation of application. The last application created appears first in the list.
 * If the user visits the registration center and consumes the appointment, then the application will be removed from the list. 
 * If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
 
