@@ -11,10 +11,21 @@ ID Repository mdoule consists of following services:
 1. Credential Request Generator
 
 ## Identity service
+* Stores, updates, retrieves identity information and also to 
+* Retrieves and updates [UIN](identifiers.md#uin) status.
+
+Identity service uses Biometric SDK (server) to extract templates from provided biometric data.
 
 ## VID service
+VID Service provides functionality to create/update Virtual IDs mapped against an UIN. It also provides facility to update status of VID. VIDs are created based on the VID policy defined in the configuration.
 
 ## Credential service
+### Credential types
+Default supported credential types:
+1. `auth`
+1. `qrcode`
+1. `euin`
+1. `reprint`
 
 ## Credential Request Generator
 This service creates request for credential issuance.
