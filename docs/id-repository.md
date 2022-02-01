@@ -10,8 +10,22 @@ ID Repository mdoule consists of following services:
 1. Credential
 1. Credential Request Generator
 
+## Identity service
+
+## VID service
+
+## Credential service
+
+## Credential Request Generator
+This service creates request for credential issuance.
+
 ## Salt generator 
 This is a one-time job that populates salts that are used to hash and encrypt data for Identity and VID services. This job must be executed before deploying these services.  The following tables are populated:
 * `uin_hash_salt` in `mosip_idrepo` DB.
 * `uin_encrypt_salt` in `mosip_idmap` DB.
 In MOSIP sandbox the job is run [here](https://github.com/mosip/mosip-infra/blob/1.2.0-rc2/deployment/v3/mosip/idrepo/install.sh).
+
+## Source code 
+[Github repo](https://github.com/mosip/id-repository/tree/1.2.0-rc2)
+
+
