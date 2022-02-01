@@ -23,6 +23,7 @@ This service creates request for credential issuance.
 This is a one-time job that populates salts that are used to hash and encrypt data for Identity and VID services. This job must be executed before deploying these services.  The following tables are populated:
 * `uin_hash_salt` in `mosip_idrepo` DB.
 * `uin_encrypt_salt` in `mosip_idmap` DB.
+
 In MOSIP sandbox the job is run [here](https://github.com/mosip/mosip-infra/blob/1.2.0-rc2/deployment/v3/mosip/idrepo/install.sh).
 
 ## Source code 
