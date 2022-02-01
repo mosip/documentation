@@ -6,9 +6,8 @@ Details of reporting framework can be found [here](https://github.com/mosip/repo
 
 The framework has been used to create a set of default dashboards using Kibana. Dashboards give a visual display of metrics and important data to track the status of various pre and post-enrollment processes. This data helps ID issuers with improving efficiency, forecasting, and better decision-making.
 
-The source files of the default dashboards are available [here](https://github.com/mosip/reporting/tree/1.2.0-rc2/dashboards)
-
 ## Default dashboards
+The source files of the default dashboards are available [here](https://github.com/mosip/reporting/tree/1.2.0-rc2/dashboards)
 The following dashboards are configured on Kibana as the default implementation
 
 ### Combined dashboard
