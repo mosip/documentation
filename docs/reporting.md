@@ -10,10 +10,10 @@ The framework has been used to create a set of default dashboards using Kibana. 
 ## Default dashboards
 The following dashboards are configured on Kibana as the default implementation
 
-* Combined dashboard
+### Combined dashboard
   ![](_images/reports-combined-dashboard.png)
   
-* Pre Registration dashboard
+### Pre Registration dashboard
   ![](_images/reports-preregistration-1.png)
   ![](_images/reports-preregistration-1.png)
   
