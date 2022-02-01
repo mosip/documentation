@@ -8,6 +8,7 @@ The framework has been used to create a set of default dashboards using Kibana. 
 
 ## Default dashboards
 The source files of the default dashboards are available [here](https://github.com/mosip/reporting/tree/1.2.0-rc2/dashboards)
+
 The following dashboards are configured on Kibana as the default implementation
 
 ### Combined dashboard
