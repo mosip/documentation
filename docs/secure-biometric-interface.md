@@ -9,7 +9,7 @@
 **Secure Biometric Interface (SBI)**, previously called **MOSIP Device Service (MDS)** specification establishes standards/protocols that are necessary for a biometric device to be used in MOSIP. The MDS specification is primarly intented for biometric device manufactures, developers and designers to build MOSIP compliant devices. All devices that collect biometric data should operate within the specification of this document.
 
 ## SBI Service
-SBI is exposed via a service to be invoked by a host application (like registration client or authentication app). This service is a software module running on a host. 
+SBI is exposed via a service to be invoked by a host application (like registration client or authentication app). This service is a software module running on a host. The service must run on any of the ports in the range 4501-4600.
 
 ## Device standards
 ### SBI 1.0 
@@ -673,18 +673,18 @@ No support for Registration Capture
 #### IOS
 No support for Registration Capture
 
-## Error Codes
+## Error codes
 Code | Message
 -----|--------
-0 | Success
-100     | Device not registered
-101     | Unable to detect a biometric object
-102     | Technical error during extraction.
-103     | Device tamper detected
-104     | Unable to connect to management server
-105     | Image orientation error
-106     | Device not found
-107     | Device public key expired
-108     | Domain public key missing
-109     | Requested number of biometric (Finger/IRIS) not supported
-5xx     | Custom errors. The device provider is free to choose his error code and error messages.
+0   | Success
+100 | Device not registered
+101 | Unable to detect a biometric object
+102 | Technical error during extraction
+103 | Device tamper detected
+104 | Unable to connect to management server
+105 | Image orientation error
+106 | Device not found
+107 | Device public key expired
+108 | Domain public key missing
+109 | Requested number of biometric (Finger/IRIS) not supported
+5xx | Custom error codes implemented by Device Provider. 
