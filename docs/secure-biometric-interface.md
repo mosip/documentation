@@ -82,6 +82,14 @@ The `bioSubType` have following values:
     * UNKNOWN
 * For Face: No subtype
 
+## Device subID
+`deviceSubId` is used to enable a specific sensor in the device. It can have following values:
+* 0: Unknown device
+* 1: Left iris/slap 
+* 2: Right iris/slap
+* 3: Two thumbs/irises
+* 4(onwards): Any other sensors
+
 ## API
 
 ### Device discovery
