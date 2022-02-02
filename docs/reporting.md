@@ -9,9 +9,6 @@ Details of reporting framework can be found [here](https://github.com/mosip/repo
 ## Dashboards
 The following dashboards are configured on [Kibana](https://www.elastic.co/kibana/). The NDJSON source files are available [here](https://github.com/mosip/reporting/tree/1.2.0-rc2/dashboards).
 
-### Combined dashboard
-  ![](_images/reports-combined-dashboard.png)
-  
 ### Pre-registration
   ![](_images/reports-preregistration-1.png)
   ![](_images/reports-preregistration-2.png)
@@ -34,6 +31,9 @@ The following dashboards are configured on [Kibana](https://www.elastic.co/kiban
 ### ID issuance profile
   ![](_images/reports-id-issuance-1.png)
   ![](_images/reports-id-issuance-2.png)
+
+### Overall trend
+  ![](_images/reports-combined-dashboard.png)
 
 ## How to customize?
 The reporting pipeline and dashboards may be customized according to an adopter's requirements.   
