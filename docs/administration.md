@@ -50,3 +50,8 @@ To know more, refer to the Admin portal user guide.
 ## Build and Deploy
 Build and deploy instructions available in the above repositories.
 
+## API
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html)
+
+## Source code 
+[Github repo](https://github.com/mosip/admin-services/tree/1.2.0-rc2)
