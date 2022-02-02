@@ -12,26 +12,26 @@ The following dashboards are configured on [Kibana](https://www.elastic.co/kiban
 ### Combined dashboard
   ![](_images/reports-combined-dashboard.png)
   
-### Pre Registration dashboard
+### Pre Registration
   ![](_images/reports-preregistration-1.png)
   ![](_images/reports-preregistration-2.png)
 
-### Pre Reg Operations dashboard
+### Pre Reg Operations
   ![](_images/reports-preregistration-operations-1.png)
   ![](_images/reports-preregistration-operations-2.png)
   
-### Registration dashboard
+### Registration
   ![](_images/reports-registration-1.png)
   ![](_images/reports-registration-2.png)
   
-### Authentication dashboard
+### Authentication
   ![](_images/reports-authentication.png)
   
-### Registration Profile dashboard
+### Registration Profile
   ![](_images/reports-registration-profile-1.png)
   ![](_images/reports-registration-profile-2.png)
   
-### ID Issuance Profile dashboard
+### ID Issuance Profile
   ![](_images/reports-id-issuance-1.png)
   ![](_images/reports-id-issuance-2.png)
 
