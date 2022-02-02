@@ -16,7 +16,7 @@ To know more about the onboarding process of an operator, refer to [Operator onb
 
 ### Registration client entity diagram
 
-The relationship of Regproc with other services is explained here. Please note, the numbers do not signify sequence of operations or control flow
+The relationship of Registration client with other services is listed below. Please note, the numbers do not signify sequence of operations or the control flow.
 
 ![](_images/reg-client.drawio.png)
 

@@ -15,33 +15,23 @@ The key services provided are:
 Every resident services API call authenticates via an OTP except for the Registration ID(RID) status
 {% endhint %}
 
-## Resident services functionality
-Below are some of the features associated with Resident services,
+## Resident services entity diagram
 
-### Functional features
-* Ability to track application status
-* Manage ID
-    * Download for credentials such as a printable card with QR code
-    * Update of demographic data
-    * Request for re-print of card
-    * Request for new virtual ID
-* Privacy features
-    * View authentication history
-    * Block and unblock authentication modes
-    * On-demand creation and revocation of virtual ID
+The relationship of Resident services with other services is listed below. 
+*Note*- The numbers do not signify sequence of operations or the control flow.
 
-### Technical features
-* The back-end is a set of services with a REST API interface (provided by MOSIP)
-* The front-end is a portal to be developed by the adopter according to their requirements
-* Email or phone number based login
+![](_images/resident-services1.png)
 
-## Functionality
-* **Registration status**- This feature allows an individual to track status of their UIN generation.
-Input- The individual needs to provide the Registration ID (received during UIN registration). OTP is not required here.
-Output- The system validates this RID and on successful validation, sends the status of UIN generation to the individual's registered mobile number and/or email ID.
-* **Auth lock**- Resident can lock or unlock their authentication
-Input- 
-Output-
+1. Resident Services invokes ID authentication services to authenticate users
+2. It nvokes master data services to get language templates and machine details
+3. To create perpetual and temporary VID and to revoke VID, resident services calls ID Repository
+4. To sync packets and upload packets, resident services connects to registration processor
+5. Resident services sends all the audit logs to audit manager
+6. Notifier handles all the communication from resident services
+7. Download UIN card can be handled through credential services
+8. [Partner management services](partner-management-services.md) provides all the credential policies to resident services
+9. Creating packets is done through [packet manager](packet-manager.md) in resident services
+
 ## Services
 For detailed description of Resident Services, code and design, refer to resident services repo
 
