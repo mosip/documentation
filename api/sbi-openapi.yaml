@@ -81,13 +81,16 @@ paths:
                   description: "Vendor specific parameters. Max of 50 key value pairs. IMPORTANT: Any sensitive data should not be present here."
       responses:
         '200':
-          description: Array of discovered devices.
+          description: Array of biometrics
           content: 
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/deviceInfo'  
+                type: object
+                properties:
+                  biometrics:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/captureBiometrics'  
 
 components:
   schemas:
@@ -99,6 +102,33 @@ components:
          - Busy
          - Not Ready
          - Not Registered
+    captureBiometrics:
+      type: object
+      description:
+      properties:
+        specVersion: 
+          type: string
+          description: SBI version
+        data:
+          $ref: '#/components/schemas/bioData'  
+        hash:
+          type: string
+          description: sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)
+        sessionKey:
+          type: string
+          description: Encrypted with MOSIP public key (dynamically selected based on the uri) and encoded session key biometric"
+        thumbprint:
+          type: string
+          description: SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens
+        error:
+          $ref: '#/components/schemas/error'     
+
+    bioData:
+      type: object
+      properties:
+        digitalId:
+          type: string
+          description: "[Reference](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#digital-id)."
     bio:
       type: object
       properties:
@@ -174,18 +204,15 @@ components:
             errorInfo: 
               type: string
               description: ""
-  responses:
-    NotFound:
-      description: Entity not found.
-    IllegalInput:
-      description: Illegal input for operation.
-    GeneralError:
-      description: General Error.
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/GeneralError'
-
+    error:
+      type: object 
+      properties:
+        errorCode:
+          type: string
+          description: "[Error codes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#error-codes)."
+        errorInfo: 
+          type: string
+          description: ""
 
 
 
