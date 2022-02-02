@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "Resident Service API documentation",
-    "description": "Resident Service API documentation",
+    "title": "Resident Services API documentation",
+    "description": "Resident Services API documentation",
     "license": {
       "name": "Mosip",
       "url": "https://docs.mosip.io/platform/license"
@@ -12,7 +12,7 @@
   "servers": [
     {
       "url": "https://dev.mosip.net/resident/v1",
-      "description": "Resident Service"
+      "description": "Resident Services"
     }
   ],
   "tags": [
@@ -53,12 +53,6 @@
           "required": true
         },
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "201": {
-            "description": "Created"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -68,6 +62,12 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -107,9 +107,6 @@
           "required": true
         },
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -122,6 +119,9 @@
           },
           "204": {
             "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -148,12 +148,6 @@
           "required": true
         },
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "201": {
-            "description": "Created"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -163,6 +157,12 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -192,12 +192,6 @@
           "required": true
         },
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "201": {
-            "description": "Created"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -207,6 +201,12 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -236,12 +236,6 @@
           "required": true
         },
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "201": {
-            "description": "Created"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -251,6 +245,12 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -289,9 +289,6 @@
           }
         ],
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -301,6 +298,9 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -330,12 +330,6 @@
           "required": true
         },
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "201": {
-            "description": "Created"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -345,6 +339,12 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -374,12 +374,6 @@
           "required": true
         },
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "201": {
-            "description": "Created"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -389,6 +383,12 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -419,12 +419,6 @@
           "required": true
         },
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "201": {
-            "description": "Created"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -434,6 +428,12 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -463,9 +463,6 @@
           }
         ],
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -475,6 +472,9 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -504,9 +504,6 @@
           }
         ],
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -516,6 +513,9 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -545,9 +545,6 @@
           }
         ],
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -557,6 +554,9 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -586,12 +586,6 @@
           "required": true
         },
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "201": {
-            "description": "Created"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -601,6 +595,12 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -630,12 +630,6 @@
           "required": true
         },
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "201": {
-            "description": "Created"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -645,6 +639,12 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -674,12 +674,6 @@
           "required": true
         },
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
-          "201": {
-            "description": "Created"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -689,6 +683,12 @@
                 }
               }
             }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
@@ -708,9 +708,6 @@
         "description": "getCredentialTypes",
         "operationId": "getCredentialTypes",
         "responses": {
-          "401": {
-            "description": "Unauthorized"
-          },
           "200": {
             "description": "OK",
             "content": {
@@ -720,6 +717,9 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "403": {
             "description": "Forbidden"
