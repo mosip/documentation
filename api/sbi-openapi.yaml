@@ -38,14 +38,86 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/deviceInfo'  
+  /capture:
+    post: 
+      summary: Capture
+      description: This request is used to capture a biometric from MOSIP compliant devices.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: ['type']
+              properties:
+                env:
+                  description: Target environment.
+                  type: string
+                purpose:
+                  description: 
+                  type: string
+                  enum:
+                    - Auth
+                    - Registration 
+                specVersion:
+                  description: Expected version of the SBI spec.
+                  type: string
+                timeout:
+                  description: Timeout for capture.
+                  type: string
+                domainUri:
+                  description: URI of the auth server
+                  type: string
+                transactionId:
+                  description: Transaction Id for the current capture
+                  type: string
+                bio:
+                  description:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/bio'  
+                customOpts:
+                  type: object 
+                  description: "Vendor specific parameters. Max of 50 key value pairs. IMPORTANT: Any sensitive data should not be present here."
+      responses:
+        '200':
+          description: Array of discovered devices
+          content: 
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/deviceInfo'  
 
 components:
   schemas:
-    deviceSubId:
-      type: array
-      description: "Used to enable a specific sensor in the device. 0: unknown, 1: left iris/slap, 2: right iris/slap, 3: two thumbs/irises, 4 (onwards): any other sensors"
-      items:
-        type: integer
+    bio:
+      type: object
+      properties:
+        type: 
+          description: Type of the biometric data.
+          type: string
+        count:
+          description: Finger/iris count. 1 in case of face.
+          type: integer
+        bioSubType:
+          description: "[Subtypes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype)."
+          type: array
+          items:
+            type: string
+        requestedScore:
+          description: 
+          type: string
+        deviceId:  
+          type: string
+          description: Internal id of the device
+        deviceSubId:
+          type: integer
+          description: "[Device SubId](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid)"
+        previousHash:
+          type: string
+          description: Hash of the previous block
+          
     deviceInfo:
       type: object
       properties:
@@ -65,7 +137,10 @@ components:
           type: string
           description: Device service version
         deviceSubId:
-          $ref: '#/components/schemas/deviceSubId'
+          type: array
+          description: "[Device SubId](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid)"
+          items:
+            type: integer
         callbackId:
           type: string
           description: "Base URL to reach device.\n* Linux and windows: HTTP URL\n* Android: Intent name\n* IOS: URL schema"
