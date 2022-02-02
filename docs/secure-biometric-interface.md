@@ -62,6 +62,25 @@ The Digital ID is signed with the [JSON Web Signature RFC 7515](https://datatrac
 ```
 "digitalId": "base64urlencoded(header).base64urlencoded(payload).base64urlencoded(signature)"
 ```
+## Biometric subtype
+The `bioSubType` have following values:
+* For Finger: 
+    * Left IndexFinger 
+    * Left MiddleFinger
+    * Left RingFinger
+    * Left LittleFinger
+    * Left Thumb
+    * Right IndexFinger
+    * Right MiddleFinger 
+    * Right RingFinger
+    * Right LittleFinger
+    * Right Thumb
+    * UNKNOWN
+* For Iris
+    * Left
+    * Right
+    * UNKNOWN
+* For Face: No subtype
 
 ## API
 
