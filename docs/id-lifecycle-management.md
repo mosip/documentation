@@ -39,7 +39,6 @@ Registration is the process in which an individual/resident can visit a registra
 -    Notifications sent to the resident using the email ID and mobile number provided as a part of demographic data collection
 
 #### For infants/children
-
 -    Child needs to visit the Registration center along with a guardian/parent.
 -    Operator needs to capture only the child' face biometrics.
 -    Parent/guardian' UIN or RID and biometrics needed for authentication.
@@ -47,22 +46,20 @@ Registration is the process in which an individual/resident can visit a registra
 -    An acknowledgement receipt will be provided to the infant' parent/guardian.
 
 ## ID data update/updating individual’s information
-
 -    Residents can update their information in two ways:
     * By visiting the registration center: The demographic and biometric information can be updated at the centers.
-    * Update of only the demographic information using [Resident Service]().
+    * Update of only the demographic information using [Resident Services](https://docs.mosip.io/1.2.0/modules/resident-services).
 -  Registration receipt containing the Registration Identity(RID)), labels and data in the configured language, QR code (of the RID) provided to the resident at the center.
 -    Updated ID credentials sent to the resident via the country’ configured printing and postal service.
 -    Notifications sent to the resident using the email ID and mobile number provided as a part of demographic data collection
 
 ## De-activate/re-activate individual’s ID
-
--    De-activate ID means an individual will not be able to authenticate themselves by using the UIN or VID. 
--    If a country wants to deactivate an individual’s ID for any specific reason, the system deactivates the individual’s ID after certain validations performed in the Registration Processor.
--     Likewise, a country can also re-activate an individual’ ID as need be.
+-  De-activate ID means an individual will not be able to authenticate themselves by using the UIN or VID. 
+-  If a country wants to deactivate an individual’s ID for any specific reason, the system deactivates the individual’s ID after certain validations performed in the Registration Processor.
+-  Likewise, a country can also re-activate an individual’ ID as need be.
 
 ## Finding a lost ID
--    Individual to provide their biometric information in the Registration center.
+-  Individual to provide their biometric information in the Registration center.
 -  De-duplication performed to find the individual' ID.
 -  Registration receipt containing Registration Identity(RID)), labels and data in the configured language, QR code (of the RID) provided to the resident.
 -  ID credentials sent to the resident via the country’ configured printing and postal service.

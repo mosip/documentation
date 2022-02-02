@@ -41,7 +41,7 @@
         * [Registration Client UI Specifications](registration-client-ui-specifications.md)
     * [Registration Processor](registration-processor.md) 
     * [Reporting](reporting.md)
-    * [Resident Service](resident-service.md)
+    * [Resident Services](resident-services.md)
     * [Storage](storage.md)
     * [WebSub](websub.md)
 * Deployment
