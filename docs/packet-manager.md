@@ -14,6 +14,7 @@ Packet Manager runs as a service and is also available as a library. The library
 ## Configuration
 
 ## API
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
 
 ## Source code 
 [Github repo](https://github.com/mosip/packet-manager/tree/1.2.0-rc2)

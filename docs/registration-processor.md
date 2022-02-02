@@ -24,8 +24,11 @@ The registration packet flows through the various stages depending on the type o
 ## Build and deploy
 Refer to [repo](https://github.com/mosip/registration/tree/1.2.0-rc2)
 
-## APIs
-
 ## Configurations
 Refer to [Configuration Guide](https://github.com/mosip/registration/blob/1.2.0-rc2/docs/configuration.md)
 
+## API
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
+
+## Source code 
+[Github repo](https://github.com/mosip/registration/tree/1.2.0-rc2)

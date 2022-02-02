@@ -38,8 +38,9 @@ This is a one-time job that populates salts that are used to hash and encrypt da
 
 In MOSIP sandbox the job is run [here](https://github.com/mosip/mosip-infra/blob/1.2.0-rc2/deployment/v3/mosip/idrepo/install.sh).
 
+## API
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
+
 ## Source code 
 [Github repo](https://github.com/mosip/id-repository/tree/1.2.0-rc2)
 
-## API
-Refer to [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html)
