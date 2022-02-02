@@ -8,10 +8,18 @@ Packet Manager performs the following functions:
 1. Performs security checks, checksum, file validations, ID object validations etc on the registration packet.
 1. Provides packet information to other services via APIs. In case of multiple packets associated with an ID, pulls information from packets based on configured priority. (See [`packetmanager.default.priority`](https://github.com/mosip/mosip-config/blob/develop3-v3/application-default.properties)).
 
-Packet Manager runs as a service and is also available as a library. The library is used by Registration Client and Resident Service to create packets. The Registration Processor uses the service to read packets.
+Packet Manager runs as a service and is also available as a library. 
 
+![](_images/packet-manager.png)
 
-## Configuration
+The relationship of Packet Manager with other services is explained here. _NOTE: The numbers do not signify sequence of operations or control flow. Arrows indicate data flow_.
+
+1. [Resident Services](resident-services.md) uses Packet Manager library to create packet.
+2. [Registration Processor](registration-processor.md) reads packet data using Packet Manager service.
+3. Packets are stored and retrieve from [Object Store](storage.md#object-store).
+4. Audit logs.
+5. Encryption and decryption of packet. 
+6. [Registration Client](registration-client.md) user Packet Manager libray to create packet.
 
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
