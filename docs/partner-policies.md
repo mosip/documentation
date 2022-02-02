@@ -13,6 +13,11 @@ There are two kinds of policies:
 ## Policy group
 Common policies are grouped example 'Telecom', 'Banking', 'Insurance' etc. 
 
+## Authentication policy
+
+## Datashare policy
+
+
 
 
 
