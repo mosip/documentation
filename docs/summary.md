@@ -21,7 +21,7 @@
         * [Admin Portal User Guide](admin-portal-user-guide.md)
     * [Automation Testing](automation-testing.md)
     * [Commons](commons.md) 
-    * [Data Share](data-share.md)
+    * [Datashare](data-share.md)
     * [ID Authentication Services](id-authentication-services.md) 
     * [ID Repository](id-repository.md)
     * [Key Manager](keymanager.md)
