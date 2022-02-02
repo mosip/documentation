@@ -11,6 +11,12 @@ As the name suggests, Commons refers to all the common services (also called "ke
 * [PRID Generator](https://github.com/mosip/commons/tree/1.2.0-rc2/kernel/kernel-pridgenerator-service)
 * [RID Generator](https://github.com/mosip/commons/tree/1.2.0-rc2/kernel/kernel-ridgenerator-service)
 
+## API
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html)
+
+## Source code 
+[Github repo](https://github.com/mosip/commons/tree/1.2.0-rc2)
+
 
 
 
