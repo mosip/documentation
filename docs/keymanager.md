@@ -102,5 +102,11 @@ We strongly recommend that you store the encryption key outside Key Manager serv
 *	The registration packet will be encrypted using the certificate received from the server after collecting all required data for registration, including adding the digital signatures required to the registration data, and before saving/writing the data on the reg-client hard-disk
 *	REG_PROC sends request to decrypt the data to key manager service with same app_id & ref_id
 
+## API
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html)
+
+## Source code 
+[Github repo](https://github.com/mosip/keymanager/tree/1.2.0-rc2)
+
 
 
