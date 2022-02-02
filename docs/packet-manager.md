@@ -22,7 +22,7 @@ The relationship of Packet Manager with other services is explained here. _NOTE:
 6. [Registration Client](registration-client.md) uses Packet Manager libray to create packet.
 
 ## Packet structure
-Refer [here](_files/test_folder).
+Refer [here](_files/test_folder/).
 
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
