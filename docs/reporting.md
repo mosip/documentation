@@ -39,3 +39,6 @@ The following dashboards are configured on [Kibana](https://www.elastic.co/kiban
 The reporting pipeline and dashboards may be customized according to an adopter's requirements.   
 * Setup a data pipeline for populating data from database to Elasticsearch as given [here](https://github.com/mosip/reporting/blob/1.2.0-rc2/docs/connectors.md).
 * After data is populated in Elasticsearch, add/customize dashboards in Kibana as given [here](https://www.elastic.co/guide/en/kibana/current/dashboard.html).
+
+## Source code 
+[Github repo](https://github.com/mosip/reporting/tree/1.2.0-rc2)
