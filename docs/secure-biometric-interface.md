@@ -90,6 +90,22 @@ The `bioSubType` have following values:
 * 3: Two thumbs/irises
 * 4(onwards): Any other sensors
 
+## Error codes
+Code | Message
+-----|--------
+0   | Success
+100 | Device not registered
+101 | Unable to detect a biometric object
+102 | Technical error during extraction
+103 | Device tamper detected
+104 | Unable to connect to management server
+105 | Image orientation error
+106 | Device not found
+107 | Device public key expired
+108 | Domain public key missing
+109 | Requested number of biometric (Finger/IRIS) not supported
+5xx | Custom error codes implemented by Device Provider. 
+
 ## API
 
 ### Device discovery
@@ -700,18 +716,3 @@ No support for Registration Capture
 #### IOS
 No support for Registration Capture
 
-## Error codes
-Code | Message
------|--------
-0   | Success
-100 | Device not registered
-101 | Unable to detect a biometric object
-102 | Technical error during extraction
-103 | Device tamper detected
-104 | Unable to connect to management server
-105 | Image orientation error
-106 | Device not found
-107 | Device public key expired
-108 | Domain public key missing
-109 | Requested number of biometric (Finger/IRIS) not supported
-5xx | Custom error codes implemented by Device Provider. 
