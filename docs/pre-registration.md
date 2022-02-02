@@ -70,8 +70,11 @@ For getting started with the pre-registration, refer to the [Pre-registration us
 ## Build and deploy
 To access the build and read through the deployment instructions, refer to [pre-registration repo](https://github.com/pjoshi751/pre-registration/tree/develop).
 
-## APIs
-For detailed functionality of pre-registration APIs, refer to [pre-registration APIs](../../../api-reference/Pre-Registration-APIs.md).
-
 ## Configurations
 For details related to pre-registration configurations, refer to [pre-registration configuration](https://github.com/pjoshi751/pre-registration/blob/develop/docs/configuration.md).
+
+## API
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html)
+
+## Source code 
+[Github repo](https://github.com/mosip/pre-registration/tree/1.2.0-rc2)
