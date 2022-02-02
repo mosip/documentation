@@ -19,10 +19,13 @@ This is a reference application to demonstration how authentication and KYC can 
 
 ## Build and deploy
 
-## APIs
-Swaggers docs. 
-
 ## Configuration
+
+## API
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
+
+## Source code 
+[Github repo](https://github.com/mosip/id-authentication/tree/1.2.0-rc2).
 
 
 
