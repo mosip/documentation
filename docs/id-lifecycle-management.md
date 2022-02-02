@@ -50,7 +50,7 @@ Registration is the process in which an individual/resident can visit a registra
 
 -    Residents can update their information in two ways:
     * By visiting the registration center: The demographic and biometric information can be updated at the centers.
-    * Using Resident services: Update of only the demographic information.
+    * Update of only the demographic information using [Resident Service]().
 -  Registration receipt containing the Registration Identity(RID)), labels and data in the configured language, QR code (of the RID) provided to the resident at the center.
 -    Updated ID credentials sent to the resident via the country’ configured printing and postal service.
 -    Notifications sent to the resident using the email ID and mobile number provided as a part of demographic data collection

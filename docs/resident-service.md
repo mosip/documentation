@@ -1,5 +1,6 @@
-# Overview
+# Resident Service
 
+## Overview
 Resident services are the self-services which are used by the residents themselves via a portal. Resident Portal is a web based UI application that provides residents of a country the services related to their Unique Identification Number (UIN).
 The key services provided are:
 * Check registration status
