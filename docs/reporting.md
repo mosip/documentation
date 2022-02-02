@@ -14,7 +14,7 @@ The following dashboards are configured on [Kibana](https://www.elastic.co/kiban
   
 ### Pre Registration dashboard
   ![](_images/reports-preregistration-1.png)
-  ![](_images/reports-preregistration-1.png)
+  ![](_images/reports-preregistration-2.png)
 
 ### Pre Reg Operations dashboard
   ![](_images/reports-preregistration-operations-1.png)
