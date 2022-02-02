@@ -54,11 +54,7 @@ paths:
                   description: Target environment.
                   type: string
                 purpose:
-                  description: 
-                  type: string
-                  enum:
-                    - Auth
-                    - Registration 
+                  $ref: '#/components/schemas/purpose'
                 specVersion:
                   description: Expected version of the SBI spec.
                   type: string
@@ -94,6 +90,12 @@ paths:
 
 components:
   schemas:
+    purpose:
+      description: 
+      type: string
+      enum:
+        - Auth
+        - Registration 
     deviceStatus:
        type: string
        description: 
@@ -129,6 +131,45 @@ components:
         digitalId:
           type: string
           description: "[Reference](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#digital-id)."
+        deviceCode: 
+          type: string
+          description: "_Unused_."
+        deviceServiceVersion: 
+          type: string
+          description: SBI version
+        bioType: 
+          type: string
+          description: 
+          enum:
+            - Finger
+            - Iris
+            - Face
+        bioSubType: 
+          type: string
+          description: "[Subtypes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype)."
+        purpose: 
+          $ref: '#/components/schemas/purpose'
+        env: 
+          type: string
+          description: Target environment.
+        domainUri:
+          type: string
+          description: URI of the auth server.
+        bioValue: 
+          type: string
+          description: Encrypted with session key and base64urlencoded biometric data.
+        transactionId: 
+          type: string
+          description: Unique transaction id.
+        timestamp: 
+          type: string
+          description: Capture datetime in ISO format.
+        requestedScore: 
+          type: number
+          description: Floating point number to represent the minimum required score for the capture.
+        qualityScore: 
+          type: number
+          description: Floating point number representing the score for the current capture.
     bio:
       type: object
       properties:
@@ -193,8 +234,7 @@ components:
           items:
             type: string
         purpose:
-          type: string
-          description: Auth or Registration or empty if not registered.
+          $ref: '#/components/schemas/purpose'
         error:
           type: object 
           properties:
