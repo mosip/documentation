@@ -12,7 +12,6 @@ paths:
     post: 
       summary: Device discovery
       description: Device discovery is used to identify MOSIP compliant devices in a system.  
-      required: true
       requestBody:
         required: true
         content:
@@ -37,7 +36,28 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/deviceInfo'  
+                  $ref: '#/components/schemas/deviceDiscoveryInfo'  
+  /info:
+    post: 
+      summary: Device info
+      description: The request is used to identify the MOSIP compliant devices and their status by the applications.
+      responses:
+        '200':
+          description: "Array of devices running on a particular port of [SBI Service](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface) instance"
+          content: 
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  required: ['deviceInfo', 'error']
+                  properties:
+                    deviceInfo:                       
+                      type: string
+                      description: "`base64urlencode(header).base64urlencode(payload).base64urlencode(signature)`"
+                    error: 
+                      $ref: '#/components/schemas/error'     
+                      
   /capture:
     post: 
       summary: Capture
@@ -51,16 +71,14 @@ paths:
               required: ['type']
               properties:
                 env:
-                  description: Target environment.
-                  type: string
+                  $ref: '#/components/schemas/environment'
                 purpose:
                   $ref: '#/components/schemas/purpose'
                 specVersion:
                   description: Expected version of the SBI spec.
                   type: string
                 timeout:
-                  description: Timeout for capture.
-                  type: string
+                  $ref: '#/components/schemas/timeout'
                 domainUri:
                   description: URI of the auth server.
                   type: string
@@ -88,8 +106,53 @@ paths:
                     items:
                       $ref: '#/components/schemas/captureBiometrics'  
 
+  /stream:
+    post: 
+      summary: Video stream
+      description: "The device starts a live video stream of biometric images. This API shall be exposd only by devices with purpose as **Registration**."
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: ['deviceId', 'deviceSubId']
+              properties:
+                deviceId:
+                  $ref: '#/components/schemas/deviceId'  
+                deviceSubId:
+                  type: integer
+                  description: "[Device SubId](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid)."
+                timeout: 
+                  $ref: '#/components/schemas/timeout'  
+      responses:
+        '200':
+          description: "[MJPEG](https://en.wikipedia.org/wiki/Motion_JPEG) video stream with minimum 3 fps or error" 
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    $ref: '#/components/schemas/error'
+
 components:
   schemas:
+    timeout:
+      type: integer
+      description: Timeout in milliseconds
+      default: 300000 
+    deviceId:
+      type: string
+      description: Internal ID of the device
+    environment:
+      type: string
+      description: Target environment.
+      enum:
+        - Staging 
+        - Developer
+        - Pre-Production
+        - Production
     purpose:
       description: 
       type: string
@@ -150,8 +213,7 @@ components:
         purpose: 
           $ref: '#/components/schemas/purpose'
         env: 
-          type: string
-          description: Target environment.
+          $ref: '#/components/schemas/environment'
         domainUri:
           type: string
           description: URI of the auth server.
@@ -188,8 +250,7 @@ components:
           description: 
           type: string
         deviceId:  
-          type: string
-          description: Internal id of the device.
+          $ref: '#/components/schemas/deviceId'  
         deviceSubId:
           type: integer
           description: "[Device SubId](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid)."
@@ -197,12 +258,11 @@ components:
           type: string
           description: Hash of the previous block.
           
-    deviceInfo:
+    deviceDiscoveryInfo:
       type: object
       properties:
         deviceId:  
-          type: string
-          description: Internal id of the device.
+          $ref: '#/components/schemas/deviceId'  
         deviceStatus:  
           $ref: '#/components/schemas/deviceStatus'  
         certification:
@@ -253,6 +313,4 @@ components:
         errorInfo: 
           type: string
           description: ""
-
-
 
