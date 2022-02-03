@@ -54,7 +54,7 @@ paths:
                   properties:
                     deviceInfo:                       
                       type: string
-                      description: "`base64urlencode(header).base64urlencode(payload).base64urlencode(signature)`"
+                      description: "* `base64urlencode(header).base64urlencode(payload).base64urlencode(signature)` for registered device.\n* `base64urlencode(header).base64urlencode(payload)` for unregistered device.\n\n In case of unregistered, error code is 100."
                     error: 
                       $ref: '#/components/schemas/error'     
                       
@@ -313,4 +313,3 @@ components:
         errorInfo: 
           type: string
           description: ""
-

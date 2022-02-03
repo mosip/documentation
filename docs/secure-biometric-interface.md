@@ -23,13 +23,10 @@ SBI service is a software module running on a host that exposes the SBI interfac
 SBI 1.0 and SBI 2.0 were previously referred to as **L0** and **L1** respectively.
 {% endhint %}
 
-## Device identity
-It is imperative that all devices that connect to MOSIP are identifiable. 
-
-### Physical ID
+## Device Physical ID
 An identification mark that shows MOSIP compliance and a readable unique device serial number (minimum of 12 digits), make and model. The same information has to be available over a 2D QR Code or Barcode. This is to help field support and validation.
 
-### Digital ID
+## Device Digital ID
 A Digital ID is represented as JSON:
 ```JSON
 {
@@ -58,6 +55,8 @@ A Digital ID is represented as JSON:
 * For `Iris`: `Single` or `Double`
 * For `Face`: `Full face`
 
+### Signed digital ID
+For [registered devices]()
 The Digital ID is signed with the [JSON Web Signature RFC 7515](https://datatracker.ietf.org/doc/html/rfc7515) using the [DKL0](keys.md#device-specific-keys) in SBI 1.0 devices and [DKL1](keys.md#device-specific-keys) in SBI 2.0 devices and would look like this:
 ```
 "digitalId": "base64urlencoded(header).base64urlencoded(payload).base64urlencoded(signature)"
