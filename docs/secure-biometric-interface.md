@@ -61,6 +61,12 @@ The Digital ID is signed with the [JSON Web Signature RFC 7515](https://datatrac
 ```
 "digitalId": "base64urlencoded(header).base64urlencoded(payload).base64urlencoded(signature)"
 ```
+### Unsigned digital ID
+Just base64 encoded:
+```
+"digitalId": "base64urlencoded(payload)"
+```
+
 ## Biometric subtype
 The `bioSubType` have following values:
 * For Finger: 
