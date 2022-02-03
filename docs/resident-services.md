@@ -23,7 +23,7 @@ The relationship of Resident services with other services is listed below.
 ![](_images/resident-services1.png)
 
 1. Resident Services invokes ID authentication services to authenticate users.
-2. It nvokes master data services to get language templates and machine details.
+2. It invokes the master data services to get language templates and machine details.
 3. To create perpetual and temporary VID and to revoke VID, resident services calls ID Repository.
 4. To sync packets and upload packets, resident services connects to registration processor.
 5. Resident services sends all the audit logs to audit manager.
