@@ -25,26 +25,21 @@ Biometric devices capture individuals biometric data (fingerprint, iris scan, ph
 
 ![](_images/devices-authentication.png)
 
-## Device trust
-MOSIP compliant devices provide a trust environment for the devices to be used in registration, KYC and AUTH scenarios. The trust level is established based on the device support for trusted execution.
+## Device trust 
+* Device creates a key pair
+* A cert signing request (CSR) is generated and sent to the device provider (management server)
+* Management server signs and issues a certificate to the device
+* Device private key is used to sign the data, the JWT will have the certificate issued by the device provider.
+* MOSIP back end uses this certificate issued to the device by the device provider, to establish a connect with already onboarded deviceprovider cert.
+
 
 ### Types of encryption keys
 * Device key [TBD]
 * FTM key
 * MOSIP public key
 
-### L0
-* L0 - The trust is provided at the software level. No hardware related trust exist. This type of compliance is used in controlled environments.
-* Digital id and data encryption
- 
-### L1
-* The trust is provided by a secure chip - [FTM](ftm.md) - with secure execution environment.
-* Digital id and data encryption
 
-### Key rotation
-
-## Device onboarding
-
+## Key rotation
 
 ## Test kits
 
