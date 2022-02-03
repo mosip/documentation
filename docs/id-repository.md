@@ -9,10 +9,11 @@ ID Repository mdoule consists of following components:
 1. VID service 
 1. Credential service
 1. Credential Request Generator
+1. Credential Feeder - 
 1. Salt generator 
 
 Below is the entity relationship diagram illustrated for ID Repository.
-![Pre-registration login page](_images/pre-reg-login.png)
+![](_images/id-repository.png)
 
 *NOTE:* The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
 
@@ -23,7 +24,7 @@ Below is the entity relationship diagram illustrated for ID Repository.
 Identity service uses Biometric SDK (server) to extract templates from provided biometric data.
 
 Below is the entity relationship diagram illustrated for Identity service.
-![Pre-registration login page](_images/pre-reg-login.png)
+![](_images/identity-service.png)
 
 *NOTE:* The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
 
@@ -45,14 +46,13 @@ VID Service provides functionality to create/update Virtual IDs mapped against a
 
 Below is the entity relationship diagram illustrated for VID service.
 
-![Pre-registration login page](_images/pre-reg-login.png)
-
+![](_images/VID-service.png)
 
 *NOTE:* The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
 
-1. Keymanager - Encrypts/decrypts data
+1. Key Manager - Encrypts/decrypts data
 2. Credential request generator - Issues credentials for new/updated uin data.
-3 DB - All VID related data is stored in mosip_idmap db.
+3  DB - All VID related data is stored in `mosip_idmap` db.
 4. Partner management - retrieves online verification partners to issue credentials.
 5. Audit manager - Audit logs are logged into Auditmanager.
 6. Auth Adapter - Integrates with KeyCloak for authentication.
@@ -60,8 +60,21 @@ Below is the entity relationship diagram illustrated for VID service.
 8. Kernel ID Generator - Generates VID.
 9. Identity Service - Checks the status of UIN to create VID
 
-
 ## Credential service
+
+Below is the entity relationship diagram illustrated for Credential service.
+
+![](_images/credential-service.png)
+
+*NOTE:* The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
+
+1. Key Manager - Encrypts/decrypts data and also used to sign data.
+2. WebSub - Subscribes to get notifications related to credential status from IDA.
+3. DataShare - creates datashare url for sharable attributes
+4. Identity service - retrieves identity data for UIN/VID.
+5. Partner management - retrieves policies related to credential type and also retrieves policy for bio-extraction.
+6. Auth Adapter - Integrates with KeyCloak for authentication.
+
 ### Credential types
 Default supported credential types:
 1. `auth`
@@ -69,31 +82,21 @@ Default supported credential types:
 1. `euin`
 1. `reprint`
 
-Below is the entity relationship diagram illustrated for Credential service.
-
-![Pre-registration login page](_images/pre-reg-login.png)
-
-*NOTE:* The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
-
-1. Keymanager - Encrypts/decrypts data and also to sign data.
-2. WebSub - Subscribes to get notifications related to credential status from IDA.
-3. DataShare - creates datashare url for sharable attributes
-4. Identity service - retrievez identity data for UIN/VID.
-5. Partner management - retrieves policies related to credential type and also retrieves policy for bio-extraction.
-6. Auth Adapter - Integrates with KeyCloak for authentication.
-
-## Credential Request Generator
+## Credential Request Generator Service
 This service creates request for credential issuance.
 
 Below is the entity relationship diagram illustrated for Credential Request Generator.
 
-![Pre-registration login page](_images/pre-reg-login.png)
+![](_images/credential-request-generator.png)
 
 *NOTE:* The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
 
 Credential Request generator:
-1. Keymanager - Encrypts/decrypts data
+1. Key Manager - Encrypts/decrypts data
 2. Auth Adapter - Integrates with KeyCloak for authentication.
+
+## Credential Feeder
+This job will feed the existing UIN/ VID identity information to newly deployed IDA instance.
 
 ## Salt generator 
 This is a one-time job that populates salts that are used to hash and encrypt data for Identity and VID services. This job must be executed before deploying these services.  The following tables are populated:
