@@ -54,7 +54,8 @@ paths:
                   properties:
                     deviceInfo:                       
                       type: string
-                      description: "* `base64urlencode(header).base64urlencode(payload).base64urlencode(signature)` for registered device.\n* `base64urlencode(header).base64urlencode(payload)` for unregistered device.\n\n In case of unregistered, error code is 100."
+                      format: byte
+                      description: "* `base64urlencode(header).base64urlencode(deviceInfo).base64urlencode(signature)` for registered device.\n* `base64urlencode(deviceInfo)` for unregistered device.\n\nSee `deviceInfo` JSON structure."
                     error: 
                       $ref: '#/components/schemas/error'     
                       
@@ -135,9 +136,27 @@ paths:
                 properties:
                   error:
                     $ref: '#/components/schemas/error'
+  /non-existent-endpoint:
+    post:
+      description: "Documentation of `deviceInfo` JSON structure."
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                deviceInfo:
+                  $ref: '#/components/schemas/deviceDiscoveryInfo'
 
 components:
   schemas:
+    certification:
+      type: string
+      description: Certification level.
+      enum: 
+        - L0
+        - L1
     timeout:
       type: integer
       description: Timeout in milliseconds
@@ -266,11 +285,7 @@ components:
         deviceStatus:  
           $ref: '#/components/schemas/deviceStatus'  
         certification:
-          type: string
-          description: Certification level.
-          enum: 
-            - L0
-            - L1
+          $ref: '#/components/schemas/certification'  
         serviceVersion:
           type: string
           description: Device service version.
@@ -284,10 +299,57 @@ components:
           description: "Base URL to reach device.\n* Linux and windows: HTTP URL\n* Android: Intent name\n* IOS: URL schema."
         digitalId:
           type: string
-          description: "[Reference](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#digital-id)."
+          description: "[Unsigned digital ID](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#unsigned-digital-id)."
         deviceCode:
           type: string
           description: A unique code given by MOSIP after successful registration.
+        specVersion:
+          type: array
+          description: Supported SBI versions.
+          items:
+            type: string
+        purpose:
+          $ref: '#/components/schemas/purpose'
+        error:
+          type: object 
+          properties:
+            errorCode:
+              type: string
+              description: "[Error codes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#error-codes)."
+            errorInfo: 
+              type: string
+              description: ""
+    deviceInfo:
+      type: object
+      properties:
+        deviceId:  
+          $ref: '#/components/schemas/deviceId'  
+        deviceStatus:  
+          $ref: '#/components/schemas/deviceStatus'  
+        firmware:
+          type: string
+          description: Firmware version 
+        certification:
+          $ref: '#/components/schemas/certification'  
+        serviceVersion:
+          type: string
+          description: Device service version.
+        deviceSubId:
+          type: array
+          description: "[Device SubId](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid)."
+          items:
+            type: integer
+        callbackId:
+          type: string
+          description: "Base URL to reach device.\n* Linux and windows: HTTP URL\n* Android: Intent name\n* IOS: URL schema."
+        digitalId:
+          type: string
+          description: "[Signed digital ID](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#signed-digital-id)."
+        deviceCode:
+          type: string
+          description: A unique code given by MOSIP after successful registration.
+        env: 
+          $ref: '#/components/schemas/environment'
         specVersion:
           type: array
           description: Supported SBI versions.
