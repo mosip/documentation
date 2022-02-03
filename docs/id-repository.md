@@ -28,6 +28,7 @@ Below is the entity relationship diagram illustrated for Identity service.
 
 ![](_images/identity-service.png)
 
+
 *NOTE:* The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
 
 1. Keymanager - Encrypts/decrypts data
@@ -55,7 +56,7 @@ Below is the entity relationship diagram illustrated for VID service.
 1. Key Manager - Encrypts/decrypts data
 2. Credential request generator - Issues credentials for new/updated uin data.
 3  DB - All VID related data is stored in `mosip_idmap` db.
-4. Partner management - retrieves online verification partners to issue credentials.
+4. Partner management service- retrieves online verification partners to issue credentials.
 5. Audit manager - Audit logs are logged into Auditmanager.
 6. Auth Adapter - Integrates with KeyCloak for authentication.
 7. WebSub - Publish events related to VID updation.
@@ -72,9 +73,9 @@ Below is the entity relationship diagram illustrated for Credential service.
 
 1. Key Manager - Encrypts/decrypts data and also used to sign data.
 2. WebSub - Subscribes to get notifications related to credential status from IDA.
-3. DataShare - creates datashare url for sharable attributes
+3. DataShare - creates datashare url for sharable attributes.
 4. Identity service - retrieves identity data for UIN/VID.
-5. Partner management - retrieves policies related to credential type and also retrieves policy for bio-extraction.
+5. Partner management service - retrieves policies related to credential type and also retrieves policy for bio-extraction.
 6. Auth Adapter - Integrates with KeyCloak for authentication.
 
 ### Credential types
@@ -93,7 +94,6 @@ Below is the entity relationship diagram illustrated for Credential Request Gene
 
 *NOTE:* The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
 
-Credential Request generator:
 1. Key Manager - Encrypts/decrypts data
 2. Auth Adapter - Integrates with KeyCloak for authentication.
 
