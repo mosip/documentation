@@ -104,6 +104,7 @@ Code | Message
 107 | Device public key expired
 108 | Domain public key missing
 109 | Requested number of biometric (Finger/IRIS) not supported
+202 | No device connected
 5xx | Custom error codes implemented by Device Provider. 
 
 ## API
