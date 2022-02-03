@@ -112,3 +112,5 @@ Code | Message
 202 | No device connected
 5xx | Custom error codes implemented by Device Provider. 
 
+## API
+Refer to [SBI API documentation](https://mosip.github.io/documentation/1.2.0-rc2/sbi.html).
