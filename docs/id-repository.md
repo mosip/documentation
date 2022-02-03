@@ -13,6 +13,7 @@ ID Repository mdoule consists of following components:
 1. Salt generator 
 
 Below is the entity relationship diagram illustrated for ID Repository.
+
 ![](_images/id-repository.png)
 
 *NOTE:* The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
@@ -24,6 +25,7 @@ Below is the entity relationship diagram illustrated for ID Repository.
 Identity service uses Biometric SDK (server) to extract templates from provided biometric data.
 
 Below is the entity relationship diagram illustrated for Identity service.
+
 ![](_images/identity-service.png)
 
 *NOTE:* The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
