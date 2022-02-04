@@ -47,7 +47,7 @@ A Digital ID is represented as JSON:
 |`model`|Model of the device as printed on [Physical ID](#device-physical-id)|
 |`type`|`Finger`, `Iris`, or `Face`|
 |`deviceSubType`|Based on `type`. See note below|
-|`deviceProvider` | Name of the device provider|
+|`deviceProvider` | Name of the [Device provider](https://docs.mosip.io/1.2.0/partners#partner-types)|
 |`dateTime`| Time during the issuance of the request. This is in ISO format.|
 
 `deviceSubType`:
@@ -110,7 +110,7 @@ Code | Message
 108 | Domain public key missing
 109 | Requested number of biometric (Finger/IRIS) not supported
 202 | No device connected
-5xx | Custom error codes implemented by Device Provider. 
+5xx | Custom error codes implemented by [Device Provider](https://docs.mosip.io/1.2.0/partners#partner-types). 
 
 ## API
 Refer to [SBI API documentation](https://mosip.github.io/documentation/1.2.0-rc2/sbi.html).
