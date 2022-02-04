@@ -299,7 +299,7 @@ components:
           description: "Base URL to reach device.\n* Linux and windows: HTTP URL\n* Android: Intent name\n* IOS: URL schema."
         digitalId:
           type: string
-          description: "[Unsigned digital ID](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#unsigned-digital-id)."
+          description: "[Unsigned digital ID](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-digital-id)."
         deviceCode:
           type: string
           description: A unique code given by MOSIP after successful registration.
@@ -344,7 +344,7 @@ components:
           description: "Base URL to reach device.\n* Linux and windows: HTTP URL\n* Android: Intent name\n* IOS: URL schema."
         digitalId:
           type: string
-          description: "[Signed digital ID](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#signed-digital-id)."
+          description: "[Signed digital ID](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-digital-id)."
         deviceCode:
           type: string
           description: A unique code given by MOSIP after successful registration.

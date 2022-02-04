@@ -42,9 +42,9 @@ A Digital ID is represented as JSON:
 ```
 |Parameters|Description|
 |---|---|
-|`serialNo`|As printed on [Physical ID](#physical-id)
-|`make`|Brand name as printed on [Physical ID](#physical-id)|
-|`model`|Model of the device as printed on [Physical ID](#physical-id)|
+|`serialNo`|As printed on [Physical ID](#device-physical-id)
+|`make`|Brand name as printed on [Physical ID](#device-physical-id)|
+|`model`|Model of the device as printed on [Physical ID](#device-physical-id)|
 |`type`|`Finger`, `Iris`, or `Face`|
 |`deviceSubType`|Based on `type`. See note below|
 |`deviceProvider` | Name of the device provider|
