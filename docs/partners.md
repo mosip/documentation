@@ -51,13 +51,13 @@ The sections below describe onboarding process for each type of partner.
 1. AP selects the policy group and policy. This request is sent to MOSIP Admin for approval. 
 1. On approval, AP generates API key that can be used along with MISP license key to interact with IDA system. 
 
-### Device Partner (DP)
+### Device Provider (DP)
 1. DP should have a trusted X.509 certificate with chain of CA certificates.
 1. DP self-registers on PMS portal providing partner id, name, organisation name (same as in certificate), partner type (`Device_Provider`) etc.
 1. DP uploades all certificates.
 1. Any approval from MOSIP? (TODO) 
 
-### FTM Partner (FTMP)
+### FTM Provider (FTMP)
 1. FTMP should have a trusted X.509 certificate with chain of CA certificates.
 1. FTMP self-registers on PMS portal providing partner id, name, organisation name (same as in certificate), partner type (`FTM_Provider`) etc.
 1. FTMP uploades all certificates.
