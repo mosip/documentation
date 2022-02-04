@@ -14,7 +14,6 @@ ID Repository module consists of the following components:
 
 ![](_images/id-repository.png)
 
-*NOTE:* The numbers do not signify sequence of operations or control flow. Arrows indicate the direction of data flow.
 
 ## Identity service
 * Stores, updates, retrieves identity information and also to 
@@ -25,7 +24,7 @@ Identity service uses Biometric SDK (server) to extract templates from provided 
 ![](_images/identity-service.png)
 
 
-Below is the entity relationship diagram illustrated for Identity service.
+Above is the entity relationship diagram illustrated for Identity service.
 *NOTE:* The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
 
 1. [Key Manager](keymanager.md) encrypts/decrypts data.
@@ -47,7 +46,7 @@ VID Service provides functionality to create/update Virtual IDs mapped against a
 ![](_images/VID-service.png)
 
 1. Key Manager encrypts/decrypts data.
-2. Credential request generator issues credentials for new/updated uin data.
+2. Credential request generator issues credentials for new/updated UIN data.
 3  All VID related data is stored in `mosip_idmap` DB.
 4. Partner management service retrieves online verification partners to issue credentials.
 5. Audit logs are logged into Audit Manager.
@@ -62,7 +61,7 @@ VID Service provides functionality to create/update Virtual IDs mapped against a
 
 1. Key Manager encrypts/decrypts data and also used to sign data.
 2. WebSub subscribes to get notifications related to credential status from IDA.
-3. DataShare creates datashare url for sharable attributes.
+3. [DataShare](data-protection.md#Datashare) creates datashare url for sharable attributes.
 4. Identity service retrieves identity data for UIN/VID.
 5. Partner management service retrieves policies related to credential type and also retrieves policy for bio-extraction.
 6. Auth Adapter integrates with KeyCloak for authentication.
