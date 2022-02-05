@@ -77,11 +77,12 @@ The data sent to the Manual Adjudication system is driven by a policy defined in
   "responsetime": "2021-01-19T13:16:22.930Z",
   "returnValue": "1",
   "candidateList": {
+    //The count value should be '0' for no match and '>0' is there are matches, similar to the ABIS response.
     "count": "1",
     "candidates": [
       {
         "referenceId": "10002100741000120210107111325",
-        "analytics": { //This section is optional and can be decided by the System Integrator
+        "analytics": { //This section is optional and can be decided by the System Integrator.
           "primaryOperatorID": "110011",
           "primaryOperatorComments": "<comments provided by operator>",
           "secondaryOperatorID": "110012",
@@ -91,7 +92,7 @@ The data sent to the Manual Adjudication system is driven by a policy defined in
         }
       }
     ],
-    "analytics": { //This section is optional and can be decided by the System Integrator
+    "analytics": { //This section is optional and can be decided by the System Integrator. This is used when there is no match found.
       "key1": "value1",
       "key2": "value2"
     }
