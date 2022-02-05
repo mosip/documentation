@@ -46,7 +46,7 @@ Any Packet irrespective of it has gone through demographic de-duplication or ABI
 # Manual Adjudication
 When biometric duplicates are found in ABIS, MOSIP system sends a request for Manual Adjudication to the Manual Adjudication System via. a queue. The system integrator can build the Manual Adjudication System, which would be listening to the MOSIP-to-ManualAdjudication queue for any Manual Adjudication requests and send a response back in the ManualAdjudication-to-MOSIP system after verifying the data.
 
-The data sent to the Manual Adjudication system is driven by a policy defined in MOSIP.
+The data sent to the Manual Adjudication system is driven by a policy defined in MOSIP and the specification is similar to ABIS identify request.
 
 ## Request sent to Manual Adjudication System
 ```JSON
@@ -77,7 +77,6 @@ The data sent to the Manual Adjudication system is driven by a policy defined in
   "responsetime": "2021-01-19T13:16:22.930Z",
   "returnValue": "1",
   "candidateList": {
-    //The count value should be '0' for no match and '>0' is there are matches, similar to the ABIS response.
     "count": "1",
     "candidates": [
       {
