@@ -34,12 +34,11 @@ This service manages partner policies.
 ## Partner portal
 TBD.
 
-
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
 
 ## Source code 
-[Github repo](https://github.com/mosip/partner-management-services/tree/1.2.0-rc2)
+[Github repo](https://github.com/mosip/partner-management-services/tree/1.2.0-rc2).
 
 
 
