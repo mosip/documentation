@@ -312,7 +312,7 @@ To view the format for inserting data in a particular table, click on the Downlo
  
 *For uploading the packets through the Admin portal, ensure that the packets are available in the machine or the external hard disk connected from where the Admin Portal is being used.*
 
-## KeyManager 
+## Key Manager 
 
 * The admin user can manage the key using this feature.
 

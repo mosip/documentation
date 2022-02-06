@@ -14,7 +14,7 @@ The diagram below illustrates the relationship of this service to other MOSIP se
 
 ![](_images/pms.png)
 
-1. Certificates of partner are uploaded to [Keymanager]() as part of onboarding.
+1. Certificates of partner are uploaded to [Key Manager](keymanager.md) as part of onboarding.
 2. Registration processor fetches ABIS datashare policy from PMS.
 3. PMS sends notification messages to partners via notification service (of Kernel). 
 4. Audit logs are logged into Auditmanager.
