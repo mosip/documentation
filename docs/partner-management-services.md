@@ -21,7 +21,9 @@ Provides various partner services like onboarding partners and providing partner
 7. Certificates of Authentication Partners are send to IDA module as IDA runs independently.  The certs are shared using [Datashare](datashare.md) (which futher uses Websub to share data with IDA).
 
 ## Policy Management Service
-This service manages partner policies. The diagram below illustrates the relationship of this service to other MOSIP services.
+This service manages partner policies. 
+
+The diagram below illustrates the relationship of this service to other MOSIP services.
 
 ![](_images/policymanager.png)
 
@@ -30,19 +32,14 @@ This service manages partner policies. The diagram below illustrates the relatio
 3. Datashare service fetches partner policies and shares data with partners accordingly.
 
 ## Partner portal
-
-## Repository
-
-## Build and deploy
-
-## Configurations
+TBD.
 
 
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
 
 ## Source code 
-[Github repo](https://github.com/mosip/packet-manager/tree/1.2.0-rc2).
+[Github repo](https://github.com/mosip/partner-management-services/tree/1.2.0-rc2)
 
 
 
