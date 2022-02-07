@@ -30,6 +30,7 @@
     * [Packet Manager](packet-manager.md)
     * [Partner Management](partner-management-services.md)
       * [Partner Management Portal](partner-management-portal.md)
+      * [Partner Policies](partner-policies.md)
     * [Pre-registration](pre-registration.md) 
         * [Pre-registration User Guide](pre-registration-user-guide.md)
         * [Pre-registration UI Specifications](pre-registration-ui-specifications.md)
