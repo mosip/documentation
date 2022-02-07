@@ -61,17 +61,17 @@ VID Service provides functionality to create/update Virtual IDs mapped against a
 
 1. Key Manager encrypts/decrypts data and also used to sign data.
 2. WebSub subscribes to get notifications related to credential status from IDA.
-3. [DataShare](data-protection.md#Datashare) creates datashare url for sharable attributes.
+3. [DataShare](datashare.md) creates datashare url for sharable attributes.
 4. Identity service retrieves identity data for UIN/VID.
 5. Partner management service retrieves policies related to credential type and also retrieves policy for bio-extraction.
 6. Auth Adapter integrates with KeyCloak for authentication.
 
 ### Credential types
 Default supported credential types:
-1. `auth`
-1. `qrcode`
-1. `euin`
-1. `reprint`
+1. `auth` : issues credential to auth systems
+1. `qrcode` : issues credential for UIN card download
+1. `euin` : issues credential for printing uin card again
+1. `reprint` : issues credential to third party qrcode systems
 
 ## Credential request generator service
 This service creates request for credential issuance.

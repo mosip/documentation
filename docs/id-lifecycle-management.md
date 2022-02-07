@@ -56,7 +56,7 @@ Registration is the process in which an individual/resident can visit a registra
 ## De-activate/re-activate individual’s ID
 -  De-activate ID means an individual will not be able to authenticate themselves by using the UIN or VID. 
 -  If a country wants to deactivate an individual’s ID for any specific reason, the system deactivates the individual’s ID after certain validations performed in the Registration Processor.
--  Likewise, a country can also re-activate an individual’ ID as need be.
+- Likewise, a country can also re-activate an individual’ ID as need be.
 
 ## Finding a lost ID
 -  Individual to provide their biometric information in the Registration center.

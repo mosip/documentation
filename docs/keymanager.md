@@ -5,7 +5,7 @@ The Key Manager service provides secure storage, provisioning and management of 
 
 This includes keying material such as symmetric keys, asymmetric keys, certificates and algorithm data.  It is a web-based key management solution that helps consolidate, control, manage, monitor, all key generation & maintenance of key life cycle required in MOSIP. 
 
-Keymanager interfaces with key store like Hardware Security Module (HSM) and Database (`mosip_keymgr` DB).
+Key Manager interfaces with key store like Hardware Security Module (HSM) and Database (`mosip_keymgr` DB).
 
 ![](_images/keymanager-hsm-integration.png)
 
@@ -95,8 +95,8 @@ We strongly recommend that you store the encryption key outside Key Manager serv
 
 ## Encryption in registration client 
 *	Reg-client sends request to sync data service for the client configuration data
-*	Sync Data service requests KeyManager service to provide the reg-client specific certificate. Key identifier will be APP_ID - REGISTRATION, REF_ID - CENTER-ID_MACHINE-ID
-*	Keymanager service generate a new key pair, encrypts the private key with REGISTRATION master key and creates a new cerificate using same master. 
+*	Sync Data service requests Key Manager service to provide the reg-client specific certificate. Key identifier will be APP_ID - REGISTRATION, REF_ID - CENTER-ID_MACHINE-ID
+*	Key Manager service generate a new key pair, encrypts the private key with REGISTRATION master key and creates a new cerificate using same master. 
 *	Returns the certificate to sync data service. If key pair already available and is valid, returns the available certificate
 *	Sync data service send the certificate to reg-client
 *	The registration packet will be encrypted using the certificate received from the server after collecting all required data for registration, including adding the digital signatures required to the registration data, and before saving/writing the data on the reg-client hard-disk

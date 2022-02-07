@@ -8,9 +8,6 @@ Unique Identification Number (UIN), as the name suggests, is a unique number ass
 
 The rules that govern generation of a UIN are listed [here](https://github.com/mosip/commons/blob/1.2.0-rc2/kernel/kernel-idgenerator-service/README.md).
 
-* uin configuration properties
-* storage
-
 ### VID
 The VID / Virtual ID is an alias identifier that can be used for authentication transactions. The key characteristic of such an identifier is that it expires. This allows for free disclosure and usage of this identifier in various contexts. It is privacy friendly in a way such that it can be revoked, configured for one time usage and is not linkable. Since these are used for authentication transactions, such identifiers are to be known to the user only or generated with their participation.
 

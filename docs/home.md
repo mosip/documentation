@@ -15,10 +15,11 @@ The key objectives of MOSIP are to:
 * Provide a scalable and accessible solution to cater to a wide range of population (a few thousands to several hundreds of millions)
 
 ## Releases
-The latest release of MOSIP, version 1.1.2 is here! We have migrated from Java 8 to Java 11 as part of this release and also incorporated some software infrastructure changes as part of paring the technical debt. Check out the exciting new services and enhancements in the documentation.
+The latest release of MOSIP, version 1.2.0 LTS is here! Check out the exciting new services and enhancements in the documentation.
 
 ### Current Release 
-Version: 1.1.2<br>Release Date: October 24, 2020<br>[Release notes](Release-Notes-1.1.2.md).
+* Version: 1.2.0 
+* Release Date:
 
 ### Previous Release
 Version: 1.1.1<br>Release Date: September 14, 2020<br> [Release notes](Release-Notes-1.1.1.md).
@@ -27,8 +28,6 @@ To view a summary of all our releases, refer to [releases page](MOSIP-Releases.m
 
 ## Documentation
 The current documentation's source is available as markdown in the 'docs' folder in the [documentation repository](https://github.com/mosip/documentation).
-
-To find out what has changed in the documentation, refer to our [revision history](Revision-History.md). To find details of upcoming improvements planned to the documentation check [here](Documentation-Updates.md). You can also help us improve the documentation by reviewing it, adding to it or by leaving suggestions.
 
 ## MOSIP Resources
 * Source Code: [GitHub Repositories](https://github.com/mosip)
@@ -39,5 +38,3 @@ To find out what has changed in the documentation, refer to our [revision histor
 * Learning videos: [YouTube Channel](https://www.youtube.com/channel/UCKFSVO6BO1QLvBzc4voziDg)
 * Community: [Gitter Channel](https://gitter.im/mosip-community/community)
 
-## Roadmap
-The MOSIP roadmap in the short term is the release of our **Long Term Support Version**. Our medium term focus is to enable reference implementations of identity usage, integrations and interoperability. The long term focus is to offer a set of core components for digital governance. View our [roadmap](roadmap.md) and [call for contribution](Call-for-Contribution.md) to see how you can be a part of the MOSIP journey.
