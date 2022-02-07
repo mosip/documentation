@@ -38,5 +38,3 @@ The current documentation's source is available as markdown in the 'docs' folder
 * Learning videos: [YouTube Channel](https://www.youtube.com/channel/UCKFSVO6BO1QLvBzc4voziDg)
 * Community: [Gitter Channel](https://gitter.im/mosip-community/community)
 
-## Roadmap
-The MOSIP roadmap in the short term is the release of our **Long Term Support Version**. Our medium term focus is to enable reference implementations of identity usage, integrations and interoperability. The long term focus is to offer a set of core components for digital governance. View our [roadmap](roadmap.md) and [call for contribution](Call-for-Contribution.md) to see how you can be a part of the MOSIP journey.
