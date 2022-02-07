@@ -39,7 +39,7 @@ Name | Description | Restrictions | Type
 requestID | ID that is associated with each request sent to ABIS | ABIS should not use this ID in any other context outside the request | UUID
 referenceID | ID of a single registration record. Registration record is maintained in MOSIP. This ID is the mapping between MOSIP and ABIS | None | UUID
 referenceURL | URL to the biometrics data stored in MOSIP. This URL will have read only access | None | HTTPS URL
-biometricType | Type of biometric data sent in the request | FMR/FIR/IIR | String
+biometricType | Type of biometric data sent in the request | FID/FIR/IIR | String
 returnValue | Code for response | [Standard Return Codes](#standard-return-codes) | String
 failureReason | Code for failure reason | [Failure Reasons](#failure-reasons) | String
 
@@ -69,6 +69,7 @@ Code | Reason
 15 | invalid requesttime format
 16 | invalid CBEFF format
 17 | data share URL has expired
+18 | Biometric Quality check failed
 
 # ABIS Operations
 The following operations are supported by MOSIP:
@@ -186,11 +187,11 @@ JeLlBHHTbA-c0YdoLpy7Ya8jXujwzj4gw3nyfwbDrHyY7sLrD7EC3yFLWI0KDO794vmagTOwWyNJhvJi
 
 **The structure of the encrypted data downloaded from referenceURL **
 
-The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format. It will be divided in two Parts after splitting using KEY_SPLITTER.
+The data downloaded would be URL safe base64 encoded. Hence, after decoding the data will be in the below format. It will be divided in two Parts after splitting using #KEY_SPLITTER#.
 
 Encrypted Key Data | KEY_SPLITTER | Encrypted Actual Data
 ----------|--------------|-----------
-Part 1    | KEY_SPLITTER | Part 2
+Part 1    | #KEY_SPLITTER# | Part 2
 
 **Part 1:**
 
