@@ -95,6 +95,32 @@ The `bioSubType` have following values:
 * 3: Two thumbs/irises
 * 4(onwards): Any other sensors
 
+## Live stream
+
+* Before start
+```
+"Content-Type: multipart/x-mixed-replace; " 
+"boundary=--BoundaryString\r\n\r\n";
+```
+
+* On start of stream
+```
+"--BoundaryString\r\n" +
+"Access-Control-Allow-Origin:*\r\n" +
+"Content-Type:image/jpeg\r\n" +
+"Content-Length:" + length + "\r\n\r\n"; // there are always 2 new line character before the actual data
+
+<Each frame of JPEG>
+```
+
+* Second Frame
+"--BoundaryString\r\n" +
+"Access-Control-Allow-Origin:*\r\n" +
+"Content-Type:image/jpeg\r\n" +
+"Content-Length:" + length + "\r\n\r\n"; // there are always 2 new line character before the actual data
+Each Frame of JPEG
+
+
 ## Error codes
 Code | Message
 -----|--------

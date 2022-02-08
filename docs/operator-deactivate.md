@@ -8,7 +8,7 @@ Operators can be deactivated by the admin using the IAM application user for use
 2. The operator (Admin, Supervisor or Officer) is now considered as a rouge individual in the system and should not have access to the MOSIP system
 
 ### What happens when an admin deactivates an officer or supervisor?
-1. If the operator is not logged in to the registration client when the admin deactivates them,
+1. If the operator is not logged in to the Registration Client when the admin deactivates them,
 
  a. Operator tries to log in when their system is online, then, 
      i. The system performs an automatic login sync  

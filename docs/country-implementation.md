@@ -14,7 +14,7 @@
 * ID schema design
 * Applicanttype MVEL
 * Masterdata 
-* Customisation of registration client, pre-registration, resident portal 
+* Customisation of Registration Client, pre-registration, resident portal 
 * Production grade deployment design. Disaster Recovery strategy.
 * MOSIP support 
 * MOSIP versions

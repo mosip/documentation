@@ -93,8 +93,8 @@ We strongly recommend that you store the encryption key outside Key Manager serv
 *	Decrypt the registration packet using the decrypted random key
 *	Returns the decrypted data to REG_PROC
 
-## Encryption in registration client 
-*	Reg-client sends request to sync data service for the client configuration data
+## Encryption in Registration Client 
+*	Registration Client sends request to sync data service for the client configuration data
 *	Sync Data service requests Key Manager service to provide the reg-client specific certificate. Key identifier will be APP_ID - REGISTRATION, REF_ID - CENTER-ID_MACHINE-ID
 *	Key Manager service generate a new key pair, encrypts the private key with REGISTRATION master key and creates a new cerificate using same master. 
 *	Returns the certificate to sync data service. If key pair already available and is valid, returns the available certificate
