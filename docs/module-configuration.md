@@ -3,6 +3,7 @@
 ## Overview
 * Distinction between v2 and v3.
 * Location of property files
+
 ## Application properties
 The file `application-default.properties` contains common properties shared across all modules. Some of the important properties that must be reviewed and modified for a specific deployment are listed below.
 

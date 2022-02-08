@@ -2,11 +2,11 @@
 
 ## Overview
 
-## Single click installer
-* Applicable property files
+## Single click installer (V2)
+* Applicable config property files
 
-## Production grade deployment 
-* Applicable property files
+## Production grade deployment (V3) 
+* Applicable config property files
 
 ## Helm charts
 
