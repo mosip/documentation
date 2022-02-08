@@ -67,7 +67,7 @@ Each process has multiple screens and each screen is rendered with one or more f
 }
 ```
 
-## Field spec spec JSON template
+## Field spec JSON template
 
 ```jsonc
 {
