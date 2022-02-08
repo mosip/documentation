@@ -17,7 +17,7 @@ The registration client menu bar displays the following:
     
 ![](_images/reg-client-menu.png)
 
-## Operational Tasks
+## Operational tasks
 
 ### Synchronize Data
 Synchronize data is the data required to make the registration client functional. Full sync is performed initially during the launch of the registration client for the first time. Post this, the registration client syncs only the changes from sever and this is called as the delta sync. Synchronize data is automated and can be triggered manually. 
@@ -43,34 +43,30 @@ For more details, refer to [operator onboarding](operator_onboarding.md)
 
 ![](_images/reg-client-biometric-page.png)
 
-### Application Upload
-Application upload refers to upload of supervisor reviewed registration packets (approved and rejected). From this page, the operator can export the packets to any location on their machine on clicking **Save to Device** button. 
-      - Upload of registration packet from this page internally performs two operations in sequence:
-          * Sync registration metadata to server
-          * On successful sync of metadata, actual registration packets are uploaded to the server.
+### Application upload
+* Application upload refers to upload of supervisor reviewed registration packets (approved and rejected). From this page, the operator can export the packets to any location on their machine on clicking **Save to Device** button. 
+* Upload of registration packet from this page internally performs two operations in sequence:
+    * Sync registration metadata to server
+    * On successful sync of metadata, actual registration packets are uploaded to the server.
+    
+**Client Status**: This column displays the status of a registration packet based on the above mentioned operation.    
+ 1. APPROVED
+ 2. REJECTED
+ 3. SYNCED
+ 4. EXPORTED
+  
+**Server Status**: 
+
+On success,
+1. PUSHED
+2. PROCESSED 
+3. ACCEPTED
       
-   **Client Status**: This column displays the status of a registration packet based on the above mentioned operation.
-      
-       * APPROVED
-       * REJECTED
-       * SYNCED
-       * EXPORTED
- 
-   **Server Status**:
-      
-     On success,
-     
-       * PUSHED
-       * PROCESSED 
-       * ACCEPTED
-      
-    On failure,
-      
-       * REREGISTER
-       * REJECTED
-       * RESEND
-      
-          
+On failure,
+1. REREGISTER
+2. REJECTED
+3. RESEND
+           
 ### Registration Type
 This column displays the type of registration packet (New packet, Lost packet, Update packet, Correction packet)
       
@@ -79,12 +75,12 @@ This column displays the type of registration packet (New packet, Lost packet, U
 * On successful completion of pending tasks, the former center's details will be deleted from the local Derby DB and a full sync will be initiated to pull in the new center details.
     
 #### What are the pending tasks related to a center?
-    - Packet Approvals/rejections
-    - Packet upload
-    - Server confirmation on receiving a packet
-    - Deletion of packets after receiving a confirmation
-    - Deletion of pre-registration packets 
-    - Deletion of center specific data like the public/policy key
+- Packet Approvals/rejections
+- Packet upload
+- Server confirmation on receiving a packet
+- Deletion of packets after receiving a confirmation
+- Deletion of pre-registration packets 
+- Deletion of center specific data like the public/policy key
     
 *Note*- After completing the above tasks, a *restart* will be prompted to initiate the full sync with new center details.
       
