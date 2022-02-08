@@ -6,7 +6,7 @@ Right to privacy is a fundamental right in many contexts. Privacy protection or 
 ## What is privacy and privacy protection?
 Privacy takes many forms. From an identity system perspective, the confidentiality of identity information and anonymity when using the identity offer privacy. 
 
-MOSIP views the identity system as a custodian of the individual's data. This data has to be protected in order to protect the individual from privacy and security risks. Privacy protection measures include data protection, transaparency, user control, confidentiality, selective disclosure, user anonymity and intrusion protection.
+MOSIP views the identity system as a custodian of the individual's data. This data has to be protected in order to protect the individual from privacy and security risks. Privacy protection measures include [data protection](data-protection.md), transaparency, user control, confidentiality, selective disclosure, user anonymity and intrusion protection.
 
 ## Privacy design elements
 MOSIP addresses privacy design at four levels.
@@ -19,7 +19,7 @@ MOSIP addresses privacy design at four levels.
     * Tokenization
 
 2. Security
-    * Data security
+    * [Data security](data-protection.md)
     * Trusted applications
     * Access control
 
@@ -34,4 +34,4 @@ MOSIP addresses privacy design at four levels.
     * Verifiability
     * Governance
 
-These design principles have resulted in features as well as development practices in MOSIP that enhance privacy protection. A typical example for a practice is how PII (Personally Identifiable Information) is dealt with when creating application or audit logs. An example of a feature is how our data share policies allow selective sharing of information.
+These design principles have resulted in features as well as development practices in MOSIP that enhance privacy protection. A typical example for a practice is how PII (Personally Identifiable Information) is dealt with when creating application or audit logs. An example of a feature is how our [data share policies](partners.md#partner-policies) allow selective sharing of information.
