@@ -20,6 +20,7 @@
     * [Administration](administration.md)
         * [Admin Portal User Guide](admin-portal-user-guide.md)
     * [Automation Testing](automation-testing.md)
+    * [Artifactory](artifactory.md)
     * [Commons](commons.md) 
     * [Datashare](datashare.md)
     * [ID Authentication Services](id-authentication-services.md) 

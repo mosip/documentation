@@ -1,7 +1,7 @@
 # Biometric Devices
 
 ## Overview
-Biometric devices capture individuals biometric data (fingerprint, iris scan, photo) and send it to registration client or authentication client (app). The functional architecture of various entities involved is shown below.
+Biometric devices capture individuals biometric data (fingerprint, iris scan, photo) and send it to a registration client or authentication client (app). The functional architecture of various entities involved is shown below.
 
 ![](_images/sdk.png)
 
