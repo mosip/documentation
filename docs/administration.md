@@ -14,10 +14,6 @@ Admin module provides the following functions:
     1. Retrieve lost RID
     1. Resume RID
 
-TODO: add any functionality
-
-TODO: Diagram
-
 ## Administrative zones
 
 * Administrative Zones are virtual boundaries which a country can define to better manage their resources that are used during registrations. These resources includes Centers, Users, Machines and Devices. These zones can be defined in a hierarchical fashion and a country can allocate resources to such zones based on their requirements.
@@ -45,13 +41,10 @@ TODO: Diagram
 ## Frontend - Admin portal
 Reference implementation of Admin portal is available in ref impl repo.
 
-To know more, refer to the Admin portal user guide.
-
-## Build and Deploy
-Build and deploy instructions available in the above repositories.
+To know more, refer to the [Admin portal user guide](admin-portal-user-guide.md).
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html)
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
 
 ## Source code 
-[Github repo](https://github.com/mosip/admin-services/tree/1.2.0-rc2)
+[Github repo](https://github.com/mosip/admin-services/tree/1.2.0-rc2).
