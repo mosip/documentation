@@ -23,7 +23,7 @@ Admin module provides the following functions:
 ## Activate/deactivate/decommission resources
 
 ### What is deactivation of a resource?
-* Deactivation refers to a temporary shutdown. This means that the resource will not be available for use unless and until it is activated later through the admin portal as required by the country.
+Deactivation refers to a temporary shutdown. This means that the resource will not be available for use unless and until it is activated later through the admin portal as required by the country.
 
 ### What is decommissioning a resource?
 * Decommission refers to a permanent shut down of the resource. This also automatically deactivates it. 
@@ -33,13 +33,13 @@ Admin module provides the following functions:
  *Note- Activation/Deactivation/Decommission of a center in one language will be applied to the same center created in all the languages.*
 
 ## Services
-1. [Admin Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/admin-service)
+1. [Admin Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/admin-service)- 
 2. [Hotlist Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/hotlist-service)
 3. [kernel Masterdata Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/kernel-masterdata-service)
 4. [Kernel Syncdata Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/kernel-syncdata-service)
 
 ## Frontend - Admin portal
-Reference implementation of Admin portal is available in ref impl repo.
+Reference implementation of Admin portal is available in [admin-ui](https://github.com/mosip/admin-ui/tree/master) repo.
 
 To know more, refer to the [Admin portal user guide](admin-portal-user-guide.md).
 
