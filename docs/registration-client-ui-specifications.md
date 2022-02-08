@@ -8,7 +8,7 @@ In the Registration Client, currently, Registration Tasks(process) forms are con
 
 Each process has multiple screens and each screen is rendered with one or more fields. 
 
-## Process/Task spec JSON template
+## Process/ Task spec JSON template
 
 ```jsonc
 {
