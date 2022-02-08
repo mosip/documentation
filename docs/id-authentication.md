@@ -5,13 +5,15 @@ MOSIP offers identity verification services which enables the usage of identity 
 
 ![](_images/ida-process.png)
 
-## Yes/No Authentication
+## Authentication types
+
+### Yes/No Authentication
 MOSIP offers a *yes/no* API which can be used for verification of attributes supplied using along with authentication factors. The API verfies the identifier and the provided demographic attributes and also validates other authentication factors such as the OTP or biometrics and responds with a *yes* or a *no*. A successful verification of the data results in a *yes*. This kind of API can be typically used to support verification of a limited set of demographic data of the person or for a simple presence verification when biometrics are used.
 
-## KYC Authentication
+### KYC Authentication
 MOSIP additionally offers a KYC API which can be used to get an authorized set of attributes of the resident in the response of the API. This API is intended for usage by authorized relying parties to perform KYC requests. The authentication includes an identifier along with authentication factors such as OTP and biometrics. The information returned is governed by a policy. Different relying parties can be provided with different KYC data based on their needs. The policy helps implement selective disclosure as part of the KYC data. The data thus returned is digitally signed by the server and can be used by the relying party with confidence.  
 
-## Multifactor authentication
+### Multifactor authentication
 The authentication APIs support multiple factors. These can be:
 * Biometric: Finger, face, iris
 * Demographic: Name, date of birth, age, gender etc.  
