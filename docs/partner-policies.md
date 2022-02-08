@@ -6,7 +6,7 @@ Partner policies control the data that needs to be shared with a partner. The po
 ### Policy types
 |Policy type|Partners|Description|
 |---|---|---|
-|Auth policy|AP|Specifies [authentication types](id-authentication.md#authentication-types) and [KYC](id-authentication.md#kyc) fields to be shared during authentication.|
+|Auth policy|AP|Specifies [authentication types](id-authentication.md#authentication-types) and [KYC](id-authentication.md#kyc-authentication) fields to be shared during authentication.|
 |Datashare policy|Online Verification Partner, Credential Partner, Manual Adjudiation, ABIS partner|Specifies data to be shared with partners|
 
 Policies are not applicable for Device Provider, FTM Provider and MISP Partner as data is shared is not with them.
