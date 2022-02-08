@@ -20,15 +20,7 @@ The MOSIP platform requires integration with several other systems.  Typically, 
 \* Label:  Reference in `partner_type` table of `mosip_pms` database.
 
 ## Partner policies
-Partner policies control the data that needs to be shared with a partner. The policies reside in [`auth_policy` table](https://github.com/mosip/partner-management-services/blob/1.2.0-rc2/db_scripts/mosip_pms/ddl/pms-auth_policy.sql) of `mosip_pms` DB. 
-
-### Policy types
-|Policy type|Partners|Description|
-|---|---|---|
-|Auth policy|AP|Specifies [authentication types](id-authentication.md#authentication-types) and [KYC](id-authentication.md#kyc) fields to be shared during authentication.|
-|Datashare policy|all partners except AP|Specifies data to be shared with partners|
-
-Refer to the [default policies](https://github.com/mosip/partner-management-services/blob/1.2.0-rc2/db_scripts/mosip_pms/dml/pms-auth_policy.csv) loaded while installing MOSIP.
+Partner policies control the data that needs to be shared with a partner. To learn more refer [here](partner-policies.md)
 
 ## Partner onboarding
 Onboarding of a partner refers to registering a partner in a particular deployment of MOSIP.  Partners need to be onboarded to establish trust.  The onboarding process consists of loading partner details in database, exchanging certificates etc, detailed in the later sections.  Such onboarding is required to be done on any fresh MOSIP installation.  For instance, if you install a sandbox, you would need to follow the onboarding process for each partner.
