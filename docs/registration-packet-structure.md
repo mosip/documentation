@@ -1,7 +1,7 @@
 # Registration Packet Structure
 
 ## Overview
-A registration packet is a zipped, [encrypted](data-protection.md#registration-data-flow) file containing ID information and meta data of an individual.
+A registration packet is a zipped, [encrypted](data-protection.md#registration-data-flow) file containing ID information of an individual. It contains meta information about operator/supervisor, registration center, machine, devices etc.  
 
 ## Zipped packet
 Example zipped file:
@@ -24,14 +24,15 @@ Naming convention: `appid-refid_timestamp.zip`
         ├── 10001100771006920220128223618_optional.json
         └── 10001100771006920220128223618_optional.zip
 ```
-* `_evident.json`:
-* `_evident.zip`:
-* `_id.json`:
-* `_id.zip`:
-* `_optional.json`:
-* `optiona.zip`:
+* `_evidence.json`: It contains meta information(process, encryptedhash, signature, schemaversion etc) for "evidence.zip" file.
+* `_evidence.zip`: It contains applicant demographic/biometric/document fields which are marked as "evidence" or "none" in identity schema.
+* `_id.json`: It contains meta information(process, encryptedhash, signature, schemaversion etc) for "id.zip" file.
+* `_id.zip`: It contains applicant demographic/biometric/document fields which are marked as "pvt" or "kyc" or "none" in identity schema.
+* `_optional.json`: It contains meta information(process, encryptedhash, signature, schemaversion etc) for "optional.zip" file.
+* `optional.zip`: It contains applicant demographic/biometric/document fields which are marked as "optional" or "none" in identity schema.
 
 ## Unzipped components
+Note: this is a sample packet and doesnot mean a particular information will be always available in same packet. The fields are populated based on the fieldCategory set in schema json.
 * Id 
 ```
 id
