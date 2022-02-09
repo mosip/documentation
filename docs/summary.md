@@ -30,6 +30,7 @@
         * [Keys](keys.md)
     * [Module Configuration](module-configuration.md)
     * [Packet Manager](packet-manager.md)
+      * [Registration Packet Structure](registration-packet-structure.md)
     * [Partner Management](partner-management-services.md)
       * [Partner Management Portal](partner-management-portal.md)
       * [Partner Policies](partner-policies.md)
