@@ -1,0 +1,3 @@
+# Registration Client Settings page
+
+## 
