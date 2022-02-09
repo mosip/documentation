@@ -2,7 +2,7 @@
 
 ## Overview
 ID Authentication (IDA) module of MOSIP consists of following services:
-1. [Authenticatione](https://github.com/mosip/id-authentication/tree/release-1.2.0/authentication/authentication-service)
+1. [Authentication](https://github.com/mosip/id-authentication/tree/release-1.2.0/authentication/authentication-service)
 1. [OTP](https://github.com/mosip/id-authentication/tree/release-1.2.0/authentication/authentication-otp-service)
 1. [Internal Authentication](https://github.com/mosip/id-authentication/tree/release-1.2.0/authentication/authentication-internal-service)
 
