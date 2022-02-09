@@ -56,12 +56,12 @@ To know more about the functions present in the Home page of the registration cl
   SDK integration guide
   
 ### Data protection
+* Local Derby db - DB is configured for strict access controls and encrypted with boot password. The boot password encrypted with TPM key and stored in db.conf file under .mosipkeys folder.
+* Registration packets - Packets created during registration process is a zip, signed by TPM key and encrypted with policy key stored in local configured folder.
+* Pre-registation packets - Downloaded pre-registration packets are encrypted with TPM key.
+* All the other json and mvel scripts synced in the registration-client are tamper proof. Everytime registration-client tries to open these files, file hash check must pass, else client will fail to load the hash check failed files.
 
-### Packets
-
-
-
-  
+ 
 ### Configurations
 Based on the ID Schema, the Registration client can be customized as per a country' requirements. For details related to Registration client configurations, refer to [Registration client configuration](registration-client-configuration.md).
 

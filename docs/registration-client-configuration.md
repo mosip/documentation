@@ -44,6 +44,13 @@ mosip.registration.num_of_iris_retries=3
 mosip.registration.num_of_face_retries=3
 ```
 
+Quliaty score threshold based on modality for operator authentication, Possible values 1 to 100
+```
+mosip.fingerprint_authentication.quality_score=30
+mosip.iris_authentication.quality_score=30
+mosip.face_authentication.quality_score=30
+```
+
 ## SDK 
 Registration client can be integrated with more than one bio-sdks. Possible values for "<modality-name>" are "finger", "iris" or "face".
 * SDK implementation class full name
@@ -139,9 +146,16 @@ CRON expression for scheduling the Jobs
 
 ## Document scan
 
-Admin Setting to turn Document Scan On or Off. Possible values are Y/N
+All the identified scanner implementations will be used to list the identified devices. For each device dpi, width and height can be configured.
+if not configured it defaults to 0.
+
+Values in the this config ```mosip.registration.docscanner.id``` map supports regex.
+
 ```
-mosip.registration.document_scanner_enabled=No
+mosip.registration.docscanner.id={ "id1" : "STUB-SCANNER", "id2" : "S600" }
+mosip.registration.docscanner.dpi={ "id1" : 200, "id2" : 300 }
+mosip.registration.docscanner.width={ "id1" : 200, "id2" : 350 }
+mosip.registration.docscanner.height={ "id1" : 200, "id2" : 400 }
 ```
 
 
@@ -184,9 +198,6 @@ Registration packet store location
 ```
   object.store.base.location=packets
 ```
-  
-TODO - check on this
-```mosip.fingerprint_authentication.quality_score=30```
 
 Number of days allowed to start registration-client without upgrade when software upgrade is available.
 ```mosip.registration.softwareUpdateCheck_configured_frequency=60```
@@ -224,4 +235,14 @@ Allowed number of invalid login attempts
 Used to configure the time (in minutes) for locking account after crossing configured invalid login count
 ```mosip.registration.invalid_login_time=2```
   
- 
+  
+## Date formats
+Date format to be displayed on acknowledgement slip, default value - dd/MM/yyyy hh:mm a
+```
+  mosip.registration.application_date_format
+```
+  
+Date format to be displayed on registration client dashboard, default format - dd MMM hh:mm a
+```
+ mosip.registration.dashboard_date_format
+```
