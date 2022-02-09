@@ -12,9 +12,9 @@ S3 compatible object store like AWS S3 or [MinIO](https://min.io/) for storing t
 
 MOSIP services access the object store using standard S3 APIs.
 
-Object Store is installed as part of [default sandbox deployment](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/external/object_store)
+Object Store is installed as part of [default sandbox deployment](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/external/object_store).
 
-For estimate of storage requirements for production deployment refer [Server Hardware Requirements](server-hardware-requirements.md)
+For estimate of storage requirements for production deployment refer [Server Hardware Requirements](server-hardware-requirements.md).
 
 
 
