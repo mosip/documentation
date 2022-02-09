@@ -13,7 +13,7 @@ TBD.
 This is a reference application to demonstration how authentication and KYC can be performed by [Authentication Partners](partners.md#partner-types). Refer to the [repository](https://github.com/mosip/mosip-ref-impl/tree/1.2.0-rc2/authentication-demo-ui) for further details.
 
 ## Configuration
-Refer to [ID Authentication Configuration Guide](https://github.com/mosip/id-authentication/blob/release-1.2.0/docs/configuration.md)
+Refer to [ID Authentication Configuration Guide](https://github.com/mosip/id-authentication/blob/release-1.2.0/docs/configuration.md).
 
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
