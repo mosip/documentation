@@ -16,6 +16,7 @@
     * [Biometric Image Specification](biometric-image-specification.md)
     * [FTM](ftm.md)
 * [Partners](partners.md)
+* [Technology Stack](technology-stack.md)
 * Modules
     * [Administration](administration.md)
         * [Admin Portal User Guide](admin-portal-user-guide.md)
