@@ -139,9 +139,16 @@ CRON expression for scheduling the Jobs
 
 ## Document scan
 
-Admin Setting to turn Document Scan On or Off. Possible values are Y/N
+All the identified scanner implementations will be used to list the identified devices. For each device dpi, width and height can be configured.
+if not configured it defaults to 0.
+
+Values in the this config ```mosip.registration.docscanner.id``` map supports regex.
+
 ```
-mosip.registration.document_scanner_enabled=No
+mosip.registration.docscanner.id={ "id1" : "STUB-SCANNER", "id2" : "S600" }
+mosip.registration.docscanner.dpi={ "id1" : 200, "id2" : 300 }
+mosip.registration.docscanner.width={ "id1" : 200, "id2" : 350 }
+mosip.registration.docscanner.height={ "id1" : 200, "id2" : 400 }
 ```
 
 
