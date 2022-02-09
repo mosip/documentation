@@ -7,6 +7,11 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |Infrastructure|Cloud - Azure/AWS|NA - Cloud tool|Commercial|Yes|Depends on Deployment Arch.|Depends on Deployment Arch.|
 |Development - Language Runtime|Java SE 11|OpenJDK 11|Oracle Binary Code License|No|Yes|NA|
 |Development - Language Runtime|J2EE|JAVA EE 8|GPL|No|Yes|NA|
+|Development - Expression language|mvel2|2.4.7.Final|||||
+|Development - Scheduling|quartz|2.2.1|||||
+|Development - File Server|tus-java-client|0.4.3|||||
+|Development - Internalization|nv-i18n|1.29|||||
+|Development - Cryptography|TPM|2.0|||||
 |Development - UI Application framework|JavaFx|OpenJFX 11|GPL v2 + Classpath|No|Yes|NA|
 |Development - Application Framework|Vert.x|3.9.1|Apache License 2.0|No|Yes|NA|
 |Development - Application Framework|Spring |5|Apache License 2.0|No|Yes|NA|
@@ -31,10 +36,12 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |Development - WebSub|Ballerina Websub|slbeta2|Apache License 2.0|No|Yes|NA|
 |Development - Database|H2 DB|1.4.197||No|Yes|NA
 |Development - Database|PostgreSQL|Server: 10|Postgres License BSD 2-clause "Simplified License"|Yes|No|NA|
+|Development - Database|Derby DB|10.13.1.1|||||
 |Development - Database Modeling tool|PG Data Modeler|0.9.2|Commercial|No|Yes|Nominal|
 |Development - Scanner library|[Morena scanner library](https://www.gnome.eu/)|7|Commercial|
 |Development - Code quality|Sonar|7.2|Open Source License|No|No|NA|
 |Development - UI Designs|Pencil Project|3.0.4|GNU Public License version 2|No|No|NA|
+|Development - TPM Java client|TSS.Java|0.3.0||||
 |Testing tools|Rest-assured|3.0.0|Apache License 2.0|
 |Testing tools|WireMock or Citrus framework|2.16.0 or respectively|Apache License 2.0|No|No|NA|
 |Testing tools|JMeter|5.3.x|Apache License 2.0|No|No|NA|
@@ -55,6 +62,7 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |DevOps tools|Grafana||Apache License 2.0 |
 |DevOps tools|Python|3.x|[PSF License](https://docs.python.org/3/license.html#psf-license-agreement-for-python-release)|
 |Messaging|ActiveMQ||Apache License 2.0 |
+|Messaging|Apache Kafka||Apache License 2.0 |
 |Secure Code Scanning|SonarQube with OWASP plugin will be used|||
 |Web Server/HTTP proxy server|Nginx|NA - Cloud tool||
 |IAM|KeyCloak|||
