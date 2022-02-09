@@ -8,7 +8,7 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |Development - Language Runtime|Java SE 11|OpenJDK 11|Oracle Binary Code License|No|Yes|NA|
 |Development - Language Runtime|J2EE|JAVA EE 8|GPL|No|Yes|NA|
 |Development - UI Application framework|JavaFx|OpenJFX 11|GPL v2 + Classpath|No|Yes|NA|
-|Development - Application Framework|Vert.x|3.5.1|Apache License 2.0|No|Yes|NA|
+|Development - Application Framework|Vert.x|3.9.1|Apache License 2.0|No|Yes|NA|
 |Development - Application Framework|Spring |5|Apache License 2.0|No|Yes|NA|
 |Development - Utilities|Apache commons(60+ to be considered)|Latest version|Apache License 2.0|No|Yes|NA|
 |Development - Data Grid|Apache Ignite|2.4.0|Apache License 2.0|No|Yes|NA|
@@ -37,11 +37,11 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |Development - UI Designs|Pencil Project|3.0.4|GNU Public License version 2|No|No|NA|
 |Testing tools|Rest-assured|3.0.0|Apache License 2.0|
 |Testing tools|WireMock or Citrus framework|2.16.0 or respectively|Apache License 2.0|No|No|NA|
-|Testing tools|JMeter|4.x|Apache License 2.0|No|No|NA|
+|Testing tools|JMeter|5.3.x|Apache License 2.0|No|No|NA|
 |Testing tools|Burp suite Professional +|9.0.3.7|PortSwigger - Burp suite Professional + / V1.7.33|No|No|NA|
 |Testing tools|TestNG|6.11|Apache License 2.0|No|No|NA|
 |DevOps tools|Jira|6.4 and above|Not Open source|
-|Testing tools|[Java profiler](https://www.ej-technologies.com/products/jprofiler/overview.html)|No|No|NA|12.0.3|Open Source License|
+|Testing tools|[Java profiler](https://www.ej-technologies.com/products/jprofiler/overview.html)|12.x|No|NA|12.0.3|Open Source License|
 |DevOps tools|SonarLint|v3.5|GNU GPL|
 |DevOps tools|GitHub|2.7.x|Commercial - Github |
 |DevOps tools|SonarQube|6.7.3 LTS|GNU GPL|
