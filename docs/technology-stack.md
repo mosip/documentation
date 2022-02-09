@@ -53,6 +53,7 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |DevOps tools|Glowroot||Apache License 2.0 |
 |DevOps tools|Prometheus||Apache License 2.0 |
 |DevOps tools|Grafana||Apache License 2.0 |
+|DevOps tools|Python|3.x|[PSF License](https://docs.python.org/3/license.html#psf-license-agreement-for-python-release)|
 |Messaging|ActiveMQ||Apache License 2.0 |
 |Secure Code Scanning|SonarQube with OWASP plugin will be used|||
 |Web Server/HTTP proxy server|Nginx|NA - Cloud tool||
