@@ -11,10 +11,13 @@
 * Procurement of biometric and other external components.
 * Sandbox, staging, development setups
 * Languages
+* HSM
 * ID schema design
+* Virus scanner
 * Applicanttype MVEL
 * Masterdata 
 * Customisation of Registration Client, pre-registration, resident portal 
+* Reference implementations
 * Production grade deployment design. Disaster Recovery strategy.
 * MOSIP support 
 * MOSIP versions
