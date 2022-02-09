@@ -1,5 +1,9 @@
 ## Registration packet structure
-### Zipped packet
+
+## Overview
+A registration packet is a zipped, [encrypted](data-protection.md#registration-data-flow) file containing ID information and meta data of an individual.
+
+## Zipped packet
 A registration packet is an [encrypted](data-protection.md#registration-data-flow), zipped file containing ID information and meta data of an individual.
 
 Example zipped file:
@@ -10,7 +14,7 @@ Naming convention: `appid-refid_timestamp.zip`
 * [appid](identifiers.md#rid-appid)
 * refid: `centerid_machineid`
 
-### Unzipped packet
+## Unzipped packet
 ```
 .
 └── REGISTRATION_CLIENT
@@ -29,7 +33,7 @@ Naming convention: `appid-refid_timestamp.zip`
 * `_optional.json`:
 * `optiona.zip`:
 
-### Unzipped components
+## Unzipped components
 * Id 
 ```
 id
