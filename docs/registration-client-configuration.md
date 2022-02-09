@@ -44,6 +44,13 @@ mosip.registration.num_of_iris_retries=3
 mosip.registration.num_of_face_retries=3
 ```
 
+Quliaty score threshold based on modality for operator authentication, Possible values 1 to 100
+```
+mosip.fingerprint_authentication.quality_score=30
+mosip.iris_authentication.quality_score=30
+mosip.face_authentication.quality_score=30
+```
+
 ## SDK 
 Registration client can be integrated with more than one bio-sdks. Possible values for "<modality-name>" are "finger", "iris" or "face".
 * SDK implementation class full name
@@ -191,9 +198,6 @@ Registration packet store location
 ```
   object.store.base.location=packets
 ```
-  
-TODO - check on this
-```mosip.fingerprint_authentication.quality_score=30```
 
 Number of days allowed to start registration-client without upgrade when software upgrade is available.
 ```mosip.registration.softwareUpdateCheck_configured_frequency=60```
@@ -234,7 +238,11 @@ Used to configure the time (in minutes) for locking account after crossing confi
   
 ## Date formats
 Date format to be displayed on acknowledgement slip, default value - dd/MM/yyyy hh:mm a
-```mosip.registration.application_date_format```
+```
+  mosip.registration.application_date_format
+```
   
 Date format to be displayed on registration client dashboard, default format - dd MMM hh:mm a
-```mosip.registration.dashboard_date_format```
+```
+ mosip.registration.dashboard_date_format
+```
