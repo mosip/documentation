@@ -1,6 +1,8 @@
 ## Registration packet structure
 ### Zipped packet
-A registration packet is an [encrypted](data-protection.md#registration-data-flow), zipped file containing ID information and meta data of an individual. Example zipped file:
+A registration packet is an [encrypted](data-protection.md#registration-data-flow), zipped file containing ID information and meta data of an individual.
+
+Example zipped file:
 
 `10001100771006920220128223618-10001_10077-20220128223618.zip`
 
@@ -58,5 +60,5 @@ optional
 └── packet_operations_hash.txt
 ```
 
-See [this folder](https://github.com/mosip/documentation/tree/1.2.0-rc2/docs/_files/packet-structure) for contents of each of these files.
+See [this folder](https://github.com/mosip/documentation/tree/1.2.0-rc2/docs/_files/packet-structure) for contents of each of the above files.
 
