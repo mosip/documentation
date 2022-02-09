@@ -1,4 +1,4 @@
-## Registration packet structure
+# Registration Packet Structure
 
 ## Overview
 A registration packet is a zipped, [encrypted](data-protection.md#registration-data-flow) file containing ID information and meta data of an individual.
