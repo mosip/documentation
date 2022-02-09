@@ -1,7 +1,7 @@
 openapi: 3.0.1,
 info:
   title: Secure Biometric Interface
-  description: "[Overview](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface)."
+  description: "Refer [SBI Overview](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface).\n\n Note that all API call should be made with **custom verbs** and not POST." 
   license:
     name: Mozilla Public License Version 2.0
     url: https://www.mozilla.org/en-US/MPL/2.0/
@@ -10,8 +10,8 @@ info:
 paths:
   /device:
     post: 
-      summary: Device discovery
-      description: Device discovery is used to identify MOSIP compliant devices in a system.  
+      summary: Device discovery. 
+      description: "Device discovery is used to identify MOSIP compliant devices in a system.\n\nVerb: **MOSIPDISC**."
       requestBody:
         required: true
         content:
@@ -40,7 +40,7 @@ paths:
   /info:
     post: 
       summary: Device info
-      description: The request is used to identify the MOSIP compliant devices and their status by the applications.
+      description: "The request is used to identify the MOSIP compliant devices and their status by the applications.\n\nVerb: **MOSIPINFO**."
       responses:
         '200':
           description: "Array of devices running on a particular port of [SBI Service](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface) instance"
@@ -61,8 +61,8 @@ paths:
                       
   /capture:
     post: 
-      summary: Capture
-      description: This request is used to capture a biometric from MOSIP compliant devices.
+      summary: Auth capture
+      description: "This request is used to capture a biometric from MOSIP **Authentication** devices.\n\nVerb: **CAPTURE**."
       requestBody:
         required: true
         content:
@@ -105,11 +105,10 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/captureBiometrics'  
-
   /stream:
     post: 
       summary: Video stream
-      description: "The device starts a live video stream of biometric images. This API shall be exposd only by devices with purpose as **Registration**."
+      description: "The device starts a live video stream of biometric images. This API shall be exposd only by devices with purpose as **Registration**.\n\nVerb: **STREAM**"
       requestBody:
         required: true
         content:
