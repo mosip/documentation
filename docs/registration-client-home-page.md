@@ -25,7 +25,7 @@ This happens automatically while launching the registration client and is also m
  
    1. **Configuration sync**: Sync of properties which drives in deciding the registration client UI functionality. For example: Invalid login attempts, idle timeout, thresholds, etc.
    1. **Masterdata sync** : As a part of this sync, supporting information like Dynamic fields data, templates, locations, screen authorization, blocklisted words, etc. are pulled in.
-   1. **UserDetails sync**: userID, user roles along with their status is synced. Only the user details belonging to machine mapped center will be synced. 
+   1. **UserDetails sync**: userID, along with their status is synced. Only the user details belonging to machine mapped center will be synced. 
    1. **Certificate sync**: Certificates used to validate the server signatures, device CA certificates, public key (specific to a center and machine, also called as policy key) used to encrypt the registration packet will be synced.
    1. **Packet sync**: 
          * All the approved/rejected Registration IDs(RIDs) will be synced to the server.
