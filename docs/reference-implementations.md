@@ -1,4 +1,7 @@
 # Reference Implementations
 
 ## Overview
-MOSIP provides reference implementations of several modules that may be customized for a specific deployment. The implementations are availale in [mosip-ref-impl repo](https://github.com/mosip/mosip-ref-impl/tree/1.2.0-rc2).
+Reference implementations of modules or components are non production grade implementations that are meant to showcase a reference design or architecture. They can be used as references or starting points for actual implementations.
+
+
+
