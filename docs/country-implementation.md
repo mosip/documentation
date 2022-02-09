@@ -12,6 +12,7 @@
 * Sandbox, staging, development setups.
 * Languages
 * HSM
+* Postgres (external)
 * ID schema design
 * Virus scanner
 * Applicanttype MVEL
