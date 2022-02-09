@@ -26,9 +26,9 @@ A registration packet is an [encrypted](data-protection.md#registration-data-flo
 
 `10001100771006920220128223618-10001_10077-20220128223618.zip`
 
-Naming convention: <br>
-`[appid](identifiers.md#rid-appid)-refid_timestamp.zip` <br>
-refid: `centerid_machineid`
+Naming convention: `appid-refid_timestamp.zip` 
+* [appid](identifiers.md#rid-appid)
+* refid: `centerid_machineid`
 
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
