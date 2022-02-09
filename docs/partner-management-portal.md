@@ -28,8 +28,13 @@ To create policies, policy groups should be defined. Policy groups can be consid
 
 ### Creation of Policy group
 - Login as ‘Partner Admin’ into the portal.
-- After successful login, on the left navigation pane, click on Policy -> Policy Group.
-- The existing policies are listed and new ones can be created by clicking **+
+- After successful login, on the left navigation pane, click on **Policy -> Policy Group**.
+- The existing policy groups are listed on the screen and the new ones can be created by clicking on **+Create Policy Group**.
+
+[image]
+
+
+
 
 
 
