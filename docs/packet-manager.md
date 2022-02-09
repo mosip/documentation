@@ -22,13 +22,13 @@ The relationship of Packet Manager with other services is explained here. _NOTE:
 6. [Registration Client](registration-client.md) uses Packet Manager libray to create packet.
 
 ## Packet structure
-A registration packet is an [encrypted](data-protection.md#registration-data-flow) zipped file containing ID information and meta data of an individual.  The zipped file follows the following naming convention:
-```
-10001100771006920220128223618-10001_10077-20220128223618.zip
-```
-Where: <br> 
-[appid](identifiers.md#rid-appid)-refid_timestamp.zip <br>
-refid = centerid_machineid
+A registration packet is an [encrypted](data-protection.md#registration-data-flow), zipped file containing ID information and meta data of an individual. Example zipped file:
+
+`10001100771006920220128223618-10001_10077-20220128223618.zip`
+
+Naming convention: <br>
+`[appid](identifiers.md#rid-appid)-refid_timestamp.zip` <br>
+refid: `centerid_machineid`
 
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
