@@ -231,4 +231,10 @@ Allowed number of invalid login attempts
 Used to configure the time (in minutes) for locking account after crossing configured invalid login count
 ```mosip.registration.invalid_login_time=2```
   
- 
+  
+## Date formats
+Date format to be displayed on acknowledgement slip, default value - dd/MM/yyyy hh:mm a
+```mosip.registration.application_date_format```
+  
+Date format to be displayed on registration client dashboard, default format - dd MMM hh:mm a
+```mosip.registration.dashboard_date_format```
