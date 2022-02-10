@@ -66,7 +66,7 @@ The compute and storage estimates for following components are not included:
 |Postgres| Only storage estimated above.|
 |Object store| Only storage estimated above. |
 |Bio SDK||
-|HSM||
+|[HSM](hsm.md)||
 |[ABIS](abis.md)||
 |Antvirus (AV)|Default scanner (ClamAV) in included, however, if you integrate your AV, the same needs to be estimated.|
 |Load balancers||
