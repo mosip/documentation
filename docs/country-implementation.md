@@ -29,8 +29,9 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 1. Compute hardware
 
 ## Country specific data
-1. Masterdata 
-1. Applicanttype MVEL
+1. [Masterdata](masterdata-guide.md)
+1. [Applicanttype MVEL](https://github.com/mosip/mosip-config/blob/develop3-v3/applicanttype.mvel)
+
 
 ## Customisation
 1. Customisation of components as decided in [step 5](key-decisions) above.
