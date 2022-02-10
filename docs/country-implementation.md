@@ -8,7 +8,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 2. Rate of enrollment desired.
 3. Rate of authentication expected.
 4. [Languages](module-configuration.md#languages).
-5. Customsiation and procurement of components given [here](reference-implementations.md).
+5. Customsiation and procurement of components as given [here](reference-implementations.md).
 5. [ID schema](id-schema.md) (in commpliance with legal framework).
 6. Hardware requirements estimate. 
     * [Server side](server-hardware-requirements.md)
