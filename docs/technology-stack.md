@@ -48,7 +48,7 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |Testing tools|Burp suite Professional +|9.0.3.7|PortSwigger - Burp suite Professional + / V1.7.33|No|No|NA|
 |Testing tools|TestNG|6.11|Apache License 2.0|No|No|NA|
 |Testing tools|awaitility|4.0.3|Apache License 2.0|No|No|NA|
-|Testing tools|testfx|4.0.16-alpha|Apache License 2.0|No|No|NA|
+|Testing tools|testfx|4.0.16-alpha|EUPL1.1|No|No|NA|
 |Testing tools|extentreports|3.1.5|Apache License 2.0|No|No|NA|
 |Testing tools|selenium-java|3.141.59|Apache License 2.0|No|No|NA|
 |DevOps tools|Jira|6.4 and above|Not Open source|
