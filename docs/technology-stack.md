@@ -42,11 +42,15 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |Development - Code quality|Sonar|7.2|Open Source License|No|No|NA|
 |Development - UI Designs|Pencil Project|3.0.4|GNU Public License version 2|No|No|NA|
 |Development - TPM Java client|TSS.Java|0.3.0||||
-|Testing tools|Rest-assured|3.0.0|Apache License 2.0|
+|Testing tools|Rest-assured|3.0.0 and above|Apache License 2.0|
 |Testing tools|WireMock or Citrus framework|2.16.0 or respectively|Apache License 2.0|No|No|NA|
 |Testing tools|JMeter|5.3.x|Apache License 2.0|No|No|NA|
 |Testing tools|Burp suite Professional +|9.0.3.7|PortSwigger - Burp suite Professional + / V1.7.33|No|No|NA|
 |Testing tools|TestNG|6.11|Apache License 2.0|No|No|NA|
+|Testing tools|awaitility|4.0.3|Apache License 2.0|No|No|NA|
+|Testing tools|testfx|4.0.16-alpha|Apache License 2.0|No|No|NA|
+|Testing tools|extentreports|3.1.5|Apache License 2.0|No|No|NA|
+|Testing tools|selenium-java|3.141.59|Apache License 2.0|No|No|NA|
 |DevOps tools|Jira|6.4 and above|Not Open source|
 |Testing tools|[Java profiler](https://www.ej-technologies.com/products/jprofiler/overview.html)|12.x|No|NA|12.0.3|Open Source License|
 |DevOps tools|SonarLint|v3.5|GNU GPL|
