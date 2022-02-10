@@ -16,7 +16,6 @@
     * [Biometric Image Specification](biometric-image-specification.md)
     * [FTM](ftm.md)
 * [Partners](partners.md)
-* [Technology Stack](technology-stack.md)
 * Modules
     * [Administration](administration.md)
         * [Admin Portal User Guide](admin-portal-user-guide.md)
@@ -50,11 +49,12 @@
     * [Resident Services](resident-services.md)
     * [Storage](storage.md)
     * [WebSub](websub.md)
+* [Technology Stack](technology-stack.md)
 * Deployment
     * [Sandbox Deployment](sandbox-deployment.md)
     * [Server Hardware Requirements](server-hardware-requirements.md)
-    * [Country Implementation](country-implementation.md)
     * [Masterdata Guide](masterdata-guide.md)
+* [Country Implementation](country-implementation.md)
  * [API](api.md)
  * Community
     * [Contributions](contributions.md)
