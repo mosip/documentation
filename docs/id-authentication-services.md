@@ -2,23 +2,29 @@
 
 ## Overview
 ID Authentication (IDA) module of MOSIP consists of following services:
-1. [Authentication](https://github.com/mosip/id-authentication/tree/release-1.2.0/authentication/authentication-service)
-1. [OTP](https://github.com/mosip/id-authentication/tree/release-1.2.0/authentication/authentication-otp-service)
-1. [Internal Authentication](https://github.com/mosip/id-authentication/tree/release-1.2.0/authentication/authentication-internal-service)
+1. Authentication
+1. OTP
+1. Internal Authentication
 
-## Authentication flow
-
-Authentication service is used by Authentication/E-KYC Partners to,
+## Authentication 
+Authentication service is used by Authentication/E-KYC Partners to
 * authenticate an individual's UIN/VID using one ore more authentication types.
 * request e-KYC for an individul's UIN/VID using one ore more authentication types.
 
 ![](_images/authentication-flow.png)
 
-## OTP Request flow
-
+## OTP Request
 OTP Request is used by Authentication/e-KYC Partners to generate OTP for an individual's UIN/VID. The generated OTP is stored in IDA DB for validation during OTP Authentication.
 
 ![](_images/otp-request-flow.png)
+
+## Internal Authentication
+* [ID-Authentication](id-authetication.md) uses credential data of the individuals for performing authentication. 
+* This credential is requested by [ID-Repository](id-repository.md) upon any UIN insertion/update or VID creation. 
+* The credential is created by Credential Service uploaded to [Datashare](datashare.md)) service and the Datashare URL sent to ID-Authentication using [WebSub](websub.md) message. 
+* Websub invokes the credential-issuance callback in [ID-Authentication](id-authentication.md) where the credential data is downloaded from Datashare and then stored into IDA DB.
+
+![](_images/ida-credential-flow.png)
 
 ## Key generation 
 TBD.
