@@ -63,6 +63,8 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |DevOps tools|Python|3.x|[PSF License](https://docs.python.org/3/license.html#psf-license-agreement-for-python-release)|
 |Messaging|ActiveMQ||Apache License 2.0 |
 |Messaging|Apache Kafka||Apache License 2.0 |
+|Caching|Hazelcast||Apache License 2.0 |
+|Object Store|Hazelcast||GNU AGPL v3 |
 |Secure Code Scanning|SonarQube with OWASP plugin will be used|||
 |Web Server/HTTP proxy server|Nginx|NA - Cloud tool||
 |IAM|KeyCloak|||
