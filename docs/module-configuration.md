@@ -1,14 +1,15 @@
 # Module Configuration
 
 ## Overview
-* Distinction between v2 and v3.
-* Location of property files
+Properties that are shared across all modules are written in file [`application-default.properties`](https://github.com/mosip/mosip-config/blob/release-1.2.0/application-default.properties). 
 
-## Properties
+Module specific properties are respective property files in [mosip-config](https://github.com/mosip/mosip-config/blob/release-1.2.0)
 
-## Application properties
-The file `application-default.properties` contains common properties shared across all modules. Some of the important properties that must be reviewed and modified for a specific deployment are listed below.
+## Config server
+Config server is a [Spring Cloud Config Server](https://cloud.spring.io/spring-cloud-config/multi/multi__spring_cloud_config_server.html) that serves above properties to modules during run-time. The property files are downloaded when an application starts. The config server is installed as part of [sandbox installation](sandbox-deployment.md).
 
+---
+Some of the important properties that must be reviewed and modified for a specific deployment are listed below.
 ## Database 
 
 ## HSM
@@ -22,8 +23,5 @@ mosip.mandatory-languages=eng
 mosip.optional-languages=fra
 ```
 
-## Camel 
-
-## Config server
 
 
