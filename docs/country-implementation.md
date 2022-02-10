@@ -1,7 +1,7 @@
 # Country Implementation
 
 ## Overview
-This is a guide to implement MOSIP in a country. The steps here are recommendations and it is advised that a System Integrator (SI) and studies them well and work on an appropriate implementation strategy.  The items are in "near-chronological order" and may differ based on worked out strategy. 
+This is a guide to implement MOSIP in a country. It is advised that Government and System Integrators (SI) study the recommended steps to work on an appropriate implementation strategy. The items are in "near-chronological order" and may differ based on the worked out strategy. 
 
 ## Key decisions
 1. Choice of deployment of PreReg.
