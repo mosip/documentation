@@ -26,6 +26,7 @@
     * [Datashare](datashare.md)
     * [ID Authentication Services](id-authentication-services.md) 
     * [ID Repository](id-repository.md)
+    * [Keycloak](keycloak.md)
     * [Key Manager](keymanager.md)
         * [Keys](keys.md)
     * [Module Configuration](module-configuration.md)
