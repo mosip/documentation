@@ -1,7 +1,7 @@
 # Country Implementation
 
 ## Overview
-This is a guide to implement MOSIP in a country. It is advised that Government and System Integrators (SI) study the recommended steps to work on an appropriate implementation strategy. The items are in "near-chronological order" and may differ based on the worked out strategy. 
+This is a guide to implement MOSIP in a country. It is advised that Government and System Integrators (SI) study the recommended steps to work out an appropriate implementation strategy. The items are in "near-chronological order" and may differ for an implementation.
 
 ## Key decisions
 1. Choice of deployment of [Pre-registration](id-lifecycle-management.md#pre-registration).
