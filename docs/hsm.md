@@ -1,7 +1,7 @@
 # Hardware Security Module (HSM)
 
 ## Overview
-HSM stands for Hardware Security Module and is an incredibly secure physical device specifically designed and used for crypto processing and strong authentication. It encrypts, decrypts, creates, stores and manages digital keys, and is used for signing and authentication.
+Hardware Security Module (HSM) is an highly secure physical device specifically designed and used for crypto processing and strong authentication. It encrypts, decrypts, creates, stores and manages digital keys, and is used for signing and authentication.
 
 * Interface - PKCS11 and JCE
 To simulate HSM, default sandbox installation uses [SoftHSM](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/external/hsm/softhsm). SoftHSM supports PKCS11, but not JCE.
