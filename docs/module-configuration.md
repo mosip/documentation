@@ -1,4 +1,4 @@
-# Module Configurations
+# Module Configuration
 
 ## Overview
 * Distinction between v2 and v3.
