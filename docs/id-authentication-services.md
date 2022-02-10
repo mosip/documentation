@@ -1,24 +1,29 @@
 # ID Authentication Services
 
 ## Overview
-ID Authentication (IDA) module of MOSIP consists of following services:
+ID Authentication (IDA) module of MOSIP consists of the following services:
 1. Authentication
 1. OTP
-1. Internal Authentication
+1. Internal Services
 
-## Authentication 
-Authentication service is used by Authentication/E-KYC Partners to
-* authenticate an individual's UIN/VID using one ore more authentication types.
-* request e-KYC for an individul's UIN/VID using one ore more authentication types.
+## Authentication services
+The services mentioned below are used by Authentication/e-KYC Partners.
+* Authentication service- used to authenticate an individual's UIN/VID using one ore more authentication types.
+* KYC Authentication service- used to request e-KYC for an individul's UIN/VID using one ore more authentication types.
 
 ![](_images/authentication-flow.png)
 
-## OTP Request
-OTP Request is used by Authentication/e-KYC Partners to generate OTP for an individual's UIN/VID. The generated OTP is stored in IDA DB for validation during OTP Authentication.
+## OTP Request service
+OTP Request service is used by Authentication/e-KYC Partners to generate OTP for an individual's UIN/VID. The generated OTP is stored in IDA DB for validation during OTP Authentication.
 
 ![](_images/otp-request-flow.png)
 
-## Internal Authentication
+## Internal Services
+1. Internal Authentication Service - The authentication service used by internal MOSIP modules such as Resident Service, Registration Processor and Registration Client to authenticate individuals.
+2. Internal OTP Service - used by Resident Service to generate OTP for an Individual for performing OTP Authentication.
+3. Authentication Transaction History Service - used by Resident Service to retrieve paginated list of authentication and OTP Request transactions for an individual. 
+
+### Credential issuance callback
 * [ID Authentication](id-authentication.md) uses credential data of the individuals for performing authentication. 
 * This credential is requested by [ID Repository](id-repository.md) upon any UIN insertion/update or VID creation. 
 * The credential is created by Credential Service uploaded to [Datashare](datashare.md) service and the Datashare URL sent to ID-Authentication using [WebSub](websub.md) message. 
@@ -27,7 +32,12 @@ OTP Request is used by Authentication/e-KYC Partners to generate OTP for an indi
 ![](_images/ida-credential-flow.png)
 
 ## Key generation 
-TBD.
+
+ID Authentication needs the below keys to be generated during the deployment for usage in Authentication Service.
+
+1. `IDA IDENTITY_CACHE` symmetric key to encrypt and decrypt the Zero-knowledge 10K random keys
+2. `IDA ROOT`, `IDA module` master key, `IDA-SIGN` master key
+3.  Base keys `CRED_SERVICE`, `IDA-FIR`, `INTERNAL`, `PARTNER`
 
 ## Authentication client demo app
 This is a reference application to demonstrate how authentication and KYC can be performed by [Authentication Partners](partners.md#partner-types). 
