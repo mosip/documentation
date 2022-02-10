@@ -67,11 +67,15 @@ VID Service provides functionality to create/update Virtual IDs mapped against a
 6. Auth Adapter integrates with KeyCloak for authentication.
 
 ### Credential types
-Default supported credential types:
-1. `auth` : issues credential to auth systems
-1. `qrcode` : issues credential for UIN card download
-1. `euin` : issues credential for printing uin card again
-1. `reprint` : issues credential to third party qrcode systems
+
+Credential types represents the credential issuance policy to each partner. It identifies the credential data that needs to be sent back to partners along with the shareable properties.
+
+Default supported credential types are:
+1. `auth`: It is used to issue credential data to authentication partners using auth policy.
+2. `qrcode`: qrcode type is used for qrcode partners to issue qrcode related credential data.
+3. `euin`: It is used to issue credential data to partners who wish to download euin card using euin policy.
+4. `reprint`: Reprint auth type is used for issuing credential information to reprint partners.
+5. `vercred`: To issue verifiable credentials to partners, vercred credential type is used.
 
 ## Credential request generator service
 This service creates request for credential issuance.
