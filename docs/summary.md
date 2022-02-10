@@ -23,6 +23,7 @@
     * [Artifactory](artifactory.md)
     * [Commons](commons.md) 
     * [Datashare](datashare.md)
+    * [Hadware Seucrity Module (HSM)](hsm.md)
     * [ID Authentication Services](id-authentication-services.md) 
     * [ID Repository](id-repository.md)
     * [Keycloak](keycloak.md)
