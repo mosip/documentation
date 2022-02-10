@@ -11,8 +11,10 @@ The file `application-default.properties` contains common properties shared acro
 
 ## Database 
 
+## HSM
+Refer [HSM configuration](hsm.md#configuration).
  
-### Languages
+## Languages
 Langauges for the entire system are configured here:
 ```
 mosip.mandatory-languages=eng
