@@ -32,18 +32,18 @@ _Note: The numbers do not signify sequence of operations or the control flow._
 9. Creating packets is done through [packet manager](packet-manager.md) in resident services.
 
 ## Services
-For detailed description of Resident Services, code and design, refer to resident services repo
+For detailed description of Resident Services, code and design, refer to resident services repo.
 
 ## Build and deploy
-For build and deploy instructions, refer to [resident services repo](https://github.com/mosip/resident-services/tree/release-1.2.0)
+For build and deploy instructions, refer to [resident services repo](https://github.com/mosip/resident-services/tree/release-1.2.0).
 
 ## Specifications
 To know more about the resident service portal specifications, read 
 A prototype UI app illustrating the functionality of the portal may be made available by MOSIP for reference. 
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html)
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
 
 ## Source code 
-[Github repo](https://github.com/mosip/resident-services/tree/release-1.2.0)
+[Github repo](https://github.com/mosip/resident-services/tree/release-1.2.0).
 
