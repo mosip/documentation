@@ -19,10 +19,10 @@ OTP Request is used by Authentication/e-KYC Partners to generate OTP for an indi
 ![](_images/otp-request-flow.png)
 
 ## Internal Authentication
-* [ID-Authentication](id-authentication.md) uses credential data of the individuals for performing authentication. 
-* This credential is requested by [ID-Repository](id-repository.md) upon any UIN insertion/update or VID creation. 
+* [ID Authentication](id-authentication.md) uses credential data of the individuals for performing authentication. 
+* This credential is requested by [ID Repository](id-repository.md) upon any UIN insertion/update or VID creation. 
 * The credential is created by Credential Service uploaded to [Datashare](datashare.md) service and the Datashare URL sent to ID-Authentication using [WebSub](websub.md) message. 
-* WebSub invokes the credential-issuance callback in [ID-Authentication](id-authentication.md) where the credential data is downloaded from Datashare and then stored into IDA DB.
+* WebSub invokes the credential-issuance callback in [ID Authentication](id-authentication.md) where the credential data is downloaded from Datashare and then stored into IDA DB.
 
 ![](_images/ida-credential-flow.png)
 
