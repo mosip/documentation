@@ -15,10 +15,9 @@ The key services provided are:
 Every resident services API call authenticates via an OTP except for the Registration ID(RID) status
 {% endhint %}
 
-## Resident services entity diagram
-
 The relationship of Resident services with other services is listed below. 
-*Note*- The numbers do not signify sequence of operations or the control flow.
+
+_Note: The numbers do not signify sequence of operations or the control flow._
 
 ![](_images/resident-services1.png)
 
@@ -36,7 +35,7 @@ The relationship of Resident services with other services is listed below.
 For detailed description of Resident Services, code and design, refer to resident services repo
 
 ## Build and deploy
-For build and deploy instructions, refer to resident services repo
+For build and deploy instructions, refer to [resident services repo](https://github.com/mosip/resident-services/tree/release-1.2.0)
 
 ## Specifications
 To know more about the resident service portal specifications, read 
@@ -46,5 +45,5 @@ A prototype UI app illustrating the functionality of the portal may be made avai
 Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html)
 
 ## Source code 
-[Github repo](https://github.com/mosip/resident-services/tree/1.2.0-rc2)
+[Github repo](https://github.com/mosip/resident-services/tree/release-1.2.0)
 
