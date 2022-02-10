@@ -7,7 +7,6 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |Operating System|Ubuntu Server|20.04|Free|No|No|NA|
 |Infrastructure|Cloud - Azure/AWS|NA - Cloud tool|Commercial|Yes|Depends on Deployment Arch.|Depends on Deployment Arch.|
 |Development - Language Runtime|Java SE 11|OpenJDK 11|Oracle Binary Code License|No|Yes|NA|
-|Development - Language Runtime|J2EE|JAVA EE 8|GPL|No|Yes|NA|
 |Development - Expression language|mvel2|2.4.7.Final|||||
 |Development - Scheduling|quartz|2.2.1|||||
 |Development - File Server|tus-java-client|0.4.3|||||
@@ -24,11 +23,11 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |Development - JSON marshal/unmarshal|Jackson |2.9.5 |Apache License  2.0|No|Yes|NA|
 |Development - Device Driver|RXTX |RXTX-2-2-20081207|LGPL v 2.1|No|Yes|NA|
 |Development - Unit Testing |Junit|5.x and above|Common Public License - v 1.0|No|No|NA|
+|Development - Unit Testing |Junit|4.x and above|Common Public License - v 1.0|No|No|NA|
 |Development - Log|logback|1.2.3|GNU Lesser GPL Version 2.1|No|Yes|NA|
 |Development - Templating|velocity|1.7|Apache License  2.0|No|Yes|NA|
 |Development - Tools|Open street view|NA - Cloud tool|Open Database License (ODbL)|No|Yes|NA|
 |Development - IDE|Eclipse Oxygen|4.7.3|Eclipse Public License Version 2.0|No|No|NA|
-|Development - Webapp|Angular|7+|MIT License|No|Yes|NA
 |Development - Unit Testing |Karma|2.0.x|MIT License|No|No|NA|
 |Development - Unit Testing |Jasmine|2.6.1|MIT License|No|No|NA|
 |Development - API Documentation |Swagger|3.13.2 |Apache License 2.0|No|No|NA|
