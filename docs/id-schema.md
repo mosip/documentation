@@ -51,3 +51,4 @@ If any changes are made to the default ID Schema, make sure the following depend
 5. [Applicanttype MVEL](https://github.com/mosip/mosip-config/blob/develop3-v3/applicanttype.mvel)
 
 ## Versions of ID Schema
+ID Schema is identified based on its version in MOSIP system.  On publish of ID Schema, schema is versioned.  Every ID Object stores the ID Schema version. This version is validated during ID-object validation.
