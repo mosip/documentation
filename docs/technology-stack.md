@@ -4,6 +4,7 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |Domain|Tools/Technologies|Version|Licence Type|Commercial|Production|Cost
 |---|---|---|---|---|---|---|
 |Operating System|CentOS|7.7|MIT License|Yes|Yes|NA - Part of Azure|
+|Operating System|Ubuntu Server|20.04|Free|No|No|NA|
 |Infrastructure|Cloud - Azure/AWS|NA - Cloud tool|Commercial|Yes|Depends on Deployment Arch.|Depends on Deployment Arch.|
 |Development - Language Runtime|Java SE 11|OpenJDK 11|Oracle Binary Code License|No|Yes|NA|
 |Development - Language Runtime|J2EE|JAVA EE 8|GPL|No|Yes|NA|
@@ -24,7 +25,7 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |Development - Device Driver|RXTX |RXTX-2-2-20081207|LGPL v 2.1|No|Yes|NA|
 |Development - Unit Testing |Junit|5.x and above|Common Public License - v 1.0|No|No|NA|
 |Development - Log|logback|1.2.3|GNU Lesser GPL Version 2.1|No|Yes|NA|
-|Development - Templating|velocity|2|Apache License  2.0|No|Yes|NA|
+|Development - Templating|velocity|1.7|Apache License  2.0|No|Yes|NA|
 |Development - Tools|Open street view|NA - Cloud tool|Open Database License (ODbL)|No|Yes|NA|
 |Development - IDE|Eclipse Oxygen|4.7.3|Eclipse Public License Version 2.0|No|No|NA|
 |Development - Webapp|Angular|4+|MIT License|No|Yes|NA
