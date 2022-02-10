@@ -8,7 +8,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 2. Rate of enrollment desired.
 3. Rate of authentication expected.
 4. [Languages](module-configuration.md#languages).
-5. Customsiation and procurement of components given [here](reference-implementations.md).
+5. Customsiation and procurement of components as given [here](reference-implementations.md).
 5. [ID schema](id-schema.md) (in commpliance with legal framework).
 6. Hardware requirements estimate. 
     * [Server side](server-hardware-requirements.md)
@@ -18,6 +18,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 9. MOSIP versions
 10. MOSIP support (scope)
 11. Disaster recovery strategy
+12. Phased approach for rollout.
 
 ## Procurement
 1. Engagement with an SI. Terms and conditions.
@@ -28,8 +29,9 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 1. Compute hardware
 
 ## Country specific data
-1. Masterdata 
-1. Applicanttype MVEL
+1. [Masterdata](masterdata-guide.md)
+1. [Applicanttype MVEL](https://github.com/mosip/mosip-config/blob/develop3-v3/applicanttype.mvel)
+
 
 ## Customisation
 1. Customisation of components as decided in [step 5](key-decisions) above.
