@@ -50,7 +50,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 1. Onboarding of trusted partners
 1. Print partner
 
-## Roll out
+## Rollout
 1. Set up of registration centers
 1. Onboarding of officers and supervisors
 1. Training
