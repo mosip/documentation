@@ -21,7 +21,7 @@ _Note: The numbers do not signify sequence of operations or the control flow._
 
 ![](_images/resident-services.png)
 
-1. Resident Services invokes [ID Authentication](id-authentication-services.md) services to authenticate users.
+1. Resident Services invokes [ID Authentication Services](id-authentication-services.md)  to authenticate users.
 2. It invokes the Masterdata services to get language templates and machine details.
 3. To create perpetual and temporary VID and to revoke VID, resident services calls ID Repository.
 4. To sync packets and upload packets, resident services connects to [registration processor](registration-processor.md).
