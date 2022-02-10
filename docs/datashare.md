@@ -9,9 +9,7 @@ Sharing of data is controlled by [Datashare policy](partner-policies.md#datashar
 
 Data is encrypted before sharing with partners. Learn more about [datashare encryption](data-protection.md#datashare). 
 
-## Datashare entity relatioship diagram
-
-The relationship of Datashare Service with other services is explained here. NOTE: The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
+The relationship of Datashare Service with other services is explained here. _NOTE: The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow._
 
 ![](_images/datashare.png)
 
