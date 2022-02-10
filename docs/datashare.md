@@ -20,11 +20,11 @@ The relationship of Datashare Service with other services is explained here. NOT
 3. Verification Stage creates datashare for verification.
 4. Datashare Service calls Policy Manager Service to get policy for creating share.
 5. Datashare Service calls Keymanager Service to encrypt data as per policy.
-6. Stores datashare inside object store.
+6. Stores datashare inside [object store](storage.md#object-store).
 7. Retrieves datashare from object store when datashare url is called.
-8. External systems like Abis, Print System, Adjudication system etc.calls Datashare Service to get the datashare.
-9. Print Service creates uin pdf & uploads to datashare through Credential.
-10. Partner Manager Service creates credential for ca certificates to be used by Id Authentication.
+8. External systems like [Abis](abis.md), Print System, Adjudication system etc. calls Datashare Service to get the datashare.
+9. Print Service creates uin pdf and uploads to datashare through Credential.
+10. [Partner Manager Service](partner-manager-services.md) creates credential for CA certificates to be used by [ID Authentication](id-authentication.md).
 11. Printing Stage creates credential for Printing systems and sends the data through datashare.
 12. Idrepo Service sends data to ID Authentication system through Credential.
 
