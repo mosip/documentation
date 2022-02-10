@@ -19,7 +19,7 @@ Refer [Keys](keys.md) for all references of the type 'Kx' and 'KPx'.
 |Key|Location|Issuer|Example|
 |---|---|---|---|
 |Root|[HSM](hsm.md)|Self signed|[K1](keys.md)|
-|Module|HSM|Root|K7|
+|Module|[HSM](hsm.md)|Root|K7|
 |Encryption (Base)|Database|Module|K7.5|
 
 ## Chain of trust
