@@ -5,7 +5,7 @@ The Key Manager service provides secure storage, provisioning and management of 
 
 This includes keying material such as symmetric keys, asymmetric keys, certificates and algorithm data.  It is a web-based key management solution that helps consolidate, control, manage, monitor, all key generation & maintenance of key life cycle required in MOSIP. 
 
-Key Manager interfaces with key store like Hardware Security Module (HSM) and Database (`mosip_keymgr` DB).
+Key Manager interfaces with key store like [Hardware Security Module (HSM)](hsm.md) and Database (`mosip_keymgr` DB).
 
 ![](_images/keymanager-hsm-integration.png)
 
@@ -18,7 +18,7 @@ Refer [Keys](keys.md) for all references of the type 'Kx' and 'KPx'.
 ## Key hierarcy
 |Key|Location|Issuer|Example|
 |---|---|---|---|
-|Root|HSM|Self signed|[K1](keys.md)|
+|Root|[HSM](hsm.md)|Self signed|[K1](keys.md)|
 |Module|HSM|Root|K7|
 |Encryption (Base)|Database|Module|K7.5|
 
@@ -49,7 +49,7 @@ Key Manager helps you generate new key pairs and deploy them to endpoint servers
 
 ![](_images/keymanager-hsm-keygenerator.png)
 
-The job generates option under ``` key-generator job ``` allows you to generate all the configured ```APP_IDs``` master keys in HSM. It associate only module keys.
+The job generates option under ``` key-generator job ``` allows you to generate all the configured ```APP_IDs``` master keys in [HSM](hsm.md). It associate only module keys.
 
 Alternatively, you can also generate key using Rest API call ```/keymanager/generateMasterKey``` and simultaneously deploy them to various user accounts. This can be done with help of ```KEY_MAKER``` wherein it is not required generating key with generator job.
 
