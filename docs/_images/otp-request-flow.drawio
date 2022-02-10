@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-10T11:28:27.855Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36" etag="z5SEnVr-cqqMvlxIgp6J" version="16.5.5" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-10T11:28:39.604Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.82 Safari/537.36" etag="k9IcK_Yk7Qq7o7UnXKaa" version="16.5.5" type="github">
   <diagram id="1dYNKg-0c9NFS9p8_zLA" name="Page-1">
     <mxGraphModel dx="768" dy="467" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -85,7 +85,7 @@
           <mxGeometry x="655" y="315" width="95" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fmAicMVyh8D6lssBpDnl-21" value="OTP &lt;br&gt;E-Mail/SMS Notification Request" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="432" y="360" width="83" height="30" as="geometry" />
+          <mxGeometry x="450" y="350" width="83" height="30" as="geometry" />
         </mxCell>
         <mxCell id="fmAicMVyh8D6lssBpDnl-24" value="OTP Email/SMS message" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="240" y="380" width="80" height="30" as="geometry" />
