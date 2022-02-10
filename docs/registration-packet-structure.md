@@ -24,12 +24,12 @@ Naming convention: `appid-refid_timestamp.zip`
         ├── 10001100771006920220128223618_optional.json
         └── 10001100771006920220128223618_optional.zip
 ```
-* `_evidence.json`: It contains meta information(process, encryptedhash, signature, schemaversion etc) for "evidence.zip" file.
-* `_evidence.zip`: It contains applicant demographic/biometric/document fields which are marked as "evidence" or "none" in identity schema.
-* `_id.json`: It contains meta information(process, encryptedhash, signature, schemaversion etc) for "id.zip" file.
-* `_id.zip`: It contains applicant demographic/biometric/document fields which are marked as "pvt" or "kyc" or "none" in identity schema.
-* `_optional.json`: It contains meta information(process, encryptedhash, signature, schemaversion etc) for "optional.zip" file.
-* `optional.zip`: It contains applicant demographic/biometric/document fields which are marked as "optional" or "none" in identity schema.
+* `*_id.zip`: Applicant demographic/biometric/document fields which are marked as "pvt" or "kyc" or "none" in [ID Schema](id-schema.md).
+* `*_id.json`: Meta information (process, encrypted hash, signature, schema version etc.) for `*_id.zip` file.
+* `*_evidence.zip`: Applicant's demographic/biometric/document fields which are marked as "evidence" or "none" in [ID Schema](id-schema.md).
+* `*_evidence.json`: Meta information (process, encrypted hash, signature, schema version etc.) for `*_evidence.zip` file.
+* `*_optional.zip`: Applicant demographic/biometric/document fields which are marked as "optional" or "none" [ID Schema](id-schema.md).
+* `*_optional.json`: Meta information (process, encrypted hash, signature, schema version etc.) for `*_optional.zip` file.
 
 ## Unzipped components
 Note: this is a sample packet and doesnot mean a particular information will be always available in same packet. The fields are populated based on the fieldCategory set in schema json.
