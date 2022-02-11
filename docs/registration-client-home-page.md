@@ -13,6 +13,7 @@ The registration client menu bar displays the following:
 * Center name
 * Machine name
 * Server connection status symbol (shows if the client is online or offline)
+* [Settings icon](registration-client-settings-page.md)
 * Breadcrumbs (User Guide/Reset Password/Logout)
     
 ![](_images/reg-client-menu.png)
