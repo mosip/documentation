@@ -2,7 +2,7 @@
 
 ## Settings Schema
 
-* Default settings schema is configured as below
+Default settings schema is configured as below:
 ```
 [
 	{
@@ -96,7 +96,8 @@ Clicking on ![](https://user-images.githubusercontent.com/22977936/153556397-66c
 * Every job's next and previous trigger time is listed along with the job name.
 * Privileged operator can update the cron expression of any job.
 * `Synchornize Data` in home page will trigger all of these listed jobs with just one click.
-* If the operator needs to trigger specific job, the same could be handled in this page.
+* If the operator needs to trigger specific job, the same can be handled in this page.
 * Access control on this page is controlled via the settings-schema.
 
 ![](https://user-images.githubusercontent.com/22977936/153555746-b3778d29-d3ef-4d7d-be05-69444ff07d9f.png)
+
