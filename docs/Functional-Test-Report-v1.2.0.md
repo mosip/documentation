@@ -22,15 +22,6 @@ The verification methods may differ based on how the need was addressed.
 
 For regression check, “MOSIP Test Rig” - an automation testing suite - which is indigenously designed and developed for supporting persona based testing. MOSIP Test Rig covers the end to end test execution and reporting. The end to end functional test scenarios are written starting from pre-registration, to creation of packet in registration centre, processing the packet through the registration processor, generating UIN and authenticating identity using IDA through various permutation and combinations of cases being covered. MOSIP Test Rig will be an open source artifact which can also be enhanced and used by countries to validate the SI deliveries before going live. Persona classes include both negative and positive personas. Negative persona classes include users like Bribed Registration Office, Malicious Insider etc. The needs of positive persona classes must be met, whereas the needs of negative persona classes must be effectively restricted by the software.
 
-# Build Details 
-
-|Title|Description|
-| :- | :- |
-|Build Tag Version|<TBD>|
-|Source Location|<TBD>|
-|Biometric Device Vendor |<TBD>|
-|ABIS Vendor|<TBD>|
-
 # Verified configuration 
 Verification is performed on various configurations as mentioned below 
 
