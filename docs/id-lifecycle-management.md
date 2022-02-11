@@ -26,23 +26,23 @@ The residents can visit the pre-registration portal and do the following:
 Once the resident completes the above process, their data will be downloaded at the respective registration centers prior to their appointment.
 
 ### Registration (enrollment)
-Registration is the process in which an individual/resident can visit a registration center with or without a pre-registration application ID. They can do a walk-in at the center and give their demographic or biometric details to an operator. In MOSIP, the Registration client captures the individual' details and packages the captured information in a secure way (in the form of encrypted packets) and sends it to Registration Processor for further processing.  
+Registration is the process in which an individual/resident can visit a registration center with or without a pre-registration application ID. They can do a walk-in at the center and give their demographic or biometric details to an operator. In MOSIP, the [Registration Client](registration-client.md) captures the individual' details and packages the captured information in a secure way (in the form of encrypted packets) and sends it to [Registration Processor](registration-processor.md) for further processing.  
 
 #### For adults
--    Resident/individual needs to visit a registration center
--    Residents need to provide required information to register themselves in MOSIP (first time)
--    Registration officer captures’ individual’s information
--    The captured information is sent to the Registration Processor
--    Various checks like biometrics quality, de-duplication, etc. performed in the Registration Processor with the individual's demographic data and biometrics
+-    Resident/individual needs to visit a registration center.
+-    Residents need to provide required information to register themselves in MOSIP (first time).
+-    Registration officer captures’ individual’s information.
+-    The captured information is sent to the [Registration Processor](registration-processor.md).
+-    Various checks like biometrics quality, de-duplication, etc. performed in the Registration Processor with the individual's demographic data and biometrics.
 -    If no duplicate is found, a Unique Identification Number(UIN) is allocated and ID credentials are sent to the individual via the country's configured printing and postal service.
 -    Registration receipt(acknowledgement) containing the Registration Identity(RID), labels and data in the configured language, QR code (of the RID) provided to the resident at the center.
--    Notifications sent to the resident using the email ID and mobile number provided as a part of demographic data collection
+-    Notifications sent to the resident using the email ID and mobile number provided as a part of demographic data collection.
 
 #### For infants/children
 -    Child needs to visit the Registration center along with a guardian/parent.
 -    Operator needs to capture only the child' face biometrics.
 -    Parent/guardian' UIN or RID and biometrics needed for authentication.
--    Additionally, a **Proof of Relationship** document to be provided at the center.
+-    Additionally, a **proof of relationship** document to be provided at the center.
 -    An acknowledgement receipt will be provided to the infant' parent/guardian.
 
 ## ID data update/updating individual’s information
@@ -55,7 +55,7 @@ Registration is the process in which an individual/resident can visit a registra
 
 ## De-activate/re-activate individual’s ID
 -  De-activate ID means an individual will not be able to authenticate themselves by using the UIN or VID. 
--  If a country wants to deactivate an individual’s ID for any specific reason, the system deactivates the individual’s ID after certain validations performed in the Registration Processor.
+-  If a country wants to deactivate an individual’s ID for any specific reason, the system deactivates the individual’s ID after certain validations performed in the [Registration Processor](registration-processor.md). 
 - Likewise, a country can also re-activate an individual’ ID as need be.
 
 ## Finding a lost ID
