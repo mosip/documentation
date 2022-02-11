@@ -1,11 +1,9 @@
-**31-01-2022**
-
 # Testing Scope
 The scope of testing is to verify fitment to the specification from the perspective of  
 
-- Functionality  
-- Deployability  
-- Configurability  
+- Functionality
+- Deployability
+- Configurability
 - Customizability
 
 Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence Configurability and Extensibility of the software is also assessed. This ensures readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform, Verification scope required comprehensive automation testing for all the MOSIP APIs. An automation Test Rig is created for the same. All MOSIP UIs are reference implementations and these were verified through UI automation Test rig for RegClient and Admin UI.
@@ -50,40 +48,20 @@ Below are the test metrics by performing functional testing using mockMDS and mo
 |**Total**|**Passed**|**Failed**|**Skipped**|
 | :-: | :-: | :-: | :-: |
 |4283|4024|259|0|
-|Test Rate : 100%  With Pass Rate : 93%|
+
+Test Rate : 100%  with Pass Rate : 93%
 
 Here is the detailed breakdown of metrics
 
-||**Test cases**|
-| :-: | :-: |
-|<p></p><p></p><p></p><p></p><p>Pre Registration</p>|Total|645|
-||Passed|632|
-||Failed|13|
-||Skipped|0|
-|<p></p><p></p><p></p><p></p><p>Registration Client</p>|Total|680|
-||Passed|649|
-||Failed|31|
-||Skipped|0|
-|<p></p><p></p><p></p><p></p><p>RegProc</p>|Total|542|
-||Passed|494|
-||Failed|48|
-||Skipped|0|
-|<p></p><p></p><p></p><p></p><p>Resident</p>|Total|230|
-||Passed|194|
-||Failed|36|
-||Skipped|0|
-|<p></p><p></p><p></p><p></p><p>Admin</p>|Total|796|
-||Passed|711|
-||Failed|85|
-||Skipped|0|
-|<p></p><p></p><p></p><p></p><p>IDA</p>|Total|940|
-||Passed|910|
-||Failed|30|
-||Skipped|0|
-|<p></p><p></p><p></p><p></p><p>Partner Management</p>|Total|450|
-||Passed|434|
-||Failed|16|
-||Skipped|0|
+|**Module**|**Total**|**Passed**|**Failed**|**Skipped**|
+| :-: | :-: | :-: | :-: | :-: |
+|Pre Registration|645|632|13|0|
+|Registration Client|680|649|31|0|
+|Registration Processor|542|494|48|0|
+|Resident|230|194|36|0|
+|Admin|796|711|85|0|
+|ID Authentication|940|910|30|0|
+|Partner Management|450|434|16|0|
 
 ## External API verification results by modules
 Below section provides details on API test metrics by executing MOSIP functional automation Framework
@@ -91,31 +69,21 @@ Below section provides details on API test metrics by executing MOSIP functional
 |**Total**|**Passed**|**Failed**|**Skipped**|
 | :-: | :-: | :-: | :-: |
 |1753|1745|8|0|
-|External Endpoints : 444   Tested : 412|
-|Test Rate : 92%  With Pass Rate : 99%|
+
+Total number of external endpoints : 444 and total tested : 412
+
+Test Rate : 92% with Pass Rate : 99%
 
 Here is the detailed breakdown of metrics
 
-||**End Points**|**Automated**||**Test cases**|
-| :-: | :-: | :-: | :-: | :-: |
-|<p></p><p></p><p>Pre Registration</p>|47|36|Total|199|
-||||Passed|196|
-||||Failed|3|
-|<p></p><p></p><p></p><p>ID Repo</p>|21|20|Total|109|
-||||Passed|108|
-||||Failed|1|
-|<p></p><p></p><p></p><p></p><p>MasterData</p>|269|257|Total|896|
-||||Passed|896|
-||||Failed|0|
-|<p></p><p></p><p></p><p></p><p>Resident</p>|17|16|Total|111|
-||||Passed|107|
-||||Failed|4|
-|<p></p><p></p><p></p><p></p><p>IDA</p>|8|8|Total|142|
-||||Passed|142|
-||||Failed|0|
-|<p></p><p></p><p></p><p></p><p>PMS</p>|82|77|Total|296|
-||||Passed|296|
-||||Failed|0|
+|**Module**|**End Points**|**Automated**|**Test cases**|**Passed**|**Failed**|
+| :-: | :-: | :-: | :-: | :-: | :-: |
+|Pre Registration|47|36|199|196|3|
+|ID Repository|21|20|109|108|1|
+|Master Data|269|257|896|896|0|
+|Resident|17|16|111|107|4|
+|ID Authentication|8|8|142|142|0|
+|Partner Management|82|77|296|296|0|
 
 ## Testing End To End flow(s) 
 Below are the end-to-end scenarios test metrics by executing MOSIP Automation Framework 
@@ -123,7 +91,8 @@ Below are the end-to-end scenarios test metrics by executing MOSIP Automation Fr
 |**Total**|**Passed**|**Failed**|**Skipped**|
 | :-: | :-: | :-: | :-: |
 |54|53|0|1|
-|Test Rate : 98%  With Pass Rate : 100%|
+  
+Test Rate : 98% with Pass Rate : 100%
 
 ## Testing with Real Device 
 Below are the test metrics by performing functional testing with Tech5SDK, Syncbyte devices and mockABIS
@@ -131,5 +100,6 @@ Below are the test metrics by performing functional testing with Tech5SDK, Syncb
 |**Total**|**Passed**|**Failed**|**Skipped**|
 | :-: | :-: | :-: | :-: |
 |475|356|55|64|
-|Test Rate : 86%  With Pass Rate : 86%|
+
+Test Rate : 86% with Pass Rate : 86%
 
