@@ -45,6 +45,7 @@
         * [Registration Client Home Page](registration-client-home-page.md)
         * [Registration Client Configuration](registration-client-configuration.md)
         * [Registration Client UI Specifications](registration-client-ui-specifications.md)
+        * [Registration Client Settings page](registration-client-settings-page.md)
     * [Registration Processor](registration-processor.md) 
     * [Reporting](reporting.md)
     * [Resident Services](resident-services.md)
