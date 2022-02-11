@@ -15,21 +15,11 @@ The key objectives of MOSIP are to:
 * Provide a scalable and accessible solution to cater to a wide range of population (a few thousands to several hundreds of millions)
 
 ## Releases
-The latest release of MOSIP, version 1.2.0 LTS is here! Check out the exciting new services and enhancements in the documentation.
+The latest release of MOSIP, version 1.2.0 LTS is here! Check out the exciting new services and enhancements in the documentation. 
 
-### Current Release 
-* Version: 1.2.0 
-* Release Date:
+To learn more see our [releases page](releases.md).
 
-### Previous Release
-Version: 1.1.1<br>Release Date: September 14, 2020<br> [Release notes](Release-Notes-1.1.1.md).
-
-To view a summary of all our releases, refer to [releases page](MOSIP-Releases.md).
-
-## Documentation
-The current documentation's source is available as markdown in the 'docs' folder in the [documentation repository](https://github.com/mosip/documentation).
-
-## MOSIP Resources
+## Resources
 * Source Code: [GitHub Repositories](https://github.com/mosip)
 * Containers: [Docker Repository](https://hub.docker.com/u/mosipid)
 * Maven Repository: [Nexus Repository](https://oss.sonatype.org/service/local/repositories/snapshots/content/io/mosip/)
