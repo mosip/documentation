@@ -60,7 +60,7 @@ paths:
                       $ref: '#/components/schemas/error'     
                       
   /capture:
-    post: 
+    get: 
       summary: Auth capture
       description: "This request is used to capture a biometric from MOSIP **Authentication** devices.\n\nVerb: **CAPTURE**."
       requestBody:
@@ -79,6 +79,8 @@ paths:
                   $ref: '#/components/schemas/specVersion'
                 timeout:
                   $ref: '#/components/schemas/timeout'
+                captureTime:
+                  $ref: '#/components/schemas/captureTime'
                 domainUri:
                   description: URI of the auth server.
                   type: string
@@ -105,6 +107,53 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/captureBiometrics'  
+    post: 
+      summary: Registration capture
+      description: "This request is used to capture a biometric from MOSIP **Registration** devices.\n\nVerb: **RCAPTURE**."
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: ['type']
+              properties:
+                env:
+                  $ref: '#/components/schemas/environment'
+                purpose:
+                  $ref: '#/components/schemas/purpose'
+                specVersion:
+                  $ref: '#/components/schemas/specVersion'
+                timeout:
+                  $ref: '#/components/schemas/timeout'
+                captureTime:
+                  $ref: '#/components/schemas/captureTime'
+                domainUri:
+                  description: URI of the auth server.
+                  type: string
+                transactionId:
+                  description: Transaction Id for the current capture.
+                  type: string
+                bio:
+                  description:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/bioRCapture'  
+                customOpts:
+                  type: object 
+                  description: "Vendor specific parameters. Max of 50 key value pairs. IMPORTANT: Any sensitive data should not be present here."
+      responses:
+        '200':
+          description: Array of biometrics
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  biometrics:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/rCaptureBiometrics'  
   /stream:
     post: 
       summary: Video stream
@@ -167,6 +216,9 @@ components:
       type: integer
       description: Timeout in milliseconds
       default: 300000 
+    captureTime:
+      type: string
+      description: Capture time in ISO format.
     deviceId:
       type: string
       description: Internal ID of the device
@@ -209,6 +261,20 @@ components:
         thumbprint:
           type: string
           description: SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens
+        error:
+          $ref: '#/components/schemas/error'     
+
+    rCaptureBiometrics:
+      type: object
+      description:
+      properties:
+        specVersion: 
+          $ref: '#/components/schemas/specVersion'  
+        data:
+          $ref: '#/components/schemas/rBioData'  
+        hash:
+          type: string
+          description: sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)
         error:
           $ref: '#/components/schemas/error'     
 
@@ -255,6 +321,48 @@ components:
         qualityScore: 
           type: number
           description: Floating point number representing the score for the current capture.
+
+    rBioData:
+      type: object
+      properties:
+        digitalId:
+          type: string
+          description: "[Reference](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#digital-id)."
+        deviceCode: 
+          $ref: '#/components/schemas/deviceCode'
+        deviceServiceVersion: 
+          type: string
+          description: SBI version
+        bioType: 
+          type: string
+          description: 
+          enum:
+            - Finger
+            - Iris
+            - Face
+        bioSubType: 
+          type: string
+          description: "[Subtypes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype)."
+        purpose: 
+          $ref: '#/components/schemas/purpose'
+        env: 
+          $ref: '#/components/schemas/environment'
+        bioValue: 
+          type: string
+          description: Encrypted with session key and base64urlencoded biometric data.
+        transactionId: 
+          type: string
+          description: Unique transaction id.
+        timestamp: 
+          type: string
+          description: Capture datetime in ISO format.
+        requestedScore: 
+          type: number
+          description: Floating point number to represent the minimum required score for the capture.
+        qualityScore: 
+          type: number
+          description: Floating point number representing the score for the current capture.
+
     bio:
       type: object
       properties:
@@ -271,6 +379,37 @@ components:
             type: string
         requestedScore:
           description: 
+          type: string
+        deviceId:  
+          $ref: '#/components/schemas/deviceId'  
+        deviceSubId:
+          type: integer
+          description: "[Device SubId](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid)."
+        previousHash:
+          type: string
+          description: Hash of the previous block.
+
+    bioRCapture:
+      type: object
+      properties:
+        type: 
+          description: Type of the biometric data.
+          type: string
+        count:
+          description: Finger/iris count. 1 in case of face.
+          type: integer
+        bioSubType:
+          description: "[Subtypes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype)."
+          type: array
+          items:
+            type: string
+        exception:
+          type: array
+          description: "Array of [biometric subtypes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype) as exceptions (not available from the applicant)."
+          items:
+            type: string
+        requestedScore:
+          description: Capture uality score must match this.
           type: string
         deviceId:  
           $ref: '#/components/schemas/deviceId'  
