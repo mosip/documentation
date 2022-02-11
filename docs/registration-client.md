@@ -11,7 +11,7 @@ To know more about the onboarding process of an operator, refer to [Operator onb
 
 The relationship of RC with other services is illustrated below. _Note: the numbers do not signify sequence of operations or the control flow._
 
-![](_images/reg-client.drawio.png)
+![](_images/reg-client.png)
 
 1. RC connects to the Upgrade Server to check on upgrades and patch downloads.
 2. All the synced packets are uploaded to packet receiver service one by one.
@@ -24,7 +24,7 @@ The relationship of RC with other services is illustrated below. _Note: the numb
 ## RC in host machine
 The image below illustrates the internal view of a RC in host machine.
 
-![](_images/reg-client-host-machine.drawio.png)
+![](_images/reg-client-host-machine.png)
 
 1. RC comprises of JavaFX UI, registration-services libraries and any third party biometric SDK.
 2. SBI is allowed to run on loopback IP and should listen on any port within 4501-4600 range. More than one SBI can run on the host machine. RC scans the allowed port range to identify the available SBI.
@@ -42,17 +42,17 @@ To know more about setting up the reference RC, refer to [RC user guide](registr
 To know more about the functions present in the Home page of the RC, refer to [RC home page](registration-client-home-page.md).
 
 ## Data protection
-* Local Derby db - DB is configured for strict access controls and encrypted with boot password. The boot password encrypted with TPM key and stored in db.conf file under .mosipkeys folder.
+* Local Derby db - DB is configured for strict access controls and encrypted with boot password. The boot password encrypted with TPM key and stored in `db.conf` file under `.mosipkeys` folder.
 * Registration packets - Packets created during registration process is a zip, signed by TPM key and encrypted with policy key stored in local configured folder.
 * Pre-registation packets - Downloaded pre-registration packets are encrypted with TPM key.
-* All the other json and mvel scripts synced in the registration-client are tamper proof. Everytime registration-client tries to open these files, file hash check must pass, else client will fail to load the hash check failed files.
+* All the other JSON and MVEL scripts synced in the registration-client are tamper proof. Everytime registration-client tries to open these files, file hash check must pass, else client will fail to load the hash check failed files.
 
 ## Configurations
-Based on the ID Schema, the RC can be customized as per a country' requirements. For details related to RC configurations, refer to [RC configuration](registration-client-configuration.md).
+Based on the [ID Schema][id-schema.md], the RC can be customized as per a country' requirements. For details related to RC configurations, refer to [RC configuration](registration-client-configuration.md).
 
 ## UI Specifications for registration tasks 
 Default UI Specifications loaded with sandbox installation is available [here](https://github.com/mosip/mosip-infra/blob/1.2.0-rc2/deployment/v3/mosip/kernel/masterdata/xlsx/ui_spec.xlsx).
 
 ## Source code 
-[Github repo](https://github.com/mosip/registration-client/tree/release-1.2.0)
+[Github repo](https://github.com/mosip/registration-client/tree/release-1.2.0).
 
