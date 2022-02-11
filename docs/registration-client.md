@@ -1,7 +1,7 @@
-# RC
+# Registration Client
 
 ## Overview
-The RC (RC) is a thick Java-based client where the resident's demographic and biometric details are captured along with the supporting documents in online or offline mode. Data is captured in the form of registration packets and is cryptographically secured to ensure that there is no tampering. The captured information is packaged and sent to the server for further processing.
+The Registration Client (RC) is a thick Java-based client where the resident's demographic and biometric details are captured along with the supporting documents in online or offline mode. Data is captured in the form of registration packets and is cryptographically secured to ensure that there is no tampering. The captured information is packaged and sent to the server for further processing.
 
 MOSIP provides a reference implementation of RC that supports multiple languages. 
 
