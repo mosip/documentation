@@ -1,10 +1,3 @@
-## Latest Release
-
-### Version: LTS (Pre-release 1)
-- Name: Pre-release Version for MOSIP LTS
-- Date: August 18, 2021
-- [Release Notes](Release-Notes-LTS-RC1.md)
-
 ## Older Releases
 
 ### Version: 1.1.5
