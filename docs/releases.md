@@ -1,9 +1,9 @@
 # Releases
 
 ## Latest Release
-Version: 1.2.0  
+**Version: 1.2.0**
 * Name: MOSIP v1.2.0 
-* Support: Long Term Support (LTS)
+* <a href="https://docs.mosip.io/1.2.0/releases" rel="nofollow"><img src="https://img.shields.io/badge/Support-Long%20Term%20Support-green" alt="LTS"></a>
 * Date: 
 * [Release Notes](release-notes-1.2.0.md)
 
