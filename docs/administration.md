@@ -16,9 +16,9 @@ Admin module provides the following functions:
 
 ## Administrative zones
 
-* Administrative Zones are virtual boundaries which a country can define to better manage their resources that are used during registrations. These resources includes Centers, Users, Machines and Devices. These zones can be defined in a hierarchical fashion and a country can allocate resources to such zones based on their requirements.
+* Administrative zones are virtual boundaries which a country can define to better manage their resources that are used during registrations. These resources includes Centers, Users, Machines and Devices. These zones can be defined in a hierarchical fashion and a country can allocate resources to such zones based on their requirements.
 * Resources under each zone is managed by a *Zonal Admin*. This is done by assigning an Administrative zone to the Zonal Admin during user creation. 
-* These Zonal Admins can exist at any zonal hierarchy. (For e.g, a Zonal Admin can directly be mapped to the whole country as a Zone or can be mapped to a significantly smaller zone such as a city). Thus, these resources when mapped to an Administrative Zone can only be managed by the Admin of that Zone.
+* These Zonal Admins can exist at any zonal hierarchy. (For e.g, a Zonal Admin can directly be mapped to the whole country as a Zone or can be mapped to a significantly smaller zone such as a city). Thus, these resources when mapped to an Administrative zone can only be managed by the Admin of that zone.
 
 ## Activate/deactivate/decommission resources
 
@@ -33,13 +33,13 @@ Deactivation refers to a temporary shutdown. This means that the resource will n
  *Note- Activation/Deactivation/Decommission of a center in one language will be applied to the same center created in all the languages.*
 
 ## Services
-1. [Admin Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/admin-service)- 
+1. [Admin Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/admin-service)
 2. [Hotlist Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/hotlist-service)
 3. [kernel Masterdata Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/kernel-masterdata-service)
 4. [Kernel Syncdata Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/kernel-syncdata-service)
 
-## Frontend - Admin portal
-Reference implementation of Admin portal is available in [admin-ui](https://github.com/mosip/admin-ui/tree/master) repo.
+## Frontend- Admin portal
+Reference implementation of the Admin portal is available in [admin-ui](https://github.com/mosip/admin-ui/tree/master) repository.
 
 To know more, refer to the [Admin portal user guide](admin-portal-user-guide.md).
 
