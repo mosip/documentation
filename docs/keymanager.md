@@ -1,7 +1,7 @@
 # Key Manager
 
 ## Overview 
-The Key Manager service provides secure storage, provisioning and management of secret data. It provides all the cryptographic operations like encryption/decryption & digital signature/verification making one trust store for all partner trust path validation. It manages the lifecycle of encryption/decryption keys, including generation, distribution, administration, and deletion.
+The Key Manager Service provides secure storage, provisioning and management of secret data. It provides all the cryptographic operations like encryption/decryption & digital signature/verification making one trust store for all partner trust path validation. It manages the lifecycle of encryption/decryption keys, including generation, distribution, administration, and deletion.
 
 This includes keying material such as symmetric keys, asymmetric keys, certificates and algorithm data.  It is a web-based key management solution that helps consolidate, control, manage, monitor, all key generation & maintenance of key life cycle required in MOSIP. 
 
@@ -11,11 +11,11 @@ Key Manager interfaces with key store like [Hardware Security Module (HSM)](hsm.
 
 Refer [Keys](keys.md) for all references of the type 'Kx' and 'KPx'.
 
-## Encryption alrogithms
+## Encryption algorithms
 * RSA-2048 for all data encryption
 * AES-256 for [zero-knowledge encryption](data-protection.md#zero-knowledge-encryption)
 
-## Key hierarcy
+## Key hierarchy
 |Key|Location|Issuer|Example|
 |---|---|---|---|
 |Root|[HSM](hsm.md)|Self signed|[K1](keys.md)|
@@ -43,8 +43,8 @@ Eg: 10001_110011
 It also provides a graphical map of key-user relationships that helps you effectively track the distribution and usage of keys within your network.
 
 ## Key generation process 
-Key Manager helps you generate new key pairs and deploy them to endpoint servers. There are two ways that allows to generate fresh key pairs from Key Manager.
-*	key-generator job, and
+Key Manager helps you generate new key pairs and deploy them to endpoint servers. There are two ways to generate fresh key pairs from Key Manager:
+*	Key-generator job, and
 *	Rest API call
 
 ![](_images/keymanager-hsm-keygenerator.png)
@@ -63,10 +63,10 @@ Once keys are associated with their user, you can perform a range of key managem
 * Digital signing of data using Module key
 * Data encryption using Encryption key
 
-The different key in MOSIP have their own built-in validity as mentioned:
-*	MOSIP root key - 5 years
-*	Module key - 3 years
-*	Encrytion key (base key) - 2 years
+The different keys in MOSIP have their own built-in validity as mentioned:
+*	MOSIP root key- 5 years
+*	Module key- 3 years
+*	Encryption key (base key)- 2 years
 
 You can edit key validity before key generation by updating the required values in ```key_policy_def``` table.
 
@@ -79,34 +79,34 @@ Whereas, you can configure existing key to revoke encryption/base key invoke ```
 We strongly recommend that you store the encryption key outside Key Manager server - preferably in any other separate machine or in any external drive (hard drive, thumb drive etc.,). And in such cases, you have to make sure that Key Manager server has full permission to access the device and the encryption key stored in it, whenever you start Key Manager service.
 
 ### Encryption process 
-*	Random AES 256-bit key will be generated, generated random key will be used to encrypt the actual registration packet
-*	Random generated key will be encrypted using the certificate received from server. Certificate contains RSA 2048 bit key
-*	Certificate Thumbprint will be computed
-*	Thumbprint will be prepend to encrypted random key for key identification
-*	Finally encrypted random key with prepended thumbprint will be concated with encypted registration packet using #KEY_SPLITTER# as seperator
+*	Random AES 256-bit key will be generated, generated random key will be used to encrypt the actual registration packet.
+*	Random generated key will be encrypted using the certificate received from server. Certificate contains RSA 2048 bit key.
+*	Certificate Thumbprint will be computed.
+*	Thumbprint will be prepend to encrypted random key for key identification.
+*	Finally, the encrypted random key with prepended thumbprint will be concated with encrypted registration packet using #KEY_SPLITTER# as separator.
 
 ### Decryption process 
-*	Registration packet data will be splited to get the encrypted random key, encrypted registration data, certificate thumbprint
-*	Identifies the respective private key to decryption process
-*	Identified private key will be decrypted with the mapped master key
-*	Decrypted private key will be used to decrypt the encrypted random key
-*	Decrypt the registration packet using the decrypted random key
-*	Returns the decrypted data to REG_PROC
+*	Registration packet data will be split to get the encrypted random key, encrypted registration data, certificate thumbprint.
+*	Identifies the respective private key to decryption process.
+*	Identified private key will be decrypted with the mapped master key.
+*	Decrypted private key will be used to decrypt the encrypted random key.
+*	Decrypt the registration packet using the decrypted random key.
+*	Returns the decrypted data to REG_PROC.
 
 ## Encryption in Registration Client 
-*	Registration Client sends request to sync data service for the client configuration data
-*	Sync Data service requests Key Manager service to provide the reg-client specific certificate. Key identifier will be APP_ID - REGISTRATION, REF_ID - CENTER-ID_MACHINE-ID
-*	Key Manager service generate a new key pair, encrypts the private key with REGISTRATION master key and creates a new cerificate using same master. 
-*	Returns the certificate to sync data service. If key pair already available and is valid, returns the available certificate
-*	Sync data service send the certificate to reg-client
-*	The registration packet will be encrypted using the certificate received from the server after collecting all required data for registration, including adding the digital signatures required to the registration data, and before saving/writing the data on the reg-client hard-disk
-*	REG_PROC sends request to decrypt the data to key manager service with same app_id & ref_id
+*	Registration Client sends request to sync data service for the client configuration data.
+*	Sync Data service requests Key Manager service to provide the reg-client specific certificate. Key identifier will be APP_ID - REGISTRATION, REF_ID - CENTER-ID_MACHINE-ID.
+*	Key Manager service generate a new key pair, encrypts the private key with REGISTRATION master key and creates a new certificate using same master. 
+*	Returns the certificate to Sync data service. If key pair is already available and is valid, returns the available certificate.
+*	Sync data service sends the certificate to Registration Client.
+*	The registration packet will be encrypted using the certificate received from the server after collecting all the required data for registration, including adding the digital signatures required to the registration data, and before saving/writing the data on the Registration Client hard-disk.
+*	REG_PROC sends request to decrypt the data to Key Manager service with same app_id and ref_id.
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html)
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
 
 ## Source code 
-[Github repo](https://github.com/mosip/keymanager/tree/1.2.0-rc2)
+[Github repo](https://github.com/mosip/keymanager/tree/1.2.0-rc2).
 
 
 
