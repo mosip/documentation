@@ -2,7 +2,7 @@
 
 ## Settings Schema
 
-* Sample Settings schema
+* Default settings schema is configured as below
 ```
 [
 	{
@@ -69,10 +69,10 @@
 ]
 ```
 
-Clickling on ![](https://user-images.githubusercontent.com/22977936/153556397-66c832bb-a627-48eb-8359-bd774a848d01.png) in home page opens below 
+Clickling on ![](https://user-images.githubusercontent.com/22977936/153556397-66c832bb-a627-48eb-8359-bd774a848d01.png) in home page opens pop-up displaying configured settings page as per above sample settings schema.
+
 ![ settings pop-up ](https://user-images.githubusercontent.com/22977936/153556279-b389ef7c-1988-4242-a794-5130c0cf0768.png)
 
-As per the above schema, We have 3 settings pages configured as below :
 
 ## Device settings
 * All the connected devices are listed in this page.
