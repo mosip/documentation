@@ -7,10 +7,10 @@ Various flows with encryption are illustrated below.  Refer [Keys](keys.md) for 
 ## Registration data flow 
 ![](_images/cryptography-registration-flow.png)
 
-1. Biometrics are signed by private key of device provider (PK2). The signature is verified by the Registration Client. 
-2. Registration Client signs packet using TPM key of the machine (K10), and encrypts packet using MOSIP public key specific to (registration center, machine id) combination (K11). 
-3. Registration processor stores packets created in (2) "as is" in Object Store. 
-4. ID Repo encrypts biometrics, demographics and documents and stores them in Object Store. (K7.1,K7.2,K7.3)
+1. [Biometrics](biometrics.md) are signed by private key of device provider (PK2). The signature is verified by the Registration Client. 
+2. [Registration Client](registration-client.md) signs packet using TPM key of the machine (K10), and encrypts packet using MOSIP public key specific to (registration center, machine id) combination (K11). 
+3. [Registration processor](registration-processor.md) stores packets created in (2) "as is" in [Object Store](storage.md#object-store). 
+4. [ID Repository](id-repository.md) encrypts biometrics, demographics and documents and stores them in Object Store. (K7.1,K7.2,K7.3)
 5. The UINs are hashed, encrypted and stored in `uin` table of `mosip_idrepo` DB. (K7.4)
 6. Biometrics are shared encrypted with ABIS partner's key (PK1). 
 7. Registration processor stores encrypted demographic data in `mosip_regprc` db. (K11)
@@ -21,7 +21,7 @@ Various flows with encryption are illustrated below.  Refer [Keys](keys.md) for 
 Data shared with all partners like ABIS, Print, Adjudication, IDA etc. is encrypted using partners' public key.  Note that IDA is also a partner, however, a special partner in the sense that data is additionally zero-knowledge encrypted before sending to IDA (see section below).
 
 ## Zero knowledge encryption
-ID Authentication module (IDA) is an independent module and may be hosted by several providers. IDA hosts all the biometric templates and demographic data. A unique additional protection is provided here to make sure that mass decryption of user data is very difficult to achieve.  The data can only be decrypted if user's UIN is provided.  Here is the encryption scheme: 
+[ID Authentication](id-authentication.md) module (IDA) is an independent module and may be hosted by several providers. IDA hosts all the biometric templates and demographic data. A unique additional protection is provided here to make sure that mass decryption of user data is very difficult to achieve.  The data can only be decrypted if user's UIN is provided.  Here is the encryption scheme: 
 
 ### Encryption and share by Credential Service
 1. Generate master symmetric encryption key K9.
@@ -52,7 +52,7 @@ ID Authentication module (IDA) is an independent module and may be hosted by sev
 1. L1 devices contain [FTM](ftm.md) to encrypt (DE1, K21) and sign (FK1) biometrics at source and send to Authentication client.  
 2. Authentication client further encrypts the auth request with IDA-PARTNER public key.
 3. IDA decrypts zero knowledge data as given in [Step 4](#encryption-and-share-by-credential-service) and the performs a demographic and/or biometric authentication.
-4. Match result is returned to Auth client.  In case of KYC, the KYC attributes are encrypted with Partner's public key (as in Datashare).  
+4. Match result is returned to Auth client.  In case of KYC, the KYC attributes are encrypted with Partner's public key (as in [Datashare](datashare.md)).  
 
 
 
