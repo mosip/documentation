@@ -119,7 +119,7 @@
 	* [Sync Data APIs](Sync-Data-APIs.md)
     * [Template APIs](Template-APIs.md)
     * [Zone APIs](Zone-APIs.md)
-* [Releases](MOSIP-Releases.md)
+* [Older Releases](MOSIP-Releases.md)
     * [Release Notes 0.9.0](Release-Notes-0.9.0.md)
     * [Release Notes 1.0.0](Release-Notes-1.0.0.md)
         * [Features](Release-Notes-1.0.0-Features.md)
