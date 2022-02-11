@@ -11,7 +11,7 @@ To know more about the onboarding process of an operator, refer to [Operator onb
 
 The relationship of RC with other services is illustrated below. _Note: the numbers do not signify sequence of operations or the control flow._
 
-![](_images/reg-client.drawio.png)
+![](_images/reg-client.png)
 
 1. RC connects to the Upgrade Server to check on upgrades and patch downloads.
 2. All the synced packets are uploaded to packet receiver service one by one.
@@ -24,7 +24,7 @@ The relationship of RC with other services is illustrated below. _Note: the numb
 ## RC in host machine
 The image below illustrates the internal view of a RC in host machine.
 
-![](_images/reg-client-host-machine.drawio.png)
+![](_images/reg-client-host-machine.png)
 
 1. RC comprises of JavaFX UI, registration-services libraries and any third party biometric SDK.
 2. SBI is allowed to run on loopback IP and should listen on any port within 4501-4600 range. More than one SBI can run on the host machine. RC scans the allowed port range to identify the available SBI.
