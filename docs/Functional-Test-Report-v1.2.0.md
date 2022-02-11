@@ -70,9 +70,9 @@ Below section provides details on API test metrics by executing MOSIP functional
 | :-: | :-: | :-: | :-: |
 |1753|1745|8|0|
 
-Total number of external endpoints : 444 and total tested : 412
+Total number of external endpoints : 444 and total tested : 414
 
-Test Rate : 92% with Pass Rate : 99%
+Test Rate : 93% with Pass Rate : 99%
 
 Here is the detailed breakdown of metrics
 
