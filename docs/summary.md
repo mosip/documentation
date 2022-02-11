@@ -56,10 +56,11 @@
     * [Server Hardware Requirements](server-hardware-requirements.md)
     * [Masterdata Guide](masterdata-guide.md)
 * [Country Implementation](country-implementation.md)
- * [API](api.md)
- * Community
-    * [Contributions](contributions.md)
-    * [Code of Conduct](code-of-conduct.md)
- *  [License](license.md)
+* [API](api.md)
+* Community
+  * [Contributions](contributions.md)
+  * [Code of Conduct](code-of-conduct.md)
+* [Releases](releases.md)
+* [License](license.md)
    
 
