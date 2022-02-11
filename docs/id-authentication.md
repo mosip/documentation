@@ -1,7 +1,7 @@
 # ID Authentication
 
 ## Overview
-MOSIP offers identity verification services which enables the usage of identity in various contexts. On successful issue of the ID, identity verification services become available for the resident. Online identity verification is enabled through MOSIP's ID Authentication (IDA) module. As MOSIP is a foundational ID system, different services (both government and private) may rely on the foundational ID system to validate the identity of a resident rather than implementing multiple authentication systems.  A typical authentication flow is illustrated below:
+MOSIP offers identity verification services which enables the usage of identity in various contexts. On successful issue of the ID, identity verification services become available for the resident. Online identity verification is enabled through MOSIP's [ID Authentication (IDA)](id-authentication-services.md) module. As MOSIP is a foundational ID system, different services (both government and private) may rely on the foundational ID system to validate the identity of a resident rather than implementing multiple authentication systems.  A typical authentication flow is illustrated below:
 
 ![](_images/ida-process.png)
 
