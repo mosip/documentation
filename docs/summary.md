@@ -62,7 +62,7 @@
   * [Code of Conduct](code-of-conduct.md)
 * [Releases](releases.md)
   * 1.2.0
-    * [Functional-Test-Report](Functional-Test-Report-v1.2.0.md)     
+    * [Functional Test Report](Functional-Test-Report-v1.2.0.md)     
 * [License](license.md)
    
 
