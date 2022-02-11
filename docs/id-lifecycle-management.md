@@ -15,7 +15,7 @@ The various life cycle events are briefly explained below:
 ![](_images/id-registration-process.jpg)
 
 ### Pre-registration
-Pre-registration is a resident facing web-based portal using which an individual can pre-enrol and book an appointment for registering in MOSIP. Pre-registration fundamentally helps the residents and Government organizations by saving the time and efforts required for basic data collection of the residents at the registration centers. The data pre-filled by the residents on the portal can be made available for use at the centers for quick access and seamless registration process.
+[Pre-registration](pre-registration.md) is a resident facing web-based portal using which an individual can pre-enrol and book an appointment for registering in MOSIP. Pre-registration fundamentally helps the residents and Government organizations by saving the time and efforts required for basic data collection of the residents at the registration centers. The data pre-filled by the residents on the portal can be made available for use at the centers for quick access and seamless registration process.
 
 The residents can visit the pre-registration portal and do the following:
 * Enter demographic data and upload supporting documents
@@ -47,9 +47,9 @@ Registration is the process in which an individual/resident can visit a registra
 
 ## ID data update/updating individual’s information
 -    Residents can update their information in two ways:
-    * By visiting the registration center: The demographic and biometric information can be updated at the centers.
-    * Update of only the demographic information using [Resident Services](https://docs.mosip.io/1.2.0/modules/resident-services).
--  Registration receipt containing the Registration Identity(RID)), labels and data in the configured language, QR code (of the RID) provided to the resident at the center.
+        * By visiting the registration center: The demographic and biometric information can be updated at the centers.
+        * Update of only the demographic information using [Resident Services](https://docs.mosip.io/1.2.0/modules/resident-services).
+-  Registration receipt containing the Registration Identity(RID), labels and data in the configured language, QR code (of the RID) provided to the resident at the center.
 -    Updated ID credentials sent to the resident via the country’ configured printing and postal service.
 -    Notifications sent to the resident using the email ID and mobile number provided as a part of demographic data collection
 
