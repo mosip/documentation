@@ -1,4 +1,4 @@
-# Partner Management Portal
+# Partner Management Portal [TBD]
 
 ## Overview
 Partner management portal allows the partners to register themselves in MOSIP. With LTS release, the following types of partners can register themselves:
@@ -20,9 +20,13 @@ Partner management portal allows the partners to register themselves in MOSIP. W
 
 A Partner Admin can create Policies that are required for Authentication and Credential partners. In the section below is described the types of policies that are supported by MOSIP.
 
+## Home page
+
+![](_images/pms-home-page.png)
+
 ## POLICIES
 
-Learn more about Policy types, refer ()
+Learn more about Policy types, refer [here](partner-policies.md).
 
 To create policies, policy groups should be defined. Policy groups can be considered as the regulatory bodies in a country, examples could be Telecom, Insurance, Banking, etc.
 
@@ -31,8 +35,7 @@ To create policies, policy groups should be defined. Policy groups can be consid
 - After successful login, on the left navigation pane, click on **Policy -> Policy Group**.
 - The existing policy groups are listed on the screen and the new ones can be created by clicking on **+Create Policy Group**.
 
-[image]
-
+![](_images/pms-policy-groups.png)
 
 
 
