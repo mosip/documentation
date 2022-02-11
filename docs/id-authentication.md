@@ -35,7 +35,7 @@ Learn more about the [Token ID](identifiers.md#token).
 ## Relying parties and policies
 The authentication APIs are consumed by relying parties. They provide services to end user after successfully verifying the identity of their customer. The relying parties can be using the services to perform simple age checks or domicile checks. They could also be open bank accounts and performing KYC process on their customer. Depending on the needs of the relying parties, MOSIP partner management provides features to onboard, authorize and approve policies for access to the authentication services for relying parties. A relying party can request and get access to API keys through the partner management system. These API keys are associated with the policy applicable to the relying party for their use case. A relying party can have multiple policies approved as well as have multiple API keys allocated. This allows them to securely manage access to the authentication services from multiple applications and geographies.
 
-Read more about policies and the partner management workflows.
+Read more about policies and the [partner management](partner-management-services.md) workflows.
 
 ## Consent
 MOSIP has a provision for specifying the user consent associated with an authentication transaction. This can be stored for audit purposes and the authentication flow can be extended to verify the consent if needed.
