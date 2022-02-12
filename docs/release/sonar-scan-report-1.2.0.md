@@ -2,14 +2,14 @@
 
 SonarCloud is used as a tool for deep code analysis, to explore all source files, whether in branches or pull requests, to reach a green Quality Gate and promote the build.
 
-- SonarCloud URL : `https://sonarcloud.io/organizations/mosip/projects`
-- Git Branch : **1.2.0-rc2**
+- SonarCloud URL: `https://sonarcloud.io/organizations/mosip/projects`
+- Git Branch: **1.2.0-rc2**
 
 # LTS Release gates
 
 - Code coverage:  to be maintained greater than or equal to 80%
-- Bugs : There should be no critical bugs open
-- Security Vulnerability : 0
+- Bugs: There should be no critical bugs open
+- Security Vulnerability: 0
 - Security Hotspot: 0
 - Code Duplications to be maintained below 3%
 
@@ -70,6 +70,6 @@ SonarCloud is used as a tool for deep code analysis, to explore all source files
 
 ## Code Duplications
 
-**Target :** Code duplications should be less than 3%
+**Target:** Code duplications should be less than 3%
 
 ![Module Wise Duplicate Code](_images/1.2.0/modulewise_duplicate_code.png)
