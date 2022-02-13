@@ -63,6 +63,7 @@
   * [Code of Conduct](code-of-conduct.md)
 * [Releases](releases.md)
   * 1.2.0
+    * [Enhancements](release/enhancements-1.2.0.md)
     * [Functional Test Report](release/functional-test-report-1.2.0.md)
     * [Sonar Scan Report](release/sonar-scan-report-1.2.0.md)     
 * [License](license.md)
