@@ -6,6 +6,9 @@ $defs:
   digitalId:
     type: string
     description: "[Reference](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#digital-id)."
+  deviceSubId:
+    type: integer
+    description: "[Device SubId](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid)."
   bioType: 
     type: string
     description: 
@@ -103,8 +106,7 @@ $defs:
       deviceId:  
         $ref: '#/$defs/deviceId'
       deviceSubId:
-        type: integer
-        description: "[Device SubId](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid)."
+        $ref: '#/$defs/deviceSubId'
       previousHash:
         type: string
         description: Hash of the previous block.
@@ -134,8 +136,7 @@ $defs:
       deviceId:  
         $ref: '#/$defs/deviceId'
       deviceSubId:
-        type: integer
-        description: "[Device SubId](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid)."
+        $ref: '#/$defs/deviceSubId'
       previousHash:
         type: string
         description: Hash of the previous block.

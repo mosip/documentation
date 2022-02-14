@@ -22,6 +22,8 @@ properties:
      $ref: ./reg-capture-request.yaml
    Registration Capture Response: 
      $ref: ./reg-capture-response.yaml
+   Stream Request:
+     $ref: ./stream-request.yaml
    Device Info:
      $ref: ./device-info.yaml
   
