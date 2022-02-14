@@ -9,7 +9,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 3. Rate of authentication expected.
 4. [Languages](module-configuration.md#languages).
 5. Customsiation and procurement of components as given [here](reference-implementations.md).
-5. [ID schema](id-schema.md) (in commpliance with legal framework).
+5. [ID schema](id-schema.md) (as prescribed by the country's regulatory authority).
 6. Hardware requirements estimate. 
     * [Server side](server-hardware-requirements.md)
     * [Devices](biometric-devices.md#devices-calculator)
