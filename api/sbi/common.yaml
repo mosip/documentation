@@ -102,3 +102,66 @@ $defs:
         type: string
         description: Hash of the previous block.
 
+  captureBiometrics:
+    type: object
+    description:
+    properties:
+      specVersion: 
+        $ref: '#/$defs/specVersion'  
+      data:
+        $ref: '#/$defs/bioData'  
+      hash:
+        type: string
+        description: sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)
+      sessionKey:
+        type: string
+        description: Encrypted with MOSIP public key (dynamically selected based on the uri) and encoded session key biometric"
+      thumbprint:
+        type: string
+        description: SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens
+      error:
+        $ref: '#/$defs/error'     
+
+  bioData:
+    type: object
+    properties:
+      digitalId:
+        type: string
+        description: "[Reference](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#digital-id)."
+      deviceCode: 
+        $ref: '#/$defs/deviceCode'
+      deviceServiceVersion: 
+        type: string
+        description: SBI version
+      bioType: 
+        type: string
+        description: 
+        enum:
+          - Finger
+          - Iris
+          - Face
+      bioSubType: 
+        type: string
+        description: "[Subtypes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype)."
+      purpose: 
+        $ref: '#/$defs/purpose'
+      env: 
+        $ref: '#/$defs/env'
+      domainUri:
+        type: string
+        description: URI of the auth server.
+      bioValue: 
+        type: string
+        description: Encrypted with session key and base64urlencoded biometric data.
+      transactionId: 
+        type: string
+        description: Unique transaction id.
+      timestamp: 
+        type: string
+        description: Capture datetime in ISO format.
+      requestedScore: 
+        type: number
+        description: Floating point number to represent the minimum required score for the capture.
+      qualityScore: 
+        type: number
+        description: Floating point number representing the score for the current capture.

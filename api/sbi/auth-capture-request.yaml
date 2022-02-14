@@ -4,7 +4,6 @@ title: Auth Capture Request
 description: "This request is used to capture a biometric from MOSIP **Authentication** devices.\n\nVerb: **CAPTURE**.\n\nEndpoints:\n\nHTTP:  `/capture`\n\nAndroid:  `appid.capture`\n\nIOS:  `APPIDCAPTURE://<call-back-app-url>?ext=<caller app name>&type=<type as defined in mosip device request>`"
 type: object
 properties:
-properties:
   env:
     $ref: ./common.yaml#/$defs/env
   purpose:

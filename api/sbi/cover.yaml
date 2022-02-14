@@ -16,6 +16,8 @@ properties:
      $ref: ./info-response.yaml
    Auth Capture Request: 
      $ref: ./auth-capture-request.yaml
+   Auth Capture Response:
+     $ref: ./auth-capture-response.yaml
    Device Info:
      $ref: ./device-info.yaml
   
