@@ -1,43 +1,44 @@
 
 ## Commons
 - The reference ID object validator now supports the validation of dynamic field data.
-- The web-sub has been upgraded
-  - To support multiple ballerina servers
-  - To have authentication and authorization for all subscribers and publishers.
-  - It also has a health check feature now.
-- JCE (Java Cryptography Extension) integration in key-manager service has been added.
-- The open ID authentication adaptor has been created to integrate with any open-ID compliant IAM solution
+- The [WebSub](websub.md) has been upgraded
+    * to support multiple ballerina servers.
+    * to have authentication and authorization for all subscribers and publishers.
+    * it also has a health check feature now.
+- JCE (Java Cryptography Extension) integration in Key Manager Service has been added.
+- The open ID authentication adaptor has been created to integrate with any open-ID compliant IAM solution.
 
 ## Admin Services
-- Using the admin portal, the administrator can now enter master data in multiple languages (more than two). Earlier we had a restriction only to run with two languages.
-- For Fetch APIs of some of the non-sensitive master data, authentication has been disabled and caching has been enabled. The master data APIs that are changed: applicant type, blacklisted words, document categories, document types, dynamic fields, exception holidays, gender types, id types, individual types, languages, locations, location hierarchy levels, templates, template type codes, title, valid documents, weekdays, working days, and zones.
-- Using the admin portal, the administrator can now map or unmap a user in keycloak with a centre and zone.
-- Using the admin portal, the administrator can now view the packets that were paused by the registration processor and resume them for further processing.
-- Using the admin portal, the administrator can now add or remove dynamic field data.
-- The UI spec and ID schema are now stored separately in different database tables as well new API has been created to store the UI spec for pre-registration and registration client
+- Using the [Admin portal](admin-portal-user-guide.md), the administrator can now enter master data in multiple languages (more than two). Earlier, we had a restriction to run only with two languages.
+- For Fetch APIs of some of the non-sensitive master data, authentication has been disabled and caching has been enabled. The master data APIs that are changed: applicant type, blocklisted words, document categories, document types, dynamic fields, exception holidays, gender types, id types, individual types, languages, locations, location hierarchy levels, templates, template type codes, title, valid documents, weekdays, working days, and zones.
+- Using the admin portal, the administrator can
+    * map or unmap a user in Keycloak with a center and zone.
+    * view the packets that were paused by the registration processor and resume them for further processing.
+    * add or remove dynamic field data.
+    * retrieve an individual's lost RID or misplaced RID.
+    * control the levels of location hierarchy they require while creating the registration centers. The level of the hierarchy can be configured through configuration property value.
+    * map the users to a registration center and to a zone.
+    * create and update dynamic fields such as Gender, Blood Type, Residence Status, Marital Status etc.
+    * configure the number of kiosks in a particular registration center during the process of creating the registration center.
+- The [UI specification](pre-registration-ui-specifications.md) and [ID schema](id-schema.md) are now stored separately in different database tables as well new API has been created to store the UI spec for pre-registration and registration client
   - UI spec version and ID schema version are independent.
-  - If any new version of UI spec is published then it will not affect the id schema version.
-  - If any new version of ID schema is published then the corresponding version of UI spec needs to be republished or updated.
+  - If any new version of UI spec is published, then it will not affect the ID schema version.
+  - If any new version of ID schema is published, the corresponding version of UI spec needs to be republished or updated.
 - APIs for adding partner ID, individual ID (UIN and VID), and device (serial number, make or model) in the hotlist has been added.
-- Using the admin portal, the administrator can now retrieve an individual's lost RID or misplaced RID.
-- Using the admin portal, the administrator can now control the levels of location hierarchy they required while creating the registration centres. The level of the hierarchy can be configured through configuration property value.
-- Using the admin portal, the administrator can now map the users to a registration centre and to a zone.
-- Using the admin portal, the administrator can now create and update dynamic fields such as Gender, Blood Type, Residence Status, Marital Status etc.
-- Using the admin portal, the administrator can now configure the number of kiosks in a particular registration centre during the process of creating the registration centre.
 
 ## Pre-registration
 - Using the pre-registration, the resident can provide demographic data in multiple languages (more than two). Earlier there was a restriction for only two languages.
-- In the UI spec,
+- In the [UI specifications](pre-registration-ui-specifications.md),
   - “alignmentGroup” property has been added to align multiple UI components horizontally.
   - “changeAction” property has been added to handle custom change actions between two or more UI components.
   - “containerStyle” and “headerStyle” properties have been added to override the default CSS.
   - “transliteration“ property has been added to enable or disable transliteration of an attribute.
   - Language-specific validators have been added.
-  - Support from a date picker & number spinner has been added for date and ageDate control types.
+  - Support from a date picker and number spinner has been added for date and ageDate control types.
   - The document upload screen is now rendered from UI spec.
 - The captcha service has been enhanced and is available now.
 - The application now gets locked once the appointment is booked. Post booking, the application details cannot be modified, but the booking can be cancelled or rescheduled.
-- The notification template now supports having parameters like centre name and centre address.
+- The notification template now supports having parameters like centre name and center address.
 - One single bucket is being created to store all the documents of the resident.
 - During application creation, consent is collected from the resident and stored as a JSON object in the audit table.
 - Pre-registration packets shared during data sync are now being encrypted with the machine-specific TPM public key.
@@ -46,23 +47,24 @@
 - Added support for displaying custom validation messages in UI components. For example, instead of just displaying 'Invalid email' or 'Invalid phone', it can be made more specific like 'Invalid email format' or 'Phone number cannot exceed 10 digits'.
 - The Send OTP button on the login page will be disabled till the OTP expiry time elapses.
 - A pre-registration application will be locked and no further modifications will be allowed on it once an appointment is booked for the same.
-- Registration client will be able to perform an on-demand fetch for pre-registration application irrespective of its booking status.
-- Encryption of Pre-registration data during data sync with Registration Client.
-- Added support for registration centre name and address in the notification template.
+- Registration Client will be able to perform an on-demand fetch for pre-registration application irrespective of its booking status.
+- Encryption of pre-registration data during data sync with Registration Client.
+- Added support for registration center name and address in the notification template.
 - The structure of how the documents were stored in MinIO has been changed. Now we will have a single bucket with different folders for each PRID.
 - The resident's consent is captured as part of the audit table.
 
-## Registration Client
-- Using the registration client, the operator can collect demographic data of residents in multiple languages (more than two). Earlier there was a restriction for only two languages.
-- Using the UI spec, the order of the screens and in which screen what data needs to be captured can be controlled.
-- In the UI spec, the subtype can be set to RID, UIN or VID to perform validation for RID, UIN and VID using the in-build validator libraries.
-- In the UI spec, regex validation for different languages can be added.
-- In the UI spec, support for multiple age groups has been added. 
-- During operator onboarding, the operator’s VID should be stored in keycloak instead of RID for authentication.
+## Registration Client[RC]
+- Using the [Registration Client](registration-client.md), the operator can collect demographic data of residents in multiple languages (more than two). Earlier there was a restriction for only two languages.
+- Using the [UI specifications](registration-client-ui-specifications.md), the order of the screens and in which screen what data needs to be captured can be controlled.
+- In the UI spec,
+    * the sub-type can be set to RID, UIN or VID to perform validation for RID, UIN and VID using the in-build validator libraries.
+    * regex validation for different languages can be added.
+    * support for multiple age groups has been added. 
+- During [operator onboarding](operator-onboarding.md), the operator’s VID should be stored in Keycloak instead of RID for authentication.
 - A control panel has been added in the registration client for biometric devices, non-biometric devices, configurable settings, registration client jobs have been added.
-  - If multiple devices are connected we can set a particular device as the default
-  - For some of the local configurations can be modified by the operator using the settings page
-  - All of the job schedules can be locally modified and the jobs can also be triggered individually
+  - If multiple devices are connected, we can set a particular device as the default.
+  - For some of the local configurations, they can be modified by the operator using the [Settings](registration-client-settings-page.md) page.
+  - All of the job schedules can be locally modified and the jobs can also be triggered individually.
 - All operations on the registration client are now performed based on the local time zone.
 - Any anti-virus or transliteration implementation can be plugged in during the registration client packaging.
 - The GPS and scanner implementation is moved to separate libraries so that countries can customize these implementations.
@@ -73,28 +75,28 @@
   - SDK\_SCORE, to store the score of the biometric SDK
   - EXCEPTION, to mark the biometric type as an exception, here BDB will be empty.
   - CONFIGURED, to store the list of configured attributes in the outer BIR (as per the ID schema)
-- The link for change and forgot password can be configured, so that, from the UI the user can be redirected to the corresponding IAM page to perform these operations.
+- The link for change and forgot password can be configured, so that, from the UI, the user can be redirected to the corresponding IAM page to perform these operations.
 - Packets can be auto-uploaded to the server based on a configuration.
 - There is a regular expression validation in place for multiple languages (earlier the system was able to validate data only for English).
 - We now have a configurable antivirus that is being used during registration client packaging. This virus scanner will be able to run based on the configuration frequency in the background.
-- There is a "settings" page in Registration Client which can be treated as a control panel window page that manages various kinds of settings such as:
+- There is a [Settings page](registration-client-settings-page.md) in Registration Client which can be treated as a control panel window page that manages various kinds of settings such as:
   1. Device selection settings
   1. Sync Settings
   1. Global configuration settings
 - The registration client is now capable of handling multiple time zones, including the local time zone and the UTC.
-- The registration client is now capable of having multiple themes based on the country's choice. This is possible because now there is separate CSS and icons based on the configuration.
-- In the registration client, the ID schema and UI specs are created and stored separately for each flow (like new registration, UIN update, lost ID) which makes sure that in future if any other flow needs to be added, it can be added with zero code change.
-- The registration client now has dynamic layouts and dynamic screens as a single screen should support all Demographic/Documents/Biometrics captured which essentially means that the order of occurrence of the screen is now configurable.
-- When the password of an operator/supervisor is changed in keycloak, the operator will be automatically be logged out if he is already logged in (in online mode) using the old password. In offline mode, the old password can still be used for creating packets, unless the client application has not synced with the server.
-- The registration client works with both SBI v1.0 and MDS v0.9.5. 
+- The RC is now capable of having multiple themes based on the country's choice. This is possible because now there is separate CSS and icons based on the configuration.
+- In the RC, the ID schema and UI specs are created and stored separately for each flow (like new registration, UIN update, lost ID) which makes sure that in future if any other flow needs to be added, it can be added with zero code change.
+- The RC now has the dynamic layouts and dynamic screens as a single screen that supports all Demographic/Documents/Biometrics captured which essentially means that the order of occurrence of the screen is now configurable.
+- When the password of an operator/supervisor is changed in Keycloak, the operator will be automatically be logged out if he/she is already logged in (in online mode) using the old password. In offline mode, the old password can still be used for creating packets, unless the client application has not synced with the server.
+- The RC works with both SBI v1.0 and MDS v0.9.5. 
 
 ## Registration Processor
 - Notifications to users are being sent based on the user preferred language set during registration.
 - The OSI validator stage has been removed and segregated into multiple stages, i.e,
-  - CMD validator stage for verifying centre, machine and device details
-  - Operator validator stage to validate the operator details
-  - Supervisor validator stage to validate the supervisor details
-  - Introducer validator stage to validate the introducer details
+  - CMD validator stage for verifying centre, machine and device details.
+  - Operator validator stage to validate the operator details.
+  - Supervisor validator stage to validate the supervisor details.
+  - Introducer validator stage to validate the introducer details.
 - Based on tagging of packets in the packet classifier stage, rules have been added in the workflow configuration for different age groups (Infant, minor and adult). For example, introducer validation is made mandatory for Infants and minors based on camel workflow.
 - In the quality check stage, the packets having poor quality scores are not being rejected, instead, these packets are tagged for having poor, average or good quality biometrics based on configured thresholds. The final decision to process these packets can be made by the camel workflow.
 - The external integration stage has been moved to reference implementation and is removed from default camel routes and registration processor deployment.
@@ -111,7 +113,7 @@
 - The verticles are grouped together to optimize the CPU usage and are executed as a single-stage using the stage executor. The various stage groups and associated verticles are,
   - Stage group 1: packet receiver stage
   - Stage group 2: quality classifier, secure zone notification, and message sender stage
-  - Stage group 3: abis handler, abis middleware, bio deduplication, and manual verification stage
+  - Stage group 3: ABIS handler, ABIS middleware, bio deduplication, and manual verification stage
   - Stage group 4: biometric authentication, and demo deduplication stage 
   - Stage group 5: cmd validator, operator validator, supervisor validator, introducer validator, and packet validator stage
   - Stage group 6: packet uploader, and packet classifier stage
@@ -121,7 +123,7 @@
 - The pause and resume feature was decoupled from hotlisting feature and modified to support any configured tag.
 - Tagging feature has been enhanced to support more tags on a packet.
 - Certificate thumbprint will be shared as a part of authentication requests for all internal authentications from the registration processor.
-- The registration officer/supervisors userId can now be mapped to VID/UIN in keycloak
+- The registration officer/supervisors userId can now be mapped to VID/UIN in Keycloak
 - An API has been added to the registration processor to find the resident’s lost RID.
 - Readiness and liveliness probes have been created as part of registration processor service discovery and load-balancing features
 - A new flow has been added to the registration processor to support and initiate correction. As a reference implementation, we have added a biometric correction flow.
@@ -129,9 +131,9 @@
 
 ## ID Repository
 - APIs for creating, updating, retrieving and publishing drafts have been added.
-- A job to re-seed all the credentials for a new ID authentication instance or change in data share policy has been added.
+- A job to re-seed all the credentials for a new ID Authentication instance or change in Datashare policy has been added.
 
-## ID Authentication
+## ID Authentication[IDA]
 - IDA is able to re-trigger the issuance of the credential for the missing active UIN or VID in IDA during startup.
 - IDA is able to pull the failed web-sub messages and process them during startup.
 - IDA is able to send notifications to residents based on the preferred language set by the resident during registration.
@@ -159,7 +161,7 @@
 - Every time there is any changes made to the template or title in master data, it will be notified to IDA using web-sub hence updating the cache in IDA.
 - IDA will now verify the device details when the biometric authentication request is received. It will validate the trust of the device provider & FTM partner,  the timestamp in the digital ID, and the status of the device (whether it is active, de-active or hot listed).
 - The system (IDA/ID repo) will have the ability to set an expiry date on a resident's identity record. This expiry date will control if the resident can perform authentication or not.
-- An ID issuer will now be able to store the anonymous profile information of a resident in the ID repo. This data will be stored in JSON format. No PII resident data will be stored as a part of this.
+- An ID issuer will now be able to store the anonymous profile information of a resident in the [ID repository](id-repository.md). This data will be stored in JSON format. No PII resident data will be stored as a part of this.
 
 ## Resident Services
 - The unlock authentication type API has been modified to support auto-lock after x seconds. When the time has passed the authentication type will be auto-locked after the time elapses.
