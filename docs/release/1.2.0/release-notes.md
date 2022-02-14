@@ -59,7 +59,7 @@ As a part of manageability, a fully supported admin and partner management porta
 - [Data](https://github.com/mosip/mosip-data/tree/v1.2.0)
 - [Mock Services](https://github.com/mosip/mosip-mock-services/tree/v1.2.0)
 - [Infra](https://github.com/mosip/mosip-infra/tree/v1.2.0-rc1)
-Test Repositories
+- Test Repositories
   - [Automation Tests](https://github.com/mosip/mosip-automation-tests/tree/v1.2.0)
   - [Functional Tests](https://github.com/mosip/mosip-functional-tests/tree/v1.2.0)
 
