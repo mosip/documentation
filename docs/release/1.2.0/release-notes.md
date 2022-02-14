@@ -37,7 +37,7 @@ As a part of manageability, a fully supported admin and partner management porta
 - [Module-wise features and enhancement](enhancements.md)
 - [Sonar scan report](sonar-scan-report.md)
 - [Functional test report](functional-test-report.md)
-- Performance report
+- [Performance test report](performance-report/performance-test-report.md)
 - [Known issues](https://mosip.atlassian.net/issues/?filter=10911)
 <!-- - Security report -->
 <!-- - Third-party components -->
