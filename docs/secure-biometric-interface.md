@@ -139,4 +139,4 @@ Code | Message
 5xx | Custom error codes implemented by [Device Provider](https://docs.mosip.io/1.2.0/partners#partner-types). 
 
 ## API
-_This section is being upgraded_.
+_This section is being updated_.
