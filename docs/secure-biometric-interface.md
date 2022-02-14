@@ -1,5 +1,7 @@
 # Secure Biometric Inteface (SBI)
 
+_THIS DOCUMENT IS BEING UPDATED_.
+
 ## Revision history
 |Version|Status|Date|
 |---|---|---|
