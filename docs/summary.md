@@ -66,6 +66,7 @@
     * [Enhancements](release/1.2.0/enhancements.md)
     * [Functional Test Report](release/1.2.0/functional-test-report.md)
     * [Sonar Scan Report](release/1.2.0/sonar-scan-report.md)
+    * [Performance Test Report](release/1.2.0/performance-report/performance-test-report.md)
   * [MOSIP Support Policy](support-policy.md)
 * [License](license.md)
    
