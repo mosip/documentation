@@ -51,7 +51,7 @@ To know more about the functions present in the Home page of the RC, refer to [R
 Based on the [ID Schema][id-schema.md], the RC can be customized as per a country' requirements. For details related to RC configurations, refer to [RC configuration](registration-client-configuration.md).
 
 ## UI Specifications for registration tasks 
-Default UI Specifications loaded with sandbox installation is available [here](https://github.com/mosip/mosip-infra/blob/1.2.0-rc2/deployment/v3/mosip/kernel/masterdata/xlsx/ui_spec.xlsx).
+Default UI Specifications loaded with sandbox installation is available [here](https://github.com/mosip/mosip-infra/blob/release-1.2.0/deployment/v3/mosip/kernel/masterdata/xlsx/ui_spec.xlsx).
 
 ## Source code 
 [Github repo](https://github.com/mosip/registration-client/tree/release-1.2.0).

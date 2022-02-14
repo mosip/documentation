@@ -43,7 +43,7 @@ ID Authentication needs the below [keys](keys.md) to be generated during the dep
 
 This is a reference application to demonstrate how authentication and KYC can be performed by [Authentication Partners](partners.md#partner-types). 
 
-Refer to the [repository](https://github.com/mosip/authentication-demo-ui/tree/1.2.0-rc2) for more details.
+Refer to the [repository](https://github.com/mosip/authentication-demo-ui/tree/release-1.2.0) for more details.
 
 Below is the sample authentication demo UI image.
 
@@ -53,10 +53,10 @@ Below is the sample authentication demo UI image.
 Refer to [ID Authentication Configuration Guide](https://github.com/mosip/id-authentication/blob/release-1.2.0/docs/configuration.md).
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
+Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
 
 ## Source code 
-[Github repo](https://github.com/mosip/id-authentication/tree/1.2.0-rc2).
+[Github repo](https://github.com/mosip/id-authentication/tree/release-1.2.0).
 
 
 

@@ -8,7 +8,7 @@ In MOSIP WebSub is used to share data with services and partners.  [Kafka](https
 
 ![](_images/websub.png)
 
-Refer [WebSub repo](https://github.com/mosip/websub/tree/1.2.0-rc2) for further details.
+Refer [WebSub repo](https://github.com/mosip/websub/tree/release-1.2.0) for further details.
 
 
 

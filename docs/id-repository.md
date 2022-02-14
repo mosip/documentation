@@ -93,11 +93,11 @@ This is a one-time job that populates salts that are used to hash and encrypt da
 * `uin_hash_salt` in `mosip_idrepo` DB.
 * `uin_encrypt_salt` in `mosip_idmap` DB.
 
-In MOSIP sandbox the job is run [here](https://github.com/mosip/mosip-infra/blob/1.2.0-rc2/deployment/v3/mosip/idrepo/install.sh).
+In MOSIP sandbox the job is run [here](https://github.com/mosip/mosip-infra/blob/release-1.2.0/deployment/v3/mosip/idrepo/install.sh).
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
+Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
 
 ## Source code 
-[Github repo](https://github.com/mosip/id-repository/tree/1.2.0-rc2).
+[Github repo](https://github.com/mosip/id-repository/tree/release-1.2.0).
 

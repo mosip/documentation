@@ -12,7 +12,7 @@ ABIS is used for 1:N deduplication. For 1:1 authentication [Biometric SDK](biome
 ![](_images/abis.png)
 
 ## MOSIP-ABIS interface
-MOSIP interacts with ABIS only via message queues. JSON format is used for all control messages in the queue. MOSIP [ABIS middleware](https://github.com/mosip/registration/tree/1.2.0-rc2/registration-processor/core-processor/registration-processor-abis-middleware-stage) sends requests to inbound queue address and receives responses from outbound queue address.
+MOSIP interacts with ABIS only via message queues. JSON format is used for all control messages in the queue. MOSIP [ABIS middleware](https://github.com/mosip/registration/tree/release-1.2.0/registration-processor/core-processor/registration-processor-abis-middleware-stage) sends requests to inbound queue address and receives responses from outbound queue address.
 ABIS must comply to the interface defined in [ABIS API Specifications](abis-api.md)
 
 ABIS must support the following types of biometric images:

@@ -43,23 +43,23 @@ The relationship of pre-registration module  with other services is explained he
 1. Fetch [ID Schema](id-schema) details.
 2. Fetch a new OTP for the user in login page.
 3. Log all events.
-4. Pre-Registration interacts with Keycloak via [`kernel-auth-adapater`](https://github.com/mosip/mosip-openid-bridge/tree/1.2.0-rc2).
+4. Pre-Registration interacts with Keycloak via [`kernel-auth-adapater`](https://github.com/mosip/mosip-openid-bridge/tree/release-1.2.0).
 5. Database used by pre-reg.
 6. Generate a new [PRID](identifiers.md#prid) for the application.
 7. Send OTP in the email/sms to the user.
 8. Registration Processor uses reverse sync to mark the pre-reg application as consumed.
-9. Registration clients uses [Datasync service](https://github.com/mosip/pre-registration/tree/1.2.0-rc2/pre-registration/pre-registration-datasync-service) to get the pre-reg application details for a given registration center, booking date and PRID.
+9. Registration clients uses [Datasync service](https://github.com/mosip/pre-registration/tree/release-1.2.0/pre-registration/pre-registration-datasync-service) to get the pre-reg application details for a given registration center, booking date and PRID.
 10. Fetch data for dropdowns, locations, consent form etc.
 
 ## Services
 
 Pre-registration module consists of the following services:
-* [Application](https://github.com/mosip/pre-registration/tree/1.2.0-rc2/pre-registration/pre-registration-application-service)
-* [Booking](https://github.com/mosip/mosip-ref-impl/tree/1.2.0-rc2/pre-registration-booking-service)
-* [Batchjob](https://github.com/mosip/pre-registration/tree/1.2.0-rc2/pre-registration/pre-registration-batchjob)
+* [Application](https://github.com/mosip/pre-registration/tree/release-1.2.0/pre-registration/pre-registration-application-service)
+* [Booking](https://github.com/mosip/mosip-ref-impl/tree/release-1.2.0/pre-registration-booking-service)
+* [Batchjob](https://github.com/mosip/pre-registration/tree/release-1.2.0/pre-registration/pre-registration-batchjob)
 
-* [Datasync](https://github.com/mosip/pre-registration/tree/1.2.0-rc2/pre-registration/pre-registration-datasync-service)
-* [Captcha](https://github.com/mosip/pre-registration/tree/1.2.0-rc2/pre-registration/pre-registration-captcha-service)
+* [Datasync](https://github.com/mosip/pre-registration/tree/release-1.2.0/pre-registration/pre-registration-datasync-service)
+* [Captcha](https://github.com/mosip/pre-registration/tree/release-1.2.0/pre-registration/pre-registration-captcha-service)
 
 For more details, refer to [pre-registration repo](https://github.com/pjoshi751/pre-registration/tree/develop)
 
@@ -74,7 +74,7 @@ To access the build and read through the deployment instructions, refer to [pre-
 For details related to pre-registration configurations, refer to [pre-registration configuration](https://github.com/pjoshi751/pre-registration/blob/develop/docs/configuration.md).
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html)
+Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html)
 
 ## Source code 
-[Github repo](https://github.com/mosip/pre-registration/tree/1.2.0-rc2)
+[Github repo](https://github.com/mosip/pre-registration/tree/release-1.2.0)

@@ -3,7 +3,7 @@
 ## Overview
 Hardware Security Module (HSM) is a highly secure physical device specifically designed and used for crypto processing and strong authentication. It encrypts, decrypts, creates, stores and manages digital keys, and is used for signing and authentication.  HSMs may be accessed via PKCS11 and JCE interfaces.
 
-To simulate HSM, default sandbox installation uses [SoftHSM](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/external/hsm/softhsm). SoftHSM supports PKCS11, but not JCE.
+To simulate HSM, default sandbox installation uses [SoftHSM](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3/external/hsm/softhsm). SoftHSM supports PKCS11, but not JCE.
 
 ## JCE
 JCE is Java keystore class implementation that connects to HSMs. JCE support is provided by HSM vendors.

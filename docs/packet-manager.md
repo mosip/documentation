@@ -25,10 +25,10 @@ The relationship of Packet Manager with other services is explained here. _NOTE:
 Refer [Registration Packet Structure](registration-packet-structure.md).
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
+Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
 
 ## Source code 
-[Github repo](https://github.com/mosip/packet-manager/tree/1.2.0-rc2).
+[Github repo](https://github.com/mosip/packet-manager/tree/release-1.2.0).
 
 
 

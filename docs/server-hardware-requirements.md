@@ -7,7 +7,7 @@ MOSIP deployment is split into two distinct parts:
    * Registration
 2. [ID Authentication](id-authentication.md)
 
-The server side hardware estimates for the above are specified at a high level in terms of **compute** (Virtual CPU, RAM) and **storage** requirements.  We provide estimates for [MOSIP core modules](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/mosip) only. [External components](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3/external) are not in the scope. See [Exclusions](#exclusions).
+The server side hardware estimates for the above are specified at a high level in terms of **compute** (Virtual CPU, RAM) and **storage** requirements.  We provide estimates for [MOSIP core modules](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3/mosip) only. [External components](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3/external) are not in the scope. See [Exclusions](#exclusions).
 
 The variables that largely determine the hardware requirements are:
 1. Population of a country
@@ -47,7 +47,7 @@ Storage is dependent on population of a country (i.e. the number of UINs to be i
 |---|:---:|---|
 |[Object Store](storage.md#object-store) (S3/Minio)|3200 GB/million packets/replication|Replication factor to be applied based on replication strategy|
 |Postgres storage|30 GB/million packets|Includes all databases|
-|[Landing zone](https://github.com/mosip/registration/blob/1.2.0-rc2/registration-processor/init/registration-processor-packet-receiver-stage/README.md#landing-zone)|Unprocessed packets X avg packet size|The size of landing zone depends on the estimated lag in packet processing and packet uploads. Once UINs are issued, the packets may be removed from the landing zone as a copy is already saved in Object Store| 
+|[Landing zone](https://github.com/mosip/registration/blob/release-1.2.0/registration-processor/init/registration-processor-packet-receiver-stage/README.md#landing-zone)|Unprocessed packets X avg packet size|The size of landing zone depends on the estimated lag in packet processing and packet uploads. Once UINs are issued, the packets may be removed from the landing zone as a copy is already saved in Object Store| 
 |Logs (Elasticsearch)| 80 GB/day|Logs maybe archived after, say, 2 weeks|
 |Monitoring (Prometheus)|1.2 GB/day||
 |Kafka|TBD||

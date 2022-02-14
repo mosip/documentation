@@ -6,8 +6,8 @@ MOSIP provides automation test repositories for the following:
 
 * [Admin UI](https://github.com/mosip/admin-ui/tree/release-1.2.0/admintest)
 * [Registration Client](https://github.com/mosip/registration-client/tree/release-1.2.0/registration/registration-test)
-* [Functional Tests](https://github.com/mosip/mosip-functional-tests/tree/1.2.0-rc2)
-* [Automation Tests](https://github.com/mosip/mosip-automation-tests/tree/1.2.0-rc2)
+* [Functional Tests](https://github.com/mosip/mosip-functional-tests/tree/release-1.2.0)
+* [Automation Tests](https://github.com/mosip/mosip-automation-tests/tree/release-1.2.0)
 
 ### Admin UI
 Selenium webdriver based Admin Portal Automation covers CRUD (create, read, update and delete) operation performed via UI with Chrome driver.

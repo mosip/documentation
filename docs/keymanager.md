@@ -111,10 +111,10 @@ We strongly recommend that you store the encryption key outside Key Manager serv
 *	REG_PROC sends request to decrypt the data to Key Manager service with same app_id and ref_id.
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
+Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
 
 ## Source code 
-[Github repo](https://github.com/mosip/keymanager/tree/1.2.0-rc2).
+[Github repo](https://github.com/mosip/keymanager/tree/release-1.2.0).
 
 
 

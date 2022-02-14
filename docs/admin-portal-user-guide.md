@@ -18,7 +18,7 @@ To get started with using the Admin portal, an admin user must be assigned to a 
 3. Create first admin user in KeyCloak
 4. Assign first user to root zone 
 
-The above are done automatically as part of [default sandbox installation](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3).
+The above are done automatically as part of [default sandbox installation](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3).
 
 ### Login
 

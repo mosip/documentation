@@ -61,7 +61,7 @@ The sections below describe onboarding process for each type of partner.
 1. CP self-registers on PMS portal providing partner id, name, organisation name (same as in certificate), partner type (`Credential_Partner`) etc.
 1. CP uploades all certificates.
 1. CP selects the policy group and policy. 
-1. CP maps policy to one of the supported [credential types](https://github.com/mosip/id-repository/tree/1.2.0-rc2/id-repository/credential-service).
+1. CP maps policy to one of the supported [credential types](https://github.com/mosip/id-repository/tree/release-1.2.0/id-repository/credential-service).
 1. CP adds biometric extractors for the policy.
 
 ### Online Verification Partner (OVP)
@@ -70,7 +70,7 @@ The sections below describe onboarding process for each type of partner.
 1. OVP self-registers on PMS portal providing partner id, name, organisation name (same as in certificate), partner type (`Credential_Partner`) etc. _(Using APIs, as OVP support on PMS Portal is available in later version of MOSIP.)_
 1. OVP uploades all certificates.
 1. OVP selects the policy group and policy. 
-1. OVP maps policy to `auth` [credential type](https://github.com/mosip/id-repository/tree/1.2.0-rc2/id-repository/credential-service).
+1. OVP maps policy to `auth` [credential type](https://github.com/mosip/id-repository/tree/release-1.2.0/id-repository/credential-service).
 1. OVP adds biometric extractors for the policy.
 
 ## MOSIP Partner Program

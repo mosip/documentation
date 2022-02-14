@@ -35,7 +35,7 @@ _Note: The numbers do not signify sequence of operations or the control flow._
 For detailed description of Resident Services, code and design, refer to [resident services repo](https://github.com/mosip/resident-services/tree/release-1.2.0).
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
+Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
 
 ## Source code 
 [Github repo](https://github.com/mosip/resident-services/tree/release-1.2.0).

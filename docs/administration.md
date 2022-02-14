@@ -33,10 +33,10 @@ Deactivation refers to a temporary shutdown. This means that the resource will n
  *Note- Activation/Deactivation/Decommission of a center in one language will be applied to the same center created in all the languages.*
 
 ## Services
-1. [Admin Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/admin-service)
-2. [Hotlist Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/hotlist-service)
-3. [kernel Masterdata Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/kernel-masterdata-service)
-4. [Kernel Syncdata Service](https://github.com/mosip/admin-services/tree/1.2.0-rc2/admin/kernel-syncdata-service)
+1. [Admin Service](https://github.com/mosip/admin-services/tree/release-1.2.0/admin/admin-service)
+2. [Hotlist Service](https://github.com/mosip/admin-services/tree/release-1.2.0/admin/hotlist-service)
+3. [kernel Masterdata Service](https://github.com/mosip/admin-services/tree/release-1.2.0/admin/kernel-masterdata-service)
+4. [Kernel Syncdata Service](https://github.com/mosip/admin-services/tree/release-1.2.0/admin/kernel-syncdata-service)
 
 ## Frontend- Admin portal
 Reference implementation of the Admin portal is available in [admin-ui](https://github.com/mosip/admin-ui/tree/master) repository.
@@ -44,7 +44,7 @@ Reference implementation of the Admin portal is available in [admin-ui](https://
 To know more, refer to the [Admin portal user guide](admin-portal-user-guide.md).
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/1.2.0-rc2/1.2.0-rc2.html).
+Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
 
 ## Source code 
-[Github repo](https://github.com/mosip/admin-services/tree/1.2.0-rc2).
+[Github repo](https://github.com/mosip/admin-services/tree/release-1.2.0).
