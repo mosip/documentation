@@ -6,6 +6,13 @@ $defs:
   digitalId:
     type: string
     description: "[Reference](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#digital-id)."
+  bioType: 
+    type: string
+    description: 
+    enum:
+      - Finger
+      - Iris
+      - Face
   specVersion:
     type: array
     description: Supported SBI versions.
@@ -102,6 +109,37 @@ $defs:
         type: string
         description: Hash of the previous block.
 
+  bioRCapture:
+    type: object
+    properties:
+      type: 
+        description: Type of the biometric data.
+        type: string
+      count:
+        description: Finger/iris count. 1 in case of face.
+        type: integer
+      bioSubType:
+        description: "[Subtypes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype)."
+        type: array
+        items:
+          type: string
+      exception:
+        type: array
+        description: "Array of [Subtypes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype)."
+        items:
+          type: string
+      requestedScore:
+        description: 
+        type: string
+      deviceId:  
+        $ref: '#/$defs/deviceId'
+      deviceSubId:
+        type: integer
+        description: "[Device SubId](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid)."
+      previousHash:
+        type: string
+        description: Hash of the previous block.
+
   captureBiometrics:
     type: object
     description:
@@ -122,6 +160,20 @@ $defs:
       error:
         $ref: '#/$defs/error'     
 
+  rCaptureBiometrics:
+    type: object
+    description:
+    properties:
+      specVersion: 
+        $ref: '#/$defs/specVersion'  
+      data:
+        $ref: '#/$defs/rBioData'  
+      hash:
+        type: string
+        description: sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)
+      error:
+        $ref: '#/$defs/error'     
+
   bioData:
     type: object
     properties:
@@ -134,12 +186,7 @@ $defs:
         type: string
         description: SBI version
       bioType: 
-        type: string
-        description: 
-        enum:
-          - Finger
-          - Iris
-          - Face
+        $ref: '#/$defs/bioType'
       bioSubType: 
         type: string
         description: "[Subtypes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype)."
@@ -150,6 +197,42 @@ $defs:
       domainUri:
         type: string
         description: URI of the auth server.
+      bioValue: 
+        type: string
+        description: Encrypted with session key and base64urlencoded biometric data.
+      transactionId: 
+        type: string
+        description: Unique transaction id.
+      timestamp: 
+        type: string
+        description: Capture datetime in ISO format.
+      requestedScore: 
+        type: number
+        description: Floating point number to represent the minimum required score for the capture.
+      qualityScore: 
+        type: number
+        description: Floating point number representing the score for the current capture.
+
+  rBioData:
+    type: object
+    properties:
+      digitalId:
+        type: string
+        description: "[Reference](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#digital-id)."
+      bioType: 
+        $ref: '#/$defs/bioType'
+      deviceCode: 
+        $ref: '#/$defs/deviceCode'
+      deviceServiceVersion: 
+        type: string
+        description: SBI version
+      bioSubType: 
+        type: string
+        description: "[Subtypes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype)."
+      purpose: 
+        $ref: '#/$defs/purpose'
+      env: 
+        $ref: '#/$defs/env'
       bioValue: 
         type: string
         description: Encrypted with session key and base64urlencoded biometric data.

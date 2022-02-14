@@ -18,6 +18,10 @@ properties:
      $ref: ./auth-capture-request.yaml
    Auth Capture Response:
      $ref: ./auth-capture-response.yaml
+   Registration Capture Request: 
+     $ref: ./reg-capture-request.yaml
+   Registration Capture Response: 
+     $ref: ./reg-capture-response.yaml
    Device Info:
      $ref: ./device-info.yaml
   
