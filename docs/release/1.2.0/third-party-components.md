@@ -6,17 +6,16 @@ In MOSIP, we have multiple third party components. Here, are the list of third p
 |Deployment Script Environment |	CentOS on AWS |
 |Registration Client – OS version |	Windows 10 (English version)  with TPM 2.0|
 |Camera |	Logitech |
-|Scanner | Canon lide 120 |
-|GPS | GlobalSat BU-353-S4 |
+|Fingerprint Slap Scanner| |
+|Double Iris Scanner||
+|Single Finger Scanner| |
+|Document Scanner | Canon lide 120 |
 |Biometrics Standard |	CBEFF format (Version - 2.0)|
 |MOSIP Device Service (MDS) |	Version - 0.9.5 |
 |Secure Biometric Interface | Version - 1.0 |
-|SMS gateway |	MSG91, Infobip |
-|Registration Client – face capture |	OpenImaj - This is licensed for demo purpose only|
 |Keystore| SoftHSM |
 |Antivirus|	ClamAV |
-|Maps	| OpenstreetMap |
-|HSM| SoftHSM |	
+|Maps	| OpenstreetMap |	
 |Transliteration |	ICU4J (Library with French, Arabic languages)|
-|ABIS | TECH5 ABIS version v2.0.5| 
-|SDK | Identy SDK version v0.0.0.9|
+|ABIS | Tech5 ABIS version v2.0.5| 
+|SDK | Tech5 SDK version v0.0.0.9|
