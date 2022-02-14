@@ -24,7 +24,7 @@ A Partner Admin can create Policies that are required for Authentication and Cre
 
 ![](_images/pms-home-page.png)
 
-## POLICIES
+## Policies
 
 Learn more about Policy types, refer [here](partner-policies.md).
 

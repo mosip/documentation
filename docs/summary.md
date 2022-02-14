@@ -62,10 +62,12 @@
   * [Contributions](contributions.md)
   * [Code of Conduct](code-of-conduct.md)
 * [Releases](releases.md)
-  * 1.2.0
-    * [Enhancements](release/enhancements-1.2.0.md)
-    * [Functional Test Report](release/functional-test-report-1.2.0.md)
-    * [Sonar Scan Report](release/sonar-scan-report-1.2.0.md)     
+  * [1.2.0](release/1.2.0/release-notes.md)
+    * [Enhancements](release/1.2.0/enhancements.md)
+    * [Functional Test Report](release/1.2.0/functional-test-report.md)
+    * [Sonar Scan Report](release/1.2.0/sonar-scan-report.md)
+    * [Performance Test Report](release/1.2.0/performance-report/performance-test-report.md)
+  * [MOSIP Support Policy](support-policy.md)
 * [License](license.md)
    
 

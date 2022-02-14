@@ -1,4 +1,4 @@
-# Module Configuration
+# Module Configuration [TBD]
 
 ## Overview
 Properties that are shared across all modules are written in file [`application-default.properties`](https://github.com/mosip/mosip-config/blob/release-1.2.0/application-default.properties). 

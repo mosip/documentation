@@ -17,7 +17,7 @@ SonarCloud is used as a tool for deep code analysis, to explore all source files
 
 **Target :** Code coverage to be maintained greater than or equal to 80%
 
-![Module Wise Code Coverage](_images/1.2.0/modulewise_code_coverage.png)
+![Module Wise Code Coverage](../_images/1.2.0/modulewise_code_coverage.png)
 
 |**Module Name**|**Code Coverage**|
 | :- | :- |
@@ -36,7 +36,7 @@ SonarCloud is used as a tool for deep code analysis, to explore all source files
 
 **Target:**  There should be no critical bugs open
 
-![Module Wise Bugs and Target](_images/1.2.0/modulewise_bugs_and_target.png)
+![Module Wise Bugs and Target](../_images/1.2.0/modulewise_bugs_and_target.png)
 
 |**Module Name**|**Bugs Count**|
 | :- | :- |
@@ -54,7 +54,7 @@ SonarCloud is used as a tool for deep code analysis, to explore all source files
 
 **Target:** There should be no security vulnerabilities and hotspots
 
-![Module Wise Secury Vulnerabbilities and Hotspots](_images/1.2.0/modulewise_securiy_vulnerabilities_hotspots.png)
+![Module Wise Secury Vulnerabbilities and Hotspots](../_images/1.2.0/modulewise_securiy_vulnerabilities_hotspots.png)
 
 |**Module Name**|**Vulnerabilities**|**Hotspots**|
 | :- | :- | :- |
@@ -72,4 +72,4 @@ SonarCloud is used as a tool for deep code analysis, to explore all source files
 
 **Target:** Code duplications should be less than 3%
 
-![Module Wise Duplicate Code](_images/1.2.0/modulewise_duplicate_code.png)
+![Module Wise Duplicate Code](../_images/1.2.0/modulewise_duplicate_code.png)
