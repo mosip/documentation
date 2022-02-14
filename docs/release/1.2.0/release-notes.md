@@ -38,6 +38,6 @@ As a part of manageability, a fully supported admin and partner management porta
 - [Sonar scan report](sonar-scan-report.md)
 - [Functional test report](functional-test-report.md)
 - Performance report
-<!-- - Security report -->
 - Known issues
+<!-- - Security report -->
 <!-- - Third-party components -->
