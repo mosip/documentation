@@ -53,7 +53,7 @@
 - The structure of how the documents were stored in MinIO has been changed. Now we will have a single bucket with different folders for each PRID.
 - The resident's consent is captured as part of the audit table.
 
-## Registration Client[RC]
+## Registration Client [RC]
 - Using the [Registration Client](registration-client.md), the operator can collect demographic data of residents in multiple languages (more than two). Earlier there was a restriction for only two languages.
 - Using the [UI specifications](registration-client-ui-specifications.md), the order of the screens and in which screen what data needs to be captured can be controlled.
 - In the UI spec,
@@ -133,7 +133,7 @@
 - APIs for creating, updating, retrieving and publishing drafts have been added.
 - A job to re-seed all the credentials for a new ID Authentication instance or change in Datashare policy has been added.
 
-## ID Authentication[IDA]
+## ID Authentication [IDA]
 - IDA is able to re-trigger the issuance of the credential for the missing active UIN or VID in IDA during startup.
 - IDA is able to pull the failed web-sub messages and process them during startup.
 - IDA is able to send notifications to residents based on the preferred language set by the resident during registration.
