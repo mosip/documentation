@@ -14,9 +14,6 @@ As the name suggests, Commons refers to all the common services (also called "ke
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html)
 
-## Source code 
-[Github repo](https://github.com/mosip/commons/tree/release-1.2.0)
-
 
 
 
