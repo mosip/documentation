@@ -76,7 +76,7 @@ The sections below describe onboarding process for each type of partner.
 ## MOSIP Partner Program
 The MOSIP Partner Programme (MPP) was initiated to help stakeholders connect with MOSIP, and become part of an ecosystem invested in building foundational digital ID systems that are trustworthy, secure, efficient, and interoperable, while being customised to specific needs. 
 
-Refer MPP document [here](https://www.mosip.io/uploads/resources/60914c1597184Program-partner-V7.pdf) for further details.
+Refer [MPP document](https://www.mosip.io/uploads/resources/60914c1597184Program-partner-V7.pdf) for further details.
 
 ## PMS module
 Refer [Partner Management Services](partner-management-services.md).
