@@ -30,7 +30,7 @@ $defs:
   deviceId:
     type: string
     description: Internal ID of the device
-  environment:
+  env:
     type: string
     description: Target environment.
     enum:
@@ -75,3 +75,30 @@ $defs:
       errorInfo: 
         type: string
         description: ""
+
+  bio:
+    type: object
+    properties:
+      type: 
+        description: Type of the biometric data.
+        type: string
+      count:
+        description: Finger/iris count. 1 in case of face.
+        type: integer
+      bioSubType:
+        description: "[Subtypes](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype)."
+        type: array
+        items:
+          type: string
+      requestedScore:
+        description: 
+        type: string
+      deviceId:  
+        $ref: '#/$defs/deviceId'
+      deviceSubId:
+        type: integer
+        description: "[Device SubId](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid)."
+      previousHash:
+        type: string
+        description: Hash of the previous block.
+
