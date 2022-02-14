@@ -83,7 +83,7 @@ jobs:
 
       - name: Update index html file
         run: |
-          if grep -q ${{ github.event.inputs.git-ref }} index.html; then
+          if grep -q ${{ github.event.inputs.git-ref }} ${{ github.event.inputs.git-ref }}.html; then
             echo "Already one entry"
           else
             sed  '/<ul>/a \\t<li><a href="${{ github.event.inputs.git-ref }}/${{ github.event.inputs.git-ref }}.html" style="font-family:verdana;">MOSIP ${{ github.event.inputs.git-ref }}</a></li>' index.html > temp.html && mv temp.html index.html
