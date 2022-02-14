@@ -139,4 +139,4 @@ Code | Message
 5xx | Custom error codes implemented by [Device Provider](https://docs.mosip.io/1.2.0/partners#partner-types). 
 
 ## API
-Refer to [SBI API documentation](https://mosip.github.io/documentation/release-1.2.0/sbi.html).
+_This section is being upgraded_.
