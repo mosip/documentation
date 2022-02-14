@@ -1,5 +1,7 @@
 # Biometric Devices [TBD]
 
+_THIS DOCUMENT IS BEING UPDATED_.
+
 ## Overview
 Biometric devices capture individuals biometric data (fingerprint, iris scan, photo) and send it to a registration client or authentication client (app). The functional architecture of various entities involved is shown below.
 

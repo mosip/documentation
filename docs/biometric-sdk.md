@@ -1,5 +1,7 @@
 # Biometric SDK [TBD]
 
+_THIS DOCUMENT IS BEING UPDATED_.
+
 ## Overview
 
 ![](_images/sdk.png)

@@ -68,10 +68,13 @@ VID Service provides functionality to create/update Virtual IDs mapped against a
 
 ### Credential types
 
-Credential types represents the credential issuance policy to each partner. It identifies the credential data that needs to be sent back to partners along with the shareable properties.
+A credential can be defined as any document, object, or data structure that vouches for the identity of a person through some method of trust and authentication. Simply put, a credential is the thing that a person presents—in person or remotely—to say "this is who I am." The types of credentials issued in an ID system vary along multiple dimensions, depending on  whether they are physical (i.e., they must be physically carried by a person in order to use them), or digital (i.e., they are machine readable and therefore can be used in a digital environment). 
 
-Default supported credential types are:
-1. `auth`: It is used to issue credential data to authentication partners using auth policy.
+A credential type essentially maps to partner and data share policy.  
+
+Default credential types provided:
+1. `auth`: Represents individual's data shared with Online Verification Partners (further used for Authentication and eKYC). 
+
 2. `qrcode`: qrcode type is used for qrcode partners to issue qrcode related credential data.
 3. `euin`: It is used to issue credential data to partners who wish to download euin card using euin policy.
 4. `reprint`: Reprint auth type is used for issuing credential information to reprint partners.
