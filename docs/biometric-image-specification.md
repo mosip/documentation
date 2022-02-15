@@ -20,7 +20,7 @@ Preview | > 3 FPS M-JPEG frames with NFIQ 2.0 score superimposed | Not Applicabl
 ESD | >= 8kv | >= 8kv
 EMC Compliance | FCC class A or equivalent | FCC class A or equivalent
 Operating Temperature |0 to 50 &deg;C | 0 to 50 &deg;C
-FTM |[SBI 1.0](secure-biometric-interface.md#sbi-1.0) | [SBI 2.0](secure-biometric-interface.md#sbi-2.0)|
+FTM |[SBI CL 1.0](secure-biometric-interface.md#sbi-cl-1.0) | [SBI CL 2.0](secure-biometric-interface.md#sbi-cl-2.0)|
 
 \* MOSIP adopters may change this if needed.
 
@@ -46,7 +46,7 @@ Scan Type | Progressive | Progressive
 Preview	| >= 3 FPS M-JPEG frames with quality score superimposed | Not Applicable
 EMC compliance | FCC Class A or equivalent | FCC Class A or equivalent
 Operating Temperature\* | 0 to 50 &deg;C | 0 to &deg;50 C
-FTM |[SBI 1.0](secure-biometric-interface.md#sbi-1.0) | [SBI 2.0](secure-biometric-interface.md#sbi-2.0)|
+FTM |[SBI CL 1.0](secure-biometric-interface.md#sbi-cl-1.0) | [SBI CL 2.0](secure-biometric-interface.md#sbi-cl-2.0)|
 
 \* MOSIP adopters may change this if needed.
 
@@ -64,7 +64,7 @@ Image format | JPEG 2000 Lossless | JPEG 2000 Lossy
 Compression Ratio | Lossless | Up to 15:1
 EMC compliance | FCC Class A or equivalent | FCC Class A or equivalent	
 Operation Temperature\*	| 0 to 50 &deg;C | 0 to 50 &deg;C
-FTM | [SBI 1.0](secure-biometric-interface.md#sbi-1.0) | [SBI 2.0](secure-biometric-interface.md#sbi-2.0)|
+FTM | [SBI CL 1.0](secure-biometric-interface.md#sbi-cl-1.0) | [SBI CL 2.0](secure-biometric-interface.md#sbi-cl-2.0) |
 
 Capture Time across modalities should be less than 4 seconds (time taken for providing a final capture response to the calling application, when the biometrics are well placed on the sensors)
 
