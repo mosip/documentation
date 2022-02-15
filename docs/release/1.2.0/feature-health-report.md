@@ -10,7 +10,7 @@ This document illustates the module wise features in MOSIP 1.2.0 and their funct
 
 
 ## Pre-registration
-|Test Sceanrio | Status |
+|Feature | Status |
 |:- | :-: |
 |Login using email OTP |![](../_images/1.2.0/check.png)|
 |Login using SMS OTP |![](../_images/1.2.0/n.png)|
@@ -30,7 +30,7 @@ This document illustates the module wise features in MOSIP 1.2.0 and their funct
 |Audit |![](../_images/1.2.0/check.png)|
 
 ## Registration Client
-|Test Sceanrio | Status |
+|Feature | Status |
 |:- | :-: |
 |Master data sync |![](../_images/1.2.0/check.png)|
 |First user onboarding |![](../_images/1.2.0/check.png)|
@@ -65,7 +65,7 @@ This document illustates the module wise features in MOSIP 1.2.0 and their funct
 |Audit |![](../_images/1.2.0/n.png) |
 
 ## Registration Processor
-|Test Sceanrio | Status |
+|Feature | Status |
 |:- | :-: |
 |Demo - De-duplication |![](../_images/1.2.0/check.png)|
 |Biometric - De-duplication |![](../_images/1.2.0/check.png)|
@@ -78,7 +78,7 @@ This document illustates the module wise features in MOSIP 1.2.0 and their funct
 |Biometric correction |![](../_images/1.2.0/check.png)|
 
 ## ID Authentication
-|Test Sceanrio | Status |
+|Feature | Status |
 |:- | :-: |
 |Auth (Bio/Demo/OTP) using UIN |![](../_images/1.2.0/check.png)|
 |Auth (Bio/Demo/OTP) using VID |![](../_images/1.2.0/check.png)|
@@ -95,7 +95,7 @@ This document illustates the module wise features in MOSIP 1.2.0 and their funct
 |Audit |![](../_images/1.2.0/check.png)|
 
 ## Resident Services
-|Test Sceanrio | Status |
+|Feature | Status |
 |:- | :-: |
 |Update demo details|![](../_images/1.2.0/remove.png)|
 |View auth history|![](../_images/1.2.0/check.png)|
@@ -108,7 +108,7 @@ This document illustates the module wise features in MOSIP 1.2.0 and their funct
 |Check Packet Status|![](../_images/1.2.0/check.png)|
 
 ## Admin Services
-|Test Sceanrio | Status |
+|Feature | Status |
 |:- | :-: |
 |User mapping - To Zone/RegCenter |![](../_images/1.2.0/check.png)|
 |Center - Create/Edit/Activate/Deactivate/Decommission |![](../_images/1.2.0/check.png)|
@@ -142,7 +142,7 @@ This document illustates the module wise features in MOSIP 1.2.0 and their funct
 |Retrieve Lost RID |![](../_images/1.2.0/p.png)|
 
 ## Partner Management
-|Test Sceanrio | Status |
+|Feature | Status |
 |:- | :-: |
 |Partner - Register/Activate/Deactivate |![](../_images/1.2.0/check.png)|
 |Partner Certificates Upload |![](../_images/1.2.0/check.png)|
