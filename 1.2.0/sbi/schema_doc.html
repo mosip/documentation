@@ -1,0 +1,3459 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,800">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="schema_doc.css">
+    <script src="https://use.fontawesome.com/facf9fa52c.js"></script>
+    <script src="schema_doc.min.js"></script>
+    <meta charset="utf-8"/>
+        
+    
+    <title>SBI API Objects</title>
+</head>
+<body onload="anchorOnLoad();" id="root"><h1>SBI API Objects</h1><div class="text-right">
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse:not(.show)" aria-expanded="false">Expand all</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".collapse.show" aria-expanded="false">Collapse all</button>
+        </div>
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>All JSON objects complying to <a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface">SBI</a>.</p>
+</span>
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionDiscovery_Request">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Request">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Request"
+                        aria-expanded="" aria-controls="Discovery_Request" onclick="setAnchor('#Discovery_Request')"><span class="property-name">Discovery Request</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Request"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Request"
+             data-parent="#accordionDiscovery_Request">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<div class="description collapse" id="collapseDescription_Discovery_Request">
+            <p>Device discovery is used to identify MOSIP compliant devices in a system.</p>
+
+<p>Verb: <strong>MOSIPDISC</strong>.</p>
+
+<p>Endpoints:</p>
+
+<p>HTTP:  <code>/device</code></p>
+
+<p>Android:  <code>io.mosip.device</code></p>
+
+<p>IOS:  <code>MOSIPDISC://&lt;call-back-app-url&gt;?ext=&lt;caller app name&gt;&amp;type=&lt;type as defined in mosip device request&gt;</code></p>
+
+        </div>
+        <div>
+            <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription_Discovery_Request"
+               aria-expanded="false" aria-controls="collapseDescriptionDiscovery_Request"
+            ></a>
+        </div>
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionDiscovery_Request_type">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Request_type">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Request_type"
+                        aria-expanded="" aria-controls="Discovery_Request_type" onclick="setAnchor('#Discovery_Request_type')"><span class="property-name">type</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Request_type"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Request_type"
+             data-parent="#accordionDiscovery_Request_type">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<span class="description"><p>Type of device.</p>
+</span><div class="enum-value" id="Discovery_Request_type_enum">
+                <h4>Must be one of:</h4>
+                <ul class="list-group"><li class="list-group-item enum-item">"Finger"</li><li class="list-group-item enum-item">"Face"</li><li class="list-group-item enum-item">"Iris"</li><li class="list-group-item enum-item">"Biometric Device"</li></ul>
+                </div>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDiscovery_Response">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response"
+                        aria-expanded="" aria-controls="Discovery_Response" onclick="setAnchor('#Discovery_Response')"><span class="property-name">Discovery Response</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response"
+             data-parent="#accordionDiscovery_Response">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of object</span><br/>
+<span class="description"><p>Device discovery is used to identify MOSIP compliant devices in a system.</p>
+
+<p>Verb: <strong>MOSIPDISC</strong>.</p>
+</span>
+
+    
+            
+
+            
+            
+
+            <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="Discovery_Response_items">
+            
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionDiscovery_Response_items_deviceId">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response_items_deviceId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response_items_deviceId"
+                        aria-expanded="" aria-controls="Discovery_Response_items_deviceId" onclick="setAnchor('#Discovery_Response_items_deviceId')"><span class="property-name">deviceId</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response_items_deviceId"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response_items_deviceId"
+             data-parent="#accordionDiscovery_Response_items_deviceId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Internal ID of the device</p>
+</span>
+
+    
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDiscovery_Response_items_deviceStatus">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response_items_deviceStatus">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response_items_deviceStatus"
+                        aria-expanded="" aria-controls="Discovery_Response_items_deviceStatus" onclick="setAnchor('#Discovery_Response_items_deviceStatus')"><span class="property-name">deviceStatus</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response_items_deviceStatus"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response_items_deviceStatus"
+             data-parent="#accordionDiscovery_Response_items_deviceStatus">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+
+
+    <div class="enum-value" id="Discovery_Response_items_deviceStatus_enum">
+                <h4>Must be one of:</h4>
+                <ul class="list-group"><li class="list-group-item enum-item">"Ready"</li><li class="list-group-item enum-item">"Busy"</li><li class="list-group-item enum-item">"Not Ready"</li><li class="list-group-item enum-item">"Not Registered"</li></ul>
+                </div>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDiscovery_Response_items_certification">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response_items_certification">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response_items_certification"
+                        aria-expanded="" aria-controls="Discovery_Response_items_certification" onclick="setAnchor('#Discovery_Response_items_certification')"><span class="property-name">certification</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response_items_certification"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response_items_certification"
+             data-parent="#accordionDiscovery_Response_items_certification">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<span class="description"><p>Certification level.</p>
+</span>
+
+    <div class="enum-value" id="Discovery_Response_items_certification_enum">
+                <h4>Must be one of:</h4>
+                <ul class="list-group"><li class="list-group-item enum-item">"L0"</li><li class="list-group-item enum-item">"L1"</li></ul>
+                </div>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDiscovery_Response_items_serviceVersion">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response_items_serviceVersion">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response_items_serviceVersion"
+                        aria-expanded="" aria-controls="Discovery_Response_items_serviceVersion" onclick="setAnchor('#Discovery_Response_items_serviceVersion')"><span class="property-name">serviceVersion</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response_items_serviceVersion"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response_items_serviceVersion"
+             data-parent="#accordionDiscovery_Response_items_serviceVersion">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Device service version.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDiscovery_Response_items_deviceSubId">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response_items_deviceSubId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response_items_deviceSubId"
+                        aria-expanded="" aria-controls="Discovery_Response_items_deviceSubId" onclick="setAnchor('#Discovery_Response_items_deviceSubId')"><span class="property-name">deviceSubId</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response_items_deviceSubId"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response_items_deviceSubId"
+             data-parent="#accordionDiscovery_Response_items_deviceSubId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of integer</span><br/>
+<span class="description"><p><a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid">Device SubId</a>.</p>
+</span>
+            
+
+            
+            
+
+            <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="Discovery_Response_items_deviceSubId_items">
+            
+
+    <span class="badge badge-dark value-type">Type: integer</span><br/>
+
+            
+
+            
+            
+
+            
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDiscovery_Response_items_callbackId">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response_items_callbackId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response_items_callbackId"
+                        aria-expanded="" aria-controls="Discovery_Response_items_callbackId" onclick="setAnchor('#Discovery_Response_items_callbackId')"><span class="property-name">callbackId</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response_items_callbackId"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response_items_callbackId"
+             data-parent="#accordionDiscovery_Response_items_callbackId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Base URL to reach device.<br />
+* Linux and windows: HTTP URL<br />
+* Android: Intent name<br />
+* IOS: URL schema.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDiscovery_Response_items_digitalId">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response_items_digitalId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response_items_digitalId"
+                        aria-expanded="" aria-controls="Discovery_Response_items_digitalId" onclick="setAnchor('#Discovery_Response_items_digitalId')"><span class="property-name">digitalId</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response_items_digitalId"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response_items_digitalId"
+             data-parent="#accordionDiscovery_Response_items_digitalId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p><a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-digital-id">Unsigned digital ID</a>.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDiscovery_Response_items_deviceCode">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response_items_deviceCode">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response_items_deviceCode"
+                        aria-expanded="" aria-controls="Discovery_Response_items_deviceCode" onclick="setAnchor('#Discovery_Response_items_deviceCode')"><span class="property-name">deviceCode</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response_items_deviceCode"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response_items_deviceCode"
+             data-parent="#accordionDiscovery_Response_items_deviceCode">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Code generated by the Device Provider.</p>
+</span>
+
+    
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDiscovery_Response_items_specVersion">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response_items_specVersion">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response_items_specVersion"
+                        aria-expanded="" aria-controls="Discovery_Response_items_specVersion" onclick="setAnchor('#Discovery_Response_items_specVersion')"><span class="property-name">specVersion</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response_items_specVersion"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response_items_specVersion"
+             data-parent="#accordionDiscovery_Response_items_specVersion">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>Supported SBI versions.</p>
+</span>
+
+    
+            
+
+            
+            
+
+            <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="Discovery_Response_items_specVersion_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+            
+
+            
+            
+
+            
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDiscovery_Response_items_purpose">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response_items_purpose">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response_items_purpose"
+                        aria-expanded="" aria-controls="Discovery_Response_items_purpose" onclick="setAnchor('#Discovery_Response_items_purpose')"><span class="property-name">purpose</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response_items_purpose"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response_items_purpose"
+             data-parent="#accordionDiscovery_Response_items_purpose">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+
+
+    <div class="enum-value" id="Discovery_Response_items_purpose_enum">
+                <h4>Must be one of:</h4>
+                <ul class="list-group"><li class="list-group-item enum-item">"Auth"</li><li class="list-group-item enum-item">"Registration"</li></ul>
+                </div>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDiscovery_Response_items_error">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response_items_error">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response_items_error"
+                        aria-expanded="" aria-controls="Discovery_Response_items_error" onclick="setAnchor('#Discovery_Response_items_error')"><span class="property-name">error</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response_items_error"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response_items_error"
+             data-parent="#accordionDiscovery_Response_items_error">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionDiscovery_Response_items_error_errorCode">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response_items_error_errorCode">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response_items_error_errorCode"
+                        aria-expanded="" aria-controls="Discovery_Response_items_error_errorCode" onclick="setAnchor('#Discovery_Response_items_error_errorCode')"><span class="property-name">errorCode</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response_items_error_errorCode"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response_items_error_errorCode"
+             data-parent="#accordionDiscovery_Response_items_error_errorCode">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<span class="description"><p>Error codes with their description.</p>
+</span><div class="enum-value" id="Discovery_Response_items_error_errorCode_enum">
+                <h4>Must be one of:</h4>
+                <ul class="list-group"><li class="list-group-item enum-item">"0 - Success"</li><li class="list-group-item enum-item">"100 - Device not registered"</li><li class="list-group-item enum-item">"101 -  Unable to detect a biometric object"</li><li class="list-group-item enum-item">"102 - Technical error during extraction"</li><li class="list-group-item enum-item">"103 - Device tamper detected"</li><li class="list-group-item enum-item">"104 - Unable to connect to management server"</li><li class="list-group-item enum-item">"105 - Image orientation error"</li><li class="list-group-item enum-item">"106 - Device not found"</li><li class="list-group-item enum-item">"107 - Device public key expired"</li><li class="list-group-item enum-item">"108 - Domain public key missing"</li><li class="list-group-item enum-item">"109 - Requested number of biometric (Finger/IRIS) not supported"</li><li class="list-group-item enum-item">"202 - No device connected"</li><li class="list-group-item enum-item">"5xx - Custom error codes implemented by [Device Provider](https://docs.mosip.io/1.2.0/partners#partner-types)."</li></ul>
+                </div>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDiscovery_Response_items_error_errorInfo">
+    <div class="card">
+        <div class="card-header" id="headingDiscovery_Response_items_error_errorInfo">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Discovery_Response_items_error_errorInfo"
+                        aria-expanded="" aria-controls="Discovery_Response_items_error_errorInfo" onclick="setAnchor('#Discovery_Response_items_error_errorInfo')"><span class="property-name">errorInfo</span></button>
+            </h2>
+        </div>
+
+        <div id="Discovery_Response_items_error_errorInfo"
+             class="collapse property-definition-div" aria-labelledby="headingDiscovery_Response_items_error_errorInfo"
+             data-parent="#accordionDiscovery_Response_items_error_errorInfo">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_Request">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_Request">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_Request"
+                        aria-expanded="" aria-controls="Device_Info_Request" onclick="setAnchor('#Device_Info_Request')"><span class="property-name">Device Info Request</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_Request"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_Request"
+             data-parent="#accordionDevice_Info_Request">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<div class="description collapse" id="collapseDescription_Device_Info_Request">
+            <p>The request is used to identify the MOSIP compliant devices and their status by the applications.</p>
+
+<p>Verb: <strong>MOSIPINFO</strong>. There are no parameters in this request.</p>
+
+<p>Endpoints:</p>
+
+<p>HTTP:  <code>/info</code></p>
+
+<p>Android:  <code>appId:Info</code></p>
+
+<p>IOS:  <code>APPIDINFO://&lt;call-back-app-url&gt;?ext=&lt;caller app name&gt;&amp;type=&lt;type as defined in mosip device request&gt;</code></p>
+
+        </div>
+        <div>
+            <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription_Device_Info_Request"
+               aria-expanded="false" aria-controls="collapseDescriptionDevice_Info_Request"
+            ></a>
+        </div>
+
+    
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_Response">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_Response">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_Response"
+                        aria-expanded="" aria-controls="Device_Info_Response" onclick="setAnchor('#Device_Info_Response')"><span class="property-name">Device Info Response</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_Response"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_Response"
+             data-parent="#accordionDevice_Info_Response">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of object</span><br/>
+<span class="description"><p>Response of Device Info Request</p>
+</span>
+
+    
+            
+
+            
+            
+
+            <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="Device_Info_Response_items">
+            
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionDevice_Info_Response_items_deviceInfo">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_Response_items_deviceInfo">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_Response_items_deviceInfo"
+                        aria-expanded="" aria-controls="Device_Info_Response_items_deviceInfo" onclick="setAnchor('#Device_Info_Response_items_deviceInfo')"><span class="property-name">deviceInfo</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_Response_items_deviceInfo"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_Response_items_deviceInfo"
+             data-parent="#accordionDevice_Info_Response_items_deviceInfo">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<div class="description collapse" id="collapseDescription_Device_Info_Response_items_deviceInfo">
+            <ul>
+<li><code>base64urlencode(header).base64urlencode(deviceInfo).base64urlencode(signature)</code> for registered device.</li>
+<li><code>base64urlencode(deviceInfo)</code> for unregistered device.</li>
+</ul>
+
+<p>See <code>deviceInfo</code> JSON structure.</p>
+
+        </div>
+        <div>
+            <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription_Device_Info_Response_items_deviceInfo"
+               aria-expanded="false" aria-controls="collapseDescriptionDevice_Info_Response_items_deviceInfo"
+            ></a>
+        </div>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_Response_items_error">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_Response_items_error">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_Response_items_error"
+                        aria-expanded="" aria-controls="Device_Info_Response_items_error" onclick="setAnchor('#Device_Info_Response_items_error')"><span class="property-name">error</span> <span class="badge badge-warning required-property">Required</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_Response_items_error"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_Response_items_error"
+             data-parent="#accordionDevice_Info_Response_items_error">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<a href="#Discovery_Response_items_error" onclick="anchorLink('Discovery_Response_items_error')" class="ref-link">Same definition as error</a>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request"
+                        aria-expanded="" aria-controls="Auth_Capture_Request" onclick="setAnchor('#Auth_Capture_Request')"><span class="property-name">Auth Capture Request</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request"
+             data-parent="#accordionAuth_Capture_Request">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<div class="description collapse" id="collapseDescription_Auth_Capture_Request">
+            <p>This request is used to capture a biometric from MOSIP <strong>Authentication</strong> devices.</p>
+
+<p>Verb: <strong>CAPTURE</strong>.</p>
+
+<p>Endpoints:</p>
+
+<p>HTTP:  <code>/capture</code></p>
+
+<p>Android:  <code>appid.capture</code></p>
+
+<p>IOS:  <code>APPIDCAPTURE://&lt;call-back-app-url&gt;?ext=&lt;caller app name&gt;&amp;type=&lt;type as defined in mosip device request&gt;</code></p>
+
+        </div>
+        <div>
+            <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription_Auth_Capture_Request"
+               aria-expanded="false" aria-controls="collapseDescriptionAuth_Capture_Request"
+            ></a>
+        </div>
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionAuth_Capture_Request_env">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_env">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_env"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_env" onclick="setAnchor('#Auth_Capture_Request_env')"><span class="property-name">env</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_env"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_env"
+             data-parent="#accordionAuth_Capture_Request_env">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<span class="description"><p>Target environment.</p>
+</span>
+
+    <div class="enum-value" id="Auth_Capture_Request_env_enum">
+                <h4>Must be one of:</h4>
+                <ul class="list-group"><li class="list-group-item enum-item">"Staging"</li><li class="list-group-item enum-item">"Developer"</li><li class="list-group-item enum-item">"Pre-Production"</li><li class="list-group-item enum-item">"Production"</li></ul>
+                </div>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_purpose">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_purpose">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_purpose"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_purpose" onclick="setAnchor('#Auth_Capture_Request_purpose')"><span class="property-name">purpose</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_purpose"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_purpose"
+             data-parent="#accordionAuth_Capture_Request_purpose">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<a href="#Discovery_Response_items_purpose" onclick="anchorLink('Discovery_Response_items_purpose')" class="ref-link">Same definition as purpose</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_specVersion">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_specVersion">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_specVersion"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_specVersion" onclick="setAnchor('#Auth_Capture_Request_specVersion')"><span class="property-name">specVersion</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_specVersion"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_specVersion"
+             data-parent="#accordionAuth_Capture_Request_specVersion">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>Supported SBI versions.</p>
+</span><a href="#Discovery_Response_items_specVersion" onclick="anchorLink('Discovery_Response_items_specVersion')" class="ref-link">Same definition as specVersion</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_timeout">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_timeout">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_timeout"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_timeout" onclick="setAnchor('#Auth_Capture_Request_timeout')"><span class="property-name">timeout</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_timeout"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_timeout"
+             data-parent="#accordionAuth_Capture_Request_timeout">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: integer</span> <span class="badge badge-success default-value">Default: 300000</span><br/>
+<span class="description"><p>Timeout in milliseconds</p>
+</span>
+
+    
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_captureTime">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_captureTime">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_captureTime"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_captureTime" onclick="setAnchor('#Auth_Capture_Request_captureTime')"><span class="property-name">captureTime</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_captureTime"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_captureTime"
+             data-parent="#accordionAuth_Capture_Request_captureTime">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Capture time in ISO format.</p>
+</span>
+
+    
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_domainUri">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_domainUri">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_domainUri"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_domainUri" onclick="setAnchor('#Auth_Capture_Request_domainUri')"><span class="property-name">domainUri</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_domainUri"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_domainUri"
+             data-parent="#accordionAuth_Capture_Request_domainUri">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>URI of the auth server.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_transactionId">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_transactionId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_transactionId"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_transactionId" onclick="setAnchor('#Auth_Capture_Request_transactionId')"><span class="property-name">transactionId</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_transactionId"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_transactionId"
+             data-parent="#accordionAuth_Capture_Request_transactionId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Transaction Id for the current capture.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_bio">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_bio">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_bio"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_bio" onclick="setAnchor('#Auth_Capture_Request_bio')"><span class="property-name">bio</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_bio"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_bio"
+             data-parent="#accordionAuth_Capture_Request_bio">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array</span><br/>
+
+            
+
+            
+            
+
+            <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="Auth_Capture_Request_bio_items">
+            
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionAuth_Capture_Request_bio_items_type">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_bio_items_type">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_bio_items_type"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_bio_items_type" onclick="setAnchor('#Auth_Capture_Request_bio_items_type')"><span class="property-name">type</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_bio_items_type"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_bio_items_type"
+             data-parent="#accordionAuth_Capture_Request_bio_items_type">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Type of the biometric data.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_bio_items_count">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_bio_items_count">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_bio_items_count"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_bio_items_count" onclick="setAnchor('#Auth_Capture_Request_bio_items_count')"><span class="property-name">count</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_bio_items_count"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_bio_items_count"
+             data-parent="#accordionAuth_Capture_Request_bio_items_count">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: integer</span><br/>
+<span class="description"><p>Finger/iris count. 1 in case of face.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_bio_items_bioSubType">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_bio_items_bioSubType">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_bio_items_bioSubType"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_bio_items_bioSubType" onclick="setAnchor('#Auth_Capture_Request_bio_items_bioSubType')"><span class="property-name">bioSubType</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_bio_items_bioSubType"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_bio_items_bioSubType"
+             data-parent="#accordionAuth_Capture_Request_bio_items_bioSubType">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p><a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype">Subtypes</a>.</p>
+</span>
+            
+
+            
+            
+
+            <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="Auth_Capture_Request_bio_items_bioSubType_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+            
+
+            
+            
+
+            
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_bio_items_requestedScore">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_bio_items_requestedScore">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_bio_items_requestedScore"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_bio_items_requestedScore" onclick="setAnchor('#Auth_Capture_Request_bio_items_requestedScore')"><span class="property-name">requestedScore</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_bio_items_requestedScore"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_bio_items_requestedScore"
+             data-parent="#accordionAuth_Capture_Request_bio_items_requestedScore">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_bio_items_deviceId">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_bio_items_deviceId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_bio_items_deviceId"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_bio_items_deviceId" onclick="setAnchor('#Auth_Capture_Request_bio_items_deviceId')"><span class="property-name">deviceId</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_bio_items_deviceId"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_bio_items_deviceId"
+             data-parent="#accordionAuth_Capture_Request_bio_items_deviceId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Internal ID of the device</p>
+</span><a href="#Discovery_Response_items_deviceId" onclick="anchorLink('Discovery_Response_items_deviceId')" class="ref-link">Same definition as deviceId</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_bio_items_deviceSubId">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_bio_items_deviceSubId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_bio_items_deviceSubId"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_bio_items_deviceSubId" onclick="setAnchor('#Auth_Capture_Request_bio_items_deviceSubId')"><span class="property-name">deviceSubId</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_bio_items_deviceSubId"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_bio_items_deviceSubId"
+             data-parent="#accordionAuth_Capture_Request_bio_items_deviceSubId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: integer</span><br/>
+<span class="description"><p><a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid">Device SubId</a>.</p>
+</span>
+
+    
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_bio_items_previousHash">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_bio_items_previousHash">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_bio_items_previousHash"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_bio_items_previousHash" onclick="setAnchor('#Auth_Capture_Request_bio_items_previousHash')"><span class="property-name">previousHash</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_bio_items_previousHash"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_bio_items_previousHash"
+             data-parent="#accordionAuth_Capture_Request_bio_items_previousHash">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Hash of the previous block.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Request_customOpts">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Request_customOpts">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Request_customOpts"
+                        aria-expanded="" aria-controls="Auth_Capture_Request_customOpts" onclick="setAnchor('#Auth_Capture_Request_customOpts')"><span class="property-name">customOpts</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Request_customOpts"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Request_customOpts"
+             data-parent="#accordionAuth_Capture_Request_customOpts">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Vendor specific parameters. Max of 50 key value pairs. IMPORTANT: Any sensitive data should not be present here.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response"
+                        aria-expanded="" aria-controls="Auth_Capture_Response" onclick="setAnchor('#Auth_Capture_Response')"><span class="property-name">Auth Capture Response</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response"
+             data-parent="#accordionAuth_Capture_Response">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics" onclick="setAnchor('#Auth_Capture_Response_biometrics')"><span class="property-name">biometrics</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics"
+             data-parent="#accordionAuth_Capture_Response_biometrics">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array</span><br/>
+<span class="description"><p>Array of biometrics</p>
+</span>
+            
+
+            
+            
+
+            <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="Auth_Capture_Response_biometrics_items">
+            
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_specVersion">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_specVersion">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_specVersion"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_specVersion" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_specVersion')"><span class="property-name">specVersion</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_specVersion"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_specVersion"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_specVersion">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>Supported SBI versions.</p>
+</span><a href="#Discovery_Response_items_specVersion" onclick="anchorLink('Discovery_Response_items_specVersion')" class="ref-link">Same definition as specVersion</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data')"><span class="property-name">data</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data_digitalId">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data_digitalId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data_digitalId"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data_digitalId" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data_digitalId')"><span class="property-name">digitalId</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data_digitalId"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data_digitalId"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data_digitalId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p><a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#digital-id">Reference</a>.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data_deviceCode">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data_deviceCode">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data_deviceCode"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data_deviceCode" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data_deviceCode')"><span class="property-name">deviceCode</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data_deviceCode"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data_deviceCode"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data_deviceCode">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Code generated by the Device Provider.</p>
+</span><a href="#Discovery_Response_items_deviceCode" onclick="anchorLink('Discovery_Response_items_deviceCode')" class="ref-link">Same definition as deviceCode</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data_deviceServiceVersion">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data_deviceServiceVersion">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data_deviceServiceVersion"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data_deviceServiceVersion" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data_deviceServiceVersion')"><span class="property-name">deviceServiceVersion</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data_deviceServiceVersion"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data_deviceServiceVersion"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data_deviceServiceVersion">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>SBI version</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data_bioType">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data_bioType">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data_bioType"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data_bioType" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data_bioType')"><span class="property-name">bioType</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data_bioType"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data_bioType"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data_bioType">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+
+
+    <div class="enum-value" id="Auth_Capture_Response_biometrics_items_data_bioType_enum">
+                <h4>Must be one of:</h4>
+                <ul class="list-group"><li class="list-group-item enum-item">"Finger"</li><li class="list-group-item enum-item">"Iris"</li><li class="list-group-item enum-item">"Face"</li></ul>
+                </div>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data_bioSubType">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data_bioSubType">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data_bioSubType"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data_bioSubType" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data_bioSubType')"><span class="property-name">bioSubType</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data_bioSubType"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data_bioSubType"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data_bioSubType">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p><a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype">Subtypes</a>.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data_purpose">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data_purpose">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data_purpose"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data_purpose" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data_purpose')"><span class="property-name">purpose</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data_purpose"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data_purpose"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data_purpose">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<a href="#Discovery_Response_items_purpose" onclick="anchorLink('Discovery_Response_items_purpose')" class="ref-link">Same definition as purpose</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data_env">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data_env">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data_env"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data_env" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data_env')"><span class="property-name">env</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data_env"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data_env"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data_env">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<span class="description"><p>Target environment.</p>
+</span><a href="#Auth_Capture_Request_env" onclick="anchorLink('Auth_Capture_Request_env')" class="ref-link">Same definition as env</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data_domainUri">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data_domainUri">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data_domainUri"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data_domainUri" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data_domainUri')"><span class="property-name">domainUri</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data_domainUri"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data_domainUri"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data_domainUri">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>URI of the auth server.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data_bioValue">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data_bioValue">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data_bioValue"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data_bioValue" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data_bioValue')"><span class="property-name">bioValue</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data_bioValue"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data_bioValue"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data_bioValue">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Encrypted with session key and base64urlencoded biometric data.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data_transactionId">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data_transactionId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data_transactionId"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data_transactionId" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data_transactionId')"><span class="property-name">transactionId</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data_transactionId"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data_transactionId"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data_transactionId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Unique transaction id.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data_timestamp">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data_timestamp">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data_timestamp"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data_timestamp" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data_timestamp')"><span class="property-name">timestamp</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data_timestamp"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data_timestamp"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data_timestamp">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Capture datetime in ISO format.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data_requestedScore">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data_requestedScore">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data_requestedScore"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data_requestedScore" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data_requestedScore')"><span class="property-name">requestedScore</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data_requestedScore"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data_requestedScore"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data_requestedScore">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: number</span><br/>
+<span class="description"><p>Floating point number to represent the minimum required score for the capture.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_data_qualityScore">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_data_qualityScore">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_data_qualityScore"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_data_qualityScore" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_data_qualityScore')"><span class="property-name">qualityScore</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_data_qualityScore"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_data_qualityScore"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_data_qualityScore">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: number</span><br/>
+<span class="description"><p>Floating point number representing the score for the current capture.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_hash">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_hash">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_hash"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_hash" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_hash')"><span class="property-name">hash</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_hash"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_hash"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_hash">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_sessionKey">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_sessionKey">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_sessionKey"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_sessionKey" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_sessionKey')"><span class="property-name">sessionKey</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_sessionKey"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_sessionKey"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_sessionKey">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Encrypted with MOSIP public key (dynamically selected based on the uri) and encoded session key biometric"</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_thumbprint">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_thumbprint">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_thumbprint"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_thumbprint" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_thumbprint')"><span class="property-name">thumbprint</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_thumbprint"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_thumbprint"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_thumbprint">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>SHA256 representation of thumbprint of the certificate that was used for encryption of session key. All texts to be treated as uppercase without any spaces or hyphens</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionAuth_Capture_Response_biometrics_items_error">
+    <div class="card">
+        <div class="card-header" id="headingAuth_Capture_Response_biometrics_items_error">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Auth_Capture_Response_biometrics_items_error"
+                        aria-expanded="" aria-controls="Auth_Capture_Response_biometrics_items_error" onclick="setAnchor('#Auth_Capture_Response_biometrics_items_error')"><span class="property-name">error</span></button>
+            </h2>
+        </div>
+
+        <div id="Auth_Capture_Response_biometrics_items_error"
+             class="collapse property-definition-div" aria-labelledby="headingAuth_Capture_Response_biometrics_items_error"
+             data-parent="#accordionAuth_Capture_Response_biometrics_items_error">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<a href="#Discovery_Response_items_error" onclick="anchorLink('Discovery_Response_items_error')" class="ref-link">Same definition as error</a>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request"
+                        aria-expanded="" aria-controls="Registration_Capture_Request" onclick="setAnchor('#Registration_Capture_Request')"><span class="property-name">Registration Capture Request</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request"
+             data-parent="#accordionRegistration_Capture_Request">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<div class="description collapse" id="collapseDescription_Registration_Capture_Request">
+            <p>This request is used to capture a biometric from MOSIP <strong>Registration</strong> devices.</p>
+
+<p>Verb: <strong>RCAPTURE</strong>.</p>
+
+<p>Endpoints:</p>
+
+<p>HTTP:  <code>/capture</code></p>
+
+<p>Android:  No support</p>
+
+<p>IOS:  No support</p>
+
+        </div>
+        <div>
+            <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription_Registration_Capture_Request"
+               aria-expanded="false" aria-controls="collapseDescriptionRegistration_Capture_Request"
+            ></a>
+        </div>
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionRegistration_Capture_Request_env">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_env">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_env"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_env" onclick="setAnchor('#Registration_Capture_Request_env')"><span class="property-name">env</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_env"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_env"
+             data-parent="#accordionRegistration_Capture_Request_env">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<span class="description"><p>Target environment.</p>
+</span><a href="#Auth_Capture_Request_env" onclick="anchorLink('Auth_Capture_Request_env')" class="ref-link">Same definition as env</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_purpose">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_purpose">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_purpose"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_purpose" onclick="setAnchor('#Registration_Capture_Request_purpose')"><span class="property-name">purpose</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_purpose"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_purpose"
+             data-parent="#accordionRegistration_Capture_Request_purpose">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<a href="#Discovery_Response_items_purpose" onclick="anchorLink('Discovery_Response_items_purpose')" class="ref-link">Same definition as purpose</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_specVersion">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_specVersion">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_specVersion"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_specVersion" onclick="setAnchor('#Registration_Capture_Request_specVersion')"><span class="property-name">specVersion</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_specVersion"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_specVersion"
+             data-parent="#accordionRegistration_Capture_Request_specVersion">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>Supported SBI versions.</p>
+</span><a href="#Discovery_Response_items_specVersion" onclick="anchorLink('Discovery_Response_items_specVersion')" class="ref-link">Same definition as specVersion</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_timeout">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_timeout">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_timeout"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_timeout" onclick="setAnchor('#Registration_Capture_Request_timeout')"><span class="property-name">timeout</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_timeout"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_timeout"
+             data-parent="#accordionRegistration_Capture_Request_timeout">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: integer</span> <span class="badge badge-success default-value">Default: 300000</span><br/>
+<span class="description"><p>Timeout in milliseconds</p>
+</span><a href="#Auth_Capture_Request_timeout" onclick="anchorLink('Auth_Capture_Request_timeout')" class="ref-link">Same definition as timeout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_captureTime">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_captureTime">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_captureTime"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_captureTime" onclick="setAnchor('#Registration_Capture_Request_captureTime')"><span class="property-name">captureTime</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_captureTime"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_captureTime"
+             data-parent="#accordionRegistration_Capture_Request_captureTime">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Capture time in ISO format.</p>
+</span><a href="#Auth_Capture_Request_captureTime" onclick="anchorLink('Auth_Capture_Request_captureTime')" class="ref-link">Same definition as captureTime</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_transactionId">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_transactionId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_transactionId"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_transactionId" onclick="setAnchor('#Registration_Capture_Request_transactionId')"><span class="property-name">transactionId</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_transactionId"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_transactionId"
+             data-parent="#accordionRegistration_Capture_Request_transactionId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Transaction Id for the current capture.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_bio">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_bio">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_bio"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_bio" onclick="setAnchor('#Registration_Capture_Request_bio')"><span class="property-name">bio</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_bio"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_bio"
+             data-parent="#accordionRegistration_Capture_Request_bio">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array</span><br/>
+
+            
+
+            
+            
+
+            <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="Registration_Capture_Request_bio_items">
+            
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionRegistration_Capture_Request_bio_items_type">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_bio_items_type">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_bio_items_type"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_bio_items_type" onclick="setAnchor('#Registration_Capture_Request_bio_items_type')"><span class="property-name">type</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_bio_items_type"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_bio_items_type"
+             data-parent="#accordionRegistration_Capture_Request_bio_items_type">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Type of the biometric data.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_bio_items_count">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_bio_items_count">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_bio_items_count"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_bio_items_count" onclick="setAnchor('#Registration_Capture_Request_bio_items_count')"><span class="property-name">count</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_bio_items_count"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_bio_items_count"
+             data-parent="#accordionRegistration_Capture_Request_bio_items_count">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: integer</span><br/>
+<span class="description"><p>Finger/iris count. 1 in case of face.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_bio_items_bioSubType">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_bio_items_bioSubType">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_bio_items_bioSubType"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_bio_items_bioSubType" onclick="setAnchor('#Registration_Capture_Request_bio_items_bioSubType')"><span class="property-name">bioSubType</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_bio_items_bioSubType"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_bio_items_bioSubType"
+             data-parent="#accordionRegistration_Capture_Request_bio_items_bioSubType">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p><a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype">Subtypes</a>.</p>
+</span>
+            
+
+            
+            
+
+            <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="Registration_Capture_Request_bio_items_bioSubType_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+            
+
+            
+            
+
+            
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_bio_items_exception">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_bio_items_exception">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_bio_items_exception"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_bio_items_exception" onclick="setAnchor('#Registration_Capture_Request_bio_items_exception')"><span class="property-name">exception</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_bio_items_exception"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_bio_items_exception"
+             data-parent="#accordionRegistration_Capture_Request_bio_items_exception">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>Array of <a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype">Subtypes</a>.</p>
+</span>
+            
+
+            
+            
+
+            <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="Registration_Capture_Request_bio_items_exception_items">
+            
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+            
+
+            
+            
+
+            
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_bio_items_requestedScore">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_bio_items_requestedScore">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_bio_items_requestedScore"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_bio_items_requestedScore" onclick="setAnchor('#Registration_Capture_Request_bio_items_requestedScore')"><span class="property-name">requestedScore</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_bio_items_requestedScore"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_bio_items_requestedScore"
+             data-parent="#accordionRegistration_Capture_Request_bio_items_requestedScore">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_bio_items_deviceId">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_bio_items_deviceId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_bio_items_deviceId"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_bio_items_deviceId" onclick="setAnchor('#Registration_Capture_Request_bio_items_deviceId')"><span class="property-name">deviceId</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_bio_items_deviceId"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_bio_items_deviceId"
+             data-parent="#accordionRegistration_Capture_Request_bio_items_deviceId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Internal ID of the device</p>
+</span><a href="#Discovery_Response_items_deviceId" onclick="anchorLink('Discovery_Response_items_deviceId')" class="ref-link">Same definition as deviceId</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_bio_items_deviceSubId">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_bio_items_deviceSubId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_bio_items_deviceSubId"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_bio_items_deviceSubId" onclick="setAnchor('#Registration_Capture_Request_bio_items_deviceSubId')"><span class="property-name">deviceSubId</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_bio_items_deviceSubId"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_bio_items_deviceSubId"
+             data-parent="#accordionRegistration_Capture_Request_bio_items_deviceSubId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: integer</span><br/>
+<span class="description"><p><a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid">Device SubId</a>.</p>
+</span><a href="#Auth_Capture_Request_bio_items_deviceSubId" onclick="anchorLink('Auth_Capture_Request_bio_items_deviceSubId')" class="ref-link">Same definition as deviceSubId</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_bio_items_previousHash">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_bio_items_previousHash">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_bio_items_previousHash"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_bio_items_previousHash" onclick="setAnchor('#Registration_Capture_Request_bio_items_previousHash')"><span class="property-name">previousHash</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_bio_items_previousHash"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_bio_items_previousHash"
+             data-parent="#accordionRegistration_Capture_Request_bio_items_previousHash">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Hash of the previous block.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Request_customOpts">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Request_customOpts">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Request_customOpts"
+                        aria-expanded="" aria-controls="Registration_Capture_Request_customOpts" onclick="setAnchor('#Registration_Capture_Request_customOpts')"><span class="property-name">customOpts</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Request_customOpts"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Request_customOpts"
+             data-parent="#accordionRegistration_Capture_Request_customOpts">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Vendor specific parameters. Max of 50 key value pairs. IMPORTANT: Any sensitive data should not be present here.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response"
+                        aria-expanded="" aria-controls="Registration_Capture_Response" onclick="setAnchor('#Registration_Capture_Response')"><span class="property-name">Registration Capture Response</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response"
+             data-parent="#accordionRegistration_Capture_Response">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics" onclick="setAnchor('#Registration_Capture_Response_biometrics')"><span class="property-name">biometrics</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics"
+             data-parent="#accordionRegistration_Capture_Response_biometrics">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array</span><br/>
+<span class="description"><p>Array of biometrics</p>
+</span>
+            
+
+            
+            
+
+            <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="Registration_Capture_Response_biometrics_items">
+            
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_specVersion">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_specVersion">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_specVersion"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_specVersion" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_specVersion')"><span class="property-name">specVersion</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_specVersion"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_specVersion"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_specVersion">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>Supported SBI versions.</p>
+</span><a href="#Discovery_Response_items_specVersion" onclick="anchorLink('Discovery_Response_items_specVersion')" class="ref-link">Same definition as specVersion</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_data">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_data">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_data"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_data" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_data')"><span class="property-name">data</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_data"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_data"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_data">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_data_digitalId">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_data_digitalId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_data_digitalId"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_data_digitalId" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_data_digitalId')"><span class="property-name">digitalId</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_data_digitalId"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_data_digitalId"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_data_digitalId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p><a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#digital-id">Reference</a>.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_data_bioType">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_data_bioType">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_data_bioType"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_data_bioType" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_data_bioType')"><span class="property-name">bioType</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_data_bioType"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_data_bioType"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_data_bioType">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<a href="#Auth_Capture_Response_biometrics_items_data_bioType" onclick="anchorLink('Auth_Capture_Response_biometrics_items_data_bioType')" class="ref-link">Same definition as bioType</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_data_deviceCode">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_data_deviceCode">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_data_deviceCode"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_data_deviceCode" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_data_deviceCode')"><span class="property-name">deviceCode</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_data_deviceCode"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_data_deviceCode"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_data_deviceCode">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Code generated by the Device Provider.</p>
+</span><a href="#Discovery_Response_items_deviceCode" onclick="anchorLink('Discovery_Response_items_deviceCode')" class="ref-link">Same definition as deviceCode</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_data_deviceServiceVersion">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_data_deviceServiceVersion">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_data_deviceServiceVersion"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_data_deviceServiceVersion" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_data_deviceServiceVersion')"><span class="property-name">deviceServiceVersion</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_data_deviceServiceVersion"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_data_deviceServiceVersion"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_data_deviceServiceVersion">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>SBI version</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_data_bioSubType">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_data_bioSubType">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_data_bioSubType"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_data_bioSubType" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_data_bioSubType')"><span class="property-name">bioSubType</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_data_bioSubType"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_data_bioSubType"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_data_bioSubType">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p><a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#biometric-subtype">Subtypes</a>.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_data_purpose">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_data_purpose">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_data_purpose"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_data_purpose" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_data_purpose')"><span class="property-name">purpose</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_data_purpose"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_data_purpose"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_data_purpose">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<a href="#Discovery_Response_items_purpose" onclick="anchorLink('Discovery_Response_items_purpose')" class="ref-link">Same definition as purpose</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_data_env">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_data_env">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_data_env"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_data_env" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_data_env')"><span class="property-name">env</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_data_env"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_data_env"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_data_env">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<span class="description"><p>Target environment.</p>
+</span><a href="#Auth_Capture_Request_env" onclick="anchorLink('Auth_Capture_Request_env')" class="ref-link">Same definition as env</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_data_bioValue">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_data_bioValue">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_data_bioValue"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_data_bioValue" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_data_bioValue')"><span class="property-name">bioValue</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_data_bioValue"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_data_bioValue"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_data_bioValue">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Encrypted with session key and base64urlencoded biometric data.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_data_transactionId">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_data_transactionId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_data_transactionId"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_data_transactionId" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_data_transactionId')"><span class="property-name">transactionId</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_data_transactionId"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_data_transactionId"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_data_transactionId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Unique transaction id.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_data_timestamp">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_data_timestamp">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_data_timestamp"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_data_timestamp" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_data_timestamp')"><span class="property-name">timestamp</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_data_timestamp"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_data_timestamp"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_data_timestamp">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Capture datetime in ISO format.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_data_requestedScore">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_data_requestedScore">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_data_requestedScore"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_data_requestedScore" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_data_requestedScore')"><span class="property-name">requestedScore</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_data_requestedScore"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_data_requestedScore"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_data_requestedScore">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: number</span><br/>
+<span class="description"><p>Floating point number to represent the minimum required score for the capture.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_data_qualityScore">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_data_qualityScore">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_data_qualityScore"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_data_qualityScore" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_data_qualityScore')"><span class="property-name">qualityScore</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_data_qualityScore"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_data_qualityScore"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_data_qualityScore">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: number</span><br/>
+<span class="description"><p>Floating point number representing the score for the current capture.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_hash">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_hash">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_hash"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_hash" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_hash')"><span class="property-name">hash</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_hash"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_hash"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_hash">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>sha256(sha256 hash in hex format of the previous data block + sha256 hash in hex format of the current data block before encryption)</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionRegistration_Capture_Response_biometrics_items_error">
+    <div class="card">
+        <div class="card-header" id="headingRegistration_Capture_Response_biometrics_items_error">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Registration_Capture_Response_biometrics_items_error"
+                        aria-expanded="" aria-controls="Registration_Capture_Response_biometrics_items_error" onclick="setAnchor('#Registration_Capture_Response_biometrics_items_error')"><span class="property-name">error</span></button>
+            </h2>
+        </div>
+
+        <div id="Registration_Capture_Response_biometrics_items_error"
+             class="collapse property-definition-div" aria-labelledby="headingRegistration_Capture_Response_biometrics_items_error"
+             data-parent="#accordionRegistration_Capture_Response_biometrics_items_error">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<a href="#Discovery_Response_items_error" onclick="anchorLink('Discovery_Response_items_error')" class="ref-link">Same definition as error</a>
+            </div>
+        </div>
+    </div>
+</div>
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionStream_Request">
+    <div class="card">
+        <div class="card-header" id="headingStream_Request">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Stream_Request"
+                        aria-expanded="" aria-controls="Stream_Request" onclick="setAnchor('#Stream_Request')"><span class="property-name">Stream Request</span></button>
+            </h2>
+        </div>
+
+        <div id="Stream_Request"
+             class="collapse property-definition-div" aria-labelledby="headingStream_Request"
+             data-parent="#accordionStream_Request">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<div class="description collapse" id="collapseDescription_Stream_Request">
+            <p>The device starts a live video stream of biometric images for <strong>registration</strong> devices.</p>
+
+<p>Verb: <strong>STREAM</strong>. </p>
+
+<p>Endpoints:</p>
+
+<p>HTTP:  <code>/stream</code></p>
+
+<p>Android: No support.</p>
+
+<p>IOS: No support.</p>
+
+        </div>
+        <div>
+            <a class="collapse-description-link collapsed" data-toggle="collapse" href="#collapseDescription_Stream_Request"
+               aria-expanded="false" aria-controls="collapseDescriptionStream_Request"
+            ></a>
+        </div>
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionStream_Request_deviceId">
+    <div class="card">
+        <div class="card-header" id="headingStream_Request_deviceId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Stream_Request_deviceId"
+                        aria-expanded="" aria-controls="Stream_Request_deviceId" onclick="setAnchor('#Stream_Request_deviceId')"><span class="property-name">deviceId</span></button>
+            </h2>
+        </div>
+
+        <div id="Stream_Request_deviceId"
+             class="collapse property-definition-div" aria-labelledby="headingStream_Request_deviceId"
+             data-parent="#accordionStream_Request_deviceId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Internal ID of the device</p>
+</span><a href="#Discovery_Response_items_deviceId" onclick="anchorLink('Discovery_Response_items_deviceId')" class="ref-link">Same definition as deviceId</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionStream_Request_deviceSubId">
+    <div class="card">
+        <div class="card-header" id="headingStream_Request_deviceSubId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Stream_Request_deviceSubId"
+                        aria-expanded="" aria-controls="Stream_Request_deviceSubId" onclick="setAnchor('#Stream_Request_deviceSubId')"><span class="property-name">deviceSubId</span></button>
+            </h2>
+        </div>
+
+        <div id="Stream_Request_deviceSubId"
+             class="collapse property-definition-div" aria-labelledby="headingStream_Request_deviceSubId"
+             data-parent="#accordionStream_Request_deviceSubId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: integer</span><br/>
+<span class="description"><p><a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid">Device SubId</a>.</p>
+</span><a href="#Auth_Capture_Request_bio_items_deviceSubId" onclick="anchorLink('Auth_Capture_Request_bio_items_deviceSubId')" class="ref-link">Same definition as deviceSubId</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionStream_Request_timeout">
+    <div class="card">
+        <div class="card-header" id="headingStream_Request_timeout">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Stream_Request_timeout"
+                        aria-expanded="" aria-controls="Stream_Request_timeout" onclick="setAnchor('#Stream_Request_timeout')"><span class="property-name">timeout</span></button>
+            </h2>
+        </div>
+
+        <div id="Stream_Request_timeout"
+             class="collapse property-definition-div" aria-labelledby="headingStream_Request_timeout"
+             data-parent="#accordionStream_Request_timeout">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: integer</span> <span class="badge badge-success default-value">Default: 300000</span><br/>
+<span class="description"><p>Timeout in milliseconds</p>
+</span><a href="#Auth_Capture_Request_timeout" onclick="anchorLink('Auth_Capture_Request_timeout')" class="ref-link">Same definition as timeout</a>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionStream_Response">
+    <div class="card">
+        <div class="card-header" id="headingStream_Response">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Stream_Response"
+                        aria-expanded="" aria-controls="Stream_Response" onclick="setAnchor('#Stream_Response')"><span class="property-name">Stream Response</span></button>
+            </h2>
+        </div>
+
+        <div id="Stream_Response"
+             class="collapse property-definition-div" aria-labelledby="headingStream_Response"
+             data-parent="#accordionStream_Response">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p><a href="https://en.wikipedia.org/wiki/Motion_JPEG">MJPEG</a> video stream with minimum 3 fps or error.</p>
+</span>
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionStream_Response_error">
+    <div class="card">
+        <div class="card-header" id="headingStream_Response_error">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Stream_Response_error"
+                        aria-expanded="" aria-controls="Stream_Response_error" onclick="setAnchor('#Stream_Response_error')"><span class="property-name">error</span></button>
+            </h2>
+        </div>
+
+        <div id="Stream_Response_error"
+             class="collapse property-definition-div" aria-labelledby="headingStream_Response_error"
+             data-parent="#accordionStream_Response_error">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<a href="#Discovery_Response_items_error" onclick="anchorLink('Discovery_Response_items_error')" class="ref-link">Same definition as error</a>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info"
+                        aria-expanded="" aria-controls="Device_Info" onclick="setAnchor('#Device_Info')"><span class="property-name">Device Info</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info"
+             data-parent="#accordionDevice_Info">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Device Info JSON structure.</p>
+</span>
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionDevice_Info_deviceId">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_deviceId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_deviceId"
+                        aria-expanded="" aria-controls="Device_Info_deviceId" onclick="setAnchor('#Device_Info_deviceId')"><span class="property-name">deviceId</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_deviceId"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_deviceId"
+             data-parent="#accordionDevice_Info_deviceId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Internal ID of the device</p>
+</span><a href="#Discovery_Response_items_deviceId" onclick="anchorLink('Discovery_Response_items_deviceId')" class="ref-link">Same definition as deviceId</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_deviceStatus">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_deviceStatus">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_deviceStatus"
+                        aria-expanded="" aria-controls="Device_Info_deviceStatus" onclick="setAnchor('#Device_Info_deviceStatus')"><span class="property-name">deviceStatus</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_deviceStatus"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_deviceStatus"
+             data-parent="#accordionDevice_Info_deviceStatus">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<a href="#Discovery_Response_items_deviceStatus" onclick="anchorLink('Discovery_Response_items_deviceStatus')" class="ref-link">Same definition as deviceStatus</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_firmware">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_firmware">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_firmware"
+                        aria-expanded="" aria-controls="Device_Info_firmware" onclick="setAnchor('#Device_Info_firmware')"><span class="property-name">firmware</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_firmware"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_firmware"
+             data-parent="#accordionDevice_Info_firmware">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Firmware version</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_certification">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_certification">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_certification"
+                        aria-expanded="" aria-controls="Device_Info_certification" onclick="setAnchor('#Device_Info_certification')"><span class="property-name">certification</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_certification"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_certification"
+             data-parent="#accordionDevice_Info_certification">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<span class="description"><p>Certification level.</p>
+</span><a href="#Discovery_Response_items_certification" onclick="anchorLink('Discovery_Response_items_certification')" class="ref-link">Same definition as certification</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_serviceVersion">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_serviceVersion">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_serviceVersion"
+                        aria-expanded="" aria-controls="Device_Info_serviceVersion" onclick="setAnchor('#Device_Info_serviceVersion')"><span class="property-name">serviceVersion</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_serviceVersion"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_serviceVersion"
+             data-parent="#accordionDevice_Info_serviceVersion">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Device service version.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_deviceSubId">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_deviceSubId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_deviceSubId"
+                        aria-expanded="" aria-controls="Device_Info_deviceSubId" onclick="setAnchor('#Device_Info_deviceSubId')"><span class="property-name">deviceSubId</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_deviceSubId"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_deviceSubId"
+             data-parent="#accordionDevice_Info_deviceSubId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of integer</span><br/>
+<span class="description"><p><a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid">Device SubId</a>.</p>
+</span>
+            
+
+            
+            
+
+            <h4>Each item of this array must be:</h4>
+    <div class="card">
+        <div class="card-body items-definition" id="Device_Info_deviceSubId_items">
+            
+
+    <span class="badge badge-dark value-type">Type: integer</span><br/>
+
+            
+
+            
+            
+
+            
+        </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_callbackId">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_callbackId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_callbackId"
+                        aria-expanded="" aria-controls="Device_Info_callbackId" onclick="setAnchor('#Device_Info_callbackId')"><span class="property-name">callbackId</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_callbackId"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_callbackId"
+             data-parent="#accordionDevice_Info_callbackId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Base URL to reach device.<br />
+- Linux and windows: HTTP URL<br />
+- Android: Intent name<br />
+- IOS: URL schema.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_digitalId">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_digitalId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_digitalId"
+                        aria-expanded="" aria-controls="Device_Info_digitalId" onclick="setAnchor('#Device_Info_digitalId')"><span class="property-name">digitalId</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_digitalId"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_digitalId"
+             data-parent="#accordionDevice_Info_digitalId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p><a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-digital-id">Signed digital ID</a>.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_deviceCode">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_deviceCode">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_deviceCode"
+                        aria-expanded="" aria-controls="Device_Info_deviceCode" onclick="setAnchor('#Device_Info_deviceCode')"><span class="property-name">deviceCode</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_deviceCode"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_deviceCode"
+             data-parent="#accordionDevice_Info_deviceCode">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Code generated by the Device Provider.</p>
+</span><a href="#Discovery_Response_items_deviceCode" onclick="anchorLink('Discovery_Response_items_deviceCode')" class="ref-link">Same definition as deviceCode</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_env">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_env">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_env"
+                        aria-expanded="" aria-controls="Device_Info_env" onclick="setAnchor('#Device_Info_env')"><span class="property-name">env</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_env"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_env"
+             data-parent="#accordionDevice_Info_env">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<span class="description"><p>Target environment.</p>
+</span><a href="#Auth_Capture_Request_env" onclick="anchorLink('Auth_Capture_Request_env')" class="ref-link">Same definition as env</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_specVersion">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_specVersion">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_specVersion"
+                        aria-expanded="" aria-controls="Device_Info_specVersion" onclick="setAnchor('#Device_Info_specVersion')"><span class="property-name">specVersion</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_specVersion"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_specVersion"
+             data-parent="#accordionDevice_Info_specVersion">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: array of string</span><br/>
+<span class="description"><p>Supported SBI versions.</p>
+</span><a href="#Discovery_Response_items_specVersion" onclick="anchorLink('Discovery_Response_items_specVersion')" class="ref-link">Same definition as specVersion</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_purpose">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_purpose">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_purpose"
+                        aria-expanded="" aria-controls="Device_Info_purpose" onclick="setAnchor('#Device_Info_purpose')"><span class="property-name">purpose</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_purpose"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_purpose"
+             data-parent="#accordionDevice_Info_purpose">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<a href="#Discovery_Response_items_purpose" onclick="anchorLink('Discovery_Response_items_purpose')" class="ref-link">Same definition as purpose</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDevice_Info_error">
+    <div class="card">
+        <div class="card-header" id="headingDevice_Info_error">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Device_Info_error"
+                        aria-expanded="" aria-controls="Device_Info_error" onclick="setAnchor('#Device_Info_error')"><span class="property-name">error</span></button>
+            </h2>
+        </div>
+
+        <div id="Device_Info_error"
+             class="collapse property-definition-div" aria-labelledby="headingDevice_Info_error"
+             data-parent="#accordionDevice_Info_error">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<a href="#Discovery_Response_items_error" onclick="anchorLink('Discovery_Response_items_error')" class="ref-link">Same definition as error</a>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDigital_ID">
+    <div class="card">
+        <div class="card-header" id="headingDigital_ID">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Digital_ID"
+                        aria-expanded="" aria-controls="Digital_ID" onclick="setAnchor('#Digital_ID')"><span class="property-name">Digital ID</span></button>
+            </h2>
+        </div>
+
+        <div id="Digital_ID"
+             class="collapse property-definition-div" aria-labelledby="headingDigital_ID"
+             data-parent="#accordionDigital_ID">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: object</span><br/>
+<span class="description"><p>Digital ID of a biometric device</p>
+</span>
+
+    
+            
+
+            
+            
+
+            
+<div class="accordion" id="accordionDigital_ID_serialNo">
+    <div class="card">
+        <div class="card-header" id="headingDigital_ID_serialNo">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Digital_ID_serialNo"
+                        aria-expanded="" aria-controls="Digital_ID_serialNo" onclick="setAnchor('#Digital_ID_serialNo')"><span class="property-name">serialNo</span></button>
+            </h2>
+        </div>
+
+        <div id="Digital_ID_serialNo"
+             class="collapse property-definition-div" aria-labelledby="headingDigital_ID_serialNo"
+             data-parent="#accordionDigital_ID_serialNo">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>As printed on <a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-physical-id">Device Physical ID</a>.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDigital_ID_make">
+    <div class="card">
+        <div class="card-header" id="headingDigital_ID_make">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Digital_ID_make"
+                        aria-expanded="" aria-controls="Digital_ID_make" onclick="setAnchor('#Digital_ID_make')"><span class="property-name">make</span></button>
+            </h2>
+        </div>
+
+        <div id="Digital_ID_make"
+             class="collapse property-definition-div" aria-labelledby="headingDigital_ID_make"
+             data-parent="#accordionDigital_ID_make">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Brand name as printed on <a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-physical-id">Device Physical ID</a>.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDigital_ID_model">
+    <div class="card">
+        <div class="card-header" id="headingDigital_ID_model">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Digital_ID_model"
+                        aria-expanded="" aria-controls="Digital_ID_model" onclick="setAnchor('#Digital_ID_model')"><span class="property-name">model</span></button>
+            </h2>
+        </div>
+
+        <div id="Digital_ID_model"
+             class="collapse property-definition-div" aria-labelledby="headingDigital_ID_model"
+             data-parent="#accordionDigital_ID_model">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Model of the device as printed on <a href="https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-physical-id">Device Physical ID</a>.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDigital_ID_type">
+    <div class="card">
+        <div class="card-header" id="headingDigital_ID_type">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Digital_ID_type"
+                        aria-expanded="" aria-controls="Digital_ID_type" onclick="setAnchor('#Digital_ID_type')"><span class="property-name">type</span></button>
+            </h2>
+        </div>
+
+        <div id="Digital_ID_type"
+             class="collapse property-definition-div" aria-labelledby="headingDigital_ID_type"
+             data-parent="#accordionDigital_ID_type">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="Digital_ID_type_enum">
+                <h4>Must be one of:</h4>
+                <ul class="list-group"><li class="list-group-item enum-item">"Finger"</li><li class="list-group-item enum-item">"Iris"</li><li class="list-group-item enum-item">"Face"</li></ul>
+                </div>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDigital_ID_deviceSubType">
+    <div class="card">
+        <div class="card-header" id="headingDigital_ID_deviceSubType">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Digital_ID_deviceSubType"
+                        aria-expanded="" aria-controls="Digital_ID_deviceSubType" onclick="setAnchor('#Digital_ID_deviceSubType')"><span class="property-name">deviceSubType</span></button>
+            </h2>
+        </div>
+
+        <div id="Digital_ID_deviceSubType"
+             class="collapse property-definition-div" aria-labelledby="headingDigital_ID_deviceSubType"
+             data-parent="#accordionDigital_ID_deviceSubType">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: enum (of string)</span><br/>
+<div class="enum-value" id="Digital_ID_deviceSubType_enum">
+                <h4>Must be one of:</h4>
+                <ul class="list-group"><li class="list-group-item enum-item">"Slap"</li><li class="list-group-item enum-item">"Touchless"</li><li class="list-group-item enum-item">"Single"</li><li class="list-group-item enum-item">"Double"</li><li class="list-group-item enum-item">"Full face"</li></ul>
+                </div>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDigital_ID_deviceProvider">
+    <div class="card">
+        <div class="card-header" id="headingDigital_ID_deviceProvider">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Digital_ID_deviceProvider"
+                        aria-expanded="" aria-controls="Digital_ID_deviceProvider" onclick="setAnchor('#Digital_ID_deviceProvider')"><span class="property-name">deviceProvider</span></button>
+            </h2>
+        </div>
+
+        <div id="Digital_ID_deviceProvider"
+             class="collapse property-definition-div" aria-labelledby="headingDigital_ID_deviceProvider"
+             data-parent="#accordionDigital_ID_deviceProvider">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Name of the <a href="https://docs.mosip.io/1.2.0/partners#partner-types">Device Provider</a>.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDigital_ID_deviceProviderId">
+    <div class="card">
+        <div class="card-header" id="headingDigital_ID_deviceProviderId">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Digital_ID_deviceProviderId"
+                        aria-expanded="" aria-controls="Digital_ID_deviceProviderId" onclick="setAnchor('#Digital_ID_deviceProviderId')"><span class="property-name">deviceProviderId</span></button>
+            </h2>
+        </div>
+
+        <div id="Digital_ID_deviceProviderId"
+             class="collapse property-definition-div" aria-labelledby="headingDigital_ID_deviceProviderId"
+             data-parent="#accordionDigital_ID_deviceProviderId">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>ID of the <a href="https://docs.mosip.io/1.2.0/partners#partner-types">Device Provider</a>.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion" id="accordionDigital_ID_dateTime">
+    <div class="card">
+        <div class="card-header" id="headingDigital_ID_dateTime">
+            <h2 class="mb-0">
+                <button class="btn btn-link property-name-button" type="button" data-toggle="collapse" data-target="#Digital_ID_dateTime"
+                        aria-expanded="" aria-controls="Digital_ID_dateTime" onclick="setAnchor('#Digital_ID_dateTime')"><span class="property-name">dateTime</span></button>
+            </h2>
+        </div>
+
+        <div id="Digital_ID_dateTime"
+             class="collapse property-definition-div" aria-labelledby="headingDigital_ID_dateTime"
+             data-parent="#accordionDigital_ID_dateTime">
+            <div class="card-body pl-5">
+
+    <span class="badge badge-dark value-type">Type: string</span><br/>
+<span class="description"><p>Time during the issuance of the request. This is in ISO format.</p>
+</span>
+            
+
+            
+            
+
+            
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <p class="generated-by-footer">Generated using <a href="https://github.com/coveooss/json-schema-for-humans">json-schema-for-humans</a> on 2022-02-15 at 06:13:00 +0530</p>
+    </footer></body>
+</html>
