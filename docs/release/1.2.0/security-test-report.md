@@ -34,9 +34,9 @@ We have a few other modules that are not directly user interfaced and use APIs f
 |Fixed|Medium|Low|
 
 | Description        | An attacker can steal JWT cookie from the browser to steal personal information<br>1. Install cookie manager plugin in any browser<br>2. Login into the application and click cookie manager<br>3. Select JWT for current page<br>4. Copy the JWT and go to jwt.io web site decrypt the JWT<br>5. Check if any sensitive information is disclosed as this is only base64 encoded |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Risk Assessment    | Authentication and authorization in MOSIP using JWT tokens. If any PII data is shared in the token, it would be considered as data breach.                                                                                                                                                                                                                                             |
-| Fix Recommendation | No PII data Should be provided in the token itself                                                                                                                                                                                                                                                                                                                                     |
+| ------------------ | ---------------------------------------------- |
+| Risk Assessment    | Authentication and authorization in MOSIP using JWT tokens. If any PII data is shared in the token, it would be considered as data breach.|
+| Fix Recommendation | No PII data Should be provided in the token itself|
 
 ## Scenario 2
 
