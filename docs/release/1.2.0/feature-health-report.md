@@ -29,35 +29,36 @@
 |Test Sceanrio | Status |
 |:- | :-: |
 |Master data sync |<img src="../_images/1.2.0/check.png" width="20">|
+|First user onboarding |<img src="../_images/1.2.0/check.png" width="20">|
+|Operator/Supervisor onboarding |<img src="../_images/1.2.0/check.png" width="20">|
 |New registration -  using sync'd PRID |<img src="../_images/1.2.0/check.png" width="20">|
 |New registration - using online PRID |<img src="../_images/1.2.0/check.png" width="20">|
 |New Registration - without PRID |<img src="../_images/1.2.0/check.png" width="20">|
 |New Registration - with valid introducer UIN/RID |<img src="../_images/1.2.0/check.png" width="20">|
 |New Registration - with Exceptions |<img src="../_images/1.2.0/check.png" width="20">|
-|Update - Operator biometrics |<img src="../_images/1.2.0/check.png" width="20">|
+|Update - Demographics |<img src="../_images/1.2.0/check.png" width="20">|
+|Update - Biometrics |<img src="../_images/1.2.0/check.png" width="20">|
+|Lost UIN - Adult |<img src="../_images/1.2.0/check.png" width="20">|
+|Lost UIN - Child |<img src="../_images/1.2.0/check.png" width="20">|
+|Acknowledge preview have related/catpured data |<img src="../_images/1.2.0/check.png" width="20">|
+|Child becomes Adult - update biometrics |<img src="../_images/1.2.0/check.png" width="20">|
+|Officer biometric update |<img src="../_images/1.2.0/check.png" width="20">|
 |Bio Login - Fingerprint/IRIS/Face using mockSDK |<img src="../_images/1.2.0/check.png" width="20">|
 |Packet creation authentication (approval) via Bio Auth |<img src="../_images/1.2.0/check.png" width="20">|
-|Dynamic UI |<img src="../_images/1.2.0/check.png" width="20">|
 |EOD Authentication via Bio Auth |<img src="../_images/1.2.0/check.png" width="20">|
 |EOD Authentication via Password |<img src="../_images/1.2.0/check.png" width="20">|
 |Multi-Factor Auth - Finger + Password: Packet Auth |<img src="../_images/1.2.0/check.png" width="20">|
-|Acknowledge preview have related/catpured data |<img src="../_images/1.2.0/check.png" width="20">|
-|First user onboarding |<img src="../_images/1.2.0/check.png" width="20">|
-|Operator/Supervisor onboarding |<img src="../_images/1.2.0/check.png" width="20">|
-|Registration client with TPM-enabled |<img src="../_images/1.2.0/check.png" width="20">|
-|Registration client without TPM |**N** |
-|Child becomes Adult - update biometrics |<img src="../_images/1.2.0/check.png" width="20">|
-|Officer biometric update |<img src="../_images/1.2.0/check.png" width="20">|
-|Lost UIN - Adult |<img src="../_images/1.2.0/check.png" width="20">|
-|Lost UIN - Child |<img src="../_images/1.2.0/check.png" width="20">|
 |Offline Registration |<img src="../_images/1.2.0/check.png" width="20">|
 |Password Re-set |<img src="../_images/1.2.0/check.png" width="20">|
 |Audit |**N** |
 |Remap Center |<img src="../_images/1.2.0/check.png" width="20">|
-|Auotmatic Upload packet with & w/o EOD |<img src="../_images/1.2.0/check.png" width="20">|
+|Auotmatic Upload packet with & without EOD |<img src="../_images/1.2.0/check.png" width="20">|
 |Save applications to device |<img src="../_images/1.2.0/check.png" width="20">|
 |Application status check |<img src="../_images/1.2.0/check.png" width="20">|
+|Dynamic UI |<img src="../_images/1.2.0/check.png" width="20">|
 |Multi language support |<img src="../_images/1.2.0/check.png" width="20">|
+|Registration client with TPM-enabled |<img src="../_images/1.2.0/check.png" width="20">|
+|Registration client without TPM |**N** |
 
 # Registration Processor
 |Test Sceanrio | Status |
@@ -143,7 +144,6 @@
 |Partner Certificates Upload |<img src="../_images/1.2.0/check.png" width="20">|
 |Partner - Policy Mapping |<img src="../_images/1.2.0/check.png" width="20">|
 |Audit |<img src="../_images/1.2.0/check.png" width="20">|
-|Device Registration |<img src="../_images/1.2.0/check.png" width="20">|
 |Policy Group - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
 |Policy- Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
 |Auth Policy - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
