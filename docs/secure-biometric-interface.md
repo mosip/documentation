@@ -30,9 +30,8 @@ Important temininologies referred in the SBI definition are given below.
 SBI CL 1.0 and SBI CL 2.0 were previously referred to as **L0** and **L1** respectively.
 {% endhint %}
 
-## Device Physical ID
+## Device physical ID
 An identification mark that shows MOSIP compliance and a readable unique device serial number (minimum of 12 digits), make and model. The same information has to be available over a 2D QR Code or Barcode. This is to help field support and validation.
-|`dateTime`| Time during the issuance of the request. This is in ISO format.|
 
 ## Device subtype
 `deviceSubType`:
