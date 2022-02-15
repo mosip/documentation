@@ -1,155 +1,159 @@
-# Legends
-|Legend|Description|
-| :-: | :-: |
-|<img src="../_images/1.2.0/check.png" width="20">|Passed|
-|<img src="../_images/1.2.0/remove.png" width="20">|Failed|
-| **N** |Not Verified|
+This document illustates the module wise features in MOSIP 1.2.0 and their functionality with the working status.
 
-# Pre-registration
+## Legends
+|Legend|Status|Description|
+| :-: | :-: |:-|
+|![](../_images/1.2.0/check.png) | Passed | Feature(s) working as designed |
+|![](../_images/1.2.0/remove.png) | Failed | Feature(s) working as designed |
+|![](../_images/1.2.0/n.png) | Not Verified | Feature(s) not verified |
+|![](../_images/1.2.0/p.png) | Partially Working | Feature(s) not completely working as designed |
+
+
+## Pre-registration
 |Test Sceanrio | Status |
 |:- | :-: |
-|Login using email OTP |<img src="../_images/1.2.0/check.png" width="20">|
-|Login using SMS OTP |**N** |
-|Captcha |<img src="../_images/1.2.0/check.png" width="20">|
-|Create Application |<img src="../_images/1.2.0/check.png" width="20">|
-|Appointment Booking |<img src="../_images/1.2.0/check.png" width="20">|
-|Notifications - E-mail |<img src="../_images/1.2.0/check.png" width="20">|
-|Notifications - SMS |**N** |
-|Download and Print acknowlagement |<img src="../_images/1.2.0/check.png" width="20">|
-|Upload document(s) |<img src="../_images/1.2.0/check.png" width="20">|
-|Appointment Cancellation |<img src="../_images/1.2.0/check.png" width="20">|
-|Appointment Re-booking |<img src="../_images/1.2.0/check.png" width="20">|
-|Group booking |<img src="../_images/1.2.0/check.png" width="20">|
-|Discard Application |<img src="../_images/1.2.0/check.png" width="20">|
-|Multi-Language support |<img src="../_images/1.2.0/check.png" width="20">|
-|Audit |<img src="../_images/1.2.0/check.png" width="20">|
-|Dynamic UI |<img src="../_images/1.2.0/check.png" width="20">|
+|Login using email OTP |![](../_images/1.2.0/check.png)|
+|Login using SMS OTP |![](../_images/1.2.0/n.png)|
+|Captcha |![](../_images/1.2.0/check.png)|
+|Create application |![](../_images/1.2.0/check.png)|
+|Appointment booking |![](../_images/1.2.0/check.png)|
+|Notifications - E-mail |![](../_images/1.2.0/check.png)|
+|Notifications - SMS |![](../_images/1.2.0/n.png) |
+|Download and print acknowlagement |![](../_images/1.2.0/check.png)|
+|Upload document(s) |![](../_images/1.2.0/check.png)|
+|Appointment cancellation |![](../_images/1.2.0/check.png)|
+|Appointment re-booking |![](../_images/1.2.0/check.png)|
+|Group booking |![](../_images/1.2.0/check.png)|
+|Discard Application |![](../_images/1.2.0/check.png)|
+|Multi-Language support |![](../_images/1.2.0/check.png)|
+|Dynamic UI |![](../_images/1.2.0/check.png)|
+|Audit |![](../_images/1.2.0/check.png)|
 
-# Registration Client
+## Registration Client
 |Test Sceanrio | Status |
 |:- | :-: |
-|Master data sync |<img src="../_images/1.2.0/check.png" width="20">|
-|First user onboarding |<img src="../_images/1.2.0/check.png" width="20">|
-|Operator/Supervisor onboarding |<img src="../_images/1.2.0/check.png" width="20">|
-|New registration -  using sync'd PRID |<img src="../_images/1.2.0/check.png" width="20">|
-|New registration - using online PRID |<img src="../_images/1.2.0/check.png" width="20">|
-|New Registration - without PRID |<img src="../_images/1.2.0/check.png" width="20">|
-|New Registration - with valid introducer UIN/RID |<img src="../_images/1.2.0/check.png" width="20">|
-|New Registration - with Exceptions |<img src="../_images/1.2.0/check.png" width="20">|
-|Update - Demographics |<img src="../_images/1.2.0/check.png" width="20">|
-|Update - Biometrics |<img src="../_images/1.2.0/check.png" width="20">|
-|Lost UIN - Adult |<img src="../_images/1.2.0/check.png" width="20">|
-|Lost UIN - Child |<img src="../_images/1.2.0/check.png" width="20">|
-|Acknowledge preview have related/catpured data |<img src="../_images/1.2.0/check.png" width="20">|
-|Child becomes Adult - update biometrics |<img src="../_images/1.2.0/check.png" width="20">|
-|Officer biometric update |<img src="../_images/1.2.0/check.png" width="20">|
-|Bio Login - Fingerprint/IRIS/Face using mockSDK |<img src="../_images/1.2.0/check.png" width="20">|
-|Packet creation authentication (approval) via Bio Auth |<img src="../_images/1.2.0/check.png" width="20">|
-|EOD Authentication via Bio Auth |<img src="../_images/1.2.0/check.png" width="20">|
-|EOD Authentication via Password |<img src="../_images/1.2.0/check.png" width="20">|
-|Multi-Factor Auth - Finger + Password: Packet Auth |<img src="../_images/1.2.0/check.png" width="20">|
-|Offline Registration |<img src="../_images/1.2.0/check.png" width="20">|
-|Password Re-set |<img src="../_images/1.2.0/check.png" width="20">|
-|Audit |**N** |
-|Remap Center |<img src="../_images/1.2.0/check.png" width="20">|
-|Auotmatic Upload packet with & without EOD |<img src="../_images/1.2.0/check.png" width="20">|
-|Save applications to device |<img src="../_images/1.2.0/check.png" width="20">|
-|Application status check |<img src="../_images/1.2.0/check.png" width="20">|
-|Dynamic UI |<img src="../_images/1.2.0/check.png" width="20">|
-|Multi language support |<img src="../_images/1.2.0/check.png" width="20">|
-|Registration client with TPM-enabled |<img src="../_images/1.2.0/check.png" width="20">|
-|Registration client without TPM |**N** |
+|Master data sync |![](../_images/1.2.0/check.png)|
+|First user onboarding |![](../_images/1.2.0/check.png)|
+|Operator/Supervisor onboarding |![](../_images/1.2.0/check.png)|
+|New registration -  using sync'd PRID |![](../_images/1.2.0/check.png)|
+|New registration - using online PRID |![](../_images/1.2.0/check.png)|
+|New Registration - without PRID |![](../_images/1.2.0/check.png)|
+|New Registration - with valid introducer UIN/RID |![](../_images/1.2.0/check.png)|
+|New Registration - with Exceptions |![](../_images/1.2.0/check.png)|
+|Update - Demographics |![](../_images/1.2.0/check.png)|
+|Update - Biometrics |![](../_images/1.2.0/check.png)|
+|Lost UIN - Adult |![](../_images/1.2.0/check.png)|
+|Lost UIN - Child |![](../_images/1.2.0/check.png)|
+|Acknowledge preview have related/catpured data |![](../_images/1.2.0/check.png)|
+|Child becomes Adult - update biometrics |![](../_images/1.2.0/check.png)|
+|Officer biometric update |![](../_images/1.2.0/check.png)|
+|Bio Login - Fingerprint/IRIS/Face using mockSDK |![](../_images/1.2.0/check.png)|
+|Packet creation authentication (approval) via Bio Auth |![](../_images/1.2.0/check.png)|
+|EOD Authentication via Bio Auth |![](../_images/1.2.0/check.png)|
+|EOD Authentication via Password |![](../_images/1.2.0/check.png)|
+|Multi-Factor Auth - Finger + Password: Packet Auth |![](../_images/1.2.0/check.png)|
+|Offline Registration |![](../_images/1.2.0/check.png)|
+|Password Re-set |![](../_images/1.2.0/check.png)|
+|Remap Center |![](../_images/1.2.0/check.png)|
+|Auotmatic Upload packet with & without EOD |![](../_images/1.2.0/check.png)|
+|Save applications to device |![](../_images/1.2.0/check.png)|
+|Application status check |![](../_images/1.2.0/check.png)|
+|Dynamic UI |![](../_images/1.2.0/check.png)|
+|Multi language support |![](../_images/1.2.0/check.png)|
+|Registration client with TPM-enabled |![](../_images/1.2.0/check.png)|
+|Registration client without TPM |![](../_images/1.2.0/n.png) |
+|Audit |![](../_images/1.2.0/n.png) |
 
-# Registration Processor
+## Registration Processor
 |Test Sceanrio | Status |
 |:- | :-: |
-|Demo - De-dupe	 |<img src="../_images/1.2.0/check.png" width="20">|
-|Biometric - De-dupe	 |<img src="../_images/1.2.0/check.png" width="20">|
-|Manual adjudication	|**N** |
-|Audit	 |<img src="../_images/1.2.0/check.png" width="20">|
-|Notification based on user preferred language	 |<img src="../_images/1.2.0/check.png" width="20">|
-|Policy based packet processing	 |<img src="../_images/1.2.0/check.png" width="20">|
-|Support for Pause Resume	 |<img src="../_images/1.2.0/check.png" width="20">|
-|Hotlisting	 |<img src="../_images/1.2.0/check.png" width="20">|
-|Biometric Correction	 |<img src="../_images/1.2.0/check.png" width="20">|
+|Demo - De-duplication |![](../_images/1.2.0/check.png)|
+|Biometric - De-duplication |![](../_images/1.2.0/check.png)|
+|Manual adjudication |![](../_images/1.2.0/n.png) |
+|Audit |![](../_images/1.2.0/check.png)|
+|Notification based on user preferred language |![](../_images/1.2.0/check.png)|
+|Policy based packet processing	|![](../_images/1.2.0/check.png)|
+|Support for pause resume |![](../_images/1.2.0/check.png)|
+|Hotlisting	|![](../_images/1.2.0/check.png)|
+|Biometric correction |![](../_images/1.2.0/check.png)|
 
-# ID Authentication
+## ID Authentication
 |Test Sceanrio | Status |
 |:- | :-: |
-|Auth (Bio/Demo/OTP) using UIN |<img src="../_images/1.2.0/check.png" width="20">|
-|Auth (Bio/Demo/OTP) using VID |<img src="../_images/1.2.0/check.png" width="20">|
-|Multi-factor Auth using UIN |<img src="../_images/1.2.0/check.png" width="20">|
-|Multi-factor Auth using VID |<img src="../_images/1.2.0/check.png" width="20">|
-|e-KYC (Bio/Demo/OTP) using UIN |<img src="../_images/1.2.0/check.png" width="20">|
-|e-KYC (Bio/Demo/OTP) using VID |<img src="../_images/1.2.0/check.png" width="20">|
-|e-KYC Multi-factor Auth using UIN |<img src="../_images/1.2.0/check.png" width="20">|
-|e-KYC Multi-factor Auth using VID |<img src="../_images/1.2.0/check.png" width="20">|
-|Auth Lock/Unlock |<img src="../_images/1.2.0/check.png" width="20">|
-|Create UIN |<img src="../_images/1.2.0/check.png" width="20">|
-|Deactivate/Reactivate UIN |<img src="../_images/1.2.0/check.png" width="20">|
-|VID Generation (Perpetual/Temporary) |<img src="../_images/1.2.0/check.png" width="20">|
-|Audit |<img src="../_images/1.2.0/check.png" width="20">|
+|Auth (Bio/Demo/OTP) using UIN |![](../_images/1.2.0/check.png)|
+|Auth (Bio/Demo/OTP) using VID |![](../_images/1.2.0/check.png)|
+|Multi-factor auth using UIN |![](../_images/1.2.0/check.png)|
+|Multi-factor auth using VID |![](../_images/1.2.0/check.png)|
+|e-KYC (Bio/Demo/OTP) using UIN |![](../_images/1.2.0/check.png)|
+|e-KYC (Bio/Demo/OTP) using VID |![](../_images/1.2.0/check.png)|
+|e-KYC multi-factor auth using UIN |![](../_images/1.2.0/check.png)|
+|e-KYC multi-factor auth using VID |![](../_images/1.2.0/check.png)|
+|Auth lock/unlock |![](../_images/1.2.0/check.png)|
+|Create UIN |![](../_images/1.2.0/check.png)|
+|Deactivate/reactivate UIN |![](../_images/1.2.0/check.png)|
+|VID generation (Perpetual/Temporary) |![](../_images/1.2.0/check.png)|
+|Audit |![](../_images/1.2.0/check.png)|
 
-# Resident Services
+## Resident Services
 |Test Sceanrio | Status |
 |:- | :-: |
-|Update Demo Details|<img src="../_images/1.2.0/check.png" width="20">|
-|View Auth History|<img src="../_images/1.2.0/check.png" width="20">|
-|Download UIN Card|<img src="../_images/1.2.0/check.png" width="20">|
-|Download Masked UIN Card|<img src="../_images/1.2.0/check.png" width="20">|
-|Revoke VIDs|<img src="../_images/1.2.0/check.png" width="20">|
-|Lock/Unlock Auth (Bio/Demo)|<img src="../_images/1.2.0/check.png" width="20">|
-|Generate VID - Perp/Temp|<img src="../_images/1.2.0/check.png" width="20">|
-|Audit|<img src="../_images/1.2.0/check.png" width="20">|
-|Check Packet Status|<img src="../_images/1.2.0/check.png" width="20">|
+|Update demo details|![](../_images/1.2.0/remove.png)|
+|View auth history|![](../_images/1.2.0/check.png)|
+|Download UIN card|![](../_images/1.2.0/check.png)|
+|Download masked UIN card|![](../_images/1.2.0/remove.png)|
+|Revoke VIDs|![](../_images/1.2.0/p.png)|
+|Lock/Unlock auth (Bio/Demo)|![](../_images/1.2.0/check.png)|
+|Generate VID (Perpetual/Temporary)|![](../_images/1.2.0/check.png)|
+|Audit|![](../_images/1.2.0/check.png)|
+|Check Packet Status|![](../_images/1.2.0/check.png)|
 
-# Admin Services
+## Admin Services
 |Test Sceanrio | Status |
 |:- | :-: |
-|User mapping - To Zone/RegCenter |<img src="../_images/1.2.0/check.png" width="20">|
-|Center - Create/Edit/Activate/Deactivate/Decommission |<img src="../_images/1.2.0/check.png" width="20">|
-|Device  - Create/Edit/Activate/Deactivate/Decommission |<img src="../_images/1.2.0/check.png" width="20">|
-|Machine - Create/Edit/Activate/Deactivate/Decommission |<img src="../_images/1.2.0/check.png" width="20">|
-|Packet Status - for given RID |<img src="../_images/1.2.0/check.png" width="20">|
-|Packet Pause/Resume - for given RID |<img src="../_images/1.2.0/check.png" width="20">|
-|CenterType - Create/Edit/Activate |<img src="../_images/1.2.0/check.png" width="20">|
-|CenterType - Cloning to logged in language |<img src="../_images/1.2.0/check.png" width="20">|
-|BlockListedWords - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|HolidayList - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|HolidayList - Cloning to logged in language |<img src="../_images/1.2.0/check.png" width="20">|
-|Template - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Template - Cloning to logged in language |<img src="../_images/1.2.0/check.png" width="20">|
-|Dynamicfield - Create/Update/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Device Specification - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Machine Specification - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Machine Type - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Document Type - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Document Category- Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Document Category Type - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Device type-Create/Update/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Bulk upload - Packets |<img src="../_images/1.2.0/check.png" width="20">|
-|Bulk upload - MasterData  - Insert/Update/Delete to a table |<img src="../_images/1.2.0/check.png" width="20">|
-|Keymanager - Generate CSR |<img src="../_images/1.2.0/check.png" width="20">|
-|Keymanager - Generate MasterKey |<img src="../_images/1.2.0/check.png" width="20">|
-|Keymanager - Get certificate |<img src="../_images/1.2.0/check.png" width="20">|
-|Keymanager - Upload certificate for APID and RID |<img src="../_images/1.2.0/check.png" width="20">|
-|Keymanager - Upload other domain certificate for APID and RID |<img src="../_images/1.2.0/check.png" width="20">|
-|Multi Language support |<img src="../_images/1.2.0/check.png" width="20">|
+|User mapping - To Zone/RegCenter |![](../_images/1.2.0/check.png)|
+|Center - Create/Edit/Activate/Deactivate/Decommission |![](../_images/1.2.0/check.png)|
+|Device  - Create/Edit/Activate/Deactivate/Decommission |![](../_images/1.2.0/p.png)|
+|Machine - Create/Edit/Activate/Deactivate/Decommission |![](../_images/1.2.0/check.png)|
+|Packet Status - for given RID |![](../_images/1.2.0/p.png)|
+|Packet Pause/Resume - for given RID |![](../_images/1.2.0/remove.png)|
+|CenterType - Create/Edit/Activate |![](../_images/1.2.0/check.png)|
+|CenterType - Cloning to logged in language |![](../_images/1.2.0/check.png)|
+|BlockListedWords - Create/Edit/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|HolidayList - Create/Edit/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|HolidayList - Cloning to logged in language |![](../_images/1.2.0/p.png)|
+|Template - Create/Edit/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|Template - Cloning to logged in language |![](../_images/1.2.0/remove.png)|
+|Dynamicfield - Create/Update/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|Device Specification - Create/Edit/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|Machine Specification - Create/Edit/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|Machine Type - Create/Edit/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|Document Type - Create/Edit/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|Document Category- Create/Edit/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|Document Category Type - Create/Edit/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|Device type-Create/Update/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|Bulk upload - Packets |![](../_images/1.2.0/remove.png)|
+|Bulk upload - MasterData  - Insert/Update/Delete to a table |![](../_images/1.2.0/p.png)|
+|Keymanager - Generate CSR |![](../_images/1.2.0/check.png)|
+|Keymanager - Generate MasterKey |![](../_images/1.2.0/check.png)|
+|Keymanager - Get certificate |![](../_images/1.2.0/check.png)|
+|Keymanager - Upload certificate for APID and RID |![](../_images/1.2.0/check.png)|
+|Keymanager - Upload other domain certificate for APID and RID |![](../_images/1.2.0/check.png)|
+|Multi Language support |![](../_images/1.2.0/check.png)|
+|Retrieve Lost RID |![](../_images/1.2.0/p.png)|
 
-# Partner Management
+## Partner Management
 |Test Sceanrio | Status |
 |:- | :-: |
-|Partner - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Policy - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Partner Certificates Upload |<img src="../_images/1.2.0/check.png" width="20">|
-|Partner - Policy Mapping |<img src="../_images/1.2.0/check.png" width="20">|
-|Audit |<img src="../_images/1.2.0/check.png" width="20">|
-|Policy Group - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Policy- Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Auth Policy - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Data share Policy - Create/Edit/Activate/Deactivate |<img src="../_images/1.2.0/check.png" width="20">|
-|Partner mapping |<img src="../_images/1.2.0/check.png" width="20">|
-|Device details - Create/Edit/Activate/Deactivate/SBI details |<img src="../_images/1.2.0/check.png" width="20">|
-|FTM details - Create/Edit/Approve/Reject |<img src="../_images/1.2.0/check.png" width="20">|
-|Partner policy mapping - Map policy/Approve/Reject |<img src="../_images/1.2.0/check.png" width="20">|
-|Upload CA certificate |<img src="../_images/1.2.0/check.png" width="20">|
+|Partner - Register/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|Partner Certificates Upload |![](../_images/1.2.0/check.png)|
+|Upload CA Certificate |![](../_images/1.2.0/check.png)|
+|Download Certificate |![](../_images/1.2.0/remove.png)|
+|Partner - Policy Mapping |![](../_images/1.2.0/check.png)|
+|Policy Group - Create/Edit/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|Auth Policy - Create/Edit/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|Data share Policy - Create/Edit/Activate/Deactivate |![](../_images/1.2.0/check.png)|
+|Partner policy mapping - Map policy/Approve/Reject |![](../_images/1.2.0/check.png)|
+|Device details - Create/Edit/Activate/Deactivate/SBI details |![](../_images/1.2.0/check.png)|
+|FTM details - Create/Edit/Approve/Reject |![](../_images/1.2.0/check.png)|
+|Upload CA certificate |![](../_images/1.2.0/check.png)|
+|Audit |![](../_images/1.2.0/check.png)|
