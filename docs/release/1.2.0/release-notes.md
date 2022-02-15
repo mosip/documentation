@@ -8,9 +8,10 @@
 
 Asymmetric Amoeba is a Long Term Support (LTS) release. This release focuses on easy manageability, usability, enhanced performance, robustness, security, inclusivity (supports 2+ languages with no restrictions), and comprehensive documentation. 
 
-As a part of manageability, a fully supported admin and partner management portal with the ability to self-register partners is included. To help operational needs, a fully-working reference reporting module is included that can be used by the adopters to track and monitor the analytics around MOSIP.
+As a part of manageability, a fully supported [Admin](admin-portal-user-guide.md) and [Partner Management Portal](partner-management-portal.md) with the ability to self-register partners is included. To help with the operational needs, a fully-working reference [Reporting](repoting.md) module is included that can be used by the adopters to track and monitor the analytics around MOSIP.
 
-**Major area of work**
+
+**Major areas of work**
 
 - Robustness
 - Partner Management Portal
@@ -63,7 +64,8 @@ As a part of manageability, a fully supported admin and partner management porta
   - [Automation Tests](https://github.com/mosip/mosip-automation-tests/tree/v1.2.0)
   - [Functional Tests](https://github.com/mosip/mosip-functional-tests/tree/v1.2.0)
 
-**List of documents:**
+
+**List of documents**
 
 - [Module-wise features and enhancement](enhancements.md)
 - [Sonar scan report](sonar-scan-report.md)
