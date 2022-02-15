@@ -1,4 +1,6 @@
-# Partner Management Portal [TBD]
+# Partner Management Portal 
+
+_THIS DOCUMENT IS BEING UPDATED_.
 
 ## Overview
 Partner management portal allows the partners to register themselves in MOSIP. With LTS release, the following types of partners can register themselves:
