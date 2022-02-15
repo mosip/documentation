@@ -1,6 +1,6 @@
 "$id": ./sbi-api.json
 "$schema": https://json-schema.org/draft/2020-12/schema
-title: SBI Request/Response Specification
+title: SBI Request/Response Specification - v0.9.5
 description: "All JSON objects complying to [SBI](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface)."
 type: object 
 properties:
