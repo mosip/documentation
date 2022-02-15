@@ -8,3 +8,5 @@ To generate HTML pages:
 ```
 generate-schema-doc --expand-buttons --no-minify --config show_breadcrumbs=false cover.yaml`
 ```
+* Remove top line in HTML "type: Object" as we don't want to appear it as a title of documentation.
+
