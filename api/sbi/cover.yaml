@@ -4,8 +4,6 @@ title: SBI API Objects
 description: "All JSON objects complying to [SBI](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface)."
 type: object 
 properties:
-   Digital ID:
-     $ref: ./digital-id.yaml
    Discovery Request:
      $ref: ./discovery-request.yaml
    Discovery Response:
@@ -24,6 +22,10 @@ properties:
      $ref: ./reg-capture-response.yaml
    Stream Request:
      $ref: ./stream-request.yaml
+   Stream Response:
+     $ref: ./stream-response.yaml
    Device Info:
      $ref: ./device-info.yaml
+   Digital ID:
+     $ref: ./digital-id.yaml
   
