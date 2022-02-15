@@ -14,7 +14,7 @@ _THIS DOCUMENT IS BEING UPDATED_.
 SBI service is a software module running on a host that exposes the SBI interface to the host application like a registration client or authentication app. The service must run on any of the ports in the range 4501-4600. The host system could be any operating system - Windows, Android or IOS.
 
 ## SBI specification 
-The request/response JSON objects of the interface are definined in  [SBI Specification]().
+The request/response JSON objects of the interface are defined [here]().
 
 Important temininologies referred in the SBI definition are given below. 
 
@@ -123,6 +123,3 @@ Code | Message
 109 | Requested number of biometric (Finger/IRIS) not supported
 202 | No device connected
 5xx | Custom error codes implemented by [Device Provider](https://docs.mosip.io/1.2.0/partners#partner-types). 
-
-## API
-_This section is being updated_.
