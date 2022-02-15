@@ -26,5 +26,5 @@ To learn more, see our [Releases Notes](releases.md).
 * Presentations: [mosip.io](https://www.mosip.io/resources.php)
 * Training: [MOSIP Academy](https://academy.mosip.io)
 * Learning videos: [YouTube Channel](https://www.youtube.com/channel/UCKFSVO6BO1QLvBzc4voziDg)
-* Community: [Gitter Channel](https://gitter.im/mosip-community/community)
+* Community: [MOSIP Community on Disourse](https://community.mosip.io)
 
