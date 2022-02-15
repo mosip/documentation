@@ -13,10 +13,17 @@ _THIS DOCUMENT IS BEING UPDATED_.
 ## SBI service
 SBI service is a software module running on a host that exposes the SBI interface to the host application like a registration client or authentication app. The service must run on any of the ports in the range 4501-4600. The host system could be any operating system - Windows, Android or IOS.
 
-## SBI specification 
-The request/response JSON objects of the interface are defined [here]().
+## Communication interfaces
+The following communication intefaces are defined:
+1. Device Discovery
+1. Device Info
+1. Auth Capture
+1. Registration Capture
+1. Stream
 
-Important temininologies referred in the SBI definition are given below. 
+The JSON objects of the interface are defined [here](https://mosip.github.io/documentation/1.2.0/sbi/schema_doc.html).
+
+Important temininologies referred in the SBI are given below. 
 
 ## Device certification levels
 ### SBI CL 1.0 
