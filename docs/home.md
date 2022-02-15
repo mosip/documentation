@@ -17,7 +17,7 @@ The key objectives of MOSIP are to:
 ## Releases
 The latest release of MOSIP, version **1.2.0 LTS** is here! Check out the exciting new services and enhancements in the documentation. 
 
-To learn more, see our [releases page](releases.md).
+To learn more, see our [Releases Notes](releases.md).
 
 ## Resources
 * Source Code: [GitHub Repositories](https://github.com/mosip)
