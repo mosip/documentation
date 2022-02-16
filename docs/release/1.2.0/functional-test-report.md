@@ -6,7 +6,7 @@ The scope of testing is to verify fitment to the specification from the perspect
 - Configurability
 - Customizability
 
-Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence Configurability and Extensibility of the software is also assessed. This ensures readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform, Verification scope required comprehensive automation testing for all the MOSIP APIs. An automation Test Rig is created for the same. All MOSIP UIs are reference implementations and these were verified through UI automation Test rig for RegClient and Admin UI.
+Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence Configurability and Extensibility of the software is also assessed. This ensures readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform, Verification scope required comprehensive automation testing for all the MOSIP APIs. An automation Test Rig is created for the same. All MOSIP UIs are reference implementations and these were verified through UI automation Test rig for Registration Client and Admin UI.
 
 # Test Approach
 Persona based approach has been adopted to perform the IV&V, by simulating test scenarios that resemble a real-time implementation. 
@@ -20,16 +20,16 @@ A Persona is a fictional character/user profile created to represent a user type
 
 The verification methods may differ based on how the need was addressed. 
 
-For regression check, “MOSIP Test Rig” - an automation testing suite - which is indigenously designed and developed for supporting persona based testing. MOSIP Test Rig covers the end to end test execution and reporting. The end to end functional test scenarios are written starting from pre-registration, to creation of packet in registration centre, processing the packet through the registration processor, generating UIN and authenticating identity using IDA through various permutation and combinations of cases being covered. MOSIP Test Rig will be an open source artifact which can also be enhanced and used by countries to validate the SI deliveries before going live. Persona classes include both negative and positive personas. Negative persona classes include users like Bribed Registration Office, Malicious Insider etc. The needs of positive persona classes must be met, whereas the needs of negative persona classes must be effectively restricted by the software.
+For regression check, “MOSIP Test Rig” - an automation testing suite - which is indigenously designed and developed for supporting persona based testing. MOSIP Test Rig covers the end to end test execution and reporting. The end-to-end functional test scenarios are written starting from pre-registration, to creation of packet in registration centre, processing the packet through the registration processor, generating UIN and authenticating identity using IDA through various permutation and combinations of cases being covered. MOSIP Test Rig will be an open source artifact which can also be enhanced and used by countries to validate the SI deliveries before going live. Persona classes include both negative and positive personas. Negative persona classes include users like Bribed Registration Office, Malicious Insider etc. The needs of positive persona classes must be met, whereas the needs of negative persona classes must be effectively restricted by the software.
 
 # Verified configuration 
 Verification is performed on various configurations as mentioned below 
 
-- Default configuration - with 3 Lang 
+- Default configuration - with 3 Languages
 - Virtual countries
-  - 1 Lang configuration
-  - 2 Lang configuration
-  - 3 Lang configuration
+  - 1 Language configuration
+  - 2 Language configuration
+  - 3 Language configuration
 
 # Test execution statistics 
 
