@@ -8,7 +8,6 @@ This document illustates the module wise features in MOSIP 1.2.0 and their funct
 |![](../_images/1.2.0/n.png) | Not Verified | Feature(s) not verified |
 |![](../_images/1.2.0/p.png) | Partially Working | Feature(s) not completely working as designed |
 
-
 ## Pre-registration
 |Feature | Status |
 |:- | :-: |
@@ -35,11 +34,11 @@ This document illustates the module wise features in MOSIP 1.2.0 and their funct
 |Master data sync |![](../_images/1.2.0/check.png)|
 |First user onboarding |![](../_images/1.2.0/check.png)|
 |Operator/Supervisor onboarding |![](../_images/1.2.0/check.png)|
-|New registration -  using sync'd PRID |![](../_images/1.2.0/check.png)|
+|New registration - using sync'd PRID |![](../_images/1.2.0/check.png)|
 |New registration - using online PRID |![](../_images/1.2.0/check.png)|
 |New Registration - without PRID |![](../_images/1.2.0/check.png)|
 |New Registration - with valid introducer UIN/RID |![](../_images/1.2.0/check.png)|
-|New Registration - with Exceptions |![](../_images/1.2.0/check.png)|
+|New Registration - with exceptions |![](../_images/1.2.0/check.png)|
 |Update - Demographics |![](../_images/1.2.0/check.png)|
 |Update - Biometrics |![](../_images/1.2.0/check.png)|
 |Lost UIN - Adult |![](../_images/1.2.0/check.png)|
@@ -48,13 +47,12 @@ This document illustates the module wise features in MOSIP 1.2.0 and their funct
 |Child becomes Adult - update biometrics |![](../_images/1.2.0/check.png)|
 |Officer biometric update |![](../_images/1.2.0/check.png)|
 |Bio Login - Fingerprint/IRIS/Face using mockSDK |![](../_images/1.2.0/check.png)|
-|Packet creation authentication (approval) via Bio Auth |![](../_images/1.2.0/check.png)|
-|EOD Authentication via Bio Auth |![](../_images/1.2.0/check.png)|
-|EOD Authentication via Password |![](../_images/1.2.0/check.png)|
-|Multi-Factor Auth - Finger + Password: Packet Auth |![](../_images/1.2.0/check.png)|
+|Packet creation authentication (approval) using biometrics |![](../_images/1.2.0/check.png)|
+|EOD authentication using biometric (MockSDK) |![](../_images/1.2.0/check.png)|
+|EOD authentication using password |![](../_images/1.2.0/check.png)|
 |Offline Registration |![](../_images/1.2.0/check.png)|
 |Password Re-set |![](../_images/1.2.0/check.png)|
-|Remap Center |![](../_images/1.2.0/check.png)|
+|Remap Center |![](../_images/1.2.0/p.png)|
 |Auotmatic Upload packet with & without EOD |![](../_images/1.2.0/check.png)|
 |Save applications to device |![](../_images/1.2.0/check.png)|
 |Application status check |![](../_images/1.2.0/check.png)|
