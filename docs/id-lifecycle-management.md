@@ -15,7 +15,7 @@ The various life cycle events are briefly explained below:
 ![](_images/id-registration-process.jpg)
 
 ### Pre-registration
-[Pre-registration](pre-registration.md) is a resident facing web-based that allows a resident to provide registration data, upload document proofs and book an appointment with a registeration center to complete the rest of the registration process.  This data can be accessed by the registration operators who could then complete registration process such as collectiong biometrics, verifying the documents and other formalties thus saving time and effort at the registration center.
+[Pre-registration](pre-registration.md) is a resident facing web-based portal that allows a resident to provide registration data, upload document proofs and book an appointment with a registeration center to complete the rest of the registration process.  This data can be accessed by the registration operators who could then complete registration process such as collectiong biometrics, verifying the documents and other formalties thus saving time and effort at the registration center.
 
 A resident can access the re-registration portal and do the following:
 * Enter demographic data and upload supporting documents
@@ -25,16 +25,15 @@ A resident can access the re-registration portal and do the following:
 
 
 ### Registration (enrollment)
-Registration is the process in which an individual/resident visits a registration center with or without a pre-registration application ID. They can do a walk-in at the center and give their demographic or biometric details to an operator. In MOSIP, the [Registration Client](registration-client.md) captures the individual' details and packages the captured information in a secure way (in the form of encrypted packets) and sends it to [Registration Processor](registration-processor.md) for further processing.  
+Registration is a process that allows a resident to provide the demographic information and biometrics by visiting a registration center.  The [Registration Client](registration-client.md) operated by a registration officer is used to securely capture the details and send it to [Registration Processor](registration-processor.md) for processing and issuance of an ID.   If resident has pre-registered, the registration officer can retreive the registration data by giving the pre-registration ID on the registration client.
 
 #### For adults
--    Resident/individual visits a registration center.
--    Resident provides the required information to register themselves in MOSIP (first time).
--    Registration officer captures’ individual’s information and sends it to the [Registration Processor](registration-processor.md)..
--    Various checks like biometrics quality, de-duplication, etc. performed in the Registration Processor with the individual's demographic data and biometrics.
--    If no duplicate is found, a Unique Identification Number(UIN) is allocated and ID credentials are sent to the individual via the country's configured printing and postal service.
--    Registration receipt(acknowledgement) containing the Registration Identity(RID), labels and data in the configured language, QR code (of the RID) provided to the resident at the center.
--    Notifications sent to the resident using the email ID and mobile number provided as a part of demographic data collection.
+-    Resident visits a registration center.
+-    Registration officer captures demographic details, biometrics and the documents and uploads the same for processing.
+-    Upon successful registration, a registration ID (RID) is allocated to the resident and an acknowledgement slip containing the captured etails and the RID is issued (printed) to the resident as a proof of registration.  
+-    Registration processor processes the registration details, performs quality checks and checks for duplicate entries (de-duplication).
+-    Upon successful processing, a Unique Identification Number (UIN) is allocated to the resident and a notification is sent to the resident on the registered phone number and/or email. 
+-    Upon failure in processing, the registration process is discarded and a notification is sent to the resident on the registered phone number and/or email.
 
 #### For infants/children
 -    Child visits the Registration center along with a guardian/parent.
