@@ -37,10 +37,13 @@ Registration is a process that allows a resident to provide the demographic info
 
 #### For infants/children
 -    Child visits the Registration center along with a guardian/parent.
--    Operator captures only the child' face biometrics.
--    Parent/guardian' UIN or RID and biometrics needed for authentication.
--    Additionally, a **proof of relationship** document to be provided at the center.
--    An acknowledgement receipt will be provided to the infant' parent/guardian.
+-    Registration officer captures the demographic details along with the face photo.
+
+_Note :  For infants/children less than 5 years old, the registration client doesn't capture the biometrics as they are still evolving.  However, the country may choose to override the same by modifying the rules accordingly_
+
+-    Parent/guardian' UIN or RID and the biometrics needed for authentication is captured.
+-    Additionally, a **proof of relationship** document is uploaded.
+-    Upon successful registration, an acknowledgement receipt containing the registration ID is issued to the parent/gaurdian.
 
 ## ID data update/updating individual’s information
 -    Residents can update their information in two ways:
