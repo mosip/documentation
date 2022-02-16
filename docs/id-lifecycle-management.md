@@ -15,15 +15,14 @@ The various life cycle events are briefly explained below:
 ![](_images/id-registration-process.jpg)
 
 ### Pre-registration
-[Pre-registration](pre-registration.md) is a resident facing web-based portal using which an individual can pre-enrol and book an appointment for registering in MOSIP. Pre-registration fundamentally helps the residents and Government organizations by saving the time and efforts required for basic data collection of the residents at the registration centers. The data pre-filled by the residents on the portal can be made available for use at the centers for quick access and seamless registration process.
+[Pre-registration](pre-registration.md) is a resident facing web-based that allows a resident to provide registration data, upload document proofs and book an appointment with a registeration center to complete the rest of the registration process.  This data can be accessed by the registration operators who could then complete registration process such as collectiong biometrics, verifying the documents and other formalties thus saving time and effort at the registration center.
 
-The residents can visit the pre-registration portal and do the following:
+A resident can access the re-registration portal and do the following:
 * Enter demographic data and upload supporting documents
 * Book an appointment for one or many users for registration by choosing a suitable registration center and a convinient time slot
 * Receive appointment notifications
-* Reschedule and Cancel appointments
+* Reschedule, update and cancel appointments
 
-Once the resident completes the above process, their data will be downloaded at the respective registration centers prior to their appointment.
 
 ### Registration (enrollment)
 Registration is the process in which an individual/resident visits a registration center with or without a pre-registration application ID. They can do a walk-in at the center and give their demographic or biometric details to an operator. In MOSIP, the [Registration Client](registration-client.md) captures the individual' details and packages the captured information in a secure way (in the form of encrypted packets) and sends it to [Registration Processor](registration-processor.md) for further processing.  
