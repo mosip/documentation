@@ -1,19 +1,19 @@
 # Overview
-This security testing report contains all the security bugs that were found in the various mosip modules .This is a combination of both web-application related security and API related security testing.
+This report contains all the security bugs that were identified in various MOSIP modules. This is a combination of both web application and API related security testing scenarios.
 
 # Timeline
-This report is presented for the 1.2.0 release also called the LTS release.
+This report is prepared based on the security testing performed on the 1.2.0 version of MOSIP.
 
 # Setup detail
-For testing the modules we have used state of the art Security testing tools such as Burpsuite Professional, wasp ZED attack proxy, wireguard and many other linux tools.
+For testing the modules we have used state of the art security testing tools such as Burpsuite Professional, owasp ZED attack proxy, wireguard and other Linux tools.
 
 # Web application details
-In MOSIP we have three modules that function partially as web-applications namely Preregistration, Administration and Partner-management-Portal. All three have been tested thoroughly. 
+In MOSIP we have three modules that have web-based UI interfaces. These modules are Preregistration, Administration and Partner-management-Portal. All three have been tested thoroughly.
 
 # API Details
-We have a few other modules that are not directly user interfaced and use APIs for internal function . https://mosip.github.io/documentation/1.2.0/1.2.0.html
+All other modules in MOSIP do not have any web-based interface and these modules communicate with each other using APIs. The details of the APIs in MOSIP 1.2.0 are available [here](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
 
-# Summary of the findings by Severity
+# Summary of the findings by severity
 
 **Web Security Vulnerability Snapshot**
 
@@ -23,7 +23,7 @@ We have a few other modules that are not directly user interfaced and use APIs f
 |Medium|18|
 |Low|8|
 |Information|0|
-|TOTAL|26|
+|Total|26|
 
 # Detailed Findings
 
@@ -33,10 +33,10 @@ We have a few other modules that are not directly user interfaced and use APIs f
 | :- | :- | :- |
 | Fixed | Medium | Low |
 
-| Description | An attacker can steal JWT cookie from the browser to steal personal information<br>1. Install cookie manager plugin in any browser<br>2. Login into the application and click cookie manager<br>3. Select JWT for current page<br>4. Copy the JWT and go to jwt.io web site decrypt the JWT<br>5. Check if any sensitive information is disclosed as this is only base64 encoded |
+| Description | An attacker can steal a JWT cookie from the browser and try to extract any personal information that is available there.<br>1. Install cookie manager plugin in any browser<br>2. Login into the application and click cookie manager<br>3. Select JWT for current page<br>4. Copy the JWT and go to jwt.io website to decode the token<br>5. Check if any sensitive information is disclosed in the token's payload as this is mostly base64 encoded |
 | :- | :- |
-| Risk Assessment | Authentication and authorization in MOSIP using JWT tokens. If any PII data is shared in the token, it would be considered as data breach. |
-| Fix Recommendation | No PII data Should be provided in the token itself |
+| Risk Assessment | For authentication and authorization in MOSIP we use JWT tokens. If any PII data is shared in the token, it would be considered a data breach. |
+| Fix Recommendation | No PII data should be shared in the token. |
 
 ## Scenario 2
 
@@ -44,10 +44,10 @@ We have a few other modules that are not directly user interfaced and use APIs f
 | :- | :- | :- |
 | Fixed | Medium | Low |
 
-| Description | Attacker can steal JWT cookie from the browser to crack the JWT secret key<br>1. Get the JWT token<br>2. Run the automated tool to crack the JWT and check if you can break the security key if it is a weak security key |
+| Description | Attacker can steal JWT cookie from the browser and crack the JWT secret key<br>1. Get the JWT token using the cookie manager plugin<br>2. Run an automated tool to crack the JWT token and check if you can break the security key if the security key is weak |
 | :- | :- |
-| Risk Assessment | Authentication and authorization in MOSIP using JWT tokens. If the token is broken, the secret key can be revealed as well as other important data can be exploited. |
-| Fix Recommendation | A very strong and random secret key must be used and must be changed at regular interval as well. |
+| Risk Assessment | For authentication and authorization in MOSIP we use JWT tokens. If the token is broken, the secret key can be revealed as well as other important data can be exploited. |
+| Fix Recommendation | A very strong and random secret key should be used and it should be changed at regular intervals. |
 
 ## Scenario 3
 
@@ -55,7 +55,7 @@ We have a few other modules that are not directly user interfaced and use APIs f
 | :- | :- | :- |
 |Fixed|Low|Low|
 
-| Description | Session was not not getting invalidated after logout |
+| Description | Session was not getting invalidated after logout |
 | :- | :- |
 | Risk Assessment | If a session doesn't get invalidated after calling the logout API, then the risk of any attacker taking over the session becomes high. |
 | Fix Recommendation | The session must be invalidated as soon as the user calls the logout API. After the token gets invalidated, all the access for the token should be removed. |
