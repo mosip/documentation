@@ -44,7 +44,7 @@ Data shared with all partners like ABIS, Print, Adjudication, IDA etc. is encryp
 1. Decrypt data in Step 8 above using PK8.
 1. Decrypt ZKn-IDA with K22 to get ZKn.
 1. Encrypt ZKn with K18 and store at random index.
-1. BIO data is stored as is.
+1. Bio-data is stored as is.
 
 ## ID authentication flow
 ![](_images/cryptography-ida-flow.png)
