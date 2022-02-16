@@ -38,7 +38,7 @@ This document illustates the module wise features in MOSIP 1.2.0 and their funct
 |New registration - using online PRID |![](../_images/1.2.0/check.png)|
 |New Registration - without PRID |![](../_images/1.2.0/check.png)|
 |New Registration - with valid introducer UIN/RID |![](../_images/1.2.0/check.png)|
-|New Registration - with exceptions |![](../_images/1.2.0/check.png)|
+|New Registration - with exceptions |![](../_images/1.2.0/p.png)|
 |Update - Demographics |![](../_images/1.2.0/check.png)|
 |Update - Biometrics |![](../_images/1.2.0/check.png)|
 |Lost UIN - Adult |![](../_images/1.2.0/check.png)|
@@ -46,9 +46,9 @@ This document illustates the module wise features in MOSIP 1.2.0 and their funct
 |Acknowledge preview have related/catpured data |![](../_images/1.2.0/check.png)|
 |Child becomes Adult - update biometrics |![](../_images/1.2.0/check.png)|
 |Officer biometric update |![](../_images/1.2.0/check.png)|
-|Bio Login - Fingerprint/IRIS/Face using mockSDK |![](../_images/1.2.0/check.png)|
-|Packet creation authentication (approval) using biometrics |![](../_images/1.2.0/check.png)|
-|EOD authentication using biometric (MockSDK) |![](../_images/1.2.0/check.png)|
+|Bio Login - Fingerprint/IRIS/Face (MockSDK) |![](../_images/1.2.0/check.png)|
+|Packet creation authentication using biometrics (MockSDK) |![](../_images/1.2.0/check.png)|
+|EOD authentication using biometrics (MockSDK) |![](../_images/1.2.0/check.png)|
 |EOD authentication using password |![](../_images/1.2.0/check.png)|
 |Offline Registration |![](../_images/1.2.0/check.png)|
 |Password Re-set |![](../_images/1.2.0/check.png)|
