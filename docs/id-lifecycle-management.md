@@ -59,11 +59,8 @@ _Note :  For infants/children less than 5 years old, the registration client doe
 - Likewise, a country can also re-activate an individual’ ID as need be.
 
 ## Finding a lost ID
--  Individual to provide their biometric information in the Registration center.
--  De-duplication performed to find the individual' ID.
--  Registration receipt containing Registration Identity(RID)), labels and data in the configured language, QR code (of the RID) provided to the resident.
--  ID credentials sent to the resident via the country’ configured printing and postal service.
-- Notifications sent to the resident using the email ID and mobile number provided as a apart of demographic data collection.
+In the event of loss of the ID, the the resident can go the nearest registration center and provide his/her biometrics and optionally provide the demographic details.   The details are sent to the MOSIP server which performs a biometric and demographic match.  Upon successful match, MOSIP provides mechanisms to retrieve the UIN of the resident which may be printed and delivered to the resident.
+Notifications are sent to the resident's registered email and/or phone.
 
 ## Correction process
 - Incase the system finds an error in the demographic data, documents or biometric data provided by an individual, the correction flow is triggered.
