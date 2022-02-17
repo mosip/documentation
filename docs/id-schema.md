@@ -1,11 +1,11 @@
 # ID Schema 
 
 ## Overview
-**ID Schema** is a standard [JSON schema](https://json-schema.org/understanding-json-schema/) that defines the data to be captured from an individual. MOSIP recommends collecting minimal data from the residents. However, information collected from residents may vary country to country. The ID Schema is flexible to accommodate such variations. 
+**ID Schema** is a standard [JSON schema](https://json-schema.org/understanding-json-schema/) that defines data fields set to be captured from a resident. It is recommended that the number of fields is kept to a usable minimum inorder to avoid profiling, minimize errors during data capture and avoid transactional fields. 
 
-Defining this schema becomes the fundamental step while using MOSIP. Once defined, all applications built on top of MOSIP platform must conform to the same.
+Defining the ID Schema is the the first step towards creating a foundational ID system.   Once defined, all applications built on top of the MOSIP platform must conform to the same.
 
-Refer to [sample ID Schema](https://github.com/mosip/mosip-infra/blob/release-1.2.0/deployment/v3/mosip/kernel/masterdata/samples/idschema.json) that's installed in [sandbox](sandbox-deployment.md). A guide to customise the same is given below.
+Refer to the [sample ID Schema](https://github.com/mosip/mosip-infra/blob/release-1.2.0/deployment/v3/mosip/kernel/masterdata/samples/idschema.json). A guide to customise the same is given below.
 
 ID schema is loaded as a part of master data to `identity_schema` table in `mosip_masterdata` DB.
 
