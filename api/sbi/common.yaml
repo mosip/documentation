@@ -3,9 +3,6 @@
 title: Common properties
 description: Common properties shared across schemas 
 $defs:
-  digitalId:
-    type: string
-    description: "[Reference](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#digital-id)."
   deviceSubId:
     type: integer
     description: "[Device SubId](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-subid)."

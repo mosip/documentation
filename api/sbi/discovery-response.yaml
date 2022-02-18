@@ -25,7 +25,7 @@ items:
       description: "Base URL to reach device.\n* Linux and windows: HTTP URL\n* Android: Intent name\n* IOS: URL schema."
     digitalId:
       type: string
-      description: "[Unsigned digital ID](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#device-digital-id)."
+      description: "[Unsigned digital ID](https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface#unsigned-digital-id). See `digital ID` schema given below."
     deviceCode:
       $ref: './common.yaml#/$defs/deviceCode'
     specVersion:
