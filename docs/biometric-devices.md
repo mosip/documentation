@@ -1,7 +1,5 @@
 # Biometric Devices [TBD]
 
-_THIS DOCUMENT IS BEING UPDATED_.
-
 ## Overview
 Biometric devices capture individuals biometric data (fingerprint, iris scan, photo) and send it to a registration client or authentication client (app). The functional architecture of various entities involved is shown below.
 
@@ -19,7 +17,7 @@ Biometric devices capture individuals biometric data (fingerprint, iris scan, ph
 
 \* An adopter may choose to have different subtypes, however, the certification needs to be adhered to.
 
-## Encrolment flow
+## Enrolment flow
 
 ![](_images/devices-enrolment.png)
 
@@ -27,25 +25,8 @@ Biometric devices capture individuals biometric data (fingerprint, iris scan, ph
 
 ![](_images/devices-authentication.png)
 
-## Device trust 
-* Device creates a key pair
-* A cert signing request (CSR) is generated and sent to the device provider (management server)
-* Management server signs and issues a certificate to the device
-* Device private key is used to sign the data, the JWT will have the certificate issued by the device provider.
-* MOSIP back end uses this certificate issued to the device by the device provider, to establish a connect with already onboarded deviceprovider cert.
-
-
-### Types of encryption keys
-* Device key [TBD]
-* FTM key
-* MOSIP public key
-
-
-## Key rotation
-
-## Test kits
-
-## Management server
+## SBI test kit
+[SBI](secure-biometric-interface.md) compliance of a device may be tested using  [MDS testing kit](https://github.com/mosip/mds-testing-kit).
 
 ## Devices calculator 
 The following calculator may be used to estimate number of devices required for a rollout. 
