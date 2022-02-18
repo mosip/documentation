@@ -35,8 +35,8 @@ The following calculator may be used to estimate number of devices required for 
 
 ## Partners
 Providers of biometric devices are Partners of MOSIP and need to be onboarded to a given deployment of MOSIP. Specifically,
-* [Device Partner](partners.md#device-partner-dp)
-* [FTM Partner](partners.md#ftm-partner-ftmp)
+* [Device Provider](partners.md#device-partner-dp)
+* [FTM Provider](partners.md#ftm-partner-ftmp)
  
 
 
