@@ -15,34 +15,35 @@ The various life cycle events are briefly explained below:
 ![](_images/id-registration-process.jpg)
 
 ### Pre-registration
-[Pre-registration](pre-registration.md) is a resident facing web-based portal using which an individual can pre-enrol and book an appointment for registering in MOSIP. Pre-registration fundamentally helps the residents and Government organizations by saving the time and efforts required for basic data collection of the residents at the registration centers. The data pre-filled by the residents on the portal can be made available for use at the centers for quick access and seamless registration process.
+[Pre-registration](pre-registration.md) is a resident facing web-based portal that allows a resident to provide registration data, upload document proofs and book an appointment with a registeration center to complete the rest of the registration process.  This data can be accessed by the registration operators who could then complete registration process such as collectiong biometrics, verifying the documents and other formalties thus saving time and effort at the registration center.
 
-The residents can visit the pre-registration portal and do the following:
+A resident can access the re-registration portal and do the following:
 * Enter demographic data and upload supporting documents
 * Book an appointment for one or many users for registration by choosing a suitable registration center and a convinient time slot
 * Receive appointment notifications
-* Reschedule and Cancel appointments
+* Reschedule, update and cancel appointments
 
-Once the resident completes the above process, their data will be downloaded at the respective registration centers prior to their appointment.
 
 ### Registration (enrollment)
-Registration is the process in which an individual/resident visits a registration center with or without a pre-registration application ID. They can do a walk-in at the center and give their demographic or biometric details to an operator. In MOSIP, the [Registration Client](registration-client.md) captures the individual' details and packages the captured information in a secure way (in the form of encrypted packets) and sends it to [Registration Processor](registration-processor.md) for further processing.  
+Registration is a process that allows a resident to provide the demographic information and biometrics by visiting a registration center.  The [Registration Client](registration-client.md) operated by a registration officer is used to securely capture the details and send it to [Registration Processor](registration-processor.md) for processing and issuance of an ID.   If resident has pre-registered, the registration officer can retreive the registration data by giving the pre-registration ID on the registration client.
 
 #### For adults
--    Resident/individual visits a registration center.
--    Resident provides the required information to register themselves in MOSIP (first time).
--    Registration officer captures’ individual’s information and sends it to the [Registration Processor](registration-processor.md)..
--    Various checks like biometrics quality, de-duplication, etc. performed in the Registration Processor with the individual's demographic data and biometrics.
--    If no duplicate is found, a Unique Identification Number(UIN) is allocated and ID credentials are sent to the individual via the country's configured printing and postal service.
--    Registration receipt(acknowledgement) containing the Registration Identity(RID), labels and data in the configured language, QR code (of the RID) provided to the resident at the center.
--    Notifications sent to the resident using the email ID and mobile number provided as a part of demographic data collection.
+-    Resident visits a registration center.
+-    Registration officer captures demographic details, biometrics and the documents and uploads the same for processing.
+-    Upon successful registration, a registration ID (RID) is allocated to the resident and an acknowledgement slip containing the captured etails and the RID is issued (printed) to the resident as a proof of registration.  
+-    Registration processor processes the registration details, performs quality checks and checks for duplicate entries (de-duplication).
+-    Upon successful processing, a Unique Identification Number (UIN) is allocated to the resident and a notification is sent to the resident on the registered phone number and/or email. 
+-    Upon failure in processing, the registration process is discarded and a notification is sent to the resident on the registered phone number and/or email.
 
 #### For infants/children
 -    Child visits the Registration center along with a guardian/parent.
--    Operator captures only the child' face biometrics.
--    Parent/guardian' UIN or RID and biometrics needed for authentication.
--    Additionally, a **proof of relationship** document to be provided at the center.
--    An acknowledgement receipt will be provided to the infant' parent/guardian.
+-    Registration officer captures the demographic details along with the face photo.
+
+_Note :  For infants/children less than 5 years old, the registration client doesn't capture the biometrics as they are still evolving.  However, the country may choose to override the same by modifying the rules accordingly_
+
+-    Parent/guardian' UIN or RID and the biometrics needed for authentication is captured.
+-    Additionally, a **proof of relationship** document is uploaded.
+-    Upon successful registration, an acknowledgement receipt containing the registration ID is issued to the parent/gaurdian.
 
 ## ID data update/updating individual’s information
 -    Residents can update their information in two ways:
@@ -58,11 +59,8 @@ Registration is the process in which an individual/resident visits a registratio
 - Likewise, a country can also re-activate an individual’ ID as need be.
 
 ## Finding a lost ID
--  Individual to provide their biometric information in the Registration center.
--  De-duplication performed to find the individual' ID.
--  Registration receipt containing Registration Identity(RID)), labels and data in the configured language, QR code (of the RID) provided to the resident.
--  ID credentials sent to the resident via the country’ configured printing and postal service.
-- Notifications sent to the resident using the email ID and mobile number provided as a apart of demographic data collection.
+In the event of loss of the ID, the the resident can go the nearest registration center and provide his/her biometrics and optionally provide the demographic details.   The details are sent to the MOSIP server which performs a biometric and demographic match.  Upon successful match, MOSIP provides mechanisms to retrieve the UIN of the resident which may be printed and delivered to the resident.
+Notifications are sent to the resident's registered email and/or phone.
 
 ## Correction process
 - Incase the system finds an error in the demographic data, documents or biometric data provided by an individual, the correction flow is triggered.

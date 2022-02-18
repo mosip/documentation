@@ -13,7 +13,7 @@ Various flows with encryption are illustrated below.  Refer [Keys](keys.md) for 
 4. [ID Repository](id-repository.md) encrypts biometrics, demographics and documents and stores them in Object Store. (K7.1,K7.2,K7.3)
 5. The UINs are hashed, encrypted and stored in `uin` table of `mosip_idrepo` DB. (K7.4)
 6. Biometrics are shared encrypted with ABIS partner's key (PK1). 
-7. Registration processor stores encrypted demographic data in `mosip_regprc` db. (K11)
+7. Registration processor stores encrypted demographic data in `mosip_regprc` DB. (K11)
 
 ## Datashare
 ![](_images/cryptography-datashare.png)
@@ -44,7 +44,7 @@ Data shared with all partners like ABIS, Print, Adjudication, IDA etc. is encryp
 1. Decrypt data in Step 8 above using PK8.
 1. Decrypt ZKn-IDA with K22 to get ZKn.
 1. Encrypt ZKn with K18 and store at random index.
-1. BIO data is stored as is.
+1. Bio-data is stored as is.
 
 ## ID authentication flow
 ![](_images/cryptography-ida-flow.png)

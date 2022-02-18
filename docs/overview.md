@@ -3,7 +3,7 @@
 ## What is a foundational ID system?
 Governments are exploring the development of multipurpose foundational ID systems, in which the individuals receive a unique identifier from the government that they can use for identity assertion and verification. It can then be used to access a wide variety of government and private services.  
 
-Functional IDs are the IDs that are used in specific use cases. By design, they are created having an end usage in mind. The Functional ID systems can leverage the Foundational ID system.
+Functional IDs are the IDs that are used in specific use cases. By design, they are created having an end usage in mind such as healthcare, finance, banking, insurance, social and civil registry etc. The Functional ID systems can leverage the Foundational ID system.
 
 ![](_images/foundational-id-systems.jpg)
 
