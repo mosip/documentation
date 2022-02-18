@@ -5,10 +5,10 @@
 ![](_images/sdk.png)
 
 ## Application
-* Registration client
-* Backend quality check
-* Biometric authentication during onboarding (internal auth)
-
+* Registration client.
+* Backend quality check.
+* Biometric authentication during onboarding (internal auth).
+* ID authentcations.
 
 ## BioSDK library
 The library is used by [Registration Client](registration-client.md) to perform 1:N match, segmentation, extraction etc.
