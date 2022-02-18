@@ -2,11 +2,11 @@
 
 ![](_images/mosip-logo.png)
 
-## The MOSIP Program
-The MOSIP program was conceived to help build global digital public goods in the space of digital governance. The flagship of the program is the MOSIP platform that provides the core for a foundational identity system that can be used by countries to build their national identity programs. Anchored at the International Institute of Information Technology, Bangalore ([IIIT-B](https://www.iiitb.ac.in/)), MOSIP harnesses the power of open source and embraces the best practices of scalability, security and privacy. [Learn more >>](https://www.mosip.io/)
-
+## What is Digital Identification ?
+Digital Identification is a means of identifying 'who you are' through some kind of digital medium.  The digital medium could be any device such as a mobile phone or a computer or anything that has a digital means of identifying 'who you are' in both offline and online mode with your consent irrespective of your religion, caste, creed, gender, country and ethnicity.  Internet is only an enabler but is not the mandatory requirement for digital identification.  While identifying 'who you are', the user bearing the identity must have absolute control of revealing a contolled set of information that he/she wishes to reveal and not everything inorder to become eligible for getting a service rendered.
+  
 ## About MOSIP
-The **Modular Open Source Identity Platform** is an open source, open standards based foundational identity platform. MOSIP is an API first platform that can be used by countries to build their own national ID platform. MOSIP offers [ID Lifecycle Management](id-lifecycle-management.md) features and identity verification capabilities out of the box.
+The **Modular Open Source Identity Platform** is an open source, open standards based foundational identity platform. MOSIP is an API first platform that can be used by countries to build their own national ID platform. MOSIP offers [ID Lifecycle Management](id-lifecycle-management.md) features and identity verification capabilities out of the box. Conceived to help build global digital public goods in the space of digital identification and governance, MOSIP is anchored at the International Institute of Information Technology, Bangalore ([IIIT-B](https://www.iiitb.ac.in/)).  It harnesses the power of open source technologies and embraces the best practices of scalability, security and privacy. [Learn more >>](https://www.mosip.io/)
 
 The key objectives of MOSIP are to:
 * Provide the basic framework to create a fully functional foundational identity system
