@@ -25,7 +25,7 @@ FTM |[SBI CL 1.0](secure-biometric-interface.md#sbi-cl-1.0) | [SBI CL 2.0](secur
 \* MOSIP adopters may change this if needed.
 
 ## Iris
-RRefer to ISO 19794-6:2011 Specifications.
+Refer to ISO 19794-6:2011 Specifications.
 
 Factor | Registration Devices | Authentication Devices
 -------|----------------------|-----------------------
