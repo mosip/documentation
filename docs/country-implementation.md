@@ -21,7 +21,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 12. Phased approach for rollout.
 
 ## Procurement
-1. Engagement with an SI. Terms and conditions.
+1. Engagement with an SI - terms and conditions.
 1. Procurement of biometric and other external components.
 1. HSM
 1. [Postgres](storage.md#postgres-db)
