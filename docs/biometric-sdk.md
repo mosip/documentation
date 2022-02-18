@@ -8,7 +8,7 @@
 * Registration client.
 * Backend quality check.
 * Biometric authentication during onboarding (internal auth).
-* ID authentications.
+* ID Authentications.
 
 ## BioSDK library
 The library is used by [Registration Client](registration-client.md) to perform 1:N match, segmentation, extraction etc.
@@ -30,7 +30,7 @@ The service may be packaged as a docker running inside [MOSIP Kubernetes cluster
 BioSDK server request/response may be tested using [BioSDK testing kit](https://github.com/mosip/biosdk-testing-kit.git).
 
 ## Configuration 
-The following properties in [`application-default.properties`]() needs to be updated to integrate bioSDK libray and service with MOSIP.
+The following properties in [`application-default.properties`]() needs to be updated to integrate bioSDK library and service with MOSIP.
 
 ```
 mosip.fingerprint.provider=io.mosip.kernel.bioapi.impl.BioApiImpl
