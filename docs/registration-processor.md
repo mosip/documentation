@@ -1,4 +1,4 @@
-# Registration Processor [TBD]
+# Registration Processor
 
 ## Overview
 Registration Processor (Regproc) is a backend processing engine to enable the ID Lifecycle management. The diagram below shows the Registration Processor along with the other modules that contribute in issuing a Unique Identification Number(UIN) for an individual. Internally, Regproc follows the [SEDA](https://en.wikipedia.org/wiki/Staged_event-driven_architecture) architecture where data flows via multiple stages till the UIN is issued.
@@ -18,7 +18,7 @@ The relationship of Regproc with other services is explained here. _NOTE: The nu
 9. After the UIN is processed the [Printing Stage](https://github.com/mosip/registration/tree/release-1.2.0/registration-processor/post-processor/registration-processor-printing-stage)  calls [Credential Service](https://github.com/mosip/id-repository/tree/release-1.2.0/id-repository/credential-service) to create credential for print. This credential will be pushed to websub and the Printing systems will consume same.
 10. The [Notification Service](https://github.com/mosip/registration/tree/release-1.2.0/registration-processor/registration-processor-notification-service) is used to send email/sms notification to the  applicant after the request processing is completed in server.
 11. Regproc connects to external "Manual Adjudication System" via queue. Regproc sends applicant information required for adjudication in queue and external adjudication system consumes it. The data is shared from mosip to external adjudication system based on policy.
-12. Regproc calls [Keymanager Service](https://docs.mosip.io/1.2.0/modules/keymanager) for decrypting packet and for encrypting information.
+12. Regproc calls [Key Manager](https://docs.mosip.io/1.2.0/modules/keymanager) for decrypting packet and for encrypting information.
 13. Regproc uses [Masterdata Service](https://docs.mosip.io/1.2.0/deployment/masterdata-guide) to validate center, machine, user etc.
 14. Regproc connects to Virus Scanner for scanning packets in [Packet Receiver Stage](https://github.com/mosip/registration/tree/release-1.2.0/registration-processor/init/registration-processor-packet-receiver-stage) and [Packet Uploader Stage](https://github.com/mosip/registration/tree/release-1.2.0/registration-processor/pre-processor/registration-processor-packet-uploader-stage)
 15. Each Stage in regproc calls [Packet Manager](https://docs.mosip.io/1.2.0/modules/packet-manager) to read information from packet.
@@ -26,13 +26,13 @@ The relationship of Regproc with other services is explained here. _NOTE: The nu
 ## Stages and services
 The Registration Processor contains several [stages and services](https://github.com/mosip/registration/tree/release-1.2.0#registration-stages-and-pipeline). 
 
-The registration packet flows through the various stages depending on the type of flow. Refer [flows](https://github.com/mosip/registration/blob/release-1.2.0/docs/flows.md) 
+The registration packet flows through the various stages depending on the type of flow. Refer [flows](https://github.com/mosip/registration/blob/release-1.2.0/docs/flows.md).
 
 ## Build and deploy
 Refer to [repo](https://github.com/mosip/registration/tree/release-1.2.0)
 
 ## Configurations
-Refer to [Configuration Guide](https://github.com/mosip/registration/blob/release-1.2.0/docs/configuration.md)
+Refer to [Configuration Guide](https://github.com/mosip/registration/blob/release-1.2.0/docs/configuration.md).
 
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
