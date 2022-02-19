@@ -9,13 +9,13 @@ Refer to the [sample ID Schema](https://github.com/mosip/mosip-infra/blob/releas
 
 ID schema is loaded as a part of master data to `identity_schema` table in `mosip_masterdata` DB.
 
-## Customisation guide
+## Understanding ID Schema 
 This guide is intented for adopters who would customise the default ID Schema to suit the needs of a specific deployment.
 
 ### Terminology
-* **Field**: Unit of date collected from residents (eg. `fullName`, `dateOfBirth`, `proofOfIdentity` etc).   
+* **Field**: Unit of data collected from residents (eg. `fullName`, `dateOfBirth`, `proofOfIdentity` etc).   
 * **Field attribute**:  Qualification of Field (eg. `fieldCategory`, `fieldType`, etc). 
-* **Definition**: Custom data types defined by MOSIP for collecting different types of data:
+* **Definition**: Custom data types defined for collecting different types of data:
     * `simpleType`: Multiple langauages.
     * `documentType`: Document metdata.
     * `biometricType`: Biometric file [CBEFF XML]() metadata  
