@@ -48,7 +48,7 @@ An identification mark that shows MOSIP compliance and a readable unique device 
 
 ## Signed digital ID
 For [registered devices]()
-The Digital ID is signed with the [JSON Web Signature RFC 7515](https://datatracker.ietf.org/doc/html/rfc7515) using the [DKL0](keys.md#device-specific-keys) in SBI 1.0 devices and [DKL1](keys.md#device-specific-keys) in SBI 2.0 devices and would look like this:
+The Digital ID is signed with the [JSON Web Signature RFC 7515](https://datatracker.ietf.org/doc/html/rfc7515) using the [DKL0](keys.md#device-specific-keys) in [SBI CL 1.0](#sbi-cl-1.0) devices and [DKL1](keys.md#device-specific-keys) in [SBI CL 2.0](#sbi-cl-2.0) devices and would look like this:
 ```
 "digitalId": "base64urlencoded(header).base64urlencoded(payload).base64urlencoded(signature)"
 ```
