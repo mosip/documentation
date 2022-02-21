@@ -19,7 +19,7 @@ The relationship of Packet Manager with other services is explained here. _NOTE:
 3. Packets are stored and retrieve from [Object Store](storage.md#object-store).
 4. Audit logs.
 5. Encryption and decryption of packet. 
-6. [Registration Client](registration-client.md) uses Packet Manager libray to create packet.
+6. [Registration Client](registration-client.md) uses Packet Manager library to create packets.
 
 ## Packet stucture
 Refer [Registration Packet Structure](registration-packet-structure.md).
