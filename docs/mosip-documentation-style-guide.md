@@ -23,10 +23,8 @@ It is recommended to follow the guidelines mentioned below.
 The above example highlights the following:
 
     a. `Readme` and `License` files are the only exceptional files that can have complete capitalization.
-
     b. Files like `deploy.sh`, `testng-report-failed.tar.gz` etc. have dots only for extensions.
-
-    c. The filename `directoryAngularFiles` is incorrect as per our guidelines. It can be renamed to `directory-angular-files`. Unnecessary capitalization is not required in filenames.
+    c. The filename `directoryAngularFiles` is incorrect as per our guidelines. It can be renamed to `directory-angular-files`. Unnecessary capitalization is not required in        filenames.
 
 ### How to write in a markdown file?
 Firstly, create a new file and save it with .md as the extension. To make changes, click **Edit**.
@@ -38,7 +36,7 @@ Firstly, create a new file and save it with .md as the extension. To make change
 * There can be multiple other topics that can follow.
 * For the main heading, use single # and it can have capitalization as required.
 * For the Overview section, use double ##.
-* For the other topics, use double hash or triple, its importance as a topic or sub-topic.
+* For the other topics, use double hash or triple hashes, based on the importance of a topic or sub-topic.
 
 **_Headers_**
 # Header one
@@ -81,7 +79,7 @@ Note: Please ensure to put the full stop outside the link.
 #### 6. Images
 Images can be inserted in documents as required but they need to be uploaded in the repository before referring to them.
 
-Images can be added to any markdown page using the following markdown syntax: **![ alt text for screen readers](/path/to/image.png "Text to show on mouseover")**
+Images can be added to any markdown page using the following markdown syntax: `![ alt text for screen readers](/path/to/image.png "Text to show on mouseover")`
 
 Example:
 
@@ -108,44 +106,45 @@ For more information on Markdown, visit [Markdownguide](https://www.markdownguid
 
 1. Content needs to be concise and we need to write crisp short sentences. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
 
-2. Maintain consistency in words and usage. Refer to our [existing documentation](https://docs.mosip.io/1.2.0).
+2. Maintain consistency in words and usage.
+  To learn more, refer to our [existing documentation](https://docs.mosip.io/1.2.0).
 
-Examples:
-* Use ID Repository (instead of id repo)
-* WebSub (instead of websub)
+   Examples:
+   * Use ID Repository (instead of id repo)
+   * WebSub (instead of websub)
 
 3. Punctuations are very important. The use of commas and period/full stop(.) Sentences to end with periods and connecting phrases to have commas.
 
-E.g.: For more information on punctuations, refer [here](https://www.grammarly.com/blog/punctuation).
+   E.g.: For more information on punctuations, refer [here](https://www.grammarly.com/blog/punctuation).
 
 4. Don’t use symbols and shortcuts like ampersand “&” in headings, text, navigation, or tables of contents.
-Instead, we can use and unless it is necessary in the code.
+   Instead, we can use **and** unless it is necessary in the code.
 
 5. Standardization and capitalization of words in the product name or abbreviations used.
-Examples:
-* While referring to out platform, use MOSIP instead of mosip.
-* While referring to IDs, use user ID instead of user id.
-* Write ABIS instead of abis.
+   Examples:
+    * While referring to out platform, use MOSIP instead of mosip.
+    * While referring to IDs, use user ID instead of user id.
+    * Write ABIS instead of abis.
 
 6. Use Tables to organize data that is too detailed or complicated to be described adequately in the text, allowing the reader to quickly see the results. 
 https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-ui-specifications 
 
 7. Run a spell checker using any online software or using MS word before saving changes. This is also called as proof-reading.
-    Note: This is crucial as running a spell checker ensures that the number of typos in your document decreases significantly.
+   Note: This is crucial as running a spell checker ensures that the number of typos in your document decreases significantly.
     
-8. On completion, check if all the hyperlinks on the page are working fine. Any broken link can be distateful to the reader.
+8. On completion, check if all the hyperlinks on the page are working fine. Any broken link can be distasteful to the reader.
 
-9. Repetition of words to be avoided as much.
+9. Repetition of words to be avoided as much as possible.
 
-Example: 
+   Example: 
 
-*Initial draft* 
+   *Initial draft* 
+ 
+   ![](_images/admin-content.png)
 
-![](_images/admin-content.png)
+   *Final draft*
 
-*Final draft*
-
-![](_images/admin-content-updated.png)
+   ![](_images/admin-content-updated.png)
 
 
 
