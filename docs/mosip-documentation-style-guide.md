@@ -129,8 +129,8 @@ For more information on Markdown, visit [Markdownguide](https://www.markdownguid
     * Write ABIS instead of abis.
 
 6. Use Tables to organize data that is too detailed or complicated to be described adequately in the text, allowing the reader to quickly see the results. 
-   Example: [Pre-registration UI specifications](pre-registration-ui-specifications.md)
-https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-ui-specifications 
+   Example: [Pre-registration UI specifications](https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-ui-specifications)
+
 
 7. Run a spell checker using any online software or using MS Word before saving changes. This is also called as proof-reading the document.
    Note: This is crucial as running a spell checker ensures that the number of typos in your document decreases significantly.
