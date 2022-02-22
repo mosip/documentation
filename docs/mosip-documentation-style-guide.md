@@ -22,11 +22,13 @@ It is recommended to follow the guidelines mentioned below.
 
 The above example highlights the following:
 
-    a. `Readme` and `License` files are the only exceptional files that can have complete capitalization.
-    b. Files like `deploy.sh`, `testng-report-failed.tar.gz` etc. have dots only for extensions.
-    c. The filename `directoryAngularFiles` is incorrect as per our guidelines. It can be renamed to `directory-angular-files`. Unnecessary capitalization is not required in        filenames.
+a. `Readme` and `License` files are the only exceptional files that can have complete capitalization.
 
-### How to write in a markdown file?
+b. Files like `deploy.sh`, `testng-report-failed.tar.gz` etc. have dots only for extensions.
+
+c. The filename `directoryAngularFiles` is incorrect as per our guidelines. It can be renamed to `directory-angular-files`. Unnecessary capitalization is not required in        filenames.
+
+## How to write in a markdown file?
 Firstly, create a new file and save it with .md as the extension. To make changes, click **Edit**.
 
 **Markdown basics with examples**
@@ -102,7 +104,7 @@ It is recommended to use *spaces* instead of tabs while editing content because 
 
 For more information on Markdown, visit [Markdownguide](https://www.markdownguide.org/basic-syntax/).
 
-### Points to remember
+## Points to remember
 
 1. Content needs to be concise and we need to write crisp short sentences. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
 
@@ -129,7 +131,7 @@ For more information on Markdown, visit [Markdownguide](https://www.markdownguid
 6. Use Tables to organize data that is too detailed or complicated to be described adequately in the text, allowing the reader to quickly see the results. 
 https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-ui-specifications 
 
-7. Run a spell checker using any online software or using MS word before saving changes. This is also called as proof-reading.
+7. Run a spell checker using any online software or using MS Word before saving changes. This is also called as proof-reading the document.
    Note: This is crucial as running a spell checker ensures that the number of typos in your document decreases significantly.
     
 8. On completion, check if all the hyperlinks on the page are working fine. Any broken link can be distasteful to the reader.
