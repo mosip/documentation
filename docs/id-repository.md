@@ -72,13 +72,17 @@ A credential can be defined as any document, object, or data structure that vouc
 
 A credential type essentially maps to partner and data share policy.  
 
-Default credential types provided:
+Default credential types provided as part of [sandbox deployment](sandbox-deployment.md) are given below:
 1. `auth`: Represents individual's data shared with Online Verification Partners (further used for Authentication and eKYC). 
 
 2. `qrcode`: qrcode type is used for qrcode partners to issue qrcode related credential data.
 3. `euin`: It is used to issue credential data to partners who wish to download euin card using euin policy.
 4. `reprint`: Reprint auth type is used for issuing credential information to reprint partners.
 5. `vercred`: To issue verifiable credentials to partners, vercred credential type is used.
+
+These types are defined in [`partner_policy_credential_type` table](https://github.com/mosip/partner-management-services/blob/release-1.2.0/db_scripts/mosip_pms/ddl/pms-partner_policy_credential_type.sql) of [`mosip_pms` database](https://github.com/mosip/partner-management-services/blob/release-1.2.0/db_scripts/mosip_pms/).
+
+New credential types may be defined as per needs of a country.
 
 ## Credential request generator service
 This service creates request for credential issuance.

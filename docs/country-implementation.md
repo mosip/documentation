@@ -13,11 +13,11 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 6. Hardware requirements estimate. 
     * [Server side](server-hardware-requirements.md)
     * [Devices](biometric-devices.md#devices-calculator)
-7. [Credential choices](id-repository.md#credential-types)
+7. [Credential choices](id-repository.md#credential-types).
 9. ID Card print design.
-9. MOSIP versions
-10. MOSIP support (scope)
-11. Disaster recovery strategy
+9. MOSIP versions.
+10. MOSIP support (scope).
+11. Disaster recovery strategy.
 12. Phased approach for rollout.
 
 ## Procurement
