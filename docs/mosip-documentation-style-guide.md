@@ -115,7 +115,7 @@ For more information on Markdown, visit [Markdownguide](https://www.markdownguid
    * Use ID Repository (instead of id repo)
    * WebSub (instead of websub)
 
-3. Punctuations are very important. The use of commas and period/full stop(.) Sentences to end with periods and connecting phrases to have commas.
+3. Punctuations- The right use of commas and period/full stop is extremely important. Sentences should end with a period and connecting phrases to have commas.
 
    E.g.: For more information on punctuations, refer [here](https://www.grammarly.com/blog/punctuation).
 
