@@ -34,7 +34,7 @@ The client always launches with the pre-loader screen which displays the informa
 
 ![](_images/reg-client-pre-loader-success.png)
 
-1. **First time launch**
+**First time launch**
 - After the pre-loader, the login screen is displayed.
 - Any valid operator credentials can be provided to authenticate and start the initial sync.
 - On successful intial sync, the operator will be prompted to **restart** the application.
@@ -46,7 +46,7 @@ The client always launches with the pre-loader screen which displays the informa
 
 ![](_images/reg-client-folder.png)
 
-2. **On next launch** (after the initial sync),
+**On next launch** (after the initial sync),
   - The registration client login page provides the operator an option to select the language for viewing the registration client UI.
   - After successful login, the operator either lands into the operator onboard page or the home page.
   
