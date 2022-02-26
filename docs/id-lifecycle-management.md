@@ -24,8 +24,8 @@ A resident can access the re-registration portal and do the following:
 * Reschedule, update and cancel appointments
 
 
-### Registration (enrollment)
-Registration is a process that allows a resident to provide the demographic information and biometrics by visiting a registration center.  The [Registration Client](registration-client.md) operated by a registration officer is used to securely capture the details and send it to [Registration Processor](registration-processor.md) for processing and issuance of an ID.   If resident has pre-registered, the registration officer can retreive the registration data by giving the pre-registration ID on the registration client.
+### Registration (enrolment)
+Registration is a process that allows a resident to provide the demographic information and biometrics by visiting a registration center.  The [Registration Client](registration-client.md) operated by a registration officer is used to securely capture the details and send it to [Registration Processor](registration-processor.md) for processing and issuance of an ID.   If resident has pre-registered, the registration officer can retreive the registration data by giving the pre-registration ID on the Registration Client.
 
 #### For adults
 -    Resident visits a registration center.
@@ -39,7 +39,7 @@ Registration is a process that allows a resident to provide the demographic info
 -    Child visits the Registration center along with a guardian/parent.
 -    Registration officer captures the demographic details along with the face photo.
 
-_Note :  For infants/children less than 5 years old, the registration client doesn't capture the biometrics as they are still evolving.  However, the country may choose to override the same by modifying the rules accordingly_
+_Note :  For infants/children less than 5 years old, the Registration Client does not capture the biometrics as they are still evolving. However, the country may choose to override the same by modifying the rules accordingly_
 
 -    Parent/guardian' UIN or RID and the biometrics needed for authentication is captured.
 -    Additionally, a **proof of relationship** document is uploaded.
