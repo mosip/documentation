@@ -170,7 +170,7 @@ Upon receiving the registration center id, date range (start date, end date) for
 
 There are three batch jobs that run in Pre-registration based on a cron scheduler.
 
-## Consumed Status Batch Job
+## Consumed   Status Batch Job
 
 This batch job identifies the Pre-Registrations for which registration packets are created and are under processing in server.   The details about these Pre-registration are removed from pre-Registration database and are moved to an Archival tables in pre-registration called as consumed tables.   
 Later    the data in consumed tables can be archived or removed based on the adopter's need.
