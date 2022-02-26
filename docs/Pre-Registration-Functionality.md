@@ -177,7 +177,7 @@ Later the data in consumed tables can be archived or removed based on the adopte
 
 ## Expiered Status Batch Job
 
-This batch job identifies the pre-registrations which have expiered and updates the status of these pre-registrations as "Expiered".
+This batch job identifies the pre-registrations which have expiered and updates the status of these pre-registrations as   "Expiered".
 
 ## Booking Batch Job
 
