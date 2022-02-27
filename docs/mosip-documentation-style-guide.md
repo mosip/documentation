@@ -104,40 +104,40 @@ It is recommended to use *spaces* instead of tabs while editing content because 
 
 For more information on Markdown, visit [Markdownguide](https://www.markdownguide.org/basic-syntax/).
 
-## Points to remember
+## Points to note
 
-1. Content needs to be concise and we need to write crisp short sentences. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
+1. **Clarity** - Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
 
-2. Maintain consistency in words and usage.
+2. **Consistency** - Maintain consistency in words and usage.
   To learn more, refer to our [existing documentation](https://docs.mosip.io/1.2.0).
 
    Examples:
    * Use ID Repository (instead of id repo)
    * WebSub (instead of websub)
 
-3. Punctuations- The right use of commas and period/full stop is extremely important. Sentences should end with a period and connecting phrases to have commas.
+3. **Punctuations** - The right use of commas and period/full stop is extremely important. Sentences should end with a period and connecting phrases to have commas.
 
    E.g.: For more information on punctuations, refer [here](https://www.grammarly.com/blog/punctuation).
 
-4. Don’t use symbols and shortcuts like ampersand “&” in headings, text, navigation, or tables of contents.
+4. **Symbols** - Don’t use symbols and shortcuts like ampersand “&” in headings, text, navigation, or tables of contents.
    Instead, we can use **and** unless it is necessary in the code.
 
-5. Standardization and capitalization of words in the product name or abbreviations used.
+5. **Capitalization** - Adhere to the standards for capitalization of words in the product name or abbreviations used.
    Examples:
     * While referring to out platform, use MOSIP instead of mosip.
     * While referring to IDs, use user ID instead of user id.
     * Write ABIS instead of abis.
 
-6. Use Tables to organize data that is too detailed or complicated to be described adequately in the text, allowing the reader to quickly see the results. 
+6. **Tables** - Use Tables to organize data that is too detailed or complicated to be described adequately in the text, allowing the reader to quickly see the results. 
    Example: [Pre-registration UI specifications](https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-ui-specifications)
 
 
-7. Run a spell checker using any online software or using MS Word before saving changes. This is also called as proof-reading the document.
+7. **Spell check**- Run a spell checker using any online software or using MS Word before saving changes. This is also called as proof-reading the document.
    Note: This is crucial as running a spell checker ensures that the number of typos in your document decreases significantly.
     
-8. On completion, check if all the hyperlinks on the page are working fine. Any broken link can be distasteful to the reader.
+8. **Hyperlinks** - On completion, check if all the hyperlinks on the page are working fine. Any broken link can be distasteful to the reader.
 
-9. Repetition of words to be avoided as much as possible.
+9. **Repetition** of words to be avoided as much as possible.
 
    Example: 
 
@@ -148,6 +148,9 @@ For more information on Markdown, visit [Markdownguide](https://www.markdownguid
    *Final draft*
 
    ![](_images/admin-content-updated.png)
+   
+   
+ 10. **Spacing** - Avoid leaving unnecessary empty spaces between words or sentences. You may leave one line space betweeb each paragraph as needed if a topic contains multiple paragraphs.
 
 
 
