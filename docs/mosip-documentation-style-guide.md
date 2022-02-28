@@ -106,13 +106,18 @@ For more information on Markdown, visit [Markdownguide](https://www.markdownguid
 
 ## Points to note
 
-1. **Language and Grammar** - In general, use second person in your documents rather than first person—*you* instead of *we*. Also, avoid using *our* in documentation.
+1. **Language and Grammar** - In general, use second person in documents rather than first person — *you* instead of *we*. Also, avoid using *our* in documentation.
+
    Examples:
    
-   **Recommended**: If you're deleting multiple entries at a time ...
-   **Not recommended**: If we're deleting multiple entries at a time ...
+   **Recommended**: If you're deleting multiple entries at a time...
+   
+   **Not recommended**: If we're deleting multiple entries at a time...
+   
+   
 
    **Recommended**: For details, read the documentation./ For details, read [Operator Onboarding](operator-onboarding.md).
+   
    **Not recommended**: For details, read our documentation.
 
 3. **Clarity** - Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
