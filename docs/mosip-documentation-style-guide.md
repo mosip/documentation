@@ -33,7 +33,7 @@ Firstly, create a new file and save it with .md as the extension. To make change
 
 **Markdown basics with examples**
 
-#### 1. Headers
+### Headers
 * A file will have a heading followed by an Overview/Introduction/About section. 
 * There can be multiple other topics that can follow.
 * For the main heading, use single # and it can have capitalization as required.
@@ -48,15 +48,15 @@ Firstly, create a new file and save it with .md as the extension. To make change
 ##### Header five
 ###### Header six
 
-#### 2. Bold
+### Bold
 To make content/words bold, use double asterisks. 
 Example: I **will** complete these lessons!
 
-#### 3. Italics
+### Italics
 To make words italic, use underscore (_)
 Example: _Note_
 
-#### 4. Lists 
+### Lists 
 For unordered lists, give * with space before each entry. 
 For ordered lists, write the numbers followed by dots and space.
 
@@ -70,7 +70,7 @@ Ordered list
 2. Banana
 3. Water melon
 
-#### 5. Links
+### Links
 To link the content or provide references, write the content to be displayed on the screen in square bracket and the link in the parentheses ().
 It is also possible to provide references to specific topics. 
 
@@ -78,7 +78,7 @@ Example: For more information on Packet Manager, see [Packet Manager](https://gi
 
 Note: Please ensure to put the full stop outside the link.
           
-#### 6. Images
+### Images
 Images can be inserted in documents as required but they need to be uploaded in the repository before referring to them.
 
 Images can be added to any markdown page using the following markdown syntax: `![ alt text for screen readers](/path/to/image.png "Text to show on mouseover")`
@@ -87,11 +87,11 @@ Example:
 
 ![Packer Manager](_images/packet-manager.png)
 
-**To create images** 
+_Creating an image_ 
 
 You may use **draw.io** which is a free diagramming application that allows users to create and share diagrams within a web browser. 
 
-_To generate a png (recommended settings)_
+_Settings to generate a PNG file (recommended settings)_
 1. Go to File > Export as -> PNG > Advanced
 2. Set DPI: 200 dpi (from drop-down)
 3. Uncheck **Transparent** option
@@ -99,14 +99,23 @@ _To generate a png (recommended settings)_
 
 ![](_images/image-settings.png)
 
-#### 7. Indentation and sub-bullets 
+### Indentation and sub-bullets 
 It is recommended to use *spaces* instead of tabs while editing content because different editors can interpret tab spacing differently. In markdown format, for indentation and sub-bullets, it is recommended to use 4 spaces instead.
 
 For more information on Markdown, visit [Markdownguide](https://www.markdownguide.org/basic-syntax/).
 
 ## Points to note
 
-1. **Clarity** - Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
+1. **Language and Grammar** - In general, use second person in your documents rather than first person—*you* instead of *we*. Also, avoid using *our* in documentation.
+   Examples:
+   
+   **Recommended**: If you're deleting multiple entries at a time ...
+   **Not recommended**: If we're deleting multiple entries at a time ...
+
+   **Recommended**: For details, read the documentation./ For details, read [Operator Onboarding](operator-onboarding.md).
+   **Not recommended**: For details, read our documentation.
+
+3. **Clarity** - Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
 
 2. **Consistency** - Maintain consistency in words and usage.
   To learn more, refer to our [existing documentation](https://docs.mosip.io/1.2.0).
@@ -151,6 +160,13 @@ For more information on Markdown, visit [Markdownguide](https://www.markdownguid
    
    
  10. **Spacing** - Avoid leaving unnecessary empty spaces between words or sentences. You may leave one line space betweeb each paragraph as needed if a topic contains multiple paragraphs.
+
+11. Avoid using the terms like **blacklist, black list, black-list, whitelist**.
+
+    Instead, it is recommended to use:
+    * For the noun blacklist, consider using a replacement such as denylist, excludelist, or blocklist.
+    * For the noun whitelist, consider using a replacement such as allowlist, trustlist, or safelist.
+    * For the noun graylist (greylist), consider using a replacement such as provisional list.
 
 
 
