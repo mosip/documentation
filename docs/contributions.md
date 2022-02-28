@@ -37,7 +37,7 @@ Singapore based Newlogic is a software consultancy company providing innovative 
 
 ## [Students @ IIIT Bangalore](https://www.iiitb.ac.in/)
 
-<img src="_images/iiitb-logo.png" width="350" height="250">
+<img src="_images/iiitb-logo.png" width="250" height="150">
 
 IIIT Bangalore has been home to MOSIP since its inception in 2018 and the students of the institute have been at the forefront of the MOSIP’s community-led development. The students have on an ongoing basis contributed to solving engineering problems in MOSIP for real-world applications. Their major ongoing contributions include:
 
