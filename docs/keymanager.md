@@ -24,10 +24,10 @@ After the deployment, the initial set of pre-requisite keys has to be generated 
 ## Key hierarchy
 
 |Key|Location|Issuer|Purpose|Example|
-|---|---|---|---|
+|---|---|---|---|--|
 |Root|[HSM](hsm.md)|Self signed|Root|[K1](keys.md)|
-|Module|[HSM](hsm.md)|Root||Signing, encryption of Base keys|[K7](keys.md)|
-|Base|Database|Module|K7.5|Encryption of registration packet etc.|[K7.5](keys.md)|
+|Module|[HSM](hsm.md)|Root|Signing, encryption of Base keys|[K7](keys.md)|
+|Base|Database|Module|Encryption of registration packet etc.|[K7.5](keys.md)|
 
 ![](_images/keymanager-chain-of-trust.png)
 
