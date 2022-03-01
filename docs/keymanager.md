@@ -22,24 +22,22 @@ After the deployment, the initial set of pre-requisite keys has to be generated 
 * AES-256 for [zero-knowledge encryption](data-protection.md#zero-knowledge-encryption)
 
 ## Key hierarchy
-A key hierarchy is created to easily identify the keys with the respective component.
 
-|Key|Location|Issuer|Example|
+|Key|Location|Issuer|Purpose|Example|
 |---|---|---|---|
-|Root|[HSM](hsm.md)|Self signed|[K1](keys.md)|
-|Module|[HSM](hsm.md)|Root|K7|
-|Encryption (Base)|Database|Module|K7.5|
-
-## Chain of trust
+|Root|[HSM](hsm.md)|Self signed|Root|[K1](keys.md)|
+|Module|[HSM](hsm.md)|Root||Signing, encryption of Base keys|[K7](keys.md)|
+|Base|Database|Module|K7.5|Encryption of registration packet etc.|[K7.5](keys.md)|
 
 ![](_images/keymanager-chain-of-trust.png)
 
-## Key storage in database
-The [`key_alias`](db_scripts/mosip_keymgr/ddl/keymgr-key_alias.sql) table in `mosip_keymgr` DB contains metadata of all the keys used in MOSIP system.  The [`key_store`](db_scripts/mosip_keymgr/ddl/keymgr-key_store.sql) tables contains encrypted Base keys.
+Root and Module keys reside in HSM while Base key pair reside in the DB encrypted by Module keys. All references (aliases) containing metadata of keys are present in [`key_alias`](db_scripts/mosip_keymgr/ddl/keymgr-key_alias.sql) table of `mosip_keymgr` DB. The [`key_store`](db_scripts/mosip_keymgr/ddl/keymgr-key_store.sql) tables contains encrypted Base keys. 
 
 The keys are identified as tuple of `app_id` and `ref_id`.
 * `app_id`: Typically, module name e.g. `REGISTRATION`.  
-* `ref_id`: Specified only for Encyption key (except SIGN). Eg. `10001_110011`   
+* `ref_id`: Specified only for Base keys (except SIGN\*). Eg. `10001_110011`   
+
+\* `SIGN`: _TBD_
 
 ![](_images/keymanager-db-example.png)
 
