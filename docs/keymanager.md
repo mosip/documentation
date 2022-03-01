@@ -37,18 +37,11 @@ A key hierarchy is created to easily identify the keys with the respective compo
 ## Key storage in database
 The [`key_alias`](db_scripts/mosip_keymgr/ddl/keymgr-key_alias.sql) table in `mosip_keymgr` DB contains metadata of all the keys used in MOSIP system.  The [`key_store`](db_scripts/mosip_keymgr/ddl/keymgr-key_store.sql) tables contains encrypted Base keys.
 
-## Key mapping 
-You can map/identify the key with mentioned two attributes:
+The keys are identified as tuple of `app_id` and `ref_id`.
+* `app_id`: Typically, module name e.g. `REGISTRATION`.  
+* `ref_id`: Specified only for Encyption key (except SIGN). Eg. `10001_110011`   
 
-```APPLICATION_ID (APP_ID)``` -  MOSIP component name is APP_ID
-
-Eg: REGISTRATION
-
-```REFERENCE_ID (REF_ID) ```- blank for master key, specific name in case of encryption key (base key)
-
-Eg: 10001_110011
-
-It also provides a graphical map of key-user relationships that helps you effectively track the distribution and usage of keys within your network.
+![](_images/keymanager-db-example.png)
 
 ## Key generation process 
 Key Manager helps you generate new key pairs and deploy them to endpoint servers. There are two ways to generate fresh key pairs from Key Manager:
