@@ -8,4 +8,4 @@
 * [Release Notes](release/1.2.0/release-notes.md)
 
 ## Older Releases
-Refer [Older Releases](https://docs.mosip.io/1.1.5/mosip-releases)
+Refer [Older Releases](https://docs.mosip.io/1.1.5/mosip-releases).
