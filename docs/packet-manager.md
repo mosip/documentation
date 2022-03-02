@@ -16,7 +16,7 @@ The relationship of Packet Manager with other services is explained here. _NOTE:
 
 1. [Resident Services](resident-services.md) uses Packet Manager library to create packet.
 2. [Registration Processor](registration-processor.md) reads packet data using Packet Manager service.
-3. Packets are stored and retrieve from [Object Store](storage.md#object-store).
+3. Packets are stored and retrieved from [Object Store](storage.md#object-store).
 4. Audit logs.
 5. Encryption and decryption of packet. 
 6. [Registration Client](registration-client.md) uses Packet Manager library to create packets.
