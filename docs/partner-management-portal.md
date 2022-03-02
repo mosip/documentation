@@ -20,7 +20,7 @@ Partner management portal allows the partners to register themselves in MOSIP. W
 |Device Provider|DEVICE_PROVIDER|
 |FTM Provider|FTM_PROVIDER|
 
-A Partner Admin can create Policies that are required for Authentication and Credential partners. In the section below is described the types of policies that are supported by MOSIP.
+A Partner Admin can create Policies that are required for Authentication and Credential partners. The section below describes the types of policies that are supported by MOSIP.
 
 ## Home page
 
@@ -33,14 +33,32 @@ Learn more about Policy types, refer [here](partner-policies.md).
 To create policies, policy groups should be defined. Policy groups can be considered as the regulatory bodies in a country, examples could be Telecom, Insurance, Banking, etc.
 
 ### Creation of Policy group
-- Login as ‘Partner Admin’ into the portal.
-- After successful login, on the left navigation pane, click on **Policy -> Policy Group**.
-- The existing policy groups are listed on the screen and the new ones can be created by clicking on **+Create Policy Group**.
+* Login as `Partner Admin` into the PMS portal.
+* After successful login, on the left navigation pane, click on **Policy -> Policy Group**.
+* The existing policy groups are listed on the screen and the new ones can be created. 
 
 ![](_images/pms-policy-groups.png)
 
+**To create Policy groups**
+* Click Policy -> Policy Group -> +Create Policy Group
+* Enter the Policy group Name and Description and click **Save**.
 
+![](_images/pms-create-policy-groups.png)
 
+To search or filter any data pertaining to policy groups, filter menu can be used. 
+
+![](_images/pms-filter-policy-groups.png)
+
+You can also change the status of policy group(Deactivate/Re-activate) or edit it using the Action menu as shown below.
+
+![](_images/pms-actionmenu-policy-groups.png)
+
+On successful creation of Policy groups, polices can be created under that group. MOSIP supports two types of policies, i.e., **Auth** policy and **Datashare** policy.
+
+## Auth Policy
+
+By default, on clicking Auth  the screen will display all existing auth policies as shown below.
+To create an Auth policy, click **Auth Policy -> Create Auth Policy** menu. 
 
 
 
