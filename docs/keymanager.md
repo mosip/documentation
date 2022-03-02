@@ -50,7 +50,7 @@ Base keys are auto-generated (and updaded on expiry) - the administrator is not 
 
 ## Validity
 
-The default validity of the keys may be modified by updated `mosip_keymgr/key_policy_dev` table before generating keys.
+The default validity of the keys may be modified by updating [`mosip_keymgr/key_policy_def` table](https://github.com/mosip/keymanager/blob/release-1.2.0/db_scripts/mosip_keymgr/ddl/keymgr-key_policy_def.sql) before generating keys.
 
 ## Key revoke/rotate
 You can revoke Root or Module key by invoking [`generateMasterKey`](https://mosip.github.io/documentation/1.2.0/kernel-keymanager-service.html#operation/generateMasterKey) API with **force** attribute as **true**. API invalidates existing key and immediately generates new key.
