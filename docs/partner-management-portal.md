@@ -57,8 +57,25 @@ On successful creation of Policy groups, polices can be created under that group
 
 ## Auth Policy
 
-By default, on clicking Auth  the screen will display all existing auth policies as shown below.
-To create an Auth policy, click **Auth Policy -> Create Auth Policy** menu. 
+* By default, on clicking Auth policy, the screen displays the list of existing auth policies.
+
+![](_images/pms-auth-policy.png)
+
+* **To create an Auth policy**, 
+  1. Click **Auth Policy -> Create Policy**. 
+  2. Add the Name and Description.
+  3. From the dropdown, select the Policy Group.
+  4. Add the Policies Data.
+  5. Click Save.
+
+![](_images/pms-create-auth-policy.png)
+
+* **To search or filter required data, use the filter menu**.
+
+![](_images/pms-filter-auth-policy.png)
+
+* **To activate or edit the policy following menus can be used**.
+
 
 
 
