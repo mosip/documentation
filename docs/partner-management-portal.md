@@ -74,9 +74,28 @@ On successful creation of Policy groups, polices can be created under that group
 
 ![](_images/pms-filter-auth-policy.png)
 
-* **To activate or edit the policy following menus can be used**.
+![](_images/pms-filter-results-auth-policy.png)
 
+* **To activate or edit the Auth policy, use the Actions menu**.
 
+![](_images/pms-actionmenu-auth-policy.png)
+
+## Data Share Policy
+
+* Data Share policy can be created/edited in the same way as the steps mentioned in Auth policy by using Data Share Policy menu options.
+
+![](_images/pms-data-share-policy.png)
+
+## Partner
+
+### Self Registration
+Partners in MOSIP are created in a self-service mode. The partner visits the MOSIP partner management portal and requests for collaborating with MOSIP by providing basic details such as organization name and email-id, purpose of registration (how they want to collaborate with MOSIP - as a device provider, authentication partner, print partner, etc), basic credentials and performing an OTP based verification.
+Once these details are filled by the partner and a request is sent to MOSIP, the `Partner Admin` verifies the details of the partners and allows the partner to integrate with MOSIP.
+
+To know more about each of the partners, click:
+1. [Auth [partner](auth-partner.md)
+2. [Device Provide](device-provider.md)
+4. [FTM Provider](ftm-provider.md)
 
 
 
