@@ -14,7 +14,7 @@ Currently available as _Beta_, [V3](https://github.com/mosip/mosip-infra/tree/re
 The configuration properties used in this installer are available [here](https://github.com/mosip/mosip-config/tree/develop3-v3).
 
 ### Cluster administration 
-In V3 installation cluster can be administered by logging into organisation wide Rancher setup. Rancher is integrated with Keycloak for authentication. To provide access to a user perform the following steps as administrator:
+In V3 installation cluster can be administered by logging into organisation wide [Rancher setup](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3/rancher). Rancher is integrated with Keycloak for authentication. To provide cluster access to a user perform the following steps as administrator:
 1. Login into organisation wide Keycloak e.g `https://iam.xyz.net`.  It is assumed that you have `admin` role in Keycloak.
 1. Create a new user. 
 1. Make sure a strong password is set for the same under _Credentials_ tab.
