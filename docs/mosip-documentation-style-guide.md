@@ -9,6 +9,7 @@ It is recommended to follow the guidelines mentioned below.
 2. Filenames to start with lowercase. For longer and meaningful names, start with lowercase and then add hyphens (-) instead of underscores (_).
 3. Use dots only for extensions in filenames and not for joining words.
 4. File names should be as descriptive and meaningful as possible. It is better to avoid using any special characters (& # * !) in the names.
+5. It is also recommended to have the filenames match the main heading on the page.
 
 #### Examples
 
