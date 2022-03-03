@@ -57,9 +57,47 @@ On successful creation of Policy groups, polices can be created under that group
 
 ## Auth Policy
 
-By default, on clicking Auth  the screen will display all existing auth policies as shown below.
-To create an Auth policy, click **Auth Policy -> Create Auth Policy** menu. 
+* By default, on clicking Auth policy, the screen displays the list of existing auth policies.
 
+![](_images/pms-auth-policy.png)
+
+* **To create an Auth policy**, 
+  1. Click **Auth Policy -> Create Policy**. 
+  2. Add the Name and Description.
+  3. From the dropdown, select the Policy Group.
+  4. Add the Policies Data.
+  5. Click **Save**.
+
+![](_images/pms-create-auth-policy.png)
+
+_Note_: Once the policy is created, it will be in _Inactive_ state. You have to activate it before using it for a partner.
+
+* **To activate or edit the Auth policy, use the Actions menu**.
+
+![](_images/pms-actionmenu-auth-policy.png)
+
+* **To search or filter required data, use the filter menu**.
+
+![](_images/pms-filter-auth-policy.png)
+
+![](_images/pms-filter-results-auth-policy.png)
+
+## Data Share Policy
+
+* Data Share policy can be created/edited in the same way as the steps mentioned in Auth policy by using Data Share Policy menu options.
+
+![](_images/pms-data-share-policy.png)
+
+## Partner
+
+### Self Registration
+Partners in MOSIP are created in a self-service mode. The partner visits the MOSIP partner management portal and requests for collaborating with MOSIP by providing basic details such as organization name and email-id, purpose of registration (how they want to collaborate with MOSIP - as a device provider, authentication partner, print partner, etc), basic credentials and performing an OTP based verification.
+Once these details are filled by the partner and a request is sent to MOSIP, the `Partner Admin` verifies the details of the partners and allows the partner to integrate with MOSIP.
+
+To know more about each of the partners, click:
+1. [Auth [partner](auth-partner.md)
+2. [Device Provide](device-provider.md)
+4. [FTM Provider](ftm-provider.md)
 
 
 

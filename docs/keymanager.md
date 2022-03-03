@@ -5,28 +5,25 @@ The Key Manager Service provides secure storage, provisioning and management of 
 
 This includes keying material such as symmetric keys, asymmetric keys, certificates and algorithm data.  It is a web-based key management solution that helps consolidate, control, manage, monitor, all key generation and maintenance of key life cycle required in MOSIP. 
 
-Key Manager interfaces with key store like [Hardware Security Module (HSM)](hsm.md) and Database (`mosip_keymgr` DB).
+Key Manager interfaces with key store like [Hardware Security Module (HSM)](hsm.md) and [`mosip_keymgr` DB](https://github.com/mosip/keymanager/tree/release-1.2.0/db_scripts/mosip_keymgr).
 
 ![](_images/keymanager-hsm-integration.png)
 
-Refer [Keys](keys.md) for all references of the type 'Kx' and 'KPx'.
 ## Encryption algorithms
 * RSA-2048 for all data encryption
 * AES-256 for [zero-knowledge encryption](data-protection.md#zero-knowledge-encryption)
 
 ## Key hierarchy
 
-|Key|Location|Issuer|Purpose|Example|Generation method| Updation (on expiry) method|[Default validity](#validity)|
-|---|---|---|---|---|---|---|
-|Root|[HSM](hsm.md)|Self signed|Root|[K1](keys.md)|Key Generator job or Admin Portal\*| Automatic| 5 years|
+|Key type|Location|Issuer|Purpose|Example|[Generation method](#key-generation-process)| Updation method(on expiry)|[Default validity](#validity)|
+|---|---|---|---|---|---|---|---|
+|Root|[HSM](hsm.md)|Self signed|Root|[K1](keys.md)|Key Generator job or Admin Portal| Automatic| 5 years|
 |Module|[HSM](hsm.md)|Root|Signing, encryption of Base keys|[K7](keys.md)|Key Generator job or Admin Portal|Automatic|3 years|
 |Base|Database|Module|Encryption of registration packet etc.|[K7.5](keys.md)|Automatic|Automatic|2 years|
 
-\* See [Key generation process](#key-generation-process)
-
 ![](_images/keymanager-chain-of-trust.png)
 
-Root and Module keys reside in HSM while Base key pair reside in the DB encrypted by Module keys. All references (aliases) containing metadata of keys are present in [`key_alias`](db_scripts/mosip_keymgr/ddl/keymgr-key_alias.sql) table of `mosip_keymgr` DB. The [`key_store`](db_scripts/mosip_keymgr/ddl/keymgr-key_store.sql) tables contains encrypted Base keys. 
+Root and Module keys reside in HSM while Base key pair reside in the DB encrypted by Module keys. All references (aliases) containing metadata of keys are present in [`mosip_keymgr/key_alias`](db_scripts/mosip_keymgr/ddl/keymgr-key_alias.sql) table. The [`key_store`](db_scripts/mosip_keymgr/ddl/keymgr-key_store.sql) table contains encrypted Base keys. 
 
 The keys are identified as tuple of `app_id` and `ref_id`.
 * `app_id` (or `applicationId`): Typically, module name e.g. `REGISTRATION`.  
