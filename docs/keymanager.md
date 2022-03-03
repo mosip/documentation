@@ -15,7 +15,7 @@ Key Manager interfaces with key store like [Hardware Security Module (HSM)](hsm.
 
 ## Key hierarchy
 
-|Key type|Location|Issuer|Purpose|Example|[Generation method](#key-generation-process)| Updation (on expiry) method|[Default validity](#validity)|
+|Key type|Location|Issuer|Purpose|Example|[Generation method](#key-generation-process)| Updation method(on expiry)|[Default validity](#validity)|
 |---|---|---|---|---|---|---|---|
 |Root|[HSM](hsm.md)|Self signed|Root|[K1](keys.md)|Key Generator job or Admin Portal| Automatic| 5 years|
 |Module|[HSM](hsm.md)|Root|Signing, encryption of Base keys|[K7](keys.md)|Key Generator job or Admin Portal|Automatic|3 years|
