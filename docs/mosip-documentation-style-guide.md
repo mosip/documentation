@@ -99,10 +99,32 @@ _Settings to generate a PNG file (recommended settings)_
 
 ![](_images/image-settings.png)
 
-### Indentation and sub-bullets 
-It is recommended to use *spaces* instead of tabs while editing content because different editors can interpret tab spacing differently. In markdown format, for indentation and sub-bullets, it is recommended to use 4 spaces instead.
+Another way to adjust the height and width of the image is by using the HTML tag:
+`<img src="_images/mindtree-logo.png" width="400" height="100">`
 
-For more information on Markdown, visit [Markdownguide](https://www.markdownguide.org/basic-syntax/).
+### Indentation and sub-bullets(list in list)
+* It is recommended to use *spaces* instead of tabs while editing content because different editors can interpret tab spacing differently. In markdown format, for indentation and sub-bullets, it is recommended to use 4 spaces instead.
+
+Example:
+_Unordered List_
+
+* Item 1
+* Item 2
+* Item 3
+    * Item 3a
+    * Item 3b
+    * Item 3c
+
+_Ordered List_
+
+1. Item 1
+1. Item 2
+1. Item 3
+    1. Item 3a
+    1. Item 3b
+    1. Item 3c
+
+For more information on Markdown, refer [Markdownguide](https://www.markdownguide.org/basic-syntax/).
 
 ## Points to note
 
