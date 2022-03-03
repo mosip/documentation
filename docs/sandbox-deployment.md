@@ -19,7 +19,7 @@ In V3 installation cluster can be administered by logging into organisation wide
 1. Create a new user. 
 1. Make sure a strong password is set for the same under _Credentials_ tab.
 1. On _Details_ tab you should see _Update Password_ flag under _Required User Actions_. This will prompt a user to change the password during first login.  Disable the same only if you are sure you don't want user to change password.
-    [](../_images/keycloak-user-create.png)
+    [](_images/keycloak-user-create.png)
 1. Login to Rancher as administrator, e.g. `https://rancher.xyz.net`.
 1. Select a cluster for which you would like to enable access to the user.
 1. Add the user as member of the cluster.
