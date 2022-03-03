@@ -66,19 +66,21 @@ On successful creation of Policy groups, polices can be created under that group
   2. Add the Name and Description.
   3. From the dropdown, select the Policy Group.
   4. Add the Policies Data.
-  5. Click Save.
+  5. Click **Save**.
 
 ![](_images/pms-create-auth-policy.png)
+
+_Note_: Once the policy is created, it will be in _Inactive_ state. You have to activate it before using it for a partner.
+
+* **To activate or edit the Auth policy, use the Actions menu**.
+
+![](_images/pms-actionmenu-auth-policy.png)
 
 * **To search or filter required data, use the filter menu**.
 
 ![](_images/pms-filter-auth-policy.png)
 
 ![](_images/pms-filter-results-auth-policy.png)
-
-* **To activate or edit the Auth policy, use the Actions menu**.
-
-![](_images/pms-actionmenu-auth-policy.png)
 
 ## Data Share Policy
 
