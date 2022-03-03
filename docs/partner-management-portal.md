@@ -57,11 +57,12 @@ On successful creation of Policy groups, polices can be created under that group
 
 ## Auth Policy
 
-* By default, on clicking Auth policy, the screen displays the list of existing auth policies.
+ By default, on clicking Auth policy, the screen displays the list of existing auth policies.
 
 ![](_images/pms-auth-policy.png)
 
-* **To create an Auth policy**, 
+### To create an Auth policy 
+
   1. Click **Auth Policy -> Create Policy**. 
   2. Add the Name and Description.
   3. From the dropdown, select the Policy Group.
@@ -72,11 +73,16 @@ On successful creation of Policy groups, polices can be created under that group
 
 _Note_: Once the policy is created, it will be in _Inactive_ state. You have to activate it before using it for a partner.
 
-* **To activate or edit the Auth policy, use the Actions menu**.
+### To activate or edit the Auth policy
+ 
+ 1. Select the policy you want to activate or edit. 
+ 2. From the Actions menu, select Activate/Edit.
 
 ![](_images/pms-actionmenu-auth-policy.png)
 
-* **To search or filter required data, use the filter menu**.
+### To search or filter required data.
+
+  1. Use the filter menu**.
 
 ![](_images/pms-filter-auth-policy.png)
 
@@ -97,7 +103,7 @@ Once these details are filled by the partner and a request is sent to MOSIP, the
 To know more about each of the partners, click:
 1. [Auth [partner](auth-partner.md)
 2. [Device Provide](device-provider.md)
-4. [FTM Provider](ftm-provider.md)
+3. [FTM Provider](ftm-provider.md)
 
 
 
