@@ -8,6 +8,14 @@ In MOSIP WebSub is used to share data with services and partners.  [Kafka](https
 
 ![](_images/websub.png)
 
+The relationship of Websub with other services is explained here.NOTE: The numbers do not signify sequence of operations or control flow
+
+1. Topic is registered and published or subscribed by Mosip Services.
+2. Content delivery, Intent Verification is done Websub to Mosip Services.
+3. Content delivery, Intent Verification is done Websub to Partners.
+4. Topic is registered and published or subscribed by the Partners.
+5. Data and metadata needed for delivery, delivery reports and other functionalities are stored in kafka.
+
 Refer [WebSub repo](https://github.com/mosip/websub/tree/release-1.2.0) for further details.
 
 
