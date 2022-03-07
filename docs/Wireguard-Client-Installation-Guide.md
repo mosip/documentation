@@ -13,7 +13,7 @@ V3 installation uses wireguard for secure access. This document helps in the ins
 
 ![](_images/add-tunnel.png)
 
-![](_images/wg.conf.png)
+![](_images/wg-conf.png)
 
 4. Click **Activate**.
 
