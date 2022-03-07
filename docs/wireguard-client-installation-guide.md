@@ -1,7 +1,7 @@
 # Wireguard Client Installation Guide
 
 ## Overview
-V3 installation uses wireguard for secure access. This document helps in the installation of wireguard on you machine.
+V3 installation uses wireguard for secure access. This document helps in the installation of wireguard on your machine.
 
 ### Steps to install wireguard
 1. Visit the [link](https://www.wireguard.com/install/) to download the wireguard installer.
