@@ -15,6 +15,6 @@ V3 installation uses wireguard for secure access. This document helps in the ins
 
 ![](_images/wg-conf.png)
 
-4. Click **Activate**.
+4. Click **Activate** to activate the wireguard.
 
 ![](_images/wg-activate.png)
