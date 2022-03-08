@@ -41,7 +41,6 @@ Firstly, create a new file and save it with .md as the extension. To make change
 * For the Overview section, use double ##.
 * For the other topics, use double hash or triple hashes, based on the importance of a topic or sub-topic.
 
-**_Headers_**
 # Header one
 ## Header two
 ### Header three
@@ -93,9 +92,9 @@ _Creating an image_
 You may use **draw.io** which is a free diagramming application that allows users to create and share diagrams within a web browser. 
 
 _Settings to generate a PNG file (recommended settings)_
-1. Go to File > Export as -> PNG > Advanced
+1. Go to File > Export as -> PNG -> Advanced
 2. Set DPI: 200 dpi (from drop-down)
-3. Uncheck **Transparent** option
+3. Uncheck **Transparent** option.
 4. Click **Export**.
 
 ![](_images/image-settings.png)
@@ -104,7 +103,7 @@ Another way to adjust the height and width of the image is by using the HTML tag
 `<img src="_images/mindtree-logo.png" width="400" height="100">`
 
 ### Indentation and sub-bullets(list in list)
-* It is recommended to use *spaces* instead of tabs while editing content because different editors can interpret tab spacing differently. In markdown format, for indentation and sub-bullets, it is recommended to use 4 spaces instead.
+It is recommended to use *spaces* instead of tabs while editing content because different editors can interpret tab spacing differently. In markdown format, for indentation and sub-bullets, it is recommended to use 4 spaces instead.
 
 Example:
 _Unordered List_
@@ -127,21 +126,31 @@ _Ordered List_
 
 For more information on Markdown, refer [Markdownguide](https://www.markdownguide.org/basic-syntax/).
 
+### Code 
+There are two ways to format code in Markdown. You can either use inline code, by putting backticks (`) around parts of a line, or you can use a code block putting backticks (`) around parts of a line.
+
+E.g.: `mosip_idrepo` DB
+
+For code blocks,  you can use three backticks ( ``` ) or three tildes ( ~~~ ) on the lines before and after the code block.
+
+Refer [here](https://github.com/mosip/documentation/blob/1.2.0/docs/registration-client-ui-specifications.md)
+
 ## Points to note
 
 1. **Language and Grammar** - In general, use second person in documents rather than first person — *you* instead of *we*. Also, avoid using *our* in documentation.
 
    Examples:
    
-   **Recommended**: If you're deleting multiple entries at a time...
+  _ **Recommended**_: If you're deleting multiple entries at a time...
    
-   **Not recommended**: If we're deleting multiple entries at a time...
+   _**Not recommended**_: If we're deleting multiple entries at a time...
    
    
-
-   **Recommended**: For details, read the documentation./ For details, read [Operator Onboarding](operator-onboarding.md).
    
-   **Not recommended**: For details, read our documentation.
+   
+   _**Recommended**_: For details, read the documentation./ For details, read [Operator Onboarding](operator-onboarding.md).
+   
+   _**Not recommended**_: For details, read our documentation.
 
 3. **Clarity** - Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
 
