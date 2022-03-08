@@ -5,7 +5,7 @@ The Registration client is a thick Java-based client where the resident's demogr
 MOSIP provides a reference implementation of a Java based registration client. The code, build files for the registration client is available in **registration client repo**.
 
 ## Multiple language support
-* Registration client is featured to allow operator to choose the operation language. Option to select his/her perferred language is provided in the login screen.
+* Registration client is featured to allow operator to choose the operation language. Option to select his/her preferred language, is provided on the login screen.
 * Data collection during regitration client supports more than one language at a time.
 * Before starting any registration process, operator can choose the languages among the configured ones.
  
