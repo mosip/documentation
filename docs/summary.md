@@ -71,6 +71,7 @@
     * [Security Test Report](release/1.2.0/security-test-report.md)
     * [Feature Health Report](release/1.2.0/feature-health-report.md)
   * [MOSIP Support Policy](support-policy.md)
+* [MOSIP Documentation Style Guide](mosip-documentation-style-guide.md)
 * [License](license.md)
    
 
