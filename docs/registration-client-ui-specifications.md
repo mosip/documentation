@@ -131,6 +131,8 @@ Each process has multiple screens and each screen is rendered with one or more f
                 "templateName": null,
                 "fieldLayout": null,
                 "locationHierarchy": null,
+		//On any biometric exception, Need to capture exception photo as proof if the below flag is enabled
+		"exceptionPhotoRequired" : true,
 		/*applicable only for BiometricsType field, defines the list of attributes to be captured
 		All the supported biometric attributes are listed down for reference*/
 	        "bioAttributes": [
