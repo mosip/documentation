@@ -48,7 +48,7 @@ To know more about the functions present in the Home page of the RC, refer to [R
 * All the other JSON and MVEL scripts synced in the registration-client are tamper proof. Everytime registration-client tries to open these files, file hash check must pass, else client will fail to load the hash check failed files.
 
 ## Configurations
-Based on the [ID Schema][id-schema.md], the RC can be customized as per a country' requirements. For details related to RC configurations, refer to [RC configuration](registration-client-configuration.md).
+Based on the [ID Schema](id-schema.md), the RC can be customized as per a country' requirements. For details related to RC configurations, refer to [RC configuration](registration-client-configuration.md).
 
 ## UI Specifications for registration tasks 
 Default UI Specifications loaded with sandbox installation is available [here](https://github.com/mosip/mosip-infra/blob/release-1.2.0/deployment/v3/mosip/kernel/masterdata/xlsx/ui_spec.xlsx).
