@@ -10,9 +10,9 @@ It is recommended to follow the guidelines mentioned below.
 2. Filenames to start with lowercase. For longer and meaningful names, start with lowercase and then add hyphens (-) instead of underscores (_).
 3. Use dots only for extensions in filenames and not for joining words.
 4. File names should be as descriptive and meaningful as possible. It is better to avoid using any special characters (& # * !) in the names.
-5. Ensure that the filenames in general match the main heading on the page.
+5. EIn general, ensure that the filenames match the main heading on the page.
 
-#### Examples
+### Examples
 
 1. Valid filenames as per our set convention.
 
@@ -33,7 +33,7 @@ c. The filename `directoryAngularFiles` is incorrect as per our guidelines. It c
 ## How to write in a markdown file?
 Firstly, create a new file and save it with .md as the extension. To make changes, click **Edit**.
 
-**Markdown basics with examples**
+### Markdown basics with examples
 
 ### Headers
 * A file will have a heading followed by an Overview/Introduction/About section. 
@@ -74,7 +74,7 @@ It is also possible to provide references to specific topics.
 
 Example: For more information on Packet Manager, see [Packet Manager](https://github.com/mosip/documentation/blob/1.2.0/docs/packet-manager.md).
 
-Note: Ensure to put the full stop outside the link.
+_Note_: Ensure to put the full stop outside the link.
           
 ### Images
 Images can be inserted in documents as required but they need to be uploaded in the repository before referring to them.
@@ -100,8 +100,8 @@ _Settings to generate a PNG file (recommended settings)_
 Another way to adjust the height and width of the image is by using the HTML tag:
 `<img src="_images/mindtree-logo.png" width="400" height="100">`
 
-### Indentation and sub-bullets(list in list)
-It is recommended to use *spaces* instead of tabs while editing content because different editors can interpret tab spacing differently. In markdown format, for indentation and sub-bullets, it is recommended to use 4 spaces instead.
+### Indentation and sub-bullets (list in list)
+Indentation must be done using 4 space characters instead of tabs as editors interpret tabs differently. 
 
 Example:
 _Unordered List_
@@ -133,20 +133,20 @@ For code blocks,  you can use three backticks ( ``` ) or three tildes ( ~~~ ) on
 
 Refer [here](https://github.com/mosip/documentation/blob/1.2.0/docs/registration-client-ui-specifications.md)
 
-## Points to note
+## Important points
 
 1. **Language and Grammar** - In general, use second person in documents rather than first person — *you* instead of *we*. Also, avoid using *our* in documentation. Also, use active voice as much to make clear who's performing the action.
 
    Examples:
    
-  _**Recommended**_: If you're deleting multiple entries at a time...
+  Recommended: If you're deleting multiple entries at a time...
    
-   _**Not recommended**_: If we're deleting multiple entries at a time...
+  Not recommended: If we're deleting multiple entries at a time...
    
     
-   _**Recommended**_: For details, read the documentation./ For details, read [Operator Onboarding](operator-onboarding.md).
+  Recommended: For details, read the documentation./ For details, read [Operator Onboarding](operator-onboarding.md).
    
-   _**Not recommended**_: For details, read our documentation.
+  Not recommended: For details, read our documentation.
 
 2. **Clarity** - Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
 
