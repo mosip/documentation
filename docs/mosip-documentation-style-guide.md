@@ -140,7 +140,7 @@ Refer [here](https://github.com/mosip/documentation/blob/1.2.0/docs/registration
 
 ## Points to note
 
-1. **Language and Grammar** - In general, use second person in documents rather than first person — *you* instead of *we*. Also, avoid using *our* in documentation.
+1. **Language and Grammar** - In general, use second person in documents rather than first person — *you* instead of *we*. Also, avoid using *our* in documentation. Also, use active voice as much to make clear who's performing the action.
 
    Examples:
    
@@ -148,9 +148,7 @@ Refer [here](https://github.com/mosip/documentation/blob/1.2.0/docs/registration
    
    _**Not recommended**_: If we're deleting multiple entries at a time...
    
-   
-   
-   
+    
    _**Recommended**_: For details, read the documentation./ For details, read [Operator Onboarding](operator-onboarding.md).
    
    _**Not recommended**_: For details, read our documentation.
