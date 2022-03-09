@@ -38,16 +38,11 @@ Firstly, create a new file and save it with .md as the extension. To make change
 ### Headers
 * A file will have a heading followed by an Overview/Introduction/About section. 
 * There can be multiple other topics that can follow.
-* For the main heading, use single # and it can have capitalization as required(use Title case).
+* For the main heading, use single # and it can have capitalization as required (use title case).
 * For the Overview section, use double ## (use sentence case).
 * For the other topics, use double hash or triple hashes, based on the importance of a topic or sub-topic.
 
-# Header One 
-## Header two
-### Header three
-#### Header four
-##### Header five
-###### Header six
+![](_images/headers.png)
 
 ### Bold
 To make content/words bold, use double asterisks. 
