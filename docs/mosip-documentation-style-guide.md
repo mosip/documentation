@@ -42,7 +42,7 @@ Firstly, create a new file and save it with .md as the extension. To make change
 * For the Overview section, use double ##.
 * For the other topics, use double hash or triple hashes, based on the importance of a topic or sub-topic.
 
-# Header one
+# Header One 
 ## Header two
 ### Header three
 #### Header four
