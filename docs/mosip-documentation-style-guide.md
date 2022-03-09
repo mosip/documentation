@@ -1,7 +1,8 @@
 # MOSIP Documentation Style Guide
 
 ## Overview
-This style guide provides guidelines for writing clear and consistent MOSIP-related documentation. This document can be used as a reference if you are new to writing in MOSIP!
+This style guide includes the guidelines for writing clear and consistent MOSIP-related documentation. This document can be used as a reference if you are new to writing in MOSIP!
+
 It is recommended to follow the guidelines mentioned below.
 
 ## File naming conventions
@@ -9,7 +10,7 @@ It is recommended to follow the guidelines mentioned below.
 2. Filenames to start with lowercase. For longer and meaningful names, start with lowercase and then add hyphens (-) instead of underscores (_).
 3. Use dots only for extensions in filenames and not for joining words.
 4. File names should be as descriptive and meaningful as possible. It is better to avoid using any special characters (& # * !) in the names.
-5. It is also recommended to have the filenames match the main heading on the page.
+5. Ensure that the filenames in general match the main heading on the page.
 
 #### Examples
 
@@ -50,10 +51,12 @@ Firstly, create a new file and save it with .md as the extension. To make change
 
 ### Bold
 To make content/words bold, use double asterisks. 
+
 Example: I **will** complete these lessons!
 
 ### Italics
-To make words italic, use underscore (_)
+To make words italic, use underscore (_).
+
 Example: _Note_
 
 ### Lists 
@@ -76,7 +79,7 @@ It is also possible to provide references to specific topics.
 
 Example: For more information on Packet Manager, see [Packet Manager](https://github.com/mosip/documentation/blob/1.2.0/docs/packet-manager.md).
 
-Note: Please ensure to put the full stop outside the link.
+Note: Ensure to put the full stop outside the link.
           
 ### Images
 Images can be inserted in documents as required but they need to be uploaded in the repository before referring to them.
@@ -152,38 +155,39 @@ Refer [here](https://github.com/mosip/documentation/blob/1.2.0/docs/registration
    
    _**Not recommended**_: For details, read our documentation.
 
-3. **Clarity** - Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
+2. **Clarity** - Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
 
-2. **Consistency** - Maintain consistency in words and usage.
+3. **Consistency** - Maintain consistency in words and usage.
   To learn more, refer to our [existing documentation](https://docs.mosip.io/1.2.0).
 
    Examples:
    * Use ID Repository (instead of id repo)
    * WebSub (instead of websub)
 
-3. **Punctuations** - The right use of commas and period/full stop is extremely important. Sentences should end with a period and connecting phrases to have commas.
+4. **Punctuations** - The right use of commas and period/full stop is extremely important. Sentences should end with a period and connecting phrases to have commas.
 
    E.g.: For more information on punctuations, refer [here](https://www.grammarly.com/blog/punctuation).
 
-4. **Symbols** - Don’t use symbols and shortcuts like ampersand “&” in headings, text, navigation, or tables of contents.
+5. **Symbols** - Don’t use symbols and shortcuts like ampersand “&” in headings, text, navigation, or tables of contents.
    Instead, we can use **and** unless it is necessary in the code.
 
-5. **Capitalization** - Adhere to the standards for capitalization of words in the product name or abbreviations used.
+6. **Capitalization** - Adhere to the standards for capitalization of words in the product name or abbreviations used.
    Examples:
     * While referring to out platform, use MOSIP instead of mosip.
     * While referring to IDs, use user ID instead of user id.
     * Write ABIS instead of abis.
 
-6. **Tables** - Use Tables to organize data that is too detailed or complicated to be described adequately in the text, allowing the reader to quickly see the results. 
-   Example: [Pre-registration UI specifications](https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-ui-specifications)
+7. **Tables** - Use tables to organize data that is too detailed or complicated to be described adequately in the text allowing the reader to quickly see the results. 
+
+   Example: [Pre-registration UI specifications](https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-ui-specifications).
 
 
-7. **Spell check**- Run a spell checker using any online software or using MS Word before saving changes. This is also called as proof-reading the document.
+8. **Spell check**- Run a spell check using any online software or using MS-Word before saving changes. This is also called as proof-reading the document.
    Note: This is crucial as running a spell checker ensures that the number of typos in your document decreases significantly.
     
-8. **Hyperlinks** - On completion, check if all the hyperlinks on the page are working fine. Any broken link can be distasteful to the reader.
+9. **Hyperlinks** - On completion, check if all the hyperlinks on the page are working fine. Any broken link can be distasteful to the reader.
 
-9. **Repetition** of words to be avoided as much as possible.
+10. Avoid **repetition** of words or content.
 
    Example: 
 
@@ -196,9 +200,9 @@ Refer [here](https://github.com/mosip/documentation/blob/1.2.0/docs/registration
    ![](_images/admin-content-updated.png)
    
    
- 10. **Spacing** - Avoid leaving unnecessary empty spaces between words or sentences. You may leave one line space betweeb each paragraph as needed if a topic contains multiple paragraphs.
+11. **Spacing** - Avoid leaving unnecessary empty spaces between words or sentences. You may leave one line space between each paragraph or as needed incase of multiple paragraphs.
 
-11. Avoid using the terms like **blacklist, black list, black-list, whitelist**.
+12. Avoid using the terms like **blacklist, black list, black-list, whitelist**.
 
     Instead, it is recommended to use:
     * For the noun blacklist, consider using a replacement such as denylist, excludelist, or blocklist.
