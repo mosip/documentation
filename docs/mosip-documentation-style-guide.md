@@ -6,38 +6,25 @@ This style guide includes the guidelines for writing clear and consistent MOSIP-
 It is recommended to follow the guidelines mentioned below.
 
 ## File naming conventions
-1. Every directory/folder can have a README.md file to convey what is present in it or can have any information that will benefit the user.
-2. Filenames to start with lowercase. For longer and meaningful names, start with lowercase and then add hyphens (-) instead of underscores (_).
+1. Every directory/folder can have a `README.md` file to convey what is present in it or can have any information that will benefit the user.
+2. Filenames to start with lowercase. For longer and meaningful names, start with lowercase and then add hyphens (-) instead of underscores (\_). The are a few exceptions like `README`, `LICENSE`.
 3. Use dots only for extensions in filenames and not for joining words.
 4. File names should be as descriptive and meaningful as possible. It is better to avoid using any special characters (& # * !) in the names.
-5. In general, ensure that the filenames match the main heading on the page.
-
-### Examples
-
-1. Valid filenames as per our set convention.
+5. In general, ensure that the filenames match the main heading on the page. Example, name of this file is `mosip-documentation-sytle-guid.md`.
 
 ![](_images/filename-example1.png)
 
-2. Filenames containing dots.
-
 ![](_images/filename-example2.png)
 
-The above example highlights the following:
-
-a. `Readme` and `License` files are the only exceptional files that can have complete capitalization.
-
-b. Files like `deploy.sh`, `testng-report-failed.tar.gz` etc. have dots only for extensions.
-
-c. The filename `directoryAngularFiles` is incorrect as per our guidelines. It can be renamed to `directory-angular-files`. Unnecessary capitalization is not required in        filenames.
-
 ## How to write in a markdown file?
-Firstly, create a new file and save it with .md as the extension. To make changes, click **Edit**.
+
+Markdown files are text files with `.md` extension.
 
 ### Headers
 * A file will have a heading followed by an Overview/Introduction/About section. 
 * There can be multiple other topics that can follow.
 * For the main heading, use single # and it can have capitalization as required (use title case).
-* For the Overview section, use double ## (use sentence case).
+* For the "Overview" section, use double ## (use sentence case).
 * For the other topics, use double hash or triple hashes, based on the importance of a topic or sub-topic.
 
 ![](_images/headers.png)
@@ -48,7 +35,7 @@ To make content/words bold, use double asterisks.
 Example: I **will** complete these lessons!
 
 ### Italics
-To make words italic, use underscore (_).
+To make words italic, use underscore (\_).
 
 Example: _Note_
 
@@ -72,30 +59,25 @@ It is also possible to provide references to specific topics.
 
 To provide links to other pages, you may use: 
 1. Learn more.
-2. See [title of other document].
-3. Refer [title of other document] for ….
+2. See [title of other document](link).
+3. Refer [title of other document](link) for ….
 
 Example: For more information on Packet Manager, see [Packet Manager](https://github.com/mosip/documentation/blob/1.2.0/docs/packet-manager.md).
 
-_Note_: Ensure to put the full stop outside the link.
-          
 ### Images
-Images can be inserted in documents as required but they need to be uploaded in the repository before referring to them.
+Images may be inserted in documents as required but they need to be uploaded in the repository before referring to them. 
 
-Images can be added to any markdown page using the following markdown syntax:
+Syntax:
+
 `![ alt text for screen readers](/path/to/image.png "Text to show on mouseover")`
 
 Example: `![](_images/image-settings.png)`
 
-Below is an example of an diagram created using draw.io.
+Below is an example of an diagram created using [draw.io](https://app.diagrams.net/) which is a free diagramming browser app.
 
 ![Packer Manager](_images/packet-manager.png)
 
-#### Creating an image
-
-You may use **draw.io** which is a free diagramming application that allows users to create and share diagrams within a web browser. 
-
-Recommended settings to generate a PNG file 
+Recommended settings to generate a PNG file on draw.io:
 
 1. Go to File -> Export as -> PNG -> Advanced
 2. Set DPI: 200 dpi (from drop-down)
@@ -130,7 +112,7 @@ _Numbered List_
     1. Item 3b
     1. Item 3c
 
-For more information on Markdown, see [Markdownguide](https://www.markdownguide.org/basic-syntax/).
+See [Markdown Guide](https://www.markdownguide.org/basic-syntax/).
 
 ### Code 
 There are two ways to format code in Markdown. You can either use inline code, by putting backticks (`) around parts of a line, or you can use a code block putting backticks (`) around parts of a line.
@@ -165,7 +147,7 @@ To know more, refer [here](https://github.com/mosip/documentation/blob/1.2.0/doc
        * Use ID Repository (instead of id repo)
        * WebSub (instead of websub)
 
-4. **Punctuations**: The right use of commas and period/full stop is extremely important. Sentences should end with a period and connecting phrases to have commas.
+4. **Punctuations**: The right use of commas and period/full stop is extremely important. Sentences should end with a period and connecting phrases to have commas. 
 
     Example: For more information on punctuations, refer [here](https://www.grammarly.com/blog/punctuation).
 
