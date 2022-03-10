@@ -10,7 +10,7 @@ It is recommended to follow the guidelines mentioned below.
 2. Filenames to start with lowercase. For longer and meaningful names, start with lowercase and then add hyphens (-) instead of underscores (_).
 3. Use dots only for extensions in filenames and not for joining words.
 4. File names should be as descriptive and meaningful as possible. It is better to avoid using any special characters (& # * !) in the names.
-5. EIn general, ensure that the filenames match the main heading on the page.
+5. In general, ensure that the filenames match the main heading on the page.
 
 ### Examples
 
@@ -53,15 +53,15 @@ To make words italic, use underscore (_).
 Example: _Note_
 
 ### Lists 
-For unordered lists, give * with space before each entry. 
-For ordered lists, write the numbers followed by dots and space.
+For bulleted lists, give * with space before each entry. 
+For numbered lists, write the numbers followed by dots and a space.
 
-Unordered list
+Bulleted list
 * Apple
 * Banana
 * Water melon
 
-Ordered list 
+Numbered list 
 1. Apple
 2. Banana
 3. Water melon
@@ -70,6 +70,11 @@ Ordered list
 To link the content or provide references, write the content to be displayed on the screen in square bracket and the link in the parentheses ().
 It is also possible to provide references to specific topics. 
 
+To provide links to other pages, you may use: 
+1. Learn more.
+2. See [title of other document].
+3. Refer [title of other document] for ….
+
 Example: For more information on Packet Manager, see [Packet Manager](https://github.com/mosip/documentation/blob/1.2.0/docs/packet-manager.md).
 
 _Note_: Ensure to put the full stop outside the link.
@@ -77,13 +82,13 @@ _Note_: Ensure to put the full stop outside the link.
 ### Images
 Images can be inserted in documents as required but they need to be uploaded in the repository before referring to them.
 
-Images can be added to any markdown page using the following markdown syntax: 
+Images can be added to any markdown page using the following markdown syntax: `![ alt text for screen readers](/path/to/image.png "Text to show on mouseover")`
 
-`![ alt text for screen readers](/path/to/image.png "Text to show on mouseover")`
+Example: `![](_images/image-settings.png)`
 
-Example:
+Below is an example of an diagram created using draw.io.
 
-See ![Packer Manager](_images/packet-manager.png)
+![Packer Manager](_images/packet-manager.png)
 
 #### Creating an image
 
@@ -96,7 +101,7 @@ Recommended settings to generate a PNG file
 3. Uncheck _**Transparent**_ option.
 4. Click **Export**.
 
-![](_images/image-settings.png)
+<img src="_images/image-settings.png" width="600" height="300">
 
 Another way to adjust the height and width of the image is by using the HTML tag:
 
@@ -106,7 +111,7 @@ Another way to adjust the height and width of the image is by using the HTML tag
 Indentation must be done using 4 space characters instead of tabs as editors interpret tabs differently. 
 
 Example:
-_Unordered List_
+_Bulleted List_
 
 * Item 1
 * Item 2
@@ -115,7 +120,7 @@ _Unordered List_
     * Item 3b
     * Item 3c
 
-_Ordered List_
+_Numbered List_
 
 1. Item 1
 1. Item 2
@@ -124,7 +129,7 @@ _Ordered List_
     1. Item 3b
     1. Item 3c
 
-For more information on Markdown, refer [Markdownguide](https://www.markdownguide.org/basic-syntax/).
+For more information on Markdown, see [Markdownguide](https://www.markdownguide.org/basic-syntax/).
 
 ### Code 
 There are two ways to format code in Markdown. You can either use inline code, by putting backticks (`) around parts of a line, or you can use a code block putting backticks (`) around parts of a line.
@@ -133,7 +138,7 @@ E.g.: `mosip_idrepo` DB
 
 For code blocks,  you can use three backticks ( ``` ) or three tildes ( ~~~ ) on the lines before and after the code block.
 
-Refer [here](https://github.com/mosip/documentation/blob/1.2.0/docs/registration-client-ui-specifications.md)
+Refer [here](https://github.com/mosip/documentation/blob/1.2.0/docs/registration-client-ui-specifications.md).
 
 ## Important points
 
@@ -141,27 +146,27 @@ Refer [here](https://github.com/mosip/documentation/blob/1.2.0/docs/registration
 
    Examples:
    
-  Recommended: If you're deleting multiple entries at a time...
+      Recommended: If **you** are deleting multiple entries at a time...
    
-  Not recommended: If we're deleting multiple entries at a time...
+      Not recommended: If **we** are deleting multiple entries at a time...
    
     
-  Recommended: For details, read the documentation./ For details, read [Operator Onboarding](operator-onboarding.md).
+      Recommended: For details, read the documentation./ For details, read [Operator Onboarding](operator-onboarding.md).
    
-  Not recommended: For details, read our documentation.
+      Not recommended: For details, read **our** documentation.
 
 2. **Clarity** - Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
 
 3. **Consistency** - Maintain consistency in words and usage.
   To learn more, refer to our [existing documentation](https://docs.mosip.io/1.2.0).
 
-   Examples:
-   * Use ID Repository (instead of id repo)
-   * WebSub (instead of websub)
+       Examples:
+       * Use ID Repository (instead of id repo)
+       * WebSub (instead of websub)
 
 4. **Punctuations** - The right use of commas and period/full stop is extremely important. Sentences should end with a period and connecting phrases to have commas.
 
-   E.g.: For more information on punctuations, refer [here](https://www.grammarly.com/blog/punctuation).
+    Example: For more information on punctuations, refer [here](https://www.grammarly.com/blog/punctuation).
 
 5. **Symbols** - Don’t use symbols and shortcuts like ampersand “&” in headings, text, navigation, or tables of contents.
    Instead, we can use **and** unless it is necessary in the code.
@@ -174,7 +179,7 @@ Refer [here](https://github.com/mosip/documentation/blob/1.2.0/docs/registration
 
 7. **Tables** - Use tables to organize data that is too detailed or complicated to be described adequately in the text allowing the reader to quickly see the results. 
 
-   Example: [Pre-registration UI specifications](https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-ui-specifications).
+    Example: [Pre-registration UI specifications](https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-ui-specifications).
 
 
 8. **Spell check**- Run a spell check using any online software or using MS-Word before saving changes. This is also called as proof-reading the document.
@@ -184,15 +189,15 @@ Refer [here](https://github.com/mosip/documentation/blob/1.2.0/docs/registration
 
 10. Avoid **repetition** of words or content.
 
-   Example: 
+       Example: 
 
-   *Initial draft* 
+       **Initial draft**
  
-   ![](_images/admin-content.png)
+       ![](_images/admin-content.png)
 
-   *Final draft*
+       **Final draft**
 
-   ![](_images/admin-content-updated.png)
+       ![](_images/admin-content-updated.png)
    
    
 11. **Spacing** - Avoid leaving unnecessary empty spaces between words or sentences. You may leave one line space between each paragraph or as needed incase of multiple paragraphs.
