@@ -82,7 +82,8 @@ _Note_: Ensure to put the full stop outside the link.
 ### Images
 Images can be inserted in documents as required but they need to be uploaded in the repository before referring to them.
 
-Images can be added to any markdown page using the following markdown syntax: `![ alt text for screen readers](/path/to/image.png "Text to show on mouseover")`
+Images can be added to any markdown page using the following markdown syntax:
+`![ alt text for screen readers](/path/to/image.png "Text to show on mouseover")`
 
 Example: `![](_images/image-settings.png)`
 
@@ -101,7 +102,7 @@ Recommended settings to generate a PNG file
 3. Uncheck _**Transparent**_ option.
 4. Click **Export**.
 
-<img src="_images/image-settings.png" width="600" height="300">
+<img src="_images/image-settings.png" width="500" height="300">
 
 Another way to adjust the height and width of the image is by using the HTML tag:
 
@@ -138,7 +139,7 @@ E.g.: `mosip_idrepo` DB
 
 For code blocks,  you can use three backticks ( ``` ) or three tildes ( ~~~ ) on the lines before and after the code block.
 
-Refer [here](https://github.com/mosip/documentation/blob/1.2.0/docs/registration-client-ui-specifications.md).
+To know more, refer [here](https://github.com/mosip/documentation/blob/1.2.0/docs/registration-client-ui-specifications.md).
 
 ## Important points
 
