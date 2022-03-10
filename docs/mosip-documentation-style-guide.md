@@ -102,7 +102,7 @@ Recommended settings to generate a PNG file
 3. Uncheck _**Transparent**_ option.
 4. Click **Export**.
 
-<img src="_images/image-settings.png" width="500" height="300">
+<img src="_images/image-settings.png" width="500" height="200">
 
 Another way to adjust the height and width of the image is by using the HTML tag:
 
