@@ -33,8 +33,6 @@ c. The filename `directoryAngularFiles` is incorrect as per our guidelines. It c
 ## How to write in a markdown file?
 Firstly, create a new file and save it with .md as the extension. To make changes, click **Edit**.
 
-### Markdown basics with examples
-
 ### Headers
 * A file will have a heading followed by an Overview/Introduction/About section. 
 * There can be multiple other topics that can follow.
@@ -79,25 +77,29 @@ _Note_: Ensure to put the full stop outside the link.
 ### Images
 Images can be inserted in documents as required but they need to be uploaded in the repository before referring to them.
 
-Images can be added to any markdown page using the following markdown syntax: `![ alt text for screen readers](/path/to/image.png "Text to show on mouseover")`
+Images can be added to any markdown page using the following markdown syntax: 
+
+`![ alt text for screen readers](/path/to/image.png "Text to show on mouseover")`
 
 Example:
 
-![Packer Manager](_images/packet-manager.png)
+See ![Packer Manager](_images/packet-manager.png)
 
-_Creating an image_ 
+#### Creating an image
 
 You may use **draw.io** which is a free diagramming application that allows users to create and share diagrams within a web browser. 
 
-_Settings to generate a PNG file (recommended settings)_
-1. Go to File > Export as -> PNG -> Advanced
+Recommended settings to generate a PNG file 
+
+1. Go to File -> Export as -> PNG -> Advanced
 2. Set DPI: 200 dpi (from drop-down)
-3. Uncheck **Transparent** option.
+3. Uncheck _**Transparent**_ option.
 4. Click **Export**.
 
 ![](_images/image-settings.png)
 
 Another way to adjust the height and width of the image is by using the HTML tag:
+
 `<img src="_images/mindtree-logo.png" width="400" height="100">`
 
 ### Indentation and sub-bullets (list in list)
