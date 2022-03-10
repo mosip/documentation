@@ -127,10 +127,10 @@ To know more, refer [here](https://github.com/mosip/documentation/blob/1.2.0/doc
 
 1. **Language and Grammar**: In general, use second person in documents rather than first person — *you* instead of *we*. Also, avoid using *our* in documentation. Also, use active voice as much to make clear who's performing the action.
 
-|Not recommended|Recommended|
-|---|---|   
-If we are deleting multiple entries at a time...|If you are deleting multiple entries at a time...| 
-|For details, read our documentation.|For details, see [Operator Onboarding](operator-onboarding.md).|
+    |Not recommended|Recommended|
+    |---|---|   
+    |If we are deleting multiple entries at a time...|If you are deleting multiple entries at a time...| 
+    |For details, read our documentation.|For details, see [Operator Onboarding](operator-onboarding.md).|
    
 2. **Clarity**: Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
 
