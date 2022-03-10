@@ -135,9 +135,8 @@ To know more, refer [here](https://github.com/mosip/documentation/blob/1.2.0/doc
 2. **Clarity**: Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
 
 3. **Consistency**: Maintain consistency in words and usage.
-  To learn more, refer to our [existing documentation](https://docs.mosip.io/1.2.0).
 
-       Examples:
+    Example:
        * Use ID Repository (instead of id repo)
        * WebSub (instead of websub)
 
