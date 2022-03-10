@@ -143,7 +143,7 @@ To know more, refer [here](https://github.com/mosip/documentation/blob/1.2.0/doc
 
 ## Important points
 
-1. **Language and Grammar** - In general, use second person in documents rather than first person — *you* instead of *we*. Also, avoid using *our* in documentation. Also, use active voice as much to make clear who's performing the action.
+1. **Language and Grammar**: In general, use second person in documents rather than first person — *you* instead of *we*. Also, avoid using *our* in documentation. Also, use active voice as much to make clear who's performing the action.
 
    Examples:
    
@@ -156,37 +156,37 @@ To know more, refer [here](https://github.com/mosip/documentation/blob/1.2.0/doc
    
       Not recommended: For details, read **our** documentation.
 
-2. **Clarity** - Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
+2. **Clarity**: Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
 
-3. **Consistency** - Maintain consistency in words and usage.
+3. **Consistency**: Maintain consistency in words and usage.
   To learn more, refer to our [existing documentation](https://docs.mosip.io/1.2.0).
 
        Examples:
        * Use ID Repository (instead of id repo)
        * WebSub (instead of websub)
 
-4. **Punctuations** - The right use of commas and period/full stop is extremely important. Sentences should end with a period and connecting phrases to have commas.
+4. **Punctuations**: The right use of commas and period/full stop is extremely important. Sentences should end with a period and connecting phrases to have commas.
 
     Example: For more information on punctuations, refer [here](https://www.grammarly.com/blog/punctuation).
 
-5. **Symbols** - Don’t use symbols and shortcuts like ampersand “&” in headings, text, navigation, or tables of contents.
+5. **Symbols**: Don’t use symbols and shortcuts like ampersand “&” in headings, text, navigation, or tables of contents.
    Instead, we can use **and** unless it is necessary in the code.
 
-6. **Capitalization** - Adhere to the standards for capitalization of words in the product name or abbreviations used.
+6. **Capitalization**: Adhere to the standards for capitalization of words in the product name or abbreviations used.
    Examples:
     * While referring to out platform, use MOSIP instead of mosip.
     * While referring to IDs, use user ID instead of user id.
     * Write ABIS instead of abis.
 
-7. **Tables** - Use tables to organize data that is too detailed or complicated to be described adequately in the text allowing the reader to quickly see the results. 
+7. **Tables**: Use tables to organize data that is too detailed or complicated to be described adequately in the text allowing the reader to quickly see the results. 
 
     Example: [Pre-registration UI specifications](https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-ui-specifications).
 
 
-8. **Spell check**- Run a spell check using any online software or using MS-Word before saving changes. This is also called as proof-reading the document.
+8. **Spell check**: Run a spell check using any online software or using MS-Word before saving changes. This is also called as proof-reading the document.
    Note: This is crucial as running a spell checker ensures that the number of typos in your document decreases significantly.
     
-9. **Hyperlinks** - On completion, check if all the hyperlinks on the page are working fine. Any broken link can be distasteful to the reader.
+9. **Hyperlinks**: On completion, check if all the hyperlinks on the page are working fine. Any broken link can be distasteful to the reader.
 
 10. Avoid **repetition** of words or content.
 
@@ -201,7 +201,7 @@ To know more, refer [here](https://github.com/mosip/documentation/blob/1.2.0/doc
        ![](_images/admin-content-updated.png)
    
    
-11. **Spacing** - Avoid leaving unnecessary empty spaces between words or sentences. You may leave one line space between each paragraph or as needed incase of multiple paragraphs.
+11. **Spacing**: Avoid leaving unnecessary empty spaces between words or sentences. You may leave one line space between each paragraph or as needed incase of multiple paragraphs.
 
 12. Avoid using the terms like **blacklist, black list, black-list, whitelist**.
 
@@ -209,13 +209,4 @@ To know more, refer [here](https://github.com/mosip/documentation/blob/1.2.0/doc
     * For the noun blacklist, consider using a replacement such as denylist, excludelist, or blocklist.
     * For the noun whitelist, consider using a replacement such as allowlist, trustlist, or safelist.
     * For the noun graylist (greylist), consider using a replacement such as provisional list.
-
-
-
-
-
-    
-
-
-
 
