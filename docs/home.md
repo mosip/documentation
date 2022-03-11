@@ -16,6 +16,8 @@ The latest release of MOSIP, version **1.2.0 LTS** is here! Check out the exciti
 
 To learn more, see our [Releases Notes](releases.md).
 
+To read through the previous version of documentation, see [Previous version documentation](https://docs.mosip.io/1.1.5).
+
 ## Resources
 * Source Code: [GitHub Repositories](https://github.com/mosip)
 * Containers: [Docker Repository](https://hub.docker.com/u/mosipid)
