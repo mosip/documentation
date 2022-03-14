@@ -1,4 +1,3 @@
-* [Documentation for 1.1.5](previous-version-documentation.md)
 * [Home](home.md)
 * [Overview](overview.md)
 * [ID Lifecycle Management](id-lifecycle-management.md)
@@ -73,6 +72,7 @@
     * [Feature Health Report](release/1.2.0/feature-health-report.md)
   * [MOSIP Support Policy](support-policy.md)
 * [MOSIP Documentation Style Guide](mosip-documentation-style-guide.md)
+* [Documentation for 1.1.5](previous-version-documentation.md)
 * [License](license.md)
    
 
