@@ -3,17 +3,19 @@
 ## Overview
 This guide helps the operator in setting up the registration client.
 
-### TPM keys
+## Know your machine TPM keys
+A Trusted Platform Module (TPM) is a specialized chip on a local machines that stores RSA encryption keys specific to the host system for hardware authentication.The pair is maintained inside the chip and cannot be accessed by software. By leveraging this security feature every individual machine would be uniquely registered and identified by the MOSIP server component with it's TPM public key.
+
 To extract the TPM public key, use the [TPM key extractor utility](https://github.com/mosip/mosip-infra/blob/develop/deployment/sandbox-v2/utils/tpm/key_extractor/README.md).
 
-### Pre-requisites 
+## Pre-requisites 
 To onboard the machine and the operator, the Admin needs to:
 1. Create and activate the registration client machine using Admin portal.
 2. Create a user/operator account in Keycloak
 3. Assign the operator a role of either the Supervisor or Officer using the Admin portal.
 4. Finally, perform the **User Zone mapping** and **User Center mapping** in the Admin portal.
 
-**System prerequisites**
+**System prerequisites:**
 * CPU - Dual Core Processor - 2GHZ  
 * RAM - 16 GB  
 * Local Storage Disk Space - 500 GB 
@@ -21,7 +23,7 @@ To onboard the machine and the operator, the Admin needs to:
 * Physical machine with TPM 2.0 facility.   
 * Windows OS [10 v] 
  
-### Registration client setup
+## Registration client setup
 To setup the registration client:
 1. Download the `reg-client.zip` from the hosted server.
 2. Unzip the client. You can see the directory structure below.
@@ -34,7 +36,7 @@ The client always launches with the pre-loader screen which displays the informa
 
 ![](_images/reg-client-pre-loader-success.png)
 
-**First time launch**
+1. **First time launch**
 - After the pre-loader, the login screen is displayed.
 - Any valid operator credentials can be provided to authenticate and start the initial sync.
 - On successful intial sync, the operator will be prompted to **restart** the application.
@@ -42,11 +44,11 @@ The client always launches with the pre-loader screen which displays the informa
 
 ![](_images/reg-client-restart.png)
 
-*Note*- Deletion of either the **.mopsipkeys** or the **db** folder makes the application get into an invalid state and hence will fail to launch. To be able to launch the client again, the operator should make sure that both the folders are removed and then re-launch the client. 
+**Note**: Deletion of either the **.mopsipkeys** or the **db** folder makes the application get into an invalid state and hence will fail to launch. To be able to launch the client again, the operator should make sure that both the folders are removed and then re-launch the client. 
 
 ![](_images/reg-client-folder.png)
 
-**On next launch** (after the initial sync),
+2. **On the next launch after the initial sync**,
   - The registration client login page provides the operator an option to select the language for viewing the registration client UI.
   - After successful login, the operator either lands into the operator onboard page or the home page.
   
@@ -62,6 +64,28 @@ The client always launches with the pre-loader screen which displays the informa
 * **Offline**- Operator can use the registration client in offline mode to only do the registrations and EOD process. During offline mode, the operator authentication will be based on locally saved password hash. An operator can work in offline mode only if they have logged into to the registration client being online atleast once.
 * **Online**- Machine must be online for the registration client first launch. For any server-client sync or vice-versa, the registration client must be online. In the online mode, the client reaches out to the server for password authentication.
        
-*Note*- On successful onboard of the operator, biometric templates of the operator are stored locally.
-       Biometric authentication does not reach out to the server everytime, instead it is validated based on the locally stored templates on the registration client machine. 
+**Note**: On successful onboard of the operator, biometric templates of the operator are stored locally.
+       Biometric authentication does not reach out to the server everytime, instead it is validated based on the locally stored templates on the registration client machine.
+       
+       
+### Setting up MOCK SBI (MDS)
+
+In the development environment, Registration client can be tested using mock SBI.
+Find the instructions to build and run the mock SBI, click [here](https://github.com/mosip/mosip-mock-services/blob/master/MockMDS/README.md).
+       
+### Troubleshooting
+
+##### 1. Incorrect username/password
+   
+    -> Cross-check the machine keys mapping in server ('Machine not found' error in logs)
+   
+    -> Cross-check machine status
+
+    -> 'Invalid Request' error in log - Check your machine time, it shouldnt be less or greater than local timezone datetime (usually accepted lag is +5/-5 minutes)
+
+    -> check logs/registration.log for more details
+
+##### 2. Configuration / masterdata Sync failed
+    
+    -> check if kernel-syncdata-service is up.
 
