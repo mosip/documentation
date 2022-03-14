@@ -29,8 +29,8 @@ To know more about the onboarding process of an operator, refer to [Operator onb
 * Synced UI-SPEC/script files are saved in plain text under registration client working directory. During sync, SPEC/script file hash is stored in derby and then the files are saved in the current working directory. Everytime the file is accessed by the client performs the hash check.
 * Synced pre-registration packets are encrypted with TPM key and stored under configured directory.
 * Directory to store the registration packets and related registration acknowledgments is configurable. 
-* Regiatration packet is an signed and encrypted ZIP.
-* Regiatration acknowledgment is also signed and encrypted with TPM key.
+* Registration packet is an signed and encrypted ZIP.
+* Registration acknowledgment is also signed and encrypted with TPM key.
 
  
 ## Configurations
