@@ -65,5 +65,27 @@ The client always launches with the pre-loader screen which displays the informa
 * **Online**- Machine must be online for the registration client first launch. For any server-client sync or vice-versa, the registration client must be online. In the online mode, the client reaches out to the server for password authentication.
        
 **Note**: On successful onboard of the operator, biometric templates of the operator are stored locally.
-       Biometric authentication does not reach out to the server everytime, instead it is validated based on the locally stored templates on the registration client machine. 
+       Biometric authentication does not reach out to the server everytime, instead it is validated based on the locally stored templates on the registration client machine.
+       
+       
+### Setting up MOCK SBI (MDS)
+
+In the development environment, Registration client can be tested using mock SBI.
+Find the instructions to build and run the mock SBI, click [here](https://github.com/mosip/mosip-mock-services/blob/master/MockMDS/README.md).
+       
+### Troubleshooting
+
+##### 1. Incorrect username/password
+   
+    -> Cross-check the machine keys mapping in server ('Machine not found' error in logs)
+   
+    -> Cross-check machine status
+
+    -> 'Invalid Request' error in log - Check your machine time, it shouldnt be less or greater than local timezone datetime (usually accepted lag is +5/-5 minutes)
+
+    -> check logs/registration.log for more details
+
+##### 2. Configuration / masterdata Sync failed
+    
+    -> check if kernel-syncdata-service is up.
 
