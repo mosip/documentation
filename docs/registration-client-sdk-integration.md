@@ -1,14 +1,5 @@
 # Biometric SDK Integration in Registration Client
 
-
-## Usage of Biometric SDK in Registration Client
-
-1. Local dedupe check between operators and operator-resident biometrics.
-2. Local operator biometric authentications.
-3. Extraction of biometric template from operator's raw biometrics to store in  local derby DB.
-4. To get quality score for the SBI captured biometrics.
-
-
 ## Biometric SDK Configurations
 
 `version : 1.1.5.*`
