@@ -119,10 +119,10 @@ What is the difference between an adult' and an infant' biometric capture?
     
 4. **Concept of biometric exception**
 * Permanent or temporary missing / defective fingers or irises can be marked as exception during registration process.
-* Marked exception finger / iris names are sent as part of rcapture request to SBI.
+* Marked exception finger / iris names are sent as part of `rcapture` request to SBI.
 * A photo of resident is captured highlighting his/her biometric exceptions called as Proof of exception (POE).
 * Biometric exception photo is captured by the biometric face camera device.
-* Until 1.2.0, POE was collected only as document type field.
+* Until 1.2.0, POE was collected only as `documentType` field.
   From 1.2.0.1, Captured biometric exception photo is stored in the biometric data file (CBEFF xml file).
    
      
