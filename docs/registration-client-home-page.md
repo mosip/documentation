@@ -6,7 +6,7 @@ This guide describes the various functions provided in the Home page of the refe
 ![](_images/reg-client-orig.png)
 
 ## Menu bar
-The registration client menu bar displays the following:
+The Registration Client menu bar displays the following:
 * MOSIP logo
 * Home button
 * Logged in username
@@ -21,10 +21,10 @@ The registration client menu bar displays the following:
 ## Operational tasks
 
 ### Synchronize Data
-Synchronize data is the data required to make the registration client functional. Full sync is performed initially during the launch of the registration client for the first time. Post this, the registration client syncs only the changes from sever and this is called as the delta sync. Synchronize data is automated and can be triggered manually. 
-This happens automatically while launching the registration client and is also manually initiated by the operator.
+Synchronize data is the data required to make the Registration Client(RC) functional. Full sync is performed initially during the launch of the RC for the first time. Post this, the RC syncs only the changes from sever and this is called as the delta sync. Synchronize data is automated and can be triggered manually. 
+This happens automatically while launching the RC and is also manually initiated by the operator.
  
-   1. **Configuration sync**: Sync of properties which drives in deciding the registration client UI functionality. For example: Invalid login attempts, idle timeout, thresholds, etc.
+   1. **Configuration sync**: Sync of properties which drives in deciding the RC UI functionality. For example: Invalid login attempts, idle timeout, thresholds, etc.
    1. **Masterdata sync** : As a part of this sync, supporting information like Dynamic fields data, templates, locations, screen authorization, blocklisted words, etc. are pulled in.
    1. **UserDetails sync**: userID, along with their status is synced. Only the user details belonging to machine mapped center will be synced. 
    1. **Certificate sync**: Certificates used to validate the server signatures, device CA certificates, public key (specific to a center and machine, also called as policy key) used to encrypt the registration packet will be synced.
@@ -39,8 +39,9 @@ An operator can download the pre-registration data of a machine mapped center wh
   *Note*- Date Range of pre-registration data to be downloaded and storage location of pre-registration data in the registration machine is configurable. Also, this is synced as a part of configuration sync.       
        
 ### Update Operator Biometrics
-Using this option, the operator can onboard themselves anytime.  
-For more details, refer to [operator onboarding](operator_onboarding.md)
+Using this option, the operators can onboard themselves anytime.  
+
+For more details, refer [Operator Onboarding Guide](operator_onboarding.md).
 
 ![](_images/reg-client-biometric-page.png)
 
@@ -157,7 +158,7 @@ The image below is that of a sample acknowledgement receipt.
 
 ![](_images/re-client-acknowledgement.png)  
 
-## End of day processes
+## End-of-day processes
 
 ### Pending Approval
 The Supervisor has the exclusive authority to approve/reject packets. The supervisor is supposed to manually re-verify the registrations before uploading them to the server. This page enables them to perform this activity. 
