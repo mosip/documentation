@@ -12,6 +12,7 @@
 
 ## BioSDK library
 The library is used by [Registration Client](registration-client.md) to perform 1:N match, segmentation, extraction etc.
+For more information on intergation with Registration Client, refer [Registration Client Biometric SDK Integration Guide](registration-client-sdk-integration.md).
 
 A simulation of this library is available as [Mock BioSDK](https://github.com/mosip/mosip-mock-services/tree/release-1.2.0/mock-sdk). The same is installed in [MOSIP sandbox](sandbox-deployment.md).
 
