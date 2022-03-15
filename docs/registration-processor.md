@@ -26,7 +26,7 @@ The relationship of Regproc with other services is explained here. _NOTE: The nu
 ## Stages and services
 The Registration Processor contains several [stages and services](https://github.com/mosip/registration/tree/release-1.2.0#registration-stages-and-pipeline). 
 
-The registration packet flows through the various stages depending on the type of flow. Refer [flows](https://github.com/mosip/registration/blob/release-1.2.0/docs/flows.md).
+The registration packet flows through the various stages depending on the type of flow. See [Registration Flows and Stage Sequence](https://github.com/mosip/registration/blob/release-1.2.0/docs/flows.md).
 
 ## Build and deploy
 Refer to [repo](https://github.com/mosip/registration/tree/release-1.2.0)
