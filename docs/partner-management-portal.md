@@ -28,7 +28,7 @@ A Partner Admin can create Policies that are required for Authentication and Cre
 
 ## Policies
 
-Learn more about Policy types, refer [here](partner-policies.md).
+To learn more about Policy types, refer [here](partner-policies.md).
 
 To create policies, policy groups should be defined. Policy groups can be considered as the regulatory bodies in a country, examples could be Telecom, Insurance, Banking, etc.
 
@@ -45,7 +45,7 @@ To create policies, policy groups should be defined. Policy groups can be consid
 
 ![](_images/pms-create-policy-groups.png)
 
-To search or filter any data pertaining to policy groups, filter menu can be used. 
+To search or filter any data pertaining to policy groups, use the filter menu. 
 
 ![](_images/pms-filter-policy-groups.png)
 
@@ -61,11 +61,11 @@ On successful creation of Policy groups, polices can be created under that group
 
 ![](_images/pms-auth-policy.png)
 
-### To create an Auth policy 
+### Create an Auth policy 
 
   1. Click **Auth Policy -> Create Policy**. 
   2. Add the Name and Description.
-  3. From the dropdown, select the Policy Group.
+  3. From the dropdown, select the Policy group.
   4. Add the Policies Data.
   5. Click **Save**.
 
@@ -73,14 +73,14 @@ On successful creation of Policy groups, polices can be created under that group
 
 _Note_: Once the policy is created, it will be in _Inactive_ state. You have to activate it before using it for a partner.
 
-### To activate or edit the Auth policy
+### Activate/edit Auth policy
  
  1. Select the policy you want to activate or edit. 
  2. From the Actions menu, select Activate/Edit.
 
 ![](_images/pms-actionmenu-auth-policy.png)
 
-### To search or filter required data.
+### Search or filter data
 
   1. Use the filter menu**.
 
@@ -90,7 +90,7 @@ _Note_: Once the policy is created, it will be in _Inactive_ state. You have to 
 
 ## Data Share Policy
 
-* Data Share policy can be created/edited in the same way as the steps mentioned in Auth policy by using Data Share Policy menu options.
+Data Share policy can be created/edited in the same way as the steps mentioned in Auth policy by using Data Share Policy menu options.
 
 ![](_images/pms-data-share-policy.png)
 
