@@ -114,9 +114,19 @@ When the operator clicks on the **Capture** button and tries to capture the biom
 After the timeout has occurred and the captured quality of biometrics is less than the threshold, registration client provides an option to re-try capture of biometrics but for a particular number of times which is also configurable.
 If the resident has a biometric exception (resident is missing a finger/iris or quality of finger/iris is very poor) the operator can mark that particular biometrics as **exception** but the operator has to capture the resident's exception photo.
 
- What is the difference between an adult' and an infant' biometric capture?
+What is the difference between an adult' and an infant' biometric capture?
  * For an adult, all the configured biometrics can be captured.
- * For an infant, by default, only the face biometrics is allowed to be captured.   
+ * For an infant, by default, only the face biometrics is allowed to be captured.
+    
+    
+4. **Concept of biometric exception**
+* Permanent or temporary missing / defective fingers or irises can be marked as exception during registration process.
+* Marked exception finger / iris names are sent as part of `rcapture` request to SBI.
+* A photo of resident is captured highlighting his/her biometric exceptions called as Proof of exception (POE).
+* Biometric exception photo is captured by the biometric face camera device.
+* Until 1.2.0, POE was collected only as `documentType` field.
+  From 1.2.0.1, Captured biometric exception photo is stored in the biometric data file (CBEFF xml file).
+   
      
 ### Update UIN
 When a resident visits the registration center to update their demographic or biometric details, the operator captures the updated data as provided by the resident in the registration client. The resident needs to give their UIN and also select the field(s) that needs an update.
