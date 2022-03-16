@@ -5,7 +5,7 @@
 ![](_images/sdk.png)
 
 ## Applications
-* Registration client.
+* Registration Client.
 * Backend quality check.
 * Biometric authentication during onboarding (internal auth).
 * ID Authentications.
