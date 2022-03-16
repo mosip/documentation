@@ -4,20 +4,20 @@
 
 ![](_images/sdk.png)
 
-## Application
+## Applications
 * Registration client.
 * Backend quality check.
 * Biometric authentication during onboarding (internal auth).
 * ID Authentications.
 
-## BioSDK library
+## Biometric SDK library
 The library is used by [Registration Client](registration-client.md) to perform 1:N match, segmentation, extraction etc.
 For more information on intergation with Registration Client, refer [Registration Client Biometric SDK Integration Guide](registration-client-sdk-integration.md).
 
 A simulation of this library is available as [Mock BioSDK](https://github.com/mosip/mosip-mock-services/tree/release-1.2.0/mock-sdk). The same is installed in [MOSIP sandbox](sandbox-deployment.md).
 
-## BioSDK service
-For 1:1 match and quality check of biometrics at MOSIP backend, the bioSDK must be running as a service that can be accessed by [Registration Processor](registration-processor.md) and [IDA Internal Services](id-authentication-services.md#internal-services). The service exposes REST APIs specified [here](#api).
+## Biometric SDK service
+For 1:1 match and quality check of biometrics at MOSIP backend, the BioSDK must be running as a service that can be accessed by [Registration Processor](registration-processor.md) and [IDA Internal Services](id-authentication-services.md#internal-services). The service exposes REST APIs specified [here](#api).
 
 A [simulation (mock) service](https://github.com/mosip/biosdk-services/tree/release-1.2.0) has been provided. The mock service loads [mock BioSDK](https://github.com/mosip/mosip-mock-services/tree/release-1.2.0/mock-sdk) internally on the startup and exposes the endpoints to perform 1:N match, segmentation, extraction as per [IBioAPI](https://github.com/mosip/commons/blob/release-1.2.0/kernel/kernel-biometrics-api/src/main/java/io/mosip/kernel/biometrics/spi/IBioApi.java).
 
@@ -31,7 +31,7 @@ The service may be packaged as a docker running inside [MOSIP Kubernetes cluster
 BioSDK server request/response may be tested using [BioSDK testing kit](https://github.com/mosip/biosdk-testing-kit.git).
 
 ## Configuration 
-The following properties in [`application-default.properties`]() needs to be updated to integrate bioSDK library and service with MOSIP.
+The following properties in [`application-default.properties`]() needs to be updated to integrate BioSDK library and service with MOSIP.
 
 ```
 mosip.fingerprint.provider=io.mosip.kernel.bioapi.impl.BioApiImpl
