@@ -5,7 +5,7 @@
 
 Defining the ID Schema is the the first step towards creating a foundational ID system.   Once defined, all applications built on top of the MOSIP platform must conform to the same.
 
-Refer to the [sample ID Schema](https://github.com/mosip/mosip-infra/blob/release-1.2.0/deployment/v3/mosip/kernel/masterdata/samples/idschema.json). A guide to customise the same is given below.
+Refer to the [sample ID Schema](../_files/id-schema/id-schema-sample.json). A guide to customise the same is given below.
 
 ID schema is loaded as a part of master data to `identity_schema` table in `mosip_masterdata` DB.
 
