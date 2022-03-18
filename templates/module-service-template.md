@@ -1,6 +1,6 @@
 # Title (same as the file name)
 
-## Overview/Introduction/About
+## Overview /Introduction /About
 
 a. Give a brief description about the module/service.
 
@@ -18,7 +18,6 @@ e. Add any screenshots that can help explain the context better.
 ### Any sub-services/components
 
 This section can include the description of any sub-services or components. Screenshots can be included if necessary.
-
 
 ## Build and deploy
 
