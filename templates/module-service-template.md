@@ -24,23 +24,23 @@ This section can include the description of any sub-services or components. Scre
 
 This section will include link that will re-direct to the repo for specific set of instructions.
 
-For example: Refer [repo name] for build and deploy instructions.
+For example: Refer [repo name]() for build and deploy instructions.
 
 ## Configuration 
 
 For every service/module, there can be an independent configuration document containing information about the steps required to configure the module.
 It can include important params and mention details as to where they are available. The link to the configuration document can be mentioned in this section.
 
-For example: For more information on configurations, refer [Registration Client Configuration Guide].
+For example: For more information on configurations, refer [Registration Client Configuration Guide]().
 
 ## API 
 
 This section will contain a link to our API doc site.
 
-For example: Refer [API].
+For example: Refer [API]().
 
 ## Source code
 
 This section will point to Github repository.
 
-For example: Refer [Github repo].
+For example: Refer [Github repo]().
