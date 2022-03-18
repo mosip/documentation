@@ -1,6 +1,6 @@
 # README
 
-## Overview/Introduction/About
+## Overview /Introduction /About
 
 This is a sample Readme template that can be used by developers to introduce the readers about what the repository/directory would contain.
 
