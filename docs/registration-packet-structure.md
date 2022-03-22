@@ -63,5 +63,6 @@ optional
 └── packet_operations_hash.txt
 ```
 
-See [this folder](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/packet-structure) for contents of each of the above files.
+## Sample packet
+See [sample packet](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/packet-structure).
 
