@@ -28,7 +28,7 @@ Assumptions:
 * Rate of enrollment: 216000 per day
 * Average packet size: 2MB
 * Biometric modalities: Finger, iris, face
-* Pod replication as given [here]()
+* Pod replication as given here.(TBD)
 
 ### Compute requirements
 * Configuration of compute node: 8 VCPU, 64GB RAM, 64GB disk store.

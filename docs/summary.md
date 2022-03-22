@@ -54,6 +54,9 @@
 * [Technology Stack](technology-stack.md)
 * Deployment
     * [Sandbox Deployment](sandbox-deployment.md)
+        * [Wireguard Bastion Host](https://github.com/mosip/mosip-infra/blob/develop/deployment/v3/docs/wireguard-bastion.md)
+        * [Wireguard Administrator's Guide](https://github.com/mosip/mosip-infra/blob/develop/deployment/v3/docs/wireguard-administrators-guide.md)
+        * [Wireguard Client Installation Guide](https://github.com/mosip/documentation/blob/1.2.0/docs/wireguard-client-installation-guide.md)
     * [Server Hardware Requirements](server-hardware-requirements.md)
     * [Masterdata Guide](masterdata-guide.md)
 * [Country Implementation](country-implementation.md)
