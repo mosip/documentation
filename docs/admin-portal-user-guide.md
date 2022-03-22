@@ -313,7 +313,7 @@ To view the format for inserting data in a particular table, click on the Downlo
      
  4. Click **Choose file** to select the packets and click **Upload**.
 
-How is the packet upload performed with or without DATA_READ role ?
+How is the packet upload performed with or without DATA_READ role?
 
 | LoggedIn User Role | Packet Sync | Packet Upload |
 |--------------------|------------|---------------|
