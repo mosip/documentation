@@ -308,9 +308,20 @@ To view the format for inserting data in a particular table, click on the Downlo
      * Source (currently displays Registration Client)
      * Process (New, Update UIN, Lost, Biometric correction)
      * Supervisor status (Approved/Rejected)
+     
+     These details are important if the packet should be synced before upload.
+     
  4. Click **Choose file** to select the packets and click **Upload**.
+
+How is the packet upload performed with or without DATA_READ role ?
+
+| LoggedIn User Role | Packet Sync | Packet Upload |
+|---------------------|------------|---------------|
+| With DATA_READ  |  Yes | only after successful sync|
+| Without DATA_READ | No | Yes |
  
 *For uploading the packets through the Admin portal, ensure that the packets are available in the machine or the external hard disk connected from where the Admin Portal is being used.*
+
 
 ## Key Manager 
 
