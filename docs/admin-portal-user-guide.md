@@ -2,10 +2,10 @@
 
 ## Overview
 Admin application is a web-based application used by a privileged group of administrative personnel to manage various master data. The various resources that can be managed by an Admin are:
-1. Center (registration centers)
+1. Center (Registration centers)
 1. Device
 1. Machine
-1. Users (Admin, registration staff) 
+1. Users (Admin, Registration staff) 
 
 Along with the resource and data management, the admin can generate master keys, check registration status, retrieve lost RID, resume processing of paused packets.
 
@@ -309,19 +309,18 @@ To view the format for inserting data in a particular table, click on the Downlo
      * Process (New, Update UIN, Lost, Biometric correction)
      * Supervisor status (Approved/Rejected)
      
-     These details are important if the packet should be synced before upload.
+     These details are important if the packet needs to be synced before upload.
      
  4. Click **Choose file** to select the packets and click **Upload**.
 
 How is the packet upload performed with or without DATA_READ role ?
 
 | LoggedIn User Role | Packet Sync | Packet Upload |
-|---------------------|------------|---------------|
+|--------------------|------------|---------------|
 | With DATA_READ  |  Yes | only after successful sync|
 | Without DATA_READ | No | Yes |
  
 *For uploading the packets through the Admin portal, ensure that the packets are available in the machine or the external hard disk connected from where the Admin Portal is being used.*
-
 
 ## Key Manager 
 
@@ -366,6 +365,7 @@ The key will be generated only when the key is not available in [Key Manager](ke
 
 * The logged in user can use this option to update the certificate for all the keys generated in [Key Manager](key-manager.md) service. 
 * This option is used in scenarios where a valid CA certificate has been procured for a key available in [Key Manager](key-manager.md) service. 
+
 ![](_images/admin-upload-certificate.png)
 
 ### UploadOtherDomainCertificate
