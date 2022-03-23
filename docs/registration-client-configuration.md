@@ -235,6 +235,31 @@ Allowed number of invalid login attempts
 Used to configure the time (in minutes) for locking account after crossing configured invalid login count
 ```mosip.registration.invalid_login_time=2```
   
+Configuration used to check if any sync job is missed / failed beyond expected days, this configuration is checked everytime operator clicks on any registration process. We follow below convention to create this config key.
+  mosip.registration.job api name as in sync_job_def table.frequency=value in days
+    
+  #Maximum no. of days without running the Master Sync Job beyond which client is frozen for registration
+  ```mosip.registration.masterSyncJob.frequency=190```
+
+  #Maximum no. of days without running the Pre-Registration Sync Job beyond which client is frozen for registration
+  ```mosip.registration.preRegistrationDataSyncJob.frequency=190```
+
+  #Maximum no. of days without running the Packet Sync Status Job beyond which client is frozen for registration
+  ```mosip.registration.packetSyncStatusJob.frequency=190```
+
+  #Maximum no. of days without running the Key Policy Sync Job beyond which client is frozen for registration
+  ```mosip.registration.keyPolicySyncJob.frequency=190```
+
+  #Maximum no. of days without running the Registration Deletion Job beyond which client is frozen for registration
+  ```mosip.registration.registrationDeletionJob.frequency=190```
+
+  #Maximum no. of days without running the Configuration Sync Job beyond which client is frozen for registration
+  ```mosip.registration.synchConfigDataJob.frequency=190```
+
+  #Maximum no. of days without running the Audit Logs Deletion Job beyond which client is frozen for registration
+  ```mosip.registration.deleteAuditLogsJob.frequency=190```
+
+
   
 ## Date formats
 Date format to be displayed on acknowledgement slip, default value - dd/MM/yyyy hh:mm a
