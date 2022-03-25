@@ -59,6 +59,7 @@
         * [Wireguard Client Installation Guide](https://github.com/mosip/documentation/blob/1.2.0/docs/wireguard-client-installation-guide.md)
     * [Server Hardware Requirements](server-hardware-requirements.md)
     * [Masterdata Guide](masterdata-guide.md)
+    * [Helm Charts](helm-charts.md)
 * [Country Implementation](country-implementation.md)
 * [API](api.md)
 * Community
