@@ -30,7 +30,7 @@ Assumptions:
 * Biometric modalities: Finger, iris, face
 * Pod replication as given here.(TBD)
 
-### Compute requirements
+### Compute requirements for registration
 * Configuration of compute node: 8 VCPU, 64GB RAM, 64GB disk store.
 * Number of nodes: 21 
 
@@ -40,7 +40,7 @@ Assumptions:
 |RAM (GB)|64|21|**1344**|
 |Node disk (GB)|64|21|**1344**|
 
-### Storage requirements
+### Storage requirements for registration
 Storage is dependent on population of a country (i.e. the number of UINs to be issued).  Storage requirements for various types of data are listed below.
 
 |Data| Storage|Comments|
