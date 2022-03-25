@@ -134,7 +134,7 @@ To know more, refer [here](https://github.com/mosip/documentation/blob/1.2.0/doc
    
 2. **Clarity**: Content needs to be concise and we need to write sentences that are short and crisp. Unordered bullet points can be used to simply content. If paragraphs are present, remember to make it short with close to 5-6 sentences (about 100-200 words).
 
-3. **Consistency**: Maintain consistency in words and usage. For example, use "ID Repository" instead of "id repo", "WebSub" instead of "websub".
+3. **Consistency**: Maintain consistency in words and usage. For example, use "ID Repository" instead of "id repo", "WebSub" instead of "websub", "Registration Client" instead of reg client, "Pre-registration" as the concept and Pre-Registration if we are referring to the module.
 
 4. **Punctuations**: The right use of commas and period/full stop is extremely important. Sentences should end with a period and connecting phrases to have commas. 
 
