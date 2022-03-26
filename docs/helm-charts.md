@@ -10,7 +10,8 @@ Helm charts follow their own versioning with following conventions:
 * MOSIP release version == branch of [`mosip-infra`](https://github.com/mosip/mosip-infra) repo
 * Docker/image version of a MOSIP module compatible with given MOSIP release version is explicitly specified in `install.sh` files of [`mosip-infra`](https://github.com/mosip/mosip-infra).
 * Helm chart version is changed only if there are changes in the chart necessary for a given version of MOSIP. Chart versions **do not** change if docker/image version is changed.
- 
+* `appVersion` field in `Charts.yaml` is not used. 
+
 Helm chart versions are mentioned in [`Charts.yaml`](https://github.com/mosip/mosip-helm/blob/1.2.0/charts/artifactory/Chart.yaml) file under the field `versions`. 
 
 ## Compatiblity matrix
