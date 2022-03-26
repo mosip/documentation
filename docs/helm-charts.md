@@ -12,11 +12,18 @@ Helm charts follow the following versioning convention:
     * Helm chart version: `wx.y.z`. Example `12.0.1` _(this is because Helm follows 3 digit versioning)_.
 * Only execption to the above case is `develop` branch of `mosip-helm` in which `version` in `Chart.yaml` will point to next planned release version of MOSIP.
 * Docker image tag in `values.yaml` of Helm chart == MOSIP release version.
-* Helm charts contain default compatible MOSIP services Docker versions. 
+* Helm charts contain default compatible docker image tag.
 * `appVersion` field in `Charts.yaml` is not used. 
 
 Helm chart versions are mentioned in [`Charts.yaml`](https://github.com/mosip/mosip-helm/blob/1.2.0/charts/artifactory/Chart.yaml) file under the field `versions`. 
 
 Make sure version in `Charts.yaml` is update for all charts when a new branch is created of `mosip-helm`.
+
+## Glossary
+|Term|Description|
+|---|---|
+|Helm chart version|`version` field in `Chart.yaml`.|
+|MOSIP release version:  Version as [published](releases.md). If a release is `w.x.y`, it implies `w.x.y.0`. Patch releases may have have 4 digits like `w.x.y.z`.|
+|Docker image tag|Version of MOSIP serivce/module published as docker on Docker Hub.|
 
 
