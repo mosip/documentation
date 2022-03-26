@@ -1,28 +1,42 @@
 # Helm Charts
 
 ## Overview
-All MOSIP services are packeged as Helm charts for ease of installation on Kubernetes cluster. The source code of Helm charts is available in [`mosip-helm`](https://github.com/mosip/mosip-helm) repository. The charts are checked in `gh-pages` branch of `mosip-helm` repo that automatically hosts them hosted at `https://mosip.github.io/mosip-helm/index.yaml`. This Helm repo may added to your installation as shown below:
-
-```
-helm repo add mosip https://mosip.github.io/mosip-helm
-
-```
+All MOSIP services are packeged as Helm charts for ease of installation on Kubernetes cluster. The source code of Helm charts is available in [`mosip-helm`](https://github.com/mosip/mosip-helm) repository. The packaged charts (`*.tgz`) are checked in `gh-pages` branch of `mosip-helm` repo. Github automatically hosts them at `https://mosip.github.io/mosip-helm/index.yaml`.  See sections below for futher details.
 
 ## Versioning 
-Helm charts follow the following versioning convention:
+Following versioning conventions are used:
 
 * Branch of [`mosip-helm`](https://github.com/mosip/mosip-helm) repo == MOSIP release version
-* [Helm chart version](https://helm.sh/docs/topics/charts/#charts-and-versioning) ~= MOSIP release version but with following versioning convention:
+* [Helm chart version](#glossary) ~= [MOSIP release version](#gloassary) but with following versioning convention:
     * MOSIP release version: `w.x.y.z`. Example `1.2.0.1`
     * Helm chart version: `wx.y.z`. Example `12.0.1` (as Helm follows 3 digit versioning).
 * Only execption to the above case is `develop` branch of `mosip-helm` where `version` in `Chart.yaml` points to next planned release version of MOSIP (as Helm does not allow version like `develop`).
-* Docker image tag in `values.yaml` of Helm chart == MOSIP release version.
+* [Docker image tag](#glossary) in `values.yaml` of Helm chart == MOSIP release version.
 * Helm charts contain default compatible docker image tag.
 * `appVersion` field in `Charts.yaml` is not used. 
 
 Helm chart versions are mentioned in [`Charts.yaml`](https://github.com/mosip/mosip-helm/blob/1.2.0/charts/artifactory/Chart.yaml) file under the field `versions`. 
 
 Make sure version in `Charts.yaml` is updated for all charts when a new branch is created on `mosip-helm`.
+
+## Installing charts
+To install the charts add the respository as below:
+```
+helm repo add mosip https://mosip.github.io/mosip-helm
+```
+## Publishing charts
+To publish charts manually follow these steps:
+
+* In the branch where changes have been made run the following from `mosip-helm` folder
+```
+helm package charts/<chart name>
+```
+* You will see packaged `.tgz` files created in current directory.
+* Copy the `.tgz` files to `gh-pages` branch of `mosip-helm` repo. You can clone another copy of the repo and check out `gh-pages` branch to achieve this.
+* Run 
+```
+./publish.sh
+```
 
 ## Glossary
 |Term|Description|
