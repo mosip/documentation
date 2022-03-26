@@ -1,7 +1,7 @@
 # Helm Charts
 
 ## Overview
-All MOSIP services are packeged as Helm charts for ease of installation on Kubernetes cluster. The Helm charts are available in [`mosip-helm`](https://github.com/mosip/mosip-helm) repository.
+All MOSIP services are packeged as Helm charts for ease of installation on Kubernetes cluster. The source code of Helm charts is available in [`mosip-helm`](https://github.com/mosip/mosip-helm) repository. The charts are published in `gh-pages` branch of `mosip-helm` repo which then hosted at `https://mosip.github.io/mosip-helm/index.yaml`.
 
 ## Versioning 
 Helm charts follow the following versioning convention:
@@ -23,7 +23,6 @@ Make sure version in `Charts.yaml` is updated for all charts when a new branch i
 |Term|Description|
 |---|---|
 |Helm chart version|`version` field in `Chart.yaml`.|
-|MOSIP release version:  Version as [published](releases.md). If a release is `w.x.y`, it implies `w.x.y.0`. Patch releases may have have 4 digits like `w.x.y.z`.|
+|MOSIP release version| Version as [published](releases.md). If a release is `w.x.y`, it implies `w.x.y.0`. Patch releases may have have 4 digits like `w.x.y.z`.|
 |Docker image tag|Version of MOSIP serivce/module published as docker on Docker Hub.|
-
 
