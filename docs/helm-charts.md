@@ -17,6 +17,6 @@ Helm charts follow the following versioning convention:
 
 Helm chart versions are mentioned in [`Charts.yaml`](https://github.com/mosip/mosip-helm/blob/1.2.0/charts/artifactory/Chart.yaml) file under the field `versions`. 
 
-Make sure version in `Charts.yaml` is update for all charts when a new branch is created of `mosip-helm`.
+Make sure version in `Charts.yaml` is updated for all charts when a new branch is created on `mosip-helm`.
 
 
