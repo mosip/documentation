@@ -4,13 +4,14 @@
 All MOSIP services are packeged as Helm charts for ease of installation on Kubernetes cluster. The Helm charts are available in [`mosip-helm`](https://github.com/mosip/mosip-helm) repository.
 
 ## Versioning 
-Helm charts follow their own versioning. However, Helm versions and branch version of `mosip-infra` repo must match for ease of maintance. Example, in `mosip-infra` branch `1.2.0` all Helm charts' versions must also be `1.2.0`. 
+Helm charts follow their own versioning with following conventions:
 
+* Helm chart version == branch of [`mosip-helm`](https://github.com/mosip/mosip-helm) repo.
+* MOSIP release version == branch of [`mosip-infra`](https://github.com/mosip/mosip-infra) repo
+* Docker/image version of a MOSIP module used with given MOSIP release version explicitly mentioned in `install.sh` files of [`mosip-infra`](https://github.com/mosip/mosip-infra).
+* Helm chart version is changed only if there are changes in the chart necessary for a given version of MOSIP. Chart versions **do not** change if docker/image version is changed.
+ 
 Helm chart versions are mentioned in [`Charts.yaml`](https://github.com/mosip/mosip-helm/blob/1.2.0/charts/artifactory/Chart.yaml) file under the field `versions`. 
 
-The docker version inside `values.yaml` will have a default value, but that may be overridden in specific MOSIP installation of `mosip-infra`.  Version of MOSIP must match `mosip-infra` branch. The specific Helm chart version and Docker version is mentioned under `./install.sh` scripts of `mosip-infra`.
-
-* `mosip-infra` branch == MOSIP version
-* `mosip-helm` branch == Helm chart version
-
 ## Compatiblity matrix
+
