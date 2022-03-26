@@ -9,8 +9,8 @@ Helm charts follow the following versioning convention:
 * Branch of [`mosip-helm`](https://github.com/mosip/mosip-helm) repo == MOSIP release version
 * [Helm chart version](https://helm.sh/docs/topics/charts/#charts-and-versioning) ~= MOSIP release version but with following versioning convention:
     * MOSIP release version: `w.x.y.z`. Example `1.2.0.1`
-    * Helm chart version: `wx.y.z`. Example `12.0.1` _(as Helm follows 3 digit versioning)_.
-* Only execption to the above case is `develop` branch of `mosip-helm` where `version` in `Chart.yaml` points to next planned release version of MOSIP _(as Helm does not allow version like `develop`)_.
+    * Helm chart version: `wx.y.z`. Example `12.0.1` (as Helm follows 3 digit versioning).
+* Only execption to the above case is `develop` branch of `mosip-helm` where `version` in `Chart.yaml` points to next planned release version of MOSIP (as Helm does not allow version like `develop`).
 * Docker image tag in `values.yaml` of Helm chart == MOSIP release version.
 * Helm charts contain default compatible MOSIP services Docker versions. 
 * `appVersion` field in `Charts.yaml` is not used. 
