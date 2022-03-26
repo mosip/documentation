@@ -21,20 +21,20 @@ Make sure version in `Charts.yaml` is updated for all charts when a new branch i
 
 ## Installing charts
 To install the charts add the respository as below:
-```
+```sh
 helm repo add mosip https://mosip.github.io/mosip-helm
 ```
 ## Publishing charts
 To publish charts manually follow these steps:
 
 * In the branch where changes have been made run the following from `mosip-helm` folder
-```
+```sh
 helm package charts/<chart name>
 ```
 * You will see packaged `.tgz` files created in current directory.
 * Copy the `.tgz` files to `gh-pages` branch of `mosip-helm` repo. You can clone another copy of the repo and check out `gh-pages` branch to achieve this.
 * Run 
-```
+```sh
 ./publish.sh
 ```
 
