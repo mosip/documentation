@@ -1,7 +1,12 @@
 # Helm Charts
 
 ## Overview
-All MOSIP services are packeged as Helm charts for ease of installation on Kubernetes cluster. The source code of Helm charts is available in [`mosip-helm`](https://github.com/mosip/mosip-helm) repository. The charts are published in `gh-pages` branch of `mosip-helm` repo which then hosted at `https://mosip.github.io/mosip-helm/index.yaml`.
+All MOSIP services are packeged as Helm charts for ease of installation on Kubernetes cluster. The source code of Helm charts is available in [`mosip-helm`](https://github.com/mosip/mosip-helm) repository. The charts are checked in `gh-pages` branch of `mosip-helm` repo that automatically hosts them hosted at `https://mosip.github.io/mosip-helm/index.yaml`. This Helm repo may added to your installation as shown below:
+
+```
+helm repo add mosip https://mosip.github.io/mosip-helm
+
+```
 
 ## Versioning 
 Helm charts follow the following versioning convention:
