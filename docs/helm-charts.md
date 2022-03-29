@@ -39,7 +39,7 @@ helm package charts/<chart name>
 ```
 
 ## Active branches
-Branches of `mosip-helm` chart that are being updated now are listed below. Previous versions are frozen. Make sure any changes are reflected in these branches (if applicable).
+Branches of `mosip-helm` chart that are being actively update are listed below. Other branches are assumed to be frozen. Make sure any changes are reflected in these branches (if applicable).
 * `1.2.0.1` 
 * `develop`
 
