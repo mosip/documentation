@@ -28,11 +28,11 @@ Below is the workflow that includes the registration process for an Auth/ Creden
 
 On successful registration, the partner will need to select the relevant **Policy Group** from the dropdown.
 
-![](_images/auth_partner_map-policy-page.PNG)
+![](_images/auth-partner-map-policy-page.PNG)
 
 The details entered by the partner can be viewed on the Dashboard.
 
-![](_images/auth_partner_dashboard.PNG)
+![](_images/auth-partner-dashboard.PNG)
 
 ### Upload of CA certificate
 
@@ -41,7 +41,7 @@ The Partner admin needs to upload the CA certificate for the partner to enable t
 2. Selects the Partner Domain.
 3. Chooses the certificate to upload.
 
-![](_images/auth_partner_dashboard.PNG)
+![](_images/auth-partner-ca-certificate.PNG)
 
 
 
