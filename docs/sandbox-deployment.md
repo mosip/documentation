@@ -34,8 +34,7 @@ V3 installation uses Wireguard for secure access. Refer to the following documen
 * [Wireguard Client Installation Guide](wireguard-client-installation-guide.md)
 
 ## Active branches
-Branches of `mosip-infra` chart that are being updated now are listed below. Previous versions are frozen. Make sure any c
-hanges are reflected in these branches (if applicable).
+Branches of `mosip-infra` chart that are being updated now are listed below. Make sure any changes are reflected in these branches (if applicable).
 * `1.1.5_v3`
 * `1.2.0.1`
 * `develop`
