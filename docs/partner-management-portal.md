@@ -101,7 +101,7 @@ Partners in MOSIP are created in a self-service mode. The partner visits the MOS
 Once these details are filled by the partner and a request is sent to MOSIP, the `Partner Admin` verifies the details of the partners and allows the partner to integrate with MOSIP.
 
 To know more about each of the partners, click:
-1. [Auth [partner](auth-partner.md)
+1. [Auth partner/ Credential partner](auth-partner.md)
 2. [Device Provide](device-provider.md)
 3. [FTM Provider](ftm-provider.md)
 
