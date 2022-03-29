@@ -33,6 +33,12 @@ V3 installation uses Wireguard for secure access. Refer to the following documen
 * [Wireguard Administrator's Guide](https://github.com/mosip/mosip-infra/blob/develop/deployment/v3/docs/wireguard-administrators-guide.md)
 * [Wireguard Client Installation Guide](wireguard-client-installation-guide.md)
 
+## Active branches
+Branches of `mosip-infra` chart that are actively being updated are listed below.  Other branches are assumed to be frozen. Make sure any changes are reflected in these branches (if applicable).
+* `1.1.5.5`
+* `1.1.5_v3`
+* `1.2.0.1`
+* `develop`
 
 
 

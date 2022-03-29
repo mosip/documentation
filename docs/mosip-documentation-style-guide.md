@@ -181,3 +181,9 @@ To know more, refer [here](https://github.com/mosip/documentation/blob/1.2.0/doc
     * For the noun whitelist, consider using a replacement such as allowlist, trustlist, or safelist.
     * For the noun graylist (greylist), consider using a replacement such as provisional list.
 
+## Templates
+Templates for some standard pages are available as below:
+* [README template](../templates/readme-template.md): For READMEs in repositories. Make sure this file is called `README.md`.
+* [Module template](../templates/module-service-template.md): Template for landing page of a MOSIP module or service.
+
+
