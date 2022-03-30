@@ -25,7 +25,11 @@ After installing Eclipse, a user needs to open the "Lombok.jar" file and wait fo
 
 ![](_images/lombok-configuration.png)
 
-Now you can check inside the eclipse installation folder ```C:\Users\userName\eclipse\jee-2021-12\eclipse```, the "Lombok.jar" is added there. Now you don't have to add the dependency of 'lombok' in your "pom.xml" file separately, it will be auto-configured by the Eclipse.
+Now you can check inside the eclipse installation folder ```C:\Users\userName\eclipse\jee-2021-12\eclipse```, the "Lombok.jar" is added there. Now you don't have to add the dependency of 'lombok' in your "pom.xml" file separately because it will be auto-configured by the Eclipse.
+
+You need to configure the JDK (Standard VM) with your eclipse also by going inside Preferences → Java → Installed JREs.
+
+![](_images/installed-jre.png)
 
 ## Code setup
 First you need to make a clone of a repository. Follow setps from [here](https://docs.mosip.io/1.2.0/community/code-contributions).
@@ -79,3 +83,8 @@ You can find all the APIs used in resident-services 1.2.0 [here](https://mosip.g
 You can test the APIs with the help of Swagger-UI and postman. Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of resident-services for dev-environment from ```https://dev.mosip.net/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config``` and localhost from ```http://localhost:8099/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config```.
 
 Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services.
+
+You just need to download the JSON collection from [here]() and then import it in your 'postman'.
+
+![](_images/import-apis-in-postman.png)
+
