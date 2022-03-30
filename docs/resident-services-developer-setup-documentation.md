@@ -20,13 +20,13 @@ Below are a list of tools required in Resident services:
 
 You can download `lombok.jar` and `settings.xml` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files).
 
-After unzipping Apache Maven, a user needs to move the unzipped folder in ```C:\Program Files``` and `settings.xml` (document file) inside this 'conf' folder ```C:\Program Files\apache-maven-3.8.4\conf```.
+After unzipping Apache Maven, a user needs to move the unzipped folder in ```C:\Program Files``` and `settings.xml` inside this 'conf' folder ```C:\Program Files\apache-maven-3.8.4\conf```.
 
-After installing Eclipse, a user needs to open the `Lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE then click on 'Install/Update'.
+After installing Eclipse, a user needs to open the `lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE then click on 'Install/Update'.
 
 ![](_images/lombok-configuration.png)
 
-Now you can check inside the eclipse installation folder ```C:\Users\userName\eclipse\jee-2021-12\eclipse```, the `Lombok.jar` is added there. Now you don't have to add the dependency of 'lombok' in your `pom.xml` file separately because it will be auto-configured by the Eclipse.
+Now you can check inside the eclipse installation folder ```C:\Users\userName\eclipse\jee-2021-12\eclipse```, the `lombok.jar` is added there. Now you don't have to add the dependency of 'lombok' in your `pom.xml` file separately because it will be auto-configured by the Eclipse.
 
 You also need to configure the JDK (Standard VM) with your eclipse by going inside Preferences → Java → Installed JREs.
 
