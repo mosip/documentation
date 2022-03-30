@@ -14,7 +14,7 @@ See [Module Configuration](https://docs.mosip.io/1.2.0/modules/module-configurat
 
 ## SBI related configurations
 
-Registration client reaches SBI on 127.0.0.1 within in the below configured port range. As per SBI spec, allowed port range is from 4501 to 4600
+Registration Client reaches SBI on 127.0.0.1 within the below configured port range. As per SBI spec, allowed port range is from 4501 to 4600.
 ```
 mosip.registration.mdm.portRangeFrom=4501
 mosip.registration.mdm.portRangeTo=4600
@@ -44,7 +44,7 @@ mosip.registration.num_of_iris_retries=3
 mosip.registration.num_of_face_retries=3
 ```
 
-Quliaty score threshold based on modality for operator authentication, Possible values 1 to 100
+Quality score threshold based on modality for operator authentication, Possible values 1 to 100
 ```
 mosip.fingerprint_authentication.quality_score=30
 mosip.iris_authentication.quality_score=30
@@ -53,6 +53,7 @@ mosip.face_authentication.quality_score=30
 
 ## SDK 
 Registration client can be integrated with more than one bio-sdks. Possible values for "modality-name" are "finger", "iris" or "face".
+
 * SDK implementation class full name
 
 ```mosip.biometric.sdk.providers.<modality-name>.<vendor-name>.classname```
@@ -73,7 +74,7 @@ Registration client can be integrated with more than one bio-sdks. Possible valu
 
 ```mosip.biometric.sdk.providers.<modality-name>.<vendor-name>.threshold```
   
-Example configuration shown below for MOCK SDK named as mockvendor:
+Example configurations shown below for MOCK SDK named as mockvendor:
   
 ```
 mosip.biometric.sdk.providers.finger.mockvendor.classname=io.mosip.mock.sdk.impl.SampleSDK
@@ -95,7 +96,7 @@ On every successful biometric capture during registration, Quality of the biomet
 ```mosip.registration.quality_check_with_sdk=Y```
 
 ## Batch size
-Jobs like RID sync, packet upload, status sync is carried out in batches, Number of registration records to be executed in a batch on every trigger.
+Jobs like RID sync, packet upload, status sync is carried out in batches, number of registration records to be executed in a batch on every trigger.
 
 ```
 mosip.registration.rid_sync_batch_size=5
@@ -104,6 +105,7 @@ mosip.registration.status_sync_batch_size=5
 ```
 
 ## Operator onboarding bio-attributes
+
 Only the modalities configured will be collected during operator onboarding.
 ```
 mosip.registration.operator.onboarding.bioattributes=leftLittle,leftRing,leftMiddle,leftIndex,leftThumb,rightLittle,rightRing,rightMiddle,rightIndex,rightThumb,leftEye,rightEye,face
@@ -112,16 +114,19 @@ mosip.registration.operator.onboarding.bioattributes=leftLittle,leftRing,leftMid
 ## Pre-Registration sync
 
 On every Pre-Registration application fetch in registration page, clears all the captured data prior to Pre-Registration application fetch. Set the field id's which should not be cleared after Pre-Registration application fetch. It is comma separated list of field ids as per UI-SPEC.
+
 ```
 mosip.registration.fields.to.retain.post.prid.fetch=consent,consentText,preferredLang
 ```
 
 Storage Location to store the downloaded Pre-Registration Packets in local system
+
 ```
 mosip.registration.registration_pre_reg_packet_location=PreRegPacketStore
 ```
 
 Pre-registration applications fetch time span, No. of days before appointment date.
+
 ``` 
 mosip.registration.pre_reg_no_of_days_limit=7
 ```
@@ -129,26 +134,31 @@ mosip.registration.pre_reg_no_of_days_limit=7
 ## Scheduled Jobs
 
 Comma separated list of offline job ids. Offline jobs are the jobs which are not part of manual sync. 
+
 ```
 mosip.registration.jobs.offline=DEL_J00013,RDJ_J00010,ADJ_J00012,PVS_J00015
 ```
 
 Comma separated list of untagged job ids. Untagged jobs, which will be not part of manual sync but only from scheduler.
+
 ```
 mosip.registration.jobs.unTagged=PDS_J00003
 ```
 
 Comma separated list of job ids which needs Registration Client restart.
+
 ```
 mosip.registration.jobs.restart=RCS_J00005
 ```
 
 Registration batch jobs scheduler.
+
 ```
 mosip.registration.jobs.scheduler.enable=Y
 ```
 
 Default CRON expression for scheduling the Jobs.
+
 ```
 mosip.registration.sync_jobs_restart_freq=0 0 */11 ? * *
 ```
@@ -156,7 +166,7 @@ mosip.registration.sync_jobs_restart_freq=0 0 */11 ? * *
 ## Document scan
 
 All the identified scanner implementations will be used to list the identified devices. For each device dpi, width and height can be configured.
-if not configured it defaults to 0.
+If it is not configured, it defaults to 0.
 
 Values in the this config ```mosip.registration.docscanner.id``` map supports regex.
 
