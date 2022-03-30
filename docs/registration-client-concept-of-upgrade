@@ -1,7 +1,10 @@
 # Registration Client Upgrade
 
 ## Overview
-Registration Client is an upgradable client. All the required files and packages for upgrade are hosted on nginx server. This nginx server is hosted in the Registration Client Docker.
+
+* Registration Client is an upgradable client. 
+* All the required files and packages for upgrade are hosted on `nginx` server. 
+* This `nginx` server is hosted in the Registration Client Docker.
 
 By default, below are the files and packages served from the upgrade server.
 * reg-client.zip
