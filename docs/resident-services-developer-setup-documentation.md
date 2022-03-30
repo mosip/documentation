@@ -7,15 +7,15 @@ This documentation will guide you to do all types of setup.
 
 ## Software setup
 There are some tools which we will be use in Resident services:
-1. JDK 11.
-2. Any IDE (like eclipse, intellij idea).
-3. Apache Maven (zip folder).
-4. pgAdmin.
-5. Postman.
-6. Git.
-7. Notepad++ (optional).
-8. Lombok.jar (file).
-9. settings.xml (document).
+1. JDK 11
+2. Any IDE (like eclipse, intellij idea)
+3. Apache Maven (zip folder)
+4. pgAdmin
+5. Postman
+6. Git
+7. Notepad++ (optional)
+8. Lombok.jar (file)
+9. settings.xml (document)
 
 You can download Lombok.jar and settings.xml from here.
 
@@ -29,7 +29,7 @@ Now you can check inside the eclipse installation folder ```C:\Users\userName\ec
 
 You need to configure the JDK (Standard VM) with your eclipse also by going inside Preferences → Java → Installed JREs.
 
-![](_images/installed-jre.png)
+<img src="_images/installed-jre.png" width="800" height="400">
 
 ## Code setup
 First you need to make a clone of a repository. Follow setps from [here](https://docs.mosip.io/1.2.0/community/code-contributions).
