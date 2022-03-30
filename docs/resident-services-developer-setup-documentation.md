@@ -34,10 +34,37 @@ First you need to make a clone of a repository. Follow setps from [here](https:/
 1. Open the project folder where "pom.xml" is present.
 2. Open command prompt from that folder.
 3. Now run this command to build the project ```mvn clean install -Dgpg.skip=true -DskipTests=true``` and wait for build to complete successfully.
-4. After building of a project, open Eclipse and select import projects → Maven → Existing maven projects → Next → browse to project directory → click finish.
+4. After building of a project, open Eclipse and select import projects → Maven → Existing maven projects → Next → Browse to project directory → click finish.
 
 ![](_images/import-project.png)
 
 5.After successful importing of project, you need to update the project by right-click on project → maven → update project.
 
 ## Environment setup
+1. For environment setup, a user needs one external JAR which is provided [here](https://oss.sonatype.org/#nexus-search;gav~~kernel-auth-adapter~1.2.0-SNAPSHOT~~) with different versions as per their need they can download any (eg., kernel-auth-adapter needs to download and add to project Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply and close).
+
+![](_images/add-external-library.png)
+
+2. Now a user need to take a clone of 'mosip-config' repository from [here](https://github.com/mosip/mosip-config).
+3. Follow all the steps of cloning a repository & adding a remote repository and constraints.
+4. Create an empty folder inside the 'mosip-config' with 'sandbox-local' name and then copy and paste all config files inside 'sandbox-local' folder except .gitignore, README and LICENSE.
+5. As resident-services is using two properties files: resident-default and application-default. You have to configure it according to your environment on which you will work. The same files are available in below table for your reference.
+6. There are two files which will help to run the server. Put both of the files in the same folder and change the location attribute to 'sandbox-local' folder in "config-server-start.bat" file and also check the version of 'kernel-config-server.jar' in the end of command. (eg., ```java -jar -Dspring.profiles.active=native  -Dspring.cloud.config.server.native.search-locations=file:C:\Users\MyDell\mosipProject\mosip-config\sandbox-local -Dspring.cloud.config.server.accept-empty=true  -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 kernel-config-server-1.0.6.jar```).
+
+As I mentioned in step 5, you have to make some changes in these two properties files.
+
+eg., ```mosip.mosip.resident.client.secret=xyz789``` you need to add this property because you need to use a decrypted passcode to run it in your local machine and if you are running it on a server then you have to use an encrypted passcode like this ```mosip.mosip.resident.client.secret={cipher}1bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f```. You need to comment out this ```auth.server.admin.issuer.internal.uri``` in 'application-default' properties because you already have this ```auth.server.admin.issuer.uri``` so there is no need to that ```issuer.internal.uri```.
+
+If you check the urls present in these files are set on default with port no. 80 or something but you need to use external url to access. In the beginning of 'resident-default' file, you need to add ```mosipbox.public.url=https://${domain.url}``` and change all other urls with ```${mosipbox.public.url}```. It’s because you will pass this domain url in Eclipse VM arguments like this ```-Ddomain.url=dev.mosip.net``` which will result in this mosipbox.public.url=https://dev.mosip.net and it will connect with the Dev environment.
+
+Now run the server by open the 'config-server-start.bat' file and it will open the command prompt and start running.
+
+![](_images/run-server.png)
+
+As you can see that the server is up. Now we have to do some configurations in Eclipse also.
+
+Open eclipse and run the project for one time as 'java application', so that it will create a java application which you can see in debug configurations in the left side and then change its name to like what I have given (project name with environment - "Resident-dev").
+
+![](_images/create-env-in-eclipse.png)
+
+Now open the arguments and pass this ```-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master``` in VM arguments. Here domain url represents the environment on which you are working (eg., it can be ```dev2.mosip.net``` or ```qa3.mosip.net```).
