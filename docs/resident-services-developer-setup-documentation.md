@@ -55,7 +55,7 @@ As I mentioned in step 5, you have to make some changes in these two properties 
 
 eg., ```mosip.mosip.resident.client.secret=xyz789``` you need to add this property because you need to use a decrypted passcode to run it in your local machine and if you are running it on a server then you have to use an encrypted passcode like this ```mosip.mosip.resident.client.secret={cipher}1bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f```. You need to comment out this ```auth.server.admin.issuer.internal.uri``` in 'application-default' properties because you already have this ```auth.server.admin.issuer.uri``` so there is no need to that ```issuer.internal.uri```.
 
-If you check the urls present in these files are set on default with port no. 80 or something but you need to use external url to access. In the beginning of 'resident-default' file, you need to add ```mosipbox.public.url=https://${domain.url}``` and change all other urls with ```${mosipbox.public.url}```. It’s because you will pass this domain url in Eclipse VM arguments like this ```-Ddomain.url=dev.mosip.net``` which will result in this mosipbox.public.url=https://dev.mosip.net and it will connect with the Dev environment.
+If you check the urls present in these files are set on default with port no. 80 or something but you need to use external url to access. In the beginning of 'resident-default' file, you need to add ```mosipbox.public.url=https://${domain.url}``` and change all other urls with ```${mosipbox.public.url}```. It’s because you will pass this domain url in Eclipse VM arguments like this ```-Ddomain.url=dev.mosip.net``` which will result in this ```mosipbox.public.url=https://dev.mosip.net``` and it will connect with the Dev environment.
 
 Now run the server by open the 'config-server-start.bat' file and it will open the command prompt and start running.
 
@@ -68,3 +68,14 @@ Open eclipse and run the project for one time as 'java application', so that it 
 ![](_images/create-env-in-eclipse.png)
 
 Now open the arguments and pass this ```-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master``` in VM arguments. Here domain url represents the environment on which you are working (eg., it can be ```dev2.mosip.net``` or ```qa3.mosip.net```).
+
+![](_images/vm-arguments.png)
+
+Now simply click on apply and then debug it and it will start running. In console, you can see a message like ```"Started ResidentBootApplication in 34.078 seconds (JVM running for 38.361)"```.
+
+## Resident services API documentation
+You can find all the APIs used in resident-services 1.2.0 [here](https://mosip.github.io/documentation/1.2.0/resident-services.html).
+
+You can test the APIs with the help of Swagger-UI and postman. Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of resident-services for dev-environment from ```https://dev.mosip.net/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config``` and localhost from ```http://localhost:8099/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config```.
+
+Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services.
