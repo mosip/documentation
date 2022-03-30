@@ -52,7 +52,7 @@ First you need to make a clone of a repository. Follow setps from [here](https:/
 2. Now a user need to take a clone of 'mosip-config' repository from [here](https://github.com/mosip/mosip-config).
 3. Follow all the steps of cloning a repository & adding a remote repository and constraints.
 4. Create an empty folder inside the 'mosip-config' with 'sandbox-local' name and then copy and paste all config files inside 'sandbox-local' folder except .gitignore, README and LICENSE.
-5. As resident-services is using two properties files: resident-default and application-default. You have to configure it according to your environment on which you will work. The same files are available in below table for your reference.
+5. As resident-services is using two properties files: resident-default and application-default. You have to configure it according to your environment on which you will work. The same files are available [here]() for your reference.
 6. There are two files which will help to run the server. Put both of the files in the same folder and change the location attribute to 'sandbox-local' folder in "config-server-start.bat" file and also check the version of 'kernel-config-server.jar' in the end of command. (eg., ```java -jar -Dspring.profiles.active=native  -Dspring.cloud.config.server.native.search-locations=file:C:\Users\MyDell\mosipProject\mosip-config\sandbox-local -Dspring.cloud.config.server.accept-empty=true  -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 kernel-config-server-1.0.6.jar```).
 
 As I mentioned in step 5, you have to make some changes in these two properties files.
@@ -88,3 +88,12 @@ You just need to download the JSON collection from [here]() and then import it i
 
 ![](_images/import-apis-in-postman.png)
 
+Now you need to create an environment like below is the environment created for dev and give variable name as ```url``` and set both of the values as ```https://dev.mosip.net```.
+
+![](_images/dev-env-postman.png)
+
+The same way you need to create more environment here like below is the environment created for localhost and give variable name as ```url``` and set both of the values as ```http://localhost:8099```.
+
+![](_images/localhost-env-postman.png)
+
+If you will check, you will find five types of APIs: Get, Post, Put, Patch & Delete and when you will send a request from any of those APIs, you will get a particular response from those APIs.
