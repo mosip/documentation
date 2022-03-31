@@ -46,7 +46,7 @@ First you need to make a clone of a repository. Follow setps of setup from [here
 5.After successful importing of project, you need to update the project by right-click on project → maven → update project.
 
 ## Environment setup
-1. For environment setup, a user needs one external JAR which is provided [here](https://oss.sonatype.org/#nexus-search;gav~~kernel-auth-adapter~1.2.0-SNAPSHOT~~) with different versions as per their need they can download any (eg., kernel-auth-adapter needs to download and add to project Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply and close).
+1. For environment setup, a user needs one external JAR which is provided [here](https://oss.sonatype.org/#nexus-search;gav~~kernel-auth-adapter~1.2.0-SNAPSHOT~~) with different versions as per their need they can download any (eg., `kernel-auth-adapter.jar` needs to download and add to project Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply and close).
 
 <img src="_images/add-external-library.png" width="750" height="450">
 
