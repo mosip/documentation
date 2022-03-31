@@ -91,10 +91,10 @@ You just need to download the JSON collection from [here](https://github.com/mos
 
 Now you need to create an environment like below is the environment created for dev and give variable name as ```url``` and set both of the values as ```https://dev.mosip.net```.
 
-<img src="_images/dev-env-postman.png" width="750" height="450">
+<img src="_images/dev-env-postman.png" width="750" height="400">
 
 The same way you need to create more environment here like below is the environment created for localhost and give variable name as ```url``` and set both of the values as ```http://localhost:8099```.
 
-<img src="_images/localhost-env-postman.png" width="750" height="450">
+<img src="_images/localhost-env-postman.png" width="750" height="400">
 
 If you will check, you will find five types of APIs: Get, Post, Put, Patch & Delete and when you will send a request from any of those APIs, you will get a particular response from those APIs.
