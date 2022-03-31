@@ -52,7 +52,7 @@ For the code setup, clone the repository and follow the steps mentioned in the [
 
 ## Environment setup
 
-1. For the environment setup, you need an external JAR that is available [here](https://oss.sonatype.org/#nexus-search;gav~~kernel-auth-adapter~1.2.0-SNAPSHOT~~) with different versions. (eg., you can download `kernel-auth-adapter.jar` and add to project Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply and close).
+1. For the environment setup, you need an external JAR that is available [here](https://oss.sonatype.org/#nexus-search;gav~~kernel-auth-adapter~1.2.0-SNAPSHOT~~) with different versions. (E.g.: You can download `kernel-auth-adapter.jar` and add to project Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply and close).
 
 <img src="_images/add-external-library.png" width="750" height="450">
 
@@ -74,12 +74,12 @@ As mentioned in step 4, you may have to make some changes in the two properties 
 
 For example,
 
-    * `mosip.mosip.resident.client.secret=xyz789` you need to add this property to be able to use a decrypted passcode and run it in your local machine. 
-    * If you are running it on a server, then you have to use an encrypted passcode like this `mosip.mosip.resident.client.secret={cipher}1bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f`.
-    * You need to comment this out `auth.server.admin.issuer.internal.uri` in `application-default` file because you already have this `auth.server.admin.issuer.uri` so there is no need of `auth.server.admin.issuer.internal.uri`.
-    * If you check the URLs present in these files, they are set to default with port no. 80 (or any other port number) but you will need to use external URL to access it.
-    * In the beginning of `resident-default` file, you need to add `mosipbox.public.url=https://${domain.url}` and change all other URLs with `${mosipbox.public.url}`. 
-    * It is because you will pass this domain URL in Eclipse VM arguments like this `-Ddomain.url=dev.mosip.net` which results in `mosipbox.public.url=https://dev.mosip.net` and it will connect with the Development environment.
+  * You need to add `mosip.mosip.resident.client.secret=xyz789` property to be able to use a decrypted passcode and run it in your local machine. 
+  * If you are running it on a server, then you have to use an encrypted passcode like this `mosip.mosip.resident.client.secret={cipher}1bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f`.
+  * You need to comment this out `auth.server.admin.issuer.internal.uri` in `application-default` file because you already have this `auth.server.admin.issuer.uri` so there is no need of `auth.server.admin.issuer.internal.uri`.
+  * If you check the URLs present in these files, they are set to default with port no. 80 (or any other port number) but you will need to use external URL to access it.
+  * In the beginning of `resident-default` file, you need to add `mosipbox.public.url=https://${domain.url}` and change all other URLs with `${mosipbox.public.url}`. 
+  * It is because you will pass this domain URL in Eclipse VM arguments like this `-Ddomain.url=dev.mosip.net` which results in `mosipbox.public.url=https://dev.mosip.net` and it will connect with the Development environment.
 
 7. Now run the server by opening the `config-server-start.bat` file.
 
@@ -117,13 +117,13 @@ Below are the configurations to be done in Eclipse:
 
 * Now, you need to create an environment as shown in the image below. 
  
-This environment is created for dev and give the variable name as `url` and set both the values as `https://dev.mosip.net`.
+This environment is created for dev. Give the variable name as `url` and set both the values as `https://dev.mosip.net`.
 
 <img src="_images/dev-env-postman.png" width="750" height="400">
 
-* In the similar way, create another environment as seen below .
+* In the similar way, create another environment as shown below.
  
-This environment is created for localhost and give the variable name as `url` and set both the values as `http://localhost:8099`.
+This environment is created for localhost. Give the variable name as `url` and set both the values as `http://localhost:8099`.
 
 <img src="_images/localhost-env-postman.png" width="750" height="400">
 
