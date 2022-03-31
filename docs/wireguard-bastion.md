@@ -6,7 +6,7 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
 ![](_images/wireguard-bastion.jpg)
 
 ## Server installation
-* Provision a Virtual Machine (VM) and make sure it has access to internal load balancer (refer [architecture](../README.md). Recommended configuration of VM is 2 vCPU, 4 GB RAM, 16 GB storage. While this configuration should work for small scale deployments, it must be scaled up if the host becomes a bottleneck in high loads.
+* Provision a Virtual Machine (VM) and make sure it has access to internal load balancer (refer [Deployment Architecture](https://github.com/mosip/k8s-infra). Recommended configuration of VM is 2 vCPU, 4 GB RAM, 16 GB storage. While this configuration should work for small scale deployments, it must be scaled up if the host becomes a bottleneck in high loads.
 
  * Install docker, and make sure you add `$USER` to docker group:
 ```
