@@ -3,7 +3,7 @@
 ## Overview
 A Wireguard bastion host (Wireguard server) provides secure private channel to access MOSIP cluster. The host restrics public access, and enables access to only those clients who have their public key listed in Wireguard server.  Wireguard listens on UDP port51820.
 
-![](images/wireguard-bastion.jpg)
+![](_images/wireguard-bastion.jpg)
 
 ## Server installation
 * Provision a Virtual Machine (VM) and make sure it has access to internal load balancer (refer [architecture](../README.md). Recommended configuration of VM is 2 vCPU, 4 GB RAM, 16 GB storage. While this configuration should work for small scale deployments, it must be scaled up if the host becomes a bottleneck in high loads.
