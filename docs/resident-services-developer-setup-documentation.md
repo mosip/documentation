@@ -9,7 +9,7 @@ This documentation will guide you with the various types of setups.
 
 Below are a list of tools required in Resident services:
 1. JDK 11
-2. Any IDE (like eclipse, intellij idea)
+2. Any IDE (like Eclipse, IntelliJ IDEA)
 3. Apache Maven (zip folder)
 4. pgAdmin
 5. Postman
