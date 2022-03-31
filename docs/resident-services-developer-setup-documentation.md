@@ -54,7 +54,7 @@ First you need to make a clone of a repository. Follow setps of setup from [here
 3. Follow all the steps of cloning a repository & adding a remote repository and constraints.
 4. Create an empty folder inside the 'mosip-config' with 'sandbox-local' name and then copy and paste all config files inside 'sandbox-local' folder except .gitignore, README and LICENSE.
 5. As resident-services is using two properties file: `resident-default` and `application-default`. You have to configure it according to your environment on which you will work. The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files) for your reference.
-6. There are two files: [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files) which will help to run the server. Put both of the files in the same folder and change the location attribute to 'sandbox-local' folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` in the end of command. (eg., ```java -jar -Dspring.profiles.active=native  -Dspring.cloud.config.server.native.search-locations=file:C:\Users\myDell\mosipProject\mosip-config\sandbox-local -Dspring.cloud.config.server.accept-empty=true  -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 kernel-config-server-1.2.0-20201016.134941-57.jar```).
+6. There are two files: [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/resident-services-config-files/config-server-start.bat) which will help to run the server. Put both of the files in the same folder and change the location attribute to 'sandbox-local' folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` in the end of command. (eg., ```java -jar -Dspring.profiles.active=native  -Dspring.cloud.config.server.native.search-locations=file:C:\Users\myDell\mosipProject\mosip-config\sandbox-local -Dspring.cloud.config.server.accept-empty=true  -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 kernel-config-server-1.2.0-20201016.134941-57.jar```).
 
 As I mentioned in step 5, you have to make some changes in these two properties files.
 
@@ -85,7 +85,7 @@ You can test the APIs with the help of Swagger-UI and postman. Swagger is an int
 
 Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services.
 
-You just need to download the JSON collection from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files) and then import it in your 'postman'.
+You just need to download the JSON collection from [here](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/resident-services-config-files/Resident-Service-APIs.postman_collection.json) and then import it in your 'postman'.
 
 ![](_images/import-apis-in-postman.png)
 
