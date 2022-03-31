@@ -24,7 +24,7 @@ After unzipping Apache Maven, a user needs to move the unzipped folder in ```C:\
 
 After installing Eclipse, a user needs to open the `lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE then click on 'Install/Update'.
 
-![](_images/lombok-configuration.png)
+<img src="_images/lombok-configuration.png" width="800" height="400">
 
 Now you can check inside the eclipse installation folder ```C:\Users\userName\eclipse\jee-2021-12\eclipse```, the `lombok.jar` is added there. Now you don't have to add the dependency of 'lombok' in your `pom.xml` file separately because it will be auto-configured by the Eclipse.
 
@@ -41,14 +41,14 @@ First you need to make a clone of a repository. Follow setps of setup from [here
 3. Now run this command to build the project ```mvn clean install -Dgpg.skip=true -DskipTests=true``` and wait for build to complete successfully.
 4. After building of a project, open Eclipse and select import projects → Maven → Existing maven projects → Next → Browse to project directory → Finish.
 
-![](_images/import-project.png)
+<img src="_images/import-project.png" width="800" height="400">
 
 5.After successful importing of project, you need to update the project by right-click on project → maven → update project.
 
 ## Environment setup
 1. For environment setup, a user needs one external JAR which is provided [here](https://oss.sonatype.org/#nexus-search;gav~~kernel-auth-adapter~1.2.0-SNAPSHOT~~) with different versions as per their need they can download any (eg., kernel-auth-adapter needs to download and add to project Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply and close).
 
-![](_images/add-external-library.png)
+<img src="_images/add-external-library.png" width="800" height="400">
 
 2. Now a user need to take a clone of 'mosip-config' repository from [here](https://github.com/mosip/mosip-config).
 3. Follow all the steps of cloning a repository & adding a remote repository and constraints.
@@ -70,11 +70,11 @@ As you can see that the server is up. Now we have to do some configurations in E
 
 Open eclipse and run the project for one time as 'java application', so that it will create a java application which you can see in debug configurations and then change its name to like what I have given (project name with environment - "Resident-dev").
 
-![](_images/create-env-in-eclipse.png)
+<img src="_images/create-env-in-eclipse.png" width="800" height="400">
 
 Now open the arguments and pass this ```-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master``` in VM arguments. Here domain url represents the environment on which you are working (eg., it can be ```dev2.mosip.net``` or ```qa3.mosip.net```).
 
-![](_images/vm-arguments.png)
+<img src="_images/vm-arguments.png" width="800" height="400">
 
 Now simply click on apply and then debug it and it will start running. In console, you can see a message like ```"Started ResidentBootApplication in 34.078 seconds (JVM running for 38.361)"```.
 
@@ -87,14 +87,14 @@ Postman is an API platform for building and using APIs. Postman simplifies each 
 
 You just need to download the JSON collection from [here](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/resident-services-config-files/Resident-Service-APIs.postman_collection.json) and then import it in your 'postman'.
 
-![](_images/import-apis-in-postman.png)
+<img src="_images/import-apis-in-postman.png" width="800" height="400">
 
 Now you need to create an environment like below is the environment created for dev and give variable name as ```url``` and set both of the values as ```https://dev.mosip.net```.
 
-![](_images/dev-env-postman.png)
+<img src="_images/dev-env-postman.png" width="800" height="400">
 
 The same way you need to create more environment here like below is the environment created for localhost and give variable name as ```url``` and set both of the values as ```http://localhost:8099```.
 
-![](_images/localhost-env-postman.png)
+<img src="_images/localhost-env-postman.png" width="800" height="400">
 
 If you will check, you will find five types of APIs: Get, Post, Put, Patch & Delete and when you will send a request from any of those APIs, you will get a particular response from those APIs.
