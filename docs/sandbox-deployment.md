@@ -9,12 +9,12 @@ The [single click installer](https://github.com/mosip/mosip-infra/tree/release-1
 The configuration properties used in this installer are available [here](https://github.com/mosip/mosip-config/tree/release-1.2.0).
 
 ## Production grade deployment (V3) 
-Currently available as _Beta_, [V3](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3) is a reference implementation of a Kubernetes based production grade deployment of MOSIP. The same may be deployed both as a sandbox or full-scale production deployment. Several security features and enhancements have been added over the single click installer.
+Currently available as _Beta_, [V3](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3) is a reference implementation of a Kubernetes based production grade deployment of MOSIP. The same may be deployed both as a sandbox or full-scale production deployment. Several security features and enhancements have been added over the single click installer.
 
 The configuration properties used in this installer are available [here](https://github.com/mosip/mosip-config/tree/develop3-v3).
 
 ### Cluster administration 
-In V3 installation cluster can be administered by logging into organisation wide [Rancher setup](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3/rancher). Rancher is integrated with Keycloak for authentication. To provide cluster access to a user perform the following steps as administrator:
+In V3 installation cluster can be administered by logging into organisation wide [Rancher setup](https://github.com/mosip/k8s-infra/tree/main/rancher). Rancher is integrated with Keycloak for authentication. To provide cluster access to a user perform the following steps as administrator:
 1. Login into organisation wide Keycloak e.g `https://iam.xyz.net`.  It is assumed that you have `admin` role in Keycloak.
 1. Create a new user. 
 1. Make sure a strong password is set for the same under _Credentials_ tab.
@@ -33,6 +33,17 @@ V3 installation uses Wireguard for secure access. Refer to the following documen
 * [Wireguard Administrator's Guide](https://github.com/mosip/mosip-infra/blob/develop/deployment/v3/docs/wireguard-administrators-guide.md)
 * [Wireguard Client Installation Guide](wireguard-client-installation-guide.md)
 
+## Versioning 
+Following versioning conventions are used for repos related to deployment:
+* Branch of `mosip-infra` == MOSIP release version ==  Branch of [`mosip-helm`](https://github.com/mosip/mosip-helm).
+* [Helm chart version](#glossary) ~= [MOSIP release version](#gloassary) but with following versioning convention:
+    * MOSIP release version: `w.x.y.z`. Example `1.2.0.1`
+    * Helm chart version: `wx.y.z`. Example `12.0.1` (as Helm follows 3 digit versioning).
+* Only execption to the above case is `develop` branch of `mosip-helm` where `version` in `Chart.yaml` points to next planned release version of MOSIP (as Helm does not allow version like `develop`).
+* [Docker image tag](#glossary) in `values.yaml` of Helm chart == MOSIP release version.
+* Helm charts contain default compatible docker image tag.
+* `appVersion` field in `Charts.yaml` is not used. 
+
 ## Active branches
 Branches of `mosip-infra` chart that are actively being updated are listed below.  Other branches are assumed to be frozen. Make sure any changes are reflected in these branches (if applicable).
 * `1.1.5.5`
@@ -40,5 +51,9 @@ Branches of `mosip-infra` chart that are actively being updated are listed below
 * `1.2.0.1`
 * `develop`
 
-
-
+## Glossary
+|Term|Description|
+|---|---|
+|Helm chart version|`version` field in [`Charts.yaml`](https://github.com/mosip/mosip-helm/blob/1.2.0/charts/artifactory/Chart.yaml)|
+|MOSIP release version| Version as [published](releases.md). If a release is `w.x.y`, it implies `w.x.y.0`. Patch releases may have have 4 digits like `w.x.y.z`.|
+|Docker image tag|Version of MOSIP serivce/module published as docker on Docker Hub.|
