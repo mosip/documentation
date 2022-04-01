@@ -21,7 +21,7 @@ Below are a list of tools required in Resident Services:
 9. settings.xml (document)
 
 
-Follow the steps below to setup Resident Services on your local system:
+Follow the steps below to set up Resident Services on your local system:
 
 1. Download `lombok.jar` and `settings.xml` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files).
 
@@ -58,7 +58,7 @@ For the code setup, clone the repository and follow the steps mentioned in the [
 
 <img src="_images/add-external-library.png" width="750" height="450">
 
-2. Clone `[mosip-config repository](https://github.com/mosip/mosip-config)`.
+2. Clone [mosip-config repository](https://github.com/mosip/mosip-config).
 
 3. Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
 
@@ -66,15 +66,15 @@ For the code setup, clone the repository and follow the steps mentioned in the [
 
 5. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/resident-services-config-files/config-server-start.bat).
 
-6. Put both the files in the same folder and change the location attribute to `sandbox-local` folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` in the end of command. 
+6. Put both the files in the same folder and change the location attribute to `sandbox-local` folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` towards the end of the command. 
 
- For example,
+ Example:
  
- ```java -jar -Dspring.profiles.active=native  -Dspring.cloud.config.server.native.search-locations=file:C:\Users\myDell\mosipProject\mosip-config\sandbox-local -Dspring.cloud.config.server.accept-empty=true  -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 kernel-config-server-1.2.0-20201016.134941-57.jar```.
+  ```java -jar -Dspring.profiles.active=native  -Dspring.cloud.config.server.native.search-locations=file:C:\Users\myDell\mosipProject\mosip-config\sandbox-local -Dspring.cloud.config.server.accept-empty=true  -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 kernel-config-server-1.2.0-20201016.134941-57.jar```.
 
 As mentioned in step 4, you may have to make some changes in the two properties files.
 
-For example,
+For instance,
 
   * Add `mosip.mosip.resident.client.secret=xyz789` property to be able to use a decrypted passcode and run it in your local machine. 
   * If you are running it on a server, then you have to use an encrypted passcode like this `mosip.mosip.resident.client.secret={cipher}1bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f`.
@@ -91,23 +91,23 @@ Now the server should be up and running.
 
 Below are the configurations to be done in Eclipse:
 
-1. Open Eclipse and run the project for one time as `java application`, so that it will create a java application which you can see in debug configurations and then change its name. (e.g.: project name with environment - "Resident-dev").
+1. Open Eclipse and run the project for one time as `Java application`, so that it will create a Java application which you can see in debug configurations and then change its name. (e.g.: project name with environment - "Resident-dev").
 
 <img src="_images/create-env-in-eclipse.png" width="750" height="450">
 
 2. Open the arguments and pass this `-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master` in VM arguments. 
 
-3. Here domain URL represents the environment on which you are working (eg., it can be ```dev2.mosip.net``` or ```qa3.mosip.net```).
+3. Here, the domain URL represents the environment on which you are working (eg., it can be ```dev2.mosip.net``` or ```qa3.mosip.net```).
 
 <img src="_images/vm-arguments.png" width="750" height="450">
 
-4. Click **Apply** and then debug it (it starts running). In the console, you can see a message like `"Started ResidentBootApplication in 34.078 seconds (JVM running for 38.361)"`.
+4. Click Apply and then debug it (starts running). In the console, you can see a message like `"Started ResidentBootApplication in 34.078 seconds (JVM running for 38.361)"`.
 
 ## Resident services API
 
 * For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
 
-* The APIs can be tested with the help of Swagger-UI and Postman. 
+* The APIs can be tested with the help of **Swagger-UI** and **Postman**. 
 
 * Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of resident-services for dev-environment from `https://dev.mosip.net/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config` and localhost from `http://localhost:8099/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config`.
 
