@@ -4,7 +4,7 @@
 All MOSIP services are packeged as Helm charts for ease of installation on Kubernetes cluster. The source code of Helm charts is available in [`mosip-helm`](https://github.com/mosip/mosip-helm) repository. The packaged charts (`*.tgz`) are checked in `gh-pages` branch of `mosip-helm` repo. Github automatically hosts them at `https://mosip.github.io/mosip-helm/index.yaml`.  See sections below for futher details.
 
 ## Versioning 
-Refer [Versioning](sandbox-deployment.md#versioning)
+Refer [Versioning](sandbox-deployment.md#versioning).
 
 Make sure version in `Charts.yaml` is updated for all charts when a new branch is created on `mosip-helm`.
 
