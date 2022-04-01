@@ -49,6 +49,7 @@
     * [Registration Processor](registration-processor.md) 
     * [Reporting](reporting.md)
     * [Resident Services](resident-services.md)
+        * [Resident Services Developer Guide](resident-services-developers-guide.md)
     * [Storage](storage.md)
     * [WebSub](websub.md)
 * [Technology Stack](technology-stack.md)
