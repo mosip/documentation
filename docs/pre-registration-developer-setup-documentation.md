@@ -20,7 +20,7 @@ The documentation here will guide you through the pre-requisties required for th
    * [kernel-transliteration-icu4j](https://repo1.maven.org/maven2/io/mosip/kernel/kernel-transliteration-icu4j/)
    * [kernel-ref-idobjectvalidator](https://repo1.maven.org/maven2/io/mosip/kernel/kernel-ref-idobjectvalidator/)
    * [kernel-virusscanner-clamav](https://repo1.maven.org/maven2/io/mosip/kernel/kernel-virusscanner-clamav/)
-9. settings.xml (document)
+9. [settings.xml](https://github.com/aihamh/documentation/blob/1.2.0/docs/_files/pre-registration-config-files/settings.xml)
 10. Notepad++ (optional)
 
 
