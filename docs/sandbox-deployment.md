@@ -40,7 +40,7 @@ Following versioning conventions are followed for repos related to deployment:
 * [Helm chart version](#glossary) ~= [MOSIP release version](#gloassary) but with following versioning convention:
     * MOSIP release version: `w.x.y.z`. Example `1.2.0.1`
     * Helm chart version: `wx.y.z`. Example `12.0.1` (as Helm follows 3 digit versioning).
-* Only execption to the above case is `develop` branch of `mosip-helm` where `version` in `Chart.yaml` points to next planned release version of MOSIP (as Helm does not allow version like `develop`).
+    * In case of `develop` branch of `mosip-helm` `version` in `Chart.yaml` points to next planned release version of MOSIP (as Helm does not allow version like `develop`).
 * [Docker image tag](#glossary) in `values.yaml` of Helm chart == MOSIP release version.
 * Helm charts contain default compatible docker image tag.
 * `appVersion` field in `Charts.yaml` is not used. 
