@@ -45,7 +45,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 1. Open the project folder where `pom.xml` is present.
 1. Open command prompt from the same folder.
-1. Now run this command to build the project ```mvn clean install -Dgpg.skip=true -DskipTests=true``` and wait for build to complete successfully.
+1. Run the command `mvn clean install -Dgpg.skip=true -DskipTests=true` to build the project and wait for the build to complete successfully.
 1. After building of a project, open Eclipse and select `Import Projects → Maven → Existing Maven Projects → Next → Browse to project directory → Finish`.
 1. After successful importing of project, update the project by right-click on `Project → Maven → Update Project`.
 
