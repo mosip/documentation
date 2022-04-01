@@ -44,13 +44,13 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 ### Importing and building of a project
 
 1. Open the project folder where `pom.xml` is present.
-2. Open command prompt from the same folder.
-3. Now run this command to build the project ```mvn clean install -Dgpg.skip=true -DskipTests=true``` and wait for build to complete successfully.
-4. After building of a project, open Eclipse and select `Import Projects → Maven → Existing Maven Projects → Next → Browse to project directory → Finish`.
+1. Open command prompt from the same folder.
+1. Now run this command to build the project ```mvn clean install -Dgpg.skip=true -DskipTests=true``` and wait for build to complete successfully.
+1. After building of a project, open Eclipse and select `Import Projects → Maven → Existing Maven Projects → Next → Browse to project directory → Finish`.
 
 <img src="_images/import-project.png" width="750" height="450">
 
-5. After successful importing of project, update the project by right-click on `Project → Maven → Update Project`.
+1. After successful importing of project, update the project by right-click on `Project → Maven → Update Project`.
 
 ## Environment setup
 
@@ -58,15 +58,15 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 <img src="_images/add-external-library.png" width="750" height="450">
 
-2. Clone [mosip-config repository](https://github.com/mosip/mosip-config).
+1. Clone [mosip-config repository](https://github.com/mosip/mosip-config).
 
-3. Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
+1. Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
 
-4. As Resident Services is using two properties files, `resident-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files) for reference.
+1. As Resident Services is using two properties files, `resident-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files) for reference.
 
-5. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/resident-services-config-files/config-server-start.bat).
+1. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/resident-services-config-files/config-server-start.bat).
 
-6. Put both the files in the same folder and change the location attribute to `sandbox-local` folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` towards the end of the command. 
+1. Put both the files in the same folder and change the location attribute to `sandbox-local` folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` towards the end of the command. 
 
  Example:
  
@@ -83,11 +83,11 @@ For instance,
   * In the beginning of `resident-default` file, add `mosipbox.public.url=https://${domain.url}` and change all other URLs with `${mosipbox.public.url}`. 
   * This is because you will pass this domain URL in Eclipse VM arguments like this `-Ddomain.url=dev.mosip.net` which results in `mosipbox.public.url=https://dev.mosip.net` and it will connect with the Development environment.
 
-7. Run the server by opening the `config-server-start.bat` file.
+1. Run the server by opening the `config-server-start.bat` file.
 
 <img src="_images/run-server.png" width="750" height="450">
 
-Now the server should be up and running. 
+The server should now be up and running. 
 
 Below are the configurations to be done in Eclipse:
 
@@ -95,13 +95,13 @@ Below are the configurations to be done in Eclipse:
 
 <img src="_images/create-env-in-eclipse.png" width="750" height="450">
 
-2. Open the arguments and pass this `-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master` in VM arguments. 
+1. Open the arguments and pass this `-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master` in VM arguments. 
 
-3. Here, the domain URL represents the environment on which you are working (eg., it can be ```dev2.mosip.net``` or ```qa3.mosip.net```).
+1. Here, the domain URL represents the environment on which you are working (eg., it can be ```dev2.mosip.net``` or ```qa3.mosip.net```).
 
 <img src="_images/vm-arguments.png" width="750" height="450">
 
-4. Click Apply and then debug it (starts running). In the console, you can see a message like `"Started ResidentBootApplication in 34.078 seconds (JVM running for 38.361)"`.
+1. Click Apply and then debug it (starts running). In the console, you can see a message like `"Started ResidentBootApplication in 34.078 seconds (JVM running for 38.361)"`.
 
 ## Resident services API
 
