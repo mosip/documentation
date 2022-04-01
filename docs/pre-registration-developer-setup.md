@@ -27,7 +27,7 @@ The documentation here will guide you through the pre-requisites required for th
 ### Follow the steps below to setup pre-registration on your local system:
 1. Fork the MOSIP [pre-registration repository](https://github.com/mosip/pre-registration) from Github [MOSIP repo](https://github.com/mosip).
 
-2. clone the repo into local
+2. Clone the repo into local.
    * `git clone https://github.com/urgithubaccname/pre-registration.git`
    * `git checkout develop`
    * `git remote add upstream https://github.com/mosip/pre-registration.git`
@@ -47,7 +47,7 @@ The documentation here will guide you through the pre-requisites required for th
 6. Add Downloaded Lombok.jar to project, click on downloaded jar and install specifying eclipse ide(eclipse.exe) location.
 
 7. Add MOSIP pre-registration specific jar files from [Maven central](https://repo1.maven.org/maven2/io/mosip/):
-   * Adding Jars to build path: Right click on service -> Build Path -> Configure Build Path. click on Classpath, Add External Jars -> Add required Jars -> Apply and close
+   * Adding Jars to build path: Right click on service -> Build Path -> Configure Build Path. click on Classpath, Add External Jars -> Add required Jars -> Apply and close.
 
 	
 8. Add `auth-adapter`, `transliteration`, `ref-idobjectvalidator`, `virusscanner`, `lombok` jar files to `pre-registration-application-service`, `pre-registration-datasync-service`  class path.
