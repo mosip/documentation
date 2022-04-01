@@ -34,7 +34,7 @@ V3 installation uses Wireguard for secure access. Refer to the following documen
 * [Wireguard Client Installation Guide](wireguard-client-installation-guide.md)
 
 ## Versioning 
-Following versioning conventions are used for repos related to deployment:
+Following versioning conventions are followed for repos related to deployment:
 * [`mosip-infra`](https://github.com/mosip/mosip-infra) branch == MOSIP release version ==  [`mosip-helm`](https://github.com/mosip/mosip-helm) branch.
 * [`k8s-infra`](https://github.com/mosip/k8s-infra) is on `main` branch.
 * [Helm chart version](#glossary) ~= [MOSIP release version](#gloassary) but with following versioning convention:
