@@ -65,7 +65,7 @@
 * [API](api.md)
 * Community
   * [Contributions](contributions.md)
-  * [Contribution guidelines](code-contributions.md)
+  * [Code Contributions](code-contributions.md)
   * [Code of Conduct](code-of-conduct.md)
 * [Releases](releases.md)
   * [1.2.0](release/1.2.0/release-notes.md)
