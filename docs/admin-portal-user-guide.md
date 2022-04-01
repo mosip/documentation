@@ -296,6 +296,7 @@ To know more, refer to Master Data guide.
  5. Click **Choose file** to select the data and click **Upload**
  
 To view the format for inserting data in a particular table, click on the Download icon. A CSV file gets downloaded in which the first row represents the column names and the rest of the rows are the data which will be inserted into the table(sample).
+**Note :** For editing CSV files containing date fields, It is advisable to use Text editors like Notepad, Notepad++, VS Code, etc., rather than Excel so that format of the date won't get altered.
 
 ### Packets
 
