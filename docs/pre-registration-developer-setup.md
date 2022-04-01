@@ -3,13 +3,13 @@
 ## Overview
 This guide helps in understanding the pre-registration developer setup. To know more, read [Pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration). 
 
-The documentation here will guide you through the pre-requisties required for the developer setup.
+The documentation here will guide you through the pre-requisites required for the developer setup.
 
-## Software, Code setup
+## Software setup
 
 ### Below are the list of tools required in pre-registration:
 1. JDK 11
-2. Any IDE (like Eclipse, IntelliJ IDEA)
+2. Any IDE (Eclipse, IntelliJ IDEA)
 3. Apache Maven (zip folder)
 4. pgAdmin
 5. Postman
@@ -36,7 +36,7 @@ The documentation here will guide you through the pre-requisties required for th
    * `git fetch upstream`
    * `git rebase upstream/develop`
  	
-3. Inside `settings.xml` change local repository direcory to your directory name where `.m2 folder` is located.
+3. Inside `settings.xml` change local repository directory to your directory name where `.m2 folder` is located.
 	ex: `<localRepository>C:/Users/M1072510/.m2/repository</localRepository>` found in 55th line
 
 4. Add `settings.xml` inside `.m2 folder` (Maven Folder).
@@ -59,7 +59,6 @@ The documentation here will guide you through the pre-requisties required for th
 11. Update Maven dependencies: Maven syncs the Eclipse project settings with that of the pom. It downloads dependencies required for the project.
 
 12. Build and Run Project.
-
 
 
 
