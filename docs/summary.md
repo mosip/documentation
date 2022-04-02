@@ -50,7 +50,9 @@
     * [Reporting](reporting.md)
     * [Resident Services](resident-services.md)
         * [Resident Services Developer Guide](resident-services-developer-guide.md)
-    * [Storage](storage.md)
+    * [Persistence](persistence.md)
+        * [Postgres DB](postgres-db.md)
+        * [Object Store](object-store.md)
     * [WebSub](websub.md)
 * [Technology Stack](technology-stack.md)
 * Deployment
