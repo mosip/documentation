@@ -1,5 +1,7 @@
 # Object Store
 
+## Overview
+
 S3 compatible object store like AWS S3 or [MinIO](https://min.io/) for storing the following:
 1. Original registration encrypted packets
 2. Pre-registration documents
