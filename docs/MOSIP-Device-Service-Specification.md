@@ -39,7 +39,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 * Auth - The process of verifying one’s identity.
 * FPS - Frames Per Second
 * Management Server - A server run by the device provider to manage the life cycle of the biometric devices.
-* Device Registration - The process of registering the device with MOSIP servers.
+* Device Registration - The process of a device obtaining a certificate from the management server.
 * Signature - All signature should be as per RFC 7515.
 * header in signature - Header in the signature means the attribute with "alg" set to RS256 and x5c set to base64encoded certificate.
 * payload is the byte array of the actual data, always represented as base64urlencoded.
@@ -1187,6 +1187,8 @@ Capture Response | Data | Device key is used
 Capture Response | Digital ID | FTM chip key is used
 Registration Capture Response | Data | Device key is used
 Registration Capture Response | Digital ID | <ul><li>For L0 device using device key</li><li>For L1 device using FTM chip key</li></ul>
+
+<!--
 Device Registration Request | Device Data | Device Provider certificate is used
 Device Registration Request | Device Info | Device key is used
 Device Registration Request | Digital ID | <ul><li>For L0 device using device key</li><li>For L1 device using FTM chip key</li></ul>
@@ -1194,6 +1196,7 @@ Device De-registration Request | Device | Device Provider certificate is used
 Device Registration Response | Response | MOSIP Signature certificate is used
 Device Registration Response | Digital ID | Should be same as request
 Device De-registration Response | Device | MOSIP Signature certificate is used
+-->
 
 ## Error Codes
 Code | Message
