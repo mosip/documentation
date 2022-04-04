@@ -36,10 +36,10 @@ The documentation here will guide you through the pre-requisites required for pr
    * `git rebase upstream/develop`
  	
 3. Inside `settings.xml` change local repository directory to your directory name where `.m2 folder` is located.
-	ex: `<localRepository>C:/Users/M1072510/.m2/repository</localRepository>` found in 55th line
+	ex: `<localRepository>C:/Users/username/.m2/repository</localRepository>` found in 55th line
 
 4. Add `settings.xml` inside `.m2 folder` (Maven Folder).
-	ex: `C:\Users\M1072510\.m2`
+	ex: `C:\Users\username\.m2`
 
 5. Import the project in Eclipse IDE and it starts updating Maven projects configuration, Refreshing workspaces, project starts building (downloading sources, javadoc).
 
