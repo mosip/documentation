@@ -177,7 +177,7 @@ A digital device ID in MOSIP would be a signed JSON (RFC 7515) as follows:
 
 Signed with the JSON Web Signature (RFC 7515) using the "Foundational Trust Module" Identity key, this data is the fundamental identity of the device. Every MOSIP compliant device will need the foundational trust module.
 
-The only exception to this rule is for the L0 compliant devices that have the purpose (explained below during device registration) as "Registration". L0 devices would sign the Digital Id with the device key.
+The only exception to this rule is for the L0 compliant devices that have the purpose as "Registration". L0 devices would sign the Digital Id with the device key.
 
 A signed digital ID would look as follows:
 ```
