@@ -128,7 +128,7 @@ The documentation here will guide you through the pre-requisites required for pr
 4. Once PR is merged check Github Actions to see if build is Successful.
 
 5. Restart Kubernetes Pods:
-   * In [dev.mosip.net](https://dev.mosip.net) Goto `K8s Dashboard - MZ` to access Kubernetes.
+   * In `env` Goto `K8s Dashboard - MZ` to access Kubernetes.
 
 6. Test the changes in UI, Perform Sanity Testing.
 
@@ -152,7 +152,5 @@ The documentation here will guide you through the pre-requisites required for pr
    * Pre-registration Captcha service : https://dev.mosip.net/preregistration/v1/captcha/swagger-ui.html
    * Pre-registration Booking service : https://dev.mosip.net/preregistration/v1/appointment/booking-service/swagger-ui.html
 
-4. Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services. 
-   * Download [pre-registration Postman API](https://github.com/aihamh/documentation/blob/1.2.0/docs/_files/pre-registration-config-files/Pre-registration-APIs.postman_collection.json) -> Import it in Postman and test the API.
 
  
