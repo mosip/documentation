@@ -23,9 +23,29 @@ In this phase, Mobile ID app is currently available for Android users only. Shor
 5. Enter a passcode to secure your application.
 6. Re-enter the passcode and confirm the same.
 7. On the Home screen, you will now see a few options and icons.
-8. To get started, add IDs to your profile.
+
+### Generating credentials
+
+It is recommended to keep your digital credentials with you at all times. To get started with the app, add IDs to your profile.
    * Once generated, IDs are safely stored on your mobile and can be renamed or shared at any time.
    * Easy sharing: Share and receive IDs swiftly using your phone camera to scan QR codes.
-9. Click **Get started and add ID**.
+
+1. On the Home screen, tap **Add ID**.
+2. From the dropdown, select either UIN/ VID of the ID you wish to retrieve. 
+3. If you have selected UIN, enter the UIN. 
+4. Tap **Generate ID**. 
+5. Enter the 6-digit verification code(OTP) sent on your registered number (can autofill the number from messages).
+6. Wait while your ID is getting downloaded and click **Back Home**.
+7. Under My IDs tab, you will be able to view your digital credentials/ ID against the UIN entered.
+   For more details, click the arrow mark towards the right corner in the ID generated. You can view the following details 
+        * Generated date
+        * UIN
+        * Status
+        *  Details like the photograph, name, address, email, etc. 
+8. Click Edit Tag (pencil icon in detailed view) and update the ID name if required.
+9. Enter the name and click **Save**.
+    
+
+### Sharing credentials
 
 
