@@ -76,7 +76,7 @@ The documentation here will guide you through the pre-requisites required for pr
 3. Install angular js `npm install -g @angular/cli`.
 4. Start the angular js server "ng serve".
 5. Open `http://localhost:4200` to access the application.
-6. You will face CORS issue since API Services are hosted on `https://dev.mosip.net`.
+6. You will face CORS issue since API Services are hosted on `https://{env}`.
 
 
 #### Using the Angular CLI proxy solution to get around CORS issue
@@ -96,7 +96,7 @@ The documentation here will guide you through the pre-requisites required for pr
 
     * `{
      "/proxyapi": {
-      "target": "https://dev.mosip.net/",
+      "target": "https://{env}/",
       "secure": true,
       "changeOrigin": true,
       "pathRewrite": {
