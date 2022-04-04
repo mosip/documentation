@@ -128,7 +128,7 @@ The documentation here will guide you through the pre-requisites required for pr
 4. Once PR is merged check Github Actions to see if build is Successful.
 
 5. Restart Kubernetes Pods:
-   * In `env` Goto `K8s Dashboard - MZ` to access Kubernetes.
+   * In respective `env` Goto `K8s Dashboard - MZ` to access Kubernetes.
 
 6. Test the changes in UI, Perform Sanity Testing.
 
