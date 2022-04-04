@@ -147,10 +147,10 @@ The documentation here will guide you through the pre-requisites required for pr
 2. The APIs can be Tested with the help of **Swagger-UI** and **Postman**. 
 
 3. Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of pre-registration here:
-   * Pre-registration Application service : https://dev.mosip.net/preregistration/v1/application-service/swagger-ui.html
-   * Pre-registration Datasync Service : https://dev.mosip.net/preregistration/v1/sync/datasync-service/swagger-ui.html
-   * Pre-registration Captcha service : https://dev.mosip.net/preregistration/v1/captcha/swagger-ui.html
-   * Pre-registration Booking service : https://dev.mosip.net/preregistration/v1/appointment/booking-service/swagger-ui.html
+   * Pre-registration Application service : https://{env}/preregistration/v1/application-service/swagger-ui.html
+   * Pre-registration Datasync Service : https://{env}/preregistration/v1/sync/datasync-service/swagger-ui.html
+   * Pre-registration Captcha service : https://{env}/preregistration/v1/captcha/swagger-ui.html
+   * Pre-registration Booking service : https://{env}/preregistration/v1/appointment/booking-service/swagger-ui.html
 
 
  
