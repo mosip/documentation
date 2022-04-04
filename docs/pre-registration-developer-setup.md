@@ -1,9 +1,8 @@
 # Pre-registration Developer Setup
 
 ## Overview
-This guide helps in understanding the pre-registration developer setup. To know more, read [Pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration). 
+The documentation here will guide you through the pre-requisites required for pre-registration developer setup. To know more, read [Pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration). 
 
-The documentation here will guide you through the pre-requisites required for the developer setup.
 
 ## Software setup
 
@@ -46,19 +45,27 @@ The documentation here will guide you through the pre-requisites required for th
 
 6. Add Downloaded Lombok.jar to project, click on downloaded jar and install specifying eclipse ide(eclipse.exe) location.
 
-7. Add MOSIP pre-registration specific jar files from [Maven central](https://repo1.maven.org/maven2/io/mosip/):
+ <img src="_images/lombok-configuration.png" width="750" height="450">
+ 
+7. Configure the JDK (Standard VM) with your Eclipse by traversing through `Preferences → Java → Installed JREs`.
+
+<img src="_images/installed-jre.png" width="750" height="450">
+
+8. Add MOSIP pre-registration specific jar files from [Maven central](https://repo1.maven.org/maven2/io/mosip/):
    * Adding Jars to build path: Right click on service -> Build Path -> Configure Build Path. click on Classpath, Add External Jars -> Add required Jars -> Apply and close.
+  
+ <img src="_images/add-external-library.png" width="750" height="450">
 
 	
-8. Add `auth-adapter`, `transliteration`, `ref-idobjectvalidator`, `virusscanner`, `lombok` jar files to `pre-registration-application-service`, `pre-registration-datasync-service`  class path.
+9. Add `auth-adapter`, `transliteration`, `ref-idobjectvalidator`, `virusscanner`, `lombok` jar files to `pre-registration-application-service`, `pre-registration-datasync-service`  class path.
 
-9. Add `auth-adapter`, `lombok` jar file to `pre-registration-core`, `pre-registration-batchjob`, `pre-registration-captcha-service`, `pre-registration-booking-service` class path.
+10. Add `auth-adapter`, `lombok` jar file to `pre-registration-core`, `pre-registration-batchjob`, `pre-registration-captcha-service`, `pre-registration-booking-service` class path.
 
-10. Run `mvn clean install -Dgpg.skip=true` command to build locally and to execute test cases.
+11. Run `mvn clean install -Dgpg.skip=true` command to build locally and to execute test cases.
 
-11. Update Maven dependencies: Maven syncs the Eclipse project settings with that of the pom. It downloads dependencies required for the project.
+12. Update Maven dependencies: Maven syncs the Eclipse project settings with that of the pom. It downloads dependencies required for the project.
 
-12. Build and Run Project.
+13. Build and Run Project.
 
 
 
@@ -136,3 +143,54 @@ The documentation here will guide you through the pre-requisites required for th
    * Add Documentation. 
    * once moved to QA env -> change the Status as Assigned for Testing -> change the Assignee to QA team.
 
+
+## Pre-registration API
+
+1. For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
+
+2. The APIs can be Tested with the help of **Swagger-UI** and **Postman**. 
+
+3. Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of pre-registration here:
+   * Pre-registration Application service : https://dev.mosip.net/preregistration/v1/application-service/swagger-ui.html
+   * Pre-registration Datasync Service : https://dev.mosip.net/preregistration/v1/sync/datasync-service/swagger-ui.html
+   * Pre-registration Captcha service : https://dev.mosip.net/preregistration/v1/captcha/swagger-ui.html
+   * Pre-registration Booking service : https://dev.mosip.net/preregistration/v1/appointment/booking-service/swagger-ui.html
+
+4. Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services. 
+   * Download [pre-registration Postman API](https://github.com/aihamh/documentation/blob/1.2.0/docs/_files/pre-registration-config-files/Pre-registration-APIs.postman_collection.json) -> Import it in Postman and test the API.
+
+### How to use Swagger API to Test the Services
+
+1. To use Swagger UI to test any service, we need to login into authmanager/clientidsecret service. This will give back a Token in response header. This token is required to test other services.
+   
+2. Open https://dev.mosip.net/v1/authmanager/swagger-ui.html#/authmanager .
+
+4. Click on `useridPwd` -> `Try it out`. Then use following `request`. Click on `Execute`
+   *	"request": {
+		"appId": "prereg",
+		"clientId": "mosip-prereg-client",
+		"secretKey": "abc123"
+	}
+   * 	"request": {
+		"appId": "registrationclient",
+		"clientId": "mosip-reg-client",
+		"secretKey": "abc123"
+	}
+	
+4. Now open the swagger to test the services.
+
+5. Request for Testing of Booking service, Datatsync service.
+   * {
+"id": "string",
+"metadata": {},
+"request": {
+"appId": "admin",
+"password": "mosip",
+"userName": "110006"
+},
+"requesttime": "2018-12-10T06:12:52.994Z",
+"version": "string"
+}
+
+   * while testing for pre-registration booking service in local use this url: http://localhost:9095/preregistration/v1/appointment 
+ 
