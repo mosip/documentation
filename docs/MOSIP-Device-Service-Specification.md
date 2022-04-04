@@ -24,6 +24,7 @@ All devices that collect biometric data for MOSIP should operate within the spec
 |0.9.5|Draft|07-Apr-2021|Device De registration API spec was updated.
 |0.9.5|Draft|08-Apr-2021|We will be following datetime values in ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ. The same has been updated throughout the document.
 |0.9.5|Draft|24-May-2021|Clarification on hash and previousHash definition has been provided 
+|0.9.5|Draft|04-Apr-2022|Register and De-register of devices have been removed from MOSIP. Device validation in MOSIP will be done via cryptography. Here onwards, registering a device will mean a device obtaining a certificate from the management server.
 
 ## Glossary of Terms
 * Device Provider - An entity that manufactures or imports the devices in their name. This entity should have legal rights to obtain an organization level digital certificate from the respective authority in the country.
@@ -261,7 +262,7 @@ Device discovery would be used to identify MOSIP compliant devices in a system b
     "deviceSubId": ["Array of supported device sub Ids"],
     "callbackId": "Base URL to reach to the device",
     "digitalId": "Unsigned Digital ID of the device",
-    "deviceCode": "A unique code given by MOSIP after successful registration",
+    "deviceCode": "Same as serialNo in digital ID",
     "specVersion": ["Array of supported MDS specification version"],
     "purpose": "Auth  or Registration or empty if not registered",
     "error": {
@@ -283,7 +284,7 @@ deviceId | Internal ID to identify the actual biometric device within the device
 deviceSubId | <ul><li>Allowed values are 1, 2 or 3.</li><li>The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement.</li><li>Device sub id is a simple index which always starts with 1 and increases sequentially for each sub device present.</li><li>In case of Finger/Iris its 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises.</li><li>The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).</li><ul>
 callbackId | <ul><li>This differs as per the OS.</li><li>In case of Linux and windows operating systems it is a HTTP URL.</li><li>In the case of android, it is the intent name.</li><li>In IOS, it is the URL scheme.</li><li>The call back URL takes precedence over future request as a base URL.</li></ul>
 digitalId | Digital ID as per the Digital ID definition but it will not be signed.
-deviceCode | A unique code given by MOSIP after successful registration.
+deviceCode | Same as serialNo in digital ID.
 specVersion | Array of supported MDS specification version. The array element zero will always contain the spec version using which the response is created.
 purpose | Purpose of the device in the MOSIP ecosystem. Allowed values are "Auth" or "Registration".
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
@@ -367,7 +368,7 @@ NA
       "deviceSubId": ["Array of supported device sub Ids"],
       "callbackId": "Baseurl to reach to the device",
       "digitalId": "Signed digital id as described in the digital id section of this document.",
-      "deviceCode": "A unique code given by MOSIP after successful registration",
+      "deviceCode": "Same as serialNo in digital ID",
       "env": "Target environment",
       "purpose": "Auth  or Registration",
       "specVersion": ["Array of supported MDS specification version"],
@@ -532,7 +533,7 @@ Scale | NFIQ v1.0
       "specVersion": "MDS spec version",
       "data": {
         "digitalId": "digital Id as described in this document",
-        "deviceCode": "A unique code given by MOSIP after successful registration",
+        "deviceCode": "Same as serialNo in digital ID",
         "deviceServiceVersion": "MDS version",
         "bioType": "Finger",
         "bioSubType": "UNKNOWN",
@@ -557,7 +558,7 @@ Scale | NFIQ v1.0
       "specVersion" : "MDS spec version",
       "data": {
         "digitalId": "Digital Id as described in this document",
-        "deviceCode": "A unique code given by MOSIP after successful registration",
+        "deviceCode": "Same as serialNo in digital ID",
         "deviceServiceVersion": "MDS version",
         "bioType": "Finger",
         "bioSubType": "Left IndexFinger",
@@ -588,7 +589,7 @@ Parameters | Description
 specVersion | Version of the MDS specification using which the response was generated.
 data | <ul><li>The data object is sent as JSON Web Token (JWT).</li><li>The data block will be signed using the device key.</li></ul>
 data.digitalId | <ul><li>The digital id as per the digital id definition in JWT format.</li><li>For L0 devices, the digital id will be signed using the device key.</li><li>For L1 devices, the digital id will be signed using the FTM key.</li></ul>
-data.deviceCode | A unique code given by MOSIP after successful registration
+data.deviceCode | Same as serialNo in digital ID.
 data.deviceServiceVersion | MDS version
 data.bioType | Allowed values are "Finger", "Iris" or "Face".
 data.bioSubType | <ul><li>For Finger: ["Left IndexFinger", "Left MiddleFinger", "Left RingFinger", "Left LittleFinger", "Left Thumb", "Right IndexFinger", "Right MiddleFinger", "Right RingFinger", "Right LittleFinger", "Right Thumb", "UNKNOWN"]</li><li>For Iris: ["Left", "Right", "UNKNOWN"]</li><li>For Face: No bioSubType</li></ul>
@@ -771,7 +772,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
       "data": {
         "digitalId": "Digital id of the device as per the Digital Id definition..",
         "bioType": "Biometric type",
-        "deviceCode": "A unique code given by MOSIP after successful registration",
+        "deviceCode": "Same as serialNo in digital ID",
         "deviceServiceVersion": "MDS version",
         "bioSubType": "Left IndexFinger",
         "purpose": "Auth  or Registration",
@@ -791,7 +792,7 @@ customOpts | <ul><li>In case, the device vendor wants to send additional paramet
     {
       "specVersion" : "MDS Spec version",
       "data": {
-        "deviceCode": "A unique code given by MOSIP after successful registration",
+        "deviceCode": "Same as serialNo in digital ID",
         "bioType" : "Finger",
         "digitalId": "Digital id of the device as per the Digital Id definition.",
         "deviceServiceVersion": "MDS version",
@@ -855,11 +856,11 @@ No support for Registration Capture
 No support for Registration Capture
 
 ---
-
+<!---
 
 ## Registration
 The MOSIP server would provide the following device registration API which is white-listed to the management servers of the device provider or their partners.
-
+	
 {% hint style="info" %}
 This API is exposed by the MOSIP server to the device providers.
 {% endhint %}
@@ -1029,6 +1030,7 @@ The entire response is sent in a JWT format. So the final response will look lik
 ```
 
 ---
+-->
 
 ## Certificates
 The MOSIP server would provide the following retrieve encryption certificate API which is white-listed to the management servers of the device provider or their partners.
