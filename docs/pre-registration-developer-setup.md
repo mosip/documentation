@@ -129,10 +129,6 @@ The documentation here will guide you through the pre-requisites required for pr
 
 5. Restart Kubernetes Pods:
    * In [dev.mosip.net](https://dev.mosip.net) Goto `K8s Dashboard - MZ` to access Kubernetes.
-   * Sign In using Token: Get the kubernetes Sign in Token from `MOSIP Confluence Environment Details` page.
-   * Get the required `Token MZ Dashboard K8` for required environment.
-   * In Kubernetes goto Pods section.
-   * Search Prereg ->  Restart required pre-registration Pods to get the latest Docker Image.
 
 6. Test the changes in UI, Perform Sanity Testing.
 
@@ -159,38 +155,4 @@ The documentation here will guide you through the pre-requisites required for pr
 4. Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services. 
    * Download [pre-registration Postman API](https://github.com/aihamh/documentation/blob/1.2.0/docs/_files/pre-registration-config-files/Pre-registration-APIs.postman_collection.json) -> Import it in Postman and test the API.
 
-### How to use Swagger API to Test the Services
-
-1. To use Swagger UI to test any service, we need to login into authmanager/clientidsecret service. This will give back a Token in response header. This token is required to test other services.
-   
-2. Open https://dev.mosip.net/v1/authmanager/swagger-ui.html#/authmanager .
-
-4. Click on `useridPwd` -> `Try it out`. Then use following `request`. Click on `Execute`
-   *	"request": {
-		"appId": "prereg",
-		"clientId": "mosip-prereg-client",
-		"secretKey": "abc123"
-	}
-   * 	"request": {
-		"appId": "registrationclient",
-		"clientId": "mosip-reg-client",
-		"secretKey": "abc123"
-	}
-	
-4. Now open the swagger to test the services.
-
-5. Request for Testing of Booking service, Datatsync service.
-   * {
-"id": "string",
-"metadata": {},
-"request": {
-"appId": "admin",
-"password": "mosip",
-"userName": "110006"
-},
-"requesttime": "2018-12-10T06:12:52.994Z",
-"version": "string"
-}
-
-   * while testing for pre-registration booking service in local use this url: `http://localhost:9095/preregistration/v1/appointment`. 
  
