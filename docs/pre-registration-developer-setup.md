@@ -192,5 +192,5 @@ The documentation here will guide you through the pre-requisites required for pr
 "version": "string"
 }
 
-   * while testing for pre-registration booking service in local use this url: http://localhost:9095/preregistration/v1/appointment 
+   * while testing for pre-registration booking service in local use this url: `http://localhost:9095/preregistration/v1/appointment`. 
  
