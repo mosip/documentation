@@ -97,6 +97,8 @@ It is recommended to keep your digital credentials (ID) with you at all times. T
 
 Likewise, the resident can tap `Add ID` to generate the credentials for their family or friends.
 
+9. You can view the history of the credentials downloaded under the `History` tab on the top right corner.
+
 ## Sharing credentials
 
 Pre-requisites:
