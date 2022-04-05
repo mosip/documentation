@@ -10,19 +10,46 @@ In this phase, Mobile ID app is currently available for Android users only. Shor
 
 1. Locate the mobile ID app on Play Store for Android devices./ Click on xyz.apk file to install the mobile ID app.
 2. You will see a prompt asking you for a confirmation before starting the installation.
+
+<img src="_images/mobile-app-install.jpeg" width="200" height="400">
+
 3. Tap **Install** to proceed.
+
+<img src="_images/mobile-app-installing.jpeg" width="200" height="400">
+
 4. On successful installation, click **Open**.
+
+<img src="_images/mobile-app-installed.jpeg" width="200" height="400">
 
 
 ### First launch of the app and initial setup
 
 1. On the first launch, you will see a prompt asking you to Allow Mosip Resident App to access the device's location.
 2. Tap **Allow/ Deny** as per your wish.
+
+<img src="_images/mobile-app-allow-deny" width="200" height="400">
+
 3. Click **Get Started** to setup the app.
+
+<img src="_images/mobile-app-getting-started.jpeg" width="200" height="400">
+
 4. You will now be given an option to either setup your biometrics or a passcode for unlocking the application.
+
+<img src="_images/mobile-app-passcode" width="200" height="400">
+
 5. Enter a passcode to secure your application.
+
+<img src="_images/mobile-app-.jpeg" width="200" height="400">
+
 6. Re-enter the passcode and confirm the same.
+
+<img src="_images/mobile-app-installed.jpeg" width="200" height="400">
+
 7. On the Home screen, you will now see a few options and icons.
+
+<img src="_images/mobile-app-welcome-home.jpeg" width="200" height="400">
+
+
 
 ### Generating credentials
 
