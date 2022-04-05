@@ -91,9 +91,11 @@ It is recommended to keep your digital credentials (ID) with you at all times. T
 
 <img src="_images/mobile-id-edit-tag.jpeg" width="200" height="400">
 
-8. Enter the new name and click **Save**. You will now see the edited label being displayed.
+8. Enter the new name and click **Save**. You will now see the updated labels being displayed.
     
 <img src="_images/mobile-app-edited-tag.jpeg" width="200" height="400">
+
+Likewise, the resident can tap `Add ID` to generate the credentials for their family or friends.
 
 ## Sharing credentials
 
