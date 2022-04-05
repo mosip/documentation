@@ -6,7 +6,7 @@ The mobile Resident app is like a digital wallet wherein a resident can generate
 
 In this phase, the mobile Resident app is currently available for Android users only. Shortly, the support will be extended to iOS users as well.
 
-### Installing the MOSIP Mobile Resident Application (app)
+## Installing the MOSIP Mobile Resident Application (app)
 
 1. Locate the app on Play Store for Android devices./ Download xyz.apk file to install the Mobile Resident app.
 2. Confirm installation of the app. Tap **Install**  to proceed.
@@ -22,7 +22,7 @@ You can see the installation in progress.
 <img src="_images/mobile-app-installed.jpeg" width="200" height="400">
 
 
-### First launch of the app and initial setup
+## First launch of the app and initial setup
 
 1. On the first launch, you will see a prompt asking you to `Allow Mosip Resident App to access the device's location`.
 2. Tap **Allow/ Deny** as per your wish.
@@ -43,12 +43,12 @@ You can see the installation in progress.
 
 <img src="_images/mobile-app-confirm-passcode.jpeg" width="200" height="400">
 
-7. On the Home screen, you will now see a few options and icons with some tooltips.
+7. On the Home screen, you will now see a few options and icons alongwith some tooltips.
 
 <img src="_images/mobile-app-welcome-home.jpeg" width="200" height="400">
 
 
-### Generating credentials
+## Generating credentials
 
 It is recommended to keep your digital credentials (ID) with you at all times. To get started with the app, **add IDs** to your profile.
    * Once generated, IDs are safely stored on your mobile and can be renamed or shared at any time.
@@ -72,13 +72,14 @@ It is recommended to keep your digital credentials (ID) with you at all times. T
 
 5. Wait while your ID is getting downloaded and click **Back Home**.
 
-<img src="_images/mobile-app-download-id" width="200" height="400">
+<img src="_images/mobile-app-download-id.jpeg" width="200" height="400">
 
 6. Under `My IDs` tab, you will be able to view your digital credentials/ ID against the UIN entered.
 
 <img src="_images/mobile-app-my-id.jpeg" width="200" height="400">
 
-For more details, click the arrow mark towards the right corner in the ID generated. You can view the following details 
+7. For more details, click on the arrow mark towards the right corner in the ID generated. You can view the following details:
+
         * Generated date
         * UIN
         * Status
@@ -86,14 +87,19 @@ For more details, click the arrow mark towards the right corner in the ID genera
         
 <img src="_images/mobile-app-detailed-view.jpeg" width="200" height="400">     
       
-7. Click Edit Tag (pencil icon in detailed view) and update the ID name as required.
+7. Click **Edit Tag** (pencil icon in detailed view) and update the ID name as required.
 
-<img src="_images/mobile-app-edit-tag.jpeg" width="200" height="400">
+<img src="_images/mobile-id-edit-tag.jpeg" width="200" height="400">
 
-8. Enter the name and click **Save**.
+8. Enter the new name and click **Save**. You will now see the edited label being displayed.
     
 <img src="_images/mobile-app-edited-tag.jpeg" width="200" height="400">
 
-### Sharing credentials
+## Sharing credentials
+
+Pre-requisites:
+
+* Two devices with the Mobile Resident app installed are required for sharing credentials.
+* All required permissions like Bluetooth, location and camera access are enabled on both the devices.
 
 
