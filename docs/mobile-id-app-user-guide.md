@@ -58,39 +58,41 @@ It is recommended to keep your digital credentials (ID) with you at all times. T
 
 <img src="_images/mobile-app-add-id.jpeg" width="200" height="400">
 
-2. From the dropdown, select either UIN/ VID of the ID you wish to retrieve. 
+2. From the dropdown, select either UIN or VID of the ID you wish to retrieve. 
 
 <img src="_images/mobile-app-uin-dropdown.jpeg" width="200" height="400">
 
-3. If you have selected UIN, enter the UIN.
+3. If you have selected UIN as the option, enter the UIN and tap **Generate ID**. 
 
 <img src="_images/mobile-app-enter-uin.jpeg" width="200" height="400">
 
-7. Tap **Generate ID**. 
+4. Enter the 6-digit verification code (OTP) sent on your registered number (can autofill the number from messages).
 
-<img src="_images/mobile-app-enter-uin.jpeg" width="200" height="400">
+<img src="_images/mobile-app-otp.jpeg" width="200" height="400">
 
-9. Enter the 6-digit verification code(OTP) sent on your registered number (can autofill the number from messages).
+5. Wait while your ID is getting downloaded and click **Back Home**.
 
-<img src="_images/mobile-app-enter-uin.jpeg" width="200" height="400">
+<img src="_images/mobile-app-download-id" width="200" height="400">
 
-11. Wait while your ID is getting downloaded and click **Back Home**.
+6. Under `My IDs` tab, you will be able to view your digital credentials/ ID against the UIN entered.
 
-<img src="_images/mobile-app-enter-uin.jpeg" width="200" height="400">
+<img src="_images/mobile-app-my-id.jpeg" width="200" height="400">
 
-13. Under `My IDs` tab, you will be able to view your digital credentials/ ID against the UIN entered.
-    For more details, click the arrow mark towards the right corner in the ID generated. You can view the following details 
+For more details, click the arrow mark towards the right corner in the ID generated. You can view the following details 
         * Generated date
         * UIN
         * Status
         * Details like the photograph, name, address, email, etc. 
         
-        
-8. Click Edit Tag (pencil icon in detailed view) and update the ID name if required.
+<img src="_images/mobile-app-detailed-view.jpeg" width="200" height="400">     
+      
+7. Click Edit Tag (pencil icon in detailed view) and update the ID name as required.
 
+<img src="_images/mobile-app-edit-tag.jpeg" width="200" height="400">
 
-10. Enter the name and click **Save**.
+8. Enter the name and click **Save**.
     
+<img src="_images/mobile-app-edited-tag.jpeg" width="200" height="400">
 
 ### Sharing credentials
 
