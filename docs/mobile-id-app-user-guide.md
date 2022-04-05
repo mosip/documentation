@@ -1,8 +1,8 @@
-# Mobile ID Application
+# Mobile Resident Application
 
 ## Overview
 
-The mobile ID app is like a digital wallet wherein a resident can generate their credentials, store it and use it as required. Additionaly, they can also generate and share the credentials of their family members and avail services in the private and public sectors.
+The mobile Resident app is like a digital wallet wherein a resident can generate their credentials, store it and use it as required. Additionaly, they can also generate and share the credentials of their family members and avail services in the private and public sectors.
 
 In this phase, Mobile ID app is currently available for Android users only. Shortly, the support will be extended to iOS users as well.
 
@@ -11,7 +11,7 @@ In this phase, Mobile ID app is currently available for Android users only. Shor
 1. Locate the mobile ID app on Play Store for Android devices./ Click on xyz.apk file to install the mobile ID app.
 2. You will see a prompt asking you for a confirmation before starting the installation.
 
-<img src="_images/mobile-app-install.jpeg" width="200" height="400">
+<img src="_images/mobile-app-install.jpeg" width="200" height="400">  <img src="_images/mobile-app-installed.jpeg" width="200" height="400">
 
 3. Tap **Install** to proceed.
 
@@ -68,7 +68,7 @@ It is recommended to keep your digital credentials with you at all times. To get
         * Generated date
         * UIN
         * Status
-        *  Details like the photograph, name, address, email, etc. 
+        * Details like the photograph, name, address, email, etc. 
 8. Click Edit Tag (pencil icon in detailed view) and update the ID name if required.
 9. Enter the name and click **Save**.
     
