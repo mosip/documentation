@@ -3,62 +3,61 @@
 ## Overview
 This guide helps in understanding the pre-registration sample UI implementation. The pre-registration portal can be used in **self-service** as well as in **assisted** mode.
 
-**Self-service mode**- In this mode, a resident can select a language that is familiar to them for logging into the application. The same language might also be selected by them as one of the languages for data capture.
+**Self-service mode**- In this mode, residents can pre-register themselves by accessing the pre-registration portal. They can login with their email address or phone number and fill up the demographic form, upload relevant documents to book an appointment for themselves and their family/friends. Finally, they would receive an acknowledgement along with a pre-registration ID that can be used at the registration center.
 
-**Assisted mode**- When used in an assisted mode, the operator could be handling the portal and helping other residents in filling up their details. The languages that the operator and the resident understands, may or may not be the same. If we consider a country with linguistic diversity, the possibilities increase. In such cases, the operator might log in with a language that they are familiar with, and also select a data capture language that the resident understands. 
+**Assisted mode**- When used in an assisted mode, the operator could be handling the portal and helping other residents in filling up the details and creating an application on their behalf. The languages that the operator and the resident understands, may or may not be the same. If we consider a country with linguistic diversity, the possibilities increase. In such cases, the operator might log in with a language that they are familiar with, and also select a language (data capture language) familiar to the resident for filling up the demographic form and other details. 
 
 ## Pre-registration process
 The key steps in this process are:
 * Login/create a user account
-* Create an Application
-* Book an Appointment
-* Receive a Confirmation
+* Create an application
+* Book an appointment
+* Receive appointment acknowledgement
 
-To create an application, the resident or the operator can follow the steps below:
+To create an application, the resident/operator can follow the steps below:
 
-## Login/create a user account
-![Pre-registartion login page](_images/pre-reg-login.png)
+### Login/create a user account
+![Pre-registration login page](_images/pre-reg-login.png)
 
 1. Open the browser and visit the pre-registration portal.
-2. On the login page, click the language dropdown to see the list of languages. 
-3. Select the **language** of your preference.
-4. Enter your valid email address or phone number in the text box provided.
-5. Select the Captcha field.
-6. Click **Send OTP** to receive an One Time Password (OTP) on your provided email address or mobile number.
-7. Enter the OTP and click **Verify**.
+2. Select the **language** of your preference from the dropdown.
+3. Enter your valid email address or phone number in the text box.
+4. Select the Captcha field.
+5. Click **Send OTP** to receive a One Time Password (OTP) on your provided email address or mobile number.
+6. Enter the OTP and click **Verify**.
 
-*Note:* In case you have not received OTP, click **Resend** to receive an OTP again. Enter the newly received OTP.
+*Note:* In case you have not received OTP, click **Send** to receive a OTP again. Enter the newly received OTP.
+
 When your OTP is verified, you can create, view, or modify your pre-registration application.
 
-## Create an Application
+### Create an application
 
-#### Step 1: Select the data capture language
+#### Step 1: Select the language for providing data
 ![](_images/pre-reg-language-selection.png)
 1. Once the OTP is verified, you will see a pop up for selecting the languages for data entry.
 2. Select the languages and click **Submit**.
 
 *Note*:
-* A user logging in for the first time and having no applications will be prompted with a data capture language pop-up. The same set of languages will be used for the next set of applications created in the same session.
-* The language selected by the user in the login screen will be pre-selected in the data capture language pop-up.
-* The user can change this by clicking on the **CHANGE DATA CAPTURE LANGUAGES** button.
-* This choice will be available only if the ID issuer has configured the usage of optional languages.
+* This choice will be available only if the ID issuer has configured the usage of optional languages. 
+* Countries will have multiple languagues some of which will be *mandatory* while others could be *optional(regional languages)*. MOSIP provides a configuration using which a country can mandate the capture of demographic data in required number of languages (combination of mandatory and optional).
 
 #### Step 2: Provide consent
 ![](_images/pre-reg-consent.png)
-1. On the Demographic Details page, read the **Terms and Conditions** and select the check box to agree. This agreement is to provide consent for the storage and processing of your personal information.
+1. On the Demographic details page, read the **Terms and Conditions** and select the check box to agree. This agreement is to provide consent for the storage and processing of your personal information.
 2. Click **Accept** and proceed.
 
 *Note*: User consent is mandatory for creating/updating applications. The contents on this page will be displayed in all data capture languages selected.
 
 #### Step 3: Enter Demographic details
-![](_images/demographic-details.png)
+![](_images/pre-reg-demo.png)
 
-1. Enter all your demographic details, which includes Name, Age/DOB, Gender, Residential Status, Address, Mobile Number, Email Id, etc.
+1. Enter your demographic details, which includes Name, Age/DOB, Gender, Residential Status, Address, Mobile Number, Email Id, etc.
 2. You can also change or verify your demographic details in the other selected language.
 3. After you have filled and verified your demographic details, click **Continue**.
   
-  Note: The mandatory fields/labels have a `*` mark.
-  Field and button labels, error and information messages will be displayed in the user preferred language selected in the login screen.
+*Note*: The mandatory fields/labels have a `*` mark. Field and button labels, error and information messages will be displayed in the user preferred language selected in the login screen. The fields displayed on this screen are configurable based on the [ID schema](id_schema.md) defined by the country.
+
+[UI specs](pre-registration-ui-specifications.md) of Pre-registration module are used to configure the form fields in the Demographic Details and Document Upload functionality pages. These specs are saved as a JSON file with a list of fields.
   
 #### Step 4: Upload documents
 ![](_images/upload-docs.png)
@@ -67,20 +66,21 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 3. Select the file that you want to upload.
 4. When the file is uploaded successfully, the document will appear on the right side. Verify that you have uploaded the correct document.
 5. Repeat the steps above to upload document(s) for each applicable document category.
-6. When adding an applicant, if a newly added applicant’s Proof of Address (POA) document is same as that of the the existing user’s POA, which has been already uploaded, click **Same As** option and select the name of the applicant.
+6. When adding an applicant, if a newly added applicant’s Proof of Address (POA) document is same as that of the existing user’s POA, which has been already uploaded, click **Same As** option and select the name of the applicant.
 7. Click **Continue** to preview your application.
 
-#### Step 5: Preview the data
+#### Step 5: Preview data
+![](_images/pre-reg-review.png)
 
-1. To change the demographic details (Name, Age, etc.), click **modify** at the top-right corner adjacent to the Demographic Details section.
+1. To change the demographic details (Name, Age, etc.), click **modify** at the top-right corner adjacent to the Demographic details section.
 2. To modify the uploaded documents, click **modify** at the bottom-right corner adjacent to the Documents Uploaded section and make changes.
-3. To add a new applicant, click **Add Applicant**. On clicking the **Add Applicant** option, you will be navigated to the Demographic Details page to provide Consent and proceed with providing the required demographic data/documents.
+3. To add a new applicant, click **Add Applicant**. On clicking the **Add Applicant** option, you will be navigated to the Demographic details page to provide Consent and proceed with providing the required demographic data and upload of documents.
 4. Click **Continue**.
 
-### Add new Application 
+### Add new application 
 On Your Applications page, click **Create New Application** to generate a new application.
 
-### Viewing my applications
+### Viewing applications
 
 ![Dashboard](_images/pre-reg-application-status.jpg)
 
@@ -94,14 +94,13 @@ Once the application is created, there could be multiple statuses depending on t
 |Expired|Appointment date has passed|Re-book an appointment|
 |Cancelled|Appointment has been cancelled|Re-book an appointment|
 
-* The applications are sorted and displayed by the order of creation of application. 
-* The first application created appears first, latest created/modified application appears at the end. 
+* The applications are sorted and displayed by the order of creation of application. The last application created appears first in the list.
 * If the user visits the registration center and consumes the appointment, then the application will be removed from the list. 
 * If the appointment date has passed, the status changes to "Expired" and is retained on the dashboard for further rebooking/modification as required.
 
-## Book an appointment
+### Book an appointment
 
-#### Step 1: Choose a registration center
+#### Choose a registration center
 
 ![](_images/pre-reg-recommended-center.png)
 
@@ -112,11 +111,11 @@ Once the application is created, there could be multiple statuses depending on t
     * Click **Recommended Centers** to view registration centers based on your demographic details. (Postal Code)
 * Click **Continue**.
 
-#### Step 2: Select a time slot
+#### Select an appointment time-slot
 * Select your preferred date from the list of available calendar days and the number of available bookings. 
 * The list of available time slots for your selected date is categorized between *Morning* and *Afternoon*. 
 * Select your preferred time slot from the list.
-* Select the particular applicant name to book an appointment(Click + to add the applicant).
+* Select the particular applicant name to book an appointment (click + to add the applicant).
 Note: On clicking the **Add Applicant** option, you will be navigated to the Demographic Details page to provide Consent and proceed with providing the required demographic data/documents.
 * Verify the time slot(s) as selected against the applicant name(s).
 * Click **Continue**.
@@ -125,11 +124,11 @@ Note: On clicking the **Add Applicant** option, you will be navigated to the Dem
 
 ![](_images/pre-reg-appointment-booking.png) 
 
-## Receive a Confirmation
+### Receive appointment acknowledgement
 
 ![](_images/pre-reg-acknowledgement.png) 
 
-* After successful completion of the Pre-registration application, you will receive an acknowledgment on the registered phone number(SMS) or email address as per details provided in the demographic form.
+* After successful completion of the Pre-registration application, you will receive an acknowledgment on the registered phone number (SMS) or email address as per details provided in the demographic form.
 * The acknowledgement contains the following information: name, pre-registration ID, age/DOB, mobile number, email id and registration center details, appointment date, appointment time)
 * A QR code containing the pre-registration ID is generated. This QR code can be scanned at the registration center to fetch the details to be used during the registration process.
 * You can print, download, email or SMS your acknowledgment.
@@ -142,9 +141,9 @@ Note: On clicking the **Add Applicant** option, you will be navigated to the Dem
 
 ### Re-book appointment
 1. On **Your Applications** page, select the check box for the applicable applicant.
-2. Click **Book/Modify Appointment** to re-book an appointment(on the top right corner)..
+2. Click **Book/Modify Appointment** to re-book an appointment (on the top right corner)..
 3. The user can select any appointment date available and the appointment slot available
-4. An user cannot re-book the appointment if the appointment booking is less than 48 hours (configurable) from the time of booking
+4. A user cannot re-book the appointment if the appointment booking is less than 48 hours (configurable) from the time of booking
 
 ### Discard application
 1. On Your Applications page, click on **delete** icon against pre-registration application of an applicant, a pop-up window appears on the screen.

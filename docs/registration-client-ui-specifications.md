@@ -1,14 +1,16 @@
 # Registration Client UI Specifications
 
-The registration UI forms are rendered using respective UI specification JSON. This is derived from the ID Schema defined by a country. Here, we would be discussing about the properties used in the UI specification of Registration Client.
+## Overview
 
-In the registration client, currently, Registration Tasks(process) forms are configurable using the UI specifications.
+The registration UI forms are rendered using respective UI specification JSON. This is derived from the [ID Schema](id-schema.md) defined by a country. Here, we would be discussing about the properties used in the UI specification of Registration Client.
+
+In the Registration Client, currently, Registration Tasks(process) forms are configurable using the UI specifications.
 
 Each process has multiple screens and each screen is rendered with one or more fields. 
 
-## PROCESS/TASK SPEC JSON Template
+## Process/ Task spec JSON template
 
-```JSON
+```jsonc
 {
 	"id": "<NEW/UPDATE/LOST/BIOMETRIC_CORRECTION process name as passed in the packet>",
   //order in which the process is displayed on the registration client home screen
@@ -36,9 +38,9 @@ Each process has multiple screens and each screen is rendered with one or more f
 }
 ```
 
-## SCREEN SPEC JSON Template
+## Screen spec JSON template
 
-```JSON
+```jsonc
 {
         //Order of the screen in registration page
         "order": 1,
@@ -65,9 +67,9 @@ Each process has multiple screens and each screen is rendered with one or more f
 }
 ```
 
-## FIELD SPEC JSON Template
+## Field spec JSON template
 
-```JSON
+```jsonc
 {
                 "id": "<Unique identifier for the field, must be same as that described in the ID Schema>",
                 //inputRequired is used to identify if UI input is needed or not
@@ -169,9 +171,9 @@ Each process has multiple screens and each screen is rendered with one or more f
             } 
  ```
  
- ### Sample Correction Process SPEC: Biometric Correction
+ ### Sample correction process SPEC: Biometric Correction
  
- ```JSON
+ ```jsonc
  {
     "id": "BIOMETRIC_CORRECTION",
     "order": 4,

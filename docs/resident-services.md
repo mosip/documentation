@@ -1,5 +1,6 @@
-# Overview
+# Resident Services
 
+## Overview
 Resident services are the self-services which are used by the residents themselves via a portal. Resident Portal is a web based UI application that provides residents of a country the services related to their Unique Identification Number (UIN).
 The key services provided are:
 * Check registration status
@@ -14,42 +15,28 @@ The key services provided are:
 Every resident services API call authenticates via an OTP except for the Registration ID(RID) status
 {% endhint %}
 
-## Resident services functionality
-Below are some of the features associated with Resident services,
+The relationship of Resident services with other services is listed below. 
 
-### Functional features
-* Ability to track application status
-* Manage ID
-    * Download for credentials such as a printable card with QR code
-    * Update of demographic data
-    * Request for re-print of card
-    * Request for new virtual ID
-* Privacy features
-    * View authentication history
-    * Block and unblock authentication modes
-    * On-demand creation and revocation of virtual ID
+_Note: The numbers do not signify sequence of operations or the control flow._
 
-### Technical features
-* The back-end is a set of services with a REST API interface (provided by MOSIP)
-* The front-end is a portal to be developed by the adopter according to their requirements
-* Email or phone number based login
+![](_images/resident-services.png)
 
-## Functionality
-* **Registration status**- This feature allows an individual to track status of their UIN generation.
-Input- The individual needs to provide the Registration ID (received during UIN registration). OTP is not required here.
-Output- The system validates this RID and on successful validation, sends the status of UIN generation to the individual's registered mobile number and/or email ID.
-* **Auth lock**- Resident can lock or unlock their authentication
-Input- 
-Output-
+1. Resident Services invokes [ID Authentication Services](id-authentication-services.md)  to authenticate users.
+2. It invokes the Masterdata services to get language templates and machine details.
+3. To create perpetual and temporary VID and to revoke VID, resident services calls ID Repository.
+4. To sync packets and upload packets, resident services connects to [registration processor](registration-processor.md).
+5. Resident services sends all the audit logs to Audit manager.
+6. Notifier handles all the communication from resident services.
+7. Download UIN card can be handled through credential services.
+8. [Partner Management Services](partner-management-services.md) provides all the credential policies to resident services.
+9. Creating packets is done through [packet manager](packet-manager.md) in resident services.
+
 ## Services
-For detailed description of Resident Services, code and design, refer to resident services repo
+For detailed description of Resident Services, code and design, refer to [resident services repo](https://github.com/mosip/resident-services/tree/release-1.2.0).
 
-## Build and deploy
-For build and deploy instructions, refer to resident services repo
+## API
+Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
 
-## APIs
-For details on resident services APIs, refer to
+## Source code 
+[Github repo](https://github.com/mosip/resident-services/tree/release-1.2.0).
 
-## Specifications
-To know more about the resident service portal specifications, read 
-A prototype UI app illustrating the functionality of the portal may be made available by MOSIP for reference. 

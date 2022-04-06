@@ -10,6 +10,11 @@ All biometric components need to comply to standard interfaces defined by MOSIP.
 
 Vendors who provide biometric systems are [Partners](partners.md) of MOSIP.  
 
+## Modalities
+Modalities supported in MOSIP are
+1. [Fingerprint](biometric-image-specification.md#fingerprint)
+1. [Iris](biometric-image-specification.md#iris)
+1. [Face](biometric-image-specification.md#face)
 
    
 

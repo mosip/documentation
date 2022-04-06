@@ -1,9 +1,7 @@
 # FTM
 
-## Overiew
-Foundational Trust Module (FTM)...
-
-FTM is created using a secure microprocessor capable of performing all required biometric processing and secure storage of keys. The foundational device trust would satisfy the below requirements.
+## Overview
+Foundational Trust Module (FTM) is created using a secure microprocessor capable of performing all required biometric processing and secure storage of keys. The foundational device trust would satisfy the below requirements.
 
 * The module has the ability to securely generate, store and process cryptographic keys.
 * Generation of asymmetric keys and symmetric keys with TRNG.
@@ -81,3 +79,18 @@ The validity for the chip certificate can not exceed 20 years from the date of m
 {% endhint %}
 
 The FTM should have a at least one of the following certifications in each category to meet the given requirement.
+
+
+### Secure Provisioning
+Secure provisioning is applicable to both the FTM and the Device providers.
+
+1. The devices and FTM should have a mechanism to protect against fraudulent attempts to create or replicate.
+1. The device and FTM trust should be programmed in a secure facility which is certified by the respective MOSIP adopters.
+1. Organization should have mechanism to segregate the FTM's and Devices built for MOSIP using cryptographically valid and repeatable process.
+1. All debug options within the FTM or device should be disabled permanently
+1. All key creations need for provisioning should happen automatically using FIPS 140-2 Level 3 or higher devices. No individual or a group or organization should have mechanism to influence this behavior.
+1. Before the devices/FTM leaving the secure provisioning facility all the necessary trust should be established and should not be re-programmable.
+
+{% hint style="info" %}
+*As there are no adopter specific information being exchanged at the management server or at the FTM provisioning server, there are no mandates from MOSIP where these are located globally. However the adopter is recommended to have audit and contractual mechanisms to validate the compliance of these components at any point in time.*
+{% endhint %}

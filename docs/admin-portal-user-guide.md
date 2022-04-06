@@ -2,10 +2,10 @@
 
 ## Overview
 Admin application is a web-based application used by a privileged group of administrative personnel to manage various master data. The various resources that can be managed by an Admin are:
-1. Center (registration centers)
+1. Center (Registration centers)
 1. Device
 1. Machine
-1. Users (Admin, registration staff) 
+1. Users (Admin, Registration staff) 
 
 Along with the resource and data management, the admin can generate master keys, check registration status, retrieve lost RID, resume processing of paused packets.
 
@@ -15,10 +15,11 @@ To get started with using the Admin portal, an admin user must be assigned to a 
 
 1. Setup of hierarchial zones 
 2. Create Admin roles in KeyCloak
-3. Create first admin user in KeyCloak
-4. Assign first user to root zone 
+3. Create first admin user in KeyCloak and assign "GLOBAL_ADMIN" role
 
-The above are done automatically as part of [default sandbox installation](https://github.com/mosip/mosip-infra/tree/1.2.0-rc2/deployment/v3).
+*Note*- On login of first admin user, user zone mapping is handled automatically.
+
+The above are done automatically as part of [default sandbox installation](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3).
 
 ### Login
 
@@ -101,7 +102,9 @@ To know more, refer [Activate/deactivate/decommission resources](administration.
 * The admin portal allows an admin to view the list of all the devices available in the jurisdiction of their administrative zone. 
 * The system does not fetch the details of decommissioned devices but only the active and inactive devices.
 
-*Note*- Device entity is language agnostic(independent of languages). 
+*Note*
+* Device entity is language agnostic (independent of languages). 
+* The data collected about Devices is used only for book keeping, i.e., MOSIP system does not use this data for any validation.
 
 ![](_images/admin-view-device.png)
 
@@ -143,6 +146,9 @@ Select the **Deactivate/Decommission** option from the Actions menu against the 
 * The admin portal allows an admin to view the list of all the machines available in the jurisdiction of their administrative zone. 
 * The system does not fetch the details of decommissioned machines but only shows the active and inactive machines. 
 
+*Note*:
+* Machine entity is also language agnostic. 
+
 ![](_images/admin-view-machine.png)
 
 The administrator can filter the list of machines based on parameters like *Machine name, Mac address, Serial number, Status, Machine type.*
@@ -152,8 +158,7 @@ The administrator can filter the list of machines based on parameters like *Mach
 ### Create machines
 
 * A machine can be created with the attributes like *Machine ID, machine name, mac address, serial number, machine spec ID and administrative zone* the machine belongs to.
-* While entering data through UI in multiple languages, the dropdown values and numeric values entered in primary language gets automatically captured in all language.
-* But the text fields (e.g., machine name) needs to be manually input in all the languages. A machine can be mapped to the administrative zone which is at the any zonal hierarchy.
+* A machine needs to be mapped to an administrative zone.
 
 ![](_images/admin-create-machine.png)
 
@@ -292,6 +297,8 @@ To know more, refer to Master Data guide.
  
 To view the format for inserting data in a particular table, click on the Download icon. A CSV file gets downloaded in which the first row represents the column names and the rest of the rows are the data which will be inserted into the table(sample).
 
+*Note:* For editing CSV files containing date fields, it is recommended to use Text editors like Notepad, Notepad++, VS Code, etc., rather than using Excel to ensure that the date format does not get altered.
+
 ### Packets
 
  ![](_images/admin-packet-bulkupload.png)
@@ -304,31 +311,71 @@ To view the format for inserting data in a particular table, click on the Downlo
      * Source (currently displays Registration Client)
      * Process (New, Update UIN, Lost, Biometric correction)
      * Supervisor status (Approved/Rejected)
+     
+     These details are important if the packet needs to be synced before upload.
+     
  4. Click **Choose file** to select the packets and click **Upload**.
+
+How is the packet upload performed with or without DATA_READ role?
+
+| LoggedIn User Role | Packet Sync | Packet Upload |
+|--------------------|------------|---------------|
+| With DATA_READ  |  Yes | only after successful sync|
+| Without DATA_READ | No | Yes |
  
 *For uploading the packets through the Admin portal, ensure that the packets are available in the machine or the external hard disk connected from where the Admin Portal is being used.*
 
-## KeyManager 
+## Key Manager 
 
-* The admin user can manage the key using this feature.
+With the help of this feature, the Admin user can generate and manage the keys required in MOSIP.
 
 ### GenerateMasterKey
+
+* The logged in user with `KEY_MAKER` role will have access to view and generate the master key in the Admin portal. 
+* Using this option, the logged in user will be able to generate only the [Root](keymanager.md#Key-hierarchy) key and [Module](keymanager.md#Key-hierarchy) master key. To generate the key, the user has to select the Application ID from the options available in the drop down, leave the Reference ID as blank for [Root](keymanager.md#Key-hierarchy) and [Module](keymanager.md#Key-hierarchy) master key and provide other certificate attributes to be used at the time of generation of certificate for the key.
+* This certificate attributes in the portal are optional, if not provided, default values configured in Key Manager service will be used. 
+* For Kernel signature key (which is considered as the master key and stored in [HSM](hsm.md)), Reference ID needs to be provided and the value has to be `SIGN`. 
+* **Force** flag option is available in key generation. The logged in user can select option value **True** to force invalidating existing key and generate new key in [Key Manager](keymanager.md) service. 
+* The logged in user has to select the return object after the generation of key.
+* The user can select either *Certificate* or *CSR (Certificate Signing Request)*.
+The key will be generated only when the key is not available in [Key Manager](keymanager.md) service otherwise already generated key certificate will be returned for the generation request.
 
 ![](_images/admin-generate-masterkey.png)
 
 ### GenerateCSR
 
+* *CSR (certificate signing request)* is required when there is a need to procure a valid certificate from a valid CA.
+* *GenerateCSR* option can be used to request for a CSR and this option will be visible to all the users who log in to the Admin portal. 
+* The logged in user can request for generation of CSR for any key generated in [Key Manager](keymanager.md) service. 
+* The user has to provide the Application ID and Reference ID to get a CSR.
+* New key will be auto-generated in case the key does not exist and the already existing key has expired for the Module Encryption keys. 
+* Whereas, for [Module](keymanager.md#Key-hierarchy) master key or [Root](keymanager.md#Key-hierarchy) key, new key will not get auto-generated in case the key does not exist, but new key will get auto generated if the key exists and has expired. Current valid key will always be used to generate a CSR.
+
 ![](_images/admin-generate-csr.png)
 
 ### GetCertificate
+
+* The user can get certificate for all the keys generated in Keymanager and any partner certificates uploaded in Keymanager service for partner data share purpose. 
+* *GetCertificate* option is visible to all the users who log in to the Admin portal.
+* The user has to provide the Application ID and Reference ID to get a certificate.
+* New key will be auto generated in case the key does not exist and the already existing key has expired for Module encryption keys. 
+* Whereas, for [Module](keymanager.md#Key-hierarchy) master key or [Root](keymanager.md#Key-hierarchy) key, new key will not get auto-generated in case the key does not exist, but new key will get auto-generated if the key exists and has expired. For partner certificate, new key will not get generated in Key Manager service. 
+* Only current valid certificates will be returned when the user requests for a certificate.
 
 ![](_images/admin-get-certificate.png)
 
 ### UploadCertificate
 
+* The logged in user can use this option to update the certificate for all the keys generated in [Key Manager](key-manager.md) service. 
+* This option is used in scenarios where a valid CA certificate has been procured for a key available in [Key Manager](key-manager.md) service. 
+
 ![](_images/admin-upload-certificate.png)
 
 ### UploadOtherDomainCertificate
+
+* The logged in use can use this option to upload partner certificate in Key Manager service. 
+* Partner certificates will be used in Key Manager service to encrypt any sharable data using the partner certificate required in datashare from MOSIP to any partner. 
+* Partner certificates can also be used in Key Manager service for signature verification purpose. 
 
 ![](_images/admin-upload-anotherdomain-certificate.png)
 

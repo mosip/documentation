@@ -8,14 +8,14 @@ Published Date: February 05, 2021
 Publish Date|Revision
 ------------|-------
 May 07, 2020|This is the first formal publication of the interface as a version-ed specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
-June 09, 2020|A note related to targetFPIR was added
+June 09, 2020|A note related to targetFPIR was added.
 June 26, 2020|New [failure reason](#failure-reasons) (code - 6, 8, 9, 10, 11, 12) for ABIS have been added.
 August 04, 2020|Analytics section has been added to the overall response for Identify and the [failure reason](#failure-reasons) have been updated.
 November 19, 2020|Note on encryption of biometric data share using referenceURL has been added.
-February 05, 2021|Note on [refernceURL](#reference-url) and [authentication token](#authentication-token) was added for Insert Request 
+February 05, 2021|Note on [referenceURL](#reference-url) and [authentication token](#authentication-token) was added for Insert Request.
 March 23, 2021|New [failure reason](#failure-reasons) (code - 17) for ABIS has been added.
-May 3, 2021|The logic for encryption has been updated for ABIS data share URL
-September 8, 2021|All possible error codes for Data Share URL has been added.
+May 3, 2021|The logic for encryption has been updated for ABIS Datashare URL.
+September 8, 2021|All possible error codes for DataShare URL has been added.
 
 # Introduction
 An ABIS system that integrates with MOSIP should support the following operations. 
@@ -39,7 +39,7 @@ Name | Description | Restrictions | Type
 requestID | ID that is associated with each request sent to ABIS | ABIS should not use this ID in any other context outside the request | UUID
 referenceID | ID of a single registration record. Registration record is maintained in MOSIP. This ID is the mapping between MOSIP and ABIS | None | UUID
 referenceURL | URL to the biometrics data stored in MOSIP. This URL will have read only access | None | HTTPS URL
-biometricType | Type of biometric data sent in the request | FMR/FIR/IIR | String
+biometricType | Type of biometric data sent in the request | FID/FIR/IIR | String
 returnValue | Code for response | [Standard Return Codes](#standard-return-codes) | String
 failureReason | Code for failure reason | [Failure Reasons](#failure-reasons) | String
 
@@ -69,6 +69,7 @@ Code | Reason
 15 | invalid requesttime format
 16 | invalid CBEFF format
 17 | data share URL has expired
+18 | Biometric Quality check failed
 
 # ABIS Operations
 The following operations are supported by MOSIP:
@@ -80,7 +81,7 @@ The following operations are supported by MOSIP:
 * [Reference Count](#reference-count)
 
 ## Insert 
-* ABIS must get biometric data from referenceURL, process it and store it locally within the ABIS reference database. More details about the refernceURL is mentioned in our [referenceURL section](#reference-url). 
+* ABIS must get biometric data from referenceURL, process it and store it locally within the ABIS reference database. More details about the referenceURL is mentioned in our [referenceURL section](#reference-url). 
 * referenceId must not be active prior to this operation i.e., it must not have been used before this operation.
 * De-duplication must not be performed in this operation.
 * MOSIP will provide biometric data in [CBEFF format](CBEFF-XML.md) to ABIS as a response of referenceURL and the data will be encrypted and encoded as mentioned below.
@@ -186,11 +187,11 @@ JeLlBHHTbA-c0YdoLpy7Ya8jXujwzj4gw3nyfwbDrHyY7sLrD7EC3yFLWI0KDO794vmagTOwWyNJhvJi
 
 **The structure of the encrypted data downloaded from referenceURL **
 
-The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format. It will be divided in two Parts after splitting using KEY_SPLITTER.
+The data downloaded would be URL safe base64 encoded. Hence, after decoding the data will be in the below format. It will be divided in two Parts after splitting using #KEY_SPLITTER#.
 
 Encrypted Key Data | KEY_SPLITTER | Encrypted Actual Data
 ----------|--------------|-----------
-Part 1    | KEY_SPLITTER | Part 2
+Part 1    | #KEY_SPLITTER# | Part 2
 
 **Part 1:**
 
