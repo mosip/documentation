@@ -16,3 +16,16 @@ In Phase 1 of the application, a VC is shared in peer to peer model. The data ex
 
 ## Where to download resident mobile application?
 Resident Mobile Application can be downloaded from here
+
+## How is peer to peer connection established?
+A QR code is generated and displayed on the requesting party's mobile application. A sample QR code is given below
+
+```
+{
+  "cid": "1ejpu",
+  "pk": "819176777955C098B78BAF949084A4484AEC5A769CED2307D59E46DC85A0F758"
+}
+```
+where ```cid``` is a randomly generated connection id and ```pk``` is a randomly generated public key.
+
+Once a phone scans the QR code of the requesting party a connection is established between the two devices.
