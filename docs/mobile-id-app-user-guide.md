@@ -149,8 +149,25 @@ Assuming that a Resident having Device A wants to share their credentials with a
 
 <img src="_images/mobile-app-reason-sharing-id.jpeg" width="200" height="400"> 
 
-9. The Resident now selects the ID to be shared with the Relying party.
+9. The Resident now selects the ID to be shared with the Relying party and taps on **Share**
 
 <img src="_images/mobile-app-select-id.jpeg" width="200" height="400">
 
-10. The Relying party' phone displays
+10. You can now see that sharing is in progress from Device A to B.
+
+<img src="_images/mobile-app-sharing-in-progress.jpeg" width="200" height="400">
+
+11. The Relying party' phone displays `Accept request and receive ID`.
+
+<img src="_images/mobile-app-receive-id.jpeg" width="200" height="400">
+
+This is followed by a success message on receiving the ID.
+
+<img src="_images/mobile-app-receive-success.jpeg" width="200" height="400">
+
+12. Relying party taps on `Received IDs` to view the ID received.
+
+<img src="_images/mobile-app-received-ids.jpeg" width="200" height="400">
+
+
+
