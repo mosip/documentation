@@ -129,11 +129,28 @@ Assuming that a Resident having Device A wants to share their credentials with a
 
 <img src="_images/mobile-app-deviceB-bluetooth.jpeg" width="200" height="400">
 
-5. You can now see that the Resident scans the QR code displayed on Device B from their device.
+5. You can now see that the Resident' device scans the QR code displayed on Device B.
 
 <img src="_images/mobile-app-scanner-ready.jpeg" width="200" height="400">   <img src="_images/mobile-app-qr-code.jpeg" width="200" height="400"> 
 
-6. 
+6. The status on the Resident' device is displayed as "Connecting..".
 
+<img src="_images/mobile-app-connecting.jpeg" width="200" height="400"> 
 
+7. Once the connection is made, the Sharing ID screen is displayed on the Resident' devide. This screen has the following details:
 
+    * Requested by: Device B
+    * Device name
+    * Reason for sharing (optional)
+
+<img src="_images/mobile-app-sharing-id.jpeg" width="200" height="400"> 
+
+8. Resident can enter the reason for sharing the credentials and tap `Accept request and choose ID`.
+
+<img src="_images/mobile-app-reason-sharing-id.jpeg" width="200" height="400"> 
+
+9. The Resident now selects the ID to be shared with the Relying party.
+
+<img src="_images/mobile-app-select-id.jpeg" width="200" height="400">
+
+10. The Relying party' phone displays
