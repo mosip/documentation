@@ -87,17 +87,17 @@ It is recommended to keep your digital credentials (ID) with you at all times. T
         
 <img src="_images/mobile-app-detailed-view.jpeg" width="200" height="400">     
       
-7. Click **Edit Tag** (pencil icon in detailed view) and update the ID name as required.
+8. Click **Edit Tag** (pencil icon in detailed view) and update the ID name as required.
 
 <img src="_images/mobile-id-edit-tag.jpeg" width="200" height="400">
 
-8. Enter the new name and click **Save**. You will now see the updated labels being displayed.
+9. Enter the new name and click **Save**. You will now see the updated labels being displayed.
     
 <img src="_images/mobile-app-edited-tag.jpeg" width="200" height="400">
 
 Likewise, the resident can tap `Add ID` to generate the credentials for their family or friends.
 
-9. You can view the history of the credentials downloaded under the `History` tab on the top right corner.
+10. You can view the history of the credentials downloaded under the `History` tab on the top right corner.
 
 ## Sharing credentials
 
@@ -135,12 +135,13 @@ Assuming that a Resident having Device A wants to share their credentials with a
 
 6. The status on the Resident' device is displayed as "Connecting..".
 
-<img src="_images/mobile-app-connecting.jpeg" width="200" height="400"> 
+<img src="_images/mobile-app-device1-connecting.jpeg" width="200" height="400"> 
 
 7. Once the connection is made, the Sharing ID screen is displayed on the Resident' devide. This screen has the following details:
 
     * Requested by: Device B
     * Device name
+    * Device Reference number
     * Reason for sharing (optional)
 
 <img src="_images/mobile-app-sharing-id.jpeg" width="200" height="400"> 
@@ -167,7 +168,9 @@ This is followed by a success message on receiving the ID.
 
 12. Relying party taps on `Received IDs` to view the ID received.
 
-<img src="_images/mobile-app-received-ids.jpeg" width="200" height="400">
+<img src="_images/mobile-app-device2-received-ids.jpeg" width="200" height="400">
 
+13. `History` tab on the Relying party' device shows the history of the downloaded IDs.
 
+<img src="_images/mobile-app-device2-history.jpeg" width="200" height="400">
 
