@@ -105,5 +105,20 @@ Pre-requisites:
 
 * Two devices with the Mobile Resident app installed are required for sharing credentials.
 * All required permissions like Bluetooth, location and camera access are enabled on both the devices.
+* The parties involved are mostly likely a Resident who would want to share their credentials with a Relying party (can be with a banker/ health worker/ etc).
+
+Let us understand sharing of credentials with an example. 
+
+Assuming that a Resident having Device A wants to share their credentials with a health worker having Device B. The steps that both the parties have to follow is illustrated below:
+
+1. The Resident taps on the `Scan` icon on their phone (second icon from left). 
+
+<img src="_images/mobile-scan-qr-code.jpeg" width="200" height="400">    
+
+2. Tap **Allow** to `Allow Mosip Resident App for taking pictures and recording videos.`
+
+<img src="_images/mobile-scanqr-allow.jpeg" width="200" height="400">   
+
+3. scans the QR code displayed on the Relying party' phone.
 
 
