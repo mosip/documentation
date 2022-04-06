@@ -111,14 +111,29 @@ Let us understand sharing of credentials with an example.
 
 Assuming that a Resident having Device A wants to share their credentials with a health worker having Device B. The steps that both the parties have to follow is illustrated below:
 
-1. The Resident taps on the `Scan` icon on their phone (second icon from left). 
+1. The Resident taps on the `Scan` icon on their phone (On the bottom menu, second icon from left). 
 
-<img src="_images/mobile-scan-qr-code.jpeg" width="200" height="400">    
+   Click **OK** to turn on the device' location.
+
+<img src="_images/mobile-app-scan-qr-code.jpeg" width="200" height="400">    
 
 2. Tap **Allow** to `Allow Mosip Resident App for taking pictures and recording videos.`
 
-<img src="_images/mobile-scanqr-allow.jpeg" width="200" height="400">   
+<img src="_images/mobile-app-scanqr-allow.jpeg" width="200" height="400">   
 
-3. scans the QR code displayed on the Relying party' phone.
+3. The Resident' device is ready for scanning the QR code that will be displayed on the Relying party' phone.
+
+4. On the Relying party' phone, press the Request icon which is the third icon from the left. 
+
+   Tap **Allow** to enable bluetooth on Device B.
+
+<img src="_images/mobile-app-deviceB-bluetooth.jpeg" width="200" height="400">
+
+5. You can now see that the Resident scans the QR code displayed on Device B from their device.
+
+<img src="_images/mobile-app-scanner-ready.jpeg" width="200" height="400">   <img src="_images/mobile-app-qr-code.jpeg" width="200" height="400"> 
+
+6. 
+
 
 
