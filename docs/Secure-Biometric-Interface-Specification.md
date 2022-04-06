@@ -5,7 +5,7 @@ API specification version:  **1.0**
 Published Date: June 23, 2021
 
 {% hint style="info" %}
-**This specification is a release candidate upto MOSIP LTS 1.2.0 continue refering to 0.9.5 MDS specification.**
+**This specification is a release candidate upto MOSIP LTS 1.2.0 continue refering to [0.9.5 MDS specification](MOSIP-Device-Service-Specification.md).**
 
 **MDS is now formally renamed as SBI.** 
 {% endhint %}
