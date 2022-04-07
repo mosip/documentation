@@ -38,6 +38,7 @@
     * [Pre-registration](pre-registration.md) 
         * [Pre-registration User Guide](pre-registration-user-guide.md)
         * [Pre-registration UI Specifications](pre-registration-ui-specifications.md)
+        * [Pre-registration Developer Setup](pre-registration-developer-setup.md)
     * [Reference Implementations](reference-implementations.md)
     * [Registration Client](registration-client.md)
         * [Operator Onboarding](operator-onboarding.md)
