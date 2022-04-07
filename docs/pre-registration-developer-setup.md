@@ -1,8 +1,7 @@
 # Pre-registration Developer Setup
 
 ## Overview
-The documentation here will guide you through the pre-requisites required for Pre-registration developer setup. To know more, read [Pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration). 
-
+The documentation here will guide you through the pre-requisites required for [Pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration) developer setup. 
 
 ## Software setup
 
@@ -24,6 +23,7 @@ The documentation here will guide you through the pre-requisites required for Pr
 
 
 ### Follow the steps below to setup Pre-registration on your local system
+
 1. Fork the MOSIP [Pre-registration repository](https://github.com/mosip/pre-registration) from Github MOSIP repository.
 
 2. Clone the repository into local.
@@ -56,7 +56,6 @@ The documentation here will guide you through the pre-requisites required for Pr
   
  <img src="_images/add-external-library.png" width="750" height="450">
 
-	
 9. Add `auth-adapter`, `transliteration`, `ref-idobjectvalidator`, `virusscanner`, `lombok` JARs to `pre-registration-application-service`, `pre-registration-datasync-service`  classpath.
 
 10. Add `auth-adapter`, `lombok` JARs to `pre-registration-core`, `pre-registration-batchjob`, `pre-registration-captcha-service`, `pre-registration-booking-service` classpath.
@@ -66,7 +65,6 @@ The documentation here will guide you through the pre-requisites required for Pr
 12. Update Maven dependencies: Maven syncs the Eclipse project settings with that of the pom. It downloads dependencies required for the project.
 
 13. Build and run the Project.
-
 
 
 ## Developer setup for MOSIP Pre-registration UI
@@ -93,7 +91,7 @@ The documentation here will guide you through the pre-requisites required for Pr
 2. Create a new file named `proxy.conf.json`:
    * location should be in `C:\MOSIP\pre-registration-ui\pre-registration-ui\proxy.conf.json` project folder.
 
-    * `{
+    ```{
      "/proxyapi": {
       "target": "https://{env}/",
       "secure": true,
@@ -102,17 +100,16 @@ The documentation here will guide you through the pre-requisites required for Pr
         "^/proxyapi": ""
           }
         }
-      }`
+      }```
 
-3. start the server by executing `ng serve --proxy-config proxy.conf.json --ssl true`.
+3. Start the server by executing `ng serve --proxy-config proxy.conf.json --ssl true`.
 
 4. Open the browser, load the app with `https://localhost:4200`.
 
 
+## Raising PR, Updating Jira for a Bug Fix
 
-## Raising PR, Updating Jira for Bug Fix
-
-1. If you want to create a new local branch for particular fix:
+1. If you want to create a new local branch for a particular fix:
    * `git checkout -b [branchname]`
    * E.g.: `git checkout -b MOSIP-20940-sonar-bug-fix`
 
@@ -146,9 +143,13 @@ The documentation here will guide you through the pre-requisites required for Pr
 2. The APIs can be tested with the help of **Swagger-UI** and **Postman**. 
 
 3. Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of pre-registration here:
+
    * Pre-registration Application service : `https://{env}/preregistration/v1/application-service/swagger-ui.html`
+   
    * Pre-registration Datasync Service : `https://{env}/preregistration/v1/sync/datasync-service/swagger-ui.html`
+   
    * Pre-registration Captcha service : `https://{env}/preregistration/v1/captcha/swagger-ui.html`
+   
    * Pre-registration Booking service : `https://{env}/preregistration/v1/appointment/booking-service/swagger-ui.html`
 
 
