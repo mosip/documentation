@@ -112,35 +112,6 @@ The documentation here will guide you through the pre-requisites required for [P
 4. Open the browser, load the app with `https://localhost:4200`.
 
 
-## Raising PR, Updating Jira for a Bug Fix
-
-1. If you want to create a new local branch for a particular fix,
-   * `git checkout -b [branchname]`
-   * E.g.: `git checkout -b MOSIP-20940-sonar-bug-fix`
-
-2. Push the changes
-   * `git add .`
-   * `git commit -m "Jira ID and Description"`
-   *  E.g.: `git commit -m "[MOSIP-19845] Fixed Sonar Bug"`
-   * `git push -f origin [branchName]`
-	
-3. Create PR in Github to merge code into `mosip/pre-registration repo`.
-
-4. Once the PR is merged, check Github Actions to see if build is successful.
-
-5. Restart Kubernetes Pods.
-   * In respective `env` Goto `K8s Dashboard - MZ` to access Kubernetes.
-
-6. Test the changes in UI, perform sanity testing.
-
-7. Jira Status and Documentation:
-   * Change status of the Bug in Jira as Fixed.
-   * Specify Root cause of the Issue.
-   * Add Detailed Comments about the changes done in Code for the Bug Fix.
-   * Add Documentation. 
-   * once moved to QA env -> change the Status as Assigned for Testing -> change the Assignee to QA team.
-
-
 ## Pre-registration API
 
 1. For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
