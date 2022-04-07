@@ -25,7 +25,7 @@ The process of generating a credential is shown below
 In Phase 1 credentials are shared in peer to peer model with another instance of the application. The data exchange between devices is done using Google Nearby Connections API. This API uses a combination of Bluetooth (BT), Bluetooth Low energy (BLE) and Wifi to achieve seamless, low-latency, high-throughput communications without requiring pairing of devices.
 
 
-### How peer to peer connection established
+### How peer to peer connection is established
 A QR code is generated and displayed on the requesting party's mobile application. A sample QR code json content is given below
 
 ```
