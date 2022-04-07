@@ -51,6 +51,8 @@
     * [Reporting](reporting.md)
     * [Resident Services](resident-services.md)
         * [Resident Services Developer Guide](resident-services-developer-guide.md)
+    * [Resident Mobile Application](mobile-application.md)
+        * [Resident Mobile Application User Guide](mobile-id-app-user-guide.md)
     * [Persistence](persistence.md)
         * [Postgres DB](postgres-db.md)
         * [Object Store](object-store.md)
