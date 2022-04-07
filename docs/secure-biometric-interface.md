@@ -1,6 +1,6 @@
 # Secure Biometric Inteface (SBI)
 
-_THIS DOCUMENT IS BEING UPDATED_.
+__THIS DOCUMENT IS BEING UPDATED. FOR THE PUBLISHED VERSION PLEASE FOLLOW THIS [LINK](https://docs.mosip.io/1.1.5/biometrics/mosip-device-service-specification).__
 
 ## Revision history
 |Version|Status|Date|

@@ -1,18 +1,30 @@
 # Masterdata Guide
 
 ## Overview
-Masterdata is the necessary base data to run MOSIP services. The data resides in the [`mosip_master` DB](https://github.com/mosip/admin-services/tree/release-1.2.0/db_scripts/mosip_master). This data needs to be customized for a country specific deployment.  Masterdata is bulk uploaded one-time during the [installation process](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3/mosip/kernel/masterdata) and later may be updated using the [Admin Portal](admin-portal-guide.md). The default data uploaded during sandbox installation is available in [mosip-data](https://github.com/mosip/mosip-data/tree/release-1.2.0/mosip_master/xlsx).
+Masterdata is the necessary base data to run MOSIP services. The data resides in [`mosip_master` database](https://github.com/mosip/admin-services/tree/release-1.2.0/db_scripts/mosip_master). This data needs to be customized for a country specific deployment. 
 
-The tables that would need to be modified are listed below.  Other tables in `mosip_master` DB are either system-filled or pre-filled and not to be modified.
+## Populating masterdata
 
-## Common guidelines
+Masterdata may be uploaded in the following manner:
+
+1. One-time bulk upload:
+    1. [Default masterdata](https://github.com/mosip/mosip-data/tree/release-1.2.0/mosip_master/xlsx) (for sandbox installation):  Using [Helm chart](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3/mosip/masterdata-loader). The default data uploaded during sandbox installation is available in [mosip-data](https://github.com/mosip/mosip-data/tree/release-1.2.0/mosip_master/xlsx). 
+    1. Country specific data: Using [Python scripts](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3/mosip/masterdata-loader). 
+
+1. Updates:
+Updates to tables may be done using the [Admin Portal](admin-portal-guide.md). 
+
+## Creating country specific data
+The tables that need to be modified for country specific data  are listed below. Other tables in `mosip_master` DB are either system-filled or pre-filled and not to be modified.
+
+### Common guidelines
 * Copy Excel files from [mosip-data](https://github.com/mosip/mosip-data/tree/release-1.2.0/mosip_master/xlsx) to a folder.
 * For all tables listed below modify `lang_code` and add corresponding rows for your [configured languages](module-configuration.md#languages). 
 * Modify the files for your deployment as per guide below. 
 * Upload **first time** using scripts given [here](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3/mosip/kernel/masterdata).
 * Subsequently, update data ONLY using [Admin Portal](admin-portal-guide.md).
 
-## Tables to be updated
+### Tables to be updated
 |Category|Table|Guide|
 |---|---|---|
 |Documents|`doc_category`|Categories of documents to be captured|
