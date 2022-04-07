@@ -131,7 +131,7 @@ Assuming that a Resident having Device A wants to share their credentials with a
 
 5. You can now see that the Resident' device scans the QR code displayed on Device B.
 
-<img src="_images/mobile-app-scanner-ready.jpeg" width="200" height="400">   <img src="_images/mobile-app-qr-code.jpeg" width="200" height="400"> 
+<img src="_images/mobile-app-scanner-ready.jpeg" width="200" height="400">    <img src="_images/mobile-app-qr-code.jpeg" width="200" height="400"> 
 
 6. The status on the Resident' device is displayed as "Connecting..".
 
@@ -170,7 +170,12 @@ This is followed by a success message on receiving the ID.
 
 <img src="_images/mobile-app-device2-received-ids.jpeg" width="200" height="400">
 
-13. `History` tab on the Relying party' device shows the history of the downloaded IDs.
+13. `History` tab on the devices display the action completed.
 
-<img src="_images/mobile-app-device2-history.jpeg" width="200" height="400">
+For instance, 
+
+    * On the Relying party' phone, shows the history of the received credentials.
+    * On the Resident' phone, shows the history of the downloaded credentials.
+
+<img src="_images/mobile-app-device2-history.jpeg" width="200" height="400">    <img src="_images/mobile-app-device1-history.jpeg" width="200" height="400">
 
