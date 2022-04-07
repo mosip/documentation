@@ -83,15 +83,19 @@ The documentation here will guide you through the pre-requisites required for [P
    * `config.json` is found inside assets directory.
    * E.g.: `C:\MOSIP\pre-registration-ui\pre-registration-ui\src\assets\config.json`
 
-	`{
+	```
+	{
 	"BASE_URL": "https://localhost:4200/proxyapi/",
 	"PRE_REG_URL": "preregistration/v1/"
-	}`
+	}
+	```
 
 2. Create a new file named `proxy.conf.json`:
-   * location should be in `C:\MOSIP\pre-registration-ui\pre-registration-ui\proxy.conf.json` project folder.
 
-    ```{
+   Location should be in `C:\MOSIP\pre-registration-ui\pre-registration-ui\proxy.conf.json` project folder.
+
+    ```
+    {
      "/proxyapi": {
       "target": "https://{env}/",
       "secure": true,
@@ -100,7 +104,8 @@ The documentation here will guide you through the pre-requisites required for [P
         "^/proxyapi": ""
           }
         }
-      }```
+      }
+      ```
 
 3. Start the server by executing `ng serve --proxy-config proxy.conf.json --ssl true`.
 
@@ -109,11 +114,11 @@ The documentation here will guide you through the pre-requisites required for [P
 
 ## Raising PR, Updating Jira for a Bug Fix
 
-1. If you want to create a new local branch for a particular fix:
+1. If you want to create a new local branch for a particular fix,
    * `git checkout -b [branchname]`
    * E.g.: `git checkout -b MOSIP-20940-sonar-bug-fix`
 
-2. Push the changes:
+2. Push the changes
    * `git add .`
    * `git commit -m "Jira ID and Description"`
    *  E.g.: `git commit -m "[MOSIP-19845] Fixed Sonar Bug"`
