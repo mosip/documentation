@@ -1,12 +1,12 @@
 # Pre-registration Developer Setup
 
 ## Overview
-The documentation here will guide you through the pre-requisites required for pre-registration developer setup. To know more, read [Pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration). 
+The documentation here will guide you through the pre-requisites required for Pre-registration developer setup. To know more, read [Pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration). 
 
 
 ## Software setup
 
-### Below are the list of tools required in pre-registration:
+### Below are the list of tools required in Pre-registration
 1. JDK 11
 2. Any IDE (Eclipse, IntelliJ IDEA)
 3. Apache Maven (zip folder)
@@ -14,7 +14,7 @@ The documentation here will guide you through the pre-requisites required for pr
 5. Postman
 6. Git
 7. [lombok.jar](https://projectlombok.org/download) (file)
-8. MOSIP pre-registration specific jar:
+8. MOSIP Pre-registration specific JARs:
    * [kernel-auth-adapter](https://repo1.maven.org/maven2/io/mosip/kernel/kernel-auth-adapter/) 
    * [kernel-transliteration-icu4j](https://repo1.maven.org/maven2/io/mosip/kernel/kernel-transliteration-icu4j/)
    * [kernel-ref-idobjectvalidator](https://repo1.maven.org/maven2/io/mosip/kernel/kernel-ref-idobjectvalidator/)
@@ -23,10 +23,10 @@ The documentation here will guide you through the pre-requisites required for pr
 10. Notepad++ (optional)
 
 
-### Follow the steps below to setup pre-registration on your local system:
-1. Fork the MOSIP [pre-registration repository](https://github.com/mosip/pre-registration) from Github [MOSIP repo](https://github.com/mosip).
+### Follow the steps below to setup Pre-registration on your local system
+1. Fork the MOSIP [Pre-registration repository](https://github.com/mosip/pre-registration) from Github MOSIP repository.
 
-2. Clone the repo into local.
+2. Clone the repository into local.
    * `git clone https://github.com/urgithubaccname/pre-registration.git`
    * `git checkout develop`
    * `git remote add upstream https://github.com/mosip/pre-registration.git`
@@ -36,14 +36,14 @@ The documentation here will guide you through the pre-requisites required for pr
    * `git rebase upstream/develop`
  	
 3. Inside `settings.xml` change local repository directory to your directory name where `.m2 folder` is located.
-	ex: `<localRepository>C:/Users/username/.m2/repository</localRepository>` found in 55th line
+	E.g.: `<localRepository>C:/Users/username/.m2/repository</localRepository>`
 
 4. Add `settings.xml` inside `.m2 folder` (Maven Folder).
-	ex: `C:\Users\username\.m2`
+	E.g.: `C:\Users\username\.m2`
 
-5. Import the project in Eclipse IDE and it starts updating Maven projects configuration, Refreshing workspaces, project starts building (downloading sources, javadoc).
+5. Import the project in Eclipse IDE and it starts updating Maven projects configuration, refreshing workspaces, project starts building (downloading sources, javadoc).
 
-6. Add Downloaded Lombok.jar to project, click on downloaded jar and install specifying eclipse ide(eclipse.exe) location.
+6. Add downloaded `lombok.jar` to project, click on downloaded JAR and install specifying Eclipse IDE(eclipse.exe) location.
 
  <img src="_images/lombok-configuration.png" width="750" height="450">
  
@@ -51,39 +51,39 @@ The documentation here will guide you through the pre-requisites required for pr
 
 <img src="_images/installed-jre.png" width="750" height="450">
 
-8. Add MOSIP pre-registration specific jar files from [Maven central](https://repo1.maven.org/maven2/io/mosip/):
-   * Adding Jars to build path: Right click on service -> Build Path -> Configure Build Path. click on Classpath, Add External Jars -> Add required Jars -> Apply and close.
+8. Add MOSIP Pre-registration specific JARs from [Maven central](https://repo1.maven.org/maven2/io/mosip/):
+   * Adding JARs to Build Path: Right click on service -> Build Path -> Configure Build Path -> click on Classpath -> Add External JARs -> Add required JARs -> Apply and close.
   
  <img src="_images/add-external-library.png" width="750" height="450">
 
 	
-9. Add `auth-adapter`, `transliteration`, `ref-idobjectvalidator`, `virusscanner`, `lombok` jar files to `pre-registration-application-service`, `pre-registration-datasync-service`  class path.
+9. Add `auth-adapter`, `transliteration`, `ref-idobjectvalidator`, `virusscanner`, `lombok` JARs to `pre-registration-application-service`, `pre-registration-datasync-service`  classpath.
 
-10. Add `auth-adapter`, `lombok` jar file to `pre-registration-core`, `pre-registration-batchjob`, `pre-registration-captcha-service`, `pre-registration-booking-service` class path.
+10. Add `auth-adapter`, `lombok` JARs to `pre-registration-core`, `pre-registration-batchjob`, `pre-registration-captcha-service`, `pre-registration-booking-service` classpath.
 
 11. Run `mvn clean install -Dgpg.skip=true` command to build locally and to execute test cases.
 
 12. Update Maven dependencies: Maven syncs the Eclipse project settings with that of the pom. It downloads dependencies required for the project.
 
-13. Build and Run Project.
+13. Build and run the Project.
 
 
 
-## Installation docs for MOSIP Pre-registration UI:
+## Developer setup for MOSIP Pre-registration UI
 
-1. Fork the [Pre-reg UI repo](https://github.com/mosip/pre-registration-ui) and checkout "develop" branch.
+1. Fork the [Pre-registration UI repo](https://github.com/mosip/pre-registration-ui) and checkout `develop` branch.
 2. Install all dependencies with `npm install`.
-3. Install angular js `npm install -g @angular/cli`.
-4. Start the angular js server "ng serve".
+3. Install Angular JS `npm install -g @angular/cli`.
+4. Start the Angular JS server `ng serve`.
 5. Open `http://localhost:4200` to access the application.
 6. You will face CORS issue since API Services are hosted on `https://{env}`.
 
 
-#### Using the Angular CLI proxy solution to get around CORS issue
+### Using the Angular CLI proxy solution to get around CORS issue
 
 1. Update the API services `BASE_URL` in `config.json`:
    * `config.json` is found inside assets directory.
-   * ex : `C:\MOSIP\pre-registration-ui\pre-registration-ui\src\assets\config.json`
+   * E.g.: `C:\MOSIP\pre-registration-ui\pre-registration-ui\src\assets\config.json`
 
 	`{
 	"BASE_URL": "https://localhost:4200/proxyapi/",
@@ -91,8 +91,7 @@ The documentation here will guide you through the pre-requisites required for pr
 	}`
 
 2. Create a new file named `proxy.conf.json`:
-   * location should be in project folder: 
-   * ex: `C:\MOSIP\pre-registration-ui\pre-registration-ui\proxy.conf.json`
+   * location should be in `C:\MOSIP\pre-registration-ui\pre-registration-ui\proxy.conf.json` project folder.
 
     * `{
      "/proxyapi": {
@@ -105,35 +104,35 @@ The documentation here will guide you through the pre-requisites required for pr
         }
       }`
 
-3. Now start the server by typing `ng serve --proxy-config proxy.conf.json --ssl true`.
+3. start the server by executing `ng serve --proxy-config proxy.conf.json --ssl true`.
 
 4. Open the browser, load the app with `https://localhost:4200`.
 
 
 
-## Raising PR, Updating Jira for Bug Fix:
+## Raising PR, Updating Jira for Bug Fix
 
-1. If we want to create a new local branch for particular fix:
+1. If you want to create a new local branch for particular fix:
    * `git checkout -b [branchname]`
-   * ex: `git checkout -b MOSIP-20940-sonar-bug-fix`
+   * E.g.: `git checkout -b MOSIP-20940-sonar-bug-fix`
 
 2. Push the changes:
    * `git add .`
    * `git commit -m "Jira ID and Description"`
-   * ex: `git commit -m "[MOSIP-19845] Fixed Sonar Bug"`
+   *  E.g.: `git commit -m "[MOSIP-19845] Fixed Sonar Bug"`
    * `git push -f origin [branchName]`
 	
 3. Create PR in Github to merge code into `mosip/pre-registration repo`.
 
-4. Once PR is merged check Github Actions to see if build is Successful.
+4. Once the PR is merged, check Github Actions to see if build is successful.
 
-5. Restart Kubernetes Pods:
+5. Restart Kubernetes Pods.
    * In respective `env` Goto `K8s Dashboard - MZ` to access Kubernetes.
 
-6. Test the changes in UI, Perform Sanity Testing.
+6. Test the changes in UI, perform sanity testing.
 
 7. Jira Status and Documentation:
-   * Change Status of the Bug in Jira as Fixed.
+   * Change status of the Bug in Jira as Fixed.
    * Specify Root cause of the Issue.
    * Add Detailed Comments about the changes done in Code for the Bug Fix.
    * Add Documentation. 
@@ -144,7 +143,7 @@ The documentation here will guide you through the pre-requisites required for pr
 
 1. For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
 
-2. The APIs can be Tested with the help of **Swagger-UI** and **Postman**. 
+2. The APIs can be tested with the help of **Swagger-UI** and **Postman**. 
 
 3. Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of pre-registration here:
    * Pre-registration Application service : `https://{env}/preregistration/v1/application-service/swagger-ui.html`
