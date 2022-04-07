@@ -5,7 +5,7 @@ The documentation here will guide you through the pre-requisites required for [P
 
 ## Software setup
 
-### Below are the list of tools required in Pre-registration
+#### Below are the list of tools required in Pre-registration
 1. JDK 11
 2. Any IDE (Eclipse, IntelliJ IDEA)
 3. Apache Maven (zip folder)
@@ -22,7 +22,7 @@ The documentation here will guide you through the pre-requisites required for [P
 10. Notepad++ (optional)
 
 
-### Follow the steps below to setup Pre-registration on your local system
+#### Follow the steps below to setup Pre-registration on your local system
 
 1. Fork the MOSIP [Pre-registration repository](https://github.com/mosip/pre-registration) from Github MOSIP repository.
 
@@ -77,7 +77,7 @@ The documentation here will guide you through the pre-requisites required for [P
 6. You will face CORS issue since API Services are hosted on `https://{env}`.
 
 
-### Using the Angular CLI proxy solution to get around CORS issue
+#### Using the Angular CLI proxy solution to get around CORS issue
 
 1. Update the API services `BASE_URL` in `config.json`:
    * `config.json` is found inside assets directory.
