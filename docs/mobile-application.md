@@ -16,7 +16,9 @@ The process flow for installation and first launch is given below
 ![](_images/app-install-launch-process.jpg)
 
 ## Generating and storing of credentials
-A resident can generate a Verifiable Credential(VC) by either using a UIN or a VID. Detailed steps on generating and sharing credentials are given in the user guide [here](https://github.com/mosip/documentation/blob/1.2.0/docs/mobile-id-app-user-guide.md).
+A resident can generate a Verifiable Credential(VC) by either using a UIN or a VID. Also, they can generate credentials for their family or friends on the same phone.
+
+Detailed steps on generating and sharing credentials are given in the user guide [here](https://github.com/mosip/documentation/blob/1.2.0/docs/mobile-id-app-user-guide.md).
 
 The process of generating a credential is shown below
 ![](_images/app-generating-credential-process.jpg)
