@@ -26,7 +26,7 @@ A QR code is generated and displayed on the requesting party's mobile applicatio
 ```
 where ```cid``` is a randomly generated connection id and ```pk``` is a randomly generated public key.
 
-Once a phone scans the QR code of the requesting party a connection is established between the two devices.
+Once a phone scans the QR code of the requesting party a connection is established between the two devices. When the requesting party is to connect to another device a new QR code is generated.
 
 
 
