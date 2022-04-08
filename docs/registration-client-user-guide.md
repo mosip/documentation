@@ -8,7 +8,7 @@ A Trusted Platform Module (TPM) is a specialized chip on a local machines that s
 
 To extract the TPM public key, use the [TPM key extractor utility](https://github.com/mosip/mosip-infra/blob/develop/deployment/sandbox-v2/utils/tpm/key_extractor/README.md).
 
-## Pre-requisites 
+## Prerequisites 
 To onboard the machine and the operator, the Admin needs to:
 1. Create and activate the registration client machine using Admin portal.
 2. Create a user/operator account in Keycloak
@@ -66,8 +66,8 @@ The client always launches with the pre-loader screen which displays the informa
        
 **Note**: On successful onboard of the operator, biometric templates of the operator are stored locally.
        Biometric authentication does not reach out to the server everytime, instead it is validated based on the locally stored templates on the registration client machine.
-       
-       
+    
+      
 ### Setting up MOCK SBI (MDS)
 
 In the development environment, Registration client can be tested using mock SBI.
