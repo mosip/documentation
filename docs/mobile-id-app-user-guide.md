@@ -10,15 +10,15 @@ For Android devices, Google Nearby Connections API and the Google SafetyNet Atte
 
 2. Tap **Install**  to proceed with installation.
 
-<img src="_images/mobile-app-install.jpeg" width="200" height="400">  
+    <img src="_images/mobile-app-install.jpeg" width="200" height="400">  
 
 You can see the installation in progress.
 
-<img src="_images/mobile-app-installing.jpeg" width="200" height="400">
+    <img src="_images/mobile-app-installing.jpeg" width="200" height="400">
 
 3. On successful installation, click **Open**.
 
-<img src="_images/mobile-app-installed.jpeg" width="200" height="400">
+    <img src="_images/mobile-app-installed.jpeg" width="200" height="400">
 
 
 ## First launch of the app and initial setup
