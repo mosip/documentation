@@ -2,7 +2,7 @@
 
 ## Overview
 
-[Admin](administration.md) application is a web-based application used by a privileged group of administrative personnel to manage various master data. The various resources that can be managed by an Admin are:
+Admin application is a web-based application used by a privileged group of administrative personnel to manage various master data. The various resources that can be managed by an Admin are:
 
   *	Center (Registration centers)
   * Device
