@@ -55,11 +55,11 @@ For the code setup, clone the [Registration Client](https://github.com/mosip/reg
 
 1. For the environment setup, you need an external dependency that is available [here](https://oss.sonatype.org/#nexus-search;gav~~mock-sdk~1.2.0-SNAPSHOT~~) with different versions. (E.g.: You can download `mock-sdk.jar` and add to registration-services project `Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply and Close`).
 
-<img src="_images/add-mock-sdk-library.png" width="750" height="450">
+<img src="_images/add-mock-sdk-library.PNG" width="750" height="450">
 
 2. Registration Client UI is developed using JavaFX and the UI pages are fxml files which can be opened using a tool called `Scene Builder`. The JavaFX integration with the Eclipse IDE is provided with the e(fx)clipse tool. Go to `Help → Install New Software → Work with → Add`. Give Name and Location as mentioned in below image.
 
-<img src="_images/efxclipse-installation.png" width="750" height="450">
+<img src="_images/efxclipse-installation.PNG" width="750" height="450">
 
 Once the software is installed, you will be prompted to restart your IDE.
 
@@ -71,11 +71,11 @@ Below are the configurations to be done in Eclipse:
 
 1. Open Eclipse and run the project for one time as `Java application`, so that it creates a Java application which you can see in debug configurations.
 
-<img src="_images/reg-client-create-env-in-eclipse.png" width="750" height="450">
+<img src="_images/reg-client-create-env-in-eclipse.PNG" width="750" height="450">
 
 2. Open the arguments and pass this `--module-path C:\Users\<USER_NAME>\Downloads\openjfx-11.0.2_windows-x64_bin-sdk\javafx-sdk-11.0.2\lib --add-modules=javafx.controls,javafx.fxml,javafx.base,javafx.web,javafx.swing,javafx.graphics --add-exports javafx.graphics/com.sun.javafx.application=ALL-UNNAMED` in VM arguments.
 
-<img src="_images/registration-client-run-configurations.png" width="750" height="450">
+<img src="_images/registration-client-run-configurations.PNG" width="750" height="450">
 
 3. Click Apply and then debug it (starts running). You can see a popup which shows informative messages of what is happening in background while Registration Client UI is loading and the application will be launched.
 
