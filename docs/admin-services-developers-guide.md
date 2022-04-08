@@ -2,23 +2,26 @@
 
 ## Overview
 
-Admin application is a web-based application used by a privileged group of administrative personnel to manage various master data. The various resources that can be managed by an Admin are:
-•	Center (registration centers)
+[Admin](admin.md) application is a web-based application used by a privileged group of administrative personnel to manage various master data. The various resources that can be managed by an Admin are:
+•	Center (Registration centers)
 •	Device
 •	Machine
-•	User(Admin ,registration staff)
+•	User (Admin, Registration staff)
+
 Along with the resource and data management, the admin can generate master keys, check registration status, retrieve lost RID, resume processing of paused packets.
+
 **Masterdata service** exposes API to perform CRUD operations on materdata through Admin service.
 
 **Hotlist service** provides functionality to block/unblock any ids with option of expiry. This hotlisted information will also be published to MOSIP_HOTLIST websub topic.
 
 **Sync Data Service** can be accessed only by the privileged group of admin personnel and enables default configurations and seed data to be setup when the MOSIP platform gets initialized.
 
-Admin has four services 
-•	Admin service 
-•	Kernel Master data service
-•	Kernel Syncdata service
-•	Hotlist service
+Admin module has four services:
+
+*	Admin service 
+*	Kernel Master data service
+*	Kernel Syncdata service
+*	Hotlist service
 
 The documentation here will guide you through the pre-requisites required for the developer' setup.
 
@@ -37,9 +40,9 @@ Follow the steps below to set up Admin Services on your local system:
 
 1. Download [lombok.jar](https://projectlombok.org/download) and [settings.xml](https://github.com/aihamh/documentation/blob/1.2.0/docs/_files/pre-registration-config-files/settings.xml).
 
-2. Unzip Apache Maven and move the unzipped folder in ```C:\Program Files``` and `settings.xml` to "conf" folder `C:\Program Files\apache-maven-3.8.4\conf`.
+2. Unzip Apache Maven and move the unzipped folder in `C:\Program Files` and `settings.xml` to `conf` folder `C:\Program Files\apache-maven-3.8.4\conf`.
 
-3. Install Eclipse, open the `lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE and then click `Install/Update`.
+3. Install Eclipse, open the `lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE and then click `Install/ Update`.
 
 <img src="_images/lombok-configuration.png" width="750" height="450">
 
@@ -51,7 +54,7 @@ Follow the steps below to set up Admin Services on your local system:
 
 ## Code setup
 
-For the code setup, clone admin-services repository and follow the guidelines mentioned in the [Code Contributions](https://docs.mosip.io/1.2.0/community/code-contributions).
+For the code setup, clone [admin-services](https://github.com/mosip/admin-services) repository and follow the guidelines mentioned in the [Code Contributions](https://docs.mosip.io/1.2.0/community/code-contributions).
 
 ### Importing and building of a project
 
@@ -71,13 +74,17 @@ For the code setup, clone admin-services repository and follow the guidelines me
 
 2. Clone [admin-services repository](https://github.com/mosip/admin-services).
 
-3. Any changes in the properties for masterdata and admin services should be done in application-local1.properties file.
+3. Any changes in the properties for Masterdata and Admin services should be done in `application-local1.properties` file.
 
-4. By default the admin-services is connected to dev environment.
+4. By default the Admin-services is connected to dev environment.
 
-5. To run the specific service from IDE, `Open IDE -> Specific service -> src/main/java/io.mosip.specific service -> Right click on the file and select run as Java Application`. for example, to rum admin service, `open IDE -> admin-service -> src/main/java/io.mosip.admin -> Right click on AdminBootApplication.java and select run as Java Application`.
+5. To run the specific service from IDE, `Open IDE -> Specific service -> src/main/java/io.mosip.specific service -> Right click on the file and select run as Java Application`. 
+ 
+For example, to run the Admin service, `open IDE -> admin-service -> src/main/java/io.mosip.admin -> Right click on AdminBootApplication.java and select run as Java Application`.
 
-6. To run the specific service from Command Prompt, Open Project folder -> open command prompt from same folder -> Execute `java -jar target/specific-service-1.2.0.jar`. for example, to rum admin service, Open Project folder -> open command prompt from same folder -> Execute `java -jar target/admin-service-1.2.0-SNAPSHOT.jar`.
+6. To run the specific service from Command Prompt, Open Project folder -> open command prompt from same folder -> Execute `java -jar target/specific-service-1.2.0.jar`.
+ 
+For example, to run the admin service, Open Project folder -> open command prompt from same folder -> Execute `java -jar target/admin-service-1.2.0-SNAPSHOT.jar`.
 
 The service should now be up and running. 
 
@@ -89,9 +96,12 @@ The service should now be up and running.
 
 * Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of admin-services for dev-environment from 
 ** Admin service – `http://dev.mosip.net/v1/admin/swagger-ui/index.html?configUrl=/v1/admin/v3/api-docs/swagger-config#/` and localhost from `http://localhost:8098/v1/admin/swagger-ui/index.html?configUrl=/v1/admin/v3/api-docs/swagger-config#/`.
+
 ** Masterdata - `http://dev.mosip.net/v1/masterdata/swagger-ui/index.html?configUrl=/v1/masterdata/v3/api-docs/swagger-config#/` and localhost from `http://localhost:8086/v1/masterdata/swagger-ui/index.html?configUrl=/v1/masterdata/v3/api-docs/swagger-config#/`.
+
 ** Syncdata - `http://dev.mosip.net/v1/syncdata/swagger-ui/index.html?configUrl=/v1/syncdata/v3/api-docs/swagger-config#/` and localhost from
 `http://localhost:8089/v1/syncdata/swagger-ui/index.html?configUrl=/v1/syncdata/v3/api-docs/swagger-config#/`.
+
 ** Hotlist - `http://dev.mosip.net/v1/hotlist/swagger-ui/index.html?configUrl=/v1/hotlist/v3/api-docs/swagger-config#/` and localhost from ` http://localhost:8095/v1/hotlist/swagger-ui/index.html?configUrl=/v1/hotlist/v3/api-docs/swagger-config#/`
 
 * Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. 
