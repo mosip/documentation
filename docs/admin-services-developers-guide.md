@@ -3,23 +3,24 @@
 ## Overview
 
 [Admin](admin.md) application is a web-based application used by a privileged group of administrative personnel to manage various master data. The various resources that can be managed by an Admin are:
-•	Center (Registration centers)
-•	Device
-•	Machine
-•	User (Admin, Registration staff)
+
+  *	Center (Registration centers)
+  * Device
+  * Machine
+  * User (Admin, Registration staff)
 
 Along with the resource and data management, the admin can generate master keys, check registration status, retrieve lost RID, resume processing of paused packets.
 
-**Masterdata service** exposes API to perform CRUD operations on materdata through Admin service.
+* **Masterdata service** exposes API to perform CRUD operations on masterdata through Admin service.
 
-**Hotlist service** provides functionality to block/unblock any ids with option of expiry. This hotlisted information will also be published to MOSIP_HOTLIST websub topic.
+* **Hotlist service** provides functionality to block/unblock any IDs with option of expiry. This hotlisted information will also be published to MOSIP_HOTLIST WebSub topic.
 
-**Sync Data Service** can be accessed only by the privileged group of admin personnel and enables default configurations and seed data to be setup when the MOSIP platform gets initialized.
+* **Sync Data Service** can be accessed only by the privileged group of admin personnel and enables default configurations and seed data to be setup when the MOSIP platform gets initialized.
 
 Admin module has four services:
 
 *	Admin service 
-*	Kernel Master data service
+*	Kernel Masterdata service
 *	Kernel Syncdata service
 *	Hotlist service
 
@@ -94,15 +95,16 @@ The service should now be up and running.
 
 * The APIs can be tested with the help of **Swagger-UI** and **Postman**. 
 
-* Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of admin-services for dev-environment from 
-** Admin service – `http://dev.mosip.net/v1/admin/swagger-ui/index.html?configUrl=/v1/admin/v3/api-docs/swagger-config#/` and localhost from `http://localhost:8098/v1/admin/swagger-ui/index.html?configUrl=/v1/admin/v3/api-docs/swagger-config#/`.
+* Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of admin-services for dev-environment from:
 
-** Masterdata - `http://dev.mosip.net/v1/masterdata/swagger-ui/index.html?configUrl=/v1/masterdata/v3/api-docs/swagger-config#/` and localhost from `http://localhost:8086/v1/masterdata/swagger-ui/index.html?configUrl=/v1/masterdata/v3/api-docs/swagger-config#/`.
+**Admin service**– `http://dev.mosip.net/v1/admin/swagger-ui/index.html?configUrl=/v1/admin/v3/api-docs/swagger-config#/` and localhost from `http://localhost:8098/v1/admin/swagger-ui/index.html?configUrl=/v1/admin/v3/api-docs/swagger-config#/`.
 
-** Syncdata - `http://dev.mosip.net/v1/syncdata/swagger-ui/index.html?configUrl=/v1/syncdata/v3/api-docs/swagger-config#/` and localhost from
+**Masterdata**- `http://dev.mosip.net/v1/masterdata/swagger-ui/index.html?configUrl=/v1/masterdata/v3/api-docs/swagger-config#/` and localhost from `http://localhost:8086/v1/masterdata/swagger-ui/index.html?configUrl=/v1/masterdata/v3/api-docs/swagger-config#/`.
+
+**Syncdata**- `http://dev.mosip.net/v1/syncdata/swagger-ui/index.html?configUrl=/v1/syncdata/v3/api-docs/swagger-config#/` and localhost from
 `http://localhost:8089/v1/syncdata/swagger-ui/index.html?configUrl=/v1/syncdata/v3/api-docs/swagger-config#/`.
 
-** Hotlist - `http://dev.mosip.net/v1/hotlist/swagger-ui/index.html?configUrl=/v1/hotlist/v3/api-docs/swagger-config#/` and localhost from ` http://localhost:8095/v1/hotlist/swagger-ui/index.html?configUrl=/v1/hotlist/v3/api-docs/swagger-config#/`
+**Hotlist**- `http://dev.mosip.net/v1/hotlist/swagger-ui/index.html?configUrl=/v1/hotlist/v3/api-docs/swagger-config#/` and localhost from ` http://localhost:8095/v1/hotlist/swagger-ui/index.html?configUrl=/v1/hotlist/v3/api-docs/swagger-config#/`
 
 * Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. 
 
