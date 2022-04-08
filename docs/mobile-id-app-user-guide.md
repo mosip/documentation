@@ -95,6 +95,8 @@ It is recommended to keep your digital credentials (ID) with you at all times. T
 
 Likewise, the resident can tap `Add ID` to generate the credentials for their family or friends.
 
+<img src="_images/mobile-app-add-ids-friends.jpeg" width="200" height="400">
+
 10. You can view the history of the credentials downloaded under the `History` tab on the top right corner.
 
 ## Sharing credentials
@@ -164,7 +166,7 @@ Clicking Accept is followed by a success message on both the phones.
 
 <img src="_images/mobile-app-receive-success.jpeg" width="200" height="400">
 
-This above image shows the sucess message displayed on Device A.
+This above image shows the success message displayed on Device A.
 
 12. Relying party taps on `Received IDs` to view the ID received on Device B.
 
