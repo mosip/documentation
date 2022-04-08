@@ -4,9 +4,10 @@
 
 For Android devices, Google Nearby Connections API and the Google SafetyNet Attestation API require that the device has access to the Google Play Services and related APIs. This implies that a Google Account is set up and configured on the device.
 
-## Installing the MOSIP Mobile Resident Application (app)
+## Installing the MOSIP Resident Mobile Application 
 
-1. Download Mobile Resident app from here.
+1. Download Mobile Resident application (app) from here.
+
 2. Tap **Install**  to proceed with installation.
 
 <img src="_images/mobile-app-install.jpeg" width="200" height="400">  
@@ -22,12 +23,13 @@ You can see the installation in progress.
 
 ## First launch of the app and initial setup
 
-1. On the first launch, you will see a prompt asking you to `Allow Mosip Resident App to access the device's location`.
+1. On the first launch, you will see a prompt asking you to `Allow MOSIP Resident App to access the device's location?`
+
 2. Tap **Allow** to continue.
 
 <img src="_images/mobile-app-allow-deny.jpeg" width="200" height="400">
 
-3. Click **Get Started** to setup the app.
+3. Click **Get started** to setup the app.
 
 <img src="_images/mobile-app-getting-started.jpeg" width="200" height="400">
 
@@ -41,9 +43,9 @@ You can see the installation in progress.
 
 <img src="_images/mobile-app-confirm-passcode.jpeg" width="200" height="400">
 
-7. On the Home screen, you will find a few tooltips to guide you through the next steps.
+7. On the Home screen, a few tooltips are displayed after the initial setup to guide you through the next steps.
 
-<img src="_images/mobile-app-welcome-home.jpeg" width="200" height="400">
+<img src="_images/mobile-app-welcome-home.jpeg" width="200" height="400"> <img src="_images/mobile-app-tooltip2.jpeg" width="200" height="400"> <img src="_images/mobile-app-tooltip3.jpeg" width="200" height="400">
 
 
 ## Generating credentials
@@ -68,7 +70,7 @@ It is recommended to keep your digital credentials (ID) with you at all times. T
 
 5. Click **Back Home** and wait till your credentials are generated.
 
-<img src="_images/mobile-app-download-id.jpeg" width="200" height="400">   < add image>
+<img src="_images/mobile-app-download-id.jpeg" width="200" height="400">   <img src="_images/mobile-app-credentials-wait.jpeg" width="200" height="400">
 
 6. Under `My IDs` tab, you will be able to view your digital credentials.
 
@@ -105,15 +107,15 @@ Pre-requisites:
 
 Let us understand sharing of credentials with an example. 
 
-Assuming that a Resident having Device A wants to share their credentials with a requesting party having Device B. The steps that both the parties have to follow is illustrated below:
+Assuming that a Resident having Device A wants to share their credentials with a Relying/ requesting party having Device B. The steps that both the parties have to follow is illustrated below:
 
-1. The Resident taps on the `Scan` icon on their phone (on the bottom menu, second icon from left). 
+1. The Resident taps on `Scan` icon on their phone (on the bottom menu, second icon from left). 
 
    Click **OK** to turn on the device' location.
 
 <img src="_images/mobile-app-scan-qr-code.jpeg" width="200" height="400">    
 
-2. Tap **Allow** to `Allow Mosip Resident App for taking pictures and recording videos.`
+2. Tap **Allow** to `Allow MOSIP Resident App to take pictures and record videos.`
 
 <img src="_images/mobile-app-scanqr-allow.jpeg" width="200" height="400">   
 
@@ -133,7 +135,7 @@ Assuming that a Resident having Device A wants to share their credentials with a
 
 <img src="_images/mobile-app-device1-connecting.jpeg" width="200" height="400"> 
 
-7. Once the connection is made, the Sharing ID screen is displayed on the Resident' phone. This screen has the following details:
+7. Once the connection is made, the `Sharing ID` screen is displayed on the Resident' phone. This screen has the following details:
 
     * Requested by: Device B model 
     * Device name of the Relying party
@@ -142,7 +144,7 @@ Assuming that a Resident having Device A wants to share their credentials with a
 
 <img src="_images/mobile-app-sharing-id.jpeg" width="200" height="400"> 
 
-8. Resident can enter the reason for sharing the credentials and tap `Accept request and choose ID`.
+8. Resident enters the reason for sharing the credentials and taps `Accept request and choose ID`.
 
 <img src="_images/mobile-app-reason-sharing-id.jpeg" width="200" height="400"> 
 
@@ -162,7 +164,7 @@ Clicking Accept is followed by a success message on both the phones.
 
 <img src="_images/mobile-app-receive-success.jpeg" width="200" height="400">
 
-This image shows the sucess message displayed on Device A.
+This above image shows the sucess message displayed on Device A.
 
 12. Relying party taps on `Received IDs` to view the ID received on Device B.
 
@@ -172,8 +174,8 @@ This image shows the sucess message displayed on Device A.
 
 For instance, 
 
-    * On the Relying party' phone, the tab shows the history of the received credentials.
-    * On the Resident' phone, the tab displays the history of the downloaded credentials.
+    * On the Relying party' phone, the History tab shows the history of the received credentials.
+    * On the Resident' phone, the History tab displays the history of the downloaded credentials.
 
 <img src="_images/mobile-app-device2-history.jpeg" width="200" height="400">    <img src="_images/mobile-app-device1-history.jpeg" width="200" height="400">
 
