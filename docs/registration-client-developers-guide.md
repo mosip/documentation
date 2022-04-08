@@ -1,10 +1,10 @@
-# Registration Client Developer Guide
+# Registration Client Developers' Guide
 
 ## Overview
 
 [Registration Client](https://docs.mosip.io/1.2.0/modules/registration-client) is a thick Java-based client where the resident's demographic and biometric details are captured along with the supporting documents in online or offline mode. 
 
-The documentation here will guide you through the pre-requisites required for the developer' setup.
+The documentation here will guide you through the prerequisites required for the developer' setup.
 
 ## Software setup
 
@@ -25,7 +25,7 @@ Follow the steps below to set up Registration Client on your local system:
 
 1. Download `lombok.jar` and `settings.xml` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/registration-client-config-files).
 
-2. Unzip Apache Maven and move the unzipped folder in ```C:\Program Files``` and `settings.xml` to "conf" folder `C:\Program Files\apache-maven-3.8.4\conf`.
+2. Unzip Apache Maven and move the unzipped folder in `C:\Program Files` and `settings.xml` to `conf` folder `C:\Program Files\apache-maven-3.8.4\conf`.
 
 3. Install Eclipse, open the `lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE and then click `Install/Update`.
 
@@ -39,7 +39,7 @@ Follow the steps below to set up Registration Client on your local system:
  
 ## Code setup
 
-For the code setup, clone the repository [Registration Client](https://github.com/mosip/registration-client) and follow the guidelines mentioned in the [Code Contributions](https://docs.mosip.io/1.2.0/community/code-contributions).
+For the code setup, clone the [Registration Client](https://github.com/mosip/registration-client) repository and follow the guidelines mentioned in the [Code Contributions](https://docs.mosip.io/1.2.0/community/code-contributions).
 
 ### Importing and building of a project
 
@@ -69,7 +69,7 @@ Once the software is installed, you will be prompted to restart your IDE.
 
 Below are the configurations to be done in Eclipse:
 
-1. Open Eclipse and run the project for one time as `Java application`, so that it will create a Java application which you can see in debug configurations.
+1. Open Eclipse and run the project for one time as `Java application`, so that it creates a Java application which you can see in debug configurations.
 
 <img src="_images/reg-client-create-env-in-eclipse.png" width="750" height="450">
 
@@ -77,5 +77,5 @@ Below are the configurations to be done in Eclipse:
 
 <img src="_images/registration-client-run-configurations.png" width="750" height="450">
 
-3. Click Apply and then debug it (starts running). You can see a popup which shows informative messages of what is happening in background while Registration Client UI is loading and Application will be launched.
+3. Click Apply and then debug it (starts running). You can see a popup which shows informative messages of what is happening in background while Registration Client UI is loading and the application will be launched.
 
