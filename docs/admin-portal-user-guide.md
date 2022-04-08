@@ -15,8 +15,9 @@ To get started with using the Admin portal, an admin user must be assigned to a 
 
 1. Setup of hierarchial zones 
 2. Create Admin roles in KeyCloak
-3. Create first admin user in KeyCloak
-4. Assign first user to root zone 
+3. Create first admin user in KeyCloak and assign "GLOBAL_ADMIN" role
+
+*Note*- On login of first admin user, user zone mapping is handled automatically.
 
 The above are done automatically as part of [default sandbox installation](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3).
 
@@ -295,7 +296,8 @@ To know more, refer to Master Data guide.
  5. Click **Choose file** to select the data and click **Upload**
  
 To view the format for inserting data in a particular table, click on the Download icon. A CSV file gets downloaded in which the first row represents the column names and the rest of the rows are the data which will be inserted into the table(sample).
-**Note :** For editing CSV files containing date fields, It is advisable to use Text editors like Notepad, Notepad++, VS Code, etc., rather than Excel so that format of the date won't get altered.
+
+*Note:* For editing CSV files containing date fields, it is recommended to use Text editors like Notepad, Notepad++, VS Code, etc., rather than using Excel to ensure that the date format does not get altered.
 
 ### Packets
 
