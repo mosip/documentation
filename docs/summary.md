@@ -51,6 +51,7 @@
     * [Registration Client UI Specifications](registration-client-ui-specifications.md)
     * [Registration Client Settings page](registration-client-settings-page.md)
   * [Registration Processor](registration-processor.md)
+     * [Registration Processor Developers Guide](registration-processor-developers-guide.md)
   * [Reporting](reporting.md)
   * [Resident Services](resident-services.md)
     * [Resident Services Developers Guide](resident-services-developer-guide.md)
