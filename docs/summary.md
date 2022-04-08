@@ -50,6 +50,7 @@
     * [Registration Client Configuration](registration-client-configuration.md)
     * [Registration Client UI Specifications](registration-client-ui-specifications.md)
     * [Registration Client Settings page](registration-client-settings-page.md)
+    * [Registration Client Developers Guide](registration-client-developers-guide.md)
   * [Registration Processor](registration-processor.md)
      * [Registration Processor Developers Guide](registration-processor-developers-guide.md)
   * [Reporting](reporting.md)
