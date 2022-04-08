@@ -21,6 +21,7 @@ A resident can generate a Verifiable Credential(VC) by either using a UIN or a V
 Detailed steps on generating and sharing credentials are given in the user guide [here](https://github.com/mosip/documentation/blob/1.2.0/docs/mobile-id-app-user-guide.md).
 
 The process of generating a credential is shown below
+
 ![](_images/app-generating-credential-process.jpg)
 
 ## Sharing of credentials
@@ -41,9 +42,11 @@ where ```cid``` is a randomly generated connection ID which is used as a device 
 Once a sharing phone scans the QR code of the requesting/relying party, a connection is established between the two devices. When the requesting party has to connect to another device, a new QR code is generated.
 
 The process flow for QR code scan is given below
+
 ![](_images/app-qr-code-scan-process.jpg)
   
 The process flow for receiving the credentials is given below
+
 ![](_images/app-receiving-credential-process.jpg)
 
 ## Download resident mobile application
