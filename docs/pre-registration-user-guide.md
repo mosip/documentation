@@ -39,7 +39,7 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 
 *Note*:
 * This choice will be available only if the ID issuer has configured the usage of optional languages. 
-* Countries will have multiple languagues some of which will be *mandatory* while others could be *optional(regional languages)*. MOSIP provides a configuration using which a country can mandate the capture of demographic data in required number of languages (combination of mandatory and optional).
+* Countries will have multiple languages some of which will be *mandatory* while others could be *optional(regional languages)*. MOSIP provides a configuration using which a country can mandate the capture of demographic data in required number of languages (combination of mandatory and optional).
 
 #### Step 2: Provide consent
 ![](_images/pre-reg-consent.png)
