@@ -24,6 +24,7 @@ Publish Date | Revision
 Publish Date | Revision
 -------------|--------
 June 23, 2021 | This is the first formal publication of this document as a version-ed specification. Earlier drafts are superseded by this document.
+April 11, 2022 | We have added and optional paramter called "camDimensions" as part of device info response. 
 
 ## Glossary of Terms
 Key | Description
@@ -416,6 +417,7 @@ specVersion | This represents the spec version of the SBI. This is a mandatory p
       "env": "Target environment",
       "purpose": "Auth  or Registration",
       "specVersion": ["Array of supported SBI specification version"],
+      "camDimensions": ["Array of supported camera image resolutions. This is an optional parameter for handling specific requirements such as exception photo. Please refer to the exception photo guidelines."]
     },
     "error": {
       "errorCode": "106",
@@ -456,6 +458,7 @@ deviceInfo.digitalId | The digital id as per the digital id definition. For SBI 
 deviceInfo.env | This represents the target environment. For devices that are not registered, the environment is "None". For devices that are registered, send the environment in which it is registered. Allowed values are "Staging", "Developer", "Pre-Production" or "Production".
 deviceInfo.purpose | Purpose of the device in the MOSIP ecosystem. Allowed values are "Auth" or "Registration".
 deviceInfo.specVersion | Array of supported SBI specification version. The array element Zero will always contain the spec version using which the response is created.
+deviceInfo.camDimensions | Array of supported camera image resolutions. This is an optional parameter for handling specific requirements such as exception photo. Please refer to the exception photo guidelines. The value should be of 12 characters where width is the first 6 characters and height is the next 6 characters. Example: ICAO standard 3:2 ratio should be depicted as "000600000400" which means 600mm X 400mm.
 error | Relevant errors as defined under the [error section](#error-codes) of this document.
 error.errorCode | Standardized error code.
 error.errorInfo | Description of the error that can be displayed to the end-user. It should have multi-lingual support.
@@ -751,7 +754,7 @@ specVersion | This represents the spec version of the SBI. This is a mandatory p
 serialNo | This represents the serial number of the device. This value should be the same as printed on the device (Refer [Physical ID](#physical-id)).
 deviceSubId | Allowed values are 0, 1, 2 or 3. The device sub id could be used to enable a specific module in the scanner appropriate for a biometric capture requirement. Device sub id is a simple index that always starts with 1 and increases sequentially for each sub-device present. In the case of Finger/Iris, it's 1 for left slap/iris, 2 for right slap/iris and 3 for two thumbs/irises. The device sub id should be set to 0 if we don't know any specific device sub id (0 is not applicable for fingerprint slap).<br><br>Wherever possible SBI must detect if the placement of biometrics is not in sync with the deviceSubId. For example, if the deviceSubId is selected as 1 and if a right slap is presented instead of left, SBI must provide appropriate messages.
 timeout | Max time after which the stream should close. This is an optional parameter and by default, the value will be 5 minutes. All timeouts are in milliseconds.
-dimensions | This is an optional parameter for handling specific requirements such as photo stream during exception. Please refer to the stream frame guidelines.<br><br>Format: mmmm. For example, value 6040 denotes 60mm(width) X 40mm(height) of the stream window.
+dimensions | This is an optional parameter for handling specific requirements such as photo stream during exception. Please refer to the stream frame guidelines.<br><br>Format: mmmmmmmmmmmm. The value should be of 12 characters where width is the first 6 characters and height is the next 6 characters. Example: ICAO standard 3:2 ratio should be depicted as "000600000400" which means 600mm X 400mm.
 
 #### Device Stream Response
 Live video stream with quality of 3 frames per second or more using [M-JPEG](https://en.wikipedia.org/wiki/Motion_JPEG).
