@@ -6,30 +6,30 @@ MOSIP uses [Postgres](https://www.postgresql.org/) DB for all relational data st
 
 ### ER Diagrams of all the databases part of MOSIP
 
-[MOSIP_AUDIT](_images/mosip_audit_er.png)
+[MOSIP_AUDIT](_images/mosip-audit-er.png)
 
-[MOSIP_AUTHDEVICE](_images/mosip_authdevice_er.png)
+[MOSIP_AUTHDEVICE](_images/mosip-authdevice-er.png)
 
-[MOSIP_CREDENTIAL](_images/mosip_credential_er.png)
+[MOSIP_CREDENTIAL](_images/mosip-credential-er.png)
 
-[MOSIP_HOTLIST](_images/mosip_hotlist_er.png)
+[MOSIP_HOTLIST](_images/mosip-hotlist-er.png)
 
-[MOSIP_IDA](_images/mosip_ida_er.png)
+[MOSIP_IDA](_images/mosip-ida-er.png)
 
-[MOSIP_IDMAP](_images/mosip_idmap_er.png)
+[MOSIP_IDMAP](_images/mosip-idmap-er.png)
 
-[MOSIP_IDREPO](_images/mosip_idrepo_er.png)
+[MOSIP_IDREPO](_images/mosip-idrepo-er.png)
 
-[MOSIP_KERNEL](_images/mosip_kernel_er.png)
+[MOSIP_KERNEL](_images/mosip-kernel-er.png)
 
-[MOSIP_KEYMGR](_images/mosip_keymgr_er.png)
+[MOSIP_KEYMGR](_images/mosip-keymgr-er.png)
 
-[MOSIP_MASTER](_images/mosip_master_er.png)
+[MOSIP_MASTER](_images/mosip-master-er.png)
 
-[MOSIP_PMS](_images/mosip_pms_er.png)
+[MOSIP_PMS](_images/mosip-pms-er.png)
 
-[MOSIP_PREREG](_images/mosip_prereg_er.png)
+[MOSIP_PREREG](_images/mosip-prereg-er.png)
 
-[MOSIP_REGDEVICE](_images/mosip_regdevice_er.png)
+[MOSIP_REGDEVICE](_images/mosip-regdevice-er.png)
 
-[MOSIP_REGPRC](_images/mosip_regprc_er.png)
+[MOSIP_REGPRC](_images/mosip-regprc-er.png)
