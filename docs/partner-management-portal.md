@@ -84,7 +84,7 @@ _Note_: Once the policy is created, it will be in _Inactive_ state. You have to 
 
 ### Search or filter data
 
-1. Use the filter menu\*\*.
+1. Use the filter menu.
 
 ![](\_images/pms-filter-auth-policy.png)
 
@@ -92,7 +92,7 @@ _Note_: Once the policy is created, it will be in _Inactive_ state. You have to 
 
 ## Data Share Policy
 
-Data Share policy can be created/edited in the same way as the steps mentioned in Auth policy by using Data Share Policy menu options.
+Data Share policy can be created/edited in the same way as the steps mentioned in the previous section on `Auth policy` by using Data Share Policy menu options.
 
 ![](\_images/pms-data-share-policy.png)
 
