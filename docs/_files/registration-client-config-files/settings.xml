@@ -1,0 +1,39 @@
+<settings>
+  <servers>
+   <server>
+      <id>ossrh</id>
+    </server>
+
+  </servers>
+  <profiles>
+    <profile>
+      <id>ossrh</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>    
+    </profile>
+
+ <profile>
+     <id>allow-snapshots</id>
+        <activation><activeByDefault>true</activeByDefault></activation>
+     <repositories>
+       <repository>
+         <id>snapshots-repo</id>
+         <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+         <releases><enabled>false</enabled></releases>
+         <snapshots><enabled>true</enabled></snapshots>
+       </repository>
+
+        <repository>
+         <id>releases-repo</id>
+         <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+         <releases><enabled>false</enabled></releases>
+         <snapshots><enabled>false</enabled></snapshots>
+       </repository>
+
+     </repositories>
+   </profile>
+
+  </profiles>
+</settings>
+

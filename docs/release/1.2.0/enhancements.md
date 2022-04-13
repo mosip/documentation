@@ -53,7 +53,6 @@
 * A pre-registration application will be locked and no further modifications will be allowed on it once an appointment is booked for the same.
 * Registration Client will be able to perform an on-demand fetch for pre-registration application irrespective of its booking status.
 * Encryption of pre-registration data during data sync with Registration Client.
-* Added support for registration center name and address in the notification template.
 * The structure of how the documents were stored in MinIO has been changed. Now we will have a single bucket with different folders for each PRID.
 * The resident's consent is captured as part of the audit table.
 

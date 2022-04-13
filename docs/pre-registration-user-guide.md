@@ -39,7 +39,7 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 
 *Note*:
 * This choice will be available only if the ID issuer has configured the usage of optional languages. 
-* Countries will have multiple languagues some of which will be *mandatory* while others could be *optional(regional languages)*. MOSIP provides a configuration using which a country can mandate the capture of demographic data in required number of languages (combination of mandatory and optional).
+* Countries will have multiple languages some of which will be *mandatory* while others could be *optional(regional languages)*. MOSIP provides a configuration using which a country can mandate the capture of demographic data in required number of languages (combination of mandatory and optional).
 
 #### Step 2: Provide consent
 ![](_images/pre-reg-consent.png)
@@ -55,7 +55,7 @@ When your OTP is verified, you can create, view, or modify your pre-registration
 2. You can also change or verify your demographic details in the other selected language.
 3. After you have filled and verified your demographic details, click **Continue**.
   
-*Note*: The mandatory fields/labels have a `*` mark. Field and button labels, error and information messages will be displayed in the user preferred language selected in the login screen. The fields displayed on this screen are configurable based on the [ID schema](id_schema.md) defined by the country.
+*Note*: The mandatory fields/labels have a `*` mark. Field and button labels, error and information messages will be displayed in the user preferred language selected in the login screen. The fields displayed on this screen are configurable based on the [ID schema](id-schema.md) defined by the country.
 
 [UI specs](pre-registration-ui-specifications.md) of Pre-registration module are used to configure the form fields in the Demographic Details and Document Upload functionality pages. These specs are saved as a JSON file with a list of fields.
   
