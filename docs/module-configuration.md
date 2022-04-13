@@ -41,9 +41,20 @@ Refer to [HSM configuration](hsm.md#configuration).
 
 ## Languages
 
-Languages for the entire system are configured here:
+**Mandatory Languages** - Languages that the user has to fill (can be auto translated) during the pre-registration & registration.
+
+**Optional Languages** - Languages that are not mandatory but provided as a choice to the user. 
+
+**User selected Language** - The language that the user selected at the time of login. The choices shown are union of Mandatory and Optional languages. The labels and alerts will be use the user selected language
+
+**Prefered Language** - During registration of a registrant (user for whom identity is requested), he can choose his prefered language. This preference use used for all further notification (email, SMS or any other notification). 
+
+Languages for the entire system are configured in application prorperties file:
 
 ```
-mosip.mandatory-languages=eng
-mosip.optional-languages=fra
+mosip.mandatory-languages=eng,tam
+mosip.optional-languages=fra,ara
 ```
+> The i18n file for the respective language has to be added to the artifactory [Artifactory](https://github.com/mosip/artifactory-ref-impl). 
+> The language codes are as per [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/code_list.php)
+
