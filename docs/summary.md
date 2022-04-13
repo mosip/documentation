@@ -37,6 +37,7 @@
     * [Registration Packet Structure](registration-packet-structure.md)
   * [Partner Management](partner-management-services.md)
     * [Partner Management Portal](partner-management-portal.md)
+    * [Auth Partner](auth-credential-partner.md)
     * [Partner Policies](partner-policies.md)
   * [Pre-registration](pre-registration.md)
     * [Pre-registration User Guide](pre-registration-user-guide.md)
