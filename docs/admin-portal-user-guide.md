@@ -297,7 +297,7 @@ To know more, refer to Master Data guide.
  
 To view the format for inserting data in a particular table, click on the Download icon. A CSV file gets downloaded in which the first row represents the column names and the rest of the rows are the data which will be inserted into the table(sample).
 
-*Note:* For editing CSV files containing date fields, it is recommended to use Text editors like Notepad, Notepad++, VS Code, etc., rather than using Excel to ensure that the date format does not get altered.
+*Note:* While editing CSV files, it is recommended to keep track of the Date format and Time format to be the same as the acceptable formats. The acceptable Date format is *YYYY-MM-DD* and the acceptable Time format is *HH:MM:SS*. Any other Date and Time formats in CSV files will result in a DataType Mismatch Error.
 
 ### Packets
 
