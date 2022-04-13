@@ -282,7 +282,7 @@ _Note_: This feature is currently under development.
 
 ![](\_images/admin-master-data.png)
 
-To know more, refer to Master Data guide.
+To know more, refer to [Masterdata guide](masterdata-guide.md).
 
 ## Bulk upload
 
