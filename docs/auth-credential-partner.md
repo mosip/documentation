@@ -30,14 +30,16 @@ To view the details entered, click **Home** to see the dashboard.
 
 ### Policy group mapping
 
-On successful registration, the partner needs to select the relevant Policy Group. To do so,
+On successful registration, the partner can see their username displayed on the top right corner.
 
-1. Partner selects the Policy Group from **Map Policy Group** dropdown.
+1. Partner selects the relevant Policy Group from **Map Policy Group** dropdown. 
 2. Clicks **Save**.
 
 ![](_images/auth-partner-map-policy-page.PNG)
 
-### Upload of CA certificate
+### Uploading of certificates
+
+#### CA Certificate upload
 
 The Partner admin needs to upload the CA certificate to enable the partner for using the portal. To do so, the Partner admin:
 
@@ -50,11 +52,31 @@ The Partner admin needs to upload the CA certificate to enable the partner for u
 
 The uploaded certificates can be viewed by clicking on View Certificates-> View.
 
+
+#### Partner Certificate
+
+
+
 ### Mapping policy to the Policy group
 
 Once the CA certificate is uploaded by the partner admin, 
 
-1. Partner maps the policy to the Policy group
+1. Partner maps the policy to the Policy group by clicking on **Partner Policy Mapping** on the left navigation pane.
+2. Partner enters the Partner Name.
+3. Selects the Auth Policy Name from the dropdown.
+4. Enters a value for the Request Details (unique value) and clicks **Save**.
+
+
+
+Once this is done, you will see a message saying "policy maapin grequest submitted successfully." Also, the status is displayed as "In progress" and this means that the partner cannot generate the API key until the request is approved by the Partner admin.
+
+### Approval/ Rejection of partner policy mapping
+
+Once the partner policy mapping request is raised by the partner, the Partner admin has the privilege to approve/ reject the mapping.
+
+
+
+### Generating the API Key
 
 
 
