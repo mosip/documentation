@@ -26,7 +26,10 @@ Below is the workflow that includes the registration process for an Auth/ Creden
 
 To view the details entered, click **Home** to see the dashboard.
 
-![](_images/auth-partner-dashboard.PNG)
+
+![](_images/auth-partner-map-policy-page.PNG)
+
+
 
 ### Policy group mapping
 
@@ -35,9 +38,9 @@ On successful registration, the partner can see their username displayed on the 
 1. Partner selects the relevant Policy Group from **Map Policy Group** dropdown. 
 2. Clicks **Save**.
 
-![](_images/auth-partner-map-policy-page.PNG)
+![](_images/auth-partner-dashboard.PNG)
 
-### Uploading of certificates
+### Uploading of Certificates
 
 #### CA Certificate upload
 
@@ -48,13 +51,25 @@ The Partner admin needs to upload the CA certificate to enable the partner for u
 3. Chooses the certificate to upload (only files with extensions as .cer or .pem).
 4. Clicks **Upload**. 
 
-![](_images/auth-partner-ca-certificate.PNG)
+![](_images/ca-cert-data-upload.PNG)
 
-The uploaded certificates can be viewed by clicking on View Certificates-> View.
+![](_images/ca-cert-data-success.PNG)
+
+The uploaded certificates can be viewed by clicking on `View Certificates-> View`.
+
+![](_images/auth-partner-view-cert.PNG)
+
+#### Partner Certificate upload
+
+Similarly, the Partner certificates can be added by the Partner admin/ partner.
+
+![](_images/auth-partner-upload-cert-page1.PNG)
 
 
-#### Partner Certificate
+![](_images/auth-partner-upload-cert-page2.PNG)
 
+
+![](_images/auth-partner-upload-cert-success.PNG)
 
 
 ### Mapping policy to the Policy group
@@ -67,6 +82,7 @@ Once the CA certificate is uploaded by the partner admin,
 4. Enters a value for the Request Details (unique value) and clicks **Save**.
 
 
+![](_images/auth-partner-upload-cert-success.PNG)
 
 Once this is done, you will see a message saying "policy maapin grequest submitted successfully." Also, the status is displayed as "In progress" and this means that the partner cannot generate the API key until the request is approved by the Partner admin.
 
