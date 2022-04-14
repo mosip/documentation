@@ -137,8 +137,7 @@ The API key is generated and can be used by the partner.
 
 ![](_images/auth-partner-generate-apikey-success.PNG)
 
-
-
+The partner can also deactivate a particular API Key by clicking on the cross-mark (X) next to it. Please note, once deactivated, it cannot be activated again. You may need to generate a new API key as per requirement. 
 
 
 
