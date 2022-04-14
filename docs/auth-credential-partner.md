@@ -118,9 +118,20 @@ Once the request is approved, the partner can view the status being updated to A
 
 ### Generating the API Key
 
+•	Partner logins after the Partner Policy Mapping is approved by the Partner admin and generates the API key with an unique label
 
 
 
+![](_images/auth-partner-generate-apikey-option.PNG)
+
+
+![](_images/auth-partner-generate-apikey-page.PNG)
+
+
+![](_images/auth-partner-genearted-apikeys-page.PNG)
+
+
+![](_images/auth-partner-generate-apikey-success.PNG)
 
 
 
