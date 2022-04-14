@@ -15,7 +15,7 @@ Identity service uses Biometric SDK (server) to extract templates from provided 
 Above is the entity relationship diagram illustrated for Identity service. NOTE: The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
 1. Key Manager encrypts/decrypts data.
 2. Credential request generator issues credentials for new/updated UIN data.
-3.Object Store stores/retrieves biometrics and demographic documents.
+3. Object Store stores/retrieves biometrics and demographic documents.
 4. All demographic data of UIN and references to biometric and demographic files stored in object store are stored in mosip_idrepo DB.
 5. Partner management service retrieves online verification partners to issue credentials.
 6. Audit logs are logged into Audit Manager.
