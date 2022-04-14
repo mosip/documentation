@@ -100,7 +100,6 @@ To do so,
 4. Clicks **Approve**.
 
 
-
 ![](_images/partner-admin-policy-mappings-view-policy.PNG)
 
 
@@ -110,7 +109,7 @@ To do so,
 ![](_images/partner-admin-policy-mappings-approve.PNG)
 
 
-Once the request is approved, the partner can view the status being updated to Approved instead of InProgress.
+Once the request is approved, the partner can view the status being updated to `Approved` instead of `InProgress`.
 
 
 ![](_images/auth-partner-policy-mapping-data-approved.PNG)
@@ -118,9 +117,14 @@ Once the request is approved, the partner can view the status being updated to A
 
 ### Generating the API Key
 
-•	Partner logins after the Partner Policy Mapping is approved by the Partner admin and generates the API key with an unique label
+Partner logins after the Partner Policy Mapping is approved by the Partner admin and generates the API key with an unique label. To do so,
 
+1. Partner clicks `Partner Policy Mapping` on the left navigation pane.
+2. From the actions menu, click **Generate API Key**.
+3. Partner enters a unique value for the `Label` field. 
+4. Click **Generate**.
 
+The API key is generated and can be used by the partner.
 
 ![](_images/auth-partner-generate-apikey-option.PNG)
 
