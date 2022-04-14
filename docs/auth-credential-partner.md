@@ -91,8 +91,29 @@ Once this is done, you will see a message saying "Policy mapping grequest submit
 
 ### Approval/ Rejection of partner policy mapping
 
-Once the partner policy mapping request is raised by the partner, the Partner admin has the privilege to approve/ reject the mapping.
+Once the Partner Policy Mapping request is raised by the partner, the Partner admin has the privilege to approve/ reject the mapping. 
+To do so,
 
+1. Partner admin logs into the PMS portal and clicks on `Partner Policy Mapping` in the left navigation pane.
+2. Selects the policy mapping that needs an approval.
+3. From the action menu against the policy mapping, selects **Manage Policy**.
+4. Clicks **Approve**.
+
+
+
+![](_images/partner-admin-policy-mappings-view-policy.PNG)
+
+
+![](_images/partner-admin-policy-mappings-manage-policy.PNG)
+
+
+![](_images/partner-admin-policy-mappings-approve.PNG)
+
+
+Once the request is approved, the partner can view the status being updated to Approved instead of InProgress.
+
+
+![](_images/auth-partner-policy-mapping-data-approved.PNG)
 
 
 ### Generating the API Key
