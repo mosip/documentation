@@ -11,7 +11,6 @@ Below is the workflow that includes the registration process for an Auth/ Creden
 *	Partner admin approves/rejects partner policy mapping.
 *	Partner logins after the approval and generates the API key for the approved partner policy mapping using an unique label.
 
-
 ### Self-registration
 
 * The Auth/ Credential partner can register themselves on MOSIP PMS portal by clicking **Register** on the landing page.
@@ -30,8 +29,7 @@ To view the details entered, click **Home** to see the dashboard.
 ![](_images/auth-partner-map-policy-page.PNG)
 
 
-
-### Policy group mapping
+### Policy Group mapping
 
 On successful registration, the partner can see their username displayed on the top right corner.
 
@@ -40,7 +38,7 @@ On successful registration, the partner can see their username displayed on the 
 
 ![](_images/auth-partner-dashboard.PNG)
 
-### Uploading of Certificates
+### Upload of Certificates
 
 #### CA Certificate upload
 
@@ -72,19 +70,24 @@ Similarly, the Partner certificates can be added by the Partner admin/ partner.
 ![](_images/auth-partner-upload-cert-success.PNG)
 
 
-### Mapping policy to the Policy group
+### Mapping policy to policy group
 
-Once the CA certificate is uploaded by the partner admin, 
+Once the certificates are uploaded,  
 
-1. Partner maps the policy to the Policy group by clicking on **Partner Policy Mapping** on the left navigation pane.
+1. Partner maps the policy to the Policy group by clicking on **Partner Policy Mapping -> +Map Policy**.
 2. Partner enters the Partner Name.
 3. Selects the Auth Policy Name from the dropdown.
 4. Enters a value for the Request Details (unique value) and clicks **Save**.
 
+![](_images/auth-partner-policy-mapping-default-page.PNG)
 
-![](_images/auth-partner-upload-cert-success.PNG)
+![](_images/auth-partner-policy-mapping-data.PNG)
 
-Once this is done, you will see a message saying "policy maapin grequest submitted successfully." Also, the status is displayed as "In progress" and this means that the partner cannot generate the API key until the request is approved by the Partner admin.
+Once this is done, you will see a message saying "Policy mapping grequest submitted successfully." Also, the status is displayed as "In progress" and this means that the partner cannot generate the API key until the request is approved by the Partner admin.
+
+![](_images/auth-partner-policy-mapping-request-success.PNG)
+
+![](_images/auth-partner-policy-mapping-page-view.PNG)
 
 ### Approval/ Rejection of partner policy mapping
 
