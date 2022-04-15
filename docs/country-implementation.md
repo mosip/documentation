@@ -27,8 +27,8 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 1. Engagement with an SI - terms and conditions.
 2. Procurement of biometric and other external components.
 3. HSM
-4. [Postgres](broken-reference)
-5. [Object store](broken-reference)
+4. [Postgres](broken-reference/)
+5. [Object store](broken-reference/)
 6. Compute hardware
 
 ## Country specific data
@@ -43,7 +43,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 ## Deployment
 
 1. [Certifcate/key generation](keys.md)
-2. Production grade deployment design.
+2. Production grade deployment design.  Refer [Production Deployment](production-deployment.md).
 3. Disaster recover set up
 4. Biometric thresholding
 5. Phased implementation
@@ -61,4 +61,3 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 1. Set up of registration centers
 2. Onboarding of officers and supervisors
 3. Training
-
