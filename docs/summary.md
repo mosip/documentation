@@ -73,6 +73,8 @@
   * [Masterdata Guide](masterdata-guide.md)
   * [Helm Charts](helm-charts.md)
 * [Country Implementation](country-implementation.md)
+* Integrations
+  * [MOSIP OpenCRVS](mosip-opencrvs-integration.md)
 * [API](api.md)
 * [Community](community/README.md)
   * [Contributions](contributions.md)
