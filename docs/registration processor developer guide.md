@@ -82,6 +82,8 @@ The server should now be up and running.
 `spring.profiles.active=default`
 spring.profiles.active can be dmz or mz(default)
 
+9. Instead of point 8 to start any particular stage add the dependency of stage which needs to be executed in mosip stage executor pom then add kernel auth adaptor jar in the classpath and add the above properties mentioned in point 8 in mosip stage executor then do the maven upgrade ,start mosip stage executor.
+
 
 
 
