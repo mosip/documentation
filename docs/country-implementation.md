@@ -61,3 +61,4 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 1. Set up of registration centers
 2. Onboarding of officers and supervisors
 3. Training
+
