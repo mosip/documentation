@@ -1,4 +1,4 @@
-# ID Repository Developers' Guide
+# ID Repository Identity Service Developers' Guide
 
 ## Overview
 
