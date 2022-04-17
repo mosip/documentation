@@ -91,18 +91,53 @@ Once this is done, you will see a message saying "Policy mapping grequest submit
 
 ### Approval/ Rejection of partner policy mapping
 
-Once the partner policy mapping request is raised by the partner, the Partner admin has the privilege to approve/ reject the mapping.
+Once the Partner Policy Mapping request is raised by the partner, the Partner admin has the privilege to approve/ reject the mapping. 
+To do so,
 
+1. Partner admin logs into the PMS portal and clicks on `Partner Policy Mapping` in the left navigation pane.
+2. Selects the policy mapping that needs an approval.
+3. From the action menu against the policy mapping, selects **Manage Policy**.
+4. Clicks **Approve**.
+
+
+![](_images/partner-admin-policy-mappings-view-policy.PNG)
+
+
+![](_images/partner-admin-policy-mappings-manage-policy.PNG)
+
+
+![](_images/partner-admin-policy-mappings-approve.PNG)
+
+
+Once the request is approved, the partner can view the status being updated to `Approved` instead of `InProgress`.
+
+
+![](_images/auth-partner-policy-mapping-data-approved.PNG)
 
 
 ### Generating the API Key
 
+Partner logins after the Partner Policy Mapping is approved by the Partner admin and generates the API key with an unique label. To do so,
+
+1. Partner clicks `Partner Policy Mapping` on the left navigation pane.
+2. From the actions menu, click **Generate API Key**.
+3. Partner enters a unique value for the `Label` field. 
+4. Click **Generate**.
+
+The API key is generated and can be used by the partner.
+
+![](_images/auth-partner-generate-apikey-option.PNG)
 
 
+![](_images/auth-partner-generate-apikey-page.PNG)
 
 
+![](_images/auth-partner-genearted-apikeys-page.PNG)
 
 
+![](_images/auth-partner-generate-apikey-success.PNG)
+
+The partner can also deactivate a particular API Key by clicking on the cross-mark (X) next to it. Please note, once deactivated, it cannot be activated again. You may need to generate a new API key as per requirement. 
 
 
 

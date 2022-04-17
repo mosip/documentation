@@ -32,15 +32,12 @@ Configurations of each MOSIP module will be available here:
 * WebSub
 
 ## Database
-
-Refer to [Postgres DB configuration](postgres-db.md#configurations).
+Refer to [Postgres DB configuration](postgres-db.md#configuration-parameters).
 
 ## HSM
-
 Refer to [HSM configuration](hsm.md#configuration).
 
 ## Languages
-
 **Mandatory Languages** - Languages that the user has to fill (can be auto translated) during the pre-registration & registration.
 
 **Optional Languages** - Languages that are not mandatory but provided as a choice to the user. 
