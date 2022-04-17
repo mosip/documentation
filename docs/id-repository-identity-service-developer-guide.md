@@ -124,29 +124,3 @@ Below are the configurations to be done in Eclipse:
 <img src="_images/vm-arguments.png" width="750" height="450">
 
 1. Click Apply and then debug it (starts running). In the console, you can see a message like `"Started ResidentBootApplication in 34.078 seconds (JVM running for 38.361)"`.
-
-## Resident services API
-
-* For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
-
-* The APIs can be tested with the help of **Swagger-UI** and **Postman**. 
-
-* Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of resident-services for dev-environment from `https://dev.mosip.net/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config` and localhost from `http://localhost:8099/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config`.
-
-* Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services.
-
-* Download the [JSON collection](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/resident-services-config-files/Resident-Service-APIs.postman_collection.json) and then import it in your `postman`.
-
-<img src="_images/import-apis-in-postman.png" width="750" height="450">
-
-* Create an environment as shown in the image below. 
- 
-This environment is created for dev. Give the variable name as `url` and set both the values as `https://dev.mosip.net`.
-
-<img src="_images/dev-env-postman.png" width="750" height="400">
-
-* In the similar way, create another environment as shown below.
- 
-This environment is created for localhost. Give the variable name as `url` and set both the values as `http://localhost:8099`.
-
-<img src="_images/localhost-env-postman.png" width="750" height="400">
