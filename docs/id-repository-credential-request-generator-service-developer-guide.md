@@ -1,4 +1,4 @@
-# ID Repository Identity Service Developers' Guide
+# ID Repository Credential Request Generator Service Developers' Guide
 
 ## Overview
 
