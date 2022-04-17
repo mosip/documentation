@@ -8,7 +8,7 @@
 * Stores, updates, retrieves identity information and also to
 * Retrieves and updates UIN status.
 
-<img src="_images/identity-service.png" width="750" height="450">
+<img src="_images/id-repository-identity-service.png" width="750" height="450">
 
 Identity service uses Biometric SDK (server) to extract templates from provided biometric data.
 
