@@ -14,7 +14,7 @@
 
 SBI service is a software module running on a host that exposes the SBI interface to the host application like a registration client or authentication app. The service must run on any of the ports in the range 4501-4600. The host system could be any operating system - Windows, Android or IOS.
 
-## SBI Request/response specification
+## SBI request/response specification
 
 The following communication interfaces are defined:
 
