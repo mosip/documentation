@@ -111,22 +111,4 @@ Policy management service also can run by following the above steps.
 
 * Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services.
 
-* Download the [JSON collection](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/partner-management-services-config-files/Resident-Service-APIs.postman_collection.json) and then import it in your `postman`.
-
-* To run above JSON collection, build [authention-demo-service](https://github.com/mosip/mosip-functional-tests/tree/release-1.2.0/authentication-demo-service) and start the service using 'authentication-demo-server-start.bat' file.
-
-<img src="_images/import-apis-in-postman.png" width="750" height="450">
-
-* Create an environment as shown in the image below. 
- 
-This environment is created for dev. Give the variable name as `url` and set both the values as `https://dev.mosip.net`.
-
-<img src="_images/dev-env-postman.png" width="750" height="400">
-
-* In the similar way, create another environment as shown below.
- 
-This environment is created for localhost. Give the variable name as `url` and set both the values as `http://localhost:8099`.
-
-<img src="_images/localhost-env-postman.png" width="750" height="400">
-
-
+* Download the [JSON collection](https://github.com/mosip/mosip-onboarding) and then import it in your `postman`.
