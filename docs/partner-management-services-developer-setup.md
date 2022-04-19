@@ -109,6 +109,6 @@ Policy management service also can run by following the above steps.
 
 * Can access Swagger-UI of policy-management-services for dev-environment from `https://dev.mosip.net/v1/policymanager/swagger-ui/index.html?configUrl=/v1/policymanager/v3/api-docs/swagger-config` and localhost from `http://localhost:9107/v1/policymanager/swagger-ui/index.html?configUrl=/v1/policymanager/v3/api-docs/swagger-config`.
 
-* Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services.
+* Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing.
 
 * Download the [JSON collection](https://github.com/mosip/mosip-onboarding) and then import it in your `postman`.
