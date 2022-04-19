@@ -35,7 +35,7 @@ The documentation here will guide you through the prerequisites required for the
 
 ## Software setup
 
-Below are a list of tools required in Resident Services:
+Below are a list of tools required in ID Repoistory Services:
 
 1. JDK 11
 2. Any IDE (like Eclipse, IntelliJ IDEA)
@@ -48,7 +48,7 @@ Below are a list of tools required in Resident Services:
 9. settings.xml (document)
 
 
-Follow the steps below to set up Resident Services on your local system:
+Follow the steps below to set up ID Repository Services on your local system:
 
 1. Download `lombok.jar` and `settings.xml` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files).
 
@@ -88,7 +88,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 3. Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
 
-4. As Resident Services is using two properties files, `resident-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files) for reference.
+4. As Id Repository is using two properties files, `id-repository-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files) for reference.
 
 5. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/resident-services-config-files/config-server-start.bat).
 
@@ -98,16 +98,18 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
  
   ```java -jar -Dspring.profiles.active=native  -Dspring.cloud.config.server.native.search-locations=file:C:\Users\myDell\mosipProject\mosip-config\sandbox-local -Dspring.cloud.config.server.accept-empty=true  -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 kernel-config-server-1.2.0-20201016.134941-57.jar```.
 
-As mentioned in step 4, you may have to make some changes in the two properties files.
+As mentioned in step 4, you may have to make some changes in the properties files.
 
 For instance,
 
-  * Add `mosip.mosip.resident.client.secret=xyz789` property to be able to use a decrypted passcode and run it in your local machine. 
+  * The value of `mosip.mosip.resident.client.secret` property need to be updated with the current password to be able to use a decrypted passcode and run it in your local machine. 
   * If you are running it on a server, then you have to use an encrypted passcode like this `mosip.mosip.resident.client.secret={cipher}1bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f`.
   * Comment this out `auth.server.admin.issuer.internal.uri` in `application-default` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
+  * Comment out all the lines containing `mosip.biometric.sdk.providers.finger`, `mosip.biometric.sdk.providers.face` and `mosip.biometric.sdk.providers.iris` in id-repository-default.properties.
+  * Set value of `mosip.kernel.xsdstorage-uri` in application-default.properties to sandbox-local folder location(For example: mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
+  * Set value of `mosip.idrepo.db.url=dev.mosip.net` and `mosip.idrepo.db.port=30090` in id-repository-default.properties.
+  * Set value of `db.dbuser.password=mosip123` in application-default.properties.
   * If you check the URLs present in these files, they are set to default with port no. 80 (or any other port number) but you need to use external URL to access it.
-  * In the beginning of `resident-default` file, add `mosipbox.public.url=https://${domain.url}` and change all other URLs with `${mosipbox.public.url}`. 
-  * This is because you will pass this domain URL in Eclipse VM arguments like this `-Ddomain.url=dev.mosip.net` which results in `mosipbox.public.url=https://dev.mosip.net` and it will connect with the Development environment.
 
 7. Run the server by opening the `config-server-start.bat` file.
 
@@ -117,15 +119,40 @@ The server should now be up and running.
 
 Below are the configurations to be done in Eclipse:
 
-1. Open Eclipse and run the project for one time as `Java application`, so that it will create a Java application which you can see in debug configurations and then change its name. (e.g.: project name with environment - "Resident-dev").
+1. Open Eclipse and run the project for one time as `Java application`, so that it will create a Java application which you can see in debug configurations and then change its name. (e.g.: project name with environment - "credential-service-dev").
 
 <img src="_images/create-env-in-eclipse.png" width="750" height="450">
 
-1. Open the arguments and pass this `-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master` in VM arguments. 
+2. Open the arguments and pass this `-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master` in VM arguments. 
 
-1. Here, the domain URL represents the environment on which you are working (eg., it can be ```dev2.mosip.net``` or ```qa3.mosip.net```).
+3. Here, the domain URL represents the environment on which you are working (eg., it can be ```dev2.mosip.net``` or ```qa3.mosip.net```).
 
 <img src="_images/vm-arguments.png" width="750" height="450">
 
-1. Click Apply and then debug it (starts running). In the console, you can see a message like `"Started ResidentBootApplication in 34.078 seconds (JVM running for 38.361)"`.
+4. Click Apply and then debug it (starts running).
 
+## Credential service API
+​
+* For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
+​
+* The APIs can be tested with the help of **Swagger-UI** and **Postman**. 
+​
+* Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of resident-services for dev-environment from `https://dev.mosip.net/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config` and localhost from `http://localhost:8099/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config`.
+​
+* Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services.
+​
+* Download the [JSON collection](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/resident-services-config-files/Resident-Service-APIs.postman_collection.json) and then import it in your `postman`.
+​
+<img src="_images/import-apis-in-postman.png" width="750" height="450">
+​
+* Create an environment as shown in the image below. 
+ 
+This environment is created for dev. Give the variable name as `url` and set both the values as `https://dev.mosip.net`.
+​
+<img src="_images/dev-env-postman.png" width="750" height="400">
+​
+* In the similar way, create another environment as shown below.
+ 
+This environment is created for localhost. Give the variable name as `url` and set both the values as `http://localhost:8099`.
+​
+<img src="_images/localhost-env-postman.png" width="750" height="400">
