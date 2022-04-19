@@ -44,7 +44,7 @@ Below are a list of tools required in Resident Services:
 9. settings.xml (document)
 
 
-Follow the steps below to set up Resident Services on your local system:
+Follow the steps below to set up ID Repository Services on your local system:
 
 1. Download `lombok.jar` and `settings.xml` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files).
 
@@ -98,15 +98,14 @@ As mentioned in step 4, you may have to make some changes in the properties file
 
 For instance,
 
-  * Add `mosip.mosip.resident.client.secret=xyz789` property to be able to use a decrypted passcode and run it in your local machine. 
+  * The value of `mosip.mosip.resident.client.secret property need to be updated with the current password to be able to use a decrypted passcode and run it in your local machine. 
   * If you are running it on a server, then you have to use an encrypted passcode like this `mosip.mosip.resident.client.secret={cipher}1bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f`.
   * Comment this out `auth.server.admin.issuer.internal.uri` in `application-default` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
-  * Comment this out mosip.biometric.sdk.providers.finger, mosip.biometric.sdk.providers.face and mosip.biometric.sdk.providers.iris in id-repository-default.properties.
-  * Set value of mosip.kernel.xsdstorage-uri in application-default.properties to file:///home/vipul/Desktop/tspl/mosip-config/sandbox-local/ i.e.sandbox-local folder location.
+  * Comment out all the lines containing mosip.biometric.sdk.providers.finger, mosip.biometric.sdk.providers.face and mosip.biometric.sdk.providers.iris in id-repository-default.properties.
+  * Set value of mosip.kernel.xsdstorage-uri in application-default.properties to file:///home/user/Desktop/tspl/mosip-config/sandbox-local/ i.e.sandbox-local folder location.
   * Set value of mosip.idrepo.db.url=dev.mosip.net and mosip.idrepo.db.port=30090 in id-repository-default.properties.
+  * Set value of db.dbuser.password=mosip123 in application-default.properties.
   * If you check the URLs present in these files, they are set to default with port no. 80 (or any other port number) but you need to use external URL to access it.
-  * In the beginning of `resident-default` file, add `mosipbox.public.url=https://${domain.url}` and change all other URLs with `${mosipbox.public.url}`. 
-  * This is because you will pass this domain URL in Eclipse VM arguments like this `-Ddomain.url=dev.mosip.net` which results in `mosipbox.public.url=https://dev.mosip.net` and it will connect with the Development environment.
 
 7. Run the server by opening the `config-server-start.bat` file.
 
@@ -120,13 +119,13 @@ Below are the configurations to be done in Eclipse:
 
 <img src="_images/create-env-in-eclipse.png" width="750" height="450">
 
-1. Open the arguments and pass this `-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master` in VM arguments. 
+2. Open the arguments and pass this `-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master` in VM arguments. 
 
-1. Here, the domain URL represents the environment on which you are working (eg., it can be ```dev2.mosip.net``` or ```qa3.mosip.net```).
+3. Here, the domain URL represents the environment on which you are working (eg., it can be ```dev2.mosip.net``` or ```qa3.mosip.net```).
 
 <img src="_images/vm-arguments.png" width="750" height="450">
 
-1. Click Apply and then debug it (starts running). In the console, you can see a message like `"Started ResidentBootApplication in 34.078 seconds (JVM running for 38.361)"`.
+4. Click Apply and then debug it (starts running).
 
 ## Identity service API
 ​
