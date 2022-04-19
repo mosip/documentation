@@ -67,7 +67,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 4. As Partner Management Services is using two properties files, `partner-management-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/partner-management-services-config-files) for reference.
 
-5. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/partner-management-services-config-files/config-server-start.bat).
+5. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/NagarjunaKuchi/documentation/blob/1.2.0/docs/_files/partner-management-services-config-files/config-server-start.bat).
 
 6. Put both the files in the same folder and change the location attribute to `sandbox-local` folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` towards the end of the command. 
 
