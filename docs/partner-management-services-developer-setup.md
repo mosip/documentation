@@ -87,7 +87,7 @@ Below are the configurations to be done in Eclipse:
 
 1. Open Eclipse and run the project for one time as `Java application`, so that it will create a Java application which you can see in debug configurations and then change its name. (e.g.: project name with environment - "partner-management-dev").
 
-<img src="_images/create-env-in-eclipse.png" width="750" height="450">
+<img src="_images/partner-management-dev.png" width="750" height="450">
 
 1. Open the arguments and pass this `-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master` in VM arguments. 
 
