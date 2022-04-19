@@ -12,7 +12,7 @@ The documentation here will guide you through the pre-requisites required for th
 
 ## Software setup
 
-Below are a list of tools required in Resident Services:
+Below are a list of tools required in Partner Management Services:
 
 1. JDK 11
 2. Any IDE (like Eclipse, IntelliJ IDEA)
@@ -25,7 +25,7 @@ Below are a list of tools required in Resident Services:
 9. settings.xml (document)
 
 
-Follow the steps below to set up Resident Services on your local system:
+Follow the steps below to set up Partner Management Services on your local system:
 
 1. Download `lombok.jar` and `settings.xml` from [here](https://github.com/NagarjunaKuchi/documentation/tree/1.2.0/docs/_files/partner-management-services-config-files).
 
