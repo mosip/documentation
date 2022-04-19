@@ -22,10 +22,21 @@ This guide enables the Device provider partner to use the partner portal effecti
     * Address, e-mail, phone number
     * Username and password
 
-![](_images/auth-partner-self-register.PNG)
+![](_images/device-partner-self-register1.PNG)  ![](_images/device-partner-self-register2.PNG)
 
 To view the details entered, click **Home** to see the dashboard.
 
-### 
+![](_images/device-partner-home-page.PNG)
+
+### Upload of Certificates
+
+#### CA Certificate upload
+
+The Partner admin needs to upload the CA certificate to enable the partner for using the portal. To do so, the Partner admin:
+
+1. Clicks **Upload CA Certificate** option on the left navigation pane of the partner portal.
+2. Selects the Partner Domain.
+3. Chooses the certificate to upload (only files with extensions as .cer or .pem).
+4. Clicks **Upload**. 
 
 
