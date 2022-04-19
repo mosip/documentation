@@ -39,4 +39,22 @@ The Partner admin needs to upload the CA certificate to enable the partner for u
 3. Chooses the certificate to upload (only files with extensions as .cer or .pem).
 4. Clicks **Upload**. 
 
+The uploaded certificates can be viewed by clicking on `View Certificates-> View`.
+
+#### Partner Certificate upload
+
+Similarly, the Partner certificates can be added by the Partner admin/ partner.
+
+The certificate can be uploaded by clicking **Home-> Upload Certificate -> Upload**.
+
+![](_images/device-partner-cert-upload-success.PNG)
+
+The certificate can be viewed by clicking **Home-> View Certificate ->View**.
+
+![](_images/device-partner-view-cert-page.PNG)
+
+
+
+
+
 
