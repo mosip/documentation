@@ -4,6 +4,10 @@
 
 [Partner Management Services](https://docs.mosip.io/1.2.0/modules/partner-management-services) are the self-services which are used by the partners themselves via a portal. Partner Management Portal is a web based UI application that provides services to various types of partners. 
 
+Partner Management module has two services.
+ * Policy Management service
+ * Partner Management service
+
 The documentation here will guide you through the pre-requisites required for the developer's setup.
 
 ## Software setup
@@ -91,7 +95,7 @@ Below are the configurations to be done in Eclipse:
 
 <img src="_images/vm-arguments.png" width="750" height="450">
 
-1. Click Apply and then debug it (starts running). In the console, you can see a message like `"Started ResidentBootApplication in 34.078 seconds (JVM running for 38.361)"`.
+1. Click Apply and then debug it (starts running). In the console, you can see a message like `"Started PartnerManagementService in 34.078 seconds (JVM running for 38.361)"`.
 
 ## Partner management services API
 
@@ -99,7 +103,9 @@ Below are the configurations to be done in Eclipse:
 
 * The APIs can be tested with the help of **Swagger-UI** and **Postman**. 
 
-* Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of resident-services for dev-environment from `https://dev.mosip.net/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config` and localhost from `http://localhost:8099/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config`.
+* Swagger is an interface description language for describing restful APIs expressed using JSON. Can access Swagger-UI of partner-management-services for dev-environment from `https://dev.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config` and localhost from `http://localhost:9109/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config`.
+
+* Can access Swagger-UI of policy-management-services for dev-environment from `https://dev.mosip.net/v1/policymanager/swagger-ui/index.html?configUrl=/v1/policymanager/v3/api-docs/swagger-config` and localhost from `http://localhost:9107/v1/policymanager/swagger-ui/index.html?configUrl=/v1/policymanager/v3/api-docs/swagger-config`.
 
 * Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services.
 
