@@ -97,6 +97,8 @@ Below are the configurations to be done in Eclipse:
 
 1. Click Apply and then debug it (starts running). In the console, you can see a message like `"Started PartnerManagementService in 34.078 seconds (JVM running for 38.361)"`.
 
+Policy management service also can run by following the above steps.
+
 ## Partner management services API
 
 * For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
