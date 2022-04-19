@@ -1,0 +1,1 @@
+java -Denv.endpoint=https://api-internal.dev3.mosip.net/ -Djava.io.tmpdir=D:\newtemp -jar authentication-demo-service-1.2.0.1.jar
