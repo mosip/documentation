@@ -113,6 +113,8 @@ Policy management service also can run by following the above steps.
 
 * Download the [JSON collection](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/partner-management-services-config-files/Resident-Service-APIs.postman_collection.json) and then import it in your `postman`.
 
+* To run above JSON collection, build [authention-demo-service](https://github.com/mosip/mosip-functional-tests/tree/release-1.2.0/authentication-demo-service) and start the service using 'authentication-demo-server-start.bat' file.
+
 <img src="_images/import-apis-in-postman.png" width="750" height="450">
 
 * Create an environment as shown in the image below. 
