@@ -7,7 +7,7 @@ Below is the workflow that includes the registration process for an Auth/ Creden
 *	Partner selects the relevant Policy Group.
 *	Partner admin uploads CA certificate.
 *	Partner admin/ Partner uploads the partner certificate.
-*	Partner admin/ Partner maps the partner policy.
+*	Partner admin/ Partner maps the Partner Policy.
 *	Partner admin approves/rejects partner policy mapping.
 *	Partner logins after the approval and generates the API key for the approved partner policy mapping using an unique label.
 
