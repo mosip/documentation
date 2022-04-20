@@ -47,13 +47,45 @@ Similarly, the Partner certificates can be added by the Partner admin/ partner.
 
 The certificate can be uploaded by clicking **Home-> Upload Certificate -> Upload**.
 
+![](_images/device-partner-upload-cert.PNG)
+
 ![](_images/device-partner-cert-upload-success.PNG)
 
 The certificate can be viewed by clicking **Home-> View Certificate ->View**.
 
 ![](_images/device-partner-view-cert-page.PNG)
 
+## Device make and model
 
+### Creating Device details
+
+The partner can add devices on the portal. To do so,
+
+1. Partner clicks `Device details-> Create Device`.
+2. Enters the necessary details to create/add device like:
+    * Partner Name
+    * Device Type and Sub Type
+    * Make and Model
+3. Click **Save**.
+
+![](_images/device-make-model-defaultpage.PNG)
+
+![](_images/device-make-model-create1.PNG)
+
+![](_images/device-make-model-create-success.PNG)
+
+
+### Approval/ Rejection of Device details
+
+The Partner Admin can choose to approve/reject the device details entered by the partner.
+
+![](_images/partner-admin-device-details-view-page.PNG)
+
+![](_images/partner-admin-device-details-actions.PNG)
+
+![](_images/partner-admin-device-details-approve-action.PNG)
+
+###
 
 
 
