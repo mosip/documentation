@@ -85,8 +85,26 @@ The Partner Admin can choose to approve/reject the device details entered by the
 
 ![](_images/partner-admin-device-details-approve-action.PNG)
 
-###
+## SBI (Secure Biometric Interface) 
 
+### Creating SBI
+
+![](_images/device-sbi-create-page.PNG)
+
+![](_images/device-sbi-create-2-page.PNG)
+
+![](_images/device-sbi-create-success-page.PNG)
+
+
+### Approval/Rejection of SBI
+
+The Partner Admin can choose to approve/reject the device details entered by the partner.
+
+![](_images/partner-admin-sbi-details-view-page.PNG)
+
+![](_images/partner-admin-sbi-details-actions.PNG)
+
+![](_images/partner-admin-sbi-details-approve-action.PNG)
 
 
 
