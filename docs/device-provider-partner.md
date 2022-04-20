@@ -89,6 +89,8 @@ The Partner Admin can choose to approve/reject the device details entered by the
 
 ### Creating SBI
 
+The Partner can create SBI by filling the required details.
+
 ![](_images/device-sbi-create-page.PNG)
 
 ![](_images/device-sbi-create-2-page.PNG)
@@ -98,13 +100,25 @@ The Partner Admin can choose to approve/reject the device details entered by the
 
 ### Approval/Rejection of SBI
 
-The Partner Admin can choose to approve/reject the device details entered by the partner.
+The Partner Admin can choose to approve/reject the SBI details entered by the partner.
 
 ![](_images/partner-admin-sbi-details-view-page.PNG)
 
 ![](_images/partner-admin-sbi-details-actions.PNG)
 
 ![](_images/partner-admin-sbi-details-approve-action.PNG)
+
+## Mapping Device make and model with SBI
+
+The partner can map the device with a SBI.
+
+![](_images/device-make-model-sbi-mapping-menu.PNG)
+
+![](_images/device-make-model-sbi-mapping-page.PNG)
+
+![](_images/device-make-model-sbi-mapping-success-page.PNG)
+
+![](_images/device-make-model-sbi-mapping-success.PNG)
 
 
 
