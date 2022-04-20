@@ -104,7 +104,7 @@ For instance,
   * Comment out all the lines containing `mosip.biometric.sdk.providers.finger`, `mosip.biometric.sdk.providers.face` and `mosip.biometric.sdk.providers.iris` in id-repository-default.properties.
   * Set value of `mosip.kernel.xsdstorage-uri` in application-default.properties to sandbox-local folder location(For example: mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
   * Set value of `mosip.idrepo.db.url=dev.mosip.net` and `mosip.idrepo.db.port=30090` in id-repository-default.properties.
-  * Set value of `db.dbuser.password` in application-default.properties.
+  * Check and set value of `db.dbuser.password` in application-default.properties.
   * If you check the URLs present in these files, they are set to default with port no. 80 (or any other port number) but you need to use external URL to access it.
 
 7. Run the server by opening the `config-server-start.bat` file.
