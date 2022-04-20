@@ -83,7 +83,8 @@ Once the certificates are uploaded,
 
 ![](_images/auth-partner-policy-mapping-data.PNG)
 
-Once this is done, you will see a message saying "Policy mapping grequest submitted successfully." Also, the status is displayed as "In progress" and this means that the partner cannot generate the API key until the request is approved by the Partner admin.
+* Once this is done, you will see a message saying `Policy mapping grequest submitted successfully`. 
+* Also, the status is displayed as "In progress" and this means that the partner cannot generate the API key until the request is approved by the Partner admin.
 
 ![](_images/auth-partner-policy-mapping-request-success.PNG)
 
