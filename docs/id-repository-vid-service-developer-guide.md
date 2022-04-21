@@ -93,11 +93,11 @@ For instance,
   * The value of `mosip.mosip.resident.client.secret` property need to be updated with the current password to be able to use a decrypted passcode and run it in your local machine. 
   * If you are running it on a server, then you have to use an encrypted passcode like this `mosip.mosip.resident.client.secret={cipher}1bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f`.
   * Comment this out `auth.server.admin.issuer.internal.uri` in `application-default` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
+  * Check and set value for `db.dbuser.password` in application-default.properties.
+  * Set value of `mosip.kernel.xsdstorage-uri` in application-default.properties to sandbox-local folder location(For example: `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
   * Comment out all the lines containing `mosip.biometric.sdk.providers.finger`, `mosip.biometric.sdk.providers.face` and `mosip.biometric.sdk.providers.iris` in id-repository-default.properties.
   * Set value of `mosip.idrepo.mosip-config-url` in id-repository-default.properties to sandbox-local folder location(For example: `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
-  * Set value of `mosip.kernel.xsdstorage-uri` in application-default.properties to sandbox-local folder location(For example: `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
   * Set value of `mosip.idrepo.db.url=dev.mosip.net` and `mosip.idrepo.db.port=30090` in id-repository-default.properties.
-  * Check and set value for `db.dbuser.password` in application-default.properties.
   * If you check the URLs present in these files, they are set to default with port no. 80 (or any other port number) but you need to use external URL to access it.
 
 7. Run the server by opening the `config-server-start.bat` file.
@@ -120,28 +120,10 @@ Below are the configurations to be done in Eclipse:
 
 4. Click Apply and then debug it (starts running).
 
-## VID service API
+## VID Service API
 ​
 * For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
 ​
-* The APIs can be tested with the help of **Swagger-UI** and **Postman**. 
+* The APIs can be tested with the help of **Swagger-UI**. 
 ​
-* Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of resident-services for dev-environment from `https://dev.mosip.net/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config` and localhost from `http://localhost:8099/resident/v1/swagger-ui/index.html?configUrl=/resident/v1/v3/api-docs/swagger-config`.
-​
-* Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services.
-​
-* Download the [JSON collection](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/resident-services-config-files/Resident-Service-APIs.postman_collection.json) and then import it in your `postman`.
-​
-<img src="_images/import-apis-in-postman.png" width="750" height="450">
-​
-* Create an environment as shown in the image below. 
- 
-This environment is created for dev. Give the variable name as `url` and set both the values as `https://dev.mosip.net`.
-​
-<img src="_images/dev-env-postman.png" width="750" height="400">
-​
-* In the similar way, create another environment as shown below.
- 
-This environment is created for localhost. Give the variable name as `url` and set both the values as `http://localhost:8099`.
-​
-<img src="_images/localhost-env-postman.png" width="750" height="400">
+* Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of resident-services for dev-environment from `http://dev.mosip.net/idrepository/v1/swagger-ui/index.html?configUrl=/idrepository/v1/v3/api-docs/swagger-config#/` and localhost from `http://localhost:8091/idrepository/v1/swagger-ui/index.html?configUrl=/idrepository/v1/v3/api-docs/swagger-config#/`.
