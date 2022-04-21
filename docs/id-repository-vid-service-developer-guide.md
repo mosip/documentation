@@ -93,11 +93,11 @@ For instance,
   * The value of `mosip.mosip.resident.client.secret` property need to be updated with the current password to be able to use a decrypted passcode and run it in your local machine. 
   * If you are running it on a server, then you have to use an encrypted passcode like this `mosip.mosip.resident.client.secret={cipher}1bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f`.
   * Comment this out `auth.server.admin.issuer.internal.uri` in `application-default` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
-  * Check and set value for `db.dbuser.password` in application-default.properties.
-  * Set value of `mosip.kernel.xsdstorage-uri` in application-default.properties to sandbox-local folder location(For example: `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
-  * Comment out all the lines containing `mosip.biometric.sdk.providers.finger`, `mosip.biometric.sdk.providers.face` and `mosip.biometric.sdk.providers.iris` in id-repository-default.properties.
-  * Set value of `mosip.idrepo.mosip-config-url` in id-repository-default.properties to sandbox-local folder location(For example: `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
-  * Set value of `mosip.idrepo.db.url=dev.mosip.net` and `mosip.idrepo.db.port=30090` in id-repository-default.properties.
+  * Check and set value for `db.dbuser.password` in `application-default.properties`.
+  * Set value of `mosip.kernel.xsdstorage-uri` in `application-default.properties` to `sandbox-local` folder location(For example: `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
+  * Comment out all the lines containing `mosip.biometric.sdk.providers.finger`, `mosip.biometric.sdk.providers.face` and `mosip.biometric.sdk.providers.iris` in `id-repository-default.properties`.
+  * Set value of `mosip.idrepo.mosip-config-url` in `id-repository-default.properties` to `sandbox-local` folder location(For example: `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
+  * Set value of `mosip.idrepo.db.url=dev.mosip.net` and `mosip.idrepo.db.port=30090` in `id-repository-default.properties`.
   * If you check the URLs present in these files, they are set to default with port no. 80 (or any other port number) but you need to use external URL to access it.
 
 7. Run the server by opening the `config-server-start.bat` file.
