@@ -1,7 +1,7 @@
-# FTM Provider
+# Foundational Trust Provider
 
 ## Overview
-This guide enables the FTM provider partner to use the partner portal effectively. Below is the workflow:
+This guide enables the Foundational Trust providers to use the PMP portal effectively. Below is the workflow:
 
 *	Partner self-register through the portal.
 *	Partner admin and uploads CA certificate.
@@ -12,7 +12,7 @@ This guide enables the FTM provider partner to use the partner portal effectivel
 
 ### Self-registration
 
-* The FTM partner can register themselves on MOSIP PMP portal by clicking **Register** on the landing page.
+* The partner can register themselves on MOSIP PMP portal by clicking **Register** on the landing page.
 * They need to fill up a form with the details below:
     * First and Last name
     * Organization Name
@@ -20,11 +20,11 @@ This guide enables the FTM provider partner to use the partner portal effectivel
     * Address, e-mail, phone number
     * Username and password
 
-![](_images/device-partner-self-register1.PNG)  ![](_images/device-partner-self-register2.PNG)
+![](_images/ftm-partner-self-register1.PNG)  ![](_images/ftm-partner-self-register2.PNG)
 
 To view the details entered, click **Home** to see the dashboard.
 
-![](_images/device-partner-home-page.PNG)
+![](_images/ftm-partner-home-page.PNG)
 
 ### Upload of Certificates
 
@@ -45,11 +45,11 @@ Similarly, the Partner certificates can be added by the Partner admin/ partner.
 
 The certificate can be uploaded by clicking **Home-> Upload Certificate -> Upload**.
 
-![](_images/device-partner-upload-cert.PNG)
+![](_images/ftm-partner-cert-upload.PNG)
 
-![](_images/device-partner-cert-upload-success.PNG)
+![](_images/ftm-partner-cert-upload-success.PNG)
 
 The certificate can be viewed by clicking **Home-> View Certificate ->View**.
 
-![](_images/device-partner-view-cert-page.PNG)
+![](_images/ftm-partner-view-cert.PNG)
 
