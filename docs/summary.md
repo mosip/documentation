@@ -40,7 +40,7 @@
     * [Partner Management Portal](partner-management-portal.md)
     * [Auth Partner](auth-credential-partner.md)
     * [Device Provider](device-provider-partner.md)
-    * [Foundational Trust Provider](ftm.md)  
+    * [Foundational Trust Provider](ftm-partner.md)  
   * [Pre-registration](pre-registration.md)
     * [Pre-registration User Guide](pre-registration-user-guide.md)
     * [Pre-registration UI Specifications](pre-registration-ui-specifications.md)
