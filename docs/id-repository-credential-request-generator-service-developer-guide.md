@@ -119,22 +119,6 @@ Below are the configurations to be done in Eclipse:
 ​
 * For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
 ​
-* The APIs can be tested with the help of **Swagger-UI** and **Postman**. 
+* The APIs can be tested with the help of **Swagger-UI**. 
 ​
 * Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of credential-request-generator-services for dev-environment from `https://localhost:8094/v1/credentialrequest/swagger-ui/index.html?configUrl=/v1/credentialrequest/v3/api-docs/swagger-config#/` and localhost from `https://localhost:8094/v1/credentialrequest/swagger-ui/index.html?configUrl=/v1/credentialrequest/v3/api-docs/swagger-config#/`.
-​
-* Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services.
-​
-<img src="_images/import-apis-in-postman.png" width="750" height="450">
-​
-* Create an environment as shown in the image below. 
- 
-This environment is created for dev. Give the variable name as `url` and set both the values as `https://dev.mosip.net`.
-​
-<img src="_images/dev-env-postman.png" width="750" height="400">
-​
-* In the similar way, create another environment as shown below.
- 
-This environment is created for localhost. Give the variable name as `url` and set both the values as `http://localhost:8099`.
-​
-<img src="_images/localhost-env-postman.png" width="750" height="400">
