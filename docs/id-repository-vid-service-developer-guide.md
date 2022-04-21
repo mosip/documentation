@@ -120,6 +120,7 @@ Below are the configurations to be done in Eclipse:
 
 4. Click Apply and then debug it (starts running).
 
+
 ## VID Service API
 ​
 * For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
