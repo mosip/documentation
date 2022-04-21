@@ -103,7 +103,7 @@ For instance,
   * Comment this out `auth.server.admin.issuer.internal.uri` in `application-default` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
   * Set value of `mosip.kernel.xsdstorage-uri` in `application-default.properties` to `sandbox-local` folder location(For example: `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
   * Check and set value of `db.dbuser.password` in `application-default.properties`.
-  * Set value of `mosip.idrepo.db.url=dev.mosip.net` and `mosip.idrepo.db.port=30090` in `id-repository-default.properties`.
+  * Check and set value of `mosip.idrepo.db.url` and `mosip.idrepo.db.port` in `id-repository-default.properties`(For Example: `mosip.idrepo.db.url=dev.mosip.net` and `mosip.idrepo.db.port=30090`).
   * Comment out all the lines containing `mosip.biometric.sdk.providers.finger`, `mosip.biometric.sdk.providers.face` and `mosip.biometric.sdk.providers.iris` in `id-repository-default.properties`.
   * If you check the URLs present in these files, they are set to default with port no. 80 (or any other port number) but you need to use external URL to access it.
 
