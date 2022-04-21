@@ -122,7 +122,6 @@ Below are the configurations to be done in Eclipse:
 
 
 ## VID Service API
-​
 * For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
 ​
 * The APIs can be tested with the help of **Swagger-UI**. 
