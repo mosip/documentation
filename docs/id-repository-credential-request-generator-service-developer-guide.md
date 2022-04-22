@@ -74,7 +74,7 @@ Properties to be updated:
 `application-default.properties`
 * `mosip.mosip.resident.client.secret = <current_password>`.
 * `db.dbuser.password=<password>`.
-* `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`(i.e. sandbox-local folder location).
+* `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`(i.e. `sandbox-local` folder location).
 *  Comment this out `auth.server.admin.issuer.internal.uri` in `application-default.properties` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
 
 `id-repository-default.properties`
