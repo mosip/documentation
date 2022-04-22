@@ -68,7 +68,9 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 3. Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
 
 4. As Id Repository is using two properties files, `id-repository-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-repository-config-files) for reference. 
+
 Properties to be updated:
+
 `application-default.properties`
 * `mosip.mosip.resident.client.secret = <current_password>`.
 * `db.dbuser.password=<password>`.
