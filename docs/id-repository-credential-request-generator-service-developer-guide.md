@@ -1,30 +1,16 @@
-# ID Repository Identity Service Developers' Guide
+# ID Repository Credential Request Generator Service Developers' Guide
 
 ## Overview
 
 [ID Repository](https://docs.mosip.io/1.2.0/modules/id-repository) contains the records of identity of an individual, and provides API based mechanism to store, retrieve and update identity details by other MOSIP modules. ID Repository is used by Registration Processor, ID Authentication and Resident Services
 
-## Identity Service
-* Stores, updates, retrieves identity information and also to
-* Retrieves and updates UIN status.
+## Credential Request Generator Service
+This service creates request for credential issuance.
 
-<img src="_images/id-repository-identity-service.png" width="750" height="450">
+<img src="_images/id-repository-credential-request-generator-service.png" width="750" height="100">
 
-Identity service uses Biometric SDK (server) to extract templates from provided biometric data.
-
-Above is the entity relationship diagram illustrated for Identity service. NOTE: The numbers do not signify sequence of operations or control flow. Arrows indicate the data flow.
 1. Key Manager encrypts/decrypts data.
-2. Credential request generator issues credentials for new/updated UIN data.
-3. Object Store stores/retrieves biometrics and demographic documents.
-4. All demographic data of UIN and references to biometric and demographic files stored in object store are stored in mosip_idrepo DB.
-5. Partner management service retrieves online verification partners to issue credentials.
-6. Audit logs are logged into Audit Manager.
-7. Biometric SDK extracts the templates for input biometric data.
-8. Auth Adapter integrates with KeyCloak for authentication.
-9. Masterdata service retreives Identity schema based on input schema version.
-10. WebSub publishes events related to UIN updation and auth type status updates.
-11. Kernel ID generator generates UIN.
-12. VID service fetches the list of VIDs associated with UIN to issue credential of update UIN and to create and activate draft VID.
+2. Auth Adapter integrates with KeyCloak for authentication.
 
 The documentation here will guide you through the prerequisites required for the developer' setup.
 
@@ -100,11 +86,13 @@ For instance,
 
   * The value of `mosip.mosip.resident.client.secret` property need to be updated with the current password to be able to use a decrypted passcode and run it in your local machine. 
   * If you are running it on a server, then you have to use an encrypted passcode like this `mosip.mosip.resident.client.secret={cipher}1bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f`.
-  * Comment this out `auth.server.admin.issuer.internal.uri` in `application-default` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
+  * Comment this out `auth.server.admin.issuer.internal.uri` in `application-default.properties` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
+  * Check and Set value of `db.dbuser.password` in `application-default.properties`.
   * Set value of `mosip.kernel.xsdstorage-uri` in `application-default.properties` to `sandbox-local` folder location(For example: `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
-  * Check and set value of `db.dbuser.password` in `application-default.properties`.
-  * Check and set value of `mosip.idrepo.db.url` and `mosip.idrepo.db.port` in `id-repository-default.properties`(For Example: `mosip.idrepo.db.url=dev.mosip.net` and `mosip.idrepo.db.port=30090`).
+  * Set value of `mosip.kernel.xsdstorage-uri` in `application-default.properties` to `sandbox-local` folder location(For example: `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
+  * Check and set value for `mosip.credential.service.database.hostname` and `mosip.credential.service.database.port` in `id-repository-default.properties`.
   * Comment out all the lines containing `mosip.biometric.sdk.providers.finger`, `mosip.biometric.sdk.providers.face` and `mosip.biometric.sdk.providers.iris` in `id-repository-default.properties`.
+  * Check and set value of `mosip.idrepo.db.url` and `mosip.idrepo.db.port` in `id-repository-default.properties` (For Example: `mosip.idrepo.db.url=dev.mosip.net` and `mosip.idrepo.db.port=30090`).
   * If you check the URLs present in these files, they are set to default with port no. 80 (or any other port number) but you need to use external URL to access it.
 
 7. Run the server by opening the `config-server-start.bat` file.
@@ -115,7 +103,7 @@ The server should now be up and running.
 
 Below are the configurations to be done in Eclipse:
 
-1. Open Eclipse and run the project for one time as `Java application`, so that it will create a Java application which you can see in debug configurations and then change its name. (e.g.: project name with environment - "Identity-Service-dev").
+1. Open Eclipse and run the project for one time as `Java application`, so that it will create a Java application which you can see in debug configurations and then change its name. (e.g.: project name with environment - "Credential-request-generator-dev").
 
 <img src="_images/create-env-in-eclipse.png" width="750" height="450">
 
@@ -127,9 +115,10 @@ Below are the configurations to be done in Eclipse:
 
 4. Click Apply and then debug it (starts running).
 
-## Identity service API
+## Credential Request Generator Service API
+​
 * For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
 ​
 * The APIs can be tested with the help of **Swagger-UI**. 
 ​
-* Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of identity-services for dev-environment from `http://dev.mosip.net/idrepository/v1/identity/swagger-ui/index.html?configUrl=/idrepository/v1/identity/v3/api-docs/swagger-config#/` and localhost from `http://localhost:8090/idrepository/v1/identity/swagger-ui/index.html?configUrl=/idrepository/v1/identity/v3/api-docs/swagger-config#/`.
+* Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of credential-request-generator-services for dev-environment from `https://localhost:8094/v1/credentialrequest/swagger-ui/index.html?configUrl=/v1/credentialrequest/v3/api-docs/swagger-config#/` and localhost from `https://localhost:8094/v1/credentialrequest/swagger-ui/index.html?configUrl=/v1/credentialrequest/v3/api-docs/swagger-config#/`.
