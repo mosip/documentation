@@ -84,8 +84,8 @@ Properties to be updated:
 *  Comment this out `auth.server.admin.issuer.internal.uri` in `application-default.properties` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
 
 `id-repository-default.properties`
-* `mosip.credential.service.database.hostname`
-* `mosip.credential.service.database.port` 
+* `mosip.idrepo.db.url`
+* `mosip.idrepo.db.port`
 * Comment out all the lines containing `mosip.biometric.sdk.providers.finger`, `mosip.biometric.sdk.providers.face` and `mosip.biometric.sdk.providers.iris`.
 * `mosip.idrepo.mosip-config-url=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`(i.e. `sandbox-local` folder location).
 
