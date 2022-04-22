@@ -67,7 +67,18 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 3. Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
 
-4. As Id Repository is using two properties files, `id-repository-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-repository-config-files) for reference.
+4. As Id Repository is using two properties files, `id-repository-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-repository-config-files) for reference. 
+Properties to be updated:
+`application-default.properties`
+* `mosip.mosip.resident.client.secret = <current_password>`.
+* `db.dbuser.password=<password>`.
+* `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`(i.e. sandbox-local folder location).
+*  Comment this out `auth.server.admin.issuer.internal.uri` in `application-default.properties` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
+
+`id-repository-default.properties`
+* `mosip.credential.service.database.hostname`
+* `mosip.credential.service.database.port` 
+
 
 5. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/id-repository-config-files/config-server-start.bat).
 
@@ -85,7 +96,6 @@ For instance,
   * If you are running it on a server, then you have to use an encrypted passcode like this `mosip.mosip.resident.client.secret={cipher}1bdd7e59ca3a9dbe66b47db3ecb7025e66a6746911de2bd841c804f`.
   * Comment this out `auth.server.admin.issuer.internal.uri` in `application-default.properties` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
   * Check and Set value of `db.dbuser.password` in `application-default.properties`.
-  * Set value of `mosip.kernel.xsdstorage-uri` in `application-default.properties` to `sandbox-local` folder location(For example: `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
   * Set value of `mosip.kernel.xsdstorage-uri` in `application-default.properties` to `sandbox-local` folder location(For example: `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`).
   * Check and set value for `mosip.credential.service.database.hostname` and `mosip.credential.service.database.port` in `id-repository-default.properties`.
   * Comment out all the lines containing `mosip.biometric.sdk.providers.finger`, `mosip.biometric.sdk.providers.face` and `mosip.biometric.sdk.providers.iris` in `id-repository-default.properties`.
