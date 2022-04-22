@@ -54,17 +54,19 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 3. Refer [Commons-DB-deploy](https://github.com/mosip/commons/blob/develop/db_scripts/README.md) to deploy local DB.
 
-4. Commons uses two property files, `kernel-default` and `application-default`, configure them accordly.For instance
+4. For integration with any of our environments, Please contact our team.
+
+5. Commons uses two property files, `kernel-default` and `application-default`, configure them accordly.For instance
 * Update `spring.mail.host` property to update SMTP host. 
 * Secrets can be encrypted using [config server](https://cloud.spring.io/spring-cloud-config/reference/html/#_encryption_and_decryption).
 * Update Url's in property files.(It can be either pointed to any remotely or locally deployed services).
 
-5. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For windows download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run ```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
+6. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For windows download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run ```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
 
-6. Run the server by opening the `config-server-start.bat` file.
+7. Run the server by opening the `config-server-start.bat` file.
 <img src="_images/run-server.png" width="750" height="450">
 
-7. To verify the config-server, hit the below URL ```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```.
+8. To verify the config-server, hit the below URL ```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```.
 
 
 ## Rest Services and Libraries

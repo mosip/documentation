@@ -47,11 +47,14 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 ## Environment setup
 
-1. Clone [mosip-config repository](https://github.com/mosip/mosip-config).
+1. Download [Auth adapter](https://oss.sonatype.org/#nexus-search;gav~~kernel-auth-adapter~1.2.0-SNAPSHOT~~) and add to project ```Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply and Close```.
+<img src="_images/add-external-library.png" width="750" height="450">
 
-2. Refer [Keymanager-DB-deploy](https://github.com/mosip/keymanager/blob/develop/db_scripts/README.md) to deploy local DB.
+2. Clone [mosip-config repository](https://github.com/mosip/mosip-config).
 
-3. Keymanager uses two property files, `kernel-default` and `application-default`, configure them accordly.For instance
+3. Refer [Keymanager-DB-deploy](https://github.com/mosip/keymanager/blob/develop/db_scripts/README.md) to deploy local DB.
+
+4. Keymanager uses two property files, `kernel-default` and `application-default`, configure them accordly.For instance
 * Keymanager needs a Keystore to store keys. Supported Keystore types: PKCS11, PKCS12, Offline, JCE. 
 
     ```
@@ -66,12 +69,12 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 * Secrets can be encrypted using [config server](https://cloud.spring.io/spring-cloud-config/reference/html/#_encryption_and_decryption).
 * Update Url's in property files.(It can be either pointed to any remotely or locally deployed services)
 
-4. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For windows download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run ```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
+5. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For windows download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run ```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
 
-5. Run the server by opening the `config-server-start.bat` file.
+6. Run the server by opening the `config-server-start.bat` file.
 <img src="_images/run-server.png" width="750" height="450">
 
-6. To verify the config-server, hit the below URL ```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```.
+7. To verify the config-server, hit the below URL ```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```.
 
 
 ## Run and Uses
