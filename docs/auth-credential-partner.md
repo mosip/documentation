@@ -7,7 +7,7 @@ Below is the workflow that includes the registration process for an Auth/ Creden
 *	Partner selects the relevant Policy Group.
 *	Partner admin uploads CA certificate.
 *	Partner admin/ Partner uploads the partner certificate.
-*	Partner admin/ Partner maps the partner policy.
+*	Partner admin/ Partner maps the Partner Policy.
 *	Partner admin approves/rejects partner policy mapping.
 *	Partner logins after the approval and generates the API key for the approved partner policy mapping using an unique label.
 
@@ -83,7 +83,8 @@ Once the certificates are uploaded,
 
 ![](_images/auth-partner-policy-mapping-data.PNG)
 
-Once this is done, you will see a message saying "Policy mapping grequest submitted successfully." Also, the status is displayed as "In progress" and this means that the partner cannot generate the API key until the request is approved by the Partner admin.
+* Once this is done, you will see a message saying `Policy mapping grequest submitted successfully`. 
+* Also, the status is displayed as "In progress" and this means that the partner cannot generate the API key until the request is approved by the Partner admin.
 
 ![](_images/auth-partner-policy-mapping-request-success.PNG)
 
