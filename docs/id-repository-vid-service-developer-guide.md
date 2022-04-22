@@ -1,10 +1,7 @@
-# ID Repository VID Service Developers' Guide
+# ID Repository: VID Service Developers' Guide
 
 ## Overview
 
-[ID Repository](https://docs.mosip.io/1.2.0/modules/id-repository) contains the records of identity of an individual, and provides API based mechanism to store, retrieve and update identity details by other MOSIP modules. ID Repository is used by Registration Processor, ID Authentication and Resident Services
-
-## VID Service
 VID Service provides functionality to create/update Virtual IDs mapped against an UIN. It also provides the facility to update status of VID. VIDs are created based on the VID policy defined in the configuration.
 
 <img src="_images/id-repository-vid-service.png" width="750" height="450">
@@ -38,7 +35,7 @@ Below are a list of tools required in ID Repoistory Services:
 
 Follow the steps below to set up ID Repository Services on your local system:
 
-1. Download `lombok.jar` and `settings.xml` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files).
+1. Download `lombok.jar` and `settings.xml` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-repsoitory-config-files).
 
 2. Unzip Apache Maven and move the unzipped folder in ```C:\Program Files``` and `settings.xml` to "conf" folder `C:\Program Files\apache-maven-3.8.4\conf`.
 
@@ -60,7 +57,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 1. Open the project folder where `pom.xml` is present.
 1. Open command prompt from the same folder.
-1. Run the command `mvn clean install -Dgpg.skip=true -DskipTests=true` to build the project and wait for the build to complete successfully.
+1. Run the command `mvn clean install -Dgpg.skip=true` to build the project and wait for the build to complete successfully.
 1. After building of a project, open Eclipse and select `Import Projects → Maven → Existing Maven Projects → Next → Browse to project directory → Finish`.
 1. After successful importing of project, update the project by right-click on `Project → Maven → Update Project`.
 
@@ -76,9 +73,22 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 3. Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
 
-4. As Id Repository is using two properties files, `id-repository-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/resident-services-config-files) for reference.
+4. As Id Repository is using two properties files, `id-repository-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-repository-config-files) for reference.
 
-5. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/resident-services-config-files/config-server-start.bat).
+Properties to be updated:
+
+`application-default.properties`
+* `mosip.mosip.resident.client.secret = <current_password>`.
+* `db.dbuser.password=<password>`.
+* `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`(i.e. `sandbox-local` folder location).
+*  Comment this out `auth.server.admin.issuer.internal.uri` in `application-default.properties` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
+
+`id-repository-default.properties`
+* `mosip.credential.service.database.hostname`
+* `mosip.credential.service.database.port` 
+* `mosip.idrepo.mosip-config-url=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`(i.e. `sandbox-local` folder location).
+
+5. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/id-repository-config-files/config-server-start.bat).
 
 6. Put both the files in the same folder and change the location attribute to `sandbox-local` folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` towards the end of the command. 
 
@@ -126,4 +136,4 @@ Below are the configurations to be done in Eclipse:
 ​
 * The APIs can be tested with the help of **Swagger-UI**. 
 ​
-* Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of resident-services for dev-environment from `http://dev.mosip.net/idrepository/v1/swagger-ui/index.html?configUrl=/idrepository/v1/v3/api-docs/swagger-config#/` and localhost from `http://localhost:8091/idrepository/v1/swagger-ui/index.html?configUrl=/idrepository/v1/v3/api-docs/swagger-config#/`.
+* Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of resident-services for localhost from `http://localhost:8091/idrepository/v1/swagger-ui/index.html?configUrl=/idrepository/v1/v3/api-docs/swagger-config#/`.
