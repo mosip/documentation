@@ -174,17 +174,17 @@ Detailed Metrics for all 14 modules is available below:
 
 **Response Time Percentile Graph using Jmeter**
 
-![](audit_manager_50_jmeter_response_time_percentile_graph.png)
+![](<audit\_manager\_50\_jmeter\_response\_time\_percentile\_graph (1).png>)
 
 **CPU and Memory Utilization Graphs using Grafana**
 
-![](audit_manager_50_grafana_CPU_utilization.png)
+![](audit\_manager\_50\_grafana\_CPU\_utilization.png)
 
-![](audit_manager_50_grafana_memory_utilization.png)
+![](audit\_manager\_50\_grafana\_memory\_utilization.png)
 
 **Application Response Time Graph from Kibana**
 
-![](audit_manager_50_kibana_api_response_time.png)
+![](audit\_manager\_50\_kibana\_api\_response\_time.png)
 
 **Dependent Application Response Time Graph from Kibana**
 
@@ -200,17 +200,17 @@ _Dependency app graph for auth manager service was empty so not attached._
 
 **Response Time Percentile Graph using Jmeter**
 
-![](audit_manager_30_jmeter_response_time_percentile_graph.png)
+![](audit\_manager\_30\_jmeter\_response\_time\_percentile\_graph.png)
 
 **CPU and Memory Utilization Graphs using Grafana**
 
-![](audit_manager_30_grafana_CPU_utilization.png)
+![](audit\_manager\_30\_grafana\_CPU\_utilization.png)
 
-![](audit_manager_30_grafana_memory_utilization.png)
+![](audit\_manager\_30\_grafana\_memory\_utilization.png)
 
 **Application Response Time Graph from Kibana**
 
-![](audit_manager_30_kibana_api_response_time.png)
+![](audit\_manager\_30\_kibana\_api\_response\_time.png)
 
 **Dependent Application Response Time Graph from Kibana**
 
@@ -571,7 +571,7 @@ _**Note:** registration processor stage group 1 service is a vertx app, so there
 | Get Client Settings API Execution | 52127     | 690     | 692    | 902      | 1001     | 1199     | 79   | 1900 | 0.00%   | 14.478     | 2524.09         | 27.51       |
 | Get Configs API Execution         | 18717     | 1923    | 1806   | 2206     | 2386     | 3310     | 1006 | 4100 | 0.00%   | 5.19704    | 240.42          | 9.39        |
 | Get LatestID Schema API Execution | 298200    | 603     | 416    | 1369     | 1780     | 2732     | 21   | 7979 | 0.00%   | 82.82468   | 1262.19         | 149.96      |
-| Get CA certificates API Execution  | 220333    | 816     | 599    | 1747     | 2248     | 3424     | 28   | 8297 | 0.00%   | 61.19382   | 6613.03         | 110.02      |
+| Get CA certificates API Execution | 220333    | 816     | 599    | 1747     | 2248     | 3424     | 28   | 8297 | 0.00%   | 61.19382   | 6613.03         | 110.02      |
 
 **Response Time Percentile Graph using Jmeter**
 
@@ -613,7 +613,7 @@ _**Note:** registration processor stage group 1 service is a vertx app, so there
 
 **Response Time Percentile Graph using Jmeter**
 
-![](Aspose.Words.847091e4-d70a-4b8a-b618-47c1e39d7377.005.png)
+![](<Aspose.Words.847091e4-d70a-4b8a-b618-47c1e39d7377.005 (1).png>)
 
 **CPU and Memory Utilization Graphs using Grafana**
 
@@ -1066,15 +1066,15 @@ _**Notes:** Pre-registration is connected to the internal database because when 
 #### 30 concurrency
 
 * 90th Percentile response time
-  * Publish (10 subscribers, 8 topics) - 0.221 sec&#x20;
-  * End to end message delivery (10 subscribers, 8 topics) -&#x20;
+  * Publish (10 subscribers, 8 topics) - 0.221 sec
+  * End to end message delivery (10 subscribers, 8 topics) -
     * finalAvgNinetiethPercentile=5777.9 sec finalAvgTurnAroundTime=3327.8 sec
     * Aggregate Report from Jmeter
 * Aggregate Report from Jmeter
 
-| Label                      | # Samples | Average | Median | 90% Line | 95% Line | 99% Line | Min  | Max   | Error % | Throughput | Received KB/sec | Sent KB/sec |
-| -------------------------- | --------- | ------- | ------ | -------- | -------- | -------- | ---- | ----- | ------- | ---------- | --------------- | ----------- |
-| Publish Messages           | 605668    | 177     | 173    | 221      | 239      | 295      | 5    | 1759  | 0.00%   | 168.2339   | 52.74           | 333.1       |
+| Label            | # Samples | Average | Median | 90% Line | 95% Line | 99% Line | Min | Max  | Error % | Throughput | Received KB/sec | Sent KB/sec |
+| ---------------- | --------- | ------- | ------ | -------- | -------- | -------- | --- | ---- | ------- | ---------- | --------------- | ----------- |
+| Publish Messages | 605668    | 177     | 173    | 221      | 239      | 295      | 5   | 1759 | 0.00%   | 168.2339   | 52.74           | 333.1       |
 
 * Response Time Percentile Graph using Jmeter
 
@@ -1089,9 +1089,9 @@ _**Notes:** Pre-registration is connected to the internal database because when 
     * finalAvgTurnAroundTime = 5719.9 sec
 * Aggregate Report from Jmeter
 
-| Label                      | # Samples | Average | Median | 90% Line | 95% Line | 99% Line | Min  | Max   | Error % | Throughput | Received KB/sec | Sent KB/sec |
-| -------------------------- | --------- | ------- | ------ | -------- | -------- | -------- | ---- | ----- | ------- | ---------- | --------------- | ----------- |
-| Publish Messages           | 861179    | 208     | 202    | 252      | 270      | 316      | 4    | 2083  | 0.00%   | 239.2059   | 74.99           | 473.62      |
+| Label            | # Samples | Average | Median | 90% Line | 95% Line | 99% Line | Min | Max  | Error % | Throughput | Received KB/sec | Sent KB/sec |
+| ---------------- | --------- | ------- | ------ | -------- | -------- | -------- | --- | ---- | ------- | ---------- | --------------- | ----------- |
+| Publish Messages | 861179    | 208     | 202    | 252      | 270      | 316      | 4   | 2083 | 0.00%   | 239.2059   | 74.99           | 473.62      |
 
 * Response Time Percentile Graph using Jmeter
 

@@ -11,10 +11,7 @@ The key objectives of MOSIP are to:
 * Provide the basic framework to create a fully functional foundational identity system
 * Provide flexibility for a country to choose and customize the features from the basic framework according to their requirements
 * Maintain privacy, security and confidentiality of an individual's data
-* Provide a scalable and accessible solution to cater to a wide range of population (a few thousands to several hundreds of millions)
-* temporary line added
-
-
+* Provide a scalable and accessible solution to cater to a wide range of population (a few thousands to several hundreds of millions.
 
 ## Releases
 
