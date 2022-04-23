@@ -1080,7 +1080,7 @@ _**Notes:** Pre-registration is connected to the internal database because when 
 
 ![](Aspose.Words.fea725ad-4057-44f8-8d56-8443bdb3024e.005.png)
 
-### 50 concurrency
+#### 50 concurrency
 
 * 90th Percentile response time
   * Publish (10 subscribers, 8 topics) - 0.25 sec
