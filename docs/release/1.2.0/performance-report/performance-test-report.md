@@ -1078,7 +1078,7 @@ _**Notes:** Pre-registration is connected to the internal database because when 
 
 * Response time percentile graph from Jmeter
 
-![](Aspose.Words.fea725ad-4057-44f8-8d56-8443bdb3024e.005.png)
+![](Aspose.Words.668508f4-1422-4536-a598-08ce0b014cd1.001.png)
 
 #### 50 concurrency
 
@@ -1095,4 +1095,4 @@ _**Notes:** Pre-registration is connected to the internal database because when 
 
 * Response time percentile graph from Jmeter
 
-![](Aspose.Words.fea725ad-4057-44f8-8d56-8443bdb3024e.001.png)
+![](Aspose.Words.668508f4-1422-4536-a598-08ce0b014cd1.002.png)
