@@ -1072,9 +1072,27 @@ _**Notes:** Pre-registration is connected to the internal database because when 
     * Aggregate report from Jmeter
 * Aggregate report from Jmeter
 
-| Label             | # Samples | Average | Median | 90% Line | 95% Line | 99% Line | Min | Max  | Error % | Median |
-| ----------------- | --------- | ------- | ------ | -------- | -------- | -------- | --- | ---- | ------- | ------ |
-| ​Publish Messages | ​605668   | 177     | 173    | 221      | ​239     | 295      | ​5  | 1759 | ​0.00%  | ​173   |
+| Label            | # Samples | Average | Median | 90% Line | 95% Line | 99% Line | Min | Max  | Error % | Throughput | Received (KB/sec) | Sent (KB/sec) |
+| ---------------- | --------- | ------- | ------ | -------- | -------- | -------- | --- | ---- | ------- | ---------- | ----------------- | ---------- -------- |
+| Publish Messages | 605668    | 177     | 173    | 221      | 239      | 295      | 5   | 1759 | 0.00%   | 168.2339   | 52.74             | 333.1              |
 
 * Response time percentile graph from Jmeter
 
+![](Aspose.Words.fea725ad-4057-44f8-8d56-8443bdb3024e.005.png)
+
+### 50 concurrency
+
+* 90th Percentile response time
+  * Publish (10 subscribers, 8 topics) - 0.25 sec
+  * End to end message delivery (10 subscribers, 8 topics)
+    * finalAvgNinetiethPercentile = 9810 sec
+    * finalAvgTurnAroundTime = 5719.9 sec
+* Aggregate report from Jmeter
+
+| Label            | # Samples | Average | Median | 90% Line | 95% Line | 99% Line | Min | Max  | Error % | Throughput | Received (KB/sec) | Sent (KB/sec) |
+| ---------------- | --------- | ------- | ------ | -------- | -------- | -------- | --- | ---- | ------- | ---------- | ----------------- | ---------- -------- |
+| Publish Messages | 861179    | 208     | 202    | 252      | 270      | 316      | 4   | 2083 | 0.00%   | 239.2059   | 74.99             | 473.62              |
+
+* Response time percentile graph from Jmeter
+
+![](Aspose.Words.fea725ad-4057-44f8-8d56-8443bdb3024e.001.png)
