@@ -204,13 +204,13 @@ _Dependency app graph for auth manager service was empty so not attached._
 
 **CPU and Memory Utilization Graphs using Grafana**
 
-![](Aspose.Words.847091e4-d70a-4b8a-b618-47c1e39d7377.006.png)
+![](audit_manager_30_grafana_CPU_utilization.png)
 
-![](Aspose.Words.847091e4-d70a-4b8a-b618-47c1e39d7377.006.png)
+![](audit_manager_30_grafana_memory_utilization.png)
 
 **Application Response Time Graph from Kibana**
 
-![](Aspose.Words.847091e4-d70a-4b8a-b618-47c1e39d7377.004.png)
+![](audit_manager_30_kibana_api_response_time.png)
 
 **Dependent Application Response Time Graph from Kibana**
 
