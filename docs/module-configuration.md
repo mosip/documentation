@@ -19,7 +19,7 @@ Configurations of each MOSIP module will be available here:
 * Administration
 * Commons
 * Datashare
-* ID Authentication
+* [ID Authentication](id-authentication-services.md#configuration)
 * ID Repository
 * Key Manager
 * Packet Manager
@@ -32,19 +32,22 @@ Configurations of each MOSIP module will be available here:
 * WebSub
 
 ## Database
+
 Refer to [Postgres DB configuration](postgres-db.md#configuration-parameters).
 
 ## HSM
+
 Refer to [HSM configuration](hsm.md#configuration).
 
 ## Languages
+
 **Mandatory Languages** - Languages that the user has to fill (can be auto translated) during the pre-registration & registration.
 
-**Optional Languages** - Languages that are not mandatory but provided as a choice to the user. 
+**Optional Languages** - Languages that are not mandatory but provided as a choice to the user.
 
 **User selected Language** - The language that the user selected at the time of login. The choices shown are union of Mandatory and Optional languages. The labels and alerts will be use the user selected language
 
-**Prefered Language** - During registration of a registrant (user for whom identity is requested), he can choose his prefered language. This preference use used for all further notification (email, SMS or any other notification). 
+**Prefered Language** - During registration of a registrant (user for whom identity is requested), he can choose his prefered language. This preference use used for all further notification (email, SMS or any other notification).
 
 Languages for the entire system are configured in application prorperties file:
 
@@ -52,6 +55,5 @@ Languages for the entire system are configured in application prorperties file:
 mosip.mandatory-languages=eng,tam
 mosip.optional-languages=fra,ara
 ```
-> The i18n file for the respective language has to be added to the artifactory [Artifactory](https://github.com/mosip/artifactory-ref-impl). 
-> The language codes are as per [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/code_list.php)
 
+> The i18n file for the respective language has to be added to the artifactory [Artifactory](https://github.com/mosip/artifactory-ref-impl). The language codes are as per [ISO 639-2](https://www.loc.gov/standards/iso639-2/php/code\_list.php)
