@@ -200,7 +200,7 @@ _Dependency app graph for auth manager service was empty so not attached._
 
 **Response Time Percentile Graph using Jmeter**
 
-![](Aspose.Words.847091e4-d70a-4b8a-b618-47c1e39d7377.005.png)
+![](audit_manager_30_jmeter_response_time_percentile_graph.png)
 
 **CPU and Memory Utilization Graphs using Grafana**
 
