@@ -41,6 +41,7 @@
     * [Auth Partner](auth-credential-partner.md)
     * [Device Provider](device-provider-partner.md)
     * [Foundational Trust Provider](ftm-partner.md)  
+    * [Partner Management Services Developers Guide](partner-management-services-developer-setup.md)
   * [Pre-registration](pre-registration.md)
     * [Pre-registration User Guide](pre-registration-user-guide.md)
     * [Pre-registration UI Specifications](pre-registration-ui-specifications.md)
