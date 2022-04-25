@@ -14,7 +14,7 @@ The documentation here will guide you through the prerequisites required for the
 
 ## Software setup
 
-Below are a list of tools required in ID Repoistory Services:
+Below are a list of tools required in ID Repository Services:
 
 1. JDK 11
 2. Any IDE (like Eclipse, IntelliJ IDEA)
@@ -31,7 +31,7 @@ Follow the steps below to set up ID Repository Services on your local system:
 
 1. Download `lombok.jar` and `settings.xml` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-repsoitory-config-files).
 
-2. Unzip Apache Maven and move the unzipped folder in ```C:\Program Files``` and `settings.xml` to "conf" folder `C:\Program Files\apache-maven-3.8.4\conf`.
+2. Unzip Apache Maven and move the unzipped folder in `C:\Program Files` and `settings.xml` to "conf" folder `C:\Program Files\apache-maven-3.8.4\conf`.
 
 3. Install Eclipse, open the `lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE and then click `Install/Update`.
 
@@ -67,7 +67,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 3. Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
 
-4. As Id Repository is using two properties files, `id-repository-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-repository-config-files) for reference. 
+4. As Id Repository is using two properties files, `id-repository-default` and `application-default`, you will have to configure them according to your environment. The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-repository-config-files) for reference. 
 
 Properties to be updated:
 
@@ -89,7 +89,7 @@ Properties to be updated:
 
  Example:
  
-  ```java -jar -Dspring.profiles.active=native  -Dspring.cloud.config.server.native.search-locations=file:C:\Users\myDell\mosipProject\mosip-config\sandbox-local -Dspring.cloud.config.server.accept-empty=true  -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 kernel-config-server-1.2.0-20201016.134941-57.jar```.
+  `java -jar -Dspring.profiles.active=native  -Dspring.cloud.config.server.native.search-locations=/home/vipul/Desktop/tspl/mosip-config/sandbox-local -Dspring.cloud.config.server.accept-empty=true  -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 kernel-config-server-1.2.0-20201016.134941-57.jar`.
 
 7. Run the server by opening the `config-server-start.bat` file.
 
