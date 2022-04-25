@@ -245,8 +245,13 @@ To map a user to a center,
 3. Select the **Center Name** from the dropdown against the User Name, Administrative Zone.
 4. Click **Save**.
 
-### Search and Dropdowns
-To get the results starting with specific character/ set of characters, prepend that specific character/set of characters with **"Asterisk"**. Similarly to get the results ending with specific character/ set of characters, append that specific character/ set of characters with **"Asterisk"**. For the results containing a specific character/ set of characters, prepend and append that specific character/ set of characters with **"Asterisk"**.
+### Search and dropdowns
+
+* To get the results starting with specific character/ set of characters, prepend that specific character/set of characters with `asterisk` symbol.
+* Similarly to get the results ending with specific character/ set of characters, append that specific character/ set of characters with `asterisk`.
+* For the results containing a specific character/ set of characters, prepend and append that specific character/ set of characters with `asterisk`.
+
+Below is the image illustrating the same.
 
 ![](_images/admin-masterdata-search-filter.png)
 
