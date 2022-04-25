@@ -245,6 +245,11 @@ To map a user to a center,
 3. Select the **Center Name** from the dropdown against the User Name, Administrative Zone.
 4. Click **Save**.
 
+### Search and Dropdowns
+To get the results starting with specific character/ set of characters, prepend that specific character/set of characters with **"Asterisk"**. Similarly to get the results ending with specific character/ set of characters, append that specific character/ set of characters with **"Asterisk"**. For the results containing a specific character/ set of characters, prepend and append that specific character/ set of characters with **"Asterisk"**.
+
+![](_images/admin-masterdata-search-filter.png)
+
 ## Packet status (based on RID)
 
 * A Registration packet generated in Registration client is sent to Registration Processor for further processing and UIN generation.
