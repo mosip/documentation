@@ -85,6 +85,7 @@ The server should now be up and running.
 
 `spring.profiles.active can be dmz or mz(default)`
 
+9. Alternative approach to start application is to place the dependency of application to be executed in the pom of `MOSIP stage executor` update maven and place above mentioned properties in the `bootstrap.properties` then start `MOSIP stage executor`
 
 
 
