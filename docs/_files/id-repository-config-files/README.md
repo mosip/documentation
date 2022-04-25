@@ -2,7 +2,7 @@
 
 ## Overview
 
-This folder contains the files required for local configurations of Resident services.
+This folder contains the files required for local configurations of ID Repository Services.
 
 1. lombok.jar 
 2. settings.xml
