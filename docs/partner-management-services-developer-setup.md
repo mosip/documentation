@@ -82,12 +82,13 @@ Below are the configurations to be done in Eclipse:
 
 ![](\_images/partner-management-dev.PNG)
 
-1. Open the arguments and pass this `-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master` in VM arguments.
-2. Here, the domain URL represents the environment on which you are working (eg., it can be `dev2.mosip.net` or `qa3.mosip.net`).
+2. Open the arguments and pass this `-Ddomain.url=dev.mosip.net -Dapplication.base.url=http://localhost:8090 -Dspring.profiles.active=default -Dspring.cloud.config.uri=http://localhost:51000/config -Dspring.cloud.config.label=master` in VM arguments.
+
+3. Here, the domain URL represents the environment on which you are working (eg., it can be `dev2.mosip.net` or `qa3.mosip.net`).
 
 ![](\_images/vm-arguments.png)
 
-1. Click Apply and then debug it (starts running). In the console, you can see a message like `"Started PartnerManagementService in 34.078 seconds (JVM running for 38.361)"`.
+4. Click Apply and then debug it (starts running). In the console, you can see a message like `"Started PartnerManagementService in 34.078 seconds (JVM running for 38.361)"`.
 
 Policy management service also can run by following the above steps.
 
