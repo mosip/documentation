@@ -90,10 +90,12 @@ Properties to be updated:
 * `db.dbuser.password=<password>`.
 * `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`(i.e. `sandbox-local` folder location).
 *  Comment this out `auth.server.admin.issuer.internal.uri` in `application-default.properties` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
+*  `mosip.identity.mapping-file=<Path_to_identity_mapping_json_file>`. (For Example: `file:///home/user/Desktop/tspl/mosip-config/sandbox-local/identity-mapping.json`)
 
 `id-repository-default.properties`
 * `mosip.idrepo.db.url`
 * `mosip.idrepo.db.port`
+* Comment out all the lines containing `mosip.biometric.sdk.providers.finger`, `mosip.biometric.sdk.providers.face` and `mosip.biometric.sdk.providers.iris`.
 * Comment out this property `mosip.kernel.idobjectvalidator.referenceValidator`.
 * `mosip.idrepo.mosip-config-url=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`(i.e. `sandbox-local` folder location).
 
