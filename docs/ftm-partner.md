@@ -53,3 +53,18 @@ The certificate can be viewed by clicking **Home-> View Certificate ->View**.
 
 ![](_images/ftm-partner-view-cert.PNG)
 
+### FTM Details
+
+#### Creating FTM Details
+
+The partner can create FTM details by,
+1. Clicking FTM Details -> Create FTM
+2. Filling up the information like Partner Name, Make and Model.
+3. Clicking Save.
+
+![](_images/ftm-partner-makemodel-view.PNG)
+
+![](_images/ftm-partner-create-make-model.PNG)
+
+![](_images/ftm-partner-create-makemodel-success.PNG)
+
