@@ -1,4 +1,4 @@
-# Credential Request Generator Service Developers' Guide
+# ID Repository- Credential Request Generator Service Developers' Guide
 
 ## Overview
 
@@ -13,7 +13,7 @@ The documentation here will guide you through the prerequisites required for the
 
 ## Software setup
 
-Below are a list of tools required in ID Repository Services (Credential Request Generator Service):
+Below are a list of tools required in ID Repository (Credential Request Generator Service) setup:
 
 1. JDK 11
 2. Any IDE (like Eclipse, IntelliJ IDEA)
