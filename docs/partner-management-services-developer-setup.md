@@ -13,7 +13,7 @@ The documentation here will guide you through the prerequisites required for the
 
 ## Software setup
 
-Below are a list of tools required in Partner Management Services:
+Below are a list of tools required in Partner Management Services setup:
 
 1. JDK 11
 2. Any IDE (like Eclipse, IntelliJ IDEA)
