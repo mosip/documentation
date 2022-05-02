@@ -179,7 +179,7 @@ Below is the sample API detail for reference URL.
 
 ##### Sample Encrypted Response
 
-The sample encrypted datashare is available here: [encrypted-datashare.txt](https://github.com/mosip/documentation/blob/1.1.5/docs/_files/abis/encrypted-datashare.txt)
+The sample encrypted datashare is available [here: encrypted-datashare.txt](https://github.com/mosip/documentation/blob/1.1.5/docs/_files/abis/encrypted-datashare.txt)
 
 {% hint style="info" %}
 
