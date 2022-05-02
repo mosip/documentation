@@ -1,4 +1,4 @@
-# OpenId Bridge Developers' Guide
+# Keymanager Developers' Guide
 
 ## Overview
 Refer [Keymanager](https://docs.mosip.io/1.2.0/modules/keymanager).
