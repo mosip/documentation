@@ -1,4 +1,4 @@
-# OpenId Bridge Developers' Guide
+# OpenID Bridge Developers' Guide
 
 ## Overview
 [OpenID-Bridge](https://docs.mosip.io/1.2.0/modules/commons) module provides AutnN and AuthZ related funtionalities.
@@ -63,7 +63,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 6. To verify the config-server, hit the below URL ```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```
 
 
-## Run and Uses
+## Initialization and utilization of module
 
 1. Audit REST service consist of ```bootstrap.properties``` file in ```src/main/resources``` 
 
