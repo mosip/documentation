@@ -36,7 +36,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 <img src="_images/websub-config-file-placement.png" width="550" height="250">
 2. Run configure and run Kafka, update ```KAFKA_BOOTSTRAP_NODE``` in ```Config.toml``` to point to your Kafka.
 
-## Run and Uses
+## Initialization and utilization of module
 
 1. WebSub consists of consolidator and hub.
 2. Consolidator should be started first, ``` Got to consolidator -> java -jar target/bin/<Jarname>.(Config.toml should be in the same place where you are running this command).
