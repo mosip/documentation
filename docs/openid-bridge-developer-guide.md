@@ -50,7 +50,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 1. Clone [mosip-config repository](https://github.com/mosip/mosip-config).
 
 2. Openid Bridge uses two property files, `kernel-default` and `application-default`, configure them accordingly.For instance
-* OpenId bridge connects to an IAM which supports Openid and Oauth. For integration with our keycloak, Please reach out to our team.
+* OpenID bridge connects to an IAM which supports Openid and Oauth. For integration with our keycloak, Please reach out to our team.
 * Update `mosip.iam.open-id-url` property to update iam url. 
 * Secrets can be encrypted using [config server](https://cloud.spring.io/spring-cloud-config/reference/html/#_encryption_and_decryption)
 * Update Url's in property files.(It can be either pointed to any remotely or locally deployed services)
