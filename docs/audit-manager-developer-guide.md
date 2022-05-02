@@ -1,10 +1,10 @@
 # Audit Manager Developers' Guide
 
 ## Overview
-[Audit-Manager](https://docs.mosip.io/1.2.0/modules/audit-manager) module provides audit related functionalities.
+[Audit-Manager](https://docs.mosip.io/1.2.0/modules/commons) module provides audit related functionalities.
 
 
-Below is a list of tools required in Commons:
+Below is a list of tools required in Audit:
 
 1. JDK 11
 2. Any IDE (like Eclipse, IntelliJ IDEA)
@@ -52,14 +52,14 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 2. Clone [mosip-config repository](https://github.com/mosip/mosip-config).
 
-3. Refer [Audit-DB-deploy](https://github.com/mosip/audit-manager/blob/develop/db_scripts/README.md) to deploy local DB.
+3. Refer [Audit-DB-deploy](https://github.com/mosip/audit-manager/tree/release-1.2.0/db_scripts/README.md) to deploy local DB.
 
-4. Audit uses two property files, `kernel-default` and `application-default`, configure them accordly.For instance
-* Update `mosip.kernel.auditmanager-service-logs-location` property to update localtion of log files. 
+4. Audit uses two property files, `kernel-default` and `application-default`, configure them accordingly.For instance
+* Update `mosip.kernel.auditmanager-service-logs-location` property to update location of log files. 
 * Secrets can be encrypted using [config server](https://cloud.spring.io/spring-cloud-config/reference/html/#_encryption_and_decryption).
-* Update Url's in property files.(It can be either pointed to any remotely or locally deployed services)
+* Update URL's in property files.(It can be either pointed to any remotely or locally deployed services)
 
-5. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For windows download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run ```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
+5. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For Windows, download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run ```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
 
 6. Run the server by opening the `config-server-start.bat` file.
 <img src="_images/run-server.png" width="750" height="450">
@@ -67,7 +67,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 7. To verify the config-server, hit the below URL ```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```.
 
 
-## Run and Uses
+## Initialization and Utilization
 
 1. Audit REST service consist of ```bootstrap.properties``` file in ```src/main/resources```.
 
@@ -85,7 +85,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 6. Swagger-UI of service can be accessed from `(https/http)://(<domain>/<host>:<port>)/<context-path>/swagger-ui/index.html?configUrl=<contect-path>/v3/api-docs/swagger-config` for instance ```https://dev2.mosip.net/v1/auditmanager/swagger-ui/index.html?configUrl=/v1/auditmanager/v3/api-docs/swagger-config```.
 
-7. The API's can be tried using postman.CURL command can be copied , host needs to be updated and imported in Postman.
+7. The API's can be tried using postman by copying CURL command below, updating host and importing in Postman.
 ```
 curl -X 'POST' \
   'https://<host>/v1/auditmanager/audits' \
