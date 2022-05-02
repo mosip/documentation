@@ -4,7 +4,7 @@
 Refer [Keymanager](https://docs.mosip.io/1.2.0/modules/keymanager).
 
 
-Below is a list of tools required in Commons:
+Below is a list of tools required in Keymanager:
 
 1. JDK 11
 2. Any IDE (like Eclipse, IntelliJ IDEA)
@@ -20,7 +20,7 @@ Below is a list of tools required in Commons:
 
 ### Software setup
 
-1. Download [lombok.jar](https://projectlombok.org/download) and [settings.xml](https://github.com/mosip/documentation/tree/develop/docs/_files/commons/settings.xml).
+1. Download [lombok.jar](https://projectlombok.org/download) and [settings.xml](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/commons/settings.xml).
 
 2. Unzip Apache Maven and move  `settings.xml` to "conf" folder `<apache maven unzip path>\conf`.
 
@@ -52,24 +52,24 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 2. Clone [mosip-config repository](https://github.com/mosip/mosip-config).
 
-3. Refer [Keymanager-DB-deploy](https://github.com/mosip/keymanager/blob/develop/db_scripts/README.md) to deploy local DB.
+3. Refer [Keymanager-DB-deploy](https://github.com/mosip/keymanager/blob/release-1.2.0/db_scripts/README.md) to deploy local DB.
 
-4. Keymanager uses two property files, `kernel-default` and `application-default`, configure them accordly.For instance
+4. Keymanager uses two property files, `kernel-default` and `application-default`, configure them accordingly.For instance
 * Keymanager needs a Keystore to store keys. Supported Keystore types: PKCS11, PKCS12, Offline, JCE. 
 
     ```
     # For PKCS11 provide Path of config file.
-    # For PKCS12 keystore type provide the p12/pfx file path. P12 file will be created internally so provide only file path & file name.
+    # For PKCS12 keystore type provide the p12/pfx file path. P12 file will be created internally so provide only file path and file name.
     # For Offline & JCE property can be left blank, specified value will be ignored.
     mosip.kernel.keymanager.hsm.config-path=/config/softhsm-application.conf
     # Passkey of keystore for PKCS11, PKCS12
-    # For Offline & JCE proer can be left blank. JCE password use other JCE specific properties.
+    # For Offline & JCE property can be left blank. JCE password use other JCE specific properties.
     mosip.kernel.keymanager.hsm.keystore-pass={cipher}2d6aa328be521b2be6f33f476f7df2ea39c7ae1a3e2146ec169c5fac3225da3f
     ```
 * Secrets can be encrypted using [config server](https://cloud.spring.io/spring-cloud-config/reference/html/#_encryption_and_decryption).
-* Update Url's in property files.(It can be either pointed to any remotely or locally deployed services)
+* Update URL's in property files.(It can be either pointed to any remotely or locally deployed services)
 
-5. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For windows download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run ```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
+5. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For Windows, download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run ```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
 
 6. Run the server by opening the `config-server-start.bat` file.
 <img src="_images/run-server.png" width="750" height="450">
@@ -77,7 +77,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 7. To verify the config-server, hit the below URL ```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```.
 
 
-## Run and Uses
+## Initialization and utilization of module
 
 1. Keymanager REST service consist of ```bootstrap.properties``` file in ```src/main/resources```.
 
