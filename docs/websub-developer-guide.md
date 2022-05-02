@@ -1,10 +1,10 @@
-# Websub Developers' Guide
+# WebSub Developers' Guide
 
 ## Overview
-[Websub](https://docs.mosip.io/1.2.0/modules/websub) module provides a common mechanism for communication between publishers of any kind of Web content and their subscribers, based on HTTP webhooks.
+[WebSub](https://docs.mosip.io/1.2.0/modules/websub) module provides a common mechanism for communication between publishers of any kind of Web content and their subscribers, based on HTTP webhooks.
 
 
-Below is a list of tools required in Commons:
+Below is a list of tools required in WebSub:
 
 1. Ballerina (Swan-Lake)
 2. Any IDE (like Vs Code)
@@ -38,7 +38,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 ## Run and Uses
 
-1. Websub consists of consolidator and hub.
+1. WebSub consists of consolidator and hub.
 2. Consolidator should be started first, ``` Got to consolidator -> java -jar target/bin/<Jarname>.(Config.toml should be in the same place where you are running this command).
-3. Start Websub with the same approach.
-4. The APIs can be tried with the help of [kernel-websub-api](https://github.com/mosip/commons/tree/develop/kernel/kernel-websubclient-api).
+3. Start WebSub with the same approach.
+4. The APIs can be tried with the help of [kernel-websub-api](https://github.com/mosip/commons/tree/release-1.2.0/kernel/kernel-websubclient-api).

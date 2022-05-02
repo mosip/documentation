@@ -20,7 +20,7 @@ Below is a list of tools required in Commons:
 
 ### Software setup
 
-1. Download [lombok.jar](https://projectlombok.org/download) and [settings.xml](https://github.com/mosip/documentation/tree/develop/docs/_files/commons/settings.xml).
+1. Download [lombok.jar](https://projectlombok.org/download) and [settings.xml](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/commons/settings.xml).
 
 2. Unzip Apache Maven and move  `settings.xml` to "conf" folder `<apache maven unzip path>\conf`.
 
@@ -52,11 +52,11 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 2. Clone [mosip-config repository](https://github.com/mosip/mosip-config).
 
-3. Refer [Commons-DB-deploy](https://github.com/mosip/commons/blob/develop/db_scripts/README.md) to deploy local DB.
+3. Refer [Commons-DB-deploy](https://github.com/mosip/commons/blob/release-1.2.0/db_scripts/README.md) to deploy local DB.
 
 4. For integration with any of our environments, Please contact our team.
 
-5. Commons uses two property files, `kernel-default` and `application-default`, configure them accordly.For instance
+5. Commons uses two property files, `kernel-default` and `application-default`, configure them accordingly. For instance
 * Update `spring.mail.host` property to update SMTP host. 
 * Secrets can be encrypted using [config server](https://cloud.spring.io/spring-cloud-config/reference/html/#_encryption_and_decryption).
 * Update Url's in property files.(It can be either pointed to any remotely or locally deployed services).
@@ -69,8 +69,8 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 8. To verify the config-server, hit the below URL ```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```.
 
 
-## Rest Services and Libraries
-<services name and single line>
+## Initialization and utilization of module
+
 1. Commons repo consists of two types of project REST services and libraries.
 
 2. Every REST service consist of ```bootstrap.properties``` file in ```src/main/resources``` 

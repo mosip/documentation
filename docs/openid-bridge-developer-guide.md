@@ -4,7 +4,7 @@
 [OpenID-Bridge](https://docs.mosip.io/1.2.0/modules/commons) module provides AutnN and AuthZ related funtionalities.
 
 
-Below is a list of tools required in Commons:
+Below is a list of tools required in OpenID Bridge:
 
 1. JDK 11
 2. Any IDE (like Eclipse, IntelliJ IDEA)
@@ -20,7 +20,7 @@ Below is a list of tools required in Commons:
 
 ### Software setup
 
-1. Download [lombok.jar](https://projectlombok.org/download) and [settings.xml](https://github.com/mosip/documentation/tree/develop/docs/_files/commons/settings.xml).
+1. Download [lombok.jar](https://projectlombok.org/download) and [settings.xml](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/commons/settings.xml).
 
 2. Unzip Apache Maven and move  `settings.xml` to "conf" folder `<apache maven unzip path>\conf`.
 
@@ -55,7 +55,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 * Secrets can be encrypted using [config server](https://cloud.spring.io/spring-cloud-config/reference/html/#_encryption_and_decryption)
 * Update Url's in property files.(It can be either pointed to any remotely or locally deployed services)
 
-3. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For windows download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run ```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
+3. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For Windows, download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run ```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
 
 5. Run the server by opening the `config-server-start.bat` file.
 <img src="_images/run-server.png" width="750" height="450">

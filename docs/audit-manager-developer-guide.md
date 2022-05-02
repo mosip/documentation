@@ -20,7 +20,7 @@ Below is a list of tools required in Audit:
 
 ### Software setup
 
-1. Download [lombok.jar](https://projectlombok.org/download) and [settings.xml](https://github.com/mosip/documentation/tree/develop/docs/_files/commons/settings.xml).
+1. Download [lombok.jar](https://projectlombok.org/download) and [settings.xml](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/commons/settings.xml).
 
 2. Unzip Apache Maven and move  `settings.xml` to "conf" folder `<apache maven unzip path>\conf`.
 
@@ -67,7 +67,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 7. To verify the config-server, hit the below URL ```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```.
 
 
-## Initialization and Utilization
+## Initialization and utilization of module
 
 1. Audit REST service consist of ```bootstrap.properties``` file in ```src/main/resources```.
 
