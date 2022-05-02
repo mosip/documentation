@@ -886,6 +886,17 @@ Target False Positive Identification Rate	| targetFPIR
 }
 ```
 
+### Failure response
+```JSON
+{
+  "id": "mosip.abis.ping",
+  "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
+  "responsetime": "2020-03-29T07:01:24.692Z",
+  "returnValue": "2",
+  "failureReason": "1"
+}
+```
+
 ## Pending Jobs
 * ABIS responds with the count of requests that are still pending.
 
@@ -910,6 +921,17 @@ Target False Positive Identification Rate	| targetFPIR
 }
 ```
 
+### Failure response
+```JSON
+{
+  "id": "mosip.abis.pendingJobs",
+  "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
+  "responsetime": "2020-03-29T07:01:24.692Z",
+  "returnValue": "2",
+  "failureReason": "1"
+}
+```
+
 ## Reference Count
 * ABIS will send a count of records in the reference database
 
@@ -931,6 +953,17 @@ Target False Positive Identification Rate	| targetFPIR
   "responsetime": "2020-03-29T07:01:24.692Z",
   "count": "10",
   "returnValue": "1"
+}
+```
+
+### Failure response
+```JSON
+{
+  "id": "mosip.abis.referenceCount",
+  "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
+  "responsetime": "2020-03-29T07:01:24.692Z",
+  "returnValue": "2",
+  "failureReason": "1"
 }
 ```
 
