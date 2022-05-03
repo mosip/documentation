@@ -30,6 +30,7 @@ Below is a list of tools required in Key Manager:
 4\. Check the Eclipse installation folder to see if the `lombok.jar` is added.
 
 5\. Configure the JDK (Standard VM) with your Eclipse by traversing through `Preferences → Java → Installed JREs`.
+
 <img src="_images/installed-jre.png" width="750" height="450">
 
 ### Source code setup
