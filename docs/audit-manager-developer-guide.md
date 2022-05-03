@@ -31,6 +31,7 @@ Below is a list of tools required in Audit:
 4\. Check the Eclipse installation folder to see if the `lombok.jar` is added.
 
 5\. Configure the JDK (Standard VM) with your Eclipse by traversing through `Preferences → Java → Installed JREs`.
+
 <img src="_images/installed-jre.png" width="750" height="450">
 
 ### Source code setup
@@ -70,7 +71,9 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 <img src="_images/run-server.png" width="750" height="450">
 
-7\. To verify the config-server, hit the below URL ```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```.
+7\. To verify the config-server, hit the below URL:
+
+```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```.
 
 
 ## Initialization and utilization of module
