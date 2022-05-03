@@ -1,7 +1,7 @@
 # Key Manager
 
 ## Overview 
-The Key Manager Service provides secure storage, provisioning and management of secret data. It provides all the cryptographic operations like encryption/decryption & digital signature/verification making one trust store for all partner trust path validation. It manages the lifecycle of encryption/decryption keys, including generation, distribution, administration, and deletion.
+The Key Manager Service provides secure storage, provisioning and management of secret data. It provides all the cryptographic operations like encryption/decryption and digital signature/verification making one trust store for all partner trust path validation. It manages the lifecycle of encryption/decryption keys, including generation, distribution, administration, and deletion.
 
 This includes keying material such as symmetric keys, asymmetric keys, certificates and algorithm data.  It is a web-based key management solution that helps consolidate, control, manage, monitor, all key generation and maintenance of key life cycle required in MOSIP. 
 
