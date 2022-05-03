@@ -30,6 +30,7 @@ Below is a list of tools required in OpenID Bridge:
 4. Check the Eclipse installation folder to see if the `lombok.jar` is added.
 
 5. Configure the JDK (Standard VM) with your Eclipse by traversing through `Preferences → Java → Installed JREs`.
+
 <img src="_images/installed-jre.png" width="750" height="450">
 
 ### Source code setup
@@ -43,6 +44,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 3. Run the command `mvn clean install -Dgpg.skip=true -DskipTests=true` to build the project .
 4. After building, open Eclipse and select `Import Projects → Maven → Existing Maven Projects → Next → Browse to project directory → Finish`.
 5. After successful importing of project, update the project by right-click on `Project → Maven → Update Project`.
+
 <img src="_images/import-project.png" width="750" height="450">
 
 ## Environment setup
@@ -57,7 +59,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 * Update Url's in property files.(It can be either pointed to any remotely or locally deployed services)
 
 3\. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). 
-For Windows, download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run
+For Windows, download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), Linux users can run
 
 ```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
 
