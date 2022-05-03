@@ -32,13 +32,13 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 ## Environment setup
 
-1. Copy ```websub-service.toml``` and ```websub-consolidator.toml``` file from [mosip-config repository](https://github.com/mosip/mosip-config) to hub and consolidator foler respectively and rename both of them as ```Config.toml```(Case Sensetive).
+1. Copy `websub-service.toml` and `websub-consolidator.toml` file from [mosip-config repository](https://github.com/mosip/mosip-config) to hub and consolidator folder respectively and rename both of them as `Config.toml`(case-sensitive).
 <img src="_images/websub-config-file-placement.png" width="550" height="250">
-2. Run configure and run Kafka, update `KAFKA_BOOTSTRAP_NODE` in `Config.toml` to point to your Kafka.
+2. Run Configure and run Kafka, update `KAFKA_BOOTSTRAP_NODE` in `Config.toml` to point to your Kafka.
 
 ## Initialization and utilization of module
 
 1. WebSub consists of consolidator and hub.
-2. Consolidator should be started first, ``` Got to consolidator -> java -jar target/bin/<Jarname>.(Config.toml should be in the same place where you are running this command).
+2. Consolidator should be started first, `Got to consolidator -> java -jar target/bin/<Jarname>`. (Config.toml should be in the same place where you are running this command).
 3. Start WebSub with the same approach.
 4. The APIs can be tried with the help of [kernel-websub-api](https://github.com/mosip/commons/tree/release-1.2.0/kernel/kernel-websubclient-api).
