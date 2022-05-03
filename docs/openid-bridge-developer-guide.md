@@ -47,25 +47,29 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 ## Environment setup
 
-1. Clone [mosip-config repository](https://github.com/mosip/mosip-config).
+1\. Clone [mosip-config repository](https://github.com/mosip/mosip-config).
 
-2. Openid Bridge uses two property files, `kernel-default` and `application-default`, configure them accordingly.For instance
+2\. OpenID Bridge uses two property files, `kernel-default` and `application-default`, configure them accordingly. For instance,
+
 * OpenID bridge connects to an IAM which supports Openid and Oauth. For integration with our keycloak, Please reach out to our team.
 * Update `mosip.iam.open-id-url` property to update iam url. 
 * Secrets can be encrypted using [config server](https://cloud.spring.io/spring-cloud-config/reference/html/#_encryption_and_decryption)
 * Update Url's in property files.(It can be either pointed to any remotely or locally deployed services)
 
-3. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For Windows, download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run ```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
+3\. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). 
+For Windows, download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run
 
-5. Run the server by opening the `config-server-start.bat` file.
+```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
+
+4\. Run the server by opening the `config-server-start.bat` file.
 <img src="_images/run-server.png" width="750" height="450">
 
-6. To verify the config-server, hit the below URL ```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```
+5\. To verify the config-server, hit the below URL: ```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```
 
 
 ## Initialization and utilization of module
 
-1. Audit REST service consist of ```bootstrap.properties``` file in ```src/main/resources``` 
+1. Audit REST service consists of `bootstrap.properties` file in `src/main/resources`. 
 
 2. Below properties needed to be modified in order to connect to the config server: 
      ```
@@ -73,15 +77,16 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
     spring.cloud.config.label=<branch of config repo>
     spring.profiles.active=default
     ```
-3. Services can be run using ``` Run As -> Spring Boot App/Java Application```.
+3. Services can be run using `Run As -> Spring Boot App/Java Application`.
 
 4. For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
 
 5. The API's can be tried with the help of **Swagger-UI** and **Postman**. 
 
-6. Swagger-UI of service can be accessed from `(https/http)://(<domain>/<host>:<port>)/<context-path>/swagger-ui/index.html?configUrl=<contect-path>/v3/api-docs/swagger-config` for instance ```https://dev2.mosip.net/v1/auditmanager/swagger-ui/index.html?configUrl=/v1/auditmanager/v3/api-docs/swagger-config```.
+6. Swagger-UI service can be accessed from `(https/http)://(<domain>/<host>:<port>)/<context-path>/swagger-ui/index.html?configUrl=<contect-path>/v3/api-docs/swagger-config` for instance `https://dev2.mosip.net/v1/auditmanager/swagger-ui/index.html?configUrl=/v1/auditmanager/v3/api-docs/swagger-config`.
 
-7. The Api's can be tried using postman. URLs and Body structures can be found in swagger or curl command can be copied and imported in Postman.
+7. The API's can be tried using postman. URLs and Body structures can be found in Swagger or curl command can be copied and imported in Postman.
+
 <img src="_images/postman-import-curl.png" width="750" height="450">
 
 
