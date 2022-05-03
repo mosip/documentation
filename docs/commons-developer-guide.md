@@ -24,11 +24,13 @@ Below is a list of tools required in Commons:
 2. Unzip Apache Maven and move  `settings.xml` to "conf" folder `<apache maven unzip path>\conf`.
 
 3. Install Eclipse, open the `lombok.jar` file and then click `Install/Update`.
+
 <img src="_images/lombok-configuration.png" width="750" height="450">
 
 4. Check the Eclipse installation folder to see if the `lombok.jar` is added.
 
 5. Configure the JDK (Standard VM) with your Eclipse by traversing through `Preferences → Java → Installed JREs`.
+
 <img src="_images/installed-jre.png" width="750" height="450">
 
 ### Source code setup
@@ -42,6 +44,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 3. Run the command `mvn clean install -Dgpg.skip=true -DskipTests=true` to build the project.
 4. After building, open Eclipse and select `Import Projects → Maven → Existing Maven Projects → Next → Browse to project directory → Finish`.
 5. After successful importing of project, update the project by right-click on `Project → Maven → Update Project`.
+
 <img src="_images/import-project.png" width="750" height="450">
 
 ## Environment setup
@@ -63,6 +66,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 6. Download [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~). For windows download [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/commons/config-server-start.bat), linux users can run ```java -jar -Dspring.profiles.active=native -Dspring.cloud.config.server.native.search-locations=file:{mosip-config-mt_folder_path}/config -Dspring.cloud.config.server.accept-empty=true -Dspring.cloud.config.server.git.force-pull=false -Dspring.cloud.config.server.git.cloneOnStart=false -Dspring.cloud.config.server.git.refreshRate=0 {jarName} ```.
 
 7. Run the server by opening the `config-server-start.bat` file.
+
 <img src="_images/run-server.png" width="750" height="450">
 
 8. To verify the config-server, hit the below URL ```http://localhost:51000/config/{spring.profiles.active}/{spring.cloud.config.name}/{spring.cloud.config.label}``` for instance ```http://localhost:51000/config/kernel/env/master```.
@@ -93,6 +97,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 9. Context-path of services is present in `bootstrap.properties` file in `src/main/resources` of every service.
 
 10. The API's can be tried using Postman. URLs and Body structures can be found in Swagger or curl command can be copied and imported in Postman.
+
 <img src="_images/postman-import-curl.png" width="750" height="450">
 
 
