@@ -3,7 +3,6 @@
 ## Overview
 [Commons](https://docs.mosip.io/1.2.0/modules/commons) module provides a bedrock to build and run services by providing several significant necessary technical operations. It contains common functionalities which are used by more than one module.
 
-
 Below is a list of tools required in Commons:
 
 1. JDK 11
@@ -54,9 +53,9 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 3. Refer [Commons-DB-deploy](https://github.com/mosip/commons/blob/release-1.2.0/db_scripts/README.md) to deploy local DB.
 
-4. For integration with any of our environments, Please contact our team.
+4. For integration with any of our environments, do reach out to our team.
 
-5. Commons uses two property files, `kernel-default` and `application-default`, configure them accordingly. For instance
+5. `Commons` uses two property files, `kernel-default` and `application-default`, configure them accordingly. For instance
 * Update `spring.mail.host` property to update SMTP host. 
 * Secrets can be encrypted using [config server](https://cloud.spring.io/spring-cloud-config/reference/html/#_encryption_and_decryption).
 * Update Url's in property files.(It can be either pointed to any remotely or locally deployed services).
@@ -71,9 +70,9 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 ## Initialization and utilization of module
 
-1. Commons repo consists of two types of project REST services and libraries.
+1. `Commons` repo consists of two types of project- REST services and libraries.
 
-2. Every REST service consist of ```bootstrap.properties``` file in ```src/main/resources``` 
+2. Every REST service consist of `bootstrap.properties` file in `src/main/resources`. 
 
 3. Below properties needed to be modified in order to connect to the config server:
      ```
@@ -81,7 +80,8 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
     spring.cloud.config.label=<branch of config repo>
     spring.profiles.active=default
     ```
-4. Services can be run using ``` Run As -> Spring Boot App/Java Application```.
+4. Services can be run using `Run As -> Spring Boot App/Java Application`.
+
 5. Libraries are not meant to be run alone they are projects used by commons as well as other modules of mosip to perform commons operations.
 
 6. For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
@@ -90,9 +90,9 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 8. Swagger-UI of services can be accessed from `(https/http)://(<domain>/<host>:<port>)/<context-path>/swagger-ui/index.html?configUrl=<contect-path>/v3/api-docs/swagger-config` for instance ```https://dev.mosip.net/v1/authmanager/swagger-ui/index.html?configUrl=/v1/authmanager/v3/api-docs/swagger-config```.
 
-9. Context-path of services is present in ```bootstrap.properties``` file in ``src/main/resources of every service.
+9. Context-path of services is present in `bootstrap.properties` file in `src/main/resources` of every service.
 
-10. The API's can be tried using postman. URLs and Body structures can be found in swagger or curl command can be copied and imported in Postman.
+10. The API's can be tried using Postman. URLs and Body structures can be found in Swagger or curl command can be copied and imported in Postman.
 <img src="_images/postman-import-curl.png" width="750" height="450">
 
 
