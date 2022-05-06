@@ -1,6 +1,7 @@
 # Foundational Trust Provider
 
 ## Overview
+
 This guide enables the Foundational Trust providers to use the PMP portal effectively. Below is the workflow:
 
 *	Partner self-register through the portal.
@@ -68,3 +69,27 @@ The partner can create FTM details by,
 
 ![](_images/ftm-partner-create-makemodel-success.PNG)
 
+#### FTM Certificate Upload
+
+The partner can upload FTM certificates by,
+1. Selecting **Upload Certificate** option from the Actions menu against the FTM created.
+2. Entering the Partner Domain as FTM and choosing the certificate file.
+3. Clicking Upload.
+
+![](_images/ftm-partner-chip-sub-menu.PNG)
+
+![](_images/ftm-partner-cert-upload.PNG)
+
+#### Approval/ rejection of the certificate
+
+The Partner Admin can choose to approve/ reject the FTM certificate uploaded. Below illustrates the workflow:
+
+![](_images/partner-admin-ftm-details-view-page.PNG)
+
+![](_images/partner-admin-ftm-details-actions.PNG)
+
+![](_images/partner-admin-ftm-details-approve-action.PNG)
+
+Finally, you can see the FTM activated.
+
+![](_images/ftm-active.png)
