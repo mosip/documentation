@@ -1,4 +1,3 @@
-# Pre-Registration
 The Pre-Registration module enables a resident to:
 	- Enter demographic data & upload supporting documents
 	- Book an appointment for one or many users for registration by choosing a suitable registration center and time slot
