@@ -1,4 +1,6 @@
-# Overview
+# Pre-Registration
+
+## Overview
 
 This module enables a resident to:
 
@@ -9,37 +11,40 @@ This module enables a resident to:
 
 Resident data is sent to the designated registration center before appointment that can be used during the registration process.
 
-# Detailed functionality
+## Detailed functionality
 
 For detailed functionality of Pre-registration features please view our page, [Pre-registration Functionality](Pre-Registration-Functionality.md).
 
-# Process flow
+## Process flow
 
 Process flow diagram for create and update flows in Pre-registration.
 
-![](_images/pre_registration/pre_registration_process_flow-create_or_update_applications.png)
+![](\_images/arch\_diagrams/pre\_registration\_process\_flow-create\_or\_update\_applications.png)
 
 Process flow diagram for cancel and discard flows in Pre-registration.
 
-![](_images/pre_registration/pre_registration_process_flow-cancel_or_discard_applications.png)
+![](\_images/arch\_diagrams/pre\_registration\_process\_flow-cancel\_or\_discard\_applications.png)
 
-# Services
+## Services
 
 For detailed description of Pre-registration services refer to [pre-registration repo](https://github.com/mosip/pre-registration).
 
 For high level and low level design refer to [pre-registration repo/design](https://github.com/mosip/pre-registration/design)
 
-# Logical View
+## Logical View
 
 Below is the diagram depicts the logical architecture of Pre-registration,
 
-![](_images/pre_registration/pre_registration-logic_architecture_diagram.png)
+![](\_images/arch\_diagrams/pre\_registration-logic\_architecture\_diagram.png)
 
-# Build and deploy
+## Build and deploy
+
 Refer to build and deploy instructions in [pre-registration repo](https://github.com/mosip/pre-registration).
 
-# APIs
+## APIs
+
 For detailed functionality of Pre-registration APIs please view our page, [Pre-registration APIs](Pre-Registration-APIs.md)
 
-# UI Reference Implementation
+## UI Reference Implementation
+
 MOSIP provides a reference implementation of the Pre-registration UI that may be customized as per country needs. The implementation is is available on [ref impl repo](https://github.com/mosip/mosip-ref-impl).

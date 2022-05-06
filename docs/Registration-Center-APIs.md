@@ -1,69 +1,76 @@
+# Registration Center APIs
+
 This section contains detail about the service APIs in the Registration Center Masterdata module
 
-* [Registration Centers API](#registration-centers-api)
-* [Registration Center - Device Mapping API](#registration-center-device-api)
-* [Registration Center - Machine Mapping API](#registration-center-machine-api)
-* [Registration Center - User - Machine Mapping API](#registration-center-user-machine-mapping-api)
-* [Registration Center - Machine - Device API](#registration-center-machine-device-api)
-* [Registration Center - Search API](#post-registrationcenterssearch)
-* [Registration Center - Filter values](#registration-center-filter-values)
-* [Registration Center Type - Search API](#post-registrationcentertypessearch)
-* [Registration Center Type - Filter values](#post-regcentertypesfiltervalues)
-* [Create/Update API](#createupdate-api)
-* [Search API](#search-api)
+* [Registration Centers API](Registration-Center-APIs.md#registration-centers-api)
+* [Registration Center - Device Mapping API](Registration-Center-APIs.md#registration-center-device-api)
+* [Registration Center - Machine Mapping API](Registration-Center-APIs.md#registration-center-machine-api)
+* [Registration Center - User - Machine Mapping API](Registration-Center-APIs.md#registration-center-user-machine-mapping-api)
+* [Registration Center - Machine - Device API](Registration-Center-APIs.md#registration-center-machine-device-api)
+* [Registration Center - Search API](Registration-Center-APIs.md#post-registrationcenterssearch)
+* [Registration Center - Filter values](Registration-Center-APIs.md#registration-center-filter-values)
+* [Registration Center Type - Search API](Registration-Center-APIs.md#post-registrationcentertypessearch)
+* [Registration Center Type - Filter values](Registration-Center-APIs.md#post-regcentertypesfiltervalues)
+* [Create/Update API](Registration-Center-APIs.md#createupdate-api)
+* [Search API](Registration-Center-APIs.md#search-api)
 
-# Registration Centers API
+## Registration Centers API
+
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Center functionality. Fetch APIs are used by Pre-Registration to display the List of Registration Centers on the UI for an Applicant to select and book appointments. Registration processor also uses the fetch API to validate if a packet is generated in an Authorized Registration Center or not.
 
-* [POST /registrationcenters](#post-registrationcenters)
-* [PUT /registrationcenters](#put-registrationcenters)
-* [GET /registrationcenters](#get-registrationcenters)
-* [GET /registrationcenters/{id}/{languagecode}](#get-registrationcentersidlanguagecode)
-* [GET /getregistrationcenterholidays/{languagecode}/{registrationcenterid}/{year}](#get-getregistrationcenterholidayslanguagecoderegistrationcenteridyear)
-* [GET /getlocspecificregistrationcenters/{langcode}/{locationcode}](#get-getlocspecificregistrationcenterslangcodelocationcode)
-* [GET /getcoordinatespecificregistrationcenters/{languagecode}/{longitude}/{latitude}/{proximitydistance}](#get-getcoordinatespecificregistrationcenterslanguagecodelongitudelatitudeproximitydistance)
-* [GET /registrationcentershistory/{id}/{languagecode}/{eff_dtimes}](#get-registrationcentershistoryidlanguagecodeeff_dtimes)
-* [GET /getregistrationmachineusermappinghistory/{eff_dtimes}/{registrationcenterid}/{machineid}/{userid}](#get-getregistrationmachineusermappinghistoryeff_dtimesregistrationcenteridmachineiduserid)
-* [GET /getlocspecificregistrationcenters/{hierarchylevel}/{textvalue}/{languagecode}](#get-getlocspecificregistrationcentershierarchyleveltextvaluelanguagecode)
+* [POST /registrationcenters](Registration-Center-APIs.md#post-registrationcenters)
+* [PUT /registrationcenters](Registration-Center-APIs.md#put-registrationcenters)
+* [GET /registrationcenters](Registration-Center-APIs.md#get-registrationcenters)
+* [GET /registrationcenters/{id}/{languagecode}](Registration-Center-APIs.md#get-registrationcentersidlanguagecode)
+* [GET /getregistrationcenterholidays/{languagecode}/{registrationcenterid}/{year}](Registration-Center-APIs.md#get-getregistrationcenterholidayslanguagecoderegistrationcenteridyear)
+* [GET /getlocspecificregistrationcenters/{langcode}/{locationcode}](Registration-Center-APIs.md#get-getlocspecificregistrationcenterslangcodelocationcode)
+* [GET /getcoordinatespecificregistrationcenters/{languagecode}/{longitude}/{latitude}/{proximitydistance}](Registration-Center-APIs.md#get-getcoordinatespecificregistrationcenterslanguagecodelongitudelatitudeproximitydistance)
+* [GET /registrationcentershistory/{id}/{languagecode}/{eff\_dtimes}](Registration-Center-APIs.md#get-registrationcentershistoryidlanguagecodeeff\_dtimes)
+* [GET /getregistrationmachineusermappinghistory/{eff\_dtimes}/{registrationcenterid}/{machineid}/{userid}](Registration-Center-APIs.md#get-getregistrationmachineusermappinghistoryeff\_dtimesregistrationcenteridmachineiduserid)
+* [GET /getlocspecificregistrationcenters/{hierarchylevel}/{textvalue}/{languagecode}](Registration-Center-APIs.md#get-getlocspecificregistrationcentershierarchyleveltextvaluelanguagecode)
 
-## POST /registrationcenters
-This service will create the list of Registration Centers which are used in the MOSIP platform. 
-Please find the steps to [create primary/secondary languages](#create-update-api) 
+### POST /registrationcenters
 
-### Resource URL
+This service will create the list of Registration Centers which are used in the MOSIP platform. Please find the steps to [create primary/secondary languages](Registration-Center-APIs.md#create-update-api)
+
+#### Resource URL
+
 `POST /registrationcenters`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-name|Yes|Name of the registration center| | 
-centertypecode|Yes|Code of the center type| | 
-addressline1|Yes|Line 1 of the address| | 
-addressline2|No|Line 2 of the address| | 
-addressline3|No|Line 3 of the address| | 
-locationcode|Yes|Code of the location of the registration center| | 
-longitude|Yes|Longitude of the registration center| | 
-latitude|Yes|Latitude of the registration center| | 
-contactphone|No|Contact phone number of the registration center| |  
-workinghours|Yes|Working hours of the registration center| | 
-perkioskprocesstime|Yes|Process time per kiosk in the registration center| | 
-centerstarttime|Yes|Office start time of the registration center| | 
-centerendtime|Yes|Office end time of the registration center| | 
-holidaylocationcode|Yes|Holiday location of the registration center| | 
-contactperson|No|Contact person of the registration center| | 
-lunchstarttime|No|Lunch start time of the registration center| | 
-lunchendtime|No|Lunch end time of the registration center| | 
-timezone |No | time zone of the registration center | |
-lang_code |Yes | language code  | |
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name                | Required | Description                                       | Default Value | Example |
+| ------------------- | -------- | ------------------------------------------------- | ------------- | ------- |
+| name                | Yes      | Name of the registration center                   |               |         |
+| centertypecode      | Yes      | Code of the center type                           |               |         |
+| addressline1        | Yes      | Line 1 of the address                             |               |         |
+| addressline2        | No       | Line 2 of the address                             |               |         |
+| addressline3        | No       | Line 3 of the address                             |               |         |
+| locationcode        | Yes      | Code of the location of the registration center   |               |         |
+| longitude           | Yes      | Longitude of the registration center              |               |         |
+| latitude            | Yes      | Latitude of the registration center               |               |         |
+| contactphone        | No       | Contact phone number of the registration center   |               |         |
+| workinghours        | Yes      | Working hours of the registration center          |               |         |
+| perkioskprocesstime | Yes      | Process time per kiosk in the registration center |               |         |
+| centerstarttime     | Yes      | Office start time of the registration center      |               |         |
+| centerendtime       | Yes      | Office end time of the registration center        |               |         |
+| holidaylocationcode | Yes      | Holiday location of the registration center       |               |         |
+| contactperson       | No       | Contact person of the registration center         |               |         |
+| lunchstarttime      | No       | Lunch start time of the registration center       |               |         |
+| lunchendtime        | No       | Lunch end time of the registration center         |               |         |
+| timezone            | No       | time zone of the registration center              |               |         |
+| lang\_code          | Yes      | language code                                     |               |         |
+
+#### Example Request
+
+```
 {
 	"id": "string",
 	"metadata": null,
@@ -95,8 +102,10 @@ lang_code |Yes | language code  | |
 	"requesttime": "2019-11-18T10:46:23.956Z"
 }
 ```
-### Error Response:
-``` JSON
+
+#### Error Response:
+
+```
 {
   "id": "string",
   "version": "string",
@@ -110,62 +119,67 @@ lang_code |Yes | language code  | |
   ],
  "response": null
 }
-
 ```
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MSD-060 |Error occurred while Inserting Registration Center details|If any error occur from database
-KER-MSD-303 |Received data is not present in all Languages supported by MOSIP|If all the mandatory data is not received in all the configured languages
-KER-MSD-306 |Records with duplicate language code found|if records received contain duplicate language codes
-KER-MSD-307 |Latitude or Longitude must have minimum 4 digits after decimal|If the Latitude and/or Longitude are in invalid format
-KER-MSD-308 |Center Lunch Start Time must be smaller than Center Lunch End Time|If Center Lunch start time is bigger than Center Lunch End Time
-KER-MSD-309|Center Start Time must be smaller than Center End Time|If Center Start time is bigger than Center End Time
+#### Failure details
 
-## PUT /registrationcenters
-This service will update the list of Registration Centers which are used in the MOSIP platform. 
+| Error Code  | Error Message                                                      | Error Description                                                         |
+| ----------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------- |
+| KER-MSD-500 | Internal Server Error                                              | If system error occurs                                                    |
+| KER-ATH-403 | Forbidden                                                          | If unauthorized role detected                                             |
+| KER-ATH-401 | Authentication Failed                                              | If no role/invalid token is detected                                      |
+| KER-MSD-060 | Error occurred while Inserting Registration Center details         | If any error occur from database                                          |
+| KER-MSD-303 | Received data is not present in all Languages supported by MOSIP   | If all the mandatory data is not received in all the configured languages |
+| KER-MSD-306 | Records with duplicate language code found                         | if records received contain duplicate language codes                      |
+| KER-MSD-307 | Latitude or Longitude must have minimum 4 digits after decimal     | If the Latitude and/or Longitude are in invalid format                    |
+| KER-MSD-308 | Center Lunch Start Time must be smaller than Center Lunch End Time | If Center Lunch start time is bigger than Center Lunch End Time           |
+| KER-MSD-309 | Center Start Time must be smaller than Center End Time             | If Center Start time is bigger than Center End Time                       |
 
-### Resource URL
+### PUT /registrationcenters
+
+This service will update the list of Registration Centers which are used in the MOSIP platform.
+
+#### Resource URL
+
 `PUT /registrationcenters`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-name|Yes|Name of the registration center| | 
-id|Yes|Id of the registration center| | Incase of Primary empty and Generated id incase of Secondary 
-centertypecode|Yes|Code of the center type| | 
-addressline1|Yes|Line 1 of the address| | 
-addressline2|No|Line 2 of the address| | 
-addressline3|No|Line 3 of the address| | 
-locationcode|Yes|Code of the location of the registration center| | 
-longitude|Yes|Longitude of the registration center| | 
-latitude|Yes|Latitude of the registration center| | 
-contactphone|No|Contact phone number of the registration center| |  
-workinghours|Yes|Working hours of the registration center| | 
-perkioskprocesstime|Yes|Process time per kiosk in the registration center| | 
-centerstarttime|Yes|Office start time of the registration center| | 
-centerendtime|Yes|Office end time of the registration center| | 
-holidaylocationcode|Yes|Holiday location of the registration center| | 
-isactive|Yes|Is the registration center active| | 
-contactperson|No|Contact person of the registration center| | 
-lunchstarttime|No|Lunch start time of the registration center| | 
-lunchendtime|No|Lunch end time of the registration center| | 
-timezone |No | time zone of the registration center | |
-lang_code |Yes | language code  | |
-numberOfKiosks|No | Number of Kiosks  | |
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name                | Required | Description                                       | Default Value | Example                                                      |
+| ------------------- | -------- | ------------------------------------------------- | ------------- | ------------------------------------------------------------ |
+| name                | Yes      | Name of the registration center                   |               |                                                              |
+| id                  | Yes      | Id of the registration center                     |               | Incase of Primary empty and Generated id incase of Secondary |
+| centertypecode      | Yes      | Code of the center type                           |               |                                                              |
+| addressline1        | Yes      | Line 1 of the address                             |               |                                                              |
+| addressline2        | No       | Line 2 of the address                             |               |                                                              |
+| addressline3        | No       | Line 3 of the address                             |               |                                                              |
+| locationcode        | Yes      | Code of the location of the registration center   |               |                                                              |
+| longitude           | Yes      | Longitude of the registration center              |               |                                                              |
+| latitude            | Yes      | Latitude of the registration center               |               |                                                              |
+| contactphone        | No       | Contact phone number of the registration center   |               |                                                              |
+| workinghours        | Yes      | Working hours of the registration center          |               |                                                              |
+| perkioskprocesstime | Yes      | Process time per kiosk in the registration center |               |                                                              |
+| centerstarttime     | Yes      | Office start time of the registration center      |               |                                                              |
+| centerendtime       | Yes      | Office end time of the registration center        |               |                                                              |
+| holidaylocationcode | Yes      | Holiday location of the registration center       |               |                                                              |
+| isactive            | Yes      | Is the registration center active                 |               |                                                              |
+| contactperson       | No       | Contact person of the registration center         |               |                                                              |
+| lunchstarttime      | No       | Lunch start time of the registration center       |               |                                                              |
+| lunchendtime        | No       | Lunch end time of the registration center         |               |                                                              |
+| timezone            | No       | time zone of the registration center              |               |                                                              |
+| lang\_code          | Yes      | language code                                     |               |                                                              |
+| numberOfKiosks      | No       | Number of Kiosks                                  |               |                                                              |
+
+#### Example Request
+
+```
 {
 	"id": "string",
 	"metadata": null,
@@ -199,7 +213,8 @@ numberOfKiosks|No | Number of Kiosks  | |
 }
 ```
 
-### Error Response:
+#### Error Response:
+
 ```
 {
   "id": "string",
@@ -214,44 +229,48 @@ numberOfKiosks|No | Number of Kiosks  | |
   ],
  "response": null
 }
-
 ```
 
-### Failure details
-Error Code | Error Message | Error Description
------ |----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-ATH-111 |Error occurred while updating Registration Center details|If any error occur from database
-KER-MSD-303 |Received data is not present in all Languages supported by MOSIP|If all the mandatory data is not received in all the configured languages
-KER-MSD-304 |Center IDs received for all languages is not same|If all the IDs received are not same for data in all the languages
-KER-MSD-305 |Center ID and Language Code combination is not unique in the request received|If combination of Center ID and Language code in duplicate in request
-KER-MSD-306 |Records with duplicate language code found|if records received contain duplicate language codes
-KER-MSD-307 |Latitude or Longitude must have minimum 4 digits after decimal|If the Latitude and/or Longitude are in invalid format
-KER-MSD-308 |Center Lunch Start Time must be smaller than Center Lunch End Time|If Center Lunch start time is bigger than Center Lunch End Time
-KER-MSD-309 |Center Start Time must be smaller than Center End Time|If Center Start time is bigger than Center End Time
+#### Failure details
 
-## GET /registrationcenters
-This service will provides the service for the List of Registration Centers. 
+| Error Code  | Error Message                                                                 | Error Description                                                         |
+| ----------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| KER-MSD-500 | Internal Server Error                                                         | If system error occurs                                                    |
+| KER-ATH-403 | Forbidden                                                                     | If unauthorized role detected                                             |
+| KER-ATH-401 | Authentication Failed                                                         | If no role/invalid token is detected                                      |
+| KER-ATH-111 | Error occurred while updating Registration Center details                     | If any error occur from database                                          |
+| KER-MSD-303 | Received data is not present in all Languages supported by MOSIP              | If all the mandatory data is not received in all the configured languages |
+| KER-MSD-304 | Center IDs received for all languages is not same                             | If all the IDs received are not same for data in all the languages        |
+| KER-MSD-305 | Center ID and Language Code combination is not unique in the request received | If combination of Center ID and Language code in duplicate in request     |
+| KER-MSD-306 | Records with duplicate language code found                                    | if records received contain duplicate language codes                      |
+| KER-MSD-307 | Latitude or Longitude must have minimum 4 digits after decimal                | If the Latitude and/or Longitude are in invalid format                    |
+| KER-MSD-308 | Center Lunch Start Time must be smaller than Center Lunch End Time            | If Center Lunch start time is bigger than Center Lunch End Time           |
+| KER-MSD-309 | Center Start Time must be smaller than Center End Time                        | If Center Start time is bigger than Center End Time                       |
 
-### Resource URL
+### GET /registrationcenters
+
+This service will provides the service for the List of Registration Centers.
+
+#### Resource URL
+
 `GET /registrationcenters`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Example Response
-```JSON
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -311,25 +330,30 @@ Name | Required | Description | Default Value | Example
 }
 ```
 
-## GET /registrationcenters/{id}/{languagecode}
-This service will provides the service for the List of Registration Centers. 
+### GET /registrationcenters/{id}/{languagecode}
 
-### Resource URL
+This service will provides the service for the List of Registration Centers.
+
+#### Resource URL
+
 `GET /registrationcenters/{id}/{languagecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -389,28 +413,31 @@ Name | Required | Description | Default Value | Example
 }
 ```
 
-## GET /getregistrationcenterholidays/{languagecode}/{registrationcenterid}/{year}
-This service will list of holidays for a particular registration center for that particular year. 
+### GET /getregistrationcenterholidays/{languagecode}/{registrationcenterid}/{year}
 
-### Resource URL
+This service will list of holidays for a particular registration center for that particular year.
+
+#### Resource URL
+
 `GET /getregistrationcenterholidays/{languagecode}/{registrationcenterid}/{year}`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-registrationcenterid|Yes|ID of the registration center| | 
-year|Yes|The year for which the list of holidays is listed| | 
+#### Parameters
 
+| Name                 | Required | Description                                       | Default Value | Example |
+| -------------------- | -------- | ------------------------------------------------- | ------------- | ------- |
+| registrationcenterid | Yes      | ID of the registration center                     |               |         |
+| year                 | Yes      | The year for which the list of holidays is listed |               |         |
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -457,29 +484,33 @@ year|Yes|The year for which the list of holidays is listed| |
    }
 }
 ```
+
 200
 
+### GET /getlocspecificregistrationcenters/{langcode}/{locationcode}
 
-## GET /getlocspecificregistrationcenters/{langcode}/{locationcode}
-This service will return a list of enrollment center details based on the location code 
+This service will return a list of enrollment center details based on the location code
 
-### Resource URL
+#### Resource URL
+
 `GET /getlocspecificregistrationcenters/{langcode}/{locationcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-locationcode|Yes|The location code for which the list of enrollment centers are needed| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Example Response
-```JSON
+| Name         | Required | Description                                                           | Default Value | Example |
+| ------------ | -------- | --------------------------------------------------------------------- | ------------- | ------- |
+| locationcode | Yes      | The location code for which the list of enrollment centers are needed |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -516,33 +547,38 @@ locationcode|Yes|The location code for which the list of enrollment centers are 
  }
 }
 ```
+
 200
 
 Description: OK
 
-## GET /getcoordinatespecificregistrationcenters/{languagecode}/{longitude}/{latitude}/{proximitydistance}
+### GET /getcoordinatespecificregistrationcenters/{languagecode}/{longitude}/{latitude}/{proximitydistance}
+
 This service will return a list of enrollment center details based on the coordinates
 
-### Resource URL
+#### Resource URL
+
 `GET /getcoordinatespecificregistrationcenters/{languagecode}/{longitude}/{latitude}/{proximitydistance}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-longitude|Yes|The longitude for which the list of enrollment centers are needed| | 
-latitude|Yes|The latitude code for which the list of enrollment centers are needed| | 
-proximitydistance|Yes|The proximity diameter in meter| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Example Response
-```JSON
+| Name              | Required | Description                                                           | Default Value | Example |
+| ----------------- | -------- | --------------------------------------------------------------------- | ------------- | ------- |
+| languagecode      | Yes      | Language code in Language code in ISO 639-2 format                    |               |         |
+| longitude         | Yes      | The longitude for which the list of enrollment centers are needed     |               |         |
+| latitude          | Yes      | The latitude code for which the list of enrollment centers are needed |               |         |
+| proximitydistance | Yes      | The proximity diameter in meter                                       |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -578,32 +614,35 @@ proximitydistance|Yes|The proximity diameter in meter| |
   }
 }
 ```
+
 200
 
 Description: Success
 
-## GET /registrationcentershistory/{id}/{languagecode}/{eff_dtimes}
+### GET /registrationcentershistory/{id}/{languagecode}/{eff\_dtimes}
 
-This service will provides the service for the List of Registration Centers History. 
+This service will provides the service for the List of Registration Centers History.
 
-### Resource URL
+#### Resource URL
+
 `GET /registrationcentershistory/{id}/{languagecode}/{eff_dtimes}`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+#### Parameters
 
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -662,34 +701,38 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 200
 
 Description: Success
 
-## GET /getregistrationmachineusermappinghistory/{eff_dtimes}/{registrationcenterid}/{machineid}/{userid}
+### GET /getregistrationmachineusermappinghistory/{eff\_dtimes}/{registrationcenterid}/{machineid}/{userid}
 
-This service will provides the history of mappings of mapping History of Registration, Machine and User based on Registration Center ID, Machine ID, User ID, Date and Language Code 
+This service will provides the history of mappings of mapping History of Registration, Machine and User based on Registration Center ID, Machine ID, User ID, Date and Language Code
 
-### Resource URL
+#### Resource URL
+
 `GET /getregistrationmachineusermappinghistory/{eff_dtimes}/{registrationcenterid}/{machineid}/{userid}`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-eff_dtimes|Yes|From which date this change is with effective| | 2018-11-02T05:20:31.075
-registrationcenterid|Yes|ID of the registration center| | 
-machineid|Yes|ID of the machine| | 
+#### Parameters
 
-### Example Response
-```JSON
+| Name                 | Required | Description                                        | Default Value | Example                 |
+| -------------------- | -------- | -------------------------------------------------- | ------------- | ----------------------- |
+| languagecode         | Yes      | Language code in Language code in ISO 639-2 format |               |                         |
+| eff\_dtimes          | Yes      | From which date this change is with effective      |               | 2018-11-02T05:20:31.075 |
+| registrationcenterid | Yes      | ID of the registration center                      |               |                         |
+| machineid            | Yes      | ID of the machine                                  |               |                         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -712,31 +755,37 @@ machineid|Yes|ID of the machine| |
   }
 }
 ```
+
 200
 
 Description: Success
 
-## GET /getlocspecificregistrationcenters/{hierarchylevel}/{textvalue}/{languagecode}
+### GET /getlocspecificregistrationcenters/{hierarchylevel}/{textvalue}/{languagecode}
+
 This service will return a list of enrollment center details based on hierarchy level, text value and language code
 
-### Resource URL
+#### Resource URL
+
 `GET /getlocspecificregistrationcenters/{hierarchylevel}/{textvalue}/{languagecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-hierarchylevel|Yes|The hierarchy level for which the list of enrollment centers are needed| | 
-textvalue|Yes|This is a free text. The search will happen with the combination of hierarchy level, language code and this free text. The enrollment centers which satisfy these 3 criteria will be returned| | 
-languagecode|Yes|The enrollment center description will be returned in this language code | | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name           | Required | Description                                                                                                                                                                                   | Default Value | Example |
+| -------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | ------- |
+| hierarchylevel | Yes      | The hierarchy level for which the list of enrollment centers are needed                                                                                                                       |               |         |
+| textvalue      | Yes      | This is a free text. The search will happen with the combination of hierarchy level, language code and this free text. The enrollment centers which satisfy these 3 criteria will be returned |               |         |
+| languagecode   | Yes      | The enrollment center description will be returned in this language code                                                                                                                      |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -772,12 +821,14 @@ languagecode|Yes|The enrollment center description will be returned in this lang
   }
 }
 ```
+
 200
 
 Description: Success
 
-### Failure Response:
-```JSON
+#### Failure Response:
+
+```
  {
   "id": "string",
   "version": "string",
@@ -793,47 +844,53 @@ Description: Success
 }
 ```
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-041 | Error occurred while fetching Registration Centers | registration center fetch exception
-KER-MSD-111 | Error occurred while updating Registration Center details | registration center update exception
-KER-MSD-112 | Error occurred while deleting Registration Center details | registration center delete exception
-KER-MSD-042 | Registration Center not found | registration center not found
-KER-MSD-149 | Cannot delete as dependency found | dependency exception
-KER-MSD-043 | Invalid date format | date time parse exception
-KER-MSD-XXX | start/end time Data not configured in database | data to be validated with not found
+#### Failure details
 
-# Registration Center User Machine Mapping API
+| Error Code  | Error Message                                             | Error Description                    |
+| ----------- | --------------------------------------------------------- | ------------------------------------ |
+| KER-MSD-041 | Error occurred while fetching Registration Centers        | registration center fetch exception  |
+| KER-MSD-111 | Error occurred while updating Registration Center details | registration center update exception |
+| KER-MSD-112 | Error occurred while deleting Registration Center details | registration center delete exception |
+| KER-MSD-042 | Registration Center not found                             | registration center not found        |
+| KER-MSD-149 | Cannot delete as dependency found                         | dependency exception                 |
+| KER-MSD-043 | Invalid date format                                       | date time parse exception            |
+| KER-MSD-XXX | start/end time Data not configured in database            | data to be validated with not found  |
+
+## Registration Center User Machine Mapping API
 
 These APIs includes map and un-map API. Both these APIs are used by the Administrator Portal for the Create and Remove Center-Machine Mapping functionality.
 
-* [POST /registrationmachineusermappings](#post-registrationmachineusermappings)
-* [GET /getregistrationmachineusermappinghistory/{effdtimes}/{registrationcenterid}/{machineid}/{userid}](#get-getregistrationmachineusermappinghistoryeffdtimesregistrationcenteridmachineiduserid-1)
-* [PUT /registrationmachineusermappings](#put-registrationmachineusermappings-1)
+* [POST /registrationmachineusermappings](Registration-Center-APIs.md#post-registrationmachineusermappings)
+* [GET /getregistrationmachineusermappinghistory/{effdtimes}/{registrationcenterid}/{machineid}/{userid}](Registration-Center-APIs.md#get-getregistrationmachineusermappinghistoryeffdtimesregistrationcenteridmachineiduserid-1)
+* [PUT /registrationmachineusermappings](Registration-Center-APIs.md#put-registrationmachineusermappings-1)
 
-## POST /registrationmachineusermappings
-This service will create a Registration Center-User-Machine Mapping which are used in the MOSIP platform. 
+### POST /registrationmachineusermappings
 
-### Resource URL
+This service will create a Registration Center-User-Machine Mapping which are used in the MOSIP platform.
+
+#### Resource URL
+
 `POST /registrationmachineusermappings`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-cntrId|Yes|Registration Center Id for request| | 
-machineId|Yes|Machine Id for request| | 
-usrId|Yes|User Id for request| | 
-isActive|Yes|Mapping is active or not| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name      | Required | Description                        | Default Value | Example |
+| --------- | -------- | ---------------------------------- | ------------- | ------- |
+| cntrId    | Yes      | Registration Center Id for request |               |         |
+| machineId | Yes      | Machine Id for request             |               |         |
+| usrId     | Yes      | User Id for request                |               |         |
+| isActive  | Yes      | Mapping is active or not           |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -848,8 +905,9 @@ isActive|Yes|Mapping is active or not| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -864,35 +922,40 @@ isActive|Yes|Mapping is active or not| |
 }
 ```
 
-### Response codes
+#### Response codes
+
 200
 
 Description: Success
 
-## GET /getregistrationmachineusermappinghistory/{effdtimes}/{registrationcenterid}/{machineid}/{userid}
-This service will provides the service for the Center-User-Machine with their history. 
+### GET /getregistrationmachineusermappinghistory/{effdtimes}/{registrationcenterid}/{machineid}/{userid}
 
-### Resource URL
+This service will provides the service for the Center-User-Machine with their history.
+
+#### Resource URL
+
 `GET /getregistrationmachineusermappinghistory/{effdtimes}/{registrationcenterid}/{machineid}/{userid}`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-ID|Yes|Machine History Id|
-effdtimes|Yes|Effective Date and Time of the Machine|
-registrationcenterid|Yes|Registration Center Id|
-machineid|Yes|Machine Id |
-userid|Yes|User Id|
+#### Parameters
 
-### Example Response
-```JSON
+| Name                 | Required | Description                            | Default Value | Example |
+| -------------------- | -------- | -------------------------------------- | ------------- | ------- |
+| ID                   | Yes      | Machine History Id                     |               |         |
+| effdtimes            | Yes      | Effective Date and Time of the Machine |               |         |
+| registrationcenterid | Yes      | Registration Center Id                 |               |         |
+| machineid            | Yes      | Machine Id                             |               |         |
+| userid               | Yes      | User Id                                |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -913,32 +976,38 @@ userid|Yes|User Id|
     }
 }
 ```
+
 200
 
 Description: Success
 
-## PUT /registrationmachineusermappings
-This service will create or update a Registration Center-User-Machine Mapping which are used in the MOSIP platform. 
+### PUT /registrationmachineusermappings
 
-### Resource URL
+This service will create or update a Registration Center-User-Machine Mapping which are used in the MOSIP platform.
+
+#### Resource URL
+
 `PUT /registrationmachineusermappings`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-cntrId|Yes|Registration Center Id for request| | 
-machineId|Yes|Machine Id for request| | 
-usrId|Yes|User Id for request| | 
-isActive|Yes|Mapping is active or not| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name      | Required | Description                        | Default Value | Example |
+| --------- | -------- | ---------------------------------- | ------------- | ------- |
+| cntrId    | Yes      | Registration Center Id for request |               |         |
+| machineId | Yes      | Machine Id for request             |               |         |
+| usrId     | Yes      | User Id for request                |               |         |
+| isActive  | Yes      | Mapping is active or not           |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -953,8 +1022,10 @@ isActive|Yes|Mapping is active or not| |
   }
 }
 ```
-### Example Response
-```JSON
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -979,11 +1050,14 @@ isActive|Yes|Mapping is active or not| |
   }
 }
 ```
-### Response codes
+
+#### Response codes
+
 201
 
-### Failure Response:
-```JSON
+#### Failure Response:
+
+```
  {
   "id": "string",
   "version": "string",
@@ -999,40 +1073,47 @@ isActive|Yes|Mapping is active or not| |
 }
 ```
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-078 | Error occurred while inserting mapping of Center, User and Machine details | registration center user machine mapping insert exception
-KER-MSD-131 | Registration Center, Machine and User Mapping not found | registration center user machine not found
-KER-MSD-108 | Error occurred while deleting mapping of Center, User and Machine details | registration center user machine delete exception
-KER-MSD-136 | Error occurred while updating mapping of Center, User and Machine details | registration center user machine update exception
+#### Failure details
 
-# Registration Center Machine API
+| Error Code  | Error Message                                                              | Error Description                                         |
+| ----------- | -------------------------------------------------------------------------- | --------------------------------------------------------- |
+| KER-MSD-078 | Error occurred while inserting mapping of Center, User and Machine details | registration center user machine mapping insert exception |
+| KER-MSD-131 | Registration Center, Machine and User Mapping not found                    | registration center user machine not found                |
+| KER-MSD-108 | Error occurred while deleting mapping of Center, User and Machine details  | registration center user machine delete exception         |
+| KER-MSD-136 | Error occurred while updating mapping of Center, User and Machine details  | registration center user machine update exception         |
+
+## Registration Center Machine API
+
 These APIs includes map and un-map API. Both these APIs are used by the Administrator Portal for the Create and Remove Center-Machine Mapping functionality.
 
-* [POST /registrationcentermachine](#post-registrationcentermachine)
-* [DELETE /registrationcentermachine/{regCenterId}/{machineId}](#deleteregistrationcentermachineregcenteridmachineid)
+* [POST /registrationcentermachine](Registration-Center-APIs.md#post-registrationcentermachine)
+* [DELETE /registrationcentermachine/{regCenterId}/{machineId}](Registration-Center-APIs.md#deleteregistrationcentermachineregcenteridmachineid)
 
-## POST /registrationcentermachine
-This service will create the mapping of registration canter and machine in the RegistrationCenterMachine Master module. 
+### POST /registrationcentermachine
 
-### Resource URL
+This service will create the mapping of registration canter and machine in the RegistrationCenterMachine Master module.
+
+#### Resource URL
+
 `POST /registrationcentermachine`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-machineId|Yes|Available machine id| | 
-regCenterId|Yes|Available registration center| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON  
+#### Parameters
+
+| Name        | Required | Description                   | Default Value | Example |
+| ----------- | -------- | ----------------------------- | ------------- | ------- |
+| machineId   | Yes      | Available machine id          |               |         |
+| regCenterId | Yes      | Available registration center |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1046,10 +1127,11 @@ regCenterId|Yes|Available registration center| |
   }
 }
 
+```
+
+#### Example Response
 
 ```
-### Example Response
-```JSON
  {
   "id": "string",
   "version": "string",
@@ -1065,31 +1147,38 @@ regCenterId|Yes|Available registration center| |
   }
 }
 ```
-### Response codes
+
+#### Response codes
+
 201
 
 Description: Created
 
-## DELETE/registrationcentermachine/{regCenterId}/{machineId}
-This service will provides the service for delete mapping of  Center-Machine. 
+### DELETE/registrationcentermachine/{regCenterId}/{machineId}
 
-### Resource URL
+This service will provides the service for delete mapping of Center-Machine.
+
+#### Resource URL
+
 `DELETE /registrationcentermachine/{regCenterId}/{machineId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-regCenterId|Yes|Registration Center Id|
-machineId|Yes|Machine Id |
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name        | Required | Description            | Default Value | Example |
+| ----------- | -------- | ---------------------- | ------------- | ------- |
+| regCenterId | Yes      | Registration Center Id |               |         |
+| machineId   | Yes      | Machine Id             |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1105,12 +1194,14 @@ machineId|Yes|Machine Id |
    }
 }
 ```
+
 200
 
 Description: Success
 
-### Failure Response:
-```JSON
+#### Failure Response:
+
+```
  {
   "id": "string",
   "version": "string",
@@ -1126,42 +1217,50 @@ Description: Success
 }
 ```
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-074 | Error occurred while inserting a mapping of Machine and Center | registration center machine create exception
-KER-MSD-114 | Mapping for Machine and Center not found | registration center machine data not found
-KER-MSD-106 | Error occurred while deleting a mapping of Machine and Center | registration center machine delete exception
+#### Failure details
 
-# Registration Center Device API
+| Error Code  | Error Message                                                  | Error Description                            |
+| ----------- | -------------------------------------------------------------- | -------------------------------------------- |
+| KER-MSD-074 | Error occurred while inserting a mapping of Machine and Center | registration center machine create exception |
+| KER-MSD-114 | Mapping for Machine and Center not found                       | registration center machine data not found   |
+| KER-MSD-106 | Error occurred while deleting a mapping of Machine and Center  | registration center machine delete exception |
+
+## Registration Center Device API
+
 These APIs includes map and un-map API. Both these APIs are used by the Administrator Portal for the Create and Remove Center-Device Mapping functionality.
 
-* [GET /registrationcenterdevice/map/{regCenterId}/{deviceId}](#get-registrationcenterdevicemapregcenteriddeviceid)
-* [PUT /registrationcenterdevice/unmap/{deviceId}/{regCenterId}](#put-registrationcenterdeviceunmapdeviceidregcenterid)
+* [GET /registrationcenterdevice/map/{regCenterId}/{deviceId}](Registration-Center-APIs.md#get-registrationcenterdevicemapregcenteriddeviceid)
+* [PUT /registrationcenterdevice/unmap/{deviceId}/{regCenterId}](Registration-Center-APIs.md#put-registrationcenterdeviceunmapdeviceidregcenterid)
 
-## GET /registrationcenterdevice/map/{regCenterId}/{deviceId}
-This service will create the mapping of registration canter and device in the RegistrationCenterDevice Master module. 
+### GET /registrationcenterdevice/map/{regCenterId}/{deviceId}
 
-### Resource URL
+This service will create the mapping of registration canter and device in the RegistrationCenterDevice Master module.
+
+#### Resource URL
+
 `GET /registrationcenterdevice/map/{regCenterId}/{deviceId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-deviceId|Yes|Available device id| | 
-regCenterId|Yes|Available registration center| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```https://mosip.io/v1/masterdata/registrationcenterdevice/map/10001/4cb310e3-965a-4afd-a28e-0db6b3db5423```
+#### Parameters
 
-### Example Response
-```JSON
+| Name        | Required | Description                   | Default Value | Example |
+| ----------- | -------- | ----------------------------- | ------------- | ------- |
+| deviceId    | Yes      | Available device id           |               |         |
+| regCenterId | Yes      | Available registration center |               |         |
+
+#### Example Request
+
+`https://mosip.io/v1/masterdata/registrationcenterdevice/map/10001/4cb310e3-965a-4afd-a28e-0db6b3db5423`
+
+#### Example Response
+
+```
 {
   "id": null,
   "version": null,
@@ -1174,11 +1273,14 @@ regCenterId|Yes|Available registration center| |
   "errors": null
 }
 ```
-### Response codes
+
+#### Response codes
+
 200
 
-### Failure Response:
-```JSON
+#### Failure Response:
+
+```
  {
   "id": "string",
   "version": "string",
@@ -1194,39 +1296,47 @@ regCenterId|Yes|Available registration center| |
 }
 ```
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-411 | Admin not authorized to map/un-map this Registration Center | when user zone doesn't belong to the same zone of center
-KER-MSD-415 | Admin not authorized to map/un-map this Device | when user zone doesn't belong to the same zone of device
-KER-MSD-418 | Cannot map as the Registration Center/Device is Decommissioned | When center/device trying to map is decomissioned
-KER-MSD-419 | Cannot map the Device as it is mapped to another Registration Center | When the center/device are already mapped to center
-KER-MSD-416 | Device cannot be mapped to the Center as Center and Device does not belong to the same Administrative Zone | When the device doesn't belong to same category
+#### Failure details
 
-## PUT /registrationcenterdevice/unmap/{deviceId}/{regCenterId}
-This service will provides the service for un map the mapping of Device and Registration Center. 
+| Error Code  | Error Message                                                                                              | Error Description                                        |
+| ----------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| KER-MSD-411 | Admin not authorized to map/un-map this Registration Center                                                | when user zone doesn't belong to the same zone of center |
+| KER-MSD-415 | Admin not authorized to map/un-map this Device                                                             | when user zone doesn't belong to the same zone of device |
+| KER-MSD-418 | Cannot map as the Registration Center/Device is Decommissioned                                             | When center/device trying to map is decomissioned        |
+| KER-MSD-419 | Cannot map the Device as it is mapped to another Registration Center                                       | When the center/device are already mapped to center      |
+| KER-MSD-416 | Device cannot be mapped to the Center as Center and Device does not belong to the same Administrative Zone | When the device doesn't belong to same category          |
 
-### Resource URL
+### PUT /registrationcenterdevice/unmap/{deviceId}/{regCenterId}
+
+This service will provides the service for un map the mapping of Device and Registration Center.
+
+#### Resource URL
+
 `PUT /registrationcenterdevice/unmap/{deviceId}/{regCenterId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-regCenterId|Yes|Registration Center Id|
-deviceId|Yes|Device Id |
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
+#### Parameters
+
+| Name        | Required | Description            | Default Value | Example |
+| ----------- | -------- | ---------------------- | ------------- | ------- |
+| regCenterId | Yes      | Registration Center Id |               |         |
+| deviceId    | Yes      | Device Id              |               |         |
+
+#### Request
+
 ```
 https://mosip.io/v1/masterdata/registrationcenterdevice/unmap/4cb310e3-965a-4afd-a28e-0db6b3db5423/10001
 ```
-### Example Response
-```JSON
+
+#### Example Response
+
+```
 {
   "id": null,
   "version": null,
@@ -1239,8 +1349,10 @@ https://mosip.io/v1/masterdata/registrationcenterdevice/unmap/4cb310e3-965a-4afd
   "errors": null
 }
 ```
-### Failure Response:
-```JSON
+
+#### Failure Response:
+
+```
  {
   "id": "string",
   "version": "string",
@@ -1255,43 +1367,51 @@ https://mosip.io/v1/masterdata/registrationcenterdevice/unmap/4cb310e3-965a-4afd
   "response" : null
 }
 ```
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-411 | Admin not authorized to map/un-map this Registration Center | when user zone doesn't belong to the same zone of center
-KER-MSD-415 | Admin not authorized to map/un-map this Device | when user zone doesn't belong to the same zone of device
-KER-MSD-435 | Device Id %s - Center Id %s mapping does not exist | when center/device trying to unmap doesn't exist
-KER-MSD-434 | Device-Registration Center un-mapping already exist | When the center/device mapping already exists
-KER-MSD-416 | Device cannot be mapped to the Center as Center and Device does not belong to the same Administrative Zone | When the device doesn't belong to same category
-KER-MSD-436 | Error occurred while mapping Device to Registration Center | Exception while mapping device to registration center
 
-# Registration Center Machine Device API
+#### Failure details
+
+| Error Code  | Error Message                                                                                              | Error Description                                        |
+| ----------- | ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| KER-MSD-411 | Admin not authorized to map/un-map this Registration Center                                                | when user zone doesn't belong to the same zone of center |
+| KER-MSD-415 | Admin not authorized to map/un-map this Device                                                             | when user zone doesn't belong to the same zone of device |
+| KER-MSD-435 | Device Id %s - Center Id %s mapping does not exist                                                         | when center/device trying to unmap doesn't exist         |
+| KER-MSD-434 | Device-Registration Center un-mapping already exist                                                        | When the center/device mapping already exists            |
+| KER-MSD-416 | Device cannot be mapped to the Center as Center and Device does not belong to the same Administrative Zone | When the device doesn't belong to same category          |
+| KER-MSD-436 | Error occurred while mapping Device to Registration Center                                                 | Exception while mapping device to registration center    |
+
+## Registration Center Machine Device API
+
 These APIs includes map, un-map and fetch mapping APIs. The Map and Un-Map APIs are used to create/remove Center-Machine-Device mapping.
 
-* [POST /registrationcentermachinedevice](#post-registrationcentermachinedevice)
-* [DELETE /registrationcentermachinedevice/{regcenterid}/{machineid}/{deviceid}](#delete-registrationcentermachinedeviceregcenteridmachineiddeviceid)
+* [POST /registrationcentermachinedevice](Registration-Center-APIs.md#post-registrationcentermachinedevice)
+* [DELETE /registrationcentermachinedevice/{regcenterid}/{machineid}/{deviceid}](Registration-Center-APIs.md#delete-registrationcentermachinedeviceregcenteridmachineiddeviceid)
 
-## POST /registrationcentermachinedevice
-This service will create the mapping of registration center, machine and device in the RegistrationCenterMachineDevice Master module. 
+### POST /registrationcentermachinedevice
 
-### Resource URL
+This service will create the mapping of registration center, machine and device in the RegistrationCenterMachineDevice Master module.
+
+#### Resource URL
+
 `POST /registrationcentermachinedevice`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-machineId|Yes|Available machine id| | 
-regCenterId|Yes|Available registration center| | 
-deviceId|Yes|Available device id| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON  
+#### Parameters
+
+| Name        | Required | Description                   | Default Value | Example |
+| ----------- | -------- | ----------------------------- | ------------- | ------- |
+| machineId   | Yes      | Available machine id          |               |         |
+| regCenterId | Yes      | Available registration center |               |         |
+| deviceId    | Yes      | Available device id           |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1306,8 +1426,10 @@ deviceId|Yes|Available device id| |
   }
 }
 ```
-### Example Response
-```JSON
+
+#### Example Response
+
+```
  {
   "id": "string",
   "version": "string",
@@ -1324,30 +1446,37 @@ deviceId|Yes|Available device id| |
   }
 }
 ```
-### Response codes
+
+#### Response codes
+
 201
 
 Description: Created
 
-## DELETE /registrationcentermachinedevice/{regcenterid}/{machineid}/{deviceid}
-This service will delete the mapping of registration center, machine and device in the RegistrationCenter-Machine-Device Master module. 
+### DELETE /registrationcentermachinedevice/{regcenterid}/{machineid}/{deviceid}
 
-### Resource URL
+This service will delete the mapping of registration center, machine and device in the RegistrationCenter-Machine-Device Master module.
+
+#### Resource URL
+
 `DELETE /registrationcentermachinedevice/{regcenterid}/{machineid}/{deviceid}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-NA
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| NA   |          |             |               |         |
+
+#### Example Response
+
+```
  {
   "id": "string",
   "version": "string",
@@ -1364,13 +1493,16 @@ NA
   }
 }
 ```
-### Response codes
+
+#### Response codes
+
 200
 
 Description: Success
 
-### Failure Response:
-```JSON
+#### Failure Response:
+
+```
  {
   "id": "string",
   "version": "string",
@@ -1386,48 +1518,55 @@ Description: Success
 }
 ```
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-076 | Error occurred while inserting a mapping of Center, Machine and Device | registration center machine device create exception
-KER-MSD-107 | Error occurred while deleting a mapping of Center, Machine and Device | registration center machine device delete exception
-KER-MSD-116 | Mapping for Center, Machine and Device not found | registration center machine device data not found exception
+#### Failure details
 
-# Registration Center search APIs
+| Error Code  | Error Message                                                          | Error Description                                           |
+| ----------- | ---------------------------------------------------------------------- | ----------------------------------------------------------- |
+| KER-MSD-076 | Error occurred while inserting a mapping of Center, Machine and Device | registration center machine device create exception         |
+| KER-MSD-107 | Error occurred while deleting a mapping of Center, Machine and Device  | registration center machine device delete exception         |
+| KER-MSD-116 | Mapping for Center, Machine and Device not found                       | registration center machine device data not found exception |
+
+## Registration Center search APIs
+
 This API is used by the Administrator Portal to fetch the list of Registration Centers based on a given filter criteria to display the list of Registration Centers on the Portal UI.
 
-* [POST /registrationcenters/search](#post-registrationcenterssearch)
+* [POST /registrationcenters/search](Registration-Center-APIs.md#post-registrationcenterssearch)
 
-## POST /registrationcenters/search
-This service is for the registration centers search functionality. All the filter parameters are passed and the registration centers are searched and the matching results are returned. 
+### POST /registrationcenters/search
 
-### Resource URL
+This service is for the registration centers search functionality. All the filter parameters are passed and the registration centers are searched and the matching results are returned.
+
+#### Resource URL
+
 `POST /registrationcenters/search`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["contains","startsWith","equals","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the start value| -NA- |
-toValue|No|If the type is "between", this field is the end value| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 0
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Filter Columns
+#### Parameters
+
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["contains","startsWith","equals","between"]           | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the start value                         | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the end value                           | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 0             |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
+
+#### Filter Columns
+
 Please find the filter columns used in search:
 
 1. id
@@ -1436,8 +1575,9 @@ Please find the filter columns used in search:
 4. locationCode
 5. status
 
-### Example Request
-```JSON
+#### Example Request
+
+```
 {
 	"id": "string",
 	"metadata": {},
@@ -1469,8 +1609,9 @@ Please find the filter columns used in search:
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1529,35 +1670,40 @@ Please find the filter columns used in search:
  }
 }
 ```
-# Registration Center filter values
+
+## Registration Center filter values
+
 This API is used by the Administrator Portal to fetch the list of Registration Centers based on a given filter criteria to display the list of Registration Centers on the Portal UI.
 
-* [POST /registrationcenters/filtervalues](#post-registrationcentersfiltervalues)
+* [POST /registrationcenters/filtervalues](Registration-Center-APIs.md#post-registrationcentersfiltervalues)
 
-## POST /registrationcenters/filtervalues
+### POST /registrationcenters/filtervalues
 
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+This service returns the filter values which are required in the dropdown entries of the filter screen.
 
-### Resource URL
+#### Resource URL
+
 `POST /registrationcenters/filtervalues`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+#### Parameters
 
-### Example Request
-```JSON
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
 	"id": "string",
 	"metadata": {},
@@ -1575,8 +1721,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1594,47 +1741,55 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
-# Registration Center Type Search APIs
+
+## Registration Center Type Search APIs
+
 This API is used by the Administrator Portal to fetch the list of Registration Center Types based on a given filter criteria to display the list of Registration Center Types on the Portal UI.
 
-* [POST /registrationcentertypes/search](#post-registrationcentertypessearch)
+* [POST /registrationcentertypes/search](Registration-Center-APIs.md#post-registrationcentertypessearch)
 
-## POST /registrationcentertypes/search
-This service is for the registration center types search functionality. All the filter parameters are passed and the registration center types are searched and the matching results are returned. 
+### POST /registrationcentertypes/search
 
-### Resource URL
+This service is for the registration center types search functionality. All the filter parameters are passed and the registration center types are searched and the matching results are returned.
+
+#### Resource URL
+
 `POST /registrationcentertypes/search`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["contains","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the start range| -NA- |
-toValue|No|If the type is "between", this field is the value of the end range| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 0
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Filter Values
-Filter Name| Search Values
------|----------
-status|["contains","equals","startsWith"]
+#### Parameters
 
-### Example Request
-```JSON
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["contains","equals","startsWith","between"]           | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the start range            | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the end range              | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 0             |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
+
+#### Filter Values
+
+| Filter Name | Search Values                       |
+| ----------- | ----------------------------------- |
+| status      | \["contains","equals","startsWith"] |
+
+#### Example Request
+
+```
 {
 	"id": "string",
 	"metadata": {},
@@ -1666,8 +1821,9 @@ status|["contains","equals","startsWith"]
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1691,33 +1847,39 @@ status|["contains","equals","startsWith"]
 }
 ```
 
-# Registration Center Types Filter values
+## Registration Center Types Filter values
+
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Registration Center Type List View UI Screen.
 
-* [POST /regcentertypes/filtervalues](#post-regcentertypesfiltervalues)
+* [POST /regcentertypes/filtervalues](Registration-Center-APIs.md#post-regcentertypesfiltervalues)
 
-## POST /regcentertypes/filtervalues
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+### POST /regcentertypes/filtervalues
 
-### Resource URL
+This service returns the filter values which are required in the dropdown entries of the filter screen.
+
+#### Resource URL
+
 `POST /regcentertypes/filtervalues`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
 	"id": "string",
 	"metadata": {},
@@ -1735,8 +1897,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1755,19 +1918,23 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-# Create/Update API
+## Create/Update API
+
 This API is a utility used by all the Create and Update APIs to perform multi-language data validation on the input received from Administrator Portal UI.
 
-All the Create API's use the common class to create masterdata, Please find the important points to be taken care 
+All the Create API's use the common class to create masterdata, Please find the important points to be taken care
 
-Create : 
+Create :
+
 * Primary language must be created first and then id must be passed in the secondary language request.
 * Primary id must be passed blank for primary language request.
 * Primary language will not be activated unless Secondary language is created.
 * Primary Id for Center/Machine will be sequential Id's and other masterdata's will be auto generated values.
 
 Update :
+
 * Activation and deactivation will be done , If we only pass the primary language with active/deactivate in the request.
 
-# Search API
+## Search API
+
 This API is a utility used by all the Masterdata Search APIs to accept the filter criteria and form a query to fetch data from the Database.

@@ -1,150 +1,161 @@
-## Table Of Contents
+# Release Notes 1.0.0
 
-- [Scope](#scope-)
-- [Documentation](#documentation-)
-- [Key Points](#key-points-)
-- [Code](#code-)
-- [Test Reports](#test-reports-)
-  * [1. In scope](#1-in-scope-)
-  * [2. Not in scope](#2-Not-in-scope-)
-  * [3. Executive Summary – Consolidated Quality Status](#3-executive-summary--consolidated-quality-status-)
-  * [4. Types of Testing](#4-types-of-testing-)
-  * [5. Test Execution Summary](#5-test-execution-summary-)
-- [Known Issues](#known-issues-)
-- [List Of Acronyms](#list-of-acronyms-)
+### Table Of Contents
 
-## Scope [**[↑]**](#table-of-contents)
-This release is with **real biometrics**. This means that MOSIP Platform is now integrated with SDK, MDS (MOSIP  Device Service), ABIS (Automated Biometrics Identification System) and Biometric devices. Also, this version is tested for Biometric functionalities. Non-functional requirements (Performance, Scale and Security) will be taken up in subsequent releases.
+* [Scope](Release-Notes-1.0.0.md#scope-)
+* [Documentation](Release-Notes-1.0.0.md#documentation-)
+* [Key Points](Release-Notes-1.0.0.md#key-points-)
+* [Code](Release-Notes-1.0.0.md#code-)
+* [Test Reports](Release-Notes-1.0.0.md#test-reports-)
+  * [1. In scope](Release-Notes-1.0.0.md#1-in-scope-)
+  * [2. Not in scope](Release-Notes-1.0.0.md#2-Not-in-scope-)
+  * [3. Executive Summary – Consolidated Quality Status](Release-Notes-1.0.0.md#3-executive-summary--consolidated-quality-status-)
+  * [4. Types of Testing](Release-Notes-1.0.0.md#4-types-of-testing-)
+  * [5. Test Execution Summary](Release-Notes-1.0.0.md#5-test-execution-summary-)
+* [Known Issues](Release-Notes-1.0.0.md#known-issues-)
+* [List Of Acronyms](Release-Notes-1.0.0.md#list-of-acronyms-)
+
+### Scope [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
+
+This release is with **real biometrics**. This means that MOSIP Platform is now integrated with SDK, MDS (MOSIP Device Service), ABIS (Automated Biometrics Identification System) and Biometric devices. Also, this version is tested for Biometric functionalities. Non-functional requirements (Performance, Scale and Security) will be taken up in subsequent releases.
 
 * Modules included
-	* Pre-Registration 
-	* Registration Client 
-	* Registration Processor 
-	* ID Authentication
-	* Administration
-	* Reference GUI implementation of Pre-Registration and Registration Client. 
+  * Pre-Registration
+  * Registration Client
+  * Registration Processor
+  * ID Authentication
+  * Administration
+  * Reference GUI implementation of Pre-Registration and Registration Client.
 * Modules not included
-	* Partner Management
-	* Resident Services
-	* Reference GUI implementation of Administration
+  * Partner Management
+  * Resident Services
+  * Reference GUI implementation of Administration
 
-Module-wise features released as part of this release can be found [here](_files/release/1.0.0/MOSIP_Feature_Release_v1.0.0.xlsx)
+Module-wise features released as part of this release can be found [here](\_files/release/1.0.0/MOSIP\_Feature\_Release\_v1.0.0.xlsx)
 
-## Documentation [**[↑]**](#table-of-contents)
+### Documentation [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
-### 1. Platform Documentation 
+#### 1. Platform Documentation
+
 Includes Functional requirements, Process flows, Architecture and High level design, Developer documentation etc.
 
 [Link to Platform Documentation](https://docs.mosip.io/platform/)
 
-### 2. Detailed Documentation
+#### 2. Detailed Documentation
+
 * Low level design documents for respective modules is found below:
-	* [Pre-Registration](https://github.com/mosip/pre-registration/tree/master/design/pre-registration)
-	* [Registration Client](https://github.com/mosip/registration/tree/master/design/registration)
-	* [Registration Processor](https://github.com/mosip/registration/tree/master/design/registration-processor)
-	* [Authentication](https://github.com/mosip/id-authentication/tree/master/design/authentication)
-	* [Administration](https://github.com/mosip/admin-services/tree/master/design/admin)
-	* [ID Repository](https://github.com/mosip/commons/tree/master/design/kernel)
-	* [Kernel](https://github.com/mosip/commons/tree/master/design/idrepository)
+  * [Pre-Registration](https://github.com/mosip/pre-registration/tree/master/design/pre-registration)
+  * [Registration Client](https://github.com/mosip/registration/tree/master/design/registration)
+  * [Registration Processor](https://github.com/mosip/registration/tree/master/design/registration-processor)
+  * [Authentication](https://github.com/mosip/id-authentication/tree/master/design/authentication)
+  * [Administration](https://github.com/mosip/admin-services/tree/master/design/admin)
+  * [ID Repository](https://github.com/mosip/commons/tree/master/design/kernel)
+  * [Kernel](https://github.com/mosip/commons/tree/master/design/idrepository)
 * Functional test documentation is found [here](https://github.com/mosip/mosip-functional-tests/tree/1.0.0).
 
-### 3. Platform Configuration for RBR
-MOSIP Platform can be configured to be used for Real Biometrics. Please find the [guide to configure MOSIP for  biometrics](Guide-to-Configure-MOSIP-for-Biometrics.md).
+#### 3. Platform Configuration for RBR
 
-## Key Points [**[↑]**](#table-of-contents)
+MOSIP Platform can be configured to be used for Real Biometrics. Please find the [guide to configure MOSIP for biometrics](Guide-to-Configure-MOSIP-for-Biometrics.md).
 
-|Key Points|	Details|
-|----|----|
-|Pre Registration - Browser support |	Chrome 74.0.3729)|
-|Deployment Script Environment|	Microsoft Azure|
-|Registration Client – OS version|	Windows 10 (English version)  with TPM 2.0|
-|Camera|	Logitech / Default windows camera|
-|Scanner|	Canon lide 120|
-|GPS|	GlobalSat BU-353-S4|
-|Biometrics standard|	CBEFF format (Version - 0.9.0)|
-|MOSIP Device Service (MDS)|	Version - 0.9.1|
-|SMS gateway|	MSG91, Infobip|
-|Registration Client – face capture |	OpenImaj - This is licensed for demo purpose only|
-|Keystore|	SoftHSM|
-|Antivirus|	ClamAV|
-|Maps	|OpenstreetMap|
-|Supporting key based digital signatures, not using digital certificates||	
-|Transliteration|	ICU4J (Library with French, Arabic languages)|
+### Key Points [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
-## Code [**[↑]**](#table-of-contents)
+| Key Points                                                              | Details                                           |
+| ----------------------------------------------------------------------- | ------------------------------------------------- |
+| Pre Registration - Browser support                                      | Chrome 74.0.3729)                                 |
+| Deployment Script Environment                                           | Microsoft Azure                                   |
+| Registration Client – OS version                                        | Windows 10 (English version) with TPM 2.0         |
+| Camera                                                                  | Logitech / Default windows camera                 |
+| Scanner                                                                 | Canon lide 120                                    |
+| GPS                                                                     | GlobalSat BU-353-S4                               |
+| Biometrics standard                                                     | CBEFF format (Version - 0.9.0)                    |
+| MOSIP Device Service (MDS)                                              | Version - 0.9.1                                   |
+| SMS gateway                                                             | MSG91, Infobip                                    |
+| Registration Client – face capture                                      | OpenImaj - This is licensed for demo purpose only |
+| Keystore                                                                | SoftHSM                                           |
+| Antivirus                                                               | ClamAV                                            |
+| Maps                                                                    | OpenstreetMap                                     |
+| Supporting key based digital signatures, not using digital certificates |                                                   |
+| Transliteration                                                         | ICU4J (Library with French, Arabic languages)     |
+
+### Code [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
+
 The code and [automation tests](https://github.com/mosip/mosip-functional-tests/tree/1.0.0) are available on [GitHub](https://github.com/mosip/). The code needs to be built and deployed as per the procedure documented in [**Building And Deploying MOSIP**](Build-and-Deploy.md). We will actively support System Integrators during their first deployment.
 
-## Test Reports [**[↑]**](#table-of-contents)
+### Test Reports [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
+
 **Testing Scope**
-#### 1. In scope [**[↑]**](#table-of-contents)
 
-|Title	|Description|
-|------|------|
-|Modules Tested|<li> Pre-registration (UI & Server) <li> Registration Client (UI & APIs) <li> Kernel (APIs) <li> Registration Processor (Server) <li> ID Authentication (APIs) <li> ID Repository (APIs) <li> Administration (UI & APIs)|
-| Version Tag Tested|	1.0.0|
-|Test Methodology| <li>  Manual <li>  Test Automation|
-|Types of testing|<li>	 Smoke <li> Functional <li> Integration <li> Regression|
-|Testing Levels|![](_images/release/1.0.0/Testing_levels.jpg) |
-|Configuration Parameters tested for| Refer to properties file at [**Link**](https://github.com/mosip/mosip-config/tree/1.0.0)|
-|Browser Support|**Pre-Registration**    <li> Chrome – 78.0.3904.108|
-|OS Support|**Registration Client**    <li> Windows 10|
-|Language Support|French, Arabic, English|
+**1. In scope** [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
-#### 2. Not in scope [**[↑]**](#table-of-contents)
+| Title                               | Description                                                                                                                                                                                                                                                                                                                  |
+| ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Modules Tested                      | <ul><li>Pre-registration (UI &#x26; Server)</li></ul><ul><li>Registration Client (UI &#x26; APIs)</li></ul><ul><li>Kernel (APIs)</li></ul><ul><li>Registration Processor (Server)</li></ul><ul><li>ID Authentication (APIs)</li></ul><ul><li>ID Repository (APIs)</li></ul><ul><li>Administration (UI &#x26; APIs)</li></ul> |
+| Version Tag Tested                  | 1.0.0                                                                                                                                                                                                                                                                                                                        |
+| Test Methodology                    | <ul><li>Manual</li></ul><ul><li>Test Automation</li></ul>                                                                                                                                                                                                                                                                    |
+| Types of testing                    | <ul><li>Smoke</li></ul><ul><li>Functional</li></ul><ul><li>Integration</li></ul><ul><li>Regression</li></ul>                                                                                                                                                                                                                 |
+| Testing Levels                      | ![](\_images/test\_rig\_automation/image1.jpg)                                                                                                                                                                                                                                                                               |
+| Configuration Parameters tested for | Refer to properties file at [**Link**](https://github.com/mosip/mosip-config/tree/1.0.0)                                                                                                                                                                                                                                     |
+| Browser Support                     | <p><strong>Pre-Registration</strong></p><ul><li>Chrome – 78.0.3904.108</li></ul>                                                                                                                                                                                                                                             |
+| OS Support                          | <p><strong>Registration Client</strong></p><ul><li>Windows 10</li></ul>                                                                                                                                                                                                                                                      |
+| Language Support                    | French, Arabic, English                                                                                                                                                                                                                                                                                                      |
 
-|Title|	Description|
-|------|------|
-|NFR Testing| <li> Scalability Testing <li> Performance Testing <li> Security Testing|
-|Configuration Testing|<li> Testing is done for one set of approved production configuration <li> Changing the configuration parameters for various values (boundary values) and testing the impact of each such value on the platform code will be taken up in subsequent releases.|
+**2. Not in scope** [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
-#### 3. Executive Summary – Consolidated Quality Status [**[↑]**](#table-of-contents)
+| Title                 | Description                                                                                                                                                                                                                                                                            |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| NFR Testing           | <ul><li>Scalability Testing</li></ul><ul><li>Performance Testing</li></ul><ul><li>Security Testing</li></ul>                                                                                                                                                                           |
+| Configuration Testing | <ul><li>Testing is done for one set of approved production configuration</li></ul><ul><li>Changing the configuration parameters for various values (boundary values) and testing the impact of each such value on the platform code will be taken up in subsequent releases.</li></ul> |
 
-|Sl. No.|	Module / Activity|Test Methodology|	Test Status|
-|------|------|------|------|
-|1|	Kernel	|<li> Test Automation	|PASS|	
-|2|	Pre-Registration|<li> Test Automation|PASS |
-|3|	Registration Client|<li> Tested Manually <li> Test Automation|PASS|
-|4|Registration Processor|<li> Tested Manually <li> Test Automation	|PASS |
-|5|	ID Authentication	|	<li>  Test Automation	|PASS|
-|6|	ID Repo	|	<li> Test Automation	|PASS|	
-|7|Pre-Registration to Registration Client integration testing|	<li> Tested Manually|PASS	|	
-|8|	Registration Client to Registration Processor integration testing|	<li> Tested Manually|PASS|	
-|9|	Registration Processor to IDA integration testing|<li> 	Tested Manually|PASS|
-|10| IDA to ID Repo|<li> 	Tested Manually|PASS	|
+**3. Executive Summary – Consolidated Quality Status** [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
-#### 4. Types of Testing [**[↑]**](#table-of-contents)
+| Sl. No. | Module / Activity                                                 | Test Methodology                                                   | Test Status |
+| ------- | ----------------------------------------------------------------- | ------------------------------------------------------------------ | ----------- |
+| 1       | Kernel                                                            | <ul><li>Test Automation</li></ul>                                  | PASS        |
+| 2       | Pre-Registration                                                  | <ul><li>Test Automation</li></ul>                                  | PASS        |
+| 3       | Registration Client                                               | <ul><li>Tested Manually</li></ul><ul><li>Test Automation</li></ul> | PASS        |
+| 4       | Registration Processor                                            | <ul><li>Tested Manually</li></ul><ul><li>Test Automation</li></ul> | PASS        |
+| 5       | ID Authentication                                                 | <ul><li>Test Automation</li></ul>                                  | PASS        |
+| 6       | ID Repo                                                           | <ul><li>Test Automation</li></ul>                                  | PASS        |
+| 7       | Pre-Registration to Registration Client integration testing       | <ul><li>Tested Manually</li></ul>                                  | PASS        |
+| 8       | Registration Client to Registration Processor integration testing | <ul><li>Tested Manually</li></ul>                                  | PASS        |
+| 9       | Registration Processor to IDA integration testing                 | <ul><li>Tested Manually</li></ul>                                  | PASS        |
+| 10      | IDA to ID Repo                                                    | <ul><li>Tested Manually</li></ul>                                  | PASS        |
 
-|Testing Type| Description|
-|------|------|
-|Smoke Testing|Tests to ensure basic workflows works fine|
-|Functional Testing|Tests to ensure functionality of each module and overall system work fine in accordance with the given requirements|
-|Integration Testing|Tests to ensure the inter module functionality works fine and in accordance with the integration requirements|
-|Regression Testing|Tests to ensure that any change doesn't break existing functionality|
-	
-#### 5. Test Execution Summary [**[↑]**](#table-of-contents)
-![](_images/release/1.0.0/ExecutionSummary_1.0.0.jpg)  
+**4. Types of Testing** [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
-## Known Issues [**[↑]**](#table-of-contents)
-![](_images/release/1.0.0/KnownIssues_1.0.0.jpg) 
+| Testing Type        | Description                                                                                                         |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Smoke Testing       | Tests to ensure basic workflows works fine                                                                          |
+| Functional Testing  | Tests to ensure functionality of each module and overall system work fine in accordance with the given requirements |
+| Integration Testing | Tests to ensure the inter module functionality works fine and in accordance with the integration requirements       |
+| Regression Testing  | Tests to ensure that any change doesn't break existing functionality                                                |
 
-## List Of Acronyms [**[↑]**](#table-of-contents)
+**5. Test Execution Summary** [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
 
-Acronym | Expanded Form
------|-----------------
-ABIS | Automated Biometric Identification System
-API | Application Programming Interface
-ID | Identity
-IDA | Identity Authentication
-MOSIP | Modular Open Source Identity Platform
-NFR | Non-Functional Requirements
-OTP | One Time Password
-SDK | Software Development Kit
-TBD | To Be Determined
-TOTP| Temporary One Time Password
-UIN | Unique Identification Number
-WIP | Work In Progress
-CBEFF | Common Biometric Exchange Formats Framework
-HSM | Hardware Security Module
-TPM | Trusted Platform Module
-SDK | Software Development Kit
-MDS | MOSIP Device Service
+![](<\_images/release/1.0.0/ExecutionSummary\_1.0.0 (1).jpg>)
+
+### Known Issues [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
+
+![](<\_images/release/1.0.0/KnownIssues\_1.0.0 (1).jpg>)
+
+### List Of Acronyms [**\[↑\]**](Release-Notes-1.0.0.md#table-of-contents)
+
+| Acronym | Expanded Form                               |
+| ------- | ------------------------------------------- |
+| ABIS    | Automated Biometric Identification System   |
+| API     | Application Programming Interface           |
+| ID      | Identity                                    |
+| IDA     | Identity Authentication                     |
+| MOSIP   | Modular Open Source Identity Platform       |
+| NFR     | Non-Functional Requirements                 |
+| OTP     | One Time Password                           |
+| SDK     | Software Development Kit                    |
+| TBD     | To Be Determined                            |
+| TOTP    | Temporary One Time Password                 |
+| UIN     | Unique Identification Number                |
+| WIP     | Work In Progress                            |
+| CBEFF   | Common Biometric Exchange Formats Framework |
+| HSM     | Hardware Security Module                    |
+| TPM     | Trusted Platform Module                     |
+| SDK     | Software Development Kit                    |
+| MDS     | MOSIP Device Service                        |
