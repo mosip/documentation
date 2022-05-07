@@ -18,6 +18,10 @@ The relationship of WebSub with other services is explained here. *NOTE: The num
 
 Refer [WebSub repo](https://github.com/mosip/websub/tree/release-1.2.0) for further details.
 
+## Developer Guide
+To know more about the developer setup, read [WebSub Developers Guide](https://docs.mosip.io/1.2.0/modules/websub/websub-developer-guide).
+
+
 
 
 
