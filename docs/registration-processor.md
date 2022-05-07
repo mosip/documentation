@@ -34,6 +34,9 @@ Refer to [repo](https://github.com/mosip/registration/tree/release-1.2.0)
 ## Configurations
 Refer to [Configuration Guide](https://github.com/mosip/registration/blob/release-1.2.0/docs/configuration.md).
 
+## Developer Guide
+To know more about the developer setup, read [Registration Processor Developers Guide](https://docs.mosip.io/1.2.0/modules/registration-processor/registration-processor-developers-guide).
+
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
 
