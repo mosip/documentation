@@ -55,7 +55,6 @@ More than one SBI can run on the host machine. Registration Client scans the all
 * Directory to store the registration packets and related registration acknowledgments is configurable. 
 * Registration packet is an signed and encrypted ZIP.
 * Registration acknowledgment is also signed and encrypted with TPM key.
-
  
 ## Configurations
 Registration client can be customized as per a country' requirements.  For details related to Registration Client configurations, refer to registration-Client configuration.
@@ -72,4 +71,6 @@ Registration client can be customized as per a country' requirements.  For detai
 
 Default UI Specifications loaded with Sandbox installation is available [here](https://github.com/mosip/mosip-infra/blob/1.2.0-rc2/deployment/v3/mosip/kernel/masterdata/xlsx/ui_spec.xlsx)
 
+## Developer Guide
+To know more about the developer setup, read [Registration Client Developers Guide](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-developers-guide).
 
