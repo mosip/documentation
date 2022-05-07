@@ -105,7 +105,14 @@ This is a one-time job that populates salts that are used to hash and encrypt da
 * `uin_hash_salt` in `mosip_idrepo` DB.
 * `uin_encrypt_salt` in `mosip_idmap` DB.
 
-In MOSIP sandbox the job is run [here](https://github.com/mosip/mosip-infra/blob/release-1.2.0/deployment/v3/mosip/idrepo/install.sh).
+In MOSIP sandbox, the job is run [here](https://github.com/mosip/mosip-infra/blob/release-1.2.0/deployment/v3/mosip/idrepo/install.sh).
+
+## Developer Guide
+To know more about the developer setups, read:
+
+1. [Credential Request Generator Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-repository/id-repository-credential-request-generator-service-developer-guide)
+2. [Identity Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-repository/id-repository-identity-service-developer-guide)
+3. [VID Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-repository/id-repository-vid-service-developer-guide)
 
 ## API
 
