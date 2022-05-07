@@ -68,7 +68,7 @@ Pre-registration module consists of the following services:
 * [Datasync](https://github.com/mosip/pre-registration/tree/release-1.2.0/pre-registration/pre-registration-datasync-service)
 * [Captcha](https://github.com/mosip/pre-registration/tree/release-1.2.0/pre-registration/pre-registration-captcha-service)
 
-For more details, refer to [pre-registration repo](https://github.com/pjoshi751/pre-registration/tree/develop).
+For more details, refer to [Pre-registration repo](https://github.com/pjoshi751/pre-registration/tree/develop).
 
 ## Pre-registration portal
 
@@ -76,11 +76,14 @@ MOSIP provides a **reference** implementation of the pre-registration portal tha
 
 ## Build and deploy
 
-To access the build and read through the deployment instructions, refer to [pre-registration repo](https://github.com/pjoshi751/pre-registration/tree/develop).
+To access the build and read through the deployment instructions, refer to [Pre-registration repo](https://github.com/pjoshi751/pre-registration/tree/develop).
 
 ## Configurations
 
-For details related to pre-registration configurations, refer to [pre-registration configuration](https://github.com/pjoshi751/pre-registration/blob/develop/docs/configuration.md).
+For details related to Pre-registration configurations, refer to [Pre-registration configuration](https://github.com/pjoshi751/pre-registration/blob/develop/docs/configuration.md).
+
+## Developer Guide
+To know more about the developer setup, read [Pre-registration Developers Guide](https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-developer-setup).
 
 ## API
 
