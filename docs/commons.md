@@ -14,6 +14,13 @@ As the name suggests, Commons refers to all the common services (also called "ke
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html)
 
+## Developer Guide
+To know more about the developer setups, read
+
+1. [Commons Developer Guide](https://docs.mosip.io/1.2.0/modules/commons/commons-developer-guide).
+2. [Audit Manager Developers Guide](https://docs.mosip.io/1.2.0/modules/commons/audit-manager-developer-guide)
+3. [OpenID-Bridge Developers Guide](https://docs.mosip.io/1.2.0/modules/commons/openid-bridge-developer-guide)
+
 
 
 
