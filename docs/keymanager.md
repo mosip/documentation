@@ -78,6 +78,9 @@ You can revoke Base key by invoking [`revokeKey`](https://mosip.github.io/docume
 *	The registration packet will be encrypted using the certificate received from the server after collecting all the required data for registration, including adding the digital signatures required to the registration data, and before saving/writing the data on the Registration Client hard-disk.
 *	REG_PROC sends request to decrypt the data to Key Manager service with same app_id and ref_id.
 
+## Developer Guide
+To know more about the developer setup, read [Key Manager Developers Guide](https://docs.mosip.io/1.2.0/modules/keymanager/keymanager-developer-guide).
+
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
 
