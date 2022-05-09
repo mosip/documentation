@@ -6,7 +6,7 @@ The services mentioned below are used by Authentication/e-KYC Partners.
 * Authentication service- used to authenticate an individual's UIN/VID using one ore more authentication types.
 * KYC Authentication service- used to request e-KYC for an individul's UIN/VID using one ore more authentication types.
 
-<img src="_images/authentication-service.png" width="1000" height="400">
+<img src="_images/authentication-service.png" width="1000" height="430">
 
 The documentation here will guide you through the prerequisites required for the developer' setup.
 
