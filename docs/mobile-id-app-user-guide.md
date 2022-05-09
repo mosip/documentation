@@ -6,7 +6,8 @@ For Android devices, Google Nearby Connections API and the Google SafetyNet Atte
 
 ## Installing the MOSIP Resident Mobile Application
 
-1\. Download Mobile Resident application (app) from here.
+1\. Download Mobile Resident application (app).
+
 2\. Tap **Install** to proceed with installation.
 
 ![](\_images/mobile-app-install.jpeg)
@@ -21,7 +22,8 @@ You can see the installation in progress.
 
 ## First launch of the app and initial setup
 
-1\. On the first launch, you will see a prompt asking you to `Allow MOSIP Resident App to access the device's location?`
+1\. On the first launch, you will see a prompt asking you to `Allow MOSIP Resident App to access the device's location?`.
+
 2\. Tap **Allow** to continue.
 
 ![](\_images/mobile-app-allow-deny.jpeg)
@@ -31,6 +33,7 @@ You can see the installation in progress.
 ![](\_images/mobile-app-getting-started.jpeg)
 
 4\. You will now be given an option to either setup your biometrics or a passcode for unlocking the application. For now, the app supports the passcode option.
+
 5\. Choose `I'd rather use a passcode`.
 
 ![](\_images/mobile-app-passcode.jpeg)
