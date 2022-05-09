@@ -2,7 +2,7 @@
 
 ## Overview
 OTP Request Service is used by Authentication/e-KYC Partners to generate OTP for an individual's UIN/VID. The generated OTP is stored in IDA DB for validation during OTP Authentication.
-<img src="_images/authentication-otp-service.png" width="750" height="450">
+<img src="_images/authentication-otp-service.png" width="900" height="450">
 
 The documentation here will guide you through the prerequisites required for the developer' setup.
 
