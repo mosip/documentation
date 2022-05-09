@@ -66,7 +66,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 3. Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
 
-4. As Id Authentication is using two properties files, `id-authentication-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-repository-config-files) for reference.
+4. As Id Authentication is using two properties files, `id-authentication-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-authentication-config-files) for reference.
 
 Properties to be updated:
 
@@ -78,8 +78,8 @@ Properties to be updated:
 *  `mosip.identity.mapping-file=<Path_to_identity_mapping_json_file>`. (For Example: `file:///home/user/Desktop/tspl/mosip-config/sandbox-local/identity-mapping.json`)
 
 `id-authentication-default.properties`
-*
-*
+* ......
+* ......
 
 5. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav~~kernel-config-server~1.2.0-SNAPSHOT~~) and [config-server-start.bat](https://github.com/mosip/documentation/blob/1.2.0/docs/_files/id-repository-config-files/config-server-start.bat).
 
