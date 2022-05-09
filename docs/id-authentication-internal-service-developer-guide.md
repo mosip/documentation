@@ -5,8 +5,6 @@
 * Internal OTP Service - used by Resident Service to generate OTP for an Individual for performing OTP Authentication.
 * Authentication Transaction History Service - used by Resident Service to retrieve paginated list of authentication and OTP Request transactions for an individual.
 
-<img src="_images/authentication-service.png" width="750" height="450">
-
 The documentation here will guide you through the prerequisites required for the developer' setup.
 
 
