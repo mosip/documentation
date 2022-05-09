@@ -2,7 +2,7 @@
 
 ## Overview
 OTP Request Service is used by Authentication/e-KYC Partners to generate OTP for an individual's UIN/VID. The generated OTP is stored in IDA DB for validation during OTP Authentication.
-<img src="_images/authentication-service.png" width="750" height="450">
+<img src="_images/authentication-otp-service.png" width="750" height="450">
 
 The documentation here will guide you through the prerequisites required for the developer' setup.
 
@@ -93,7 +93,7 @@ The server should now be up and running.
 
 Below are the configurations to be done in Eclipse:
 
-1. Open Eclipse and run the project for one time as `Java application`, so that it will create a Java application which you can see in debug configurations and then change its name. (e.g.: project name with environment - "Auth-Service-Dev").
+1. Open Eclipse and run the project for one time as `Java application`, so that it will create a Java application which you can see in debug configurations and then change its name. (e.g.: project name with environment - "Auth-Otp-Service-Dev").
 
 <img src="_images/create-env-in-eclipse.png" width="750" height="450">
 
