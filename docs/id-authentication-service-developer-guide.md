@@ -6,7 +6,7 @@ The services mentioned below are used by Authentication/e-KYC Partners.
 * Authentication service- used to authenticate an individual's UIN/VID using one ore more authentication types.
 * KYC Authentication service- used to request e-KYC for an individul's UIN/VID using one ore more authentication types.
 
-<img src="_images/authentication-service.png" width="750" height="450">
+<img src="_images/authentication-service.png" width="1000" height="400">
 
 The documentation here will guide you through the prerequisites required for the developer' setup.
 
@@ -109,7 +109,7 @@ Below are the configurations to be done in Eclipse:
 
 4. Click Apply and then debug it (starts running).
 
-## Authentication service API
+## Authentication Service API
 * For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
 ​
 * The APIs can be tested with the help of **Swagger-UI**. 
