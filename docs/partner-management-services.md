@@ -34,6 +34,9 @@ This service manages partner policies.
 ## Partner portal
 To know more about the partner portal, refer [Partner Management portal](partner-management-portal.md).
 
+## Developer Guide
+To know more about the developer setup, read [Partner Management Services Developers Guide](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-services-developer-setup).
+
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
 
