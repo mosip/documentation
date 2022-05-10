@@ -10,8 +10,6 @@ For Android devices, Google Nearby Connections API and the Google SafetyNet Atte
 
 2\. Tap **Install** to proceed with installation.
 
-<img src="_images\mobile-scan-qr-code.jpeg" width="200" height="400"> 
-
 ![](\_images/mobile-app-install.jpeg)
 
 You can see the installation in progress.
