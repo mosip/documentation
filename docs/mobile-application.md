@@ -58,7 +58,7 @@ The process flow for receiving the credentials is given below
 
 ![](_images/mobile-app-roadmap.png)
 
-## Building the application
-The resident mobile application code can be downloaded from https://github.com/mosip/inji. An apk will be generated as the output of the build process which can then be installed on smart phones.
+## Build and install
+The resident mobile application code can be downloaded from https://github.com/mosip/inji. Detailed steps to build Inji to generate an apk are given [here](https://github.com/mosip/inji#building-from-source). The output apk can then be installed on smart phones.
 
-NOTE: To download the alpha release use the 0.8 tag. The alpha release works on both 1.1.5.5 and 1.2.0(LTS) version of the platform. Corresponding Mimoto version can be downloaded and used.
+NOTE: To download the alpha release use the 0.8 tag of Inji. The alpha release works on both 1.1.5.5 and 1.2.0(LTS) version of the platform. Corresponding Mimoto version can be downloaded and used.
