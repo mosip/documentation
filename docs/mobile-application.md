@@ -58,5 +58,7 @@ The process flow for receiving the credentials is given below
 
 ![](_images/mobile-app-roadmap.png)
 
-## Download resident mobile application
-Resident Mobile Application's alpha release can be downloaded from [here].
+## Building the application
+The resident mobile application code can be downloaded from https://github.com/mosip/inji. To download the alpha release use the 0.8 tag.
+
+NOTE: The alpha release works on both 1.1.5.5 and 1.2.0(LTS) version of the platform. Corresponding Mimoto version can be downloaded and used. 
