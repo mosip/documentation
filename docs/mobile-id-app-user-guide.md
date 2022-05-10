@@ -109,15 +109,15 @@ Let us understand sharing of credentials with an example.
 
 Assuming that a Resident having Device A wants to share their credentials with a Relying/ requesting party having Device B. The steps that both the parties have to follow is illustrated below:
 
-1\.  The Resident taps on `Scan` icon on their phone (on the bottom menu, second icon from left).
+1\. The Resident taps on `Scan` icon on their phone (on the bottom menu, second icon from left).
 
     Click **OK** to turn on the device' location.
 
-![](\_images/mobile-app-scan-qr-code.jpeg)
+<img src="_images/mobile-app-scan-qr-code.jpeg" width="200" height="400">
 
 2\. Tap **Allow** to `Allow MOSIP Resident App to take pictures and record videos.`
 
-![](\_images/mobile-app-scanqr-allow.jpeg)
+<img src="_images/mobile-app-scanqr-allow.jpeg" width="200" height="400">
 
 3\. The Resident' device is ready for scanning the QR code that will be displayed on the Relying party' phone.
 
@@ -125,15 +125,15 @@ Assuming that a Resident having Device A wants to share their credentials with a
 
     Tap **Allow** to enable bluetooth on Device B.
 
-![](\_images/mobile-app-deviceB-bluetooth.jpeg)
+<img src="_images/mobile-app-deviceB-bluetooth.jpeg" width="200" height="400">
 
 5\. Resident scans the QR code displayed on Device B using Device A.
 
-![](\_images/mobile-app-scanner-ready.jpeg) ![](\_images/mobile-app-qr-code.jpeg)
+<img src="_images/mobile-app-scanner-ready.jpeg" width="200" height="400"> <img src="_images/mobile-app-qr-code.jpeg" width="200" height="400">
 
 6\. The status on the Resident' device is displayed as "Connecting..".
 
-![](\_images/mobile-app-device1-connecting.jpeg)
+<img src="_images/mobile-app-device1-connecting.jpeg" width="200" height="400">
 
 7\. Once the connection is made, the `Sharing ID` screen is displayed on the Resident' phone. This screen has the following details:
    * Requested by: Device B model
@@ -141,33 +141,33 @@ Assuming that a Resident having Device A wants to share their credentials with a
    * Device Reference number
    * Reason for sharing (optional)
 
-![](\_images/mobile-app-sharing-id.jpeg)
+<img src="_images/mobile-app-sharing-id.jpeg" width="200" height="400">
 
 8\. Resident enters the reason for sharing the credentials and taps `Accept request and choose ID`.
 
-![](\_images/mobile-app-reason-sharing-id.jpeg)
+<img src="_images/mobile-app-reason-sharing-id.jpeg" width="200" height="400">
 
 9\. The Resident now selects the ID to be shared with the Relying party and taps on **Share**.
 
-![](\_images/mobile-app-select-id.jpeg)
+<img src="_images/mobile-app-select-id.jpeg" width="200" height="400">
 
 10\. Sharing gets initiated from Device A to B.
 
-![](\_images/mobile-app-sharing-in-progress.jpeg)
+<img src="_images/mobile-app-sharing-in-progress.jpeg" width="200" height="400">
 
 11\. The Relying party' phone displays `Accept request and receive ID`.
 
-![](\_images/mobile-app-receive-id.jpeg)
+<img src="_images/mobile-app-receive-id.jpeg" width="200" height="400">
 
 Clicking Accept is followed by a success message on both the phones.
 
-![](\_images/mobile-app-receive-success.jpeg)
+<img src="_images/mobile-app-receive-success.jpeg" width="200" height="400">
 
 This above image shows the success message displayed on Device A.
 
 12\. Relying party taps on `Received IDs` to view the ID received on Device B.
 
-![](\_images/mobile-app-device2-received-ids.jpeg)
+<img src="_images/mobile-app-device2-received-ids.jpeg" width="200" height="400">
 
 13\. `History` tab on the devices displays the details of the activities performed.
 
@@ -177,5 +177,4 @@ For instance,
 * On the Relying party' phone, the History tab shows the history of the received credentials.
 * On the Resident' phone, the History tab displays the history of the downloaded credentials.
 ```
-
-![](\_images/mobile-app-device2-history.jpeg) ![](\_images/mobile-app-device1-history.jpeg)
+<img src="_images/mobile-app-device2-history.jpeg" width="200" height="400"> <img src="_images/mobile-app-device1-history.jpeg" width="200" height="400">
