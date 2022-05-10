@@ -10,15 +10,15 @@ For Android devices, Google Nearby Connections API and the Google SafetyNet Atte
 
 2\. Tap **Install** to proceed with installation.
 
-![](\_images/mobile-app-install.jpeg)
+<img src="_images/mobile-app-install.jpeg" width="200" height="400">  
 
 You can see the installation in progress.
 
-![](\_images/mobile-app-installing.jpeg)
+<img src="_images/mobile-app-installing.jpeg" width="200" height="400">  
 
 3\. On successful installation, click **Open**.
 
-![](\_images/mobile-app-installed.jpeg)
+<img src="_images/mobile-app-installed.jpeg" width="200" height="400">  
 
 ## First launch of the app and initial setup
 
@@ -26,25 +26,25 @@ You can see the installation in progress.
 
 2\. Tap **Allow** to continue.
 
-![](\_images/mobile-app-allow-deny.jpeg)
+<img src="_images/mobile-app-allow-deny.jpeg" width="200" height="400">
 
 3\. Click **Get started** to setup the app.
 
-![](\_images/mobile-app-getting-started.jpeg)
+<img src="_images/mobile-app-getting-started.jpeg" width="200" height="400">
 
 4\. You will now be given an option to either setup your biometrics or a passcode for unlocking the application. For now, the app supports the passcode option.
 
 5\. Choose `I'd rather use a passcode`.
 
-![](\_images/mobile-app-passcode.jpeg)
+<img src="_images/mobile-app-passcode.jpeg" width="200" height="400">
 
 6\. Re-enter the passcode to confirm the same.
 
-![](\_images/mobile-app-confirm-passcode.jpeg)
+<img src="_images/mobile-app-confirm-passcode.jpeg" width="200" height="400">
 
 7\. On the Home screen, a few tooltips are displayed after the initial setup to guide you through the next steps.
 
-![](\_images/mobile-app-welcome-home.jpeg) ![](\_images/mobile-app-tooltip2.jpeg) ![](\_images/mobile-app-tooltip3.jpeg)
+<img src="_images/mobile-app-welcome-home.jpeg" width="200" height="400">  <img src="_images/mobile-app-tooltip2.jpeg" width="200" height="400">   <img src="_images/mobile-app-tooltip3.jpeg" width="200" height="400">
 
 ## Generating credentials
 
@@ -52,51 +52,48 @@ It is recommended to keep your digital credentials (ID) with you at all times. T
 
 1\. On the Home screen, tap **Add ID**.
 
-![](\_images/mobile-app-add-id.jpeg)
+<img src="_images/mobile-app-add-id.jpeg" width="200" height="400"> 
 
 2\. From the dropdown, select either the UIN or VID that will be used to generate the credential.
 
-![](\_images/mobile-app-uin-dropdown.jpeg)
+<img src="_images/mobile-app-uin-dropdown.jpeg" width="200" height="400"> 
 
 3\. Enter the corresponding value for UIN/ VID and tap **Generate ID**.
 
-![](\_images/mobile-app-enter-uin.jpeg)
+<img src="_images/mobile-app-enter-uin.jpeg" width="200" height="400"> 
 
 4\. Enter the 6-digit verification code (OTP) sent on your registered phone number/e-mail.
 
-![](\_images/mobile-app-otp.jpeg)
+<img src="_images/mobile-app-otp.jpeg" width="200" height="400"> 
 
 5\. Click **Back Home** and wait till your credentials are generated.
 
-![](\_images/mobile-app-download-id.jpeg) ![](\_images/mobile-app-credentials-wait.jpeg)
+<img src="_images/mobile-app-download-id.jpeg" width="200" height="400"> <img src="_images/mobile-app-credentials-wait.jpeg" width="200" height="400"> 
 
 6\. Under `My IDs` tab, you will be able to view your digital credentials.
 
-![](\_images/mobile-app-credentials-created.jpeg)
+<img src="_images/mobile-app-credentials-created.jpeg" width="200" height="400">
 
 7\.  For more details, click on the arrow mark towards the right corner in the ID generated. You can view the following details:
 
-    ```
      * Generated date
      * UIN
      * Status
      * Details like the photograph, name, address, email, etc. 
      
-    ```
-
-![](\_images/mobile-app-detailed-view.jpeg)
+<img src="_images/mobile-app-detailed-view.jpeg" width="200" height="400">
 
 8\. Click **Edit Tag** (pencil icon in detailed view) and update the ID name as required.
 
-![](\_images/mobile-id-edit-tag.jpeg)
+<img src="_images/mobile-id-edit-tag.jpeg" width="200" height="400">
 
 9\. Enter the new name and click **Save**. You will now see the updated ID name being displayed.
 
-![](\_images/mobile-app-edited-tag.jpeg)
+<img src="_images/mobile-app-edited-tag.jpeg" width="200" height="400">
 
 Likewise, the resident can tap `Add ID` to generate the credentials for their family or friends.
 
-[](\_images/mobile-app-add-ids-friends.jpeg)
+<img src="_images/mobile-app-add-ids-friends.jpeg" width="200" height="400">
 
 10\. You can view the history of the credentials downloaded under the `History` tab on the top right corner.
 
