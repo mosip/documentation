@@ -111,7 +111,7 @@ Assuming that a Resident having Device A wants to share their credentials with a
 
 1\.  The Resident taps on `Scan` icon on their phone (on the bottom menu, second icon from left).
 
-    Click **OK** to turn on the device' location.
+Click **OK** to turn on the device' location.
 
 <img src="_images/mobile-app-scan-qr-code.jpeg" width="200" height="400">
 
@@ -133,7 +133,7 @@ Assuming that a Resident having Device A wants to share their credentials with a
 
 6\. The status on the Resident' device is displayed as "Connecting..".
 
-<img src="_images/mobile-app-device1-connecting-id.jpeg" width="200" height="400">
+<img src="_images/mobile-app-device1-connecting.jpeg" width="200" height="400">
 
 7\. Once the connection is made, the `Sharing ID` screen is displayed on the Resident' phone. This screen has the following details:
    * Requested by: Device B model
