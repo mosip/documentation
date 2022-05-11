@@ -16,6 +16,7 @@ The MOSIP platform requires integration with several other systems.  Typically, 
 |Manual Adjudication| Providers of Manual Adjudication Systems(MAS); enrollment data is shared with MAS|`Manual_Adjudication`|
 |ABIS Partner|Provider of [ABIS](abis.md)|`ABIS_Partner`|
 |MISP Partner|MOSIP Infra Service Provider (MISP) provide network infrastructure/channel/pipe to various Authentication Partners to connect to the MOSIP system. Example, broadband service providers.|`MISP_Partner`| 
+|SDK Partner|SDK Providers|`SDK_Partner`|
 
 \* Label:  Reference in `partner_type` table of `mosip_pms` database.
 
