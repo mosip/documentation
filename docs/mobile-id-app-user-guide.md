@@ -6,7 +6,7 @@ For Android devices, Google Nearby Connections API and the Google SafetyNet Atte
 
 ## Installing the MOSIP Resident Mobile Application
 
-1\. Download Mobile Resident application (app).
+1\. Build Inji code to generate an apk file. Transfer the apk file to a smart phone on which it is to be installed.
 
 2\. Tap **Install** to proceed with installation.
 
