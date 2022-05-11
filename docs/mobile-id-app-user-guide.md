@@ -129,7 +129,7 @@ Tap **Allow** to enable bluetooth on Device B.
 
 5\. Resident scans the QR code displayed on Device B using Device A.
 
-<img src="_images/mobile-app-scanner-ready.jpeg" width="200" height="400"> <img src="_images/mobile-app-qr-code.jpeg" width="200" height="400">
+<img src="_images/mobile-app-scanner-ready.jpeg" width="200" height="400">  <img src="_images/mobile-app-qr-code.jpeg" width="200" height="400">
 
 6\. The status on the Resident' device is displayed as "Connecting..".
 
