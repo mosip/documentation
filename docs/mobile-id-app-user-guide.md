@@ -2,23 +2,23 @@
 
 ## Prerequisite
 
-For Android devices, Google Nearby Connections API and the Google SafetyNet Attestation API require that the device has access to the Google Play Services and related APIs. This implies that a Google Account is set up and configured on the device.
+For Android devices, `Google Nearby Connections API` and the `Google SafetyNet Attestation API` require that the device has access to the Google Play Services and related APIs. This implies that a Google Account is set up and configured on the device.
 
 ## Installing the MOSIP Resident Mobile Application
 
-1\. Build Inji code to generate an apk file. Transfer the apk file to a smart phone on which it is to be installed.
+1\. Build `Inji` code to generate an `apk` file. Transfer the `apk` file to a smart phone on which it is to be installed.
 
 2\. Tap **Install** to proceed with installation.
 
-![](\_images/mobile-app-install.jpeg)
+<img src="_images/mobile-app-install.jpeg" width="200" height="400"> 
 
 You can see the installation in progress.
 
-![](\_images/mobile-app-installing.jpeg)
+<img src="_images/mobile-app-installing.jpeg" width="200" height="400"> 
 
 3\. On successful installation, click **Open**.
 
-![](\_images/mobile-app-installed.jpeg)
+<img src="_images/mobile-app-installed.jpeg" width="200" height="400"> 
 
 ## First launch of the app and initial setup
 
@@ -26,25 +26,25 @@ You can see the installation in progress.
 
 2\. Tap **Allow** to continue.
 
-![](\_images/mobile-app-allow-deny.jpeg)
+<img src="_images/mobile-app-allow-deny.jpeg" width="200" height="400"> 
 
 3\. Click **Get started** to setup the app.
 
-![](\_images/mobile-app-getting-started.jpeg)
+<img src="_images/mobile-app-getting-started.jpeg" width="200" height="400"> 
 
 4\. You will now be given an option to either setup your biometrics or a passcode for unlocking the application. For now, the app supports the passcode option.
 
 5\. Choose `I'd rather use a passcode`.
 
-![](\_images/mobile-app-passcode.jpeg)
+<img src="_images/mobile-app-passcode.jpeg" width="200" height="400"> 
 
 6\. Re-enter the passcode to confirm the same.
 
-![](\_images/mobile-app-confirm-passcode.jpeg)
+<img src="_images/mobile-app-confirm-passcode.jpeg" width="200" height="400"> 
 
 7\. On the Home screen, a few tooltips are displayed after the initial setup to guide you through the next steps.
 
-![](\_images/mobile-app-welcome-home.jpeg) ![](\_images/mobile-app-tooltip2.jpeg) ![](\_images/mobile-app-tooltip3.jpeg)
+<img src="_images/mobile-app-welcome-home.jpeg" width="200" height="400"> <img src="_images/mobile-app-tooltip2.jpeg" width="200" height="400"> <img src="_images/mobile-app-tooltip3.jpeg" width="200" height="400"> 
 
 ## Generating credentials
 
