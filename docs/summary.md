@@ -154,6 +154,7 @@
     * [Enhancements](Release-Notes-1.1.5-Enhancements.md)
     * [Defect Fixes](Release-Notes-1.1.5-Defect-Fixes.md)
     * [Patches](Release-Notes-1.1.5-Patches.md)
+      * [Patch 1.1.5.5](Patch-1.1.5.5.md)
   * [Release Notes LTS (Pre-release 1)](Release-Notes-LTS-RC1.md)
     * [Enhancements](Release-Notes-LTS-RC1-Enhancements.md)
     * [Known Issues](Release-Notes-LTS-RC1-Known-Issues.md)
