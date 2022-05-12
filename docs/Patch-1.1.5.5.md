@@ -2,7 +2,9 @@
 
 ## Overview
 
-The&#x20;
+The 1.1.5.5 version of MOSIP is a patch release on top of MOSIP's earlier intermediate patches released. This patch has many important bug and performance fixes which are backported from our LTS release.&#x20;
+
+This release also contains includes some new features such as the alpha version of MOSIP's first mobile application for residents and anonymous profile which are also backported from our LTS release.
 
 ## Modules
 
