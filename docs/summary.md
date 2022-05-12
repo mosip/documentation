@@ -86,8 +86,6 @@
   * [Coding Standards](contribute/coding-standards/README.md)
     * [Auth Angular User Guide](Auth-Angular-User-Guide.md)
     * [Auth SpringBoot User Guide](Auth-SpringBoot-User-Guide.md)
-    *
-    *
     * [Gitub Workflow](Github-Workflow.md)
     * [MOSIP Java Coding Standards](MOSIP-Java-Coding-Standards.md)
     * [MOSIP REST API guidelines](MOSIP-REST-API-guidelines.md)
