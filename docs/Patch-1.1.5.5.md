@@ -6,6 +6,17 @@ The 1.1.5.5 version of MOSIP is a patch release on top of MOSIP's earlier interm
 
 This release also contains includes some new features such as the alpha version of MOSIP's first mobile application for residents and anonymous profile which are also backported from our LTS release.
 
+## Repository Released
+
+| Repository        | Tag       |
+| ----------------- | --------- |
+| ​Commons          | v1.1.5.6  |
+| ​Key Manager      | ​v1.1.5.5 |
+| Audit Manager     | v1.1.5.6  |
+| Open ID Connector | v1.1.5.5  |
+| ​Admin Services   | ​v1.1.5.3 |
+| Audit Manager     | ​         |
+
 ## Modules
 
 ### **Registration Processor**
