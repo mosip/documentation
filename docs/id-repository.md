@@ -30,7 +30,7 @@ Above is the entity relationship diagram illustrated for Identity service. _NOTE
 
 1. [Key Manager](keymanager.md) encrypts/decrypts data.
 2. Credential request generator issues credentials for new/updated UIN data.
-3. [Object Store](broken-reference) stores/retrieves biometrics and demographic documents.
+3. [Object Store](broken-reference/) stores/retrieves biometrics and demographic documents.
 4. All demographic data of UIN and references to biometric and demographic files stored in object store are stored in `mosip_idrepo` DB.
 5. [Partner management service](partner-management-services.md) retrieves online verification partners to issue credentials.
 6. Audit logs are logged into Audit Manager.
@@ -45,7 +45,7 @@ Above is the entity relationship diagram illustrated for Identity service. _NOTE
 
 VID Service provides functionality to create/update Virtual IDs mapped against an UIN. It also provides the facility to update status of VID. VIDs are created based on the VID policy defined in the configuration.
 
-![](\_images/VID-service.png)
+![](\_images/id-repository-vid-service.png)
 
 1. Key Manager encrypts/decrypts data.
 2. Credential request generator issues credentials for new/updated UIN data. 3 All VID related data is stored in `mosip_idmap` DB.
@@ -58,7 +58,7 @@ VID Service provides functionality to create/update Virtual IDs mapped against a
 
 ## Credential service
 
-![](\_images/credential-service.png)
+![](\_images/id-repository-credential-service.png)
 
 1. Key Manager encrypts/decrypts data and also used to sign data.
 2. WebSub subscribes to get notifications related to credential status from IDA.
@@ -89,7 +89,7 @@ New credential types may be defined as per needs of a country.
 
 This service creates request for credential issuance.
 
-![](\_images/credential-request-generator.png)
+![](\_images/id-repository-credential-request-generator-service.png)
 
 1. Key Manager encrypts/decrypts data.
 2. Auth Adapter integrates with KeyCloak for authentication.
@@ -108,6 +108,7 @@ This is a one-time job that populates salts that are used to hash and encrypt da
 In MOSIP sandbox, the job is run [here](https://github.com/mosip/mosip-infra/blob/release-1.2.0/deployment/v3/mosip/idrepo/install.sh).
 
 ## Developer Guide
+
 To know more about the developer setups, read:
 
 1. [Credential Request Generator Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-repository/id-repository-credential-request-generator-service-developer-guide)

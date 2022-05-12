@@ -25,6 +25,8 @@ The following is a list of possible scenarios to be covered in this integration.
 
 ## Phase 1: Technical Proof Of Concept integration (v0.5)
 
+{% embed url="https://www.youtube.com/watch?t=3s&v=1dtM5ve0qA8" %}
+
 * In this phase, v0.5 POC, only 1,2,5 scopes are handled.
 * The following new components are added:
   * OpenCRVS Side Mediator. (Maintained and deployed by OpenCRVS)
