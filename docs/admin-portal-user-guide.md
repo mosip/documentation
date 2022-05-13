@@ -9,9 +9,18 @@ Admin application is a web-based application used by a privileged group of admin
 3. Machine
 4. Users (Admin, Registration staff)
 
-Along with the resource and data management, the admin can generate master keys, check registration status, retrieve lost RID, resume processing of paused packets.
+Along with the resource and data management, the admin can generate master keys, check registration status, retrieve lost RID, resume processing of paused packets. To start using the Admin portal, an admin user must be assigned to a zone.
 
-To get started with using the Admin portal, an admin user must be assigned to a zone.
+To learn more, refer the videos below!
+
+Session1
+
+{% embed url="https://www.youtube.com/watch?v=v6KjyVoNcqI&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=1" %}
+
+Session2
+
+{% embed url="https://www.youtube.com/watch?v=v6KjyVoNcqI&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=2" %}
+
 
 ## First Admin user
 
