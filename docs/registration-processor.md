@@ -23,13 +23,16 @@ The relationship of Regproc with other services is explained here. _NOTE: The nu
 14. Regproc connects to Virus Scanner for scanning packets in [Packet Receiver Stage](https://github.com/mosip/registration/tree/release-1.2.0/registration-processor/init/registration-processor-packet-receiver-stage) and [Packet Uploader Stage](https://github.com/mosip/registration/tree/release-1.2.0/registration-processor/pre-processor/registration-processor-packet-uploader-stage)
 15. Each Stage in regproc calls [Packet Manager](https://docs.mosip.io/1.2.0/modules/packet-manager) to read information from packet.
 
+
+{% embed url="https://www.youtube.com/watch?v=_SJW2__UoKc&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=6" %}
+
 ## Stages and services
 The Registration Processor contains several [stages and services](https://github.com/mosip/registration/tree/release-1.2.0#registration-stages-and-pipeline). 
 
 The registration packet flows through the various stages depending on the type of flow. See [Registration Flows and Stage Sequence](https://github.com/mosip/registration/blob/release-1.2.0/docs/flows.md).
 
 ## Build and deploy
-Refer to [repo](https://github.com/mosip/registration/tree/release-1.2.0)
+Refer to [repo](https://github.com/mosip/registration/tree/release-1.2.0).
 
 ## Configurations
 Refer to [Configuration Guide](https://github.com/mosip/registration/blob/release-1.2.0/docs/configuration.md).
