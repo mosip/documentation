@@ -53,8 +53,8 @@ The process flow for receiving the credentials is given below
 
 
 ## Roadmap for mobile application
-* The developement of resident mobile application has been split into 3 phases as shown below. 
-* Phase 1 has been completed and is made available as alpha release.
+* The development of resident mobile application has been split into 3 phases as shown below. 
+* Phase 1 has been completed and is made available as `alpha` release.
 
 ![](_images/mobile-app-roadmap.png)
 
