@@ -3,6 +3,7 @@
 ## Overview
 Resident services are the self-services which are used by the residents themselves via a portal. Resident Portal is a web based UI application that provides residents of a country the services related to their Unique Identification Number (UIN).
 The key services provided are:
+
 * Check registration status
 * Lock/unlock authentication 
 * Download card 
@@ -12,7 +13,7 @@ The key services provided are:
 * Update personal details
 
 {% hint style="info" %}
-Every resident services API call authenticates via an OTP except for the Registration ID(RID) status
+Every resident services API call authenticates via an OTP except for the Registration ID(RID) status.
 {% endhint %}
 
 The relationship of Resident services with other services is listed below. 
@@ -30,6 +31,10 @@ _Note: The numbers do not signify sequence of operations or the control flow._
 7. Download UIN card can be handled through credential services.
 8. [Partner Management Services](partner-management-services.md) provides all the credential policies to resident services.
 9. Creating packets is done through [packet manager](packet-manager.md) in resident services.
+
+To know more, refer the video below!
+
+{% embed url="https://www.youtube.com/watch?v=Tb_5qsN01PM&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=10" %}
 
 ## Services
 For detailed description of Resident Services, code and design, refer to [resident services repo](https://github.com/mosip/resident-services/tree/release-1.2.0).
