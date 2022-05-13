@@ -1,7 +1,5 @@
 # Partner Management Portal
 
-_THIS DOCUMENT IS BEING UPDATED_.
-
 ## Overview
 
 Partner management portal allows the partners to register themselves in MOSIP. With LTS release, the following types of partners can register themselves:
@@ -10,6 +8,8 @@ Partner management portal allows the partners to register themselves in MOSIP. W
 2. Credential Partners(with limited features)
 3. Device Providers
 4. FTM Provider
+
+{% embed url="https://www.youtube.com/watch?v=VseMUIfJ2Y8&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=3" %}
 
 ## Partner roles
 
