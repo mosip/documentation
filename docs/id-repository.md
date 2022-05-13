@@ -4,6 +4,8 @@
 
 ID Repository contains the records of identity of an individual, and provides API based mechanism to store, retrieve and update identity details by other MOSIP modules. ID Repository is used by [Registration Processor](registration-processor.md), [ID Authentication](id-authentication-services.md) and [Resident Services](resdient-services.md).
 
+{% embed url="https://www.youtube.com/watch?v=hLI-p7yUnZI&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=8" %}
+
 ## Services
 
 ID Repository module consists of the following components:
