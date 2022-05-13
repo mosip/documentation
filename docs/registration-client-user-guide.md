@@ -3,6 +3,8 @@
 ## Overview
 This guide helps the operator in setting up the registration client.
 
+{% embed url="https://www.youtube.com/watch?v=V4pV3uyPEuI&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=5" %}
+
 ## Know your machine TPM keys
 A Trusted Platform Module (TPM) is a specialized chip on a local machines that stores RSA encryption keys specific to the host system for hardware authentication.The pair is maintained inside the chip and cannot be accessed by software. By leveraging this security feature every individual machine would be uniquely registered and identified by the MOSIP server component with it's TPM public key.
 
