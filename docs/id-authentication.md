@@ -5,6 +5,10 @@ MOSIP offers identity verification services which enables the usage of identity 
 
 ![](_images/ida-process.png)
 
+Refer the video below to know more!
+
+{% embed url="https://www.youtube.com/watch?v=kBJ_l6043Pw&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=7" %}
+
 ## Authentication types
 
 ### Yes/No Authentication
