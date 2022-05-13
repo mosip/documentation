@@ -7,6 +7,8 @@ This guide helps in understanding the pre-registration sample UI implementation.
 
 **Assisted mode**- When used in an assisted mode, the operator could be handling the portal and helping other residents in filling up the details and creating an application on their behalf. The languages that the operator and the resident understands, may or may not be the same. If we consider a country with linguistic diversity, the possibilities increase. In such cases, the operator might log in with a language that they are familiar with, and also select a language (data capture language) familiar to the resident for filling up the demographic form and other details. 
 
+{% embed url="https://www.youtube.com/watch?v=eHb26gn5MoQ&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=4" %}
+
 ## Pre-registration process
 The key steps in this process are:
 * Login/create a user account
