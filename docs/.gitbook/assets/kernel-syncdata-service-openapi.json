@@ -11,7 +11,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:8090/app/generic",
+      "url": "",
       "description": "kernel-syncdata-service url"
     }
   ],
