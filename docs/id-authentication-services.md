@@ -52,11 +52,20 @@ Below is the sample authentication demo UI image.
 ## Configuration
 Refer to [ID Authentication Configuration Guide](https://github.com/mosip/id-authentication/blob/release-1.2.0/docs/configuration.md).
 
+## Developer Guide
+To know more about the developer setups, read:
+
+1. [ID Authentication Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-authentication-services/id-authentication-service-developer-guide)
+2. [ID Authentication OTP Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-authentication-services/id-authentication-otp-service-developers-guide)
+3. [ID Authentication Internal Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-authentication-services/id-authentication-internal-service-developer-guide)
+
 ## API
 Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
 
 ## Source code 
 [Github repo](https://github.com/mosip/id-authentication/tree/release-1.2.0).
+
+
 
 
 
