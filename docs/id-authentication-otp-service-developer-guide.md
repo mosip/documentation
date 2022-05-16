@@ -105,8 +105,7 @@ Below are the configurations to be done in Eclipse:
 4\. Click Apply and then debug it (starts running).
 
 ## Authentication OTP Service API
+
 * For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
-​
-* The APIs can be tested with the help of **Swagger-UI**. 
-​
-* Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of identity-services for localhost from `...`.
+
+
