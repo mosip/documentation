@@ -1,6 +1,6 @@
 # Kernel Syncdata Service API
 
-{% swagger src="../.gitbook/assets/kernel-syncdata-service-openapi.json" path="/websub/callback/cacert" method="post" %}
+{% swagger src="../.gitbook/assets/kernel-syncdata-service-openapi.json" path="/websub/callback/cacert" method="" %}
 [kernel-syncdata-service-openapi.json](../.gitbook/assets/kernel-syncdata-service-openapi.json)
 {% endswagger %}
 
