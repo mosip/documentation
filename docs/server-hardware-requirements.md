@@ -17,10 +17,6 @@ The variables that largely determine the hardware requirements are:
 2. Rate of enrollment
 3. Usage of foundation ID by various services
 
-{% embed url="https://docs.google.com/spreadsheets/d/1mSYmTA5mGs6ScyJ3H2rD3r109V8BpaZFRB862BzRDVY/edit?usp=sharing" %}
-OpenG2P Questions
-{% endembed %}
-
 ## Pre-registration
 
 Refer to [Pre-registration Resource Calculator XLS](\_files/pre-reg-resource-calculator.xls)
