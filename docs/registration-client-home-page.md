@@ -145,7 +145,7 @@ There might be a situation when a resident might have lost his UIN and visits th
     
 ![](_images/reg-client-lost-uin.png)
 
-As a part of Lost UIN flow, the contact details like the phone number/ e-mail address of the UIN holder can also be updated. The details get updated in the ID Repository based on the value provided for the property (uingenerator.lost.packet.update.information) which is specified in the Registration Processor properties. If the value already exists, then, the lost UIN is found based on the property value details fetched from the Packet manager and saved in ID Repository.
+As a part of Lost UIN flow, the contact details like the phone number/ e-mail address of the UIN holder can also be updated and stored in the ID Repository based on the value provided for the property (uingenerator.lost.packet.update.information) which is specified in the Registration Processor properties. If the value already exists, then, the lost UIN is found based on the property value details that is fetched from the Packet Manager and saved in the ID Repository.
 
 Example: uingenerator.lost.packet.update.information= phone,email
 
