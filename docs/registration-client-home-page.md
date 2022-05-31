@@ -144,6 +144,11 @@ The image below gives an idea of the update UIN process Flow in the registration
 There might be a situation when a resident might have lost his UIN and visits the registration center for retrieving the same. The operator then captures the biometrics and the demographic details of the individual and processes a request to retrieve the lost UIN. As biometrics play a crucial in identifying a person's identity, it is mandated to provide the biometrics as a part of the Lost UIN flow. Other details like demographic data, uploading documents are optional.
     
 ![](_images/reg-client-lost-uin.png)
+
+As a part of Lost UIN flow, the contact details like the phone number/ e-mail address of the UIN holder can also be updated. The details get updated in the ID Repository based on the value provided for the property (uingenerator.lost.packet.update.information) which is specified in the Registration Processor properties. If the value already exists, then, the lost UIN is found based on the property value details fetched from the Packet manager and saved in ID Repository.
+
+Example: uingenerator.lost.packet.update.information= phone,email
+
    
 ### Correction process
 For a resident whose UIN is yet not generated, they can get a request intimation to re-provide their details with a RequestId.
