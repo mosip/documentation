@@ -44,15 +44,12 @@ The above are done automatically as part of [default sandbox installation](https
 
 |GLOBAL_ADMIN|ZONAL_ADMIN|REGISTRATION_ADMIN|MASTERDATA_ADMIN|KEY_MAKER|
 |------|-----|-----|-----|-----|
-|Centers|Devices|Packet Status|All Master Data|GenerateMasterKey|
-|User Zone Mapping|Machines|Pause/ Resume RID|Bulk Upload||||||
-|All Master Data|User Zone Mapping|Retrieve Lost RID|GenerateCSR|||||
-|Bulk Upload|User Center Mapping|Packet Upload|GetCertificate||||
-|GenerateCSR|All Master Data||UploadCertificate|||
-|GetCertificate|Bulk Upload||UploadOtherDomainCertificate||
-|UploadCertificate|GenerateCSR||||
-|UploadOtherDomainCertificate|UploadCertificate||||
-||UploadOtherDomainCertificate||||
+|Centers|Devices|Packet Status|Devices|GenerateMasterKey|
+|User Zone Mapping|Machines|Pause/ Resume RID|Machines|GenerateCSR|
+|All Master Data|User Zone Mapping|Retrieve Lost RID|All Master Data|GetCertificate|
+|Masterdata Bulk Upload|User Center Mapping|Packet Bulk Upload|Masterdata Bulk Upload|UploadCertificate|
+||All Master Data|||UploadOtherDomainCertificate|
+||Masterdata Bulk Upload||||
 
 ## Center 
 
