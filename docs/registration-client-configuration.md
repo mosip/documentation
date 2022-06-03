@@ -205,6 +205,15 @@ mosip.registration.docscanner.height={ "id1" : 200, "id2" : 400 }
 
 
 ## Other configurations
+
+To Reset Password in Registration Client
+
+On clicking *Reset password* from the Actions menu present in the top right corner of Home page, it redirects the operator to the URL below which is configurable.
+```
+mosip.registration.reset_password_url=${mosip.api.internal.url}/keycloak/auth/realms/mosip/account/
+Note: The place holder “mosip.api.internal.url” should be defined in application-default.properties.
+
+```
   
 Enables / disables reviewer authentication on any biometric exception during registration
 ```
