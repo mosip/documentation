@@ -2,7 +2,7 @@
 
 ## Overview
 
-While System Integrators (SI) have a choice of implementing their own deployment tools, MOSIP provides reference implementation of Kubernetes based prouction grade deployment called [V3](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3)_(currently offered as Beta)_.
+While System Integrators (SI) have a choice of implementing their own deployment tools, MOSIP provides reference implementation of Kubernetes based production grade deployment called [V3](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3)_(currently offered as Beta)_.
 
 There are two distinct parts to the installation:
 
