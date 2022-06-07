@@ -38,7 +38,7 @@ To know more about the partner portal, refer [Partner Management portal](partner
 To know more about the developer setup, read [Partner Management Services Developers Guide](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-services-developer-setup).
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
 
 ## Source code 
 [Github repo](https://github.com/mosip/partner-management-services/tree/release-1.2.0).
