@@ -60,7 +60,7 @@ To know more about the developer setups, read:
 3. [ID Authentication Internal Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-authentication-services/id-authentication-internal-service-developer-guide)
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
 
 ## Source code 
 [Github repo](https://github.com/mosip/id-authentication/tree/release-1.2.0).
