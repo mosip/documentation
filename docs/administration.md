@@ -48,7 +48,7 @@ To know more, refer to the [Admin portal user guide](admin-portal-user-guide.md)
 To know more about the setup, read [Admin Services Developer's Guide](https://docs.mosip.io/1.2.0/modules/administration/admin-services-developers-guide).
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
 
 ## Source code 
 [Github repo](https://github.com/mosip/admin-services/tree/release-1.2.0).
