@@ -28,7 +28,7 @@ Refer [Registration Packet Structure](registration-packet-structure.md).
 
 ## API
 
-Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
 
 ## Source code
 
