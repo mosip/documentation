@@ -82,7 +82,7 @@ You can revoke Base key by invoking [`revokeKey`](https://mosip.github.io/docume
 To know more about the developer setup, read [Key Manager Developers Guide](https://docs.mosip.io/1.2.0/modules/keymanager/keymanager-developer-guide).
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
 
 ## Source code 
 [Github repo](https://github.com/mosip/keymanager/tree/release-1.2.0).
