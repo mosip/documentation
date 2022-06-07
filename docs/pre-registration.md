@@ -87,7 +87,7 @@ To know more about the developer setup, read [Pre-registration Developers Guide]
 
 ## API
 
-Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
 
 ## Source code
 
