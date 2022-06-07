@@ -12,7 +12,7 @@ As the name suggests, Commons refers to all the common services (also called "ke
 * [RID Generator](https://github.com/mosip/commons/tree/release-1.2.0/kernel/kernel-ridgenerator-service)
 
 ## API
-Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html)
+Refer [API Documentation](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
 
 ## Developer Guide
 To know more about the developer setups, read:
