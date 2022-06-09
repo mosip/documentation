@@ -28,5 +28,5 @@ To read through the previous version of documentation, see [Older version docume
 * Maven Repository: [Nexus Repository](https://oss.sonatype.org/service/local/repositories/snapshots/content/io/mosip/)
 * Presentations: [mosip.io](https://www.mosip.io/resources.php)
 * Training: [MOSIP Academy](https://academy.mosip.io)
-* Learning videos: [YouTube Channel](https://www.youtube.com/channel/UCKFSVO6BO1QLvBzc4voziDg)
+* Learning videos: [YouTube Channel](https://www.youtube.com/channel/UCxvEtyjmc3_KR45BOKMLJLA)
 * Community: [MOSIP Community on Discourse](https://community.mosip.io)
