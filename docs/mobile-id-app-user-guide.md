@@ -4,7 +4,7 @@
 
 For Android devices, `Google Nearby Connections API` and the `Google SafetyNet Attestation API` require that the device has access to the Google Play Services and related APIs. This implies that a Google Account is set up and configured on the device.
 
-{% embed url="https://www.youtube.com/watch?v=9vzMwwXO2Q8&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=9" %}
+{% embed url="https://www.youtube.com/watch?v=ry6SknpGOss" %}
 
 ## Installing the MOSIP Resident Mobile Application
 
