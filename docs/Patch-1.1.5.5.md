@@ -9,6 +9,7 @@ This release also contains includes some new features such as the alpha version 
 ## Repository Released
 
 | Repositories | Tags Released |
+|--------------|---------------|
 | admin-services | [v1.1.5.3](https://github.com/mosip/admin-services/tree/v1.1.5.3) |
 | audit-manager | [v1.1.5.6](https://github.com/mosip/audit-manager/tree/v1.1.5.6) |
 | keymanager | [v1.1.5.5](https://github.com/mosip/keymanager/tree/v1.1.5.5) |
