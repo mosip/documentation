@@ -80,7 +80,7 @@ To access the build and read through the deployment instructions, refer to [Pre-
 
 ## Configurations
 
-For details related to Pre-registration configurations, refer to [Pre-registration configuration](https://github.com/pjoshi751/pre-registration/blob/develop/docs/configuration.md).
+For details related to Pre-registration configurations, refer to [Pre-registration configuration](https://github.com/mosip/pre-registration/blob/release-1.2.0/docs/configuration.md).
 
 ## Developer Guide
 To know more about the developer setup, read [Pre-registration Developers Guide](https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-developer-setup).
