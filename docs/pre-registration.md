@@ -76,7 +76,7 @@ MOSIP provides a **reference** implementation of the pre-registration portal tha
 
 ## Build and deploy
 
-To access the build and read through the deployment instructions, refer to [Pre-registration repo](https://github.com/pjoshi751/pre-registration/tree/develop).
+To access the build and read through the deployment instructions, refer to [Pre-registration repo](https://github.com/mosip/pre-registration/tree/release-1.2.0).
 
 ## Configurations
 
