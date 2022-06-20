@@ -1,6 +1,6 @@
-# ID Demographic Normalization
+# ID-Authentication Demographic Data Normalization
 
-The normalization configuration mentioned here is specific to the [reference implementation](https://github.com/mosip/demosdk) of the [Demo-SDK API](https://github.com/mosip/commons/tree/master/kernel/kernel-demographics-api). It takes the below configuration to apply the name and address normalization rules.
+The ID-Authentication Demographic data normalization mentioned here is specific to the [reference implementation](https://github.com/mosip/demosdk) of the [Demo-SDK API](https://github.com/mosip/commons/tree/master/kernel/kernel-demographics-api). It takes the below configuration to apply the name and address normalization rules.
 
 For any other custom implementation of the normalization, the Demo-SDK needs to be implemented accordingly.
  
