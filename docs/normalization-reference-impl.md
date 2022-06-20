@@ -1,11 +1,10 @@
 # ID Demographic Normalization
 
-The normalization configuration mentioned here is specific to the [reference implementation](https://github.com/mosip/demosdk) of the [Demo SDK API](https://github.com/mosip/commons/tree/master/kernel/kernel-demographics-api). This takes the below configuration to apply the name and address normalization rules.
+The normalization configuration mentioned here is specific to the [reference implementation](https://github.com/mosip/demosdk) of the [Demo-SDK API](https://github.com/mosip/commons/tree/master/kernel/kernel-demographics-api). It takes the below configuration to apply the name and address normalization rules.
 
-For any other custom implementation of the normalization, the Demo SDK needs to be implemented accordingly.
-
+For any other custom implementation of the normalization, the Demo-SDK needs to be implemented accordingly.
  
-## Demographic Name/Address Normalization using Regular Expressions and their replacement configurations
+## Demographic name/address normalization using regular expressions and their replacement configurations
 
 The below configuration is used to define the separator for normalizing regex (pattern) and the replacement word. The default is set to '='.
    
@@ -15,12 +14,13 @@ The format for configuring the name/address normalization rules for any language
 
 `ida.demo.<name/address/common>.normalization.regex.<languageCode/any>[<sequential index starting from 0>]=<reqular expression>${ida.norm.sep}<replacement string>`
 
-name/address/common - type of normalization, common applies to both name and address
-languageCode - this is the code for languages like hin, eng, any('any' applies to any language code)
+    * name/address/common - type of normalization, common applies to both name and address
+    
+    * languageCode - this is the code for languages like hin, eng, any('any' applies to any language)
 
 If replacement string is not specified, the regular expression will be replaced with empty string.
   
-_Note_: It is recommended that the sequence is not broken in the middle, otherwise all normalization properties will not be read for the particular type.
+_Note_: It is recommended that the sequence is not broken in the middle otherwise all normalization properties will not be read for the particular type.
   
 ## Normalization rules for English language
 
