@@ -41,7 +41,7 @@ An operator can download the pre-registration data of a machine mapped center wh
 ### Update Operator Biometrics
 Using this option, the operators can onboard themselves anytime.  
 
-For more details, refer [Operator Onboarding Guide](operator_onboarding.md).
+For more details, refer [Operator Onboarding Guide](https://docs.mosip.io/1.2.0/modules/registration-client/operator-onboarding).
 
 ![](_images/reg-client-biometric-page.png)
 
