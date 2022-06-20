@@ -196,11 +196,11 @@ The other details for the p12 file are:
 
 **The structure of the encrypted data downloaded from referenceURL**
 
-The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format. It will be divided in two Parts after splitting using KEY_SPLITTER.
+The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format. It will be divided in two Parts after splitting using #KEY_SPLITTER#.
 
-Encrypted Key Data | KEY_SPLITTER | Encrypted Actual Data
+Encrypted Key Data | #KEY_SPLITTER# | Encrypted Actual Data
 ----------|--------------|-----------
-Part 1    | KEY_SPLITTER | Part 2
+Part 1    | #KEY_SPLITTER# | Part 2
 
 **Part 1:**
 
