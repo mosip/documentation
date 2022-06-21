@@ -30,6 +30,7 @@
     * [OpenID-Bridge Developers Guide](openid-bridge-developer-guide.md)
   * [Datashare](datashare.md)
   * [ID Authentication Services](id-authentication-services.md)
+    * [ID Authentication Demographic Data Normalization](normalization-reference-impl.md) 
     * [ID Authentication Service Developers Guide](id-authentication-service-developer-guide.md)
     * [ID Authentication OTP Service Developers Guide](id-authentication-otp-service-developer-guide.md)
     * [ID Authentication Internal Service Developers Guide](id-authentication-internal-service-developer-guide.md)
