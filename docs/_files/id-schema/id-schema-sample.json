@@ -92,7 +92,8 @@
           "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
-          "$ref": "#/definitions/documentType"
+          "$ref": "#/definitions/documentType",
+          "subType" : "POA"
         },
         "gender": {
           "bioAttributes": [],
@@ -135,6 +136,7 @@
           "format": "none",
           "fieldType": "default",
           "$ref": "#/definitions/documentType"
+          "subType" : "POE"
         },
         "referenceIdentityNumber": {
           "bioAttributes": [],
@@ -197,7 +199,8 @@
           "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
-          "$ref": "#/definitions/documentType"
+          "$ref": "#/definitions/documentType",
+          "subType" : "POB"
         },
         "addressLine1": {
           "bioAttributes": [],
@@ -351,7 +354,8 @@
           "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
-          "$ref": "#/definitions/documentType"
+          "$ref": "#/definitions/documentType",
+          "subType" : "POI"
         },
         "IDSchemaVersion": {
           "bioAttributes": [],
@@ -366,7 +370,8 @@
           "fieldCategory": "evidence",
           "format": "none",
           "fieldType": "default",
-          "$ref": "#/definitions/documentType"
+          "$ref": "#/definitions/documentType",
+          "subType" : "POE"
         },
         "phone": {
           "bioAttributes": [],
@@ -394,7 +399,8 @@
           "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
-          "$ref": "#/definitions/documentType"
+          "$ref": "#/definitions/documentType",
+          "subType" : "POR"
         },
         "UIN": {
           "bioAttributes": [],
