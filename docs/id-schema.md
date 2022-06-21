@@ -41,7 +41,7 @@ This guide is intended for adopters who would customize the default ID Schema to
   * `validator`: Regex
   * `arguments`: Array to hold parameter or dependent field ids required for validation.
 * `subType`
-  *  For every document type field, document category code must be the value to this key. This document category code is used to validate the provided document types in the ID object.
+  *  For every `documentType` field, `document category code` must be the value to this key. This document category code is used to validate the provided document types in the ID object.
   
 
 ### Dependencies
