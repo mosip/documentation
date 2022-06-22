@@ -1,6 +1,8 @@
 # ID-Authentication Demographic Data Normalization
 
-The ID-Authentication Demographic data normalization mentioned here is specific to the [reference implementation](https://github.com/mosip/demosdk) of the [Demo-SDK API](https://github.com/mosip/commons/tree/master/kernel/kernel-demographics-api). It takes the below configuration to apply the name and address normalization rules.
+Demographic data normalization is the process of applying rules for formatting of the demographic data (such as the address) into a common format before demographic data matching is verified during the demographic authentication in IDA. For example, for address lines, the '1st Street' can be replaced with '1 st' and 'C/o' can be removed from both the input and database data before the match is verified. These rules will be different for different languages, and may be configured/implemented differently.
+
+The ID-Authentication Demographic data normalization mentioned here is specific to the [Demo-SDK reference implementation](https://github.com/mosip/demosdk) of the [Kernel Demographic API](https://github.com/mosip/commons/tree/master/kernel/kernel-demographics-api). It takes the below configuration to apply the name and address normalization rules.
 
 For any other custom implementation of the normalization, the Demo-SDK needs to be implemented accordingly.
  
@@ -50,7 +52,7 @@ ida.demo.address.normalization.regex.eng[21]=9[tT][hH]${ida.norm.sep}9
 ida.demo.address.normalization.regex.eng[22]=0[tT][hH]${ida.norm.sep}0 
 # Note: the common normalization attributes will be replaced at the end.
 # Special characters are removed : . , - * ( ) [ ] ` ' / \ # "
-# Replace spcial char with space.Trailing space is removed from property. As a workaround first replacing with " ." then removing the "."
+# Replace special char with space. Trailing space is removed from property. As a workaround first replacing with " ." then removing the "."
 ida.demo.common.normalization.regex.any[0]=[\\.|,|\\-|\\*|\\(|\\)|\\[|\\]|`|\\'|/|\\|#|\"]${ida.norm.sep} .
 # Trailing space is removed from property. As a workaround first replacing with " ." then removing the "."
 ida.demo.common.normalization.regex.any[1]=\\s+${ida.norm.sep} .
