@@ -8,8 +8,8 @@ This release also contains includes some new features such as the alpha version 
 
 ## Repository Released
 
-| Repositories | Tags Released |
-|--------------|---------------|
+| **Repositories** | **Tags Released** |
+|------------------|-------------------|
 | admin-services | [v1.1.5.3](https://github.com/mosip/admin-services/tree/v1.1.5.3) |
 | audit-manager | [v1.1.5.6](https://github.com/mosip/audit-manager/tree/v1.1.5.6) |
 | keymanager | [v1.1.5.5](https://github.com/mosip/keymanager/tree/v1.1.5.5) |
@@ -35,7 +35,7 @@ This release also contains includes some new features such as the alpha version 
 
 ## Modules
 
-### **Registration Processor**
+### Registration Processor
 
 * Bug Fix: In some of the stages in the registration processor, we were using class-level variables due to which packets marked as “supervisor rejected”, were getting processed. Hence, we have removed the use of class-level variables in the registration processor.
 * Upgrade: The maximum number of landing zones that can be added by an implementor has been increased from three to ten. _#MOSIP-15978_
@@ -59,7 +59,7 @@ This release also contains includes some new features such as the alpha version 
 * Bug Fix: Code changes have been added to retrieve documents from data share while performing manual adjudication. _#MOSIP-20837_
 * Database Update: In “ida-key\_alias” table a new column cert\_thumbprint character varying(100) has been added.
 
-### **Registration Client**
+### Registration Client
 
 * Bug Fix: In the 1.1.5.4 version of the registration client, the operator was not able to complete the registration when the applicant had a biometric exception as in some scenarios the operator is not able to see the exception photo capture. _#MOSIP-15873_
 * Bug Fix: In the 1.1.5.4 version of the registration client, the operator was not able to complete the registration when the applicant has a biometric exception even though all the biometrics and exception photo was captured. _#MOSIP-15871_
@@ -85,7 +85,7 @@ This release also contains includes some new features such as the alpha version 
 * Upgrade: A health check has been added for PRID generator _#MOSIP-15845_
 * Upgrade: The notification service is updated by adding HTML support in the body of the email which is default by true and can be turned off by making “_mosip.kernel.mail.content.html.enable”_ property to false.
 
-### Audit **** Manager
+### Audit Manager
 
 * Bug Fix: The reference ID type and reference ID in the kernel audit manager service were made mandatory whereas in the database these columns were optional leading to frequent errors in the service while storing the audit transactions. This has been fixed by modifying the audit manager. _#MOSIP-18878_
 * Performance Fix: “The validation factory in audit manager is built for every request and it uses 70% of the processing time for audit calls”. Hence, we are now creating a single instance of the validation factory during the start-up of the audit manager and we are using it for all the audit calls. _#MOSIP-17565_
@@ -110,7 +110,7 @@ This release also contains includes some new features such as the alpha version 
 * Upgrade: Added support to decrypt using the master key in the key manager
 * Performance Fix: Fixed performance issues in decryption & trust store creation.
 
-### **Admin Services**
+### Admin Services
 
 * Upgrade: Fix for identity schema in admin service has been added for backward compatibility with 1.1.4 identity schema related to changes in language code attribute in the validator.
 * Upgrade: Sync of gender and resident status was enabled in the sync data service to provide backward compatibility with the 1.1.4 version of MOSIP. _#MOSIP-17282_
@@ -121,18 +121,18 @@ This release also contains includes some new features such as the alpha version 
 * Bug Fix: Error in pre-registration booking appointment when the registration centre selected has location hierarchy!= 5. _#MOSIP-17754_
 * Bug Fix: Issue when we create a location with the same name with different parents in the same hierarchy level. _#MOSIP-19954_
 
-### **Artifactory Reference Implementation**
+### Artifactory Reference Implementation
 
 * Upgrade: Added a new artifact to docker file cache-provider-redis
 * Upgrade: The latest mock-SDK is now being used for the latest bioSDK server
 * Upgrade: The latest auth adapter is now being used for the 1.1.5.5 services
 * Upgrade: The latest bioSDK client is now being used for internal mock bioSDK server implementation
 
-### **Durian**
+### Durian
 
 * Bug Fix: Token expiration issue was resolved by deleting the expired token from the cache and fetching the new token and storing it in case of authentication failure. #MOSIP-17599
 
-### **ID Authentication**
+### ID Authentication
 
 * Upgrade: The thumbprint sent in the e-KYC response would be now HEX encoded and upper case. _#MOSIP-16654_
 * Bug Fix: In the 1.1.5.4 version of IDA, when multiple fingerprints were sent to IDA for authentication it was found the system was throwing a hash validation error, which has been fixed. _#MOSIP-17106_
@@ -152,33 +152,33 @@ This release also contains includes some new features such as the alpha version 
 * Database Update: We have added a few indexes in the IDA database for better performance.
 * Database Update: In “ida-key\_alias” table a new column cert\_thumbprint character varying(100) has been added.
 
-### **Partner Management Services**
+### Partner Management Services
 
 * Upgrade: Websub client version has been updated for connecting with the Kafka based web sub.
 * Security fix: log4j dependencies have been removed.
 
-### **Pre-registration services**
+### Pre-registration services
 
 * Bug Fix: Captcha Service is not working in 1.1.5.x version of MOSIP. _#MOSIP-16977_
 * Performance Fixes: We were observing high response times for the "/preregistration/v1/applications/config'" API. _#MOSIP-16660_
 * Performance FIx: In the pre-registration application service, a new RestTemplate was created for every request. This has been fixed, only one rest templated is created and it is re-used. _#MOSIP-18156_
 * Security Fix: In preregistration, the authorization tokens are being received from the server for even Wrong OTPs. _#MOSIP-18903_
 
-### **Pre-registration booking service (reference implementation)**
+### Pre-registration booking service (reference implementation)
 
 * Security Fix: Delete Appointment endpoint is not checking if the PRID belongs to the user in the token or not. #MOSIP-20309
 
-### **Pre-registration UI service**
+### Pre-registration UI service
 
 * Bug Fixes: In 1.1.5, the edit demographics page was not working in pre-registration when we did not have fullName in ID Schema. #MOSIP-15872
 * Bug Fix: In 1.1.5 pre-registration, dynamic fields were not called using pagination. #MOSIP-15317
 * Bug Fix: Captcha Service was not working in 1.1.5.x version of MOSIP. #MOSIP-16977
 
-### **Print Service**
+### Print Service
 
 * Upgrade: Websub client version has been updated for connecting with the Kafka based web sub.
 
-### **ID Repository**
+### ID Repository
 
 * New Feature: Ability to generate verifiable credentials as part of MOSIP credential issuance #MOSIP-19079
 * New Feature: Support for Anonymous Profiling #MOSIP-18179
@@ -195,7 +195,7 @@ This release also contains includes some new features such as the alpha version 
 * Upgrade: kernel-biometrics-api version has been upgraded to the latest version.
 * DB Change: Added anonymous\_profile and channel\_info tables.
 
-### **Resident Services**
+### Resident Services
 
 * Bug Fix: The “individual ID” and “individual ID Type” were taken twice as input for revoking a VID. #MOSIP-15969
 * Bug Fix: Fixed update of resident data which not working as expected. #MOSIP-19917
