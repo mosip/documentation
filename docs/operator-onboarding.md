@@ -25,8 +25,8 @@ Once the operator is registered:
 
 * Admin needs to map the operator' UIN in KeyCloak under Attributes with attribute name as `individualId`.
 * Admin needs to remove the "Default" role mapping for the operator' user account if it exists.
-* The operator needs to login (password based) to the registration client using Keycloak credentials.
-* The operator needs to ensure that the registration client machine is online.
+* The operator needs to login (password based) to the Registration Client using Keycloak credentials.
+* The operator needs to ensure that the Registration Client machine is online.
 * The operator will land into the below page and needs to click on **Get Onboarded**
 
   ![](_images/reg-client-user-onboard.png)
@@ -54,6 +54,21 @@ Summarizing, on-boarding of an operator is successful only if,
 * The operator's User ID is mapped to their UIN. 
 * The operator's biometric authentication is successful during on-boarding.
 * The system is online during on-boarding.
+
+### Operator onboarding workflow
+
+![](_images/operator-onboarding.png)
+
+1. Operator logs into Registration Client for the first time and is redirected to Onboarding screen. Here, they need to capture all their biometrics and then click SAVE button.
+2. Request from Registration Client goes to [Registration Processor](https://docs.mosip.io/1.2.0/modules/registration-processor) for operator authentication.
+3. Registration Processor passes this request to [ID Authentication](https://docs.mosip.io/1.2.0/modules/id-authentication-services) where it checks whether the user is mapped to a valid UIN and then matches the biometrics sent in the request with the biometrics of the mapped UIN.
+4. Success/Failure response sent back to Registration Processor based on the authentication result.
+5. Registration Processor sends back this response to Registration Client.
+6. After successful authentication, the captured biometrics are sent to configured Bio-SDK to extract templates.
+7. Extracted templates are sent back from [Bio-SDK](https://docs.mosip.io/1.2.0/biometrics/biometric-sdk).
+8. The extracted templates are stored in local Derby DB.
+9. These templates stored in local DB can be used later for operator's biometric-authentication and also for local de-duplication checks during registration.
+
 
 ### Modes of login
 * MOSIP supports single factor and multi factor login including password, iris, fingerprint, and face authentication for registration client. An administrative configuration setting determines the mode of authentication login.
