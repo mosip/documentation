@@ -3,12 +3,16 @@
 ## Overview
 The guide here lists down some of the important properties that may be customised for a given installation. Note that the listing here is not exhaustive, but a checklist to review properties that are likely to be different from default.  If you would like to see all the properites, then refer to the files listed below.
 
+**IMPORTANT : From the LTS version, All the properties are synced to the registration-client only from ```registration-default.properties``` file.**
+
 ## Configuration files
 
 ```
 application-default.properties
 registration-default.properties
 ```
+
+
 
 See [Module Configuration](https://docs.mosip.io/1.2.0/modules/module-configuration) for location of these files.
 
