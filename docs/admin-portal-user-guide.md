@@ -44,15 +44,12 @@ The above are done automatically as part of [default sandbox installation](https
 
 |GLOBAL_ADMIN|ZONAL_ADMIN|REGISTRATION_ADMIN|MASTERDATA_ADMIN|KEY_MAKER|
 |------|-----|-----|-----|-----|
-|Centers|Devices|Packet Status|All Master Data|GenerateMasterKey|
-|User Zone Mapping|Machines|Pause/ Resume RID|Bulk Upload||||||
-|All Master Data|User Zone Mapping|Retrieve Lost RID|GenerateCSR|||||
-|Bulk Upload|User Center Mapping|Packet Upload|GetCertificate||||
-|GenerateCSR|All Master Data||UploadCertificate|||
-|GetCertificate|Bulk Upload||UploadOtherDomainCertificate||
-|UploadCertificate|GenerateCSR||||
-|UploadOtherDomainCertificate|UploadCertificate||||
-||UploadOtherDomainCertificate||||
+|Centers|Devices|Packet Status|Devices|GenerateMasterKey|
+|User Zone Mapping|Machines|Pause/ Resume RID|Machines|GenerateCSR|
+|All Master Data|User Zone Mapping|Retrieve Lost RID|All Master Data|GetCertificate|
+|Masterdata Bulk Upload|User Center Mapping|Packet Bulk Upload|Masterdata Bulk Upload|UploadCertificate|
+||All Master Data|||UploadOtherDomainCertificate|
+||Masterdata Bulk Upload||||
 
 ## Center 
 
@@ -295,9 +292,9 @@ To know more, refer to Master Data guide.
  4. Select the table name into which the data needs to be uploaded into.
  5. Click **Choose file** to select the data and click **Upload**
  
-To view the format for inserting data in a particular table, click on the Download icon. A CSV file gets downloaded in which the first row represents the column names and the rest of the rows are the data which will be inserted into the table(sample).
+To view the format for inserting data in a particular table, click on the Download icon. A CSV or XLSX template file gets downloaded in which the first row represents the column names and the rest of the rows are the data which will be inserted into the table(sample).
 
-*Note:* For editing CSV files containing date fields, it is recommended to use Text editors like Notepad, Notepad++, VS Code, etc., rather than using Excel to ensure that the date format does not get altered.
+_Note:_ While editing CSV or XLSX files, it is recommended to keep track of the Date format and Time format to be the same as the acceptable formats. The acceptable Date format is _YYYY-MM-DD_ and the acceptable Time format is _HH:MM:SS_. Any other Date and Time formats in CSV or XLSX files will result in a `DataType Mismatch Error`.
 
 ### Packets
 
