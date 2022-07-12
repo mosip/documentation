@@ -41,6 +41,7 @@ The above are done automatically as part of [default sandbox installation](https
 *  REGISTRATION_ADMIN
 *  MASTERDATA_ADMIN
 *  KEY_MAKER
+*  DIGITALCARD_ADMIN
 
 |GLOBAL_ADMIN|ZONAL_ADMIN|REGISTRATION_ADMIN|MASTERDATA_ADMIN|KEY_MAKER|
 |------|-----|-----|-----|-----|
@@ -242,6 +243,21 @@ To map a user to a center,
 * In case the packet has not been processed or is marked for *Re-Send/Re-Register*, the admin will be able to view specific comments indicating the reason for that particular status.
 
 ![](_images/admin-packet-status.png)
+
+## Download Card
+
+* The DIGITALCARD_ADMIN has the privilege to download the digital copy of UIN card for the residents(PDF format).
+* The resident reaches the centre and requests the admin to provide a PDF version of their ID card.
+
+To download the card, the admin,
+1. Admin navigates to **Download Card** on the left navigation pane.
+2. Enters the Registration ID shared by the resident.
+3. Clicks on Search to check if the Registration ID/ UIN exists and verifies the identity of the resident.
+4. If the identity can be verified, the Admin proceeds to Download of card and if the face does not match, the request is rejected.
+
+![](_images/download-card.png)
+
+Note: The admin can perform a limited number of searches as set as the daily limit. This number is configurable as per the country requirements.
 
 ## Pause/Resume RID 
 
