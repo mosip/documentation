@@ -256,6 +256,8 @@ To download the card,
 4. The Admin now performs a manual verification to confirm the identity of the resident. If the identity of the resident can be verified, the Admin clicks `I have verified the face` and downloads the card.
 5. If the face of the resident does not match, the request for downloading the card is rejected.
 
+The residents can avail the printed copy of their digital cards at the centers.
+
 ![](_images/download-card.png)
 
 _NOTE_: The admin can perform a limited number of searches everyday based on the daily limit set. This limit is configurable as per the country' requirements.
