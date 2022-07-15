@@ -246,21 +246,22 @@ To map a user to a center,
 
 ## Download Card
 
-* The DIGITALCARD_ADMIN has the privilege to download the digital copy of UIN card for the residents (PDF format).
+* The DIGITALCARD_ADMIN has the privilege to download the digital copy of the UIN card for the residents (currently in PDF format).
 * The resident reaches the center and requests the admin to provide a PDF version of their ID card.
 
 To download the card, 
 1. Admin navigates to **Download Card** on the left navigation pane.
 2. Enters the Registration ID shared by the resident.
-3. Clicks on Search to check if the Registration ID/ UIN exists and proceeds for verification. If the RID exists, the photograph along with the Date of Birth of the resident is displayed on the screen.
+3. Clicks on **Search** icon to check if the Registration ID/ UIN exists and proceeds for further verification. If the RID exists, the photograph along with the Date of Birth of the resident is displayed on the screen.
 4. The Admin now performs a manual verification to confirm the identity of the resident. If the identity of the resident can be verified, the Admin clicks `I have verified the face` and downloads the card.
 5. If the face of the resident does not match, the request for downloading the card is rejected.
 
 The residents can avail the printed copy of their digital cards at the centers.
 
-![](_images/download-card.png)
+_NOTE_: The admin can perform limited number of searches everyday based on the daily limit set. This limit is configurable as per the country' requirements.
 
-_NOTE_: The admin can perform a limited number of searches everyday based on the daily limit set. This limit is configurable as per the country' requirements.
+![](_images/download-card-new.png)
+
 
 ## Pause/Resume RID 
 
