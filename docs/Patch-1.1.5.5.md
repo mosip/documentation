@@ -162,6 +162,7 @@ This release also contains includes some new features such as the alpha version 
 * Performance Fix: We were observing high response times for the "/preregistration/v1/applications/config'" API. _#MOSIP-16660_
 * Performance FIx: In the pre-registration application service, a new RestTemplate was created for every request. This has been fixed, only one rest templated is created and it is re-used. _#MOSIP-18156_
 * Security Fix: In preregistration, the authorization tokens are being received from the server for even Wrong OTPs. _#MOSIP-18903_
+* Performance Fix: Storing pre-registration in a single bucket instead of storing in multiple buckets per PRID has been added with backward compatibility.
 
 ### Pre-registration booking service (reference implementation)
 
