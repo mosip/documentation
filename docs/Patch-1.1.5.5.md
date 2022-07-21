@@ -57,7 +57,6 @@ This release also contains includes some new features such as the alpha version 
 * Bug Fix: The child packet was getting rejected when the parent/guardian packet was in the queue for manual verification. Code has been modified to reject child packet only when parent/guardian packet is rejected. _#MOSIP-20634_
 * Bug Fix: The request for kernel notification service from the registration processor notification service has been modified to prevent URL encoding errors. _#MOSIP-21070_
 * Bug Fix: Code changes have been added to retrieve documents from data share while performing manual adjudication. _#MOSIP-20837_
-* Database Update: In “ida-key\_alias” table a new column cert\_thumbprint character varying(100) has been added.
 
 ### Registration Client
 
@@ -160,7 +159,7 @@ This release also contains includes some new features such as the alpha version 
 ### Pre-registration services
 
 * Bug Fix: Captcha Service is not working in 1.1.5.x version of MOSIP. _#MOSIP-16977_
-* Performance Fixes: We were observing high response times for the "/preregistration/v1/applications/config'" API. _#MOSIP-16660_
+* Performance Fix: We were observing high response times for the "/preregistration/v1/applications/config'" API. _#MOSIP-16660_
 * Performance FIx: In the pre-registration application service, a new RestTemplate was created for every request. This has been fixed, only one rest templated is created and it is re-used. _#MOSIP-18156_
 * Security Fix: In preregistration, the authorization tokens are being received from the server for even Wrong OTPs. _#MOSIP-18903_
 
@@ -170,7 +169,7 @@ This release also contains includes some new features such as the alpha version 
 
 ### Pre-registration UI service
 
-* Bug Fixes: In 1.1.5, the edit demographics page was not working in pre-registration when we did not have fullName in ID Schema. #MOSIP-15872
+* Bug Fix: In 1.1.5, the edit demographics page was not working in pre-registration when we did not have fullName in ID Schema. #MOSIP-15872
 * Bug Fix: In 1.1.5 pre-registration, dynamic fields were not called using pagination. #MOSIP-15317
 * Bug Fix: Captcha Service was not working in 1.1.5.x version of MOSIP. #MOSIP-16977
 
@@ -183,12 +182,8 @@ This release also contains includes some new features such as the alpha version 
 * New Feature: Ability to generate verifiable credentials as part of MOSIP credential issuance #MOSIP-19079
 * New Feature: Support for Anonymous Profiling #MOSIP-18179
 * Bug Fix: Support for resident services to update the status of VID
-* Bug Fix: ID repo anonymous profile - if we don't pass verified attributes in the add record request it displays as null instead of “\[]” #MOSIP-18169
-* Bug Fix: Fixed Channel Info table population issues #MOSIP-18166
-* Bug Fix: Biometric value is not getting populated for demo update using ID repo instant APIs in Anonymous Profile #MOSIP-18167
-* Bug Fix: Instead of publishing biometric data of individuals in a single CBEFF file, data is split and sent to IDA #MOSIP-17300
-* Bug Fix: Biometric data are not getting updated properly in Anonymous profiling #MOSIP-18202
-* Performance Fixes: Primary key constraint error seen for few requests in ID repository add identity API #MOSIP-19422
+* Performance Fix: Instead of publishing biometric data of individuals in a single CBEFF file, data is split and sent to IDA #MOSIP-17300
+* Performance Fix: Primary key constraint error seen for few requests in ID repository add identity API #MOSIP-19422
 * Performance Fix: Caching of salt tables in IDRepo
 * Performance Fix: To compute a salt key, instead of performing modulo operation, substring operation has been done #MOSIP-18522
 * Upgrade: The WebSub client version has been updated for connecting with the Kafka based WebSub.
