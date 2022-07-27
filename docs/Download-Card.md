@@ -181,13 +181,12 @@ INSERT INTO pms.partner_policy_credential_type
 VALUES('mpartner-default-digitalcard', 'mpolicy-default-PDFCard', 'PDFCard', true, 'service-account-mosip-regproc-client', '2022-04-04 13:29:10.383', NULL, NULL, false, NULL);
 
 ```
-* A new table to store the details of the digital cards generated should be created.
-https://github.com/mosip/digital-card-service/tree/1.1.5.6/db_scripts/mosip_digitalcard
+* A new database "mosip_digitalcard" has to be created to store the details of the digital cards that are getting generated. The details for the same are [available here](https://github.com/mosip/digital-card-service/tree/1.1.5.6/db_scripts/mosip_digitalcard).
 
 ### Configuration Changes
 
 The configuration changes can be picked up from the below github branch:
-https://github.com/mosip/mosip-config/tree/qa3-1.1.5/sandbox/*
+https://github.com/mosip/mosip-config/tree/qa3-1.1.5/sandbox/
 
 * application-mz.properties
 ```
