@@ -29,6 +29,8 @@ All devices that collect biometric data for MOSIP should operate within the spec
 | 0.9.5   | Draft  | 08-Apr-2021 | We will be following datetime values in ISO 8601 with format yyyy-mm-ddTHH:MM:ssZ. The same has been updated throughout the document.                                                                                                                                                                                                |
 | 0.9.5   | Draft  | 24-May-2021 | Clarification on hash and previousHash definition has been provided                                                                                                                                                                                                                                                                  |
 | 0.9.5   | Draft  | 04-Apr-2022 | Register and De-register of devices have been removed from MOSIP. Device validation in MOSIP will be done via cryptography. Here onwards, registering a device will mean a device obtaining a certificate from the management server.                                                                                                |
+| 0.9.5   | Draft  | 27-Jul-2022 | Added the section on [Android SBI Specification](#android-sbi-specification)                                                                                                |
+
 
 ## Glossary of Terms
 
@@ -363,7 +365,7 @@ Connection: Closed
 {% endhint %}
 
 #### Android
-For details on android specifications please view the section - [android SBI specification](#android-sbi-specification).
+For details on android specifications please view the section - [Android SBI Specification](#android-sbi-specification).
 
 <!--
 All devices on an android device should listen to the following intent "io.mosip.device".
@@ -498,7 +500,7 @@ The payloads are JSON in both cases and are part of the body.
 {% endhint %}
 
 #### Android
-For details on android specifications please view the section - [android SBI specification](#android-sbi-specification).
+For details on android specifications please view the section - [Android SBI Specification](#android-sbi-specification).
 
 <!--
 An android device should listen to the following intent "appId.Info".
@@ -706,7 +708,7 @@ The payloads are JSON in both cases and are part of the body.
 {% endhint %}
 
 #### Android
-For details on android specifications please view the section - [android SBI specification](#android-sbi-specification).
+For details on android specifications please view the section - [Android SBI Specification](#android-sbi-specification).
 
 <!--
 All device on an android device should listen to the following intent appid.capture. Upon this intend, the devices are expected to respond with the JSON response filtered by the respective type.
@@ -780,7 +782,7 @@ EXT: <app name>
 _**HTTP Response:**_ HTTP Chunk of frames to be displayed. Minimum frames 3 per second.
 
 #### Android
-For details on android specifications please view the section - [android SBI specification](#android-sbi-specification).
+For details on android specifications please view the section - [Android SBI Specification](#android-sbi-specification).
 
 <!--
 No support for streaming
@@ -940,7 +942,7 @@ EXT: <app name>
 _**HTTP Response:**_ HTTP response.
 
 #### Android
-For details on android specifications please view the section - [android SBI specification](#android-sbi-specification).
+For details on android specifications please view the section - [Android SBI Specification](#android-sbi-specification).
 
 <!--
 No support for Registration Capture
@@ -1043,7 +1045,7 @@ Management client is the interface that connects the device with the respective 
 1. For better and efficient handling of the device at large volume, we expect the devices to auto-register to the Management Server.
 2. All communication to the server and from the server should follow the below properties.
    1. All communication is digitally signed with the approved algorithms
-   2. All communication to the server are encrypted using one of the approved public key cryptography (HTTPS – TLS1.2/1.3 is required with one of the [approved algorithms](MOSIP-Device-Service-Specification.md#cryptography).
+   2. All communication to the server are encrypted using one of the approved public key cryptography (HTTPS – TLS1.2/1.3 is required with one of the [approved algorithms](#cryptography).
    3. All request has timestamps attached in ISO format to the milliseconds inside the signature.
    4. All communication back and forth should have the signed digital id as one of the attributes.
 3. It's expected that auto-registration has an absolute way to identify and validate the devices.
