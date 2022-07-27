@@ -5,12 +5,12 @@ The admin with the role "DIGITALCARD_ADMIN" has the privilege to download the di
 
 To download the card, 
 1. The admin logs into the admin portal and navigate to the **Download Card** option on the left navigation pane.
-3. The admin now enters the registration ID shared by the resident and clicks on the search icon to check if the registration ID exists and proceeds for further verification.
-4. If a card is available for that registration ID, the photograph along with the date of birth of the resident is displayed on the screen.
-5. Now the admin can perform a manual verification to confirm the identity of the resident or the country can customize this section to add an SDK to perform local authentication.
-6. If the identity of the resident can be verified, the admin has to provide consent by clicking on the *"I have verified the face"* option and downloading the card.
-7. If the face does not match then the request for downloading the card is rejected.
-8. The card downloaded here can be printed and a physical copy of the same can be shared with the resident.
+2. The admin now enters the registration ID shared by the resident and clicks on the search icon to check if the registration ID exists and proceeds for further verification. The admin can use a QR code or barcode scanner to scan the registration ID from the registration slip available with the resident instead of typing the same to avoid mistakes.
+3. If a card is available for that registration ID, the photograph along with the date of birth of the resident is displayed on the screen.
+4. Now the admin can perform a manual verification to confirm the identity of the resident or the country can customize this section to add an SDK to perform local authentication.
+5. If the identity of the resident can be verified, the admin has to provide consent by clicking on the *"I have verified the face"* option and downloading the card.
+6. If the face does not match then the request for downloading the card is rejected.
+7. The card downloaded here can be printed and a physical copy of the same can be shared with the resident.
 
 ![](_images/admin/download-card-new.png)
 
