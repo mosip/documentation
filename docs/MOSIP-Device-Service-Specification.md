@@ -363,7 +363,9 @@ Connection: Closed
 {% endhint %}
 
 #### Android
+For details on android specifications please view the section - [android SBI specification](#android-sbi-specification).
 
+<!--
 All devices on an android device should listen to the following intent "io.mosip.device".
 
 Upon invocation of this intent, the devices are expected to respond with the JSON response filtered by the respective type.
@@ -386,6 +388,7 @@ If a MOSIP compliant device service app exists then the URL would launch the ser
 * In IOS there are restrictions to have multiple apps registering to the same URL schema.
 * CallbackId would be set to the device service app name. So, the caller has to call appnameInfo or appnameCapture as the URL scheme.
 {% endhint %}
+-->
 
 ### Device Info
 
@@ -495,7 +498,9 @@ The payloads are JSON in both cases and are part of the body.
 {% endhint %}
 
 #### Android
+For details on android specifications please view the section - [android SBI specification](#android-sbi-specification).
 
+<!--
 An android device should listen to the following intent "appId.Info".
 
 Upon invocation of this intent, the devices are expected to respond with the JSON response filtered by the respective type.
@@ -513,6 +518,7 @@ If a MOSIP compliant device service app exists then the URL would launch the ser
 {% hint style="info" %}
 In IOS there are restrictions to have multiple apps registering to the same URL schema.
 {% endhint %}
+-->
 
 ### Capture
 
@@ -700,7 +706,9 @@ The payloads are JSON in both cases and are part of the body.
 {% endhint %}
 
 #### Android
+For details on android specifications please view the section - [android SBI specification](#android-sbi-specification).
 
+<!--
 All device on an android device should listen to the following intent appid.capture. Upon this intend, the devices are expected to respond with the JSON response filtered by the respective type.
 
 #### IOS
@@ -712,6 +720,7 @@ APPIDCAPTURE://<call-back-app-url>?ext=<caller app name>&type=<type as defined i
 ```
 
 If a MOSIP compliant device service app exists then the URL would launch the service. The service in return should respond to the call using the call-back-app-URL with the base64 encoded JSON as the URL parameter for the key data.
+-->
 
 ### Device Stream
 
@@ -771,12 +780,15 @@ EXT: <app name>
 _**HTTP Response:**_ HTTP Chunk of frames to be displayed. Minimum frames 3 per second.
 
 #### Android
+For details on android specifications please view the section - [android SBI specification](#android-sbi-specification).
 
+<!--
 No support for streaming
 
 #### IOS
 
 No support for streaming
+-->
 
 ### Registration Capture
 
@@ -928,12 +940,15 @@ EXT: <app name>
 _**HTTP Response:**_ HTTP response.
 
 #### Android
+For details on android specifications please view the section - [android SBI specification](#android-sbi-specification).
 
+<!--
 No support for Registration Capture
 
 #### IOS
 
 No support for Registration Capture
+-->
 
 ***
 
@@ -1105,6 +1120,66 @@ In all the above APIs, some of the requests and responses are signed with variou
 | Capture Response              | Digital ID  | FTM chip key is used                                                                                |
 | Registration Capture Response | Data        | Device key is used                                                                                  |
 | Registration Capture Response | Digital ID  | <ul><li>For L0 device using device key</li><li>For L1 device using FTM chip key</li></ul>           |
+
+## Android SBI Specification
+This section explains the mechanism for the SBI devices to communicate in the android operating system.
+
+### Status
+Draft document V 0.9
+
+### Approach
+Discovery will return the appId of the discovered items. User will be given a choice to choose one of the discovered SBI app. The selected app responds back to the intent using the default intent callback functionality.
+
+### Device Discovery
+_Request_: io.sbi.device<br>
+_action_: io.sbi.device<br>
+_data_: no change<br>
+_type_: application/json<br>
+_Request Schema_: No change in the data structure. The serialized request data as byte array is set in the intent extras with key as “input”.<br>
+_Response Schema_: No change in the data structure. The serialized response data (byte array) is set in the intent extras with key as “response”.
+
+_callbackId_ should be set to the appId, can not be empty in android.
+
+### Device Info
+_Request_: appId.Info<br>
+_action_: appId.Info<br>
+_data_: no change<br>
+_type_: application/json<br>
+_Request Schema_: No change in the data structure. The serialized request data as a byte array is set in the intent extras with the key as “input”.<br>
+_Response Schema_: No change in the data structure. The serialized response data as a byte array is set in the intent extras with the key as “response”.
+
+_deviceInfo_: _callbackId_ should be set to the appId, can not be empty in android.
+
+### Capture
+_Request_: appId.Capture<br>
+_action_: appId.Capture<br>
+_data_: no change<br>
+_type_: application/json<br>
+_flag_: FLAG_GRANT_READ_URI_PERMISSION<br>
+_Request Schema_: No change in the data structure. The serialized request data as a byte array is set in the intent extras with the key as “input”.<br>
+_Response Schema_: No change in the data structure. The response content is set as content URI “content://authority/path/id” in the intent extras as a string with the key as “response”.
+
+URI must be invalidated right after the read.
+
+### rCapture
+_Request_: appId.rCapture<br>
+_action_: appId.rCapture<br>
+_data_: no change<br>
+_type_: application/json<br>
+_flag_: FLAG_GRANT_READ_URI_PERMISSION<br>
+_Request Schema_: No change in the data structure. The serialized request data as byte array is set in the intent extras with key as “input”.<br>
+_Response Schema_: No change in the data structure. The response content is set as content URI “content://authority/path/id” in the intent extras as a string with the key as “response”.
+
+The content provider should not support insert, update, delete
+
+### Device Stream
+On receiving rCapture request MDS must show the stream within its UI in the foreground.
+
+### Security
+Ensure to set the correct authority in the manifest and set the android:exported as “False”
+
+### Android Tab Specs
+Android 9 and above with hardware-backed key store
 
 ## Error Codes
 
