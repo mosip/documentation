@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Permission is hereby granted, free of charge in perpetuity, to any person
+obtaining a copy of the Schema, to use, copy, modify, merge and distribute free
+of charge, copies of the Schema for the purposes of developing, implementing,
+installing and using software based on the Schema, and to permit persons to
+whom the Schema is furnished to do so, subject to the following conditions:
+THE SCHEMA IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SCHEMA OR THE USE OR OTHER DEALINGS IN THE
+SCHEMA.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns="http://standards.iso.org/iso-iec/19785/-3/ed-2/" targetNamespace="http://standards.iso.org/iso-iec/19785/-3/ed-2/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="BIR" type="BIRType"/>
+	<xs:complexType name="BIRType">
+		<xs:sequence>
+			<xs:element name="Version" type="VersionType" minOccurs="0"/>
+			<xs:element name="CBEFFVersion" type="VersionType" minOccurs="0"/>
+			<!--<xs:any namespace="##other" processContents="skip" minOccurs="0" maxOccurs="unbounded"/>-->
+			<xs:element name="BIRInfo" type="BIRInfoType"/>
+			<xs:element name="BDBInfo" type="BDBInfoType" minOccurs="0"/>
+			<xs:element name="SBInfo" type="SBInfoType" minOccurs="0"/>
+			<xs:element name="BIR" type="BIRType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="BDB" type="xs:base64Binary" minOccurs="0" />
+			<xs:element name="SB" type="xs:base64Binary" minOccurs="0" />
+			<xs:element name="others" type="OthersListType" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="VersionType">
+		<xs:sequence>
+			<xs:element name="Major" type="xs:unsignedInt"/>
+			<xs:element name="Minor" type="xs:unsignedInt"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BIRInfoType">
+		<xs:sequence>
+			<xs:element name="Creator" type="xs:string" minOccurs="0"/>
+			<xs:element name="Index" type="UUIDType" minOccurs="0"/>
+			<xs:element name="Payload" type="xs:base64Binary" minOccurs="0"/>
+			<xs:element name="Integrity" type="xs:boolean"/>
+			<xs:element name="CreationDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="NotValidBefore" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="NotValidAfter" type="xs:dateTime" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BDBInfoType">
+		<xs:sequence>
+			<xs:element name="ChallengeResponse" type="xs:base64Binary" minOccurs="0"/>
+			<xs:element name="Index" type="UUIDType" minOccurs="0"/>
+			<xs:element name="Format" type="RegistryIDType" minOccurs="0"/>
+			<xs:element name="Encryption" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="CreationDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="NotValidBefore" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="NotValidAfter" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="Type" type="MultipleTypesType" minOccurs="0"/>
+			<xs:element name="Subtype" type="SubtypeType" minOccurs="0"/>
+			<xs:element name="Level" type="ProcessedLevelType" minOccurs="0"/>
+			<xs:element name="Product" type="RegistryIDType" minOccurs="0"/>
+			<xs:element name="CaptureDevice" type="RegistryIDType" minOccurs="0"/>
+			<xs:element name="FeatureExtractionAlgorithm" type="RegistryIDType" minOccurs="0"/>
+			<xs:element name="ComparisonAlgorithm" type="RegistryIDType" minOccurs="0"/>
+			<xs:element name="CompressionAlgorithm" type="RegistryIDType" minOccurs="0"/>
+			<xs:element name="Purpose" type="PurposeType" minOccurs="0"/>
+			<xs:element name="Quality" type="QualityType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RegistryIDType">
+		<xs:sequence>
+			<xs:element name="Organization" type="xs:string"/>
+			<xs:element name="Type" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SBInfoType">
+		<xs:sequence>
+			<xs:element name="Format" type="RegistryIDType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="QualityScoreType">
+		<xs:restriction base="xs:unsignedInt">
+			<xs:maxInclusive value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="QualityType">
+		<xs:sequence>
+			<xs:element name="Algorithm" type="RegistryIDType"/>
+			<xs:choice>
+				<xs:element name="Score" type="QualityScoreType"/>
+				<xs:element name="QualityCalculationFailed" type="xs:string"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="SingleTypeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Scent"/>
+			<xs:enumeration value="DNA"/>
+			<xs:enumeration value="Ear "/>
+			<xs:enumeration value="Face"/>
+			<xs:enumeration value="Finger"/>
+			<xs:enumeration value="Foot"/>
+			<xs:enumeration value="HandGeometry"/>
+			<xs:enumeration value="Vein"/>
+			<xs:enumeration value="Iris"/>
+			<xs:enumeration value="Retina"/>
+			<xs:enumeration value="Voice"/>
+			<xs:enumeration value="Gait"/>
+			<xs:enumeration value="Keystroke"/>
+			<xs:enumeration value="LipMovement"/>
+			<xs:enumeration value="SignatureSign"/>
+			<xs:enumeration value="Palm"/>
+			<xs:enumeration value="BackOfHand"/>
+			<xs:enumeration value="Wrist"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MultipleTypesType">
+		<xs:list itemType="SingleTypeType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SingleAnySubtypeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Left"/>
+			<xs:enumeration value="Right"/>
+			<xs:enumeration value="Thumb"/>
+			<xs:enumeration value="IndexFinger"/>
+			<xs:enumeration value="MiddleFinger"/>
+			<xs:enumeration value="RingFinger"/>
+			<xs:enumeration value="LittleFinger"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="SingleVeinOnlySubtypeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="LeftVein"/>
+			<xs:enumeration value="RightVein"/>
+			<xs:enumeration value="Palm"/>
+			<xs:enumeration value="BackOfHand"/>
+			<xs:enumeration value="Wrist"/>
+			<xs:enumeration value="Reserved1"/>
+			<xs:enumeration value="Reserved2"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="MultipleAnySubtypesType">
+		<xs:list itemType="SingleAnySubtypeType"/>
+	</xs:simpleType>
+	<xs:simpleType name="MultipleVeinOnlySubtypesType">
+		<xs:list itemType="SingleVeinOnlySubtypeType"/>
+	</xs:simpleType>
+	<xs:simpleType name="SubtypeType">
+		<xs:union memberTypes="MultipleAnySubtypesType MultipleVeinOnlySubtypesType"/>
+	</xs:simpleType>
+	<xs:simpleType name="ProcessedLevelType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Raw"/>
+			<xs:enumeration value="Intermediate"/>
+			<xs:enumeration value="Processed"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="PurposeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Verify"/>
+			<xs:enumeration value="Identify"/>
+			<xs:enumeration value="Enroll"/>
+			<xs:enumeration value="EnrollVerify"/>
+			<xs:enumeration value="EnrollIdentify"/>
+			<xs:enumeration value="Audit"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UUIDType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-fA-F0-9]{8}\-([a-fA-F0-9]{4}\-){3}[a-fA-F0-9]{12}"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="OthersListType">
+		<xs:sequence>
+			<xs:element name="entry" type="Entry"
+						nillable="true" maxOccurs="unbounded"
+						minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Entry">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="key" type="xs:string"
+							  use="required"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+</xs:schema>
