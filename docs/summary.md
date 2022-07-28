@@ -17,6 +17,7 @@
   * [Secure Biometric Interface (SBI)](secure-biometric-interface.md)
   * [Biometric Image Specification](biometric-image-specification.md)
   * [FTM](ftm.md)
+  * [CBEFF](cbeff-xml.md)
 * [Partners](partners.md)
 * [Modules](modules/README.md)
   * [Administration](administration.md)
