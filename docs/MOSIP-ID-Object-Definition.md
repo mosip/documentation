@@ -2,7 +2,7 @@ ID Object describes attributes that a country or entity will capture from an Ind
 
 # ID Object Definition
 
-In order to define the ID object, MOSIP adopters need to analyze the attributes that they need in their ID object. We have provided a [sample excel](https://github.com/mosip/documentation/tree/master/docs/_sources/id_schema/Sample_ID_Object_Definition.xlsx) which might be helpful for adopter to analyze their ID attributes. The items that the adopter needs to analyze as part of tis exercise are:
+In order to define the ID object, MOSIP adopters need to analyze the attributes that they need in their ID object. We have provided a [sample excel](https://github.com/mosip/documentation/tree/1.1.5/docs/_sources/id_schema/Sample_ID_Object_Definition.xlsx) which might be helpful for adopter to analyze their ID attributes. The items that the adopter needs to analyze as part of tis exercise are:
 
 * ID attributes that would be collected to identify a resident uniquely. Example: Attributes such as, Name, Gender, DateOfBirth, Address, Biometrics etc.
 * Additional evidence attributes that would be collected as evidence. Example: Attributes such as proof documents (Identity, Address, Date of Birth, Relationship, etc) or Introducer.
