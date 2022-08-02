@@ -28,13 +28,9 @@ You can see the installation in progress.
 
 2\. Tap **Allow** to continue.
 
-![](\_images/mobile-app-allow-deny.jpeg)
-
 <img src="_images/mobile-app-allow-deny.jpeg" width="200" height="400">  
 
 3\. Click **Get started** to setup the app.
-
-![](\_images/mobile-app-getting-started.jpeg)
 
 <img src="_images/mobile-app-getting-started.jpeg" width="200" height="400">  
 
@@ -62,7 +58,7 @@ It is recommended to keep your digital credentials (ID) with you at all times. T
 
 2\. From the dropdown, select either the UIN or VID that will be used to generate the credential.
 
-<img src="_images/mobile-app-uin-download.jpeg" width="200" height="400">  
+<img src="_images/mobile-app-uin-dropdown.jpeg" width="200" height="400">  
 
 3\. Enter the corresponding value for UIN/ VID and tap **Generate ID**.
 
@@ -93,7 +89,7 @@ It is recommended to keep your digital credentials (ID) with you at all times. T
 
 8\. Click **Edit Tag** (pencil icon in detailed view) and update the ID name as required.
 
-<img src="_images/mobile-app-id-edit-tag.jpeg" width="200" height="400">  
+<img src="_images/mobile-id-edit-tag.jpeg" width="200" height="400">  
 
 9\. Enter the new name and click **Save**. You will now see the updated ID name being displayed.
 
@@ -120,8 +116,6 @@ Assuming that a Resident having Device A wants to share their credentials with a
 1\. The Resident taps on `Scan` icon on their phone (on the bottom menu, second icon from left).
 
 Click **OK** to turn on the device' location.
-
-![](\_images/mobile-app-scan-qr-code.jpeg)
 
 <img src="_images/mobile-app-scan-qr-code.jpeg" width="200" height="400">  
 
@@ -152,15 +146,11 @@ Tap **Allow** to enable bluetooth on Device B.
 * Device Reference number
 * Reason for sharing (optional)
 
-![](\_images/mobile-app-sharing-id.jpeg) 
-
 <img src="_images/mobile-app-sharing-id.jpeg" width="200" height="400">  
 
 8\. Resident enters the reason for sharing the credentials and taps `Accept request and choose ID`.
 
-![](\_images/mobile-app-sharing-id.jpeg)
-
-<img src="_images/mobile-app-install.jpeg" width="200" height="400">  
+<img src="_images/mobile-app-sharing-id.jpeg" width="200" height="400">  
 
 9\. The Resident now selects the ID to be shared with the Relying party and taps on **Share**.
 
@@ -190,7 +180,5 @@ For instance,
 
 * On the Relying party' phone, the `History` tab shows the history of the received credentials.
 * On the Resident' phone, the `History` tab displays the history of the downloaded credentials.
-
-![](\_images/mobile-app-device2-history.jpeg) ![](\_images/mobile-app-device1-history.jpeg)
 
 <img src="_images/mobile-app-device2-history.jpeg" width="200" height="400"> <img src="_images/mobile-app-device1-history.jpeg" width="200" height="400">  
