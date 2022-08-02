@@ -21,7 +21,7 @@ This guide is intended for adopters who would customize the default ID Schema to
 * **Definition**: Custom data types defined for collecting different types of data:
   * `simpleType`: Multiple languages.
   * `documentType`: Document metdata.
-  * `biometricType`: Biometric file [CBEFF XML](id-schema.md) metadata
+  * `biometricType`: Biometric file [CBEFF XML](cbeff-xml.md) metadata
 
 ### JSON keys
 
