@@ -181,4 +181,4 @@ For instance,
 * On the Relying party' phone, the `History` tab shows the history of the received credentials.
 * On the Resident' phone, the `History` tab displays the history of the downloaded credentials.
 
-<img src="_images/mobile-app-device2-history.jpeg" width="200" height="400"> <img src="_images/mobile-app-device1-history.jpeg" width="200" height="400">  
+<img src="_images/mobile-app-device2-history.jpeg" width="200" height="400">   <img src="_images/mobile-app-device1-history.jpeg" width="200" height="400">  
