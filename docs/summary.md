@@ -62,6 +62,7 @@
     * [Postgres DB](postgres-db.md)
     * [Object Store](object-store.md)
   * [WebSub](websub.md)
+  * [IDA Data Seeder](modules/ida-data-seeder.md)
 * [Technology Stack](technology-stack.md)
 * [Deployment](deployment/README.md)
   * [Sandbox Deployment](sandbox-deployment.md)
