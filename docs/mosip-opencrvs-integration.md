@@ -98,16 +98,18 @@ The following stages are omitted:
 ## Phase 2: Detailed design of production implementation (v1.0)
 
 ### Birth Registration using CRVS
-![Opencrvs Integration v1.2](\_images/opencrvs\_birth-registration\_v1.2.png)
+![Opencrvs Integration for new birth](\_images/opencrvs\_birth-registration\_v1.2.png)
 
 ### Death Registration using CRVS
-![Opencrvs Integration v0.5](\_images/opencrvs\_death-registration\_v1.2.png)
+![Opencrvs Integration for death](\_images/opencrvs\_death-registration\_v1.2.png)
 
 ### Death Reversal using CRVS
-![Opencrvs Integration v0.5](\_images/opencrvs\_death-reversal\_v1.2.png)
+![Opencrvs Integration for death reversal](\_images/opencrvs\_death-reversal\_v1.2.png)
 
 ### Data Modification in CRVS
-![Opencrvs Integration v0.5](\_images/opencrvs\_data-modification\_v1.2.png)
+![Opencrvs Integration for data modification](\_images/opencrvs\_data-modification\_v1.2.png)
+
+### Specification for MOSIP Mediator (TBD)
 
 ## Source code
 
