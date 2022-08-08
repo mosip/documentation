@@ -95,6 +95,20 @@ The following stages are omitted:
 
 * For MOSIP Side Components installation, refer to [mosip-opencrvs deployment instructions](https://github.com/mosip/mosip-opencrvs/tree/develop/deployment).
 
+## Phase 2: Detailed design of production implementation (v1.0)
+
+### Birth Registration using CRVS
+![Opencrvs Integration v1.2](\_images/opencrvs\_birth-registration\_v1.2.png)
+
+### Death Registration using CRVS
+![Opencrvs Integration v0.5](\_images/opencrvs\_death-registration\_v1.2.png)
+
+### Death Reversal using CRVS
+![Opencrvs Integration v0.5](\_images/opencrvs\_death-reversal\_v1.2.png)
+
+### Data Modification in CRVS
+![Opencrvs Integration v0.5](\_images/opencrvs\_data-modification\_v1.2.png)
+
 ## Source code
 
 * For MOSIP Side Components (Mediator and Regproc Stage), refer to [mosip-opencrvs](https://github.com/mosip/mosip-opencrvs/tree/develop) repository.
