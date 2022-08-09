@@ -105,13 +105,15 @@ The following stages are omitted:
 
 ![Opencrvs Integration for death](\_images/opencrvs\_death-registration\_v1.2.png)
 
-### Death reversal&#x20;
+<!--
+### Death reversal
 
 ![Opencrvs Integration for death reversal](\_images/opencrvs\_death-reversal\_v1.2.png)
 
 ### Data modification
 
 ![Opencrvs Integration for data modification](\_images/opencrvs\_data-modification\_v1.2.png)
+-->
 
 ### Specification for MOSIP Mediator (TBD)
 
