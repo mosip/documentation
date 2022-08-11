@@ -182,6 +182,8 @@ VALUES('mpartner-default-digitalcard', 'mpolicy-default-PDFCard', 'PDFCard', tru
 
 ```
 * A new database "mosip_digitalcard" has to be created to store the details of the digital cards that are getting generated. The details for the same are [available here](https://github.com/mosip/digital-card-service/tree/1.1.5.6/db_scripts/mosip_digitalcard).
+* A new table has been created in "mosip_master" called "applicant_login_details" to track the details of number of times the admin is performing a search. The details for the same are [available here](https://github.com/mosip/commons/blob/1.1.5.6/db_release_scripts/mosip_master/ddl/master-applicant_login_detail.sql)
+
 
 ### Configuration Changes
 
@@ -201,6 +203,12 @@ https://github.com/mosip/mosip-config/tree/qa3-1.1.5/sandbox/
 	mosip.auth.adapter.impl.basepackage=io.mosip.kernel.auth.defaultadapter
 ```
 * digital-card-mz.properties - is newly added
-* identity-mapping.json - modification as per the policy 
-* registration-processor-print-text-file.json - modification as per policy
-* mosip-context.json - modification as per policy
+* identity-mapping.json
+  * The attribute which are part of the PDF card should be part of available in identity-mapping.json 
+* mosip-context.json
+  * The attributes shared in the VC should be avaialable in mosip-context file and available for public consumption
+
+### Certificate Exchange
+Even though the digital card service is part of MOSIP code, it is considered as a different module separate from MOSIP core modules and registred as a partner like IDA. Hence, we need to do a certificate exchange between the two systems. The steps to do the same are:
+
+
