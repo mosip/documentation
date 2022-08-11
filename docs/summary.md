@@ -39,6 +39,7 @@
     * [FRS MISP Self Service Portal](FRS-MISP-Self-Service-Portal.md)
   * [Administration](Admin.md)
     * [Admin Services Functionality](Admin-Services-Functionality.md)
+    * [Download Card](Download-Card.md)
   * [Kernel](Kernel.md)
     * [Audit Manager Functionality](Audit-Manager-Functionality.md)
       * [Admin Service Audits](audits/Admin-Service-Audits.md)
