@@ -13,7 +13,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 5. Customisation and procurement of components as given [here](reference-implementations.md).
 6. [ID schema](id-schema.md) (as prescribed by the country's regulatory authority).
 7. Hardware requirements estimate.
-   * [Server side](server-hardware-requirements.md)
+   * [Server side](deployment/production/server-hardware-requirements.md)
    * [Devices](biometric-devices.md#devices-calculator)
 8. [Credential choices](id-repository.md#credential-types).
 9. ID Card print design.
@@ -27,8 +27,8 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 1. Engagement with an SI - terms and conditions.
 2. Procurement of biometric and other external components.
 3. HSM
-4. [Postgres](broken-reference)
-5. [Object store](broken-reference)
+4. [Postgres](broken-reference/)
+5. [Object store](broken-reference/)
 6. Compute hardware
 
 ## Country specific data

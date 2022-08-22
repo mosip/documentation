@@ -30,7 +30,7 @@ Above is the entity relationship diagram illustrated for Identity service. _NOTE
 
 1. [Key Manager](keymanager.md) encrypts/decrypts data.
 2. Credential request generator issues credentials for new/updated UIN data.
-3. [Object Store](broken-reference) stores/retrieves biometrics and demographic documents.
+3. [Object Store](broken-reference/) stores/retrieves biometrics and demographic documents.
 4. All demographic data of UIN and references to biometric and demographic files stored in object store are stored in `mosip_idrepo` DB.
 5. [Partner management service](partner-management-services.md) retrieves online verification partners to issue credentials.
 6. Audit logs are logged into Audit Manager.
@@ -73,7 +73,7 @@ A credential can be defined as any document, object, or data structure that vouc
 
 A credential type essentially maps to partner and data share policy.
 
-Default credential types provided as part of [sandbox deployment](sandbox-deployment.md) are given below:
+Default credential types provided as part of [sandbox deployment](broken-reference) are given below:
 
 1. `auth`: Represents individual's data shared with Online Verification Partners (further used for Authentication and eKYC).
 2. `qrcode`: qrcode type is used for qrcode partners to issue qrcode related credential data.
