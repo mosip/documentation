@@ -75,6 +75,7 @@
     * [Wireguard Client Installation Guide](https://github.com/mosip/documentation/blob/1.2.0/docs/wireguard-client-installation-guide.md)
   * [Production](deployment/production/README.md)
     * [Server Hardware Requirements](deployment/production/server-hardware-requirements.md)
+    * [Production Hardening Guide](deployment/production/production-hardening-guide.md)
     * [Rancher](deployment/production/rancher.md)
 * [Country Implementation](country-implementation.md)
 * [Integrations](integrations/README.md)
