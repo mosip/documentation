@@ -76,7 +76,7 @@
   * [Production](deployment/production/README.md)
     * [Server Hardware Requirements](deployment/production/server-hardware-requirements.md)
     * [Production Hardening Guide](deployment/production/production-hardening-guide.md)
-    * [Rancher](deployment/production/rancher.md)
+    * [Administration Using Rancher](deployment/production/rancher.md)
 * [Country Implementation](country-implementation.md)
 * [Integrations](integrations/README.md)
   * [MOSIP OpenCRVS](mosip-opencrvs-integration.md)
