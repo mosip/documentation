@@ -6,7 +6,7 @@ MOSIP components are available as Dockers on [Docker Hub](broken-reference). We 
 
 ## Production grade deployment V3 (Beta)
 
-&#x20;MOSIP provides is a reference implementation of a Kubernetes based production grade deployment of MOSIP. The same may be deployed both as a **sandbox** or **full-scale production** deployment.&#x20;
+&#x20;MOSIP provides a reference implementation of Kubernetes based production grade deployment of MOSIP. The same may be deployed both as a **sandbox** or **full-scale production** deployment.&#x20;
 
 Follow the installation instructions given [here](https://github.com/mosip/mosip-infra/tree/1.2.0.1/deployment/v3).
 
