@@ -9,16 +9,16 @@ This document describes plan & scope of integration of MOSIP and OpenCRVS.
 * Phase 1: Technical Proof Of Concept integration (v0.5)
 * Phase 2: Detailed design of production implementation (v1.0)
 * Phase 3: Implementation of v1.0.
-* Phase 4: Installing on MEC.
+* Phase 4: Installation at MEC.
 
 ## Scope
 
-The following is a list of possible scenarios to be covered in this integration.
+The following is a list of possible scenarios for this integration.
 
-1. A birth is certified by OpenCRVS. MOSIP receives event data, creates UIN for the birth.
-2. A death is certified by OpenCRVS. MOSIP receives event data, deactivates the particular UIN.
-3. A birth is corrected on OpenCRVS. MOSIP receives event data, corrects the particular details of that person.
-4. A death is corrected on OpenCRVS. MOSIP receives event data, corrects the particular details of that person.
+1. A birth is certified by OpenCRVS. MOSIP receives event data and creates UIN for the birth.
+2. A death is certified by OpenCRVS. MOSIP receives event data and deactivates the particular UIN.
+3. A birth is corrected on OpenCRVS. MOSIP receives event data and corrects the particular details of that person.
+4. A death is corrected on OpenCRVS. MOSIP receives event data and corrects the particular details of that person.
 5. Upon birth certification, once MOSIP generates UIN, MOSIP issues the relevant details/credentials back to OpenCRVS.
 6. Upon birth certification, if MOSIP encounters a problem while generating UIN, MOSIP issues back an error to OpenCRVS.
 7. TBD
@@ -27,7 +27,7 @@ The following is a list of possible scenarios to be covered in this integration.
 
 {% embed url="https://www.youtube.com/watch?t=3s&v=1dtM5ve0qA8" %}
 
-* In this phase, v0.5 POC, only 1,2,5 scopes are handled.
+* In this phase, v0.5 POC, only 1, 2, and 5 scopes are handled.
 * The following new components are added:
   * OpenCRVS Side Mediator. (Maintained and deployed by OpenCRVS)
   * MOSIP Side Mediator.
@@ -47,7 +47,7 @@ The following is a list of possible scenarios to be covered in this integration.
 
 ### MOSIP Side Mediator
 
-* Runs on MOSIP Cluster. Maintained by MOSIP.
+* Runs on MOSIP cluster. Maintained by MOSIP.
 * Subscribes to MOSIP WebSub, for `CREDENTIAL_ISSUED` event.
 * Receives data from OpenCRVS.
   * On Birth:
@@ -99,24 +99,23 @@ The following stages are omitted:
 
 ### Birth registration
 
-![Opencrvs Integration for new birth](\_images/opencrvs\_birth-registration\_v1.2.png)
+<figure><img src=".gitbook/assets/opencrvs_birth-registration_v1.2 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Death registration
 
-![Opencrvs Integration for death](\_images/opencrvs\_death-registration\_v1.2.png)
+<figure><img src=".gitbook/assets/opencrvs_death-registration_v1.2 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Death reversal
 
-![Opencrvs Integration for death reversal](\_images/opencrvs\_death-reversal\_v1.2.png)
+<figure><img src=".gitbook/assets/opencrvs_death-reversal_v1.2.png" alt=""><figcaption></figcaption></figure>
 
 ### Data modification
 
-![Opencrvs Integration for data modification](\_images/opencrvs\_data-modification\_v1.2.png)
-
+<figure><img src=".gitbook/assets/opencrvs_data-modification_v1.2 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Specification for MOSIP Mediator (TBD)
 
 ## Source code
 
 * For MOSIP Side Components (Mediator and Regproc Stage), refer to [mosip-opencrvs](https://github.com/mosip/mosip-opencrvs/tree/develop) repository.
-* For OpenCRVS Side Mediator , refer to [opencrvs's mosip-mediator](https://github.com/opencrvs/mosip-mediator) repository.
+* For OpenCRVS Side Mediator, refer to [opencrvs's mosip-mediator](https://github.com/opencrvs/mosip-mediator) repository.
