@@ -99,11 +99,11 @@ The following stages are omitted:
 
 ### Birth registration
 
-<figure><img src=".gitbook/assets/opencrvs_birth-registration_v1.2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/CRVS_Integration_Phase2-Birth Registration.png" alt=""><figcaption></figcaption></figure>
 
 ### Death registration
 
-<figure><img src=".gitbook/assets/opencrvs_death-registration_v1.2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/CRVS_Integration_Phase2-Death Registration (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Death reversal
 
