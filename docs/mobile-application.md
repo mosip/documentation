@@ -14,7 +14,7 @@ The process flow for installation and first launch is given below
 
 ![](\_images/app-install-launch-process.jpg)
 
-After installing the application, the user will need to set a app lock code for it. The current version supports a PIN based lock. The first launch will also establish a security check with Google SafetyNet Attestation API (for Android) and the equivalent for iOS. For more details, refer the [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/mobile-id-app-user-guide).
+After installing the application, the user will need to set a app lock code for it. The current version supports a PIN based lock. The first launch will also establish a security check with Google SafetyNet Attestation API (for Android) and the equivalent for iOS. For more details, refer the [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/mobile-id-app-user-guide-new).
 
 ## Generating and storing of credentials
 
