@@ -1,4 +1,4 @@
-# Resident Mobile Application (Draft)
+# Resident Mobile Application 
 
 ## Overview
 
@@ -20,7 +20,7 @@ After installing the application, the user will need to set a app lock code for 
 
 A resident can generate a Verifiable Credential(VC) by either using a UIN or a VID. Also, they can generate credentials for their family or friends on the same phone.
 
-Detailed steps on generating and sharing credentials are given in the user guide [here](broken-reference).
+Detailed steps on generating and sharing credentials are given in the user guide [here](https://docs.mosip.io/1.2.0/modules/mobile-application/mobile-id-app-user-guide-new).
 
 The process of generating a credential is shown below
 
