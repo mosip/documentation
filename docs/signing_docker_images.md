@@ -27,7 +27,8 @@ e.g. docker trust inspect mosipid/print:1.1.5
 
 * This script is used very carefully. It is used when we want to introduce a new module or repository. 
 * For example, let’s say PMP-UI_. It’s a new module of which no images have been signed, hence first we need to initialize Docker signing for the same and then sign it.
-This initialize Docker signing part is covered by `dockerInit.sh`. This initialization has important steps as adding our root and target keys to the repository, rotating trust keys and publishing the same, all of these are taken care of by the script. 
+This initialize Docker signing part is covered by `dockerInit.sh`.
+* This initialization has important steps as adding our root and target keys to the repository, rotating trust keys and publishing the same, all of these are taken care of by the script. 
 
 Steps to follow:
  1. Change the user to root (sudo su)
