@@ -3,7 +3,7 @@
 ## Overview
 Resident services are the self-services which are used by the residents themselves via a portal. Resident Portal is a web based UI application that provides residents of a country the services related to their Unique Identification Number (UIN). The residents can perform various operations related to UIN/VID and can raise concerns if any through the portal.
 
-The key services provided by resident services are:
+The key services provided by Resident services are:
 1.	Get information (no validation required)
     * Get the list of the registration center
     *	Get the list of supporting documents
@@ -29,7 +29,7 @@ The key services provided by resident services are:
     *	Book an appointment to update UIN
 
 
-Below is an image summarizing the features provided in Resident Services portal.
+Below is an image summarizing the features provided in Resident portal.
 
 ![](_images/rs-feature-list.png)
 
@@ -71,7 +71,7 @@ The design of the Resident portal has to embody the following principles:
 * __Grievance redressal__: The Resident portal will ensure that in case of any concerns or grievance, the issue is raised and resolved through the portal itself.
 
 ## Services
-For detailed description of Resident Services, code and design, refer to [resident services repo](https://github.com/mosip/resident-services/tree/release-1.2.0).
+For detailed description of Resident services, the code and design, refer to [resident services repo](https://github.com/mosip/resident-services/tree/release-1.2.0).
 
 ## Resident portal
 MOSIP provides a reference implementation of the Resident portal that can be customized as per the country’s needs. The sample implementation is available at *insert reference implementation repository link*. 
