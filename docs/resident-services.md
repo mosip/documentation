@@ -1,19 +1,37 @@
 # Resident Services
 
 ## Overview
-Resident services are the self-services which are used by the residents themselves via a portal. Resident Portal is a web based UI application that provides residents of a country the services related to their Unique Identification Number (UIN).
-The key services provided are:
-* Check registration status
-* Lock/unlock authentication 
-* Download card 
-* Request printed card
-* Request Virtual ID (VID)
-* Request authentication history
-* Update personal details
+Resident services are the self-services which are used by the residents themselves via a portal. Resident Portal is a web based UI application that provides residents of a country the services related to their Unique Identification Number (UIN). The residents can perform various operations related to UIN/VID and can raise concerns if any through the portal.
 
-{% hint style="info" %}
-Every resident services API call authenticates via an OTP except for the Registration ID(RID) status
-{% endhint %}
+The key services provided by resident services are:
+1.	Get information (no validation required)
+    * Get the list of the registration center
+    *	Get the list of supporting documents
+2.	Get my UIN using UIN/ VID/ AID (validation required)
+3.	Verify email ID and/or phone number (validation required)
+4.	Login using UIN/ AID/ VID and OTP/ biometrics/ QR code (validation required) to:
+	  * View History
+    *	Share credentials with a partner
+    *	Order a physical card
+    *	Download a personalized card
+    *	Track a service request
+    *	Secure my ID
+    *	Manage my VID
+    *	Self-update my data
+    *	Get notifications
+    *	View the name, photo, and last login details of the logged-in user
+    *	Logout
+5.	Multi-browser support
+6.	Multi-language support
+7.	Redirection to pre-registration portal for the following features: (log in using email ID/phone number: (validation required)
+    *	Book an appointment for new enrolment (pre-registration)
+    *	Book an appointment to retrieve lost UIN
+    *	Book an appointment to update UIN
+
+
+Below is an image summarizing the features provided in Resident Services portal.
+
+![](_images/rs-feature-list)
 
 The relationship of Resident services with other services is listed below. 
 
