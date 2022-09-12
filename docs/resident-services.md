@@ -37,7 +37,7 @@ The relationship of Resident services with other services is listed below.
 
 _Note: The numbers do not signify sequence of operations or the control flow._
 
-![](_images/resident-services.png)
+![](_images/rs-entity-relationship.png)
 
 1.	Audit Manager: Resident services sends all the audit logs to the Audit manager.
 2.	Digital card service: Resident services use this service to download the PDF of the UIN card or VID card.
