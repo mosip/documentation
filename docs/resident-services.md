@@ -39,23 +39,23 @@ _Note: The numbers do not signify sequence of operations or the control flow._
 
 ![](_images/rs-entity-relationship.png)
 
-1.	Audit Manager: Resident services sends all the audit logs to the Audit manager.
-2.	Digital card service: Resident services use this service to download the PDF of the UIN card or VID card.
-3.	Print partner: Resident services use this service to perform activities related to the printing of the credential.
-4.	Credential Request Generator Service: Resident services use this service to share the credential with various partners like print partners, authentication partners, and digital card partners.
-5.	ID Repository Identity Service: Resident services use this service to retrieve the identity information of a credential and to lock/unlock authentication types.
-6.	ID Repository VID service: Resident services use this service to generate/revoke various types of VIDs.
-7.	ID Authentication: This service is used by Resident services to authenticate users.
-8.	MOSIP IdP: This is used to authenticate and authorize the users in an event of logging in using UIN/ VID.
-9.	Resident UI: This is the interface through which users can interact with the Resident services.
-10.	Web Sub: This is used to get asynchronous notification from IDA for acknowledgment purposes.
-11.	Registration Processor: This is used to sync and upload packets for features pertaining to changes in identity data.
-12.	Packet Manager: Resident services use this service to create packets.
-13.	Partner Management Service: Resident services uses this service to get information about various partners and policies.
-14.	Keycloak: Resident services uses this to authenticate in order to access the MOSIP internal APIs.
-15.	Master data service: Resident services invoke the Master Data services to get various templates and machine details.
-16.	Notification service: Resident services uses this service to send various notifications through email or SMS.
-17.	Key Manager: Resident services uses this manager to encrypt or decrypt the data used across features.
+1.	__Audit Manager__: Resident services sends all the audit logs to the Audit Manager.
+2.	__Digital card service__: Resident services use this service to download the PDF of the UIN card or VID card.
+3.	__Print partner__: Resident services use this service to perform activities related to the printing of the credential.
+4.	__Credential Request Generator Service__: Resident services use this service to share the credential with various partners like print partners, authentication partners, and digital card partners.
+5.	__ID Repository Identity Service__: Resident services use this service to retrieve the identity information of a credential and to lock/unlock authentication types.
+6.	__ID Repository VID service__: Resident services use this service to generate/revoke various types of VIDs.
+7.	__ID Authentication__: This service is used by Resident services to authenticate users.
+8.	__MOSIP IdP__: This is used to authenticate and authorize the users in an event of logging in using UIN/ VID.
+9.	__Resident UI__: This is the interface through which users can interact with the Resident services.
+10.	__WebSub__: This is used to get asynchronous notification from IDA for acknowledgment purposes.
+11.	__Registration Processor__: This is used to sync and upload packets for features pertaining to changes in identity data.
+12.	__Packet Manager__: Resident services use this service to create packets.
+13.	__Partner Management Service__: Resident services uses this service to get information about various partners and policies.
+14.	__Keycloak__: Resident services uses this to authenticate in order to access the MOSIP internal APIs.
+15.	__Master data service__: Resident services invoke the Master Data services to get various templates and machine details.
+16.	__Notification service__: Resident services uses this service to send various notifications through email or SMS.
+17.	__Key Manager__: Resident services uses this manager to encrypt or decrypt the data used across features.
 
 
 ## Design principles
