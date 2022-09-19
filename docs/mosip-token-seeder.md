@@ -42,6 +42,10 @@ Some of the features of MTS:
 
 ![](../.gitbook/assets/mosip-token-token-seeder-block-diagram.png)
 
+
+![](\_images/mosip-token-seeder-block-diagram.png)
+
+
 ### Authtoken API
 
 Authtoken API is a RESTful interface to accept various auth request input for the Token Seeder system. The API works in a complete asynchronous mode. [Relying party](https://docs.mosip.io/1.2.0/id-authentication#relying-parties-and-policies) is returned a request identifier when they make successful authtoken request. Status check API can be used to poll the status of the request placed. In case the status returns a processed state, the output can be accessed, as configured in the primary request for. Eg. If the request was for a file download, the file download API can be called to return the output file.\
