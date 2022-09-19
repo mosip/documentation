@@ -4,7 +4,7 @@
 
 MOSIP Token Seeder (**MTS**) is a standalone service that outputs [MOSIP Token ID](https://docs.mosip.io/1.2.0/id-lifecycle-management/identifiers#token-id) for a given input list of UIN/VIDs after performing authentication with [IDA](https://docs.mosip.io/1.2.0/id-authentication). The service is a convenience module that makes it easy for [Relying Parties](https://docs.mosip.io/1.2.0/id-authentication#relying-parties-and-policies) to perform bulk authentication to onboard users to their systems. One of the intended use cases of MTS is to seed existing beneficiary registries for deduplication. Similarly, entities like banks can run the MTS service to onboard users.
 
-Some of the features of MTS:
+## Features of MTS
 
 * Bulk upload
 * Support for multiple inputs and outputs (see diagram below). For instance, a CSV file may be uploaded, and the downloaded file will contain a column with tokens populated.
@@ -62,19 +62,19 @@ Authenticator module can also be used as a individual library outside of MOSIP t
 
 ### API documentation
 
-Ref [API](mosip-token-seeder-api.md)
+Refer [API](mosip-token-seeder-api.md).
 
 ### Source code
 
-Ref [GitHub](https://github.com/mosip/mosip-token-seeder)
+Refer [GitHub](https://github.com/mosip/mosip-token-seeder).
 
 ### Test
 
 ### User stories
 
-Ref [Jira](https://mosip.atlassian.net/browse/MOSIP-23029)
+Refer [Jira](https://mosip.atlassian.net/browse/MOSIP-23029).
 
 ### Installation
 
-Ref [README](https://github.com/mosip/openg2p/blob/develop/mosip\_token\_seeder/README.md)
+Refer [README](https://github.com/mosip/openg2p/blob/develop/mosip\_token\_seeder/README.md).
 
