@@ -40,11 +40,7 @@ Some of the features of MTS:
 
 ## Design
 
-![](../.gitbook/assets/mosip-token-token-seeder-block-diagram.png)
-
-
 ![](\_images/mosip-token-seeder-block-diagram.png)
-
 
 ### Authtoken API
 
