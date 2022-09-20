@@ -8,7 +8,7 @@ MOSIP Token Seeder (**MTS**) is a standalone service that outputs [MOSIP Token I
 
 * Bulk upload
 * Support for multiple inputs and outputs (see diagram below). For instance, a CSV file may be uploaded, and the downloaded file will contain a column with tokens populated.
-* [REST interface](./#api).
+* REST interface.
 * PII at rest is encrypted. Further, the PII is erased after processing.
 * Works in asynchronous mode - queues all the requests.
 
