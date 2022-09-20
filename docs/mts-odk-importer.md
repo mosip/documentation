@@ -12,7 +12,7 @@ MTS ODK Importer (MOI) is a OpenG2P module which will be an addon to [Odoo](http
 * OpenG2P can schedule a daily job to fetch the delta for the day
 * A manual import feature will also be provided
 
-<figure><img src=".gitbook/assets/mosip-token-seeder-odk-importer.png" alt=""><figcaption></figcaption></figure>
+![](_images/mosip-token-seeder-odk-importer.png)
 
 ## Input
 
