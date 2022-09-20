@@ -174,7 +174,7 @@ Detailed Metrics for all 14 modules is available below:
 
 **Response Time Percentile Graph using Jmeter**
 
-![](audit\_manager\_50\_jmeter\_response\_time\_percentile\_graph.png)
+![](<audit\_manager\_50\_jmeter\_response\_time\_percentile\_graph (1).png>)
 
 **CPU and Memory Utilization Graphs using Grafana**
 
@@ -613,7 +613,7 @@ _**Note:** registration processor stage group 1 service is a vertx app, so there
 
 **Response Time Percentile Graph using Jmeter**
 
-![](Aspose.Words.847091e4-d70a-4b8a-b618-47c1e39d7377.005.png)
+![](<Aspose.Words.847091e4-d70a-4b8a-b618-47c1e39d7377.005 (1).png>)
 
 **CPU and Memory Utilization Graphs using Grafana**
 

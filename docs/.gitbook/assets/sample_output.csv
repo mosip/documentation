@@ -1,0 +1,3 @@
+vid,token,status,errorCode,errorMessage
+6396870648940270,346676616121608126880537035832017481,processed,,
+6785720049183419,,error,ATS-REQ-010,"name or its mapping not present"
