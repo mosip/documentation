@@ -2,7 +2,7 @@
 
 ## API Documentation
 
-Ref [Api](https://mosip.stoplight.io/docs/mosip-token-seeder/branches/main)
+Ref [A](https://mosip.stoplight.io/docs/mosip-token-seeder/branches/main)PI.
 
 ## Authtoken (JSON) <a href="#mosip-token-seeder-default" id="mosip-token-seeder-default"></a>
 
