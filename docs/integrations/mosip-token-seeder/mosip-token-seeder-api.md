@@ -1,18 +1,17 @@
+---
+description: >-
+  This page details only on very specific areas of MOSIP Token Seeder. For a
+  elaborate understanding on the MTS API, please refer the API documentation
+  page.
+---
+
 # MTS Developer Guide
 
 ## API Documentation
 
-Ref [A](https://mosip.stoplight.io/docs/mosip-token-seeder/branches/main)PI.
+Refer [API documentation](https://mosip.stoplight.io/docs/mosip-token-seeder/branches/main).
 
-## Authtoken (JSON) <a href="#mosip-token-seeder-default" id="mosip-token-seeder-default"></a>
-
-An endpoint to receive an array of authdata records to generate MOSIP token IDs. On placing a successful authtoken request, the caller will be returned with a request identifier, and the request will be queued to the seeder for asynchronous processing. The request identifier can be used to check the status of the authtoken request.
-
-## Authtoken (CSV)
-
-This is an endpoint for receiving a CSV file in order to generate a MOSIP token. On placing a successful authtoken request, the caller will be returned with a request identifier, and the request will be queued to the seeder for asynchronous processing. The request identifier can be used to check the status of the authtoken request.
-
-#### CSV Format
+### CSV Format
 
 {% file src="../../.gitbook/assets/sample_input.csv" %}
 
@@ -20,21 +19,9 @@ When using above format, you may not need any mapping configuration. But in case
 
 {% file src="../../.gitbook/assets/sample_output.csv" %}
 
-Output might have mix of successful and failed records except for the case where whole of the input throws error. If successful, the record would be having the token placed against the vid. And if there is error processing a record, the same is updated against the vid and the [error code](mosip-token-seeder-api-1.md#failure-details) and description is mentioned along.
+Output might have mix of successful and failed records except for the case where whole of the input throws error. If successful, the record would be having the token placed against the vid. And if there is error processing a record, the same is updated against the vid and the [error code](mosip-token-seeder-api.md#failure-details) and description is mentioned along.
 
-## Authtoken (ODK)
-
-Seeds token for the ODK data pulled from the ODK Central, based on the config submitted. Unlike authtoken API for JSON and CSV, here there is no input supplied in the request directly. Instead, an ODK configuration is submitted along with the input, and the API will try to fetch submissions from ODK central and store them in an in-memory DB. The API will then queue the request to the seeder and return the request identifier.
-
-## Fetch Status
-
-Fetches the status of the request for the request identifier passed in.
-
-## Download File
-
-If the delivery type submitted in an authtoken request is "download" and the status check revealed for the request is "processed," this api can return you the file generated as the output of tokenization. The input expected in this API is the same request identifier.
-
-## Failure Details
+## Error Codes
 
 | Error Code    | Error Message                                                 |
 | ------------- | ------------------------------------------------------------- |

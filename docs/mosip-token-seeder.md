@@ -45,24 +45,24 @@ MOSIP Token Seeder (**MTS**) is a standalone service that outputs [MOSIP Token I
 ### Authtoken API
 
 Authtoken API is a RESTful interface to accept various auth request input for the Token Seeder system. The API works in a complete asynchronous mode. [Relying party](https://docs.mosip.io/1.2.0/id-authentication#relying-parties-and-policies) is returned a request identifier when they make successful authtoken request. Status check API can be used to poll the status of the request placed. In case the status returns a processed state, the output can be accessed, as configured in the primary request for. Eg. If the request was for a file download, the file download API can be called to return the output file.\
-&#x20;\
-Refer [MOSIP Token Seeder API](mosip-token-seeder-api.md) for a detailed API documentation.
+\
+Refer [MOSIP Token Seeder API](broken-reference) for a detailed API documentation.
 
 ### Token seeder
 
 Token seeder is a batch processing module which initiates the token authentication process. Once a new request is enqueued into the token seeder, it fetches the same and sends the request on a record level to the authenticator module. Token seeder is also responsible for updating the success and failure status to the database.\
-There is also a expiry program for clearing off the request already processed from the system based on the expiry settings configured.       &#x20;
+There is also a expiry program for clearing off the request already processed from the system based on the expiry settings configured.
 
 ### Authenticator
 
-Authenticator process takes in a valid authentication request and performs the demographic authentication with the [MOSIP IDA](https://docs.mosip.io/1.2.0/id-authentication) server. Each auth request is well formed, encrypted and signed before its sent to the [MOSIP IDA](https://docs.mosip.io/1.2.0/id-authentication). It passes on the response received to the caller regardless of the status received. \
-Authenticator module can also be used as a individual library outside of MOSIP token seeder for any use case it applies to.&#x20;
+Authenticator process takes in a valid authentication request and performs the demographic authentication with the [MOSIP IDA](https://docs.mosip.io/1.2.0/id-authentication) server. Each auth request is well formed, encrypted and signed before its sent to the [MOSIP IDA](https://docs.mosip.io/1.2.0/id-authentication). It passes on the response received to the caller regardless of the status received.\
+Authenticator module can also be used as a individual library outside of MOSIP token seeder for any use case it applies to.
 
 ## Other links
 
 ### API documentation
 
-Refer [API](mosip-token-seeder-api.md).
+Refer [API](broken-reference).
 
 ### Source code
 
@@ -77,4 +77,3 @@ Refer [Jira](https://mosip.atlassian.net/browse/MOSIP-23029).
 ### Installation
 
 Refer [README](https://github.com/mosip/openg2p/blob/develop/mosip\_token\_seeder/README.md).
-
