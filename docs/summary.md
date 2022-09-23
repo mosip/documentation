@@ -92,6 +92,7 @@
 * [Country Implementation](country-implementation.md)
 * [Integrations](integrations/README.md)
   * [MOSIP OpenCRVS](mosip-opencrvs-integration.md)
+  * [MOSIP eManas Integration](mosip-emanas-integrations.md)
   * [Digital Signature](integrations/digital-signature.md)
   * [MOSIP Token Seeder](mosip-token-seeder.md)
     * [MTS Versions](mts-versions.md)
