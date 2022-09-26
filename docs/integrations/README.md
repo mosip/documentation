@@ -3,5 +3,5 @@
 Integration of MOSIP with other systems.
 
 * [OpenCRVS](../mosip-opencrvs-integration.md)
-* [MOSIP eManas Integration](../mosip-emanas-integration.md)
-* [Digital signature](digital-signature.md)
+* [e-Manas: Mental health care system](../mosip-emanas-integration.md)
+* [eMudhra: Digital signature](digital-signature.md)
