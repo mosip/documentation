@@ -17,6 +17,18 @@ _(Yet to be released)_
 * Helm chart
 * Processes 5k entries in one request
 
+### MOSIP version compatibility
+
+MTS will be compatible with following versions of MOSIP IDA
+
+* MOSIP v1.1.5x
+* MOSIP v1.2.0.x
+* MOSIP v1.2.1.x
+
+### Release notes
+
+##
+
 
 
 ## Version 1.1.0

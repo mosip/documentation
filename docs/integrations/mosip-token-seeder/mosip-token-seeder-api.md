@@ -90,12 +90,3 @@ Except for name and full address, the majority of the fields in authdata are dir
 | phoneNumber | country specific length without any country code | Optional   |
 | emailId     | string                                           | Optional   |
 | fullAddress | string                                           | Mandatory  |
-
-## MOSIP Compatibility
-
-MTS will be compatible with following versions of MOSIP IDA
-
-| MTS Version | MOSIP Version              |
-| ----------- | -------------------------- |
-| 1.0.0       | 1.1.5.x, 1.2.0.x, 1.2.1.x  |
-|             |                            |
