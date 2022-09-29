@@ -111,6 +111,7 @@
     * [Performance Test Report](release/1.2.0/performance-report/performance-test-report.md)
     * [Security Test Report](release/1.2.0/security-test-report.md)
     * [Feature Health Report](release/1.2.0/feature-health-report.md)
+   * [1.2.0.1](release/1.2.0.1/release-notes.md)
   * [MOSIP Support Policy](support-policy.md)
 * [MOSIP Documentation Style Guide](mosip-documentation-style-guide.md)
 * [Documentation for 1.1.5](previous-version-documentation.md)
