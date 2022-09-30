@@ -21,6 +21,38 @@ When using above format, you may not need any mapping configuration. But in case
 
 Output might have mix of successful and failed records except for the case where whole of the input throws error. If successful, the record would be having the token placed against the vid. And if there is error processing a record, the same is updated against the vid and the [error code](mosip-token-seeder-api.md#failure-details) and description is mentioned along.
 
+## Status Messages
+
+#### submitted&#x20;
+
+`submitted` is the first status immediately after you have placed a authtoken request.
+
+#### invalid
+
+If in case there is basic validation error such that the request could not be processed, the request in marked as `invalid`.&#x20;
+
+#### submitted\_with\_errors
+
+Once the system passes through the basic validation but has found that none of the records can go through due to varied record level validation issues, the system will update the request with `submitted_with_errors` status.
+
+#### processing
+
+This status is updated when the seeder enqueues the request for `processing`.
+
+#### processed
+
+Once the request is completed processing and ready for a result, the system updates the record with `processed` status. There can be error codes mentioned in the output line items in case few but not entire records have any processing error.
+
+#### processed\_with\_errors
+
+When the request is processed but every record in the request has some or other processing errors, the system updates the request with `processed_with_errors` status.
+
+
+
+#### _Delay in status update_
+
+In case there is a prior request placed with considerably higher number of records, and you have placed  subsequent request submitted even before getting output for your earlier request, the system might take a while to update the status of your newer request. It might be still in the `submitted` state until the system finds a window to start processing. &#x20;
+
 ## Error Codes
 
 | Error Code    | Error Message                                                 |
@@ -90,12 +122,3 @@ Except for name and full address, the majority of the fields in authdata are dir
 | phoneNumber | country specific length without any country code | Optional   |
 | emailId     | string                                           | Optional   |
 | fullAddress | string                                           | Mandatory  |
-
-## MOSIP Compatibility
-
-MTS will be compatible with following versions of MOSIP IDA
-
-| MTS Version | MOSIP Version              |
-| ----------- | -------------------------- |
-| 1.0.0       | 1.1.5.x, 1.2.0.x, 1.2.1.x  |
-|             |                            |
