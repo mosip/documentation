@@ -46,7 +46,7 @@ MOSIP Token Seeder (**MTS**) is a standalone service that outputs [MOSIP Token I
 
 Authtoken API is a RESTful interface to accept various auth request input for the Token Seeder system. The API works in a complete asynchronous mode. [Relying party](https://docs.mosip.io/1.2.0/id-authentication#relying-parties-and-policies) is returned a request identifier when they make successful authtoken request. Status check API can be used to poll the status of the request placed. In case the status returns a processed state, the output can be accessed, as configured in the primary request for. Eg. If the request was for a file download, the file download API can be called to return the output file.\
 \
-Refer [MOSIP Token Seeder API](https://mosip.stoplight.io/docs/mosip-token-seeder/branches/main) for a detailed API documentation.
+Refer [MOSIP Token Seeder API](broken-reference) for a detailed API documentation.
 
 ### Token seeder
 
@@ -62,7 +62,7 @@ Authenticator module can also be used as a individual library outside of MOSIP t
 
 ### API documentation
 
-Refer [API](https://mosip.stoplight.io/docs/mosip-token-seeder/branches/main).
+Refer [API](broken-reference).
 
 ### Source code
 
@@ -72,7 +72,7 @@ Refer [GitHub](https://github.com/mosip/mosip-token-seeder).
 
 ### User stories
 
-Refer [MOSIP-24068](https://mosip.atlassian.net/browse/MOSIP-24068), [MOSIP-23029](https://mosip.atlassian.net/browse/MOSIP-23029).
+Refer [Jira](https://mosip.atlassian.net/browse/MOSIP-23029).
 
 ### Installation
 

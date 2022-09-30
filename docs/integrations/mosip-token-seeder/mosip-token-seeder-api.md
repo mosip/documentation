@@ -23,31 +23,29 @@ Output might have mix of successful and failed records except for the case where
 
 ## Status Messages
 
-#### submitted&#x20;
+#### `submitted`&#x20;
 
 `submitted` is the first status immediately after you have placed a authtoken request.
 
-#### invalid
+#### `invalid`
 
 If in case there is basic validation error such that the request could not be processed, the request in marked as `invalid`.&#x20;
 
-#### submitted\_with\_errors
+#### `submitted_with_errors`
 
 Once the system passes through the basic validation but has found that none of the records can go through due to varied record level validation issues, the system will update the request with `submitted_with_errors` status.
 
-#### processing
+#### `processing`
 
 This status is updated when the seeder enqueues the request for `processing`.
 
-#### processed
+#### `processed`
 
 Once the request is completed processing and ready for a result, the system updates the record with `processed` status. There can be error codes mentioned in the output line items in case few but not entire records have any processing error.
 
-#### processed\_with\_errors
+#### `processed_with_errors`
 
 When the request is processed but every record in the request has some or other processing errors, the system updates the request with `processed_with_errors` status.
-
-
 
 #### _Delay in status update_
 
