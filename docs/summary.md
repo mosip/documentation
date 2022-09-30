@@ -23,7 +23,7 @@
   * [Administration](administration.md)
     * [Admin Portal User Guide](admin-portal-user-guide.md)
     * [Admin Services Developers Guide](admin-services-developers-guide.md)
-    * [Masterdata Guide](modules/administration/masterdata-guide.md)
+    * [Masterdata Guide](masterdata-guide.md)
   * [Automation Testing](automation-testing.md)
   * [Artifactory](artifactory.md)
   * [Commons](commons.md)
