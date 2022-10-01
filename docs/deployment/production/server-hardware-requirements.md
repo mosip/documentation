@@ -4,7 +4,7 @@
 
 MOSIP deployment is split into two distinct parts:
 
-1. [ID lifecycle managament](../../id-lifecycle-management.md)
+1. [ID lifecycle management](../../id-lifecycle-management.md)
    * Pre-registration
    * Registration
 2. [ID Authentication](../../id-authentication.md)
@@ -14,7 +14,7 @@ The server side hardware estimates for the above are specified at a high level i
 The variables that largely determine the hardware requirements are:
 
 1. Population of a country
-2. Rate of enrollment
+2. Rate of enrolme
 3. Usage of foundation ID by various services
 
 ## Pre-registration
@@ -23,15 +23,15 @@ Refer to [Pre-registration Resource Calculator XLS](../../\_files/pre-reg-resour
 
 Allow for 20% additional compute and storage for monitoring and any overheads.
 
-## Registration (enrollment)
+## Registration (enrolment)
 
-The registration compute resources are related to the max rate of enrollment desired. The processing throughput must match the enrollment rate to avoid pile up of pending registration packets.
+The registration compute resources are related to the max rate of enrolment desired. The processing throughput must match the enrolment rate to avoid pile up of pending registration packets.
 
 The data here is based on actual field data of a MOSIP deployment.
 
 Assumptions:
 
-* Rate of enrollment: 216000 per day
+* Rate of enrolment: 216000 per day
 * Average packet size: 2MB
 * Biometric modalities: Finger, iris, face
 * Pod replication as given here.(TBD)
@@ -53,7 +53,7 @@ Storage is dependent on population of a country (i.e. the number of UINs to be i
 
 | Data                                                                                                                                                                     |                Storage                | Comments                                                                                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-----------------------------------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Object Store](../../broken-reference/) (S3/Minio)                                                                                                                       |  3200 GB/million packets/replication  | Replication factor to be applied based on replication strategy                                                                                                                                                   |
+| [Object Store ](https://github.com/mosip/mosip-infra/tree/1.2.0.1/deployment/v3/external/object-store/minio)(S3/Minio)                                                   |  3200 GB/million packets/replication  | Replication factor to be applied based on replication strategy                                                                                                                                                   |
 | Postgres storage                                                                                                                                                         |         30 GB/million packets         | Includes all databases                                                                                                                                                                                           |
 | [Landing zone](https://github.com/mosip/registration/blob/release-1.2.0/registration-processor/init/registration-processor-packet-receiver-stage/README.md#landing-zone) | Unprocessed packets X avg packet size | The size of landing zone depends on the estimated lag in packet processing and packet uploads. Once UINs are issued, the packets may be removed from the landing zone as a copy is already saved in Object Store |
 | Logs (Elasticsearch)                                                                                                                                                     |               80 GB/day               | Logs maybe archived after, say, 2 weeks                                                                                                                                                                          |
