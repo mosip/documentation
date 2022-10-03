@@ -1,8 +1,6 @@
 # Versioning
 
-## Versioning
-
-Following versioning conventions are followed for repos related to deployment:
+The following versioning conventions are followed for repos related to deployment:
 
 * [`mosip-infra`](https://github.com/mosip/mosip-infra) branch == MOSIP release version == [`mosip-helm`](https://github.com/mosip/mosip-helm) branch.
 * [`k8s-infra`](https://github.com/mosip/k8s-infra) is on `main` branch.
