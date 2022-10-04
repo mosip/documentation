@@ -6,7 +6,7 @@ All MOSIP services are packaged as Helm charts for ease of installation on Kuber
 
 ## Chart versioning
 
-Refer [Versioning](versioning.md).
+Refer [Versioning](deployment/versioning.md).
 
 Make sure version in `Charts.yaml` is updated for all charts when a new branch is created on `mosip-helm`.
 
@@ -35,4 +35,3 @@ helm package charts/<chart name>
 ```
 ./publish.sh
 ```
-
