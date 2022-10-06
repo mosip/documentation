@@ -42,6 +42,6 @@ MTS 1.0.0 is compatible with following versions of MOSIP IDA:
 * For functional **user stories**, refer here:
     * <Input: JSON/CSV format> and <Output: JSON/CSV format> - [#MOSIP-23029](https://mosip.atlassian.net/browse/MOSIP-23029)
     * <Input: ODK format> and <Output: JSON/CSV format> - [#MOSIP-23224](https://mosip.atlassian.net/browse/MOSIP-23224)
-* For API documentation, click [here](https://mosip.stoplight.io/docs/mosip-token-seeder/branches/main/sksp54oilqzun-mosip-token-seeder)
+* For API documentation, click [here](https://mosip.stoplight.io/docs/mosip-token-seeder/branches/main/sksp54oilqzun-mosip-token-seeder).
 * For installation, refer [README](https://github.com/mosip/openg2p/blob/develop/mosip_token_seeder/README.md).
 * [Known Issues](https://mosip.atlassian.net/issues/?filter=11025) 
