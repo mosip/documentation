@@ -100,6 +100,7 @@
   * [Digital Signature](integrations/digital-signature.md)
   * [MOSIP Token Seeder](mosip-token-seeder.md)
     * [MTS Versions](mts-versions.md)
+        * [Version 1.0.0](mts1.0-release-notes.md)
     * [MTS Developer Guide](integrations/mosip-token-seeder/mosip-token-seeder-api.md)
     * [MTS ODK Importer](mts-odk-importer.md)
 * [API](api.md)
