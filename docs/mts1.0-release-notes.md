@@ -19,8 +19,9 @@ MTS 1.0.0 is compatible with following versions of MOSIP IDA:
 
 ## Features covered
 
-* Input type: CSV, JSON, ODK
-* Output type: CSV, JSON
+* Authentication and token issuance using MOSIP Token Seeder with input/output formats and specifications as stated below:
+    * Input type: CSV, JSON, ODK
+    * Output type: CSV, JSON
 * Delivery type: Download
 * Asynchronous token seeding
 * Status API
