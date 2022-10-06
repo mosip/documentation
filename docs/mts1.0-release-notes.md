@@ -1,0 +1,46 @@
+**Release Name**: MTS 1.0
+
+**Release Version**: Version 1.0.0
+
+**Upgrade From**: NA
+
+**Release Date**: 6th October, 2022
+
+## Overview
+
+The 1.0.0 version of MTS covers basic features of [MOSIP Token Seeder](https://docs.mosip.io/1.2.0/integrations/mosip-token-seeder) as listed below.
+This version is tested for functionality. Non-functional requirements (Performance, scale etc.) will be taken up in subsequent releases.
+
+## Compatibility
+
+MTS 1.0.0 is compatible with following versions of MOSIP IDA:
+* MOSIP v1.1.5x
+* MOSIP v1.2.0.x
+
+## Features covered
+
+* Input type: CSV, JSON, ODK
+* Output type: CSV, JSON
+* Delivery type: Download
+* Asynchronous token seeding
+* Status API
+* Download API
+* Authfield Mapping
+* Dockerization
+* Helm chart
+* Processes 5k entries in one request
+
+## Repositories released
+
+a. [MTS repository](https://github.com/mosip/mosip-token-seeder/tree/release-1.0.0)
+b. Test repositories
+    * Functional Tests 
+    
+## Documentation
+a. For a basic overview, refer [architecture and high level design](https://docs.mosip.io/1.2.0/integrations/mosip-token-seeder).
+b. For functional **user stories**, refer here:
+-  <Input: JSON/CSV format> and <Output: JSON/CSV format> - [#MOSIP-23029](https://mosip.atlassian.net/browse/MOSIP-23029)
+-  <Input: ODK format> and <Output: JSON/CSV format> - [#MOSIP-23224](https://mosip.atlassian.net/browse/MOSIP-23224)
+c. For API documentation, click [here](https://mosip.stoplight.io/docs/mosip-token-seeder/branches/main/sksp54oilqzun-mosip-token-seeder)
+d. For installation, refer [README](https://github.com/mosip/openg2p/blob/develop/mosip_token_seeder/README.md).
+e. [Known Issues](https://mosip.atlassian.net/issues/?filter=11025) 
