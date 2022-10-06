@@ -11,12 +11,6 @@
 The 1.0.0 version of MTS covers basic features of [MOSIP Token Seeder](https://docs.mosip.io/1.2.0/integrations/mosip-token-seeder) as listed below.
 This version is tested for functionality. Non-functional requirements (Performance, scale etc.) will be taken up in subsequent releases.
 
-## Compatibility
-
-MTS 1.0.0 is compatible with following versions of MOSIP IDA:
-* MOSIP v1.1.5x
-* MOSIP v1.2.0.x
-
 ## Features covered
 
 Authentication and token issuance using MOSIP Token Seeder with input/output formats and specifications as stated below:
@@ -30,6 +24,12 @@ Authentication and token issuance using MOSIP Token Seeder with input/output for
 * Dockerization
 * Helm chart
 * Processes 5k entries in one request
+
+## Compatibility
+
+MTS 1.0.0 is compatible with following versions of MOSIP IDA:
+* MOSIP v1.1.5x
+* MOSIP v1.2.0.x
 
 ## Repositories released
 
