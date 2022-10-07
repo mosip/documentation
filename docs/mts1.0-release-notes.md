@@ -28,7 +28,7 @@ Authentication and token issuance using MOSIP Token Seeder with input/output for
 ## Compatibility
 
 MTS 1.0.0 is compatible with following versions of MOSIP IDA:
-* MOSIP v1.1.5x
+* MOSIP v1.1.5.x
 * MOSIP v1.2.0.x
 
 ## Repositories released
