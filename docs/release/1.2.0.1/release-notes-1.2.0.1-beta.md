@@ -7,7 +7,7 @@ _(Work in progress)_
 
 **Release Version**: 1.2.0.1-B1
 
-**Upgrade from**: 1.2.0 (Long Trm Support)
+**Upgrade from**: 1.2.0 (Long Term Support)
 
 **Support**: Developer Release
 
