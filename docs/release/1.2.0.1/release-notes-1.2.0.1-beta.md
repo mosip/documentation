@@ -94,19 +94,19 @@ The “1.2.0.1 Beta” release of MOSIP is the first patch release on top of the
 * Bug fix: In FTM details menu button, the name was "create device" instead of "create FTM". As a fix, the name of the button of resource bundle was modified to _create FTM_ instead of _create device_. #MOSIP-19918
 * Bug fix: In PMP UI, filter labels were not pointing to logged in language. As a fix, support was added to display label in multi language. #MOSIP-19639
 * Bug fix: In PMP UI, filter columns for partner menu was not proper. As a fix, the display label was modified. #MOSIP-19414
-* Bug fix: In PMP UI, user was allowed to create SBI details without mandatory details. After the fix, without mandatory details SBI creation is not allowed. #MOSIP-17562
-* Bug fix: In FTM details page, the status should be approve/reject instead of active/de-active/ After the fix, approve/reject labels were updated. #MOSIP-19823
-* Bug fix: In PMP UI, the partner could be mapped to the same policy twice. After the fix, one partner could only be mapped to one policy. #MOSIP-19773
-* Bugfix: In PMP UI, when a partner is registering himself, the partner Id should be one single word with no space. After the fix, partner Id was not allowed to be created with space. #MOSIP-19404
+* Bug fix: In PMP UI, user was allowed to create SBI details without mandatory details. After the fix, without mandatory details, SBI creation is not allowed. #MOSIP-17562
+* Bug fix: In FTM details page, the status should be approve/reject instead of active/de-active. After the fix, approve/reject labels were updated. #MOSIP-19823
+* Bug fix: In PMP UI, the partner could be mapped to the same policy twice. After the fix, one partner can only be mapped to one policy. #MOSIP-19773
+* Bugfix: In PMP UI, when a partner is registering themselves, the partner Id should be one single word with no space. After the fix, partner Id was not allowed to be created with space. #MOSIP-19404
 * Bug fix: In PMP UI, partial search was not working. After the fix, partial search was working with asterisk(*). #MOISIP-19347
-* Bug fix: In PMP UI, the partner admin should not be allowed to change the SBI details and FTM details after it was approved. After the fix, the SBI details and FTM details were made to be un-editable. #MOSIP-19309
-* Bug fix: In PMP UI, the error message that we expected to get when the SBI details are added to the pending status device details was "Device details are not yet updated" instead we were getting "Device details does not exist". As a fix, label was updated. #MOSIP-19306
-* Bug fix: In PMP UI, "search" box was case sensitive in partner policy mapping. After the fix, the "search: box was made to be case insensitive. #MOSIP-19289
-* Bug fix: In PMP UI, if a partner tries to registering using an email which already existed, instead of displaying "email already registered", it was showing a blank page. After the fix, it was correctly showing the message. #MOSIP-19277
+* Bug fix: In PMP UI, the partner admin should not be allowed to change the SBI details and FTM details after it was approved. After the fix, the SBI details and FTM details were made uneditable. #MOSIP-19309
+* Bug fix: In PMP UI, the expected error message when the SBI details are added to the pending status device details was "Device details are not yet updated" instead "Device details does not exist" was seen. As a fix, label was updated. #MOSIP-19306
+* Bug fix: In PMP UI, _Search_ box was case sensitive in partner policy mapping. After the fix, the _Search_ was made to be case insensitive. #MOSIP-19289
+* Bug fix: In PMP UI, if a partner tries to register using an email which already exists, instead of displaying "email already registered", it was showing a blank page. After the fix, it was correctly showing the message. #MOSIP-19277
 
 ### Pre-registration 
 
-* Bug fix: Cancel application mails from prereg were not being sent and email templates were not being fetched from correct template type code. After the fix, the mail contents were fetched from respective templates and cancel mails were duly sent. #MOSIP-18192
+* Bug fix: Cancel application mails from pre-registration were not being sent and email templates were not being fetched from correct template type code. After the fix, the mail contents were fetched from respective templates and cancel mails were duly sent. #MOSIP-18192
 * Performance fix: Booking Slots were missing for many centers in cellbox2 env. As a fix, a code change was done in Batch Job to call master data API with sorting by "ID" instead of "createdDateTime". #MOSIP-19942
 * Security_fix: The attacker could potentially see the files from the application or system. Using this, attackers can access other files as well. To mitigate the risk, the URL should not allow path manipulation. The "accept known good" input validation strategy was put in place. Also, a whitelist of acceptable inputs that strictly conforms to specifications was used. #MOSIP-14246
 * Bug_fix: When a center was created without selecting lunch hours, at the center selection page it was showing lunch time as 12:00 AM to 12:00 AM. As a code fix,  a condition "if lunchStartTime!= lunchEndTime" was put in place. #MOSIP-18985
