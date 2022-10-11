@@ -20,9 +20,10 @@
 | pre-registration     |                     |                       |                  |                  |
 |  id-authentication   |                     |                       |                  |                  |
 |   registration       |                     |                       |                  |                  |
-|                  |                     |                       |                  |                  |
-|                  |                     |                       |                  |                  |
-|                  |                     |                       |                  |                  |
-|                  |                     |                       |                  |                  |
-|                  |                     |                       |                  |                  |
-|                  |                     |                       |                  |                  |
+|  resident-services   |                     |                       |                  |                  |
+|  admin-ui            |                     |                       |                  |                  |
+|  registration-client |                     |                       |                  |                  |
+| partner-management-services|                     |                       |                  |                  |
+| print                 |                     |                       |                  |                  |
+| durian                 |                     |                       |                  |                  |
+| pre-registration-ui             |                     |                       |                  |                  |
