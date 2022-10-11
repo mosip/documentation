@@ -14,7 +14,7 @@ _(Work in progress)_
 
 **Release Date**: 14-Oct 2022
 
-The “1.2.0.1 Beta” release of MOSIP is the first patch release on top of the Long-Term Support (LTS) release 1.2.0. This patch release mainly contains the bug fixes, performance fixes, and minor feature updates. One of the major highlights of this patch release is the production-grade [V3 deployment](https://docs.mosip.io/1.2.0/deployment).
+The **1.2.0.1 Beta** release of MOSIP is the first patch release on top of the Long-Term Support (LTS) release 1.2.0. This patch release mainly contains the bug fixes, security and performance fixes, and also minor feature upgrades. One of the major highlights of this patch release is the production-grade [V3 deployment](https://docs.mosip.io/1.2.0/deployment).
 
 ## Repository Released
 
@@ -110,5 +110,29 @@ The “1.2.0.1 Beta” release of MOSIP is the first patch release on top of the
 
 * Bug fix: Cancel application mails from pre-registration were not being sent and email templates were not being fetched from correct template type code. After the fix, the mail contents were fetched from respective templates and cancel mails were duly sent. #MOSIP-18192
 * Performance fix: Booking Slots were missing for many centers in cellbox2 env. As a fix, a code change was done in Batch Job to call master data API with sorting by "ID" instead of "createdDateTime". #MOSIP-19942
-* Security\_fix: The attacker could potentially see the files from the application or system. Using this, attackers can access other files as well. To mitigate the risk, the URL should not allow path manipulation. The "accept known good" input validation strategy was put in place. Also, a whitelist of acceptable inputs that strictly conforms to specifications was used. #MOSIP-14246
-* Bug\_fix: When a center was created without selecting lunch hours, at the center selection page it was showing lunch time as 12:00 AM to 12:00 AM. As a code fix,  a condition "if lunchStartTime!= lunchEndTime" was put in place. #MOSIP-18985
+* Security fix: The attacker could potentially see the files from the application or system. Using this, attackers can access other files as well. To mitigate the risk, the URL should not allow path manipulation. The "accept known good" input validation strategy was put in place. Also, a whitelist of acceptable inputs that strictly conforms to specifications was used. #MOSIP-14246
+* Bug fix: When a center was created without selecting lunch hours, at the center selection page it was showing lunch time as 12:00 AM to 12:00 AM. As a code fix,  a condition "if lunchStartTime!= lunchEndTime" was put in place. #MOSIP-18985
+
+### Comprehensive Review
+
+* Bug fix: PACKET_NOT_FOUND_EXCEPTION packet reprocessed after deleting from the landing zone. Cherry-pick was missed out from older branches(1.1.5), hence the Dev team updated changes in 1.2.0 and now it is working as expected. #MOSIP-19651
+* Bug fix: DMZ packet servers were not able to handle multiple landing zones. After the fix, DMZ packet servers were able to handle multiple landing zones. #MOSIP-19650Reporter
+* Bug fix: UIN generation notification email has $name_eng in template body. In the database, the name is not mentioned as per the ID schema, after making appropriate changes, the name is coming correctly in the email notification.G87 #MOSIP-11872
+* Bug fix: If a RID was inserted twice, ~referenceId already exists (in ABIS)~ error was displayed and the packet was being sent for reprocessing. After the fix, the packet was not passed onto the reprocessing stage. #MOSIP-14191
+
+### ID Authentication
+
+* Bug fix: Even when DEVICE_PROVIDER Id was hot listed, authentication was being performed successfully. As a fix, Client secret key in property ~mosip.mosip.hotlist.client.secret~ was duly configured. #MOSIP-19829
+* Bug fix: Even with an invalid document Id, UIN was getting activated. As fix a, in ID schema, subType attributes was added. #MOSIP-19338
+* Bug fix: Authentication was successfully performed even with garbage value of application property of demo service as ~mosip.env~. As a fix, the only allowed values were restricted to IDA authentication property files. #MOSIP-19160
+* Bug fix: In the database, when e-KYC was performed, the entries were incorrect as OTP-AUTH, KYC-AUTH. After the fix, the entries are KYC, authentication type (E.g.: KYC-AUTH, OTP-AUTH). #MOSIP-18285
+* Bug fix: In the database, the column called ~cr_by~ was not being updated and was left empty. This bug was fixed, ~cr_by~ column has the correct value of who created that particular entry. #MOSIP-14291
+* Bug fix: Once the transaction configuration was changed to "2", the transaction limit in IDA DB did not change. After the code fix, the changes in ~config~ properties were being reflected in the DB. #MOSIP-19736
+
+### Resident Services 
+
+* Bug fix: Notifications were not being sent as per the preferred language. After the fix, notifications for send OTP were received in preferred language. NOTE- UINs generated from IDREPO. #MOSIP-19371
+* Bug fix: VID was not behaving correctly according to the config properties. Also, OTP was successfully being sent even with a revoked VID. After the fix, both the above issues were resolved and behavior of VID was based on config and also OTP could only be sent with a valid active VID. #MOSIP-19270
+* Bug fix: In the process of updating the demographic details of the resident from resident API, ~base exception~ errors were displayed. After the code fix, we were able to update the demographic details successfully. #MOSIP-19525
+
+
