@@ -138,7 +138,8 @@ The **1.2.0.1 Beta** release of MOSIP is the first patch release on top of the L
 | **SchemaName.Table**        | **Column name**    |   **Changes done**          | **Description**          |                                                          
 | ----------------------------|--------------------|------------------------|------------------------- |
 | master.loc_holiday  |  `id` | removed from composite primary key |This column doesn’t fit well in the primary key as it allows duplicate holidays on same day which is not expected.                          |
+| master.loc_holiday  |  `holiday_date` | added to composite primary key |Adding this constraint restricts the user from creating multiple holidays on the same day.                          |
 | master.blocklisted_words| `lang_code` | removed `notnull` constraint and dropped this column from composite primary key |Since the “word” column is enough to identify the word uniquely, there is no need for `lang_code` to be in primary key.                     |
-|pms.ftp_chip_detail |   `approval_status` |      column added  |This column is added to track certificate upload and admin approval.|
-|regprc.registration_list|    `ref_id`     |    column added    |   This attribute is needed for packet encryption/decryption.  |
-|prereg.processed_prereg_list  |   `prereg_trn_id`   |   Dropped the Foreign Key constraint    |  The table to which the Foreign key was referring to did not exist.                        |
+|pms.ftp_chip_detail |   `approval_status` |       added  |This column is added to track certificate upload and admin approval.|
+|regprc.registration_list|    `ref_id`     |     added    |   This attribute is needed for packet encryption/decryption.  |
+|prereg.processed_prereg_list  |   `prereg_trn_id`   |  dropped the Foreign Key constraint    |  The table to which the Foreign key was referring to did not exist.                        |
