@@ -42,17 +42,18 @@ The **1.2.0.1 Beta** release of MOSIP is the first patch release on top of the L
 | partner-management-portal   | [v1.2.0.1-B1](https://github.com/mosip/Partner-management-portal/tree/v1.2.0.1-B1) |
 | mosip-ref-impl              | [v1.2.0.1-B1](https://github.com/mosip/mosip-ref-impl/tree/v1.2.0.1-B1) |
 | artifactory-ref-impl        | [v1.2.0.1-B1](https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.1-B1) |
-| reporting                   | [v1.2.0.1-B1]() |
-| mosip-functional-tests      | [v1.2.0.1-B1]() |
-| mosip-automation-tests      | [v1.2.0.1-B1]() |
-| keycloak                    | [v1.2.0.1-B1]() |
-| biosdk-services             | [v1.2.0.1-B1]() |
-| biosdk-client               | [v1.2.0.1-B1]() |
-| mosip-infra                 | [v1.2.0.1-B1]() |
-| mosip-helm                  | [v1.2.0.1-B1]() |
-| mosip-file-server           | [v1.2.0.1-B1]() |
-| postgres-init               | [v1.2.0.1-B1]() |
-| mimoto                      | [v1.2.0.1-B1]() |
+| reporting                   | [v1.2.0.1-B1](https://github.com/mosip/reporting/tree/v1.2.0.1-B1) |
+| mosip-functional-tests      | [v1.2.0.1-B1](https://github.com/mosip/mosip-functional-tests/tree/v1.2.0.1-B1) |
+| mosip-data                  | [v1.2.0.1-B1](https://github.com/mosip/mosip-data/tree/v1.2.0.1-B1) |
+| mosip-automation-tests      | [v1.2.0.1-B1](https://github.com/mosip/mosip-automation-tests/tree/v1.2.0.1-B1) |
+| keycloak                    | [v1.2.0.1-B1](https://github.com/mosip/keycloak/tree/v1.2.0.1-B1) |
+| biosdk-services             | [v1.2.0.1-B1](https://github.com/mosip/biosdk-services/tree/v1.2.0.1-B1) |
+| biosdk-client               | [v1.2.0.1-B1](https://github.com/mosip/biosdk-client/tree/v1.2.0.1-B1) |
+| mosip-infra                 | [v1.2.0.1-B1](https://github.com/mosip/mosip-infra/tree/v1.2.0.1-B1) |
+| mosip-helm                  | [v1.2.0.1-B1](https://github.com/mosip/mosip-helm/tree/v1.2.0.1-B1) |
+| mosip-file-server           | [v1.2.0.1-B1](https://github.com/mosip/mosip-file-server/tree/v1.2.0.1-B1) |
+| postgres-init               | [v1.2.0.1-B1](https://github.com/mosip/postgres-init/tree/release-1.2.0.1) |
+| mimoto                      | [v1.2.0.1-B1](https://github.com/mosip/mimoto/tree/v1.2.0.1-B1) |
 
 ## Modules
 
