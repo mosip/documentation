@@ -75,7 +75,7 @@ A credential can be defined as any document, object, or data structure that vouc
 
 A credential type essentially maps to partner and data share policy.
 
-Default credential types provided as part of [sandbox deployment](sandbox-deployment.md) are given below:
+Default credential types provided as part of [sandbox deployment](broken-reference) are given below:
 
 1. `auth`: Represents individual's data shared with Online Verification Partners (further used for Authentication and eKYC).
 2. `qrcode`: qrcode type is used for qrcode partners to issue qrcode related credential data.

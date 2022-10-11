@@ -13,7 +13,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 5. Customisation and procurement of components as given [here](reference-implementations.md).
 6. [ID schema](id-schema.md) (as prescribed by the country's regulatory authority).
 7. Hardware requirements estimate.
-   * [Server side](server-hardware-requirements.md)
+   * [Server side](broken-reference)
    * [Devices](biometric-devices.md#devices-calculator)
 8. [Credential choices](id-repository.md#credential-types).
 9. ID Card print design.
@@ -33,7 +33,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 
 ## Country specific data
 
-1. [Masterdata](masterdata-guide.md)
+1. [Masterdata](broken-reference)
 2. [Applicanttype MVEL](https://github.com/mosip/mosip-config/blob/develop3-v3/applicanttype.mvel)
 
 ## Customisation
@@ -43,7 +43,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 ## Deployment
 
 1. [Certifcate/key generation](keys.md)
-2. Production grade deployment design.  Refer [Production Deployment](production-deployment.md).
+2. Production grade deployment design.  Refer [Production Deployment](broken-reference).
 3. Disaster recover set up
 4. Biometric thresholding
 5. Phased implementation

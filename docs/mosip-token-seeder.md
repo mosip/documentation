@@ -70,6 +70,8 @@ Refer [GitHub](https://github.com/mosip/mosip-token-seeder).
 
 ### Test
 
+Refer [Test Cases](https://github.com/mosip/test-management/raw/master/Openg2p/Openg2p-testcases.xlsx)
+
 ### User stories
 
 Refer [MOSIP-24068](https://mosip.atlassian.net/browse/MOSIP-24068), [MOSIP-23029](https://mosip.atlassian.net/browse/MOSIP-23029).

@@ -21,7 +21,6 @@ Session2
 
 {% embed url="https://www.youtube.com/watch?v=v6KjyVoNcqI&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=2" %}
 
-
 ## First Admin user
 
 1. Setup of hierarchial zones
@@ -55,14 +54,14 @@ The above are done automatically as part of [default sandbox installation](https
 * MASTERDATA\_ADMIN
 * KEY\_MAKER
 
-| GLOBAL\_ADMIN                | ZONAL\_ADMIN                 | REGISTRATION\_ADMIN          | MASTERDATA\_ADMIN | KEY\_MAKER        |
-| ---------------------------- | ---------------------------- | ---------------------------- | ----------------- | ----------------- |
-|Centers                       |Devices                       |Packet Status                 |Devices            |GenerateMasterKey  |
-|User Zone Mapping             |Machines                      |Pause/ Resume RID             |Machines           |GenerateCSR        |
-|All Master Data               |User Zone Mapping             |Retrieve Lost RID             |All Master Data    |GetCertificate     |
-|Masterdata Bulk Upload        |User Center Mapping           |Packet Bulk Upload            |Masterdata Bulk Upload|UploadCertificate|
-|                              |All Master Data               |                              |                   |UploadOtherDomainCertificate|
-|                              |Masterdata Bulk Upload        |                              |                   |                    |
+| GLOBAL\_ADMIN          | ZONAL\_ADMIN           | REGISTRATION\_ADMIN | MASTERDATA\_ADMIN      | KEY\_MAKER                   |
+| ---------------------- | ---------------------- | ------------------- | ---------------------- | ---------------------------- |
+| Centers                | Devices                | Packet Status       | Devices                | GenerateMasterKey            |
+| User Zone Mapping      | Machines               | Pause/ Resume RID   | Machines               | GenerateCSR                  |
+| All Master Data        | User Zone Mapping      | Retrieve Lost RID   | All Master Data        | GetCertificate               |
+| Masterdata Bulk Upload | User Center Mapping    | Packet Bulk Upload  | Masterdata Bulk Upload | UploadCertificate            |
+|                        | All Master Data        |                     |                        | UploadOtherDomainCertificate |
+|                        | Masterdata Bulk Upload |                     |                        |                              |
 
 ## Center
 
@@ -259,7 +258,7 @@ To map a user to a center,
 
 Below is the image illustrating the same.
 
-![](_images/admin-masterdata-search-filter.png)
+![](\_images/admin-masterdata-search-filter.png)
 
 ## Packet status (based on RID)
 
@@ -298,7 +297,7 @@ _Note_: This feature is currently under development.
 
 ![](\_images/admin-master-data.png)
 
-To know more, refer to [Masterdata guide](masterdata-guide.md).
+To know more, refer to [Masterdata guide](broken-reference).
 
 ## Bulk upload
 

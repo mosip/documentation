@@ -8,7 +8,7 @@ Module-specific properties are written in respective `*.properties` files in [mo
 
 ## Config server
 
-Config server is a [Spring Cloud Config Server](https://cloud.spring.io/spring-cloud-config/multi/multi\_\_spring\_cloud\_config\_server.html) that serves the above properties to modules during run-time. The property files are downloaded when an application starts. The config server is installed as part of [sandbox installation](sandbox-deployment.md).
+Config server is a [Spring Cloud Config Server](https://cloud.spring.io/spring-cloud-config/multi/multi\_\_spring\_cloud\_config\_server.html) that serves the above properties to modules during run-time. The property files are downloaded when an application starts. The config server is installed as part of [sandbox installation](broken-reference).
 
 Some of the important properties that must be reviewed and modified for a specific deployment are listed below.
 
