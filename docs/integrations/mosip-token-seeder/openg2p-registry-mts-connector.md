@@ -2,12 +2,12 @@
 
 ## Overview
 
-OpenG2P-registry MTS Connector (OMC) is a OpenG2P module which will be an addon to [Odoo](https://www.odoo.com/). OMC can generate a MOSIP Auth Token against the any record in OpenG2P registry by calling [MOSIP Token Seeder](../../mosip-token-seeder.md) (MTS) and store the same in beneficiary registry. This will be an important module in deduplication process when OpenG2P system is using MOSIP as its id platform.
+OpenG2P-registry MTS Connector (OMC) is a OpenG2P module which will be an addon to [Odoo](https://www.odoo.com/). OMC can generate a MOSIP Auth Token against the any record in OpenG2P registry by calling [MOSIP Token Seeder](../../mosip-token-seeder.md) (MTS) and store the same in beneficiary registry. This will be an important module in deduplication process when OpenG2P system uses MOSIP as its ID platform.
 
 ## Features of OMC
 
-* Generates MOSIP token against the OpenG2P registry by calling MTS
-* Uses callback delivery type of MTS
+* Generates MOSIP token against the OpenG2P registry by calling [MTS](../../mosip-token-seeder.md).
+* Uses `callback` delivery type of MTS
 * Completely asynchronous execution
 * OpenG2P can schedule a daily job to fetch the delta for the day
 * A manual import feature will also be provided
