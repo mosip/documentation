@@ -75,9 +75,7 @@ The **1.2.0.1 Beta** release of MOSIP is the first patch release on top of the L
 * Bug fix: In the admin portal, when one adds values under an existing dynamic field, the description of that value should be pre-filled with the data in the existing dynamic field. After the fix, the description was auto-filled as expected. #MOSIP-18584
 * Feature upgrade: While creating dynamic field, initally, we used to input the data as dataType and now it is entered as text field. #MOSIP-16855
 * Bug fix: In admin portal, the pagination options were displayed in "English" language by default instead of the logged-in language. After the fix, pagination was displayed in the logged-in language.#MOSIP-16382
-* Bug fix: In admin module,\
-  tags were visible in the UI. After the fix,\
-  tags were removed from the UI. #MOSIP-19979
+* Bug fix: In admin module, `\tags` were visible in the UI. After the fix, `\tags` were removed from the UI. #MOSIP-19979
 * Bug fix: The audit logs were being logged in with incorrect event messages. As a fix, static audit logs were updated to fix the event messages. #MOSIP-19966
 * Bug fix: In admin module, packet upload was failing. As a fix, data-read role was assigned to the user. #MOSIP-19818
 * Bug fix: In Admin module, one was able to map Machine and Device to different Center ID which does not belong to that zone. As a fix, a validation was put in place to check if the center ID belongs to the given Zone or not. #MOSIP-19724
@@ -127,7 +125,7 @@ The **1.2.0.1 Beta** release of MOSIP is the first patch release on top of the L
 * Bug fix: Authentication was successfully performed even with garbage value of application property of demo service as `mosip.env`. As a fix, the only allowed values were restricted to IDA authentication property files. #MOSIP-19160
 * Bug fix: In the database, when e-KYC was performed, the entries were incorrect as OTP-AUTH, KYC-AUTH. After the fix, the entries are KYC, authentication type (E.g.: KYC-AUTH, OTP-AUTH). #MOSIP-18285
 * Bug fix: In the database, the column called `cr_by` was not being updated and was left empty. This bug was fixed, `cr_by` column has the correct value of who created that particular entry. #MOSIP-14291
-* Bug fix: Once the transaction configuration was changed to "2", the transaction limit in IDA DB did not change. After the code fix, the changes in ~config~ properties were being reflected in the DB. #MOSIP-19736
+* Bug fix: Once the transaction configuration was changed to "2", the transaction limit in IDA DB did not change. After the code fix, the changes in `config` properties were being reflected in the DB. #MOSIP-19736
 
 ### Resident Services 
 
