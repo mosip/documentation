@@ -146,3 +146,9 @@ The **1.2.0.1 Beta** release of MOSIP is the first patch release on top of the L
 |pms.ftp_chip_detail |   `approval_status` |       added  |This column is added to track certificate upload and admin approval.|
 |regprc.registration_list|    `ref_id`     |     added    |   This attribute is needed for packet encryption/decryption.  |
 |prereg.processed_prereg_list  |   `prereg_trn_id`   |  dropped the Foreign Key constraint    |  The table to which the Foreign key was referring to did not exist.                        |
+
+## Known Issues
+
+To view the list of known issues, click [here](https://mosip.atlassian.net/browse/MOSIP-23776?filter=11030).
+
+
