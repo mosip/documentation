@@ -4,6 +4,8 @@
 
 **Upgrade from**: 1.1.5
 
+**Recommended Patch Version:** 1.2.0.1 Beta
+
 **Release Date**: 14th February 2022
 
 Asymmetric Amoeba is a Long Term Support (LTS) release. This release focuses on easy manageability, usability, enhanced performance, robustness, security, inclusivity (supports 2+ languages with no restrictions), and comprehensive documentation. 
