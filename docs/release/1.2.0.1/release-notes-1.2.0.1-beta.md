@@ -6,13 +6,13 @@
 
 **Release Version**: 1.2.0.1-B1
 
-**Upgrade from**: 1.2.0 (Long Term Support)
-
 **Support**: Developer Release
 
 **Release Date**: 14-Oct 2022
 
-The **1.2.0.1 Beta** release of MOSIP is the first patch release on top of the Long-Term Support (LTS) release 1.2.0. This patch release mainly contains the bug fixes, security and performance fixes, and also minor feature upgrades. One of the major highlights of this patch release is the production-grade [V3 deployment](https://docs.mosip.io/1.2.0/deployment).
+The **1.2.0.1 Beta** release of MOSIP is the first patch release on top of the Long-Term Support (LTS) release 1.2.0. This patch release mainly contains the fixes for bugs, security and performance. This release also contains minor feature enhancements. One of the major highlights of this patch release is the [V3 deployment](https://docs.mosip.io/1.2.0/deployment). Support for legacy V2 deployment is deprecated. The recommended deployment method will be V3 deployment architecture.
+
+ 
 
 ## Repository Released
 
