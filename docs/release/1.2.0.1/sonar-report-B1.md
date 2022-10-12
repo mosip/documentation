@@ -29,4 +29,12 @@
 | pre-registration-ui    |        0             |           0          |      102            |          6        |
 
 
+![](../_images/1.2.0.1B1/sonar-hotspots-1201B1.png)
+
+![](../_images/1.2.0.1B1/open-bugs-1201B1.png)
+
+![](../_images/1.2.0.1B1/sonar-vulnerabilities-1201B1.png)
+
+![](../_images/1.2.0.1B1/sonar-code-coverage-1201B1.png)
+
 
