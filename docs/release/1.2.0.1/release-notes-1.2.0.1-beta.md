@@ -1,7 +1,5 @@
 # 1.2.0.1 (Beta)
 
-_(Work in progress)_
-
 ## Overview
 
 **Release Name**: 1.2.0.1 Beta1
@@ -151,4 +149,11 @@ The **1.2.0.1 Beta** release of MOSIP is the first patch release on top of the L
 
 To view the list of known issues, click [here](https://mosip.atlassian.net/browse/MOSIP-23776?filter=11030).
 
+## Documentation
+
+For complete documentation, refer to [1.2.0 LTS documentation](https://docs.mosip.io/1.2.0/).
+
+Deployment documentation and scripts have been enhanced and are compliant with V3 architecture.
+
+Developer documentation for repos have also been added for developers to setup in their local systems.
 
