@@ -28,7 +28,7 @@ The **1.2.0.1 Beta** release of MOSIP is the first patch release on top of the L
 | id-repository               | [v1.2.0.1-B1](https://github.com/mosip/id-repository/tree/v1.2.0.1-B1) |
 | pre-registration            | [v1.2.0.1-B1](https://github.com/mosip/pre-registration/tree/v1.2.0.1-B1) |
 | id-authentication           | [v1.2.0.1-B1](https://github.com/mosip/id-authentication/tree/v1.2.0.1-B1) |
-| registration                | [v1.2.0.1-B1](https://github.com/mosip/registration/tree/v1.2.0.1-B1) |
+| registration                | [v1.2.0.1-B2](https://github.com/mosip/registration/tree/v1.2.0.1-B2) |
 | resident-services           | [v1.2.0.1-B1](https://github.com/mosip/resident-services/tree/v1.2.0.1-B1) |
 | admin-ui                    | [v1.2.0.1-B1](https://github.com/mosip/admin-ui/tree/v1.2.0.1-B1) |
 | registration-client         | [v1.2.0.1-B1](https://github.com/mosip/registration-client/tree/v1.2.0.1-B1) |
