@@ -8,34 +8,15 @@ The documentation here will guide you through the prerequisites required for the
 
 ## Software setup
 
-Below are a list of tools required in Resident Services:
+Below are a list of tools required in Registration Client:
 
 1. JDK 11
 2. Any IDE (like Eclipse, IntelliJ IDEA)
 3. Apache Maven (zip folder)
-4. pgAdmin
 5. Git
-6. Notepad++ (optional)
-7. Postman (optional)
-8. lombok.jar (file)
-9. settings.xml (document)
 
 
 Follow the steps below to set up Registration Client on your local system:
-
-1. Download `lombok.jar` and `settings.xml` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/registration-client-config-files).
-
-2. Unzip Apache Maven and move the unzipped folder in `C:\Program Files` and `settings.xml` to `conf` folder `C:\Program Files\apache-maven-3.8.4\conf`.
-
-3. Install Eclipse, open the `lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE and then click `Install/Update`.
-
-<img src="_images/lombok-configuration.png" width="750" height="450">
-
-4. Check the Eclipse installation folder `C:\Users\userName\eclipse\jee-2021-12\eclipse` to see if the `lombok.jar` is added. By doing this, you don't have to add the dependency of `lombok` in your `pom.xml` file separately as it is auto-configured by Eclipse.
-
-5. Configure the JDK (Standard VM) with your Eclipse by traversing through `Preferences → Java → Installed JREs`.
-
-<img src="_images/installed-jre.png" width="750" height="450">
  
 ## Code setup
 
