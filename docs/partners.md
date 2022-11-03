@@ -28,11 +28,6 @@ Partner policies control the data that needs to be shared with a partner. Learn 
 
 ## Partner onboarding
 
-```mermaid
-graph TD
-  Mermaid --> Hello
-```
-
 Onboarding of a partner refers to registering a partner in a particular deployment of MOSIP. Partners need to be onboarded to establish trust. The onboarding process consists of loading partner details in database, exchanging certificates etc, detailed in the later sections. Such onboarding is required to be done on any fresh MOSIP installation. For instance, if you install a sandbox, you would need to follow the onboarding process for each partner.
 
 The sections below describe onboarding process for each type of partner.
