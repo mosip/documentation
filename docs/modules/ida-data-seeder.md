@@ -35,26 +35,20 @@ A Python utility to import data into [IDA](https://docs.mosip.io/1.2.0/id-authen
 
     ```
     source ~/.venv/ida-seeder/bin/activate
-    pip3 install -r requirements.txt
-    deactivate
+    pip install -r requirements.txt
     ```
-*   Create a new folder `secrets-store` under data\_seeder folder, The folder is used to store the secrets required for the seeder. -- Export `uin_hash_salt` table data from `ID_REPO` database from the environment and create an csv file with only id & slat values
-
-    \-- Example:
+* Create a new folder `secrets-store` under `data_seeder` folder. The folder is used to store the secrets required for the seeder.&#x20;
+*   Export `uin_hash_salt` table data from `ID_REPO` database from the environment and create a CSV file with only id & slat values. Example:
 
     ```
     1,PwNa9oV+GtusHPxAumIssA== 
     ```
 * Edit the environment related details in `config/config.toml` file. Refer comments in config file to update the necessary values.
-*   Data to be import should in a text file with an separator. Default separator is `|`. -- Note:
-
-    ```
-    The column header names in the text file should match with the master id schema field names. 
-    ```
-
-    \-- Mandatory column headers are `language`, `id or vid`
+* Data to be import should in a text file with a separator `|`.  The column header names in the text file should match  the  [ID Schema](https://docs.mosip.io/1.2.0/id-lifecycle-management/id-schema) field names of the particular IDA installation.  Column headers `language`, `id` and `vid` are mandatory`.`
 
 ### Run
+
+Make sure you are have Wireguard running on your  machine to connect to MOSIP.
 
 ```
 python data_seeder/seeder_main.py
