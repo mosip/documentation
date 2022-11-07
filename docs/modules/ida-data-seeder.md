@@ -43,7 +43,7 @@ Available in Github [here](https://github.com/mosip/ida-data-seeder.git).
     pip install -r requirements.txt
     ```
 * Create a new folder `secrets-store` under `data_seeder` folder. The folder is used to store the secrets required for the seeder.&#x20;
-*   Export `uin_hash_salt` table data from `ID_REPO` database from the environment and create a CSV file with only id & slat values. Example:
+*   Export `uin_hash_salt` table data from `ID_REPO` database from the environment and create a CSV file with only id & salt values. Example:
 
     ```
     1,PwNa9oV+GtusHPxAumIssA== 
