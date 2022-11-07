@@ -13,7 +13,7 @@ A Python utility to import data into [IDA](https://docs.mosip.io/1.2.0/id-authen
 * All [IDA services](https://docs.mosip.io/1.2.0/modules/id-authentication-services) (Internal Service, Auth Service, OTP Service)
 * [Datashare](https://docs.mosip.io/1.2.0/modules/datashare)
 * [Key Manager](https://docs.mosip.io/1.2.0/modules/keymanager)&#x20;
-* [Partner Management Service](https://docs.mosip.io/1.2.0/modules/partner-management-services#partner-management-service) (_Only for MOSIP versions < 1.2.0_)
+* [Partner Management Service](https://docs.mosip.io/1.2.0/modules/partner-management-services#partner-management-service)&#x20;
 * [Websub](https://docs.mosip.io/1.2.0/modules/websub) &#x20;
 
 ## Design
