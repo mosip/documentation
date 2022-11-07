@@ -26,7 +26,7 @@ A Python utility to import data into [IDA](https://docs.mosip.io/1.2.0/id-authen
 
 ### Prerequisites
 
-* Clone the develop branch of repo: [https://github.com/mosip/ida-data-seeder.git](https://github.com/mosip/ida-data-seeder.git)
+* Clone the `develop` branch of repo: [https://github.com/mosip/ida-data-seeder.git](https://github.com/mosip/ida-data-seeder.git)
 *   Initialize virtualenv:
 
     ```
