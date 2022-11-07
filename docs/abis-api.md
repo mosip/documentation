@@ -185,25 +185,53 @@ JeLlBHHTbA-c0YdoLpy7Ya8jXujwzj4gw3nyfwbDrHyY7sLrD7EC3yFLWI0KDO794vmagTOwWyNJhvJi
 
 {% hint style="info" %}
 
-**The structure of the encrypted data downloaded from referenceURL **
+**The structure of the encrypted data downloaded from referenceURL in MOSIP 1.2.0 or later versions**
 
 The data downloaded would be URL safe base64 encoded. Hence, after decoding the data will be in the below format. It will be divided in two Parts after splitting using #KEY_SPLITTER#.
 
 Encrypted Key Data | KEY_SPLITTER | Encrypted Actual Data
-----------|--------------|-----------
-Part 1    | #KEY_SPLITTER# | Part 2
+-----------|----------------|-----------
+Block 1    | #KEY_SPLITTER# | Block 2
 
-**Part 1:**
+**Block 1:**
 
-1. VER_BYTES - Current version constant is - VER_R2  - first 6 bytes
-2. Certificate Thumbprint - Key Identifier - next 32 bytes
-3. Encrypted Random AES Key - Encrypted with RSA OAEP - SHA256-MFG1 - Remaining bytes (256 bytes)
+Block 1, i.e. the encrypted key data is again split into three parts,
 
-**Part 2:**
+* The 1st part is **_VER_BYTES_** (version bytes). The Current version constant is set as VER_R2 and this is present in the first 6 bytes of Block 1.
+* The 2nd part is the **_Certificate Thumbprint_** i.e. the key identifier which is present in the next 32 bytes after VER_BYTES.
+* The 3rd part is the **_Encrypted Random AES Key_**, encrypted with the RSA OAEP - SHA256-MFG1. This cosistutes the remaining 256 bytes of Block 1.
 
-1. Random 32 bytes which will be used as AAD in AES - first 32 bytes
-2. IV/Nonce - First 12 bytes from AAD
-3. Actual Encrypted data using AES GCM PKCS5Padding - Remaining bytes
+
+**Block 2:**
+
+Block 2, i.e. the encrypted actual data is again split into two parts,
+
+* The 1st part is the random 32 bytes which will be used as _**AAD**_ in AES encryption(first 32 bytes). From this 32 bytes AAD data, the first 12 bytes is **_IV/Nonce_**.
+* The 2nd part is the encrypted data which is encrypted using AES GCM PKCS5Padding.
+
+---
+
+**The structure of the encrypted data downloaded from referenceURL in MOSIP 1.1.5.5 or prior versions**
+
+The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format. It will be divided in two Parts after splitting using #KEY_SPLITTER#.
+
+Encrypted Key Data | KEY_SPLITTER | Encrypted Actual Data
+-----------|----------------|-----------
+Block 1    | #KEY_SPLITTER# | Block 2
+
+**Block 1:**
+
+Block 1, i.e. the encrypted key data is again split into two parts,
+
+* The first part is the **_Certificate Thumbprint_** i.e. the key identifier which is the first 32 bytes in Block 1.
+* The second part is the **_Encrypted Random AES Key_** which is encrypted with RSA OAEP - SHA256-MFG1. This cosistutes the remaining 256 bytes of Block 1.
+
+**Block 2:**
+
+Block 2, i.e. the encrypted actual data is again split into two parts,
+
+* The 1st part is the **_Encrypted data_**, encrypted using AES GCM PKCS5Padding.
+* The 2nd part is **_IV/Nonce_** i.e. the last 32 bytes appended after encrypted data.
 
 {% endhint %}
 
