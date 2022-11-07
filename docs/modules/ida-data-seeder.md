@@ -22,6 +22,10 @@ A Python utility to import data into [IDA](https://docs.mosip.io/1.2.0/id-authen
 * PMS service is required to onboard partner for performing Authentication for the imported data.
 * Websub is required to publish the onboarded partner details to IDA.
 
+## Source code
+
+Available in Github [here](https://github.com/mosip/ida-data-seeder.git).
+
 ## Run
 
 ### Prerequisites
