@@ -101,6 +101,7 @@
   * [MOSIP Token Seeder](mosip-token-seeder.md)
     * [MTS Versions](mts-versions.md)
       * [Version 1.0.0](mts1.0-release-notes.md)
+      * [Version 1.0.1](mts-version-1.0.1.md)
       * [Version 1.1.0 (WIP)](integrations/mosip-token-seeder/mts-versions/mts1.1.0-release-notes.md)
     * [MTS Developer Guide](integrations/mosip-token-seeder/mosip-token-seeder-api.md)
     * [MTS Connector](mts-odk-importer.md)
