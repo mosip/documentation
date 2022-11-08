@@ -14,7 +14,7 @@ The 1.0.1 version of MTS is the first patch release above version 1.0. This patc
 
 ## Issues Fixed
 
-Refer [Fixed Issues](https://mosip.atlassian.net/issues/?filter=11054)
+For more information, refer [Fixed Issues](https://mosip.atlassian.net/issues/?filter=11054).
 
 ## Compatibility
 
@@ -36,5 +36,5 @@ MTS 1.0.1 is compatible with following versions of MOSIP IDA:
     * <Input: JSON/CSV format> and <Output: JSON/CSV format> - #MOSIP-23029
     * <Input: ODK format> and <Output: JSON/CSV format> - #MOSIP-23224
 * For API documentation, click [here](https://mosip.stoplight.io/docs/mosip-token-seeder/branches/main/sksp54oilqzun-mosip-token-seeder)
-* For installation, refer README
+* For installation, refer [README](https://github.com/mosip/openg2p/blob/develop/mosip_token_seeder/README.md)
 * [Known Issues](https://mosip.atlassian.net/issues/?filter=11025)
