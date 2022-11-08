@@ -8,7 +8,7 @@
 ## Version: 1.0.1
 * Name: MTS 1.0.1
 * Date: 9th November, 2022
-* [Release Notes](mts-version-1.0.1.md)
+* [Release Notes](https://docs.mosip.io/1.2.0/integrations/mosip-token-seeder/mts-versions/mts-version-1.0.1)
 
 
 
