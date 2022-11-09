@@ -16,27 +16,25 @@ MOSIP Token Seeder (**MTS**) is a standalone service that outputs [MOSIP Token I
 
 ## Inputs
 
-1. Direct Plain KYC Request
-2. CSV Upload
-3. ODK based upload
-4. JSON Array Upload
-5. Google Sheets upload
-6. Form.IO Sheets upload
-7. VC
+1. CSV&#x20;
+2. ODK based&#x20;
+3. JSON&#x20;
+4. Google Sheets (_TBD_)
+5. Form.IO Sheets (_TBD_)
+6. Verifiable Credentials (VC) (_TBD_)
 
 ## Outputs
 
-1. Direct Synchronous Response
-2. CSV
-3. JSON
+1. CSV
+2. JSON
 
 ### Delivery type
 
-1. Synchronous Response
-2. Web Sub
-3. SFTP
-4. Download URL
-5. Callback
+1. Download&#x20;
+2. Callback
+3. Synchronous response
+4. WebSub (_TBD_)
+5. SFTP (_TBD_)
 
 ## Design
 
@@ -72,10 +70,6 @@ Refer [GitHub](https://github.com/mosip/mosip-token-seeder).
 
 Refer [Test Cases](https://github.com/mosip/test-management/raw/master/Openg2p/Openg2p-testcases.xlsx)
 
-### User stories
-
-Refer [MOSIP-24068](https://mosip.atlassian.net/browse/MOSIP-24068), [MOSIP-23029](https://mosip.atlassian.net/browse/MOSIP-23029).
-
 ### Installation
 
-Refer [README](https://github.com/mosip/openg2p/blob/develop/mosip\_token\_seeder/README.md).
+Refer [README](https://github.com/mosip/mosip-token-seeder/blob/release-1.0.1/README.md).
