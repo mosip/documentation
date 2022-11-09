@@ -35,7 +35,7 @@ MTS 1.0.0 is compatible with following versions of MOSIP IDA:
 
 1. [MTS repository](https://github.com/mosip/mosip-token-seeder/tree/release-1.0.0)
 2. Test repositories
-    * [Functional Tests](https://github.com/mosip/test-management/tree/master/Openg2p) 
+    * [Functional Tests](https://github.com/mosip/test-management/tree/master/integration/MTS) 
     
 ## Documentation
 
