@@ -33,7 +33,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 
 ## Country specific data
 
-1. [Masterdata](broken-reference)
+1. [Masterdata](https://docs.mosip.io/1.2.0/modules/administration/masterdata-guide)
 2. [Applicanttype MVEL](https://github.com/mosip/mosip-config/blob/develop3-v3/applicanttype.mvel)
 
 ## Customisation
