@@ -68,7 +68,7 @@ Refer [GitHub](https://github.com/mosip/mosip-token-seeder).
 
 ### Test
 
-Refer [Test Cases](https://github.com/mosip/test-management/raw/master/Openg2p/Openg2p-testcases.xlsx)
+Refer [Test Cases](https://github.com/mosip/test-management/tree/master/integration/MTS)
 
 ### Installation
 
