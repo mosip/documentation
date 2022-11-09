@@ -12,7 +12,7 @@
 
 The 1.0.1 version of MTS is the first patch release above version 1.0. This patch release mainly comprises of fixes for bugs identified in the previous release.
 
-## Issues Fixed
+## Issues fixed
 
 For more information, refer [Fixed Issues](https://mosip.atlassian.net/issues/?filter=11054).
 
