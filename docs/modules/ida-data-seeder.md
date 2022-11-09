@@ -6,7 +6,11 @@ description: Draft
 
 ## Overview
 
-A Python utility to import data into [IDA](https://docs.mosip.io/1.2.0/id-authentication) component.
+MOSIP's [IDA](../id-authentication.md) module is capable of running standalone providing verification services. In a full fledged MOSIP installation the [UIN's](../identifiers.md#uin) are issued as part of the [Registration process](../id-lifecycle-management.md) and the demographic and biometric data (credentials) is handed over to IDA for authentication via [Websub](../websub.md). (see [credential issuance](https://docs.mosip.io/1.2.0/modules/id-authentication-services#credential-issuance-callback)). However, for testing purposes it is highly desirable that one should be able to seed test data into IDA and perform successful verification without having to install the entire MOSIP lifecycle management process. This would be especially very useful for integration partners to test their integrations using MOSIP authentication. The partners can just upload their synthetic data - like UINs, demographics and even biometrics and call MOSIP Auth APIs to perform verification and obtain a [Token ID.](../identifiers.md#token-id) IDA Data Seeder is a Python utility to import such data into IDA.
+
+In its current form, the utility is intended for testing purposes. _DO NOT USE IN PRODUCTION!._
+
+Future versions of the utility will provide capability to import non-MOSIP ID data of a country and use MOSIP's IDA.
 
 ## Dependent services
 
