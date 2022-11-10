@@ -15,7 +15,7 @@ MOSIP Token Seeder (**MTS**) is a standalone service that outputs [MOSIP Token I
 * [Processing](mosip-token-seeder.md#processing):
   * Processes multiple records per request
   * Processes multiple requests simultaneously
-* Enables [configurations](mosip-token-seeder.md#processing-1):
+* Enables [configurations](mosip-token-seeder.md#configurations):
   * Output formatting of fields
   * Setting up fields as mandatory/optional
   * Defining data clean-up policy
