@@ -4,8 +4,9 @@
 - Name: Interim Release
 - Date: April 23, 2021
 - <a href="https://docs.mosip.io/1.2.0/releases/support-policy" rel="nofollow"><img src="https://img.shields.io/badge/Support-Short%20Term%20Support-orange?style=plastic" alt="LTS"></a>
-- Recommended Upgrade Version: 1.1.5.5
+- Recommended Patch for 1.1.5: [1.1.5.5](Patch-1.1.5.5.md)
 - Support Sunset Date: June 2022
+- Recommended Upgrade Version: [1.2.0.1](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1-beta)
 - [Release Notes](Release-Notes-1.1.5.md)
 
 ## Version: 1.1.4
