@@ -49,10 +49,14 @@ This anonymous profile can be either stored or published in an analytics stream 
 ## Design
 
 ### Anonymous Identity Issuance Profile event
+  
+* This profile will be used during the identity issuance. 
+* The profile will be available from 1.1.5.5 and above.
+* The profile data is captured in a `anonymous_profile` table under the `idrepo schema`.
 
-This profile will be used during the identity issuance. The profile will be available from 1.1.5.5 and above.
+**DTO name**: io.mosip.analytics.event.anonymous.IdentityIssuanceProfile
 
-DTO name: io.mosip.analytics.event.anonymous.IdentityIssuanceProfile
+The event is published when an entry is made in the ID repo. 
 
 ```jsonc
 {
