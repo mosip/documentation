@@ -1,27 +1,22 @@
----
-description: >-
-  This page details only on very specific areas of MOSIP Token Seeder. For a
-  elaborate understanding on the MTS API, please refer the API documentation
-  page.
----
+# Developer Guide 1.0
 
-# MTS Developer Guide
+This page details only on very specific areas of MOSIP Token Seeder. For a elaborate understanding on the MTS API, please refer the API documentation page.
 
-## API Documentation
+## API documentation
 
 Refer [API documentation](https://mosip.stoplight.io/docs/mosip-token-seeder/branches/main).
 
-### CSV Format
+### CSV format
 
-{% file src="../../.gitbook/assets/sample_input.csv" %}
+{% file src="../../../.gitbook/assets/sample_input.csv" %}
 
 When using above format, you may not need any mapping configuration. But in case you change any column name in the csv, please do provide the same in the mapping configuration.
 
-{% file src="../../.gitbook/assets/sample_output.csv" %}
+{% file src="../../../.gitbook/assets/sample_output.csv" %}
 
 Output might have mix of successful and failed records except for the case where whole of the input throws error. If successful, the record would be having the token placed against the vid. And if there is error processing a record, the same is updated against the vid and the [error code](mosip-token-seeder-api.md#failure-details) and description is mentioned along.
 
-## Status Messages
+## Status messages
 
 #### `submitted`&#x20;
 
@@ -51,7 +46,7 @@ When the request is processed but every record in the request has some or other 
 
 In case there is a prior request placed with considerably higher number of records, and you have placed  subsequent request submitted even before getting output for your earlier request, the system might take a while to update the status of your newer request. It might be still in the `submitted` state until the system finds a window to start processing. &#x20;
 
-## Error Codes
+## Error codes
 
 | Error Code    | Error Message                                                 |
 | ------------- | ------------------------------------------------------------- |
@@ -85,7 +80,7 @@ In case there is a prior request placed with considerably higher number of recor
 There are cases where MTS might successfully pass on the request but IDA generates error based on the its implementation scenario. MTS will log such error directly to the output json/csv/file.\
 In any case there are uncaught errors thrown by IDA, MTS will output the same as unknown error (ATS-REQ-100).&#x20;
 
-## Mapping Config
+## Mapping config
 
 The names on the left side of the mapping config denotes the original expected names and the value part will hold the change of name, if any. The mapping config if not supplied, the system will assume that there are no changes in the names used. The same applies if any one or more element of the mapping is not provided.
 

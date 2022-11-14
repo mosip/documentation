@@ -1,17 +1,12 @@
----
-description: >-
-  This page details only on very specific areas of MOSIP Token Seeder. For a
-  elaborate understanding on the MTS API, please refer the API documentation
-  page.
----
-
 # Developer Guide 1.1
 
-## API Documentation
+This page details only on very specific areas of MOSIP Token Seeder. For a elaborate understanding on the MTS API, please refer the API documentation page.
+
+## API documentation
 
 Refer [API documentation](https://mosip.stoplight.io/docs/mosip-token-seeder/branches/1.1.0).
 
-### CSV Format
+### CSV format
 
 {% file src="../../../.gitbook/assets/sample_input.csv" %}
 
@@ -21,7 +16,7 @@ When using above format, you may not need any mapping configuration. But in case
 
 Output might have mix of successful and failed records except for the case where whole of the input throws error. If successful, the record would be having the token placed against the vid. And if there is error processing a record, the same is updated against the vid and the [error code](mosip-token-seeder-api-1.md#failure-details) and description is mentioned along.
 
-## Status Messages
+## Status messages
 
 #### `submitted`&#x20;
 
@@ -96,7 +91,7 @@ The functionality is added to support the OpenG2P use case where in OpenG2P odoo
       },
 ```
 
-## Error Codes
+## Error codes
 
 | Error Code    | Error Message                                                       |
 | ------------- | ------------------------------------------------------------------- |
@@ -141,7 +136,7 @@ The functionality is added to support the OpenG2P use case where in OpenG2P odoo
 There are cases where MTS might successfully pass on the request but IDA generates error based on the its implementation scenario. MTS will log such error directly to the output json/csv/file.\
 In any case there are uncaught errors thrown by IDA, MTS will output the same as unknown error (ATS-REQ-100).&#x20;
 
-## Mapping Config
+## Mapping config
 
 The names on the left side of the mapping config denotes the original expected names and the value part will hold the change of name, if any. The mapping config if not supplied, the system will assume that there are no changes in the names used. The same applies if any one or more element of the mapping is not provided.
 
@@ -163,7 +158,7 @@ The names on the left side of the mapping config denotes the original expected n
 
 Except for name and full address, the majority of the fields in authdata are direct mapping. MTS expects that there can be exceptions for name and full address for which the mapping is configured as a string array. For example, if the calling application or program stores the address fields in separate variables or columns like addressline1, addressline2, street, area, or zipcode; the same can be supplied directly as authdata with mapping supplied as a list of variable or column names as in the calling program.
 
-## Output Format
+## Output format
 
 With the output formatting capability, MTS can give you the result exactly the way in which you would want it ready for your further processing of data. The output format string to be supplied follows the [jq format](https://stedolan.github.io/jq/).  In case the output format is not supplied, the default output will be generated which will be the same as the previous versions. The below section details on an example case for output formatting.&#x20;
 
