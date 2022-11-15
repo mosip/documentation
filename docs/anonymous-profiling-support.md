@@ -26,7 +26,7 @@ Example 3: They can compare the total number of enrollments against the total nu
 ## Design
 
 * In order to achieve this, we have published a fixed anonymized profile of the users and ensured the same is accessible to a search engine such as elastic search so that it can be used for analytics. The limited dataset should not violate the privacy of the person or point to specific individuals.
-* This dataset is called **anonymous profile** and is captured at various stages in the ID lifecycle like pre-registration, registration, id issuance/rejection and  authentication.
+* This dataset is called **anonymous profile** and is captured at various stages in the ID lifecycle like pre-registration, registration processing, ID issuance and  authentication.
 * As a part of this implementation, a new **anonymous_profile** table is created in each of these modules and is populated as per the JSON structure given below for each profile.
 
 _Note_: New DB tables are added for anonymous profile because data in existing tables (except pre-registration module) are encrypted and cannot be used to create reports and dashboards. 
