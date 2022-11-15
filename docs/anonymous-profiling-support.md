@@ -2,7 +2,7 @@
 
 ## Overview
 
-When a country is implementing and running the ID program, people at the forefront like policymakers and other executives will have a need to monitor the progress. Progress can be measured with the help of various attributes like:
+When a country is implementing and running the ID program, people at the forefront like policymakers and other executives will need to monitor the progress. Progress can be measured with the help of various attributes like:
 
 * total enrollment count
 * gender profile for enrollments
@@ -20,43 +20,44 @@ Example 1: If registration centers are setup for enrolling residents and if they
 
 Example 2: Quality of biometrics captured for a particular registration center or region can be monitored. And if it is found to be unacceptable, they can proceed to replace the biometric devices in that centre.
 
-Example 3: They can compare the total number of enrollments against the total number of UIN’s issued. If there is a big gap, then they can address this by increasing the capacity of the registration processor module to handle and process more packets.
-
-### Why new DB tables?
-
-Data in existing tables (except pre-registration) are encrypted and cannot be used to create reports and dashboards.
-
-### In which modules is the profile data being captured?
-
-* Pre-reg
-* Reg-proc
+Example 3: They can compare the total number of enrollments against the total number of UIN’s issued. If there is a big gap, they can then address this by increasing the capacity of the registration processor module to handle and process more packets.
 
 ### How to configure the stage where data is captured. Add example <TODO>
 
 * ID-Repo
 * Auth
   
- ## Objectives
 
-* Allow for reporting and analytics on a limited set of attributes on various flows of ID in MOSIP. 
-* The limited set should not violate the privacy of the person or be pointing to specific individuals.
-* The flows would cover pre-registration, registration, id issue/rejection, updates, authentication, credential issue, credential verification.
-* In order to achieve this, we have published a fixed anonymized profile of the users and ensured the same is accessible to a search engine such as elastic search so that it can be used for analytics. 
-  
-  
-This anonymous profile can be either stored or published in an analytics stream one time or both. Storage brings certain capabilities and limitations and also creates some change in the system. Publishing is fairly easy to plugin but brings with it some limitations in usage.
+
+
 
 ## Design
 
-### Anonymous Identity Issuance Profile event
+* In order to achieve this, we have published a fixed anonymized profile of the users and ensured the same is accessible to a search engine such as elastic search so that it can be used for analytics. The limited dataset should not violate the privacy of the person or point to specific individuals.
+* This dataset is called **anonymous profile** and is captured at various stages in the ID lifecycle like pre-registration, registration, id issuance/rejection and  authentication.
+* As a part of this implementation, a new **anonymous_profile** table is created in each of these modules and is populated as per the JSON structure given below for each profile.
 
-* This profile will be used during the identity issuance. 
-* The profile will be available from 1.1.5.5 and above.
-* The profile data is captured in a `anonymous_profile` table under the `idrepo schema`.
+_Note_: New DB tables are added for anonymous profile because data in existing tables (except pre-registration module) are encrypted and cannot be used to create reports and dashboards. 
+  
+### In which modules is the profile data being captured?
 
-**DTO name**: io.mosip.analytics.event.anonymous.IdentityIssuanceProfile
+* Pre-registration
+* Reg-processor
+* ID Repository
+* Authentication
+  
+  
+## Design
+  
+### Anonymous Identity issuance profile
+  
+* This profile data will be captured during the identity issuance process when an entry is made in the ID repository. 
+.
+* The profile data is captured in a `anonymous_profile` table under the `mosip_idrepo` schema.
 
-The event is published when an entry is made in the ID repo. 
+**The profile will be available from 1.1.5.5 and above.**
+
+ JSON structure of the identity issuance profile is given below:
 
 ```jsonc
 {
@@ -104,11 +105,12 @@ The event is published when an entry is made in the ID repo.
   }
 }
 ```
+  
+![](_images/ap-identity-issuance.png) 
 
-The event is published when an entry is made in the ID repo.   
-
-Note:
-
-Verified: will be sent to IDRepo from Regproc in request
+## How to generate dashboards from Anonymous profile data?
+  
+ Refer [reporting framework](https://github.com/mosip/reporting/blob/release-1.2.0/README.md) to know more.
+  
 
 
