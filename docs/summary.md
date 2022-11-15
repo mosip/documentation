@@ -10,6 +10,7 @@
     * [Data-Model](MOSIP-Data-Model.md)
   * [Privacy & Security](Privacy-and-Security.md)
     * [Cryptography in MOSIP](Encryption-in-DTO-Layer.md)
+  * [Anonymous Profiling Support](anonymous-profiling-support.md)
 * [Modules](modules/README.md)
   * [Pre-Registration](Pre-Registration.md)
     * [Pre-Registration Functionality](Pre-Registration-Functionality.md)
