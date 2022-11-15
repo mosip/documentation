@@ -2,7 +2,7 @@
 
 ## Overview
 
-When a country is implementing and running the ID program, people at the forefront like policymakers and other executives will have a need to monitor the progress. Progress can be measured with the help of various attributes like:
+When a country is implementing and running the ID program, people at the forefront like policymakers and other executives will need to monitor the progress. Progress can be measured with the help of various attributes like:
 
 * total enrollment count
 * gender profile for enrollments
@@ -22,41 +22,94 @@ Example 2: Quality of biometrics captured for a particular registration center o
 
 Example 3: They can compare the total number of enrollments against the total number of UIN’s issued. If there is a big gap, then they can address this by increasing the capacity of the registration processor module to handle and process more packets.
 
-### Why new DB tables?
 
-Data in existing tables (except pre-registration) are encrypted and cannot be used to create reports and dashboards.
-
-### In which modules is the profile data being captured?
-
-* Pre-reg
-* Reg-proc
 
 ### How to configure the stage where data is captured. Add example <TODO>
 
 * ID-Repo
 * Auth
   
- ## Objectives
 
-* Allow for reporting and analytics on a limited set of attributes on various flows of ID in MOSIP. 
-* The limited set should not violate the privacy of the person or be pointing to specific individuals.
-* The flows would cover pre-registration, registration, id issue/rejection, updates, authentication, credential issue, credential verification.
-* In order to achieve this, we have published a fixed anonymized profile of the users and ensured the same is accessible to a search engine such as elastic search so that it can be used for analytics. 
-  
-  
-This anonymous profile can be either stored or published in an analytics stream one time or both. Storage brings certain capabilities and limitations and also creates some change in the system. Publishing is fairly easy to plugin but brings with it some limitations in usage.
+
+
 
 ## Design
 
-### Anonymous Identity Issuance Profile event
+* In order to achieve this, we have published a fixed anonymized profile of the users and ensured the same is accessible to a search engine such as elastic search so that it can be used for analytics. The limited dataset should not violate the privacy of the person or point to specific individuals.
+* This dataset is called **anonymous profile** and is captured at various stages in the ID lifecycle like pre-registration, registration, id issuance/rejection and  authentication.
+* As a part of this implementation, a new **anonymous_profile** table is created in each of these modules and is populated as per the JSON structure given below for each profile.
+
+image an profile table in ID repo
+
+_Note_: New DB tables are added for anonymous profile because data in existing tables (except pre-registration module) are encrypted and cannot be used to create reports and dashboards. 
   
-* This profile will be used during the identity issuance. 
-* The profile will be available from 1.1.5.5 and above.
-* The profile data is captured in a `anonymous_profile` table under the `idrepo schema`.
+### In which modules is the profile data being captured?
 
-**DTO name**: io.mosip.analytics.event.anonymous.IdentityIssuanceProfile
+* Pre-registration
+* Reg-processor
+* ID Repository
+* Authentication
 
-The event is published when an entry is made in the ID repo. 
+### Anonymous Registration profile
+
+* This profile will be used to capture data about enrollment. This suggests that the user has started the registration process.
+* This data is captured at two stages of registration process, i.e., during pre-registration and registration. The same registration profile JSON is re-used to capture data in these two modules.
+* The event is published by multiple stages within the registration based on the configurations.
+* This profile data is captured in `anonymous_profile` tables under the `mosip_prereg` and `mosip_regprc` schemas.
+  
+**The profile will be available from 1.2.0 and above**
+  
+  JSON structure of the registration profile is given below
+
+```jsonc
+{
+  "processName": "", //process as new or update or correction or lost uin
+  "processStage": "", //internal stage of the process eg: preregistration, client, sync, classifier etc
+  "date": "", //Occurance of the event. Just date with no time.
+  "startDateTime": "",
+  "endDateTime": "",
+  "yearOfBirth": "",
+  "gender": "", // Confidential, Female, Male, Transgender, ...
+  "location": [""], //hiearchy except last 2 (means no personal address) maintained as per the array. JSON array remembers the order. Its the center info
+  "preferredLanguages": [""], // list of preferred languages
+  "channel":["phone or email "//Please note all values should be hashed after normalization] , // Used for computing how many have this number
+  "exceptions": [{
+      "type" : "",
+      "subtype": ""
+  }],  
+  "verified": [""], // list of all the verified id schema atribute names
+  "biometricInfo": [ {
+  "type" : "",
+    "subtype": "",
+    "qualityScore": "",
+    "attempts": ""
+    "digitalId": "" //Digital Id of the device
+  }],
+  "assisted": [""], //set of people who assisted in this process. Could be empty in case of automated or self. In case of assisted prereg that individuals id is listed here. 
+  "registrationCenterId": "", //Center id
+  "device": { //leave it empty in case if the atribute does not match your need.
+    "os": "", //operating system
+    "browser": "",
+    "browserVersion": "",
+    "software": "", 
+    "version": "",
+    "year": "",
+    "id": "" //any unique id of the enrollment device.
+   }, //all device identies involved in this process 
+  "documents": [""], //type of the documents. eg: passport, license.
+  "status": "" //Any internal status that needs to be published. 
+}
+``` 
+
+### Anonymous Identity issuance profile
+  
+* This profile data will be captured during the identity issuance process when an entry is made in the ID repository. 
+.
+* The profile data is captured in a `anonymous_profile` table under the `mosip_idrepo` schema.
+
+**The profile will be available from 1.1.5.5 and above.**
+
+ JSON structure of the identity issuance profile is given below:
 
 ```jsonc
 {
@@ -105,19 +158,14 @@ The event is published when an entry is made in the ID repo.
 }
 ```
 
-The event is published when an entry is made in the ID repo.   
-
-Note:
-
-Verified: will be sent to IDRepo from Regproc in request
-
 ### Anonymous Authentication Profile
 
-DTO name: io.mosip.analytics.event.anonymous.AnonymousAutheticationProfile
+* This profile data will be captured when the resident performs authentication.
+* The profile data is captured in an `anonymous_profile` table under the `mosip_IDA` schema.
 
-Available in LTS (1.2.0) and above
+**The profile will be available from 1.2.0 and above**.
 
-This will be stored in a table as a JSON and also published as a web-sub event.
+JSON structure of the Authentication profile is given below:
 
 ```jsonc
 {
@@ -141,48 +189,3 @@ This will be stored in a table as a JSON and also published as a web-sub event.
 ```
 
 
-### Anonymous registration profile event
-
-This profile will be used to send events about the enrollment. This event suggests a user has started a registration process. The event is published by multiple stages within the registration. The profile will be available from 1.2.0 and above
-
-DTO Name:  io.mosip.analytics.event.anonymous.RegistrationProfile
-
-```jsonc
-{
-  "processName": "", //process as new or update or correction or lost uin
-  "processStage": "", //internal stage of the process eg: preregistration, client, sync, classifier etc
-  "date": "", //Occurance of the event. Just date with no time.
-  "startDateTime": "",
-  "endDateTime": "",
-  "yearOfBirth": "",
-  "gender": "", // Confidential, Female, Male, Transgender, ...
-  "location": [""], //hiearchy except last 2 (means no personal address) maintained as per the array. JSON array remembers the order. Its the center info
-  "preferredLanguages": [""], // list of preferred languages
-  "channel":["phone or email "//Please note all values should be hashed after normalization] , // Used for computing how many have this number
-  "exceptions": [{
-      "type" : "",
-      "subtype": ""
-  }],  
-  "verified": [""], // list of all the verified id schema atribute names
-  "biometricInfo": [ {
-  "type" : "",
-    "subtype": "",
-    "qualityScore": "",
-    "attempts": ""
-    "digitalId": "" //Digital Id of the device
-  }],
-  "assisted": [""], //set of people who assisted in this process. Could be empty in case of automated or self. In case of assisted prereg that individuals id is listed here. 
-  "registrationCenterId": "", //Center id
-  "device": { //leave it empty in case if the atribute does not match your need.
-    "os": "", //operating system
-    "browser": "",
-    "browserVersion": "",
-    "software": "", 
-    "version": "",
-    "year": "",
-    "id": "" //any unique id of the enrollment device.
-   }, //all device identies involved in this process 
-  "documents": [""], //type of the documents. eg: passport, license.
-  "status": "" //Any internal status that needs to be published. 
-}
-``` 
