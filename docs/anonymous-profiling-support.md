@@ -205,14 +205,19 @@ Below is the image for Anonymous profile table created in IDA schema
 
   
 ## How to generate dashboards from Anonymous profile data?
+ 
+Reports and dashboards can be created using the anonymous profile data. The [reporting framework](https://github.com/mosip/reporting/blob/release-1.2.0/README.md) used for the platform can be used to push this data into elastic search and dashboards can be configured using Kibana. 
+A dashboard created using **ID Issuance Anonymous profile** data is available as a part of the reference implementation. The same is shown below.
+
+ ![](_images/reports-id-issuance-1.png)
+ ![](_images/reports-id-issuance-2.png)
   
- Refer [reporting framework](https://github.com/mosip/reporting/blob/release-1.2.0/README.md) to know more.
+More details about reporting module and dashboards can be found [here](https://docs.mosip.io/1.2.0/modules/reporting).
+
   
- Example of a sample dashboard created using **ID Issuance Anonymous** profile data 
+ 
   
-  ![](_images/reports-id-issuance-1.png)
-  ![](_images/reports-id-issuance-2.png)
-  
+ 
   
 
 
