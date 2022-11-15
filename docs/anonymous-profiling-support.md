@@ -188,4 +188,18 @@ JSON structure of the Authentication profile is given below:
 }
 ```
 
+IMAGE
+  
+## How to generate dashboards from Anonymous profile data?
+  
+ * Refer [reporting framework](ttps://github.com/mosip/reporting/blob/release-1.2.0/README.md).
+ *
+  
+  Example of a sample dashboard created using ID Issuance Anonymous profide data 
+  
+  ID issuance profile
+  
+  
+
+
 
