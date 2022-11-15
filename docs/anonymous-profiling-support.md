@@ -12,24 +12,15 @@ When a country is implementing and running the ID program, people at the forefro
 
 Information like this will allow policymakers to take corrective measures as and when required. 
 
-## Use cases
+## Examples 
 
-Some examples or use cases are given below:
+Some examples are given below:
 
 Example 1: If registration centers are setup for enrolling residents and if they see that the number of women enrolling in a particular area is less because of cultural factors, they can introduce a door to door enrollment process to increase coverage.
 
 Example 2: Quality of biometrics captured for a particular registration center or region can be monitored. And if it is found to be unacceptable, they can proceed to replace the biometric devices in that centre.
 
 Example 3: They can compare the total number of enrollments against the total number of UIN’s issued. If there is a big gap, they can then address this by increasing the capacity of the registration processor module to handle and process more packets.
-
-### How to configure the stage where data is captured. Add example <TODO>
-
-* ID-Repo
-* Auth
-  
-
-
-
 
 ## Design
 
@@ -39,7 +30,7 @@ Example 3: They can compare the total number of enrollments against the total nu
 
 _Note_: New DB tables are added for anonymous profile because data in existing tables (except pre-registration module) are encrypted and cannot be used to create reports and dashboards. 
   
-### In which modules is the profile data being captured?
+### Modules in which the profile data is captured
 
 * Pre-registration
 * Reg-processor
@@ -49,11 +40,14 @@ _Note_: New DB tables are added for anonymous profile because data in existing t
 ### Anonymous Registration profile
 
 * This profile will be used to capture data about enrollment. This suggests that the user has started the registration process.
-* This data is captured at two stages of registration process, i.e., during pre-registration and registration. The same registration profile JSON is re-used to capture data in these two modules.
-* The event is published by multiple stages within the registration based on the configurations.
+* This data is captured at two stages, i.e., during pre-registration and registration processing.
+* The same registration profile JSON is re-used to capture data in these two modules.
 * This profile data is captured in `anonymous_profile` tables under the `mosip_prereg` and `mosip_regprc` schemas.
-  
-**The profile will be available from 1.2.0 and above.**
+* We can configure the stage at which the anonymous profile data in registration processor needs to be captured. This can be configured as a part of the **registration processor camel routes** in the `mosip-config` repository as shown below.
+
+![Registration processor camel routes configuration](_images/camel-config.png)
+   
+**The profile will be available from version 1.2.0 and above.**
   
 JSON structure of the registration profile is given below
 
