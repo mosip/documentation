@@ -2,7 +2,7 @@
 
 ## Overview
 
-When a country is implementing and running the ID program, people at the forefront like the policymakers and other executives will need to monitor the progress. Progress can be measured with the help of various attributes like:
+When a country is implementing and running the ID program, people at the forefront like policymakers and other executives will need to monitor the progress. Progress can be measured with the help of various attributes like:
 
 * total enrollment count
 * gender profile for enrollments
@@ -12,8 +12,6 @@ When a country is implementing and running the ID program, people at the forefro
 
 Information like this will allow policymakers to take corrective measures as and when required. 
 
-## Examples
-
 Some examples are given below:
 
 Example 1: If registration centers are setup for enrolling residents and if they see that the number of women enrolling in a particular area is less because of cultural factors, they can introduce a door to door enrollment process to increase coverage.
@@ -21,7 +19,6 @@ Example 1: If registration centers are setup for enrolling residents and if they
 Example 2: Quality of biometrics captured for a particular registration center or region can be monitored. And if it is found to be unacceptable, they can proceed to replace the biometric devices in that centre.
 
 Example 3: They can compare the total number of enrollments against the total number of UIN’s issued. If there is a big gap, they can then address this by increasing the capacity of the registration processor module to handle and process more packets.
-
 
 ## Design
 
@@ -31,17 +28,14 @@ Example 3: They can compare the total number of enrollments against the total nu
 
 _Note_: New DB tables are added for anonymous profile because data in existing tables (except pre-registration module) are encrypted and cannot be used to create reports and dashboards. 
   
-### Modules in which the profile data is captured
+### Module in which the profile data is captured
 
-* Pre-registration
-* Reg-processor
 * ID Repository
-* Authentication
+
   
 ### Anonymous Identity issuance profile
   
 * This profile data will be captured during the identity issuance process when an entry is made in the ID repository. 
-.
 * The profile data is captured in a `anonymous_profile` table under the `mosip_idrepo` schema.
 
 **The profile will be available from 1.1.5.5 and above.**
@@ -95,6 +89,8 @@ _Note_: New DB tables are added for anonymous profile because data in existing t
 }
 ```
   
-![](_images/ap-identity-issuance.png) 
+Below is the image for Anonymous profile table created in ID repository schema
+ 
+![Anonymous profile table created in ID repository schema](_images/ap-identity-issuance.png)  
 
 
