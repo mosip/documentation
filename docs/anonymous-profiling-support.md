@@ -23,7 +23,7 @@ Example 3: They can compare the total number of enrollments against the total nu
 ## Design
 
 * In order to achieve this, we have published a fixed anonymized profile of the users and ensured the same is accessible to a search engine such as elastic search so that it can be used for analytics. The limited dataset should not violate the privacy of the person or point to specific individuals.
-* This dataset is called **anonymous profile** and is captured at various stages in the ID lifecycle like pre-registration, registration, id issuance/rejection and  authentication.
+* This dataset is called **anonymous profile** and is captured at various stages in the ID lifecycle like pre-registration, registration processing, ID issuance and  authentication.
 * As a part of this implementation, a new **anonymous_profile** table is created in each of these modules and is populated as per the JSON structure given below for each profile.
 
 _Note_: New DB tables are added for anonymous profile because data in existing tables (except pre-registration module) are encrypted and cannot be used to create reports and dashboards. 
@@ -93,13 +93,13 @@ JSON structure of the registration profile is given below
 Below is the image for Anonymous profile table created in Pre-registration schema
 
 
-![](_images/ap-prereg.png)
+![Anonymous profile table created in Pre-registration schema](_images/ap-prereg.png)
 
   
 Below is the image for Anonymous profile table created in Registration processor schema
 
 
-![](_images/ap-regprc.png)
+![Anonymous profile table created in Registration processor schema](_images/ap-regprc.png)
  
 ### Anonymous Identity issuance profile
   
@@ -162,7 +162,7 @@ Below is the image for Anonymous profile table created in Registration processor
 Below is the image for Anonymous profile table created in ID repository schema
 
  
-![](_images/ap-identity-issuance.png)  
+![Anonymous profile table created in ID repository schema](_images/ap-identity-issuance.png)  
 
 
 ### Anonymous Authentication Profile
@@ -199,10 +199,10 @@ JSON structure of the Authentication profile is given below:
 Below is the image for Anonymous profile table created in IDA schema
 
  
-![](_images/ap-ida.png)
+![Anonymous profile table created in IDA schema](_images/ap-ida.png)
 
   
-## How to generate dashboards from Anonymous profile data?
+## Generating dashboards from Anonymous profile data
  
 Reports and dashboards can be created using the anonymous profile data. The [reporting framework](https://github.com/mosip/reporting/blob/release-1.2.0/README.md) used for the platform can be used to push this data into elastic search and dashboards can be configured using Kibana. 
 A dashboard created using **ID Issuance Anonymous profile** data is available as a part of the reference implementation. The same is shown below.
