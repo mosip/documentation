@@ -90,9 +90,17 @@ JSON structure of the registration profile is given below
   "status": "" //Any internal status that needs to be published. 
 }
 ``` 
-  
+
+
+Below is the image for Anonymous profile table created in Pre-registration schema
+
+
 ![](_images/ap-prereg.png)
+
   
+Below is the image for Anonymous profile table created in Registration processor schema
+
+
 ![](_images/ap-regprc.png)
  
 ### Anonymous Identity issuance profile
@@ -151,8 +159,13 @@ JSON structure of the registration profile is given below
   }
 }
 ```
-  
+
+
+Below is the image for Anonymous profile table created in ID repository schema
+
+ 
 ![](_images/ap-identity-issuance.png)  
+
 
 ### Anonymous Authentication Profile
 
@@ -184,13 +197,18 @@ JSON structure of the Authentication profile is given below:
 }
 ```
 
+
+Below is the image for Anonymous profile table created in IDA schema
+
+ 
 ![](_images/ap-ida.png)
+
   
 ## How to generate dashboards from Anonymous profile data?
   
  Refer [reporting framework](https://github.com/mosip/reporting/blob/release-1.2.0/README.md) to know more.
   
- Example of a sample dashboard created using ID Issuance Anonymous profile data 
+ Example of a sample dashboard created using **ID Issuance Anonymous** profile data 
   
   ![](_images/reports-id-issuance-1.png)
   ![](_images/reports-id-issuance-2.png)
