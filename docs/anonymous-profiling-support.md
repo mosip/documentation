@@ -12,8 +12,6 @@ When a country is implementing and running the ID program, people at the forefro
 
 Information like this will allow policymakers to take corrective measures as and when required. 
 
-## Examples 
-
 Some examples are given below:
 
 Example 1: If registration centers are setup for enrolling residents and if they see that the number of women enrolling in a particular area is less because of cultural factors, they can introduce a door to door enrollment process to increase coverage.
