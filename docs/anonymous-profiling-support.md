@@ -23,14 +23,16 @@ Example 3: They can compare the total number of enrollments against the total nu
 ## Design
 
 * In order to achieve this, we have published a fixed anonymized profile of the users and ensured the same is accessible to a search engine such as elastic search so that it can be used for analytics. The basic guideline followed to create these profiles is that the limited dataset should not violate the privacy of the person or point to specific individuals. These JSON profiles are not configurable in the current design and a code change is required to change it.
-* This dataset is called **anonymous profile** and is captured at various stages in the ID lifecycle like in ID issuance.
+* This dataset is called **anonymous profile** and is captured during ID issuance stage.
 * As a part of this implementation, a new **anonymous_profile** table is created in each of these modules and is populated as per the JSON structure given below for each profile.
 
 _Note_: New DB tables are added for anonymous profile because data in existing tables (except pre-registration module) are encrypted and cannot be used to create reports and dashboards. 
   
 ### Module in which the profile data is captured
 
-* ID Repository
+|Module|Table name|Profile name|
+|---|---|---|
+|ID Repository|anonymous_profile|Anonymous Identity Issuance profile|
 
   
 ### Anonymous Identity issuance profile
