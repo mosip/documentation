@@ -22,19 +22,20 @@ Example 3: They can compare the total number of enrollments against the total nu
 
 ## Design
 
-* In order to achieve this, we have published a fixed anonymized profile of the users and ensured the same is accessible to a search engine such as elastic search so that it can be used for analytics. The limited dataset should not violate the privacy of the person or point to specific individuals.
+* In order to achieve this, we have published a fixed anonymized profile of the users and ensured the same is accessible to a search engine such as elastic search so that it can be used for analytics. The basic guideline followed to create these profiles is that the limited dataset should not violate the privacy of the person or point to specific individuals. These JSON profiles are not configurable in the current design and a code change is required to change it.
 * This dataset is called **anonymous profile** and is captured at various stages in the ID lifecycle like pre-registration, registration processing, ID issuance and  authentication.
 * As a part of this implementation, a new **anonymous_profile** table is created in each of these modules and is populated as per the JSON structure given below for each profile.
 
+|Module|Table name|Profile name|
+|---|---|---|
+|Pre-registration|anonymous_profile|Anonymous Registration profile|
+|Registration Processor|anonymous_profile|Anonymous Registration profile|
+|ID Repository|anonymous_profile|Anonymous Identity Issuance profile|
+|Authentication|anonymous_profile|Anonymous Authentication profile|
+
+
 _Note_: New DB tables are added for anonymous profile because data in existing tables (except pre-registration module) are encrypted and cannot be used to create reports and dashboards. 
   
-### Modules in which the profile data is captured
-
-* Pre-registration
-* Reg-processor
-* ID Repository
-* Authentication
-
 ### Anonymous Registration profile
 
 * This profile will be used to capture data about enrollment. This suggests that the user has started the registration process.
