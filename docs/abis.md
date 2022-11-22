@@ -20,8 +20,7 @@ The interface may be tested using [ABIS testing kit](https://github.com/mosip/ab
 ABIS must support the following types of biometric images:
 * Individual fingerprint images (segmented)
 * Iris images (left, right)
-
-For privacy and security considerations, face data **shall not be sent to ABIS** for deduplication.
+* Face image 
 
 Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Image Specification](biometric-image-specification.md). 
 
