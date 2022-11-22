@@ -43,7 +43,7 @@ Assumptions:
 
 | Resource       | Per node | Nodes |    Total |
 | -------------- | -------: | ----: | -------: |
-| VCPU           |        8 |    21 |  **168** |
+| VCPU           |       12 |    21 |  **252** |
 | RAM (GB)       |       64 |    21 | **1344** |
 | Node disk (GB) |       64 |    21 | **1344** |
 
@@ -59,7 +59,7 @@ Storage is dependent on population of a country (i.e. the number of UINs to be i
 | Logs (Elasticsearch)                                                                                                                                                     |               80 GB/day               | Logs maybe archived after, say, 2 weeks                                                                                                                                                                          |
 | Monitoring (Prometheus)                                                                                                                                                  |               1.2 GB/day              |                                                                                                                                                                                                                  |
 | Kafka                                                                                                                                                                    |                  TBD                  |                                                                                                                                                                                                                  |
-| ActiveMQ                                                                                                                                                                 |                  TBD                  |                                                                                                                                                                                                                  |
+| ActiveMQ                                                                                                                                                                |                  TBD                  |                                                                                                                                                                                                                  |
 | Redis                                                                                                                                                                    |                  TBD                  |                                                                                                                                                                                                                  |
 
 ## ID authentication
