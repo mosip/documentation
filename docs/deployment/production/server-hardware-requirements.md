@@ -9,12 +9,12 @@ MOSIP deployment is split into two distinct parts:
    * Registration
 2. [ID Authentication](../../id-authentication.md)
 
-The server side hardware estimates for the above are specified at a high level in terms of **compute** (Virtual CPU, RAM) and **storage** requirements. We provide estimates for [MOSIP core modules](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3/mosip) only. [External components](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3/external) are not in the scope. See [Exclusions](server-hardware-requirements.md#exclusions).
+The server-side hardware estimates for the above are specified at a high level in terms of **compute** (Virtual CPU, RAM) and **storage** requirements. We provide estimates for [MOSIP core modules](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3/mosip) only. [External components](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3/external) are not in the scope. See [Exclusions](server-hardware-requirements.md#exclusions).
 
 The variables that largely determine the hardware requirements are:
 
-1. Population of a country
-2. Rate of enrolme
+1. The population of the country
+2. Rate of enrolment
 3. Usage of foundation ID by various services
 
 ## Pre-registration
@@ -25,7 +25,7 @@ Allow for 20% additional compute and storage for monitoring and any overheads.
 
 ## Registration (enrolment)
 
-The registration compute resources are related to the max rate of enrolment desired. The processing throughput must match the enrolment rate to avoid pile up of pending registration packets.
+The registration compute resources are related to the max rate of enrolment desired. The processing throughput must match the enrolment rate to avoid a pile-up of pending registration packets.
 
 The data here is based on actual field data of a MOSIP deployment.
 
@@ -34,7 +34,7 @@ Assumptions:
 * Rate of enrolment: 216000 per day
 * Average packet size: 2MB
 * Biometric modalities: Finger, iris, face
-* Pod replication as given here.(TBD)
+* Pod replication as given here. (TBD)
 
 ### Compute requirements for registration
 
@@ -62,6 +62,8 @@ Storage is dependent on the population of a country (i.e. the number of UINs to 
 | ActiveMQ                                                                                                                                                                 |                                                                                                 NA                                                                                                 | Resource allocation depends on the deployment - standalone or part of cluster                                                                                                                                    |
 | Redis                                                                                                                                                                    | <p>Single VM with,<br><strong>RAM</strong> = Cache size * 1.5<br><strong>VCPU</strong> = 4 to 8 depending on number of packets getting processed per min<br><strong>Hardware</strong>: Minimum</p> | Cache size = Avg. packet size \* No. of packets processed in a min \* Packet to be stored in cache for X mins                                                                                                    |
 
+Allow for 20% additional compute and storage for monitoring and any overheads.
+
 ## ID authentication
 
 Refer to [IDA Resource Calculator XLS](../../\_files/ida-resource-calculator.xlsx)
@@ -70,7 +72,7 @@ Allow for 20% additional compute and storage for monitoring and any overheads.
 
 ## Exclusions
 
-The compute and storage estimates for following components are not included:
+The compute and storage estimates for the following components are not included:
 
 | Component                  | Comments                                                                                                 |
 | -------------------------- | -------------------------------------------------------------------------------------------------------- |
