@@ -1,6 +1,22 @@
-# COMPLIANCE TOOL KIT USER GUIDE
+# COMPLIANCE TOOL KIT (CTK) USER GUIDE
 
-## LOGIN
+This guide will help the partners in using the Compliance Took Kit online portal.
+
+Below are simple steps to use this portal are:
+
+1.	The partners who are going to use the compliance tool kit should be registered partners in the system.
+2.	Login into CTK with the same credentials.
+3.	Create a project of type SBI / SDK / ABIS.
+4.	Create a collection by selecting testcases that you want to test.
+5.	Provide necessary details to connect to your device / SDK service / ABIS queue.
+6.	Execute the test run by running the collection.
+7.	For executing each testcase, follow the instructions on the screen.
+8.	Once entire collection is run, results of number of testcases passed or failed will be displayed.
+9.	You can see all test run details as well for example request sent to SBI, response received from SBI, validations performed on the response and the result.
+10.	Test runs previously executed will be available in test run history.
+11.	More collections can be created as per testcases required.
+ 
+## Login
 
 The partners using the compliance tool kit should be registered in the system. Registered partners can login into the compliance tool kit with the same credentials as they used to register themselves into the partner management portal.
 
@@ -8,7 +24,7 @@ The partner needs to enter the Username/ email and Password.
 
 <image>
 
-## DASHBOARDS
+## Dashboards
   
 Once the user logs into the compliance tool kit, they can view the Project dashboard by default and would have the option to view the Biometric data dashboard as well.
  
@@ -18,7 +34,7 @@ Once the user logs into the compliance tool kit, they can view the Project dashb
   
 <image>
 
-## PROJECT DASHBOARD
+## Project dashboard
   
 Below are the possible activities as part of the Project Dashboard.
 
@@ -30,7 +46,7 @@ Below are the possible activities as part of the Project Dashboard.
   
 Let us go through each of them in detail.
   
-### VIEW PROJECTS
+### View projects
   
 Once the user logs into the compliance tool kit, user can view all the existing projects in the dashboard.
 The project dashboard will display the following attributes of a project:
@@ -47,7 +63,7 @@ Filter option in the dashboard will filter based on the name of the project, pro
     
  < image >
    
- ### CREATE PROJECTS
+ ### Create a project
    
  * On the Projects Dashboard, select `+Add Project` button.
  * The page will redirect the user to ‘Add a new Project’ page as shown below.
@@ -96,3 +112,47 @@ Filter option in the dashboard will filter based on the name of the project, pro
 * Extract Template
 * Convert Format
 * Segment
+
+### View a specific project  
+   
+Details of a specific project can be viewed 
+* By clicking on the name of the project, or,
+* By clicking on the option “View” in the options section of the project row
+   
+ <image>
+
+Once you click on the above-mentioned link, you will be redirected to the project details page of the specific project.
+
+### Move to the biometric data dashboard
+   
+* Click on `Biometric Data` button on projects dashboard screen. 
+* The user will navigate to Biometric Test Data screen where they can add multiple biometric test data files.
+   
+ <image>
+   
+## Biometric data dashboard
+   
+Possible activities as a part of the Biometric Data Dashboard are:
+* View all the biometric data collected on the dashboard
+* Upload new biometric data
+* Download biometric data
+* Delete biometric data
+* Move to the project dashboard
+
+### View all the biometric data collected on the dashboard
+   
+To view the biometric test data collection, click on `Biometric Data` on Dashboard.
+   
+The biometric data dashboard should display the below attributes of a biometric data
+* Name of the biometric data
+* Type of data
+* Purpose of the data
+* The file name of the data
+* Creation date and time of the biometric data
+   
+ <image>
+   
+Filter in the dashboard should be able to perform filter based on the name of the biometric data, type, purpose and creation date and time.
+
+<image>   
+  
