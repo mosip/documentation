@@ -127,11 +127,14 @@ The functionality is added to support the OpenG2P use case where in OpenG2P odoo
 | ATS-REQ-100   | unknown error                                                       |
 | ATS-REQ-101   | none of the record form a valid request                             |
 | ATS-REQ-102   | invalid input                                                       |
+| ATS-REQ-103   | outputFormat is not a valid jq expression                           |
+| ATS-REQ-104   | for csv output, outputFormat cannot be list. Has to be json         |
 | AUT\_CRY\_001 | Error parsing encryption certificate provided in config file.       |
 | AUT\_CRY\_002 | Error reading P12 file provided in config file.                     |
 | AUT\_CRY\_003 | Error Encrypting Auth Data                                          |
 | AUT\_CRY\_004 | Error Signing Auth Request Data                                     |
 | AUT\_BAS\_001 | Not Able to process auth request                                    |
+|               |                                                                     |
 
 There are cases where MTS might successfully pass on the request but IDA generates error based on the its implementation scenario. MTS will log such error directly to the output json/csv/file.\
 In any case there are uncaught errors thrown by IDA, MTS will output the same as unknown error (ATS-REQ-100).&#x20;
