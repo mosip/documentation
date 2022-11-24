@@ -1,4 +1,4 @@
-# COMPLIANCE TOOL KIT
+# Compliance Tool Kit
 
 Compliance Toolkit (CTK) is an online portal that can be used by MOSIP partners to test their compliance with various biometrics related specifications published by MOSIP. 
 
@@ -20,4 +20,4 @@ CTK supports testing of compliance with all above specifications.
 * Each testcase also defines the response expected from the method. On this response various validators are run. Each validator will perform a predefined check on the response. If all validations are successful, then the testcase is passed otherwise it is a failed testcase. 
 * Partners can use CTK to run these testcases to check if their implementation adheres to the MOSIP’s specs or not. 
 
-
+![Compliance Tool Kit process flow diagram](_images/compliance-toolkit-flow-diagram.png)
