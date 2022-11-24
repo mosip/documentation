@@ -1,8 +1,8 @@
 # COMPLIANCE TOOL KIT (CTK) USER GUIDE
 
-This guide will help the partners in using the Compliance Took Kit online portal.
+This guide will help the partners in using the Compliance Took Kit online portal. The word "user" in this document refers to a partner or anyone using the CTK portal.
 
-Below are simple steps to use this portal are:
+Below are simple steps to use this portal:
 
 1.	The partners who are going to use the compliance tool kit should be registered partners in the system.
 2.	Login into CTK with the same credentials.
@@ -139,7 +139,7 @@ Possible activities as a part of the Biometric Data Dashboard are:
 * Delete biometric data
 * Move to the project dashboard
 
-### View all the biometric data collected on the dashboard
+### View all the biometric data
    
 To view the biometric test data collection, click on `Biometric Data` on Dashboard.
    
@@ -155,4 +155,47 @@ The biometric data dashboard should display the below attributes of a biometric 
 Filter in the dashboard should be able to perform filter based on the name of the biometric data, type, purpose and creation date and time.
 
 <image>   
+
+ ### Upload new biometric data
+ 
+ * On the `Biometric Test Data` page, click `+Add Biometric data`, it redirects the user to the “Upload Biometrics Test Data” screen.
+ * Provide a unique name for the biometric data
+ * Based on the type selected, the user needs to enter the respective mandatory details before saving the biometric data.
+ * When the project type SDK is selected, the user needs to provide the below details
+    * Purpose: The purpose of the test (SDK test type)
+    * Test Data: The test data to be uploaded as a ZIP
+
+The Test Data section has two options `Browse` and `Download Sample File`.
+
+The `Browse` button will be the file explorer in the system for the user to select the test data ZIP to be uploaded
+
+The `Download Sample File` button will download a blank ZIP file with instructions in the README of the test case so that the partner can prepare and add biometric test data.
+ 
+ <image>
   
+ ### Download test data
+  
+* Once the test data is uploaded to the server it can be downloaded by the partner,
+    * Clicking on the name of the biometric data in the biometric data, or, 
+    * Clicking on the `Download Zip` option in the actions menu (three vertical dots menu) of the biometric data
+  
+  <image>
+   
+ ## Collections
+   
+A collection is a group of test cases selected by the user for a particular project configuration. Inside a project, the user can create multiple collections based on their choice of test cases selected. As part of the collection, the user can perform the below activities:
+* Create a collection
+* View a collection
+* Run a collection
+* View the run history of a collection
+* Generate report from a run
+* Archive a collection
+   
+### Create a collection
+
+* To create a collection for a project, first navigate to the project details page by clicking on the project name or View option in the options list.
+* Click on `Add Collection` button and you will be redirected to the Add Collection screen.
+* Enter a unique name for the collection.
+* Select the test cases to be added to the collection
+    * The test cases will be displayed in a tabular format with ID, Name, Description and Validator details
+    * Beside every test case, there will be a check box which needs to be selected by the user
