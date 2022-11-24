@@ -56,6 +56,35 @@ As part of the SDK test suite in the current version would support verification 
     
 The detailed list of the test cases for SBI and SDK in the 0.9.0 version of the Compliance Tool Kit  is available here:
 
+* SBI (https://mosip.atlassian.net/l/cp/jfX6EkG2)
+* SDK (https://mosip.atlassian.net/l/cp/zvwTk03B)
+
+## Dependency
+
+* For Authentication and Authorization:
+    * artifactory-ref-impl/auth-adapter jar: 1.2.0.1-B2
+    * kernel-auth-service: 1.2.0.1-B1
+* For Virus Scanning:
+    * artifcatory-ref-impl/clamAV jar: 1.2.0.1-B2
+* For encryption, decryption and trust validation
+    * kernel-keymanager-service: 1.2.0.1-B1
+* For adding partner certificates using partner management
+    * partner-management-service: 1.2.0.1-B1
+    * kernel-auditmanager-service: 1.2.0.1-B1
+
+## Documentation
+
+* Feature Documentation
+* Compliance Tool Kit User Guide
+* QA Report
+* Sonar Report
+
+Videos
+
+
+
+
+
 
 
 
