@@ -1,4 +1,4 @@
-# COMPLIANCE TOOL KIT (CTK) USER GUIDE
+# Compliance Tool Kit (CTK) User Guide
 
 This guide will help the partners in using the Compliance Took Kit online portal. The word "user" in this document refers to a partner or anyone using the CTK portal.
 
