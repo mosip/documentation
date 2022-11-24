@@ -22,7 +22,7 @@ CTK supports testing of compliance with all above specifications.
 
 ![Compliance Tool Kit process flow diagram](_images/compliance-toolkit-flow-diagram.png)
 
-## Pre-registration portal
+## Compliance Tool Kit portal
 
 MOSIP provides a **reference** implementation of the pre-registration portal that may be customized as per country needs. The sample implementation is available at [reference implementation repository](https://github.com/mosip/mosip-ref-impl). For getting started with the pre-registration, refer to the [Pre-registration user guide](pre-registration-user-guide.md)
 
