@@ -140,3 +140,15 @@ Any new test case is to be uploaded to the Database. You can also update an exis
 
 6\. Change the `requesttime` to current day and send the request.
 
+## Where can you find the existing CTK testcases? 
+
+In the location below, you can find all the existing testcases:
+https://github.com/mosip/mosip-compliance-toolkit/tree/0.0.9-B1/resources
+
+compliance_test_definitions_sbi.json
+This has all existing SBI test cases
+
+compliance_test_definitions_sdk.json
+This has all existing SDK test cases
+
+
