@@ -107,7 +107,25 @@ This test case is the check that the quality of face biometrics is good (above a
 
 ## Attributes in a test case
 
-As can be seen from the above two samples, few attributes are common across test cases for both SBI and SDK while few are optional. Here is list of each attribute and its use.
+As it can be seen from the above two samples, few attributes are common across test cases for both SBI and SDK while few are optional. Below is the list of each attribute and its use.
+
+| Name   | Type  | Description | Allowed Values |
+|-----------------|-------------------|---------------|-----------|
+|`testCaseType`  | Required | Type of test case  |SBI / SDK / ABIS|
+|`testName` | Required | Name of test case  ||
+|`testId `| Required |Unique ID for test case  | SBI10XX, SDK20XX|
+|`specVersion `| Required  | Spec version being tested | 0.9.5/1.0.0 for SBI, <br> 0.9.0 for SDK|
+|`testDescription`| Required | Test description. It can also include the steps to execute the test case.  |  |
+|`isNegativeTestcase` | Required  | Indicates if the validators should expect a positive scenario or negative.  | E.g.: for bad face quality test, we expect a low score which is a negative scenario, so the validator should mark the test case as passed on receiving low score |
+|`methodName` | Required | The name of the method to be invoked for the test case.  <br> It accepts an array. <br> <br> For SBI, this array will have only one value.  <br><br> For SDK, in case of a combination test case you can give 2 method names. <br> E.g.: ["extract-template", "check-quality"] | device(SBI), info(SBI), capture(SBI), rcapture(SBI), stream(SBI), insert(ABIS), identify(ABIS), delete(ABIS), init(SDK), check-quality(SDK), match(SDK), extract-template(SDK), convert-format(SDK), segment(SDK)|
+|`requestSchema`|Required|Name of the JSON schema file which will be used to validate the HTTP request. This HTTP request will be used to invoke the HTTP method defined in the spec. <br> It accepts an array. <br>  <br> For SBI, this array will have only one value. <br> <br> For SDK, in case of a combination test case you can give 2 request schema names. <br> E.g: ["ExtractTemplateRequestSchema", "MatchRequestSchema"]|The request schema JSON files are saved in the MINIO in following folder structure. <br> E.g.: compliance-toolkit/schemas/sbi/0.9.5/ DiscoverRequestSchema.json|
+|`responseSchema`|Required|Name of the JSON schema file which will be used to validate the HTTP response. This is the HTTP response that we will receive after invoking the HTTP method.<br> It accepts an array. <br><br> For SBI, this array will have only one value <br><br> For SDK, in case of a combination test case you can give 2 request schema names. <br> E.g.: ["ExtractTemplateResponseSchema", "MatchResponseSchema"]|The response schema JSON files are saved in the MINIO in following folder structure. <br> E.g.: compliance-toolkit/schemas/sbi/0.9.5/ DiscoverResponseSchema.json|
+|`validatorDefs`|Required|Names of Validators that are to be invoked to run various validations on the response. <br> It accepts an array of arrays.<br> <br> Each array is list of validators to be applied to response of corresponding method in the test case.<br> <br> In case of SBI, it is an array with a single array. <br> <br> 
+In case of SDK, for a combination test case it can be an array with list of arrays.|Validators are available in folder: `compliance-toolkit\src\main\java\io\mosip\compliance\toolkit\validators`|
+|`validatorDefs.name`|Required|||
+|`validatorDefs`||||
+
+
 
 ## How to add a test case to the Database
 
@@ -145,8 +163,8 @@ Any new test case is to be uploaded to the Database. You can also update an exis
 In the location below, you can find all the existing testcases:
 https://github.com/mosip/mosip-compliance-toolkit/tree/0.0.9-B1/resources
 
-compliance_test_definitions_sbi.json- This has all existing SBI test cases
+`compliance_test_definitions_sbi.json`- This has all existing SBI test cases
 
-compliance_test_definitions_sdk.json- This has all existing SDK test cases
+`compliance_test_definitions_sdk.json`- This has all existing SDK test cases
 
 
