@@ -11,7 +11,7 @@ MOSIP’s device partners are required to build a software layer for their devic
 
 3. ABIS- Automated Biometric Identification System (ABIS) vendors provide ABIS component which performs de-duplication of a resident's biometric data. This is useful to ensure uniqueness of resident’s biometrics. MOSIP’s ABIS partners communicate with MOSIP via a queue. MOSIP defines ABIS specs for the same. 
 
-CTK supports testing of compliance with all above specifications. 
+CTK supports testing of compliance with all the above specifications. 
 
 ## How does Compliance Tool Kit work?
 
