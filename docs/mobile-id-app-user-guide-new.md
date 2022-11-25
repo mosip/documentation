@@ -74,7 +74,7 @@ It is recommended to keep your digital credentials (ID) with you at all times. T
 
 6\. Under `My IDs` tab, you will be able to view your digital credentials.
 
-![](\_images/mobile-app-my-id.jpeg)
+![](\_images/mobile-app-credentials-created.jpeg)
 
 7\. For more details, click on the arrow mark towards the right corner in the ID generated. You can view the following details:
 

@@ -6,7 +6,7 @@ Various flows with encryption are illustrated below. Refer [Keys](keys.md) for a
 
 ## Registration data flow
 
-![](release/\_images/cryptography-registration-flow.png)
+![](\_images/cryptography-registration-flow.png)
 
 1. [Biometrics](biometrics.md) are signed by private key of device provider (PK2). The signature is verified by the Registration Client.
 2. [Registration Client](registration-client.md) signs packet using TPM key of the machine (K10), and encrypts packet using MOSIP public key specific to (registration center, machine id) combination (K11).
