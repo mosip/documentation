@@ -13,11 +13,11 @@ _**Note**_:
     
 2\. Project structure will be as shown below.
 
-![](_images/)
+![](_images/ctk-project-structure.png)
   
 3\. Resources folder contains schemas, testdata and testcases that needs to be added to MinIO and DB.
   
- <image>
+![](_images/ctk-resources-folder.png)
    
 ## Steps to upload resources to MinIO
    
@@ -37,16 +37,19 @@ _**Note**_:
    
 1\. Using Keycloak, create a new user for compliance toolkit.
 
-     <image>
+![](_images/ctk-user-creation.png)
+  
 2\. Make sure to add the email ID. Also give the user `GLOBAL_ADMIN`.
 
-3\. Login to compliance toolkit in your env with above the Keycloak user.
+3\. Login to compliance toolkit in your environment with above the Keycloak user.
          
-    Open the developer tools and copy the Authorization token from the headers section under `Networks` tab.
+    Open the developer tools and copy the `Authorization` token from the headers section under `Networks` tab.
          
-    <image>
+ ![](_images/ctk-networks.png)
+  
 4\. Add the Authorization token in postman, copy the token and place it in headers section of request (Cookie=Authentication:eyAjksa...) and send request.
-    <image>
+    
+ ![](_images/ctk-postman.png)
         
  ## Steps to upload testcases to Database
         
