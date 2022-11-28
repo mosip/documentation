@@ -24,7 +24,7 @@ MOSIP Token Seeder (**MTS**) is a standalone service that outputs [MOSIP Token I
 
 ## Use cases
 
-One of the intended use cases of MTS is to seed existing beneficiary registries for deduplication. Similarly, entities like banks can run the MTS service to onboard users.
+One of the intended use cases of MTS is to seed existing beneficiary registries for deduplication.&#x20;
 
 ## Inputs
 
