@@ -6,21 +6,21 @@ Below are simple steps to use this portal:
 
 1.	The partners who are going to use the compliance tool kit should be registered partners in the system.
 2.	Login into CTK with the same credentials.
-3.	Create a project of type SBI / SDK / ABIS.
-4.	Create a collection by selecting testcases that you want to test.
+3.	Create a project of type SBI / SDK / ABIS (to be implemented).
+4.	Create a collection by selecting test cases that you want to test.
 5.	Provide necessary details to connect to your device / SDK service / ABIS queue.
-6.	Execute the test run by running the collection.
-7.	For executing each testcase, follow the instructions on the screen.
-8.	Once entire collection is run, results of number of testcases passed or failed will be displayed.
-9.	You can see all test run details as well for example request sent to SBI, response received from SBI, validations performed on the response and the result.
-10.	Test runs previously executed will be available in test run history.
-11.	More collections can be created as per testcases required.
+6.	Execute the Test Run by running the collection.
+7.	For executing each test case, follow the instructions on the screen.
+8.	Once the entire collection is run, results of number of test cases passed or failed will be displayed.
+9.	You can see all the Test Run details as well. For example, the request sent to SBI, response received from SBI, validations performed on the response and the result.
+11.	Test runs previously executed will be available in Test Run history.
+12.	More collections can be created as per testcases required.
  
 ## Login
 
-The partners using the compliance tool kit should be registered in the system. Registered partners can login into the compliance tool kit with the same credentials as they used to register themselves into the partner management portal.
+The partners using the compliance tool kit should be registered in the system. Registered partners can login into the compliance tool kit with the same credentials as they used to register themselves into the [Partner Management Portal](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-portal).
 
-The partner needs to enter the Username/ email and Password.
+The partner needs to enter the Username/ e-mail and Password.
 
 ![CTK login page](_images/ctk-toolkit-login.png)
 
@@ -28,11 +28,11 @@ The partner needs to enter the Username/ email and Password.
   
 Once the user logs into the compliance tool kit, they can view the Project Dashboard by default and would have the option to view the Biometric data dashboard as well.
  
-* Project: A project is a module that the partner wants to test. For example, if a device partner has developed a new version of his/her SBI for their fingerprint slap device, then, they can create a project in the compliance tool kit to verify this version of SBI.  
+* `Project`: A project is a module that the partner wants to test. For example, if a device partner has developed a new version of his/her SBI for their fingerprint slap device, then, they can create a project in the compliance tool kit to verify this version of SBI.  
 
 ![CTK Project Dashboard](_images/ctk-toolkit-dashboard.png)
 
-* Biometric Data: As part of the compliance tool kit, we provide an option for the partner to upload their test data which can be used to verify the partner’s software. Currently, in MOSIP, we can upload test data for an SDK or an ABIS.
+* `Biometric Data`: As a part of the CTK, there is an option for the partner to upload their test data which can be used to verify the partner’s software. Currently, in MOSIP, we can upload test data for an SDK or an ABIS.
   
 ![CTK Biometric Data](_images/ctk-toolkit-biometric-data.png)
 
@@ -315,13 +315,14 @@ The user after completing a successful test run can view the detailed run by,
  
 * Clicking on the `View Last Test Run` option in the options section of the collection as shown below.
  
-![](_images/ctk-viewtestrun.png) 
+![](_images/ctk-viewlast-testrun.png) 
   
 Once the user selects `View Last Test Run` option, the application will redirect the user to display the test run details as shown.
   
 * Clicking on the `Test Run History` option in the options section of the collection and then click on the “Details” button of the test run that the user wants to view
 
-ckt-test-results.
+![](_images/ctk-testrun-history.png) 
+
 Once the user click on `Details`, it will redirect the user to the test details as shown above.
    
 * On the test run details page, the user will be able to view:
