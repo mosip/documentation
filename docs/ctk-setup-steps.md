@@ -38,13 +38,13 @@ _**Note**_:
     
 2\. Create a `compliance-toolkit` bucket.
     
-3\. Create a new folder named `testdata` in the above bucket. Upload all test data zip files from resources to it.
+3\. Create a new folder named `testdata` in the above bucket and upload all test data zip files from resources folder to this folder.
     
-4\. Create a new folder named `schemas` in the above bucket. Upload all **sbi** and **sdk** schemas, **testcase** schema from the resources folder to it.
-    
-5\. There is no need to upload `compliance_test_definitions_sbi.json` and `compliance_test_definitions_sdk.json`.
-    
-6\. Please restart the pods after adding new files in MinIO.
+4\. Create a new folder named `schemas` in the above bucket and upload all **sbi** and **sdk** schemas, **testcase** schema from the resources folder to this folder.
+
+NOTE: _There is no need to upload `compliance_test_definitions_sbi.json` and `compliance_test_definitions_sdk.json`._
+
+5\. Please restart the pods after adding new files in MinIO.
    
 ## Using Postman
    
