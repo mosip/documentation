@@ -164,7 +164,7 @@ Any new test case is to be uploaded to the database. You can also update an exis
 
 1\. Open postman and create a POST request.
 
-2\. URL endpoint https://api-internal.dev.mosip.net/v1/toolkit/saveTestCases
+2\. URL endpoint `https://{base_URL}/v1/toolkit/saveTestCases`
 
 3\. Copy the Authorization token in the request header by logging into the compliance toolkit in your env with a user having a `GLOBAL_ADMIN` role. Open the developer tools and copy the Authorization token from the headers section under the `Networks` tab. Add the Authorization token in postman, copy the token and place it in the headers section of the request (`Cookie=Authorization:eyAjksa...`)
 
