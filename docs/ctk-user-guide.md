@@ -228,27 +228,27 @@ A collection is a group of test cases selected by the user for a particular proj
 * Before running a collection in SBI, the user needs to connect to a device without which they cannot proceed with testing.
 * The user should click on the `Scan Device` button in the Collection Dashboard as shown below.
  
-   <image>
+![](_images/ctk-scan-device.png) 
     
 * This triggers a scan of all the configured ports in the system where the SBI is connected.
 * If any device connected with an SBI is found, the application asks the user to select an available port and the device for running the test.
-    
-    <image>
-     
+
+![](_images/ctk-scan-device-selection.png) 
+
 * If any device is not found, an error popup is displayed to the user with an option to `Scan Again`.
      
-  <image >
+ ![](_images/ctk-scan-failed.png) 
    
 * Once the device is selected, the user can click on the `Save` button.
 * After the device is selected and saved in memory, the `Run` button for the collections is enabled.
    
- <image>
+ ![](_images/ctk-run-button.png) 
   
 * If a device is already scanned and selected before running the collection, the user can choose to re-scan and select another device for running the test case.
 * If a device is selected, the user can click on the `Run` button to run the test case.
 * If the user selects a Fingerprint Slap device but the collection is for a Double Iris device, then the test case should not execute, the user should be shown an error message and asked to re-select the correct device. The combination validated here is for Purpose, Device Type and Sub Type as shown below.
 
-<image>
+ ![](_images/ctk-combination-validation.png) 
  
  * If the correct device is selected and the user initiates the test run, the test case execution should start.
  * During the test run,
@@ -257,7 +257,7 @@ A collection is a group of test cases selected by the user for a particular proj
      * Option to close or cancel the test run
      * Option to initiate capture for a test case or resume run after completing the operation.
 
-<image>
+ ![](_images/ctk-test-run.png) 
  
  * The test run should also shows,
     * The total test cases getting executed for that run
@@ -267,42 +267,41 @@ A collection is a group of test cases selected by the user for a particular proj
 * Once the test execution is completed, the user should see,
     * A high-level result with the number of test cases executed- with the number of test cases failed and number of test cases passed in the run.
  
- <image>
+![](_images/ctk-run-result.png) 
   
     * The user should also see the time elapsed
     * The user can also view the detailed test run report
  
- <image>
+![](_images/ctk-run-details.png) 
   
 ### Run a SDK collection
   
 Before running the SDK collection, the user should be able to change the `Test Data` and the `Base UR`L in the project settings
 
-<image>
+![](_images/ctk-sdk-change-url-testdata.png) 
  
 * Click `Run` button of the specific collection.
 * The application now checks if the URL shared by the user is accessible or not. If not accessible, the application shows an error message to the user.
 
- <image>
+![](_images/ctk-sdk-url-notaccessible.png) 
   
 * Once the run initiates with the proper URL, the execution should complete on its own and during the run, the user should be able to see:
     * A progress bar will be shown with the percentage of tests execution completed.
     * A timer to show the time elapsed during the execution.
     * Option to close or cancel the test run.
-  
-<image>
- 
+
+![](_images/ctk-sdk-run.png) 
+
 * Once the test execution is completed, the user should see:
    * A high-level result with the number of test cases executed- with the number of test cases failed and number of test cases passed in the run.
    * The user should also see the time elapsed.
    * The user should have the option to view the detailed `Test Run` report.
 
- <image>
+![](_images/ctk-sdk-run-result.png) 
+   
+_Note_: For a test run, the user can select their data or MOSIP’s default data. But let us say that the user chooses his data, but in the ZIP file the user has missed adding data for a particular test case, then the system should take MOSIP’s data for the test case for the execution.
   
-  
-Note: For a test run, the user can select their data or MOSIP’s default data. But let us say that the user chooses his data, but in the ZIP file the user has missed adding data for a particular test case, then the system should take MOSIP’s data for the test case for the execution.
-  
-  <image>
+![](_images/ctk-testdata-selecting.png) 
    
 ### View the run history of the collection
    
@@ -310,20 +309,19 @@ The user after completing a successful test run can view the detailed run by,
    
 * Clicking on the `View Test Run` button once the test execution is completed.
    
-<image>
+![](_images/ctk-viewtestrun.png) 
  
-<image>
+![](_images/ctk-test-results.png) 
  
 * Clicking on the `View Last Test Run` option in the options section of the collection as shown below.
  
- <image>
+![](_images/ctk-viewtestrun.png) 
   
 Once the user selects `View Last Test Run` option, the application will redirect the user to display the test run details as shown.
   
 * Clicking on the `Test Run History` option in the options section of the collection and then click on the “Details” button of the test run that the user wants to view
 
-  <image>
-   
+ckt-test-results.
 Once the user click on `Details`, it will redirect the user to the test details as shown above.
    
 * On the test run details page, the user will be able to view:
@@ -347,7 +345,7 @@ Once the user click on `Details`, it will redirect the user to the test details 
     * The response that was received
     * The detailed status of validators that ran in the test case
    
-   <image>
+ ![](_images/ctk-testcase-details.png) 
     
 
 
