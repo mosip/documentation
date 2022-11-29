@@ -47,7 +47,7 @@ As part of the SDK test suite in the current version would support verification 
     * Quality Check
     * Matcher
     * Extractor
-    * Convertor
+    * Converter
     
 * Biometric Modalities
     * Fingerprint
@@ -78,14 +78,3 @@ The detailed list of the test cases for SBI and SDK in the 0.9.0 version of the 
 * Compliance Tool Kit User Guide
 * QA Report
 * Sonar Report
-
-Videos
-
-
-
-
-
-
-
-
-
