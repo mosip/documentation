@@ -22,17 +22,19 @@ The partners using the compliance tool kit should be registered in the system. R
 
 The partner needs to enter the Username/ email and Password.
 
-<image>
+![CTK login page](_images/ctk-toolkit-login.png)
 
 ## Dashboards
   
-Once the user logs into the compliance tool kit, they can view the Project dashboard by default and would have the option to view the Biometric data dashboard as well.
+Once the user logs into the compliance tool kit, they can view the Project Dashboard by default and would have the option to view the Biometric data dashboard as well.
  
 * Project: A project is a module that the partner wants to test. For example, if a device partner has developed a new version of his/her SBI for their fingerprint slap device, then, they can create a project in the compliance tool kit to verify this version of SBI.  
 
+![CTK Project Dashboard](_images/ctk-toolkit-dashboard.png)
+
 * Biometric Data: As part of the compliance tool kit, we provide an option for the partner to upload their test data which can be used to verify the partner’s software. Currently, in MOSIP, we can upload test data for an SDK or an ABIS.
   
-<image>
+![CTK Biometric Data](_images/ctk-toolkit-biometric-data.png)
 
 ## Project dashboard
   
@@ -57,21 +59,22 @@ The project dashboard will display the following attributes of a project:
 * Last time a collection in the project was run
 * Status of the last run on the project
 
-  < image >
+![CTK Project Dashboard](_images/ctk-toolkit-projectdashboard.png) 
  
 Filter option in the dashboard will filter based on the name of the project, project type and the creation date and time.
     
- < image >
+![CTK filter](_images/ctk-toolkit-filter.png) 
    
  ### Create a project
    
  * On the Projects Dashboard, select `+Add Project` button.
  * The page will redirect the user to ‘Add a new Project’ page as shown below.
-  
-   <image>
-     
+ 
+ ![CTK create a Project](_images/ctk-toolkit-create-project.png) 
+      
  * Enter a unique Project Name and select the Project Type. Currently MOSIP supports only two types of projects: SBI, SDK
  * Based on the project type selected, the user needs to enter the mandatory configurations before saving the project.
+ 
  * When the project type selected is SBI, the user will need to provide/select the below configurations:
     * _Spec Version_: MOSIP SBI specification for which the SBI is built
     * _Purpose_: The purpose of the device
@@ -88,9 +91,8 @@ Filter option in the dashboard will filter based on the name of the project, pro
 |Authentication|Iris|Single|
 |Authentication|Iris|Double|
 |Authentication|Face|Full Face|
-     
-         
-     <image>
+           
+ ![](_images/ctk-toolkit-create-sbi-project.png) 
      
  * When the project type selected is SDK, the partner will need to provide the below configurations:
     * Base URL: URL where the SDK is deployed
@@ -98,12 +100,12 @@ Filter option in the dashboard will filter based on the name of the project, pro
     * Purpose: Purpose of the SDK 
     * Test Data: Input data needed for the run
 
-<image>
+ ![](_images/ctk-creating-sdk-project.png) 
   
 * Once the data is entered by the user, the user can click on the **Save Project** button to save the project.
 * Once the project is saved, a successful message is displayed and a popup appears on the screen which when closed redirects the user to the project dashboard (home).
 
- <image>
+ ![](_images/ctk-sdk-project-created.png)  
 
  Possible values for the Purpose attribute in SDK are:
  
@@ -117,19 +119,17 @@ Filter option in the dashboard will filter based on the name of the project, pro
    
 Details of a specific project can be viewed 
 * By clicking on the name of the project, or,
-* By clicking on the option “View” in the options section of the project row
-   
- <image>
+* By clicking on the option `View` in the options section of the project row.
+ 
+![](_images/ctk-view-specifi-project.png) 
 
-Once you click on the above-mentioned link, you will be redirected to the project details page of the specific project.
+Once you click on the above mentioned link, you will be redirected to the project details page of the specific project.
 
 ### Move to the biometric data dashboard
    
 * Click on `Biometric Data` button on projects dashboard screen. 
 * The user will navigate to Biometric Test Data screen where they can add multiple biometric test data files.
-   
- <image>
-   
+  
 ## Biometric data dashboard
    
 Possible activities as a part of the Biometric Data Dashboard are:
@@ -150,15 +150,15 @@ The biometric data dashboard should display the below attributes of a biometric 
 * The file name of the data
 * Creation date and time of the biometric data
    
- <image>
+![](_images/ctk-biometric-data-collected.png) 
    
 Filter in the dashboard should be able to perform filter based on the name of the biometric data, type, purpose and creation date and time.
 
-<image>   
+![](_images/ctk-filter-bio-data.png) 
 
  ### Upload new biometric data
  
- * On the `Biometric Test Data` page, click `+Add Biometric data`, it redirects the user to the “Upload Biometrics Test Data” screen.
+ * On the `Biometric Test Data` page, click `+Add Biometric data`, it redirects the user to the `Upload Biometrics Test Data` screen.
  * Provide a unique name for the biometric data
  * Based on the type selected, the user needs to enter the respective mandatory details before saving the biometric data.
  * When the project type SDK is selected, the user needs to provide the below details
@@ -171,16 +171,16 @@ The `Browse` button will be the file explorer in the system for the user to sele
 
 The `Download Sample File` button will download a blank ZIP file with instructions in the README of the test case so that the partner can prepare and add biometric test data.
  
- <image>
+ ![](_images/ctk-upload-bio-data.png) 
   
  ### Download test data
   
 * Once the test data is uploaded to the server it can be downloaded by the partner,
     * Clicking on the name of the biometric data in the biometric data, or, 
-    * Clicking on the `Download Zip` option in the actions menu (three vertical dots menu) of the biometric data
+    * Clicking on the `Download Zip` in the options menu of the biometric data.
+
+ ![](_images/ctk-dowload-testdata.png) 
   
-  <image>
-   
  ## Collections
    
 A collection is a group of test cases selected by the user for a particular project configuration. Inside a project, the user can create multiple collections based on their choice of test cases selected. As part of the collection, the user can perform the below activities:
@@ -195,22 +195,23 @@ A collection is a group of test cases selected by the user for a particular proj
 
 * To create a collection for a project, first navigate to the project details page by clicking on the project name or View option in the options list.
 * Click on `Add Collection` button and you will be redirected to the Add Collection screen.
-   <image>
+
+ ![](_images/ctk-add-collection.png) 
     
 * Enter a unique name for the collection.
 * Select the test cases to be added to the collection
     * The test cases will be displayed in a tabular format with ID, Name, Description and Validator details
     * Beside every test case, there will be a check box which needs to be selected by the user
     
-    <image>
+ ![](_images/ctk-create-collection.png) 
      
 * After selecting the test cases the user can click on the “Save Collection” button to save the collection
 * Once a collection is successfully created, the user is shown a success popup and is redirected to the project details page.
 * Once a collection is created it is displayed on the Collection Dashboard which is available on the project details page.   
-     
-     <image>
-      
-**Few points to note:
+
+ ![](_images/ctk-collection-details.png) 
+  
+**Few points to note**:
       
 * A collection cannot be saved if no test cases are selected.
 * A collection name cannot be empty, the user needs to provide a unique collection name before saving the collection.
@@ -220,7 +221,7 @@ A collection is a group of test cases selected by the user for a particular proj
       
   Once the user creates a collection, they can view the collection details by clicking on the collection name.
       
-  <image>
+ ![](_images/ctk-view-collection.png) 
    
  ### Run a SBI collection
    
