@@ -195,7 +195,162 @@ A collection is a group of test cases selected by the user for a particular proj
 
 * To create a collection for a project, first navigate to the project details page by clicking on the project name or View option in the options list.
 * Click on `Add Collection` button and you will be redirected to the Add Collection screen.
+   <image>
+    
 * Enter a unique name for the collection.
 * Select the test cases to be added to the collection
     * The test cases will be displayed in a tabular format with ID, Name, Description and Validator details
     * Beside every test case, there will be a check box which needs to be selected by the user
+    
+    <image>
+     
+* After selecting the test cases the user can click on the “Save Collection” button to save the collection
+* Once a collection is successfully created, the user is shown a success popup and is redirected to the project details page.
+* Once a collection is created it is displayed on the Collection Dashboard which is available on the project details page.   
+     
+     <image>
+      
+**Few points to note:
+      
+* A collection cannot be saved if no test cases are selected.
+* A collection name cannot be empty, the user needs to provide a unique collection name before saving the collection.
+* Every collection row in the dashboard has the options to view the name of the collection, the number of test cases selected as a part of the collection, the creation date, the Last Test Run and the Run history of the collection.
+      
+ ### View a collection
+      
+  Once the user creates a collection, they can view the collection details by clicking on the collection name.
+      
+  <image>
+   
+ ### Run a SBI collection
+   
+* Before running a collection in SBI, the user needs to connect to a device without which they cannot proceed with testing.
+* The user should click on the `Scan Device` button in the Collection Dashboard as shown below.
+ 
+   <image>
+    
+* This triggers a scan of all the configured ports in the system where the SBI is connected.
+* If any device connected with an SBI is found, the application asks the user to select an available port and the device for running the test.
+    
+    <image>
+     
+* If any device is not found, an error popup is displayed to the user with an option to `Scan Again`.
+     
+  <image >
+   
+* Once the device is selected, the user can click on the `Save` button.
+* After the device is selected and saved in memory, the `Run` button for the collections is enabled.
+   
+ <image>
+  
+* If a device is already scanned and selected before running the collection, the user can choose to re-scan and select another device for running the test case.
+* If a device is selected, the user can click on the `Run` button to run the test case.
+* If the user selects a Fingerprint Slap device but the collection is for a Double Iris device, then the test case should not execute, the user should be shown an error message and asked to re-select the correct device. The combination validated here is for Purpose, Device Type and Sub Type as shown below.
+
+<image>
+ 
+ * If the correct device is selected and the user initiates the test run, the test case execution should start.
+ * During the test run,
+     * A progress bar will be shown with the percentage of tests execution completed
+     * A timer to show the time elapsed during the execution
+     * Option to close or cancel the test run
+     * Option to initiate capture for a test case or resume run after completing the operation.
+
+<image>
+ 
+ * The test run should also shows,
+    * The total test cases getting executed for that run
+    * The current test case name
+    * Instructions (if any) for the user to follow
+ 
+* Once the test execution is completed, the user should see,
+    * A high-level result with the number of test cases executed- with the number of test cases failed and number of test cases passed in the run.
+ 
+ <image>
+  
+    * The user should also see the time elapsed
+    * The user can also view the detailed test run report
+ 
+ <image>
+  
+### Run a SDK collection
+  
+Before running the SDK collection, the user should be able to change the `Test Data` and the `Base UR`L in the project settings
+
+<image>
+ 
+* Click `Run` button of the specific collection.
+* The application now checks if the URL shared by the user is accessible or not. If not accessible, the application shows an error message to the user.
+
+ <image>
+  
+* Once the run initiates with the proper URL, the execution should complete on its own and during the run, the user should be able to see:
+    * A progress bar will be shown with the percentage of tests execution completed.
+    * A timer to show the time elapsed during the execution.
+    * Option to close or cancel the test run.
+  
+<image>
+ 
+* Once the test execution is completed, the user should see:
+   * A high-level result with the number of test cases executed- with the number of test cases failed and number of test cases passed in the run.
+   * The user should also see the time elapsed.
+   * The user should have the option to view the detailed `Test Run` report.
+
+ <image>
+  
+  
+Note: For a test run, the user can select their data or MOSIP’s default data. But let us say that the user chooses his data, but in the ZIP file the user has missed adding data for a particular test case, then the system should take MOSIP’s data for the test case for the execution.
+  
+  <image>
+   
+### View the run history of the collection
+   
+The user after completing a successful test run can view the detailed run by,
+   
+* Clicking on the `View Test Run` button once the test execution is completed.
+   
+<image>
+ 
+<image>
+ 
+* Clicking on the `View Last Test Run` option in the options section of the collection as shown below.
+ 
+ <image>
+  
+Once the user selects `View Last Test Run` option, the application will redirect the user to display the test run details as shown.
+  
+* Clicking on the `Test Run History` option in the options section of the collection and then click on the “Details” button of the test run that the user wants to view
+
+  <image>
+   
+Once the user click on `Details`, it will redirect the user to the test details as shown above.
+   
+* On the test run details page, the user will be able to view:
+    * Run date
+    * Overall run status
+    * Total test cases in the collection
+    * Test cases passed
+    * Test cases failed
+ 
+ The user will be able to view the details of any test run they wish to.
+   
+* On the test run details page, the user will be able to view,
+    * List of the test cases in the collection
+    * Test case ID
+    * Test case Name
+    * Status of the test case (Pass or Failed)
+    * Option to view details of the test case
+   
+* The details of the test case contains,
+    * The request that was sent
+    * The response that was received
+    * The detailed status of validators that ran in the test case
+   
+   <image>
+    
+
+
+
+
+     
+     
