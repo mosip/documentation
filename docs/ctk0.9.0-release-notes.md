@@ -15,11 +15,13 @@ The 0.9.0 version of MOSIP’s compliance tool kit is the first beta release whi
 ## Features Covered
 
 The basic features such as,
+
 * Create a Project
-    * Create a Collection
-    * Run a Collection
-    * View Details of a Test Run
-    * Add Biometric Data
+* Create a Collection
+* Run a Collection
+* View Details of a Test Run
+* Add Biometric Data
+
 are available as part of the releases.
 
 The current version can be used by the device and biometric SDK vendors to test their SBIs and SDKs.
