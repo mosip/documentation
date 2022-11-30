@@ -34,7 +34,7 @@
   * [Compliance Tool Kit](ctk-features.md) 
     * [Versions](ctk-versions.md)
       * [Version 0.9.0](ctk0.9.0-release-notes.md)
-    * [How to Guides]
+    * How to Guides
       * [How to SetUp CTK post installation](ctk-setup-steps.md)
       * [How to use CTK](ctk-user-guide.md)
       * [How to add more test cases](ctk-test-cases.md)
