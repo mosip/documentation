@@ -168,8 +168,6 @@ Any new test case is to be uploaded to the database. You can also update an exis
 
 3\. Copy the Authorization token in the request header by logging into the compliance toolkit in your env with a user having a `GLOBAL_ADMIN` role. Open the developer tools and copy the Authorization token from the headers section under the `Networks` tab. Add the Authorization token in postman, copy the token and place it in the headers section of the request (`Cookie=Authorization:eyAjksa...`)
 
-![](_images/ctk-testcase.png)
-
 4\. Copy test cases array JSON and prepare a request as shown below.
 
 5\. Request body for saveTestCases request 
