@@ -34,9 +34,9 @@
   * [Compliance Tool Kit](compliance-tool-kit.md) 
     * [Versions](ctk-versions.md)
       * [Version 0.9.0](ctk0.9.0-release-notes.md)
+    * [User Guide](ctk-user-guide.md)
     * How to Guides
       * [How to set up CTK post installation](ctk-setup-steps.md)
-      * [How to use CTK](ctk-user-guide.md)
       * [How to add more test cases](ctk-test-cases.md)
   * [Datashare](datashare.md)
   * [ID Authentication Services](id-authentication-services.md)
