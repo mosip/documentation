@@ -1,5 +1,6 @@
 	
-| |Test Case ID	 |Test Case Description	 | 	
+|SL No |Test Case ID	 |Test Case Description	 | 
+|------|-----------------|-----------------------|
 |1|	SDK2000|	Schema validation for SDK initialization interface|
 |2|	SDK2001|	Schema and quality check validation for a qood quality face image|
 |3|	SDK2002|	Schema and quality check validation for a bad quality face image|
@@ -49,7 +50,7 @@
 |47|	SDK2046|	Schema & extraction validation when invalid iris is sent|
 |48|	SDK2047|	Schema & extraction validation when no data is sent instead of fingerprint|
 |49|	SDK2048|	Schema & extraction validation when no data is sent instead of face|
-|50|	SDK2049|         Schema & extraction validation when no data is sent instead of iris|
+|50|	SDK2049|        Schema & extraction validation when no data is sent instead of iris|
 |51|	SDK2050|	Schema, extraction and matcher validation for fingerprint extraction & match using templates|
 |52|	SDK2051|	Schema, extraction and matcher validation for face extraction & match using templates|
 |53|	SDK2052|	Schema, extraction and matcher validation for iris extraction & match using templates|
