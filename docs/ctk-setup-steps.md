@@ -4,7 +4,7 @@
 
 CTK should be deployed with the required dockers.
 
-* compliance-toolkit-service: 0.0.9-B!
+* compliance-toolkit-service: 0.0.9-B1
 * compliance-toolkit-ui: 0.0.9-B1
 
 Dependent Services
@@ -21,14 +21,9 @@ _**Note**_:
 
 ## Steps to setup mosip-compliance-toolkit
 
-1\.	Clone mosip-compliance-toolkit
-    `git clone https://github.com/mosip-compliance-toolkit.git`
-    
-2\. The project structure would be as shown below
-
-![](_images/ctk-project-structure.png)
-  
-3\. The resources folder would contain schemas, test data and test cases that need to be added to MinIO and DB.
+1\.	Browse to [mosip-compliance-toolkit](https://github.com/mosip-compliance-toolkit.git)
+       
+2\. The resources folder would contain schemas, test data and test cases that need to be added to MinIO and DB.
   
 ![](_images/ctk-resources-folder.png)
    
@@ -49,21 +44,16 @@ NOTE: _There is no need to upload `compliance_test_definitions_sbi.json` and `co
 ## Using Postman
    
 1\. Using Keycloak, create a new user for the compliance toolkit.
-
-![](_images/ctk-user-creation.png)
-  
+ 
 2\. Make sure to add the email ID. Also, give the user `GLOBAL_ADMIN`.
 
 3\. Login to the compliance toolkit in your environment with above the Keycloak user.
 
 4\. Open the developer tools and copy the `Authorization` token from the headers section under the `Networks` tab.
          
- ![](_images/ctk-networks.png)
-  
 5\. Add the Authorization token in postman, copy the token and place it in the headers section of the request (Cookie=Authentication:eyAjksa...) and send the request.
     
- ![](_images/ctk-postman.png)
-        
+     
  ## Steps to upload test cases to the Database
         
 1\.	Open postman and create a POST request.
