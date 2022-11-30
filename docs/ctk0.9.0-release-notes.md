@@ -64,10 +64,10 @@ The detailed list of the test cases for SBI and SDK in the 0.9.0 version of the 
 ## Dependency
 
 * For Authentication and Authorization:
-    * artifactory-ref-impl/auth-adapter jar: 1.2.0.1-B2
+    * artifactory-ref-impl: 1.2.0.1-B2
     * kernel-auth-service: 1.2.0.1-B1
 * For Virus Scanning:
-    * artifcatory-ref-impl/clamAV jar: 1.2.0.1-B2
+    * clamAV: 1.2.0.1-B2
 * For encryption, decryption and trust validation
     * kernel-keymanager-service: 1.2.0.1-B1
 * For adding partner certificates using partner management
