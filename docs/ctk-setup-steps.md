@@ -7,18 +7,18 @@ CTK should be deployed with the required dockers.
 * compliance-toolkit-service: 0.0.9-B1
 * compliance-toolkit-ui: 0.0.9-B1
 
-Dependent Services 
-* keycloak
-* postgres
-* config-server
-* artifactory-ref-impl: 1.2.0.1-B2
-* kernel-auditmanager-service: 1.2.0.1-B1
-* kernel-authmanager: 1.2.0.1-B1
-* kernel-keymanager-service: 1.2.0.1-B1
-* partner-management-service: 1.2.0.1-B1
-* minio
-* kernel-notifier
-* clamav
+Dependent Service (dockers)
+* Artifactory: mosipid/artifactory-ref-impl: 1.2.0.1-B2
+* Audit manager: mosipid/kernel-auditmanager-service: 1.2.0.1-B1
+* Auth Manager: mosipid/kernel-authmanager: 1.2.0.1-B1
+* Key Manager: modipid/kernel-keymanager-service: 1.2.0.1-B1
+* Partner Management: mosipid/partner-management-service: 1.2.0.1-B1
+* KeyCloak: mosipid/keycloak-init: 1.2.0.1-B1
+* Postgres: mosipid/postgres-init: 1.2.0.1-B1
+* Config Server: config-server: mosipid/config-server: 1.1.2
+* Notification Service: mosipid/kernel-notification-service: 1.2.0.1-B1
+* ClamAV: clamav/clamav: latest
+* MinIO
 
 _**Note**_: 
 * Ensure that in the `kernel-default.properties`, the value of `mosip-toolkit-client` is set as `auth.server.admin.allowed.audience`. 
