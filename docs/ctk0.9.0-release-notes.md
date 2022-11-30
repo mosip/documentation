@@ -26,13 +26,13 @@ The current version can be used by the device and biometric SDK vendors to test 
 
 As part of the SBI test suite, we would support verification schema and signature verification of,
 * Interfaces
-    * Device discovery,
-    * Device info,
-    * Capture, and
+    * Device discovery
+    * Device info
+    * Capture
     * RCapture
     
 * Certification Level
-    * L0, and
+    * L0
     * L1
     
 * Biometric Modalities
