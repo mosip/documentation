@@ -23,13 +23,15 @@ Currently, CTK supports testing of compliance with the below biometrics specific
 
 ## Compliance Tool Kit Portal
 
-To set up the Compliance Tool Kit, refer to [How to set up CTK](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/how-to-guides/ctk-setup-steps).
+To set up the Compliance Tool Kit, refer [How to set up CTK](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/how-to-guides/ctk-setup-steps).
 
 To use the CTK portal, refer to the [Compliance Tool Kit User Guide](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/ctk-user-guide).
 
 ## Build and deploy
 
-To access the build and read through the deployment instructions, refer to the [deployment guide].
+To access the build and read through the deployment instructions, refer to the below mentioned READMEs:
+1. [Compliance Tool Kit README (backend)](https://github.com/mosip/mosip-compliance-toolkit/tree/develop#readme)
+2. [Compliance Tool Kit UI README](https://github.com/mosip/mosip-compliance-toolkit-ui/tree/develop#readme)
 
 ## Configurations
 
