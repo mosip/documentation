@@ -26,13 +26,13 @@
 |24|	SDK2023|	Schema and matcher validation when invalid data is sent for fingerprint match|
 |25|	SDK2024|        Schema and matcher validation when no data is sent for fingerprint match|
 |26|	SDK2025|	Schema and matcher validation for fingerprint match against more than ten fingerprints image|
-|27|	SDK2026| Schema and matcher validation for finagrprint match when subtype is wrong|
+|27|	SDK2026|        Schema and matcher validation for finagrprint match when subtype is wrong|
 |28|	SDK2027|	Schema and matcher validation for fingerprint match when face is sent instead of fingerprint|
-|29|	SDK2028|Schema and matcher validation for iris match failure|
+|29|	SDK2028|        Schema and matcher validation for iris match failure|
 |30|	SDK2029|	Schema and matcher validation for successful iris match|
 |31|	SDK2030|	Schema and matcher validation when invalid data is sent for iris match|
 |32|	SDK2031|	Schema and matcher validation when no data is sent for iris match|
-|33|	SDK2032|Schema and matcher validation for iris match against more than two iris images|
+|33|	SDK2032|        Schema and matcher validation for iris match against more than two iris images|
 |34|	SDK2033|	Schema and matcher validation for iris match when subtype is wrong|
 |35|	SDK2034|	Schema and matcher validation for iris match when face is sent instead of iris|
 |36|	SDK2035|	Schema and matcher validation for multiple modalities - Face and Fingerprints|
@@ -44,12 +44,12 @@
 |42|	SDK2041|	Schema, extraction and quality validation for fingerprints where quality check fails|
 |43|	SDK2042|	Schema, extraction and quality validation for face where quality check fails|
 |44|	SDK2043|	Schema, extraction and quality validation for iris where quality check fails|
-|45|	SDK2044| Schema & extraction validation when invalid fingerprint is sent|
+|45|	SDK2044|        Schema & extraction validation when invalid fingerprint is sent|
 |46|	SDK2045|	Schema & extraction validation when invalid face is sent|
 |47|	SDK2046|	Schema & extraction validation when invalid iris is sent|
 |48|	SDK2047|	Schema & extraction validation when no data is sent instead of fingerprint|
 |49|	SDK2048|	Schema & extraction validation when no data is sent instead of face|
-|50|	SDK2049| Schema & extraction validation when no data is sent instead of iris|
+|50|	SDK2049|         Schema & extraction validation when no data is sent instead of iris|
 |51|	SDK2050|	Schema, extraction and matcher validation for fingerprint extraction & match using templates|
 |52|	SDK2051|	Schema, extraction and matcher validation for face extraction & match using templates|
 |53|	SDK2052|	Schema, extraction and matcher validation for iris extraction & match using templates|
@@ -60,9 +60,9 @@
 |58|	SDK2066|	Schema and converter validation for face from ISO19794_5_2011 to IMAGE/PNG|
 |59|	SDK2067|	Schema and converter validation for face when the input data is invalid|
 |60|	SDK2068|	Schema and converter validation for face when no data is sent|
-|61|	SDK2069| Schema and converter validation for fingerprint from ISO19794_4_2011 to IMAGE/JPEG|
-|62|	SDK2070| Schema and converter validation for fingerprint from ISO19794_4_2011 to IMAGE/PNG|
-|63|	SDK2071|Schema and converter validation for fingerprint when the input data is invalid|
+|61|	SDK2069|        Schema and converter validation for fingerprint from ISO19794_4_2011 to IMAGE/JPEG|
+|62|	SDK2070|        Schema and converter validation for fingerprint from ISO19794_4_2011 to IMAGE/PNG|
+|63|	SDK2071|        Schema and converter validation for fingerprint when the input data is invalid|
 |64|	SDK2072|	Schema and converter validation for fingerprint when no data is sent|
 |65|	SDK2073|	Schema and converter validation for iris from ISO19794_6_2011 to IMAGE/PNG|
 |66|	SDK2074|	Schema and converter validation for iris when the input data is invalid|
