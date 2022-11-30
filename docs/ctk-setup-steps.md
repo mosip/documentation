@@ -26,7 +26,7 @@ _**Note**_:
 
 ## Steps to setup mosip-compliance-toolkit
 
-1\.	Browse to [mosip-compliance-toolkit](https://github.com/mosip-compliance-toolkit.git)
+1\.	Browse to [mosip-compliance-toolkit](https://github.com/mosip-compliance-toolkit.git).
        
 2\. The resources folder would contain schemas, test data and test cases that need to be added to MinIO and DB.
   
