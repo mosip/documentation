@@ -6,11 +6,9 @@
 
 **Release Date**: 1st December 2022
 
-
 ## Overview
 
-The 0.9.0 version of MOSIP’s compliance tool kit is the first beta release which covers the essential features to test an SBI and biometric SDK which follows MOSIP’s biometric specifications. The subsequent releases will have more aggressive test scenarios and integration components (like ABIS, Manual Adjudication & Manual Verification systems).
-
+The 0.9.0 version of MOSIP’s Compliance Tool Kit is the first beta release which covers the essential features to test an SBI and biometric SDK which follows MOSIP’s biometric specifications. The subsequent releases will have more aggressive test scenarios and integration components (like ABIS, Manual Adjudication & Manual Verification systems).
 
 ## Features Covered
 
