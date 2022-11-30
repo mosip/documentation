@@ -1,6 +1,6 @@
 # Setting up Compliance Tool Kit (CTK)
 
-## Pre-requisite
+## Pre-requisites
 
 CTK should be deployed with the required dockers.
 
@@ -42,9 +42,9 @@ _**Note**_:
     
 4\. Create a new folder named `schemas` in the above bucket and upload all **sbi** and **sdk** schemas, **testcase** schema from the resources folder to this folder.
 
-NOTE: _There is no need to upload `compliance_test_definitions_sbi.json` and `compliance_test_definitions_sdk.json`._
+_Note_: _There is no need to upload `compliance_test_definitions_sbi.json` and `compliance_test_definitions_sdk.json`._
 
-5\. Please restart the pods after adding new files in MinIO.
+5\. Restart the pods after adding new files in MinIO.
    
 ## Using Postman
    
@@ -56,7 +56,7 @@ NOTE: _There is no need to upload `compliance_test_definitions_sbi.json` and `co
 
 4\. Open the developer tools and copy the `Authorization` token from the headers section under the `Networks` tab.
          
-5\. Add the Authorization token in postman, copy the token and place it in the headers section of the request (Cookie=Authentication:eyAjksa...) and send the request.
+5\. Add the `Authorization` token in postman, copy the token and place it in the headers section of the request (Cookie=Authentication:eyAjksa...) and send the request.
     
      
  ## Steps to upload test cases to the Database
