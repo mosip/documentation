@@ -31,6 +31,13 @@
     * [Commons Developers Guide](commons-developer-guide.md)
     * [Audit Manager Developers Guide](audit-manager-developer-guide.md)
     * [OpenID-Bridge Developers Guide](openid-bridge-developer-guide.md)
+  * [Compliance Tool Kit](ctk-features.md) 
+    * [Versions](ctk-versions.md)
+      * [Version 0.9.0](ctk0.9.0-release-notes.md)
+    * [How to Guides]
+      * [How to SetUp CTK post installation](ctk-setup-steps.md)
+      * [How to use CTK](ctk-user-guide.md)
+      * [How to add more test cases](ctk-test-cases.md)
   * [Datashare](datashare.md)
   * [ID Authentication Services](id-authentication-services.md)
     * [ID Authentication Demographic Data Normalization](normalization-reference-impl.md)
