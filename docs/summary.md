@@ -36,7 +36,7 @@
       * [Version 0.9.0](ctk0.9.0-release-notes.md)
     * [User Guide](ctk-user-guide.md)
     * How to Guides
-      * [How to set up CTK post installation](ctk-setup-steps.md)
+      * [How to set up CTK](ctk-setup-steps.md)
       * [How to add more test cases](ctk-test-cases.md)
   * [Datashare](datashare.md)
   * [ID Authentication Services](id-authentication-services.md)
