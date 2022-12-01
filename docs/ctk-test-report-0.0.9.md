@@ -2,7 +2,7 @@
 
 ## SBI Testing
 
-### For Authentication Devices using MOSIP's Mock SBI:
+### For Authentication Devices using MOSIP's Mock SBI
 
 |**Scenarios**| **Finger** | **Iris** | **Face** |
 |-------------|------------|----------|----------|
@@ -13,7 +13,7 @@
 | **Test Rate (%)** | 100% | 100% | 100% |
 | **Pass Rate (%)** | 100% | 100% | 100% |
 
-### For Registration Devices using MOSIP's Mock SBI:
+### For Registration Devices using MOSIP's Mock SBI
 
 |**Scenarios**| **Finger** | **Iris** | **Face** |
 |-------------|------------|----------|----------|
@@ -24,7 +24,7 @@
 | **Test Rate (%)** | 100% | 100% | 100% |
 | **Pass Rate (%)** | 100% | 100% | 100% |
 
-### For Authentication Devices using MOSIP's Real SBI:
+### For Authentication Devices using MOSIP's Real SBI
 
 |**Scenarios**| **Finger** | **Iris** | **Face** |
 |-------------|------------|----------|----------|
@@ -35,7 +35,7 @@
 | **Test Rate (%)** | 100% | 0% | 0% |
 | **Pass Rate (%)** | 64%  | 0% | 0% |
 
-### For Registration Devices using MOSIP's Real SBI:
+### For Registration Devices using MOSIP's Real SBI
 
 |**Scenarios**| **Finger** | **Iris** | **Face** |
 |-------------|------------|----------|----------|
