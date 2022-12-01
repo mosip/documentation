@@ -61,3 +61,7 @@
 | Not Applicable | 0                 | 28                |
 | **Test Rate (%)** | 88% | 50% |
 | **Pass Rate (%)** | 47% | 36% |
+
+# Sonar Report
+
+![](_images/ctk-0.0.9-sonar-report.png)
