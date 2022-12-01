@@ -78,6 +78,3 @@ The detailed list of the test cases for SBI and SDK in the 0.9.0 version of the 
 * [Feature Documentation](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit)
 * [Compliance Tool Kit User Guide](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/ctk-user-guide)
 * [QA Report](ctk-test-report-0.0.9.md)
-* Sonar Report
-
-![](_images/ctk-0.0.9-sonar-report.png)
