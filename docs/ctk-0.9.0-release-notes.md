@@ -1,6 +1,6 @@
-# Version 0.9.0
+# Version 0.0.9
 
-**Release Name**: CTK 0.9.0
+**Release Name**: CTK 0.0.9 (Beta)
 
 **Upgrade From**: NA (First Release)
 
@@ -56,25 +56,27 @@ As part of the SDK test suite in the current version would support verification 
     
 The detailed list of the test cases for SBI and SDK in the 0.9.0 version of the Compliance Tool Kit  is available here:
 
-* SBI (https://mosip.atlassian.net/l/cp/jfX6EkG2)
-* SDK (https://mosip.atlassian.net/l/cp/zvwTk03B)
+* [SBI Test Cases](https://github.com/mosip/mosip-compliance-toolkit/blob/0.0.9-B1/resources/compliance_test_definitions_sbi.json)
+* [SDK Test Cases](https://github.com/mosip/mosip-compliance-toolkit/blob/0.0.9-B1/resources/compliance_test_definitions_sdk.json)
 
 ## Dependency
 
-* For Authentication and Authorization:
-    * artifactory-ref-impl: 1.2.0.1-B2
-    * kernel-auth-service: 1.2.0.1-B1
-* For Virus Scanning:
-    * clamAV: 1.2.0.1-B2
-* For encryption, decryption and trust validation
-    * kernel-keymanager-service: 1.2.0.1-B1
-* For adding partner certificates using partner management
-    * partner-management-service: 1.2.0.1-B1
-    * kernel-auditmanager-service: 1.2.0.1-B1
+* Artifactory: mosipid/artifactory-ref-impl: 1.2.0.1-B2
+* Audit manager: mosipid/kernel-auditmanager-service: 1.2.0.1-B1
+* Auth Manager: mosipid/kernel-authmanager: 1.2.0.1-B1
+* Key Manager: modipid/kernel-keymanager-service: 1.2.0.1-B1
+* Partner Management: mosipid/partner-management-service: 1.2.0.1-B1
+* KeyCloak: mosipid/keycloak-init: 1.2.0.1-B1
+* Postgres: mosipid/postgres-init: 1.2.0.1-B1
+* Config Server: config-server: mosipid/config-server: 1.1.2
+* Notification Service: mosipid/kernel-notification-service: 1.2.0.1-B1
+* ClamAV: clamav/clamav: latest
+* MinIO
 
 ## Documentation
 
 * [Feature Documentation](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit)
 * [Compliance Tool Kit User Guide](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/ctk-user-guide)
-* QA Report
+* [QA Report](ctk-test-report-0.0.9.md)
 * Sonar Report
+![](_images/ctk-0.0.9-sonar-report.png)
