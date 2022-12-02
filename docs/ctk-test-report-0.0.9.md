@@ -54,7 +54,7 @@ The MOSIP’s real SBI has been tested for compliance with the specification onl
 | **Test Rate (%)** | 100% | 0% | 0% |
 | **Pass Rate (%)** | 64%  | 0% | 0% |
 
-### For Registration Devices using MOSIP's Real SBI
+### For Authentication Devices using MOSIP's Real SBI (Only Finger)
 The MOSIP’s real SBI has been tested for compliance with the specification for iris, face and fingerprint devices. 
 
 |**Scenarios**| **Finger** | **Iris** | **Face** |
