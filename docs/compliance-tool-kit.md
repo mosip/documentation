@@ -1,12 +1,12 @@
 # Compliance Tool Kit
 
-Compliance Tool Kit (CTK) is an online portal that can be used by MOSIP partners to test the compliance of their product developed as per specifications (specs) published by MOSIP. 
+Compliance Tool Kit (CTK) is an online portal that can be used by MOSIP partners to test the compliance of their product developed as per specifications (specs) published/adopted by MOSIP. 
 
-Currently, CTK supports testing of compliance with the below biometrics specifications:
+Currently, CTK supports testing of compliance with the below specifications:
 
-1. **SBI**: Secure Biometric Interface (SBI) is used to interface with biometric devices. MOSIP’s device partners are required to build a software layer for their devices to communicate with MOSIP’s registration client or authentication client. The specifications that they should follow are defined as Secure Biometrics Interface (SBI) specs. The compliance tool kit should ensure that the interface built by the device provider is following the specs, and security and integrity rules defined in the SBI spec.
+1. **SBI**: Secure Biometric Interface (SBI) is used to interface with biometric devices. Device partners are required to build a software layer that provides a unified communication protocol for all biometric capture use cases. The specifications that should be followed are defined as Secure Biometrics Interface (SBI) specs. The compliance tool kit ensures that the interface built by the device provider is following the specs, and certain level of security and integrity as defined in the SBI spec. The device hardware security features are not tested as part of this toolkit. 
 
-2. **SDK**: MOSIP’s Biometric Service Providers (BSPs) provide an SDK implementation which supports quality check, 1:N match, extraction, and conversion of biometrics. MOSIP defines an IBioAPI as the specification for this SDK implementation. MOSIP’s biometric service providers are also required to build an interface between their solution and MOSIP to smoothen the communication between the two entities. The compliance tool kit would make sure that these interfaces are as per the MOSIP-defined specifications for smooth interaction.
+2. **SDK**: Biometric Service Providers (BSPs) provide SDK implementation which supports quality check, match, extraction, and conversion of biometrics. MOSIP defines an [IBioAPI](https://github.com/mosip/commons/blob/master/kernel/kernel-biometrics-api/src/main/java/io/mosip/kernel/biometrics/spi/IBioApi.java) as the specification for this SDK implementation. Biometric SDK providers are also required to integrate this [http service](https://github.com/mosip/biosdk-services/tree/release-1.2.0) in their solution. This allows to run the SDK as an independant http service. The compliance tool kit would make sure that these interfaces are as per the MOSIP-defined specifications for smooth interaction.
 
 <!--
 3. **ABIS**- Automated Biometric Identification System (ABIS) vendors provide ABIS component which performs de-duplication of a resident's biometric data. This is useful to ensure the uniqueness of residents’ biometrics. MOSIP’s ABIS partners communicate with MOSIP via a queue. MOSIP defines ABIS specs for the same.  
