@@ -15,6 +15,8 @@ Below are simple steps to use this portal:
 9.	You can see all the Test Run details as well. For example, the request sent to SBI, the response received from SBI, validations performed on the response and the result.
 11.	Test runs previously executed will be available in the Test Run history.
 12.	More collections can be created as per the test cases required.
+
+{% embed url="https://www.youtube.com/playlist?list=PLJH-POb_55z8YYS_qAk_QNBQeiQ2VrtZD" %}
  
 ## Login
 
@@ -50,7 +52,7 @@ Let us go through each of them in detail.
   
 ### View projects
   
-Once the user logs into the compliance tool kit, the user can view all the existing projects in the dashboard.
+Once the partner logs into the compliance tool kit, they can view all the existing projects in the dashboard.
 
 The project dashboard will display the following attributes of a project:
 * Name of the project
