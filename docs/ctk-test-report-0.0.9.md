@@ -1,6 +1,6 @@
 # Testing Scope
 
-The scope of testing revolved around verifying the compliance of the product as per the specifications published by MOSIP using below the devices:
+The scope of testing revolved around verifying the compliance of the product as per the specifications published by MOSIP using the below devices:
 
 * Registration devices for iris, face and fingerprint
 * Authentication devices for iris, face and fingerprint
