@@ -84,6 +84,7 @@
     * [Resident Services Developers Guide](resident-services-developer-guide.md)
   * [Resident Mobile Application (Draft)](mobile-application.md)
     * [Resident Mobile Application User Guide](mobile-id-app-user-guide-new.md)
+    * [Resident Mobile Application User Guide Beta](inji-mobile-app-beta.md)
   * [Persistence](persistence.md)
     * [Postgres DB](postgres-db.md)
     * [Object Store](object-store.md)
