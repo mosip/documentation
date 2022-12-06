@@ -1,17 +1,17 @@
 # CTK Test Cases
 
-Compliance Tool Kit (CTK) is an online portal that can be used by MOSIP partners to test the compliance of their product developed as per specifications (specs) published by MOSIP. CTK currently support compliance verification of SBI and SDK specifications.
+Compliance Tool Kit (CTK) is an online portal that can be used by MOSIP partners to test the compliance of their product developed as per the specifications (specs) published by MOSIP. CTK currently supports compliance verification of SBI and SDK specifications.
 
 ## What are the CTK test cases?
 
-To verify compliance of partner software with MOSIP specifications, MOSIP has created predefined test cases for the type of specification. 
+To verify the compliance of the partner software with MOSIP specifications, MOSIP has created predefined test cases for the type of specification. 
 
-* Each test case in CTK runs on a given method of the specs; For example, there will be a test case for the “device” method of SBI specs
-* Each test case in CTK defines the attributes required to create the request to be sent to the partner application
-* Each test case also defines the response expected from the partner application
-* Each test case also defines the validators to be run in the response received
-* Each validator also performs a predefined check on the response 
-* If all validations are successful, then the test case is considered as passed, otherwise the test case fails 
+* Each test case in CTK runs on a given method of the specs. For example, there will be a test case for the `device` method of SBI specs.
+* Each test case in CTK defines the attributes required to create the request to be sent to the partner application.
+* Each test case also defines the response expected from the partner application.
+* Each test case also defines the validators to be run in the response received.
+* Each validator also performs a predefined check on the response.
+* If all validations are successful, then the test case is considered as passed, otherwise the test case fails.
 
 Partners can use CTK to run these test cases to verify if their implementation adheres to the MOSIP’s specs or not. 
 
@@ -19,7 +19,7 @@ These test cases are defined in JSON format and saved in the CTK database.
 
 ## Sample SBI test case
 
-This test case is for verifying the check device discovery endpoint of an SBI. This test case is available for both `Registration` and `Auth` SBI projects and all `device type` and `sub type` combinations.
+This test case is for verifying the **check device discovery** endpoint of an SBI. This test case is available for both `Registration` and `Auth` SBI projects and all `device type` and `sub type` combinations.
 
 ```jsonc
 {
@@ -81,7 +81,7 @@ This test case is for verifying the check device discovery endpoint of an SBI. T
 
 ## Sample SDK test case
 
-This test case is for verifying the quality of face biometrics (if it is above the acceptable threshold). This test case will be available for `Face modality` only and for the `Quality Check project`.
+This test case is for verifying the **quality of face biometrics** (if it is above the acceptable threshold). This test case will be available for `Face modality` only and for the `Quality Check project`.
 
 ```jsonc
 {
@@ -125,7 +125,7 @@ This test case is for verifying the quality of face biometrics (if it is above t
 
 ## Attributes in a test case
 
-As can be seen from the above two samples, few attributes are common across the test cases for both SBI and SDK while few are optional. Below is the list of each attribute and its use.
+As it can be seen from the above two samples, few attributes are common across the test cases for both SBI and SDK while few are optional. Below is the list of each attribute and its use.
 
 | Name   | Type  | Description | Allowed Values |
 |-----------------|-------------------|---------------|-----------|
@@ -166,9 +166,9 @@ Any new test case is to be uploaded to the database. You can also update an exis
 
 2\. URL endpoint `https://{base_URL}/v1/toolkit/saveTestCases`
 
-3\. Copy the Authorization token in the request header by logging into the compliance toolkit in your env with a user having a `GLOBAL_ADMIN` role. Open the developer tools and copy the Authorization token from the headers section under the `Networks` tab. Add the Authorization token in postman, copy the token and place it in the headers section of the request (`Cookie=Authorization:eyAjksa...`)
+3\. Copy the `Authorization` token in the request header by logging into the Compliance Toolkit in your env with a user having a `GLOBAL_ADMIN` role. Open the developer tools and copy the Authorization token from the headers section under the `Networks` tab. Add the Authorization token in postman, copy the token and place it in the headers section of the request (`Cookie=Authorization:eyAjksa...`)
 
-4\. Copy test cases array JSON and prepare a request as shown below.
+4\. Copy the test cases array JSON and prepare a request as shown below.
 
 5\. Request body for saveTestCases request 
 
