@@ -8,7 +8,7 @@
 
 ## Overview
 
-The 0.9.0 version of MOSIP’s Compliance Tool Kit is the first beta release which covers the essential features to test an SBI and biometric SDK which follows MOSIP’s biometric specifications. The subsequent releases will have more aggressive test scenarios and integration components (like ABIS, Manual Adjudication & Manual Verification systems).
+The 0.9.0 version of MOSIP’s Compliance Tool Kit is the first beta release which covers the essential features to test an SBI and Biometric SDK which follows MOSIP’s biometric specifications. The subsequent releases will have more aggressive test scenarios and integration components (like ABIS, Manual Adjudication & Manual Verification systems).
 
 ## Features Covered
 
@@ -24,7 +24,7 @@ are available as part of the releases.
 
 The current version can be used by the device and biometric SDK vendors to test their SBIs and SDKs.
 
-As part of the SBI test suite, we would support verification schema and signature verification of,
+As a part of the SBI test suite, we support the verification schema and signature verification of,
 * Interfaces
     * Device discovery
     * Device info
@@ -40,7 +40,7 @@ As part of the SBI test suite, we would support verification schema and signatur
     * Iris
     * Face
 
-As part of the SDK test suite in the current version would support verification of schema and interface level verification for,
+As a part of the SDK test suite in the current version, we support the verification of schema and interface level verification for,
 
 * Interfaces
     * Initialization
@@ -54,7 +54,7 @@ As part of the SDK test suite in the current version would support verification 
     * Iris
     * Face
     
-The detailed list of the test cases for SBI and SDK in the 0.9.0 version of the Compliance Tool Kit  is available here:
+The detailed list of the test cases for SBI and SDK in the 0.9.0 version of the Compliance Tool Kit are available here:
 
 * [SBI Test Cases](https://github.com/mosip/mosip-compliance-toolkit/blob/0.0.9-B1/resources/compliance_test_definitions_sbi.json)
 * [SDK Test Cases](https://github.com/mosip/mosip-compliance-toolkit/blob/0.0.9-B1/resources/compliance_test_definitions_sdk.json)
@@ -78,3 +78,4 @@ The detailed list of the test cases for SBI and SDK in the 0.9.0 version of the 
 * [Feature Documentation](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit)
 * [Compliance Tool Kit User Guide](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/ctk-user-guide)
 * [QA Report](ctk-test-report-0.0.9.md)
+* [Videos](https://www.youtube.com/playlist?list=PLJH-POb_55z8YYS_qAk_QNBQeiQ2VrtZD)
