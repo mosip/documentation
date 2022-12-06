@@ -28,9 +28,9 @@ The partner needs to enter the registered username or e-mail and password to log
 
 ## Dashboards
   
-Once the partner logs into the compliance tool kit, they can view the `Project Dashboard` by default and would have the option to view the `Biometric data dashboard` as well.
+Once the partner logs into the compliance tool kit, they can view the `Project Dashboard` by default and would have the option to view the `Biometric Data Dashboard` as well.
  
-* `Project`: A project is a module that the partner wants to test. For example, if a device partner has developed a new version of his/her SBI for their fingerprint slap device, then, they can create a project in the compliance tool kit to verify this version of SBI.  
+* `Project`: A project is a module that the partner wants to test. For example, if a device partner has developed a new version of their SBI for the fingerprint slap device, then, they can create a project in the compliance tool kit to verify this version of SBI.  
 
 ![CTK Project Dashboard](_images/ctk-toolkit-dashboard.png)
 
