@@ -35,15 +35,15 @@ To access the build and read through the deployment instructions, refer to the b
 
 ## Configurations
 
-For details related to the Compliance Tool Kit configurations, refer to [Compliance Tool Kit configuration document](https://github.com/mosip/mosip-compliance-toolkit/tree/0.0.9-B1).
+For details related to the Compliance Tool Kit configurations, refer [Compliance Tool Kit configuration document](https://github.com/mosip/mosip-compliance-toolkit/tree/0.0.9-B1).
 
 ## Developer Guide
 
-To be able to add new test cases to CTK, refer to [How to add more test cases](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/how-to-guides/ctk-test-cases).
+To be able to add new test cases to CTK, refer [How to add more test cases](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/how-to-guides/ctk-test-cases).
 
 ## Source code
 
-To access the source code for compliance tool kit, refer to, 
+To access the source code for Compliance Tool Kit, refer, 
 * [Compliance Tool Kit Backend](https://github.com/mosip/mosip-compliance-toolkit/tree/0.0.9-B1)
 * [Compliance Tool Kit UI](https://github.com/mosip/mosip-compliance-toolkit-ui/tree/0.0.9-B1)
 
