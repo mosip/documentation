@@ -11,3 +11,17 @@ For Android devices, `Google Nearby Connections API` and the `Google SafetyNet A
 Prerequisite: Build `Inji` code to generate an `apk` file. Transfer the `apk` file on to a smart phone on which it is to be installed.
 
 ![](\_images/inji-install-flow.png)
+
+## First launch of the app 
+
+
+
+## Initial setup 
+
+On the Home screen, a few tooltips are displayed after the initial setup to guide you through the next steps.
+
+
+
+
+
+
