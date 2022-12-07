@@ -36,6 +36,15 @@ It is recommended to keep your digital credentials (ID) with you at all times. T
 ### Downloading VC using the Application ID feature
 
 
+## Sharing Credentials
+
+
+## Wallet binding flow
+
+
+## Login with QR code scan flow
+
+
 
 
 
