@@ -12,14 +12,18 @@ Prerequisite: Build `Inji` code to generate an `apk` file. Transfer the `apk` fi
 
 ![](\_images/inji-install-flow.png)
 
+
 ## First launch of the app 
 
+
+![](\_images/inji-initial-setup-flow.png)
 
 
 ## Initial setup 
 
-On the Home screen, a few tooltips are displayed after the initial setup to guide you through the next steps.
+On the **Home** screen, a few tooltips are displayed after the initial setup to guide the user with the next steps.
 
+![](\_images/inji-home-tooltips.png)
 
 
 
