@@ -25,6 +25,17 @@ On the **Home** screen, a few tooltips are displayed after the initial setup to 
 
 ![](\_images/inji-home-tooltips.png)
 
+## Downloading credentials
+
+It is recommended to keep your digital credentials (ID) with you at all times. To get started with the app, Add IDs to your profile.
+
+### Downloading VC using the UIN/VID feature
+
+
+
+### Downloading VC using the Application ID feature
+
+
 
 
 
