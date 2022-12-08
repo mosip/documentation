@@ -58,11 +58,13 @@ Click on the ID card generated to view the following details:
 ### Viewing history of the downloaded credential
 
 
-### Associating a tag with credentials
-
-
 ### Downloading VC using the Application ID feature
 
+At times, when the resident/user does not have their UIN/ VID, but they possess the Registration ID or PRID, they can make use of this feature to download their digital credentials.
+
+![](\_images/inji-application-id-flow.png)
+
+* After entering the Application ID, click on **Get UIN/VID** and follow the steps mentioned in the flow above.
 
 ## Sharing Credentials
 
