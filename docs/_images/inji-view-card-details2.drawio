@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-12-08T09:42:30.466Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" version="20.6.0" etag="GLgZoxBnP8UbAA8Phj1w" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-08T09:44:12.913Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36" version="20.6.0" etag="uLK9Rwdv8O5mUQVAhiBk" type="github">
   <diagram id="9c_dhzM4iJGVlJ9PcyJI" name="Page-1">
     <mxGraphModel dx="1022" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -16,9 +16,6 @@
         <mxCell id="hTx3K6DCzhfDZRgwBcLb-5" value="Enter the tag name &lt;br&gt;and click &lt;b&gt;Save&lt;/b&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="70" y="115" width="130" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="hTx3K6DCzhfDZRgwBcLb-6" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; text-align: start;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Enter%20the%20tag%20name%20%26lt%3Bbr%26gt%3Band%20click%20%26lt%3Bb%26gt%3BSave%26lt%3B%2Fb%26gt%3B%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3Bautosize%3D1%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%2270%22%20y%3D%22115%22%20width%3D%22130%22%20height%3D%2240%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;You can see the new tag &lt;br&gt;name&amp;nbsp;updated&lt;br&gt;against the credential" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="326.54" y="110" width="150" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="hTx3K6DCzhfDZRgwBcLb-9" value="Same is reflected under My IDs tab" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="600" y="125" width="140" height="30" as="geometry" />
         </mxCell>
@@ -30,6 +27,9 @@
         </mxCell>
         <mxCell id="hTx3K6DCzhfDZRgwBcLb-12" value="&lt;b&gt;Step 6&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="640" y="100" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="hTx3K6DCzhfDZRgwBcLb-13" value="New tag name updated" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="319.62" y="125" width="150" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
