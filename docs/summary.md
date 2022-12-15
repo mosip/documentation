@@ -39,6 +39,7 @@
     * How to Guides
       * [How to set up CTK](ctk-setup-steps.md)
       * [How to add more test cases](ctk-test-cases.md)
+      * [How to set up SDK for testing](ctk-sdk-setup.md)
   * [Datashare](datashare.md)
   * [ID Authentication Services](id-authentication-services.md)
     * [ID Authentication Demographic Data Normalization](normalization-reference-impl.md)
