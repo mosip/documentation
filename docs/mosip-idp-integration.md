@@ -2,9 +2,9 @@
 
 Once a foundation ID is in place for a country, the next step is to allow the verification of the ID holders for both government and private agencies to provide various services. Using the current authentication module for verification requires the relying parties to build custom components specific to the MOSIP authentication module in various layers of their applications. It allows more flexibility for the relying parties like designing their own user interaction flow and request for very specific user details in KYC etc.
     
-But few straightforward applications like enabling unique login to their website, fetching some basic details like name, age etc. does not need above flexibilities, but needs a simple integration mechanism.
+A few straightforward applications which enable unique login to their website, fetching some basic details like name, age etc. does not need above flexibilities, but needs a simple integration mechanism.
 
-Hence, we are developing a new module called MOSIP IdP (Identity Provider), which will be OpenID Connect and Oauth2.0 compliant system, and can be used by a relying party to perform quick and simple integration to MOSIP for user verification.
+Hence, have developed a new module called MOSIP IdP (Identity Provider), which will be `OpenID Connect` and `Oauth2.0` compliant system, and can be used by a relying party to perform quick and simple integration to MOSIP for user verification.
 
 ## Advantages of using OpenID Connect
 
@@ -33,7 +33,7 @@ The existing partner management portal will be used for Client ID generation. On
 *	If private key used for client authentication is compromised, new client ID has to be generated and new user consents will be required.
 *	Support will be provided only for the authorization code flow of OIDC since it is the most secure option.
 
-## Supported Authorize API request parameters:
+## Supported Authorize API request parameters
 
 1.	cope - profile, email, address, phone
 2.	response_type - code
@@ -49,7 +49,7 @@ The existing partner management portal will be used for Client ID generation. On
 12.	claims_locales
 13.	claims
 
-## Claims supported by userinfo API:
+## Claims supported by userinfo API
 
 * sub - partner-specific user token (PSUT)
 *	name
@@ -63,7 +63,7 @@ The existing partner management portal will be used for Client ID generation. On
 *	Custom
     * individual_id (What we share in this claim is a system-level config and it can be UIN, perceptual VID or temporary VID)
 
-## Claims supported by ID Token:
+## Claims supported by ID Token
 
 *	iss
 *	sub - (PSUT)
