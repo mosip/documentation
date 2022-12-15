@@ -68,6 +68,13 @@ At times, when the resident/user does not have their UIN/ VID, but they possess 
 
 ## Sharing Credentials
 
+## Face authentication flow
+
+Below are the steps for performing face authentication on resident' phone using Inji.
+
+![](\_images/inji-fa-sheet1.png)![](\_images/inji-fa-sheet2.png)
+
+
 
 ## Wallet binding flow
 
