@@ -4,18 +4,19 @@ A partner can test both their JAR based or docker service based biometric SDKs w
 
 Partners having SDK JARs can test thier biometric SDK JARs using compliance tool kit, by wrapping their SDKs in MOSIP’s BioSDK Services which provide REST endpoints to interact with the SDK jar.
 
-1. Checkout MOSIP’s Bio SDK Services from `https://github.com/mosip/biosdk-services.git`. Make sure you checkout the code from **develop** branch.
-2. Build the code with command `mvn clean install -Dgpg.skip`
-3. After build is successful place your SDK jar in the `biosdk-services\biosdk-services\lib` folder.
-4. Create a bat file to run biosdk-services
+* Checkout MOSIP’s Bio SDK Services from `https://github.com/mosip/biosdk-services.git`. Make sure you checkout the code from **develop** branch.
+* Build the code with command `mvn clean install -Dgpg.skip`
+* After build is successful place your SDK jar in the `biosdk-services\biosdk-services\lib` folder.
+* Create a bat file to run biosdk-services
+  
   ```
   cd <LOCAL_PATH>\biosdk-services\target
   java -Dloader.path=../lib/<SDK_JAR_NAME> -Dbiosdk_bioapi_impl=io.mosip.mock.sdk.impl.SampleSDK -jar biosdk-services-1.2.1-SNAPSHOT.jar
   ```
   Here, the `LOCAL_PATH` is the installation directory path for Bio SDK Service and `SDK_JAR_NAME` is the SDK JAR name.
 
-5. Once the Bio SDK Service is running, please check if JAR is working using the Swagger available at URL: `http://localhost:9099/biosdk-service/swagger-ui.html`
-6. In Compliance tool kit for the SDK project configure the `BASE_URL` as: `http://localhost:9099/biosdk-service`
+* Once the Bio SDK Service is running, please check if JAR is working using the Swagger available at URL: `http://localhost:9099/biosdk-service/swagger-ui.html`
+* In Compliance tool kit for the SDK project configure the `BASE_URL` as: `http://localhost:9099/biosdk-service`
 
 ![](_images/ctk-setup-sdk-jar.png)
 
