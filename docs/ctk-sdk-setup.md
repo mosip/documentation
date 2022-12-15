@@ -1,9 +1,4 @@
-# How to set up an SDK?
-
-A partner can test their biometric SDK with MOSIP's compliace tool kit uisng two different ways:
-
-* Using SDK jar
-* Using Docker service
+A partner can test both their JAR based or docker service based biometric SDKs with MOSIP's compliace tool kit. As part of this documentation we have provided the steps that can be followed by the partner to enabling testing both the types of solutions.
 
 ## Test using a SDK JAR
 
@@ -32,5 +27,6 @@ Once the docker is deployed and accessible, the partner needs to add the correct
 
 ![](_images/ctk-setup-sdk-docker.png)
 
-But the partner may face the CORS issue. To get around this, they can allow the compliance toolkit URL in their controllers using @CrossOrigin("<URL>") annotation.
-Otherwise, they can use a proxy service which would redirect all their calls to the docker.
+But the partner may face the CORS issue. To get around this, they can allow the compliance toolkit URL in their controllers using `@CrossOrigin("<URL>")` annotation.
+
+Otherwise, a proxy service can be used, which would redirect all the calls to the docker.
