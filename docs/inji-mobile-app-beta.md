@@ -76,7 +76,7 @@ Below are the steps for performing face authentication on resident' phone using 
 
 ![](\_images/inji-fa-sheet2.png)
 
-
+![](\_images/inji-fa-open-scanner.png)
 
 ## Wallet binding flow
 
