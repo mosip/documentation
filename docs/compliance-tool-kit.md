@@ -1,5 +1,3 @@
-# Compliance Tool Kit
-
 Compliance Tool Kit (CTK) is an online portal that can be used by MOSIP partners to test the compliance of their product developed as per specifications (specs) published/adopted by MOSIP. 
 
 Currently, CTK supports testing of compliance with the below specifications:
