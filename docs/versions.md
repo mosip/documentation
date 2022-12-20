@@ -1,9 +1,9 @@
-# CTK Versions
+# IdP Versions
 
-## Version: 0.0.9
-* Name: CTK 0.0.9
-* Date: 1st December, 2022
-* [Release Notes](ctk-0.0.9-release-notes.md)
+## Version: 1.0.0
+* Name: IdP 1.0.0
+* Date: 8th January, 2023
+* [Release Notes](release-notes-1.0.0.md)
 
 
 
