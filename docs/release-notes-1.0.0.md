@@ -21,8 +21,8 @@ are available as part of the releases.
 
 ## Documentation
 
-* [Feature Documentation](identity-provider.md)
+* [Feature Documentation](./)
 * [Integration Guides](inetgration-guide.md)
 * [How to Guides](how-to-guide.md)
 * [QA Report](test-report-1.0.0.md)
-* [Videos]()
+* [Videos](release-notes-1.0.0.md)
