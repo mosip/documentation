@@ -1,5 +1,0 @@
-"$id": ./info-request.yaml
-"$schema": https://json-schema.org/draft/2020-12/schema
-title: Device Info Request
-description: "The request is used to identify the MOSIP compliant devices and their status by the applications.\n\nVerb: **MOSIPINFO**. There are no parameters in this request.\n\nEndpoints:\n\nHTTP:  `/info`\n\nAndroid:  `appId:Info`\n\nIOS:  `APPIDINFO://<call-back-app-url>?ext=<caller app name>&type=<type as defined in mosip device request>`"
-
