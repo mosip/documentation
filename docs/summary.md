@@ -17,9 +17,9 @@
    * [Wallet Binding APIs](wallet-binding-apis.md)
    * [Wallet Authentication APIs](wallet-authentication-apis.md)
 * [How to Guides](how-to-guides.md)
-   * [Add additional claims](add-additonal-claims.md)
-   * [Use mock authentication system](mock-authentication-system.md)
-   * [Use mock client application](mock-client-application.md)
+   * [Add Additional Claims](add-additonal-claims.md)
+   * [Use Mock Authentication System](mock-authentication-system.md)
+   * [Use Mock Client Application](mock-client-application.md)
 * [Build & Deployment](build-&-deployment.md)
 * Integrations
    * [MOSIP](https://docs.mosip.io)
