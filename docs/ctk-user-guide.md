@@ -271,8 +271,8 @@ Once the partner creates a collection, they can view the collection details by c
  
 ![](_images/ctk-run-result.png) 
   
-    * The partner can also see the time elapsed
-    * They can also view the detailed test run report
+* The partner can also see the time elapsed
+* They can also view the detailed test run report
  
 ![](_images/ctk-run-details.png) 
   
