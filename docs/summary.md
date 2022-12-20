@@ -11,3 +11,4 @@
   * [How to set up SDK for testing](ctk-sdk-setup.md)
 * [License](license.md)
 * [MOSIP](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/4EyCrLbFom7vj7UcMIUZ/)
+* [MOSIP Website](https://mosip.io/)
