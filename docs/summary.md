@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Overview](README.md)
+* [Architecture](architecture.md)
 * [Versions](versions.md)
   * [Version 1.0.0](release-notes-1.0.0.md)
     * [Test Report](test-report-1.0.0.md)
