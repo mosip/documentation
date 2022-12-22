@@ -6,6 +6,5 @@ But a few straightforward applications like enabling unique login to their websi
 
 Hence, we have developed a new module called IdP (Identity Provider), which will be [OpenID Connect](https://openid.net/connect/) and [OAuth 2.0](https://oauth.net/2/) compliant system and can be used by a relying party to perform quick and simple integration to any authentication system for user verification.
 
-### Architecture Principles
+### Benefits of IdP
 
-### Source code
