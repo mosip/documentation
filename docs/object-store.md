@@ -2,7 +2,7 @@
 
 ## Overview
 
-Object Store is a storage module for MOSIP named as [Khazana](https://github.com/mosip/khazana). The module is an abstraction of storage layer used across [Regclient](https://github.com/mosip/registration-client), [Packetmanager](https://github.com/mosip/packet-manager), [Datashare or durian](https://github.com/mosip/durian) for packets and biometric data.
+Object Store is a storage module for MOSIP named as [Khazana](https://github.com/mosip/khazana). The module is an abstraction of storage layer used across [Registration Client](https://github.com/mosip/registration-client), [Packet Manager](https://github.com/mosip/packet-manager), [Datashare or Durian](https://github.com/mosip/durian) for packets and biometric data.
 
 Khazana provides following adapters to store objects
 
