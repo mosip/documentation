@@ -19,11 +19,11 @@ Object Store is used for following purpose wihin mosip
 
 As part of our sandbox deployment we have provided an example use case with [minio](https://www.minio.io) for on-prem deployment and AWS S3 with AWS deployment. Object Store is installed as part of [default sandbox deployment](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3/external/object\_store).
 
-__Note:__ Please note its important to choose the right partner for object storage and work with them to scale acordingly. 
+__Note:__ Please note its important to choose the right partner for object storage and work with them to scale acordingly. Please follow the hardware estimate for Object Store based on respective Object store products. 
 
-Please follow the hardware estimate for Object Store based on respective Object store products. 
+The below is the list of S3 Java API's used by MOSIP. This can be used to understand the vendor compatibility. Khazana does not use any internal business logic and is purely an storage abstraction layer.
 
-| | |
+| Java API Used by MOSIP| S3 Documentation URL |
 |:----|:----|
 |getConnection(bucketName).getObject(bucketName, finalObjectName)|https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html#getObject-com.amazonaws.services.s3.model.GetObjectRequest|
 |getConnection(bucketName).getObjectMetadata(bucketName, finalObjectName)|https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html#getObjectMetadata-java.lang.String-java.lang.String|
