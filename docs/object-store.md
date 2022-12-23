@@ -25,12 +25,11 @@ The below is the list of S3 Java API's used by MOSIP. This can be used to unders
 
 | Java API Used by MOSIP| S3 Documentation URL |
 |:----|:----|
-|getConnection(bucketName).getObject(bucketName, finalObjectName)|https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html#getObject-com.amazonaws.services.s3.model.GetObjectRequest|
+|getConnection(bucketName).getObject(bucketName, finalObjectName)|https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html#getObject-java.lang.String-java.lang.String-|
 |getConnection(bucketName).getObjectMetadata(bucketName, finalObjectName)|https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html#getObjectMetadata-java.lang.String-java.lang.String|
 |doesBucketExistV2(bucketName)|https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html#doesBucketExistV2-java.lang.String|
 |createBucket(bucketName)|https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html#createBucket-java.lang.String|
-|getConnection(bucketName).getObject(bucketName, finalObjectName)|https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3Client.html#getObject-com.amazonaws.services.s3.model.GetObjectRequest|
-|getObjectMetadata()|https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/S3Object.html#getObjectMetadata--|
+|getObjectMetadata()|https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/S3Object.html#getObjectMetadata|
 |getObjectMetadata().getUserMetadata()|https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/ObjectMetadata.html#getUserMetadata|
 |addUserMetadata(m.getKey(), m.getValue())|https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/ObjectMetadata.html#addUserMetadata-java.lang.String-java.lang.String|
 |PutObjectRequest(bucketName, finalObjectName, s3Object.getObjectContent(), objectMetadata)|https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/model/PutObjectRequest.html#PutObjectRequest-java.lang.String-java.lang.String-java.io.InputStream-com.amazonaws.services.s3.model.ObjectMetadata|
