@@ -7,8 +7,8 @@ Object Store is a storage module for MOSIP named as [Khazana](https://github.com
 Khazana provides following adapters to store objects
 
 1. POSIX - Supports storage of packets on a filesystem. Its typically used by registration client to store packets locally on the machine. This adapter is not receommended for usage in low latency environments like packet manager. 
-2. S3 - [S3](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html) is one of the well known  API for object stores. [AWS Java S3 client](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3.html) is used in Khazana to support any S3 compliant object storage solutions. 
-3. Swift - An object storage system from [Openstack](https://docs.openstack.org/swift/latest/getting_started.html). Swift has published API's and Khazana supports the same on experimental basis using [JOSS Sdk](https://joss.javaswift.org/). This works with any Swift or Swift compliant object storage solutions.
+2. S3 - [S3](https://docs.aws.amazon.com/AmazonS3/latest/API/Welcome.html) is one of the well known  API for object stores. [AWS Java S3 Client](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/s3/AmazonS3.html) is used in Khazana to support any S3 compliant object storage solutions. 
+3. Swift - An object storage system from [Openstack](https://docs.openstack.org/swift/latest/getting_started.html). Swift has published API's and Khazana supports the same on experimental basis using [JOSS SDK](https://joss.javaswift.org/). This works with any Swift or Swift compliant object storage solutions.
 
 Object Store is used for following purpose wihin mosip
 
