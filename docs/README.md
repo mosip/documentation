@@ -8,7 +8,7 @@ Hence, we have developed an identity provider solution called **e-Signet**, whic
 
 ### Benefits
 
-There are multiple benefits of using IdP for both the residents as well as the government and private agencies.
+There are multiple benefits of using e-Signate for both the residents as well as the government and private agencies.
 
 How are the residents benefitted?
 
