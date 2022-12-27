@@ -6,7 +6,7 @@ But a few straightforward applications that enable unique login to their website
 
 Hence, a new module called `IdP` (Identity Provider) has been developed, which is [OpenID Connect](https://openid.net/connect/) and [OAuth 2.0](https://oauth.net/2/) compliant system and can be used by the relying parties to perform quick and simple integrations to any authentication system for `user verification`.
 
-### Benefits of IdP
+### Benefits
 
 There are multiple benefits of using IdP for both the residents as well as the government and private agencies.
 
