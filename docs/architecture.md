@@ -32,52 +32,40 @@
 
 4. **IDP Core**
 
-Library component used to maintain the common interfaces, DTOs and utility methods
+* Library component used to maintain the common interfaces, DTOs and utility methods
+* Used as a build time dependency for IDP service
+* Used as a compile time dependency for Authentication Wrapper library since this library contains the common interfaces and DTOs
 
-Used as a build time dependency for IDP service
+5. **Authentication Wrapper**
 
-Used as a compile time dependency for Authentication Wrapper library since this library contains the common interfaces and DTOs
+* Library component which has interface implementations required by the IDP service for loose coupled integration to Authentication System
+* Contains all the integration logic to connect to an Authentication System and proxy the authentication process and user claims collection
+* Expected as runtime dependency to facilitate use of officially released container images even in custom integrations
 
-Authentication Wrapper
+6. **Authentication System**
 
-Library component which has interface implementations required by the IDP service for loose coupled integration to Authentication System
+* System responsible to contain resident demographic and optionally biometric information to perform authentication and provide user information
+* In case of integration with MOSIP based ID system, this could IDA module
+* In case of integration with non-MOSIP ID system, this could be any functional or foundational ID system which can facilitate mechanism to do verification and share user information.
 
-Contains all the integration logic to connect to an Authentication System and proxy the authentication process and user claims collection
+7. **Cache Server**
 
-Expected as runtime dependency to facilitate use of officially released container images even in custom integrations
+* Responsible to temporarily maintain the current transaction details with a short expiry time
+* Used for faster access and update of transaction details
+* Redis is currently used and integrated behind spring cache, so can be switched easily with minor changes to configurations
 
-Authentication System
+8. Database
 
-System responsible to contain resident demographic and optionally biometric information to perform authentication and provide user information
+* Contains the tables required for keymanager component and stores the OIDC client details
+* Postgres is used as current database, but can be switched easily with minor changes to configuration and database layers in IDP service and keymanager components
 
-In case of integration with MOSIP based ID system, this could IDA module
+9. HSM
 
-In case of integration with non-MOSIP ID system, this could be any functional or foundational ID system which can facilitate mechanism to do verification and share user information.
+* Hardware Security Module is responsible for secure maintenance of the keys
+* First level key decryption happens inside this component
 
-Cache Server
+10. SBI Service
 
-Responsible to temporarily maintain the current transaction details with a short expiry time
-
-Used for faster access and update of transaction details
-
-Redis is currently used and integrated behind spring cache, so can be switched easily with minor changes to configurations
-
-Database
-
-Contains the tables required for keymanager component and stores the OIDC client details
-
-Postgres is used as current database, but can be switched easily with minor changes to configuration and database layers in IDP service and keymanager components
-
-HSM
-
-Hardware Security Module is responsible for secure maintenance of the keys
-
-First level key decryption happens inside this component
-
-SBI Service
-
-Software application that runs in an end user machine from where IDP solution is accessed
-
-Allows interaction to a biometric device through a well defined interface over HTTP
-
-Returns a encrypted and signed biometric that can be passed on to the Authentication System for verification
+* Software application that runs in an end user machine from where IDP solution is accessed
+* Allows interaction to a biometric device through a well defined interface over HTTP
+* Returns a encrypted and signed biometric that can be passed on to the Authentication System for verification
