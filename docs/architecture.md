@@ -54,17 +54,17 @@
 * Used for faster access and update of transaction details
 * Redis is currently used and integrated behind spring cache, so can be switched easily with minor changes to configurations
 
-8\. Database
+8\. **Database**
 
 * Contains the tables required for keymanager component and stores the OIDC client details
 * Postgres is used as current database, but can be switched easily with minor changes to configuration and database layers in IDP service and keymanager components
 
-9\. HSM
+9\. **HSM**
 
 * Hardware Security Module is responsible for secure maintenance of the keys
 * First level key decryption happens inside this component
 
-10\. SBI Service
+10\. **SBI Service**
 
 * Software application that runs in an end user machine from where IDP solution is accessed
 * Allows interaction to a biometric device through a well defined interface over HTTP
