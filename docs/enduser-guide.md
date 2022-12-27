@@ -13,14 +13,23 @@ Pre-requisite: The resident is registered with MOSIP and has a valid UIN or VID.
 
 1\. Resident clicks on `Sign in with MOSIP'. 
     The resident is navigated to the login screen.
+    
 2\. To get started with login with OTP authentication, resident clicks on 'Log in here`.
+
 3\. `Login with OTP' screen displayed to the resident.
+
 4\. Resident needs to enter valid VID in the `Enter VID' textfield. Also, they can enter the UIN here.
+
 5\. Next, the resident clicks on `Get OTP` button.
+
 6\. The resident receives the OTP on the registered channel(either the phone number or emailId).
+
 7\. The resident needs to enter the valid OTP received and click on `Verify` button.
+
 8\. The resident is then navigated to the Consent page. On this page, the Essential and Voluntary claims are displayed.
+
 9\. The resident has the choice to select amongst the list of Voluntary claims while the Essential claims are mandatory and not editable.
+
 10\. The resident then clicks on the 'Allow' button. The system then navigates the resident to the User Profile page and the page displays their personal information based on the consent provided.
 
 ## LOGIN with Biometrics
