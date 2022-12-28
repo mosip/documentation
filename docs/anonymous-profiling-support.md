@@ -5,51 +5,52 @@
 When a country is implementing and running the ID program, people at the forefront like policymakers and other executives will need to monitor the progress. Progress can be measured with the help of various attributes like:
 
 * total enrollment count
-* gender profile for enrollment
+* gender profile for enrollments
 * age group profile
-* enrollment numbers and profile per registration centre
-* quality of biometric data captured
+* enrollment numbers and profile per registration center
+* quality of biometric data captured 
 
-Information like this will allow policymakers to take corrective measures as and when required.
+Information like this will allow policymakers to take corrective measures as and when required. 
 
 Some examples are given below:
 
-Example 1: If registration centres are setup for enrolling residents and if they see that the number of women enrolling in a particular area is less because of cultural factors, they can introduce a door-to-door enrollment process to increase coverage.
+Example 1: If registration centers are setup for enrolling residents and if they see that the number of women enrolling in a particular area is less because of cultural factors, they can introduce a door to door enrollment process to increase coverage.
 
-Example 2: The quality of biometrics captured for a particular registration centre or region can be monitored. And if it is found to be unacceptable, they can proceed to replace the biometric devices in that centre.
+Example 2: Quality of biometrics captured for a particular registration center or region can be monitored. And if it is found to be unacceptable, they can proceed to replace the biometric devices in that centre.
 
-Example 3: They can compare the total number of enrollments against the total number of UINs issued. If there is a big gap, they can then address this by increasing the capacity of the registration processor module to handle and process more packets.
+Example 3: They can compare the total number of enrollments against the total number of UIN’s issued. If there is a big gap, they can then address this by increasing the capacity of the registration processor module to handle and process more packets.
 
 ## Design
 
-* In order to achieve this, we have published a fixed anonymized profile of the users and ensured the same is accessible to a search engine such as elastic search so that it can be used for analytics. The basic guideline followed to create these profiles is that the limited dataset should not violate the privacy of the person or point to specific individuals. These JSON profiles are not configurable in the current design and a code change is required to change them.
-* This dataset is called an **anonymous profile** and is captured at various stages in the ID lifecycle like pre-registration, registration processing, ID issuance and authentication.
-* As a part of this implementation, a new **anonymous\_profile** table is created in each of these modules and is populated as per the JSON structure given below for each profile.
+* In order to achieve this, we have published a fixed anonymized profile of the users and ensured the same is accessible to a search engine such as elastic search so that it can be used for analytics. The basic guideline followed to create these profiles is that the limited dataset should not violate the privacy of the person or point to specific individuals. These JSON profiles are not configurable in the current design and a code change is required to change it.
+* This dataset is called **anonymous profile** and is captured at various stages in the ID lifecycle like pre-registration, registration processing, ID issuance and  authentication.
+* As a part of this implementation, a new **anonymous_profile** table is created in each of these modules and is populated as per the JSON structure given below for each profile.
 
-| Module                 | Table name         | Profile name                        |
-| ---------------------- | ------------------ | ----------------------------------- |
-| Pre-registration       | anonymous\_profile | Anonymous Registration profile      |
-| Registration Processor | anonymous\_profile | Anonymous Registration profile      |
-| ID Repository          | anonymous\_profile | Anonymous Identity Issuance profile |
-| Authentication         | anonymous\_profile | Anonymous Authentication profile    |
+|Module|Table name|Profile name|
+|---|---|---|
+|Pre-registration|anonymous_profile|Anonymous Registration profile|
+|Registration Processor|anonymous_profile|Anonymous Registration profile|
+|ID Repository|anonymous_profile|Anonymous Identity Issuance profile|
+|Authentication|anonymous_profile|Anonymous Authentication profile|
 
-_Note_: New DB tables are added for the anonymous profile because data in existing tables (except the pre-registration module) are encrypted and cannot be used to create reports and dashboards.
 
+_Note_: New DB tables are added for anonymous profile because data in existing tables (except pre-registration module) are encrypted and cannot be used to create reports and dashboards. 
+  
 ### Anonymous Registration profile
 
 * This profile will be used to capture data about enrollment. This suggests that the user has started the registration process.
 * This data is captured at two stages, i.e., during pre-registration and registration processing.
 * The same registration profile JSON is re-used to capture data in these two modules.
-* This profile data is captured in `anonymous_profile` tables under the `mosip_prereg`  `mosip_regprc` schemas.
-* We can configure the stage at which the anonymous profile data in the registration processor needs to be captured. This can be configured as a part of the **registration processor camel routes** in the `mosip-config` repository as shown below.
+* This profile data is captured in `anonymous_profile` tables under the `mosip_prereg` and `mosip_regprc` schemas.
+* We can configure the stage at which the anonymous profile data in registration processor needs to be captured. This can be configured as a part of the **registration processor camel routes** in the `mosip-config` repository as shown below.
 
-![Registration processor camel routes configuration](\_images/camel-config.png)
-
+![Registration processor camel routes configuration](_images/camel-config.png)
+   
 **The profile will be available from version 1.2.0 and above.**
-
+  
 JSON structure of the registration profile is given below
 
-```
+```jsonc
 {
   "processName": "", //process as new or update or correction or lost uin
   "processStage": "", //internal stage of the process eg: preregistration, client, sync, classifier etc
@@ -87,26 +88,31 @@ JSON structure of the registration profile is given below
   "documents": [""], //type of the documents. eg: passport, license.
   "status": "" //Any internal status that needs to be published. 
 }
-```
+``` 
 
-Below is the image for the Anonymous profile table created in the Pre-registration schema
 
-![Anonymous profile table created in Pre-registration schema](\_images/ap-prereg.png)
+Below is the image for Anonymous profile table created in Pre-registration schema
 
-Below is the image for the Anonymous profile table created in the Registration processor schema
 
-![Anonymous profile table created in Registration processor schema](\_images/ap-regprc.png)
+![Anonymous profile table created in Pre-registration schema](_images/ap-prereg.png)
 
+  
+Below is the image for Anonymous profile table created in Registration processor schema
+
+
+![Anonymous profile table created in Registration processor schema](_images/ap-regprc.png)
+ 
 ### Anonymous Identity issuance profile
-
-* This profile data will be captured during the identity issuance process when an entry is made in the ID repository.
+  
+* This profile data will be captured during the identity issuance process when an entry is made in the ID repository. 
+.
 * The profile data is captured in a `anonymous_profile` table under the `mosip_idrepo` schema.
 
 **The profile will be available from 1.1.5.5 and above.**
 
-JSON structure of the identity issuance profile is given below:
+ JSON structure of the identity issuance profile is given below:
 
-```
+```jsonc
 {
   "processName": "", //New, Update or Lost. Correction is not included here
   "date": "", //Occurance of the event date. Just date with no time. 
@@ -153,9 +159,12 @@ JSON structure of the identity issuance profile is given below:
 }
 ```
 
-Below is the image for the Anonymous profile table created in the ID repository schema
 
-![Anonymous profile table created in ID repository schema](\_images/ap-identity-issuance.png)
+Below is the image for Anonymous profile table created in ID repository schema
+
+ 
+![Anonymous profile table created in ID repository schema](_images/ap-identity-issuance.png)  
+
 
 ### Anonymous Authentication Profile
 
@@ -166,7 +175,7 @@ Below is the image for the Anonymous profile table created in the ID repository 
 
 JSON structure of the Authentication profile is given below:
 
-```
+```jsonc
 {
   "partnerName": "", 
   "date": "", //Occurance of the event date. Just date with no time. 
@@ -187,14 +196,28 @@ JSON structure of the Authentication profile is given below:
 }
 ```
 
-Below is the image for the Anonymous profile table created in the IDA schema
 
-![Anonymous profile table created in IDA schema](\_images/ap-ida.png)
+Below is the image for Anonymous profile table created in IDA schema
 
+ 
+![Anonymous profile table created in IDA schema](_images/ap-ida.png)
+
+  
 ## Generating dashboards from Anonymous profile data
+ 
+Reports and dashboards can be created using the anonymous profile data. The [reporting framework](https://github.com/mosip/reporting/blob/release-1.2.0/README.md) used for the platform can be used to push this data into elastic search and dashboards can be configured using Kibana. 
+A dashboard created using **ID Issuance Anonymous profile** data is available as a part of the reference implementation. The same is shown below.
 
-Reports and dashboards can be created using anonymous profile data. The [reporting framework](https://github.com/mosip/reporting/blob/release-1.2.0/README.md) used for the platform can be used to push this data into elastic search and dashboards can be configured using Kibana. A dashboard created using **ID Issuance Anonymous profile** data is available as a part of the reference implementation. The same is shown below.
-
-![](\_images/reports-id-issuance-1.png) ![](\_images/reports-id-issuance-2.png)
-
+ ![](_images/reports-id-issuance-1.png)
+ ![](_images/reports-id-issuance-2.png)
+  
 More details about reporting module and dashboards can be found [here](https://docs.mosip.io/1.2.0/modules/reporting).
+
+  
+ 
+  
+ 
+  
+
+
+

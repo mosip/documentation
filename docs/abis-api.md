@@ -1,108 +1,95 @@
-# ABIS API
-
-constitutesThis document defines the APIs specifications for various operations that ABIS can perform to integrate with MOSIP.
+This document defines the APIs specifications for various operations that ABIS can perform to integrate with MOSIP.
 
 API specification version: **0.9**
 
 Published Date: February 05, 2021
 
-## Revision Note
+# Revision Note
+Publish Date|Revision
+------------|-------
+May 07, 2020|This is the first formal publication of the interface as a version-ed specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion.
+June 09, 2020|A note related to targetFPIR was added.
+June 26, 2020|New [failure reason](#failure-reasons) (code - 6, 8, 9, 10, 11, 12) for ABIS have been added.
+August 04, 2020|Analytics section has been added to the overall response for Identify and the [failure reason](#failure-reasons) have been updated.
+November 19, 2020|Note on encryption of biometric data share using referenceURL has been added.
+February 05, 2021|Note on [referenceURL](#reference-url) and [authentication token](#authentication-token) was added for Insert Request.
+March 23, 2021|New [failure reason](#failure-reasons) (code - 17) for ABIS has been added.
+May 3, 2021|The logic for encryption has been updated for ABIS Datashare URL.
+September 8, 2021|All possible error codes for DataShare URL has been added.
 
-| Publish Date      | Revision                                                                                                                                                                                                                                     |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| May 07, 2020      | This is the first formal publication of the interface as a version-ed specification. Earlier draft are superseded by this document. The interface is revamped to make it friendlier to programmers and also has a new method for conversion. |
-| June 09, 2020     | A note related to targetFPIR was added.                                                                                                                                                                                                      |
-| June 26, 2020     | New [failure reason](abis-api.md#failure-reasons) (code - 6, 8, 9, 10, 11, 12) for ABIS have been added.                                                                                                                                     |
-| August 04, 2020   | Analytics section has been added to the overall response for Identify and the [failure reason](abis-api.md#failure-reasons) have been updated.                                                                                               |
-| November 19, 2020 | Note on encryption of biometric data share using referenceURL has been added.                                                                                                                                                                |
-| February 05, 2021 | Note on [referenceURL](abis-api.md#reference-url) and [authentication token](abis-api.md#authentication-token) was added for Insert Request.                                                                                                 |
-| March 23, 2021    | New [failure reason](abis-api.md#failure-reasons) (code - 17) for ABIS has been added.                                                                                                                                                       |
-| May 3, 2021       | The logic for encryption has been updated for ABIS Datashare URL.                                                                                                                                                                            |
-| September 8, 2021 | All possible error codes for DataShare URL has been added.                                                                                                                                                                                   |
-
-## Introduction
-
-An ABIS system that integrates with MOSIP should support the following operations.
-
-* [Insert](abis-api.md#insert)
-* [Identify](abis-api.md#identify)
-* [Delete](abis-api.md#delete)
-* [Ping](abis-api.md#ping)
-* [Pending Jobs](abis-api.md#pending-jobs)
-* [Reference Count](abis-api.md#reference-count)
+# Introduction
+An ABIS system that integrates with MOSIP should support the following operations. 
+* [Insert](#insert)
+* [Identify](#identify)
+* [Delete](#delete)
+* [Ping](#ping)
+* [Pending Jobs](#pending-jobs)
+* [Reference Count](#reference-count)
 
 {% hint style="info" %}
-All ABIS operations are via. a message queue and are asynchronous. The data sent in ABIS can be byte array or text based on a configuration in the registration processor.
+All ABIS operations are via. a message queue and are asynchronous. The data sent in ABIS can be byte array or text based on a configure in registration processor. 
 {% endhint %}
 
-## Parameters
+# Parameters
 
-### Common Parameters
-
+## Common Parameters
 Common parameters used for all ABIS operations:
+Name | Description | Restrictions | Type
+-----|-------------|--------------|------
+requestID | ID that is associated with each request sent to ABIS | ABIS should not use this ID in any other context outside the request | UUID
+referenceID | ID of a single registration record. Registration record is maintained in MOSIP. This ID is the mapping between MOSIP and ABIS | None | UUID
+referenceURL | URL to the biometrics data stored in MOSIP. This URL will have read only access | None | HTTPS URL
+biometricType | Type of biometric data sent in the request | FID/FIR/IIR | String
+returnValue | Code for response | [Standard Return Codes](#standard-return-codes) | String
+failureReason | Code for failure reason | [Failure Reasons](#failure-reasons) | String
 
-| Name          | Description                                                                                                                   | Restrictions                                                         | Type      |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- | --------- |
-| requestID     | ID that is associated with each request sent to ABIS                                                                          | ABIS should not use this ID in any other context outside the request | UUID      |
-| referenceID   | ID of a single registration record. Registration record is maintained in MOSIP. This ID is the mapping between MOSIP and ABIS | None                                                                 | UUID      |
-| referenceURL  | URL to the biometrics data stored in MOSIP. This URL will have read only access                                               | None                                                                 | HTTPS URL |
-| biometricType | Type of biometric data sent in the request                                                                                    | FID/FIR/IIR                                                          | String    |
-| returnValue   | Code for response                                                                                                             | [Standard Return Codes](abis-api.md#standard-return-codes)           | String    |
-| failureReason | Code for failure reason                                                                                                       | [Failure Reasons](abis-api.md#failure-reasons)                       | String    |
+## Standard Return Codes
+Code | Status
+-----|---------
+1 | Success
+2 | Failed
 
-### Standard Return Codes
+## Failure Reasons
+Code | Reason
+-----|-------
+1 | internal error - Unknown
+2 | aborted
+3 | unexpected error
+4 | unable to serve the request - invalid request structure
+5 | missing referenceId (in request body)
+6 | missing requestId (in request body)
+7 | unable to fetch biometric details (using referenceURL)
+8 | missing reference URL (in request body)
+9 | missing requesttime (in request body)
+10 | referenceId already exists (in ABIS)
+11 | CBEFF has no data
+12 | referenceId not found (in ABIS)
+13 | invalid version
+14 | invalid id
+15 | invalid requesttime format
+16 | invalid CBEFF format
+17 | data share URL has expired
+18 | Biometric Quality check failed
 
-| Code | Status  |
-| ---- | ------- |
-| 1    | Success |
-| 2    | Failed  |
-
-### Failure Reasons
-
-| Code | Reason                                                  |
-| ---- | ------------------------------------------------------- |
-| 1    | internal error - Unknown                                |
-| 2    | aborted                                                 |
-| 3    | unexpected error                                        |
-| 4    | unable to serve the request - invalid request structure |
-| 5    | missing referenceId (in request body)                   |
-| 6    | missing requestId (in request body)                     |
-| 7    | unable to fetch biometric details (using referenceURL)  |
-| 8    | missing reference URL (in request body)                 |
-| 9    | missing requesttime (in request body)                   |
-| 10   | referenceId already exists (in ABIS)                    |
-| 11   | CBEFF has no data                                       |
-| 12   | referenceId not found (in ABIS)                         |
-| 13   | invalid version                                         |
-| 14   | invalid id                                              |
-| 15   | invalid requesttime format                              |
-| 16   | invalid CBEFF format                                    |
-| 17   | data share URL has expired                              |
-| 18   | Biometric Quality check failed                          |
-
-## ABIS Operations
-
+# ABIS Operations
 The following operations are supported by MOSIP:
+* [Insert](#insert)
+* [Identify](#identify)
+* [Delete](#delete)
+* [Ping](#ping)
+* [Pending Jobs](#pending-jobs)
+* [Reference Count](#reference-count)
 
-* [Insert](abis-api.md#insert)
-* [Identify](abis-api.md#identify)
-* [Delete](abis-api.md#delete)
-* [Ping](abis-api.md#ping)
-* [Pending Jobs](abis-api.md#pending-jobs)
-* [Reference Count](abis-api.md#reference-count)
-
-### Insert
-
-* ABIS must get biometric data from referenceURL, process it and store it locally within the ABIS reference database. More details about the referenceURL is mentioned in our [referenceURL section](abis-api.md#reference-url).
+## Insert 
+* ABIS must get biometric data from referenceURL, process it and store it locally within the ABIS reference database. More details about the referenceURL is mentioned in our [referenceURL section](#reference-url). 
 * referenceId must not be active prior to this operation i.e., it must not have been used before this operation.
 * De-duplication must not be performed in this operation.
 * MOSIP will provide biometric data in CBEFF format to ABIS as a response of referenceURL and the data will be encrypted and encoded as mentioned below.
 
-#### Request and Response Structure for Insert
+### Request and Response Structre for Insert
 
-**Insert Request**
-
-```
+#### Insert Request
+```JSON
 {
   "id": "mosip.abis.insert",
   "version": "1.1",
@@ -113,9 +100,8 @@ The following operations are supported by MOSIP:
 }
 ```
 
-**Success Response**
-
-```
+#### Success Response
+```JSON
 {
   "id": "mosip.abis.insert",
   "requestId": "91234567-89AB-CDEF-0123-456789ABCDEF",
@@ -124,9 +110,8 @@ The following operations are supported by MOSIP:
 }
 ```
 
-**Failure Response**
-
-```
+#### Failure Response
+```JSON
 {
   "id": "mosip.abis.insert",
   "requestId": "91234567-89AB-CDEF-0123-456789ABCDEF",
@@ -136,27 +121,22 @@ The following operations are supported by MOSIP:
 }
 ```
 
-#### Reference URL
-
+### Reference URL
 The reference URL is MOSIP's datashare URL which is generated based on a policy defined by MOISP's adopter.
-
 * The referenceURL is authenticated and authorized; ABIS needs to send a JWT token inside the request header COOKIE
-* The referenceURL will be active for a certain time as decided by the MOSIP adopter
+* The referenceURL will be active for a certain time as decided by the MOSIP adopter 
 * The data sent in the referenceURL will be encrypted
 
-**Authentication Token**
-
+#### Authentication Token
 As mentioned above in order to access the request URL the ABIS system needs to send a JWT token inside the request header COOKIE. In order to get the token ABIS needs to call MOSIP's AuthN & AuthZ API with Client ID & Secret Key by passing the credentials (clientid, secretkey and appid) which would be provided by the System Integrator (SI).
 
-Below are the sample API details for getting the authentication token. More details about the API are available in our [AuthN & AuthZ document](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key).
+Below is the sample API details for getting the authentication token. More details about the API is available in our [AuthN & AuthZ document](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key). 
 
-**Sample Request URL**
-
+##### Sample Request URL
 `POST https://{base_url}/v1/authmanager/authenticate/clientidsecretkey`
 
-**Sample Request Body**
-
-```
+##### Sample Request Body
+```JSON
 {
   "id": "string",
   "metadata": {},
@@ -170,8 +150,7 @@ Below are the sample API details for getting the authentication token. More deta
 }
 ```
 
-**Sample Response**
-
+##### Sample Response
 ```
 Response Cookie:
 
@@ -179,7 +158,7 @@ Set-Cookie
 authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBLWZRRDZYVVpYeFlldk5UZWtYcnZKVXN1RG5TeHJjZ0tZIn0.eyJqdGkiOiI2Yzg0ZDMyNi04NjZhLTRmZTQtOGJiMy02NGY0YWVjNmZiZDAiLCJleHAiOjE2MDk5NDg3NTAsIm5iZiI6MCwiaWF0IjoxNjA5OTEyNzUwLCJpc3MiOiJodHRwczovL3FhMi5tb3NpcC5uZXQva2V5Y2xvYWsvYXV0aC9yZWFsbXMvbW9zaXAiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiODdmMDU3NjQtNzg5ZC00ZTZiLTljMWUtYzU2YmJkYzI5NTYzIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibW9zaXAtYWJpcy1jbGllbnQiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJiNjZjMjBiMy03OTY1LTQ0ZDUtODg3Ny00Zjk2MDNlNzI5OTEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vcWEyLm1vc2lwLm5ldCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1vc2lwLWFiaXMtY2xpZW50Ijp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6Im1vc2lwLWFiaXMtY2xpZW50IiwiY2xpZW50SG9zdCI6IjEwLjI0NC4zLjM1IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbW9zaXAtYWJpcy1jbGllbnQiLCJjbGllbnRBZGRyZXNzIjoiMTAuMjQ0LjMuMzUifQ.ntez3ZkbDsjWi467JVj9d3kfktbUc7e6zQhHv0bVJfmiQA0N1QGyXAiZdqZrHj3cgFo0Lft54jgEtCGZZAma8nAw9IDICet9TA2A_u5hZ3oAq6HwYMS1pWb43jx5K9RRr_Yc-hdNnma754KzHhJgU1A7e_y0m88MT_oohHpRQ16jItEfC0AUQUvOAsxPwn-mmhu4uFFEq9e05ftBDIEBr24t-8feWN92uCJVMrSYHHjFL2ayg03I4Zkw1IupfLa-HACIlIToUmAk00aPxLtyWMFpOHVcLKBS2i9gEeqCEiUzklwuEp0B4aCqk5_M-Ng2X6VcGsCUJ8ACWRG4lCQQYA
 ```
 
-```
+```JSON
 {
   "id": "string",
   "version": "string",
@@ -193,75 +172,70 @@ authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBL
 }
 ```
 
-**DataShare URL**
+#### DataShare URL 
+Below is the sample API detail for reference URL. 
 
-Below is the sample API detail for reference URL.
-
-**Sample Request URL**
-
+##### Sample Request URL
 `GET https://{base_url}/v1/datashare/get/mpolicy-default-abis/mpartner-default-abis/mpartner-default-abismpolicy-default-abis20210205062412BlQo0rJB`
 
-**Sample Encrypted Response**
-
+##### Sample Encrypted Response
 ```
 ```
 
 {% hint style="info" %}
+
 **The structure of the encrypted data downloaded from referenceURL in MOSIP 1.2.0 or later versions**
 
-The data downloaded would be URL-safe base64 encoded. Hence, after decoding the data will be in the below format. It will be divided into two Parts after splitting using #KEY\_SPLITTER#.
-{% endhint %}
+The data downloaded would be URL safe base64 encoded. Hence, after decoding the data will be in the below format. It will be divided in two Parts after splitting using #KEY_SPLITTER#.
 
-| Encrypted Key Data | KEY\_SPLITTER   | Encrypted Actual Data |
-| ------------------ | --------------- | --------------------- |
-| Block 1            | #KEY\_SPLITTER# | Block 2               |
+Encrypted Key Data | KEY_SPLITTER | Encrypted Actual Data
+-----------|----------------|-----------
+Block 1    | #KEY_SPLITTER# | Block 2
 
-{% hint style="info" %}
 **Block 1:**
 
 Block 1, i.e. the encrypted key data is again split into three parts,
 
-* The 1st part is _**VER\_BYTES**_ (version bytes). The Current version constant is set as VER\_R2 and this is present in the first 6 bytes of Block 1.
-* The 2nd part is the _**Certificate Thumbprint**_ i.e. the key identifier which is present in the next 32 bytes after VER\_BYTES.
-* The 3rd part is the _**Encrypted Random AES Key**_, encrypted with the RSA OAEP - SHA256-MFG1. This constitutes the remaining 256 bytes of Block 1.
+* The 1st part is **_VER_BYTES_** (version bytes). The Current version constant is set as VER_R2 and this is present in the first 6 bytes of Block 1.
+* The 2nd part is the **_Certificate Thumbprint_** i.e. the key identifier which is present in the next 32 bytes after VER_BYTES.
+* The 3rd part is the **_Encrypted Random AES Key_**, encrypted with the RSA OAEP - SHA256-MFG1. This cosistutes the remaining 256 bytes of Block 1.
+
 
 **Block 2:**
 
 Block 2, i.e. the encrypted actual data is again split into two parts,
 
-* The 1st part is the random 32 bytes which will be used as _**AAD**_ in AES encryption(first 32 bytes). From this 32 bytes AAD data, the first 12 bytes is _**IV/Nonce**_.
+* The 1st part is the random 32 bytes which will be used as _**AAD**_ in AES encryption(first 32 bytes). From this 32 bytes AAD data, the first 12 bytes is **_IV/Nonce_**.
 * The 2nd part is the encrypted data which is encrypted using AES GCM PKCS5Padding.
 
-***
+---
 
 **The structure of the encrypted data downloaded from referenceURL in MOSIP 1.1.5.5 or prior versions**
 
-The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format. It will be divided into two Parts after splitting using #KEY\_SPLITTER#.
-{% endhint %}
+The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format. It will be divided in two Parts after splitting using #KEY_SPLITTER#.
 
-| Encrypted Key Data | KEY\_SPLITTER   | Encrypted Actual Data |
-| ------------------ | --------------- | --------------------- |
-| Block 1            | #KEY\_SPLITTER# | Block 2               |
+Encrypted Key Data | KEY_SPLITTER | Encrypted Actual Data
+-----------|----------------|-----------
+Block 1    | #KEY_SPLITTER# | Block 2
 
-{% hint style="info" %}
 **Block 1:**
 
 Block 1, i.e. the encrypted key data is again split into two parts,
 
-* The first part is the _**Certificate Thumbprint**_ i.e. the key identifier which is the first 32 bytes in Block 1.
-* The second part is the _**Encrypted Random AES Key**_ which is encrypted with RSA OAEP - SHA256-MFG1. This constitutes the remaining 256 bytes of Block 1.
+* The first part is the **_Certificate Thumbprint_** i.e. the key identifier which is the first 32 bytes in Block 1.
+* The second part is the **_Encrypted Random AES Key_** which is encrypted with RSA OAEP - SHA256-MFG1. This cosistutes the remaining 256 bytes of Block 1.
 
 **Block 2:**
 
 Block 2, i.e. the encrypted actual data is again split into two parts,
 
-* The 1st part is the _**Encrypted data**_, encrypted using AES GCM PKCS5Padding.
-* The 2nd part is _**IV/Nonce**_ i.e. the last 32 bytes appended after encrypted data.
+* The 1st part is the **_Encrypted data_**, encrypted using AES GCM PKCS5Padding.
+* The 2nd part is **_IV/Nonce_** i.e. the last 32 bytes appended after encrypted data.
+
 {% endhint %}
 
-**Sample Response after Decryption**
-
-```xml
+##### Sample Response after Decryption
+```XML
 <?xml version="1.0" encoding="UTF-8"?>
 <BIR xmlns="http://standards.iso.org/iso-iec/19785/-3/ed-2/">
     <BIRInfo>
@@ -698,9 +672,8 @@ Block 2, i.e. the encrypted actual data is again split into two parts,
 </BIR>
 ```
 
-**Sample Response in case of Authentication Failure**
-
-```
+##### Sample Response in case of Authentication Failure
+```JSON
 {
   "id": null,
   "version": null,
@@ -716,55 +689,52 @@ Block 2, i.e. the encrypted actual data is again split into two parts,
 }
 ```
 
-**All Possible Error codes and Messages from Datashare URL**
-
-| Error Code  | Error Message                         |
-| ----------- | ------------------------------------- |
-| DAT-SER-003 | File does not exists or File is empty |
-| DAT-SER-006 | Data share not found                  |
-| DAT-SER-006 | Data share usage expired              |
-| KER-ATH-401 | Authentication Failed                 |
-| KER-ATH-403 | Forbidden                             |
+##### All Possible Error codes and Messages from Datashare URL
+Error Code  | 	Error Message
+------------|---------------
+DAT-SER-003 |	File does not exists or File is empty
+DAT-SER-006 |	Data share not found
+DAT-SER-006 |	Data share usage expired
+KER-ATH-401 |	Authentication Failed
+KER-ATH-403 |	Forbidden
 
 {% hint style="info" %}
-Please note that for all the functional failures MOSIP sends a response code 200.
+Please note that, for all the functional failures MOSIP sends response code as 200.  
 {% endhint %}
 
-### Identify
-
-* All Insert requests added to the queue earlier must be serviced by ABIS when performing an Identify request.
+## Identify
+* All Insert requests added to the queue earlier must be serviced by ABIS when performing an Identify request.  
 * Identify request provides a 1:N comparison. The given input is compared either against the gallery passed or if the gallery is not specified the entire database.
-* The input for comparison can be provided by referenceID or referenceURL.
-  * If the referenceID is given it is used as the preferred option. The given referenceID must be existing in the ABIS database else ABIS will throw an error.
-  * If the referenceID is omitted or NULL and the referenceURL is passed the ABIS retrieves the biometrics provided in the referenceURL and compares the same against either a gallery or its database.
-  * If in case, both referenceID and referenceURL are missing ABIS throws an error.
+* The input for comparison can be provided by referenceID or referenceURL. 
+	* If the referenceID is given it is used as the preferred option. The given referenceID must be existing in the ABIS database else ABIS will throw and error. 
+	* If the referenceID is omitted or NULL and the referenceURL is passed the ABIS retrieves the biometrics provided in the referenceURL and compares the same against either a gallery or its database. 
+	* If in case, both referenceID and referenceURL are missing ABIS throws an error.
 
 {% hint style="info" %}
-We are not using the referenceURL in Identify request for our current implementation. Hence, it will be an empty string for Identify request. MOSIP adopters can have customized workflows where the referenceURL can be used.
+We are not using the referenceURL in Identify request for our current implementation. Hence, it will be an empty string for Identify request. MOSIP adopters can have customized work-flows where the referenceURL can be used.
 {% endhint %}
 
-* Identify requests should give to all candidates which are considered as a match based on ABIS thresholds.
+* Identify request should give all candidates which are considered as a match based on ABIS thresholds.
 * This request should not match against referenceID that is not in the reference database.
-* The response now has a section for analytics that contains key-value pairs. Values can be JSON objects also. The contents of the analytics section will be agreed upon by the MOSIP adopter with the ABIS provider. Scores are also moved to this section and are not mandatory response parameters anymore.
+* The response now has a section for analytics that contains key value pairs. Values can be JSON objects also. The contents of the analytics section will be agreed upon by the MOSIP adopter with the ABIS provider. Scores are also moved to this section and are not mandatory response parameters any more.
 * Ordering or ranking of results is not explicitly specified and can be agreed upon between the MOSIP adopter and the ABIS provider.
-* The flags section of the request can be used to customize or control ABIS behaviour by sending specific key-value pairs.
-* "targetFPIR" or "maxResults" are examples of such flags that can alter ABIS behaviour. These are optional attributes for MOSIP during an identify request. MOSIP expects the adopters to define these parameters based on the accuracy expectations and workflow requirements. These can be set at the ABIS configuration level and need not be part of the individual request at all.
+* The flags section of the request can be used to customize or control ABIS behavior by sending specific key value pairs.
+* "targetFPIR" or "maxResults" are examples of such flags that can alter the ABIS behavior. These are optional attributes for MOSIP during an identify request. MOSIP expects the adopters to define these parameters based on the accuracy expectations and the work-flow requirements. These can be set at the ABIS configuration level and need not be part of the individual request at all.
 
-To give an example, please find the following calculation for targetFPIR - which is the error rate at which identification requests are expected to return a non-empty candidate list.
+To give an example, please find the following calculation for targetFPIR - which is the error rate at which identification requests are expected to return non-empty candidate list.
 
 `round (-10 * log10 (target false positive identification rate))`
 
 With this calculation:
 
-| Target False Positive Identification Rate | targetFPIR |
-| ----------------------------------------- | ---------- |
-| 1 in 1,000                                | 30         |
-| 1 in 10,000                               | 40         |
-| 1 in 100,000                              | 50         |
+Target False Positive Identification Rate	| targetFPIR
+--------------------------------------------|------------------
+1 in 1,000                                  | 30
+1 in 10,000                                 | 40
+1 in 100,000                                | 50
 
-#### Identify Request
-
-```
+### Identify Request
+```JSON
 {
   "id": "mosip.abis.identify",
   "version": "1.1",
@@ -803,9 +773,8 @@ With this calculation:
 }
 ```
 
-#### Success Response
-
-```
+### Success Response
+```JSON
 {
   "id": "mosip.abis.identify",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
@@ -858,16 +827,15 @@ With this calculation:
       }
     ]
     "analytics": {
-      //This is an optional section
+      //This is a optional section
       //Data in this section can be agreed upon between the MOSIP adopter and the ABIS Provider
 	}
   }
 }
 ```
 
-#### Failure Response
-
-```
+### Failure Response
+```JSON
 {
   "id": "mosip.id.identify",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
@@ -877,14 +845,12 @@ With this calculation:
 }
 ```
 
-### Delete
-
+## Delete
 * Removes only the entry referred by the referenceId.
 * This operation can be used to remove duplicates found by Identify.
 
-#### Delete Request
-
-```
+### Delete Request
+```JSON
 {
   "id": "mosip.abis.delete",
   "version": "1.1",
@@ -894,9 +860,8 @@ With this calculation:
 }
 ```
 
-#### Success response
-
-```
+### Success response
+```JSON
 {
   "id": "mosip.abis.delete",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
@@ -905,9 +870,8 @@ With this calculation:
 }
 ```
 
-#### Failure response
-
-```
+### Failure response
+```JSON
 {
   "id": "mosip.abis.delete",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
@@ -917,13 +881,11 @@ With this calculation:
 }
 ```
 
-### Ping
-
+## Ping
 * A Ping request should respond with a response on the liveness of the ABIS system.
 
-#### Ping Request
-
-```
+### Ping Request
+```JSON
 {
   "id": "mosip.abis.ping",
   "version": "1.1",
@@ -932,9 +894,8 @@ With this calculation:
 }
 ```
 
-#### Success response
-
-```
+### Success response
+```JSON
 {
   "id": "mosip.abis.ping",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
@@ -943,13 +904,11 @@ With this calculation:
 }
 ```
 
-### Pending Jobs
-
+## Pending Jobs
 * ABIS responds with the count of requests that are still pending.
 
-#### Pending Jobs Request
-
-```
+### Pending Jobs Request
+```JSON
 {
   "id": "mosip.abis.pendingJobs",
   "version": "1.1",
@@ -958,9 +917,8 @@ With this calculation:
 }
 ```
 
-#### Success Response
-
-```
+### Success Response
+```JSON
 {
   "id": "mosip.abis.pendingJobs",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
@@ -970,13 +928,11 @@ With this calculation:
 }
 ```
 
-### Reference Count
-
+## Reference Count
 * ABIS will send a count of records in the reference database
 
-#### Reference Count Request
-
-```
+### Reference Count Request
+```JSON
 {
   "id": "mosip.abis.referenceCount",
   "version": "1.1",
@@ -985,9 +941,8 @@ With this calculation:
 }
 ```
 
-#### Success Response
-
-```
+### Success Response
+```JSON
 {
   "id": "mosip.abis.referenceCount",
   "requestId": "01234567-89AB-CDEF-0123-456789ABCDEF",
@@ -997,9 +952,8 @@ With this calculation:
 }
 ```
 
-## References
-
-* [Biometric Specification](Biometric-Specification.md) to know about the biometric specification in MOSIP
+# References 
+* [Biometric Specification](Biometric-Specification.md) to know about biometric specification in MOSIP
 * [CBEFF XML](CBEFF-XML.md) to how MOSIP stores biometric data
 * [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token
-* [MOSIP's de-duplication process](Deduplication-and-Manual-Adjudication.md) for details about the De-Duplication process in MOSIP
+* [MOSIP's de-duplication process](Deduplication-and-Manual-Adjudication.md) for deatils about De-Duplication process in MOSIP
