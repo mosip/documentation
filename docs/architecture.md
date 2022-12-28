@@ -2,19 +2,19 @@
 
 ## Component Diagram
 
-![](_images/e-signet-component-diagram-Page-3.png)
+![](_images/e-signet-component-diagram.png)
 
-1\. **IDP UI**
+1\. **IdP UI**
 
 * Responsible to do the following:
     * All user interactions
     * Forward few request details from relying party received through standard OpenID connect endpoints
     * Redirect to relying party web app with relevant details
     * Interact with SBI service running in the local machine to collect encrypted and signed biometric data
-* Runs on the end user browser and invokes the REST API endpoints of the IDP service component to send and receive details required for user interaction
+* Runs on the end user browser and invokes the REST API endpoints of the IdP service component to send and receive details required for user interaction
 * Built using React framework
 
-2\. **IDP Service**
+2\. **IdP Service**
 
 * Responsible to do the following
     * Expose standard OpenID Connect API endpoints for relying party consumption
@@ -28,25 +28,25 @@
 
 * Responsible for secure key management and expose API for all the cryptography functionalities required by the IDP service component
 * It depends on HSM (Hardware Security Module) for the secure storage of keys
-* Typically keymanager is run as a service, but it is used as a library in the IDP service to minimize the effort for managing extra containers
+* Typically keymanager is run as a service, but it is used as a library in the IdP service to minimize the effort for managing extra containers
 
-4\. **IDP Core**
+4\. **IdP Core**
 
 * Library component used to maintain the common interfaces, DTOs and utility methods
-* Used as a build time dependency for IDP service
+* Used as a build time dependency for IdP service
 * Used as a compile time dependency for Authentication Wrapper library since this library contains the common interfaces and DTOs
 
 5\. **Authentication Wrapper**
 
-* Library component which has interface implementations required by the IDP service for loose coupled integration to Authentication System
+* Library component which has interface implementations required by the IdP service for loose coupled integration to Authentication System
 * Contains all the integration logic to connect to an Authentication System and proxy the authentication process and user claims collection
 * Expected as runtime dependency to facilitate use of officially released container images even in custom integrations
 
 6\. **Authentication System**
 
 * System responsible to contain resident demographic and optionally biometric information to perform authentication and provide user information
-* In case of integration with MOSIP based ID system, this could IDA module
-* In case of integration with non-MOSIP ID system, this could be any functional or foundational ID system which can facilitate mechanism to do verification and share user information.
+* In case of integration with MOSIP based ID system, this could be the `ID Authentication` module
+* In case of integration with non-MOSIP ID system, this could be any functional or foundational ID system which can facilitate the mechanism to do verification and share user information.
 
 7\. **Cache Server**
 
@@ -66,6 +66,6 @@
 
 10\. **SBI Service**
 
-* Software application that runs in an end user machine from where IDP solution is accessed
+* Software application that runs in an end user machine from where IdP solution is accessed
 * Allows interaction to a biometric device through a well defined interface over HTTP
 * Returns a encrypted and signed biometric that can be passed on to the Authentication System for verification
