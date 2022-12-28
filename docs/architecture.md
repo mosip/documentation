@@ -1,71 +1,74 @@
-# ARCHITECTURE
+# Architecture Overview
 
-## Component Diagram
+## Principles
 
-![](_images/e-signet-component-diagram.png)
+TBD
 
-1\. **IdP UI**
+## Components
 
-* Responsible to do the following:
-    * All user interactions
-    * Forward few request details from relying party received through standard OpenID connect endpoints
-    * Redirect to relying party web app with relevant details
-    * Interact with SBI service running in the local machine to collect encrypted and signed biometric data
-* Runs on the end user browser and invokes the REST API endpoints of the IdP service component to send and receive details required for user interaction
+![](\_images/e-signet-component-diagram.png)
+
+### **IdP UI**
+
+* Responsible for the following:
+  * User interactions
+  * Forwarding request details received from the relying party through standard OpenID connect endpoints
+  * Redirect to the relying party's web application with relevant details
+  * Interact with the [SBI (Secure Biometric Interface)](https://app.gitbook.com/s/-M1R77ZUwR6XwtPjJIVm/biometrics/mosip-device-service-specification) service running in the local machine to collect encrypted and signed biometric data
+* Runs on the end user browser and invokes the REST API endpoints of the [IdP service](architecture.md#idp-service) component to send and receive details required for user interaction
 * Built using React framework
 
-2\. **IdP Service**
+### **IdP Service**
 
-* Responsible to do the following
-    * Expose standard OpenID Connect API endpoints for relying party consumption
-    * Expose REST API endpoints for UI component consumption
-    * Expose REST API endpoints for OIDC client management
-* Authentication wrapper library component will be provided as a run time dependency by including in the class path
-* IDP core and Keymanager components are used as build time dependencies for various common and crypto functionalities
+* Responsible for the following
+  * Expose standard OpenID Connect API endpoints for the relying party consumption
+  * Expose REST API endpoints for UI component consumption
+  * Expose REST API endpoints for OIDC client management
+* The authentication wrapper library component is provided as a run time dependency by including it in the classpath
+* [IdP core](architecture.md#idp-core) and [Key Manager](architecture.md#key-manager) components are used as build-time dependencies for various common and crypto functionalities
 * Built using spring boot framework
 
-3\. **Keymanager**
+### **Key Manager**
 
-* Responsible for secure key management and expose API for all the cryptography functionalities required by the IDP service component
-* It depends on HSM (Hardware Security Module) for the secure storage of keys
-* Typically keymanager is run as a service, but it is used as a library in the IdP service to minimize the effort for managing extra containers
+* Responsible for secure key management and exposing API for all the cryptography functionalities required by the IdP service component
+* It depends on [HSM (Hardware Security Module)](architecture.md#hsm) for the secure storage of keys
+* Typically key manager is run as a service, but it is used as a library in the [IdP service](architecture.md#idp-service) to minimize the effort of managing extra containers
 
-4\. **IdP Core**
+### **IdP Core**
 
 * Library component used to maintain the common interfaces, DTOs and utility methods
-* Used as a build time dependency for IdP service
-* Used as a compile time dependency for Authentication Wrapper library since this library contains the common interfaces and DTOs
+* Used as a build-time dependency for IdP service
+* Used as a compile-time dependency for the [Authentication Wrapper](architecture.md#authentication-wrapper) library since this library contains the common interfaces and DTOs
 
-5\. **Authentication Wrapper**
+### **Authentication Wrapper**
 
-* Library component which has interface implementations required by the IdP service for loose coupled integration to Authentication System
-* Contains all the integration logic to connect to an Authentication System and proxy the authentication process and user claims collection
-* Expected as runtime dependency to facilitate use of officially released container images even in custom integrations
+* Library component which has interface implementations required by the IdP service for loosely coupled integration to the [Authentication System](architecture.md#authentication-system)
+* It contains all the integration logic to connect to an [Authentication System](architecture.md#authentication-system) and proxy the authentication process and user claims collection
+* Expected as runtime dependency to facilitate the use of officially released container images even in custom integrations
 
-6\. **Authentication System**
+### **Authentication System**
 
-* System responsible to contain resident demographic and optionally biometric information to perform authentication and provide user information
-* In case of integration with MOSIP based ID system, this could be the `ID Authentication` module
-* In case of integration with non-MOSIP ID system, this could be any functional or foundational ID system which can facilitate the mechanism to do verification and share user information.
+* This system is responsible to contain resident demographic and optionally biometric information to perform authentication and provide user information
+* In case of integration with an ID system, this could be any functional or foundational ID system which can facilitate the mechanism to do verification and share user information.
 
-7\. **Cache Server**
+### **Cache Server**
 
-* Responsible to temporarily maintain the current transaction details with a short expiry time
+* Responsible for temporarily maintaining the current transaction details with a short expiry time
 * Used for faster access and update of transaction details
-* Redis is currently used and integrated behind spring cache, so can be switched easily with minor changes to configurations
+* Redis is currently used and integrated behind the spring cache, so can be switched easily with minor changes to configurations
 
-8\. **Database**
+### **Database**
 
-* Contains the tables required for keymanager component and stores the OIDC client details
-* Postgres is used as current database, but can be switched easily with minor changes to configuration and database layers in IDP service and keymanager components
+* Contains the tables required for the key manager component and stores the OIDC client details
+* Postgres is used as the current database but can be switched easily with minor changes to configuration and database layers in [IdP service](architecture.md#idp-service) and key manager components
 
-9\. **HSM**
+### **HSM**
 
-* Hardware Security Module is responsible for secure maintenance of the keys
-* First level key decryption happens inside this component
+* Hardware Security Module is responsible for the secure maintenance of the keys
+* First-level key decryption happens inside this component
 
-10\. **SBI Service**
+### **SBI Service**
 
-* Software application that runs in an end user machine from where IdP solution is accessed
-* Allows interaction to a biometric device through a well defined interface over HTTP
-* Returns a encrypted and signed biometric that can be passed on to the Authentication System for verification
+* A software application that runs in an end-user machine from where the IdP solution is accessed
+* Allows interaction with a biometric device through a well-defined interface over HTTP
+* Returns an encrypted and signed biometric that can be passed on to the [Authentication System](architecture.md#authentication-system) for verification
