@@ -2,13 +2,13 @@
 
 ## Overview
 
-**ID Schema** is a standard [JSON schema](https://json-schema.org/understanding-json-schema/) that defines data fields set to be captured from a resident. It is recommended that the number of fields is kept to a usable minimum inorder to avoid profiling, minimize errors during data capture and avoid transactional fields.
+**ID Schema** is a standard [JSON schema](https://json-schema.org/understanding-json-schema/) that defines data fields set to be captured from a resident. It is recommended that the number of fields is kept to a usable minimum in order to avoid profiling, minimize errors during data capture and avoid transactional fields.
 
-Defining the ID Schema is the the first step towards creating a foundational ID system. Once defined, all applications built on top of the MOSIP platform must conform to the same.
+Defining the ID Schema is the first step towards creating a foundational ID system. Once defined, all applications built on top of the MOSIP platform must conform to the same.
 
-Refer to the [sample ID Schema](\_files/id-schema/id-schema-sample.json). A guide to customise the same is given below.
+Refer to the [sample ID Schema](\_files/id-schema/id-schema-sample.json). A guide to customising the same is given below.
 
-ID schema is loaded as a part of master data to `identity_schema` table in `mosip_masterdata` DB.
+ID schema is loaded as a part of master data to `identity_schema` the table in `mosip_masterdata` DB.
 
 ## Understanding ID Schema
 
@@ -18,9 +18,9 @@ This guide is intended for adopters who would customize the default ID Schema to
 
 * **Field**: Unit of data collected from residents (eg. `fullName`, `dateOfBirth`, `proofOfIdentity` etc).
 * **Field attribute**: Qualification of Field (eg. `fieldCategory`, `fieldType`, etc).
-* **Definition**: Custom data types defined for collecting different types of data:
+* **Definition**: Custom data types are defined for collecting different types of data:
   * `simpleType`: Multiple languages.
-  * `documentType`: Document metdata.
+  * `documentType`: Document metadata.
   * `biometricType`: Biometric file [CBEFF XML](cbeff-xml.md) metadata
 
 ### JSON keys
@@ -28,21 +28,20 @@ This guide is intended for adopters who would customize the default ID Schema to
 * `bioAttributes`:
   * `leftEye`, `rightEye`, `leftIndex`, `leftRing`, `leftLittle`, `leftMiddle`, `rightIndex`, `rightRing`, `rightMiddle`, `rightLittle`, `rightThumb`, `leftThumb`, `face`,
 * `fieldCategory`
-  * `none`: Cannot be used for any purpose. But will be stored in id.json (default sub packet).
+  * `none`: Cannot be used for any purpose. But will be stored in id.json (default subpacket).
   * `pvt`: Private information, can be used only auth.
   * `kyc`: Information that can be disclosed to partners including IDA.
   * `evidence`: Field is treated as proof and may be subjected to removal.
-  * `optional`: Field is treated as proof and will be removed after predefined interval (defined as policy).
+  * `optional`: Field is treated as proof and will be removed after a predefined interval (defined as policy).
 * `format`
   * `lowercased`
   * `uppercased`
 * `validators`
   * `type`: Validation engine type
   * `validator`: Regex
-  * `arguments`: Array to hold parameter or dependent field ids required for validation.
+  * `arguments`: Array to hold parameter or dependent field IDs required for validation.
 * `subType`
-  *  For every `documentType` field, `document category code` must be the value to this key. This document category code is used to validate the provided document types in the ID object.
-  
+  * For every `documentType` field, `document category code` must be the value of this key. This document category code is used to validate the provided document types in the ID object.
 
 ### Dependencies
 
@@ -57,4 +56,4 @@ If any changes are made to the default ID Schema, make sure the following depend
 
 ## Versions of ID Schema
 
-ID Schema is identified based on its version in MOSIP system. On publish of ID Schema, schema is versioned. Every ID Object stores the ID Schema version which is validated during ID Object validation.
+ID Schema is identified based on its version in the MOSIP system. On publishing of ID Schema, the schema is versioned. Every ID Object stores the ID Schema version which is validated during ID Object validation.
