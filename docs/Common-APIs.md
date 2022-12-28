@@ -1,58 +1,55 @@
+# Common APIs
+
 This section contains detail about the service APIs in the Common Master data module
-* [Title APIs](#title)
-These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Title functionality. Fetch APIs are used by IDA to separate out Name from the title.
-* [Gender APIs](#gender)
-These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Gender functionality. Fetch API is used by Pre-Registration to display the Genders on the demographic form page for the applicant to select one gender while filling out the form.
-* [Age Group Types APIs](#age-group-types)
-This service will provide the age group based on the passed age.
-* [ID Types APIs](#id-types)
-These API contains the Create and Fetch ID types API.
-* [Holidays APIs](#holidays) 
-These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Holiday functionality. Fetch API is used by Pre-Registration to refer the list of Holiday for a Registration Center while generating booking appointments.
-* [Locations APIs](#locations)
-These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Location functionality. Fetch API is used by Pre-Registration and ID objected validator. Pre-Registration uses this API to display locations in the demographic form page for applicant to select locations from the dropdown while filling in the address. ID object validator uses the fetch API to validate the value of location received in the packet against the Masterdata.
-* [Languages APIs](#languages)
-These include APIs to create, update and fetch MOSIP supported languages.
-* [Individual Types APIs](#individual-types)
-These includes the APIs to fetch list of Individual Types. This API is used by Pre-Registration to display the list of Individual type for an applicant to select on the Demographic page.
-* [Application Types APIs](#application-types)
-These include APIs to create, update and fetch name of MOSIP Applications.
-* [Blacklisted Words APIs](#blacklisted-words)
-These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Blacklisted Word functionality. Fetch API is used by Pre-Registration to verify if a Blacklisted word in entered by the Applicant in the Demographic form.
-* [Working days APIs](#working-days)
-This API is fetches the defined working days of a week for a Registration Center. It is used by Pre-Registration to consider working days while generating booking appointments for a Registration Center.
-* [Exceptional holidays APIs](#exceptional-holidays)
-This API is fetches the list of exceptional holidays if any defined for a Registration Center. It is used by Pre-Registration to consider exceptional holidays while generating booking appointments for a Registration Center.
 
-# Title
-* [POST /title](#post-title)
-* [GET /title](#get-title)
-* [GET /title/{langcode}](#get-title-langcode)
-* [PUT /title](#put-title)
-* [DELETE /title/{code}](#delete-title-code)
-* [GET /title/all](#get-title-all)
-* [POST /titles/search](#post-titles-search)
-* [POST /titles/filtervalues](#post-titles-filtervalues)
+* [Title APIs](Common-APIs.md#title) These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Title functionality. Fetch APIs are used by IDA to separate out Name from the title.
+* [Gender APIs](Common-APIs.md#gender) These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Gender functionality. Fetch API is used by Pre-Registration to display the Genders on the demographic form page for the applicant to select one gender while filling out the form.
+* [Age Group Types APIs](Common-APIs.md#age-group-types) This service will provide the age group based on the passed age.
+* [ID Types APIs](Common-APIs.md#id-types) These API contains the Create and Fetch ID types API.
+* [Holidays APIs](Common-APIs.md#holidays) These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Holiday functionality. Fetch API is used by Pre-Registration to refer the list of Holiday for a Registration Center while generating booking appointments.
+* [Locations APIs](Common-APIs.md#locations) These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Location functionality. Fetch API is used by Pre-Registration and ID objected validator. Pre-Registration uses this API to display locations in the demographic form page for applicant to select locations from the dropdown while filling in the address. ID object validator uses the fetch API to validate the value of location received in the packet against the Masterdata.
+* [Languages APIs](Common-APIs.md#languages) These include APIs to create, update and fetch MOSIP supported languages.
+* [Individual Types APIs](Common-APIs.md#individual-types) These includes the APIs to fetch list of Individual Types. This API is used by Pre-Registration to display the list of Individual type for an applicant to select on the Demographic page.
+* [Application Types APIs](Common-APIs.md#application-types) These include APIs to create, update and fetch name of MOSIP Applications.
+* [Blacklisted Words APIs](Common-APIs.md#blacklisted-words) These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Blacklisted Word functionality. Fetch API is used by Pre-Registration to verify if a Blacklisted word in entered by the Applicant in the Demographic form.
+* [Working days APIs](Common-APIs.md#working-days) This API is fetches the defined working days of a week for a Registration Center. It is used by Pre-Registration to consider working days while generating booking appointments for a Registration Center.
+* [Exceptional holidays APIs](Common-APIs.md#exceptional-holidays) This API is fetches the list of exceptional holidays if any defined for a Registration Center. It is used by Pre-Registration to consider exceptional holidays while generating booking appointments for a Registration Center.
 
-## POST /title
-This service will create the list of Title which are used in the MOSIP platform. 
+## Title
 
-### Resource URL
+* [POST /title](Common-APIs.md#post-title)
+* [GET /title](Common-APIs.md#get-title)
+* [GET /title/{langcode}](Common-APIs.md#get-title-langcode)
+* [PUT /title](Common-APIs.md#put-title)
+* [DELETE /title/{code}](Common-APIs.md#delete-title-code)
+* [GET /title/all](Common-APIs.md#get-title-all)
+* [POST /titles/search](Common-APIs.md#post-titles-search)
+* [POST /titles/filtervalues](Common-APIs.md#post-titles-filtervalues)
+
+### POST /title
+
+This service will create the list of Title which are used in the MOSIP platform.
+
+#### Resource URL
+
 `POST /title`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-titletype|Yes|Name of the title| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name      | Required | Description       | Default Value | Example |
+| --------- | -------- | ----------------- | ------------- | ------- |
+| titletype | Yes      | Name of the title |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -68,8 +65,9 @@ titletype|Yes|Name of the title| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -86,29 +84,33 @@ titletype|Yes|Name of the title| |
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /title
 
-## GET /title
-This service will provides the service for  list of all titles.
+This service will provides the service for list of all titles.
 
-### Resource URL
+#### Resource URL
+
 `GET /title`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-NA | NA | NA | NA | NA
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Example Response
-```JSON
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| NA   | NA       | NA          | NA            | NA      |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -130,29 +132,33 @@ NA | NA | NA | NA | NA
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /title/{langcode}
 
-## GET /title/{langcode}
-This service will provides the service for the List of Titles. 
+This service will provides the service for the List of Titles.
 
-### Resource URL
+#### Resource URL
+
 `GET /title/{langcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-langcode|Yes|Code of the language| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Example Response
-```JSON
+| Name     | Required | Description          | Default Value | Example |
+| -------- | -------- | -------------------- | ------------- | ------- |
+| langcode | Yes      | Code of the language |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -174,32 +180,37 @@ langcode|Yes|Code of the language| |
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### PUT /title
 
-## PUT /title
-This service will provides the service for updating a particular title. 
+This service will provides the service for updating a particular title.
 
-### Resource URL
+#### Resource URL
+
 `PUT /title`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Code of the title| | 
-titleName|Yes|Name of the title| | 
-isActive|Yes|Name of the title| |
-langCode|Yes|Name of the title| |
-titleDescription|Yes|Name of the title| |
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name             | Required | Description       | Default Value | Example |
+| ---------------- | -------- | ----------------- | ------------- | ------- |
+| code             | Yes      | Code of the title |               |         |
+| titleName        | Yes      | Name of the title |               |         |
+| isActive         | Yes      | Name of the title |               |         |
+| langCode         | Yes      | Name of the title |               |         |
+| titleDescription | Yes      | Name of the title |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -217,28 +228,33 @@ titleDescription|Yes|Name of the title| |
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### DELETE /title/{code}
 
-## DELETE /title/{code}
-This service will provides the service for deleting a particular title. 
+This service will provides the service for deleting a particular title.
 
-### Resource URL
+#### Resource URL
+
 `DELETE /title/{code}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Code of the title| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description       | Default Value | Example |
+| ---- | -------- | ----------------- | ------------- | ------- |
+| code | Yes      | Code of the title |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -255,10 +271,12 @@ code|Yes|Code of the title| |
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure Response
-```JSON
+#### Failure Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -271,31 +289,36 @@ code|Yes|Code of the title| |
   "response": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /title/all
 
-## GET /title/all
-This service will provides the service for  list of all titles.
+This service will provides the service for list of all titles.
 
-### Resource URL
+#### Resource URL
+
 `GET /title/all`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-orderBy | optional |order the requested data based on param ||
-pageNumber | optional | page no for the requested data ||
-pageSize | optional |page size for the requested data ||
-sortBy | optional | sort the requested data based on param value ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name       | Required | Description                                  | Default Value | Example |
+| ---------- | -------- | -------------------------------------------- | ------------- | ------- |
+| orderBy    | optional | order the requested data based on param      |               |         |
+| pageNumber | optional | page no for the requested data               |               |         |
+| pageSize   | optional | page size for the requested data             |               |         |
+| sortBy     | optional | sort the requested data based on param value |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -326,55 +349,62 @@ sortBy | optional | sort the requested data based on param value ||
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-047 | Error occured while fetching Titles | Fetch Issue
-KER-MSD-XXX | Error occurred while inserting Title details | Insertion Issue
-KER-MSD-048 | Title not found | Data Not Found
-KER-MSD-103 | Error occurred while updating Title details | Update Issue
-KER-MSD-104 | Error occurred while deleting Title details | Deletion Issue
+#### Failure details
 
-## POST /titles/search
+| Error Code  | Error Message                                | Error Description |
+| ----------- | -------------------------------------------- | ----------------- |
+| KER-MSD-047 | Error occured while fetching Titles          | Fetch Issue       |
+| KER-MSD-XXX | Error occurred while inserting Title details | Insertion Issue   |
+| KER-MSD-048 | Title not found                              | Data Not Found    |
+| KER-MSD-103 | Error occurred while updating Title details  | Update Issue      |
+| KER-MSD-104 | Error occurred while deleting Title details  | Deletion Issue    |
+
+### POST /titles/search
+
 This API is used by the Administrator Portal to fetch list of Titles based on a given filter criteria to display the list of Titles on the Portal UI.
 
-### Resource URL
+#### Resource URL
+
 `POST /titles/search`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["in","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the start range| -NA- |
-toValue|No|If the type is "between", this field is the value of the end range| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 0
-pageFetch| This is the amount of records to be fetched | 10 | 10
+#### Parameters
 
-### Filter Values
-Filter Name| Search Values
------|----------
-name|["contains","equals","startsWith"]
-status|["equals"]
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["in","equals","startsWith","between"]                 | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the start range            | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the end range              | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 0             |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
 
-### Example Request
-```JSON
+#### Filter Values
+
+| Filter Name | Search Values                       |
+| ----------- | ----------------------------------- |
+| name        | \["contains","equals","startsWith"] |
+| status      | \["equals"]                         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -405,8 +435,9 @@ status|["equals"]
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -429,31 +460,36 @@ status|["equals"]
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### POST /titles/filtervalues
 
-## POST /titles/filtervalues
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Title List View UI Screen.
 
-### Resource URL
+#### Resource URL
+
 `POST /titles/filtervalues`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -471,8 +507,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -489,41 +526,47 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-----
+***
 
-# Gender
-* [POST /gendertypes](#post-gendertypes)
-* [PUT /gendertypes](#putgendertypes)
-* [DELETE /gendertypes/{code}](#deletegendertypes-code)
-* [GET /gendertypes](#get-gendertypes)
-* [GET /gendertypes/{langcode}](#get-gendertypes-langcode)
-* [GET /gendertypes/{gendername}](#get-gendertypes-gendername)
-* [GET /gendertypes/all](#get-gendertypes-all)
-* [POST /genders/search](#post-gender-search)
-* [POST /genders/filtervalues](#post-genders-filtervalues)
+## Gender
 
-## POST /gendertypes
+* [POST /gendertypes](Common-APIs.md#post-gendertypes)
+* [PUT /gendertypes](Common-APIs.md#putgendertypes)
+* [DELETE /gendertypes/{code}](Common-APIs.md#deletegendertypes-code)
+* [GET /gendertypes](Common-APIs.md#get-gendertypes)
+* [GET /gendertypes/{langcode}](Common-APIs.md#get-gendertypes-langcode)
+* [GET /gendertypes/{gendername}](Common-APIs.md#get-gendertypes-gendername)
+* [GET /gendertypes/all](Common-APIs.md#get-gendertypes-all)
+* [POST /genders/search](Common-APIs.md#post-gender-search)
+* [POST /genders/filtervalues](Common-APIs.md#post-genders-filtervalues)
 
-This service will create the list of Gender which are used in the MOSIP platform. 
+### POST /gendertypes
 
-### Resource URL
+This service will create the list of Gender which are used in the MOSIP platform.
+
+#### Resource URL
+
 `POST /gendertypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-gendertype|Yes|Name of the gender| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name       | Required | Description        | Default Value | Example |
+| ---------- | -------- | ------------------ | ------------- | ------- |
+| gendertype | Yes      | Name of the gender |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -538,8 +581,9 @@ gendertype|Yes|Name of the gender| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -552,32 +596,36 @@ gendertype|Yes|Name of the gender| |
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### PUT /gendertypes
 
-## PUT /gendertypes
-This service will update Gender which are used in the MOSIP platform. 
+This service will update Gender which are used in the MOSIP platform.
 
-### Resource URL
+#### Resource URL
+
 `PUT/gendertypes`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Code of gender type| | 
-genderName|Yes|Name of gender type| | 
-isActive|Yes|is active or not| | 
-code|Yes|language code of gender| | 
+#### Parameters
 
-### Example Request
-```JSON
+| Name       | Required | Description             | Default Value | Example |
+| ---------- | -------- | ----------------------- | ------------- | ------- |
+| code       | Yes      | Code of gender type     |               |         |
+| genderName | Yes      | Name of gender type     |               |         |
+| isActive   | Yes      | is active or not        |               |         |
+| code       | Yes      | language code of gender |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -592,8 +640,9 @@ code|Yes|language code of gender| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -606,28 +655,33 @@ code|Yes|language code of gender| |
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### DELETE /gendertypes/{code}
 
-## DELETE /gendertypes/{code}
-This service will delete Gender which are used in the MOSIP platform. 
+This service will delete Gender which are used in the MOSIP platform.
 
-### Resource URL
+#### Resource URL
+
 `DELETE/gendertypes/{code}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Code of gender type| |  
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description         | Default Value | Example |
+| ---- | -------- | ------------------- | ------------- | ------- |
+| code | Yes      | Code of gender type |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -639,28 +693,33 @@ code|Yes|Code of gender type| |
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /gendertypes
 
-## GET /gendertypes
-This service will provides the service for the List of Genders. 
+This service will provides the service for the List of Genders.
 
-### Resource URL
+#### Resource URL
+
 `GET /gendertypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-NA | NA | NA | NA | NA
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| NA   | NA       | NA          | NA            | NA      |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -679,28 +738,33 @@ NA | NA | NA | NA | NA
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /gendertypes/{langcode}
 
-## GET /gendertypes/{langcode}
-This service will provides the service for the List of Genders. 
+This service will provides the service for the List of Genders.
 
-### Resource URL
+#### Resource URL
+
 `GET /gendertypes/{langcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-langcode|Yes|Code of the language| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name     | Required | Description          | Default Value | Example |
+| -------- | -------- | -------------------- | ------------- | ------- |
+| langcode | Yes      | Code of the language |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -719,29 +783,33 @@ langcode|Yes|Code of the language| |
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /gendertypes/{gendername}
 
-## GET /gendertypes/{gendername}
-This service will provides the gender based on the gender name. 
+This service will provides the gender based on the gender name.
 
-### Resource URL
+#### Resource URL
+
 `GET /gendertypes/{gendername}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-gendername|Yes|Name of the gender| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Example Response
-```JSON
+| Name       | Required | Description        | Default Value | Example |
+| ---------- | -------- | ------------------ | ------------- | ------- |
+| gendername | Yes      | Name of the gender |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -756,10 +824,12 @@ gendername|Yes|Name of the gender| |
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure Response
-```JSON
+#### Failure Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -772,31 +842,36 @@ gendername|Yes|Name of the gender| |
   "response": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET gendertypes/all
 
-## GET gendertypes/all
-This service will provides all gendertypes details. 
+This service will provides all gendertypes details.
 
-### Resource URL
+#### Resource URL
+
 `GET gendertypes/all`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-orderBy | optional |order the requested data based on param ||
-pageNumber | optional | page no for the requested data ||
-pageSize | optional |page size for the requested data ||
-sortBy | optional | sort the requested data based on param value ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name       | Required | Description                                  | Default Value | Example |
+| ---------- | -------- | -------------------------------------------- | ------------- | ------- |
+| orderBy    | optional | order the requested data based on param      |               |         |
+| pageNumber | optional | page no for the requested data               |               |         |
+| pageSize   | optional | page size for the requested data             |               |         |
+| sortBy     | optional | sort the requested data based on param value |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -826,49 +901,55 @@ sortBy | optional | sort the requested data based on param value ||
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+#### Failure details
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-017 | Error occured while fetching gender types | Fetch Issue
-KER-MSD-018 | Gender Type not found | Not Found
-KER-MSD-068 | Could not insert Gender Data | Insert Issue
-KER-MSD-101 | Error occurred while updating Gender Type details | Update Issue
-KER-MSD-102 | Error occurred while deleting Gender Type details | Delete Issue
+| Error Code  | Error Message                                     | Error Description |
+| ----------- | ------------------------------------------------- | ----------------- |
+| KER-MSD-017 | Error occured while fetching gender types         | Fetch Issue       |
+| KER-MSD-018 | Gender Type not found                             | Not Found         |
+| KER-MSD-068 | Could not insert Gender Data                      | Insert Issue      |
+| KER-MSD-101 | Error occurred while updating Gender Type details | Update Issue      |
+| KER-MSD-102 | Error occurred while deleting Gender Type details | Delete Issue      |
 
-## POST /genders/search
+### POST /genders/search
+
 This API is used by the Administrator Portal to fetch list of Genders based on a given filter criteria to display the list of Genders on the Portal UI.
 
-### Resource URL
+#### Resource URL
+
 `POST /genders/search`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["contains","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the start range| -NA- |
-toValue|No|If the type is "between", this field is the value of the end range| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 0
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["contains","equals","startsWith","between"]           | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the start range            | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the end range              | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 0             |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -899,8 +980,9 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -922,31 +1004,36 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-## POST /genders/filtervalues
+### POST /genders/filtervalues
+
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Gender List View UI Screen.
 
-### Resource URL
+#### Resource URL
+
 `POST /genders/filtervalues`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+#### Parameters
 
-### Example Request
-```JSON
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -964,8 +1051,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -982,32 +1070,39 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-----
+***
 
-# Age Group Types
-* [GET /agegrouptype/{age}](#get-agegrouptypeage)
+## Age Group Types
 
-## GET /agegrouptype/{age}
-This service will provides the age group based on the passed age. 
+* [GET /agegrouptype/{age}](Common-APIs.md#get-agegrouptypeage)
 
-### Resource URL
+### GET /agegrouptype/{age}
+
+This service will provides the age group based on the passed age.
+
+#### Resource URL
+
 `GET /agegrouptype/{age}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1030,8 +1125,9 @@ Name | Required | Description | Default Value | Example
 }
 ```
 
-### Failure Response
-```JSON
+#### Failure Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1044,34 +1140,41 @@ Name | Required | Description | Default Value | Example
   "response":  null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-----
+***
 
-# ID Types
-* [POST /idtypes](#post-idtypes)
-* [GET /idtypes/{languagecode}](#get-idtypes-languagecode)
+## ID Types
 
-## POST /idtypes
-This service will create the list of Id types which are used in the MOSIP platform. 
+* [POST /idtypes](Common-APIs.md#post-idtypes)
+* [GET /idtypes/{languagecode}](Common-APIs.md#get-idtypes-languagecode)
 
-### Resource URL
+### POST /idtypes
+
+This service will create the list of Id types which are used in the MOSIP platform.
+
+#### Resource URL
+
 `POST /idtypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-idtype|Yes|Name of the id type| | 
-languagecode|Yes|Language of the id type| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description             | Default Value | Example |
+| ------------ | -------- | ----------------------- | ------------- | ------- |
+| idtype       | Yes      | Name of the id type     |               |         |
+| languagecode | Yes      | Language of the id type |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1087,8 +1190,9 @@ languagecode|Yes|Language of the id type| |
  }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1101,28 +1205,33 @@ languagecode|Yes|Language of the id type| |
               }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /idtypes/{langcode}
 
-## GET /idtypes/{langcode}
-This service will provides the service for the List of id types based on language. 
+This service will provides the service for the List of id types based on language.
 
-### Resource URL
+#### Resource URL
+
 `GET /idtypes/{langcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-langcode|Yes|Code of the language| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name     | Required | Description          | Default Value | Example |
+| -------- | -------- | -------------------- | ------------- | ------- |
+| langcode | Yes      | Code of the language |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -1147,10 +1256,12 @@ langcode|Yes|Code of the language| |
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure Response
-```JSON
+#### Failure Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1163,48 +1274,55 @@ langcode|Yes|Code of the language| |
   "response": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
+#### Failure details
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-022 | ID Type not found. | Not Found
-KER-MSD-021 | Error occurred while fetching ID Types |Fetch Issue
-KER-MSD-059 | Error occurred while inserting ID Type details. | Insert Issue
+| Error Code  | Error Message                                   | Error Description |
+| ----------- | ----------------------------------------------- | ----------------- |
+| KER-MSD-022 | ID Type not found.                              | Not Found         |
+| KER-MSD-021 | Error occurred while fetching ID Types          | Fetch Issue       |
+| KER-MSD-059 | Error occurred while inserting ID Type details. | Insert Issue      |
 
-----
+***
 
-# Holidays
-* [GET /holidays](#get-holidays)
-* [POST /holidays](#post-holidays)
-* [PUT /holidays](#put-holidays)
-* [DELETE /holidays](#delete-holidays)
-* [GET /holidays/{holidayid}](#get-holidays-holidayid)
-* [GET /holidays/{holidayid}/{langcode}](#get-holidays-holidayid-langcode)
-* [GET /holidays/all](#get-holidays-all)
-* [POST /holidays/filtervalues](#post-holidays-filtervalues)
-* [POST /holidays/search](#post-holidays-search)
+## Holidays
 
-## GET /holidays
-This service will get all the holidays. 
+* [GET /holidays](Common-APIs.md#get-holidays)
+* [POST /holidays](Common-APIs.md#post-holidays)
+* [PUT /holidays](Common-APIs.md#put-holidays)
+* [DELETE /holidays](Common-APIs.md#delete-holidays)
+* [GET /holidays/{holidayid}](Common-APIs.md#get-holidays-holidayid)
+* [GET /holidays/{holidayid}/{langcode}](Common-APIs.md#get-holidays-holidayid-langcode)
+* [GET /holidays/all](Common-APIs.md#get-holidays-all)
+* [POST /holidays/filtervalues](Common-APIs.md#post-holidays-filtervalues)
+* [POST /holidays/search](Common-APIs.md#post-holidays-search)
 
-### Resource URL
+### GET /holidays
+
+This service will get all the holidays.
+
+#### Resource URL
+
 `GET /holidays`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
---NA-- 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name   | Required | Description | Default Value | Example |
+| ------ | -------- | ----------- | ------------- | ------- |
+| --NA-- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": null,
   "version": null,
@@ -1229,35 +1347,40 @@ Name | Required | Description | Default Value | Example
   "errors": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### POST /holidays
 
-## POST /holidays
-This service will create a new holiday. 
+This service will create a new holiday.
 
-### Resource URL
+#### Resource URL
+
 `POST /holidays`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-locationCode | Yes | location code ||
-holidayDate | Yes| date ||
-holidayMonth | Yes | month || 
-holidayYear |Yes | year ||
-holidayName |Yes | name ||
-holidayDesc |Yes | description ||
-langCode |Yes | language code ||
-isActive |Yes | is active? ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description   | Default Value | Example |
+| ------------ | -------- | ------------- | ------------- | ------- |
+| locationCode | Yes      | location code |               |         |
+| holidayDate  | Yes      | date          |               |         |
+| holidayMonth | Yes      | month         |               |         |
+| holidayYear  | Yes      | year          |               |         |
+| holidayName  | Yes      | name          |               |         |
+| holidayDesc  | Yes      | description   |               |         |
+| langCode     | Yes      | language code |               |         |
+| isActive     | Yes      | is active?    |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -1278,8 +1401,9 @@ isActive |Yes | is active? ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -1299,37 +1423,41 @@ isActive |Yes | is active? ||
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### PUT /holidays
 
-## PUT /holidays
-This service will update a holiday. 
+This service will update a holiday.
 
-### Resource URL
+#### Resource URL
+
 `PUT /holidays`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-locationCode | Yes | location code ||
-holidayDate | Yes| date ||
-newHolidayDate | Yes | new date || 
-newHolidayName | Yes | new name ||
-holidayName | Yes | name ||
-holidayDesc | Yes | description ||
-langCode | Yes | language code ||
-isActive | Yes | is active? ||
-newHolidayDesc | Yes | new description ||
+#### Parameters
 
-### Example Request
-```JSON
+| Name           | Required | Description     | Default Value | Example |
+| -------------- | -------- | --------------- | ------------- | ------- |
+| locationCode   | Yes      | location code   |               |         |
+| holidayDate    | Yes      | date            |               |         |
+| newHolidayDate | Yes      | new date        |               |         |
+| newHolidayName | Yes      | new name        |               |         |
+| holidayName    | Yes      | name            |               |         |
+| holidayDesc    | Yes      | description     |               |         |
+| langCode       | Yes      | language code   |               |         |
+| isActive       | Yes      | is active?      |               |         |
+| newHolidayDesc | Yes      | new description |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -1350,8 +1478,9 @@ newHolidayDesc | Yes | new description ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "holidayDate": "string",
   "holidayName": "string",
@@ -1359,31 +1488,35 @@ newHolidayDesc | Yes | new description ||
   "locationCode": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### DELETE /holidays
 
-## DELETE /holidays
-This service will provides the service to delete a holiday. 
+This service will provides the service to delete a holiday.
 
-### Resource URL
+#### Resource URL
+
 `DELETE /holidays`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-holidayDate | Yes | date to be deleted ||
-holidayName | Yes | name of the holiday to be deleted ||
-locationCode | Yes | location code ||
+#### Parameters
 
-### Example Request
-```JSON
+| Name         | Required | Description                       | Default Value | Example |
+| ------------ | -------- | --------------------------------- | ------------- | ------- |
+| holidayDate  | Yes      | date to be deleted                |               |         |
+| holidayName  | Yes      | name of the holiday to be deleted |               |         |
+| locationCode | Yes      | location code                     |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -1397,36 +1530,42 @@ locationCode | Yes | location code ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "holidayDate": "string",
   "holidayName": "string",
   "locationCode": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /holidays/{holidayid}
 
-## GET /holidays/{holidayid}
-This service will provides the service to get all holidays by Id. 
+This service will provides the service to get all holidays by Id.
 
-### Resource URL
+#### Resource URL
+
 `GET /holidays/{holidayid}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-holidayid | yes | holiday Id ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name      | Required | Description | Default Value | Example |
+| --------- | -------- | ----------- | ------------- | ------- |
+| holidayid | yes      | holiday Id  |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -1456,29 +1595,34 @@ holidayid | yes | holiday Id ||
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /holidays/{holidayid}/{langcode}
 
-## GET /holidays/{holidayid}/{langcode}
-This service will get all the holidays by holidayid and language code. 
+This service will get all the holidays by holidayid and language code.
 
-### Resource URL
+#### Resource URL
+
 `GET /holidays/{holidayid}/{langcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-holidayid | yes | holiday Id ||||
-langCode | Yes | language code ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name      | Required | Description   | Default Value | Example |
+| --------- | -------- | ------------- | ------------- | ------- |
+| holidayid | yes      | holiday Id    |               |         |
+| langCode  | Yes      | language code |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -1508,31 +1652,36 @@ langCode | Yes | language code ||
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /holidays/all
 
-## GET /holidays/all
-This service will retrieve all the holidays with additional metadata. 
+This service will retrieve all the holidays with additional metadata.
 
-### Resource URL
+#### Resource URL
+
 `GET /holidays/all`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-orderBy | optional | response order	| desc	||
-pageNumber |optional | page no for the requested data | 0 ||	
-pageSize | optional	| page size for the requested data	| 10 ||
-sortBy | optional | sort the requested data based on param value | createdDateTime ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name       | Required | Description                                  | Default Value   | Example |
+| ---------- | -------- | -------------------------------------------- | --------------- | ------- |
+| orderBy    | optional | response order                               | desc            |         |
+| pageNumber | optional | page no for the requested data               | 0               |         |
+| pageSize   | optional | page size for the requested data             | 10              |         |
+| sortBy     | optional | sort the requested data based on param value | createdDateTime |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -1569,42 +1718,48 @@ sortBy | optional | sort the requested data based on param value | createdDateTi
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-019 | Error occured while fetching Holidays | Fetch Issue
-KER-MSD-020 | Holiday not found | Data Not Found
-KER-MSD-065 | Error occurred while inserting holiday | Insertion Issue
-KER-MSD-099 | Error occurred while updating holiday | Update Issue
-KER-MSD-100 | Error occurred while deleting holiday | Deletion Issue
-KER-MSD-025 | Error occured while fetching Location Hierarchy | fetch issue
-KER-MSD-026 | Location not found | Data Not Found
+#### Failure details
 
+| Error Code  | Error Message                                   | Error Description |
+| ----------- | ----------------------------------------------- | ----------------- |
+| KER-MSD-019 | Error occured while fetching Holidays           | Fetch Issue       |
+| KER-MSD-020 | Holiday not found                               | Data Not Found    |
+| KER-MSD-065 | Error occurred while inserting holiday          | Insertion Issue   |
+| KER-MSD-099 | Error occurred while updating holiday           | Update Issue      |
+| KER-MSD-100 | Error occurred while deleting holiday           | Deletion Issue    |
+| KER-MSD-025 | Error occured while fetching Location Hierarchy | fetch issue       |
+| KER-MSD-026 | Location not found                              | Data Not Found    |
 
-## POST /holidays/filtervalues
+### POST /holidays/filtervalues
+
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Holiday List View UI Screen.
 
-### Resource URL
+#### Resource URL
+
 `POST /holidays/filtervalues`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters | No| Array of the filter applied. In case of "list" screen, this array will be empty | -NA- |
-columnName |No | The column name in the JSON response | -NA- |
-type | No | The value have to be in ["unique","all"] | unique | unique
-languagecode | Yes | Language code in Language code in ISO 639-2 format | | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -1632,8 +1787,9 @@ languagecode | Yes | Language code in Language code in ISO 639-2 format | |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -1655,46 +1811,53 @@ languagecode | Yes | Language code in Language code in ISO 639-2 format | |
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### POST /holidays/search
 
-## POST /holidays/search
 This API is used by the Administrator Portal to fetch list of Holidays based on a given filter criteria to display the list of Holidays on the Portal UI.
 
-### Resource URL
+#### Resource URL
+
 `POST /holidays/search`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["contains","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the fromName| -NA- |
-toValue|No|If the type is "between", this field is the value of the toName| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 0
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Filter Values
+#### Parameters
+
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["contains","equals","startsWith","between"]           | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the fromName               | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the toName                 | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 0             |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
+
+#### Filter Values
+
 Please find the filter columns used in search
-1) holidayName
-2) holidayDate|["between"]
-3) isActive
 
-### Example Request
-```JSON
+1. holidayName
+2. holidayDate|\["between"]
+3. isActive
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -1725,8 +1888,9 @@ Please find the filter columns used in search
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1754,49 +1918,55 @@ Please find the filter columns used in search
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-----
+***
 
-# Locations
-* [POST /locations](#post-locations)
-* [PUT /locations](#put-locations)
-* [DELETE /locations/{locationcode}](#delete-locationslocationcode)
-* [GET /locations/{langcode}](#get-locationslangcode)
-* [GET /locations/{locationcode}/{languagecode}](#get-locationslocationcodelanguagecode)
-* [GET /locations/immediatechildren/{locationcode}/{languagecode}](#get-locationsimmediatechildrenlocationcodelanguagecode)
-* [GET /locations/locationhierarchy/{hierarchyname}](#get-locationslocationhierarchyhierarchyname)
-* [GET /locations/validate/{locationname}](#get-locations-validate-locationname)
-* [GET /locations/all](#get-locations-all)
-* [POST /locations/search](#post-locations-search)
-* [POST /locations/filtervalues](#post-locations-filtervalues)
+## Locations
 
-## `POST /locations`
+* [POST /locations](Common-APIs.md#post-locations)
+* [PUT /locations](Common-APIs.md#put-locations)
+* [DELETE /locations/{locationcode}](Common-APIs.md#delete-locationslocationcode)
+* [GET /locations/{langcode}](Common-APIs.md#get-locationslangcode)
+* [GET /locations/{locationcode}/{languagecode}](Common-APIs.md#get-locationslocationcodelanguagecode)
+* [GET /locations/immediatechildren/{locationcode}/{languagecode}](Common-APIs.md#get-locationsimmediatechildrenlocationcodelanguagecode)
+* [GET /locations/locationhierarchy/{hierarchyname}](Common-APIs.md#get-locationslocationhierarchyhierarchyname)
+* [GET /locations/validate/{locationname}](Common-APIs.md#get-locations-validate-locationname)
+* [GET /locations/all](Common-APIs.md#get-locations-all)
+* [POST /locations/search](Common-APIs.md#post-locations-search)
+* [POST /locations/filtervalues](Common-APIs.md#post-locations-filtervalues)
+
+### `POST /locations`
+
 This masterdata service creates the location. Please find the steps to create primary/secondary languages in the [link](Registration-Center-APIs.md#createupdate-api).
 
-### Resource URL
+#### Resource URL
+
 `POST /locations`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Code of the location| | 
-name|Yes|Name of the location| | 
-hierarchyLevel|Yes|Heirarchy level of the location| | 
-hierarchyName|Yes|Hierarchy level name of the location| | 
-parentLocCode|Yes|Parent location code of the location| | 
-langCode|Yes|Language Code of the location| | 
-isActive|Yes|Is this location active| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Example Request
-```JSON
+| Name           | Required | Description                          | Default Value | Example |
+| -------------- | -------- | ------------------------------------ | ------------- | ------- |
+| code           | Yes      | Code of the location                 |               |         |
+| name           | Yes      | Name of the location                 |               |         |
+| hierarchyLevel | Yes      | Heirarchy level of the location      |               |         |
+| hierarchyName  | Yes      | Hierarchy level name of the location |               |         |
+| parentLocCode  | Yes      | Parent location code of the location |               |         |
+| langCode       | Yes      | Language Code of the location        |               |         |
+| isActive       | Yes      | Is this location active              |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -1814,8 +1984,9 @@ isActive|Yes|Is this location active| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1840,9 +2011,11 @@ isActive|Yes|Is this location active| |
   "errors": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Error Response:
+#### Error Response:
+
 ```
 {
   "id": "string",
@@ -1858,43 +2031,48 @@ isActive|Yes|Is this location active| |
  "response": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MSD-389 |Parent location not found
-KER-MSD-385 |Location already exist under the hierarchy
-KER-MSD-064 |Error occured while inserting location hierarchy details
+#### Failure details
 
+| Error Code  | Error Message                                            | Error Description                    |
+| ----------- | -------------------------------------------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error                                    | If system error occurs               |
+| KER-ATH-403 | Forbidden                                                | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed                                    | If no role/invalid token is detected |
+| KER-MSD-389 | Parent location not found                                |                                      |
+| KER-MSD-385 | Location already exist under the hierarchy               |                                      |
+| KER-MSD-064 | Error occured while inserting location hierarchy details |                                      |
 
-## PUT /locations
+### PUT /locations
 
-### Resource URL
+#### Resource URL
+
 `PUT /locations`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Code of the location| | 
-name|Yes|Name of the location| | 
-hierarchyLevel|Yes|Heirarchy level of the location| | 
-hierarchyName|Yes|Hierarchy level name of the location| | 
-parentLocCode|Yes|Parent location code of the location| | 
-langCode|Yes|Language Code of the location| | 
-isActive|Yes|Is this location active| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name           | Required | Description                          | Default Value | Example |
+| -------------- | -------- | ------------------------------------ | ------------- | ------- |
+| code           | Yes      | Code of the location                 |               |         |
+| name           | Yes      | Name of the location                 |               |         |
+| hierarchyLevel | Yes      | Heirarchy level of the location      |               |         |
+| hierarchyName  | Yes      | Hierarchy level name of the location |               |         |
+| parentLocCode  | Yes      | Parent location code of the location |               |         |
+| langCode       | Yes      | Language Code of the location        |               |         |
+| isActive       | Yes      | Is this location active              |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -1912,10 +2090,11 @@ isActive|Yes|Is this location active| |
 }
 ```
 
-### Example Response
+#### Example Response
 
-#### Success Response
-```JSON
+**Success Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1940,9 +2119,11 @@ isActive|Yes|Is this location active| |
   "errors": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-#### Error Response
+**Error Response**
+
 ```
 {
   "id": "string",
@@ -1958,35 +2139,40 @@ isActive|Yes|Is this location active| |
  "response": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MSD-097 |Error occured while updating location hierarchy details
+#### Failure details
 
+| Error Code  | Error Message                                           | Error Description                    |
+| ----------- | ------------------------------------------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error                                   | If system error occurs               |
+| KER-ATH-403 | Forbidden                                               | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed                                   | If no role/invalid token is detected |
+| KER-MSD-097 | Error occured while updating location hierarchy details |                                      |
 
-## DELETE /locations/{locationcode}
+### DELETE /locations/{locationcode}
 
-### Resource URL
+#### Resource URL
+
 `DELETE /locations/{locationcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-locationcode | Yes | location code ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name         | Required | Description   | Default Value | Example |
+| ------------ | -------- | ------------- | ------------- | ------- |
+| locationcode | Yes      | location code |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1998,28 +2184,33 @@ locationcode | Yes | location code ||
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /locations/{langcode}
 
-## GET /locations/{langcode}
-This service will provides the service for the List of Locations. 
+This service will provides the service for the List of Locations.
 
-### Resource URL
+#### Resource URL
+
 `GET /locations/{langcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2042,28 +2233,33 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /locations/{locationcode}/{languagecode}
 
-## GET /locations/{locationcode}/{languagecode}
-This service will provides the service for the List of Locations. 
+This service will provides the service for the List of Locations.
 
-### Resource URL
+#### Resource URL
+
 `GET /locations/{locationcode}/{languagecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2094,28 +2290,33 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /locations/immediatechildren/{locationcode}/{langcode}
 
-## GET /locations/immediatechildren/{locationcode}/{langcode}
-This service will provides the service for the List of Locations. 
+This service will provides the service for the List of Locations.
 
-### Resource URL
+#### Resource URL
+
 `GET /locations/immediatechildren/{locationcode}/{langcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2146,28 +2347,33 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /locations/locationhierarchy/{hierarchyname}
 
-## GET /locations/locationhierarchy/{hierarchyname}
-This service will provides the service for the List of Locations based on the location hierarchy name. 
+This service will provides the service for the List of Locations based on the location hierarchy name.
 
-### Resource URL
+#### Resource URL
+
 `GET /locations/locationhierarchy/{hierarchyname}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2198,28 +2404,33 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /locations/validate/{locationname}
 
-## GET /locations/validate/{locationname}
-This service whether the given location name is valid or not. 
+This service whether the given location name is valid or not.
 
-### Resource URL
+#### Resource URL
+
 `GET /locations/validate/{locationname}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-locationname|yes|This is the location name. | -NA- | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name         | Required | Description                | Default Value | Example |
+| ------------ | -------- | -------------------------- | ------------- | ------- |
+| locationname | yes      | This is the location name. | -NA-          |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -2236,31 +2447,36 @@ locationname|yes|This is the location name. | -NA- |
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /locations/all
 
-## GET /locations/all
 This service will provide all locations
 
-### Resource URL
+#### Resource URL
+
 `GET /locations/all`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-pageNumber | optional | page no for the requested data | -NA- | 
-pageSize | optional | page size for the requested data | -NA- | 
-sortBy | optional | sort the requested data based on param value | -NA- | 
-orderBy | optional | order the requested data based on param | -NA- | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name       | Required | Description                                  | Default Value | Example |
+| ---------- | -------- | -------------------------------------------- | ------------- | ------- |
+| pageNumber | optional | page no for the requested data               | -NA-          |         |
+| pageSize   | optional | page size for the requested data             | -NA-          |         |
+| sortBy     | optional | sort the requested data based on param value | -NA-          |         |
+| orderBy    | optional | order the requested data based on param      | -NA-          |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -2287,53 +2503,60 @@ orderBy | optional | order the requested data based on param | -NA- |
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-025 | Error occured while fetching Location Hierarchy | Fetch Issue
-KER-MSD-026 | Location not found | Data Not Found
-KER-MSD-064 | Error occured while inserting location hierarchy details | Insertion Issue
-KER-MSD-097 | Error occured wihile updating location hierarchy details | Update Issue
-KER-MSD-098 | Error occured wihile deleting location hierarchy details | Deletion Issue
-KER-MSD-028 | Location Hierarchy Level not found | Data Not Found
-KER-MSD-027 | Error occured while fetching Location Hierarchy Levels | Fetch Issue
-KER-MSD-389 | Parent location not found | Data Not Found
-KER-MSD-385 | Location already exist under the hierarchy | insertion issue
+#### Failure details
 
+| Error Code  | Error Message                                            | Error Description |
+| ----------- | -------------------------------------------------------- | ----------------- |
+| KER-MSD-025 | Error occured while fetching Location Hierarchy          | Fetch Issue       |
+| KER-MSD-026 | Location not found                                       | Data Not Found    |
+| KER-MSD-064 | Error occured while inserting location hierarchy details | Insertion Issue   |
+| KER-MSD-097 | Error occured wihile updating location hierarchy details | Update Issue      |
+| KER-MSD-098 | Error occured wihile deleting location hierarchy details | Deletion Issue    |
+| KER-MSD-028 | Location Hierarchy Level not found                       | Data Not Found    |
+| KER-MSD-027 | Error occured while fetching Location Hierarchy Levels   | Fetch Issue       |
+| KER-MSD-389 | Parent location not found                                | Data Not Found    |
+| KER-MSD-385 | Location already exist under the hierarchy               | insertion issue   |
 
-## POST /locations/search
+### POST /locations/search
+
 This API is used by the Administrator Portal to fetch list of Locations based on a given filter criteria to display the list of Locations on the Portal UI.
 
-### Resource URL
+#### Resource URL
+
 `POST /locations/search`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["in","equals",,"startsWith""between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the start range| -NA- |
-toValue|No|If the type is "between", this field is the value of the end range| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 0
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Filter Values
+#### Parameters
+
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["in","equals",,"startsWith""between"]                 | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the start range            | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the end range              | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 0             |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
+
+#### Filter Values
+
 Please find the filter columns used in search
+
 * isActive
 * region
 * province
@@ -2341,8 +2564,9 @@ Please find the filter columns used in search
 * Zone
 * postalCode
 
-### Example Request
-```JSON
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -2373,8 +2597,9 @@ Please find the filter columns used in search
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2399,31 +2624,36 @@ Please find the filter columns used in search
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### POST /locations/filtervalues
 
-## POST /locations/filtervalues
-This API is used by the Administrator Portal UI to populate filter dropdowns on the Location List View UI Screen.  
+This API is used by the Administrator Portal UI to populate filter dropdowns on the Location List View UI Screen.
 
-### Resource URL
+#### Resource URL
+
 `POST /locations/filtervalues`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -2441,8 +2671,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2460,36 +2691,43 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-----
+***
 
-# Languages
-* [POST /languages](#post-languages)
-* [GET /languages](#get-languages)
-* [PUT /languages](#put-languages)
-* [DELETE /languages/{code}](#delete-languagescode)
+## Languages
 
-## POST /languages
-This service will create a Language which is used in the MOSIP platform. 
+* [POST /languages](Common-APIs.md#post-languages)
+* [GET /languages](Common-APIs.md#get-languages)
+* [PUT /languages](Common-APIs.md#put-languages)
+* [DELETE /languages/{code}](Common-APIs.md#delete-languagescode)
 
-### Resource URL
+### POST /languages
+
+This service will create a Language which is used in the MOSIP platform.
+
+#### Resource URL
+
 `POST /languages`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Code of the language| | 
-name|Yes|Name of the language| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name | Required | Description          | Default Value | Example |
+| ---- | -------- | -------------------- | ------------- | ------- |
+| code | Yes      | Code of the language |               |         |
+| name | Yes      | Name of the language |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2505,8 +2743,9 @@ name|Yes|Name of the language| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2518,32 +2757,37 @@ name|Yes|Name of the language| |
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /languages
 
-## GET /languages
-This service will provides the service for the List of languages. 
+This service will provides the service for the List of languages.
 
-### Resource URL
+#### Resource URL
+
 `GET /languages`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-NA ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Example Request
--NA-
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| NA   |          |             |               |         |
 
-### Example Response
-```JSON
+#### Example Request
+
+\-NA-
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2562,29 +2806,34 @@ NA ||
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### PUT /languages
 
-## PUT /languages
-This service will update a Language which is used in the MOSIP platform. 
+This service will update a Language which is used in the MOSIP platform.
 
-### Resource URL
+#### Resource URL
+
 `PUT /languages`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Code of the language| | 
-name|Yes|Name of the language| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name | Required | Description          | Default Value | Example |
+| ---- | -------- | -------------------- | ------------- | ------- |
+| code | Yes      | Code of the language |               |         |
+| name | Yes      | Name of the language |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2600,8 +2849,9 @@ name|Yes|Name of the language| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2613,31 +2863,37 @@ name|Yes|Name of the language| |
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### DELETE /languages/{code}
 
-## DELETE /languages/{code}
-This service will delete a Language which is used in the MOSIP platform. 
+This service will delete a Language which is used in the MOSIP platform.
 
-### Resource URL
+#### Resource URL
+
 `DELETE /languages/{code}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Code of the language| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
--NA-
+#### Parameters
 
-### Example Response
-```JSON
+| Name | Required | Description          | Default Value | Example |
+| ---- | -------- | -------------------- | ------------- | ------- |
+| code | Yes      | Code of the language |               |         |
+
+#### Example Request
+
+\-NA-
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2650,8 +2906,9 @@ code|Yes|Code of the language| |
 }
 ```
 
-### Failure Response
-```JSON
+#### Failure Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2666,47 +2923,55 @@ code|Yes|Code of the language| |
   "response" : null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-24 | Language not found | no language found exception
-KER-MSD-23 | Error occured while fetching Languages | language fetch exception
-KER-MSD-049 | Error occurred while inserting Language details | language create exception
-KER-MSD-XXX | Error occured while updating Language | language update exception
-KER-MSD-XXX | Error occured while deleting Language | language delete exception
+#### Failure details
 
-----
+| Error Code  | Error Message                                   | Error Description           |
+| ----------- | ----------------------------------------------- | --------------------------- |
+| KER-MSD-24  | Language not found                              | no language found exception |
+| KER-MSD-23  | Error occured while fetching Languages          | language fetch exception    |
+| KER-MSD-049 | Error occurred while inserting Language details | language create exception   |
+| KER-MSD-XXX | Error occured while updating Language           | language update exception   |
+| KER-MSD-XXX | Error occured while deleting Language           | language delete exception   |
 
-# Individual Types
-* [POST /individualtypes](#post-individualtypes)
-* [PUT /individualtypes](#post-individualtypes)
-* [GET /individualtypes](#get-individualtypes)
-* [GET /individualtypes/all](#get-individualtypes-all)
-* [POST /individualtypes/search](#post-individualtypes-search)
-* [POST /individualtypes/filtervalues](#post-individualtypes-filtervalues)
+***
 
-## POST /individualtypes
-This service will create the list of individualtypes which are used in the MOSIP platform. 
+## Individual Types
 
-### Resource URL
+* [POST /individualtypes](Common-APIs.md#post-individualtypes)
+* [PUT /individualtypes](Common-APIs.md#post-individualtypes)
+* [GET /individualtypes](Common-APIs.md#get-individualtypes)
+* [GET /individualtypes/all](Common-APIs.md#get-individualtypes-all)
+* [POST /individualtypes/search](Common-APIs.md#post-individualtypes-search)
+* [POST /individualtypes/filtervalues](Common-APIs.md#post-individualtypes-filtervalues)
+
+### POST /individualtypes
+
+This service will create the list of individualtypes which are used in the MOSIP platform.
+
+#### Resource URL
+
 `POST /individualtypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|code of individualtype| |
-name|Yes | name of individualtype| |
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name | Required | Description            | Default Value | Example |
+| ---- | -------- | ---------------------- | ------------- | ------- |
+| code | Yes      | code of individualtype |               |         |
+| name | Yes      | name of individualtype |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -2721,8 +2986,9 @@ name|Yes | name of individualtype| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2743,34 +3009,40 @@ name|Yes | name of individualtype| |
   "errors": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-#### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-153 | Data insertion in IndividualTypeRepository is failed | create individualType is failed
+**Failure details**
 
+| Error Code  | Error Message                                        | Error Description               |
+| ----------- | ---------------------------------------------------- | ------------------------------- |
+| KER-MSD-153 | Data insertion in IndividualTypeRepository is failed | create individualType is failed |
 
-## PUT /individualtypes
-This service will update the list of individualtypes which are used in the MOSIP platform. 
+### PUT /individualtypes
 
-### Resource URL
+This service will update the list of individualtypes which are used in the MOSIP platform.
+
+#### Resource URL
+
 `PUT /individualtypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|code of individualtype| |
-name|Yes | name of individualtype| |
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name | Required | Description            | Default Value | Example |
+| ---- | -------- | ---------------------- | ------------- | ------- |
+| code | Yes      | code of individualtype |               |         |
+| name | Yes      | name of individualtype |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -2785,8 +3057,9 @@ name|Yes | name of individualtype| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2807,35 +3080,42 @@ name|Yes | name of individualtype| |
   "errors": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-151 | Individual Type not found | no individual type found exception
-KER-MSD-154 | Data updation in IndividualTypeRepository is failed | Data updation in individualType is failed
+#### Failure details
 
+| Error Code  | Error Message                                       | Error Description                         |
+| ----------- | --------------------------------------------------- | ----------------------------------------- |
+| KER-MSD-151 | Individual Type not found                           | no individual type found exception        |
+| KER-MSD-154 | Data updation in IndividualTypeRepository is failed | Data updation in individualType is failed |
 
-## GET /individualtypes
+### GET /individualtypes
+
 This service will provides the complete list of all individual types in the MOSIP platform
 
-### Resource URL
+#### Resource URL
+
 `GET /individualtypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
--NA-
+#### Parameters
 
-### Example Response
-```JSON
+\-NA-
+
+#### Example Request
+
+\-NA-
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -2855,10 +3135,12 @@ Requires Authentication | Yes
  }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure Response
-```JSON
+#### Failure Response
+
+```
  {
   "id": "string",
   "version": "string",
@@ -2873,31 +3155,36 @@ Requires Authentication | Yes
   "response" : null
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /individualtypes/all
 
-## GET /individualtypes/all
-This service will get all the individualtypes. 
+This service will get all the individualtypes.
 
-### Resource URL
+#### Resource URL
+
 `GET /individualtypes/all`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-orderBy|optional|order the requested data based on param| | 
-pageNumber|optional|page no for the requested data| | 
-pageSize|optional|page size for the requested data| | 
-sortBy|optional|sort the requested data based on param value| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name       | Required | Description                                  | Default Value | Example |
+| ---------- | -------- | -------------------------------------------- | ------------- | ------- |
+| orderBy    | optional | order the requested data based on param      |               |         |
+| pageNumber | optional | page no for the requested data               |               |         |
+| pageSize   | optional | page size for the requested data             |               |         |
+| sortBy     | optional | sort the requested data based on param value |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -2927,46 +3214,52 @@ sortBy|optional|sort the requested data based on param value| |
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-151 | Individual Type not found | no individual type found exception
-KER-MSD-152 | Error occurred while fetching Individual Type | individual type fetch exception
+#### Failure details
 
-	
-## POST /individualtypes/search
-This service is for the individual types search functionality. All the filter parameters are passed and the individual types are searched and the matching results are returned. 
+| Error Code  | Error Message                                 | Error Description                  |
+| ----------- | --------------------------------------------- | ---------------------------------- |
+| KER-MSD-151 | Individual Type not found                     | no individual type found exception |
+| KER-MSD-152 | Error occurred while fetching Individual Type | individual type fetch exception    |
 
-### Resource URL
+### POST /individualtypes/search
+
+This service is for the individual types search functionality. All the filter parameters are passed and the individual types are searched and the matching results are returned.
+
+#### Resource URL
+
 `POST /individualtypes/search`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["in","equals",”startsWith”,"between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the start range| -NA- |
-toValue|No|If the type is "between", this field is the value of the end range| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 0
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["in","equals",”startsWith”,"between"]                 | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the start range            | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the end range              | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 0             |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -2997,8 +3290,9 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -3013,11 +3307,11 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
         "langCode": "string",
         "name": "string",
         "createdBy": "string",
-        "createdDateTime": "string",
-        "updatedBy": "string",
-        "updatedDateTime": "string",
-        "isDeleted": "boolean",
-        "deletedDateTime": "string",
+        "createdDateTime": "string",
+        "updatedBy": "string",
+        "updatedDateTime": "string",
+        "isDeleted": "boolean",
+        "deletedDateTime": "string",
       }
     ],
 	"fromRecord" : "number",
@@ -3026,30 +3320,36 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-## POST /individualtypes/filtervalues
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+### POST /individualtypes/filtervalues
 
-### Resource URL
+This service returns the filter values which are required in the dropdown entries of the filter screen.
+
+#### Resource URL
+
 `POST /individualtypes/filtervalues`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -3067,8 +3367,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -3085,36 +3386,43 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-----
+***
 
-# Application Types
-* [POST /applicationtypes](#post-applicationtypes)
-* [GET /applicationtypes](#get-applicationtypes)
-* [GET /applicationtypes/{code}/{langcode}](#get-applicationtypes-code-languagecode)
-* [GET /applicationtypes/{langcode}](#get-applicationtypes-languagecode)
+## Application Types
 
-## POST /applicationtypes
-This service will create the list of ApplicationTypes which are used in the MOSIP platform. 
+* [POST /applicationtypes](Common-APIs.md#post-applicationtypes)
+* [GET /applicationtypes](Common-APIs.md#get-applicationtypes)
+* [GET /applicationtypes/{code}/{langcode}](Common-APIs.md#get-applicationtypes-code-languagecode)
+* [GET /applicationtypes/{langcode}](Common-APIs.md#get-applicationtypes-languagecode)
 
-### Resource URL
+### POST /applicationtypes
+
+This service will create the list of ApplicationTypes which are used in the MOSIP platform.
+
+#### Resource URL
+
 `POST /applicationtypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|code of applicationtype| |
-description|Yes | description of applicationtype| |
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name        | Required | Description                    | Default Value | Example |
+| ----------- | -------- | ------------------------------ | ------------- | ------- |
+| code        | Yes      | code of applicationtype        |               |         |
+| description | Yes      | description of applicationtype |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -3130,8 +3438,9 @@ description|Yes | description of applicationtype| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -3149,26 +3458,31 @@ description|Yes | description of applicationtype| |
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /applicationtypes
 
-## GET /applicationtypes
-This service will provides the service for the List of ApplicationTypes. 
+This service will provides the service for the List of ApplicationTypes.
 
-### Resource URL
+#### Resource URL
+
 `GET /applicationtypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+\-NA-
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -3193,29 +3507,34 @@ Requires Authentication | Yes
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /applicationtypes/{code}/{langcode}
 
-## GET /applicationtypes/{code}/{langcode}
-This service will provides the service for the List of ApplicationTypes. 
+This service will provides the service for the List of ApplicationTypes.
 
-### Resource URL
+#### Resource URL
+
 `GET /applicationtypes/{code}/{languagecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code |Yes|Code of the applicationtype| | 
-langcode|Yes|Name of the language| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name     | Required | Description                 | Default Value | Example |
+| -------- | -------- | --------------------------- | ------------- | ------- |
+| code     | Yes      | Code of the applicationtype |               |         |
+| langcode | Yes      | Name of the language        |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -3240,28 +3559,33 @@ langcode|Yes|Name of the language| |
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /applicationtypes/{langcode}
 
-## GET /applicationtypes/{langcode}
 This service is used to fetch all Application details by language code
 
-### Resource URL
+#### Resource URL
+
 `GET /applicationtypes/{languagecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-langcode|Yes|Name of the language| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name     | Required | Description          | Default Value | Example |
+| -------- | -------- | -------------------- | ------------- | ------- |
+| langcode | Yes      | Name of the language |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -3286,52 +3610,59 @@ langcode|Yes|Name of the language| |
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+#### Failure details
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-001 | Error occurred while fetching Applications | application fetch exception 
-KER-MSD-101 | Error occurred while inserting application details | application insert exception
-KER-MSD-002 | Application not found | application not found exception
-KER-MSD-201 | Bad Request Found | application request exception
+| Error Code  | Error Message                                      | Error Description               |
+| ----------- | -------------------------------------------------- | ------------------------------- |
+| KER-MSD-001 | Error occurred while fetching Applications         | application fetch exception     |
+| KER-MSD-101 | Error occurred while inserting application details | application insert exception    |
+| KER-MSD-002 | Application not found                              | application not found exception |
+| KER-MSD-201 | Bad Request Found                                  | application request exception   |
 
-----
+***
 
-# Blacklisted Words
-* [POST /blacklistedwords](#post-blacklistedwords)
-* [PUT /blacklistedwords](#put-blacklistedwords)
-* [GET /blacklistedwords/{langcode}](#get-blacklistedwords-langcode)
-* [DELETE /blacklistedwords/{word}](#delete-blacklistedwords-word)
-* [GET /blacklistedwords/all](#get-blacklistedwords-all)
-* [PUT /blacklistedwords/details](#put-blacklistedwords-details)
-* [POST /blacklistedwords/words](#post-blacklistedwords-words)
-* [POST /blacklistedwords/filtervalues](#post-blacklistedwords-filtervalues)
-* [POST /blacklistedwords/search](#post-blacklistedwords-search)
+## Blacklisted Words
 
-## POST /blacklistedwords
-This service will create a blacklistedword which will be used in the MOSIP platform. 
+* [POST /blacklistedwords](Common-APIs.md#post-blacklistedwords)
+* [PUT /blacklistedwords](Common-APIs.md#put-blacklistedwords)
+* [GET /blacklistedwords/{langcode}](Common-APIs.md#get-blacklistedwords-langcode)
+* [DELETE /blacklistedwords/{word}](Common-APIs.md#delete-blacklistedwords-word)
+* [GET /blacklistedwords/all](Common-APIs.md#get-blacklistedwords-all)
+* [PUT /blacklistedwords/details](Common-APIs.md#put-blacklistedwords-details)
+* [POST /blacklistedwords/words](Common-APIs.md#post-blacklistedwords-words)
+* [POST /blacklistedwords/filtervalues](Common-APIs.md#post-blacklistedwords-filtervalues)
+* [POST /blacklistedwords/search](Common-APIs.md#post-blacklistedwords-search)
 
-### Resource URL
+### POST /blacklistedwords
+
+This service will create a blacklistedword which will be used in the MOSIP platform.
+
+#### Resource URL
+
 `POST /blacklistedwords`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-description | optional | blacklisted word description ||
-isActive | Yes | is active or not ||
-langCode | Yes | language code ||
-word | Yes | blacklisted word name || 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name        | Required | Description                  | Default Value | Example |
+| ----------- | -------- | ---------------------------- | ------------- | ------- |
+| description | optional | blacklisted word description |               |         |
+| isActive    | Yes      | is active or not             |               |         |
+| langCode    | Yes      | language code                |               |         |
+| word        | Yes      | blacklisted word name        |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -3346,8 +3677,9 @@ word | Yes | blacklisted word name ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -3365,32 +3697,37 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### PUT /blacklistedwords
 
-## PUT /blacklistedwords
-This service will update the blacklisted word which is used in the MOSIP platform. 
+This service will update the blacklisted word which is used in the MOSIP platform.
 
-### Resource URL
+#### Resource URL
+
 `PUT /blacklistedwords`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-description | optional | blacklisted word description ||
-isActive | Yes| is active or not ||
-langCode | Yes | language code ||
-oldWord | Yes | old blacklisted word || 
-word |Yes |blacklisted word ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name        | Required | Description                  | Default Value | Example |
+| ----------- | -------- | ---------------------------- | ------------- | ------- |
+| description | optional | blacklisted word description |               |         |
+| isActive    | Yes      | is active or not             |               |         |
+| langCode    | Yes      | language code                |               |         |
+| oldWord     | Yes      | old blacklisted word         |               |         |
+| word        | Yes      | blacklisted word             |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -3406,8 +3743,9 @@ word |Yes |blacklisted word ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -3425,28 +3763,33 @@ word |Yes |blacklisted word ||
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /blacklistedwords/{langcode}
 
-## GET /blacklistedwords/{langcode}
-This service will provides the service for the List of blacklisted words based on the passed language code. 
+This service will provides the service for the List of blacklisted words based on the passed language code.
 
-### Resource URL
+#### Resource URL
+
 `GET /blacklistedwords/{langcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-langcode|Yes| language code ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name     | Required | Description   | Default Value | Example |
+| -------- | -------- | ------------- | ------------- | ------- |
+| langcode | Yes      | language code |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -3470,28 +3813,33 @@ langcode|Yes| language code ||
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### DELETE /blacklistedwords/{word}
 
-## DELETE /blacklistedwords/{word}
-This service will provides the service to delete the blacklisted word. 
+This service will provides the service to delete the blacklisted word.
 
-### Resource URL
+#### Resource URL
+
 `DELETE /blacklistedwords/{word}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-word | Yes | blacklisted word to be deleted ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description                    | Default Value | Example |
+| ---- | -------- | ------------------------------ | ------------- | ------- |
+| word | Yes      | blacklisted word to be deleted |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -3508,31 +3856,36 @@ word | Yes | blacklisted word to be deleted ||
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /blacklistedwords/all
 
-## GET /blacklistedwords/all 
-This service will provides the service for the List of blacklistedwords. 
+This service will provides the service for the List of blacklistedwords.
 
-### Resource URL
+#### Resource URL
+
 `GET /blacklistedwords/all`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-orderBy | optional | response order | desc ||
-pageNumber | optional | page no for the requested data | 0 ||
-pageSize | optional | page size for the requested data | 10 ||
-sortBy | optional | sort the requested data based on param value | createdDateTime || 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name       | Required | Description                                  | Default Value   | Example |
+| ---------- | -------- | -------------------------------------------- | --------------- | ------- |
+| orderBy    | optional | response order                               | desc            |         |
+| pageNumber | optional | page no for the requested data               | 0               |         |
+| pageSize   | optional | page size for the requested data             | 10              |         |
+| sortBy     | optional | sort the requested data based on param value | createdDateTime |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -3562,31 +3915,36 @@ sortBy | optional | sort the requested data based on param value | createdDateTi
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### PUT /blacklistedwords/details
 
-## PUT /blacklistedwords/details
-This service will update the blacklisted word details except the word itself. 
+This service will update the blacklisted word details except the word itself.
 
-### Resource URL
+#### Resource URL
+
 `PUT /blacklistedwords/details`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-description | optional | blacklisted word description ||
-isActive | Yes | is active or not ||
-langCode | Yes | language code ||
-word | Yes | blacklisted word name || 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name        | Required | Description                  | Default Value | Example |
+| ----------- | -------- | ---------------------------- | ------------- | ------- |
+| description | optional | blacklisted word description |               |         |
+| isActive    | Yes      | is active or not             |               |         |
+| langCode    | Yes      | language code                |               |         |
+| word        | Yes      | blacklisted word name        |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -3601,8 +3959,9 @@ word | Yes | blacklisted word name ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -3620,28 +3979,33 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### POST /blacklistedwords/words
 
-## POST /blacklistedwords/words
-This service will validate list of words if they are blacklisted or not. 
+This service will validate list of words if they are blacklisted or not.
 
-### Resource URL
+#### Resource URL
+
 `POST /blacklistedwords/words`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-blacklisted words | Yes | blacklisted words to be validated  ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name              | Required | Description                       | Default Value | Example |
+| ----------------- | -------- | --------------------------------- | ------------- | ------- |
+| blacklisted words | Yes      | blacklisted words to be validated |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -3655,8 +4019,9 @@ blacklisted words | Yes | blacklisted words to be validated  ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -3668,55 +4033,63 @@ blacklisted words | Yes | blacklisted words to be validated  ||
   "errors": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-008 | Blacklisted word not found | no blacklisted words found
-KER-MSD-007 | Error occurred while fetching Blacklisted words | blacklisted words fetch exception
-KER-MSD-070 | Error occurred while inserting Blacklisted words | blacklisted words insert exception
-KER-MSD-105 | Error occurred while updating Blacklisted Word | blacklisted words update exception
-KER-MSD-106 | Error occurred while deleting Blacklisted Word | blacklisted words delete exception
+#### Failure details
 
+| Error Code  | Error Message                                    | Error Description                  |
+| ----------- | ------------------------------------------------ | ---------------------------------- |
+| KER-MSD-008 | Blacklisted word not found                       | no blacklisted words found         |
+| KER-MSD-007 | Error occurred while fetching Blacklisted words  | blacklisted words fetch exception  |
+| KER-MSD-070 | Error occurred while inserting Blacklisted words | blacklisted words insert exception |
+| KER-MSD-105 | Error occurred while updating Blacklisted Word   | blacklisted words update exception |
+| KER-MSD-106 | Error occurred while deleting Blacklisted Word   | blacklisted words delete exception |
 
-## POST /blacklistedwords/search
+### POST /blacklistedwords/search
+
 This API is used by the Administrator Portal to fetch list of Locations based on a given filter criteria to display the list of Blacklisted Words on the Portal UI.
 
-### Resource URL
+#### Resource URL
+
 `POST /blacklistedwords/search`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["contains","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the start range| -NA- |
-toValue|No|If the type is "between", this field is the value of the end range| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 0
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Filter Values
+#### Parameters
+
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["contains","equals","startsWith","between"]           | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the start range            | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the end range              | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 0             |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
+
+#### Filter Values
+
 Please find the filter columns used in search
+
 * word
 * langCode
 * isActive
 
-### Example Request
-```JSON
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -3747,8 +4120,9 @@ Please find the filter columns used in search
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -3776,31 +4150,36 @@ Please find the filter columns used in search
  }
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### POST /blacklistedwords/filtervalues
 
-## POST /blacklistedwords/filtervalues
-This API is used by the Administrator Portal UI to populate filter dropdowns on the Blacklisted Word List View UI Screen.  
+This API is used by the Administrator Portal UI to populate filter dropdowns on the Blacklisted Word List View UI Screen.
 
-### Resource URL
+#### Resource URL
+
 `POST /blacklistedwords/filtervalues`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -3818,8 +4197,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -3836,42 +4216,50 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-----
+***
 
-# Working days
-* [GET /weekdays/{registrationCenterID}/{languagecode}](#get-weekdays-registrationcenterid-languagecode)
-* [GET /workingdays/{registrationCenterID}/{languagecode}](#get-workingdays-registrationcenterid-languagecode)
+## Working days
 
-## GET /weekdays/{registrationCenterID}/{languagecode}
+* [GET /weekdays/{registrationCenterID}/{languagecode}](Common-APIs.md#get-weekdays-registrationcenterid-languagecode)
+* [GET /workingdays/{registrationCenterID}/{languagecode}](Common-APIs.md#get-workingdays-registrationcenterid-languagecode)
+
+### GET /weekdays/{registrationCenterID}/{languagecode}
+
 This service returns all the week days.
 
-### Resource URL
+#### Resource URL
+
 `https://mosip.io/v1/masterdata/weekdays/{registrationCenterId}/{languagecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Part Parameters
-Name | Required | Description |  Example
------|----------|-------------|--------
-registrationCenterID |Yes|Id of the registration center| 
-languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Response Part Parameters
-Name | Required | Description |  Example
------|----------|-------------|--------
-name |Yes|Id of the registration center| 
-order |Yes|This is the order of the weekdays. If the weekdays are in the order of Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday. The order will be 1-Sunday, 2-Monday, 3-Tuesday, 4-Wednesday, 5-Thursday, 6-Friday, 7-Saturday and 8-Sunday.| 
-languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
+#### Request Part Parameters
 
-### Responses
+| Name                 | Required | Description                         | Example |
+| -------------------- | -------- | ----------------------------------- | ------- |
+| registrationCenterID | Yes      | Id of the registration center       |         |
+| languagecode         | Yes      | Language code in ISO 639-2 standard | -NA-    |
 
-#### Success Response
+#### Response Part Parameters
+
+| Name         | Required | Description                                                                                                                                                                                                                                                    | Example |
+| ------------ | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| name         | Yes      | Id of the registration center                                                                                                                                                                                                                                  |         |
+| order        | Yes      | This is the order of the weekdays. If the weekdays are in the order of Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and Sunday. The order will be 1-Sunday, 2-Monday, 3-Tuesday, 4-Wednesday, 5-Thursday, 6-Friday, 7-Saturday and 8-Sunday. |         |
+| languagecode | Yes      | Language code in ISO 639-2 standard                                                                                                                                                                                                                            | -NA-    |
+
+#### Responses
+
+**Success Response**
+
 ```
 {
   "id": "mosip.kernel.weekdays",
@@ -3910,9 +4298,11 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-#### Error Response
+**Error Response**
+
 ```
 {
   "id": "mosip.kernel.weekdays",
@@ -3928,36 +4318,42 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
  "response": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-KER-WKDS-001 |	reg_working_nonworking table not accessible | Table not accessible
-KER-WKDS-002 |	No week day found | No data present in week day table 
+#### Failure details
 
+| Error Code   | Error Message                                 | Error Description                 |
+| ------------ | --------------------------------------------- | --------------------------------- |
+| KER-WKDS-001 | reg\_working\_nonworking table not accessible | Table not accessible              |
+| KER-WKDS-002 | No week day found                             | No data present in week day table |
 
-## GET /workingdays/{registrationCenterID}/{languagecode}
-This service returns the working days of a particular registration center. 
+### GET /workingdays/{registrationCenterID}/{languagecode}
 
-### Resource URL
+This service returns the working days of a particular registration center.
+
+#### Resource URL
+
 `https://mosip.io/v1/masterdata/workingdays/{registrationCenterId}/{languagecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Part Parameters
-Name | Required | Description |  Example
------|----------|-------------|--------
-registrationCenterID |Yes|Id of the registration center| 
-languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Responses
+#### Request Part Parameters
 
-#### Success Response
+| Name                 | Required | Description                         | Example |
+| -------------------- | -------- | ----------------------------------- | ------- |
+| registrationCenterID | Yes      | Id of the registration center       |         |
+| languagecode         | Yes      | Language code in ISO 639-2 standard | -NA-    |
+
+#### Responses
+
+**Success Response**
+
 ```
 {
   "id": "mosip.kernel.workingdays",
@@ -4020,9 +4416,11 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-#### Error Response
+**Error Response**
+
 ```
 {
   "id": "mosip.kernel.workingdays",
@@ -4038,39 +4436,46 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
  "response": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-KER-WKDS-001 |	reg_working_nonworking table not accessible | Table not accessible
-KER-WKDS-003 |	No working/non working day data found | No Data present in Working days table.
+#### Failure details
 
+| Error Code   | Error Message                                 | Error Description                      |
+| ------------ | --------------------------------------------- | -------------------------------------- |
+| KER-WKDS-001 | reg\_working\_nonworking table not accessible | Table not accessible                   |
+| KER-WKDS-003 | No working/non working day data found         | No Data present in Working days table. |
 
-# Exceptional holidays
-* [GET /exceptionholidays/{registrationCenterId}/{languagecode}](#get-exceptionholidays-registrationcenterid-languagecode)
+## Exceptional holidays
 
-## GET /exceptionholidays/{registrationCenterId}/{languagecode}
-This service returns the exceptional holidays of a particular registration center. 
+* [GET /exceptionholidays/{registrationCenterId}/{languagecode}](Common-APIs.md#get-exceptionholidays-registrationcenterid-languagecode)
 
-### Resource URL
+### GET /exceptionholidays/{registrationCenterId}/{languagecode}
+
+This service returns the exceptional holidays of a particular registration center.
+
+#### Resource URL
+
 `https://mosip.io/v1/masterdata/exceptionholidays/{registrationCenterId}/{languagecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Part Parameters
-Name | Required | Description |  Example
------|----------|-------------|--------
-registrationCenterID |Yes|Id of the registration center| 
-languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Responses
+#### Request Part Parameters
 
-#### Success Response
+| Name                 | Required | Description                         | Example |
+| -------------------- | -------- | ----------------------------------- | ------- |
+| registrationCenterID | Yes      | Id of the registration center       |         |
+| languagecode         | Yes      | Language code in ISO 639-2 standard | -NA-    |
+
+#### Responses
+
+**Success Response**
+
 ```
 {
   "id": "mosip.kernel.weekdays",
@@ -4108,9 +4513,11 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-#### Error Response
+**Error Response**
+
 ```
 {
   "id": "mosip.kernel.weekdays",
@@ -4126,10 +4533,12 @@ languagecode|Yes|Language code in ISO 639-2 standard| -NA- |eng
  "response": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-### Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-KER-EHD-001 |	Error occured while fetching Exceptional Holidays | Database exception
-KER-EHD-002 |	Exceptional Holiday not founds | Exceptional holidays data not present for registration center id and language code
+#### Failure details
+
+| Error Code  | Error Message                                     | Error Description                                                                  |
+| ----------- | ------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| KER-EHD-001 | Error occured while fetching Exceptional Holidays | Database exception                                                                 |
+| KER-EHD-002 | Exceptional Holiday not founds                    | Exceptional holidays data not present for registration center id and language code |

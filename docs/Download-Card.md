@@ -1,35 +1,43 @@
+# Download Card
+
 The printing and delivery of cards in a foundational ID system highly depend upon the printing capacity and postal infrastructure of the country. The last mile delivery of the resident's card is unreliable in many developing countries. Based on the need of the hour, in MOSIP we have added a new feature to download the resident's card using the resident service APIs or receive the card at an assisted kiosk using the admin portal.
 
-## Download cards using the admin portal
-The admin with the role "DIGITALCARD_ADMIN" has the privilege to download the digital copy of the UIN card for the residents (currently as a PDF). Here the resident reaches the centre and requests the admin to provide a PDF version of their ID card.
+### Download cards using the admin portal
 
-To download the card, 
+The admin with the role "DIGITALCARD\_ADMIN" has the privilege to download the digital copy of the UIN card for the residents (currently as a PDF). Here the resident reaches the centre and requests the admin to provide a PDF version of their ID card.
+
+To download the card,
+
 1. The admin logs into the admin portal and navigate to the **Download Card** option on the left navigation pane.
 2. The admin now enters the registration ID shared by the resident and clicks on the search icon to check if the registration ID exists and proceeds for further verification. The admin can use a QR code or barcode scanner to scan the registration ID from the registration slip available with the resident instead of typing the same to avoid mistakes.
 3. If a card is available for that registration ID, the photograph along with the date of birth of the resident is displayed on the screen.
 4. Now the admin can perform a manual verification to confirm the identity of the resident or the country can customize this section to add an SDK to perform local authentication.
-5. If the identity of the resident can be verified, the admin has to provide consent by clicking on the *"I have verified the face"* option and downloading the card.
+5. If the identity of the resident can be verified, the admin has to provide consent by clicking on the _"I have verified the face"_ option and downloading the card.
 6. If the face does not match then the request for downloading the card is rejected.
 7. The card downloaded here can be printed and a physical copy of the same can be shared with the resident.
 
-![](_images/admin/download-card-new.png)
+![](\_images/admin/download-card-new.png)
 
-## Restrictions and auditing
-* The admins who have the additional role "DIGITALCARD_ADMIN" only have the privilege to see the option to download a card.
+### Restrictions and auditing
+
+* The admins who have the additional role "DIGITALCARD\_ADMIN" only have the privilege to see the option to download a card.
 * There is a limit added for the admins per day to search a registration ID but the limit doesn't reduce when there is a failed attempt. The limit here is configurable by the country.
 * All the transactions successful or failed are logged in the audit table which can be further used for analytics.
 * As of now there are no time restrictions on the availability of the registration ID but there is a restriction on the number of times a particular registration ID might be shared in the policy.
 * The PDFs that are generated are password protected. The passwords are configurable.
 
-## Download the card using resident services APIs
+### Download the card using resident services APIs
+
 If this API is added to the resident portal of the country, then the resident should be able to download the digital copy of his/her card using OTP authentication. The details about the API are listed below:
 
-### Request OTP using RID
+#### Request OTP using RID
 
-#### Request URL
+**Request URL**
+
 `POST https://{base_url}/resident/v1/req/rid-otp`
 
-#### Request body
+**Request body**
+
 ```
 {
   "id": "mosip.resident.ridotp",
@@ -44,7 +52,8 @@ If this API is added to the resident portal of the country, then the resident sh
 }
 ```
 
-#### Response body
+**Response body**
+
 ```
 {
   "id": "mosip.identity.otp.internal",
@@ -60,12 +69,14 @@ If this API is added to the resident portal of the country, then the resident sh
 }
 ```
 
-### Request to download card
+#### Request to download card
 
-#### Request URL
+**Request URL**
+
 `POST https://{base_url}/resident/v1/req/rid-digital-card`
 
-#### Request body
+**Request body**
+
 ```
 {
   "id": "mosip.resident.ridotp",
@@ -79,13 +90,16 @@ If this API is added to the resident portal of the country, then the resident sh
 }
 ```
 
-#### Response
+**Response**
+
 A password-protected PDF file containing the digital version of the resident's ID card.
 
-## Deployment Notes
+### Deployment Notes
 
-### Docker images
+#### Docker images
+
 Docker Images required on top of 1.1.5.5 version of MOSIP.
+
 * digital-card-service : 1.1.5.6
 * id-repository : 1.1.5.6
 * resident-services : 1.1.5.4
@@ -93,8 +107,10 @@ Docker Images required on top of 1.1.5.5 version of MOSIP.
 * admin-ui : 1.1.5.1
 * admin-services : 1.1.5.4
 
-### Database changes
-* Add key policy for DIGITAL_CARD in key_policy_def and key_policy_def_h tables.
+#### Database changes
+
+* Add key policy for DIGITAL\_CARD in key\_policy\_def and key\_policy\_def\_h tables.
+
 ```
 INSERT INTO keymgr.key_policy_def
 	(app_id, key_validity_duration, is_active, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes)
@@ -104,7 +120,9 @@ INSERT INTO keymgr.key_policy_def_h
 	(app_id, eff_dtimes, key_validity_duration, is_active, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes)
 	VALUES('DIGITAL_CARD', '2020-12-15 15:15:54.442', 1095, true, 'mosipadmin', '2020-12-15 15:15:54.442', NULL, NULL, NULL, NULL);
 ```
+
 * Add a new partner and policy for digital card where the partner ID is "mpartner-default-digitalcard" and the credential type is "PDFCard". The partner management APIs can be used to add the below details.
+
 ```
 //Create a new policy group called "mpolicygroup-deafult-digitalcard".
 
@@ -179,18 +197,17 @@ VALUES('146112', 'mpartner-default-digitalcard', 'mpolicy-default-PDFCard', 'fin
 INSERT INTO pms.partner_policy_credential_type
 (part_id, policy_id, credential_type, is_active, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes)
 VALUES('mpartner-default-digitalcard', 'mpolicy-default-PDFCard', 'PDFCard', true, 'service-account-mosip-regproc-client', '2022-04-04 13:29:10.383', NULL, NULL, false, NULL);
-
 ```
-* A new database "mosip_digitalcard" has to be created to store the details of the digital cards that are getting generated. The details for the same are [available here](https://github.com/mosip/digital-card-service/tree/1.1.5.6/db_scripts/mosip_digitalcard).
-* A new table has been created in "mosip_master" called "applicant_login_details" to track the details of number of times the admin is performing a search. The details for the same are [available here](https://github.com/mosip/commons/blob/1.1.5.6/db_release_scripts/mosip_master/ddl/master-applicant_login_detail.sql)
 
+* A new database "mosip\_digitalcard" has to be created to store the details of the digital cards that are getting generated. The details for the same are [available here](https://github.com/mosip/digital-card-service/tree/1.1.5.6/db\_scripts/mosip\_digitalcard).
+* A new table has been created in "mosip\_master" called "applicant\_login\_details" to track the details of number of times the admin is performing a search. The details for the same are [available here](https://github.com/mosip/commons/blob/1.1.5.6/db\_release\_scripts/mosip\_master/ddl/master-applicant\_login\_detail.sql)
 
-### Configuration Changes
+#### Configuration Changes
 
-The configuration changes can be picked up from the below github branch:
-https://github.com/mosip/mosip-config/tree/qa3-1.1.5/sandbox/
+The configuration changes can be picked up from the below github branch: https://github.com/mosip/mosip-config/tree/qa3-1.1.5/sandbox/
 
 * application-mz.properties
+
 ```
   #----------------------- CBEFF Util--------------------------------------------------
 	# Cbeff URL where the files will be stored in git, change it accordingly in case of change of storage location.
@@ -202,13 +219,13 @@ https://github.com/mosip/mosip-config/tree/qa3-1.1.5/sandbox/
 	#iam adapter
 	mosip.auth.adapter.impl.basepackage=io.mosip.kernel.auth.defaultadapter
 ```
+
 * digital-card-mz.properties - is newly added
 * identity-mapping.json
-  * The attribute which are part of the PDF card should be part of available in identity-mapping.json 
+  * The attribute which are part of the PDF card should be part of available in identity-mapping.json
 * mosip-context.json
   * The attributes shared in the VC should be avaialable in mosip-context file and available for public consumption
 
-### Certificate Exchange
+#### Certificate Exchange
+
 Even though the digital card service is part of MOSIP code, it is considered as a different module separate from MOSIP core modules and registred as a partner like IDA. Hence, we need to do a certificate exchange between the two systems. The steps to do the same are:
-
-

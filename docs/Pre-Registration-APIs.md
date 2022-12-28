@@ -1,64 +1,71 @@
+# Pre Registration APIs
+
 This section details about the service API in the Pre-Registration modules.
 
-* [Login Service](#login-service-public)
-* [Demographic Service](#demographic-service-public)
-* [Document Service](#document-service-public)
-* [DataSync Service](#datasync-service-external)
-* [Booking Service](#booking-service-public)
-* [BatchJob Service](#batchjob-service-private)
-* [Generate QR code service](#generate-qr-code-service-public)
-* [Notification Service](#notification-service-public)
-* [Transliteration Service](#transliteration-service-public)
-* [Captcha Service](#captcha-service-public)
+* [Login Service](Pre-Registration-APIs.md#login-service-public)
+* [Demographic Service](Pre-Registration-APIs.md#demographic-service-public)
+* [Document Service](Pre-Registration-APIs.md#document-service-public)
+* [DataSync Service](Pre-Registration-APIs.md#datasync-service-external)
+* [Booking Service](Pre-Registration-APIs.md#booking-service-public)
+* [BatchJob Service](Pre-Registration-APIs.md#batchjob-service-private)
+* [Generate QR code service](Pre-Registration-APIs.md#generate-qr-code-service-public)
+* [Notification Service](Pre-Registration-APIs.md#notification-service-public)
+* [Transliteration Service](Pre-Registration-APIs.md#transliteration-service-public)
+* [Captcha Service](Pre-Registration-APIs.md#captcha-service-public)
 
 {% hint style="info" %}
-id, version and requesttime in request and responsetime in response bodies are optional fields and not consumed by pre-registration application unless defined. Though we need to pass these as part of the request, it should not be tested.
-Few of the error messages are intended for API consumer, who are mostly SI and developers. User friendly messages need to be mapped in the UI reference implementation.
+id, version and requesttime in request and responsetime in response bodies are optional fields and not consumed by pre-registration application unless defined. Though we need to pass these as part of the request, it should not be tested. Few of the error messages are intended for API consumer, who are mostly SI and developers. User friendly messages need to be mapped in the UI reference implementation.
 {% endhint %}
 
 {% hint style="info" %}
 **API testing Prerequisites**
+
 * Generate a Authorization Token by using following Kernel AuthManager APIs
-	* To send an OTP [/authmanager/sendOTPUsingPOST](AuthN-and-AuthZ-APIs.md#generate-otp)
-	* To validate the OTP [/authmanager/userIdOTPUsingPOST](AuthN-and-AuthZ-APIs.md#validate-otp)
-   Once OTP get validate successfully you will get the Authorization token. 
+  * To send an OTP [/authmanager/sendOTPUsingPOST](AuthN-and-AuthZ-APIs.md#generate-otp)
+  * To validate the OTP [/authmanager/userIdOTPUsingPOST](AuthN-and-AuthZ-APIs.md#validate-otp) Once OTP get validate successfully you will get the Authorization token.
 * Use this Authorization token in the every request header of all pre-registration APIs.
 {% endhint %}
 
-# Login Service (Public)
+## Login Service (Public)
+
 This service details used by Pre-Registration portal to authenticate user by sending OTP to the user, validating with userid and OTP.
 
-* [POST /login/sendOtp](#post-loginsendotp)
-* [POST /login/validateOtp](#post-loginvalidateotp)
-* [POST /login/invalidateToken](#post-logininvalidatetoken)
-* [GET /login/config](#get-loginconfig)
-* [GET /login/refreshconfig](#get-loginrefreshconfig)
+* [POST /login/sendOtp](Pre-Registration-APIs.md#post-loginsendotp)
+* [POST /login/validateOtp](Pre-Registration-APIs.md#post-loginvalidateotp)
+* [POST /login/invalidateToken](Pre-Registration-APIs.md#post-logininvalidatetoken)
+* [GET /login/config](Pre-Registration-APIs.md#get-loginconfig)
+* [GET /login/refreshconfig](Pre-Registration-APIs.md#get-loginrefreshconfig)
 
-## POST /login/sendOtp
+### POST /login/sendOtp
+
 This request will send the OTP to the requested user in the preferred channel(sms/email)
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/login/sendOtp`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | No
+#### Resource details
 
-### Request Part Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-id |Yes|id |mosip.pre-registration.login.sendotp
-version |Yes|version of the application|1.0
-requesttime |Yes|Time of the request|2019-01-16T05:23:08.019Z
-request |Yes|Request for the application|
-request.userid |Yes|user id of the applicant(mobile number/email address)|8907654778
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | No          |
 
-### For SMS
+#### Request Part Parameters
 
-#### Request for SMS
-```JSON
+| Name           | Required | Description                                           | Comment                              |
+| -------------- | -------- | ----------------------------------------------------- | ------------------------------------ |
+| id             | Yes      | id                                                    | mosip.pre-registration.login.sendotp |
+| version        | Yes      | version of the application                            | 1.0                                  |
+| requesttime    | Yes      | Time of the request                                   | 2019-01-16T05:23:08.019Z             |
+| request        | Yes      | Request for the application                           |                                      |
+| request.userid | Yes      | user id of the applicant(mobile number/email address) | 8907654778                           |
+
+#### For SMS
+
+**Request for SMS**
+
+```
 {
   "id": "mosip.pre-registration.login.sendotp",
   "version": "1.0",
@@ -69,14 +76,15 @@ request.userid |Yes|user id of the applicant(mobile number/email address)|890765
 }
 ```
 
-#### Responses for SMS
+**Responses for SMS**
 
-##### Success Response
+**Success Response**
+
 **Status code**: 200
 
 **Description**: OTP sent successfully to specified channel
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.login.sendotp",
   "version": "1.0",
@@ -89,10 +97,11 @@ request.userid |Yes|user id of the applicant(mobile number/email address)|890765
 }
 ```
 
-### For Email
+#### For Email
 
-#### Request for Email
-```JSON
+**Request for Email**
+
+```
 {
   "id": "mosip.pre-registration.login.sendotp",
   "version": "1.0",
@@ -103,14 +112,15 @@ request.userid |Yes|user id of the applicant(mobile number/email address)|890765
 }
 ```
 
-#### Responses for Email
+**Responses for Email**
 
-##### Success Response
+**Success Response**
+
 **Status code**: 200
 
 **Description**: OTP sent successfully to specified channel
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.login.sendotp",
   "version": "1.0",
@@ -123,12 +133,13 @@ request.userid |Yes|user id of the applicant(mobile number/email address)|890765
 }
 ```
 
-##### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: Invalid parameters
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.login.sendotp",
   "version": "1.0",
@@ -143,39 +154,45 @@ request.userid |Yes|user id of the applicant(mobile number/email address)|890765
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_LGN_008|Invalid Request userId received|if requested userId is empty or invalid
-PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
-PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
-PRG_PAM_CORE_003|Invalid request time |Empty Request time
-PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
+#### Other Failure details
 
-## POST /login/validateOtp
+| Error Code          | Error Message                       | Error Description                       |
+| ------------------- | ----------------------------------- | --------------------------------------- |
+| PRG\_PAM\_LGN\_008  | Invalid Request userId received     | if requested userId is empty or invalid |
+| PRG\_PAM\_CORE\_001 | Request id is invalid               | Invalid or empty Request Id             |
+| PRG\_PAM\_CORE\_002 | Request version is invalid          | Invalid or empty Request version        |
+| PRG\_PAM\_CORE\_003 | Invalid request time                | Empty Request time                      |
+| PRG\_CORE\_REQ\_013 | Request date should be current date | If request date is not current date     |
+
+### POST /login/validateOtp
+
 This request will validate the OTP with respect to userid and provide the authorize token in the browser cookies.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/login/validateOtp`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | No
+#### Resource details
 
-### Request Part Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-id |Yes|id |mosip.pre-registration.login.useridotp
-version |Yes|version of the application|1.0
-requesttime |Yes|Time of the request|2019-01-16T05:23:08.019Z
-request |Yes|Request for the application|
-request.userid |Yes|user id of the applicant (mobile number/email address)|8907654778
-request.OTP|Yes| received OTP  |345674
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | No          |
 
-### Request
-```JSON
+#### Request Part Parameters
+
+| Name           | Required | Description                                            | Comment                                |
+| -------------- | -------- | ------------------------------------------------------ | -------------------------------------- |
+| id             | Yes      | id                                                     | mosip.pre-registration.login.useridotp |
+| version        | Yes      | version of the application                             | 1.0                                    |
+| requesttime    | Yes      | Time of the request                                    | 2019-01-16T05:23:08.019Z               |
+| request        | Yes      | Request for the application                            |                                        |
+| request.userid | Yes      | user id of the applicant (mobile number/email address) | 8907654778                             |
+| request.OTP    | Yes      | received OTP                                           | 345674                                 |
+
+#### Request
+
+```
 {
   "id": "mosip.pre-registration.login.useridotp",
   "version": "1.0",
@@ -187,13 +204,15 @@ request.OTP|Yes| received OTP  |345674
 }
 ```
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
+
 **Status code**: 200
 
 **Description**: sms sent successfully
-```JSON
+
+```
 {
   "id": "mosip.pre-registration.login.useridotp",
   "version": "1.0",
@@ -206,11 +225,13 @@ request.OTP|Yes| received OTP  |345674
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: Invalid parameters
-```JSON
+
+```
 {
   "id": "mosip.pre-registration.login.useridotp",
   "version": "1.0",
@@ -225,39 +246,44 @@ request.OTP|Yes| received OTP  |345674
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-KER-ATH-003|User Detail doesn't exist.|If userId is empty or invalid
-KER-OTV-003|OTP can't be empty or null.|  If otp field is empty or null
-KER-OTV-004|OTP consists of only numeric characters. No other characters is allowed|If otp contains character other than numeric
-PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
-PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
-PRG_PAM_CORE_003|Invalid request time |Empty Request time
-PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
-PRG_PAM_LGN_013|VALIDATION_UNSUCCESSFUL|If incorrect otp is entered
-PRG_PAM_LGN_014|Token is not present in the header |When token does not come from kernel service in the header
+#### Other Failure details
 
-## POST /login/invalidateToken
+| Error Code          | Error Message                                                           | Error Description                                          |
+| ------------------- | ----------------------------------------------------------------------- | ---------------------------------------------------------- |
+| KER-ATH-003         | User Detail doesn't exist.                                              | If userId is empty or invalid                              |
+| KER-OTV-003         | OTP can't be empty or null.                                             | If otp field is empty or null                              |
+| KER-OTV-004         | OTP consists of only numeric characters. No other characters is allowed | If otp contains character other than numeric               |
+| PRG\_PAM\_CORE\_001 | Request id is invalid                                                   | Invalid or empty Request Id                                |
+| PRG\_PAM\_CORE\_002 | Request version is invalid                                              | Invalid or empty Request version                           |
+| PRG\_PAM\_CORE\_003 | Invalid request time                                                    | Empty Request time                                         |
+| PRG\_CORE\_REQ\_013 | Request date should be current date                                     | If request date is not current date                        |
+| PRG\_PAM\_LGN\_013  | VALIDATION\_UNSUCCESSFUL                                                | If incorrect otp is entered                                |
+| PRG\_PAM\_LGN\_014  | Token is not present in the header                                      | When token does not come from kernel service in the header |
+
+### POST /login/invalidateToken
+
 This request will invalidate the authorization token when force logout is done.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/login/invalidateToken`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Responses
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-#### Success Response
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Token invalidated successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.login.invalidate",
   "version": "1.0",
@@ -270,12 +296,13 @@ Requires Authentication | Yes
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: Token is not present in cookies
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.login.invalidate",
   "version": "1.0",
@@ -290,35 +317,41 @@ Requires Authentication | Yes
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-KER-ATH-008|Token is not present in datastore, Please try with new token|If token is not present in datastore
-KER-ATH-006|Cookies are empty|When no Cookie is passed in the header
+#### Other Failure details
 
-## GET /login/config
+| Error Code  | Error Message                                                | Error Description                      |
+| ----------- | ------------------------------------------------------------ | -------------------------------------- |
+| KER-ATH-008 | Token is not present in datastore, Please try with new token | If token is not present in datastore   |
+| KER-ATH-006 | Cookies are empty                                            | When no Cookie is passed in the header |
+
+### GET /login/config
+
 This request will load the configuration parameters while loading the pre-registration portal page.
 
 {% hint style="info" %}
 All the values are retrieving from the pre-registration config properties file. If any value get changed in the config properties file it will get reflected in the response of this API. Following mentioned response is the sample of that.
 {% endhint %}
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/login/config`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | No
+#### Resource details
 
-### Responses
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | No          |
 
-#### Success Response
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
-**Description**: Config parameter retrieved sucessfully 
-```JSON
+**Description**: Config parameter retrieved sucessfully
+
+```
 {
   "id": "mosip.pre-registration.login.config",
   "version": "1.0",
@@ -372,99 +405,112 @@ Requires Authentication | No
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_AUTH_012|	Config file not found in the config server|	If config file is missing in the config server
+#### Other Failure details
 
-## GET /login/refreshconfig
+| Error Code     | Error Message                              | Error Description                              |
+| -------------- | ------------------------------------------ | ---------------------------------------------- |
+| PRG\_AUTH\_012 | Config file not found in the config server | If config file is missing in the config server |
+
+### GET /login/refreshconfig
+
 This request will reload the configuration parameters.
 
 {% hint style="info" %}
 When ever there is change in the property file, then this rest end point should be called manually,so that the property get reflected.
 {% endhint %}
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/login/refreshconfig`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | No
+#### Resource details
 
-### Responses
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | No          |
 
-#### Success Response
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
-**Description**: Config parameter retrieved sucessfully 
+**Description**: Config parameter retrieved sucessfully
 
-```JSON
+```
 {
-  "id": "mosip.pre-registration.login.config",
-  "version": "1.0",
-  "responsetime": "2019-08-08T07:43:45.908Z",
-  "response": "success",
-  "errors": null
+  "id": "mosip.pre-registration.login.config",
+  "version": "1.0",
+  "responsetime": "2019-08-08T07:43:45.908Z",
+  "response": "success",
+  "errors": null
 } 
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_AUTH_012|	Config file not found in the config server|	If config file is missing in the config server
+#### Other Failure details
 
-# Demographic Service (public)
+| Error Code     | Error Message                              | Error Description                              |
+| -------------- | ------------------------------------------ | ---------------------------------------------- |
+| PRG\_AUTH\_012 | Config file not found in the config server | If config file is missing in the config server |
+
+## Demographic Service (public)
+
 This service details used by Pre-Registration portal to maintain the demographic data by providing his/her basic details.
-* [POST /applications](#post-applications)
-* [PUT /applications/{preRegistrationId}](#put-applicationspreRegistrationid)
-* [GET /applications/{preRegistrationId}](#get-applicationspreRegistrationid)
-* [GET /applications/status/{preRegistrationId}](#get-applicationsstatuspreRegistrationid)
-* [GET /applications](#get-applications)
-* [DELETE /applications/{preRegistrationId}](#delete-applicationspreRegistrationid)
 
-## POST /applications
+* [POST /applications](Pre-Registration-APIs.md#post-applications)
+* [PUT /applications/{preRegistrationId}](Pre-Registration-APIs.md#put-applicationspreRegistrationid)
+* [GET /applications/{preRegistrationId}](Pre-Registration-APIs.md#get-applicationspreRegistrationid)
+* [GET /applications/status/{preRegistrationId}](Pre-Registration-APIs.md#get-applicationsstatuspreRegistrationid)
+* [GET /applications](Pre-Registration-APIs.md#get-applications)
+* [DELETE /applications/{preRegistrationId}](Pre-Registration-APIs.md#delete-applicationspreRegistrationid)
+
+### POST /applications
+
 This request is used to create new pre-registration with demographic details, which generates pre-registration id and associates it with demographic details.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/applications`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Body Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-id |Yes|Id of the application|mosip.pre-registration.demographic.create
-version |Yes|version of the application|1.0
-requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
-request |Yes|Request for the application|
-request.langCode |Yes|primary language code|  value will be derived from UI
-request.demographicDetails |Yes|demographicDetails of the applicant|
-request.demographicDetails.identity |Yes|identity of the applicant|
-request.demographicDetails.identity.gender |Yes|gender of the applicant| value will be derived from the domain metadata
-request.demographicDetails.identity.city |Yes|city of the applicant| value will be derived from the domain metadata
-request.demographicDetails.identity.phone |Optional|mobile number of the applicant|
-request.demographicDetails.identity.IDSchemaVersion|Optional|id schema version|1
-request.demographicDetails.identity.fullName |Yes|full name of the applicant|
-request.demographicDetails.identity.dateOfBirth |Yes|date of birth of the applicant|
-request.demographicDetails.identity.email |Optional|email Id of the applicant|
-request.demographicDetails.identity.province |Yes|province of the applicant| value will be derived from the domain metadata
-request.demographicDetails.identity.postalCode |Yes|postal code of the applicant|
-request.demographicDetails.identity.addressLine1 |Yes|address Line 1 of the applicant|
-request.demographicDetails.identity.addressLine2 |Optional|address Line 2 of the applicant|
-request.demographicDetails.identity.addressLine3 |Optional|address Line 3 of the applicant|
-request.demographicDetails.identity.region |Yes|region of the applicant| value will be derived from the domain metadata
-request.demographicDetails.identity.residenceStatus|Yes|residence status of the applicant| value will be derived from the domain metadata
-request.demographicDetails.identity.zone |Yes|zone of the applicant| value will be derived from the domain metadata
-request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentityNumber Number of the applicant|
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                                                        | Required | Description                                     | Comment                                        |
+| ----------------------------------------------------------- | -------- | ----------------------------------------------- | ---------------------------------------------- |
+| id                                                          | Yes      | Id of the application                           | mosip.pre-registration.demographic.create      |
+| version                                                     | Yes      | version of the application                      | 1.0                                            |
+| requesttime                                                 | Yes      | Request time of the application                 | 2019-01-16T05:23:08.019Z                       |
+| request                                                     | Yes      | Request for the application                     |                                                |
+| request.langCode                                            | Yes      | primary language code                           | value will be derived from UI                  |
+| request.demographicDetails                                  | Yes      | demographicDetails of the applicant             |                                                |
+| request.demographicDetails.identity                         | Yes      | identity of the applicant                       |                                                |
+| request.demographicDetails.identity.gender                  | Yes      | gender of the applicant                         | value will be derived from the domain metadata |
+| request.demographicDetails.identity.city                    | Yes      | city of the applicant                           | value will be derived from the domain metadata |
+| request.demographicDetails.identity.phone                   | Optional | mobile number of the applicant                  |                                                |
+| request.demographicDetails.identity.IDSchemaVersion         | Optional | id schema version                               | 1                                              |
+| request.demographicDetails.identity.fullName                | Yes      | full name of the applicant                      |                                                |
+| request.demographicDetails.identity.dateOfBirth             | Yes      | date of birth of the applicant                  |                                                |
+| request.demographicDetails.identity.email                   | Optional | email Id of the applicant                       |                                                |
+| request.demographicDetails.identity.province                | Yes      | province of the applicant                       | value will be derived from the domain metadata |
+| request.demographicDetails.identity.postalCode              | Yes      | postal code of the applicant                    |                                                |
+| request.demographicDetails.identity.addressLine1            | Yes      | address Line 1 of the applicant                 |                                                |
+| request.demographicDetails.identity.addressLine2            | Optional | address Line 2 of the applicant                 |                                                |
+| request.demographicDetails.identity.addressLine3            | Optional | address Line 3 of the applicant                 |                                                |
+| request.demographicDetails.identity.region                  | Yes      | region of the applicant                         | value will be derived from the domain metadata |
+| request.demographicDetails.identity.residenceStatus         | Yes      | residence status of the applicant               | value will be derived from the domain metadata |
+| request.demographicDetails.identity.zone                    | Yes      | zone of the applicant                           | value will be derived from the domain metadata |
+| request.demographicDetails.identity.referenceIdentityNumber | Yes      | referenceIdentityNumber Number of the applicant |                                                |
+
+#### Request
+
+```
 {
   "id": "mosip.pre-registration.demographic.create",
   "version": "1.0",
@@ -585,14 +631,15 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
 }
 ```
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Pre-Registration successfully Created
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.demographic.create",
   "version": "1.0",
@@ -717,12 +764,13 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: invalid or empty request id
 
-```JSON
+```
 {
   "id": "mosip-registration.demographic.create",
   "version": "1.0",
@@ -737,97 +785,104 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
-PRG_PAM_CORE_003|Invalid request time |Empty Request time
-PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
-PRG_CORE_REQ_014|Lang code is invalid|when language code is invalid or empty
-PRG_PAM_CORE_011|encryption failed|encryption of demographic data failed
-PRG_PAM_APP_007|json parsing is failed|demographic json parsing failed
-PRG_PAM_CORE_010|hashing failed|demographic data hashing failed
-PRG_PAM_CORE_012|decryption failes|decryption of demographic data failed
-PRG_PAM_APP_020|Rest call to get prid failed|Service call to get Prid failed
-PRG_PAM_APP_021|Duplicate key for prid|Failure of unique key constrains
-KER-IOV-005|Missing input parameter - identity/fullName|If fullName attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/dateOfBirth&#124;identity/age|If dateOfBirth attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/gender|If gender attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/residenceStatus|If residenceStatus attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/addressLine1|If addressLine1 attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/region|If region attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/zone|If zone attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/province|If province attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/city|If city attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/postalCode|If postalCode attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/referenceIdentityNumber|If referenceIdentityNumber attribute is not found in the identity request
-KER-IOV-004|Invalid input parameter - identity/phone|If phone attribute is found but it's value is empty or invalid
-KER-IOV-004|Invalid input parameter - identity/email|If email attribute is found but it's value is empty or invalid
-KER-IOV-004|Invalid input parameter - identity/fullName/{*}/language|If language code is empty or invalid in the specified position(*) inside fullName attribute
-KER-IOV-004|Invalid input parameter - identity/dateOfBirth|If dateOfBirth value is empty or invalid
-KER-IOV-004|Invalid input parameter - identity/gender/{*}/language|If language code is empty or invalid in the specified position(*) inside gender attribute
-KER-IOV-004|Invalid input parameter - identity/gender/{*}/value|If value is empty or invalid in the specified position(*) inside gender attribute
-KER-IOV-004|Invalid input parameter - identity/addressLine1/{*}/language|If language code is empty or invalid in the specified position(*) inside addressLine1 attribute
-KER-IOV-004|Invalid input parameter - identity/addressLine2/{*}/language|If language code is empty or invalid in the specified position(*) inside addressLine2 attribute
-KER-IOV-004|Invalid input parameter - identity/addressLine3/{*}/language|If language code is empty or invalid in the specified position(*) inside addressLine3 attribute
-KER-IOV-004|Invalid input parameter - identity/residenceStatus/{*}/language|If language code is empty or invalid in the specified position(*) inside residenceStatus attribute
-KER-IOV-004|Invalid input parameter - identity/region/{*}/language|If language code is empty or invalid in the specified position(*) inside region attribute
-KER-IOV-004|Invalid input parameter - identity/region/{*}/value|If value is empty or invalid in the specified position(*) inside region attribute
-KER-IOV-004|Invalid input parameter - identity/province/{*}/language|If language code is empty or invalid in the specified position(*) inside province attribute
-KER-IOV-004|Invalid input parameter - identity/province/{*}/value|If value is empty or invalid in the specified position(*) inside province attribute
-KER-IOV-004|Invalid input parameter - identity/city/{*}/language|If language code is empty or invalid in the specified position(*) inside city attribute
-KER-IOV-004|Invalid input parameter - identity/city/{*}/value|If value is empty or invalid in the specified position(*) inside city attribute
-KER-IOV-004|Invalid input parameter - identity/zone/{*}/language|If language code is empty or invalid in the specified position(*) inside zone attribute
-KER-IOV-004|Invalid input parameter - identity/zone/{*}/value|If value is empty or invalid in the specified position(*) inside zone attribute
-KER-IOV-004|Invalid input parameter - identity/postalCode|If postalCode is empty or invalid 
-KER-IOV-004|Invalid input parameter - identity/referenceIdentityNumber|If referenceIdentityNumber is empty or invalid
+#### Other Failure details
 
-## PUT /applications/{preRegistrationId}
+| Error Code          | Error Message                                                    | Error Description                                                                                   |
+| ------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| PRG\_PAM\_CORE\_002 | Request version is invalid                                       | Invalid or empty Request version                                                                    |
+| PRG\_PAM\_CORE\_003 | Invalid request time                                             | Empty Request time                                                                                  |
+| PRG\_CORE\_REQ\_013 | Request date should be current date                              | If request date is not current date                                                                 |
+| PRG\_CORE\_REQ\_014 | Lang code is invalid                                             | when language code is invalid or empty                                                              |
+| PRG\_PAM\_CORE\_011 | encryption failed                                                | encryption of demographic data failed                                                               |
+| PRG\_PAM\_APP\_007  | json parsing is failed                                           | demographic json parsing failed                                                                     |
+| PRG\_PAM\_CORE\_010 | hashing failed                                                   | demographic data hashing failed                                                                     |
+| PRG\_PAM\_CORE\_012 | decryption failes                                                | decryption of demographic data failed                                                               |
+| PRG\_PAM\_APP\_020  | Rest call to get prid failed                                     | Service call to get Prid failed                                                                     |
+| PRG\_PAM\_APP\_021  | Duplicate key for prid                                           | Failure of unique key constrains                                                                    |
+| KER-IOV-005         | Missing input parameter - identity/fullName                      | If fullName attribute is not found in the identity request                                          |
+| KER-IOV-005         | Missing input parameter - identity/dateOfBirth\|identity/age     | If dateOfBirth attribute is not found in the identity request                                       |
+| KER-IOV-005         | Missing input parameter - identity/gender                        | If gender attribute is not found in the identity request                                            |
+| KER-IOV-005         | Missing input parameter - identity/residenceStatus               | If residenceStatus attribute is not found in the identity request                                   |
+| KER-IOV-005         | Missing input parameter - identity/addressLine1                  | If addressLine1 attribute is not found in the identity request                                      |
+| KER-IOV-005         | Missing input parameter - identity/region                        | If region attribute is not found in the identity request                                            |
+| KER-IOV-005         | Missing input parameter - identity/zone                          | If zone attribute is not found in the identity request                                              |
+| KER-IOV-005         | Missing input parameter - identity/province                      | If province attribute is not found in the identity request                                          |
+| KER-IOV-005         | Missing input parameter - identity/city                          | If city attribute is not found in the identity request                                              |
+| KER-IOV-005         | Missing input parameter - identity/postalCode                    | If postalCode attribute is not found in the identity request                                        |
+| KER-IOV-005         | Missing input parameter - identity/referenceIdentityNumber       | If referenceIdentityNumber attribute is not found in the identity request                           |
+| KER-IOV-004         | Invalid input parameter - identity/phone                         | If phone attribute is found but it's value is empty or invalid                                      |
+| KER-IOV-004         | Invalid input parameter - identity/email                         | If email attribute is found but it's value is empty or invalid                                      |
+| KER-IOV-004         | Invalid input parameter - identity/fullName/{\*}/language        | If language code is empty or invalid in the specified position(\*) inside fullName attribute        |
+| KER-IOV-004         | Invalid input parameter - identity/dateOfBirth                   | If dateOfBirth value is empty or invalid                                                            |
+| KER-IOV-004         | Invalid input parameter - identity/gender/{\*}/language          | If language code is empty or invalid in the specified position(\*) inside gender attribute          |
+| KER-IOV-004         | Invalid input parameter - identity/gender/{\*}/value             | If value is empty or invalid in the specified position(\*) inside gender attribute                  |
+| KER-IOV-004         | Invalid input parameter - identity/addressLine1/{\*}/language    | If language code is empty or invalid in the specified position(\*) inside addressLine1 attribute    |
+| KER-IOV-004         | Invalid input parameter - identity/addressLine2/{\*}/language    | If language code is empty or invalid in the specified position(\*) inside addressLine2 attribute    |
+| KER-IOV-004         | Invalid input parameter - identity/addressLine3/{\*}/language    | If language code is empty or invalid in the specified position(\*) inside addressLine3 attribute    |
+| KER-IOV-004         | Invalid input parameter - identity/residenceStatus/{\*}/language | If language code is empty or invalid in the specified position(\*) inside residenceStatus attribute |
+| KER-IOV-004         | Invalid input parameter - identity/region/{\*}/language          | If language code is empty or invalid in the specified position(\*) inside region attribute          |
+| KER-IOV-004         | Invalid input parameter - identity/region/{\*}/value             | If value is empty or invalid in the specified position(\*) inside region attribute                  |
+| KER-IOV-004         | Invalid input parameter - identity/province/{\*}/language        | If language code is empty or invalid in the specified position(\*) inside province attribute        |
+| KER-IOV-004         | Invalid input parameter - identity/province/{\*}/value           | If value is empty or invalid in the specified position(\*) inside province attribute                |
+| KER-IOV-004         | Invalid input parameter - identity/city/{\*}/language            | If language code is empty or invalid in the specified position(\*) inside city attribute            |
+| KER-IOV-004         | Invalid input parameter - identity/city/{\*}/value               | If value is empty or invalid in the specified position(\*) inside city attribute                    |
+| KER-IOV-004         | Invalid input parameter - identity/zone/{\*}/language            | If language code is empty or invalid in the specified position(\*) inside zone attribute            |
+| KER-IOV-004         | Invalid input parameter - identity/zone/{\*}/value               | If value is empty or invalid in the specified position(\*) inside zone attribute                    |
+| KER-IOV-004         | Invalid input parameter - identity/postalCode                    | If postalCode is empty or invalid                                                                   |
+| KER-IOV-004         | Invalid input parameter - identity/referenceIdentityNumber       | If referenceIdentityNumber is empty or invalid                                                      |
+
+### PUT /applications/{preRegistrationId}
+
 This request is used to update pre-registration's demographic details by providing pre-registration id in the path parameter and updated demographic details in request body.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/applications/{preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-preRegistrationId |Yes|pre-registration id of the application|64269837502851
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request Body Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-id |Yes|Id of the application|mosip.pre-registration.demographic.create
-version |Yes|version of the application|1.0
-requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
-request |Yes|Request for the application|
-request.langCode |Yes|primary language code|  value will be derived from UI
-request.demographicDetails |Yes|demographicDetails of the applicant|
-request.demographicDetails.identity |Yes|identity of the applicant|
-request.demographicDetails.identity.gender |Yes|gender of the applicant| value will be derived from the domain metadata
-request.demographicDetails.identity.city |Yes|city of the applicant| value will be derived from the domain metadata
-request.demographicDetails.identity.phone |Optional|mobile number of the applicant|
-request.demographicDetails.identity.IDSchemaVersion|Optional|id schema version|1
-request.demographicDetails.identity.fullName |Yes|full name of the applicant|
-request.demographicDetails.identity.dateOfBirth |Yes|date of birth of the applicant|
-request.demographicDetails.identity.email |Optional|email Id of the applicant|
-request.demographicDetails.identity.province |Yes|province of the applicant| value will be derived from the domain metadata
-request.demographicDetails.identity.postalCode |Yes|postal code of the applicant|
-request.demographicDetails.identity.addressLine1 |Yes|address Line 1 of the applicant|
-request.demographicDetails.identity.addressLine2 |Optional|address Line 2 of the applicant|
-request.demographicDetails.identity.addressLine3 |Optional|address Line 3 of the applicant|
-request.demographicDetails.identity.region |Yes|region of the applicant| value will be derived from the domain metadata
-request.demographicDetails.identity.residenceStatus|Yes|residence status of the applicant| value will be derived from the domain metadata
-request.demographicDetails.identity.zone |Yes|zone of the applicant| value will be derived from the domain metadata
-request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentityNumber Number of the applicant|
+#### Request Path Parameters
 
-### Request
-```JSON
+| Name              | Required | Description                            | Comment        |
+| ----------------- | -------- | -------------------------------------- | -------------- |
+| preRegistrationId | Yes      | pre-registration id of the application | 64269837502851 |
+
+#### Request Body Parameters
+
+| Name                                                        | Required | Description                                     | Comment                                        |
+| ----------------------------------------------------------- | -------- | ----------------------------------------------- | ---------------------------------------------- |
+| id                                                          | Yes      | Id of the application                           | mosip.pre-registration.demographic.create      |
+| version                                                     | Yes      | version of the application                      | 1.0                                            |
+| requesttime                                                 | Yes      | Request time of the application                 | 2019-01-16T05:23:08.019Z                       |
+| request                                                     | Yes      | Request for the application                     |                                                |
+| request.langCode                                            | Yes      | primary language code                           | value will be derived from UI                  |
+| request.demographicDetails                                  | Yes      | demographicDetails of the applicant             |                                                |
+| request.demographicDetails.identity                         | Yes      | identity of the applicant                       |                                                |
+| request.demographicDetails.identity.gender                  | Yes      | gender of the applicant                         | value will be derived from the domain metadata |
+| request.demographicDetails.identity.city                    | Yes      | city of the applicant                           | value will be derived from the domain metadata |
+| request.demographicDetails.identity.phone                   | Optional | mobile number of the applicant                  |                                                |
+| request.demographicDetails.identity.IDSchemaVersion         | Optional | id schema version                               | 1                                              |
+| request.demographicDetails.identity.fullName                | Yes      | full name of the applicant                      |                                                |
+| request.demographicDetails.identity.dateOfBirth             | Yes      | date of birth of the applicant                  |                                                |
+| request.demographicDetails.identity.email                   | Optional | email Id of the applicant                       |                                                |
+| request.demographicDetails.identity.province                | Yes      | province of the applicant                       | value will be derived from the domain metadata |
+| request.demographicDetails.identity.postalCode              | Yes      | postal code of the applicant                    |                                                |
+| request.demographicDetails.identity.addressLine1            | Yes      | address Line 1 of the applicant                 |                                                |
+| request.demographicDetails.identity.addressLine2            | Optional | address Line 2 of the applicant                 |                                                |
+| request.demographicDetails.identity.addressLine3            | Optional | address Line 3 of the applicant                 |                                                |
+| request.demographicDetails.identity.region                  | Yes      | region of the applicant                         | value will be derived from the domain metadata |
+| request.demographicDetails.identity.residenceStatus         | Yes      | residence status of the applicant               | value will be derived from the domain metadata |
+| request.demographicDetails.identity.zone                    | Yes      | zone of the applicant                           | value will be derived from the domain metadata |
+| request.demographicDetails.identity.referenceIdentityNumber | Yes      | referenceIdentityNumber Number of the applicant |                                                |
+
+#### Request
+
+```
 {
   "id": "mosip.pre-registration.demographic.update",
   "version": "1.0",
@@ -947,14 +1002,16 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
   "requesttime": "2019-08-19T11:18:48.393Z"
 }
 ```
-### Responses
 
-#### Success Response
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Pre-Registration demographic details successfully updated
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.demographic.update",
   "version": "1.0",
@@ -1079,12 +1136,13 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: Invalid preregistration id(non-empty) or data is not found for that preregistration id.
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.demographic.update",
   "version": "1.0",
@@ -1099,75 +1157,81 @@ request.demographicDetails.identity.referenceIdentityNumber|Yes|referenceIdentit
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
-PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
-PRG_PAM_CORE_003|Invalid request time |Empty Request time
-PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
-PRG_PAM_CORE_011|encryption failed|encryption of demographic data failed
-PRG_PAM_APP_007|json parsing is failed|demographic json parsing failed
-PRG_PAM_CORE_010|hashing failed|demographic data hashing failed
-PRG_PAM_CORE_012|decryption failes|decryption of demographic data failed
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
-KER-IOV-005|Missing input parameter - identity/fullName|If fullName attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/dateOfBirth&#124;identity/age|If dateOfBirth attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/gender|If gender attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/residenceStatus|If residenceStatus attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/addressLine1|If addressLine1 attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/region|If region attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/zone|If zone attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/province|If province attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/city|If city attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/postalCode|If postalCode attribute is not found in the identity request
-KER-IOV-005|Missing input parameter - identity/referenceIdentityNumber|If referenceIdentityNumber attribute is not found in the identity request
-KER-IOV-004|Invalid input parameter - identity/phone|If phone attribute is found but it's value is empty or invalid
-KER-IOV-004|Invalid input parameter - identity/email|If email attribute is found but it's value is empty or invalid
-KER-IOV-004|Invalid input parameter - identity/fullName/{*}/language|If language code is empty or invalid in the specified position(*) inside fullName attribute
-KER-IOV-004|Invalid input parameter - identity/dateOfBirth|If dateOfBirth value is empty or invalid
-KER-IOV-004|Invalid input parameter - identity/gender/{*}/language|If language code is empty or invalid in the specified position(*) inside gender attribute
-KER-IOV-004|Invalid input parameter - identity/gender/{*}/value|If value is empty or invalid in the specified position(*) inside gender attribute
-KER-IOV-004|Invalid input parameter - identity/addressLine1/{*}/language|If language code is empty or invalid in the specified position(*) inside addressLine1 attribute
-KER-IOV-004|Invalid input parameter - identity/addressLine2/{*}/language|If language code is empty or invalid in the specified position(*) inside addressLine2 attribute
-KER-IOV-004|Invalid input parameter - identity/addressLine3/{*}/language|If language code is empty or invalid in the specified position(*) inside addressLine3 attribute
-KER-IOV-004|Invalid input parameter - identity/residenceStatus/{*}/language|If language code is empty or invalid in the specified position(*) inside residenceStatus attribute
-KER-IOV-004|Invalid input parameter - identity/region/{*}/language|If language code is empty or invalid in the specified position(*) inside region attribute
-KER-IOV-004|Invalid input parameter - identity/region/{*}/value|If value is empty or invalid in the specified position(*) inside region attribute
-KER-IOV-004|Invalid input parameter - identity/province/{*}/language|If language code is empty or invalid in the specified position(*) inside province attribute
-KER-IOV-004|Invalid input parameter - identity/province/{*}/value|If value is empty or invalid in the specified position(*) inside province attribute
-KER-IOV-004|Invalid input parameter - identity/city/{*}/language|If language code is empty or invalid in the specified position(*) inside city attribute
-KER-IOV-004|Invalid input parameter - identity/city/{*}/value|If value is empty or invalid in the specified position(*) inside city attribute
-KER-IOV-004|Invalid input parameter - identity/zone/{*}/language|If language code is empty or invalid in the specified position(*) inside zone attribute
-KER-IOV-004|Invalid input parameter - identity/zone/{*}/value|If value is empty or invalid in the specified position(*) inside zone attribute
-KER-IOV-004|Invalid input parameter - identity/postalCode|If postalCode is empty or invalid 
-KER-IOV-004|Invalid input parameter - identity/referenceIdentityNumber|If referenceIdentityNumber is empty or invalid
+#### Other Failure details
 
-## GET /applications/{preRegistrationId}
+| Error Code          | Error Message                                                    | Error Description                                                                                   |
+| ------------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| PRG\_PAM\_CORE\_001 | Request id is invalid                                            | Invalid or empty Request Id                                                                         |
+| PRG\_PAM\_CORE\_002 | Request version is invalid                                       | Invalid or empty Request version                                                                    |
+| PRG\_PAM\_CORE\_003 | Invalid request time                                             | Empty Request time                                                                                  |
+| PRG\_CORE\_REQ\_013 | Request date should be current date                              | If request date is not current date                                                                 |
+| PRG\_PAM\_CORE\_011 | encryption failed                                                | encryption of demographic data failed                                                               |
+| PRG\_PAM\_APP\_007  | json parsing is failed                                           | demographic json parsing failed                                                                     |
+| PRG\_PAM\_CORE\_010 | hashing failed                                                   | demographic data hashing failed                                                                     |
+| PRG\_PAM\_CORE\_012 | decryption failes                                                | decryption of demographic data failed                                                               |
+| PRG\_PAM\_APP\_017  | Requested preregistration id does not belong to the user         | when the user tries to access another user's demographic data                                       |
+| KER-IOV-005         | Missing input parameter - identity/fullName                      | If fullName attribute is not found in the identity request                                          |
+| KER-IOV-005         | Missing input parameter - identity/dateOfBirth\|identity/age     | If dateOfBirth attribute is not found in the identity request                                       |
+| KER-IOV-005         | Missing input parameter - identity/gender                        | If gender attribute is not found in the identity request                                            |
+| KER-IOV-005         | Missing input parameter - identity/residenceStatus               | If residenceStatus attribute is not found in the identity request                                   |
+| KER-IOV-005         | Missing input parameter - identity/addressLine1                  | If addressLine1 attribute is not found in the identity request                                      |
+| KER-IOV-005         | Missing input parameter - identity/region                        | If region attribute is not found in the identity request                                            |
+| KER-IOV-005         | Missing input parameter - identity/zone                          | If zone attribute is not found in the identity request                                              |
+| KER-IOV-005         | Missing input parameter - identity/province                      | If province attribute is not found in the identity request                                          |
+| KER-IOV-005         | Missing input parameter - identity/city                          | If city attribute is not found in the identity request                                              |
+| KER-IOV-005         | Missing input parameter - identity/postalCode                    | If postalCode attribute is not found in the identity request                                        |
+| KER-IOV-005         | Missing input parameter - identity/referenceIdentityNumber       | If referenceIdentityNumber attribute is not found in the identity request                           |
+| KER-IOV-004         | Invalid input parameter - identity/phone                         | If phone attribute is found but it's value is empty or invalid                                      |
+| KER-IOV-004         | Invalid input parameter - identity/email                         | If email attribute is found but it's value is empty or invalid                                      |
+| KER-IOV-004         | Invalid input parameter - identity/fullName/{\*}/language        | If language code is empty or invalid in the specified position(\*) inside fullName attribute        |
+| KER-IOV-004         | Invalid input parameter - identity/dateOfBirth                   | If dateOfBirth value is empty or invalid                                                            |
+| KER-IOV-004         | Invalid input parameter - identity/gender/{\*}/language          | If language code is empty or invalid in the specified position(\*) inside gender attribute          |
+| KER-IOV-004         | Invalid input parameter - identity/gender/{\*}/value             | If value is empty or invalid in the specified position(\*) inside gender attribute                  |
+| KER-IOV-004         | Invalid input parameter - identity/addressLine1/{\*}/language    | If language code is empty or invalid in the specified position(\*) inside addressLine1 attribute    |
+| KER-IOV-004         | Invalid input parameter - identity/addressLine2/{\*}/language    | If language code is empty or invalid in the specified position(\*) inside addressLine2 attribute    |
+| KER-IOV-004         | Invalid input parameter - identity/addressLine3/{\*}/language    | If language code is empty or invalid in the specified position(\*) inside addressLine3 attribute    |
+| KER-IOV-004         | Invalid input parameter - identity/residenceStatus/{\*}/language | If language code is empty or invalid in the specified position(\*) inside residenceStatus attribute |
+| KER-IOV-004         | Invalid input parameter - identity/region/{\*}/language          | If language code is empty or invalid in the specified position(\*) inside region attribute          |
+| KER-IOV-004         | Invalid input parameter - identity/region/{\*}/value             | If value is empty or invalid in the specified position(\*) inside region attribute                  |
+| KER-IOV-004         | Invalid input parameter - identity/province/{\*}/language        | If language code is empty or invalid in the specified position(\*) inside province attribute        |
+| KER-IOV-004         | Invalid input parameter - identity/province/{\*}/value           | If value is empty or invalid in the specified position(\*) inside province attribute                |
+| KER-IOV-004         | Invalid input parameter - identity/city/{\*}/language            | If language code is empty or invalid in the specified position(\*) inside city attribute            |
+| KER-IOV-004         | Invalid input parameter - identity/city/{\*}/value               | If value is empty or invalid in the specified position(\*) inside city attribute                    |
+| KER-IOV-004         | Invalid input parameter - identity/zone/{\*}/language            | If language code is empty or invalid in the specified position(\*) inside zone attribute            |
+| KER-IOV-004         | Invalid input parameter - identity/zone/{\*}/value               | If value is empty or invalid in the specified position(\*) inside zone attribute                    |
+| KER-IOV-004         | Invalid input parameter - identity/postalCode                    | If postalCode is empty or invalid                                                                   |
+| KER-IOV-004         | Invalid input parameter - identity/referenceIdentityNumber       | If referenceIdentityNumber is empty or invalid                                                      |
+
+### GET /applications/{preRegistrationId}
+
 This request is used to retrieve Pre-Registration demographic data by pre-Registration id provided in request path parameter.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/applications/{preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-preRegistrationId |Yes|Id of the application|32042841521591
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Responses
+#### Request Path Parameters
 
-#### Success Response:
+| Name              | Required | Description           | Comment        |
+| ----------------- | -------- | --------------------- | -------------- |
+| preRegistrationId | Yes      | Id of the application | 32042841521591 |
+
+#### Responses
+
+**Success Response:**
+
 **Status code**: 200
 
 **Description**: Demographic data successfully retrieved
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.demographic.retrieve.details",
   "version": "1.0",
@@ -1295,12 +1359,13 @@ preRegistrationId |Yes|Id of the application|32042841521591
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: '200'
 
 **Description**: No data found for the requested pre-registration id(non-empty).
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.demographic.retrieve.details",
   "version": "1.0",
@@ -1315,39 +1380,45 @@ preRegistrationId |Yes|Id of the application|32042841521591
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_010|hashing failed|demographic data hashing failed
-PRG_PAM_CORE_012|decryption failes|decryption of demographic data failed
-PRG_PAM_APP_007|json parsing is failed|demographic json parsing failed
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
+#### Other Failure details
 
-## GET /applications/status/{preRegistrationId}
+| Error Code          | Error Message                                            | Error Description                                             |
+| ------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
+| PRG\_PAM\_CORE\_010 | hashing failed                                           | demographic data hashing failed                               |
+| PRG\_PAM\_CORE\_012 | decryption failes                                        | decryption of demographic data failed                         |
+| PRG\_PAM\_APP\_007  | json parsing is failed                                   | demographic json parsing failed                               |
+| PRG\_PAM\_APP\_017  | Requested preregistration id does not belong to the user | when the user tries to access another user's demographic data |
+
+### GET /applications/status/{preRegistrationId}
+
 This request is used to retrieve pre-registration application status by providing the pre-registration id in request path parameter.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/applications/status/{preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameter
-Name | Required | Description | Comment
------|----------|-------------|--------
-preRegistrationId |Yes|Id of the application|62076019780925
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Responses
+#### Request Path Parameter
 
-#### Success Response
+| Name              | Required | Description           | Comment        |
+| ----------------- | -------- | --------------------- | -------------- |
+| preRegistrationId | Yes      | Id of the application | 62076019780925 |
+
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: All applications status fetched successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.demographic.retrieve.status",
   "version": "1.0",
@@ -1360,12 +1431,13 @@ preRegistrationId |Yes|Id of the application|62076019780925
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: No data found for the requested pre-registration id(non-empty).
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.demographic.retrieve.status",
   "version": "1.0",
@@ -1380,38 +1452,44 @@ preRegistrationId |Yes|Id of the application|62076019780925
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_010|hashing failed|demographic data hashing failed
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
+#### Other Failure details
 
-## GET /applications
+| Error Code          | Error Message                                            | Error Description                                             |
+| ------------------- | -------------------------------------------------------- | ------------------------------------------------------------- |
+| PRG\_PAM\_CORE\_010 | hashing failed                                           | demographic data hashing failed                               |
+| PRG\_PAM\_APP\_017  | Requested preregistration id does not belong to the user | when the user tries to access another user's demographic data |
+
+### GET /applications
+
 This request is used to retrieve all Pre-Registration id, Full name in both language, Status Code, Document details(Only for Proof Of Address), Appointment details and Postal Code by user id from authorization token.
 
-* [Without Pagination](#without-pagination)
-* [With Pagination](#with-pagination)
+* [Without Pagination](Pre-Registration-APIs.md#without-pagination)
+* [With Pagination](Pre-Registration-APIs.md#with-pagination)
 
-### Without pagination
+#### Without pagination
+
 if pageIndex parameter is not passed as query param, then all the demographic data for the user will be retrieved without applying pagination mechanism.
 
-#### Resource URL
+**Resource URL**
+
 `https://{base_url}/preregistration/v1/applications`
 
-#### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+**Resource details**
 
-#### Responses
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-##### Success Response
+**Responses**
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: All applications fetched successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.demographic.retrieve.basic",
   "version": "1.0",
@@ -1476,12 +1554,13 @@ Requires Authentication | Yes
 }
 ```
 
-##### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: No record found for the requested user id.
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.demographic.retrieve.basic",
   "version": "1.0",
@@ -1496,41 +1575,48 @@ Requires Authentication | Yes
 }
 ```
 
-#### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_010|hashing failed|demographic data hashing failed
-PRG_PAM_CORE_012|decryption failed|decryption of demographic data failed
-PRG_PAM_APP_007|json parsing is failed|demographic json parsing failed
-PRG_PAM_APP_018|Failed to read the identity json from the server|If the configured identity json file is unreachable
+**Other Failure details**
 
-### With pagination
+| Error Code          | Error Message                                    | Error Description                                   |
+| ------------------- | ------------------------------------------------ | --------------------------------------------------- |
+| PRG\_PAM\_CORE\_010 | hashing failed                                   | demographic data hashing failed                     |
+| PRG\_PAM\_CORE\_012 | decryption failed                                | decryption of demographic data failed               |
+| PRG\_PAM\_APP\_007  | json parsing is failed                           | demographic json parsing failed                     |
+| PRG\_PAM\_APP\_018  | Failed to read the identity json from the server | If the configured identity json file is unreachable |
+
+#### With pagination
+
 If pageIndex parameter is passed as query param, then all the demographic data for the user will be retrieved in terms of pages.
+
 * PageSize parameter is configurable.
 * PageIndex is by default 0 if no value is passed for query param.
 
-#### Resource URL
+**Resource URL**
+
 `https://{base_url}/preregistration/v1/applications?pageIndex=0`
 
-#### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+**Resource details**
 
-#### Request Query Parameter
-Name | Required | Description | Comment
------|----------|-------------|--------
-pageIndex |Yes|page index of the application|0(By default)
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-#### Responses
+**Request Query Parameter**
 
-##### Success Response
+| Name      | Required | Description                   | Comment       |
+| --------- | -------- | ----------------------------- | ------------- |
+| pageIndex | Yes      | page index of the application | 0(By default) |
+
+**Responses**
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: All applications fetched successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.demographic.retrieve.basic",
   "version": "1.0",
@@ -1595,12 +1681,13 @@ pageIndex |Yes|page index of the application|0(By default)
 }
 ```
 
-##### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: No record found for the requested user id.
 
-```JSON
+```
 {
     "id": "mosip.pre-registration.demographic.retrieve.basic",
     "version": "1.0",
@@ -1615,42 +1702,48 @@ pageIndex |Yes|page index of the application|0(By default)
 }
 ```
 
-#### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_APP_016|no record found for the requested page index|if there is no more demographic data found for the requested page index
-PRG_PAM_APP_019|Invalid page index value|If page index value is invalid
-PRG_PAM_APP_015|Page size must be greater than zero|if page size is invalid or if it is defined 0 or less than 0 in config
-PRG_PAM_CORE_010|hashing failed|demographic data hashing failed
-PRG_PAM_CORE_012|decryption failed|decryption of demographic data failed
-PRG_PAM_APP_007|json parsing is failed|demographic json parsing failed
-PRG_PAM_APP_018|Failed to read the identity json from the server|If the configured identity json file is unreachable
+**Other Failure details**
 
-## DELETE /applications/{preRegistrationId}
+| Error Code          | Error Message                                    | Error Description                                                       |
+| ------------------- | ------------------------------------------------ | ----------------------------------------------------------------------- |
+| PRG\_PAM\_APP\_016  | no record found for the requested page index     | if there is no more demographic data found for the requested page index |
+| PRG\_PAM\_APP\_019  | Invalid page index value                         | If page index value is invalid                                          |
+| PRG\_PAM\_APP\_015  | Page size must be greater than zero              | if page size is invalid or if it is defined 0 or less than 0 in config  |
+| PRG\_PAM\_CORE\_010 | hashing failed                                   | demographic data hashing failed                                         |
+| PRG\_PAM\_CORE\_012 | decryption failed                                | decryption of demographic data failed                                   |
+| PRG\_PAM\_APP\_007  | json parsing is failed                           | demographic json parsing failed                                         |
+| PRG\_PAM\_APP\_018  | Failed to read the identity json from the server | If the configured identity json file is unreachable                     |
+
+### DELETE /applications/{preRegistrationId}
+
 This request is used to discard the entire pre-registration details based pre-registration id provided in request path parameter.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/applications/{preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-preRegistrationId |Yes|pre-registration id of the application|29605371807216
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Responses
+#### Request Path Parameters
 
-#### Success Response
+| Name              | Required | Description                            | Comment        |
+| ----------------- | -------- | -------------------------------------- | -------------- |
+| preRegistrationId | Yes      | pre-registration id of the application | 29605371807216 |
+
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Deletion of individual is successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.demographic.delete",
   "version": "1.0",
@@ -1666,12 +1759,13 @@ preRegistrationId |Yes|pre-registration id of the application|29605371807216
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: No data found for the requested pre-registration id(non-empty)
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.demographic.delete",
   "version": "1.0",
@@ -1686,25 +1780,28 @@ preRegistrationId |Yes|pre-registration id of the application|29605371807216
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_APP_003|delete operation is not allowed|Deletion of Preregistration fails if its status is neither pending appointment nor booked
-PRG_PAM_DOC_016|failed to delete the booking|If Booking data is failed to delete
-PRG_PAM_APP_004|failed to delete the pre-registration data|If Preregistration data is failed to delete
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
+#### Other Failure details
 
-# Document Service (public)
-This service enables Pre-Registration portal to request for uploading the document for a particular pre-registration.
-If any one upload file greater than specified size which is allowed by ngnix config; it will give 413 Request Entity Too Large error.
-* [POST /documents/{preRegistrationId}](#post-documentspreregistrationid)
-* [PUT /documents/{preRegistrationId}](#put-documentspreregistrationid)
-* [GET /documents/preregistration/{preRegistrationId}](#get-documentspreregistrationpreregistrationid)
-* [GET /documents/{documentId}?preRegistrationId={preRegistrationId}](#get-documentsdocumentidpreregistrationidpreregistrationid)
-* [DELETE /documents/preregistration/{preRegistrationId}](#delete-documentspreregistrationpreregsitrationid)
-* [DELETE /documents/{documentId}?preRegistrationId={preRegistrationId}](#delete-documentsdocumentidpreregistrationidpreregistrationid)
+| Error Code         | Error Message                                            | Error Description                                                                         |
+| ------------------ | -------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| PRG\_PAM\_APP\_003 | delete operation is not allowed                          | Deletion of Preregistration fails if its status is neither pending appointment nor booked |
+| PRG\_PAM\_DOC\_016 | failed to delete the booking                             | If Booking data is failed to delete                                                       |
+| PRG\_PAM\_APP\_004 | failed to delete the pre-registration data               | If Preregistration data is failed to delete                                               |
+| PRG\_PAM\_APP\_017 | Requested preregistration id does not belong to the user | when the user tries to access another user's demographic data                             |
 
-## POST /documents/{preRegistrationId}
+## Document Service (public)
+
+This service enables Pre-Registration portal to request for uploading the document for a particular pre-registration. If any one upload file greater than specified size which is allowed by ngnix config; it will give 413 Request Entity Too Large error.
+
+* [POST /documents/{preRegistrationId}](Pre-Registration-APIs.md#post-documentspreregistrationid)
+* [PUT /documents/{preRegistrationId}](Pre-Registration-APIs.md#put-documentspreregistrationid)
+* [GET /documents/preregistration/{preRegistrationId}](Pre-Registration-APIs.md#get-documentspreregistrationpreregistrationid)
+* [GET /documents/{documentId}?preRegistrationId={preRegistrationId}](Pre-Registration-APIs.md#get-documentsdocumentidpreregistrationidpreregistrationid)
+* [DELETE /documents/preregistration/{preRegistrationId}](Pre-Registration-APIs.md#delete-documentspreregistrationpreregsitrationid)
+* [DELETE /documents/{documentId}?preRegistrationId={preRegistrationId}](Pre-Registration-APIs.md#delete-documentsdocumentidpreregistrationidpreregistrationid)
+
+### POST /documents/{preRegistrationId}
+
 This request is used to upload document with the metadata which include document category code, document type code and document format for a pre-registration Id.
 
 {% hint style="info" %}
@@ -1712,41 +1809,48 @@ Document category code, document type code and language code are derived from ke
 {% endhint %}
 
 URL:
+
 1. For valid Document category code refer below GET method for respective language code : /documentcategories/{langcode}
 2. For valid Document type code refer below GET method for respective language and document category code: /documenttypes/{documentcategorycode}/{langcode}
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/documents/{preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-preRegistrationId |Yes|Pre-registration id of the application|32042841521591
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request Part Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-file |Yes|Document which we need to upload|
+#### Request Path Parameters
 
-### Request Part (Document request) Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-id |Yes|Id of the application|mosip.pre-registration.document.upload
-version |Yes|version of the application|1.0
-requesttime |Yes|Request tme of the application|2019-01-16T05:23:08.019Z
-request |Yes|Request for the application|
-request.docCatCode |Yes|Document category code|POA
-request.docTypCode |Yes|Document type code|RNC
-request.langCode |Yes|Language code of the application|fra
+| Name              | Required | Description                            | Comment        |
+| ----------------- | -------- | -------------------------------------- | -------------- |
+| preRegistrationId | Yes      | Pre-registration id of the application | 32042841521591 |
 
-### Request
-```JSON
+#### Request Part Parameters
+
+| Name | Required | Description                      | Comment |
+| ---- | -------- | -------------------------------- | ------- |
+| file | Yes      | Document which we need to upload |         |
+
+#### Request Part (Document request) Parameters
+
+| Name               | Required | Description                      | Comment                                |
+| ------------------ | -------- | -------------------------------- | -------------------------------------- |
+| id                 | Yes      | Id of the application            | mosip.pre-registration.document.upload |
+| version            | Yes      | version of the application       | 1.0                                    |
+| requesttime        | Yes      | Request tme of the application   | 2019-01-16T05:23:08.019Z               |
+| request            | Yes      | Request for the application      |                                        |
+| request.docCatCode | Yes      | Document category code           | POA                                    |
+| request.docTypCode | Yes      | Document type code               | RNC                                    |
+| request.langCode   | Yes      | Language code of the application | fra                                    |
+
+#### Request
+
+```
 {
   "id": "mosip.pre-registration.document.upload",
   "version": "1.0",
@@ -1759,14 +1863,15 @@ request.langCode |Yes|Language code of the application|fra
 }
 ```
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Document uploaded successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.document.upload",
   "version": "1.0",
@@ -1783,12 +1888,13 @@ request.langCode |Yes|Language code of the application|fra
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: Invalid document format supported
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.document.upload",
   "version": "1.0",
@@ -1803,57 +1909,64 @@ request.langCode |Yes|Language code of the application|fra
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
-PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
-PRG_PAM_CORE_003|Invalid request time |Empty Request time
-PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
-PRG_PAM_DOC_007|Document exceeding permitted size|when uploaded document size is exceeding the configured size
-PRG_CORE_REQ_018|Document Catagory code is invalid|empty or invalid document category code
-PRG_CORE_REQ_017|Document type code is invalid|empty or invalid document type code
-PRG_CORE_REQ_014|Language code is invalid|If language code is empty or invalid
-PRG_PAM_CORE_011|encryption failed|encryption of document data failed
-PRG_PAM_DOC_015|Json exception|document request json parsing failed
-PRG_PAM_CORE_010|hashing failed|document data hashing failed
-PRG_PAM_DOC_010|Document virus scan failed|virus scan of uploaded document is failed
-PRG_PAM_APP_005|No data found for the requested pre-registration id|invalid preregistration id or data is not found for that preregistration id
-PRG_PAM_DOC_012|Document table not accessible|access to document table fails
-PRG_PAM_DOC_009|Document upload failed|if the document & document details are failed to store
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
+#### Other Failure details
 
-## PUT /documents/{preRegistrationId}
+| Error Code          | Error Message                                            | Error Description                                                           |
+| ------------------- | -------------------------------------------------------- | --------------------------------------------------------------------------- |
+| PRG\_PAM\_CORE\_001 | Request id is invalid                                    | Invalid or empty Request Id                                                 |
+| PRG\_PAM\_CORE\_002 | Request version is invalid                               | Invalid or empty Request version                                            |
+| PRG\_PAM\_CORE\_003 | Invalid request time                                     | Empty Request time                                                          |
+| PRG\_CORE\_REQ\_013 | Request date should be current date                      | If request date is not current date                                         |
+| PRG\_PAM\_DOC\_007  | Document exceeding permitted size                        | when uploaded document size is exceeding the configured size                |
+| PRG\_CORE\_REQ\_018 | Document Catagory code is invalid                        | empty or invalid document category code                                     |
+| PRG\_CORE\_REQ\_017 | Document type code is invalid                            | empty or invalid document type code                                         |
+| PRG\_CORE\_REQ\_014 | Language code is invalid                                 | If language code is empty or invalid                                        |
+| PRG\_PAM\_CORE\_011 | encryption failed                                        | encryption of document data failed                                          |
+| PRG\_PAM\_DOC\_015  | Json exception                                           | document request json parsing failed                                        |
+| PRG\_PAM\_CORE\_010 | hashing failed                                           | document data hashing failed                                                |
+| PRG\_PAM\_DOC\_010  | Document virus scan failed                               | virus scan of uploaded document is failed                                   |
+| PRG\_PAM\_APP\_005  | No data found for the requested pre-registration id      | invalid preregistration id or data is not found for that preregistration id |
+| PRG\_PAM\_DOC\_012  | Document table not accessible                            | access to document table fails                                              |
+| PRG\_PAM\_DOC\_009  | Document upload failed                                   | if the document & document details are failed to store                      |
+| PRG\_PAM\_APP\_017  | Requested preregistration id does not belong to the user | when the user tries to access another user's demographic data               |
+
+### PUT /documents/{preRegistrationId}
+
 This request is used to copy the document from source pre-registration id to destination pre-registration id with the specified document category code.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/documents/{preRegistrationId}?catCode={doc_cat_code}&sourcePreId={preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-preRegistrationId |Yes|Destination Pre-registration id of the application|67531403498547
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request Query Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-catCode|Yes|Document category code|POA
-sourcePreId |Yes|Source Pre-registration id of the application|97285429827016
+#### Request Path Parameters
 
-### Responses
+| Name              | Required | Description                                        | Comment        |
+| ----------------- | -------- | -------------------------------------------------- | -------------- |
+| preRegistrationId | Yes      | Destination Pre-registration id of the application | 67531403498547 |
 
-#### Success Response
+#### Request Query Parameters
+
+| Name        | Required | Description                                   | Comment        |
+| ----------- | -------- | --------------------------------------------- | -------------- |
+| catCode     | Yes      | Document category code                        | POA            |
+| sourcePreId | Yes      | Source Pre-registration id of the application | 97285429827016 |
+
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Document successfully copied
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.document.copy",
   "version": "1.0",
@@ -1870,12 +1983,13 @@ sourcePreId |Yes|Source Pre-registration id of the application|97285429827016
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: If Document has not been uploaded for the source pre-registration Id(non-empty)
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.document.copy",
   "version": "1.0",
@@ -1890,43 +2004,49 @@ sourcePreId |Yes|Source Pre-registration id of the application|97285429827016
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_CORE_REQ_001|request parameter is missing|If source or destination preregistration id is empty
-PRG_CORE_REQ_017|Catagory code is invalid|if document category code is not POA
-PRG_PAM_APP_005|No data found for the requested pre-registration id|If source preregistration id or destination preregistration id is invalid(non-empty) or no preregistration data found for any of the preregistration id
-PRG_PAM_DOC_012|Document table not accessible|access to document table fails
-PRG_PAM_DOC_009|Document upload failed|if the document & document details are failed to store
-PRG_PAM_DOC_011|Document copy failed from source to destination|when document is not copied from source to destination preregistration id
-PRG_CORE_REQ_010|hashing failed|document data hashing failed
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
+#### Other Failure details
 
-## GET /documents/preregistration/{preRegistrationId}
+| Error Code          | Error Message                                            | Error Description                                                                                                                                       |
+| ------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PRG\_CORE\_REQ\_001 | request parameter is missing                             | If source or destination preregistration id is empty                                                                                                    |
+| PRG\_CORE\_REQ\_017 | Catagory code is invalid                                 | if document category code is not POA                                                                                                                    |
+| PRG\_PAM\_APP\_005  | No data found for the requested pre-registration id      | If source preregistration id or destination preregistration id is invalid(non-empty) or no preregistration data found for any of the preregistration id |
+| PRG\_PAM\_DOC\_012  | Document table not accessible                            | access to document table fails                                                                                                                          |
+| PRG\_PAM\_DOC\_009  | Document upload failed                                   | if the document & document details are failed to store                                                                                                  |
+| PRG\_PAM\_DOC\_011  | Document copy failed from source to destination          | when document is not copied from source to destination preregistration id                                                                               |
+| PRG\_CORE\_REQ\_010 | hashing failed                                           | document data hashing failed                                                                                                                            |
+| PRG\_PAM\_APP\_017  | Requested preregistration id does not belong to the user | when the user tries to access another user's demographic data                                                                                           |
+
+### GET /documents/preregistration/{preRegistrationId}
+
 This request used to retrieve all documents metadata associated with particular pre-registration.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/documents/preregistration/{preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-preRegistrationId |Yes|Pre-registration id of the application|97285429827016
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Responses
+#### Request Path Parameters
 
-#### Success Response
+| Name              | Required | Description                            | Comment        |
+| ----------------- | -------- | -------------------------------------- | -------------- |
+| preRegistrationId | Yes      | Pre-registration id of the application | 97285429827016 |
+
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Documents retrieved successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.document.fetch.metadata",
   "version": "1.0",
@@ -1953,12 +2073,13 @@ preRegistrationId |Yes|Pre-registration id of the application|97285429827016
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: if pre-registration id is invalid(non-empty)
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.document.fetch.metadata",
   "version": "1.0",
@@ -1973,47 +2094,54 @@ preRegistrationId |Yes|Pre-registration id of the application|97285429827016
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_DOC_012|Document table not accessible|access to document table fails
-PRG_PAM_DOC_005|Failed to fetch from File System server|if the document is failed to be fetched from file system
-PRG_PAM_CORE_012|decryption failes|decryption of document data failed
-PRG_PAM_CORE_010|hashing failed|document data hashing failed
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
-PRG_PAM_DOC_005|Documents is not found for the requested pre-registration id|when the document is not uploaded for the preregistration id
-PRG_PAM_APP_005|No data found for the requested pre-registration id|When the application is deleted and trying to fetch the document of that pre-registration-id
+#### Other Failure details
 
-## GET /documents/{documentId}?preRegistrationId={preRegistrationId}
+| Error Code          | Error Message                                                | Error Description                                                                            |
+| ------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| PRG\_PAM\_DOC\_012  | Document table not accessible                                | access to document table fails                                                               |
+| PRG\_PAM\_DOC\_005  | Failed to fetch from File System server                      | if the document is failed to be fetched from file system                                     |
+| PRG\_PAM\_CORE\_012 | decryption failes                                            | decryption of document data failed                                                           |
+| PRG\_PAM\_CORE\_010 | hashing failed                                               | document data hashing failed                                                                 |
+| PRG\_PAM\_APP\_017  | Requested preregistration id does not belong to the user     | when the user tries to access another user's demographic data                                |
+| PRG\_PAM\_DOC\_005  | Documents is not found for the requested pre-registration id | when the document is not uploaded for the preregistration id                                 |
+| PRG\_PAM\_APP\_005  | No data found for the requested pre-registration id          | When the application is deleted and trying to fetch the document of that pre-registration-id |
+
+### GET /documents/{documentId}?preRegistrationId={preRegistrationId}
+
 This request used to retrieve the document for a particular document id from the File System server.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/documents/{documentId}?preRegistrationId={preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-documentId |Yes|document id of the application|0748c439-4f83-11e9-ae3b-7b0aa1318f48
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request Query Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-preRegistrationId |Yes|pre-registration id of the application|74843948119371
+#### Request Path Parameters
 
-### Responses
+| Name       | Required | Description                    | Comment                              |
+| ---------- | -------- | ------------------------------ | ------------------------------------ |
+| documentId | Yes      | document id of the application | 0748c439-4f83-11e9-ae3b-7b0aa1318f48 |
 
-#### Success Response
+#### Request Query Parameters
+
+| Name              | Required | Description                            | Comment        |
+| ----------------- | -------- | -------------------------------------- | -------------- |
+| preRegistrationId | Yes      | pre-registration id of the application | 74843948119371 |
+
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Document successfully retrieved
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.document.fetch.content",
   "version" : "1.0",
@@ -2025,12 +2153,13 @@ preRegistrationId |Yes|pre-registration id of the application|74843948119371
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: if pre-registration id is invalid(non-empty)
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.document.fetch.metadata",
   "version": "1.0",
@@ -2045,41 +2174,47 @@ preRegistrationId |Yes|pre-registration id of the application|74843948119371
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_DOC_012|Document table not accessible|access to document table fails
-PRG_PAM_DOC_005|Failed to fetch from File System server|if the document is failed to be fetched from file system
-PRG_CORE_REQ_012|decryption failed|decryption of document data failed
-PRG_CORE_REQ_010|hashing failed|document data hashing failed
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
-PRG_PAM_DOC_022|DocumentId is not belongs to the pre-registration Id|If document id is not related to the pre-registration id or if document is not found for the pre-registration id
+#### Other Failure details
 
-## DELETE /documents/preregistration/{preRegsitrationId}
+| Error Code          | Error Message                                            | Error Description                                                                                                |
+| ------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| PRG\_PAM\_DOC\_012  | Document table not accessible                            | access to document table fails                                                                                   |
+| PRG\_PAM\_DOC\_005  | Failed to fetch from File System server                  | if the document is failed to be fetched from file system                                                         |
+| PRG\_CORE\_REQ\_012 | decryption failed                                        | decryption of document data failed                                                                               |
+| PRG\_CORE\_REQ\_010 | hashing failed                                           | document data hashing failed                                                                                     |
+| PRG\_PAM\_APP\_017  | Requested preregistration id does not belong to the user | when the user tries to access another user's demographic data                                                    |
+| PRG\_PAM\_DOC\_022  | DocumentId is not belongs to the pre-registration Id     | If document id is not related to the pre-registration id or if document is not found for the pre-registration id |
+
+### DELETE /documents/preregistration/{preRegsitrationId}
+
 This request used to delete all the documents which are associated with requested pre-registration id.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/documents/preregistration/{preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-preRegsitrationId |Yes|pre-registration id of the application|37802950913289
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Responses
+#### Request Path Parameters
 
-#### Success Response
+| Name              | Required | Description                            | Comment        |
+| ----------------- | -------- | -------------------------------------- | -------------- |
+| preRegsitrationId | Yes      | pre-registration id of the application | 37802950913289 |
+
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Documents successfully deleted
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.document.delete",
   "version" : "1.0",
@@ -2091,12 +2226,13 @@ preRegsitrationId |Yes|pre-registration id of the application|37802950913289
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: if the pre-registration id is invalid(non-empty)
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.document.fetch.metadata",
   "version": "1.0",
@@ -2111,45 +2247,52 @@ preRegsitrationId |Yes|pre-registration id of the application|37802950913289
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_DOC_006|Documents failed to delete|if the document & document details are failed to delete
-PRG_PAM_DOC_012|Document table not accessible|access to document table fails
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
-PRG_PAM_DOC_005|Documents is not found for the requested pre-registration id|If document is not uploaded for the pre-registration id
-PRG_PAM_APP_005|No data found for the requested pre-registration id|When the application is deleted and trying to fetch the document of that pre-registration-id
+#### Other Failure details
 
-## DELETE /documents/{documentId}?preRegistrationId={preRegistrationId}
+| Error Code         | Error Message                                                | Error Description                                                                            |
+| ------------------ | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| PRG\_PAM\_DOC\_006 | Documents failed to delete                                   | if the document & document details are failed to delete                                      |
+| PRG\_PAM\_DOC\_012 | Document table not accessible                                | access to document table fails                                                               |
+| PRG\_PAM\_APP\_017 | Requested preregistration id does not belong to the user     | when the user tries to access another user's demographic data                                |
+| PRG\_PAM\_DOC\_005 | Documents is not found for the requested pre-registration id | If document is not uploaded for the pre-registration id                                      |
+| PRG\_PAM\_APP\_005 | No data found for the requested pre-registration id          | When the application is deleted and trying to fetch the document of that pre-registration-id |
+
+### DELETE /documents/{documentId}?preRegistrationId={preRegistrationId}
+
 This request used to delete the document for a particular document id from database and File System server.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/documents/{documentId}?preRegistrationId={preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-documentId |Yes|document id of the application|0748c439-4f83-11e9-ae3b-7b0aa1318f48
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request Query Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-preRegistrationId |Yes|pre-registration id of the application|74843948119371
+#### Request Path Parameters
 
-### Responses
+| Name       | Required | Description                    | Comment                              |
+| ---------- | -------- | ------------------------------ | ------------------------------------ |
+| documentId | Yes      | document id of the application | 0748c439-4f83-11e9-ae3b-7b0aa1318f48 |
 
-#### Success Response
+#### Request Query Parameters
+
+| Name              | Required | Description                            | Comment        |
+| ----------------- | -------- | -------------------------------------- | -------------- |
+| preRegistrationId | Yes      | pre-registration id of the application | 74843948119371 |
+
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Document successfully deleted
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.document.delete.specific",
   "version" : "1.0",
@@ -2161,12 +2304,13 @@ preRegistrationId |Yes|pre-registration id of the application|74843948119371
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: if the pre-registration id is invalid(non-empty)
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.document.fetch.metadata",
   "version": "1.0",
@@ -2181,45 +2325,53 @@ preRegistrationId |Yes|pre-registration id of the application|74843948119371
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_DOC_006|Documents failed to delete|if the document & document details are failed to delete
-PRG_PAM_DOC_012|Document table not accessible|access to document table fails
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
-PRG_PAM_DOC_022|DocumentId is not belongs to the pre-registration Id|If document id is not related to the pre-registration id or if document is not found for the pre-registration id
+#### Other Failure details
 
-# DataSync Service (External)
+| Error Code         | Error Message                                            | Error Description                                                                                                |
+| ------------------ | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| PRG\_PAM\_DOC\_006 | Documents failed to delete                               | if the document & document details are failed to delete                                                          |
+| PRG\_PAM\_DOC\_012 | Document table not accessible                            | access to document table fails                                                                                   |
+| PRG\_PAM\_APP\_017 | Requested preregistration id does not belong to the user | when the user tries to access another user's demographic data                                                    |
+| PRG\_PAM\_DOC\_022 | DocumentId is not belongs to the pre-registration Id     | If document id is not related to the pre-registration id or if document is not found for the pre-registration id |
+
+## DataSync Service (External)
+
 This service enables Pre-Registration to a registration client, request to retrieve all pre-registration ids based on registration client id, appointment date and an user type.
-* [POST /sync](#post-sync)
-* [POST /sync/consumedPreRegIds](#post-syncconsumedpreregids)
-* [GET /sync/{preRegistrationId}](#get-syncpreregistrationid)
 
-## POST /sync
+* [POST /sync](Pre-Registration-APIs.md#post-sync)
+* [POST /sync/consumedPreRegIds](Pre-Registration-APIs.md#post-syncconsumedpreregids)
+* [GET /sync/{preRegistrationId}](Pre-Registration-APIs.md#get-syncpreregistrationid)
+
+### POST /sync
+
 This request is used by registration client to retrieve all the pre-registration Ids by the date range of appointment done.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/sync`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Body Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-id |Yes|Id of the application|mosip.pre-registration.datasync
-version |Yes|version of the application|1.0
-requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
-request |Yes|Request for the application|
-request.registrationCenterId|Yes|Registration Center Id for which the data is required|10001
-request.fromDate |Yes|From date of the appointment|2019-02-09
-request.toDate |Yes|To date of the appointment|2019-02-12
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                         | Required | Description                                           | Comment                         |
+| ---------------------------- | -------- | ----------------------------------------------------- | ------------------------------- |
+| id                           | Yes      | Id of the application                                 | mosip.pre-registration.datasync |
+| version                      | Yes      | version of the application                            | 1.0                             |
+| requesttime                  | Yes      | Request time of the application                       | 2019-01-16T05:23:08.019Z        |
+| request                      | Yes      | Request for the application                           |                                 |
+| request.registrationCenterId | Yes      | Registration Center Id for which the data is required | 10001                           |
+| request.fromDate             | Yes      | From date of the appointment                          | 2019-02-09                      |
+| request.toDate               | Yes      | To date of the appointment                            | 2019-02-12                      |
+
+#### Request
+
+```
 {
   "id": "mosip.pre-registration.datasync.fetch.ids",
   "version": "1.0",
@@ -2232,14 +2384,15 @@ request.toDate |Yes|To date of the appointment|2019-02-12
 }
 ```
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
+
 **Status code**: 200
 
 **Description**: All Pre-Registration Ids fetched successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.datasync.fetch.ids",
   "version": "1.0",
@@ -2256,12 +2409,13 @@ request.toDate |Yes|To date of the appointment|2019-02-12
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: If appointment is not booked under the registration center and requested date range.
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.datasync.fetch.ids",
   "version": "1.0",
@@ -2276,43 +2430,49 @@ request.toDate |Yes|To date of the appointment|2019-02-12
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
-PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
-PRG_PAM_CORE_003|Invalid request time |Empty Request time
-PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
-PRG_DATA_SYNC_009|registration center id is invalid|Empty registration center Id
-PRG_CORE_REQ_013|Request date should be current date|when the date is not current date
-PRG_DATA_SYNC_007|Demographic record failed to fetch|when rest service to demographic service fails
-PRG_DATA_SYNC_016|booking data not found|when rest service to booking service fails
-PRG_CORE_REQ_019|Invalid date time format|If from date or to date is invalid
-PRG_CORE_REQ_020|From date is greater than To date|If from date is greater than to date
+#### Other Failure details
 
-## POST /sync/consumedPreRegIds
+| Error Code           | Error Message                       | Error Description                              |
+| -------------------- | ----------------------------------- | ---------------------------------------------- |
+| PRG\_PAM\_CORE\_001  | Request id is invalid               | Invalid or empty Request Id                    |
+| PRG\_PAM\_CORE\_002  | Request version is invalid          | Invalid or empty Request version               |
+| PRG\_PAM\_CORE\_003  | Invalid request time                | Empty Request time                             |
+| PRG\_CORE\_REQ\_013  | Request date should be current date | If request date is not current date            |
+| PRG\_DATA\_SYNC\_009 | registration center id is invalid   | Empty registration center Id                   |
+| PRG\_CORE\_REQ\_013  | Request date should be current date | when the date is not current date              |
+| PRG\_DATA\_SYNC\_007 | Demographic record failed to fetch  | when rest service to demographic service fails |
+| PRG\_DATA\_SYNC\_016 | booking data not found              | when rest service to booking service fails     |
+| PRG\_CORE\_REQ\_019  | Invalid date time format            | If from date or to date is invalid             |
+| PRG\_CORE\_REQ\_020  | From date is greater than To date   | If from date is greater than to date           |
+
+### POST /sync/consumedPreRegIds
+
 This request is used by registration processor, to retrieve all processed pre-registration ids and store in pre-registration database so that after batch jon run , job will delete records from main table and move to history table(consumed).
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/sync/consumedPreRegIds`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Body Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-id |Yes|Id of the application|mosip.pre-registration.datasync.store
-version |Yes|version of the application|1.0
-requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
-request |Yes|Request for the application|
-request.preRegistrationIds |Yes|List of Preregistration Ids|42973267563920
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                       | Required | Description                     | Comment                               |
+| -------------------------- | -------- | ------------------------------- | ------------------------------------- |
+| id                         | Yes      | Id of the application           | mosip.pre-registration.datasync.store |
+| version                    | Yes      | version of the application      | 1.0                                   |
+| requesttime                | Yes      | Request time of the application | 2019-01-16T05:23:08.019Z              |
+| request                    | Yes      | Request for the application     |                                       |
+| request.preRegistrationIds | Yes      | List of Preregistration Ids     | 42973267563920                        |
+
+#### Request
+
+```
 {
   "id": "mosip.pre-registration.datasync.store",
   "version": "1.0",
@@ -2326,14 +2486,15 @@ request.preRegistrationIds |Yes|List of Preregistration Ids|42973267563920
 }
 ```
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Consumed Pre-Registrations saved
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.datasync.store",
   "version" : "1.0",
@@ -2347,12 +2508,13 @@ request.preRegistrationIds |Yes|List of Preregistration Ids|42973267563920
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: No pre-registration ids passed in request body or all the preregistration ids are invalid
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.datasync.store",
   "version": "1.0",
@@ -2367,44 +2529,50 @@ request.preRegistrationIds |Yes|List of Preregistration Ids|42973267563920
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
-PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
-PRG_PAM_CORE_003|Invalid request time |Empty Request time
-PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
-PRG_DATA_SYNC_007|Demographic record failed to fetch|when rest service to demographic service fails
+#### Other Failure details
 
-## GET /sync/{preRegistrationId}
+| Error Code           | Error Message                       | Error Description                              |
+| -------------------- | ----------------------------------- | ---------------------------------------------- |
+| PRG\_PAM\_CORE\_001  | Request id is invalid               | Invalid or empty Request Id                    |
+| PRG\_PAM\_CORE\_002  | Request version is invalid          | Invalid or empty Request version               |
+| PRG\_PAM\_CORE\_003  | Invalid request time                | Empty Request time                             |
+| PRG\_CORE\_REQ\_013  | Request date should be current date | If request date is not current date            |
+| PRG\_DATA\_SYNC\_007 | Demographic record failed to fetch  | when rest service to demographic service fails |
+
+### GET /sync/{preRegistrationId}
+
 This request is used by registration client to retrieve particular pre-registration data based on a pre-registration id.
 
 {% hint style="info" %}
 ID.json will include both demographic and uploaded document metadata content.
 {% endhint %}
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/sync/{preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-preRegistrationId |Yes|Pre Registration id|41342175487213
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Responses
+#### Request Path Parameters
 
-#### Success Response
+| Name              | Required | Description         | Comment        |
+| ----------------- | -------- | ------------------- | -------------- |
+| preRegistrationId | Yes      | Pre Registration id | 41342175487213 |
+
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Data Sync records fetched
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.datasync.fetch",
   "version": "1.0",
@@ -2422,12 +2590,13 @@ preRegistrationId |Yes|Pre Registration id|41342175487213
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: No demographic data exists for the requested pre-registration id or if the pre-registration id is invalid(non-empty)
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.datasync.fetch",
   "version": "1.0",
@@ -2442,46 +2611,53 @@ preRegistrationId |Yes|Pre Registration id|41342175487213
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_BOOK_RCI_013|booking data not found|If appointment is not booked against the preregistration id
-PRG_DATA_SYNC_007|Demographic record failed to fetch|when rest service to demographic service fails
-PRG_DATA_SYNC_016|booking data not found|when rest service to booking service fails
-PRG_DATA_SYNC_005|Unable to create zip file|If any error occurs while creating the zip file bytes
-PRG_DATA_SYNC_014|file IO exception|File system exception
-PRG_DATA_SYNC_006|unable to fetch the document|when rest service to document service fails
+#### Other Failure details
 
-# Booking Service (Public)
+| Error Code           | Error Message                      | Error Description                                           |
+| -------------------- | ---------------------------------- | ----------------------------------------------------------- |
+| PRG\_BOOK\_RCI\_013  | booking data not found             | If appointment is not booked against the preregistration id |
+| PRG\_DATA\_SYNC\_007 | Demographic record failed to fetch | when rest service to demographic service fails              |
+| PRG\_DATA\_SYNC\_016 | booking data not found             | when rest service to booking service fails                  |
+| PRG\_DATA\_SYNC\_005 | Unable to create zip file          | If any error occurs while creating the zip file bytes       |
+| PRG\_DATA\_SYNC\_014 | file IO exception                  | File system exception                                       |
+| PRG\_DATA\_SYNC\_006 | unable to fetch the document       | when rest service to document service fails                 |
+
+## Booking Service (Public)
+
 This service details used by Pre-Registration portal to book an appointment by providing his/her basic appointment details.
-* [GET appointment/availability/sync](#get-appointmentavailabilitysync)
-* [POST /appointment/{preRegistrationId}](#post-appointmentpreregistrationid)
-* [POST /appointment](#post-appointment)
-* [PUT /appointment/{preRegistrationId}](#put-appointmentpreregistrationid)
-* [GET /appointment/{preRegistrationId}](#get-appointmentpreregistrationid)
-* [GET /appointment/availability/{registrationCenterId}](#get-appointmentavailabilityregistrationcenterid)
-* [GET /appointment/preRegistrationId/{registrationCenterId}?from_date=:date&to_date=:date](#get-appointmentpreregistrationidregistrationcenteridfrom_datedateto_datedate)
 
-## GET /appointment/availability/sync
+* [GET appointment/availability/sync](Pre-Registration-APIs.md#get-appointmentavailabilitysync)
+* [POST /appointment/{preRegistrationId}](Pre-Registration-APIs.md#post-appointmentpreregistrationid)
+* [POST /appointment](Pre-Registration-APIs.md#post-appointment)
+* [PUT /appointment/{preRegistrationId}](Pre-Registration-APIs.md#put-appointmentpreregistrationid)
+* [GET /appointment/{preRegistrationId}](Pre-Registration-APIs.md#get-appointmentpreregistrationid)
+* [GET /appointment/availability/{registrationCenterId}](Pre-Registration-APIs.md#get-appointmentavailabilityregistrationcenterid)
+* [GET /appointment/preRegistrationId/{registrationCenterId}?from\_date=:date\&to\_date=:date](Pre-Registration-APIs.md#get-appointmentpreregistrationidregistrationcenteridfrom\_datedateto\_datedate)
+
+### GET /appointment/availability/sync
+
 This request is used to synchronize booking slots availability table with master data.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/appointment/availability/sync`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Responses
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-#### Success Response
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Master Data Sync is successful
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.appointment.availability.sync",
   "version": "1.0",
@@ -2491,46 +2667,53 @@ Requires Authentication | Yes
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_BOOK_RCI_015|No available slots found for specified registration center| If no slots are available in the specified registration center
-PRG_BOOK_RCI_016|Availablity table not accessible|access to availability table fails
-PRG_BOOK_RCI_034|Json processing exception| Json parse exception while sending notification
-PRG_BOOK_RCI_033|Notification service call failed| Notification service call fail
-PRG_BOOK_RCI_020|Master data not found| Master date service call fail
+#### Other Failure details
 
-## POST /appointment/{preRegistrationId}
+| Error Code          | Error Message                                              | Error Description                                              |
+| ------------------- | ---------------------------------------------------------- | -------------------------------------------------------------- |
+| PRG\_BOOK\_RCI\_015 | No available slots found for specified registration center | If no slots are available in the specified registration center |
+| PRG\_BOOK\_RCI\_016 | Availablity table not accessible                           | access to availability table fails                             |
+| PRG\_BOOK\_RCI\_034 | Json processing exception                                  | Json parse exception while sending notification                |
+| PRG\_BOOK\_RCI\_033 | Notification service call failed                           | Notification service call fail                                 |
+| PRG\_BOOK\_RCI\_020 | Master data not found                                      | Master date service call fail                                  |
+
+### POST /appointment/{preRegistrationId}
+
 This request is used to book an registration center. If the appointment data exists for the requested pre-registration id, it will cancel it and update the new appointment data. If no appointment data then it will book an appointment for specified registration center and time slot.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/appointment/{preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-preRegsitrationId |Yes|pre-registration id of the application|37802950913289
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request Body Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-id |Yes|Id of the application|mosip.pre-registration.booking.book
-version |Yes|version of the application|1.0
-requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
-request |Yes|Request for the application|
-request.registration_center_id |Yes|Registration center Id |10005
-request.appointment_date |Yes|Date of the appointment|2019-01-19
-request.time_slot_from |Yes|Time Slot From|12:15:00
-request.time_slot_to |Yes|Time Slot To|12:28:00
+#### Request Path Parameters
 
-### Request
-```JSON
+| Name              | Required | Description                            | Comment        |
+| ----------------- | -------- | -------------------------------------- | -------------- |
+| preRegsitrationId | Yes      | pre-registration id of the application | 37802950913289 |
+
+#### Request Body Parameters
+
+| Name                             | Required | Description                     | Comment                             |
+| -------------------------------- | -------- | ------------------------------- | ----------------------------------- |
+| id                               | Yes      | Id of the application           | mosip.pre-registration.booking.book |
+| version                          | Yes      | version of the application      | 1.0                                 |
+| requesttime                      | Yes      | Request time of the application | 2019-01-16T05:23:08.019Z            |
+| request                          | Yes      | Request for the application     |                                     |
+| request.registration\_center\_id | Yes      | Registration center Id          | 10005                               |
+| request.appointment\_date        | Yes      | Date of the appointment         | 2019-01-19                          |
+| request.time\_slot\_from         | Yes      | Time Slot From                  | 12:15:00                            |
+| request.time\_slot\_to           | Yes      | Time Slot To                    | 12:28:00                            |
+
+#### Request
+
+```
 {
   "id": "mosip.pre-registration.booking.book",
   "version": "1.0",
@@ -2544,14 +2727,15 @@ request.time_slot_to |Yes|Time Slot To|12:28:00
 }
 ```
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Appointment booked successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.booking.book",
   "version": "1.0",
@@ -2563,12 +2747,13 @@ request.time_slot_to |Yes|Time Slot To|12:28:00
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: If demographic data not found for the preregistration id or if Pre Registration Id is invalid(non-empty).
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.booking.book",
   "version": "1.0",
@@ -2583,12 +2768,13 @@ request.time_slot_to |Yes|Time Slot To|12:28:00
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: Slot availability not found for selected time.
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.booking.book",
   "version": "1.0",
@@ -2603,54 +2789,60 @@ request.time_slot_to |Yes|Time Slot To|12:28:00
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
-PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
-PRG_PAM_CORE_003|Invalid request time |Empty Request time
-PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
-PRG_BOOK_RCI_002|Availability not found for the selected time|When availability not found for the requested registration center id or appointment date or time slot
-PRG_BOOK_RCI_003|User has not selected time slot|If from time slot or to time slot is empty
-PRG_BOOK_RCI_005|Booking table not found|access to appointment table fails
-PRG_BOOK_RCI_007|Registration center id not entered|If registration center id is empty
-PRG_BOOK_RCI_008|Booking date time not selected|If appointment date is empty
-PRG_BOOK_RCI_013|Booking data not found|while rebooking, when the preregistration status is booked but appointment data not found in the database
-PRG_BOOK_RCI_015|No available slots found for specified registration center| If no slots are available in the specified registration center
-PRG_BOOK_RCI_016|Availablity table not accessible|access to availability table fails
-PRG_BOOK_RCI_024|Availablity update failed|when appointment availability is failed to update
-PRG_BOOK_RCI_026|Booking status cannot be altered|when we tend to modify the appointment details after the configured time span for rebook
-PRG_BOOK_RCI_028|Failed to delete the pre-registration record|while rebooking, failed to delete old appointment details
-PRG_BOOK_RCI_031| Invalid Booking Date Time found for preregistration id - 37513708391357| If appointment date is past date and also when appointment date is present date but the appointment time is past. If the date format is other than YYYY-MM-DD.
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
+#### Other Failure details
 
-## POST /appointment
+| Error Code          | Error Message                                                           | Error Description                                                                                                                                              |
+| ------------------- | ----------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PRG\_PAM\_CORE\_001 | Request id is invalid                                                   | Invalid or empty Request Id                                                                                                                                    |
+| PRG\_PAM\_CORE\_002 | Request version is invalid                                              | Invalid or empty Request version                                                                                                                               |
+| PRG\_PAM\_CORE\_003 | Invalid request time                                                    | Empty Request time                                                                                                                                             |
+| PRG\_CORE\_REQ\_013 | Request date should be current date                                     | If request date is not current date                                                                                                                            |
+| PRG\_BOOK\_RCI\_002 | Availability not found for the selected time                            | When availability not found for the requested registration center id or appointment date or time slot                                                          |
+| PRG\_BOOK\_RCI\_003 | User has not selected time slot                                         | If from time slot or to time slot is empty                                                                                                                     |
+| PRG\_BOOK\_RCI\_005 | Booking table not found                                                 | access to appointment table fails                                                                                                                              |
+| PRG\_BOOK\_RCI\_007 | Registration center id not entered                                      | If registration center id is empty                                                                                                                             |
+| PRG\_BOOK\_RCI\_008 | Booking date time not selected                                          | If appointment date is empty                                                                                                                                   |
+| PRG\_BOOK\_RCI\_013 | Booking data not found                                                  | while rebooking, when the preregistration status is booked but appointment data not found in the database                                                      |
+| PRG\_BOOK\_RCI\_015 | No available slots found for specified registration center              | If no slots are available in the specified registration center                                                                                                 |
+| PRG\_BOOK\_RCI\_016 | Availablity table not accessible                                        | access to availability table fails                                                                                                                             |
+| PRG\_BOOK\_RCI\_024 | Availablity update failed                                               | when appointment availability is failed to update                                                                                                              |
+| PRG\_BOOK\_RCI\_026 | Booking status cannot be altered                                        | when we tend to modify the appointment details after the configured time span for rebook                                                                       |
+| PRG\_BOOK\_RCI\_028 | Failed to delete the pre-registration record                            | while rebooking, failed to delete old appointment details                                                                                                      |
+| PRG\_BOOK\_RCI\_031 | Invalid Booking Date Time found for preregistration id - 37513708391357 | If appointment date is past date and also when appointment date is present date but the appointment time is past. If the date format is other than YYYY-MM-DD. |
+| PRG\_PAM\_APP\_017  | Requested preregistration id does not belong to the user                | when the user tries to access another user's demographic data                                                                                                  |
+
+### POST /appointment
+
 This request is used to book mulitple registration centers. If the appointment data exists for the requested pre-registration ids, it will cancel it and update the new appointment data. If no appointment data then it will book an appointment for specified registration center and time slot.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/appointment`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Body Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-id |Yes|Id of the application|mosip.pre-registration.booking.book
-version |Yes|version of the application|1.0
-requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
-request |Yes|Request for the application|
-request.preRegistrationid|Yes|Preregistration Id|51489749326453
-request.registration_center_id |Yes|Registration center Id |10001
-request.appointment_date |Yes|Date of the appointment|2019-04-22
-request.time_slot_from |Yes|Time Slot From|15:30:00
-request.time_slot_to |Yes|Time Slot To|15:45:00
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                             | Required | Description                     | Comment                             |
+| -------------------------------- | -------- | ------------------------------- | ----------------------------------- |
+| id                               | Yes      | Id of the application           | mosip.pre-registration.booking.book |
+| version                          | Yes      | version of the application      | 1.0                                 |
+| requesttime                      | Yes      | Request time of the application | 2019-01-16T05:23:08.019Z            |
+| request                          | Yes      | Request for the application     |                                     |
+| request.preRegistrationid        | Yes      | Preregistration Id              | 51489749326453                      |
+| request.registration\_center\_id | Yes      | Registration center Id          | 10001                               |
+| request.appointment\_date        | Yes      | Date of the appointment         | 2019-04-22                          |
+| request.time\_slot\_from         | Yes      | Time Slot From                  | 15:30:00                            |
+| request.time\_slot\_to           | Yes      | Time Slot To                    | 15:45:00                            |
+
+#### Request
+
+```
 {
   "id": "mosip.pre-registration.booking.book",
   "version": "1.0",
@@ -2676,14 +2868,15 @@ request.time_slot_to |Yes|Time Slot To|15:45:00
 }
 ```
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Appointment booked successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.booking.book",
   "version": "1.0",
@@ -2702,12 +2895,13 @@ request.time_slot_to |Yes|Time Slot To|15:45:00
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: If demographic data is not found for any of the preregistration id or if Pre Registration Id is invalid(non-empty).
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.booking.book",
   "version" : "1.0",
@@ -2722,11 +2916,13 @@ request.time_slot_to |Yes|Time Slot To|15:45:00
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: Slot availability not found for selected time.
-```JSON
+
+```
 {
   "id": "mosip.pre-registration.booking.book",
   "version" : "1.0",
@@ -2741,45 +2937,50 @@ request.time_slot_to |Yes|Time Slot To|15:45:00
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
-PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
-PRG_PAM_CORE_003|Invalid request time |Empty Request time
-PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
-PRG_BOOK_RCI_007|Registration center id not entered|If registration center id is empty
-PRG_BOOK_RCI_008|Booking date time not selected|If appointment date is empty
-PRG_BOOK_RCI_002|Availability not found for the selected time|When availability not found for the requested registration center id or appointment date or time slot
-PRG_BOOK_RCI_016|Availability table not accessible|access to availability table fails
-PRG_BOOK_RCI_005|Booking table not found|access to appointment table fails
-PRG_BOOK_RCI_024|Availability update failed|when appointment availability is failed to update
-PRG_BOOK_RCI_013|Booking data not found|while rebooking, when the preregistration status is booked but appointment data not found in the database
-PRG_BOOK_RCI_026|Booking status cannot be altered|when we tend to modify the appointment details after the configured time span for rebook
-PRG_BOOK_RCI_028|Failed to delete the pre-registration record|while rebooking, failed to delete old appointment details
-PRG_BOOK_RCI_031| Invalid Booking Date Time found for preregistration id - 37513708391357| If appointment date is past date and also when appointment date is present date but the appointment time is past.If the date format is other than YYYY-MM-DD.
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
+#### Other Failure details
 
-## PUT /appointment/{preRegistrationId}
-This request used to cancel the appointment. Which will retrieve the appointment details for the specified pre-registration id,if appointment data exists update the availability for the slot by increasing the value and delete the record from the table and update the demographic record status "Pending_Appointment".
+| Error Code          | Error Message                                                           | Error Description                                                                                                                                             |
+| ------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PRG\_PAM\_CORE\_001 | Request id is invalid                                                   | Invalid or empty Request Id                                                                                                                                   |
+| PRG\_PAM\_CORE\_002 | Request version is invalid                                              | Invalid or empty Request version                                                                                                                              |
+| PRG\_PAM\_CORE\_003 | Invalid request time                                                    | Empty Request time                                                                                                                                            |
+| PRG\_CORE\_REQ\_013 | Request date should be current date                                     | If request date is not current date                                                                                                                           |
+| PRG\_BOOK\_RCI\_007 | Registration center id not entered                                      | If registration center id is empty                                                                                                                            |
+| PRG\_BOOK\_RCI\_008 | Booking date time not selected                                          | If appointment date is empty                                                                                                                                  |
+| PRG\_BOOK\_RCI\_002 | Availability not found for the selected time                            | When availability not found for the requested registration center id or appointment date or time slot                                                         |
+| PRG\_BOOK\_RCI\_016 | Availability table not accessible                                       | access to availability table fails                                                                                                                            |
+| PRG\_BOOK\_RCI\_005 | Booking table not found                                                 | access to appointment table fails                                                                                                                             |
+| PRG\_BOOK\_RCI\_024 | Availability update failed                                              | when appointment availability is failed to update                                                                                                             |
+| PRG\_BOOK\_RCI\_013 | Booking data not found                                                  | while rebooking, when the preregistration status is booked but appointment data not found in the database                                                     |
+| PRG\_BOOK\_RCI\_026 | Booking status cannot be altered                                        | when we tend to modify the appointment details after the configured time span for rebook                                                                      |
+| PRG\_BOOK\_RCI\_028 | Failed to delete the pre-registration record                            | while rebooking, failed to delete old appointment details                                                                                                     |
+| PRG\_BOOK\_RCI\_031 | Invalid Booking Date Time found for preregistration id - 37513708391357 | If appointment date is past date and also when appointment date is present date but the appointment time is past.If the date format is other than YYYY-MM-DD. |
+| PRG\_PAM\_APP\_017  | Requested preregistration id does not belong to the user                | when the user tries to access another user's demographic data                                                                                                 |
 
-### Resource URL
+### PUT /appointment/{preRegistrationId}
+
+This request used to cancel the appointment. Which will retrieve the appointment details for the specified pre-registration id,if appointment data exists update the availability for the slot by increasing the value and delete the record from the table and update the demographic record status "Pending\_Appointment".
+
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/appointment/{preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Responses
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-#### Success Response
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Appointment cancelled successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.appointment.cancel",
   "version": "1.0",
@@ -2792,12 +2993,13 @@ Requires Authentication | Yes
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: Appointment cancellation failed.
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.appointment.cancel",
   "version": "1.0",
@@ -2812,43 +3014,49 @@ Requires Authentication | Yes
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_BOOK_RCI_013|Booking data not found|if appointment is not booked against the requested preregistration id
-PRG_BOOK_RCI_016|Availability table not accessible|access to availability table fails
-PRG_BOOK_RCI_005|Booking table not found|access to appointment table fails
-PRG_BOOK_RCI_024|Availability update failed|when appointment availability is failed to update
-PRG_BOOK_RCI_026|Booking status cannot be altered|when we tend to cancel the appointment details after the configured time span for cancel
-PRG_BOOK_RCI_018|Appointment cannot be canceled|If status is other than booked
-PRG_PAM_APP_005 |No data found for the requested pre-registration id | If no demographic data found for the requested preregistration id or if the preregistration id is invalid(non-empty)
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
+#### Other Failure details
 
-## GET /appointment/{preRegistrationId}
+| Error Code          | Error Message                                            | Error Description                                                                                                    |
+| ------------------- | -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| PRG\_BOOK\_RCI\_013 | Booking data not found                                   | if appointment is not booked against the requested preregistration id                                                |
+| PRG\_BOOK\_RCI\_016 | Availability table not accessible                        | access to availability table fails                                                                                   |
+| PRG\_BOOK\_RCI\_005 | Booking table not found                                  | access to appointment table fails                                                                                    |
+| PRG\_BOOK\_RCI\_024 | Availability update failed                               | when appointment availability is failed to update                                                                    |
+| PRG\_BOOK\_RCI\_026 | Booking status cannot be altered                         | when we tend to cancel the appointment details after the configured time span for cancel                             |
+| PRG\_BOOK\_RCI\_018 | Appointment cannot be canceled                           | If status is other than booked                                                                                       |
+| PRG\_PAM\_APP\_005  | No data found for the requested pre-registration id      | If no demographic data found for the requested preregistration id or if the preregistration id is invalid(non-empty) |
+| PRG\_PAM\_APP\_017  | Requested preregistration id does not belong to the user | when the user tries to access another user's demographic data                                                        |
+
+### GET /appointment/{preRegistrationId}
+
 This request is to retrieve Pre-Registration appointment details by pre-Registration id.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/appointment/{preRegistrationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-preRegistrationId |Yes|Id of the application|37802950913289
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Responses
+#### Request Path Parameters
 
-#### Success Response
+| Name              | Required | Description           | Comment        |
+| ----------------- | -------- | --------------------- | -------------- |
+| preRegistrationId | Yes      | Id of the application | 37802950913289 |
+
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Appointment details successfully retrieved
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.appointment.fetch",
   "version" : "1.0",
@@ -2863,12 +3071,13 @@ preRegistrationId |Yes|Id of the application|37802950913289
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: No Appointment record found for the specified pre-registration id
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.appointment.fetch",
   "version" : "1.0",
@@ -2883,36 +3092,43 @@ preRegistrationId |Yes|Id of the application|37802950913289
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_BOOK_RCI_013|Booking data not found|if appointment is not booked against the requested preregistration id
-PRG_PAM_APP_017|Requested preregistration id does not belong to the user|when the user tries to access another user's demographic data
+#### Other Failure details
 
-## GET /appointment/availability/{registrationCenterId}
+| Error Code          | Error Message                                            | Error Description                                                     |
+| ------------------- | -------------------------------------------------------- | --------------------------------------------------------------------- |
+| PRG\_BOOK\_RCI\_013 | Booking data not found                                   | if appointment is not booked against the requested preregistration id |
+| PRG\_PAM\_APP\_017  | Requested preregistration id does not belong to the user | when the user tries to access another user's demographic data         |
+
+### GET /appointment/availability/{registrationCenterId}
+
 This request is used to retrieve all appointment slots available for booking based on the specified registration center id.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/appointment/availability/{registrationCenterId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-registrationCenterId |Yes|Registration Center Id|10004
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Responses
+#### Request Path Parameters
 
-#### Success Response
+| Name                 | Required | Description            | Comment |
+| -------------------- | -------- | ---------------------- | ------- |
+| registrationCenterId | Yes      | Registration Center Id | 10004   |
+
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Availability details fetched successfully
-```JSON
+
+```
 {
   "id": "mosip.pre-registration.appointment.availability",
   "version" : "1.0",
@@ -2958,12 +3174,13 @@ registrationCenterId |Yes|Registration Center Id|10004
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: No available slots found for specified registration center.
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.appointment.availability",
   "version" : "1.0",
@@ -2978,47 +3195,53 @@ registrationCenterId |Yes|Registration Center Id|10004
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_BOOK_RCI_016|Availability table not accessible|access to availability table fails
+#### Other Failure details
 
-## GET /appointment/preRegistrationId/{registrationCenterId}?from_date=:Date&to_date=:Date
+| Error Code          | Error Message                     | Error Description                  |
+| ------------------- | --------------------------------- | ---------------------------------- |
+| PRG\_BOOK\_RCI\_016 | Availability table not accessible | access to availability table fails |
+
+### GET /appointment/preRegistrationId/{registrationCenterId}?from\_date=:Date\&to\_date=:Date
+
 This request is used to retrieve all pre-registration ids available for specified registration center and date range.
 
 {% hint style="info" %}
 If toDate parameter value is not passed in the request, fromDate will be considered as toDate.
 {% endhint %}
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/appointment/preRegistrationId/{registrationCenterId}?from_date=:Date&to_date=:Date`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Path Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-registrationCenterId |Yes|Registration Center Id|10002
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request Query Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-fromDate |Yes|From Date | 2019-02-12
-toDate |Yes|To Date | 2019-06-15
+#### Request Path Parameters
 
-### Responses
+| Name                 | Required | Description            | Comment |
+| -------------------- | -------- | ---------------------- | ------- |
+| registrationCenterId | Yes      | Registration Center Id | 10002   |
 
-#### Success Response
+#### Request Query Parameters
+
+| Name     | Required | Description | Comment    |
+| -------- | -------- | ----------- | ---------- |
+| fromDate | Yes      | From Date   | 2019-02-12 |
+| toDate   | Yes      | To Date     | 2019-06-15 |
+
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Availability details fetched successfully
 
-```JSON
-
+```
 {
   "id": "mosip.pre-registration.appointment.ids",
   "version": "1.0",
@@ -3033,12 +3256,13 @@ toDate |Yes|To Date | 2019-06-15
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: No available slots found for specified registration center with date range.
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.appointment.ids",
   "version" : "1.0",
@@ -3053,45 +3277,49 @@ toDate |Yes|To Date | 2019-06-15
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_BOOK_RCI_005|Booking table not found|access to appointment table fails
-PRG_CORE_REQ_019|Invalid date time format|If from date or to date is invalid
-PRG_CORE_REQ_020|From date is greater than To date|If from date is greater than to date
+#### Other Failure details
 
+| Error Code          | Error Message                     | Error Description                    |
+| ------------------- | --------------------------------- | ------------------------------------ |
+| PRG\_BOOK\_RCI\_005 | Booking table not found           | access to appointment table fails    |
+| PRG\_CORE\_REQ\_019 | Invalid date time format          | If from date or to date is invalid   |
+| PRG\_CORE\_REQ\_020 | From date is greater than To date | If from date is greater than to date |
 
-# BatchJob Service (Private)
-This service is used by Pre-Registration portal to update an expired pre-registration id  and consumed pre-registration id.
+## BatchJob Service (Private)
+
+This service is used by Pre-Registration portal to update an expired pre-registration id and consumed pre-registration id.
 
 {% hint style="info" %}
 Below are privileged APIs cannot be operate with individuals credentials.
 {% endhint %}
 
-* [PUT batch/expiredStatus](#put-expiredstatus)
-* [PUT batch/consumedStatus](#put-consumedstatus)
+* [PUT batch/expiredStatus](Pre-Registration-APIs.md#put-expiredstatus)
+* [PUT batch/consumedStatus](Pre-Registration-APIs.md#put-consumedstatus)
 
-## PUT /expiredStatus
-This request is used to update status of pre-registration ids appointment to expired status in database.
-Batch service will expire all the appointments from date before exceution date till the last execution date of batch job.
+### PUT /expiredStatus
 
-### Resource URL
+This request is used to update status of pre-registration ids appointment to expired status in database. Batch service will expire all the appointments from date before exceution date till the last execution date of batch job.
+
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/batch/expiredStatus`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Responses
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-#### Success Response
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Expired status updated successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.batchjob.service.expired",
   "version": "1.0",
@@ -3101,11 +3329,13 @@ Requires Authentication | Yes
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: No pre-registration record found to update expired status
-```JSON
+
+```
 {
   "id": "mosip.pre-registration.batchjob.service.expired",
   "version" : "1.0",
@@ -3120,32 +3350,37 @@ Requires Authentication | Yes
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_BAT_004|Demographic table not accessible|If data is not found for preRegistrationId
-PRG_PAM_BAT_005|Reg appointment table not accessible|If Reg appointment table not accessible
+#### Other Failure details
 
-## PUT /consumedStatus
+| Error Code         | Error Message                        | Error Description                          |
+| ------------------ | ------------------------------------ | ------------------------------------------ |
+| PRG\_PAM\_BAT\_004 | Demographic table not accessible     | If data is not found for preRegistrationId |
+| PRG\_PAM\_BAT\_005 | Reg appointment table not accessible | If Reg appointment table not accessible    |
+
+### PUT /consumedStatus
+
 This request is used to update the consumed status for all pre-Registration ids given by registration processor.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/batch/consumedStatus`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Responses
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-#### Success Response
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Consumed status updated successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.batchjob.service.consumed",
   "version" : "1.0",
@@ -3154,12 +3389,14 @@ Requires Authentication | Yes
   "errors":null
 }
 ```
-#### Failure Response
+
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: No pre-registration record found to update consumed status
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.batchjob.service.consumed",
   "version": "1.0",
@@ -3174,50 +3411,56 @@ Requires Authentication | Yes
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_BAT_004   |Demographic table not accessible|If data is not found for preRegistrationId
-PRG_PAM_BAT_005   |Reg appointment table not accessible|If Reg appointment table not accessible
-PRG_PAM_BAT_006|Processed prereg list table not accessible|If Processed prereg list table not accessible
-PRG_PAM_BAT_007   |Document table not accessible|  If document table not accessible
-PRG_PAM_BAT_008   |Reg appointment consumed table not accessible|If Reg appointment consumed table not accessible
-PRG_PAM_BAT_009|Demographic consumed table not accessible|If Demographic consumed table not accessible
-PRG_PAM_BAT_010   |Document consumed table not accessible|If document consumed table not accessible
+#### Other Failure details
 
-# Generate QR code service (public)
+| Error Code         | Error Message                                 | Error Description                                |
+| ------------------ | --------------------------------------------- | ------------------------------------------------ |
+| PRG\_PAM\_BAT\_004 | Demographic table not accessible              | If data is not found for preRegistrationId       |
+| PRG\_PAM\_BAT\_005 | Reg appointment table not accessible          | If Reg appointment table not accessible          |
+| PRG\_PAM\_BAT\_006 | Processed prereg list table not accessible    | If Processed prereg list table not accessible    |
+| PRG\_PAM\_BAT\_007 | Document table not accessible                 | If document table not accessible                 |
+| PRG\_PAM\_BAT\_008 | Reg appointment consumed table not accessible | If Reg appointment consumed table not accessible |
+| PRG\_PAM\_BAT\_009 | Demographic consumed table not accessible     | If Demographic consumed table not accessible     |
+| PRG\_PAM\_BAT\_010 | Document consumed table not accessible        | If document consumed table not accessible        |
+
+## Generate QR code service (public)
+
 This service details used by Pre-Registration portal to generate QR Code.
 
-* [POST qrCode/generate](#post-qrcodegenerate)
+* [POST qrCode/generate](Pre-Registration-APIs.md#post-qrcodegenerate)
 
-## POST qrCode/generate
+### POST qrCode/generate
+
 This request is used to generate QR Code for the pre-registration acknowledgement.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/qrCode/generate`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Part Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-id |Yes|Id of the application|mosip.pre-registration.qrcode.generate
-version |Yes|version of the application|1.0
-requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
-request |Yes|Request for the application|
-request.value |Yes|Any string that you want to generate QR code|
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
+#### Request Part Parameters
+
+| Name          | Required | Description                                  | Comment                                |
+| ------------- | -------- | -------------------------------------------- | -------------------------------------- |
+| id            | Yes      | Id of the application                        | mosip.pre-registration.qrcode.generate |
+| version       | Yes      | version of the application                   | 1.0                                    |
+| requesttime   | Yes      | Request time of the application              | 2019-01-16T05:23:08.019Z               |
+| request       | Yes      | Request for the application                  |                                        |
+| request.value | Yes      | Any string that you want to generate QR code |                                        |
+
+#### Request
 
 {% hint style="info" %}
 Below is the sample request with no validation for request value
 {% endhint %}
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.qrcode.generate",
   "version": "1.0",
@@ -3226,14 +3469,15 @@ Below is the sample request with no validation for request value
 }
 ```
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
+
 **Status code**: 200
 
-**Description**: QR Code generated  successfully
+**Description**: QR Code generated successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.qrcode.generate",
   "version" : "1.0",
@@ -3244,12 +3488,14 @@ Below is the sample request with no validation for request value
   "errors":null
 }
 ```
-#### Failure Response
+
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: Failed to generate QR code
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.qrcode.generate",
   "version" : "1.0",
@@ -3264,59 +3510,67 @@ Below is the sample request with no validation for request value
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
-PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
-PRG_PAM_CORE_003|Invalid request time |Empty Request time
-PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
-PRG_PAM_CORE_004|Request body is invalid|Invalid or empty Request body
-PRG_QRC_001|	File input output exception|	when there is any input / output file operation issues
-PRG_CORE_REQ_013|Request date should be current date|If request date is other than current date
+#### Other Failure details
 
-# Notification Service (public)
+| Error Code          | Error Message                       | Error Description                                      |
+| ------------------- | ----------------------------------- | ------------------------------------------------------ |
+| PRG\_PAM\_CORE\_001 | Request id is invalid               | Invalid or empty Request Id                            |
+| PRG\_PAM\_CORE\_002 | Request version is invalid          | Invalid or empty Request version                       |
+| PRG\_PAM\_CORE\_003 | Invalid request time                | Empty Request time                                     |
+| PRG\_CORE\_REQ\_013 | Request date should be current date | If request date is not current date                    |
+| PRG\_PAM\_CORE\_004 | Request body is invalid             | Invalid or empty Request body                          |
+| PRG\_QRC\_001       | File input output exception         | when there is any input / output file operation issues |
+| PRG\_CORE\_REQ\_013 | Request date should be current date | If request date is other than current date             |
+
+## Notification Service (public)
+
 This service details used by Pre-Registration portal to trigger notification via SMS or email.
 
-* [POST notification/notify](#post-notificationnotify)
+* [POST notification/notify](Pre-Registration-APIs.md#post-notificationnotify)
 
-## POST notification/notify
+### POST notification/notify
+
 This request is used to notify the pre-registration acknowledgement via Email and SMS.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/notification/notify`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Request format | multipart/form-data
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Part (NotificationRequestDTO) Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-id |Yes|Id of the application|mosip.pre-registration.notification.notify
-version |Yes|version of the application|1.0
-requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
-request |Yes|Request for the application|
-request.name |Yes|user name of the application|Sanober Noor
-request.preRegistrationId|Yes|Pre Registration of the application|37802950913289
-request.appointmentDate|Yes| Booking appointment date|2019-01-18
-request.appointmentTime| Yes|Booking appointment time| 12:02
-request.mobNum| Optional(If emailID is non empty)| applicant mobile number |9480456789
-request.emailID| Optional(If mobNum is non empty)|applicant email Id |`sanober@gmail.com`
-request.additionalRecipient|Yes|additional recipient| It is a Boolean value(true/false). If it is **true** then **request.mobNum** and **request.emailId** get validated otherwise even though value is present for those values validation will not happen and it will get the mobile number/email address from the identity json from the database.  
-request.isBatch|Yes|Required for batch job | It is a Boolean value(true/false). If it is **true** then it consider this call as a cancel appointment only otherwise it will considered as a normal notification call and validate appointment details.
+| Resource Details        | Description         |
+| ----------------------- | ------------------- |
+| Request format          | multipart/form-data |
+| Response format         | JSON                |
+| Requires Authentication | Yes                 |
 
-### Request Part Parameters
-Name | Required | Description | Comment
------|----------|-------------|--------
-attachment| Yes| pdf file of acknowledgment page|37802950913289.pdf
-langCode| Yes| language code whatever user choose while login|eng
+#### Request Part (NotificationRequestDTO) Parameters
 
-### Request
-```JSON
+| Name                        | Required                          | Description                         | Comment                                                                                                                                                                                                                                                                                         |
+| --------------------------- | --------------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id                          | Yes                               | Id of the application               | mosip.pre-registration.notification.notify                                                                                                                                                                                                                                                      |
+| version                     | Yes                               | version of the application          | 1.0                                                                                                                                                                                                                                                                                             |
+| requesttime                 | Yes                               | Request time of the application     | 2019-01-16T05:23:08.019Z                                                                                                                                                                                                                                                                        |
+| request                     | Yes                               | Request for the application         |                                                                                                                                                                                                                                                                                                 |
+| request.name                | Yes                               | user name of the application        | Sanober Noor                                                                                                                                                                                                                                                                                    |
+| request.preRegistrationId   | Yes                               | Pre Registration of the application | 37802950913289                                                                                                                                                                                                                                                                                  |
+| request.appointmentDate     | Yes                               | Booking appointment date            | 2019-01-18                                                                                                                                                                                                                                                                                      |
+| request.appointmentTime     | Yes                               | Booking appointment time            | 12:02                                                                                                                                                                                                                                                                                           |
+| request.mobNum              | Optional(If emailID is non empty) | applicant mobile number             | 9480456789                                                                                                                                                                                                                                                                                      |
+| request.emailID             | Optional(If mobNum is non empty)  | applicant email Id                  | `sanober@gmail.com`                                                                                                                                                                                                                                                                             |
+| request.additionalRecipient | Yes                               | additional recipient                | It is a Boolean value(true/false). If it is **true** then **request.mobNum** and **request.emailId** get validated otherwise even though value is present for those values validation will not happen and it will get the mobile number/email address from the identity json from the database. |
+| request.isBatch             | Yes                               | Required for batch job              | It is a Boolean value(true/false). If it is **true** then it consider this call as a cancel appointment only otherwise it will considered as a normal notification call and validate appointment details.                                                                                       |
+
+#### Request Part Parameters
+
+| Name       | Required | Description                                    | Comment            |
+| ---------- | -------- | ---------------------------------------------- | ------------------ |
+| attachment | Yes      | pdf file of acknowledgment page                | 37802950913289.pdf |
+| langCode   | Yes      | language code whatever user choose while login | eng                |
+
+#### Request
+
+```
 {
   "id": "mosip.pre-registration.notification.notify",
   "version": "1.0",
@@ -3334,14 +3588,15 @@ langCode| Yes| language code whatever user choose while login|eng
 }
 ```
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Email and sms request successfully submitted
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.notification.notify",
   "version" : "1.0",
@@ -3353,12 +3608,13 @@ langCode| Yes| language code whatever user choose while login|eng
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: Mobile number or Email Id is missing
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.notification.notify",
   "version" : "1.0",
@@ -3373,51 +3629,59 @@ langCode| Yes| language code whatever user choose while login|eng
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
-PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
-PRG_PAM_CORE_003|Invalid request time |Empty Request time
-PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
-PRG_PAM_ACK_002|Mandatory fields are missing|If isBatch field is null
-PRG_PAM_ACK_008|Full name is not valid|If name field is invalid or empty 
-PRG_PAM_ACK_009|Appointment date is not valid|If appointmentDate field is invalid or empty 
-PRG_PAM_ACK_010|Appointment time is not valid|If appointmentTime field is invalid or empty 
-PRG_PAM_APP_005|No data found for the requested pre-registration id|If additionalRecipient is false and there will be no demographic data for requested pre-registration id
-PRG_CORE_REQ_013|Request date should be current date|If request date is other than current date
-PRG_PAM_ACK_006|Email is not valid|If additionalRecipient is true and email id pattern is invalid 
-PRG_PAM_ACK_007|Phone number is not valid|If additionalRecipient is true and phone number is invalid 
+#### Other Failure details
 
-# Transliteration Service (Public)
+| Error Code          | Error Message                                       | Error Description                                                                                       |
+| ------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| PRG\_PAM\_CORE\_001 | Request id is invalid                               | Invalid or empty Request Id                                                                             |
+| PRG\_PAM\_CORE\_002 | Request version is invalid                          | Invalid or empty Request version                                                                        |
+| PRG\_PAM\_CORE\_003 | Invalid request time                                | Empty Request time                                                                                      |
+| PRG\_CORE\_REQ\_013 | Request date should be current date                 | If request date is not current date                                                                     |
+| PRG\_PAM\_ACK\_002  | Mandatory fields are missing                        | If isBatch field is null                                                                                |
+| PRG\_PAM\_ACK\_008  | Full name is not valid                              | If name field is invalid or empty                                                                       |
+| PRG\_PAM\_ACK\_009  | Appointment date is not valid                       | If appointmentDate field is invalid or empty                                                            |
+| PRG\_PAM\_ACK\_010  | Appointment time is not valid                       | If appointmentTime field is invalid or empty                                                            |
+| PRG\_PAM\_APP\_005  | No data found for the requested pre-registration id | If additionalRecipient is false and there will be no demographic data for requested pre-registration id |
+| PRG\_CORE\_REQ\_013 | Request date should be current date                 | If request date is other than current date                                                              |
+| PRG\_PAM\_ACK\_006  | Email is not valid                                  | If additionalRecipient is true and email id pattern is invalid                                          |
+| PRG\_PAM\_ACK\_007  | Phone number is not valid                           | If additionalRecipient is true and phone number is invalid                                              |
+
+## Transliteration Service (Public)
+
 This service is used by Pre-Registration portal to transliterate given value from one language to another language. In this API transliteration is using IDB ICU4J library , so accuracy will be less.
-* [POST /transliteration/transliterate](#post-transliterationtransliterate)
 
-##  POST /transliteration/transliterate
-This request is used to transliterate from_Field_value to to_field_value based on given valid from_lang_code to to_lang_code.
+* [POST /transliteration/transliterate](Pre-Registration-APIs.md#post-transliterationtransliterate)
 
-### Resource URL
+### POST /transliteration/transliterate
+
+This request is used to transliterate from\_Field\_value to to\_field\_value based on given valid from\_lang\_code to to\_lang\_code.
+
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/transliteration/transliterate`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Example
------|----------|-------------|--------
-id |Yes|Id of the application|mosip.pre-registration.transliteration.transliterate
-version |Yes|version of the application|1.0
-requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
-request |Yes|Request for the application|
-request.from_field_lang|Yes|From language code|eng
-request.from_field_value |Yes|From field value |Kishan
-request.to_field_lang |Yes|To language code|ara
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Parameters
+
+| Name                       | Required | Description                     | Example                                              |
+| -------------------------- | -------- | ------------------------------- | ---------------------------------------------------- |
+| id                         | Yes      | Id of the application           | mosip.pre-registration.transliteration.transliterate |
+| version                    | Yes      | version of the application      | 1.0                                                  |
+| requesttime                | Yes      | Request time of the application | 2019-01-16T05:23:08.019Z                             |
+| request                    | Yes      | Request for the application     |                                                      |
+| request.from\_field\_lang  | Yes      | From language code              | eng                                                  |
+| request.from\_field\_value | Yes      | From field value                | Kishan                                               |
+| request.to\_field\_lang    | Yes      | To language code                | ara                                                  |
+
+#### Request
+
+```
 {
   "id": "mosip.pre-registration.transliteration.transliterate",
   "version": "1.0",
@@ -3429,14 +3693,16 @@ request.to_field_lang |Yes|To language code|ara
   }
 }
 ```
-### Responses
 
-#### Success Response
+#### Responses
+
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Given key is transliterated successfully
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.transliteration.transliterate",
   "version" : "1.0",
@@ -3451,11 +3717,13 @@ request.to_field_lang |Yes|To language code|ara
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
 **Description**: Failed to transliterate
-```JSON
+
+```
 {
   "id": "mosip.pre-registration.transliteration.transliterate",
   "version" : "1.0",
@@ -3470,43 +3738,51 @@ request.to_field_lang |Yes|To language code|ara
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
-PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
-PRG_PAM_CORE_003|Invalid request time |Empty Request time
-PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
-PRG_TRL_APP_008|Unsupported language|If langCode is other than ara,eng and fra
-PRG_TRL_APP_002|Incorrect mandatory Fields|If any of the request is null
+#### Other Failure details
 
-# Captcha Service (Public)
+| Error Code          | Error Message                       | Error Description                         |
+| ------------------- | ----------------------------------- | ----------------------------------------- |
+| PRG\_PAM\_CORE\_001 | Request id is invalid               | Invalid or empty Request Id               |
+| PRG\_PAM\_CORE\_002 | Request version is invalid          | Invalid or empty Request version          |
+| PRG\_PAM\_CORE\_003 | Invalid request time                | Empty Request time                        |
+| PRG\_CORE\_REQ\_013 | Request date should be current date | If request date is not current date       |
+| PRG\_TRL\_APP\_008  | Unsupported language                | If langCode is other than ara,eng and fra |
+| PRG\_TRL\_APP\_002  | Incorrect mandatory Fields          | If any of the request is null             |
+
+## Captcha Service (Public)
+
 This service is used in Pre-Registration portal to protects the website from spam and abuse. In this API we are google recaptcha V2 to authenticate.
-* [POST /captcha/validatecaptcha](#post-captchavalidatecaptcha)
 
-##  POST /captcha/validatecaptcha
+* [POST /captcha/validatecaptcha](Pre-Registration-APIs.md#post-captchavalidatecaptcha)
+
+### POST /captcha/validatecaptcha
+
 This request is used to validate the response from the google recaptcha v2 API used in the front end application.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/preregistration/v1/captcha/validatecaptcha`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | NO
+#### Resource details
 
-### Parameters
-Name | Required | Description | Example
------|----------|-------------|--------
-id |Yes|Id of the application|mosip.pre-registration.captcha.id.validate
-version |Yes|version of the application|1.0
-requesttime |Yes|Request time of the application|2019-01-16T05:23:08.019Z
-request |Yes|Request for the application|
-request.captcha_token|Yes|token
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | NO          |
 
-### Request
-```JSON
+#### Parameters
+
+| Name                   | Required | Description                     | Example                                    |
+| ---------------------- | -------- | ------------------------------- | ------------------------------------------ |
+| id                     | Yes      | Id of the application           | mosip.pre-registration.captcha.id.validate |
+| version                | Yes      | version of the application      | 1.0                                        |
+| requesttime            | Yes      | Request time of the application | 2019-01-16T05:23:08.019Z                   |
+| request                | Yes      | Request for the application     |                                            |
+| request.captcha\_token | Yes      | token                           |                                            |
+
+#### Request
+
+```
 {
   "id": "mosip.pre-registration.captcha.id.validate",
   "version": "1.0",
@@ -3517,14 +3793,15 @@ request.captcha_token|Yes|token
 }
 ```
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
+
 **Status code**: 200
 
 **Description**: Captcha successfully verified
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.captcha.id.validate",
   "version" : "1.0",
@@ -3537,12 +3814,13 @@ request.captcha_token|Yes|token
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Status code**: 200
 
-**Description**: Invalid Captcha 
+**Description**: Invalid Captcha
 
-```JSON
+```
 {
   "id": "mosip.pre-registration.captcha.id.validate",
   "version" : "1.0",
@@ -3557,20 +3835,21 @@ request.captcha_token|Yes|token
 }
 ```
 
-### Other Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_PAM_CORE_001|Request id is invalid|Invalid or empty Request Id
-PRG_PAM_CORE_002|Request version is invalid|Invalid or empty Request version
-PRG_PAM_CORE_003|Invalid request time |Empty Request time
-PRG_CORE_REQ_013|Request date should be current date|If request date is not current date
-PRG-PAM-006|Invalid request , Request can't be null or empty
+#### Other Failure details
 
-# Common Exception Details for all Preregistration API
-Error Code | Error Message | Error Description
------|----------|-------------
-PRG_CORE_REQ_015|Error message will come accordingly to the exception occurred|This error code  will occur for MethodArgumentNotValidException,HttpMessageNotReadableException
-PRG_CORE_REQ_016|Error message will come accordingly to the exception occurred|This error code  will occur for Exception,RuntimeException
-KER-ATH-402|Token expired|If the auth token got expired
-KER-ATH-401|Invalid Token|If the auth token is invalid
+| Error Code          | Error Message                                    | Error Description                   |
+| ------------------- | ------------------------------------------------ | ----------------------------------- |
+| PRG\_PAM\_CORE\_001 | Request id is invalid                            | Invalid or empty Request Id         |
+| PRG\_PAM\_CORE\_002 | Request version is invalid                       | Invalid or empty Request version    |
+| PRG\_PAM\_CORE\_003 | Invalid request time                             | Empty Request time                  |
+| PRG\_CORE\_REQ\_013 | Request date should be current date              | If request date is not current date |
+| PRG-PAM-006         | Invalid request , Request can't be null or empty |                                     |
 
+## Common Exception Details for all Preregistration API
+
+| Error Code          | Error Message                                                 | Error Description                                                                              |
+| ------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| PRG\_CORE\_REQ\_015 | Error message will come accordingly to the exception occurred | This error code will occur for MethodArgumentNotValidException,HttpMessageNotReadableException |
+| PRG\_CORE\_REQ\_016 | Error message will come accordingly to the exception occurred | This error code will occur for Exception,RuntimeException                                      |
+| KER-ATH-402         | Token expired                                                 | If the auth token got expired                                                                  |
+| KER-ATH-401         | Invalid Token                                                 | If the auth token is invalid                                                                   |

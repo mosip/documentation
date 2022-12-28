@@ -1,32 +1,41 @@
+# Admin APIs
+
 This documents provides details about the APIs used by Admin Module.
 
-# Packet Status Services
-[GET /packetstatusupdate](#get-packetstatusupdate)
+## Packet Status Services
 
-## GET /packetstatusupdate
+[GET /packetstatusupdate](Admin-APIs.md#get-packetstatusupdate)
+
+### GET /packetstatusupdate
+
 The user can get status of the UIN.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/v1/admin/packetstatusupdate?rid={rid}`
 
-### Resource Details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource Details
 
-### Request Part Parameters
-Name | Required | Description   |  Example
------|----------|---------------|--------
-rid | Yes |rid of the user | 10008100670000220191226111423
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
+#### Request Part Parameters
+
+| Name | Required | Description     | Example                       |
+| ---- | -------- | --------------- | ----------------------------- |
+| rid  | Yes      | rid of the user | 10008100670000220191226111423 |
+
+#### Request
+
 `https://mosip.io/v1/admin/packetstatusupdate?rid=10008100670000220191226111423`
 
-### Responses
+#### Responses
 
-#### Success Response
-```JSON
+**Success Response**
+
+```
 {
   "id": null,
   "version": null,
@@ -85,7 +94,8 @@ rid | Yes |rid of the user | 10008100670000220191226111423
 }
 ```
 
-#### Error Response
+**Error Response**
+
 ```
 {
   "id": "string",
@@ -100,145 +110,159 @@ rid | Yes |rid of the user | 10008100670000220191226111423
   ],
  "response": null
 }
-
 ```
 
-#### Failure Details
-Error Code  | Error Message | Error Description
-------------|---------------|-------------
-ADM-PKT-001 |Admin is not authorized |
-ADM-PKT-002 |RID is invalid | If RID is invalid
-ADM-PKT-003 |Center does not exist | If Center ID extracted from RID does not exist
-ADM-PKT-004 |RID is miss | If RID is missing in the Input
-ADM-PKT-005 |Error occurred while fetch Packet Status | If any system error occurs while fetching Packet Status
+**Failure Details**
 
+| Error Code  | Error Message                            | Error Description                                       |
+| ----------- | ---------------------------------------- | ------------------------------------------------------- |
+| ADM-PKT-001 | Admin is not authorized                  |                                                         |
+| ADM-PKT-002 | RID is invalid                           | If RID is invalid                                       |
+| ADM-PKT-003 | Center does not exist                    | If Center ID extracted from RID does not exist          |
+| ADM-PKT-004 | RID is miss                              | If RID is missing in the Input                          |
+| ADM-PKT-005 | Error occurred while fetch Packet Status | If any system error occurs while fetching Packet Status |
 
-# Bulk Upload
+## Bulk Upload
+
 * POST /bulkupload
 * GET /bulkupload/getAllTransactions
 * GET /bulkupload/transaction/{transactionId}
 
-## POST /bulkupload
+### POST /bulkupload
+
 The user can perform bulk upload of master data and tables.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/v1/admin/bulkupload`
 
-### Resource Details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource Details
 
-### Request Part Parameters
-Name | Required | Description   |  Example
------|----------|---------------|--------
-category | Yes |  | 
-files | Yes |  | 
-operation | Yes |  | 
-tableName | Yes |  | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Part Parameters
 
-```
-### Responses
+| Name      | Required | Description | Example |
+| --------- | -------- | ----------- | ------- |
+| category  | Yes      |             |         |
+| files     | Yes      |             |         |
+| operation | Yes      |             |         |
+| tableName | Yes      |             |         |
 
-#### Success Resposne
-```JSON
+#### Request
 
 ```
-
-#### Failure Response
-```JSON
-
 ```
 
-### Failure Details
-Error Code  | Error Message | Error Description
-------------|---------------|-------------
-ADM-PKT-001 |Admin is not authorized |
+#### Responses
 
+**Success Resposne**
 
-## GET /bulkupload/getAllTransactions
+```
+```
+
+**Failure Response**
+
+```
+```
+
+#### Failure Details
+
+| Error Code  | Error Message           | Error Description |
+| ----------- | ----------------------- | ----------------- |
+| ADM-PKT-001 | Admin is not authorized |                   |
+
+### GET /bulkupload/getAllTransactions
+
 The user can fetch all the transaction which were used for bulkupload.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/v1/admin/bulkupload/getAllTransactions?category=masterdata&orderBy=desc&pageNumber=0&pageSize=10&sortBy=createdDateTime`
 
-### Resource Details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource Details
 
-### Request Query Parameters
-Name | Required | Description   |  Example
------|----------|---------------|--------
-category | Yes |  | 
-orderBy | Yes |  | 
-pageNumber | Yes |  | 
-pageSize | Yes |  |
-sortBy | Yes |  
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Query Parameters
 
-```
+| Name       | Required | Description | Example |
+| ---------- | -------- | ----------- | ------- |
+| category   | Yes      |             |         |
+| orderBy    | Yes      |             |         |
+| pageNumber | Yes      |             |         |
+| pageSize   | Yes      |             |         |
+| sortBy     | Yes      |             |         |
 
-### Responses
-
-#### Success Resposne
-```JSON
+#### Request
 
 ```
-
-#### Failure Response
-```JSON
-
 ```
 
-### Failure Reason
-Error Code  | Error Message | Error Description
-------------|---------------|-------------
-ADM-PKT-001 | Admin is not authorized |
+#### Responses
 
+**Success Resposne**
 
-## GET /bulkupload/transaction
+```
+```
+
+**Failure Response**
+
+```
+```
+
+#### Failure Reason
+
+| Error Code  | Error Message           | Error Description |
+| ----------- | ----------------------- | ----------------- |
+| ADM-PKT-001 | Admin is not authorized |                   |
+
+### GET /bulkupload/transaction
+
 The user can fetch a transaction which was used for bulkupload using the transaction id.
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/v1/admin/bulkupload/transcation/{transcationId}`
 
-### Resource Details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource Details
 
-### Request Query Parameters
-Name | Required | Description   |  Example
------|----------|---------------|--------
-category | Yes |  |  
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Query Parameters
 
-```
+| Name     | Required | Description | Example |
+| -------- | -------- | ----------- | ------- |
+| category | Yes      |             |         |
 
-### Responses
-
-#### Success Resposne
-```JSON
+#### Request
 
 ```
-
-#### Failure Response
-```JSON
-
 ```
 
-### Failure Reason
-Error Code  | Error Message | Error Description
-------------|---------------|-------------
-ADM-PKT-001 | Admin is not authorized |
+#### Responses
+
+**Success Resposne**
+
+```
+```
+
+**Failure Response**
+
+```
+```
+
+#### Failure Reason
+
+| Error Code  | Error Message           | Error Description |
+| ----------- | ----------------------- | ----------------- |
+| ADM-PKT-001 | Admin is not authorized |                   |

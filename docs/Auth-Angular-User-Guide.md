@@ -1,4 +1,4 @@
-# Guidelines
+# Auth Angular User Guide
 
 Guidelines to implement Authorization and Authentication techniques in the Angular application are detailed in this document.
 
@@ -7,9 +7,9 @@ Before going in to the components let us discuss the following flows of Authoriz
 ### Authentication flow:
 
 1. Initially a login request is made passing user credentials to a REST API as specified in the SPECS of that API.
-2. In the response of a successful authentication you will receive user details and an auth_token as the value of the header **"Authorization"**.
-3. Now the received auth token has to be stored and re-used. For example let us use sessionStorage to store the auth_token under the key "TOKEN".
-4. Now any kind of HTTP/HTTPS requests we make from the application has to be sent by adding a header **"Authorization"** and value of auth_token stored in sessionStorage with key by name "Token" for the purpose of authentication.
+2. In the response of a successful authentication you will receive user details and an auth\_token as the value of the header **"Authorization"**.
+3. Now the received auth token has to be stored and re-used. For example let us use sessionStorage to store the auth\_token under the key "TOKEN".
+4. Now any kind of HTTP/HTTPS requests we make from the application has to be sent by adding a header **"Authorization"** and value of auth\_token stored in sessionStorage with key by name "Token" for the purpose of authentication.
 5. If the response comes back with a new token which might be because of previous token getting expired or refresh token mechanisms that happen in the backend, we need to replace the old token with the new one in the session storage.
 
 ### Authorization flow:
@@ -31,7 +31,7 @@ Tasks to be implemented in a Client/UI Http interceptor are:
 
 Below code implements the requirements mentioned above:
 
-```JS
+```
 import { Injectable } from '@angular/core';
 import { HttpInterceptor, HttpRequest, HttpHandler, HttpResponse, HttpEvent, HttpEventType } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -74,7 +74,7 @@ Role of the Roles directive is to fetch roles from UserDetails stored in the ses
 
 Below code implements the requirements mentioned above:
 
-```JS
+```
 import { Directive, TemplateRef, ViewContainerRef, Input, ElementRef } from '@angular/core';
 
 @Directive({
@@ -101,12 +101,11 @@ export class RoleDirective {
     }
   }
 }
-
 ```
 
 Now inject the above interceptor and directive in the app.module.ts as follows
 
-```JS
+```
 @NgModule({
   declarations: [ RoleDirective, ...],
   imports: [...],
@@ -121,10 +120,10 @@ Now inject the above interceptor and directive in the app.module.ts as follows
 
 To activate/deactivate => show/hide element all we need to do is add the appRole attribute to the HTML element as shown below:
 
-```HTML
+```
 <button class="btn btn-success" appRole="DIVISION_ADMIN,SUPERVISOR">Add</button>
 ```
 
-In the above sample, the add button will only be visible for users with DIVISION_ADMIN or SUPERVISOR role.
+In the above sample, the add button will only be visible for users with DIVISION\_ADMIN or SUPERVISOR role.
 
 **Note:** Above mentioned code snippets are not the final implementations. Based on the API spec's and few other factors the method implementations might change a bit. But the component structures remain the same.

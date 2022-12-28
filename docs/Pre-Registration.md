@@ -19,7 +19,7 @@ For detailed functionality of Pre-registration features please view our page, [P
 
 Process flow diagram for create and update flows in Pre-registration.
 
-![](\_images/arch\_diagrams/pre\_registration\_process\_flow-create\_or\_update\_applications.png)
+![](<\_images/pre\_registration/pre\_registration\_process\_flow-create\_or\_update\_applications (1) (1).png>)
 
 Process flow diagram for cancel and discard flows in Pre-registration.
 
@@ -35,7 +35,7 @@ For high level and low level design refer to [pre-registration repo/design](http
 
 Below is the diagram depicts the logical architecture of Pre-registration,
 
-![](\_images/arch\_diagrams/pre\_registration-logic\_architecture\_diagram.png)
+![](<\_images/pre\_registration/pre\_registration-logic\_architecture\_diagram (1) (1).png>)
 
 ## Build and deploy
 
