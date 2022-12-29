@@ -1,23 +1,20 @@
-# RELYING PARTIES INTEGRATION GUIDE
+# Relying Party Integration
 
 ## Overview
 
+1.  How do i register as replying party in the Sandbox?
 
+    a. Get registered with MOSIP [Partner Management System](https://docs.mosip.io/1.2.0/modules/partner-management-services).
 
+    b. Login into Partner management system.
 
-1.	How to register OIDC with IDP?
-
-	a. Get registered with MOSIP [Partner Management System](https://docs.mosip.io/1.2.0/modules/partner-management-services).
-  
-	b. Login into Partner management system.
-  
-	c. Trigger flowing APIs to register a OIDC client app to IDP
+    c. Trigger flowing APIs to register a OIDC client app to IDP
 
 ### Create OIDC API Endpoint
 
 POST https://dev.mosip.net/v1/idp/client-mgmt/oidc-client
 
-```jsonc
+```
 REQUEST BODY (application/json)
 {
 	"requestTime": "2011-10-05T14:48:00.000Z",
@@ -43,7 +40,7 @@ REQUEST BODY (application/json)
 }
 ```
 
-```jsonc
+```
 RESPONSE BODY (application/json)
 
 {
@@ -60,17 +57,13 @@ RESPONSE BODY (application/json)
 }
 ```
 
+d. To update OIDC client details trigger below api
 
+• Update OIDC API Endpoint
 
+PUT https://dev.mosip.net/v1/idp/client-mgmt/oidc-client/{client\_id}
 
-
-d.	To update OIDC client details trigger below api
-
-•	Update OIDC API Endpoint
-
-PUT https://dev.mosip.net/v1/idp/client-mgmt/oidc-client/{client_id}
-
-```jsonc
+```
 REQUEST BODY (application/json)
 
 {
@@ -98,7 +91,7 @@ REQUEST BODY (application/json)
 }
 ```
 
-```jsonc
+```
 RESPONSE BODY (application/json)
 
 {
@@ -115,75 +108,69 @@ RESPONSE BODY (application/json)
 }
 ```
 
+1. How to integrate OIDC with IDP? Step 1 : Create a button on your OIDC app (i.e, Login with MOSIP), which will navigate the user to IDP-UI for authentication and consent capture.
 
-2.	How to integrate OIDC with IDP?
-	Step 1 : Create a button on your OIDC app (i.e, Login with MOSIP), which will navigate the user to IDP-UI for authentication and consent capture.
+• OIDC Authorization endpoint GET https://dev.mosip.net/v1/idp/authorize should be the redirect URI for the button with the following query parameters
 
-•	OIDC Authorization endpoint
-	GET https://dev.mosip.net/v1/idp/authorize should be the redirect URI for the button
-with the following query parameters
+• client\_id\*: string
 
-•	client_id*: string
+• redirect\_uri\*: string
 
-•	redirect_uri*: string
+• response\_type\*: code
 
-•	response_type*: code
+• scope\*: openid profile (Options - openid, profile, email, address, phone, offline\_access)
 
-•	scope*: openid profile (Options - openid, profile, email, address, phone, offline_access)
+• acr\_values: string
 
-•	acr_values: string
+• claims: string
 
-•	claims: string
+• claims\_locales: string
 
-•	claims_locales: string
+• display: page (Options - page, popup, touch, wap)
 
-•	display: page (Options - page, popup, touch, wap)
+• max\_age: number
 
-•	max_age: number
+• nonce: string
 
-•	nonce: string
+• prompt: none (Options - none, login, consent, select\_account)
 
-•	prompt: none (Options - none, login, consent, select_account)
+• state: string
 
-•	state: string
+• ui\_locales: string
 
-•	ui_locales: string	
-	
-	  Step2. Create a web page where user will be redirect to after login in and accepting the claims.
-	The URL of this page should be passed as a query parameter in the authorize api mentioned above.
-	The user will be redirect to this URL with the below query parameters.
-	a. General parameters
-◦	nonce: string
-◦	state: string
-◦	
-	b. On successfull transaction
-•	code: string
+```
+  Step2. Create a web page where user will be redirect to after login in and accepting the claims.
+The URL of this page should be passed as a query parameter in the authorize api mentioned above.
+The user will be redirect to this URL with the below query parameters.
+a. General parameters
+```
 
-	c. On transaction failure
-•	error: string
-•	error_description: string
-	
-	The webpage should handle the below cases.
+◦ nonce: string ◦ state: string ◦ b. On successfull transaction • code: string
 
-1.	On a succesful transaction, the webpage will receive “code” query parameter which is authcode.
-•	OIDC client app should trigger token API (mentioned below), with the “code” received in the query parameter, to fetch auth token from IDP service.
-•	Once received, OIDC client app should then use the token in userInfo API endpoint (mentioned below), to fetch user information.
-2.	On failure, the webpage will receive “error” and “error_description”(optional) query parameter. The OIDC client can define its behaviour for failure case.
+```
+c. On transaction failure
+```
 
-•	Token API Endpoint
+• error: string • error\_description: string
 
-	POST https://dev.mosip.net/v1/idp/oauth/token
+```
+The webpage should handle the below cases.
+```
+
+1. On a succesful transaction, the webpage will receive “code” query parameter which is authcode. • OIDC client app should trigger token API (mentioned below), with the “code” received in the query parameter, to fetch auth token from IDP service. • Once received, OIDC client app should then use the token in userInfo API endpoint (mentioned below), to fetch user information.
+2. On failure, the webpage will receive “error” and “error\_description”(optional) query parameter. The OIDC client can define its behaviour for failure case.
+
+• Token API Endpoint
+
+```
+POST https://dev.mosip.net/v1/idp/oauth/token
+```
 
 REQUEST BODY (application/x-www-form-urlencoded)
 
-•	grant_type*: authorization_code
-•	code*: string
-•	client_id*: string
-•	client_assertion_type*: urn:ietf:params:oauth:client-assertion-type:jwt-bearer
-•	client_assertion*: string
-•	redirect_uri*: string
+• grant\_type\*: authorization\_code • code\*: string • client\_id\*: string • client\_assertion\_type\*: urn:ietf:params:oauth:client-assertion-type:jwt-bearer • client\_assertion\*: string • redirect\_uri\*: string
 
-```jsonc
+```
 RESPONSE BODY(application/json)
 {
 	"id_token": "string",
@@ -193,18 +180,18 @@ RESPONSE BODY(application/json)
 }
 ```
 
-•	UserInfo API Endpoint
+• UserInfo API Endpoint
 
-	GET https://dev.mosip.net/v1/idp/oidc/userinfo
+```
+GET https://dev.mosip.net/v1/idp/oidc/userinfo
+```
 
-REQUEST HEADER
-	Authorization: string
+REQUEST HEADER Authorization: string
 
-Note: Bearer <access token as received in token endpoint response>
+Note: Bearer
 
-RESPONSE BODY (application/jwt)
-	string<jwt>
-	
+RESPONSE BODY (application/jwt) string
+
 Note : The response is signed and then encrypted, with the result being a Nested JWT. Signed using IDA server's private key. Signed full JWT will then be encrypted using OIDC client's public key.
 
-3.	Work flow diagram.
+1. Work flow diagram.
