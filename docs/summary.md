@@ -1,7 +1,7 @@
 # Table of contents
 
 * [e-Signet](README.md)
-* [Architecture Overview](architecture/README.md)
+* [Architecture Overview](architecture.md)
   * [Componets](architecture/componets.md)
   * [Open ID](architecture/open-id.md)
 * [Versions](versions.md)
