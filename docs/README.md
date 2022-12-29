@@ -38,5 +38,5 @@ There are multiple benefits of using e-Signet for the residents, government as w
 
 **e-Signet**, which is [OpenID Connect](https://openid.net/connect/) and [OAuth 2.0](https://oauth.net/2/) compliant system and can be used by a relying party to perform quick and simple integration for user verification.
 
-**e-Signet**, also uses \[SBI]\(TODO: add the link to the spec and also ieee) to enable an ecossytem of biomertic players. Look at the supported devices here \[TODO: add the list of supported device link]
+**e-Signet**, also uses \[SBI]\(TODO: add the link to the spec and also ieee) to enable an ecossytem of biometric players. Look at the supported devices here \[TODO: add the list of supported device link]
 
