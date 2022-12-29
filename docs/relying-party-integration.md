@@ -53,5 +53,3 @@ Using the access token you can call the user info endpoint to get the user infor
 {% hint style="info" %}
 The response is signed and then encrypted, with the result being a nested JWT. Signed using the authentication system's private key. Signed full JWT will then be encrypted using the OIDC client's public key.
 {% endhint %}
-
-Note :&#x20;
