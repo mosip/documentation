@@ -2,17 +2,26 @@
 
 ## Build
 
-Location of the repo
+### Repositories
 
-Prerequisite&#x20;
+* [Service](https://github.com/mosip/idp/tree/develop)
+* [UI](https://github.com/mosip/idp-ui/tree/develop)
 
-Command to build
+### Prerequisite
 
-Published artifacts
 
-Can i use the dockers directly?
 
-How can i run in my development machine?
+### Command to build
+
+
+
+### Published artifacts
+
+
+
+Can I use the dockers directly?
+
+How can I run it on my development machine?
 
 ## Deployment
 
