@@ -2,196 +2,56 @@
 
 ## Overview
 
-1.  How do i register as replying party in the Sandbox?
+To be added by Anusha
 
-    a. Get registered with MOSIP [Partner Management System](https://docs.mosip.io/1.2.0/modules/partner-management-services).
+## Pre-requisites
 
-    b. Login into Partner management system.
+Connect with an Authentication Partner who is using the e-Signet solution for onboarding relying parties. As part of this activity, you should receive the environment details and a client ID.
 
-    c. Trigger flowing APIs to register a OIDC client app to IDP
+## Integration Steps
 
-### Create OIDC API Endpoint
+### Configuring the redirect URI
 
-POST https://dev.mosip.net/v1/idp/client-mgmt/oidc-client
+Create a webpage where the user would be redirected after authentication is successful and consent is provided. The URL of this page should be shared as a query parameter as part of the Authorization Endpoint.
 
-```
-REQUEST BODY (application/json)
-{
-	"requestTime": "2011-10-05T14:48:00.000Z",
-	"request": {
-		"clientId": "e-health-service",
-		"clientName": "Health Service",
-		"relyingPartyId": "bharath-gov",
-		"logoUri": "http://example.com",
-		"publicKey": {},
-		"authContextRefs": [
-			"mosip:idp:acr:static-code"
-		],
-		"userClaims": [
-			"name"
-		],
-		"grantTypes": [
-			"authorization_code"
-		],
-		"clientAuthMethods": [
-			"private_key_jwt"
-		]
-	}
-}
-```
+{% hint style="info" %}
+Please make sure that the redirect URI is also shared with the Authentication Partner to configure the same in the e-Signet server.
+{% endhint %}
 
-```
-RESPONSE BODY (application/json)
+### Add a button on your login screen
 
-{
-	"responseTime": "string",
-	"response": {
-		"clientId": "string"
-	},
-	"errors": [
-		{
-			"errorCode": "duplicate_client_id",
-			"errorMessage": "string"
-		}
-	]
-}
-```
+Add a button on your website (i.e, Log in with Signet), which should call the authorization endpoint and navigate the user to the e-Signet UI screen for authentication and consent capture.
 
-d. To update OIDC client details trigger below api
+{% swagger src=".gitbook/assets/Identity-Provider.yml" path="/authorize" method="get" %}
+[Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
+{% endswagger %}
 
-• Update OIDC API Endpoint
+After the authorization endpoint is called, the e-Signet server validates the request and redirects the user to the authentication screen.
 
-PUT https://dev.mosip.net/v1/idp/client-mgmt/oidc-client/{client\_id}
+### Handling authentication success and failure scenarios
 
-```
-REQUEST BODY (application/json)
+After the authentication is performed successfully, the webpage will receive a "code" in the query parameter which is the "authorization code" to call the token API to get the ID and Access tokens.
 
-{
-	"requestTime": "2022-09-22T08:03:45.000Z",
-	"request": {
-		"clientName": "Health Service",
-		"status": "active",
-		"logoUri": "http://example.com",
-		"redirectUris": [
-			"http://example.com"
-		],
-		"userClaims": [
-			"name"
-		],
-		"authContextRefs": [
-			"mosip:idp:acr:static-code"
-		],
-		"grantTypes": [
-			"authorization_code"
-		],
-		"clientAuthMethods": [
-			"private_key_jwt"
-		]
-	}
-}
-```
+In case of failure, the redirect URI webpage would receive an "error" and "error description" in the query parameter. The OIDC client can also define its behaviour in case of failure.
 
-```
-RESPONSE BODY (application/json)
+### Retrieving ID and access tokens
 
-{
-	"responseTime": "string",
-	"response": {
-		"clientId": "string"
-	},
-	"errors": [
-		{
-			"errorCode": "invalid_client_id",
-			"errorMessage": "string"
-		}
-	]
-}
-```
+Once the authentication code is received, you can now call the token endpoint to get the ID and Access tokens.
 
-1. How to integrate OIDC with IDP? Step 1 : Create a button on your OIDC app (i.e, Login with MOSIP), which will navigate the user to IDP-UI for authentication and consent capture.
+{% swagger src=".gitbook/assets/Identity-Provider.yml" path="/oauth/token" method="post" %}
+[Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
+{% endswagger %}
 
-• OIDC Authorization endpoint GET https://dev.mosip.net/v1/idp/authorize should be the redirect URI for the button with the following query parameters
+### Retrieving user info
 
-• client\_id\*: string
+Using the access token you can call the user info endpoint to get the user information as an encrypted JWT.
 
-• redirect\_uri\*: string
+{% swagger src=".gitbook/assets/Identity-Provider.yml" path="/oidc/userinfo" method="get" %}
+[Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
+{% endswagger %}
 
-• response\_type\*: code
+{% hint style="info" %}
+The response is signed and then encrypted, with the result being a nested JWT. Signed using the authentication system's private key. Signed full JWT will then be encrypted using the OIDC client's public key.
+{% endhint %}
 
-• scope\*: openid profile (Options - openid, profile, email, address, phone, offline\_access)
-
-• acr\_values: string
-
-• claims: string
-
-• claims\_locales: string
-
-• display: page (Options - page, popup, touch, wap)
-
-• max\_age: number
-
-• nonce: string
-
-• prompt: none (Options - none, login, consent, select\_account)
-
-• state: string
-
-• ui\_locales: string
-
-```
-  Step2. Create a web page where user will be redirect to after login in and accepting the claims.
-The URL of this page should be passed as a query parameter in the authorize api mentioned above.
-The user will be redirect to this URL with the below query parameters.
-a. General parameters
-```
-
-◦ nonce: string ◦ state: string ◦ b. On successfull transaction • code: string
-
-```
-c. On transaction failure
-```
-
-• error: string • error\_description: string
-
-```
-The webpage should handle the below cases.
-```
-
-1. On a succesful transaction, the webpage will receive “code” query parameter which is authcode. • OIDC client app should trigger token API (mentioned below), with the “code” received in the query parameter, to fetch auth token from IDP service. • Once received, OIDC client app should then use the token in userInfo API endpoint (mentioned below), to fetch user information.
-2. On failure, the webpage will receive “error” and “error\_description”(optional) query parameter. The OIDC client can define its behaviour for failure case.
-
-• Token API Endpoint
-
-```
-POST https://dev.mosip.net/v1/idp/oauth/token
-```
-
-REQUEST BODY (application/x-www-form-urlencoded)
-
-• grant\_type\*: authorization\_code • code\*: string • client\_id\*: string • client\_assertion\_type\*: urn:ietf:params:oauth:client-assertion-type:jwt-bearer • client\_assertion\*: string • redirect\_uri\*: string
-
-```
-RESPONSE BODY(application/json)
-{
-	"id_token": "string",
-	"access_token": "string",
-	"token_type": "Bearer",
-	"expires_in": 0
-}
-```
-
-• UserInfo API Endpoint
-
-```
-GET https://dev.mosip.net/v1/idp/oidc/userinfo
-```
-
-REQUEST HEADER Authorization: string
-
-Note: Bearer
-
-RESPONSE BODY (application/jwt) string
-
-Note : The response is signed and then encrypted, with the result being a Nested JWT. Signed using IDA server's private key. Signed full JWT will then be encrypted using OIDC client's public key.
-
-1. Work flow diagram.
+Note :&#x20;
