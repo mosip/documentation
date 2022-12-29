@@ -43,6 +43,7 @@ REQUEST BODY (application/json)
 }
 ```
 
+```jsonc
 RESPONSE BODY (application/json)
 
 {
@@ -57,7 +58,7 @@ RESPONSE BODY (application/json)
 		}
 	]
 }
-
+```
 
 
 
@@ -69,6 +70,7 @@ d.	To update OIDC client details trigger below api
 
 PUT https://dev.mosip.net/v1/idp/client-mgmt/oidc-client/{client_id}
 
+```jsonc
 REQUEST BODY (application/json)
 
 {
@@ -94,7 +96,9 @@ REQUEST BODY (application/json)
 		]
 	}
 }
+```
 
+```jsonc
 RESPONSE BODY (application/json)
 
 {
@@ -109,28 +113,40 @@ RESPONSE BODY (application/json)
 		}
 	]
 }
-
+```
 
 
 2.	How to integrate OIDC with IDP?
-	Step1. Create a button on your OIDC app (i.e, Login with MOSIP), which will navigate the user to IDP-UI for authentication and consent capture.
+	Step 1 : Create a button on your OIDC app (i.e, Login with MOSIP), which will navigate the user to IDP-UI for authentication and consent capture.
 
 •	OIDC Authorization endpoint
 	GET https://dev.mosip.net/v1/idp/authorize should be the redirect URI for the button
 with the following query parameters
 
 •	client_id*: string
+
 •	redirect_uri*: string
+
 •	response_type*: code
+
 •	scope*: openid profile (Options - openid, profile, email, address, phone, offline_access)
+
 •	acr_values: string
+
 •	claims: string
+
 •	claims_locales: string
+
 •	display: page (Options - page, popup, touch, wap)
+
 •	max_age: number
+
 •	nonce: string
+
 •	prompt: none (Options - none, login, consent, select_account)
+
 •	state: string
+
 •	ui_locales: string	
 	
 	  Step2. Create a web page where user will be redirect to after login in and accepting the claims.
@@ -167,6 +183,7 @@ REQUEST BODY (application/x-www-form-urlencoded)
 •	client_assertion*: string
 •	redirect_uri*: string
 
+```jsonc
 RESPONSE BODY(application/json)
 {
 	"id_token": "string",
@@ -174,7 +191,7 @@ RESPONSE BODY(application/json)
 	"token_type": "Bearer",
 	"expires_in": 0
 }
-
+```
 
 •	UserInfo API Endpoint
 
