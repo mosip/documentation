@@ -4,7 +4,7 @@
 
 Connect with an Authentication Partner who is using the e-Signet solution for onboarding relying parties. As part of this activity, you should receive the environment details and a client ID.
 
-You can use our sandbox environment to integrate as well. For more details visit our page on [Sandbox Details](sandbox-details/).
+You can use our sandbox environment to integrate as well. For more details visit our page on [Sandbox Details](sandbox-details.md).
 
 ## Integration Steps
 
