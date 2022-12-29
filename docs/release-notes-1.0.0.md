@@ -1,6 +1,6 @@
-# Version 1.0.0
+# Version 0.0.9
 
-**Release Name**: IdP 1.0.0 (Beta)
+**Release Name**: e-Signet 0.0.9 (Beta)
 
 **Upgrade From**: NA (First Release)
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-The 1.0.0 version of Identity Provider is the first beta release which covers the essential features such as Login with OTP and Login with Biometrics. The subsequent releases will have more features and integration with digital wallet solutions.
+The 0.0.9 version of e-Signet is the first beta release which covers essential features such as Login with OTP and Login with biometrics. The subsequent releases will have more features and integration with digital wallet solutions.
 
 ## Features Covered
 

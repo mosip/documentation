@@ -5,7 +5,7 @@
   * [Componets](architecture/componets.md)
   * [Open ID](architecture/open-id.md)
 * [Versions](versions.md)
-  * [Version 1.0.0](release-notes-1.0.0.md)
+  * [Version 0.0.9](release-notes-1.0.0.md)
     * [Test Report](test-report-1.0.0.md)
 * [Integration Guides](integration-guides/README.md)
   * [Relying Party Integration](relying-party-integration.md)
