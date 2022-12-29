@@ -10,7 +10,6 @@
 * [Versions](versions.md)
   * [Version 0.0.9](release-notes-1.0.0.md)
     * [Test Report](test-report-1.0.0.md)
-  * [Relying Party Integration (MOSIP)](versions/relying-party-integration-mosip.md)
 * [Integration Guides](integration-guides/README.md)
   * [Identity Provider](integration-guides/identity-provider.md)
   * [Authentication System Integration](integration-guides/authentication-system-integration.md)
