@@ -7,7 +7,7 @@
 
 1.	How to register OIDC with IDP?
 
-	a. Get registered with MOSIP partner mangement system.
+	a. Get registered with MOSIP [Partner Management System](https://docs.mosip.io/1.2.0/modules/partner-management-services).
   
 	b. Login into Partner management system.
   
