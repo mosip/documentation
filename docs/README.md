@@ -5,7 +5,7 @@ In today's world, access to information enables us with better quality of living
 ![](.gitbook/assets/e-signet-qr.jpg)![](.gitbook/assets/e-signet-bio.jpg)
 
 * **Assisted model** - Where an assistant lends his system or uses it on behalf of the user. In this model, it is important not to use a password for user verification.
-  * Biometric verification - Password less and making verification equitable for everyone. Biometric capture is based on \[<mark style="color:red;">SBI</mark>]\(TODO: Provide the link here). This specification allows a general purpose biometric device (of course compliant to the specification) to capture any ones biometric and verify them. This allows the usage of biometrics beyond the personal device.&#x20;
+  * Biometric verification - Password less and making verification equitable for everyone. Biometric capture is based on \[<mark style="color:red;">SBI</mark>]\(https://docs.mosip.io/1.2.0/biometrics/secure-biometric-interface). This specification allows a general purpose biometric device (of course compliant to the specification) to capture any ones biometric and verify them. This allows the usage of biometrics beyond the personal device.&#x20;
   * OTP - Password less but will need access to ones phone. Biometric in rare cases can  reject a valid user. Our OTP solution bridges the divide in these scenarios.&#x20;
 * **Self Authentication** - Where an user can verify themselves. This is a well known model and has been in use over the internet.&#x20;
   * QR Code - Using a selfie image in a smart phone, you can authenticate locally to your phone and use the enrolled private key to release a authentication token. This mode allows the usage of a personal smart phone as an authenticator.&#x20;
