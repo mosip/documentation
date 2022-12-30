@@ -1,8 +1,15 @@
 # Relying Party Integration
 
+The relying party is an `OAuth` client which requires to authenticate the user and get user claims from IdP.
+For example, in MOSIP, the auth-partner is considered as a relying party. A partner may register one or more than one OIDC clients with an unique public-key.
+Auth policy mapped to auth partner must provision the below `allowedAuthTypes`.
+* kycauth
+* kycexchange
+* otp-request
+
 ## Pre-requisites
 
-Connect with an Authentication Partner who is using the e-Signet solution for onboarding relying parties. As part of this activity, you should receive the environment details and a client ID.
+Connect with an Authentication Partner who is using the e-Signet solution for onboarding relying parties. As a part of this activity, you should receive the environment details and a client ID.
 
 You can use our sandbox environment to integrate as well. For more details visit our page on [Sandbox Details](sandbox-details/).
 
