@@ -1,6 +1,6 @@
-# Version 0.0.9
+# Version 0.9.0
 
-**Release Name**: e-Signet 0.0.9 (Beta)
+**Release Name**: e-Signet 0.9.0 (Beta)
 
 **Upgrade From**: NA (First Release)
 
