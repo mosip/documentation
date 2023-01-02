@@ -91,7 +91,7 @@ public interface AuthenticationWrapper {
 ```
 
 
-Authentication wrapper implementation class must be annotated with ConditionalOnProperty based on "mosip.idp.authn.wrapper.impl" property;
+Authentication wrapper implementation class must be annotated with ConditionalOnProperty based on "mosip.idp.authn.wrapper.impl" property as below:
 
 ```
 @ConditionalOnProperty(value = "mosip.idp.authn.wrapper.impl", havingValue = "mock-authentication-service")
@@ -104,7 +104,10 @@ public class MockAuthenticationService implements AuthenticationWrapper {
 
 # Plan
 
-Case 1: Authentication system has single endpoint ( authenticate and returns kyc )
-case 2: Authentication system has endpoint only to authenticate.
+    ## Case 1: 
+        Authentication system has single endpoint ( authenticate and returns kyc )
+        
+    ## case 2: 
+        Authentication system has endpoint only to authenticate.
 
 
