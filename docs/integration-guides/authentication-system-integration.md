@@ -7,9 +7,6 @@ System to authenticate an individual and provide consented details of the authen
 1. kyc-auth: Authenticate the end user and return a kyc-token
 
 ```mermaid
-```
-
-```mermaid
 sequenceDiagram
     autonumber
     actor Individual
