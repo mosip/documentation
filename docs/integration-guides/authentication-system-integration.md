@@ -1,6 +1,43 @@
 # Authentication System Integration
 
-The Identity Provider must implement the below Authentication Wrapper interface.
+#Overview
+
+System to authenticate an individual and provide consented details of the authenticated individual. Adhering to this principle we have the integration with authentication system divided into 2 APIs:
+
+1. kyc-auth : Authenticate enduser and return kyc-token
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Individual
+    Individual->>+IdP: Credentials
+    rect rgb(0,0,128)
+    IdP->>IDA: Credentials
+    IDA->>IdP: kyc-token
+    end
+    IdP-->>-Individual: Success
+    Individual->>+IdP: Consent
+    Note over IdP: Store consent
+    IdP->>-Individual: Success
+    Note left of IdP:Redirect to client portal with auth-code
+```
+2. kyc-exchange: Exchange kyc-token for the user KYC
+```mermaid
+sequenceDiagram
+    autonumber
+    OIDC Client->>+IdP: auth-code
+    rect rgb(0,0,128)
+    IdP->>IDA: Consent & kyc-token
+    IDA->>IdP: KYC (JWT/JWE)
+    end
+    Note over IdP: Store KYC
+    IdP-->>-OIDC Client: id-token & access-token
+    OIDC Client->>+IdP: access-token
+    IdP->>-OIDC Client: KYC (JWT/JWE)
+```
+
+# Interface
+
+Authentication System Provider must implement the below Authentication Wrapper interface.
 
 ```java
 public interface AuthenticationWrapper {
@@ -53,7 +90,21 @@ public interface AuthenticationWrapper {
 }
 ```
 
-To enable the authentication wrapper implementation to be initialized based on the below configuration.&#x20;
 
-\
-`mosip.idp.authn.wrapper.impl=`
+Authentication wrapper implementation class must be annotated with ConditionalOnProperty based on "mosip.idp.authn.wrapper.impl" property;
+
+```
+@ConditionalOnProperty(value = "mosip.idp.authn.wrapper.impl", havingValue = "mock-authentication-service")
+@Component
+@Slf4j
+public class MockAuthenticationService implements AuthenticationWrapper {
+...
+}
+```
+
+# Plan
+
+Case 1: Authentication system has single endpoint ( authenticate and returns kyc )
+case 2: Authentication system has endpoint only to authenticate.
+
+
