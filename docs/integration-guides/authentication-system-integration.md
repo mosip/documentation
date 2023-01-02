@@ -2,6 +2,10 @@
 
 ## Overview
 
+This system is an identity repository that stores the individual's demographic and biometric information to perform authentication and provide user information.
+
+As part of this integration&#x20;
+
 System to authenticate an individual and provide consented details of the authenticated individual. Adhering to this principle we have the integration with the authentication system divided into two APIs:
 
 ### KYC-AUTH API: Authenticate the end user and return a KYC-token
@@ -93,7 +97,7 @@ public interface AuthenticationWrapper {
 }
 ```
 
-The authentication wrapper implementation class must be annotated with ConditionalOnProperty based on "mosip.idp.authn.wrapper.impl" property as below:
+The authentication wrapper implementation class must be annotated with ConditionalOnProperty based on `mosip.idp.authn.wrapper.impl` property as below:
 
 ```
 @ConditionalOnProperty(value = "mosip.idp.authn.wrapper.impl", havingValue = "mock-authentication-service")
