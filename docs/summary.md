@@ -2,7 +2,7 @@
 
 * [e-Signet](README.md)
 * [Overview](overview/README.md)
-  * [Componets](sandbox-details/componets.md)
+  * [Components](sandbox-details/componets.md)
   * [Features](architecture/features.md)
 * [Sandbox Details](sandbox-details/README.md)
 * [Contribution](contribution/README.md)
@@ -16,7 +16,7 @@
   * [Relying Party](relying-party-integration.md)
   * [Mock Identity Provider](integration-guides/mock-authentication-system.md)
   * [Mock Client Application](integration-guides/mock-client-application/README.md)
-  * [End User Guide](esignet-end-user-guide.md)
+  * [End User Guide](integration-guides/mock-client-application/enduser-guide.md)
 * [Supported Integrations](integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
 * [License](license.md)

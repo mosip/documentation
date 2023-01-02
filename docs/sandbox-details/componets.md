@@ -1,6 +1,6 @@
-# Componets
+# Components
 
-![](../\_images/e-signet-component-diagram.png)
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### **IdP UI**
 
