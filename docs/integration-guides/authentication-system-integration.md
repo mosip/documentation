@@ -6,11 +6,11 @@ This system is an identity repository that stores the individual's demographic a
 
 As part of this integration with e-Signet, the authentication system should have the below interfaces,
 
-* **doKycAuth** interface to authenticate the individual and get back a KYC token. This interface should support multiple types of authentication as well as multi-modal authentication.
-* **doKycExchange** interface to share user information based on the KYC token.
-* **sendOTP** interface to request an OTP before the OTP authentication.
-* **isSupportedOtpChannel** interface to check if the request channel to share OTP is supported.
-* **getAllKycSigningCertificates** interface should be able to retrieve all the details of KYC signing certificates
+* **doKycAuth:** to authenticate the individual and get back a KYC token. This interface should support multiple types of authentication as well as multi-modal authentication.
+* **doKycExchange:** to share user information based on the KYC token.
+* **sendOTP:** to request an OTP before the OTP authentication.
+* **isSupportedOtpChannel:** to check if the request channel to share OTP is supported.
+* **getAllKycSigningCertificates:** to retrieve all the details of KYC signing certificates
 
 <figure><img src="../.gitbook/assets/IdP Diagrams-Page-3.png" alt=""><figcaption></figcaption></figure>
 
