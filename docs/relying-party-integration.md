@@ -1,15 +1,10 @@
 # Relying Party Integration
 
-The relying party is an `OAuth` client which requires to authenticate the user and get user claims from IdP.
-For example, in MOSIP, the auth-partner is considered as a relying party. A partner may register one or more than one OIDC clients with an unique public-key.
-Auth policy mapped to auth partner must provision the below `allowedAuthTypes`.
-* kycauth
-* kycexchange
-* otp-request
+The relying party is an OAuth client who should be able to authenticate the end user and get the user's claims. For availing [these features](architecture/features.md) the relying party needs to partner with an e-Signet-compliant [identity provider](integration-guides/identity-provider.md) to register and integrate.
 
 ## Pre-requisites
 
-Connect with an Authentication Partner who is using the e-Signet solution for onboarding relying parties. As a part of this activity, you should receive the environment details and a client ID.
+Connect with an identity provider who uses the e-Signet solution for onboarding relying parties. As a part of this activity, you should receive the environment details and register yourself to receive a client ID.
 
 You can use our sandbox environment to integrate as well. For more details visit our page on [Sandbox Details](sandbox-details/).
 
@@ -17,10 +12,10 @@ You can use our sandbox environment to integrate as well. For more details visit
 
 ### Configuring the redirect URI
 
-Create a webpage where the user would be redirected after authentication is successful and consent is provided. The URL of this page should be shared as a query parameter as part of the Authorization Endpoint.
+Create a webpage where the user is redirected after successful authentication and consent are provided. The URL of this page should be shared as a query parameter as part of the Authorization Endpoint.
 
 {% hint style="info" %}
-Please make sure that the redirect URI is also shared with the Authentication Partner to configure the same in the e-Signet server.
+Please ensure that the redirect URI is also shared with the Authentication Partner to configure the same in the e-Signet server.
 {% endhint %}
 
 ### Add a button on your login screen
@@ -59,18 +54,18 @@ Using the access token you can call the user info endpoint to get the user infor
 The response is signed and then encrypted, with the result being a nested JWT. Signed using the authentication system's private key. Signed full JWT will then be encrypted using the OIDC client's public key.
 {% endhint %}
 
+## How to get credentials or register?
 
-  How to get credentials or register for IdP
-    Non-MOSIP deployment:
-      https://mosip.stoplight.io/docs/identity-provider/branches/main/e5bf97e265109-create-oidc-client-endpoint
-      https://mosip.stoplight.io/docs/identity-provider/branches/main/6081c36c68d08-update-oidc-client-endpoint
-    MOSIP-deployment:
-      In the mosip deployment, Auth partners are considered as relying parties, creating of oidc client under each auth-partner
-      is provisioned. An auth-partner can have multiple oidc clients.
-      Auth-partner's are mapped with one or more policies. Policy defines the registered/supported authentication factors and kyc attributes. 
-      An oidc client is created for an auth-partner with a particular policy via pms portal.
-      Pms portal, resolves the ACRs and user claims based on the mapped policy. 
-      pms service internally calls client-mgmt apis of IDP-service and raises a websub event to IDA to create the client details respective databases.
-      single point API to create/update OIDC client in IDP and IDA is 
-      POST https://api-internal.dev.mosip.net/v1/partnermanager/oidc/client
-      PUT https://api-internal.dev.mosip.net/v1/partnermanager/oidc/client
+e-Signet exposes APIs using which a relying party can be registered and receive credentials to connect with e-Signet.
+
+{% swagger src=".gitbook/assets/Identity-Provider.yml" path="/client-mgmt/oidc-client" method="post" %}
+[Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
+{% endswagger %}
+
+{% swagger src=".gitbook/assets/Identity-Provider.yml" path="/client-mgmt/oidc-client/{client_id}" method="put" %}
+[Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
+{% endswagger %}
+
+{% hint style="info" %}
+You can connect with your identity provider for details to get registered and receive your client ID.
+{% endhint %}
