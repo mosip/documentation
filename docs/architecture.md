@@ -1,11 +1,13 @@
-# Overview
+# Architecture Overview
 
-e-Signet allows easy and efforltess Sign on to applications using the country's Digital Foundation ID. This document highlights the various unlerlying priciples that were adopted to build a thin layer around the existing ID verification module that supports the authorization code flow. The actual integration is abstracted and taken as dynamic library dependency
+e-Signet allows easy and efforltess Sign on to applications using the country's Digital Foundation ID. This document highlights the various unlerlying priciples that were adopted to build a thin layer around the existing ID verification module that supports the authorization code flow. The actual integration is abstracted and taken as dynamic library dependency.
 
+* Easy relying party integration
+* Inclusive approach
+* Support of biometric devices
+* Support any identity repository.
  
-## Architecture
-
-**Design Principles**
+## Design Principles
 
 1. Solution should be able to independently operate without much dependency on existing services of MOSIP platform
 2. All integration libraries to ID system should be a runtime plugable to reuse the official container images which helps with easier upgrades
@@ -20,8 +22,4 @@ e-Signet allows easy and efforltess Sign on to applications using the country's 
 
 TBD: [Vishwanath V](https://app.gitbook.com/u/Kyda2yhlctS6UJ3XIyT6t6VpEHs1 "mention")
 
-* Easy relying party integration
-* Inclusive approach
-* Support of biometric devices
-* Support any identity repository.
 
