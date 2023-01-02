@@ -1,6 +1,6 @@
 # Authentication System Integration
 
-#Overview
+# Overview
 
 System to authenticate an individual and provide consented details of the authenticated individual. Adhering to this principle we have the integration with authentication system divided into 2 APIs:
 
