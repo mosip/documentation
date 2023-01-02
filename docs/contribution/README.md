@@ -1,6 +1,6 @@
 # Contribution
 
-## How do i contribute?
+## How do I contribute?
 
 contribution guide
 

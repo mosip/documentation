@@ -42,6 +42,10 @@ Once the authentication code is received, you can now call the token endpoint to
 [Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
 {% endswagger %}
 
+{% hint style="danger" %}
+**To add: Sample ID and Acess Tokens** [swati.periwal](https://app.gitbook.com/u/9VJJOcYOrkRCddb5atxhF55I3sq1 "mention")****
+{% endhint %}
+
 ### Retrieving user info
 
 Using the access token you can call the user info endpoint to get the user information as an encrypted JWT.
@@ -49,6 +53,10 @@ Using the access token you can call the user info endpoint to get the user infor
 {% swagger src=".gitbook/assets/Identity-Provider.yml" path="/oidc/userinfo" method="get" %}
 [Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
 {% endswagger %}
+
+{% hint style="danger" %}
+**To add: Sample JWT** [swati.periwal](https://app.gitbook.com/u/9VJJOcYOrkRCddb5atxhF55I3sq1 "mention")****
+{% endhint %}
 
 {% hint style="info" %}
 The response is signed and then encrypted, with the result being a nested JWT. Signed using the authentication system's private key. Signed full JWT will then be encrypted using the OIDC client's public key.
@@ -65,6 +73,8 @@ e-Signet exposes APIs using which a relying party can be registered and receive 
 {% swagger src=".gitbook/assets/Identity-Provider.yml" path="/client-mgmt/oidc-client/{client_id}" method="put" %}
 [Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
 {% endswagger %}
+
+
 
 {% hint style="info" %}
 You can connect with your identity provider for details to get registered and receive your client ID.

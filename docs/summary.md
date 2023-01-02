@@ -15,7 +15,7 @@
   * [Identity Provider](integration-guides/identity-provider.md)
   * [Authentication System Integration](integration-guides/authentication-system-integration.md)
   * [Relying Party Integration](relying-party-integration.md)
-  * [Mock Authentication System](integration-guides/mock-authentication-system.md)
+  * [Mock Identity Provider](integration-guides/mock-authentication-system.md)
   * [Mock Client Application](integration-guides/mock-client-application/README.md)
   * [How to Guides](integration-guides/how-to-guides.md)
     * [End User Guide](integration-guides/mock-client-application/enduser-guide.md)
