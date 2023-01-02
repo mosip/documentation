@@ -1,7 +1,7 @@
 # Table of contents
 
 * [e-Signet](README.md)
-* [Overview](architecture.md)
+* [Architecture](architecture.md)
   * [Componets](sandbox-details/componets.md)
   * [Features](architecture/features.md)
 * [Sandbox Details](sandbox-details/README.md)
