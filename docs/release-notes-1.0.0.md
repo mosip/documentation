@@ -1,19 +1,21 @@
 # Version 0.9.0
 
-**Release Name**: Inji 0.9.0 (Beta)
+**Release Name**: e-Signet 0.9.0 (Beta)
 
-**Upgrade From**: 0.8.0
+**Upgrade From**: NA (First Release)
 
-**Release Date**: 20th January 2023
+**Release Date**: 8th January 2023
 
 ## Overview
 
-The 0.0.9 version of Inji is the beta release which covers essential features such as ......... .
+The 0.0.9 version of e-Signet is the first beta release which covers essential features such as Login with OTP and Login with biometrics. The subsequent releases will have more features and integration with digital wallet solutions.
 
 ## Features Covered
 
-The basic features such as,\
+The basic features such as,
 
+* Login with OTP
+* Login with Biometrics
 
 are available as part of the releases.
 
