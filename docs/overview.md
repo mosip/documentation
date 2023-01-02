@@ -1,6 +1,6 @@
-# Architecture Overview
+# Overview
 
-e-Signet allows easy and efforltess Sign on to applications using the country's Digital Foundation ID. This document highlights the various unlerlying priciples that were adopted to build a thin layer around the existing ID verification module that supports the authorization code flow. The actual integration is abstracted and taken as dynamic library dependency.
+e-Signet allows easy and efforltess Sign on to applications using the country's Digital Foundation ID. This document highlights the various unlerlying priciples that were adopted to build a thin layer around the existing ID authentication system. The actual integration is abstracted and taken as dynamic library dependency.
 
 * Easy relying party integration
 * Inclusive approach
