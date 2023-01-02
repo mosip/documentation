@@ -6,6 +6,8 @@
   * [Features](architecture/features.md)
 * [Sandbox Details](sandbox-details/README.md)
 * [Contribution](contribution/README.md)
+  * [Code of Conduct](contribution/code-of-conduct.md)
+  * [Code Contribution](contribution/code-contribution.md)
 * [Build & Deployment](build-&-deployment.md)
 * [Versions](versions.md)
   * [Version 0.9.0](release-notes-1.0.0.md)
