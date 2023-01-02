@@ -1,10 +1,10 @@
-# Authentication System Integration
+# Authentication System
 
 ## Overview
 
-System to authenticate an individual and provide consented details of the authenticated individual. Adhering to this principle we have the integration with the authentication system divided into 2 APIs:
+System to authenticate an individual and provide consented details of the authenticated individual. Adhering to this principle we have the integration with the authentication system divided into two APIs:
 
-1. kyc-auth: Authenticate the end user and return a kyc-token
+### KYC-AUTH API: Authenticate the end user and return a KYC-token
 
 ```mermaid
 sequenceDiagram
@@ -22,7 +22,7 @@ sequenceDiagram
     Note left of IdP:Redirect to client portal with auth-code
 ```
 
-1. kyc-exchange: Exchange kyc-token for the user KYC
+### KYC-EXCHANGE API: Exchanges KYC-token for the user
 
 ```mermaid
 sequenceDiagram
@@ -40,7 +40,7 @@ sequenceDiagram
 
 ## Interface
 
-Authentication System Provider must implement the below Authentication Wrapper interface.
+The authentication system must implement the below authentication wrapper interface.
 
 ```java
 public interface AuthenticationWrapper {
@@ -93,7 +93,7 @@ public interface AuthenticationWrapper {
 }
 ```
 
-Authentication wrapper implementation class must be annotated with ConditionalOnProperty based on "mosip.idp.authn.wrapper.impl" property as below:
+The authentication wrapper implementation class must be annotated with ConditionalOnProperty based on "mosip.idp.authn.wrapper.impl" property as below:
 
 ```
 @ConditionalOnProperty(value = "mosip.idp.authn.wrapper.impl", havingValue = "mock-authentication-service")
@@ -106,10 +106,13 @@ public class MockAuthenticationService implements AuthenticationWrapper {
 
 ## Plan
 
+#### Case 1
+
+The authentication system has a single endpoint (authenticate and returns KYC)
+
+#### Case 2
+
+The authentication system has an endpoint only to authenticate.
+
 ```
-## Case 1: 
-    Authentication system has single endpoint ( authenticate and returns kyc )
-    
-## case 2: 
-    Authentication system has endpoint only to authenticate.
 ```
