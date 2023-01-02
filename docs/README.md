@@ -16,7 +16,7 @@ There is a need to support lot more verification methods to be inclusive. Also, 
 
 ### Who can use this?
 
-e-Signet is designed as a simple highly performant system for large-scale inclusive digital verification. The solution does not deal with ID Issuance & ID Lifecycle. So it can be adopted by anyone who has an ID repository.
+e-Signet is designed as a simple highly performant system for large-scale inclusive digital verification. The solution does not deal with ID Issuance & ID Lifecycle. Therefore, it can be adopted by anyone who has an ID repository.
 
 ### Why should I adopt?
 
@@ -38,4 +38,4 @@ There are multiple benefits of using e-Signet for the residents, government as w
 
 **e-Signet**, which is [OpenID Connect](https://openid.net/connect/) and [OAuth 2.0](https://oauth.net/2/) compliant system and can be used by a relying party to perform quick and simple integration for user verification.
 
-**e-Signet** also uses [SBI (Secure Biometric Interface)](https://standards.ieee.org/ieee/3167/10925/) to enable an ecosystem of biometric players. Look at the supported devices [here](https://docs.mosip.io/1.2.0/biometrics/biometric-devices).
+**e-Signet** also uses [SBI (Secure Biometric Interface)](https://standards.ieee.org/ieee/3167/10925/) to enable an ecosystem of biometric players. To have a look at the supported devices, click [here](https://docs.mosip.io/1.2.0/biometrics/biometric-devices).
