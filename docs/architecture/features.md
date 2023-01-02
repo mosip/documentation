@@ -1,6 +1,6 @@
 # Features of e-Signet
 
-*  Easy and and efforltess Sign on to applications using the country's Digital Foundation ID
+* Login to applications with OPT and Biometric authentications using the Foundation ID system.
 
 
 * Quick integration
