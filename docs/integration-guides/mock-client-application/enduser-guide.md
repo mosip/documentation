@@ -2,7 +2,9 @@
 
 In this user guide, we are taking an example of a Health services portal that acts a relying party using e-Signet to provide services and benefits to the residents. Also, in turn, the residents can quickly identify themselves on various websites using their country' foundation ID system (here MOSIP) thereby avoiding the hassels of repeatedly filling up their account/personal information.
 
-There are multiple ways a user can uthenticate th Below we are illustrating different flows for login:
+There are multiple ways a user can be authenticated themselves.  
+
+The two login flows supported with this release are illustrated:
 
 1. Login flow for OTP based authentication
 2. Login flow for Biometrics based authentication
@@ -12,6 +14,10 @@ There are multiple ways a user can uthenticate th Below we are illustrating diff
 Pre-requisite: The resident is registered with MOSIP and has a valid UIN or VID.
 
 1\. Resident clicks on `Sign in with MOSIP`. The resident is navigated to the login screen.
+
+![](\_images/idp-login-otp-signin.png)
+
+idp-login-otp-signin.pngidp-login-otp-signin.pn
 
 2\. To get started with login with OTP authentication, resident clicks on `Log in here`.
 
