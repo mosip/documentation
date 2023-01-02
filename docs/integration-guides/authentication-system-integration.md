@@ -11,7 +11,7 @@ sequenceDiagram
     autonumber
     actor Individual
     Individual->>+IdP: Credentials
-    rect rgb(0,0,128)
+    rect yellow
     IdP->>IDA: Credentials
     IDA->>IdP: kyc-token
     end
@@ -28,8 +28,8 @@ sequenceDiagram
 sequenceDiagram
     autonumber
     OIDC Client->>+IdP: auth-code
-    rect rgb(0,0,128)
-    IdP->>IDA: Consent & kyc-token
+    rect yellow
+    IdP->>IDA: Con1sent & kyc-token
     IDA->>IdP: KYC (JWT/JWE)
     end
     Note over IdP: Store KYC
