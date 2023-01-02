@@ -1,10 +1,14 @@
 # Authentication System Integration
 
-# Overview
+## Overview
 
-System to authenticate an individual and provide consented details of the authenticated individual. Adhering to this principle we have the integration with authentication system divided into 2 APIs:
+System to authenticate an individual and provide consented details of the authenticated individual. Adhering to this principle we have the integration with the authentication system divided into 2 APIs:
 
-1. kyc-auth : Authenticate enduser and return kyc-token
+1. kyc-auth: Authenticate the end user and return a kyc-token
+
+```mermaid
+```
+
 ```mermaid
 sequenceDiagram
     autonumber
@@ -20,7 +24,9 @@ sequenceDiagram
     IdP->>-Individual: Success
     Note left of IdP:Redirect to client portal with auth-code
 ```
-2. kyc-exchange: Exchange kyc-token for the user KYC
+
+1. kyc-exchange: Exchange kyc-token for the user KYC
+
 ```mermaid
 sequenceDiagram
     autonumber
@@ -35,7 +41,7 @@ sequenceDiagram
     IdP->>-OIDC Client: KYC (JWT/JWE)
 ```
 
-# Interface
+## Interface
 
 Authentication System Provider must implement the below Authentication Wrapper interface.
 
@@ -90,7 +96,6 @@ public interface AuthenticationWrapper {
 }
 ```
 
-
 Authentication wrapper implementation class must be annotated with ConditionalOnProperty based on "mosip.idp.authn.wrapper.impl" property as below:
 
 ```
@@ -102,12 +107,12 @@ public class MockAuthenticationService implements AuthenticationWrapper {
 }
 ```
 
-# Plan
+## Plan
 
-    ## Case 1: 
-        Authentication system has single endpoint ( authenticate and returns kyc )
-        
-    ## case 2: 
-        Authentication system has endpoint only to authenticate.
-
-
+```
+## Case 1: 
+    Authentication system has single endpoint ( authenticate and returns kyc )
+    
+## case 2: 
+    Authentication system has endpoint only to authenticate.
+```
