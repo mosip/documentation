@@ -4,43 +4,15 @@
 
 This system is an identity repository that stores the individual's demographic and biometric information to perform authentication and provide user information.
 
-As part of this integration&#x20;
+As part of this integration with e-Signet, the authentication system should have the below interfaces,
 
-System to authenticate an individual and provide consented details of the authenticated individual. Adhering to this principle we have the integration with the authentication system divided into two APIs:
+* **doKycAuth** interface to authenticate the individual and get back a KYC token. This interface should support multiple types of authentication as well as multi-modal authentication.
+* **doKycExchange** interface to share user information based on the KYC token.
+* **sendOTP** interface to request an OTP before the OTP authentication.
+* **isSupportedOtpChannel** interface to check if the request channel to share OTP is supported.
+* **getAllKycSigningCertificates** interface should be able to retrieve all the details of KYC signing certificates
 
-### KYC-AUTH API: Authenticate the end user and return a KYC-token
-
-```mermaid
-sequenceDiagram
-    autonumber
-    actor Individual
-    Individual->>+IdP: Credentials
-    rect yellow
-    IdP->>IDA: Credentials
-    IDA->>IdP: kyc-token
-    end
-    IdP-->>-Individual: Success
-    Individual->>+IdP: Consent
-    Note over IdP: Store consent
-    IdP->>-Individual: Success
-    Note left of IdP:Redirect to client portal with auth-code
-```
-
-### KYC-EXCHANGE API: Exchanges KYC-token for the user
-
-```mermaid
-sequenceDiagram
-    autonumber
-    OIDC Client->>+IdP: auth-code
-    rect yellow
-    IdP->>IDA: Con1sent & kyc-token
-    IDA->>IdP: KYC (JWT/JWE)
-    end
-    Note over IdP: Store KYC
-    IdP-->>-OIDC Client: id-token & access-token
-    OIDC Client->>+IdP: access-token
-    IdP->>-OIDC Client: KYC (JWT/JWE)
-```
+<figure><img src="../.gitbook/assets/IdP Diagrams-Page-3.png" alt=""><figcaption></figcaption></figure>
 
 ## Interface
 
@@ -117,6 +89,3 @@ The authentication system has a single endpoint (authenticate and returns KYC)
 #### Case 2
 
 The authentication system has an endpoint only to authenticate.
-
-```
-```
