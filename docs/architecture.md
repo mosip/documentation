@@ -22,4 +22,5 @@ e-Signet allows easy and efforltess Sign on to applications using the country's 
 
 TBD: [Vishwanath V](https://app.gitbook.com/u/Kyda2yhlctS6UJ3XIyT6t6VpEHs1 "mention")
 
+![](\_images/idp_diagrams_updated_2-Page-2.png)
 
