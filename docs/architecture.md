@@ -1,6 +1,6 @@
 # Overview
 
-## Architure
+## Architecture
 
 **Design Principles**
 
