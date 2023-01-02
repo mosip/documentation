@@ -1,2 +1,0 @@
-# Mock Client Application
-

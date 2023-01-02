@@ -1,9 +1,8 @@
 # Table of contents
 
-* [e-Signet](README.md)
+* [Inji](README.md)
 * [Overview](architecture.md)
   * [Componets](sandbox-details/componets.md)
-  * [Open ID](contribution/open-id.md)
   * [Features](architecture/features.md)
 * [Sandbox Details](sandbox-details/README.md)
 * [Contribution](contribution/README.md)
@@ -12,11 +11,6 @@
   * [Version 0.9.0](release-notes-1.0.0.md)
     * [Test Report](test-report-1.0.0.md)
 * [Integration Guides](integration-guides/README.md)
-  * [Identity Provider](integration-guides/identity-provider.md)
-  * [Authentication System Integration](integration-guides/authentication-system-integration.md)
-  * [Relying Party Integration](relying-party-integration.md)
-  * [Mock Identity Provider](integration-guides/mock-authentication-system.md)
-  * [Mock Client Application](integration-guides/mock-client-application/README.md)
   * [How to Guides](integration-guides/how-to-guides.md)
     * [End User Guide](integration-guides/mock-client-application/enduser-guide.md)
 * [Supported Integrations](integrations/README.md)

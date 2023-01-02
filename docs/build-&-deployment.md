@@ -4,20 +4,11 @@
 
 ### Repositories
 
-* [Service](https://github.com/mosip/idp/tree/develop)
-* [UI](https://github.com/mosip/idp-ui/tree/develop)
-
 ### Prerequisite
-
-
 
 ### Command to build
 
-
-
 ### Published artifacts
-
-
 
 Can I use the dockers directly?
 
