@@ -1,6 +1,6 @@
 # End User Guide
 
-In this user guide, we are taking an example of a Health services portal that acts a relying party using e-Signet to provide services and benefits to the residents. Also, in turn, the residents can quickly identify themselves on various websites using their country' foundation ID system (here MOSIP) thereby avoiding the hassels of repeatedly filling up their account/personal information.
+In this user guide, we are taking an example of a Health services portal that acts a relying party using e-Signet to provide services and benefits to the residents. Also, in turn, the residents can quickly identify themselves using their country' foundation ID system (here MOSIP) thereby avoiding the hassels of repeatedly filling up their account/personal information.
 
 There are multiple ways a user can be authenticated themselves.  
 
@@ -13,29 +13,42 @@ The two login flows supported with this release are illustrated:
 
 Pre-requisite: The resident is registered with MOSIP and has a valid UIN or VID.
 
-1\. Resident clicks on `Sign in with MOSIP`. The resident is navigated to the login screen.
+1\. Resident clicks `Sign in with MOSIP`. 
 
+![](\_images/idp-login-otp-signin.png)
 
+The login screen appears and the resident is displayed with the options they can choose for login.
 
-idp-login-otp-signin.pngidp-login-otp-signin.pn
+2\. To get started with login with OTP authentication, resident clicks on `Log in here`. 
 
-2\. To get started with login with OTP authentication, resident clicks on `Log in here`.
+**Login with OTP** screen is displayed to the resident.
 
-3\. `Login with OTP` screen displayed to the resident.
+![](\_images/idp-login-otp-loginhere.png)
 
-4\. Resident needs to enter valid VID in the \`Enter VID' textfield. Also, they can enter the UIN here.
+3\. Resident needs to enter valid VID in the `Enter VID` textfield. Also, they can enter the UIN here.
 
-5\. Next, the resident clicks on `Get OTP` button.
+![](\_images/idp-login-otp-entervid.png)
 
-6\. The resident receives the OTP on the registered channel(either the phone number or emailId).
+4\. Next, the resident clicks on `Get OTP` button.
 
-7\. The resident needs to enter the valid OTP received and click on `Verify` button.
+5\. The resident receives the OTP on the registered channel (either the phone or on email).
 
-8\. The resident is then navigated to the Consent page. On this page, the **Essential** and **Voluntary** claims are displayed.
+6\. The resident needs to enter the valid OTP received and click on `Verify` button.
 
-9\. The resident has the choice to select amongst the list of Voluntary claims while the Essential claims are mandatory and not editable.
+![](\_images/idp-login-otp-verify.png)
 
-10\. The resident then clicks on the `Allow` button. The system then navigates the resident to the User Profile page and the page displays their personal information based on the consent provided.
+7\. The resident is then navigated to the Consent page. On this page, the **Essential** and **Voluntary** claims are displayed.
+
+![](\_images/idp-login-otp-askingconsent.png)
+
+8\. The resident has the choice to select amongst the list of Voluntary claims while the Essential claims are mandatory and not editable.
+
+![](\_images/idp-login-otp-showingclaims.png)
+
+9\. The resident then clicks on the `Allow` button. The system navigates the resident to the User Profile page and the page displays their personal information based on the consent provided.
+
+![](\_images/idp-login-otp-display-pi.png)
+
 
 ## LOGIN with Biometrics
 
