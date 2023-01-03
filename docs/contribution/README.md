@@ -4,7 +4,7 @@ e-Signet is a product of the combined efforts of multiple stakeholders. Contribu
 
 ## How do I contribute?
 
-For code contributions, refer [here]().
+For code contributions, refer [here](https://docs.mosip.io/identity-provider/aiBOCblAUNtQZjYU1xrS/contribution/code-contribution).
 
 To engage with us on our community forum, visit [here](https://community.mosip.io/c/developer/14).
 
@@ -13,16 +13,16 @@ To engage with us on our community forum, visit [here](https://community.mosip.i
 
 
 
-TODO from Sashi
+**TODO from Sashi**
 
 
-contribution guide
+contribution guide - dont have
 
-link to community
+link to community  - done
 
-raising issues&#x20;
+raising issues&#x20; - no process in place
 
-raising a pr
+raising a pr - tbd
 
 TODO: We should get the contributor agreement up and running in our system.
 
