@@ -12,15 +12,15 @@ You can use our sandbox environment to integrate as well. For more details visit
 
 ### Configuring the redirect URI
 
-Create a webpage where the user is redirected after successful authentication and consent are provided. The URL of this page should be shared as a query parameter as part of the Authorization Endpoint.
+Create a webpage where the user is redirected after successful authentication and consent is provided. The URL of this page should be shared as a query parameter as part of the Authorization Endpoint.
 
 {% hint style="info" %}
-Please ensure that the redirect URI is also shared with the Authentication Partner to configure the same in the e-Signet server.
+Ensure that the redirect URI is also shared with the Authentication Partner to configure the same in the e-Signet server.
 {% endhint %}
 
 ### Add a button on your login screen
 
-Add a button on your website (i.e, Log in with Signet), which should call the authorization endpoint and navigate the user to the e-Signet UI screen for authentication and consent capture.
+Add a button on your website (i.e, Log in with e-Signet), which should call the authorization endpoint and navigate the user to the e-Signet UI screen for authentication and consent capture.
 
 {% swagger src=".gitbook/assets/Identity-Provider.yml" path="/authorize" method="get" %}
 [Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
