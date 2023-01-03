@@ -2,9 +2,9 @@
 
 In this user guide, we are taking an example of a Health services portal that acts a relying party using e-Signet to provide services and benefits to the residents. Also, in turn, the residents can quickly identify themselves using their country' foundation ID system (here MOSIP) thereby avoiding the hassels of repeatedly filling up their account/personal information.
 
-There are multiple ways a user can be authenticated themselves.  
+There are multiple ways in which user authentication can be done.
 
-The two login flows supported with this release are illustrated:
+With this release, the two login flows are illustrated below:
 
 1. Login flow for OTP based authentication
 2. Login flow for Biometrics based authentication
