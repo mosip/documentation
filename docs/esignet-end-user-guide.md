@@ -88,4 +88,4 @@ The login screen appears and the resident is displayed with the options they can
 
 ![](\_images/idp-login-bio-displaypi.png)
 
-In both the login flows mentioned above, the user's account is successfully created on the relying party's portal, user has logged in and the profile is displayed based on consent provided.
+In both the login flows mentioned above, authorization code flow is used to fetch the user profile based on the consent.
