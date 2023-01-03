@@ -4,20 +4,22 @@ Are you a relying party looking to integrate with the e-Signet? Feel free to sig
 
 ## Collab
 
-Collab is our development integration environment which can be used by our partners and contributors to build on top of the platform or integrate with the QA-certified version of the latest platform code.
+Collab is our development integration environment which can be used by our partners and contributors to build on top of the platform or integrate with the QA certified version of the latest platform code.
 
-QA-tested sprint deliverables of a current release are deployed in this environment.
+QA tested sprint deliverables of a current release are deployed in this environment.
 
-Environment links are available [here](https://collab.mosip.net/).
+Environment links are available at [here](https://collab.mosip.net/).
 
 ## Synergy
 
 Synergy is our environment where the latest released version of the platform (currently, v1.2.0.1) is deployed for partners to integrate and test their solutions.
 
-{% hint style="danger" %}
-To Do: Small video of how to register yourself.
-{% endhint %}
 
-{% hint style="danger" %}
-To Do: As of now, we do not have the UI so can we provide the postman scripts or expose the swagger here?
-{% endhint %}
+
+
+TODO: Small video of how to register yourself.
+
+TODO: As of now, we do not have the UI so can we provide the postman scripts or expose the swagger here?
+
+
+
