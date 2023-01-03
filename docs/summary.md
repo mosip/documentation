@@ -4,6 +4,7 @@
 * [Overview](overview/README.md)
   * [Components](sandbox-details/componets.md)
   * [Features](architecture/features.md)
+  * [OpenID Connect](contribution/open-id.md)
 * [Sandbox Details](sandbox-details/README.md)
 * [Contribution](contribution/README.md)
   * [Code Contribution](contribution/code-contribution.md)
