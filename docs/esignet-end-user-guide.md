@@ -86,4 +86,4 @@ The login screen appears and the resident is displayed with the options they can
 
 9\. The resident then clicks on the `Allow` button. The system then navigates the resident to the User Profile page and the page displays their personal information based on the consent provided.
 
-![](\_images/idp-login-bio-display-pi.png)
+![](\_images/idp-login-bio-displaypi.png)
