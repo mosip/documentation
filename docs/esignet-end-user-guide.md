@@ -1,10 +1,10 @@
 # End User Guide
 
-In this user guide, we are taking an example of a Health services portal that acts a relying party using e-Signet to provide services and benefits to the residents. Also, in turn, the residents can quickly identify themselves using their country' foundation ID system (here MOSIP) thereby avoiding the hassels of repeatedly filling up their account/personal information.
+In this user guide, we are taking an example of a Health services portal that acts as a relying party using e-Signet to provide services and benefits to the residents. Also, in turn, the residents can quickly identify themselves using their country's foundation ID system (here MOSIP) thereby avoiding the hassles of repeatedly filling up their account/personal information.
 
 There are multiple ways in which user authentication can be done.
 
-With this release, the two login flows are illustrated below:
+With this release, we support the login flow for the below authentication factors:
 
 1. Login flow for OTP based authentication
 2. Login flow for Biometrics based authentication
@@ -25,7 +25,7 @@ The login screen appears and the resident is displayed with the options they can
 
 ![](\_images/idp-login-otp-loginhere.png)
 
-3\. Resident needs to enter valid VID in the `Enter VID` textfield. Also, they can enter the UIN here.
+3\. Resident needs to enter valid VID in the `Enter Your VID` textfield. Also, they can enter the UIN here.
 
 ![](\_images/idp-login-otp-entervid.png)
 
@@ -64,7 +64,7 @@ The login screen appears and the resident is displayed with the options they can
 
 ![](\_images/idp-login-bio-moreways.png)
 
-4\. Resident needs to enter valid VID in the `Enter VID` textfield. Also, they can enter the UIN here.
+4\. Resident needs to enter valid VID in the `Enter Your VID` textfield. Also, they can enter the UIN here.
 
 ![](\_images/idp-login-bio-selecteddevice.png)
 
@@ -72,7 +72,7 @@ The login screen appears and the resident is displayed with the options they can
 
 ![](\_images/idp-login-bio-selectdevice.png)
 
-6\. The resident clicks on `Scan and verify` button.
+6\. The resident clicks on `Scan and Verify` button.
 
 ![](\_images/idp-login-bio-scan.png)
 
@@ -84,6 +84,8 @@ The login screen appears and the resident is displayed with the options they can
 
 ![](\_images/idp-login-bio-selectclaims.png)
 
-9\. The resident then clicks on the `Allow` button. The system then navigates the resident to the User Profile page and the page displays their personal information based on the consent provided.
+9\. The resident clicks on the `Allow` button. The system then navigates the resident to the User Profile page and the page displays their personal information based on the consent provided.
 
 ![](\_images/idp-login-bio-displaypi.png)
+
+In both the login flows mentioned above, the user's account is successfully created on the relying party's portal, user has logged in and the profile is displayed based on consent provided.
