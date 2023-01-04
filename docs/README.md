@@ -9,7 +9,7 @@ e-Signet also provides an elegant and easy way for a trusted identity database t
 **What can e-Signet be used for?**
 
 * e-Signet can be a login provider for a relying party application to enable access to the service without creating yet another set of userid and password.
-* e-Signet can be used for assured identity verification of an individual against an identity provider. The identity provider could be a national identity database or a drivers license system or a passport license system or any other trusted identity provider. Assurance level is based on the authentication factor used, with biometric authentication offering user presence assurance.
+* e-Signet can be used for assured identity verification of an individual against an identity provider. The identity provider could be a national identity database or a driver's license system or a passport license system or any other trusted identity provider. Assurance level is based on the authentication factor used, with biometric authentication offering user presence assurance.
 * e-Signet can be used for consented data sharing for profile creation or eKYC needs of relying parties. Authentication requests from a relying party can be accompanied by a request for a set of attributes suitable for profile creation or meeting eKYC process norms. The requested information is shared after user provides consent as part of the e-Signet login flow.
 
 **How is e-Signet different from other services?**
