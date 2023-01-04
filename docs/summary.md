@@ -98,3 +98,4 @@
 * [MOSIP Documentation Style Guide](mosip-documentation-style-guide.md)
 * [Documentation for 1.1.5](previous-version-documentation.md)
 * [License](license.md)
+* [Drawio SVG Experiment](drawio-svg-experiment.md)
