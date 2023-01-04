@@ -6,11 +6,11 @@ This guide helps with the steps to mock the authentication server integration in
 Note: It is for development purpose only.
 {% endhint %}
 
+## Setup
+
 {% hint style="info" %}
 Note: Mock authentication system only supports PIN and OTP. For PIN based login, PIN must be provided in the persona json file. For OTP based login, OTP is always set to 111111.
 {% endhint %}
-
-## Setup
 
 1. Set the auth wrapper implementation to mock in properties
     ```
