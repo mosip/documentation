@@ -1,10 +1,12 @@
-# Mock Identity Provider
+# Mock Authentication System
 
 This guide helps with the steps to mock the authentication server integration in the IdP service. 
 
-> Note: It is for development purposes only.
+{% hint style="info" %}
+Note: It is for development purpose only.
+{% endhint %}
 
-> Note: Mock authentication system only supports PIN and OTP. For PIN based login, PIN must be provided in the persona json file. For OTP based login, OTP is 111111 always.
+> Note: Mock authentication system only supports PIN and OTP. For PIN based login, PIN must be provided in the persona json file. For OTP based login, OTP is always set to 111111.
 
 ## Setup
 
