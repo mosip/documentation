@@ -4,19 +4,25 @@
 
 The recommended Github workflow here is for developers to submit code and documentation contributions to e-Signet open-source repositories.
 
-## Setup
+### Repositories
 
-1. Fork repository of interest from https://github.com/idp/
+{% embed url="https://github.com/mosip/idp" %}
+
+{% embed url="https://github.com/mosip/idp-ui" %}
+
+## Setup your development machine
+
+1. Fork repository of interest
 2.  Clone the fork to your local machine. E.g.:
 
     ```
-    $ git clone https://github.com/<your_github_id>/commons.git
+    $ git clone https://github.com/<your_github_id>/idp.git
     ```
 3.  Set the upstream project as the original from where you forked. E.g.:
 
     ```
-    $ cd commons
-    $ git remote add upstream https://github.com/mosip/commons.git
+    $ cd idp
+    $ git remote add upstream https://github.com/mosip/idp.git
     ```
 4.  Make sure you never directly push upstream.
 
@@ -32,28 +38,67 @@ The recommended Github workflow here is for developers to submit code and docume
 ## Code changes
 
 1. Create a new issue in GitHub.
-2. You may work on the master branch, switch to a branch (like the Release branch) or create a new branch.
-3.  Make sure you are up-to-date with the upstream repo.
+   1. Follow the issue template provided.
+   2. Please provide as much information as possible
+   3. In case you want to develop a new feature please elaborate the idea and discuss the design before starting development.
+2. In your local repository fetch the upstream
 
-    ```
-    $ git pull upstream <branch> 
-    ```
-4.  Once you are done with the work, commit your changes by referring to the Issue ID in the commit message. Eg:
+```
+$ git fetch upstream
+```
 
-    ```
-    $ git commit -m "[#1234] Adding new upload feature in IdP service module for POA documents"
-    ```
-5.  Once again ensure that you are up-to-date with the upstream repo as it may have moved forward.
+3\. On your local repo switch to a branch if you are working on a older release (like the 0.9.0 branch) or stay in `main/develop` branch.&#x20;
 
-    ```
-    $ git pull upstream <branch> 
-    ```
-6. Build and test your code. Make sure it follows the coding guidelines.
-7.  Push to your forked repo (origin).
+```
+$ git checkout upstream/<branch> 
+```
 
-    ```
-    $ git push 
-    ```
-8. Create a pull request on your forked repo. Direct the pull-request to `master` or any specific branch upstream (like a Release branch).
-9. Make sure the automatic tests on Github for your pull request pass.
-10. The pull request shall be reviewed by reviewers.
+{% hint style="info" %}
+You will get a warning from git. So dont worry our next step will take care of this warning.
+{% endhint %}
+
+4\. Create a new issue branch with the name of the issue.
+
+```
+$ git switch -c issue-<issue number>
+```
+
+5\. Make sure you are up-to-date with the upstream repo.
+
+```
+$ git pull upstream <branch> 
+```
+
+{% hint style="info" %}
+You should do this quite often to ensure you are upto date.
+{% endhint %}
+
+6\. Now feel free to make the change in the code or documentation. Reach out to <mark style="background-color:red;">\[our community]\(https://community.mosip.io)</mark> for any query. Once you are done with the work, commit your changes by referring to the Issue ID in the commit message. Eg:
+
+```
+$ git commit -m "[#1234] Adding new upload feature in e-Signet service module for POA documents"
+```
+
+7\. Once again ensure that you are up-to-date with the upstream repo as it may have moved forward.
+
+```
+$ git pull upstream <branch> 
+```
+
+8\. Build and test your code. Make sure to follow the coding guidelines. Provide unit test cases for the changes you have built.
+
+9\. Push to your forked repo (origin).
+
+```
+$ git push --set-upstream origin issue-<issue number>
+```
+
+10\. On your forked remote repository from github create a pull request using the contribute button. Direct the pull-request to `main` or any specific branch upstream.&#x20;
+
+{% hint style="info" %}
+Most often its the same branch in the upstream (as in Step 3).&#x20;
+{% endhint %}
+
+11\. Make sure the automatic tests on github for your pull request pass.
+
+12\. The pull request shall be reviewed by reviewers. Reach out to the <mark style="background-color:red;">\[community]\(https://community.mosip.io)</mark> for any faster response.&#x20;
