@@ -18,7 +18,7 @@
   * [Authentication System](integration-guides/authentication-system-integration.md)
   * [Relying Party](relying-party-integration.md)
   * [Mock Authentication System](integration-guides/mock-authentication-system.md)
-  * [Mock Client Application](integration-guides/mock-client-application/README.md)
+  * [Mock Relying Party](integration-guides/mock-client-application/README.md)
   * [End User Guide](esignet-end-user-guide.md)
 * [Supported Integrations](integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
