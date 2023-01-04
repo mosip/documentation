@@ -14,7 +14,6 @@
   * [Version 0.9.0](release-notes-1.0.0.md)
     * [Test Report](test-report-1.0.0.md)
 * [Integration Guides](integration-guides/README.md)
-  * [Identity Provider](integration-guides/identity-provider.md)
   * [Authentication System](integration-guides/authentication-system-integration.md)
   * [Relying Party](relying-party-integration.md)
   * [Mock Authentication System](integration-guides/mock-authentication-system.md)

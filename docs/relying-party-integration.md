@@ -1,6 +1,6 @@
-# Relying Party Integration
+# Relying Party
 
-The relying party is an OAuth client who should be able to authenticate the end user and get the user's claims. For availing [these features](architecture/features.md) the relying party needs to partner with an e-Signet-compliant [identity provider](integration-guides/identity-provider.md) to register and integrate.
+The relying party is an OAuth client who should be able to authenticate the end user and get the user's claims. For availing [these features](architecture/features.md) the relying party needs to partner with an e-Signet-compliant [identity provider](broken-reference) to register and integrate.
 
 ## Pre-requisites
 
@@ -43,6 +43,7 @@ Once the authentication code is received, you can now call the token endpoint to
 {% endswagger %}
 
 **Sample ID-token**
+
 ```
 header: 
 {
@@ -50,6 +51,7 @@ header:
   "alg": "RS256"
 }
 ```
+
 ```
 payload: 
 {
@@ -66,6 +68,7 @@ payload:
 ```
 
 **Access Token**
+
 ```
 header: 
 {
@@ -73,6 +76,7 @@ header:
   "alg": "RS256"
 }
 ```
+
 ```
 payload: 
 {
@@ -93,7 +97,7 @@ Using the access token you can call the user info endpoint to get the user infor
 {% endswagger %}
 
 {% hint style="danger" %}
-**To add: Sample JWT** [swati.periwal](https://app.gitbook.com/u/9VJJOcYOrkRCddb5atxhF55I3sq1 "mention")****
+**To add: Sample JWT** [swati.periwal](https://app.gitbook.com/u/9VJJOcYOrkRCddb5atxhF55I3sq1 "mention")\*\*\*\*
 {% endhint %}
 
 {% hint style="info" %}
@@ -111,8 +115,6 @@ e-Signet exposes APIs using which a relying party can be registered and receive 
 {% swagger src=".gitbook/assets/Identity-Provider.yml" path="/client-mgmt/oidc-client/{client_id}" method="put" %}
 [Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
 {% endswagger %}
-
-
 
 {% hint style="info" %}
 You can connect with your identity provider for details to get registered and receive your client ID.
