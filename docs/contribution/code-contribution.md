@@ -40,21 +40,21 @@ The recommended Github workflow here is for developers to submit code and docume
 1. Create a new issue in GitHub.
    1. Follow the issue template provided.
    2. Please provide as much information as possible
-   3. In case you want to develop a new feature please elaborate the idea and discuss the design before starting development.
+   3. If you want to develop a new feature please elaborate on the idea and discuss the design before starting development.
 2. In your local repository fetch the upstream
 
 ```
 $ git fetch upstream
 ```
 
-3\. On your local repo switch to a branch if you are working on a older release (like the 0.9.0 branch) or stay in `main/develop` branch.&#x20;
+3\. On your local repo switch to a branch if you are working on an older release (like the 0.9.0 branch) or stay in `main/develop` branch.&#x20;
 
 ```
 $ git checkout upstream/<branch> 
 ```
 
 {% hint style="info" %}
-You will get a warning from git. So dont worry our next step will take care of this warning.
+You will get a warning from git. So don't worry our next step will take care of this warning.
 {% endhint %}
 
 4\. Create a new issue branch with the name of the issue.
@@ -70,10 +70,10 @@ $ git pull upstream <branch>
 ```
 
 {% hint style="info" %}
-You should do this quite often to ensure you are upto date.
+You should do this quite often to ensure you are up to date.
 {% endhint %}
 
-6\. Now feel free to make the change in the code or documentation. Reach out to <mark style="background-color:red;">\[our community]\(https://community.mosip.io)</mark> for any query. Once you are done with the work, commit your changes by referring to the Issue ID in the commit message. Eg:
+6\. Now feel free to make the change in the code or documentation. Reach out to [our community](https://community.mosip.io) for any queries. Once done with the work, commit your changes by referring to the Issue ID in the commit message. Eg:
 
 ```
 $ git commit -m "[#1234] Adding new upload feature in e-Signet service module for POA documents"
@@ -93,12 +93,12 @@ $ git pull upstream <branch>
 $ git push --set-upstream origin issue-<issue number>
 ```
 
-10\. On your forked remote repository from github create a pull request using the contribute button. Direct the pull-request to `main` or any specific branch upstream.&#x20;
+10\. On your forked remote repository from GitHub create a pull request using the contribute button. Direct the pull-request to `main` or any specific branch upstream.&#x20;
 
 {% hint style="info" %}
-Most often its the same branch in the upstream (as in Step 3).&#x20;
+Most often it's the same branch in the upstream (as in Step 3).&#x20;
 {% endhint %}
 
-11\. Make sure the automatic tests on github for your pull request pass.
+11\. Make sure the automatic tests on GitHub for your pull request pass.
 
-12\. The pull request shall be reviewed by reviewers. Reach out to the <mark style="background-color:red;">\[community]\(https://community.mosip.io)</mark> for any faster response.&#x20;
+12\. Reviewers shall review the pull request. Reach out to the [community](https://community.mosip.io) for a faster response.&#x20;
