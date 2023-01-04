@@ -42,9 +42,47 @@ Once the authentication code is received, you can now call the token endpoint to
 [Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
 {% endswagger %}
 
-{% hint style="danger" %}
-**To add: Sample ID and Acess Tokens** [swati.periwal](https://app.gitbook.com/u/9VJJOcYOrkRCddb5atxhF55I3sq1 "mention")****
-{% endhint %}
+**Sample ID-token**
+```
+header: 
+{
+  "kid": "NOt7BZBkG4nAAX0vE_-S4wT8S5cKUqDTLPOyaTJAu_w",
+  "alg": "RS256"
+}
+```
+```
+payload: 
+{
+  "at_hash": "ggJyqKcuYHdwARpWzeHKMMgDdRRNe61oN6O7xzEuyiY",
+  "sub": "268524736272681240519736297238054502",
+  "aud": "yzLgU7sj8fr2qcqL-MZjwYnl-5ADiClp7Ycj8LiUV5I",
+  "acr": "mosip:idp:acr:generated-code",
+  "auth_time": 1672759590,
+  "iss": "https://api.dev.mosip.net/v1/idp",
+  "exp": 1672766837,
+  "iat": 1672759637,
+  "nonce": "973eieljzng"
+}
+```
+
+**Access Token**
+```
+header: 
+{
+  "kid": "NOt7BZBkG4nAAX0vE_-S4wT8S5cKUqDTLPOyaTJAu_w",
+  "alg": "RS256"
+}
+```
+```
+payload: 
+{
+  "sub": "268524736272681240519736297238054502",
+  "aud": "yzLgU7sj8fr2qcqL-MZjwYnl-5ADiClp7Ycj8LiUV5I",
+  "iss": "https://api.dev.mosip.net/v1/idp",
+  "exp": 1672766837,
+  "iat": 1672759637
+}
+```
 
 ### Retrieving user info
 
