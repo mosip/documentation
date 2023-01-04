@@ -18,6 +18,7 @@ Note: Mock authentication system only supports PIN and OTP. For PIN based login,
     ```
    
 2. Add Persona files. This is the JSON file used to store the mock data of the individuals.
+
      * Set the folder path to look for persona json files in properties.
     ```
     mosip.idp.authn.mock.impl.persona-repo=/home/mosip/mockida
@@ -25,7 +26,7 @@ Note: Mock authentication system only supports PIN and OTP. For PIN based login,
      * The file should be named after the individual's ID.
          For example, filename - 34578673456.json where 34578673456 is the individual's ID.
      * To support PIN based login, pin key must be added at the root level of the persona json.
-     * maskedEmailId & maskedMobile are required for OTP based login.
+     * `maskedEmailId` and `maskedMobile` are required for OTP based login.
 
      ```JSON
                  {      "pin" : "34789",
@@ -129,6 +130,7 @@ Note: Mock authentication system only supports PIN and OTP. For PIN based login,
       ```
    
 4. Set Relying party policy
+
    * Mock authentication service assumes that every relying party will be mapped to a policy (defines kyc attributes & auth types).
    * Before building the user info based on consented claims, the mock-authentication-service validates if the consented claims are part of the policy.
    * Relying party policy json must be defined as below and must be named after the relying party id (input in Create OIDC client endpoint).
