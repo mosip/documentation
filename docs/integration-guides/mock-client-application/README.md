@@ -1,2 +1,2 @@
-# Mock Client Application
+# Mock Relying Party Application
 
