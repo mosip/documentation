@@ -2,7 +2,7 @@
 
 ## Scope
 
-The e-signet testing scope revolves around the flows mentioned below:
+The e-Signet testing scope revolves around the following flows:
 * Login with OTP
 * Login with Biometrics (mock and real device)
 * Multiple instances of e-Signet
