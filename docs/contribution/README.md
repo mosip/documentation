@@ -6,7 +6,7 @@ e-Signet is a product of the combined efforts of multiple stakeholders. Contribu
 
 For code contributions, refer [here](https://docs.mosip.io/identity-provider/aiBOCblAUNtQZjYU1xrS/contribution/code-contribution).
 
-To engage with us on our community forum, visit [here](https://community.mosip.io/c/developer/14).
+To engage with us on our community forum, visit [here](https://community.mosip.io/c/e-signet/15).
 
 {% hint style="danger" %}
 **ToDo from** [Sasikumar Ganesan](https://app.gitbook.com/u/EUqE2RYvx4P6tBURfuCtBR2m7ez1 "mention")****
