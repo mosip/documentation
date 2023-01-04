@@ -17,7 +17,7 @@
   * [Identity Provider](integration-guides/identity-provider.md)
   * [Authentication System](integration-guides/authentication-system-integration.md)
   * [Relying Party](relying-party-integration.md)
-  * [Mock Identity Provider](integration-guides/mock-authentication-system.md)
+  * [Mock Authentication System](integration-guides/mock-authentication-system.md)
   * [Mock Client Application](integration-guides/mock-client-application/README.md)
   * [End User Guide](esignet-end-user-guide.md)
 * [Supported Integrations](integrations/README.md)
