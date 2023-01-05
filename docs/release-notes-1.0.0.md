@@ -8,7 +8,7 @@
 
 ## Overview
 
-The 0.0.9 version of e-Signet is the first beta release which covers essential features such as Login with OTP and Login with biometrics. The subsequent releases will have more features and integration with digital wallet solutions.
+The 0.9.0 version of e-Signet is the first beta release which covers essential features such as Login with OTP and Login with Biometrics. The subsequent releases will have more features and integration with digital wallet solutions.
 
 ## Features Covered
 
@@ -21,8 +21,8 @@ are available as a part of this release.
 
 ## Documentation
 
-* [Feature Documentation](./)
-* [Integration Guides](inetgration-guide.md)
+* [Feature Documentation](architecture/features.md)
+* [Integration Guides](integration-guides/README.md)
 * [End User Guide](esignet-end-user-guide.md)
-* [QA Report](test-report-1.0.0.md)
-* [Videos](release-notes-1.0.0.md)
+* [QA Report](test-report-0.9.0.md)
+
