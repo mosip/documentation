@@ -2,7 +2,7 @@
 
 * e-Signet is envisioned to act as a thin add-on system to any existing digital ID solution to bring in additional capabilities.
 
-* It implements [OpenID Connect](https://openid.net/connect/) and [OAuth 2.0](https://oauth.net/2/) flows which helps the relying party to perform quick and simple integration for user verification.
+* It implements [OpenID Connect](https://openid.net/connect/) flows which helps the relying party to perform quick and simple integrations using pre-existing libraries for user verification.
 
 * The system supports only the secure options in OpenID connect like `authorization code flow` to ensure the resident data is handled securely.
 
