@@ -1,10 +1,10 @@
 # Relying Party
 
-The relying party is an OAuth client who should be able to authenticate the end user and get the user's claims. For availing these [features](architecture/features.md) the relying party needs to partner with an e-Signet-compliant authentication system to register and integrate.
+The relying party is an OAuth client who should be able to authenticate the end user and get the user information. For availing these [features](architecture/features.md), the relying party needs to partner with an e-Signet-compliant authentication system to register and integrate.
 
 ## Pre-requisites
 
-Connect with an identity provider who uses the e-Signet solution for onboarding relying parties. As a part of this activity, you should receive the environment details and register yourself to receive a client ID.
+Connect with an authentication system which uses the e-Signet solution for onboarding relying parties. As a part of this activity, you should receive the environment details and register yourself to receive a client ID.
 
 You can use our sandbox environment to integrate as well. For more details visit our page on [Sandbox Details](sandbox-details/).
 
