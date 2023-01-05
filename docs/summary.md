@@ -1,7 +1,6 @@
 # Table of contents
 
 * [e-Signet](README.md)
-* [Identity Verification](identity-verification.md)
 * [Overview](overview/README.md)
   * [Components](sandbox-details/componets.md)
   * [Features](architecture/features.md)
@@ -23,3 +22,6 @@
 * [Supported Integrations](integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
 * [License](license.md)
+* [Glossary](glossary.md)
+  * [Identity Verification](identity-verification.md)
+
