@@ -1,6 +1,6 @@
 # e-Signet
 
-In these times of digital transformation, most of the services are moving online globally. Personalized access to online services is enabled through usage of a trusted digital identity. **e-Signet** aims to offer a simple yet powerful mechanism for end users to identify themselves to avail online services and also share their profile information. e-Signet supports multiple modes of [identity verification](identity-verification.md) to promote inclusion and increase access, thus narrowing potential digital divides.
+In these times of digital transformation, most of the services are moving online globally. Personalized access to online services is enabled through usage of a trusted digital identity. **e-Signet** aims to offer a simple yet powerful mechanism for end users to identify themselves to avail online services and also share their profile information. e-Signet supports multiple modes of identity verification to promote inclusion and increase access, thus narrowing potential digital divides.
 
 e-Signet also provides an elegant and easy way for an existing trusted identity database to make the identity digital and provision identity verification and service access.
 
@@ -37,7 +37,7 @@ e-Signet relies on [**SBI (Secure Biometric Interface)**](https://standards.ieee
 
 e-Signet will leverage emerging standards for using verifiable credentials with OpenID and for wallet integration.
 
-#### User Centricity
+#### User centricity
 
 Inclusion and access are core objectives of e-Signet. We are mindful of user privacy and the data protections. e-Signet simplifies the user's life and offers flexibility and choices to complete identity verification.
 
