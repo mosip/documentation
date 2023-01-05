@@ -4,13 +4,12 @@
 
 ### **IdP UI**
 
-* Responsible for the following:
-  * User interactions
-  * Forwarding request details received from the relying party through standard OpenID connect endpoints
-  * Redirect to the relying party's web application with relevant details
-  * Interact with the [SBI (Secure Biometric Interface)](https://app.gitbook.com/s/-M1R77ZUwR6XwtPjJIVm/biometrics/mosip-device-service-specification) service running in the local machine to collect encrypted and signed biometric data
+* This is the front-end xxxx and is mainly responsible for the user interactions.
+* It forwards the request details received from the relying party through standard [OpenID connect]() endpoints.
+* It redirects to the relying party's web application with relevant details.
+* IdP UI interacts with the [SBI (Secure Biometric Interface)](https://app.gitbook.com/s/-M1R77ZUwR6XwtPjJIVm/biometrics/mosip-device-service-specification) service running in the local machine to collect encrypted and signed biometric data.
 * Runs on the end user browser and invokes the REST API endpoints of the [IdP service](componets.md#idp-service) component to send and receive details required for user interaction
-* Built using React framework
+* It is built using the React framework.
 
 ### **IdP Service**
 
@@ -20,13 +19,13 @@
   * Expose REST API endpoints for OIDC client management
 * The authentication wrapper library component is provided as a run time dependency by including it in the classpath
 * [IdP core](componets.md#idp-core) and [Key Manager](componets.md#key-manager) components are used as build-time dependencies for various common and crypto functionalities
-* Built using spring boot framework
+* This is built using the spring boot framework.
 
 ### **Key Manager**
 
-* Responsible for secure key management and exposing API for all the cryptography functionalities required by the IdP service component
-* It depends on [HSM (Hardware Security Module)](componets.md#hsm) for the secure storage of keys
-* Typically key manager is run as a service, but it is used as a library in the [IdP service](componets.md#idp-service) to minimize the effort of managing extra containers
+* Responsible for secure key management and exposing API for all the cryptography functionalities required by the IdP service component.
+* It depends on [HSM (Hardware Security Module)](componets.md#hsm) for the secure storage of keys.
+* Typically key manager is run as a service, but it is used as a library in the [IdP service](componets.md#idp-service) to minimize the effort of managing extra containers.
 
 ### **IdP Core**
 
