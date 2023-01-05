@@ -17,9 +17,3 @@ Synergy is our environment where the latest released version of the platform (cu
 
 
 
-TODO: Small video of how to register yourself.
-
-TODO: As of now, we do not have the UI so can we provide the postman scripts or expose the swagger here?
-
-
-
