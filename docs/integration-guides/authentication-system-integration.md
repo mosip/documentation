@@ -69,7 +69,7 @@ public interface AuthenticationWrapper {
 }
 ```
 
-The authentication wrapper implementation class must be annotated with ConditionalOnProperty based on `mosip.idp.authn.wrapper.impl` property as below:
+The Authentication Wrapper implementation class must be annotated with `ConditionalOnProperty` based on `mosip.idp.authn.wrapper.impl` property as below:
 
 ```java
 @ConditionalOnProperty(value = "mosip.idp.authn.wrapper.impl", havingValue = "mock-authentication-service")
