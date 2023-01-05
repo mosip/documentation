@@ -5,7 +5,7 @@ In these times of digital transformation, more and more services are becoming im
 e-Signet also provides an elegant and easy way for an existing trusted identity database, to make the identity digital and provision identity verification and service access. 
 
 {% hint style="info" %}
-There is a need to support lot more verification methods to be inclusive. Current approaches do not address privacy concerns comprehensively. We are constantly looking at ways to bridge the digital divide with better privacy. Here is a short introduction to [identity verification methods](identity-verification). Also check out [Inji](https://app.gitbook.com/s/4EyCrLbFom7vj7UcMIUZ/modules/mobile-application) to understand modern approaches to identity using verifiable credentials for decentralized verification.
+There is a need to support lot more verification methods to be inclusive. Current approaches do not address privacy concerns comprehensively. We are constantly looking at ways to bridge the digital divide with better privacy. Here is a short introduction to [identity verification methods](identity-verification.md). Also check out [Inji](https://app.gitbook.com/s/4EyCrLbFom7vj7UcMIUZ/modules/mobile-application) to understand modern approaches to identity using verifiable credentials for decentralized verification.
 {% endhint %}
 
 
