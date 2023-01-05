@@ -79,13 +79,3 @@ public class MockAuthenticationService implements AuthenticationWrapper {
 ...
 }
 ```
-
-## Plan
-
-#### Case 1
-
-The authentication system has a single endpoint (authenticate and returns KYC)
-
-#### Case 2
-
-The authentication system has an endpoint only to authenticate.
