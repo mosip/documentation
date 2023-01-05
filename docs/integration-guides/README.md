@@ -7,6 +7,6 @@ For more information on how to get started with integrations with e-Signet, read
 1. [Authentication System](integration-guides/authentication-system-integration.md)
 2. [Relying party](relying-party-integration.md)
 3. [Mock Authentication System](integration-guides/mock-authentication-system.md)
-4. [Mock Relying Party](integration-guides/mock-client-application/README.md))
+4. [Mock Relying Party](integration-guides/mock-client-application/README.md)
 5. [End USer Guide](esignet-end-user-guide.md)
 
