@@ -6,7 +6,7 @@
 
 * The system supports only the secure options in OpenID connect like `authorization code flow` to ensure the resident data is handled securely.
 
-* It is integrated with [SBI](https://standards.ieee.org/ieee/3167/10925/) (Secure Biometric Interface) to facilitate secure collection of biometrics for the biometric based user verification
+* It is integrated with [SBI](https://standards.ieee.org/ieee/3167/10925/) (Secure Biometric Interface) to facilitate secure collection of biometrics for the biometric based user verification.
 
 * System supports multiple authentication factors like OTP, Biometrics etc. to be inclusive for all types of people.
 
