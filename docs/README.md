@@ -1,14 +1,19 @@
 # e-Signet
 
-In these times of digital transformation, more and more services are becoming impersonal and moving online globally. Personalized access to online services is enabled through usage of a trusted digital identity. **e-Signet** aims to offer a simple and powerful mechanism for end users to identify themselves to online services and share profile information. e-Signet offers multiple forms of identity verification to promote inclusion and increase access, thus narrowing potential digital divides.
+In these times of digital transformation, more and more services are becoming impersonal and moving online globally. Personalized access to online services is enabled through usage of a trusted digital identity. **e-Signet** aims to offer a simple and powerful mechanism for end users to identify themselves to online services and share profile information. e-Signet supports multiple modes of identity verification to promote inclusion and increase access, thus narrowing potential digital divides.
 
-e-Signet also provides an elegant and easy way for a trusted identity database to make the identity digital and provision identity verification and service access. 
+e-Signet also provides an elegant and easy way for an existing trusted identity database, to make the identity digital and provision identity verification and service access. 
+
+{% hint style="info" %}
+There is a need to support lot more verification methods to be inclusive. Current approaches do not address privacy concerns comprehensively. We are constantly looking at ways to bridge the digital divide with better privacy. Here is a short introduction to [identity verification methods](identity-verification). Also check out [Inji](https://app.gitbook.com/s/4EyCrLbFom7vj7UcMIUZ/modules/mobile-application) to understand modern approaches to identity using verifiable credentials for decentralized verification.
+{% endhint %}
+
 
 ![](.gitbook/assets/e-signet-qr.jpg) ![](.gitbook/assets/e-signet-bio.jpg)
 
 **What can e-Signet be used for?**
 
-* e-Signet can be a login provider for a relying party application to enable access to the service without creating yet another set of userid and password.
+* e-Signet can be a login provider for a relying party application to enable access to the service without creating yet another set of login credentials (username/password combination).
 * e-Signet can be used for assured identity verification of an individual against an identity provider. The identity provider could be a national identity database or a driver's license system or a passport license system or any other trusted identity provider. Assurance level is based on the authentication factor used, with biometric authentication offering user presence assurance.
 * e-Signet can be used for consented data sharing for profile creation or eKYC needs of relying parties. Authentication requests from a relying party can be accompanied by a request for a set of attributes suitable for profile creation or meeting eKYC process norms. The requested information is shared after user provides consent as part of the e-Signet login flow.
 
@@ -17,25 +22,32 @@ e-Signet also provides an elegant and easy way for a trusted identity database t
 e-Signet reimagines authentication services to factor emerging trends and the need for assured digital identities. It brings critical capabilities to the authentication process:
 * Model to integrate existing identity stores for authentication and kyc needs.
 * Support for biometrics authentication.
-* Plan to support wallet based authentication in the near future.
-* Plan to support verifiable credentials in the near future.
+* Support for wallet based authentication in the near future.
+* Support for verifiable credentials in the near future.
 
 
 ### Who can use this?
 
-e-Signet is designed as a simple highly performant system for large-scale inclusive digital verification. The solution does not deal with ID Issuance & ID Lifecycle. Therefore, it can be adopted by anyone who has an ID repository.
+e-Signet is a modern and scalable digital identity verification system. The solution does not deal with ID issuance and lifecycle management. It is meant for use on top of any ID repository with a simple integration model. Any ID repository that offers authentication and attribute fetching can use e-Signet.
 
-### Why should I adopt?
+### e-Signet relies on standards
 
-There are multiple benefits of using e-Signet for the residents, government as well as private organisations.
+e-Signet, implements [**OpenID Connect**](https://openid.net/connect/) and [**OAuth 2.0**](https://oauth.net/2/) flows to work its magic. We have chosen the most secure and trustworthy flow to ensure user privacy and data security.
 
-#### How are the residents benefited?
+e-Signet relies on [**SBI (Secure Biometric Interface)**](https://standards.ieee.org/ieee/3167/10925/) to enable an ecosystem of biometric players. To have a look at the supported devices, click [here](https://docs.mosip.io/1.2.0/biometrics/biometric-devices).
 
-* Easy login to any of the government services using a single credential (as it uses the existing ID repository)
-* Providing their `consent` before allowing the relying party for accessing the personal information (inbuilt consent flow).
-* Allows the user to identify themselves and reduces the efforts of remembering or storing multiple passwords and account details.
+e-Signet will leverage emerging standards for using verifiable credentials with OpenID and for wallet integration.
 
-#### How are the adopters (government/ private) benefitted?
+#### User Centricity
+
+Inclusion and access are core objectives of e-Signet. We are mindful of user privacy and the data protections. e-Signet simplifies the user's life and offers flexibility and choice to complete identity verification.
+
+* One ID to access multiple services. Easy login to any of the integrated government and private sector services using a single identity credential.
+* Mandatory `User Consent` before allowing the relying party for accessing the personal information (inbuilt consent flow).
+* Multiple modes of authentication to complete identity verification.
+* Protect your credentails as there is no need to share your login credentials with the relying party. The login happens on e-Signet.
+
+#### Go digital quickly
 
 * Quick and safe way to expose digital verification across services.
 * Ability to verify the residents with the same assurance as given during registration (OTP, Biometric, Cryptographic key)
@@ -43,22 +55,3 @@ There are multiple benefits of using e-Signet for the residents, government as w
 * Ease of integration to the relying parties as it follows standard-based protocols. (lower time to market)
 * Narrows and bridges the digital divide by enabling multiple modes of verification.
 
-**e-Signet**, which is [OpenID Connect](https://openid.net/connect/) and [OAuth 2.0](https://oauth.net/2/) compliant system and can be used by a relying party to perform quick and simple integration for user verification.
-
-**e-Signet** also uses [SBI (Secure Biometric Interface)](https://standards.ieee.org/ieee/3167/10925/) to enable an ecosystem of biometric players. To have a look at the supported devices, click [here](https://docs.mosip.io/1.2.0/biometrics/biometric-devices).
-
-**What is ID verification?**
-
-ID verification is the process that allows to confirm one's identity and confirm the validity of details to avail various government and private sector services.
-
-Let us understand the different models with their pros and cons.
-
-* **Assisted model** - Where an assistant lends his system or uses it on behalf of the user. In this model, it is important not to use a password for user verification.
-  * Biometric verification - Passwordless and making verification equitable for everyone. Biometric capture is based on [SBI](https://app.gitbook.com/s/-M1R77ZUwR6XwtPjJIVm/biometrics/mosip-device-service-specification). This specification allows a general-purpose biometric device (of course compliant with the specification) to capture anyone's biometrics and verify them. This allows the usage of biometrics beyond the personal device.
-  * OTP - Passwordless but will need access to one's phone. Biometrics in rare cases can reject a valid user. Our OTP solution bridges the divide in these scenarios.
-* **Self Authentication** - Where a user can verify themselves. This is a well-known model and has been in use over the internet.
-  * QR Code - Using a selfie image in a smartphone, you can authenticate locally to your phone and use the enrolled private key to release an authentication token. This mode allows the usage of a personal smartphone as an authenticator.
-
-{% hint style="info" %}
-There is a need to support lot more verification methods to be inclusive. Also, the current approach solves certain privacy concerns but it does not address all of the privacy concerns. We are constantly looking at ways to bridge the digital divide with better privacy. Please refer to [Inji](https://app.gitbook.com/s/4EyCrLbFom7vj7UcMIUZ/modules/mobile-application) to understand some of the innovative methods that are explored around distributed verifiable credentials.
-{% endhint %}
