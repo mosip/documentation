@@ -12,7 +12,7 @@ The recommended Github workflow here is for developers to submit code and docume
 
 ## Setup your development machine
 
-1. Fork repository of interest
+1. Fork repository of interest.
 2.  Clone the fork to your local machine. E.g.:
 
     ```
@@ -39,22 +39,22 @@ The recommended Github workflow here is for developers to submit code and docume
 
 1. Create a new issue in GitHub.
    1. Follow the issue template provided.
-   2. Please provide as much information as possible
-   3. If you want to develop a new feature please elaborate on the idea and discuss the design before starting development.
-2. In your local repository fetch the upstream
+   2. Please provide as much information as possible.
+   3. If you want to develop a new feature, please elaborate on the idea and discuss the design before starting development.
+2. In your local repository, fetch the upstream.
 
 ```
 $ git fetch upstream
 ```
 
-3\. On your local repo switch to a branch if you are working on an older release (like the 0.9.0 branch) or stay in `main/develop` branch.&#x20;
+3\. On your local repo, switch to a branch if you are working on an older release (like the 0.9.0 branch) or stay in `main/develop` branch.&#x20;
 
 ```
 $ git checkout upstream/<branch> 
 ```
 
 {% hint style="info" %}
-You will get a warning from git. So don't worry our next step will take care of this warning.
+You will get a warning from git. Don't worry, our next step will take care of this warning.
 {% endhint %}
 
 4\. Create a new issue branch with the name of the issue.
@@ -93,7 +93,7 @@ $ git pull upstream <branch>
 $ git push --set-upstream origin issue-<issue number>
 ```
 
-10\. On your forked remote repository from GitHub create a pull request using the contribute button. Direct the pull-request to `main` or any specific branch upstream.&#x20;
+10\. On your forked remote repository from GitHub, create a pull request using the Contribute button. Direct the pull-request to `main` or any specific branch upstream.&#x20;
 
 {% hint style="info" %}
 Most often it's the same branch in the upstream (as in Step 3).&#x20;
