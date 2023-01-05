@@ -6,7 +6,7 @@ OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. 
 
 OpenID Connect allows clients of all types, including Web-based, mobile, and JavaScript clients, to request and receive information about authenticated sessions and end-users.
 
-Currently we support only the core functionalities of OpenId Connect to ensure performance at a country scale usage
+Currently, we support only the core functionalities of OpenId Connect to ensure performance at a country scale usage
 
 In OpenID Connect we support only Authorization code flow, as it is most secure way of integration with relying party apps
 
