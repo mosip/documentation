@@ -18,12 +18,12 @@ The Authorization Code Flow returns an Authorization Code to the Client, which c
 
 **Authorization Code Flow Steps**
 
-Client prepares an Authentication Request containing the desired request parameters.
-Client sends the request to the Authorization Server.
-Authorization Server Authenticates the End-User.
-Authorization Server obtains End-User Consent/Authorization.
-Authorization Server sends the End-User back to the Client with an Authorization Code.
-Client requests a response using the Authorization Code at the Token Endpoint.
-Client receives a response that contains an ID Token and Access Token in the response body.
-Client validates the ID token and retrieves the End-User's Subject Identifier.
+* Client prepares an Authentication Request containing the desired request parameters.
+* Client sends the request to the Authorization Server.
+* Authorization Server Authenticates the End-User.
+* Authorization Server obtains End-User Consent/Authorization.
+* Authorization Server sends the End-User back to the Client with an Authorization Code.
+* Client requests a response using the Authorization Code at the Token Endpoint.
+* Client receives a response that contains an ID Token and Access Token in the response body.
+* Client validates the ID token and retrieves the End-User's Subject Identifier.
 <figure><img src="../.gitbook/assets/IdP Diagrams-Page-2 (1).png" alt=""><figcaption></figcaption></figure>
