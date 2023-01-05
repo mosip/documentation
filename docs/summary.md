@@ -1,6 +1,7 @@
 # Table of contents
 
 * [e-Signet](README.md)
+* [Identity Verification](identity-verification.md)
 * [Overview](overview/README.md)
   * [Components](sandbox-details/componets.md)
   * [Features](architecture/features.md)
