@@ -1,6 +1,6 @@
 # e-Signet
 
-In these times of digital transformation, most of the services are becoming impersonal and moving online globally. Personalized access to online services is enabled through usage of a trusted digital identity. **e-Signet** aims to offer a simple yet powerful mechanism for end users to identify themselves to avail online services and share their profile information. e-Signet supports multiple modes of [identity verification](identity-verification.md) to promote inclusion and increase access, thus narrowing potential digital divides.
+In these times of digital transformation, most of the services are becoming impersonal and moving online globally. Personalized access to online services is enabled through usage of a trusted digital identity. **e-Signet** aims to offer a simple yet powerful mechanism for end users to identify themselves to avail online services and also share their profile information. e-Signet supports multiple modes of [identity verification](identity-verification.md) to promote inclusion and increase access, thus narrowing potential digital divides.
 
 e-Signet also provides an elegant and easy way for an existing trusted identity database to make the identity digital and provision identity verification and service access. 
 
@@ -20,7 +20,7 @@ There is a need to support a lot more verification methods to be inclusive. Curr
 **How is e-Signet different from other services?**
 
 e-Signet reimagines authentication services to factor emerging trends and the need for assured digital identities. It brings critical capabilities to the authentication process:
-* Model to integrate existing identity stores for authentication and kyc needs.
+* Model to integrate existing identity stores for authentication and KYC needs.
 * Support for biometrics authentication.
 * Support for wallet based authentication in the near future.
 * Support for verifiable credentials in the near future.
