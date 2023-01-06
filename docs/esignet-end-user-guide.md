@@ -9,7 +9,13 @@ With this release, we support the login flow for the below authentication factor
 1. Login flow for OTP based authentication
 2. Login flow for Biometrics based authentication
 
-> Note: The screenshots and the steps illustrated below are for demonstration purpose only and will change based on the use case.
+Before starting with the login flows, let us understand the following terms:
+
+1. **Essential claims**- These are mandatory user information required by the relying party to be able to provide their services to the residents.
+
+2. **Voluntary claims**- They are additional user information that resident can choose to share to get some add-on features for the service provided by the relying party.
+
+> Note: The screenshots and the steps illustrated below are for demonstration purpose only and are likely to change based on the use case.
 
 ## LOGIN with OTP authentication
 
