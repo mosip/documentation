@@ -2,11 +2,11 @@
 
 The image below is a block diagram of e-Signet comprising of various components alongwith the different layers and external systems.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/idp-component-diagram.jpeg" alt=""><figcaption></figcaption></figure>
 
 ### Relying Party System
 
-The relying party system is any application who would need the verified user information and a unique user login functionality to provide various services online. It depends on OpenID Connect libraries to integrate with e-Signet. 
+The relying party system is any application who would need the verified user information and a unique user login functionality to provide various services online. It depends on OpenID Connect libraries to integrate with e-Signet.
 
 ### **IdP UI**
 
@@ -19,18 +19,18 @@ The relying party system is any application who would need the verified user inf
 
 ### **IdP Service**
 
-* IdP service is the main backend application which has various layers and integrates with multiple components. 
+* IdP service is the main backend application which has various layers and integrates with multiple components.
 * It has a **Service layer** containing the business logic to serve the below API endpoints:
-     * Standard `OpenID Connect API` endpoints for the relying party consumption
-     * REST API endpoints for UI component consumption
-     * REST API endpoints for OIDC client management
+  * Standard `OpenID Connect API` endpoints for the relying party consumption
+  * REST API endpoints for UI component consumption
+  * REST API endpoints for OIDC client management
 * The Service layer is also dependent on Cache layer, Data layer, Key Manager, Authentication Wrapper and IdP Core components.
 * The IdP service also has a **Cache layer** which is responsible for:
-    * Temporarily maintaining the current transaction details with a short expiry time
-    * Providing faster access and update of transaction details
-    * It relies on Spring cache to integrate with a distributed cache. Currently, `Redis` is configured to ensure data sharing across multiple instances of IdP service.
- * The **Data layer** is used to store the relying party client or application details. `Postgres` is used as the current database.
- * This is built using the `Spring Boot` framework.
+  * Temporarily maintaining the current transaction details with a short expiry time
+  * Providing faster access and update of transaction details
+  * It relies on Spring cache to integrate with a distributed cache. Currently, `Redis` is configured to ensure data sharing across multiple instances of IdP service.
+* The **Data layer** is used to store the relying party client or application details. `Postgres` is used as the current database.
+* This is built using the `Spring Boot` framework.
 
 ### Authentication Wrapper
 
@@ -53,8 +53,5 @@ The relying party system is any application who would need the verified user inf
 
 ### **Authentication System**
 
-* This system could be any functional or foundational ID system that contains the resident demographic and biometric information (optional). 
+* This system could be any functional or foundational ID system that contains the resident demographic and biometric information (optional).
 * It facilitates the mechanism to perform identity verification and share the required user information.
-
-
-
