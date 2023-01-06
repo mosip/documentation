@@ -6,7 +6,7 @@ OIDC mock relying party portal is built with reactJS. This consists of 2 compone
 
 1. **OIDC-UI**
 
-UI component consists of login page and the user profile page. Login webpage is built with "Log in with e-Signet" button. On Click of this button user is redirected to authorization endpoint of e-Signet UI. User profile `/userprofile` webpage is crafted to which e-Signet server redirects to after successful authentication with `auth-code`. On load of  Userprofile webpage, `/fetchUserInfo` endpoint of oidc-server is invoked with valid auth-code. 
+UI component consists of login page and the user profile page. Login webpage is built with "Log in with e-Signet" button. On click of this button, the user is redirected to authorization endpoint of e-Signet UI. User profile `/userprofile` webpage is crafted to which e-Signet server redirects to after successful authentication with `auth-code`. On load of  Userprofile webpage, `/fetchUserInfo` endpoint of oidc-server is invoked with valid auth-code. 
     
     Required environment variables:
     - IDP_UI_BASE_URL : Base URL of e-signet UI   
@@ -18,7 +18,7 @@ UI component consists of login page and the user profile page. Login webpage is 
 
 2. **OIDC-Server**
 
-This server only hosts `/fetchUserInfo` endpoint. `/fetchUserInfo` endpoint will build the `client_assertion` and sign with the `PRIVATE_KEY` set as environment variable to invoke `/token` endpoint of e-Signet server. On receiving id-token and access-token from /token endpoint, OIDC-Server invokes `/userinfo` endpoint of e-Signet server to fetch user details.
+This server only hosts `/fetchUserInfo` endpoint. `/fetchUserInfo` endpoint will build the `client_assertion` and sign with the `PRIVATE_KEY` set as environment variable to invoke `/token` endpoint of e-Signet server. On receiving id-token and access-token from `/token` endpoint, OIDC-Server invokes `/userinfo` endpoint of e-Signet server to fetch user details.
 
     Required environment variables:
     - IDP_BASE_URL`: e-signet backend server base URL
