@@ -9,9 +9,12 @@ With this release, we support the login flow for the below authentication factor
 1. Login flow for OTP based authentication
 2. Login flow for Biometrics based authentication
 
+> Note: The screenshots and the steps illustrated below are for demonstration purpose only and will change based on the use case.
+
 ## LOGIN with OTP authentication
 
-Pre-requisite: The resident is registered with MOSIP and has a valid UIN or VID.
+Pre-requisite: The resident is issued with a unique virtual ID for a countries foundation ID.
+               In the below demo application, the resident is registered with MOSIP and has a valid UIN or VID.
 
 1\. Resident clicks `Sign In with MOSIP`. 
 
@@ -56,15 +59,15 @@ The login screen appears and the resident is displayed with the options they can
 
 ![](\_images/idp-login-otp-signin.png)
 
-2\. The resident clicks on `Log in here`.
+2\. The resident clicks on `More Ways to Login`.
 
 ![](\_images/idp-login-bio-loginhere.png)
 
-3\. To get started with login using biometrics, the resident needs to click on `More ways to Login` --> `Login with Biometric`.
+3\. To get started with login using biometrics, the resident clicks `Login with Biometric`.
 
 ![](\_images/idp-login-bio-moreways.png)
 
-4\. Resident needs to enter valid VID in the `Enter Your VID` textfield. Also, they can enter the UIN here.
+4\. Resident needs to enter valid VID in the `Enter Your VID` textfield. 
 
 ![](\_images/idp-login-bio-selecteddevice.png)
 
