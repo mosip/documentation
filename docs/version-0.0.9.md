@@ -25,39 +25,37 @@ are available as part of the releases.
 The current version can be used by the device and biometric SDK vendors to test their SBIs and SDKs.
 
 As a part of the SBI test suite, we support the verification schema and signature verification of,
+
 * Interfaces
-    * Device discovery
-    * Device info
-    * Capture
-    * RCapture
-    
+  * Device discovery
+  * Device info
+  * Capture
+  * RCapture
 * Certification Level
-    * L0
-    * L1
-    
+  * L0
+  * L1
 * Biometric Modalities
-    * Fingerprints
-    * Iris
-    * Face
+  * Fingerprints
+  * Iris
+  * Face
 
 As a part of the SDK test suite in the current version, we support the verification of schema and interface level verification for,
 
 * Interfaces
-    * Initialization
-    * Quality Check
-    * Matcher
-    * Extractor
-    * Converter
-    
+  * Initialization
+  * Quality Check
+  * Matcher
+  * Extractor
+  * Converter
 * Biometric Modalities
-    * Fingerprint
-    * Iris
-    * Face
-    
-The detailed list of the test cases for SBI and SDK in the 0.9.0 version of the Compliance Tool Kit are available here:
+  * Fingerprint
+  * Iris
+  * Face
 
-* [SBI Test Cases](https://github.com/mosip/mosip-compliance-toolkit/blob/0.0.9-B1/resources/compliance_test_definitions_sbi.json)
-* [SDK Test Cases](https://github.com/mosip/mosip-compliance-toolkit/blob/0.0.9-B1/resources/compliance_test_definitions_sdk.json)
+The detailed list of the test cases for SBI and SDK in the 0.9.0 version of the Compliance Tool Kit is available here:
+
+* [SBI Test Cases](https://github.com/mosip/mosip-compliance-toolkit/blob/0.0.9-B1/resources/compliance\_test\_definitions\_sbi.json)
+* [SDK Test Cases](https://github.com/mosip/mosip-compliance-toolkit/blob/0.0.9-B1/resources/compliance\_test\_definitions\_sdk.json)
 
 ## Dependency
 
@@ -75,7 +73,7 @@ The detailed list of the test cases for SBI and SDK in the 0.9.0 version of the 
 
 ## Documentation
 
-* [Feature Documentation](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit)
-* [Compliance Tool Kit User Guide](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/ctk-user-guide)
-* [QA Report](ctk-test-report-0.0.9.md)
-* [Videos](https://www.youtube.com/playlist?list=PLJH-POb_55z8YYS_qAk_QNBQeiQ2VrtZD)
+* [Feature Documentation](./)
+* [Compliance Tool Kit User Guide](user-guide.md)
+* [QA Report](test-report-0.0.9.md)
+* [Videos](https://www.youtube.com/playlist?list=PLJH-POb\_55z8YYS\_qAk\_QNBQeiQ2VrtZD)
