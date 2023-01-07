@@ -1,7 +1,3 @@
----
-coverY: 0
----
-
 # User Guide
 
 This guide will help the partners in using the Compliance Took Kit portal.
