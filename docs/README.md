@@ -4,27 +4,27 @@ Compliance Tool Kit (CTK) is an online portal that can be used by MOSIP partners
 
 Currently, CTK supports testing of compliance with the below specifications:
 
-1. **SBI**: Secure Biometric Interface (SBI) is used to interface with biometric devices. Device partners are required to build a software layer that provides a unified communication protocol for all biometric capture use cases. The specifications that should be followed are defined as Secure Biometrics Interface (SBI) specs. The compliance tool kit ensures that the interface built by the device provider is following the specs, and certain level of security and integrity as defined in the SBI spec. The device hardware security features are not tested as part of this toolkit.
-2. **SDK**: Biometric Service Providers (BSPs) provide SDK implementation which supports quality check, match, extraction, and conversion of biometrics. MOSIP defines an [IBioAPI](https://github.com/mosip/commons/blob/master/kernel/kernel-biometrics-api/src/main/java/io/mosip/kernel/biometrics/spi/IBioApi.java) as the specification for this SDK implementation. Biometric SDK providers are also required to integrate this [http service](https://github.com/mosip/biosdk-services/tree/release-1.2.0) in their solution. This allows to run the SDK as an independant http service. The compliance tool kit would make sure that these interfaces are as per the MOSIP-defined specifications for smooth interaction.
+1. **SBI**: Secure Biometric Interface (SBI) is used to interface with biometric devices. Device partners are required to build a software layer that provides a unified communication protocol for all biometric capture use cases. The specifications that should be followed are defined as Secure Biometrics Interface (SBI) specs. The compliance tool kit ensures that the interface built by the device provider follows the specs, and a certain level of security and integrity is defined in the SBI spec. The device hardware security features are not tested as part of this toolkit.
+2. **SDK**: Biometric Service Providers (BSPs) provide SDK implementation which supports quality check, match, extraction, and conversion of biometrics. MOSIP defines an [IBioAPI](https://github.com/mosip/commons/blob/master/kernel/kernel-biometrics-api/src/main/java/io/mosip/kernel/biometrics/spi/IBioApi.java) as the specification for this SDK implementation. Biometric SDK providers are also required to integrate this [HTTP service](https://github.com/mosip/biosdk-services/tree/release-1.2.0) into their solution. This allows running the SDK as an independent HTTP service. The compliance tool kit would make sure that these interfaces are as per the MOSIP-defined specifications for smooth interaction.
 
 ### How does Compliance Tool Kit work?
 
 * To support compliance with the specifications, CTK has predefined test cases for each of the above specs.
 * Each test case is run on a given method of the specs. Each test case defines the attributes required to create the request to be sent to the method.
-* Each test case also defines the response expected from the method. In this response, various validators are run. Each validator will perform a predefined check on the response. If all validations are successful, then the test case is passed otherwise it is a failed test case.
+* Each test case also defines the response expected from the method. In this response, various validators are run. Each validator will perform a predefined check on the response. If all validations are successful, the test case is passed otherwise it is a failed test case.
 * Partners can use CTK to run these test cases to check if their implementation adheres to the MOSIP’s specs or not.
 
-![Compliance Tool Kit Process Flow Diagram](broken-reference)
+<figure><img src=".gitbook/assets/compliance-toolkit-flow-diagram.png" alt=""><figcaption></figcaption></figure>
 
 ### Compliance Tool Kit Portal
 
-To set up the Compliance Tool Kit, refer [How to set up CTK](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/how-to-guides/ctk-setup-steps).
+To set up the Compliance Tool Kit, refer to [How to set up CTK](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/how-to-guides/ctk-setup-steps).
 
 To use the CTK portal, refer to the [Compliance Tool Kit User Guide](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/ctk-user-guide).
 
 ### Build and deploy
 
-To access the build and read through the deployment instructions, refer to the below mentioned READMEs:
+To access the build and read through the deployment instructions, refer to the below-mentioned READMEs:
 
 1. [Compliance Tool Kit README (backend)](https://github.com/mosip/mosip-compliance-toolkit/tree/develop#readme)
 2. [Compliance Tool Kit UI README](https://github.com/mosip/mosip-compliance-toolkit-ui/tree/develop#readme)
@@ -35,7 +35,7 @@ For details related to the Compliance Tool Kit configurations, refer [Compliance
 
 ### Developer Guide
 
-To be able to add new test cases to CTK, refer [How to add more test cases](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/how-to-guides/ctk-test-cases).
+To be able to add new test cases to CTK, refer to [How to add more test cases](https://docs.mosip.io/1.2.0/modules/compliance-tool-kit/how-to-guides/ctk-test-cases).
 
 ### Source code
 

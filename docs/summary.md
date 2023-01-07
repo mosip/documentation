@@ -9,6 +9,10 @@
   * [How to set up CTK](ctk-setup-steps.md)
   * [How to add more test cases](ctk-test-cases.md)
   * [How to set up SDK for testing](ctk-sdk-setup.md)
+* [License](license.md)
+
+## Specifications
+
 * [Secure Biometric Interface](https://app.gitbook.com/s/-M1R77ZUwR6XwtPjJIVm/biometrics/mosip-device-service-specification)
 * [Biometric SDK Spec](https://app.gitbook.com/s/-M1R77ZUwR6XwtPjJIVm/apis/biometric-sdk-api-specification)
-* [License](license.md)
+* [ABIS Specification](https://app.gitbook.com/s/-M1R77ZUwR6XwtPjJIVm/apis/abis-apis)
