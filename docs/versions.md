@@ -1,4 +1,4 @@
-# CTK Versions
+# Versions
 
 ## Version: 0.0.9
 * Name: CTK 0.0.9
