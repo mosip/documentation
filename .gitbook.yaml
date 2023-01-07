@@ -4,4 +4,4 @@ structure:
     summary: summary.md
 
 redirect:
-    1.2.0/modules/compliance-tool-kit: 1.2.0/biometrics.md
+    modules/compliance-tool-kit: biometrics.md
