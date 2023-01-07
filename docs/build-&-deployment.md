@@ -1,36 +1,17 @@
 # Build & Deployment
 
-## Build
+The developer guide for building and running various components of e-Signet is available in their respective repositories as mentioned below.
 
 ### Repositories
 
-* [Service](https://github.com/mosip/idp/tree/develop)
-* [UI](https://github.com/mosip/idp-ui/tree/develop)
-
-### Prerequisite
-
-
-
-### Command to build
-
-
+* [IdP Service](https://github.com/mosip/idp/tree/0.9.0)
+* [IdP UI](https://github.com/mosip/idp-ui/tree/0.9.0)
+* [Mock OIDC Client](https://github.com/mosip/oidc-demo-portal/tree/0.9.0)
 
 ### Published artifacts
 
+* mosipid/idp:0.9.0
+* mosipid/idp-ui:0.9.0
+* mosipid/oidc-ui:0.9.0
+* mosipid/oidc-server:0.9.0
 
-
-Can I use the dockers directly?
-
-How can I run it on my development machine?
-
-## Deployment
-
-Prerequisite
-
-How to deploy?
-
-How to scale
-
-How to configure
-
-How to test
