@@ -5,7 +5,7 @@
   * [Version 0.0.9](version-0.0.9.md)
     * [Test Report](test-report-0.0.9.md)
 * [User Guide](user-guide.md)
-* How to Guides
+* [How to Guides](how-to-guides/README.md)
   * [How to set up CTK](setup-steps.md)
   * [How to add more test cases](test-cases.md)
   * [How to set up SDK for testing](sdk-setup.md)
