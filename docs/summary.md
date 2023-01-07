@@ -23,4 +23,3 @@
 * [License](license.md)
 * [Glossary](glossary.md)
   * [Identity Verification](identity-verification.md)
-
