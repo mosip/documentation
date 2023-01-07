@@ -66,6 +66,7 @@
   * [SBI Specification](Secure-Biometric-Interface-Specification.md)
   * [Biometric Specification](Biometric-Specification.md)
   * [CBEFF XML](CBEFF-XML.md)
+  * [Compliance Tool Kit](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/OrxzFOqLUpvxyg8Kvdlg/)
 * [Build & Deploy](build-and-deploy/README.md)
   * [Sandbox Installer](Sandbox-Installer.md)
   * [Deployment Architectures](Deployment-Architectures.md)
