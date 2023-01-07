@@ -3,3 +3,5 @@ root: ./docs/
 structure:
     summary: summary.md
 
+redirect:
+    modules/compliance-tool-kit: compliance-tool-kit
