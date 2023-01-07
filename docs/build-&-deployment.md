@@ -1,8 +1,8 @@
 # Build & Deployment
 
-## Build
+The developer guide for building and running various components of e-Signet is available in their respective repositories as mentioned below.
 
-### Command to build
+## Command to build
 
 Building [IdP-service](https://github.com/mosip/idp/tree/0.9.0):
     - Prerequisite
@@ -22,6 +22,13 @@ Building [IdP-UI](https://github.com/mosip/idp-ui/tree/0.9.0):
       - node v16.13.2 or higher
       - Run command `npm run build` to build the project.
       - After successful build, the complete JS bundle with public files will be available under idp-ui/build folder
+
+Building [Mock OIDC client](https://github.com/mosip/oidc-demo-portal/tree/0.9.0):
+    - Prerequisite
+      - npm 8.1.2 or higher
+      - node v16.13.2 or higher
+      - Run command `npm run build` to build the project.
+      - After successful build, the complete JS bundle with public files will be available under oidc-demo-portal/build folder
     
 ### Published artifacts
 
