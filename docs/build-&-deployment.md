@@ -11,7 +11,7 @@ The developer guide for building and running various components of e-Signet is a
     * Java 11
     * Apache Maven 3.8.6
     
-* Run the command `mvn clean install -Dgpg.skip=true` to build the project, skipping the build signing.
+* Run the command `mvn clean install -Dgpg.skip=true` to build the project (skipping the build signing).
 
 * After successful build, the below artifacts will be available under target folder of each module:
 
@@ -29,7 +29,7 @@ The developer guide for building and running various components of e-Signet is a
      * node v16.13.2 or higher
 
 * Run command `npm run build` to build the project.
-* After successful build, the complete JS bundle with public files will be available under `idp-ui/build` folder
+* After successful build, the complete JS bundle with public files will be available under `idp-ui/build` folder.
 
 ### Building [Mock OIDC client](https://github.com/mosip/oidc-demo-portal/tree/0.9.0)
 
@@ -38,7 +38,7 @@ The developer guide for building and running various components of e-Signet is a
     * node v16.13.2 or higher
 
 * Run command `npm run build` to build the project.
-* After successful build, the complete JS bundle with public files will be available under oidc-demo-portal/build folder
+* After successful build, the complete JS bundle with public files will be available under `oidc-demo-portal/build` folder.
     
 ### Published artifacts
 
