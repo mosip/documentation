@@ -34,6 +34,7 @@ The developer guide for building and running various components of e-Signet is a
 ### Building [Mock OIDC client](https://github.com/mosip/oidc-demo-portal/tree/0.9.0)
 
 **Prerequisite**
+
     * npm 8.1.2 or higher
     * node v16.13.2 or higher
 
