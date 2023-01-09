@@ -8,3 +8,17 @@ e-Signet also provides an elegant and easy way for an existing trusted identity 
 There is a need to support more verification methods to be inclusive. Current approaches do not address privacy concerns comprehensively. We are constantly looking at ways to bridge the digital divide with better privacy. Here is a short introduction to [identity verification](identity-verification.md) methods. Also, do check out [Inji](https://app.gitbook.com/s/4EyCrLbFom7vj7UcMIUZ/modules/mobile-application) to understand modern approaches to identity using verifiable credentials for decentralized verification.
 {% endhint %}
 
+![](_images/e-signet-qr.jpg) ![](_images/e-signet-bio.jpg)
+
+**What can e-Signet be used for?**
+
+* e-Signet can be a login provider for a relying party application to enable access to the service without creating yet another set of login credentials (username/password combination).
+* e-Signet can be used for assured identity verification of an individual against an identity provider. The identity provider could be a national identity database/ driver's license system/ passport license system or any other trusted identity provider. The assurance level is based on the authentication factor used, with biometric authentication offering user presence assurance.
+* e-Signet can be used for consented data sharing for profile creation or eKYC needs of relying parties. Authentication requests from a relying party can be accompanied by a request for a set of attributes suitable for profile creation or meeting eKYC process norms. The requested information is shared after the user provides consent as part of the e-Signet login flow.
+
+To know more about e-Signet, its features, components, integrations etc., read through the [e-Signet documentation](https://docs.esignet.io/).
+
+To know more about integrations with MOSIP, refer the following documents:
+
+* [IDA as authentication system]()
+* [Client management with PMS]()
