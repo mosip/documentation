@@ -68,6 +68,37 @@ At times, when the resident/user does not have their UIN/ VID, but they possess 
 
 ## Sharing Credentials
 
+Prerequisites:
+
+* Two or more devices with the Resident Mobile app installed are required for sharing credentials.
+* All required permissions like Bluetooth, location and camera access are enabled on both the devices.
+* The parties involved are mostly likely to be a Resident who would want to share their credentials with a Relying party (can be with a banker/ health worker/ etc).
+
+
+Let us understand sharing of credentials with an example. Assuming that a Resident is wants to share their credentials with a Relying/ requesting party on the receiver's phone. The steps that both the parties have to follow is illustrated below:
+
+1. Enable required permissions on both devices to get started.
+
+![](\_images/inji-sv-flow1.png)
+
+2. Connectivity details displayed on the Sharing and Requesting device.
+
+![](\_images/inji-sv-flow2.png)
+
+3. Once the connection is made, the `Sharing ID` screen is displayed on the Resident' phone with the name of the Requesting device. Here, the sharing party can enter the reason for sharing their credentials and tap on `Accept request and choose ID`.
+
+
+![](\_images/inji-sv-flow3.png)
+
+4. Incoming VC on reuested device
+
+![](\_images/inji-sv-flow4.png)
+
+5. Success pop up message after VC share: Sharing & Requesting Device:
+
+
+![](\_images/inji-sv-flow5.png)
+
 ## Face authentication flow
 
 Below are the steps for performing face authentication on resident' phone using Inji.
