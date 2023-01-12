@@ -2,17 +2,17 @@
 
 MOSIP releases the below mentioned artifacts in open source:
 
-* Jars: Artifacts released into Maven Central Repository after sucessfull compilation of tagged code from all Mosip repositories.
+* [Jars](https://repo1.maven.org/maven2/io/mosip/) : Artifacts released into Maven Central Repository after sucessfull compilation of tagged code from all Mosip repositories.
 
-* Docker images: Docker images for all MOSIP services.
+* [Docker images](https://hub.docker.com/search?q=mosipid) : Docker images for all MOSIP services.
 
 * MOSIP helm: Packaged charts for each and every MOSIP services. 
 
 > helm repo add mosip https://mosip.github.io/mosip-helm
 
-* K8s Infra: Scripts to create [kubernetes]() cluster and configure it for MOSIP.
+* K8s Infra: Scripts to create [kubernetes](https://kubernetes.io/) cluster and configure it for MOSIP.
 
-* Deployment scripts: These scripts are a part of `mosip-infra` to install the helm charts in a desired sequence.
+* Deployment scripts: These scripts are a part of [mosip-infra](https://github.com/mosip/mosip-infra) to install the helm charts in a desired sequence.
 
 ## MOSIP Installations
 
