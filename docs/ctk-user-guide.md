@@ -116,6 +116,13 @@ Possible values for the Purpose attribute in SDK are:
 * Extract Template
 * Convert Format
 
+### Download Encryption Key
+
+* Once the project is created by the partner, they can download the **encryption key**.
+
+* Partner can download encryption key for **Auth** devices.
+
+![](_images/ctk-encryptionkey.png)
 ### View a specific project  
    
 Details of a specific project can be viewed 
