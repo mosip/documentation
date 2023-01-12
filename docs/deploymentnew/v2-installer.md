@@ -1,4 +1,4 @@
-# V2 Installer
+# MOSIP V2 Installation
 
 **Version**: 1.1.5.5
 
