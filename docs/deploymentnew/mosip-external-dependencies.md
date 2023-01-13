@@ -26,7 +26,7 @@ cd $INFRA_ROOT/deployment/v3/external/postgres
 ./install.sh
 ~~~
 
-* Initialise Postgres DB:
+* Initialize Postgres DB:
 
 ~~~
 cd $INFRA_ROOT/deployment/v3/external/postgres
@@ -37,4 +37,102 @@ Opt for yes and enter **Y**.
 
 ### Keycloak
 
+* Install Keycloak
 
+```
+cd $INFRA_ROOT/deployment/v3/external/iam
+./install.sh
+```
+
+* Initialize Keycloak:
+
+```
+cd $INFRA_ROOT/deployment/v3/external/iam
+./keycloak_init.sh
+```
+
+### Setup SoftHSM
+
+```
+cd $INFRA_ROOT/deployment/v3/external/hsm/softhsm
+./install.sh
+```
+
+### Setup Object store
+
+MinIO installation:
+
+```
+cd $INFRA_ROOT/deployment/v3/external/object-store/minio
+./install.sh
+```
+### S3 Credentials setup
+
+```
+cd $INFRA_ROOT/deployment/v3/external/object-store/
+./cred.sh
+```
+
+* Opt **1** for MinIO
+* Opt **2** for S3 (incase you are not going with MinIO installation and want s3 to be installed)
+    * Enter the prompted details.
+
+### ClamAV setup
+
+```
+cd $INFRA_ROOT/deployment/v3/external/antivirus/clamav
+./install.sh
+```
+
+### ActiveMQ setup
+
+```
+cd $INFRA_ROOT/deployment/v3/external/activemq
+./install.sh
+```
+
+### Kafka setup
+
+```
+cd $INFRA_ROOT/deployment/v3/external/kafka
+./install.sh
+```
+
+### BioSDK Server setup
+
+Reference implementation of Biometric SDK server will be installed separately in MOSIP service installation section as the same is dependent on artifactory which is a MOSIP component.
+
+### ABIS
+
+ABIS is needed to be up and running outside the MOSIP cluster and should be able to connect to the activeMQ. For testing purpose, MOSIP has provided a mock stimulator for the same named as mock-abis which will be deployed as part of the MOSIP services installation.
+
+### MSG Gateway
+
+```
+cd $INFRA_ROOT/deployment/v3/external/msg-gateway
+./install.sh
+```
+* MOSIP provides `mock smtp server` which will be installed as part of default istallation, opt for Y.
+
+### Docker Secrets
+
+```
+cd $INFRA_ROOT/deployment/v3/external/docker-secrets
+./install.sh
+```
+Incase the images are getting pulled from private repositories.
+
+### Captcha
+
+```
+cd $INFRA_ROOT/deployment/v3/external/msg-gateway
+./install.sh
+```
+To setup the captcha for pre-reg and resident domains.
+
+### Landing page setup
+
+```
+cd $INFRA_ROOT/deployment/v3/external/landing-page
+./install.sh
+```
