@@ -1,16 +1,18 @@
 # Client Management with PMS
 
 
-1. e-Signet is onboarded as MISP partner in MOSIP system with below policy
+1. e-Signet is onboarded as MISP partner in MOSIP system with the below policy:
+
    ```json lines
     {
     "allowAuthRequestDelegation": true,
     "allowKycRequestDelegation":true
     }
     ```
-2. License key of the MISP partner must be updated in the idp-default.properties. Property name : `mosip.idp.misp.license.key`
+2. License key of the MISP partner must be updated in the `idp-default.properties`. Property name : `mosip.idp.misp.license.key`
 3. Create and Update of OIDC clients are managed via PMS.
-4. Relying party is onboarded as a Auth partner. Auth partner is required to have below allowed auth-types in the policy.
+4. Relying party is onboarded as a Auth partner. Auth partner is required to have the below allowed auth-types in the policy.
+
    ```json lines
    { "allowedAuthTypes" : [
                            {"authSubType":"","authType":"kycauth","mandatory":false},
@@ -40,7 +42,7 @@
 
    https://github.com/mosip/mosip-config/blob/develop-v3/amr-acr-mapping.json
 
-## Sample auth-policy of a relying party:
+## Sample auth-policy of a relying party
 
 ```json lines
 {"authTokenType":"policy",
