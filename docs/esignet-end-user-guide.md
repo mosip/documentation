@@ -16,7 +16,7 @@ Before starting with the login flows, let us understand the following terms:
 
 > Note: The screenshots and the steps illustrated below are for demonstration purpose only and are likely to change based on the use case.
 
-## LOGIN with OTP authentication
+## Log in with OTP authentication
 
 Pre-requisite: The resident is issued with a unique virtual ID for a country's foundation ID. In the below demo application, the resident is registered with MOSIP and has a valid UIN or VID.
 
@@ -56,7 +56,7 @@ The login screen appears and the resident is displayed with the options they can
 
 ![](.gitbook/assets/test-docs.png)
 
-## LOGIN with Biometrics
+## Log in with Biometrics
 
 1\. Resident clicks on "Sign In with MOSIP". They are navigated to the login screen where they can choose the way they want to log in.
 
