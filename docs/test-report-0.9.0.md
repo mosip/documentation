@@ -9,7 +9,7 @@ The e-Signet testing scope revolves around the following flows:
 * Login with OTP
 * Login with Biometrics (mock and real device)
 * Multiple instances of e-Signet
-* Cross browser testing: e-Signet flow verification in different browsers (Chrome, Microsoft edge, Firefox, Opera, Safari)
+* Cross-browser testing: e-Signet flow verification in different browsers (Chrome, Microsoft Edge, Firefox, Opera, Safari)
 
 ## Test Execution Statistics
 
@@ -20,7 +20,7 @@ The e-Signet testing scope revolves around the following flows:
   * Passed: 386
   * Failed: 9
   * Skipped: 6
-* Test Rate: 98% With Pass Rate : 97%
+* Test Rate: 98% With Pass Rate: 97%
 
 #### Device Based Testing
 
@@ -28,7 +28,7 @@ The e-Signet testing scope revolves around the following flows:
   * Passed: 11
   * Failed: 1
   * Skipped: 0
-* Test Rate : 100% With Pass Rate : 91%
+* Test Rate: 100% With Pass Rate: 91%
 
 #### API Testing
 
