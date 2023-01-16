@@ -1,6 +1,6 @@
 # IDA as Authentication System
 
-IDA is integrated as authentication system in e-Signet services with below 2 endpoints.
+IDA is integrated as authentication system in e-Signet services with the below 2 endpoints.
 1. kyc-auth endpoint
     ## TODO - add stoplight doc here 
 2. kyc-exchange endpoint
@@ -10,11 +10,10 @@ IDA is integrated as authentication system in e-Signet services with below 2 end
 
 ## Configurations
 
-1. To get the mapping of OIDC claims with MOSIP KYC-attributes.
+1. To get the mapping of OIDC claims with MOSIP KYC-attributes, refer [here](https://github.com/mosip/mosip-config/blob/develop-v3/identity-mapping.json).
 
-   https://github.com/mosip/mosip-config/blob/develop-v3/identity-mapping.json
-2. To get the mapping of auth types in policy with ACR values.
 
-   https://github.com/mosip/mosip-config/blob/develop-v3/amr-acr-mapping.json
+2. To get the mapping of auth types in policy with ACR values, refer [here]( https://github.com/mosip/mosip-config/blob/develop-v3/amr-acr-mapping.json).
 
+  
 
