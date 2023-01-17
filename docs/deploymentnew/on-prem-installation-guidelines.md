@@ -116,3 +116,89 @@ helm repo add mosip https://mosip.github.io/mosip-helm
     `source .bashrc`
     
     >Note: Above mentioned environment variables will be used throughout the installation to move between one directory to other to run install scripts.
+
+### Installation
+
+#### Wireguard
+
+A Wireguard bastion host (Wireguard server) provides secure private channel to access MOSIP cluster. The host restricts public access, and enables access to only those clients who have their public key listed in Wireguard server. Wireguard listens on UDP port51820.
+
+_(Link to architecture diagram) TODO_
+
+#### Setup Wireguard VM and wireguard bastion server:
+
+* Create a Wireguard server VM with above mentioned Hardware and Network requirements.
+
+* Open ports and Install docker on Wireguard VM.
+
+    * cd $K8_ROOT/wireguard/
+
+    * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for wireguard VM<br>
+
+         `cp hosts.ini.sample hosts.ini`
+
+    * execute ports.yml to enable ports on VM level using ufw:
+
+       `ansible-playbook -i hosts.ini ports.yaml`
+       
+> Note: These ports are only needed to be opened for sharing packets over UDP. Take necessary measure on firewall level so that the Wireguard server can be reachable on 51820/udp.<br>
+
+    * execute docker.yml to install docker and add user to docker group:
+
+        `ansible-playbook -i hosts.ini docker.yaml`
+        
+* Setup Wireguard server
+    * SSH to wireguard VM
+    * reate directory for storing wireguard config files.<br>
+    `mkdir -p wireguard/config`
+    * Install and start wireguard server using docker as given below:
+    ```
+    sudo docker run -d \
+   --name=wireguard \
+   --cap-add=NET_ADMIN \
+   --cap-add=SYS_MODULE \
+   -e PUID=1000 \
+   -e PGID=1000 \
+   -e TZ=Asia/Calcutta\
+   -e PEERS=30 \
+   -p 51820:51820/udp \
+   -v /home/ubuntu/wireguard/config:/config \
+   -v /lib/modules:/lib/modules \
+   --sysctl="net.ipv4.conf.all.src_valid_mark=1" \
+   --restart unless-stopped \
+   ghcr.io/linuxserver/wireguard
+    ````
+    
+> Note: 
+* Increase the no. of peers above in case needed more than 30 wireguard client confs (`-e PEERS=30`).
+* Change the directory to be mounted to wireguard docker in case needed. 
+   All your wireguard confs will be generated in the mounted directory (`-v /home/ubuntu/wireguard/config:/config`).
+   
+   
+#### Setup Wireguard Client in your PC
+
+* Install Wireguard client in your PC.
+* Assign `wireguard.conf`:
+    * SSH to the wireguard server VM.
+    * `cd /home/ubuntu/wireguard/config`
+    * assign one of the PR for yourself and use the same from the PC to connect to the server.
+        * create `assigned.txt` file to assign the keep track of peer files allocated and update everytime some peer is allocated to someone.
+        ```
+        peer1 :   peername
+        peer2 :   xyz
+        ```
+        * use `ls` cmd to see the list of peers.
+        * get inside your selected peer directory, and add mentioned changes in `peer.conf`: 
+            * `cd peer1`
+            * `nano peer1.conf`
+                * Delete the DNS IP.
+                * Update the allowed IP's to subnets CIDR ip . e.g.  10.10.20.0/23
+            * Share the updated `peer.conf` with respective peer to connect to wireguard server from Personel PC.
+* add `peer.conf` in your PC’s `/etc/wireguard` directory as `wg0.conf`.
+*  start the wireguard client and check the status:
+```
+sudo systemctl start wg-quick@wg0
+sudo systemctl status wg-quick@wg0
+```
+* Once connected to wireguard, you should be now able to login using private IP’s.
+
