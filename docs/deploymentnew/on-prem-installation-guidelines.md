@@ -45,9 +45,33 @@
 
 **Pre-requisites**:
 
-**Hardware Requirement**
+**Hardware Requirements**
 
 * VM’s required can be with any OS as per convenience. 
 * Here, we are referting to Ubuntu OS throughout this installation guide.
 
+| Sl no.|  Purpose               | vCPU's   | RAM      | Storage (HDD) | no. ofVM's  | HA  |
+|-------|------------------------|----------|----------|---------------|-------------|-----|
+| 1.    | Wireguard Bastion Host  |  2    | 4 GB     |   8 GB        |     1       |(ensure to setup active-passive)|
+| 2.    | Rancher Cluster nodes   |  2 | 8 GB      | 32 GB    |  2   | 2  |
+| 3.    | Rancher Nginx server (use Loadbalancer if required)  | 2  |  4 GB     | 16 GB    |  2   | Nginx+ |
+| 4.   |MOSIP Cluster nodes    | 2  |   32 GB    |  128 GB   |  6   | 6  |
+| 5. |MOSIP Nginx server ( use Loadbalancer if required)  | 2  | 4 GB      | 16 GB    |  1   | Nginx+ |
 
+**Network Requirements:**
+
+* All the VM's should be able to communicate with each other.
+
+* Need stable Intra network connectivity between these VM's.
+
+* All the VM's should have stable internet connectivity for docker image download (in case of local setup ensure to have a locally accesible docker registry).
+
+* Server Interface requirement as mentioned in below table:
+
+| Sl no.|  Purpose               | Network Interfaces                           |
+|-------|------------------------|----------------------------------------------|
+|1.     |Wireguard Bastion Host| * One Private interface: that is on the same network as all the rest of nodes (eg: inside local NAT Network). * One public interface: Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 51820/udp port to this interface IP.|
+|2.     | K8 Cluster nodes | One internal interface: with internet access and that is on the same network as all the rest of nodes (eg: inside local NAT Network )|
+|3.     | Rancher Nginx server | One internal interface: with internet access and that is on the same network as all the rest of nodes (eg: inside local NAT Network). |
+|4. |Mosip Nginx server| * One internal interface: that is on the same network as all the rest of nodes (eg: inside local NAT Network ).
+* One public interface: Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 443/tcp port to this interface IP.|
