@@ -45,7 +45,7 @@
 
 **Pre-requisites**:
 
-**Hardware Requirements**
+#### Hardware Requirements
 
 * VM’s required can be with any OS as per convenience. 
 * Here, we are referting to Ubuntu OS throughout this installation guide.
@@ -58,7 +58,7 @@
 | 4.   |MOSIP Cluster nodes    | 2  |   32 GB    |  128 GB   |  6   | 6  |
 | 5. |MOSIP Nginx server ( use Loadbalancer if required)  | 2  | 4 GB      | 16 GB    |  1   | Nginx+ |
 
-**Network Requirements:**
+#### Network Requirements
 
 * All the VM's should be able to communicate with each other.
 
@@ -70,9 +70,49 @@
 
 | Sl no.|  Purpose               | Network Interfaces                           |
 |-------|------------------------|----------------------------------------------|
-|1.     |Wireguard Bastion Host| _One Private interface_ : that is on the same network as all the rest of nodes (eg: inside local NAT Network).<br><br>_One public interface_ : Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 51820/udp port to this interface IP.|
-|2.     | K8 Cluster nodes | One internal interface: with internet access and that is on the same network as all the rest of nodes (eg: inside local NAT Network )|
-|3.     | Rancher Nginx server | One internal interface: with internet access and that is on the same network as all the rest of nodes (eg: inside local NAT Network). |
-|4. |Mosip Nginx server| _One internal interface_ : that is on the same network as all the rest of nodes (eg: inside local NAT Network).<br><br>_One public interface_ : Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 443/tcp port to this interface IP.|
+|1.     |Wireguard Bastion Host| _One Private interface_ : that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br>_One public interface_ : Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 51820/udp port to this interface IP.|
+|2.     | K8 Cluster nodes | One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network )|
+|3.     | Rancher Nginx server | One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network). |
+|4. |Mosip Nginx server| _One internal interface_ : that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br>_One public interface_ : Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 443/tcp port to this interface IP.|
 
-**DNS Requirements:**
+#### DNS Requirements:
+
+TO DO
+
+
+#### Certificate requirements
+
+As only secured https connections are allowed via nginx server will need below mentioned valid ssl certificates:
+
+* One valid wildcard ssl certificate related to domain used for accesing Rancher cluster, this needs to be stored inside the nginx server VM for rancher cluster. In above e.g.: *.org.net is the similiar example domain.
+
+* One valid wildcard ssl certificate related to domain used for accesing Mosip cluster, this needs to be stored inside the nginx server VM for mosip cluster. In above e.g.: *.sandbox.xyz.net is the similiar example domain.
+
+**Tools to be installed in Personel Computers for complete deployment**
+
+* [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl)- any client version above 1.19
+
+* [helm](https://helm.sh/docs/intro/install/)- any client version above 3.0.0 and add below repos as well:
+
+```
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo add mosip https://mosip.github.io/mosip-helm
+```
+* [Istioctl](https://istio.io/latest/docs/setup/getting-started/#download) : version: 1.15.0
+* [rke](https://rancher.com/docs/rke/latest/en/installation/) : version: [1.3.10](https://github.com/rancher/rke/releases/tag/v1.3.10)
+* [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html: version > 2.12.4
+* Create a directory as mosip in your PC and:
+    * clone k8’s infra repo with tag : 1.2.0.1-B2 inside mosip directory.<br>
+      `git clone https://github.com/mosip/k8s-infra  -b v1.2.0.1-B2`
+    * clone mosip-infra with tag : 1.2.0.1-B2 inside mosip directory.<br>
+      `git clone https://github.com/mosip/mosip-infra -b v1.2.0.1-B2`
+    * Set below mentioned variables in bashrc
+    
+    ```
+    export MOSIP_ROOT=<location of mosip directory>
+    export K8_ROOT=$MOSIP_ROOT/k8s-infra
+    export INFRA_ROOT=$MOSIP_ROOT/mosip-infra
+    ```
+    `source .bashrc`
+    
+    >Note: Above mentioned environment variables will be used throughout the installation to move between one directory to other to run install scripts.
