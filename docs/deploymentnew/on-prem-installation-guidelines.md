@@ -70,8 +70,9 @@
 
 | Sl no.|  Purpose               | Network Interfaces                           |
 |-------|------------------------|----------------------------------------------|
-|1.     |Wireguard Bastion Host| * One Private interface: that is on the same network as all the rest of nodes (eg: inside local NAT Network). * One public interface: Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 51820/udp port to this interface IP.|
+|1.     |Wireguard Bastion Host| _One Private interface_ : that is on the same network as all the rest of nodes (eg: inside local NAT Network).<br><br>_One public interface_ : Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 51820/udp port to this interface IP.|
 |2.     | K8 Cluster nodes | One internal interface: with internet access and that is on the same network as all the rest of nodes (eg: inside local NAT Network )|
 |3.     | Rancher Nginx server | One internal interface: with internet access and that is on the same network as all the rest of nodes (eg: inside local NAT Network). |
-|4. |Mosip Nginx server| * One internal interface: that is on the same network as all the rest of nodes (eg: inside local NAT Network ).
-* One public interface: Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 443/tcp port to this interface IP.|
+|4. |Mosip Nginx server| _One internal interface_ : that is on the same network as all the rest of nodes (eg: inside local NAT Network).<br><br>_One public interface_ : Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 443/tcp port to this interface IP.|
+
+**DNS Requirements:**
