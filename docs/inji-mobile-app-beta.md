@@ -90,14 +90,23 @@ Let us understand sharing of credentials with an example. Assuming that a Reside
 
 ![](\_images/inji-sv-flow3.png)
 
-4. Incoming VC on reuested device
+4. Incoming VC on requested device. Relying party can tap `Accept request and receive ID` to receive the VC.
 
 ![](\_images/inji-sv-flow4.png)
 
-5. Success pop up message after VC share: Sharing & Requesting Device:
-
+5. Success message displayed on the Sharing and Requesting device after successful VC share.
 
 ![](\_images/inji-sv-flow5.png)
+
+6. The `History` tab on the devices displays the details of the activities performed.
+
+For instance,
+
+On the Resident' phone, the `History` tab displays the history of the shared credentials.
+
+On the Relying party' phone, the `History` tab shows the history of the received credentials.
+
+![](\_images/inji-sv-history.png)
 
 ## Face authentication flow
 
