@@ -111,6 +111,7 @@
       * [Developer Guide 1.1](integrations/mosip-token-seeder/mts-developer-guides/mosip-token-seeder-api-1.md)
     * [MTS Connector](mts-odk-importer.md)
     * [OpenG2P-registry MTS Connector](integrations/mosip-token-seeder/openg2p-registry-mts-connector.md)
+  * [MOSIP e-Signet](e-signet.md) 
 * [API](https://mosip.github.io/documentation/1.2.0/1.2.0.html)
 * [Community](community/README.md)
   * [Contributions](contributions.md)
