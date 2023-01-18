@@ -9,15 +9,13 @@ IDA is integrated as authentication system in e-Signet services with the below t
 
 ## Configurations
 
-1. To get the mapping of OIDC claims with MOSIP KYC-attributes, click [here]().
+1. To get the mapping of OIDC claims with MOSIP KYC-attributes, click [here](https://github.com/mosip/mosip-config/blob/develop-v3/identity-mapping.json).
 
-   https://github.com/mosip/mosip-config/blob/develop-v3/identity-mapping.json
-   
-2. To get the mapping of auth types in policy with ACR values.
+  
+2. To get the mapping of auth types in policy with ACR values, click [here](https://github.com/mosip/mosip-config/blob/develop-v3/amr-acr-mapping.json).
 
-   https://github.com/mosip/mosip-config/blob/develop-v3/amr-acr-mapping.json
 
-3. Below configurations are required to be set in `idp-default.properties`.
+3. Below configurations are required to be set in `idp-default.properties`.<br>
 
    IdP-service will be onboarded as MISP partner
    ```
