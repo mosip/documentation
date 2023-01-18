@@ -282,11 +282,20 @@ sudo systemctl status wg-quick@wg0
    * Copy the kubeconfig files
     ```
    cp kube_config_cluster.yml $HOME/.kube/<cluster_name>_config
-chmod 400 $HOME/.kube/<cluster_name>_config
-
-
-   
-
+   chmod 400 $HOME/.kube/<cluster_name>_config
+   ```
+   * To access the cluster using `kubeconfig` file use any one of the below method:
+       * `cp  $HOME/.kube/<cluster_name>_config  $HOME/.kube/config`<br>
+      **Alternatively**
+       * `export KUBECONFIG="$HOME/.kube/<cluster_name>_config`
+   * Test cluster access:
+       * `kubect get nodes`
+           * Command will result in details of the nodes of the rancher cluster.
+   * Save your files
+       * Save a copy of the following files in a secure location, they are needed to maintain, troubleshoot and upgrade your cluster.
+           * `cluster.yml`: The RKE cluster configuration file.
+           * `kube_config_cluster.yml`: The [Kubeconfig file](https://rancher.com/docs/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
+           * `cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains credentials for full access to the cluster.
 
 
 
