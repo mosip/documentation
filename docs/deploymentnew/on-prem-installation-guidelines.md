@@ -204,7 +204,7 @@ sudo systemctl status wg-quick@wg0
 
 ## Rancher K8s Cluster setup and configuration
 
-Rancher K8s Cluster setup
+**Rancher K8s Cluster setup**
 
 * Install all the required tools mentioned in pre-requisites for PC.
     * kubectl
@@ -248,4 +248,46 @@ Rancher K8s Cluster setup
          Is host (<node1-ip>) a Worker host (y/n)? [n]: y
          Is host (<node1-ip>) an etcd host (y/n)? [n]: y
          ```
+        * Make all the nodes `Worker host` by default.
+        * To create an HA cluster, specify more than one host with role `Control Plane` and `etcd host`.
+     * `Network Plugin Type` : Continue with canal as default network plugin.
+     * For rest of other configurations, opt the required or default value.
+ * As result of `rke config` command `cluster.ymlfile` will be generated inside same directory, update the below mentioned fields:
+     * `nano cluster.yml`
+        * Remove the default Ingress install
    
+        ```
+        ingress:
+        provider: none
+        ```
+     * Add the name of the kubernetes cluster
+         * `cluster_name: sandbox-name`
+ * For production deplopyments edit the `cluster.yml`, according to this [RKE Cluster Hardening Guide](https://github.com/mosip/k8s-infra/blob/v1.2.0.1-B1/docs/rke-cluster-hardening.md).
+ 
+* Setup up the cluster:
+    * Once `cluster.yml` is ready, you can bring up the kubernetes cluster using simple command.
+       * This command assumes the `cluster.yml` file is in the same directory as where you are running the command.
+       * `rke up`
+       * 
+       ~~~
+       INFO[0000] Building Kubernetes cluster
+       INFO[0000] [dialer] Setup tunnel for host [10.0.0.1]
+       INFO[0000] [network] Deploying port listener containers   
+       INFO[0000] [network] Pulling image [alpine:latest] on host [10.0.0.1]
+       ...
+       INFO[0101] Finished building Kubernetes cluster successfully
+       ```
+       * The last line should read `Finished building Kubernetes cluster` successfully to indicate that your cluster is ready to use.
+   * As part of the Kubernetes creation process, a `kubeconfig` file has been created and written at `kube_config_cluster.yml`, which can be used to start interacting with your Kubernetes cluster.
+   * Copy the kubeconfig files
+    ```
+   cp kube_config_cluster.yml $HOME/.kube/<cluster_name>_config
+chmod 400 $HOME/.kube/<cluster_name>_config
+
+
+   
+
+
+
+
+
