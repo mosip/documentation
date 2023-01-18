@@ -202,3 +202,50 @@ sudo systemctl status wg-quick@wg0
 ```
 * Once connected to wireguard, you should be now able to login using private IP’s.
 
+## Rancher K8s Cluster setup and configuration
+
+Rancher K8s Cluster setup
+
+* Install all the required tools mentioned in pre-requisites for PC.
+    * kubectl
+    * helm
+    * ansible
+    * rke  (version 1.3.10)
+* Setup Rancher Cluster node VM’s as per the hardware and network requirements as mentioned above.
+* Run `env-check.yaml` to check if cluster nodes are fine and do not have known issues in it.
+    * cd $K8_ROOT/rancher/on-prem
+    * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for rancher k8 cluster nodes.
+        * `cp hosts.ini.sample hosts.ini`
+        * `ansible-playbook -i hosts.ini env-check.yaml`
+        * This ansible checks if localhost mapping is already present in /etc/hosts file in all cluster nodes, if not it adds the same.
+* Setup passwordless SSH into the cluster nodes via pem keys. (Ignore if VM’s are accessible via pem’s). 
+    * Generate keys on your PC
+        * `ssh-keygen -t rsa`
+    * Copy the keys to remote rancher node VM’s
+        * `ssh-copy-id <remote-user>@<remote-ip>`
+    * SSH into the node to check password-less SSH
+        * `ssh -i ~/.ssh/<your private key> <remote-user>@<remote-ip>`
+* Open ports and install docker on Rancher K8 Cluster node VM’s.
+    * `cd $K8_ROOT/rancher/on-prem`
+    * Ensure that `hosts.ini` is updated with nodal details.
+    * Update vpc_ip variable in `ports.yaml` with vpc CIDR ip to allow access only from machines inside same vpc.
+    * Execute `ports.yml` to enable ports on VM level using ufw:
+        * `ansible-playbook -i hosts.ini ports.yaml`
+    * Disable swap in cluster nodes. (Ignore if swap is already disabled)
+        * ansible-playbook -i hosts.ini swap.yaml
+    * execute `docker.yml` to install docker and add user to docker group:
+        * ansible-playbook -i hosts.ini docker.yaml
+* Creating RKE Cluster Configuration file
+    * `rke config`
+    * Command will prompt for nodal details related to cluster, provide inputs w.r.t below mentioned points:
+        * `SSH Private Key Path` : <private key path>
+        * `Number of Hosts`: <no of hosts>
+        * `SSH Address of host` : <internal ip of node>
+        * `SSH User of host`  : <user of rancher node machine> 
+        *
+         ```
+         Is host (<node1-ip>) a Control Plane host (y/n)? [y]: y
+         Is host (<node1-ip>) a Worker host (y/n)? [n]: y
+         Is host (<node1-ip>) an etcd host (y/n)? [n]: y
+         ```
+   
