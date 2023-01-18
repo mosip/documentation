@@ -20,5 +20,5 @@ To know more about e-Signet, its features, components, integrations etc., read t
 
 To know more about integrations with MOSIP, refer the following documents:
 
-* [IDA as authentication system](e-signet-ida-authentication-system.md)
-* [Client management with PMS](e-Signet-client-management-withPMS.md)
+* [IDA as authentication system](https://docs.mosip.io/1.2.0/integrations/e-signet/e-signet-ida-authentication-system)
+* [Client management with PMS](https://docs.mosip.io/1.2.0/integrations/e-signet/e-signet-client-management-withpms)
