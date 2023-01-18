@@ -1,6 +1,7 @@
 # IDA as Authentication System
 
-IDA is integrated as authentication system in e-Signet services with below 2 endpoints.
+IDA is integrated as authentication system in e-Signet services with the below two endpoints:
+
 1. [kyc-auth endpoint](https://mosip.stoplight.io/docs/id-authentication/branches/main/e1010cf7b1ea6-kyc-auth)
 2. [kyc-exchange endpoint](https://mosip.stoplight.io/docs/id-authentication/branches/main/645a92f1b98c0-kyc-exchange)
 
@@ -11,11 +12,12 @@ IDA is integrated as authentication system in e-Signet services with below 2 end
 1. To get the mapping of OIDC claims with MOSIP KYC-attributes.
 
    https://github.com/mosip/mosip-config/blob/develop-v3/identity-mapping.json
+   
 2. To get the mapping of auth types in policy with ACR values.
 
    https://github.com/mosip/mosip-config/blob/develop-v3/amr-acr-mapping.json
 
-3. Below configurations are required to be set in idp-default.properties
+3. Below configurations are required to be set in `idp-default.properties`.
 
    IdP-service will be onboarded as MISP partner
    ```
