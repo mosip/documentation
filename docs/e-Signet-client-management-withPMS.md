@@ -9,7 +9,7 @@
     "allowKycRequestDelegation":true
     }
     ```
-2. License key of the MISP partner must be updated in the `idp-default.properties`. Property name : `mosip.idp.misp.license.key`
+2. License key of the MISP partner must be updated in the `idp-default.properties`.<br> Property name : `mosip.idp.misp.license.key`
 3. Create and Update of OIDC clients are managed via PMS.
 4. Relying party is onboarded as a Auth partner. Auth partner is required to have the below allowed auth-types in the policy.
 
@@ -36,11 +36,11 @@
 
 1. To get the mapping of OIDC claims with MOSIP KYC-attributes.
 
-   https://github.com/mosip/mosip-config/blob/develop-v3/idp-claims-mapping.json
+   [](https://github.com/mosip/mosip-config/blob/develop-v3/idp-claims-mapping.json)
 
 2. To get the mapping of auth types in policy with ACR values.
 
-   https://github.com/mosip/mosip-config/blob/develop-v3/amr-acr-mapping.json
+   [](https://github.com/mosip/mosip-config/blob/develop-v3/amr-acr-mapping.json)
 
 ## Sample auth-policy of a relying party
 
