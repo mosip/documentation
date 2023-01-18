@@ -9,7 +9,7 @@ IDA is integrated as authentication system in e-Signet services with the below t
 
 ## Configurations
 
-1. To get the mapping of OIDC claims with MOSIP KYC-attributes.
+1. To get the mapping of OIDC claims with MOSIP KYC-attributes, click [here]().
 
    https://github.com/mosip/mosip-config/blob/develop-v3/identity-mapping.json
    
