@@ -296,7 +296,28 @@ sudo systemctl status wg-quick@wg0
            * `cluster.yml`: The RKE cluster configuration file.
            * `kube_config_cluster.yml`: The [Kubeconfig file](https://rancher.com/docs/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
            * `cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains credentials for full access to the cluster.
+   
+   
+### MOSIP K8 Cluster Global configmap, Ingress and Storage Class setup 
+
+**Global configmap**: Global configmap contains the list of neccesary details to be used throughout the namespaces of the cluster for common details.
+* `cd $K8_ROOT/mosip`
+* Copy `global_configmap.yaml.sample` to `global_configmap.yaml`.
+* Update the domain names in `global_configmap.yaml` and run.
+* `kubectl apply -f global_configmap.yaml`
+   
+* [Istio](https://istio.io/) Ingress setup: It is a service mesh for the MOSIP K8 cluster which provides transparent layers on top of existing microservices along with powerful features enabling a uniform and more efficient way to secure, connect, and monitor services.
+    * `cd $K8_ROOT/mosip/on-prem/istio`
+    * `./install.sh`
+    * This will bring up all the Istio components and the Ingress Gateways.
+    * Check Ingress Gateway services:
+        * `kubectl get svc -n istio-system`
+            * istio-ingressgateway: external facing istio service.
+            * istio-ingressgateway-internal:  internal facing istio service.
+            * istiod : Istio daemon for replicating the changes to all envoy filters. 
+   
+* Storage class setup:  Longhorn creates a  storage class in the cluster for creating pv (persistence volume) and pvc (persistence volume claim).
 
 
-
+   
 
