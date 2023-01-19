@@ -312,12 +312,168 @@ sudo systemctl status wg-quick@wg0
     * This will bring up all the Istio components and the Ingress Gateways.
     * Check Ingress Gateway services:
         * `kubectl get svc -n istio-system`
-            * istio-ingressgateway: external facing istio service.
-            * istio-ingressgateway-internal:  internal facing istio service.
-            * istiod : Istio daemon for replicating the changes to all envoy filters. 
+            * `istio-ingressgateway`: external facing istio service.
+            * `istio-ingressgateway-internal`:  internal facing istio service.
+            * `istiod`: Istio daemon for replicating the changes to all envoy filters. 
    
-* Storage class setup:  Longhorn creates a  storage class in the cluster for creating pv (persistence volume) and pvc (persistence volume claim).
+* Storage class setup:  Longhorn creates a storage class in the cluster for creating pv (persistence volume) and pvc (persistence volume claim).
+    * Pre-requisites:
+    ```
+    cd $K8_ROOT/longhorn
+    ./pre_install.sh
+   ```
+   * Install Longhorn via helm
+        * `./install.sh`
+        * Note: Values of below mentioned parameters are set as by default Longhorn installation script:
+            * PV replica count is set to 1. Set the replicas for the storage class appropriately.
+            ```
+            persistence.defaultClassReplicaCount=1
+            defaultSettings.defaultReplicaCount=1
+            ```
+            * Total available node CPU allocated to **each** `instance-manager` pod in the `longhorn-system` namespace.
+            ```
+            guaranteedEngineManagerCPU: 5
+            guaranteedReplicaManagerCPU: 5   
+            ```
+            * The value "5" means 5% of the total available node CPU
 
+            * This value should be fine for sandbox and pilot but you may have to increase the default to "12" for production.
 
+            * The value can be updated on Longhorn UI after installation.
    
+ ### Import MOSIP Cluster into Rancher UI
+   
+* Login as admin in Rancher console
+
+* Select `Impor`t Existing for cluster addition.
+
+* Select `Generic` as cluster type to add.
+
+* Fill the `Cluster Name` field with unique cluster name and select `Create`.
+
+* You will get the kubecl commands to be executed in the kubernetes cluster. Copy the command and execute from your PC (make sure your `kube-config` file is correctly set to MOSIP cluster).
+
+```
+e.g.:
+kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt5bckwf4ctdgr7xkmmtwg8dfjk4hmbpk_c-m-db8kcj4r.yaml
+```
+* Wait for few seconds after executing the command for the cluster to get verified.
+
+* Your cluster is now added to the rancher management server.
+   
+### MOSIP K8 cluster Nginx server setup
+   
+* For Nginx server setup, we need ssl certificate, add the same into Nginx server.
+* Incase valid ssl certificate is not there generate one using letsencrypt:
+    * SSH into the nginx server
+    * Install Pre-requisites:
+      ```
+      sudo apt update -y
+      sudo apt-get install software-properties-common -y
+      sudo add-apt-repository ppa:deadsnakes/ppa
+      sudo apt-get update -y
+      sudo apt-get install python3.8 -y
+      sudo apt install letsencrypt -y
+      sudo apt install certbot python3-certbot-nginx -y
+      ```
+   * Generate wildcard SSL certificates for your domain name.
+       * `sudo certbot certonly --agree-tos --manual --preferred-challenges=dns -d *.sandbox.mosip.net -d  sandbox.mosip.net`
+           * replace `sanbox.mosip.net` with your domain.
+           * The default challenge HTTP is changed to DNS challenge, as we require wildcard certificates.
+           * Create a DNS record in your DNS service of type TXT with host `_acme-challenge.sandbox.xyz.net`, with the string prompted by the script.
+           * Wait for a few minutes for the above entry to get into effect.<br> 
+            ** Verify**:
+             `host -t TXT _acme-challenge.sandbox.mosip.net`
+           * Press enter in the `certbot` prompt to proceed.
+           * Certificates are created in `/etc/letsencrypt` on your machine.
+           * Certificates created are valid for 3 months only.
+   * `Wildcard SSL certificate` [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
+   
+ * Clone k8s-infra
+   ```
+   cd $K8_ROOT/mosip/on-prem/nginx
+   sudo ./install.sh
+   ```
+* Provide below mentioned inputs as and when prompted
+   
+    * MOSIP nginx server internal ip
+    * MOSIP nginx server public ip 
+    * Publically accessible domains (comma seperated with no whitespaces)
+    * SSL cert path
+    * SSL key path
+    * Cluster node ip's  (comma seperated no whitespace)
+   
+* Post installation check<br>  
+   * `sudo systemctl status nginx`
+   * Steps to uninstall nginx (incase it is required)<br>
+     `sudo apt purge nginx nginx-common`
+   * **DNS mapping**: Once nginx server is installed sucessfully, create DNS mapping for rancher cluster related domains as mentioned in DNS requirement section.
+   
+* Check Overall if nginx and istio wiring is set correctly   
+   * `Install httpbin`: This utility docker returns http headers received inside the cluster. You may use it for general debugging - to check ingress, headers etc.
+   
+   ```
+   cd $K8_ROOT/utils/httpbin
+   ./install.sh
+   ```
+   * To see what is reaching the  httpbin (example, replace with your domain name):
+   
+   ```
+   curl https://api.sandbox.xyz.net/httpbin/get?show_env=true
+   curl https://api-internal.sandbox.xyz.net/httpbin/get?show_env=true
+   ```
+   
+### Monitoring module deployment
+   
+* Prometheus and Grafana and Alertmanager tools are used for cluster monitoring.
+   
+* Select 'Monitoring' App from Rancher console -> `Apps & Marketplaces`.
+* In Helm options, open the YAML file and disable Nginx Ingress.
+   
+  ```
+   ingressNginx:
+   enabled: false
+   ```
+* Click on `Install`.
+   
+   
+### Alerting Setup
+   
+Alerting is part of cluster monitoring, where alert notifications are sent to the configured email or slack channel. 
+   
+* Monitoring should be deployed which includes deployment of prometheus, grafana and alertmanager.
+* Create [slack incoming webhook](https://api.slack.com/messaging/webhooks).
+* After setting slack incoming webhook update `slack_api_url` and `slack_channel_name` in `alertmanager.yml`.
+    * `cd $K8_ROOT/monitoring/alerting/`
+    * `nano alertmanager.yml`
+    * Update:
+   
+    ```
+    global:
+    resolve_timeout: 5m
+    slack_api_url: <YOUR-SLACK-API-URL>
+    ...
+    slack_configs:
+    - channel: '<YOUR-CHANNEL-HERE>'
+    send_resolved: true
+    ```
+* Update `Cluster_name` in `patch-cluster-name.yaml`.   
+   
+* `cd $K8_ROOT/monitoring/alerting/`
+* `nano patch-cluster-name.yaml`   
+* Update: 
+   
+ ```
+ spec:
+ externalLabels:
+ cluster: <YOUR-CLUSTER-NAME-HERE>
+ ```  
+* Install Default alerts along some of the defined custom alerts:
+   
+ ```
+ cd $K8_ROOT/monitoring/alerting/
+./install.sh
+ ```
+   
+
 
