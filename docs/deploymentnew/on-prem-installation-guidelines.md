@@ -474,6 +474,82 @@ Alerting is part of cluster monitoring, where alert notifications are sent to th
  cd $K8_ROOT/monitoring/alerting/
 ./install.sh
  ```
+* Alerting is installed.   
+
+### Logging Module Setup and Installation
+   
+MOSIP uses [Rancher Fluentd](https://ranchermanager.docs.rancher.com/v2.0-v2.4/explanations/integrations-in-rancher/cluster-logging/fluentd) and elasticsearch to collect logs from all services and reflect the same in Kibana Dashboard.
+   
+* Install Rancher FluentD system : for screpping logs outs of all the microservices from MOSIP k8 cluster.
+     * Install Logging from Apps and marketplace within the Rancher UI.
+     * Select Chart Version `100.1.3+up3.17.7` from Rancher console -> Apps & Marketplaces.
+* Configure Rancher FluentD
+   * Create `clusteroutput`
+       * `kubectl apply -f clusteroutput-elasticsearch.yaml`
+   * Start `clusterFlow`
+       * `kubectl apply -f clusterflow-elasticsearch.yaml`
+   * Install elasticsearch, kibana and Istio addons<br>
+       ```
+       cd $K8_ROOT/logging
+      ./intall.sh
+       ```
+   * set `min_age` in `elasticsearch-ilm-script.sh` and execute the same. 
+   * `min_age` : is the minimum no. of days for which indices will be  stored in elasticsearch.
+      ```
+       cd $K8_ROOT/logging
+
+      ./elasticsearch-ilm-script.sh
+      ```
+   * MOSIP provides set of Kibana Dashboards for checking logs and throughputs.
+      *  Brief description of these dashboards are as follows:
+           * [01-logstash.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/01-logstash.ndjson) contains the logstash _Index_ Pattern required by the rest of the dashboards.
+           * [02-error-only-logs.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which shows only the error logs of the services, called `MOSIP Error Logs` dashboard.
+           * [03-service-logs.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which show all logs of a particular service, called MOSIP Service Logs dashboard.
+           * [04-insight.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/04-insight.ndjson) contains dashboards which show insights into MOSIP processes, like the number of UINs generated (total and per hr), the number of Biometric deduplications processed, number of packets uploaded etc, called `MOSIP Insight` dashboard.
+           * [05-response-time.ndjson]() contains dashboards which show how quickly different MOSIP Services are responding to different APIs, over time, called `Response Time` dashboard.
+
+* Import dashboards:
+      
+   * `cd K8_ROOT/logging/dashboard`
+
+   * `./load_kibana_dashboards.sh ./dashboards <cluster-kube-config-file>`
+   
+ * View dashboards 
+
+Open kibana dashboard from `https://kibana.sandbox.xyz.net`.
+
+Kibana --> Menu (on top left) --> Dashboard --> Select the dashboard.  
+
+   
+### MOSIP External Dependencies setup
+   
+External Dependencies: are set of external requirements needed for functioning of MOSIP’s core services like DB, object store, hsm etc.
+
+```
+cd $INFRA_ROOT/deployment/v3/external/all
+./install-all.sh
+```
+Click here to check the detailed installation instructions of all the external components.
    
 
+### MOSIP Modules Deployment
+   
+Now that all the Kubernetes cluster and external dependencies are already installed, will continue with MOSIP service deployment.
+```
+cd $INFRA_ROOT/deployment/v3/mosip/all
+./install-all.sh
+```
+Check detailed MOSIP Modules Deployment MOSIP Modular installation steps. 
+   
+   
+### Api Testrig
+ 
+MOSIP’s successful deployment can be verified by comparing the results of api testrig with testrig benchmark.
+   
+```
+cd $INFRA_ROOT/deployment/v3/apitestrig
+./install.sh
+```
+    * When prompted input the hour of the day to execute the api-testrig.
+    * Daily api testrig cron jon will be executed at the very opted hour of the day.
 
