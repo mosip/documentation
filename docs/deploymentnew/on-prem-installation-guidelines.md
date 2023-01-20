@@ -77,7 +77,27 @@
 
 #### DNS Requirements:
 
-TO DO
+|      |    Domain Name           |   Mapping details                        |       Purpose                 |
+|------|--------------------------|------------------------------------------|-------------------------------|
+| 1.   |rancher.xyz.net           |Private IP of Nginx server or load balancer for rancher cluster |Rancher  dashboard to monitor and manage the kubernetes cluster.| You can share an existing rancher cluster.|
+| 2.   |keycloak.xyz.net          |Private IP of Nginx server for rancher cluster| Administrative IAM tool (keycloak). This is for the kubernetes administration.|
+| 3.   |sandbox.xyx.net           |Private IP of Nginx server for MOSIP cluster| Index page for links to different dashboards of MOSIP env.  (This is just for reference, please do not expose this page in a real production or UAT environment)|
+| 4.   | api-internal.sandbox.xyz.net | Private IP of Nginx server for MOSIP cluster| Internal API’s are exposed through this domain. They are accessible privately over wireguard channel|
+| 5.   |api.sandbox.xyx.net       |Public IP of Nginx server for MOSIP cluster| All the API’s that are publically usable are exposed using this domain.|
+| 6.   | prereg.sandbox.xyz.net| Public IP of Nginx server for MOSIP cluster| Domain name for MOSIP's pre-registration portal.  The portal is accessible publicly.|
+| 7.   |activemq.sandbox.xyx.net|Private IP of Nginx server for MOSIP cluster| Provides direct access to `activemq` dashboard. It is limited and can be used only over wireguard.|
+|8.    |kibana.sandbox.xyx.net|Private IP of Nginx server for MOSIP cluster|Optional installation. Used to access kibana dashboard over wireguard.|
+|9.    | regclient.sandbox.xyz.net| Private IP of Nginx server for MOSIP cluster| Registration Client can be downloaded from this domain. It should be used over wireguard.
+|10.   | admin.sandbox.xyz.net| Private IP of Nginx server for MOSIP cluster| MOSIP's admin portal is exposed using this domain. This is an internal domain and is restricted to access over wireguard|
+|11.   |object-store.sandbox.xyx.net|Private IP of Nginx server for MOSIP cluster|Optional- This domain is used to access the object server. Based on the object server that you choose map this domain accordingly. In our reference implementation, MinIO is used and this domain let's you access MinIO’s Console over wireguard|
+|12.   | kafka.sandbox.xyz.net| Private IP of Nginx server for MOSIP cluster| Kafka UI is installed as part of the MOSIP’s default installation. We can access kafka UI over wireguard. Mostly used for administrative needs.|
+|13.   |iam.sandbox.xyz.net| Private IP of Nginx server for MOSIP cluster|MOSIP uses an OpenID Connect server to limit and manage access across all the services. The default installation comes with Keycloak. This domain is used to access the keycloak server over wireguard|
+|14.   |	postgres.sandbox.xyz.net| Private IP of Nginx server for MOSIP cluster| This domain points to the postgres server. You can connect to postgres via port forwarding over wireguard|
+|15.   | pmp.sandbox.xyz.net| Private IP of Nginx server for MOSIP cluster| MOSIP’s partner management portal is used to manage partners accessing partner management portal over wireguard|
+|16.   |onboarder.sandbox.xyz.net|Private IP of Nginx server for MOSIP cluster|Accessing reports of MOSIP partner onboarding over wireguard|
+|17.   |resident.sandbox.xyz.net|Public IP of Nginx server for MOSIP cluster| Accessing resident portal publically|
+|18.   |	idp.sandbox.xyz.net| Public IP of Nginx server for MOSIP cluster|Accessing IDP over public|
+|19.   |smtp.sandbox.xyz.net|Private IP of Nginx server for MOSIP cluster|Accessing mock-smtp UI over wireguard|
 
 
 #### Certificate requirements
