@@ -117,7 +117,7 @@ Below are the steps for performing face authentication on resident' phone using 
 * QR code on requesting phone
 * Scanner on Sharing Device
 
-![](\_images/ inji-face-auth-flow1.png)
+![](\_images/inji-face-auth-flow1.png)
 
 2. Connectivity details on both the devices: Sharing and Requesting device
 
@@ -127,7 +127,17 @@ Below are the steps for performing face authentication on resident' phone using 
 
 ![](\_images/inji-face-auth-flow3.png)
 
-4. 
+4. On the Requesting Device, following is displayed:
+
+![](\_images/inji-face-auth-flow4.png)
+
+5. Success pop up after successful share with face auth: On both the devices.
+
+![](\_images/inji-face-auth-flow5.png)
+
+6. History on both the devices.
+
+![](\_images/inji-face-auth-flow6.png)
 
 
 
@@ -137,11 +147,6 @@ Below are the steps for performing face authentication on resident' phone using 
 ## Login with QR code scan flow
 
 
-![](\_images/inji-fa-sheet1.png)
-
-![](\_images/inji-fa-sheet2.png)
-
-![](\_images/inji-fa-open-scanner.png)
 
 
 
