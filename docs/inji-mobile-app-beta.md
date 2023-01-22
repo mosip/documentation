@@ -112,11 +112,24 @@ On the Relying party' phone, the `History` tab shows the history of the received
 
 Below are the steps for performing face authentication on resident' phone using Inji.
 
-![](\_images/inji-fa-sheet1.png)
+1. Face Auth on Requesting Phone.
 
-![](\_images/inji-fa-sheet2.png)
+* QR code on requesting phone
+* Scanner on Sharing Device
 
-![](\_images/inji-fa-open-scanner.png)
+![](\_images/ inji-face-auth-flow1.png)
+
+2. Connectivity details on both the devices: Sharing and Requesting device
+
+![](\_images/inji-face-auth-flow2.png)
+
+3. Sharing screen after establishing the connection:
+
+![](\_images/inji-face-auth-flow3.png)
+
+4. 
+
+
 
 ## Wallet binding flow
 
@@ -124,7 +137,11 @@ Below are the steps for performing face authentication on resident' phone using 
 ## Login with QR code scan flow
 
 
+![](\_images/inji-fa-sheet1.png)
 
+![](\_images/inji-fa-sheet2.png)
+
+![](\_images/inji-fa-open-scanner.png)
 
 
 
