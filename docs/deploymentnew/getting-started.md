@@ -12,7 +12,7 @@ MOSIP releases the below mentioned artifacts in open source:
 
     `helm repo add mosip https://mosip.github.io/mosip-helm`
 
-* K8s Infra: Scripts to create [kubernetes](https://kubernetes.io/) cluster and configure it for MOSIP.
+* [K8s Infra](https://github.com/mosip/k8s-infra): Scripts to create [kubernetes](https://kubernetes.io/) cluster and configure it for MOSIP.
 
 * Deployment scripts: These scripts are a part of [mosip-infra](https://github.com/mosip/mosip-infra) to install the helm charts in a desired sequence.
 
