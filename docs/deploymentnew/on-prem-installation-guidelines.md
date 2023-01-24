@@ -550,7 +550,7 @@ External Dependencies are set of external requirements that are needed for funct
 cd $INFRA_ROOT/deployment/v3/external/all
 ./install-all.sh
 ```
-Click [here] to check the detailed installation instructions of all the external components.
+Click [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies) to check the detailed installation instructions of all the external components.
    
 
 ### MOSIP Modules Deployment
@@ -561,7 +561,7 @@ Now that all the Kubernetes cluster and external dependencies are already instal
 cd $INFRA_ROOT/deployment/v3/mosip/all
 ./install-all.sh
 ```
-Check detailed [MOSIP Modules Deployment] MOSIP Modular installation steps. 
+Check detailed [MOSIP Modules Deployment](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-modules-deployment) installation steps. 
    
    
 ### API Testrig
