@@ -55,8 +55,8 @@
 | Sl no.|  Purpose               | vCPU's   | RAM      | Storage (HDD) | no. ofVM's  | HA  |
 |-------|------------------------|----------|----------|---------------|-------------|-----|
 | 1.    | Wireguard Bastion Host  |  2    | 4 GB     |   8 GB        |     1       |(ensure to setup active-passive)|
-| 2.    | Rancher Cluster nodes   |  2 | 8 GB      | 32 GB    |  2   | 2  |
-| 3.    | Rancher Nginx server (use Loadbalancer if required)  | 2  |  4 GB     | 16 GB    |  2   | Nginx+ |
+| 2.    | Observation Cluster nodes   |  2 | 8 GB      | 32 GB    |  2   | 2  |
+| 3.    | Observation Nginx server (use Loadbalancer if required)  | 2  |  4 GB     | 16 GB    |  2   | Nginx+ |
 | 4.   |MOSIP Cluster nodes    | 2  |   32 GB    |  128 GB   |  6   | 6  |
 | 5. |MOSIP Nginx server ( use Loadbalancer if required)  | 2  | 4 GB      | 16 GB    |  1   | Nginx+ |
 
@@ -74,15 +74,15 @@
 |-------|------------------------|----------------------------------------------|
 |1.     |Wireguard Bastion Host| _One Private interface_ : that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br>_One public interface_ : Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 51820/udp port to this interface IP.|
 |2.     | K8 Cluster nodes | One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network )|
-|3.     | Rancher Nginx server | One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network). |
+|3.     | Observation Nginx server | One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network). |
 |4. |Mosip Nginx server| _One internal interface_ : that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br>_One public interface_ : Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 443/tcp port to this interface IP.|
 
 #### DNS requirements:
 
 |      |    Domain Name           |   Mapping details                        |       Purpose                 |
 |------|--------------------------|------------------------------------------|-------------------------------|
-| 1.   |rancher.xyz.net           |Private IP of Nginx server or load balancer for rancher cluster |Rancher  dashboard to monitor and manage the kubernetes cluster.| You can share an existing rancher cluster.|
-| 2.   |keycloak.xyz.net          |Private IP of Nginx server for rancher cluster| Administrative IAM tool (keycloak). This is for the kubernetes administration.|
+| 1.   |rancher.xyz.net           |Private IP of Nginx server or load balancer for Observation cluster |Rancher dashboard to monitor and manage the kubernetes cluster.| You can share an existing Observation cluster.|
+| 2.   |keycloak.xyz.net          |Private IP of Nginx server for Observation cluster| Administrative IAM tool (keycloak). This is for the kubernetes administration.|
 | 3.   |sandbox.xyx.net           |Private IP of Nginx server for MOSIP cluster| Index page for links to different dashboards of MOSIP env.  (This is just for reference, please do not expose this page in a real production or UAT environment)|
 | 4.   | api-internal.sandbox.xyz.net | Private IP of Nginx server for MOSIP cluster| Internal API’s are exposed through this domain. They are accessible privately over wireguard channel|
 | 5.   |api.sandbox.xyx.net       |Public IP of Nginx server for MOSIP cluster| All the API’s that are publically usable are exposed using this domain.|
