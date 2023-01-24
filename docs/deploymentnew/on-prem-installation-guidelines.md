@@ -77,7 +77,7 @@
 |3.     | Observation Nginx server | One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network). |
 |4. |Mosip Nginx server| _One internal interface_ : that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br>_One public interface_ : Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 443/tcp port to this interface IP.|
 
-#### DNS requirements:
+#### DNS requirements
 
 |      |    Domain Name           |   Mapping details                        |       Purpose                 |
 |------|--------------------------|------------------------------------------|-------------------------------|
@@ -106,7 +106,7 @@
 
 As only secured https connections are allowed via nginx server will need below mentioned valid ssl certificates:
 
-* One valid wildcard ssl certificate related to domain used for accesing Rancher cluster, this needs to be stored inside the nginx server VM for rancher cluster. In above e.g.: *.org.net is the similiar example domain.
+* One valid wildcard ssl certificate related to domain used for accessing Observation cluster, this needs to be stored inside the nginx server VM for Observation cluster. In above e.g.: *.org.net is the similiar example domain.
 
 * One valid wildcard ssl certificate related to domain used for accesing Mosip cluster, this needs to be stored inside the nginx server VM for mosip cluster. In above e.g.: *.sandbox.xyz.net is the similiar example domain.
 
@@ -145,7 +145,6 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 
 A Wireguard bastion host (Wireguard server) provides secure private channel to access MOSIP cluster. The host restricts public access, and enables access to only those clients who have their public key listed in Wireguard server. Wireguard listens on UDP port51820.
 
-_(Link to architecture diagram) TODO_
 
 #### Setup Wireguard VM and wireguard bastion server
 
@@ -429,7 +428,7 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
    * `sudo systemctl status nginx`
    * Steps to uninstall nginx (incase it is required)<br>
      `sudo apt purge nginx nginx-common`
-   * **DNS mapping**: Once nginx server is installed sucessfully, create DNS mapping for rancher cluster related domains as mentioned in DNS requirement section.
+   * **DNS mapping**: Once nginx server is installed sucessfully, create DNS mapping for observation cluster related domains as mentioned in DNS requirement section.
    
 * Check Overall if nginx and istio wiring is set correctly   
    * `Install httpbin`: This utility docker returns http headers received inside the cluster. You may use it for general debugging - to check ingress, headers etc.
