@@ -6,7 +6,7 @@
 
 * Release notes: (add hyper link)
 
-* [On-Prem Installation Guidelines]()
+* [On-Prem Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines)
     
     
 **Version**: 1.2.0.1-B1
