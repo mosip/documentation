@@ -235,18 +235,18 @@ sudo systemctl status wg-quick@wg0
 * Setup Observation Cluster node VM’s as per the hardware and network requirements as mentioned above.
 * Run `env-check.yaml` to check if cluster nodes are fine and do not have known issues in it.
     * cd $K8_ROOT/rancher/on-prem
-    * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for rancher k8 cluster nodes.
+    * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for Observation k8 cluster nodes.
         * `cp hosts.ini.sample hosts.ini`
         * `ansible-playbook -i hosts.ini env-check.yaml`
         * This ansible checks if localhost mapping is already present in /etc/hosts file in all cluster nodes, if not it adds the same.
 * Setup passwordless SSH into the cluster nodes via pem keys. (Ignore if VM’s are accessible via pem’s). 
     * Generate keys on your PC
         * `ssh-keygen -t rsa`
-    * Copy the keys to remote rancher node VM’s
+    * Copy the keys to remote observation node VM’s
         * `ssh-copy-id <remote-user>@<remote-ip>`
     * SSH into the node to check password-less SSH
         * `ssh -i ~/.ssh/<your private key> <remote-user>@<remote-ip>`
-* Open ports and install docker on Rancher K8 Cluster node VM’s.
+* Open ports and install docker on Observation K8 Cluster node VM’s.
     * `cd $K8_ROOT/rancher/on-prem`
     * Ensure that `hosts.ini` is updated with nodal details.
     * Update vpc_ip variable in `ports.yaml` with vpc CIDR ip to allow access only from machines inside same vpc.
@@ -262,7 +262,7 @@ sudo systemctl status wg-quick@wg0
         * `SSH Private Key Path` : <private key path>
         * `Number of Hosts`: <no of hosts>
         * `SSH Address of host` : <internal ip of node>
-        * `SSH User of host`  : <user of rancher node machine> 
+        * `SSH User of host`  : <user of Observation node machine> 
         *
          ```
          Is host (<node1-ip>) a Control Plane host (y/n)? [y]: y
@@ -311,7 +311,7 @@ sudo systemctl status wg-quick@wg0
        * `export KUBECONFIG="$HOME/.kube/<cluster_name>_config`
    * Test cluster access:
        * `kubect get nodes`
-           * Command will result in details of the nodes of the rancher cluster.
+           * Command will result in details of the nodes of the Observation cluster.
    * Save your files
        * Save a copy of the following files in a secure location, they are needed to maintain, troubleshoot and upgrade your cluster.
            * `cluster.yml`: The RKE cluster configuration file.
