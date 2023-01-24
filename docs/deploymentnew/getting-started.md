@@ -1,5 +1,7 @@
 # Overview
 
+MOSIP is deployed as a combination of microservices. MOSIP deployment as mircroservices adds more scalability, robustness, resilience and fault tolerance. MOSIP services are grouped as multiple modules like Kernel, prereg, regproc etc. These modules can be deployed independently with all its dependencies as per the business needs. 
+
 MOSIP releases the below mentioned artifacts in open source:
 
 * [Jars](https://repo1.maven.org/maven2/io/mosip/) : Artifacts released into Maven Central Repository after successful compilation of tagged code from all Mosip repositories.
