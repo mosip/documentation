@@ -11,8 +11,8 @@
     
 **Version**: 1.2.0.1-B1
 
-* Release date:
+* Release date: 14-Oct 2022
 
-* Release notes: (add hyper link)
+* [Release notes](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1-beta)
 
 * [Deployment Instructions](https://github.com/mosip/mosip-infra/tree/v1.2.0.1-B1/deployment/v3#readme)
