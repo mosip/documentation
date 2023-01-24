@@ -6,9 +6,9 @@ MOSIP releases the below mentioned artifacts in open source:
 
 * [Docker images](https://hub.docker.com/search?q=mosipid) : Docker images for all MOSIP services.
 
-* MOSIP helm: Packaged charts for each and every MOSIP services. 
+* MOSIP helm: Packaged charts for every MOSIP service. 
 
-> helm repo add mosip https://mosip.github.io/mosip-helm
+    `helm repo add mosip https://mosip.github.io/mosip-helm`
 
 * K8s Infra: Scripts to create [kubernetes](https://kubernetes.io/) cluster and configure it for MOSIP.
 
