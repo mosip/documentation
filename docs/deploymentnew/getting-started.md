@@ -16,13 +16,13 @@ MOSIP releases the below mentioned artifacts in open source:
 
 * Deployment scripts: These scripts are a part of [mosip-infra](https://github.com/mosip/mosip-infra) to install the helm charts in a desired sequence.
 
-## MOSIP Installations
+## MOSIP installations
 
 MOSIP by default supports two ways of installation:
 
-* V2 - A simple sandbox-based implementation with very low resources to help understand the working modules (deprecated).
+* [V2](https://docs.mosip.io/1.2.0/deploymentnew/v2-installer) - A simple sandbox-based implementation with very low resources to help understand the working modules (deprecated).
 
-* V3  - A scalable deployment with a service mesh, HA and other security protection (supported from V1.2.0.1-B1).
+* [V3](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation)  - A scalable deployment with a service mesh, HA and other security protection (supported from V1.2.0.1-B1).
 
 Apart from these installation models, customers can adopt a model of their choice. We recommend using Kubernetes or equivalent container orchestration tools for better management of the microservices. 
 
