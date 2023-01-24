@@ -1,4 +1,4 @@
-# On-prem Installation Guidelines
+# On-Prem Installation Guidelines
 
 ## Overview
 
