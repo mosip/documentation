@@ -2,7 +2,7 @@
 
 MOSIP releases the below mentioned artifacts in open source:
 
-* [Jars](https://repo1.maven.org/maven2/io/mosip/) : Artifacts released into Maven Central Repository after sucessfull compilation of tagged code from all Mosip repositories.
+* [Jars](https://repo1.maven.org/maven2/io/mosip/) : Artifacts released into Maven Central Repository after successful compilation of tagged code from all Mosip repositories.
 
 * [Docker images](https://hub.docker.com/search?q=mosipid) : Docker images for all MOSIP services.
 
