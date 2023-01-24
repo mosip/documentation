@@ -24,7 +24,7 @@
 * [Rancher](https://rancher.com/docs/rancher/v1.3/en/kubernetes/#rancher-ui) is used for managing the MOSIP cluster. 
 * [Keycloak](https://www.keycloak.org/) in this cluster is used for cluster user access management.
 * It is recommended to configure log monitoring and network monitoring in this cluster. 
-* In case you have a internal container registry then it should run here.
+* In case you have an internal container registry, then it should run here.
 
 **MOSIP cluster** - This cluster runs all the MOSIP components and certain third party components to secure the cluster, API’s and data.
 
@@ -33,9 +33,9 @@
 
 ### Architecture diagram 
 
+![](\_images/deployment_architecture.png)
 
-
-### Deployment Repos
+### Deployment repos
 
 * [k8s-infra](https://github.com/mosip/k8s-infra/tree/v1.2.0.1-B1) : contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
 
@@ -45,9 +45,9 @@
 
 * [mosip-helm](https://github.com/mosip/mosip-helm/tree/v1.2.0.1-B1) : contains packaged helm charts for all the MOSIP modules. 
 
-**Pre-requisites**:
+### Pre-requisites
 
-#### Hardware Requirements
+#### Hardware requirements
 
 * VM’s required can be with any OS as per convenience. 
 * Here, we are referting to Ubuntu OS throughout this installation guide.
@@ -60,7 +60,7 @@
 | 4.   |MOSIP Cluster nodes    | 2  |   32 GB    |  128 GB   |  6   | 6  |
 | 5. |MOSIP Nginx server ( use Loadbalancer if required)  | 2  | 4 GB      | 16 GB    |  1   | Nginx+ |
 
-#### Network Requirements
+#### Network requirements
 
 * All the VM's should be able to communicate with each other.
 
@@ -77,7 +77,7 @@
 |3.     | Rancher Nginx server | One internal interface: with internet access and that is on the same network as all the rest of nodes (e.g.: inside local NAT Network). |
 |4. |Mosip Nginx server| _One internal interface_ : that is on the same network as all the rest of nodes (e.g.: inside local NAT Network).<br><br>_One public interface_ : Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 443/tcp port to this interface IP.|
 
-#### DNS Requirements:
+#### DNS requirements:
 
 |      |    Domain Name           |   Mapping details                        |       Purpose                 |
 |------|--------------------------|------------------------------------------|-------------------------------|
@@ -147,7 +147,7 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
 
 _(Link to architecture diagram) TODO_
 
-#### Setup Wireguard VM and wireguard bastion server:
+#### Setup Wireguard VM and wireguard bastion server
 
 * Create a Wireguard server VM with above mentioned Hardware and Network requirements.
 
@@ -551,17 +551,18 @@ External Dependencies are set of external requirements that are needed for funct
 cd $INFRA_ROOT/deployment/v3/external/all
 ./install-all.sh
 ```
-Click here to check the detailed installation instructions of all the external components.
+Click [here] to check the detailed installation instructions of all the external components.
    
 
 ### MOSIP Modules Deployment
    
 Now that all the Kubernetes cluster and external dependencies are already installed, will continue with MOSIP service deployment.
+   
 ```
 cd $INFRA_ROOT/deployment/v3/mosip/all
 ./install-all.sh
 ```
-Check detailed MOSIP Modules Deployment MOSIP Modular installation steps. 
+Check detailed [MOSIP Modules Deployment] MOSIP Modular installation steps. 
    
    
 ### API Testrig
