@@ -223,16 +223,16 @@ sudo systemctl status wg-quick@wg0
 ```
 * Once connected to wireguard, you should be now able to login using private IP’s.
 
-## Rancher K8s Cluster setup and configuration
+## Observation K8s Cluster setup and configuration
 
-**Rancher K8s Cluster setup**
+**Observation K8s Cluster setup**
 
 * Install all the required tools mentioned in pre-requisites for PC.
     * kubectl
     * helm
     * ansible
     * rke  (version 1.3.10)
-* Setup Rancher Cluster node VM’s as per the hardware and network requirements as mentioned above.
+* Setup Observation Cluster node VM’s as per the hardware and network requirements as mentioned above.
 * Run `env-check.yaml` to check if cluster nodes are fine and do not have known issues in it.
     * cd $K8_ROOT/rancher/on-prem
     * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for rancher k8 cluster nodes.
