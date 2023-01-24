@@ -1,4 +1,4 @@
-# On-prem 1.2.0.1-B2 Installation Guidelines
+# On-prem Installation Guidelines
 
 ## Overview
 
@@ -31,7 +31,9 @@
 * [MOSIP External Components](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/external/README.md#mosip-external-components) 
 * [MOSIP Services](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/mosip/README.md#mosip-services)
 
-## Architecture Diagram: TODO
+### Architecture diagram 
+
+
 
 ### Deployment Repos
 
@@ -122,9 +124,9 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 * [rke](https://rancher.com/docs/rke/latest/en/installation/) : version: [1.3.10](https://github.com/rancher/rke/releases/tag/v1.3.10)
 * [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html: version > 2.12.4
 * Create a directory as mosip in your PC and:
-    * clone k8’s infra repo with tag : 1.2.0.1-B2 inside mosip directory.<br>
+    * clone k8’s infra repo with tag : 1.2.0.1-B2 (**whichever is the latest version**) inside mosip directory.<br>
       `git clone https://github.com/mosip/k8s-infra  -b v1.2.0.1-B2`
-    * clone mosip-infra with tag : 1.2.0.1-B2 inside mosip directory.<br>
+    * clone mosip-infra with tag : 1.2.0.1-B2 (**whichever is the latest version**) inside mosip directory.<br>
       `git clone https://github.com/mosip/mosip-infra -b v1.2.0.1-B2`
     * Set below mentioned variables in bashrc
     
@@ -457,7 +459,7 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
 * Click on `Install`.
    
    
-### Alerting Setup
+### Alerting setup
    
 Alerting is part of cluster monitoring, where alert notifications are sent to the configured email or slack channel. 
    
@@ -496,7 +498,7 @@ Alerting is part of cluster monitoring, where alert notifications are sent to th
  ```
 * Alerting is installed.   
 
-### Logging Module Setup and Installation
+### Logging module setup and installation
    
 MOSIP uses [Rancher Fluentd](https://ranchermanager.docs.rancher.com/v2.0-v2.4/explanations/integrations-in-rancher/cluster-logging/fluentd) and elasticsearch to collect logs from all services and reflect the same in Kibana Dashboard.
    
@@ -543,7 +545,7 @@ Kibana --> Menu (on top left) --> Dashboard --> Select the dashboard.
    
 ### MOSIP External Dependencies setup
    
-External Dependencies: are set of external requirements needed for functioning of MOSIP’s core services like DB, object store, hsm etc.
+External Dependencies are set of external requirements that are needed for functioning of MOSIP’s core services like DB, Object Store, HSM etc.
 
 ```
 cd $INFRA_ROOT/deployment/v3/external/all
@@ -562,14 +564,14 @@ cd $INFRA_ROOT/deployment/v3/mosip/all
 Check detailed MOSIP Modules Deployment MOSIP Modular installation steps. 
    
    
-### Api Testrig
+### API Testrig
  
-MOSIP’s successful deployment can be verified by comparing the results of api testrig with testrig benchmark.
+MOSIP’s successful deployment can be verified by comparing the results of API testrig with testrig benchmark.
    
 ```
 cd $INFRA_ROOT/deployment/v3/apitestrig
 ./install.sh
 ```
-    * When prompted input the hour of the day to execute the api-testrig.
-    * Daily api testrig cron jon will be executed at the very opted hour of the day.
+* When prompted, input the hour of the day to execute the API-testrig.
+* Daily API testrig cron jon will be executed at the very opted hour of the day.
 
