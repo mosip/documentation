@@ -24,6 +24,3 @@ MOSIP by default supports two ways of installation:
 
 Apart from these installation models, customers can adopt a model of their choice. We recommend using Kubernetes or equivalent container orchestration tools for better management of the microservices. 
 
-TODO: Actual image to be attached.
-
-Reference deployment architecture: MOSIP SecArc 
