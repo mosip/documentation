@@ -19,14 +19,14 @@ List of external dependencies:
 
 ### Postgres
 
-* Install Postgres:
+* Install Postgres
 
 ~~~
 cd $INFRA_ROOT/deployment/v3/external/postgres
 ./install.sh
 ~~~
 
-* Initialize Postgres DB:
+* Initialize Postgres DB
 
 ~~~
 cd $INFRA_ROOT/deployment/v3/external/postgres
@@ -44,7 +44,7 @@ cd $INFRA_ROOT/deployment/v3/external/iam
 ./install.sh
 ```
 
-* Initialize Keycloak:
+* Initialize Keycloak
 
 ```
 cd $INFRA_ROOT/deployment/v3/external/iam
@@ -60,7 +60,7 @@ cd $INFRA_ROOT/deployment/v3/external/hsm/softhsm
 
 ### Setup Object store
 
-MinIO installation:
+MinIO installation
 
 ```
 cd $INFRA_ROOT/deployment/v3/external/object-store/minio
