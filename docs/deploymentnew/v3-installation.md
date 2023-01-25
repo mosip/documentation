@@ -2,9 +2,9 @@
 
 **Version**: 1.2.0.1-B2  (Latest stable release)
 
-* Release date:
+* Release date: 8-Jan 2023
 
-* Release notes: (add hyper link)
+* [Release notes](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1-b2)
 
 * [On-Prem Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines)
     
