@@ -25,56 +25,62 @@ _**Note**_:
 
 * Ensure that in the `kernel-default.properties`, the value of `mosip-toolkit-client` is set as `auth.server.admin.allowed.audience`.
 * If this was not set by default, then set it and restart `kernel-auth-service` and `compliance-toolkit-service`.
-*   From the 1.0.0 version onwards, we need to generate an encryption key for CTK.
+* From the 1.0.0 version onwards, we need to generate an encryption key for CTK.
 
-    *   Create a new app id by directly inserting the below row.
-
-        ```
-           access_allowed, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes)
-           VALUES ('COMPLIANCE_TOOLKIT', 1095, true, 60, 'NA', 'mosipadmin', '2022-11-28 09:00:40.822625', 
-           null, null, false, null);
+    * Create a new app id by directly inserting the below row.
 
         ```
-    *   Get the client token using auth manager swagger by calling endpoint. `https://api-internal.dev.mosip.net/v1/authmanager/authenticate/clientidsecretkey`
+            INSERT INTO keymgr.key_policy_def(app_id, key_validity_duration, is_active,pre_expire_days, 
+		   	access_allowed, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes)
+		   	VALUES ('COMPLIANCE_TOOLKIT', 1095, true, 60, 'NA', 'mosipadmin', '2022-11-28 09:00:40.822625', 
+		   	null, null, false, null);
 
         ```
-        {
-        	"id": "string",
-        	"version": "string",
-        	"requesttime": "2022-12-22T07:13:35.010Z",
-        	"metadata": {},
-        	"request": {
-        		"clientId": " mosip-pms-client ",
-        		"secretKey": " XXXXXX ",
-        		"appId": " regproc "
-        	}
-        }
-        ```
+    * Get the client token using auth manager swagger by calling endpoint. 
+    
+        `https://api-internal.dev.mosip.net/v1/authmanager/authenticate/clientidsecretkey`
+
+        ```jsonc
+		{
+			"id": "string",
+			"version": "string",
+			"requesttime": "2022-12-22T07:13:35.010Z",
+			"metadata": {},
+			"request": {
+				"clientId": " mosip-pms-client ",
+				"secretKey": " XXXXXX ",
+				"appId": " regproc "
+			}
+		}
+		```
+
     * Use `generateMasterKey` endpoint to generate module-level certificate.
 
-    ![](\_images/ctk-generateMasterKey.png)
+        ![](\_images/ctk-generateMasterKey.png)
 
     * Directly download the certificate via key manager swagger `getCertificate` with App Id as `COMPLIANCE_TOOLKIT` and Ref Id as `COMP-FIR`.
 
-    ![](\_images/ctk-getCertificate.png)
+        ![](\_images/ctk-getCertificate.png)
 
     * This certificate is to be used by **SBI** devices as the encryption key.
-    *   For Mock **MDS**, when running in **Auth** mode, update the below values in the application.properties file.
+    * For Mock **MDS**, when running in **Auth** mode, update the below values in the application.properties file.
 
         ```
+            mosip.auth.appid=regproc
         	mosip.auth.clientid=mosip-pms-client
         	mosip.auth.secretkey=XXXXXXXXXXXXXXXX
         	mosip.auth.server.url=https://api-internal.dev.mosip.net/v1/authmanager/authenticate/clientidsecretkey 
         	mosip.ida.server.url=https://api-internal.dev.mosip.net/v1/keymanager/getCertificate?applicationId=COMPLIANCE_TOOLKIT&referenceId=COMP-FIR
         ```
 
-\*For REAL MDS/SBI. \* You must communicate to the vendors to download the new encryption key from UI and give us an updated **SBI** which uses this encryption key. \* It can be downloaded for **Auth SBI** projects from UI.
+* For REAL MDS/SBI.
+    * You must communicate to the vendors to download the new encryption key from UI and give us an updated **SBI** which uses this encryption key. 
+    * It can be downloaded for **Auth SBI** projects from UI.
 
-```
-![](_images/ctk-encryptionKey.png)
-```
+        ![](_images/ctk-encryptionkey.png)
 
-## Steps tO load TESTDATA, SCHEMAS in MINIO
+
+## Steps to load testdata and schemas in MINIO
 
 1\. Browse to [mosip-compliance-toolkit](https://github.com/mosip-compliance-toolkit.git).
 
