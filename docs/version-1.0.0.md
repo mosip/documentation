@@ -60,8 +60,8 @@ As a part of the SDK test suite in the current version, we support the verificat
 
 The detailed list of the test cases for SBI and SDK in the 1.0.0 version of the Compliance Tool Kit is available here:
 
-* [SBI Test Cases](https://github.com/mosip/mosip-compliance-toolkit/blob/1.0.0-B2/resources/compliance\_test\_definitions\_sbi.json)
-* [SDK Test Cases](https://github.com/mosip/mosip-compliance-toolkit/blob/1.0.0-B2/resources/compliance\_test\_definitions\_sdk.json)
+* [SBI Test Cases](https://github.com/mosip/mosip-compliance-toolkit/blob/1.0.0/resources/compliance\_test\_definitions\_sbi.json)
+* [SDK Test Cases](https://github.com/mosip/mosip-compliance-toolkit/blob/1.0.0/resources/compliance\_test\_definitions\_sdk.json)
 
 ## Dependency
 
