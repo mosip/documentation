@@ -8,9 +8,9 @@
     * [Test Report](test-report-0.0.9.md)
 * [User Guide](user-guide.md)
 * [How to Guides](how-to-guides/README.md)
-  * [How to set up CTK]
+  * [How to set up CTK](how-to-guides/how-to-set-up-ctk/README.md)
     * [0.0.9](setup-steps-0.0.9.md)
-    * [1.0.0](steup-steps-1.0.0.md)
+    * [1.0.0](how-to-guides/how-to-set-up-ctk/1.0.0.md)
   * [How to add more test cases](test-cases.md)
   * [How to set up SDK for testing](sdk-setup.md)
 * [License](license.md)
