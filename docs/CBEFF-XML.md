@@ -4,10 +4,18 @@
 
 * Standards:
   * ISO 19785-3
-  * [OASIS patron format ISO/IEC JTC 1 SC 37 - biometrics](https://www.ibia.org/cbeff/iso/bir-header-identifiers), patron identifier 257, patron format identifier 11
-  * [OASIS Binary Data Block Format Identifiers](https://www.ibia.org/cbeff/iso/bdb-format-identifiers) for Format Type ISO/IEC JTC 1 SC 37-biometrics, patron identifier 257, BDB patron format identifier 7 for finger image, 2 for finger minutiae, 8 for face image and 9 for iris image.
+  * [OASIS patron format ISO/IEC JTC 1 SC 37 - biometrics](https://www.ibia.org/cbeff/iso/bir-header-identifiers)
+    * Patron identifier 257
+    * Patron format identifier 11
+  * [OASIS Binary Data Block Format Identifiers](https://www.ibia.org/cbeff/iso/bdb-format-identifiers) for Format Type ISO/IEC JTC 1 SC 37-biometrics
+    * Patron identifier 257
+    * BDB patron format identifier
+      * 7 for finger image
+      * 2 for finger minutiae
+      * 8 for face image
+      * 9 for iris image
 * [MOSIP Schema](https://github.com/mosip/mosip-config/blob/v1.2.0.1-B2/mosip-cbeff.xsd) is similar to [OASIS Schema](https://docs.oasis-open.org/bioserv/BIAS/v2.0/csprd01/schemas/cbeff\_ed2.xsd), with an optional attribute called others added from the LTS version.
-* MOSIP's [CBEFF Utility](https://github.com/mosip/commons/tree/master/kernel/kernel-cbeffutil-api) to create, update, search and validate CBEFF XML data.
+* MOSIP's [CBEFF Utils](https://github.com/mosip/commons/tree/v1.2.0/kernel/kernel-cbeffutil-api) can be used to create and validate CBEFF XML data.
 
 ## CBEFF Sample
 
