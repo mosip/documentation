@@ -15,8 +15,6 @@
   * [ABIS API](abis-api.md)
   * [Biometric SDK](biometric-sdk.md)
   * [Biometric Devices](biometric-devices.md)
-  * [Secure Biometric Interface (SBI)](secure-biometric-interface.md)
-  * [Biometric Image Specification](biometric-image-specification.md)
   * [FTM](ftm.md)
   * [CBEFF](cbeff-xml.md)
   * [Compliance Tool Kit](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/OrxzFOqLUpvxyg8Kvdlg/)
