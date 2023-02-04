@@ -63,7 +63,6 @@
   * [ABIS](Automated-Biometric-Identification-System-ABIS.md)
   * [Biometric SDK](Biometric-SDK.md)
   * [MDS Specification](MOSIP-Device-Service-Specification.md)
-  * [SBI Specification](Secure-Biometric-Interface-Specification.md)
   * [Biometric Specification](Biometric-Specification.md)
   * [CBEFF XML](CBEFF-XML.md)
   * [Compliance Tool Kit](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/OrxzFOqLUpvxyg8Kvdlg/)
