@@ -14,7 +14,7 @@
       * 2 for finger minutiae
       * 8 for face image
       * 9 for iris image
-* [Schema](mosip-cbeff.xsd)
+* [MOSIP Schema](https://github.com/mosip/mosip-config/blob/v1.2.0.1-B2/mosip-cbeff.xsd) is similar to [OASIS Schema](https://docs.oasis-open.org/bioserv/BIAS/v2.0/csprd01/schemas/cbeff\_ed2.xsd), with an optional attribute called others added from the LTS version.
 * MOSIP's [CBEFF Utils](https://github.com/mosip/commons/tree/v1.2.0/kernel/kernel-cbeffutil-api) can be used to create and validate CBEFF XML data.
 
 ## CBEFF Sample
