@@ -23,18 +23,21 @@ Dependent Service (dockers)
 
 _**Note**_:
 
-* Ensure that in the `kernel-default.properties`, the value of `mosip-toolkit-client` is set as `auth.server.admin.allowed.audience`.
-* If this was not set by default, then set it and restart `kernel-auth-service` and `compliance-toolkit-service`.
-* Check if the roles given to `mosip-pms-client` should be in config property.
-    
-    `https://github.com/mosip/mosip-config/blob/${ENV_NAME}/kernel-default.properties`
+* Ensure that in the `kernel-default.properties`, the value of `mosip-toolkit-client` is set in `auth.server.admin.allowed.audience`. If this was not set by default, then set it and restart `kernel-auth-service` and `compliance-toolkit-service`.
+* Check if the roles given to `mosip-pms-client` should match with any of the roles for following config property.
 
     ``` 
         mosip.role.keymanager.postverifycertificatetrust=XXX
     ```
-    _Example_: _mosip.role.keymanager.postverifycertificatetrust=`ZONAL_ADMIN`, `GLOBAL_ADMIN`, `PMS_ADMIN`, `PMS_USER`_
+    This config property is available in:
+    https://github.com/mosip/mosip-config/blob/${ENV_NAME}/kernel-default.properties
     
-    Any of these roles should be in `mosip-pms-client`.
+    _For Example_:
+
+    mosip.role.keymanager.postverifycertificatetrust=`ZONAL_ADMIN`, `GLOBAL_ADMIN`, `PMS_ADMIN`, `PMS_USER`
+
+    Then `mosip-pms-client` should have any of the above roles.
+
 ## Steps to setup mosip-compliance-toolkit
 
 1\. Browse to [mosip-compliance-toolkit](https://github.com/mosip/mosip-compliance-toolkit/tree/0.0.9).
