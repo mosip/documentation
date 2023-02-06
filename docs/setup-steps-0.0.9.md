@@ -34,7 +34,7 @@ _**Note**_:
     ```
     _Example_: _mosip.role.keymanager.postverifycertificatetrust=`ZONAL_ADMIN`, `GLOBAL_ADMIN`, `PMS_ADMIN`, `PMS_USER`_
     
-    These roles should be in `mosip-pms-client`.
+    Any of these roles should be in `mosip-pms-client`.
 ## Steps to setup mosip-compliance-toolkit
 
 1\. Browse to [mosip-compliance-toolkit](https://github.com/mosip/mosip-compliance-toolkit/tree/0.0.9).
