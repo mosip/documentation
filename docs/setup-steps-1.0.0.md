@@ -34,7 +34,7 @@ _**Note**_:
     ```
     _Example_: _mosip.role.keymanager.postverifycertificatetrust=`ZONAL_ADMIN`, `GLOBAL_ADMIN`, `PMS_ADMIN`, `PMS_USER`_
     
-    These roles should be in `mosip-pms-client`.
+    Any of these roles should be in `mosip-pms-client`.
 * From the 1.0.0 version onwards, we need to generate an encryption key for CTK.
 
     * Create a new app id by directly inserting the below row.
