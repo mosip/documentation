@@ -25,17 +25,30 @@ _**Note**_:
 
 * Ensure that in the `kernel-default.properties`, the value of `mosip-toolkit-client` is set as `auth.server.admin.allowed.audience`.
 * If this was not set by default, then set it and restart `kernel-auth-service` and `compliance-toolkit-service`.
-*   From the 1.0.0 version onwards, we need to generate an encryption key for CTK.
+* Check if the roles given to `mosip-pms-client` should be in config property.
+    
+    `https://github.com/mosip/mosip-config/blob/${ENV_NAME}/kernel-default.properties`
 
-    *   Create a new app id by directly inserting the below row.
+    ``` 
+        mosip.role.keymanager.postverifycertificatetrust=XXX
+    ```
+    _Example_: _mosip.role.keymanager.postverifycertificatetrust=`ZONAL_ADMIN`, `GLOBAL_ADMIN`, `PMS_ADMIN`, `PMS_USER`_
+    
+    These roles should be in `mosip-pms-client`.
+* From the 1.0.0 version onwards, we need to generate an encryption key for CTK.
+
+    * Create a new app id by directly inserting the below row.
 
         ```
-           access_allowed, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes)
-           VALUES ('COMPLIANCE_TOOLKIT', 1095, true, 60, 'NA', 'mosipadmin', '2022-11-28 09:00:40.822625', 
-           null, null, false, null);
-
+            INSERT INTO keymgr.key_policy_def(app_id, key_validity_duration, is_active,pre_expire_days, 
+		    access_allowed, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes)
+		    VALUES ('COMPLIANCE_TOOLKIT', 1095, true, 60, 'NA', 'mosipadmin', '2022-11-28 09:00:40.822625', 
+		    null, null, false, null);
         ```
-    *   Get the client token using auth manager swagger by calling endpoint. `https://api-internal.dev.mosip.net/v1/authmanager/authenticate/clientidsecretkey`
+
+    * Get the client token using auth manager swagger by calling endpoint. 
+    
+        `https://api-internal.dev.mosip.net/v1/authmanager/authenticate/clientidsecretkey`
 
         ```
         {
@@ -50,31 +63,34 @@ _**Note**_:
         	}
         }
         ```
+
     * Use `generateMasterKey` endpoint to generate module-level certificate.
 
-    ![](\_images/ctk-generateMasterKey.png)
+    ![](\_images/ctk-generateMasterkey.png)
 
     * Directly download the certificate via key manager swagger `getCertificate` with App Id as `COMPLIANCE_TOOLKIT` and Ref Id as `COMP-FIR`.
 
     ![](\_images/ctk-getCertificate.png)
 
     * This certificate is to be used by **SBI** devices as the encryption key.
-    *   For Mock **MDS**, when running in **Auth** mode, update the below values in the application.properties file.
+    * For Mock **MDS**, when running in **Auth** mode, update the below values in the application.properties file.
 
         ```
-        	mosip.auth.clientid=mosip-pms-client
-        	mosip.auth.secretkey=XXXXXXXXXXXXXXXX
-        	mosip.auth.server.url=https://api-internal.dev.mosip.net/v1/authmanager/authenticate/clientidsecretkey 
-        	mosip.ida.server.url=https://api-internal.dev.mosip.net/v1/keymanager/getCertificate?applicationId=COMPLIANCE_TOOLKIT&referenceId=COMP-FIR
+            mosip.auth.appid=regproc
+            mosip.auth.clientid=mosip-pms-client
+            mosip.auth.secretkey=XXXXXXXXXXXXXXXX
+            mosip.auth.server.url=https://api-internal.dev.mosip.net/v1/authmanager/authenticate/clientidsecretkey 
+            mosip.ida.server.url=https://api-internal.dev.mosip.net/v1/keymanager/
+            getCertificate?applicationId=COMPLIANCE_TOOLKIT&referenceId=COMP-FIR
         ```
 
-\*For REAL MDS/SBI. \* You must communicate to the vendors to download the new encryption key from UI and give us an updated **SBI** which uses this encryption key. \* It can be downloaded for **Auth SBI** projects from UI.
+* For REAL MDS/SBI.
+    * You must communicate to the vendors to download the new encryption key from UI and give us an updated **SBI** which uses this encryption key.
+    * It can be downloaded for **Auth SBI** projects from UI.
 
-```
-![](_images/ctk-encryptionKey.png)
-```
+    ![](_images/ctk-encryptionkey.png)
 
-## Steps tO load TESTDATA, SCHEMAS in MINIO
+## Steps to load testdata and schemas
 
 1\. Browse to [mosip-compliance-toolkit](https://github.com/mosip-compliance-toolkit.git).
 
@@ -99,8 +115,6 @@ _Note_: _There is no need to upload `compliance_test_definitions_sbi.json` and `
 ## Steps to upload resources to MinIO using Swagger
 
 1\. Using Keycloak, create a new user for the compliance toolkit.
-
-![](\_images/ctk-keycloak-user-create.png)
 
 2\. Make sure to add the email ID. Also, give the user `GLOBAL_ADMIN`.
 
@@ -141,7 +155,7 @@ _Note_: _There is no need to upload `compliance_test_definitions_sbi.json` and `
         "testCases": [
                         <Paste the testcases here>
                      ]
-               }
+    }
 }
 ```
 
