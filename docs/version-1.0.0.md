@@ -1,4 +1,4 @@
-# Version 0.0.9
+# Version 1.0.0
 
 **Release Name**: CTK 1.0.0 (Beta)
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-The 1.0.0 version of MOSIP’s Compliance Tool Kit is the first patch release on top of the release on top of 0.0.9 version. This release covers similar features as the 0.0.9 version but has additional test scenarios for the SBI, like 
+The 1.0.0 version of MOSIP’s Compliance Tool Kit is the first patch release on top of the release on top of 0.0.9 version. This release covers similar features as the 0.0.9 version but has additional test scenarios for the SBI, like
 
 * Key Rotation Validations
 * Quality Check Validation of the biometrics captured in SBI
@@ -83,5 +83,5 @@ Post installation please follow the setup steps available [here](setup-steps-1.0
 
 * [Feature Documentation](./)
 * [Compliance Tool Kit User Guide](user-guide.md)
-* [QA Report](test-report-1.0.0.md)
+* [QA Report](test-report-0.0.9.md)
 * [Videos](https://www.youtube.com/playlist?list=PLJH-POb\_55z8YYS\_qAk\_QNBQeiQ2VrtZD)

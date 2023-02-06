@@ -18,7 +18,7 @@ Currently, CTK supports testing of compliance with the below specifications:
 
 ### Compliance Tool Kit Portal
 
-To set up the Compliance Tool Kit, refer to [How to set up CTK](setup-steps.md).
+To set up the Compliance Tool Kit, refer to [How to set up CTK](setup-steps-0.0.9.md).
 
 To use the CTK portal, refer to the [Compliance Tool Kit User Guide](user-guide.md).
 
