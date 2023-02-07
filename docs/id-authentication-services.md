@@ -65,7 +65,7 @@ Refer to [ID Authentication Configuration Guide](https://github.com/mosip/id-aut
 To know more about the developer setups, read:
 
 1. [ID Authentication Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-authentication-services/id-authentication-service-developer-guide)
-2. [ID Authentication OTP Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-authentication-services/id-authentication-otp-service-developers-guide)
+2. [ID Authentication OTP Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-authentication-services/id-authentication-otp-service-developer-guide)
 3. [ID Authentication Internal Service Developers Guide](https://docs.mosip.io/1.2.0/modules/id-authentication-services/id-authentication-internal-service-developer-guide)
 
 ## API
