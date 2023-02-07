@@ -36,7 +36,7 @@
   * [ID Authentication Services](id-authentication-services.md)
     * [ID Authentication Demographic Data Normalization](normalization-reference-impl.md)
     * [ID Authentication Service Developers Guide](id-authentication-service-developer-guide.md)
-    * [ID Authentication OTP Service Developers Guide](id-authentication-otp-service-developer-guide.md)
+    * [ID Authentication OTP Service Developer Guide](id-authentication-otp-service-developer-guide.md)
     * [ID Authentication Internal Service Developers Guide](id-authentication-internal-service-developer-guide.md)
   * [ID Repository](id-repository.md)
     * [Credential Request Generator Service Developers Guide](id-repository-credential-request-generator-service-developer-guide.md)
