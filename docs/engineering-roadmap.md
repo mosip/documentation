@@ -34,6 +34,17 @@ MOSIP Platforms and Initiatives
 ||Management of consent registry by end user|Custom handles|
 
 
-|
+### Compliance Tool Kit (CTK)
+
+|        Coverage      |    Priority 1     |     Priority 2     |
+|--------------------|-------------------|--------------------|
+|Devices|Testing kit for Android SBI|Testing kit for Adjudication|
+|ABIS|Testing kit for ABIS|Archival|
+|Matcher SDK|Certificate Issuance|Security Testing|
+|Capture Quality|Multi-language Support|Performance Testing|
+||Spec Review<br>ABIS<br>Manual Adjudication<br>Manual Verification|Integration with multiple quality SDKs|
+
+
+
 
 
