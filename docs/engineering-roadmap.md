@@ -55,7 +55,18 @@ MOSIP Platforms and Initiatives
 |Registration Processor Stage level verification of negative scenarios|UI automation for resident portal||
 
 
+### Collaborations
 
+|    Partner Initiatives    | Community Projects| Open Source Integrations|
+|--------------------|-------------------|--------------------|
+|* Face matcher SDK with Iris scan<br>* Voice biometrics with turant.ai<br>* Integration with UPI| Android registration client for Ethiopia|Integrations<br>* OpenCRVS (updated architecture)<br>* Mojaloop (Identity mapper)<br>* OpenG2P (Inji, e-Signet usage)<br>* DHIS by CMU<br><br>Showcases<br>* GovStack<br>* DCI<br>* G2P Connect<br> * MEC|
+
+
+### Research
+
+
+
+### Ecosystem
 
 
 
