@@ -42,7 +42,18 @@ MOSIP Platforms and Initiatives
 |ABIS|Testing kit for ABIS|Archival|
 |Matcher SDK|Certificate Issuance|Security Testing|
 |Capture Quality|Multi-language Support|Performance Testing|
-||Spec Review<br>ABIS<br>Manual Adjudication<br>Manual Verification|Integration with multiple quality SDKs|
+||Spec Review<br>* ABIS<br>* Manual Adjudication<br>* Manual Verification|Integration with multiple quality SDKs|
+
+
+### Automation
+
+|    Focus      |    Priority 1     |     Priority 2     |
+|--------------------|-------------------|--------------------|
+|Dockerize the DSL|Enhance the functional test rigs to reduce manual testing effort|Test Rig to handle upgrade flows|
+|Increase the DSL coverage for production scenarios|Revamp old test rigs||
+|Enhance the Mocks to simulate real time scenarios|Reduce test rig execution time (DSL)||
+|Registration Processor Stage level verification of negative scenarios|UI automation for resident portal||
+
 
 
 
