@@ -14,8 +14,16 @@ MOSIP Platforms and Initiatives
 ||Resident Portal||
 
 
+### Inji
+
+|        Focus       |    Priority 1     |     Priority 2     |
+|--------------------|-------------------|--------------------|
+|Beta customer|Modular wallet compatible with OWF architecture|Cloud wallet|
+|Reference integrations to other issuers|Issuance flow as per OpenID standard|USSD support|
+||Biometric Authenticator|SIM based wallet|
+||e-Signet integration|Voice authentication|
 
 
-
+### Inji
 
 
