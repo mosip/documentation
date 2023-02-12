@@ -64,6 +64,16 @@ MOSIP Platforms and Initiatives
 
 ### Research
 
+|   Inclusion   | Biometrics| Privacy and Security|
+|--------------------|-------------------|--------------------|
+|SIMple ID: Using SIM as identity and integrate with USSD (Alan Turing)|Liveness: FP, Iris (IIITB / Community)|Making MOSIP’s analytics pipeline satisfy a formal differential privacy guarantee- Metrics Report (CMU Africa)|
+|Assisting Countries with USSD integration. e.g. Ethiopia (Sanath & team)|Biometrics data generation for evaluation & testing (ABIS/SDK): Real data, Synthetic data (TBA)|Anomaly detection: Identifying irregular patterns during E2E flow. e.g. packet uploaded through an irregular channel (Alan Turing)|
+||Enhanced evaluation algorithms of biometrics: Minutiae-based matcher vs. texture-based matcher (TBA)|Privacy preserving identity using homomorphic encryption: Map it back to MOSIP’s production code (IIITB)|
+
+
+
+
+
 
 
 ### Ecosystem
