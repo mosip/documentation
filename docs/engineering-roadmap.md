@@ -24,6 +24,16 @@ MOSIP Platforms and Initiatives
 ||e-Signet integration|Voice authentication|
 
 
-### Inji
+### e-Signet
+
+|        Focus       |    Priority 1     |     Priority 2     |
+|--------------------|-------------------|--------------------|
+|Beta customer|VC support in e-Signet|Android APK|
+|Reference integrations|Single window consent|iOS APK|
+||Consent registry|Multiple issuers|
+||Management of consent registry by end user|Custom handles|
+
+
+|
 
 
