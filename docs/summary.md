@@ -137,6 +137,7 @@
     * [Sonar Report](release/1.2.0.1/sonar-report-B1.md)
   * [1.2.0.1-B2 (Beta)](release/1.2.0.1/release-notes-1.2.0.1-b2.md)
   * [MOSIP Support Policy](support-policy.md)
+* [Roadmap](engineering-roadmap.md)
 * [MOSIP Documentation Style Guide](mosip-documentation-style-guide.md)
 * [Documentation for 1.1.5](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/-M1R77ZUwR6XwtPjJIVm/)
 * [License](license.md)
