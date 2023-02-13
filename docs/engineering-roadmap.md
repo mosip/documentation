@@ -75,7 +75,7 @@ MOSIP Platforms and Initiatives
 
 |  Standards   | Biometrics| 
 |--------------------|-------------------|
-|Reference implementations of <br> * SBI IEEE - Draft 1, 2<br> * OpeNID4VP over BLE - Draft 1, 2 <br> * Specifications for SDK and ABIS<br> * Global ID Credentials Specifications- Draft 1<br>* Credential Issuance and Wallet Onboarding Protocol - Draft 2| Benchmarking tools for <br> * Capture quality<br> * Matcher accuracy<br> * Bias in matchers<br> * Performance and scalability of matcher and ABIS<br> * Match accuracy for contactless captures|
+|Reference implementations of <br> * SBI IEEE - Draft 1, 2<br> * OpeNID4VP over BLE - Draft 1, 2 <br> * Specifications for SDK and ABIS<br> * Global ID Credentials Specifications- Draft1<br>* Credential Issuance and Wallet Onboarding Protocol - Draft 2| Benchmarking tools for <br> * Capture quality<br> * Matcher accuracy<br> * Bias in matchers<br> * Performance and scalability of matcher and ABIS<br> * Match accuracy for contactless captures|
 
 
 
