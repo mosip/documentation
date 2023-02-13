@@ -52,7 +52,7 @@ MOSIP Platforms and Initiatives
 |Dockerize the DSL|Enhance the functional test rigs to reduce manual testing effort|Test Rig to handle upgrade flows|
 |Increase the DSL coverage for production scenarios|Revamp old test rigs||
 |Enhance the Mocks to simulate real time scenarios|Reduce test rig execution time (DSL)||
-|Registration Processor Stage level verification of negative scenarios|UI automation for resident portal||
+|Registration Processor Stage level verification of negative scenarios|UI automation for Resident Portal||
 
 
 ### Collaborations
