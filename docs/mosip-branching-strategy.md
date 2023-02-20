@@ -28,7 +28,7 @@ For e.g.: Let us assume `develop-SNAPSHOT` is the current POM version in `develo
 In MOSIP, we follow a four-digit version as `1.2.0.0`. The branches are cut over for every version. So, the `release_1.2.0.1` will have it's own branch and would be based on `1.2.0` or the latest of `1.2.0.x`.
 
 
-### Feature branche
+### Feature branch
 
 Major releases may be coded in the respective feature branches within the MOSIP subsystem.  It may also be developed outside MOSIP in some other GitHub organization/repo.  Once a feature is coded and is ready to be pulled into MOSIP, the organization or team could submit a PR. All feature branches are merged into the `develop` branch after the maintainer's review. `Feature` branches are deleted after their changes are adopted by the `develop` branch.
 
@@ -55,7 +55,7 @@ Minor release is needed to support te critical issues that are faced by customer
 The following procedure must be adopted:
 
 1. Identify all the supported versions of MOSIP.
-2. Create a minor release branch from the latest release tag
-3. Checkout code, fix and test the issue
+2. Create a minor release branch from the latest release tag.
+3. Checkout code, fix and test the issue.
 4. Issue the release to the customer
 5. Merge the fix into the `develop` branch so that it gets into the next main/ patch release. This step is followed on a need basis. There are several cases where this merge would not make sense as the design of the component may have changed in the upcoming releases.
