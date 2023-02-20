@@ -17,7 +17,7 @@ It's expected that over time we will incorporate additional material from our ex
 Version control branching
 -------------------------
 
-[MOSIP Branching Strategy](https://mosip.atlassian.net/wiki/spaces/ENGG/pages/82313444/MOSIP+Branching+Strategy)
+To know more, read [MOSIP Branching Strategy](https://docs.mosip.io/1.2.0/community/mosip-branching-strategy).
 
 Submitting bugs
 ===============
