@@ -124,6 +124,7 @@
   * [Contributions](contributions.md)
   * [Code Contributions](code-contributions.md)
   * [Code of Conduct](code-of-conduct.md)
+  * [MOSIP Branching Strategy](mosip-branching-strategy.md)
 * [Releases](releases.md)
   * [1.2.0](release/1.2.0/release-notes.md)
     * [Enhancements](release/1.2.0/enhancements.md)
