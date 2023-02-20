@@ -36,8 +36,8 @@ Major releases may be coded in the respective feature branches within the MOSIP 
 
 When we are close to the code freeze, just before acceptance testing, the develop branch may be tagged and a new `release_branch` may be cutover. The `release branch` is meant for attaining stability through testing and bug fixing. After all the tests are successfully executed, the code is ready to be released.  At this time two things happen:
 
-    * the code from the release branch is merged into `master`, tagged with the release number and released.
-    * the code from the release branch is merged back into `develop` branch.
+* the code from the release branch is merged into `master`, tagged with the release number and released.
+* the code from the release branch is merged back into `develop` branch.
     
 To identify the actual release, you are requested to use the tag. The tags for a release follow the convention as `v<release_version>`.
 
@@ -45,12 +45,12 @@ To identify the actual release, you are requested to use the tag. The tags for a
 
 All the modified POM versions would be the same as the tagged `release` version. 
 
-### Minor Release
+### Minor release
 
 Minor release is needed to support te critical issues that are faced by customers. Customers may be using different MOSIP releases at any given point in time. While it is our goal to get our customers use the latest and greatest release, they may not be ready to upgrade and it is important to support the release they have deployed. At this point, two things could happen:
 
-    * the issue might have been fixed in the current code-base and might have to be back ported.
-    * the issue might have to be freshly fixed.
+* the issue might have been fixed in the current code-base and might have to be back ported.
+* the issue might have to be freshly fixed.
     
 The following procedure must be adopted:
 
