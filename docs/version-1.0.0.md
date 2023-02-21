@@ -83,5 +83,5 @@ Post installation please follow the setup steps available [here](setup-steps-1.0
 
 * [Feature Documentation](./)
 * [Compliance Tool Kit User Guide](user-guide.md)
-* [QA Report](test-report-0.0.9.md](https://docs.mosip.io/compliance-tool-kit/versions/version-1.0.0/test-report-1.0.0)
+* [QA Report](https://docs.mosip.io/compliance-tool-kit/versions/version-1.0.0/test-report-1.0.0)
 * [Videos](https://www.youtube.com/playlist?list=PLJH-POb\_55z8YYS\_qAk\_QNBQeiQ2VrtZD)
