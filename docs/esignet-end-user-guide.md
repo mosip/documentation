@@ -32,7 +32,7 @@ The login screen appears and the resident is displayed with the options they can
 
 ![](\_images/idp-login-otp-loginhere.png)
 
-3\. Resident needs to enter valid VID in the "Enter Your VID" text field. Also, they can enter the UIN here.
+3\. Resident needs to enter valid VID in the "Enter Your VID" text field. 
 
 ![](\_images/idp-login-otp-entervid.png)
 
