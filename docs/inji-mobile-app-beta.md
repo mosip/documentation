@@ -140,15 +140,16 @@ Below are the steps for performing face authentication on resident' phone using 
 
 ## Wallet binding flow
 
-1. After successful download of VC, residents will have an option to activate VC for online login.
-2. Resident clicks on `Activation pending for online login` in the home page. 
-3. Resident will be taken to a detail view page where an option to `Activate` the VC is available.
+After successful download of VC, residents will have an option to activate VC for online login.
+
+1. Resident clicks on `Activation pending for online login` in the home page. 
+2. Resident will be taken to a detailed view page where an option to `Activate` the VC is available.
+3. Further, the resident can click on `Activate` button. They will get an alert message after which they can click on `Yes, I confirm` button.
 
 ![](\_images/inji-wa-flow1.png)
 
-4. Further, the resident clicks on `Activate` button. They will get an alert pop-up after which they can click on `Yes, I confirm` button.
-5. The resident needs to enter the OTP sent on their registered number.
-6. After the successful OTP match, VC will be activated for online login with the icon changing to green as shown below.
+4. The resident needs to enter the OTP sent on their registered number.
+5. After the successful OTP match, VC will be activated for online login with the icon changing to green as shown below.
 
 Also, the same is reflected on the home page.
 
