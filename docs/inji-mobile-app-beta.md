@@ -15,9 +15,7 @@ Prerequisite: Build `Inji` code to generate an `apk` file. Transfer the `apk` fi
 
 ## First launch of the app 
 
-
 ![](\_images/inji-initial-setup-flow.png)
-
 
 On the **Home** screen, a few tooltips are displayed after the initial setup to guide the user with the next steps.
 
@@ -52,7 +50,6 @@ Click on the ID card generated to view the following details:
 ![](\_images/inji-view-card-details.png)
 
 ![](\_images/inji-view-card-details2.png)
-
 
 
 ### Viewing history of the downloaded credential
@@ -143,8 +140,23 @@ Below are the steps for performing face authentication on resident' phone using 
 
 ## Wallet binding flow
 
+1. After successful download of VC, residents will have an option to activate VC for online login.
+2. Resident clicks on `Activation pending for online login` in the home page. 
+3. Resident will be taken to a detail view page where an option to `Activate` the VC is available.
 
-## Login with QR code scan flow
+![](\_images/inji-wa-flow1.png)
+
+4. Further, the resident clicks on `Activate` button. They will get an alert pop-up after which they can click on `Yes, I confirm` button.
+5. The resident needs to enter the OTP sent on their registered number.
+6. After the successful OTP match, VC will be activated for online login with the icon changing to green as shown below.
+
+Also, the same is reflected on the home page.
+
+![](\_images/inji-wa-flow2.png)
+
+
+
+ 
 
 
 
