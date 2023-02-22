@@ -107,11 +107,45 @@ On the Relying party' phone, the `History` tab shows the history of the received
 
 ## Face authentication flow
 
-Below are the steps for performing face authentication on resident' phone using Inji.
+### Face Auth on resident's phone
 
-1. Face Auth on Requesting Phone.
+Below are the steps for performing face authentication on the resident's phone using Inji.
+
+1. Let us assume that the:
 
 * QR code on requesting phone
+* Scanner on Sharing Device
+
+![](\_images/inji-fa-resident-flow1.png)
+
+2. Connectivity details on both the devices : Sharing & Requesting device
+
+![](\_images/inji-fa-resident-flow2.png)
+
+3. Sharing screen after establishing the connection
+
+![](\_images/inji-fa-resident-flow3.png)
+
+4. Incoming VC on Requested Device:
+ 
+![](\_images/inji-fa-resident-flow4.png)
+
+5. Success pop up after successful share with face authentication on both the devices.
+
+![](\_images/inji-fa-resident-flow5.png)
+
+6.  History on both the devices.
+
+![](\_images/inji-fa-resident-flow6.png)
+
+
+### Face Auth on requesting phone
+
+Below are the steps for performing face authentication on the requesting phone using Inji.
+
+1. Let us assume that the:
+
+* QR code is on the requesting phone
 * Scanner on Sharing Device
 
 ![](\_images/inji-face-auth-flow1.png)
@@ -120,22 +154,21 @@ Below are the steps for performing face authentication on resident' phone using 
 
 ![](\_images/inji-face-auth-flow2.png)
 
-3. Sharing screen after establishing the connection:
-
+3. Sharing screen after establishing the connection
+.
 ![](\_images/inji-face-auth-flow3.png)
 
 4. On the Requesting Device, following is displayed:
 
 ![](\_images/inji-face-auth-flow4.png)
 
-5. Success pop up after successful share with face auth: On both the devices.
+5. Success pop up after successful share with face auth on both the devices.
 
 ![](\_images/inji-face-auth-flow5.png)
 
 6. History on both the devices.
 
 ![](\_images/inji-face-auth-flow6.png)
-
 
 
 ## Wallet binding flow
