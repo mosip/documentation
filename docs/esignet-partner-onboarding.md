@@ -1,14 +1,15 @@
-# ONBOARDING an e-Signet PARTNER
+# e-Signet PARTNER ONBOARDING
 
 This document contains the steps that needs to be followed for onboarding an e-Signet partner.
 
-*Note*: The same is automated and is done through `mosip-onboarder`, however this document will help in understanding the key details and manual onboarding.
+*Note*: The same is automated and is done through `mosip-onboarder`, however this document helps in understanding the key details and the manual onboarding process.
 
 **Step 1: Authenticate as policy manager**
 
-URL:{{url}}/v1/authmanager/authenticate/internal/useridPwd
+URL: {{url}}/v1/authmanager/authenticate/internal/useridPwd
 
- Request body :
+ Request body:
+ ```
  {
   "id": "string",
   "version": "string",
@@ -22,12 +23,14 @@ URL:{{url}}/v1/authmanager/authenticate/internal/useridPwd
     "clientSecret": ""
   }
 }
- 
+```
+
 **Step 2: Create a policy Group**
 
- URL : {{url}}/v1/policymanager/policies/group/new
+URL: {{url}}/v1/policymanager/policies/group/new
  
   Request body:
+ ```
   {
   "id": "",
   "metadata": {},
@@ -38,12 +41,14 @@ URL:{{url}}/v1/authmanager/authenticate/internal/useridPwd
   "requesttime": "",
   "version": "LTS"
 }
+```
 
 **Step 3: Create a MISP policy**
 
- URL :{{url}}/v1/policymanager/policies
+URL: {{url}}/v1/policymanager/policies
  
  Request body:
+ ```
  {
   "id": "string",
   "metadata": {},
@@ -62,16 +67,19 @@ URL:{{url}}/v1/authmanager/authenticate/internal/useridPwd
   "requesttime": "",
   "version": "LTS"
 }
+```
 
 **Step 4: Publish the policy and policy group**
 
- URL :{{url}}/v1/policymanager/policies/{{policyid}}/group/{{policygroupid}}/publish
+URL: {{url}}/v1/policymanager/policies/{{policyid}}/group/{{policygroupid}}/publish
 
 **Step 5: Add e-Signet partner **
 
-URL : {{url}}/v1/partnermanager/partners
+URL: {{url}}/v1/partnermanager/partners
 
-Request body :{
+Request body :
+```
+{
   "id": "string",
   "metadata": {},
   "request": {
@@ -86,6 +94,7 @@ Request body :{
   "requesttime": "",
   "version": "string"
 }
+```
 
 **Step 6: Get Root Certificate**
 
@@ -95,17 +104,19 @@ URL: {{external-url}}/v1/esignet/system-info/certificate?applicationId=ROOT
 
 **Step 7: Get Intermediate certificate**
 
-URL:{{external-url}}/v1/esignet/system-info/certificate?applicationId=OIDC_SERVICE
+URL: {{external-url}}/v1/esignet/system-info/certificate?applicationId=OIDC_SERVICE
 
 **Step 8: Get Leaf Certificate**
 
-URL:{{external-url}}/v1/esignet/system-info/certificate?applicationId=OIDC_PARTNER
+URL: {{external-url}}/v1/esignet/system-info/certificate?applicationId=OIDC_PARTNER
 
 **Step 9: Upload ROOT certificate**
 
-URL:{{url}}/v1/partnermanager/partners/certificate/ca/upload
+URL: {{url}}/v1/partnermanager/partners/certificate/ca/upload
 
-Request body:{
+Request body:
+```
+{
     "id": "string",
   "metadata": {},
   "request": {
@@ -115,12 +126,15 @@ Request body:{
   "requesttime": "",
   "version": "string"
   }
-  
+```
+
 **Step 10: Upload Intermediate Certificate**
 
-URL : {{url}}/v1/partnermanager/partners/certificate/ca/upload
+URL: {{url}}/v1/partnermanager/partners/certificate/ca/upload
 
-Request body: {
+Request body:
+```
+{
     "id": "string",
   "metadata": {},
   "request": {
@@ -130,27 +144,33 @@ Request body: {
   "requesttime": "",
   "version": "string"
   }
-  
+```
+
 **Step 11: Upload partner certificate**
 
-URL :{{url}}/v1/partnermanager/partners/certificate/upload
-Request body : {
+URL: {{url}}/v1/partnermanager/partners/certificate/upload
+
+Request body:
+```
+{
   "id": "string",
   "metadata": {},
   "request": {
     "certificateData":"",
     "partnerDomain": "MISP",
     "partnerId": ""
- 
-  },
+   },
   "requesttime": "",
   "version": "string"
 }
+```
 
 **Step 12: Activate MISP partner**
 
-URL : {{url}}/v1/partnermanager/partners/{{partner_id}}
-Request body :
+URL: {{url}}/v1/partnermanager/partners/{{partner_id}}
+
+Request body:
+```
 {
   "id": "string",
   "version": "string",
@@ -160,12 +180,15 @@ Request body :
     "status": "ACTIVE"
   }
 }
+```
 
 **Step 13: Upload signed cert to e-Signet"
 
-URL : {{external-url}}/v1/esignet/system-info/uploadCertificate
+URL: {{external-url}}/v1/esignet/system-info/uploadCertificate
 
-Request body : {
+Request body:
+```
+{
   "request": {
     "certificateData": "certificate recieved in the response of STEP-11 to be used as input",
     "applicationId": "OIDC_PARTNER",
@@ -173,11 +196,13 @@ Request body : {
   },
   "requestTime": ""
 }
+```
 
 **Step 14: Map partner with policy**
 
 URL: {{url}}/v1/partnermanager/partners/{{partnerid}}/policy/map
-Request body :
+Request body:
+```
 {
   "id": "string",
   "metadata": {},
@@ -188,11 +213,14 @@ Request body :
   "requesttime": "",
   "version": "string"
 }
+```
 
 **Step 15: Approve partner-policy mapping**
 
- URL:{{url}}/v1/partnermanager/partners/policy/{mapping key recieved from the STEP-14}
- Request body: {
+ URL: {{url}}/v1/partnermanager/partners/policy/{mapping key recieved from the STEP-14}
+ Request body:
+ ```
+ {
   "id": "string",
   "metadata": {},
   "request": {
@@ -201,11 +229,13 @@ Request body :
   "requesttime": "",
   "version": "string"
 }
+```
 
 **Step 16: Generate MISP license key**
 
- URL :{{url}}/v1/partnermanager/misps
- Request body :
+ URL: {{url}}/v1/partnermanager/misps
+ Request body:
+ ```
  {
   "id": "string",
   "metadata": {},
@@ -215,6 +245,7 @@ Request body :
   "requesttime": "",
   "version": "string"
 }
+```
 
 **Step 17**: Collect the Generated MISP license key from the response of Step 16 and update the `esignet-default-properties` in the `mosip-config`.
 
