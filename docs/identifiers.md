@@ -22,6 +22,6 @@ The RID is the registration ID that is used to refer to the registration process
 
 The PRID is a specialized RID used in the pre-registration system.
 
-### Token ID
+### Token ID (PSUT - Partner Specific User Token)
 
-The Token identifier is a system provided customer reference number for relying parties for identifying the user uniquely in their system. The token identifier is an alias meant for the relying party and us typically unique to them. This identifier is included in the response of the authentication transactions. One key differentiator is that the token identifier is not accepted as an identifier for authentication transactions.
+The Token identifier/PSUT is a system provided customer reference number for relying parties for identifying the user uniquely in their system. The token identifier is an alias meant for the partner/relying party typically unique (Configured through PMS policy, in case uniqueness is not the need then partner policy can be set to provide random number) to them. This identifier is included in the response of the authentication transactions. One key differentiator is that the PSUT is not accepted as an identifier for authentication transactions. This ensures that the partner who has the PSUT can not reauthneticate.
