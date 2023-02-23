@@ -73,7 +73,7 @@ URL: {{url}}/v1/policymanager/policies
 
 URL: {{url}}/v1/policymanager/policies/{{policyid}}/group/{{policygroupid}}/publish
 
-**Step 5: Add e-Signet partner **
+**Step 5: Add an e-Signet partner**
 
 URL: {{url}}/v1/partnermanager/partners
 
@@ -182,7 +182,7 @@ Request body:
 }
 ```
 
-**Step 13: Upload signed cert to e-Signet"
+**Step 13: Upload signed cert to e-Signet**
 
 URL: {{external-url}}/v1/esignet/system-info/uploadCertificate
 
