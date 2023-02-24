@@ -25,7 +25,7 @@ To read through the previous version of the documentation, see the [Older versio
 
 * Source Code: [GitHub Repositories](https://github.com/mosip)
 * Containers: [Docker Repository](https://hub.docker.com/u/mosipid)
-* Maven Repository: [Nexus Repository](https://oss.sonatype.org/service/local/repositories/snapshots/content/io/mosip/)
+* Maven Repository: [Nexus Repository](https://oss.sonatype.org/service/local/repositories/releases/content/io/mosip/)
 * Presentations: [mosip.io](https://www.mosip.io/resources.php)
 * Training: [MOSIP Academy](https://academy.mosip.io)
 * Learning videos: [YouTube Channel](https://www.youtube.com/channel/UCxvEtyjmc3\_KR45BOKMLJLA)
