@@ -21,8 +21,8 @@ ID Repository module consists of the following components:
 
 ## Identity service
 
-* Stores, updates, retrieves identity information and also to
-* Retrieves and updates [UIN](identifiers.md#uin) status.
+* Stores, updates, retrieves identity information.
+* Also, retrieves and updates [UIN](identifiers.md#uin) status.
 
 Identity service uses Biometric SDK (server) to extract templates from provided biometric data.
 
