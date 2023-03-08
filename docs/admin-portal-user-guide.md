@@ -314,7 +314,11 @@ To know more, refer to Master Data guide.
  
 To view the format for inserting data in a particular table, click on the Download icon. A CSV or XLSX template file gets downloaded in which the first row represents the column names and the rest of the rows are the data which will be inserted into the table(sample).
 
+Apart from comma, other special characters (i.e., '|','$'etc.) can also be used as a separater in the csv file that is used for masterdata bulk upload by updating this property : `mosip.admin.batch.line.delimiter` with the same special character.
+
 _Note:_ While editing CSV or XLSX files, it is recommended to keep track of the Date format and Time format to be the same as the acceptable formats. The acceptable Date format is _YYYY-MM-DD_ and the acceptable Time format is _HH:MM:SS_. Any other Date and Time formats in CSV or XLSX files will result in a `DataType Mismatch Error`.
+
+
 
 ### Packets
 
