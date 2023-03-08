@@ -321,6 +321,8 @@ To upload Master data using Admin portal,
 
 * To view the format for inserting data in a particular table, click on the Download icon.
 * A CSV file gets downloaded in which the first row represents the column names and the rest of the rows are the data which will be inserted into the table(sample).
+* From 1.2.0.1-B2 version, apart from comma, other special characters (i.e., '|','$'etc.) can also be used as a separator in the csv file used for masterdata bulk upload. This can be done by updating the property `mosip.admin.batch.line.delimiter` with the same special character.
+
 
 _Note:_ While editing CSV files, it is recommended to keep track of the Date format and Time format to be the same as the acceptable formats. The acceptable Date format is _YYYY-MM-DD_ and the acceptable Time format is _HH:MM:SS_. Any other Date and Time formats in CSV files will result in a `DataType Mismatch Error`.
 
