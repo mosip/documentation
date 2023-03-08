@@ -163,8 +163,7 @@ Datashare contains biometrics, identity documents, metainfo, audits related to p
 
 GET https://datashare-service/v1/datashare/get/mpolicy-default-adjudication/mpartner-default-adjudication/mpartner-default-adjudicationmpolicy-default-adjudication202011110619201EpLEjvD
 
-
-
+```
 {
   "id": "mosip.manual.adjudication.adjudicate",
   "requestId": "987654321-89AB-CDEF-0123-456789ABCDEF",
@@ -193,7 +192,7 @@ GET https://datashare-service/v1/datashare/get/mpolicy-default-adjudication/mpar
     }
   }
 }
-
+```
 
 
 
