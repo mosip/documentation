@@ -498,7 +498,6 @@ This stage is applicable only if required biometrics are not present in the pack
 
 
 #### Sample request
-
 ```
 {
   "id": " mosip.verification.adjudicate ",
@@ -534,13 +533,16 @@ Datashare contains biometrics, identity, documents, metainfo, audits related to 
 
 GET https://datashare-service/v1/datashare/get/mpolicy-default-adjudication/mpartner-default-adjudication/mpartner-default-adjudicationmpolicy-default-adjudication202011110619201EpLEjvD
 
-Sample Encrypted Response
+#### Sample Encrypted Response
 
 The structure of the encrypted data downloaded from referenceURL in MOSIP 1.2.0 or later versions
 The data downloaded would be URL-safe base64 encoded. Hence, after decoding the data will be in the below format. It will be divided into two Parts after splitting using #KEY_SPLITTER#.
 
-Encrypted Key Data	KEY_SPLITTER	Encrypted Actual Data
-Block 1	#KEY_SPLITTER#	Block 2
+| Encrypted Key Data | KEY\_SPLITTER   | Encrypted Actual Data |
+| ------------------ | --------------- | --------------------- |
+| Block 1            | #KEY\_SPLITTER# | Block 2               |
+
+
 
 Block 1:
 Block 1, i.e. the encrypted key data is again split into three parts,
@@ -578,18 +580,23 @@ Sample Response in case of Authentication Failure
   ]
 }
 
-All Possible Error codes and Messages from Datashare URL
-Error Code	Error Message
-DAT-SER-003	File does not exists or File is empty
-DAT-SER-006	Data share not found
-DAT-SER-006	Data share usage expired
-KER-ATH-401	Authentication Failed
-KER-ATH-403	Forbidden
+**Possible Error codes and Messages from Datashare URL**
+
+|Error Code  |	Error Message   |
+|------------|------------------|
+|DAT-SER-003|	File does not exists or File is empty|
+|DAT-SER-006|	Data share not found|
+|DAT-SER-006|	Data share usage expired|
+|KER-ATH-401|	Authentication Failed|
+|KER-ATH-403|	Forbidden|
 
 
-Policy structure
-    partner Id : mpartner-default-adjudication
- policy Id : mpolicy-default-adjudication
+### Policy structure
+
+`partner Id`: mpartner-default-adjudication
+`policy Id`: mpolicy-default-adjudication
+ 
+``` 
 {
   "shareableAttributes": [
     {
@@ -742,8 +749,11 @@ Policy structure
     "source": "Packet Manager"
   }
 }
-Configuration used in Verification
+```
 
+### Configuration used in Verification
+
+```
 registration.processor.queue.verification.request
 registration.processor.queue.verification.request.messageTTL
 registration.processor.verification.policy.id
@@ -751,17 +761,20 @@ registration.processor.verification.subscriber.id
 activemq.message.format
 mosip.regproc.data.share.protocol
 mosip.regproc.data.share.internal.domain.name
+```
 
-Error Codes
+### Error Codes
 
 
-RPR-MVS-004   No Assigned Record Found 
-RPR-MVS-025   Multiple rids found for a reference id
-RPR-MVS-022   TablenotAccessibleException in Manual verification
-RPR-VER-002    Verification failed
-RPR-VER-004   Resend for verification 
-RPR-MVS-016   Reg Id should not be null or empty
-RPR-MVS-021   Manual verification rejected
+|Error Code  |	Error Message   |
+|------------|------------------|
+|RPR-MVS-004|  No Assigned Record Found| 
+|RPR-MVS-025|  Multiple rids found for a reference id|
+|RPR-MVS-022|  TablenotAccessibleException in Manual verification|
+|RPR-VER-002|   Verification failed|
+|RPR-VER-004|  Resend for verification| 
+|RPR-MVS-016|  Reg Id should not be null or empty|
+|RPR-MVS-021|   Manual verification rejected|
 
 
 
