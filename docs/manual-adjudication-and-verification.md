@@ -4,7 +4,7 @@
 * The system integrator can build the Manual Adjudication System, which would be listening to the `MOSIP-to-ManualAdjudication` queue for any manual adjudication requests and sends a response back in the `ManualAdjudication-to-MOSIP` system after verifying the data.
 * The data sent to the Manual Adjudication System is driven by a policy defined in MOSIP and the specification is similar to ABIS identify request.
 
-The manual adjudication stage in [registration processor]() performs the following functions:
+The manual adjudication stage in [registration processor](https://docs.mosip.io/1.2.0/modules/registration-processor) performs the following functions:
 * Sends the applicant's demographic and biometric information (via queue + Datashare) to Manual Adjudication System (MAS).
 * Receives decision from MAS and accordingly forwards the packets.
 * If rejected, notifies the applicant.
@@ -110,7 +110,9 @@ The manual adjudication stage in [registration processor]() performs the followi
 
 `candidateList`: It contains matched candidate referenceIds, count and analytics.
 
-### Scenario: No match- response structure
+### Scenario: No match
+
+**Response structure**
 
 ```
 {
@@ -122,7 +124,9 @@ The manual adjudication stage in [registration processor]() performs the followi
 }
 ```
 
-### Scenario: There are matches, response structure
+### Scenario: There are matches
+
+**Response structure**
 
 ```
 {
@@ -177,16 +181,19 @@ The data downloaded would be URL-safe base64 encoded. Hence, after decoding the 
 | Block 1            | #KEY\_SPLITTER# | Block 2               |
 
 {% hint style="info" %}
-Block 1:
+
+
+**Block 1:**
 
 Block 1, i.e. the encrypted key data is again split into three parts,
-•	The 1st part is VER_BYTES (version bytes). The Current version constant is set as VER_R2 and this is present in the first 6 bytes of Block 1.
-•	The 2nd part is the Certificate Thumbprint i.e. the key identifier which is present in the next 32 bytes after VER_BYTES.
-•	The 3rd part is the Encrypted Random AES Key, encrypted with the RSA OAEP - SHA256-MFG1. This constitutes the remaining 256 bytes of Block 1.
-Block 2:
+•	The 1st part is _**VER_BYTES**_ (version bytes). The Current version constant is set as VER_R2 and this is present in the first 6 bytes of Block 1.
+•	The 2nd part is the _**Certificate Thumbprint**_ i.e. the key identifier which is present in the next 32 bytes after VER_BYTES.
+•	The 3rd part is the _**Encrypted Random AES Key**_, encrypted with the RSA OAEP - SHA256-MFG1. This constitutes the remaining 256 bytes of Block 1.
+
+**Block 2:**
 
 Block 2, i.e. the encrypted actual data is again split into two parts,
-•	The 1st part is the random 32 bytes which will be used as AAD in AES encryption (first 32 bytes). From this 32 bytes AAD data, the first 12 bytes is IV/Nonce.
+•	The 1st part is the random 32 bytes which will be used as _**AAD**_ in AES encryption (first 32 bytes). From this 32 bytes AAD data, the first 12 bytes is _**IV/Nonce**_.
 •	The 2nd part is the encrypted data which is encrypted using AES GCM PKCS5Padding.
 
 **The structure of the encrypted data downloaded from referenceURL in MOSIP 1.1.5.5 or prior versions.**
@@ -521,16 +528,17 @@ The data downloaded would be URL-safe base64 encoded. Hence, after decoding the 
 | Block 1            | #KEY\_SPLITTER# | Block 2               |
 
 {% hint style="info" %}
-Block 1:
+
+**Block 1:**
 
 Block 1, i.e. the encrypted key data is again split into three parts,
-•	The 1st part is VER_BYTES (version bytes). The Current version constant is set as VER_R2 and this is present in the first 6 bytes of Block 1.
-•	The 2nd part is the Certificate Thumbprint i.e. the key identifier which is present in the next 32 bytes after VER_BYTES.
-•	The 3rd part is the Encrypted Random AES Key, encrypted with the RSA OAEP - SHA256-MFG1. This constitutes the remaining 256 bytes of Block 1.
+•	The 1st part is _**VER_BYTES**_ (version bytes). The Current version constant is set as VER_R2 and this is present in the first 6 bytes of Block 1.
+•	The 2nd part is the _**Certificate Thumbprint**_ i.e. the key identifier which is present in the next 32 bytes after VER_BYTES.
+•	The 3rd part is the _**Encrypted Random AES Key**_, encrypted with the RSA OAEP - SHA256-MFG1. This constitutes the remaining 256 bytes of Block 1.
 Block 2:
 
 Block 2, i.e. the encrypted actual data is again split into two parts,
-•	The 1st part is the random 32 bytes which will be used as AAD in AES encryption (first 32 bytes). From this 32 bytes AAD data, the first 12 bytes is IV/Nonce.
+•	The 1st part is the random 32 bytes which will be used as _**AAD**_ in AES encryption (first 32 bytes). From this 32 bytes AAD data, the first 12 bytes is _**IV/Nonce**_.
 •	The 2nd part is the encrypted data which is encrypted using AES GCM PKCS5Padding.
 
 **The structure of the encrypted data downloaded from referenceURL in MOSIP 1.1.5.5 or prior versions.**
