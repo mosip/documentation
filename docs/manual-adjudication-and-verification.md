@@ -163,48 +163,20 @@ Datashare contains biometrics, identity documents, metainfo, audits related to p
 
 GET https://datashare-service/v1/datashare/get/mpolicy-default-adjudication/mpartner-default-adjudication/mpartner-default-adjudicationmpolicy-default-adjudication202011110619201EpLEjvD
 
-```
-{
-  "id": "mosip.manual.adjudication.adjudicate",
-  "requestId": "987654321-89AB-CDEF-0123-456789ABCDEF",
-  "responsetime": "2019-02-14T12:40:59.768Z",
-  "returnValue": "1",
-  "candidateList": {
-    "count": "1",
-    "candidates": [
-      {
-        "referenceId": "27847657360002520181208123451",
-        "analytics": {
-          //This section is optional 
-          "primaryOperatorID": "110011",
-          "primaryOperatorComments": "<comments provided by operator>",
-          "secondaryOperatorID": "110012",
-          "secondaryOperatorComments": "<comments provided by operator>",
-          "key1": "value1",
-          "key2": "value2"
-        }
-      }   
-    ],
-    "analytics": {
-      // This section is optional
-      "key1": "value1",
-      "key2": "value2"
-    }
-  }
-}
-```
+### Sample Encrypted Response
 
 {% hint style="info" %}
 
-The structure of the encrypted data downloaded from referenceURL in MOSIP 1.2.0 or later versions.
-The data downloaded would be URL-safe base64 encoded. Hence, after decoding the data will be in the below format. It will be divided into two Parts after splitting using #KEY_SPLITTER#.
+**The structure of the encrypted data downloaded from referenceURL in MOSIP 1.2.0 or later versions.** 
+The data downloaded would be URL-safe base64 encoded. Hence, after decoding the data will be in the below format. It will be divided into two parts after splitting using #KEY_SPLITTER#.
+
+{% endhint %}
 
 | Encrypted Key Data | KEY\_SPLITTER   | Encrypted Actual Data |
 | ------------------ | --------------- | --------------------- |
 | Block 1            | #KEY\_SPLITTER# | Block 2               |
 
-{% endhint %}
-
+{% hint style="info" %}
 Block 1:
 
 Block 1, i.e. the encrypted key data is again split into three parts,
@@ -245,6 +217,8 @@ Block 2, i.e. the encrypted actual data is again split into two parts,
 {% endhint %}
 
 ### Sample response in case of Authentication Failure
+
+```
 {
   "id": null,
  "version": null,
@@ -258,8 +232,8 @@ Block 2, i.e. the encrypted actual data is again split into two parts,
     }
   ]
 }
-
-### Possible Error codes and messages from Datashare URL
+```
+### Possible Error Codes and messages from Datashare URL
 
 |Error Code  |	Error Message   |
 |------------|------------------|
@@ -271,8 +245,8 @@ Block 2, i.e. the encrypted actual data is again split into two parts,
 
 ### Policy structure
 
-`partner Id`: mpartner-default-adjudication
-`policy Id`: mpolicy-default-adjudication
+`partner Id`: `mpartner-default-adjudication`
+`policy Id`: `mpolicy-default-adjudication`
 
 ```
 {
@@ -429,7 +403,7 @@ Block 2, i.e. the encrypted actual data is again split into two parts,
 }
 ```
 
-Configuration used in Manual adjudication
+### Configuration used in Manual adjudication
 
 ```
 registration.processor.queue.manual.adjudication.request
@@ -535,37 +509,60 @@ GET https://datashare-service/v1/datashare/get/mpolicy-default-adjudication/mpar
 
 #### Sample Encrypted Response
 
-The structure of the encrypted data downloaded from referenceURL in MOSIP 1.2.0 or later versions
-The data downloaded would be URL-safe base64 encoded. Hence, after decoding the data will be in the below format. It will be divided into two Parts after splitting using #KEY_SPLITTER#.
+{% hint style="info" %}
+
+**The structure of the encrypted data downloaded from referenceURL in MOSIP 1.2.0 or later versions.** 
+The data downloaded would be URL-safe base64 encoded. Hence, after decoding the data will be in the below format. It will be divided into two parts after splitting using #KEY_SPLITTER#.
+
+{% endhint %}
 
 | Encrypted Key Data | KEY\_SPLITTER   | Encrypted Actual Data |
 | ------------------ | --------------- | --------------------- |
 | Block 1            | #KEY\_SPLITTER# | Block 2               |
 
-
-
+{% hint style="info" %}
 Block 1:
+
 Block 1, i.e. the encrypted key data is again split into three parts,
 •	The 1st part is VER_BYTES (version bytes). The Current version constant is set as VER_R2 and this is present in the first 6 bytes of Block 1.
 •	The 2nd part is the Certificate Thumbprint i.e. the key identifier which is present in the next 32 bytes after VER_BYTES.
 •	The 3rd part is the Encrypted Random AES Key, encrypted with the RSA OAEP - SHA256-MFG1. This constitutes the remaining 256 bytes of Block 1.
 Block 2:
+
 Block 2, i.e. the encrypted actual data is again split into two parts,
-•	The 1st part is the random 32 bytes which will be used as AAD in AES encryption(first 32 bytes). From this 32 bytes AAD data, the first 12 bytes is IV/Nonce.
+•	The 1st part is the random 32 bytes which will be used as AAD in AES encryption (first 32 bytes). From this 32 bytes AAD data, the first 12 bytes is IV/Nonce.
 •	The 2nd part is the encrypted data which is encrypted using AES GCM PKCS5Padding.
-The structure of the encrypted data downloaded from referenceURL in MOSIP 1.1.5.5 or prior versions
-The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format. It will be divided into two Parts after splitting using #KEY_SPLITTER#.
-Encrypted Key Data	KEY_SPLITTER	Encrypted Actual Data
-Block 1	#KEY_SPLITTER#	Block 2
-Block 1:
+
+**The structure of the encrypted data downloaded from referenceURL in MOSIP 1.1.5.5 or prior versions.**
+
+The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format. It will be divided into two parts after splitting using #KEY_SPLITTER#.
+
+{% endhint %}
+
+| Encrypted Key Data | KEY\_SPLITTER   | Encrypted Actual Data |
+| ------------------ | --------------- | --------------------- |
+| Block 1            | #KEY\_SPLITTER# | Block 2               |
+
+{% hint style="info" %}
+**Block 1:**
+
 Block 1, i.e. the encrypted key data is again split into two parts,
-•	The first part is the Certificate Thumbprint i.e. the key identifier which is the first 32 bytes in Block 1.
-•	The second part is the Encrypted Random AES Key which is encrypted with RSA OAEP - SHA256-MFG1. This constitutes the remaining 256 bytes of Block 1.
-Block 2:
+
+* The first part is the _**Certificate Thumbprint**_ i.e. the key identifier which is the first 32 bytes in Block 1.
+* The second part is the _**Encrypted Random AES Key**_ which is encrypted with RSA OAEP - SHA256-MFG1. This constitutes the remaining 256 bytes of Block 1.
+
+**Block 2:**
+
 Block 2, i.e. the encrypted actual data is again split into two parts,
-•	The 1st part is the Encrypted data, encrypted using AES GCM PKCS5Padding.
-•	The 2nd part is IV/Nonce i.e. the last 32 bytes appended after encrypted data.
-Sample Response in case of Authentication Failure
+
+* The 1st part is the _**Encrypted data**_, encrypted using AES GCM PKCS5Padding.
+* The 2nd part is _**IV/Nonce**_ i.e. the last 32 bytes appended after encrypted data.
+
+{% endhint %}
+
+
+### Sample Response in case of Authentication Failure
+```
 {
   "id": null,
  "version": null,
@@ -579,7 +576,7 @@ Sample Response in case of Authentication Failure
     }
   ]
 }
-
+```
 **Possible Error codes and Messages from Datashare URL**
 
 |Error Code  |	Error Message   |
