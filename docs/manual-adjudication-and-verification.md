@@ -543,7 +543,7 @@ Block 1, i.e. the encrypted key data is again split into three parts,
 
 •	The 3rd part is the _**Encrypted Random AES Key**_, encrypted with the RSA OAEP - SHA256-MFG1. This constitutes the remaining 256 bytes of Block 1.
 
-Block 2:
+**Block 2:**
 
 Block 2, i.e. the encrypted actual data is again split into two parts,
 
