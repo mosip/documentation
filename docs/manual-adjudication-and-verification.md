@@ -163,6 +163,8 @@ The manual adjudication stage in [registration processor](https://docs.mosip.io/
 
 Datashare contains biometrics, identity documents, metainfo, audits related to particular rid and the datashare URL contains encrypted form of this data.
 
+_Note_: Datashare encryption using partner key and decryption in MAS is using private key of that partner.
+
 ### Sample Request URL
 
 GET https://datashare-service/v1/datashare/get/mpolicy-default-adjudication/mpartner-default-adjudication/mpartner-default-adjudicationmpolicy-default-adjudication202011110619201EpLEjvD
@@ -514,6 +516,8 @@ This stage is applicable only if required biometrics are not present in the pack
 ### Datashare structure 
 
 Datashare contains biometrics, identity, documents, metainfo, audits related to particular `rid` and datashare URL contains encrypted form of this data.
+
+_Note_: Datashare encryption using partner key and decryption in MAS is using private key of that partner.
 
 #### Sample request URL
 
