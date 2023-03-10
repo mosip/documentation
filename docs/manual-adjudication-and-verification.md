@@ -533,8 +533,11 @@ The data downloaded would be URL-safe base64 encoded. Hence, after decoding the 
 
 Block 1, i.e. the encrypted key data is again split into three parts,
 •	The 1st part is _**VER_BYTES**_ (version bytes). The Current version constant is set as VER_R2 and this is present in the first 6 bytes of Block 1.
+
 •	The 2nd part is the _**Certificate Thumbprint**_ i.e. the key identifier which is present in the next 32 bytes after VER_BYTES.
+
 •	The 3rd part is the _**Encrypted Random AES Key**_, encrypted with the RSA OAEP - SHA256-MFG1. This constitutes the remaining 256 bytes of Block 1.
+
 Block 2:
 
 Block 2, i.e. the encrypted actual data is again split into two parts,
