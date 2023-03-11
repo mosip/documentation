@@ -1,6 +1,6 @@
 # Home
 
-![](\_images/mosip-vertical-black.png)
+![](\_images/mosip-vertical-black.jpg)
 
 ## About MOSIP
 
