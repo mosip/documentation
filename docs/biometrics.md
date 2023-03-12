@@ -16,6 +16,6 @@ Vendors who provide biometric systems are [Partners](partners.md) of MOSIP.
 
 Modalities supported in MOSIP are
 
-1. [Fingerprint](biometric-image-specification.md#fingerprint)
-2. [Iris](biometric-image-specification.md#iris)
-3. [Face](biometric-image-specification.md#face)
+1. [Fingerprint](broken-reference)
+2. [Iris](broken-reference)
+3. [Face](broken-reference)

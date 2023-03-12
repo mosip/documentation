@@ -2,7 +2,7 @@
 
 ## Production installation
 
-[Production Grade Deployment V3](../getting-started.md#production-grade-deployment-v3-beta)
+[Production Grade Deployment V3](broken-reference)
 
 ## Hardware requirements
 
@@ -12,4 +12,3 @@
 ## Production hardening
 
 [Production Hardening Guide](production-hardening-guide.md)
-
