@@ -23,7 +23,7 @@
 * Name: Asymmetric Amoeba
 * [![LTS](https://img.shields.io/badge/Support-Long%20Term%20Support-blue?style=plastic)](https://docs.mosip.io/1.2.0/releases/support-policy)
 * Date: 14th February 2022
-* Recommended Patch Version: 1.2.0.1 Beta
+* Recommended Patch Version: [1.2.0.1 Beta 2](release/1.2.0.1/release-notes-1.2.0.1-b2.md)
 * [Release Notes](release/1.2.0/release-notes.md)
 
 Refer to [Older Releases](https://docs.mosip.io/1.1.5/mosip-releases).
