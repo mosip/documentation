@@ -85,7 +85,7 @@ Moving from one version of MOSIP to a newer version is expected to be a non-triv
 
 | Version          | Active Support                | Essential Support             |
 | ---------------- | ----------------------------- | ----------------------------- |
-| 1.2.0.X (Latest) | 14th Feb 2022 - 13th Feb 2025 | 14th Feb 2025 - 13th Feb 2027 |
-| 1.1.5.X (Latest) | 23rd Apr 2021 - 22nd Apr 2022 | 23rd Apr 2022 - 22nd Apr 2023 |
-| 1.1.4.X          | End of Life                   | End of Life                   |
-| 1.1.3.X          | End of Life                   | End of Life                   |
+| 1.2.0.x (Latest) | 14th Feb 2022 - 13th Feb 2025 | 14th Feb 2025 - 13th Feb 2027 |
+| 1.1.5.x (Latest) | 23rd Apr 2021 - 22nd Apr 2022 | 23rd Apr 2022 - 22nd Apr 2023 |
+| 1.1.4.x          | End of Life                   | End of Life                   |
+| 1.1.3.x          | End of Life                   | End of Life                   |
