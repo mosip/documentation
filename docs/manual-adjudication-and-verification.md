@@ -112,49 +112,48 @@ The manual adjudication stage in [registration processor](https://docs.mosip.io/
 
 ### Scenario: No match
 
-**Response structure**
+#### Response structure- Not Matched (No Duplicate Profile found)
 
-```
+```json
 {
   "id": "mosip.manual.adjudication.adjudicate",
-  "requestId": "4d4f27d3-ec73-41c4-a384-bf87fce4969e",
-  "responsetime": "2021-01-19T13:16:22.930Z",
+  "requestId": "c278b2f1-29f7-4d1a-9fa7-e93e3f932816",
+  "responsetime": "2022-09-23T06:31:31.7456782+00:00",
   "returnValue": "1",
-  "candidateList": {}
+  "candidateList": {
+    "count": "0",
+    "candidates": [],
+    "analytics": null
+  }
 }
 ```
 
 ### Scenario: There are matches
 
-**Response structure**
 
-```
+#### Response structure
+
+```json
 {
   "id": "mosip.manual.adjudication.adjudicate",
-  "requestId": "987654321-89AB-CDEF-0123-456789ABCDEF",
-  "responsetime": "2019-02-14T12:40:59.768Z",
+  "requestId": "58d5bb0e-e65e-4907-b452-81edbfd3ae46",
+  "responsetime": "2022-09-23T06:33:11.9869624+00:00",
   "returnValue": "1",
   "candidateList": {
     "count": "1",
     "candidates": [
       {
-        "referenceId": "27847657360002520181208123451",
+        "referenceId": "10001100010000620220923053704",
         "analytics": {
-          //This section is optional 
-          "primaryOperatorID": "110011",
-          "primaryOperatorComments": "<comments provided by operator>",
-          "secondaryOperatorID": "110012",
-          "secondaryOperatorComments": "<comments provided by operator>",
-          "key1": "value1",
-          "key2": "value2"
+          "primaryOperatorID": "admin",
+          "primaryOperatorComments": "MATCHED",
+          "Face": "F",
+          "Finger": "Right_Thumb,Right_Index,Right_Middle,Right_Ring,Right_Little,Left_Thumb,Left_Index,Left_Middle,Left_Ring,Left_Little",
+          "Iris": "Right_Iris,Left_Iris"
         }
-      }   
+      }
     ],
-    "analytics": {
-      // This section is optional
-      "key1": "value1",
-      "key2": "value2"
-    }
+    "analytics": null
   }
 }
 ```
