@@ -1,6 +1,8 @@
-# ID Authentication Services
+# ID Authentication Services (IDA)
 
 ## Overview
+
+ID Authentication is built as an independant service that can be seeded with data for authentication by any system including MOSIP. In the current design we can have multiple IDA modules running from a single issuer. 
 
 ID Authentication (IDA) module of MOSIP consists of the following services:
 
