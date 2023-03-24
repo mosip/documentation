@@ -159,7 +159,7 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
 *   Setup Wireguard server
 
     * SSH to wireguard VM
-    * reate directory for storing wireguard config files.\
+    * Create directory for storing wireguard config files.\
       `mkdir -p wireguard/config`
     * Install and start wireguard server using docker as given below:
 
@@ -170,7 +170,7 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
     --cap-add=SYS_MODULE \
     -e PUID=1000 \
     -e PGID=1000 \
-    -e TZ=Asia/Calcutta\
+    -e TZ=Asia/Calcutta \
     -e PEERS=30 \
     -p 51820:51820/udp \
     -v /home/ubuntu/wireguard/config:/config \
