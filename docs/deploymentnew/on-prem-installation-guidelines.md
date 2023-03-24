@@ -270,7 +270,7 @@ sudo systemctl status wg-quick@wg0
       * To create an HA cluster, specify more than one host with role `Control Plane` and `etcd host`.
   * `Network Plugin Type` : Continue with canal as default network plugin.
   * For rest of other configurations, opt the required or default value.
-* As result of `rke config` command `cluster.ymlfile` will be generated inside same directory, update the below mentioned fields:
+* As result of `rke config` command `cluster.yml` file will be generated inside same directory, update the below mentioned fields:
   *   `nano cluster.yml`
 
       * Remove the default Ingress install
