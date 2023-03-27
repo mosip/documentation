@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Inji](README.md)
-* [Overview](architecture.md)
+* [Overview](overview.md)
   * [Componets](sandbox-details/componets.md)
   * [Features](architecture/features.md)
 * [Sandbox Details](sandbox-details/README.md)
