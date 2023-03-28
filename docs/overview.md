@@ -54,3 +54,4 @@ The resident is given access to the portal after token verification.
 
 
 #### Step 2: Online QR Login
+![](_images/online_qr_login.png)
