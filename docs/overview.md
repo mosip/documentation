@@ -40,3 +40,17 @@ The process of generating a credential is shown below
 
 # Sharing of credentials
 The credentials are shared in peer-to-peer model with verifier application. The data exchange between devices is done using BLE Protocol. Refer to [Tuvali documentation]() for more info.
+
+
+# Online Login Process
+Resident can use INJI app to login to any service provider app(integrated with esignet) just by scanning a qr code from their portal. 
+The app performs offline face auth after scanning qr code to verify user presence. 
+Once presence is verified, resident is given option to choose what optional information to be shared with service provider portal.
+After consent App sends a WLA(Wallet local auth) token which is a JWT token to the relying party. 
+The resident is given access to the portal after token verification.
+
+#### Step 1: VC activation process
+![](_images/vc_activation.png)
+
+
+#### Step 2: Online QR Login
