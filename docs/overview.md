@@ -30,11 +30,13 @@ Below diagram shows how credential share and authentication process takes place 
 After installing the application, the user will need to set an app lock code for it. App supports biometric or PIN based lock. For more details, refer the [User Guide]().
 ![](_images/inji_first_launch.png)
 
+
 # Generating and storing of credentials
 A resident can generate a Verifiable Credential(VC) for them or their family or friends on the same phone.
 Detailed steps on generating and sharing credentials are given in the [user guide]().
 The process of generating a credential is shown below
 ![](_images/generate_and_store_cred.png)
+
 
 # Sharing of credentials
 The credentials are shared in peer-to-peer model with verifier application. The data exchange between devices is done using BLE Protocol. Refer to [Tuvali documentation]() for more info.
