@@ -18,7 +18,7 @@ The login screen appears and the resident is displayed with the options they can
 
 3. Now, the resident can scan the QR code displayed on the portal using Inji (on their mobile device).
 
-![](\_images/qr-authentication-progress.png)
+![](\_images/qr-authentication-progress3.png)
 
 4. On Inji, the resident can see the VC that is activated for online login. Select the VC and Click `Verify`.
 
@@ -28,7 +28,7 @@ The login screen appears and the resident is displayed with the options they can
 
 ![](\_images/qr-code-screen5.png)
 
-6. Here, the residents can provide their consent and click on `Allow'. A successful message is displayed on Inji.
+6. Here, the residents can provide their consent and click on `Allow`. A successful message is displayed on Inji.
 
 ![](\_images/qr-code-screen6.png)
 
