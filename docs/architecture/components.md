@@ -6,4 +6,6 @@ Transfer VC from Wallet to Verifier is facilitated by a react native library cal
 At present, offline VC transfer is supported between Android to Android and IOS to Android. VC transfer between Android to IOS is not supported yet.
 
 Refer to Tuvali implementation details [here](./tuvali.md)
+
+Refer to Tuvali & Inji Integration along with API documentation [here](./tuvali-inji.md)
 > Note: Tuvali is actively developed & maintained by MOSIP.
