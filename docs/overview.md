@@ -30,23 +30,23 @@ Below diagram shows how credentials are shared and the authentication process th
 - It uses [e-Signet APIs](https://mosip.stoplight.io/docs/identity-provider) for online login.
 
 
-# Installing the application
+## Installing the application
 After installing the application, the user will need to set an app lock code for it. App supports biometric or PIN based lock. For more details, refer the [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta).
 ![](_images/inji_first_launch.png)
 
 
-# Generating and storing of credentials
+## Generating and storing of credentials
 A resident can generate a Verifiable Credential(VC) for them or their family or friends on the same phone.
 Detailed steps on generating and sharing credentials are given in the [User guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta).
 The process of generating a credential is shown below
 ![](_images/generate_and_store_cred.png)
 
 
-# Sharing of credentials
+## Sharing of credentials
 The credentials are shared in peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. Refer to [Tuvali documentation]() for more info.
 
 
-# Online Login Process
+## Online login process
 * Resident can use INJI app to login to any service provider app (integrated with e-Signet) just by scanning a QR code from their portal. 
 * The app performs offline face auth after scanning the QR code to verify the user presence. 
 * Once the presence is verified, resident is given an option to choose the optional information to be shared with the service provider portal.
@@ -57,5 +57,5 @@ The credentials are shared in peer-to-peer model with the verifier application. 
 ![](_images/vc_activation.png)
 
 
-#### Step 2: Online QR Login
+#### Step 2: Online QR login
 ![](_images/online_qr_login.png)
