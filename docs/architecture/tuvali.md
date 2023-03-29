@@ -50,7 +50,11 @@ Post that, Central would derive a public key pair and send the its 32 bytes publ
 
 Once the public keys are exchanged between Central and Peripheral, a set of keys are derived on both sides which would be used for encryption and decryption of data on the wire.
 
-> Note: Details about the the algorithm used for public key pair generation, key derivation is available in the spec.
+> Cryptographic Algorithm usage:  
+> - Ephemeral Key Pair is generated from X25519 curve
+> - Key Agreement uses ECKA-DH (Elliptic Curve Key Agreement Algorithm – Diffie-Hellman) as defined in BSI TR-03111
+> - Wallet and Verifier derives respective keys using HKDF as defined in RFC5869
+> - Encryption/Decryption uses AES-256-GCM (192) (GCM: Galois Counter Mode)  as defined in NIST SP 800-38D
 
 
 ### 2. Data transfer
@@ -67,6 +71,10 @@ Central would read the Transfer report sumamry to understand if the Peripheral r
 
 The failure frame will be sent from Central repeatedly until Transfer report summary is successful. If during the process, Central reached the maximum allowed failure frame retry limit, the tranfer is halted, devices will be disconnected and an error is generated (Please refer to API documentation on how this error can be read).
 
+> - Gzip is the Compression algorithm used with default compression level
+> - Each chunk have 2 bytes of CRC-16/Kermit added. Parameters for the same are: width=16 poly=0x1021 init=0x0000 refin=true refout=true xorout=0x0000 check=0x2189 residue=0x0000 name="CRC-16/KERMIT"
+
+
 ### 3. Connection closure
 #### Disconnect initiated by Peripheral:
 - On a sucessful data transfer 
@@ -81,7 +89,7 @@ Central also performs disconnect in the following scenarios
 - Peripheral is out of range/disconnected
 - Destroy Connection API
 
-As part of Connection closure. Both Central and Peripheral objects are cleaned up along with Wallet and Verifier objects.
+As part of connection closure, both central and peripheral cleans the held resources, cryptographic keys, bluetooth resources, to ensure that the subsequent transfer happens smoothly.
 
 
 

@@ -1,9 +1,16 @@
 # Components
 
-## 1. Offline VC sharing component
+## Offline VC sharing component
 Transfer VC from Wallet to Verifier is facilitated by a react native library called [Tuvali](https://github.com/mosip/tuvali). This library is integrated into inji to allow offline VC transfer between mobile devices over Bluetooth Low Energy (BLE). 
 
-At present, offline VC transfer is supported between Android to Android and IOS to Android. VC transfer between Android to IOS is not supported yet.
+Below table represents the supported roles for Android and IOS devices. IOS as Verifier is not supported.
+
+|Wallet|Verifier|VC transfer support|
+|---|---|---|
+|Android|Android| Yes|
+|IOS|Android|Yes|
+|Android|IOS|No|
+|IOS|IOS|No|
 
 Refer to Tuvali implementation details [here](./tuvali.md)
 
