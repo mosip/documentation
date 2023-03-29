@@ -2,7 +2,7 @@
 
 * [Inji](README.md)
 * [Overview](overview.md)
-  * [Componets](sandbox-details/componets.md)
+  * [Components](sandbox-details/components.md)
   * [Features](architecture/features.md)
 * [Sandbox Details](sandbox-details/README.md)
 * [Contribution](contribution/README.md)
