@@ -85,4 +85,87 @@ As part of Connection closure. Both Central and Peripheral objects are cleaned u
 
 
 
+## Error Scenarios:
 
+### Scenario 1: The verifier receives a `Failed to transfer` message and wallet receives a `Disconnected` message on the screen. 
+>**Possible error scenarios:**
+-   During VC transfer, if there is a failure in transfer of more than 70% of the data we get an exception on the verifier side and it disconnects from the wallet.  
+-   After the verifier and wallet establishes connection, the wallet initiates a MTU negotiation with the verifier. If the negotiated MTU is less than 64 Bytes, then the verifier throws an exception and disconnects from the wallet.
+-   If the verifier receives the size of the VC as 0, it raises an exception and disconnects from the wallet.
+    
+### Scenario 2: The wallet receives a `Failed to transfer` message and verifier receives a `Disconnected` message on the screen. 
+>**Possible error scenarios:**
+
+-   After the verifier and wallet establishes connection, the wallet initiates a MTU negotiation with the verifier. If the wallet is unable to negotiate the MTU with the verifier, it raises an exception and disconnects from the verifier.
+-   During VC transfer, if the transfer cannot be completed within the specified limit of retries, the wallet raises an exception and disconnects from the verifier.
+-   After the wallet sends all the chunks, it requests for a transfer report. If the wallet is not able to send the request, it raises an exception and disconnects from the verifier.
+
+
+## Constants:
+
+- MAX_ALLOWED_DATA_LEN = 509 Bytes 
+
+        Maximum data length allowed for one write for both wallet and verifier
+    
+ - MIN_MTU_REQUIRED = 64 Bytes 
+        
+        Minimum bytes required to share public key transfer of wallet is 46. In order not to operate in edges, we chose the nearest value in power of 2 i.e. 64. 
+    
+- MAX_FAILURE_FRAME_RETRY_LIMIT = 15 
+        
+        Maximum limit to retry sending failure chunks to the verifier
+
+## Characteristics UUID: 
+
+    
+- IDENTIFY_REQUEST_CHAR_UUID= 00002030-0000-1000-8000-00805f9b34fb
+
+        Characteristic for sending public key of wallet
+    
+- RESPONSE_SIZE_CHAR_UUID = 00002033-0000-1000-8000-00805f9b34fb
+
+        Characteristic for sending VC size to the verifier
+    
+- SUBMIT_RESPONSE_CHAR_UUID = 00002034-0000-1000-8000-00805f9b34fb
+        
+        Characteristic for sending the entire VC
+    
+- TRANSFER_REPORT_REQUEST_CHAR_UUID = 00002035-0000-1000-8000-00805f9b34fb
+
+        Characteristic for requesting for transfer report from the verifier
+    
+- TRANSFER_REPORT_RESPONSE_CHAR_UUID = 00002036-0000-1000-8000-00805f9b34fb
+
+        Characteristic for sending transfer report to the wallet
+    
+- VERIFICATION_STATUS_CHAR_UUID = 00002037-0000-1000-8000-00805f9b34fb 
+
+        Characteristic for informing the wallet if the VC is accepted or rejected
+    
+- DISCONNECT_CHAR_UUID = 00002038-0000-1000-8000-00805f9b34fb 
+
+        Characteristic for notifying wallet to initiate the disconnection between the devices
+    
+## Service UUID:
+-  SERVICE_UUID = 0000AB29-0000-1000-8000-00805f9b34fb
+
+        Service UUID of the verifier
+    
+-  SCAN_RESPONSE_SERVICE_UUID = 0000AB2A-0000-1000-8000-00805f9b34fb
+
+        Service UUID for uniquely identifying the scan response data to the wallet's SCAN_REQ
+    
+----------
+
+## Retry Scenarios:
+
+-   **Backoff Strategy**: It is a technique that we can use to retry failing function calls after a certain time limit.
+	-   **Service Discovery**: After the connection is established, the central tries to discover all the services hosted by the peripheral. If it fails to discover our service, then the backoff strategy is implemented with 5 (android) / 10 (iOS) retries for time limit of 100 ms.
+    
+	-   **Request Transfer Report**: After the wallet writes all the chunks to the verifier, it requests for the transfer report. If the transfer report request write fails, then the backoff strategy is implemented with 5 retries for time limit of 100 ms [currently implemented only for iOS].
+ 
+-   **Dynamic MTU negotiation**:
+
+	-   **Android**: After the connection is established, the wallet initiates a MTU negotiation with an initial value of 512 bytes. If it fails, it retries with 185 and 100 bytes subsequently with a wait time of 500 ms each. If the negotiation fails after all retries, it throws an exception and disconnects from the wallet.
+	
+	-   **iOS**: iOS kicks off an MTU exchange automatically upon connection
