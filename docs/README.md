@@ -22,7 +22,7 @@ e-Signet reimagines authentication services to factor in emerging trends and the
 
 * Model to integrate existing identity stores for authentication and KYC needs.
 * Support for biometrics authentication.
-* Support for wallet-based authentication in the near future.
+* Support for wallet-based authentication.
 * Support for verifiable credentials in the near future.
 
 ### Who can use this?
