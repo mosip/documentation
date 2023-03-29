@@ -8,6 +8,7 @@ With this release, we support the login flow for the below authentication factor
 
 1. Login flow for OTP-based authentication
 2. Login flow for Biometrics based authentication
+3. Login flow with QR code (Inji)
 
 Before starting with the login flows, let us understand the following terms:
 
