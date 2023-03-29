@@ -11,6 +11,10 @@
   * OTP
   * Biometric
 
+### Wallet based authentication
+
+* With e-Signet version 1.0, mobile wallet based authentication can be used to scan a QR code and complete the authentication based on the credential already activated for online login. It also performs a local face authentication before using the activated credential.
+
 ### Quick integrations
 
 * `OpenID` being a standard, we get a lot of Client libraries for intergrations. Hence, avoid custom code building for integration.
