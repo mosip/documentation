@@ -20,7 +20,7 @@ The login screen appears and the resident is displayed with the options they can
 
 ![](\_images/qr-authentication-progress3.png)
 
-4. On Inji, the resident can see the VC that is activated for online login. Select the VC and Click `Verify`.
+4. On Inji, the resident can see the VC that is activated for online login. Select the VC and click on `Verify`.
 
 ![](\_images/qr-code-screen4.png)
 
