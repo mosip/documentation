@@ -9,7 +9,7 @@ The image below is a block diagram of e-Signet comprising of various components 
 
 The relying party system is any application who would need the verified user information and a unique user login functionality to provide various services online. It depends on OpenID Connect libraries to integrate with e-Signet.
 
-### **eignet (OIDC) UI**
+### **esignet (OIDC) UI**
 
 * This is the front-end application which is mainly responsible for the user interactions.
 * Runs on the end user browser and invokes the REST API endpoints of the [esignet service](componets.md#idp-service) component.
