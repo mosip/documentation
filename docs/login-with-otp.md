@@ -1,4 +1,4 @@
-## Log in with OTP authentication
+## Login flow for OTP-based authentication
 
 Pre-requisite: The resident is issued with a unique virtual ID for a country's foundation ID. In the below demo application, the resident is registered with MOSIP and has a valid UIN or VID.
 
