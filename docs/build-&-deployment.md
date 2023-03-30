@@ -44,8 +44,8 @@ To build and run esignet UI, refer (here)[https://github.com/mosip/esignet/tree/
 Mock OIDC portal comprises of mock-relying-party-ui and mock-relying-party-service.
 
 Link to Repositories
-1. [](https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-relying-party-ui)
-2. [](https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-relying-party-service)
+1. [mock-relying-party-ui](https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-relying-party-ui)
+2. [mock-relying-party-service](https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-relying-party-service)
  
 **Prerequisite**
 
@@ -66,8 +66,8 @@ Repository: [](https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-id
 **Prerequisite**
 
 ``` 
-	* Java 11
-	* Apache Maven 3.8.6
+* Java 11
+* Apache Maven 3.8.6
 ```
 
 * Run `mvn clean install -Dgpg.skip=true` to build the service jar.
