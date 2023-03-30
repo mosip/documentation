@@ -2,7 +2,7 @@
 
 * [Inji](README.md)
 * [Overview](overview.md)
-  * [Components](sandbox-details/components.md)
+  * [Components](architecture/components.md)
   * [Features](architecture/features.md)
 * [Tuvali Architecture](architecture/tuvali.md)
   * [Permissions & Requirements](architecture/tuvali-requirements.md)
