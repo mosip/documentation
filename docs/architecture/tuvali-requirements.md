@@ -41,11 +41,11 @@ To use Bluetooth Low Energy (BLE) features, should declare several permissions i
 To access Core Bluetooth APIs on iOS, below are the permissions included in `info.plist`.
 
 ```
-<key&gt;NSBluetoothAlwaysUsageDescription&lt;/key>
-<string&gt;Bluetooth is used to allow sharing VCs with another device&lt;/string>
+<key>NSBluetoothAlwaysUsageDescription</key>
+<string>Bluetooth is used to allow sharing VCs with another device</string>
 
-<key&gt;NSBluetoothPeripheralUsageDescription&lt;/key&gt;
-<string&gt;Bluetooth is used to allow sharing VCs with another device&lt;/string&gt;
+<key>NSBluetoothPeripheralUsageDescription</key>
+<string>Bluetooth is used to allow sharing VCs with another device</string>
 ```
 
 ## Requirements
@@ -54,9 +54,9 @@ To access Core Bluetooth APIs on iOS, below are the permissions included in `inf
 Data transfer on tuvali will work on certain bounds that devices should satisfy the minimum BLE version as 4.2 and above.
 
 **Android version**:
-The SDK will work with apps that have a minimum version of **28.0**.
+The library will work with apps that run on devices with Android version 9 (API level 28) and above.
 
-Android API: Minimum 28 - Target 30
+**Android API version** : Minimum 28 - Target 30
 
 **iOS version**:
 The SDK requires iOS minimum deployment target version as **13.0**.
