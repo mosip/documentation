@@ -2,13 +2,11 @@
 
 ## Overview
 
-The recommended Github workflow here is for developers to submit code and documentation contributions to e-Signet open-source repositories.
+The recommended Github workflow here is for developers to submit code and documentation contributions to Inji open-source repositories.
 
 ### Repositories
 
-{% embed url="https://github.com/mosip/idp" %}
-
-{% embed url="https://github.com/mosip/idp-ui" %}
+{% embed url="https://github.com/mosip/inji" %}
 
 ## Setup your development machine
 
@@ -16,13 +14,13 @@ The recommended Github workflow here is for developers to submit code and docume
 2.  Clone the fork to your local machine. E.g.:
 
     ```
-    $ git clone https://github.com/<your_github_id>/idp.git
+    $ git clone https://github.com/<your_github_id>/inji.git
     ```
 3.  Set the upstream project as the original from where you forked. E.g.:
 
     ```
-    $ cd idp
-    $ git remote add upstream https://github.com/mosip/idp.git
+    $ cd inji
+    $ git remote add upstream https://github.com/mosip/inji.git
     ```
 4.  Make sure you never directly push upstream.
 
@@ -47,7 +45,7 @@ The recommended Github workflow here is for developers to submit code and docume
 $ git fetch upstream
 ```
 
-3\. On your local repo, switch to a branch if you are working on an older release (like the 0.9.0 branch) or stay in `main/develop` branch.&#x20;
+3\. On your local repo, switch to a branch if you are working on an older release or stay in `main/develop` branch.&#x20;
 
 ```
 $ git checkout upstream/<branch> 
@@ -76,7 +74,7 @@ You should do this quite often to ensure you are up to date.
 6\. Now feel free to make the change in the code or documentation. Reach out to [our community](https://community.mosip.io) for any queries. Once done with the work, commit your changes by referring to the Issue ID in the commit message. Eg:
 
 ```
-$ git commit -m "[#1234] Adding new upload feature in e-Signet service module for POA documents"
+$ git commit -m "[#1234] Adding new feature in inji module"
 ```
 
 7\. Once again ensure that you are up-to-date with the upstream repo as it may have moved forward.
