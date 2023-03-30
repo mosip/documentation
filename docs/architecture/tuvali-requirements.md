@@ -69,7 +69,7 @@ Currently the SDK has the capability of being a wallet but not able to act as Ve
 
 We don't support some of the device combinations -
 
-| Transfer Type     | Sender Device             | Receiver Device             |
-| ----------------- | ------------------------- | --------------------------- |
-| Android - Android | Vivo Y73 v12.0 BLE v5.0   | Redmi K20 Pro v11.0 BLEv5.0 |
-| Android - Android | Oneplus 6T v11.0 BLE v5.0 | Redmi 9i v11.0 BLE v5.0     |
+| Transfer Type     | Sender Device           | Receiver Device             |
+| ----------------- | ----------------------- | --------------------------- |
+| Android - Android | Vivo Y73 v12.0 BLE v5.0 | Redmi K20 Pro v11.0 BLEv5.0 |
+| Android - Android | Redmi 9i v11.0 BLE v5.0 | Oneplus 6T v11.0 BLE v5.0   |
