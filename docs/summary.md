@@ -15,6 +15,8 @@
 * [Versions](versions.md)
   * [Version 0.9.0](release-notes-1.0.0.md)
     * [Test Report](test-report-1.0.0.md)
+* [Specifications](specifications/README.md)
+  * [Face SDK](specifications/face-sdk.md)
 * [Backend Service](backend-services/README.md)
   * [Mimoto](backend-services/mimoto.md)
   * [e-Signet](backend-services/esignet.md)
