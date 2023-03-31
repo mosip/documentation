@@ -7,6 +7,7 @@
 * [Tuvali Architecture](architecture/tuvali.md)
   * [Permissions & Requirements](architecture/tuvali-requirements.md)
   * [Tuvali API Documentation](architecture/tuvali-inji.md)
+* [Customisation](customisation-overview.md)
 * [Sandbox Details](sandbox-details/README.md)
 * [Contribution](contribution/README.md)
   * [Code Contribution](contribution/code-contribution.md)
