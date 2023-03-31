@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" modified="2023-03-31T11:47:01.383Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="9vfDHPXVyMv_wOboNlL5" version="21.1.2" type="device">
+  <diagram name="Page-1" id="93VnuNxYh2gsQvyITQv-">
+    <mxGraphModel dx="1621" dy="311" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8KHelhcyJ5FLNe6Fu8bT-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Qxa5S_glfbw3jdkzJXX0-1" target="8KHelhcyJ5FLNe6Fu8bT-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Qxa5S_glfbw3jdkzJXX0-1" value="User selects&amp;nbsp;&lt;br&gt;VC&lt;br&gt;From Home Page" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="30" y="210" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="8KHelhcyJ5FLNe6Fu8bT-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="1QkmKIXsnP00DaD5SYNQ-4" target="1QkmKIXsnP00DaD5SYNQ-26">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="1QkmKIXsnP00DaD5SYNQ-4" value="VC Details&amp;nbsp;&lt;br&gt;Screen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="30" y="520" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="1QkmKIXsnP00DaD5SYNQ-26" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" parent="1" vertex="1">
+          <mxGeometry x="75" y="630" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8KHelhcyJ5FLNe6Fu8bT-3" value="VC found" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8KHelhcyJ5FLNe6Fu8bT-1" target="1QkmKIXsnP00DaD5SYNQ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8KHelhcyJ5FLNe6Fu8bT-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8KHelhcyJ5FLNe6Fu8bT-1" target="8KHelhcyJ5FLNe6Fu8bT-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="20" y="340" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="5" y="410" />
+              <mxPoint x="5" y="350" />
+              <mxPoint x="90" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8KHelhcyJ5FLNe6Fu8bT-6" value="else" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8KHelhcyJ5FLNe6Fu8bT-5">
+          <mxGeometry x="-0.5243" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8KHelhcyJ5FLNe6Fu8bT-1" value="Check VC Store&lt;br&gt;for VC" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="25" y="370" width="130" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
