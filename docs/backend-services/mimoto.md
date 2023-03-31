@@ -1,4 +1,4 @@
-# Mimoto Service
+# Mimoto
 
 Mimoto service is used by Inji to request, download and use verifiable credentials(VC). It provides all necessary APIs to the Inji app. Internally it acts as a proxy for resident service. Mimoto gets the request from Inji, does all the validations and forwards it to resident service. Additionally, it subscribes to the web-sub event to be able to download the VC once it's ready. Below are some of the important INJI to Mimoto communication. The API documentation of Mimoto is present [here](https://mosip.stoplight.io/docs/mimoto).
 
@@ -21,8 +21,8 @@ As mentioned in previous documentation, INJI allows users to enter their unique 
 
 4. After the credential status is "ISSUED", the app will initialte download. Below API will be called to download credential.
 
-{% swagger src=".gitbook/assets/mimoto.yml" path="/credentialshare/download" method="get" %}
-[mimoto.yml](.gitbook/assets/mimoto.yml)
+{% swagger src="../backend-systems/.gitbook/assets/mimoto.yml" path="/credentialshare/download" method="get" %}
+[mimoto.yml](../backend-systems/.gitbook/assets/mimoto.yml)
 {% endswagger %}
 
 ## Activating credentials
@@ -31,12 +31,12 @@ Credentials has to be activated in order to use it for online login. When user s
 
 1. To send OTP to user, below API will be called.
 
-{% swagger src=".gitbook/assets/mimoto.yml" path="/binding-otp" method="post" %}
-[mimoto.yml](.gitbook/assets/mimoto.yml)
+{% swagger src="../backend-systems/.gitbook/assets/mimoto.yml" path="/binding-otp" method="post" %}
+[mimoto.yml](../backend-systems/.gitbook/assets/mimoto.yml)
 {% endswagger %}
 
 2. After successful OTP validation, a keypair is generated in the phone and public key will be synced with server. The app receives certificate which it stores in the keystore securely. This is called activation process.
 
-{% swagger src=".gitbook/assets/mimoto.yml" path="/wallet-binding" method="post" %}
-[mimoto.yml](.gitbook/assets/mimoto.yml)
+{% swagger src="../backend-systems/.gitbook/assets/mimoto.yml" path="/wallet-binding" method="post" %}
+[mimoto.yml](../backend-systems/.gitbook/assets/mimoto.yml)
 {% endswagger %}
