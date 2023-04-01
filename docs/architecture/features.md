@@ -11,6 +11,8 @@
   * OTP
   * Biometric
 
+With e-Signet version 1.0, we have added a `Refresh` button to display the new list of connected devices.
+ 
 ### Wallet based authentication
 
 * With e-Signet version 1.0, mobile wallet based authentication can be used to scan a QR code and complete the authentication based on the credential already activated for online login. It also performs a local face authentication before using the activated credential.
@@ -34,3 +36,13 @@
 ### Support for various assurance levels
 
 * We support the relying party to specify an assurance level based on the usecase of the relying party.
+
+### Captcha validation
+
+With e-Signet version 1.0, the OTP based authentication is now secured with captcha.
+
+
+### Multi-language support
+
+In version 1.0, the e-Signet UI supports multiple languages. The languages supported are Arabic, English, Hindi, Kannada and Tamil by default. We also support RTL (right-to-left) languages.
+
