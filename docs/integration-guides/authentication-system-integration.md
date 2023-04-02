@@ -3,79 +3,70 @@
 ## Overview
 
 This system is an identity repository that stores the individual's demographic and biometric information to perform authentication and provide user information.
+As part of this integration with e-Signet, the authentication system should implement below interfaces,
 
-As part of this integration with e-Signet, the authentication system should have the below interfaces,
+## Authenticator
+This is the main interface of e-Signet. Provides methods to authenticate the end-user with control on the supported authentication factors. 
+If the OTP is one of the supported authentication factors, interface provides method to define the supported OTP channels and implement the send-otp functionality.
 
-* **doKycAuth:** to authenticate the individual and get back a KYC token. This interface should support multiple types of authentication as well as multi-modal authentication.
-* **doKycExchange:** to share user information based on the KYC token.
-* **sendOTP:** to request an OTP before the OTP authentication.
-* **isSupportedOtpChannel:** to check if the request channel to share OTP is supported.
-* **getAllKycSigningCertificates:** to retrieve all the details of KYC signing certificates
+As per OIDC standards, all the certificates used to verify the user data must be published in /.well-known/jwks.json endpoint. 
+This interface provides a method to return list of X509 certificate(both active and expired). 
 
+Refer this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java#L22-L69) 
+to check the interface in detail.
+
+### Two main functionalities of this interface, KYC Auth and KYC Exchange are depicted in the below diagram:
 <figure><img src="../.gitbook/assets/IdP Diagrams-Page-3.png" alt=""><figcaption></figcaption></figure>
 
-## Interface
-
-The authentication system must implement the below authentication wrapper interface.
-
+The Authenticator implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.authenticator` property.
+Ex:
 ```java
-public interface AuthenticationWrapper {
-
-    /**
-     * Delegate request to authenticate the user, and get KYC token
-     * @param relyingPartyId Relying Party (RP) ID. This ID will be provided during partner self registration process
-     * @param clientId OIDC client Id. Auto-generated while creating OIDC client in PMS
-     * @param kycAuthDto
-     * @return KYC Token and Partner-specific User Token (PSUT)
-     * @throws KycAuthException
-     */
-    KycAuthResult doKycAuth(String relyingPartyId, String clientId, KycAuthDto kycAuthDto)
-            throws KycAuthException;
-
-    /**
-     * Delegate request to exchange KYC token with encrypted user data
-     * @param relyingPartyId Relying Party (RP) ID. This ID will be provided during partner self registration process
-     * @param clientId OIDC client Id. Auto-generated while creating OIDC client in PMS
-     * @param kycExchangeDto
-     * @return signed and encrypted KYC data.
-     * @throws KycExchangeException
-     */
-    KycExchangeResult doKycExchange(String relyingPartyId, String clientId, KycExchangeDto kycExchangeDto)
-            throws KycExchangeException;
-
-    /**
-     * Delegate request to send out OTP to provided individual Id on the configured channel
-     * @param relyingPartyId Relying Party (RP) ID. This ID will be provided during partner self registration process
-     * @param clientId OIDC client Id. Auto-generated while creating OIDC client in PMS
-     * @param sendOtpDto
-     * @return status of send OTP response.
-     * @throws SendOtpException
-     */
-    SendOtpResult sendOtp(String relyingPartyId, String clientId, SendOtpDto sendOtpDto)
-            throws SendOtpException;
-
-    /**
-     * supported OTP channel to validate in Send-OTP request.
-     * @return true if supported, otherwise false
-     */
-    boolean isSupportedOtpChannel(String channel);
-
-    /**
-     * Get the list of KYC signing certificates and their details.
-     * @return list
-     */
-    List<KycSigningCertificateData> getAllKycSigningCertificates();
-
+@ConditionalOnProperty(value = "mosip.esignet.integration.authenticator", havingValue = "mock-authentication-service")
+@Component
+@Slf4j
+public class MockAuthenticationService implements Authenticator {
+    //Implement authenticator methods
 }
 ```
 
-The Authentication Wrapper implementation class must be annotated with `ConditionalOnProperty` based on `mosip.idp.authn.wrapper.impl` property as below:
+## KeyBinder
 
+This interface provides method to bind an individualId with a public-key. On successful binding, returns a signed 
+certificate which uniquely identifies a user. 
+Binding key request requires auth-challenge to do the binding. It is structured to accept any type of auth-challenge, 
+namely OTP / PIN / BIO. 
+
+Bound certificate will then be usable to do token based authentication like WLA (Wallet Local Authentication).
+
+Refer this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/KeyBinder.java#L17-L45) 
+to check the interface in detail.
+
+The KeyBinder implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.key-binder` property.
+Ex:
 ```java
-@ConditionalOnProperty(value = "mosip.idp.authn.wrapper.impl", havingValue = "mock-authentication-service")
+@ConditionalOnProperty(value = "mosip.esignet.integration.key-binder", havingValue = "mock-keybinder-service")
 @Component
 @Slf4j
-public class MockAuthenticationService implements AuthenticationWrapper {
-...
+public class MockKeyBindingWrapperService implements KeyBinder {
+    //Implement keybinder methods
+}
+```
+
+## AuditPlugin
+
+This interface provide 2 methods to audit any action in e-Signet. Instance of this auditPlugin is injected in all the services of e-Signet, 
+almost all the events are audited.
+
+Refer this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/AuditPlugin.java#L12-L34) 
+to check the interface in detail.
+
+The Audit plugin implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.audit-plugin` property.
+Ex:
+```java
+@ConditionalOnProperty(value = "mosip.esignet.integration.audit-plugin", havingValue = "mock-audit-service")
+@Component
+@Slf4j
+public class LoggerAuditService implements AuditPlugin {
+    //Implement audit plugin methods
 }
 ```
