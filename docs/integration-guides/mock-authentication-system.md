@@ -32,7 +32,12 @@ We run mock-identity-system, with endpoints to create individual, authenticate i
 2. Add mock implementation jar into e-Signet classpath.
     >Repository : https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-esignet-integration-impl
 
-3. Add Persona. Create identity endpoint of mock-identity-system is used to add mock individuals into the system.
+3. And an entry in key_policy_def table of mosip_esignet DB:
+
+   `INSERT INTO KEY_POLICY_DEF(APP_ID,KEY_VALIDITY_DURATION,PRE_EXPIRE_DAYS,ACCESS_ALLOWED,IS_ACTIVE,CR_BY,CR_DTIMES) VALUES('MOCK_BINDING_SERVICE', 1095, 50, 'NA', true, 'mosipadmin', now());`
+
+
+4. Add Persona. Create identity endpoint of mock-identity-system is used to add mock individuals into the system.
    > POST https://${mosip.api.public.host}/v1/mock-identity-system/identity
    ```
    {
