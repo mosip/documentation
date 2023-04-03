@@ -24,7 +24,17 @@ This state machine helps to setup authentication for the application. It allows 
 This state machine helps to show a couple of screens related to VC. One is My VCs where all user downloaded VCs will be shown. Another one is Received VCs where all received VCs can be shown.
 
 ## vcItem.ts
-TODO:
+This state machine performs all VC related activity for the current selected VC, like -
+- downloading VC
+- sending event to store machine to store the VC
+- add tag for a VC
+- lock VC
+- revoke VC
+- activate VC
+
+After a request is made to download a new VC, an event will be sent to this state machine. It will internally check if VC is "ISSUED" successfully, then initiate VC download. It also takes care of retry in case there is any issue during download.
+
+Any new feature for a VC to be added in this state machine.
 
 ## settings.ts
 This state machine helps to show contents and interactions on the settings screen of the application. This facilitates options like language switch, enable/disable biometric unlock etc.
@@ -39,7 +49,9 @@ This state machine is instantiated when the user launches the verification secti
 This state machine is instantiated when the user launches the scanner section which opens up camera to scan the QR code presented by the Verifier. The scanned data is fed into underlying [offline VC sharing component](../architecture/components.md#offline-vc-sharing-component) to allow discovery of the Verifier device and establishing connnection to it. Once the connection is established, the user is allowed select the downloaded VCs that can be shared to Verifier. The state machine also allows selfie/face verification before sharing VC.
 
 ## revoke.ts
-TODO:
+NOTE: This feature is currently disabled in INJI App but underlying support for code is available.
+
+An unique ID can be revoked using INJI App. For example - if resident has used a VID to generate VCs and no longer wish to use the VID, then it can be disabled. This state machine will communicate with backend service to disable the VC.
 
 ## QrLoginMachine.ts
 This state machine facilitates flow for Login with QR code through Open ID connect from various portals. This is launched when the user opens up scanner and scans a QR code from a website that supports login with Inji. Once scan is peformed, the user can review the required claims and select volunatry claims to be submitted. Once the submission is done successfully, the portal will be able to redirect automatically and logs the user in.
