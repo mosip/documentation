@@ -11,7 +11,7 @@
   * OTP
   * Biometric
 
-With e-Signet version 1.0, we have added a `Refresh` button to display the new list of connected devices.
+With e-Signet version 1.0, we have added a `Refresh` button to display the list of newly connected devices.
  
 ### Wallet based authentication
 
@@ -39,7 +39,7 @@ With e-Signet version 1.0, we have added a `Refresh` button to display the new l
 
 ### Captcha validation
 
-With e-Signet version 1.0, the OTP based authentication is now secured with captcha.
+With e-Signet version 1.0, the OTP-based authentication is now secured with captcha.
 
 
 ### Multi-language support
