@@ -21,3 +21,4 @@
 ![](_images/vc_share.png)
 
 ### Online login (to relying party portal)
+![](_images/onlineloginactivity.png)
