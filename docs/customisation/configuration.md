@@ -1,7 +1,8 @@
 ## Configurations
 
-The configurable properties for Inji can be found at  [path-to-inji-default-file](https://github.com/mosip/mosip-config/blob/qa-1201-B2/inji-default.properties). The file mentioned is in qa-1201-b2 branch.
->TODO: Update the url with the collab environment file after it is added.
+The configurable properties for Inji can be found at  [inji-default.properties](https://github.com/mosip/mosip-config/blob/qa-1201-B2/inji-default.properties). This property file maintained as one for each deployment environment. On [this](https://github.com/mosip/mosip-config) repository, each environment configuration is placed in a corresponding branch specific to that environment.
+
+>TODO: Refer to inji-default.properties of collab env once available
 
 These values will be used by Inji via Mimoto. Mimoto loads all the configurations and exposes an api which is used by Inji application to fetch and store the configurations in the local storage.
 
