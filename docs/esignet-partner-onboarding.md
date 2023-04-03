@@ -1,6 +1,6 @@
 # e-Signet PARTNER ONBOARDING
 
-This document contains the steps that needs to be followed for onboarding an e-Signet partner.
+This document contains the steps that needs to be followed for onboarding an e-Signet partner manually.
 
 *Note*: The same is automated and is done through `mosip-onboarder`, however this document helps in understanding the key details and the manual onboarding process.
 
@@ -25,7 +25,7 @@ URL: {{url}}/v1/authmanager/authenticate/internal/useridPwd
 }
 ```
 
-**Step 2: Create a policy Group**
+**Step 2: Create a policy group**
 
 URL: {{url}}/v1/policymanager/policies/group/new
  
