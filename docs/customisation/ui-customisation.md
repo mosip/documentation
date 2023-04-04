@@ -2,7 +2,7 @@
 
 ## **CSS Themes**
 
-Currently inji supports two themes:
+Currently Inji supports two themes:
 
 - orange
 - purple
@@ -19,7 +19,7 @@ Example:-
 
 ### **Logo and Background Images :**
 
-To change the mosip logo:
+To change the MOSIP logo:
 
 ```
 MosipLogo = require(path of logo you want to use, in string format)
@@ -37,7 +37,7 @@ Example:-
 ProfileIcon: require('../../assets/placeholder-photo.png')
 ```
 
-To change the close card details background:
+To change the `CloseCard` details background:
 
 ```
 CloseCard = require(path of image you want to use, in string format)
@@ -49,7 +49,7 @@ Example:-
 CloseCard: require('../../assets/ID-closed.png')
 ```
 
-To change the OpenCard card details background:
+To change the `OpenCard` card details background:
 
 ```
 OpenCard = require(path of image you want to use, in string format)
@@ -61,9 +61,9 @@ Example:-
   OpenCard: require('../../assets/ID-open.png')
 ```
 
-### **Colors :**
+### Colors
 
-To change the color of TabItemText:
+To change the color of `TabItemText`:
 
 ![Image](./_images/tab-item-text.png)
 
@@ -102,7 +102,7 @@ export const DefaultTheme = {
 }
 ```
 
-To change the color of AddId Button Text and Background:
+To change the color of `AddId`button text and background:
 
 ![Image](./_images/add-id-button.png)
 
@@ -129,7 +129,7 @@ export const DefaultTheme = {
 }
 ```
 
-To change the Background Color of Icons:
+To change the Background color of icons:
 
 ![Image](./_images/icon-bg.png)
 
@@ -142,7 +142,7 @@ export const DefaultTheme = {
 }
 ```
 
-To change the Color of Loading Transition:
+To change the color of Loading Transition:
 
 ![Image](./_images/loading-transition.png)
 
@@ -155,7 +155,7 @@ export const DefaultTheme = {
 }
 ```
 
-To change the Color of Error message:
+To change the color of Error message:
 
 ![Image](./_images/error-message.png)
 
@@ -168,7 +168,7 @@ export const DefaultTheme = {
 }
 ```
 
-To change the Color of noUinText:
+To change the color of noUinText:
 
 ![Image](./_images/no-uin-text.png)
 
@@ -181,7 +181,7 @@ export const DefaultTheme = {
 }
 ```
 
-To change the Colors of profile Label and Profile values:
+To change the colors of profile Label and Profile values:
 
 ![Image](./_images/profile-values.png)
 
@@ -195,7 +195,7 @@ export const DefaultTheme = {
 }
 ```
 
-To change the Color of profileVersion:
+To change the color of profileVersion:
 
 ![Image](./_images/profile-version.png)
 
