@@ -321,6 +321,89 @@ sudo systemctl status wg-quick@wg0
         * `kube_config_cluster.yml`: The [Kubeconfig file](https://rancher.com/docs/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
         * `cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains credentials for full access to the cluster.
 
+## Observation K8s Cluster Ingress and Storage class setup
+
+Once the rancher cluster is ready, we need ingress and storage class to be set for other applications to be installed.
+
+* Nginx Ingress Controller : used for ingress in rancher cluster.
+
+```
+cd $K8_ROOT/rancher/rancher-ui
+helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+helm repo update
+helm install rancher rancher-latest/rancher \
+  --namespace cattle-system \
+  --create-namespace \
+  -f rancher-values.yaml
+```
+this will install ingress in ingress-nginx namespace of rancher cluster.
+
+
+* Storage class setup: [Longhorn](https://longhorn.io/) creates a storage class in the cluster for creating pv (persistence volume) and pvc (persistence volume claim).
+
+Pre-requisites:
+```
+cd $K8_ROOT/longhorn
+./pre_install.sh
+```
+Install Longhorn via helm
+
+  * `./install.sh`
+
+  * Note: Values of below mentioned parametrs are set as by default Longhorn installation script:
+
+     * PV replica count is set to 1. Set the replicas for the storage class appropriately.
+        
+        ```
+        persistence.defaultClassReplicaCount=1
+        defaultSettings.defaultReplicaCount=1
+        ```
+     * Total available node CPU allocated to **each** `instance-manager` pod in the `longhorn-system` namespace.
+     
+     ```
+     guaranteedEngineManagerCPU: 5
+     guaranteedReplicaManagerCPU: 5   
+     ```
+     
+     * The value "5" means 5% of the total available node CPU.
+     * This value should be fine for sandbox and pilot but you may have to increase the default to "12" for production.
+     * The value can be updated on Longhorn UI after installation.
+     
+   * Access the Longhorn dashboard from Rancher UI once installed.
+
+* Setup Backup : In case you want to bacup the pv data from longhorn to s3 periodically follow [instructions](https://github.com/mosip/k8s-infra/blob/main/docs/longhorn-backupstore-and-tests.md). (Optional, ignore if not required)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* Login:
+
+  * Open Rancher page https://rancher.org.net.
+  * Get Bootstrap password using:
+  ```
+  kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{ .data.bootstrapPassword|base64decode}}{{ "\n" }}'
+  ```
+  Assign a password. IMPORTANT: make sure this password is securely saved and retrievable by Admin.
+  
+**Keycloak** : Keycloak is an OAuth 2.0 compliant Identity Access Management (IAM) system used to manage the access to Rancher for cluster controls 
+  
+  
+  
+  
+  
+  
+  
 ### MOSIP K8 Cluster Global configmap, Ingress and Storage Class setup
 
 **Global configmap**: Global configmap contains the list of neccesary details to be used throughout the namespaces of the cluster for common details.
