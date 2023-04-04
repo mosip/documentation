@@ -12,9 +12,9 @@ The implementers can choose to use the existing configurations or add new config
 
 The properties used by inji are:
 
-- mosip.inji.faceSdkModelUrl(``https://${mosip.api.public.host}/inji``): This is the path of the file server from where the face sdk model can be downloaded.
-- mosip.inji.modelDownloadMaxRetry(10): The maximum times the application will try to fetch the model.
-- mosip.inji.vcDownloadMaxRetry(10): The maximum times the application will try to download the requested VC.
-- mosip.inji.vcDownloadPoolInterval(6000): The waiting interval between each retry.
-- mosip.inji.audience(ida-binding): This is used to generate jwt token which will be passed during online login.
-- mosip.inji.issuer(residentapp): This is used to generate jwt token which will be passed during online login.
+- `mosip.inji.faceSdkModelUrl(https://${mosip.api.public.host}/inji)`: This is the path of the file server from where the face sdk model can be downloaded.
+- `mosip.inji.modelDownloadMaxRetry(10)`: The maximum times the application will try to fetch the model.
+- `mosip.inji.vcDownloadMaxRetry(10)`: The maximum times the application will try to download the requested VC.
+- `mosip.inji.vcDownloadPoolInterval(6000)`: The waiting interval between each retry.
+- `mosip.inji.audience(ida-binding)`: This is used to generate the JWT token which will be passed during online login.
+- `mosip.inji.issuer(residentapp)`: This is used to generate the JWT token which will be passed during online login.
