@@ -24,7 +24,7 @@ import { faceAuth } from "mosip-inji-face-sdk";
 
 ## Latest stable version
 
-`"0.1.1"`
+`"0.1.12"`
 
 ## API SPEC
 
