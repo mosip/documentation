@@ -1,6 +1,6 @@
 # UI Customization
 
-## **CSS Themes**
+## CSS Themes
 
 Currently Inji supports two themes:
 
@@ -17,7 +17,7 @@ Example:-
     export const Theme = PurpleTheme;
 ```
 
-### **Logo and Background Images :**
+### Logo and Background Images
 
 To change the MOSIP logo:
 
