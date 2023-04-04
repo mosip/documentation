@@ -17,6 +17,7 @@
   * [Relying Party](relying-party-integration.md)
   * [Mock Authentication System](integration-guides/mock-authentication-system.md)
   * [Mock Relying Party](integration-guides/mock-client-application/README.md)
+  * [Digital Wallet Integration](digital-wallet-integration.md)
 * [End User Guide](esignet-end-user-guide.md)
   * [Login flow for OTP-based authentication](login-with-otp.md)
   * [Login flow for Biometrics based authentication](login-with-biometrics.md)
