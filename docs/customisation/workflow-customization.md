@@ -62,7 +62,7 @@ This state machine is instantiated when the user launches the scanner section wh
 
 ## revoke.ts
 
-NOTE: This feature is currently disabled in Inji but underlying support for code is available.
+_Note_: This feature is currently disabled in Inji but underlying support for code is available.
 
 An unique ID can be revoked using Inji. For example, if the resident has used a VID to generate VCs and no longer wishes to use the VID, then it can be disabled. This state machine will communicate with backend service to disable the VC.
 
