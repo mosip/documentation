@@ -8,7 +8,7 @@
   * [Permissions & Requirements](architecture/tuvali-requirements.md)
   * [Tuvali API Documentation](architecture/tuvali-inji.md)
 * [Customizations](customization-overview.md)
-  * [Workflow customization](customisation/workflow-cuztomization.md)
+  * [Workflow customization](customisation/workflow-customization.md)
   * [UI customization](customisation/ui-customization.md)
   * [Locale customization](customisation/locale-customization.md)
   * [Configuration](customisation/configuration.md)
