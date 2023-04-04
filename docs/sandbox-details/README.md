@@ -1,6 +1,5 @@
 # Sandbox Details
 
-Are you a relying party looking to integrate with the e-Signet? Feel free to [Sign Up](https://forms.gle/sHteZEsKvPRXbUNw7) here. This will allow you access to our sandbox to test and integrate.
 
 ## Collab
 
