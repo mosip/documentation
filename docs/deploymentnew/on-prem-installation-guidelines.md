@@ -325,7 +325,7 @@ sudo systemctl status wg-quick@wg0
 
 Once the rancher cluster is ready, we need ingress and storage class to be set for other applications to be installed.
 
-* Nginx Ingress Controller : used for ingress in rancher cluster.
+* [Nginx Ingress Controller](https://kubernetes.github.io/ingress-nginx/deploy/): used for ingress in rancher cluster.
 
 ```
 cd $K8_ROOT/rancher/rancher-ui
@@ -405,7 +405,7 @@ Install Longhorn via helm
 
       * Wait for a few minutes for the above entry to get into effect. 
       
-   Verify:
+   **Verify**:
 
     `host -t TXT _acme-challenge.org.net`
       
@@ -461,7 +461,7 @@ Install Longhorn via helm
 
 * Login:
 
-  * Open Rancher page https://rancher.org.net.
+  * Open [Rancher](https://rancher.org.net) page.
 
   * Get Bootstrap password using
 
@@ -471,7 +471,7 @@ Install Longhorn via helm
    
    Assign a password. IMPORTANT: makes sure this password is securely saved and retrievable by Admin.
   
-* Keycloak : Keycloak is an OAuth 2.0 compliant Identity Access Management (IAM) system used to manage the access to Rancher for cluster controls.
+* [Keycloak](https://www.keycloak.org/): Keycloak is an OAuth 2.0 compliant Identity Access Management (IAM) system used to manage the access to Rancher for cluster controls.
 
 ```
 cd $K8_ROOT/rancher/keycloak
@@ -523,7 +523,7 @@ cd $K8_ROOT/rancher/keycloak
 
 In case you see certificate expiry message while adding users, on **local** cluster run these commands:
 
-https://rancher.com/docs/rancher/v2.6/en/troubleshooting/expired-webhook-certificates/
+[](https://rancher.com/docs/rancher/v2.6/en/troubleshooting/expired-webhook-certificates/)
     
 ## MOSIP K8s Cluster setup
 
