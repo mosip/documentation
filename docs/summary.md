@@ -141,5 +141,5 @@
 * [MOSIP Support Policy](support-policy.md)
 * [Roadmap](engineering-roadmap.md)
 * [MOSIP Documentation Style Guide](mosip-documentation-style-guide.md)
-* [Documentation for 1.1.5](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/-M1R77ZUwR6XwtPjJIVm/)
+* [Documentation for 1.1.5](https://docs.mosip.io/1.1.5)
 * [License](license.md)
