@@ -415,31 +415,124 @@ Install Longhorn via helm
 
      * Certificates created are valid for 3 months only.
      
-   * 
+  * Wirldcard SSL certificate [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
+     
+* Clone [k8s-infra](https://github.com/mosip/k8s-infra)
 
+  ```
+  cd $K8_ROOT/rancher/on-prem/nginx
+  sudo ./install.sh
+  ```
+* Provide below mentioned inputs as and when promted  
+  
+   * Rancher nginx ip : internal ip of the nginx server VM.
 
+   * SSL cert path : path of the ssl certificate to be used for ssl termination.
 
+   * SSL key path : path of the ssl key to be used for ssl termination.
 
+   * Cluster node ip's  : ip’s of the rancher cluster node
 
+* Post installation check:
 
+   * `sudo systemctl status nginx`
 
+   * Steps to Uninstall nginx (in case required)
 
+    `sudo apt purge nginx nginx-common`
+    
+    DNS mapping: Once nginx server is installed sucessfully, create DNS mapping for rancher cluster related domains as mentioned in DNS requirement section. (rancher.org.net, keycloak.org.net)
+    
+## Observation K8's Cluster Apps Installation
 
+* **Rancher UI**: Rancher provides full CRUD capability of creating and managing kubernetes cluster. 
+
+  * Install rancher using Helm, update `hostname` in `rancher-values.yaml` and run the following command to install.
+
+   ```
+   cd $K8_ROOT/rancher/rancher-ui
+   helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+   helm repo update
+  helm install rancher rancher-latest/rancher \
+  --namespace cattle-system \
+  --create-namespace \
+  -f rancher-values.yaml
+  ```
 
 * Login:
 
   * Open Rancher page https://rancher.org.net.
-  * Get Bootstrap password using:
+
+  * Get Bootstrap password using
+
+   ```
+   kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{ .data.bootstrapPassword|base64decode}}{{ "\n" }}'
+   ```
+   
+   Assign a password. IMPORTANT: makes sure this password is securely saved and retrievable by Admin.
+  
+* Keycloak : Keycloak is an OAuth 2.0 compliant Identity Access Management (IAM) system used to manage the access to Rancher for cluster controls.
+
   ```
-  kubectl get secret --namespace cattle-system bootstrap-secret -o go-template='{{ .data.bootstrapPassword|base64decode}}{{ "\n" }}'
-  ```
-  Assign a password. IMPORTANT: make sure this password is securely saved and retrievable by Admin.
-  
-**Keycloak** : Keycloak is an OAuth 2.0 compliant Identity Access Management (IAM) system used to manage the access to Rancher for cluster controls 
-  
-  
-  
-  
+  cd $K8_ROOT/rancher/keycloak
+ ./install.sh <iam.host.name>
+ ```
+ 
+ `keycloak_client.json`: Used to create SAML client on Keycloak for Rancher integration.
+ 
+
+## Keycloak - Rancher UI Integration
+
+* Login as `admin` user in Keycloak and make sure an email id, and first name field is populated for admin user. This is important for Rancher authentication as given below.
+
+* Enable authentication with Keycloak using the steps given [here](https://ranchermanager.docs.rancher.com/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-saml).
+
+* In Keycloak add another Mapper for the rancher client (in Master realm) with following fields:
+
+    * Protocol: saml
+    * Name: username
+    * Mapper Type: User Property
+    * Property: username
+    * Friendly Name: username
+    * SAML Attribute Name: username
+    * SAML Attribute NameFormat: Basic
+
+  * Specify the following mappings in Rancher's Authentication Keycloak form:
+
+    * Display Name Field: givenName
+    * User Name Field: email
+    * UID Field: username
+    * Entity ID Field: https://your-rancher-domain/v1-saml/keycloak/saml/metadata
+    * Rancher API Host: https://your-rancher-domain
+    * Groups Field: member
+    
+**RBAC** : 
+
+* For users in Keycloak assign roles in Rancher - **cluster** and **project** roles. Under `default` project add all the namespaces. Then, to a non-admin user you may provide Read-Only role (under projects).
+
+* If you want to create custom roles, you can follow the steps given [here](https://github.com/mosip/k8s-infra/blob/main/docs/create-custom-role.md).
+
+* Add a member to cluster/project in Rancher:
+
+    * Give member name exactly as `username` in Keycloak
+
+    * Assign appropriate role like Cluster Owner, Cluster Viewer etc.
+
+    * You may create new role with fine grained acccess control.    
+    
+**Certificates expiry**
+
+In case you see certificate expiry message while adding users, on local cluster run these commands:
+
+https://rancher.com/docs/rancher/v2.6/en/troubleshooting/expired-webhook-certificates/
+    
+    
+    
+    
+    
+    
+
+ 
   
   
   
