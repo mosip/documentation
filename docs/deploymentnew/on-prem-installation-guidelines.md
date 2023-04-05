@@ -415,7 +415,7 @@ Install Longhorn via helm
 
      * Certificates created are valid for 3 months only.
      
-  * Wirldcard SSL certificate [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
+  * Wildcard SSL certificate [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
      
 * Clone [k8s-infra](https://github.com/mosip/k8s-infra)
 
@@ -445,7 +445,7 @@ Install Longhorn via helm
     
 ## Observation K8's Cluster Apps Installation
 
-* **Rancher UI**: Rancher provides full CRUD capability of creating and managing kubernetes cluster. 
+**Rancher UI**: Rancher provides full CRUD capability of creating and managing kubernetes cluster. 
 
   * Install rancher using Helm, update `hostname` in `rancher-values.yaml` and run the following command to install.
 
@@ -473,14 +473,13 @@ Install Longhorn via helm
   
 * Keycloak : Keycloak is an OAuth 2.0 compliant Identity Access Management (IAM) system used to manage the access to Rancher for cluster controls.
 
-  ```
-  cd $K8_ROOT/rancher/keycloak
- ./install.sh <iam.host.name>
- ```
+```
+cd $K8_ROOT/rancher/keycloak
+./install.sh <iam.host.name>
+```
  
- `keycloak_client.json`: Used to create SAML client on Keycloak for Rancher integration.
+`keycloak_client.json`: Used to create SAML client on Keycloak for Rancher integration.
  
-
 ## Keycloak - Rancher UI Integration
 
 * Login as `admin` user in Keycloak and make sure an email id, and first name field is populated for admin user. This is important for Rancher authentication as given below.
@@ -522,20 +521,167 @@ Install Longhorn via helm
     
 **Certificates expiry**
 
-In case you see certificate expiry message while adding users, on local cluster run these commands:
+In case you see certificate expiry message while adding users, on **local** cluster run these commands:
 
 https://rancher.com/docs/rancher/v2.6/en/troubleshooting/expired-webhook-certificates/
     
-    
-    
-    
-    
-    
+## MOSIP K8s Cluster setup
 
+* Pre-requisites:
+
+* Install all the required tools mentioned in Pre-requisites for PC.
+
+  * kubectl
+  * helm   
+
+ ```
+ helm repo add bitnami https://charts.bitnami.com/bitnami
+ helm repo add mosip https://mosip.github.io/mosip-helm
+ ```
+
+  * ansible
+  * rke (version 1.3.10)
+    
+* Setup MOSIP K8 Cluster node VM’s as per the hardware and network requirements as mentioned above.  
+  
+* Run `env-check.yaml` to check if cluster nodes are fine and dont have known issues in it.
+
+   * cd $K8_ROOT/rancher/on-prem
+
+   * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for MOSIP k8 cluster nodes.
+
+       * `cp hosts.ini.sample hosts.ini`
+
+       * `ansible-playbook -i hosts.ini env-check.yaml`
+
+       * This ansible checks if localhost mapping ia already present in `/etc/hosts` file in all cluster nodes, if not it adds the same.
+   
+* Setup passwordless ssh into the cluster nodes via pem keys. (Ignore if VM’s are accessible via pem’s).
+
+  * Generate keys on your PC
+
+    * `ssh-keygen -t rsa`
+
+  * Copy the keys to remote rancher node VM’s:
+
+    * `ssh-copy-id <remote-user>@<remote-ip>`
+
+  * SSH into the node to check password-less SSH
+
+    * `ssh -i ~/.ssh/<your private key> <remote-user>@<remote-ip>`
+
+  * Rancher UI : (deployed in Rancher K8 cluster) 
+
+* Open ports and Install docker on MOSIP K8 Cluster node VM’s.
+
+  * `cd $K8_ROOT/mosip/on-prem`
+
+  * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for wireguard VM.
+
+     * `cp hosts.ini.sample hosts.ini`
+
+  * Update `vpc_ip` variable in `ports.yaml` with `vpc CIDR ip` to allow access only from machines inside same vpc.
+
+  * execute `ports.yml` to enable ports on VM level using ufw:
+
+     * `ansible-playbook -i hosts.ini ports.yaml`
+
+  * Disable swap in cluster nodes. (Ignore if swap is already disabled)
+
+    * ansible-playbook -i hosts.ini swap.yaml
+
+  * execute `docker.yml` to install docker and add user to docker group:
+
+    * ansible-playbook -i hosts.ini docker.yaml  
+    
+* Creating RKE Cluster Configuration file
+    * rke config
+    * Command will prompt for nodal details related to cluster, provide inputs w.r.t below mentioned points:
+
+      * `SSH Private Key Path` : <private key path>
+      * `Number of Hosts`: <no of hosts>
+      * `SSH Address of host` : <internal ip of node>
+      * `SSH User of host`  : <user of rancher node machine>
  
+      ```
+      Is host (<node1-ip>) a Control Plane host (y/n)? [y]: y
+      Is host (<node1-ip>) a Worker host (y/n)? [n]: y
+      Is host (<node1-ip>) an etcd host (y/n)? [n]: y
+      ```
+      * Make all the nodes Worker `host` by default.
+      * To create an HA cluster, specify more than one host with role `Control Plane` and `etcd host`.
+ 
+    * `Network Plugin Type` : Continue with canal as default network plugin.
+
+    * For rest for other configuration opt the required or default value.
   
+* As result of rke config  command cluster.ymlfile will be generated inside same directory, update the below mentioned fields:
   
-  
+     *  `nano cluster.yml`
+
+     * Remove the default Ingress install
+ 
+      ```
+      ingress:
+      provider: none
+      ```
+ 
+    * Add the name of the kubernetes cluster
+    
+      `cluster_name: sandbox-name`
+ 
+    * For production deplopyments edit the `cluster.yml`, according to this [RKE Cluster Hardening Guide](https://github.com/mosip/k8s-infra/blob/v1.2.0.1-B1/docs/rke-cluster-hardening.md).
+
+* Setup up the cluster:
+
+  * Once `cluster.yml` is ready, you can bring up the kubernetes cluster using simple command. 
+
+     * This command assumes the `cluster.yml` file is in the same directory as where you are running the command.
+
+       * rke up
+ 
+       ```
+       INFO[0000] Building Kubernetes cluster
+       INFO[0000] [dialer] Setup tunnel for host [10.0.0.1]
+       INFO[0000] [network] Deploying port listener containers
+       INFO[0000] [network] Pulling image [alpine:latest] on host [10.0.0.1]
+       ...
+       INFO[0101] Finished building Kubernetes cluster successfully
+       ```
+       * The last line should read `Finished building Kubernetes cluster successfully` to indicate that your cluster is ready to use.
+ 
+    * Copy the kubeconfig files
+      
+      ```
+      cp kube_config_cluster.yml $HOME/.kube/<cluster_name>_config
+      chmod 400 $HOME/.kube/<cluster_name>_config
+      ```
+ 
+   * To access the cluster using kubeconfig filr use any one of the below method:
+
+    * `cp  $HOME/.kube/<cluster_name>_config  $HOME/.kube/config`
+ 
+**Alternatively**
+
+    * `export KUBECONFIG="$HOME/.kube/<cluster_name>_config`
+
+ * Test cluster access:
+
+    * `kubect get nodes`
+
+     * Command will result in details of the nodes of the rancher cluster.
+
+* Save Your files
+
+  * Save a copy of the following files in a secure location, they are needed to maintain, troubleshoot and upgrade your cluster.:
+
+    * `cluster.yml`: The RKE cluster configuration file.
+
+    * `kube_config_cluster.yml`: The [Kubeconfig file](https://rke.docs.rancher.com/kubeconfig) for the cluster, this file contains credentials for full access to the cluster.
+
+    * `cluster.rkestate`: The [Kubernetes Cluster State file](https://rke.docs.rancher.com/installation#kubernetes-cluster-state), this file contains credentials for full access to the cluster.
+ 
+   
 ### MOSIP K8 Cluster Global configmap, Ingress and Storage Class setup
 
 **Global configmap**: Global configmap contains the list of neccesary details to be used throughout the namespaces of the cluster for common details.
