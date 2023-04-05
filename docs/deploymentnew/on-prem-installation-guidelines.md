@@ -374,9 +374,48 @@ Install Longhorn via helm
 * Setup Backup : In case you want to bacup the pv data from longhorn to s3 periodically follow [instructions](https://github.com/mosip/k8s-infra/blob/main/docs/longhorn-backupstore-and-tests.md). (Optional, ignore if not required)
 
 
+### Setting up nginx server for Observation K8s Cluster
 
+* For Nginx server setup we need ssl certificate, add the same into Nginx server.
 
+* Incase valid ssl certificate is not there generate one using letsencrypt:
 
+  * SSH into the nginx server
+
+  * Install Pre-requisites
+
+  ```
+  sudo apt update -y
+  sudo apt-get install software-properties-common -y
+  sudo add-apt-repository ppa:deadsnakes/ppa
+  sudo apt-get update -y
+  sudo apt-get install python3.8 -y
+  sudo apt install letsencrypt -y
+  sudo apt install certbot python3-certbot-nginx -y
+  ```
+ * Generate wildcard SSL certificates for your domain name.
+
+    * `sudo certbot certonly --agree-tos --manual --preferred-challenges=dns -d *.org.net`
+
+      * replace `org.net` with your domain.
+
+      * The default challenge HTTP is changed to DNS challenge, as we require wildcard certificates.
+
+      * Create a DNS record in your DNS service of type TXT with host `_acme-challenge.org.net`, with the string prompted by the script.
+
+      * Wait for a few minutes for the above entry to get into effect. 
+      
+   Verify:
+
+    `host -t TXT _acme-challenge.org.net`
+      
+     * Press enter in the `certbot` prompt to proceed.
+
+     * Certificates are created in `/etc/letsencrypt` on your machine.
+
+     * Certificates created are valid for 3 months only.
+     
+   * 
 
 
 
