@@ -615,18 +615,17 @@ https://rancher.com/docs/rancher/v2.6/en/troubleshooting/expired-webhook-certifi
 
     * For rest for other configuration opt the required or default value.
   
-* As result of rke config  command cluster.ymlfile will be generated inside same directory, update the below mentioned fields:
+* As result of rke config command `cluster.ymlfile` will be generated inside same directory, update the below mentioned fields:
   
-     *  `nano cluster.yml`
-
+     * `nano cluster.yml`
      * Remove the default Ingress install
  
-      ```
-      ingress:
-      provider: none
-      ```
+     ```
+     ingress:
+     provider: none
+     ```
  
-    * Add the name of the kubernetes cluster
+     * Add the name of the kubernetes cluster
     
       `cluster_name: sandbox-name`
  
@@ -648,7 +647,8 @@ https://rancher.com/docs/rancher/v2.6/en/troubleshooting/expired-webhook-certifi
        ...
        INFO[0101] Finished building Kubernetes cluster successfully
        ```
-       * The last line should read `Finished building Kubernetes cluster successfully` to indicate that your cluster is ready to use.
+ 
+    * The last line should read `Finished building Kubernetes cluster successfully` to indicate that your cluster is ready to use.
  
     * Copy the kubeconfig files
       
