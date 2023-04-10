@@ -16,7 +16,7 @@ The login screen appears and the resident is displayed with the options they can
 
 3\. Resident needs to enter valid VID in the "Enter Your VID" text field. 
 
-![](\_images/idp-login-otp-entervid.png)
+![](\_images/esignet-captcha-validation.png)
 
 4\. Next, the resident clicks on the "Get OTP" button.
 
@@ -24,16 +24,16 @@ The login screen appears and the resident is displayed with the options they can
 
 6\. The resident needs to enter the valid OTP received and click on the "Verify" button.
 
-![](\_images/idp-login-otp-verify.png)
+![](\_images/esignet-otp-entered.png)
 
 7\. The resident is then navigated to the Consent page. On this page, the **Essential** and **Voluntary** claims are displayed.
 
-![](\_images/idp-login-otp-askingconsent.png)
+![](\_images/esignet-not-allowed-claims.png)
 
 8\. The resident has the choice to select from the list of Voluntary claims while the Essential claims are mandatory and cannot be edited.
 
-![](\_images/idp-login-otp-showingclaims.png)
+![](\_images/esignet-claims.png)
 
 9\. The resident then clicks on the "Allow" button. The system navigates the resident to the User Profile page and the page displays their personal information based on the consent provided.
 
-![](.gitbook/assets/test-docs.png)
+![](\_images/esignet-final.png)
