@@ -12,7 +12,7 @@ The login screen appears and the resident is displayed with the options they can
 
 **Login with OTP** screen is displayed to the resident.
 
-![](\_images/idp-login-otp-loginhere.png)
+![](\_images/esignet-loginhere.png)
 
 3\. Resident needs to enter valid VID in the "Enter Your VID" text field. 
 
