@@ -14,15 +14,17 @@ The login screen appears and the resident is displayed with the options they can
 
 ![](\_images/esignet-loginhere.png)
 
-3\. Resident needs to enter valid VID in the "Enter Your VID" text field. 
+3\. Resident needs to enter valid VID in the "Enter Your VID" text field and check the box 'I'm not a robot'.
+
+With e-Signet version 1.0, the OTP-based authentication is now secured with captcha.
 
 ![](\_images/esignet-captcha-validation.png)
 
-4\. Next, the resident clicks on the "Get OTP" button.
+4\. Next, the resident clicks on the `Get OTP` button.
 
 5\. The resident receives the OTP on the registered channel (either the phone or email).
 
-6\. The resident needs to enter the valid OTP received and click on the "Verify" button.
+6\. The resident needs to enter the valid OTP received and click on the `Verify` button.
 
 ![](\_images/esignet-otp-entered.png)
 
@@ -34,6 +36,6 @@ The login screen appears and the resident is displayed with the options they can
 
 ![](\_images/esignet-claims.png)
 
-9\. The resident then clicks on the "Allow" button. The system navigates the resident to the User Profile page and the page displays their personal information based on the consent provided.
+9\. The resident should click the `Allow` button. The system navigates the resident to the User Profile page which displays all the personal information based on the consent provided.
 
 ![](\_images/esignet-final.png)
