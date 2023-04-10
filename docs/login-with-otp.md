@@ -2,9 +2,9 @@
 
 Pre-requisite: The resident is issued with a unique virtual ID for a country's foundation ID. In the below demo application, the resident is registered with MOSIP and has a valid UIN or VID.
 
-1\. Resident clicks `Sign In with MOSIP`.
+1\. Resident clicks `Sign In with e-Signet`.
 
-![](\_images/idp-login-otp-signin.png)
+![](\_images/qr-login-screen1.png)
 
 The login screen appears and the resident is displayed with the options they can choose for login.
 
