@@ -31,4 +31,4 @@ To summarize, Inji is:
 
 Through solutions like Inji, the team remains committed to developing safe, trusted, and inclusive technology, bringing us closer to a truly equitable world.
 
-Credentials on the Inji (mobile app) needs to be downloaded once. Then, the app can be used to verify online and offline IDs at any time, eliminating the dependence on network coverage.
+Credentials on the Inji (mobile app) need to be downloaded once. Then, the app can be used to verify online and offline IDs at any time, eliminating the dependence on network coverage.
