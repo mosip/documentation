@@ -22,8 +22,8 @@ Ensure that the redirect URI is also shared with the Authentication Partner to c
 
 Add a button on your website (i.e, Log in with e-Signet), which should call the authorization endpoint and navigate the user to the e-Signet UI screen for authentication and consent capture.
 
-{% swagger src=".gitbook/assets/Identity-Provider.yml" path="/authorize" method="get" %}
-[Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
+{% swagger src=".gitbook/assets/e-Signet.yml" path="/authorize" method="get" %}
+[e-Signet.yml](.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
 After the authorization endpoint is called, the e-Signet server validates the request and redirects the user to the authentication screen.
@@ -38,8 +38,8 @@ In case of failure, the redirect URI webpage would receive an "error" and "error
 
 Once the authentication code is received, you can now call the token endpoint to get the ID and Access tokens.
 
-{% swagger src=".gitbook/assets/Identity-Provider.yml" path="/oauth/token" method="post" %}
-[Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
+{% swagger src=".gitbook/assets/e-Signet.yml" path="/oauth/token" method="post" %}
+[e-Signet.yml](.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
 **Sample ID-token**
@@ -92,13 +92,46 @@ payload:
 
 Using the access token you can call the user info endpoint to get the user information as an encrypted JWT.
 
-{% swagger src=".gitbook/assets/Identity-Provider.yml" path="/oidc/userinfo" method="get" %}
-[Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
+{% swagger src=".gitbook/assets/e-Signet.yml" path="/oidc/userinfo" method="get" %}
+[e-Signet.yml](.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
-{% hint style="danger" %}
-**To add: Sample JWT** [swati.periwal](https://app.gitbook.com/u/9VJJOcYOrkRCddb5atxhF55I3sq1 "mention")\*\*\*\*
-{% endhint %}
+**Example 1**
+```
+{
+  "sub": "63EBC25D699305A26EE740A955852EAB2E6527BFF2F5E9E5562B502DACECD020",
+  "address": {
+    "street_address": "#991, 47 Street, 6 block",
+    "country": "KTA",
+    "locality": "KNT",
+    "region": "RSK",
+    "postal_code": "14022"
+  },
+  "gender": "Male",
+  "phone": "91600395660",
+  "name": "Manoj",
+  "email": "manoj@mail.com"
+}
+```
+
+**Example 2**
+```
+{
+  "sub": "63EBC25D699305A26EE740A955852EAB2E6527BFF2F5E9E5562B502DACECD020",
+  "name#en": "Manoj",
+  "address#en": {
+    "formatted#en": "#991, 47 Street, 6 block"
+  },
+  "phone": "91600395660",
+  "gender#kn": "ಗಂಡು",
+  "name#kn": "ಮನೋಜ್",
+  "address#kn": {
+    "formatted#kn": "#991, 47 ಸ್ಟ್ರೀಟ್, 6 ಬ್ಲಾಕ್"
+  },
+  "gender#en": "Male",
+  "email": "mohd.taheer@gmail.com"
+}
+```
 
 {% hint style="info" %}
 The response is signed and then encrypted, with the result being a nested JWT. Signed using the authentication system's private key. Signed full JWT will then be encrypted using the OIDC client's public key.
@@ -108,12 +141,12 @@ The response is signed and then encrypted, with the result being a nested JWT. S
 
 e-Signet exposes APIs using which a relying party can be registered and receive credentials to connect with e-Signet.
 
-{% swagger src=".gitbook/assets/Identity-Provider.yml" path="/client-mgmt/oidc-client" method="post" %}
-[Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
+{% swagger src=".gitbook/assets/e-Signet.yml" path="/client-mgmt/oidc-client" method="post" %}
+[e-Signet.yml](.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
-{% swagger src=".gitbook/assets/Identity-Provider.yml" path="/client-mgmt/oidc-client/{client_id}" method="put" %}
-[Identity-Provider.yml](.gitbook/assets/Identity-Provider.yml)
+{% swagger src=".gitbook/assets/e-Signet.yml" path="/client-mgmt/oidc-client/{client_id}" method="put" %}
+[e-Signet.yml](.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
 {% hint style="info" %}

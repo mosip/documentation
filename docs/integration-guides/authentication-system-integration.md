@@ -32,14 +32,17 @@ public class MockAuthenticationService implements Authenticator {
 ## KeyBinder
 
 This interface provides method to bind an individualId with a public-key. On successful binding, returns a signed 
-certificate which uniquely identifies a user. 
-Binding key request requires auth-challenge to do the binding. It is structured to accept any type of auth-challenge, 
-namely OTP / PIN / BIO. 
+certificate and walletUserId which uniquely identifies a user. It is expected that the KeyBinder implementation takes care of overriding previously bound certificates with the newly generated signed certificate for a user.
+Individual needs to be authenticated before binding key. It is structured to accept any type of auth-challenge, 
+namely OTP / BIO.
 
-Bound certificate will then be usable to do token based authentication like WLA (Wallet Local Authentication).
+Bound certificate will then be usable to do token based authentication like WLA (Wallet Local Authentication) from any digital wallet apps.
 
 Refer this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/KeyBinder.java#L17-L45) 
 to check the interface in detail.
+
+### KeyBinding functionally and its usage are depicted in the below diagram:
+<figure><img src="../.gitbook/assets/key-binding-and-usage.png" alt=""><figcaption></figcaption></figure>
 
 The KeyBinder implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.key-binder` property.
 Ex:
