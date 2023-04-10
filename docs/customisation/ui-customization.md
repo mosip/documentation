@@ -1,11 +1,11 @@
-# UI Customization
+# UI customization
 
 ## CSS Themes
 
-Currently Inji supports two themes:
+Currently, Inji supports two themes:
 
-- orange
-- purple
+* orange
+* purple
 
 We can customize the application by adding a new file under `components/ui/themes` and import that file in `components/ui/styleUtils.ts` and assign that file to `Theme` variable in it.
 
@@ -40,7 +40,7 @@ ProfileIcon: require('../../assets/placeholder-photo.png')
 To change the `CloseCard` details background:
 
 ```
-CloseCard = require(path of image you want to use, in string format)
+CloseCard = require(path of the image you want to use, in string format)
 
 -width: 363 pixels
 -height: 236 pixels
@@ -52,7 +52,7 @@ CloseCard: require('../../assets/ID-closed.png')
 To change the `OpenCard` card details background:
 
 ```
-OpenCard = require(path of image you want to use, in string format)
+OpenCard = require(path of the image you want to use, in string format)
 
 -width: 363 pixels
 -height: 623 pixels
@@ -61,11 +61,11 @@ Example:-
   OpenCard: require('../../assets/ID-open.png')
 ```
 
-### Colors
+### Colours
 
-To change the color of `TabItemText`:
+To change the colour of `TabItemText`:
 
-![Image](_images/tab-item-text.png)
+![Image](\_images/tab-item-text.png)
 
 ```
 export const DefaultTheme = {
@@ -76,9 +76,9 @@ export const DefaultTheme = {
 }
 ```
 
-To change the color of Details Label Text:
+To change the colour of the Details Label Text:
 
-![Image](_images/details-value.png)
+![Image](\_images/details-value.png)
 
 ```
 export const DefaultTheme = {
@@ -89,9 +89,9 @@ export const DefaultTheme = {
 }
 ```
 
-To change the color of Details Value Text:
+To change the colour of Details Value Text:
 
-![Image](_images/details-value.png)
+![Image](\_images/details-value.png)
 
 ```
 export const DefaultTheme = {
@@ -102,9 +102,9 @@ export const DefaultTheme = {
 }
 ```
 
-To change the color of `AddId`button text and background:
+To change the colour of `AddId`button text and background:
 
-![Image](_images/add-id-button.png)
+![Image](\_images/add-id-button.png)
 
 ```
 export const DefaultTheme = {
@@ -116,9 +116,9 @@ export const DefaultTheme = {
 }
 ```
 
-To change the color of Icons:
+To change the colour of Icons:
 
-![Image](_images/icons.png)
+![Image](\_images/icons.png)
 
 ```
 export const DefaultTheme = {
@@ -129,9 +129,9 @@ export const DefaultTheme = {
 }
 ```
 
-To change the Background color of icons:
+To change the Background colour of icons:
 
-![Image](_images/icon-bg.png)
+![Image](\_images/icon-bg.png)
 
 ```
 export const DefaultTheme = {
@@ -142,9 +142,9 @@ export const DefaultTheme = {
 }
 ```
 
-To change the color of Loading Transition:
+To change the colour of the Loading Transition:
 
-![Image](_images/loading-transition.png)
+![Image](\_images/loading-transition.png)
 
 ```
 export const DefaultTheme = {
@@ -155,9 +155,9 @@ export const DefaultTheme = {
 }
 ```
 
-To change the color of Error message:
+To change the colour of the Error message:
 
-![Image](_images/error-message.png)
+![Image](\_images/error-message.png)
 
 ```
 export const DefaultTheme = {
@@ -168,9 +168,9 @@ export const DefaultTheme = {
 }
 ```
 
-To change the color of noUinText:
+To change the colour of noUinText:
 
-![Image](_images/no-uin-text.png)
+![Image](\_images/no-uin-text.png)
 
 ```
 export const DefaultTheme = {
@@ -181,9 +181,9 @@ export const DefaultTheme = {
 }
 ```
 
-To change the colors of profile Label and Profile values:
+To change the colours of the profile Label and Profile values:
 
-![Image](_images/profile-values.png)
+![Image](\_images/profile-values.png)
 
 ```
 export const DefaultTheme = {
@@ -195,9 +195,9 @@ export const DefaultTheme = {
 }
 ```
 
-To change the color of profileVersion:
+To change the colour of profileVersion:
 
-![Image](_images/profile-version.png)
+![Image](\_images/profile-version.png)
 
 ```
 export const DefaultTheme = {
