@@ -1,16 +1,18 @@
 # Login flow for Biometrics based authentication
 
-1\. Resident clicks on "Sign In with MOSIP". They are navigated to the login screen where they can choose the way they want to log in.
+1\. Resident clicks on `Sign In with e-Signet`. 
+
+They are navigated to the login screen where they can choose the way they want to log in.
 
 ![](\_images/idp-login-otp-signin.png)
 
-2\. The resident clicks on "More Ways to Login".
+2\. The resident clicks on LOG In HERE -> `More Ways to Login`.
 
-![](\_images/idp-login-bio-loginhere.png)
+![](\_images/esignet-loginhere)
 
 3\. To get started with login using biometrics, the resident clicks "Log in with Biometrics".
 
-![](\_images/idp-login-bio-moreways.png)
+![](\_images/esignet-bio-moreways.png)
 
 4\. Resident needs to enter valid VID in the "Enter Your VID" text field.
 
