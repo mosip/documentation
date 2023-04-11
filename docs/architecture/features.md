@@ -11,8 +11,6 @@
   * OTP
   * Biometric
 
-With e-Signet version 1.0, we have added a `Refresh` button to display the list of newly connected devices.
- 
 ### Wallet based authentication
 
 * With e-Signet version 1.0, mobile wallet based authentication can be used to scan a QR code and complete the authentication based on the credential already activated for online login. It also performs a local face authentication before using the activated credential.
@@ -40,7 +38,6 @@ With e-Signet version 1.0, we have added a `Refresh` button to display the list 
 ### Captcha validation
 
 With e-Signet version 1.0, the OTP-based authentication is now secured with captcha.
-
 
 ### Multi-language support
 
