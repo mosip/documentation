@@ -1,30 +1,30 @@
 # Components
 
-There are two important components in Inji:
+Below is the description of the two important components of Inji:
 
 1. Offline VC sharing component
 2. Face matching component
 
-These components have been explained in the section below.
+These components have been explained in detailed.
 
 ## Offline VC sharing component
 
-Transfer VC from Wallet to Verifier is facilitated by a react native library called [Tuvali](https://github.com/mosip/tuvali). This library is integrated into Inji to allow offline VC transfer between mobile devices over `Bluetooth Low Energy (BLE)`.
+Transfer VC from Wallet to Verifier is facilitated by a `react native library` called [Tuvali](https://github.com/mosip/tuvali). This library is integrated into Inji to allow the offline VC transfer between mobile devices over `Bluetooth Low Energy (BLE)`.
 
 The below table represents the supported roles for Android and iOS devices.
 
 _Note_: iOS as Verifier is not supported.
 
-| **Wallet** | **Verifier** | VC transfer support |
+| **Wallet** | **Verifier** | **VC transfer support** |
 | ---------- | ------------ | ------------------- |
 | Android    | Android      | Yes                 |
 | iOS        | Android      | Yes                 |
 | Android    | iOS          | No                  |
 | iOS        | iOS          | No                  |
 
-* To know more about Tuvali's implementation, refer [here](architecture/tuvali.md).
-* To learn about Tuvali permissions and requirements, refer [here](architecture/tuvali-requirements.md).
-* To know about the Tuvali and Inji integration and API documentation, refer [here](architecture/tuvali-inji.md).
+* To know more about Tuvali's implementation, refer [here](https://docs.mosip.io/inji/tuvali).
+* To learn about Tuvali permissions and requirements, refer [here](https://docs.mosip.io/inji/tuvali/tuvali-requirements).
+* To know about the Tuvali and Inji integration and API documentation, refer [here](https://docs.mosip.io/inji/tuvali/tuvali-inji).
 
 _Note_: Tuvali is actively developed and maintained by MOSIP.
 
