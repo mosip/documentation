@@ -54,4 +54,4 @@ Inclusion and access are core objectives of e-Signet. We are mindful of user pri
 * Ease of integration to the relying parties as it follows standard-based protocols (lower time to market).
 * Narrows and bridges the digital divide by enabling multiple modes of verification.
 
-_Note_: IdP (version 0.9.0) is completely re-structured and renamed as e-Signet.
+_Note_: IdP (version 0.9.0) is completely re-structured and renamed as e-Signet (from endpoints to classes).
