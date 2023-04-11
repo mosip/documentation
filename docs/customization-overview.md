@@ -4,7 +4,7 @@ The countries also have the option to customize Inji as per their requirements. 
 
 The following customizations are available in Inji:
 
-* [Workflow Customization](customization-overview.md)
-* [UI Customization](customization-overview.md)
-* [Locale Customization](customization-overview.md)
-* [Configuration](customization-overview.md)
+* [Workflow Customization](https://docs.mosip.io/inji/customization-overview/workflow-customization)
+* [UI Customization](https://docs.mosip.io/inji/customization-overview/ui-customization)
+* [Locale Customization](https://docs.mosip.io/inji/customization-overview/locale-customization)
+* [Configuration](https://docs.mosip.io/inji/customization-overview/configuration)
