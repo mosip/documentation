@@ -1,8 +1,6 @@
 # Tuvali API Documentation
 
-## Tuvali API documentation
-
-Firstly, for establishing the secured connection over BLE the connection params which include `cid` and `Public key` needs to be exchanged between two devices. The exchange of parameters can be accomplished but is not limited to, by using a QR code.
+Firstly, for establishing the secured connection over BLE the connection params which include `cid` and `Public key` needs to be exchanged between the two devices. The exchange of parameters can be accomplished but is not limited to or by using a QR code.
 
 For example, use a QR code generator to visually display params and a QR code scanner to get params. A mobile app that displays a QR code can act as an `advertiser` by including its connection params as data in the QR code and another device can act as `discoverer` which scans the QR code, it can extract the connection parameters and initiate a BLE connection with the advertising device.
 
@@ -10,7 +8,7 @@ For example, use a QR code generator to visually display params and a QR code sc
 
 ### Connection parameters exchange
 
-The device on which the QR code is displayed shall generate connection parameters using the getConnectionParameters() method:
+* The device on which the QR code is displayed shall generate connection parameters using the `getConnectionParameters()` method:
 
 ```typescript
 import OpenIdBle from 'react-native-openid4vp-ble';
@@ -20,7 +18,7 @@ const params = Openid4vpBle.getConnectionParameters();
 console.log(params);
 ```
 
-The device that scans the QR code will extract the connection parameters from the QR code and set its connection parameters using the setConnectionParameters() method :
+* The device that scans the QR code will extract the connection parameters from the QR code and set its connection parameters using the `setConnectionParameters()` method :
 
 ```typescript
 Openid4vpBle.setConnectionParameters(params);
@@ -35,9 +33,11 @@ The connection params contain:
 }
 ```
 
-The `pk` part of the data is the same data that will be advertised by the `advertiser` device but in hex-encoded form. E.g: OVPMOSIP\_\<first 5 bytes of public key>
+* The `pk` part of the data is the same data that will be advertised by the `advertiser` device but in hex-encoded form.&#x20;
 
-Note: The "cid" parameter is there for legacy reasons and will be removed soon.
+&#x20;  E.g: OVPMOSIP\_\<first 5 bytes of public key>
+
+_Note_: The `cid` parameter is there for legacy reasons and will be removed soon.
 
 ### Establishing connection
 
@@ -67,11 +67,11 @@ Openid4vpBle.send(message, () => {
 });
 ```
 
-The following sequence of actions should be performed to transfer data over BLE
+The following sequence of actions should be performed to transfer data over BLE:
 
-1. Exchange Wallet public key Discoverer calls `Openid4vpBle.send` with message type "exchange-sender-info". The callback passed is executed on successful writing wallet public key to Identify characteristic
-2. Send VC data At the moment, only VC data is being exchanged from Wallet to Verifier instead of the VP response mentioned in the specification. Hence `Openid4vpBle.send` should be called message type "send-vc" for sending VC data from Wallet to Verifier.
-3. Send VC response Verifier can exchange "Accept/Reject" status to Wallet with the following message type for `Openid4vpBle.send` method
+1. Exchange Wallet public key - Discoverer calls `Openid4vpBle.send` with message type "exchange-sender-info". The callback passed is executed on successful writing wallet public key to Identify characteristic
+2. Send VC data - At the moment, only VC data is being exchanged from Wallet to Verifier instead of the VP response mentioned in the specification. Hence `Openid4vpBle.send` should be called message type "send-vc" for sending VC data from Wallet to Verifier.
+3. Send VC response - Verifier can exchange "Accept/Reject" status to Wallet with the following message type for `Openid4vpBle.send` method
 
 * For Accept status, message type "send-vc:response\n1"
 * For Reject status, message type "send-vc:response\n2"
@@ -93,7 +93,7 @@ Here are the different types of events that can be received
 
 ### Connection closure
 
-The device on which the app is running can destroy the connection by calling the destroyConnection() method:
+The device on which the app is running can destroy the connection by calling the `destroyConnection()` method:
 
 ```typescript
 Openid4vpBle.destroyConnection();
