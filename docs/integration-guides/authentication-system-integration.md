@@ -41,11 +41,12 @@ Bound certificate will then be usable to do token based authentication like WLA 
 Refer this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/KeyBinder.java#L17-L45) 
 to check the interface in detail.
 
-### KeyBinding functionally and its usage are depicted in the below diagram
+### KeyBinding Process
 
-<figure><img src="../.gitbook/assets/key-binding.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/e-signet-key-binding.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/key-binding-usage.png" alt=""><figcaption></figcaption></figure>
+### Authentication With Bound Key
+<figure><img src="../.gitbook/assets/e-signet-key-binding-usage.png" alt=""><figcaption></figcaption></figure>
 
 The KeyBinder implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.key-binder` property.
 Ex:
