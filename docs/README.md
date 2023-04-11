@@ -53,3 +53,5 @@ Inclusion and access are core objectives of e-Signet. We are mindful of user pri
 * Enables government to open up digital verification/ e-KYC as a service and enables better access to financial inclusion.
 * Ease of integration to the relying parties as it follows standard-based protocols (lower time to market).
 * Narrows and bridges the digital divide by enabling multiple modes of verification.
+
+_Note_: IdP (version 0.9.0) is completely re-structured and renamed as e-Signet.
