@@ -36,14 +36,15 @@ Link to [Repository](https://github.com/mosip/esignet/tree/1.0.0/oidc-ui)
 	 * node v16.13.2 or higher
 ```
 
-To build and run esignet UI, refer (here)[https://github.com/mosip/esignet/tree/1.0.0/oidc-ui#build--run-for-developers].
+To build and run esignet UI, refer [here](https://github.com/mosip/esignet/tree/1.0.0/oidc-ui#build--run-for-developers).
 
 
 ### Building and deployment of mock OIDC portal
 
 Mock OIDC portal comprises of mock-relying-party-ui and mock-relying-party-service.
 
-Link to Repositories
+Link to Repositories:
+
 1. [mock-relying-party-ui](https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-relying-party-ui)
 2. [mock-relying-party-service](https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-relying-party-service)
  
