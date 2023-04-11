@@ -18,7 +18,7 @@ They are navigated to the login screen where they can choose the way they want t
 
 ![](\_images/esignet-bio-vid.png)
 
-5\. Next, the resident selects a device based on authentication (face/ iris/ finger) needed and provides correct biometrics.
+5\. Next, the resident selects a device (face/ iris/ finger) and provides their biometrics.
 
 With e-Signet version 1.0, we have a `Refresh` button added to display the list of newly connected devices.
 
