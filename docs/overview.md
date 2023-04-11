@@ -16,7 +16,7 @@ The app is built using [react native framework](https://reactnative.dev/) which 
 * After installing Inji, residents can enter their unique ID (issued by country, e.g. the UIN or VID) on the app to generate the VC.
 * Resident will now be prompted to enter the OTP sent on the registered mobile number or email address.
 * After successful validation, the VC will be downloaded and stored on the app.
-* Residents can also use the Application ID if their UIN or VID is not available. They can share the downloaded VC with the relying party via bluetooth to avail the services. The app uses [BLE protocol](overview.md) to share VC.
+* Residents can also use the Application ID if their UIN or VID is not available. They can share the downloaded VC with the relying party via bluetooth to avail the services. The app uses [BLE protocol](https://www.bluetooth.org/docman/handlers/downloaddoc.ashx?doc_id=441541) to share the VCs.
 
 Inji also supports integration with [e-Signet](https://docs.esignet.io/) wherein the resident can login to the relying party portal by scanning a QR code. They can can also choose what information needs to be shared with the relying party (user consent). However, the residents have to activate the VC before performing online login.
 
@@ -47,11 +47,11 @@ Detailed steps on generating and sharing credentials are given in the [User guid
 
 ## Sharing of credentials
 
-The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. Refer to [Tuvali documentation](overview.md) for more information.
+The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. Refer to [Tuvali documentation](https://docs.mosip.io/inji/tuvali) for more information.
 
 ## Online login process
 
-* Residents can use the INJI app to log in to any service provider app (integrated with e-Signet) just by scanning a QR code from their portal.
+* Residents can use Inji to log in to any service provider app (integrated with e-Signet) just by scanning a QR code from their portal.
 * The app performs offline face auth after scanning the QR code to verify the user's presence.
 * Once the presence is verified, the resident is given the option to choose the optional information to be shared with the service provider portal.
 * After consent is provided, the app sends a WLA (Wallet local auth) token which is a JWT token to the relying party.
