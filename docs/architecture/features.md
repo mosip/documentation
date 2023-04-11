@@ -41,5 +41,14 @@ With e-Signet version 1.0, the OTP-based authentication is now secured with capt
 
 ### Multi-language support
 
-In version 1.0, the e-Signet UI supports multiple languages. The languages supported are Arabic, English, Hindi, Kannada and Tamil by default. We also support RTL (right-to-left) languages.
+In version 1.0, the e-Signet UI supports multiple languages. By default, e-Signet comes with the following language bundles: 
 
+* Arabic
+* English
+* Hindi
+* Kannada
+* Tamil 
+
+Additionally, it can be customized to support other languages as per a country's requirement.
+
+* e-Signet is also verified for RTL (right-to-left) support.
