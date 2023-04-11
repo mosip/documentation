@@ -6,16 +6,18 @@ This system is an identity repository that stores the individual's demographic a
 As part of this integration with e-Signet, the authentication system should implement below interfaces,
 
 ## Authenticator
-This is the main interface of e-Signet. Provides methods to authenticate the end-user with control on the supported authentication factors. 
-If the OTP is one of the supported authentication factors, interface provides method to define the supported OTP channels and implement the send-otp functionality.
 
-As per OIDC standards, all the certificates used to verify the user data must be published in /.well-known/jwks.json endpoint. 
-This interface provides a method to return list of X509 certificate(both active and expired). 
+This is the main interface of e-Signet. Provides methods to authenticate the end-user with control on the supported authentication factors. 
+If OTP is one of the supported authentication factors, the interface provides a method to define the supported OTP channels and implement the send-otp functionality.
+
+As per OIDC standards, all the certificates used to verify the user data must be published in `/.well-known/jwks.json` endpoint. 
+This interface provides a method to return list of X509 certificate (both active and expired). 
 
 Refer this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java#L22-L69) 
 to check the interface in detail.
 
-### Two main functionalities of this interface, KYC Auth and KYC Exchange are depicted in the below diagram:
+The two main functionalities of this interface, **KYC Auth** and **KYC Exchange** are depicted in the diagram below
+
 <figure><img src="../.gitbook/assets/IdP Diagrams-Page-3.png" alt=""><figcaption></figcaption></figure>
 
 The Authenticator implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.authenticator` property.
@@ -31,10 +33,11 @@ public class MockAuthenticationService implements Authenticator {
 
 ## KeyBinder
 
-This interface provides method to bind an individualId with a public-key. On successful binding, returns a signed 
-certificate and walletUserId which uniquely identifies a user. It is expected that the KeyBinder implementation takes care of overriding previously bound certificates with the newly generated signed certificate for a user.
+This interface provides method to bind an `individualId` with a public-key. On successful binding, returns a signed 
+certificate and `walletUserId` which uniquely identifies a user. It is expected that the `KeyBinder` implementation takes care of overriding previously bound certificates with the newly generated signed certificate for a user.
+
 Individual needs to be authenticated before binding key. It is structured to accept any type of auth-challenge, 
-namely OTP / BIO.
+namely OTP/ BIO.
 
 Bound certificate will then be usable to do token based authentication like WLA (Wallet Local Authentication) from any digital wallet apps.
 
@@ -45,7 +48,8 @@ to check the interface in detail.
 
 <figure><img src="../.gitbook/assets/e-signet-key-binding.png" alt=""><figcaption></figcaption></figure>
 
-### Authentication With Bound Key
+### Authentication with Bound Key
+
 <figure><img src="../.gitbook/assets/e-signet-key-binding-usage.png" alt=""><figcaption></figcaption></figure>
 
 The KeyBinder implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.key-binder` property.
