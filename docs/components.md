@@ -1,6 +1,6 @@
 # Components
 
-The image below is a block diagram of e-Signet comprising of various components along with the different layers and external systems.
+The image below is a block diagram of e-Signet comprising various components along with the different layers and external systems.
 
 ![](\_images/esignet-components-updated.png)
 
