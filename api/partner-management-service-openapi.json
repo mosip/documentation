@@ -16,6 +16,110 @@
     }
   ],
   "paths": {
+    "/oidc/client": {
+      "post": {
+        "tags": [
+          "client-management-controller"
+        ],
+        "summary": "Service to create OIDCClient",
+        "description": "Creates OIDCClient and return Client id",
+        "operationId": "CreateOIDCClient",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperClientDetailCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperClientDetailResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/oidc/client/{client_id}": {
+      "get": {
+        "tags": [
+          "client-management-controller"
+        ],
+        "summary": "Service to get OIDCClient details",
+        "description": "Service to get OIDCClient details",
+        "operationId": "getOIDCClient",
+        "parameters": [
+          {
+            "name": "client_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperClientDetail"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "client-management-controller"
+        ],
+        "summary": "Service to update deatils of OIDCClient",
+        "description": "Service to update deatils of OIDCClient",
+        "operationId": "updateOIDCClientDetails",
+        "parameters": [
+          {
+            "name": "client_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperClientDetailUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperClientDetailResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/securebiometricinterface": {
       "put": {
         "tags": [
@@ -2139,6 +2243,298 @@
   },
   "components": {
     "schemas": {
+      "RequestWrapperClientDetailCreateRequest": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/ClientDetailCreateRequest"
+          }
+        }
+      },
+      "ClientDetailCreateRequest": {
+        "required": [
+          "name",
+          "policyId",
+          "publicKey",
+          "authPartnerId",
+          "logoUri",
+          "redirectUris",
+          "grantTypes",
+          "clientAuthMethods"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string"
+          },
+          "policyId": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "publicKey": {
+            "type" : "object",
+            "additionalProperties" : {
+                "type" : "object"
+            }
+          },
+          "authPartnerId": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "logoUri": {
+            "maxLength": 2048,
+            "type": "string"
+          },
+          "redirectUris": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 5
+          },
+          "grantTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          },
+          "clientAuthMethods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          }
+        }
+      },
+      "RequestWrapperClientDetailUpdateRequest": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/ClientDetailUpdateRequest"
+          }
+        }
+      },
+      "ClientDetailUpdateRequest": {
+        "required": [
+          "logoUri",
+          "redirectUris",
+          "status",
+          "grantTypes",
+          "clientName",
+          "clientAuthMethods"
+        ],
+        "type": "object",
+        "properties": {
+          "logoUri": {
+            "maxLength": 2048,
+            "type": "string"
+          },
+          "redirectUris": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 5
+          },
+          "status": {
+            "type": "string",
+            "pattern": "^(ACTIVE)|(INACTIVE)$"
+          },
+          "grantTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          },
+          "clientName": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string"
+          },
+          "clientAuthMethods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          }
+        }
+      },
+      "ResponseWrapperClientDetailResponse": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/ClientDetailResponse"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ClientDetailResponse": {
+        "type": "object",
+        "properties": {
+          "clientId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperClientDetail": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/ClientDetail"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ClientDetail": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "policyId": {
+            "type": "string"
+          },
+          "policyName": {
+            "type": "string"
+          },
+          "relyingPartyId": {
+            "type": "string"
+          },
+          "logoUri": {
+            "type": "string"
+          },
+          "redirectUris": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "publicKey": {
+            "type": "string"
+          },
+          "claims": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acrValues": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          },
+          "grantTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "clientAuthMethods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
       "RequestWrapperSecureBiometricInterfaceUpdateDto": {
         "required": [
           "request"
