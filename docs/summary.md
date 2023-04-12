@@ -2,7 +2,7 @@
 
 * [e-Signet](README.md)
 * [Overview](overview/README.md)
-  * [Components](sandbox-details/components.md)
+  * [Components](components.md)
   * [Features](architecture/features.md)
 * [Sandbox Details](sandbox-details/README.md)
 * [Contribution](contribution/README.md)
