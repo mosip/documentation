@@ -1,6 +1,6 @@
 # Version 0.9.0
 
-**Release Name**: e-Signet 0.9.0 (Beta)
+**Release Name**: IdP (Beta)
 
 **Upgrade From**: NA (First Release)
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-The 0.9.0 version of e-Signet is the first beta release which covers essential features such as Login with OTP and Login with Biometrics. The subsequent releases will have more features and integration with digital wallet solutions.
+The IdP (0.9.0 version of e-Signet) is the first beta release which covers essential features such as Login with OTP and Login with Biometrics. The subsequent releases will have more features and integration with digital wallet solutions.
 
 ## Features Covered
 
