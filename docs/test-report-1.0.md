@@ -11,7 +11,7 @@ The scope of testing is to verify fitment to the specification from the perspect
 
 Verification is performed not only from the end-user perspective but also from the System Integrator (SI) point of view. Hence, the configurability and extensibility of the software is also assessed. This ensures readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform, verification scope required comprehensive automation testing for all the MOSIP APIs. An automation Test Rig is created for the same. 
 
-The e-Signet testing scope revolves around the following flows:
+The `e-Signet` testing scope revolves around the following flows:
 
 * Login with OTP
 * Login with Biometrics (mock)
@@ -55,10 +55,29 @@ Verification is performed on various configurations as mentioned below:
 Below are the test metrics by performing functional testing for e-Signet using `mockMDS`, `mockAuth` and `mockABIS`. The process followed was black box testing which based its test cases on the specifications of the software component under test. Functional test was performed in combination of individual module testing as well as integration testing. Test data were prepared inline with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple languages and configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
 
 
-| **Total**  | **Passed** |  **Failed** | **Skipped** |
-|------------|------------|-------------|-------------|
-|            |            |             |             |
+| **Total**     | **Passed**   |  **Failed**    | **Skipped**   |
+|---------------|--------------|----------------|---------------|
+|     817       |   760        |        12      |    45         |
 
+**Test Rate: 94%**  with **Pass Rate : 99%**
+
+Here is the detailed breakdown of metrics for e-Signet:
+
+#### API based testing
+
+* Total Test cases: 642
+  * Passed: 590
+  * Failed: 7
+  * Skipped: 45
+  
+Note: 45 test cases are marked as skipped as they were not automated.
+
+#### UI based testing
+
+* Total Test cases: 175
+  * Passed: 175
+  * Failed: 0
+  * Skipped: 0
 
 ## External API verification results for e-Signet
 
@@ -66,7 +85,17 @@ Below section provides details on API test metrics for e-Signet by executing MOS
 
 | **Total**  | **Passed** |  **Failed** | **Skipped** |
 |------------|------------|-------------|-------------|
-|            |            |             |             |
+|     563    |    558     |     5       |    0        |
+
+**Test Rate: 100%**  with **Pass Rate : 99%**
+
+### Testing End-to-end flow(s) 
+
+End-to-end flows are a set of stateful test cases that expects the results across multiple modules. The test does not cover the intermediary stages, rather concentrates on the end result for a given data. The test covers both negative scenarios and positive scenarios with real world scenarios. Below are the end-to-end scenarios test metrics by executing MOSIP Automation Framework.
+
+| **Total**  | **Passed** |  **Failed** | **Skipped** |
+|------------|------------|-------------|-------------|
+|     84    |    63   |     21      |    0        |
 
 
 
@@ -75,28 +104,3 @@ Below section provides details on API test metrics for e-Signet by executing MOS
 
 
 
-## Test Execution Statistics
-
-#### Functional Testing
-
-* Stories Verified: 10
-* Test cases: 401
-  * Passed: 386
-  * Failed: 9
-  * Skipped: 6
-* Test Rate: 98% With Pass Rate: 97%
-
-#### Device Based Testing
-
-* Test cases: 12
-  * Passed: 11
-  * Failed: 1
-  * Skipped: 0
-* Test Rate: 100% With Pass Rate: 91%
-
-#### API Testing
-
-* Test cases: 261
-  * Passed: 261
-  * Failed: 0
-  * Skipped: 0
