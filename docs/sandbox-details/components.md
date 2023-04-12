@@ -2,8 +2,7 @@
 
 The image below is a block diagram of e-Signet comprising of various components alongwith the different layers and external systems.
 
-<figure><img src="../.gitbook/assets/
- -component-diagram.jpeg" alt=""><figcaption></figcaption></figure>
+![](\_images/esignet-components-updated.png)
 
 ### Relying Party System
 
