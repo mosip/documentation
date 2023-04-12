@@ -2,7 +2,7 @@
 
 **Release Name**: e-Signet 
 
-**Upgrade From**: 0.9.0 (First Release)
+**Upgrade From**: 0.9.0 (IdP - First released version)
 
 **Release Date**: 14th April 2023
 
