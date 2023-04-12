@@ -15,7 +15,7 @@ The key bound credentials stored in the wallet app can be used to verify the use
 ### **e-Signet (OIDC) UI**
 
 * This is the front-end application which is mainly responsible for the user interactions.
-* Runs on the end user browser and invokes the REST API endpoints of the [e-Signet Service](components#e-signet-service) component.
+* Runs on the end user browser and invokes the REST API endpoints of the [e-Signet Service](components#e-Signet Service) component.
 * It acts as a first level proxy and forwards the request details received through standard [OpenID connect](https://openid.net/connect/) endpoints to the esignet service.
 * On completion of all user interactions, it redirects to the relying party's web application with relevant details.
 * e-Signet UI also interacts with the [SBI (Secure Biometric Interface)](https://app.gitbook.com/s/-M1R77ZUwR6XwtPjJIVm/biometrics/mosip-device-service-specification) service running in the local machine to collect encrypted and signed biometric data.
