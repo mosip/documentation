@@ -1,6 +1,6 @@
 # Components
 
-The image below is a block diagram of e-Signet comprising various components along with the different layers and external systems.
+The image below is a block diagram of e-Signet comprising of various components along with the different layers and external systems.
 
 ![](\_images/esignet-components-updated.png)
 
@@ -10,7 +10,7 @@ The relying party system is any application who would need the verified user inf
 
 ### Digital Wallet
 
-Key bound credentials stored in the wallet app can be used to verify the user to avail the services provided by a Relying Party system. Refer [here](integration-guides/authentication-system-integration#keybinder) for more details.
+The key bound credentials stored in the wallet app can be used to verify the user to avail the services provided by a Relying party system. Refer [here](integration-guides/authentication-system-integration.md#keybinder) for more details.
 
 ### **e-Signet (OIDC) UI**
 
