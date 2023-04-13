@@ -38,6 +38,8 @@ The **1.2.0.1 Beta3** release of MOSIP is a patch release on top of the [Long-Te
 
 For complete documentation, refer to [1.2.0 LTS documentation](https://docs.mosip.io/1.2.0/).
 
+To read though the Test Reports, refer [here](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1-b3/test-report-1.2.0.1-b3).
+
 Deployment documentation and scripts have been enhanced and are compliant with V3 architecture.
 
 Developer documentation for all repositories has also been added for developers to set up in their local systems.
