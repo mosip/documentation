@@ -97,9 +97,18 @@ End-to-end flows are a set of stateful test cases that expects the results acros
 |------------|------------|-------------|-------------|
 |     84    |    63   |     21      |    0        |
 
+**Test Rate:** 100% with **Pass Rate:** 75%
 
+### Detailed Test metrics
 
+Below are the detailed test metrics by performing manual/ automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency. 
 
+The various metrics that assist in test tracking and efficiency are as follows:
+
+●	Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100
+●	Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
+
+Git hub link for the xls file:
 
 
 
