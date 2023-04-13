@@ -54,9 +54,10 @@ Here is the detailed breakdown of metrics:
 |Mobile ID (Inji)|37|36|1|0|
 |ID Repository|136|130|6|0|
 |Resident|1020| 958|62|0|
-|Admin|796|711|85|0|
-|ID Authentication|940|910|30|0|
-|Partner Management|450|434|16|0|
+|Master Data|592|590|2|0|
+|ID Authentication|358|336|22|0|
+|Partner Management|463|462|1|0|
+|e-Signet|563|558|5|0|
 
 
 ### Testing End-to-End flow(s) 
