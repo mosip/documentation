@@ -26,6 +26,7 @@
   * [Login flow with QR code (Inji)](login-flow-qr-code.md) 
 * [Supported Integrations](integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
+  * [INJI](https://docs.mosip.io/inji)
 * [License](license.md)
 * [Glossary](glossary.md)
   * [Identity Verification](identity-verification.md)
