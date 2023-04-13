@@ -1,8 +1,6 @@
 # Resident Mobile Application User Guide
 
-## Prerequisite
-
-For Android devices, `Google Nearby Connections API` and the `Google SafetyNet Attestation API` require that the device has access to the Google Play Services and related APIs. This implies that a Google Account is set up and configured on the device.
+This a quick-read user guide for Inji. To refer to detailed Inji documentation, click [here](https://docs.mosip.io/inji/).
 
 {% embed url="https://www.youtube.com/watch?v=ry6SknpGOss" %}
 
