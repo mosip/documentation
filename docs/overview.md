@@ -31,3 +31,39 @@ Below diagram shows how credentials are shared and the authentication process th
 * The app uses [Mimoto APIs](https://mosip.stoplight.io/docs/mimoto) for generating VCs, downloading and activation.
 * It uses [e-Signet APIs](https://mosip.stoplight.io/docs/identity-provider) for online login.
 
+## Installing the application
+
+After installing the application, the user must set an app lock code for it. The app supports biometric or PIN-based locks. For more details, refer to the [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta).
+
+![](\_images/inji\_first\_launch.png)
+
+## Generating and storing credentials
+
+Residents can generate a Verifiable Credential(VC) for themselves or their family or friends on the same phone.
+
+Detailed steps on generating and sharing credentials are given in the [User guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta). The process of generating a credential is shown below
+
+![](\_images/generate\_and\_store\_cred.png)
+
+## Sharing of credentials
+
+The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. Refer to [Tuvali documentation](https://docs.mosip.io/inji/tuvali) for more information.
+
+## Online login process
+
+* Residents can use Inji to log in to any service provider app (integrated with e-Signet) by just scanning a QR code from their portal.
+* The app performs offline face auth after scanning the QR code to verify the user's presence.
+* Once the presence is verified, the resident is given the option to choose the optional information to be shared with the service provider portal.
+* After consent is provided, the app sends a WLA (Wallet local auth) token which is a JWT token to the relying party.
+* The resident is then given the access to the portal after the token verification.
+
+#### Step 1: VC activation process
+
+![](\_images/vc\_activation.png)
+
+#### Step 2: Online QR login
+
+![](\_images/online\_qr\_login.png)
+
+
+
