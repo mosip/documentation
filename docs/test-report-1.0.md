@@ -21,7 +21,7 @@ The `e-Signet` testing scope revolves around the following flows:
 * Multiple instances of e-Signet
 * Cross-browser testing: e-Signet flow verification in different browsers (Chrome, Microsoft Edge, Firefox, Safari)
 
-## Test Approach
+## Test approach
 
 Persona based approach has been adopted to perform the IV&V(Independent Verification and Validation) by simulating the test scenarios that resemble a real-time implementation. 
 
@@ -57,7 +57,7 @@ Below are the test metrics by performing functional testing for e-Signet using `
 
 | **Total**     | **Passed**   |  **Failed**    | **Skipped**   |
 |---------------|--------------|----------------|---------------|
-|     817       |   760        |        12      |    45         |
+|     817       |   765        |        7       |    45         |
 
 **Test Rate: 94%**  with **Pass Rate : 99%**
 
@@ -99,7 +99,7 @@ End-to-end flows are a set of stateful test cases that expects the results acros
 
 **Test Rate:** 100% with **Pass Rate:** 75%
 
-### Detailed Test metrics
+### Detailed test metrics
 
 Below are the detailed test metrics by performing manual/ automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency. 
 
