@@ -109,7 +109,7 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 * Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
 
-Git hub link for the xls file:
+ Link for the xls file:
 
 
 
