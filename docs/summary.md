@@ -128,6 +128,7 @@
   * [MOSIP Branching Strategy](mosip-branching-strategy.md)
 * [Releases](releases.md)
   * [1.2.0.1-B3 (Beta)](release/1.2.0.1/release-notes-1.2.0.1-b3.md)
+    * [Test Report](release/1.2.0.1/test-report-1.2.0.1-b3.md)
   * [1.2.0.1-B2 (Beta)](release/1.2.0.1/release-notes-1.2.0.1-b2.md)
   * [1.2.0.1-B1 (Beta)](release/1.2.0.1/release-notes-1.2.0.1-beta.md)
     * [Functional Test Report](release/1.2.0.1/functional-test-report-B1.md)
