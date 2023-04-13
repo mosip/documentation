@@ -6,10 +6,12 @@
    ```json lines
     {
     "allowAuthRequestDelegation": true,
-    "allowKycRequestDelegation":true
+    "allowKycRequestDelegation": true,
+    "trustBindedAuthVerificationToken": true,
+    "allowKeyBindingDelegation": true
     }
     ```
-2. License key of the MISP partner must be updated in the `idp-default.properties`.<br> Property name : `mosip.idp.misp.license.key`
+2. License key of the MISP partner must be updated in the `esignet-default.properties`.<br> Property name : `mosip.esignet.misp.license.key`
 3. Create and Update of OIDC clients are managed via PMS.
 4. Relying party is onboarded as a Auth partner. Auth partner is required to have the below allowed auth-types in the policy.
 
@@ -25,9 +27,9 @@
 6. SHA-256 hash of the OIDC client public key is considered as clientID.
 7. Authentication Context References(ACR) and user claims are derived based on the policy of the auth partner.
 
-   a. `allowedKycAttributes` are used to derive user claims.
+   a. `allowedKycAttributes` are used to derive user claims using the identity_mapping.json 
 
-   b. `allowedAuthTypes` are used to derive ACR values
+   b. `allowedAuthTypes` are used to derive ACR values using the amr-acr-mapping.json
 
 8. Client management endpoints of e-Signet oidc-service is invoked from PMS with the derived values, clientId and the provided public-key.
 9. Also, the client-details with policy and partner details are sent as an event to MOSIP IDA system.
