@@ -18,7 +18,7 @@
   * [Code of Conduct](contribution/code-of-conduct.md)
 * [Build & Deployment](build-&-deployment.md)
 * [Versions](versions.md)
-  * [Version 0.9.0](release-notes-1.0.0.md)
+  * [Version 0.9.0](version-0.9.0.md)
     * [Test Report](test-report-0.9.0.md)
 * [Specifications](specifications/README.md)
   * [Face SDK](specifications/face-sdk.md)
