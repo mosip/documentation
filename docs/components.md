@@ -10,7 +10,9 @@ The relying party system is any application who would need the verified user inf
 
 ### Digital Wallet
 
-The key bound credentials stored in the wallet app can be used to verify the user to avail the services provided by a Relying party system. Refer [here](integration-guides/authentication-system-integration.md#keybinder) for more details.
+The key bound credentials stored in the wallet app can be used to verify the user to avail the services provided by a Relying party system. 
+
+To know more, refer [here](integration-guides/authentication-system-integration.md#keybinder).
 
 ### **e-Signet (OIDC) UI**
 
