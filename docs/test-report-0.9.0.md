@@ -24,6 +24,22 @@ The `Inji` testing scope revolves around the following flows:
 * Wallet binding
 * QR code Login
 
+## Test approach
+
+Persona based approach has been adopted to perform the IV&V(Independent Verification and Validation) by simulating the test scenarios that resemble a real-time implementation. 
+
+A Persona is a fictional character/ user profile created to represent a user type that might use a product/ or a service in a similar way. Persona based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software and thereby determines use cases/ scenarios that the customers will execute. The persona needs may be addressed through any of the following:
+
+* Functionality  
+* Deployability  
+* Configurability  
+* Customizability
+
+The verification methods may differ based on how the need was addressed. 
+
+For regression check, `MOSIP Test Rig`, an automation testing suite is indigenously designed and developed for supporting persona based testing. MOSIP Test Rig covers the end-to-end test execution and reporting. The end-to-end functional test scenarios are written starting from pre-registration, to creation of packet in registration center, processing the packet through the registration processor, generating UIN and authenticating identity using IDA through various permutation and combinations of cases being covered. MOSIP Test Rig will be an open source artifact which can also be enhanced and used by countries to validate the SI deliveries before going live. Persona classes include both negative and positive personas. Negative persona classes include users like Bribed Registration Office, Malicious Insider etc. The needs of positive persona classes must be met, whereas the needs of negative persona classes must be effectively restricted by the software.
+
+
 ## Feature health
 
 ![](\_images/inji-test-report1.png)  ![](\_images/inji-test-report2.png)
@@ -93,7 +109,7 @@ Below are the test metrics by performing VC Sharing functionality on various dev
 **Test Rate: 100%**  with **Pass Rate : 83%**
 
 
-### Detailed Test metrics
+### Detailed test metrics
 
 Below are the detailed test metrics by performing manual/ automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency. 
 
