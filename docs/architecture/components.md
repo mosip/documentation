@@ -35,7 +35,8 @@ Inji uses the face matcher SDK to perform offline face authentication.
 The SDK is used in the two scenarios below:
 
 1. During offline VC sharing: Residents can perform selfie authentication before sharing the VC with the relying party. Once the resident chooses to do so, the app will open the camera and the resident can take a selfie. This selfie image will be validated against the VC image to verify the Resident's presence.
-2. During online login: Residents can scan the QR code from the relying party portal and choose to log in using Inji to avail of services. In this process, the resident has to go through offline selfie auth against the VC to verify presence.
+
+2. During online login: Residents can scan the QR code from the relying party portal and choose to log in using Inji to avail services. In this process, the resident has to go through selfie authentication against the VC to verify presence.
 
 The face matcher SDK internally has the native implementation for Android and iOS where [Tensorflow](https://www.tensorflow.org/) and [Google ML Kit](https://developers.google.com/ml-kit) is used to identify face.
 
