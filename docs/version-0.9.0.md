@@ -32,5 +32,5 @@ are available as part of this release.
 
 * [Feature Documentation](./)
 * [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta)
-* [QA Report]([test-report-0.9.md](https://docs.mosip.io/inji/versions/release-notes-1.0.0/test-report-0.9.0))
+* [QA Report](test-report-0.9.md](https://docs.mosip.io/inji/versions/release-notes-1.0.0/test-report-0.9.0)
 
