@@ -1,4 +1,4 @@
-# Version 1.0
+# Version 1.0.0
 
 **Release Name**: e-Signet 
 
@@ -8,7 +8,7 @@
 
 ## Overview
 
-The 1.0 version of e-Signet is the second release which covers the essential features such as Login with OTP and Login with Biometrics along with Wallet based authentication. The subsequent releases will have more features and integration with digital wallet solutions.
+The 1.0.0 version of e-Signet is the second release which covers the essential features such as Login with OTP and Login with Biometrics along with Wallet based authentication. The subsequent releases will have more features and integration with digital wallet solutions.
 
 ## Features Covered
 
@@ -25,4 +25,4 @@ The features included in this release are,
 * [Feature Documentation](architecture/features.md)
 * [Integration Guides](integration-guides/README.md)
 * [End User Guide](esignet-end-user-guide.md)
-* [QA Report](test-report-1.0.md)
+* [QA Report](test-report-1.0.0.md)
