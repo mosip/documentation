@@ -36,9 +36,9 @@ Verification is performed on various configurations as mentioned below:
    * 2 Lang configuration
    * 3 Lang configuration
 
-## External API verification results for e-Signet
+## External API verification results for all modules
 
-Below section provides details on API test metrics for e-Signet by executing MOSIP functional automation Framework. The external API test executions were performed at module level isolation. Each end point is tested with the test data and expectations of each test data are mapped to assert the test case.
+Below section provides details on API test metrics for all modules by executing MOSIP functional automation Framework. All external API test executions were performed at module level isolation. Each end point is tested with the test data and expectations of each test data are mapped to assert the test case.
 
 | **Total**  | **Passed** |  **Failed** | **Skipped** |
 |------------|------------|-------------|-------------|
@@ -70,7 +70,7 @@ End-to-end flows are a set of stateful test cases that expects the results acros
 
 **Test Rate:** 100% with **Pass Rate:** 75%
 
-### Detailed test metrics
+### Detailed Test metrics
 
 Below are the detailed test metrics by performing manual/ automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency. 
 
