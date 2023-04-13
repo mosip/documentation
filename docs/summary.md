@@ -28,5 +28,4 @@
 * [End User Guide](enduser-guide.md)
 * [Supported Integrations](supported-integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
-  * [INJI](https://docs.mosip.io/inji)
 * [License](license.md)
