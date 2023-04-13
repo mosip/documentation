@@ -1,6 +1,6 @@
 ## Digital Wallet Integration
 
-e-Signet provides endpoint to bind a public key to an `individualId`.
+e-Signet provides endpoints to bind a public key to an individual.
 
 {% swagger src=".gitbook/assets/e-Signet.yml" path="/binding/wallet-binding" method="post" %}
 [e-Signet.yml](.gitbook/assets/e-Signet.yml)
