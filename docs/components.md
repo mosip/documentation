@@ -39,14 +39,14 @@ The key bound credentials stored in the wallet app can be used to verify the use
 ### Plugins
 
 * These library components acts like a proxy to the Authentication system.
-* These plugins have [interface](integration-guides/authentication-system-integration) implementations required by the e-Signet service for loosely coupled integration to the Authentication System.
+* These plugins have [interface](integration-guides/authentication-system-integration.md) implementations required by the e-Signet service for loosely coupled integration to the Authentication System.
 * Expected as runtime dependency to facilitate the use of officially released container images even in custom integrations.
 
 ### Key Manager
 
 * Key Manager is used for secure key management and cryptography functionalities required by the e-Signet service component.
 * It can be integrated with a HSM (Hardware Security Module) for the secure storage of keys.
-* Typically, Key Manager is run as a service, but it is used as a library in the [e-Signet Service](components#e-signet-service) to minimize the effort of managing extra containers.
+* Typically, Key Manager is run as a service, but it is used as a library in the e-Signet Service to minimize the effort of managing extra containers.
 * It depends upon the Data layer for maintaining the metadata on keys.
 
 ### **e-Signet Core**
@@ -54,7 +54,7 @@ The key bound credentials stored in the wallet app can be used to verify the use
 * e-Signet core is a library component used to maintain the common interfaces, DTOs and utility methods.
 * Used as a build-time dependency for e-Signet service.
 
-### **Authentication System**
+### **Authentication System (ID system)**
 
 * This system could be any functional or foundational ID system that contains the resident demographic and biometric information (optional).
 * It facilitates the mechanism to perform identity verification and share the required user information.
