@@ -8,9 +8,9 @@
 
 **Support**: Developer Release
 
-**Release Date**: 14th April, 2023
+**Release Date**: 14th April 2023
 
-The **1.2.0.1 Beta3** release of MOSIP is a patch release on top of the [Long-Term Support (LTS) release 1.2.0](../1.2.0/release-notes.md). This patch release mainly contains all the fixes for bugs, security and performance given as part of the [1.2.0.1-B1 patch](release-notes-1.2.0.1-beta.md) and additional integrations modification for the [Compliance Tool Kit](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/OrxzFOqLUpvxyg8Kvdlg/) and [e-Signet](https://app.gitbook.com/o/-M1FyzBr-VmticWYm8QI/s/ylzvZHp30DQ3rNCClELV/).
+The **1.2.0.1 Beta3** release of MOSIP is a patch release on top of the [Long-Term Support (LTS) release 1.2.0](../1.2.0/release-notes.md). This patch release mainly contains all the fixes for bugs, security and performance given as part of the [1.2.0.1-B1 patch](release-notes-1.2.0.1-beta.md) and additional integrations modification for the [Inji](http://localhost:5000/s/aY8BQ4hdzhSchZV814Ev/versions/version-0.9.0) and [e-Signet](http://localhost:5000/s/ylzvZHp30DQ3rNCClELV/versions/version-1.0.0).
 
 ## Repository Released
 
@@ -30,9 +30,6 @@ The **1.2.0.1 Beta3** release of MOSIP is a patch release on top of the [Long-Te
 | mock-smtp                   | [v0.0.1](https://github.com/mosip/mock-smtp/tree/v0.0.1)                             |
 | keycloak                    | [v1.2.0.1-B2](https://github.com/mosip/keymanager/tree/v1.2.0.1-B2)                  |
 | postgres-init               | [v1.2.0.1-B2](https://github.com/mosip/postgres-init/tree/release-1.2.0.1-B2)        |
-| idp                         | [v0.9.0](https://github.com/mosip/idp/tree/v0.9.0)                                   |
-| idp-ui                      | [v0.9.0](https://github.com/mosip/idp-ui/tree/v0.9.0)                                |
-| oidc-demo-portal            | [v0.9.0](https://github.com/mosip/oidc-demo-portal/tree/v0.9.0)                      |
 
 ## Documentation
 
