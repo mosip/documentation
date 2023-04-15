@@ -6,11 +6,15 @@ This guide helps with the steps to mock the authentication server.
 Note: It is for development purposes only.
 {% endhint %}
 
-We run the mock-identity-system, with endpoints to create an individual, authenticate an individual, share data of the individual and mock send-OTP operations.
+We run the mock identity system, with endpoints to create an individual, authenticate an individual, share data of the individual and mock send-OTP operations.
 
-> Repository: https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-identity-system
+**GitHub Repository**
 
-> configuration: https://github.com/mosip/mosip-config/blob/qa-1201-B2/mock-identity-system-default.properties
+{% embed url="https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-identity-system" %}
+
+**Configurations**
+
+{% embed url="https://github.com/mosip/mosip-config/blob/qa-1201-B2/mock-identity-system-default.properties" %}
 
 ## Setup
 
@@ -46,7 +50,7 @@ IS_ACTIVE, CR_BY, CR_DTIMES)
 VALUES('MOCK_BINDING_SERVICE', 1095, 50, 'NA', true, 'mosipadmin', now());
 ```
 
-4. To add a new persona, using the create identity endpoint of the `mock-identity-system`, add a mock individual into the system.
+4. To add a new persona, using the create identity endpoint of the mock identity system, add a mock individual into the system.
 
 ```
 POST https://api.dev.mosip.net/v1/mock-identity-system/identity
@@ -98,4 +102,4 @@ POST https://api.dev.mosip.net/v1/mock-identity-system/identity
  }
 ```
 
-With mock individuals created in mock-identity-system, The individualId created could now be used with e-Signet to perform PIN / OTP / BIO / QR-code based login.
+With mock individuals created in the mock identity system, The individual ID created could now be used with e-Signet to perform PIN / OTP / BIO / QR-code-based login.

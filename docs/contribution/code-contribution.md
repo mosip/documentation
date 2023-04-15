@@ -2,7 +2,7 @@
 
 ## Overview
 
-The recommended Github workflow here is for developers to submit code and documentation contributions to e-Signet open-source repositories.
+The recommended GitHub workflow here is for developers to submit code and documentation contributions to e-Signet open-source repositories.
 
 ### Repositories
 
@@ -47,7 +47,7 @@ The recommended Github workflow here is for developers to submit code and docume
 $ git fetch upstream
 ```
 
-3\. On your local repo, switch to a branch if you are working on an older release (like the 0.9.0 branch) or stay in `main/develop` branch.&#x20;
+3\. On your local repo, switch to a branch if you are working on an older release (like the 0.9.0 branch) or stay in `main/develop` branch.
 
 ```
 $ git checkout upstream/<branch> 
@@ -93,12 +93,12 @@ $ git pull upstream <branch>
 $ git push --set-upstream origin issue-<issue number>
 ```
 
-10\. On your forked remote repository from GitHub, create a pull request using the Contribute button. Direct the pull-request to `main` or any specific branch upstream.&#x20;
+10\. On your forked remote repository from GitHub, create a pull request using the Contribute button. Direct the pull-request to `main` or any specific branch upstream.
 
 {% hint style="info" %}
-Most often it's the same branch in the upstream (as in Step 3).&#x20;
+Most often it's the same branch in the upstream (as in Step 3).
 {% endhint %}
 
 11\. Make sure the automatic tests on GitHub for your pull request pass.
 
-12\. Reviewers shall review the pull request. Reach out to the [community](https://community.mosip.io) for a faster response.&#x20;
+12\. Reviewers shall review the pull request. Reach out to the [community](https://community.mosip.io) for a faster response.
