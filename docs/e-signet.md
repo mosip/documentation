@@ -1,6 +1,6 @@
 # MOSIP e-Signet
 
-In these times of digital transformation, most services are moving online globally. Personalized access to online services is enabled through the usage of a trusted digital identity. **e-Signet** aims to offer a simple yet powerful mechanism for end users to identify themselves to avail of online services and also share their profile information. e-Signet supports multiple modes of identity verification to promote inclusion and increase access, thus narrowing potential digital divides.
+In these times of digital transformation, most services are moving online globally. Personalized access to online services is enabled through the usage of a trusted digital identity. **e-Signet** aims to offer a simple yet powerful mechanism for end users to identify themselves in order to avail online services and also share their profile information. e-Signet supports multiple modes of identity verification to promote inclusion and increase access, thus narrowing potential digital divides.
 
 e-Signet also provides an elegant and easy way for an existing trusted identity database to make the identity digital and provision identity verification and service access.
 
