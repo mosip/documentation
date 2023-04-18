@@ -6,7 +6,7 @@ The image below is a block diagram of e-Signet comprising various components alo
 
 ### Relying Party System
 
-The relying party system is any application who would need the verified user information and a unique user login functionality to provide various services online. It depends on OpenID Connect libraries to integrate with e-Signet.
+The relying party system is any application who would need the verified user information and a unique user login functionality to provide various services online. It depends on `OpenID Connect` libraries to integrate with e-Signet.
 
 ### Digital Wallet
 
