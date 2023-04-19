@@ -43,10 +43,10 @@ MOSIP highly recommends the following specifications for HSM:
 27. Performance
 28. RSA 2048 Signing performance – 10000 per second.
 29. RSA 2048 Key generation performance – 10+ per second.
-30. RSA 2048 encryption/decryption performance - 20000+.
+30. RSA 2048 encryption/decryption performance - 20000+ per second.
 31. RSA 4096 Signing performance - 5000 per second.
 32. RSA 4096 Key generation performance - 2+ per second.
-33. RSA 4096 encryption/decryption performance - 20000+.
+33. RSA 4096 encryption/decryption performance - 20000+ per second.
 34. Should have the ability to backup keys, replicate keys, store keys in offline locker facilities for DR. The total capacity is inline with the total number of keys prescribed.
 35. Clustering minimum of 20 HSMs.
 36. Less than 30 seconds for key replication across the cluster.
