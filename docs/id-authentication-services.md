@@ -1,8 +1,8 @@
-# ID Authentication Services (IDA)
+# ID Authentication Services
 
 ## Overview
 
-ID Authentication is built as an independant service that can be seeded with data for authentication by any system including MOSIP. In the current design we can have multiple IDA modules running from a single issuer. 
+ID Authentication is built as an independant service that can be seeded with data for authentication by any system including MOSIP. In the current design we can have multiple IDA modules running from a single issuer.
 
 ID Authentication (IDA) module of MOSIP consists of the following services:
 
@@ -17,13 +17,13 @@ The services mentioned below are used by Authentication/e-KYC Partners.
 * Authentication service- used to authenticate an individual's UIN/VID using one ore more authentication types.
 * KYC Authentication service- used to request e-KYC for an individul's UIN/VID using one ore more authentication types.
 
-![](\_images/authentication-service.png)
+![](\_images/authentication-flow.png)
 
 ## OTP Request Service
 
 OTP Request Service is used by Authentication/e-KYC Partners to generate OTP for an individual's UIN/VID. The generated OTP is stored in IDA DB for validation during OTP Authentication.
 
-![](\_images/authentication-otp-service.png)
+![](\_images/otp-request-flow.png)
 
 ## Internal Services
 
