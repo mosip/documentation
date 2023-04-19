@@ -1,6 +1,6 @@
 # License
 
-The documentation work is licensed under a Creative Commons Attribution 4.0 International License.
+The documentation is licensed under a Creative Commons Attribution 4.0 International License.
 
 ![CC license Image](_images/by.svg)
 
