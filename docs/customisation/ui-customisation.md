@@ -65,7 +65,7 @@ Example:-
 
 To change the color of TabItemText:
 
-![Image](./_images/tab-item-text.png)
+![Image](./../_images/tab-item-text.png)
 
 ```
 export const DefaultTheme = {
@@ -78,7 +78,7 @@ export const DefaultTheme = {
 
 To change the color of Details Label Text:
 
-![Image](./_images/details-value.png)
+![Image](./../_images/details-label.png)
 
 ```
 export const DefaultTheme = {
@@ -91,7 +91,7 @@ export const DefaultTheme = {
 
 To change the color of Details Value Text:
 
-![Image](./_images/details-value.png)
+![Image](./../_images/details-value.png)
 
 ```
 export const DefaultTheme = {
@@ -104,7 +104,7 @@ export const DefaultTheme = {
 
 To change the color of AddId Button Text and Background:
 
-![Image](./_images/add-id-button.png)
+![Image](./../_images/add-id-button.png)
 
 ```
 export const DefaultTheme = {
@@ -118,7 +118,7 @@ export const DefaultTheme = {
 
 To change the color of Icons:
 
-![Image](./_images/icons.png)
+![Image](./../_images/icons.png)
 
 ```
 export const DefaultTheme = {
@@ -131,7 +131,7 @@ export const DefaultTheme = {
 
 To change the Background Color of Icons:
 
-![Image](./_images/icon-bg.png)
+![Image](./../_images/icon-bg.png)
 
 ```
 export const DefaultTheme = {
@@ -144,7 +144,7 @@ export const DefaultTheme = {
 
 To change the Color of Loading Transition:
 
-![Image](./_images/loading-transition.png)
+![Image](./../_images/loading-transition.png)
 
 ```
 export const DefaultTheme = {
@@ -157,7 +157,7 @@ export const DefaultTheme = {
 
 To change the Color of Error message:
 
-![Image](./_images/error-message.png)
+![Image](./../_images/error-message.png)
 
 ```
 export const DefaultTheme = {
@@ -170,7 +170,7 @@ export const DefaultTheme = {
 
 To change the Color of noUinText:
 
-![Image](./_images/no-uin-text.png)
+![Image](./../_images/no-uin-text.png)
 
 ```
 export const DefaultTheme = {
@@ -181,9 +181,9 @@ export const DefaultTheme = {
 }
 ```
 
-To change the Colors of profile Label and Profile values:
+To change the Colors of Profile Label and Profile Values:
 
-![Image](./_images/profile-values.png)
+![Image](./../_images/profile-values.png)
 
 ```
 export const DefaultTheme = {
@@ -197,7 +197,7 @@ export const DefaultTheme = {
 
 To change the Color of profileVersion:
 
-![Image](./_images/profile-version.png)
+![Image](./../_images/profile-version.png)
 
 ```
 export const DefaultTheme = {
