@@ -50,4 +50,4 @@ Each metric json logged into `metrics.log` file is tagged with machine name. Ref
 
 * A job is scheduled to upload collected metrics to server from the client application. 
 * Job runs with a fixed delay of 15 minutes. 
-* Resumeble file URLs are stored under `.metrics` folder of registration client. Once the complete file is uploaded to server, the metrics file is deleted locally.
+* Resumable file URLs are stored under `.metrics` folder of registration client. Once the complete file is uploaded to server, the metrics file is deleted locally.
