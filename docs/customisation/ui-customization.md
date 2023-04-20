@@ -78,7 +78,7 @@ export const DefaultTheme = {
 
 To change the colour of the Details Label Text:
 
-![Image](\_images/details-value.png)
+![Image](\_images/details-label.png)
 
 ```
 export const DefaultTheme = {
