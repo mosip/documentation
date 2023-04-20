@@ -1,6 +1,6 @@
 # End User Guide
 
-To know more about the features of Inji, refer the [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application).
+To know more about the features of Inji, refer the [User Guide](https://docs.mosip.io/1.2.0/modules/inji-user-guide).
 
 
 
