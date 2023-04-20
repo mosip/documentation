@@ -83,8 +83,8 @@
         "tags": [
           "client-management-controller"
         ],
-        "summary": "Service to update deatils of OIDCClient",
-        "description": "Service to update deatils of OIDCClient",
+        "summary": "Service to update details of OIDCClient",
+        "description": "Service to update details of OIDCClient",
         "operationId": "updateOIDCClientDetails",
         "parameters": [
           {
