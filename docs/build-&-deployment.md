@@ -66,7 +66,7 @@ Run `cd android && ./gradlew :app:assembleMosipDebug && cd ..` to build the appl
 * Run `npm run android:mosip` to build and install the application on the device.
 * Run `npm run android:mosip --reset-cache` to build and install the application if any change is made in the .env file.
 
-### Published artifacts
+#### Published artifacts
 
 Once the build is successful, APKs are available in `./android/app/build/outputs/apk/mosip/debug`.
 
@@ -93,32 +93,32 @@ npm start
 npm run ios -- --device
 ```
 
-### Build for Testflight
+### Build for TestFlight
 
-The beta version of the build can be uploaded to `Testflight` for testing. The Testflight allows the creation of internal and external testing teams who will be notified once a new build is published.
+The beta version of the build can be uploaded to `TestFlight` for testing. TestFlight allows the creation of internal and external testing teams who will be notified once a new build is published.
 
 ![Testflight testers](\_images/img.png)
 
-**Publishing build to Testflight**
+**Publishing build to TestFlight**
 
-An Apple developer account is a must to publish builds in Testflight.
+An Apple developer account is a must to publish builds in TestFlight.
 
-1. Set the backend URL and choose a theme (orange | purple) inside the .env file.
+1. Set the backend URL and choose a theme (orange | purple) inside the `.env` file.
 2. Archive the build using xcode.
-3. Upload the archive to testflight.
+3. Upload the archive to Testflight.
 
-First choose Distribute App
+First choose `Distribute App`.
 
 ![img.png](\_images/archive.png)
 
-Upload in Testflight
+**Upload in TestFlight**
 
 ![img.png](\_images/upload.png)
 
 ![img.png](\_images/uploading.png)
 
-4. Login to Testflight and check for build upload status. Once the build is uploaded successfully, add Groups to provide access to testers.
+4. Login to TestFlight and check for the build upload status. Once the build is uploaded successfully, add Groups to provide access to testers.
 
 ![img.png](\_images/testflightgroups.png)
 
-5. All group members will be notified about the new build. Open Testflight and install the new version.
+5. All the group members will be notified about the new build. Open TestFlight and install the new version.
