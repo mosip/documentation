@@ -41,7 +41,7 @@ After installing the application, the user must set an app lock code for it. The
 
 Residents can generate a Verifiable Credential(VC) for themselves or their family or friends on the same phone.
 
-Detailed steps on generating and sharing credentials are given in the [User guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta). The process of generating a credential is shown below
+Detailed steps on generating and sharing credentials are given in the [User guide](https://docs.mosip.io/1.2.0/modules/inji-user-guide). The process of generating a credential is shown below
 
 ![](\_images/generate\_and\_store\_cred.png)
 
