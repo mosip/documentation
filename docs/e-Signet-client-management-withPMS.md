@@ -15,12 +15,12 @@
 * Create and Update of OIDC clients are managed via PMS.\
 
 
-{% swagger src="../api/partner-management-service-openapi.json" path="/oidc/client" method="post" %}
-[partner-management-service-openapi.json](../api/partner-management-service-openapi.json)
+{% swagger src=".gitbook/assets/partner-management-service-openapi (1).json" path="/oidc/client" method="post" %}
+[partner-management-service-openapi (1).json](<.gitbook/assets/partner-management-service-openapi (1).json>)
 {% endswagger %}
 
-{% swagger src="../api/partner-management-service-openapi.json" path="/oidc/client/{client_id}" method="put" %}
-[partner-management-service-openapi.json](../api/partner-management-service-openapi.json)
+{% swagger src=".gitbook/assets/partner-management-service-openapi (1) (1).json" path="/oidc/client/{client_id}" method="put" %}
+[partner-management-service-openapi (1) (1).json](<.gitbook/assets/partner-management-service-openapi (1) (1).json>)
 {% endswagger %}
 
 * Relying party is onboarded as an `Auth` partner. Auth partner is required to have the below allowed `auth-types` in the policy.
@@ -38,12 +38,12 @@
 
 * An auth-partner may have one or more OIDC clients.
 * SHA-256 hash of the OIDC client public key is considered as `clientID`.
-*   Authentication Context References(ACR) and user claims are derived based on the policy of the auth partner.
+*   Authentication Context References (ACR) and user claims are derived based on the policy of the auth partner.
 
     a. `allowedKycAttributes` are used to derive user claims using the `identity_mapping.json`
 
     b. `allowedAuthTypes` are used to derive ACR values using the `amr-acr-mapping.json`
-* Client management endpoints of e-Signet oidc-service is invoked from PMS with the derived values, `clientID` and the provided public-key.
+* Client management endpoints of e-Signet `oidc-service` is invoked from PMS with the derived values, `clientID` and the provided public-key.
 * Also, the client-details with policy and partner details are sent as an event to MOSIP IDA system.
 
 ## Configurations

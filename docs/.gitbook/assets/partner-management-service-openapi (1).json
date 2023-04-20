@@ -1,0 +1,6233 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Partner Management Services API documentation",
+    "description": "Partner Management Services API documentation",
+    "license": {
+      "name": "Mosip",
+      "url": "https://docs.mosip.io/platform/license"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://localhost/v1/partnermanager",
+      "description": "Partner Management Service"
+    }
+  ],
+  "paths": {
+    "/oidc/client": {
+      "post": {
+        "tags": [
+          "client-management-controller"
+        ],
+        "summary": "Service to create OIDCClient",
+        "description": "Creates OIDCClient and return Client id",
+        "operationId": "CreateOIDCClient",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperClientDetailCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperClientDetailResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/oidc/client/{client_id}": {
+      "get": {
+        "tags": [
+          "client-management-controller"
+        ],
+        "summary": "Service to get OIDCClient details",
+        "description": "Service to get OIDCClient details",
+        "operationId": "getOIDCClient",
+        "parameters": [
+          {
+            "name": "client_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperClientDetail"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "client-management-controller"
+        ],
+        "summary": "Service to update details of OIDCClient",
+        "description": "Service to update details of OIDCClient",
+        "operationId": "updateOIDCClientDetails",
+        "parameters": [
+          {
+            "name": "client_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperClientDetailUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperClientDetailResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/securebiometricinterface": {
+      "put": {
+        "tags": [
+          "secure-biometric-interface-controller"
+        ],
+        "summary": "Service to update SecureBiometricInterface",
+        "description": "Updates SecureBiometricInterface and returns success message",
+        "operationId": "updateSecureBiometricInterface",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperSecureBiometricInterfaceUpdateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperIdDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "secure-biometric-interface-controller"
+        ],
+        "summary": "Service to save SecureBiometricInterfaceCreateDto",
+        "description": "Saves SecureBiometricInterfaceCreateDto and return DeviceDetail id",
+        "operationId": "SecureBiometricInterface",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperSecureBiometricInterfaceCreateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperIdDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "secure-biometric-interface-controller"
+        ],
+        "summary": "Service to approve/reject SecureBiometricInterface",
+        "description": "Approve SecureBiometricInterface and returns success message",
+        "operationId": "approveSecureBiometricInterface",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperSecureBiometricInterfaceStatusUpdateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/securebiometricinterface/search": {
+      "post": {
+        "tags": [
+          "secure-biometric-interface-controller"
+        ],
+        "summary": "Service to search SecureBiometricInterface details",
+        "description": "Service to search SecureBiometricInterface details",
+        "operationId": "searchSecureBiometric",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDeviceSearchDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPageResponseDtoSbiSearchResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/securebiometricinterface/filtervalues": {
+      "post": {
+        "tags": [
+          "secure-biometric-interface-controller"
+        ],
+        "summary": "Service to filter SBI's",
+        "description": "Service to filter SBI's",
+        "operationId": "filterValues",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperFilterValueDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperFilterResponseCodeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/securebiometricinterface/devicedetails/map": {
+      "put": {
+        "tags": [
+          "secure-biometric-interface-controller"
+        ],
+        "summary": "Service to map device details with sbi",
+        "description": "Service to map device details with sbi",
+        "operationId": "mapDeviceDetails",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDeviceDetailSBIMappingDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/securebiometricinterface/devicedetails/map/search": {
+      "post": {
+        "tags": [
+          "secure-biometric-interface-controller"
+        ],
+        "summary": "Service to search mapped device details and SecureBiometricInterface details",
+        "description": "Service to search mapped device details and SecureBiometricInterface details",
+        "operationId": "searchMappedDeviceDetails",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDeviceSearchDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPageResponseDtoMappedDeviceDetailsReponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/securebiometricinterface/devicedetails/map/remove": {
+      "put": {
+        "tags": [
+          "secure-biometric-interface-controller"
+        ],
+        "summary": "Service to remove mapped device details with sbi",
+        "description": "Service to remove mapped device details with sbi",
+        "operationId": "removeMappedDeviceDetails",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDeviceDetailSBIMappingDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/roles": {
+      "get": {
+        "tags": [
+          "role-controller"
+        ],
+        "operationId": "getRequiredRoles",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperRoleExtnDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners": {
+      "get": {
+        "tags": [
+          "partner-management-controller"
+        ],
+        "summary": "Service to get partner details",
+        "description": "Service to get partner details",
+        "operationId": "getPartners",
+        "parameters": [
+          {
+            "name": "partnerType",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperRetrievePartnerDetailsResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "partner self registration",
+        "description": "Saves partner details",
+        "operationId": "partnerSelfRegistration",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperPartnerRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPartnerResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/{partnerId}": {
+      "get": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to get deatils of partner",
+        "description": "Service to get deatils of partner",
+        "operationId": "retrievePartnerDetails",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperRetrievePartnerDetailsResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to update deatils of partner",
+        "description": "Service to update deatils of partner",
+        "operationId": "updatePartnerDetails",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperPartnerUpdateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPartnerResponse"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "partner-management-controller"
+        ],
+        "summary": "Service to activate/de-activate partner",
+        "description": "Service to activate/de-activate partner",
+        "operationId": "activateDeactivatePartner",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperStatusRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPartnersPolicyMappingResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/{partnerId}/policygroup/{policygroupName}": {
+      "put": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "operationId": "updatePolicyGroup",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "policygroupName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/{partnerId}/policy/{policyId}/apiKey/status": {
+      "patch": {
+        "tags": [
+          "partner-management-controller"
+        ],
+        "summary": "Service to activate/de-activate partner api key",
+        "description": "Service to activate/de-activate partner api key",
+        "operationId": "activateDeactivatePartnerAPIKey",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "policyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperAPIkeyStatusUpdateRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/{partnerId}/policy/map": {
+      "post": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "To request for policy mapping",
+        "description": "To request for policy mapping",
+        "operationId": "mapPolicyToPartner",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperPartnerPolicyMappingRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPartnerPolicyMappingResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/{partnerId}/generate/apikey": {
+      "patch": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "To generate apiKeys for approved policies",
+        "description": "To generate apiKeys for approved policies",
+        "operationId": "generateAPIKey",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperAPIKeyGenerateRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperAPIKeyGenerateResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/{partnerId}/credentialtype/{credentialType}/policies": {
+      "get": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to get policy for mapped partner and credential type",
+        "description": "Service to get policy for mapped partner and credential type",
+        "operationId": "getCredentialTypePolicy",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "credentialType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPartnerCredentialTypePolicyDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/{partnerId}/credentialtype/{credentialType}/policies/{policyName}": {
+      "post": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to map partner and policy to a credential type",
+        "description": "Service to map partner and policy to a credential type",
+        "operationId": "mapPolicyToCredentialType",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "policyName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "credentialType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/{partnerId}/contact/add": {
+      "post": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to add additional contact deatils of partner",
+        "description": "Service to add additional contact deatils of partner",
+        "operationId": "addContact",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperAddContactRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/{partnerId}/certificate": {
+      "get": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to get partner certificate",
+        "description": "Service to get partner certificate",
+        "operationId": "getPartnerCertificate",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPartnerCertDownloadResponeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/{partnerId}/bioextractors/{policyId}": {
+      "get": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to get bio extractors",
+        "description": "Service to get bio extractors",
+        "operationId": "getBiometricExtractors",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "policyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperExtractorsDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to add bio extractors",
+        "description": "Service to add bio extractors",
+        "operationId": "addBiometricExtractors",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "policyId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperExtractorsDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/{partnerId}/apikey/{apikey}": {
+      "get": {
+        "tags": [
+          "partner-management-controller"
+        ],
+        "summary": "Service to get policy for given api key",
+        "description": "Service to get policy for given api key",
+        "operationId": "getPolicyMappedToAPIKey",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "apikey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPartnerAPIKeyToPolicyMappingsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/{partnerId}/apikey/{apikey}/policies": {
+      "put": {
+        "tags": [
+          "partner-management-controller"
+        ],
+        "summary": "Service to update policies against to api key",
+        "description": "Service to update policies against to api key",
+        "operationId": "partnerApiKeyToPolicyMappings",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "apikey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperPartnersPolicyMappingRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPartnersPolicyMappingResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/{partnerId}/apikey/request": {
+      "get": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to get api key requests of partner",
+        "description": "Service to get api key requests of partner",
+        "operationId": "getAPIKeyRequestsOfPartner",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperListAPIkeyRequests"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/search": {
+      "post": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to search partner details",
+        "description": "Service to search partner details",
+        "operationId": "searchPartner",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperPartnerSearchDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPageResponseDtoPartnerSearchResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/policy/{mappingkey}": {
+      "put": {
+        "tags": [
+          "partner-management-controller"
+        ],
+        "summary": "Service to approve/reject partner policy mapping",
+        "description": "Service to approve/reject partner policy mapping",
+        "operationId": "approveRejectPolicyMappings",
+        "parameters": [
+          {
+            "name": "mappingkey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperStatusRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/partnertype/search": {
+      "post": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to search partner types",
+        "description": "Service to search partner types",
+        "operationId": "searchPartnerType",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperSearchDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPageResponseDtoPartnerType"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/filtervalues": {
+      "post": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to filter partner details",
+        "description": "Service to filter partner details",
+        "operationId": "filterValues_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperFilterValueDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperFilterResponseCodeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/email/verify": {
+      "put": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "To verify partner's email",
+        "description": "Service to verify partner email",
+        "operationId": "isEmailExists",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperEmailVerificationRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperEmailVerificationResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/certificate/upload": {
+      "post": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to upload partner certificate",
+        "description": "Service to upload partner certificate",
+        "operationId": "uploadPartnerCertificate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperPartnerCertificateUploadRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPartnerCertificateResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/certificate/ca/upload": {
+      "post": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to upload ca certificate",
+        "description": "Service to upload ca certificate",
+        "operationId": "uploadCACertificate",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperCACertificateRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperCACertificateResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/apikey": {
+      "get": {
+        "tags": [
+          "partner-management-controller"
+        ],
+        "summary": "Service to get api key requests",
+        "description": "Service to get api key requests",
+        "operationId": "getAPIKeyRequests",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPartnerAPIKeyRequestsResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/apikey/{apikey}": {
+      "get": {
+        "tags": [
+          "partner-management-controller"
+        ],
+        "summary": "Service to get api key request",
+        "description": "Service to get api key request",
+        "operationId": "getAPIKeyRequest",
+        "parameters": [
+          {
+            "name": "apikey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperApikeyRequests"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/apikey/search": {
+      "post": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to search api key",
+        "description": "Service to search api key",
+        "operationId": "searchApikey",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperSearchDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPageResponseDtoPartnerPolicySearchResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/apikey/request/search": {
+      "post": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to search api key requests",
+        "description": "Service to search api key requests",
+        "operationId": "searchApikeyRequest",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperSearchDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPageResponseDtoPolicyRequestSearchResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/partners/apikey/request/filtervalues": {
+      "post": {
+        "tags": [
+          "partner-service-controller"
+        ],
+        "summary": "Service to filter api key requests",
+        "description": "Service to filter api key requests",
+        "operationId": "apikeyRequetsFilterValues",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperFilterValueDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperFilterResponseCodeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/misps": {
+      "get": {
+        "tags": [
+          "misp-license-controller"
+        ],
+        "summary": "Service to get license details of misp",
+        "description": "Service to get license details of misp",
+        "operationId": "getLicenseDetails",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperListMISPLicenseEntity"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "misp-license-controller"
+        ],
+        "summary": "Service to update license details of misp",
+        "description": "Service to update license details of misp",
+        "operationId": "updateLicenseDetails",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperMISPLicenseUpdateRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperMISPLicenseResponseDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "misp-license-controller"
+        ],
+        "summary": "Service to generate license for misp",
+        "description": "Service to generate license for misp",
+        "operationId": "generateLicense",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperMISPLicenseRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperMISPLicenseResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/misps/{mispId}/licenseKey": {
+      "get": {
+        "tags": [
+          "misp-license-controller"
+        ],
+        "summary": "Service to get/regenarate license details of misp",
+        "description": "Service to get/regenarate license details of misp",
+        "operationId": "regenarteLicenseKey",
+        "parameters": [
+          {
+            "name": "mispId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperMISPLicenseResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/misps/search": {
+      "post": {
+        "tags": [
+          "misp-license-controller"
+        ],
+        "summary": "Service to search misp details",
+        "description": "Service to search misp details",
+        "operationId": "search",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperSearchDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPageResponseDtoMISPLicenseEntity"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/misps/filtervalues": {
+      "post": {
+        "tags": [
+          "misp-license-controller"
+        ],
+        "summary": "Service to filter misp details",
+        "description": "Service to filter misp details",
+        "operationId": "filterValues_2",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperFilterValueDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperFilterResponseCodeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/logout/user": {
+      "delete": {
+        "tags": [
+          "login-controller"
+        ],
+        "operationId": "logoutUser",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperAuthResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/login/{redirectURI}": {
+      "get": {
+        "tags": [
+          "login-controller"
+        ],
+        "operationId": "login",
+        "parameters": [
+          {
+            "name": "state",
+            "in": "cookie",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "redirectURI",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/login-redirect/{redirectURI}": {
+      "get": {
+        "tags": [
+          "login-controller"
+        ],
+        "operationId": "loginRedirect",
+        "parameters": [
+          {
+            "name": "redirectURI",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "state",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "session_state",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ftpchipdetail": {
+      "put": {
+        "tags": [
+          "ftp-chip-detail-controller"
+        ],
+        "summary": "Service to update ftp chip detail",
+        "description": "Updates ftp chip detail and returns success message",
+        "operationId": "updateDeviceDetail",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperFtpChipDetailUpdateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperIdDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ftp-chip-detail-controller"
+        ],
+        "summary": "Service to save ftpChipDetail",
+        "description": "Saves ftpChipDetail and return ftpChipDetail id",
+        "operationId": "createDeviceDetail",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperFtpChipDetailDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperIdDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "ftp-chip-detail-controller"
+        ],
+        "summary": "Service to approve/reject ftp chip detail",
+        "description": "Approve ftp chip detail and returns success message",
+        "operationId": "approveDeviceDetails",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperFtpChipDetailStatusDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ftpchipdetail/uploadcertificate": {
+      "post": {
+        "tags": [
+          "ftp-chip-detail-controller"
+        ],
+        "summary": "Service to upload certificate of ftp chip",
+        "description": "uploads the ftp chip certificate and returns success message",
+        "operationId": "uploadPartnerCertificate_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperFtpChipCertificateRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperFtpCertificateResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ftpchipdetail/search": {
+      "post": {
+        "tags": [
+          "ftp-chip-detail-controller"
+        ],
+        "summary": "Service to serach ftp chip details",
+        "description": "Service to serach ftp chip details",
+        "operationId": "searchFtpChipDetails",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDeviceSearchDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPageResponseDtoFTPSearchResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ftpchipdetail/getPartnerCertificate/{ftpChipDetailId}": {
+      "get": {
+        "tags": [
+          "ftp-chip-detail-controller"
+        ],
+        "summary": "Service to get certificate of ftp chip",
+        "description": "Returns the ftp chip certificate",
+        "operationId": "getPartnerCertificate_1",
+        "parameters": [
+          {
+            "name": "ftpChipDetailId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperFtpCertDownloadResponeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devicedetail": {
+      "put": {
+        "tags": [
+          "device-detail-controller"
+        ],
+        "summary": "Service to update DeviceDetails",
+        "description": "Updates DeviceDetails",
+        "operationId": "updateDeviceDetail_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDeviceDetailUpdateDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperIdDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "device-detail-controller"
+        ],
+        "summary": "Service to save DeviceDetail",
+        "description": "Saves DeviceDetail and return DeviceDetail id",
+        "operationId": "createDeviceDetail_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDeviceDetailDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperIdDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "patch": {
+        "tags": [
+          "device-detail-controller"
+        ],
+        "summary": "Service to approve/reject DeviceDetail",
+        "description": "Approve DeviceDetail and returns success message",
+        "operationId": "approveDeviceDetails_1",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperUpdateDeviceDetailStatusDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devicedetail/search": {
+      "post": {
+        "tags": [
+          "device-detail-controller"
+        ],
+        "summary": "Service to search DeviceDetails",
+        "description": "ervice to search DeviceDetails",
+        "operationId": "searchDeviceDetails",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDeviceSearchDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPageResponseDtoDeviceDetailSearchResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devicedetail/filtervalues": {
+      "post": {
+        "tags": [
+          "device-detail-controller"
+        ],
+        "summary": "Service to filter DeviceDetails",
+        "description": "Service to filter DeviceDetails",
+        "operationId": "filterValues_3",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDeviceFilterValueDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperFilterResponseCodeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devicedetail/deviceType/search": {
+      "post": {
+        "tags": [
+          "device-detail-controller"
+        ],
+        "summary": "Service to search DeviceTypes",
+        "description": "service to search DeviceTypes",
+        "operationId": "searchDeviceType",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDeviceSearchDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPageResponseDtoRegistrationSubTypeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devicedetail/deviceType/filtervalues": {
+      "post": {
+        "tags": [
+          "device-detail-controller"
+        ],
+        "summary": "Service to filter DeviceTypes",
+        "description": "Service to filter DeviceTypes",
+        "operationId": "filterDeviceType",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDeviceFilterValueDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperFilterResponseCodeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/devicedetail/deviceSubType/filtervalues": {
+      "post": {
+        "tags": [
+          "device-detail-controller"
+        ],
+        "summary": "Service to filter DeviceSubTypes",
+        "description": "Service to filter DeviceSubTypes",
+        "operationId": "filterDeviceSubType",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDeviceFilterValueDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperFilterResponseCodeDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/authorize/admin/validateToken": {
+      "get": {
+        "tags": [
+          "login-controller"
+        ],
+        "operationId": "validateAdminToken",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperMosipUserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RequestWrapperClientDetailCreateRequest": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/ClientDetailCreateRequest"
+          }
+        }
+      },
+      "ClientDetailCreateRequest": {
+        "required": [
+          "name",
+          "policyId",
+          "publicKey",
+          "authPartnerId",
+          "logoUri",
+          "redirectUris",
+          "grantTypes",
+          "clientAuthMethods"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string"
+          },
+          "policyId": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "publicKey": {
+            "type" : "object",
+            "additionalProperties" : {
+                "type" : "object"
+            }
+          },
+          "authPartnerId": {
+            "maxLength": 100,
+            "minLength": 1,
+            "type": "string"
+          },
+          "logoUri": {
+            "maxLength": 2048,
+            "type": "string"
+          },
+          "redirectUris": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 5
+          },
+          "grantTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          },
+          "clientAuthMethods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          }
+        }
+      },
+      "RequestWrapperClientDetailUpdateRequest": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/ClientDetailUpdateRequest"
+          }
+        }
+      },
+      "ClientDetailUpdateRequest": {
+        "required": [
+          "logoUri",
+          "redirectUris",
+          "status",
+          "grantTypes",
+          "clientName",
+          "clientAuthMethods"
+        ],
+        "type": "object",
+        "properties": {
+          "logoUri": {
+            "maxLength": 2048,
+            "type": "string"
+          },
+          "redirectUris": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 5
+          },
+          "status": {
+            "type": "string",
+            "pattern": "^(ACTIVE)|(INACTIVE)$"
+          },
+          "grantTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          },
+          "clientName": {
+            "maxLength": 256,
+            "minLength": 1,
+            "type": "string"
+          },
+          "clientAuthMethods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "maxItems": 3
+          }
+        }
+      },
+      "ResponseWrapperClientDetailResponse": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/ClientDetailResponse"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ClientDetailResponse": {
+        "type": "object",
+        "properties": {
+          "clientId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperClientDetail": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/ClientDetail"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ClientDetail": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "policyId": {
+            "type": "string"
+          },
+          "policyName": {
+            "type": "string"
+          },
+          "relyingPartyId": {
+            "type": "string"
+          },
+          "logoUri": {
+            "type": "string"
+          },
+          "redirectUris": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "publicKey": {
+            "type": "string"
+          },
+          "claims": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "acrValues": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          },
+          "grantTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "clientAuthMethods": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "RequestWrapperSecureBiometricInterfaceUpdateDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/SecureBiometricInterfaceUpdateDto"
+          }
+        }
+      },
+      "SecureBiometricInterfaceUpdateDto": {
+        "required": [
+          "id",
+          "isActive",
+          "swBinaryHash",
+          "swVersion"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "swBinaryHash": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "swVersion": {
+            "maxLength": 64,
+            "minLength": 1,
+            "type": "string"
+          },
+          "swCreateDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "swExpiryDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isActive": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "IdDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperIdDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/IdDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "RequestWrapperSecureBiometricInterfaceCreateDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/SecureBiometricInterfaceCreateDto"
+          }
+        }
+      },
+      "SecureBiometricInterfaceCreateDto": {
+        "required": [
+          "providerId",
+          "swBinaryHash",
+          "swVersion"
+        ],
+        "type": "object",
+        "properties": {
+          "swBinaryHash": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "swVersion": {
+            "maxLength": 64,
+            "minLength": 1,
+            "type": "string"
+          },
+          "swCreateDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "swExpiryDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "providerId": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperSecureBiometricInterfaceStatusUpdateDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/SecureBiometricInterfaceStatusUpdateDto"
+          }
+        }
+      },
+      "SecureBiometricInterfaceStatusUpdateDto": {
+        "required": [
+          "approvalStatus",
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "approvalStatus": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperString": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "DeviceSearchDto": {
+        "type": "object",
+        "properties": {
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SearchFilter"
+            }
+          },
+          "sort": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SearchSort"
+            }
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "purpose": {
+            "type": "string"
+          }
+        }
+      },
+      "Pagination": {
+        "type": "object",
+        "properties": {
+          "pageStart": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pageFetch": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "RequestWrapperDeviceSearchDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/DeviceSearchDto"
+          }
+        }
+      },
+      "SearchFilter": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "string"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "fromValue": {
+            "type": "string"
+          },
+          "toValue": {
+            "type": "string"
+          },
+          "columnName": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "SearchSort": {
+        "type": "object",
+        "properties": {
+          "sortField": {
+            "type": "string"
+          },
+          "sortType": {
+            "type": "string"
+          }
+        }
+      },
+      "PageResponseDtoSbiSearchResponseDto": {
+        "type": "object",
+        "properties": {
+          "fromRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "toRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SbiSearchResponseDto"
+            }
+          }
+        }
+      },
+      "ResponseWrapperPageResponseDtoSbiSearchResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PageResponseDtoSbiSearchResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "SbiSearchResponseDto": {
+        "required": [
+          "deviceDetailId",
+          "swBinaryHash",
+          "swVersion"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "swBinaryHash": {
+            "maxItems": 36,
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "byte"
+            }
+          },
+          "swVersion": {
+            "maxLength": 64,
+            "minLength": 1,
+            "type": "string"
+          },
+          "deviceDetailId": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "swCreateDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "swExpiryDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "approvalStatus": {
+            "type": "string"
+          },
+          "providerId": {
+            "type": "string"
+          },
+          "partnerOrganizationName": {
+            "type": "string"
+          },
+          "crBy": {
+            "type": "string"
+          },
+          "crDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "delDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updBy": {
+            "type": "string"
+          },
+          "updDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "deleted": {
+            "type": "boolean"
+          }
+        }
+      },
+      "FilterDto": {
+        "required": [
+          "columnName",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "columnName": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "FilterValueDto": {
+        "required": [
+          "filters"
+        ],
+        "type": "object",
+        "properties": {
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FilterDto"
+            }
+          },
+          "optionalFilters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SearchFilter"
+            }
+          }
+        }
+      },
+      "RequestWrapperFilterValueDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/FilterValueDto"
+          }
+        }
+      },
+      "ColumnCodeValue": {
+        "type": "object",
+        "properties": {
+          "fieldID": {
+            "type": "string"
+          },
+          "fieldValue": {
+            "type": "string"
+          },
+          "fieldCode": {
+            "type": "string"
+          }
+        }
+      },
+      "FilterResponseCodeDto": {
+        "type": "object",
+        "properties": {
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ColumnCodeValue"
+            }
+          }
+        }
+      },
+      "ResponseWrapperFilterResponseCodeDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/FilterResponseCodeDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "DeviceDetailSBIMappingDto": {
+        "required": [
+          "deviceDetailId",
+          "sbiId"
+        ],
+        "type": "object",
+        "properties": {
+          "deviceDetailId": {
+            "type": "string"
+          },
+          "sbiId": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperDeviceDetailSBIMappingDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/DeviceDetailSBIMappingDto"
+          }
+        }
+      },
+      "MappedDeviceDetailsReponse": {
+        "type": "object",
+        "properties": {
+          "deviceDetailId": {
+            "type": "string"
+          },
+          "sbiId": {
+            "type": "string"
+          },
+          "providerId": {
+            "type": "string"
+          },
+          "providerName": {
+            "type": "string"
+          },
+          "make": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "deviceTypeCode": {
+            "type": "string"
+          },
+          "deviceSubTypeCode": {
+            "type": "string"
+          },
+          "swBinaryHash": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "byte"
+            }
+          },
+          "swVersion": {
+            "type": "string"
+          },
+          "crBy": {
+            "type": "string"
+          },
+          "crDtimes": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "PageResponseDtoMappedDeviceDetailsReponse": {
+        "type": "object",
+        "properties": {
+          "fromRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "toRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MappedDeviceDetailsReponse"
+            }
+          }
+        }
+      },
+      "ResponseWrapperPageResponseDtoMappedDeviceDetailsReponse": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PageResponseDtoMappedDeviceDetailsReponse"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ResponseWrapperRoleExtnDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/RoleExtnDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "RoleExtnDto": {
+        "type": "object",
+        "properties": {
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "PartnerRequest": {
+        "required": [
+          "address",
+          "contactNumber",
+          "emailId",
+          "organizationName",
+          "partnerId",
+          "partnerType"
+        ],
+        "type": "object",
+        "properties": {
+          "partnerId": {
+            "type": "string"
+          },
+          "policyGroup": {
+            "type": "string"
+          },
+          "organizationName": {
+            "maxLength": 128,
+            "minLength": 1,
+            "type": "string"
+          },
+          "address": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "contactNumber": {
+            "maxLength": 16,
+            "minLength": 1,
+            "type": "string"
+          },
+          "emailId": {
+            "maxLength": 254,
+            "minLength": 1,
+            "type": "string"
+          },
+          "partnerType": {
+            "type": "string"
+          },
+          "langCode": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperPartnerRequest": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/PartnerRequest"
+          }
+        }
+      },
+      "PartnerResponse": {
+        "type": "object",
+        "properties": {
+          "partnerId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperPartnerResponse": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PartnerResponse"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ResponseWrapperRetrievePartnerDetailsResponse": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/RetrievePartnerDetailsResponse"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "RetrievePartnerDetailsResponse": {
+        "type": "object",
+        "properties": {
+          "partners": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RetrievePartnersDetails"
+            }
+          }
+        }
+      },
+      "RetrievePartnersDetails": {
+        "type": "object",
+        "properties": {
+          "partnerID": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "organizationName": {
+            "type": "string"
+          },
+          "contactNumber": {
+            "type": "string"
+          },
+          "emailId": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "partnerType": {
+            "type": "string"
+          }
+        }
+      },
+      "PartnerUpdateRequest": {
+        "required": [
+          "address",
+          "contactNumber"
+        ],
+        "type": "object",
+        "properties": {
+          "address": {
+            "maxLength": 2000,
+            "minLength": 1,
+            "type": "string"
+          },
+          "contactNumber": {
+            "maxLength": 16,
+            "minLength": 1,
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperPartnerUpdateRequest": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/PartnerUpdateRequest"
+          }
+        }
+      },
+      "RequestWrapperStatusRequestDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/StatusRequestDto"
+          }
+        }
+      },
+      "StatusRequestDto": {
+        "required": [
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          }
+        }
+      },
+      "PartnersPolicyMappingResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperPartnersPolicyMappingResponse": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PartnersPolicyMappingResponse"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "APIkeyStatusUpdateRequestDto": {
+        "required": [
+          "label",
+          "status"
+        ],
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperAPIkeyStatusUpdateRequestDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/APIkeyStatusUpdateRequestDto"
+          }
+        }
+      },
+      "PartnerPolicyMappingRequest": {
+        "required": [
+          "policyName",
+          "useCaseDescription"
+        ],
+        "type": "object",
+        "properties": {
+          "policyName": {
+            "type": "string"
+          },
+          "useCaseDescription": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperPartnerPolicyMappingRequest": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/PartnerPolicyMappingRequest"
+          }
+        }
+      },
+      "PartnerPolicyMappingResponseDto": {
+        "type": "object",
+        "properties": {
+          "mappingkey": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperPartnerPolicyMappingResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PartnerPolicyMappingResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "APIKeyGenerateRequestDto": {
+        "required": [
+          "label",
+          "policyName"
+        ],
+        "type": "object",
+        "properties": {
+          "policyName": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperAPIKeyGenerateRequestDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/APIKeyGenerateRequestDto"
+          }
+        }
+      },
+      "APIKeyGenerateResponseDto": {
+        "type": "object",
+        "properties": {
+          "apiKey": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "policyId": {
+            "type": "string"
+          },
+          "partnerId": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperAPIKeyGenerateResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/APIKeyGenerateResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "JSONObject": {
+        "type": "object",
+        "properties": {
+          "empty": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": {
+          "type": "object"
+        }
+      },
+      "PartnerCredentialTypePolicyDto": {
+        "type": "object",
+        "properties": {
+          "partnerId": {
+            "type": "string"
+          },
+          "credentialType": {
+            "type": "string"
+          },
+          "policyId": {
+            "type": "string"
+          },
+          "policyName": {
+            "type": "string"
+          },
+          "policyDesc": {
+            "type": "string"
+          },
+          "policyType": {
+            "type": "string"
+          },
+          "publishDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "validTill": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "status": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "schema": {
+            "type": "string"
+          },
+          "is_Active": {
+            "type": "boolean"
+          },
+          "cr_by": {
+            "type": "string"
+          },
+          "cr_dtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "up_by": {
+            "type": "string"
+          },
+          "upd_dtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "policies": {
+            "type": "object",
+            "properties": {
+              "empty": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": {
+              "type": "object"
+            }
+          }
+        }
+      },
+      "ResponseWrapperPartnerCredentialTypePolicyDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PartnerCredentialTypePolicyDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "AddContactRequestDto": {
+        "required": [
+          "address",
+          "contactNumber",
+          "emailId"
+        ],
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string"
+          },
+          "contactNumber": {
+            "type": "string"
+          },
+          "emailId": {
+            "type": "string"
+          },
+          "is_Active": {
+            "type": "boolean"
+          }
+        }
+      },
+      "RequestWrapperAddContactRequestDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/AddContactRequestDto"
+          }
+        }
+      },
+      "PartnerCertDownloadResponeDto": {
+        "type": "object",
+        "properties": {
+          "certificateData": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ResponseWrapperPartnerCertDownloadResponeDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PartnerCertDownloadResponeDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ExtractorDto": {
+        "type": "object",
+        "properties": {
+          "attributeName": {
+            "type": "string"
+          },
+          "biometric": {
+            "type": "string"
+          },
+          "extractor": {
+            "$ref": "#/components/schemas/ExtractorProviderDto"
+          }
+        }
+      },
+      "ExtractorProviderDto": {
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      },
+      "ExtractorsDto": {
+        "type": "object",
+        "properties": {
+          "extractors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ExtractorDto"
+            }
+          }
+        }
+      },
+      "RequestWrapperExtractorsDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/ExtractorsDto"
+          }
+        }
+      },
+      "ResponseWrapperExtractorsDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/ExtractorsDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "PartnerAPIKeyToPolicyMappingsResponse": {
+        "type": "object",
+        "properties": {
+          "partnerID": {
+            "type": "string"
+          },
+          "policyId": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperPartnerAPIKeyToPolicyMappingsResponse": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PartnerAPIKeyToPolicyMappingsResponse"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "PartnersPolicyMappingRequest": {
+        "required": [
+          "newPolicyID",
+          "oldPolicyID"
+        ],
+        "type": "object",
+        "properties": {
+          "oldPolicyID": {
+            "type": "string"
+          },
+          "newPolicyID": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperPartnersPolicyMappingRequest": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/PartnersPolicyMappingRequest"
+          }
+        }
+      },
+      "APIkeyRequests": {
+        "type": "object",
+        "properties": {
+          "apiKeyReqID": {
+            "type": "string"
+          },
+          "apiKeyRequestStatus": {
+            "type": "string"
+          },
+          "partnerApiKey": {
+            "type": "string"
+          },
+          "apikeyStatus": {
+            "type": "boolean"
+          },
+          "validityTill": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ResponseWrapperListAPIkeyRequests": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/APIkeyRequests"
+            }
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "PartnerSearchDto": {
+        "required": [
+          "partnerType"
+        ],
+        "type": "object",
+        "properties": {
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SearchFilter"
+            }
+          },
+          "sort": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SearchSort"
+            }
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "partnerType": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperPartnerSearchDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/PartnerSearchDto"
+          }
+        }
+      },
+      "PageResponseDtoPartnerSearchResponseDto": {
+        "type": "object",
+        "properties": {
+          "fromRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "toRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PartnerSearchResponseDto"
+            }
+          }
+        }
+      },
+      "PartnerSearchResponseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "address": {
+            "type": "string"
+          },
+          "contactNo": {
+            "type": "string"
+          },
+          "crBy": {
+            "type": "string"
+          },
+          "crDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "delDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "emailId": {
+            "type": "string"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "policyGroupId": {
+            "type": "string"
+          },
+          "certificateAlias": {
+            "type": "string"
+          },
+          "partnerTypeCode": {
+            "type": "string"
+          },
+          "approvalStatus": {
+            "type": "string"
+          },
+          "updBy": {
+            "type": "string"
+          },
+          "updDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "userId": {
+            "type": "string"
+          },
+          "langCode": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperPageResponseDtoPartnerSearchResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PageResponseDtoPartnerSearchResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "RequestWrapperSearchDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/SearchDto"
+          }
+        }
+      },
+      "SearchDto": {
+        "type": "object",
+        "properties": {
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SearchFilter"
+            }
+          },
+          "sort": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SearchSort"
+            }
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        }
+      },
+      "PageResponseDtoPartnerType": {
+        "type": "object",
+        "properties": {
+          "fromRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "toRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PartnerType"
+            }
+          }
+        }
+      },
+      "PartnerType": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "crBy": {
+            "type": "string"
+          },
+          "crDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "delDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "partnerDescription": {
+            "type": "string"
+          },
+          "updBy": {
+            "type": "string"
+          },
+          "updDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isPolicyRequired": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ResponseWrapperPageResponseDtoPartnerType": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PageResponseDtoPartnerType"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "EmailVerificationRequestDto": {
+        "type": "object",
+        "properties": {
+          "emailId": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperEmailVerificationRequestDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/EmailVerificationRequestDto"
+          }
+        }
+      },
+      "EmailVerificationResponseDto": {
+        "type": "object",
+        "properties": {
+          "emailExists": {
+            "type": "boolean"
+          },
+          "policyRequiredPartnerTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ResponseWrapperEmailVerificationResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/EmailVerificationResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "PartnerCertificateUploadRequestDto": {
+        "required": [
+          "certificateData",
+          "partnerDomain",
+          "partnerId"
+        ],
+        "type": "object",
+        "properties": {
+          "partnerId": {
+            "type": "string"
+          },
+          "certificateData": {
+            "type": "string"
+          },
+          "partnerDomain": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperPartnerCertificateUploadRequestDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/PartnerCertificateUploadRequestDto"
+          }
+        }
+      },
+      "PartnerCertificateResponseDto": {
+        "type": "object",
+        "properties": {
+          "signedCertificateData": {
+            "type": "string"
+          },
+          "certificateId": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ResponseWrapperPartnerCertificateResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PartnerCertificateResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "CACertificateRequestDto": {
+        "required": [
+          "certificateData",
+          "partnerDomain"
+        ],
+        "type": "object",
+        "properties": {
+          "certificateData": {
+            "type": "string"
+          },
+          "partnerDomain": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperCACertificateRequestDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/CACertificateRequestDto"
+          }
+        }
+      },
+      "CACertificateResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ResponseWrapperCACertificateResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/CACertificateResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ApikeyRequests": {
+        "type": "object",
+        "properties": {
+          "partnerID": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "organizationName": {
+            "type": "string"
+          },
+          "policyId": {
+            "type": "string"
+          },
+          "policyDesc": {
+            "type": "string"
+          },
+          "apiKeyReqNo": {
+            "type": "string"
+          }
+        }
+      },
+      "PartnerAPIKeyRequestsResponse": {
+        "type": "object",
+        "properties": {
+          "apikeyRequests": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApikeyRequests"
+            }
+          }
+        }
+      },
+      "ResponseWrapperPartnerAPIKeyRequestsResponse": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PartnerAPIKeyRequestsResponse"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "ResponseWrapperApikeyRequests": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/ApikeyRequests"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "PageResponseDtoPartnerPolicySearchResponseDto": {
+        "type": "object",
+        "properties": {
+          "fromRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "toRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PartnerPolicySearchResponseDto"
+            }
+          }
+        }
+      },
+      "PartnerPolicySearchResponseDto": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "crBy": {
+            "type": "string"
+          },
+          "crDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "delDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "policyId": {
+            "type": "string"
+          },
+          "policyName": {
+            "type": "string"
+          },
+          "updBy": {
+            "type": "string"
+          },
+          "updDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "validFromDatetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "validToDatetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "partnerId": {
+            "type": "string"
+          },
+          "partnerName": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperPageResponseDtoPartnerPolicySearchResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PageResponseDtoPartnerPolicySearchResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "PageResponseDtoPolicyRequestSearchResponseDto": {
+        "type": "object",
+        "properties": {
+          "fromRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "toRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PolicyRequestSearchResponseDto"
+            }
+          }
+        }
+      },
+      "PolicyRequestSearchResponseDto": {
+        "type": "object",
+        "properties": {
+          "apikeyRequestId": {
+            "type": "string"
+          },
+          "crBy": {
+            "type": "string"
+          },
+          "crDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "delDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "policyId": {
+            "type": "string"
+          },
+          "requestDatetimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "requestDetail": {
+            "type": "string"
+          },
+          "statusCode": {
+            "type": "string"
+          },
+          "updBy": {
+            "type": "string"
+          },
+          "updDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "partnerId": {
+            "type": "string"
+          },
+          "partnerName": {
+            "type": "string"
+          },
+          "policyName": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperPageResponseDtoPolicyRequestSearchResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PageResponseDtoPolicyRequestSearchResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "MISPLicenseUpdateRequestDto": {
+        "type": "object",
+        "properties": {
+          "providerId": {
+            "type": "string"
+          },
+          "licenseKeyStatus": {
+            "type": "string"
+          },
+          "licenseKey": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperMISPLicenseUpdateRequestDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/MISPLicenseUpdateRequestDto"
+          }
+        }
+      },
+      "MISPLicenseResponseDto": {
+        "type": "object",
+        "properties": {
+          "providerId": {
+            "type": "string"
+          },
+          "licenseKey": {
+            "type": "string"
+          },
+          "licenseKeyStatus": {
+            "type": "string"
+          },
+          "licenseKeyExpiry": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ResponseWrapperMISPLicenseResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/MISPLicenseResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "MISPLicenseRequestDto": {
+        "required": [
+          "providerId"
+        ],
+        "type": "object",
+        "properties": {
+          "providerId": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperMISPLicenseRequestDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/MISPLicenseRequestDto"
+          }
+        }
+      },
+      "MISPLicenseEntity": {
+        "required": [
+          "licenseKey"
+        ],
+        "type": "object",
+        "properties": {
+          "mispId": {
+            "type": "string"
+          },
+          "licenseKey": {
+            "type": "string"
+          },
+          "validFromDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "validToDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "createdBy": {
+            "type": "string"
+          },
+          "createdDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedBy": {
+            "type": "string"
+          },
+          "updatedDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "deletedDateTime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ResponseWrapperListMISPLicenseEntity": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MISPLicenseEntity"
+            }
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "PageResponseDtoMISPLicenseEntity": {
+        "type": "object",
+        "properties": {
+          "fromRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "toRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MISPLicenseEntity"
+            }
+          }
+        }
+      },
+      "ResponseWrapperPageResponseDtoMISPLicenseEntity": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PageResponseDtoMISPLicenseEntity"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "AuthResponseDto": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperAuthResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/AuthResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceError"
+            }
+          }
+        }
+      },
+      "ServiceError": {
+        "type": "object",
+        "properties": {
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "FtpChipDetailUpdateDto": {
+        "required": [
+          "ftpChipDetailId",
+          "make",
+          "model"
+        ],
+        "type": "object",
+        "properties": {
+          "ftpChipDetailId": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "make": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "model": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperFtpChipDetailUpdateDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/FtpChipDetailUpdateDto"
+          }
+        }
+      },
+      "FtpChipDetailDto": {
+        "required": [
+          "ftpProviderId",
+          "make",
+          "model"
+        ],
+        "type": "object",
+        "properties": {
+          "ftpProviderId": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "make": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "model": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperFtpChipDetailDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/FtpChipDetailDto"
+          }
+        }
+      },
+      "FtpChipDetailStatusDto": {
+        "required": [
+          "approvalStatus",
+          "ftpChipDetailId"
+        ],
+        "type": "object",
+        "properties": {
+          "ftpChipDetailId": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "approvalStatus": {
+            "type": "boolean"
+          }
+        }
+      },
+      "RequestWrapperFtpChipDetailStatusDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/FtpChipDetailStatusDto"
+          }
+        }
+      },
+      "FtpChipCertificateRequestDto": {
+        "required": [
+          "certificateData",
+          "ftpChipDeatilId",
+          "ftpProviderId",
+          "isItForRegistrationDevice",
+          "organizationName",
+          "partnerDomain"
+        ],
+        "type": "object",
+        "properties": {
+          "ftpProviderId": {
+            "type": "string"
+          },
+          "ftpChipDeatilId": {
+            "type": "string"
+          },
+          "isItForRegistrationDevice": {
+            "type": "boolean"
+          },
+          "certificateData": {
+            "type": "string"
+          },
+          "organizationName": {
+            "type": "string"
+          },
+          "partnerDomain": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperFtpChipCertificateRequestDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/FtpChipCertificateRequestDto"
+          }
+        }
+      },
+      "FtpCertificateResponseDto": {
+        "type": "object",
+        "properties": {
+          "signedCertificateData": {
+            "type": "string"
+          },
+          "certificateId": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ResponseWrapperFtpCertificateResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/FtpCertificateResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "FTPSearchResponseDto": {
+        "type": "object",
+        "properties": {
+          "ftpChipDetailId": {
+            "type": "string"
+          },
+          "ftpProviderId": {
+            "type": "string"
+          },
+          "make": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "certificateAlias": {
+            "type": "string"
+          },
+          "partnerOrganizationName": {
+            "type": "string"
+          },
+          "crBy": {
+            "type": "string"
+          },
+          "crDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "delDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updBy": {
+            "type": "string"
+          },
+          "updDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "deleted": {
+            "type": "boolean"
+          },
+          "active": {
+            "type": "boolean"
+          }
+        }
+      },
+      "PageResponseDtoFTPSearchResponseDto": {
+        "type": "object",
+        "properties": {
+          "fromRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "toRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FTPSearchResponseDto"
+            }
+          }
+        }
+      },
+      "ResponseWrapperPageResponseDtoFTPSearchResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PageResponseDtoFTPSearchResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "FtpCertDownloadResponeDto": {
+        "type": "object",
+        "properties": {
+          "certificateData": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ResponseWrapperFtpCertDownloadResponeDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/FtpCertDownloadResponeDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "DeviceDetailUpdateDto": {
+        "required": [
+          "deviceSubTypeCode",
+          "deviceTypeCode",
+          "id",
+          "make",
+          "model"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "deviceTypeCode": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "deviceSubTypeCode": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "make": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "model": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperDeviceDetailUpdateDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/DeviceDetailUpdateDto"
+          }
+        }
+      },
+      "DeviceDetailDto": {
+        "required": [
+          "deviceProviderId",
+          "deviceSubTypeCode",
+          "deviceTypeCode",
+          "make",
+          "model"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "deviceProviderId": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "deviceTypeCode": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "deviceSubTypeCode": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "make": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "model": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          }
+        }
+      },
+      "RequestWrapperDeviceDetailDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/DeviceDetailDto"
+          }
+        }
+      },
+      "RequestWrapperUpdateDeviceDetailStatusDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/UpdateDeviceDetailStatusDto"
+          }
+        }
+      },
+      "UpdateDeviceDetailStatusDto": {
+        "required": [
+          "approvalStatus",
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "approvalStatus": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          }
+        }
+      },
+      "DeviceDetailSearchResponseDto": {
+        "required": [
+          "deviceProviderId",
+          "deviceSubTypeCode",
+          "deviceTypeCode",
+          "make",
+          "model"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "deviceProviderId": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "deviceTypeCode": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "deviceSubTypeCode": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "make": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "model": {
+            "maxLength": 36,
+            "minLength": 1,
+            "type": "string"
+          },
+          "partnerOrganizationName": {
+            "maxLength": 128,
+            "minLength": 0,
+            "type": "string"
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "approvalStatus": {
+            "type": "string"
+          }
+        }
+      },
+      "PageResponseDtoDeviceDetailSearchResponseDto": {
+        "type": "object",
+        "properties": {
+          "fromRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "toRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeviceDetailSearchResponseDto"
+            }
+          }
+        }
+      },
+      "ResponseWrapperPageResponseDtoDeviceDetailSearchResponseDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PageResponseDtoDeviceDetailSearchResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "DeviceFilterValueDto": {
+        "required": [
+          "filters"
+        ],
+        "type": "object",
+        "properties": {
+          "filters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/FilterDto"
+            }
+          },
+          "optionalFilters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SearchFilter"
+            }
+          },
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "REGISTRATION",
+              "AUTH"
+            ]
+          }
+        }
+      },
+      "RequestWrapperDeviceFilterValueDto": {
+        "required": [
+          "request"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "request": {
+            "$ref": "#/components/schemas/DeviceFilterValueDto"
+          }
+        }
+      },
+      "PageResponseDtoRegistrationSubTypeDto": {
+        "type": "object",
+        "properties": {
+          "fromRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "toRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalRecord": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RegistrationSubTypeDto"
+            }
+          }
+        }
+      },
+      "RegistrationSubTypeDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "deviceType": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "desciption": {
+            "type": "string"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "crBy": {
+            "type": "string"
+          },
+          "crDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "delDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updBy": {
+            "type": "string"
+          },
+          "updDtimes": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "active": {
+            "type": "boolean"
+          }
+        }
+      },
+      "ResponseWrapperPageResponseDtoRegistrationSubTypeDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/PageResponseDtoRegistrationSubTypeDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ErrorResponse"
+            }
+          }
+        }
+      },
+      "MosipUserDto": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string"
+          },
+          "mobile": {
+            "type": "string"
+          },
+          "mail": {
+            "type": "string"
+          },
+          "langCode": {
+            "type": "string"
+          },
+          "userPassword": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "role": {
+            "type": "string"
+          },
+          "token": {
+            "type": "string"
+          },
+          "rid": {
+            "type": "string"
+          }
+        }
+      },
+      "ResponseWrapperMosipUserDto": {
+        "required": [
+          "response"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "metadata": {
+            "type": "object"
+          },
+          "response": {
+            "$ref": "#/components/schemas/MosipUserDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ServiceError"
+            }
+          }
+        }
+      }
+    }
+  }
+}

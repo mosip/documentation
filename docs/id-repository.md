@@ -47,7 +47,7 @@ Above is the entity relationship diagram illustrated for Identity service. _NOTE
 
 VID Service provides functionality to create/update Virtual IDs mapped against an UIN. It also provides the facility to update status of VID. VIDs are created based on the VID policy defined in the configuration.
 
-![](\_images/id-repository-vid-service.png)
+![](\_images/VID-service.png)
 
 1. Key Manager encrypts/decrypts data.
 2. Credential request generator issues credentials for new/updated UIN data. 3 All VID related data is stored in `mosip_idmap` DB.
@@ -60,7 +60,7 @@ VID Service provides functionality to create/update Virtual IDs mapped against a
 
 ## Credential service
 
-![](\_images/id-repository-credential-service.png)
+![](\_images/credential-service.png)
 
 1. Key Manager encrypts/decrypts data and also used to sign data.
 2. WebSub subscribes to get notifications related to credential status from IDA.
@@ -91,7 +91,7 @@ New credential types may be defined as per needs of a country.
 
 This service creates request for credential issuance.
 
-![](\_images/id-repository-credential-request-generator-service.png)
+![](\_images/credential-request-generator.png)
 
 1. Key Manager encrypts/decrypts data.
 2. Auth Adapter integrates with KeyCloak for authentication.

@@ -107,11 +107,11 @@ The following stages are omitted:
 
 ### Death reversal
 
-<figure><img src=".gitbook/assets/opencrvs_death-reversal_v1.2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="_images/opencrvs_death-reversal_v1.2.png" alt=""><figcaption></figcaption></figure>
 
 ### Data modification
 
-<figure><img src=".gitbook/assets/opencrvs_data-modification_v1.2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="_images/opencrvs_data-modification_v1.2.png" alt=""><figcaption></figcaption></figure>
 
 ### Specification for MOSIP Mediator (TBD)
 

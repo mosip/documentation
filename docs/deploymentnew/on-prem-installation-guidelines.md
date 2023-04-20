@@ -27,7 +27,7 @@
 
 ### Architecture diagram
 
-![](../\_images/deployment\_architecture.png)
+![](\_images/deployment\_architecture.png)
 
 ### Deployment repos
 
