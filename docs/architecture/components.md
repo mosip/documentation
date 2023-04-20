@@ -1,11 +1,9 @@
 # Components
 
-Below is the description of the two important components of Inji:
+Below is the description of the two most important components of Inji:
 
 1. Offline VC sharing component
 2. Face matching component
-
-These components have been explained in detailed.
 
 ## Offline VC sharing component
 
