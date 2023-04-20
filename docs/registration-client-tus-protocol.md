@@ -30,7 +30,7 @@ Registration Client is built with `tus-java-client`, version: 0.4.3, to overcome
 * The `Tus protocol` is designed to enable resumable uploads of large files over HTTP, which can be useful for web applications that need to handle file uploads in unreliable network conditions or with large files that might take a long time to upload. For more information on TUS, refer [here](https://tus.io/).
 * `Tusd` is a popular implementation of the Tus protocol that can be used as a standalone server. It is a part of the MOSIP deployment.
 
-Each metric json logged into `metrics.log` file is tagged with machine name. Refer the below log line with highlighted machine name.
+Each metric json logged into `metrics.log` file is tagged with machine name. Refer the below log lines with the machine name highlighted.
 
 ```
 {"@timestamp":"2023-03-12T15:00:10.654+05:30","@version":"1","message":"{\"@timestamp\":\"2023-03-12T09:30:10.654Z\",\"name\":\"jvm.threads.states\",\"type\":\"gauge\",\"machine\":\"c1ml54597\",\"state\":\"waiting\",\"value\":8,\"unit\":\"threads\"}","logger_name":"io.mosip.registration.config.LoggingJsonMeterRegistry","thread_name":"logging-metrics-publisher","level":"INFO","level_value":20000}
