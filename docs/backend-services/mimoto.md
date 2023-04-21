@@ -19,24 +19,20 @@ As mentioned in previous documentation, INJI allows users to enter their unique 
 [mimoto.json](../.gitbook/assets/mimoto.json)
 {% endswagger %}
 
-4. After the credential status is "ISSUED", the app will initialte download. Below API will be called to download credential.
-
-{% swagger src="../backend-systems/.gitbook/assets/mimoto.yml" path="/credentialshare/download" method="get" %}
-[mimoto.yml](../backend-systems/.gitbook/assets/mimoto.yml)
-{% endswagger %}
+4. After the credential status is **ISSUED**, the app will initiate download. Below API will be called to download credential.
 
 ## Activating credentials
 
-Credentials has to be activated in order to use it for online login. When user selects "Activate" option, an OTP will be sent to user and crendential will be activated.
+Credentials has to be activated in order to use it for online login. When user selects **Activate** option, an OTP will be sent to user and credential will be activated.
 
 1. To send OTP to user, below API will be called.
 
-{% swagger src="../backend-systems/.gitbook/assets/mimoto.yml" path="/binding-otp" method="post" %}
-[mimoto.yml](../backend-systems/.gitbook/assets/mimoto.yml)
+{% swagger src="../.gitbook/assets/mimoto.json" path="/binding-otp" method="post" %}
+[mimoto.json](../.gitbook/assets/mimoto.json)
 {% endswagger %}
 
 2. After successful OTP validation, a keypair is generated in the phone and public key will be synced with server. The app receives certificate which it stores in the keystore securely. This is called activation process.
 
-{% swagger src="../backend-systems/.gitbook/assets/mimoto.yml" path="/wallet-binding" method="post" %}
-[mimoto.yml](../backend-systems/.gitbook/assets/mimoto.yml)
+{% swagger src="../.gitbook/assets/mimoto.json" path="/wallet-binding" method="post" %}
+[mimoto.json](../.gitbook/assets/mimoto.json)
 {% endswagger %}
