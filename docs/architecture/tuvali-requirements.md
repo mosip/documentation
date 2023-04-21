@@ -58,10 +58,8 @@ Following permissions are required to be included in `info.plist` to access the 
 
 ## Capabilities
 
-* **Wallet**: In this role, Tuvali can discover Verifer devices over BLE and can connect and share data.
-* **Verifier**: In this role, Tuvali can advertise itself to  Wallets and receive data.
-* **Tuvali Android**: The SDK has the capability of acting as a wallet and verifier.
-* **Tuvali iOS**: Currently the SDK has the capability of being a wallet but do not support being Verifier.
+* **Wallet**: In this role, Tuvali can discover Verifer devices over BLE and can connect and share data. This role is supported on Both Android and IOS devices meeting minimum version requirement.
+* **Verifier**: In this role, Tuvali can advertise itself to Wallets and receive data. This role is supported only on Android devices at the moment. IOS doesn't support being a Verifier.
 
 ## Unsupported device combinations
 

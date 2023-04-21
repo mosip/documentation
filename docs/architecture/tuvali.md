@@ -97,7 +97,9 @@ Central also performs disconnect in the following scenarios
 * Peripheral is out of range/disconnected
 * Destroy Connection API
 
-As part of connection closure, both central and peripheral clean the held resources, cryptographic keys, and Bluetooth resources, to ensure that the subsequent transfer happens smoothly.
+As part of connection closure, both central and peripheral clean the held resources, cryptographic keys, and Bluetooth resources, to ensure that the subsequent transfer happens smoothly. 
+
+> Note: All the crypographic keys generated/derived are used only for a single VC transfer session. The library strictly ensures they are not re-used in subsequent VC transfers post connection closure.
 
 ## Error Scenarios:
 
