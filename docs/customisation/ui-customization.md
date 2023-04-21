@@ -65,7 +65,7 @@ Example:-
 
 To change the colour of `TabItemText`:
 
-![Image](\_images/tab-item-text.png)
+<img src="_images/tab-item-text.png" height=300 width=300>
 
 ```
 export const DefaultTheme = {
@@ -78,7 +78,7 @@ export const DefaultTheme = {
 
 To change the colour of the Details Label Text:
 
-![Image](\_images/details-label.png)
+<img src="_images/details-label.png" height=300 width=300>
 
 ```
 export const DefaultTheme = {
@@ -91,7 +91,7 @@ export const DefaultTheme = {
 
 To change the colour of Details Value Text:
 
-![Image](\_images/details-value.png)
+<img src="_images/details-value.png" height=200 width=300>
 
 ```
 export const DefaultTheme = {
@@ -104,7 +104,8 @@ export const DefaultTheme = {
 
 To change the colour of `AddId`button text and background:
 
-![Image](\_images/add-id-button.png)
+
+<img src="_images/add-id-button.png" height=400 width=200>
 
 ```
 export const DefaultTheme = {
@@ -118,7 +119,7 @@ export const DefaultTheme = {
 
 To change the colour of Icons:
 
-![Image](\_images/icons.png)
+<img src="_images/icons.png" height=400 width=200>
 
 ```
 export const DefaultTheme = {
@@ -131,7 +132,7 @@ export const DefaultTheme = {
 
 To change the Background colour of icons:
 
-![Image](\_images/icon-bg.png)
+<img src="_images/icon-bg.png" height=70 width=300>
 
 ```
 export const DefaultTheme = {
@@ -144,7 +145,8 @@ export const DefaultTheme = {
 
 To change the colour of the Loading Transition:
 
-![Image](\_images/loading-transition.png)
+
+<img src="_images/loading-transition.png" height=280 width=300>
 
 ```
 export const DefaultTheme = {
@@ -157,7 +159,7 @@ export const DefaultTheme = {
 
 To change the colour of the Error message:
 
-![Image](\_images/error-message.png)
+<img src="_images/error-message.png" height=370 width=200>
 
 ```
 export const DefaultTheme = {
@@ -170,7 +172,7 @@ export const DefaultTheme = {
 
 To change the colour of noUinText:
 
-![Image](\_images/no-uin-text.png)
+<img src="_images/no-uin-text.png" height=180 width=300>
 
 ```
 export const DefaultTheme = {
@@ -183,7 +185,7 @@ export const DefaultTheme = {
 
 To change the colours of the profile Label and Profile values:
 
-![Image](\_images/profile-values.png)
+<img src="_images/profile-values.png" height=370 width=200>
 
 ```
 export const DefaultTheme = {
@@ -197,7 +199,7 @@ export const DefaultTheme = {
 
 To change the colour of profileVersion:
 
-![Image](\_images/profile-version.png)
+<img src="_images/profile-version.png" height=370 width=200>
 
 ```
 export const DefaultTheme = {

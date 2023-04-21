@@ -2,18 +2,18 @@
 
 ## Permissions
 
-**Android**
+### Android
 
-To use Bluetooth Low Energy (BLE) features, should declare several permissions in the manifest file. (AndroidManifest.xml)
+Following permissions are required to be included in the `AndroidManifest.xml` to access Bluetooth Low Energy on Android.
 
-**Permissions required for Central (Wallet) of target Android 12 or higher**
+**Permissions required for Central (Wallet) when target is Android 12 or higher**
 
 ```
 <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />;
 <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />;
 ```
 
-**Permissions required for Central (Wallet) of target Android 11 or lower**
+**Permissions required for Central (Wallet) when target is Android 11 or lower**
 
 ```
 <uses-permission android:name="android.permission.BLUETOOTH" />;
@@ -22,23 +22,23 @@ To use Bluetooth Low Energy (BLE) features, should declare several permissions i
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />;
 ```
 
-**Permissions required for Peripheral (Verifier) of target Android 12 or higher**
+**Permissions required for Peripheral (Verifier) when target is Android 12 or higher**
 
 ```
 <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />;
 <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />;
 ```
 
-**Permissions required for Peripheral (Verifier) of target Android 11 or lower**
+**Permissions required for Peripheral (Verifier) when target is Android 11 or lower**
 
 ```
 <uses-permission android:name="android.permission.BLUETOOTH" />;
 <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />;
 ```
 
-**iOS**
+### iOS
 
-To access Core Bluetooth APIs on iOS, below are the permissions included in `info.plist`.
+Following permissions are required to be included in `info.plist` to access the Core Bluetooth APIs on iOS.
 
 ```
 <key>NSBluetoothAlwaysUsageDescription</key>
@@ -48,22 +48,18 @@ To access Core Bluetooth APIs on iOS, below are the permissions included in `inf
 <string>Bluetooth is used to allow sharing VCs with another device</string>
 ```
 
-## Requirements
+## Minimum Version Requirements
 
-**BLE version**: Data transfer on Tuvali will work on certain bounds that devices should satisfy the minimum BLE version as 4.2 and above.
+**BLE version**: BLE 4.2 and above.
 
-**Android version**: The library will work with apps that run on devices with Android version 9 (API level 28) and above.
-
-**Android API version**: Minimum 28 - Target 30
+**Android version**: Android version 9 (API level 28) and above.
 
 **iOS version**: The SDK requires iOS minimum deployment target version as **13.0**.
 
 ## Capabilities
 
-* **Wallet**: The device can send data to another device.
-* **Verifier**: A device that can receive data from another device.
-* **Android SDK**: The SDK has the capability of acting as a wallet and verifier.
-* **iOS SDK**: Currently the SDK has the capability of being a wallet but is not able to act as Verifier.
+* **Wallet**: In this role, Tuvali can discover Verifer devices over BLE and can connect and share data. This role is supported on Both Android and IOS devices meeting minimum version requirement.
+* **Verifier**: In this role, Tuvali can advertise itself to Wallets and receive data. This role is supported only on Android devices at the moment. IOS doesn't support being a Verifier.
 
 ## Unsupported device combinations
 
