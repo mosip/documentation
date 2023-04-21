@@ -119,12 +119,13 @@ As part of connection closure, both central and peripheral clean the held resour
 
 Below are the exception message and the disconnect message which appears on the screen during the error.
 
-![Exception Message](../\_images/exception-message.png)
+> <img src="../_images/exception-message.png" height=90 width=160>
 
 > This message is displayed on the device throwing the exception.
 
-![Disconnect Message](../\_images/disconnect-message.png)
 
+
+> <img src="../_images/disconnect-message.png" height=90 width=160>
 > This message is displayed whenever a device gets disconnected.
 
 ## Retry Scenarios:
