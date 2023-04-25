@@ -16,7 +16,7 @@ All the metrics collected are appended to `metrics.log` file. Rolling policy of 
 Below are the challenges faced in exporting the collected metrics from client application to the server for further analysis:
 
 1. Unreliable network conditions on field.
-2. Many files and mostly large files, cannot afford retries on failed attempts.
+2. Metrics files are mostly large files, and cannot afford retries on failed attempts.
 3. Required HTTP based metrics export.
 
 To overcome the above challenges, Registration Client is built with `tus-java-client` (version: 0.4.3) . Tusd server URL and the upload chunk-size are made configurable in the client application.
