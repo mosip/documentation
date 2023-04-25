@@ -1,4 +1,4 @@
-# Registration Client metrics upload using TUS protocol
+# TELEMETRY FROM REGISTRATION CLIENT 
  
 Following are the metrics that are collected in the client application using the micrometer library:
 
