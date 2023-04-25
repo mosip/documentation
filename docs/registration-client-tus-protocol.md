@@ -1,6 +1,6 @@
 # Registration Client metrics upload using TUS protocol
  
-Below metrics are collected in the client application using micrometer library:
+Following are the metrics that are collected in the client application using the micrometer library:
 
 * JVM Memory Metrics
 * JVM Thread Metrics
@@ -13,13 +13,13 @@ Below metrics are collected in the client application using micrometer library:
 
 All the metrics collected are appended to `metrics.log` file. Rolling policy of the `metrics.log` is defined in registration-services `logback.xml`.
 
-Challenges in exporting the collected metrics from client application to server for further analysis:
+Below are the challenges faced in exporting the collected metrics from client application to the server for further analysis:
 
 1. Unreliable network conditions on field.
 2. Many files and mostly large files, cannot afford retries on failed attempts.
 3. Required HTTP based metrics export.
 
-Registration Client is built with `tus-java-client`, version: 0.4.3, to overcome the above challenges faced. Tusd server URL and the upload chunk-size are made configurable in the client application.
+To overcome the above challenges, Registration Client is built with `tus-java-client` (version: 0.4.3) . Tusd server URL and the upload chunk-size are made configurable in the client application.
 
 `mosip.registration.tus.server.url`: This is the server URL config which specifies to which URL the metrics files are to be uploaded.
 
