@@ -45,7 +45,7 @@ Registration is a process that allows a resident to provide demographic informat
 * A child visits the registration centre along with a guardian/parent.
 * The registration officer captures the demographic details along with the face photo.
 
-_Note: For infants/children less than 5 years old, the Registration Client does not capture the biometrics as they are still evolving. However, the country may choose to override the same by modifying the rules accordingly_
+_Note: For infants/children less than 5 years old, the Registration Client does not capture the biometrics as they are still evolving. However, the country may choose to override the same by modifying the rules accordingly._
 
 * Parent/guardian' UIN or RID and the biometrics needed for authentication is captured.
 * Additionally, a **proof of relationship** document is uploaded.
@@ -57,14 +57,14 @@ _Note: For infants/children less than 5 years old, the Registration Client does 
   * By visiting the registration centre: The demographic and biometric information can be updated at the centres.
   * Update only the demographic information using [Resident Services](https://docs.mosip.io/1.2.0/modules/resident-services).
 * Registration receipt containing the Registration Identity(RID), labels and data in the configured language, and QR code (of the RID) provided to the resident at the centre.
-* Updated ID credentials were sent to the resident via the country’ configured printing and postal service.
+* Updated ID credentials were sent to the resident via the country’s configured printing and postal service.
 * Notifications were sent to the resident using the email ID and mobile number provided as a part of demographic data collection.
 
 ## De-activate/re-activate individual’s ID
 
 * De-activate ID means an individual will not be able to authenticate themselves by using the UIN or VID.
 * If a country wants to deactivate an individual’s ID for any specific reason, the system deactivates the individual’s ID after certain validations are performed in the [Registration Processor](registration-processor.md).
-* Likewise, a country can also re-activate an individual’ ID as need be.
+* Likewise, a country can also re-activate an individual’s ID as need be.
 
 ## Finding a lost ID
 
@@ -75,4 +75,4 @@ In the event of loss of the ID, the resident can go to the nearest registration 
 * In case the system finds an error in the demographic data, documents or biometric data provided by an individual, the correction flow is triggered.
 * Before issuing the UIN for the individual, the incorrect or incomplete information provided by the individual is intimated to them.
 * Once the corrected information is received by the system, a correction procedure is triggered.
-* Updated ID credentials are sent to the resident via the country’ configured printing and postal service.
+* Updated ID credentials are sent to the resident via the country’s configured printing and postal service.
