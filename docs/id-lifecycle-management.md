@@ -18,7 +18,7 @@ The various life cycle events are briefly explained below:
 
 ### Pre-registration
 
-[Pre-registration](pre-registration.md) is a resident-facing web-based portal that allows a resident to provide registration data, upload document proofs and book an appointment with a registration centre to complete the rest of the registration process. This data can be accessed by the registration operators who could then complete the registration process such as collecting biometrics, verifying the documents and other formalities thus saving time and effort at the registration centre.
+[Pre-registration](pre-registration.md) is a resident-facing web-based portal that allows a resident to provide registration data, upload document proofs and book an appointment with a registration centre to complete the rest of the registration process. This data can be accessed by the registration officers who could then complete the registration process such as collecting biometrics, verifying the documents and other formalities thus saving time and effort at the registration centre.
 
 A resident can access the pre-registration portal and do the following:
 
