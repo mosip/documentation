@@ -44,7 +44,7 @@ Learn more about the [Token ID](identifiers.md#token).
 
 ## Relying parties and policies
 
-Read more about policies and&#x20;
+Read more about [parties and policies](partner-policies.md).
 
 ## Consent
 
