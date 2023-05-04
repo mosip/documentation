@@ -6,20 +6,29 @@ Mimoto service is used by Inji to request, download and use verifiable credentia
 
 As mentioned in previous documentation, INJI allows users to enter their unique ID(UIN or VID) and download credentials. Multiple Mimoto APIs are being called to complete the process in the backend.
 
-1. After entering the unique ID, the user is asked to enter OTP on the next screen. In the backend below API is called to send the OTP to the user as email or SMS.
-2. After the user enters OTP, Inji calls below Mimoto API to request a new credential.
+* After entering the unique ID, the user is asked to enter OTP on the next screen. In the backend below API is called to send the OTP to the user as email or SMS.
 
-{% swagger src="../.gitbook/assets/mimoto.json" path="/credentialshare/download" method="post" %}
+{% swagger src="../.gitbook/assets/mimoto.json" path="/req/otp" method="post" %}
 [mimoto.json](../.gitbook/assets/mimoto.json)
 {% endswagger %}
 
-3. The credentials are downloaded asynchronously after the request is processed. First below API will be called to check the status of credentials.
+* After the user enters OTP, Inji calls below Mimoto API to request a new credential.
+
+{% swagger src="../.gitbook/assets/mimoto.json" path="/credentialshare/request" method="post" %}
+[mimoto.json](../.gitbook/assets/mimoto.json)
+{% endswagger %}
+
+* The credentials are downloaded asynchronously after the request is processed. First below API will be called to check the status of credentials.
 
 {% swagger src="../.gitbook/assets/mimoto.json" path="/credentialshare/request/status/{requestId}" method="get" %}
 [mimoto.json](../.gitbook/assets/mimoto.json)
 {% endswagger %}
 
 4. After the credential status is **ISSUED**, the app will initiate download. Below API will be called to download credential.
+
+{% swagger src="../.gitbook/assets/mimoto.json" path="/credentialshare/download" method="post" %}
+[mimoto.json](../.gitbook/assets/mimoto.json)
+{% endswagger %}
 
 ## Activating credentials
 
