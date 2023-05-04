@@ -97,7 +97,7 @@ Central also performs disconnect in the following scenarios
 * Peripheral is out of range/disconnected
 * Destroy Connection API
 
-As part of connection closure, both central and peripheral clean the held resources, cryptographic keys, and Bluetooth resources, to ensure that the subsequent transfer happens smoothly. 
+As part of connection closure, both central and peripheral clean the held resources, cryptographic keys, and Bluetooth resources, to ensure that the subsequent transfer happens smoothly.
 
 > Note: All the crypographic keys generated/derived are used only for a single VC transfer session. The library strictly ensures they are not re-used in subsequent VC transfers post connection closure.
 
@@ -121,13 +121,12 @@ As part of connection closure, both central and peripheral clean the held resour
 
 Below are the exception message and the disconnect message which appears on the screen during the error.
 
-> <img src="../_images/exception-message.png" height=90 width=160>
+> ![](../\_images/exception-message.png)
 
 > This message is displayed on the device throwing the exception.
 
-
-
-> <img src="../_images/disconnect-message.png" height=90 width=160>
+> ![](../\_images/disconnect-message.png)&#x20;
+>
 > This message is displayed whenever a device gets disconnected.
 
 ## Retry Scenarios:
