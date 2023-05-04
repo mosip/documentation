@@ -1,6 +1,6 @@
 # Tuvali Architecture
 
-Before we understand how the Tuvali component performs activities on the BLE layer to transfer VC/VP. We can take a look at how BLE communication works in general between two devices A & B.
+Before we understand how the Tuvali component performs activities on the BLE layer to transfer VC/VP. We can take a look at how BLE communication works in general between the two devices A & B.
 
 ## How does BLE Communication work?
 
@@ -14,7 +14,7 @@ Once the connection is made, Central can perform further actions on the device l
 
 * discovering services and characteristics
 * subscribing to notifications on characteristics
-* write/read data from characteristics
+* write/ read data from characteristics
 * disconnect from device
 
 While peripheral can perform actions like
@@ -28,10 +28,10 @@ The above diagram explains the sequence of actions for BLE communication in gene
 2. Connection establishment & additional data exchange
 3. Service & Characteristic discovery from Central
 4. The characteristic subscription on Peripheral
-5. Write with response to Characteristic
+5. Write with response to characteristic
 6. Write without response to the characteristic
 7. Send Notification from GATT Server
-8. Disconnection from GATT Server/Client
+8. Disconnection from GATT Server/ Client
 
 More details about other BLE terminology used here can be found in standard BLE specifications of 4.2 and above.
 
@@ -88,20 +88,20 @@ The failure frame will be sent from Central repeatedly until the Transfer report
 
 Peripheral notify Central to perform disconnection via `Disconnect` characteristic mentioned in Step 12 of the above diagram.
 
-#### Disconnect initiated by Central:
+#### Disconnect initiated by Central
 
-Central also performs disconnect in the following scenarios
+Central also performs disconnect in the following scenarios:
 
 * On a successful data transfer
 * Non-recoverable error on Central
-* Peripheral is out of range/disconnected
+* Peripheral is out of range/ disconnected
 * Destroy Connection API
 
 As part of connection closure, both central and peripheral clean the held resources, cryptographic keys, and Bluetooth resources, to ensure that the subsequent transfer happens smoothly.
 
-> Note: All the crypographic keys generated/derived are used only for a single VC transfer session. The library strictly ensures they are not re-used in subsequent VC transfers post connection closure.
+> Note: All the cryptographic keys generated/ derived are used only for a single VC transfer session. The library strictly ensures they are not re-used in subsequent VC transfers post connection closure.
 
-## Error Scenarios:
+## Error scenarios
 
 ### Scenario 1: The verifier receives a `Failed to transfer` message and wallet receive a `Disconnected` message on the screen.
 
@@ -129,7 +129,7 @@ Below are the exception message and the disconnect message which appears on the 
 >
 > This message is displayed whenever a device gets disconnected.
 
-## Retry Scenarios:
+## Retry scenarios
 
 *   **Backoff Strategy**: Exponential Backoff is a technique that retries a failing operation, with an exponentially increasing wait time, up to a maximum retry count(MAX\_RETRY\_LIMIT) or maximum backoff time(MAX\_ELAPSE\_TIME).
 
@@ -147,23 +147,23 @@ Below are the exception message and the disconnect message which appears on the 
   * **Android**: After the connection is established, the wallet initiates an MTU negotiation with an initial value of 512 bytes. If it fails, it retries with 185 and 100 bytes subsequently with a wait time of 500 ms each. If the negotiation fails after all retries, it throws an exception and disconnects from the wallet.
   * **iOS**: iOS kicks off an MTU exchange automatically upon connection
 
-## Constants:
+## Constants
 
-* MAX\_ALLOWED\_DATA\_LEN(509 Bytes): Maximum data length allowed for one write for both wallet and verifier
-* MIN\_MTU\_REQUIRED(64 Bytes): Minimum number of bytes required to share public key transfer of the wallet is 46. In order not to operate in edges, we chose the nearest value in the power of 2 i.e. 64.
-* MAX\_FAILURE\_FRAME\_RETRY\_LIMIT(15): Maximum limit to retry sending failure chunks to the verifier
+* MAX\_ALLOWED\_DATA\_LEN (509 Bytes): Maximum data length allowed for one write for both wallet and verifier.
+* MIN\_MTU\_REQUIRED (64 Bytes): Minimum number of bytes required to share public key transfer of the wallet is 46. In order not to operate in edges, we chose the nearest value in the power of 2 i.e., 64.
+* MAX\_FAILURE\_FRAME\_RETRY\_LIMIT (15): Maximum limit to retry sending failure chunks to the verifier.
 
-## Characteristics UUID:
+## Characteristics UUID
 
-* IDENTIFY\_REQUEST\_CHAR\_UUID (00002030-0000-1000-8000-00805f9b34fb): Characteristic for sending the public key of the wallet
-* RESPONSE\_SIZE\_CHAR\_UUID (00002033-0000-1000-8000-00805f9b34fb): Characteristic for sending VC size to the verifier
-* SUBMIT\_RESPONSE\_CHAR\_UUID (00002034-0000-1000-8000-00805f9b34fb): Characteristic for sending the entire VC
-* TRANSFER\_REPORT\_REQUEST\_CHAR\_UUID (00002035-0000-1000-8000-00805f9b34fb): Characteristic for requesting for transfer report from the verifier
+* IDENTIFY\_REQUEST\_CHAR\_UUID (00002030-0000-1000-8000-00805f9b34fb): Characteristic for sending the public key of the wallet.
+* RESPONSE\_SIZE\_CHAR\_UUID (00002033-0000-1000-8000-00805f9b34fb): Characteristic for sending VC size to the verifier.
+* SUBMIT\_RESPONSE\_CHAR\_UUID (00002034-0000-1000-8000-00805f9b34fb): Characteristic for sending the entire VC.
+* TRANSFER\_REPORT\_REQUEST\_CHAR\_UUID (00002035-0000-1000-8000-00805f9b34fb): Characteristic for requesting for transfer report from the verifier.
 * TRANSFER\_REPORT\_RESPONSE\_CHAR\_UUID (00002036-0000-1000-8000-00805f9b34fb): Characteristic for sending transfer report to the wallet
-* VERIFICATION\_STATUS\_CHAR\_UUID (00002037-0000-1000-8000-00805f9b34fb): Characteristic for informing the wallet if the VC is accepted or rejected
-* DISCONNECT\_CHAR\_UUID (00002038-0000-1000-8000-00805f9b34fb): Characteristic for notifying the wallet to initiate the disconnection between the devices
+* VERIFICATION\_STATUS\_CHAR\_UUID (00002037-0000-1000-8000-00805f9b34fb): Characteristic for informing the wallet if the VC is accepted or rejected.
+* DISCONNECT\_CHAR\_UUID (00002038-0000-1000-8000-00805f9b34fb): Characteristic for notifying the wallet to initiate the disconnection between the devices.
 
-## Service UUID:
+## Service UUID
 
 * SERVICE\_UUID (0000AB29-0000-1000-8000-00805f9b34fb): Service UUID of the verifier
 * SCAN\_RESPONSE\_SERVICE\_UUID (0000AB2A-0000-1000-8000-00805f9b34fb): Service UUID for uniquely identifying the scan response data to the wallet's SCAN\_REQ
