@@ -14,22 +14,33 @@ The **1.2.0.1 Beta3** release of MOSIP is a patch release on top of the [Long-Te
 
 ## Repository Released
 
-| **Repositories**            | **Tags Released**                                                                    |
-| --------------------------- | ------------------------------------------------------------------------------------ |
-| mosip-openid-bridge         | [v1.2.0.1-B2](https://github.com/mosip/mosip-openid-bridge/tree/v1.2.0.1-B2)         |
-| keymanager                  | [v1.2.0.1-B2](https://github.com/mosip/keymanager/tree/v1.2.0.1-B2)                  |
-| id-authentication           | [v1.2.0.1-B2](https://github.com/mosip/id-authentication/tree/v1.2.0.1-B2)           |
-| partner-management-services | [v1.2.0.1-B2](https://github.com/mosip/partner-management-services/tree/v1.2.0.1-B2) |
-| mosip-config                | [v1.2.0.1-B2](https://github.com/mosip/mosip-config/tree/v1.2.0.1-B2)                |
-| artifactory-ref-impl        | [v1.2.0.1-B3](https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.1-B3)        |
-| mosip-data                  | [v1.2.0.1-B2](https://github.com/mosip/mosip-data/tree/v1.2.0.1-B2)                  |
-| mosip-infra                 | [v1.2.0.1-B2](https://github.com/mosip/mosip-infra/tree/v1.2.0.1-B2)                 |
-| mosip-helm                  | [v1.2.0.1-B2](https://github.com/mosip/mosip-helm/tree/v1.2.0.1-B2)                  |
-| mosip-file-server           | [v1.2.0.1-B2](https://github.com/mosip/mosip-file-server/tree/v1.2.0.1-B2)           |
-| mosip-onboarding            | [v1.2.0.1-B2](https://github.com/mosip/mosip-onboarding/tree/v1.2.0.1-B2)            |
-| mock-smtp                   | [v0.0.1](https://github.com/mosip/mock-smtp/tree/v0.0.1)                             |
-| keycloak                    | [v1.2.0.1-B2](https://github.com/mosip/keymanager/tree/v1.2.0.1-B2)                  |
-| postgres-init               | [v1.2.0.1-B2](https://github.com/mosip/postgres-init/tree/release-1.2.0.1-B2)        |
+
+|    **Repositories**            |    **Tags Released**                 | 
+|------------------------------|---------------------------|
+| mosip-mock-services  |  [v1.2.0.1-B2](https://github.com/mosip/mosip-mock-services/tree/v1.2.0.1-B2) | 
+| biosdk-service |  [v1.2.0.1-B2](https://github.com/mosip/biosdk-services/tree/v1.2.0.1-B2/biosdk-services)|
+|biosdk-client| [v1.2.0.1-B2](https://github.com/mosip/biosdk-client/tree/v1.2.0.1-B2/biosdk-client)| 
+| bio-util |[v1.2.0.1-B2](https://github.com/mosip/bio-utils/tree/v1.2.0)| 
+| partner-management-services | [v1.2.0.1-B3]( https://github.com/mosip/partner-management-services/tree/v1.2.0.1-B3)|
+| id-authentication | [v1.2.0.1-B3](https://github.com/mosip/partner-management-services/tree/v1.2.0.1-B3)|
+| esignet | [v1.0.0]( https://github.com/mosip/esignet/tree/v1.0.0)|
+| esignet-mock-services | [v0.9.0]( https://github.com/mosip/esignet-mock-services/tree/v0.9.0)|
+| Inji | [v0.9.0](https://github.com/mosip/inji/tree/v0.9)|
+| tuvali | [v0.3.9](https://github.com/mosip/tuvali/tree/v0.3.9) |
+| mimoto | [v0.9](https://github.com/mosip/mimoto/tree/v1.2.0.1-B1)  | 
+| resident-services | [v1.2.0.1-B2](https://github.com/mosip/resident-services/tree/v1.2.0.1-B2)|
+| mosip-file-server | [v1.2.0.1-B3]( https://github.com/mosip/mosip-file-server/tree/v1.2.0.1-B3)|
+| mosip-helm| [v1.2.0.1-B3]( https://github.com/mosip/mosip-helm/tree/v1.2.0.1-B3) | 
+| mosip-infra| [v1.2.0.1-B3](https://github.com/mosip/mosip-infra/tree/v1.2.0.1-B3)|
+| postgres-init | [v1.2.0.1-B3]( https://github.com/mosip/postgres-init/tree/v1.2.0.1-B3)|
+| k8s-infra | [v1.2.0.1-B3](https://github.com/mosip/k8s-infra/tree/v1.2.0.1-B3)|  
+| mosip-config| [v1.2.0.1-B3]( https://github.com/mosip/mosip-config/tree/v1.2.0.1-B3)|
+| artifactory-ref-impl | [v1.2.0.1-B4]( https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.1-B4) |
+| mosip-data | [v1.2.0.1-B3]( https://github.com/mosip/mosip-data/tree/v1.2.0.1-B3) |
+| mosip-onboarding | [v1.2.0.1-B3](https://github.com/mosip/mosip-onboarding/tree/v1.2.0.1-B3) |
+| mosip-functional-tests| [v1.2.0.1-B1]( https://github.com/mosip/mosip-functional-tests/tree/v1.2.0.1-B1)| 
+| mosip-automation-tests| [v1.2.0.1-B1](https://github.com/mosip/mosip-automation-tests/tree/v1.2.0.1-B1)| 
+| converters| [v1.2.0.1-B1](https://github.com/mosip/converters/tree/v1.2.0.1-B1)|
 
 ## Documentation
 
@@ -39,4 +50,4 @@ To read though the Test Reports, refer [here](https://docs.mosip.io/1.2.0/releas
 
 Deployment documentation and scripts have been enhanced and are compliant with V3 architecture.
 
-Developer documentation for all repositories has also been added for developers to set up in their local systems.
+Developer documentation for all the repositories has been added for developers to set up in their local systems.
