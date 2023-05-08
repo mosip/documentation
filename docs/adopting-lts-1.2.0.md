@@ -40,8 +40,6 @@ MOSIP's current LONG TERM SUPPORT RELEASE is v1.2.0 (Asymetric Amoeba). The sect
 
 ### What’s New in Asymetric Amoeba
 
-**FEATURES & FIXES**
-
 **Functional benefits**
 
 - New Admin UI with robust APIs
