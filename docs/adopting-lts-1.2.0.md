@@ -94,15 +94,15 @@ The existing adopters of pre-LTS stable versions can:
 8. **Marking-off** checklist template items
 
 _Note_:
-* Time and effort involvement will depend on customisation needs.
-* Without customisations, the time needed will be about 2-3 months.
+* The time and effort involvement depends on customisation requirements.
+* Without customisations, the time needed would be about 2-3 months.
     * Time to deploy: 2 weeks
     * Time to execute upgrade scripts:  2-3 weeks
     * Time taken to test/ verify:
         * Two days for environment sanity using test rig automation
         * 3-4 weeks for full blown testing for all the modules
 
-For detailed information on all the enhancements in the LTS 1.2.0 version, refer the [Release Notes](https://docs.mosip.io/1.2.0/releases/release-notes/enhancements). However, let us briefly go over a couple of features and the newly added modules:
+For detailed information on all the enhancements in the LTS 1.2.0 version, refer the [Release Notes](https://docs.mosip.io/1.2.0/releases/release-notes/enhancements). However, let us briefly go over a couple of features and also look at the newly added modules.
 
 #### Admin Services
  
@@ -148,7 +148,7 @@ To know more, read through the [Partner Management Portal User Guide](https://do
 
 * Upgrade scripts are available that help in hassle free migration from 1.1.5.x to 1.2.0.x. These scripts will include the db upgrade scripts, template upgrade scripts, config upgrade scripts, MOSIP seed data upgrade scripts etc.
 
-#### Deployment architecture
+#### Deployment Architecture
 
 * In LTS, support for legacy V2 deployment has been deprecated and the updated deployment method is V3 deployment that promises:
     * Enhanced security
@@ -156,7 +156,7 @@ To know more, read through the [Partner Management Portal User Guide](https://do
     * Highly recommended for production
     * Performance enhancements
 
-To learn more, read through the section on [Deployment](https://docs.mosip.io/1.2.0/deploymentnew).
+To learn more, read through [Deployment](https://docs.mosip.io/1.2.0/deploymentnew).
 
 #### Improved Reporting
 
@@ -210,7 +210,7 @@ To know more, read through [Automation Testing](https://docs.mosip.io/1.2.0/modu
 
 #### OpenCRVS
 * OpenCRVS is a digital platform for recording a person's major life events like births, deaths, marriages, and divorces.
-* It is a customizable open source solution designed for civil registration and it's essential services such as social protection, health care, education and economic & social opportunities.
+* It is a customizable open source solution designed for civil registration and it's essential services such as social protection, health care, education and economic and social opportunities.
 
 
 
