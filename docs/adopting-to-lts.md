@@ -15,7 +15,7 @@ Asymmetric Amoeba (1.2.0 LTS) was released in February 2022 and will be supporte
     * Support will be available for migration to next LTS version for two years.
     * Adopter inputs and experiences will be factored to fine tune during this duration.
 
-## Benefits of Long-Term Support
+## Benefits of Long Term Support
 
 LTS releases offer:
 
@@ -162,6 +162,64 @@ To learn more, read through the section on [Deployment](https://docs.mosip.io/1.
 
 * LTS 1.2.0 provides a reporting framework for real-time streaming of data visualization on dashboards that gives a visual display of metrics and important data to track the status of various pre and post-enrolment processes. This data helps the ID issuers in improving efficiency, forecasting, and better decision-making. The framework has been used to create a set of default dashboards using Kibana.
 * To know more, read through [Reporting](https://docs.mosip.io/1.2.0/modules/reporting).
+
+#### Anonymous Profiling
+* We have curated a data set called anonymous profile to cater to the analytic needs of the adopting countries which will help to assess the progress of ID programs.
+* It is accessible to search engines such as elasticsearch.
+* To know more, read through the [Anonymous Profiling Support](https://docs.mosip.io/1.2.0/id-lifecycle-management/anonymous-profiling-support).
+
+#### Test Automation 
+* We now have a dockerized API test automation as opposed to the jar file execution due to which the entire process of automation has become faster owing to
+    * Cron jobs that handle daily automation report eliminating any need of manual trigger for test report generation.
+    * Automatic language, environment and secret keys configuration.
+
+To know more, read through [Automation Testing](https://docs.mosip.io/1.2.0/modules/automation-testing).
+
+#### Enhanced Security
+
+* Security should be built-in and not bolt-on. Taking our security checks to the next level, we successfully completed security audit as part of MOSIP 1.2.0 LTS (Asymmetric Amoeba), which was certified by Aujas. 
+* The components have been significantly tested for scale and performance. The adopting countries can now cater to it's millions of customers with confidence.
+
+#### Finer Documentation
+* Documentation has evolved over time, thereby making a huge difference in resolving the issues of accessibility and assistive technology. The availability of comprehensive and well-devised user guides for all modules has helped the community to move one step closer towards simplified ways of working autonomously.
+
+#### Performance enhancement
+* With the LTS 1.2.0 version, performance has been significantly improved.
+* To know more, read through [Performance Test Reports](https://docs.mosip.io/1.2.0/releases/release-notes/performance-test-report).
+
+## Newer modules compatible with LTS
+
+#### e-Signet
+* e-Signet allows easy login to any of the government services using a single credential and passwordless login using the supported authentication factors
+* To know more, read through the [e-Signet](https://docs.esignet.io/) documentation. 
+
+#### Inji
+* A safe, trusted & inclusive mobile wallet and authenticator, that enables you to carry your digital IDs, prove your presence, (offline and online) and avail services in a snap.
+* To know more, read through the [Inji](https://docs.mosip.io/inji/) documentation.
+
+#### Compliance Tool Kit (CTK)
+
+* Compliance Tool Kit (CTK) is an online portal that can be used by MOSIP partners to test the compliance of their product developed as per specifications (specs) published/adopted by MOSIP.
+* To know more, read through [Compliance Tool Kit](https://docs.mosip.io/compliance-tool-kit/versions/version-0.0.9) documentation.
+
+#### OpenG2P
+* OpenG2P is an open source platform upon which government-to-person (G2P) solutions can be built.
+* The platform offers people facing processes such as onboarding into schemes, identity verification, and cash transfers to their bank accounts along with a self-serviced beneficiary portal.
+* It also incorporates the government department facing features such as creation of registries and beneficiary lists, eligibility checks, scheme definition, payment disbursement and reconciliation.
+* To know more, read through [OpenG2P](https://docs.openg2p.org/) documentation.
+
+#### OpenCRVS
+* OpenCRVS is a digital platform for recording a person's major life events like births, deaths, marriages, and divorces.
+* It is a customizable open source solution designed for civil registration and it's essential services such as social protection, health care, education and economic & social opportunities.
+
+
+
+
+
+
+
+
+
 
 
 
