@@ -179,9 +179,10 @@ To know more, read through [Automation Testing](https://docs.mosip.io/1.2.0/modu
 * The components have been significantly tested for scale and performance. The adopting countries can now cater to it's millions of customers with confidence.
 
 #### Finer Documentation
-* Documentation has evolved over time, thereby making a huge difference in resolving the issues of accessibility and assistive technology. The availability of comprehensive and well-devised user guides for all modules has helped the community to move one step closer towards simplified ways of working autonomously.
+* Documentation has evolved over time, thereby making a huge difference in resolving the issues of accessibility and assistive technology.
+* The availability of comprehensive and well-devised user guides for all modules has helped the community to move one step closer towards simplified ways of working autonomously.
 
-#### Performance enhancement
+#### Performance enhancements
 * With the LTS 1.2.0 version, performance has been significantly improved.
 * To know more, read through [Performance Test Reports](https://docs.mosip.io/1.2.0/releases/release-notes/performance-test-report).
 
