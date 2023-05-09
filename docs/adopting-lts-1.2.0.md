@@ -77,9 +77,9 @@ The existing adopters of pre-LTS stable versions can:
 * Get access to periodic updates and fixes
 * Utilise the upgrade window to avoid falling into unsupported mode
 
-### Upgrading to ASYMMETRIC AMOEBA
+### Upgrading to Asymmetric Amoeba
 
-**Standard Procedure for LTS Migration**
+**Standard Procedure for LTS migration**
 
 1. **Discussing** migration and communication strategies (relying parties, Stakeholders etc.)
 2. **Prioritising** a list of issues that must be fixed before migration 
