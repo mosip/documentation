@@ -2,7 +2,7 @@
 
 MOSIP periodically releases versions of the platform, tagged with their version numbers. 
 
-Asymmetric Amoeba (1.2.0) is the latest stable version of LTS. This release focuses on easy manageability, usability, enhanced performance, robustness, security, inclusivity, and comprehensive documentation. Additionally, we support **multiple languages** across modules.
+Asymmetric Amoeba (1.2.0) is the latest stable version of LTS. This release focuses on easy manageability, usability, enhanced performance, robustness, security, inclusivity, and comprehensive documentation. Additionally, **multiple languages** are now supported across modules.
 
 LTS versions get patch releases with minor and major updates as and when required.
 
