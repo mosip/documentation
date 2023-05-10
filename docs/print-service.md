@@ -65,7 +65,7 @@ To know more details, refer [Credential Service](https://docs.mosip.io/1.2.0/mod
 
 To learn about the Credential Types, refer [Verifiable Credentials Data Model v1.1](https://www.w3.org/TR/vc-data-model/).
 
-To view a sample VC that is created by MOSIP, refer [Verified credentials](verified-credentials.md).
+To view a sample VC that is created by MOSIP, refer [Verified credentials](https://docs.mosip.io/1.2.0/integrations/print-service/verified-credentials).
 
 ## Partner Print System 
 
