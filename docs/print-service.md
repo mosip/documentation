@@ -60,7 +60,7 @@ To know more, refer [Credential Service](https://docs.mosip.io/1.2.0/modules/id-
 
 To learn about the Credential Types, refer [Verifiable Credentials Data Model v1.1](https://www.w3.org/TR/vc-data-model/).
 
-## Print Partner System 
+## Partner Print System 
 
 The partner print system has to be amended with the functionality to receive the credential from MOSIP and interpret it. The following are key sequence of operations:
 
