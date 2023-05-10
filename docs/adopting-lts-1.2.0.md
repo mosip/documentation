@@ -6,7 +6,7 @@ Asymmetric Amoeba (1.2.0) is the latest stable version of LTS. This release focu
 
 LTS versions get patch releases with minor and major updates as and when required.
 
-* **SUPPORTED FOR A MINIMUM OF 5 YEARS**
+**SUPPORTED FOR A MINIMUM OF 5 YEARS**
 
 Asymmetric Amoeba (1.2.0 LTS) was released in February 2022 and will be supported at the minimum until February 2027.
 
