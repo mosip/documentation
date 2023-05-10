@@ -82,4 +82,27 @@ Note : The QR code is currently is not part of the VC. This is a work in progres
 
 Some of the important attributes of the VC that must be considered are:
 
-1. _issuer_:  Represents the issuer of the credential. Must be either a URI or an object containing an id property. For example, in the case of a MOSIP server, the URI https://api.mec.mosip.net/.well-known/controller.json resolves to something like below 
+1. _issuer_ :  Represents the issuer of the credential. Must be either a URI or an object containing an id property. For example, in the case of a MOSIP server, the URI https://api.mec.mosip.net/.well-known/controller.json resolves to something like below:
+
+```
+{
+  "@context": "https://w3id.org/security/v2",
+  "id": "https://api.mec.mosip.net/.well-known/controller.json",
+  "assertionMethod": [
+    "https://api.mec.mosip.net/.well-known/public-key.json"
+  ]
+}
+```
+where the `public-key.json` contains the issuer’s public key.
+
+2. _issuanceDate_ : Contains the Verifiable Credentials creation date and time in ISO Format. This can be used to print the date of issue on the ID card.
+
+3. _credentialSubject_ : Contains the demographic and Biometric data for the resident.
+
+    * Demographic Fields: such as Name, gender, date of birth, Phone number etc as per the the policy of what is shareable to the print partner.
+
+    * Biometrics: The face photograph of the resident in CBEFF format.
+
+4. _proof_ :  One of more cryptographic proofs that can be used to detect the tampering and verify the authorship of a credential. One of the methods to verify the authenticity of the VC is to ascertain via the signature of the credential using the JWS signature.
+
+5. _type_ :  Indicates that it is a Verifiable Credential.
