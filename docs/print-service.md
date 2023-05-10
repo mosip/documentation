@@ -81,7 +81,7 @@ For MOSIP to communicate with the partner printing system,  the partner printing
 
 _Note_: The print service may be considered as an extension to the functionality of the partner printing system.  It may also be implemented as a separate microservice and linked to the partner printing system.  The technology, architecture and language of the print service implementation is outside the scope of MOSIP.
 
-For implementing the print service, following is the procedure:
+For implementing the print service, follow the procedure mentioned below:
 
 * The Print Service will be called/ invoked only by WebSub (Subscription engine) with credential request event using registered callback URL.
 
@@ -164,7 +164,7 @@ _Sample status update request:_
 }
 ```
 
-_Note_: The “ERROR” status and the message next to it.
+_Note_: The “ERROR” status and the messages next to it.
 
 The following are standard error messages that should be returned to MOSIP: 
 
@@ -173,5 +173,15 @@ The following are standard error messages that should be returned to MOSIP:
 * “Unable to validate credential”
 * “Error receiving credential event”
 * “Unable to print”
+
+### Guidelines and Assumptions
+
+* The Print service within the Partner Printing System has to be implemented by the vendor. The team at MOSIP can work with the vendor during the implementation and testing stage of the printing integration process.
+* MOSIP can interface with any printing system irrespective of it's implementation technology.
+* MOSIP integrates with an external partner using the MOSIP [Partner Management System](https://docs.mosip.io/1.2.0/modules/partner-management-services) using which the printing partner is onboarded.
+* The design of the ID Card is left to the implementation of the printing partner.
+* The country has to decide the procedure to cleanup the data stored at the location of the print partner after the printing process.
+
+
 
 
