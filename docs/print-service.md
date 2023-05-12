@@ -2,11 +2,15 @@
 
 This document explains the **Print Service** and other associated components along with a detailed technical understanding of the architecture and design of integrating MOSIP with external print partners.
 
+## Sign Up
+
+Are you a print partner looking to integrate with MOSIP? Feel free to [Sign Up] here!
+
 ## Overview
 
-As per the current approach, after a UIN is successfully processed, the Registrations Processor’s Printing Stage calls the Credential Service to create a credential for print. This credential is pushed to the WebSub and the Printing systems consumes the same.
+As per the current approach, after a UIN is successfully processed, the [Registrations Processor’s Printing Stage](https://github.com/mosip/registration/tree/release-1.2.0/registration-processor/post-processor/registration-processor-printing-stage) calls the [Credential Service](https://github.com/mosip/id-repository/tree/release-1.2.0/id-repository/credential-service) to create a credential for print. This credential is pushed to the WebSub and the Printing systems consumes the same.
 
-MOSIP has introduced the Print Service as a reference implementation to print the _euin_, _reprint_, _qrcode_, [credential types]() in PDF format. This service is intended to be customized and used by a card printing agency who will need to on-board onto MOSIP as a Credential Partner before deploying the service.
+MOSIP has introduced the Print Service as a reference implementation to print the _euin_, _reprint_, _qrcode_, [credential types](https://docs.mosip.io/1.2.0/modules/id-repository#credential-types) in PDF format. This service is intended to be customized and used by a card printing agency who will need to on-board onto MOSIP as a [Credential Partner](https://docs.mosip.io/1.2.0/modules/partner-management-services) before deploying the service.
 
 Below is an entity relationship diagram highlighting the relationship of Print Service with other modules.
 
@@ -35,11 +39,11 @@ To know more about the different configurations, steps for build and deployment,
     * Generate a QR code to be used while printing ID cards
     * A centralized printing management system developed by a third party that might manage the printing and posting of ID cards to designated residents
     
-**WebSub** : WebSub is a websocket used by MOSIP for sharing data with MOSIP partners. MOSIP’s print stage shares the credential with the partner printing system through [WebSub](https://docs.mosip.io/1.2.0/modules/websub). The credentials shared are in the form of [Verifiable Credentials(VCs)](). 
+**WebSub** : WebSub is a websocket used by MOSIP for sharing data with MOSIP partners. MOSIP’s print stage shares the credential with the partner printing system through [WebSub](https://docs.mosip.io/1.2.0/modules/websub). The credentials shared are in the form of [Verifiable Credentials(VCs)](https://docs.mosip.io/1.2.0/integrations/print-service/verified-credentials). 
 
 ## Architecture
 
-The below diagram depicts the technical architecture of the solution. 
+The diagram below depicts the technical architecture of the solution. 
 
 ![](\_images/print-service-architecture.png)
 
