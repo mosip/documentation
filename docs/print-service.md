@@ -34,7 +34,7 @@ To know more about the different configurations, steps for build and deployment,
 
 **Print Stage** : This is a component inside the MOSIP server which is responsible for generating a credential and sharing it with the Partner printing system.
 
-**Partner Printing System** : An external printing solution onboarded as a ‘credential partner’ by MOSIP using MOSIP’s partner management framework. It securely consumes the credential from the MOSIP server through a standard interface and uses the data inside the credential for printing. The partner printing system may offer the following services based on the country’s printing choices
+**Print Service** : An external printing solution onboarded as a `credential partner` by MOSIP using MOSIP’s partner management framework. It securely consumes the credential from the MOSIP server through a standard interface and uses the data inside the credential for printing. The partner printing system may offer the following services based on the country’s printing choices
 
 * Ability to print plastic cards 
     
@@ -76,9 +76,9 @@ To learn about the Credential Types, refer [Verifiable Credentials Data Model v1
 
 To view a sample VC that is created by MOSIP, refer [Verified credentials](https://docs.mosip.io/1.2.0/integrations/print-service/verified-credentials).
 
-## Partner Print System 
+## Print Service
 
-The partner print system has to be amended with the functionality to receive the credential from MOSIP and interpret it. The following are key sequence of operations:
+The partner printing system has to be amended with the functionality to receive the credential from MOSIP and interpret it. The following are key sequence of operations:
 
 1. Receive the datashare URL of the credential from WebSub
 2. Download the credential from the datashare URL 
@@ -91,7 +91,7 @@ _Note_: The way the credential is processed and interpreted is left to the imple
 
 The partner printing system is expected to expose an API end point for MOSIP to publish the datashare URL of the credential.   
 
-## Implementing Print Service (Partner Printing System)
+## Implementing Print Service
 
 For MOSIP to communicate with the partner printing system,  the partner printing system is expected to implement a print service.   
 
@@ -189,6 +189,17 @@ The following are standard error messages that should be returned to MOSIP:
 * “Unable to validate credential”
 * “Error receiving credential event”
 * “Unable to print”
+
+## Invoking Print Service
+Print partners may trigger credential issuance through either of the below channels which would eventually consume the Print Service:
+
+1. Registration process through Registration Client
+2. Resident Services feature to send the printed UIN to a resident inturn triggers a request to the print partner.
+
+Below is a simple diagram illustrating the flow.
+
+![](\_images/print-service-integration.png)
+
 
 ### Guidelines and Assumptions
 
