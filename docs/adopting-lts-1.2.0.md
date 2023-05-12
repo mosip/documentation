@@ -12,8 +12,8 @@ LTS 1.2.0 was released in February 2022 and will be supported at the minimum unt
 
 _What happens after five years?_
 
-    * Support will be available for migration to next LTS version for two years following it's release.
-    * Adopter inputs and experiences will be factored in to fine tune subsequent versions.
+* Support will be available for migration to next LTS version for two years following its release.
+* Adopter inputs and experiences will be factored in to fine tune subsequent versions.
 
 ## Benefits of Long Term Support
 
