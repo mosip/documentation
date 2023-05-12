@@ -36,13 +36,13 @@ To know more about the different configurations, steps for build and deployment,
 
 **Partner Printing System** : An external printing solution onboarded as a ‘credential partner’ by MOSIP using MOSIP’s partner management framework. It securely consumes the credential from the MOSIP server through a standard interface and uses the data inside the credential for printing. The partner printing system may offer the following services based on the country’s printing choices
 
-    * Ability to print plastic cards 
+* Ability to print plastic cards 
     
-    * Ability to print a PDF document and email it to the registered email ID
+* Ability to print a PDF document and email it to the registered email ID
     
-    * Generate a QR code to be used while printing ID cards
+* Generate a QR code to be used while printing ID cards
     
-    * A centralized printing management system developed by a third party that might manage the printing and posting of ID cards to designated residents
+* A centralized printing management system developed by a third party that might manage the printing and posting of ID cards to designated residents
     
 **WebSub** : WebSub is a websocket used by MOSIP for sharing data with MOSIP partners. MOSIP’s print stage shares the credential with the partner printing system through [WebSub](https://docs.mosip.io/1.2.0/modules/websub). The credentials shared are in the form of [Verifiable Credentials(VCs)](https://docs.mosip.io/1.2.0/integrations/print-service/verified-credentials). 
 
