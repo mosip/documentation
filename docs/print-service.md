@@ -22,6 +22,7 @@ Below is an entity relationship diagram highlighting the relationship of Print S
 4. Publishes the event to WebSub with updated status and Datashare link.
 
 The card data in JSON format is published as a WebSub event. The print service consumes the data from event, decrypts using partner private key and converts into PDF using a pre-defined [template](https://github.com/mosip/print/blob/release-1.2.0.1/docs/configuration.md#template).
+
 To know more about the different configurations, steps for build and deployment, refer to the documentation in the [Print](https://github.com/mosip/print) repository.
 
 ## Design
