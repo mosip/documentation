@@ -1,26 +1,26 @@
 # ADOPTING LONG-TERM SUPPORT VERSION (1.2.0)
 
-MOSIP periodically releases versions of the platform, tagged with their version numbers. 
+MOSIP periodically releases new versions of the platform, tagged with their version numbers. 
 
-Asymmetric Amoeba (1.2.0) is the latest stable version of LTS. This release focuses on easy manageability, usability, enhanced performance, robustness, security, inclusivity, and comprehensive documentation. Additionally, **multiple languages** are now supported across modules.
+Asymmetric Amoeba  is the latest stable Long Term Support (LTS 1.2.0) version. This release focuses on easy manageability, usability, enhanced performance, robustness, security, inclusivity, and comprehensive documentation. Additionally, **multiple languages** are now supported across modules.
 
-LTS versions get patch releases with minor and major updates as and when required.
+LTS versions get patch releases with minor and major updates, as and when required.
 
 **SUPPORTED FOR A MINIMUM OF 5 YEARS**
 
-Asymmetric Amoeba (1.2.0 LTS) was released in February 2022 and will be supported at the minimum until February 2027.
+LTS 1.2.0 was released in February 2022 and will be supported at the minimum until February 2027.
 
-* What happens after the five years?
+_What happens after five years?_
 
-    * Support will be available for migration to next LTS version for two years.
-    * Adopter inputs and experiences will be factored to fine tune during this duration.
+    * Support will be available for migration to next LTS version for two years following it's release.
+    * Adopter inputs and experiences will be factored in to fine tune subsequent versions.
 
 ## Benefits of Long Term Support
 
 LTS releases offer:
 
 * Completely implemented roadmap features
-* Frozen API and Data formats
+* Frozen API and data formats
 * Tooling, add-ons and extensions
 * Compatible components and solutions in the marketplace
 * Compliance and certification programs
@@ -34,35 +34,32 @@ LTS releases offer:
     * Training and capacity building
     * Technical advisory on ID and use case implementations
 
-## Details about the current stable LTS release
+## What’s New in LTS 1.2.0
 
-MOSIP's current LONG TERM SUPPORT RELEASE is v1.2.0 (Asymetric Amoeba). The section below highlights the key features, benefits and the new modules added.
+MOSIP's current LONG TERM SUPPORT RELEASE is v1.2.0. The section below highlights the key features, benefits, and new modules added.
 
-### What’s New in Asymetric Amoeba
-
-**Functional benefits**
+**Functional Benefits**
 
 - New Admin UI with robust APIs
 - New Partner Management Portal UI with robust APIs
 - New Resident Portal with robust APIs
 
-**Other benefits**
+**Other Benefits**
 
 - Enhanced security
-- Finer Documentation
+- Finer documentation
 - Enhanced mechanism to evaluate performance
-- Improved service level performance
+- Improved service-level performance
 - Standalone stages of registration processing
 
 **Tools & Add-ons**
 
-- Anonymous profiling to cater to the analytic needs
-- Improved reporting for better forecasting & efficient 
-decision-making
+- Anonymous profiling to cater to analytical needs
+- Improved reporting for better forecasting and efficient decision-making
 - V3 Deployment Architecture
 - Dockerized test automation
 
-**Newer modules compatible with LTS**
+**Newer Modules Compatible with LTS**
 
 - e-Signet
 - Inji
@@ -73,23 +70,23 @@ decision-making
 
 The existing adopters of pre-LTS stable versions can:
 * Get access to the full feature set, latest tools, and add-on modules
-* Get access to the best-tier of support
+* Get access to the best tier of support
 * Get access to periodic updates and fixes
 * Utilise the upgrade window to avoid falling into unsupported mode
 
-### Upgrading to Asymmetric Amoeba
+### Upgrading to LTS 1.2.0
 
-**Standard Procedure for LTS migration**
+**Standard Procedure for LTS Migration**
 
-1. **Discussing** migration and communication strategies (relying parties, Stakeholders etc.)
+1. **Discussing** migration and communication strategies (relying parties, stakeholders etc.)
 2. **Prioritising** a list of issues that must be fixed before migration 
 3. **Understanding and analysing**, in detail, latest changes and customised features
 4. **Identifying** sequencing of components and infra to be migrated
 5. **Discussing** ways and means to automate specific steps
-6. **Migrating** using upgrade scripts- DB, template, config, seed data etc.
+6. **Migrating** using upgrade scripts: DB, template, config, seed data, etc.
     * Phased migration: sandbox, staging, production
 7. **Hardening** security
-8. **Marking-off** checklist template items
+8. **Marking off** checklist template items
 
 _Note_:
 * The time and effort involvement depends on customisation requirements.
@@ -100,7 +97,9 @@ _Note_:
         * Two days for environment sanity using test rig automation
         * 3-4 weeks for full blown testing for all the modules
 
-For detailed information on all the enhancements in the LTS 1.2.0 version, refer the [Release Notes](https://docs.mosip.io/1.2.0/releases/release-notes/enhancements). However, let us briefly go over a couple of features and also look at the newly added modules.
+For detailed information on all the enhancements in the LTS 1.2.0 version, refer the [Release Notes](https://docs.mosip.io/1.2.0/releases/release-notes/enhancements). 
+
+See below for a brief overview of features and newly-added modules.
 
 #### Admin Services
  
@@ -122,7 +121,7 @@ To know more, read the [Registration Client Settings page](https://docs.mosip.io
 
 * **Authentication filters** have been added to ID Authentication. 
 * IDA is externalized through data sync via WebSub. This allows the relying parties to create their own IDA module or extend the existing IDA module.
-*	The ID Authentication module has been enhanced to retrieve any missing data such as credentials, partner data, and policies, in the event of a crash or time-out. 
+* The ID Authentication module has been enhanced to retrieve any missing data such as credentials, partner data, and policies, in the event of a crash or time-out. 
 * The IDA database now stores the partner details, which includes data like the partner ID, policy ID, MISP ID, and API keys, to authenticate the above entities directly from IDA.
 
 #### Partner Management
@@ -162,11 +161,13 @@ To learn more, read through [Deployment](https://docs.mosip.io/1.2.0/deploymentn
 * To know more, read through [Reporting](https://docs.mosip.io/1.2.0/modules/reporting).
 
 #### Anonymous Profiling
+
 * We have curated a data set called anonymous profile to cater to the analytic needs of the adopting countries which will help to assess the progress of ID programs.
 * It is accessible to search engines such as elasticsearch.
 * To know more, read through the [Anonymous Profiling Support](https://docs.mosip.io/1.2.0/id-lifecycle-management/anonymous-profiling-support).
 
 #### Test Automation 
+
 * We now have a dockerized API test automation as opposed to the jar file execution due to which the entire process of automation has become faster owing to
     * Cron jobs that handle daily automation report eliminating any need of manual trigger for test report generation.
     * Automatic language, environment and secret keys configuration.
@@ -182,17 +183,19 @@ To know more, read through [Automation Testing](https://docs.mosip.io/1.2.0/modu
 * Documentation has evolved over time, thereby making a huge difference in resolving the issues of accessibility and assistive technology.
 * The availability of comprehensive and well-devised user guides for all modules has helped the community to move one step closer towards simplified ways of working autonomously.
 
-#### Performance enhancements
+#### Performance Enhancements
 * With the LTS 1.2.0 version, performance has been significantly improved.
 * To know more, read through [Performance Test Reports](https://docs.mosip.io/1.2.0/releases/release-notes/performance-test-report).
 
-## Newer modules compatible with LTS
+## Newer Modules Compatible with LTS
 
 #### e-Signet
+
 * e-Signet allows easy login to any of the government services using a single credential and passwordless login using the supported authentication factors
 * To know more, read through the [e-Signet](https://docs.esignet.io/) documentation. 
 
 #### Inji
+
 * A safe, trusted & inclusive mobile wallet and authenticator, that enables you to carry your digital IDs, prove your presence, (offline and online) and avail services in a snap.
 * To know more, read through the [Inji](https://docs.mosip.io/inji/) documentation.
 
@@ -202,14 +205,16 @@ To know more, read through [Automation Testing](https://docs.mosip.io/1.2.0/modu
 * To know more, read through [Compliance Tool Kit](https://docs.mosip.io/compliance-tool-kit/versions/version-0.0.9) documentation.
 
 #### OpenG2P
+
 * OpenG2P is an open source platform upon which government-to-person (G2P) solutions can be built.
 * The platform offers people facing processes such as onboarding into schemes, identity verification, and cash transfers to their bank accounts along with a self-serviced beneficiary portal.
 * It also incorporates the government department facing features such as creation of registries and beneficiary lists, eligibility checks, scheme definition, payment disbursement and reconciliation.
 * To know more, read through [OpenG2P](https://docs.openg2p.org/) documentation.
 
 #### OpenCRVS
+
 * OpenCRVS is a digital platform for recording a person's major life events like births, deaths, marriages, and divorces.
-* It is a customizable open source solution designed for civil registration and it's essential services such as social protection, health care, education and economic and social opportunities.
+* It is a customisable open source solution designed for civil registration and it's essential services such as social protection, health care, education and economic and social opportunities.
 
 
 
