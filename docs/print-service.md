@@ -4,7 +4,7 @@ This document explains the **Print Service** and other associated components alo
 
 ## Sign Up
 
-Are you a print partner looking to integrate with MOSIP? Feel free to [Sign Up] here!
+Are you a print partner looking to integrate with MOSIP? Feel free to [Sign Up]() here!
 
 ## Overview
 
