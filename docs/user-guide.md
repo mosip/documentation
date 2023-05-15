@@ -5,16 +5,17 @@ This guide will help the partners in using the Compliance Took Kit portal.
 Below are simple steps to use this portal:
 
 1. The partners using the compliance tool kit should be registered partners in the system.
-2. Login into CTK with the same credentials.
-3. Create a project of type SBI / SDK.
-4. Create a collection by selecting the test cases that you want to test.
-5. Provide the necessary details to connect to your device / SDK service.
-6. Execute the Test Run by running the collection.
-7. For executing each test case, follow the instructions on the screen.
-8. Once the entire collection is run, the results of the number of test cases passed or failed will be displayed.
-9. You can see all the Test Run details as well. For example, the request sent to SBI, the response received from SBI, validations performed on the response and the result.
-10. Test runs previously executed will be available in the Test Run history.
-11. More collections can be created as per the test cases required.
+2. Login into CTK with the same credentials. 
+3. Partner can also select their preferred language while logging-in. 
+4. Create a project of type SBI / SDK. 
+5. Create a collection by selecting the test cases that you want to test.
+6. Provide the necessary details to connect to your device / SDK service.
+7. Execute the Test Run by running the collection.
+8. For executing each test case, follow the instructions on the screen.
+9. Once the entire collection is run, the results of the number of test cases passed or failed will be displayed.
+10. You can see all the Test Run details as well. For example, the request sent to SBI, the response received from SBI, validations performed on the response and the result.
+11. Test runs previously executed will be available in the Test Run history.
+12. More collections can be created as per the test cases required.
 
 {% embed url="https://www.youtube.com/playlist?list=PLJH-POb_55z8YYS_qAk_QNBQeiQ2VrtZD" %}
 
@@ -23,6 +24,11 @@ Below are simple steps to use this portal:
 The partners using the compliance tool kit should be registered in the system. Registered partners can log in to the compliance tool kit with the same credentials as they used to register themselves into the [Partner Management Portal](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-portal).
 
 The partner needs to enter the registered username or e-mail and password to log in.
+
+The partner can select the language of their preference from the dropdown in the top-right corner of the screen. Thereafter, the application is displayed in the selected language. By default, CTK supports the following languages:
+* English
+* French
+* Arabic
 
 ![CTK login page](\_images/ctk-toolkit-login.png)
 
