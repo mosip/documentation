@@ -8,8 +8,8 @@ On successful login, a dashboard is displayed with the details of the existing S
 
 To test the SBI implementation, partner can create collection of testcases and run them following the same steps as in the CTK web application.
 
-To know more, please watch the video below.
+_Video coming up soon!_
 
-<embed link-   >
+
 
 
