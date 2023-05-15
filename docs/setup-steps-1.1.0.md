@@ -32,16 +32,19 @@ CTK should be deployed with the required dockers.
 1. Ensure that in the `kernel-default.properties`, the value of `mosip-toolkit-client` and `mosip-toolkit-android-client` is set in `auth.server.admin.allowed.audience`. If this was not set by default, then set it and restart `kernel-auth-service` and `compliance-toolkit-service`.
 
 2. Ensure that in `compliance-toolkit-default.properties`, CORS is enabled to allow access to `mosip-toolkit-android-client`:
-   `mosip.security.cors-enable=true`
-   `mosip.security.origins=http://localhost`
-   `auth.server.admin.allowed.audience=mosip-toolkit-client,mosip-toolkit-android-client`
+
+   ```
+    mosip.security.cors-enable=true
+    mosip.security.origins=http://localhost
+    auth.server.admin.allowed.audience=mosip-toolkit-client,mosip-toolkit-android-client
+   ```
 
 3. Check if the roles given to `mosip-pms-client` match with any of the roles for the following config property: 
        ` mosip.role.keymanager.postverifycertificatetrust=XXX`
        
-This config property is available [here](https://github.com/mosip/mosip-config/blob/${ENV_NAME}/kernel-default.properties).
+   This config property is available [here](https://github.com/mosip/mosip-config/blob/${ENV_NAME}/kernel-default.properties).
 
-_For Example_:
+   _For Example_:
     
     mosip.role.keymanager.postverifycertificatetrust=`ZONAL_ADMIN`, `GLOBAL_ADMIN`, `PMS_ADMIN`, `PMS_USER`
 
@@ -52,49 +55,49 @@ _For Example_:
 5. From the 1.0.0 version onwards, we need to generate an encryption key for CTK.
 Create a new app id by directly inserting the below row.
 
-`INSERT INTO keymgr.key_policy_def(app_id, key_validity_duration, is_active,pre_expire_days, access_allowed, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes) VALUES ('COMPLIANCE_TOOLKIT', 1095, true, 60, 'NA', 'mosipadmin', '2022-11-28 09:00:40.822625', null, null, false, null);`
+   `INSERT INTO keymgr.key_policy_def(app_id, key_validity_duration, is_active,pre_expire_days, access_allowed, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes) VALUES ('COMPLIANCE_TOOLKIT', 1095, true, 60, 'NA', 'mosipadmin', '2022-11-28 09:00:40.822625', null, null, false, null);`
 
-Get the client token using auth manager swagger by calling the endpoint.     
-`https://api-internal.dev.mosip.net/v1/authmanager/authenticate/clientidsecretkey`
+   Get the client token using auth manager swagger by calling the endpoint.     
+   `https://api-internal.dev.mosip.net/v1/authmanager/authenticate/clientidsecretkey`
 
-```
-{
-    "id": "string",
-    "version": "string",
-    "requesttime": "2022-12-22T07:13:35.010Z",
-    "metadata": {},
-    "request": {
-        "clientId": " mosip-pms-client ",
-        "secretKey": " XXXXXX ",
-        "appId": " regproc "
+   ```
+   {
+       "id": "string",
+      "version": "string",
+      "requesttime": "2022-12-22T07:13:35.010Z",
+      "metadata": {},
+       "request": {
+          "clientId": " mosip-pms-client ",
+         "secretKey": " XXXXXX ",
+         "appId": " regproc "
+      }
     }
-    }
-```
+   ```
 
-Use `generateMasterKey` endpoint to generate module-level certificate.
+   Use `generateMasterKey` endpoint to generate module-level certificate.
 
-![](\_images/ctk-generateMasterkey.png)
+   ![](\_images/ctk-generateMasterkey.png)
 
-5. Directly download the certificate via key manager swagger `getCertificate` with App Id as `COMPLIANCE_TOOLKIT` and Ref Id as `COMP-FIR`.
+6. Directly download the certificate via key manager swagger `getCertificate` with App Id as `COMPLIANCE_TOOLKIT` and Ref Id as `COMP-FIR`.
 
-![](\_images/ctk-getCertificate.png)
+   ![](\_images/ctk-getCertificate.png)
 
-6. This certificate is to be used by **SBI** devices as the encryption key.
+7. This certificate is to be used by **SBI** devices as the encryption key.
 
-For Mock **MDS**, when running in **Auth** mode, update the below values in the `application.properties` file.
+   For Mock **MDS**, when running in **Auth** mode, update the below values in the `application.properties` file.
 
     ```
     mosip.auth.appid=regproc
     mosip.auth.clientid=mosip-pms-client
     mosip.auth.secretkey=XXXXXXXXXXXXXXXX
-    mosip.auth.server.url=https://api-internal.dev.mosip.net/v1/authmanager/authenticate/clientidsecretkey 
-    mosip.ida.server.url=https://api-internal.dev.mosip.net/v1/keymanager/getCertificate?applicationId=COMPLIANCE_TOOLKIT&referenceId=COMP-FIR
+    mosip.auth.server.url=https://api-internal.${env}.mosip.net/v1/authmanager/authenticate/clientidsecretkey 
+    mosip.ida.server.url=https://api-internal.${env}.mosip.net/v1/keymanager/getCertificate?applicationId=COMPLIANCE_TOOLKIT&referenceId=COMP-FIR
     ```
 
-7. For real MDS/SBI, you must communicate to the vendors to download the new encryption key from UI and give us an updated **SBI** which uses this encryption key.
-It can be downloaded for **Auth SBI** projects from UI.
+8. For real MDS/SBI, the vendors can download the new encryption key from the UI and test with the updated **SBI** which uses this encryption key.
+   It can be downloaded for **Auth SBI** projects from UI.
 
-![](_images/ctk-encryptionkey.png)
+   ![](_images/ctk-encryptionkey.png)
 
 ### Steps to load testdata, schemas and testcases
 
@@ -177,8 +180,8 @@ _Note_: _There is no need to upload `compliance_test_definitions_sbi.json` and `
 * Once all above steps are done, you can trigger the Android APK build for your env
 https://github.com/mosip/mosip-compliance-toolkit-ui/actions/workflows/android.yml
 
-* You may need GitHub repo write access.
+* You may need GitHub repository write access.
 
-* Add values for the URL’s according to your deployment env
+* Add values for the URL’s according to your deployment env.
 
 ![](\_images/ctk-android-apk.png)
