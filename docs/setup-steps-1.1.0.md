@@ -107,7 +107,7 @@ Create a new app id by directly inserting the below row.
 
 ![](\_images/ctk-resources-folder.png)
 
-#### Steps to load testdata and schemas in MinIO directly
+#### Steps to load testdata and schemas directly in MinIO 
 
 1\. Log in to MinIO from the browser.
 
