@@ -13,11 +13,11 @@ Along with the resource and data management, the admin can generate master keys,
 
 To learn more, refer the videos below!
 
-Session1
+**Session1**
 
 {% embed url="https://www.youtube.com/watch?v=v6KjyVoNcqI&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=1" %}
 
-Session2
+**Session2**
 
 {% embed url="https://www.youtube.com/watch?v=v6KjyVoNcqI&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=2" %}
 
