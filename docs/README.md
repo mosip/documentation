@@ -6,7 +6,7 @@ Currently, CTK supports testing of compliance with the below specifications:
 
 1. **SBI**: Secure Biometric Interface (SBI) is used to interface with biometric devices. Device partners are required to build a software layer that provides a unified communication protocol for all biometric capture use cases. The specifications that should be followed are defined as Secure Biometrics Interface (SBI) specs. The compliance tool kit ensures that the interface built by the device provider follows the specs, and a certain level of security and integrity is defined in the SBI spec. The device hardware security features are not tested as part of this toolkit.
 
-CTK also supports the testing with [Android SBI specifications](https://docs.mosip.io/1.1.5/biometrics/mosip-device-service-specification#android-sbi-specification).
+  CTK also supports the testing with [Android SBI specifications](https://docs.mosip.io/1.1.5/biometrics/mosip-device-service-specification#android-sbi-specification).
 
 2. **SDK**: Biometric Service Providers (BSPs) provide SDK implementation which supports quality check, match, extraction, and conversion of biometrics. MOSIP defines an [iBioAPI](https://github.com/mosip/commons/blob/master/kernel/kernel-biometrics-api/src/main/java/io/mosip/kernel/biometrics/spi/IBioApi.java) as the specification for this SDK implementation. Biometric SDK providers are also required to integrate this [HTTP service](https://github.com/mosip/biosdk-services/tree/release-1.2.0) into their solution. This allows running the SDK as an independent HTTP service. The compliance tool kit would make sure that these interfaces are as per the MOSIP-defined specifications for smooth interaction.
 
