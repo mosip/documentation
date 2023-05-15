@@ -27,7 +27,7 @@ CTK should be deployed with the required dockers.
 2. Steps to load testdata, schemas and testcases
 3. Steps to generate Android APK
 
-### Configuartion checks:
+### Configuartion checks
 
 1. Ensure that in the `kernel-default.properties`, the value of `mosip-toolkit-client` and `mosip-toolkit-android-client` is set in `auth.server.admin.allowed.audience`. If this was not set by default, then set it and restart `kernel-auth-service` and `compliance-toolkit-service`.
 
@@ -174,11 +174,11 @@ _Note_: _There is no need to upload `compliance_test_definitions_sbi.json` and `
 
 ### Steps to generate Android APK
 
-Once all above steps are done, you can trigger the Android APK build for your env
+* Once all above steps are done, you can trigger the Android APK build for your env
 https://github.com/mosip/mosip-compliance-toolkit-ui/actions/workflows/android.yml
 
-You may need GitHub repo write access.
+* You may need GitHub repo write access.
 
-Add values for the URL’s according to your deployment env
+* Add values for the URL’s according to your deployment env
 
-image.png
+![](\_images/ctk-android-apk.png)
