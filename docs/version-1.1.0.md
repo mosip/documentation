@@ -8,19 +8,21 @@
 
 ## Overview
 
-The 1.1.0 version of CTK includes two new features:
+The 1.1.0 version of CTK includes the two new features:
 1. Multiple Language support in CTK
 2. Android SBI testing
 
 **Multiple Language support in CTK**
+
 * CTK will now support the application in multiple languages.
 * While logging in, the partner can select a language from the dropdown.
-* Therafter the application will be displayed in the selected language.
-* By default CTK will support 3 languages English, French and Arabic.
+* Therafter, the application will be displayed in the selected language.
+* By default, CTK will support three languages- English, French and Arabic.
 
 
 **Android SBI testing**
-CTK will now support Android SBI testing using Android CTK app.
+
+CTK will now support Android SBI testing using the Android CTK App.
 
 ## Features Covered
 
@@ -83,14 +85,14 @@ The detailed list of the test cases for SBI and SDK in the 1.1.0 version of the 
 * ClamAV: clamav/clamav: latest
 * MinIO
 
-Post installation please follow the setup steps available [here](setup-steps-1.1.0.md).
+Post installation, follow the setup steps available [here](setup-steps-1.1.0.md).
 
 ## Documentation
 
 * [Feature Documentation](./)
 * [Compliance Tool Kit User Guide](user-guide.md)
-* [Android User Guide]() 
 * [QA Report](https://docs.mosip.io/compliance-tool-kit/versions/version-1.1.0/test-report-1.1.0)
 * [Videos](https://www.youtube.com/playlist?list=PLJH-POb\_55z8YYS\_qAk\_QNBQeiQ2VrtZD)
+* [Android CTK App demo](https://www.youtube.com/watch?v=IWujTSNH3d8)
 
 
