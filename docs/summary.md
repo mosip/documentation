@@ -9,7 +9,7 @@
   * [Version 0.0.9](version-0.0.9.md)
     * [Test Report](test-report-0.0.9.md)
 * [User Guide](user-guide.md)
-* [Android User Guide](android-user-guide.md)
+* [Android App User Guide](android-user-guide.md)
 * [How to Guides](how-to-guides/README.md)
   * [How to set up CTK](how-to-guides/how-to-set-up-ctk/README.md)
     * [1.1.0](setup-steps-1.1.0.md)
