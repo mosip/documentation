@@ -1,4 +1,4 @@
-# ANDROID USER GUIDE
+# ANDROID APP USER GUIDE
 
 CTK Android App can be used to test the [Android SBI specifications](https://docs.mosip.io/1.1.5/biometrics/mosip-device-service-specification#android-sbi-specification). 
 
