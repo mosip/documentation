@@ -2,8 +2,8 @@
 
 * [Overview](README.md)
 * [Versions](versions.md)
-  * [Version 1.0.0](version-1.0.0.md)
-    * [Test Report](test-report-1.0.0.md)
+  * [Version 1.1.0](version-1.1.0.md)
+    * [Test Report](test-report-1.1.0.md)
   * [Version 1.0.0](version-1.0.0.md)
     * [Test Report](test-report-1.0.0.md)
   * [Version 0.0.9](version-0.0.9.md)
