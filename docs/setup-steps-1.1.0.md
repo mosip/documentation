@@ -27,7 +27,7 @@ CTK should be deployed with the required dockers.
 2. Steps to load testdata, schemas and testcases
 3. Steps to generate Android APK
 
-### Configuartion checks
+### Configuration checks
 
 1. Ensure that in the `kernel-default.properties`, the value of `mosip-toolkit-client` and `mosip-toolkit-android-client` is set in `auth.server.admin.allowed.audience`. If this was not set by default, then set it and restart `kernel-auth-service` and `compliance-toolkit-service`.
 
@@ -121,7 +121,7 @@ _Note_: _There is no need to upload `compliance_test_definitions_sbi.json` and `
 
 5\. Restart the CTK service after adding new files in MinIO.
 
-**Alernately swagger endpoint can also be used to upload data in Minio. In this case there is no need to restart CTK services.**
+   **Alernately swagger endpoint can also be used to upload data in Minio. In this case there is no need to restart CTK services.**
 
 
 #### Steps to load testdata and schemas in MinIO directly using Swagger
@@ -177,7 +177,7 @@ _Note_: _There is no need to upload `compliance_test_definitions_sbi.json` and `
 
 ### Steps to generate Android APK
 
-* Once all above steps are done, you can trigger the Android APK build for your env
+* Once all the steps mentioned above are completed, you can trigger the Android APK build for your env
 https://github.com/mosip/mosip-compliance-toolkit-ui/actions/workflows/android.yml
 
 * You may need GitHub repository write access.
