@@ -184,4 +184,4 @@ https://github.com/mosip/mosip-compliance-toolkit-ui/actions/workflows/android.y
 
 * Add values for the URL’s according to your deployment env.
 
-![](\_images/ctk-android-apk.png)
+![](\_images/ctk-android-apk1.png)
