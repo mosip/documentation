@@ -91,8 +91,9 @@ Post installation, follow the setup steps available [here](setup-steps-1.1.0.md)
 
 * [Feature Documentation](./)
 * [Compliance Tool Kit User Guide](user-guide.md)
+* [Android App user Guide](android-app-user-guide.md)
 * [QA Report](https://docs.mosip.io/compliance-tool-kit/versions/version-1.1.0/test-report-1.1.0)
 * [Videos](https://www.youtube.com/playlist?list=PLJH-POb\_55z8YYS\_qAk\_QNBQeiQ2VrtZD)
-* [Android CTK App demo](https://www.youtube.com/watch?v=IWujTSNH3d8)
+
 
 
