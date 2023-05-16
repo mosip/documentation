@@ -4,6 +4,8 @@
 
 **Upgrade From**: CTK 1.0.0
 
+**Support**: Stable Release
+
 **Release Date**: 20 May, 2023
 
 ## Overview
