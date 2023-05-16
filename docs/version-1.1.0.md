@@ -6,7 +6,7 @@
 
 **Support**: Stable Release
 
-**Release Date**: 20 May, 2023
+**Release Date**: 19 May, 2023
 
 ## Overview
 
