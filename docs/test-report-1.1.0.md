@@ -9,7 +9,7 @@ The Android Compliance tool kit App v1.1.0 was tested with the below specificati
 
 * Secure Biometric Interface (SBI)
 
-The windows compliance tool kit was tested with the below specifications:
+The Windows Compliance Tool kit was tested with the below specifications:
 
 Secure Biometric Interface (SBI)
  > SDK
@@ -98,11 +98,67 @@ The Windows CTK v1.1.0 with `MOSIP windows Mock SBI` has been tested for complia
 The SDK implementation has been tested to support quality check, match, extraction, and conversion of biometrics. Test cases have been tested with MOSIP mock SDK.
 
 | **Scenarios**     | **With Mock SDK** | 
-| ----------------- | ---------- | 
-| Total             |        | 
-| Passed            |          | 
-| Pending           |           | 
-| Failed            |           | 
-| **Test Rate (%)** | 100%       | 
-| **Pass Rate (%)** | 100%       |
+| ----------------- | ----------- | 
+| Total             |  76           | 
+| Passed            |   65          | 
+| Pending           |    0        | 
+| Failed            |  0           | 
+| N/A          |  11           | 
+| **Test Rate (%)** | 86%        | 
+| **Pass Rate (%)** | 86%        |
+
+**Out of scope**: Segmentation testing and Real SDK testing
+
+### Known Issues 
+
+
+| **Issue**         | **Description** | 
+| ----------------- | ----------- | 
+| MOSIP-26898      |	After login to CTK android app, the previous browser tab is not killed.|
+| MOSIP-26762      |	Newly registered user not landing into CTK android home page (intermittent issue)|
+| MOSIP-27044      |	In CTK Android app, UI elements are overlapping with each other.|
+| MOSIP-27257      |	While initial launch, Android mock SBI is not landing into home page.|
+| MOSIP-27304      |	In Android CTK -'Encryption Key' button is not appearing for Auth projects (Workaround: Partners can download 'Encryption Key' from web application)|
+| MOSIP-27391      |	CTK - UI and Buttons not aligned properly|
+| MOSIP-27440      |CTK UI Reliability bugs reported in SonarCloud|
+
+### Docker version (required for Compliance Test Kit)
+
+mosipqa/compliance-toolkit-service:1.1.0
+mosipqa/compliance-toolkit-ui:1.1.0
+mosipqa/postgres-init:1.2.0.1
+mosipid/postgres-init:1.2.0.1-B2
+mosipid/config-server:1.1.2
+mosipid/kernel-auditmanager-service:1.2.0.1-B1
+mosipid/kernel-auth-service:1.2.0.1-B2
+mosipqa/authentication-service:1.2.0.1
+mosipid/kernel-keymanager-service:1.2.0.1-B2
+mosipid/keycloak-init:1.2.0.1-B2
+mosipqa/partner-management-service:1.2.0.1
+mosipqa/partner-onboarder:develop
+mosipid/kernel-notification-service:1.2.0.1-B1
+mosipid/keycloak-init:1.2.0.1-B2
+mosipid/mosip-keycloak:16.1.1-debian-10-r85
+mosipqa/keycloak-init:develop
+
+## Sonar Report
+
+#### MOSIP CTK Service
+
+![](\_images/sonar-ctk-service.png)
+
+#### MOSIP CTK UI Repository
+
+![](\_images/sonar-ctk-ui.png)
+
+
+
+
+
+
+
+
+
+
+
 
