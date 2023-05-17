@@ -1,4 +1,4 @@
-# TEST REPORT
+# Test Report
 
 The scope of testing revolved around verifying the compliance of the product as per the specifications published by MOSIP using the below devices:
 
@@ -124,22 +124,37 @@ The SDK implementation has been tested to support quality check, match, extracti
 
 ### Docker version (required for Compliance Test Kit)
 
-mosipqa/compliance-toolkit-service:1.1.0
-mosipqa/compliance-toolkit-ui:1.1.0
-mosipqa/postgres-init:1.2.0.1
-mosipid/postgres-init:1.2.0.1-B2
-mosipid/config-server:1.1.2
-mosipid/kernel-auditmanager-service:1.2.0.1-B1
+mosipqa/compliance-toolkit-service: 1.1.0
+
+mosipqa/compliance-toolkit-ui: 1.1.0
+
+mosipqa/postgres-init: 1.2.0.1
+
+mosipid/postgres-init :1.2.0.1-B2
+
+mosipid/config-server: 1.1.2
+
+mosipid/kernel-auditmanager-service: 1.2.0.1-B1
+
 mosipid/kernel-auth-service:1.2.0.1-B2
-mosipqa/authentication-service:1.2.0.1
-mosipid/kernel-keymanager-service:1.2.0.1-B2
-mosipid/keycloak-init:1.2.0.1-B2
-mosipqa/partner-management-service:1.2.0.1
-mosipqa/partner-onboarder:develop
-mosipid/kernel-notification-service:1.2.0.1-B1
-mosipid/keycloak-init:1.2.0.1-B2
-mosipid/mosip-keycloak:16.1.1-debian-10-r85
-mosipqa/keycloak-init:develop
+
+mosipqa/authentication-service: 1.2.0.1
+
+mosipid/kernel-keymanager-service: 1.2.0.1-B2
+
+mosipid/keycloak-init: 1.2.0.1-B2
+
+mosipqa/partner-management-service: 1.2.0.1
+
+mosipqa/partner-onboarder: develop
+
+mosipid/kernel-notification-service: 1.2.0.1-B1
+
+mosipid/keycloak-init: 1.2.0.1-B2
+
+mosipid/mosip-keycloak: 16.1.1-debian-10-r85
+
+mosipqa/keycloak-init: develop
 
 ## Sonar Report
 
