@@ -2,8 +2,6 @@
 
 **Release Name**: Inji 0.9.0 (Beta)
 
-**Upgrade From**: 0.8.0
-
 **Release Date**: 14th April, 2023
 
 ## Overview
