@@ -17,6 +17,7 @@
     * [0.0.9](setup-steps-0.0.9.md)
   * [How to add more test cases](test-cases.md)
   * [How to set up SDK for testing](sdk-setup.md)
+  * [How to make CTK publicly available](ctk-public-setup.md)
   * [CTK Validators](ctk-validators.md)
 * [License](license.md)
 
