@@ -1,6 +1,14 @@
 # MOSIP V3 Installation
 
-**Version**: 1.2.0.1-B2  (Latest stable release)
+**Version**: 1.2.0.1-B3  (Latest stable release)
+
+* Release date: 14th April 2023
+
+* [Release notes](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1-b3)
+
+* [On-Prem Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines)
+
+**Version**: 1.2.0.1-B2 
 
 * Release date: 8-Jan 2023
 
