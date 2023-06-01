@@ -14,7 +14,7 @@ MOSIP has introduced the Print Service as a reference implementation to print th
 
 Below is an entity relationship diagram highlighting the relationship of Print Service with other modules.
 
-![](\_images/print-service.png)
+![](\_images/print-service-white.png)
 
 1. Receives events from [WebSub](https://docs.mosip.io/1.2.0/modules/websub).
 2. Fetches [templates](https://github.com/mosip/print/blob/release-1.2.0.1/docs/configuration.md#template) from Masterdata.
@@ -27,7 +27,7 @@ To know more about the different configurations, steps for build and deployment,
 
 ## Design
 
-![](\_images/print-service-design.png)
+![](\_images/print-service-design-white.png)
 
 
 **MOSIP Server** : All the components that are responsible for generating and sharing credentials resides inside the MOSIP server. Registration requests or updates are sent to the MOSIP server for processing.  The MOSIP server after successfully processing the registration data generates a Unique Identification Number (UIN) which is unique to every resident of a country.   
