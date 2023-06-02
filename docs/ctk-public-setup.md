@@ -52,7 +52,7 @@ Add the below mentioned domains in `server_name` section of pubic nginx server.
 
 2. Update below mentioned istio virtualservice to add public gateway in spec.gateways:
 
-   ![](_images/ctk-istio.png)
+ ![](_images/ctk-istio.png)
 
     * partnermanager
     * policymanager
