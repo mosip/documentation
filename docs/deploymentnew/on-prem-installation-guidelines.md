@@ -848,14 +848,4 @@ cd $INFRA_ROOT/deployment/v3/mosip/all
 
 Check detailed [MOSIP Modules Deployment](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-modules-deployment) installation steps.
 
-### API Testrig
 
-MOSIP’s successful deployment can be verified by comparing the results of API testrig with testrig benchmark.
-
-```
-cd $INFRA_ROOT/deployment/v3/apitestrig
-./install.sh
-```
-
-* When prompted, input the hour of the day to execute the API-testrig.
-* Daily API testrig cron jon will be executed at the very opted hour of the day.
