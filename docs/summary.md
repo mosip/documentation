@@ -90,6 +90,7 @@
   * [V2 installation](deploymentnew/v2-installer.md)
   * [V3 installation](deploymentnew/v3-installation.md)
     * [On-Prem Installation Guidelines](deploymentnew/on-prem-installation-guidelines.md)
+    * [Testrig](deploymentnew/testrig.md)
     * [MOSIP External Dependencies](deploymentnew/mosip-external-dependencies.md)
     * [MOSIP Modules Deployment](deploymentnew/mosip-modules-deployment.md)
   * [Helm Charts](helm-charts.md)
