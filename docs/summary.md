@@ -1,6 +1,20 @@
 # Table of contents
 
 * [Home](README.md)
-* [Secure Biometric Interface]
-* []
+* [Secure Biometric Interface](sbi/sbi.md)
+    * [v0.9.5](sbi/0.9.5.md)
+* [Biometric SDK](sdk/bio-sdk.md)
+    * [v0.9.0](sdk/v0.9.5.md)
+* [ABIS API](abis/abis-api.md)
+    * [v0.9.0](abis/v0.9.0.md)
+* [ID Auth API](ida/id-auth-api.md)
+    * [v1.0.0](v1.0.0.md)
+* [Manual Adjudication](ma/manual-adjudication.md)
+    * [v1.0.0](ma/v1.0.0.md)
+* [Manual Verification](mv/manual-verification.md)
+    * [v1.0.0](mv/v1.0.0.md)
+* Biometric Specification
+    * [Fingerprint](bio/fingerprint.md)
+    * [Iris](bio/iris.md)
+    * [Face](bio/face.md)
 * [License](license.md)
