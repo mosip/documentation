@@ -1,2 +1,0 @@
-# Biometric Specification
-
