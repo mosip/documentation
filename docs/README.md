@@ -1,3 +1,4 @@
+<div style="text-align: justify">
 # Overview 
 
 MOSIP (Modular Open Source Identity Platform) is an open-source platform that provides the foundational infrastructure for implementing digital Identity systems.
@@ -27,3 +28,5 @@ A few of the specifications provided by MOSIP are listed below:
 5. ID Authentication APIs for relying parties
 6. Biometric Specifications for biometric data in MOSIP
 7. Hardware Security Module Specifications to connect with HSM solutions
+
+</div>
