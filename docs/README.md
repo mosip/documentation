@@ -1,4 +1,5 @@
 <div style="text-align: justify">
+
 # Overview 
 
 MOSIP (Modular Open Source Identity Platform) is an open-source platform that provides the foundational infrastructure for implementing digital Identity systems.
