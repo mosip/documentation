@@ -4,7 +4,7 @@
 * [Secure Biometric Interface](sbi/sbi.md)
   * [v0.9.5](sbi/v0.9.5.md)
 * [Biometric SDK](sdk/bio-sdk.md)
-  * [v0.9.0](bio-sdk/v0.9.0.md)
+  * [v0.9.0](sdk/v0.9.0.md)
 * [ABIS API](abis/abis-api.md)
   * [v0.9.0](abis/v0.9.0.md)
 * [ID Auth API](ida/id-auth-api.md)
