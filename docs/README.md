@@ -1,11 +1,12 @@
 # Overview 
-<div style="text-align: justify">MOSIP (Modular Open Source Identity Platform) is an open-source platform that provides the foundational infrastructure for implementing digital Identity systems.</div>
 
-<div style="text-align: justify">As an open platform for digital Identity, MOSIP partners with multiple service providers who offer wide-ranging products and solutions to countries and other user organizations.</div>
+MOSIP (Modular Open Source Identity Platform) is an open-source platform that provides the foundational infrastructure for implementing digital Identity systems.
 
-<div style="text-align: justify">MOSIP provides a comprehensive set of specifications defining how various partners in their ecosystem can connect with MOSIP and work inter-operably. It aims to enable governments, organizations, and developers to build and deploy robust, scalable, and interoperable identity solutions.</div>
+As an open platform for digital Identity, MOSIP partners with multiple service providers who offer wide-ranging products and solutions to countries and other user organizations.
 
-<div style="text-align: justify">A set of specifications and procedures with respect to the operation, maintenance, and reliability of materials, products, methods, and services—are the backbone of the technical architecture of the ID system.</div>
+MOSIP provides a comprehensive set of specifications defining how various partners in their ecosystem can connect with MOSIP and work inter-operably. It aims to enable governments, organizations, and developers to build and deploy robust, scalable, and interoperable identity solutions.
+
+A set of specifications and procedures with respect to the operation, maintenance, and reliability of materials, products, methods, and services—are the backbone of the technical architecture of the ID system.
 
 
 ## Need for Specifications
