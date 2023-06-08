@@ -1,14 +1,12 @@
-<div style="text-align: justify">
-
 # Overview 
+<div style="text-align: justify">MOSIP (Modular Open Source Identity Platform) is an open-source platform that provides the foundational infrastructure for implementing digital Identity systems.</div>
 
-MOSIP (Modular Open Source Identity Platform) is an open-source platform that provides the foundational infrastructure for implementing digital Identity systems.
+<div style="text-align: justify">As an open platform for digital Identity, MOSIP partners with multiple service providers who offer wide-ranging products and solutions to countries and other user organizations.</div>
 
-As an open platform for digital Identity, MOSIP partners with multiple service providers who offer wide-ranging products and solutions to countries and other user organisations.
+<div style="text-align: justify">MOSIP provides a comprehensive set of specifications defining how various partners in their ecosystem can connect with MOSIP and work inter-operably. It aims to enable governments, organizations, and developers to build and deploy robust, scalable, and interoperable identity solutions.</div>
 
-MOSIP provides a comprehensive set of specifications defining how various partners in their ecosystem can connect with MOSIP and work inter-operably. It aims to enable governments, organisations, and developers to build and deploy robust, scalable, and interoperable identity solutions.
+<div style="text-align: justify">A set of specifications and procedures with respect to the operation, maintenance, and reliability of materials, products, methods, and services—are the backbone of the technical architecture of the ID system.</div>
 
-A set of specifications and procedures with respect to the operation, maintenance, and reliability of materials, products, methods, and services—are the backbone of the technical architecture of the ID system.
 
 ## Need for Specifications
 
@@ -29,5 +27,3 @@ A few of the specifications provided by MOSIP are listed below:
 5. ID Authentication APIs for relying parties
 6. Biometric Specifications for biometric data in MOSIP
 7. Hardware Security Module Specifications to connect with HSM solutions
-
-</div>
