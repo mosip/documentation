@@ -184,7 +184,7 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
 > Note:
 
 >  *  Increase the no. of peers above in case more than 30 wireguard client confs (-e PEERS=30) are needed.  
->  *  Change the directory to be mounted to wireguard docker in case needed. All your wireguard confs will be generated in the mounted directory (`-v /home/ubuntu/wireguard/config:/config`).
+>  *  Change the directory to be mounted to wireguard docker as per need. All your wireguard confs will be generated in the mounted directory (`-v /home/ubuntu/wireguard/config:/config`).
 
 #### Setup Wireguard Client in your PC
 
@@ -236,7 +236,7 @@ sudo systemctl status wg-quick@wg0
     *  SSH into the node to check password-less SSH
        `ssh -i ~/.ssh/<your private key> <remote-user>@<remote-ip>`
 > Note:
-> *  Make sure the permission for privkey.pem for ssh is set to 400.
+> *  Make sure the permission for `privkey.pem` for ssh is set to 400.
 
 * Run `env-check.yaml` to check if cluster nodes are fine and do not have known issues in it.
   * cd $K8\_ROOT/rancher/on-prem
