@@ -145,7 +145,10 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
 
       `ansible-playbook -i hosts.ini ports.yaml`
 
-> Note: These ports are only needed to be opened for sharing packets over UDP. Take necessary measure on firewall level so that the Wireguard server can be reachable on 51820/udp.\\
+> Note: 
+>  *  Permission of the pem files to access nodes should have 400 permission. `sudo chmod 400 ~/.ssh/privkey.pem`
+>  *  These ports are only needed to be opened for sharing packets over UDP.
+>  *  Take necessary measure on firewall level so that the Wireguard server can be reachable on 51820/udp.
 
 ```
 * execute docker.yml to install docker and add user to docker group:
@@ -180,8 +183,8 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
 
 > Note:
 
-* Increase the no. of peers above in case needed more than 30 wireguard client confs (`-e PEERS=30`).
-* Change the directory to be mounted to wireguard docker in case needed. All your wireguard confs will be generated in the mounted directory (`-v /home/ubuntu/wireguard/config:/config`).
+>  *  Increase the no. of peers above in case more than 30 wireguard client confs (-e PEERS=30) are needed.  
+>  *  Change the directory to be mounted to wireguard docker as per need. All your wireguard confs will be generated in the mounted directory (`-v /home/ubuntu/wireguard/config:/config`).
 
 #### Setup Wireguard Client in your PC
 
@@ -225,19 +228,22 @@ sudo systemctl status wg-quick@wg0
   * ansible
   * rke (version 1.3.10)
 * Setup Observation Cluster node VM’s as per the hardware and network requirements as mentioned above.
+* Setup passwordless SSH into the cluster nodes via pem keys. (Ignore if VM’s are accessible via pem’s).
+    *  Generate keys on your PC
+       `ssh-keygen -t rsa`
+    *  Copy the keys to remote observation node VM’s
+       `ssh-copy-id <remote-user>@<remote-ip>`
+    *  SSH into the node to check password-less SSH
+       `ssh -i ~/.ssh/<your private key> <remote-user>@<remote-ip>`
+> Note:
+> *  Make sure the permission for `privkey.pem` for ssh is set to 400.
+
 * Run `env-check.yaml` to check if cluster nodes are fine and do not have known issues in it.
   * cd $K8\_ROOT/rancher/on-prem
   * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for Observation k8 cluster nodes.
     * `cp hosts.ini.sample hosts.ini`
     * `ansible-playbook -i hosts.ini env-check.yaml`
     * This ansible checks if localhost mapping is already present in /etc/hosts file in all cluster nodes, if not it adds the same.
-* Setup passwordless SSH into the cluster nodes via pem keys. (Ignore if VM’s are accessible via pem’s).
-  * Generate keys on your PC
-    * `ssh-keygen -t rsa`
-  * Copy the keys to remote observation node VM’s
-    * `ssh-copy-id <remote-user>@<remote-ip>`
-  * SSH into the node to check password-less SSH
-    * `ssh -i ~/.ssh/<your private key> <remote-user>@<remote-ip>`
 * Open ports and install docker on Observation K8 Cluster node VM’s.
   * `cd $K8_ROOT/rancher/on-prem`
   * Ensure that `hosts.ini` is updated with nodal details.
