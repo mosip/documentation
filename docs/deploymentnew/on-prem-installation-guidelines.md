@@ -146,7 +146,7 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
       `ansible-playbook -i hosts.ini ports.yaml`
 
 > Note: 
->  *  Permission of the pem files to access nodes whoud have 400 permission. `sudo chmod 400 ~/.ssh/privkey.pem`
+>  *  Permission of the pem files to access nodes should have 400 permission. `sudo chmod 400 ~/.ssh/privkey.pem`
 >  *  These ports are only needed to be opened for sharing packets over UDP.
 >  *  Take necessary measure on firewall level so that the Wireguard server can be reachable on 51820/udp.
 
@@ -183,7 +183,7 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
 
 > Note:
 
->  *  Increase the no. of peers above in case needed more than 30 wireguard client confs (`-e PEERS=30`).  
+>  *  Increase the no. of peers above in case more than 30 wireguard client confs (-e PEERS=30) are needed.  
 >  *  Change the directory to be mounted to wireguard docker in case needed. All your wireguard confs will be generated in the mounted directory (`-v /home/ubuntu/wireguard/config:/config`).
 
 #### Setup Wireguard Client in your PC
