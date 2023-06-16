@@ -1,7 +1,8 @@
 # Table of contents
 
 * [Home](README.md)
-* [Overview](overview.md)
+* [Overview](overview/README.md)
+  * [Architecture](overview/architecture.md)
 * [ID Lifecycle Management](id-lifecycle-management.md)
   * [ID Schema](id-schema.md)
   * [Identifiers](identifiers.md)

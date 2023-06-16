@@ -10,27 +10,27 @@ Governments are exploring the development of multipurpose foundational ID system
 
 Functional IDs are the IDs that are used in specific use cases. By design, they are created having the final usecase in mind such as healthcare, finance, banking, insurance, social and civil registry etc. The Functional ID systems can leverage the Foundational ID system.
 
-![](\_images/foundational-id-systems.jpg)
+![](../\_images/foundational-id-systems.jpg)
 
 ## What is MOSIP?
 
 MOSIP is a robust, secure, open-source platform for building foundational identity systems. MOSIP is **configurable** and flexible to adapt to a country’s national ID requirements.
 
-![](\_images/mosip-features.jpg)
+![](../\_images/mosip-features.jpg)
 
 ## Privacy and security
 
-![](\_images/privacy-and-security.jpg)
+![](../\_images/privacy-and-security.jpg)
 
 ## MOSIP modules
 
-![](\_images/all-modules.jpg)
+![](../\_images/all-modules.jpg)
 
 ## MOSIP ecosystem
 
 MOSIP needs to work along with other ecosystem players to create a solution for a particular country.
 
-![](\_images/mosip-ecosystem.jpg)
+![](../\_images/mosip-ecosystem.jpg)
 
 ## MOSIP offerings
 
@@ -39,10 +39,10 @@ Key MOSIP offerings are:
 * ID Lifecycle Management
 * ID Authentication
 
-![](\_images/mosip-offerings.jpg)
+![](../\_images/mosip-offerings.jpg)
 
 ## Building a national ID system using MOSIP
 
 National ID systems can leverage MOSIP as the base platform and configure, customize, and extend it to build systems just the way needed. The image below depicts how MOSIP provides the base layer to build a national ID platform.
 
-![](\_images/layers.png)
+![](../\_images/layers.png)
