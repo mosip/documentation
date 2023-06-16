@@ -122,7 +122,7 @@
     * [IDA as authentication system](e-signet-ida-authentication-system.md)
     * [Client management with PMS](e-Signet-client-management-withPMS.md)
   * [Print Service Integration](print-service.md)
-     * [Verified Credentials](verified-credentials.md)
+    * [Verified Credentials](verified-credentials.md)
 * [API](https://mosip.github.io/documentation/1.2.0/1.2.0.html)
 * [Community](community/README.md)
   * [Contributions](contributions.md)
@@ -150,3 +150,4 @@
 * [MOSIP Documentation Style Guide](mosip-documentation-style-guide.md)
 * [Documentation for 1.1.5](https://docs.mosip.io/1.1.5)
 * [License](license.md)
+* [Community Calendar](community-calendar.md)

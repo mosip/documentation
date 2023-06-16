@@ -26,7 +26,7 @@ Below is the workflow that includes the registration process for an Auth/ Creden
 
 To view the details entered, click **Home** to see the dashboard.
 
-![](\_images/auth-partner-map-policy-page.PNG)
+![](<\_images/auth-partner-map-policy-page (1).PNG>)
 
 ### Policy Group mapping
 

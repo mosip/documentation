@@ -4,7 +4,7 @@
 
 This service creates request for credential issuance.
 
-![](\_images/id-repository-credential-request-generator-service.png)
+![](\_images/credential-request-generator.png)
 
 1. Keymanager encrypts/decrypts data.
 2. Auth Adapter integrates with Keycloak for authentication.
