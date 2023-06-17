@@ -1,6 +1,8 @@
 # Sandbox Details
 
-Are you a partner looking to integrate with MOSIP? Feel free to connect with us by filling out [this form](https://forms.gle/84wCQYQ7Bxdw718h9). This will allow you access to our sandbox to test and integrate.
+Are you a partner looking to integrate with MOSIP? Feel free to connect with us by filling out [this form](https://forms.gle/84wCQYQ7Bxdw718h9). This will help us guide you to a smooth integration in our sandbox environments.
+
+Below are our two sandbox environments that you could use.
 
 ## Collab
 
