@@ -1,8 +1,8 @@
 ---
 description: >-
-  Overview: This section enlists calendars pertinent to MOSIP's community
-  engagements in terms of meetings and events. Click on the specific calendar to
-  view & track them based on your area of interest.
+  This section enlists calendars pertinent to MOSIP's community engagements in
+  terms of meetings and events. Click on the specific calendar to view & track
+  them based on your area of interest.
 ---
 
 # Community Calendars

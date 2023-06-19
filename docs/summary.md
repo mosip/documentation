@@ -130,6 +130,7 @@
   * [Code Contributions](code-contributions.md)
   * [Code of Conduct](code-of-conduct.md)
   * [MOSIP Branching Strategy](mosip-branching-strategy.md)
+  * [Community Calendars](community/community-calendar.md)
 * [Releases](releases.md)
   * [1.2.0.1-B3 (Beta)](release/1.2.0.1/release-notes-1.2.0.1-b3.md)
     * [Test Report](release/1.2.0.1/test-report-1.2.0.1-b3.md)
@@ -151,4 +152,3 @@
 * [MOSIP Documentation Style Guide](mosip-documentation-style-guide.md)
 * [Documentation for 1.1.5](https://docs.mosip.io/1.1.5)
 * [License](license.md)
-* [Community Calendars](community-calendar.md)
