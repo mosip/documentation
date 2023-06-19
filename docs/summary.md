@@ -151,4 +151,4 @@
 * [MOSIP Documentation Style Guide](mosip-documentation-style-guide.md)
 * [Documentation for 1.1.5](https://docs.mosip.io/1.1.5)
 * [License](license.md)
-* [Community Calendar](community-calendar.md)
+* [Community Calendars](community-calendar.md)
