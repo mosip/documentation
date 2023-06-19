@@ -23,7 +23,7 @@ The list of validations performed for each of the modalities is given below.
 
 Refer ISO 19794-4:2011 Specifications.
 
-Sl.No	Name	Type	Description	Length	Valid values	Is this attribute mandatory?	Image verification
+|Sl.No|	Name  |	Type| Description	| Length	|Valid values	Is this attribute mandatory?	Image verification
 1.	Format Identifier	General Header	“FIR” – Finger Image Record	4 bytes	464952Hex (‘F’ ‘I’ ‘R’ 00Hex)	YES	
 2.	Version number	General Header	“020” in ASCII	4 bytes	30323000Hex (‘0’ ’2’ ’0’ 00Hex)	YES	
 3.	Length of record	General Header	Includes all finger/palm representations, 
