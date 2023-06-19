@@ -22,7 +22,7 @@ Let us understand the steps mentioned above with more details.
   
 For example: New locale “es” for Spanish language.
 
-
+![](_images/.png)
 
 * It will be added to the CTK login page once the changes have been saved.
 
