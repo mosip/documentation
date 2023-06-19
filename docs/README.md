@@ -10,6 +10,8 @@ Currently, CTK supports testing of compliance with the below specifications:
 
 2. **SDK**: Biometric Service Providers (BSPs) provide SDK implementation which supports quality check, match, extraction, and conversion of biometrics. MOSIP defines an [iBioAPI](https://github.com/mosip/commons/blob/master/kernel/kernel-biometrics-api/src/main/java/io/mosip/kernel/biometrics/spi/IBioApi.java) as the specification for this SDK implementation. Biometric SDK providers are also required to integrate this [HTTP service](https://github.com/mosip/biosdk-services/tree/release-1.2.0) into their solution. This allows running the SDK as an independent HTTP service. The compliance tool kit would make sure that these interfaces are as per the MOSIP-defined specifications for smooth interaction.
 
+3.  **ABIS**: To provide a unique identity for a resident, MOSIP has to ensure that the uniqueness of the resident's biometrics is maintained. To achieve this, MOSIP interfaces with an Automated Biometric Identification System (ABIS) to perform the de-duplication of a resident's biometric data. ABIS is used for 1:N deduplication. MOSIP interacts with ABIS only via message queues. The JSON format is used for all control messages in the queue. ABIS must comply with the interface defined in [ABIS API Specifications](https://docs.mosip.io/1.2.0/biometrics/abis-api).
+
 ### How does Compliance Tool Kit work?
 
 * To support compliance with the specifications, CTK has predefined test cases for each of the above specs.
@@ -18,6 +20,13 @@ Currently, CTK supports testing of compliance with the below specifications:
 * Partners can use CTK to run these test cases to check if their implementation adheres to the MOSIP’s specs or not.
 
 <figure><img src=".gitbook/assets/compliance-toolkit-flow-diagram.png" alt=""><figcaption></figcaption></figure>
+
+
+### Architecture
+
+The diagram below illustrates the architecture of Compliance Tool Kit.
+
+![](_images/ctk-architecture.png)
 
 ### Compliance Tool Kit Portal
 
