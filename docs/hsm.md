@@ -2,13 +2,13 @@
 
 ## Overview
 
-Hardware Security Module (HSM) is a highly secure physical device specifically designed and used for crypto processing and strong authentication. It encrypts, decrypts, creates, stores and manages digital keys, and is used for signing and authentication. HSMs may be accessed via PKCS11 and JCE interfaces.
+The Hardware Security Module (HSM) is a highly secure physical device specifically designed and used for cryptographic processing and strong authentication. It encrypts, decrypts, creates, stores, and manages digital keys and is used for signing and authentication. HSMs may be accessed via PKCS11 and JCE interfaces.
 
-To simulate HSM, the default sandbox installation uses [SoftHSM](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3/external/hsm/softhsm). SoftHSM supports PKCS11, but not JCE.
+To simulate HSM, the default sandbox installation uses [SoftHSM](https://github.com/mosip/mosip-infra/tree/release-1.2.0/deployment/v3/external/hsm/softhsm). SoftHSM supports PKCS11 but not JCE.
 
 ## JCE
 
-JCE is Java keystore class implementation that connects to HSMs. HSM vendors should provide JCE support.
+JCE is a Java keystore class implementation that connects to HSMs. HSM vendors should provide JCE support.
 
 ## Specification
 
@@ -26,10 +26,10 @@ MOSIP highly recommends the following specifications for HSM:
 10. Must support M of N multi-factor authentication.
 11. PKCS#11, OpenSSL, Java (JCE), Microsoft CAPI, and CNG
 12. Minimum dual Gigabit Ethernet ports (to service two network segments) and, optionally, 10G Fibre ports could be available.
-13. Asymmetric public key algorithms: RSA, Diffie-Hellman, DSA, KCDSA, ECDSA, ECDH, and ECIES.
+13. Asymmetric public key algorithms: RSA, Diffie-Hellman, DSA, KCDSA, ECDSA, ECDH, and ECIES
 14. Symmetric algorithms: AES, ARIA, CAST, HMAC, SEED, Triple DES, DUKPT, and BIP32
 15. Hash/message digest: SHA-1, SHA-2 (224, 256, 384, 512 bits).
-16. Full Suite B implementation with fully licensed ECC, including Brainpool, custom curves, and safe curves.
+16. Full Suite B implementation with fully licensed ECC, including Brainpool, custom curves, and safe curves
 17. Safety and environmental compliance
     1. Compliance with UL, CE, and FCC Part 15 Class B.
     2. Compliance with RoHS2 and WEEE.
@@ -39,14 +39,14 @@ MOSIP highly recommends the following specifications for HSM:
     3. Command Line Interface (CLI) or Graphical User Interface (GUI)
     4. Support the SNMP monitoring agent.
 19. Physical characteristics
-    1. Standard 1U 19-inch rack mount with integrated PIN ENTRY Device.
+    1. Standard 1U 19-inch rack mount with integrated PIN ENTRY Device or Smart Card or any equivalent security.
 20. Performance
     1. RSA 2048 signing performance: 10,000 per second.
     2. RSA 2048 key generation performance: 10+ per second.
-    3. RSA 2048 encryption/decryption performance: 20000+ per second.
-    4. RSA 4096 Signing performance - 5000 per second.
-    5. RSA 4096 Key generation performance - 2+ per second.
-    6. RSA 4096 encryption/decryption performance - 20000+ per second.
+    3. RSA 2048 encryption or decryption performance: 20000+ per second.
+    4. RSA 4096 signing performance: 2000+ per second.
+    5. RSA 4096 key generation performance: 2+ per second.
+    6. RSA 4096 encryption or decryption performance: 20000+ per second.
 21. Should be able to backup keys, replicate keys, and store keys in offline locker facilities for DR. The total capacity is in line with the total number of keys prescribed.
 22. Clustering minimum of 20 HSMs.
 23. Less than 30 seconds for key replication across the cluster.
