@@ -31,26 +31,26 @@ MOSIP highly recommends the following specifications for HSM:
 15. Hash/message digest: SHA-1, SHA-2 (224, 256, 384, 512 bits).
 16. Full Suite B implementation with fully licensed ECC, including Brainpool, custom curves, and safe curves.
 17. Safety and environmental compliance
-18. Compliance with UL, CE, and FCC Part 15 Class B.
-19. Compliance with RoHS2 and WEEE.
-20. Management and monitoring
-21. Support remote administration —including adding applications, updating firmware, and checking the status— from NoC.
-22. Syslog diagnostics support
-23. Command Line Interface (CLI) or Graphical User Interface (GUI)
-24. Support the SNMP monitoring agent.
-25. Physical characteristics
-26. Standard 1U 19-inch rack mount with integrated PIN ENTRY Device.
-27. Performance
-28. RSA 2048 signing performance: 10,000 per second.
-29. RSA 2048 key generation performance: 10+ per second.
-30. RSA 2048 encryption/decryption performance: 20000+ per second.
-31. RSA 4096 Signing performance - 5000 per second.
-32. RSA 4096 Key generation performance - 2+ per second.
-33. RSA 4096 encryption/decryption performance - 20000+ per second.
-34. Should be able to backup keys, replicate keys, and store keys in offline locker facilities for DR. The total capacity is in line with the total number of keys prescribed.
-35. Clustering minimum of 20 HSMs.
-36. Less than 30 seconds for key replication across the cluster.
-37. A minimum of 30 logical partitions and their license should be included in the cost.
+    1. Compliance with UL, CE, and FCC Part 15 Class B.
+    2. Compliance with RoHS2 and WEEE.
+18. Management and monitoring
+    1. Support remote administration —including adding applications, updating firmware, and checking the status— from NoC.
+    2. Syslog diagnostics support
+    3. Command Line Interface (CLI) or Graphical User Interface (GUI)
+    4. Support the SNMP monitoring agent.
+19. Physical characteristics
+    1. Standard 1U 19-inch rack mount with integrated PIN ENTRY Device.
+20. Performance
+    1. RSA 2048 signing performance: 10,000 per second.
+    2. RSA 2048 key generation performance: 10+ per second.
+    3. RSA 2048 encryption/decryption performance: 20000+ per second.
+    4. RSA 4096 Signing performance - 5000 per second.
+    5. RSA 4096 Key generation performance - 2+ per second.
+    6. RSA 4096 encryption/decryption performance - 20000+ per second.
+21. Should be able to backup keys, replicate keys, and store keys in offline locker facilities for DR. The total capacity is in line with the total number of keys prescribed.
+22. Clustering minimum of 20 HSMs.
+23. Less than 30 seconds for key replication across the cluster.
+24. A minimum of 30 logical partitions and their license should be included in the cost.
 
 ## Guide to Integrate HSM
 
