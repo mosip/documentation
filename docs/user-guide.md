@@ -7,9 +7,9 @@ Below are simple steps to use this portal:
 1. The partners using the compliance tool kit should be registered partners in the system.
 2. Login into CTK with the same credentials. 
 3. Partner can also select their preferred language while logging-in. 
-4. Create a project of type SBI / SDK. 
+4. Create a project of type SBI / SDK / ABIS. 
 5. Create a collection by selecting the test cases that you want to test.
-6. Provide the necessary details to connect to your device / SDK service.
+6. Provide the necessary details to connect to your device / SDK / ABIS service.
 7. Execute the Test Run by running the collection.
 8. For executing each test case, follow the instructions on the screen.
 9. Once the entire collection is run, the results of the number of test cases passed or failed will be displayed.
@@ -40,7 +40,7 @@ Once the partner logs into the compliance tool kit, they can view the `Project D
 
 ![CTK Project Dashboard](\_images/ctk-toolkit-dashboard.png)
 
-* `Biometric Data`: As a part of the CTK, there is an option for the partner to upload their test data which can be used to verify the partner’s software. Currently, in MOSIP, we can upload test data for an SDK.
+* `Biometric Data`: As a part of the CTK, there is an option for the partner to upload their test data which can be used to verify the partner’s software. Currently, in MOSIP, we can upload test data for an SDK and ABIS.
 
 ![CTK Biometric Data](\_images/ctk-toolkit-biometric-data.png)
 
@@ -82,7 +82,7 @@ The filter option in the dashboard will filter based on the name of the project,
 
 ![CTK create a Project](\_images/ctk-toolkit-create-project.png)
 
-* Enter a unique Project Name and select the Project Type. Currently, MOSIP supports only two types of projects: SBI and SDK
+* Enter a unique Project Name and select the Project Type. Currently, MOSIP supports three types of projects: SBI, SDK and ABIS
 * Based on the project type selected, the partner needs to enter the mandatory configurations before saving the project.
 * When the project type selected is SBI, the partner needs to provide/select the below configurations:
   * _Spec Version_: MOSIP SBI specification for which the SBI is built
@@ -110,6 +110,19 @@ The filter option in the dashboard will filter based on the name of the project,
   * Test Data: Input data needed for the run
 
 ![](\_images/ctk-creating-sdk-project.png)
+
+* When the project type selected is ABIS, the partner needs to provide the below configurations:
+  * Active MQ URL: URL where the ABIS is deployed
+  * Username: Username of Active MQ URL
+  * Password: Password of Active MQ URL
+  * Request Queue Name: Outbound Queue Name
+  * Response Queue Name: Inbound Queue Name
+  * Spec Version: MOSIP ABIS specification for which the ABIS is built
+  * Test Data: Input data needed for the run
+
+_Note_: ABIS partner can only create ABIS project.
+
+![](\_images/ctk-creating-abis-project.png)
 
 * Once the data is entered by the partner, they can click on the **Save Project** button to save the project.
 * Once the project is saved, a successful message is displayed and a popup appears on the screen which when closed redirects the partner to the project dashboard (home).
@@ -182,6 +195,8 @@ Filter in the dashboard should be able to perform filter based on the name of th
 * Based on the type selected, the partner needs to enter the respective mandatory details before saving the biometric data.
 * When the project type SDK is selected, the partner needs to provide the below details:
   * Purpose: The purpose of the test (SDK test type)
+  * Test Data: The test data is to be uploaded as a ZIP
+* When the project type ABIS is selected, the partner needs to provide the below details:
   * Test Data: The test data is to be uploaded as a ZIP
 
 The Test Data section has two options `Browse` and `Download Sample File`.
@@ -322,6 +337,31 @@ Before running the SDK collection, the partner can change the `Test Data` and th
 _Note_: For a test run, the partner can select their data or MOSIP’s default data. But let us assume that the partner chooses their data, but in the ZIP file, they have missed adding data for a particular test case, then the system should take MOSIP’s data for the test case' execution.
 
 ![](\_images/ctk-testdata-selecting.png)
+
+### Run an ABIS collection
+
+Before running the ABIS collection, the partner can change the `Username`, `Password`, `Queue names`, `Test Data` and the `Actice MQ URL` in the project settings
+
+![](\_images/ctk-abis-change-project-settings.png)
+
+* Click the `Run` button of the specific collection.
+* Once the run initiates with the proper URL, the execution should complete on its own and during the run, the partner can see:
+  * A progress bar with the percentage of test execution completed.
+  * A timer to show the time elapsed during the execution.
+  * Option to close or cancel the test run.
+
+![](\_images/ctk-abis-run.png)
+
+* Once the test execution is completed, the partner can see:
+  * A high-level result with the number of test cases executed- with the number of test cases failed and the number of test cases passed in the run.
+  * They can also see the time elapsed.
+  * They also have the option to view the detailed `Test Run` report.
+
+![](\_images/ctk-abis-run-result.png)
+
+_Note_: For a test run, the partner can select their data or MOSIP’s default data. But let us assume that the partner chooses their data, but in the ZIP file, they have missed adding data for a particular test case, then the system should take MOSIP’s data for the test case' execution.
+
+![](\_images/ctk-ABIS-testdata-selecting.png)
 
 ### View the run history of the collection
 
