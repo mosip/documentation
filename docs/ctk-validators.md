@@ -29,3 +29,11 @@
 | `ConvertDataValidator`| Validates the input BDB data present in the Probe. | |
 | `ConvertInvalidDataValidator`| Validates if input BDB data present in the Probe for the modality is valid. | |
 | `ConvertNoInputDataValidator`| Validates if no input BDB data present in the Probe. | |
+
+## ABIS Validators
+| Name   |      Description      |  Test with Mock ABIS |
+|-----------------|-------------------|---------------|
+| `SchemaValidator`| Validates if response has all mandatory attributes and they have allowed values. | |
+| `ExpectedFailureReasonValidator` | Validates the failure reason to match the expected value | |
+| `IdentifyDuplicateFoundValidator` | Validates the count of duplicates found by ABIS for the given referenceId | |
+| `ExpectedDuplicateCountValidator` | Validates the duplicates found to match the expected value | |
