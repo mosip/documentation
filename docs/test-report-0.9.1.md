@@ -35,12 +35,18 @@ For regression check, “MOSIP Test Rig” - an automation testing suite - which
 
 Verification is performed on various configurations as mentioned below:
 
-●	Default configuration - with 6 Lang 
+●	Default configuration (with 6 languages) 
+
    ○	English
+   
    ○	Arabic
+   
    ○	Filipino
+   
    ○	Hindi
+   
    ○	Tamil
+   
    ○	Kannada
 
 
