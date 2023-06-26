@@ -3,6 +3,8 @@
 ## Scope
 
 The scope of testing is to verify fitment to the specification from the perspective of:
+
+
 ●	Functionality  
 ●	Deployability  
 ●	Configurability  
