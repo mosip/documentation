@@ -7,24 +7,25 @@ Below is the sequence of installation of MOSIP modules and the sequence must be 
 3. [Artifactory](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/artifactory/README.md)
 4. [Key Manager](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/keymanager/README.md)
 5. [WebSub](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/websub/README.md)
-6. [Kernel](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/kernel/README.md)
-7. [Masterdata-loader]()
-8. [Biosdk server](https://github.com/mosip/mosip-infra/tree/1.2.0.1/deployment/v3/mosip/biosdk)
-9. [Packet Manager](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/packetmanager/README.md)
-10. [Datashare](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/datashare/README.md)
-11. [Pre-registration](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/prereg/README.md)
-12. [ID Repository](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/idrepo/README.md)
-13. [Partner Management](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/pms/README.md)
-14. [Mock ABIS](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/mock-abis/README.md)
-15. [Mock MV](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/mock-mv/README.md)
-16. [Registration Processor](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/regproc/README.md)
-17. [Admin](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/admin/README.md)
-18. [ID Authentication](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/ida/README.md)
-19. [Print](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/print/README.md)
-20. [Partner Onboarder](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/partner-onboarder/README.md)
-21. [MOSIP File Server](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/mosip-file-server/README.md)
-22. [Registration Client](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/regclient/README.md)
-23. [Resident Services](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/resident/README.md)
+6. [Mock SMTP](https://github.com/mosip/mosip-infra/blob/develop/deployment/v3/mosip/mock-smtp/README.md)
+7. [Kernel](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/kernel/README.md)
+8. [Masterdata-loader]()
+9. [Biosdk server](https://github.com/mosip/mosip-infra/tree/1.2.0.1/deployment/v3/mosip/biosdk)
+10. [Packet Manager](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/packetmanager/README.md)
+11. [Datashare](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/datashare/README.md)
+12. [Pre-registration](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/prereg/README.md)
+13. [ID Repository](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/idrepo/README.md)
+14. [Partner Management](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/pms/README.md)
+15. [Mock ABIS](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/mock-abis/README.md)
+16. [Mock MV](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/mock-mv/README.md)
+17. [Registration Processor](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/regproc/README.md)
+18. [Admin](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/admin/README.md)
+19. [ID Authentication](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/ida/README.md)
+20. [Print](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/print/README.md)
+21. [Partner Onboarder](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/partner-onboarder/README.md)
+22. [MOSIP File Server](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/mosip-file-server/README.md)
+23. [Registration Client](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/regclient/README.md)
+24. [Resident Services](https://github.com/mosip/mosip-infra/blob/1.2.0.1/deployment/v3/mosip/resident/README.md)
 
 ## Installation
 
@@ -60,6 +61,12 @@ cd $INFRA_ROOT/deployment/v3/mosip/keymanager
 
 ```
 cd $INFRA_ROOT/deployment/v3/mosip/websub
+./install.sh
+```
+
+* Mock-SMTP
+```
+cd $INFRA_ROOT/deployment/v3/mosip/mock-smtp
 ./install.sh
 ```
 
