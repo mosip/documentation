@@ -826,7 +826,7 @@ MOSIP uses [Rancher Fluentd](https://ranchermanager.docs.rancher.com/v2.0-v2.4/e
       * [04-insight.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/04-insight.ndjson) contains dashboards which show insights into MOSIP processes, like the number of UINs generated (total and per hr), the number of Biometric deduplications processed, number of packets uploaded etc, called `MOSIP Insight` dashboard.
       * [05-response-time.ndjson](on-prem-installation-guidelines.md) contains dashboards which show how quickly different MOSIP Services are responding to different APIs, over time, called `Response Time` dashboard.
 * Import dashboards:
-  * `cd K8_ROOT/logging/dashboard`
+  * `cd K8_ROOT/logging`
   * `./load_kibana_dashboards.sh ./dashboards <cluster-kube-config-file>`
 * View dashboards
 
