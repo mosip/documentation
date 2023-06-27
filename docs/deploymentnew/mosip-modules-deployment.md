@@ -193,5 +193,7 @@ cd $INFRA_ROOT/deployment/v3/mosip/resident
 
 ```
 cd $INFRA_ROOT/deployment/v3/mosip/regclient
+sudo apt-get update
+sudo apt-get install jq
 ./install.sh
 ```
