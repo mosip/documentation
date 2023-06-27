@@ -332,13 +332,15 @@ Once the rancher cluster is ready, we need ingress and storage class to be set f
 * [Nginx Ingress Controller](https://kubernetes.github.io/ingress-nginx/deploy/): used for ingress in rancher cluster.
 
 ```
-cd $K8_ROOT/rancher/rancher-ui
-helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+cd $K8_ROOT/rancher/on-prem
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo update
-helm install rancher rancher-latest/rancher \
-  --namespace cattle-system \
-  --create-namespace \
-  -f rancher-values.yaml
+helm install \                                                                                                             
+  ingress-nginx ingress-nginx/ingress-nginx \
+  --namespace ingress-nginx \
+  --version 4.0.18 \
+  --create-namespace  \
+  -f ingress-nginx.values.yaml
 ```
 
 this will install ingress in ingress-nginx namespace of rancher cluster.
