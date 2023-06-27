@@ -67,5 +67,34 @@ The older version of Inji app (0.9.0) will not be compatible with the newer vers
 
 ### Bug fixes
 
+Bug fix: All the binded VCs will be shown and every binded VC can be used for online login irrespective of the timeframe of binding. #INJI-80
+
+Bug fix: Tuvali now has capability to specify the error code  to let Inji know at where the error has occurred during VC sharing instead of displaying the default error message. #INJI-71
+
+Bug fix: We now have the capability to build APKs on Windows. #INJI-53 #INJI-30
+
+Bug fix: In iOS, when the user tries to go back from the OTP screen while generating VID from AID, Inji was crashing. As a fix, it was made sure that the models (over lays) are not overlapping. #INJI-46
+
+Bug fix: Inji now has the capability to render the resident's demographic information in the language chosen by the Residents. #INJI-44
+
+Bug fix: Inji now has the capability to identify when the App is low on storage and it notifies the same to the Residents. #INJI-42
+
+Bug fix: During wallet binding when the auth token is expired, the first call made for wallet binding will be used for refreshing the auth token, which then makes the current call to fail and subsequent calls to succeed. As a fix, the wallet binding call will refresh the token and complete the binding process. #INJI-41
+
+Bug fix: Inji had a restriction to the overall storage size, in that we were not able to download more than 29 VCs. As a fix, we migrated from async storage to MMKV which does not have any upper limit on the storage size. #INJI-38
+
+Bug fix: In the Home Screen, the tab indicators were not properly working in RTL. After the fix, RTL is being rendered properly. #INJI-36
+
+Bug fix: The VCs that are added were getting stored in the app memory rather than user data. As a fix,  MMKV storage was introduced (as opposed to async storage) to solve this by moving the VC data to user data instead of App memory. #INJI-35
+
+Bug fix: A few texts were not being rendered in Arabic. The Arabic translations were added to make sure when the resident has chosen Arabic language, all the data is being rendered in Arabic. #INJI-34
+
+Bug fix: Inji application was not consistent in different locales, and some literals were not properly translated in the native languages. As a fix, all the missed out translations were added. #INJI-33 #INJI-32
+
+Bug fix: We now have updated the error popup shown during the BLE transfer, the popup will contain few error codes which depicts different stages where the failure has happened in the BLE layer. #INJI-28
+
+Bug fix: There was a delay in reading and writing the VC from the device, so we changed the storage mechanism from Async Storage to MMKV Storage, which ensures faster reading and writing. #INJI-7
+
+Bug fix: There were a few devices which failed to connect (vivo Y73 & Redmi K20 Pro) to initiate sharing of VC. #INJI-68 #INJI-39
 
 
