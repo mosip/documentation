@@ -32,3 +32,7 @@ Below is a sneak peek of the features available in Inji.
 For a quick look at these features, refer the [Inji User Guide](https://docs.mosip.io/1.2.0/modules/inji-user-guide).
 
 To understand the QR code login flow, refer [here](https://docs.esignet.io/esignet-end-user-guide/login-flow-qr-code).
+
+Also, watch the video below for a quick glimpse of the features available.
+
+{% embed url="https://www.youtube.com/watch?v=JWxJfHMVMFI" %}

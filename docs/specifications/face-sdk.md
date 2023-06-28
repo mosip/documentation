@@ -2,7 +2,7 @@
 
 * This is a `react native component library` created to perform face match in Inji.
 * The library takes two images as base64 encoded strings and returns a boolean match or no match.
-* This library supports only ANDROID currently. IOS is not supported.
+* This library supports only ANDROID currently. iOS is not supported.
 
 ## Installation
 
@@ -52,7 +52,7 @@ _Standard Return Codes (match or no match)_
 | ------------ | ---------- |
 | throws error | Error      |
 
-### **Face Matching**&#x20;
+### **Face Matching**
 
 Face matching is used to match two faces. It returns a boolean true or false in case of match or no match.
 

@@ -2,13 +2,11 @@
 
 **Release Name**: Inji 0.9.0 (Beta)
 
-**Upgrade From**: 0.8.0
-
 **Release Date**: 14th April, 2023
 
 ## Overview
 
-The 0.0.9 version of Inji is the beta release which covers essential features such as Downloading and sharing the VC, Wallet binding, face authentication on resident' phone, etc.
+The 0.9.0 version of Inji is the beta release which covers essential features such as Downloading and sharing the VC, Wallet binding, face authentication on resident' phone, etc.
 
 ## Features Covered
 
