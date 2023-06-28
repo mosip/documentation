@@ -65,11 +65,3 @@ To access Core Bluetooth APIs on iOS, below are the permissions included in `inf
 * **Android SDK**: The SDK has the capability of acting as a wallet and verifier.
 * **iOS SDK**: Currently the SDK has the capability of being a wallet but is not able to act as Verifier.
 
-## Unsupported device combinations
-
-A few device combinations that are not supported are as follows:
-
-| **Transfer Type** | **Sender Device**       | **Receiver Device**         |
-| ----------------- | ----------------------- | --------------------------- |
-| Android - Android | Vivo Y73 v12.0 BLE v5.0 | Redmi K20 Pro v11.0 BLEv5.0 |
-| Android - Android | Redmi 9i v11.0 BLE v5.0 | Oneplus 6T v11.0 BLE v5.0   |
