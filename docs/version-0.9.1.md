@@ -91,6 +91,9 @@ The older version of Inji app (0.9.0) will not be compatible with the newer vers
 
 * **Bug fix**: There were a few devices which failed to connect (vivo Y73 & Redmi K20 Pro) to initiate sharing of VC. #[INJI-68](https://mosip.atlassian.net/browse/INJI-68) #[INJI-39](https://mosip.atlassian.net/browse/INJI-39)
 
+## Documentation
 
-
-
+* [Feature Documentation](./)
+* [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta)
+* [QA Report](https://docs.mosip.io/inji/versions/release-notes-1.0.0/test-report-0.9.0)
+* To know more about Inji, watch the [video](https://www.youtube.com/watch?v=JWxJfHMVMFI)!
