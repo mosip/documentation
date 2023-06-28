@@ -53,7 +53,7 @@ The 0.9.1 version of Inji mainly focuses on bug fixes along with some internal i
 
 ### Change in implementation
 
-The older version of Inji app (0.9.0) will not be compatible with the newer version of inji, due to two reasons:
+The older version of Inji app (0.9.0) will not be compatible with the newer version of Inji, due to two reasons:
 
 * The storage has been changed from _Async Storage_ to _mmkv_ storage, which are two different storage mechanisms.
 
