@@ -83,7 +83,10 @@ The older version of Inji app (0.9.0) will not be compatible with the newer vers
 
 * **Bug fix**: There was a delay in reading and writing the VC from the device, so the storage mechanism has been changed from Async Storage to MMKV Storage, which ensures faster reading and writing. #[INJI-7](https://mosip.atlassian.net/browse/INJI-7)
 
-* **Bug fix**: There were a few devices which failed to connect (vivo Y73 & Redmi K20 Pro) to initiate sharing of VC. #[INJI-68](https://mosip.atlassian.net/browse/INJI-68) #[INJI-39](https://mosip.atlassian.net/browse/INJI-39)
+* **Bug fix**: Few devices failed to establish the connection while sharing of VCs were initiated (Vivo Y73 & Redmi K20 Pro). To resolve this, setting preferred PHY was removed and missing BLE permissions for Android 12 and above were added. #[INJI-39](https://mosip.atlassian.net/browse/INJI-39)
+
+* **Bug fix**: The VC transfers from iOS device always failed when Android 13 was the Verifier. As a fix, Bluetooth negotiation was updated to support Google Pixel (Android 13). #[INJI-68](https://mosip.atlassian.net/browse/INJI-68)
+
 
 ## Documentation
 
