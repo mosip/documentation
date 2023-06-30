@@ -1,5 +1,5 @@
 # Technology Stack
-This page lists all the technologies used in building MOSIP. Free and open source softwares with clear long term support availability have been chosen. For a deployment certain choices can be replaced with other free or commercial options.
+This page lists all the technologies used in building MOSIP. Free and open-source software with clear long-term support availability has been chosen. For a deployment, certain choices can be replaced with other free or commercial options.
 
 |Domain|Tools/Technologies|Version|Licence Type|Commercial|Production|Cost
 |---|---|---|---|---|---|---|
@@ -68,7 +68,7 @@ This page lists all the technologies used in building MOSIP. Free and open sourc
 |Messaging|ActiveMQ||Apache License 2.0 |
 |Messaging|Apache Kafka||Apache License 2.0 |
 |Caching|Hazelcast||Apache License 2.0 |
-|Object Store|Hazelcast||GNU AGPL v3 |
+|Object Store|MinIO||GNU AGPL v3 |
 |Secure Code Scanning|SonarQube with OWASP plugin will be used|||
 |Web Server/HTTP proxy server|Nginx|NA - Cloud tool||
 |IAM|KeyCloak|||
