@@ -22,23 +22,17 @@ Below is a summary of some of the important bug fixes made in this version.
 
 * **Introduction of error codes** in case the transfer of VC fails.
 
-* Clean-up of Google Nearby API and its state machines.
-
 * Based on the android devices, Inji now asks for only the required Bluetooth permissions.
 
 * Migrated to **MMKV storage from Async storage**. With this, the devices can now store more number of VCs.
 
 * Renew auth token after expiry in Mimoto.
 
-* Modified the app to be environment agnostic so as to treat environment as one MOSIP Credential registry.
-
 * Added support for Filipino language (Philippines language).
 
 * Added support for languages whose semantics are Right-to-Left.
 
 * Added feature to restrict the downloading of ID card when the download of the card via UIN is blocked.
-
-* Integrated Faceauth using Iris scan SDK.
 
 * Updated VC thumbprints when the same VC is downloaded multiple times on the same device and is activated.
 
