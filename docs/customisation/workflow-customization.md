@@ -20,7 +20,11 @@ This is the root state machine for the application. On initialisation, it starts
 
 ## store.ts
 
-This state machine takes care of actions related to storing and retrieving data on the mobile phone. It exposes the wrapper to all the other state machines to work with data stored on the device. It also performs the custom encryption and decryption required for saving and retrieving data from the underlying store. As of now, the store state machine uses a library called [async-storage](https://react-native-async-storage.github.io/async-storage/docs/api) which abstracts how data is stored between iOS and Android.
+This state machine takes care of actions related to storing and retrieving data on the mobile phone. It exposes the wrapper to all the other state machines to work with data stored on the device. It also performs the custom encryption and decryption required for saving and retrieving data from the underlying store. As of now, the store state machine uses two libraries
+* [react-native-mmkv-storage](https://github.com/ammarahm-ed/react-native-mmkv-storage)  - stores all the meta information and reference of the encrypted vc.
+* [react-native-fs](https://www.npmjs.com/package/react-native-fs) - stores the encrypted vc as separate file.
+
+which abstracts how data is stored between iOS and Android.
 
 ## auth.ts
 

@@ -99,11 +99,34 @@ Central also performs disconnect in the following scenarios:
 
 As part of connection closure, both central and peripheral clean the held resources, cryptographic keys, and Bluetooth resources, to ensure that the subsequent transfer happens smoothly.
 
+
 > Note: All the cryptographic keys generated/ derived are used only for a single VC transfer session. The library strictly ensures they are not re-used in subsequent VC transfers post connection closure.
 
-## Error scenarios
 
-### Scenario 1: The verifier receives a `Failed to transfer` message and wallet receive a `Disconnected` message on the screen.
+## Error Codes And Error Scenarios:
+
+**Error Code Format:**
+<Component(2 Character)Role(1 Character)>-<Stage(3 Character)>-<Number(3 Character)>
+
+Current Supported Stages: CON(Connection) | KEX(Key Exchange) | ENC(Encryption) | TRA(Transfer) | REP(Report) | DEC(Decryption) | UNK (Stage is unknown)
+Current Component+ Role Combinations:  TVW(Tuvali+Wallet) | TVV(Tuvali+Verifier) | TUV(Tuvali where role is unknown)
+
+**List of Supported Error Codes:**
+* UnknownException: TUV_UNK_001
+* WalletUnknownException: TVW_UNK_001
+* CentralStateHandlerException: TVW_UNK_002
+* WalletTransferHandlerException: TVW_UNK_003
+* VerifierUnknownException: TVV_UNK_001
+* PeripheralStateHandlerException: TVV_UNK_002
+* VerifierTransferHandlerException: TVV_UNK_003
+* MTUNegotiationException: TVW_CON_001
+* TransferFailedException: TVW_REP_001
+* UnsupportedMTUSizeException: TVV_CON_001
+* CorruptedChunkReceivedException: TVV_TRA_001
+* TooManyFailureChunksException: TVV_TRA_002
+
+
+### Error Scenario 1: The verifier receives a `Failed to transfer` message and wallet receive a `Disconnected` message on the screen.
 
 **Possible error scenarios:**
 
@@ -111,7 +134,7 @@ As part of connection closure, both central and peripheral clean the held resour
 * After the verifier and wallet establish a connection, the wallet initiates an MTU negotiation with the verifier. If the negotiated MTU is less than 64 Bytes, then the verifier throws an exception and disconnects from the wallet.
 * If the verifier receives the size of the VC as 0, it raises an exception and disconnects from the wallet.
 
-### Scenario 2: The wallet receives a `Failed to transfer` message and the verifier receives a `Disconnected` message on the screen.
+### Error Scenario 2: The wallet receives a `Failed to transfer` message and the verifier receives a `Disconnected` message on the screen.
 
 **Possible error scenarios:**
 
@@ -121,7 +144,8 @@ As part of connection closure, both central and peripheral clean the held resour
 
 Below are the exception message and the disconnect message which appears on the screen during the error.
 
-> ![](../\_images/exception-message.png)
+
+![Exception Message](../\_images/failedToTransferError.jpeg)
 
 > This message is displayed on the device throwing the exception.
 

@@ -61,11 +61,3 @@ Following permissions are required to be included in `info.plist` to access the 
 * **Wallet**: In this role, Tuvali can discover Verifer devices over BLE and can connect and share data. This role is supported on Both Android and IOS devices meeting minimum version requirement.
 * **Verifier**: In this role, Tuvali can advertise itself to Wallets and receive data. This role is supported only on Android devices at the moment. IOS doesn't support being a Verifier.
 
-## Unsupported device combinations
-
-A few device combinations that are not supported are as follows:
-
-| **Transfer Type** | **Sender Device**       | **Receiver Device**         |
-| ----------------- | ----------------------- | --------------------------- |
-| Android - Android | Vivo Y73 v12.0 BLE v5.0 | Redmi K20 Pro v11.0 BLEv5.0 |
-| Android - Android | Redmi 9i v11.0 BLE v5.0 | Oneplus 6T v11.0 BLE v5.0   |

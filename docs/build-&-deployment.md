@@ -66,10 +66,60 @@ Run `cd android && ./gradlew :app:assembleMosipDebug && cd ..` to build the appl
 * Run `npm run android:mosip` to build and install the application on the device.
 * Run `npm run android:mosip --reset-cache` to build and install the application if any change is made in the .env file.
 
-#### Published artifacts
+#### Build for PlayStore
 
-Once the build is successful, APKs are available in `./android/app/build/outputs/apk/mosip/debug`.
+The Internal testing version of the build can be uploaded to `PlayStore` for testing. PlayStore allows the creation of internal testers group.
 
+![Internal testers](\_images/internal_testers_android.png)
+
+**Publishing build manually to PlayStore**
+
+A Google play console developer account is a must to publish build in PlayStore.
+
+1. Set the backend URL and choose a theme (orange | purple) inside the `.env` file.
+2. Build the Apk or App bundle.
+3. Login to PlayStore and inside Internal testers create a new release.
+4. Upload the Apk or App bundle to PlayStore.
+
+**Upload in PlayStore**
+
+![img.png](\_images/upload_android.png)
+
+![img.png](\_images/uploading_android.png)
+
+5. Once the build is uploaded and saved you will be able to see the status of the release with version name, code, API level and some more details.
+
+![img.png](\_images/uploaded_view_android.png)
+
+6. Select the testers group you want to share with. Once saved you can copy the link and give to testers to test the Apk or App bundle.
+
+![img.png](\_images/internal_testers_select_android.png)
+
+7. You need to manually provide the link to testers. They will not be notified whenever a new build is uploaded.
+
+**Publishing build via Github actions (Automation) to PlayStore**
+
+A Google play console developer account must be configured to inji app to publish builds via PlayStore. 
+
+> Testers must be added to internal testers group in Play console.
+
+![img.png](\_images/internal_testers_select_android.png)
+
+1. To deploy the Android build to playstore, Select `Android Custom Build` workflow from github actions.
+
+![img.png](\_images/inji_android_github_actions.png)
+
+2. Choose branch, backend url, theme and describe about build details. 
+
+3. Click the Run workflow button.
+
+4. Once the pipeline has done with building the app (takes around ~25-30min). 
+
+5. You need to login to play console and verify the build version name and code in the internal testers track. 
+
+6. Now you can share the link to testers and only those who are registered in the selected testers group will only be able to download the App from Google Play.
+
+---
 ## iOS - Build and deployment
 
 ### Build process
@@ -99,7 +149,7 @@ The beta version of the build can be uploaded to `TestFlight` for testing. TestF
 
 ![Testflight testers](\_images/img.png)
 
-**Publishing build to TestFlight**
+**Publishing build manually to TestFlight**
 
 An Apple developer account is a must to publish builds in TestFlight.
 
@@ -119,6 +169,29 @@ First choose `Distribute App`.
 
 4. Login to TestFlight and check for the build upload status. Once the build is uploaded successfully, add Groups to provide access to testers.
 
-![img.png](\_images/testflightgroups.png)
+![img.png](\_images/testflight_testers_group.png)
 
 5. All the group members will be notified about the new build. Open TestFlight and install the new version.
+
+
+**Publishing build via Github actions (Automation) to TestFlight**
+
+An Apple developer account must be configured to inji app to publish builds via TestFlight. 
+
+> Testers must be added to group in testflight.
+
+![img.png](\_images/testflight_testers_group.png)
+
+1. To deploy the iOS build to testflight, Select `Inji iOS build` workflow from github actions.
+
+![img.png](\_images/inji_ios_github_actions.png)
+
+2. Choose branch, backend url, theme, testers group from testflight to get the build and describe about build details. 
+
+3. Click the Run workflow button.
+
+
+4. Once the pipeline has done with building the app (takes around ~25-30min), testflight notifies corresponding testers associated with testers group in email about deployed build details.
+
+
+![img.png](\_images/testflight_ios_notification.png)
