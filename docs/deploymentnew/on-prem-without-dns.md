@@ -455,7 +455,7 @@ Install Longhorn via helm
        -e LOCATION=BLR        \
        -e ORG=MOSIP           \
        -e ORG_UNIT=MOSIP      \
-       -e COMMON_NAME=*.sandbox.xyz.net \
+       -e COMMON_NAME=*.xyz.net \
        mosipdev/openssl:latest
        ```
        * Above command will generate certs in below specified location. Use it when prompted during nginx installation.
@@ -473,35 +473,10 @@ Install Longhorn via helm
         * SSL cert path : path of the ssl certificate to be used for ssl termination.
         * SSL key path : path of the ssl key to be used for ssl termination.
         * Cluster node ip's : ip’s of the rancher cluster node
-* In case using openssl wildcard ssl certificate add below http block in nginx server configuration, Ignore in case of ssl cerst obtained using letsencrypt or for publically available domains. (Ensure to use this only in development env, not suggested for Production env).
-    * `nano /etc/nginx/nginx.conf`
-    ```
-    http{
-    server{
-       listen <cluster-nginx-internal-ip>:80;
-       server_name iam.sandbox.xyz.net;
-       location /auth/realms/mosip/protocol/openid-connect/certs {
-            proxy_pass                      http://myInternalIngressUpstream;
-            proxy_http_version              1.1;
-            proxy_set_header                Upgrade $http_upgrade;
-            proxy_set_header                Connection "upgrade";
-            proxy_set_header                Host $host;
-            proxy_set_header                Referer $http_referer;
-            proxy_set_header                X-Real-IP $remote_addr;
-            proxy_set_header                X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header                X-Forwarded-Proto $scheme;
-            proxy_pass_request_headers      on;
-            proxy_set_header  Strict-Transport-Security "max-age=0;";
-       }
-       location / { return 301 https://iam.sandbox.xyz.net; }
-      }
-    }
-    ```
-    * Note: HTTP access is enabled for IAM because MOSIP's keymanager expects to have valid SSL certificates. Ensure to use this only for development purposes, and it is not recommended to use it in production environments.
-    * Restart nginx service.
-    ```
-    sudo systemctl restart nginx
-    ```
+* Restart nginx service.
+```
+sudo systemctl restart nginx
+```
 * Post installation check:
     * `sudo systemctl status nginx`
 * Steps to Uninstall nginx (in case required)
@@ -511,8 +486,7 @@ Install Longhorn via helm
     * In case used Openssl for wildcard ssl certificate add DNS entries in local hosts file of your system.
         * For example: /etc/hosts files for Linux machines.
         ```
-         <PUBLIC_IP>    api.sandbox.xyz.net resident.sandbox.xyz.net esignet.sandbox.xyz.net prereg.sandbox.xyz.net healthservices.sandbox.xyz.net
-         <INTERNAL_IP>  sandbox.xyz.net api-internal.sandbox.xyz.net activemq.sandbox.xyz.net kibana.sandbox.xyz.net regclient.sandbox.xyz.net admin.sandbox.xyz.net minio.sandbox.xyz.net iam.sandbox.xyz.net kafka.sandbox.xyz.net postgres.sandbox.xyz.net pmp.sandbox.xyz.net onboarder.sandbox.xyz.net smtp.sandbox.xyz.net compliance.sandbox.xyz.net
+         <INTERNAL_IP_OF_OBS_NGINX_NODE>    rancher.xyz.net keycloak.xyz.net
         ```  
 
 ## Observation K8's Cluster Apps Installation
@@ -794,61 +768,118 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
 * Your cluster is now added to the rancher management server.
 
 ### MOSIP K8 cluster Nginx server setup
-
 * For Nginx server setup, we need ssl certificate, add the same into Nginx server.
-* Incase valid ssl certificate is not there generate one using letsencrypt:
-  * SSH into the nginx server
-  *   Install Pre-requisites:
-
-      ```
-      sudo apt update -y
-      sudo apt-get install software-properties-common -y
-      sudo add-apt-repository ppa:deadsnakes/ppa
-      sudo apt-get update -y
-      sudo apt-get install python3.8 -y
-      sudo apt install letsencrypt -y
-      sudo apt install certbot python3-certbot-nginx -y
-      ```
-  * Generate wildcard SSL certificates for your domain name.
-    * `sudo certbot certonly --agree-tos --manual --preferred-challenges=dns -d *.sandbox.mosip.net -d sandbox.mosip.net`
-      * replace `sanbox.mosip.net` with your domain.
-      * The default challenge HTTP is changed to DNS challenge, as we require wildcard certificates.
-      * Create a DNS record in your DNS service of type TXT with host `_acme-challenge.sandbox.xyz.net`, with the string prompted by the script.
-      * Wait for a few minutes for the above entry to get into effect.\
-        \*\* Verify\*\*: `host -t TXT _acme-challenge.sandbox.mosip.net`
-      * Press enter in the `certbot` prompt to proceed.
-      * Certificates are created in `/etc/letsencrypt` on your machine.
-      * Certificates created are valid for 3 months only.
-  * `Wildcard SSL certificate` [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
-*   Clone k8s-infra
-
+*  SSL certificates can be generated in multiple ways. Either via lets encrypt if you have public DNS or via openssl certs when you dont have Public DNS.
+    *  Letsencrypt: Generate wildcard ssl certificate having 3 months validity when you have public DNS system using below steps.
+       * SSH into the nginx server node.
+       * Install Pre-requisites
+       ```
+       sudo apt update -y
+       sudo apt-get install software-properties-common -y
+       sudo add-apt-repository ppa:deadsnakes/ppa
+       sudo apt-get update -y
+       sudo apt-get install python3.8 -y
+       sudo apt install letsencrypt -y
+       sudo apt install certbot python3-certbot-nginx -y
+       ```
+       *  Generate wildcard SSL certificates for your domain name.
+       * `sudo certbot certonly --agree-tos --manual --preferred-challenges=dns -d *.org.net`
+       * replace `org.net` with your domain.
+       * The default challenge HTTP is changed to DNS challenge, as we require wildcard certificates.
+       * Create a DNS record in your DNS service of type TXT with host `_acme-challenge.org.net`, with the string prompted by the script.
+       * Wait for a few minutes for the above entry to get into effect.
+       **Verify**: 
+       `host -t TXT _acme-challenge.org.net`
+       * Press enter in the `certbot` prompt to proceed.
+       * Certificates are created in `/etc/letsencrypt` on your machine.
+       * Certificates created are valid for 3 months only.
+       * Wildcard SSL certificate [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
+    * Openssl : Generate wildcard ssl certificate using openssl in case you dont have public DNS using below steps. (Ensure to use this only in development env, not suggested for Production env).
+       * Install docker on nginx node.
+       ```
+       sudo apt-get update --fix-missing
+       sudo apt install docker.io -y
+       sudo systemctl restart docker
+       ```
+       * Generate a self-signed certificate for your domain, such as *.sandbox.xyz.net.
+       * Execute the following command to generate a self-signed SSL certificate. Prior to execution, kindly ensure that the environmental variables passed to the OpenSSL Docker container have been properly updated:
+       ```
+       docker volume create --name gensslcerts --opt type=none --opt device=/etc/ssl --opt o=bind
+       docker run -it --mount type=volume,src='gensslcerts',dst=/home/mosip/ssl,volume-driver=local \
+       -e VALIDITY=700        \
+       -e COUNTRY=IN          \
+       -e STATE=KAR           \
+       -e LOCATION=BLR        \
+       -e ORG=MOSIP           \
+       -e ORG_UNIT=MOSIP      \
+       -e COMMON_NAME=*.sandbox.xyz.net \
+       mosipdev/openssl:latest
+       ```
+       * Above command will generate certs in below specified location. Use it when prompted during nginx installation.
+         * fullChain path: /etc/ssl/certs/nginx-selfsigned.crt.
+         * privKey path: /etc/ssl/private/nginx-selfsigned.key.
+* Install nginx:
+    * Login to nginx server node.
+    * Clone [k8s-infra](https://github.com/mosip/k8s-infra)
     ```
-    cd $K8_ROOT/mosip/on-prem/nginx
+    cd $K8_ROOT/rancher/on-prem/nginx
     sudo ./install.sh
     ```
-* Provide below mentioned inputs as and when prompted
-  * MOSIP nginx server internal ip
-  * MOSIP nginx server public ip
-  * Publically accessible domains (comma seperated with no whitespaces)
-  * SSL cert path
-  * SSL key path
-  * Cluster node ip's (comma seperated no whitespace)
-* Post installation check\\
-  * `sudo systemctl status nginx`
-  * Steps to uninstall nginx (incase it is required)\
-    `sudo apt purge nginx nginx-common`
-  * **DNS mapping**: Once nginx server is installed sucessfully, create DNS mapping for observation cluster related domains as mentioned in DNS requirement section.
+    * Provide below mentioned inputs as and when promted
+        * MOSIP nginx server internal ip
+        * MOSIP nginx server public ip
+        * Publically accessible domains (comma seperated with no whitespaces)
+        * SSL cert path
+        * SSL key path
+        * Cluster node ip's (comma seperated no whitespace)
+* In case using openssl wildcard ssl certificate add below http block in nginx server configuration, Ignore in case of ssl cerst obtained using letsencrypt or for publically available domains. (Ensure to use this only in development env, not suggested for Production env).
+    * `nano /etc/nginx/nginx.conf`
+    ```
+        http{
+    server{
+       listen <cluster-nginx-internal-ip>:80;
+       server_name iam.sandbox.xyz.net;
+       location /auth/realms/mosip/protocol/openid-connect/certs {
+            proxy_pass                      http://myInternalIngressUpstream;
+            proxy_http_version              1.1;
+            proxy_set_header                Upgrade $http_upgrade;
+            proxy_set_header                Connection "upgrade";
+            proxy_set_header                Host $host;
+            proxy_set_header                Referer $http_referer;
+            proxy_set_header                X-Real-IP $remote_addr;
+            proxy_set_header                X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header                X-Forwarded-Proto $scheme;
+            proxy_pass_request_headers      on;
+            proxy_set_header  Strict-Transport-Security "max-age=0;";
+       }
+       location / { return 301 https://iam.sandbox.xyz.net; }
+      }
+    }
+    ```
+    * Note: HTTP access is enabled for IAM because MOSIP's keymanager expects to have valid SSL certificates. Ensure to use this only for development purposes, and it is not recommended to use it in production environments.
+    * Restart nginx service.
+    ```
+    sudo systemctl restart nginx
+    ```  
+* Post installation check:
+    * `sudo systemctl status nginx`
+* Steps to Uninstall nginx (in case required)
+`sudo apt purge nginx nginx-common`
+* DNS mapping:
+    * Once nginx server is installed sucessfully, create DNS mapping for rancher cluster related domains as mentioned in DNS requirement section. (rancher.org.net, keycloak.org.net)
+    * In case used Openssl for wildcard ssl certificate add DNS entries in local hosts file of your system.
+        * For example: /etc/hosts files for Linux machines.
+        ```
+         <PUBLIC_IP>    api.sandbox.xyz.net resident.sandbox.xyz.net esignet.sandbox.xyz.net prereg.sandbox.xyz.net healthservices.sandbox.xyz.net
+         <INTERNAL_IP>  sandbox.xyz.net api-internal.sandbox.xyz.net activemq.sandbox.xyz.net kibana.sandbox.xyz.net regclient.sandbox.xyz.net admin.sandbox.xyz.net minio.sandbox.xyz.net iam.sandbox.xyz.net kafka.sandbox.xyz.net postgres.sandbox.xyz.net pmp.sandbox.xyz.net onboarder.sandbox.xyz.net smtp.sandbox.xyz.net compliance.sandbox.xyz.net
+        ```
 *   Check Overall if nginx and istio wiring is set correctly
-
     * `Install httpbin`: This utility docker returns http headers received inside the cluster. You may use it for general debugging - to check ingress, headers etc.
-
     ```
     cd $K8_ROOT/utils/httpbin
     ./install.sh
     ```
-
     * To see what is reaching the httpbin (example, replace with your domain name):
-
     ```
     curl https://api.sandbox.xyz.net/httpbin/get?show_env=true
     curl https://api-internal.sandbox.xyz.net/httpbin/get?show_env=true
@@ -959,6 +990,8 @@ cd $INFRA_ROOT/deployment/v3/external/all
 ```
 
 Click [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies) to check the detailed installation instructions of all the external components.
+
+### Configurational change 
 
 ### MOSIP Modules Deployment
 
