@@ -991,12 +991,27 @@ cd $INFRA_ROOT/deployment/v3/external/all
 
 Click [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies) to check the detailed installation instructions of all the external components.
 
-### Configurational change 
+### Configurational change in case using Openssl wildcard ssl certificate. (Only advised in development env, not recommended for Production setup)
+*  Add/ Update the below property in application-default.properties and comment on the below property in the *-default.properties file in the config repo.
+```
+mosip.iam.certs_endpoint=http://${keycloak.external.host}/auth/realms/mosip/protocol/openid-connect/certs
+```
+* Add/ Update the below property in the esignet-default.properties file in the config repo.
+```
+spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://${keycloak.external.host}/auth/realms/mosip/protocol/openid-connect/certs
+```
 
 ### MOSIP Modules Deployment
 
-Now that all the Kubernetes cluster and external dependencies are already installed, will continue with MOSIP service deployment.
-
+* Now that all the Kubernetes cluster and external dependencies are already installed, will continue with MOSIP service deployment.
+* While installing a few modules, installation script prompts to check if you have public domain and valid SSL certificates on the server. Opt option n as we are using self-signed certificates. For example:
+```
+./install.sh
+Do you have public domain & valid SSL? (Y/n) 
+ Y: if you have public domain & valid ssl certificate
+ n: If you don't have a public domain and a valid SSL certificate. Note: It is recommended to use this option only in development environments.
+```
+* Start installing mosip modules:
 ```
 cd $INFRA_ROOT/deployment/v3/mosip/all
 ./install-all.sh
