@@ -2,15 +2,17 @@
 
 The Registration Client is a thick Java-based client where the resident's demographic and biometric details are captured along with the supporting documents in online or offline mode. Data is captured in the form of registration packets and is cryptographically secured to ensure that there is no tampering. The captured information is packaged and sent to the server for further processing.
 
-MOSIP provides a reference implementation of a Java-based Registration Client. The code, build files for the Registration Client is available in **Registration Client repo**.
+MOSIP provides a reference implementation of a Java-based Registration Client. The code, build files for the Registration Client are available in the [Registration Client repo](https://github.com/mosip/registration-client).
 
 ## Multiple language support
-* Registration client is featured to allow operator to choose the operation language. Option to select his/her preferred language, is provided on the login screen.
-* Data collection during regitration client supports more than one language at a time.
-* Before starting any registration process, operator can choose the languages among the configured ones.
+
+* Registration Client is featured to allow an operator to choose the operation language. Option to select their preferred language is provided on the login screen.
+* Data collection during registration client supports more than one language at a time.
+* Before starting any registration process, the operator can choose the languages amongst the configured ones.
  
   
 To know more about setting up the reference registration client, refer to [Registration client user guide](registration-client-user-guide.md).
+
 To know more about the functions present in the Home page of the registration client, refer to [Registration client home page](registration-client-home-page.md).
 
 ## Who operates the Registration Client?
@@ -23,7 +25,7 @@ To know more about the onboarding process of an operator, refer to [Operator onb
     
 ![](_images/reg-client.drawio.png)
 
-The relationship of Registration Client proc with other services is explained here. NOTE: The numbers do not signify sequence of operations or control flow.
+The relationship of Registration Client with other services is explained here. _NOTE_: The numbers do not signify sequence of operations or control flow.
 
 1. Registration Client connects to the Upgrade Server to check on upgrades and patch downloads.
 2. All the masterdata and configurations are downloaded from SyncData-service.
@@ -47,8 +49,8 @@ More than one SBI can run on the host machine. Registration Client scans the all
 
 ## Data protection
 
-* We store registration packets and synced data in the client machine.
-* Most of the synced data are stored in the derby DB. Derby DB is encrypted with the bootpassword.
+* The registration packets and synced data are stored in the client machine.
+* Most of the synced data are stored in the Derby DB. Derby DB is encrypted with the bootpassword.
 * Derby DB boot password is encrypted with machine TPM key and stored under `.mosipkeys/db.conf`.
 * Synced UI-SPEC/script files are saved in plain text under registration client working directory. During sync, SPEC/script file hash is stored in derby and then the files are saved in the current working directory. Everytime the file is accessed by the client performs the hash check.
 * Synced pre-registration packets are encrypted with TPM key and stored under configured directory.
@@ -57,7 +59,8 @@ More than one SBI can run on the host machine. Registration Client scans the all
 * Registration acknowledgment is also signed and encrypted with TPM key.
  
 ## Configurations
-Registration client can be customized as per a country' requirements.  For details related to Registration Client configurations, refer to registration-Client configuration.
+
+Registration Client can be customized as per a country' requirements.  For details related to Registration Client configurations, refer to [Registration Client configuration](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-configuration).
 
 ## UI Specifications for Registration Tasks 
 
