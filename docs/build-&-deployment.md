@@ -1,7 +1,5 @@
 # Build & Deployment
 
-## Build & Deployment
-
 ### Repositories
 
 {% embed url="https://github.com/mosip/inji" %}
@@ -74,11 +72,11 @@ The Internal testing version of the build can be uploaded to `PlayStore` for tes
 
 **Publishing build manually to PlayStore**
 
-A Google play console developer account is a must to publish build in PlayStore.
+A Google play console developer account is a must to publish builds in PlayStore.
 
 1. Set the backend URL and choose a theme (orange | purple) inside the `.env` file.
 2. Build the Apk or App bundle.
-3. Login to PlayStore and inside Internal testers create a new release.
+3. Login to PlayStore and create a new release inside Internal testers.
 4. Upload the Apk or App bundle to PlayStore.
 
 **Upload in PlayStore**
@@ -91,7 +89,7 @@ A Google play console developer account is a must to publish build in PlayStore.
 
 ![img.png](\_images/uploaded_view_android.png)
 
-6. Select the testers group you want to share with. Once saved you can copy the link and give to testers to test the Apk or App bundle.
+6. Select the testers group you want to share with. Once saved, you can copy the link and give to testers to test the Apk or App bundle.
 
 ![img.png](\_images/internal_testers_select_android.png)
 
@@ -99,7 +97,7 @@ A Google play console developer account is a must to publish build in PlayStore.
 
 **Publishing build via Github actions (Automation) to PlayStore**
 
-A Google play console developer account must be configured to inji app to publish builds via PlayStore. 
+A Google play console developer account must be configured to Inji to publish builds via PlayStore. 
 
 > Testers must be added to internal testers group in Play console.
 
@@ -109,15 +107,15 @@ A Google play console developer account must be configured to inji app to publis
 
 ![img.png](\_images/inji_android_github_actions.png)
 
-2. Choose branch, backend url, theme and describe about build details. 
+2. Choose the branch, backend url, theme and describe about build details. 
 
-3. Click the Run workflow button.
+3. Click the `Run` workflow button.
 
-4. Once the pipeline has done with building the app (takes around ~25-30min). 
+4. Once the pipeline has done with building the app (takes around ~25-30min), you need to login to play console and verify the build version name and code in the internal testers track. 
 
-5. You need to login to play console and verify the build version name and code in the internal testers track. 
+5. Now, you can share the link to testers.
 
-6. Now you can share the link to testers and only those who are registered in the selected testers group will only be able to download the App from Google Play.
+ _Note_: Only those who are registered in the selected testers group will be able to download the App from Google Play.
 
 ---
 ## iOS - Build and deployment
@@ -131,13 +129,13 @@ npm install
 npx pod-install
 ```
 
-* run Metro bundler in the background
+* Run Metro bundler in the background
 
 ```agsl
 npm start
 ```
 
-* run Inji directly to a connected device
+* Run Inji directly to a connected device
 
 ```agsl
 npm run ios -- --device
@@ -154,7 +152,7 @@ The beta version of the build can be uploaded to `TestFlight` for testing. TestF
 An Apple developer account is a must to publish builds in TestFlight.
 
 1. Set the backend URL and choose a theme (orange | purple) inside the `.env` file.
-2. Archive the build using xcode.
+2. Archive the build using `xcode`.
 3. Upload the archive to Testflight.
 
 First choose `Distribute App`.
@@ -167,7 +165,7 @@ First choose `Distribute App`.
 
 ![img.png](\_images/uploading.png)
 
-4. Login to TestFlight and check for the build upload status. Once the build is uploaded successfully, add Groups to provide access to testers.
+4. Login to TestFlight and check for the build upload status. Once the build is uploaded successfully, add `Groups` to provide access to testers.
 
 ![img.png](\_images/testflight_testers_group.png)
 
@@ -188,10 +186,8 @@ An Apple developer account must be configured to inji app to publish builds via 
 
 2. Choose branch, backend url, theme, testers group from testflight to get the build and describe about build details. 
 
-3. Click the Run workflow button.
+3. Click the `Run` workflow button.
 
-
-4. Once the pipeline has done with building the app (takes around ~25-30min), testflight notifies corresponding testers associated with testers group in email about deployed build details.
-
+4. Once the pipeline has done with building the app (takes around ~25-30min), Testflight notifies corresponding testers associated with the testers group in email about deployed build details.
 
 ![img.png](\_images/testflight_ios_notification.png)
