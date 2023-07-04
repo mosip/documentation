@@ -2,7 +2,7 @@
 
 The Registration Client is a thick Java-based client where the resident's demographic and biometric details are captured along with the supporting documents in online or offline mode. Data is captured in the form of registration packets and is cryptographically secured to ensure that there is no tampering. The captured information is packaged and sent to the server for further processing.
 
-MOSIP provides a reference implementation of a Java-based registration client. The code, build files for the registration client is available in **registration client repo**.
+MOSIP provides a reference implementation of a Java-based Registration Client. The code, build files for the Registration Client is available in **Registration Client repo**.
 
 ## Multiple language support
 * Registration client is featured to allow operator to choose the operation language. Option to select his/her preferred language, is provided on the login screen.
@@ -33,11 +33,11 @@ The relationship of Registration Client proc with other services is explained he
 6. Packets ready to be uploaded meta-info are synced to Sync Status service. Also, the status of already uploaded packets are synced back to Registration Client.
 7. All the synced packets are uploaded to Packet Receiver service one by one.
 
-The image below shows the setup of REgistration lient Host machine.
+The image below shows the setup of Registration Client Host machine.
 
-![](_images/reg-client.drawio.png)
+![](_images/reg-client-host-machine.png)
 
-1. Registration Client comprises of Javafx UI, Registration-services libaries and any third party biometric-SDK.
+1. Registration Client comprises of JavaFX UI, Registration-services libaries and any third party biometric-SDK.
 2. SBI is allowed to run on loopback IP and should listen on any port within 4501-4600 range.
 More than one SBI can run on the host machine. Registration Client scans the allowed port range to identify the available SBI.
 3. Registration Client connects to local Derby database. This is used to store all the data synced. 
