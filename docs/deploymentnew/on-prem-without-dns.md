@@ -324,6 +324,37 @@ sudo systemctl status wg-quick@wg0
         * `cluster.yml`: The RKE cluster configuration file.
         * `kube_config_cluster.yml`: The [Kubeconfig file](https://rancher.com/docs/rke/latest/en/kubeconfig/) for the cluster, this file contains credentials for full access to the cluster.
         * `cluster.rkestate`: The [Kubernetes Cluster State file](https://rancher.com/docs/rke/latest/en/installation/#kubernetes-cluster-state), this file contains credentials for full access to the cluster.
+    * In case not having Public DNS system add the custom DNS configuration for the cluster.
+        * Check whether coredns pods are up and running in your cluster via the below command:
+        ```
+        kubectl -n kube-system get pods -l k8s-app=kube-dns
+        ```
+        * Update the IP address and domain name in the below DNS hosts template and add it in the coredns configmap Corefile key in the kube-system namespace.
+        ```
+        hosts {
+          <INTERNAL_IP_OF_OBS_NGINX_NODE>    rancher.xyz.net keycloak.xyz.net
+          fallthrough
+        }
+        ```
+        * Update coredns configmap via below command.
+        ```
+        kubectl -n kube-system edit cm coredns
+        ```
+        example:
+        ![mosip-without-dns-1.png](_images/mosip-without-dns-1.png)
+        * Check whether the DNS changes are correctly updated in coredns configmap.
+        ```
+        kubectl -n kube-system get cm coredns -o yaml
+        ```
+        * Restart the `coredns` pod in the `kube-system` namespace.
+        ```
+        kubectl -n kube-system rollout restart deploy coredns coredns-autoscaler
+        ```
+        * Check status of coredns restart.
+        ```
+        kubectl -n kube-system rollout status deploy coredns
+        kubectl -n kube-system rollout status coredns-autoscaler
+        ```
 
 ## Observation K8s Cluster Ingress and Storage class setup
 
@@ -380,56 +411,109 @@ Install Longhorn via helm
 
 ### Setting up nginx server for Observation K8s Cluster
 
-* For Nginx server setup we need ssl certificate, add the same into Nginx server.
-*   Incase valid ssl certificate is not there generate one using letsencrypt:
-
-    * SSH into the nginx server
-    * Install Pre-requisites
-
-    ```
-    sudo apt update -y
-    sudo apt-get install software-properties-common -y
-    sudo add-apt-repository ppa:deadsnakes/ppa
-    sudo apt-get update -y
-    sudo apt-get install python3.8 -y
-    sudo apt install letsencrypt -y
-    sudo apt install certbot python3-certbot-nginx -y
-    ```
-*   Generate wildcard SSL certificates for your domain name.
-
-    * `sudo certbot certonly --agree-tos --manual --preferred-challenges=dns -d *.org.net`
-      * replace `org.net` with your domain.
-      * The default challenge HTTP is changed to DNS challenge, as we require wildcard certificates.
-      * Create a DNS record in your DNS service of type TXT with host `_acme-challenge.org.net`, with the string prompted by the script.
-      * Wait for a few minutes for the above entry to get into effect.
-
-    **Verify**:
-
-    `host -t TXT _acme-challenge.org.net`
-
-    * Press enter in the `certbot` prompt to proceed.
-    * Certificates are created in `/etc/letsencrypt` on your machine.
-    * Certificates created are valid for 3 months only.
-* Wildcard SSL certificate [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
-*   Clone [k8s-infra](https://github.com/mosip/k8s-infra)
-
+*  For Nginx server setup we need ssl certificate, add the same into Nginx server.
+*  SSL certificates can be generated in multiple ways. Either via lets encrypt if you have public DNS or via openssl certs when you dont have Public DNS.
+    *  Letsencrypt: Generate wildcard ssl certificate having 3 months validity when you have public DNS system using below steps.
+       * SSH into the nginx server node.
+       * Install Pre-requisites
+       ```
+       sudo apt update -y
+       sudo apt-get install software-properties-common -y
+       sudo add-apt-repository ppa:deadsnakes/ppa
+       sudo apt-get update -y
+       sudo apt-get install python3.8 -y
+       sudo apt install letsencrypt -y
+       sudo apt install certbot python3-certbot-nginx -y
+       ```
+       *  Generate wildcard SSL certificates for your domain name.
+       * `sudo certbot certonly --agree-tos --manual --preferred-challenges=dns -d *.org.net`
+       * replace `org.net` with your domain.
+       * The default challenge HTTP is changed to DNS challenge, as we require wildcard certificates.
+       * Create a DNS record in your DNS service of type TXT with host `_acme-challenge.org.net`, with the string prompted by the script.
+       * Wait for a few minutes for the above entry to get into effect.
+       **Verify**: 
+       `host -t TXT _acme-challenge.org.net`
+       * Press enter in the `certbot` prompt to proceed.
+       * Certificates are created in `/etc/letsencrypt` on your machine.
+       * Certificates created are valid for 3 months only.
+       * Wildcard SSL certificate [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
+    * Openssl : Generate wildcard ssl certificate using openssl in case you dont have public DNS using below steps. (Ensure to use this only in development env, not suggested for Production env).
+       * Install docker on nginx node.
+       ```
+       sudo apt-get update --fix-missing
+       sudo apt install docker.io -y
+       sudo systemctl restart docker
+       ```
+       * Generate a self-signed certificate for your domain, such as *.sandbox.xyz.net.
+       * Execute the following command to generate a self-signed SSL certificate. Prior to execution, kindly ensure that the environmental variables passed to the OpenSSL Docker container have been properly updated:
+       ```
+       docker volume create --name gensslcerts --opt type=none --opt device=/etc/ssl --opt o=bind
+       docker run -it --mount type=volume,src='gensslcerts',dst=/home/mosip/ssl,volume-driver=local \
+       -e VALIDITY=700        \
+       -e COUNTRY=IN          \
+       -e STATE=KAR           \
+       -e LOCATION=BLR        \
+       -e ORG=MOSIP           \
+       -e ORG_UNIT=MOSIP      \
+       -e COMMON_NAME=*.sandbox.xyz.net \
+       mosipdev/openssl:latest
+       ```
+       * Above command will generate certs in below specified location. Use it when prompted during nginx installation.
+         * fullChain path: /etc/ssl/certs/nginx-selfsigned.crt.
+         * privKey path: /etc/ssl/private/nginx-selfsigned.key.  
+* Install nginx:
+    * Login to nginx server node.
+    * Clone [k8s-infra](https://github.com/mosip/k8s-infra)
     ```
     cd $K8_ROOT/rancher/on-prem/nginx
     sudo ./install.sh
     ```
-* Provide below mentioned inputs as and when promted
-  * Rancher nginx ip : internal ip of the nginx server VM.
-  * SSL cert path : path of the ssl certificate to be used for ssl termination.
-  * SSL key path : path of the ssl key to be used for ssl termination.
-  * Cluster node ip's : ip’s of the rancher cluster node
-*   Post installation check:
-
+    * Provide below mentioned inputs as and when promted
+        * Rancher nginx ip : internal ip of the nginx server VM.
+        * SSL cert path : path of the ssl certificate to be used for ssl termination.
+        * SSL key path : path of the ssl key to be used for ssl termination.
+        * Cluster node ip's : ip’s of the rancher cluster node
+* In case using openssl wildcard ssl certificate add below http block in nginx server configuration, Ignore in case of ssl cerst obtained using letsencrypt or for publically available domains. (Ensure to use this only in development env, not suggested for Production env).
+    * `nano /etc/nginx/nginx.conf`
+    ```
+    http{
+    server{
+       listen <cluster-nginx-internal-ip>:80;
+       server_name iam.sandbox.xyz.net;
+       location /auth/realms/mosip/protocol/openid-connect/certs {
+            proxy_pass                      http://myInternalIngressUpstream;
+            proxy_http_version              1.1;
+            proxy_set_header                Upgrade $http_upgrade;
+            proxy_set_header                Connection "upgrade";
+            proxy_set_header                Host $host;
+            proxy_set_header                Referer $http_referer;
+            proxy_set_header                X-Real-IP $remote_addr;
+            proxy_set_header                X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header                X-Forwarded-Proto $scheme;
+            proxy_pass_request_headers      on;
+            proxy_set_header  Strict-Transport-Security "max-age=0;";
+       }
+       location / { return 301 https://iam.sandbox.xyz.net; }
+      }
+    }
+    ```
+    * Note: HTTP access is enabled for IAM because MOSIP's keymanager expects to have valid SSL certificates. Ensure to use this only for development purposes, and it is not recommended to use it in production environments.
+    * Restart nginx service.
+    ```
+    sudo systemctl restart nginx
+    ```
+* Post installation check:
     * `sudo systemctl status nginx`
-    * Steps to Uninstall nginx (in case required)
-
-    `sudo apt purge nginx nginx-common`
-
-    DNS mapping: Once nginx server is installed sucessfully, create DNS mapping for rancher cluster related domains as mentioned in DNS requirement section. (rancher.org.net, keycloak.org.net)
+* Steps to Uninstall nginx (in case required)
+`sudo apt purge nginx nginx-common`
+* DNS mapping:
+    * Once nginx server is installed sucessfully, create DNS mapping for rancher cluster related domains as mentioned in DNS requirement section. (rancher.org.net, keycloak.org.net)
+    * In case used Openssl for wildcard ssl certificate add DNS entries in local hosts file of your system.
+        * For example: /etc/hosts files for Linux machines.
+        ```
+         <PUBLIC_IP>    api.sandbox.xyz.net resident.sandbox.xyz.net esignet.sandbox.xyz.net prereg.sandbox.xyz.net healthservices.sandbox.xyz.net
+         <INTERNAL_IP>  sandbox.xyz.net api-internal.sandbox.xyz.net activemq.sandbox.xyz.net kibana.sandbox.xyz.net regclient.sandbox.xyz.net admin.sandbox.xyz.net minio.sandbox.xyz.net iam.sandbox.xyz.net kafka.sandbox.xyz.net postgres.sandbox.xyz.net pmp.sandbox.xyz.net onboarder.sandbox.xyz.net smtp.sandbox.xyz.net compliance.sandbox.xyz.net
+        ```  
 
 ## Observation K8's Cluster Apps Installation
 
@@ -613,7 +697,38 @@ helm repo add mosip https://mosip.github.io/mosip-helm
     * `cluster.yml`: The RKE cluster configuration file.
     * `kube_config_cluster.yml`: The [Kubeconfig file](https://rke.docs.rancher.com/kubeconfig) for the cluster, this file contains credentials for full access to the cluster.
     * `cluster.rkestate`: The [Kubernetes Cluster State file](https://rke.docs.rancher.com/installation#kubernetes-cluster-state), this file contains credentials for full access to the cluster.
-
+* In case not having Public DNS system add the custom DNS configuration for the cluster.
+    * Check whether coredns pods are up and running in your cluster via the below command:
+    ```
+    kubectl -n kube-system get pods -l k8s-app=kube-dns
+    ```
+    * Update the IP address and domain name in the below DNS hosts template and add it in the coredns configmap Corefile key in the kube-system namespace.
+    ```
+    hosts {
+      <PUBLIC_IP_OF_MOSIP_NGINX_NODE>    api.sandbox.xyz.net resident.sandbox.xyz.net esignet.sandbox.xyz.net prereg.sandbox.xyz.net healthservices.sandbox.xyz.net
+      <INTERNAL_IP_OF_MOSIP_NGINX_NODE>  sandbox.xyz.net api-internal.sandbox.xyz.net activemq.sandbox.xyz.net kibana.sandbox.xyz.net regclient.sandbox.xyz.net admin.sandbox.xyz.net minio.sandbox.xyz.net iam.sandbox.xyz.net kafka.sandbox.xyz.net postgres.sandbox.xyz.net pmp.sandbox.xyz.net onboarder.sandbox.xyz.net smtp.sandbox.xyz.net compliance.sandbox.xyz.net
+      fallthrough
+    }
+    ```
+    * Update coredns configmap via below command.
+    ```
+    kubectl -n kube-system edit cm coredns
+    ```
+    example:
+    ![mosip-without-dns-1.png](_images/mosip-without-dns-1.png)
+    * Check whether the DNS changes are correctly updated in coredns configmap.
+    ```
+    kubectl -n kube-system get cm coredns -o yaml
+    ```
+    * Restart the `coredns` pod in the `kube-system` namespace.
+    ```
+    kubectl -n kube-system rollout restart deploy coredns coredns-autoscaler
+    ```
+    * Check status of coredns restart.
+    ```
+    kubectl -n kube-system rollout status deploy coredns
+    kubectl -n kube-system rollout status coredns-autoscaler
+    ```
 ### MOSIP K8 Cluster Global configmap, Ingress and Storage Class setup
 
 **Global configmap**: Global configmap contains the list of neccesary details to be used throughout the namespaces of the cluster for common details.
