@@ -8,6 +8,8 @@
 
 * [On-Prem Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines)
 
+* [On-Prem without DNS Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-without-dns)
+
 **Version**: 1.2.0.1-B2 
 
 * Release date: 8-Jan 2023
