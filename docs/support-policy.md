@@ -43,7 +43,7 @@ An evolution typically goes through the support lifecycle of â€œActive Supportâ€
 
 ### Long Term Support
 
-While all evolutions typically go though the support lifecycle churn rapidly, specific stable versions are designated as Long Term Support versions. These versions are supported for many years and their rollover happens on the basis of the introduction of the next LTS evolution. Minimum support duration is assured for LTS versions. Countries are encouraged to base their systems on LTS versions to benefit from the long term support they get.
+While all evolutions typically go through the support lifecycle churn rapidly, specific stable versions are designated as Long Term Support versions. These versions are supported for many years and their rollover happens on the basis of the introduction of the next LTS evolution. Minimum support duration is assured for LTS versions. Countries are encouraged to base their systems on LTS versions to benefit from the long term support they get.
 
 All support for MOSIP is provided under the MPL 2.0 license terms with no express warranties or guarantees.
 
