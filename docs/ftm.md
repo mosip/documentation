@@ -2,31 +2,31 @@
 
 ## Overview
 
-Foundational Trust Module (FTM) is created using a secure microprocessor capable of performing all required biometric processing and secure storage of keys. The foundational device trust would satisfy the below requirements.
+The Foundational Trust Module (FTM) is created using a secure microprocessor capable of performing all required biometric processing and secure storage of keys. The foundational device trust would satisfy the below requirements.
 
-* The module has the ability to securely generate, store and process cryptographic keys.
-* Generation of asymmetric keys and symmetric keys with TRNG.
+* The module has the ability to securely generate, store, and process cryptographic keys.
+* Generation of asymmetric and symmetric keys with TRNG.
 * The module has the ability to protect keys from extraction.
-* The module has to protect the keys from physical tampering, temperature, frequency and voltage-related attacks.
+* The module has to protect the keys from physical tampering, temperature, frequency, and voltage-related attacks.
 * The module could withstand Hardware cloning.
 * The module could withstand probing attacks
 * The module provides memory segregation for cryptographic operations and protection against buffer overflow attacks
-* The module provides the ability to withstand cryptographic side-channel attacks like Differential Power analysis attacks, Timing attacks.
+* The module provides the ability to withstand cryptographic side-channel attacks like Differential Power analysis attacks, and timing attacks.
 * CAVP validated the implementation of the cryptographic algorithm.
-* The module has the ability to perform a cryptographically validatable secure boot.
+* The module has the ability to perform a cryptographically valid, secure boot.
 * The module has the ability to run trusted applications.
 
 The foundational device trust derived from this module is used to enable trust-based computing for biometric capture. The foundational device trust module provides a trusted execution environment based on the following:
 
 * Secure Boot
   * Ability to cryptographically verify code before execution.
-  * Ability to check for integrity violations of the module/device.
+  * Ability to check for integrity violations of the module or device.
   * Halt upon failure.
-  * Ability to securely upgrade and perform forward-only upgrades, to thwart downgrade attacks.
+  * The ability to securely upgrade and perform forward-only upgrades to thwart downgrade attacks.
   * SHA256 hash equivalent or above should be used for all hashing requirements
   * All root of trust is provisioned upon first boot or before.
-  * All upgrades would be considered a success only after the successful boot with proper hash and signature verification.
-  * The boot should fail upon hash/signature failures and would never operate in an intermediary state.
+  * All upgrades would be considered successful only after a successful boot with proper hash and signature verification.
+  * The boot should fail upon hash or signature failures and never operate in an intermediary state.
   * A maximum of 10 failed attempts should lock the upgrade process and brick the device. However, chip manufacturers can decide to be less than 10.
 * Secure application
   * Ability to run applications that are trusted.
@@ -89,15 +89,15 @@ The FTM should have at least one of the following certifications in each categor
 
 ### Secure Provisioning
 
-Secure provisioning is applicable to both the FTM and the Device providers.
+Secure provisioning applies to both the FTM and the Device providers.
 
 1. The devices and FTM should have a mechanism to protect against fraudulent attempts to create or replicate.
 2. The device and FTM trust should be programmed in a secure facility which is certified by the respective MOSIP adopters.
-3. The organization should have mechanism to segregate the FTMs and Devices built for MOSIP using a cryptographically valid and repeatable process.
+3. The organization should have a mechanism to segregate the FTMs and Devices built for MOSIP using a cryptographically valid and repeatable process.
 4. All debug options within the FTM or device should be disabled permanently
-5. All key creations need for provisioning should happen automatically using FIPS 140-2 Level 3 or higher devices. No individual or group or organization should have a mechanism to influence this behaviour.
+5. All key creations needed for provisioning should happen automatically using FIPS 140-2 Level 3 or higher devices. No individual or group or organization should have a mechanism to influence this behaviour.
 6. Before the devices/FTM leaves the secure provisioning facility all the necessary trust should be established and should not be re-programmable.
 
 {% hint style="info" %}
-_As there is no adopter-specific information being exchanged at the management server or at the FTM provisioning server, there are no mandates from MOSIP where these are located globally. However, the adopter is recommended to have an audit and contractual mechanisms to validate the compliance of these components at any point in time._
+_As there is no adopter-specific information being exchanged at the management server or the FTM provisioning server, there are no mandates from MOSIP where these are located globally. However, the adopter is recommended to have an audit and contractual mechanisms to validate the compliance of these components at any point in time._
 {% endhint %}
