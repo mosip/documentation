@@ -41,7 +41,7 @@
 #### Hardware requirements
 
 * VM’s required can be with any OS as per convenience.
-* Here, we are referting to Ubuntu OS throughout this installation guide.
+* Here, we are referring to Ubuntu OS throughout this installation guide.
 
 | Sl no. | Purpose                                                 | vCPU's | RAM   | Storage (HDD) | no. ofVM's | HA                               |
 | ------ | ------------------------------------------------------- | ------ | ----- | ------------- | ---------- | -------------------------------- |
@@ -55,7 +55,7 @@
 
 * All the VM's should be able to communicate with each other.
 * Need stable Intra network connectivity between these VM's.
-* All the VM's should have stable internet connectivity for docker image download (in case of local setup ensure to have a locally accesible docker registry).
+* All the VM's should have stable internet connectivity for docker image download (in case of local setup ensure to have a locally accessible docker registry).
 * Server Interface requirement as mentioned in below table:
 
 | Sl no. | Purpose                  | Network Interfaces                                                                                                                                                                                                                                                                                         |
@@ -93,8 +93,8 @@
 
 As only secured https connections are allowed via nginx server will need below mentioned valid ssl certificates:
 
-* One valid wildcard ssl certificate related to domain used for accessing Observation cluster, this needs to be stored inside the nginx server VM for Observation cluster. In above e.g.: \*.org.net is the similiar example domain.
-* One valid wildcard ssl certificate related to domain used for accesing Mosip cluster, this needs to be stored inside the nginx server VM for mosip cluster. In above e.g.: \*.sandbox.xyz.net is the similiar example domain.
+* One valid wildcard ssl certificate related to domain used for accessing Observation cluster, this needs to be stored inside the nginx server VM for Observation cluster. In above e.g.: \*.org.net is the similar example domain.
+* One valid wildcard ssl certificate related to domain used for accesing Mosip cluster, this needs to be stored inside the nginx server VM for mosip cluster. In above e.g.: \*.sandbox.xyz.net is the similar example domain.
 
 **Tools to be installed in Personel Computers for complete deployment**
 
@@ -194,7 +194,7 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
   * `cd /home/ubuntu/wireguard/config`
   *   assign one of the PR for yourself and use the same from the PC to connect to the server.
 
-      * create `assigned.txt` file to assign the keep track of peer files allocated and update everytime some peer is allocated to someone.
+      * create `assigned.txt` file to assign the keep track of peer files allocated and update every time some peer is allocated to someone.
 
       ```
       peer1 :   peername
@@ -285,7 +285,7 @@ sudo systemctl status wg-quick@wg0
       ```
   * Add the name of the kubernetes cluster
     * `cluster_name: sandbox-name`
-* For production deplopyments edit the `cluster.yml`, according to this [RKE Cluster Hardening Guide](https://github.com/mosip/k8s-infra/blob/v1.2.0.1-B1/docs/rke-cluster-hardening.md).
+* For production deployments edit the `cluster.yml`, according to this [RKE Cluster Hardening Guide](https://github.com/mosip/k8s-infra/blob/v1.2.0.1-B1/docs/rke-cluster-hardening.md).
 *   Setup up the cluster:
 
     *   Once `cluster.yml` is ready, you can bring up the kubernetes cluster using simple command.
@@ -388,7 +388,7 @@ cd $K8_ROOT/longhorn
 Install Longhorn via helm
 
 * `./install.sh`
-*   Note: Values of below mentioned parametrs are set as by default Longhorn installation script:
+*   Note: Values of below mentioned parameters are set as by default Longhorn installation script:
 
     *   PV replica count is set to 1. Set the replicas for the storage class appropriately.
 
@@ -407,12 +407,12 @@ Install Longhorn via helm
     * This value should be fine for sandbox and pilot but you may have to increase the default to "12" for production.
     * The value can be updated on Longhorn UI after installation.
 * Access the Longhorn dashboard from Rancher UI once installed.
-* Setup Backup : In case you want to bacup the pv data from longhorn to s3 periodically follow [instructions](https://github.com/mosip/k8s-infra/blob/main/docs/longhorn-backupstore-and-tests.md). (Optional, ignore if not required)
+* Setup Backup : In case you want to backup the pv data from longhorn to s3 periodically follow [instructions](https://github.com/mosip/k8s-infra/blob/main/docs/longhorn-backupstore-and-tests.md). (Optional, ignore if not required)
 
 ### Setting up nginx server for Observation K8s Cluster
 
 *  For Nginx server setup we need ssl certificate, add the same into Nginx server.
-*  SSL certificates can be generated in multiple ways. Either via lets encrypt if you have public DNS or via openssl certs when you dont have Public DNS.
+*  SSL certificates can be generated in multiple ways. Either via lets encrypt if you have public DNS or via openssl certs when you don't have Public DNS.
     *  Letsencrypt: Generate wildcard ssl certificate having 3 months validity when you have public DNS system using below steps.
        * SSH into the nginx server node.
        * Install Pre-requisites
@@ -437,7 +437,7 @@ Install Longhorn via helm
        * Certificates are created in `/etc/letsencrypt` on your machine.
        * Certificates created are valid for 3 months only.
        * Wildcard SSL certificate [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
-    * Openssl : Generate wildcard ssl certificate using openssl in case you dont have public DNS using below steps. (Ensure to use this only in development env, not suggested for Production env).
+    * Openssl : Generate wildcard ssl certificate using openssl in case you don't have public DNS using below steps. (Ensure to use this only in development env, not suggested for Production env).
        * Install docker on nginx node.
        ```
        sudo apt-get update --fix-missing
@@ -482,7 +482,7 @@ sudo systemctl restart nginx
 * Steps to Uninstall nginx (in case required)
 `sudo apt purge nginx nginx-common`
 * DNS mapping:
-    * Once nginx server is installed sucessfully, create DNS mapping for rancher cluster related domains as mentioned in DNS requirement section. (rancher.org.net, keycloak.org.net)
+    * Once nginx server is installed successfully, create DNS mapping for rancher cluster related domains as mentioned in DNS requirement section. (rancher.org.net, keycloak.org.net)
     * In case used Openssl for wildcard ssl certificate add DNS entries in local hosts file of your system.
         * For example: /etc/hosts files for Linux machines.
         ```
@@ -551,7 +551,7 @@ cd $K8_ROOT/rancher/keycloak
 * Add a member to cluster/project in Rancher:
   * Give member name exactly as `username` in Keycloak
   * Assign appropriate role like Cluster Owner, Cluster Viewer etc.
-  * You may create new role with fine grained acccess control.
+  * You may create new role with fine grained access control.
 
 **Certificates expiry**
 
@@ -572,12 +572,12 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 * ansible
 * rke (version 1.3.10)
 * Setup MOSIP K8 Cluster node VM’s as per the hardware and network requirements as mentioned above.
-* Run `env-check.yaml` to check if cluster nodes are fine and dont have known issues in it.
+* Run `env-check.yaml` to check if cluster nodes are fine and don't have known issues in it.
   * cd $K8\_ROOT/rancher/on-prem
   * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for MOSIP k8 cluster nodes.
     * `cp hosts.ini.sample hosts.ini`
     * `ansible-playbook -i hosts.ini env-check.yaml`
-    * This ansible checks if localhost mapping ia already present in `/etc/hosts` file in all cluster nodes, if not it adds the same.
+    * This ansible checks if localhost mapping is already present in `/etc/hosts` file in all cluster nodes, if not it adds the same.
 * Setup passwordless ssh into the cluster nodes via pem keys. (Ignore if VM’s are accessible via pem’s).
   * Generate keys on your PC
     * `ssh-keygen -t rsa`
@@ -754,7 +754,7 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 ### Import MOSIP Cluster into Rancher UI
 
 * Login as admin in Rancher console
-* Select `Impor`t Existing for cluster addition.
+* Select `Import` Existing for cluster addition.
 * Select `Generic` as cluster type to add.
 * Fill the `Cluster Name` field with unique cluster name and select `Create`.
 * You will get the kubecl commands to be executed in the kubernetes cluster. Copy the command and execute from your PC (make sure your `kube-config` file is correctly set to MOSIP cluster).
@@ -769,7 +769,7 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
 
 ### MOSIP K8 cluster Nginx server setup
 * For Nginx server setup, we need ssl certificate, add the same into Nginx server.
-*  SSL certificates can be generated in multiple ways. Either via lets encrypt if you have public DNS or via openssl certs when you dont have Public DNS.
+*  SSL certificates can be generated in multiple ways. Either via lets encrypt if you have public DNS or via openssl certs when you don't have Public DNS.
     *  Letsencrypt: Generate wildcard ssl certificate having 3 months validity when you have public DNS system using below steps.
        * SSH into the nginx server node.
        * Install Pre-requisites
@@ -794,7 +794,7 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
        * Certificates are created in `/etc/letsencrypt` on your machine.
        * Certificates created are valid for 3 months only.
        * Wildcard SSL certificate [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
-    * Openssl : Generate wildcard ssl certificate using openssl in case you dont have public DNS using below steps. (Ensure to use this only in development env, not suggested for Production env).
+    * Openssl : Generate wildcard ssl certificate using openssl in case you don't have public DNS using below steps. (Ensure to use this only in development env, not suggested for Production env).
        * Install docker on nginx node.
        ```
        sudo apt-get update --fix-missing
@@ -825,13 +825,13 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
     cd $K8_ROOT/rancher/on-prem/nginx
     sudo ./install.sh
     ```
-    * Provide below mentioned inputs as and when promted
+    * Provide below mentioned inputs as and when prompted
         * MOSIP nginx server internal ip
         * MOSIP nginx server public ip
-        * Publically accessible domains (comma seperated with no whitespaces)
+        * Publically accessible domains (comma separated with no whitespaces)
         * SSL cert path
         * SSL key path
-        * Cluster node ip's (comma seperated no whitespace)
+        * Cluster node ip's (comma separated no whitespace)
 * In case using openssl wildcard ssl certificate add below http block in nginx server configuration, Ignore in case of ssl cerst obtained using letsencrypt or for publically available domains. (Ensure to use this only in development env, not suggested for Production env).
     * `nano /etc/nginx/nginx.conf`
     ```
@@ -866,7 +866,7 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
 * Steps to Uninstall nginx (in case required)
 `sudo apt purge nginx nginx-common`
 * DNS mapping:
-    * Once nginx server is installed sucessfully, create DNS mapping for rancher cluster related domains as mentioned in DNS requirement section. (rancher.org.net, keycloak.org.net)
+    * Once nginx server is installed successfully, create DNS mapping for rancher cluster related domains as mentioned in DNS requirement section. (rancher.org.net, keycloak.org.net)
     * In case used Openssl for wildcard ssl certificate add DNS entries in local hosts file of your system.
         * For example: /etc/hosts files for Linux machines.
         ```
@@ -942,7 +942,7 @@ cd $K8_ROOT/monitoring/alerting/
 
 MOSIP uses [Rancher Fluentd](https://ranchermanager.docs.rancher.com/v2.0-v2.4/explanations/integrations-in-rancher/cluster-logging/fluentd) and elasticsearch to collect logs from all services and reflect the same in Kibana Dashboard.
 
-* Install Rancher FluentD system : for screpping logs outs of all the microservices from MOSIP k8 cluster.
+* Install Rancher FluentD system : for scraping logs outs of all the microservices from MOSIP k8 cluster.
   * Install Logging from Apps and marketplace within the Rancher UI.
   * Select Chart Version `100.1.3+up3.17.7` from Rancher console -> Apps & Marketplaces.
 * Configure Rancher FluentD
