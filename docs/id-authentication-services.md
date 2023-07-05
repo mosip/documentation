@@ -2,9 +2,9 @@
 
 ## Overview
 
-ID Authentication is built as an independant service that can be seeded with data for authentication by any system including MOSIP. In the current design we can have multiple IDA modules running from a single issuer.
+ID Authentication is built as an independent service that can be seeded with data for authentication by any system, including MOSIP. In the current design, we can have multiple IDA modules running from a single issuer.
 
-ID Authentication (IDA) module of MOSIP consists of the following services:
+The ID Authentication (IDA) module of MOSIP consists of the following services:
 
 1. Authentication Services
 2. OTP Service
@@ -12,10 +12,10 @@ ID Authentication (IDA) module of MOSIP consists of the following services:
 
 ## Authentication Services
 
-The services mentioned below are used by Authentication/e-KYC Partners.
+The services mentioned below are used by Authentication or e-KYC Partners.
 
-* Authentication service- used to authenticate an individual's UIN/VID using one ore more authentication types.
-* KYC Authentication service- used to request e-KYC for an individul's UIN/VID using one ore more authentication types.
+* Authentication Service: used to authenticate an individual's UIN/VID using one or more authentication types.
+* KYC Authentication Service: used to request e-KYC for an individual's UIN/VID using one or more authentication types.
 
 ![](\_images/authentication-flow.png)
 
@@ -29,14 +29,14 @@ OTP Request Service is used by Authentication/e-KYC Partners to generate OTP for
 
 1. Internal Authentication Service - The authentication service used by internal MOSIP modules such as Resident Service, Registration Processor and Registration Client to authenticate individuals.
 2. Internal OTP Service - used by Resident Service to generate OTP for an Individual for performing OTP Authentication.
-3. Authentication Transaction History Service - used by Resident Service to retrieve paginated list of authentication and OTP Request transactions for an individual.
+3. Authentication Transaction History Service - used by Resident Service to retrieve a paginated list of authentication and OTP Request transactions for an individual.
 
 ### Credential issuance callback
 
-* [ID Authentication](id-authentication.md) uses credential data of the individuals for performing authentication.
+* [ID Authentication](id-authentication.md) uses the credential data of the individuals for performing authentication.
 * This credential is requested by [ID Repository](id-repository.md) upon any UIN insertion/update or VID creation.
-* The credential is created by Credential Service uploaded to [Datashare](datashare.md) service and the Datashare URL sent to ID-Authentication using [WebSub](websub.md) message.
-* WebSub invokes the credential-issuance callback in [ID Authentication](id-authentication.md) where the credential data is downloaded from Datashare and then stored into IDA DB.
+* The credential is created by Credential Service uploaded to [Datashare](datashare.md) service and the Datashare URL is sent to ID-Authentication using [WebSub](websub.md) message.
+* WebSub invokes the credential-issuance callback in [ID Authentication](id-authentication.md) where the credential data is downloaded from Datashare and then stored in IDA DB.
 
 ![](\_images/ida-credential-flow.png)
 
