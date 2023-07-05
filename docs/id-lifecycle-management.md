@@ -2,13 +2,13 @@
 
 ## Overview
 
-Identity Lifecycle Management refers to the **process of issuing and managing user identities** in a given system. An individual can visit a registration centre to get a new ID or update their ID details. A registration officer would typically capture the individual’s demographic (name, date of birth, gender, etc.) and biometric (face, iris, fingerprint image) details.
+Identity Lifecycle Management refers to the **process of issuing and managing user identities** in a given system. An individual can visit a registration centre to get a new ID or update their ID details. A registration officer would typically capture the individual’s demographic (name, date of birth, gender, etc.) and biometric (face, iris, and fingerprint image) details.
 
 The various life cycle events are briefly explained below:
 
 * New ID issuance (for adults and infants)
-* ID data update/update individual’s information
-* De-activate/re-activate individual’s ID
+* ID data update or update individual’s information
+* De-activate or re-activate the individual’s ID
 * Lost ID
 * Correction process
 
@@ -47,7 +47,7 @@ Registration is a process that allows a resident to provide demographic informat
 
 _Note: For infants/children less than 5 years old, the Registration Client does not capture the biometrics as they are still evolving. However, the country may choose to override the same by modifying the rules accordingly._
 
-* Parent/guardian' UIN or RID and the biometrics needed for authentication is captured.
+* Parent/guardian' UIN or RID and the biometrics needed for authentication are captured.
 * Additionally, a **proof of relationship** document is uploaded.
 * Upon successful registration, an acknowledgement receipt containing the registration ID is issued to the parent/guardian.
 
