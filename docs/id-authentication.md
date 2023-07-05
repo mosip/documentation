@@ -2,11 +2,11 @@
 
 ## Overview
 
-MOSIP offers identity verification services which enable the usage of identity in various contexts. On the successful issue of the ID, identity verification services become available for the resident. Online identity verification is enabled through MOSIP's [ID Authentication (IDA)](id-authentication-services.md) module. As MOSIP is a foundational ID system, different services (both government and private) may rely on the foundational ID system to validate the identity of a resident rather than implementing multiple authentication systems. A typical authentication flow is illustrated below:
+MOSIP offers identity verification services that enable the usage of identity in various contexts. After the successful issue of the ID, identity verification services become available for the resident. Online identity verification is enabled through MOSIP's [ID Authentication (IDA)](id-authentication-services.md) module. As MOSIP is a foundational ID system, different services (both government and private) may rely on the foundational ID system to validate the identity of a resident rather than implementing multiple authentication systems. A typical authentication flow is illustrated below:
 
 ![](\_images/ida-process.png)
 
-Refer to the video below to know more!
+Refer to the video below to learn more!
 
 {% embed url="https://www.youtube.com/watch?v=kBJ_l6043Pw&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=7" %}
 
@@ -14,11 +14,11 @@ Refer to the video below to know more!
 
 ### Yes/No Authentication
 
-MOSIP offers a _yes/no_ API which can be used for the verification of attributes supplied using along with authentication factors. The API verifies the identifier and the provided demographic attributes and also validates other authentication factors such as the OTP or biometrics and responds with a _yes_ or a _no_. Successful verification of the data results in a _yes_. This kind of API can be typically used to support verification of a limited set of demographic data of the person or for a simple presence verification when biometrics are used.
+MOSIP offers a _yes/no_ API that can be used for the verification of attributes supplied along with authentication factors. The API verifies the identifier and the provided demographic attributes and also validates other authentication factors such as the OTP or biometrics and responds with a _yes_ or a _no_. Successful verification of the data results in a _yes_. This kind of API can be typically used to support the verification of a limited set of demographic data about the person or for simple presence verification when biometrics are used.
 
 ### KYC Authentication
 
-MOSIP additionally offers a KYC API which can be used to get an authorized set of attributes of the resident in the response of the API. This API is intended for usage by authorized relying parties to perform KYC requests. The authentication includes an identifier along with authentication factors such as OTP and biometrics. The information returned is governed by a policy. Different relying parties can be provided with different KYC data based on their needs. The policy helps implement selective disclosure as part of the KYC data. The data thus returned is digitally signed by the server and can be used by the relying party with confidence.
+MOSIP additionally offers a KYC API, which can be used to get an authorized set of attributes for the resident in the response of the API. This API is intended for use by authorized relying parties to perform KYC requests. The authentication includes an identifier along with authentication factors such as OTP and biometrics. The information returned is governed by a policy. Different relying parties can be provided with different KYC data based on their needs. The policy helps implement selective disclosure as part of the KYC data. The data thus returned is digitally signed by the server and can be used by the relying party with confidence.
 
 ### Multifactor authentication
 
