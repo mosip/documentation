@@ -4,10 +4,10 @@
 
 Providing a unique identity for a resident is one of the key features of any identity platform. To achieve this, MOSIP interfaces with an **Automated Biometric Identification System (ABIS)** to perform the de-duplication of a resident's biometric data.
 
-The ABIS system never comes to know about residents' identities. Any Personally Identifiable Information (PII) such as demographic details or AID (application ID for applicant) is not shared with the ABIS system. Internally, MOSIP maintains a mapping between the ABIS-specific reference ID and the AID of the resident.
+The ABIS system never learns about residents' identities. Any Personally Identifiable Information (PII), such as demographic details or an applicant's AID (application ID), is not shared with the ABIS system. Internally, MOSIP maintains a mapping between the ABIS-specific reference ID and the AID of the resident.
 
 {% hint style="info" %}
-ABIS is used for 1:N deduplication. For 1:1 authentication [Biometric SDK](biometric-sdk.md) is used. MOSIP does not recommend using an ABIS for 1:1 authentication.
+ABIS is used for 1:N deduplication. For 1:1 authentication, [Biometric SDK](biometric-sdk.md) is used. MOSIP does not recommend using an ABIS for 1:1 authentication.
 {% endhint %}
 
 ![](\_images/abis.png)
@@ -28,7 +28,7 @@ Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Image
 
 ## Test kits
 
-MOSIP provides kits with the test the interface. Refer [abis-testing-kit repo](https://github.com/mosip/abis-testing-kit/tree/1.2.0)
+MOSIP provides kits the test the interface. Refer [abis-testing-kit repo](https://github.com/mosip/abis-testing-kit/tree/1.2.0)
 
 ## ABIS deployment
 
