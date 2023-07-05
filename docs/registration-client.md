@@ -31,7 +31,7 @@ The relationship of Registration Client with other services is explained here. _
 2. All the masterdata and configurations are downloaded from SyncData-service.
 3. Registration Client always connects to external biometric devices through SBI.
 4. Registration Client scans the document proofs from any document scanner.
-5. Aknowledgement receipt print request is raised to any connected printers.
+5. Acknowledgement receipt print request is raised to any connected printers.
 6. Packets ready to be uploaded meta-info are synced to Sync Status service. Also, the status of already uploaded packets are synced back to Registration Client.
 7. All the synced packets are uploaded to Packet Receiver service one by one.
 
