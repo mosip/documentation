@@ -3,18 +3,18 @@
 ## Overview
 This guide enables the Device provider partner to use the partner portal effectively. Below is the workflow:
 
-* Partner self-registers through the portal.
-* Partner admin uploads CA certificate.
-* Partner admin/ Partner uploads the partner certificate.
-* Partner admin/ Partner creates device details.
-* Partner admin approves/rejects device details.
-* Partner admin/ Partner creates SBI details.
-* Partner admin approves/rejects SBI details.
-* Partner admin/ Partner maps devices and SBI.
+* The partner self-registers through the portal.
+* Partner admin uploads the CA certificate.
+* Partner admin or Partner uploads the partner certificate.
+* Partner admin or Partner creates device details.
+* Partner admin approves or rejects device details.
+* Partner admin or Partner creates SBI details.
+* Partner admin approves or rejects SBI details.
+* Partner admin or Partner maps devices and SBI.
 
 ### Self-registration
 
-* The Device Provider partner can register themselves on MOSIP PMS portal by clicking **Register** on the landing page.
+* The Device Provider partner can register themselves on the MOSIP PMS portal by clicking **Register** on the landing page.
 * They need to fill up a form with the details below:
     * First and Last name
     * Organization Name
@@ -36,7 +36,7 @@ The Partner admin needs to upload the CA certificate to enable the partner for u
 
 1. Clicks **Upload CA Certificate** option on the left navigation pane of the partner portal.
 2. Selects the Partner Domain.
-3. Chooses the certificate to upload (only files with extensions as .cer or .pem).
+3. Chooses the certificate to upload (only files with extensions such as .cer or .pem).
 4. Clicks **Upload**. 
 
 The uploaded certificates can be viewed by clicking on `View Certificates-> View`.
@@ -59,10 +59,10 @@ The certificate can be viewed by clicking **Home-> View Certificate ->View**.
 
 ### Creating Device details
 
-The partner can add devices on the portal. To do so,
+The partner can add devices to the portal. To do so,
 
 1. Partner clicks `Device details-> Create Device`.
-2. Enters the necessary details to create/add device like:
+2. Enters the necessary details to create/add devices like:
     * Partner Name
     * Device Type and Sub Type
     * Make and Model
@@ -89,7 +89,7 @@ The Partner Admin can choose to approve/reject the device details entered by the
 
 ### Creating SBI
 
-The Partner can create SBI by filling the required details.
+The Partner can create SBI by filling in the required details.
 
 ![](_images/device-sbi-create-page.PNG)
 
@@ -110,7 +110,7 @@ The Partner Admin can choose to approve/reject the SBI details entered by the pa
 
 ## Mapping Device make and model with SBI
 
-The partner can map the device with a SBI.
+The partner can map the device with an SBI.
 
 ![](_images/device-make-model-sbi-mapping-menu.PNG)
 
