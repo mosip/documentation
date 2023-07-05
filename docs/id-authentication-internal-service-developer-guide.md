@@ -1,19 +1,19 @@
 # ID Authentication Internal Service Developers' Guide
 
 ## Overview
-* Internal Authentication Service - The authentication service used by internal MOSIP modules such as Resident Service, Registration Processor and Registration Client to authenticate individuals.
-* Internal OTP Service - used by Resident Service to generate OTP for an Individual for performing OTP Authentication.
-* Authentication Transaction History Service - used by Resident Service to retrieve paginated list of authentication and OTP Request transactions for an individual.
+* Internal Authentication Service: The authentication service used by internal MOSIP modules such as Resident Service, Registration Processor, and Registration Client to authenticate individuals.
+* Internal OTP Service: used by Resident Service to generate an OTP for an Individual for performing OTP Authentication.
+* Authentication Transaction History Service: used by Resident Service to retrieve a paginated list of authentication and OTP Request transactions for an individual.
 
-The documentation here will guide you through the prerequisites required for the developer' setup.
+The documentation here will guide you through the prerequisites required for the developer's setup.
 
 
 ## Software setup
 
-Below are a list of tools required in ID Repository Services:
+Below is a list of tools required in ID Repository Services:
 
 1. JDK 11
-2. Any IDE (like Eclipse, IntelliJ IDEA)
+2. Any IDE (like Eclipse or IntelliJ IDEA)
 3. Apache Maven (zip folder)
 4. pgAdmin
 5. Postman
@@ -29,11 +29,11 @@ Follow the steps below to set up ID Repository Services on your local system:
 
 2\. Unzip Apache Maven and move the unzipped folder in ```C:\Program Files``` and `settings.xml` to "conf" folder `C:\Program Files\apache-maven-3.8.4\conf`.
 
-3\. Install Eclipse, open the `lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE and then click `Install/Update`.
+3\. Install Eclipse, open the `lombok.jar` file, wait for some time until it completes the scan for the Eclipse IDE, and then click `Install/Update`.
 
 <img src="_images/lombok-configuration.png" width="750" height="450">
 
-4\. Check the Eclipse installation folder `C:\Users\userName\eclipse\jee-2021-12\eclipse` to see if the `lombok.jar` is added. By doing this, you don't have to add the dependency of `lombok` in your `pom.xml` file separately as it is auto-configured by Eclipse.
+4\. Check the Eclipse installation folder `C:\Users\userName\eclipse\jee-2021-12\eclipse` to see if the `lombok.jar` is added. By doing this, you don't have to add the dependency of `lombok` in your `pom.xml` file separately, as it is auto-configured by Eclipse.
 
 5\. Configure the JDK (Standard VM) with your Eclipse by traversing through `Preferences → Java → Installed JREs`.
 
@@ -43,19 +43,19 @@ Follow the steps below to set up ID Repository Services on your local system:
 
 For the code setup, clone the repository and follow the guidelines mentioned in the [Code Contributions](https://docs.mosip.io/1.2.0/community/code-contributions).
 
-### Importing and building of a project
+### Importing and building a project
 
 1. Open the project folder where `pom.xml` is present.
-2. Open command prompt from the same folder.
+2. Open the command prompt from the same folder.
 3. Run the command `mvn clean install -Dgpg.skip=true` to build the project and wait for the build to complete successfully.
-4. After building of a project, open Eclipse and select `Import Projects → Maven → Existing Maven Projects → Next → Browse to project directory → Finish`.
-5. After successful importing of project, update the project by right-click on `Project → Maven → Update Project`.
+4. After building a project, open Eclipse and select `Import Projects → Maven → Existing Maven Projects → Next → Browse to project directory → Finish`.
+5. After successfully importing of project, update the project by right-clicking on `Project → Maven → Update Project`.
 
 <img src="_images/import-project.png" width="750" height="450">
 
 ## Environment setup
 
-1\. For the environment setup, you need an external JAR that is available [here](https://oss.sonatype.org/#nexus-search;gav~~kernel-auth-adapter~1.2.0-SNAPSHOT~~) with different versions. (E.g.: You can download `kernel-auth-adapter.jar` and add to project `Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply and Close`).
+1\. For the environment setup, you need an external JAR that is available [here](https://oss.sonatype.org/#nexus-search;gav~~kernel-auth-adapter~1.2.0-SNAPSHOT~~) with different versions. (E.g.: You can download `kernel-auth-adapter.jar` and add to the project `Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply and Close`).
 
 <img src="_images/add-external-library.png" width="750" height="450">
 
@@ -63,7 +63,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 3\. Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
 
-4\. As ID Authentication is using two properties files, `id-authentication-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-authentication-config-files) for reference.
+4\. As ID Authentication is using two property files, `id-authentication-default` and `application-default`, you will have to configure them according to your environment.    The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/_files/id-authentication-config-files) for reference.
 
 Properties to be updated:
 
@@ -71,7 +71,7 @@ Properties to be updated:
 * `mosip.mosip.resident.client.secret = <current_password>`.
 * `db.dbuser.password=<password>`.
 * `mosip.kernel.xsdstorage-uri=file:///home/user/Desktop/tspl/mosip-config/sandbox-local/`(i.e. `sandbox-local` folder location).
-*  Comment this out `auth.server.admin.issuer.internal.uri` in `application-default.properties` file because you already have this `auth.server.admin.issuer.uri` , and hence there is no need of `auth.server.admin.issuer.internal.uri`.
+*  Comment this out `auth.server.admin.issuer.internal.uri` in `application-default.properties` file because you already have this `auth.server.admin.issuer.uri`, and hence there is no need for `auth.server.admin.issuer.internal.uri`.
 *  `mosip.identity.mapping-file=<Path_to_identity_mapping_json_file>`. (For Example: `file:///home/user/Desktop/tspl/mosip-config/sandbox-local/identity-mapping.json`)
 
 `id-authentication-default.properties`
@@ -94,7 +94,7 @@ The server should now be up and running.
 
 Below are the configurations to be done in Eclipse:
 
-1\. Open Eclipse and run the project for one time as `Java application`, so that it will create a Java application which you can see in debug configurations and then change its name. (e.g.: project name with environment - "Auth-Internal-Service-Dev").
+1\. Open Eclipse and run the project for one time as `Java application`, so that it will create a Java application which you can see in debug configurations and then change its name. (e.g.: project name with the environment - "Auth-Internal-Service-Dev").
 
 <img src="_images/create-env-in-eclipse.png" width="750" height="450">
 
