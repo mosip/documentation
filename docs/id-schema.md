@@ -6,7 +6,7 @@
 
 Defining the ID Schema is the first step towards creating a foundational ID system. Once defined, all applications built on top of the MOSIP platform must conform to the same.
 
-We should not confuse ID Schema with what you see on the screen of the Registration client/Pre-registration. ID Schema is the final data that you would like to store against each user in the final ID Repository. Quite often we collect more data than listed in ID Schema. This is essential to validate the user's claim. We should consider these data as transactional and will never reach the final ID Repository.
+One should not confuse ID Schema with what is seen on the screen of the Registration client/ Pre-registration. ID Schema is the final data that you would like to store against each user in the final ID Repository. Quite often we collect more data than listed in ID Schema. This is essential to validate the user's claim. We should consider these data as transactional and it will never reach the final ID Repository.
 
 ## Understanding ID Schema
 
@@ -15,7 +15,7 @@ This guide is intended for adopters who would customize the default ID Schema to
 ### Terminology
 
 * **Field**: Unit of data collected from residents (eg. `fullName`, `dateOfBirth`, `proofOfIdentity` etc).
-* **Field attribute**: Qualification of Field (eg. `fieldCategory`, `fieldType`, etc).
+* **Field attribute**: Qualification of Field (e.g.: `fieldCategory`, `fieldType`, etc).
 * **Definition**: Custom data types are defined for collecting different types of data:
   * `simpleType`: Multiple languages.
   * `documentType`: Document metadata.
@@ -36,7 +36,7 @@ This guide is intended for adopters who would customize the default ID Schema to
   * `uppercased:` Value stored in upper case format
   * `none:` No format applied to the data
 * `validators`
-  * `type`: Validation engine type. Supported type as of now is `regex`
+  * `type`: Validation engine type. Supported type as of now is `regex`.
   * `validator`: Based on the type the actual script is placed here.  In case the `type` is `regex` then the actual regex pattern is used here.
   * `arguments`: Array to hold parameter or dependent field IDs required for validation.
 * `subType`
@@ -59,14 +59,14 @@ If any changes are made to the default ID Schema, make sure the following depend
 
 ## Versions of ID Schema
 
-ID Schema is identified based on its version in the MOSIP system. On publishing of ID Schema, the schema is versioned. Every ID Object stores the ID Schema version which is validated during ID Object validation.
+ID Schema is identified based on it's version in the MOSIP system. On publishing of an ID Schema, the schema is versioned. Every ID Object stores the ID Schema version which is validated during ID Object validation.
 
 ## Good Practice
 
-The following is the list of good practice that MOSIP recommends for creating your ID Schema.
+The following is the list of good practices that MOSIP recommends for creating your ID Schema.
 
-* As a privacy by design practice we recommended that the number of fields is kept to a usable minimum in order to avoid profiling.
+* As a privacy by design practice, it is recommended that the number of fields is kept to a usable minimum in order to avoid profiling.
 * Larger number of data results in serious data quality issues.&#x20;
-* Keeping the field minimum ensures everyone is inclusively add to the foundational identity.
-* As a best guide limit the total number of fields to be less than 10.
+* Keeping the fields minimum ensures everyone is inclusively added to the foundational identity.
+* As a best guide, limit the total number of fields to be less than 10.
 * Stick to one version of ID Schema for better compatibility.&#x20;
