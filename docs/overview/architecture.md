@@ -17,4 +17,5 @@ MOSIP is designed with the following architecture principles. These architecture
 
 <figure><img src="../.gitbook/assets/MOSIP-Architecture-Overview.jpg" alt=""><figcaption><p>Architecture Overview</p></figcaption></figure>
 
-To know how MOSIP can be deployed, refer to the [Getting started](https://docs.mosip.io/1.2.0/deploymentnew/getting-started). The different installation models are detailed out in the [Deployment](https://docs.mosip.io/1.2.0/deploymentnew) section. 
+
+To know how MOSIP can be deployed, refer [Getting Started](https://docs.mosip.io/1.2.0/deploymentnew/getting-started). The different installation models are detailed out in the [Deployment](https://docs.mosip.io/1.2.0/deploymentnew) section. 
