@@ -1,13 +1,13 @@
 Overview:
 ---------
 
-*   Mosip modules are deployed in the form of microservices in kubernetes cluster.
+*   MOSIP modules are deployed in the form of microservices in kubernetes cluster.
     
 *   [Wireguard](https://www.wireguard.com/) is used as a trust network extension to access the admin, control, and observation pane
     
-*   It's also used for on-the-field registration.
+*   It is also used for on-the-field registrations.
     
-*   Mosip uses AWS load balancers for:
+*   MOSIP uses AWS load balancers for:
     
     *   SSL termination
         
@@ -19,19 +19,19 @@ Overview:
         
 *   Kubernetes cluster is administered using the [Rancher](https://rancher.com/docs/rancher/v1.3/en/kubernetes/#rancher-ui) and [EKS](https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/amazon-elastic-kubernetes-service.html)
     
-*   In V3 we have two Kubernetes clusters:
+*   In V3, we have two Kubernetes clusters:
     
-    *   Observation Cluster - This cluster is part of the observation plane and it helps in administrative tasks. By design, this is kept independent of the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice this cluster or its services should be internal and should never be exposed to the external world.
+    *   Observation Cluster - This cluster is a part of the observation plane and it helps in administrative tasks. By design, this is kept independent of the actual cluster as a good security practice and to ensure clear segregation of roles and responsibilities. As a best practice, this cluster or its services should be internal and should never be exposed to the external world.
         
         *   [Rancher](https://rancher.com/docs/rancher/v1.3/en/kubernetes/#rancher-ui) is used for managing the Mosip cluster.
             
         *   [Keycloak](https://www.keycloak.org/) in this cluster is used for cluster user access management.
             
-        *   Its recommended to configure log monitoring and network monitoring in this cluster.
+        *   It is recommended to configure log monitoring and network monitoring in this cluster.
             
-        *   In case you have a internal container registry then it should run here.
+        *   In case you have a internal container registry, then it should run here.
             
-    *   Mosip Cluster - This cluster runs all the Mosip components and certain third party components to secure the cluster, API’s and Data.
+    *   MOSIP Cluster - This cluster runs all the MOSIP components and certain third party components to secure the cluster, API’s and Data.
         
         *   [MOSIP External Components](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/external/README.md#mosip-external-components)
             
@@ -45,22 +45,22 @@ Deployment Repos:
     
 *   [mosip-infra](https://github.com/mosip/mosip-infra/tree/v1.2.0.1-B1/deployment/v3) : contains deployment scripts to run charts in defined sequence.
     
-*   [mosip-config](https://github.com/mosip/mosip-config/tree/v1.2.0.1-B1) : contains all the configuration files required by the Mosip modules.
+*   [mosip-config](https://github.com/mosip/mosip-config/tree/v1.2.0.1-B1) : contains all the configuration files required by the MOSIP modules.
     
-*   [mosip-helm](https://github.com/mosip/mosip-helm/tree/v1.2.0.1-B1) : contains packaged helm charts for all the Mosip modules.
+*   [mosip-helm](https://github.com/mosip/mosip-helm/tree/v1.2.0.1-B1) : contains packaged helm charts for all the MOSIP modules.
     
 
 Pre-requisites:
 ---------------
 
-### Hardware Requirement:
+### Hardware Requirements
 
-VM’s required can be with any OS as per convenience.  
-We are reffering to Ubuntu OS througout this installation guide.
+VM’s required have any Operating System and can be selected as per convenience.  
+In this installation guide, we are referring to `Ubuntu OS` throughout.
 
 <table data-layout="wide" data-local-id="108428f4-b00b-42ab-91d2-7d64f8ea5be7" class="confluenceTable"><colgroup><col><col style="width: 358.0px;"><col style="width: 78.0px;"><col style="width: 70.0px;"><col style="width: 132.0px;"><col style="width: 140.0px;"><col style="width: 140.0px;"></colgroup><tbody><tr><th class="numberingColumn confluenceTh"></th><th data-highlight-colour="var(--ds-background-neutral, #F4F5F7)" class="confluenceTh"><p><strong>Purpose</strong></p></th><th data-highlight-colour="var(--ds-background-neutral, #F4F5F7)" class="confluenceTh"><p><strong>vCPU’s</strong></p></th><th data-highlight-colour="var(--ds-background-neutral, #F4F5F7)" class="confluenceTh"><p><strong>RAM</strong></p></th><th data-highlight-colour="var(--ds-background-neutral, #F4F5F7)" class="confluenceTh"><p><strong>Storage (HDD)</strong></p></th><th data-highlight-colour="var(--ds-background-neutral, #F4F5F7)" class="confluenceTh"><p><strong>no. of VM’s</strong></p></th><th data-highlight-colour="var(--ds-background-neutral, #F4F5F7)" class="confluenceTh"><p><strong>HA</strong></p></th></tr><tr><td class="numberingColumn confluenceTd">1</td><td class="confluenceTd"><p>Wireguard Bastion Host</p></td><td class="confluenceTd"><p>2</p></td><td class="confluenceTd"><p>4 GB</p></td><td class="confluenceTd"><p>8 GB</p></td><td class="confluenceTd"><p>1</p></td><td class="confluenceTd"><p>(ensure to setup active-passive)</p></td></tr><tr><td class="numberingColumn confluenceTd">2</td><td class="confluenceTd"><p>Rancher Cluster nodes (EKS managed)</p></td><td class="confluenceTd"><p>2</p></td><td class="confluenceTd"><p>8 GB</p></td><td class="confluenceTd"><p>32 GB</p></td><td class="confluenceTd"><p>2</p></td><td class="confluenceTd"><p>2</p></td></tr><tr><td class="numberingColumn confluenceTd">3</td><td class="confluenceTd"><p>Mosip Cluster nodes (EKS managed)</p></td><td class="confluenceTd"><p>12</p></td><td class="confluenceTd"><p>32 GB</p></td><td class="confluenceTd"><p>128 GB</p></td><td class="confluenceTd"><p>6</p></td><td class="confluenceTd"><p>6</p></td></tr></tbody></table>
 
-### Network Requirements:
+### Network Requirements
 
 *   All the VM's should be able to communicate with each other.
     
@@ -68,16 +68,16 @@ We are reffering to Ubuntu OS througout this installation guide.
     
 *   All the VM's should have stable internet connectivity for docker image download (in case of local setup ensure to have a locally accesible docker registry).
     
-*   During the process we will be creating two loadbalancers as mentioned in below mentioned 1st table :
+*   During the process, we will be creating two loadbalancers as mentioned in the first table below:
     
-*   Server Interface requirement as mentioned in below mentioned 2nd table:
+*   Server Interface requirement as mentioned in the second table:
     
 
 <table data-layout="wide" data-local-id="b1b6584b-363c-4443-a6b5-51f38f8ad1a0" class="confluenceTable"><colgroup><col style="width: 273.0px;"><col style="width: 685.0px;"></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Loadbalancer</strong></p></th><th class="confluenceTh"><p><strong>Purpose</strong></p></th></tr><tr><td class="confluenceTd"><p>Private loadbalancer Observation cluster</p></td><td class="confluenceTd"><p>This will be used to access Rancher dashboard and keycloak of observation cluster.</p><p>Note: access to this will be restricted only with wireguard key holders.</p></td></tr><tr><td class="confluenceTd"><p>Public loadbalancer MOSIP cluster</p></td><td class="confluenceTd"><p>This will be used to access below mentioned services:</p><ul><li><p>Pre-registration</p></li><li><p>Esignet</p></li><li><p>IDA</p></li><li><p>Partner management service api’s</p></li><li><p>Mimoto</p></li><li><p>Mosip file server</p></li><li><p>Resident</p></li></ul></td></tr><tr><td class="confluenceTd"><p>Private loadbalancer MOSIP cluster</p></td><td class="confluenceTd"><p>This will be used to access all the services deployed as part of the setup inclusing external as well as all the MOSIP services.</p><p>Note: access to this will be restricted only with wireguard key holders.</p></td></tr></tbody></table>
 
 <table data-layout="wide" data-local-id="557c067b-15fa-4af3-af2e-fb9080d0dcd6" class="confluenceTable"><colgroup><col><col style="width: 232.0px;"><col style="width: 728.0px;"></colgroup><tbody><tr><th class="numberingColumn confluenceTh"></th><th data-highlight-colour="var(--ds-background-neutral, #F4F5F7)" class="confluenceTh"><p><strong>Purpose VM</strong></p></th><th data-highlight-colour="var(--ds-background-neutral, #F4F5F7)" class="confluenceTh"><p><strong>Network Interfaces</strong></p></th></tr><tr><td class="numberingColumn confluenceTd">1</td><td class="confluenceTd"><p>Wireguard Bastion Host</p></td><td class="confluenceTd"><ul><li><p>One Private interface: that is on the same network as all the rest of nodes. (Eg: inside local NAT Network )</p></li><li><p>One public interface: Either has a direct public IP, or a firewall NAT (global address) rule that forwards traffic on 51820/udp port to this interface ip.</p></li></ul></td></tr></tbody></table>
 
-### DNS Requirements:
+### DNS Requirements
 
 <table data-layout="wide" data-local-id="067f0108-de70-41af-a662-2bb21c705bda" class="confluenceTable"><colgroup><col><col style="width: 226.67px;"><col style="width: 226.67px;"><col style="width: 226.67px;"></colgroup><tbody><tr><th class="numberingColumn confluenceTh"></th><th data-highlight-colour="var(--ds-background-neutral, #F4F5F7)" class="confluenceTh"><p><strong>Domain name</strong></p></th><th data-highlight-colour="var(--ds-background-neutral, #F4F5F7)" class="confluenceTh"><p><strong>Mapping details</strong></p></th><th data-highlight-colour="var(--ds-background-neutral, #F4F5F7)" class="confluenceTh"><p><strong>Purpose</strong></p></th></tr><tr><td class="numberingColumn confluenceTd">1</td><td class="confluenceTd"><p><a href="http://rancher.xyz.net" class="external-link" rel="nofollow">rancher.xyz.net</a></p></td><td class="confluenceTd"><p>Load balancer of Observation cluster</p></td><td class="confluenceTd"><p>Rancher dashboard to monitor and manage the kubernetes cluster. You can share an existing rancher cluser.</p></td></tr><tr><td class="numberingColumn confluenceTd">2</td><td class="confluenceTd"><p><a href="http://keycloak.xyz.net" class="external-link" rel="nofollow">keycloak.xyz.net</a></p></td><td class="confluenceTd"><p>Load balancer of Observation cluster</p></td><td class="confluenceTd"><p>Administrative IAM tool (keycloak). This is for the kubernetes administration.</p></td></tr><tr><td class="numberingColumn confluenceTd">3</td><td class="confluenceTd"><p><a href="http://sandbox.xyx.net" class="external-link" rel="nofollow">sandbox.xyx.net</a></p></td><td class="confluenceTd"><p>Private Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>Index page for links to different dashboards of Mosip env. (This is just for reference, Please do not expose this page in a real production or uat environment)</p></td></tr><tr><td class="numberingColumn confluenceTd">4</td><td class="confluenceTd"><p><a href="http://api-internal.sandbox.xyz.net" class="external-link" rel="nofollow">api-internal.sandbox.xyz.net</a></p></td><td class="confluenceTd"><p>Private Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>Internal API’s are exposed through this domain. They are accessible privately over wireguard channel</p></td></tr><tr><td class="numberingColumn confluenceTd">5</td><td class="confluenceTd"><p><a href="http://api.sandbox.xyx.net" class="external-link" rel="nofollow">api.sandbox.xyx.net</a></p></td><td class="confluenceTd"><p>Public Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>All the API’s that are publically usable are exposed using this domain.</p></td></tr><tr><td class="numberingColumn confluenceTd">6</td><td class="confluenceTd"><p><a href="http://prereg.sandbox.xyz.net" class="external-link" rel="nofollow">prereg.sandbox.xyz.net</a></p></td><td class="confluenceTd"><p>Public Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>Domain name for Mosip’s pre-registration portal. The portal is accessible publicly.</p></td></tr><tr><td class="numberingColumn confluenceTd">7</td><td class="confluenceTd"><p><a href="http://activemq.sandbox.xyx.net" class="external-link" rel="nofollow">activemq.sandbox.xyx.net</a></p></td><td class="confluenceTd"><p>Private Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>Provides direct access to activemq dashboard. Its limited and can be used only over wireguard</p></td></tr><tr><td class="numberingColumn confluenceTd">8</td><td class="confluenceTd"><p><a href="http://kibana.sandbox.xyx.net" class="external-link" rel="nofollow">kibana.sandbox.xyx.net</a></p></td><td class="confluenceTd"><p>Private Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>Optional instalation. Used to access kibana dashboard over wireguard</p></td></tr><tr><td class="numberingColumn confluenceTd">9</td><td class="confluenceTd"><p><a href="http://regclient.sandbox.xyz.net" class="external-link" rel="nofollow">regclient.sandbox.xyz.net</a></p></td><td class="confluenceTd"><p>Private Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>Regclient can be downloaded from this domain. It should be used over wireguard.</p></td></tr><tr><td class="numberingColumn confluenceTd">10</td><td class="confluenceTd"><p><a href="http://admin.sandbox.xyz.net" class="external-link" rel="nofollow">admin.sandbox.xyz.net</a></p></td><td class="confluenceTd"><p>Private Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>Mosip’s admin portal is exposed using this domain. This is an internal domain and is restricted to access over wireguard</p></td></tr><tr><td class="numberingColumn confluenceTd">11</td><td class="confluenceTd"><p><a href="http://object-store.sandbox.xyx.net" class="external-link" rel="nofollow">object-store.sandbox.xyx.net</a></p></td><td class="confluenceTd"><p>Private Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>Optional- This domain is used to access the object server. Based on the object server that you choose map this domain accordingly. In our reference implementation Minio is used and this domain lets you access Minio’s Console over wireguard</p></td></tr><tr><td class="numberingColumn confluenceTd">12</td><td class="confluenceTd"><p><a href="http://kafka.sandbox.xyz.net" class="external-link" rel="nofollow">kafka.sandbox.xyz.net</a></p></td><td class="confluenceTd"><p>Private Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>Kafka UI is installed as part of the Mosip’s default installation. We can access kafka ui over wireguard. Mostly used for administrative needs.</p></td></tr><tr><td class="numberingColumn confluenceTd">13</td><td class="confluenceTd"><p><a href="http://iam.sandbox.xyz.net" class="external-link" rel="nofollow">iam.sandbox.xyz.net</a></p></td><td class="confluenceTd"><p>Private Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>Mosip uses an Openid connect server to limit and manage access across all the services. The default installation comes with Keycloak. This domain is used to access the keycloak server over wireguard</p></td></tr><tr><td class="numberingColumn confluenceTd">14</td><td class="confluenceTd"><p><a href="http://postgres.sandbox.xyz.net" class="external-link" rel="nofollow">postgres.sandbox.xyz.net</a></p></td><td class="confluenceTd"><p>Private Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>This domain points to the postgres server. You can connect to postgres via port forwarding over wireguard</p></td></tr><tr><td class="numberingColumn confluenceTd">15</td><td class="confluenceTd"><p><a href="http://pmp.sandbox.xyz.net" class="external-link" rel="nofollow">pmp.sandbox.xyz.net</a></p></td><td class="confluenceTd"><p>Public Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>Mosip’s partner management portal is used to manage partners accessing partner management portal over wireguard</p></td></tr><tr><td class="numberingColumn confluenceTd">16</td><td class="confluenceTd"><p><a href="http://resident.sandbox.xyz.net" class="external-link" rel="nofollow">resident.sandbox.xyz.net</a></p></td><td class="confluenceTd"><p>Public Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>accessident resident portal publically</p></td></tr><tr><td class="numberingColumn confluenceTd">17</td><td class="confluenceTd"><p><a href="http://idp.sandbox.xyz.net" class="external-link" rel="nofollow">esignet.sandbox.xyz.net</a></p></td><td class="confluenceTd"><p>Public Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>accessing IDP over public</p></td></tr><tr><td class="numberingColumn confluenceTd">18</td><td class="confluenceTd"><p><a href="http://smtp.sandbox.xyz.net" class="external-link" rel="nofollow">smtp.sandbox.xyz.net</a></p></td><td class="confluenceTd"><p>Private Load balancer of MOSIP cluster</p></td><td class="confluenceTd"><p>Accessing mock-smtp UI over wireguard</p></td></tr></tbody></table>
 
@@ -88,16 +88,16 @@ We are reffering to Ubuntu OS througout this installation guide.
 *   The above table is just a placeholder for hostnames, the actual name itself varies from organisation to organisation.
     
 
-### Certificate requirements:
+### Certificate requirements
 
-As only secured https connections are allowed via nginx server will need below mentioned valid ssl certificates:
+As only secured `https` connections are allowed via nginx server, you will need the below mentioned valid ssl certificates:
 
-*   One valid wildcard ssl certificate related to domain used for accesing Observation cluster, this will be created using ACM (Amazon certificate manager). In above e.g. \*.[org.net](http://org.net/) is the similiar example domain.
+*   One valid wildcard ssl certificate related to domain used for accesing Observation cluster which will be created using ACM (Amazon certificate manager). In above e.g. \*.[org.net](http://org.net/) is the similiar example domain.
     
-*   One valid wildcard ssl certificate related to domain used for accessing Mosip cluster, this will be created using ACM (Amazon certificate manager). In above e.g \*.[sandbox.xyz.net](http://sandbox.xyz.net/) is the similiar example domain.
+*   One valid wildcard ssl certificate related to domain used for accessing MOSIP cluster which will be created using ACM (Amazon certificate manager). In above e.g. \*.[sandbox.xyz.net](http://sandbox.xyz.net/) is the similiar example domain.
     
 
-### Prerequisites to be done in Personal Computer for complete deployment:
+### Prerequisite for complete deployment in Personal Computer
 
 *   [kubectl](https://kubernetes.io/docs/tasks/tools/#kubectl) client version 1.23.6
     
@@ -198,7 +198,7 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
 
 *   Install [Wireguard client](https://www.wireguard.com/install/) in your PC.
     
-*   Assign wireguard.conf:
+*   Assign `wireguard.conf`:
     
     *   SSH to the wireguard server VM.
         
@@ -299,7 +299,7 @@ A Wireguard bastion host (Wireguard server) provides secure private channel to a
             *   Command will result in details of the nodes of the rancher cluster.
                 
 
-### **Observation K8s Cluster’s Ingress and Storage class setup:**
+### Observation K8s Cluster’s Ingress and Storage class setup
 
 Once the rancher cluster is ready we need ingress and storage class to be set for other applications to be installed.
 
@@ -330,7 +330,7 @@ Once the rancher cluster is ready we need ingress and storage class to be set fo
         
     *   Edit listner "443". Select "TLS".
         
-    *   Note the target group name of listner 80. Set target group of 443 to target group of 80. Basically, we want TLS termination at the LB and it must forward HTTP traffic (not HTTPS) to port 80 of ingress controller. So
+    *   Note, the target group name of listner 80. Set target group of 443 to target group of 80. Basically, we want TLS termination at the LB and it must forward HTTP traffic (not HTTPS) to port 80 of ingress controller. So
         
         *   Input of LB: HTTPS
             
@@ -374,7 +374,7 @@ Create the following domain names:
 
 Point the above to **internal** ip address of the NLB. This assumes that you have a [Wireguard Bastion Host](https://docs.mosip.io/1.2.0/deployment/wireguard/wireguard-bastion) has been installed. On AWS this is done on Route 53 console.
 
-### **Rancher K8s Cluster Apps Installation**
+### Rancher K8s Cluster Apps Installation
 
 *   **Rancher UI** : Rancher provides full CRUD capability of creating and managing kubernetes cluster.
     
@@ -550,7 +550,7 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
 *   Your cluster is now added to the rancher management server.
     
 
-### **MOSIP K8 Cluster Global configmap, Ingress and Storage Class setup**
+### MOSIP K8 Cluster Global configmap, Ingress and Storage Class setup
 
 *   **Global configmap**: Global configmap contains list of necesary details to be used throughout the namespaces of the cluster for common details.
     
@@ -804,7 +804,7 @@ Mosip uses Rancher Fluentd and elasticsearch to collect logs from all services a
 *   Check detailed MOSIP Modules Deployment [MOSIP Modular installation](https://mosip.atlassian.net/wiki/spaces/DevOps/pages/1036386394/MOSIP+Modules+Deployment) steps.
     
 
-### Api Testrig
+### API Testrig
 
 *   MOSIP’s successfull deployment can be verified by comparing the results of api testrig with testrig benchmark.
     
