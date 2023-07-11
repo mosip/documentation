@@ -92,6 +92,7 @@
   * [V3 installation](deploymentnew/v3-installation.md)
     * [On-Prem Installation Guidelines](deploymentnew/on-prem-installation-guidelines.md)
     * [On-Prem without DNS Installation Guidelines](deploymentnew/on-prem-without-dns.md)
+    * [AWS Installation Guidelines](aws-installation-guidelines-new.md)
     * [Testrig](deploymentnew/testrig.md)
     * [MOSIP External Dependencies](deploymentnew/mosip-external-dependencies.md)
     * [MOSIP Modules Deployment](deploymentnew/mosip-modules-deployment.md)
