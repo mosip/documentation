@@ -9,14 +9,20 @@ The Windows Compliance tool kit was tested with the below specifications:
   i.	**ABIS (Automated Biometric Identification System)** Specifications was tested with Fingerprint, Iris and Face modalities as per MOSIP- ABIS API specifications.
 
   ii.	**Secure Biometric Interface (SBI)**
+  
         * Registration devices for Iris, Face and Fingerprint
+        
         * Authentication devices for Iris, Face and Fingerprint
       
   iii. **Biometric SDK**
-        *	Quality Check
-        *	Match
-        * Extraction
-        * Conversion 
+   
+       * Quality Check
+        
+       * Match
+        
+       * Extraction
+        
+       * Conversion 
 
 The Android Compliance tool kit app v1.2.0 was tested with the below specifications:
 
