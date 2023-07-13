@@ -50,7 +50,7 @@ Test cases have been tested with MOSIP mock ABIS for compliance with the MOSIP s
 | **Test Rate (%)** | 100%       | 
 | **Pass Rate (%)** | 100%       | 
 
-_Out of scope_: Real ABIS testing in CTK v1.2.0
+_Out of scope_: Real ABIS testing in CTK 1.2.0
 
 ### SBI Testing
 
@@ -85,7 +85,7 @@ The `Android CTK app v1.2.0` with `MOSIP Android Mock SBI` has been tested for c
 
 #### For Windows Authentication Devices using MOSIP's windows mock SBI
 
-The Windows CTK v1.2.0 with `MOSIP windows Mock SBI` has been tested for compliance with the specifications across 55 authentication spec test cases.
+The Windows CTK 1.2.0 with `MOSIP windows Mock SBI` has been tested for compliance with the specifications across 55 authentication spec test cases.
 
 | **Scenarios**     | **Finger** | **Iris** | **Face** |
 | ----------------- | ---------- | -------- | -------- |
@@ -98,7 +98,7 @@ The Windows CTK v1.2.0 with `MOSIP windows Mock SBI` has been tested for complia
 
 #### For Windows Registration Devices using MOSIP's windows mock SBI
 
-The Windows CTK v1.2.0 with `MOSIP windows Mock SBI` has been tested for compliance with the specifications across 76 registration spec test cases.
+The Windows CTK 1.2.0 with `MOSIP windows Mock SBI` has been tested for compliance with the specifications across 76 registration spec test cases.
 
 | **Scenarios**     | **Finger** | **Iris** | **Face** |
 | ----------------- | ---------- | -------- | -------- |
@@ -129,12 +129,13 @@ _Out of scope_: Segmentation testing and Real SDK testing.
 ### Known Issues 
 
 * After login to CTK Android app, the previous browser tab is not killed.
-*	Newly registered user not landing on the CTK android home page (intermittent issue).
+  Workaround: Once the popup appears, the user can manually close the tabs.
+*	Newly registered user not landing on the CTK android home page (an intermittent issue observed on _Samsung A03_ mobile device).
 *	In CTK Android app, UI elements are overlapping with each other (issue observed on _Samsung A03_ and _Oneplus nord AC2001_ mobiles because of screen size).
-*	Add project/ collection takes empty spaces as name (Validation is missing).
-*	In Android CTK -`Encryption Key` button is not appearing for Auth projects (Workaround: Partners can download `Encryption Key` from web application.
-*	Test cases `SBI1067` and `SBI1068` Auth Iris ISO validation failing with Android mock MDS.
-
+*	Add project/ collection takes empty spaces as name (validation is missing).
+*	In Android CTK -`Encryption Key` button is not appearing for Auth projects (Workaround: Partners can download the `Encryption Key` from the web application.
+*	With Android mock MDS, `SBI1067` and `SBI1068` testcases for Auth Iris ISO validation failing (issue with Android mock MDS).
+  
 ### Docker version (required for Compliance Tool Kit)
 
 mosipqa/compliance-toolkit-service:1.2.0 
