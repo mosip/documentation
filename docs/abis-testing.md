@@ -2,7 +2,11 @@
 
 A partner can test their biometric ABIS’s with MOSIP’s Compliance Toolkit. In this document, we have provided the steps that can be followed by the partner to enable the ABIS testing.
 
-## Test using a Mock ABIS:
+The diagram below illustrates the CTK deployment architecture.
+
+![](\_images/ctk-deployment-architecture-abis.png)
+
+## Test using a Mock ABIS
 
 * Checkout MOSIP’s Mock Services from `https://github.com/mosip/mosip-mock-services`. Make sure to checkout the code from **develop** branch.
 * Go to REPO_ROOT/mock-abis.
