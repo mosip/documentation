@@ -21,7 +21,7 @@
   * [Steps to make CTK publicly available](ctk-public-setup.md)
   * [Steps to set up SDK for testing](sdk-setup.md)
   * [Steps to set up ABIS for testing](abis-testing.md)
-* [Developer Guides](how-to-guides/how-to-set-up-ctk/README.md)
+* [Developer Guides](README.md)
     * [How to add more test cases](test-cases.md)
     * [CTK Validators](ctk-validators.md)
     * [List of ISO validations performed by CTK](iso-validators.md)
