@@ -169,9 +169,7 @@ mosipid/mosip-keycloak:16.1.1-debian-10-r85
 
 #### MOSIP CTK Service
 
-
-#### MOSIP CTK UI Repository
-
+![](\_images/sonar-ctk-service1.2.0.png)
 
 
 
