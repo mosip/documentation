@@ -9,8 +9,8 @@ The diagram below illustrates the CTK deployment architecture.
 ## Test using a Mock ABIS
 
 * Checkout MOSIP’s Mock Services from `https://github.com/mosip/mosip-mock-services`. Make sure to checkout the code from **develop** branch.
-* Go to REPO_ROOT/mock-abis.
-* To setting ABIS queue Configuration, below are steps to be followed.
+* Go to `REPO_ROOT/mock-abis`.
+* For setting ABIS queue configuration, follow the steps below:
     * Step 1: Create `registration-processor-abis.json` in the resources folder with the below details.
 
     ```
@@ -32,7 +32,7 @@ The diagram below illustrates the CTK deployment architecture.
     }
     ```
 
-    * Step 2: Update the following details in `application-local.properties`
+    * Step 2: Update the following details in `application-local.properties`.
 
     ```
     secret_url=https://api-internal.${env}.mosip.net/v1/authmanager/authenticate/clientidsecretkey
@@ -40,7 +40,7 @@ The diagram below illustrates the CTK deployment architecture.
     abis.bio.encryption=false
     ```
 
-    * Step 3: Update the following details in `config.properties`
+    * Step 3: Update the following details in `config.properties`.
 
     ```
     secret_url=https://api-internal.${env}.mosip.net/v1/authmanager/authenticate/clientidsecretkey
@@ -58,7 +58,8 @@ The diagram below illustrates the CTK deployment architecture.
     ```
 
     * Step 4: Build the code with the command  `mvn clean install -Dmaven.test.skip=true -Dgpg.skip=true`.
-* If you are testing with new queues, then first create them manually in active mq console.
+      
+* If you are testing with newer queues, then you need to first create them manually in `active mq` console.
 
 ```
 Create Address > ctk-to-abis >  anycast > save
