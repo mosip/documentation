@@ -141,11 +141,11 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
 3\. Create a new folder named `testdata` in the above bucket.Upload MOSIP_DEFAULT_XXX.zip files from resources to it.
 
-4\. Create a new folder named `schemas` in the above bucket.  Upload all **SBI** and **SDK** schemas along with subfolders in it.
+4\. Create a new folder named `schemas` in the above bucket.  Upload all **SBI**, **SDK** and **ABIS** schemas along with subfolders in it.
 
 5\. Upload `testcase_schema.json` from resources folder to `schemas folder.
 
-6\. There is no need to upload `compliance_test_definitions_sbi.json` & `compliance_test_definitions_sdk.json`
+6\. There is no need to upload `compliance_test_definitions_sbi.json` ,`compliance_test_definitions_sdk.json` and `compliance_test_definitions_abis.json`
 
 7\. Please restart the compliance pods after adding new files in minio to refresh the cache.
 
@@ -166,7 +166,7 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
 5\. Go to `ResourceManagementController` in swagger and upload the schema alongwith testdata files.
 
-6\. Then, select any one of type mentioned above and also mention the version (SBI/SDK Version).
+6\. Then, select any one of type mentioned above and also mention the version (SBI/SDK/ABIS Version).
 
 7\. Select the type of required file which you want to upload from `resources` folder in project.
 
@@ -208,7 +208,7 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
 ![](\_images/ctk-testcases-upload.png)
 
-7\. The same should be done for `compliance_test_definitions_sdk.json`.
+7\. The same should be done for `compliance_test_definitions_sdk.json` and `compliance_test_definitions_abis.json`.
 
 ### Steps to generate Android APK
 
