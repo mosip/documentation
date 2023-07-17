@@ -40,4 +40,6 @@ To know more, refer [Bug fixes for 1.1.5.5-P1](https://mosip.atlassian.net/brows
 | biosdk-client               |[v1.1.5.5](https://github.com/mosip/biosdk-client/tree/v1.1.5.5) |
 | artifactory-ref-impl         |[v1.1.5.5-P1](https://github.com/mosip/artifactory-ref-impl/tree/v1.1.5.5-P1) |
 
+## Test Report
 
+The detailed Test Reports are available at [1.1.5.5-P1 Base platform verification](https://github.com/mosip/test-management/tree/master/1.1.5.5).
