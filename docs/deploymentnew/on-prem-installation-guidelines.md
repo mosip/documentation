@@ -25,7 +25,7 @@
 * [MOSIP External Components](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/external/README.md#mosip-external-components)
 * [MOSIP Services](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/mosip/README.md#mosip-services)
 
-### Architecture diagram
+### Architecture 
 
 ![](\_images/deployment\_architecture.png)
 
