@@ -2,7 +2,7 @@
 
 MOSIP periodically releases new versions of the platform, tagged with their version numbers. 
 
-Asymmetric Amoeba  is the latest stable Long Term Support (LTS 1.2.0) version. This release focuses on easy manageability, usability, enhanced performance, robustness, security, inclusivity, and comprehensive documentation. Additionally, **multiple languages** are now supported across modules.
+Asymmetric Amoeba is the latest stable Long Term Support (LTS 1.2.0) version. This release focuses on easy manageability, usability, enhanced performance, robustness, security, inclusivity, and comprehensive documentation. Additionally, **multiple languages** are now supported across modules.
 
 LTS versions get patch releases with minor and major updates, as and when required.
 
@@ -12,8 +12,8 @@ LTS 1.2.0 was released in February 2022 and will be supported at the minimum unt
 
 _What happens after five years?_
 
-* Support will be available for migration to next LTS version for two years following its release.
-* Adopter inputs and experiences will be factored in to fine tune subsequent versions.
+* Support will be available for migration to the next LTS version for two years following its release.
+* Adopter inputs and experiences will be factored in to fine-tune subsequent versions.
 
 ## Benefits of Long Term Support
 
@@ -215,29 +215,3 @@ To know more, read through [Automation Testing](https://docs.mosip.io/1.2.0/modu
 
 * OpenCRVS is a digital platform for recording a person's major life events like births, deaths, marriages, and divorces.
 * It is a customisable open source solution designed for civil registration and it's essential services such as social protection, health care, education and economic and social opportunities.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
