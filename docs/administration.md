@@ -1,11 +1,11 @@
 # Administration
 
 ## Overview
-The MOSIP platform is configured via the Admin application. This application can be accessed only by the privileged group of administration personnel. 
-Admin module provides the following functions: 
+The MOSIP platform is configured via the Admin application. This application can be accessed only by a privileged group of administration personnel.
+The admin module provides the following functions:
 1. Management of resources via CRUD operations:
     1. Zone 
-    1. Center (registration centers)
+    1. Centers (registration centers)
     1. Device
     1. Machine
     1. Users (Admin, registration staff)
