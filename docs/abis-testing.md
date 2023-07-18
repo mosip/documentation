@@ -8,6 +8,10 @@ The diagram below illustrates the CTK deployment architecture.
 
 ## Test using a Mock ABIS
 
+Below is a quick demonstration followed by steps to set up ABIS for testing.
+
+{% embed url="https://www.youtube.com/watch?v=NQiJ-PDOuI0" %}
+
 * Checkout MOSIP’s Mock Services from `https://github.com/mosip/mosip-mock-services`. Make sure to checkout the code from **develop** branch.
 * Go to `REPO_ROOT/mock-abis`.
 * For setting ABIS queue configuration, follow the steps below:
