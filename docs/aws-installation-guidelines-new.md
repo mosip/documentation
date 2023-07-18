@@ -1,4 +1,4 @@
-Overview:
+Overview
 ---------
 
 *   MOSIP modules are deployed in the form of microservices in a Kubernetes cluster.
@@ -38,7 +38,7 @@ Overview:
         *   [Mosip Services](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/mosip/README.md#mosip-services)
             
 
-Deployment Repos:
+Deployment Repos
 -----------------
 
 *   [k8s-infra](https://github.com/mosip/k8s-infra/tree/v1.2.0.1-B1) : contains scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
@@ -141,14 +141,16 @@ As only secured `https` connections are allowed via nginx server, you will need 
             Above mentioned environment variables will be used throughout the installation to move between one directory to other to run install scripts.
             
 
-Installation:
+Installation
 -------------
 
 ### [Wireguard](https://www.wireguard.com/)
 
 A Wireguard bastion host (Wireguard server) provides secure private channel to access MOSIP cluster. The host restricts public access, and enables access to only those clients who have their public key listed in Wireguard server. Wireguard listens on UDP port 51820.
 
-**(Link to architecture diagram) TODO**
+### Architecture diagram
+
+![](\_images/deployment\_architecture.png)
 
 **Setup Wirguard VM and wireguard bastion server:**
 
@@ -794,14 +796,14 @@ Mosip uses Rancher Fluentd and elasticsearch to collect logs from all services a
 
 ### MOSIP Modules Deployment
 
-*   Now that all the Kubernetes cluster and external dependencies are already installed, will continue with MOSIP service deployment.
+*   Now that all the Kubernetes cluster and external dependencies are already installed, you can continue with MOSIP service deployment.
     
     *   ```java
         cd $INFRA_ROOT/deployment/v3/mosip/all
         ./install-all.sh
         ```
         
-*   Check detailed MOSIP Modules Deployment [MOSIP Modular installation](https://mosip.atlassian.net/wiki/spaces/DevOps/pages/1036386394/MOSIP+Modules+Deployment) steps.
+*   Check the detailed MOSIP Modules Deployment [MOSIP Modular installation](https://mosip.atlassian.net/wiki/spaces/DevOps/pages/1036386394/MOSIP+Modules+Deployment) steps.
     
 
 ### API Testrig
