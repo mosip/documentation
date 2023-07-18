@@ -2,14 +2,14 @@
 
 ## Overview
 
-Below is the workflow that includes the registration process for an Auth/ Credential partner and the steps that needs to be followed for using the partner portal.
+Below is the workflow that includes the registration process for an Auth or Credential partner and the steps that need to be followed for using the partner portal.
 
-* Partner self-registers through the portal.
+* The partner self-registers through the portal.
 * Partner selects the relevant Policy Group.
-* Partner admin uploads CA certificate.
-* Partner admin/ Partner uploads the partner certificate.
-* Partner admin/ Partner maps the Partner Policy.
-* Partner admin approves/rejects partner policy mapping.
+* Partner admin uploads the CA certificate.
+* Partner admin or partner uploads the partner certificate.
+* Partner admin or Partner maps the Partner Policy.
+* Partner admin approves or rejects partner policy mapping.
 * Partner logins after the approval and generates the API key for the approved partner policy mapping using an unique label.
 
 ### Self-registration
