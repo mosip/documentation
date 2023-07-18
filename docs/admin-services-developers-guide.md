@@ -2,20 +2,20 @@
 
 ## Overview
 
-Admin application is a web-based application used by a privileged group of administrative personnel to manage various master data. The various resources that can be managed by an Admin are:
+The admin application is a web-based application used by a privileged group of administrative personnel to manage various master data. The various resources that can be managed by an administrator are:
 
 * Center (Registration centers)
 * Device
 * Machine
 * User (Admin, Registration staff)
 
-Along with the resource and data management, the admin can generate master keys, check registration status, retrieve lost RID, resume processing of paused packets.
+Along with resource and data management, the admin can generate master keys, check registration status, retrieve lost RIDs, and resume processing of paused packets.
 
-* **Masterdata service** exposes API to perform CRUD operations on masterdata through Admin service.
-* **Hotlist service** provides functionality to block/unblock any IDs with option of expiry. This hotlisted information will also be published to MOSIP\_HOTLIST WebSub topic.
+* **Masterdata Service** exposes API to perform CRUD operations on masterdata through Admin service.
+* **Hotlist Service** provides functionality to block/unblock any IDs with option of expiry. This hotlisted information will also be published to MOSIP\_HOTLIST WebSub topic.
 * **Sync Data Service** can be accessed only by the privileged group of admin personnel and enables default configurations and seed data to be setup when the MOSIP platform gets initialized.
 
-Admin module has four services:
+The admin module has four services:
 
 * Admin service
 * Kernel Masterdata service
