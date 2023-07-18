@@ -1,7 +1,7 @@
 Overview:
 ---------
 
-*   MOSIP modules are deployed in the form of microservices in kubernetes cluster.
+*   MOSIP modules are deployed in the form of microservices in a Kubernetes cluster.
     
 *   [Wireguard](https://www.wireguard.com/) is used as a trust network extension to access the admin, control, and observation pane
     
