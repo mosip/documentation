@@ -34,7 +34,7 @@ Google Play Developer Console is the platform that Google provides for Google Pl
 
 4. Update Developer account details:
 
-        * Developer account name: Enter a public name for this developer account. This will be shown on Google Play.
+     * Developer account name: Enter a public name for this developer account. This will be shown on Google Play.
 
         * Contact name: If google need to speak to someone about your account, this is who we'll ask for. This won't be shown on Google Play.
 
