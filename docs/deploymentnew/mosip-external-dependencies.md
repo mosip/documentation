@@ -5,7 +5,7 @@ External Dependencies are set of external requirements that are needed for funct
 List of external dependencies:
 
 * [Postgres](https://www.postgresql.org/): Relational Database system used for storing data in MOSIP.
-* IAM: IAM tool is for authentication and authorization. Reference implementation here uses [Keycloak](https://www.keycloak.org/) for the  same purpose.
+* IAM: IAM tool is for authentication and authorization. Reference implementation here uses [Keycloak](https://www.keycloak.org/) for the same purpose.
 * [HSM](https://en.wikipedia.org/wiki/Hardware_security_module): Hardware Security Module (HSM) stores the cryptographic keys used in MOSIP. Reference implementation is provided as SoftHSM here.
 * [Object Store](https://en.wikipedia.org/wiki/Object_storage): MOSIP uses S3 API compliant object store for storing biometric and other data. Reference implementation here uses [MinIO](https://min.io/).
 * Anti-virus: Used for document scanning and packets scanning throughout MOSIP modules. Reference implementation uses dockerised version of [ClamAV](https://www.clamav.net/).
@@ -112,7 +112,7 @@ ABIS is needed to be up and running outside the MOSIP cluster and should be able
 cd $INFRA_ROOT/deployment/v3/external/msg-gateway
 ./install.sh
 ```
-* MOSIP provides `mock smtp server` which will be installed as part of default istallation, opt for Y.
+* MOSIP provides `mock smtp server` which will be installed as part of default installation, opt for Y.
 
 ### Docker Secrets
 
