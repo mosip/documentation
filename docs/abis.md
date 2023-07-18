@@ -28,11 +28,11 @@ Biometrics data in MOSIP is exchanged as per formats defined in [Biometric Image
 
 ## Test kits
 
-MOSIP provides kits the test the interface. Refer [abis-testing-kit repo](https://github.com/mosip/abis-testing-kit/tree/1.2.0)
+MOSIP provides kits to test the interface. Refer to the [abis-testing-kit repo](https://github.com/mosip/abis-testing-kit/tree/1.2.0)
 
 ## ABIS deployment
 
 * ABIS must comply with [ABIS API Specifications](abis-api.md).
-* The queues can be configured in the [RegistrationProcessorAbis-env.json](https://github.com/mosip/mosip-config/blob/master/config-templates/RegistrationProcessorAbis-env.json) file. ABIS system connects to the queues using a pre-defined user id and password.
-* It is recommended that ABIS is deployed in the same secure zone (military zone) where the registration processor is deployed.
+* The queues can be configured in the [RegistrationProcessorAbis-env.json](https://github.com/mosip/mosip-config/blob/master/config-templates/RegistrationProcessorAbis-env.json) file. The ABIS system connects to the queues using a pre-defined user ID and password.
+* It is recommended that ABIS be deployed in the same secure zone (military zone) where the registration processor is deployed.
 * ABIS system is not recommended to connect to any external network.
