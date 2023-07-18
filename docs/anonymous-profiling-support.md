@@ -2,12 +2,12 @@
 
 ## Overview
 
-When a country is implementing and running the ID program, people at the forefront like policymakers and other executives will need to monitor the progress. Progress can be measured with the help of various attributes like:
+When a country is implementing and running the ID program, people at the forefront, like policymakers and other executives, will need to monitor the progress. Progress can be measured with the help of various attributes, like:
 
 * total enrollment count
 * gender profile for enrollment
 * age group profile
-* enrollment numbers and profile per registration centre
+* enrollment numbers and profiles per registration centre
 * quality of biometric data captured
 
 Information like this will allow policymakers to take corrective measures as and when required.
