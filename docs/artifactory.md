@@ -1,4 +1,5 @@
 # Artifactory
 
 ## Overview
-The artifactory contains miscellaneous libraries that are downloaded run-time by modules. The contents of artifactory may be updated based on a specific installation.  
+
+The artifactory contains miscellaneous libraries that are downloaded at runtime by modules. The contents of the artifactory may be updated based on a specific installation.
