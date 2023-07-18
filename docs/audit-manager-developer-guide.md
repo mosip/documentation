@@ -2,9 +2,9 @@
 
 ## Overview
 
-[Audit-Manager](https://docs.mosip.io/1.2.0/modules/commons) module provides audit related functionalities.
+[Audit Manager](https://docs.mosip.io/1.2.0/modules/commons) module provides audit-related functionalities.
 
-Below is a list of tools required in Audit:
+Below is a list of tools required for auditing:
 
 1. JDK 11
 2. Any IDE (like Eclipse, IntelliJ IDEA)
@@ -21,9 +21,9 @@ Below is a list of tools required in Audit:
 
 1\. Download [lombok.jar](https://projectlombok.org/download) and [settings.xml](https://github.com/mosip/documentation/tree/1.2.0/docs/\_files/commons/settings.xml).
 
-2\. Unzip Apache Maven and move `settings.xml` to "conf" folder `<apache maven unzip path>\conf`.
+2\. Unzip Apache Maven and move `settings.xml` to the "conf" folder `<apache maven unzip path>\conf`.
 
-3\. Install Eclipse, open the `lombok.jar` file and then click `Install/Update`. ![](\_images/lombok-configuration.png)
+3\. Install Eclipse, open the `lombok.jar` file, and click `Install/Update`. ![](\_images/lombok-configuration.png)
 
 4\. Check the Eclipse installation folder to see if the `lombok.jar` is added.
 
@@ -38,10 +38,10 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 ### Importing and building
 
 1. Open the project folder where `pom.xml` is present.
-2. Open command prompt from the same folder.
+2. Open the command prompt from the same folder.
 3. Run the command `mvn clean install -Dgpg.skip=true -DskipTests=true` to build the project.
 4. After building, open Eclipse and select `Import Projects → Maven → Existing Maven Projects → Next → Browse to project directory → Finish`.
-5. After successful importing of project, update the project by right-click on `Project → Maven → Update Project`.
+5. After successfully importing of project, update the project by right-clicking on `Project → Maven → Update Project`.
 
 ![](\_images/import-project.png)
 
@@ -55,9 +55,9 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 3\. Refer [Audit-DB-deploy](https://github.com/mosip/audit-manager/tree/release-1.2.0/db\_scripts/README.md) to deploy local DB.
 
-4\. Audit uses two property files, `kernel-default` and `application-default`, configure them accordingly. For instance,
+4\. The audit uses two property files, `kernel-default` and `application-default`. Please configure them as needed. For instance,
 
-* Update `mosip.kernel.auditmanager-service-logs-location` property to update location of log files.
+* Update the `mosip.kernel.auditmanager-service-logs-location` property to update the location of log files.
 * Secrets can be encrypted using [config server](https://cloud.spring.io/spring-cloud-config/reference/html/#\_encryption\_and\_decryption).
 * Update URL's in property files.(It can be either pointed to any remotely or locally deployed services)
 
