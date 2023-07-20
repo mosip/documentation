@@ -40,12 +40,11 @@ _Note: The numbers do not signify sequence of operations or the control flow._
 
 1.	__Audit Manager__: Resident services sends all the audit logs to the Audit Manager.
 2.	__Digital card service__: Resident services use this service to download the PDF of the UIN card or VID card.
-3.	__Print partner__: Resident services use this service to perform activities related to the printing of the credential.
-4.	__Credential Request Generator Service__: Resident services use this service to share the credential with various partners like print partners, authentication partners, and digital card partners.
-5.	__ID Repository Identity Service__: Resident services use this service to retrieve the identity information of a credential and to lock/unlock authentication types.
+3.	__Credential Request Generator Service__: Resident services use this service to share the credential with various partners like print partners, authentication partners, and digital card partners.
+4.	__ID Repository Identity Service__: Resident services use this service to retrieve the identity information of a credential and to lock/unlock authentication types.
 6.	__ID Repository VID service__: Resident services use this service to generate/revoke various types of VIDs.
 7.	__ID Authentication__: This service is used by Resident services to authenticate users.
-8.	__MOSIP IdP__: This is used to authenticate and authorize the users in an event of logging in using UIN/ VID.
+8.	__MOSIP e-Signet__: This is used to authenticate and authorize the users in an event of logging in using UIN/ VID.
 9.	__Resident UI__: This is the interface through which users can interact with the Resident services.
 10.	__WebSub__: This is used to get asynchronous notification from IDA for acknowledgment purposes.
 11.	__Registration Processor__: This is used to sync and upload packets for features pertaining to changes in identity data.
