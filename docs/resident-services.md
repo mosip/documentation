@@ -1,32 +1,31 @@
-# Resident Services
+	# Resident Services
 
 ## Overview
 Resident services are the self-services which are used by the residents themselves via a portal. Resident Portal is a web based UI application that provides residents of a country the services related to their Unique Identification Number (UIN). The residents can perform various operations related to UIN/VID and can raise concerns if any through the portal.
 
 The key services provided by Resident services are:
-1.	Get information (no validation required)
+1.	Get information about:
     * Get the list of the registration center
     *	Get the list of supporting documents
-2.	Get my UIN using UIN/ VID/ AID (validation required)
-3.	Verify email ID and/or phone number (validation required)
-4.	Login using UIN/ AID/ VID and OTP/ biometrics/ QR code (validation required) to:
-	  * View History
-    *	Share credentials with a partner
-    *	Order a physical card
-    *	Download a personalized card
-    *	Track a service request
-    *	Secure my ID
-    *	Manage my VID
-    *	Self-update my data
-    *	Get notifications
-    *	View the name, photo, and last login details of the logged-in user
+2.	Get my UIN using UIN/ VID/ AID 
+3.	Verify email ID and/or phone number 
+4.	Avail UIN services using UIN/ AID/ VID and OTP/ biometrics/ QR code to:
+	  * View My History
+	  * Manage My VID
+	  Secure My ID
+		Track My Requests
+		Get Personalised Card
+		Share My Data
+Update My Data
+    
+    *	Get Notifications (email and bell notifications)
+    *	View profile details of the logged in user (name, photo, and last login details)
     *	Logout
-5.	Multi-browser support
-6.	Multi-language support
-7.	Redirection to pre-registration portal for the following features: (log in using email ID/phone number: (validation required)
-    *	Book an appointment for new enrolment (pre-registration)
-    *	Book an appointment to retrieve lost UIN
-    *	Book an appointment to update UIN
+  
+5. Responsive UI support
+
+
+6.    Book an appointment for new enrolment (via the pre-registration portal)
 
 
 Below is an image summarizing the features provided in Resident portal.
