@@ -7,7 +7,7 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 ## Key decisions
 
 1. Choice of deployment of [Pre-registration](id-lifecycle-management.md#pre-registration).
-2. Rate of enrollment desired.
+2. Rate of enrolment desired.
 3. Rate of authentication expected.
 4. [Languages](module-configuration.md#languages).
 5. Customisation and procurement of components as given [here](reference-implementations.md).
@@ -27,8 +27,8 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 1. Engagement with an SI - terms and conditions.
 2. Procurement of biometric and other external components.
 3. HSM
-4. [Postgres](broken-reference/)
-5. [Object store](broken-reference/)
+4. [Postgres](https://docs.mosip.io/1.2.0/modules/persistence/postgres-db))
+5. [Object store](https://docs.mosip.io/1.2.0/modules/persistence/object-store)
 6. Compute hardware
 
 ## Country specific data
@@ -43,13 +43,12 @@ This is a guide to implement MOSIP for a country. It is advised that Government 
 ## Deployment
 
 1. [Certifcate/key generation](keys.md)
-2. Production grade deployment design.  Refer [Production Deployment](broken-reference).
+2. [Deployment design](https://docs.mosip.io/1.2.0/deploymentnew/getting-started). 
 3. Disaster recover set up
 4. Biometric thresholding
 5. Phased implementation
-6. Sandbox, staging, development setups.
-7. Production grade deployment
-8. IDA installation
+6. [Sandbox](https://docs.mosip.io/1.2.0/sandbox-details), staging, development setups.
+7. IDA installation
 
 ## Partners
 
