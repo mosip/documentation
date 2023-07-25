@@ -4,11 +4,9 @@
 
 **Upgrade From**: Inji 0.9.0 (Beta)
 
-**Release Date**: 14th April, 2023
-
 **Support**: Developer Release
 
-**Release Date**: XXth June, 2023
+**Release Date**: July 2023
 
 ## Overview
 
@@ -92,5 +90,5 @@ The older version of Inji app (0.9.0) will not be compatible with the newer vers
 
 * [Feature Documentation](./)
 * [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta)
-* [QA Report](https://docs.mosip.io/inji/versions/release-notes-1.0.0/test-report-0.9.0)
+* [QA Report](https://docs.mosip.io/inji/versions/version-0.9.1/test-report-0.9.1)
 * To know more about Inji, watch the [video](https://www.youtube.com/watch?v=JWxJfHMVMFI)!
