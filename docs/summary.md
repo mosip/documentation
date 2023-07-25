@@ -18,6 +18,8 @@
   * [Code of Conduct](contribution/code-of-conduct.md)
 * [Build & Deployment](build-&-deployment.md)
 * [Versions](versions.md)
+  * [Version 0.9.1](version-0.9.1.md)
+    * [Test Report](test-report-0.9.1.md)
   * [Version 0.9.0](version-0.9.0.md)
     * [Test Report](test-report-0.9.0.md)
 * [Specifications](specifications/README.md)
