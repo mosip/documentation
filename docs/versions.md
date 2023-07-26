@@ -3,7 +3,7 @@
 ## Version: 0.9.1
 
 * Name: Inji 0.9.1 (Beta)
-* Date: July 2023
+* Date: 25 July, 2023
 * [Release Notes](version-0.9.1.md)
 
 ## Version: 0.9.0
