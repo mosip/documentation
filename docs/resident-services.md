@@ -1,5 +1,4 @@
 # Resident Services
-_This page is WIP_
 
 ## Overview
 
