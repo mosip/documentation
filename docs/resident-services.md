@@ -29,13 +29,14 @@ The key features provided on Resident portal are:
 
 Below is an image summarizing the features provided in Resident portal.
 
-![](_images/Copy of rs-feature-list.png)
+![](_images/rs-feature-list.png)
 
 The relationship of Resident services with other services is listed below. 
 
 _Note: The numbers do not signify sequence of operations or the control flow._
 
-![](_images/rs-entity-relationship.png)
+![](_images/rs-entity-relationship-new.png)
+
 
 1.	__Audit Manager__: Resident services sends all the audit logs to the Audit Manager.
 2.	__Digital card service__: Resident services uses this service to download the PDF of the UIN card or VID card.
