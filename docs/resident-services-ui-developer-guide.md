@@ -1,6 +1,6 @@
 # Resident Services UI Developers Guide
 
-This repository contains the UI code for Resident portal. Refer here for details about the functions that a resident can perform via this portal.
+This [repository](https://github.com/mosip/resident-ui) contains the UI code for Resident portal. To know more about the functions that a resident can perform via this portal, refer [here](https://docs.mosip.io/1.2.0/modules/resident-services).
 
 ## Build and Deployment
 
@@ -18,38 +18,40 @@ _Note_: The code is written in Angular JS.
 
     * git clone https://github.com/mosip/resident-ui.git (to clone the source code repository from git)
  
-For Production build:
-Build the code – Follow the following steps to build the source code on your system.
+### For Production build:
 
-Navigate to the resident-ui directory inside the cloned repository. Then run the following command in that directory
+* Build the code – Follow the steps below to build the source code on your system.
 
-ng build "--prod" "--base-href" "." "--output-path=dist" (to build the code)
+      * Navigate to the resident-ui directory inside the cloned repository. 
 
-Build Docker Image – Follow the following steps to build docker image on your system.
+      * Run the command  `ng build "--prod" "--base-href" "." "--output-path=dist"` in that directory to build the code.
 
-docker build -t name . (to build the docker image, replace name with the name of the image you want, "." Signifies the current directory from where the docker file has to be read.
+* Build Docker Image – Follow the steps below to build the docker image on your system.
 
-Example: docker build -t residentui .
+      * `docker build -t name .` (to build the docker image, replace `name` with the name of the image you want, "." signifies the current directory from where the docker file has to be read.)
 
-Run the docker image – Follow the following steps to build docker image on your system.
+      * Example: `docker build -t residentui .`
 
-docker run –d –p 80:80 --name container-name image-name (to run the docker image created with the previous step,-d signifies to run the container in detached mode, -p signifies the port mapping left side of the":" is the external port that will be exposed to the outside world and right side is the internal port of the container that is mapped with the external port. Replace container-name with the name of your choice for the container, replace image-name with the name of the image specified in .the previous step)
+* Run the docker image – Follow the steps to build docker image on your system.
 
-Example: docker run -d -p 8080:8080 --name nginx residentui
+      * `docker run –d –p 80:80 --name container-name image-name` (to run the docker image created with the previous step,`-d` signifies to run the container in detached mode, `-p` signifies the port mapping left side of the":" is the external port that will be exposed to the outside world and right side is the internal port of the container that is mapped with the external port. Replace `container-name` with the name of your choice for the container, replace `image-name` with the name of the image specified in the previous step)
 
-Now you can access the user interface over the internet via browser.
+      * Example: `docker run -d -p 8080:8080 --name nginx residentui`
 
-Example: http://localhost:8080/#/dashboard
+* Now you can access the user interface over the internet via browser.
 
-For Local build:
-Build & deploy the code locally – Follow the following steps to build the source code on your system.
+      * Example: `http://localhost:8080/#/dashboard`
 
-Navigate to the resident-ui directory inside the cloned repository. Then run the following command in that directory
+### For Local build:
 
-npm install
+* Build & deploy the code locally – Follow the steps below to build the source code on your system.
 
-ng serve
+      * Navigate to the resident-ui directory inside the cloned repository. Then, run the following command in that directory:
 
-Now you can access the user interface via browser.
+      * `npm install`
 
-Example: http://localhost:4200
+      * `ng serve`
+
+* Now, you can access the user interface via browser.
+
+  Example: `http://localhost:4200`
