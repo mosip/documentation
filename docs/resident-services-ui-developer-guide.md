@@ -20,33 +20,41 @@ _Note_: The code is written in Angular JS.
  
 ### For Production build:
 
-* Build the code – Follow the steps below to build the source code on your system.
+* Build the code
 
-      * Navigate to the resident-ui directory inside the cloned repository. 
+  Follow the steps below to build the source code on your system.
 
-      * Run the command  `ng build "--prod" "--base-href" "." "--output-path=dist"` in that directory to build the code.
+    * Navigate to the resident-ui directory inside the cloned repository. 
 
-* Build Docker Image – Follow the steps below to build the docker image on your system.
+    * Run the command  `ng build "--prod" "--base-href" "." "--output-path=dist"` in that directory to build the code.
 
-      * `docker build -t name .` (to build the docker image, replace `name` with the name of the image you want, "." signifies the current directory from where the docker file has to be read.)
+* Build Docker Image
 
-      * Example: `docker build -t residentui .`
+  Follow the steps below to build the docker image on your system.
 
-* Run the docker image – Follow the steps to build docker image on your system.
+    * `docker build -t name .` (replace `name` with the name of the image you want, "." signifies the current directory from where the docker file has to be read.)
 
-      * `docker run –d –p 80:80 --name container-name image-name` (to run the docker image created with the previous step,`-d` signifies to run the container in detached mode, `-p` signifies the port mapping left side of the":" is the external port that will be exposed to the outside world and right side is the internal port of the container that is mapped with the external port. Replace `container-name` with the name of your choice for the container, replace `image-name` with the name of the image specified in the previous step)
+    * Example: `docker build -t residentui .`
 
-      * Example: `docker run -d -p 8080:8080 --name nginx residentui`
+* Run the docker image
+
+  Follow the steps to build docker image on your system.
+
+    * `docker run –d –p 80:80 --name container-name image-name` (to run the docker image created with the previous step,`-d` signifies to run the container in detached mode, `-p` signifies the port mapping left side of the":" is the external port that will be exposed to the outside world and right side is the internal port of the container that is mapped with the external port. Replace `container-name` with the name of your choice for the container, replace `image-name` with the name of the image specified in the previous step)
+
+   * Example: `docker run -d -p 8080:8080 --name nginx residentui`
 
 * Now you can access the user interface over the internet via browser.
 
-      * Example: `http://localhost:8080/#/dashboard`
+  * Example: `http://localhost:8080/#/dashboard`
 
 ### For Local build:
 
-* Build & deploy the code locally – Follow the steps below to build the source code on your system.
+* Build & deploy the code locally
 
-      * Navigate to the resident-ui directory inside the cloned repository. Then, run the following command in that directory:
+  Follow the steps below to build the source code on your system.
+
+    * Navigate to the resident-ui directory inside the cloned repository. Then, run the following command in that directory:
 
       * `npm install`
 
