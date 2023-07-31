@@ -13,7 +13,7 @@ The [MOSIP sandbox](https://docs.mosip.io/1.2.0/sandbox-details) comes with its 
 
 ![](_images/id-schema1.png)
 
-**Step 1: Authenticate with the help of APIs**
+**Step 1: Authenticate using APIs**
 
 1.	Open Swagger, access the following link (add the exact env name in the link below):
    ```
@@ -22,6 +22,8 @@ The [MOSIP sandbox](https://docs.mosip.io/1.2.0/sandbox-details) comes with its 
    ```
 
 2. Select `authenticate/clientidsecretkey` API.
+
+  ![](_images/id-schema2.png)
 
 3. Click **Try it out** to proceed.
    
@@ -44,7 +46,7 @@ The [MOSIP sandbox](https://docs.mosip.io/1.2.0/sandbox-details) comes with its 
 
 **Step 2: Modify the ID Schema**
 
-1. Take the sample `ID Schema.json` available and modify it.
+1. Take the sample `ID Schema.json` that is available and modify it.
 2.	The schema can be modified to match your need.
    
    For e.g.: Below is the sample `ID Schema.json` file with additional field to capture blood group.
@@ -57,25 +59,27 @@ The [MOSIP sandbox](https://docs.mosip.io/1.2.0/sandbox-details) comes with its 
    b.	Use the online tool [](https://onlinetexttools.com/json-stringify-text) or [](https://jsonformatter.org/json-stringify-online)
    c.	Paste the modified `ID Schema.json content` in the Input section.
    d.	Convert the JSON to string (stringify). 
-   e.	Copy the stringified JSON
+   e.	Copy the stringified JSON.
 
 
 **Step 3: Create a draft ID Schema** 
 
 1. Go to (please add the exact env name and domain name in the link):
-https://api-internal.<<add the environment name>>.<<domain name>>/v1/masterdata/swagger-ui/index.html?url=/v1/masterdata/v3/api-docs#/schema-controller/createSchema
 
-2.	Select POST/idschema
+```
+https://api-internal.<<add the environment name>>.<<domain name>>/v1/masterdata/swagger-ui/index.html?url=/v1/masterdata/v3/api-docs#/schema-controller/createSchema
+```
+2.	Select POST `/idschema`.
 
 3. Select **Try it out**.
    
 4.	Paste the stringified ID schema in "schema": <<paste the id schema here>> as below:
 
-   ![](_images/id-schema6.jpg)
+    ![](_images/id-schema6.JPG)
 
 5. Click **Execute** and make sure to get a successful response.
 
-   ![](_images/id-schema6.png)
+   ![](_images/id-schema-response.png)
 
 6. Take a note of the `response.id` in response.
 
