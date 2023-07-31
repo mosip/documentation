@@ -16,9 +16,10 @@ The [MOSIP sandbox](https://docs.mosip.io/1.2.0/sandbox-details) comes with its 
 **Step 1: Authenticate with the help of APIs**
 
 1.	Open Swagger, access the following link (add the exact env name in the link below):
-   
-   https://api-internal.<<add the environment name>>.mosip.net/v1/authmanager/swagger-ui/index.html?configUrl=/v1/authmanager/v3/api-docs/swagger-   
-   config#/authmanager/clientIdSecretKey
+   ```
+      https://api-internal.<<add the environment name>>.mosip.net/v1/authmanager/swagger-ui/index.html?configUrl=/v1/authmanager/v3/api-docs/swagger-   
+      config#/authmanager/clientIdSecretKey
+   ```
 
 2. Select `authenticate/clientidsecretkey` API.
 
@@ -35,23 +36,24 @@ The [MOSIP sandbox](https://docs.mosip.io/1.2.0/sandbox-details) comes with its 
 
    ![](_images/id-schema3.png)
 
-4. After editing, click on **Execute**, and make sure the response is success as below:
+4. After editing, click on **Execute**, and make sure the response is success as shown below:
 
-   ![](_images/id-schema4.png)
+   ![](_images/id-schema4.JPG)
 
-5. By this, Authentication is completed successfully.
+5. By this, the authentication process is completed successfully.
 
 **Step 2: Modify the ID Schema**
 
-1. Take the sample `ID Schema.json` available and modify it to match your need.
-2.	Modify the schema to match your need.
+1. Take the sample `ID Schema.json` available and modify it.
+2.	The schema can be modified to match your need.
    
    For e.g.: Below is the sample `ID Schema.json` file with additional field to capture blood group.
 
    ![](_images/id-schema5.png)
 
 3. Convert the modified `ID Schema.json` to a string. To convert a JSON to a string follow the below steps:
-   a.	Use an online tool like this [JSON Formatter & Validator ](https://jsonformatter.curiousconcept.com/#) to remove the spaces and make it compact(select “Compact”            under Json template and “RFC8259” under Json specification.
+   a.	Use an online tool like this [JSON Formatter & Validator ](https://jsonformatter.curiousconcept.com/#) to remove the spaces and make it compact (select 
+      “Compact” under Json template and “RFC8259” under Json specification.
    b.	Use the online tool [](https://onlinetexttools.com/json-stringify-text) or [](https://jsonformatter.org/json-stringify-online)
    c.	Paste the modified `ID Schema.json content` in the Input section.
    d.	Convert the JSON to string (stringify). 
@@ -69,7 +71,7 @@ https://api-internal.<<add the environment name>>.<<domain name>>/v1/masterdata/
    
 4.	Paste the stringified ID schema in "schema": <<paste the id schema here>> as below:
 
-   ![](_images/id-schema6.png)
+   ![](_images/id-schema6.jpg)
 
 5. Click **Execute** and make sure to get a successful response.
 
@@ -81,23 +83,25 @@ https://api-internal.<<add the environment name>>.<<domain name>>/v1/masterdata/
 **Step 4: Publish the ID Schema** 
 
 1. Go to the link below and add the exact env name in the link:
+```
    https://api-internal.<<add the environment name>>.mosip.net/v1/masterdata/swagger-ui/index.html?url=/v1/masterdata/v3/api-docs#/schema-controller/publishSchema
+```
+3.	Select PUT `/idschema/publish` to publish the schema.
 
-2.	Select PUT /idschema/publish to publish the schema.
-
-3.	Select the `Try it Out` option.
+4.	Select the `Try it Out` option.
    
-4.	Update the ID `request.id` to the `response.id` that we obtained from the earlier step.
+5.	Update the ID `request.id` to the `response.id` that was obtained from the earlier step.
    
-5.	Update the time to the current UTC date and time.
-   The time to be edited is highlighted below:
+6.	Update the time to the current UTC Date and time.
 
-   ![](_images/id-schema7.png)
+  	The time to be edited is highlighted below:
+
+   ![](_images/id-schema7.JPG)
 
 7. Click **Execute** to execute the changes and response should have no errors. This proves that the ID Schema is published internally to MOSIP.
 
-   ![](_images/id-schema8.png)
+   ![](_images/id-schema8.JPG)
 
-8. Now, the ID Schema is updated successfully. After the schema is published, all new registrations would use this schema (In Registration Client, this will happen only after the sync).
+8. Now, the ID Schema is updated successfully. After the schema is published, all the new registrations would use this schema (In Registration Client, this will happen only after the sync).
 
    
