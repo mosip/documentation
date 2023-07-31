@@ -1,6 +1,6 @@
 # Resident Services UI Developers Guide
 
-This [repository](https://github.com/mosip/resident-ui) contains the UI code for Resident portal. To know more about the functions that a resident can perform via this portal, refer [here](https://docs.mosip.io/1.2.0/modules/resident-services).
+This [repository](https://github.com/mosip/resident-ui) contains the UI code for Resident portal. To know more about the features and functions present on the portal, refer [here](https://docs.mosip.io/1.2.0/modules/resident-services).
 
 ## Build and Deployment
 
@@ -62,4 +62,4 @@ _Note_: The code is written in Angular JS.
 
 * Now, you can access the user interface via browser.
 
-  Example: `http://localhost:4200`
+    * Example: `http://localhost:4200`
