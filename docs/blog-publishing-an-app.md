@@ -2,6 +2,8 @@
 
 In this post, you will be taken through the **step-by-step process to publish an Android app in Google Play Store**.
 
+Similar steps were followed to release the Inji app. To know more about, refer [Inji documentation](https://docs.mosip.io/inji/).
+
 ### Google Play Console
 
 Google Play Developer Console is the platform that Google provides for Google Play and Android developers to publish and monitor their app's performance in the Google Play store.
@@ -116,4 +118,72 @@ keytool \
 * Google play developer account (used to login to Google play console) with Play Publisher rights.
 
 * Signed APK or App bundle.
+
+#### Step 1: Application Information
+
+Once you have the above information ready, log in to Google Play Console using _Play publisher_ credentials and Click on `Create App` on the menu (on the top right side of the screen). 
+
+![](\_images/blog-image1.png) 
+
+Add **App details** such as, 
+
+* App name
+
+* Language
+
+* Game or App
+
+* Free or Paid
+
+Once done, accept the declaration and click **Create app** and proceed further.
+
+![](\_images/blog-image2.png) 
+
+#### Step 2: Application Information 
+
+* You will be redirected to the dashboard where you can find the option to set up your app.
+* Provide all the details required one by one.
+
+![](\_images/blog-image3.png) 
+
+* Set **Privacy Policy**- provide the privacy policy URL for the app.
+
+![](\_images/blog-image4.png) 
+
+* Set **App access**- Choose whether all of the app functionality is available without restriction or some are restricted.
+
+![](\_images/blog-image5.png) 
+
+* Ads - Select whether your app contains ads or not.
+
+![](\_images/blog-image6.png)  
+
+* **Content ratings**- For content ratings you will be asked to fill a questionnaire and based on your inputs the play console will automatically calculate the ratings. Click on “Start Questionnaire”. Enter the email address which will be used to contact you. Select the App category and click on **Next**.
+
+![](\_images/blog-image7.png)  
+
+Fill the questionnaire with appropriate information and click on **Save** and **Next**.
+
+![](\_images/blog-image8.png)  
+
+You will be shown the summary based on the information given by you. Click on **Save** and continue.
+
+![](\_images/blog-image9.png)  
+
+You will be able to see your application ratings based on the information you have provided.
+
+* Target Audience - Select the target age groups for your application. Click on **Next** and proceed further.
+
+![](\_images/blog-image10.png)
+
+* Store presence - Select whether your application unintentionally appeals to children or not. Then click on Next and you will see the summary based on your answers. Save the details and proceed further.
+
+![](\_images/blog-image11.png)
+
+
+
+
+
+
+
 
