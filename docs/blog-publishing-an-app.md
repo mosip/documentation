@@ -154,7 +154,7 @@ Once done, accept the declaration and click **Create app** and proceed further.
 
 ![](\_images/blog-image5.png) 
 
-* Ads - Select whether your app contains ads or not.
+* **Ads** - Select whether your app contains ads or not.
 
 ![](\_images/blog-image6.png)  
 
@@ -172,18 +172,35 @@ You will be shown the summary based on the information given by you. Click on **
 
 You will be able to see your application ratings based on the information you have provided.
 
-* Target Audience - Select the target age groups for your application. Click on **Next** and proceed further.
+* **Target Audience**- Select the target age groups for your application. Click on **Next** and proceed further.
 
 ![](\_images/blog-image10.png)
 
-* Store presence - Select whether your application unintentionally appeals to children or not. Then click on Next and you will see the summary based on your answers. Save the details and proceed further.
+* **Store presence**- Select whether your application unintentionally appeals to children or not. Then click on **Next** and you will see the summary based on your answers. Save the details and proceed further.
 
 ![](\_images/blog-image11.png)
 
+* **News apps**- Select whether your application is a news app or not. Click on **Save** once done.
 
+![](\_images/blog-image12.png)
 
+* **COVID-19 Apps**- Select whether your app is related to COVID-19 contact tracing or status app. Click on save and continue once done.
 
+![](\_images/blog-image13.png)
 
+* **Data Safety**- Select whether your app collects or shares the data. If yes, then the console will ask for more information. Fill all the information according to the data usage policy you follow. It will ask to confirm more details on the usage of the data separately. Fill it accordingly and proceed further. Once all the details are provided, it will show a summary you can verify it and save it and proceed further.
 
+![](\_images/blog-image14.png)
 
+* **Government apps**- Choose whether your app is a government app or not and click on save.
+
+![](\_images/blog-image15.png)
+
+* Selecting App category and contact details - Click on Edit on the top right corner. Select whether it’s an App or Game. Choose the category accordingly. Add tags if needed. Edit the contact details also with appropriate details.
+
+![](\_images/blog-image16.png)
+
+* Setting up store listing - You will be asked to provide a short and long description of your app.
+
+![](\_images/blog-image17.png)
 
