@@ -12,18 +12,17 @@ The key features provided on Resident portal are:
 2. Get My UIN using UIN/ VID/ AID 
 3. Verify email ID and/ or phone number 
 4. Avail UIN services using UIN/ AID/ VID and OTP/ biometrics/ QR code to:
-	  * View My History
-	  * Manage My VID
-5. Secure My ID
-   * Track My Requests
-   * Get Personalised Card
-   * Share My Data
-6. Update My Data
-   * Get Notifications (email and bell notifications)
-   * View profile details of the logged in user (name, photo, and last login details)
-   * Logout
-7. Responsive UI support
-8. Book an appointment for new enrolment (via the pre-registration portal)
+     * View My History
+     * Manage My VID
+     * Secure My ID
+     * Track My Requests
+     * Get Personalised Card
+     * Share My Data
+     * Get Notifications (email and bell notifications)
+     * View profile details of the logged in user (name, photo, and last login details)
+     * Logout
+5. Responsive UI support
+6. Book an appointment for new enrolment (via the pre-registration portal)
 
 
 Below is an image summarizing the features provided in Resident portal.
