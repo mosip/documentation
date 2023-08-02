@@ -1,4 +1,4 @@
-# ID Schema 
+# Publishing an ID Schema 
 
 The Identity Schema is a core configuration of MOSIP’s modularity. It allows the adopters to configure the important attributes of the identity system. All the user data that needs to be stored on the generation of a UIN is defined here. The schema implements the [JSON Schema Standard](http://json-schema.org/draft-07/schema#) and allows you to customize specifically to your requirements. Identity schema specifies the set of attributes and their allowed types. The identity schema is validated by the Identity Repository before storing the data for the registered users. Through schemas, you can also define additional fields that can be added to a user’s repository, such as the marital status, blood group, or preferred language.
 
@@ -9,7 +9,9 @@ The identity schema not only defines the data model of your identities, but also
 
 Depending on your setup, you can benefit from defining different identity schemas for different groups of users, such as schemas for customer support and end users. This allows the adopters to tailor the user experience and also consider the security measures to meet specific requirements of each group.
 
-The [MOSIP sandbox](https://docs.mosip.io/1.2.0/sandbox-details) comes with its default ID Schema (in Master DB, `identity_schema` table).  Below is a sample `identity-schema.json` file:
+The [MOSIP sandbox](https://docs.mosip.io/1.2.0/sandbox-details) comes with its default ID Schema (in Master DB, `identity_schema` table).
+
+Below is a sample `identity-schema.json` file:
 
 ![](_images/id-schema1.png)
 
@@ -47,7 +49,7 @@ The [MOSIP sandbox](https://docs.mosip.io/1.2.0/sandbox-details) comes with its 
 **Step 2: Modify the ID Schema**
 
 1. Take the sample `ID Schema.json` that is available and modify it.
-2.	The schema can be modified to match your need.
+2.	The schema can be modified to match your needs.
    
    For e.g.: Below is the sample `ID Schema.json` file with additional field to capture blood group.
 
@@ -64,7 +66,7 @@ The [MOSIP sandbox](https://docs.mosip.io/1.2.0/sandbox-details) comes with its 
 
 **Step 3: Create a draft ID Schema** 
 
-1. Go to (please add the exact env name and domain name in the link):
+1. Go to the link below (please add the exact env name and domain name in the link):
 
 ```
 https://api-internal.<<add the environment name>>.<<domain name>>/v1/masterdata/swagger-ui/index.html?url=/v1/masterdata/v3/api-docs#/schema-controller/createSchema
@@ -108,4 +110,4 @@ https://api-internal.<<add the environment name>>.<<domain name>>/v1/masterdata/
 
 8. Now, the ID Schema is updated successfully. After the schema is published, all the new registrations would use this schema (In Registration Client, this will happen only after the sync).
 
-   
+To know more about ID schema, refer [here](https://docs.mosip.io/1.2.0/id-lifecycle-management/id-schema).
