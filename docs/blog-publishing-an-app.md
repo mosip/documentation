@@ -1,8 +1,8 @@
-# Steps to release Inji to Android Playstore
+# Release an app to Android Playstore
 
 In this post, you will be taken through the **step-by-step process to publish an Android app in Google Play Store**.
 
-Similar steps were followed to release the Inji app. To know more about, refer [Inji documentation](https://docs.mosip.io/inji/).
+Similar steps were followed to release the **Inji** app. To know more about, refer [Inji documentation](https://docs.mosip.io/inji/).
 
 ### Google Play Console
 
@@ -203,4 +203,98 @@ You will be able to see your application ratings based on the information you ha
 * Setting up store listing - You will be asked to provide a short and long description of your app.
 
 ![](\_images/blog-image17.png)
+
+* App icon - Provide an icon for your app.
+
+![](\_images/blog-image18.png)  
+
+* Feature Graphic - Provide a picture for your feature graphic video. This will act as a template for your video. Add a video link for the feature graphic.
+
+![](\_images/blog-image19.png)  
+
+* Add screenshots - Add at least 2 screenshots for Phone, 7 inch tablet screenshots, 10 inch tablet screenshots and required while chromebook screenshots are optional.
+
+![](\_images/blog-image20.png)  
+
+### Step 3: Setting up an Internal testers group to test your app
+
+Once the setting up of the app is done in the dashboard, select `Start testing now`.
+
+![](\_images/blog-image21.png) 
+
+* Inside that, select the testers.
+* You can add the tester's email id in a list based on your preference.
+* The testers with that email id will get access to download the app from the play store.
+* You can also provide a feedback URL to collect the feedback from the testers.
+* Then save and proceed further.
+
+![](\_images/blog-image22.png) 
+
+### Step 4: Creating a new Internal release for your Internal testers group
+
+* Click on `Create a new release.
+
+* App integrity 
+
+    * This is a signing key and it will be automatically generated and managed by google if you choose google play to manage it. 
+
+    * This signing key is not related to the release keystore that we are using. 
+
+    * This signing key is generated based on the keystore that we have used to sign the app while building the application.
+
+* App bundle 
+
+    * Generate a signed apk or app bundle and upload the same.
+
+    * Keep the keystore safe in secrets or somewhere safe as we need to use the same keystore for future signing of the app.
+
+![](\_images/blog-image23.png) 
+
+* **Release details**
+
+    * Provide a Release name and Release notes for the application.
+
+    * Release name is the version name.
+
+    * Release notes are information on what are the changes or upgrades or bug fixes done.
+
+    * Click on Next once done.
+
+    * You will be taken to preview the details and confirm the changes.
+
+    * Click on Save.
+
+#### Step 5: Giving the app to Internal testers
+
+Congratulations, you have successfully done all the steps needed for the Internal release. Let’s see how we can give the apk to testers.
+
+* In the Internal testing tab, you can see your app status is active and says it is available to internal testers.
+
+* To provide the apk to testers, click on testers in the Internal testing tab.
+
+* You can see the list of testers, select the testers list you want to share this apk with.
+
+* Once selected click on save and this will save the changes.
+
+* You will be able to see the Copy link option.
+
+* Copy the link and give it to testers, they will be able to download the app from play store.
+
+![](\_images/blog-image24.png) 
+
+Things to keep in mind once it is uploaded to the play store,
+
+* You will need to share the link manually to testers whenever you upload a new release.
+
+* The testers will not get any notifications regarding the upload.
+
+They should access the link with the same email account they have given.
+
+They will be asked to accept the invite to test once accepted they will be taken to the play store.
+
+In the play store also they should be logged in to the same email account. Otherwise they will see an empty screen inside the play store app.
+
+
+
+
 
