@@ -123,7 +123,7 @@ keytool \
 
 Once you have the above information ready, log in to Google Play Console using _Play publisher_ credentials and Click on `Create App` on the menu (on the top right side of the screen). 
 
-![](\_images/blog-image1.png) 
+![](\_images/app-image1.png) 
 
 Add **App details** such as, 
 
@@ -137,90 +137,90 @@ Add **App details** such as,
 
 Once done, accept the declaration and click **Create app** and proceed further.
 
-![](\_images/blog-image2.png) 
+![](\_images/app-image2.png) 
 
-#### Step 2: Application Information 
+#### Step 2: Add Additional details
 
 * You will be redirected to the dashboard where you can find the option to set up your app.
 * Provide all the details required one by one.
 
-![](\_images/blog-image3.png) 
+![](\_images/app-image3.png) 
 
 * Set **Privacy Policy**- provide the privacy policy URL for the app.
 
-![](\_images/blog-image4.png) 
+![](\_images/app-image4.png) 
 
 * Set **App access**- Choose whether all of the app functionality is available without restriction or some are restricted.
 
-![](\_images/blog-image5.png) 
+![](\_images/app-image5.png) 
 
 * **Ads** - Select whether your app contains ads or not.
 
-![](\_images/blog-image6.png)  
+![](\_images/app-image6.png)  
 
 * **Content ratings**- For content ratings you will be asked to fill a questionnaire and based on your inputs the play console will automatically calculate the ratings. Click on “Start Questionnaire”. Enter the email address which will be used to contact you. Select the App category and click on **Next**.
 
-![](\_images/blog-image7.png)  
+![](\_images/app-image7.png)  
 
 Fill the questionnaire with appropriate information and click on **Save** and **Next**.
 
-![](\_images/blog-image8.png)  
+![](\_images/app-image8.png)  
 
 You will be shown the summary based on the information given by you. Click on **Save** and continue.
 
-![](\_images/blog-image9.png)  
+![](\_images/app-image9.png)  
 
 You will be able to see your application ratings based on the information you have provided.
 
 * **Target Audience**- Select the target age groups for your application. Click on **Next** and proceed further.
 
-![](\_images/blog-image10.png)
+![](\_images/app-image10.png)
 
 * **Store presence**- Select whether your application unintentionally appeals to children or not. Then click on **Next** and you will see the summary based on your answers. Save the details and proceed further.
 
-![](\_images/blog-image11.png)
+![](\_images/app-image11.png)
 
 * **News apps**- Select whether your application is a news app or not. Click on **Save** once done.
 
-![](\_images/blog-image12.png)
+![](\_images/app-image12.png)
 
 * **COVID-19 Apps**- Select whether your app is related to COVID-19 contact tracing or status app. Click on save and continue once done.
 
-![](\_images/blog-image13.png)
+![](\_images/app-image13.png)
 
 * **Data Safety**- Select whether your app collects or shares the data. If yes, then the console will ask for more information. Fill all the information according to the data usage policy you follow. It will ask to confirm more details on the usage of the data separately. Fill it accordingly and proceed further. Once all the details are provided, it will show a summary you can verify it and save it and proceed further.
 
-![](\_images/blog-image14.png)
+![](\_images/app-image14.png)
 
 * **Government apps**- Choose whether your app is a government app or not and click on save.
 
-![](\_images/blog-image15.png)
+![](\_images/app-image15.png)
 
 * Selecting App category and contact details - Click on Edit on the top right corner. Select whether it’s an App or Game. Choose the category accordingly. Add tags if needed. Edit the contact details also with appropriate details.
 
-![](\_images/blog-image16.png)
+![](\_images/app-image16.png)
 
 * Setting up store listing - You will be asked to provide a short and long description of your app.
 
-![](\_images/blog-image17.png)
+![](\_images/app-image17.png)
 
 * App icon - Provide an icon for your app.
 
-![](\_images/blog-image18.png)  
+![](\_images/app-image18.png)  
 
 * Feature Graphic - Provide a picture for your feature graphic video. This will act as a template for your video. Add a video link for the feature graphic.
 
-![](\_images/blog-image19.png)  
+![](\_images/app-image19.png)  
 
 * Add screenshots - Add at least 2 screenshots for Phone, 7 inch tablet screenshots, 10 inch tablet screenshots and required while chromebook screenshots are optional.
 
-![](\_images/blog-image20.png)  
+![](\_images/app-image20.png)  
 
 ### Step 3: Setting up an Internal testers group to test your app
 
 Once the setting up of the app is done in the dashboard, select `Start testing now`.
 
-![](\_images/blog-image21.png) 
+![](\_images/app-image21.png) 
 
 * Inside that, select the testers.
 * You can add the tester's email id in a list based on your preference.
@@ -228,7 +228,7 @@ Once the setting up of the app is done in the dashboard, select `Start testing n
 * You can also provide a feedback URL to collect the feedback from the testers.
 * Then save and proceed further.
 
-![](\_images/blog-image22.png) 
+![](\_images/app-image22.png) 
 
 ### Step 4: Creating a new Internal release for your Internal testers group
 
@@ -248,7 +248,7 @@ Once the setting up of the app is done in the dashboard, select `Start testing n
 
     * Keep the keystore safe in secrets or somewhere safe as we need to use the same keystore for future signing of the app.
 
-![](\_images/blog-image23.png) 
+![](\_images/app-image23.png) 
 
 * **Release details**
 
@@ -263,6 +263,8 @@ Once the setting up of the app is done in the dashboard, select `Start testing n
     * You will be taken to preview the details and confirm the changes.
 
     * Click on Save.
+  
+![](\_images/app-image25.png)
 
 #### Step 5: Giving the app to Internal testers
 
@@ -280,7 +282,7 @@ Congratulations, you have successfully done all the steps needed for the Interna
 
 * Copy the link and give it to testers, they will be able to download the app from play store.
 
-![](\_images/blog-image24.png) 
+![](\_images/app-image24.png) 
 
 Things to keep in mind once it is uploaded to the play store,
 
@@ -288,11 +290,25 @@ Things to keep in mind once it is uploaded to the play store,
 
 * The testers will not get any notifications regarding the upload.
 
-They should access the link with the same email account they have given.
+* They should access the link with the same email account they have given.
 
-They will be asked to accept the invite to test once accepted they will be taken to the play store.
+* They will be asked to accept the invite to test. Once accepted, they will be taken to the play store.
 
-In the play store also they should be logged in to the same email account. Otherwise they will see an empty screen inside the play store app.
+* In the play store also they should be logged in to the same email account. Otherwise they will see an empty screen inside the play store app.
+
+**Additional Notes**:
+
+_KEYSTORE_
+
+* If you are using pipeline to push the app to the play store, make sure that your keystore that you have used for the first time is used to sign the app while building.
+* We have encoded the keystore file (the whole file and not the contents) to base64 and stored it in secret.
+* Before building the app,  get the encoded file and decode it and place it in the right folder so that you can sign the app without any issues.
+
+
+_PLAY STORE LIMITATIONS_
+
+* You may want to increment the build number/ version code every time you upload a new apk/ app bundle.
+* If the app is built using the same build number/ version code of the previous app, then play store will reject that build.
 
 
 
