@@ -19,7 +19,7 @@ The variables that largely determine the hardware requirements are:
 
 ## Pre-registration
 
-Refer to [Pre-registration Resource Calculator XLS](../../\_files/pre-reg-resource-calculator.xls)
+Refer to [Pre-registration Resource Calculator XLS](../../\_files/pre-reg-resource-calculator-v2.xls)
 
 Allow for 20% additional compute and storage for monitoring and any overheads.
 
