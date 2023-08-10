@@ -152,8 +152,6 @@ To view the list of known issues, click [here](https://mosip.atlassian.net/brows
 
 _Note_: The 1.2.0.1-B1 version of Registration Client will not support the latest mock MDS (1.2.1-SNAPSHOT). All the biometrics will be captured fine but exception photo capture fails.  To know more, refer [here](https://mosip.atlassian.net/browse/MOSIP-28592).
 
- will not work with  of regclient. All the biometrics will be captured fine, but exception photo capture fails. We have given fix for that issue in 1.1.5.5-P1, 1.2.0.1-SNAPSHOT versions of regclient as of now.
-
 
 ## Documentation
 
