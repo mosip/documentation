@@ -170,7 +170,109 @@ The name will be reviewed before it is made available on the App Store.
 
 Subtitle (optional, character limit 30): The subtitle will be reviewed before it is made available on the App Store.
 
-**Primary Category** (Mandatory):
+**Primary Category** (mandatory):
 
 ![](\_images/appstore-release3.png)
+
+**Secondary Category** (optional):
+
+![](\_images/appstore-release4.png)
+
+**Content Rights** (mandatory):
+
+![](\_images/appstore-content.png)
+
+**Age Rating** (mandatory):
+
+![](\_images/appstore-age1.png)
+
+
+![](\_images/appstore-age2.png)
+
+
+![](\_images/appstore-age3.png)
+
+**Pricing and Availability section** (Pricing mandatory):
+
+
+![](\_images/appstore-pricing.png)
+
+
+![](\_images/appstore-regionprices.png)
+
+
+![](\_images/appstore-app-pricing.png)
+
+
+![](\_images/appstore-sampleone.png)
+
+
+**Country or Region Availability** (mandatory)
+
+![](\_images/appstore-country.png)
+
+**Tax Category** (mandatory, already pre-filled as ‘App Store software’)
+
+![](\_images/appstore-tax1.png)
+
+**Pre-Orders** (Optional)
+
+![](\_images/appstore-preorders.png)
+
+**App Privacy section**
+
+![](\_images/appstore-privacy.png)
+
+_Privacy Policy URL (mandatory):_
+
+A URL that links to your privacy policy. A privacy policy is required for all apps.
+
+_User Privacy Choices URL (optional):_
+
+A URL where users can modify and delete the data collected from the app, or decide how their data is used and shared.
+
+**Data collection practices** (mandatory):
+
+![](\_images/appstore-data1.png)
+
+![](\_images/appstore-data2.png)
+
+![](\_images/appstore-data3.png)
+
+**TestFlight Section**
+
+Once the artifacts/ builds are uploaded to App Store Connect, it will appear under this section:
+
+![](\_images/appstore-testflight1.png)
+
+Once the build is uploaded, and post that `Missing Compliance` is seen on the screen, click on the yellow warning icon.
+
+![](\_images/appstore-testflight2.png)
+
+![](\_images/appstore-testflight3.png)
+
+Once the build is ready in the TestFlight section, under “1.0 Prepare for Submission” -> Build, a button will appear to choose the build. Once it’s done, click on “Add for Review”, if there is any error on metadata, it will throw a detailed error. Submit for Review in the new window. And that’s it!!! Wait for the review team to respond. If you want to notice each state of the app in mobile, install [AppStore Connect](https://apps.apple.com/us/app/app-store-connect/id1234793120) app in your device. Even after submitting, you might be able to change some fields.
+
+![](\_images/appstore-testflight4.png)
+
+#### Steps to upload an iOS app using Xcode IDE 
+
+> This is not recommended. The recommended way is to automate the uploading process using pipeline or Xcode Cloud).
+
+
+* Ensure Version is matching with App Store Connect portal, Also ensure, there is no build exist with the same number in TestFlight section of App Store Connect portal.
+
+![](\_images/appstore-xcode1.png)
+
+* Select the target device as `Any iOS Device`.
+
+![](\_images/appstore-xcode2.png)  
+
+* Product -> Archive
+
+![](\_images/appstore-xcode3.png)  
+
+* Click on `Distribute App`
+
+![](\_images/appstore-xcode4.png)  
 
