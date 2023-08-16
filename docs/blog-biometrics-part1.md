@@ -76,16 +76,18 @@ Deoxyribonucleic acid contains a unique genetic code or a blueprint of a human b
 
 Stay tuned for Part 2 of this series!
 
+To know more about the MOSIP platform and its integrations with the different biometric components, refer the section on [Biometrics](https://docs.mosip.io/1.2.0/biometrics).
+
 ### Resources and References:
 * History.com
 * Dons Maps
-*	Biometricupdate.com
+* Biometricupdate.com
 * M2sys blog
-*	The Evolution of Fingerprinting - Hurtado, McGowan, Munoz
+* The Evolution of Fingerprinting - Hurtado, McGowan, Munoz
 * North American Investigations - The History and Evolution of Fingerprint Identification (Darrin)
 * Ancientpages.com
-*	[https://www.nature.com/](https://www.nature.com/)
-*	[https://findbiometrics.com/](https://findbiometrics.com/)
+* [https://www.nature.com/](https://www.nature.com/)
+* [https://findbiometrics.com/](https://findbiometrics.com/)
 
 Content Credits: Sanjith Sundaram (Head - Biometric Ecosystem)
 Write to: sanjith@mosip.io
