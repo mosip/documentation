@@ -2,6 +2,9 @@
 
 In this post, you will be taken through the step-by-step process to release an app to iOS AppStore(as per 11 April'23).
 
+Similar steps were followed to release the **Inji** app. To know more about Inji, refer [Inji documentation](https://docs.mosip.io/inji/).
+
+
 **_App Store Connect_**: 
 
 * An Apple portal to manage artifacts/builds, AppStore distribution, TestFlight (beta test) distribution, Analytics, Trends, Payments and financial reports, etc
