@@ -2,7 +2,7 @@
 
 In this post, you will be taken through the **step-by-step process to publish an Android app in Google Play Store**.
 
-Similar steps were followed to release the **Inji** app. To know more about, refer [Inji documentation](https://docs.mosip.io/inji/).
+Similar steps were followed to release the **Inji** app. To know more about Inji, refer [Inji documentation](https://docs.mosip.io/inji/).
 
 ### Google Play Console
 
