@@ -30,7 +30,7 @@ public class MockAuthenticationService implements Authenticator {
 
 The diagram below illustrates the workflow of the Consent Registry built in with e-Signet.
 
-![](\_images/consent.png)
+![](../.gitbook/assets/consent.png)
 
 ## KeyBinder
 
