@@ -36,6 +36,8 @@ With e-Signet version 1.0, the OTP-based authentication is now secured with capt
 
 ![](\_images/esignet-claims.png)
 
+_Note_:  The consent screen is displayed to the resident only if it hasn't been captured earlier else the residents are navigated back to the relying party UI.
+
 9\. The resident should click the `Allow` button. The system navigates the resident to the User Profile page which displays all the personal information based on the consent provided.
 
 ![](\_images/esignet-final.png)
