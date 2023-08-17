@@ -2,7 +2,7 @@
 
 ## Overview
 
-This system is an identity repository that stores the individual's demographic and biometric information to perform authentication and provide user information. As part of this integration with e-Signet, the authentication system should implement below interfaces,
+This system is an identity repository that stores the individual's demographic and biometric information to perform authentication and provide user information. As part of this integration with e-Signet, the authentication system should implement the below interfaces.
 
 ## Authenticator
 
@@ -26,6 +26,11 @@ public class MockAuthenticationService implements Authenticator {
     //Implement authenticator methods
 }
 ```
+### Consent Registry
+
+The diagram below illustrates the workflow of the Consent Registry built in with e-Signet.
+
+![](\_images/consent.png)
 
 ## KeyBinder
 
