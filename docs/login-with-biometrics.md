@@ -36,6 +36,8 @@ With e-Signet version 1.0, we have a `Refresh` button added to display the list 
 
 ![](\_images/esignet-claims.png)
 
+_Note_:  The consent screen is displayed to the resident only if it hasn't been captured earlier else the residents are navigated back to the relying party UI.
+
 9\. The resident clicks on the `Allow` button. The system navigates the resident to the User Profile page and the page displays their details based on the consent provided.
 
 ![](\_images/esignet-final.png)
