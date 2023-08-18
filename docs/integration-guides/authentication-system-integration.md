@@ -26,9 +26,18 @@ public class MockAuthenticationService implements Authenticator {
     //Implement authenticator methods
 }
 ```
-### Consent Registry
 
-The diagram below illustrates the workflow of the Consent Registry built in with e-Signet.
+### Storing Consent 
+
+Storing Consent in e-Signet is now via the built-in **Consent Registry** that has been designed to store user consent on claims and scopes requested during login into a relying party application using e-Signet or the Wallet application ([Inji](https://docs.mosip.io/inji/)).
+
+Key highlights of this feature are:
+
+* Storage of user consent against the requested claims and scopes in the database.
+* If the consent is already provided, it will bypass the consent screen when the user logs in using e-Signet(v1.1.0).
+* Recapture consent in case of changes in requested claims or scopes.
+
+The diagram below illustrates the internal mechanism of storing Consent in e-signet.
 
 ![](../.gitbook/assets/consent.png)
 
