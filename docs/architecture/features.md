@@ -26,8 +26,9 @@ Consent Registry is designed to store user consent on claims and scopes requeste
 Key highlights of this feature are:
 
 * Storage of user consent against the requested claims and scopes in the database.
-* If the consent is already provided, it will bypass the consent screen when the user logs in using e-Signet(v1.1.0).
+* If the consent is already provided, the consent screen is bypassed when the user logs in using e-Signet (v1.1.0).
 * Recapture consent in case of changes in requested claims or scopes.
+
 
 ### Seamless inclusion of new authentication mechanisms
 
