@@ -275,7 +275,9 @@ Once the build is ready in the TestFlight section, under “1.0 Prepare for Subm
 
 ![](\_images/appstore-xcode3.png)  
 
-* Click on `Distribute App`
+* Click on `Distribute App`.
 
 ![](\_images/appstore-xcode4.png)  
 
+Content credits: Chandra keshav Mishra
+Write to: chandrakeshavmishra@gmail.com
