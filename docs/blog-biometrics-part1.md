@@ -69,7 +69,7 @@ Iris and retina recognition are generally categorised as ocular-based technologi
 *	Finger Vein Recognition: Using vein patterns beneath the skin’s surface
 *	Ear Recognition: Using the shape of the outer ear
 
-Stay tuned for Part 2 of this series!
+_Stay tuned for Part 2 of this series!_
 
 To know more about the MOSIP platform and its integrations with the different biometric components, refer the section on [Biometrics](https://docs.mosip.io/1.2.0/biometrics).
 
