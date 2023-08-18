@@ -1,6 +1,6 @@
 # Release an app to iOS AppStore
 
-In this post, you will be taken through the step-by-step process to release an app to iOS AppStore(as per 11 April'23).
+In this post, you will be taken through the step-by-step process to release an app to iOS AppStore (content is updated as per process followed until 11 April'23).
 
 Similar steps were followed to release the **Inji** app. To know more about Inji, refer [Inji documentation](https://docs.mosip.io/inji/).
 
@@ -13,7 +13,7 @@ Similar steps were followed to release the **Inji** app. To know more about Inji
 
 An Apple portal to manage Developer certificates like APNs certificates, Provisioning profile, devices for adhoc distribution, APNs key, etc.
 
-**Prerequisites**
+**Pre-requisites**
 
 * Apple ID (email & password used to login to any apple’s portal)
 
