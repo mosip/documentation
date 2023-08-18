@@ -1,4 +1,4 @@
-# Releasing an app to Android Playstore
+# Releasing an app to Playstore
 
 In this post, you will be taken through the **step-by-step process to publish an Android app in Google Play Store**.
 
