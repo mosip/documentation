@@ -1,4 +1,4 @@
-# Release an app to iOS AppStore
+# Releasing an app to Apple App Store
 
 In this post, you will be taken through the step-by-step process to release an app to iOS AppStore (content is updated as per process followed until 11 April'23).
 
