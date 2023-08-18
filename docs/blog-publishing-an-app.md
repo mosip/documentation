@@ -310,7 +310,8 @@ _PLAY STORE LIMITATIONS_
 * You may want to increment the build number/ version code every time you upload a new apk/ app bundle.
 * If the app is built using the same build number/ version code of the previous app, then play store will reject that build.
 
-
+Content credits: Chandra keshav Mishra
+Write to: chandrakeshavmishra@gmail.com
 
 
 
