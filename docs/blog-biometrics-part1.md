@@ -45,23 +45,18 @@ Fingerprints were also used in Babylonia (~1500BC) to execute contracts written 
 While a plethora of biometric modalities is available, only a few have proved to be useful in identifying use cases and authenticating them. Let us explore some of them and understand what makes them unique, without comparing their effectiveness, usability, risks, or reliability.
 
 
-**Fingerprint Recognition**
-Fingerprints are nearly always unique, difficult to change, and less vulnerable to aging, unlike a person's face.  They, thereby, inspire confidence as a reliable biometric. The most popular of all biometrics for a long while, fingerprint recognition is truly standalone, due to the ease of use, reliability, and the advanced technology stage at which it operates.
+**Fingerprint Recognition**: Fingerprints are nearly always unique, difficult to change, and less vulnerable to aging, unlike a person's face.  They, thereby, inspire confidence as a reliable biometric. The most popular of all biometrics for a long while, fingerprint recognition is truly standalone, due to the ease of use, reliability, and the advanced technology stage at which it operates.
 What makes a fingerprint unique? Human skin is made up of three layers. The raised portions of the skin's outer layer on human fingers and toes are called friction ridges while the low lines between them are called valleys. When friction ridges leave their impression on a surface, fingerprints are formed. Fingerprint technologies focus on capturing this unique pattern, leveraging it for identification or verification purposes.
 
-**Iris and Retina Recognition**
-The iris is the coloured, ring-shaped region in the eye whose patterns are unique and different for each individual. Today, iris recognition is considered to be one of the most reliable and accurate biometric modalities available.
+**Iris and Retina Recognition**: The iris is the coloured, ring-shaped region in the eye whose patterns are unique and different for each individual. Today, iris recognition is considered to be one of the most reliable and accurate biometric modalities available.
 
 Iris and retina recognition are generally categorised as ocular-based technologies which are less vulnerable to aging or alteration. The patterns of the retina’s blood vessels are unique,  which are what retinal scans take advantage of.
 
-**Facial Recognition**
-Many unique features are associated with the face. Traditional facial recognition algorithms focus on the relative size, shape, or position of the eyes, cheekbones (which give structure to one’s face), nose, and jaw. There are three-dimensional face recognition sensors that can assess the face's third dimension (depth) features such as the eye sockets and nose size. Skin texture analysis is another approach, where the unique lines, patterns, or spots on someone's face are converted to digitally verifiable representations.
+**Facial Recognition**: Many unique features are associated with the face. Traditional facial recognition algorithms focus on the relative size, shape, or position of the eyes, cheekbones (which give structure to one’s face), nose, and jaw. There are three-dimensional face recognition sensors that can assess the face's third dimension (depth) features such as the eye sockets and nose size. Skin texture analysis is another approach, where the unique lines, patterns, or spots on someone's face are converted to digitally verifiable representations.
 
-**Voice Recognition**
-Multiple parts of the human body are involved in producing aural sound, including the vocal cords, throat, nose, mouth, and larynx. Since these are physical and unique aspects of the human body, the sounds produced by their orchestration is also unique. When sounds are clubbed with a person’s behaviour, be it speech delivery or the volume of the voice, the resultant combination is unique to that individual. Voice biometrics capture multiple attributes of the voice to arrive at the voiceprint of a person. Acquisitions are done by asking the person to read out a fixed text or a set of numbers, or to say something completely random, based on the algorithms used. This voiceprint is then used for identification or authentication requirements. It is important to note, however, that unlike with the iris or fingerprints, a person's voice is expected to change over time.
+**Voice Recognition**: Multiple parts of the human body are involved in producing aural sound, including the vocal cords, throat, nose, mouth, and larynx. Since these are physical and unique aspects of the human body, the sounds produced by their orchestration is also unique. When sounds are clubbed with a person’s behaviour, be it speech delivery or the volume of the voice, the resultant combination is unique to that individual. Voice biometrics capture multiple attributes of the voice to arrive at the voiceprint of a person. Acquisitions are done by asking the person to read out a fixed text or a set of numbers, or to say something completely random, based on the algorithms used. This voiceprint is then used for identification or authentication requirements. It is important to note, however, that unlike with the iris or fingerprints, a person's voice is expected to change over time.
 
-**DNA Recognition**
-Deoxyribonucleic acid contains a unique genetic code or a blueprint of a human body. The DNA molecule is composed of a series of smaller molecules within. The order in which these smaller molecules are arranged makes for the uniqueness of each individual. The extraction of DNA characteristics or DNA analysis is a highly time-consuming and expensive activity. In addition, DNA may not be an effective modality in distinguishing monozygotic (identical) twins. However, it provides the most reliable form of identification and is therefore used in forensics.
+**DNA Recognition**: Deoxyribonucleic acid contains a unique genetic code or a blueprint of a human body. The DNA molecule is composed of a series of smaller molecules within. The order in which these smaller molecules are arranged makes for the uniqueness of each individual. The extraction of DNA characteristics or DNA analysis is a highly time-consuming and expensive activity. In addition, DNA may not be an effective modality in distinguishing monozygotic (identical) twins. However, it provides the most reliable form of identification and is therefore used in forensics.
 
 **Other biometric modalities include**:
 
@@ -89,5 +84,7 @@ To know more about the MOSIP platform and its integrations with the different bi
 * [https://www.nature.com/](https://www.nature.com/)
 * [https://findbiometrics.com/](https://findbiometrics.com/)
 
-Content Credits: Sanjith Sundaram (Head - Biometric Ecosystem)
-Write to: sanjith@mosip.io
+_Content Credits_: Sanjith Sundaram (Head- MOSIP Biometric Ecosystem)
+
+e-mail: sanjith@mosip.io
+
