@@ -21,7 +21,10 @@
 
 ### Consent Registry
 
-Consent Registry is a module that is designed to store user consent on claims and scopes requested during login into e-Signet using either `oidc-ui` or the Wallet application ([Inji](https://docs.mosip.io/inji/)). Key highlights of this feature are:
+Consent Registry is designed to store user consent on claims and scopes requested during login into a relying party application using e-Signet or the Wallet application ([Inji](https://docs.mosip.io/inji/)).
+
+Key highlights of this feature are:
+
 * Storage of user consent against the requested claims and scopes in the database.
 * If the consent is already provided, it will bypass the consent screen when the user logs in using e-Signet(v1.1.0).
 * Recapture consent in case of changes in requested claims or scopes.
