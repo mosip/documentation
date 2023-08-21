@@ -18,6 +18,8 @@ Key highlights of this feature are:
 * If the consent is already provided, the consent screen is bypassed when the user logs in using e-Signet (v1.1.0).
 * Recapture consent in case of changes in requested claims or scopes.
 
+_Note_: Consent management is not applicable in this release as it solely focuses on the storage of user consent. The functionalities of editing, revoking, updating, or viewing the consent after it has been given by the user are considered beyond the scope of this release.
+
 ## Features Included
 
 Below are the features available in the release,
@@ -27,7 +29,7 @@ Below are the features available in the release,
 * Wallet based authentication
 * Multi-language support
 * Captcha validation
-* Consent
+* Consent storage
 
 ## Documentation
 
