@@ -1,6 +1,6 @@
 # Sandbox Details
 
-Are you a partner looking to integrate Inji? We invite you to connect with us by completing the [form](https://forms.gle/WvKajxxZ6Jy2K5TM6) here. This will assist us in facilitating a seamless integration with our designated sandbox environments.
+Are you a partner looking to integrate with us and explore **Inji**? We invite you to connect with us by completing the [form](https://forms.gle/WvKajxxZ6Jy2K5TM6) here. This will assist us in facilitating a seamless integration with our designated sandbox environments.
 
 ## Collab
 
