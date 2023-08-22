@@ -87,3 +87,8 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 Link for the [detailed test report](https://github.com/mosip/test-management/tree/master/e-signet).
 
+### Sonar Report
+
+![](\_images/esignet-sonar-v110.png)
+
+
