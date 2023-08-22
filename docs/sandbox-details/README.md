@@ -1,6 +1,6 @@
 # Sandbox Details
 
-Are you a relying party looking to integrate with e-Signet? We invite you to connect with us by completing the [form](https://forms.gle/sHteZEsKvPRXbUNw7) here. This will assist us in facilitating a seamless integration with our designated sandbox environments.
+Are you a relying party looking to integrate with **e-Signet**? We invite you to connect with us by completing the [form](https://forms.gle/sHteZEsKvPRXbUNw7) here. This will assist us in facilitating a seamless integration with our designated sandbox environments.
 
 ## Collab
 
