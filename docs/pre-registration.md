@@ -2,7 +2,7 @@
 
 ## Overview
 
-Pre-registration module enables a resident to
+Pre-registration module enables a resident to:
 
 * enter demographic data and upload supporting documents,
 * book an appointment for one or many users for registration by choosing a suitable registration center and a convenient time slot,
@@ -22,8 +22,9 @@ MOSIP provides backend APIs for this module along with a reference implementatio
 * User provides consent
 * User provides demographic information
 * User uploads supporting documents (Proof of Address, Birth certificate, etc.)
-* A pre-registration request ID (PRID) is generated and provided to the user
+* A pre-registration request ID known as [AID](identifiers.md#rid-aid) is generated and provided to the user.
 
+_Note_:  The AID was formerly called PRID in the pre-registration context.
 ### Book an appointment
 
 * User selects a registration center based on postal code, geo-location, etc.
@@ -33,12 +34,12 @@ MOSIP provides backend APIs for this module along with a reference implementatio
 ### Receiving acknowledgement notifications
 
 * An acknowledgement is sent via email/SMS
-* The user can print the acknowledgement containing PRID and QR code.
+* The user can print the acknowledgement containing AID and QR code.
 * This QR code can be scanned at the in-person registration centers.
 
 ### Download of pre-registration data at registration centers
 
-* User provides the PRID/QR code at the registration center.
+* User provides the AID/ QR code at the registration center.
 * The registration form gets pre-filled with the pre-registration data.
 
 ## Pre-registration module
@@ -52,10 +53,10 @@ The relationship of the pre-registration module with other services is explained
 3. Log all events.
 4. Pre-Registration interacts with Keycloak via [`kernel-auth-adapater`](https://github.com/mosip/mosip-openid-bridge/tree/release-1.2.0). The Pre-Reg module communicates with endpoints of other MOSIP modules. However, to access these endpoints, a token is required. This token is obtained from Keycloak.
 5. Database used by pre-reg.
-6. Generate a new [PRID](identifiers.md#prid) for the application.
+6. Generate a new AID for the application.
 7. Send OTP in the email/SMS to the user.
 8. Registration Processor uses reverse sync to mark the pre-reg application as consumed.
-9. Registration clients use [Datasync service](https://github.com/mosip/pre-registration/tree/release-1.2.0/pre-registration/pre-registration-datasync-service) to get the pre-reg application details for a given registration center, booking date and PRID.
+9. Registration clients use [Datasync service](https://github.com/mosip/pre-registration/tree/release-1.2.0/pre-registration/pre-registration-datasync-service) to get the pre-reg application details for a given registration center, booking date and AID.
 10. Fetch data for dropdowns, locations, consent forms etc.
 
 ## Services
