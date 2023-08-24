@@ -32,11 +32,11 @@ With e-Signet version 1.0, the OTP-based authentication is now secured with capt
 
 ![](\_images/esignet-not-allowed-claims.png)
 
-8\. The resident has the choice to select from the list of Voluntary claims while the Essential claims are mandatory and cannot be edited.
+_Note_:  The consent screen is presented solely to the resident if consent has not previously been obtained. Additionally, a timer is incorporated onto the Consent screen, allowing the resident to provide a response within the designated time frame. In the event that the allotted time elapses, residents will be redirected to the relying party user interface.
+
+8\. The resident is given the option to choose from a list of Authorized scopes and Voluntary claims. The Essential claims are mandatory and cannot be modified. In e-Signet v1.1.1, a `master toggle button` has been added to allow residents to select all the options at once, if desired.
 
 ![](\_images/esignet-claims.png)
-
-_Note_:  The consent screen is displayed to the resident only if it hasn't been captured earlier else the residents are navigated back to the relying party UI.
 
 9\. The resident should click the `Allow` button. The system navigates the resident to the User Profile page which displays all the personal information based on the consent provided.
 
