@@ -16,7 +16,8 @@ The VID / Virtual ID is an alias identifier that can be used for authentication 
 
 ### RID / AID
 
-The RID is the registration ID that is used to refer to the registration process. It is interchangeably used with the AID which represents the "Application Number" / registration ID that is used as the context for all communication with user for the registration.
+The Application ID (AID) refers to the unique identifier given to a resident during any ID lifecycle event, such as ID Issuance, ID Update, or Lost ID retrieval, at the registration center. It serves as a distinguishing factor for each specific event and can later be utilized by the resident to check the progress or status of the event.
+Previously, in MOSIP, the Application ID was referred to as the RID (Registration ID) and/or PRID (Pre-registration ID).
 
 ### PRID
 
