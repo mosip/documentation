@@ -3,7 +3,7 @@
 Prerequisites:
 
 * Residents should have Inji app installed on the mobile device.
-* They should have credentials downloaded and should have activated it for online login. To know how to activate the VC for online login, refer [Inji User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta).
+* They should have credentials downloaded and should have activated it for online login. To know how to activate the VC for online login, refer [Inji User Guide](https://docs.mosip.io/1.2.0/modules/inji-user-guide#wallet-binding-flow).
 
 
 1\. Resident launches the relying party's portal and clicks on `Sign In with e-Signet`.
