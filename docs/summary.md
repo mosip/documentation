@@ -43,7 +43,7 @@
     * [Credential Request Generator Service Developers Guide](id-repository-credential-request-generator-service-developer-guide.md)
     * [Identity Service Developers Guide](id-repository-identity-service-developer-guide.md)
     * [VID Service Developers Guide](id-repository-vid-service-developer-guide.md)
-  * [Inji](http://localhost:5000/o/-M1FyzBr-VmticWYm8QI/s/aY8BQ4hdzhSchZV814Ev/)
+  * [Inji](https://docs.mosip.io/inji)
   * [Inji User Guide](inji-user-guide.md)
   * [Keycloak](keycloak.md)
   * [Key Manager](keymanager.md)
