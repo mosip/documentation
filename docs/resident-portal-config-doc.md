@@ -437,6 +437,445 @@ resident.template.email.subject.success.send-otp=receive-otp-mail-subject
 resident.template.email.subject.success.validate-otp=validate-otp-mail-subject
 ```
 
+### Template type codes for email content
+
+```
+resident.template.email.content.request-received.cust-and-down-my-card=cust-and-down-my-card-request-received-email-content
+resident.template.email.content.success.cust-and-down-my-card=cust-and-down-my-card-success-email-content
+resident.template.email.content.failure.cust-and-down-my-card=cust-and-down-my-card-failure-email-content
+
+resident.template.email.content.request-received.order-a-physical-card=order-a-physical-card-request-received-email-content
+resident.template.email.content.success.order-a-physical-card=order-a-physical-card-success-email-content
+resident.template.email.content.failure.order-a-physical-card=order-a-physical-card-failure-email-content
+
+resident.template.email.content.request-received.share-cred-with-partner=share-cred-with-partner-request-received-email-content
+resident.template.email.content.success.share-cred-with-partner=share-cred-with-partner-success-email-content
+resident.template.email.content.failure.share-cred-with-partner=share-cred-with-partner-failure-email-content
+
+resident.template.email.content.request-received.lock-unlock-auth=lock-unlock-auth-request-received-email-content
+resident.template.email.content.success.lock-unlock-auth=lock-unlock-auth-success-email-content
+resident.template.email.content.failure.lock-unlock-auth=lock-unlock-auth-failure-email-content
+
+resident.template.email.content.request-received.update-demo-data=update-demo-data-request-received-email-content
+resident.template.email.content.success.update-demo-data=update-demo-data-success-email-content
+resident.template.email.content.failure.update-demo-data=update-demo-data-failure-email-content
+
+resident.template.email.content.request-received.gen-or-revoke-vid=gen-or-revoke-vid-request-received-email-content
+resident.template.email.content.success.gen-or-revoke-vid=gen-or-revoke-vid-success-email-content
+resident.template.email.content.failure.gen-or-revoke-vid=gen-or-revoke-vid-failure-email-content
+
+resident.template.email.content.request-received.vid-card-download=vid-card-download-request-received-email-content
+resident.template.email.content.success.vid-card-download=vid-card-download-success-email-content
+resident.template.email.content.failure.vid-card-download=vid-card-download-failure-email-content
+
+resident.template.email.content.request-received.get-my-uin-card=get-my-uin-card-request-received-email-content
+resident.template.email.content.success.get-my-uin-card=get-my-uin-card-success-email-content
+resident.template.email.content.failure.get-my-uin-card=get-my-uin-card-failure-email-content
+
+resident.template.email.content.request-received.verify-my-phone-email=verify-my-phone-email-request-received-email-content
+resident.template.email.content.success.verify-my-phone-email=verify-my-phone-email-success-email-content
+resident.template.email.content.failure.verify-my-phone-email=verify-my-phone-email-failure-email-content
+
+resident.template.email.content.success.send-otp=receive-otp-mail-content
+resident.template.email.content.success.validate-otp=validate-otp-mail-content
+```
+### Template type codes for sms content
+
+```
+resident.template.sms.request-received.cust-and-down-my-card=cust-and-down-my-card-request-received_SMS
+resident.template.sms.success.cust-and-down-my-card=cust-and-down-my-card-success_SMS
+resident.template.sms.failure.cust-and-down-my-card=cust-and-down-my-card-failure_SMS
+
+resident.template.sms.request-received.order-a-physical-card=order-a-physical-card-request-received_SMS
+resident.template.sms.success.order-a-physical-card=order-a-physical-card-success_SMS
+resident.template.sms.failure.order-a-physical-card=order-a-physical-card-failure_SMS
+
+resident.template.sms.request-received.share-cred-with-partner=share-cred-with-partner-request-received_SMS
+resident.template.sms.success.share-cred-with-partner=share-cred-with-partner-success_SMS
+resident.template.sms.failure.share-cred-with-partner=share-cred-with-partner-failure_SMS
+
+resident.template.sms.request-received.lock-unlock-auth=lock-unlock-auth-request-received_SMS
+resident.template.sms.success.lock-unlock-auth=lock-unlock-auth-success_SMS
+resident.template.sms.failure.lock-unlock-auth=lock-unlock-auth-failure_SMS
+
+resident.template.sms.request-received.update-demo-data=update-demo-data-request-received_SMS
+resident.template.sms.success.update-demo-data=update-demo-data-success_SMS
+resident.template.sms.failure.update-demo-data=update-demo-data-failure_SMS
+
+resident.template.sms.request-received.gen-or-revoke-vid=gen-or-revoke-vid-request-received_SMS
+resident.template.sms.success.gen-or-revoke-vid=gen-or-revoke-vid-success_SMS
+resident.template.sms.failure.gen-or-revoke-vid=gen-or-revoke-vid-failure_SMS
+
+resident.template.sms.request-received.vid-card-download=vid-card-download-request-received_SMS
+resident.template.sms.success.vid-card-download=vid-card-download-success_SMS
+resident.template.sms.failure.vid-card-download=vid-card-download-failure_SMS
+
+resident.template.sms.request-received.get-my-uin-card=get-my-uin-card-request-received_SMS
+resident.template.sms.success.get-my-uin-card=get-my-uin-card-success_SMS
+resident.template.sms.failure.get-my-uin-card=get-my-uin-card-failure_SMS
+
+resident.template.sms.request-received.verify-my-phone-email=verify-my-phone-email-request-received_SMS
+resident.template.sms.success.verify-my-phone-email=verify-my-phone-email-success_SMS
+resident.template.sms.failure.verify-my-phone-email=verify-my-phone-email-failure_SMS
+
+resident.template.sms.success.send-otp=receive-otp
+resident.template.sms.success.validate-otp=validate-otp
+```
+
+### Template type codes for purpose (success) content
+
+```
+resident.template.purpose.success.cust-and-down-my-card=cust-and-down-my-card-positive-purpose
+resident.template.purpose.success.order-a-physical-card=order-a-physical-card-positive purpose
+resident.template.purpose.success.share-cred-with-partner=share-cred-with-partner-positive-purpose
+resident.template.purpose.success.lock-unlock-auth=lock-unlock-auth-positive-purpose
+resident.template.purpose.success.update-demo-data=update-demo-data-positive-purpose
+resident.template.purpose.success.gen-or-revoke-vid=gen-or-revoke-vid-positive-purpose
+resident.template.purpose.success.get-my-uin-card=get-my-uin-card-positive-purpose
+resident.template.purpose.success.verify-my-phone-email=verify-my-phone-email-positive-purpose
+resident.template.purpose.success.vid-card-download=vid-card-download-positive-purpose
+```
+
+### Template type codes for purpose (in-progress/failure) content
+
+```
+resident.template.purpose.failure.cust-and-down-my-card=cust-and-down-my-card-negative-purpose
+resident.template.purpose.failure.order-a-physical-card=order-a-physical-card-negative purpose
+resident.template.purpose.failure.share-cred-with-partner=share-cred-with-partner-negative-purpose
+resident.template.purpose.failure.lock-unlock-auth=lock-unlock-auth-negative-purpose
+resident.template.purpose.failure.update-demo-data=update-demo-data-negative-purpose
+resident.template.purpose.failure.gen-or-revoke-vid=gen-or-revoke-vid-negative-purpose
+resident.template.purpose.failure.get-my-uin-card=get-my-uin-card-negative-purpose
+resident.template.purpose.failure.verify-my-phone-email=verify-my-phone-email-negative-purpose
+resident.template.purpose.failure.vid-card-download=vid-card-download-negative-purpose
+```
+
+### Template type codes for summary (success) content
+
+```
+resident.template.summary.success.cust-and-down-my-card=cust-and-down-my-card-success-summary
+resident.template.summary.success.order-a-physical-card=order-a-physical-card-success-summary
+resident.template.summary.success.share-cred-with-partner=share-cred-with-partner-success-summary
+resident.template.summary.success.lock-unlock-auth=lock-unlock-auth-success-summary
+resident.template.summary.success.update-demo-data=update-demo-data-success-summary
+resident.template.summary.success.gen-or-revoke-vid=gen-or-revoke-vid-success-summary
+resident.template.summary.success.get-my-uin-card=get-my-uin-card-success-summary
+resident.template.summary.success.verify-my-phone-email=verify-my-phone-email-success-summary
+resident.template.summary.success.vid-card-download=vid-card-download-positive-summary
+```
+
+### Template type codes for acknowledgement PDFs 
+
+```
+resident.template.ack.share-cred-with-partner=acknowledgement-share-cred-with-partner
+resident.template.ack.manage-my-vid=acknowledgement-manage-my-vid
+resident.template.ack.order-a-physical-card=acknowledgement-order-a-physical-card
+resident.template.ack.download-a-personalized-card=acknowledgement-download-a-personalized-card
+resident.template.ack.update-demographic-data=acknowledgement-update-demographic-data
+resident.template.ack.verify-email-id-or-phone-number=acknowledgement-verify-email-id-or-phone-number
+resident.template.ack.secure-my-id=acknowledgement-secure-my-id
+resident.template.ack.authentication.request=acknowledgment-authentication-request
+resident.template.ack.get.my.id=acknowledgment-get-my-id
+resident.template.ack.vid.card.download=acknowledgment-vid-card-download
+```
+
+### Template type codes for supporting documents, service history, registration centers and VID card
+
+```
+resident.template.support-docs-list=supporting-docs-list
+mosip.resident.service.history.template.type.code=service-history-type
+resident.template.registration.centers.list=registration-centers-list
+mosip.resident.vid.card.template.property=vid-card-type
+```
+
+### Template required properties
+
+```
+resident.template.date.pattern=dd-MM-yyyy
+resident.template.time.pattern=HH:mm:ss
+resident.ui.track-service-request-url=https://${mosip.resident.host}/#/uinservices/trackservicerequest?eid=
+```
+
+### View history filters
+
+```
+resident.view.history.serviceType.filters=ALL,AUTHENTICATION_REQUEST,SERVICE_REQUEST,DATA_UPDATE_REQUEST,ID_MANAGEMENT_REQUEST,DATA_SHARE_REQUEST
+resident.view.history.status.filters=all,Success,In Progress,Failed
+```
+
+### Maximum data to download in a PDF
+
+```
+resident.service-history.download.max.count=100
+resident.registration-centers.download.max.count=100
+```
+
+### The Registration centers will be searched based on the distance value in meters from the Geo location identified
+
+```
+resident.nearby.centers.distance.meters=2000
+```
+
+### Page size in Bell Icon Notification list and view history
+
+```
+resident.notifications.default.page.size=100
+resident.view-history.default.page.size=10
+```
+
+### Token related config
+
+```
+auth.validate.id-token=true
+idToken=id_token
+auth.token.header=Authorization
+mosip.resident.access_token.auth_mode.claim-name=acr
+mosip.resident.oidc.id_token.ida_token.claim-name=sub
+mosip.resident.oidc.auth_token.expiry.claim-name=exp
+mosip.resident.oidc.userinfo.encryption.enabled=false
+mosip.client.assertion.reference.id=
+mosip.include.payload=true
+mosip.include.certificate=true
+mosip.include.cert.hash=false
+```
+
+### Rectangle coordinates for PDF signed data
+
+```
+mosip.resident.service.uincard.lowerleftx=73
+mosip.resident.service.uincard.lowerlefty=100
+mosip.resident.service.uincard.upperrightx=300
+mosip.resident.service.uincard.upperrighty=300
+mosip.resident.service.uincard.signature.reason="Digitally Signed"
+```
+
+### File name for the downloaded PDFs
+
+```
+mosip.resident.download.registration.centre.file.name.convention=Registration_centers_{timestamp}
+mosip.resident.download.supporting.document.file.name.convention=Supporting_documents_{timestamp}
+mosip.resident.download.personalized.card.naming.convention=Personalised_card_{eventId}_{timestamp}
+mosip.resident.ack.manage_my_vid.name.convention=Ack_{featureName}_{eventId}_{timestamp}
+mosip.resident.ack.secure_my_id.name.convention=Ack_{featureName}_{eventId}_{timestamp}
+mosip.resident.ack.personalised_card.name.convention=Ack_{featureName}_{eventId}_{timestamp}
+mosip.resident.ack.update_my_data.name.convention=Ack_{featureName}_{eventId}_{timestamp}
+mosip.resident.ack.share_credential.name.convention=Ack_{featureName}_{eventId}_{timestamp}
+mosip.resident.ack.order_physical_card.name.convention=Ack_{featureName}_{eventId}_{timestamp}
+mosip.resident.ack.name.convention=Ack_{featureName}_{eventId}_{timestamp}
+mosip.resident.uin.card.name.convention=UIN_{eventId}_{timestamp}
+mosip.resident.vid.card.name.convention=VID_{eventId}_{timestamp}
+mosip.resident.download.service.history.file.name.convention=View_history_{timestamp}
+mosip.resident.download.nearest.registration.centre.file.name.convention=Registration_centers_{timestamp}
+mosip.resident.download.card.naming.convention=Get_my_UIN_{timestamp}
+```
+
+### Credential request config
+
+```
+mosip.resident.request.credential.credentialType=euin
+mosip.resident.request.credential.isEncrypt=true
+mosip.resident.request.credential.encryption.key=******
+
+mosip.digital.card.credential.type=PDFCard
+mosip.credential.issuer=******
+```
+
+### Claim names
+
+```
+mosip.resident.name.token.claim-name=name
+mosip.resident.photo.token.claim-photo=picture
+mosip.resident.individual.id.claim.name=individual_id
+mosip.resident.email.token.claim-email=email
+mosip.resident.phone.token.claim-phone=phone_number
+```
+
+### OTP Flooding
+
+Configure Time limit for OTP Flooding scenario (in minutes).
+```
+otp.request.flooding.duration=1
+otp.request.flooding.max-count=10
+```
+
+### Maximum file size and types for uploading document
+
+```
+mosip.max.file.upload.size.in.bytes=2306867
+mosip.allowed.extension=pdf,jpeg,png,jpg
+```
+
+### Reg-proc packet status codes
+
+```
+resident.success.packet-status-code.list=PROCESSED,SUCCESS,UIN_GENERATED
+resident.in-progress.packet-status-code.list=PROCESSING,REREGISTER,RESEND,RECEIVED,UPLOAD_PENDING,AWAITING_INFORMATION,REPROCESS
+resident.failure.packet-status-code.list=REJECTED,FAILED,REPROCESS_FAILED
+```
+### Reg-proc packet transaction type codes
+
+```
+resident.REQUEST_RECEIVED.packet-transaction-type-code.list=PACKET_RECEIVER,VIRUS_SCAN,SECUREZONE_NOTIFICATION,UPLOAD_PACKET,VALIDATE_PACKET,PACKET_CLASSIFICATION
+resident.VALIDATION_STAGE.packet-transaction-type-code.list=CMD_VALIDATION,OPERATOR_VALIDATION,QUALITY_CLASSIFIER,SUPERVISOR_VALIDATION,INTRODUCER_VALIDATION,BIOMETRIC_AUTHENTICATION,EXTERNAL_INTEGRATION
+resident.VERIFICATION_STAGE.packet-transaction-type-code.list=DEMOGRAPHIC_VERIFICATION,MANUAL_ADJUDICATION,VERIFICATION,BIOGRAPHIC_VERIFICATION
+resident.UIN_GENERATION_STAGE.packet-transaction-type-code.list=UIN_GENERATOR,BIOMETRIC_EXTRACTION,NOTIFICATION,FINALIZATION,PACKET_REPROCESS
+resident.CARD_READY_TO_DOWNLOAD.packet-transaction-type-code.list=PRINT_SERVICE,PRINT_POSTAL_SERVICE,PRINT
+```
+
+### Synchronous events
+
+```
+resident.request.success.status.list.AUTHENTICATION_REQUEST=AUTHENTICATION_SUCCESSFUL,Y
+resident.request.failed.status.list.AUTHENTICATION_REQUEST=AUTHENTICATION_FAILED,N
+
+resident.request.new.status.list.DOWNLOAD_PERSONALIZED_CARD=NEW
+resident.batchjob.process.success.status.list.DOWNLOAD_PERSONALIZED_CARD=CARD_DOWNLOADED
+resident.request.failed.status.list.DOWNLOAD_PERSONALIZED_CARD=FAILED
+
+resident.request.new.status.list.GET_MY_ID=NEW
+resident.request.in-progress.status.list.GET_MY_ID=OTP_REQUESTED
+resident.request.success.status.list.GET_MY_ID=CARD_DOWNLOADED,OTP_VERIFIED
+resident.request.failed.status.list.GET_MY_ID=FAILED
+
+resident.request.new.status.list.BOOK_AN_APPOINTMENT=
+resident.request.success.status.list.BOOK_AN_APPOINTMENT=
+resident.request.failed.status.list.BOOK_AN_APPOINTMENT=
+
+resident.request.new.status.list.GENERATE_VID=NEW
+resident.request.success.status.list.GENERATE_VID=VID_GENERATED
+resident.request.failed.status.list.GENERATE_VID=FAILED
+
+resident.request.new.status.list.REVOKE_VID=NEW
+resident.request.success.status.list.REVOKE_VID=VID_REVOKED
+resident.request.failed.status.list.REVOKE_VID=FAILED
+
+resident.request.new.status.list.SEND_OTP=
+resident.request.success.status.list.SEND_OTP=
+resident.request.failed.status.list.SEND_OTP=
+
+resident.request.new.status.list.VALIDATE_OTP=OTP_REQUESTED
+resident.request.success.status.list.VALIDATE_OTP=OTP_VERIFIED
+resident.request.failed.status.list.VALIDATE_OTP=OTP_VERIFICATION_FAILED
+
+resident.request.new.status.list.DEFAULT=
+resident.request.success.status.list.DEFAULT=
+resident.request.failed.status.list.DEFAULT=
+```
+
+### Asyc Request Types
+
+```
+resident.async.request.types=VID_CARD_DOWNLOAD,ORDER_PHYSICAL_CARD,SHARE_CRED_WITH_PARTNER,UPDATE_MY_UIN
+```
+
+### Asynchronous events  
+
+```
+resident.request.new.status.list.SHARE_CRED_WITH_PARTNER=NEW
+resident.request.in-progress.status.list.SHARE_CRED_WITH_PARTNER=ISSUED
+resident.request.success.status.list.SHARE_CRED_WITH_PARTNER=RECEIVED,DATA_SHARED_SUCCESSFULLY,STORED
+resident.request.failed.status.list.SHARE_CRED_WITH_PARTNER=FAILED
+resident.request.notification.status.list.SHARE_CRED_WITH_PARTNER=FAILED,RECEIVED,DATA_SHARED_SUCCESSFULLY,STORED
+
+resident.request.new.status.list.ORDER_PHYSICAL_CARD=NEW
+resident.request.in-progress.status.list.ORDER_PHYSICAL_CARD=PAYMENT_CONFIRMED,ISSUED,PRINTING,IN_TRANSIT
+resident.request.success.status.list.ORDER_PHYSICAL_CARD=CARD_DELIVERED
+resident.request.failed.status.list.ORDER_PHYSICAL_CARD=FAILED,PAYMENT_FAILED
+resident.request.notification.status.list.ORDER_PHYSICAL_CARD=PAYMENT_CONFIRMED,ISSUED,PRINTING,IN_TRANSIT,CARD_DELIVERED,FAILED,PAYMENT_FAILED,CARD_DELIVERED
+
+resident.request.new.status.list.UPDATE_MY_UIN=NEW
+resident.request.in-progress.status.list.UPDATE_MY_UIN=PROCESSING,PAUSED,RESUMABLE,REPROCESS,PAUSED_FOR_ADDITIONAL_INFO
+resident.request.success.status.list.UPDATE_MY_UIN=PROCESSED,DATA_UPDATED,STORED,CARD_READY_TO_DOWNLOAD,CARD_DOWNLOADED
+resident.request.failed.status.list.UPDATE_MY_UIN=FAILED,REJECTED,REPROCESS_FAILED
+resident.request.notification.status.list.UPDATE_MY_UIN=PROCESSED,DATA_UPDATED,STORED,CARD_READY_TO_DOWNLOAD,CARD_DOWNLOADED,FAILED,REJECTED,REPROCESS_FAILED
+
+resident.request.new.status.list.AUTH_TYPE_LOCK_UNLOCK=NEW
+resident.request.in-progress.status.list.AUTH_TYPE_LOCK_UNLOCK=
+resident.request.success.status.list.AUTH_TYPE_LOCK_UNLOCK=COMPLETED
+resident.request.failed.status.list.AUTH_TYPE_LOCK_UNLOCK=FAILED
+resident.request.notification.status.list.AUTH_TYPE_LOCK_UNLOCK=COMPLETED,FAILED
+
+resident.request.new.status.list.VID_CARD_DOWNLOAD=NEW
+resident.request.in-progress.status.list.VID_CARD_DOWNLOAD=ISSUED
+resident.request.success.status.list.VID_CARD_DOWNLOAD=STORED,CARD_READY_TO_DOWNLOAD,CARD_DOWNLOADED
+resident.request.failed.status.list.VID_CARD_DOWNLOAD=FAILED
+resident.request.notification.status.list.VID_CARD_DOWNLOAD=STORED,CARD_READY_TO_DOWNLOAD,CARD_DOWNLOADED,FAILED
+```
+
+### Attributes name based template type codes
+
+Define property name in below format-
+
+resident.<attribute name>.template.property.attribute.list
+
+```
+resident.fullName.template.property.attribute.list=mosip.full.name.template.property
+resident.dateOfBirth.template.property.attribute.list=mosip.date.of.birth.template.property
+resident.UIN.template.property.attribute.list=mosip.uin.template.property
+resident.perpetualVID.template.property.attribute.list=mosip.perpetual.vid.template.property
+resident.phone.template.property.attribute.list=mosip.phone.template.property
+resident.email.template.property.attribute.list=mosip.email.template.property
+resident.fullAddress.template.property.attribute.list=mosip.address.template.property
+resident.addressLine1.template.property.attribute.list=mosip.address.line1.template.property
+resident.addressLine2.template.property.attribute.list=mosip.address.line2.template.property
+resident.addressLine3.template.property.attribute.list=mosip.address.line3.template.property
+resident.province.template.property.attribute.list=mosip.province.template.property
+resident.city.template.property.attribute.list=mosip.city.template.property
+resident.zone.template.property.attribute.list=mosip.zone.template.property
+resident.postalCode.template.property.attribute.list=mosip.postal.code.template.property
+resident.region.template.property.attribute.list=mosip.region.template.property
+resident.gender.template.property.attribute.list=mosip.gender.template.property
+resident.photo.template.property.attribute.list=mosip.photo.template.property
+resident.preferredLang.template.property.attribute.list=mosip.preferred.language.template.property
+resident.default.template.property.attribute.list=mosip.defualt.template.property
+```
+
+### Class name of the referenceValidator
+
+Commenting or removing this property will disable reference validator.
+
+```
+mosip.kernel.idobjectvalidator.referenceValidator=io.mosip.kernel.idobjectvalidator.impl.IdObjectReferenceValidator
+```
+
+### Cache expiration time (in milliseconds)
+
+```
+template.cache.expiry.time.millisec=86400000
+```
+
+### Request time validation
+
+For validating request time as per before and after time limit (in seconds) in contact-details/update API.
+
+```
+resident.future.time.limit=60
+resident.past.time.limit=60
+```
+
+### Date time formatting styles
+
+The java.time.format.FormatStyle enum to use for date time formatting based on locale. Allowed values with examples are: 
+
+* FULL ('Tuesday, April 12, 1952 AD' or '3:30:42pm PST')
+
+* LONG('January 12, 1952')
+
+* MEDIUM ('Jan 12, 1952')
+
+* SHORT ('12.13.52' or '3:30pm')
+
+Current value is MEDUIM. For more details refer to the enum.
+
+```
+resident.date.time.formmatting.style=MEDIUM
+resident.date.time.replace.special.chars={" ": "_", "," : "", ":" : "."}
+```
+
+
+
+
+
 
 
 
