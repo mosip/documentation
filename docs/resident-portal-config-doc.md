@@ -872,6 +872,35 @@ resident.date.time.formmatting.style=MEDIUM
 resident.date.time.replace.special.chars={" ": "_", "," : "", ":" : "."}
 ```
 
+### Logger related properties
+
+URL pattern for logging filter. For example, "/callback/" .Defaults to "/".
+
+```
+logging.level.root=INFO
+logging.level.io.mosip.resident.batch=INFO
+logging.level.io.mosip.resident.filter=DEBUG
+resident.logging.filter.enabled=false
+resident.logging.filter.url.pattern=/*
+```
+
+### Rest template logger filter
+
+This will print the request details such as URL, headers and body for debugging purpose. Default is false.
+
+```
+logging.level.io.mosip.resident.config.LoggingInterceptor=DEBUG
+resident.rest.template.logging.interceptor.filter.enabled=false
+```
+
+### Websub topic subscription and WebsubCallbackRequestDecoratorFilter
+
+```
+subscriptions-delay-on-startup_millisecs=120000
+re-subscription-interval-in-seconds=43200
+resident.websub.request.decorator.filter.enabled=true
+```
+
 
 
 
