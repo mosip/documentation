@@ -48,7 +48,7 @@ The relationship of the pre-registration module with other services is explained
 
 ![](\_images/pre-reg-entity.png)
 
-1. Fetch [ID Schema](id-schema/) details.
+1. Fetch [ID Schema](id-schema/) details with the help of Syncdata service.
 2. Fetch a new OTP for the user on the login page.
 3. Log all events.
 4. Pre-Registration interacts with Keycloak via [`kernel-auth-adapater`](https://github.com/mosip/mosip-openid-bridge/tree/release-1.2.0). The Pre-Reg module communicates with endpoints of other MOSIP modules. However, to access these endpoints, a token is required. This token is obtained from Keycloak.
@@ -57,7 +57,7 @@ The relationship of the pre-registration module with other services is explained
 7. Send OTP in the email/SMS to the user.
 8. Registration Processor uses reverse sync to mark the pre-reg application as consumed.
 9. Registration clients use [Datasync service](https://github.com/mosip/pre-registration/tree/release-1.2.0/pre-registration/pre-registration-datasync-service) to get the pre-reg application details for a given registration center, booking date and AID.
-10. Fetch data for dropdowns, locations, consent forms etc.
+10. Request data from MasterData service to get data for dropdowns, locations, consent forms etc..
 
 ## Services
 
