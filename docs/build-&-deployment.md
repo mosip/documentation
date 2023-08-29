@@ -2,6 +2,8 @@
 
 The developer guide for building and running various components of e-Signet is available in their respective repositories as mentioned below.
 
+{% embed url="https://www.youtube.com/watch?v=nmIZl6Tmt68" %}
+
 ## Command to build
 
 ### Building and deployment of esignet service
