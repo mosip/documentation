@@ -1,6 +1,6 @@
 # Build & Deployment
 
-The developer guide for building and running various components of e-Signet is available in their respective repositories as mentioned below.
+The developer guide for building and running various components of e-Signet is available in their respective repositories as mentioned below. Also, you can watch the video to learn more!
 
 {% embed url="https://www.youtube.com/watch?v=nmIZl6Tmt68" %}
 
