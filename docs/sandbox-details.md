@@ -10,11 +10,11 @@ Collab is our development integration environment that has QA tested dockers dep
 
 Regular nightly builds from engineering are deployed here and this environment is used for continuous development.
 
-Environment links are available [here](https://collab.mosip.net/).
+The link to access the environment is available [here](https://collab.mosip.net/).
 
 ## Synergy
 
 Synergy is our stable environment where the latest released version of the MOSIP platform and applications are deployed for partners to integrate and test.
 
-Environment links are available [here](https://synergy.mosip.net/).
+The link to access the environment is available [here](https://synergy.mosip.net/).
 
