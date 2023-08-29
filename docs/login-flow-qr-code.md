@@ -14,7 +14,7 @@ The login screen appears and the resident is displayed with the options they can
 
 2\. There are 2 options for login displayed. Resident can select `LOG IN WITH INJI`.
 
-![](\_images/qr-login-with-inji2.png)
+![](\_images/esignet-qrcode-logo-img1.png)
 
 3. Now, the resident can scan the QR code displayed on the portal using Inji (on their mobile device).
 
