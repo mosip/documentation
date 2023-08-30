@@ -23,12 +23,14 @@ Below are a list of tools required in Resident Services:
 Follow the steps below to set up Resident Services on your local system:
 
 1. Download `lombok.jar` and `settings.xml` from [here](https://github.com/mosip/documentation/tree/1.2.0/docs/\_files/resident-services-config-files).
-2. Unzip Apache Maven and move the unzipped folder in `C:\Program Files` and `settings.xml` to "conf" folder `C:\Program Files\apache-maven-3.8.4\conf`.
-3. Install Eclipse, open the `lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE and then click `Install/Update`.
+2. Install Apache Maven.
+3. Copy the `settings.xml` to ".m2" folder `C:\Users\<username>\.m2`.
+4. Install Eclipse.
+5. Open the `lombok.jar` file and wait for some time until it completes the scan for Eclipse IDE and then click `Install/Update`. Specify the eclipse installation location if required by clicking the ‘Specify location…’ button. Then, click `Install/Update` button to proceed.
 
 ![](\_images/lombok-configuration.png)
 
-1. Check the Eclipse installation folder `C:\Users\userName\eclipse\jee-2021-12\eclipse` to see if the `lombok.jar` is added. By doing this, you don't have to add the dependency of `lombok` in your `pom.xml` file separately as it is auto-configured by Eclipse.
+6. Check the Eclipse installation folder `C:\Users\userName\eclipse\jee-2021-12\eclipse` to see if the `lombok.jar` is added. By doing this, you will not have to add the dependency of `lombok` in your `pom.xml` file separately as it is auto-configured by Eclipse.
 2. Configure the JDK (Standard VM) with your Eclipse by traversing through `Preferences → Java → Installed JREs`.
 
 ![](\_images/installed-jre.png)
@@ -43,21 +45,59 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 2. Open command prompt from the same folder.
 3. Run the command `mvn clean install -Dgpg.skip=true -DskipTests=true` to build the project and wait for the build to complete successfully.
 4. After building of a project, open Eclipse and select `Import Projects → Maven → Existing Maven Projects → Next → Browse to project directory → Finish`.
-5. After successful importing of project, update the project by right-click on `Project → Maven → Update Project`.
 
 ![](\_images/import-project.png)
 
+5. After successful importing of project, update the project by right-click on `Project → Maven → Update Project`.
+
 ## Environment setup
 
-1. For the environment setup, you need an external JAR that is available [here](https://oss.sonatype.org/#nexus-search;gav\~\~kernel-auth-adapter\~1.2.0-SNAPSHOT\~\~) with different versions. (E.g.: You can download `kernel-auth-adapter.jar` and add to project `Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply and Close`).
+1. For the environment setup, you need an external JAR that is available [here](https://oss.sonatype.org/#nexus-search;gav\~\~kernel-auth-adapter\~1.2.0-SNAPSHOT\~\~) with different versions.
+   Download below mentioned JARs with appropriate latest/appropriate versions. You will need to input appropriate artifact id and version and other inputs.
+   
+    a. `icu4j.jar`
+   
+    b. `kernel-auth-adapter.jar`
+   
+    c. `kernel-ref-idobjectvalidator.jar`
+   
+    d. `kernel-transliteration-icu4j.jar`
+   
+   For e.g.: You can download `kernel-auth-adapter.jar` and add to project `Libraries → Classpath → Add External JARs → Select Downloaded JAR → Add → Apply and Close`).
 
-![](\_images/add-external-library.png)
+``![](\_images/add-external-library.png)
 
-1. Clone [mosip-config repository](https://github.com/mosip/mosip-config).
-2. Create an empty folder inside the `mosip-config` with `sandbox-local` name and then copy and paste all config files inside `sandbox-local` folder except `.gitignore, README and LICENSE`.
-3. As Resident Services is using two properties files, `resident-default` and `application-default`, you will have to configure them according to your environment. The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/\_files/resident-services-config-files) for reference.
-4. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav\~\~kernel-config-server\~1.2.0-SNAPSHOT\~\~) and [config-server-start.bat](\_files/resident-services-config-files/config-server-start.bat).
-5. Put both the files in the same folder and change the location attribute to `sandbox-local` folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` towards the end of the command.
+2. Clone [mosip-config repository](https://github.com/mosip/mosip-config).
+   
+   a. As Resident Services is using two properties files- `resident-default.properties` and `application-default.properties`. But for local running of the application, you need to provide additional/overriding properties such as secrets, passwords and properties passed by the environment which can be added in new files `application-dev-default.properties` (common properties for all modules) and `resident-dev-default.properties` (Resident service specific properties).
+   b.  You will have to create both the property files according to your environment and put them in `mosip-config folder` (cloned). The same files are available below for reference.
+
+   These two files are loaded by application by specifying the application names in the Application VM arguments like- `Dspring.cloud.config.name=application,resident,application-dev`, `resident-dev`  (also detailed in later section).
+   
+3. To run the server, two files are required- `kernel-config-server.jar` and `config-server-start.bat`.
+
+4. Put both the files in the same folder and point the property- `Dspring.cloud.config.server.native.search-locations` to `mosip-config` folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` towards the end of the command.
+   
+Example:
+
+```
+java -jar -Dspring.profiles.active=native  -
+Dspring.cloud.config.server.native.search-
+locations=file:C:\Users\myDell\mosipProject\mosip-config -
+Dspring.cloud.config.server.accept-empty=true  -
+Dspring.cloud.config.server.git.force-pull=false -
+Dspring.cloud.config.server.git.cloneOnStart=false -
+Dspring.cloud.config.server.git.refreshRate=0 kernel-config-server-1.2.0-20201016.134941-57.jar
+```
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+
+7. As Resident Services is using two properties files, `resident-default` and `application-default`, you will have to configure them according to your environment. The same files are available [here](https://github.com/mosip/documentation/tree/1.2.0/docs/\_files/resident-services-config-files) for reference.
+8. To run the server, two files are required- [kernel-config-server.jar](https://oss.sonatype.org/#nexus-search;gav\~\~kernel-config-server\~1.2.0-SNAPSHOT\~\~) and [config-server-start.bat](\_files/resident-services-config-files/config-server-start.bat).
+9. Put both the files in the same folder and change the location attribute to `sandbox-local` folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` towards the end of the command.
 
 Example:
 
