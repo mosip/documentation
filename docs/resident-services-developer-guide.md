@@ -90,6 +90,81 @@ Dspring.cloud.config.server.git.cloneOnStart=false -
 Dspring.cloud.config.server.git.refreshRate=0 kernel-config-server-1.2.0-20201016.134941-57.jar
 ```
 
+* As mentioned in step 2, you will have to create property files according to your environment like `resident-env-default` and `application-env-default` (here env represents environment name). Both files will contain different configurations such as `resident-env-default` will have config properties (e.g., secrets, passcodes, etc) used for resident-services module only and `application-env-default` is used for environment specific changes and can be used for other modules as well. 
+
+* In this example, currently, these two files are created for dev environment and hence the files have suffix of `-dev`. If you want to run it for a different environment such as qa, create these two files with `-qa` suffix and then you will also need to provide the appropriate VM argument for that referring to qa environment.
+
+For instance,
+
+* Add `mosip.resident.client.secret=pqrst768465` property to be able to use a decrypted passcode and run it in your local machine.
+
+* If you check the URLs present in `application-default` file, they are set to module specific URLs, but you need to use internal/external environment URLs to access the APIs by using application-dev-default file.
+
+* In `application-dev-default` file, assign environment domain URL to `mosipbox.public.url` and change all other URLs with ${mosipbox.public.url}.
+
+* It results in `mosipbox.public.url=internal/externalAPI` (e.g., mosipbox.public.url=https://api-internal.dev.mosip.net) and it will connect with the Development environment.
+
+1. Run the server by opening the config-server-start.bat file.
+
+   ![](\_images/resident-dev-img1.png)
+
+
+2. Open the Arguments tab and specify Application VM arguments: For example, for dev environment:
+   
+    -Dspring.profiles.active=default -
+     Dspring.cloud.config.uri=http://localhost:51000/config -
+     Dspring.cloud.config.label=master -Dsubdomain=dev -
+     Dspring.cloud.config.name=application,resident,application-dev,resident-dev --illegal-access=permit.
+
+   Save this run configuration as ‘Resident-dev’ .
+   
+For `qa` environment, you can create `Resident-qa` run configuration with VM argument as below. 
+Example:
+
+-Dspring.profiles.active=default -
+Dspring.cloud.config.uri=http://localhost:51000/config -
+Dspring.cloud.config.label=master -Dsubdomain=qa -
+Dspring.cloud.config.name=application,resident,application-qa,resident-qa --illegal-access=permit
+
+<<imggg>>>
+
+3. Click Apply and then debug it (starts running). In the console, you can see a message like `Started ResidentBootApplication in 34.078 seconds (JVM running for 38.361)`.
+
+
+### Resident services API
+
+* For API documentation, refer [here](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
+
+* The APIs can be tested with the help of Postman or Swagger-UI.
+
+* Postman is an API platform for building and using APIs. Postman simplifies each step of the API lifecycle and streamlines collaboration so you can create better APIs—faster. It is widely used tool for API testing. Below you will find the APIs postman collection of resident-services.
+
+* Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of resident-services for dev-environment from `https://api-internal.dev.mosip.net/resident/v1/swagger-ui.html` and localhost from `http://localhost:8099/resident/v1/swagger-ui.html`.
+
+* Download the JSON collection available below and import in your postman.
+Resident-Service-APIs.postman_collection-latest.json    << check with Ritik>>
+
+
+<<img>>
+
+* Create an environment as shown in the image below.
+
+This environment is created for dev. Give the variable name as `url` and set both the values as `https://api-internal.dev.mosip.net`.
+
+<<img>
+
+* In the similar way, create another environment as shown below.
+
+This environment is created for localhost. Give the variable name as `url` and set both the values as `http://localhost:8099`.
+
+<<img>>
+
+
+
+
+
+
+
 
 
 
