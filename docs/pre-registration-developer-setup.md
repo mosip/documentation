@@ -125,7 +125,7 @@ The documentation here will guide you through the pre-requisites required for [P
 
 ## Pre-registration API
 
-1. For API documentation, refer [here](https://docs.mosip.io/1.2.0/api).
+1. For API documentation, refer [here](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
 2. The APIs can be tested with the help of **Swagger-UI** and **Postman**.
 3. Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of pre-registration here:
    * Pre-registration Application service : `https://{env}/preregistration/v1/application-service/swagger-ui.html`
