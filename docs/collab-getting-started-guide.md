@@ -83,9 +83,9 @@ Let’s Get Started!
 
 * For details on how to use the application, refer to our [end user guide](https://docs.mosip.io/inji/enduser-guide).
 
-* No wireguard access is required to set up.
-
-### ActiveMQ Setup Guide
+* Wireguard access is not required to set this up.
+  
+#### ActiveMQ Setup Guide
 
 * ActiveMQ is an open-source message broker that facilitates the communication between different components and services within a distributed system. In MOSIP, ActiveMQ is utilized as a messaging broker to enable asynchronous communication between various modules and services. To learn more, click [here](https://activemq.collab.mosip.net/user-manual/index.html).
 
@@ -95,12 +95,94 @@ Let’s Get Started!
 
 * Wireguard access is not required to set this up.
 
-### Keycloak User Guide
+#### Keycloak User Guide
 
 * KeyCloak is used to manage user authentication and authorization, ensuring that only authorized users have access to the various modules and functionalities within the platform. It plays a crucial role in maintaining the security and integrity of the platform by managing user identities, access controls, and user sessions. To learn more, click [here](https://docs.mosip.io/1.2.0/modules/keymanager).
 
-* For the end-to-end process of how to use KeyCloak in our Collab environment, click here. (Upcoming)
+* For the end-to-end process of how to use KeyCloak in our Collab environment, click here (Upcoming).
 
-* Refer here for details on how to use the key manager services with key stores like [Hardware Security Module (HSM)](https://docs.mosip.io/1.2.0/modules/keymanager/hsm) and [mosip_keymgr](https://github.com/mosip/keymanager/tree/release-1.2.0/db_scripts/mosip_keymgr) DB.
+* Running this component in your local system will require wireguard access. To get started, raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here.
 
-* Running this component in your local system will require wireguard access. Raise a request by filling out the form here and get started.
+
+* Kibana is a powerful data visualization and exploration tool that works with elastic search. It allows users to create interactive dashboards and visualizations to analyze and interpret large volumes of data, helping to uncover insights, trends, and patterns for informed decision-making.
+  
+* In MOSIP, Kibana dashboards are utilized to monitor and analyze system metrics, logs, and performance data. To learn more, click [here](https://kibana.collab.mosip.net/app/home#/). 
+
+* The dashboards give a visual display of metrics and important data to track the status of various pre and post-enrollment processes. To get all the necessary information and to effectively navigate and set up Kibana, click [here](https://docs.mosip.io/1.2.0/modules/reporting#dashboards).
+
+* For step-by-step instructions on how to access and configure the Kibana dashboard in your V3 installation, please click the following link: [Accessing and Configuring Kibana Dashboard - V3 Installation Guide](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines).
+
+* Wireguard access is not required to set this up.
+  
+#### MinIO Client Utility
+
+* MinIO is an open-source, high-performance object storage server that is designed for cloud-native and containerized environments. It allows organizations to build their own private cloud storage infrastructure that is scalable, highly available, and easily deployable. In MOSIP, MinIO is used to store various types of data, such as documents, images, and files, providing a reliable and efficient storage solution. To learn more, click [here]().
+
+* For MinIO installation for the object store, click [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies).
+
+* Running this utility in your local system will require [wireguard access](https://github.com/mosip/documentation/blob/1.2.0/docs/wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
+
+#### Admin Portal Setup Guide
+
+* Admin application is a web-based application used by a privileged group of administrative personnel to manage various master data and carry out operational activities. To learn more about the Admin Portal, click [here](https://docs.mosip.io/1.2.0/modules/administration).
+
+* For the end-to-end process of how to run the Admin Portal in our collab environment, click here(Upcoming).
+
+* For details on how to use the application, refer to our [end user guide](https://docs.mosip.io/1.2.0/modules/administration/admin-portal-user-guide).
+
+Running this application in your local system will require [wireguard access](https://github.com/mosip/documentation/blob/1.2.0/docs/wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
+
+#### Resident Services Setup Guide
+
+* The Resident Services application is a self-service-based portal, that can be used by the residents themselves. It is a web-based UI application that provides residents of a country the services related to managing their Unique Identification Number (UIN).To learn more about Resident Services, click [here](https://docs.mosip.io/1.2.0/modules/resident-services).
+
+* For the end-to-end process of how to run Resident Services in our Collab env, click here. (Upcoming)
+
+* For details on the developers guide, refer [here](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-developer-guide).
+
+* Wireguard access is not required to set this up.
+  
+#### Kafka Services
+
+* In MOSIP, Kafka serves as a distributed messaging system that facilitates the exchange of data between different components and modules of the platform. It's purpose is to provide a scalable, reliable, and fault-tolerant way to transmit data and events in a decoupled manner, ensuring efficient communication and data synchronization across various parts of the system. To know more, click [here](https://kafka.apache.org/downloads).
+
+* For the end-to-end process of how to run the Kafka Services in our Collab env, click here. (Upcoming)
+
+* To check the details on how to set up Kafka for V3 installation, click [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies#kafka-setup).
+
+* Wireguard access is not required to set this up.
+
+#### Mock MDS/SBI Services
+
+* Mock MDS (Mock Master Data Store) is a simulated version of the Master Data Store used for testing and development purposes. It replicates the behavior of the actual Master Data Store, but doesn't store data persistently. Mock MDS is used to mimic the interactions with the Master Data Store during testing and development, allowing developers to verify the functionality of different modules without affecting the real data. To learn more, click [here](https://drive.google.com/drive/folders/1wMW5h1fBxAdBwTzOmPL7Sd_UON7yuIvU).
+
+* SBI (Secure Biometric Interface) in MOSIP ensures secure and reliable integration of biometric data for identity verification and authentication. SBI ensures secure storage and retrieval of biometric data, enhancing the accuracy and reliability of identity-related operations. To learn more, click [here](https://drive.google.com/drive/folders/1wMW5h1fBxAdBwTzOmPL7Sd_UON7yuIvU).
+
+* To run [Mock MDS](https://github.com/mosip/mosip-mock-services/blob/master/MockMDS/README.md)/ SBI in registration mode in the Collab environment, click [here](https://drive.google.com/file/d/1inXH7t1x2toVLGPNMoefYIU5kY1dG7C8/view?usp=sharing).
+
+* Wireguard access is not required to set this up.
+
+**Step 3: Testing and Validation**:
+
+* Once the setup and configurations are completed, you should proceed with testing and validation activities to ensure the smooth functioning of the modules or services. The testing process may include:
+
+    * Performing end-to-end tests for the integrated modules or services.
+    * Validating data exchange and interoperability between different components.
+    * Verifying the compliance of the modules or services with the specified requirements and standards.
+
+**Step 4: Get-in-touch : Report issues and seek support**
+
+If you need any help or come across any problems during the testing and integration process, please feel free to contact us using the support system provided below.
+  
+* Navigate to [Community](community.mosip.io).
+
+* Provide a detailed description about the support you require or provide detailed information about the issue you have encountered, including steps to reproduce, error messages, logs, and any other relevant details.
+
+* Continuous communication and collaboration between the MOSIP team and the community will aid successful integrations and also help resolve issues if any, within the Collab environment.
+
+_We thank you for your ongoing support and look forward to building MOSIP together!_
+
+
+ 
+
+
