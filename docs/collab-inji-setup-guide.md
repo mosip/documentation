@@ -6,6 +6,7 @@ Let's begin this journey of seamless setup and exploration!
 
 
 ### Pre-requisites
+
 Before you start with setting up Inji, ensure you have the following in place.
 
 1. Inji APK file: For Android devices,
@@ -74,7 +75,7 @@ Click [here](https://docs.mosip.io/inji) for detailed information about Inji.
 
 > By following these instructions, you will be equipped to seamlessly set up the Inji application and effectively share your Verifiable Credentials.
 
-### Get in Touch
+### Get In Touch
 
 If you require any assistance or encounter any issues during the testing and integration process, kindly reach out to us through the support mechanism provided below.
 
