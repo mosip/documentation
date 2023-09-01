@@ -150,6 +150,8 @@
 * [Adopting LTS 1.2.0](adopting-lts-1.2.0.md)
 * [MOSIP Support Policy](support-policy.md)
 * [Sandbox Details](sandbox-details.md)
+* [Collab Environment Setup Guides](collab-getting-started-guide.md)
+     * [Inji Setup Guide](collab-inji-setup-guide.md)
 * [Roadmap](engineering-roadmap.md)
 * [MOSIP Documentation Style Guide](mosip-documentation-style-guide.md)
 * [Documentation for 1.1.5](https://docs.mosip.io/1.1.5)
