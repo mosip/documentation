@@ -79,7 +79,7 @@ Let’s Get Started!
 
 * Inji is a mobile wallet and authenticator that enables storage of all forms of IDs and credentials in a single digital wallet, enabling offline identity verification through just a selfie! To learn more about Inji, click [here](https://docs.mosip.io/inji/).
 
-* For the end-to-end process of how to run Inji in our Collab environment, click [here](https://mosip.atlassian.net/wiki/spaces/MSD/pages/1141178503).
+* For the end-to-end process of how to run Inji in our Collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide).
 
 * For details on how to use the application, refer to our [end user guide](https://docs.mosip.io/inji/enduser-guide).
 
