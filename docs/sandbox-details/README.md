@@ -10,6 +10,8 @@ Regular nightly builds from engineering are deployed here and this environment i
 
 Environment links are available [here](https://collab.mosip.net/).
 
+To know more about the setup Details for Inji in Collab environment, refer [Inji Setup Guide](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide).
+
 ## Synergy
 
 Synergy is our stable environment where the latest released version of the MOSIP platform and applications are deployed for partners to integrate and test.
