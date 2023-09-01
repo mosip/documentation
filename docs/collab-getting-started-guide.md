@@ -94,8 +94,7 @@ Before starting with the Collab environment, please ensure you have the followin
 * Admin application is a web-based application used by a privileged group of administrative personnel to manage various master data and carry out operational activities. To learn more about the Admin Portal, click [here](https://docs.mosip.io/1.2.0/modules/administration).
 * For the end-to-end process of how to run the Admin Portal in our collab environment, click here(Upcoming).
 * For details on how to use the application, refer to our [end user guide](https://docs.mosip.io/1.2.0/modules/administration/admin-portal-user-guide).
-
-Running this application in your local system will require [wireguard access](wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
+* Running this application in your local system will require [wireguard access](wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
 
 #### Resident Services Setup Guide
 
@@ -120,10 +119,11 @@ Running this application in your local system will require [wireguard access](wi
 
 **Step 3: Testing and Validation**:
 
-* Once the setup and configurations are completed, you should proceed with testing and validation activities to ensure the smooth functioning of the modules or services. The testing process may include:
-  * Performing end-to-end tests for the integrated modules or services.
-  * Validating data exchange and interoperability between different components.
-  * Verifying the compliance of the modules or services with the specified requirements and standards.
+Once the setup and configuration is completed, you should proceed with testing and validation activities to ensure the smooth functioning of the modules or services. The testing process may include:
+
+* Performing end-to-end tests for the integrated modules or services.
+* Validating data exchange and interoperability between different components.
+* Verifying the compliance of the modules or services with the specified requirements and standards.
 
 **Step 4: Get-in-touch : Report issues and seek support**
 
@@ -131,6 +131,7 @@ If you need any help or come across any problems during the testing and integrat
 
 * Navigate to [Community](community.mosip.io).
 * Provide a detailed description about the support you require or provide detailed information about the issue you have encountered, including steps to reproduce, error messages, logs, and any other relevant details.
-* Continuous communication and collaboration between the MOSIP team and the community will aid successful integrations and also help resolve issues if any, within the Collab environment.
+
+Continuous communication and collaboration between the MOSIP team and the community will aid successful integrations and also help resolve issues if any, within the Collab environment.
 
 _We thank you for your ongoing support and look forward to building MOSIP together!_
