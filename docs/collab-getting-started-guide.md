@@ -40,7 +40,7 @@ Before starting with the Collab environment, please ensure you have the followin
 #### Registration Client Setup Guide
 
 * The Registration Client application in MOSIP enables agents to efficiently register residents by capturing their demographic and biometric data, in addition to managing tasks like onboarding, data synchronization, software upgrades, and packet management. To know more, click [here](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-home-page).
-* For the end-to-end process on how to set up the Registration client in the Collab environment, click [here](https://mosip.atlassian.net/wiki/spaces/MSD/pages/1140293719).
+* For the end-to-end process on how to set up the Registration client in the Collab environment, click here (Coming soon).
 * For details on how to use the application, refer to our [user guide](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-user-guide).
 * Wireguard access is not required to set this up.
 
@@ -54,7 +54,7 @@ Before starting with the Collab environment, please ensure you have the followin
 #### e-Signet Setup Guide
 
 * e-Signet aims to offer a simple yet powerful mechanism for end users to identify themselves to avail the online services and also share their profile information. To learn more about e-Signet, click [here](https://docs.esignet.io/).
-* For the end-to-end process of how to run e-Signet in our Collab environment, click [here](https://mosip.atlassian.net/wiki/spaces/MSD/pages/1141112984).
+* For the end-to-end process of how to run e-Signet in our Collab environment, click here (Coming soon).
 * For details on how to use the application, refer to our [end user guide](https://docs.esignet.io/esignet-end-user-guide).
 * Wireguard access is not required to set this up.
 
@@ -77,6 +77,9 @@ Before starting with the Collab environment, please ensure you have the followin
 * KeyCloak is used to manage user authentication and authorization, ensuring that only authorized users have access to the various modules and functionalities within the platform. It plays a crucial role in maintaining the security and integrity of the platform by managing user identities, access controls, and user sessions. To learn more, click [here](https://docs.mosip.io/1.2.0/modules/keymanager).
 * For the end-to-end process of how to use KeyCloak in our Collab environment, click here (Upcoming).
 * Running this component in your local system will require wireguard access. To get started, raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here.
+
+### Kibana
+
 * Kibana is a powerful data visualization and exploration tool that works with elastic search. It allows users to create interactive dashboards and visualizations to analyze and interpret large volumes of data, helping to uncover insights, trends, and patterns for informed decision-making.
 * In MOSIP, Kibana dashboards are utilized to monitor and analyze system metrics, logs, and performance data. To learn more, click [here](https://kibana.collab.mosip.net/app/home#/).
 * The dashboards give a visual display of metrics and important data to track the status of various pre and post-enrollment processes. To get all the necessary information and to effectively navigate and set up Kibana, click [here](https://docs.mosip.io/1.2.0/modules/reporting#dashboards).
@@ -85,7 +88,7 @@ Before starting with the Collab environment, please ensure you have the followin
 
 #### MinIO Client Utility
 
-* MinIO is an open-source, high-performance object storage server that is designed for cloud-native and containerized environments. It allows organizations to build their own private cloud storage infrastructure that is scalable, highly available, and easily deployable. In MOSIP, MinIO is used to store various types of data, such as documents, images, and files, providing a reliable and efficient storage solution. To learn more, click [here](collab-getting-started-guide.md).
+* MinIO is an open-source, high-performance object storage server that is designed for cloud-native and containerized environments. It allows organizations to build their own private cloud storage infrastructure that is scalable, highly available, and easily deployable. In MOSIP, MinIO is used to store various types of data, such as documents, images, and files, providing a reliable and efficient storage solution. To learn more, click [here](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3/utils/minio-client-util).
 * For MinIO installation for the object store, click [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies).
 * Running this utility in your local system will require [wireguard access](wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
 
@@ -111,7 +114,7 @@ Before starting with the Collab environment, please ensure you have the followin
 
 #### Mock MDS/SBI Services
 
-* Mock MDS (Mock Master Data Store) is a simulated version of the Master Data Store used for testing and development purposes. It replicates the behavior of the actual Master Data Store, but doesn't store data persistently. Mock MDS is used to mimic the interactions with the Master Data Store during testing and development, allowing developers to verify the functionality of different modules without affecting the real data. To learn more, click [here](https://drive.google.com/drive/folders/1wMW5h1fBxAdBwTzOmPL7Sd\_UON7yuIvU).
+* Mock MDS (Mock Master Data Store) is a simulated version of the Master Data Store used for testing and development purposes. It replicates the behavior of the actual Master Data Store, but doesn't store data persistently. Mock MDS is used to mimic the interactions with the Master Data Store during testing and development, allowing developers to verify the functionality of different modules without affecting the real data. To learn more, click [here](https://drive.google.com/drive/folders/1wMW5h1fBxAdBwTzOmPL7Sd_UON7yuIvU).
 * SBI (Secure Biometric Interface) in MOSIP ensures secure and reliable integration of biometric data for identity verification and authentication. SBI ensures secure storage and retrieval of biometric data, enhancing the accuracy and reliability of identity-related operations. To learn more, click [here](https://drive.google.com/drive/folders/1wMW5h1fBxAdBwTzOmPL7Sd\_UON7yuIvU).
 * To run [Mock MDS](https://github.com/mosip/mosip-mock-services/blob/master/MockMDS/README.md)/ SBI in registration mode in the Collab environment, click [here](https://drive.google.com/file/d/1inXH7t1x2toVLGPNMoefYIU5kY1dG7C8/view?usp=sharing).
 * Wireguard access is not required to set this up.
@@ -128,8 +131,7 @@ Once the setup and configuration is completed, you should proceed with testing a
 
 If you need any help or come across any problems during the testing and integration process, please feel free to contact us using the support system provided below.
 
-* Navigate to [Community](community.mosip.io).
-* Provide a detailed description about the support you require or provide detailed information about the issue you have encountered, including steps to reproduce, error messages, logs, and any other relevant details.
+* Navigate to [Community](http://community.mosip.io/).
 
 Continuous communication and collaboration between the MOSIP team and the community will aid successful integrations and also help resolve issues if any, within the Collab environment.
 
