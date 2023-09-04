@@ -42,23 +42,23 @@ To experience the various methods of login and authentication in the demo health
 
 **Step 1: Access the health services portal**
 
-* Navigate to the relying party’s demo [**Health Services**](https://healthservices-esignet.collab.mosip.net/) portal in the Collab environment, and click on `Sign In with e-Signet`.
+  * Navigate to the relying party’s demo [**Health Services**](https://healthservices-esignet.collab.mosip.net/) portal in the Collab environment, and click on `Sign In with e-Signet`.
 
 **Step 2: Explore the various authentication mechanisms**
 
 1. OTP-Based Login & Authentication
 
-  * Click [here](https://docs.esignet.io/esignet-end-user-guide/login-with-otp) for step-by-step instructions on how to login using OTP-based authentication.
+    * Click [here](https://docs.esignet.io/esignet-end-user-guide/login-with-otp) for step-by-step instructions on how to login using OTP-based authentication.
 
 2. Inji-Based (Wallet-Based) login With Face Authentication
 
-  * Discover how to login using Inji (Wallet) through face authentication, by clicking on the link [here](https://docs.esignet.io/esignet-end-user-guide/login-flow-qr-code).
+    * Discover how to login using Inji (Wallet) through face authentication, by clicking on the link [here](https://docs.esignet.io/esignet-end-user-guide/login-flow-qr-code).
 
-  * As mentioned in the pre-requisites section above, ensure that your credential is activated for online login, in Inji. Follow the instructions provided [here](https://docs.mosip.io/1.2.0/modules/inji-user-guide#wallet-binding-flow), in the section titled `Wallet Binding Flow`.
+    * As mentioned in the pre-requisites section above, ensure that your credential is activated for online login, in Inji. Follow the instructions provided [here](https://docs.mosip.io/1.2.0/modules/inji-user-guide#wallet-binding-flow), in the section titled `Wallet Binding Flow`.
 
 3. Biometrics-Based Login & Authentication
 
-  * Experience the process of logging in using biometrics, by following the instructions provided [here](https://docs.esignet.io/esignet-end-user-guide/login-with-biometrics).
+    * Experience the process of logging in using biometrics, by following the instructions provided [here](https://docs.esignet.io/esignet-end-user-guide/login-with-biometrics).
 
 ### Additional  Video Resources
 
