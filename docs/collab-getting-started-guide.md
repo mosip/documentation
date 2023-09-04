@@ -78,7 +78,7 @@ Before starting with the Collab environment, please ensure you have the followin
 * For the end-to-end process of how to use KeyCloak in our Collab environment, click here (Upcoming).
 * Running this component in your local system will require wireguard access. To get started, raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here.
 
-### Kibana
+#3## Kibana
 
 * Kibana is a powerful data visualization and exploration tool that works with elastic search. It allows users to create interactive dashboards and visualizations to analyze and interpret large volumes of data, helping to uncover insights, trends, and patterns for informed decision-making.
 * In MOSIP, Kibana dashboards are utilized to monitor and analyze system metrics, logs, and performance data. To learn more, click [here](https://kibana.collab.mosip.net/app/home#/).
@@ -90,7 +90,7 @@ Before starting with the Collab environment, please ensure you have the followin
 
 * MinIO is an open-source, high-performance object storage server that is designed for cloud-native and containerized environments. It allows organizations to build their own private cloud storage infrastructure that is scalable, highly available, and easily deployable. In MOSIP, [MinIO](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies) is used to store various types of data, such as documents, images, and files, providing a reliable and efficient storage solution. To learn more, click [here](https://min.io/).
 * For MinIO installation for the object store, click [here](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3/utils/minio-client-util).
-* Running this utility in your local system will require [wireguard access]([wireguard-client-installation-guide.md](https://github.com/mosip/documentation/blob/1.2.0/docs/wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
+* Running this utility in your local system will require [wireguard access](https://github.com/mosip/documentation/blob/1.2.0/docs/wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
 
 #### Admin Portal Setup Guide
 
