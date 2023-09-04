@@ -5,7 +5,6 @@ In our previous blog, we explored the concept of sharding and its many advantage
 
 ## What is Citus and how did we apply it in MOSIP?
 
-
 Citus is an open-source extension to PostgreSQL that enables the partitioning of the database into smaller segments and deploying them across multiple machines known as Worker nodes. Whenever a query is executed, Citus intelligently directs it to the relevant node based on the Shard ID in order to retrieve the desired data. 
 
 In the Citus system, the process of inserting or updating data involves several steps:
@@ -85,18 +84,18 @@ host    all     all    0.0.0.0/0    trust
 Also, note that granting access to everyone is not advisable. To provide access to specific users, please follow the steps outlined below:
 
 1. **Create a dedicated PostgreSQL user:** Begin by creating a PostgreSQL user specifically for passwordless login. This can be done using the createuser command or by executing SQL commands with a superuser account. For example, to create a user named "passwordlessuser", execute the following SQL command:
-```
-CREATE USER passwordlessuser;
-```
+   ```
+   CREATE USER passwordlessuser;
+   ```
 
 2. **Edit the PostgreSQL configuration file**: Open the `pg_hba.conf` file, typically located in the PostgreSQL data directory. This file controls client authentication methods and can be edited using a text editor such as Vim or nano.
 
 3. **Configure the authentication method for the specific user**:  Within the `pg_hba.conf` file, locate the section that corresponds to the desired connection type (local, host, or hostssl). Add a new line to specify the authentication method as trust for the specific user. For example:
-```
-TYPE  DATABASE        USER            ADDRESS                 METHOD
+   ```
+   TYPE  DATABASE        USER            ADDRESS                 METHOD
 
-host    mydatabase      passwordlessuser   0.0.0.0/0               trust
-```
+   host    mydatabase      passwordlessuser   0.0.0.0/0               trust
+   ```
 
 In the above configuration, `mydatabase` represents the name of the database for which you want to allow passwordless login for the `passwordlessuser` account. Adjust the parameters according to your requirements.
 
