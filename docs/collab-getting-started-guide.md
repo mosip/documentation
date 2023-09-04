@@ -88,9 +88,9 @@ Before starting with the Collab environment, please ensure you have the followin
 
 #### MinIO Client Utility
 
-* MinIO is an open-source, high-performance object storage server that is designed for cloud-native and containerized environments. It allows organizations to build their own private cloud storage infrastructure that is scalable, highly available, and easily deployable. In MOSIP, MinIO is used to store various types of data, such as documents, images, and files, providing a reliable and efficient storage solution. To learn more, click [here](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3/utils/minio-client-util).
-* For MinIO installation for the object store, click [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies).
-* Running this utility in your local system will require [wireguard access](wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
+* MinIO is an open-source, high-performance object storage server that is designed for cloud-native and containerized environments. It allows organizations to build their own private cloud storage infrastructure that is scalable, highly available, and easily deployable. In MOSIP, [MinIO](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies) is used to store various types of data, such as documents, images, and files, providing a reliable and efficient storage solution. To learn more, click [here](https://min.io/).
+* For MinIO installation for the object store, click [here](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3/utils/minio-client-util).
+* Running this utility in your local system will require [wireguard access]([wireguard-client-installation-guide.md](https://github.com/mosip/documentation/blob/1.2.0/docs/wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
 
 #### Admin Portal Setup Guide
 
