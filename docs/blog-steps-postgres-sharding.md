@@ -24,7 +24,10 @@ The worker nodes, on the other hand, collaborate with the coordinator node to re
 
 ## Setting Up a Citus Cluster
 
-In order to establish a Citus cluster, it is necessary to have a minimum of three machines. Among these, one machine serves as the Coordinator node, while the remaining two machines function as Worker nodes.
+In order to establish a Citus cluster, it is necessary to have a minimum of three machines. Among these, one machine serves as the Coordinator node, while the remaining two machines function as Worker nodes. There are two ways to do this:
+
+1. Using docker image
+2. Using Machines directly
 
 ### Using docker image
 
@@ -52,7 +55,54 @@ When choosing the appropriate Docker image of Citus for your environment, it is 
 
            `docker pull citusdata/citus:<tag>`
 
-Replace "<tag>" with the specific version tag identified in step 4.
+Replace `<tag>` with the specific version tag identified in step 4.
+
+
+#### Trust and Configuration changes
+
+This section describes the setup steps with the necessary configuration changes such as `wal`, trust setup, and connectivity requirements:
+
+1. Change the `wal_level` setting in the Postgresql.conf file:
+   - Locate the `Postgresql.conf` file in the path `/var/lib/postgresql/data/postgresql.conf`.
+   - Use the `vim` or `nano editor` to modify the `wal_level` setting to Logical.
+   - Ensure that the setting is uncommented before saving the file.
+   - Afterwards, restart the postgresql service.
+
+2. If you are using the Citus image and running it as a Kubernetes Pod:
+   - Restart the POD to apply the **Logical** `wal_level` setting.
+   - Prior to restarting, verify and configure the Persistent Volume Claim (PVC) or Stateful Set Configuration correctly to ensure the new pod replaces the old one while preserving the data and changes made within the POD.
+
+_Please note that without changing the `wal_level` to `Logical`, it will not be possible to perform Citus Rebalance effectively._
+
+To address any password issues you may be experiencing, it is recommended that you make changes to the `pg_hba.conf` file.
+
+To make these changes, please use a suitable text editor such as Vim or nano to add the following line:
+
+```
+host    all     all    0.0.0.0/0    trust
+```
+
+Also, note that granting access to everyone is not advisable. To provide access to specific users, please follow the steps outlined below:
+
+1. **Create a dedicated PostgreSQL user:** Begin by creating a PostgreSQL user specifically for passwordless login. This can be done using the createuser command or by executing SQL commands with a superuser account. For example, to create a user named "passwordlessuser", execute the following SQL command:
+```
+CREATE USER passwordlessuser;
+```
+
+2. **Edit the PostgreSQL configuration file**: Open the `pg_hba.conf` file, typically located in the PostgreSQL data directory. This file controls client authentication methods and can be edited using a text editor such as Vim or nano.
+
+3. **Configure the authentication method for the specific user**:  Within the `pg_hba.conf` file, locate the section that corresponds to the desired connection type (local, host, or hostssl). Add a new line to specify the authentication method as trust for the specific user. For example:
+```
+TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+host    mydatabase      passwordlessuser   0.0.0.0/0               trust
+```
+
+In the above configuration, `mydatabase` represents the name of the database for which you want to allow passwordless login for the `passwordlessuser` account. Adjust the parameters according to your requirements.
+
+4. **Save and exit the file**: After making the necessary changes, save the pg_hba.conf file and exit the text editor.
+
+5. **Restart PostgreSQL**: To apply the changes, restart the PostgreSQL service. If you are working with a Citus cluster on a Kubernetes pod, restart the pod to ensure the changes take effect.
 
 #### Using Machines directly
 
@@ -68,3 +118,41 @@ To set up the Coordinator node in the Citus Cluster, please use the following co
 For setting up or adding worker nodes in the Citus Cluster, please use the command below:
 
 `SELECT * from citus_add_node ('Hostname', Port_No);`
+
+
+### Steps to add nodes in a Citus Cluster
+
+To set or add worker nodes in the Citus Cluster, follow the below command:
+
+    `SELECT * FROM citus_add_node('Hostname', Port_No);`
+
+For example:
+
+    `SELECT * FROM citus_add_node('citus-worker1', Port_No);`
+
+    `SELECT * FROM citus_add_node('citus-worker2', Port_No);`
+
+Please note that in addition to the hostname, you can also use a service name or an IP address to set or add worker nodes to the Citus Cluster.
+
+### Steps to rebalance:
+
+To begin, ensure that the 'wal_level` is set to `Logical`. Next, execute the following command in order to rebalance:
+
+   `SELECT rebalance_table_shards('distributed_table_name');`
+
+This command will effectively redistribute the data on the recently integrated worker nodes.
+
+### Steps to verify the data rebalancing
+
+Use the command below to show that the data has been sharded on newly added worker nodes.
+
+  `SELECT * FROM pg_dist_shard_placement;`
+
+  ![](\_images/postgres.png)
+
+Below are the links used as references:
+
+* [Citus Utility Functions - Citus 11.2 documentation](https://docs.citusdata.com/en/v11.2/develop/api_udf.html#citus-rebalance-start) 
+* [Ubuntu or Debian - Citus 12.0 documentation](https://docs.citusdata.com/en/stable/installation/multi_node_debian.html) 
+* [Useful Diagnostic Queries - Citus 11.2 documentation](https://docs.citusdata.com/en/v11.2/admin_guide/diagnostic_queries.html)
+* [Real-time Analytics - Citus 12.0 documentation](https://docs.citusdata.com/en/stable/get_started/tutorial_realtime_analytics.html)   
