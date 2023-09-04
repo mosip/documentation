@@ -6,13 +6,15 @@ Welcome to the Inji Setup Guide tailored specifically for our Collab Environment
 
 Before you start with setting up Inji, ensure you have the following in place.
 
-1. Inji APK File: For Android devices
-   * If you are using an Android smartphone, click [here](collab-inji-setup-guide.md) to get the Inji `apk` file for installation.
+1. Inji APK File: For Android devices,
+   * If you are using an Android smartphone, click [here](https://drive.google.com/drive/folders/1SRHhFxQBNfOc-cdPU8VlKecIdc-WkuGZ) to get the Inji `apk` file for installation.
    * Transfer the `apk` file onto the smartphone on which it is to be installed.
-2. Inji Test Flight Access: For iOS devices
+     
+2. Inji Test Flight Access: For iOS devices,
    * If you are using an iOS device, fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSd\_P4OMwimjTxGlJ2bfLob2TIt9UaaZDQF3sBO74e9TBST-vQ/viewform) here to get access to the Inji app on test flight.
    * You will receive an email on the email ID (Apple ID) provided in the form.
    * Follow the instructions in the email and access Inji from the iOS device on which it is to be installed.
+     
 3.  UIN Credentials:
 
     * Issuance of UIN (Unique identification number) as a demo credential will allow you to explore Inji’s capabilities and experience seamless VC sharing firsthand.
@@ -37,7 +39,7 @@ To effectively set up the Inji app and manage Verifiable Credentials (VCs), foll
 **Step 3: Download VC Using UIN**
 
 1. Download your credential (VC) onto the app by using your demo UIN.
-2. To learn how to download VCs using the Unique Identification Number (UIN) or Virtual ID (VID) feature, click [here](https://docs.mosip.io/1.2.0/modules/inji-user-guide#downloading-vc-using-the-uin-vid-feature). Refer to the section titled _Downloading VC using the UIN/VID feature_ in the guide .
+2. To learn how to download VCs using the Unique Identification Number (UIN) or Virtual ID (VID) feature, click [here](https://docs.mosip.io/1.2.0/modules/inji-user-guide#downloading-vc-using-the-uin-vid-feature). Refer to the section titled `Downloading VC using the UIN/VID feature` in the guide .
 
 **Step 4: Start Sharing the Credentials**
 
@@ -60,7 +62,7 @@ Click [here](https://docs.mosip.io/inji) for detailed information about Inji.
 
 If you require any assistance or encounter any issues during the testing and integration process, kindly reach out to us through the support mechanism provided below.
 
-* Navigate to [Community](community.mosip.io).
+* Navigate to [Community](http://community.mosip.io/).
 * Provide a detailed description about the support you require or provide detailed information about the issue you have encountered, including steps to reproduce, error messages, logs and any other relevant details.
 
 _Thank you. Wishing you a pleasant experience!_
