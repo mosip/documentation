@@ -8,33 +8,33 @@ Let's dive into the details and embark on this informative journey of seamless a
 
 1. **UIN credentials**
 
-  * Issuance of [UIN](https://docs.mosip.io/1.2.0/id-lifecycle-management/identifiers#uin) (Unique identification number) as a demo credential will allow you to explore e-Signet’s capabilities and experience seamless authentication through various channels.
+    * Issuance of [UIN](https://docs.mosip.io/1.2.0/id-lifecycle-management/identifiers#uin) (Unique identification number) as a demo credential will allow you to explore e-Signet’s capabilities and experience seamless authentication through various channels.
 
-  * Fill the UIN generation [form](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform) here and we will generate the demo credentials which you can subsequently use on the e-Signet integrated health portal for authentication.
+    * Fill the UIN generation [form](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform) here and we will generate the demo credentials which you can subsequently use on the e-Signet integrated health portal for authentication.
 
 2. **Mock biometrics setup - To enable biometrics-based login**
 
-  * Ensure that your machine is running Windows.
+    * Ensure that your machine is running Windows.
 
-  * Make sure you have Java 11 or a higher version installed on your computer.
+    * Make sure you have Java 11 or a higher version installed on your computer.
 
-  * Download the `collab-mock-mds-auth.zip` file from the provided link here.
+    * Download the `collab-mock-mds-auth.zip` file from the provided link here.
 
-  * Unzip the downloaded file to extract its contents.
+    * Unzip the downloaded file to extract its contents.
 
-  * Locate the `run_auth.bat` file within the extracted folder.
+    * Locate the `run_auth.bat` file within the extracted folder.
 
-  * Double-click on the `run_auth.bat` file to start the authentication MDS.
+    * Double-click on the `run_auth.bat` file to start the authentication MDS.
 
 3. **Availability of Inji app for wallet/Inji-based login**
 
-  * To be able to use the wallet-based authentication mechanism on the portal, ensure you have the Inji app installed on your mobile device. For details on how to set up and use Inji, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide). 
+    * To be able to use the wallet-based authentication mechanism on the portal, ensure you have the Inji app installed on your mobile device. For details on how to set up and use Inji, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide). 
 
-  * Make sure to have the credential downloaded in your wallet. For details on how to download the credential, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide). 
+    * Make sure to have the credential downloaded in your wallet. For details on how to download the credential, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide). 
 
-  * Also, ensure you have activated your credentials for online login. This step is crucial for wallet-based authentication to work smoothly. For a comprehensive guide on how to activate the VC for online login, refer [here](https://docs.mosip.io/1.2.0/modules/inji-user-guide#wallet-binding-flow) and navigate to the section titled `Wallet Binding Flow`.
+   * Also, ensure you have activated your credentials for online login. This step is crucial for wallet-based authentication to work smoothly. For a comprehensive guide on how to activate the VC for online login, refer [here](https://docs.mosip.io/1.2.0/modules/inji-user-guide#wallet-binding-flow) and navigate to the section titled `Wallet Binding Flow`.
 
-    _Note_: Please use 111111 as the OTP, for any OTP-based feature in the Collab environment.
+   _Note_: Please use 111111 as the OTP, for any OTP-based feature in the Collab environment.
 
 ## Step-by-Step Process
 
