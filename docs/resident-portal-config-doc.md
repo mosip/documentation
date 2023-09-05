@@ -1,4 +1,4 @@
-# Resident Portal: Configuration Guide
+# Resident Portal- Configuration Guide
 
 The provided guide presents a list of essential properties that can be customised according to a specific installation. Please note that this list is not exhaustive but rather acts as a checklist to review properties that are expected to differ from their default settings. If you require access to all properties, please refer to the files mentioned below.
 
