@@ -1,4 +1,4 @@
-# Resident Portal User Guide
+<img width="960" alt="resident-getmyuin2" src="https://github.com/mosip/documentation/assets/95334601/27e769e3-0554-400d-b5dd-4c192482d47d"># Resident Portal User Guide
 
 The Resident Portal is a user-friendly web-based platform designed to assist residents in accessing various services associated with their Unique Identification Number (UIN). This portal offers a range of essential services, including:
 
@@ -356,19 +356,93 @@ The residents can book an appointment for registration using the pre-registratio
 
 The residents can use this feature to verify their registered email ID or phone number.
 
-Steps to verify Email ID/ phone number:
+**Steps to verify Email ID/ phone number**:
 
-Resident clicks either on Verify email ID or Verify phone number option
+1. Resident clicks either on Verify email ID or Verify phone number option
 
-Enter the UIN/VID.
+2. Enter the UIN/VID.
 
-Select I’m not a robot against the captcha and click on Send OTP.
+3. Select `I’m not a robot` against the captcha and click on `Send OTP`.
 
-Resident enters the OTP received on the requested channel and clicks on Submit.
-Based on the scenario, any of the below three messages will be displayed:
+4. Resident enters the OTP received on the requested channel and clicks on `Submit`.
+   
+   Based on the scenario, any of the below three messages will be displayed:
 
-Email ID/ phone number successfully verified: On successful verification, a message is displayed on the screen saying that the phone number/ email ID has been successfully verified.
+   a. **Email ID/ phone number successfully verified**: On successful verification, a message is displayed on the screen saying that the phone number/ email ID has been successfully verified.
 
-Email ID/ phone number was already verified: If the verification has been previously completed, a message is displayed saying the email ID/ phone number was already verified.
+   b. **Email ID/ phone number was already verified**: If the verification has been previously completed, a message is displayed saying the email ID/ phone number was already verified.
 
-Email ID/ phone number does not exist: If there is no email ID/ phone number linked to the UIN/VID, a message is displayed saying no email ID/ phone number was found associated to this UIN/VID.
+   c. **Email ID/ phone number does not exist**: If there is no email ID/ phone number linked to the UIN/VID, a message is displayed saying no email ID/ phone number was found associated to this UIN/VID.
+
+   ![](\_images/resident-verifyphonenumber-emailid.png)
+
+   ![](\_images/resident-verifyphonenumber-emailid1.png)
+
+   ![](\_images/resident-verifyphonenumber-emailid2.png)
+
+   ![](\_images/resident-verifyphonenumber-emailid3.png)
+
+   ![](\_images/resident-verifyphonenumber-emailid4.png)
+
+
+### Get My UIN
+
+The residents can use this feature for one of the following:
+
+1. Download their UIN card
+
+2. Check the status of their Application ID (AID)
+
+**Steps to download the UIN**:
+
+1. Resident clicks on Get My UIN
+
+2. Enter the AID/UIN/VID.
+
+3. Select `I’m not a robot` against the captcha and click on `Send OTP`.
+
+4. Resident enters the OTP received on the registered email ID/ phone number and clicks on `Submit`.
+
+5. The default PDF of UIN card will be downloaded and a success message is seen stating that the UIN has been successfully downloaded.
+
+   ![](\_images/resident-getmyuin.png)
+
+   ![](\_images/resident-getmyuin1.png)
+
+**Steps to check the status of the AID**:
+
+**Note**: If the UIN is not ready, then the AID is used to get status else UIN card will be downloaded using AID too.
+
+1. Resident clicks on`Get My UIN`.
+
+2. Enter the AID.
+
+3. Select `I’m not a robot` against the captcha and click on `Send OTP`.
+
+4. Resident enters the OTP received on the registered email ID/ phone number and clicks on `Submit`.
+
+5. The status of the AID will be shown.
+    
+   ![](\_images/resident-getmyuin2.png)
+
+### Get Information
+
+#### List of supporting documents
+
+Residents can view the list of supported documents in the PDF format and download the same. Also, some sample documents are available for reference.
+   
+![](\_images/resident-getinformation-supportingdocuments.png)
+
+#### List of Registration Centers
+
+Residents can search for Registration Centres on the basis of below two mechanisms:
+
+**Nearby centers**: The resident will be asked to allow permission for location access in order to enable the system to suggest the nearest Registration Centres. 
+
+![](\_images/resident-getinformation-registrationcentres1.png)
+
+**Manually look for centers**: If the Resident wants to manually look for a center, they can do so by choosing a level in location hierarchy from the drop-down (e.g.: Region, Province, Postal Code) and entering the value against the same.
+
+![](\_images/resident-getinformation-registrationcentres2.png)
+
+They can also download the PDF version of the result displayed on the screen for reference.
