@@ -9,7 +9,7 @@ The Resident Portal is a user-friendly web-based platform designed to assist res
     * Manage My VID
     * Track My Request
     * Download My Personalised Card
-    * Share My Credential
+    * Share My Data
 
 2. Get Information
    
@@ -212,7 +212,8 @@ The residents can:
  ![](\_images/resident-securemyid3.png)
 
 
-### Track My Requests
+### Track My Request
+
 On clicking `Track My Requests`, the residents can track the status of an EID associated with the logged-in UIN/ VID. They can also view and download the detailed information about the entered EID like:
 
 1. Event ID- This is the unique ID provided against each event
@@ -348,11 +349,11 @@ The Resident Portal menu bar contains the following:
 
 ![](\_images/resident-menubar.png)
 
-### Book an appointment
+## Book an appointment
 
 The residents can book an appointment for registration using the pre-registration portal. To do so, they can click on `Book an appointment` tile which will redirect them to the pre-registration portal. To know more about pre-registration portal, refer to this link [Pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration).
 
-### Verify Email ID/ Phone number
+## Verify Email ID/ Phone number
 
 The residents can use this feature to verify their registered email ID or phone number.
 
@@ -425,7 +426,7 @@ The residents can use this feature for one of the following:
     
    ![](\_images/resident-getmyuin2.png)
 
-### Get Information
+## Get Information
 
 #### List of supporting documents
 
