@@ -1,4 +1,4 @@
-<img width="960" alt="resident-getmyuin2" src="https://github.com/mosip/documentation/assets/95334601/27e769e3-0554-400d-b5dd-4c192482d47d"># Resident Portal User Guide
+# Resident Portal User Guide
 
 The Resident Portal is a user-friendly web-based platform designed to assist residents in accessing various services associated with their Unique Identification Number (UIN). This portal offers a range of essential services, including:
 
@@ -34,7 +34,7 @@ Residents can use these services to view, update, change, manage or share their 
 
    ![](\_images/resident-dashboard.png)
 
-2. Resident clicks on UIN services.
+2. Resident clicks on `UIN services`.
 
    ![](\_images/resident-loginpage1.png)
 
@@ -51,11 +51,11 @@ Residents can use these services to view, update, change, manage or share their 
 5. Next, the resident clicks on the `Get OTP` button.
 
    * The resident receives the OTP on the registered phone number and email ID.
-   * The resident needs to enter the valid OTP received within stipulated time and clicks the `Verify` button.
+   * The resident needs to enter the valid OTP received within stipulated time and click the `Verify` button.
   
    ![](\_images/resident-loginpage4.png)
 
-6. The resident is then navigated to the Consent page. On this page, the **Essential** and **Voluntary** claims are displayed. Additionally, the residents will also have to allow access to their data in **Authorize Scope** section in order to be able to avail various services. Based on the consent provided by the resident, the services will be made available for modification.
+6. The resident is then navigated to the Consent page. On this page, the **Essential** and **Voluntary** claims are displayed. Additionally, they will also have to allow access to their data in **Authorize Scope** section to avail various services. Based on the consent provided by the resident, the services will be made available for modification.
 
   ![](\_images/resident-consentpage1.png)
 
@@ -115,7 +115,7 @@ The residents can perform the following:
 
 7. Clicking on the accordion/ the caret of a particular event, the following options will appear:
 
-   a. **View Details**: The residents can view the details about an event by clicking on “View Details”. They will be redirected to “Track My Request” page with pre-filled EID where they can see further details about the event.
+   a. **View Details**: The residents can view the details about an event by clicking on `View Details`. They will be redirected to `Track My Request` page with pre-filled EID where they can see further details about the event.
 
    b. **Pin Event to the top**: The residents can pin the events to the top of the list based on their preference.   Currently, this is configured for up to 3 events but it can be customized as per country’s requirements. Also, the resident can unpin the pinned events by clicking `Unpin from Top`.
 
@@ -149,7 +149,7 @@ The following types of VIDs can be seen based on the VID policy:
 * Temporary VID
 * One-time VID
 
-**_Note_**: The resident can get to know about the features of a particular VID by hovering in the “i” symbol.
+**_Note_**: The resident can get to know about the features of a particular VID by hovering over the “i” symbol.
 
   ![](\_images/resident-managemyvid1.png)
 
@@ -165,15 +165,15 @@ The residents can perform the following:
 
 3. **Download a VID card**: 
 
-  a. The residents can click on the download icon to initiate the download process. They can click on `Download` to proceed. Once the event is completed, a message is displayed containing the Event ID, a link to track the service and the password combination.
+    a. The residents can click on the download icon to initiate the download process. They can click on `Download` to proceed. Once the event is completed, a message is displayed containing the Event ID, a link to track the service and the password combination.
 
-  b. Once the card is ready to download, they will receive a notification for the same under the bell icon displayed on the top right corner of the screen and as an Email ID notification.
+    b. Once the card is ready to download, they will receive a notification for the same under the bell icon displayed on the top right corner of the screen and as an Email ID notification.
 
-  c. On clicking on the notification, the resident will be taken the the `Track My Request` Page with pre-filled EID. 
+    c. On clicking on the notification, the resident will be taken the the `Track My Request` Page with pre-filled EID. 
 
-  d. On this screen, the resident will be able to download the card by clicking on `Download My VID card` button on the bottom left corner of the screen.
+    d. On this screen, the resident will be able to download the card by clicking on `Download My VID card` button on the bottom left corner of the screen.
 
-  e. The downloaded card will be a password protected PDF. The residents can view the downloaded VID card by entering the password combination displayed on the screen.
+    e. The downloaded card will be a password protected PDF. The residents can view the downloaded VID card by entering the password combination displayed on the screen.
 
   ![](\_images/resident-managemyvid4.png)
 
@@ -245,7 +245,7 @@ The resident can reach `Track My Requests` page by the following ways:
 
 3. `UIN services > Track My Requests`
 
-![](\_images/resident-trackmyrequest.png)
+![](\_images/resident-trackmyrequest.PNG)
 
 _**Note**_: 
 
@@ -338,13 +338,13 @@ The Resident Portal menu bar contains the following:
 
 4. Profile Icon- Residents can view the following:
 
-  * Name of the logged in user
+    * Name of the logged in user
 
-  * Photo of the logged in user
+    * Photo of the logged in user
 
-  * Last login details
+    * Last login details
 
-  * Logout option
+    * Logout option
 
 ![](\_images/resident-menubar.png)
 
