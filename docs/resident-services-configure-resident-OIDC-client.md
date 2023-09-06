@@ -5,17 +5,24 @@ Below are the steps to create the Resident OIDC client as standard steps in DevO
 ## Pre-requisites
 
 1. Have a user created in keycloak with the below roles as needed for the Authorization token in the API requests:
-	i. ZONAL_ADMIN, 
-	ii. PARTNER_ADMIN, 
-	iii. POLICY_MANAGER, 
-	iv. MISP_PARTNER, 
+
+	i. ZONAL_ADMIN,
+
+	ii. PARTNER_ADMIN,
+
+	iii. POLICY_MANAGER,
+
+	iv. MISP_PARTNER,
+
 	v. PMS_ADMIN
 
 
 2. Authenticating user to take the token and use it in all APIs invoked in further steps:
+   
 * Swagger url - https://api-internal.dev2.mosip.net/v1/authmanager/swagger-ui/index.html?configUrl=/v1/authmanager/v3/api-docs/swagger-config#/authmanager/getAllAuthTokens
 
-* request body:
+* Request body:
+  
 ````
 {
   "id": "string",
@@ -32,9 +39,9 @@ Below are the steps to create the Resident OIDC client as standard steps in DevO
 }
 ````
 
-## Step-by-step process
+## Step-by-step process to create and configure the Resident OIDC client
 
-### I. Create Auth Partner for resident OIDC Client
+### I. Create Auth Partner for Resident OIDC Client
 
 **Step 1**: Creating a policy group for resident OIDC Client
 
@@ -370,7 +377,8 @@ In the request body make sure to replace below attributes:
 
 The response will contain the Resident OIDC client ID in `clientId` attribute.
 
-**Step 3**: Configure the Reisent OIDC client in resident-default.properties
+**Step 3**: Configure the Resident OIDC client in `resident-default.properties`
+
 Configure the above obtained Resident OIDC client ID `resident-default.properties` with property name `mosip.iam.module.clientID`.
 
 *Note: This will need a restart of the resident service if it is already deployed.*
