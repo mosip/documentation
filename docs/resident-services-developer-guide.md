@@ -97,7 +97,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
 For instance,
 
-* Add `mosip.resident.client.secret=pqrst768465` property to be able to use a decrypted passcode and run it in your local machine.
+* Add `mosip.resident.client.secret=***********` property to be able to use a decrypted passcode and run it in your local machine.
 
 * If you check the URLs present in `application-default` file, they are set to module specific URLs, but you need to use internal/external environment URLs to access the APIs by using application-dev-default file.
 
@@ -129,7 +129,8 @@ For instance,
    
    Save this run configuration as ‘Resident-dev’ .
       
-   For `qa` environment, you can create `Resident-qa` run configuration with VM argument as below. 
+   For `qa` environment, you can create `Resident-qa` run configuration with VM argument as below.
+   
    Example:
 
    ```
@@ -141,12 +142,12 @@ For instance,
    
    ![](\_images/resident-dev-img3.png)
 
-3. Click Apply and then debug it (starts running). In the console, you can see a message like `Started ResidentBootApplication in 34.078 seconds (JVM running for 38.361)`.
+3. Click `Apply` and then debug it (starts running). In the console, you can see a message like `Started ResidentBootApplication in 34.078 seconds (JVM running for 38.361)`.
 
 
 ### Resident services API
 
-* For API documentation, refer [here](https://mosip.github.io/documentation/1.2.0/1.2.0.html).
+* For API documentation, refer [here](https://mosip.stoplight.io/docs/resident/9a5192571fc51-document).
 
 * The APIs can be tested with the help of Postman or Swagger-UI.
 
@@ -155,7 +156,7 @@ For instance,
 * Swagger is an interface description language for describing restful APIs expressed using JSON. You can access Swagger-UI of resident-services for dev-environment from `https://api-internal.dev.mosip.net/resident/v1/swagger-ui.html` and localhost from `http://localhost:8099/resident/v1/swagger-ui.html`.
 
 * Download the JSON collection available below and import in your postman.
-Resident-Service-APIs.postman_collection-latest.json    << check with Ritik>>
+[Resident-Service-APIs.postman_collection-latest.json](https://github.com/mosip/documentation/tree/1.2.0/docs//_files/resident-services-config-files).
 
 ![](\_images/resident-dev-img4.png)
 
