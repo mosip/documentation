@@ -1,24 +1,26 @@
 # Resident Portal User Guide
 
-The Resident Portal is a user-friendly web-based platform designed to assist residents in accessing various services associated with their Unique Identification Number (UIN). This portal offers a range of essential services, including:
+The Resident Portal is a user-friendly web-based platform designed to assist residents in accessing various services associated with their Unique Identification Number (UIN). This portal offers a range of essential services such as:
 
-1. UIN Services
-
-    * View My History
-    * Secure My ID
-    * Manage My VID
-    * Track My Request
-    * Download My Personalised Card
-    * Share My Data
-
-2. Get Information
-   
-    * Supporting Document
-    * Registration Center
-
-3. Verify Email ID/Phone number
-4. Get My UIN
-5. Booking an Appointment
+1. **UIN services** using UIN/VID (through [e-Signet](https://docs.esignet.io)):
+     * View My History
+     * Manage My VID
+     * Secure My ID
+     * Track My Requests
+     * Get Personalised Card
+     * Share My Data
+     * Logout
+2. Get Information 
+    * About Registration Centers
+    * List of supporting documents
+3. Get My UIN (using UIN/ VID/ AID)
+4. Verify email ID and/ or phone number 
+5. Responsive UI support- Support for the application to work seamlessly on various resolutions.
+6. Book an appointment for new enrolment (via the pre-registration portal)
+7. Ancillary features
+     * Font size
+     *  Get Notifications (email and bell notifications)
+     * View profile details of the logged in user (name, photo, and last login details)
 
 Below is the detailed explanation of each of the features mentioned above.
 
@@ -30,7 +32,7 @@ Residents can use these services to view, update, change, manage or share their 
 
 **Pre-requisite**: To login into the Resident Portal, the resident should have their unique virtual ID (VID) or Unique Identification Number (UIN) and also have access to the registered email ID/ phone number to be able to receive the OTP.
 
-1. Resident accesses the Resident Portal dashboard page ([URL](https://resident.%7Bbaseurl%7D/#/dashboard)).
+1. Resident accesses the Resident Portal dashboard page.
 
    ![](\_images/resident-dashboard.png)
 
@@ -38,15 +40,15 @@ Residents can use these services to view, update, change, manage or share their 
 
    ![](\_images/resident-loginpage1.png)
 
-   The login screen appears and the resident is displayed with the options they can choose to log in.
+   The login screen appears and the resident can choose one of the options to log in.
    
-3. To get started with login with OTP authentication, the resident clicks on `Log in here> More ways to login > Login with OTP`.
+3. To login with OTP authentication, the resident clicks on `Log in here> More ways to login > Login with OTP`.
 
     ![](\_images/resident-loginpage2.png)
 
 4. Resident needs to enter valid VID in the `Enter Your VID` text field and check the box `I'm not a robot`.
 
-    ![](\_images/resident-loginpage3.png)
+    ![](\_images/resident-loginpage3new.png)
 
 5. Next, the resident clicks on the `Get OTP` button.
 
@@ -80,19 +82,19 @@ The residents can perform the following:
 
 1. **Search**: The residents can enter an Event ID to search a particular event.
 
-2. **Filter based on date (From date and To date)**: The Residents can put a “from” and “to” date in order to get the list of all the event performed in the chosen date range.
+2. **Filter based on date** (**From date** and **To date**): The Residents can put a “from” and “to” date in order to get the list of all the events performed in the chosen date range.
 
-3. **Filter based on status (Success/In Progress/ Failure)**: The Residents can filter based on the status of the event. E.g.: If they want to view all “In Progress” events, they can choose the status as “In Progress”. Additionally, they can also select any combination of the above three options.
+3. **Filter based on status (Success/ In Progress/ Failure)**: The Residents can filter based on the status of the event. E.g.: If they want to view all “In Progress” events, they can choose the status as “In Progress”. Additionally, they can also select any combination of the above three options.
 
 4. **Filter based on History Type (Authentication, ID Management, Data Update, Data Share, Service Requests)**: The Residents can filter based on the type of event. Additionally, they can also choose any combination of the above five options.
 
-     * **Authentication Request**
+     * **Authentication Request**: This includes all the authentication and e-KYC requests.
 
      * **ID Management Request**: This includes the below services:
 
-        * Generate/revoke VID
+        * Manage My VID (Generate/Revoke VID)
         * Verify phone number/email ID
-        * Lock/unlock authentication type
+        * Secure My ID (Lock/unlock various authentication types)
 
      * **Data Update Request**: This includes the below services:
 
@@ -117,13 +119,13 @@ The residents can perform the following:
 
    a. **View Details**: The residents can view the details about an event by clicking on `View Details`. They will be redirected to `Track My Request` page with pre-filled EID where they can see further details about the event.
 
-   b. **Pin Event to the top**: The residents can pin the events to the top of the list based on their preference.   Currently, this is configured for up to 3 events but it can be customized as per country’s requirements. Also, the resident can unpin the pinned events by clicking `Unpin from Top`.
+   b. **Pin Event to the top**: The residents can pin the events to the top of the list based on their preference. Currently, this is configured for up to 3 events but it can be customized as per country’s requirements. Also, the resident can unpin the pinned events by clicking `Unpin from Top`.
 
    c. **Report a grievance**: The residents can report a grievance in case of fraud or for any event not initiated by them. On clicking `Report an Issue`, the resident will be redirected to the `Grievance Redressal Form` page where they will see a set of pre-filled data as well as a set of data to be filled.
 
      * Pre-filled data:
          * Name
-         * Event ID
+         * Event ID (EID)
          * Registered Email ID
          * Registered Mobile Number
      * Data to be filled:
@@ -155,32 +157,40 @@ The following types of VIDs can be seen based on the VID policy:
 
 The residents can perform the following:
 
-1. **Create a new VID** : The residents can click on the `Create` button against any of the VID type that they choose. They can click on `Yes` to proceed. Once the event is completed, a message is displayed containing the Event ID along with a link to track the service.
+1. **Create a new VID** : The residents can click on the `Create` button against any of the VID type selected. They can click on `Yes` to proceed. Once the event is completed, a message is displayed containing the Event ID along with a link to track the service.
 
   ![](\_images/resident-managemyvid2.png)
 
-2. **Revoke an existing VID**: The residents can click on the delete icon to revoke an existing VID. They can click on `Yes` to proceed. Once the event is completed, a message is displayed containing the Event ID along with a link to track the service.
+2. **Revoke an existing VID**: The residents can click on the **Delete icon** to revoke an existing VID. They can click on `Yes` to proceed. Once the event is completed, a message is displayed containing the Event ID along with a link to track the service.
+
+  ![](\_images/resident-manage-myvid-delete.png)
 
   ![](\_images/resident-managemyvid3.png)
 
 3. **Download a VID card**: 
 
-    a. The residents can click on the download icon to initiate the download process. They can click on `Download` to proceed. Once the event is completed, a message is displayed containing the Event ID, a link to track the service and the password combination.
+    a. The residents can click on the **Download icon** to initiate the download process. They can click on `Download` to proceed. Once the event is completed, a message is displayed containing the Event ID, a link to track the service and the password combination.
 
-    b. Once the card is ready to download, they will receive a notification for the same under the bell icon displayed on the top right corner of the screen and as an Email ID notification.
+    b. Once the card is ready to download, they will receive a notification for the same under the **bell icon** displayed on the top right corner of the screen and as an Email notification.
 
-    c. On clicking on the notification, the resident will be taken the the `Track My Request` Page with pre-filled EID. 
+    c. On clicking on the notification, the resident will be taken to `Track My Request` page with pre-filled EID. 
 
     d. On this screen, the resident will be able to download the card by clicking on `Download My VID card` button on the bottom left corner of the screen.
 
     e. The downloaded card will be a password protected PDF. The residents can view the downloaded VID card by entering the password combination displayed on the screen.
 
+  ![](\_images/resident-manage-myvid5-download.png)
+
   ![](\_images/resident-managemyvid4.png)
 
   ![](\_images/resident-managemyvid5.png)
 
+  ![](\_images/resident-manage-myvid-downloadvid.png)
+  
 4. **View VID number**: All the VID numbers will be masked by default. The residents can view the unmasked version of VID by clicking on eye icon next to the VID number.
 
+  ![](\_images/resident-manage-myvid-eye.png)
+   
 ### Secure My ID
 
 On clicking `Secure My ID`, the residents can view the status of all the authentication types. They can choose to lock or unlock authentication types like the following:
@@ -197,13 +207,13 @@ On clicking `Secure My ID`, the residents can view the status of all the authent
 
 6. Face authentication
 
-The residents can:
+The residents can perform the following,
 
-**View the current status of authentication types**: The lock icon on each card indicates the current status of the authentication type. E.g.: If the lock is open, the authentication type is unlocked which means the residents can authenticate themselves using that particular authentication type and vice versa.
+**View the current status of authentication types**: The **lock icon** on each card indicates the current status of the authentication type. E.g.: If the lock is open, the authentication type is unlocked which means the residents can authenticate themselves using that particular authentication type and vice versa.
 
  ![](\_images/resident-securemyid.png)
 
-**Lock/unlock the authentication types**: To lock/unlock a particular authentication type, the residents can click on lock/unlock button. Once the preferences of each authentication type is selected, the residents can click on `Submit` to save the changes. They can click on `Yes` to proceed. Once the event is completed, a message is displayed containing the Event ID along with a link to track the service.
+**Lock/ unlock the authentication types**: To lock/ unlock a particular authentication type, the residents can click on lock/ unlock button. Once the preferences of each authentication type is selected, the residents can click on `Submit` to save the changes and click `Yes` to proceed. Once the event is completed, a message is displayed containing the Event ID along with a link to track the service.
 
  ![](\_images/resident-securemyid1.png)
  
@@ -212,7 +222,7 @@ The residents can:
  ![](\_images/resident-securemyid3.png)
 
 
-### Track My Request
+### Track My Requests
 
 On clicking `Track My Requests`, the residents can track the status of an EID associated with the logged-in UIN/ VID. They can also view and download the detailed information about the entered EID like:
 
@@ -250,9 +260,9 @@ The resident can reach `Track My Requests` page by the following ways:
 
 _**Note**_: 
 
-* Residents can also downloaded their updated UIN card/VID card as shown below.
+* Residents can download their updated UIN /VID card.
 
-* Report a grievance: The residents can report a grievance in case of fraud or for any event not initiated by them. On clicking    `Report an Issue`, the resident will be redirected to the `Grievance Redressal Form    page where they will see a set of pre-filled data as well as a set of data to be filled.
+* **Report a grievance**: The residents can report a grievance in case of fraud or for any event not initiated by them. On clicking    `Report an Issue`, the resident will be redirected to the `Grievance Redressal Form` page where they will see a set of pre-filled data as well as a set of data to be filled.
 
 ### Get Personalised Card
 
