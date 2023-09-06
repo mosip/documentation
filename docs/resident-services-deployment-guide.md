@@ -27,7 +27,7 @@ The master-data templates required for the Resident portal are added to the [tem
 
 ### Resident OIDC Client setup
 
-Here is the document which explains how `resident-oidc` partner is onboarded through `partner-onboarder` after deployment.
+Here is the document which explains how `resident-oidc` partner is onboarded through [partner-onboarder](https://github.com/mosip/mosip-onboarding) after deployment.
 
 For more details on how to configure the Resident OIDC client, refer [here](resident-services-configure-resident-OIDC-client.md).
 
