@@ -86,7 +86,7 @@ For details related to resident portal configurations, refer to the [Configurati
 
 ## Developers Guide
 
-For a detailed description of Resident Services, code, and design, refer to:
+For a detailed description of Resident Services, code, design, and setup steps, refer to:
 1. [Resident Services Developers Guide](resident-services-developer-guide.md)
 2. [Resident Services UI Developers Guide](resident-services-ui-developer-guide.md)
 
