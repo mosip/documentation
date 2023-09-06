@@ -326,7 +326,8 @@ In the console the JSON text of the public key of the certificate will be printe
 
 In the JSON public key, replace the `kid` value with the `keyId` in the earlier step.
 
-**Step 2: Create the OIDC client in PMS:
+**Step 2: Create the OIDC client in PMS**
+
 * Swagger url: https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/client-management-controller/createClient
 
 In the request body make sure to replace below attributes:
@@ -369,7 +370,7 @@ In the request body make sure to replace below attributes:
 
 The response will contain the Resident OIDC client ID in `clientId` attribute.
 
-## III. Configure the Reisent OIDC client in resident-default.properties
+**Step 3**: Configure the Reisent OIDC client in resident-default.properties
 Configure the above obtained Resident OIDC client ID `resident-default.properties` with property name `mosip.iam.module.clientID`.
 
 *Note: This will need a restart of the resident service if it is already deployed.*
