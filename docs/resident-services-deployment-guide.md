@@ -5,13 +5,13 @@ This guide contains all the information required for successful deployment and r
 
 ## DB scripts
 
-Resident Service DB Scripts to be run: [DB scipts](https://github.com/mosip/resident-services/tree/master/db_scripts/mosip_resident)
+Resident Service DB Scripts to be run: [DB scipts](https://github.com/mosip/resident-services/tree/develop/db_scripts/mosip_resident)
 
 ## Master-data Template Scripts
 
-The master-data templates required for the Resident portal are added to the [template](https://github.com/mosip/mosip-data/blob/master/mosip_master/xlsx/template.xlsx) and [template type](https://github.com/mosip/mosip-data/blob/master/mosip_master/xlsx/template_type.xlsx) DML excel files in `mosip/mosip-data` repository. These scripts need to be applied to the corresponding table.
+The master-data templates required for the Resident portal are added to the [template](https://github.com/mosip/mosip-data/blob/develop/mosip_master/xlsx/template.xlsx) and [template type](https://github.com/mosip/mosip-data/blob/develop/mosip_master/xlsx/template_type.xlsx) DML excel files in [mosip/mosip-data](https://github.com/mosip/mosip-data/tree/develop) repository. These scripts need to be applied to the corresponding table.
 
-### Keycloak Roles
+## Keycloak Roles
 
 `mosip-resident-client` needs to have below roles in keycloak:
 
@@ -29,6 +29,6 @@ The master-data templates required for the Resident portal are added to the [tem
 
 Here is the document which explains how `resident-oidc` partner is onboarded through `partner-onboarder` after deployment.
 
-For more, refer [here]().
+For more details on how to configure the Resident OIDC client, refer [here]().
 
  
