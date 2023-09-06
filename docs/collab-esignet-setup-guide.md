@@ -4,7 +4,7 @@ Welcome to the comprehensive guide on how to test and experience the various mod
 
 Let's dive into the details and embark on this informative journey of seamless authentication and exploration.
 
-## Pre-requisites
+### Pre-requisites
 
 1. **UIN credentials**
 
@@ -30,13 +30,13 @@ Let's dive into the details and embark on this informative journey of seamless a
 
     * To be able to use the wallet-based authentication mechanism on the portal, ensure you have the Inji app installed on your mobile device. For details on how to set up and use Inji, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide). 
 
-    * Make sure to have the credential downloaded in your wallet. For details on how to download the credential, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide). 
+    * Make sure to have the credential downloaded in your wallet. For details on how to download the credential, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide) (Refer step 3 in the guide). 
 
    * Also, ensure you have activated your credentials for online login. This step is crucial for wallet-based authentication to work smoothly. For a comprehensive guide on how to activate the VC for online login, refer [here](https://docs.mosip.io/1.2.0/modules/inji-user-guide#wallet-binding-flow) and navigate to the section titled `Wallet Binding Flow`.
 
    _Note_: Please use 111111 as the OTP, for any OTP-based feature in the Collab environment.
 
-## Step-by-Step Process
+### Step-by-Step Process
 
 To experience the various methods of login and authentication in the demo health services portal using e-Signet, follow the detailed instructions below:
 
@@ -60,7 +60,7 @@ To experience the various methods of login and authentication in the demo health
 
     * Experience the process of logging in using biometrics, by following the instructions provided [here](https://docs.esignet.io/esignet-end-user-guide/login-with-biometrics).
 
-### Additional  Video Resources
+### Additional Video Resources
 
 * Watch the informative video titled [About e-Signet](https://www.youtube.com/watch?v=ZfUPRv71s_0,) to gain insights into e-Signet.
 
