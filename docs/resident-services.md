@@ -70,13 +70,13 @@ The design of the Resident portal embodies the following principles:
 
 For detailed description of Resident services, the code and design, refer to [resident services repo](https://github.com/mosip/resident-services/tree/develop).
 
-## Resident portal
+## Resident Portal
 
 MOSIP provides a reference implementation of the Resident portal that can be customized as per the country’s needs. The sample implementation is available [here](https://github.com/mosip/resident-ui/tree/develop).
 
 For getting started with the resident portal, refer to the [Resident Services User Guide](resident-services-user-guide.md).
 
-## Build and deploy
+## Build and Deploy
 
 To access the build and read through the deployment instructions, refer to the [Resident Services Deployment Guide](resident-services-deployment-guide.nmd).
 
