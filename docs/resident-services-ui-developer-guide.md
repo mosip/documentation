@@ -1,4 +1,4 @@
-# Resident Services UI Developers Guide
+# Resident Services- UI Developers Guide
 
 This [repository](https://github.com/mosip/resident-ui) contains the UI code for Resident portal. To know more about the features and functions present on the portal, refer [here](https://docs.mosip.io/1.2.0/modules/resident-services).
 
@@ -18,9 +18,9 @@ _Note_: The code is written in Angular JS.
 
     * git clone https://github.com/mosip/resident-ui.git (to clone the source code repository from git)
  
-### For Production build:
+### For Production build
 
-* Build the code
+* **Build the code**
 
   Follow the steps below to build the source code on your system.
 
@@ -28,7 +28,7 @@ _Note_: The code is written in Angular JS.
 
     * Run the command  `ng build "--prod" "--base-href" "." "--output-path=dist"` in that directory to build the code.
 
-* Build Docker Image
+* **Build Docker image**
 
   Follow the steps below to build the docker image on your system.
 
@@ -36,7 +36,7 @@ _Note_: The code is written in Angular JS.
 
     * Example: `docker build -t residentui .`
 
-* Run the docker image
+* **Run the Docker image**
 
   Follow the steps to build docker image on your system.
 
@@ -48,7 +48,7 @@ _Note_: The code is written in Angular JS.
 
   * Example: `http://localhost:8080/#/dashboard`
 
-### For Local build:
+### For Local build
 
 * Build & deploy the code locally
 
