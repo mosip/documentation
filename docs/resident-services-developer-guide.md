@@ -75,9 +75,9 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
 
    These two files are loaded by application by specifying the application names in the Application VM arguments like- `Dspring.cloud.config.name=application,resident,application-dev`, `resident-dev`  (also detailed in later section).
    
-4. To run the server, two files are required- `kernel-config-server.jar` and `config-server-start.bat`.
+3. To run the server, two files are required- `kernel-config-server.jar` and `config-server-start.bat`.
 
-5. Put both the files in the same folder and point the property- `Dspring.cloud.config.server.native.search-locations` to `mosip-config` folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` towards the end of the command.
+4. Put both the files in the same folder and point the property- `Dspring.cloud.config.server.native.search-locations` to `mosip-config` folder in `config-server-start.bat` file and also check the version of `kernel-config-server.jar` towards the end of the command.
    
    Example:
 
@@ -91,7 +91,7 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
    Dspring.cloud.config.server.git.refreshRate=0 kernel-config-server-1.2.0-20201016.134941-57.jar
    ```
 
-* As mentioned in step 2, you will have to create property files according to your environment like `resident-env-default` and `application-env-default` (here env represents environment name). Both files will contain different configurations such as `resident-env-default` will have config properties (e.g., secrets, passcodes, etc) used for resident-services module only and `application-env-default` is used for environment specific changes and can be used for other modules as well. 
+* As mentioned earlier, you will have to create property files according to your environment like `resident-env-default` and `application-env-default` (here env represents environment name). Both files will contain different configurations such as `resident-env-default` will have config properties (e.g., secrets, passcodes, etc) used for resident-services module only and `application-env-default` is used for environment specific changes and can be used for other modules as well. 
 
 * In this example, currently, these two files are created for dev environment and hence the files have suffix of `-dev`. If you want to run it for a different environment such as qa, create these two files with `-qa` suffix and then you will also need to provide the appropriate VM argument for that referring to qa environment.
 
@@ -105,12 +105,12 @@ For instance,
 
 * It results in `mosipbox.public.url=internal/externalAPI` (e.g., mosipbox.public.url=https://api-internal.dev.mosip.net) and it will connect with the Development environment.
 
-1. Run the server by opening the `config-server-start.bat` file.
+5. Run the server by opening the `config-server-start.bat` file.
 
    ![](\_images/resident-dev-img1.png)
    
 
-   **Configurations to be done in Eclipse**
+#### Configurations to be done in Eclipse
 
 1. Open Eclipse and run the project for one time as Java application, so that it will create a Java application which you can see in debug configurations and then change its name. 
    (e.g.: project name with environment - "Resident-dev").
@@ -118,7 +118,7 @@ For instance,
    ![](\_images/resident-dev-img2.jpg)
    
 
-3. Open the Arguments tab and specify Application VM arguments: For example, for dev environment:
+2. Open the Arguments tab and specify Application VM arguments: For example, for dev environment:
    
     ```
     -Dspring.profiles.active=default -
