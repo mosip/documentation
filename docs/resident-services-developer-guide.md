@@ -91,9 +91,9 @@ For the code setup, clone the repository and follow the guidelines mentioned in 
    Dspring.cloud.config.server.git.refreshRate=0 kernel-config-server-1.2.0-20201016.134941-57.jar
    ```
 
-* As mentioned earlier, you will have to create property files according to your environment like `resident-env-default` and `application-env-default` (here env represents environment name). Both files will contain different configurations such as `resident-env-default` will have config properties (e.g., secrets, passcodes, etc) used for resident-services module only and `application-env-default` is used for environment specific changes and can be used for other modules as well. 
+  * As mentioned earlier, you will have to create property files according to your environment like `resident-env-default` and `application-env-default` (here env represents environment name). Both files will contain different configurations such as `resident-env-default` will have config properties (e.g., secrets, passcodes, etc) used for resident-services module only and `application-env-default` is used for environment specific changes and can be used for other modules as well. 
 
-* In this example, currently, these two files are created for dev environment and hence the files have suffix of `-dev`. If you want to run it for a different environment such as qa, create these two files with `-qa` suffix and then you will also need to provide the appropriate VM argument for that referring to qa environment.
+  * In this example, currently, these two files are created for dev environment and hence the files have suffix of `-dev`. If you want to run it for a different environment such as qa, create these two files with `-qa` suffix and then you will also need to provide the appropriate VM argument for that referring to qa environment.
 
 For instance,
 
