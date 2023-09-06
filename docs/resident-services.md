@@ -34,8 +34,7 @@ The relationship of Resident services with other services is listed below.
 
 _Note: The numbers do not signify sequence of operations or the control flow._
 
-![](_images/rs-entity-relationship-new.png)
-
+![](_images/rs-entity-relationship-updated.png)
 
 1.	__Audit Manager__: Resident services sends all the audit logs to the Audit Manager.
 2.	__Digital card service__: Resident services uses this service to download the PDF of the UIN card or VID card.
@@ -69,29 +68,35 @@ The design of the Resident portal embodies the following principles:
 
 ## Services
 
-For detailed description of Resident services, the code and design, refer to [resident services repo]().
+For detailed description of Resident services, the code and design, refer to [resident services repo](https://github.com/mosip/resident-services/tree/develop).
 
 ## Resident portal
 
-MOSIP provides a reference implementation of the Resident portal that can be customized as per the country’s needs. The sample implementation is available at *insert reference implementation repository link*. 
+MOSIP provides a reference implementation of the Resident portal that can be customized as per the country’s needs. The sample implementation is available [here](https://github.com/mosip/resident-ui/tree/develop).
 
-For getting started with the resident portal, refer to the *Resident services user guide link*
+For getting started with the resident portal, refer to the [Resident Services User Guide](resident-services-user-guide.md).
 
 ## Build and deploy
 
-To access the build and read through the deployment instructions, refer to insert resident services repo link
+To access the build and read through the deployment instructions, refer to the [Resident Services Deployment Guide](resident-services-deployment-guide.nmd).
 
 ## Configurations
 
-For details related to resident portal configurations, refer to *insert Resident services configuration link*
+For details related to resident portal configurations, refer to the [Configuration Guide](resident-services-configuration-guide.md).
 
 ## Developers Guide
 
-For a detailed description of Resident Services, code, and design, refer to *insert resident services developer’s guide link*
+For a detailed description of Resident Services, code, and design, refer to:
+1. [Resident Services Developers Guide](resident-services-developer-guide.md)
+2. [Resident Services UI Developers Guide](resident-services-ui-developer-guide.md)
 
 ## API
 
 Refer [API Documentation](https://mosip.stoplight.io/docs/resident/9a5192571fc51-document).
+
+## Test Report
+
+For details on the test results, refer [here](https://github.com/mosip/test-management/tree/master/).
 
 ## Source code 
 
