@@ -4,27 +4,28 @@
 
 Resident services are the self-services which are used by the residents themselves via a portal. Resident Portal is a web-based UI application that provides residents of a country the services related to their Unique Identification Number (UIN). The residents can perform various operations related to their UIN/ VID and can also raise concerns if any through the portal.
 
-The key features provided on Resident portal are:
+The key features provided on the Resident portal are:
 
-1. Get Information 
-    * About Registration Centers
-    * List of supporting documents
-2. Get My UIN (using UIN/ VID/ AID)
-3. Verify email ID and/ or phone number 
-4. Avail **UIN services** using UIN/VID (through [e-Signet](https://docs.esignet.io)):
+1. Avail **UIN services** using UIN/VID (through [e-Signet](https://docs.esignet.io)):
      * View My History
      * Manage My VID
      * Secure My ID
      * Track My Requests
      * Get Personalised Card
      * Share My Data
-     * Get Notifications (email and bell notifications)
-     * View profile details of the logged in user (name, photo, and last login details)
      * Logout
+2. Get Information 
+    * About Registration Centers
+    * List of supporting documents
+3. Get My UIN (using UIN/ VID/ AID)
+4. Verify email ID and/ or phone number 
 5. Responsive UI support- Support for the application to work seamlessly on various resolutions.
 6. Book an appointment for new enrolment (via the pre-registration portal)
-
-
+7. Ancillary features
+     * Font size
+     *  Get Notifications (email and bell notifications)
+     * View profile details of the logged in user (name, photo, and last login details)
+       
 Below is an image summarizing the features provided in Resident portal.
 
 ![](_images/rs-feature-list.png)
