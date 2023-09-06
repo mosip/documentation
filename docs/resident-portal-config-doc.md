@@ -9,6 +9,10 @@ Resident Service uses the following configuration files:
 ```
 application-default.properties
 resident-default.properties
+resident-ui-personalized-card-schema.json
+resident-ui-share-credential-schema.json
+resident-ui-update-demographics-schema.json
+
 ```
 
 ### Database
@@ -114,13 +118,18 @@ token.request.secretKey=******
 auth.server.admin.allowed.audience=mosip-resident-client,mosip-reg-client,${mosip.iam.module.clientID}
 ```
 
-### Mapping Identity json to map with the applicant id json
+### Identity mapping json file
+
+Property used to get the identity mapping json
 
 ```
 registration.processor.identityjson=identity-mapping.json
+identity-mapping-file-name=identity-mapping.json
+identity-mapping-file-url=${config.server.file.storage.uri}${identity-mapping-file-name} 
+identity-mapping-file-source=url:${identity-mapping-file-url}
 ```
 
-### Machine creation and search configs
+### Machine creation and search configurations
 
 Properties used for machine specification and center:
 
@@ -132,7 +141,7 @@ resident.center.id=10007
 resident.machine.id=10011
 ```
 
-### Auth Adapter rest template authentication configs
+### Auth Adapter rest template authentication configurations
 
 ```
 mosip.iam.adapter.appid=resident
@@ -140,9 +149,11 @@ mosip.iam.adapter.clientid=******
 mosip.iam.adapter.clientsecret=******
 ```
 
-### Exclusion list of URL patterns that should not be part of authentication and authorization
+### Exclusion list 
 
-Property used to define the endpoints that should not be part of authentication.
+* This is an exclusion list of URL patterns that should not be a part of authentication and authorization.
+
+* Properties used to define the endpoints that should not be part of authentication.
 
 ```
 mosip.service.end-points=/**/req/otp,/**/proxy/**/*,/**/validate-otp,/**/channel/verification-status,/**/req/credential/**,/**/req/card/*,/**/req/auth-history,/**/rid/check-status,/**/req/auth-lock,/**/req/auth-unlock,/**/req/update-uin,/**/req/print-uin,/**/req/euin,/**/credential/types,/**/req/policy/**,/**/aid/status,/**/individualId/otp,/**/mock/**,/**/callback/**,/**/download-card,/**/download/registration-centers-list/**,/**/download/supporting-documents/**,/**/vid/policy,/**/vid,/vid/**,/**/download/nearestRegistrationcenters/**,/**/authorize/admin/validateToken,/**/logout/user,/**/aid-stage/**
@@ -159,17 +170,15 @@ mosip.resident.captcha.resourse.url=http://resident-captcha.resident/resident/v1
 mosip.resident.captcha.recaptcha.verify.url=https://www.google.com/recaptcha/api/siteverify
 ```
 
-### Comma separated values of property keys to be exposed to UI
+### Resident UI properties 
 
-This property is used to define the keys of the properties to be exposed to UI.
+These properties (comma separated values) are used to define the keys of the properties to be exposed to UI.
 
 ```
 resident.ui.propertyKeys=mosip.mandatory-languages,mosip.optional-languages,mosip.utc-datetime-pattern,mosip.iam.adapter.clientid,resident.datetime.pattern,mosip.resident.api.id.otp.request,mosip.resident.api.id.auth,mosip.resident.api.version.otp.request,mosip.resident.api.version.auth,mosip-prereg-host,mosip-prereg-ui-url,auth.types.allowed,resident.template.tnc.order-a-physical-card,resident.template.tnc.share-cred-with-partner,resident.template.tnc.update-demo,resident.view.history.serviceType.filters,resident.view.history.status.filters,resident.auth-type.default.unlock.duration.seconds,mosip.resident.grievance.url,mosip.api.public.host,mosip.resident.captcha.sitekey,mosip.resident.captcha.secretkey,mosip.webui.auto.logout.idle,mosip.webui.auto.logout.ping,mosip.webui.auto.logout.timeout,mosip.resident.download.registration.centre.file.name.convention,mosip.resident.download.supporting.document.file.name.convention,mosip.resident.download.personalized.card.naming.convention,mosip.resident.ack.manage_my_vid.name.convention,mosip.resident.ack.secure_my_id.name.convention,mosip.resident.ack.personalised_card.name.convention,mosip.resident.ack.update_my_data.name.convention,mosip.resident.ack.share_credential.name.convention,mosip.resident.ack.order_physical_card.name.convention,mosip.resident.ack.name.convention,mosip.resident.uin.card.name.convention,mosip.resident.vid.card.name.convention,mosip.resident.download.service.history.file.name.convention,mosip.resident.download.nearest.registration.centre.file.name.convention,auth.internal.id,auth.internal.version,mosip.registration.processor.print.id,mosip.registration.processor.application.version,vid.create.id,mosip.resident.create.vid.version,resident.vid.version,resident.vid.version.new,resident.revokevid.version,resident.revokevid.version.new,resident.vid.id,resident.vid.id.generate,resident.vid.policy.id,resident.vid.get.id,auth.type.status.id,resident.authlock.id,resident.checkstatus.id,resident.checkstatus.version,resident.euin.id,resident.printuin.id,resident.uin.id,resident.rid.id,resident.updateuin.id,resident.authunlock.id,resident.authhistory.id,resident.authLockStatusUpdateV2.id,resident.authLockStatusUpdateV2.version,resident.service.history.id,resident.service.history.version,resident.document.upload.id,resident.document.get.id,resident.document.get.version,resident.document.list.id,resident.document.list.version,resident.service.pin.status.id,resident.service.pin.status.version,resident.service.unpin.status.id,resident.service.unpin.status.version,resident.document.delete.id,resident.document.delete.version,resident.contact.details.update.id,resident.contact.details.send.otp.id,mosip.resident.service.status.check.id,mosip.resident.service.status.check.version,resident.service.unreadnotificationlist.id,resident.service.event.id,resident.service.event.version,resident.identity.info.id,resident.identity.info.version,resident.share.credential.id,resident.share.credential.version,mosip.resident.request.response.version,vid.revoke.id,resident.revokevid.id,mosip.resident.revokevid.id,mosip.resident.grievance.ticket.request.id,mosip.resident.grievance.ticket.request.version,resident.channel.verification.status.id,resident.channel.verification.status.version,resident.event.ack.download.id,resident.event.ack.download.version,resident.download.card.eventid.id ,resident.download.card.eventid.version,mosip.resident.request.vid.card.id,mosip.resident.request.vid.card.version,mosip.credential.request.service.id,mosip.credential.request.service.version,mosip.resident.checkstatus.individualid.id,mosip.resident.checkstatus.individualid.version,mosip.resident.download.personalized.card.id,mosip.resident.transliteration.transliterate.id,resident.ui.properties.id,resident.ui.properties.version,resident.nearby.centers.distance.meters,resident.ui.notification.update.interval.seconds,mosip.kernel.otp.expiry-time,resident.grievance-redressal.alt-email.chars.limit,resident.grievance-redressal.alt-phone.chars.limit,resident.grievance-redressal.comments.chars.limit,resident.share-credential.purpose.chars.limit,mosip.resident.eventid.searchtext.length,mosip.kernel.uin.length,mosip.kernel.vid.length,mosip.kernel.rid.length,mosip.resident.eid.length,mosip.kernel.otp.default-length,resident.message.allowed.special.char.regex,resident.purpose.allowed.special.char.regex,resident.id.allowed.special.char.regex,resident.version.new,mosip.resident.identity.auth.internal.id,resident.validation.event-id.regex,resident.document.validation.transaction-id.regex,resident.document.validation.document-id.regex,resident.validation.is-numeric.regex,resident.otp.validation.transaction-id.regex,,mosip.resident.captcha.enable,resident.download.reg.centers.list.id,resident.download.nearest.reg.centers.id,resident.download.supporting.documents.id,resident.send.card.id,resident.pinned.eventid.id,resident.unpinned.eventid.id,resident.auth.proxy.partners.id,resident.events.eventid.id,resident.notification.id,resident.profile.id,resident.notification.click.id,mosip.credential.store.id,resident.vids.id
 ```
 
-### MOSIP e-Signet config
-
-When enabling MOSIP e-Signet, comment Mock Keycloak config and vise versa.
+### MOSIP e-Signet configuration
 
 ```
 mosip.iam.module.clientID=******
@@ -198,7 +207,7 @@ auth.server.admin.validate.url=
 mosip.resident.oidc.userinfo.jwt.verify.enabled=false
 ```
 
-### Resident login configuration for e-Signet
+### Resident login configurations for e-Signet
 
 ```
 mosip.iam.module.redirecturi=${mosip.api.internal.url}/resident/v1/login-redirect/
@@ -211,7 +220,7 @@ mosip.iam.module.admin_realm_id=mosip
 
 ### User-info claim attributes
 
-Used in open-id-connect based login with UIN/VID in MOSIP e-Signet(IDP)
+Used in `open-id-connect` based login with UIN/VID in MOSIP e-Signet(IDP)
 
 ```
 mosip.resident.identity.claim.individual-id=individual_id
@@ -307,16 +316,6 @@ resident-ui-schema-file-url=${config.server.file.storage.uri}${resident-ui-schem
 resident-ui-schema-file-source-prefix=url:${resident-ui-schema-file-url}
 ```
 
-### Identity Mapping JSON file
-
-Property used to get the identity mapping json
-
-```
-identity-mapping-file-name=identity-mapping.json
-identity-mapping-file-url=${config.server.file.storage.uri}${identity-mapping-file-name} 
-identity-mapping-file-source=url:${identity-mapping-file-url}
-```
-
 ### Credential Data format MVEL file name
 
 This property is used to get the data format from MVEL file:
@@ -386,7 +385,7 @@ mosip.resident.update.service.status.job.initial-delay=60000
 mosip.resident.update.service.status.job.interval.millisecs=600000
 ```
 
-### Template type codes for terms & conditions
+### Template type codes for terms and conditions
 
 ```
 resident.template.tnc.order-a-physical-card=tnc-order-a-physical-card
@@ -479,6 +478,7 @@ resident.template.email.content.failure.verify-my-phone-email=verify-my-phone-em
 resident.template.email.content.success.send-otp=receive-otp-mail-content
 resident.template.email.content.success.validate-otp=validate-otp-mail-content
 ```
+
 ### Template type codes for sms content
 
 ```
@@ -610,7 +610,9 @@ resident.service-history.download.max.count=100
 resident.registration-centers.download.max.count=100
 ```
 
-### The Registration centers will be searched based on the distance value in meters from the Geo location identified
+### Registration Center search configuration
+
+The Registration centers will be searched based on the distance value in meters from the Geo location identified
 
 ```
 resident.nearby.centers.distance.meters=2000
@@ -623,7 +625,7 @@ resident.notifications.default.page.size=100
 resident.view-history.default.page.size=10
 ```
 
-### Token related config
+### Token related configuration
 
 ```
 auth.validate.id-token=true
@@ -669,7 +671,7 @@ mosip.resident.download.nearest.registration.centre.file.name.convention=Registr
 mosip.resident.download.card.naming.convention=Get_my_UIN_{timestamp}
 ```
 
-### Credential request config
+### Credential request configuration
 
 ```
 mosip.resident.request.credential.credentialType=euin
@@ -693,6 +695,7 @@ mosip.resident.phone.token.claim-phone=phone_number
 ### OTP Flooding
 
 Configure Time limit for OTP Flooding scenario (in minutes).
+
 ```
 otp.request.flooding.duration=1
 otp.request.flooding.max-count=10
@@ -893,7 +896,7 @@ logging.level.io.mosip.resident.config.LoggingInterceptor=DEBUG
 resident.rest.template.logging.interceptor.filter.enabled=false
 ```
 
-### Websub topic subscription and WebsubCallbackRequestDecoratorFilter
+### Websub properties
 
 ```
 subscriptions-delay-on-startup_millisecs=120000
