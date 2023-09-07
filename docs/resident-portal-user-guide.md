@@ -37,7 +37,7 @@ Residents can use these services to view, update, change, manage or share their 
 
     ![](\_images/resident-dashboard.png)
 
-3. Resident clicks on `UIN services`.
+3. Resident clicks on `UIN Services`.
 
 
     ![](\_images/resident-loginpage1.png)
