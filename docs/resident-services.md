@@ -28,7 +28,7 @@ The key features provided on the Resident portal are:
        
 Below is an image summarizing the features provided in Resident portal.
 
-![](_images/rs-feature-list.png)
+![](_images/rs-feature-list-final.png)
 
 The relationship of Resident services with other services is listed below. 
 
