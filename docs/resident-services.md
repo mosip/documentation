@@ -78,11 +78,11 @@ For getting started with the resident portal, refer to the [Resident Portal User
 
 ## Build and Deploy
 
-To access the build and read through the deployment instructions, refer to the [Resident Services Deployment Guide](resident-services-deployment-guide.md).
+To access the build and read through the deployment instructions, refer to the [Resident Services Deployment Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-deployment-guide).
 
 ## Configurations
 
-For details related to resident portal configurations, refer to the [Configuration Guide](resident-portal-configuration-guide.md).
+For details related to resident portal configurations, refer to the [Configuration Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-configuration-guide).
 
 ## Developers Guide
 
