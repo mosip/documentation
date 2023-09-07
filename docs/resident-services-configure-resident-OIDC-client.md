@@ -149,16 +149,16 @@ POST - https://api-internal.dev2.mosip.net/v1/policymanager/policies
 
 **Step 3**: Publishing policy
 
-* POST - https://api-internal.dev2.mosip.net/v1/policymanager/policies/{{policyId}}/group/{{policyGroupId}}/publish
+POST - https://api-internal.dev2.mosip.net/v1/policymanager/policies/{{policyId}}/group/{{policyGroupId}}/publish
 Path params: 
 	* `policyId` - resident-oidc-client-policy
 	* `policyGroupId` - from previous response
 
 **Step 4**: Resident OIDC Client Partner self registration
 
-* **Swagger URL**: https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/partner-service-controller/partnerSelfRegistration
+**Swagger URL**: https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/partner-service-controller/partnerSelfRegistration
 
-* **Request Body**:
+**Request Body**:
   
 ````
 {
@@ -185,13 +185,13 @@ i. Get certificate from keymanager with below parameters:
 
 * **Swagger URL**: https://api-internal.dev2.mosip.net/v1/keymanager/swagger-ui/index.html?configUrl=/v1/keymanager/v3/api-docs/swagger-config#/keymanager/getCertificate
 
-*  A`ppID: "ROOT", refID: ""`
+*  `AppID: "ROOT", refID: ""`
 
 ii. Uploaded it as CA certificate: 
 
 * **Swagger URL** - https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/partner-service-controller/uploadCACertificate
 
-* **Request Body** (Example only):
+**Request Body** (Example only):
 
 ````
 {
@@ -243,9 +243,9 @@ i. Get certificate from keymanager with below parameters:
 
 ii. Uploaded it as Partner certificate: 
 
-* **Swagger URL** - https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/partner-service-controller/uploadPartnerCertificate
+**Swagger URL** - https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/partner-service-controller/uploadPartnerCertificate
 
-* **Request Body** (Example only):
+**Request Body** (Example only):
 
 ````
 {
@@ -268,7 +268,7 @@ ii. Uploaded it as Partner certificate:
 * Path param: 
 	* `partnerId` : resident-oidc-client-partner
 
-* **Request Body**:
+**Request Body**:
 
 ````
 {
@@ -302,7 +302,7 @@ Make not of the `mappingKey`.
 
 **Step 9**: Approve policy mapping:
 
-* Swagger url - https://api-internal.dev2.mosip.net/v1/partnermanager/partners/policy/{{mapping key}}
+**Swagger URL** - https://api-internal.dev2.mosip.net/v1/partnermanager/partners/policy/{{mapping key}}
 
 *Note: This mapping key will be returned as an output from policy mapping request.*
 
@@ -354,7 +354,7 @@ In the JSON public key, replace the `kid` value with the `keyId` in the earlier 
 
 **Step 2: Create the OIDC client in PMS**
 
-* **Swagger url**: https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/client-management-controller/createClient
+**Swagger URL**: https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/client-management-controller/createClient
 
 In the request body, make sure to replace thebelow attributes:
 
@@ -362,7 +362,7 @@ In the request body, make sure to replace thebelow attributes:
 2. `logoUri` - Correct hostname for the Resident UI
 3. `redirectUris` - Correct the hostname for Resident Service
 
-* **Request Body** (Example only):
+**Request Body** (Example only):
 
 ````
 {
