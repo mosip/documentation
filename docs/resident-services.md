@@ -74,7 +74,7 @@ For detailed description of Resident services, the code and design, refer to [re
 
 MOSIP provides a reference implementation of the Resident portal that can be customized as per the country’s needs. The sample implementation is available [here](https://github.com/mosip/resident-ui/tree/develop).
 
-For getting started with the resident portal, refer to the [Resident Services User Guide](resident-portal-user-guide.md).
+For getting started with the resident portal, refer to the [Resident Portal User Guide](resident-portal-user-guide.md).
 
 ## Build and Deploy
 
