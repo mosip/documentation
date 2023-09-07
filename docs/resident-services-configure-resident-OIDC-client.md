@@ -1,4 +1,4 @@
-# Configure the Resident OIDC Client
+# Configuring the Resident OIDC Client
 
 Below are the steps to create the Resident OIDC client as standard steps in DevOps after e-Signet and Resident deployment.
 
