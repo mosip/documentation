@@ -78,11 +78,11 @@ For getting started with the resident portal, refer to the [Resident Portal User
 
 ## Build and Deploy
 
-To access the build and read through the deployment instructions, refer to the [Resident Services Deployment Guide](resident-services-deployment-guide.nmd).
+To access the build and read through the deployment instructions, refer to the [Resident Services Deployment Guide](resident-portal-deployment-guide.nmd).
 
 ## Configurations
 
-For details related to resident portal configurations, refer to the [Configuration Guide](resident-services-configuration-guide.md).
+For details related to resident portal configurations, refer to the [Configuration Guide](resident-portal-configuration-guide.md).
 
 ## Developers Guide
 
