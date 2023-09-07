@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2023-09-07T06:16:11.410Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62" etag="qxUA7sL5HduuWC3pJJPp" version="21.7.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-07T06:18:26.439Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36 Edg/116.0.1938.62" etag="mkwike3v2V9-VRWjDVuJ" version="21.7.2" type="github">
   <diagram id="PEyNk4iIxxl0Euzo4a64" name="Page-1">
     <mxGraphModel dx="739" dy="470" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="LToKUSsu8nLhEfSpIroE-1" value="&lt;font style=&quot;font-size: 24px&quot;&gt;The resident&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFE599;strokeColor=#000000;" parent="1" vertex="1">
+        <mxCell id="LToKUSsu8nLhEfSpIroE-1" value="&lt;font style=&quot;font-size: 24px&quot;&gt;Resident&lt;/font&gt;" style="shape=umlActor;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFE599;strokeColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="1280" y="30" width="40" height="70" as="geometry" />
         </mxCell>
         <mxCell id="LToKUSsu8nLhEfSpIroE-2" value="" style="endArrow=none;html=1;" parent="1" edge="1">
@@ -38,7 +38,7 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="LToKUSsu8nLhEfSpIroE-6" value="&lt;span&gt;&lt;font style=&quot;font-size: 24px&quot;&gt;&lt;b&gt;UIN services&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF00;" parent="1" vertex="1">
+        <mxCell id="LToKUSsu8nLhEfSpIroE-6" value="&lt;span&gt;&lt;font style=&quot;font-size: 24px&quot;&gt;&lt;b&gt;UIN Services&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF00;" parent="1" vertex="1">
           <mxGeometry x="1020" y="240" width="160" height="100" as="geometry" />
         </mxCell>
         <mxCell id="LToKUSsu8nLhEfSpIroE-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="LToKUSsu8nLhEfSpIroE-8" target="LToKUSsu8nLhEfSpIroE-9" edge="1">
@@ -114,7 +114,7 @@
         <mxCell id="LToKUSsu8nLhEfSpIroE-21" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Secure My ID&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF99;" parent="1" vertex="1">
           <mxGeometry x="1100" y="525" width="120" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="LToKUSsu8nLhEfSpIroE-22" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Get personalised card&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF99;" parent="1" vertex="1">
+        <mxCell id="LToKUSsu8nLhEfSpIroE-22" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Get Personalised Card&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF99;" parent="1" vertex="1">
           <mxGeometry x="1100" y="605" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="LToKUSsu8nLhEfSpIroE-23" value="" style="endArrow=classic;html=1;" parent="1" edge="1">
@@ -126,7 +126,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="LToKUSsu8nLhEfSpIroE-24" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Get notifications&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF99;" parent="1" vertex="1">
+        <mxCell id="LToKUSsu8nLhEfSpIroE-24" value="&lt;font style=&quot;font-size: 18px&quot;&gt;Get Notifications&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFF99;" parent="1" vertex="1">
           <mxGeometry x="970" y="685" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="LToKUSsu8nLhEfSpIroE-26" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1">
