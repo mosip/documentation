@@ -34,41 +34,49 @@ Residents can use these services to view, update, change, manage or share their 
 
 1. Resident accesses the Resident Portal dashboard page.
 
-   ![](\_images/resident-dashboard.png)
 
-2. Resident clicks on `UIN services`.
+    ![](\_images/resident-dashboard.png)
 
-   ![](\_images/resident-loginpage1.png)
+3. Resident clicks on `UIN services`.
+
+
+    ![](\_images/resident-loginpage1.png)
 
    The login screen appears and the resident can choose one of the options to log in.
    
-3. To login with OTP authentication, the resident clicks on `Log in here> More ways to login > Login with OTP`.
+5. To login with OTP authentication, the resident clicks on `Log in here> More ways to login > Login with OTP`.
+
 
     ![](\_images/resident-loginpage2.png)
 
-4. Resident needs to enter valid VID in the `Enter Your VID` text field and check the box `I'm not a robot`.
+7. Resident needs to enter valid VID in the `Enter Your VID` text field and check the box `I'm not a robot`.
 
-    ![](\_images/resident-loginpage3new.png)
 
-5. Next, the resident clicks on the `Get OTP` button.
+     ![](\_images/resident-loginpage3new.png)
+
+9. Next, the resident clicks on the `Get OTP` button.
 
    * The resident receives the OTP on the registered phone number and email ID.
    * The resident needs to enter the valid OTP received within stipulated time and click the `Verify` button.
   
-   ![](\_images/resident-loginpage4.png)
 
-6. The resident is then navigated to the Consent page. On this page, the **Essential** and **Voluntary** claims are displayed. Additionally, they will also have to allow access to their data in **Authorize Scope** section to avail various services. Based on the consent provided by the resident, the services will be made available for modification.
+    ![](\_images/resident-loginpage4.png)
 
+11. The resident is then navigated to the Consent page. On this page, the **Essential** and **Voluntary** claims are displayed. Additionally, they will also have to allow access to their data in **Authorize Scope** section to avail various services. Based on the consent provided by the resident, the services will be made available for modification.
+
+ 
   ![](\_images/resident-consentpage1.png)
 
 7. The resident has the choice to select from the list of Voluntary claims while the Essential claims are mandatory.
 
+ 
   ![](\_images/resident-consentpage2.png)
 
 8. The resident should now click the `Continue` button. The system navigates the resident to the UIN Services menu page from where they can avail various services.
 
    _**Note**_: **Consent page will be available only for first time login.**
 
+ 
    ![](\_images/resident-dashboard.png)
 
 
@@ -359,15 +367,15 @@ The Resident Portal menu bar contains the following:
 
 ![](\_images/resident-menubar.png)
 
-## Book an appointment
+## Book an Appointment
 
 The residents can book an appointment for registration using the pre-registration portal. To do so, they can click on `Book an appointment` tile which will redirect them to the pre-registration portal. To know more about pre-registration portal, refer to this link [Pre-registration](https://docs.mosip.io/1.2.0/modules/pre-registration).
 
-## Verify Email ID/ Phone number
+## Verify email ID/ phone number
 
 The residents can use this feature to verify their registered email ID or phone number.
 
-**Steps to verify Email ID/ phone number**:
+**Steps to verify email ID/ phone number**:
 
 1. Resident clicks either on Verify email ID or Verify phone number option
 
