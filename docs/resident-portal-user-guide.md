@@ -30,7 +30,7 @@ Residents can use these services to view, update, change, manage or share their 
 
 #### Login
 
-**Pre-requisite**: To login into the Resident Portal, the resident should have their unique virtual ID (VID) or Unique Identification Number (UIN) and also have access to the registered email ID/ phone number to be able to receive the OTP.
+**Pre-requisites**: To login into the Resident Portal, the resident should have their unique virtual ID (VID) or Unique Identification Number (UIN) and also have access to the registered email ID/ phone number to be able to receive the OTP.
 
 1. Resident accesses the Resident Portal dashboard page.
 
