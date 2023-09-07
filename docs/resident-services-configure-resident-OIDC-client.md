@@ -34,7 +34,7 @@ Below are the steps to create the Resident OIDC client as standard steps in DevO
     "password": "mosip123",
     "appId": "partner",
     "clientId": "mosip-pms-client",
-    "clientSecret": "s0feRXeyqmPAzsKg"
+    "clientSecret": "*****"
   }
 }
 ````
