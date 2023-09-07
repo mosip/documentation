@@ -21,7 +21,7 @@ Below are the steps to create the Resident OIDC client as standard steps in DevO
    
 * Swagger url - https://api-internal.dev2.mosip.net/v1/authmanager/swagger-ui/index.html?configUrl=/v1/authmanager/v3/api-docs/swagger-config#/authmanager/getAllAuthTokens
 
-* Request body:
+* **Request Body**:
   
 ````
 {
@@ -45,11 +45,13 @@ Below are the steps to create the Resident OIDC client as standard steps in DevO
 
 **Step 1**: Creating a policy group for resident OIDC Client
 
-* Note: Since policymanager service swagger does not work, you can use postman for APIs in it.*
+* Note: Since policymanager service swagger does not work, you can use postman for APIs in it.
+  
 * POST - `https://api-internal.dev2.mosip.net/v1/policymanager/policies/group/new`
 
 
-**Request body**:
+**Request Body**:
+
 ````
 {
   "id": "string",
@@ -69,7 +71,8 @@ Below are the steps to create the Resident OIDC client as standard steps in DevO
 
 POST - https://api-internal.dev2.mosip.net/v1/policymanager/policies
 
-**Request body**:
+**Request Body**:
+
 ````
 {
 	"id": "",
@@ -151,11 +154,12 @@ Path params:
 	* `policyId` - resident-oidc-client-policy
 	* `policyGroupId` - from previous response
 
-**Step 4**: Resident OIDC Client Partner self registration:
+**Step 4**: Resident OIDC Client Partner self registration
 
 * Swagger url: https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/partner-service-controller/partnerSelfRegistration
 
 * **Request Body**:
+  
 ````
 {
   "id": "string",
@@ -175,14 +179,17 @@ Path params:
 }
 ````
 
-**Step 5**: Upload ROOT Certificate as CA certificate:
+**Step 5**: Upload ROOT Certificate as CA certificate
+
 i. Get certificate from keymanager with below parameters:
+
 * Swagger URL: https://api-internal.dev2.mosip.net/v1/keymanager/swagger-ui/index.html?configUrl=/v1/keymanager/v3/api-docs/swagger-config#/keymanager/getCertificate
 
-*AppID: "ROOT", refID: ""
+*  AppID: "ROOT", refID: ""
 
 ii. Uploaded it as CA certificate: 
-*Swagger UIR - https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/partner-service-controller/uploadCACertificate
+
+* Swagger UIR - https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/partner-service-controller/uploadCACertificate
 
 **Request Body** (Example only):
 
@@ -199,16 +206,20 @@ ii. Uploaded it as CA certificate:
 }
 ````
 
-**Step 6**: Upload RESIDENT certificate as CA certificate:
+**Step 6**: Upload RESIDENT certificate as CA certificate
+
 i. Get certificate from keymanager with below parameters:
+
 * Swagger URL: https://api-internal.dev2.mosip.net/v1/keymanager/swagger-ui/index.html?configUrl=/v1/keymanager/v3/api-docs/swagger-config#/keymanager/getCertificate
 
-*AppID: "RESIDENT", refID: ""
+* AppID: "RESIDENT", refID: ""
 
 ii. Uploaded it as CA certificate: 
-*Swagger UIR - https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/partner-service-controller/uploadCACertificate
+
+* Swagger UIR - https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/partner-service-controller/uploadCACertificate
 
 **Request Body** (Example only):
+
 ````
 {
   "id": "string",
@@ -222,17 +233,20 @@ ii. Uploaded it as CA certificate:
 }
 ````
 
-**Step 7**: Upload `RESIDENT : IDP_USER_INFO` certificate as Partner certificate:
+**Step 7**: Upload `RESIDENT : IDP_USER_INFO` certificate as Partner certificate
 
 i. Get certificate from keymanager with below parameters:
+
 * Swagger URL: https://api-internal.dev2.mosip.net/v1/keymanager/swagger-ui/index.html?configUrl=/v1/keymanager/v3/api-docs/swagger-config#/keymanager/getCertificate
 
-*AppID: "RESIDENT", refID: "IDP_USER_INFO"
+* AppID: "RESIDENT", refID: "IDP_USER_INFO"
 
 ii. Uploaded it as Partner certificate: 
-*Swagger UIR - https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/partner-service-controller/uploadPartnerCertificate
+
+* Swagger UIR - https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/partner-service-controller/uploadPartnerCertificate
 
 **Request Body** (Example only):
+
 ````
 {
   "id": "string",
@@ -254,7 +268,8 @@ https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?conf
 * Path param: 
 	* `partnerId` : resident-oidc-client-partner
 
-**Request Body**
+**Request Body**:
+
 ````
 {
   "id": "string",
@@ -268,7 +283,8 @@ https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?conf
 }
 ````
 
-**Output**
+**Output**:
+
 ````
 {
   "id": "string",
@@ -285,11 +301,13 @@ https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?conf
 Make not of the `mappingKey`.
 
 **Step 9**: Approve policy mapping:
+
 * Swagger url - https://api-internal.dev2.mosip.net/v1/partnermanager/partners/policy/{{mapping key}}
 
 *Note: This mapping key will be returned as an output from policy mapping request.*
 
 **Request Body**:
+
 ````
 {
   "id": "string",
@@ -317,7 +335,7 @@ Make not of the `mappingKey`.
 
 * Swagger URL: https://api-internal.dev2.mosip.net/v1/keymanager/swagger-ui/index.html?configUrl=/v1/keymanager/v3/api-docs/swagger-config#/keymanager/getAllCertificates
 
-*AppID: "RESIDENT", refID: ""
+* AppID: "RESIDENT", refID: ""
 
 From the response get the `keyId`. This will be the `kid` attribute in the OIDC client creation step.
 
@@ -337,12 +355,14 @@ In the JSON public key, replace the `kid` value with the `keyId` in the earlier 
 
 * Swagger url: https://api-internal.dev2.mosip.net/v1/partnermanager/swagger-ui/index.html?configUrl=/v1/partnermanager/v3/api-docs/swagger-config#/client-management-controller/createClient
 
-In the request body make sure to replace below attributes:
+In the request body, make sure to replace thebelow attributes:
+
 1. `publicKey` - the JWKS public key JSON from earlier step
 2. `logoUri` - Correct hostname for the Resident UI
 3. `redirectUris` - Correct the hostname for Resident Service
 
 **Request Body** (Example only):
+
 ````
 {
 	"id": "string",
@@ -377,7 +397,7 @@ In the request body make sure to replace below attributes:
 
 The response will contain the Resident OIDC client ID in `clientId` attribute.
 
-**Step 3**: Configure the Resident OIDC client in `resident-default.properties`
+**Step 3**: Configure the Resident OIDC client in `resident-default.properties`.
 
 Configure the above obtained Resident OIDC client ID `resident-default.properties` with property name `mosip.iam.module.clientID`.
 
