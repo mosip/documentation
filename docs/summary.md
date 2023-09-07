@@ -81,7 +81,7 @@
   * [Resident Services](resident-services.md)
     * [Resident Services Developers Guide](resident-services-developer-guide.md)
     * [Resident Services UI Developers Guide](resident-services-ui-developer-guide.md)
-    * [Resident Portal Configuration Guide](resident-portal-configuration-portal.md)
+    * [Resident Portal Configuration Guide](resident-portal-configuration-guide.md)
     * [Residental Portal Deployment Guide](resident-portal-deployment-guide.md)
     * [Configuring Resident OIDC Client](resident-services-configure-resident-OIDC-client.md)
     * [Resident Portal User Guide](resident-portal-user-guide.md)
