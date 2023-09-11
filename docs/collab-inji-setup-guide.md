@@ -9,16 +9,14 @@ Before you start with setting up Inji, ensure you have the following in place.
 1. Inji APK File: For Android devices,
    * If you are using an Android smartphone, click [here](https://drive.google.com/drive/folders/1SRHhFxQBNfOc-cdPU8VlKecIdc-WkuGZ) to get the Inji `apk` file for installation.
    * Transfer the `apk` file onto the smartphone on which it is to be installed.
-     
 2. Inji Test Flight Access: For iOS devices,
    * If you are using an iOS device, fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSd\_P4OMwimjTxGlJ2bfLob2TIt9UaaZDQF3sBO74e9TBST-vQ/viewform) here to get access to the Inji app on test flight.
    * You will receive an email on the email ID (Apple ID) provided in the form.
    * Follow the instructions in the email and access Inji from the iOS device on which it is to be installed.
-     
 3.  UIN Credentials:
 
     * Issuance of UIN (Unique identification number) as a demo credential will allow you to explore Inji’s capabilities and experience seamless VC sharing firsthand.
-    * Fill out the UIN generation [form](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform) here and we will generate the demo credentials, which you can use subsequently on the Inji app to download and share Verifiable Credentials (VCs).
+    * Fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSd\_P4OMwimjTxGlJ2bfLob2TIt9UaaZDQF3sBO74e9TBST-vQ/viewform) here and we will generate the demo credentials, which you can use subsequently on the Inji app to download and share Verifiable Credentials (VCs).
 
     _Note_: Please use 111111 as the OTP, for any OTP based feature in Collab environment.
 
