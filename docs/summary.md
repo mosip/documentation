@@ -78,7 +78,7 @@
     * [Manual Adjudication and Verification](manual-adjudication-and-verification.md)
     * [Registration Processor Developers Guide](registration-processor-developers-guide.md)
   * [Reporting](reporting.md)
-  * [Resident Services](resident-services.md)
+  * [Resident Portal](resident-services.md)
     * [Resident Services Developers Guide](resident-services-developer-guide.md)
     * [Resident Services UI Developers Guide](resident-services-ui-developer-guide.md)
     * [Resident Portal Configuration Guide](resident-portal-configuration-guide.md)
