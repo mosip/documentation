@@ -1,4 +1,10 @@
-# Resident Services
+# Resident Portal
+
+## Release Notes
+
+**Support**: Developer Release
+
+**Release Date**: 12th Sept, 2023
 
 ## Overview
 
@@ -54,7 +60,7 @@ _Note: The numbers do not signify sequence of operations or the control flow._
 17.	__Key Manager__: Resident services uses Key Manager to encrypt or decrypt the data used across features.
 
 
-## Design principles
+## Design Principles
 
 The design of the Resident portal embodies the following principles:
 
@@ -70,7 +76,7 @@ The design of the Resident portal embodies the following principles:
 
 For detailed description of Resident services, the code and design, refer to [resident services repo](https://github.com/mosip/resident-services/tree/develop).
 
-## Resident Portal
+## Resident Portal UI
 
 MOSIP provides a reference implementation of the Resident portal that can be customized as per the country’s needs. The sample implementation is available [here](https://github.com/mosip/resident-ui/tree/develop).
 
