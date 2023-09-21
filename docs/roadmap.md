@@ -5,7 +5,7 @@ The MOSIP community strives to deliver major [releases](https://docs.mosip.io/1.
 MOSIP has been developed with a focus on addressing challenges related to identity management, privacy, security, and data protection. It is designed to offer flexibility and modularity, allowing governments to tailor identity systems according to their unique requirements.
 
 
-## Our Vision
+## Principles and Vision
 
 MOSIP is based on several key principles that guide its development and implementation. These principles are closely related to the roadmap in the following ways: 
 
