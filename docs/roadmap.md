@@ -4,7 +4,6 @@ The MOSIP community strives to deliver major [releases](https://docs.mosip.io/1.
 
 MOSIP has been developed with a focus on addressing challenges related to identity management, privacy, security, and data protection. It is designed to offer flexibility and modularity, allowing governments to tailor identity systems according to their unique requirements.
 
-
 ## Principles and Vision
 
 MOSIP is based on several key principles that guide its development and implementation. These principles are closely related to the roadmap in the following ways: 
@@ -27,10 +26,9 @@ Below is an illustration of some of the key features and principles upon which t
 
 ![](\_images/roadmap-img2.png)
 
-MOSIP encourages you to participate in building a digital ID infrastructure that empowers individuals and organizations to securely and effectively access a wide range of services while safeguarding privacy and data integrity. Connect to the community to contribute your expertise and ideas, making a meaningful impact on the development of a robust and inclusive digital ID ecosystem that benefits everyone. To know more, click [here](https://community.mosip.io/).
+While we embark on the journey outlined in our roadmap, we at MOSIP encourage you to participate in building a digital ID infrastructure that empowers individuals and organizations to securely and effectively access a wide range of services while safeguarding privacy and data integrity. Connect with us on the [Community](https://community.mosip.io/) to contribute your expertise and ideas, making a meaningful impact on the development of a robust and inclusive digital ID ecosystem that benefits everyone.
 
-
-The roadmap serves as a prelude to the year-wise links, providing a strategic overview of the journey ahead and highlighting key milestones and objectives for each year.
+Head below to navigate through our year-wise roadmap, that provides a strategic overview of the journey ahead and highlightes the key milestones and objectives for each year.
 
 * [Roadmap 2023-2024]().
 
