@@ -28,9 +28,10 @@ Below is an illustration of some of the key features and principles upon which t
 
 While we embark on the journey outlined in our roadmap, we at MOSIP encourage you to participate in building a digital ID infrastructure that empowers individuals and organizations to securely and effectively access a wide range of services while safeguarding privacy and data integrity. Connect with us on the [Community](https://community.mosip.io/) to contribute your expertise and ideas, making a meaningful impact on the development of a robust and inclusive digital ID ecosystem that benefits everyone.
 
-Head below to navigate through our year-wise roadmap, that provides a strategic overview of the journey ahead and highlightes the key milestones and objectives for each year.
+Head below to navigate through our year-wise roadmap that provides a strategic overview of the journey ahead and highlights the key milestones and objectives for each year!
 
-* [Roadmap 2023-2024]().
+* [Roadmap 2023-2024]()
+* [Roadmap 2024-2025]()
 
 
 
