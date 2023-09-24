@@ -4,10 +4,10 @@ The ".well-known" folder is a convention used in web development to provide a st
 
 ## Why should we use ".well-know" directory in MOSIP?
 
-MOSIP can use the ".well-known" directory to serve the below purposes:
+MOSIP can use the ".well-known" directory to serve the following purposes:
 
 * **Standardization**: To provide a standardized location for specific public files and resources related to web services and security. It makes it easier for developers and web clients using MOSIP to know where to look for important information.
-* **Security**: Security related files and resources can be placed in the ".well-known" directory, such as the public certificate for encryption and signature verification can be placed here. 
+* **Security**: Security-related files and resources can be placed in the ".well-known" directory, such as the public certificate for encryption and signature verification can be placed here. 
 * **Interoperability**: By following the ".well-known" convention, web developers using MOSIP can ensure interoperability with various web standards and protocols. For example, MOISP shares the context file which contains the structure of its Verifiable Credentials.
 * **Ease of Configuration**: Web servers can be configured to serve files from the ".well-known" directory without needing custom configurations for each specific resource. This simplifies the server setup and maintenance process.
 * **Transparency**: For matters related to security policies and contact information, such as in the "security.txt" file, placing them in a well-known location makes it transparent and easily accessible to anyone interested in the website's security practices.
@@ -16,6 +16,13 @@ MOSIP can use the ".well-known" directory to serve the below purposes:
 
 MOSIP's ".well-know" directory contains three files,
 * controller.json
+* mosip-context.json
+* public-key.json
+
+### controller.json
+
+The "controller.json" file is used in MOSIP to share the details of the public key using which a MOSIP-issued verifiable credential can be asserted.
+
 ```
 {
   "@context": "https://w3id.org/security/v2",
@@ -26,7 +33,10 @@ MOSIP's ".well-know" directory contains three files,
 }
 ```
 
-* mosip-context.json
+### mosip-context.json
+
+The "mosip-context.json" file contains the schema of the subject in the MOSIP-issued verifiable credential.
+
 ```
 {
   "@context": [{
@@ -87,7 +97,10 @@ MOSIP's ".well-know" directory contains three files,
 }
 ```
 
-* public-key.json
+### public-key.json
+
+The "public-key.json" file contains the public key using which the signature of the MOSIP-issued verifiable credential can be asserted.
+
 ```
 {
   "@context": "https://w3id.org/security/v2",
