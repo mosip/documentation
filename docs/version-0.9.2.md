@@ -1,8 +1,8 @@
-# Version 0.9.2
+# Version INJI dev-preview-1
 
-**Release Name**: Inji 0.9.2 (Patch)
+**Release Name**: INJI dev-preview-1
 
-**Upgrade From**: Inji 0.9.1 (Patch)
+**Upgrade From**: INJI 0.9.1 (Patch)
 
 **Support**: Developer Release
 
@@ -10,69 +10,81 @@
 
 ## Overview
 
-The 0.9.2 version of Inji is the second patch release on top of Inji 0.9.1. This release has bug fixes for features like -----------------------------Downloading and sharing the VC, Wallet binding, face authentication on resident’s phone, etc.
+The developer preview version of INJI is the release on top of INJI 0.9.1. Key highlights of the release are:
+
+ * Enhanced UI
+ * Additional functional flows in INJI
+ * Internal enhancements
+ * Bug fixes
 
 ## Summary
 
-Below is a summary of some of the important bug fixes made in this version.
+Below is the detailed summary of the release.
 
+### Change in UI implementation
 
+* New UI for INJI:
+  * The INJI logo has received a fresh update.
+  * This redesign promises an enriched user experience.
+  * Introduction sliders have been introduced. 
+  * Helpful FAQ screens are provided.
+  * Verifier functionality is conveniently accessible from the settings screen. 
+  * VC pinning is now available. 
+    * Currently, the pinning feature supports a single VC.
+  * VC activation options are incorporated into the kebab menu. 
+  * Easy VC removal from INJI. 
+  * Improved audit log filtering based on VC. 
+  
+### Change in functional implementation
 
+* Branding the App as INJI:
+  * We've rebranded the application, transitioning from "Resident App" to the more streamlined and recognisable "INJI".
 
-### Internal Improvements 
+* Ability to Choose Language During App Setup:
+  * INJI app users can configure the application in six distinct languages:
+      * English
+      * Filipino
+      * Arabic
+      * Hindi
+      * Kannada
+      * Tamil
 
-The 0.9.1 version of Inji mainly focuses on bug fixes along with some internal improvements like:
+* Warning When Device Storage is Beyond the Threshold:
+  * INJI now offers customisable storage limits:
+    * For VC downloads, the threshold is set to 5MB. When the device's remaining storage space falls below this limit, INJI displays a warning message. However, users can still continue to verify and share VCs.
+    * For INJI audit logs, the threshold is set to 1MB. Once the device reaches this limit, INJI users will be restricted to viewing VCs, unable to perform additional actions.
 
-* Ability to build on Windows
+* Traceability with Unique ID for Customer Support:
+  * We've implemented a unique identification called as an Application ID for customer support interactions. Each 
+    support request is now assigned a traceable and distinct ID, allowing our support teams to efficiently track, manage, and resolve customer issues.
+   
+### Internal improvements
 
-* Abilty to build and push iOS builds to TestFlight without any human intervention
+* Improved Bluetooth State and Permission Handling:
+  * We have refined the management of Bluetooth states and permissions.
 
-### Change in implementation
+* Removed Google Nearby Implementation:
+    * We've transitioned to using Tuvali for Bluetooth Low Energy (BLE) communication, enhancing the connectivity experience.
 
-The older version of Inji app (0.9.0) will not be compatible with the newer version of Inji, due to the following reasons:
-
-* The storage has been changed from _Async Storage_ to _mmkv_ storage, which are two different storage mechanisms.
-
-* The VC sharing might break as Tuvali has updated the type of data shared across devices, hence it can cause *array index out of bounds exception*.
-
+* Encrypted VC’s Metadata:
+  * We now calculate and securely store an encrypted HASH (HMAC SHA256) of the VC's metadata key in the database, bolstering data security.
+    
 ### Bug fixes
 
-* **Bug fix**: All the binded VCs will be shown and every binded VC can be used for online login irrespective of the timeframe of binding. #[INJI-80](https://mosip.atlassian.net/browse/INJI-80)
+* **Bug fix**: Reduced the app size for Android  #[INJI-103](https://mosip.atlassian.net/browse/INJI-103)
 
-* **Bug fix**: Tuvali now has the capability to specify an error code to let Inji know where the error has occurred during VC sharing instead of displaying the default error message. #[INJI-71](https://mosip.atlassian.net/browse/INJI-71)
+* **Bug fix**: Resolved connectivity issue when sharing VC  #[INJI-207](https://mosip.atlassian.net/browse/INJI-207)
 
-* **Bug fix**: Added capability to build APKs on Windows. #[INJI-53](https://mosip.atlassian.net/browse/INJI-53) #[INJI-30](https://mosip.atlassian.net/browse/INJI-30)
+* **Bug fix**: Fixed QR/ Esignet login using INJI app #[INJI-209](https://mosip.atlassian.net/browse/INJI-209), [INJI-49](https://mosip.atlassian.net/browse/INJI-209)
 
-* **Bug fix**: In iOS, when the user tries to go back from the OTP screen while generating VID from AID, Inji was crashing. As a fix, it was made sure that the models (overlays) are not overlapping. #[INJI-46](https://mosip.atlassian.net/browse/INJI-46)
-
-* **Bug fix**: Inji now has the capability to render the resident's demographic information in the language chosen by the Residents. #[INJI-44](https://mosip.atlassian.net/browse/INJI-44)
-
-* **Bug fix**: Inji now has the capability to identify when the App is low on storage and notify the same to the Residents. #[INJI-42](https://mosip.atlassian.net/browse/INJI-42)
-
-* **Bug fix**: During wallet binding when the auth token is expired, the first call made for wallet binding will be used for refreshing the auth token, which then makes the current call to fail and subsequent calls to succeed. As a fix, the wallet binding call will refresh the token and complete the binding process. #[INJI-41](https://mosip.atlassian.net/browse/INJI-41)
-
-* **Bug fix**: Inji had a restriction to the overall storage size, in that, we were not able to download more than 29 VCs. As a fix, we migrated from Async storage to MMKV which does not have any upper limit on the storage size. #[INJI-38](https://mosip.atlassian.net/browse/INJI-38)
-
-* **Bug fix**: In the Home Screen, the tab indicators were not properly working in RTL. After the fix, RTL is being rendered properly. #[INJI-36](https://mosip.atlassian.net/browse/INJI-36)
-
-* **Bug fix**: The VCs that are added were getting stored in the app memory rather than user data. As a fix, MMKV storage was introduced (as opposed to async storage) to solve this by moving the VC data to user data instead of App memory. #[INJI-35](https://mosip.atlassian.net/browse/INJI-35)
-
-* **Bug fix**: A few texts were not being rendered in Arabic. The Arabic translations were added to make sure when the resident has chosen Arabic language, all the data is being rendered in Arabic. #[INJI-34](https://mosip.atlassian.net/browse/INJI-34)
-
-* **Bug fix**: Inji application was not consistent in different locales, and some literals were not properly translated in the native languages. As a fix, all the missed out translations were added. #[INJI-33](https://mosip.atlassian.net/browse/INJI-80) #[INJI-32](https://mosip.atlassian.net/browse/INJI-80)
-
-* **Bug fix**: The error popup shown during the BLE transfer is updated, the popup will now contain few error codes which depicts different stages where the failure has happened in the BLE layer. #[INJI-28](https://mosip.atlassian.net/browse/INJI-28)
-
-* **Bug fix**: There was a delay in reading and writing the VC from the device, so the storage mechanism has been changed from Async Storage to MMKV Storage, which ensures faster reading and writing. #[INJI-7](https://mosip.atlassian.net/browse/INJI-7)
-
-* **Bug fix**: Few devices failed to establish the connection while sharing of VCs were initiated (Vivo Y73 & Redmi K20 Pro). To resolve this, setting preferred PHY was removed and missing BLE permissions for Android 12 and above were added. #[INJI-39](https://mosip.atlassian.net/browse/INJI-39)
-
-* **Bug fix**: The VC transfers from iOS device always failed when Android 13 was the Verifier. As a fix, Bluetooth negotiation was updated to support Google Pixel (Android 13). #[INJI-68](https://mosip.atlassian.net/browse/INJI-68)
+* **Bug fix**: Resolved BLE issues #[INJI-146](https://mosip.atlassian.net/browse/INJI-146), [INJI-70](https://mosip.atlassian.net/browse/INJI-70)
 
 
 ## Documentation
 
 * [Feature Documentation](./)
-* [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta)
-* [QA Report](https://docs.mosip.io/inji/versions/version-0.9.1/test-report-0.9.1)
-* To know more about Inji, watch the [video](https://www.youtube.com/watch?v=JWxJfHMVMFI)!
+* [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/INJI-mobile-app-beta)
+* [QA Report](https://docs.mosip.io/INJI/versions/version-0.9.2/test-report-0.9.2)
+* To know more about INJI, watch the [video](https://www.youtube.com/watch?v=70uDsa9mKjE)
+
+
