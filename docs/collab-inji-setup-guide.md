@@ -11,6 +11,7 @@ Before you start with setting up Inji, ensure you have the following in place.
    * Transfer the `apk` file onto the smartphone on which it is to be installed.
 2. Inji Test Flight Access: For iOS devices,
    * If you are using an iOS device, fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSd\_P4OMwimjTxGlJ2bfLob2TIt9UaaZDQF3sBO74e9TBST-vQ/viewform) here to get access to the Inji app on test flight.
+     * Ensure you have downloaded the test flight application from your app store
    * You will receive an email on the email ID (Apple ID) provided in the form.
    * Follow the instructions in the email and access Inji from the iOS device on which it is to be installed.
 3.  UIN Credentials:
