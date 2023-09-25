@@ -42,7 +42,7 @@ To experience the various methods of login and authentication in the demo health
 
 **Step 1: Access the health services portal**
 
-  * Navigate to the relying party’s demo [**Health Services**](https://healthservices-esignet.collab.mosip.net/) portal in the Collab environment, and click on `Sign In with e-Signet`.
+  Navigate to the relying party’s demo [**Health Services**](https://healthservices-esignet.collab.mosip.net/) portal in the Collab environment, and click on `Sign In with e-Signet`.
 
 **Step 2: Explore the various authentication mechanisms**
 
@@ -59,6 +59,8 @@ To experience the various methods of login and authentication in the demo health
 3. Biometrics-Based Login & Authentication
 
     * Experience the process of logging in using biometrics, by following the instructions provided [here](https://docs.esignet.io/esignet-end-user-guide/login-with-biometrics).
+  
+    > Note: Biometric-based login with Mock MDS is currently unavailable in the Collab environment. Stay tuned to MOSIP [Community](https://community.mosip.io/) for updates!
 
 ### Additional Video Resources
 
