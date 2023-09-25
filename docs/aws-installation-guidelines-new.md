@@ -361,7 +361,7 @@ Once the rancher cluster is ready we need ingress and storage class to be set fo
             kubectl apply -f sc.yaml
             ```
             
-    *   In case of performance setup use EBS storage as give [here](https://www.stacksimplify.com/aws-eks/kubernetes-storage/install-aws-ebs-csi-driver-on-aws-eks-for-persistent-storage/).
+    *   we need the EBS driver for our storage class to work, follow the steps [here](https://www.stacksimplify.com/aws-eks/kubernetes-storage/install-aws-ebs-csi-driver-on-aws-eks-for-persistent-storage/) to setup EBS driver.
         
 
 Domain name
@@ -579,7 +579,8 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
             kubectl apply -f sc.yaml
             ```
             
-    *   In case of performance setup use EBS storage as give [here](https://www.stacksimplify.com/aws-eks/kubernetes-storage/install-aws-ebs-csi-driver-on-aws-eks-for-persistent-storage/).
+    *   we need the EBS driver for our storage class to work, follow the steps [here](https://www.stacksimplify.com/aws-eks/kubernetes-storage/install-aws-ebs-csi-driver-on-aws-eks-for-persistent-storage/) to setup EBS driver.
+    *   also we need  EFS CSI driver for the regproc services, because EBS driver only supports RWO but we need RWX, follow these [steps](https://docs.aws.amazon.com/eks/latest/userguide/efs-csi.html) to setup EFS CSI driver.  
         
 *   Ingress and load balancer (LB) :
     
@@ -791,7 +792,7 @@ Mosip uses Rancher Fluentd and elasticsearch to collect logs from all services a
     ./install-all.sh
     ```
     
-*   Check detailed installation instruction of all the [external componets](https://mosip.atlassian.net/wiki/spaces/DevOps/pages/edit-v2/1046020129?draftShareId=26bfe209-411a-4a21-bd10-a2c65009721c)
+*   Check detailed installation instruction of all the [external componets](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies).
     
 
 ### MOSIP Modules Deployment
@@ -803,7 +804,7 @@ Mosip uses Rancher Fluentd and elasticsearch to collect logs from all services a
         ./install-all.sh
         ```
         
-*   Check the detailed MOSIP Modules Deployment [MOSIP Modular installation](https://mosip.atlassian.net/wiki/spaces/DevOps/pages/1036386394/MOSIP+Modules+Deployment) steps.
+*   Check the detailed MOSIP Modules Deployment [MOSIP Modular installation](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-modules-deployment) steps.
     
 
 ### API Testrig
