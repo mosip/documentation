@@ -4,7 +4,7 @@
 
 **Upgrade From**: 1.0.0
 
-**Release Date**: August 2023
+**Release Date**: 22nd September 2023
 
 ## Overview
 
@@ -30,6 +30,12 @@ Below are the features available in the release,
 * Multi-language support
 * Captcha validation
 * Consent storage
+
+## Repositories Released
+* e-Signet: [v1.1.0](https://github.com/mosip/esignet/tree/v1.1.0)
+* artifactory-ref-impl: [v1.2.0.1-B5](https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.1-B5)
+
+For details for deployment go through the [helm charts in e-Signet repository](https://github.com/mosip/esignet/tree/v1.1.0/helm).
 
 ## Documentation
 
