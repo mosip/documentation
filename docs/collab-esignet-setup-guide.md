@@ -12,7 +12,7 @@ Let's dive into the details and embark on this informative journey of seamless a
 
     * Fill the UIN generation [form](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform) here and we will generate the demo credentials which you can subsequently use on the e-Signet integrated health portal for authentication.
 
-2. **Mock biometrics setup - To enable biometrics-based login**
+2. **Mock biometrics setup- To enable biometrics-based login**
 
     * Ensure that your machine is running Windows.
 
@@ -26,7 +26,7 @@ Let's dive into the details and embark on this informative journey of seamless a
 
     * Double-click on the `run_auth.bat` file to start the authentication MDS.
 
-3. **Availability of Inji app for wallet/Inji-based login**
+3. **Availability of Inji app for wallet/ Inji-based login**
 
     * To be able to use the wallet-based authentication mechanism on the portal, ensure you have the Inji app installed on your mobile device. For details on how to set up and use Inji, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide). 
 
