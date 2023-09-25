@@ -59,8 +59,9 @@ To experience the various methods of login and authentication in the demo health
 3. Biometrics-Based Login & Authentication
 
     * Experience the process of logging in using biometrics, by following the instructions provided [here](https://docs.esignet.io/esignet-end-user-guide/login-with-biometrics).
+      
   
-    > Note: Biometric-based login with Mock MDS is currently unavailable in the Collab environment. Stay tuned to MOSIP [Community](https://community.mosip.io/) for updates!
+   _Note_: Biometric-based login with Mock MDS is currently unavailable in the Collab environment. Stay tuned to MOSIP [Community](https://community.mosip.io/) for updates!
 
 ### Additional Video Resources
 
