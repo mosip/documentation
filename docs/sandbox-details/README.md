@@ -16,10 +16,5 @@ Synergy is our stable environment where the latest released version of the MOSIP
 
 Environment links are available [here](https://synergy.mosip.net/).
 
-***
-
-Note: Data gathered as a part of the form will need your explicit consent.\
-(Consent\_v1\_25Sep23: The information provided above will be used to create demo credential(s) for youself/ onboard you as a partner, to facilitate the usage of MOSIP/ Inji/ e-Signet. Please tick the box below to provide your consent towards usage of your data.)
-
 
 
