@@ -162,6 +162,7 @@
      * [Pre-registration Guide](collab-pre-registration-guide.md)
 * [Roadmap](engineering-roadmap.md)
      * [Roadmap 2023-2024](roadmap-2023-2024.md)
+     * [Roadmap 2024-2025](roadmap-2024-2025.md)
 * [MOSIP Documentation Style Guide](mosip-documentation-style-guide.md)
 * [Documentation for 1.1.5](https://docs.mosip.io/1.1.5)
 * [License](license.md)
