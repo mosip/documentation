@@ -41,8 +41,6 @@ Login to the portal with a mobile number or valid email ID. Refer below for deta
 
 * Enter a valid email ID and an OTP will be sent to your email address. You can then enter the OTP received on the provided email ID to verify yourself and login to the portal.
 
-   ![](\_images/pre-reg-collab-guide1.png)
-
 **Step 3: Explore the features on the Pre-registration Portal**: 
 
 To access all the features of the Pre-registration portal and explore the pre-registration process in MOSIP, refer to our [end user guide](https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-user-guide).
@@ -52,9 +50,9 @@ Note: Please use 111111 as the OTP, for any OTP-based feature in the Collab envi
 
 ### Additional Resources
 
-Watch this informative video titled [LTS Pre-registration UI Demo](https://youtu.be/eHb26gn5MoQ?si=xDt__J3wzoEDnB8z) for a visual walkthrough of the features.
+Watch this informative video [LTS Pre-registration UI Demo](https://youtu.be/eHb26gn5MoQ?si=xDt__J3wzoEDnB8z) for a visual walkthrough of the features.
 
-Click [here](https://docs.mosip.io/1.2.0/modules/pre-registration) for more information about Pre-registration.
+For more information about Pre-registration, click [here](https://docs.mosip.io/1.2.0/modules/pre-registration).
 
 > By following these instructions, you will be equipped to seamlessly set up the pre-registration portal and effectively use all the features and book an appointment.
 
@@ -62,7 +60,7 @@ Click [here](https://docs.mosip.io/1.2.0/modules/pre-registration) for more info
 
 If you require any assistance or encounter any issues during the testing and integration process, kindly reach out to us through the support mechanism provided below.
 
-* Navigate to [Community](https://www.mosip.io/community.php).
+* Navigate to [Community](https://community.mosip.io/).
 
 * Provide a detailed description of the support you require or provide detailed information about the issue you have encountered, including steps to reproduce, error messages, logs, and any other relevant details.
 
