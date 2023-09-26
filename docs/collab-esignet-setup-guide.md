@@ -1,6 +1,8 @@
 # e-Signet Setup Guide
 
-Welcome to the comprehensive guide on how to test and experience the various features that [**e-Signet**](https://docs.esignet.io/) offers in MOSIP’s [**Collab**](https://collab.mosip.net/) environment! In this guide, we will walk you through the step-by-step process of authenticating yourself on a relying party’s demo health service portal that has integrated with e-Signet and also help you explore its various modes of authentication. This will enable you to get conversant with a secure & streamlined way of authenticating yourself and accessing online services, while ensuring your identity & information remains protected.
+Welcome to the comprehensive guide on how to setup and demonstrate [**e-Signet**](https://docs.esignet.io/) in MOSIP's Collab environment, and experience its various features. \
+\
+In this guide, we will walk you through the step-by-step process of authenticating yourself on a relying party’s demo health service portal that has integrated with e-Signet and also help you explore its various modes of authentication. This will enable you to get conversant with a secure & streamlined way of authenticating yourself and accessing online services, while ensuring your identity & information remains protected.
 
 Let's dive into the details and embark on this informative journey of seamless authentication and exploration.
 
@@ -59,7 +61,7 @@ Navigate to the relying party’s demo [**Health Services**](https://healthservi
 
 If you require any assistance or encounter any issues during the testing and integration process, kindly reach out to us through the support mechanism provided below.
 
-* Navigate to [Community](https://www.mosip.io/community.php).
+* Navigate to [Community](https://community.mosip.io/).
 * Provide a detailed description about the support you require or provide detailed information about the issue you have encountered, including steps to reproduce, error messages, logs and any other relevant details.
 
 _Thank you. Wishing you a pleasant experience!_
