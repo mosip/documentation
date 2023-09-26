@@ -1,4 +1,4 @@
-# Setup Guides- Collab Environment 
+# Collab Environment Setup Guides
 
 Hello Partner! Looking to collaborate with us? Look no further than here!
 
@@ -8,7 +8,7 @@ The Collab environment in [MOSIP ](https://docs.mosip.io/1.2.0/)offers a collabo
 
 ### Purpose
 
-This guide has been created to offer a step-by-step overview of the fundamental procedures that as a partner, you must adhere to, in order to begin working with the Collab environment. By carefully following the setup and configuration process, which is outlined module by module within this guide, you will be able to effortlessly access the Collab environment, establish the necessary modules or services, and undertake testing and validation tasks.
+This guide has been created to offer a step-by-step overview of the fundamental procedures that as a partner, you must adhere to, in order to begin working with the Collab environment. By carefully following the setup and configuration process, which is outlined module by module within this guide, you will be able to effortlessly access the Collab environment, establish the necessary modules or services, and effectively demonstrate the application features as relevant.
 
 ### Pre-requisites
 
@@ -90,7 +90,7 @@ Before starting with the Collab environment, please ensure you have the followin
 
 * MinIO is an open-source, high-performance object storage server that is designed for cloud-native and containerized environments. It allows organizations to build their own private cloud storage infrastructure that is scalable, highly available, and easily deployable. In MOSIP, [MinIO](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies) is used to store various types of data, such as documents, images, and files, providing a reliable and efficient storage solution. To learn more, click [here](https://min.io/).
 * For MinIO installation for the object store, click [here](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3/utils/minio-client-util).
-* Running this utility in your local system will require [wireguard access](https://github.com/mosip/documentation/blob/1.2.0/docs/wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
+* Running this utility in your local system will require [wireguard access](wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
 
 #### Admin Portal Setup Guide
 
@@ -115,7 +115,7 @@ Before starting with the Collab environment, please ensure you have the followin
 #### Mock MDS/SBI Services
 
 * Mock MDS (Mock Master Data Store) is a simulated version of the Master Data Store used for testing and development purposes. It replicates the behavior of the actual Master Data Store, but doesn't store data persistently. Mock MDS is used to mimic the interactions with the Master Data Store during testing and development, allowing developers to verify the functionality of different modules without affecting the real data. To learn more, click [here](https://github.com/mosip/mosip-mock-services/tree/master/MockMDS).
-* SBI (Secure Biometric Interface) in MOSIP ensures secure and reliable integration of biometric data for identity verification and authentication. SBI ensures secure storage and retrieval of biometric data, enhancing the accuracy and reliability of identity-related operations. To learn more, click [here](https://drive.google.com/drive/folders/1wMW5h1fBxAdBwTzOmPL7Sd_UON7yuIvU).
+* SBI (Secure Biometric Interface) in MOSIP ensures secure and reliable integration of biometric data for identity verification and authentication. SBI ensures secure storage and retrieval of biometric data, enhancing the accuracy and reliability of identity-related operations. To learn more, click [here](https://drive.google.com/drive/folders/1wMW5h1fBxAdBwTzOmPL7Sd\_UON7yuIvU).
 * To run [Mock MDS](https://github.com/mosip/mosip-mock-services/blob/master/MockMDS/README.md)/ SBI in registration mode in the Collab environment, click [here](https://drive.google.com/file/d/1inXH7t1x2toVLGPNMoefYIU5kY1dG7C8/view?usp=sharing).
 * Wireguard access is not required to set this up.
 
