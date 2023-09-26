@@ -14,7 +14,7 @@ The 1.1.5.5-P1 release of MOSIP is a patch release which mainly focuses on perfo
 
 The link below contains the list of bugs/ issues that have been addressed as a part of this patch release. 
 
-To know more, refer [Bug fixes for 1.1.5.5-P1](https://mosip.atlassian.net/browse/MOSIP-28441?jql=%22Release%20Number%5BLabels%5D%22%3D%201.1.5.5-P1).
+To know more, refer [Bug fixes for 1.1.5.5-P1](https://mosip.atlassian.net/issues/?jql=labels%3D1.1.5.5-P1%20ORDER%20BY%20createdDate%20desc).
 
 ## Repository Released
 
