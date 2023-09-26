@@ -79,6 +79,14 @@ Below is the detailed summary of the release.
 
 * **Bug fix**: Resolved BLE issues #[INJI-146](https://mosip.atlassian.net/browse/INJI-146), [INJI-70](https://mosip.atlassian.net/browse/INJI-70)
 
+## Repository Released
+
+| **Repositories**            | **Tags Released**                                                              |
+| --------------------------- | ------------------------------------------------------------------------------ |
+| Inji                    | [Inji Developer preview release 1- vDP1](https://github.com/mosip/inji/releases/tag/vDP1) |
+| Mimoto         | [Mimoto vDP1](https://github.com/mosip/mimoto/releases/tag/vDP1) |
+
+
 
 ## Documentation
 
