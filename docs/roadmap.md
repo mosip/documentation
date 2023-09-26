@@ -30,8 +30,8 @@ While we embark on the journey outlined in our roadmap, we at MOSIP encourage yo
 
 Head below to navigate through our year-wise roadmap that provides a strategic overview of the journey ahead and highlights the key milestones and objectives for each year!
 
-* [Roadmap 2023-2024]()
-* [Roadmap 2024-2025]()
+* [Roadmap 2023-2024](roadmap-2023-2024.md)
+* [Roadmap 2024-2025](roadmap-2024-2025.md)
 
 
 
