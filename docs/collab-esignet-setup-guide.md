@@ -14,7 +14,7 @@ Let's dive into the details and embark on this informative journey of seamless a
 2. **Mock biometrics setup- To enable biometrics-based login**
    * Ensure that your machine is running Windows.
    * Make sure you have Java 11 or a higher version installed on your computer.
-   * Download the `collab-mock-mds-auth.zip` file from the provided link here.
+   * Download the `collab-mock-mds-auth.zip` file from the link provided [here](https://drive.google.com/drive/folders/14q7E5pZtfj0eimF3JGzlVfU4eV-MRPCQ).
    * Unzip the downloaded file to extract its content.
    * Locate the `run_auth.bat` file within the extracted folder.
    * Double-click on the `run_auth.bat` file to start the authentication MDS.
