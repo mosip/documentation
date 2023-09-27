@@ -4,7 +4,7 @@ The MOSIP community strives to deliver major [releases](https://docs.mosip.io/1.
 
 MOSIP has been developed with a focus on addressing challenges related to identity management, privacy, security, and data protection. It is designed to offer flexibility and modularity, allowing governments to tailor identity systems according to their unique requirements.
 
-[MOSIP's principles](roadmap.md#principles-and-vision) underpin the design and development of the roadmap. The year-wise roadmap details how these principles will be applied and advanced in a step-by-step manner, ensuring that the digital ID platform evolves in alignment with these core principles.
+[MOSIP's principles](https://docs.mosip.io/1.2.0/roadmap#principles-and-vision) underpin the design and development of the roadmap. The year-wise roadmap details how these principles will be applied and advanced in a step-by-step manner, ensuring that the digital ID platform evolves in alignment with these core principles.
 
 Head below to navigate through our year-wise roadmap that provides a strategic overview of the journey ahead and highlights the key milestones and objectives for each year!
 
