@@ -2,7 +2,7 @@
 
 **Release Name**: Inji vDP1
 
-**Upgrade From**: INJI 0.9.1 (Patch)
+**Upgrade From**: Inji 0.9.1 (Patch)
 
 **Support**: Developer Preview Release1
 
