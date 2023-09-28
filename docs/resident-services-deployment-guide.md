@@ -5,7 +5,7 @@ This guide contains all the information required for successful deployment and r
 
 ## DB scripts
 
-Resident Service DB Scripts to be run: [DB scipts](https://github.com/mosip/resident-services/tree/develop/db_scripts/mosip_resident)
+Resident Service DB Scripts to be run: [DB scripts](https://github.com/mosip/resident-services/tree/vDP1/db_scripts/mosip_resident)
 
 ## Master-data Template Scripts
 
@@ -27,7 +27,7 @@ The master-data templates required for the Resident portal are added to the [tem
 
 ### Resident OIDC Client setup
 
-Here is the document which explains how `resident-oidc` partner is onboarded through [partner-onboarder](https://github.com/mosip/mosip-onboarding) after deployment.
+Here is the document which explains how `resident-oidc` partner is onboarded through [partner-onboarder](https://github.com/mosip/mosip-onboarding/tree/develop) after deployment.
 
 For more details on how to configure the Resident OIDC client, refer [here](resident-services-configure-resident-OIDC-client.md).
 
