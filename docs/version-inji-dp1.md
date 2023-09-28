@@ -1,19 +1,19 @@
 # Version INJI dev-preview-1
 
-**Release Name**: INJI dev-preview-1
+**Release Name**: Inji vDP1
 
 **Upgrade From**: INJI 0.9.1 (Patch)
 
-**Support**: Developer Release
+**Support**: Developer Preview Release1
 
 **Release Date**: September 2023
 
 ## Overview
 
-The developer preview version of INJI is the release on top of INJI 0.9.1. Key highlights of the release are:
+The developer preview version of Inji is the release on top of Inji 0.9.1. Key highlights of the release are:
 
  * Enhanced UI
- * Additional functional flows in INJI
+ * Additional functional flows in Inji
  * Internal enhancements
  * Bug fixes
 
@@ -23,8 +23,8 @@ Below is the detailed summary of the release.
 
 ### Change in UI implementation
 
-* New UI for INJI:
-  * The INJI logo has received a fresh update.
+* New UI for Inji:
+  * The Inji logo has received a fresh update.
   * This redesign promises an enriched user experience.
   * Introduction sliders have been introduced. 
   * Helpful FAQ screens are provided.
@@ -32,16 +32,16 @@ Below is the detailed summary of the release.
   * VC pinning is now available. 
     * Currently, the pinning feature supports a single VC.
   * VC activation options are incorporated into the kebab menu. 
-  * Easy VC removal from INJI. 
+  * Easy VC removal from Inji. 
   * Improved audit log filtering based on VC. 
   
 ### Change in functional implementation
 
-* Branding the App as INJI:
-  * We've rebranded the application, transitioning from "Resident App" to the more streamlined and recognisable "INJI".
+* Branding the App as `Inji`:
+  * We've rebranded the application, transitioning from `Resident App` to the more streamlined and recognisable `INJI`.
 
 * Ability to Choose Language During App Setup:
-  * INJI app users can configure the application in six distinct languages:
+  * Inji app users can configure the application in six distinct languages:
       * English
       * Filipino
       * Arabic
@@ -50,9 +50,9 @@ Below is the detailed summary of the release.
       * Tamil
 
 * Warning When Device Storage is Beyond the Threshold:
-  * INJI now offers customisable storage limits:
-    * For VC downloads, the threshold is set to 5MB. When the device's remaining storage space falls below this limit, INJI displays a warning message. However, users can still continue to verify and share VCs.
-    * For INJI audit logs, the threshold is set to 1MB. Once the device reaches this limit, INJI users will be restricted to viewing VCs, unable to perform additional actions.
+  * Inji now offers customisable storage limits:
+    * For VC downloads, the threshold is set to 5MB. When the device's remaining storage space falls below this limit, Inji displays a warning message. However, users can still continue to verify and share VCs.
+    * For Inji audit logs, the threshold is set to 1MB. Once the device reaches this limit, Inji users will be restricted to viewing VCs, unable to perform additional actions.
 
 * Traceability with Unique ID for Customer Support:
   * We've implemented a unique identification called as an Application ID for customer support interactions. Each 
@@ -93,6 +93,6 @@ Below is the detailed summary of the release.
 * [Feature Documentation](./)
 * [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/INJI-mobile-app-beta)
 * [QA Report](https://docs.mosip.io/INJI/versions/version-0.9.2/test-report-0.9.2)
-* To know more about INJI, watch the [video](https://www.youtube.com/watch?v=70uDsa9mKjE)
+* To know more about Inji, watch the [video](https://www.youtube.com/watch?v=9Z1WuTd8q0M)
 
 
