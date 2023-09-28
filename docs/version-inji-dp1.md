@@ -38,7 +38,7 @@ Below is the detailed summary of the release.
 ### Change in functional implementation
 
 * Branding the App as `Inji`:
-  * We've rebranded the application, transitioning from `Resident App` to the more streamlined and recognisable `INJI`.
+  * We've rebranded the application, transitioning from `Resident App` to the more streamlined and recognisable `Inji`.
 
 * Ability to Choose Language During App Setup:
   * Inji app users can configure the application in six distinct languages:
