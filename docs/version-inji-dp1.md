@@ -1,4 +1,4 @@
-# Version INJI dev-preview-1
+# Version Inji vDP1
 
 **Release Name**: Inji vDP1
 
