@@ -1,11 +1,5 @@
 # Resident Portal
 
-## Release Notes
-
-**Support**: Developer Release
-
-**Release Date**: 12th Sept, 2023
-
 ## Overview
 
 Resident services are the self-services which are used by the residents themselves via a portal. [Resident Portal](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-user-guide) is a web-based UI application that provides residents of a country the services related to their Unique Identification Number (UIN). The residents can perform various operations related to their UIN/ VID and can also raise concerns if any through the portal.
@@ -72,39 +66,5 @@ The design of the Resident portal embodies the following principles:
 * __Trusted__: The identity verification process on the device should be trusted so that it can be used in service delivery without any concerns.
 * __Grievance redressal__: The Resident portal ensures that in case of any concerns or grievance, the issue is raised and resolved through the portal itself.
 
-## Services
 
-For detailed description of Resident services, the code and design, refer to [resident services repo](https://github.com/mosip/resident-services/tree/develop).
-
-## Resident Portal UI
-
-MOSIP provides a reference implementation of the Resident portal that can be customized as per the country’s needs. The sample implementation is available [here](https://github.com/mosip/resident-ui/tree/develop).
-
-For getting started with the resident portal, refer to the [Resident Portal User Guide](resident-portal-user-guide.md).
-
-## Build and Deploy
-
-To access the build and read through the deployment instructions, refer to the [Resident Services Deployment Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-deployment-guide).
-
-## Configurations
-
-For details related to resident portal configurations, refer to the [Configuration Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-configuration-guide).
-
-## Developers Guide
-
-For a detailed description of Resident Services, code, design, and setup steps, refer to:
-1. [Resident Services Developers Guide](resident-services-developer-guide.md)
-2. [Resident Services UI Developers Guide](resident-services-ui-developer-guide.md)
-
-## API
-
-Refer [API Documentation](https://mosip.stoplight.io/docs/resident/9a5192571fc51-document).
-
-## Test Report
-
-For details on the test results, refer [here](https://github.com/mosip/test-management/tree/master/).
-
-## Source code 
-
-[Github repo](https://github.com/mosip/resident-services/tree/release-1.2.0).
 
