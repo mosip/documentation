@@ -80,6 +80,7 @@
     * [Registration Processor Developers Guide](registration-processor-developers-guide.md)
   * [Reporting](reporting.md)
   * [Resident Portal](resident-services.md)
+    * [Release Notes](release-notes-resident-portal-dp1.md)
     * [Resident Services Developers Guide](resident-services-developer-guide.md)
     * [Resident Services UI Developers Guide](resident-services-ui-developer-guide.md)
     * [Resident Portal Configuration Guide](resident-portal-configuration-guide.md)
