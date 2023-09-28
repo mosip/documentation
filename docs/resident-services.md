@@ -6,7 +6,7 @@ Resident services are the self-services which are used by the residents themselv
 
 The key features provided on the Resident portal are:
 
-1. Avail **UIN services** using UIN/VID (through [e-Signet](https://docs.esignet.io)):
+1. Avail **UIN services** using UIN/ VID (through [e-Signet](https://docs.esignet.io)):
      * View My History
      * Manage My VID
      * Secure My ID
