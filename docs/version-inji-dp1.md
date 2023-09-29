@@ -63,8 +63,8 @@ Below is the detailed summary of the release.
 * Improved Bluetooth State and Permission Handling:
   * We have refined the management of Bluetooth states and permissions.
 
-* Removed Google Nearby Implementation:
-    * We've transitioned to using Tuvali for Bluetooth Low Energy (BLE) communication, enhancing the connectivity experience.
+* Removed `Google Nearby` Implementation:
+    * We've transitioned to using [Tuvali](https://docs.mosip.io/inji/tuvali) for Bluetooth Low Energy (BLE) communication, enhancing the connectivity experience.
 
 * Encrypted VC’s Metadata:
   * We now calculate and securely store an encrypted HASH (HMAC SHA256) of the VC's metadata key in the database, bolstering data security.
@@ -87,12 +87,11 @@ Below is the detailed summary of the release.
 | Mimoto         | [Mimoto vDP1](https://github.com/mosip/mimoto/releases/tag/vDP1) |
 
 
-
 ## Documentation
 
 * [Feature Documentation](./)
 * [User Guide](https://docs.mosip.io/1.2.0/modules/inji-user-guide)
 * [QA Report](https://github.com/mosip/test-management/tree/master/inji/Inji%20VDP1)
-* To know more about Inji, watch the [video](https://www.youtube.com/watch?v=9Z1WuTd8q0M)
+* To know more about Inji, watch the [video](https://www.youtube.com/watch?v=9Z1WuTd8q0M)!
 
 
