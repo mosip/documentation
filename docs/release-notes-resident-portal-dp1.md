@@ -10,7 +10,7 @@
 
 ## Overview
 
-This is the developers preview version of Resident Services. Resident Services are the self-services which are used by the residents themselves via a portal. [Resident Portal](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-user-guide) is a web-based UI application that provides residents of a country the services related to their Unique Identification Number (UIN). The residents can perform various operations related to their UIN/ VID and can also raise concerns if any through the portal.
+This release marks the developer's preview release of Resident Services, offering valuable insights into the range of features and functionality available. Resident Services is designed to run on 1.2.0.1-B3 version of MOSIP platform. Resident Services are the self-services which are used by the residents themselves via a portal. [Resident Portal](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-user-guide) is a web-based UI application that provides residents of a country the services related to their Unique Identification Number (UIN). The residents can perform various operations related to their UIN/ VID and can also raise concerns if any through the portal.
 
 The key features provided on the Resident portal are:
 
@@ -33,6 +33,8 @@ The key features provided on the Resident portal are:
      * Font size
      *  Get Notifications (email and bell notifications)
      * View profile details of the logged in user (name, photo, and last login details)
+  
+For a quick overview of the design principles and to understand the relationship of Resident Services with other services, read [Resident Services Overview](resident-services.md).
   
 ## Repository Released
 
