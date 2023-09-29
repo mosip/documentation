@@ -91,7 +91,7 @@ Below is the detailed summary of the release.
 ## Documentation
 
 * [Feature Documentation](./)
-* [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/INJI-mobile-app-beta)
+* [User Guide](https://docs.mosip.io/1.2.0/modules/inji-user-guide)
 * [QA Report](https://github.com/mosip/test-management/tree/master/inji/Inji%20VDP1)
 * To know more about Inji, watch the [video](https://www.youtube.com/watch?v=9Z1WuTd8q0M)
 
