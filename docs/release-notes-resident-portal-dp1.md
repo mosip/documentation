@@ -1,6 +1,8 @@
-# Resident Portal- Release Notes
+# Resident Services- Release Notes
 
-**Release Name**: Resident Portal vDP1
+**Release Name**: Resident Services
+
+**Release version**: vDP1
 
 **Support**: Developer Preview Release1
 
