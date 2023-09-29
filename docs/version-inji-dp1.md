@@ -83,7 +83,7 @@ Below is the detailed summary of the release.
 
 | **Repositories**            | **Tags Released**                                                              |
 | --------------------------- | ------------------------------------------------------------------------------ |
-| Inji                    | [Inji Developer preview release 1- vDP1](https://github.com/mosip/inji/releases/tag/vDP1) |
+| Inji                    | [Inji Developer Preview Release1- vDP1](https://github.com/mosip/inji/releases/tag/vDP1) |
 | Mimoto         | [Mimoto vDP1](https://github.com/mosip/mimoto/releases/tag/vDP1) |
 
 
