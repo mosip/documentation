@@ -1,4 +1,4 @@
-# Version Inji vDP1
+# Inji vDP1
 
 **Release Name**: Inji vDP1
 
@@ -6,7 +6,7 @@
 
 **Support**: Developer Preview Release1
 
-**Release Date**: September 2023
+**Release Date**: 28 September, 2023
 
 ## Overview
 
