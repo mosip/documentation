@@ -1,4 +1,4 @@
-# Resident Portal
+# Resident Services
 
 ## Overview
 
@@ -66,5 +66,12 @@ The design of the Resident portal embodies the following principles:
 * __Trusted__: The identity verification process on the device should be trusted so that it can be used in service delivery without any concerns.
 * __Grievance redressal__: The Resident portal ensures that in case of any concerns or grievance, the issue is raised and resolved through the portal itself.
 
+## Documentation
 
-
+1. [Release Notes](https://docs.mosip.io/1.2.0/releases/release-notes-resident-portal-dp1)
+2. [Resident Services Developers Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-developer-guide)
+3. [Resident Services UI Developers Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-ui-developer-guide)
+4. [Resident Portal Configuration Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-configuration-guide)
+5. [Resident Services Deployment Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-deployment-guide)
+6. [Configuring Resident OIDC Client](https://docs.mosip.io/1.2.0/modules/resident-services/resident-services-configure-resident-oidc-client)
+7. [Resident Portal User Guide](https://docs.mosip.io/1.2.0/modules/resident-services/resident-portal-user-guide)
