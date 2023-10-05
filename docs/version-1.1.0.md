@@ -34,6 +34,7 @@ Below are the features available in the release,
 ## Repositories Released
 * e-Signet: [v1.1.0](https://github.com/mosip/esignet/tree/v1.1.0)
 * artifactory-ref-impl: [v1.2.0.1-B5](https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.1-B5)
+* mosip-config: [v1.1.0-ES](https://github.com/mosip/mosip-config/releases/tag/v1.1.0-ES)
 
 For details for deployment go through the [helm charts in e-Signet repository](https://github.com/mosip/esignet/tree/v1.1.0/helm).
 
