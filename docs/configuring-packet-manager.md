@@ -84,9 +84,9 @@ provider.packetwriter.portal=source:PORTAL,process:CORRECTION,classname:io.mosip
     
     _Note_: For regproc-abis-handler-stage and regproc-abis-middleware-stage the key is same as regproc-biodedupe-stage
 
-3. After these changes are done, the Packet Manager and the respective stage need to be restarted.
+3. After these changes are done, the Packet Manager and the respective stage needs to be restarted.
 
-  **Special Case: For Biometrics (as multiple biometrics needs to merge a single document)**
+    **Special Case: For Biometrics (as multiple biometrics needs to merge a single document)**
 
     In certain situations, it may occur that biometric data is received from multiple systems, such as system A and system B. However,     it is necessary to combine and process both sets of data into a single Common Biometric Exchange Format Framework (CBEFF). This        merging and processing task can be accomplished through a specialized stage level configuration. It should be noted that the 
     default configurations are not capable of handling the merging of biometrics.
@@ -100,9 +100,9 @@ provider.packetwriter.portal=source:PORTAL,process:CORRECTION,classname:io.mosip
     respective stages.
     
     This can be set as shown below:
-  
-    ```
-   packetmanager.provider.uingenerator.individualBiometrics[Finger]=source:PORTAL\/process:CORRECTION,source:REGISTRATION_CLIENT\/process:NEW|UPDATE|LOST,source:RESIDENT\/process:RES_UPDATE|RES_REPRINT
+
+```
+packetmanager.provider.uingenerator.individualBiometrics[Finger]=source:PORTAL\/process:CORRECTION,source:REGISTRATION_CLIENT\/process:NEW|UPDATE|LOST,source:RESIDENT\/process:RES_UPDATE|RES_REPRINT
 packetmanager.provider.uingenerator.individualBiometrics[Iris]=source:PORTAL\/process:CORRECTION,source:REGISTRATION_CLIENT\/process:NEW|UPDATE|LOST,source:RESIDENT\/process:RES_UPDATE|RES_REPRINT
 packetmanager.provider.uingenerator.individualBiometrics[Face]=source:PORTAL\/process:CORRECTION,source:REGISTRATION_CLIENT\/process:NEW|UPDATE|LOST,source:RESIDENT\/process:RES_UPDATE|RES_REPRINT
 ```
