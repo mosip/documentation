@@ -160,7 +160,7 @@
 * [Collab Environment Setup Guides](collab-getting-started-guide.md)
      * [Inji Setup Guide](collab-inji-setup-guide.md)
      * [e-Signet Setup Guide](collab-esignet-setup-guide.md)
-     * [Pre-registration Guide](collab-pre-registration-guide.md)
+     * [Pre-registration Setup Guide](collab-pre-registration-guide.md)
 * [Roadmap](roadmap.md)
      * [Roadmap 2023-2024](roadmap-2023-2024.md)
      * [Roadmap 2024-2025](roadmap-2024-2025.md)
