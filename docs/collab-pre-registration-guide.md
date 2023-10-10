@@ -1,4 +1,4 @@
-# Pre-registration Guide
+# Pre-registration Setup Guide
 
 ## Overview
 
