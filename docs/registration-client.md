@@ -11,9 +11,9 @@ MOSIP provides a reference implementation of a Java-based Registration Client. T
 * Before starting any registration process, the operator can choose the languages amongst the configured ones.
  
   
-To know more about setting up the reference registration client, refer to [Registration client user guide](registration-client-user-guide.md).
+To know more about setting up the reference registration client, refer to [Registration Client Installation Guide](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-installation-guide).
 
-To know more about the functions present in the Home page of the registration client, refer to [Registration client home page](registration-client-home-page.md).
+To know more about the features present in the Registration Client, refer to [Registration Client User Guide](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-user-guide).
 
 ## Who operates the Registration Client?
 
