@@ -1,65 +1,43 @@
 # Features
 
-### Login using the Foundation ID
+## One Login 
 
-* e-Signet allows easy login to any of the government services using a single credential (as it uses the existing ID repository)
-* Passwordless login using the supported authentication factors
+e-Signet offers a convenient feature called One Login, which allows users to access applications and access various services through a single interface. This feature provides a Single Sign-on (SSO) experience, eliminating the need for multiple logins. Additionally, e-Signet enables seamless login to any government service by utilizing a single credential through the existing ID repository.
 
-### Support for multiple authentication factors
+## Passwordless Authentication
 
-* This release focuses on the following two authentication factors:
-  * OTP
-  * Biometric
+e-Signet implements a Passwordless login method that leverages authentication factors supported by our system. This approach enhances security by mitigating the potential risks associated with password-related security vulnerabilities, such as weak passwords, password reuse, and phishing attacks.
 
-### Wallet based authentication
+## Support for Multiple Authentication
 
-* With e-Signet version 1.0, mobile wallet based authentication can be used to scan a QR code and complete the authentication based on the credential already activated for online login. It also performs a local face authentication before using the activated credential.
+### OTP Authentication
 
-### Quick integrations
+OTP authentication offers an additional level of security due to the short validity period of the OTP. In the case of logging in to e-Signet with OTP as the chosen method, our system generates a unique OTP and delivers it to the user via a registered communication channel, such as SMS or email. Upon receiving the OTP, the user can input it into the login interface. The system then compares the entered OTP with the generated one. If they match, the user is granted access to the system.
 
-* `OpenID` being a standard, we get a lot of Client libraries for intergrations. Hence, avoid custom code building for integration.
+### Biometric Authentication
 
-### Consent Registry
+e-Signet can connect to any biometric device which complies to IEEE P3167 SBI 2.0 standards and perform secure biometric capture and enable authentication against an underlying ID system has capability to perform biometric authentication.
 
-Consent Registry is designed to store user consent on claims and scopes requested during login into a relying party application using e-Signet or the Wallet application ([Inji](https://docs.mosip.io/inji/)).
+### Wallet-Based Authentication
 
-Key highlights of this feature are:
+Mobile wallet-based authentication can be utilized to scan a QR code and finalize the authentication process using the previously activated credentials for online login. Additionally, a facial authentication can happen on the wallet to make sure the presence is verified.
 
-* Storage of user consent against the requested claims and scopes in the database.
-* If the consent is already provided, the consent screen is bypassed when the user logs in using e-Signet (v1.1.0).
-* Recapture consent in case of changes in requested claims or scopes.
+## Verifiable Credentials Issuance
 
+VC refers to a set of claims about an authorized end-user that have been signed by an OAuth 2.0 credential issuer. This allows the VC to be securely presented to a relying party without involving the credential issuer. Our e-Signet platform supports the use of VC issuance through OAuth 2.0 authorization. Our system is able to issue VCs to digital credential wallets by utilizing OAuth 2.0 authorization. We implement OpenID4VCI for VC issuance, allowing us to issue VCs using the plugged-in credential issuer. Currently, we support the authorization-code flow to authorize the end-user, and support for the pre-authorize code flow will be available in the near future. Any digital credential wallets that adhere to the OpenID4VCI specification will be able to download the VC.
 
-### Seamless inclusion of new authentication mechanisms
+## Consent 
 
-* Since the relying party redirects to the e-Signet page, inclusion of new authentication factor can be introduced without any changes to the integration from the relying party end.
+The Consent Registry is intended for the storage of user consent regarding claims and scopes requested during the login process to a relying party application. This can be done through either the e-Signet or the Wallet application (Inji).
 
-### Avoids unwanted profiling
+Some key aspects to note about this feature are as follows:
 
-* As the user enters the ID directly on the e-Signet page, the relying party does not have to store the ID which could otherwise be used for profiling incase of data leaks.
+* The user consent will be stored in the database in relation to the requested claims and scopes.
+* If the consent has already been provided, the consent screen will be bypassed when the user logs in using e-Signet.
+* In situations where there are changes to the requested claims or scopes, the user will be prompted to provide consent again.
 
-### Collects explicit user consent
+## Language Support for e-Signet
 
-* In our login flows, we collect the user's consent before sharing their private information to the relying party. The user therefore has the privilege for selective sharing of data.
+The e-Signet user interface (UI) offers comprehensive language support to facilitate effective communication. By default, e-Signet includes language bundles for Arabic, English, Hindi, Kannada, and Tamil. Moreover, it can be easily customized to incorporate additional languages as necessary to accommodate specific country requirements. 
 
-### Support for various assurance levels
-
-* We support the relying party to specify an assurance level based on the usecase of the relying party.
-
-### Captcha validation
-
-With e-Signet version 1.0, the OTP-based authentication is now secured with captcha.
-
-### Multi-language support
-
-In version 1.0, the e-Signet UI supports multiple languages. By default, e-Signet comes with the following language bundles: 
-
-* Arabic
-* English
-* Hindi
-* Kannada
-* Tamil 
-
-Additionally, it can be customized to support other languages as per a country's requirement.
-
-* e-Signet is also verified for RTL (right-to-left) support.
+Furthermore, e-Signet has undergone meticulous testing to ensure seamless compatibility with right-to-left (RTL) languages. This means that users can rely on e-Signet to confidently navigate and interact with RTL content.
