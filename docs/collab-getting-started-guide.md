@@ -39,8 +39,8 @@ Before starting with the Collab environment, please ensure you have the followin
 
 #### Registration Client Setup Guide
 
-* The Registration Client application in MOSIP enables agents to efficiently register residents by capturing their demographic and biometric data, in addition to managing tasks like onboarding, data synchronization, software upgrades, and packet management. To know more, click [here](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-home-page).
-* For the end-to-end process on how to set up the Registration client in the Collab environment, click here (Coming soon).
+* The Registration Client application in MOSIP enables agents to efficiently register residents by capturing their demographic and biometric data, in addition to managing tasks like onboarding, data synchronization, software upgrades, and packet management. To know more about the installation and pre-requisites for the same, click [here](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-installation-guide).
+* For the end-to-end process on how to set up the Registration client in the Collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-reg-client-setup-guide).
 * For details on how to use the application, refer to our [user guide](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-user-guide).
 * Wireguard access is not required to set this up.
 
