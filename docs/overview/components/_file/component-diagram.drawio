@@ -1,0 +1,136 @@
+<mxfile host="Electron" modified="2023-10-11T03:26:22.651Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.0.2 Chrome/114.0.5735.289 Electron/25.8.4 Safari/537.36" etag="bRyWDDAhAn4qyTOxioA5" version="22.0.2" type="device">
+  <diagram name="component-diagram" id="Hw2Yd1-sXx5gVD7LFIkM">
+    <mxGraphModel dx="954" dy="616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-1" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#38a2f7;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="80" y="110" width="810" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-2" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#f1813a;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="500" y="30" width="390" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-3" value="Relying Party System" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#666666;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="80" y="30" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1751a2;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="100" y="149" width="770" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-5" value="OIDC APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9c446;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#333333;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="120" y="165" width="133" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1751a2;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="100" y="250" width="770" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-7" value="OIDC Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d44247;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="118" y="270" width="133" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-8" value="Key Manager" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fillColor=#1751a2;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="105" y="367" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-9" value="Data Layer" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fillColor=#1751a2;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="105" y="440" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-10" value="Cache Layer" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fillColor=#1751a2;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="346" y="440" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-11" value="e-Signet Core" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fillColor=#1751a2;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="585" y="440" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-12" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;e-Signet Service&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="410" y="115" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-13" value="SBI Integration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1751a2;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="630" y="45" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-14" value="e-Signet&lt;br style=&quot;font-size: 16px;&quot;&gt;UI" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="510" y="50" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-15" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f1813a;strokeColor=none;fontColor=#FFFFFF;fontFamily=Montserrat-Semibold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;fontStyle=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="105" y="560" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-16" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;ID&lt;br style=&quot;font-size: 16px;&quot;&gt;System&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#666666;strokeColor=none;fontColor=#FFFFFF;fontFamily=Montserrat-Semibold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;fontStyle=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="910" y="340" width="80" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-17" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Digital Wallet&lt;/span&gt;&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#666666;strokeColor=none;fontColor=#FFFFFF;fontFamily=Montserrat-Semibold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;fontStyle=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="312" y="32" width="170" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-18" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#38a2f7;strokeColor=none;fontColor=#FFFFFF;fontFamily=Montserrat-Semibold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;fontStyle=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="345" y="560" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-19" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#666666;strokeColor=none;fontColor=#FFFFFF;fontFamily=Montserrat-Semibold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;fontStyle=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="585" y="560" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-20" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1751a2;strokeColor=none;fontColor=#FFFFFF;fontFamily=Montserrat-Semibold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;fontStyle=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="105" y="625" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-21" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f9c446;strokeColor=none;fontColor=#FFFFFF;fontFamily=Montserrat-Semibold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;fontStyle=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="345" y="625" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#3b8755;strokeColor=none;fontColor=#FFFFFF;fontFamily=Montserrat-Semibold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;fontStyle=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="585" y="625" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-23" value="e-Signet UI" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="164" y="565" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-24" value="Core Componets" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="164" y="625" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-25" value="e-Signet Service" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="405" y="565" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-26" value="Rest APIs" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="405" y="630" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-27" value="External System" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="645" y="565" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-28" value="Plugins" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="645" y="630" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-29" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d44247;strokeColor=none;fontColor=#FFFFFF;fontFamily=Montserrat-Semibold;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;fontStyle=0;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="800" y="560" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-30" value="Services" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="859" y="565" width="135" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-31" value="Key Binder" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fillColor=#3b8755;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="257" y="367" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-32" value="Consent&lt;br style=&quot;font-size: 16px;&quot;&gt;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d44247;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="268" y="270" width="135" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-33" value="VCI Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d44247;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="417" y="270" width="134" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-34" value="Management Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d44247;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="567" y="270" width="134" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-35" value="Binding&lt;br style=&quot;font-size: 16px;&quot;&gt;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d44247;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="714" y="270" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-36" value="UI APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9c446;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#333333;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="267" y="165" width="135" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-37" value="Management APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9c446;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#333333;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="563" y="165" width="137" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-38" value="Binding APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9c446;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#333333;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="717" y="165" width="134" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-39" value="VCI APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9c446;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fontColor=#333333;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="415" y="165" width="135" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-40" value="Audit Plugin" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fillColor=#3b8755;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="566" y="367" width="146" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-41" value="Authenticator" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fillColor=#3b8755;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="725" y="367" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5pxhArDdXFgjGTxjTKVE-42" value="VCI Plugin" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=none;fontFamily=Montserrat-Semibold;fontSize=16;fontStyle=0;fillColor=#3b8755;fontColor=#FFFFFF;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DMontserrat-Semibold;" vertex="1" parent="1">
+          <mxGeometry x="413" y="367" width="140" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
