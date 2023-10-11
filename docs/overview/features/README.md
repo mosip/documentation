@@ -50,8 +50,11 @@ Furthermore, e-Signet has undergone meticulous testing to ensure seamless compat
 
 {% hint style="info" %}
 In order to add more language bundles in e-Signet, you can go through the below article.
+
 [How to add a new language in e-Signet?]()
 
 In order to remove a language from e-Signet, you can go through the below article.
+
 [How to remove a language from e-Signet default setup?]()
+
 {% endhint %}
