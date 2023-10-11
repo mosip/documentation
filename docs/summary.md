@@ -2,7 +2,7 @@
 
 * [e-Signet](README.md)
 * [Overview](overview/README.md)
-  * [Architectural Principles](overview/architecture/README.md)
+  * [Principles](overview/principles/README.md)
   * [Components](overview/components/README.md)
   * [Features](overview/features/README.md)
 * [Sandbox Details](sandbox-details/README.md)

@@ -1,4 +1,4 @@
-# Architectural Principles
+# Principles
 
 e-Signet follows a microservice-based architecture.
 
