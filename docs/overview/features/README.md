@@ -8,6 +8,12 @@ e-Signet offers a convenient feature called One Login, which allows users to acc
 
 e-Signet implements a Passwordless login method that leverages authentication factors supported by our system. This approach enhances security by mitigating the potential risks associated with password-related security vulnerabilities, such as weak passwords, password reuse, and phishing attacks.
 
+{% hint style="info" %}
+Though we don't believe in passwords, e-Signet still provide an option to enable password based authentication for authentication system that store passwords. In order to perform password based authentication in e-Signet you can go through the below article.
+
+[How to enable password based authentication in e-Signet?]()
+{% endhint %}
+
 ## Support for Multiple Authentication
 
 ### OTP Authentication
