@@ -100,7 +100,7 @@ Login to the portal with the username and password that you should have received
 
 **Step 3: Explore the features on the Registration Client Portal**
 
-To start running the Registration Client, refer to our [Registration Client Setup Guide](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-setup-guide).
+To start running the Registration Client, refer to our [Registration Client Installation Guide](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-installation-guide).
 
 To access all the features of the Registration Client portal and explore the registration process in MOSIP, refer [Registration Client User Guide](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-user-guide).
 
