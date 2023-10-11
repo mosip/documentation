@@ -68,7 +68,7 @@
   * [Reference Implementations](reference-implementations.md)
   * [Registration Client](registration-client.md)
     * [Operator Onboarding](operator-onboarding.md)
-    * [Registration Client Setup Guide](registration-client-set-guide.md)
+    * [Registration Client Setup Guide](registration-client-setup-guide.md)
     * [Registration Client User Guide](registration-client-user-guide.md)
     * [Registration Client Configuration](registration-client-configuration.md)
     * [Registration Client UI Specifications](registration-client-ui-specifications.md)
