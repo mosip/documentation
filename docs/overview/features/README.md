@@ -47,3 +47,11 @@ Some key aspects to note about this feature are as follows:
 The e-Signet user interface (UI) offers comprehensive language support to facilitate effective communication. By default, e-Signet includes language bundles for Arabic, English, Hindi, Kannada, and Tamil. Moreover, it can be easily customized to incorporate additional languages as necessary to accommodate specific country requirements. 
 
 Furthermore, e-Signet has undergone meticulous testing to ensure seamless compatibility with right-to-left (RTL) languages. This means that users can rely on e-Signet to confidently navigate and interact with RTL content.
+
+{% hint style="info" %}
+In order to add more language bundles in e-Signet, you can go through the below article.
+[How to add a new language in e-Signet?]()
+
+In order to remove a language from e-Signet, you can go through the below article.
+[How to remove a language from e-Signet default setup?]()
+{% endhint %}
