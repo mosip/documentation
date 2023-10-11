@@ -1,4 +1,4 @@
-# Registration Client Home Page
+# Registration Client User Guide
 
 ## Overview
 
