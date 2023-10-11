@@ -21,7 +21,7 @@ The Registration Client can be operated by an operator who can be either a **Sup
 
 To know more about the onboarding process of an operator, refer to [Operator onboarding](operator-onboarding.md).
 
-## Registration client entity diagram
+## Registration Client entity diagram
     
 ![](_images/reg-client.drawio.png)
 
