@@ -1,4 +1,4 @@
-# Registration Client Setup Guide
+# Registration Client Installation Guide
 
 ## Overview
 
