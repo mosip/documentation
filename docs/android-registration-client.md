@@ -35,7 +35,7 @@ The primary objective of the mobile version is to facilitate the registration pr
    * Create the operator’s user account in KeyCloak and set the password and assign the role as “Default”, “REGISTRATION_OFFICER”, 
      “Registration Operator”, “REGISTRATION_SUPERVISOR”, 
 
-   * Login into Admin Portal to perform the following to add the user:
+   * Login into Admin Portal to perform the following and add the user:
 
       * After login into Admin Portal, go to `User Zone Mapping` and add the zone for the user and activate the zone.
 
