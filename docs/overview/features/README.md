@@ -30,7 +30,15 @@ Mobile wallet-based authentication can be utilized to scan a QR code and finaliz
 
 ## Verifiable Credentials Issuance
 
-VC refers to a set of claims about an authorized end-user that have been signed by an OAuth 2.0 credential issuer. This allows the VC to be securely presented to a relying party without involving the credential issuer. Our e-Signet platform supports the use of VC issuance through OAuth 2.0 authorization. Our system is able to issue VCs to digital credential wallets by utilizing OAuth 2.0 authorization. We implement OpenID4VCI for VC issuance, allowing us to issue VCs using the plugged-in credential issuer. Currently, we support the authorization-code flow to authorize the end-user, and support for the pre-authorize code flow will be available in the near future. Any digital credential wallets that adhere to the OpenID4VCI specification will be able to download the VC.
+Verifiable credentials (VCs) are an open standard for digital credentials. They can represent information found in physical credentials, such as a passport or license in digital format. They have numerous advantages over physical credentials, most notably that they're digitally signed, which makes them tamper-resistant and instantaneously verifiable.
+
+VCs are generally issued by the entities who are eligible to assert claims on specific domain aspects about an individual / entity. These issuer entities are also widely trusted by relying parties in an ecosystem.
+
+Individuals / holder receives and stores these VCs from issuers in there digital wallet apps, and later will use these VCs to avail various services. 
+
+OID4VCI is a mechanism built extending the OAuth 2.0 protocol to enable standards based interaction between wallets and issuer application to transfer VCs. Since this is based on proved OAuth 2.0 protocol, issuers also get a reliable mechanism to authenticate the individual before delivering the VC. This promotes interoperability between wallet provider and issuers.
+
+e-Signet being a OAuth 2.0 & OIDC based solution, it is enhanced to support OID4VCI flows. Once e-Signet VCI solution is integrated to a classic issuer, it can enable the issuer application to be become OID4VCI compliant and become interoperable with all OID4VCI compatible wallets.
 
 ## Consent 
 

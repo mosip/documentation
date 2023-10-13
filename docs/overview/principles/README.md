@@ -1,7 +1,5 @@
 # Principles
 
-e-Signet follows a microservice-based architecture.
-
 e-Signet is designed with the architectural principles mentioned below. These architecture principles are core to developing the system's features and greatly influence how and why specific software design patterns are used.
 
 ## Open Standards
@@ -26,6 +24,8 @@ As e-Signet follows OpenID Connect, it gets a lot of client libraries for integr
 * Any biometric device compatible with the IEEE P3167 SBI 2.0 specification can connect with e-Signet
 
 ## Commodity Computing
+
+e-Signet backend services are designed to run as containers, which does not depend upon any specialized hardware or specific cloud solutions. It can run on any general purpose VMs which support docker containers. This also helps in avoiding the vendor lock in.
 
 ## Fault-tolerant
 
