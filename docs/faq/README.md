@@ -14,7 +14,21 @@ description: Frequently Asked Questions
 
 </details>
 
-##
+<details>
+
+<summary>What are the core features of e-Signet?</summary>
+
+
+
+</details>
+
+<details>
+
+<summary>How can I use e-Signet?</summary>
+
+
+
+</details>
 
 ## Features and Functionality
 
