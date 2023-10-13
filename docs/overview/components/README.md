@@ -18,7 +18,7 @@ To know more, refer [here](integration-guides/authentication-system-integration.
 
 * This is the front-end application which is mainly responsible for the user interactions.
 * Runs on the end user browser and invokes the REST API endpoints of the e-Signet Service component.
-* It acts as a first level proxy and forwards the request details received through standard [OpenID connect](https://openid.net/connect/) endpoints to the esignet service.
+* It acts as a first level proxy and forwards the request details received through standard [OpenID connect](https://openid.net/connect/) endpoints to the e-Signet service.
 * On completion of all user interactions, it redirects to the relying party's web application with relevant details.
 * e-Signet UI also interacts with the [SBI (Secure Biometric Interface)](https://app.gitbook.com/s/-M1R77ZUwR6XwtPjJIVm/biometrics/mosip-device-service-specification) service running in the local machine to collect encrypted and signed biometric data.
 * It is built using the `React` framework.
@@ -34,7 +34,7 @@ To know more, refer [here](integration-guides/authentication-system-integration.
 * The e-Signet service also has a **Cache layer** which is responsible for:
   * Temporarily maintaining the current transaction details with a short expiry time
   * Providing faster access and update of transaction details
-  * It relies on Spring cache to integrate with a distributed cache. Currently, `Redis` is configured to ensure data sharing across multiple instances of esignet service.
+  * It relies on Spring cache to integrate with a distributed cache. Currently, `Redis` is configured to ensure data sharing across multiple instances of e-Signet service.
 * The **Data layer** is used to store the relying party client or application details. `Postgres` is used as the current database.
 * This is built using the `Spring Boot` framework.
 
