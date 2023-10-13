@@ -14,7 +14,7 @@ Refer to this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integra
 
 The two main functionalities of this interface, **KYC Auth** and **KYC Exchange** are depicted in the diagram below
 
-![](_images/1-kyc-auth-exchange.png)
+![](<\_images/1-kyc-auth-exchange (1).png>)
 
 The Authenticator implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.authenticator` property. Ex:
 
@@ -27,7 +27,7 @@ public class MockAuthenticationService implements Authenticator {
 }
 ```
 
-### Storing Consent 
+### Storing Consent
 
 Storing Consent in e-Signet is now via the built-in **Consent Registry** that has been designed to store user consent on claims and scopes requested during login into a relying party application using e-Signet or the Wallet application ([Inji](https://docs.mosip.io/inji/)).
 
@@ -39,11 +39,11 @@ Key highlights of this feature are:
 
 The diagram below illustrates the internal mechanism of storing Consent in e-signet.
 
-![](_images/2-consent.png)
+![](<\_images/2-consent (1).png>)
 
 ## KeyBinder
 
-This interface provides a method to bind a `individualId` with a public key. On successful binding, returns a signed certificate  `walletUserId` which uniquely identifies a user. It is expected that the `KeyBinder` implementation takes care of overriding previously bound certificates with the newly generated signed certificate for a user.
+This interface provides a method to bind a `individualId` with a public key. On successful binding, returns a signed certificate `walletUserId` which uniquely identifies a user. It is expected that the `KeyBinder` implementation takes care of overriding previously bound certificates with the newly generated signed certificate for a user.
 
 Individual needs to be authenticated before binding key. It is structured to accept any type of auth challenge, namely OTP/ BIO.
 
@@ -53,11 +53,11 @@ Refer to this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integra
 
 ### KeyBinding Process
 
-![](_images/3-key-binding-process.png)
+![](<\_images/3-key-binding-process (1).png>)
 
 ### Authentication with Bound Key
 
-![](_images/4-key-binding-usage.png)
+![](<\_images/4-key-binding-usage (1).png>)
 
 The KeyBinder implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.key-binder` property. Ex:
 

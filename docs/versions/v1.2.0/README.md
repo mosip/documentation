@@ -1,4 +1,4 @@
-# Version 1.1.0
+# v1.2.0
 
 **Release Name**: e-Signet
 
@@ -32,6 +32,7 @@ Below are the features available in the release,
 * Consent storage
 
 ## Repositories Released
+
 * e-Signet: [v1.1.0](https://github.com/mosip/esignet/tree/v1.1.0)
 * artifactory-ref-impl: [v1.2.0.1-B5](https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.1-B5)
 * mosip-config: [v1.1.0-ES](https://github.com/mosip/mosip-config/releases/tag/v1.1.0-ES)
@@ -40,7 +41,7 @@ For details for deployment go through the [helm charts in e-Signet repository](h
 
 ## Documentation
 
-* [Feature Documentation](../../overview/features/README.md)
-* [Integration Guides](../../integration-guides/README.md)
-* [End User Guide](../../end-user-guide/README.md)
-* [QA Report](test-report/README.md)
+* [Feature Documentation](../../overview/features/)
+* [Integration Guides](../../integration-guides/)
+* [End User Guide](../../end-user-guide/)
+* [QA Report](../../build-and-deploy/configuration/)

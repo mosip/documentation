@@ -48,7 +48,7 @@ Verification is performed on various configurations as mentioned below:
 
 ## Feature health
 
-![](\_images/esignet-feature-health.png)
+![](broken-reference)
 
 ## Functional test results for e-Signet
 

@@ -1,12 +1,12 @@
 # Relying Party
 
-The relying party is an OAuth client who should be able to authenticate the end user and get the user information. For availing these [features](architecture/features.md), the relying party needs to partner with an e-Signet-compliant authentication system to register and integrate.
+The relying party is an OAuth client who should be able to authenticate the end user and get the user information. For availing these [features](../../overview/features/), the relying party needs to partner with an e-Signet-compliant authentication system to register and integrate.
 
 ## Pre-requisites
 
 Connect with an authentication system which uses the e-Signet solution for onboarding relying parties. As a part of this activity, you should receive the environment details and register yourself to receive a client ID.
 
-You can use our sandbox environment to integrate as well. For more details visit our page on [Sandbox Details](sandbox-details/).
+You can use our sandbox environment to integrate as well. For more details visit our page on [Sandbox Details](../../sandbox-details/).
 
 ## Integration steps
 
@@ -22,8 +22,8 @@ Ensure that the redirect URI is also shared with the Authentication Partner to c
 
 Add a button on your website (i.e, Log in with e-Signet), which should call the authorization endpoint and navigate the user to the e-Signet UI screen for authentication and consent capture.
 
-{% swagger src=".gitbook/assets/e-Signet.yml" path="/authorize" method="get" %}
-[e-Signet.yml](.gitbook/assets/e-Signet.yml)
+{% swagger src="../../.gitbook/assets/e-Signet.yml" path="/authorize" method="get" %}
+[e-Signet.yml](../../.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
 After the authorization endpoint is called, the e-Signet server validates the request and redirects the user to the authentication screen.
@@ -38,8 +38,8 @@ In case of failure, the redirect URI webpage would receive an "error" and "error
 
 Once the authentication code is received, you can now call the token endpoint to get the ID and Access tokens.
 
-{% swagger src=".gitbook/assets/e-Signet.yml" path="/oauth/token" method="post" %}
-[e-Signet.yml](.gitbook/assets/e-Signet.yml)
+{% swagger src="../../.gitbook/assets/e-Signet.yml" path="/oauth/token" method="post" %}
+[e-Signet.yml](../../.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
 **Sample ID-token**
@@ -92,11 +92,12 @@ payload:
 
 Using the access token you can call the user info endpoint to get the user information as an encrypted JWT.
 
-{% swagger src=".gitbook/assets/e-Signet.yml" path="/oidc/userinfo" method="get" %}
-[e-Signet.yml](.gitbook/assets/e-Signet.yml)
+{% swagger src="../../.gitbook/assets/e-Signet.yml" path="/oidc/userinfo" method="get" %}
+[e-Signet.yml](../../.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
 **Example 1**
+
 ```
 {
   "sub": "63EBC25D699305A26EE740A955852EAB2E6527BFF2F5E9E5562B502DACECD020",
@@ -115,6 +116,7 @@ Using the access token you can call the user info endpoint to get the user infor
 ```
 
 **Example 2**
+
 ```
 {
   "sub": "63EBC25D699305A26EE740A955852EAB2E6527BFF2F5E9E5562B502DACECD020",
@@ -141,12 +143,12 @@ The response is signed and then encrypted, with the result being a nested JWT. S
 
 e-Signet exposes APIs using which a relying party can be registered and receive credentials to connect with e-Signet.
 
-{% swagger src=".gitbook/assets/e-Signet.yml" path="/client-mgmt/oidc-client" method="post" %}
-[e-Signet.yml](.gitbook/assets/e-Signet.yml)
+{% swagger src="../../.gitbook/assets/e-Signet.yml" path="/client-mgmt/oidc-client" method="post" %}
+[e-Signet.yml](../../.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
-{% swagger src=".gitbook/assets/e-Signet.yml" path="/client-mgmt/oidc-client/{client_id}" method="put" %}
-[e-Signet.yml](.gitbook/assets/e-Signet.yml)
+{% swagger src="../../.gitbook/assets/e-Signet.yml" path="/client-mgmt/oidc-client/{client_id}" method="put" %}
+[e-Signet.yml](../../.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
 {% hint style="info" %}
