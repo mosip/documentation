@@ -22,7 +22,7 @@ The features included in this release are,
 
 ## Documentation
 
-* [Feature Documentation](architecture/features.md)
-* [Integration Guides](integration-guides/)
-* [End User Guide](esignet-end-user-guide.md)
-* [QA Report](test-report-1.0.0.md)
+* [Feature Documentation](../../overview/features/README.md)
+* [Integration Guides](../../integration-guides/README.md)
+* [End User Guide](../../end-user-guide/README.md)
+* [QA Report](test-report/README.md)

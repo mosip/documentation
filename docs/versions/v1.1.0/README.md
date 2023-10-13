@@ -40,7 +40,7 @@ For details for deployment go through the [helm charts in e-Signet repository](h
 
 ## Documentation
 
-* [Feature Documentation](architecture/features.md)
-* [Integration Guides](integration-guides/)
-* [End User Guide](esignet-end-user-guide.md)
-* [QA Report](test-report-1.1.0.md)
+* [Feature Documentation](../../overview/features/README.md)
+* [Integration Guides](../../integration-guides/README.md)
+* [End User Guide](../../end-user-guide/README.md)
+* [QA Report](test-report/README.md)
