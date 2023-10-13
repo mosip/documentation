@@ -14,7 +14,7 @@ Refer to this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integra
 
 The two main functionalities of this interface, **KYC Auth** and **KYC Exchange** are depicted in the diagram below
 
-<figure><img src="../.gitbook/assets/IdP Diagrams-Page-3.png" alt=""><figcaption></figcaption></figure>
+![](_images/1-kyc-auth-exchange.png)
 
 The Authenticator implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.authenticator` property. Ex:
 
@@ -39,7 +39,7 @@ Key highlights of this feature are:
 
 The diagram below illustrates the internal mechanism of storing Consent in e-signet.
 
-![](../.gitbook/assets/consent.png)
+![](_images/2-consent.png)
 
 ## KeyBinder
 
@@ -53,11 +53,11 @@ Refer to this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integra
 
 ### KeyBinding Process
 
-<figure><img src="../.gitbook/assets/e-signet-key-binding.png" alt=""><figcaption></figcaption></figure>
+![](_images/3-key-binding-process.png)
 
 ### Authentication with Bound Key
 
-<figure><img src="../.gitbook/assets/e-signet-key-binding-usage.png" alt=""><figcaption></figcaption></figure>
+![](_images/4-key-binding-usage.png)
 
 The KeyBinder implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.key-binder` property. Ex:
 
