@@ -5,7 +5,7 @@
 * The system supports only the secure options in OpenID connect like `authorization code flow` to ensure the resident data is handled securely.
 * It is integrated with [SBI](https://standards.ieee.org/ieee/3167/10925/) (Secure Biometric Interface) to facilitate secure biometrics collection for biometric-based user verification.
 * The system supports multiple authentication factors like OTP, Biometrics, etc., to be inclusive for all people.
-* All integrations to the ID system are taken as a runtime pluggable library to allow the reuse of official container images that help with easier upgrades.
+* All integrations to the ID system are taken as a runtime plug-able library to allow the reuse of official container images that help with easier upgrades.
 * Since this is designed especially for country-scale resident verification, we do not support additional features like role management, session management, etc.
 
 Below is a brief demonstration of e-Signet and its offerings.
