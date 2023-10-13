@@ -2,7 +2,7 @@
 
 This guide helps in setting up the mock OIDC-relying party portal. This portal uses the authorization code flow with private key JWT client authentication to fetch the user profile.
 
-OIDC mock relying party portal is built with reactJS. This consists of 2 components:
+OIDC mock relying party portal is built with reactJS. This consists of two components:
 
 1. OIDC-UI
 2. OIDC-Server

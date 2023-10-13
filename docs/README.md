@@ -8,7 +8,7 @@ e-Signet also provides an elegant and easy way for an existing trusted identity 
 There is a need to support more verification methods to be inclusive. Current approaches do not address privacy concerns comprehensively. We are constantly looking at ways to bridge the digital divide with better privacy. Here is a short introduction to [identity verification](identity-verification.md) methods. Also, do check out [Inji](https://app.gitbook.com/s/4EyCrLbFom7vj7UcMIUZ/modules/mobile-application) to understand modern approaches to identity using verifiable credentials for decentralized verification.
 {% endhint %}
 
-![](.gitbook/assets/e-signet-qr.jpg) ![](.gitbook/assets/e-signet-bio.jpg)
+![](_images/e-signet-qr.jpg) ![](_images/e-signet-bio.jpg)
 
 **What can e-Signet be used for?**
 
@@ -18,7 +18,7 @@ There is a need to support more verification methods to be inclusive. Current ap
 
 **How is e-Signet different from other services?**
 
-e-Signet reimagines authentication services to factor in emerging trends and the need for assured digital identities. It brings critical capabilities to the authentication process:
+e-Signet re-imagines authentication services to factor in emerging trends and the need for assured digital identities. It brings critical capabilities to the authentication process:
 
 * Model to integrate existing identity stores for authentication and KYC needs.
 * Support for biometrics authentication.
@@ -37,7 +37,7 @@ e-Signet relies on [**SBI (Secure Biometric Interface)**](https://standards.ieee
 
 e-Signet will leverage emerging standards for using verifiable credentials with OpenID and for wallet integration.
 
-#### User centricity
+#### User Centricity
 
 Inclusion and access are core objectives of e-Signet. We are mindful of user privacy and data protection. e-Signet simplifies the user's life and offers flexibility and choices to complete identity verification.
 
@@ -53,5 +53,3 @@ Inclusion and access are core objectives of e-Signet. We are mindful of user pri
 * Enables government to open up digital verification/ e-KYC as a service and enables better access to financial inclusion.
 * Ease of integration to the relying parties as it follows standard-based protocols (lower time to market).
 * Narrows and bridges the digital divide by enabling multiple modes of verification.
-
-> _**Note**_: **IdP** (version 0.9.0) is completely re-structured and renamed as **e-Signet** (from endpoints to classes).
