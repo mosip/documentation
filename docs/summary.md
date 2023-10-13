@@ -16,7 +16,7 @@
 * [Integration Guides](integration-guides/README.md)
   * [Authentication System](integration-guides/authentication-system/README.md)
   * [Relying Party](integration-guides/relying-party/README.md)
-  * [Digital Wallet Integration](integration-guides/digital-wallet/README.md)
+  * [Digital Wallet](integration-guides/digital-wallet/README.md)
 * [End User Guide](end-user-guide/README.md)
   * [Login with OTP](end-user-guide/login-with-otp/README.md)
   * [Login with Biometrics](end-user-guide/login-with-biometrics/README.md)
