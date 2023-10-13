@@ -1,20 +1,20 @@
 # Features
 
-## One Login 
+## One Login
 
 e-Signet offers a convenient feature called One Login, which allows users to access applications and access various services through a single interface. This feature provides a Single Sign-on (SSO) experience, eliminating the need for multiple logins. Additionally, e-Signet enables seamless login to any government service by utilizing a single credential through the existing ID repository.
 
-## Passwordless Authentication
+## Password-less Authentication
 
-e-Signet implements a Passwordless login method that leverages authentication factors supported by our system. This approach enhances security by mitigating the potential risks associated with password-related security vulnerabilities, such as weak passwords, password reuse, and phishing attacks.
+e-Signet implements a Password-less login method that leverages authentication factors supported by our system. This approach enhances security by mitigating the potential risks associated with password-related security vulnerabilities, such as weak passwords, password reuse, and phishing attacks.
 
 {% hint style="info" %}
 Though we don't believe in passwords, e-Signet still provide an option to enable password based authentication for authentication system that store passwords. In order to perform password based authentication in e-Signet you can go through the below article.
 
-[How to enable password based authentication in e-Signet?]()
+[How to enable password based authentication in e-Signet?](./)
 {% endhint %}
 
-## Support for Multiple Authentication
+## Support for various Authentication Modalities
 
 ### OTP Authentication
 
@@ -34,13 +34,13 @@ Verifiable credentials (VCs) are an open standard for digital credentials. They 
 
 VCs are generally issued by the entities who are eligible to assert claims on specific domain aspects about an individual / entity. These issuer entities are also widely trusted by relying parties in an ecosystem.
 
-Individuals / holder receives and stores these VCs from issuers in there digital wallet apps, and later will use these VCs to avail various services. 
+Individuals / holder receives and stores these VCs from issuers in there digital wallet apps, and later will use these VCs to avail various services.
 
 OID4VCI is a mechanism built extending the OAuth 2.0 protocol to enable standards based interaction between wallets and issuer application to transfer VCs. Since this is based on proved OAuth 2.0 protocol, issuers also get a reliable mechanism to authenticate the individual before delivering the VC. This promotes interoperability between wallet provider and issuers.
 
 e-Signet being a OAuth 2.0 & OIDC based solution, it is enhanced to support OID4VCI flows. Once e-Signet VCI solution is integrated to a classic issuer, it can enable the issuer application to be become OID4VCI compliant and become interoperable with all OID4VCI compatible wallets.
 
-## Consent 
+## Consent
 
 The Consent Registry is intended for the storage of user consent regarding claims and scopes requested during the login process to a relying party application. This can be done through either the e-Signet or the Wallet application (Inji).
 
@@ -52,17 +52,16 @@ Some key aspects to note about this feature are as follows:
 
 ## Language Support for e-Signet
 
-The e-Signet user interface (UI) offers comprehensive language support to facilitate effective communication. By default, e-Signet includes language bundles for Arabic, English, Hindi, Kannada, and Tamil. Moreover, it can be easily customized to incorporate additional languages as necessary to accommodate specific country requirements. 
+The e-Signet user interface (UI) offers comprehensive language support to facilitate effective communication. By default, e-Signet includes language bundles for Arabic, English, Hindi, Kannada, and Tamil. Moreover, it can be easily customized to incorporate additional languages as necessary to accommodate specific country requirements.
 
 Furthermore, e-Signet has undergone meticulous testing to ensure seamless compatibility with right-to-left (RTL) languages. This means that users can rely on e-Signet to confidently navigate and interact with RTL content.
 
 {% hint style="info" %}
 In order to add more language bundles in e-Signet, you can go through the below article.
 
-[How to add a new language in e-Signet?]()
+[How to add a new language in e-Signet?](./)
 
 In order to remove a language from e-Signet, you can go through the below article.
 
-[How to remove a language from e-Signet default setup?]()
-
+[How to remove a language from e-Signet default setup?](./)
 {% endhint %}
