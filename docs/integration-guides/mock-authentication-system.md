@@ -18,8 +18,7 @@ We run the mock identity system, with endpoints to create an individual, authent
 
 ## Setup
 
-1.  Set the mock implementation details in the `esignet-default.properties`\
-
+1.  Set the mock implementation details in the `esignet-default.properties`\\
 
     ```properties
     mosip.esignet.integration.scan-base-package=io.mosip.esignet.mock.integration
@@ -39,8 +38,6 @@ We run the mock identity system, with endpoints to create an individual, authent
     > Build this module : https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-esignet-integration-impl using below command
     >
     > `mvn clean install -Dgpg.skip=true`
-
-
 3. And an entry in the `key_policy_def` table of `mosip_esignet` DB:
 
 ```sql
