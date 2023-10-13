@@ -24,6 +24,7 @@
 * [Supported Integrations](integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
   * [Inji](https://docs.mosip.io/inji)
+  * [OpenCRVS](https://documentation.opencrvs.org/general/releases/v1.3.0-beta-release-notes#mosip-integration-v2-e-signet)
 * [Versions](versions/README.md)
   * [v1.2.0](versions/v1.2.0/README.md)
     * [Test Report](versions/v1.2.0/test-report/README.md)
