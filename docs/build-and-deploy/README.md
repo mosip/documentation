@@ -1,35 +1,28 @@
 # Build & Deployment
 
-The developer guide for building and running various components of e-Signet is available in their respective repositories as mentioned below. Also, you can watch the video to learn more!
+The latest and greatest released codebase can be found under "master" branch. All the ongoing bug fixes or feature development are usually on the "develop" or on a specific feature branch.
 
-{% embed url="https://www.youtube.com/watch?v=nmIZl6Tmt68" %}
+Note: It is recommended to either use master or released tags for the local deployment and testing.
 
-## Command to build
-
-### Building and deployment of esignet service
-
-Link to [Repository](https://github.com/mosip/esignet/tree/1.0.0/esignet-service)
+## Build Backend services
+	
+e-Signet core and service modules use maven as build tool. esignet-service is a spring boot application which hosts all the REST endpoints.
 
 **Prerequisite**
 
-```
+``` 
 * Java 11
 * Apache Maven 3.8.6
 ```
-We provide two authenticator implementations:
 
-* [esignet mock services](https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-esignet-integration-impl)
-* [id-authentication](https://github.com/mosip/id-authentication/tree/release-1.2.0.1/authentication/esignet-integration-impl)
+* Run `mvn clean install -Dgpg.skip=true` to build.
 
-1. Run `mvn clean install -Dgpg.skip=true` to build the service jar.
-2. Add either one of the authenticator implementation to the classpath to start the service.
-
-_Note_: For more information, refer [here](https://docs.esignet.io/integration-guides).
+Note: Use -DskipTests=true to skip test case execution
 
 
-### Building and deployment of esignet UI
+## Build UI
 
-Link to [Repository](https://github.com/mosip/esignet/tree/1.0.0/oidc-ui)
+e-Signet UI is a React application which is built using npm.
 
 **Prerequisite**
 
@@ -38,42 +31,8 @@ Link to [Repository](https://github.com/mosip/esignet/tree/1.0.0/oidc-ui)
 	 * node v16.13.2 or higher
 ```
 
-To build and run esignet UI, refer [here](https://github.com/mosip/esignet/tree/1.0.0/oidc-ui#build--run-for-developers).
-
-
-### Building and deployment of mock OIDC portal
-
-Mock OIDC portal comprises of mock-relying-party-ui and mock-relying-party-service.
-
-Link to Repositories:
-
-1. [mock-relying-party-ui](https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-relying-party-ui)
-2. [mock-relying-party-service](https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-relying-party-service)
- 
-**Prerequisite**
-
-```
-* npm 8.1.2 or higher  
-* node v16.13.2 or higher
-```
-
-* To build and run mock-relying-party UI, refer [here](https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-relying-party-ui#build--run-for-developers).
-
-* To build and run mock-relying-party service, refer [here](https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-relying-party-service#build--run-for-developers).
-
-
-### Building and deployment of mock-identity-system
-
-Link to [Repository](https://github.com/mosip/esignet-mock-services/tree/0.9.0/mock-identity-system)
- 
-**Prerequisite**
-
-``` 
-* Java 11
-* Apache Maven 3.8.6
-```
-
-* Run `mvn clean install -Dgpg.skip=true` to build the service jar.
+* Run `npm install`
+* Run `npm run build`
 
 
 <!--
