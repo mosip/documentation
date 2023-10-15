@@ -2,9 +2,9 @@
 
 * [e-Signet](README.md)
 * [Overview](overview/README.md)
+  * [Features](overview/features/README.md)
   * [Principles](overview/principles/README.md)
   * [Components](overview/components/README.md)
-  * [Features](overview/features/README.md)
   * [Technology Stack](overview/technology-stack/README.md)
 * [Try it out](sandbox-details/README.md)
 * [Build & Deployment](build-and-deploy/README.md)

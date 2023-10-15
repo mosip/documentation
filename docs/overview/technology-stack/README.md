@@ -1,10 +1,10 @@
 # Technology Stack
 
-e-Signet is build using the below tools and technologies.
+e-Signet is built using the below tools and technologies.
 
 ## Authentication and Authorization
 
-For restricted endpoints in e-Signet we use the below IAM application but e-Signet is can work with any IAM solution compatible with spring OAuth 2.0.
+For restricted endpoints in e-Signet, we use the below IAM application, but e-Signet is can work with any IAM solution compatible with Springe-Signet OAuth 2.0.
 
 <table><thead><tr><th width="180">Tool/Technology</th><th width="125">Version</th><th width="251">Description</th><th>Licence</th></tr></thead><tbody><tr><td><a href="https://www.keycloak.org/">KeyCloak</a></td><td>TBA</td><td>KeyCloak is an open-source Identity and Access Management (IAM) tool.</td><td><a href="https://github.com/keycloak/keycloak/blob/main/LICENSE.txt">Apache License 2.0</a></td></tr></tbody></table>
 
