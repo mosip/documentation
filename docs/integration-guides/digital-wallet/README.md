@@ -1,6 +1,6 @@
 # Digital Wallet Integration
 
-What is a Digital Wallet?
+What is a Digital ID Wallet?
 
 A Digital ID Wallet is a tool or a software-based system that stores and manages personal information and identity credentials securely in a digital format. It helps people keep their information organized and protected. This wallet ensures the safety of personal data and makes it easily accessible when needed.
 
