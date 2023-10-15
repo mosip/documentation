@@ -14,8 +14,8 @@ The mock identity system is a simple spring boot application with endpoints to m
 
 Refer to the below page to set up and run the mock ID system.
 
-{% content-ref url="../../integration-guides/mock-authentication-system.md" %}
-[mock-authentication-system.md](../../integration-guides/mock-authentication-system.md)
+{% content-ref url="mock-id-system/README.md" %}
+[README.md](mock-id-system/README.md)
 {% endcontent-ref %}
 
 ## Build mock plugins
