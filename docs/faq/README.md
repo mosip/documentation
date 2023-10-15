@@ -1,8 +1,6 @@
----
-description: Frequently Asked Questions
----
+# FAQs
 
-# FAQ
+Here are a few of the frequently asked questions (FAQs) on e-Signet:
 
 ## About e-Signet
 
