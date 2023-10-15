@@ -9,7 +9,7 @@
 * [Sandbox Details](sandbox-details/README.md)
 * [Build & Deployment](build-and-deploy/README.md)
   * [Local Deployment](build-and-deploy/local-deployment/README.md)
-    * [Mock Authentication System](integration-guides/mock-authentication-system.md)
+    * [Mock Identity System](integration-guides/mock-authentication-system.md)
     * [Mock Relying Party](build-and-deploy/local-deployment/mock-client-application/README.md)
   * [Production Deployment](build-and-deploy/production-deployment/README.md)
   * [Configuring e-Signet](build-and-deploy/configuration/README.md)
