@@ -20,10 +20,10 @@ The first developer release of Android Registration Client offers the following 
 
       New languages can be added by following the below steps:
 
-        i. Additional languages can be configured by adding localisation files in `lib/l10n` folder present in the root project 
+         i. Additional languages can be configured by adding localisation files in `lib/l10n` folder present in the root project 
            directory("android_registration_client").
 
-        ii. The languages that are rendered on the UI will be based on the country configuration (after master data sync). The default 
+         ii. The languages that are rendered on the UI will be based on the country configuration (after master data sync). The default 
            display language is English. The other languages will be available in the UI after master data sync.
    
       To know more, refer [Flutter doc-Internationalizing Flutter apps](https://docs.flutter.dev/ui/accessibility-and-localization/internationalization).
