@@ -13,11 +13,11 @@ Here are some ways you can use our sandbox environment: [Collab](https://collab.
 
 If you are looking to quickly try out e-Signet, here are a few VIDs that you can use on our Collab environment for testing.
 
-* \<VID>
-* \<VID>
-* \<VID>
+* 2078497635
+* 9250738043
+* 4976458142
 
-Now, to test e-Signet on collab we have built a [mock health portal (click here to access it)](https://healthservices-esignet.collab.mosip.net/). Follow the steps mentioned in our [end-user guide for OTP authentication](../end-user-guide/login-with-otp/) after reaching the mock health portal.
+Now, to test e-Signet on Collab, we have built a [mock health portal (click here to access it)](https://healthservices-esignet.collab.mosip.net/). Follow the steps mentioned in our [end-user guide for OTP authentication](../end-user-guide/login-with-otp/) after reaching the mock health portal.
 
 {% hint style="info" %}
 The data used in the above VIDs is fictitious and the images returned are AI-generated from the website: [https://thispersondoesnotexist.com/](https://thispersondoesnotexist.com/)
