@@ -9,9 +9,9 @@ e-Signet offers a convenient feature called One Login, which allows users to acc
 e-Signet implements a password-less login method that leverages authentication factors supported by our system. This approach enhances security by mitigating the potential risks associated with password-related security vulnerabilities, such as weak passwords, password reuse, and phishing attacks.
 
 {% hint style="info" %}
-Though we don't believe in passwords, e-Signet still provides an option to enable password-based authentication for an authentication system that stores passwords. In order to perform password-based authentication in e-Signet you can go through the below article.
+Though we don't believe in passwords, e-Signet still provides an option to enable password-based authentication for an authentication system that stores passwords. In order to perform password-based authentication in e-Signet, you can go through the below article.
 
-[How to enable password-based authentication in e-Signet?](./)
+[How to enable password-based authentication in e-Signet?](../../faq/#how-to-configure-password-authentication-in-e-signet)
 {% endhint %}
 
 ## Support for various Authentication Modalities
@@ -30,7 +30,7 @@ Mobile wallet-based authentication can be utilized to scan a QR code and finaliz
 
 ## Verifiable Credentials Issuance
 
-Verifiable credentials (VCs) are an open standard for digital credentials. They can represent information found in physical credentials, such as a passport or license in digital format. They have numerous advantages over physical credentials, most notably that they're digitally signed, which makes them tamper-resistant and instantaneously verifiable.
+Verifiable credentials (VCs) are an open standard for digital credentials. They can represent information found in physical credentials, such as a passport or license, in digital format. They have numerous advantages over physical credentials, most notably that they're digitally signed, which makes them tamper-resistant and instantly verifiable.
 
 VCs are generally issued by entities who are eligible to assert claims on specific domain aspects about an individual/entity. These issuer entities are also widely trusted by relying parties in an ecosystem.
 
@@ -59,9 +59,9 @@ Furthermore, e-Signet has undergone meticulous testing to ensure seamless compat
 {% hint style="info" %}
 In order to add more language bundles in e-Signet, you can go through the below article.
 
-[How to add a new language in e-Signet?](./)
+[How to add a new language to e-Signet?](../../faq/#how-to-add-a-new-language-in-e-signet)
 
 In order to remove a language from e-Signet, you can go through the below article.
 
-[How to remove a language from the e-Signet default setup?](./)
+[How to remove a language from the e-Signet default setup?](../../faq/#how-to-remove-a-language-from-the-e-signet-default-setup)
 {% endhint %}
