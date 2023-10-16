@@ -100,15 +100,15 @@ The first developer release of Android Registration Client offers the following 
   - Photograph
   - Exception photograph
 
-    The acquisition of biometric data is regulated by the country. The country has control over the capture of each type of biometric 
-    (fingerprint, iris, or face) through the global configuration. When the operator selects the **Capture** button, the biometric SBI 
-    application is accessed to capture the biometrics. Once the biometrics are obtained, the data and control are returned to the 
-    Android Registration Client. To obtain the resident's biometrics, the quality of the captured image must exceed the threshold 
-    specified by the country. The biometrics can be captured multiple times if necessary to meet the quality threshold. In situations 
-    where none of the captured images meet the threshold, the image with the highest quality score will be saved.
+ The acquisition of biometric data is regulated by the country. The country has control over the capture of each type of biometric 
+ (fingerprint, iris, or face) through the global configuration. When the operator selects the **Capture** button, the biometric SBI 
+ application is accessed to capture the biometrics. Once the biometrics are obtained, the data and control are returned to the 
+ Android Registration Client. To obtain the resident's biometrics, the quality of the captured image must exceed the threshold 
+ specified by the country. The biometrics can be captured multiple times if necessary to meet the quality threshold. In situations 
+ where none of the captured images meet the threshold, the image with the highest quality score will be saved.
 
-    If the resident has a biometric exception (such as a missing finger/eye or very poor finger/iris quality), the operator can d 
-    designate that particular biometric as an exception. However, the operator must still capture the resident's exception photo.
+ If the resident has a biometric exception (such as a missing finger/eye or very poor finger/iris quality), the operator can
+ designate that particular biometric as an exception. However, the operator must still capture the resident's exception photo.
 
 * **Preview section**: The Operator has the ability to review the data entered by the applicant, including demographic information, uploaded documents, and captured biometrics. This preview allows the Operator to ensure the accuracy of the entered data. If any mistakes are found, the Operator can easily go back to the corresponding section and make the necessary corrections. If the data is correct, the Operator can proceed to the next step, which is to authenticate themselves.
 
