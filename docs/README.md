@@ -1,14 +1,14 @@
 # e-Signet
 
-In these times of digital transformation, most services are moving online globally. Personalized access to online services is enabled through the usage of a trusted digital identity. **e-Signet** aims to offer a simple yet powerful mechanism for end users to identify themselves to avail of online services and also share their profile information. e-Signet supports multiple modes of identity verification to promote inclusion and increase access, thus narrowing potential digital divides.
+In these times of digital transformation, most services are moving online globally. Personalized access to online services is enabled through the use of a trusted digital identity. **e-Signet** aims to offer a simple yet powerful mechanism for end users to identify themselves to avail of online services and also share their profile information. e-Signet supports multiple modes of identity verification to promote inclusion and increase access, thus narrowing potential digital divides.
 
-e-Signet also provides an elegant and easy way for an existing trusted identity database to make the identity digital and provision identity verification and service access.
+e-Signet also provides an elegant and easy way for an existing trusted identity database to make the identity digital and provide identity verification and service access.
 
 {% hint style="info" %}
-There is a need to support more verification methods to be inclusive. Current approaches do not address privacy concerns comprehensively. We are constantly looking at ways to bridge the digital divide with better privacy. Here is a short introduction to [identity verification](identity-verification.md) methods. Also, do check out [Inji](https://app.gitbook.com/s/4EyCrLbFom7vj7UcMIUZ/modules/mobile-application) to understand modern approaches to identity using verifiable credentials for decentralized verification.
+There is a need to support more verification methods to be inclusive. Current approaches do not address privacy concerns comprehensively. We are constantly looking at ways to bridge the digital divide with better privacy. Here is a short introduction to [identity verification](glossary.md#identity-verification) methods. Also, check out [Inji](https://app.gitbook.com/s/4EyCrLbFom7vj7UcMIUZ/modules/mobile-application) to understand modern approaches to identity using verifiable credentials for decentralized verification.
 {% endhint %}
 
-![](_images/e-signet-qr.jpg) ![](_images/e-signet-bio.jpg)
+![](\_images/e-signet-qr.jpg) ![](\_images/e-signet-bio.jpg)
 
 **What can e-Signet be used for?**
 
@@ -42,14 +42,14 @@ e-Signet will leverage emerging standards for using verifiable credentials with 
 Inclusion and access are core objectives of e-Signet. We are mindful of user privacy and data protection. e-Signet simplifies the user's life and offers flexibility and choices to complete identity verification.
 
 * **One ID** to access multiple services. Easy login to any of the integrated government and private sector services using a single identity credential.
-* Mandatory **User Consent** before allowing the relying party for accessing the personal information (inbuilt consent flow).
+* Mandatory **User Consent** before allowing the relying party to access the personal information (inbuilt consent flow).
 * **Multiple modes of authentication** to complete identity verification.
-* Protection of credentials as the login credentials is not shared with the relying party. The login happens on e-Signet.
+* Protection of credentials as the login credentials are not shared with the relying party. The login happens on e-Signet.
 
 #### Go digital quickly
 
 * Quick and safe way to expose digital verification across services.
 * Ability to verify the residents with the same assurance as given during registration (OTP, Biometric, Cryptographic key).
-* Enables government to open up digital verification/ e-KYC as a service and enables better access to financial inclusion.
+* Enables the government to open up digital verification/ e-KYC as a service and enables better access to financial inclusion.
 * Ease of integration to the relying parties as it follows standard-based protocols (lower time to market).
 * Narrows and bridges the digital divide by enabling multiple modes of verification.
