@@ -2,7 +2,7 @@
 
 Welcome to the [Registration Client](https://docs.mosip.io/1.2.0/modules/registration-client) Setup Guide tailored specifically for our Collab Environment!
 
-The Registration Client setup guide for the MOSIP Collab environment offers a detailed and user-friendly walkthrough to assist you in configuring and accessing the Registration Client module. This module is specifically designed to provide agents/ operators with a wide range of functionalities, including onboarding, data synchronization, packet management, and more.
+The Registration Client setup guide for the MOSIP Collab environment offers a detailed and user-friendly walkthrough to assist you in configuring and accessing the Registration Client module. This module is specifically designed to provide Operators/Supervisor with a wide range of functionalities, including onboarding, data synchronization, packet management, and more.
 
 The primary goal of this guide is to ensure that you can efficiently set up the Registration Client in the MOSIP Collab environment with minimal effort. Whether you are new to the module and just starting to explore its features or an experienced operator seeking a streamlined setup process, this document will guide you through the essential steps to ensure that you have all the necessary tools  available at your disposal.
 
@@ -20,7 +20,8 @@ With the implementation of this Registration Client Demo Setup, you are now on t
 
    * 50 GB of free space on the hard disk 
 
-   * The workstation should be TPM 2.0 enabled. The sequence of steps to check if your workstation is TPM enabled, click [here](https://www.howtogeek.com/287737/how-to-check-if-your-computer-has-a-trusted-platform-module-tpm-chip/#:~:text=To%20open%20it%2C%20press%20Windows,PC%20does%20have%20a%20TPM).
+   * The workstation should be TPM 2.0 enabled. To access the guidelines on how to verify the TPM compatibility of your workstation, 
+     click [here](https://www.howtogeek.com/287737/how-to-check-if-your-computer-has-a-trusted-platform-module-tpm-chip/#:~:text=To%20open%20it%2C%20press%20Windows,PC%20does%20have%20a%20TPM).
   
      _Note_: It is important that your workstation is TPM 2.0 enabled and does not operate on any older version of TPM.  In the event 
      that your workstation currently utilizes an older iteration such as TPM 1.2, it may be necessary to upgrade your BIOS firmware to 
@@ -30,12 +31,15 @@ With the implementation of this Registration Client Demo Setup, you are now on t
 ### Software
 
   * **JAVA** - Ensure JAVA 11 is installed and `JAVA_HOME` is in the PATH. To download JAVA 11 in your system, click [here](https://www.oracle.com/in/java/technologies/javase/jdk11-archive-downloads.html).
-       * Downloading the JDK Installer
+    
+  * Download the JDK installer
           * Access the Java SE Downloads page and click `Accept License Agreement`. Under the Download menu, click the Download link that corresponds to the `.exe` for your version of Windows 10.
           * Download the file `jdk-11.interim.update.patch_windows-x64_bin.exe`.
         
-  * Running the JDK Installer: You must have administrator privilege to install the JDK on Microsoft Windows. To run the JDK installer:
-       * Start the JDK 11 installer by double-clicking the installer's icon or file name in the download location.
+  * Run the JDK installer
+       * You must have administrator privilege to install the JDK on Microsoft Windows. 
+       * To run the JDK installer, start the JDK 11 installer by double-clicking the installer's icon or file name in the download 
+         location.
        * Follow the instructions provided by the installer.
        * After the installation is complete, delete the downloaded file to recover the disk space.
    
@@ -76,11 +80,14 @@ With the implementation of this Registration Client Demo Setup, you are now on t
 
     * You will be able to see the `run.bat` file in the **mock** folder.
 
-    *  Double-click on `run.bat` and extract the file in your system where you can name the folder **Collab-mock-mds-reg**.
+    * Double-click on `run.bat` and extract the file in your system where you can name the folder **Collab-mock-mds-reg**.
 
-    * Click on the **Collab-mock-mds-reg** folder where you will find the sub-folder called **Target** and then you can click on the     **Target** folder to find the required files to run in the system to activate mock mds.
+    * Click on the **Collab-mock-mds-reg** folder where you will find the sub-folder called **Target** and then you can click on the     
+      **Target** folder to find the required files to run in the system to activate mock mds.
 
-    * You can click and explore `collab-mock-mds-reg › target › Profile › Default › Registration` to see the demo biometrics already updated for finger, iris and face which will be used while testing the Registration Client, so you won’t be required to do any additional work here.
+    * You can click and explore `collab-mock-mds-reg › target › Profile › Default › Registration` to see the demo biometrics already 
+      updated for finger, iris and face which will be used while testing the Registration Client, so you won’t be required to do any 
+      additional work here.
 
     * Click on `run_reg.bat` to run the mock MDS for the Registration Client.
  
@@ -104,9 +111,7 @@ To start running the Registration Client, refer to our [Registration Client Inst
 
 To access all the features of the Registration Client portal and explore the registration process in MOSIP, refer [Registration Client User Guide](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-user-guide).
 
-_Note_: Supervisor Authentication and Packet Approval Authentication
-
-When prompted for credentials for supervisor authentication and/or packet approval authentication, please provide the same username and password that was provided for login.
+_Note_: For Supervisor Authentication and Packet Approval Authentication, please provide the same username and password that was provided during login.
 
 ### Get in Touch
 
