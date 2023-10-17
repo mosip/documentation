@@ -32,12 +32,13 @@ With the implementation of this Registration Client Demo Setup, you are now on t
 
   * **JAVA** - Ensure JAVA 11 is installed and `JAVA_HOME` is in the PATH. To download JAVA 11 in your system, click [here](https://www.oracle.com/in/java/technologies/javase/jdk11-archive-downloads.html).
     
-  * Download the JDK installer
+    * Download the JDK installer
 
-        * Access the Java SE Downloads page and click `Accept License Agreement`. Under the Download menu, click the Download link that corresponds to the `.exe` for your version of Windows 10.
+        * Access the Java SE Downloads page and click `Accept License Agreement`. Under the Download menu, click the download link that 
+          corresponds to the `.exe` for your version of Windows 10.
         * Download the file `jdk-11.interim.update.patch_windows-x64_bin.exe`.
         
-  * Run the JDK installer
+    * Run the JDK installer
        * You must have administrator privilege to install the JDK on Microsoft Windows. 
        * To run the JDK installer, start the JDK 11 installer by double-clicking the installer's icon or file name in the download 
          location.
