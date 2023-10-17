@@ -2,7 +2,7 @@
 
 Welcome to the [Registration Client](https://docs.mosip.io/1.2.0/modules/registration-client) Setup Guide tailored specifically for our Collab Environment!
 
-The Registration Client setup guide for the MOSIP Collab environment offers a detailed and user-friendly walkthrough to assist you in configuring and accessing the Registration Client module. This module is specifically designed to provide Operators/Supervisor with a wide range of functionalities, including onboarding, data synchronization, packet management, and more.
+The Registration Client setup guide for the MOSIP Collab environment offers a detailed and user-friendly walkthrough to assist you in configuring and accessing the Registration Client module. This module is specifically designed to provide Operators/Supervisors with a wide range of functionalities, including onboarding, data synchronization, packet management, and more.
 
 The primary goal of this guide is to ensure that you can efficiently set up the Registration Client in the MOSIP Collab environment with minimal effort. Whether you are new to the module and just starting to explore its features or an experienced operator seeking a streamlined setup process, this document will guide you through the essential steps to ensure that you have all the necessary tools  available at your disposal.
 
