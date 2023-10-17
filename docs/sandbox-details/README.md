@@ -12,7 +12,7 @@ Regular nightly builds from engineering are deployed here and this environment i
 
 Environment links are available [here](https://collab.mosip.net/).
 
-To know more about the setup Details for Inji in Collab environment, refer [Inji Setup Guide](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide).
+To explore Inji and its features in Collab environment, refer [Inji Setup Guide](https://docs.mosip.io/inji/sandbox-details/inji-setup-guide).
 
 ## Synergy
 
