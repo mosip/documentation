@@ -62,7 +62,39 @@ The standards followed by e-Signet are [listed here](../overview/principles/#ope
 
 <summary>How to add a new language in e-Signet?</summary>
 
+**Adding a new language for local e-Signet setup**
 
+1. Go to your e-Signet project and then open the folder\
+   `oidc-ui >> public >> locales`
+2.  Create a language JSON file&#x20;
+
+    There will be a file name _en.json_ copy that file and rename it with your new language i.e for French _fr.json_ , after that you can the value of all keys in your new language by doing this you will have a json file ith key-value pair of your desired language.
+3. Update `default.json` file\
+   After that you have to add your new language’s json file detail in _default.json_ file, so that it can be parse and the new language can be shown in the ui, like below. You have to add the 2 letter code of the language in languages\_2Letters, similar with the filename, with name of the language in that language. After that if your language is written from right to left then add 2 letter language code in rtlLanguages array, at the end map your 3 letter language code with two letter language code in langCodeMapping.
+
+```json
+{
+  "languages_2Letters": {
+    "en": "English",
+    "ar": "عربى",
+    "LANGUAGE_CODE_IN_ISO-639-1": "LANGUAGE VALUE"
+  },
+  // Add the language as per ISO 639 in rtlLanguages for RTL
+  "rtlLanguages": ["ar"],
+  "langCodeMapping": {
+    "eng": "en",
+    "ara": "ar",
+    "LANGUAGE_CODE_IN_ISO-639-2": "LANGUAGE_CODE_IN_ISO-639-1"
+  }
+}
+```
+
+\
+
+
+Please follow the 2 letter & 3 letter code of any language given in the below link
+
+[https://www.loc.gov/standards/iso639-2/php/English\_list.p](https://www.loc.gov/standards/iso639-2/php/English\_list.php)
 
 </details>
 
