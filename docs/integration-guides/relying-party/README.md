@@ -6,7 +6,7 @@ The relying party is an OAuth client who should be able to authenticate the end 
 
 Connect with an authentication system which uses the e-Signet solution for onboarding relying parties. As a part of this activity, you should receive the environment details and register yourself to receive a client ID.
 
-You can use our sandbox environment to integrate as well. For more details visit our page on [Sandbox Details](../../sandbox-details/).
+You can use our sandbox environment to integrate as well. For more details visit our page on [Sandbox Details](../../try-it-out/).
 
 ## Integration steps
 

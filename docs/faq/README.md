@@ -26,7 +26,7 @@ The core features of e-Signet are available [here](../overview/features/).
 
 Based on the type of entity, such as an ID system, a relying party, or a digital wallet, you can integrate with e-Signet. For more details, go through our [integration guide](../integration-guides/).
 
-If you looking at trying out e-Signet right away, then you can use our sandbox for testing. Please go through our [Try it out section](../sandbox-details/) for more details.
+If you looking at trying out e-Signet right away, then you can use our sandbox for testing. Please go through our [Try it out section](../try-it-out/) for more details.
 
 </details>
 

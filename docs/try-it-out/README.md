@@ -7,7 +7,7 @@ The latest stable version of the e-Signet solution is deployed in our [Collab](h
 
 Here are some ways you can use our sandbox environment: [Collab](https://collab.mosip.net/).
 
-<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>If you want to try out OTP authentication with our test users you can go with this option.</td><td></td><td></td><td><a href="../.gitbook/assets/banners-quick-try.png">banners-quick-try.png</a></td><td><a href="./#quickly-try-out-e-signet">#quickly-try-out-e-signet</a></td></tr><tr><td>If you want your credentials registered and test OTP and wallet based authentication.</td><td></td><td></td><td><a href="../.gitbook/assets/banners-onboard.png">banners-onboard.png</a></td><td><a href="./#onboard-yourself-on-collab-as-a-resident">#onboard-yourself-on-collab-as-a-resident</a></td></tr><tr><td>If you are a relying party and would like to intergate in our sandbox enviornment.</td><td></td><td></td><td><a href="../.gitbook/assets/banners-relying-party-int.png">banners-relying-party-int.png</a></td><td><a href="./#integrate-your-solution-with-e-signet-in-collab">#integrate-your-solution-with-e-signet-in-collab</a></td></tr></tbody></table>
+<table data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-type="files"></th><th data-hidden data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Use our mock data to test e-Signet in Collab.</td><td></td><td></td><td><a href="../.gitbook/assets/banners-try-using-dummy-data.png">banners-try-using-dummy-data.png</a></td><td><a href="./#quickly-try-out-e-signet">#quickly-try-out-e-signet</a></td><td><a href="../.gitbook/assets/banners-quick-try.png">banners-quick-try.png</a></td></tr><tr><td>Onboard your credentials on Collab for testing.</td><td></td><td></td><td><a href="../.gitbook/assets/banners-onboard (2).png">banners-onboard (2).png</a></td><td><a href="./#onboard-yourself-on-collab-as-a-resident">#onboard-yourself-on-collab-as-a-resident</a></td><td><a href="../.gitbook/assets/banners-onboard (1).png">banners-onboard (1).png</a></td></tr><tr><td>Integrate your solution with e-Signet.</td><td></td><td></td><td><a href="../.gitbook/assets/banners-relying-party-int (1).png">banners-relying-party-int (1).png</a></td><td><a href="./#integrate-your-solution-with-e-signet-in-collab">#integrate-your-solution-with-e-signet-in-collab</a></td><td><a href="../.gitbook/assets/banners-relying-party-int.png">banners-relying-party-int.png</a></td></tr></tbody></table>
 
 ## Quickly try out e-Signet
 
@@ -25,15 +25,15 @@ The data used in the above VIDs is fictitious and the images returned are AI-gen
 
 ## Onboard yourself on Collab as a resident
 
-In order to get your credentials onboarded in collab. Please fill out this form (click here to access the form). We generally take 2-3 working days to create your credentials.
+In order to get your credentials onboarded in Collab, please fill out this form (click here to access the form). We generally take 2-3 working days to create your credentials.
 
-Once your credentials are created you can use e-Signet to perform,
+Once your credentials are created, you can use e-Signet to perform:
 
 * OTP authentication
-  * For OTP authentication connect with our mock health portal by clicking on this link
+  * For OTP authentication, connect with our mock health portal by clicking on this link
 * Wallet-based authentication using Inji
   * First, install the Inji wallet on an Android phone. The APK is available on this link.
-  * Then onboard your credentials on the wallet and activate it for authentication using this document.
+  * Then onboard your credentials to the wallet and activate it for authentication using this document.
   * Finally, perform wallet-based authentication using our [Inji wallet authentication guide](../integration-guides/digital-wallet/).
 
 ## Integrate your solution with e-Signet in Collab

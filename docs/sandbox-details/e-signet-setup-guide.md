@@ -1,2 +1,0 @@
-# e-Signet Setup Guide
-
