@@ -1,9 +1,9 @@
 # Try it out
 
-The latest stable version of our e-Signet solution is deployed in an environment called [Collab](https://collab.mosip.net/). Collab has our latest QA-certified dockers deployed so that&#x20;
+The latest stable version of e-Signet solution is deployed in an environment called [Collab](https://collab.mosip.net/). Collab has our latest QA-certified dockers deployed so that:
 
-* Representatives of ID solutions who are looking for an easy way to enable authentication and want to get a feel of how e-Signet works or want to demonstrate and showcase e-Signet
-* Relying parties can quickly use this environment to integrate and verify that it is compatible with the protocols followed by e-Signet
+* Representatives of ID solutions who are seeking a convenient method to enable authentication, as well as those interested in gaining a better understanding of how e-Signet works or those who wish to demonstrate e-Signet.
+* Relying parties can efficiently utilize this platform to seamlessly integrate and ascertain its compatibility with the protocols employed by e-Signet.
 
 Here are some ways you can use our sandbox environment: [Collab](https://collab.mosip.net/).
 
