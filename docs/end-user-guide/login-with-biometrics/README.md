@@ -1,45 +1,41 @@
 # Login with Biometrics
 
-1\. Resident clicks on "Sign In with e-Signet".
+The login with biometrics is illustrated with the help of a demo health portal.
 
-They are navigated to the login screen where they can choose the way they want to log in.
+1\. On the portal, the r esident clicks on `Sign In with e-Signet`.
 
-![](\_images/1-login-screen.png)
+![](\_images/new1-healthservices.png)
 
-2\. The resident clicks on LOG In HERE -> "More Ways to Login".
+2\. To get started with login using biometrics, the resident clicks `Login with Biometrics`.
 
-![](<\_images/2-login-here (1).png>)
+![](\_images/new2-esignetLogin.png)
 
-3\. To get started with login using biometrics, the resident clicks "Login with Biometrics".
+3\. Resident needs to enter valid VID in the `Enter Your VID` text field.
 
-![](<\_images/3-bio-moreways (1).png>)
+![](\_images/new3-esignetLogin-biometric.png)
 
-4\. Resident needs to enter valid VID in the "Enter Your VID" text field.
+4\. Next, the resident selects a device (face/ iris/ finger) and provides their biometrics.
 
-![](<\_images/4-bio-vid (1).png>)
+ A new "Refresh" button has been implemented to facilitate the display of recently connected devices in the list.
 
-5\. Next, the resident selects a device (face/ iris/ finger) and provides their biometrics.
+![](\_images/new4-esignetLogin-biometric-loaded.png)
 
-With e-Signet version 1.0, we have a "Refresh" button added to display the list of newly connected devices.
+The resident clicks on the `Scan and Verify` button.
 
-![](<\_images/5-select-device (1).png>)
+![](\_images/new5-esignetLogin-biometric_capture.png)
 
-6\. The resident clicks on the "Scan and Verify" button.
+5\. The resident is then navigated to the Consent page. On this page, the **Essential** and **Voluntary** claims are displayed.
 
-![](<\_images/6-scan-and-verify (1).png>)
-
-7\. The resident is then navigated to the Consent page. On this page, the **Essential** and **Voluntary** claims are displayed.
-
-![](<\_images/7-not-allowed-claims (1).png>)
+![](\_images/new6-esignetConsent.png)
 
 {% hint style="info" %}
 The consent screen is presented solely to the resident if consent has not previously been obtained. Additionally, a timer is incorporated onto the Consent screen, allowing the resident to provide a response within the designated time frame. In the event that the allotted time elapses, residents will be redirected to the relying party user interface.
 {% endhint %}
 
-8\. The resident is given the option to choose from a list of Authorized scopes and Voluntary claims. The Essential claims are mandatory and cannot be modified. In e-Signet v1.1.0, a "master toggle button" has been added to allow residents to select all the options at once, if desired.
+6\. The resident is given the option to choose from a list of Authorized scopes and Voluntary claims. The Essential claims are mandatory and cannot be modified. In e-Signet v1.1.0, a "master toggle button" has been added to allow residents to select all the options at once, if desired.
 
-![](<\_images/8-claims (1).png>)
+![](\_images/new7-esignetConsent-claims.png)
 
-9\. The resident clicks on the "Allow" button. The system navigates the resident to the User Profile page and the page displays their details based on the consent provided.
+7\. The resident clicks on the "Allow" button. The system navigates the resident to the User Profile page and the page displays their details based on the consent provided.
 
-![](<\_images/9-final (1).png>)
+![](\_images/new8-healthServices-user-profile.png)
