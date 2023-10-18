@@ -14,7 +14,7 @@
   * [Local Deployment](build-and-deploy/local-deployment/README.md)
     * [Mock Identity System](build-and-deploy/local-deployment/mock-id-system/README.md)
     * [Mock Relying Party](build-and-deploy/local-deployment/mock-client-application/README.md)
-  * [Deployment](build-and-deploy/production-deployment/README.md)
+  * [Deployment Architecture](build-and-deploy/deployment-arch.md)
   * [Configuring e-Signet](build-and-deploy/configuration/README.md)
 * [Integration Guides](integration-guides/README.md)
   * [ID System](integration-guides/authentication-system/README.md)
