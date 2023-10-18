@@ -1,20 +1,20 @@
-# Authentication System
+# ID System
 
-## Overview
+##
 
-This system is an identity repository that stores the individual's demographic and biometric information to perform authentication and provide user information. As part of this integration with e-Signet, the authentication system should implement the below interfaces.
+This system is an identity repository that stores the individual's demographic and biometric information to authenticate and provide user information. As part of this integration with e-Signet, the authentication system should implement the below interfaces.
 
 ## Authenticator
 
-This is the main interface of e-Signet. Provides methods to authenticate the end-user with control of the supported authentication factors. If OTP is one of the supported authentication factors, the interface provides a method to define the supported OTP channels and implement the send-OTP functionality.
+This is the main interface for e-Signet. Provides methods to authenticate the end-user with control of the supported authentication factors. If OTP is one of the supported authentication factors, the interface provides a method to define the supported OTP channels and implement the send-OTP functionality.
 
-As per OIDC standards, all the certificates used to verify the user data must be published in `/.well-known/jwks.json` endpoint. This interface provides a method to return a list of X509 certificates (both active and expired).
+As per OIDC standards, all the certificates used to verify the user data must be published in `/.well-known/jwks.json` the endpoint. This interface provides a method to return a list of X509 certificates (both active and expired).
 
 Refer to this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java#L22-L69) to check the interface in detail.
 
 The two main functionalities of this interface, **KYC Auth** and **KYC Exchange** are depicted in the diagram below
 
-![](<\_images/1-kyc-auth-exchange (1).png>)
+![](<authentication-system/\_images/1-kyc-auth-exchange (1).png>)
 
 The Authenticator implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.authenticator` property. Ex:
 
@@ -29,7 +29,7 @@ public class MockAuthenticationService implements Authenticator {
 
 ### Storing Consent
 
-Storing Consent in e-Signet is now via the built-in **Consent Registry** that has been designed to store user consent on claims and scopes requested during login into a relying party application using e-Signet or the Wallet application ([Inji](https://docs.mosip.io/inji/)).
+Storing Consent in e-Signet is now via the built-in **Consent Registry** designed to store user consent on claims and scopes requested during login into a relying party application using e-Signet or the Wallet application ([Inji](https://docs.mosip.io/inji/)).
 
 Key highlights of this feature are:
 
@@ -39,13 +39,13 @@ Key highlights of this feature are:
 
 The diagram below illustrates the internal mechanism of storing Consent in e-signet.
 
-![](<\_images/2-consent (1).png>)
+![](<authentication-system/\_images/2-consent (1).png>)
 
 ## KeyBinder
 
-This interface provides a method to bind a `individualId` with a public key. On successful binding, returns a signed certificate `walletUserId` which uniquely identifies a user. It is expected that the `KeyBinder` implementation takes care of overriding previously bound certificates with the newly generated signed certificate for a user.
+This interface provides a method to bind a `individualId` with a public key. On successful binding, it returns a signed certificate `walletUserId` which uniquely identifies a user. It is expected that the `KeyBinder` implementation takes care of overriding previously bound certificates with the newly generated signed certificate for a user.
 
-Individual needs to be authenticated before binding key. It is structured to accept any type of auth challenge, namely OTP/ BIO.
+Individual needs to be authenticated before binding the key. It is structured to accept any type of auth challenge, namely OTP/ BIO.
 
 The bound certificate will then be usable to do token-based authentication like WLA (Wallet Local Authentication) from any digital wallet app.
 
@@ -53,11 +53,11 @@ Refer to this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integra
 
 ### KeyBinding Process
 
-![](<\_images/3-key-binding-process (1).png>)
+![](<authentication-system/\_images/3-key-binding-process (1).png>)
 
 ### Authentication with Bound Key
 
-![](<\_images/4-key-binding-usage (1).png>)
+![](<authentication-system/\_images/4-key-binding-usage (1).png>)
 
 The KeyBinder implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.key-binder` property. Ex:
 
