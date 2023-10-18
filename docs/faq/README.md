@@ -66,11 +66,10 @@ The standards followed by e-Signet are [listed here](../overview/principles/#ope
 
 1. Go to your e-Signet project and then open the folder\
    `oidc-ui >> public >> locales`
-2.  Create a language JSON file&#x20;
-
-    There will be a file name _en.json_ copy that file and rename it with your new language i.e for French _fr.json_ , after that you can the value of all keys in your new language by doing this you will have a json file ith key-value pair of your desired language.
+2. Create a new language JSON file \
+   Copy the file _en.json_ and rename it with your new language's code as per ISO 639-1 (for example, if you want to add the language French then rename the file as _fr.json)_ so that you can have all keys in for your new language. Modify the values in your desired language (for French, the values have to be modified to French in the new file)
 3. Update `default.json` file\
-   After that you have to add your new language’s json file detail in _default.json_ file, so that it can be parse and the new language can be shown in the ui, like below. You have to add the 2 letter code of the language in languages\_2Letters, similar with the filename, with name of the language in that language. After that if your language is written from right to left then add 2 letter language code in rtlLanguages array, at the end map your 3 letter language code with two letter language code in langCodeMapping.
+   Now add the new language’s JSON file detail in _the default.json_ file so that it can be parsed and the new language can be shown in the UI, like below. You have to add the 2-letter code of the language in languages\_2Letters, similar to the filename, with the name of the language in that language. After that, if your language is written from right to left then add 2 letter language code in the `rtlLanguages` array, in the end, map your 3 letter language code with two-letter language code in langCodeMapping.
 
 ```json
 {
