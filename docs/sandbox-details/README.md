@@ -1,6 +1,6 @@
 # Try it out
 
-The latest stable version of e-Signet solution is deployed in an environment called [Collab](https://collab.mosip.net/). Collab has our latest QA-certified dockers deployed so that:
+The latest stable version of the e-Signet solution is deployed in our [Collab](https://collab.mosip.net/) environment. Collab has our latest QA-certified dockers deployed so that:
 
 * Representatives of ID solutions who are seeking a convenient method to enable authentication, as well as those interested in gaining a better understanding of how e-Signet works or those who wish to demonstrate e-Signet.
 * Relying parties can efficiently utilize this platform to seamlessly integrate and ascertain its compatibility with the protocols employed by e-Signet.
@@ -25,12 +25,12 @@ The data used in the above VIDs is fictitious and the images returned are AI-gen
 
 ## Onboard yourself on Collab as a resident
 
-In order to get your credentials onboarded in collab. Please fill out this form (click here to access the form). We generally take 2-3 working days to create your credentials.&#x20;
+In order to get your credentials onboarded in collab. Please fill out this form (click here to access the form). We generally take 2-3 working days to create your credentials.
 
 Once your credentials are created you can use e-Signet to perform,
 
 * OTP authentication
-  * For OTP authentication connect with our mock health portal by clicking on this link&#x20;
+  * For OTP authentication connect with our mock health portal by clicking on this link
 * Wallet-based authentication using Inji
   * First, install the Inji wallet on an Android phone. The APK is available on this link.
   * Then onboard your credentials on the wallet and activate it for authentication using this document.
@@ -53,8 +53,6 @@ Here are some FAQs on the Google form.
 <details>
 
 <summary>Why do you need a public key?</summary>
-
-
 
 
 
