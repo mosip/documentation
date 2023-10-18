@@ -14,11 +14,13 @@ The data used in the above VIDs is fictitious and the images returned are AI-gen
 
 ## Steps to use e-Signet
 
-As you are going to use mock data for testing, you can try out OTP authentication on our Collab environment.&#x20;
+We have built a mock health portal which acts as a relying party web portal. Here, as an end user, you are trying to avail online health services by logging into the health portal using your national ID.
 
-We have built a mock health portal as the relying party for testing. Here, as an end user, you are trying to avail online health services by logging into the health portal using your national ID.
+You can visit the Collab health portal using [this link](https://healthservices-esignet.collab.mosip.net/).
 
-You can visit the Collab health portal using [this link](https://healthservices-esignet.collab.mosip.net/). You can use any of the above personas for testing and the default OTP for testing is "111111" (six ones).
+### OTP Authentication
+
+As you are going to use mock data for testing, you can try out OTP authentication. You can use any of the above [personas](using-mock-data.md#personas) for testing and the default OTP for testing is "111111" (six ones).
 
 A detailed step-by-step guide on how to log in with OTP using e-Signet is also available [here](../end-user-guide/login-with-otp/).
 
