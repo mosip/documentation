@@ -15,7 +15,7 @@
   * [Deployment](build-and-deploy/production-deployment/README.md)
   * [Configuring e-Signet](build-and-deploy/configuration/README.md)
 * [Integration Guides](integration-guides/README.md)
-  * [ID System](integration-guides/id-system.md)
+  * [ID System](integration-guides/authentication-system/README.md)
   * [Relying Party](integration-guides/relying-party/README.md)
   * [Digital Wallet](integration-guides/digital-wallet/README.md)
   * [VC Issuer](integration-guides/vc-issuer.md)
