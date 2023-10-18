@@ -8,6 +8,7 @@
   * [Technology Stack](overview/technology-stack/README.md)
 * [Try it out](try-it-out/README.md)
   * [Using Mock Data](try-it-out/using-mock-data.md)
+  * [Register Yourself](try-it-out/register-yourself.md)
 * [Build & Deployment](build-and-deploy/README.md)
   * [Local Deployment](build-and-deploy/local-deployment/README.md)
     * [Mock Identity System](build-and-deploy/local-deployment/mock-id-system/README.md)

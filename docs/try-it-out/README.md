@@ -7,25 +7,11 @@ The latest stable version of the e-Signet solution is deployed in our [Collab](h
 
 Here are some ways you can use our sandbox environment: [Collab](https://collab.mosip.net/).
 
-<table data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-type="files"></th><th data-hidden data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Use our mock data to test e-Signet in Collab.</td><td></td><td></td><td><a href="../.gitbook/assets/banners-try-using-dummy-data.png">banners-try-using-dummy-data.png</a></td><td><a href="./#quickly-try-out-e-signet">#quickly-try-out-e-signet</a></td><td><a href="../.gitbook/assets/banners-quick-try.png">banners-quick-try.png</a></td></tr><tr><td>Onboard your credentials on Collab for testing.</td><td></td><td></td><td><a href="../.gitbook/assets/banners-onboard (2).png">banners-onboard (2).png</a></td><td><a href="./#onboard-yourself-on-collab-as-a-resident">#onboard-yourself-on-collab-as-a-resident</a></td><td><a href="../.gitbook/assets/banners-onboard (1).png">banners-onboard (1).png</a></td></tr><tr><td>Integrate your solution with e-Signet.</td><td></td><td></td><td><a href="../.gitbook/assets/banners-relying-party-int (1).png">banners-relying-party-int (1).png</a></td><td><a href="./#integrate-your-solution-with-e-signet-in-collab">#integrate-your-solution-with-e-signet-in-collab</a></td><td><a href="../.gitbook/assets/banners-relying-party-int.png">banners-relying-party-int.png</a></td></tr></tbody></table>
-
-## Quickly try out e-Signet
-
-If you are looking to quickly try out e-Signet, here are a few VIDs that you can use on our Collab environment for testing.
-
-* 2078497635
-* 9250738043
-* 4976458142
-
-Now, to test e-Signet on Collab, we have built a [mock health portal (click here to access it)](https://healthservices-esignet.collab.mosip.net/). Follow the steps mentioned in our [end-user guide for OTP authentication](../end-user-guide/login-with-otp/) after reaching the mock health portal.
-
-{% hint style="info" %}
-The data used in the above VIDs is fictitious and the images returned are AI-generated from the website: [https://thispersondoesnotexist.com/](https://thispersondoesnotexist.com/)
-{% endhint %}
+<table data-column-title-hidden data-view="cards" data-full-width="false"><thead><tr><th></th><th data-hidden></th><th data-hidden></th><th data-hidden data-type="files"></th><th data-hidden data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Use our mock data to test e-Signet in Collab.</td><td></td><td></td><td><a href="../.gitbook/assets/banners-try-using-dummy-data.png">banners-try-using-dummy-data.png</a></td><td><a href="./#quickly-try-out-e-signet">#quickly-try-out-e-signet</a></td><td><a href="../.gitbook/assets/banners-quick-try.png">banners-quick-try.png</a></td><td><a href="using-mock-data.md">using-mock-data.md</a></td></tr><tr><td>Onboard your credentials on Collab for testing.</td><td></td><td></td><td><a href="../.gitbook/assets/banners-onboard (2).png">banners-onboard (2).png</a></td><td><a href="./#onboard-yourself-on-collab-as-a-resident">#onboard-yourself-on-collab-as-a-resident</a></td><td><a href="../.gitbook/assets/banners-onboard (1).png">banners-onboard (1).png</a></td><td></td></tr><tr><td>Integrate your solution with e-Signet.</td><td></td><td></td><td><a href="../.gitbook/assets/banners-relying-party-int (1).png">banners-relying-party-int (1).png</a></td><td><a href="./#integrate-your-solution-with-e-signet-in-collab">#integrate-your-solution-with-e-signet-in-collab</a></td><td><a href="../.gitbook/assets/banners-relying-party-int.png">banners-relying-party-int.png</a></td><td></td></tr></tbody></table>
 
 ## Onboard yourself on Collab as a resident
 
-In order to get your credentials onboarded in Collab, please fill out this form (click here to access the form). We generally take 2-3 working days to create your credentials.
+In order to get your credentials onboarded in Collab, please fill out this form (click here to access the form). We generally take 2–3 working days to create your credentials.
 
 Once your credentials are created, you can use e-Signet to perform:
 
