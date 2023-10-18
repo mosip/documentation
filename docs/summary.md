@@ -7,6 +7,7 @@
   * [Components](overview/components/README.md)
   * [Technology Stack](overview/technology-stack/README.md)
 * [Try it out](sandbox-details/README.md)
+  * [e-Signet Setup Guide](sandbox-details/e-Signet-setup-guide.md)
 * [Build & Deployment](build-and-deploy/README.md)
   * [Local Deployment](build-and-deploy/local-deployment/README.md)
     * [Mock Identity System](build-and-deploy/local-deployment/mock-id-system/README.md)
