@@ -42,13 +42,11 @@ e-Signet being an OAuth 2.0 & OIDC-based solution, it is enhanced to support OID
 
 ## Consent
 
-The Consent Registry is intended for the storage of user consent regarding claims and scopes requested during the login process to a relying party application. This can be done through either the e-Signet or the Wallet application (Inji).
+User consent refers to the voluntary and informed agreement provided by an individual, often referred to as a user, to a specific action, process, or request. Users should have a clear understanding of what they are consenting to. User consent is particularly important in the context of data privacy, where it is required in many jurisdictions for organizations to obtain explicit consent from individuals before collecting, processing, or sharing their personal data.
 
-Some key aspects to note about this feature are as follows:
-
-* The user consent will be stored in the database in relation to the requested claims and scopes.
-* If the consent has already been provided, the consent screen will be bypassed when the user logs in using e-Signet.
-* In situations where there are changes to the requested claims or scopes, the user will be prompted to provide consent again.
+Consent mechanisms are often used in the form of checkboxes, pop-up notifications, or consent forms on applications to ensure that the users understand and agree to data processing practices.\
+\
+e-Signet stores the consent in a built-in **consent registry** which is specifically designed to store user consent on claims and scopes that are requested during the first login into a relying party's application using e-Signet.
 
 ## Language Support for e-Signet
 
