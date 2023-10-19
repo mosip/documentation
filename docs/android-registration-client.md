@@ -40,49 +40,49 @@ The first developer release of Android Registration Client offers the following 
 
 3. **Auto-Sync/ manual sync**: On launching the Android Registration Client and logging in for the first time, the system automatically syncs the following data:
 
- * **Configuration sync**: Sync of properties which drives in deciding the ARC UI functionality. For example: Invalid login attempts, idle timeout, thresholds, etc.
-
- * **Masterdata sync**: As a part of this sync, supporting information like Dynamic fields data, templates, locations, screen authorization, blocklisted words, etc. are pulled in.
-
-* **UserDetails sync**: userID, along with their status is synced. Only the user details belonging to machine mapped center will be synced.
-
- * **Certificate sync**: Certificates used to validate the server signatures, device CA certificates, public key (specific to a center and machine, also called as policy key) used to encrypt the registration packet will be synced.
+     * **Configuration sync**: Sync of properties which drives in deciding the ARC UI functionality. For example: Invalid login attempts, idle timeout, thresholds, etc.
+    
+     * **Masterdata sync**: As a part of this sync, supporting information like Dynamic fields data, templates, locations, screen authorization, blocklisted words, etc. are pulled in.
+    
+    * **UserDetails sync**: userID, along with their status is synced. Only the user details belonging to machine mapped center will be synced.
+    
+     * **Certificate sync**: Certificates used to validate the server signatures, device CA certificates, public key (specific to a center and machine, also called as policy key) used to encrypt the registration packet will be synced.
 
   
 4. **New Registrations** : Operators have the ability to register a resident using the `New Registration` feature. The registration process can be customized through the [UI specification](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-ui-specifications). The required data for registering an applicant are as follows:
 
-* **Consent**: Prior to the registration process, applicants must provide consent to the terms and conditions presented on the consent screen. This explicitly asks the applicant to grant permission for storing and using their Personally Identifiable Information (PII).
+    * **Consent**: Prior to the registration process, applicants must provide consent to the terms and conditions presented on the consent screen. This explicitly asks the applicant to grant permission for storing and using their Personally Identifiable Information (PII).
+    
+    * **Demographic Details**: Once the consent is obtained, the Operator will enter the demographic data of the applicant in the language preferred by the applicant. This includes details such as their name, gender, date of birth, and residential address.
+    
+    * **Documents Upload**: Following the completion of the demographic details, the Operator can select the document type, input the reference, and upload the supporting documents provided by the applicant. Supporting documents may include Proof of Address, Proof of Identity, and Proof of Birth, based on the country-specific requirements.
+    
+    * **Biometrics**: After the documents have been uploaded, the Operator will proceed to capture the applicant's biometrics. The biometrics captured are as follows:
 
-* **Demographic Details**: Once the consent is obtained, the Operator will enter the demographic data of the applicant in the language preferred by the applicant. This includes details such as their name, gender, date of birth, and residential address.
+          - Fingerprints
+          - Iris 
+          - Photograph
+          - Exception photograph
 
-* **Documents Upload**: Following the completion of the demographic details, the Operator can select the document type, input the reference, and upload the supporting documents provided by the applicant. Supporting documents may include Proof of Address, Proof of Identity, and Proof of Birth, based on the country-specific requirements.
+     The acquisition of biometric data is regulated by the country. The country has control over the capture of each type of biometric 
+     (fingerprint, iris, or face) through the global configuration. When the Operator selects the **Capture** button, the biometric SBI 
+     application is accessed to capture the biometrics. Once the biometrics are obtained, the data and control are returned to the 
+     Android Registration Client. To obtain the resident's biometrics, the quality of the captured image must exceed the threshold 
+     specified by the country. The biometrics can be captured set number of times if necessary to meet the quality threshold. In situations 
+     where none of the captured images meet the threshold, the image with the highest quality score will be saved.
+    
+     If the resident has a biometric exception (such as a missing finger/eye or very poor finger/iris quality), the Operator can
+     designate that particular biometric as an exception. However, the Operator must still capture the resident's exception photo.
 
-* **Biometrics**: After the documents have been uploaded, the Operator will proceed to capture the applicant's biometrics. The biometrics captured are as follows:
+    * **Preview section**: The Operator has the ability to review the data entered by the applicant, including demographic information, uploaded documents, and captured biometrics. This preview allows the Operator to ensure the accuracy of the entered data. If any mistakes are found, the Operator can easily go back to the corresponding section and make the necessary corrections. If the data is correct, the Operator can proceed to the next step, which is to authenticate themselves.
+    
+    * **Operator authentication**: Once both the Operator and applicant have confirmed that the data is accurately filled, the Operator is required to authenticate themselves using their credentials. After a successful authentication, the data packets are created and only then the sync and upload operations can be performed. 
+    
+    * **Packet sync**: After the applicant's registration form has been completed and the Operator has authenticated themselves, a packet sync must be performed. This can be done either manually or as a background job(auto sync and uplaod of packets). Packet sync ensures that the packet is prepared for uploading and the status of the uploaded packet is synchronized with the server.
+    
+    * **Packet Upload**: Once the packet sync is successfully completed, the system will proceed to upload the packet to the server when an internet connection is available. If there is no network access, the system will attempt to upload the packet as soon as connectivity is established.
 
-  - Fingerprints
-  - Iris 
-  - Photograph
-  - Exception photograph
-
- The acquisition of biometric data is regulated by the country. The country has control over the capture of each type of biometric 
- (fingerprint, iris, or face) through the global configuration. When the Operator selects the **Capture** button, the biometric SBI 
- application is accessed to capture the biometrics. Once the biometrics are obtained, the data and control are returned to the 
- Android Registration Client. To obtain the resident's biometrics, the quality of the captured image must exceed the threshold 
- specified by the country. The biometrics can be captured set number of times if necessary to meet the quality threshold. In situations 
- where none of the captured images meet the threshold, the image with the highest quality score will be saved.
-
- If the resident has a biometric exception (such as a missing finger/eye or very poor finger/iris quality), the Operator can
- designate that particular biometric as an exception. However, the Operator must still capture the resident's exception photo.
-
-* **Preview section**: The Operator has the ability to review the data entered by the applicant, including demographic information, uploaded documents, and captured biometrics. This preview allows the Operator to ensure the accuracy of the entered data. If any mistakes are found, the Operator can easily go back to the corresponding section and make the necessary corrections. If the data is correct, the Operator can proceed to the next step, which is to authenticate themselves.
-
-* **Operator authentication**: Once both the Operator and applicant have confirmed that the data is accurately filled, the Operator is required to authenticate themselves using their credentials. After a successful authentication, the data packets are created and only then the sync and upload operations can be performed. 
-
-* **Packet sync**: After the applicant's registration form has been completed and the Operator has authenticated themselves, a packet sync must be performed. This can be done either manually or as a background job(auto sync and uplaod of packets). Packet sync ensures that the packet is prepared for uploading and the status of the uploaded packet is synchronized with the server.
-
-* **Packet Upload**: Once the packet sync is successfully completed, the system will proceed to upload the packet to the server when an internet connection is available. If there is no network access, the system will attempt to upload the packet as soon as connectivity is established.
-
-* **Acknowledgment section**: Following the completion of the new registration process, an acknowledgment receipt is generated. This receipt includes the AID(Application ID), captured demographic data in the selected language, a photograph of the resident, and a ranking of each finger from 1 to 10, with 1 representing the finger with the best quality. The receipt is designed to be easily printed.
+    * **Acknowledgment section**: Following the completion of the new registration process, an acknowledgment receipt is generated. This receipt includes the AID(Application ID), captured demographic data in the selected language, a photograph of the resident, and a ranking of each finger from 1 to 10, with 1 representing the finger with the best quality. The receipt is designed to be easily printed.
 
 ### How to install Android Registration Client (ARC)
 
@@ -119,8 +119,14 @@ The first developer release of Android Registration Client offers the following 
 
       * Go to `User Center Mapping` and add the center for the user and activate it.
 
-Note: The user should be mapped to the same Zone and Center to which the device was mapped to.
+_Note_ : The user should be assigned to the same Zone and Center as the device.
 
+### Configuration Guide
 
+To read through the comprehensive list of configurable properties for the Android Registration Client, refer [Android Registration Client Configuration Guide](https://docs.mosip.io/1.2.0/android-registration-client/android-registration-client-configuration).
+
+### UI Specifications
+
+For more details on UI specifications for the Android Registration Client, refer [here](https://docs.mosip.io/1.2.0/android-registration-client/registration-client/registration-client-ui-specifications).
 
 
