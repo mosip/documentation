@@ -23,11 +23,11 @@ As seen below, the authentication is in progress.
 
 4. On Inji, the resident can see the VC that is activated for online login. Select the VC and click on "Verify".
 
-![](\_images/4-credential-selection.png)
+![](\_images/esignet-inji1.png)
 
 5. After clicking on "Verify", the resident is asked to perform face authentication. On successful authentication, the "Consent" screen is displayed.
 
-![](\_images/5-face-authentication.png)
+![](\_images/esignet-inji2.png)
 
 6. Here, the residents can provide their consent and click on "Allow". A successful message is displayed on Inji.
 
