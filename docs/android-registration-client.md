@@ -120,7 +120,7 @@ The first developer release of Android Registration Client offers the following 
 
       * Go to `User Center Mapping` and add the center for the user and activate it.
 
-_Note_ : The user should be assigned to the same Zone and Center as the device.
+> Note: The user should be assigned to the same Zone and Center as the device.
 
 ### Configuration Guide
 
