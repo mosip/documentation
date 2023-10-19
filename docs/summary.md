@@ -17,6 +17,7 @@
   * [Deployment Architecture](build-and-deploy/deployment-arch.md)
   * [Configuring e-Signet](build-and-deploy/configuration/README.md)
     * [ACR](build-and-deploy/configuration/acr.md)
+    * [Claims](build-and-deploy/configuration/claims.md)
 * [Integration Guides](integration-guides/README.md)
   * [ID System](integration-guides/authentication-system/README.md)
   * [Relying Party](integration-guides/relying-party/README.md)
