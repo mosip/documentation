@@ -27,7 +27,7 @@
     * [Admin Portal User Guide](admin-portal-user-guide.md)
     * [Admin Services Developers Guide](admin-services-developers-guide.md)
     * [Masterdata Guide](masterdata-guide.md)
-* [Android Registration Client](android-registration-client.md)
+  * [Android Registration Client](android-registration-client.md)
     * [Android Registration Configuration Guide](android-registration-client-configuration.md)
   * [Automation Testing](automation-testing.md)
   * [Artifactory](artifactory.md)
