@@ -22,15 +22,16 @@ The first developer release of Android Registration Client offers the following 
         the Android Registration Client, Operators have the option to choose their preferred language for UI display. This language 
         selection can be made on the login screen. Currently, the supported display languages include Arabic, French, English.
 
-   New languages can be added by following the below steps:
-
-     i. Additional languages can be configured by adding localisation files in `lib/l10n` folder present in the root project 
-           directory("android_registration_client").
-
-     ii. The languages that are rendered on the UI will be based on the country configuration (after master data sync). The default 
-           display language is English. The other languages will be available in the UI after master data sync.
-   
-      To know more, refer [Flutter doc-Internationalizing Flutter apps](https://docs.flutter.dev/ui/accessibility-and-localization/internationalization).
+       New languages can be added by following the below steps:
+    
+         i. Additional languages can be configured by adding localisation files in `lib/l10n` folder present in the root project 
+               directory("android_registration_client").
+       
+    
+         ii. The languages that are rendered on the UI will be based on the country configuration (after master data sync). The default 
+               display language is English. The other languages will be available in the UI after master data sync.
+       
+          To know more, refer [Flutter doc-Internationalizing Flutter apps](https://docs.flutter.dev/ui/accessibility-and-localization/internationalization).
    
    * **Data Entry Language**: The Data Entry Language refers to the specific language utilized by the Operator while gathering data, 
       which is then stored on the server in that selected language. During the registration process, the Operator can choose the 
@@ -38,7 +39,7 @@ The first developer release of Android Registration Client offers the following 
       selection option becomes available upon initiating a new registration. The responsibility for managing the data entry language 
       lies within the UI Spec, and any modifications or changes can be made through that specification.
 
-3. **Auto-Sync/ manual sync**: On launching the Android Registration Client and logging in for the first time, the system automatically syncs the following data:
+4. **Auto-Sync/ manual sync**: On launching the Android Registration Client and logging in for the first time, the system automatically syncs the following data:
 
      * **Configuration sync**: Sync of properties which drives in deciding the ARC UI functionality. For example: Invalid login attempts, idle timeout, thresholds, etc.
     
@@ -49,7 +50,7 @@ The first developer release of Android Registration Client offers the following 
      * **Certificate sync**: Certificates used to validate the server signatures, device CA certificates, public key (specific to a center and machine, also called as policy key) used to encrypt the registration packet will be synced.
 
   
-4. **New Registrations** : Operators have the ability to register a resident using the `New Registration` feature. The registration process can be customized through the [UI specification](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-ui-specifications). The required data for registering an applicant are as follows:
+5. **New Registrations** : Operators have the ability to register a resident using the `New Registration` feature. The registration process can be customized through the [UI specification](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-ui-specifications). The required data for registering an applicant are as follows:
 
     * **Consent**: Prior to the registration process, applicants must provide consent to the terms and conditions presented on the consent screen. This explicitly asks the applicant to grant permission for storing and using their Personally Identifiable Information (PII).
     
