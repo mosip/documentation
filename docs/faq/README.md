@@ -54,7 +54,44 @@ The standards followed by e-Signet are [listed here](../overview/principles/#ope
 
 <summary>How to configure password authentication in e-Signet?</summary>
 
+To enable password authentication in e-Signet for a client, you must first set the ACR value as “**mosip:idp:acr:password**” in the _**authContextRefs**_ array during client creation or update.
 
+Then, **during local testing**,
+
+You must modify or add a file _**amr-acr-mapping.json**_ in _**esignet-service >> src >> main >> resources,**_ which should contain all ACR and AMR mapping where you can add **“mosip:idp:acr:password”** and **“PWD”** as shown below.
+
+```json
+{
+ "amr": {
+  ...
+  "PWD" : [{ "type": "PWD" }],
+  ...
+ },
+ "acr_amr": {
+  ...
+  "mosip:idp:acr:password" : ["PWD"],
+  ...
+ }
+}
+```
+
+Once these properties have been added to the file, you can refer to this file in _**application-local.properties**_ in the same folder location.
+
+```properties
+mosip.esignet.amr-acr-mapping-file-url=classpath:amr-acr-mapping.json
+```
+
+Or
+
+You can directly point to a URL from the deployed version using the _**mosip-config**_ repo where the _**acr\_amr\_mapping**_ configuration is stored for production, as shown below.
+
+```properties
+mosip.esignet.amr-acr-mapping-file-url=https://raw.githack.com/mosip/mosip-config/develop-v3/amr-acr-mapping.json
+```
+
+Similarly, **for** **production**,&#x20;
+
+You have to change _**acr-amr-mapping.json**_ in the _**mosip-config**_ repo; depending on your environment, switch to that branch and add the **“PWD”** property in the _**amr**_ and **“mosip:idp:acr:password”** in the _**acr\_amr**_.
 
 </details>
 
