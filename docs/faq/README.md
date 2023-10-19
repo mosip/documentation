@@ -119,7 +119,17 @@ Now use this new artifactory in your production setup.
 
 <summary>How to remove a language from the e-Signet default setup?</summary>
 
+To remove a language from the default e-Signet setup, you have to remove or delete the language’s JSON file (let's say French _fr.json_) from your language bundle.&#x20;
 
+After that, you need to remove the mapping and details from the _**default.json**_ file of that particular language.
+
+**For local setup,**&#x20;
+
+Go to the folder _**oidc-ui >> public >> locales**_ in the e-Signet project and perform the above steps.
+
+**In production,**
+
+Go to the develop branch of your [_**artifactory-ref-impl**_](https://github.com/mosip/artifactory-ref-impl/tree/develop) and perform the above steps in this location: _**artifacts >>  src >> i18n >> esignet-i18n-bundle**._ Once, the artifactory is modified, then you can deploy the latest version in production.
 
 </details>
 
