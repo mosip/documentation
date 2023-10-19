@@ -4,7 +4,11 @@
 
 The Android Registration Client is a tablet application that serves as a portable version of the existing desktop [Registration Client](https://docs.mosip.io/1.2.0/modules/registration-client). It has been developed to support accessibility on all Android devices. The existance of Android Registration Client came about in order to meet the mobility requirements of countries adopting MOSIP. 
 
-The primary objective of the tablet version is to facilitate the registration process for residents, specifically those who are unable to physically visit registration centres and also serve remote locations where setting up Registration centres is not feasible. To address this challenge, the Android Registration Client was created, enabling Operators and supervisors to easily reach remote areas and maximise resident registrations across the country.
+The primary objective of the tablet version is to facilitate the registration process for residents, specifically those who are unable to physically visit registration centres and also serve remote locations where setting up Registration centres is not feasible. To address this challenge, the Android Registration Client was created, enabling Operators/ Supervisors to easily reach the remote areas and maximise resident registrations across the country.
+
+To have a quick glance at the features, refer the video below!
+
+{% embed url="https://www.youtube.com/watch?v=DrBB5IJnS0Y&t=9s&ab_channel=MOSIP-IIITBangalore" %}
 
 ### Features
 
@@ -18,12 +22,12 @@ The first developer release of Android Registration Client offers the following 
         the Android Registration Client, Operators have the option to choose their preferred language for UI display. This language 
         selection can be made on the login screen. Currently, the supported display languages include Arabic, French, English.
 
-      New languages can be added by following the below steps:
+   New languages can be added by following the below steps:
 
-         i. Additional languages can be configured by adding localisation files in `lib/l10n` folder present in the root project 
+     i. Additional languages can be configured by adding localisation files in `lib/l10n` folder present in the root project 
            directory("android_registration_client").
 
-         ii. The languages that are rendered on the UI will be based on the country configuration (after master data sync). The default 
+     ii. The languages that are rendered on the UI will be based on the country configuration (after master data sync). The default 
            display language is English. The other languages will be available in the UI after master data sync.
    
       To know more, refer [Flutter doc-Internationalizing Flutter apps](https://docs.flutter.dev/ui/accessibility-and-localization/internationalization).
@@ -116,5 +120,7 @@ The first developer release of Android Registration Client offers the following 
       * Go to `User Center Mapping` and add the center for the user and activate it.
 
 Note: The user should be mapped to the same Zone and Center to which the device was mapped to.
+
+
 
 
