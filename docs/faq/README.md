@@ -137,7 +137,27 @@ Go to the develop branch of your [_**artifactory-ref-impl**_](https://github.com
 
 <summary>How to integrate a wallet with e-Signet to provide wallet based authentication? </summary>
 
+To integrate a wallet in e-Signet, first, you have to add wallet details in _**application-local.properties**_ in the _**esignet-service**_ module in your esignet project.
 
+```properties
+mosip.esignet.ui.wallet.config={{'wallet.name': 'Inji', 'wallet.logo-url': 'inji_logo.png', 'wallet.download-uri': '#', 'wallet.deep-link-uri': 'inji://landing-page-name?linkCode=LINK_CODE&linkExpireDateTime=LINK_EXPIRE_DT' }}
+```
+
+Here, you need to specify the
+
+* wallet.name
+* wallet.logo-url
+* wallet.download-uri
+* wallet.deep-link-uri
+
+After adding the above details you should add this variable in _**wallet.config**_ properties of _**mosip.esignet.ui.config.key-values**_ configuration as shown below.
+
+```properties
+mosip.esignet.ui.config.key-values={…
+ 'wallet.config': ${mosip.esignet.ui.wallet.config}}
+```
+
+Then restart the e-Signet UI and e-Signet backend service to view the changes.
 
 </details>
 
