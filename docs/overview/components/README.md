@@ -22,18 +22,18 @@ The e-Signet VCI service offers a feature that allows the issuance of verifiable
 
 This is the user interface component of e-Signet, developed using React JS. Its main functionality is to handle user authentication and obtain user consent. e-Signet UI seamlessly integrates with the UI REST endpoints provided by **esignet-service**.
 
-* One notable feature of e-Signet UI is its support for multiple languages.
+* One notable feature of the e-Signet UI is its support for multiple languages.
 * e-Signet UI also offers QR code-based login with support for multiple digital wallets.
-* In addition, e-Signet UI is compatible with MOSIP SBI 2.0 for biometrics capture.
-* Furthermore, e-Signet UI provides flag-based captcha validation for OTP login.
-* Lastly, the landing page of e-Signet UI showcases the available _.well-know_ endpoints.
+* In addition, e-Signet UI is compatible with MOSIP SBI 2.0 for biometric capture.
+* Furthermore, the e-Signet UI provides flag-based captcha validation for OTP login.
+* Lastly, the landing page of the e-Signet UI showcases the available _.well-know_ endpoints.
 
 {% hint style="info" %}
-FAQs
+Here are a few frequently asked questions on the e-Signet UI.
 
-* How can we enable multiple digital wallet support?
-* How do we configure the expected quality score, timeouts, and number of bio attributes to be captured?
-* How can we enable or disable the captcha?
+* [How to enable multiple digital wallet support for authentication?](../../faq/#how-to-integrate-wallets-with-e-signet-to-provide-wallet-based-authentication)
+* [How to configure the expected quality score, timeouts, and number of bio attributes to be captured?](../../faq/#how-to-configure-the-expected-quality-score-timeouts-and-number-of-biometric-attributes-to-be-captur)
+* [How to enable or disable the captcha?](../../faq/#how-to-enable-or-disable-the-captcha-in-e-signet-ui)
 {% endhint %}
 
 ### **e-Signet Service**

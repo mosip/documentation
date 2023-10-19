@@ -172,7 +172,7 @@ Go to the develop branch of your [_**artifactory-ref-impl**_](https://github.com
 
 <details>
 
-<summary>How to integrate a wallet with e-Signet to provide wallet based authentication? </summary>
+<summary>How to integrate wallets with e-Signet to provide wallet-based authentication? </summary>
 
 To integrate a wallet in e-Signet, first, you have to add wallet details in _**application-local.properties**_ in the _**esignet-service**_ module in your esignet project.
 
@@ -187,6 +187,8 @@ Here, you need to specify the
 * wallet.download-uri
 * wallet.deep-link-uri
 
+_**Note**_: In this property, you can also configure multiple wallets.
+
 After adding the above details you should add this variable in _**wallet.config**_ properties of _**mosip.esignet.ui.config.key-values**_ configuration as shown below.
 
 ```properties
@@ -200,7 +202,52 @@ Then restart the e-Signet UI and e-Signet backend service to view the changes.
 
 <details>
 
-<summary>How to register or create a Client ID in e-Signet?</summary>
+<summary>How to configure the expected quality score, timeouts, and number of biometric attributes to be captured in e-Signet?</summary>
+
+Parameters such as expected quality score, timeouts and the number of biometric attributes to capture are environment variables for e-Signet UI.&#x20;
+
+You can add the below environment variables in the _**.env**_ file in the e-Signet project’s _**oidc-ui**_ folder.
+
+```
+// expected quality score for various biometrics
+REACT_APP_SBI_FACE_CAPTURE_SCORE=70
+REACT_APP_SBI_FINGER_CAPTURE_SCORE=70
+REACT_APP_SBI_IRIS_CAPTURE_SCORE=70
+
+// number of biometric subtypes to capture
+REACT_APP_SBI_FACE_CAPTURE_COUNT=1
+REACT_APP_SBI_FINGER_CAPTURE_COUNT=1
+REACT_APP_SBI_IRIS_CAPTURE_COUNT=1
+
+// capture timeouts in seconds
+REACT_APP_SBI_CAPTURE_TIMEOUT=30
+REACT_APP_SBI_DINFO_TIMEOUT=30
+REACT_APP_SBI_DISC_TIMEOUT=30
+```
+
+</details>
+
+<details>
+
+<summary>How to enable or disable the captcha in e-Signet UI?</summary>
+
+To disable the captcha from the e-Signet OTP screen, you have to set the value _false_ in _**application-local.properties**_ for _**mosip.esignet.send-otp.captcha-required**_ variable.
+
+For **local testing**,
+
+Go to _**esignet-service >> src >> main >> resources**_, then open _**application-local.properties**_ then add this.
+
+```properties
+mosip.esignet.send-otp.captcha-required=false
+```
+
+For enabling captcha you need to set the same property value as true.
+
+</details>
+
+<details>
+
+<summary>How to register or create a client ID in e-Signet?</summary>
 
 
 
