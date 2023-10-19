@@ -64,22 +64,28 @@ The standards followed by e-Signet are [listed here](../overview/principles/#ope
 
 **Adding a new language for local e-Signet setup**
 
-1. Go to your e-Signet project and then open the folder\
-   `oidc-ui >> public >> locales`
-2. Create a new language JSON file \
-   Copy the file _en.json_ and rename it with your new language's code as per ISO 639-1 (for example, if you want to add the language French then rename the file as _fr.json)_ so that you can have all keys in for your new language. Modify the values in your desired language (for French, the values have to be modified to French in the new file)
-3. Update `default.json` file\
-   Now add the new language’s JSON file detail in _the default.json_ file so that it can be parsed and the new language can be shown in the UI, like below. You have to add the 2-letter code of the language in languages\_2Letters, similar to the filename, with the name of the language in that language. After that, if your language is written from right to left then add 2 letter language code in the `rtlLanguages` array, in the end, map your 3 letter language code with two-letter language code in langCodeMapping.
+1. Go to your e-Signet project and then open the folder:\
+   **oidc-ui >> public >> locales**
+2. Create a new language JSON file&#x20;
+   1. Copy the file _en.json_ and rename it with your new language's code as per ISO 639-1 (for example, if you want to add the language French, then rename the file to _fr.json)_ so that you can have all keys in for your new language.&#x20;
+   2. Modify the values in your desired language (for French, the values have to be modified to French in the _fr.json_ file)
+3. Update _default.json_ file
+   1. Now add the new language’s JSON file detail in _the default.json_ file so that it can be parsed and the new language can be shown in the UI, like below.&#x20;
+   2. You have to add the ISO 639-1 (two-lettered language code) language info in languages\_2Letters (which was used to create the new file above) and also put the language value against it.&#x20;
+   3. If your language follows RTL(right-to-left) then add ISO 639-1 language code in the `rtlLanguages` array.
+   4. Finally, create a mapping between ISO 639-2 and ISO 639-1 language codes for your language in `langCodeMapping`.
 
 ```json
 {
+  // Add your new language here
   "languages_2Letters": {
     "en": "English",
     "ar": "عربى",
     "LANGUAGE_CODE_IN_ISO-639-1": "LANGUAGE VALUE"
   },
-  // Add the language as per ISO 639 in rtlLanguages for RTL
+  // Add your new language in rtlLanguages if it uses RTL
   "rtlLanguages": ["ar"],
+  // Add a language mapping for ISO 639-2 & ISO 639-1 format
   "langCodeMapping": {
     "eng": "en",
     "ara": "ar",
@@ -88,12 +94,24 @@ The standards followed by e-Signet are [listed here](../overview/principles/#ope
 }
 ```
 
-\
+For details on ISO 639-1 and ISO 639-2, please follow the [documentation here](https://www.loc.gov/standards/iso639-2/php/English\_list.p).
 
 
-Please follow the 2 letter & 3 letter code of any language given in the below link
 
-[https://www.loc.gov/standards/iso639-2/php/English\_list.p](https://www.loc.gov/standards/iso639-2/php/English\_list.php)
+**Adding a new language in the production setup**
+
+Similar to the local mentioned above, you need to create a new language JSON file (as per ISO 639-1 and then update language configurations in _the **default.json**_ file.
+
+Apart from that, you have to make the above changes in the `develop` branch of your [_**artifactory-ref-impl**_](https://github.com/mosip/artifactory-ref-impl/tree/develop) repository. In order to do so,
+
+1. Clone the repo and switch to the develop branch
+2. Go to the folder location: \
+   **artifacts >> src >> i18n >> esignet-i18n-bundle**
+3. Inside this folder, you can view all language JSON files
+4. Create your new language file as mentioned in the local setup guide above and place it in the folder.
+5. Modify the _**default.json**_ file as mentioned in the local setup guide above.
+
+Now use this new artifactory in your production setup.
 
 </details>
 
