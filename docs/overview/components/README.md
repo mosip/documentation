@@ -1,62 +1,66 @@
 # Components
 
-The image below is a block diagram of e-Signet comprising various components along with the different layers and external systems.
+The image below is a block diagram of the e-Signet comprising various components along with the different layers and external systems.
 
 ![](\_images/component-diagram.png)
 
 ### Relying Party System
 
-The relying party system is any application who would need the verified user information and a unique user login functionality to provide various services online. It depends on `OpenID Connect` libraries to integrate with e-Signet.
+[Relying Party](../../glossary.md#relying-party) Systems depend on identity providers, such as e-Signet, to authenticate and verify the identities of users before granting them access to protected resources or services.&#x20;
+
+Clients utilizing OpenID Connect within the OAuth 2.0 framework are commonly referred to as Relying Parties (RPs).
+
+In the case of VC issuance, they are simply OAuth 2.0 clients. To ensure enhanced security, e-Signet exclusively supports confidential clients.
 
 ### Digital Wallet
 
-The key bound credentials stored in the wallet app can be used to verify the user to avail the services provided by a Relying party system. 
+[Digital Wallets](../../glossary.md#digital-id-wallet) are software-based platforms used to securely store and share the certified credentials of the wallet holder. These credentials are verified claims about the individual, typically certified by the identification system.
 
-To know more, refer [here](integration-guides/authentication-system-integration.md#keybinder).
+The e-Signet VCI service offers a feature that allows the issuance of verifiable credentials to any digital wallet that adheres to the OpenID4VCI protocol.
 
-### **e-Signet (OIDC) UI**
+### **e-Signet UI**
 
-* This is the front-end application which is mainly responsible for the user interactions.
-* Runs on the end user browser and invokes the REST API endpoints of the e-Signet Service component.
-* It acts as a first level proxy and forwards the request details received through standard [OpenID connect](https://openid.net/connect/) endpoints to the e-Signet service.
-* On completion of all user interactions, it redirects to the relying party's web application with relevant details.
-* e-Signet UI also interacts with the [SBI (Secure Biometric Interface)](https://app.gitbook.com/s/-M1R77ZUwR6XwtPjJIVm/biometrics/mosip-device-service-specification) service running in the local machine to collect encrypted and signed biometric data.
-* It is built using the `React` framework.
+This is the user interface component of e-Signet, developed using React JS. Its main functionality is to handle user authentication and obtain user consent. e-Signet UI seamlessly integrates with the UI REST endpoints provided by **esignet-service**.
+
+* One notable feature of e-Signet UI is its support for multiple languages.
+* e-Signet UI also offers QR code-based login with support for multiple digital wallets.
+* In addition, e-Signet UI is compatible with MOSIP SBI 2.0 for biometrics capture.
+* Furthermore, e-Signet UI provides flag-based captcha validation for OTP login.
+* Lastly, the landing page of e-Signet UI showcases the available _.well-know_ endpoints.
+
+{% hint style="info" %}
+FAQs
+
+* How can we enable multiple digital wallet support?
+* How do we configure the expected quality score, timeouts, and number of bio attributes to be captured?
+* How can we enable or disable the captcha?
+{% endhint %}
 
 ### **e-Signet Service**
 
-* e-Signet service is the main backend application which has various layers and integrates with multiple components.
-* It has a **Service layer** containing the business logic to serve the below API endpoints:
-  * Standard `OpenID Connect API` endpoints for the relying party consumption
-  * REST API endpoints for UI component consumption
-  * REST API endpoints for OIDC client management
-* The Service layer is also dependent on Cache layer, Data layer, Key Manager, Authentication Wrapper and esignet Core components.
-* The e-Signet service also has a **Cache layer** which is responsible for:
-  * Temporarily maintaining the current transaction details with a short expiry time
-  * Providing faster access and update of transaction details
-  * It relies on Spring cache to integrate with a distributed cache. Currently, `Redis` is configured to ensure data sharing across multiple instances of e-Signet service.
-* The **Data layer** is used to store the relying party client or application details. `Postgres` is used as the current database.
-* This is built using the `Spring Boot` framework.
+This service is the primary backend Spring Java application that incorporates various layers and integrates with other components mentioned on this page.
 
-### Plugins
+1. **Core components**: The e-Signet core library is used to manage core service interfaces, constants, exceptions, validators, and utility methods.
+2. **Service layer**: This layer represents the implementation of the interfaces defined in the e-Signet core library. Each protocol implementation is a separate service, such as the complete OIDC protocol implementation being part of the oidc-service and VCI protocol implementations residing in the vci-service.
+   * Service modules utilize caching to enhance transaction access and update speeds, as well as to prevent the need for persistent storage of transaction details.
+   * Persistent storage is only used for OIDC client registration details.
+   * Kafka is employed to support asynchronous operations during wallet-based logins.
+3. **Rest APIs**: The e-Signet-service module exposes REST endpoints for the functionality implemented in the service layer modules.
+4. **Key Manager**
+   * Key Manager is used for secure key management and cryptography functionalities required by the e-Signet service component.
+   * It can be integrated with an HSM (Hardware Security Module) for the secure storage of keys.
+   * Typically, Key Manager is run as a service, but it is used as a library in the e-Signet Service to minimize the effort of managing extra containers.
+   * It depends upon the Data layer for maintaining the metadata on keys.
+5. **Plugins**: Integration points with external systems are designed to be pluggable, allowing easy integration with any ID system. The pluggable integration points are as follows:
+   * **Authenticator** - for identity verification
+   * **VCIssuancePlugin** - for constructing Verifiable Credentials (VCs)
+   * **AuditPlugin** - for auditing all events
+   * **CaptchaValidator** - for captcha validation
 
-* These library components acts like a proxy to the Authentication system.
-* These plugins have [interface](integration-guides/authentication-system-integration.md) implementations required by the e-Signet service for loosely coupled integration to the Authentication System.
-* Expected as runtime dependency to facilitate the use of officially released container images even in custom integrations.
+{% hint style="info" %}
+All plugin interfaces are defined in the esignet-integration-api module.
+{% endhint %}
 
-### Key Manager
+### **Identification System (ID system)**
 
-* Key Manager is used for secure key management and cryptography functionalities required by the e-Signet service component.
-* It can be integrated with a HSM (Hardware Security Module) for the secure storage of keys.
-* Typically, Key Manager is run as a service, but it is used as a library in the e-Signet Service to minimize the effort of managing extra containers.
-* It depends upon the Data layer for maintaining the metadata on keys.
-
-### **e-Signet Core**
-
-* e-Signet core is a library component used to maintain the common interfaces, DTOs and utility methods.
-* Used as a build-time dependency for e-Signet service.
-
-### **Authentication System (ID system)**
-
-* This system could be any functional or foundational ID system that contains the resident demographic and biometric information (optional).
-* It facilitates the mechanism to perform identity verification and share the required user information.
+This system refers to any operational or fundamental identification system that houses the user's demographic and biometric details (if applicable). It could be a database or a system equipped with suitable mechanisms to facilitate identity verification and the sharing of verified user data.
