@@ -1,6 +1,6 @@
 # Mock Identity System
 
-This is a mock implementation of an identity system. We provide this system so developers can use it for local development and testing of e-Signet.
+This is a mock implementation of an identity system. We provide this system so developers can use it for local development and testing of eSignet.
 
 The mock system can be run with endpoints to,
 
