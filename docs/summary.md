@@ -15,7 +15,7 @@
     * [Mock Identity System](build-and-deploy/local-deployment/mock-id-system/README.md)
     * [Mock Relying Party](build-and-deploy/local-deployment/mock-client-application/README.md)
   * [Deployment Architecture](build-and-deploy/deployment-arch.md)
-  * [Configuring eSignet](build-and-deploy/configuration/README.md)
+  * [Configure eSignet](build-and-deploy/configuration/README.md)
     * [ACR](build-and-deploy/configuration/acr.md)
     * [Claims](build-and-deploy/configuration/claims.md)
 * [Integration Guides](integration-guides/README.md)
