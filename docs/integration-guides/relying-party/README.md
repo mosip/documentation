@@ -1,10 +1,10 @@
 # Relying Party
 
-The relying party is an OAuth client who should be able to authenticate the end user and get the user information. For availing these [features](../../overview/features/), the relying party needs to partner with an e-Signet-compliant authentication system to register and integrate.
+The relying party is an OAuth client who should be able to authenticate the end user and get the user information. For availing these [features](../../overview/features/), the relying party needs to partner with an eSignet-compliant authentication system to register and integrate.
 
 ## Pre-requisites
 
-Connect with an authentication system which uses the e-Signet solution for onboarding relying parties. As a part of this activity, you should receive the environment details and register yourself to receive a client ID.
+Connect with an authentication system which uses the eSignet solution for onboarding relying parties. As a part of this activity, you should receive the environment details and register yourself to receive a client ID.
 
 You can use our sandbox environment to integrate as well. For more details visit our page on [Sandbox Details](../../try-it-out/).
 
@@ -12,21 +12,21 @@ You can use our sandbox environment to integrate as well. For more details visit
 
 ### Configuring the redirect URI
 
-Create a webpage where the user is redirected after successful authentication and consent is provided. The URL of this page should be shared as a query parameter as part of the Authorization Endpoint.
+Create a webpage where the user is redirected after successful authentication and consent are provided. The URL of this page should be shared as a query parameter as part of the authorization endpoint.
 
 {% hint style="info" %}
-Ensure that the redirect URI is also shared with the Authentication Partner to configure the same in the e-Signet server.
+Ensure that the redirect URI is also shared with the authentication partner to configure the same on the eSignet server.
 {% endhint %}
 
 ### Add a button on your login screen
 
-Add a button on your website (i.e, Log in with e-Signet), which should call the authorization endpoint and navigate the user to the e-Signet UI screen for authentication and consent capture.
+Add a button on your website (i.e., Log in with eSignet), which should call the authorization endpoint and navigate the user to the eSignet UI screen for authentication and consent capture.
 
 {% swagger src="../../.gitbook/assets/e-Signet.yml" path="/authorize" method="get" %}
 [e-Signet.yml](../../.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
-After the authorization endpoint is called, the e-Signet server validates the request and redirects the user to the authentication screen.
+After the authorization endpoint is called, the eSignet server validates the request and redirects the user to the authentication screen.
 
 ### Handling authentication success and failure scenarios
 
@@ -141,7 +141,7 @@ The response is signed and then encrypted, with the result being a nested JWT. S
 
 ## How to get credentials or register?
 
-e-Signet exposes APIs using which a relying party can be registered and receive credentials to connect with e-Signet.
+eSignet exposes APIs using which a relying party can be registered and receive credentials to connect with eSignet.
 
 {% swagger src="../../.gitbook/assets/e-Signet.yml" path="/client-mgmt/oidc-client" method="post" %}
 [e-Signet.yml](../../.gitbook/assets/e-Signet.yml)

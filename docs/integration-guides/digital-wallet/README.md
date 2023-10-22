@@ -8,7 +8,7 @@ To learn more about Digital ID Wallets and their use, refer [here](https://www.i
 
 ### Digital Wallet Integration
 
-e-Signet provides endpoints to bind a public key to an individual.
+eSignet provides endpoints to bind a public key to an individual.
 
 {% swagger src="../../.gitbook/assets/e-Signet.yml" path="/binding/wallet-binding" method="post" %}
 [e-Signet.yml](../../.gitbook/assets/e-Signet.yml)
@@ -28,17 +28,17 @@ MimotoServer->>-Wallet-app: Signed Certificate
 Wallet-app->>-Wallet-app: Store Signed Certificate with individualId
 ```
 
-Once the public key is successfully bound to an individual ID, the server-signed certificate and it's `walletUserId` is returned back to the wallet app. Wallet-app should store the certificate in a secure storage mapped with `walletUserId`.
+Once the public key is successfully bound to an individual ID, the server-signed certificate and it's `walletUserId` is returned to the wallet app. Wallet-app should store the certificate in a secure storage mapped with `walletUserId`.
 
 _Note_: Binding multiple VIDs with a public key through a particular binding partner will always return the same `walletUserId`. However, only the latest server-signed certificate is valid.
 
 ### How to use a Server-signed certificate?
 
-A server-signed certificate is used in the QR-code login flow of e-Signet.
+A server-signed certificate is used in the QR-code login flow of eSignet.
 
-1. The end user scans the QR code on the e-Signet UI using the digital wallet app.
+1. The end user scans the QR code on the eSignet UI using the digital wallet app.
 2. The digital wallet app reads the link code in the scanned QR code.
-3. The digital wallet sends a request to the e-Signet server to start a transaction with the link code.
+3. The digital wallet sends a request to the eSignet server to start a transaction with the link code.
 
 {% swagger src="../../.gitbook/assets/e-Signet.yml" path="/linked-authorization/link-transaction" method="post" %}
 [e-Signet.yml](../../.gitbook/assets/e-Signet.yml)
@@ -46,7 +46,7 @@ A server-signed certificate is used in the QR-code login flow of e-Signet.
 
 4. On a successful link, the e-Signet server responds back with a supported list of authentication factors namely WLA(Wallet Local Auth).
 5. Digital wallet app locally authenticates the end user. (Ex: selfie authentication)
-6. On successful local verification of the end user, the wallet app creates a JWT signed with a certificate bound to the end-user. This signed JWT is sent to the e-Signet server.
+6. On successful local verification of the end user, the wallet app creates a JWT signed with a certificate bound to the end user. This signed JWT is sent to the eSignet server.
 
 {% swagger src="../../.gitbook/assets/e-Signet.yml" path="/linked-authorization/authenticate" method="post" %}
 [e-Signet.yml](../../.gitbook/assets/e-Signet.yml)
@@ -58,4 +58,4 @@ A server-signed certificate is used in the QR-code login flow of e-Signet.
 [e-Signet.yml](../../.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
-8\. e-Signet UI now automatically detects the successful consent on the link-code and redirects the end-user to the relying party portal with an authorization code.
+8\. eSignet UI now automatically detects the successful consent on the link code and redirects the end-user to the relying party portal with an authorization code.
