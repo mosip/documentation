@@ -45,8 +45,8 @@ This is a spring boot application built with Maven.
     `java -jar -Dloader.path=/opt/plugins/mock-esignet-integration-impl.jar esignet-service.jar`
 
 {% hint style="info" %}
-* Loader .path is set to the mock plugin jar file path
-* esignet-service is by default set to`local` profile
+* loader.path is set to the mock plugin jar file path&#x20;
+* esignet-service is by default set to `local` profile
 {% endhint %}
 
 Once the service is up, the esignet service swagger should be accessible with the below URL.
