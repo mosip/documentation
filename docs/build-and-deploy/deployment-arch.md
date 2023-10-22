@@ -1,8 +1,8 @@
 # Deployment Architecture
 
-This page has the proposed deployment architecture for e-Signet.
+This page has the proposed deployment architecture for eSignet.
 
-<figure><img src="../.gitbook/assets/deployment-diagram.png" alt=""><figcaption><p><em>e-Signet Deployment Diagram</em></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/deployment-diagram.png" alt=""><figcaption><p><em>eSignet Deployment Diagram</em></p></figcaption></figure>
 
 ## Firewall
 
@@ -10,7 +10,7 @@ A firewall is a network security device that monitors and filters incoming and o
 
 ## Load Balancer
 
-A load balancer is a network device or service that evenly distributes incoming network traffic across multiple servers or resources. It operates based on predetermined rules or algorithms and helps optimize the use of these resources. The primary purpose of a load balancer is to ensure that no single server becomes overwhelmed with traffic, thereby improving performance, availability, and reliability for users accessing a particular service or application.&#x20;
+A load balancer is a network device or service that evenly distributes incoming network traffic across multiple servers or resources. It operates based on predetermined rules or algorithms and helps optimize the use of these resources. The primary purpose of a load balancer is to ensure that no single server becomes overwhelmed with traffic, thereby improving performance, availability, and reliability for users accessing a particular service or application.
 
 Additionally, we use it in the following cases:
 
@@ -22,9 +22,9 @@ Additionally, we use it in the following cases:
 
 ## IAM
 
-Wireguard is used as a trusted network extension to provide secure access to control and monitoring panels for operational team members making sure that restricted api's are not publically accessible.
+Wireguard is used as a trusted network extension to provide secure access to control and monitoring panels for operational team members, making sure that restricted APIs are not publically accessible.
 
-Internal IAM system is used to manage the access control for the operation team and client management API calls from client management systems
+The internal IAM system is used to manage access control for the operation team and client management API calls from client management systems
 
 ## Deployment Layers
 
@@ -32,11 +32,11 @@ Deployment layers can be sectioned into the below three sections.
 
 ### Application Cluster
 
-e-Signet application services are deployed in the form of pods in the Kubernetes cluster.
+eSignet application services are deployed in the form of pods in the Kubernetes cluster.
 
 **Artifactory Service**
 
-This pod contains environment-specific libraries like HSM client and eSignet plugins. When the e-Signet service pod starts, these libraries are downloaded from the artifactory and added to the application loader path.
+This pod contains environment-specific libraries like HSM client and eSignet plugins. When the eSignet service pod starts, these libraries are downloaded from the artifactory and added to the application loader path.
 
 **Config Server**
 
@@ -44,7 +44,7 @@ This pod is responsible for serving the external property files to application s
 
 **OIDC UI**
 
-This pod will expose all the UI component files that are requested from the browser once the e-Signet portal is accessed.
+This pod will expose all the UI component files that are requested from the browser once the eSignet portal is accessed.
 
 **e-Sigent Service**
 

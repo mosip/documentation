@@ -1,6 +1,6 @@
 # Table of contents
 
-* [e-Signet](README.md)
+* [eSignet](README.md)
 * [Overview](overview/README.md)
   * [Features](overview/features/README.md)
   * [Principles](overview/principles/README.md)
@@ -9,13 +9,13 @@
 * [Try it out](try-it-out/README.md)
   * [Using Mock Data](try-it-out/using-mock-data.md)
   * [Register Yourself](try-it-out/register-yourself.md)
-  * [Integrate with e-Signet](try-it-out/integrate-with-e-signet.md)
+  * [Integrate with eSignet](try-it-out/integrate-with-e-signet.md)
 * [Build & Deployment](build-and-deploy/README.md)
   * [Local Deployment](build-and-deploy/local-deployment/README.md)
     * [Mock Identity System](build-and-deploy/local-deployment/mock-id-system/README.md)
     * [Mock Relying Party](build-and-deploy/local-deployment/mock-client-application/README.md)
   * [Deployment Architecture](build-and-deploy/deployment-arch.md)
-  * [Configuring e-Signet](build-and-deploy/configuration/README.md)
+  * [Configuring eSignet](build-and-deploy/configuration/README.md)
     * [ACR](build-and-deploy/configuration/acr.md)
     * [Claims](build-and-deploy/configuration/claims.md)
 * [Integration Guides](integration-guides/README.md)

@@ -169,5 +169,3 @@ Here is the list of keys used in the `mosip.esignet.ui.config.key-values` proper
 
 		* captcha.enable - comma-separated components list, where the captcha should be shown. Currenlty only supports otp page.
 		* captcha.sitekey - sitekey used to generate captcha.
-
-

@@ -1,6 +1,6 @@
 # Claims
 
-In the context of authentication and authorization, "claims" are statements about an entity, such as a user, that are made by an identity provider (IdP). Claims are pieces of information that describe attributes, characteristics, or other properties associated with an entity.&#x20;
+In the context of authentication and authorization, "claims" are statements about an entity, such as a user, that are made by an identity provider (IdP). Claims are pieces of information that describe attributes, characteristics, or other properties associated with an entity.
 
 These claims are typically packaged into security tokens, such as SAML (Security Assertion Markup Language) tokens or JWTs (JSON Web Tokens), and are used to convey information about the entity's identity and associated permissions.&#x20;
 
@@ -10,11 +10,11 @@ The assurance level is then shared with the relying party as one of the claims i
 
 Let us understand the terms essential and voluntary claims.
 
-**Essential claims:** These refer to the necessary user information that the relying party must collect in order to fulfil their service obligations to the residents.
+**Essential claims:** These refer to the necessary user information that the relying party must collect in order to fulfill their service obligations to the residents.
 
 **Voluntary claims:** These are additional user details that residents have the option to provide, in order to access supplementary features offered by the relying party.
 
-Below is the list of standard OIDC user claims supported when e-Signet is integrated with MOSIP IDA:
+Below is the list of standard OIDC user claims supported when eSignet is integrated with MOSIP IDA:
 
 * name
 * gender

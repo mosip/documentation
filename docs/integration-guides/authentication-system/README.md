@@ -10,9 +10,9 @@ As per OIDC standards, all the certificates used to verify the user data must be
 
 Refer to this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java#L22-L69) to check out the interface in detail.
 
-The two main functionalities of this interface, **KYC Auth** and **KYC Exchange,** are depicted in the diagram below
+The two main functionalities of this interface, **KYC Auth** and **KYC Exchange,** are depicted in the diagram below:
 
-![](<\_images/1-kyc-auth-exchange (1).png>)
+<figure><img src="../../.gitbook/assets/activity-diagrams-authenticator.png" alt=""><figcaption></figcaption></figure>
 
 The Authenticator implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.authenticator` property. Ex:
 
@@ -37,9 +37,9 @@ Key highlights of this feature are:
 
 The diagram below illustrates the internal mechanism of storing Consent in e-signet.
 
-![](<\_images/2-consent (1).png>)
+![](../../.gitbook/assets/activity-diagrams-storing-consent.png)
 
-## KeyBinder
+## Key Binder
 
 This interface provides a method to bind a `individualId` with a public key. On successful binding, it returns a signed certificate `walletUserId` which uniquely identifies a user. It is expected that the `KeyBinder` implementation takes care of overriding previously bound certificates with the newly generated signed certificate for a user.
 
@@ -49,13 +49,13 @@ The bound certificate will then be usable to do token-based authentication like 
 
 Refer to this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/KeyBinder.java#L17-L45) to check the interface in detail.
 
-### KeyBinding Process
+### Key Binding Process
 
-![](<\_images/3-key-binding-process (1).png>)
+![](../../.gitbook/assets/activity-diagrams-wallet-binding.png)
 
 ### Authentication with Bound Key
 
-![](<\_images/4-key-binding-usage (1).png>)
+![](../../.gitbook/assets/activity-diagrams-wallet-authentication.png)
 
 The KeyBinder implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.key-binder` property. Ex:
 

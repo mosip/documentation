@@ -62,6 +62,6 @@ A relying party is a service provider that depends on an identity provider for a
 
 They are typically online services, websites, or applications that need to verify the identity of users for access control, personalization, or other purposes.&#x20;
 
-The identity provider, often utilizing protocols like OpenID Connect, provides authentication and identity information to the relying party, allowing users to access the service without having to create a new account or authenticate separately for each relying party.
+The identity provider, often utilizing protocols like [OpenID Connect](https://openid.net/connect/), provides authentication and identity information to the relying party, allowing users to access the service without having to create a new account or authenticate separately for each relying party.
 
 </details>
