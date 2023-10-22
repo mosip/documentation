@@ -1,6 +1,6 @@
 # Build & Deployment
 
-The latest stable released codebase can be found under the "master" branch of the e-Signet codebase. All the ongoing bug fixes or feature development are usually on the "develop" or on a specific feature branch.
+The latest stable released codebase can be found under the "master" branch of the eSignet codebase. All the ongoing bug fixes or feature development are usually on the "develop" or on a specific feature branch.
 
 {% hint style="info" %}
 It is recommended to either use master or released tags for local deployment and testing.
@@ -17,7 +17,7 @@ It is recommended to either use master or released tags for local deployment and
 
 **Build**
 
-Run the below command to build e-Signet backend services.
+Run the below command to build eSignet backend services.
 
 ```
 mvn clean install -Dgpg.skip=true
@@ -29,7 +29,7 @@ Use -DskipTests=true to skip test case execution
 
 ## Build UI
 
-[e-Signet UI](https://github.com/mosip/esignet/tree/master/oidc-ui) is a react application that is built using npm.
+[eSignet UI](https://github.com/mosip/esignet/tree/master/oidc-ui) is a react application that is built using npm.
 
 **Prerequisite**
 
