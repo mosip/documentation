@@ -30,13 +30,13 @@ After the authorization endpoint is called, the eSignet server validates the req
 
 ### Handling authentication success and failure scenarios
 
-After the authentication is performed successfully, the webpage will receive a "code" in the query parameter which is the "authorization code" to call the token API to get the ID and Access tokens.
+After the authentication is performed successfully, the webpage will receive a "code" in the query parameter, which is the "authorization code" to call the token API to get the ID and access tokens.
 
-In case of failure, the redirect URI webpage would receive an "error" and "error description" in the query parameter. The OIDC client can also define its behaviour in case of failure.
+In case of failure, the redirect URI webpage would receive an "error" and "error description" in the query parameter. The OIDC client can also define its behaviour in the event of failure.
 
 ### Retrieving ID and access tokens
 
-Once the authentication code is received, you can now call the token endpoint to get the ID and Access tokens.
+Once the authentication code is received, you can now call the token endpoint to get the ID and access tokens.
 
 {% swagger src="../../.gitbook/assets/e-Signet.yml" path="/oauth/token" method="post" %}
 [e-Signet.yml](../../.gitbook/assets/e-Signet.yml)
@@ -139,9 +139,9 @@ Using the access token you can call the user info endpoint to get the user infor
 The response is signed and then encrypted, with the result being a nested JWT. Signed using the authentication system's private key. Signed full JWT will then be encrypted using the OIDC client's public key.
 {% endhint %}
 
-## How to get credentials or register?
+## How do I get credentials or register?
 
-eSignet exposes APIs using which a relying party can be registered and receive credentials to connect with eSignet.
+eSignet exposes APIs using which a relying party can register and receive credentials to connect with eSignet.
 
 {% swagger src="../../.gitbook/assets/e-Signet.yml" path="/client-mgmt/oidc-client" method="post" %}
 [e-Signet.yml](../../.gitbook/assets/e-Signet.yml)
@@ -152,5 +152,5 @@ eSignet exposes APIs using which a relying party can be registered and receive c
 {% endswagger %}
 
 {% hint style="info" %}
-You can connect with your identity provider for details to get registered and receive your client ID.
+You can connect with your identity provider for details on how to get registered and receive your client ID.
 {% endhint %}
