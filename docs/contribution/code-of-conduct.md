@@ -2,7 +2,7 @@
 
 ## Preamble
 
-e-Signet was created to foster an open, innovative and inclusive community around open source & open standards. To clarify expected behaviour in our communities we have adopted the Contributor Covenant. This code of conduct has been adopted by many other open-source communities and we feel it expresses our values well.
+eSignet was created to foster an open, innovative, and inclusive community around open source and open standards. To clarify expected behaviour in our communities, we have adopted the Contributor Covenant. This code of conduct has been adopted by many other open-source communities, and we feel it expresses our values well.
 
 ## Our Pledge
 
@@ -18,7 +18,7 @@ Examples of behaviour that contributes to a positive environment for our communi
 * Being respectful of differing opinions, viewpoints, and experiences
 * Giving and gracefully accepting constructive feedback
 * Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
-* Focusing on what is best not just for us as individuals, but for the overall community
+* Focusing on what is best, not just for us as individuals, but for the overall community
 
 Examples of unacceptable behaviour include:
 
@@ -32,7 +32,7 @@ Examples of unacceptable behaviour include:
 
 Community leaders are responsible for clarifying and enforcing our standards of acceptable behaviour and will take appropriate and fair corrective action in response to any behaviour that they deem inappropriate, threatening, offensive, or harmful.
 
-Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.
+Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned to this Code of Conduct and will communicate reasons for moderation decisions when appropriate.
 
 ## Scope
 
@@ -40,7 +40,7 @@ This Code of Conduct applies within all community spaces and also applies when a
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise, unacceptable behaviour may be reported to the community leaders responsible for enforcement at  [MOSIP](mailto:info@mosip.io). All complaints will be reviewed and investigated promptly and fairly.
+Instances of abusive, harassing, or otherwise unacceptable behaviour may be reported to the community leaders responsible for enforcement at [MOSIP](mailto:info@mosip.io). All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the reporter of any incident.
 

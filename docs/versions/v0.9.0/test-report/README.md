@@ -4,12 +4,12 @@
 
 ### Scope
 
-The e-Signet testing scope revolves around the following flows:
+The eSignet testing scope revolves around the following flows:
 
 * Login with OTP
 * Login with Biometrics (mock and real device)
-* Multiple instances of e-Signet
-* Cross-browser testing: e-Signet flow verification in different browsers (Chrome, Microsoft Edge, Firefox, Opera, Safari)
+* Multiple instances of eSignet
+* Cross-browser testing: eSignet flow verification in different browsers (Chrome, Microsoft Edge, Firefox, Opera, Safari)
 
 ## Test Execution Statistics
 
@@ -36,4 +36,3 @@ The e-Signet testing scope revolves around the following flows:
   * Passed: 261
   * Failed: 0
   * Skipped: 0
-

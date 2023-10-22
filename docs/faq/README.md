@@ -2,11 +2,11 @@
 
 Here are a few of the frequently asked questions (FAQs) on e-Signet:
 
-## About e-Signet
+## About eSignet
 
 <details>
 
-<summary>What is e-Signet?</summary>
+<summary>What is eSignet?</summary>
 
 
 
@@ -14,19 +14,19 @@ Here are a few of the frequently asked questions (FAQs) on e-Signet:
 
 <details>
 
-<summary>What are the core features of e-Signet?</summary>
+<summary>What are the core features of eSignet?</summary>
 
-The core features of e-Signet are available [here](../overview/features/).
+The core features of eSignet are available [here](../overview/features/).
 
 </details>
 
 <details>
 
-<summary>How can I use e-Signet?</summary>
+<summary>How can I use eSignet?</summary>
 
-Based on the type of entity, such as an ID system, a relying party, or a digital wallet, you can integrate with e-Signet. For more details, go through our [integration guide](../integration-guides/).
+Based on the type of entity, such as an ID system, a relying party, or a digital wallet, you can integrate with eSignet. For more details, go through our [integration guide](../integration-guides/).
 
-If you looking at trying out e-Signet right away, then you can use our sandbox for testing. Please go through our [Try it out section](../try-it-out/) for more details.
+If you are looking at trying out eSignet right away, then you can use our sandbox for testing. Please go through our [Try it out section](../try-it-out/) for more details.
 
 </details>
 
@@ -34,17 +34,17 @@ If you looking at trying out e-Signet right away, then you can use our sandbox f
 
 <details>
 
-<summary>How many types of authentication methods does e-Signet support today?</summary>
+<summary>How many types of authentication methods does eSignet support today?</summary>
 
-The types of authentication methods supported by e-Signet are [available here](../overview/features/#support-for-various-authentication-modalities).
+The types of authentication methods supported by eSignet are [available here](../overview/features/#support-for-various-authentication-modalities).
 
 </details>
 
 <details>
 
-<summary>What are the standards followed by e-Signet?</summary>
+<summary>What are the standards followed by eSignet?</summary>
 
-The standards followed by e-Signet are [listed here](../overview/principles/#open-standards).
+The standards followed by eSignet are [listed here](../overview/principles/#open-standards).
 
 </details>
 
@@ -52,9 +52,9 @@ The standards followed by e-Signet are [listed here](../overview/principles/#ope
 
 <details>
 
-<summary>How to configure password authentication in e-Signet?</summary>
+<summary>How to configure password authentication in eSignet?</summary>
 
-To enable password authentication in e-Signet for a client, you must first set the ACR value as “**mosip:idp:acr:password**” in the _**authContextRefs**_ array during client creation or update.
+To enable password authentication in Signet for a client, you must first set the ACR value as “**mosip:idp:acr:password**” in the _**authContextRefs**_ array during client creation or update.
 
 Then, **during local testing**,
 
@@ -97,11 +97,11 @@ You have to change _**acr-amr-mapping.json**_ in the _**mosip-config**_ repo; de
 
 <details>
 
-<summary>How to add a new language in e-Signet?</summary>
+<summary>How to add a new language in eSignet?</summary>
 
-**Adding a new language for local e-Signet setup**
+**Adding a new language for local eSignet setup**
 
-1. Go to your e-Signet project and then open the folder:\
+1. Go to your Signet project and then open the folder:\
    **oidc-ui >> public >> locales**
 2. Create a new language JSON file&#x20;
    1. Copy the file _en.json_ and rename it with your new language's code as per ISO 639-1 (for example, if you want to add the language French, then rename the file to _fr.json)_ so that you can have all keys in for your new language.&#x20;
@@ -154,9 +154,9 @@ Now use this new artifactory in your production setup.
 
 <details>
 
-<summary>How to remove a language from the e-Signet default setup?</summary>
+<summary>How to remove a language from the eSignet default setup?</summary>
 
-To remove a language from the default e-Signet setup, you have to remove or delete the language’s JSON file (let's say French _fr.json_) from your language bundle.&#x20;
+To remove a language from the default eSignet setup, you have to remove or delete the language’s JSON file (let's say French _fr.json_) from your language bundle.&#x20;
 
 After that, you need to remove the mapping and details from the _**default.json**_ file of that particular language.
 
@@ -166,15 +166,15 @@ Go to the folder _**oidc-ui >> public >> locales**_ in the e-Signet project and 
 
 **In production,**
 
-Go to the develop branch of your [_**artifactory-ref-impl**_](https://github.com/mosip/artifactory-ref-impl/tree/develop) and perform the above steps in this location: _**artifacts >>  src >> i18n >> esignet-i18n-bundle**._ Once, the artifactory is modified, then you can deploy the latest version in production.
+Go to the develop branch of your [_**artifactory-ref-impl**_](https://github.com/mosip/artifactory-ref-impl/tree/develop) and perform the above steps in this location: _**artifacts >>  src >> i18n >> esignet-i18n-bundle**._ Once the artifactory is modified, then you can deploy the latest version in production.
 
 </details>
 
 <details>
 
-<summary>How to integrate wallets with e-Signet to provide wallet-based authentication? </summary>
+<summary>How to integrate wallets with eSignet to provide wallet-based authentication? </summary>
 
-To integrate a wallet in e-Signet, first, you have to add wallet details in _**application-local.properties**_ in the _**esignet-service**_ module in your esignet project.
+To integrate a wallet in eSignet, first, you have to add wallet details in _**application-local.properties**_ in the _**esignet-service**_ module in your esignet project.
 
 ```properties
 mosip.esignet.ui.wallet.config={{'wallet.name': 'Inji', 'wallet.logo-url': 'inji_logo.png', 'wallet.download-uri': '#', 'wallet.deep-link-uri': 'inji://landing-page-name?linkCode=LINK_CODE&linkExpireDateTime=LINK_EXPIRE_DT' }}
@@ -202,11 +202,11 @@ Then restart the e-Signet UI and e-Signet backend service to view the changes.
 
 <details>
 
-<summary>How to configure the expected quality score, timeouts, and number of biometric attributes to be captured in e-Signet?</summary>
+<summary>How to configure the expected quality score, timeouts, and number of biometric attributes to be captured in eSignet?</summary>
 
-Parameters such as expected quality score, timeouts and the number of biometric attributes to capture are environment variables for e-Signet UI.&#x20;
+Parameters such as expected quality score, timeouts and the number of biometric attributes to capture are environment variables for eSignet UI.&#x20;
 
-You can add the below environment variables in the _**.env**_ file in the e-Signet project’s _**oidc-ui**_ folder.
+You can add the below environment variables in the _**.env**_ file in the eSignet project’s _**oidc-ui**_ folder.
 
 ```
 // expected quality score for various biometrics
@@ -229,7 +229,7 @@ REACT_APP_SBI_DISC_TIMEOUT=30
 
 <details>
 
-<summary>How to enable or disable the captcha in e-Signet UI?</summary>
+<summary>How to enable or disable the captcha in eSignet UI?</summary>
 
 To disable the captcha from the e-Signet OTP screen, you have to set the value _false_ in _**application-local.properties**_ for _**mosip.esignet.send-otp.captcha-required**_ variable.
 
@@ -247,7 +247,7 @@ For enabling captcha you need to set the same property value as true.
 
 <details>
 
-<summary>How to register or create a client ID in e-Signet?</summary>
+<summary>How to register or create a client ID in eSignet?</summary>
 
 
 
@@ -255,7 +255,7 @@ For enabling captcha you need to set the same property value as true.
 
 <details>
 
-<summary>How to configure a VC issuer in e-Signet?</summary>
+<summary>How to configure a VC issuer in eSignet?</summary>
 
 
 

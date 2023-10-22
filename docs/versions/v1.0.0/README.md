@@ -1,6 +1,6 @@
-# Version 1.0.0
+# v1.0.0
 
-**Release Name**: e-Signet
+**Release Name**: eSignet
 
 **Upgrade From**: 0.9.0 (IdP - First released version)
 
@@ -8,21 +8,21 @@
 
 ## Overview
 
-The 1.0.0 version of e-Signet is the second release which covers essential features such as logging in with OTP and logging in with Biometrics along with wallet-based authentication. The subsequent releases will have more features and integration with digital wallet solutions.
+The 1.0.0 version of eSignet is the second release, which covers essential features such as logging in with OTP and logging in with biometrics, along with wallet-based authentication. The subsequent releases will have more features and integration with digital wallet solutions.
 
 ## Features Covered
 
-The features included in this release are,
+The features included in this release are:
 
 * Login with OTP
 * Login with biometrics
-* Wallet based authentication
+* Wallet-based authentication
 * Multi-language support
 * Captcha validation
 
 ## Documentation
 
-* [Feature Documentation](../../overview/features/README.md)
-* [Integration Guides](../../integration-guides/README.md)
-* [End User Guide](../../end-user-guide/README.md)
-* [QA Report](test-report/README.md)
+* [Feature Documentation](../../overview/features/)
+* [Integration Guides](../../integration-guides/)
+* [End User Guide](../../end-user-guide/)
+* [QA Report](test-report/)
