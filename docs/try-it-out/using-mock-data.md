@@ -1,6 +1,6 @@
 # Using Mock Data
 
-If you are looking to try out e-Signet, here are a few personas that you can use in our Collab environment for testing.
+If you are looking to try out eSignet, here are a few personas that you can use in our Collab environment for testing.
 
 ## Personas
 
@@ -10,7 +10,7 @@ If you are looking to try out e-Signet, here are a few personas that you can use
 The data used in the above VIDs is fictitious and the images returned are AI-generated from the website: [https://thispersondoesnotexist.com/](https://thispersondoesnotexist.com/)
 {% endhint %}
 
-## Steps to use e-Signet
+## Steps to use eSignet
 
 We have built a mock health portal that acts as a relying party web portal. Here, as an end user, you are trying to avail online health services by logging into the health portal using your national ID.
 
@@ -20,5 +20,5 @@ You can visit the Collab health portal using [this link](https://healthservices-
 
 As you are going to use mock data for testing, you can try out OTP authentication. You can use any of the above [personas](using-mock-data.md#personas) for testing, and the default OTP for testing is "111111" (six ones).
 
-A detailed step-by-step guide on how to log in with OTP using e-Signet is also available [here](../end-user-guide/login-with-otp/).
+A detailed step-by-step guide on how to log in with OTP using eSignet is also available [here](../end-user-guide/login-with-otp/).
 

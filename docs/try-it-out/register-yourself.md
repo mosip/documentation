@@ -2,9 +2,9 @@
 
 You can get your credentials added to Collab by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform). We generally take 1-2 working days to create your credentials.
 
-Once your credentials are generated, you will receive a VID (Virtual ID) from our collab environment at your registered email ID. Post which you will be able to explore e-Signet’s capabilities and experience seamless authentication through various channels.
+Once your credentials are generated, you will receive a VID (Virtual ID) from our collab environment at your registered email ID. After which, you will be able to explore eSignet’s capabilities and experience seamless authentication through various channels.
 
-## Steps to test e-Signet
+## Steps to test eSignet
 
 We have built a mock health portal that acts as a relying party web portal. Here, as an end user, you are trying to avail online health services by logging into the health portal using your national ID.
 
@@ -14,7 +14,7 @@ You can visit the Collab health portal using [this link](https://healthservices-
 
 Once you receive your VID, you can navigate to the [health portal](https://healthservices-esignet.collab.mosip.net/) and try authenticating using your VID and the default OTP, i.e. "111111" (six ones).
 
-A detailed step-by-step guide on how to log in with OTP using e-Signet is also available [here](../end-user-guide/login-with-otp/).
+A detailed step-by-step guide on how to log in with OTP using eSignet is also available [here](../end-user-guide/login-with-otp/).
 
 ### Authentication using Wallet
 

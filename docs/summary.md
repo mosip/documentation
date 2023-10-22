@@ -9,7 +9,7 @@
 * [Try it out](try-it-out/README.md)
   * [Using Mock Data](try-it-out/using-mock-data.md)
   * [Register Yourself](try-it-out/register-yourself.md)
-  * [Integrate with e-Signet](try-it-out/integrate-with-e-signet.md)
+  * [Integrate with eSignet](try-it-out/integrate-with-esignet.md)
 * [Build & Deployment](build-and-deploy/README.md)
   * [Local Deployment](build-and-deploy/local-deployment/README.md)
     * [Mock Identity System](build-and-deploy/local-deployment/mock-id-system/README.md)
