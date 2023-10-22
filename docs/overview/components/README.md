@@ -1,8 +1,8 @@
 # Components
 
-The image below is a block diagram of the e-Signet comprising various components along with the different layers and external systems.
+The image below is a block diagram of the eSignet comprising of various components along with the different layers and external systems.
 
-![](\_images/component-diagram.png)
+![](../../.gitbook/assets/component-diagram.png)
 
 ### Relying Party System
 
@@ -40,7 +40,7 @@ Here are a few frequently asked questions on the e-Signet UI.
 
 This service is the primary backend Spring Java application that incorporates various layers and integrates with other components mentioned on this page.
 
-1. **Core components**: The e-Signet core library is used to manage core service interfaces, constants, exceptions, validators, and utility methods.
+1. **Core components**: The eSignet core library is used to manage core service interfaces, constants, exceptions, validators, and utility methods.
 2. **Service layer**: This layer represents the implementation of the interfaces defined in the e-Signet core library. Each protocol implementation is a separate service, such as the complete OIDC protocol implementation being part of the oidc-service and VCI protocol implementations residing in the vci-service.
    * Service modules utilize caching to enhance transaction access and update speeds, as well as to prevent the need for persistent storage of transaction details.
    * Persistent storage is only used for OIDC client registration details.
