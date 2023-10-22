@@ -65,7 +65,7 @@ This is applicable only for `simple` cache type
 For cache other than `redis` and `simple`, based on the cache native TTL support a separate cache configuration should be added. Find the Redis cache config [here](https://github.com/mosip/esignet/blob/master/esignet-core/src/main/java/io/mosip/esignet/core/config/RedisCacheConfig.java).
 {% endhint %}
 
-## Plugin integrations
+## Plugin Integrations
 
 In eSignet, we use runtime plugins to connect with external ID systems or VC Issuers. As per design we only load one implementation of the plugin interface.
 
