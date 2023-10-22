@@ -1,6 +1,6 @@
 # Table of contents
 
-* [e-Signet](README.md)
+* [eSignet](README.md)
 * [Overview](overview/README.md)
   * [Features](overview/features/README.md)
   * [Principles](overview/principles/README.md)
