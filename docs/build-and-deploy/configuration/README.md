@@ -1,3 +1,3 @@
-# Configuring e-Signet
+# Configuring eSignet
 
-e-Signet have multiple configurations
+eSignet have multiple configurations
