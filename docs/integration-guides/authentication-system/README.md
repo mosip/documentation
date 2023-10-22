@@ -39,7 +39,7 @@ The diagram below illustrates the internal mechanism of storing Consent in e-sig
 
 ![](../../.gitbook/assets/activity-diagrams-storing-consent.png)
 
-## KeyBinder
+## Key Binder
 
 This interface provides a method to bind a `individualId` with a public key. On successful binding, it returns a signed certificate `walletUserId` which uniquely identifies a user. It is expected that the `KeyBinder` implementation takes care of overriding previously bound certificates with the newly generated signed certificate for a user.
 
@@ -49,7 +49,7 @@ The bound certificate will then be usable to do token-based authentication like 
 
 Refer to this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/KeyBinder.java#L17-L45) to check the interface in detail.
 
-### KeyBinding Process
+### Key Binding Process
 
 ![](../../.gitbook/assets/activity-diagrams-wallet-binding.png)
 
