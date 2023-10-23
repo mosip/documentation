@@ -1,8 +1,8 @@
 # VC Issuer
 
-VC Issuer is a system that can issue a verifiable credential (VC) in [W3C formats](https://www.w3.org/TR/vc-data-model/) for an entity. As eSignet is an OAuth and OIDC-based solution, we have enhanced it to support [OpenID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html) flow - in particular the wallet-initiated flow.
+VC Issuer is a system that can issue a verifiable credential (VC) in [W3C formats](https://www.w3.org/TR/vc-data-model/) for an entity. As eSignet is an OAuth and OIDC-based solution, we have enhanced it to support [OpenID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html) flow, in particular wallet-initiated flow.
 
-This document explains the VC Issuance flow and guide to how a VI Issuer and Wallet can integrate with eSignet for VC Issuance.
+This document explains the VC Issuance flow and provides a guide to how a VI Issuer and Wallet can integrate with eSignet for VC Issuance.
 
 ## VC Issuance Flow
 
