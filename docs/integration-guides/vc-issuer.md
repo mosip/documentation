@@ -39,13 +39,13 @@ public class TestVCIPluginImpl implements VCIssuancePlugin {
 
 ## Wallet Integration
 
-In the VC Issuance flow, we are considering the digital wallets as a relying party where an individual would try to authenticate with eSignet and get his/her credentials onboarded into the wallet.
+In the VC Issuance flow, we consider the digital wallets as a relying party where an individual would try to authenticate with eSignet and get his/her credentials onboarded into the wallet.
 
 ### Get a valid redirect deep link
 
 eSignet follows the OpenID4VCI wallet-initiated flow, hence, once authentication is successful, eSignet will be sharing an auth code to the wallet. Hence, for the integration, the wallet would need to create a valid redirect deep link first.
 
-Get an OAuth client credentials
+### Get an OAuth client credentials
 
 The relying party (here, the wallet) can use the eSignet client management APIs to register as an OAuth client and get the client credentials which would help them connect with eSignet.
 
@@ -65,16 +65,20 @@ Once the user successfully authenticates and provides consent, the authorization
 
 ### Retrieving the access token and c\_nonce
 
-The authorization code parameter in the redirected deep link should be extracted. And **exchange authorization code to access token and c\_nonce** from the eSignet server.&#x20;
+The authorization code parameter in the redirected deep link should be extracted and **exchange authorization code to access token and c\_nonce** from the eSignet server.&#x20;
 
 {% hint style="info" %}
-There are many OAuth 2.0 client libraries available in most of the programming languages to perform this action.
+Many OAuth 2.0 client libraries are available in most programming languages to perform this action.
 {% endhint %}
 
-Generate key pair
+### Generate key pair
 
 Generate a key pair for the wallet holder, and use the private key from the key pair to sign the c\_nonce. This is used to prove the possession(PoP) of the private key is the wallet holder.
 
+### Get the credential using VCI credential API
+
 Invoke `/vci/credential` REST endpoint of e-Signet with PoP and the credential format metadata to get the VC.
+
+### Store the credentials in the wallet
 
 Securely store acquired VC in the wallet.
