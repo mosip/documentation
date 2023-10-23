@@ -18,7 +18,9 @@ As part of this integration with eSignet, the verifiable credential system shoul
 
 ### VC Issuance Plugin
 
-This interface currently supports linked data-proof VC (as JSON-LD) and VC as JWT. The type of VC requested and the format in which VC is expected is passed as input to the implementation. Authorization details about the holder as present in the bearer token are also one of the inputs to the VC plugin implementation. eSignet currently mandates the cryptographic binding of the VC to the holder. The public key proved to be possessed by the holder is used to generate "`did:jwk`" and the same is passed to the "_**holderId**_". It is expected that the implementation will add the "_**holderId**_" as the "_**credentialSubjectID**_".
+This interface currently supports linked data-proof VC (as JSON-LD) and VC as JWT. The type of VC requested and the format in which VC is expected is passed as input to the implementation. Authorization details about the holder as present in the bearer token are also one of the inputs to the VC plugin implementation. eSignet currently mandates the cryptographic binding of the VC to the holder.&#x20;
+
+The public key proved to be possessed by the holder is used to generate "`did:jwk`" and the same is passed to the "_**holderId**_". It is expected that the implementation will add the "_**holderId**_" as the "_**credentialSubjectID**_".
 
 {% hint style="info" %}
 Cryptographic binding of the VC to the holder proves that the VC was issued to the key holder and also enables the VC verifier to guarantee that the presenter is indeed the holder of the VC.
@@ -39,11 +41,11 @@ public class TestVCIPluginImpl implements VCIssuancePlugin {
 
 In the VC Issuance flow, we are considering the digital wallets as a relying party where an individual would try to authenticate with eSignet and get his/her credentials onboarded into the wallet.
 
-### Get a Valid Redirect Deep Link
+### Get a valid redirect deep link
 
 eSignet follows the OpenID4VCI wallet-initiated flow, hence, once authentication is successful, eSignet will be sharing an auth code to the wallet. Hence, for the integration, the wallet would need to create a valid redirect deep link first.
 
-### Get an OAuth Client Credentials
+Get an OAuth client credentials
 
 The relying party (here, the wallet) can use the eSignet client management APIs to register as an OAuth client and get the client credentials which would help them connect with eSignet.
 
@@ -51,7 +53,7 @@ The relying party (here, the wallet) can use the eSignet client management APIs 
 [e-Signet.yml](../.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
-### Call the Authorize Endpoint
+### Call the authorize endpoint
 
 Call the "_**/authorize**_" endpoint of eSignet from the wallet to authenticate the credential holder and receive consent.
 
@@ -61,11 +63,15 @@ Call the "_**/authorize**_" endpoint of eSignet from the wallet to authenticate 
 
 Once the user successfully authenticates and provides consent, the authorization code is returned to the wallet app via the configured **redirect deep link.**
 
-**TBA**
+### Retrieving the access token and c\_nonce
 
-The authorization code parameter in the redirected deep link should be extracted. And **exchange authorization code to access token and c\_nonce** from the eSignet server. Note that many OAuth 2.0 client libraries are available in most of the programming languages.
+The authorization code parameter in the redirected deep link should be extracted. And **exchange authorization code to access token and c\_nonce** from the eSignet server.&#x20;
 
+{% hint style="info" %}
+There are many OAuth 2.0 client libraries available in most of the programming languages to perform this action.
+{% endhint %}
 
+Generate key pair
 
 Generate a key pair for the wallet holder, and use the private key from the key pair to sign the c\_nonce. This is used to prove the possession(PoP) of the private key is the wallet holder.
 
