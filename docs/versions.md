@@ -1,4 +1,10 @@
-# Versions
+# Releases
+
+## Version: vDP1
+
+* Name: Inji DP1 (Beta)
+* Date: 28th September, 2023
+* [Release Notes](version-inji-dp1.md)
 
 ## Version: 0.9.1
 
