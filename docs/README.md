@@ -32,19 +32,3 @@ eSignet re-imagines authentication services to factor in emerging trends and the
 
 eSignet is a contemporary and adaptable system for verifying digital identities. This solution is not involved with the issuance and management of IDs. It is designed to be compatible with any ID repository through a straightforward integration model. Any ID repository that provides authentication and attribute retrieval capabilities can utilize e-Signet.
 
-#### User Centricity
-
-Inclusion and access are core objectives of eSignet. We are mindful of user privacy and data protection. eSignet simplifies the user's life and offers flexibility and choices to complete identity verification.
-
-* **One ID** to access multiple services. Easy login to any of the integrated government and private sector services using a single identity credential.
-* Mandatory **User Consent** before allowing the relying party to access the personal information (inbuilt consent flow).
-* **Multiple modes of authentication** to complete identity verification.
-* Protection of credentials as the login credentials are not shared with the relying party. The login happens on eSignet.
-
-#### Go digital quickly
-
-* Quick and safe way to expose digital verification across services.
-* Ability to verify the residents with the same assurance as given during registration (OTP, Biometric, Cryptographic key).
-* Enables the government to open up digital verification/ e-KYC as a service and enables better access to financial inclusion.
-* Ease of integration to the relying parties as it follows standard-based protocols (lower time to market).
-* Narrows and bridges the digital divide by enabling multiple modes of verification.
