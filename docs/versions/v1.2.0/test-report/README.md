@@ -40,7 +40,7 @@ Verification is performed on various configurations as mentioned below:
 
 ## Feature health
 
-![](\_images/feature-health.png)
+![](\_images/feature-health-1.2.0.png)
 
 ## Test Execution Statistics
 
