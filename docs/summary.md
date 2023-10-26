@@ -4,6 +4,7 @@
 * [Overview](overview/README.md)
   * [Features](overview/features/README.md)
   * [Principles](overview/principles/README.md)
+  * [Standards](overview/standards/README.md)
   * [Components](overview/components/README.md)
   * [Technology Stack](overview/technology-stack/README.md)
 * [Try it out](try-it-out/README.md)
