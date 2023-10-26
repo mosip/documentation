@@ -32,14 +32,6 @@ eSignet re-imagines authentication services to factor in emerging trends and the
 
 eSignet is a contemporary and adaptable system for verifying digital identities. This solution is not involved with the issuance and management of IDs. It is designed to be compatible with any ID repository through a straightforward integration model. Any ID repository that provides authentication and attribute retrieval capabilities can utilize e-Signet.
 
-### eSignet relies on standards
-
-eSignet implements [**OpenID Connect**](https://openid.net/connect/) and [**OAuth 2.0**](https://oauth.net/2/) flows to work its magic. We have chosen the most secure and trustworthy flow to ensure user privacy and data security.
-
-eSignet relies on [**SBI (Secure Biometric Interface)**](https://standards.ieee.org/ieee/3167/10925/) to enable an ecosystem of biometric players. To have a look at the supported devices, click [here](https://docs.mosip.io/1.2.0/biometrics/biometric-devices).
-
-eSignet will leverage emerging standards for using verifiable credentials with OpenID and for wallet integration.
-
 #### User Centricity
 
 Inclusion and access are core objectives of eSignet. We are mindful of user privacy and data protection. eSignet simplifies the user's life and offers flexibility and choices to complete identity verification.
