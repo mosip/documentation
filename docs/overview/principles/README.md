@@ -2,16 +2,6 @@
 
 eSignet is designed with the architectural principles mentioned below. These architecture principles are core to developing the system's features and greatly influence how and why specific software design patterns are used.
 
-## Open Standards
-
-eSignet flows open standards such as,
-
-* [OAuth 2.0](https://oauth.net/2/)
-* [OpenID Connect](https://openid.net/specs/openid-connect-core-1\_0.html)
-* [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html)
-* [IEEE SA P3167 SBI 2.0](https://standards.ieee.org/ieee/3167/10925/)
-
-As eSignet follows OpenID Connect, it gets a lot of client libraries for integration. Hence, avoid custom code building for integration.
 
 ## Data Privacy
 
