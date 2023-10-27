@@ -28,7 +28,7 @@ For regression check, "MOSIP Test Rig", an automation testing suite is indigenou
 
 MOSIP Test Rig will be an open-source artifact which can also be enhanced and used by countries to validate the SI deliveries before going live. Persona classes include both negative and positive personas. Negative persona classes include users like Bribed Registration Office, Malicious Insider etc. The needs of positive persona classes must be met, whereas the needs of negative persona classes must be effectively restricted by the software.
 
-### Verified configuration
+### Verified configurations
 
 Verification is performed on various configurations as mentioned below:
 
@@ -42,13 +42,13 @@ Verification is performed on various configurations as mentioned below:
 
 ### Feature health
 
-![](\_images/feature-health-1.2.0.png)
 
-<figure><img src="../../../.gitbook/assets/feature-health-1.2.0.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../../.gitbook/assets/test-report-1.2.0.png" alt=""><figcaption><p>Tesr report 1.2.0</p></figcaption></figure>
 
 ### Test Execution Statistics
 
-### Functional test results for eSignet
+#### Functional test results for eSignet
 
 Below are the test metrics obtained by performing functional testing for eSignet using mockMDS, mockAuth and mockABIS. The process followed was black box testing which based its test cases on the specifications of the software component under test.
 
@@ -99,6 +99,6 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 Link for the [detailed test report](https://github.com/mosip/test-management/tree/master/e-signet).
 
-#### Sonar Report
+### Sonar Report
 
 ![](\_images/sonar.png)

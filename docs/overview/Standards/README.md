@@ -1,6 +1,6 @@
 # Standards
 
-* eSignet is envisioned as a thin add-on system to any existing digital ID solution to bring in additional capabilities.
+*
 * It implements [OpenID Connect](https://openid.net/connect/) flows, which helps the relying party perform quick and easy integrations using pre-existing libraries for user verification.
 * The system supports only the secure options in OpenID Connect, like authorization code flow to ensure the resident data is handled securely.
 * It is integrated with [SBI](https://standards.ieee.org/ieee/3167/10925/) (Secure Biometric Interface) to facilitate secure biometric collection for biometric-based user verification.
@@ -18,7 +18,6 @@ To learn more about the open standards followed by eSignet, read:
 * [IEEE SA P3167 SBI 2.0](https://standards.ieee.org/ieee/3167/10925/)
 
 As eSignet follows OpenID Connect, it gets a lot of client libraries for integration. Hence, avoid custom code building for integration.
-
 
 ### eSignet relies on standards
 
