@@ -29,7 +29,6 @@ Login to the portal with a mobile number or valid email ID. Refer below for deta
 
 * If you choose to login using your mobile number, you will be required to enter any 10-digit mobile number, as an example - “1234567890”.
 * Click on the captcha tick box to proceed to the next step.
-* Use 111111 as the OTP, for mobile number based login to the Collab environment.
 
 **Email ID**:
 
