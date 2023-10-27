@@ -8,7 +8,7 @@
 * All integrations to the ID system are taken as a runtime plug-able library to allow the reuse of official container images that help with easier upgrades.
 * Since this is designed especially for country-scale resident verification, we do not support additional features like role management, session management, etc.
 
-## Open standards
+## Open Standards
 
 To learn more about the open standards followed by eSignet, read:
 
