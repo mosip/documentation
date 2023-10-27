@@ -43,7 +43,7 @@ Here is the  easiest way to convert your public key (a `.PEM` file) to JWK forma
 * Paste the public key PEM file content in **PEM encoded key**&#x20;
 * Click on the **convert** button
 
-<img src="../.gitbook/assets/image.png" alt="" data-size="original">
+<img src="../.gitbook/assets/image (1).png" alt="" data-size="original">
 
 </details>
 
