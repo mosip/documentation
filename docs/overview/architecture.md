@@ -23,4 +23,4 @@ To know how MOSIP can be deployed, refer [Getting Started](https://docs.mosip.io
 
 The High-Level Functional Reference Architecture serves as a blueprint outlining the system's high-level functioning and interactions, providing a structured framework.
 
-<figure><img src="../.gitbook/assets/reference_functional_rchitecture.jpg" alt=""><figcaption><p>Architecture Overview</p></
+<figure><img src="../_images/reference_functional_rchitecture.jpg" alt=""><figcaption><p>Functional Reference Architecture</p></
