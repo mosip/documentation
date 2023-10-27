@@ -28,7 +28,7 @@
   * [ID System](integration-guides/authentication-system/README.md)
   * [Relying Party](integration-guides/relying-party/README.md)
   * [Digital Wallet](integration-guides/digital-wallet/README.md)
-  * [VC Issuer](integration-guides/vc-issuer.md)
+  * [VC Issuance](integration-guides/vc-issuer.md)
 * [End User Guide](end-user-guide/README.md)
   * [Login with OTP](end-user-guide/login-with-otp/README.md)
   * [Login with Biometrics](end-user-guide/login-with-biometrics/README.md)
