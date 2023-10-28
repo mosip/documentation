@@ -1,8 +1,8 @@
 # Authenticator Plugin
 
-This is the main interface for eSignet which provides methods to authenticate the end-user with control of the supported authentication factors.&#x20;
+Authenticator plugin is the main interface for eSignet which provides methods to authenticate the end-user with control of the supported authentication factors.&#x20;
 
-For example, if OTP is one of the supported authentication factors, the interface provides a methods to&#x20;
+For example, if OTP is one of the supported authentication factors, the interface provides a methods to,
 
 * Define the supported OTP channels,&#x20;
 * Implement the send-OTP functionality and&#x20;
@@ -54,7 +54,7 @@ public interface Authenticator {
 
     /**
      * Get list of KYC signing certificate and its details.
-     * @return list
+     * @return list of certificates
      */
     List<KycSigningCertificateData> getAllKycSigningCertificates() throws KycSigningCertificateException;
 }
@@ -64,11 +64,15 @@ public interface Authenticator {
 For the latest version of the interface please check our code base - [Authenticator.java](https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java)
 {% endhint %}
 
-Authenticator plugin is used by [Identity Systems](../glossary.md#identity-systems) that want to integrate with eSignet and expose endpoints for the above interfaces.
+## Who uses this plugin?
+
+Authenticator plugin is implemented by [Identity Systems](../glossary.md#identity-systems) that want to integrate with eSignet and expose endpoints for the above interfaces.
+
+## How to use this plugin?
 
 The Authenticator implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.authenticator` property.
 
-Below is an example how our [Mock Identity System](https://github.com/mosip/esignet-mock-services/tree/master/mock-identity-system) has implemented the eSignet Authenticator plugin.
+Below is an example of how our [Mock Identity System](https://github.com/mosip/esignet-mock-services/tree/master/mock-identity-system) has implemented the eSignet Authenticator plugin.
 
 ```java
 @ConditionalOnProperty(value = "mosip.esignet.integration.authenticator", havingValue = "mock-authentication-service")
@@ -78,3 +82,9 @@ public class MockAuthenticationService implements Authenticator {
     //Implement authenticator methods
 }
 ```
+
+## Appendix - activity diagrams
+
+The two main functionalities of the authenticator interface, **KYC Auth** and **KYC Exchange,** are depicted in the diagram below:
+
+<figure><img src="../.gitbook/assets/activity-diagrams-authenticator (1).png" alt=""><figcaption></figcaption></figure>
