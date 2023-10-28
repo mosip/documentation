@@ -1,2 +1,0 @@
-# VC Issuer Plugin
-

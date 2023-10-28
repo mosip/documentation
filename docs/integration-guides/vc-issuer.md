@@ -18,7 +18,7 @@ As part of this integration with eSignet, the verifiable credential system shoul
 
 ### VC Issuance Plugin
 
-This interface currently supports linked data-proof VC (as JSON-LD) and VC as JWT. The type of VC requested and the format in which VC is expected is passed as input to the implementation. Authorization details about the holder as present in the bearer token are also one of the inputs to the VC plugin implementation. eSignet currently mandates the cryptographic binding of the VC to the holder.&#x20;
+This interface currently supports linked data-proof VC (as JSON-LD) and VC as JWT. The type of VC requested and the format in which VC is expected is passed as input to the implementation. Authorization details about the holder present in the bearer token are also one of the inputs to the VC plugin implementation. eSignet currently mandates the cryptographic binding of the VC to the holder.
 
 The public key proved to be possessed by the holder is used to generate "`did:jwk`" and the same is passed to the "_**holderId**_". It is expected that the implementation will add the "_**holderId**_" as the "_**credentialSubjectID**_".
 
@@ -65,7 +65,7 @@ Once the user successfully authenticates and provides consent, the authorization
 
 ### Retrieving the access token and c\_nonce
 
-The authorization code parameter in the redirected deep link should be extracted and **exchange authorization code to access token and c\_nonce** from the eSignet server.&#x20;
+The authorization code parameter in the redirected deep link should be extracted and **exchange authorization code to access token and c\_nonce** from the eSignet server.
 
 {% hint style="info" %}
 Many OAuth 2.0 client libraries are available in most programming languages to perform this action.

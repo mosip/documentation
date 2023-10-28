@@ -26,7 +26,7 @@ This is the user interface component of eSignet, developed using React JS. Its m
 * eSignet UI also offers QR code-based login with support for multiple digital wallets.
 * In addition, eSignet UI is compatible with MOSIP SBI 2.0 for biometric capture.
 * Furthermore, the eSignet UI provides flag-based captcha validation for OTP login.
-* Lastly, the landing page of the eSignet UI showcases the available "_.well-know"_ endpoints.
+* Lastly, the landing page of the eSignet UI showcases the available "[_.well-know_](../../build-and-deploy/configuration/.well-known/)_"_ endpoints.
 
 {% hint style="info" %}
 Here are a few frequently asked questions on the eSignet UI.
@@ -52,15 +52,20 @@ This service is the primary backend Spring Java application that incorporates va
    * Typically, Key Manager is run as a service, but it is used as a library in the eSignet Service to minimize the effort of managing extra containers.
    * It depends on the data layer for maintaining the metadata on keys.
 5. **Plugins**: Integration points with external systems are designed to be pluggable, allowing easy integration with any ID system. The pluggable integration points are as follows:
-   * **Authenticator** - for identity verification
-   * **VCIssuancePlugin** - for constructing Verifiable Credentials (VCs)
-   * **AuditPlugin** - for auditing all events
+   * [**Authenticator**](../../integration-guides/authenticator.md) - for identity verification
+   * [**VCIssuancePlugin**](../../integration-guides/vc-issuance.md) - for constructing Verifiable Credentials (VCs)
+   * [**AuditPlugin**](../../integration-guides/audit.md) - for auditing all events
+   * [**KeyBinderPlugin**](../../integration-guides/key-binder.md) - for key binding of a user and wallet
    * **CaptchaValidator** - for captcha validation
 
 {% hint style="info" %}
-All plugin interfaces are defined in the esignet-integration-api module.
+All plugin interfaces are defined in the [esignet-integration-api](https://github.com/mosip/esignet/tree/master/esignet-integration-api) module.
 {% endhint %}
 
 ### **Identification System (ID system)**
 
 This system refers to any operational or fundamental identification system that houses the user's demographic and biometric details (if applicable). It could be a database or a system equipped with suitable mechanisms to facilitate identity verification and the sharing of verified user data.
+
+### VC Issuer
+
+VC Issuer is an entity that can assert claims of a subject (here the holder), create verifiable credentials from these claims and transmit the verifiable credentials to the holder.

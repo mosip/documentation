@@ -29,7 +29,7 @@
   * [Authenticator Plugin](integration-guides/authenticator.md)
   * [Key Binder Plugin](integration-guides/key-binder.md)
   * [Audit Plugin](integration-guides/audit.md)
-  * [VC Issuer Plugin](integration-guides/vc-issuer-plugin.md)
+  * [VC Issuance Plugin](integration-guides/vc-issuance.md)
   * [Relying Party](integration-guides/relying-party/README.md)
   * [Digital Wallet](integration-guides/digital-wallet/README.md)
   * [VC Issuance](integration-guides/vc-issuer.md)

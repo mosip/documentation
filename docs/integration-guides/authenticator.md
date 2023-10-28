@@ -68,7 +68,7 @@ For the latest version of the interface please check our code base - [Authentica
 
 Authenticator plugin is implemented by [Identity Systems](../glossary.md#identity-systems) that want to integrate with eSignet and expose endpoints for the above interfaces.
 
-## How to use this plugin?
+## How to implement this plugin?
 
 The Authenticator implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.authenticator` property.
 
@@ -83,7 +83,7 @@ public class MockAuthenticationService implements Authenticator {
 }
 ```
 
-## Appendix - activity diagrams
+## Appendix - KYC Auth and Exchange
 
 The two main functionalities of the authenticator interface, **KYC Auth** and **KYC Exchange,** are depicted in the diagram below:
 
