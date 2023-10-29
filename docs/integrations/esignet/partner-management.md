@@ -14,7 +14,12 @@ In order to create a OIDC client,&#x20;
 
 * The relying party, needs to get onboarded into MOSIP using the partner management portal as a authentication partner
 * The relying party needs to be mapped to a policy in MOSIP
-* When the relying party is mapped to the policy, using the new OIDC client create API, a client can be created for the relying party.
+* When the relying party is mapped to the policy, using the new [OIDC client create API](partner-management.md#oidc-client), a client can be created for the relying party.
+
+**Notes:**
+
+* A relying party can have multiple clients created against a approved mapped policy.
+* When a eSignet client is created using partner management APIs, then the client ID is set as the SHA256 hash of the public key provided in the request.
 
 </details>
 

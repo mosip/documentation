@@ -5,7 +5,7 @@ IDA is integrated as authentication system in e-Signet services with the below t
 1. [kyc-auth endpoint](https://mosip.stoplight.io/docs/id-authentication/branches/main/e1010cf7b1ea6-kyc-auth)
 2. [kyc-exchange endpoint](https://mosip.stoplight.io/docs/id-authentication/branches/main/645a92f1b98c0-kyc-exchange)
 
-![](\_images/ida-esignet-integration.png)
+![](../../\_images/ida-esignet-integration.png)
 
 ## Configurations
 
