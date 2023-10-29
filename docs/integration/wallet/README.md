@@ -1,7 +1,5 @@
 # Digital Wallet
 
-## Digital Wallet
-
 A digital ID wallet is a tool or software-based system that stores and manages personal information and identity credentials securely in a digital format. It helps people keep their information organized and protected. This wallet ensures the safety of personal data and makes it easily accessible when needed.
 
 {% hint style="info" %}
