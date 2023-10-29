@@ -24,7 +24,7 @@ The public key shared by the relying party is used to verify the digital signatu
 
 <summary>What is JWK format?</summary>
 
-JWK (JSON Web Key) is a JSON data structure that represents a set of public keys utilizing either the Elliptic Curve or RSA families of algorithms (public key cryptography).&#x20;
+JWK (JSON Web Key) is a JSON data structure that represents a set of public keys utilizing either the Elliptic Curve or RSA families of algorithms (public key cryptography).
 
 Learn more about JWK [here](https://openid.net/specs/draft-jones-json-web-key-03.html).
 
@@ -34,17 +34,17 @@ Learn more about JWK [here](https://openid.net/specs/draft-jones-json-web-key-03
 
 <summary>How can I convert a public key to JWK format?</summary>
 
-Here is the  easiest way to convert your public key (a `.PEM` file) to JWK format for testing.
+Here is the easiest way to convert your public key (a `.PEM` file) to JWK format for testing.
 
 * Go to the link [https://russelldavies.github.io/jwk-creator/](https://russelldavies.github.io/jwk-creator/)
 * Select **Public Key Use** as **Signing**
 * Select **Algorithm** as **RS256**
 * Select **Key ID** as **alpha-numeric-random-string**
-* Paste the public key PEM file content in **PEM encoded key**&#x20;
+* Paste the public key PEM file content in **PEM encoded key**
 * Click on the **convert** button
 
 <img src="../.gitbook/assets/image (1).png" alt="" data-size="original">
 
 </details>
 
-Once you receive the eSignet credentials at the email address provided on the form, please go through our integration guide on [relying party integration](../integration-guides/relying-party/) to complete the integration.
+Once you receive the eSignet credentials at the email address provided on the form, please go through our integration guide on [relying party integration](../integration/relying-party.md) to complete the integration.

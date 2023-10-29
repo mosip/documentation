@@ -24,7 +24,7 @@ The core features of eSignet are available [here](../overview/features/).
 
 <summary>How can I use eSignet?</summary>
 
-Based on the type of entity, such as an ID system, a relying party, or a digital wallet, you can integrate with eSignet. For more details, go through our [integration guide](../integration-guides/).
+Based on the type of entity, such as an ID system, a relying party, or a digital wallet, you can integrate with eSignet. For more details, go through our [integration guide](../integration/).
 
 If you are looking at trying out eSignet right away, then you can use our sandbox for testing. Please go through our [Try it out section](../try-it-out/) for more details.
 
@@ -89,7 +89,7 @@ You can directly point to a URL from the deployed version using the _**mosip-con
 mosip.esignet.amr-acr-mapping-file-url=https://raw.githack.com/mosip/mosip-config/develop-v3/amr-acr-mapping.json
 ```
 
-Similarly, **for** **production**,&#x20;
+Similarly, **for** **production**,
 
 You have to change _**acr-amr-mapping.json**_ in the _**mosip-config**_ repo; depending on your environment, switch to that branch and add the **“PWD”** property in the _**amr**_ and **“mosip:idp:acr:password”** in the _**acr\_amr**_.
 
@@ -103,12 +103,12 @@ You have to change _**acr-amr-mapping.json**_ in the _**mosip-config**_ repo; de
 
 1. Go to your Signet project and then open the folder:\
    **oidc-ui >> public >> locales**
-2. Create a new language JSON file&#x20;
-   1. Copy the file _en.json_ and rename it with your new language's code as per ISO 639-1 (for example, if you want to add the language French, then rename the file to _fr.json)_ so that you can have all keys in for your new language.&#x20;
+2. Create a new language JSON file
+   1. Copy the file _en.json_ and rename it with your new language's code as per ISO 639-1 (for example, if you want to add the language French, then rename the file to _fr.json)_ so that you can have all keys in for your new language.
    2. Modify the values in your desired language (for French, the values have to be modified to French in the _fr.json_ file)
 3. Update _default.json_ file
-   1. Now add the new language’s JSON file detail in _the default.json_ file so that it can be parsed and the new language can be shown in the UI, like below.&#x20;
-   2. You have to add the ISO 639-1 (two-lettered language code) language info in languages\_2Letters (which was used to create the new file above) and also put the language value against it.&#x20;
+   1. Now add the new language’s JSON file detail in _the default.json_ file so that it can be parsed and the new language can be shown in the UI, like below.
+   2. You have to add the ISO 639-1 (two-lettered language code) language info in languages\_2Letters (which was used to create the new file above) and also put the language value against it.
    3. If your language follows RTL(right-to-left) then add ISO 639-1 language code in the `rtlLanguages` array.
    4. Finally, create a mapping between ISO 639-2 and ISO 639-1 language codes for your language in `langCodeMapping`.
 
@@ -133,8 +133,6 @@ You have to change _**acr-amr-mapping.json**_ in the _**mosip-config**_ repo; de
 
 For details on ISO 639-1 and ISO 639-2, please follow the [documentation here](https://www.loc.gov/standards/iso639-2/php/English\_list.p).
 
-
-
 **Adding a new language in the production setup**
 
 Similar to the local mentioned above, you need to create a new language JSON file (as per ISO 639-1 and then update language configurations in _the **default.json**_ file.
@@ -142,7 +140,7 @@ Similar to the local mentioned above, you need to create a new language JSON fil
 Apart from that, you have to make the above changes in the `develop` branch of your [_**artifactory-ref-impl**_](https://github.com/mosip/artifactory-ref-impl/tree/develop) repository. In order to do so,
 
 1. Clone the repo and switch to the develop branch
-2. Go to the folder location: \
+2. Go to the folder location:\
    **artifacts >> src >> i18n >> esignet-i18n-bundle**
 3. Inside this folder, you can view all language JSON files
 4. Create your new language file as mentioned in the local setup guide above and place it in the folder.
@@ -156,23 +154,23 @@ Now use this new artifactory in your production setup.
 
 <summary>How to remove a language from the eSignet default setup?</summary>
 
-To remove a language from the default eSignet setup, you have to remove or delete the language’s JSON file (let's say French _fr.json_) from your language bundle.&#x20;
+To remove a language from the default eSignet setup, you have to remove or delete the language’s JSON file (let's say French _fr.json_) from your language bundle.
 
 After that, you need to remove the mapping and details from the _**default.json**_ file of that particular language.
 
-**For local setup,**&#x20;
+**For local setup,**
 
 Go to the folder _**oidc-ui >> public >> locales**_ in the e-Signet project and perform the above steps.
 
 **In production,**
 
-Go to the develop branch of your [_**artifactory-ref-impl**_](https://github.com/mosip/artifactory-ref-impl/tree/develop) and perform the above steps in this location: _**artifacts >>  src >> i18n >> esignet-i18n-bundle**._ Once the artifactory is modified, then you can deploy the latest version in production.
+Go to the develop branch of your [_**artifactory-ref-impl**_](https://github.com/mosip/artifactory-ref-impl/tree/develop) and perform the above steps in this location: _**artifacts >> src >> i18n >> esignet-i18n-bundle**._ Once the artifactory is modified, then you can deploy the latest version in production.
 
 </details>
 
 <details>
 
-<summary>How to integrate wallets with eSignet to provide wallet-based authentication? </summary>
+<summary>How to integrate wallets with eSignet to provide wallet-based authentication?</summary>
 
 To integrate a wallet in eSignet, first, you have to add wallet details in _**application-local.properties**_ in the _**esignet-service**_ module in your esignet project.
 
@@ -204,7 +202,7 @@ Then restart the e-Signet UI and e-Signet backend service to view the changes.
 
 <summary>How to configure the expected quality score, timeouts, and number of biometric attributes to be captured in eSignet?</summary>
 
-Parameters such as expected quality score, timeouts and the number of biometric attributes to capture are environment variables for eSignet UI.&#x20;
+Parameters such as expected quality score, timeouts and the number of biometric attributes to capture are environment variables for eSignet UI.
 
 You can add the below environment variables in the _**.env**_ file in the eSignet project’s _**oidc-ui**_ folder.
 
