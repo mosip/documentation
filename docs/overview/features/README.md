@@ -40,6 +40,10 @@ OID4VCI is a mechanism built extending the OAuth 2.0 protocol to enable standard
 
 eSignet being an OAuth 2.0 & OIDC-based solution, it is enhanced to support OID4VCI flows. Once the eSignet VCI solution is integrated into a classic issuer, it can enable the issuer application to become OID4VCI compliant and become interoperable with all OID4VCI compatible wallets.
 
+{% hint style="info" %}
+[OpenID4VCI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html) specification by the OpenID Foundation defines a wallet-initiated flow and an issuer-initiated flow for VC issuance. eSignet currently supports only the wallet-initiated flow, with VC being directly sent in the response (just in time) for credential requests.
+{% endhint %}
+
 ## Consent
 
 User consent refers to the voluntary and informed agreement provided by an individual, often referred to as a user, to a specific action, process, or request. Users should have a clear understanding of what they are consenting to. User consent is particularly important in the context of data privacy, where it is required in many jurisdictions for organizations to obtain explicit consent from individuals before collecting, processing, or sharing their personal data.
