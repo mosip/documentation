@@ -15,12 +15,12 @@
 * Create and Update of OIDC clients are managed via PMS.\
 
 
-{% swagger src="../../../api/partner-management-service-openapi (1).json" path="/oidc/client" method="post" %}
-[partner-management-service-openapi (1).json](<../../../api/partner-management-service-openapi (1).json>)
+{% swagger src="../api/partner-management-service-openapi (1).json" path="/oidc/client" method="post" %}
+[partner-management-service-openapi (1).json](<../api/partner-management-service-openapi (1).json>)
 {% endswagger %}
 
-{% swagger src="../../../api/partner-management-service-openapi.json" path="/oidc/client/{client_id}" method="put" %}
-[partner-management-service-openapi.json](../../../api/partner-management-service-openapi.json)
+{% swagger src="../api/partner-management-service-openapi.json" path="/oidc/client/{client_id}" method="put" %}
+[partner-management-service-openapi.json](../api/partner-management-service-openapi.json)
 {% endswagger %}
 
 * Relying party is onboarded as an `Auth` partner. Auth partner is required to have the below allowed `auth-types` in the policy.
