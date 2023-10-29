@@ -55,7 +55,7 @@ Refer to this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integra
 
 ### Authentication with Bound Key
 
-![](../../.gitbook/assets/activity-diagrams-wallet-authentication.png)
+![](<../../.gitbook/assets/activity-diagrams-wallet-authentication (1).png>)
 
 The KeyBinder implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.key-binder` property. Ex:
 

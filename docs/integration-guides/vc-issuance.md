@@ -23,7 +23,7 @@ public class TestVCIPluginImpl implements VCIssuancePlugin {
 }
 ```
 
-## Appendix - VC Issuance Flow
+## Appendix - VC Issuance
 
 The below diagram shows how a holder is authenticating himself/herself and requesting for his/her credentials using a digital wallet.
 
