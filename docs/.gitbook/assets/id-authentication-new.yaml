@@ -1,0 +1,1573 @@
+openapi: 3.1.0
+x-stoplight:
+  id: ycq417jl4oao7
+info:
+  title: id-authentication
+  version: '1.0'
+  summary: 'APIs for IdP integration'
+  description: List the APIs required for IdP integration
+servers:
+  - url: 'https://api-internal.collab.mosip.net'
+paths:
+  /idauthentication/v1/key-auth/delegated/{IdP-LK}​/{Auth-Partner-ID}​/{oidc-client-id}:
+    post:
+      summary: KYC Authentication
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                x-examples:
+                  example-1:
+                    id: string
+                    version: string
+                    responseTime: '2019-08-24T14:15:22Z'
+                    response:
+                      kycToken: string
+                      authToken: string
+                    errors:
+                      - errorCode: string
+                        errorMessage: string
+                properties:
+                  id:
+                    type: string
+                    description: |-
+                      IDA standard response ID. 
+                      Eg: mosip.identity.kycauth
+                  version:
+                    type: string
+                    description: |-
+                      Version of the API. Current supported version 
+                      is '1.0'
+                  responseTime:
+                    type: string
+                    description: Response Time of the request.
+                  response:
+                    type: object
+                    description: |-
+                      The Response Object contains the details
+                      whether auth is successful or not. If Auth
+                      successful kycToken will be included in the
+                      response otherwise kycToken will be null.
+                    required:
+                      - kycToken
+                      - authToken
+                      - kycStatus
+                    properties:
+                      kycToken:
+                        type: string
+                        description: If Auth successful kycToken will be included in the response otherwise kycToken will be null.
+                      authToken:
+                        type: string
+                        description: |-
+                          Partner Specific User Token will be generated 
+                          and returned. Both auth success/failed case
+                          PSU token will be included in the response.
+                      kycStatus:
+                        type: boolean
+                        description: |-
+                          Auth Status. True will be returned if auth 
+                          is successful otherwise false.
+                  errors:
+                    type: array
+                    description: |-
+                      In case of auth failed, respective all errors
+                      will be returned as an array. Each error 
+                      object contains error code and error message.
+                      If auth success, error object will be null.
+                    items:
+                      type: object
+                      properties:
+                        errorCode:
+                          type: string
+                          description: |-
+                            Unique Error Code will be include if case of
+                            auth failure.
+                        errorMessage:
+                          type: string
+                          description: |-
+                            Error Code specific error message will be 
+                            included in the error object.
+                required:
+                  - id
+                  - version
+                  - responseTime
+                  - response
+                  - errors
+              examples:
+                example-1:
+                  value:
+                    id: string
+                    version: string
+                    responseTime: string
+                    response:
+                      kycToken: string
+                      authToken: string
+                      kycStatus: false
+                    errors:
+                      - errorCode: string
+                        errorMessage: string
+            application/xml:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      operationId: post-kyc-auth-delegated
+      description: |-
+        API to perform the ID Authentication based on allowed auth policy. Does validation of provided path parameters before doing the actual authentication. Returns a new KYC token and partner specific user token. 
+        This API should be called from IdP service only. 
+      x-internal: false
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  id: string
+                  version: string
+                  individualId: string
+                  individualIdType: string
+                  transactionID: string
+                  requestTime: string
+                  specVersion: string
+                  thumbprint: string
+                  domainUri: string
+                  env: string
+                  request:
+                    otp: string
+                    staticPin: string
+                    timestamp: string
+                    demographics:
+                      age: string
+                      dob: string
+                      name:
+                        - language: string
+                          value: string
+                      dobType:
+                        - language: string
+                          value: string
+                      gender:
+                        - language: string
+                          value: string
+                      phoneNumber: string
+                      emailId: string
+                      addressLine1:
+                        - language: string
+                          value: string
+                      addressLine2:
+                        - language: string
+                          value: string
+                      addressLine3:
+                        - language: string
+                          value: string
+                      location1:
+                        - language: string
+                          value: string
+                      location2:
+                        - language: string
+                          value: string
+                      location3:
+                        - language: string
+                          value: string
+                      postalCode: string
+                      fullAddress:
+                        - language: string
+                          value: string
+                      metadata:
+                        property1: {}
+                        property2: {}
+                    biometrics:
+                      - data:
+                          digitalId:
+                            serialNo: string
+                            make: string
+                            model: string
+                            type: string
+                            deviceSubType: string
+                            deviceProvider: string
+                            dp: string
+                            dpId: string
+                            deviceProviderId: string
+                            dateTime: string
+                          bioType: string
+                          bioSubType: string
+                          bioValue: string
+                          deviceCode: string
+                          deviceServiceVersion: string
+                          transactionId: string
+                          timestamp: string
+                          purpose: string
+                          env: string
+                          version: string
+                          domainUri: string
+                          requestedScore: 0
+                          qualityScore: 0
+                        hash: string
+                        sessionKey: string
+                        specVersion: string
+                        thumbprint: string
+                  consentObtained: true
+                  requestHMAC: string
+                  requestSessionKey: string
+                  metadata:
+                    property1: {}
+                    property2: {}
+                  allowedKycAttributes:
+                    - string
+              properties:
+                id:
+                  type: string
+                  description: |-
+                    IDA standard request ID. 
+                    Eg: mosip.identity.kycauth
+                version:
+                  type: string
+                  description: |-
+                    Version of the API. Current supported version 
+                    is '1.0'
+                individualId:
+                  type: string
+                  description: 'UIN/VID of the individual. '
+                individualIdType:
+                  type: string
+                  description: |-
+                    Parameter to indicate individual type. 
+                    Type can be UIN/VID
+                transactionID:
+                  type: string
+                  description: |-
+                    any random alpha numberic string. 
+                    Allowed max size is 10. 
+                requestTime:
+                  type: string
+                  description: Request created time
+                specVersion:
+                  type: string
+                  description: IDA Specification version. Current Supported version is 1.0
+                thumbprint:
+                  type: string
+                  description: Thumbprint of the certificate used for encrypting  the auth request.
+                domainUri:
+                  type: string
+                  description: Domain uri of the server
+                env:
+                  type: string
+                  description: Name of the environment
+                request:
+                  type: object
+                  description: |-
+                    Authentication Request with one of the auth 
+                    challenges. Supported Challenges are: 
+                    OTP, DEMO and BIOMETRICS
+                  required:
+                    - otp
+                    - timestamp
+                    - demographics
+                    - biometrics
+                    - keyBindedTokens
+                  properties:
+                    otp:
+                      type: string
+                      description: |-
+                        This attributes is mandatory if 
+                        OTP Authentication is performed.
+                    staticPin:
+                      type: string
+                      description: |-
+                        This is not supported auth factor in 
+                        current IDA version.
+                    timestamp:
+                      type: string
+                      description: |-
+                        This attributes is mandatory if 
+                        Demographics Authentication is performed.
+                    demographics:
+                      type: object
+                      description: |-
+                        This attributes is mandatory if 
+                        Demographics Authentication is performed.
+                      properties:
+                        age:
+                          type: string
+                        dob:
+                          type: string
+                        name:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        dobType:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        gender:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        phoneNumber:
+                          type: string
+                        emailId:
+                          type: string
+                        addressLine1:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        addressLine2:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        addressLine3:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        location1:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        location2:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        location3:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        postalCode:
+                          type: string
+                        fullAddress:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        metadata:
+                          type: object
+                          properties:
+                            property1:
+                              type: object
+                            property2:
+                              type: object
+                    biometrics:
+                      type: array
+                      description: |-
+                        This attributes is mandatory if 
+                        BIOMETRICS Authentication is performed.
+                      items:
+                        type: object
+                        properties:
+                          data:
+                            type: object
+                            description: |-
+                              Data attribute contains captured encrypted 
+                              biometric. Data object should be formed 
+                              as per the SBI Spec. All inner objects 
+                              and inner attributes are mandatory as per
+                              SBI Specifications.
+                            properties:
+                              digitalId:
+                                type: object
+                                properties:
+                                  serialNo:
+                                    type: string
+                                  make:
+                                    type: string
+                                  model:
+                                    type: string
+                                  type:
+                                    type: string
+                                  deviceSubType:
+                                    type: string
+                                  deviceProvider:
+                                    type: string
+                                  dp:
+                                    type: string
+                                  dpId:
+                                    type: string
+                                  deviceProviderId:
+                                    type: string
+                                  dateTime:
+                                    type: string
+                              bioType:
+                                type: string
+                              bioSubType:
+                                type: string
+                              bioValue:
+                                type: string
+                              deviceCode:
+                                type: string
+                              deviceServiceVersion:
+                                type: string
+                              transactionId:
+                                type: string
+                              timestamp:
+                                type: string
+                              purpose:
+                                type: string
+                              env:
+                                type: string
+                              version:
+                                type: string
+                              domainUri:
+                                type: string
+                              requestedScore:
+                                type: integer
+                              qualityScore:
+                                type: integer
+                          hash:
+                            type: string
+                          sessionKey:
+                            type: string
+                          specVersion:
+                            type: string
+                          thumbprint:
+                            type: string
+                        required:
+                          - data
+                    keyBindedTokens:
+                      type: object
+                      x-stoplight:
+                        id: i8302yfkhjo1s
+                      description: |-
+                        This attributes is mandatory if 
+                        Key Binded Token Authentication is performed.
+                      properties:
+                        type:
+                          type: string
+                          x-stoplight:
+                            id: 9bpzo3nbg91yp
+                          description: |-
+                            Token type for which the key needs to be binded.
+                            Supported token type(s): WLA (Wallet Local Auth)
+                        token:
+                          type: string
+                          x-stoplight:
+                            id: yvv837zohlbt3
+                          description: |
+                            TOken created in JWT format with below list of mandatory claims.
+                             - sub
+                             - aud
+                             - exp
+                             - iss
+                             - iat
+                        format:
+                          type: string
+                          x-stoplight:
+                            id: jq2xi6szwr1wd
+                          description: |-
+                            In Which format the token needs to be generated. 
+                            Current supported format is JWT.
+                consentObtained:
+                  type: boolean
+                  description: 'User provided Consent either true or false '
+                requestHMAC:
+                  type: string
+                  description: HMAC value generated of the whole request.
+                requestSessionKey:
+                  type: string
+                  description: Session key used to encrypt the request.
+                metadata:
+                  type: object
+                  description: Any additional attributes needs to be processedin authentication.
+                  properties:
+                    property1:
+                      type: object
+                    property2:
+                      type: object
+                allowedKycAttributes:
+                  type: array
+                  description: Allowed KYC Attributes List.
+                  items:
+                    type: string
+              required:
+                - id
+                - version
+                - individualId
+                - transactionID
+                - requestTime
+                - specVersion
+                - thumbprint
+                - domainUri
+                - env
+                - request
+                - consentObtained
+                - requestHMAC
+                - requestSessionKey
+        description: Auth Request Body
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: signature
+          description: Digital Signature of the Auth Request. IdP key will be used to generate the signature.
+      x-stoplight:
+        id: z7ds0jreqlqtc
+    parameters:
+      - schema:
+          type: string
+        name: Auth-Partner-ID
+        in: path
+        required: true
+        description: Relying Party (RP) Partner ID. This ID will be provided during partner self registration process
+      - schema:
+          type: string
+        name: oidc-client-id
+        in: path
+        required: true
+        description: 'OIDC client Id. Auto generated while creating OIDC client in PMS '
+      - schema:
+          type: string
+        name: IdP-LK
+        in: path
+        required: true
+        description: IdP Service License Key. This LK is similar MISP-LK.
+  /idauthentication/v1/identity-key-binding/delegated/{IdP-LK}/{Auth-Partner-ID}/{OIDC-Client-Id}:
+    post:
+      summary: Key Binding
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                x-examples:
+                  example-1:
+                    id: string
+                    version: string
+                    responseTime: '2019-08-24T14:15:22Z'
+                    response:
+                      kycToken: string
+                      authToken: string
+                    errors:
+                      - errorCode: string
+                        errorMessage: string
+                properties:
+                  id:
+                    type: string
+                    description: |-
+                      IDA standard response ID. 
+                      Eg: mosip.identity.keybinding
+                  version:
+                    type: string
+                    description: |-
+                      Version of the API. Current supported version 
+                      is '1.0'
+                  responseTime:
+                    type: string
+                    description: Response Time of the request.
+                  response:
+                    type: object
+                    description: |-
+                      The Response Object contains the details
+                      whether auth is successful or not. If Auth
+                      successful kycToken will be included in the
+                      response otherwise kycToken will be null.
+                    required:
+                      - identityCertificate
+                      - authToken
+                      - bindingAuthStatus
+                    properties:
+                      identityCertificate:
+                        type: string
+                        description: If Auth successful a certificate will be generated using IDA Key Binding and returned as identity certificate.
+                        x-stoplight:
+                          id: b2y41s57q3q4n
+                      authToken:
+                        type: string
+                        description: |-
+                          Partner Specific User Token will be generated 
+                          and returned. Both auth success/failed case
+                          PSU token will be included in the response.
+                      bindingAuthStatus:
+                        type: boolean
+                        description: |-
+                          Binding Auth Status. True will be returned if auth 
+                          is successful and key binding is completed otherwise false.
+                        x-stoplight:
+                          id: dutzuhtwtfn3a
+                  errors:
+                    type: array
+                    description: |-
+                      In case of auth failed, respective all errors
+                      will be returned as an array. Each error 
+                      object contains error code and error message.
+                      If auth success, error object will be null.
+                    items:
+                      type: object
+                      properties:
+                        errorCode:
+                          type: string
+                          description: |-
+                            Unique Error Code will be include if case of
+                            auth failure.
+                        errorMessage:
+                          type: string
+                          description: |-
+                            Error Code specific error message will be 
+                            included in the error object.
+                required:
+                  - id
+                  - version
+                  - responseTime
+                  - response
+                  - errors
+              examples:
+                example-1:
+                  value:
+                    id: string
+                    version: string
+                    responseTime: string
+                    response:
+                      identityCertificate: string
+                      authToken: string
+                      bindingAuthStatus: false
+                    errors:
+                      - errorCode: string
+                        errorMessage: string
+            application/xml:
+              schema:
+                type: object
+                properties: {}
+          headers: {}
+      operationId: post-identity-key-binding-delegated
+      description: |-
+        API to perform the ID Authentication based for the provided identity data and based on allowed auth policy. 
+        To identity the auth partner API will perform validation of provided path parameters before performing the actual authentication.
+        Wallet will include a public key in the request to be binded for the input VID/UIN
+        Returns a status of key binding, partner specific user token, certificate generated for the input public key (this certificate will be binded to the input VID/UIN). Certificate will be returned only when the authenticate is passed. 
+        This API should be called from eSignet service and from Inji Wallet. 
+      x-internal: false
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  id: string
+                  version: string
+                  individualId: string
+                  individualIdType: string
+                  transactionID: string
+                  requestTime: string
+                  specVersion: string
+                  thumbprint: string
+                  domainUri: string
+                  env: string
+                  request:
+                    otp: string
+                    staticPin: string
+                    timestamp: string
+                    demographics:
+                      age: string
+                      dob: string
+                      name:
+                        - language: string
+                          value: string
+                      dobType:
+                        - language: string
+                          value: string
+                      gender:
+                        - language: string
+                          value: string
+                      phoneNumber: string
+                      emailId: string
+                      addressLine1:
+                        - language: string
+                          value: string
+                      addressLine2:
+                        - language: string
+                          value: string
+                      addressLine3:
+                        - language: string
+                          value: string
+                      location1:
+                        - language: string
+                          value: string
+                      location2:
+                        - language: string
+                          value: string
+                      location3:
+                        - language: string
+                          value: string
+                      postalCode: string
+                      fullAddress:
+                        - language: string
+                          value: string
+                      metadata:
+                        property1: {}
+                        property2: {}
+                    biometrics:
+                      - data:
+                          digitalId:
+                            serialNo: string
+                            make: string
+                            model: string
+                            type: string
+                            deviceSubType: string
+                            deviceProvider: string
+                            dp: string
+                            dpId: string
+                            deviceProviderId: string
+                            dateTime: string
+                          bioType: string
+                          bioSubType: string
+                          bioValue: string
+                          deviceCode: string
+                          deviceServiceVersion: string
+                          transactionId: string
+                          timestamp: string
+                          purpose: string
+                          env: string
+                          version: string
+                          domainUri: string
+                          requestedScore: 0
+                          qualityScore: 0
+                        hash: string
+                        sessionKey: string
+                        specVersion: string
+                        thumbprint: string
+                  consentObtained: true
+                  requestHMAC: string
+                  requestSessionKey: string
+                  metadata:
+                    property1: {}
+                    property2: {}
+                  allowedKycAttributes:
+                    - string
+              properties:
+                id:
+                  type: string
+                  description: |-
+                    IDA standard request ID. 
+                    Eg: mosip.identity.keybinding
+                version:
+                  type: string
+                  description: |-
+                    Version of the API. Current supported version 
+                    is '1.0'
+                individualId:
+                  type: string
+                  description: 'UIN/VID of the individual. '
+                individualIdType:
+                  type: string
+                  description: |-
+                    Parameter to indicate individual type. 
+                    Type can be UIN/VID
+                transactionID:
+                  type: string
+                  description: |-
+                    any random alpha numberic string. 
+                    Allowed max size is 10. 
+                requestTime:
+                  type: string
+                  description: Request created time
+                specVersion:
+                  type: string
+                  description: IDA Specification version. Current Supported version is 1.0
+                thumbprint:
+                  type: string
+                  description: Thumbprint of the certificate used for encrypting  the auth request.
+                domainUri:
+                  type: string
+                  description: Domain uri of the server
+                env:
+                  type: string
+                  description: Name of the environment
+                request:
+                  type: object
+                  description: |-
+                    Authentication Request with one of the auth 
+                    challenges. Supported Challenges are: 
+                    OTP, DEMO and BIOMETRICS
+                  required:
+                    - otp
+                    - timestamp
+                    - demographics
+                    - biometrics
+                  properties:
+                    otp:
+                      type: string
+                      description: |-
+                        This attributes is mandatory if 
+                        OTP Authentication is performed.
+                    staticPin:
+                      type: string
+                      description: |-
+                        This is not supported auth factor in 
+                        current IDA version.
+                    timestamp:
+                      type: string
+                      description: |-
+                        This attributes is mandatory if 
+                        Demographics Authentication is performed.
+                    demographics:
+                      type: object
+                      description: |-
+                        This attributes is mandatory if 
+                        Demographics Authentication is performed.
+                      properties:
+                        age:
+                          type: string
+                        dob:
+                          type: string
+                        name:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        dobType:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        gender:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        phoneNumber:
+                          type: string
+                        emailId:
+                          type: string
+                        addressLine1:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        addressLine2:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        addressLine3:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        location1:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        location2:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        location3:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        postalCode:
+                          type: string
+                        fullAddress:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              language:
+                                type: string
+                              value:
+                                type: string
+                        metadata:
+                          type: object
+                          properties:
+                            property1:
+                              type: object
+                            property2:
+                              type: object
+                    biometrics:
+                      type: array
+                      description: |-
+                        This attributes is mandatory if 
+                        BIOMETRICS Authentication is performed.
+                      items:
+                        type: object
+                        properties:
+                          data:
+                            type: object
+                            description: |-
+                              Data attribute contains captured encrypted 
+                              biometric. Data object should be formed 
+                              as per the SBI Spec. All inner objects 
+                              and inner attributes are mandatory as per
+                              SBI Specifications.
+                            properties:
+                              digitalId:
+                                type: object
+                                properties:
+                                  serialNo:
+                                    type: string
+                                  make:
+                                    type: string
+                                  model:
+                                    type: string
+                                  type:
+                                    type: string
+                                  deviceSubType:
+                                    type: string
+                                  deviceProvider:
+                                    type: string
+                                  dp:
+                                    type: string
+                                  dpId:
+                                    type: string
+                                  deviceProviderId:
+                                    type: string
+                                  dateTime:
+                                    type: string
+                              bioType:
+                                type: string
+                              bioSubType:
+                                type: string
+                              bioValue:
+                                type: string
+                              deviceCode:
+                                type: string
+                              deviceServiceVersion:
+                                type: string
+                              transactionId:
+                                type: string
+                              timestamp:
+                                type: string
+                              purpose:
+                                type: string
+                              env:
+                                type: string
+                              version:
+                                type: string
+                              domainUri:
+                                type: string
+                              requestedScore:
+                                type: integer
+                              qualityScore:
+                                type: integer
+                          hash:
+                            type: string
+                          sessionKey:
+                            type: string
+                          specVersion:
+                            type: string
+                          thumbprint:
+                            type: string
+                        required:
+                          - data
+                consentObtained:
+                  type: boolean
+                  description: 'User provided Consent either true or false '
+                requestHMAC:
+                  type: string
+                  description: HMAC value generated of the whole request.
+                requestSessionKey:
+                  type: string
+                  description: Session key used to encrypt the request.
+                metadata:
+                  type: object
+                  description: Any additional attributes needs to be processedin authentication.
+                  properties:
+                    property1:
+                      type: object
+                    property2:
+                      type: object
+                identityKeyBinding:
+                  type: object
+                  x-stoplight:
+                    id: q0r414a1gzjox
+                  required:
+                    - publicKeyJWK
+                    - authFactorType
+                  description: Key details needs to be binded to the identity after successful authentication.
+                  properties:
+                    publicKeyJWK:
+                      type: object
+                      x-stoplight:
+                        id: fpayijchwq7h2
+                      required:
+                        - additionalProp1
+                      description: |
+                        At least 1 key input needs to be provided.
+                        The input public key to be in JWK format.
+                        Multiple keys are allowed to be binded to the same identity.
+                        Supported key type: RSA
+                      properties:
+                        additionalProp1:
+                          type: object
+                          x-stoplight:
+                            id: xf3h2rojmtcu9
+                          description: |-
+                            Public Key in JWK format. Eg:
+                            {
+                                "kty": "RSA",
+                                "e": "AQAB",
+                                "use": "sig",
+                                "alg": "RS256",
+                                "n": "p3Beq05VQmU_opZdrXtHLrJiXr7Yl4FnDt4UkvQEw8HGW-xY8UFfhF01zedrV1FHg38uqOlYbkLnYGRjyt_dgW2BZBEYpcB93sLWrdx59EquRyF4I6B_sq1gHijzBYXmOxFl8NBR6x2d7tyVgAV4YhJ3e070Ik2AUhZsHLDtiaPFKkxxo1cOjxsL5g5jBM-OOzonV6n61jjjexgWNNwYqop2viklmlQrrUE0VEnDOUwQowWtRqHbS4GDoUBb6ea9DONWxO1As6yDdKukb5KJ4O2z_okRmj9CN3u2ZanCW3xsI5_EBCHE7VpD1CWk5u_aFmCGJ7gIjI2uBfPmF-7qFw"
+                            }
+                        additionalProp2:
+                          type: object
+                          x-stoplight:
+                            id: j4tn4175my4el
+                        additionalProp3:
+                          type: object
+                          x-stoplight:
+                            id: ay2klgasfqfjp
+                    authFactorType:
+                      type: string
+                      x-stoplight:
+                        id: d9urc4i0kqk7j
+                      description: 'Authe Factor Type for the binded key. Eg: WLA'
+              required:
+                - id
+                - version
+                - individualId
+                - transactionID
+                - requestTime
+                - specVersion
+                - thumbprint
+                - domainUri
+                - env
+                - request
+                - consentObtained
+                - requestHMAC
+                - requestSessionKey
+                - identityKeyBinding
+        description: Auth Request Body
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: signature
+          description: Digital Signature of the Auth Request. IdP key will be used to generate the signature.
+      x-stoplight:
+        id: kqn2zvo2wchrl
+    parameters:
+      - schema:
+          type: string
+        name: Auth-Partner-ID
+        in: path
+        required: true
+        description: Relying Party (RP) Partner ID. This ID will be provided during partner self registration process
+      - schema:
+          type: string
+        name: IdP-LK
+        in: path
+        required: true
+        description: IdP Service License Key. This LK is similar MISP-LK.
+      - schema:
+          type: string
+        name: OIDC-Client-Id
+        in: path
+        required: true
+  /idauthentication/v1/kyc-exchange/delegated/{IdP-LK}​/{Auth-Partner-ID}​/{oidc-client-id}:
+    parameters:
+      - schema:
+          type: string
+        name: IdP-LK
+        in: path
+        required: true
+        description: IdP Service License Key. This LK is similar MISP-LK.
+      - schema:
+          type: string
+        name: Auth-Partner-ID
+        in: path
+        required: true
+        description: Relying Party (RP) Partner ID. This ID will be provided during partner self registration process
+      - schema:
+          type: string
+        name: oidc-client-id
+        in: path
+        required: true
+        description: 'OIDC client Id. Auto generated while creating OIDC client in PMS '
+    post:
+      summary: kyc-exchange
+      operationId: post-idauthentication-v1-kyc-exchange-delegated-IdP-LK-eKYC-Partner-ID-oidc-client-id-oidc
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                x-examples:
+                  example-1:
+                    id: string
+                    version: string
+                    responseTime: string
+                    response:
+                      encryptedUserInfo: string
+                    errors:
+                      - errorCode: string
+                        errorMessage: string
+                properties:
+                  id:
+                    type: string
+                    description: |-
+                      IDA standard response ID. 
+                      Eg: mosip.identity.kycexchange
+                  version:
+                    type: string
+                    description: |-
+                      Version of the API. Current supported version 
+                      is '1.0'
+                  responseTime:
+                    type: string
+                    description: Response Time of the request.
+                  response:
+                    type: object
+                    required:
+                      - encryptedKyc
+                    description: |-
+                      The Response Object contains the user kyc. KYC
+                      will be build based the consented user claims.
+                    properties:
+                      encryptedKyc:
+                        type: string
+                        description: JWT Signed user consented claims.
+                  errors:
+                    type: array
+                    description: |-
+                      In case of invalid kyc token, errors
+                      will be returned as an array. Each error object
+                      contains error code and error message.
+                      if kyc token is valid the errors object will
+                      be null.
+                    items:
+                      type: object
+                      properties:
+                        errorCode:
+                          type: string
+                          description: |-
+                            Unique Error Code will be include if case of
+                            auth failure.
+                        errorMessage:
+                          type: string
+                          description: |-
+                            Error Code specific error message will be 
+                            included in the error object.
+                required:
+                  - id
+                  - version
+                  - responseTime
+                  - response
+                  - errors
+      description: API to validate kycToken returned in kyc-auth call that the kycToken belongs to the provided oidc-client-id and returns encrypted kyc to the caller.  This API should be called from IdP service only.
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: signature
+          description: Digital Signature of the Auth Request. IdP key will be used to generate the signature.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  id: string
+                  version: string
+                  requesttime: '2022-08-09T11:20:08.989Z'
+                  metadata: {}
+                  request:
+                    kycData: string
+              properties:
+                id:
+                  type: string
+                  description: |-
+                    IDA standard request ID. 
+                    Eg: mosip.identity.kycexchange
+                version:
+                  type: string
+                  description: |-
+                    Version of the API. Current supported version 
+                    is '1.0'
+                requesttime:
+                  type: string
+                  description: Request created time.
+                transactionID:
+                  type: string
+                  description: Same transaction ID used in kyc-auth request.
+                individualId:
+                  type: string
+                  description: UIN/VID of the individual.
+                kycToken:
+                  type: string
+                  description: kyc token received in kycAuth API response.
+                consentObtained:
+                  type: array
+                  description: List of consents obtained from user.
+                  items:
+                    type: string
+                locales:
+                  type: array
+                  description: user selected list of languages.
+                  items:
+                    type: string
+                resType:
+                  type: string
+                  description: |-
+                    Response Type for the user claims. Currently
+                    defaulted to signed JWT.
+              required:
+                - id
+                - version
+                - requesttime
+                - transactionID
+                - individualId
+                - kycToken
+                - consentObtained
+        description: ''
+      x-stoplight:
+        id: 4jfualbttri8w
+  /idauthentication/v1/vci-exchange/delegated/{IdP-LK}/{Auth-Partner-ID}/{OIDC-Client-Id}:
+    parameters:
+      - schema:
+          type: string
+        name: IdP-LK
+        in: path
+        required: true
+        description: IdP Service License Key. This LK is similar MISP-LK.
+      - schema:
+          type: string
+        name: Auth-Partner-ID
+        in: path
+        required: true
+        description: Relying Party (RP) Partner ID. This ID will be provided during partner self registration process
+      - schema:
+          type: string
+        name: OIDC-Client-Id
+        in: path
+        required: true
+        description: 'OIDC client Id. Auto generated while creating OIDC client in PMS '
+    post:
+      summary: vci-exchange
+      operationId: post-idauthentication-v1-vci-exchange-delegated-IdP-LK-eKYC-Partner-ID-oidc-client-id-oidc
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                x-examples:
+                  example-1:
+                    id: string
+                    version: string
+                    responseTime: string
+                    response:
+                      encryptedUserInfo: string
+                    errors:
+                      - errorCode: string
+                        errorMessage: string
+                properties:
+                  id:
+                    type: string
+                    description: |-
+                      IDA standard response ID. 
+                      Eg: mosip.identity.kycexchange
+                  version:
+                    type: string
+                    description: |-
+                      Version of the API. Current supported version 
+                      is '1.0'
+                  responseTime:
+                    type: string
+                    description: Response Time of the request.
+                  response:
+                    type: object
+                    description: |-
+                      The Response Object contains the issued VC. 
+                      Different response object types will be returned based the requested format.
+                      Eg: for ldp_vc the returned response object is JsonLDObject
+                  errors:
+                    type: array
+                    description: |-
+                      In case of invalid kyc token, errors
+                      will be returned as an array. Each error object
+                      contains error code and error message.
+                      if kyc token is valid the errors object will
+                      be null.
+                    items:
+                      type: object
+                      properties:
+                        errorCode:
+                          type: string
+                          description: |-
+                            Unique Error Code will be include if case of
+                            auth failure.
+                        errorMessage:
+                          type: string
+                          description: |-
+                            Error Code specific error message will be 
+                            included in the error object.
+                required:
+                  - id
+                  - version
+                  - responseTime
+                  - response
+                  - errors
+      description: API to validate kycToken returned in kyc-auth call that the kycToken belongs to the provided oidc-client-id & issued to the same identity used in kyc-auth and returns verifiable credentials to the caller.  This API should be called from eSignet service.
+      parameters:
+        - schema:
+            type: string
+          in: header
+          name: signature
+          description: Digital Signature of the Auth Request. IdP key will be used to generate the signature.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  id: string
+                  version: string
+                  requesttime: '2022-08-09T11:20:08.989Z'
+                  metadata: {}
+                  request:
+                    kycData: string
+              properties:
+                id:
+                  type: string
+                  description: |-
+                    IDA standard request ID. 
+                    Eg: mosip.identity.vciexchange
+                version:
+                  type: string
+                  description: |-
+                    Version of the API. Current supported version 
+                    is '1.0'
+                requesttime:
+                  type: string
+                  description: Request created time.
+                transactionID:
+                  type: string
+                  description: Tansaction ID used in kyc-auth request.
+                individualId:
+                  type: string
+                  description: UIN/VID of the individual.
+                vcAuthToken:
+                  type: string
+                  description: kyc token received in kycAuth API response.
+                  x-stoplight:
+                    id: tlwdnxt3ch0s8
+                credSubjectId:
+                  type: string
+                  description: |-
+                    JWK DID of the Identity. Eg:
+                    did:jwk:ewogICAgImt0eSI6ICJSU0EiLAogICAgImUiOiAiQVFBQiIsCiAgICAibiI6ICJtaFZOaERpaW1WdTQxV0xCRWJzYVpLWUZRTTJrZXBHREQwWDRZNHp2VW8zZEVET3lTbDd0bXhha3RfVnlodXRJdWp3ZlJQMmxTTTRIQ2lZS3BYSXdBNmljVHIyWThDSnc2VDU1bWVRWWJmRHZxLV9QRXNWMDRobEYzUS10cnU2ajhPbUpRdWwzTGtSR05mN3Z6VFNSRmstUU9rcmNuVDRPaC1YbGhCRjhFNFFHNFdTVFF2Qk1xOVdTQ05lZjZkVWFOQ3JXY0lDQ1Q2bi1peHFKLTJBREEzYk5TcWpqS0REQktTM1VPRy1jbUlfTTdKY19BYWJod1JLLTM2blphWGJWLUdQYjR5UjdTNVY5MUhtdTZhS3JJdVdRM1ByY0FlWkZvZ1VuYjlLMUpHS0dhOWJ2S3F0TWd5TjNLdS1aMFdDT3Z1dUtMNndNNzduSDJWdGtJRDZNNVEiCn0
+                vcFormat:
+                  type: string
+                  description: |-
+                    Verifiable credential format needed in response object.
+                    Supported Format : ldp_vc
+                credentialsDefinition:
+                  type: object
+                  x-stoplight:
+                    id: slfzbb8fz3fqu
+                  required:
+                    - type
+                  description: Credential Definition Object of the Identity.
+                  properties:
+                    credentialSubject:
+                      type: object
+                      x-stoplight:
+                        id: dm80eyxbngxyc
+                      description: List of optional claims to be added to the credential to be issued.
+                      properties:
+                        property1:
+                          type: object
+                          x-stoplight:
+                            id: 6nre5wr0vu4bd
+                        property2:
+                          type: object
+                          x-stoplight:
+                            id: nsiphi1syzcml
+                    type:
+                      type: array
+                      x-stoplight:
+                        id: okrts85an746z
+                      description: Issued credentials should have at least one type from the list of types.
+                      items:
+                        x-stoplight:
+                          id: fskjb30bleguw
+                        type: string
+                    context:
+                      type: array
+                      x-stoplight:
+                        id: x0y8kv3mpea9k
+                      description: list of Context URI to validate the credential subject.
+                      items:
+                        x-stoplight:
+                          id: jdp9c85fb6awz
+                        type: string
+                locales:
+                  type: array
+                  x-stoplight:
+                    id: zu7zqn0ev44ny
+                  description: list of locales to be included in the issued VC.
+                  items:
+                    x-stoplight:
+                      id: z1yzncjhzsofl
+                    type: string
+                metadata:
+                  type: object
+                  x-stoplight:
+                    id: a7x62ma89octw
+                  properties:
+                    property1:
+                      type: object
+                      x-stoplight:
+                        id: 7vf60q977ssxw
+                    property2:
+                      type: object
+                      x-stoplight:
+                        id: 6necgeeiux16f
+              required:
+                - id
+                - version
+                - requesttime
+                - transactionID
+                - individualId
+                - vcAuthToken
+                - credSubjectId
+                - vcFormat
+                - credentialsDefinition
+        description: ''
+      x-stoplight:
+        id: s9qerir0n7k56
+components:
+  schemas:
+    User:
+      title: User
+      type: object
+      description: ''
+      examples:
+        - id: 142
+          firstName: Alice
+          lastName: Smith
+          email: alice.smith@gmail.com
+          dateOfBirth: '1997-10-31'
+          emailVerified: true
+          signUpDate: '2019-08-24'
+      properties:
+        id:
+          type: integer
+          description: Unique identifier for the given user.
+        firstName:
+          type: string
+        lastName:
+          type: string
+        email:
+          type: string
+          format: email
+        dateOfBirth:
+          type: string
+          format: date
+          example: '1997-10-31'
+        emailVerified:
+          type: boolean
+          description: Set to true if the user's email has been verified.
+        createDate:
+          type: string
+          format: date
+          description: The date that the user was created.
+      required:
+        - id
+        - firstName
+        - lastName
+        - email
+        - emailVerified
+      x-stoplight:
+        id: ssvk7jinemjxp
+  securitySchemes: {}

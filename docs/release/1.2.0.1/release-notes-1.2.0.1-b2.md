@@ -10,7 +10,7 @@
 
 **Release Date**: 8-Jan 2023
 
-The **1.2.0.1 Beta 2** release of MOSIP is a patch release on top of the [Long-Term Support (LTS) release 1.2.0](../1.2.0/release-notes.md). This patch release mainly contains all the fixes for bugs, security and performance given as part of the [1.2.0.1-B1 patch](broken-reference) and additional integrations modification for the [Compliance Tool Kit](http://localhost:5000/o/-M1FyzBr-VmticWYm8QI/s/OrxzFOqLUpvxyg8Kvdlg/) and [e-Signet](http://localhost:5000/o/-M1FyzBr-VmticWYm8QI/s/ylzvZHp30DQ3rNCClELV/).
+The **1.2.0.1 Beta 2** release of MOSIP is a patch release on top of the [Long-Term Support (LTS) release 1.2.0](../1.2.0/release-notes.md). This patch release mainly contains all the fixes for bugs, security and performance given as part of the [1.2.0.1-B1 patch](broken-reference) and additional integrations modification for the [Compliance Tool Kit](http://127.0.0.1:5000/o/-M1FyzBr-VmticWYm8QI/s/OrxzFOqLUpvxyg8Kvdlg/) and [e-Signet](http://127.0.0.1:5000/o/-M1FyzBr-VmticWYm8QI/s/ylzvZHp30DQ3rNCClELV/).
 
 ## Repository Released
 
