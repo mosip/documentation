@@ -22,6 +22,6 @@ are available as a part of this release.
 ## Documentation
 
 * [Feature Documentation](../../overview/features/)
-* [Integration Guides](../../integration-guides/)
+* [Integration Guides](../../integration/)
 * [End User Guide](../../end-user-guide/)
 * [QA Report](test-report/)

@@ -52,10 +52,10 @@ This service is the primary backend Spring Java application that incorporates va
    * Typically, Key Manager is run as a service, but it is used as a library in the eSignet Service to minimize the effort of managing extra containers.
    * It depends on the data layer for maintaining the metadata on keys.
 5. **Plugins**: Integration points with external systems are designed to be pluggable, allowing easy integration with any ID system. The pluggable integration points are as follows:
-   * [**Authenticator**](../../integration-guides/authenticator.md) - for identity verification
-   * [**VCIssuancePlugin**](../../integration-guides/vc-issuance.md) - for constructing Verifiable Credentials (VCs)
-   * [**AuditPlugin**](../../integration-guides/audit.md) - for auditing all events
-   * [**KeyBinderPlugin**](../../integration-guides/key-binder.md) - for key binding of a user and wallet
+   * [**Authenticator**](../../integration/authenticator.md) - for identity verification
+   * [**VCIssuancePlugin**](../../integration/vc-issuance.md) - for constructing Verifiable Credentials (VCs)
+   * [**AuditPlugin**](../../integration/audit.md) - for auditing all events
+   * [**KeyBinderPlugin**](../../integration/key-binder.md) - for key binding of a user and wallet
    * **CaptchaValidator** - for captcha validation
 
 {% hint style="info" %}

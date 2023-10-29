@@ -3,7 +3,7 @@
 A digital wallet which want to work as a credential holder application, in eSignet needs to be onboarded as a relying party. This document details the steps how a wallet can use eSignet to download credentials issued by a VC Issuer using [OpenID4CVI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html) wallet-initiated flow.
 
 {% hint style="info" %}
-To know more about how the VC Issuance flow works in eSignet, go through the [activity diagram ](../../integration-guides/vc-issuance.md#appendix-vc-issuance-flow)available in [VC Issuance Plugin](../../integration-guides/vc-issuance.md) document.&#x20;
+To know more about how the VC Issuance flow works in eSignet, go through the [activity diagram ](../vc-issuance.md#appendix-vc-issuance-flow)available in [VC Issuance Plugin](../vc-issuance.md) document.&#x20;
 {% endhint %}
 
 Below are the steps for on-boarding a digital wallet as a relying party and using the eSignet APIs for downloading a verifiable credentials.

@@ -5,7 +5,7 @@ A digital wallet which wants to work as an authenticator using eSignet needs to 
 {% hint style="info" %}
 For details on how to get the user's credentials downloaded on eSignet, go through our document on - [How a digital wallet can be used as credential holder?](credential-holder.md)
 
-For details on how binding is performed in e-Signet, go through the document on - [eSignet's Key Binding Plugin](../../integration-guides/key-binder.md).
+For details on how binding is performed in e-Signet, go through the document on - [eSignet's Key Binding Plugin](../key-binder.md).
 {% endhint %}
 
 In this document we will be discussing about the APIs that needs to be called by the wallet application for performing binding and then performing wallet local authentication.

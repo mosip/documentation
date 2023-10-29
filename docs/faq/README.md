@@ -24,7 +24,7 @@ The core features of eSignet are available [here](../overview/features/).
 
 <summary>How can I use eSignet?</summary>
 
-Based on the type of entity, such as an ID system, a relying party, or a digital wallet, you can integrate with eSignet. For more details, go through our [integration guide](../integration-guides/).
+Based on the type of entity, such as an ID system, a relying party, or a digital wallet, you can integrate with eSignet. For more details, go through our [integration guide](../integration/).
 
 If you are looking at trying out eSignet right away, then you can use our sandbox for testing. Please go through our [Try it out section](../try-it-out/) for more details.
 
