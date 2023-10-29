@@ -48,13 +48,17 @@ For creating an OIDC client, the relying party needs to provide a list of redire
 
 ### Add a button on your login screen
 
-Add a button on your website (i.e., Log in with eSignet), which should call the authorization endpoint and navigate the user to the eSignet UI screen for authentication and consent capture.
+Add a button on your website (i.e., Log in with eSignet), which should call the "_**/authorize**_" endpoint and navigate the user to the eSignet UI screen for authentication and consent capture.
 
 Here is the UI storybook deployed by eSignet which can help relying party developers build the button for their website.
 
 {% embed url="https://mosip.github.io/mosip-plugins/?path=/docs/javascript-sign-in-with-esignet--docs" %}
 
-After the authorization endpoint is called, the eSignet server validates the request and redirects the user to the authentication screen.
+{% swagger src="../.gitbook/assets/eSignet (1).yml" path="/authorize" method="get" %}
+[eSignet (1).yml](<../.gitbook/assets/eSignet (1).yml>)
+{% endswagger %}
+
+After the "_**/authorize**_" endpoint is called, the eSignet server validates the request and redirects the user to the authentication screen.
 
 ### Handling authentication success and failure scenarios
 
@@ -65,6 +69,10 @@ In case of failure, the redirect URI webpage would receive an "error" and "error
 #### Retrieving ID and access tokens
 
 Once the authentication code is received, you can now call the token endpoint to get the ID and access tokens.
+
+{% swagger src="../.gitbook/assets/eSignet (1).yml" path="/oauth/v2/token" method="post" %}
+[eSignet (1).yml](<../.gitbook/assets/eSignet (1).yml>)
+{% endswagger %}
 
 **Sample ID token**
 
@@ -115,6 +123,10 @@ payload:
 #### Retrieving user info
 
 Using the access token you can call the user info endpoint to get the user information as an encrypted JWT.
+
+{% swagger src="../.gitbook/assets/eSignet (1).yml" path="/oidc/userinfo" method="get" %}
+[eSignet (1).yml](<../.gitbook/assets/eSignet (1).yml>)
+{% endswagger %}
 
 **Example 1**
 
