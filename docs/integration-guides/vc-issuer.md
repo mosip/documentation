@@ -49,16 +49,16 @@ eSignet follows the OpenID4VCI wallet-initiated flow, hence, once authentication
 
 The relying party (here, the wallet) can use the eSignet client management APIs to register as an OAuth client and get the client credentials which would help them connect with eSignet.
 
-{% swagger src="../.gitbook/assets/eSignet.yml" path="/client-mgmt/oidc-client" method="post" %}
-[eSignet.yml](../.gitbook/assets/eSignet.yml)
+{% swagger src="../.gitbook/assets/e-Signet.yml" path="/client-mgmt/oidc-client" method="post" %}
+[e-Signet.yml](../.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
 ### Call the authorize endpoint
 
 Call the "_**/authorize**_" endpoint of eSignet from the wallet to authenticate the credential holder and receive consent.
 
-{% swagger src="../.gitbook/assets/eSignet.yml" path="/authorize" method="get" %}
-[eSignet.yml](../.gitbook/assets/eSignet.yml)
+{% swagger src="../.gitbook/assets/e-Signet.yml" path="/authorize" method="get" %}
+[e-Signet.yml](../.gitbook/assets/e-Signet.yml)
 {% endswagger %}
 
 Once the user successfully authenticates and provides consent, the authorization code is returned to the wallet app via the configured **redirect deep link.**

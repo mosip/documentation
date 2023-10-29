@@ -6,13 +6,13 @@ This system is an identity repository that stores the individual's demographic a
 
 This is the main interface for eSignet. Provides methods to authenticate the end-user with control of the supported authentication factors. If OTP is one of the supported authentication factors, the interface provides a method to define the supported OTP channels and implement the send-OTP functionality.
 
-As per OIDC standards, all the certificates used to verify the user data must be published at [_**/.well-known/jwks.json**_](../build-and-deploy/configuration/.well-known/jwks.json.md) the endpoint. This interface provides a method to return a list of X509 certificates (both active and expired).
+As per OIDC standards, all the certificates used to verify the user data must be published at [_**/.well-known/jwks.json**_](../../build-and-deploy/configuration/.well-known/jwks.json.md) the endpoint. This interface provides a method to return a list of X509 certificates (both active and expired).
 
 Refer to this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java#L22-L69) to check out the interface in detail.
 
 The two main functionalities of this interface, **KYC Auth** and **KYC Exchange,** are depicted in the diagram below:
 
-<figure><img src="../.gitbook/assets/activity-diagrams-authenticator.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/activity-diagrams-authenticator.png" alt=""><figcaption></figcaption></figure>
 
 The Authenticator implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.authenticator` property. Ex:
 
@@ -37,7 +37,7 @@ Key highlights of this feature are:
 
 The diagram below illustrates the internal mechanism of storing consent in eSignet.
 
-![](../.gitbook/assets/activity-diagrams-storing-consent.png)
+![](../../.gitbook/assets/activity-diagrams-storing-consent.png)
 
 ## Key Binder
 
@@ -51,11 +51,11 @@ Refer to this [link](https://github.com/mosip/esignet/blob/1.0.0/esignet-integra
 
 ### Key Binding Process
 
-![](../.gitbook/assets/activity-diagrams-wallet-binding.png)
+![](../../.gitbook/assets/activity-diagrams-wallet-binding.png)
 
 ### Authentication with Bound Key
 
-![](../.gitbook/assets/activity-diagrams-wallet-authentication.png)
+![](../../.gitbook/assets/activity-diagrams-wallet-authentication.png)
 
 The KeyBinder implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.key-binder` property. Ex:
 

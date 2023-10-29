@@ -23,6 +23,6 @@ The features included in this release are:
 ## Documentation
 
 * [Feature Documentation](../../overview/features/)
-* [Integration Guides](../../integration/)
+* [Integration Guides](../../integration-guides/)
 * [End User Guide](../../end-user-guide/)
 * [QA Report](test-report/)

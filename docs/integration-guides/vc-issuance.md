@@ -1,12 +1,12 @@
 # VC Issuance Plugin
 
-VC Issuance plugin interface provides methods to return Verifiable Credentials (VCs) of an individual (here, the holder of the credential) when authorized. Today, this interface supports methods for returning linked data-proof VC (as JSON-LD) and VC as JWT.&#x20;
+VC Issuance plugin interface provides methods to return Verifiable Credentials (VCs) of an individual (here, the holder of the credential) when authorized. Today, this interface supports methods for returning linked data-proof VC (as JSON-LD) and VC as JWT.
 
 ## How to implement this Plugin?
 
 Here, are some important points for the implementers,
 
-* The type of VC requested and the format in which VC is expected is passed as input to the implementation.&#x20;
+* The type of VC requested and the format in which VC is expected is passed as input to the implementation.
 * Authorization details about the holder present in a bearer token are also one of the inputs to the VC plugin implementation.
 * eSignet currently mandates the cryptographic binding of the VC to the holder. Cryptographic binding of the VC to the holder proves that the VC was issued to the key holder and also enables the VC verifier to guarantee that the presenter is indeed the holder of the VC.
 

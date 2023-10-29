@@ -47,4 +47,4 @@ Here is the easiest way to convert your public key (a `.PEM` file) to JWK format
 
 </details>
 
-Once you receive the eSignet credentials at the email address provided on the form, please go through our integration guide on [relying party integration](../integration/relying-party.md) to complete the integration.
+Once you receive the eSignet credentials at the email address provided on the form, please go through our integration guide on [relying party integration](../integration-guides/relying-party/) to complete the integration.

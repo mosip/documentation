@@ -1,11 +1,11 @@
 # Authenticator Plugin
 
-Authenticator plugin is the main interface for eSignet which provides methods to authenticate the end-user with control of the supported authentication factors.&#x20;
+Authenticator plugin is the main interface for eSignet which provides methods to authenticate the end-user with control of the supported authentication factors.
 
 For example, if OTP is one of the supported authentication factors, the interface provides a methods to,
 
-* Define the supported OTP channels,&#x20;
-* Implement the send-OTP functionality and&#x20;
+* Define the supported OTP channels,
+* Implement the send-OTP functionality and
 * A method to share a list of certificates used for verifying user data published at [_/.well-known/jwks.json_](../build-and-deploy/configuration/.well-known/jwks.json.md), as per OIDC standards.
 
 Below is the eSignet authenticator interface,

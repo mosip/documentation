@@ -1,6 +1,6 @@
 # Key Binder Plugin
 
-Key Binder plugin interface provides a method to bind an individual's ID with a public key. On successful binding, it returns a signed certificate called Wallet User ID which uniquely identifies the user and the wallet.&#x20;
+Key Binder plugin interface provides a method to bind an individual's ID with a public key. On successful binding, it returns a signed certificate called Wallet User ID which uniquely identifies the user and the wallet.
 
 When a new binding request is received, it is expected that the key binder implementation takes care of overriding previously bound certificates with the newly generated signed certificate for a user.
 
@@ -52,7 +52,7 @@ The APIs exposed by this interface is used by [Digital Wallets](../glossary.md#d
 
 ## How to implement this plugin?
 
-The Key Binder implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.key-binder` property.&#x20;
+The Key Binder implementation class must be annotated with `ConditionalOnProperty` with `mosip.esignet.integration.key-binder` property.
 
 Below is an example of how our [Mock Identity System](https://github.com/mosip/esignet-mock-services/blob/master/mock-esignet-integration-impl/src/main/java/io/mosip/esignet/mock/integration/service/MockKeyBindingWrapperService.java) has implemented the eSignet KeyBinder plugin.
 
