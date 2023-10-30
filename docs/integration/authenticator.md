@@ -1,8 +1,8 @@
 # Authenticator Plugin
 
-Authenticator plugin is the main interface for eSignet which provides methods to authenticate the end-user with control of the supported authentication factors.
+The Authenticator plugin is the main interface for eSignet, which provides methods to authenticate the end-user with control of the supported authentication factors.
 
-For example, if OTP is one of the supported authentication factors, the interface provides a methods to,
+For example, if OTP is one of the supported authentication factors, the interface provides a method to,
 
 * Define the supported OTP channels,
 * Implement the send-OTP functionality and
@@ -15,10 +15,10 @@ public interface Authenticator {
 
     /**
      * Delegate request to authenticate the user, and get KYC token
-     * @param relyingPartyId relying Party (RP) ID. This ID will be provided during partner self registration process
-     * @param clientId OIDC client Id. Auto generated while creating OIDC client in PMS
+     * @param relyingPartyId Relying Party (RP) ID. This ID will be provided during the partner self registration process
+     * @param clientId OIDC client Id. Auto-generated while creating OIDC client in PMS
      * @param kycAuthDto
-     * @return KYC Token and Partner specific User Token (PSUT)
+     * @return KYC Token and Partner-specific User Token (PSUT)
      * @throws KycAuthException
      */
     KycAuthResult doKycAuth(String relyingPartyId, String clientId, KycAuthDto kycAuthDto)
@@ -26,21 +26,21 @@ public interface Authenticator {
 
     /**
      * Delegate request to exchange KYC token with encrypted user data
-     * @param relyingPartyId relying Party (RP) ID. This ID will be provided during partner self registration process
-     * @param clientId OIDC client Id. Auto generated while creating OIDC client in PMS
+     * @param relyingPartyId Relying Party (RP) ID. This ID will be provided during partner self registration process
+     * @param clientId OIDC client Id. Auto-generated while creating OIDC client in PMS
      * @param kycExchangeDto
-     * @return signed and encrypted kyc data.
+     * @return signed and encrypted KYC data.
      * @throws KycExchangeException
      */
     KycExchangeResult doKycExchange(String relyingPartyId, String clientId, KycExchangeDto kycExchangeDto)
             throws KycExchangeException;
 
     /**
-     * Delegate request to send out OTP to provided individual Id on the configured channel
-     * @param relyingPartyId relying Party (RP) ID. This ID will be provided during partner self registration process
-     * @param clientId OIDC client Id. Auto generated while creating OIDC client in PMS
+     * Delegate request to send out OTP to provided individual ID on the configured channel
+     * @param relyingPartyId Relying Party (RP) ID. This ID will be provided during partner self registration process
+     * @param clientId OIDC client Id. Auto-generated while creating OIDC client in PMS
      * @param sendOtpDto
-     * @return status of send otp response.
+     * @return status of send OTP response.
      * @throws SendOtpException
      */
     SendOtpResult sendOtp(String relyingPartyId, String clientId, SendOtpDto sendOtpDto)
@@ -53,7 +53,7 @@ public interface Authenticator {
     boolean isSupportedOtpChannel(String channel);
 
     /**
-     * Get list of KYC signing certificate and its details.
+     * Get the list of KYC signing certificates and their details.
      * @return list of certificates
      */
     List<KycSigningCertificateData> getAllKycSigningCertificates() throws KycSigningCertificateException;
@@ -66,7 +66,7 @@ For the latest version of the interface please check our code base - [Authentica
 
 ## Who uses this plugin?
 
-Authenticator plugin is implemented by [Identity Systems](../glossary.md#identity-systems) that want to integrate with eSignet and expose endpoints for the above interfaces.
+The authenticator plugin is implemented by [Identity Systems](../glossary.md#identity-systems) that want to integrate with eSignet and expose endpoints for the above interfaces.
 
 ## How to implement this plugin?
 
