@@ -38,3 +38,5 @@ As seen below, the authentication is in progress.
 7. The resident is able to log into the relying party portal and view their details on the user profile page.
 
 ![](\_images/7.final.png)
+
+<figure><img src="../../.gitbook/assets/new8-healthServices-user-profile (1).png" alt=""><figcaption></figcaption></figure>
