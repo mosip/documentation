@@ -1,20 +1,20 @@
 # Credential Holder
 
-A digital wallet which want to work as a credential holder application, in eSignet needs to be onboarded as a relying party. This document details the steps how a wallet can use eSignet to download credentials issued by a VC Issuer using [OpenID4CVI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html) wallet-initiated flow.
+A digital wallet that aims to function as a credential holder application in eSignet must go through the onboarding process as a relying party. This document outlines the necessary steps for a wallet to utilize eSignet for downloading credentials issued by a VC Issuer using the [OpenID4CVI](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html) wallet-initiated flow.
 
 {% hint style="info" %}
-To know more about how the VC Issuance flow works in eSignet, go through the [activity diagram ](../vc-issuance.md#appendix-vc-issuance-flow)available in [VC Issuance Plugin](../vc-issuance.md) document.
+To gain a better understanding of the VC Issuance flow in eSignet, please refer to the [activity diagram ](../vc-issuance.md#appendix-vc-issuance-flow)provided in the [VC Issuance Plugin](../vc-issuance.md) document.&#x20;
 {% endhint %}
 
-Below are the steps for on-boarding a digital wallet as a relying party and using the eSignet APIs for downloading a verifiable credentials.
+Below are the steps for on-boarding a digital wallet as a relying party and using the eSignet APIs to download verifiable credentials.
 
 ### 1. Get a valid redirect deep link
 
-eSignet follows the OpenID4VCI wallet-initiated flow, hence, once authentication is successful, eSignet will be sharing an auth-code to the wallet. Hence, for the integration, the wallet would need to create a valid redirect deep link first.
+eSignet adheres to the OpenID4VCI wallet-initiated flow. Consequently, after authentication is successfully completed, eSignet will provide the wallet with an authorization code. Thus, in order to integrate, the wallet must first generate a valid redirect deep link.
 
 ### 2. Get OAuth client credentials
 
-The relying party (here, the wallet) can use the eSignet client management APIs to register as an OAuth client and get the client credentials, which would help them connect with eSignet.
+The wallet can utilize the eSignet client management APIs to formally register as an OAuth client and obtain the necessary client credentials. This will facilitate their connection with eSignet.
 
 {% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/client-mgmt/oauth-client" method="post" %}
 [esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
@@ -28,9 +28,9 @@ In order to initiate the credential issuance flow, the credential holder needs t
 [esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
 {% endswagger %}
 
-This would redirect the holder to a web view of eSignet's authentication screen, where the holder needs to authenticate and provide consent to share the credentials.
+This process would redirect the user to a web view of eSignet's authentication screen. In this screen, the user will need to authenticate their identity and give consent to share their credentials.
 
-Once the holder successfully authenticates and provides consent, the authorization code is returned to the wallet app via the configured **redirect deep link.**
+Upon successful authentication and consent, the authorization code will be sent back to the wallet application through the designated **redirect deep link** that has been configured.
 
 ### 4. Retrieving the access token and c\_nonce
 
@@ -50,10 +50,10 @@ The wallet now needs to generate a key pair for the wallet holder and use the pr
 
 ### 6. Get the credential using VCI credential API
 
-Now the wallet can invoke the "_**/vci/credential**_" endpoint of eSignet with PoP (Proof of Possession) and share the credential format metadata to get the Verifiable Credential in the requested format.
+Now, the wallet can invoke the "_**/vci/credential**_" endpoint of eSignet with PoP (Proof of Possession) and share the credential format metadata to get the Verifiable Credential in the requested format.
 
 {% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/vci/credential" method="post" %}
 [esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
 {% endswagger %}
 
-Once the credential is received the wallet needs to securely store it.
+Once the credential is obtained, the wallet should be responsible for securely storing it.
