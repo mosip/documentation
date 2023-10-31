@@ -1,17 +1,17 @@
 # Relying Party
 
-A relying party is a service provider that depends on an identity provider for authentication and identity verification, enabling users to access their services securely and conveniently.
+A relying party refers to a service provider that relies on an identity provider for authentication and identity verification. This enables users to securely and conveniently access the services provided by the relying party.
 
-For a relying party to use eSignet to authenticate and get the user information of their customers,
+In order to utilize eSignet for authenticating users and obtaining their information, relying parties are required to follow these steps:
 
-* They need to register as a client in eSignet
-* They need to integrate with eSignet APIs (as per OpenID Connect) on their web or mobile applications.
+1. Register as a client in the eSignet system.
+2. Integrate with eSignet APIs, following the guidelines provided by OpenID Connect, on their web or mobile applications.
 
 ## Pre-requisites
 
 ### Configuring the redirect URI
 
-The relying party needs to configure a redirect URI to its website where eSignet will be sending the auth-code post successful authentication.
+The relying party is required to set up a redirect URI on their website. This URI will be used by eSignet to send the authorization code after a successful authentication.
 
 {% hint style="info" %}
 **Supported URI patterns**
@@ -30,7 +30,7 @@ The relying party needs to configure a redirect URI to its website where eSignet
 
 ### Register on eSignet using the client management APIs
 
-eSignet exposes APIs using which a relying party can register and receive OIDC client IDs to connect with eSignet.
+eSignet offers APIs that allow a relying party to register and obtain OIDC client IDs for connecting with eSignet.
 
 {% swagger src="../.gitbook/assets/esignet-1.2.0.yml" path="/client-mgmt/oauth-client" method="post" %}
 [esignet-1.2.0.yml](../.gitbook/assets/esignet-1.2.0.yml)
@@ -50,7 +50,7 @@ For creating an OIDC client, the relying party needs to provide a list of redire
 
 Add a button on your website (i.e., Log in with eSignet), which should call the "_**/authorize**_" endpoint and navigate the user to the eSignet UI screen for authentication and consent capture.
 
-Here is the UI storybook deployed by eSignet which can help relying party developers build the buttons for their website.
+Here is the UI storybook deployed by eSignet which can help  relying party developers build the buttons for their website.
 
 {% embed url="https://mosip.github.io/mosip-plugins/?path=/docs/javascript-sign-in-with-esignet--docs" %}
 
@@ -62,9 +62,9 @@ After the "_**/authorize**_" endpoint is called, the eSignet server validates th
 
 ### Handling authentication success and failure scenarios
 
-After the authentication is performed successfully, the webpage will receive a "code" in the query parameter, which is the "authorization code" to call the token API to get the ID and access tokens. Once, the access token is retrieved, the relying party can use it to get the user info using the user-info API.
+After the authentication process is completed, the webpage will receive an "authorization code" in the query parameter. This code can be used to access the token API and retrieve the ID and access tokens. Once the access token is obtained, the relying party can utilize it to retrieve user information through the user-info API.
 
-In case of failure, the redirect URI webpage would receive an "error" and "error description" in the query parameter. The OIDC client can also define its behaviour in the event of failure.
+If the authentication process fails, the redirect URI webpage will receive an "error" and "error description" in the query parameter. The OIDC client also has the capability to define its response in case of such failures.
 
 #### Retrieving ID and access tokens
 

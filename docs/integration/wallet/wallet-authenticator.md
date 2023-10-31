@@ -24,7 +24,7 @@ eSignet offers endpoints to request a one-time password (OTP) for this associati
 [esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
 {% endswagger %}
 
-Here, the challenge here can be the OTP or any other authentication type supported by eSignet, like biometrics.
+Here, the challenge can be the OTP, or any other authentication type supported by eSignet, like biometrics.
 
 Once the user successfully completes the binding process, their wallet will be assigned a unique user ID and receive a signed certificate from eSignet. This certificate will have an expiration time, and as a result, it will be necessary for the user to periodically reinitiate the wallet binding. It is important for the wallet to securely store this certificate and associate it with the respective Wallet User ID for proper mapping.
 
