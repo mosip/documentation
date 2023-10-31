@@ -1,20 +1,20 @@
 # Wallet Authenticator
 
-A digital wallet that wants to work as an authenticator using eSignet needs to have the credentials of the user, and the user's ID in the credential should be bound to eSignet.
+In order for a digital wallet to function as an authenticator using eSignet, it is necessary to have the user's credentials and ensure that the user's ID in the credential is securely linked to eSignet.
 
 {% hint style="info" %}
 For details on how to get the user's credentials downloaded on eSignet, go through our document on - [How a digital wallet can be used as credential holder?](credential-holder.md)
 
-For details on how binding is performed in e-Signet, go through the document on - [eSignet's Key Binding Plugin](../key-binder.md).
+For details on how binding is performed in e-Signet, refer the document on - [eSignet's Key Binding Plugin](../key-binder.md).
 {% endhint %}
 
-In this document, we will be discussing the APIs that need to be called by the wallet application for performing binding and then performing wallet local authentication.
+In this document, we will be discussing the application programming interfaces (APIs) that need to be invoked by the wallet application for executing the process of binding and subsequently performing wallet local authentication.
 
 ## Wallet Binding APIs
 
-As mentioned above, before the authentication is initiated in eSignet, the ID of the user should be bound to the public key of the wallet.
+As previously stated, prior to initiating authentication in eSignet, it is necessary to associate the user's ID with the wallet's public key.
 
-eSignet provides endpoints to request an OTP for binding and then another API to bind the wallet's public key to a user's ID.
+eSignet offers endpoints to request a one-time password (OTP) for this association, followed by another API to bind the public key of the wallet to the user's ID.
 
 {% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/binding/binding-otp" method="post" %}
 [esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
@@ -24,47 +24,48 @@ eSignet provides endpoints to request an OTP for binding and then another API to
 [esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
 {% endswagger %}
 
-Here, the challenge can be OTP or any other authentication type supported by eSignet, like biometrics.
+Here, the challenge here can be the OTP or any other authentication type supported by eSignet, like biometrics.
 
-Once binding is performed, the wallet will receive a unique wallet user ID, a signed certificate from eSignet, and an expiration time of the certificate, so the user needs to retrigger the wallet binding at regular intervals. The wallet should store the certificate securely and map it against the Wallet User ID.
+Once the user successfully completes the binding process, their wallet will be assigned a unique user ID and receive a signed certificate from eSignet. This certificate will have an expiration time, and as a result, it will be necessary for the user to periodically reinitiate the wallet binding. It is important for the wallet to securely store this certificate and associate it with the respective Wallet User ID for proper mapping.
 
 {% hint style="info" %}
-Binding multiple VIDs with a public key through a particular type of wallet will always return the same Wallet User ID. However, only the latest certificate signed by eSignet would be valid.
-
-Hence, if the user is changing the device and performing wallet binding from a new device then the signed certificates stored in the old device will not be valid anymore.
+When multiple VIDs are bound to a public key using a specific type of wallet, they will consistently produce the same Wallet User ID. However, only the most recent certificate signed by eSignet will hold validity. Therefore, if a user switches to a new device and proceeds to bind their wallet on that device, any signed certificates saved on the previous device will no longer be valid.
 {% endhint %}
 
 ## Wallet Authentication APIs
 
-To use the wallet having a bounded credential for authentication, the user needs to do the following,
+To utilize the wallet with a secured credential for authentication, users are required to follow these steps:
 
-* The user needs to navigate to a relying party website where eSignet authentication is via. the wallet is enabled.
-* The user should scan the QR code using the wallet to connect and perform authentication. The wallet application should find a link code in the QR code.
-* The link code would be used for initiating the authentication. To do so, the wallet sends the link code to the eSignet server using the "_**/linked-authorization/v2/link-transaction**_" endpoint.
+* Firstly, users need to visit a relying party website that has enabled eSignet authentication through the wallet.
+* Next, users should use the wallet application to scan the QR code provided on the website. This will establish a connection and initiate the authentication process.
+* The wallet application will identify a link code within the QR code, which is essential for initiating the authentication.
+* To begin the authentication, the wallet will send the link code to the eSignet server using the _**"/linked-authorization/v2/link-transaction"**_ endpoint.
 
 {% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/linked-authorization/v2/link-transaction" method="post" %}
 [esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
 {% endswagger %}
 
-* Once, the transaction is initiated successfully, the eSignet server responds with a list of authentication factors called, WLA (Wallet Local Authentication).
-* The wallet now authenticates the user locally. Maybe with a selfie against the credentials available on the phone.
-* Once local authentication on the wallet is successful, the wallet should create a JWT signed with the signed certificate which was shared during wallet binding. The signed JWT is sent to the eSignet server with WLA as the challenge using the "_**/link-authorization/v2/authenticate**_" endpoint.
+* Once the transaction has been successfully initiated, the eSignet server will respond by providing a list of authentication factors known as WLA (Wallet Local Authentication).&#x20;
+* The wallet will then proceed to authenticate the user locally, possibly by comparing a selfie with the existing credentials stored on the phone.&#x20;
+* Upon successful local authentication on the wallet, it should generate a signed JWT (JSON Web Token) using the provided signed certificate from the wallet binding process.&#x20;
+* Subsequently, the wallet will send the signed JWT to the eSignet server via the "/link-authorization/v2/authenticate" endpoint, using WLA as the challenge.
 
 {% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/linked-authorization/v2/authenticate" method="post" %}
 [esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
 {% endswagger %}
 
-* After authentication is successful, the eSignet server sends the consent action, where consent action can have values, CAPTURE or NO CAPTURE, indicating the user to capture or not capture the consent.
-* If the authentication response has consent action as CAPTURE, then the wallet requests the user to provide consent and share the captured consent to the eSignet server using the "_**/link-authorization/v2/consent**_" endpoint.
+* After the process of authentication is completed successfully, the eSignet server will proceed to send the consent action.&#x20;
+* The consent action can have two possible values: CAPTURE or NO CAPTURE. These values indicate whether the user should capture their consent or not.
+* In the event that the authentication response includes a consent action of CAPTURE, the wallet will prompt the user to provide their consent. The wallet will then proceed to share the captured consent with the eSignet server through the use of the _**"/link-authorization/v2/consent"**_ endpoint.
 
 {% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/linked-authorization/v2/consent" method="post" %}
 [esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
 {% endswagger %}
 
-* eSignet UI now automatically detects that the consent has been provided by the user and sends the authentication code to the redirect URI of the relying party.
+* The eSignet user interface now has the capability to automatically detect when consent has been given by the user. Subsequently, the authentication code will be sent to the redirect URI of the relying party.
 
 ## Appendix - Wallet Local Authentication
 
-The below diagram shows how wallet local authentication is performed in eSignet using a digital wallet.
+The diagram below illustrates the process of wallet local authentication in eSignet through the use of a digital wallet.
 
 <figure><img src="../../.gitbook/assets/activity-diagrams-wallet-authentication.png" alt=""><figcaption></figcaption></figure>
