@@ -130,8 +130,6 @@
     * [MTS Connector](mts-odk-importer.md)
     * [OpenG2P-registry MTS Connector](integrations/mosip-token-seeder/openg2p-registry-mts-connector.md)
   * [MOSIP eSignet](e-signet.md)
-    * [IDA as authentication system](e-signet-ida-authentication-system.md)
-    * [Client management with PMS](e-Signet-client-management-withPMS.md)
     * [ID Authentication](integrations/e-signet/ida.md)
     * [Partner Management](integrations/e-signet/partner-management.md)
     * [Configuring eSignet](integrations/esignet/configuring-esignet.md)
