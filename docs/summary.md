@@ -135,7 +135,6 @@
     * [Configuring eSignet](integrations/esignet/configuring-esignet.md)
   * [Print Service Integration](print-service.md)
     * [Verified Credentials](verified-credentials.md)
-* [API](https://mosip.github.io/documentation/1.2.0/1.2.0.html)
 * [Community](community/README.md)
   * [Contributions](contributions.md)
   * [Code Contributions](code-contributions.md)
@@ -170,5 +169,7 @@
   * [Roadmap 2023-2024](roadmap-2023-2024.md)
   * [Roadmap 2024-2025](roadmap-2024-2025.md)
 * [MOSIP Documentation Style Guide](mosip-documentation-style-guide.md)
-* [Documentation for 1.1.5](https://docs.mosip.io/1.1.5)
 * [License](license.md)
+* [API](https://mosip.github.io/documentation/1.2.0/1.2.0.html)
+* [Documentation for 1.1.5](https://docs.mosip.io/1.1.5)
+
