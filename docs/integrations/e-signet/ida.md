@@ -1,13 +1,13 @@
 # ID Authentication
 
-MOSIP's ID Authentication Module is integrated with eSignet to provide APIs for various interface plugins defined in eSignet.
+eSignet is integrated with the MOSIP ID Authentication module as an authentication provider. The defined plugins interface has been  implemented using the APIs available in the MOSIP ID Authentication module. 
 
-The APIs recently added for eSignet integration are,
+Here is a list of the APIs that have been integrated into the eSignet plugin interface implementation.
 
-* KYC Authentication API to perform authentication for an identity provider like eSignet
-* KYC Exchange API to share an encrypted KYC token to an identity provider
-* Key Binding API to authenticate a user to bind the ID and Wallet of an user
-* VC Exchange API to share the VC associate to a user who was authenticated earlier and has shared the associated KYC Token
+* **KYC Authentication** API to perform authentication for an identity provider like eSignet
+* **KYC Exchange** API to share an encrypted KYC token to an identity provider
+* **Key Binding** API to authenticate a user to bind the ID and Wallet of an user
+* **VC Exchange** API to share the VC associate to a user who was authenticated earlier and has shared the associated KYC Token
 
 ## Appendix - API Specifications
 
