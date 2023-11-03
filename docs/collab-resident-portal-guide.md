@@ -21,7 +21,7 @@ Please note that for developers setting up Resident Portal locally, refer to the
 
   * Please complete the [form](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform) provided and submit it. Once received, we will generate a demo credential for you to use in order to login to the Resident Portal.
 
-**Note**: For any OTP-based feature in the Collab environment, use the OTP received on your email, as provided at the time of UIN creation.
+**Note**: Please use 111111 as the OTP, for any OTP-based feature in the Collab environment.
 
 ## Step-by-Step Process
 
@@ -39,7 +39,7 @@ There are multiple methods for logging in to access UIN services on the Resident
 
 2. **Login with Biometrics**: To set up a biometrics device on your system, click [here](https://docs.mosip.io/1.2.0/biometrics).
 
-3. **Login with OTP (One-Time Password)**: Enter the UIN/VID received from our team and use the OTP received on your email, as provided at the time of UIN creation for logging in to the Resident Portal in the Collab environment.
+3. **Login with OTP (One-Time Password)**: Enter UIN/VID received from our end and use 111111 as OTP, for login to Resident Portal in Collab environment.
 
 **Step 3: Explore the features of Resident Portal**
 
