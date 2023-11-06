@@ -2,9 +2,9 @@
 
 eSignet implements [**OpenID Connect**](https://openid.net/connect/) and [**OAuth 2.0**](https://oauth.net/2/) flows to work its magic. We have chosen the most secure and trustworthy flows to ensure user privacy and data security.
 
-eSignet relies on [**SBI (Secure Biometric Interface)**](https://standards.ieee.org/ieee/3167/10925/) to enable an ecosystem of biometric players. To have a look at the supported devices, click [here](https://docs.mosip.io/1.2.0/biometrics/biometric-devices).
+It relies on [**SBI (Secure Biometric Interface)**](https://standards.ieee.org/ieee/3167/10925/) to enable an ecosystem of biometric players. To have a look at the supported devices, click [here](https://docs.mosip.io/1.2.0/biometrics/biometric-devices).
 
-eSignet leverages emerging standards for using verifiable credentials with OpenID and for wallet integration.
+eSignet also leverages emerging standards for using verifiable credentials with OpenID and for wallet integration.
 
 To learn more about the open standards followed by eSignet, read:
 
