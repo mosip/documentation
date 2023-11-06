@@ -23,7 +23,7 @@ eSignet re-imagines authentication services to factor in emerging trends and the
 * Framework to seamlessly integrate existing identity stores for authentication and KYC (Know Your Customer) requirements.
 * Robust support for biometric authentication.
 * Comprehensive support for wallet-based authentication.
-* Support for issuance of Verifiable credentials.
+* Support for issuance of [Verifiable credentials](overview/features/#verifiable-credentials-issuance).
 
 **Who is the intended user of this product?**
 
