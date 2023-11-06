@@ -130,4 +130,11 @@ To read through the comprehensive list of configurable properties for the Androi
 
 For more details on UI specifications for the Android Registration Client, refer [here](https://docs.mosip.io/1.2.0/android-registration-client/registration-client/registration-client-ui-specifications).
 
+### Compatibility
+
+The Android Registration Client is compatible with the following MOSIP platform versions:
+
+1. 1.1.5.x
+2. LTS 1.2.0 and above
+
 
