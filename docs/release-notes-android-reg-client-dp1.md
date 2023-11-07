@@ -39,7 +39,7 @@ The key features provided on the Android Registration Client are:
 
 ## Build and Deploy
 
-To access the build and read through the deployment instructions, refer to the [Deployment Guide]().
+To access the build and read through the deployment instructions, refer to the [Deployment Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-developer-guide).
 
 ## Configurations
 
