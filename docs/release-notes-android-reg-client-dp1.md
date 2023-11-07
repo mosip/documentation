@@ -47,7 +47,7 @@ For details related to resident portal configurations, refer to the [Configurati
 
 ## Video
 
-To have a quick glance at the features, refer the [video](https://www.youtube.com/watch?v=DrBB5IJnS0Y&t=9s&ab_channel=MOSIP-IIITBangalore).
+To have a quick glance at the features, refer the [video](https://www.youtube.com/watch?v=DrBB5IJnS0Y&t=9s&ab_channel=MOSIP-IIITBangalore)!
 
 
 
