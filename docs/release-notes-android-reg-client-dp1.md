@@ -1,4 +1,4 @@
-# ANDROID REGISTRATION CLIENT- RELEASE NOTES
+# Android Registration Client: Release Notes
 
 **Release Name**: Android Registration Client DP1
 
@@ -29,7 +29,7 @@ The key features provided on the Android Registration Client are:
 
 | **Repositories**            | **Tags Released**   |  **Branch**                          |
 | --------------------------- | ------------------------------------------------------------| ------------------ |
-| android-registration-client                |  | [Repo Branch](https://github.com/mosip/android-registration-client/tree/developer-release/flutter/0.9.x)  |
+| android-registration-client   | [vDP1](https://github.com/mosip/android-registration-client/releases/tag/vDP1) | [Branch details](https://github.com/mosip/android-registration-client/tree/developer-release/flutter/0.9.x)  |
 
 
 **Dependencies**:
@@ -39,7 +39,7 @@ The key features provided on the Android Registration Client are:
 
 ## Build and Deploy
 
-To access the build and read through the deployment instructions, refer to the 
+To access the build and read through the deployment instructions, refer to the [Deployment Guide]().
 
 ## Configurations
 
