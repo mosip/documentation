@@ -29,7 +29,7 @@
     * [Masterdata Guide](masterdata-guide.md)
   * [Android Registration Client](android-registration-client.md)
     * [Configuration Guide](android-registration-client-configuration.md)
-    * [Developer's Guide](android-registration-client-developer-guide.md)
+    * [Developer Guide](android-registration-client-developer-guide.md)
   * [Automation Testing](automation-testing.md)
   * [Artifactory](artifactory.md)
   * [Commons](commons.md)
