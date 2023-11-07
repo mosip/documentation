@@ -22,6 +22,12 @@ The feature-flutter branch of android-reg-client is currently being actively dev
 git clone -b feature-flutter https://github.com/mosip/android-registration-client.git
 ```
 
+**Active Branches**:
+
+* [developer-release/flutter/0.9.x](https://github.com/mosip/android-registration-client/tree/developer-release/flutter/0.9.x) (developer release branch)
+
+* [feature-flutter](https://github.com/mosip/android-registration-client/tree/feature-flutter) (active development branch)
+
 #### Step 2: Set up Flutter in Android Studio
 
 1. To begin, launch Android Studio.
