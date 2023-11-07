@@ -134,9 +134,9 @@ In order to facilitate this migration, certain configurations and templates have
   property.
 
 * **mosip.registration.agegroup-config={"INFANT":{"bioAttributes":["face"],"isGuardianAuthRequired":true},"ADULT":{"bioAttributes":**
-```
-["leftEye","rightEye","rightIndex","rightLittle","rightRing","rightMiddle","leftIndex","leftLittle","leftRing","leftMiddle","leftThumb","rightThumb","face"],"isGuardianAuthRequired":false},"SENIOR_CITIZEN":{"bioAttributes":["leftEye","rightEye","rightIndex","rightLittle","rightRing","rightMiddle","leftIndex","leftLittle","leftRing","leftMiddle","leftThumb","rightThumb","face"],"isGuardianAuthRequired":false}}
-```
+   ```
+     ["leftEye","rightEye","rightIndex","rightLittle","rightRing","rightMiddle","leftIndex","leftLittle","leftRing","leftMiddle","leftThumb"," rightThumb","face"],"isGuardianAuthRequired":false},"SENIOR_CITIZEN":{"bioAttributes":   ["leftEye","rightEye","rightIndex","rightLittle","rightRing","rightMiddle","leftIndex","leftLittle","leftRing","leftMiddle","leftThumb","  rightThumb","face"],"isGuardianAuthRequired":false}}
+  ```
 
   The above property indicates list of age-groups, required bio-attributes, and a flag which indicates guardian authentication is 
   required or not. This property should be changed according to the server configuration and requirements.
