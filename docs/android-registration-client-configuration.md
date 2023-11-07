@@ -1,4 +1,4 @@
-# Android Registration Client Configuration Guide
+# Android Registration Client: Configuration Guide
 
 This guide provides a comprehensive list of configurable properties for the Android Registration Client. Please note that this list is not exhaustive but serves as a helpful checklist for reviewing commonly configured properties.
 
@@ -108,3 +108,49 @@ Default CRON expression for scheduling the Jobs.
 * Date format to be displayed on Registration Client dashboard, default format - dd MMM hh:mm a
 
   `mosip.registration.dashboard_date_format`
+
+#### Supporting properties for 1.1.5.x server compatibility
+
+Due to the absence of UI specifications in the 1.1.5.x versions, the android regclient addresses backward compatibility by migrating the schema of these versions to the LTS UI Spec structure.
+
+In order to facilitate this migration, certain configurations and templates have been incorporated to ensure compatibility with the 1.1.5.x server. The list of these configurations is provided below.
+
+* **mosip.registration.consent-screen-template-name=reg-consent-screen-content-template**
+
+  Consent screen is not a part of 1.1.5.x schema structure. So, we are completely fetching this consent screen content from 
+  `master.template` table, and the `templateTypeCode` for the consent screen content is mentioned in the above configuration.
+
+* **mosip.registration.individual-biometrics-id=individualBiometrics**
+
+  The id of individual biometrics should be mentioned in the above property according to the configured 1.1.5.x schema.
+
+* **mosip.registration.introducer-biometrics-id=guardianBiometrics**
+
+  The id of guardian/ introducer biometrics should be mentioned in the above property according to the configured 1.1.5.x schema.
+
+* **mosip.registration.infant-agegroup-name=INFANT**
+
+  The age-group name for infants (aged below 5 years) which is configured in the configured server should be mentioned in the above 
+  property.
+
+* **mosip.registration.agegroup-config={"INFANT":{"bioAttributes":["face"],"isGuardianAuthRequired":true},"ADULT":{"bioAttributes":**
+```
+["leftEye","rightEye","rightIndex","rightLittle","rightRing","rightMiddle","leftIndex","leftLittle","leftRing","leftMiddle","leftThumb","rightThumb","face"],"isGuardianAuthRequired":false},"SENIOR_CITIZEN":{"bioAttributes":["leftEye","rightEye","rightIndex","rightLittle","rightRing","rightMiddle","leftIndex","leftLittle","leftRing","leftMiddle","leftThumb","rightThumb","face"],"isGuardianAuthRequired":false}}
+```
+
+  The above property indicates list of age-groups, required bio-attributes, and a flag which indicates guardian authentication is 
+  required or not. This property should be changed according to the server configuration and requirements.
+
+* **mosip.registration.allowed-bioattributes=leftEye,rightEye,rightIndex,rightLittle,rightRing,rightMiddle,leftIndex,leftLittle,leftRing,leftMiddle,leftThumb,rightThumb,face**
+
+  The above property defines the list of bio-attributes that are allowed for scanning during registration. If there are any changes in 
+  the server, it should be changed accordingly.
+
+* **mosip.registration.default-app-type-code=000**
+
+  The above property defines the default applicantTypeCode. In LTS, we have applicanttype.mvel script to fetch the documents according 
+  to the age, gender and some other attributes. Based on the applicant details, the script returns an applicantTypeCode which can be any 
+  value from “000” to “014”, and respective documents will be fetched from master.applicant_valid_document table. But we do not have 
+  this script defined in 1.1.5.x, to handle this, we have added a default applicantTypeCode.
+
+
