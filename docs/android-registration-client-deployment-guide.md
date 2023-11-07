@@ -26,11 +26,11 @@ git clone -b feature-flutter https://github.com/mosip/android-registration-clien
 
 1. To begin, launch Android Studio.
 
-2. Next, select "Open an existing Android Studio project" and navigate to the cloned repository.
+2. Next, select **Open an existing Android Studio project** and navigate to the cloned repository.
 
 3. Open the `android-registration-client` directory as a project in Android Studio.
 
-4. In order to integrate Flutter with Android Studio, install the Flutter plugin by accessing `File > Settings > Plugins` and searching for "Flutter". Proceed to click on **Install** to install the plugin.
+4. In order to integrate Flutter with Android Studio, install the Flutter plugin by accessing `File > Settings > Plugins` and searching for **Flutter**. Proceed to click on **Install** to install the plugin.
 
 5. To ensure proper functionality, configure the Flutter SDK path by navigating to `File > Settings > Languages & Frameworks > Flutter` and specifying the Flutter SDK path as the location where you have installed Flutter.
 
