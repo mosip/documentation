@@ -10,7 +10,7 @@
 
 ## Overview
 
-The Android Registration Client is a tablet application that serves as a portable version of the existing desktop [Registration Client](https://docs.mosip.io/1.2.0/modules/registration-client). It has been developed to support accessibility on all Android devices. The existance of Android Registration Client came about in order to meet the mobility requirements of countries adopting MOSIP.
+The Android Registration Client is a tablet application that serves as a portable version of the existing desktop [Registration Client](https://docs.mosip.io/1.2.0/modules/registration-client). It has been developed to support accessibility on all Android devices. The existence of Android Registration Client came about in order to meet the mobility requirements of countries adopting MOSIP.
 
 The primary objective of the tablet version is to facilitate the registration process for residents, specifically those who are unable to physically visit registration centres and also serve remote locations where setting up Registration centres is not feasible. To address this challenge, the Android Registration Client was created, enabling Operators/ Supervisors to easily reach the remote areas and maximise resident registrations across the country.
 
