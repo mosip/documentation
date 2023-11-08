@@ -58,11 +58,20 @@ Many OAuth 2.0 client libraries are available in most programming languages to p
 
 #### 3. Generate key pair
 
-The wallet now needs to generate a key pair for the wallet holder and use the private key from the key pair to sign the _**c\_nonce**_. This will be used to determine that the proof of possession (PoP) of the private key is the wallet holder.
+The wallet now needs to generate a key pair for the wallet holder and use the private key from the key pair to sign the _**c\_nonce**_. This will be used to determine that the [Proof of Possession](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-proof-types) (PoP) of the private key is the wallet holder.
+
+Corresponding public key is accepted as `did:jwk` in the PoP.
+
+**Note:**&#x20;
+
+* eSignet does not mandate to create a different key pair for a holder on each credential request. it is left to the discretion of the wallet implementer.
+* Only `jwt` Proof Type is currently supported.
 
 #### 4. Get the credential using VCI credential API
 
 Now, the wallet can invoke the "_**/vci/credential**_" endpoint of eSignet with PoP (Proof of Possession) and share the credential format metadata to get the Verifiable Credential in the requested format.
+
+Only the `ldp_vc` format in the [Credential request](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-credential-request-4) is supported.&#x20;
 
 {% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/vci/credential" method="post" %}
 [esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
