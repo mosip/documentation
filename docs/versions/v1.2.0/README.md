@@ -10,7 +10,9 @@
 
 The 1.2.0 version of eSignet is the fourth release of eSignet which mainly focuses on the **VC Issuance** feature.
 
-To Add: Description of changes.
+<mark style="color:yellow;">To Add</mark>: Description of changes. (OpenID for VCI, PKCE security extension added, signed consent, multiple wallet support)
+
+
 
 ## Features Included
 
