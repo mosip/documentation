@@ -345,6 +345,13 @@ helm install \
 
 this will install ingress in ingress-nginx namespace of rancher cluster.
 
+## Storage classes
+The following storage classes can be used:
+* [Vsphere storage class](https://github.com/vmware-archive/vsphere-storage-for-kubernetes): If you are already using VMware virtual machines, you can proceed with the vSphere storage class.
+* [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/main/nfs/README.md).
+* [ceph-csi](TODO Implementation in progress)
+* [Longhorn](https://github.com/mosip/k8s-infra/blob/main/longhorn/README.md)
+
 * Storage class setup: [Longhorn](https://longhorn.io/) creates a storage class in the cluster for creating pv (persistence volume) and pvc (persistence volume claim).
 
 Pre-requisites:
@@ -631,6 +638,16 @@ helm repo add mosip https://mosip.github.io/mosip-helm
       * `istio-ingressgateway`: external facing istio service.
       * `istio-ingressgateway-internal`: internal facing istio service.
       * `istiod`: Istio daemon for replicating the changes to all envoy filters.
+
+## Storage classes
+The following storage classes can be used:
+* [Vsphere storage class](https://github.com/vmware-archive/vsphere-storage-for-kubernetes): If you are already using VMware virtual machines, you can proceed with the vSphere storage class.
+* [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/main/nfs/README.md).
+* [ceph-csi](TODO Implementation in progress)
+* [Longhorn](https://github.com/mosip/k8s-infra/blob/main/longhorn/README.md)
+
+For time being, we are considering Longhorn as a storage class.
+
 *   Storage class setup: Longhorn creates a storage class in the cluster for creating pv (persistence volume) and pvc (persistence volume claim).
 
     * Pre-requisites:
