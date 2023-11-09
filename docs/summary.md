@@ -152,6 +152,7 @@
     * [Functional Test Report](release/1.2.0.1/functional-test-report-B1.md)
     * [Sonar Report](release/1.2.0.1/sonar-report-B1.md)
   * [1.2.0](release/1.2.0/release-notes.md)
+    * [Release Process](release-process.md)
     * [Enhancements](release/1.2.0/enhancements.md)
     * [Functional Test Report](release/1.2.0/functional-test-report.md)
     * [Sonar Scan Report](release/1.2.0/sonar-scan-report.md)
