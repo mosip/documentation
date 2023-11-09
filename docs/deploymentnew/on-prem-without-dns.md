@@ -445,22 +445,25 @@ Install Longhorn via helm
        sudo systemctl restart docker
        ```
        * Generate a self-signed certificate for your domain, such as *.sandbox.xyz.net.
-       * Execute the following command to generate a self-signed SSL certificate. Prior to execution, kindly ensure that the environmental variables passed to the OpenSSL Docker container have been properly updated:
+       * Execute the following command to generate a self-signed SSL certificate. Prior to execution, kindly ensure to update environmental variables & rancher domain passed to openssl command:
        ```
-       docker volume create --name gensslcerts --opt type=none --opt device=/etc/ssl --opt o=bind
-       docker run -it --mount type=volume,src='gensslcerts',dst=/home/mosip/ssl,volume-driver=local \
-       -e VALIDITY=700        \
-       -e COUNTRY=IN          \
-       -e STATE=KAR           \
-       -e LOCATION=BLR        \
-       -e ORG=MOSIP           \
-       -e ORG_UNIT=MOSIP      \
-       -e COMMON_NAME=*.xyz.net \
-       mosipdev/openssl:latest
+        mkdir -p /etc/ssl/certs/
+        export VALIDITY=700 
+        export COUNTRY=IN 
+        export STATE=KAR
+        export LOCATION=BLR
+        export ORG=MOSIP
+        export ORG_UNIT=MOSIP
+        export COMMON_NAME=*.xyz.net
+        
+        openssl req -x509 -nodes -days $VALIDITY \
+          -newkey rsa:2048 -keyout /etc/ssl/certs/tls.key -out /etc/ssl/certs/tls.crt \
+          -subj "/C=$COUNTRY/ST=$STATE/L=$LOCATION/O=$ORG/OU=$ORG_UNIT/CN=$COMMON_NAME" \
+          -addext "subjectAltName = DNS:rancher.xyz.net, DNS:*.xyz.net"
        ```
        * Above command will generate certs in below specified location. Use it when prompted during nginx installation.
-         * fullChain path: /etc/ssl/certs/nginx-selfsigned.crt.
-         * privKey path: /etc/ssl/private/nginx-selfsigned.key.  
+         * fullChain path: `/etc/ssl/certs/tls.crt`.
+         * privKey path: `/etc/ssl/private/tls.key`.  
 * Install nginx:
     * Login to nginx server node.
     * Clone [k8s-infra](https://github.com/mosip/k8s-infra)
@@ -493,15 +496,18 @@ sudo systemctl restart nginx
 
 **Rancher UI**: Rancher provides full CRUD capability of creating and managing kubernetes cluster.
 
-* Install rancher using Helm, update `hostname` in `rancher-values.yaml` and run the following command to install.
+* Install rancher using Helm, update `hostname`, & add `privateCA` to `true` in `rancher-values.yaml`, and run the following command to install.
 
 ```
 cd $K8_ROOT/rancher/rancher-ui
 helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 helm repo update
+kubectl create ns cattle-system
+kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem=./tls.crt
 helm install rancher rancher-latest/rancher \
 --namespace cattle-system \
 --create-namespace \
+--set privateCA=true \
 -f rancher-values.yaml
 ```
 
