@@ -144,7 +144,7 @@
   * [Community Calendars](community/community-calendar.md)
 * [📖 Releases](releases.md)
   * [Release Process](release-process.md)
-    * [Go/No go Release checklist](go-nogo.md) 
+    * [Go/No Go Release Checklist](go-nogo.md) 
   * [Android Registration Client DP1](release-notes-android-reg-client-dp1.md)
   * [Resident Services DP1](release-notes-resident-portal-dp1.md)
   * [1.2.0.1-B3 (Beta)](release/1.2.0.1/release-notes-1.2.0.1-b3.md)
