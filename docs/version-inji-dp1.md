@@ -24,14 +24,11 @@ Below is the detailed summary of the release.
 ### Change in UI implementation
 
 * New UI for Inji:
-  * The Inji logo has received a fresh update.
   * This redesign promises an enriched user experience.
   * Introduction sliders have been introduced.
   * Helpful FAQ screens are provided.
-  * Verifier functionality is conveniently accessible from the settings screen.
   * VC pinning is now available.
     * Currently, the pinning feature supports a single VC.
-  * VC activation options are incorporated into the kebab menu.
   * Easy VC removal from Inji.
   * Improved audit log filtering based on VC.
 
