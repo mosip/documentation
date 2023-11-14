@@ -17,7 +17,7 @@ Now, let us understand the key objectives of eSignet:
 
 ### User Centricity
 
-At eSignet, our core goals are to prioritize inclusion and accessibility. We place a strong emphasis on user privacy and data protection. Our platform, eSignet, aims to simplify users' lives by offering flexibility and choices when it comes to identity verification.
+At eSignet, our core goals are to prioritize inclusion and accessibility. We place a strong emphasis on user privacy and data protection. Our platform, eSignet, is designed to enhance user convenience by providing various options and accommodating flexibility in the realm of identity verification.
 
 * **One ID**: Gain access to multiple services with ease. Users can log in to integrated government and private sector services using a single identity credential.
 * **Mandatory User Consent**: Before allowing access to personal information, we require users to provide explicit consent. Our platform incorporates a built-in consent flow.

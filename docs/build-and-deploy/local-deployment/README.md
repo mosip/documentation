@@ -45,7 +45,7 @@ This is a spring boot application built with Maven.
     `java -jar -Dloader.path=/opt/plugins/mock-esignet-integration-impl.jar esignet-service.jar`
 
 {% hint style="info" %}
-* loader.path is set to the mock plugin jar file path&#x20;
+* loader.path is set to the mock plugin jar file path
 * esignet-service is by default set to `local` profile
 {% endhint %}
 
@@ -70,13 +70,11 @@ Now with `http://localhost:3000/authorize` you should be able to start and test 
 
 ## API Documentation
 
-To know about the query parameters that are required to test the OIDC flow refer to our stoplight API documentation.
-
-{% embed url="https://mosip.stoplight.io/docs/identity-provider/85f761d237115-authorization-endpoint" %}
+To know about the query parameters that are required to test the OIDC flow, refer to our stoplight [API documentation](https://mosip.stoplight.io/docs/identity-provider/jlmszj6dlxigw-e-signet).
 
 ## Postman Collection
 
-We also have Postman scripts available under `docs/postman-collections` folder in the eSignet GitHub repository
+We also have Postman scripts available under `docs/postman-collections` folder in the eSignet GitHub repository.
 
 **Collection**
 

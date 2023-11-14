@@ -31,9 +31,9 @@ This is the user interface component of eSignet, developed using React JS. Its m
 {% hint style="info" %}
 Here are a few frequently asked questions on the eSignet UI.
 
-* [How to enable multiple digital wallet support for authentication?](../../faq/#how-to-integrate-wallets-with-e-signet-to-provide-wallet-based-authentication)
+* [How to enable multiple digital wallet support for authentication?](../../faq/#how-to-integrate-wallets-with-esignet-to-provide-wallet-based-authentication)
 * [How to configure the expected quality score, timeouts, and number of bio attributes to be captured?](../../faq/#how-to-configure-the-expected-quality-score-timeouts-and-number-of-biometric-attributes-to-be-captur)
-* [How to enable or disable the captcha?](../../faq/#how-to-enable-or-disable-the-captcha-in-e-signet-ui)
+* [How to enable or disable the captcha?](../../faq/#how-to-enable-or-disable-the-captcha-in-esignet-ui)
 {% endhint %}
 
 ### **eSignet Service**
