@@ -7,7 +7,7 @@ eSignet is envisioned as a thin add-on system to any existing digital ID solutio
 * It is integrated with [SBI](https://standards.ieee.org/ieee/3167/10925/) (Secure Biometric Interface) to facilitate secure biometric collection for biometric-based user verification.
 * The system supports multiple authentication factors, like OTP, biometrics, etc., to be inclusive for all people.
 * All integrations to the ID system are taken as a runtime plug-able library to allow the reuse of official container images that help with easier upgrades.
-* Since this is designed especially for country-scale resident verification, we do not support additional features like role management, session management, etc.
+* Since this is designed especially for country-scale resident verification, eSignet does not support additional features like role management, session management, etc.
 
 Watch the informative video below to gain insights into eSignet and its offerings.
 
