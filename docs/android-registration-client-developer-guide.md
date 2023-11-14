@@ -78,6 +78,32 @@ flutter build apk --debug
 flutter build apk --release
 ```
 
+### Set up Mock MDS for Biometric Scan
+
+The Mock MDS tool can be utilized to simulate the functionalities of biometric devices. The Mock MDS application is compliant with CTK standards and can serve as a substitute for Android SBI modules during testing and validation.
+
+1. Install the Mock MDS application.
+
+2. Access the **Settings** menu.
+
+3. Under Device Configuration, choose **Registration** from the dropdown menu.
+
+4. In P12 Configuration:
+
+   * Enter the necessary credentials for the Device Key and upload the Device P12 file.
+
+   * Enter the required credentials for the FTM Key and upload the FTM P12 file.
+
+   * Complete all fields in MOSIP IDA Configuration.
+
+5. In Modality Configuration, specify the quality score for Face, Finger, and Iris scans(these values can also be adjusted during testing).
+
+6. Click on the **Save** button.
+
+7. Go back to the Home Page and select `LOAD AND VALIDATE CERTIFICATES`.
+
+A toast message will be displayed indicating the success of the validation process.
+
 ### Contributions 
 
 If you would like to contribute to the Android Registration Client, please follow the guidelines outlined [here](https://docs.mosip.io/1.2.0/community/code-contributions).
