@@ -2,11 +2,15 @@
 
 A digital wallet that aims to function as a credential holder application in eSignet must go through the onboarding process as a relying party. This document outlines the necessary steps for a wallet to utilize eSignet for downloading credentials issued by a VC Issuer using the[ OpenID4VCI authorization code flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-authorization-code-flow).
 
+The sequence diagram below illustrates the steps involved in the authorization code flow that are required for downloading a verified credential.
+
+<figure><img src="../../.gitbook/assets/auth-code-flow.png" alt=""><figcaption></figcaption></figure>
+
 **Note**:&#x20;
 
 * Currently, only the `ldp_vc` format in the [Credential request](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-credential-request-4) is supported.
-* Also, we do not support the [Pre-Authorized Code Flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-pre-authorized-code-flow).
-* We also support only the `private-key-jwt` to enforce better security.
+* Also, the [Pre-Authorized Code Flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-pre-authorized-code-flow) is not supported as yet.
+* The `private-key-jwt` is supported to enforce better security.
 
 {% hint style="info" %}
 To gain a better understanding of the VC Issuance flow in eSignet, please refer to the [activity diagram ](../vc-issuance.md#appendix-vc-issuance-flow)provided in the [VC Issuance Plugin](../vc-issuance.md) document.&#x20;
