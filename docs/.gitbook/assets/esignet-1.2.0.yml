@@ -397,6 +397,7 @@ paths:
                     logoUri: 'https://fastlane.com/fastlane-esim.png'
                     redirectUris:
                       - 'https://fastlane.com/homepage'
+                      - 'io.mosip.residentapp://oauth'
                     publicKey:
                       kty: RSA
                       e: AQAB
@@ -422,7 +423,7 @@ paths:
 
         Each relying party can associate with one or more client ids.
 
-        On create, client status will be by default set to "**active**".
+        On create, client status will be by default set to "**ACTIVE**".
       x-internal: false
       responses:
         '200':
