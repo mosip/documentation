@@ -8,7 +8,9 @@ Here are a few of the frequently asked questions (FAQs) on e-Signet:
 
 <summary>What is eSignet?</summary>
 
+In today's era of digital transformation, there has been a global shift towards moving most services online. To facilitate personalized access to these online services, a secure and trusted digital identity is crucial. **eSignet** strives to provide a user-friendly and effective method for individuals to authenticate themselves and utilize online services while also having the option to share their profile information. Moreover, eSignet supports multiple modes of identity verification to ensure inclusivity and broaden access, thereby reducing potential digital barriers.
 
+To know more, click [here](../).
 
 </details>
 
@@ -44,7 +46,7 @@ The types of authentication methods supported by eSignet are [available here](..
 
 <summary>What are the standards followed by eSignet?</summary>
 
-The standards followed by eSignet are [listed here](../overview/principles/#open-standards).
+The standards followed by eSignet are listed [here](../overview/Standards/).
 
 </details>
 
@@ -106,7 +108,7 @@ You have to change _**acr-amr-mapping.json**_ in the _**mosip-config**_ repo; de
 2. Create a new language JSON file
    1. Copy the file _en.json_ and rename it with your new language's code as per ISO 639-1 (for example, if you want to add the language French, then rename the file to _fr.json)_ so that you can have all keys in for your new language.
    2. Modify the values in your desired language (for French, the values have to be modified to French in the _fr.json_ file)
-3. Update _default.json_ file
+3. Update `default.json` file
    1. Now add the new language’s JSON file detail in _the default.json_ file so that it can be parsed and the new language can be shown in the UI, like below.
    2. You have to add the ISO 639-1 (two-lettered language code) language info in languages\_2Letters (which was used to create the new file above) and also put the language value against it.
    3. If your language follows RTL(right-to-left) then add ISO 639-1 language code in the `rtlLanguages` array.
@@ -139,14 +141,14 @@ Similar to the local mentioned above, you need to create a new language JSON fil
 
 Apart from that, you have to make the above changes in the `develop` branch of your [_**artifactory-ref-impl**_](https://github.com/mosip/artifactory-ref-impl/tree/develop) repository. In order to do so,
 
-1. Clone the repo and switch to the develop branch
+1. Clone the repo and switch to the `develop` branch.
 2. Go to the folder location:\
    **artifacts >> src >> i18n >> esignet-i18n-bundle**
-3. Inside this folder, you can view all language JSON files
+3. Inside this folder, you can view all language JSON files.
 4. Create your new language file as mentioned in the local setup guide above and place it in the folder.
 5. Modify the _**default.json**_ file as mentioned in the local setup guide above.
 
-Now use this new artifactory in your production setup.
+Now, use this new artifactory in your production setup.
 
 </details>
 
@@ -194,7 +196,7 @@ mosip.esignet.ui.config.key-values={…
  'wallet.config': ${mosip.esignet.ui.wallet.config}}
 ```
 
-Then restart the e-Signet UI and e-Signet backend service to view the changes.
+Then, restart the eSignet UI and eSignet backend service to view the changes.
 
 </details>
 
@@ -239,7 +241,7 @@ Go to _**esignet-service >> src >> main >> resources**_, then open _**applicatio
 mosip.esignet.send-otp.captcha-required=false
 ```
 
-For enabling captcha you need to set the same property value as true.
+For enabling captcha you need to set the same property value as **true**.
 
 </details>
 
@@ -247,7 +249,12 @@ For enabling captcha you need to set the same property value as true.
 
 <summary>How to register or create a client ID in eSignet?</summary>
 
+In order to utilize eSignet for authenticating users and obtaining their information, relying parties are required to follow these steps:
 
+1. Register as a **Client** in the eSignet system.
+2. Integrate with eSignet APIs, following the guidelines provided by OpenID Connect, on their web or mobile applications.
+
+To know more, click [here](../integration/relying-party.md).
 
 </details>
 
@@ -255,6 +262,8 @@ For enabling captcha you need to set the same property value as true.
 
 <summary>How to configure a VC issuer in eSignet?</summary>
 
+The VC Issuance plugin interface provides methods to return Verifiable Credentials (VCs) of an individual (here, the holder of the credential) when authorized. Today, this interface supports methods for returning linked data-proof VC (as JSON-LD) and VC as JWT.
 
+To know more, click [here](../integration/vc-issuance.md).
 
 </details>

@@ -42,8 +42,6 @@ Verification is performed on various configurations as mentioned below:
 
 ### Feature health
 
-
-
 <figure><img src="../../../.gitbook/assets/test-report-1.2.0.png" alt=""><figcaption><p>Tesr report 1.2.0</p></figcaption></figure>
 
 ### Test Execution Statistics
@@ -97,7 +95,7 @@ The various metrics that assist in test tracking and efficiency are as follows:
 * Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100
 * Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
 
-Link for the [detailed test report](https://github.com/mosip/test-management/tree/master/e-signet).
+Link for the [detailed test report](https://github.com/mosip/test-management/tree/master/e-signet/1.2.0).
 
 ### Sonar Report
 

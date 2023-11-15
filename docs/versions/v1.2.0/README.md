@@ -4,7 +4,7 @@
 
 **Upgrade From**: 1.1.0
 
-**Release Date**: October 28, 2023
+**Release Date**: November 18, 2023
 
 ## Overview
 
@@ -32,7 +32,7 @@ Below are the features available in the release:
 * artifactory-ref-impl: TBA
 * mosip-config: TBA
 
-For details for deployment go through the [helm charts in the eSgnet repository](https://github.com/mosip/esignet/tree/v1.1.0/helm).
+For details on deployment, go through the [helm charts in the eSignet repository](https://github.com/mosip/esignet/tree/v1.1.0/helm).
 
 ## Documentation
 
