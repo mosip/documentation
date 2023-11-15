@@ -56,7 +56,6 @@ This service is the primary backend Spring Java application that incorporates va
    * [**VCIssuancePlugin**](../../integration/vc-issuance.md) - for constructing Verifiable Credentials (VCs)
    * [**AuditPlugin**](../../integration/audit.md) - for auditing all events
    * [**KeyBinderPlugin**](../../integration/key-binder.md) - for key binding of a user and wallet
-   * **CaptchaValidator** - for captcha validation
 
 {% hint style="info" %}
 All plugin interfaces are defined in the [esignet-integration-api](https://github.com/mosip/esignet/tree/master/esignet-integration-api) module.
