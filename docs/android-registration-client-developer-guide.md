@@ -115,7 +115,7 @@ If you would like to contribute to the Android Registration Client, please follo
 
 ### License
 
-The Android Registration Client is licensed under the [Apache License 2.0](https://github.com/mosip/android-registration-client/blob/feature-flutter/LICENSE).
+The Android Registration Client is licensed under the [MIT License](https://github.com/mosip/android-registration-client/blob/develop/LICENSE).
 
 ### Support
 
