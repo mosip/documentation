@@ -104,6 +104,11 @@ The Mock MDS tool can be utilized to simulate the functionalities of biometric d
 
 A toast message will be displayed indicating the success of the validation process.
 
+**Note**:  To view the released version of the Mock SBI APK, click [here](https://github.com/mosip/android-camera-mds/releases/tag/vDP10).
+
+To download the Mock SBI APK, click on `camera-mds.zip`.
+
+
 ### Contributions 
 
 If you would like to contribute to the Android Registration Client, please follow the guidelines outlined [here](https://docs.mosip.io/1.2.0/community/code-contributions).
