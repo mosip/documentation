@@ -100,3 +100,5 @@ Link for the [detailed test report](https://github.com/mosip/test-management/tre
 ### Sonar Report
 
 ![](\_images/sonar.png)
+
+<table><thead><tr><th width="137">Repo Name</th><th>Version</th><th>Branch Name</th><th>Coverage (>80%)</th><th>Reliability (0)</th><th>Security (0)</th><th>Hotspots (0)</th><th>Duplications  (Less than 3%)</th></tr></thead><tbody><tr><td>id-authentication</td><td>1.2.0.1-B5</td><td>release-1.2.0.1</td><td>70.9</td><td>0</td><td>0</td><td>0</td><td>1.9%</td></tr><tr><td>eSignet</td><td>1.2.0</td><td>release-1.2.x</td><td>89.1</td><td>0</td><td>0</td><td>0</td><td>0.5%</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>

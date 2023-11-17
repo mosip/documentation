@@ -1,6 +1,14 @@
 # Overview
 
-eSignet is envisioned as a thin add-on system to any existing digital ID solution to bring in additional capabilities.
+eSignet is envisioned as a thin add-on system to any existing digital ID solution to bring in additional capabilities and enhance functionalities.
+
+Do take a moment to watch the video below, which provides valuable information about eSignet and the range of features it offers!
+
+{% embed url="https://www.youtube.com/watch?v=ZfUPRv71s_0" %}
+
+Now, let us understand the key objectives of eSignet:
+
+### Enhancing authentication methods
 
 * It implements [OpenID Connect](https://openid.net/connect/) flows, which helps the relying party perform quick and easy integrations using pre-existing libraries for user verification.
 * The system supports only the secure options in OpenID Connect, like authorization code flow to ensure the resident data is handled securely.
@@ -8,12 +16,6 @@ eSignet is envisioned as a thin add-on system to any existing digital ID solutio
 * The system supports multiple authentication factors, like OTP, biometrics, etc., to be inclusive for all people.
 * All integrations to the ID system are taken as a runtime plug-able library to allow the reuse of official container images that help with easier upgrades.
 * Since this is designed especially for country-scale resident verification, eSignet does not support additional features like role management, session management, etc.
-
-Watch the informative video below to gain insights into eSignet and its offerings.
-
-{% embed url="https://www.youtube.com/watch?v=ZfUPRv71s_0" %}
-
-Now, let us understand the key objectives of eSignet:
 
 ### User Centricity
 
