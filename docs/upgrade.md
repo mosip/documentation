@@ -5,6 +5,7 @@ MOSIP has recently launched a new version, 1.2.0.1. This release features an arc
 To set up the new environment and deploy the upgraded version of MOSIP, carefully follow the procedures outlined below step-by-step.
 
 ## Points to Consider
+
 - The migration will only be supported if the latest version deployed is 1.1.5.x (mostly 1.1.5.5-P1 and above). Countries should ensure that MOSIP is updated to version 1.1.5.x before migrating to the newer version.
 - Once the upgrade is completed, all the modules running on the server will be upgraded together.
 - The IDA Database will not have any entries from version 1.1.4.
@@ -31,7 +32,7 @@ To set up the new environment and deploy the upgraded version of MOSIP, carefull
 
 This comprehensive upgrade process entails the deployment architecture upgrade from V2 to V3, as well as the MOSIP platform upgrade from version 1.1.5.5-P1 to 1.2.0.1. The various tasks involved in this process are organized into the following categories.
 
-#### Upgrade of deployment architecture from V2 to V3
+#### Upgrade of Deployment Architecture from V2 to V3
 
 1. Installation and configuration of new environment with V3 architecture.
 
@@ -39,7 +40,7 @@ This comprehensive upgrade process entails the deployment architecture upgrade f
 
 3. Backup and restoration of external services.
 
-#### Upgrade of platform from version 1.1.5.5-P1 to 1.2.0.1
+#### Upgrade of Platform from version 1.1.5.5-P1 to 1.2.0.1
 
 1. Upgrade of necessary external services.
 
@@ -53,7 +54,7 @@ This comprehensive upgrade process entails the deployment architecture upgrade f
 
 Let us go through the processes discussed above in detail.
 
-### New environment setup with V3 architecture 
+### New environment setup with V3 Architecture 
 
 This is required for migration from V2 to V3 architecture
 
@@ -86,28 +87,94 @@ This is required for migration from V2 to V3 architecture
 14. Setting up [Logging](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines#logging-module-setup-and-installation) for MOSIP cluster
 
 ### External services deployment  
+
 (Required for V2 to V3 architecture migration)
 
-Setup postgres server
-Note: 1. Please deploy postgres server in a seperate node. 
-            2. Make sure postgres initialisation is not done. Only install postgres.
+1. Setup [postgres server](https://github.com/mosip/mosip-infra/blob/release-1.2.0.1/deployment/v3/external/postgres/README.md)
 
-Setup Keycloak server
-Note: Make sure keycloak initialisation is not done. Only install keycloak.
+   **Note**:
+   
+   i. Deploy postgres server in a seperate node.
+   
+   ii. Make sure postgres initialisation is not done (only install postgres).
 
-Setup Softhsm
+3. Setup [Keycloak server](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/external/iam#install)
 
-Setup Minio server
+   **Note**: Make sure keycloak initialisation is not done (only install keycloak).
 
-Setup ClamAV
+4. Setup [Softhsm](https://github.com/mosip/mosip-infra/blob/release-1.2.0.1/deployment/v3/external/hsm/softhsm/README.md#install)
 
-Setup ActiveMQ
+5. Setup [Minio server](https://github.com/mosip/mosip-infra/blob/release-1.2.0.1/deployment/v3/external/object-store/minio/README.md#helm-chart-based-install)
 
-Setup Message Gateway
+6. Setup [ClamAV](https://github.com/mosip/mosip-infra/blob/release-1.2.0.1/deployment/v3/external/antivirus/clamav/README.md#install)
 
-Setup docker registry secrets if using private dockers
-Note: You need these only if you are accessing Private Docker Registries. Skip if all your dockers are downloaded from public Docker Hub.
+7. Setup [ActiveMQ](https://github.com/mosip/mosip-infra/blob/release-1.2.0.1/deployment/v3/external/activemq/README.md#install)
 
-Setup Captcha for required domains
+8. Setup [Message Gateway](https://github.com/mosip/mosip-infra/blob/release-1.2.0.1/deployment/v3/external/msg-gateway/README.md#email-and-sms-gateways)
 
-Setup Landing page for new MOSIP cluster
+9. Setup docker [registry secrets](https://github.com/mosip/mosip-infra/blob/release-1.2.0.1/deployment/v3/external/docker-secrets/README.md) if you are using private dockers.
+
+   **Note**: These instructions are only applicable if you need to access Private Docker Registries. You may disregard them if all of your Docker containers are downloaded from the public Docker Hub.
+
+10. Setup [Captcha](https://github.com/mosip/mosip-infra/blob/release-1.2.0.1/deployment/v3/external/captcha/README.md#install) for the required domains.
+
+11. Setup [Landing page](https://github.com/mosip/mosip-infra/blob/release-1.2.0.1/deployment/v3/external/landing-page/README.md#install) for new MOSIP cluster.
+
+### External services backup and restore
+
+(Required for V2 to V3 architecture migration)
+
+1. Softhsm (only required if softhsm is used instead of real HSM)
+
+   i. [Backup keys](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/external/hsm/softhsm#backup)
+
+   ii. [Restore old key](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/external/hsm/softhsm#restore) 
+
+   iii. Update softhsm ida and softhsm kernel security pin
+
+2. Postgres 
+
+   i. [Export](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/external/postgres#db-export) 
+
+   ii. [Import](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/external/postgres#db-import)
+
+   iii. secret creation
+
+   iv. Increase postgres `max_connections` to 1000
+
+3. Keycloak 
+
+   i. [Export](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/external/iam#export)
+
+   ii. [Import](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/external/iam#import)
+
+4. Minio 
+
+   i. Export the existing Minio as directory
+
+   ii. [Clone Minio](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/external/object-store/minio#minio-clone)
+
+5. Kafka  
+
+   i. setup external minio for backup.  
+
+   ii. backup kafka  
+
+   iii. restore kafka 
+
+6. Conf-secrets 
+
+Update the secrets in existing secrets in conf-secrets namspace
+[https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/mosip/conf-secrets#secrets-to-be-updated-for-migartion-scenerios](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/mosip/conf-secrets#secrets-to-be-updated-for-migartion-scenerios) Connect your Github account 
+
+7. Packets in landing to be copied from old environment to the upgraded environment or same NFS folder can be mounted to regproc packet server and group 1 stage groups - [Document](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/mosip/regproc/upgrade)
+
+ * dmz-sc.yaml
+
+ * dmz-pkt-pv.yaml
+
+ * dmz-pkt-pvc.yaml
+
+ * dmz-landing-pv.yaml
+
+ * dmz-landing-pvc.yaml
