@@ -1,34 +1,29 @@
 # Inji
 
-In this fast-paced and increasingly interconnected world, it has become essential for governments to make the resident's access to rights and services as efficient as possible.
+In the current dynamic and globalized world, it is crucial to enhance residents' access to vital services such as healthcare, financial equality, global travel, and assistance. An essential requirement for accessing these services is the authentication of individuals' identity. At present, individuals often manage multiple physical identification documents, each necessary for different rights and services.
 
-From healthcare to financial equity, international travel and aid, every service requires residents to be able to verify their identity.
+Introducing **Inji**, a mobile application specifically created to streamline all types of identification and credentials into one digital wallet. This innovative solution allows for identity verification through a straightforward selfie.
 
-Citizens today often carry multiple forms of physical ID, each needed to access a different right and service.
+**What does Inji mean?** 
 
-**Introducing Inji** – a mobile application **(MOSIP Resident app)** that stores all forms of ID and credentials in a single digital wallet, allowing identity verification through just a selfie!
+In Korean, Inji means `knowing` or `recognizance`. Hence, the word _Inji_ resonates with the purpose it has been built for.
 
-**What does Inji mean?** In Korean, Inji means `knowing` or `recognizance`. Hence, the word _Inji_ resonates with the purpose it has been built for.
+### Key advantages of Inj
 
-### Benefits of Inji
+- Serves as a secure **user wallet** for storing and managing ID credentials.
 
-• Can be used as a **user wallet** to store credentials.
+- Streamlines the process of **obtaining authenticated ID credentials** from the server.
 
-• Allows for **onboarding of signed ID credentials** from the server.
+- Supports **decentralized ID verification** through offline sharing.
 
-• Supports **decentralized ID verification** through offline sharing.
+- Allows users to have full control over the data shared with service providers, ensuring **privacy protection**.
 
-• Can be used to **register for social benefits** on government portals (such as pension or healthcare services, and complete security checks at airports).
+- Facilitates **seamless access** to multiple websites and services using the same login information, enhancing convenience and security.
 
-• Residents can also provide **explicit consent** on what data is shared with service providers, to protect their privacy.
+- **Simplifies the registration process** for government benefits (like pensions or healthcare services) and improves efficiency in airport security checks.
+  
+In summary, Inji provides a practical, reliable, and cost-efficient solution for consolidating various forms of identification. It seamlessly integrates with MOSIP and can easily adapt to other ID systems through a dedicated integration process.
 
-To summarize, Inji is:
+Moreover, Inji operates locally and in a distributed manner, serving individuals in remote locations with limited network accessibility. The credentials stored within the Inji mobile app only require a one-time download, allowing the app to verify both online and offline IDs at any given moment, eliminating the need for network connectivity.
 
-* a convenient, safe, and cost-effective way to carry all IDs in a single place.
-* pre-integrated with MOSIP and able to work with any other ID system through a designed integration exercise.
-* a local and decentralized way to verify identity.
-* inclusive of those in remote areas without network coverage.
 
-Through solutions like Inji, the team remains committed to developing safe, trusted, and inclusive technology, bringing us closer to a truly equitable world.
-
-Credentials on the Inji (mobile app) need to be downloaded once. Then, the app can be used to verify online and offline IDs at any time, eliminating the dependence on network coverage.
