@@ -164,10 +164,9 @@ This is required for migration from V2 to V3 architecture
 
 6. Conf-secrets 
 
-Update the secrets in existing secrets in conf-secrets namspace
-[https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/mosip/conf-secrets#secrets-to-be-updated-for-migartion-scenerios](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/mosip/conf-secrets#secrets-to-be-updated-for-migartion-scenerios) Connect your Github account 
+Update the secrets in existing secrets in (conf-secrets namspace)[https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/mosip/conf-secrets#secrets-to-be-updated-for-migartion-scenerios].
 
-7. Packets in landing to be copied from old environment to the upgraded environment or same NFS folder can be mounted to regproc packet server and group 1 stage groups - [Document](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/mosip/regproc/upgrade)
+7. Packets in landing to be copied from old environment to the upgraded environment or same NFS folder can be mounted to regproc packet server and group 1 stage groups. Refer [here](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/mosip/regproc/upgrade) for more details.
 
  * dmz-sc.yaml
 
@@ -178,3 +177,29 @@ Update the secrets in existing secrets in conf-secrets namspace
  * dmz-landing-pv.yaml
 
  * dmz-landing-pvc.yaml
+
+### Upgrade of required external services  
+
+1. **Postgres**: 
+
+  * Check and remove the duplicate thumbprint entries in keymanager ca_cert_store
+     
+  * Refer the [link]() for DB upgrade scripts to update the DB  
+
+  * Change `shareDomain` in all the relevant policies to point to latest datashare
+
+      * Change shareDomain's  value from `datashare-service` to `datashare.datashare` in the `policy_file_id` column for each partner.
+
+  * Check and rectify the partner name mismatch issue for certificate renewal
+
+  * Check mvel expression, id schema and document mappings and add the required applicant document mappings
+
+2. **Keycloak**: 
+
+Follow the steps mentioned in this link to execute upgrade keycloak init with import-init.yaml
+
+Verify all the existing user of admin and update roles according to the latest role matrix - Refer this document to know more about existing users 
+
+In keycloak for each operator and supervisor the VID / UIN should be collected and updated to keycloak in individualId field. For users whom this is not done, they will have issue when they are onboarded to a new machine or reonboarded to the existing machine or update biometrics process. 
+
+Update roles manually for client ids added as part of customization. refer to this page to know more about the changes 
