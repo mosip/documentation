@@ -6,7 +6,7 @@ The Partner Management Portal (PMP) is an essential component of MOSIP's ecosyst
 
 With this Partner Management Portal Demo Setup, you're close to showcasing the impressive capabilities of MOSIP's Partner Management Portal. Let's get started!
 
-**Note**: Please fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLScMpWoX0c1yA8vAxXm1w5M3wlzXh7BC-2l2pD3O4o8coxlBtQ/viewform) to request a password modification for your account, which was initially configured following your registration on this platform.
+**Note**: Please fill the [form](https://docs.google.com/forms/d/e/1FAIpQLScMpWoX0c1yA8vAxXm1w5M3wlzXh7BC-2l2pD3O4o8coxlBtQ/viewform) to request a password modification for your account, which was initially configured following your registration on this platform.
 
 ## Pre-requisites
 
@@ -36,7 +36,7 @@ To access all the features of the Partner Management portal and explore the part
 
 * Watch this [video](https://youtu.be/VseMUIfJ2Y8) for a visual walkthrough of the features.
 
-* Click on [Partner Policies](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-policies), [Auth Partner](https://docs.mosip.io/1.2.0/modules/partner-management-services/device-provider-partner), [Device Partner]() & [Foundation Trust Partner](https://docs.mosip.io/1.2.0/modules/partner-management-services/ftm-partner) to get in-depth knowledge of PMP.
+* Click on [Partner Policies](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-policies), [Auth Partner](https://docs.mosip.io/1.2.0/modules/partner-management-services/device-provider-partner), [Device Partner]() and [Foundation Trust Partner](https://docs.mosip.io/1.2.0/modules/partner-management-services/ftm-partner) to get in-depth knowledge of PMP.
 
 For more information about Partner Management Portal Developer Setup, click [here](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-services-developer-setup).
 
