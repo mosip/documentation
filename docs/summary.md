@@ -4,6 +4,7 @@
 * [Overview](overview.md)
   * [Components](architecture/components.md)
   * [Features](architecture/features.md)
+  * [Architecture](Architecture/architecture.md)
 * [Tuvali Architecture](architecture/tuvali.md)
   * [Permissions & Requirements](architecture/tuvali-requirements.md)
   * [Tuvali API Documentation](architecture/tuvali-inji.md)
