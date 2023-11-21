@@ -223,3 +223,31 @@ export const DefaultTheme = {
   })
 }
 ```
+
+To change colour on add new card page:
+
+<img src="_images/add-new-card.png" height=400 width=200>
+
+```
+export const DefaultTheme = {
+    Styles: StyleSheet.create({
+      ssuerHeading: {
+      fontFamily: 'Inter_600SemiBold',
+      fontSize: 14,
+      lineHeight: 17,
+      paddingHorizontal: 3,
+      paddingBottom: 4,
+      paddingTop: 1.7,
+    },
+    issuerDescription: {
+      fontSize: 11,
+      lineHeight: 14,
+      color: Colors.ShadeOfGrey,
+      paddingVertical: 5,
+      paddingHorizontal: 3,
+      paddingTop: 1.4,
+    }
+    ...
+  })
+}
+```
