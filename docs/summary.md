@@ -169,6 +169,7 @@
   * [Pre-registration](collab-pre-registration-guide.md)
   * [Registration Client](collab-reg-client-setup-guide.md)
   * [Resident Portal](collab-resident-portal-guide.md)
+  * [Partner Management Portal](collab-pmp-guide.md)
 * [🛣 Roadmap](roadmap.md)
   * [Roadmap 2023-2024](roadmap-2023-2024.md)
   * [Roadmap 2024-2025](roadmap-2024-2025.md)
