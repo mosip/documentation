@@ -196,10 +196,82 @@ Update the secrets in existing secrets in (conf-secrets namspace)[https://github
 
 2. **Keycloak**: 
 
-Follow the steps mentioned in this link to execute upgrade keycloak init with import-init.yaml
+  * Follow the steps mentioned [here]() to execute upgrade keycloak init with `import-init.yaml`.
 
-Verify all the existing user of admin and update roles according to the latest role matrix - Refer this document to know more about existing users 
+  * Verify all the existing users of admin and update the roles according to the latest role matrix. To know more about the existing users, refer [here]().
 
-In keycloak for each operator and supervisor the VID / UIN should be collected and updated to keycloak in individualId field. For users whom this is not done, they will have issue when they are onboarded to a new machine or reonboarded to the existing machine or update biometrics process. 
+  * In Keycloak, it is important to ensure that the VID / UIN of each operator and supervisor is collected and updated in the individualId field. Failure to do so may cause complications during the onboarding or re-onboarding processes to new or existing machines, as well as during the biometrics update process for these users.
 
-Update roles manually for client ids added as part of customization. refer to this page to know more about the changes 
+  * Manually update roles for client IDs that have been added as part of customization. For more information about the changes, please refer [here]().
+
+3. **Activemq**: 
+
+  * Clear all the objects along with topics in the activemq or deploy a fresh instance of activemq with no previous data
+
+4. **ABIS**: 
+
+  * Stop and clear all the inprogres items as it will be reprocessed freshly    
+
+  * Review the queue names and update if required (mosip-to-abis and abis-to-mosip)
+
+5. **Manual adjudication system**: 
+
+   * Stop and clear all the inprogres items as it will be reprocessed freshly  
+
+   * Review the queue names and update if required (mosip-to-adjudication and adjudication-to-mosip) 
+
+6. **Manual verification system**: 
+
+   * Stop and clear all the inprogres items as it will be reprocessed freshly  
+
+   * Review the queue names and update if required (mosip-to-verification and verification-to-mosip)
+     
+7. Run the data movement to the necessary three tables using the provided script. Afterward, run the migration script to re-encrypt the data and perform the movement of data from the bucket to the folder (This step is only necessary if the pre-registration has been upgraded from version 1.1.3.x). Please consult the provided [document]() for detailed instructions on how to carry out the data movement process.
+
+### Property migration  
+
+* Refer this document to run the property migration script
+
+* Update `registration-processor-default.properties` reprocess elapse time to a larger time to avoid reprocessing before migration is fully complete (registration.processor.reprocess.elapse.time=315360000).
+
+* Add the below properties to `syncdata-default.properties` file if reg-client versions 1.1.5.4 and below are to be supported additionally.
+
+```
+#Properties needed for 1.1.5.4 and previous version reg-client compatibility (Tag mismatch error)
+mosip.kernel.client.crypto.iv-length=16
+mosip.kernel.client.crypto.aad-length=12
+```
+
+* Configuration property files required to be updated for language specific deployments. Please follow the below snippet. 
+
+**Note**: Ensure that the transliteration line is not commented out, even for a single language.
+
+```
+## Transliteration
+mosip.kernel.transliteration.arabic-language-code=ara
+mosip.kernel.transliteration.english-language-code=eng
+# Added this property for backward compatibility as it is misspelled in <1.2.0 versions of kernel-transliteration library
+mosip.kernel.transliteration.franch-language-code=fra
+```
+
+* Take the latest version of the identity-mapping.json file (1.2.0.1) from `mosip-config` and update the mapping values based on the country's id schema. Please refer [here]() for instructions on making the necessary updates.
+
+* Additionally, make adjustments to the `mvel` config file for the application type according to each country's specific requirements. For more details on how to modify the mvel config file, please refer [here]().
+
+* The camel routes need to be modified to accommodate the new workflow commands and ensure proper integration with external subsystems such as manual adjudication and manual verification. To understand the specific changes required, refer [here]().
+
+* Please ensure that the mosip.regproc.packet.classifier.tagging.agegroup.ranges property is aligned with the camel route.xml file.
+
+### MOSIP services upgrade
+
+* To begin, set up the configuration server.
+
+* Next, configure and setup the artifactory.
+
+* Proceed with the installation in the specified sequence. Refer to the provided [link](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/mosip#install) for the correct order.
+
+* Execute the `salt generation job` to generate salts for the newly created table in the regproc.
+
+* Run the `key generation job` to ensure that all new module keys comply with the `key_policy_def` table.
+
+**Note**: Disable the `masterdata loader` and `regproc-reprocessor`.
