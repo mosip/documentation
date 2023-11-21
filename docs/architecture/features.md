@@ -1,33 +1,84 @@
 # Features
 
-Below is a sneak peek of the features available in Inji.
+Below is a comprehensive overview of the features provided by Inji.
 
-1. **Easy installation**
+### Security Features
 
-* Build Inji code to generate an APK file. Transfer the APK file to the smartphone on which it is to be installed. Also, to install the app on iOS, build the app and push it onto `TestFlight`.
-* Set up the app with biometrics (Face unlock/ fingerprint based on your device settings).
-* Also, there is an option to set a passcode to unlock the app and for its subsequent usage.
+Inji, as a digital wallet, implements robust measures to safeguard PII data and protect against cyber attacks.
 
-2. **Downloading the card**
+1. **Utilization of Hardware Keystore**:
+   
+   * Inji securely stores private encryption keys by utilizing the Android hardware keystore.
 
-* Keeping your digital credentials (ID) with you at all times just got easier.
-* This can be done in two ways:
-  * **Downloading VC using the UIN/ VID** – Residents can use the country-provided ID (UIN/VID) to download their cards and avail of various government and private services.
-  * **Downloading VC using the Application ID** – Residents can also use their Application ID provided to them during the registration process to be able to download their card.
+2. **Cryptographic Protection for PII Data**:
+   
+   * Inji employs industry-standard SHA-256 and Argon2 cryptographic libraries to hash and strengthen Personally Identifiable Information (PII) data. The app actively detects and responds to any suspicious activities, ensuring enhanced security of user data.
 
-3. **Viewing details** of the downloaded credential – Residents can have a quick view of the demographic details present on their VCs in a card format.
+3. **Automatic Reset for Stolen or Transferred Devices**:
 
-4. **Quick identification of VCs** by associating them with relevant tags- In case residents have multiple VCs on their device, they can add customized names to the VCs for quick identification.
+   * Inji automatically resets itself in case of device theft or ownership change, thereby ensuring the security of information.
 
-5. **Maintaining History** - The `History` tab on the app helps the residents in viewing the status of the VCs (downloaded/ shared/ activated, logged-in).
+4. **Certified Security Measures**:
+   
+   * Inji undergoes rigorous Penetration Testing and Threat Modelling by certified experts, further enhancing its resilience against cyber threats.
+  
 
-6. **Sharing Credentials** - The downloaded VCs on the device can be easily shared with the Verifier for verification and to provide quick access to their services. The VC can be shared over `Bluetooth Low Energy (BLE)` without the need for having an internet connection.
+### Download and save Verifiable Credentials
 
-7. **Share with a selfie** - The residents can capture the photo on their mobile device which internally gets matched with the photo available on their card thereby helping them quickly prove their identity.
+1. **OpenID Support**
 
-8. **Activate VC for online login**- Residents can select the VC that can be activated and further used for online login thereby reducing the chances of the VCs being misused.
+   * Inji offers support for OpenID, enabling a smooth onboarding experience for identity providers (IdP).
 
-9. **QR Code login** - Inji can be used to sign-in to any online portal by just scanning the QR code and sharing the data based on resident' consent.
+2. **Download Options**
+
+   * Inji supports the use of the country-provided Identification Number (UIN/VID) to download identity proof, granting access to various government and private services.
+
+   * Alternatively, the Application ID (AID) provided during the registration process can also be used to initiate the download of identity proofs.
+
+
+### Sharing Identity Proofs without the Internet
+
+* Inji allows users to securely share their downloaded identity proofs with other INJI users using Bluetooth Low Energy (BLE) technology, removing the necessity for an internet connection.
+
+### Offline authentication of shared Identity proofs
+
+* Users can verify the authenticity of their shared ID proof by taking a self-portrait photograph on their mobile device. INJI compares this photograph with the image on the ID proof, confirming the correct source and owner of the proof.
+
+### Streamlined SSO and User-Controlled Authentication
+
+* The Inji mobile application facilitates a Single Sign-On (SSO) function, empowering supported partners to enable a seamless login to online portals. This is achieved through the efficient process of scanning a QR code and sharing user data with their explicit consent.
+
+* Inji users have the ability to choose which downloaded ID proof should be enabled for online authentication and selectively share the credentials on their ID. This capability provides users with an additional layer of security and control over the utilization of their stored information.
+
+### Ingenious Design
+
+Inji functions as a comprehensive repository for a diverse array of identity proofs, leveraging its clever interface design to benefit users.
+
+* **Multiple views of Identity proofs**: Users can access multiple views of IDs, ranging from an overview to detailed insights.
+
+* **Practical Sorting logic**: The sorting and filtering logic is meticulously crafted, ensuring relevance and practicality in day-to-day use.
+
+* **Organized UI**: INJI provides a clear demarcation between downloaded and received identity proofs enhancing user clarity and organization.
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 For a quick look at these features, refer the [Inji User Guide](https://docs.mosip.io/1.2.0/modules/inji-user-guide).
 
