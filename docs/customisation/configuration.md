@@ -1,5 +1,7 @@
 # Configuration
 
+## Configuration for Inji
+
 The configurable properties for Inji can be found at [inji-default.properties](https://github.com/mosip/mosip-config/blob/qa-inji/inji-default.properties). This property file is maintained as one for each deployment environment. On [this](https://github.com/mosip/mosip-config) repository, each environment configuration is placed in a corresponding branch specific to that environment.
 
 > Refer to [inji-default.properties](https://github.com/mosip/mosip-config/blob/collab/inji-default.properties) of Collab environment.
@@ -22,3 +24,16 @@ The properties used by Inji are:
 * `mosip.inji.aboutInjiUrl(https://docs.mosip.io/inji)`: This is the url for Inji documentation used in About Inji page.
 * `mosip.inji.minStorageRequiredForAuditEntry(1)`: This is threshold(minimum storage space required) in MB for storing audit entries.
 * `mosip.inji.minStorageRequired(5)`: This is threshold(minimum storage space required) in MB for storing downloaded / received vc.
+
+
+## Configuration for Issuers
+
+The configurable properties for supporting issuers can be found at [mimoto-issuers-config.json](https://github.com/mosip/mosip-config/blob/qa-inji/mimoto-issuers-config.json). This property file is maintained as one for each deployment environment. On [this](https://github.com/mosip/mosip-config) repository, each environment configuration is placed in a corresponding branch specific to that environment.
+
+> Refer to [mimoto-issuers-config.json](https://github.com/mosip/mosip-config/blob/collab/mimoto-issuers-config.json) of Collab environment.
+
+These values will be used by Inji via Mimoto. Mimoto exposes APIs which is used by the Inji application to fetch and store the issuers and their configurations in the local storage.
+
+API used to fetch issuers: `https://api.mosip.io/v1/mimoto/residentmobileapp/issuers`
+
+API used to fetch issuer's configuration: `https://api.mosip.io/v1/mimoto/residentmobileapp/issuers${issuerId}`
