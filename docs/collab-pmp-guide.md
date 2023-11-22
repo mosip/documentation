@@ -36,7 +36,7 @@ To access all the features of the Partner Management portal and explore the part
 
 * Watch this [video](https://youtu.be/VseMUIfJ2Y8) for a visual walkthrough of the features.
 
-* Click on [Partner Policies](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-policies), [Auth Partner](https://docs.mosip.io/1.2.0/modules/partner-management-services/device-provider-partner), [Device Partner]() and [Foundation Trust Partner](https://docs.mosip.io/1.2.0/modules/partner-management-services/ftm-partner) to get in-depth knowledge of PMP.
+* Click on [Partner Policies](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-policies), [Auth Partner](https://docs.mosip.io/1.2.0/modules/partner-management-services/auth-credential-partner), [Device Partner](https://docs.mosip.io/1.2.0/modules/partner-management-services/device-provider-partner) and [Foundation Trust Partner](https://docs.mosip.io/1.2.0/modules/partner-management-services/ftm-partner) to get in-depth knowledge of PMP.
 
 For more information about Partner Management Portal Developer Setup, click [here](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-services-developer-setup).
 
