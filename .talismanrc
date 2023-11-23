@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: docs/architecture/tuvali-inji.md
+  checksum: bd31913ef2f4b30eaa7b9d5940b09d127afae50ec59ae525b8a4f4d19519adf4
+version: ""
