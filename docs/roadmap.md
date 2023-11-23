@@ -1,4 +1,4 @@
-# Roadmap
+# 🛣 Roadmap
 
 The MOSIP community strives to deliver major [releases](https://docs.mosip.io/1.2.0/releases) as per the designated schedules, while offering minor releases every other month! The roadmap outlines the vision, goals, and planned development milestones of all our ongoing and upcoming projects over a specific period of time. It also provides a high-level overview of the MOSIP platform's future direction, features, enhancements, and major updates.
 

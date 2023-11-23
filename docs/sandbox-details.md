@@ -1,4 +1,4 @@
-# Sandbox Details
+# 📫 Sandbox Details
 
 Are you interested in integrating with MOSIP as a partner? We invite you to connect with us by completing the [form](https://forms.gle/84wCQYQ7Bxdw718h9). This will assist us in facilitating a seamless integration with our designated sandbox environments.
 
@@ -19,4 +19,3 @@ Looking to collaborate with us? Click [here](https://docs.mosip.io/1.2.0/collab-
 Synergy is our stable environment where the latest released version of the MOSIP platform and applications are deployed for partners to integrate and test.
 
 The link to access the **Synergy environment** is available [here](https://synergy.mosip.net/).
-

@@ -1,4 +1,4 @@
-# Privacy and Security
+# 🔐 Privacy and Security
 
 MOSIP's fundamental architecture and design incorporate the highest levels of privacy and security.
 
@@ -28,7 +28,7 @@ Key privacy features:
 * No search on the database (You can find a record only if you know the ID).
 * Clear segregation of Biometric & Demographic data.
 * De-centralised ID usage and data (cannot profile based on usage).
-* Users are not limited to one permenant ID - Virtual ID. 
+* Users are not limited to one permenant ID - Virtual ID.
 * All relying party gets a privacy enabled tokens to prevent profiling across transactions. Permenant ID is never shared.
 * Supports Wallet based decentralized ID issuance and usage.
 * Face data is not sent to ABIS for deduplication.

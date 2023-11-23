@@ -232,7 +232,7 @@ Block 2, i.e. the encrypted actual data is again split into two parts,
 * The 1st part is the random 32 bytes which will be used as _**AAD**_ in AES encryption(first 32 bytes). From this 32 bytes AAD data, the first 12 bytes is _**IV/Nonce**_.
 * The 2nd part is the encrypted data which is encrypted using AES GCM PKCS5Padding.
 
-***
+
 
 **The structure of the encrypted data downloaded from referenceURL in MOSIP 1.1.5.5 or prior versions**
 

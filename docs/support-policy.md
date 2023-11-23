@@ -1,4 +1,4 @@
-# MOSIP Support Policy
+# 📚 MOSIP Support Policy
 
 Support is a critical aspect of adopting any software. MOSIP too offers support to adopting countries and their solutions providers on the platform. This enables MOSIP users to get fixes and updates on the platform. This document lays down the MOSIP support policy, while also specifying how these apply to the various versions of MOSIP that have been released and the ones to come in the future.
 
@@ -83,4 +83,4 @@ Moving from one version of MOSIP to a newer version is expected to be a non-triv
 
 ## MOSIP Versions
 
-<table><thead><tr><th width="171.33333333333331">Version</th><th width="275">Active Support</th><th>Essential Support</th></tr></thead><tbody><tr><td>1.2.0.x (Latest)</td><td>14th Feb 2022 - 13th Feb 2025</td><td>14th Feb 2025 - 13th Feb 2027</td></tr><tr><td>1.1.5.x (Latest)</td><td>23rd Apr 2021 - 22nd Apr 2022</td><td>23rd Apr 2022 - 22nd Apr 2023</td></tr><tr><td>1.1.4.x </td><td>End of Life</td><td>End of Life</td></tr><tr><td>1.1.3.x</td><td>End of Life</td><td>End of Life</td></tr></tbody></table>
+<table><thead><tr><th width="171.33333333333331">Version</th><th width="275">Active Support</th><th>Essential Support</th></tr></thead><tbody><tr><td>1.2.0.x (Latest)</td><td>14th Feb 2022 - 13th Feb 2025</td><td>14th Feb 2025 - 13th Feb 2027</td></tr><tr><td>1.1.5.x (Latest)</td><td>23rd Apr 2021 - 22nd Apr 2022</td><td>23rd Apr 2022 - 22nd Apr 2023</td></tr><tr><td>1.1.4.x</td><td>End of Life</td><td>End of Life</td></tr><tr><td>1.1.3.x</td><td>End of Life</td><td>End of Life</td></tr></tbody></table>
