@@ -10,7 +10,7 @@ The recommended Github workflow here is for developers to submit code and docume
 
 ## Setup your development machine
 
-1. Fork repository of interest.
+1.  Fork the repository.
 2.  Clone the fork to your local machine. E.g.:
 
     ```
@@ -32,20 +32,28 @@ The recommended Github workflow here is for developers to submit code and docume
     ```
     $ git remote -v
     ```
+    This should display origin and upstream as below:
+
+    ```
+    origin	https://github.com/<your_github_id>/inji.git (fetch)
+    origin	https://github.com/<your_github_id>/inji.git (push)
+    upstream	https://github.com/mosip/inji.git (fetch)
+    upstream	https://github.com/mosip/inji.git (push)
+    ```
 
 ## Code changes
 
-1. Create a new issue in GitHub.
+1\. Create a new issue in GitHub.
    1. Follow the issue template provided.
    2. Please provide as much information as possible.
    3. If you want to develop a new feature, please elaborate on the idea and discuss the design before starting development.
-2. In your local repository, fetch the upstream.
+2\. In your local repository, fetch the upstream.
 
 ```
 $ git fetch upstream
 ```
 
-3\. On your local repo, switch to a branch if you are working on an older release or stay in `main/develop` branch.&#x20;
+3\. On your local repo, switch to a branch if you are working on an older release or stay in `main/develop` branch.
 
 ```
 $ git checkout upstream/<branch> 
@@ -91,12 +99,12 @@ $ git pull upstream <branch>
 $ git push --set-upstream origin issue-<issue number>
 ```
 
-10\. On your forked remote repository from GitHub, create a pull request using the Contribute button. Direct the pull-request to `main` or any specific branch upstream.&#x20;
+10\. On your forked remote repository from GitHub, create a pull request using the Contribute button. Direct the pull-request to `main` or any specific branch upstream.
 
 {% hint style="info" %}
-Most often it's the same branch in the upstream (as in Step 3).&#x20;
+Most often it's the same branch in the upstream (as in Step 3).
 {% endhint %}
 
-11\. Make sure the automatic tests on GitHub for your pull request pass.
+11\. Make sure the automatic tests/checks on GitHub for your pull request pass.
 
-12\. Reviewers shall review the pull request. Reach out to the [community](https://community.mosip.io) for a faster response.&#x20;
+12\. Reviewers shall review the pull request. Reach out to the [community](https://community.mosip.io) for a faster response.
