@@ -1,31 +1,37 @@
-# Face SDK
+# Face Match SDK
 
 * This is a `react native component library` created to perform face match in Inji.
 * The library takes two images as base64 encoded strings and returns a boolean match or no match.
-* This library supports only ANDROID currently. iOS is not supported.
+
+### Repositories
+
+{% embed url="https://github.com/mosip/mosip-mobileid-sdk/tree/IrisScan" %}
 
 ## Installation
 
-* Using npm
-  * `npm install mosip-inji-face-sdk`
-* Using yarn
-  * `yarn add mosip-inji-face-sdk`
+* Add dependency in package.json
+  
+  `"mosip-mobileid-sdk": "git://github.com/mosip/mosip-mobileid-sdk.git#IrisScan"`
 
 ## Usage
 
+* Download the model file
 ```
-import { faceAuth } from "mosip-inji-face-sdk";
+import {init} from 'mosip-mobileid-sdk';
 
-## refer to /example/src/Auth.tsx for usage
+## refer to /src/index.tsx init method for usage
 ```
 
-## Latest stable version
+* Compare images to verify face matches or not
+```
+import { faceAuth } from "mosip-mobileid-sdk";
 
-`"0.1.12"`
+## refer to /src/index.tsx faceAuth method for usage
+```
 
 ### API Specification
 
-The SDK will be used by Inji for biometric authentication. An SDK system that integrates with MOSIP should support the following operations:
+The SDK will be used by Inji for biometric authentication. An SDK system that integrates with Inji should support the following operations:
 
 ### **Init**
 
@@ -34,7 +40,7 @@ The init function is used for loading the model. It accepts the secure URL of th
 **Signature**
 
 ```
-export async function init(url: string, overrideCache: boolean) {
+export async function init(path: string): Promise<boolean> {
   // logic here
 }
 ```
@@ -44,13 +50,13 @@ export async function init(url: string, overrideCache: boolean) {
 | **Name**      | **Description**                              | **Type**   |
 | ------------- | -------------------------------------------- | ---------- |
 | url           | Secure url of the model                      | Secure url |
-| overrideCache | boolean indicator to override existing model | boolean    |
 
-_Standard Return Codes (match or no match)_
+_Standard Return Codes (true or false)_
 
-| **response** | **Status** |
-| ------------ | ---------- |
-| throws error | Error      |
+| **Response** | **Status** |
+|--------------|------------|
+| true         | Success    |
+| false        | Error      |
 
 ### **Face Matching**
 
@@ -76,8 +82,8 @@ export function faceAuth(
 
 _Standard Return Codes (match or no match)_
 
-| **response**  | **Status**  |
-| ------------- | ----------- |
-| true          | Matched     |
-| false         | Not Matched |
-| error message | Error       |
+| **response** | **Status**  |
+|--------------| ----------- |
+| true         | Matched     |
+| false        | Not Matched |
+| false        | Error       |
