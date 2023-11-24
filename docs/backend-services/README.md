@@ -4,5 +4,5 @@ This section contains the guides and information that could benefit the develope
 
 For more information on backend systems, read through:
 
-1. [Mimoto service](https://docs.mosip.io/inji/backend-services/mimoto)
-2. [esignet service](https://docs.mosip.io/inji/backend-services/esignet)
+1. [Mimoto service](mimoto.md)
+2. [esignet service](esignet.md)
