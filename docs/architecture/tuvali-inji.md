@@ -32,7 +32,7 @@ The connection param is a URI with a name & a key. The `name` is the client's na
 OPENID4VP://connect:?name=OVPMOSIP&key=69dc92a2cc91f02258aa8094d6e2b62877f5b6498924fbaedaaa46af30abb364
 ```
 
-* The `key` part of the data is the same data that will be advertised by the `advertiser` device but in hex-encoded form.
+* The `key` part of the data is the same data that will be advertised by the `verifier` device but in hex-encoded form.
 
 &#x20;  E.g: OVPMOSIP://connect:?name=\<\>&key=\<verifier public key\>
 
@@ -145,47 +145,32 @@ sequenceDiagram
     participant Inji Wallet
     
     rect white
-        Inji Verifier ->> Tuvali Verifier: destroyConnection
-        Tuvali Verifier --) Inji Verifier: CONNECTION_DESTROYED
+        Inji Verifier ->> Tuvali Verifier: disconnect()
+        Inji Verifier ->> Tuvali Verifier: handleDataEvents()
+        Tuvali Verifier --) Inji Verifier: "onDisconnected"
 
-        Inji Verifier ->> Tuvali Verifier: getConnectionParams
-        Inji Verifier ->> Tuvali Verifier: createConnection('advertiser',...)
-        Tuvali Verifier ->> Tuvali Verifier: starts advertisement
+        Inji Verifier ->> Tuvali Verifier: startAdvertisement
+        Tuvali Verifier ->> Tuvali Verifier: "starts BLE advertisement"
 
         Tuvali Verifier --) Tuvali Wallet: advertisement
-        Tuvali Verifier --) Tuvali Wallet: advertisement
-        
+        Inji Wallet ->> Tuvali Wallet: handleDataEvents()
 
-        Inji Wallet ->> Tuvali Wallet: destroyConnection
-        Tuvali Wallet --) Inji Wallet: CONNECTION_DESTROYED
+        Inji Wallet ->> Inji Wallet: starts scanning for QR
 
-        Inji Wallet ->> Tuvali Wallet: setConnectionParams
-        Inji Wallet ->> Tuvali Wallet: createConnection('discoverer,...)
-        Tuvali Wallet ->> Tuvali Wallet: starts scanning
+        Inji Wallet ->> Tuvali Wallet: startConnection(uri)
+
 
         Tuvali Wallet -->> Tuvali Verifier: BLE connection
-        Tuvali Verifier --) Inji Verifier: CONNECTED
-        Tuvali Wallet --) Inji Wallet: CONNECTED
+        Tuvali Wallet ->> Inji Wallet: "onConnected"
     end
 
     rect white
-        Inji Verifier ->> Tuvali Verifier: handleNearbyEvents('exchange-sender-info', ...)
-        Inji Wallet ->> Tuvali Wallet: send('exchange-sender-info', ...)
-
-        Inji Wallet ->> Tuvali Wallet: handleNearbyEvents('exchange-receiver-info',...)
-        Inji Verifier ->> Tuvali Verifier: send('exchange-receiver-info',...)
-        
-        Tuvali Verifier --) Inji Verifier: EXCHANGE_DONE
-        Tuvali Wallet --) Inji Wallet: EXCHANGE_DONE
-    end
-
-    rect white
-        Inji Verifier ->> Tuvali Verifier: handleNearbyEvents('send-vc', ...)
-        Inji Wallet ->> Tuvali Wallet: send('send-vc',...)
-
-        Tuvali Wallet -->> Tuvali Verifier: Chunked VC transfer over BLE
-
+        Inji Wallet ->> Tuvali Wallet: sendData('<VC>')
+        Tuvali Wallet -->> Tuvali Verifier: Key exchange & chunked VC transfer over BLE
         Tuvali Verifier --) Inji Verifier: VC_RECEIVED
         Tuvali Wallet --) Inji Wallet: RECEIVED
+        Tuvali Wallet --) Tuvali Verifier: disconnect()
+        Tuvali Verifier ->> Inji Verifier: "onDisconnected"
+        Tuvali Wallet ->> Inji Wallet: "onDisconnected"
     end
 ```
