@@ -6,12 +6,10 @@ These libraries are accessible as NPM modules, allowing seamless integration wit
 
 The libraries are as follows:\
 
-
 1. &#x20;NPM module for sharing via BLE
 2. &#x20;NPM module for matching faces
 3. &#x20;NPN module for using secure keystore
-4. &#x20;NPM module of Telemetry (planned)
-
+4. &#x20;NPM module of Telemetry (coming soon)
 
 
 #### **1. NPM Module for Sharing via BLE** ([Tuvali](https://www.npmjs.com/package/mosip-react-native-tuvali))
@@ -28,19 +26,17 @@ The libraries are as follows:\
 
 **Note**:&#x20;
 
-To learn more about Tuvali's implementation, refer [here](https://docs.mosip.io/inji/tuvali).\
-For information on Tuvali permissions and requirements, refer [here](https://docs.mosip.io/inji/tuvali/tuvali-requirements).\
-To understand Tuvali and Inji integration, along with API documentation, refer [here](https://docs.mosip.io/inji/tuvali/tuvali-inji).
+* To learn more about Tuvali's implementation, refer [here](https://docs.mosip.io/inji/tuvali).\
+* For information on Tuvali permissions and requirements, refer [here](https://docs.mosip.io/inji/tuvali/tuvali-requirements).\
+* To understand Tuvali and Inji integration, along with API documentation, refer [here](https://docs.mosip.io/inji/tuvali/tuvali-inji).
 
 #### 2. NPM Module for Matching Faces
 
-The face matcher SDK internally implements native functionalities for Android and iOS, utilizing Tensorflow and Google ML Kit to identify faces.
+The face matcher SDK internally implements native functionalities for Android and iOS, utilizing [Tensorflow](https://www.tensorflow.org/) and [Google ML Kit](https://developers.google.com/ml-kit) to identify faces.
 
 This SDK internally employs a tflite model, which must be created by the integrating party. The model, trained using resident faces, is stored on the MOSIP file server. Inji currently utilizes the face matcher SDK (soon to be replaced by the NPM module) for offline face authentication.\
 
-
 The SDK is employed in two scenarios:\
-
 
 **During Offline VC Sharing**: Residents can perform selfie authentication before sharing the VC with the relying party. The app opens the camera, allowing residents to take a selfie, which is then validated against the VC image to verify the resident's presence.\
 \
@@ -48,40 +44,34 @@ The SDK is employed in two scenarios:\
 
 Upon the initial launch of Inji, the model is downloaded in the background and stored in the cache. Refer here to check the API spec for the face matcher model.
 
-3. NPN module for using secure keystore([Secure Keystore](https://www.npmjs.com/package/mosip-react-native-secure-keystore))
-4. NPN module for using secure keystore([Secure Keystore](https://www.npmjs.com/package/mosip-react-native-secure-keystore))&#x20;
+### 3. NPN module for using secure keystore([Secure Keystore](https://www.npmjs.com/package/mosip-react-native-secure-keystore))
 
 The [secure-keystore](https://github.com/mosip/secure-keystore) library is a react native module. This is used to create, store key-pairs in android hardware keystore, allows encryption, decryption and HMAC calculation.
 
 It also helps to sign with aliases, created as part of key pair generation.
 
-As the description says, this module is only for Android devices which support hardware keystore
+As the description says, this module is only for Android devices which support hardware keystore.
 
-Refer [here](https://github.com/mosip/secure-keystore/blob/develop/src/interface.ts) to check all the API supported by this module.
+To check all the API supported by this module, refer [here](https://github.com/mosip/secure-keystore/blob/develop/src/interface.ts). 
 
 **Note**:&#x20;
 
-* This is supported for Android only.
-* For devices which support hardware keystore.
+* This feature is exclusive to the Android operating system.
+* It is only compatible with devices that have a hardware keystore.
 
-2. NPM module of Telemetry&#x20;
+### 4. NPM module of Telemetry&#x20;
 
 This [telemetry](https://github.com/mosip/sunbird-telemetry-sdk) module is derived from the [sunbird telemetry](https://github.com/project-sunbird/sunbird-telemetry-sdk) module. It is responsible for generating events that can provide valuable analytics.
 
-Note: This is not published yet as it is WIP. Nevertheless, it is coming soon!
+_Note_: The publication of this project is currently a work in progress and has not been released yet. However, it will be available in the near future.
 
 \
-
-
 
 
 &#x20;
 
 \
 
-
-
-
 \
 \
 \
@@ -91,42 +81,7 @@ Note: This is not published yet as it is WIP. Nevertheless, it is coming soon!
 \
 
 
-\
-
-
-\
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+--------------------------------------------------------------------------------------
 \--------------------------------------------------------------------------------
 
 Below is the description of the two most important components of Inji:
