@@ -15,17 +15,17 @@ To address and successfully execute the DB upgrade script, the following steps c
 1. Identify the duplicate entries in the mosip_keymanager table.
 2. To accomplish this, use the provided SQL query:
    
-```
-SELECT * 
-FROM keymgr.ca_cert_store 
-WHERE (cert_thumbprint, partner_domain) IN 
-      (SELECT cert_thumbprint, partner_domain 
-       FROM your_table_name 
-       GROUP BY cert_thumbprint, partner_domain 
-       HAVING COUNT(*) > 1);
-```
+   ```
+   SELECT * 
+   FROM keymgr.ca_cert_store 
+   WHERE (cert_thumbprint, partner_domain) IN 
+         (SELECT cert_thumbprint, partner_domain 
+          FROM your_table_name 
+          GROUP BY cert_thumbprint, partner_domain 
+          HAVING COUNT(*) > 1);
+   ```
 
-This query will retrieve the rows of data that contain duplicate entries.
+   This query will retrieve the rows of data that contain duplicate entries.
 
 3. As a precautionary measure, it is advisable to create a backup of all the duplicate values.
 
