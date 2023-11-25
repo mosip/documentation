@@ -1,4 +1,4 @@
-# How to effectively manage an error in a Database upgrade script. 
+# How to effectively manage an error in a Database upgrade script
 
 **What is the issue at hand?**
 
