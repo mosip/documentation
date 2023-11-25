@@ -34,7 +34,7 @@ The libraries are as follows:\
 
 The face matcher SDK internally implements native functionalities for Android and iOS, utilizing [Tensorflow](https://www.tensorflow.org/) and [Google ML Kit](https://developers.google.com/ml-kit) to identify faces.
 
-This SDK internally employs a tflite model, which must be created by the integrating party. The model, trained using resident faces, is stored on the MOSIP file server. Inji currently utilizes the face matcher SDK (soon to be replaced by the NPM module) for offline face authentication.\
+This SDK internally employs a `tflite` model, which must be created by the integrating party. The model, trained using resident faces, is stored on the MOSIP file server. Inji currently utilizes the face matcher SDK (soon to be replaced by the NPM module) for offline face authentication.\
 
 The SDK is employed in two scenarios:\
 
