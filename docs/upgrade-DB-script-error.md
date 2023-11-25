@@ -5,10 +5,10 @@
 We have encountered an error while attempting to execute the upgrade script.
 
 ```
-psql:sql/1.1.5.5_to_1.2.0.1-B1_upgrade.sql:13: ERROR: could not create unique index `cert_thumbprint_unique` DETAIL: Key (cert_thumbprint, partner_domain)=(231bd472ab24ef60ec6*******2cace89c34, AUTH) is duplicated. psql:sql/1.1.5.5_to_1.2.0.1-B1_upgrade.sql:13: STATEMENT: ALTER TABLE keymgr.ca_cert_store ADD CONSTRAINT cert_thumbprint_unique UNIQUE (cert_thumbprint,partner_domain);
+psql:sql/1.1.5.5_to_1.2.0.1-B1_upgrade.sql:13: ERROR: could not create unique index "cert_thumbprint_unique" DETAIL: Key (cert_thumbprint, partner_domain)=(231bd472ab24ef60ec6*******2cace89c34, AUTH) is duplicated. psql:sql/1.1.5.5_to_1.2.0.1-B1_upgrade.sql:13: STATEMENT: ALTER TABLE keymgr.ca_cert_store ADD CONSTRAINT cert_thumbprint_unique UNIQUE (cert_thumbprint,partner_domain);
 ```
 
-The error message states that a unique index, named "cert_thumbprint_unique", cannot be created due to a duplicate entry. Specifically, the values for the `cert_thumbprint` and `partner_domain` columns, which are (231bd472ab24ef60ec6*******2cace89c34, AUTH), already exist in the database. This duplicate entry violates the unique constraint defined for the `ca_cert_store` table in the `mosip_keymanager` database.
+The error message states that a unique index, named `cert_thumbprint_unique`, cannot be created due to a duplicate entry. Specifically, the values for the `cert_thumbprint` and `partner_domain` columns, which are (231bd472ab24ef60ec6*******2cace89c34, AUTH), already exist in the database. This duplicate entry violates the unique constraint defined for the `ca_cert_store` table in the `mosip_keymanager` database.
 
 To address and successfully execute the DB upgrade script, the following steps can be taken:
 
