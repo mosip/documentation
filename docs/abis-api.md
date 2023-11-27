@@ -148,7 +148,7 @@ The reference URL is MOSIP's datashare URL which is generated based on a policy 
 
 As mentioned above in order to access the request URL the ABIS system needs to send a JWT token inside the request header COOKIE. In order to get the token ABIS needs to call MOSIP's AuthN & AuthZ API with Client ID & Secret Key by passing the credentials (clientid, secretkey and appid) which would be provided by the System Integrator (SI).
 
-Below are the sample API details for getting the authentication token. More details about the API are available in our [AuthN & AuthZ document](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key).
+Below are the sample API details for getting the authentication token. More details about the API are available in our [AuthN & AuthZ document](https://docs.mosip.io/1.1.5/apis/authn-and-authz-apis).
 
 **Sample Request URL**
 
@@ -231,7 +231,6 @@ Block 2, i.e. the encrypted actual data is again split into two parts,
 
 * The 1st part is the random 32 bytes which will be used as _**AAD**_ in AES encryption(first 32 bytes). From this 32 bytes AAD data, the first 12 bytes is _**IV/Nonce**_.
 * The 2nd part is the encrypted data which is encrypted using AES GCM PKCS5Padding.
-
 
 
 **The structure of the encrypted data downloaded from referenceURL in MOSIP 1.1.5.5 or prior versions**
