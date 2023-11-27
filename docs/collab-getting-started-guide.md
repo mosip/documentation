@@ -33,7 +33,7 @@ Before starting with the Collab environment, please ensure you have the followin
 #### Pre-registration Setup Guide
 
 * Pre-registration is a MOSIP module that allows residents to pre-register themselves by providing demographic data, upload documents, and book appointments, before official registration at the registration center, thereby optimizing the enrollment process. To learn more about pre-registration click [here](https://docs.mosip.io/1.2.0/modules/pre-registration).
-* For the end-to-end process on how to set up the Pre-registration Client in the Collab environment, click here (Coming Soon).
+* For the end-to-end process on how to set up the Pre-registration Client in the Collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-pre-registration-guide).
 * For details on how to use the application, refer to our [end user guide](https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-user-guide).
 * Wireguard access is not required to set this up.
 
@@ -47,14 +47,14 @@ Before starting with the Collab environment, please ensure you have the followin
 #### Partner Management Setup Guide
 
 * MOSIP's Partner management services (PMS) module streamlines partner onboarding, policy management, and data sharing. It comprises of Partner Management and Policy Management Services, providing essential support for effective collaboration within MOSIP. To learn more, click [here](https://docs.mosip.io/1.2.0/modules/partner-management-services).
-* For the end-to-end process of how to run Partner Management in our collab environment, click here (Upcoming).
+* For the end-to-end process of how to run Partner Management in our collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-pmp-guide).
 * For details on how to use the application, refer to our [end user guide](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-portal).
 * Accessing this module and running it on your local system will require [wireguard access](wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
 
 #### e-Signet Setup Guide
 
 * e-Signet aims to offer a simple yet powerful mechanism for end users to identify themselves to avail the online services and also share their profile information. To learn more about e-Signet, click [here](https://docs.esignet.io/).
-* For the end-to-end process of how to run e-Signet in our Collab environment, click here (Coming soon).
+* For the end-to-end process of how to run e-Signet in our Collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-esignet-setup-guide).
 * For details on how to use the application, refer to our [end user guide](https://docs.esignet.io/esignet-end-user-guide).
 * Wireguard access is not required to set this up.
 
