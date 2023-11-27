@@ -1,23 +1,16 @@
-# Sandbox Details
+# Try it out
 
-Are you a partner looking to integrate with us and explore **Inji**? \
-We invite you to connect with us by completing the [form](https://forms.gle/WvKajxxZ6Jy2K5TM6) here.\
-This will assist us in facilitating a seamless integration with our designated sandbox environments.
+If you're a partner interested in integrating with Inji, we encourage you to initiate the process by completing the form available [here](https://forms.gle/WvKajxxZ6Jy2K5TM6). This step is crucial for ensuring a smooth integration with our designated sandbox environments.
 
-## Collab
+#### Collab: Development Integration Environment
 
-Collab is our development integration environment that has QA tested dockers deployed. Our partners and contributors can use this to build on the platform or integrate with the QA-certified version of the latest platform code.
+Collab serves as our development integration environment featuring QA-tested dockers. It's a dedicated space where our partners and contributors can build on the platform or integrate with the QA-certified version of the latest platform code.
 
-Regular nightly builds from engineering are deployed here and this environment is used for continuous development.
+This environment undergoes regular nightly builds from our engineering team, making it a hub for continuous development activities. For access to environment related resources, please refer to the provided [link](https://collab.mosip.net/).
 
-Environment links are available [here](https://collab.mosip.net/).
+#### Synergy: Stable Integration Environment
 
-To explore Inji and its features in Collab environment, refer [Inji Setup Guide](https://docs.mosip.io/inji/sandbox-details/inji-setup-guide).
+Synergy represents our stable environment where the most recently released version of the MOSIP platform and applications are deployed for partners to seamlessly integrate and conduct testing.
 
-## Synergy
-
-Synergy is our stable environment where the latest released version of the MOSIP platform and applications are deployed for partners to integrate and test.
-
-Environment links are available [here](https://synergy.mosip.net/).
-
+For quick access to environment related resources, please visit the provided [link](https://synergy.mosip.net/).
 
