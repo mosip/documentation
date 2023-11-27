@@ -34,10 +34,3 @@ If the user encounters this error code, it means that the user is not authentica
 
 If the user encounters this error code, it means that there is an issue with either the CA or SUBCA certificate. The user must resolve the CA/SUBCA issue first.
 
-`KER-PCM-008 Partner Organization Name not Matched`.
-
-If the user encounters this error code, it means that the partner's certificate has a different organization name from what the partner originally registered with.
-
-The registration details can be found in the `mosip_pms` partner table, where the org name is stored under the column name.
-
-To fix this issue manually, the user will need to update this table with the new value based on the fresh certificates.
