@@ -1,4 +1,6 @@
 fileignoreconfig:
 - filename: docs/architecture/tuvali-inji.md
   checksum: cdce594bb8a8adda74aa516309af45c793b6c46946d13f70c966bd36c8c8c534
+- filename: docs/.gitbook/assets/mimoto.json
+  checksum: bd81855945717db5eb2b0d7217225080cf166c7f965f1bd1edf891fd5af4c644
 version: ""
