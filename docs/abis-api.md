@@ -999,7 +999,7 @@ With this calculation:
 
 ## References
 
-* [Biometric Specification](Biometric-Specification.md) to know about the biometric specification in MOSIP
-* [CBEFF XML](CBEFF-XML.md) to how MOSIP stores biometric data
-* [Authentication and Authorization API](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key) to get the JWT token
-* [MOSIP's de-duplication process](Deduplication-and-Manual-Adjudication.md) for details about the De-Duplication process in MOSIP
+* [Biometric Specification](https://docs.mosip.io/1.1.5/biometrics/mosip-device-service-specification) to know about the biometric specification in MOSIP.
+* [CBEFF XML](https://docs.mosip.io/1.2.0/biometrics/cbeff-xml) to know how MOSIP stores biometric data.
+* [Authentication and Authorization API](https://docs.mosip.io/1.1.5/apis/authn-and-authz-apis) to get the JWT token.
+* [MOSIP's de-duplication process](https://docs.mosip.io/1.1.5/modules/registration-processor/deduplication-and-manual-adjudication) for details about the De-Duplication process in MOSIP.
