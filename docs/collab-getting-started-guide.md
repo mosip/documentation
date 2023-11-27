@@ -102,7 +102,7 @@ Before starting with the Collab environment, please ensure you have the followin
 #### Resident Services Setup Guide
 
 * The Resident Services application is a self-service-based portal, that can be used by the residents themselves. It is a web-based UI application that provides residents of a country the services related to managing their Unique Identification Number (UIN).To learn more about Resident Services, click [here](https://docs.mosip.io/1.2.0/modules/resident-services).
-* For the end-to-end process of how to run Resident Services in our Collab env, click here. (Upcoming)
+* For the end-to-end process of how to run Resident Services in our Collab env, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-resident-portal-guide).
 * Wireguard access is not required to set this up.
 
 #### Kafka Services
