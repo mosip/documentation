@@ -1,8 +1,8 @@
 # Version 0.10.0
 
-**Release Name**: Inji 0.10.0 (Patch)
+**Release Name**: Inji 0.10.0 
 
-**Upgrade From**: Inji 0.9.0 (Beta)
+**Upgrade From**: Inji 0.9.0 
 
 **Support**: Developer Release
 
@@ -52,7 +52,6 @@ Below is the detailed summary of the release.
 * Introduces new screens allowing users to select issuers before downloading Verifiable Credentials (VC).
 * eSignet and MOSIP have been successfully onboarded as Identity Providers within Inji.
 
-
 #### Advanced Facial Recognition authorization
   
 Inji now employs advanced facial recognition libraries for secure and seamless authorization of Verifiable Credential (VC) transfers.
@@ -61,20 +60,29 @@ Inji now employs advanced facial recognition libraries for secure and seamless a
   
 A unique application ID (App ID) is now associated with each unique installation of INJI. It is made accessible to the users.
 
+## Repository Released
+
+| **Repositories**            | **Tags Released**                                                                        |
+| --------------------------- | ---------------------------------------------------------------------------------------- |
+|         | []()             |
+|            | []() |
+|          | []()     |
+| | []()                            |
+
 ## Known Issues
 
-Redmi devices are not supported for this release. Link to [known issues in Redmi device](https://mosip.atlassian.net/issues/?filter=-4&jql=labels%20%3D%20redmi%20order%20by%20created%20DESC).
-<to be updated>
+Redmi devices are not supported for this release. To know more, refer to [known issues in Redmi device](https://mosip.atlassian.net/issues/?filter=-4&jql=labels%20%3D%20redmi%20order%20by%20created%20DESC).
+
 
 ## Bug Fixes
 
-1. The user will be redirected to the MOSIP page successfully from the ‘About INJI’ screen. Earlier the link was crashing the app.  [INJI 225](https://mosip.atlassian.net/browse/INJI-225)
-2. The user will be able to login into eSignet’s portal via QR code, using the VC activated on Home screen via. ellipsis menu. [INJI 253](https://mosip.atlassian.net/browse/INJI-253)
-3. App will prompt and remove tampered VC. [INJI 397](https://mosip.atlassian.net/browse/INJI-397)
-4. The user will be asked for language preference only at new installation. [INJI 362](https://mosip.atlassian.net/browse/INJI-362)
-5. Previously used UIN/VID will not be suggested in the AID field for VC download. [INJI 332](https://mosip.atlassian.net/browse/INJI-332)
-6. The user will be able to see the detailed view of ‘Received’ VC. [INJI 329](https://mosip.atlassian.net/browse/INJI-329)
-7. The user will be redirected to an intermittent downloading screen, when download is triggered from OpenID supported issuer. [INJI 458](https://mosip.atlassian.net/browse/INJI-458)
+1. The user will now be redirected to the MOSIP page successfully from the `About INJI` screen. Earlier the link was crashing the app. #[INJI 225](https://mosip.atlassian.net/browse/INJI-225)
+2. The user will be able to login into eSignet’s portal via QR code, using the VC activated on Home screen via. ellipsis menu. #[INJI 253](https://mosip.atlassian.net/browse/INJI-253)
+3. App will prompt and remove tampered VC. #[INJI 397](https://mosip.atlassian.net/browse/INJI-397)
+4. The user will be asked for language preference only at new installation. #[INJI 362](https://mosip.atlassian.net/browse/INJI-362)
+5. Previously used UIN/VID will not be suggested in the AID field for VC download. #[INJI 332](https://mosip.atlassian.net/browse/INJI-332)
+6. The user will be able to see the detailed view of `Received` VC. #[INJI 329](https://mosip.atlassian.net/browse/INJI-329)
+7. The user will be redirected to an intermittent downloading screen, when download is triggered from OpenID supported issuer. #[INJI 458](https://mosip.atlassian.net/browse/INJI-458)
 
 ## Documentation 
 
