@@ -500,11 +500,11 @@ sudo systemctl restart nginx
 
 ```
 cd $K8_ROOT/rancher/rancher-ui
-helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+helm repo add rancher https://releases.rancher.com/server-charts/stable
 helm repo update
 kubectl create ns cattle-system
 kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem=./tls.crt
-helm install rancher rancher/rancher --version v2.6.3 \
+helm install rancher rancher/rancher --version 2.6.3 \
 --namespace cattle-system \
 --create-namespace \
 --set privateCA=true \
@@ -838,7 +838,7 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
         * SSL cert path
         * SSL key path
         * Cluster node ip's (comma separated no whitespace)
-* In case using openssl wildcard ssl certificate add below server block in nginx server configuration, Ignore in case of ssl cerst obtained using letsencrypt or for publically available domains. (Ensure to use this only in development env, not suggested for Production env).
+* In case using openssl wildcard ssl certificate add below server block in nginx server configuration under http block, Ignore in case of ssl cerst obtained using letsencrypt or for publically available domains. (Ensure to use this only in development env, not suggested for Production env).
     * `nano /etc/nginx/nginx.conf`
     ```
     server{
