@@ -34,7 +34,7 @@
   * [Face SDK](specifications/face-sdk.md)
 * [Backend Service](backend-services/README.md)
   * [Mimoto](backend-services/mimoto.md)
-  * [e-Signet](backend-services/esignet.md)
+  * [eSignet](backend-services/esignet.md)
 * [End User Guide](enduser-guide.md)
 * [Supported Integrations](supported-integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
