@@ -500,11 +500,11 @@ sudo systemctl restart nginx
 
 ```
 cd $K8_ROOT/rancher/rancher-ui
-helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
+helm repo add rancher https://releases.rancher.com/server-charts/stable
 helm repo update
 kubectl create ns cattle-system
 kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem=./tls.crt
-helm install rancher rancher-latest/rancher \
+helm install rancher rancher/rancher --version 2.6.3 \
 --namespace cattle-system \
 --create-namespace \
 --set privateCA=true \
@@ -828,7 +828,7 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
     * Login to nginx server node.
     * Clone [k8s-infra](https://github.com/mosip/k8s-infra)
     ```
-    cd $K8_ROOT/rancher/on-prem/nginx
+    cd $K8_ROOT/mosip/on-prem/nginx
     sudo ./install.sh
     ```
     * Provide below mentioned inputs as and when prompted
@@ -838,10 +838,9 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
         * SSL cert path
         * SSL key path
         * Cluster node ip's (comma separated no whitespace)
-* In case using openssl wildcard ssl certificate add below http block in nginx server configuration, Ignore in case of ssl cerst obtained using letsencrypt or for publically available domains. (Ensure to use this only in development env, not suggested for Production env).
+* When utilizing an openssl wildcard SSL certificate, please add the following server block to the nginx server configuration within the http block. Disregard this if using SSL certificates obtained through letsencrypt or for publicly available domains. Please note that this should only be used in a development environment and is not recommended for production environments.
     * `nano /etc/nginx/nginx.conf`
     ```
-        http{
     server{
        listen <cluster-nginx-internal-ip>:80;
        server_name iam.sandbox.xyz.net;
@@ -860,7 +859,6 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
        }
        location / { return 301 https://iam.sandbox.xyz.net; }
       }
-    }
     ```
     * Note: HTTP access is enabled for IAM because MOSIP's keymanager expects to have valid SSL certificates. Ensure to use this only for development purposes, and it is not recommended to use it in production environments.
     * Restart nginx service.
