@@ -56,7 +56,9 @@ Inji allows the users to download VC by redirecting to user to eSignet UI. Multi
 
 * Inji initiates authenticate API by redirecting user to eSignet UI. On eSignet UI, user is given option to enter the unique ID, the user is asked to enter an OTP on the next screen. In the backend, below API is called to get token.
 
-[//]: <> (Add get token endpoint)
+{% swagger src="../.gitbook/assets/mimoto.json" path="/get-token" method="post" %}
+[mimoto.json](../.gitbook/assets/mimoto.json) `
+{% endswagger %}
 
 * After getting token response, Inji initiates download request. Refer [here](./esignet.md#download-vc) 
 

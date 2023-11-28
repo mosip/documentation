@@ -251,7 +251,7 @@
                     }
                 },
                 "summary": "Generate Otp for wallet binding",
-                "description": "This api is used to generate otp for wallet binding.\nThis api is used as a proxy to call [Identity Provider - Send Binding OTP Endpoint](https://mosip.stoplight.io/docs/identity-provider/a34e5371d4876-send-binding-otp-endpoint-draft) api internally."
+                "description": "This api is used to generate otp for wallet binding.\nThis api is used as a proxy to call [Identity Provider - Send Binding OTP Endpoint](https://mosip.stoplight.io/docs/identity-provider/mk9xsyt7rvnez-send-binding-otp-endpoint) api internally."
             }
         },
         "/wallet-binding": {
@@ -545,7 +545,7 @@
                     }
                 },
                 "summary": "Bind Credential with wallet",
-                "description": "This api is used to bind the credential   with wallet.\nThis api is used as a proxy to call [Identity Provider - Wallet binding Endpoint](https://mosip.stoplight.io/docs/identity-provider/6e91115b16311-wallet-binding-endpoint) api internally."
+                "description": "This api is used to bind the credential   with wallet.\nThis api is used as a proxy to call [Identity Provider - Wallet binding Endpoint](https://mosip.stoplight.io/docs/identity-provider/j4rvet323vah4-wallet-binding-endpoint) api internally."
             }
         },
         "/vid": {

@@ -10,7 +10,7 @@ The user is required to open the portal integrated with eSignet and utilize the 
 
 After successfully scanning the QR code, Inji will access the API below and transmit the link code.
 
-{% swagger src="../.gitbook/assets/Identity-Provider.yaml" path="/linked-authorization/v2/link-transaction" method="post" %}
+{% swagger src="../.gitbook/assets/Identity-Provider.yaml" path="/linked-authorization/link-transaction" method="post" %}
 [Identity-Provider.yaml](../.gitbook/assets/Identity-Provider.yaml)
 {% endswagger %}
 
@@ -32,4 +32,9 @@ The user is currently on the `Add new card` screen and chooses the option to `Do
 
 * Once the user is on the eSignet user interface, they input the necessary information such as a unique ID and OTP (One-time Password). After entering the OTP, the user is redirected back to Inji in order to generate a key pair and initiate the request to download the credential.
 
+For credential request, refer credential_endpoint attribute in issuer's configuration response.
+
+{% swagger src="../.gitbook/assets/mimoto.json" path="/issuers/{issuer-id}t" method="post" %}
+[mimoto.json](../.gitbook/assets/mimoto.json)
+{% endswagger %}
 [//]: <> (Add download credential endpoint)
