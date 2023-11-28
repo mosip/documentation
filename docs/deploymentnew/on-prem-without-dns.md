@@ -838,7 +838,7 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
         * SSL cert path
         * SSL key path
         * Cluster node ip's (comma separated no whitespace)
-* In case using openssl wildcard ssl certificate add below server block in nginx server configuration under http block, Ignore in case of ssl cerst obtained using letsencrypt or for publically available domains. (Ensure to use this only in development env, not suggested for Production env).
+* When utilizing an openssl wildcard SSL certificate, please add the following server block to the nginx server configuration within the http block. Disregard this if using SSL certificates obtained through letsencrypt or for publicly available domains. Please note that this should only be used in a development environment and is not recommended for production environments.
     * `nano /etc/nginx/nginx.conf`
     ```
     server{
