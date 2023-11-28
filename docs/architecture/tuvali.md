@@ -119,7 +119,9 @@ Current Component+ Role Combinations:  TVW(Tuvali+Wallet) | TVV(Tuvali+Verifier)
 * VerifierUnknownException: TVV_UNK_001
 * PeripheralStateHandlerException: TVV_UNK_002
 * VerifierTransferHandlerException: TVV_UNK_003
-* MTUNegotiationException: TVW_CON_001
+* InvalidURIException: TVW_CON_001
+* MTUNegotiationException: TVW_CON_002
+* ServiceNotFoundException: TVW_CON_003
 * TransferFailedException: TVW_REP_001
 * UnsupportedMTUSizeException: TVV_CON_001
 * CorruptedChunkReceivedException: TVV_TRA_001

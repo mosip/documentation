@@ -61,22 +61,11 @@ Inji functions as a comprehensive repository for a diverse array of identity pro
 * **Organized UI**: INJI provides a clear demarcation between downloaded and received identity proofs enhancing user clarity and organization.
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* Downloading your digital credentials (ID) with you at all times just got easier.
+* This can be done in three ways:
+  * **Downloading VC using the UIN/ VID** – Residents can use the country-provided ID (UIN/VID) to download their cards and avail of various government and private services.
+  * **Downloading VC using the Application ID** – Residents can also use their Application ID provided to them during the registration process to be able to download their card.
+  * **Downloading VC using the OpenID for VC Issuance flow** - Residents can download a VC using a configured third party issuer which follows OpenID for VCI standard.
 
 
 
@@ -86,4 +75,4 @@ To understand the QR code login flow, refer [here](https://docs.esignet.io/esign
 
 Also, watch the video below for a quick glimpse of the features available.
 
-{% embed url="https://www.youtube.com/watch?v=JWxJfHMVMFI" %}
+{% embed url="https://www.youtube.com/watch?v=9Z1WuTd8q0M" %}
