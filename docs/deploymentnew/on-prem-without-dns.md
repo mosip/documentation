@@ -838,10 +838,9 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
         * SSL cert path
         * SSL key path
         * Cluster node ip's (comma separated no whitespace)
-* In case using openssl wildcard ssl certificate add below http block in nginx server configuration, Ignore in case of ssl cerst obtained using letsencrypt or for publically available domains. (Ensure to use this only in development env, not suggested for Production env).
+* In case using openssl wildcard ssl certificate add below server block in nginx server configuration, Ignore in case of ssl cerst obtained using letsencrypt or for publically available domains. (Ensure to use this only in development env, not suggested for Production env).
     * `nano /etc/nginx/nginx.conf`
     ```
-        http{
     server{
        listen <cluster-nginx-internal-ip>:80;
        server_name iam.sandbox.xyz.net;
@@ -860,7 +859,6 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
        }
        location / { return 301 https://iam.sandbox.xyz.net; }
       }
-    }
     ```
     * Note: HTTP access is enabled for IAM because MOSIP's keymanager expects to have valid SSL certificates. Ensure to use this only for development purposes, and it is not recommended to use it in production environments.
     * Restart nginx service.
