@@ -1,20 +1,20 @@
-# e-Signet
+# eSignet
 
-The e-Signet service is used by Inji for online login and downloading VC. Users can log in to any service provider portal which is integrated with e-Signet.
+The eSignet service is utilized by Inji for online login and downloading the VC.  Users have the ability to log in to any service provider portal that is integrated with eSignet.
 
 ## Online login
 
-### QR code scan and login to the service provider portal
+### QR code scanning and login to the service provider portal
 
-The user has to open the portal integrated with e-Signet and scan the QR code using the app scanner.
+The user is required to open the portal integrated with eSignet and utilize the app scanner to scan the QR code. 
 
-* After scanning the QR code, Inji will call the below API and pass the link code.
+After successfully scanning the QR code, Inji will access the API below and transmit the link code.
 
 {% swagger src="../.gitbook/assets/Identity-Provider.yaml" path="/linked-authorization/v2/link-transaction" method="post" %}
 [Identity-Provider.yaml](../.gitbook/assets/Identity-Provider.yaml)
 {% endswagger %}
 
-* After completing the offline face authentication and selecting the essential and optional information, the two APIs mentioned below are called.
+* After successfully completing the offline face authentication and selecting the required and optional information, the two specified APIs are invoked.
 
 {% swagger src="../.gitbook/assets/Identity-Provider.yaml" path="/linked-authorization/authenticate" method="post" %}
 [Identity-Provider.yaml](../.gitbook/assets/Identity-Provider.yaml)
@@ -26,12 +26,10 @@ The user has to open the portal integrated with e-Signet and scan the QR code us
 
 ### Download VC
 
-The user is on Add new card screen, and selects download via eSignet.
+The user is currently on the `Add new card` screen and chooses the option to `Download via eSignet`.
 
-* Inji uses `react-native-app-auth` to authorize and redirect user to eSignet UI.
-Configuration for redirection is fetch as part of issuer configuration.
+* Inji utilizes the `react-native-app-auth` library to authorize and redirect the user to the eSignet user interface. The configuration for redirection is retrieved as part of the issuer's configuration.
 
-* Once user is on eSignet UI, user enters required information (unique ID, OTP).
-After entering OTP, user is redirected back to Inji to generate key pair and initiates download credential request.
+* Once the user is on the eSignet user interface, they input the necessary information such as a unique ID and OTP (One-time Password). After entering the OTP, the user is redirected back to Inji in order to generate a key pair and initiate the request to download the credential.
 
 [//]: <> (Add download credential endpoint)
