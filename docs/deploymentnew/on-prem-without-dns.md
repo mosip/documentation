@@ -468,7 +468,7 @@ Install Longhorn via helm
     * Login to nginx server node.
     * Clone [k8s-infra](https://github.com/mosip/k8s-infra)
     ```
-    cd $K8_ROOT/rancher/on-prem/nginx
+    cd $K8_ROOT/mosip/on-prem/nginx
     sudo ./install.sh
     ```
     * Provide below mentioned inputs as and when promted
