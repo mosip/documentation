@@ -4,10 +4,10 @@
 
 The scope of testing is to verify fitment to the specification from the perspective of:
 
-●	Functionality  
-●	Deployability  
-●	Configurability  
-●	Customizability
+ *	Functionality  
+ *	Deployability  
+ *	Configurability  
+ *	Customizability
 
 Verification is performed not only from the end user perspective but also from the System Integrator (SI) point of view. Hence, the configurability and extensibility of the software is also assessed. This ensures readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform, verification scope required comprehensive automation testing for all the MOSIP APIs. An automation Test Rig is created for the same. 
 
@@ -21,10 +21,10 @@ Persona based approach has been adopted to perform the IV&V(Independent Verifica
 
 A Persona is a fictional character/ user profile created to represent a user type that might use a product/ or a service in a similar way. Persona based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software and thereby determines use cases/scenarios that the customers will execute. The persona needs may be addressed through any of the following. 
 
-●	Functionality  
-●	Deployability  
-●	Configurability  
-●	Customizability
+ *	Functionality  
+ *	Deployability  
+ *	Configurability  
+ *	Customizability
 
 The verification methods may differ based on how the need was addressed. 
 
@@ -34,22 +34,14 @@ For regression check, “MOSIP Test Rig”- an automation testing suite - which 
 
 Verification is performed on various configurations as mentioned below:
 
-
 Default configuration (with 6 languages) 
 
     * English
-   
     * Arabic
-   
     * Filipino
-   
     * Hindi
-   
     * Tamil
-   
     * Kannada
-
-
 
 ## Feature Health
 
