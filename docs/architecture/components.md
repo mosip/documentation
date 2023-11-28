@@ -44,9 +44,9 @@ The SDK is employed in two scenarios:\
 
 Upon the initial launch of Inji, the model is downloaded in the background and stored in the cache. Refer here to check the API spec for the face matcher model.
 
-### 3. NPN module for using secure keystore([Secure Keystore](https://www.npmjs.com/package/mosip-react-native-secure-keystore))
+### 3. NPN module for using react-native-secure keystore([Secure Keystore](https://www.npmjs.com/package/mosip-react-native-secure-keystore))
 
-The [secure-keystore](https://github.com/mosip/secure-keystore) library is a react native module. This is used to create, store key-pairs in android hardware keystore, allows encryption, decryption and HMAC calculation.
+The [react-native-secure-keystore](https://github.com/mosip/secure-keystore) library is a react native module. This is used to create, store key-pairs in android hardware keystore, allows encryption, decryption and HMAC calculation.
 
 It also helps to sign with aliases, created as part of key pair generation.
 
