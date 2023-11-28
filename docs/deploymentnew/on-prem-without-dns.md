@@ -504,7 +504,7 @@ helm repo add rancher-latest https://releases.rancher.com/server-charts/latest
 helm repo update
 kubectl create ns cattle-system
 kubectl -n cattle-system create secret generic tls-ca --from-file=cacerts.pem=./tls.crt
-helm install rancher rancher-latest/rancher \
+helm install rancher rancher/rancher --version v2.6.3 \
 --namespace cattle-system \
 --create-namespace \
 --set privateCA=true \
