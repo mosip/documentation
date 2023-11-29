@@ -2,6 +2,16 @@
 
 If you are looking to try out eSignet, here are a few personas that you can use in our Collab environment for testing.
 
+
+
+<figure><img src="../.gitbook/assets/download (15) (1).jpeg" alt=""><figcaption><p>image</p></figcaption></figure>
+
+
+
+{% file src="../.gitbook/assets/download (15) (1).jpeg" %}
+Insert file
+{% endfile %}
+
 ## Personas
 
 Individual pictures are incorporated as well to enable selfie authentication from the Inji app.
