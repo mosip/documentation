@@ -6,6 +6,11 @@ If you are looking to try out eSignet, here are a few personas that you can use 
 
 <table data-card-size="large" data-view="cards" data-full-width="true"><thead><tr><th data-type="users" data-multiple></th><th data-hidden></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-type="users" data-multiple></th><th data-hidden data-type="users" data-multiple></th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/card_1 (1).png">card_1 (1).png</a></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/card_2 (1).png">card_2 (1).png</a></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/card_3 (1).png">card_3 (1).png</a></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/card_4 (1).png">card_4 (1).png</a></td><td></td><td></td></tr></tbody></table>
 
+Individual images are included to facilitate **selfie authentication** for the Inji application.
+
+Please select the appropriate image file corresponding to the chosen UIN above.
+
+
 {% hint style="info" %}
 The data used in the above VIDs is fictitious and the images returned are AI-generated from the website: [https://thispersondoesnotexist.com/](https://thispersondoesnotexist.com/)
 {% endhint %}
