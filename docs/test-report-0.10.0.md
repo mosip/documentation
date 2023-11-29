@@ -86,7 +86,7 @@ Below section provides details on API test metrics by executing MOSIP functional
 |------------|------------|-------------|-------------|
 |     154     |    152      |     2       |    0        |
 
-**Test Rate: 100%**  with **Pass Rate : 97%**
+**Test Rate: 100%**  with **Pass Rate : 99%**
 
 ### Testing End-to-end flow(s) 
 
