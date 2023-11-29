@@ -6,31 +6,31 @@ In this section, we have listed the properties that may change from implementati
 
 These are very basic configuration properties of the eSignet service. Most of them are set to ideal values by default.
 
-* Generated **ID token expiry** time in seconds \
+* Generated **ID token expiry** time in seconds\
   `mosip.esignet.id-token-expire-seconds=3600`
-* Generated **access token expiry** time in seconds \
+* Generated **access token expiry** time in seconds\
   `mosip.esignet.access-token-expire-seconds=3600`
-* Switch off or on the **captcha** token validation in the send OTP request \
+* Switch off or on the **captcha** token validation in the send OTP request\
   `mosip.esignet.send-otp.captcha-required=false`
 * **Time** gap allowed **between** **authentication** **and** **consent** capture in seconds\
   `mosip.esignet.authentication-expire-in-secs`
-* Applicable for QR code-based login: QR code is embedded with link-code which is used by wallet apps to link transactions between the wallet app and the browser. This is the property to define the **lifetime of a link code** in seconds. \
+* Applicable for QR code-based login: QR code is embedded with link-code which is used by wallet apps to link transactions between the wallet app and the browser. This is the property to define the **lifetime of a link code** in seconds.\
   `mosip.esignet.link-code-expire-in-secs=600`
-* Regex to validate the input client ID \
+* Regex to validate the input client ID\
   `mosip.esignet.supported-id-regex=\\S*`
-* e-Signet uses logback for logging. The **log level** of the application can be easily changed with this property. \
+* e-Signet uses logback for logging. The **log level** of the application can be easily changed with this property.\
   `logging.level.io.mosip.esignet=INFO`
 
 ### OAuth and OpenID
 
 * Property to define the list of **authorize scopes**\
   `mosip.esignet.supported.authorize.scopes={'manage-resident-vid'}`
-* Property to define the list of **OpenId scopes** \
+* Property to define the list of **OpenId scopes**\
   `mosip.esignet.supported.openid.scopes={'profile','email','phone'}`
 * Property to define the **OpenId scopes and user claim mappings** `mosip.esignet.openid.scope.claims={'profile' : {'name','picture','gender','birthdate','address'},'email' : {'email'}, 'phone' : {'phone_number'}}`
 
 {% hint style="info" %}
-To know more about the claims supported by eSignet, go through our [claims documentation](claims.md).&#x20;
+To know more about the claims supported by eSignet, go through our [claims documentation](claims.md).
 {% endhint %}
 
 * **OAuth** configuration's **well-known endpoint** is based on the below configuration property. This holds the map which is exactly the same as the [oauth-authorization-server](https://www.rfc-editor.org/rfc/rfc8414.html#section-2)'s well-known spec.\
@@ -40,14 +40,14 @@ To know more about the claims supported by eSignet, go through our [claims docum
 ### VC Issuance
 
 * Property to define the list of **supported credential scopes** `mosip.esignet.supported.credential.scopes={'sample_vc_ldp'}`
-* **Client nonce** used in VCI flow **expiry** in seconds \
+* **Client nonce** used in VCI flow **expiry** in seconds\
   `mosip.esignet.cnonce-expire-seconds=20`
 * **OIDC** **VCI** configuration **well known** **endpoint** is based on the below configuration property. This holds the map which is exactly the same as the [openid-credential-issuer](https://openid.github.io/OpenID4VCI/openid-4-verifiable-credential-issuance-wg-draft.html#name-credential-issuer-metadata) well-known spec.\
   `mosip.esignet.vci.key-values`
 
 ## Cache
 
-e-Signet uses a cache to store all the details about UI transactions which are identified with a transactionId. e-Signet uses the spring-cache abstraction library. Hence e-Signet could be connected with any spring-cache abstraction supported cache server.
+eSignet uses a cache to store all the details about UI transactions which are identified with a transactionId. eSignet uses the spring-cache abstraction library. Hence e-Signet could be connected with any spring-cache abstraction supported cache server.
 
 * By default, it is set to simple to use springs **default in-memory cache** `spring.cache.type=simple`
 * e-Signet transitions the transaction details from one cache to another cache based on the transaction stage. Here is the list of **caches maintained in eSignet**\
@@ -72,7 +72,7 @@ In eSignet, we use runtime plugins to connect with external ID systems or VC Iss
 The below properties define the plugin packages to be scanned and which implementations should be loaded into the spring context.
 
 * Comma-separated list of **plugin implementation packages** to scan by spring `mosip.esignet.integration.scan-base-package=io.mosip.esignet.mock.integration`
-* **Authenticator plugin** implementation is a conditional scanned bean based on the property below \
+* **Authenticator plugin** implementation is a conditional scanned bean based on the property below\
   `mosip.esignet.integration.authenticator=MockAuthenticationService`
 * **Key binder plugin** implementation is a conditional scanned bean based on the property below `mosip.esignet.integration.key-binder=MockKeyBindingWrapperService`
 * **Audit plugin** implementation is a conditional scanned bean based on the property below `mosip.esignet.integration.audit-plugin=LoggerAuditService`
@@ -89,9 +89,9 @@ Configuration properties with respect to mock plugins and MOSIP IDA plugins are 
 The key manager connects with the configured keystore. Below are the configurations used:
 
 * Type of keystore, Supported Types: PKCS11, PKCS12, Offline, JCE `mosip.kernel.keymanager.hsm.keystore-type=PKCS11`
-* For PKCS11 provide Path of config file. For PKCS12 keystore type provide the p12/pfx file path. P12 file will be created internally so provide only the file path & file name. For Offline & JCE property can be left blank, and specified value will be ignored. \
+* For PKCS11 provide Path of config file. For PKCS12 keystore type provide the p12/pfx file path. P12 file will be created internally so provide only the file path & file name. For Offline & JCE property can be left blank, and specified value will be ignored.\
   `mosip.kernel.keymanager.hsm.config-path=/config/softhsm-application.conf`
-* Passkey of keystore for PKCS11, PKCS12.For Offline & JCE proer can be left blank. JCE passwords use other JCE-specific properties. \
+* Passkey of keystore for PKCS11, PKCS12.For Offline & JCE proer can be left blank. JCE passwords use other JCE-specific properties.\
   `mosip.kernel.keymanager.hsm.keystore-pass`
 
 {% hint style="info" %}
@@ -100,15 +100,15 @@ Most of the other key manager configurations need not be changed.
 
 ## eSignet UI
 
-List of properties used by the e-Signet UI to render the UI accordingly.
+List of properties used by the eSignet UI to render the UI accordingly.
 
-* The below property holds the map of ui properties with default values `mosip.esignet.ui.config.key-values`
+* The below property holds the map of ui properties with default values `mosip.esignet.ui.config.key-values.`
 
 Here is the list of keys used in the `mosip.esignet.ui.config.key-values` property.
 
 ### SBI for Biometric Authentication
 
-* `sbi.env` - By default, SBI env is set to 'Develop'&#x20;
+* `sbi.env` - By default, SBI env is set to 'Develop'
 * `sbi.port.range` - Port range to scan for any running SBI
 * `sbi.timeout.DISC` - Timeout for SBI discovery endpoint in seconds
 * `sbi.timeout.DINFO` - Timeout for SBI device info endpoint in seconds

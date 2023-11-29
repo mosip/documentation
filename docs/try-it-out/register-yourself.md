@@ -1,6 +1,6 @@
 # Register Yourself
 
-You can get your credentials added to Collab by filling out [this form](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform). We generally take 1-2 working days to create your credentials.
+You can get your credentials added to Collab by filling [this form](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform). We generally take 1-2 working days to create your credentials.
 
 Once your credentials are generated, you will receive a VID (Virtual ID) from our collab environment at your registered email ID. After which, you will be able to explore eSignet’s capabilities and experience seamless authentication through various channels.
 

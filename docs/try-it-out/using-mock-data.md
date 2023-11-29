@@ -10,6 +10,13 @@ Individual images are included to facilitate **selfie authentication** for the I
 
 Please select the appropriate image file corresponding to the chosen UIN above.
 
+{% file src="../.gitbook/assets/Maria Powell.jpeg" %}
+
+{% file src="../.gitbook/assets/James Rodrigious.jpeg" %}
+
+{% file src="../.gitbook/assets/Gorge Cooper.jpeg" %}
+
+{% file src="../.gitbook/assets/Jane Thompson.jpeg" %}
 
 {% hint style="info" %}
 The data used in the above VIDs is fictitious and the images returned are AI-generated from the website: [https://thispersondoesnotexist.com/](https://thispersondoesnotexist.com/)
@@ -23,6 +30,6 @@ You can visit the Collab health portal using [this link](https://healthservices-
 
 ### OTP Authentication
 
-As you are going to use mock data for testing, you can try out OTP authentication. You can use any of the above [personas](using-mock-data.md#personas) for testing, and the default OTP for testing is "111111" (six ones).
+As you are going to use mock data for testing, you can try out OTP authentication. Any of the provided [personas](using-mock-data.md#personas) above can be used for testing, and the default OTP for testing is "111111" (six ones).
 
 A detailed step-by-step guide on how to log in with OTP using eSignet is also available [here](../end-user-guide/login-with-otp/).

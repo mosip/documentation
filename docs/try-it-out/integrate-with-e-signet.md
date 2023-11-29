@@ -8,7 +8,7 @@ Here are some FAQs on the Google form.
 
 <summary>What are redirect URIs?</summary>
 
-The redirect URIs are the list of URIs the relying party provides where the authorization code needs to be sent after successful authentication by e-Signet.
+The redirect URIs are the list of URIs the relying party provides where the authorization code needs to be sent after successful authentication by eSignet.
 
 </details>
 
@@ -16,7 +16,7 @@ The redirect URIs are the list of URIs the relying party provides where the auth
 
 <summary>Why do you need a public key?</summary>
 
-The public key shared by the relying party is used to verify the digital signature when there is an authorization request. It is also used to encrypt the user\_info and send it to the relying party.
+The public key shared by the relying party is used to verify the digital signature when there is an authorization request. It is also used to encrypt the `user_info` and send it to the relying party.
 
 </details>
 
@@ -47,4 +47,4 @@ Here is the easiest way to convert your public key (a `.PEM` file) to JWK format
 
 </details>
 
-Once you receive the eSignet credentials at the email address provided on the form, please go through our integration guide on [relying party integration](broken-reference) to complete the integration.
+Once you receive the eSignet credentials at the email address provided on the form, please go through our integration guide on [relying party integration](broken-reference/) to complete the integration.

@@ -2,7 +2,6 @@
 
 eSignet is designed with the architectural principles mentioned below. These architecture principles are core to developing the system's features and greatly influence how and why specific software design patterns are used.
 
-
 ## Data Privacy
 
 * As the user enters the ID directly on the eSignet page, the relying party does not have to store the ID, which could otherwise be used for profiling in case of data leaks. The relying party gets a privacy-enabled token that is unique to the relying party and the user and is called the PSUT (Partner Specific User Token).
@@ -11,8 +10,8 @@ eSignet is designed with the architectural principles mentioned below. These arc
 
 ## No Vendor Lock-in
 
-* eSignet is vendor-neutral
-* Any biometric device compatible with the IEEE P3167 SBI 2.0 specification can connect with eSignet
+* eSignet is vendor neutral.
+* Any biometric device compatible with the IEEE P3167 SBI 2.0 specification can connect with eSignet.
 
 ## Commodity Computing
 
