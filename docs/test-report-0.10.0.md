@@ -13,16 +13,19 @@ Verification is performed not only from the end-user perspective but also from t
 
 The `Inji` testing scope revolves around the following flows:
 
-* Biometric Unlock
-* Passcode Unlock
-* VC download with VID
-* Renaming VC / Edit tag for VID
+* Biometric unlock
+* Passcode unlock
+* VC download via MOSIP
+* VC download via eSignet
+* Retriving UIN/VID via AID
+* Pinning a VC
 * Normal VC sharing with VID
-* Online and Offine mode sharing
+* Deleting VC
 * Face Auth on Resident's phone with VID
 * Multi language support
 * Wallet binding
 * QR code Login
+* Logout
 
 ## Test approach
 
@@ -40,7 +43,7 @@ The verification methods may differ based on how the need was addressed.
 For regression check, `MOSIP Test Rig`, an automation testing suite is indigenously designed and developed for supporting persona based testing. MOSIP Test Rig covers the end-to-end test execution and reporting. The end-to-end functional test scenarios are written starting from pre-registration, to creation of packet in registration center, processing the packet through the registration processor, generating UIN and authenticating identity using IDA through various permutation and combinations of cases being covered. MOSIP Test Rig will be an open source artifact which can also be enhanced and used by countries to validate the SI deliveries before going live. Persona classes include both negative and positive personas. Negative persona classes include users like Bribed Registration Office, Malicious Insider etc. The needs of positive persona classes must be met, whereas the needs of negative persona classes must be effectively restricted by the software.
 
 
-## Feature health
+## Feature health-TODO
 
 ![](\_images/inji-test-report1.png)  ![](\_images/inji-test-report2.png)
 
@@ -54,25 +57,25 @@ Below are the test metrics for Inji by performing functional testing using `mock
 
 | **Total**     | **Passed**   |  **Failed**    | **Skipped**   |
 |---------------|--------------|----------------|---------------|
-|     359       |   319        |        40      |    0         |
+|     1087       |   863        |      177      |    47         |
 
-**Test Rate: 100%**  with **Pass Rate : 88%**
+**Test Rate: 95%**  with **Pass Rate : 82%**
 
 Here is the detailed breakdown of metrics:
 
 #### On Android Device
 
-* Total Test cases: 185
-  * Passed: 177
-  * Failed: 8
-  * Skipped: 0
+* Total Test cases: 602
+  * Passed: 476
+  * Failed: 99
+  * Skipped: 27
 
 #### On iOS Device
 
-* Total Test cases: 174
-  * Passed: 142
-  * Failed: 32
-  * Skipped: 0
+* Total Test cases: 485
+  * Passed: 387
+  * Failed: 78
+  * Skipped: 20
 
 
 ### External API verification results for Inji
@@ -81,7 +84,7 @@ Below section provides details on API test metrics by executing MOSIP functional
 
 | **Total**  | **Passed** |  **Failed** | **Skipped** |
 |------------|------------|-------------|-------------|
-|     37     |    36      |     1       |    0        |
+|     154     |    152      |     2       |    0        |
 
 **Test Rate: 100%**  with **Pass Rate : 97%**
 
@@ -91,9 +94,9 @@ End-to-end flows are a set of stateful test cases that expects the results acros
 
 | **Total**  | **Passed** |  **Failed** | **Skipped** |
 |------------|------------|-------------|-------------|
-|     84    |    63   |     21      |    0        |
+|    1268    |    1262   |     4     |    0        |
 
-**Test Rate:** 100% with **Pass Rate:** 75%
+**Test Rate:** 100% with **Pass Rate:** 99.52%
 
 ### Testing with various device combinations 
 
@@ -104,9 +107,9 @@ Below are the test metrics by performing VC Sharing functionality on various dev
 
 | **Total**  | **Passed** |  **Failed** | **Skipped** |
 |------------|------------|-------------|-------------|
-|     192    |    160     |     32      |    0        |
+|     40   |    40     |     0      |    0        |
 
-**Test Rate: 100%**  with **Pass Rate : 83%**
+**Test Rate: 100%**  with **Pass Rate : 100%**
 
 
 ### Detailed test metrics
