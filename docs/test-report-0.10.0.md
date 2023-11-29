@@ -98,6 +98,16 @@ End-to-end flows are a set of stateful test cases that expects the results acros
 
 **Test Rate:** 100% with **Pass Rate:** 99.52%
 
+**Note**:
+
+Functional and test rig code base branch which is used for the above metrics is:
+[](https://github.com/mosip/mosip-functional-tests/tree/develop)
+
+Commit Id is: 103e0606
+
+Hash Tag: afedb56a2977844286bc4cbfedb8263507efa823a3d7d5a7b3cbd601ac22d120
+
+
 ### Testing with various device combinations 
 
 Below are the test metrics by performing VC Sharing functionality on various device combinations.
