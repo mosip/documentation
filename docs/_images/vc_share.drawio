@@ -1,178 +1,153 @@
-<mxfile host="app.diagrams.net" modified="2023-03-31T14:20:10.627Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" etag="Ur4ckPWPp-JMop8zvpD2" version="21.1.2" type="device">
-  <diagram name="Page-1" id="eS0KHHI3w9iexsjqDOh-">
-    <mxGraphModel dx="794" dy="402" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxfile host="app.diagrams.net" modified="2023-11-29T10:43:47.132Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="uKFAgihYpLsbkUf3arsw" version="22.1.4" type="device">
+  <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
+    <mxGraphModel dx="1054" dy="732" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-3" value="Sender Phone" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
-          <mxGeometry x="210" y="10" width="360" height="460" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-4" value="Received Phone" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
-          <mxGeometry x="650" y="10" width="320" height="460" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-9" target="baDJgMDmBLE6aFpfHWo9-10">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-9" value="Scan QR code from receiver phone" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="359" y="60" width="110" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-12" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-10" target="baDJgMDmBLE6aFpfHWo9-11">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-27" target="baDJgMDmBLE6aFpfHWo9-22">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-10" value="Bluetooth enabled?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="361.5" y="130" width="105" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-11" target="baDJgMDmBLE6aFpfHWo9-9">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="P9vbLbW0i9mO5QJtbJ1Z-9" value="Scans QR Code" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" parent="1" source="O33Dg_AS-0g0KVgm5leG-6" target="YdSEQM3vQ0OIxF3ovsws-1" edge="1">
+          <mxGeometry x="-0.5686" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="271" y="80" />
+              <mxPoint x="140" y="260" />
+              <mxPoint x="270" y="340" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-11" value="Enable bluetooth" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="230" y="135" width="82.5" height="40" as="geometry" />
+        <mxCell id="O33Dg_AS-0g0KVgm5leG-6" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;fontStyle=0" parent="1" vertex="1">
+          <mxGeometry x="100" y="50" width="20" height="550" as="geometry" />
         </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-14" target="baDJgMDmBLE6aFpfHWo9-17">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="O33Dg_AS-0g0KVgm5leG-8" value="User" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="85" y="20" width="50" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-14" value="Choose VC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="375" y="267" width="78" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-20" value="Share&lt;br&gt;with&lt;br&gt;selfie" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-17" target="baDJgMDmBLE6aFpfHWo9-19">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-17" target="baDJgMDmBLE6aFpfHWo9-32">
+        <mxCell id="P9vbLbW0i9mO5QJtbJ1Z-7" style="edgeStyle=elbowEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;elbow=horizontal;curved=0;endArrow=open;endSize=12;dashed=1;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="530" y="372" />
-              <mxPoint x="530" y="327" />
+              <mxPoint x="300" y="340" />
+              <mxPoint x="320" y="300" />
+              <mxPoint x="190" y="270" />
             </Array>
+            <mxPoint x="401.5" y="340" as="sourcePoint" />
+            <mxPoint x="109.32352941176464" y="340" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-62" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="baDJgMDmBLE6aFpfHWo9-33">
-          <mxGeometry x="-0.86" relative="1" as="geometry">
+        <mxCell id="P9vbLbW0i9mO5QJtbJ1Z-8" value="Shows list of VCs to share" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="P9vbLbW0i9mO5QJtbJ1Z-7" vertex="1" connectable="0">
+          <mxGeometry x="0.161" relative="1" as="geometry">
             <mxPoint x="1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-17" value="Choose option" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="361.5" y="347" width="105" height="50" as="geometry" />
+        <mxCell id="O33Dg_AS-0g0KVgm5leG-10" value="INJI App&lt;br&gt;(Wallet)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=process;verticalAlign=middle;strokeColor=default;shadow=0;dashed=0;strokeWidth=2;labelBackgroundColor=#ffffff;fillColor=default;fontColor=default;sketch=0;gradientColor=none;fontStyle=0;rounded=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="50" width="85" height="550" as="geometry" />
         </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-19" target="baDJgMDmBLE6aFpfHWo9-32">
+        <mxCell id="P9vbLbW0i9mO5QJtbJ1Z-5" style="edgeStyle=elbowEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;endArrow=open;endSize=12;dashed=1;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="762.5" y="180" as="sourcePoint" />
+            <mxPoint x="1049.5" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P9vbLbW0i9mO5QJtbJ1Z-6" value="Shows QR Code" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="P9vbLbW0i9mO5QJtbJ1Z-5" vertex="1" connectable="0">
+          <mxGeometry x="-0.1369" y="1" relative="1" as="geometry">
+            <mxPoint x="-26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-1" value="INJI App&lt;br&gt;(Verifier)" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=process;verticalAlign=middle;strokeColor=default;shadow=0;dashed=0;strokeWidth=2;labelBackgroundColor=#ffffff;fillColor=default;fontColor=default;sketch=0;gradientColor=none;fontStyle=0;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="720" y="50" width="85" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-2" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;fontStyle=0" vertex="1" parent="1">
+          <mxGeometry x="1040" y="50" width="20" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-3" value="Verifier User" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1005" y="20" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-4" value="Requests for VC by visting Request VC&lt;br&gt;&amp;nbsp;from Settings" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=horizontal;curved=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="274" y="407" />
-              <mxPoint x="530" y="407" />
-              <mxPoint x="530" y="327" />
+              <mxPoint x="860.5" y="140" />
             </Array>
+            <mxPoint x="1052" y="140" as="sourcePoint" />
+            <mxPoint x="760" y="140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-36" value="Face verified" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="baDJgMDmBLE6aFpfHWo9-35">
-          <mxGeometry x="-0.6448" y="-2" relative="1" as="geometry">
-            <mxPoint x="12" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-37" value="Face verification&lt;br&gt;failed" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-19" target="baDJgMDmBLE6aFpfHWo9-14">
-          <mxGeometry x="-0.5978" relative="1" as="geometry">
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-7" value="" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=horizontal;curved=0;" edge="1" parent="1" target="O33Dg_AS-0g0KVgm5leG-6">
+          <mxGeometry x="-0.5714" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="274" y="275" />
+              <mxPoint x="860.5" y="220" />
             </Array>
+            <mxPoint x="1052" y="220" as="sourcePoint" />
+            <mxPoint x="760" y="220" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-19" value="Offline face Auth" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="234.5" y="357" width="78" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-22" target="baDJgMDmBLE6aFpfHWo9-28">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.182;exitY=0.975;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-22" target="baDJgMDmBLE6aFpfHWo9-41">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-69" value="Connected" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="baDJgMDmBLE6aFpfHWo9-44">
-          <mxGeometry x="0.0627" y="2" relative="1" as="geometry">
-            <mxPoint x="13" y="-2" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-22" value="Exchange device info" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="700" y="135" width="82.5" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-10" target="baDJgMDmBLE6aFpfHWo9-27">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="467" y="155" as="sourcePoint" />
-            <mxPoint x="700" y="155" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-26" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="baDJgMDmBLE6aFpfHWo9-25">
-          <mxGeometry x="-0.8158" y="-2" relative="1" as="geometry">
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-8" value="Shows QR code to resident" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YdSEQM3vQ0OIxF3ovsws-7">
+          <mxGeometry x="-0.6353" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-27" value="BLE Protocol" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.bluetooth;pointerEvents=1" vertex="1" parent="1">
-          <mxGeometry x="600" y="140.6" width="15" height="28.799999999999997" as="geometry" />
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-9" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="YdSEQM3vQ0OIxF3ovsws-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="402.3235294117644" y="304.41" as="sourcePoint" />
+            <mxPoint x="570" y="304.41" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-28" value="Waiting for VC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="700" y="220" width="82.5" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-32" target="baDJgMDmBLE6aFpfHWo9-46">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-32" value="VC Received" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="700" y="307" width="82.5" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-41" target="baDJgMDmBLE6aFpfHWo9-14">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-45" value="Initiate transfer" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="baDJgMDmBLE6aFpfHWo9-43">
-          <mxGeometry x="-0.4419" relative="1" as="geometry">
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-10" value="Establish secure connection" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YdSEQM3vQ0OIxF3ovsws-9">
+          <mxGeometry x="-0.1476" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-41" value="Connected with receiver&amp;nbsp;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="375" y="200" width="78" height="30" as="geometry" />
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-11" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="109.32352941176464" y="390" as="sourcePoint" />
+            <mxPoint x="400" y="390" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-46" target="baDJgMDmBLE6aFpfHWo9-49">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-12" value="Selects VC to share&lt;br&gt;and selects share with Selfie" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YdSEQM3vQ0OIxF3ovsws-11">
+          <mxGeometry x="-0.2701" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-18" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="480" as="sourcePoint" />
+            <mxPoint x="761.5" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-20" value="VC sharing in progress" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YdSEQM3vQ0OIxF3ovsws-18">
+          <mxGeometry x="-0.7595" relative="1" as="geometry">
+            <mxPoint x="31" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-24" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="YdSEQM3vQ0OIxF3ovsws-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="762.3235294117644" y="520" as="sourcePoint" />
+            <mxPoint x="1040" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-25" value="Shows successfully received VC" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YdSEQM3vQ0OIxF3ovsws-24">
+          <mxGeometry x="-0.2272" relative="1" as="geometry">
+            <mxPoint x="27" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-26" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400.0035294117644" y="570.4100000000001" as="sourcePoint" />
+            <mxPoint x="759.68" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-27" value="Disconnect Connection" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="YdSEQM3vQ0OIxF3ovsws-26">
+          <mxGeometry x="-0.1476" y="-2" relative="1" as="geometry">
+            <mxPoint x="7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="YdSEQM3vQ0OIxF3ovsws-28" value="Performs 1:1 offline face auth&amp;nbsp;&lt;br&gt;against VC image" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.0065" relative="1" as="geometry">
+            <mxPoint x="403" y="410" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="880" y="314" />
-              <mxPoint x="829" y="314" />
+              <mxPoint x="455" y="410" />
+              <mxPoint x="455" y="460" />
             </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-53" value="Verify&lt;br&gt;and Save" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="baDJgMDmBLE6aFpfHWo9-51">
-          <mxGeometry x="0.2589" y="-2" relative="1" as="geometry">
             <mxPoint as="offset" />
+            <mxPoint x="403" y="460" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.628;entryY=-0.033;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-46" target="baDJgMDmBLE6aFpfHWo9-50">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-54" value="Save" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="baDJgMDmBLE6aFpfHWo9-52">
-          <mxGeometry x="0.2618" y="-1" relative="1" as="geometry">
-            <mxPoint x="1" y="1" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-46" value="Choose option" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="826.5" y="220" width="105" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="baDJgMDmBLE6aFpfHWo9-49" target="baDJgMDmBLE6aFpfHWo9-50">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-57" value="Verified" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="baDJgMDmBLE6aFpfHWo9-56">
-          <mxGeometry x="-0.2143" y="1" relative="1" as="geometry">
-            <mxPoint x="16" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-49" value="Offline face Auth" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="770" y="357" width="78" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-50" value="Save" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="870" y="357" width="78" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="baDJgMDmBLE6aFpfHWo9-67" value="Send VC" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;strokeColor=#0080F0;shadow=0;dashed=0;shape=mxgraph.ios7.icons.bluetooth;pointerEvents=1" vertex="1" parent="1">
-          <mxGeometry x="600" y="319" width="15" height="28.799999999999997" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
