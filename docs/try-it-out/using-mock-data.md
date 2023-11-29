@@ -2,21 +2,9 @@
 
 If you are looking to try out eSignet, here are a few personas that you can use in our Collab environment for testing.
 
-
-
-<figure><img src="../.gitbook/assets/download (15) (1).jpeg" alt=""><figcaption><p>image</p></figcaption></figure>
-
-
-
-{% file src="../.gitbook/assets/download (15) (1).jpeg" %}
-Insert file
-{% endfile %}
-
 ## Personas
 
-Individual pictures are incorporated as well to enable selfie authentication from the Inji app.
-
-<table data-card-size="large" data-view="cards" data-full-width="true"><thead><tr><th data-type="users" data-multiple></th><th data-hidden></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-type="users" data-multiple></th><th data-hidden data-type="users" data-multiple></th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/card_1 (1).png">card_1 (1).png</a></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/card_2 (1).png">card_2 (1).png</a></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/card_3 (1).png">card_3 (1).png</a></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/card_4 (1).png">card_4 (1).png</a></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/download (5) (1).jpeg">download (5) (1).jpeg</a></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/download (4).jpeg">download (4).jpeg</a></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/download (14) (1).jpeg">download (14) (1).jpeg</a></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/download (15) (1).jpeg">download (15) (1).jpeg</a></td><td></td><td></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards" data-full-width="true"><thead><tr><th data-type="users" data-multiple></th><th data-hidden></th><th data-hidden></th><th data-hidden></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-type="users" data-multiple></th><th data-hidden data-type="users" data-multiple></th></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/card_1 (1).png">card_1 (1).png</a></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/card_2 (1).png">card_2 (1).png</a></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/card_3 (1).png">card_3 (1).png</a></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td><td><a href="../.gitbook/assets/card_4 (1).png">card_4 (1).png</a></td><td></td><td></td></tr></tbody></table>
 
 {% hint style="info" %}
 The data used in the above VIDs is fictitious and the images returned are AI-generated from the website: [https://thispersondoesnotexist.com/](https://thispersondoesnotexist.com/)
