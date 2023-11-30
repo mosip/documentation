@@ -3,6 +3,7 @@
 * [Inji](README.md)
 * [Overview](overview.md)
   * [Features](architecture/features.md)
+     * [Feature Workflows](architecture/feature-workflows.md)
   * [Architecture](overview/architecture.md)
 * [Components](architecture/components.md)
   * [Tuvali](architecture/tuvali.md)
