@@ -2,7 +2,7 @@
 
 This document delineates the workflow for essential functionalities of Inji.
 
-### First App Launch
+### 1. First App Launch
 
 After installing the application for the first time, the user will be asked to set up unlock method for it. The app supports biometric or PIN-based locks. For more details, refer to the [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta).
 
@@ -14,7 +14,7 @@ After installing the application for the first time, the user will be asked to s
 
 <figure><img src="../.gitbook/assets/inji_first_launch_with_biometric.png" alt=""><figcaption></figcaption></figure>
 
-### Generating and storing credentials
+### 2. Generating and Storing Credentials
 
 Residents have the ability to generate a Verifiable Credential (VC) for themselves, their family members, or friends using a single mobile device. This can be done through two methods:
 
@@ -37,13 +37,13 @@ Residents have the ability to generate a Verifiable Credential (VC) for themselv
 
 </div>
 
-### Sharing of credentials
+### 3. Sharing of credentials
 
 The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. Refer to [Tuvali documentation](https://docs.mosip.io/inji/tuvali) for more information.
 
 <figure><img src="../.gitbook/assets/vc_share.png" alt=""><figcaption></figcaption></figure>
 
-### Online login process
+### 4. Online login process
 
 * Residents can use Inji to log in to any service provider app (integrated with e-Signet) by just scanning a QR code from their portal.
 * The app performs offline face auth after scanning the QR code to verify the user's presence.
