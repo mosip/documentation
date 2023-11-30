@@ -8,10 +8,11 @@ After installing the application for the first time, the user will be asked to s
 
 #### Launch with passcode unlock method
 
-
+<figure><img src="../.gitbook/assets/inji_first_launch_with_passcode.png" alt=""><figcaption></figcaption></figure>
 
 #### Launch with biometric unlock method
 
+<figure><img src="../.gitbook/assets/inji_first_launch_with_biometric.png" alt=""><figcaption></figcaption></figure>
 
 ### Generating and storing credentials
 
@@ -27,7 +28,6 @@ Residents have the ability to generate a Verifiable Credential (VC) for themselv
 #### Download via eSignet
 
 ![](\_images/download\_via\_esignet.png)
-
 
 ### Sharing of credentials
 
