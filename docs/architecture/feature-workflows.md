@@ -1,21 +1,22 @@
 # Feature Workflows
 
+This document delineates the workflow for essential functionalities of Inji.
 
 ### First App Launch
 
 After installing the application for the first time, the user will be asked to set up unlock method for it. The app supports biometric or PIN-based locks. For more details, refer to the [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta).
 
 #### Launch with passcode unlock method
-![](\_images/inji\_first\_launch\_with_\passcode.png)
+
+
 
 #### Launch with biometric unlock method
-![](\_images/inji\_first\_launch\_with_\biometric.png)
+
 
 ### Generating and storing credentials
 
-Residents can generate a Verifiable Credential(VC) for themselves or their family or friends on the same phone.
+Residents have the ability to generate a Verifiable Credential (VC) for themselves, their family members, or friends using a single mobile device. This can be done through two methods:
 
-There are two ways residents can generate VC
 * Download via UIN/VID
 * Download via eSignet
 
