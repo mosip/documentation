@@ -42,9 +42,8 @@ After installing the application for the first time, the user will be asked to s
 
 ### Generating and storing credentials
 
-Residents can generate a Verifiable Credential(VC) for themselves or their family or friends on the same phone.
+Residents have the ability to create a Verifiable Credential (VC) for themselves, as well as for their family or friends, using the same mobile device. There are two methods through which residents can generate VC: 
 
-There are two ways residents can generate VC
 * Download via UIN/VID
 * Download via eSignet
 
@@ -59,7 +58,7 @@ There are two ways residents can generate VC
 
 ### Sharing of credentials
 
-The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. Refer to [Tuvali documentation](https://docs.mosip.io/inji/tuvali) for more information.
+The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. For more information, refer to [Tuvali documentation](https://docs.mosip.io/inji/tuvali).
 
 ![](\_images/vc\_share.png)
 
