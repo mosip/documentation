@@ -18,5 +18,6 @@ In `mimoto-issuers-config.json`, new providers can be added as per the `well-kno
 
 After adding the provider in configuration, it will be displayed on the UI on `Add new card` screen.
 
-* If new provider supports `OpenID4VCI` protocol, it is recommended to use `issuerMachine.ts` and `EsignetMosipVCItemMachine.ts` for workflow to download VC.
+* If new provider supports [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html) protocol, it is recommended to use `issuerMachine.ts` and `EsignetMosipVCItemMachine.ts` for workflow to download VC.
+  
 * If it doesn't support `OpenID4VCI` protocol, new state machine needs to be added. Please refer to `issuerMachine.ts` and `EsignetMosipVCItemMachine.ts`.
