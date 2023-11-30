@@ -23,17 +23,25 @@ Residents have the ability to generate a Verifiable Credential (VC) for themselv
 
 #### Download via UIN/VID
 
-![](\_images/download\_via\_uin\_vid.png)
+<figure><img src="../.gitbook/assets/download_via_uin_vid.png" alt=""><figcaption></figcaption></figure>
 
 #### Download via eSignet
 
-![](\_images/download\_via\_esignet.png)
+<div>
+
+<img src="_images/download_via_esignet.png" alt="">
+
+ 
+
+<figure><img src="../.gitbook/assets/download_via_esignet.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 ### Sharing of credentials
 
 The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. Refer to [Tuvali documentation](https://docs.mosip.io/inji/tuvali) for more information.
 
-![](\_images/vc\_share.png)
+<figure><img src="../.gitbook/assets/vc_share.png" alt=""><figcaption></figcaption></figure>
 
 ### Online login process
 
@@ -45,8 +53,16 @@ The credentials are shared in a peer-to-peer model with the verifier application
 
 #### Step 1: VC activation process
 
-![](\_images/vc\_activation.png)
+<div>
+
+<img src="_images/vc_activation.png" alt="">
+
+ 
+
+<figure><img src="../.gitbook/assets/vc_activation.png" alt=""><figcaption></figcaption></figure>
+
+</div>
 
 #### Step 2: Online QR login
 
-![](\_images/online\_qr\_login.png)
+<figure><img src="../.gitbook/assets/online_qr_login.png" alt=""><figcaption></figcaption></figure>
