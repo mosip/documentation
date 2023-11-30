@@ -8,3 +8,4 @@ The following customizations are available in Inji:
 * [UI Customization](https://docs.mosip.io/inji/customization-overview/ui-customization)
 * [Locale Customization](https://docs.mosip.io/inji/customization-overview/locale-customization)
 * [Configuration](https://docs.mosip.io/inji/customization-overview/configuration)
+* [Credential Provider](https://docs.mosip.io/inji/customization-overview/credential-provider)
