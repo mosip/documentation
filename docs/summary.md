@@ -16,6 +16,7 @@
   * [UI customization](customisation/ui-customization.md)
   * [Locale customization](customisation/locale-customization.md)
   * [Configuration](customisation/configuration.md)
+  * [Credential Providers](customisation/credential_providers.md)
 * [Try it out](sandbox-details/README.md)
   * [Inji Setup Guide](sandbox-details/inji-setup-guide.md)
 * [Contribution](contribution/README.md)
