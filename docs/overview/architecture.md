@@ -49,6 +49,6 @@ Let us go through a brief overview of these flows.
 
 #### Libraries Used for Key Pairs
 
-* **iOS**: react-native-secure-key-store.
-* **Android**: Hardware keystore.
+* **iOS**: react-native-secure-key-store
+* **Android**: Hardware keystore
 
