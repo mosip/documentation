@@ -14,7 +14,7 @@ After installing the application for the first time, the user will be asked to s
 
 <figure><img src="../.gitbook/assets/inji_first_launch_with_biometric.png" alt=""><figcaption></figcaption></figure>
 
-### 2. Generating and Storing Credentials
+### 2. Generating and storing credentials
 
 Residents have the ability to generate a Verifiable Credential (VC) for themselves, their family members, or friends using a single mobile device. This can be done through two methods:
 
