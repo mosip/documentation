@@ -7,7 +7,7 @@ Inji stands as a secure, trustworthy, and dependable mobile wallet designed to f
 * **Share verifiable credentials** or ID proofs with relying parties without requiring an internet connection, utilizing Bluetooth Low Energy (BLE).
 * Enable users to **log in to online portals** of relying parties by scanning a QR code, facilitating seamless access to their services.
 
-The application is constructed using the [React Native framework](https://reactnative.dev/), ensuring compatibility with both Android and iOS mobile operating systems. It leverages [Xstate state machines](https://xstate.js.org/docs/) for efficient application state management. The digital credentials produced by the mobile app adhere to the Verifiable Credentials (VC) data model. For additional information, refer [Verifiable Credentials Data Model](https://www.w3.org/TR/vc-data-model/). .
+The application is constructed using the [React Native framework](https://reactnative.dev/), ensuring compatibility with both Android and iOS mobile operating systems. It leverages [Xstate state machines](https://xstate.js.org/docs/) for efficient application state management. The digital credentials produced by the mobile app adhere to the [Verifiable Credentials (VC) Data Model](https://www.w3.org/TR/vc-data-model/). 
 
 **How does Inji work?**
 
@@ -20,7 +20,7 @@ The application is constructed using the [React Native framework](https://reactn
 * Inji is compatible with [**OpenID**](https://openid.net/developers/how-connect-works/) protocol and has the capability to onboard a variety of Identity Providers (IdP). This, in turn, provides users with multiple options for Verifiable Credential (VC) issuers.
 * Inji ensures the authenticity of digital signatures provided by the issuer for each ID before downloading it to the local device. Subsequently, it generates a HASH for each digital ID stored, utilizing it to verify the integrity of the ID before displaying it within the app at any time.
 
-#### Backend
+#### Backend Systems
 
 * The app uses [Mimoto APIs](https://mosip.stoplight.io/docs/mimoto) for generating VCs, downloading and activation.
 * It uses [e-Signet APIs](https://mosip.stoplight.io/docs/identity-provider) for online login.
