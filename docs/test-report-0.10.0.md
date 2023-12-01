@@ -76,25 +76,29 @@ Here is the detailed breakdown of metrics:
   * Failed: 78
   * Skipped: 20
 
-### External API verification results for Inji
+### External API verification results by modules
 
-Below section provides details on API test metrics by executing MOSIP functional automation Framework. The external API test executions were performed at module level isolation. Each end point is tested with the test data and expectations of each test data are mapped to assert the test case.
-
-| **Total** | **Passed** | **Failed** | **Skipped** |
-| --------- | ---------- | ---------- | ----------- |
-| 154       | 152        | 2          | 0           |
-
-**Test Rate: 100%** with **Pass Rate : 99%**
-
-### Testing End-to-end flow(s)
-
-End-to-end flows are a set of stateful test cases that expects the results across multiple modules. The test does not cover the intermediary stages, rather concentrates on the end result for a given data. The test covers both negative scenarios and positive scenarios with real world scenarios. Below are the end-to-end scenarios test metrics by executing MOSIP Automation Framework.
+Below section provides details on API test metrics by executing MOSIP functional automation Framework. All external API test executions were performed at module level isolation. Each endpoint is tested with the test data and expectations of each test data are mapped to assert the test case.
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
 | 1268      | 1262       | 4          | 0           |
 
 **Test Rate:** 100% with **Pass Rate:** 99.52%
+
+Here is the detailed breakdown of metrics:
+
+#### Inji
+
+| **Total** | **Passed** | **Failed** | **Skipped** |
+| --------- | ---------- | ---------- | ----------- |
+| 154       | 152        | 2          | 0           |
+
+#### eSignet
+
+| **Total** | **Passed** | **Failed** | **Skipped** |
+| --------- | ---------- | ---------- | ----------- |
+| 1114      | 1110      | 4          | 0           |
 
 **Note**:
 
@@ -125,4 +129,4 @@ The various metrics that assist in test tracking and efficiency are as follows:
 * Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100
 * Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
 
-Link for the [detailed test report](https://github.com/mosip/test-management/tree/master/inji/0.9.0).
+Link for the [detailed test report](https://github.com/mosip/test-management/tree/master/inji/0.10.0).
