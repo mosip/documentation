@@ -82,7 +82,7 @@ Below section provides details on API test metrics by executing MOSIP functional
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
-| 1268      | 1262       | 4          | 0           |
+| 1268      | 1262       | 6          | 0           |
 
 **Test Rate:** 100% with **Pass Rate:** 99.52%
 
