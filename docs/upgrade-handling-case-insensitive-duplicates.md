@@ -1,4 +1,4 @@
-# Handling the case insensitive duplicates user detail table
+# Handling case insensitive duplicates user detail table
 
 In the registration processor, there was an issue where packets were failing at the supervisor validation stage when the username of the supervisor was entered in a different case than it appeared in the database. To resolve this issue, a case insensitive search will be implemented to retrieve the username of the supervisor during the validation stage.
 
