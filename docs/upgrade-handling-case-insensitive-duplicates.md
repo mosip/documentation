@@ -50,7 +50,7 @@ Follow these steps:
   
    ![](\_images/upgrade-hcid5.jpg)
 
-6. Click on the appropriate action (Delete/Deactivate) on that entry.
+6. Select the appropriate action (Delete/Deactivate) on that entry.
 
     ![](\_images/upgrade-hcid6.jpg)
 
