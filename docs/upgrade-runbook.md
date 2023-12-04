@@ -276,18 +276,44 @@ mosip.kernel.transliteration.franch-language-code=fra
 
 **Note**: Disable the `masterdata loader` and `regproc-reprocessor`.
 
-### Activites once all the upgraded services are up
+### Activities once all the upgraded services are operational
 
-To resend the partner and policy details to IDA, please run the PMS utility job once. You can find the steps to run the job in this Document.
+* To resend the partner and policy details to IDA, please run the PMS utility job once. You can find the steps to run the job [here]()..
 
-The UI specs for pre-registration should be published via the MasterData API in version 1.2.0. Previously, in version 1.1.5, the UI specs were saved in the config server. To upgrade the UI specs, please refer to this link.
+* The UI specs for pre-registration should be published via the MasterData API in version 1.2.0. Previously, in version 1.1.5, the UI specs were saved in the config server. To upgrade the UI specs, please refer [here]().
 
-To proceed with the masterdata country specific upgrade scripts, please follow the instructions outlined in this Document.
+* To proceed with the masterdata country specific upgrade scripts, please follow the instructions outlined [here]().
 
-Please create all the required applicant type details according to the applicanttype.mvel file created in the property migration section. For more information, please refer to this Document.
+* Please create all the required applicant type details according to the `applicanttype.mvel` file created in the property migration section. For more information, please refer to the document [here]().
 
-Starting from version 1.2.0.1, it is mandatory to prepend the thumbprint for all encryptions. Therefore, we need to ensure that the certificate thumbprint for a particular partner exactly matches in both the keymanager and IDA key_alias tables. To learn how to check thumbprints and for further steps, please refer to this Document.
+* Starting from version 1.2.0.1, it is mandatory to prepend the thumbprint for all encryptions. Therefore, we need to ensure that the certificate thumbprint for a particular partner exactly matches in both the keymanager and IDA `key_alias` tables. To learn how to check thumbprints and for further steps, please refer [here]().
 
-Please check and rectify any mixed case user names in the user details and zone mapping.
+* Please check and rectify any mixed case user names in the user details and zone mapping.
 
-Finally, restart all the services to take care of old data caching.
+* Finally, restart all the services to take care of old data caching.
+
+### Activities after completing the first round of testing:
+
+1. Configure the Registration client upgrade at the server side. Please refer to this [link]() for further instructions.
+
+2. Run the query to identify all the packets stuck between the stages. Use the manual reprocess utility to reprocess all the RIDs found using the above query. Please refer to this [link]() to carry out the reprocess.
+
+3. Initiate the regproc reprocessor.
+
+4. In case packets continue to fail due to performance issues, follow the steps mentioned in the [document]() to process packets from the beginning.
+
+5. Perform the ID repository tasks. Run the archival script and reprocess SQL script on the credential transaction table as specified in the document.
+
+6. Backup and delete any unnecessary tables and databases.
+
+7. Manually remove the "mosip_regdevice" and "mosip_authdevice" databases, as they have been moved to "mosip_pms".
+
+8. Delete all tables ending with "<table_name>_to_be_deleted" and "<table_name>_migr_bkp".
+
+### Optional Steps
+
+1. Ensure that the datashare property is properly configured in the abis policy for the domain. Please refer to this [link]() for more detailed information.
+
+2. Remove any unnecessary roles for clients and users.
+
+3. When the admin portal becomes accessible, the admin user should generate the master keys that have been recently added to the `key_policy_def` table. This can be done using the admin UI master key generation page (Keymanager) for the `ADMIN_SERVICES` and `RESIDENT` roles. Only proceed with this step if the corresponding entries are not already available in the `key_alias` table of keymanager. For more detailed instructions, please consult the provided [document]().
