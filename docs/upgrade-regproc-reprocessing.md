@@ -1,4 +1,4 @@
-# Registartion Processor: How to Reprocess from the Beginning
+# Registration Processor: How to Reprocess from the Beginning
 
 This document provides instructions on manually reprocessing all packets from the beginning after migration. The 1.2.0.1 release introduces multiple new stages and a new tagging mechanism. All packets that have not been processed before migration will be reprocessed to ensure they go through the new stages.
 
