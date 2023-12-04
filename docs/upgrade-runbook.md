@@ -264,9 +264,9 @@ mosip.kernel.transliteration.franch-language-code=fra
 
 ### MOSIP services upgrade
 
-* To begin, set up the configuration server.
+* To begin, set up the Configuration server.
 
-* Next, configure and setup the artifactory.
+* Next, configure and setup the Artifactory.
 
 * Proceed with the installation in the specified sequence. Refer to the provided [link](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/v3/mosip#install) for the correct order.
 
@@ -275,3 +275,19 @@ mosip.kernel.transliteration.franch-language-code=fra
 * Run the `key generation job` to ensure that all new module keys comply with the `key_policy_def` table.
 
 **Note**: Disable the `masterdata loader` and `regproc-reprocessor`.
+
+### Activites once all the upgraded services are up
+
+To resend the partner and policy details to IDA, please run the PMS utility job once. You can find the steps to run the job in this Document.
+
+The UI specs for pre-registration should be published via the MasterData API in version 1.2.0. Previously, in version 1.1.5, the UI specs were saved in the config server. To upgrade the UI specs, please refer to this link.
+
+To proceed with the masterdata country specific upgrade scripts, please follow the instructions outlined in this Document.
+
+Please create all the required applicant type details according to the applicanttype.mvel file created in the property migration section. For more information, please refer to this Document.
+
+Starting from version 1.2.0.1, it is mandatory to prepend the thumbprint for all encryptions. Therefore, we need to ensure that the certificate thumbprint for a particular partner exactly matches in both the keymanager and IDA key_alias tables. To learn how to check thumbprints and for further steps, please refer to this Document.
+
+Please check and rectify any mixed case user names in the user details and zone mapping.
+
+Finally, restart all the services to take care of old data caching.
