@@ -62,6 +62,7 @@ Here is the detailed breakdown of metrics:
 Functional and automation test rig code base branch which is used for the metrics are:
 
 https://github.com/mosip/mosip-functional-tests/tree/release-1.2.0.1
+
 https://github.com/mosip/mosip-automation-tests/tree/release-1.2.0.1
 
 
@@ -86,25 +87,26 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 ### Sonar Report
 
-|Repo Name|	Version|	Branch Name	Coverage
-admin-services	1.2.0.1-B1	release-1.2.0.1	79.2%
-admin-ui	1.2.0.1-B2	release-1.2.0.1	0%
-audit-manager	1.2.0.1-B2	release-1.2.0.1	100%
-id-authentication	1.2.0.1-B5	release-1.2.0.1	70.9%
-id-repository	1.2.0.1-B2	release-1.2.0.1	81.2%
-commons	1.2.0.1-B2	release-1.2.0.1	82.7%
-packet-manager	1.2.0.1-B2	release-1.2.0.1	0%
-durian	1.2.0.1-B2	release-1.2.0.1	84.8%
-keymanager	1.2.0.1-B3	release-1.2.0.1	21.8%
-partner-management-services	1.2.0.1-B4	release-1.2.0.1	74.4%
-pre-registration	1.2.0.1-B2	release-1.2.0.1	81%
-Print	1.2.0.1-B2	release-1.2.0.1	2.4%
-Registration	1.2.0.1-B3	release-1.2.0.1	81.2%
-resident-services	1.2.0.1-B3	release-1.2.0.1	77.3%
-registration-client	1.2.0.1-B2	release-1.2.0.1	73.7%
-mosip-openid-bridge	1.2.0.1-B3	release-1.2.0.1	81%
-khazana	1.2.0.1-B2	release-1.2.0.1	2.1%
-biosdk-client	1.2.0.1-B3	release-1.2.0.1	100%
+|Repo Name|	Version|	Branch Name|	Coverage|
+|----------|--------|-------------|----------|
+|admin-services|	1.2.0.1-B1|	release-1.2.0.1|	79.2%|
+|admin-ui|	1.2.0.1-B2|	release-1.2.0.1|	0%|
+|audit-manager|	1.2.0.1-B2|	release-1.2.0.1|	100%|
+|id-authentication|	1.2.0.1-B5|	release-1.2.0.1|	70.9%|
+|id-repository|	1.2.0.1-B2|	release-1.2.0.1|	81.2%|
+|commons|	1.2.0.1-B2|	release-1.2.0.1|	82.7%|
+|packet-manager|	1.2.0.1-B2|	release-1.2.0.1|	0%|
+|durian|	1.2.0.1-B2|	release-1.2.0.1|	84.8%|
+|keymanager|	1.2.0.1-B3|	release-1.2.0.1|	21.8%|
+|partner-management-services|	1.2.0.1-B4|	release-1.2.0.1|	74.4%|
+|pre-registration|	1.2.0.1-B2|	release-1.2.0.1|	81%|
+|Print|	1.2.0.1-B2|	release-1.2.0.1|	2.4%|
+|Registration|	1.2.0.1-B3|	release-1.2.0.1|	81.2%|
+|resident-services|	1.2.0.1-B3|	release-1.2.0.1|	77.3%|
+|registration-client|	1.2.0.1-B2|	release-1.2.0.1|	73.7%|
+|mosip-openid-bridge|	1.2.0.1-B3|	release-1.2.0.1|	81%|
+|khazana|	1.2.0.1-B2|	release-1.2.0.1|	2.1%|
+|biosdk-client|	1.2.0.1-B3|	release-1.2.0.1|	100%|
 
 
 
