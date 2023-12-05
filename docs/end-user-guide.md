@@ -8,8 +8,4 @@ Please navigate to the Play Store or App Store for iOS, select the "Install" opt
 
 ### On Android device
 
-
-
-
-
-
+<figure><img src=".gitbook/assets/inji-install-android.png" alt=""><figcaption><p>Installation of Inji on Android mobile device</p></figcaption></figure>
