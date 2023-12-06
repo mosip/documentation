@@ -4,7 +4,7 @@ This is a concise user guide for end users that will guide you through the vario
 
 ## Installing Inji
 
-Please navigate to the Play Store or App Store for iOS, select the "Install" option, and kindly wait for the installation process to complete.
+Please navigate to the Play Store or App Store for iOS, select the **Install** option, and kindly wait for the installation process to complete.
 
 #### On Android device
 
@@ -12,7 +12,7 @@ Please navigate to the Play Store or App Store for iOS, select the "Install" opt
 
 #### On iOS device
 
-<figure><img src=".gitbook/assets/inji-install-ios.png" alt=""><figcaption><p>Installation of Inji on iOS device</p></figcaption></figure>
+<figure><img src=".gitbook/assets/inji-install-ios (1).png" alt=""><figcaption><p>Installation of Inji on iOS device</p></figcaption></figure>
 
 ### First launch of the app
 
@@ -58,4 +58,42 @@ To download VC, there are three methods:
 
 <figure><img src=".gitbook/assets/downloadVC-esignet-Page-2.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/downloadVC-esignet-Page-3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/downloadVC-esignet-Page-3.png" alt="" width="548"><figcaption></figcaption></figure>
+
+### Detailed View of the downloaded VC
+
+Once we click on the downloaded VC, it will open as a detailed view.
+
+<figure><img src=".gitbook/assets/detailed-viewVC.png" alt=""><figcaption></figcaption></figure>
+
+### Viewing history of the downloaded VC
+
+After we have completed several scenarios, when we navigate to the history page, we can find it by selecting the third icon located in the bottom right corner. This page will display a comprehensive list of all the events that have occurred.
+
+<figure><img src=".gitbook/assets/detailed-viewVC-history.png" alt=""><figcaption><p>History View</p></figcaption></figure>
+
+### Pinning a VC
+
+After clicking on the ellipsis button on the downloaded VC, a button will appear allowing for the VC to be pinned. Selecting this option will pin the specific VC to the top of the screen.
+
+<figure><img src=".gitbook/assets/pinVC.png" alt=""><figcaption><p>Pinning a VC</p></figcaption></figure>
+
+### Activating VC
+
+There are two ways to activate the VC:
+
+* The first option is to click on the three-dot ellipsis located on the VC card state.
+* &#x20;The second option is to click on the activate button found in the detailed view.&#x20;
+* Upon clicking the **Activate** button, a confirmation alert message will be prompted. Once permission is granted, the user will be directed to an OTP screen. After entering the correct OTP, the VC will be activated and projected on the screen with the same message.
+
+<figure><img src=".gitbook/assets/activateVC-Page-1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/activateVC-Page-2.png" alt=""><figcaption></figcaption></figure>
+
+### Deleting VC
+
+* The process of removing a virtual card (VC) involves locating the three-dot menu on the downloaded VC.&#x20;
+* From there, the option to remove the card will be available. Upon clicking this option, a confirmation prompt will appear asking for confirmation.&#x20;
+* If the confirmation is selected, the VC will be successfully removed from the system.
+
+<figure><img src=".gitbook/assets/deletingVC.png" alt=""><figcaption><p>Deleting a VC</p></figcaption></figure>
