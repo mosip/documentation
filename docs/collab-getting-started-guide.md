@@ -48,7 +48,6 @@ Before starting with the Collab environment, please ensure you have the followin
 * MOSIP's Partner management services (PMS) module streamlines partner onboarding, policy management, and data sharing. It comprises of Partner Management and Policy Management Services, providing essential support for effective collaboration within MOSIP. To learn more, click [here](https://docs.mosip.io/1.2.0/modules/partner-management-services).
 * For the end-to-end process of how to run Partner Management in our collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-pmp-guide).
 * For details on how to use the application, refer to our [end user guide](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-portal).
-* Accessing this module and running it on your local system will require [wireguard access](wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
 
 #### e-Signet Setup Guide
 
@@ -72,7 +71,6 @@ Before starting with the Collab environment, please ensure you have the followin
 
 * KeyCloak is used to manage user authentication and authorization, ensuring that only authorized users have access to the various modules and functionalities within the platform. It plays a crucial role in maintaining the security and integrity of the platform by managing user identities, access controls, and user sessions. To learn more, click [here](https://docs.mosip.io/1.2.0/modules/keymanager).
 * For the end-to-end process of how to use KeyCloak in our Collab environment, click here (Upcoming).
-* Running this component in your local system will require wireguard access. To get started, raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here.
 
 #### Kibana
 
@@ -85,14 +83,12 @@ Before starting with the Collab environment, please ensure you have the followin
 
 * MinIO is an open-source, high-performance object storage server that is designed for cloud-native and containerized environments. It allows organizations to build their own private cloud storage infrastructure that is scalable, highly available, and easily deployable. In MOSIP, [MinIO](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies) is used to store various types of data, such as documents, images, and files, providing a reliable and efficient storage solution. To learn more, click [here](https://min.io/).
 * For MinIO installation for the object store, click [here](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3/utils/minio-client-util).
-* Running this utility in your local system will require [wireguard access](wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
 
 #### Admin Portal Setup Guide
 
 * Admin application is a web-based application used by a privileged group of administrative personnel to manage various master data and carry out operational activities. To learn more about the Admin Portal, click [here](https://docs.mosip.io/1.2.0/modules/administration).
 * For the end-to-end process of how to run the Admin Portal in our collab environment, click here(Upcoming).
 * For details on how to use the application, refer to our [end user guide](https://docs.mosip.io/1.2.0/modules/administration/admin-portal-user-guide).
-* Running this application in your local system will require [wireguard access](wireguard-client-installation-guide.md). Raise a request by filling out the [form](https://docs.google.com/forms/d/e/1FAIpQLSeI3VcvEYMvOgtobV92r7293AVqq7bEQgNE6WHn-JTiuLOGqg/viewform) here and get started.
 
 #### Resident Services Setup Guide
 
