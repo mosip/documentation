@@ -43,7 +43,7 @@ The credentials are shared in a peer-to-peer model with the verifier application
 
 <figure><img src="../.gitbook/assets/vc_share.png" alt=""><figcaption></figcaption></figure>
 
-### 4. Online login process
+### 4. QR code login process
 
 * Residents can use Inji to log in to any service provider app (integrated with e-Signet) by just scanning a QR code from their portal.
 * The app performs offline face auth after scanning the QR code to verify the user's presence.
@@ -63,6 +63,6 @@ The credentials are shared in a peer-to-peer model with the verifier application
 
 </div>
 
-#### Step 2: Online QR login
+#### Step 2: QR code login
 
 <figure><img src="../.gitbook/assets/online_qr_login.png" alt=""><figcaption></figcaption></figure>
