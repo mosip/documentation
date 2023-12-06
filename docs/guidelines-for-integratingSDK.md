@@ -129,13 +129,15 @@ The following APIs are exposed to instantiate, start the transfer and stop the t
 
    * Disconnected
   
-     Transitions between states is as below:
+     Transitions between states is shown below:
+  
+     
 
      If either the sender or receiver decides to cancel the transfer at any stage, the state will transition to Disconnected and become Idle as a result.
 
      To know more, refer the BLE Verifier Sdk [documentation](https://github.com/mosip/ble-verifier-sdk/tree/develop#readme) for more details.
 
-     ## Inji integration workflow with BLE Verifier SDK and Face Match SDK
+ ## Inji integration workflow with BLE Verifier SDK and Face Match SDK
 
      
 
