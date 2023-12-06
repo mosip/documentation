@@ -14,8 +14,6 @@ Please navigate to the Play Store or App Store for iOS, select the "Install" opt
 
 <figure><img src=".gitbook/assets/inji-install-ios.png" alt=""><figcaption><p>Installation of Inji on iOS device</p></figcaption></figure>
 
-
-
 ### First launch of the app
 
 * Upon launching the app, the MOSIP logo will be displayed before the language filter appears.&#x20;
@@ -32,16 +30,32 @@ Please navigate to the Play Store or App Store for iOS, select the "Install" opt
 
 To download VC, there are three methods:
 
+* Downloading VC using the UIN/ VID feature
+* Downloading VC using the Application ID feature
+* Download VC via eSignet
 
+**Downloading VC using UIN/ VID/ AID**
 
-* On the home page, locate the "+" symbol. Clicking on it will display a list of issuers offering the option to download VCs.
-* &#x20;Select the issuer that includes the option `Download via UIN and VID`. This selection will provide an option to download VC using AID and VID.&#x20;
-* After filling the text box according to your requirements, click on `Generate card`. This action will prompt an OTP page, where you can enter the OTP received. Once the OTP is submitted, the download process will commence automatically.
+* On the home page, you will find a plus "+" symbol. Clicking on this symbol will display a list of issuers from which you can download VCs.&#x20;
+* Look for the issuer that offers the option to download via UIN and VID. Clicking on this option will present you with the option to download VC from AID and VID.&#x20;
+* Fill in the required information in the text box according to your needs, and then click on the **Generate Card** button.&#x20;
+* You will be prompted to enter an OTP on the next page, and once you do so, the download will begin automatically.
 
-\####
-
-<figure><img src=".gitbook/assets/downloadVC-mosipID-Page-1.png" alt=""><figcaption><p>Download via UIN, VID, AID</p></figcaption></figure>
+<figure><img src=".gitbook/assets/downloadVC-mosipID-Page-1.png" alt=""><figcaption><p>Selecting the <strong>Download via UIN, VID, AID option</strong></p></figcaption></figure>
 
 <figure><img src=".gitbook/assets/downloadVC-mosipID-Page-2.png" alt=""><figcaption><p>OTP Verification and Requesting for Credential</p></figcaption></figure>
 
-####
+**Downloading VC via eSignet**
+
+* On the home page, there will be a plus "+" symbol that displays the list of issuers available to download VCs from.&#x20;
+* Select the issuer that states **Download via eSignet**. Once clicked, the browser will open and take you to the eSignet page.&#x20;
+* There will be an option to download from OTP, which should be selected. Logging in with biometrics will not be possible. Instead, a text box should be filled with your VID and the captcha should be completed in order to enable the **Get OTP** button.&#x20;
+* Once clicked, it will redirect to the OTP page. After entering the correct OTP, it will bring us back to the app, landing on a loading page. Once the download is complete, it will take us back to the home page.
+
+
+
+<figure><img src=".gitbook/assets/downloadVC-esignet-Page-1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/downloadVC-esignet-Page-2.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/downloadVC-esignet-Page-3.png" alt=""><figcaption></figcaption></figure>
