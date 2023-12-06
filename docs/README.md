@@ -20,3 +20,5 @@ In Korean, Inji means `knowing` or `recognizance`. Hence, the word _Inji_ resona
 In summary, Inji provides a practical, reliable, and cost-efficient solution for consolidating various forms of identification. It seamlessly integrates with MOSIP and can easily adapt to other ID systems through a dedicated integration process.
 
 Moreover, Inji serves individuals in remote locations with limited network accessibility. The credentials stored within the Inji mobile app only require a one-time download, allowing the app to verify both online and offline IDs at any given moment, eliminating the need for network connectivity.
+
+__Note__: Inji is a reference app and provides most of the necessary components to act as a wallet. 
