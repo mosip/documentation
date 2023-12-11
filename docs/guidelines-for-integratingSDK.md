@@ -26,9 +26,7 @@ The following APIs are available for consumption:
 
 *  The API should immediately return true if initialization has already been completed.
 
-* The API optionally accepts a traceabilityId parameter for enhanced logging and traceability purposes.
-
-* In Inji, the AppId is used.
+* The API optionally accepts a traceabilityId parameter for enhanced logging and traceability purposes. In Inji, the AppId is used.
 
    ```
    async function init(path: string): Promise<boolean> {
