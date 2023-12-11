@@ -6,12 +6,13 @@ These libraries are accessible as NPM modules, allowing seamless integration wit
 
 The libraries are as follows:
 
-1. NPM module for sharing via BLE
-2. NPM module for matching faces
-3. NPN module for using secure keystore
-4. NPM module of Telemetry (coming soon)
+1. Tuvali - Sharing via BLE
+2. Face Match
+3. Secure Keystore
+4. BLE Verifier
+5. Telemetry (coming soon)
 
-#### **1. NPM Module for Sharing via BLE** ([Tuvali](https://www.npmjs.com/package/mosip-react-native-tuvali))
+#### **1. Tuvali - Sharing via BLE**
 
 * The transfer of downloaded Verifiable Credential from the Wallet to Verifier is facilitated by a React Native library named Tuvali.
 * [Tuvali](https://github.com/mosip/tuvali) enables offline VC transfer between mobile devices via Bluetooth Low Energy (BLE).\
@@ -29,7 +30,7 @@ The libraries are as follows:
 * For information on Tuvali permissions and requirements, refer [here](https://docs.mosip.io/inji/tuvali/tuvali-requirements).
 * To understand Tuvali and Inji integration, along with API documentation, refer [here](https://docs.mosip.io/inji/tuvali/tuvali-inji).
 
-#### 2. NPM Module for Matching Faces
+#### **2. Face Match**
 
 The face matcher SDK internally implements native functionalities for Android and iOS, utilizing [Tensorflow](https://www.tensorflow.org/) and [Google ML Kit](https://developers.google.com/ml-kit) to identify faces.
 
@@ -43,9 +44,9 @@ The SDK is employed in two scenarios:
 
 Upon the initial launch of Inji, the model is downloaded in the background and stored in the cache. Refer [here](../specifications/face-SDK-specifications.md) to check the API specifications for the face matcher model.
 
-### 3. NPN module for using react-native-secure keystore ([Secure Keystore](https://www.npmjs.com/package/mosip-react-native-secure-keystore))
+### **3. Secure Keystore**
 
-The [react-native-secure-keystore](https://github.com/mosip/secure-keystore) library is a react native module. This is used to create, store key-pairs in android hardware keystore, allows encryption, decryption and HMAC calculation.
+The [secure-keystore](https://github.com/mosip/secure-keystore) library is a react native module. This is used to create, store key-pairs in android hardware keystore, allows encryption, decryption and HMAC calculation.
 
 It also helps to sign with aliases, created as part of key pair generation.
 
@@ -58,7 +59,13 @@ To check all the API supported by this module, refer [here](https://github.com/m
 * This feature is exclusive to the Android operating system.
 * It is only compatible with devices that have a hardware keystore.
 
-### 4. NPM module of Telemetry
+### **4. BLE Verifier**
+
+The [BLE Verifier](https://github.com/mosip/ble-verifier-sdk/tree/develop) is the module built for verifiers for receiving VC via BLE. This is a wrapper built on Tuvali with simplified APIs.
+
+To know more about API and how to integrate, check this (Link for Integration guide of BLE Verifier)
+
+### **5. Telemetry**
 
 The [telemetry](https://github.com/mosip/sunbird-telemetry-sdk) module is derived from the [sunbird telemetry](https://github.com/project-sunbird/sunbird-telemetry-sdk) module. It is responsible for generating events that can provide valuable analytics.
 
