@@ -26,9 +26,9 @@ The libraries are as follows:
 
 **Note**:
 
-* To learn more about Tuvali's implementation, refer [here](https://docs.mosip.io/inji/tuvali).
-* For information on Tuvali permissions and requirements, refer [here](https://docs.mosip.io/inji/tuvali/tuvali-requirements).
-* To understand Tuvali and Inji integration, along with API documentation, refer [here](https://docs.mosip.io/inji/tuvali/tuvali-inji).
+* To learn more about Tuvali's implementation, refer [here](integration-guide/tuvali.md).
+* For information on Tuvali permissions and requirements, refer [here](integration-guide/tuvali-requirements.md).
+* To understand Tuvali and Inji integration, along with API documentation, refer [here](integration-guide/tuvali-inji.md).
 
 #### **2. Face Match**
 
