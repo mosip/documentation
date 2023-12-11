@@ -26,9 +26,9 @@ The libraries are as follows:
 
 **Note**:
 
-* To learn more about Tuvali's implementation, refer [here](integration-guide/tuvali.md).
-* For information on Tuvali permissions and requirements, refer [here](integration-guide/tuvali-requirements.md).
-* To understand Tuvali and Inji integration, along with API documentation, refer [here](integration-guide/tuvali-inji.md).
+* To learn more about Tuvali's implementation, refer [here](https://docs.mosip.io/inji/integration-guide/tuvali).
+* For information on Tuvali's permissions and requirements, refer [here](https://docs.mosip.io/inji/integration-guide/tuvali/tuvali-requirements).
+* To understand Tuvali and Inji integration, along with API documentation, refer[ here](https://docs.mosip.io/inji/integration-guide/tuvali/tuvali-inji).
 
 #### **2. Face Match**
 
@@ -46,13 +46,13 @@ Upon the initial launch of Inji, the model is downloaded in the background and s
 
 ### **3. Secure Keystore**
 
-The [secure-keystore](https://github.com/mosip/secure-keystore) library is a react native module. This is used to create, store key-pairs in android hardware keystore, allows encryption, decryption and HMAC calculation.
+The [secure-keystore](https://github.com/mosip/secure-keystore) library is a module in the React Native framework. It is designed for the purpose of creating and storing key-pairs in the hardware keystore of Android devices. The library also supports encryption, decryption, and HMAC calculation functionalities.
 
 It also helps to sign with aliases, created as part of key pair generation.
 
 As the description says, this module is only for Android devices which support hardware keystore.
 
-To check all the API supported by this module, refer [here](https://github.com/mosip/secure-keystore/blob/develop/src/interface.ts).
+To check all the APIs supported by this module, refer [here](https://github.com/mosip/secure-keystore/blob/develop/src/interface.ts).
 
 **Note**:
 
@@ -63,13 +63,12 @@ To check all the API supported by this module, refer [here](https://github.com/m
 
 The [BLE Verifier](https://github.com/mosip/ble-verifier-sdk/tree/develop) is the module built for verifiers for receiving VC via BLE. This is a wrapper built on Tuvali with simplified APIs.
 
-To know more about API and how to integrate, refer [here](integration-guide/ble-verifier.md).
+To know more about API and how to integrate, refer [here](../integration-guide/ble-verifier.md).
 
 ### **5. Telemetry**
 
 The [telemetry](https://github.com/mosip/sunbird-telemetry-sdk) module is derived from the [sunbird telemetry](https://github.com/project-sunbird/sunbird-telemetry-sdk) module. It is responsible for generating events that can provide valuable analytics.
 
-_Note_: The publication of this project is currently a work in progress and has not been released yet. Stay tuned for further announcements.
+_**Note**_: _The publication of this project is currently a work in progress and has not been released yet. Stay tuned for further announcements_.
 
-To know more about each of these, refer the section [Integration Guides](integration-guide/README.md).
-
+To know more about each of these, refer the section[ Integration Guides](https://docs.mosip.io/inji/integration-guide).
