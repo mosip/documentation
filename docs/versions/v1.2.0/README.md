@@ -10,9 +10,11 @@
 
 The 1.2.0 version of eSignet is the fourth release of eSignet which mainly focuses on the [**VC Issuance**](../../integration/vc-issuance.md) feature.
 
-<mark style="color:yellow;">To Add</mark>: Description of changes. (OpenID for VCI, PKCE security extension added, signed consent, multiple wallet support)
-
-
+* **Verifiable Credentials Issuance**: eSignet is an OAuth 2.0 and OIDC-based solution that has been enhanced to support OID4VCI flows. By integrating the eSignet VCI solution into a traditional issuer, it allows the issuer application to become compliant with OID4VCI standards, ensuring interoperability with all OID4VCI compatible wallets.
+* **Signed Consent**: eSignet securely saves the consent in a dedicated consent registry that is specifically designed to store user consent for claims and scopes requested during the initial login to a relying party's application using eSignet.
+* **PKCE Security extension added**: We also provide support for the [PKCE](https://www.rfc-editor.org/rfc/rfc7636) security extension, which allows for the secure exchange of an authorization code for a token. This guarantees that the authorization code was obtained by the client application itself during the exchange process.
+* **Multiple wallet support:** Mobile wallet-based authentication can be employed to scan a QR code and complete the authentication process utilizing the previously activated credentials for online login. Moreover, facial authentication can occur on the wallet to ensure the presence of the authorized individual is verified.
+* **Language Support for eSignet:**  The eSignet user interface (UI) offers comprehensive language support to facilitate effective communication. By default, eSignet includes language bundles for Arabic, English, Hindi, Kannada, and Tamil. Moreover, it can be easily customized to incorporate additional languages as necessary to accommodate specific country requirements. Furthermore, eSignet has undergone meticulous testing to ensure seamless compatibility with right-to-left (RTL) languages. This means that users can rely on eSignet to confidently navigate and interact with RTL content.
 
 ## Features Included
 
