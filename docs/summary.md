@@ -30,7 +30,7 @@
     * [Tuvali](architecture/tuvali.md)
       * [Permissions & Requirements](architecture/tuvali-requirements.md)
       * [Tuvali API Documentation](architecture/tuvali-inji.md)
-    * [BLE Verifier](ble-verifier.md)
+    * [BLE Verifier](integration-guide/ble-verifier.md)
     * [Telemetry]((architecture/telemetry.md))
 * [Backend Services](backend-services/README.md)
   * [Mimoto](backend-services/mimoto.md)
