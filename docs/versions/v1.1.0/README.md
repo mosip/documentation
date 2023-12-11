@@ -8,14 +8,14 @@
 
 ## Overview
 
-The 1.1.0 version of e-Signet is the third release of eSignet, which mainly focuses on the **Consent Registry** feature.
+The 1.1.0 version of eSignet is the third release of eSignet, which mainly focuses on the **Consent Registry** feature.
 
-The consent registry is designed to store user consent on claims and scopes requested during login to a relying party application using e-Signet or the Wallet application ([Inji](https://docs.mosip.io/inji/)).
+The consent registry is designed to store user consent on claims and scopes requested during login to a relying party application using eSignet or the Wallet application ([Inji](https://docs.mosip.io/inji/)).
 
 Key highlights of this feature are:
 
 * Storage of user consent against the requested claims and scopes in the database
-* If consent is already provided, the consent screen is bypassed when the user logs in using e-Signet.
+* If consent is already provided, the consent screen is bypassed when the user logs in using eSignet.
 * Recapture consent in the event of changes in requested claims or scopes.
 
 {% hint style="info" %}
