@@ -63,7 +63,7 @@ To check all the API supported by this module, refer [here](https://github.com/m
 
 The [BLE Verifier](https://github.com/mosip/ble-verifier-sdk/tree/develop) is the module built for verifiers for receiving VC via BLE. This is a wrapper built on Tuvali with simplified APIs.
 
-To know more about API and how to integrate, check this (Link for Integration guide of BLE Verifier)
+To know more about API and how to integrate, refer [here](integration-guide/ble-verifier.md).
 
 ### **5. Telemetry**
 
@@ -71,5 +71,5 @@ The [telemetry](https://github.com/mosip/sunbird-telemetry-sdk) module is derive
 
 _Note_: The publication of this project is currently a work in progress and has not been released yet. Stay tuned for further announcements.
 
-
+To know more about each of these, refer the section [Integration Guides](integration-guide/README.md).
 
