@@ -4,7 +4,7 @@
 
 **Upgrade From**: 1.1.0
 
-**Release Date**: November 18, 2023
+**Release Date**: 12th December 2023
 
 ## Overview
 
@@ -41,4 +41,5 @@ For details on deployment, go through the [helm charts in the eSignet repository
 * [Feature Documentation](../../overview/features/)
 * [Integration Guides](../../integration/)
 * [End User Guide](../../end-user-guide/)
+* [API Documentation](https://mosip.stoplight.io/docs/identity-provider/jlmszj6dlxigw-e-signet)
 * [QA Report](test-report/)
