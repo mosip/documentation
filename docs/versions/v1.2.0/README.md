@@ -4,7 +4,7 @@
 
 **Upgrade From**: 1.1.0
 
-**Release Date**: 12th December 2023
+**Release Date**: December 11, 2023
 
 ## Overview
 
@@ -30,9 +30,23 @@ Below are the features available in the release:
 
 ## Repositories Released
 
-* eSignet: TBA
-* artifactory-ref-impl: TBA
-* mosip-config: TBA
+
+
+| Repository Released                | Tags                                                                         |
+| ---------------------------------- | ---------------------------------------------------------------------------- |
+| keymanager                         | [1.2.0.1-B3](https://github.com/mosip/keymanager/tree/v1.2.0.1-B3)           |
+| id-authentication                  | [1.2.0.1-B5](https://github.com/mosip/id-authentication/tree/v1.2.0.1-B5)    |
+| Artifactory-ref-impl               | [1.2.0.1-B6](https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.1-B6) |
+| mosip-config                       | [1.2.0-ES](https://github.com/mosip/mosip-config/tree/v1.2.0-ES)             |
+| mosip-helm                         | [1.2.0-ES](https://github.com/mosip/mosip-helm/tree/v1.2.0-ES)               |
+| mosip-infra                        | [1.2.0-ES](https://github.com/mosip/mosip-infra/tree/v1.2.0-ES)              |
+| esignet                            | [1.2.0](https://github.com/mosip/esignet/tree/v1.2.0)                        |
+| esignet-mock-services              | [0.9.1](https://github.com/mosip/esignet-mock-services/tree/v0.9.1)          |
+| mosip-file-server                  | [1.2.0.1-B4](https://github.com/mosip/mosip-file-server/tree/v1.2.0.1-B4)    |
+| mosip-plugins/sign-in-with-esignet | [0.9.1](https://github.com/mosip/mosip-plugins/tree/v0.9.1)                  |
+| mosip-onboarding                   | [1.2.0.1-B4](https://github.com/mosip/mosip-onboarding/tree/v1.2.0.1-B4)     |
+| postres-init                       | [1.2.0.1-B4](https://github.com/mosip/postgres-init/tree/v1.2.0.1-B4)        |
+| mosip-data                         | [1.2.0.1-B4](https://github.com/mosip/mosip-data/tree/v1.2.0.1-B4)           |
 
 For details on deployment, go through the [helm charts in the eSignet repository](https://github.com/mosip/esignet/tree/v1.1.0/helm).
 

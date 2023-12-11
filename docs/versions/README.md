@@ -3,7 +3,7 @@
 ## Version: 1.2.0
 
 * Name: eSignet (VCI)
-* Date: November 18, 2023
+* Date: December 11, 2023
 * [Release Notes](v1.2.0)
 
 ## Version: 1.1.0
