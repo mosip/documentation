@@ -34,7 +34,6 @@ The user is currently on the `Add new card` screen and chooses the option to `Do
 
 For credential request, refer credential_endpoint attribute in issuer's configuration response.
 
-{% swagger src="../.gitbook/assets/mimoto.json" path="/issuers/{issuer-id}t" method="post" %}
+{% swagger src="../.gitbook/assets/mimoto.json" path="/issuers/{issuer-id}" method="get" %}
 [mimoto.json](../.gitbook/assets/mimoto.json)
 {% endswagger %}
-[//]: <> (Add download credential endpoint)
