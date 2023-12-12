@@ -9,7 +9,11 @@ The scope of testing is to verify fitment to the specification from the perspect
 
 Verification is performed not only from the end-user perspective but also from the System Integrator (SI) point of view. Hence, the configureability and extensibility of the software are also assessed. This ensures the readiness of software for use in multiple countries. Since MOSIP is an “API First” product platform, the verification scope required comprehensive automation testing for all the MOSIP APIs. An automated Test Rig is created for the same.
 
-The key feature tested as a part of this release is the **Consent Registry** (without signature).
+The key features tested as a part of this release are:
+
+* Consent registry with signature (for consent link wallet flow)
+* VCI
+* Multiple types of wallet login in UI
 
 ### Test approach
 
@@ -42,7 +46,7 @@ Verification is performed on various configurations as mentioned below:
 
 ### Feature health
 
-<figure><img src="../../../.gitbook/assets/test-report-1.2.0.png" alt=""><figcaption><p>Tesr report 1.2.0</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/test-report-1.2.0.png" alt=""><figcaption><p>Test report 1.2.0</p></figcaption></figure>
 
 ### Test Execution Statistics
 
@@ -99,6 +103,4 @@ Link for the [detailed test report](https://github.com/mosip/test-management/tre
 
 ### Sonar Report
 
-![](\_images/sonar.png)
-
-<table><thead><tr><th width="137">Repo Name</th><th>Version</th><th>Branch Name</th><th>Coverage (>80%)</th><th>Reliability (0)</th><th>Security (0)</th><th>Hotspots (0)</th><th>Duplications  (Less than 3%)</th></tr></thead><tbody><tr><td>id-authentication</td><td>1.2.0.1-B5</td><td>release-1.2.0.1</td><td>70.9</td><td>0</td><td>0</td><td>0</td><td>1.9%</td></tr><tr><td>eSignet</td><td>1.2.0</td><td>release-1.2.x</td><td>89.1</td><td>0</td><td>0</td><td>0</td><td>0.5%</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
+<table><thead><tr><th width="161">Repo Name</th><th>Version</th><th width="132">Branch Name</th><th>Coverage (>80%)</th><th>Reliability (0)</th><th>Security (0)</th><th>Hotspots (0)</th><th>Duplications (Less than 3%)</th></tr></thead><tbody><tr><td>id-authentication</td><td>1.2.0.1-B5</td><td>release-1.2.0.1</td><td>70.9</td><td>0</td><td>0</td><td>0</td><td>1.9%</td></tr><tr><td>eSignet</td><td>1.2.0</td><td>release-1.2.x</td><td>89.1</td><td>0</td><td>0</td><td>0</td><td>0.5%</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table>
