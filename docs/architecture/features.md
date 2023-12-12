@@ -15,11 +15,13 @@ Inji, as a digital Verifiable Credential wallet, implements robust measures to s
 
 ### Download and save Verifiable Credentials
 
-1. **OpenID Support**
-   * Inji offers support for OpenID, enabling a smooth onboarding experience for identity providers (IdP).
-2. **Download Options**
-   * Inji supports the use of the country-provided Identification Number (UIN/VID) to download identity proof, granting access to various government and private services.
-   * Alternatively, the Application ID (AID) provided during the registration process can also be used to initiate the download of VCs.
+Downloading your digital credentials (IDs) with you at all          times just got easier. This can be done in three ways:
+
+* **Downloading VC using the UIN/ VID:** Residents can use the country-provided ID (UIN/VID) to download their cards and avail of various government and private services.
+* **Downloading VC using the Application ID (AID):** Residents can also use their Application ID provided to them during the registration process to be able to download their card.
+* **Downloading VC using the OpenID for VC Issuance flow:** Residents can download a VC using a configured third-party issuer which follows OpenID for VCI standard.
+
+
 
 ### Sharing Verifiable Credentials without the Internet
 
@@ -43,10 +45,6 @@ Inji functions as a comprehensive repository for a diverse array of VCs, leverag
 
 * **Multiple views of VCs**: Users can access multiple views of VCs, ranging from an overview to detailed insights.
 * **Organized UI**: Inji provides a clear demarcation between downloaded and received VCs enhancing user clarity.
-* Downloading your digital credentials (ID) with you at all times just got easier. This can be done in three ways:
-  * **Downloading VC using the UIN/ VID:** Residents can use the country-provided ID (UIN/VID) to download their cards and avail of various government and private services.
-  * **Downloading VC using the Application ID (AID):** Residents can also use their Application ID provided to them during the registration process to be able to download their card.
-  * **Downloading VC using the OpenID for VC Issuance flow:** Residents can download a VC using a configured third-party issuer which follows OpenID for VCI standard.
 
 For a quick look at these features, refer the [Inji User Guide](../end-user-guide.md).
 
