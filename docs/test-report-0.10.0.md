@@ -17,7 +17,7 @@ The `Inji` testing scope revolves around the following flows:
 * Passcode unlock
 * VC download via MOSIP
 * VC download via eSignet
-* Retriving UIN/VID via AID
+* Retrieving UIN/VID via AID
 * Pinning a VC
 * Normal VC sharing with VID
 * Deleting VC
@@ -98,7 +98,7 @@ Here is the detailed breakdown of metrics:
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
-| 1114      | 1110      | 4          | 0           |
+| 1114      | 1110       | 4          | 0           |
 
 **Note**:
 
@@ -120,7 +120,7 @@ Below are the test metrics by performing VC Sharing functionality on various dev
 
 **Test Rate: 100%** with **Pass Rate : 100%**
 
-### Detailed test metrics
+### Detailed Test Metrics
 
 Below are the detailed test metrics by performing manual/ automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency.
 

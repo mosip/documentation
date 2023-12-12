@@ -10,7 +10,7 @@
 
 ## Overview
 
-We are pleased to announce the release of Inji Version 0.10.0. This release builds upon Inji 0.9.1, introducing key features and improvements
+We are pleased to announce the release of Inji Version 0.10.0. This release builds upon Inji 0.9.1, introducing key features and improvements.
 
 * **OpenID Support for Verifiable Credentials**: Inji 0.10.0 introduces support for OpenID, facilitating the issuance of verifiable credentials.
 * **Enhanced Security for Personally Identifiable Information (PII) Data**: A significant focus has been placed on reinforcing security measures related to Personally Identifiable Information (PII) data.
@@ -76,7 +76,6 @@ Redmi devices are not supported for this release. To know more, refer to [known 
 
 ## Documentation
 
-* Feature documentation 
-* User guide
-* QA Report
-
+* [Feature documentation](architecture/features.md)
+* [User guide](end-user-guide.md)
+* [QA Report](test-report-0.10.0.md)
