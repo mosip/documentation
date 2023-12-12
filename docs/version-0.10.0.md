@@ -6,7 +6,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: 1st December, 2023
+**Release Date**: December 12, 2023
 
 ## Overview
 
@@ -76,7 +76,7 @@ Redmi devices are not supported for this release. To know more, refer to [known 
 
 ## Documentation
 
-* Feature documentation [https://docs.mosip.io/inji/](https://docs.mosip.io/inji/)
-* User guide [https://docs.mosip.io/1.2.0/modules/inji-user-guide](https://docs.mosip.io/1.2.0/modules/inji-user-guide)
+* Feature documentation 
+* User guide
 * QA Report
-* To know more above Inji, watch the video
+
