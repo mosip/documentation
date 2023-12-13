@@ -14,7 +14,7 @@ The 1.2.0 version of eSignet is the fourth release of eSignet which mainly focus
 * **Signed Consent**: eSignet securely saves the consent in a dedicated consent registry that is specifically designed to store user consent for claims and scopes requested during the initial login to a relying party's application using eSignet.
 * **PKCE Security extension added**: We also provide support for the [PKCE](https://www.rfc-editor.org/rfc/rfc7636) security extension, which allows for the secure exchange of an authorization code for a token. This guarantees that the authorization code was obtained by the client application itself during the exchange process.
 * **Multiple wallet support:** Mobile wallet-based authentication can be employed to scan a QR code and complete the authentication process utilizing the previously activated credentials for online login. Moreover, facial authentication can occur on the wallet to ensure the presence of the authorized individual is verified.
-* **Language Support for eSignet:**  The eSignet user interface (UI) offers comprehensive language support to facilitate effective communication. By default, eSignet includes language bundles for Arabic, English, Hindi, Kannada, and Tamil. Moreover, it can be easily customized to incorporate additional languages as necessary to accommodate specific country requirements. Furthermore, eSignet has undergone meticulous testing to ensure seamless compatibility with right-to-left (RTL) languages. This means that users can rely on eSignet to confidently navigate and interact with RTL content.
+* **Language Support for eSignet:** The eSignet user interface (UI) offers comprehensive language support to facilitate effective communication. By default, eSignet includes language bundles for Arabic, English, Hindi, Kannada, and Tamil. Moreover, it can be easily customized to incorporate additional languages as necessary to accommodate specific country requirements. Furthermore, eSignet has undergone meticulous testing to ensure seamless compatibility with right-to-left (RTL) languages. This means that users can rely on eSignet to confidently navigate and interact with RTL content.
 
 ## Features Included
 
@@ -30,8 +30,6 @@ Below are the features available in the release:
 
 ## Repositories Released
 
-
-
 | Repository Released                | Tags                                                                         |
 | ---------------------------------- | ---------------------------------------------------------------------------- |
 | keymanager                         | [1.2.0.1-B3](https://github.com/mosip/keymanager/tree/v1.2.0.1-B3)           |
@@ -45,10 +43,8 @@ Below are the features available in the release:
 | mosip-file-server                  | [1.2.0.1-B4](https://github.com/mosip/mosip-file-server/tree/v1.2.0.1-B4)    |
 | mosip-plugins/sign-in-with-esignet | [0.9.1](https://github.com/mosip/mosip-plugins/tree/v0.9.1)                  |
 | mosip-onboarding                   | [1.2.0.1-B4](https://github.com/mosip/mosip-onboarding/tree/v1.2.0.1-B4)     |
-| postres-init                       | [1.2.0.1-B4](https://github.com/mosip/postgres-init/tree/v1.2.0.1-B4)        |
-| mosip-data                         | [1.2.0.1-B4](https://github.com/mosip/mosip-data/tree/v1.2.0.1-B4)           |
 
-For details on deployment, go through the [helm charts in the eSignet repository](https://github.com/mosip/esignet/tree/v1.1.0/helm).
+For details on deployment, go through the [helm charts](https://github.com/mosip/esignet/tree/v1.1.0/helm) in the eSignet repository.
 
 ## Documentation
 
