@@ -71,4 +71,4 @@ The [telemetry](https://github.com/mosip/sunbird-telemetry-sdk) module is derive
 
 _**Note**_: _The publication of this project is currently a work in progress and has not been released yet. Stay tuned for further announcements_.
 
-To know more about each of these, refer the section[ Integration Guides](https://docs.mosip.io/inji/integration-guide).
+To know more about each of these, refer [Integration Guides](https://docs.mosip.io/inji/integration-guide).
