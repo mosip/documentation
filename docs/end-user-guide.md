@@ -53,16 +53,21 @@ To download VC, there are three methods:
 
 * On the home page, there will be a plus "+" symbol that displays the list of issuers available to download VCs from.&#x20;
 * Select the issuer that states **Download via eSignet**. Once clicked, the browser will open and take you to the eSignet page.&#x20;
-* There will be an option to download from OTP, which should be selected. Logging in with biometrics will not be possible. Instead, a text box should be filled with your VID and the captcha should be completed in order to enable the **Get OTP** button.&#x20;
-* Once clicked, it will redirect to the OTP page. After entering the correct OTP, it will bring us back to the app, landing on a loading page. Once the download is complete, it will take us back to the home page.
+* There will be an option to **Login with OTP**, which should be selected.
+* A text box should be filled with your VID and the captcha should be completed in order to enable the **Get OTP** button.&#x20;
+* Upon activation, the system will redirect to the One-Time Password (OTP) validation page. After successfully inputting the correct OTP, the user will be taken back to the application, landing on the loading screen. Following the completion of the download process, the user will be returned to the home page.
 
 
 
-<figure><img src=".gitbook/assets/downloadVC-esignet-Page-1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/inji-download-via-esignet-Page-1.png" alt=""><figcaption><p>Selecting the <strong>Download via eSignet</strong></p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/downloadVC-esignet-Page-2.png" alt=""><figcaption></figcaption></figure>
+###
 
-<figure><img src=".gitbook/assets/downloadVC-esignet-Page-3.png" alt="" width="548"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/inji-download-via-esignet-Page-2.png" alt=""><figcaption><p>Opt for <strong>Login with OTP</strong></p></figcaption></figure>
+
+###
+
+<figure><img src=".gitbook/assets/inji-download-via-esignet-Page-3.png" alt=""><figcaption><p>Successful download of VC</p></figcaption></figure>
 
 ### Detailed View of the downloaded VC
 
