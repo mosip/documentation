@@ -77,6 +77,7 @@ Redmi devices are not supported for this release. To know more, refer to [known 
 ## Documentation
 
 * [Feature documentation](architecture/features.md)
+* [Integration Guides](integration-guide/)
 * [User guide](end-user-guide.md)
 * [QA Report](test-report-0.10.0.md)
 * [API Documentation](https://github.com/mosip/mimoto/tree/release-0.10.0/docs/postman-collections)
