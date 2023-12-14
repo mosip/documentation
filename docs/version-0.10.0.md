@@ -1,6 +1,6 @@
 # Version 0.10.0
 
-**Release Name**: Inji 0.10.0
+**Release Name**: Inji 0.10.0 \[Release in Progress]
 
 **Upgrade From**: Inji 0.9.0
 
@@ -79,4 +79,4 @@ Redmi devices are not supported for this release. To know more, refer to [known 
 * [Feature documentation](architecture/features.md)
 * [User guide](end-user-guide.md)
 * [QA Report](test-report-0.10.0.md)
-* [API Documentation](https://mosip.stoplight.io/docs/mimoto/5bf5a1n68g4tq-mimoto)
+* [API Documentation](https://github.com/mosip/mimoto/tree/release-0.10.0/docs/postman-collections)
