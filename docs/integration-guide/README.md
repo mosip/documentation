@@ -1,10 +1,10 @@
 # Integration Guides
 
-For any software development kit (SDK) integration with Inji, the following specifications are expected:
+Below are the guidelines and specifications for integrating any software development kit (SDK) with Inji:
 
 1.  The SDK should be implemented as a npm module that supports the React Native framework.
 
-    For example, the npm modules `mosip-react-native-tuvali` and `mosip-react-native-secure-keystore` demonstrate suitable implementations.
+    For example, the npm modules, [**tuvali**](https://www.npmjs.com/package/@mosip/tuvali) and [**secure-keystore**](https://www.npmjs.com/package/@mosip/secure-keystore)**,** demonstrate suitable implementations.
 2.  The SDK should provide simple APIs for integration purposes.
 
     These APIs should include an API for instantiation or initialization, such as the **init** or **constructor** API.
@@ -12,6 +12,7 @@ For any software development kit (SDK) integration with Inji, the following spec
 4.  There should be an API available to **disconnect** the SDK, if needed.
 
     If possible, it would be beneficial for these APIs to be **asynchronous**. This enables users to continue using the application without experiencing any UI blocking.
+5. To enhance logging and traceability, the API may accept an optional parameter known as `traceabilityId`.
 
 By adhering to these specifications, the integrated SDK will enhance the functionality and usability of the application.
 

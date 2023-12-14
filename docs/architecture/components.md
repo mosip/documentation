@@ -69,6 +69,6 @@ To know more about API and how to integrate, refer [here](../integration-guide/b
 
 The [telemetry](https://github.com/mosip/sunbird-telemetry-sdk) module is derived from the [sunbird telemetry](https://github.com/project-sunbird/sunbird-telemetry-sdk) module. It is responsible for generating events that can provide valuable analytics.
 
-_**Note**_: _The publication of this project is currently a work in progress and has not been released yet. Stay tuned for further announcements_.
+_**Note**_: _The publication of this project is currently a work in progress and has not been released yet. Stay tuned for further announcements!_
 
-To know more about each of these, refer [Integration Guides](https://docs.mosip.io/inji/integration-guide).
+> To know more about each of these, refer [Integration Guides](https://docs.mosip.io/inji/integration-guide).
