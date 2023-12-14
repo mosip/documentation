@@ -114,4 +114,4 @@ _Standard Return Codes (match or no match)_
   3. Recording or transmitting IP addresses, user details, Phone IMEI, phone numbers, or user photos in telemetry or logs is strictly prohibited.
   4. The use of phone numbers and device fingerprints should be limited to managing the SDK license.
 
-_**Note**: We extend our sincere appreciation to the **Iriscan team** for their invaluable support to MOSIP by providing the face match SDK. We are truly impressed by your commitment and outstanding contribution._
+_**Note**: We extend our sincere appreciation to the **IRIScan team** for their invaluable support to MOSIP by providing the face match SDK for a reference integration. We are truly impressed by your commitment and outstanding contribution. We welcome and invite our other esteemed partners to collaborate with MOSIP, for a similar integration._
