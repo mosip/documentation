@@ -4,7 +4,7 @@ This document delineates the workflow for essential functionalities of Inji.
 
 ### 1. First App Launch
 
-After installing the application for the first time, the user will be asked to set up unlock method for it. The app supports biometric or PIN-based locks. For more details, refer to the [User Guide](https://docs.mosip.io/1.2.0/modules/mobile-application/inji-mobile-app-beta).
+After installing the application for the first time, the user will be asked to set up unlock method for it. The app supports biometric or PIN-based locks. For more details, refer to the [End User Guide](../end-user-guide.md).
 
 #### Launch with passcode unlock method
 
@@ -39,7 +39,7 @@ Residents have the ability to generate a Verifiable Credential (VC) for themselv
 
 ### 3. Sharing of credentials
 
-The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. Refer to [Tuvali documentation](https://docs.mosip.io/inji/tuvali) for more information.
+The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. For more information, refer to [Tuvali](../integration-guide/tuvali.md) documentation.
 
 <figure><img src="../.gitbook/assets/vc_share.png" alt=""><figcaption></figcaption></figure>
 

@@ -21,8 +21,6 @@ Downloading your digital credentials (IDs) with you at all          times just g
 * **Downloading VC using the Application ID (AID):** Residents can also use their Application ID provided to them during the registration process to be able to download their card.
 * **Downloading VC using the OpenID for VC Issuance flow:** Residents can download a VC using a configured third-party issuer which follows OpenID for VCI standard.
 
-
-
 ### Sharing Verifiable Credentials without the Internet
 
 * Inji allows users to securely share their downloaded VCs with other Inji users using Bluetooth Low Energy (BLE) technology, removing the necessity for an internet connection.
@@ -35,7 +33,7 @@ Downloading your digital credentials (IDs) with you at all          times just g
 
 * The Inji mobile application facilitates a Single Sign-On (SSO) function, empowering supported partners to enable a seamless login to online portals. This is achieved through the efficient process of scanning a QR code and sharing user data with their explicit consent.
 
-&#x20;      To understand the QR code login flow, refer [here](https://docs.esignet.io/esignet-end-user-guide/login-flow-qr-code).
+&#x20;      To understand the QR code login flow, refer [here](https://docs.esignet.io/end-user-guide/login-with-qr-code).
 
 * Inji users have the ability to choose which downloaded VC should be enabled for online authentication and selectively share the credentials on their ID. This capability provides users with an additional layer of security and control over the utilization of their stored information.
 
