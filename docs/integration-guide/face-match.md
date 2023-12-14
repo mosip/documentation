@@ -3,7 +3,7 @@
 * This is the module built for performing face match verification.
 * The library takes two images as base64 encoded strings and returns a boolean (match or no match).
 
-Because of its Open-Source nature, Inji has used it to conduct face verification while transferring VC to the relying party.&#x20;
+Because of its Open-Source nature, Inji has used it to conduct face verification while transferring VC to the relying party.
 
 ## Repository
 
@@ -17,14 +17,14 @@ Because of its Open-Source nature, Inji has used it to conduct face verification
 
 * To install this module, please add it as a dependency in the `package.json` file.
 
-## API Specification
+## API Specifications
 
 ### Configure API
 
 * This API is asynchronous and is used for initializing the given SDK. During initialization, the API validates the license, downloads the latest model file if needed, or informs the server about its usage if required. It is expected that this API only returns errors when there is a critical issue with the initialization process. In offline scenarios, the API should return true to ensure smooth usage.
 * The API should immediately return true if initialization has already been completed.
-* To enhance logging and traceability, the API may accept an optional parameter known as traceabilityId.
-* &#x20;In Inji, AppId is being used.
+* To enhance logging and traceability, the API may accept an optional parameter known as `traceabilityId`.
+* In Inji, `AppId` is being used.
 
 **Usage**
 
@@ -49,11 +49,10 @@ import { configure } from '@iriscan/biometric-sdk-react-native';
  }
 ```
 
-**Parameters**
-Refer [here](https://github.com/biometric-technologies/biometric-sdk-react-native/blob/master/README.md) for config parameter 
+**Parameters** Refer [here](https://github.com/biometric-technologies/biometric-sdk-react-native/blob/master/README.md) for config parameter
 
 | **Name** | **Description**                                     | **Type**   |
-|----------|-----------------------------------------------------|------------|
+| -------- | --------------------------------------------------- | ---------- |
 | config   | Configuration with model file and matcher threshold | Any object |
 
 _Standard Return Codes (true or false)_
@@ -98,7 +97,7 @@ import { faceCompare } from '@iriscan/biometric-sdk-react-native';
 
 _Standard Return Codes (match or no match)_
 
-| **response** | **Status**  |
+| R**esponse** | **Status**  |
 | ------------ | ----------- |
 | true         | Matched     |
 | false        | Not Matched |

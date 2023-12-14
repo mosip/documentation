@@ -6,7 +6,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: December 12, 2023
+**Release Date**: December 14, 2023
 
 ## Overview
 
@@ -67,7 +67,7 @@ Redmi devices are not supported for this release. To know more, refer to [known 
 ## Bug Fixes
 
 1. The user will now be redirected to the MOSIP page successfully from the `About INJI` screen. Earlier the link was crashing the app. #[INJI 225](https://mosip.atlassian.net/browse/INJI-225)
-2. The user will be able to login into eSignet’s portal via QR code, using the VC activated on Home screen via. ellipsis menu. #[INJI 253](https://mosip.atlassian.net/browse/INJI-253)
+2. The user will be able to login into eSignet portal via QR code, using the VC activated on Home screen via. ellipsis menu. #[INJI 253](https://mosip.atlassian.net/browse/INJI-253)
 3. App will prompt and remove tampered VC. #[INJI 397](https://mosip.atlassian.net/browse/INJI-397)
 4. The user will be asked for language preference only at new installation. #[INJI 362](https://mosip.atlassian.net/browse/INJI-362)
 5. Previously used UIN/VID will not be suggested in the AID field for VC download. #[INJI 332](https://mosip.atlassian.net/browse/INJI-332)
@@ -79,3 +79,4 @@ Redmi devices are not supported for this release. To know more, refer to [known 
 * [Feature documentation](architecture/features.md)
 * [User guide](end-user-guide.md)
 * [QA Report](test-report-0.10.0.md)
+* [API Documentation](https://mosip.stoplight.io/docs/mimoto/5bf5a1n68g4tq-mimoto)
