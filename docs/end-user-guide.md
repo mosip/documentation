@@ -41,11 +41,7 @@ To download VC, there are three methods:
 * Fill in the required information in the text box according to your needs, and then click on the **Generate Card** button.&#x20;
 * You will be prompted to enter an OTP on the next page, and once you do so, the download will begin automatically.
 
-
-
 <figure><img src=".gitbook/assets/inji-download-via-uin-Page-1.png" alt=""><figcaption><p>Selecting the <strong>Download via UIN, VID, AID option</strong></p></figcaption></figure>
-
-
 
 <figure><img src=".gitbook/assets/inji-download-via-uin-Page-2.png" alt=""><figcaption><p><strong>OTP Verification</strong> and <strong>Requesting for Credential</strong></p></figcaption></figure>
 
@@ -57,15 +53,9 @@ To download VC, there are three methods:
 * A text box should be filled with your VID and the captcha should be completed in order to enable the **Get OTP** button.&#x20;
 * Upon activation, the system will redirect to the One-Time Password (OTP) validation page. After successfully inputting the correct OTP, the user will be taken back to the application, landing on the loading screen. Following the completion of the download process, the user will be returned to the home page.
 
-
-
 <figure><img src=".gitbook/assets/inji-download-via-esignet-Page-1.png" alt=""><figcaption><p>Selecting the <strong>Download via eSignet</strong></p></figcaption></figure>
 
-###
-
-<figure><img src=".gitbook/assets/inji-download-via-esignet-Page-2.png" alt=""><figcaption><p>Opt for <strong>Login with OTP</strong></p></figcaption></figure>
-
-###
+<figure><img src=".gitbook/assets/inji-download-via-esignet-Page-2.png" alt=""><figcaption><p>User opts for <strong>Login with OTP option</strong></p></figcaption></figure>
 
 <figure><img src=".gitbook/assets/inji-download-via-esignet-Page-3.png" alt=""><figcaption><p>Successful download of VC</p></figcaption></figure>
 
@@ -73,7 +63,7 @@ To download VC, there are three methods:
 
 Once we click on the downloaded VC, it will open as a detailed view.
 
-<figure><img src=".gitbook/assets/detailed-viewVC.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/detailed-vc-view.png" alt=""><figcaption></figcaption></figure>
 
 ### Viewing history of the downloaded VC
 
@@ -85,24 +75,24 @@ After we have completed several scenarios, when we navigate to the history page,
 
 After clicking on the ellipsis button on the downloaded VC, a button will appear allowing for the VC to be pinned. Selecting this option will pin the specific VC to the top of the screen.
 
-<figure><img src=".gitbook/assets/pinVC.png" alt=""><figcaption><p>Pinning a VC</p></figcaption></figure>
-
 ### Activating VC
 
 There are two ways to activate the VC:
 
-* The first option is to click on the three-dot ellipsis located on the VC card state.
 * &#x20;The second option is to click on the activate button found in the detailed view.&#x20;
 * Upon clicking the **Activate** button, a confirmation alert message will be prompted. Once permission is granted, the user will be directed to an OTP screen. After entering the correct OTP, the VC will be activated and projected on the screen with the same message.
 
-<figure><img src=".gitbook/assets/activateVC-Page-1.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src=".gitbook/assets/activateVC-Page-2.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/activate-vc-new-Page-1.png" alt=""><figcaption><p>User clicks on <strong>Activate button</strong></p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/activate-vc-new-Page-2.png" alt=""><figcaption><p>VC activated for online login</p></figcaption></figure>
 
 ### Deleting VC
 
-* The process of removing a virtual card (VC) involves locating the three-dot menu on the downloaded VC.&#x20;
-* From there, the option to remove the card will be available. Upon clicking this option, a confirmation prompt will appear asking for confirmation.&#x20;
+* The process of removing a VC involves locating the three-dot menu on the downloaded VC.&#x20;
+* From there, the option to remove the card will be available. Select the option **Remove from Wallet**. Upon clicking this option, a confirmation prompt will appear asking for confirmation.&#x20;
 * If the confirmation is selected, the VC will be successfully removed from the system.
 
-<figure><img src=".gitbook/assets/deletingVC.png" alt=""><figcaption><p>Deleting a VC</p></figcaption></figure>
+<figure><img src=".gitbook/assets/activate-vc-new-deleteVC.png" alt=""><figcaption></figcaption></figure>
+
