@@ -87,3 +87,12 @@ _Standard Return Codes (match or no match)_
 | false        | Not Matched |
 | false        | Error       |
 
+## Guideline
+
+The following guidelines apply to individuals who are developing the face SDK:
+
+* It is prohibited to collect any personally identifiable information (PII) or phone details.
+* Inji includes built-in telemetry, and all telemetry data must be transmitted to the designated system. Telemetry enhances Inji's observability features by capturing specific events, creating measures, and monitoring various user actions and events.
+* Recording or transmitting IP addresses, user details, Phone IMEI, phone numbers, or user photos in telemetry or logs is strictly prohibited
+* The use of device fingerprints should be limited to managing the SDK license.
+
