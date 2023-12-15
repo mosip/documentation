@@ -1,11 +1,11 @@
-# API Specifications
+# API Specifications (Draft)
 
 ## Introduction
-
+This is a draft specification that is used to implement the face match in the Inji wallet or any similar wallets. 
 
 ### Configure API
 
-This API is asynchronous and can be used for initializing the given SDK. During initialization, the API can validate the license, download the latest model file if needed, or inform the server about its usage. This API is expected to return errors when there is a critical issue with the initialization process. If the API is called more than once then the SDK can optionally return based on the current status. The API should support offline mode. In offline mode, the API should ensure smooth usage. Care should be taken by the providers to ensure the SDK is lightweight and does not slow down the app.
+This API is asynchronous and can be used for initializing the implementor's SDK. During initialization, the implementors can use this API to build logic to validate the license, download the latest model file if needed, or inform the server about its usage. This API is expected to return errors when there is a critical issue with the initialization process. If the API is called more than once then the SDK can optionally return based on the current status. The implementation of this API should support offline mode. In offline mode, the implementor should ensure smooth usage. Care should be taken by the implementor to ensure the SDK is lightweight and does not slow down the app.
   
 * The implementation of this API should immediately return if initialization has already been completed.
 * The implementation should not attempt to initialize multiple times unless it's necessary.
@@ -50,23 +50,20 @@ _Standard Return Codes (true or false)_
 
 ### Face Compare API
 
-* This API is an asynchronous tool that compares two images, allowing for different image formats such as PNG, JPG, or HEIC. By returning a boolean value, the API confirms a successful match or indicates an unsuccessful one.
-* In order to ensure fraud prevention in compliance with [ISO/IEC 30101](https://www.iso.org/standard/83828.html), the faceAuth verification should include passive liveness checks, such as picture in picture.
-* To enhance logging and traceability, the API may accept an optional parameter known as traceabilityId. In Inji, AppId is being used.
+An asynchronous API that compares two images, allowing for different image formats such as PNG, JPG, HEIC or Template. Upon completion returns a boolean value. The API has an expected timeout and it is expected that the implementors clear the memory and processing upon timeout.  
 
-**Usage**
+* To ensure fraud prevention in compliance with [ISO/IEC 30101](https://www.iso.org/standard/83828.html), the faceAuth verification should include passive liveness checks, such as picture-in-picture.
+* To enhance logging and traceability, the implementors should send telemetry using `traceabilityId`. The id is set during the configure API call, It is expected that the same is used here. In Inji, `AppId` is used as `traceabilityId`.
+* Timeout is set in seconds.
 
-* Import the [faceCompare](https://github.com/biometric-technologies/biometric-sdk-react-native/blob/master/src/index.tsx#L31) method from module to compare.
-
-```
-import { faceCompare } from '@iriscan/biometric-sdk-react-native';
-```
 
 **Signature**
 
 ```
- async function faceCompare(capturedImage: string, vcImage: string): Promise<boolean> {
+ async function faceCompare(timeout: int ,capturedImage: string, vcImage: string): Promise<boolean> {
  logic to compare capturedImage & vcImage.....
+ setTimeout(cancel);
+//logic to match
  if (matched) {
    return true;
  }
@@ -78,8 +75,9 @@ import { faceCompare } from '@iriscan/biometric-sdk-react-native';
 
 | **Name**      | **Description**                          | **Type**              |
 | ------------- | ---------------------------------------- | --------------------- |
-| capturedImage | The image that is captured by the camera | base64 encoded string |
-| vcImage       | The face image received in VC            | base64 encoded string |
+| timeout | Timeout in seconds. After this time the SDK should stop processing. | integer |
+| capturedImage | The image that is captured by the camera | [Data URL](https://developer.mozilla.org/en-US/docs/web/http/basics_of_http/data_urls) <br> format: data:image/[imageformat](https://www.iana.org/assignments/media-types/media-types.xhtml#image) base64 encoded image <br> eg: data:image/jpeg |
+| vcImage       | The image that is given in the VC | [Data URL](https://developer.mozilla.org/en-US/docs/web/http/basics_of_http/data_urls) <br> format: data:image/[imageformat](https://www.iana.org/assignments/media-types/media-types.xhtml#image) base64 encoded image <br> eg: data:image/jpeg |
 
 _Standard Return Codes (match or no match)_
 
@@ -88,3 +86,4 @@ _Standard Return Codes (match or no match)_
 | true         | Matched     |
 | false        | Not Matched |
 | false        | Error       |
+
