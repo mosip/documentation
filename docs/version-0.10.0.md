@@ -6,7 +6,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: December 14, 2023
+**Release Date**: December 15, 2023
 
 ## Overview
 
@@ -53,12 +53,14 @@ A unique application ID is now associated with each unique installation of Inji.
 
 ## Repository Released
 
-| **Repositories** | **Tags Released** |
-| ---------------- | ----------------- |
-|                  |                   |
-|                  |                   |
-|                  |                   |
-|                  |                   |
+| **Repositories** | **Tags Released**                                                         |
+| ---------------- | ------------------------------------------------------------------------- |
+| mimoto           | [v0.10.0](https://github.com/mosip/mimoto/tree/v0.10.0)                   |
+| inji             | [v0.10.0](https://github.com/mosip/inji/tree/v0.10.0)                     |
+| tuvali           | [v0.4.7](https://github.com/mosip/tuvali/tree/v0.4.7)                     |
+| mosip-config     | [v0.10.0-INJI](https://github.com/mosip/mosip-config/tree/v0.10.0-INJI)   |
+| secure-keystore  | [v0.1.4](https://github.com/mosip/secure-keystore/tree/v0.1.4)            |
+| mosip-onboarder  | [v1.2.0.1-B4](https://github.com/mosip/mosip-onboarding/tree/v1.2.0.1-B4) |
 
 ## Known Issues
 
