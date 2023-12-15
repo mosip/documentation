@@ -42,7 +42,7 @@ The SDK is employed in two scenarios:
 \
 **During Online Login**: Residents can scan the QR code from the relying party portal and opt to log in using Inji for services. In this process, residents undergo selfie authentication against the VC to confirm their presence.
 
-Upon the initial launch of Inji, the model is downloaded in the background and stored in the cache. Refer [here](../specifications/face-SDK-specifications.md) to check the API specifications for the face matcher model.
+Upon the initial launch of Inji, the model is downloaded in the background and stored in the cache. Refer [here](../integration-guide/face-match.md) to check the API specifications for the face matcher model.
 
 ### **3. Secure Keystore**
 
