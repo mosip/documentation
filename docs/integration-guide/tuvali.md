@@ -1,6 +1,6 @@
 # Tuvali
 
-This is the module that supports transferring verifiable credentials (VC) over Bluetooth Low Energy(BLE).
+This is the module that supports transferring verifiable credentials (VC) over Bluetooth Low Energy (BLE).
 
 Let's have a look at how BLE communication works in general between the two devices A & B.
 
@@ -101,34 +101,30 @@ Central also performs disconnect in the following scenarios:
 
 As part of connection closure, both central and peripheral clean the held resources, cryptographic keys, and Bluetooth resources, to ensure that the subsequent transfer happens smoothly.
 
-
-> Note: All the cryptographic keys generated/ derived are used only for a single VC transfer session. The library strictly ensures they are not re-used in subsequent VC transfers post connection closure.
-
+> **Note**: All the cryptographic keys generated/ derived are used only for a single VC transfer session. The library strictly ensures they are not re-used in subsequent VC transfers post connection closure.
 
 ## Error Codes And Error Scenarios:
 
-**Error Code Format:**
-<Component(2 Character)Role(1 Character)>-<Stage(3 Character)>-<Number(3 Character)>
+**Error Code Format:** \<Component(2 Character)Role(1 Character)>-\<Stage(3 Character)>-\<Number(3 Character)>
 
-Current Supported Stages: CON(Connection) | KEX(Key Exchange) | ENC(Encryption) | TRA(Transfer) | REP(Report) | DEC(Decryption) | UNK (Stage is unknown)
-Current Component+ Role Combinations:  TVW(Tuvali+Wallet) | TVV(Tuvali+Verifier) | TUV(Tuvali where role is unknown)
+Current Supported Stages: CON(Connection) | KEX(Key Exchange) | ENC(Encryption) | TRA(Transfer) | REP(Report) | DEC(Decryption) | UNK (Stage is unknown) Current Component+ Role Combinations: TVW(Tuvali+Wallet) | TVV(Tuvali+Verifier) | TUV(Tuvali where role is unknown)
 
 **List of Supported Error Codes:**
-* UnknownException: TUV_UNK_001
-* WalletUnknownException: TVW_UNK_001
-* CentralStateHandlerException: TVW_UNK_002
-* WalletTransferHandlerException: TVW_UNK_003
-* VerifierUnknownException: TVV_UNK_001
-* PeripheralStateHandlerException: TVV_UNK_002
-* VerifierTransferHandlerException: TVV_UNK_003
-* InvalidURIException: TVW_CON_001
-* MTUNegotiationException: TVW_CON_002
-* ServiceNotFoundException: TVW_CON_003
-* TransferFailedException: TVW_REP_001
-* UnsupportedMTUSizeException: TVV_CON_001
-* CorruptedChunkReceivedException: TVV_TRA_001
-* TooManyFailureChunksException: TVV_TRA_002
 
+* UnknownException: TUV\_UNK\_001
+* WalletUnknownException: TVW\_UNK\_001
+* CentralStateHandlerException: TVW\_UNK\_002
+* WalletTransferHandlerException: TVW\_UNK\_003
+* VerifierUnknownException: TVV\_UNK\_001
+* PeripheralStateHandlerException: TVV\_UNK\_002
+* VerifierTransferHandlerException: TVV\_UNK\_003
+* InvalidURIException: TVW\_CON\_001
+* MTUNegotiationException: TVW\_CON\_002
+* ServiceNotFoundException: TVW\_CON\_003
+* TransferFailedException: TVW\_REP\_001
+* UnsupportedMTUSizeException: TVV\_CON\_001
+* CorruptedChunkReceivedException: TVV\_TRA\_001
+* TooManyFailureChunksException: TVV\_TRA\_002
 
 ### Error Scenario 1: The verifier receives a `Failed to transfer` message and wallet receive a `Disconnected` message on the screen.
 
@@ -148,12 +144,11 @@ Current Component+ Role Combinations:  TVW(Tuvali+Wallet) | TVV(Tuvali+Verifier)
 
 Below are the exception message and the disconnect message which appears on the screen during the error.
 
-
 ![Exception Message](../\_images/failedToTransferError.jpeg)
 
 > This message is displayed on the device throwing the exception.
 
-> ![](../\_images/disconnect-message.png)&#x20;
+> <img src="../_images/disconnect-message.png" alt="" data-size="original">
 >
 > This message is displayed whenever a device gets disconnected.
 

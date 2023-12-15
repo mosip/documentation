@@ -25,9 +25,9 @@ Before you start with setting up Inji, ensure you have the following in place.
 
 To effectively set up the Inji app and manage Verifiable Credentials (VCs), follow these detailed steps:
 
-**Step 1 : Install the Inji Resident App**
+**Step 1: Install the Inji Resident App**
 
-1. For a step-by-step guide on how to install the Inji mobile application, click [here](https://docs.mosip.io/1.2.0/modules/inji-user-guide#installing-the-mosip-resident-mobile-application).
+1. For a step-by-step guide on how to install the Inji mobile application, click [here](../end-user-guide.md).
 2. You can visit the section titled `Installing the MOSIP Resident Mobile Application` for more detailed instructions in the guide.
 
 **Step 2: Install the Inji App - To be used as Verifier App**
