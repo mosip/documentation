@@ -59,7 +59,7 @@ To download VC, there are three methods:
 
 <figure><img src=".gitbook/assets/inji-download-via-esignet-Page-3.png" alt=""><figcaption><p>Successful download of VC</p></figcaption></figure>
 
-### Detailed View of the downloaded VC
+### Detailed view of the downloaded VC
 
 Once we click on the downloaded VC, it will open as a detailed view.
 
@@ -71,11 +71,23 @@ After we have completed several scenarios, when we navigate to the history page,
 
 <figure><img src=".gitbook/assets/detailed-viewVC-history.png" alt=""><figcaption><p>History View</p></figcaption></figure>
 
+### Sharing Credentials
+
+Prerequisites:
+
+* Two or more devices with Inji installed are required for sharing credentials.
+* All required permissions like Bluetooth, location and camera access are enabled on both the devices.
+* The parties involved are usually a Resident who wishes to share their credentials with a Relying party, which could be a banker, health worker, or other professional service.
+
 ### Pinning a VC
 
 After clicking on the ellipsis button on the downloaded VC, a button will appear allowing for the VC to be pinned. Selecting this option will pin the specific VC to the top of the screen.
 
-### Activating VC
+
+
+<figure><img src=".gitbook/assets/detailed-vc-view-pin.png" alt=""><figcaption><p>Pin a VC</p></figcaption></figure>
+
+### Activating a VC
 
 There are two ways to activate the VC:
 
@@ -94,5 +106,5 @@ There are two ways to activate the VC:
 * From there, the option to remove the card will be available. Select the option **Remove from Wallet**. Upon clicking this option, a confirmation prompt will appear asking for confirmation.&#x20;
 * If the confirmation is selected, the VC will be successfully removed from the system.
 
-<figure><img src=".gitbook/assets/activate-vc-new-deleteVC.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/activate-vc-new-deleteVC.png" alt=""><figcaption><p>Remove a VC</p></figcaption></figure>
 
