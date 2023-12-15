@@ -17,7 +17,7 @@ Currently, CTK supports testing of compliance with the below specifications:
 * To support compliance with the specifications, CTK has predefined test cases for each of the above specs.
 * Each test case is run on a given method of the specs. Each test case defines the attributes required to create the request to be sent to the method.
 * Each test case also defines the response expected from the method. In this response, various validators are run. Each validator will perform a predefined check on the response. If all validations are successful, the test case is passed otherwise it is a failed test case.
-* Partners can use CTK to run these test cases to check if their implementation adheres to the MOSIP’s specs or not.
+* Partners can use CTK to run these test cases to check if their implementation adheres to the MOSIP’s specs or not. 
 
 <figure><img src=".gitbook/assets/compliance-toolkit-flow-diagram.png" alt=""><figcaption></figcaption></figure>
 
@@ -27,6 +27,28 @@ Currently, CTK supports testing of compliance with the below specifications:
 The diagram below illustrates the architecture of Compliance Tool Kit.
 
 ![](_images/ctk-architecture.png)
+
+### Default Collections for CTK
+* When a new project is added, by default two new collections will be added to the project.
+* One will be Compliance Collectiont (for all project types) and other will be Quality Assessment Collection (only for SBI).
+
+### Quality Assessment Process (only for SBI)
+* The Quality Assessment Collection can be run to collect biomteric scores for various groups of individuals (age wise, gender wise, occupation wise etc).
+* The biomteric scores will be given using BQAT SDK.
+* The scores will be used to perform quality assessment of the SBI partner.
+  
+### Compliance Collection Reporting Process (for all project types)
+
+* Partners can run the Compliance Collection and they can generate Draft Report for the same.
+* After self review, the partners can submit the Draft Report for Review by CTK Admin.
+* CTK Admin can review the partner's testrun, project details and all other details before Approving or Rejecting the Report.
+* Final report can be downloaded by both partner and CTK Admin.
+
+  Summarizing as below:
+* Partner > Add Project > Compliance Collection > Run Collection (Test Run) > View Test Run > Download Draft Report > Submit for Review
+* CTK Admin > View Draft Report / View Test Run > Approve / Reject Report
+
+**INSERT THE FLOW DIAGRAM HERE**
 
 ### Compliance Tool Kit Portal
 
