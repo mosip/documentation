@@ -1,6 +1,6 @@
 # End User Guide
 
-This is a concise user guide for end users that will guide you through the various features and functionalities provided by Inji.
+This document serves as a concise user guide for end users, providing comprehensive information on the features and functionalities offered by Inji.
 
 ## Installing Inji
 
@@ -77,15 +77,40 @@ Prerequisites:
 
 * Two or more devices with Inji installed are required for sharing credentials.
 * All required permissions like Bluetooth, location and camera access are enabled on both the devices.
-* The parties involved are usually a Resident who wishes to share their credentials with a Relying party, which could be a banker, health worker, or other professional service.
+* The parties involved are usually a Resident (sharing party) who wishes to share their credentials with a Relying party (receiving party), which could be a banker, health worker, or other professional service.
+
+Let us understand the process of sharing credentials using an example. Suppose a Resident wishes to share their credentials with a Relying/ Requesting party through the receiver's phone. The following steps outline the procedure for both parties involved:
+
+**On the Sharing Party' phone:**
+
+* The resident opens the Scanner by clicking on the `Scan` button, the application now prompts for permission.
+* &#x20;Upon granting the necessary permissions, the app opens a camera where the resident can scan the QR code of the recipient's phone.&#x20;
+* Once the QR code is successfully scanned, both phones will establish a connection.
+* The resident then needs to choose a downloaded VC and select either the **Share** option or the **Share with Selfie** option.&#x20;
+* The **Share** button will solely share the VC, while the **Share with Selfie** option will verify if the sender's face matches the photo in the VC before proceeding to share.
+
+<figure><img src=".gitbook/assets/sharing-Page-1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/sharing-Page-2.png" alt=""><figcaption></figcaption></figure>
+
+**On the Relying Party' phone**:
+
+* This functionality is only available on Android devices. To access it, the receiver needs to navigate to the settings page and locate the `Receive Cards` option.&#x20;
+* On selecting this option, it will open the QR code page. For the relying party to be able to receive a card, the resident needs to scan the QR code using a sharing phone. Once the QR code is scanned and shared, the relying party will receive the VC and be able to preview its contents.
+* To view the received cards, they would need to access the settings page and find the `Received Cards` section. Clicking on this section will display the received cards. If the receiver has not received any card, this section will be empty.&#x20;
+* Please note that the relying party can only view the received cards and will not be able to share or perform other actions with them.
+
+<figure><img src=".gitbook/assets/sharing-Page-3.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/sharing-Page-4.png" alt=""><figcaption></figcaption></figure>
 
 ### Pinning a VC
 
 After clicking on the ellipsis button on the downloaded VC, a button will appear allowing for the VC to be pinned. Selecting this option will pin the specific VC to the top of the screen.
 
-
-
 <figure><img src=".gitbook/assets/detailed-vc-view-pin.png" alt=""><figcaption><p>Pin a VC</p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/sharing-Page-4.png" alt=""><figcaption></figcaption></figure>
 
 ### Activating a VC
 
@@ -94,13 +119,11 @@ There are two ways to activate the VC:
 * &#x20;The second option is to click on the activate button found in the detailed view.&#x20;
 * Upon clicking the **Activate** button, a confirmation alert message will be prompted. Once permission is granted, the user will be directed to an OTP screen. After entering the correct OTP, the VC will be activated and projected on the screen with the same message.
 
-
-
 <figure><img src=".gitbook/assets/activate-vc-new-Page-1.png" alt=""><figcaption><p>User clicks on <strong>Activate button</strong></p></figcaption></figure>
 
 <figure><img src=".gitbook/assets/activate-vc-new-Page-2.png" alt=""><figcaption><p>VC activated for online login</p></figcaption></figure>
 
-### Deleting VC
+### Deleting a VC
 
 * The process of removing a VC involves locating the three-dot menu on the downloaded VC.&#x20;
 * From there, the option to remove the card will be available. Select the option **Remove from Wallet**. Upon clicking this option, a confirmation prompt will appear asking for confirmation.&#x20;
