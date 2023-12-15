@@ -14,7 +14,7 @@ The application is constructed using the [React Native framework](https://reactn
 * Inji users can obtain their Verifiable credential by utilizing their unique ID (e.g., UIN or VID issued by the government).
 * Users are required to authenticate their request through an OTP sent to their registered mobile number or email address.
 * Only upon successful validation, the Verifiable credential will be downloaded and securely stored within the app.
-* Once a Verifiable credential is downloaded, users can share it with relying parties via Bluetooth, using the [BLE protocol](\(https:/www.bluetooth.org/docman/handlers/downloaddoc.ashx).
+* Once a Verifiable credential is downloaded, users can share it with relying parties via Bluetooth, using the [BLE protocol](https://tlodderstedt.github.io/openid-for-verifiable-presentations-offline-1\_0-00.html).
 * To further authenticate the digital VC, users can opt for offline face authentication during transactions.
 * Inji also offers integration with eSignet, allowing residents to log in to relying party portals by scanning a QR code.
 * Users have control over the information shared with the relying party through user consent.
