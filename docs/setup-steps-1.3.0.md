@@ -1,11 +1,11 @@
-# 1.2.0
+# 1.3.0
 
 ## Pre-requisites
 
 CTK should be deployed with the required dockers.
 
-* compliance-toolkit-service: 1.2.0
-* compliance-toolkit-ui: 1.2.0
+* compliance-toolkit-service: 1.3.0
+* compliance-toolkit-ui: 1.3.0
 
 To deploy Compliance Toolkit, we require the below mandatory services:
 
@@ -160,7 +160,7 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
 2\. Using keycloak/ register option in CTK UI, create a new user for compliance toolkit.
 
-3\. Make sure to add the email ID. Also, give the role `GLOBAL_ADMIN`.
+3\. Make sure to add the email ID. Also, give the role `CTK_ADMIN`.
 
 4\. Login to compliance toolkit in your environment from browser with the above Keycloak user.
 
