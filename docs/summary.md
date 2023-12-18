@@ -34,6 +34,8 @@
       * [Tuvali API Documentation](integration-guide/tuvali-inji.md)
     * [BLE Verifier](integration-guide/ble-verifier.md)
     * [Telemetry](architecture/telemetry.md)
+* [Specifications](README.md)
+    * [Face SDK Specifications](face-sdk-specifications.md)
 * [Backend Services](backend-services/README.md)
   * [Mimoto](backend-services/mimoto.md)
   * [eSignet](backend-services/esignet.md)
