@@ -30,9 +30,6 @@
 | `ConvertDataValidator`| Validates the input BDB data present in the Probe. | |
 | `ConvertInvalidDataValidator`| Validates if input BDB data present in the Probe for the modality is valid. | |
 | `ConvertNoInputDataValidator`| Validates if no input BDB data present in the Probe. | |
-| `SegmentValidator`| Validates if input BDB data present in the Probe for the modality is valid. | |
-| `SegmentInvalidDataValidator`| Validates if input BDB data present in the Probe for the modality is valid. | |
-| `SegmentNoInputDataValidator`| Validates if no input BDB data present in the Probe. | |
 
 ## ABIS Validators
 | Name   |      Description      |  Test with Mock ABIS |
