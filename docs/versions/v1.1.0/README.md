@@ -4,7 +4,7 @@
 
 **Upgrade From**: 1.0.0
 
-**Release Date**: September 22, 2023
+**Release Date**: 22nd September, 2023
 
 ## Overview
 
