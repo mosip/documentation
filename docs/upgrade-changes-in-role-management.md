@@ -95,5 +95,21 @@ In the previous version, 1.1.5.x, we did not employ any clients for our digital 
 
 ### Print
 
-In version 1.1.5.x, we do not employ any clients for printing. However, beginning from version 1.2.0.1, we utilize the 'mpartner-default-print' client. Please find below the service account roles and client scopes associated with the 'mpartner-default-print' client.
+In version 1.1.5.x, we do not employ any clients for printing. However, beginning from version 1.2.0.1, we utilize the `mpartner-default-prin`t client. Please find below the service account roles and client scopes associated with the `mpartner-default-print` client.
+
+**Service account roles assigned to **_**mpartner-default-print**_** in 1.2.0.1**
+
+* CREATE\_SHARE
+* default\_roles\_mosip
+* PUBLISH\_CREDENTIAL\_STATUS\_UPDTAE\_GENERAL
+* SUBSCRIBE\_ CREDENTIAL\_ISSUED\_INDIVIDUAL
+
+&#x20;**Client scopes assigned to **_**mpartner-default-print**_** in 1.2.0.1**
+
+* email
+* profile
+* roles
+* web-origins
+
+
 
