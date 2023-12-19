@@ -4,7 +4,7 @@
 
 **Upgrade From**: 0.9.0 (IdP - First released version)
 
-**Release Date**: 14th April 2023
+**Release Date**: 14th April, 2023
 
 ## Overview
 
