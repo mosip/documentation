@@ -493,7 +493,7 @@ cd $K8_ROOT/rancher/keycloak
     * Rancher API Host: https://your-rancher-domain
     * Groups Field: member
 
-**RBAC** :
+### RBAC for Rancher using Keycloak
 
 * For users in Keycloak assign roles in Rancher - **cluster** and **project** roles. Under `default` project add all the namespaces. Then, to a non-admin user you may provide Read-Only role (under projects).
 * If you want to create custom roles, you can follow the steps given [here](https://github.com/mosip/k8s-infra/blob/main/docs/create-custom-role.md).
