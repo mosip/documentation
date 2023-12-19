@@ -3,7 +3,7 @@
 ## Version: 0.10.0
 
 * Name: Inji 0.10.0 (Beta)
-* Date: December 15, 2023
+* Date: December 19, 2023
 * [Release Notes](version-0.10.0.md)
 
 ## Version: vDP1
