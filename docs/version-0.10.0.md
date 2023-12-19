@@ -6,7 +6,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: December 19, 2023
+**Release Date**: 19th December, 2023
 
 ## Overview
 
