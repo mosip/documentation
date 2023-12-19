@@ -440,8 +440,8 @@ Install Longhorn via helm
 
 ## Observation K8's Cluster Apps Installation
 
-**Rancher UI**: Rancher provides full CRUD capability of creating and managing kubernetes cluster.
-
+### Rancher UI
+* Rancher provides full CRUD capability of creating and managing kubernetes cluster.
 * Install rancher using Helm, update `hostname` in `rancher-values.yaml` and run the following command to install.
 
 ```
@@ -464,8 +464,8 @@ helm install rancher rancher-latest/rancher \
     ```
 
     Assign a password. IMPORTANT: makes sure this password is securely saved and retrievable by Admin.
-* [Keycloak](https://www.keycloak.org/): Keycloak is an OAuth 2.0 compliant Identity Access Management (IAM) system used to manage the access to Rancher for cluster controls.
-
+### Keycloak 
+* [Keycloak]((https://www.keycloak.org/)) is an OAuth 2.0 compliant Identity Access Management (IAM) system used to manage the access to Rancher for cluster controls.
 ```
 cd $K8_ROOT/rancher/keycloak
 ./install.sh <iam.host.name>
@@ -473,7 +473,7 @@ cd $K8_ROOT/rancher/keycloak
 
 `keycloak_client.json`: Used to create SAML client on Keycloak for Rancher integration.
 
-## Keycloak - Rancher UI Integration
+### Keycloak - Rancher UI Integration
 
 * Login as `admin` user in Keycloak and make sure an email id, and first name field is populated for admin user. This is important for Rancher authentication as given below.
 * Enable authentication with Keycloak using the steps given [here](https://ranchermanager.docs.rancher.com/v2.6/how-to-guides/new-user-guides/authentication-permissions-and-global-configuration/authentication-config/configure-keycloak-saml).
