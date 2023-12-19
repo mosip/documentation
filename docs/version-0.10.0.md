@@ -1,6 +1,6 @@
 # Version 0.10.0
 
-**Release Name**: Inji 0.10.0 \[Release in Progress]
+**Release Name**: Inji 0.10.0
 
 **Upgrade From**: Inji 0.9.0
 
