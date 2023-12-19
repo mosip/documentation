@@ -111,5 +111,51 @@ In version 1.1.5.x, we do not employ any clients for printing. However, beginnin
 * roles
 * web-origins
 
+### ID Repository
+
+In version 1.1.5.x, we utilized the `mosip-regproc-client` for id-repository. Starting from version 1.2.0.1, we have transitioned to using `mosip-idrepo-client`. This switch has led to modifications in service account roles, client scopes, and client settings. Below are the details of the changes in service account roles and client scopes.
+
+**Client Scopes for id-repository:**
+
+<table><thead><tr><th width="282">mosip-regproc-client (1.1.5.x)</th><th>mosip-idrepo-client (1.2.0.1)</th></tr></thead><tbody><tr><td><ul><li>email</li><li>profile</li><li>roles</li><li>web-origins</li></ul></td><td><ul><li>email</li><li>profile</li><li>roles</li><li>web-origins</li></ul></td></tr></tbody></table>
+
+**Service account roles for id-repository:**
+
+|  mosip-regproc-client (1.1.5.x)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | mosip-idrepo-client (1.2.0.1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p></p><ul><li>ABIS_PARTNER</li><li>CENTRAL_ADMIN</li><li>CENTRAL_APPROVER</li><li>CREDENTIAL_INSURANCE</li><li>CREDETIAL_PARTNER</li><li>Default</li><li>DEVICE_PROVIDER</li><li>DIGITAL_CARD</li><li>FTM_PROVIDER</li><li>GLOBAL_ADMIN</li><li>INDIVIDUAL</li><li>KEY_MAKER</li><li>MASTERDATA_ADMIN</li><li>MISP</li><li>MISP_PARTNER</li><li>ONLINE_VERIFICATION_PARTNER</li><li>POLICYMANAGER</li><li>PRE_REGISTRATION</li><li>PRE_REGISTRATION_ADMIN</li><li>PREREG</li><li>REGISTRATION_ADMIN</li><li>REGISTRATION_OFFICER</li><li>REGISTRATION_OPERATOR</li><li>REGISTRATION_SUPERVISOR</li><li>ZONAL_ADMIN</li><li>ZONAL_APPROVER</li></ul> | <ul><li>default_roles_mosip</li></ul><ul><li>ID_REPOSITORY</li><li>offline_access</li><li>PUBLISH_ACTIVATE_ID_ALL_INDIVIDUAL</li><li>PUBLISH_AUTH_TYPE_STATUS_UPDATE_ALL_INDIVIDUAL</li><li>PUBLISH_AUTHENTICATION_TRANSACTION_STATUS_GENERAL</li><li>PUBLISH_DEACTIVATE_ID_ALL_INDIVIDUAL</li><li>PUBLISH_IDENTITY_CREATED_GENERAL</li><li>PUBLISH_IDENTITY_UPDATED _GENERAL</li><li>PUBLISH_REMOVE _ID_ALL_INDIVIDUAL</li><li>PUBLISH_VID_CRED_STATUS_UPDATE_GENERAL</li><li>SUBSCRIBE_VID_CRED_STATUS_UPDATE_GENERAL</li><li>uma_authorization</li></ul> |
+
+### Resident Services
+
+In version 1.1.5.x, we utilized the `mosip-resident-client` for Resident Services. This client is also employed in version 1.2.0.1. Although there were modifications in service account roles, the client scopes remain unchanged. Below the details of the alterations made in service account roles.
+
+**Service account roles for Resident-Services:**
 
 
+
+| mosip-resident-client (1.1.5.x)                                                                                                           | 	mosip-resident-client (1.2.0.1)                                                                                                                                                                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p></p><ul><li>CREDENTIAL_ISSUANCE</li><li>CREDENTIAL_REQUEST</li><li>offline_access</li><li>RESIDENT</li><li>uma_authorization</li></ul> | <p></p><ul><li>CREDENTIAL_REQUEST</li><li>default_roles_mosip</li><li>offline_access</li><li>RESIDENT</li><li>SUBSCRIBE_AUTH_TYPE_STATUS_UPDATE_ACK_GENERAL</li><li>SUBSCRIBE_AUTHENTICATION_TRANSACTION_STATUS_GENERAL</li><li>SUBSCRIBE_CREDENTIAL_STATUS_UPDATE_GENERAL</li><li>uma_authorization</li></ul> |
+
+**Client Scopes for Resident-Services:**
+
+| mosip-resident -client (1.1.5.x)                                                 | 	mosip- resident -client (1.2.0.1)                                                                                       |
+| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| <p></p><ul><li>email</li><li>profile</li><li>roles</li><li>web-origins</li></ul> | <p></p><ul><li>email</li><li>ida_token</li><li>individual_id</li><li>profile</li><li>roles</li><li>web-origins</li></ul> |
+
+### **Compliance-Tool-Kit**
+
+In previous iterations (1.1.5.x) of our system, we did not employ any clients for the compliance toolkit. However, beginning with version 1.2.0.1, we have implemented the use of `mosip_toolkit_clien`t. The following information outlines the service account roles and client scopes associated with `mosip_toolkit_client`.
+
+**Service account roles assigned to **_**mosip\_toolkit\_client**_** in 1.2.0.1**
+
+* default\_roles\_mosip
+
+&#x20;**Client scopes assigned to **_**mosip\_toolkit\_client**_** in 1.2.0.1**
+
+* email
+* profile
+* roles
+* web-origins
+
+&#x20;
