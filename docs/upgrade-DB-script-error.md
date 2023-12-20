@@ -1,6 +1,8 @@
-# How to effectively manage an error in a Database upgrade script
+# Managing Duplicate Thumbprint entries in Keymanager
 
-**What is the issue at hand?**
+This document addresses how an error in Database upgrade script can be managed effectively.
+
+## Issue
 
 We have encountered an error while attempting to execute the upgrade script.
 
