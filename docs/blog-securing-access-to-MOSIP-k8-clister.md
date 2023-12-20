@@ -24,10 +24,14 @@ Below are the mentioned steps taken for securing the kubernetes clusters:
     * Setting up Wireguard [Bastion](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines#setup-wireguard-vm-and-wireguard-bastion-server) : Create a Wireguard Bastion server to secure access to all the nodes by configuring it for defined CIDR range in which all the k8 nodes are present.
     * [Wireguad client](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines#setup-wireguard-client-in-your-pc) on Administrator's device.
     * Sharing Unique and proper wireguard configuration files to each adminstrator.
-* Rancher + Keycloak : Implement Role-Based Access Control (RBAC) to control access to resources within each Kubernetes cluster.
-  * Rancher acts as a management platform for Kubernetes clusters.
+* Rancher UI + Keycloak : Implement Role-Based Access Control (RBAC) to control access to resources within each Kubernetes cluster.
+  * Rancher UI acts as a management platform for Kubernetes clusters.
   * Keycloak serves as an identity provider and handles authentication.
-  * Below are the steps for setting up Rancher .
+  * Rancher UI can be deployed using mentioned [steps](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines#rancher-ui).
+  * Keycloak can be deployed using mentioned [steps](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines#keycloak).
+  * Rancher UI and Keycloak integration can be performed using following [steps](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines#keycloak-rancher-ui-integration).
+  * Created Roles based access control (RBAC) using mentioned [steps](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines#rbac-for-rancher-using-keycloak).
+  * This way you can create multiple groups and users in keycloak and provide them access via rancher UI.
 * Istio: Secure access to administrative dashboards within the Kubernetes clusters.
   * This involves leveraging Istio's capabilities for traffic management, access control, and security policies.
   * Istio provides powerful features to control and secure the flow of traffic between services.
