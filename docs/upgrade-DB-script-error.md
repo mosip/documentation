@@ -4,7 +4,9 @@ This document addresses how an error in Database upgrade script can be managed e
 
 ## Issue
 
-We have encountered an error while attempting to execute the upgrade script.
+If the below error has been encountered while attempting to execute the upgrade script, this can be resolved by follwong the steps mentioned in this document.
+
+**Error message**
 
 ```
 psql:sql/1.1.5.5_to_1.2.0.1-B1_upgrade.sql:13: ERROR: could not create unique index "cert_thumbprint_unique" DETAIL: Key (cert_thumbprint, partner_domain)=(231bd472ab24ef60ec6*******2cace89c34, AUTH) is duplicated. psql:sql/1.1.5.5_to_1.2.0.1-B1_upgrade.sql:13: STATEMENT: ALTER TABLE keymgr.ca_cert_store ADD CONSTRAINT cert_thumbprint_unique UNIQUE (cert_thumbprint,partner_domain);
