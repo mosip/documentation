@@ -202,7 +202,7 @@ Update the secrets in existing secrets in (conf-secrets namspace)[https://github
 
   * In Keycloak, it is important to ensure that the VID / UIN of each operator and supervisor is collected and updated in the individualId field. Failure to do so may cause complications during the onboarding or re-onboarding processes to new or existing machines, as well as during the biometrics update process for these users.
 
-  * Manually update roles for client IDs that have been added as part of customization. For more information about the changes, please refer [here](to do).
+  * Manually update roles for client IDs that have been added as part of customization. For more information about the changes, please refer [here](upgrade-changes-in-role-management.md).
 
 3. **Activemq**: 
 
