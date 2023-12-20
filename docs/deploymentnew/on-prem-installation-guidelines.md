@@ -497,10 +497,20 @@ cd $K8_ROOT/rancher/keycloak
 
 * For users in Keycloak assign roles in Rancher - **cluster** and **project** roles. Under `default` project add all the namespaces. Then, to a non-admin user you may provide Read-Only role (under projects).
 * If you want to create custom roles, you can follow the steps given [here](https://github.com/mosip/k8s-infra/blob/main/docs/create-custom-role.md).
-* Add a member/group to cluster/project in Rancher:
-  * Give member/group name exactly as `username`/`groupname` in Keycloak
+* Add a member to cluster/project in Rancher:
+  * Navigate to RBAC cluster members
+  * Add member name exactly as `username` in Keycloak
   * Assign appropriate role like Cluster Owner, Cluster Viewer etc.
   * You may create new role with fine grained acccess control.
+* Add group to to cluster/project in Rancher:
+  * Navigate to RBAC cluster members
+  * Click on `Add` and select a group from the displayed drop-down.
+  * Assign appropriate role like Cluster Owner, Cluster Viewer etc.
+  * To add groups, the user must be a member of the group.
+* Creating a Keycloak group involves the following steps:
+  * Go to the "Groups" section in Keycloak and create groups with default roles.
+  * Navigate to the "Users" section in Keycloak, select a user, and then go to the "Groups" tab. From the list of groups, add the user to the required group.
+            
 
 **Certificates expiry**
 
