@@ -1,4 +1,4 @@
-# REGPROC: Camel route changes
+# Registration Processor: Camel route changes
 
 This document outlines the changes made to the camel route file following the migration.
 
