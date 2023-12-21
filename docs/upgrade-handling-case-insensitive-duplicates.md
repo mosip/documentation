@@ -1,4 +1,4 @@
-# Handling case insensitive duplicates user detail table
+# Handling case insensitive duplicates in the `user_details` table
 
 In the registration processor, there was an issue where packets were failing at the supervisor validation stage when the username of the supervisor was entered in a different case than it appeared in the database. To resolve this issue, a case insensitive search will be implemented to retrieve the username of the supervisor during the validation stage.
 
@@ -6,7 +6,7 @@ In order for this fix to work properly, it is necessary for the `user_id` column
 
 If there are any duplicates in this table, packets will fail at the supervisor validation stage once again. Therefore, it is important to deactivate or delete these case insensitive duplicates. It should be noted that this action will not have any impact on other areas, as the mapping between keycloak users and the `user_id` of the `user_details` table is one-to-one and case insensitive.
 
-## How can we identify case-insensitive duplicates in the user_id column of the user_details table?
+## How can we identify case-insensitive duplicates in the `user_id` column of the `user_details` table?
 
 Follow these steps:
 
