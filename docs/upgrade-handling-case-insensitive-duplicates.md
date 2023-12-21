@@ -10,7 +10,7 @@ If there are any duplicates in this table, packets will fail at the supervisor v
 
 Follow these steps:
 
-1. Log in to the master schema of the mosip_master database.
+1. Log in to the master schema of the `mosip_master` database.
 
 2. Open a query tool.
 
@@ -22,7 +22,7 @@ Follow these steps:
 
    Make sure to copy the output to a text file to manage the duplicate data effectively.
 
-## How to deactivate/ delete the case insensitive duplicates?
+## How to deactivate/delete the case insensitive duplicates?
 
 1. Login in to the [admin portal](https://docs.mosip.io/1.2.0/modules/administration/admin-portal-user-guide) with a user having `ZONAL_ADMIN` role.
 
@@ -42,7 +42,7 @@ Follow these steps:
 
     ![](\_images/upgrade-hcid4.jpg)
 
-   * Now, on the User Center Mapping page, case insensitive duplicates of `user_id` would be displayed. 
+   * Now, on the `User Center Mapping` page, case insensitive duplicates of `user_id` would be displayed. 
 
    * Based on the Center, choose the entry that can be deactivated/deleted.
 
@@ -50,7 +50,7 @@ Follow these steps:
   
    ![](\_images/upgrade-hcid5.jpg)
 
-6. Select the appropriate action (Delete/Deactivate) on that entry.
+6. Select the appropriate action (Delete/ Deactivate) on that entry.
 
     ![](\_images/upgrade-hcid6.jpg)
 
