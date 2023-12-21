@@ -2,7 +2,7 @@
 
 This document provides instructions on manually reprocessing all packets from the beginning after migration. The 1.2.0.1 release introduces multiple new stages and a new tagging mechanism. All packets that have not been processed before migration will be reprocessed to ensure they go through the new stages.
 
-To facilitate packet reprocessing, MOSIP provides a Python script. This approach involves fetching all RIDs from the database using a query and processing them from the beginning. Please consult the documentation for instructions on setting up and running the reprocessing script. The query can be found in the config.py file.
+To facilitate packet reprocessing, MOSIP provides a Python script. This approach involves fetching all RIDs from the database using a query and processing them from the beginning. Please consult the documentation for [instructions on setting up and running the reprocessing script](https://github.com/mosip/mosip-infra/tree/release-1.2.0.1/deployment/sandbox-v2/utils/reprocess). The query can be found in the [config.py](https://github.com/mosip/mosip-infra/blob/release-1.2.0.1/deployment/sandbox-v2/utils/reprocess/config.py) file.
 
 Note: This script is highly customizable, and each country can modify it according to their specific requirements. This document outlines the general approach for reprocessing packets. If a country has special needs, the query will need to be adjusted accordingly.
 
@@ -22,7 +22,7 @@ DEFAULT QUERY
 query="SELECT reg_id, process, workflow_instance_id FROM registration WHERE latest_trn_status_code IN ('SUCCESS', 'REPROCESS', 'IN_PROGRESS') AND reg_process_retry_count <= 500 AND latest_trn_dtimes < (SELECT NOW() - INTERVAL '1 DAY') AND status_code NOT IN ('PROCESSED', 'FAILED', 'REJECTED') LIMIT 1000"
 ```
 
-The default query reprocesses all packets that were not "PROCESSED" or "REJECTED" before migration. The query uses a limit of 1000 packets and a 1-second delay between each packet. This means that when the script is executed, it will reprocess 1000 packets one by one with a 1-second interval. These settings can be adjusted if necessary in the config.py file:
+The default query reprocesses all packets that were not "PROCESSED" or "REJECTED" before migration. The query uses a limit of 1000 packets and a 1-second delay between each packet. This means that when the script is executed, it will reprocess 1000 packets one by one with a 1-second interval. These settings can be adjusted if necessary in the [config.py](https://github.com/mosip/mosip-infra/blob/release-1.2.0.1/deployment/sandbox-v2/utils/reprocess/config.py) file:
 
 ```
 LIMIT 1000 # Can be changed as needed.
