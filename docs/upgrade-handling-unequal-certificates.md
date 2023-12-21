@@ -6,11 +6,11 @@ To check if the thumbprints are the same in both databases, we can follow these 
 
 #### Check through SQL commands
 
-```
+~~~
 -- SQL commands to find the entry in both Keymanager  and IDA databases respectively. The cert_thumbprint column to be compared between both the entries.
 select * from key_alias where app_id='PARTNER' and ref_id = 'mpartner-default-auth' order by key_expire_dtimes desc limit 1;
 select * from key_alias where app_id='IDA' and ref_id = 'mpartner-default-auth' order by key_expire_dtimes desc limit 1;
-```
+~~~
 
 In the results of the above query, if it is found that the thumbprints do not match, the next objective is to take the MOSIP signed certificate from keymanager and store it in IDA manually, so that they match.
 
@@ -21,6 +21,8 @@ A. **Perform the required authentication at authmanager portal using the below s
 [](https://api-internal.dev.mosip.net/v1/authmanager/swagger-ui/index.html?configUrl=/v1/authmanager/v3/api-docs/swagger-config#/authmanager/clientIdSecretKey)
 
 **Sample request body**:
+
+~~~
 
 {
   {
@@ -34,6 +36,7 @@ A. **Perform the required authentication at authmanager portal using the below s
     "appId": "regproc"
   }
 }
+~~~
 
 B. **Get the certificate using following swagger URL**
 
@@ -43,6 +46,7 @@ In the `app_id` field use : PARTNER , in the `ref_id` field use : name of the pa
 
 **Sample response**: 
 
+~~~
 {
   "id": null,
   "version": null,
@@ -57,14 +61,15 @@ In the `app_id` field use : PARTNER , in the `ref_id` field use : name of the pa
   },
   "errors": null
 }
+~~~
 
 C. Now, reauthenticate in the same authmanager URL (note the different clientId , appId and corresponding secret key changes )
 
-[](https://api-internal.dev.mosip.net/v1/authmanager/swagger-ui/index.html?configUrl=/v1/authmanager/v3/api-docs/swagger-config#/authmanager/clientIdSecretKey)
+https://api-internal.dev.mosip.net/v1/authmanager/swagger-ui/index.html?configUrl=/v1/authmanager/v3/api-docs/swagger-config#/authmanager/clientIdSecretKey
 
 **Sample Request**
 
-```
+~~~
 {
   {
   "id": "string",
@@ -77,11 +82,11 @@ C. Now, reauthenticate in the same authmanager URL (note the different clientId 
     "appId": "ida"
   }
 }
-```
+~~~
 
 D. After getting the certificate through step B mentioned above, copy it and use it in the following POST request in the below swagger URL:
 
-[](https://api-internal.dev.mosip.net/idauthentication/v1/internal/swagger-ui/index.html?configUrl=/idauthentication/v1/internal/v3/api-docs/swagger-config#/keymanager/uploadCertificate
+https://api-internal.dev.mosip.net/idauthentication/v1/internal/swagger-ui/index.html?configUrl=/idauthentication/v1/internal/v3/api-docs/swagger-config#/keymanager/uploadCertificate
 
 In `applicationId` field use `IDA` and in the `referenceId` field use _name of the partner_ whose cert thumbprints are mismatching such as `mpartner-default-auth`.
 
