@@ -1,8 +1,8 @@
-# Reg Client upgrade
+# Registration Client Upgrade
 
 The Registration Client Docker serves as a registration client zip downloader and upgrade server. The Nginx server within the Registration Client Docker container provides all necessary artifacts and resources during the upgrade process.
 
-**Patch Updates**:
+**Patch updates**:
 
 * When the registration client is launched, it downloads the manifest file from the upgrade server if the machine is online. Otherwise, it uses the local manifest file.
 * The client compares the checksum of each JAR file in the lib directory with the checksum stored in the manifest file. If there's a mismatch, the client considers the file invalid and deletes it before downloading it from the client upgrade server.
@@ -31,11 +31,9 @@ The Registration Client Docker serves as a registration client zip downloader an
 
 <figure><img src=".gitbook/assets/reg-client-upgrade1.png" alt=""><figcaption><p>On patch download, the pre-loader screen displays <strong>Restart required</strong></p></figcaption></figure>
 
-
-
 <figure><img src=".gitbook/assets/reg-client-upgrade2.png" alt=""><figcaption><p>Successful restart of the Registration Client application</p></figcaption></figure>
 
-## Version Upgrade
+## Version upgrade
 
 This procedure entails upgrading from one version of the software to the next iteration.
 
@@ -150,7 +148,7 @@ Below are the steps for manually rolling back:
 1. Close the registration client application.
 2. Delete the `db` folder, if it exists, in the registration client working directory.
 3. Navigate to the designated backup directory, where you will find a folder named after the previous version and the timestamp when it was created. For example, "1.1.5.5\_2023-05-30 13-00-27.238Z".
-4. Copy all the files and folders (lib, bin, MANIFEST.MF) from the backup to the registration client working directory.
+4. Copy all the files and folders (`lib, bin, MANIFEST.MF`) from the backup to the registration client working directory.
 5. Launch the registration client application again.
 
 By following these steps, the registration client application will be successfully rolled back to its previous version.
