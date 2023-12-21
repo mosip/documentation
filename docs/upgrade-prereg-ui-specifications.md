@@ -1,8 +1,8 @@
-# Pre Reg UI upgrade
+# Pre-Registration UI Upgrade
 
 The Pre-Registration UI-spec file `pre-registration-demographic.json` was previously included in the mosip-config repository in version 1.1.5.\*, but starting from version 1.2.0, it should be manually published using the master data UI-spec API.
 
-### How to define and publish UI spec?
+### How to define and publish UI specifications?
 
 1.  Go to Swagger `clientIdSecretKey` to get the Authentication token:
 
@@ -45,7 +45,7 @@ request": {
 
 4. Once done, check the `master.ui_spec` table.
 
-### Changes in UI specifications:
+### Changes in UI Specifications
 
 The [Pre-registration UI Specifications](https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-ui-specifications) document provides details about all UI spec attributes. This document can be referred to in order to identify the changes between versions 1.1.5 and 1.2.0.1.
 
