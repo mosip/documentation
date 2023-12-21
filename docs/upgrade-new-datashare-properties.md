@@ -1,6 +1,6 @@
 # New Datashare Properties
 
-If a country desires to designate specific data sharing to be transmitted on HTTP or HTTPS endpoints, they should accomplish this by including the "Domain URL" of the data sharing in the policy field itself.
+If a country desires to designate specific data sharing to be transmitted on HTTP or HTTPS endpoints, they should accomplish this by including the **Domain URL** of the data sharing in the policy field itself.
 This will have priority over any other settings.
 
 Furthermore, two new fields have been incorporated into the policy:
