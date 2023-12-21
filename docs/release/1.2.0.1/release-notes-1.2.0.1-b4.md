@@ -12,6 +12,9 @@
 
 The MOSIP **1.2.0.1 Beta4** release marks an upgrade from version 1.1.5.x to 1.2.0.1. This release primarily focuses on the migration of all services/modules to the V3 architecture. Additionally, it includes important bug fixes, enhancements to security, and improvements in performance.
 
+To know more about Upgrades, refer [Upgrade Runbook](upgrade-runbook.md).
+
+
 ## Repository Released
 
 | **Repositories**            | **Tags Released**                                                                        |
