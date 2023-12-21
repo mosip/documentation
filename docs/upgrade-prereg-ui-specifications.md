@@ -66,8 +66,1376 @@ The following new attributes have been added:
 
 ### UI Specifications of 1.1.5 and 1.2.0
 
+### 1.1.5
+
+~~~
+{
+
+              "identity": [{
+
+                                           "id": "IDSchemaVersion",
+
+                                           "description": "ID Schema Version",
+
+                                           "type": "number",
+
+                                           "controlType": null,
+
+                                           "fieldType": "default",
+
+                                           "inputRequired": false,
+
+                                           "validators": [],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "fullName",
+
+                                           "description": "Enter Full Name",
+
+                                           "labelName": {
+
+                                                          "eng": "Full Name",
+
+                                                          "ara": "الاسم الكامل",
+
+                                                          "fra": "Nom complet"
+
+                                           },
+
+                                           "controlType": "textbox",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": [
+
+ 
+
+                                                          ]
+
+                                           }],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "dateOfBirth",
+
+                                           "description": "Enter DOB",
+
+                                           "labelName": {
+
+                                                          "eng": "Date Of Birth",
+
+                                                          "ara": "تاريخ الولادة",
+
+                                                          "fra": "Date de naissance"
+
+                                           },
+
+                                           "controlType": "date",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "string",
+
+                                           "validators": [],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "gender",
+
+                                           "description": "Enter Gender",
+
+                                           "labelName": {
+
+                                                          "eng": "Gender",
+
+                                                          "ara": "جنس",
+
+                                                          "fra": "Le genre"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "dynamic",
+
+                                           "type": "simpleType",
+
+                                           "validators": [
+
+ 
+
+                                           ],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "residenceStatus",
+
+                                           "description": "Residence status",
+
+                                           "labelName": {
+
+                                                          "eng": "Residence Status",
+
+                                                          "ara": "حالة الإقامة",
+
+                                                          "fra": "Statut de résidence"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "dynamic",
+
+                                           "type": "simpleType",
+
+                                           "validators": [
+
+ 
+
+                                           ],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "addressLine1",
+
+                                           "description": "addressLine1",
+
+                                           "labelName": {
+
+                                                          "eng": "Address Line1",
+
+                                                          "ara": "العنوان السطر 1",
+
+                                                          "fra": "Adresse 1"
+
+                                           },
+
+                                           "controlType": "textbox",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": [
+
+ 
+
+                                                          ]
+
+                                           }],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "addressLine2",
+
+                                           "description": "addressLine2",
+
+                                           "labelName": {
+
+                                                          "eng": "Address Line2",
+
+                                                          "ara": "العنوان السطر 2",
+
+                                                          "fra": "Adresse 2"
+
+                                           },
+
+                                           "controlType": "textbox",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": [
+
+ 
+
+                                                          ]
+
+                                           }],
+
+                                           "required": false
+
+                             },
+
+                             {
+
+                                           "id": "addressLine3",
+
+                                           "description": "addressLine3",
+
+                                           "labelName": {
+
+                                                          "eng": "Address Line3",
+
+                                                          "ara": "العنوان السطر 3",
+
+                                                          "fra": "Adresse 3"
+
+                                           },
+
+                                           "controlType": "textbox",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": [
+
+ 
+
+                                                          ]
+
+                                           }],
+
+                                           "required": false
+
+                             },
+
+                             {
+
+                                           "id": "region",
+
+                                           "description": "region",
+
+                                           "labelName": {
+
+                                                          "eng": "Region",
+
+                                                          "ara": "منطقة",
+
+                                                          "fra": "Région"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": [
+
+ 
+
+                                                          ]
+
+                                           }],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "province",
+
+                                           "description": "province",
+
+                                           "labelName": {
+
+                                                          "eng": "Province",
+
+                                                          "ara": "المحافظة",
+
+                                                          "fra": "Province"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": [
+
+ 
+
+                                                          ]
+
+                                           }],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "city",
+
+                                           "description": "city",
+
+                                           "labelName": {
+
+                                                          "eng": "City",
+
+                                                          "ara": "مدينة",
+
+                                                          "fra": "Ville"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": [
+
+ 
+
+                                                          ]
+
+                                           }],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "zone",
+
+                                           "description": "zone",
+
+                                           "labelName": {
+
+                                                          "eng": "Zone",
+
+                                                          "ara": "منطقة",
+
+                                                          "fra": "Zone"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [
+
+ 
+
+                                           ],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "postalCode",
+
+                                           "description": "postalCode",
+
+                                           "labelName": {
+
+                                                          "eng": "Postal Code",
+
+                                                          "ara": "الكود البريدى",
+
+                                                          "fra": "code postal"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "string",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^[(?i)A-Z0-9]{5}$|^NA$",
+
+                                                          "arguments": [
+
+ 
+
+                                                          ]
+
+                                           }],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "phone",
+
+                                           "description": "phone",
+
+                                           "labelName": {
+
+                                                          "eng": "Phone",
+
+                                                          "ara": "هاتف",
+
+                                                          "fra": "Téléphone"
+
+                                           },
+
+                                           "controlType": "textbox",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "string",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^([6-9]{1})([0-9]{9})$",
+
+                                                          "arguments": [
+
+ 
+
+                                                          ]
+
+                                           }],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "email",
+
+                                           "description": "email",
+
+                                           "labelName": {
+
+                                                          "eng": "Email",
+
+                                                          "ara": "البريد الإلكتروني",
+
+                                                          "fra": "Email"
+
+                                           },
+
+                                           "controlType": "textbox",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "string",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-zA-Z]{2,})$",
+
+                                                          "arguments": [
+
+ 
+
+                                                          ]
+
+                                           }],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "proofOfAddress",
+
+                                           "description": "proofOfAddress",
+
+                                           "labelName": [{
+
+                                                          "value": "Address Proof",
+
+                                                          "language": "eng"
+
+                                           }],
+
+                                           "controlType": "fileupload",
+
+                                           "inputRequired": true,
+
+                                           "validators": [
+
+ 
+
+                                           ],
+
+                                           "required": false
+
+                             },
+
+                             {
+
+                                           "id": "proofOfIdentity",
+
+                                           "description": "proofOfIdentity",
+
+                                           "labelName": [{
+
+                                                          "value": "Identity Proof",
+
+                                                          "language": "eng"
+                                           }],
+
+                                           "controlType": "fileupload",
+
+                                           "inputRequired": true,
+
+                                           "validators": [
+
+                                           ],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "proofOfRelationship",
+
+                                           "description": "proofOfRelationship",
+
+                                           "labelName": [{
+
+                                                          "value": "Relationship Proof",
+
+                                                          "language": "eng"
+                                           }],
+
+                                           "controlType": "fileupload",
+
+                                           "inputRequired": true,
+
+                                           "validators": [
+
+                                           ],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "proofOfDateOfBirth",
+
+                                           "description": "proofOfDateOfBirth",
+
+                                           "labelName": [{
+
+                                                          "value": "DOB Proof",
+
+                                                          "language": "eng"
+
+                                           }],
+
+                                           "controlType": "fileupload",
+
+                                           "inputRequired": true,
+
+                                           "validators": [
+
+                                            ],
+
+                                           "required": true
+
+                             },
+
+                             {
+
+                                           "id": "proofOfException",
+
+                                           "description": "proofOfException",
+
+                                           "labelName": [{
+
+                                                          "value": "Exception Proof",
+
+                                                          "language": "eng"
+
+                                           }],
+
+                                           "controlType": "fileupload",
+
+                                           "inputRequired": true,
+
+                                           "validators": [
+
+                                           ],
+
+                                           "required": true
+                             }
+
+              ],
+
+              "locationHierarchy": ["region", "province", "city", "zone", "postalCode"]
+}
+~~~
 
 
-| 1.1.5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | 1.2.0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>{</p><p>              "identity": [{</p><p>                                           "id": "IDSchemaVersion",</p><p>                                           "description": "ID Schema Version",</p><p>                                           "type": "number",</p><p>                                           "controlType": null,</p><p>                                           "fieldType": "default",</p><p>                                           "inputRequired": false,</p><p>                                           "validators": [],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "fullName",</p><p>                                           "description": "Enter Full Name",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Full Name",</p><p>                                                          "ara": "الاسم الكامل",</p><p>                                                          "fra": "Nom complet"</p><p>                                           },</p><p>                                           "controlType": "textbox",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": [</p><p> </p><p>                                                          ]</p><p>                                           }],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "dateOfBirth",</p><p>                                           "description": "Enter DOB",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Date Of Birth",</p><p>                                                          "ara": "تاريخ الولادة",</p><p>                                                          "fra": "Date de naissance"</p><p>                                           },</p><p>                                           "controlType": "date",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "string",</p><p>                                           "validators": [],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "gender",</p><p>                                           "description": "Enter Gender",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Gender",</p><p>                                                          "ara": "جنس",</p><p>                                                          "fra": "Le genre"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "dynamic",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [</p><p> </p><p>                                           ],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "residenceStatus",</p><p>                                           "description": "Residence status",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Residence Status",</p><p>                                                          "ara": "حالة الإقامة",</p><p>                                                          "fra": "Statut de résidence"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "dynamic",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [</p><p> </p><p>                                           ],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "addressLine1",</p><p>                                           "description": "addressLine1",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Address Line1",</p><p>                                                          "ara": "العنوان السطر 1",</p><p>                                                          "fra": "Adresse 1"</p><p>                                           },</p><p>                                           "controlType": "textbox",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": [</p><p> </p><p>                                                          ]</p><p>                                           }],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "addressLine2",</p><p>                                           "description": "addressLine2",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Address Line2",</p><p>                                                          "ara": "العنوان السطر 2",</p><p>                                                          "fra": "Adresse 2"</p><p>                                           },</p><p>                                           "controlType": "textbox",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": [</p><p> </p><p>                                                          ]</p><p>                                           }],</p><p>                                           "required": false</p><p>                             },</p><p>                             {</p><p>                                           "id": "addressLine3",</p><p>                                           "description": "addressLine3",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Address Line3",</p><p>                                                          "ara": "العنوان السطر 3",</p><p>                                                          "fra": "Adresse 3"</p><p>                                           },</p><p>                                           "controlType": "textbox",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": [</p><p> </p><p>                                                          ]</p><p>                                           }],</p><p>                                           "required": false</p><p>                             },</p><p>                             {</p><p>                                           "id": "region",</p><p>                                           "description": "region",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Region",</p><p>                                                          "ara": "منطقة",</p><p>                                                          "fra": "Région"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": [</p><p> </p><p>                                                          ]</p><p>                                           }],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "province",</p><p>                                           "description": "province",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Province",</p><p>                                                          "ara": "المحافظة",</p><p>                                                          "fra": "Province"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": [</p><p> </p><p>                                                          ]</p><p>                                           }],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "city",</p><p>                                           "description": "city",</p><p>                                           "labelName": {</p><p>                                                          "eng": "City",</p><p>                                                          "ara": "مدينة",</p><p>                                                          "fra": "Ville"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": [</p><p> </p><p>                                                          ]</p><p>                                           }],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "zone",</p><p>                                           "description": "zone",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Zone",</p><p>                                                          "ara": "منطقة",</p><p>                                                          "fra": "Zone"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [</p><p> </p><p>                                           ],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "postalCode",</p><p>                                           "description": "postalCode",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Postal Code",</p><p>                                                          "ara": "الكود البريدى",</p><p>                                                          "fra": "code postal"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "string",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^[(?i)A-Z0-9]{5}$|^NA$",</p><p>                                                          "arguments": [</p><p> </p><p>                                                          ]</p><p>                                           }],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "phone",</p><p>                                           "description": "phone",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Phone",</p><p>                                                          "ara": "هاتف",</p><p>                                                          "fra": "Téléphone"</p><p>                                           },</p><p>                                           "controlType": "textbox",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "string",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^([6-9]{1})([0-9]{9})$",</p><p>                                                          "arguments": [</p><p> </p><p>                                                          ]</p><p>                                           }],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "email",</p><p>                                           "description": "email",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Email",</p><p>                                                          "ara": "البريد الإلكتروني",</p><p>                                                          "fra": "Email"</p><p>                                           },</p><p>                                           "controlType": "textbox",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "string",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-zA-Z]{2,})$",</p><p>                                                          "arguments": [</p><p> </p><p>                                                          ]</p><p>                                           }],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "proofOfAddress",</p><p>                                           "description": "proofOfAddress",</p><p>                                           "labelName": [{</p><p>                                                          "value": "Address Proof",</p><p>                                                          "language": "eng"</p><p>                                           }],</p><p>                                           "controlType": "fileupload",</p><p>                                           "inputRequired": true,</p><p>                                           "validators": [</p><p> </p><p>                                           ],</p><p>                                           "required": false</p><p>                             },</p><p>                             {</p><p>                                           "id": "proofOfIdentity",</p><p>                                           "description": "proofOfIdentity",</p><p>                                           "labelName": [{</p><p>                                                          "value": "Identity Proof",</p><p>                                                          "language": "eng"</p><p>                                           }],</p><p>                                           "controlType": "fileupload",</p><p>                                           "inputRequired": true,</p><p>                                           "validators": [</p><p> </p><p>                                           ],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "proofOfRelationship",</p><p>                                           "description": "proofOfRelationship",</p><p>                                           "labelName": [{</p><p>                                                          "value": "Relationship Proof",</p><p>                                                          "language": "eng"</p><p>                                           }],</p><p>                                           "controlType": "fileupload",</p><p>                                           "inputRequired": true,</p><p>                                           "validators": [</p><p> </p><p>                                           ],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "proofOfDateOfBirth",</p><p>                                           "description": "proofOfDateOfBirth",</p><p>                                           "labelName": [{</p><p>                                                          "value": "DOB Proof",</p><p>                                                          "language": "eng"</p><p>                                           }],</p><p>                                           "controlType": "fileupload",</p><p>                                           "inputRequired": true,</p><p>                                           "validators": [</p><p> </p><p>                                           ],</p><p>                                           "required": true</p><p>                             },</p><p>                             {</p><p>                                           "id": "proofOfException",</p><p>                                           "description": "proofOfException",</p><p>                                           "labelName": [{</p><p>                                                          "value": "Exception Proof",</p><p>                                                          "language": "eng"</p><p>                                           }],</p><p>                                           "controlType": "fileupload",</p><p>                                           "inputRequired": true,</p><p>                                           "validators": [</p><p> </p><p>                                           ],</p><p>                                           "required": true</p><p>                             }</p><p>              ],</p><p>              "locationHierarchy": ["region", "province", "city", "zone", "postalCode"]</p><p>}</p> | <p>{</p><p>              "identity": {</p><p>                             "identity": [{</p><p>                                           "id": "IDSchemaVersion",</p><p>                                           "description": "ID Schema Version",</p><p>                                           "type": "number",</p><p>                                           "controlType": null,</p><p>                                           "fieldType": "default",</p><p>                                           "inputRequired": false,</p><p>                                           "validators": [],</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "fullName",</p><p>                                           "description": "Enter Full Name",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Full Name",</p><p>                                                          "ara": "الاسم الكامل",</p><p>                                                          "fra": "Nom complet"</p><p>                                           },</p><p>                                           "controlType": "textbox",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": []</p><p>                                           }],</p><p>                                           "required": true,</p><p>                                           "transliteration": true</p><p>                             }, {</p><p>                                           "id": "dateOfBirth",</p><p>                                           "description": "Enter DOB",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Date Of Birth",</p><p>                                                          "ara": "تاريخ الولادة",</p><p>                                                          "fra": "Date de naissance"</p><p>                                           },</p><p>                                           "controlType": "ageDate",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "string",</p><p>                                           "validators": [],</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "gender",</p><p>                                           "description": "Enter Gender",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Gender",</p><p>                                                          "ara": "جنس",</p><p>                                                          "fra": "Le genre"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "dynamic",</p><p>                                           "subType": "gender",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [],</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "residenceStatus",</p><p>                                           "description": "Residence status",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Residence Status",</p><p>                                                          "ara": "حالة الإقامة",</p><p>                                                          "fra": "Statut de résidence"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "dynamic",</p><p>                                           "subType": "residenceStatus",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [],</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "addressLine1",</p><p>                                           "description": "addressLine1",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Address Line1",</p><p>                                                          "ara": "العنوان السطر 1",</p><p>                                                          "fra": "Adresse 1"</p><p>                                           },</p><p>                                           "controlType": "textbox",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": []</p><p>                                           }],</p><p>                                           "required": true,</p><p>                                           "transliteration": true</p><p>                             }, {</p><p>                                           "id": "addressLine2",</p><p>                                           "description": "addressLine2",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Address Line2",</p><p>                                                          "ara": "العنوان السطر 2",</p><p>                                                          "fra": "Adresse 2"</p><p>                                           },</p><p>                                           "controlType": "textbox",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": []</p><p>                                           }],</p><p>                                           "required": false,</p><p>                                           "transliteration": true</p><p>                             }, {</p><p>                                           "id": "addressLine3",</p><p>                                           "description": "addressLine3",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Address Line3",</p><p>                                                          "ara": "العنوان السطر 3",</p><p>                                                          "fra": "Adresse 3"</p><p>                                           },</p><p>                                           "controlType": "textbox",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": []</p><p>                                           }],</p><p>                                           "required": false,</p><p>                                           "transliteration": true</p><p>                             }, {</p><p>                                           "id": "region",</p><p>                                           "description": "region",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Region",</p><p>                                                          "ara": "منطقة",</p><p>                                                          "fra": "Région"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": []</p><p>                                           }],</p><p>                                           "parentLocCode": "MOR",</p><p>                                           "locationHierarchyLevel": 1,</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "province",</p><p>                                           "description": "province",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Province",</p><p>                                                          "ara": "المحافظة",</p><p>                                                          "fra": "Province"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": []</p><p>                                           }],</p><p>                                           "locationHierarchyLevel": 2,</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "city",</p><p>                                           "description": "city",</p><p>                                           "labelName": {</p><p>                                                          "eng": "City",</p><p>                                                          "ara": "مدينة",</p><p>                                                          "fra": "Ville"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^(?=.{0,50}$).*",</p><p>                                                          "arguments": []</p><p>                                           }],</p><p>                                           "locationHierarchyLevel": 3,</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "zone",</p><p>                                           "description": "zone",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Zone",</p><p>                                                          "ara": "منطقة",</p><p>                                                          "fra": "Zone"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "simpleType",</p><p>                                           "validators": [],</p><p>                                           "locationHierarchyLevel": 4,</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "postalCode",</p><p>                                           "description": "postalCode",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Postal Code",</p><p>                                                          "ara": "الكود البريدى",</p><p>                                                          "fra": "code postal"</p><p>                                           },</p><p>                                           "controlType": "dropdown",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "string",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^[(?i)A-Z0-9]{5}$|^NA$",</p><p>                                                          "arguments": []</p><p>                                           }],</p><p>                                           "locationHierarchyLevel": 5,</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "phone",</p><p>                                           "description": "phone",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Phone",</p><p>                                                          "ara": "هاتف",</p><p>                                                          "fra": "Téléphone"</p><p>                                           },</p><p>                                           "controlType": "textbox",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "string",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^([6-9]{1})([0-9]{9})$",</p><p>                                                          "arguments": []</p><p>                                           }],</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "email",</p><p>                                           "description": "email",</p><p>                                           "labelName": {</p><p>                                                          "eng": "Email",</p><p>                                                          "ara": "البريد الإلكتروني",</p><p>                                                          "fra": "Email"</p><p>                                           },</p><p>                                           "controlType": "textbox",</p><p>                                           "inputRequired": true,</p><p>                                           "fieldType": "default",</p><p>                                           "type": "string",</p><p>                                           "validators": [{</p><p>                                                          "type": "regex",</p><p>                                                          "validator": "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-zA-Z]{2,})$",</p><p>                                                          "arguments": []</p><p>                                           }],</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "proofOfAddress",</p><p>                                           "description": "proofOfAddress",</p><p>                                           "labelName": {</p><p>                                                          "ara": "إثبات العنوان",</p><p>                                                          "fra": "Address Proof",</p><p>                                                          "eng": "Address Proof"</p><p>                                           },</p><p>                                           "controlType": "fileupload",</p><p>                                           "inputRequired": true,</p><p>                                           "validators": [],</p><p>                                           "subType": "POA",</p><p>                                           "required": false</p><p>                             }, {</p><p>                                           "id": "proofOfIdentity",</p><p>                                           "description": "proofOfIdentity",</p><p>                                           "labelName": {</p><p>                                                          "ara": "إثبات الهوية",</p><p>                                                          "fra": "Identity Proof",</p><p>                                                          "eng": "Identity Proof"</p><p>                                           },</p><p>                                           "controlType": "fileupload",</p><p>                                           "inputRequired": true,</p><p>                                           "validators": [],</p><p>                                           "subType": "POI",</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "proofOfRelationship",</p><p>                                           "description": "proofOfRelationship",</p><p>                                           "labelName": {</p><p>                                                          "ara": "إثبات العلاقة",</p><p>                                                          "fra": "Relationship Proof",</p><p>                                                          "eng": "Relationship Proof"</p><p>                                           },</p><p>                                           "controlType": "fileupload",</p><p>                                           "inputRequired": true,</p><p>                                           "validators": [],</p><p>                                           "subType": "POR",</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "proofOfDateOfBirth",</p><p>                                           "description": "proofOfDateOfBirth",</p><p>                                           "labelName": {</p><p>                                                          "ara": "دليل DOB",</p><p>                                                          "fra": "DOB Proof",</p><p>                                                          "eng": "DOB Proof"</p><p>                                           },</p><p>                                           "controlType": "fileupload",</p><p>                                           "inputRequired": true,</p><p>                                           "validators": [],</p><p>                                           "subType": "POB",</p><p>                                           "required": true</p><p>                             }, {</p><p>                                           "id": "proofOfException",</p><p>                                           "description": "proofOfException",</p><p>                                           "labelName": {</p><p>                                                          "ara": "إثبات الاستثناء",</p><p>                                                          "fra": "Exception Proof",</p><p>                                                          "eng": "Exception Proof"</p><p>                                           },</p><p>                                           "controlType": "fileupload",</p><p>                                           "inputRequired": true,</p><p>                                           "validators": [],</p><p>                                           "subType": "POE",</p><p>                                           "required": true</p><p>                             }],</p><p>                             "locationHierarchy": ["region", "province", "city", "zone", "postalCode"]</p><p>              }</p><p>}</p> |
+### 1.2.0
+
+~~~
+{
+
+              "identity": {
+
+                             "identity": [{
+
+                                           "id": "IDSchemaVersion",
+
+                                           "description": "ID Schema Version",
+
+                                           "type": "number",
+
+                                           "controlType": null,
+
+                                           "fieldType": "default",
+
+                                           "inputRequired": false,
+
+                                           "validators": [],
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "fullName",
+
+                                           "description": "Enter Full Name",
+
+                                           "labelName": {
+
+                                                          "eng": "Full Name",
+
+                                                          "ara": "الاسم الكامل",
+
+                                                          "fra": "Nom complet"
+
+                                           },
+
+                                           "controlType": "textbox",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": []
+
+                                           }],
+
+                                           "required": true,
+
+                                           "transliteration": true
+
+                             }, {
+
+                                           "id": "dateOfBirth",
+
+                                           "description": "Enter DOB",
+
+                                           "labelName": {
+
+                                                          "eng": "Date Of Birth",
+
+                                                          "ara": "تاريخ الولادة",
+
+                                                          "fra": "Date de naissance"
+
+                                           },
+
+                                           "controlType": "ageDate",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "string",
+
+                                           "validators": [],
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "gender",
+
+                                           "description": "Enter Gender",
+
+                                           "labelName": {
+
+                                                          "eng": "Gender",
+
+                                                          "ara": "جنس",
+
+                                                          "fra": "Le genre"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "dynamic",
+
+                                           "subType": "gender",
+
+                                           "type": "simpleType",
+
+                                           "validators": [],
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "residenceStatus",
+
+                                           "description": "Residence status",
+
+                                           "labelName": {
+
+                                                          "eng": "Residence Status",
+
+                                                          "ara": "حالة الإقامة",
+
+                                                          "fra": "Statut de résidence"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "dynamic",
+
+                                           "subType": "residenceStatus",
+
+                                           "type": "simpleType",
+
+                                           "validators": [],
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "addressLine1",
+
+                                           "description": "addressLine1",
+
+                                           "labelName": {
+
+                                                          "eng": "Address Line1",
+
+                                                          "ara": "العنوان السطر 1",
+
+                                                          "fra": "Adresse 1"
+
+                                           },
+
+                                           "controlType": "textbox",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": []
+
+                                           }],
+
+                                           "required": true,
+
+                                           "transliteration": true
+
+                             }, {
+
+                                           "id": "addressLine2",
+
+                                           "description": "addressLine2",
+
+                                           "labelName": {
+
+                                                          "eng": "Address Line2",
+
+                                                          "ara": "العنوان السطر 2",
+
+                                                          "fra": "Adresse 2"
+
+                                           },
+
+                                           "controlType": "textbox",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": []
+
+                                           }],
+
+                                           "required": false,
+
+                                           "transliteration": true
+
+                             }, {
+
+                                           "id": "addressLine3",
+
+                                           "description": "addressLine3",
+
+                                           "labelName": {
+
+                                                          "eng": "Address Line3",
+
+                                                          "ara": "العنوان السطر 3",
+
+                                                          "fra": "Adresse 3"
+
+                                           },
+
+                                           "controlType": "textbox",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": []
+
+                                           }],
+
+                                           "required": false,
+
+                                           "transliteration": true
+
+                             }, {
+
+                                           "id": "region",
+
+                                           "description": "region",
+
+                                           "labelName": {
+
+                                                          "eng": "Region",
+
+                                                          "ara": "منطقة",
+
+                                                          "fra": "Région"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": []
+
+                                           }],
+
+                                           "parentLocCode": "MOR",
+
+                                           "locationHierarchyLevel": 1,
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "province",
+
+                                           "description": "province",
+
+                                           "labelName": {
+
+                                                          "eng": "Province",
+
+                                                          "ara": "المحافظة",
+
+                                                          "fra": "Province"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": []
+
+                                           }],
+
+                                           "locationHierarchyLevel": 2,
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "city",
+
+                                           "description": "city",
+
+                                           "labelName": {
+
+                                                          "eng": "City",
+
+                                                          "ara": "مدينة",
+
+                                                          "fra": "Ville"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^(?=.{0,50}$).*",
+
+                                                          "arguments": []
+
+                                           }],
+
+                                           "locationHierarchyLevel": 3,
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "zone",
+
+                                           "description": "zone",
+
+                                           "labelName": {
+
+                                                          "eng": "Zone",
+
+                                                          "ara": "منطقة",
+
+                                                          "fra": "Zone"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "simpleType",
+
+                                           "validators": [],
+
+                                           "locationHierarchyLevel": 4,
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "postalCode",
+
+                                           "description": "postalCode",
+
+                                           "labelName": {
+
+                                                          "eng": "Postal Code",
+
+                                                          "ara": "الكود البريدى",
+
+                                                          "fra": "code postal"
+
+                                           },
+
+                                           "controlType": "dropdown",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "string",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^[(?i)A-Z0-9]{5}$|^NA$",
+
+                                                          "arguments": []
+
+                                           }],
+
+                                           "locationHierarchyLevel": 5,
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "phone",
+
+                                           "description": "phone",
+
+                                           "labelName": {
+
+                                                          "eng": "Phone",
+
+                                                          "ara": "هاتف",
+
+                                                          "fra": "Téléphone"
+
+                                           },
+
+                                           "controlType": "textbox",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "string",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^([6-9]{1})([0-9]{9})$",
+
+                                                          "arguments": []
+
+                                           }],
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "email",
+
+                                           "description": "email",
+
+                                           "labelName": {
+
+                                                          "eng": "Email",
+
+                                                          "ara": "البريد الإلكتروني",
+
+                                                          "fra": "Email"
+
+                                           },
+
+                                           "controlType": "textbox",
+
+                                           "inputRequired": true,
+
+                                           "fieldType": "default",
+
+                                           "type": "string",
+
+                                           "validators": [{
+
+                                                          "type": "regex",
+
+                                                          "validator": "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-zA-Z]{2,})$",
+
+                                                          "arguments": []
+
+                                           }],
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "proofOfAddress",
+
+                                           "description": "proofOfAddress",
+
+                                           "labelName": {
+
+                                                          "ara": "إثبات العنوان",
+
+                                                          "fra": "Address Proof",
+
+                                                          "eng": "Address Proof"
+
+                                           },
+
+                                           "controlType": "fileupload",
+
+                                           "inputRequired": true,
+
+                                           "validators": [],
+
+                                           "subType": "POA",
+
+                                           "required": false
+
+                             }, {
+
+                                           "id": "proofOfIdentity",
+
+                                           "description": "proofOfIdentity",
+
+                                           "labelName": {
+
+                                                          "ara": "إثبات الهوية",
+
+                                                          "fra": "Identity Proof",
+
+                                                          "eng": "Identity Proof"
+
+                                           },
+
+                                           "controlType": "fileupload",
+
+                                           "inputRequired": true,
+
+                                           "validators": [],
+
+                                           "subType": "POI",
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "proofOfRelationship",
+
+                                           "description": "proofOfRelationship",
+
+                                           "labelName": {
+
+                                                          "ara": "إثبات العلاقة",
+
+                                                          "fra": "Relationship Proof",
+
+                                                          "eng": "Relationship Proof"
+
+                                           },
+
+                                           "controlType": "fileupload",
+
+                                           "inputRequired": true,
+
+                                           "validators": [],
+
+                                           "subType": "POR",
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "proofOfDateOfBirth",
+
+                                           "description": "proofOfDateOfBirth",
+
+                                           "labelName": {
+
+                                                          "ara": "دليل DOB",
+
+                                                          "fra": "DOB Proof",
+
+                                                          "eng": "DOB Proof"
+
+                                           },
+
+                                           "controlType": "fileupload",
+
+                                           "inputRequired": true,
+
+                                           "validators": [],
+
+                                           "subType": "POB",
+
+                                           "required": true
+
+                             }, {
+
+                                           "id": "proofOfException",
+
+                                           "description": "proofOfException",
+
+                                           "labelName": {
+
+                                                          "ara": "إثبات الاستثناء",
+
+                                                          "fra": "Exception Proof",
+
+                                                          "eng": "Exception Proof"
+
+                                           },
+
+                                           "controlType": "fileupload",
+
+                                           "inputRequired": true,
+
+                                           "validators": [],
+
+                                           "subType": "POE",
+
+                                           "required": true
+
+                             }],
+
+                             "locationHierarchy": ["region", "province", "city", "zone", "postalCode"]
+
+              }
+
+}
+~~~
+
