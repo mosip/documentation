@@ -164,7 +164,7 @@
 * [Registration Client Upgrade](upgrade-registration-client.md)
 * [Applicant MVEL type](upgrade-applicant-typeMVEL-scriptmigration.md)
 * [Pre Reg UI upgrade](upgrade-prereg-ui-specifications.md)
-* [Reg Proc](upgrade-camel-route-changes.md)
+* [Registration Processor: Camel Route changes](upgrade-camel-route-changes.md)
 * [📚 MOSIP Support Policy](support-policy.md)
 * [📫 Sandbox Details](sandbox-details.md)
 * [🗳 Collab Environment Setup Guides](collab-getting-started-guide.md)
