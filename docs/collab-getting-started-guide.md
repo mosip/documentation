@@ -36,7 +36,7 @@ Before starting with the Collab environment, please ensure you have the followin
 
 #### Pre-registration - Optimize the Journey
 
-_Why wait to register at the centers?_
+Why wait to register at the centers?
 
 * Pre-registration is a MOSIP module that allows residents to pre-register themselves by providing demographic data, upload documents, and book appointments, before official registration at the registration center, thereby optimizing the enrollment process. To learn more about pre-registration click [here](https://docs.mosip.io/1.2.0/modules/pre-registration).
 * For the end-to-end process on how to set up the Pre-registration in the Collab environment, click on [Pre-registration Setup Guide](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-pre-registration-guide).
