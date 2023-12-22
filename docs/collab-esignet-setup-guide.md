@@ -1,7 +1,7 @@
-# e-Signet Setup Guide
+# eSignet Setup Guide
 
-Welcome to the comprehensive guide on how to setup and demonstrate [**e-Signet**](https://docs.esignet.io/) in MOSIP's Collab environment, and experience its various features. \
-\
+Welcome to the comprehensive guide on how to setup and demonstrate [**eSignet**](https://docs.esignet.io/) in MOSIP's Collab environment, and experience its various features. 
+
 In this guide, we will walk you through the step-by-step process of authenticating yourself on a relying party’s demo health service portal that has integrated with e-Signet and also help you explore its various modes of authentication. This will enable you to get conversant with a secure & streamlined way of authenticating yourself and accessing online services, while ensuring your identity & information remains protected.
 
 Let's dive into the details and embark on this informative journey of seamless authentication and exploration.
@@ -32,7 +32,7 @@ To experience the various methods of login and authentication in the demo health
 
 **Step 1: Access the health services portal**
 
-Navigate to the relying party’s demo [**Health Services**](https://healthservices-esignet.collab.mosip.net/) portal in the Collab environment, and click on `Sign In with e-Signet`.
+Navigate to the relying party’s demo [**Health Services**](https://healthservices-esignet.collab.mosip.net/) portal in the Collab environment, and click on `Sign In with eSignet`.
 
 **Step 2: Explore the various authentication mechanisms**
 
@@ -41,7 +41,7 @@ Navigate to the relying party’s demo [**Health Services**](https://healthservi
 2. Inji-Based (Wallet-Based) login With Face Authentication
    * Discover how to login using Inji (Wallet) through face authentication, by clicking on the link [here](https://docs.esignet.io/esignet-end-user-guide/login-flow-qr-code).
    * As mentioned in the pre-requisites section above, ensure that your credential is activated for online login, in Inji. Follow the instructions provided [here](https://docs.mosip.io/1.2.0/modules/inji-user-guide#wallet-binding-flow), in the section titled `Wallet Binding Flow`.
-3.  Biometrics-Based Login & Authentication
+3.  Biometrics-Based Login and Authentication
 
     * Experience the process of logging in using biometrics, by following the instructions provided [here](https://docs.esignet.io/esignet-end-user-guide/login-with-biometrics).
 
@@ -49,12 +49,12 @@ Navigate to the relying party’s demo [**Health Services**](https://healthservi
 
 ### Additional Video Resources
 
-* Watch this informative video [here](https://www.youtube.com/watch?v=ZfUPRv71s\_0,) to gain insights into e-Signet.
-* Explore the [e-Signet Online Authentication Demo](https://www.youtube.com/watch?v=uNKlmw9KRFg) video for a practical demonstration of the authentication process.
-* Watch [Running e-Signet Locally](https://youtu.be/nmIZl6Tmt68?si=odKFq3UUQrV1kb6H) - A quick comprehensive guide for local implementation.
-* Click [here](https://docs.esignet.io/) for detailed information about e-Signet.
+* Watch this informative video [here](https://www.youtube.com/watch?v=ZfUPRv71s\_0,) to gain insights into eSignet.
+* Explore the [eSignet Online Authentication Demo](https://www.youtube.com/watch?v=uNKlmw9KRFg) video for a practical demonstration of the authentication process.
+* Watch [Running eSignet Locally](https://youtu.be/nmIZl6Tmt68?si=odKFq3UUQrV1kb6H) - A quick comprehensive guide for local implementation.
+* Click [here](https://docs.esignet.io/) for detailed information about eSignet.
 
-> By adhering to these guidelines and making use of the available resources, you will be able to smoothly experience the different methods of login and authentication offered by e-signet. \
+> By adhering to these guidelines and making use of the available resources, you will be able to smoothly experience the different methods of login and authentication offered by eSignet. 
 > This will guarantee secure and efficient access to the services you require.
 
 ### Get in Touch
