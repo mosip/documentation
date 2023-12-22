@@ -1,6 +1,8 @@
 # 🗳 Collab Environment Setup Guides
 
-Hello Partner! Looking to collaborate with us? Look no further than here!
+Hello Partner! Ready to delve deeper into the world of MOSIP? This expanded guide sheds light on the functionalities and benefits of each service and module available in the Collab environment. Explore, test, and build with confidence!
+
+Let us dive deeper into MOSIP Collab: **Services** and **Modules** in detail.
 
 ### Introduction
 
@@ -20,94 +22,106 @@ Before starting with the Collab environment, please ensure you have the followin
 
 **Let’s Get Started!**
 
-**Step 1**: Access the Collab Environment
+### Step 1: Access the Collab Environment
 
 * Open your web browser and navigate to the Collab environment URL: [MOSIP Collab](https://collab.mosip.net/).
 * In the Collab environment, click on the specific module/ service that you want to access as a contributor.
 
-**Step 2**: Follow the module-specific guide to integrate with/ test the preferred application
+### Step 2: Follow the module-specific guide to integrate with/ test the preferred application
 
 * In MOSIP's Collab environment, the following components and services are available.
 * Navigate to the specific module you are looking to test and follow the corresponding guide for a step-by-step overview of the setup process involved.
 
-#### Pre-registration Setup Guide
+## Modules
+
+#### Pre-registration - Optimize the Journey
+
+_Why wait to register at the centers?_
 
 * Pre-registration is a MOSIP module that allows residents to pre-register themselves by providing demographic data, upload documents, and book appointments, before official registration at the registration center, thereby optimizing the enrollment process. To learn more about pre-registration click [here](https://docs.mosip.io/1.2.0/modules/pre-registration).
-* For the end-to-end process on how to set up the Pre-registration Client in the Collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-pre-registration-guide).
+* For the end-to-end process on how to set up the Pre-registration in the Collab environment, click on [Pre-registration Setup Guide](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-pre-registration-guide).
 * For details on how to use the application, refer to our [end user guide](https://docs.mosip.io/1.2.0/modules/pre-registration/pre-registration-user-guide).
 
-#### Registration Client Setup Guide
+#### Registration Client - Efficient Enrollments
 
+* Registering residents quickly and accurately is crucial.
 * The Registration Client application in MOSIP enables agents to efficiently register residents by capturing their demographic and biometric data, in addition to managing tasks like onboarding, data synchronization, software upgrades, and packet management. To know more about the installation and pre-requisites for the same, click [here](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-installation-guide).
 * For the end-to-end process on how to set up the Registration client in the Collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-reg-client-setup-guide).
 * For details on how to use the application, refer to our [user guide](https://docs.mosip.io/1.2.0/modules/registration-client/registration-client-user-guide).
 
+#### Resident Services - Empowering Users
 
-#### Partner Management Setup Guide
+* Imagine residents managing their identities with ease and convenience!
+* Residents take center stage with the Resident Services module. This reference **self-service portal** empowers them to manage their Unique Identification Number (UIN), check their registration status, download documents, and access other essential services. 
+* This web-based UI application provides residents of a country the services related to managing their Unique Identification Number (UIN).To learn more about Resident Services, click [here](https://docs.mosip.io/1.2.0/modules/resident-services).
+* For the end-to-end process of how to run Resident Services in our Collab env, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-resident-portal-guide).
 
-* MOSIP's Partner management services (PMS) module streamlines partner onboarding, policy management, and data sharing. It comprises of Partner Management and Policy Management Services, providing essential support for effective collaboration within MOSIP. To learn more, click [here](https://docs.mosip.io/1.2.0/modules/partner-management-services).
+#### Admin Portal - Master Data Management
+
+* Behind the scenes, the Admin Portal empowers administrative personnel. This web-based platform helps manage master data, configure system settings, track user activity, and perform crucial operational tasks. Maintaining data accuracy and optimizing platform efficiency necessitates a robust administrative infrastructure, and the Admin Portal fulfills this role effectively.
+* To learn more about the Admin Portal, click [here](https://docs.mosip.io/1.2.0/modules/administration).
+Admin portal access in Collab is limited, contact the [community forum](https://community.mosip.io/) for specific module needs.
+* For details on how to use the application, refer to our [end user guide](https://docs.mosip.io/1.2.0/modules/administration/admin-portal-user-guide).
+
+#### Partner Management - Trust Made Easy
+
+* MOSIP thrives on collaboration, and the Partner Management Portal facilitates it. This module handles partner onboarding and manages policy configurations, between partners and the platform. Building solutions together has never been easier! To learn more, click [here](https://docs.mosip.io/1.2.0/modules/partner-management-services).
+* MOSIP's Partner management services (PMS) module streamlines partner onboarding, policy management, and data sharing. It comprises of Partner Management and Policy Management Services, providing essential support for effective collaboration within MOSIP.
 * For the end-to-end process of how to run Partner Management in our collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-pmp-guide).
 * For details on how to use the application, refer to our [end user guide](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-portal).
 
-#### e-Signet Setup Guide
+#### Inji - Your Mobile Identity Wallet
 
-* e-Signet aims to offer a simple yet powerful mechanism for end users to identify themselves to avail the online services and also share their profile information. To learn more about e-Signet, click [here](https://docs.esignet.io/).
-* For the end-to-end process of how to run e-Signet in our Collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-esignet-setup-guide).
-* For details on how to use the application, refer to our [end user guide](https://docs.esignet.io/esignet-end-user-guide).
-
-#### Inji Setup Guide
-
-* Inji is a mobile wallet and authenticator that enables storage of all forms of IDs and credentials in a single digital wallet, enabling offline identity verification through just a selfie! To learn more about Inji, click [here](https://docs.mosip.io/inji/).
+* Imagine carrying all your IDs and credentials on your phone – securely and conveniently! Inji makes it a reality. This mobile wallet and authenticator stores various government-issued IDs, certificates, and even private credentials. Offline identity verification through selfies adds another layer of convenience and security. To learn more about Inji, click [here](https://docs.mosip.io/inji/).
 * For the end-to-end process of how to run Inji in our Collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide).
 * For details on how to use the application, refer to our [end user guide](https://docs.mosip.io/inji/enduser-guide).
 
-#### ActiveMQ Setup Guide
+#### eSignet - Simple and Secure Online Authentication:
 
-* ActiveMQ is an open-source message broker that facilitates the communication between different components and services within a distributed system. In MOSIP, ActiveMQ is utilized as a messaging broker to enable asynchronous communication between various modules and services. To learn more, click [here](https://activemq.collab.mosip.net/user-manual/index.html).
-* For the end-to-end process of how to run ActiveMQ in our Collab environment, click here (Upcoming).
-* For details on how to use the service, refer to our [end user guide](https://activemq.collab.mosip.net/api/index.html) and go through the APIs of ActiveMQ.
+* Signing-in online shouldn't be a hassle now. e-Signet simplifies online authentication by allowing users to identify themselves and share profile information with just a few clicks. Secure and user-friendly, e-signet streamlines online interactions and protects user privacy. To learn more about e-signet, click [here](https://docs.esignet.io/).
+* For the end-to-end process of how to run e-Signet in our Collab environment, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-esignet-setup-guide).
+* For details on how to use the application, refer to our [end user guide](https://docs.esignet.io/esignet-end-user-guide).
 
-#### Keycloak User Guide
+## Services
 
-* KeyCloak is used to manage user authentication and authorization, ensuring that only authorized users have access to the various modules and functionalities within the platform. It plays a crucial role in maintaining the security and integrity of the platform by managing user identities, access controls, and user sessions. To learn more, click [here](https://docs.mosip.io/1.2.0/modules/keymanager).
-* For the end-to-end process of how to use KeyCloak in our Collab environment, click here (Upcoming).
+#### ActiveMQ - Smooth Communication Flow:
 
-#### Kibana
+Imagine components talking seamlessly– that's ActiveMQ! This messaging broker facilitates asynchronous data exchange between different modules, ensuring smooth data transfers and efficient communication within the platform. Whether it's data updates, event notifications, or message relays, ActiveMQ keeps information flowing. To learn more, click [here](https://activemq.collab.mosip.net/user-manual/index.html).
+* For details on how to use the service, refer [here](https://activemq.collab.mosip.net/api/index.html).
 
-* Kibana is a powerful data visualization and exploration tool that works with elastic search. It allows users to create interactive dashboards and visualizations to analyze and interpret large volumes of data, helping to uncover insights, trends, and patterns for informed decision-making.
-* In MOSIP, Kibana dashboards are utilized to monitor and analyze system metrics, logs, and performance data. To learn more, click [here](https://kibana.collab.mosip.net/app/home#/).
-* The dashboards give a visual display of metrics and important data to track the status of various pre and post-enrollment processes. To get all the necessary information and to effectively navigate and set up Kibana, click [here](https://docs.mosip.io/1.2.0/modules/reporting#dashboards).
+#### Keycloak - Secure Access always!
+
+* Identity management gets top priority with Keycloak. It acts as the gatekeeper, authenticating users and managing access control. Only authorized users with the right permissions can access specific modules and functionalities, upholding the platform's security and integrity. It plays a crucial role in maintaining the security and integrity of the platform by managing user identities, access controls, and user sessions. To learn more, click [here](https://docs.mosip.io/1.2.0/modules/keycloak).  
+* On how to use the key manager services with key stores like [Hardware Security Module (HSM)](https://docs.mosip.io/1.2.0/modules/keymanager/hsm) and [mosip_keymgr](https://github.com/mosip/keymanager/tree/release-1.2.0/db_scripts/mosip_keymgr) DB.
+* Keycloak access in Collab is limited, contact the [community forum](https://community.mosip.io/) for specific module needs or alternative auth methods.
+
+#### Kibana - Visualize Your Insights
+
+* Data without understanding is just numbers. Enter Kibana – your key to insightful visualization! This powerful tool transforms system metrics and logs into interactive dashboards and charts, revealing trends, patterns, and valuable information about platform performance and data flow. Monitor system health, identify potential issues, and make informed decisions with data clarity. In MOSIP, Kibana dashboards are utilized to monitor and analyze system metrics, logs, and performance data. To learn more, click [here](https://kibana.collab.mosip.net/app/home#/).
+* The dashboards give a visual display of metrics and important data to track the status of various pre and post-enrollment processes. To get all the necessary information to effectively navigate and set up Kibana click [here](https://docs.mosip.io/1.2.0/modules/reporting#dashboards).
 * For step-by-step instructions on how to access and configure the Kibana dashboard in your V3 installation, please click the following link: [Accessing and Configuring Kibana Dashboard - V3 Installation Guide](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines).
 
-#### MinIO Client Utility
 
-* MinIO is an open-source, high-performance object storage server that is designed for cloud-native and containerized environments. It allows organizations to build their own private cloud storage infrastructure that is scalable, highly available, and easily deployable. In MOSIP, [MinIO](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies) is used to store various types of data, such as documents, images, and files, providing a reliable and efficient storage solution. To learn more, click [here](https://min.io/).
-* For MinIO installation for the object store, click [here](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3/utils/minio-client-util).
+#### MinIO - Store It Securely and Scalably
 
-#### Admin Portal Setup Guide
+* Think of [MinIO]((https://min.io/)) as your secure and reliable storage vault. It handles diverse data types like documents, images, and files, guaranteeing their safekeeping and easy access. MinIO scales effortlessly to accommodate your growing data needs, ensuring a robust and flexible storage solution. In  MOSIP, MinIO is used to store various types of data, such as documents, images, and files, providing a reliable and efficient storage solution. To learn more, click [here](https://github.com/mosip/mosip-infra/tree/develop/deployment/v3/utils/minio-client-util).
+* For MinIO installation for the object store, click [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies).
 
-* Admin application is a web-based application used by a privileged group of administrative personnel to manage various master data and carry out operational activities. To learn more about the Admin Portal, click [here](https://docs.mosip.io/1.2.0/modules/administration).
-* For the end-to-end process of how to run the Admin Portal in our collab environment, click here(Upcoming).
-* For details on how to use the application, refer to our [end user guide](https://docs.mosip.io/1.2.0/modules/administration/admin-portal-user-guide).
+#### Kafka - Decoupled Data Exchange:
 
-#### Resident Services Setup Guide
+* In MOSIP, Kafka acts as the information highway of the platform. It enables real-time data exchange between modules in a decoupled manner, meaning they don't need to be directly connected. This ensures efficient communication, fault tolerance, and scalability, even with a multitude of modules interacting.
+* It's purpose is to provide a scalable, reliable, and fault-tolerant way to transmit data and events in a decoupled manner, ensuring efficient communication and data synchronization across various parts of the system. To know more, click [here](https://kafka.apache.org/downloads).
+* To check the details on how to set up Kafka for V3 installation click [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies#kafka-setup).
 
-* The Resident Services application is a self-service-based portal, that can be used by the residents themselves. It is a web-based UI application that provides residents of a country the services related to managing their Unique Identification Number (UIN).To learn more about Resident Services, click [here](https://docs.mosip.io/1.2.0/modules/resident-services).
-* For the end-to-end process of how to run Resident Services in our Collab env, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-resident-portal-guide).
+#### Mock MDS/SBI Services - Testing Made Real:
 
-#### Kafka Services
+* Need a testing ground for real-world scenarios? Mock MDS and SBI services come to the rescue! These simulated versions of the Master Data Store and Secure Biometric Interface replicate their functionalities without affecting actual data. Develop, test, and integrate your solutions with confidence, knowing you're working with realistic simulations.
+* Mock MDS (Mock Master Data Store) is a simulated version of the Master Data Store used for testing and development purposes. It replicates the behavior of the actual Master Data Store but doesn't store data persistently. Mock MDS is used to mimic the interactions with the Master Data Store during testing and development, allowing developers to verify the functionality of different modules without affecting the real data. To learn more, click [here](https://drive.google.com/drive/folders/1wMW5h1fBxAdBwTzOmPL7Sd_UON7yuIvU).
+* SBI (Secure Biometric Interface) in MOSIP ensures secure and reliable integration of biometric data for identity verification and authentication. SBI ensures secure storage and retrieval of biometric data, enhancing the accuracy and reliability of identity-related operations. To learn more, click [here](https://drive.google.com/drive/folders/1wMW5h1fBxAdBwTzOmPL7Sd_UON7yuIvU).
+* To run [Mock MDS/SBI](https://github.com/mosip/mosip-mock-services/blob/master/MockMDS/README.md) in registration mode in the Collab environment, click [here](https://drive.google.com/file/d/1inXH7t1x2toVLGPNMoefYIU5kY1dG7C8/view?usp=sharing).
 
-* In MOSIP, Kafka serves as a distributed messaging system that facilitates the exchange of data between different components and modules of the platform. It's purpose is to provide a scalable, reliable, and fault-tolerant way to transmit data and events in a decoupled manner, ensuring efficient communication and data synchronization across various parts of the system. To know more, click [here](https://kafka.apache.org/downloads).
-* For the end-to-end process of how to run the Kafka Services in our Collab env, click here. (Upcoming)
-* To check the details on how to set up Kafka for V3 installation, click [here](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/mosip-external-dependencies#kafka-setup).
 
-#### Mock MDS/SBI Services
-
-* Mock MDS (Mock Master Data Store) is a simulated version of the Master Data Store used for testing and development purposes. It replicates the behavior of the actual Master Data Store, but doesn't store data persistently. Mock MDS is used to mimic the interactions with the Master Data Store during testing and development, allowing developers to verify the functionality of different modules without affecting the real data. To learn more, click [here](https://github.com/mosip/mosip-mock-services/tree/master/MockMDS).
-* SBI (Secure Biometric Interface) in MOSIP ensures secure and reliable integration of biometric data for identity verification and authentication. SBI ensures secure storage and retrieval of biometric data, enhancing the accuracy and reliability of identity-related operations. To learn more, click [here](https://drive.google.com/drive/folders/1wMW5h1fBxAdBwTzOmPL7Sd\_UON7yuIvU).
-* To run [Mock MDS](https://github.com/mosip/mosip-mock-services/blob/master/MockMDS/README.md)/ SBI in registration mode in the Collab environment, click [here](https://drive.google.com/file/d/1inXH7t1x2toVLGPNMoefYIU5kY1dG7C8/view?usp=sharing).
-
-**Step 3: Testing and Validation**
+### Step 3: Testing and Validation
 
 Once the setup and configuration is completed, you should proceed with testing and validation activities to ensure the smooth functioning of the modules or services. The testing process may include:
 
@@ -115,7 +129,7 @@ Once the setup and configuration is completed, you should proceed with testing a
 * Validating data exchange and interoperability between different components.
 * Verifying the compliance of the modules or services with the specified requirements and standards.
 
-**Step 4: Get-in-touch : Report issues and seek support**
+### Step 4: Get-in-touch : Report issues and seek support
 
 If you need any help or come across any problems during the testing and integration process, please feel free to contact us using the support system provided below.
 
