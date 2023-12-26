@@ -4,7 +4,7 @@
 
 **Upgrade From**: NA (First Release)
 
-**Release Date**: 1st December 2022
+**Release Date**: 1st December, 2022
 
 ## Overview
 

@@ -1,24 +1,23 @@
 # Version 1.3.0
 
-**Release Name**: CTK 1.3.0 
+**Release Name**: CTK 1.3.0
 
 **Upgrade From**: CTK 1.2.0
 
 **Support**: Stable Release
 
-**Release Date**: 20 Dec, 2023
+**Release Date**: 26th December, 2023
 
 ## Overview
 
 The 1.3.0 version of CTK includes the following new features:
 
-1. CTK now supports Report Generation and submission of Report for Review.
-2. CTK now supports Admin login to View Partner Reports, Test Run, Approve or Reject the submitted Reports.
-3. CTK now supports Quality Assessment testcases using BQAT quality check on biomterics captured by SBI devices.
-4. CTK now supports additional Hash Validation testcases for SBI.
-5. CTK now supports Data Shares related tescases for ABIS.
-6. CTK now supports Kibana Dashboards.
-   
+* Enhanced **Report Generation** and submission capabilities for CTK (Report for Review).
+* Added Admin login functionality to enable viewing Partner Reports, conducting Test Runs, and approving or rejecting submitted Reports.
+* Incorporated Quality Assessment testcases using BQAT quality check on biometrics captured by SBI devices.
+* Additional Hash Validation testcases for SBI to ensure data integrity.
+* Introduced Data Share related testcases for ABIS.
+* Included support for Kibana Dashboards in CTK.
 
 ## Dependency
 
@@ -43,7 +42,3 @@ Post installation, follow the setup steps available [here](setup-steps-1.3.0.md)
 * [Android CTK App user Guide](android-user-guide.md)
 * [QA Report](https://docs.mosip.io/compliance-tool-kit/versions/version-1.3.0/test-report-1.3.0)
 * [Videos](https://www.youtube.com/playlist?list=PLJH-POb\_55z8YYS\_qAk\_QNBQeiQ2VrtZD)
-
-
-
-

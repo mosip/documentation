@@ -5,9 +5,9 @@ This guide will help the partners in using the Compliance Took Kit portal.
 Below are simple steps to use this portal:
 
 1. The partners using the compliance tool kit should be registered partners in the system.
-2. Login into CTK with the same credentials. 
-3. Partner can also select their preferred language while logging-in. 
-4. Create a project of type SBI / SDK / ABIS. 
+2. Login into CTK with the same credentials.
+3. Partner can also select their preferred language while logging-in.
+4. Create a project of type SBI / SDK / ABIS.
 5. Create a collection by selecting the test cases that you want to test.
 6. Provide the necessary details to connect to your device / SDK / ABIS service.
 7. Execute the Test Run by running the collection.
@@ -26,6 +26,7 @@ The partners using the compliance tool kit should be registered in the system. R
 The partner needs to enter the registered username or e-mail and password to log in.
 
 The partner can select the language of their preference from the dropdown in the top-right corner of the screen. Thereafter, the application is displayed in the selected language. By default, CTK supports the following languages:
+
 * English
 * French
 * Arabic
@@ -44,7 +45,7 @@ Once the partner logs into the compliance tool kit, they can view the `Project D
 
 ![CTK Biometric Data](\_images/ctk-toolkit-biometric-data.png)
 
-*  `My Reports`: Partners of CTK will be able to view the reports that they have submitted for review as well as the status of those reports.
+* `My Reports`: Partners of CTK will be able to view the reports that they have submitted for review as well as the status of those reports.
 
 ![CTK My Reports](\_images/ctk-toolkit-myreport.png)
 
@@ -139,6 +140,7 @@ _Note_: ABIS partner can only create ABIS project.
 * After entering data, partners can click `Save Project`. Popup ask's partner to confirm the hash value and website URL before proceeding. Click on the `Save` again to confirm if values are correct.
 
 ![](\_images/ctk-hash-verification.png)
+
 * Once the project is saved, a successful message is displayed and a popup appears on the screen which when closed redirects the partner to the project dashboard (home).
 
 ![](\_images/ctk-sdk-project-created.png)
@@ -153,10 +155,9 @@ Possible values for the Purpose attribute in SDK are:
 ### Download Encryption Key
 
 * Once the project is created by the partner, they can download the **encryption key**.
-
 * Partner can download encryption key for **Auth** devices.
 
-![](_images/ctk-encryptionkey.png)
+![](\_images/ctk-encryptionkey.png)
 
 ### View a specific project
 
@@ -269,16 +270,17 @@ A collection is a group of test cases selected by the partner for a particular p
 * Generate Draft Report for Compliance Collection
 * Archive a collection
 
-### Create a collection
+### Create a Collection
 
-* To create a collection for a project:
-  * Navigate to the project details page by clicking on the project name or View option in the options list.
+*   To create a collection for a project:
 
-  ![](\_images/ctk-add-collection.png)
+    * Navigate to the project details page by clicking on the project name or View option in the options list.
 
-  * By default, application will create a  `Compliance Collection` for the project, and it includes all the test cases that are based on project details.
-  *  `Quality Assessment Collection` will only be added by default for **SBI** projects, and it includes only quality assessment testcases.
-  * Click on the `Add Collection` button and you will be redirected to the Add Collection screen.
+    ![](\_images/ctk-add-collection.png)
+
+    * By default, application will create a `Compliance Collection` for the project, and it includes all the test cases that are based on project details.
+    * `Quality Assessment Collection` will only be added by default for **SBI** projects, and it includes only quality assessment testcases.
+    * Click on the `Add Collection` button and you will be redirected to the Add Collection screen.
 * Enter a unique name for the collection.
 * Select the test cases to be added to the collection
   * The test cases will be displayed in a tabular format with ID, Name, Description and Validator details.
@@ -286,7 +288,7 @@ A collection is a group of test cases selected by the partner for a particular p
 
 ![](\_images/ctk-create-collection.png)
 
-* After selecting the test cases, the partner can click on the “Save Collection” button to save the collection.
+* After selecting the test cases, the partner can click on the **Save Collection** button to save the collection.
 * Once a collection is successfully created, there is a success popup shown and the partner is redirected to the Project details page.
 * Once a collection is created it is displayed on the Collection Dashboard which is available on the Project details page.
 
@@ -298,13 +300,13 @@ A collection is a group of test cases selected by the partner for a particular p
 * A collection name cannot be empty, the partner needs to provide a unique collection name before saving the collection.
 * Every collection row in the dashboard has the option to view the name of the collection, the number of test cases selected as a part of the collection, the creation date, the View Report, the Last Test Run and the Run history of the collection.
 
-### View a collection
+### View a Collection
 
 Once the partner creates a collection, they can view the collection details by clicking on the collection name.
 
 ![](\_images/ctk-view-collection.png)
 
-### Run an SBI collection
+### Run an SBI Collection
 
 * Before running a collection in SBI, the partner needs to connect to a device without which they cannot proceed with testing.
 * The partner should click on the `Scan Device` button in the Collection Dashboard as shown below.
@@ -354,7 +356,7 @@ Once the partner creates a collection, they can view the collection details by c
 
 ![](\_images/ctk-run-details.png)
 
-### Run an SDK collection
+### Run an SDK Collection
 
 Before running the SDK collection, the partner can change the `Test Data`, the `Base URL` and the `SDK Hash` in the project settings
 
@@ -383,7 +385,7 @@ _Note_: For a test run, the partner can select their data or MOSIP’s default d
 
 ![](\_images/ctk-testdata-selecting.png)
 
-### Run an ABIS collection
+### Run an ABIS Collection
 
 Before running the ABIS collection, the partner can change the `Username`, `Password`, `Queue names`, `Test Data`, `ABIS Hash` and the `Actice MQ URL` in the project settings
 
@@ -408,7 +410,7 @@ _Note_: For a test run, the partner can select their data or MOSIP’s default d
 
 ![](\_images/ctk-ABIS-testdata-selecting.png)
 
-### View the run history of the collection
+### View the run history of the Collection
 
 The partner after completing a successful test run can view the detailed run by,
 
@@ -455,7 +457,7 @@ The partner will be able to view the details of any test run they wish.
 
 ### Generate Draft Report for Compliance Collection
 
-The partner can only generate a Draft Report after running `Compliance Collection`. 
+The partner can only generate a Draft Report after running `Compliance Collection`.
 
 * By default, `Compliance Collection` will be added when the project was created.
 
@@ -472,14 +474,14 @@ The partner can only generate a Draft Report after running `Compliance Collectio
 ![](\_images/ctk-compliance-collection-testrun.png)
 
 * Partner can create a Draft Report by clicking the `Generate Draft Report` button.
-* Once the report is downloaded , the partner can see,
-  * The downloaded draft report, and it uses the project name as its filename.
+* Once the report is downloaded, the partner can view:
+  * The downloaded draft report, which uses the project name as its filename.
   * A popup will appear to submit the report for review.
 
 ![](\_images/ctk-download-report.png)
 
 * Partners need to check the downloaded Draft Report, which contains their details, project specifics, test cases, and the complete test run results. These results include the number of test cases executed, passed, and failed.
-* After reviewing the downloaded report, the partner can submit it for review by checking the checkbox in the popup window. They can then proceed by clicking the `Send for review` button to finalize the submission.
+* After reviewing the downloaded report, the partner can submit it for review by checking the checkbox in the popup window. They can then proceed by clicking the `Send For Review` button to finalize the submission.
 
 ![](\_images/ctk-send-for-review.png)
 
@@ -489,11 +491,11 @@ The partner can only generate a Draft Report after running `Compliance Collectio
 
 ## Partner Reports Dashboard
 
-When the user's with special CTK Admin role login into application, they can see the Partner Reports Dashboard. This dashboard serves as a central hub, providing a comprehensive oversight of partner reports.
+When users with the special CTK Admin role access the application, they are granted access to the Partner Reports Dashboard. This dashboard serves as a centralized hub, offering a comprehensive overview of partner reports.
 
 ![CTK Partner Report Dashboard](\_images/ctk-partnerReportsDashboard.png)
 
-Below are the possible activities as part of Partner Reports Tab of the Admin Dashboard.
+Below are the possible activities as a part of Partner Reports Tab of the Admin Dashboard.
 
 * Explore a comprehensive list of all reports that have been submitted.
 * Efficiently sort and examine reports based on their current status.
@@ -503,7 +505,7 @@ Below are the possible activities as part of Partner Reports Tab of the Admin Da
 
 ### View reports
 
-Upon logging into the compliance toolkit and navigating to the Partner Reports Dashboard, the admin will be presented with a default view showcasing reports submitted for review.
+Upon logging into the compliance toolkit and navigating to the Partner Reports Dashboard, the admin will be presented with a _default view_ showcasing reports submitted for review.
 
 The Partner Reports Dashboard will display the following attributes of a report:
 
@@ -517,7 +519,7 @@ The Partner Reports Dashboard will display the following attributes of a report:
 * Download or view the report document.
 * Access associated test runs and results.
 * Approve the report.
-* Reject the report. 
+* Reject the report.
 
 ![CTK Partner Report Dashboard](\_images/ctk-partnerReportsDashboard.png)
 
@@ -537,7 +539,7 @@ The filter option in the dashboard will filter based on the name of the project,
 
 ### Download reports
 
-When you click on the download icon, the report will be downloaded. Admins can then view the downloaded report and make decisions based on the information it contains. 
+When you click on the download icon, the report will be downloaded. Admins can then view the downloaded report and make decisions based on the information it contains.
 
 ![CTK Partner Report Dashboard](\_images/ctk-partnerReports-downloadReport.png)
 
@@ -555,20 +557,20 @@ After reviewing the downloaded report and verifying its content, the admin can c
 
 `Approve Report`: After reviewing the downloaded report, if it meets the criteria and is deemed satisfactory, the admin can proceed to click on the `Approve` button.
 
-  * After clicking the 'Approve' button, a popup will appear to confirm the approval action, after reviewing the information, and once satisfied, they can proceed by ticking the checkbox within the popup to finalize the approval.
+* After selecting the `Approve` button, a confirmation popup will be displayed to verify the approval action. Admins should review the information provided and, if satisfied, proceed by selecting the checkbox within the popup to finalize the approval.
 
 ![CTK Partner Report Dashboard](\_images/ctk-partnerReports-approvePopup.png)
 
-* After ticking the checkbox, the user will be presented with an option to add optional comments, if needed, after that the admin can proceed by clicking the 'Approve' button to officially approve the report.
+* After selecting the checkbox, the admin will be presented with an option to add optional comments, if needed, after that the admin can proceed by clicking the `Approve` button to officially approve the report.
 
 ![CTK Partner Report Dashboard](\_images/ctk-partnerReports-approve.png)
 
 `Reject Report`: After reviewing the downloaded report, if it does not meet the criteria, the admin can initiate the rejection process by clicking on the `Reject` button.
 
-* After clicking the 'Reject' button, a popup will appear to confirm the rejection action. After reviewing the information, and once satisfied with the decision, the admin can proceed by ticking the checkbox within the popup to finalize the rejection.
+* After clicking the `Reject` button, a popup will appear to confirm the rejection action. After reviewing the information, and once satisfied with the decision, the admin can proceed by checking the checkbox within the popup to finalize the rejection.
 
 ![CTK Partner Report Dashboard](\_images/ctk-partnerReports-rejectPopup.png)
 
-* After ticking the checkbox, the user will be presented with a comment box to add mandatory comments, specifying the reason for rejection. After providing the required comments, the admin can proceed by clicking the 'Reject' button to officially reject the report.
+* After selecting the checkbox, the admin will be presented with a comment box to add mandatory comments, specifying the reason for rejection. After providing the required comments, the admin can proceed by clicking the `Reject` button to officially reject the report.
 
 ![CTK Partner Report Dashboard](\_images/ctk-partnerReports-reject.png)

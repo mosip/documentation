@@ -1,16 +1,17 @@
 # Version 1.1.0
 
-**Release Name**: CTK 1.1.0 
+**Release Name**: CTK 1.1.0
 
 **Upgrade From**: CTK 1.0.0
 
 **Support**: Stable Release
 
-**Release Date**: 19 May, 2023
+**Release Date**: 19th May, 2023
 
 ## Overview
 
 The 1.1.0 version of CTK includes the two new features:
+
 1. Multiple Language support in CTK
 2. Android SBI testing
 
@@ -20,7 +21,6 @@ The 1.1.0 version of CTK includes the two new features:
 * While logging in, the partner can select a language from the dropdown.
 * Therafter, the application will be displayed in the selected language.
 * By default, CTK will support three languages- English, French and Arabic.
-
 
 **Android SBI testing**
 
@@ -96,6 +96,3 @@ Post installation, follow the setup steps available [here](setup-steps-1.1.0.md)
 * [Android CTK App user Guide](android-user-guide.md)
 * [QA Report](https://docs.mosip.io/compliance-tool-kit/versions/version-1.1.0/test-report-1.1.0)
 * [Videos](https://www.youtube.com/playlist?list=PLJH-POb\_55z8YYS\_qAk\_QNBQeiQ2VrtZD)
-
-
-

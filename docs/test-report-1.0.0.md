@@ -23,53 +23,25 @@ The Secure Biometric Interface (SBI) is used to interface with biometric devices
 
 The MOSIP’s Mock SBI has been tested for compliance with the specifications across 48 test cases. Test cases specific to quality and user interactions have been tested with real devices rather than mock.
 
-| **Scenarios**     | **Finger** | **Iris** | **Face** |
-| ----------------- | ---------- | -------- | -------- |
-| Total             | 17         | 18       | 13       |
-| Passed            | 17         | 18       | 13       |
-| Pending           | 0          | 0        | 0        |
-| Failed            | 0          | 0        | 0        |
-| **Test Rate (%)** | 100%       | 100%     | 100%     |
-| **Pass Rate (%)** | 100%       | 100%     | 100%     |
+<table data-header-hidden><thead><tr><th></th><th width="121"></th><th width="105"></th><th></th></tr></thead><tbody><tr><td><strong>Scenarios</strong></td><td><strong>Finger</strong></td><td><strong>Iris</strong></td><td><strong>Face</strong></td></tr><tr><td>Total</td><td>17</td><td>18</td><td>13</td></tr><tr><td>Passed</td><td>17</td><td>18</td><td>13</td></tr><tr><td>Pending</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Failed</td><td>0</td><td>0</td><td>0</td></tr><tr><td><strong>Test Rate (%)</strong></td><td>100%</td><td>100%</td><td>100%</td></tr><tr><td><strong>Pass Rate (%)</strong></td><td>100%</td><td>100%</td><td>100%</td></tr></tbody></table>
 
 #### For Registration Devices using MOSIP's mock SBI devices
 
 The MOSIP’s Mock SBI has been tested for compliance with the specifications across 65 test cases. Test cases specific to quality and user interactions have been tested with real devices rather than mock.
 
-| **Scenarios**     | **Finger** | **Iris** | **Face** |
-| ----------------- | ---------- | -------- | -------- |
-| Total             | 30         | 18       | 17       |
-| Passed            | 30         | 18       | 17       |
-| Pending           | 0          | 0        | 0        |
-| Failed            | 0          | 0        | 0        |
-| **Test Rate (%)** | 100%       | 100%     | 100%     |
-| **Pass Rate (%)** | 100%       | 100%     | 100%     |
+<table data-header-hidden><thead><tr><th width="259"></th><th width="122"></th><th width="103"></th><th></th></tr></thead><tbody><tr><td><strong>Scenarios</strong></td><td><strong>Finger</strong></td><td><strong>Iris</strong></td><td><strong>Face</strong></td></tr><tr><td>Total</td><td>30</td><td>18</td><td>17</td></tr><tr><td>Passed</td><td>30</td><td>18</td><td>17</td></tr><tr><td>Pending</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Failed</td><td>0</td><td>0</td><td>0</td></tr><tr><td><strong>Test Rate (%)</strong></td><td>100%</td><td>100%</td><td>100%</td></tr><tr><td><strong>Pass Rate (%)</strong></td><td>100%</td><td>100%</td><td>100%</td></tr></tbody></table>
 
 #### For Authentication Devices using MOSIP's real devices (only finger)
 
 The MOSIP’s real devices have been tested for compliance with the specification only for fingerprint and iris devices.
 
-| **Scenarios**     | **Finger** | **Iris** | **Face** |
-| ----------------- | ---------- | -------- | -------- |
-| Total             | 17         | 18       | 13       |
-| Passed            | 14         | 1        | 0        |
-| Pending           | 0          | 0        | 13       |
-| Failed            | 3          | 17       | 0        |
-| **Test Rate (%)** | 100%       | 100%     | 0%       |
-| **Pass Rate (%)** | 82%        | 6%       | 0%       |
+<table data-header-hidden><thead><tr><th width="259"></th><th width="128"></th><th width="102"></th><th></th></tr></thead><tbody><tr><td><strong>Scenarios</strong></td><td><strong>Finger</strong></td><td><strong>Iris</strong></td><td><strong>Face</strong></td></tr><tr><td>Total</td><td>17</td><td>18</td><td>13</td></tr><tr><td>Passed</td><td>14</td><td>1</td><td>0</td></tr><tr><td>Pending</td><td>0</td><td>0</td><td>13</td></tr><tr><td>Failed</td><td>3</td><td>17</td><td>0</td></tr><tr><td><strong>Test Rate (%)</strong></td><td>100%</td><td>100%</td><td>0%</td></tr><tr><td><strong>Pass Rate (%)</strong></td><td>82%</td><td>6%</td><td>0%</td></tr></tbody></table>
 
 #### For Registration Devices using MOSIP's real devices
 
 The MOSIP’s real SBI has been tested for compliance with the specifications for iris, face and fingerprint devices.
 
-| **Scenarios**     | **Finger** | **Iris** | **Face** |
-| ----------------- | ---------- | -------- | -------- |
-| Total             | 30         | 18       | 17       |
-| Passed            | 30         | 18       | 17       |
-| Pending           | 0          | 0        | 0        |
-| Failed            | 0          | 0        | 0        |
-| **Test Rate (%)** | 100%       | 100%     | 100%     |
-| **Pass Rate (%)** | 100%       | 100%     | 100%     |
+<table data-header-hidden><thead><tr><th width="261"></th><th width="125"></th><th width="110"></th><th></th></tr></thead><tbody><tr><td><strong>Scenarios</strong></td><td><strong>Finger</strong></td><td><strong>Iris</strong></td><td><strong>Face</strong></td></tr><tr><td>Total</td><td>30</td><td>18</td><td>17</td></tr><tr><td>Passed</td><td>30</td><td>18</td><td>17</td></tr><tr><td>Pending</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Failed</td><td>0</td><td>0</td><td>0</td></tr><tr><td><strong>Test Rate (%)</strong></td><td>100%</td><td>100%</td><td>100%</td></tr><tr><td><strong>Pass Rate (%)</strong></td><td>100%</td><td>100%</td><td>100%</td></tr></tbody></table>
 
 ### SDK Testing
 
@@ -77,15 +49,7 @@ The SDK implementation has been tested to support quality checks, 1:N matches, e
 
 **Out of scope**: Segmentation testing
 
-| **Scenarios**.    | **With Mock SDK** | **With Real SDK 1** | **With Real SDK 2** |
-| ----------------- | ----------------- | ------------------- | ------------------- |
-| Total             | 76                | 76                  | 76                  |
-| Passed            | 66                | 27                  | 51                  |
-| Pending           | 0                 | 0                   | 0                   |
-| Failed            | 1                 | 11                  | 16                  |
-| Not Applicable    | 9                 | 28                  | 9                   |
-| **Test Rate (%)** | 88%               | 50%                 | 88%                 |
-| **Pass Rate (%)** | 87%               | 36%                 | 67%                 |
+<table data-header-hidden><thead><tr><th width="176"></th><th width="156"></th><th width="158"></th><th></th></tr></thead><tbody><tr><td><strong>Scenarios</strong>.</td><td><strong>With Mock SDK</strong></td><td><strong>With Real SDK 1</strong></td><td><strong>With Real SDK 2</strong></td></tr><tr><td>Total</td><td>76</td><td>76</td><td>76</td></tr><tr><td>Passed</td><td>66</td><td>27</td><td>51</td></tr><tr><td>Pending</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Failed</td><td>1</td><td>11</td><td>16</td></tr><tr><td>Not Applicable</td><td>9</td><td>28</td><td>9</td></tr><tr><td><strong>Test Rate (%)</strong></td><td>88%</td><td>50%</td><td>88%</td></tr><tr><td><strong>Pass Rate (%)</strong></td><td>87%</td><td>36%</td><td>67%</td></tr></tbody></table>
 
 ## Sonar Report
 
