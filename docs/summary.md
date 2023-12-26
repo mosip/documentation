@@ -165,7 +165,7 @@
 * [📫 Sandbox Details](sandbox-details.md)
 * [🗳 Collab Environment Setup Guides](collab-getting-started-guide.md)
   * [Inji](collab-inji-setup-guide.md)
-  * [e-Signet](collab-esignet-setup-guide.md)
+  * [eSignet](collab-esignet-setup-guide.md)
   * [Pre-registration](collab-pre-registration-guide.md)
   * [Registration Client](collab-reg-client-setup-guide.md)
   * [Resident Portal](collab-resident-portal-guide.md)
