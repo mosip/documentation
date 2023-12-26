@@ -6,7 +6,7 @@
 
 **Support**: Stable Release
 
-**Release Date**: 26th December, 2023
+**Release Date**: 27th December, 2023
 
 ## Overview
 
@@ -17,7 +17,7 @@ The 1.3.0 version of CTK includes the following new features:
 * Incorporated Quality Assessment testcases using BQAT quality check on biometrics captured by SBI devices.
 * Additional Hash Validation testcases for SBI to ensure data integrity.
 * Introduced Data Share related testcases for ABIS.
-* Included support for Kibana Dashboards in CTK.
+* Included support for [Kibana Dashboards](ctk-dashboards-kibana.md) in CTK.
 
 ## Dependency
 
