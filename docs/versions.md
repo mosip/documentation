@@ -6,19 +6,19 @@
 
 * Name: CTK 1.3.0
 * Date: 26th December, 2023
-* [Release Notes](version-1.0.0.md)
+* [Release Notes](version-1.3.0.md)
 
 ### Version: 1.2.0
 
 * Name: CTK 1.2.0
 * Date: 14th July, 2023
-* [Release Notes](version-1.0.0.md)
+* [Release Notes](version-1.2.0.md)
 
 ### Version: 1.1.0
 
 * Name: CTK 1.0.0
 * Date: 19th February, 2023
-* [Release Notes](version-1.0.0.md)
+* [Release Notes](version-1.1.0.md)
 
 ### Version: 1.0.0
 
