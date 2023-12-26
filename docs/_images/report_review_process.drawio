@@ -1,0 +1,132 @@
+<mxfile host="app.diagrams.net" modified="2023-12-05T08:34:10.970Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="1Ddmfj463PmR23TMYwNJ" version="22.1.5" type="device">
+  <diagram name="Page-1" id="c7558073-3199-34d8-9f00-42111426c3f3">
+    <mxGraphModel dx="794" dy="424" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qdhjX7PnNyru0yQS5ILC-2" value="&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="40" width="830" height="610" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-110" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="1" source="25AaMbBkdScn_HasonkM-96" target="25AaMbBkdScn_HasonkM-97" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-96" value="Partner will create a new CTK Project" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=none;fontSize=10;shadow=1;gradientColor=none;fontFamily=Verdana;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="50" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-111" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="1" source="25AaMbBkdScn_HasonkM-97" target="25AaMbBkdScn_HasonkM-100" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-97" value="A Compliance Collection will be added by default for the project" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=none;fontSize=10;shadow=1;fontFamily=Verdana;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="50" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-108" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="1" source="25AaMbBkdScn_HasonkM-98" target="25AaMbBkdScn_HasonkM-100" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-98" value="Partner will run compliance collection&amp;nbsp;&lt;br style=&quot;font-size: 10px;&quot;&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=none;fontSize=10;shadow=1;fontFamily=Verdana;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="50" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-116" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Verdana;fontStyle=1;verticalAlign=middle;" parent="1" source="25AaMbBkdScn_HasonkM-99" target="25AaMbBkdScn_HasonkM-103" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="380" y="520" />
+              <mxPoint x="380" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-99" value="Submit report for Review?&lt;br style=&quot;font-size: 10px;&quot;&gt;" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=none;fontSize=10;rounded=1;shadow=1;fontFamily=Verdana;verticalAlign=middle;horizontal=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="200" y="467.5" width="130" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-109" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="1" source="25AaMbBkdScn_HasonkM-100" target="25AaMbBkdScn_HasonkM-104" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-100" value="Partner will generate draft report for this test run" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=none;fontSize=10;shadow=1;fontFamily=Verdana;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="50" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-101" value="" style="endArrow=classic;html=1;rounded=0;fontSize=12;" parent="1" edge="1" target="25AaMbBkdScn_HasonkM-99">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="519.5" as="sourcePoint" />
+            <mxPoint x="190" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-114" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="1" source="25AaMbBkdScn_HasonkM-103" target="25AaMbBkdScn_HasonkM-113" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-103" value="Report Data will be saved in DB with status as Review" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=none;fontSize=10;shadow=1;fontFamily=Verdana;verticalAlign=middle;horizontal=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="450" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-104" value="Report Data will be saved in DB with status as Draft" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=none;fontSize=10;shadow=1;fontFamily=Verdana;verticalAlign=middle;horizontal=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="50" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-105" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=10;fontFamily=Verdana;fontStyle=1;verticalAlign=middle;" parent="1" source="25AaMbBkdScn_HasonkM-99" target="25AaMbBkdScn_HasonkM-98" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="550" as="sourcePoint" />
+            <mxPoint x="150" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="265" y="600" />
+              <mxPoint x="150" y="600" />
+              <mxPoint x="20" y="600" />
+              <mxPoint x="20" y="430" />
+              <mxPoint x="20" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-106" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;No&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" parent="25AaMbBkdScn_HasonkM-105" vertex="1" connectable="0">
+          <mxGeometry x="0.0343" relative="1" as="geometry">
+            <mxPoint x="51" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-117" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="1" source="25AaMbBkdScn_HasonkM-113" target="25AaMbBkdScn_HasonkM-115" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-113" value="CTK Admin user will login and see all the reports with status Review in the Partner Reports Dashboard" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffe6cc;strokeColor=none;fontSize=10;rounded=1;shadow=1;fontFamily=Verdana;verticalAlign=middle;horizontal=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="353" y="330" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-120" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Verdana;fontStyle=1;verticalAlign=middle;" parent="1" source="25AaMbBkdScn_HasonkM-115" target="25AaMbBkdScn_HasonkM-119" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-121" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;fontFamily=Verdana;fontStyle=1;verticalAlign=middle;" parent="1" source="25AaMbBkdScn_HasonkM-115" target="25AaMbBkdScn_HasonkM-118" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-115" value="Approve Report" style="rhombus;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=none;fontSize=10;rounded=1;shadow=1;fontFamily=Verdana;verticalAlign=middle;horizontal=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="530" y="350" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-124" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="1" source="25AaMbBkdScn_HasonkM-118" target="25AaMbBkdScn_HasonkM-122" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-118" value="Report Data will be saved in DB with status as Approved" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=none;fontSize=10;shadow=1;fontFamily=Verdana;verticalAlign=middle;horizontal=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="510" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-123" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;" parent="1" source="25AaMbBkdScn_HasonkM-119" target="25AaMbBkdScn_HasonkM-122" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-119" value="Report Data will be saved in DB with status as Rejected" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=none;fontSize=10;shadow=1;fontFamily=Verdana;verticalAlign=middle;horizontal=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="660" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-122" value="Final Report with status as Approved / Rejected" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=none;fontSize=10;shadow=1;fontFamily=Verdana;verticalAlign=middle;horizontal=1;fontStyle=1" parent="1" vertex="1">
+          <mxGeometry x="660" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-125" value="Admin can review &lt;br style=&quot;font-size: 11px;&quot;&gt;the Test Run Details" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=11;fontFamily=Verdana;fontStyle=1;verticalAlign=middle;" parent="1" target="25AaMbBkdScn_HasonkM-113" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="360" as="sourcePoint" />
+            <mxPoint x="430" y="420" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="170" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="25AaMbBkdScn_HasonkM-126" value="Partner can download the Final Report from CTK" style="endArrow=none;html=1;rounded=0;entryX=0.583;entryY=0.011;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.017;exitY=0.389;exitDx=0;exitDy=0;exitPerimeter=0;fontSize=11;fontFamily=Verdana;fontStyle=1;verticalAlign=middle;" parent="1" source="25AaMbBkdScn_HasonkM-96" target="25AaMbBkdScn_HasonkM-122" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="150" as="sourcePoint" />
+            <mxPoint x="430" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="730" y="153" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qdhjX7PnNyru0yQS5ILC-3" value="&lt;h1&gt;Compliance Collection Report Review Process&lt;/h1&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="60" width="430" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
