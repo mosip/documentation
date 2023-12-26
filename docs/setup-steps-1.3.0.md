@@ -1,11 +1,11 @@
-# 1.2.0
+# 1.3.0
 
 ## Pre-requisites
 
 CTK should be deployed with the required dockers.
 
-* compliance-toolkit-service: 1.2.0
-* compliance-toolkit-ui: 1.2.0
+* compliance-toolkit-service: 1.3.0
+* compliance-toolkit-ui: 1.3.0
 
 To deploy Compliance Toolkit, we require the below mandatory services:
 
@@ -121,6 +121,21 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
       ![](_images/ctk-encryptionkey.png)
 
+6. For **ABIS3030** and **ABIS3031** test cases do the following.
+    * Ensure that latest `auth-adapter-1.2.1-SNAPSHOT` is being used for datashare and CTK.
+
+    * Update the below values in the `data-share-default.properties` file and restart `datashare`.
+
+        ```
+        auth.handle.ctk.flow=true
+        mosip.api.internal.toolkit.url=https://${mosip.api.internal.host}/v1/toolkit
+        mosip.compliance.toolkit.saveDataShareToken.url=${mosip.api.internal.toolkit.url}/saveDataShareToken
+        mosip.compliance.toolkit.invalidateDataShareToken.url=${mosip.api.internal.toolkit.url}/invalidateDataShareToken
+        mosip.compliance.toolkit.invalidateDataShareToken.testCaseId=ABIS3031
+        ```
+
+7. Ensure that `reporting` module is deployed from the `develop` branch. It is required for the **Kibana Dashboard**.
+
 ### Steps to load testdata, schemas in MINIO
 
 1\. Browse [mosip-compliance-toolkit](https://github.com/mosip-compliance-toolkit.git)
@@ -160,7 +175,7 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
 2\. Using keycloak/ register option in CTK UI, create a new user for compliance toolkit.
 
-3\. Make sure to add the email ID. Also, give the role `GLOBAL_ADMIN`.
+3\. Make sure to add the email ID. Also, give the role `CTK_ADMIN`.
 
 4\. Login to compliance toolkit in your environment from browser with the above Keycloak user.
 
