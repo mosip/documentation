@@ -12,6 +12,8 @@
     * [Test Report](test-report-1.0.0.md)
   * [Version 0.0.9](version-0.0.9.md)
     * [Test Report](test-report-0.0.9.md)
+* [CTK Dashboards in Kibana](ctk-dashboards-kibana.md)
+* [Hash Generation](hash-generation.md)
 * [User Guide](user-guide.md)
 * [Android App User Guide](android-user-guide.md)
 * [CTK Setup](how-to-guides/README.md)
