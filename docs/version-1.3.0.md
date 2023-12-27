@@ -6,7 +6,7 @@
 
 **Support**: Stable Release
 
-**Release Date**: 27th December, 2023 [Release in-progress]
+**Release Date**: Release in-progress
 
 ## Overview
 
