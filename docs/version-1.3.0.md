@@ -1,6 +1,6 @@
 # Version 1.3.0
 
-**Release Name**: CTK 1.3.0
+**Release Name**: CTK 1.3.0 [Release in-progress]
 
 **Upgrade From**: CTK 1.2.0
 
