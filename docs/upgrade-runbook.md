@@ -22,9 +22,9 @@ To set up the new environment and deploy the upgraded version of MOSIP, carefull
 - If there are additional attributes in the data share for manual adjudication, the manual adjudication system will ignore them and not fail.
 - The first global admin user login does not need to be handled during the upgrade.
 - Default resource allocation (CPU and memory) has been added to all the pods in version 1.2.0.1, so additional nodes may be required after the upgrade.
-- Out of scope for the migration:
+- Out of scope for migration:
     - Configuration of correction flow and related changes are not included in this migration.
-    - Anonymous profiles for existing data are handled in this upgrade.
+    - Anonymous profiles for existing data are not handled in this upgrade.
     - Support for the Lost RID/AID search feature for packets synced before the migration is out of scope.
  
   
