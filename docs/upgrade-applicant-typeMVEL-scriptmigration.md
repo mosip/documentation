@@ -1,4 +1,4 @@
-# Applicant MVEL type
+# Applicant MVEL type Script
 
 **Location**: [mosip-config](https://github.com/mosip/mosip-config) repository
 
