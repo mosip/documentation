@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Release Name**: 1.2.0.1 Beta4
+**Release Name**: 1.2.0.1 Beta4 [Release in-progress]
 
 **Release Version**: 1.2.0.1-B4
 
