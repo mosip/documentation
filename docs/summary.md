@@ -145,6 +145,8 @@
   * [MOSIP Branching Strategy](mosip-branching-strategy.md)
   * [Community Calendars](community/community-calendar.md)
 * [📖 Releases](releases.md)
+  * [1.2.0.1-B4 (Beta)](release/1.2.0.1/release-notes-1.2.0.1-b4.md)
+    * [Test Report](release/1.2.0.1/test-report-1.2.0.1-b4.md)
   * [Android Registration Client DP1](release-notes-android-reg-client-dp1.md)
   * [Resident Services DP1](release-notes-resident-portal-dp1.md)
   * [1.2.0.1-B3 (Beta)](release/1.2.0.1/release-notes-1.2.0.1-b3.md)
