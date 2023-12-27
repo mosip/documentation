@@ -161,6 +161,7 @@
     * [Security Test Report](release/1.2.0/security-test-report.md)
     * [Feature Health Report](release/1.2.0/feature-health-report.md)
 * [📋 Adopting LTS 1.2.0](adopting-lts-1.2.0.md)
+* [Upgrade Runbook](upgrade-runbook.md)
 * [📚 MOSIP Support Policy](support-policy.md)
 * [📫 Sandbox Details](sandbox-details.md)
 * [🗳 Collab Environment Setup Guides](collab-getting-started-guide.md)
