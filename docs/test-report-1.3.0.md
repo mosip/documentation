@@ -6,31 +6,21 @@ The scope of testing revolved around verifying the compliance of the product as 
 
 The Windows Compliance tool kit was tested with the below specifications:
 
-  *	**ABIS (Automated Biometric Identification System)** Specifications were tested with Fingerprint, Iris and Face modalities as per [MOSIP ABIS API](https://docs.mosip.io/1.2.0/biometrics/abis-api) specifications.
-
-  *	**Secure Biometric Interface (SBI)** with Compliance testcases collection and Quality Assessment testcases collection on below modalities 
-  
-       * Registration devices for Iris, Face and Fingerprint
-        
-       * Authentication devices for Iris, Face and Fingerprint
-      
-  * **Biometric SDK**
-   
-       * Quality Check
-        
-       * Match
-        
-       * Extraction
-        
-       * Conversion 
+* **ABIS (Automated Biometric Identification System)** Specifications were tested with Fingerprint, Iris and Face modalities as per [MOSIP ABIS API](https://docs.mosip.io/1.2.0/biometrics/abis-api) specifications.
+* **Secure Biometric Interface (SBI)** with Compliance testcases collection and Quality Assessment testcases collection on below modalities
+  * Registration devices for Iris, Face and Fingerprint
+  * Authentication devices for Iris, Face and Fingerprint
+* **Biometric SDK**
+  * Quality Check
+  * Match
+  * Extraction
+  * Conversion
 
 The Android Compliance tool kit app v1.3.0 was tested with the below specifications:
 
 * **Secure Biometric Interface (SBI)** with Compliance testcases collection and Quality Assessment testcases collection on below modalities
-
-    *	Registration devices for Iris, Face and Fingerprint
-  
-    *	Authentication devices for Iris, Face and Fingerprint
+  * Registration devices for Iris, Face and Fingerprint
+  * Authentication devices for Iris, Face and Fingerprint
 
 ## Test Execution Statistics
 
@@ -41,14 +31,14 @@ MOSIP interfaces with an Automated Biometric Identification System (ABIS) to per
 Test cases have been tested with MOSIP mock ABIS for compliance with the MOSIP specifications across 29 test cases.
 
 | **Scenarios**     | **Mock ABIS** |
-| ----------------- | ---------- | 
-| Total             | 28         | 
-| Passed            | 27         |
-| Pending           | 0          | 
-| Failed            | 0          | 
-| NA                | 1          |
-| **Test Rate (%)** | 100%       | 
-| **Pass Rate (%)** | 100%       | 
+| ----------------- | ------------- |
+| Total             | 28            |
+| Passed            | 27            |
+| Pending           | 0             |
+| Failed            | 0             |
+| NA                | 1             |
+| **Test Rate (%)** | 100%          |
+| **Pass Rate (%)** | 100%          |
 
 _Out of scope_: Real ABIS testing in CTK 1.3.0
 
@@ -76,7 +66,7 @@ The `Android CTK app v1.2.0` with `MOSIP Android Mock SBI` has been tested for c
 | **Scenarios**     | **Finger** | **Iris** | **Face** |
 | ----------------- | ---------- | -------- | -------- |
 | Total             | 47         | 24       | 43       |
-| Passed            | 47         | 24       | 43      |
+| Passed            | 47         | 24       | 43       |
 | Pending           | 0          | 0        | 0        |
 | Failed            | 0          | 0        | 0        |
 | **Test Rate (%)** | 100%       | 100%     | 100%     |
@@ -115,30 +105,29 @@ _Out of scope_: Real devices testing on Windows and android CTK v1.3.0.
 The SDK implementation has been tested to support quality check, match, extraction, and conversion of biometrics. Test cases have been tested with MOSIP mock SDK.
 
 | **Scenarios**     | **With Mock SDK** |
-| ----------------- | ---------- | 
-| Total             | 65         | 
-| Passed            | 65         |
-| Pending           | 0          | 
-| Failed            | 0          | 
-| **Test Rate (%)** | 100%       | 
-| **Pass Rate (%)** | 100%       | 
+| ----------------- | ----------------- |
+| Total             | 65                |
+| Passed            | 65                |
+| Pending           | 0                 |
+| Failed            | 0                 |
+| **Test Rate (%)** | 100%              |
+| **Pass Rate (%)** | 100%              |
 
 _Out of scope_: Segmentation testing and Real SDK testing.
 
-### Known Issues 
-
+### Known Issues
 
 * CTK-Keycloak login field names in Arabic are not appearing in RTL.
 * **Forgot Password** option is not working in CTK login page.
 * Error message should be user friendly in CTK sign-in page.
-*	Column name is showing as 'View report'
-*	Getting 500 error for endpoint `/v1/authmanager/authorize/invalidateToken` in development environment.
-  
+* Column name is showing as 'View report'
+* Getting 500 error for endpoint `/v1/authmanager/authorize/invalidateToken` in development environment.
+
 ### Docker version (required for Compliance Tool Kit)
 
 mosipqa/compliance-toolkit-service:1.3.0
 
-mosipqa/compliance-toolkit-ui:1.3.0 
+mosipqa/compliance-toolkit-ui:1.3.0
 
 mosipqa/postgres-init:1.2.0.1
 
@@ -146,11 +135,11 @@ mosipqa/postgres-init:1.2.0.1
 
 mosipqa/postgres-init:develop
 
-mosipid/config-server:1.1.2 
+mosipid/config-server:1.1.2
 
-mosipid/kernel-auditmanager-service:1.2.0.1-B1 
+mosipid/kernel-auditmanager-service:1.2.0.1-B1
 
-mosipid/kernel-auth-service:1.2.0.1-B2 
+mosipid/kernel-auth-service:1.2.0.1-B2
 
 mosipqa/authentication-service:1.2.0.1
 
@@ -172,13 +161,8 @@ mosipqa/minio-client-util:latest
 
 #### MOSIP - Compliance-toolkit-service
 
+<figure><img src=".gitbook/assets/ctk-sonar1.png" alt=""><figcaption></figcaption></figure>
 
 #### MOSIP - compliance-toolkit-ui
 
-
-
-
-
-
-
-
+<figure><img src=".gitbook/assets/ctk-sonar2.png" alt=""><figcaption></figcaption></figure>
