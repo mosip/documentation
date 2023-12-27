@@ -1,4 +1,4 @@
-# Admin Roles
+# Administration Roles
 
 Below is the list of admin roles:
 
