@@ -1,6 +1,6 @@
 # Upgrade Runbook
 
-MOSIP has recently launched a new version, 1.2.0.1. This release features an architectural upgrade and resolves several bugs. The QA run book provides comprehensive guidance for users to migrate from the current version of MOSIP (1.1.5.x) to the latest version (1.2.0.1). 
+MOSIP has recently launched a new version, 1.2.0.1-B4. This release features an architectural upgrade and resolves several bugs. The Runbook provides a comprehensive guidance for users to migrate from the current version of MOSIP (1.1.5.x) to the latest version (1.2.0.1). 
 
 To set up the new environment and deploy the upgraded version of MOSIP, carefully follow the procedures outlined below step-by-step.
 
@@ -190,9 +190,11 @@ Update the secrets in existing secrets in (conf-secrets namspace)[https://github
 
       * Change shareDomain's  value from `datashare-service` to `datashare.datashare` in the `policy_file_id` column for each partner.
 
-  * Check and rectify the partner name mismatch issue for certificate renewal. To know more, refer [here](upgrade-partner-organization-name.md). 
+  * Check and rectify the partner name mismatch issue for certificate renewal. To know more, refer [here](upgrade-partner-organization-name.md).
 
-  * Check mvel expression, id schema and document mappings and add the required applicant document mappings. Click [here](upgrade-partner-certificate-expired.md) to know more.
+  * Follow this [link](upgrade-partner-certificate-expired.md) to check on the validity of the partner certificate and for renewal/ extension if required.
+
+  * Check mvel expression, id schema and document mappings and add the required applicant document mappings. Click [here](upgrade-applicant-typeMVEL-scriptmigration.md) to know more.
 
 2. **Keycloak**: 
 
@@ -210,21 +212,21 @@ Update the secrets in existing secrets in (conf-secrets namspace)[https://github
 
 4. **ABIS**: 
 
-  * Stop and clear all the inprogres items as it will be reprocessed freshly    
+  * Stop and clear all the inprogress items as it will be reprocessed freshly.    
 
-  * Review the queue names and update if required (mosip-to-abis and abis-to-mosip)
+  * Review the queue names and update if required (mosip-to-abis and abis-to-mosip).
 
 5. **Manual adjudication system**: 
 
-   * Stop and clear all the inprogres items as it will be reprocessed freshly  
+   * Stop and clear all the inprogres. items as it will be reprocessed freshly.  
 
-   * Review the queue names and update if required (mosip-to-adjudication and adjudication-to-mosip) 
+   * Review the queue names and update if required (mosip-to-adjudication and adjudication-to-mosip) .
 
 6. **Manual verification system**: 
 
-   * Stop and clear all the inprogres items as it will be reprocessed freshly  
+   * Stop and clear all the inprogress items as it will be reprocessed freshly.  
 
-   * Review the queue names and update if required (mosip-to-verification and verification-to-mosip)
+   * Review the queue names and update if required (mosip-to-verification and verification-to-mosip).
      
 7. Run the data movement to the necessary three tables using the provided script. Afterward, run the migration script to re-encrypt the data and perform the movement of data from the bucket to the folder (This step is only necessary if the pre-registration has been upgraded from version 1.1.3.x). Please consult the provided [document](https://github.com/mosip/migration-utility/blob/develop/pre-reg-113-115/README.md) for detailed instructions on how to carry out the data movement process.
 
@@ -292,7 +294,7 @@ mosip.kernel.transliteration.franch-language-code=fra
 
 * Finally, restart all the services to take care of old data caching.
 
-### Activities after completing the first round of testing:
+### Activities after completing the first round of testing
 
 1. Configure the Registration Client upgrade at the server side. Please refer to this [link](upgrade-registration-client.md) for further instructions.
 
