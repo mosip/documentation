@@ -1,12 +1,12 @@
 # Version 1.3.0
 
-**Release Name**: CTK 1.3.0 [Release in-progress]
+**Release Name**: CTK 1.3.0 
 
 **Upgrade From**: CTK 1.2.0
 
 **Support**: Stable Release
 
-**Release Date**: 27th December, 2023
+**Release Date**: 27th December, 2023 [Release in-progress]
 
 ## Overview
 
