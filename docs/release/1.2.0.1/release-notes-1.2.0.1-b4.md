@@ -2,13 +2,13 @@
 
 ## Overview
 
-**Release Name**: 1.2.0.1 Beta4 [Release in-progress]
+**Release Name**: 1.2.0.1 Beta4 
 
 **Release Version**: 1.2.0.1-B4
 
 **Support**: Developer Release
 
-**Release Date**: December 2023
+**Release Date**: December 2023 [Release in-progress]
 
 The MOSIP **1.2.0.1 Beta4** release marks an upgrade from version 1.1.5.x to 1.2.0.1. This release primarily focuses on the migration of all services/modules to the V3 architecture. Additionally, it includes important bug fixes, enhancements to security, and improvements in performance.
 
