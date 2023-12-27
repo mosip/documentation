@@ -19,7 +19,16 @@ The 1.3.0 version of CTK includes the following new features:
 * Introduced Data Share related testcases for ABIS.
 * Included support for [Kibana Dashboards](ctk-dashboards-kibana.md) in CTK.
 
-## Dependency
+To know more about the Hash generation logic, read [Hash Generation](hash-generation.md).
+
+### Repository Released
+
+| Repositories                 | Tags Released             |
+| ---------------------------- | ------------------------- |
+| mosip-compliance-toolkit     | _Will be updated shortly_ |
+| mosip-compliance-toolkit-ui  | _Will be updated shortly_ |
+
+### Dependency
 
 * Artifactory: mosipid/artifactory-ref-impl: 1.2.0.1-B2
 * Audit manager: mosipid/kernel-auditmanager-service: 1.2.0.1-B1
@@ -35,10 +44,10 @@ The 1.3.0 version of CTK includes the following new features:
 
 Post installation, follow the setup steps available [here](setup-steps-1.3.0.md).
 
-## Documentation
+### Documentation
 
 * [Feature Documentation](./)
 * [Compliance Tool Kit User Guide](user-guide.md)
 * [Android CTK App user Guide](android-user-guide.md)
-* [QA Report](https://docs.mosip.io/compliance-tool-kit/versions/version-1.3.0/test-report-1.3.0)
+* [QA Report](test-report-1.3.0.md)
 * [Videos](https://www.youtube.com/playlist?list=PLJH-POb\_55z8YYS\_qAk\_QNBQeiQ2VrtZD)
