@@ -24,7 +24,7 @@
   * [Steps to make CTK publicly available](ctk-public-setup.md)
   * [Steps to set up SDK for testing](sdk-setup.md)
   * [Steps to set up ABIS for testing](abis-testing.md)
-* [Developer Guides](developer-guides/README.md)
+* [How-to-guides](developer-guides/README.md)
   * [How to add more test cases](test-cases.md)
   * [CTK Validators](ctk-validators.md)
   * [CTK Dashboards in Kibana](ctk-dashboards-kibana.md)
