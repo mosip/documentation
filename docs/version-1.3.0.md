@@ -16,7 +16,6 @@ The 1.3.0 version of CTK includes the following new features:
 * Added Admin login functionality to enable viewing Partner Reports, conducting Test Runs, and approving or rejecting submitted Reports.
 * Incorporated Quality Assessment testcases using BQAT quality check on biometrics captured by SBI devices.
 * Additional Hash Validation testcases for SBI to ensure data integrity.
-* Introduced Data Share related testcases for ABIS.
 * Included support for [Kibana Dashboards](ctk-dashboards-kibana.md) in CTK.
 
 To know more about the Hash generation logic, read [Hash Generation](hash-generation.md).
@@ -25,8 +24,10 @@ To know more about the Hash generation logic, read [Hash Generation](hash-genera
 
 | Repositories                 | Tags Released             |
 | ---------------------------- | ------------------------- |
-| mosip-compliance-toolkit     | _Will be updated shortly_ |
-| mosip-compliance-toolkit-ui  | _Will be updated shortly_ |
+| mosip-compliance-toolkit     | [v1.3.0](https://github.com/mosip/mosip-compliance-toolkit/tree/v1.3.0) |
+| mosip-compliance-toolkit-ui  | [v1.3.0](https://github.com/mosip/mosip-compliance-toolkit-ui/tree/v1.3.0) |
+| bio-utils|    [v1.2.0.1-B4](https://github.com/mosip/bio-utils/tree/v1.2.0.1-B4)  |
+| Imagedecoder| [v0.9.0](https://github.com/mosip/imagedecoder/tree/v0.9.0)|
 
 ### Dependency
 
