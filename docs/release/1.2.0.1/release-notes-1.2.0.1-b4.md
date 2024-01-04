@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Release Name**: 1.2.0.1 Beta4 
+**Release Name**: 1.2.0.1 Beta4
 
 **Release Version**: 1.2.0.1-B4
 
@@ -12,8 +12,7 @@
 
 The MOSIP **1.2.0.1 Beta4** release marks an upgrade from version 1.1.5.x to 1.2.0.1. This release primarily focuses on the migration of all services/modules to the V3 architecture. Additionally, it includes important bug fixes, enhancements to security, and improvements in performance.
 
-To know more about Upgrades, refer [Upgrade Runbook](https://docs.mosip.io/1.2.0/upgrade-runbook).
-
+To know more about Upgrades, refer [Upgrade Runbook](../../upgrade-runbook.md).
 
 ## Repository Released (WIP)
 
@@ -53,4 +52,3 @@ To read though the Test Reports, refer [here](https://docs.mosip.io/1.2.0/releas
 Deployment documentation and scripts have been enhanced and are compliant with V3 architecture.
 
 Developer documentation for all the repositories has been added for developers to set up in their local systems.
-
