@@ -32,6 +32,7 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 ### Configuration checks
 
 1. Ensure that in the `kernel-default.properties`, the value of `mosip-toolkit-client` and `mosip-toolkit-android-client` is set in `auth.server.admin.allowed.audience`. If this was not set by default, then set it and restart `kernel-auth-service` and `compliance-toolkit-service`.
+   
 2.  Ensure that in `compliance-toolkit-default.properties`, CORS is enabled to allow access to `mosip-toolkit-android-client`:
 
     ```
@@ -41,6 +42,7 @@ To deploy Compliance Toolkit, we require the below mandatory services:
     ```
 
     If this was not set by default, then set it and restart `compliance-toolkit-service`.
+    
 3.  Check if the roles given to `mosip-pms-client` match with any of the roles for the following config property: `mosip.role.keymanager.postverifycertificatetrust=XXX`
 
     This config property is available [here](https://github.com/mosip/mosip-config/blob/$%7BENV\_NAME%7D/kernel-default.properties).
@@ -50,12 +52,16 @@ To deploy Compliance Toolkit, we require the below mandatory services:
     mosip.role.keymanager.postverifycertificatetrust=`ZONAL_ADMIN`, `GLOBAL_ADMIN`, `PMS_ADMIN`, `PMS_USER`
 
     Then `mosip-pms-client` should have any of the above roles.
+    
 4. Check that `mosip-pms-client` has the role `REGISTRATION_PROCESSOR`, `PARTNER_ADMIN`, `PMS_ADMIN` in Key Cloak. If this was not set by default, then set it and restart `keymanager` and `compliance-toolkit-service`.
-5. From the CTK v 1.0.0 version onwards, we need to generate an encryption key for CTK.
+   
+5. It is also needed to generate an encryption key for CTK.
+   
    *   Create a new app id by directly inserting the below row.
 
        `INSERT INTO keymgr.key_policy_def(app_id, key_validity_duration, is_active,pre_expire_days, access_allowed, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes) VALUES ('COMPLIANCE_TOOLKIT', 1095, true, 60, 'NA', 'mosipadmin', '2022-11-28 09:00:40.822625', null, null, false, null);`
-   *   Using the auth manager swagger URL, get the client token.
+       
+   *   Using the auth manager swagger URL, obtain the client token.
 
        Swagger URL:
 
@@ -101,9 +107,11 @@ To deploy Compliance Toolkit, we require the below mandatory services:
        Request:
 
        ![](\_images/ctk-generateMasterkey.png)
+       
    *   Directly download the certificate via key manager swagger URL and `getCertificate` endpoint, with App Id as `COMPLIANCE_TOOLKIT` and Ref Id as `COMP-FIR`.
 
        ![](\_images/ctk-getCertificate.png)
+       
    *   This certificate is to be used by **SBI** devices as the encryption key.
 
        For Mock **MDS**, when running in **Auth** mode: update the below values in the `application.properties` file.
@@ -119,18 +127,8 @@ To deploy Compliance Toolkit, we require the below mandatory services:
        For real MDS/SBI, the vendors can download the new encryption key from the UI and test with the updated **SBI** which uses this encryption key.It can be downloaded for **Auth SBI** projects from UI.
 
        ![](\_images/ctk-encryptionkey.png)
-6. For **ABIS3030** and **ABIS3031** test cases do the following.
-   * Ensure that latest `auth-adapter-1.2.1-SNAPSHOT` is being used for datashare and CTK.
-   *   Update the below values in the `data-share-default.properties` file and restart `datashare`.
-
-       ```
-       auth.handle.ctk.flow=true
-       mosip.api.internal.toolkit.url=https://${mosip.api.internal.host}/v1/toolkit
-       mosip.compliance.toolkit.saveDataShareToken.url=${mosip.api.internal.toolkit.url}/saveDataShareToken
-       mosip.compliance.toolkit.invalidateDataShareToken.url=${mosip.api.internal.toolkit.url}/invalidateDataShareToken
-       mosip.compliance.toolkit.invalidateDataShareToken.testCaseId=ABIS3031
-       ```
-7. Ensure that `reporting` module is deployed from the `develop` branch. It is required for the **Kibana Dashboard**.
+       
+6. Ensure that `reporting` module is deployed from the `develop` branch. This is required for the **Kibana Dashboard**.
 
 ### Steps to load testdata, schemas in MINIO
 
