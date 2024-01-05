@@ -4,7 +4,7 @@ This document addresses how an error in Database upgrade script can be managed e
 
 ## Issue
 
-If the below error has been encountered while attempting to execute the upgrade script, this can be resolved by follwong the steps mentioned in this document.
+If the below error has been encountered while attempting to execute the upgrade script, this can be resolved by following the steps mentioned in this document.
 
 **Error message**
 
