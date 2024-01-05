@@ -1,4 +1,4 @@
-# Upgrade of Platform
+# Upgrade of Platform from version 1.1.5.5-P1 to 1.2.0.1
 
 This document outlines the necessary steps for upgrading the Platform from version 1.1.5.5-P1 to 1.2.0.1.
 
