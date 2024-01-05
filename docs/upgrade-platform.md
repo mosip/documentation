@@ -2,7 +2,7 @@
 
 This document outlines the necessary steps for upgrading the Platform from version 1.1.5.5-P1 to 1.2.0.1.
 
-### Upgrade of required external services  
+## Step 1: Upgrade of necessary external services  
 
 1. **Postgres**: 
 
@@ -54,7 +54,7 @@ This document outlines the necessary steps for upgrading the Platform from versi
      
 7. Run the data movement to the necessary three tables using the provided script. Afterward, run the migration script to re-encrypt the data and perform the movement of data from the bucket to the folder (This step is only necessary if the pre-registration has been upgraded from version 1.1.3.x). Please consult the provided [document](https://github.com/mosip/migration-utility/blob/develop/pre-reg-113-115/README.md) for detailed instructions on how to carry out the data movement process.
 
-### Property migration  
+## Step 2: Migration of Properties
 
 * Refer this [document](https://github.com/mosip/mosip-infra/blob/release-1.2.0.1/deployment/v3/utils/prop_migrator/README.md) to run the property migration script.
 
@@ -88,7 +88,7 @@ mosip.kernel.transliteration.franch-language-code=fra
 
 * Please ensure that the `mosip.regproc.packet.classifier.tagging.agegroup.ranges` property is aligned with the camel route.xml file.
 
-### MOSIP services upgrade
+## Step 3: Upgrade of MOSIP 
 
 * To begin, set up the Configuration server.
 
@@ -102,7 +102,7 @@ mosip.kernel.transliteration.franch-language-code=fra
 
 **Note**: Disable the `masterdata loader` and `regproc-reprocessor`.
 
-### Activities once all the upgraded services are operational
+## Step 4: Execution of activities once all upgraded services are operational 
 
 * To resend the partner and policy details to IDA, please run the PMS utility job once. You can find the steps to run the job [here](https://github.com/mosip/migration-utility/blob/develop/pms-115-120/README.md).
 
@@ -118,7 +118,7 @@ mosip.kernel.transliteration.franch-language-code=fra
 
 * Finally, restart all the services to take care of old data caching.
 
-### Activities after completing the first round of testing
+## Step 5: Carrying out activities after completion of initial round of testing
 
 1. Configure the Registration Client upgrade at the server side. Please refer to this [link](upgrade-registration-client.md) for further instructions.
 
