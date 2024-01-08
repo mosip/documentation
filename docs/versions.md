@@ -1,4 +1,4 @@
-# Versions
+# Releases
 
 ## Latest Release
 
