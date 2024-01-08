@@ -168,7 +168,7 @@
     * [Upgrade of Platform from version 1.1.5.5-P1 to 1.2.0.1](upgrade-platform.md)
       * [Managing Duplicate Thumbprint entries in Keymanager](upgrade-DB-script-error.md)
       * [Administration Roles](upgrade-admin-services-roles-guide.md)
-    * [Applicant MVEL type](upgrade-applicant-typeMVEL-scriptmigration.md)
+      * [Applicant MVEL type](upgrade-applicant-typeMVEL-scriptmigration.md)
       * [Registration Processor: Camel Route changes](upgrade-camel-route-changes.md)
       * [Changes in Role Management with respect to Client IDs](upgrade-changes-in-role-management.md)
       * [Handling case insensitive duplicates in the user\_details table](upgrade-handling-case-insensitive-duplicates.md)
