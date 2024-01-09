@@ -1,4 +1,6 @@
-# Upgrade of Deployment Architecture from V2 to V3
+# Deployment Architecture Upgrade
+
+This document outlines the steps required for migrating the deployment architecture from V2 to V3.
 
 ## Step 1: New environment setup with V3 Architecture 
 
