@@ -174,7 +174,7 @@
       * [Changes in Role Management based on Client IDs](upgrade-changes-in-role-management.md)
       * [Handling Case Insensitive Duplicated User Details](upgrade-handling-case-insensitive-duplicates.md)
       * [Managing Unequal Certificates](upgrade-handling-unequal-certificates.md)
-      * [Update Mapping file in Configuration](upgrade-identity-json-file.md)
+      * [Update Identity Mapping file in Configuration](upgrade-identity-json-file.md)
       * [New Datashare Properties](upgrade-new-datashare-properties.md)
       * [Handling Non-Recoverable Packets](upgrade-non-recoverable-packets.md)
       * [Partners' Certificate Expired](upgrade-partner-certificate-expired.md)
