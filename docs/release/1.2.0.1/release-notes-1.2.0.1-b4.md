@@ -16,11 +16,12 @@ To know more about Upgrades, refer [Upgrade Runbook](../../upgrade-runbook.md).
 
 ## Repository Released (WIP)
 
-| **Repositories**            | **Tags Released**                                                                        |
-| --------------------------- | ---------------------------------------------------------------------------------------- |
-| bio-utils                   | [v1.2.0.1-B3](https://github.com/mosip/bio-utils/tree/v1.2.0.1-B3)                       |
-| commons                     | [v1.2.0.1-B2](https://github.com/mosip/commons/tree/v1.2.0.1-B2)                         |                 | mosip-openid-bridge         | [v.1.2.0.1-B3](https://github.com/mosip/mosip-openid-bridge/tree/v1.2.0.1-B3)            |
-| biosdk-client               | [v.1.2.0.1-B3](https://github.com/mosip/biosdk-client/tree/v1.2.0.1-B3)                  |                 
+| **Repositories** | **Tags Released**                                                       |
+| ---------------- | ----------------------------------------------------------------------- |
+| bio-utils        | [v1.2.0.1-B3](https://github.com/mosip/bio-utils/tree/v1.2.0.1-B3)      |
+| commons          | [v1.2.0.1-B2](https://github.com/mosip/commons/tree/v1.2.0.1-B2)        |
+| biosdk-client    | [v.1.2.0.1-B3](https://github.com/mosip/biosdk-client/tree/v1.2.0.1-B3) |
+| test             |                                                                         |
 
 ## Documentation
 
