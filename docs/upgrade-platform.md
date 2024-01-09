@@ -135,3 +135,13 @@ mosip.kernel.transliteration.franch-language-code=fra
 7. Manually remove the "mosip_regdevice" and "mosip_authdevice" databases, as they have been moved to "mosip_pms".
 
 8. Delete all tables ending with "<table_name>_to_be_deleted" and "<table_name>_migr_bkp".
+
+
+### Optional Steps
+
+1. Ensure that the datashare property is properly configured in the abis policy for the domain. Please refer to this [link](upgrade-new-datashare-properties.md) for more detailed information.
+
+2. Remove any unnecessary roles for clients and users.
+
+3. When the admin portal becomes accessible, the admin user should generate the master keys that have been recently added to the `key_policy_def` table. This can be done using the admin UI master key generation page (Keymanager) for the `ADMIN_SERVICES` and `RESIDENT` roles. Only proceed with this step if the corresponding entries are not already available in the `key_alias` table of keymanager. For more detailed instructions, please consult the provided [document](https://docs.mosip.io/1.2.0/modules/administration/admin-portal-user-guide#generatemasterkey).
+
