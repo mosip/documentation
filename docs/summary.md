@@ -169,7 +169,7 @@
     * [Additional Information](upgrade-additional-info.md)
       * [Managing Duplicate Thumbprint entries in Keymanager](upgrade-DB-script-error.md)
       * [Administration Roles](upgrade-admin-services-roles-guide.md)
-      * [Applicant MVEL type](upgrade-applicant-typeMVEL-scriptmigration.md)
+      * [Applicant MVEL type script](upgrade-applicant-typeMVEL-scriptmigration.md)
       * [Registration Processor: Camel Route changes](upgrade-camel-route-changes.md)
       * [Changes in Role Management with respect to Client IDs](upgrade-changes-in-role-management.md)
       * [Handling case insensitive duplicates in the user\_details table](upgrade-handling-case-insensitive-duplicates.md)
