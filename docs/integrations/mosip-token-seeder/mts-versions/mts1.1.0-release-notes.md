@@ -10,8 +10,6 @@
 
 ### Overview
 
-
-
 ### Features covered
 
 * Delivery type: Callback
@@ -20,7 +18,7 @@
 * Processes records in millions
 * Process multiple requests simultaneously
 * Auth request data expiry\
-  &#x20;
+
 
 ### Compatibility
 
@@ -30,8 +28,6 @@ MTS 1.0.0 is compatible with following versions of MOSIP IDA:
 * MOSIP v1.2.0.x
 
 ### Repositories released
-
-
 
 ### Documentation (WIP)
 
