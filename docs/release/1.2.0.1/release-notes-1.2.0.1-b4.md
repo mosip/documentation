@@ -8,13 +8,13 @@
 
 **Support**: Developer Release
 
-**Release Date**: Release in-progress
+**Release Date**: 10th January, 2023
 
 The MOSIP **1.2.0.1 Beta4** release marks an upgrade from version 1.1.5.x to 1.2.0.1. This release primarily focuses on the migration of all services/modules to the V3 architecture. Additionally, it includes important bug fixes, enhancements to security, and improvements in performance.
 
 To know more about Upgrades, refer [Upgrade Runbook](../../upgrade-runbook.md).
 
-## Repository Released (WIP)
+## Repository Released
 
 | **Repositories**            | **Tags Released**                                                                    |
 | --------------------------- | ------------------------------------------------------------------------------------ |
@@ -38,7 +38,19 @@ To know more about Upgrades, refer [Upgrade Runbook](../../upgrade-runbook.md).
 | print                       | [v1.2.0.1-B2](https://github.com/mosip/print/tree/v1.2.0.1-B2)                       |
 | websub                      | [1.2.0.1-B2](https://github.com/mosip/websub/tree/v1.2.0.1-B2)                       |
 | durian                      | [v1.2.0.1-B2](https://github.com/mosip/durian/tree/v1.2.0.1-B2)                      |
-|                             |                                                                                      |
+| mosip-config                | [v1.2.0.1-B4](https://github.com/mosip/mosip-config/tree/v1.2.0.1-B4)                |
+| mosip-mock-services         | [v1.2.0.1-B3](https://github.com/mosip/mosip-mock-services/tree/v1.2.0.1-B3)         |
+| migration-utility           | [v1.2.0.1-B2](https://github.com/mosip/migration-utility/tree/v1.2.0.1-B2)           |
+| mosip-functional-tests      | [v1.2.0.1-B3](https://github.com/mosip/mosip-functional-tests/tree/v1.2.0.1-B3)      |
+| converters                  | [v1.2.0.1-B2](https://github.com/mosip/converters/tree/v1.2.0.1-B2)                  |
+| keycloak                    | [v1.2.0.1-B3](https://github.com/mosip/keycloak/tree/v1.2.0.1-B3)                    |
+| reporting                   | [v1.2.0.1-B2](https://github.com/mosip/reporting/tree/v1.2.0.1-B2)                   |
+| mosip-ref-impl              | [v1.2.0.1-B3](https://github.com/mosip/mosip-ref-impl/tree/v1.2.0.1-B3)              |
+| artifactory-ref-impl        | [V1.2.0.1-B7](https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.1-B7)        |
+| mosip/mock-smtp-sms         | [v0.0.2](https://github.com/mosip/mock-smtp-sms/tree/v0.0.2)                         |
+| mosip-helm                  | [v1.2.0.1-B4](https://github.com/mosip/mosip-helm/tree/v1.2.0.1-B4)                  |
+| mosip-infra                 | [v1.2.0.1-B4](https://github.com/mosip/mosip-infra/tree/v1.2.0.1-B4)                 |
+| K8s-infra                   | [v1.2.0.1-B4](https://github.com/mosip/k8s-infra/tree/v1.2.0.1-B4)                   |
 
 ## Documentation
 
