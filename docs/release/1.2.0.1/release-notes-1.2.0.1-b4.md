@@ -16,12 +16,29 @@ To know more about Upgrades, refer [Upgrade Runbook](../../upgrade-runbook.md).
 
 ## Repository Released (WIP)
 
-| **Repositories** | **Tags Released**                                                       |
-| ---------------- | ----------------------------------------------------------------------- |
-| bio-utils        | [v1.2.0.1-B3](https://github.com/mosip/bio-utils/tree/v1.2.0.1-B3)      |
-| commons          | [v1.2.0.1-B2](https://github.com/mosip/commons/tree/v1.2.0.1-B2)        |
-| biosdk-client    | [v.1.2.0.1-B3](https://github.com/mosip/biosdk-client/tree/v1.2.0.1-B3) |
-| test             |                                                                         |
+| **Repositories**            | **Tags Released**                                                                    |
+| --------------------------- | ------------------------------------------------------------------------------------ |
+| bio-utils                   | [v1.2.0.1-B3](https://github.com/mosip/bio-utils/tree/v1.2.0.1-B3)                   |
+| commons                     | [v1.2.0.1-B2](https://github.com/mosip/commons/tree/v1.2.0.1-B2)                     |
+| mosip-openid-bridge         | [v.1.2.0.1-B3](https://github.com/mosip/mosip-openid-bridge/tree/v1.2.0.1-B3)        |
+| biosdk-client               | [v.1.2.0.1-B3](https://github.com/mosip/biosdk-client/tree/v1.2.0.1-B3)              |
+| biosdk-services             | [v1.2.0.1-B3](https://github.com/mosip/biosdk-services/tree/v1.2.0.1-B3)             |
+| audit-manager               | [v1.2.0.1-B2](https://github.com/mosip/audit-manager/tree/v1.2.0.1-B2)               |
+| keymanager                  | [v1.2.0.1-B3](https://github.com/mosip/keymanager/tree/v1.2.0.1-B3)                  |
+| khazana                     | [v1.2.0.1-B2](https://github.com/mosip/khazana/tree/v1.2.0.1-B2)                     |
+| packet-manager              | [v1.2.0.1-B2](https://github.com/mosip/packet-manager/tree/v1.2.0.1-B2)              |
+| admin-services              | [v1.2.0.1-B2](https://github.com/mosip/admin-services/tree/v1.2.0.1-B2)              |
+| id-repository               | [v1.2.0.1-B2](https://github.com/mosip/id-repository/tree/v1.2.0.1-B2)               |
+| pre-registration            | [v1.2.0.1-B2](https://github.com/mosip/pre-registration/tree/v1.2.0.1-B2)            |
+| id-authentication           | [v1.2.0.1-B5](https://github.com/mosip/id-authentication/tree/v1.2.0.1-B5)           |
+| registration                | [v1.2.0.1-B3](https://github.com/mosip/registration/tree/v1.2.0.1-B3)                |
+| resident-services           | [v1.2.0.1-B3](https://github.com/mosip/resident-services/tree/v1.2.0.1-B3)           |
+| registration-client         | [v1.2.0.1-B2](https://github.com/mosip/registration-client/tree/v1.2.0.1-B2)         |
+| partner-management-services | [v1.2.0.1-B4](https://github.com/mosip/partner-management-services/tree/v1.2.0.1-B4) |
+| print                       | [v1.2.0.1-B2](https://github.com/mosip/print/tree/v1.2.0.1-B2)                       |
+| websub                      | [1.2.0.1-B2](https://github.com/mosip/websub/tree/v1.2.0.1-B2)                       |
+| durian                      | [v1.2.0.1-B2](https://github.com/mosip/durian/tree/v1.2.0.1-B2)                      |
+|                             |                                                                                      |
 
 ## Documentation
 
