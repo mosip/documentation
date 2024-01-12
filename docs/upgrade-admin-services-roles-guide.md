@@ -1,4 +1,4 @@
-# Administration Roles
+# Adapting Changes in Administration Roles
 
 Below is the list of admin roles:
 
@@ -24,11 +24,11 @@ Below is the list of admin roles:
 
 Here:
 
-Green-colored represent persisted roles.
+<mark style="color:green;">**Green**</mark>- colored represent persisted roles.
 
-Blue-colored cells represent newly added roles.
+<mark style="color:blue;">**Blue**</mark>- colored cells represent newly added roles.
 
-Red-colored cells represent removed roles.
+<mark style="color:red;">**Red**</mark>- colored cells represent removed roles.
 
 **How to adjust the role accessibilities for existing users after upgrading to 1.2.0.1-x from 1.1.5.5-P1?**
 
