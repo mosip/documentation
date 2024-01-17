@@ -24,4 +24,87 @@
 
 ### Partner Profile Configuration
 
+<p>MOSIP has introduced a new partner profile for the Credential Requestor Stage. The partner profiles are maintained in the [https://github.com/mosip/mosip-config/blob/develop-v3/registration-processor-credential-partners.json] (https://github.com/mosip/mosip-config/blob/develop-v3/registration-processor-credential-partners.json) file.</p>
+
+### Sample Partner Profile:
+
+
+   <code> jsonCopy code{
+  "partners": [
+    {
+      "id": "digitalcardPartner",
+      "partnerId": "mpartner-default-digitalcard",
+      "credentialType": "PDFCard",
+      "template": "RPR_UIN_CARD_TEMPLATE",
+      "appIdBasedCredentialIdSuffix": ".pdf",
+      "process": null,
+      "metaInfoFields": null
+    },
+    {
+      "id": "printPartner",
+      "partnerId": "mpartner-default-print",
+      "credentialType": "euin",
+      "template": "RPR_UIN_CARD_TEMPLATE",
+      "appIdBasedCredentialIdSuffix": null,
+      "process": null,
+      "metaInfoFields": null
+    },
+    {
+      "id": "opencrvsPartner",
+	  "partnerId": "opencrvs-partner",
+      "type": "opencrvs",
+      "template": "RPR_UIN_CARD_TEMPLATE",
+      "process": ["OPENCRVS_NEW"],
+      "metaInfoFields": ["opencrvsBRN"]
+    }
+  ]
+} </code>
+
+
+### <ins>Explanation of Fields:</ins>
+
+<ul><li><code>id:</code> Logical unique identifier.</li>
+  
+<li><code>partnerId:</code> Partner identifier configured in MOSIP</li>
+
+<li><code> credentialType:</code>Type of credential configured in MOSIP.</li>
+
+<li><code>template:</code> Template used for generating the credential.</li>
+
+<li><code>appIdBasedCredentialIdSuffix:</code> Applicable for special conditions where the credential ID is the application ID itself, with an optional suffix (e.g., <code> .pdf </code>). This is applicable for digital card credentials as of now.</li> 
+
+  <li><code> process:</code> If applicable for a particular process. If applicable for all processes, it can be left as <code>null </code>. </li>
+  
+  <li><code>metaInfoFields: </code> Meta information fields to be sent as additional information while generating the credential.</li>
+</ul>
+
+## <ins>Configuration Changes </ins>
+
+<p>Once the partner profile is configured, the System Integrator (SI) needs to make changes to the following configurations:</p>
+<ul><li><code>mosip.registration.processor.credential.partner-profiles:</code> Specify the file name for the partner profiles. By default its → <code> registration-processor-credential-partners.json </code>. If a country wants to change the file name only then this configuration need to be updated otherwise use default configuration.</li>
+  
+<li><code>mosip.registration.processor.credential.default.partner-ids:</code> Specify default partner IDs for which credentials will be created automatically.</li>
+
+<li><code>mosip.registration.processor.credential.conditional.partner-id-map:</code> Define conditions for conditional partners. Credentials for these partners will be requested only if the conditions are met. Use MVEL expressions for conditions.</li>
+
+<li><code>mosip.registration.processor.credential.conditional.no-match-partner-ids:</code> Specify a partner ID to be used when no conditions are met for conditional partners.</li>
+</ul>
+
+### <ins>Configuration File Locations </ins>
+
+<ol>
+  <li><b>Credential Requestor Stage Configuration:</b>
+  <ul>
+    <li>File: [https://github.com/mosip/mosip-config/blob/develop1-v3/registration-processor-default.properties#L479] (https://github.com/mosip/mosip-config/blob/develop1-v3/registration-processor-default.properties#L479)</li>
+  </ul></li>
+
+  <li><b>Partner Profile Configuration:</b><ul><li>File: [https://github.com/mosip/mosip-config/blob/develop1-v3/registration-processor-credential-partners.json] (https://github.com/mosip/mosip-config/blob/develop1-v3/registration-processor-credential-partners.json) </li></ul>
+  </li>
+</ol>
+
+### Conclusion
+
+<p>The Credential Requestor Stage configuration is an essential part of MOSIP's functionality, enabling seamless communication with partners and ensuring the secure exchange of information post-UIN generation.</p>
+
+<p><b><ins>Notes:</ins></b> Ensure that configured IDs are logically unique and consistent across future configurations.</p>
 
