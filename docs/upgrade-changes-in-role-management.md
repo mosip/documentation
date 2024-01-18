@@ -1,4 +1,4 @@
-# Changes in Role Management with respect to Client IDs
+# Changes in Role Management based on Client IDs
 
 ## Partner Management Services
 
@@ -46,9 +46,11 @@ In version 1.1.5.x, we utilized the 'mosip-prereg-client' for Pre-Registration. 
 
 **Service account roles for Pre-Registration:**
 
-| mosip-prereg-client in 1.1.5.x                                                                                                                             | mosip-prereg-client in 1.2.0.1                                                                                             |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| <ul><li>INDIVIDUAL</li><li>offline_access</li><li>PRE_REGISTRATION_ADMIN</li><li>PREREG</li><li>REGISTRATION_PROCESSOR</li><li>uma_authorization</li></ul> | <ul><li>default_roles_mosip</li><li>PRE_REGISTRATION_ADMIN</li><li>PREREG</li><li>REGISTRATION_PROCESSOR</li></ul><p> </p> |
+| mosip-prereg-client in 1.1.5.x                                                                                                                             | mosip-prereg-client in 1.2.0.1                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| <ul><li>INDIVIDUAL</li><li>offline_access</li><li>PRE_REGISTRATION_ADMIN</li><li>PREREG</li><li>REGISTRATION_PROCESSOR</li><li>uma_authorization</li></ul> | <ul><li>default_roles_mosip</li><li>PRE_REGISTRATION_ADMIN</li><li>PREREG</li><li>REGISTRATION_PROCESSOR</li></ul> |
+
+**Note**: Prior to proceeding with the upgrade, please ensure that the `INDIVIDUAL` role has been removed.
 
 **Client scopes are the same for mosip-prereg-client in 1.2.0.1 & 1.1.5.1**
 
@@ -63,19 +65,19 @@ In the previous version 1.1.5.x, the `mosip-ida-client` module was responsible f
 
 **Service account roles for id-authentication:**
 
-<table><thead><tr><th width="269">mosip-ida-client in (1.1.5.x)</th><th>mpartner-default-auth (1.2.0.1)</th></tr></thead><tbody><tr><td><p> </p><ul><li>AUTH</li><li>AUTH_PARTNER</li><li>ID_AUTHENTICATION</li><li>offline_access</li><li>uma_authorization</li></ul></td><td><ul><li>CREDENTIAL_REQUEST</li><li>default_roles_mosip</li><li>ID_AUTHENTICATION</li><li>offline_access</li><li>PUBLISH_ANONYMOUS_PROFILE_GENERAL</li><li>PUBLISH_AUTH_TYPE_STATUS_UPDATE_ACK_GENERAL</li><li>PUBLISH_AUTHENTICATION_TRANSACTION_STATUS_GENERAL</li><li>PUBLISH_CREDENTIAL_STATUS_UPDATE_GENERAL</li><li>PUBLISH_IDA_FRAUD_ANALYTICS_GENERAL</li><li>SUBSCRIBE_ACTIVATE_ID_INDIVIDUAL</li><li>SUBSCRIBE_APIKEY _APPROVED_GENERAL</li><li>SUBSCRIBE_APIKEY _UPDATED _GENERAL</li><li>SUBSCRIBE_AUTH_TYPE_STATUS_UPDATE_ACK_GENERAL</li><li>SUBSCRIBE_AUTH_TYPE_STATUS_UPDATE_INDIVIDUAL</li><li>SUBSCRIBE_CA_CERTIFICATE_UPLOADED_GENERAL</li><li>SUBSCRIBE_CREDENTIAL_ISSUED_INDIVIDUAL</li><li>SUBSCRIBE_DEACTIVATE_ID_INDIVIDUAL</li><li>SUBSCRIBE_MASTERDATA_IDAUTHENTICATION_TEMPLATES_GENERAL</li><li>SUBSCRIBE_MASTERDATA_TITLES_GENERAL</li><li>SUBSCRIBE_MISP_LICENSE_GENERATED_GENERAL</li><li>SUBSCRIBE_MISP_LICENSE_UPDATED_GENERAL</li><li>SUBSCRIBE_MOSIP_HOTLIST_GENERAL</li><li>SUBSCRIBE_OIDC_CLIENT_CREATED_GENERAL</li><li>SUBSCRIBE_OIDC_CLIENT_UPDATED_GENERAL</li><li>SUBSCRIBE_PARTNER_UPDATED_GENERAL</li><li>SUBSCRIBE_POLICY _UPDATED_GENERAL</li><li>SUBSCRIBE_REMOVE _ID_INDIVIDUAL</li><li>uma_authorization</li></ul><p> </p></td></tr></tbody></table>
+<table><thead><tr><th width="269">mosip-ida-client in (1.1.5.x)</th><th>mpartner-default-auth (1.2.0.1)</th></tr></thead><tbody><tr><td><ul><li>AUTH</li><li>AUTH_PARTNER</li><li>ID_AUTHENTICATION</li><li>offline_access</li><li>uma_authorization</li></ul></td><td><ul><li>CREDENTIAL_REQUEST</li><li>default_roles_mosip</li><li>ID_AUTHENTICATION</li><li>offline_access</li><li>PUBLISH_ANONYMOUS_PROFILE_GENERAL</li><li>PUBLISH_AUTH_TYPE_STATUS_UPDATE_ACK_GENERAL</li><li>PUBLISH_AUTHENTICATION_TRANSACTION_STATUS_GENERAL</li><li>PUBLISH_CREDENTIAL_STATUS_UPDATE_GENERAL</li><li>PUBLISH_IDA_FRAUD_ANALYTICS_GENERAL</li><li>SUBSCRIBE_ACTIVATE_ID_INDIVIDUAL</li><li>SUBSCRIBE_APIKEY _APPROVED_GENERAL</li><li>SUBSCRIBE_APIKEY _UPDATED _GENERAL</li><li>SUBSCRIBE_AUTH_TYPE_STATUS_UPDATE_ACK_GENERAL</li><li>SUBSCRIBE_AUTH_TYPE_STATUS_UPDATE_INDIVIDUAL</li><li>SUBSCRIBE_CA_CERTIFICATE_UPLOADED_GENERAL</li><li>SUBSCRIBE_CREDENTIAL_ISSUED_INDIVIDUAL</li><li>SUBSCRIBE_DEACTIVATE_ID_INDIVIDUAL</li><li>SUBSCRIBE_MASTERDATA_IDAUTHENTICATION_TEMPLATES_GENERAL</li><li>SUBSCRIBE_MASTERDATA_TITLES_GENERAL</li><li>SUBSCRIBE_MISP_LICENSE_GENERATED_GENERAL</li><li>SUBSCRIBE_MISP_LICENSE_UPDATED_GENERAL</li><li>SUBSCRIBE_MOSIP_HOTLIST_GENERAL</li><li>SUBSCRIBE_OIDC_CLIENT_CREATED_GENERAL</li><li>SUBSCRIBE_OIDC_CLIENT_UPDATED_GENERAL</li><li>SUBSCRIBE_PARTNER_UPDATED_GENERAL</li><li>SUBSCRIBE_POLICY _UPDATED_GENERAL</li><li>SUBSCRIBE_REMOVE _ID_INDIVIDUAL</li><li>uma_authorization</li></ul></td></tr></tbody></table>
 
 **Client Scopes for id-authentication:**
 
-| mosip-ida-client (1.1.5.x)                                                        | mpartner-default-auth (1.2.0.1)                                                                                                  |
-| --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| <ul><li>email</li><li>profile</li><li>roles</li><li>web-origins</li></ul><p> </p> | <ul><li>add_oidc_client </li><li>email </li><li>profile</li><li>roles </li><li>update_oidc_client </li><li>web-origins</li></ul> |
+| mosip-ida-client (1.1.5.x)                                                | mpartner-default-auth (1.2.0.1)                                                                                              |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>email</li><li>profile</li><li>roles</li><li>web-origins</li></ul> | <ul><li>add_oidc_client</li><li>email</li><li>profile</li><li>roles</li><li>update_oidc_client</li><li>web-origins</li></ul> |
 
 ### Digital-card-service
 
 In the previous version, 1.1.5.x, we did not employ any clients for our digital card service. However, in the latest version, 1.2.0.1, we have implemented the use of the `mpartner-default-digitalcard` client. Please find below the service account roles and client scopes associated with the `mpartner-default-digitalcard` client.
 
-**Service account roles assigned to **_**mpartner-default-digitalcard**_** in 1.2.0.1**
+**Service account roles assigned to \_mpartner-default-digitalcard**\_\*\* in 1.2.0.1\*\*
 
 * CREATE\_SHARE
 * CREDENTIAL\_REQUEST
@@ -86,7 +88,7 @@ In the previous version, 1.1.5.x, we did not employ any clients for our digital 
 * SUBSCRIBE\_IDENTITY\_CREATED\_GENERAL
 * SUBSCRIBE\_IDENTITY\_UPDATED \_GENERAL
 
-&#x20;**Client scopes assigned to **_**mpartner-default-digitalcard**_** in 1.2.0.1**
+**Client scopes assigned to \_mpartner-default-digitalcard**\_\*\* in 1.2.0.1\*\*
 
 * email
 * profile
@@ -97,14 +99,14 @@ In the previous version, 1.1.5.x, we did not employ any clients for our digital 
 
 In version 1.1.5.x, we do not employ any clients for printing. However, beginning from version 1.2.0.1, we utilize the `mpartner-default-prin`t client. Please find below the service account roles and client scopes associated with the `mpartner-default-print` client.
 
-**Service account roles assigned to **_**mpartner-default-print**_** in 1.2.0.1**
+**Service account roles assigned to \_mpartner-default-print**\_\*\* in 1.2.0.1\*\*
 
 * CREATE\_SHARE
 * default\_roles\_mosip
 * PUBLISH\_CREDENTIAL\_STATUS\_UPDTAE\_GENERAL
 * SUBSCRIBE\_ CREDENTIAL\_ISSUED\_INDIVIDUAL
 
-&#x20;**Client scopes assigned to **_**mpartner-default-print**_** in 1.2.0.1**
+**Client scopes assigned to \_mpartner-default-print**\_\*\* in 1.2.0.1\*\*
 
 * email
 * profile
@@ -121,9 +123,9 @@ In version 1.1.5.x, we utilized the `mosip-regproc-client` for id-repository. St
 
 **Service account roles for id-repository:**
 
-|  mosip-regproc-client (1.1.5.x)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | mosip-idrepo-client (1.2.0.1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p></p><ul><li>ABIS_PARTNER</li><li>CENTRAL_ADMIN</li><li>CENTRAL_APPROVER</li><li>CREDENTIAL_INSURANCE</li><li>CREDETIAL_PARTNER</li><li>Default</li><li>DEVICE_PROVIDER</li><li>DIGITAL_CARD</li><li>FTM_PROVIDER</li><li>GLOBAL_ADMIN</li><li>INDIVIDUAL</li><li>KEY_MAKER</li><li>MASTERDATA_ADMIN</li><li>MISP</li><li>MISP_PARTNER</li><li>ONLINE_VERIFICATION_PARTNER</li><li>POLICYMANAGER</li><li>PRE_REGISTRATION</li><li>PRE_REGISTRATION_ADMIN</li><li>PREREG</li><li>REGISTRATION_ADMIN</li><li>REGISTRATION_OFFICER</li><li>REGISTRATION_OPERATOR</li><li>REGISTRATION_SUPERVISOR</li><li>ZONAL_ADMIN</li><li>ZONAL_APPROVER</li></ul> | <ul><li>default_roles_mosip</li></ul><ul><li>ID_REPOSITORY</li><li>offline_access</li><li>PUBLISH_ACTIVATE_ID_ALL_INDIVIDUAL</li><li>PUBLISH_AUTH_TYPE_STATUS_UPDATE_ALL_INDIVIDUAL</li><li>PUBLISH_AUTHENTICATION_TRANSACTION_STATUS_GENERAL</li><li>PUBLISH_DEACTIVATE_ID_ALL_INDIVIDUAL</li><li>PUBLISH_IDENTITY_CREATED_GENERAL</li><li>PUBLISH_IDENTITY_UPDATED _GENERAL</li><li>PUBLISH_REMOVE _ID_ALL_INDIVIDUAL</li><li>PUBLISH_VID_CRED_STATUS_UPDATE_GENERAL</li><li>SUBSCRIBE_VID_CRED_STATUS_UPDATE_GENERAL</li><li>uma_authorization</li></ul> |
+| mosip-regproc-client (1.1.5.x)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | mosip-idrepo-client (1.2.0.1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>ABIS_PARTNER</li><li>CENTRAL_ADMIN</li><li>CENTRAL_APPROVER</li><li>CREDENTIAL_INSURANCE</li><li>CREDETIAL_PARTNER</li><li>Default</li><li>DEVICE_PROVIDER</li><li>DIGITAL_CARD</li><li>FTM_PROVIDER</li><li>GLOBAL_ADMIN</li><li>INDIVIDUAL</li><li>KEY_MAKER</li><li>MASTERDATA_ADMIN</li><li>MISP</li><li>MISP_PARTNER</li><li>ONLINE_VERIFICATION_PARTNER</li><li>POLICYMANAGER</li><li>PRE_REGISTRATION</li><li>PRE_REGISTRATION_ADMIN</li><li>PREREG</li><li>REGISTRATION_ADMIN</li><li>REGISTRATION_OFFICER</li><li>REGISTRATION_OPERATOR</li><li>REGISTRATION_SUPERVISOR</li><li>ZONAL_ADMIN</li><li>ZONAL_APPROVER</li></ul> | <ul><li>default_roles_mosip</li></ul><ul><li>ID_REPOSITORY</li><li>offline_access</li><li>PUBLISH_ACTIVATE_ID_ALL_INDIVIDUAL</li><li>PUBLISH_AUTH_TYPE_STATUS_UPDATE_ALL_INDIVIDUAL</li><li>PUBLISH_AUTHENTICATION_TRANSACTION_STATUS_GENERAL</li><li>PUBLISH_DEACTIVATE_ID_ALL_INDIVIDUAL</li><li>PUBLISH_IDENTITY_CREATED_GENERAL</li><li>PUBLISH_IDENTITY_UPDATED _GENERAL</li><li>PUBLISH_REMOVE _ID_ALL_INDIVIDUAL</li><li>PUBLISH_VID_CRED_STATUS_UPDATE_GENERAL</li><li>SUBSCRIBE_VID_CRED_STATUS_UPDATE_GENERAL</li><li>uma_authorization</li></ul> |
 
 ### Resident Services
 
@@ -131,31 +133,27 @@ In version 1.1.5.x, we utilized the `mosip-resident-client` for Resident Service
 
 **Service account roles for Resident-Services:**
 
-
-
-| mosip-resident-client (1.1.5.x)                                                                                                           | 	mosip-resident-client (1.2.0.1)                                                                                                                                                                                                                                                                               |
-| ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p></p><ul><li>CREDENTIAL_ISSUANCE</li><li>CREDENTIAL_REQUEST</li><li>offline_access</li><li>RESIDENT</li><li>uma_authorization</li></ul> | <p></p><ul><li>CREDENTIAL_REQUEST</li><li>default_roles_mosip</li><li>offline_access</li><li>RESIDENT</li><li>SUBSCRIBE_AUTH_TYPE_STATUS_UPDATE_ACK_GENERAL</li><li>SUBSCRIBE_AUTHENTICATION_TRANSACTION_STATUS_GENERAL</li><li>SUBSCRIBE_CREDENTIAL_STATUS_UPDATE_GENERAL</li><li>uma_authorization</li></ul> |
+| mosip-resident-client (1.1.5.x)                                                                                                    | mosip-resident-client (1.2.0.1)                                                                                                                                                                                                                                                                         |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <ul><li>CREDENTIAL_ISSUANCE</li><li>CREDENTIAL_REQUEST</li><li>offline_access</li><li>RESIDENT</li><li>uma_authorization</li></ul> | <ul><li>CREDENTIAL_REQUEST</li><li>default_roles_mosip</li><li>offline_access</li><li>RESIDENT</li><li>SUBSCRIBE_AUTH_TYPE_STATUS_UPDATE_ACK_GENERAL</li><li>SUBSCRIBE_AUTHENTICATION_TRANSACTION_STATUS_GENERAL</li><li>SUBSCRIBE_CREDENTIAL_STATUS_UPDATE_GENERAL</li><li>uma_authorization</li></ul> |
 
 **Client Scopes for Resident-Services:**
 
-| mosip-resident -client (1.1.5.x)                                                 | 	mosip- resident -client (1.2.0.1)                                                                                       |
-| -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| <p></p><ul><li>email</li><li>profile</li><li>roles</li><li>web-origins</li></ul> | <p></p><ul><li>email</li><li>ida_token</li><li>individual_id</li><li>profile</li><li>roles</li><li>web-origins</li></ul> |
+| mosip-resident -client (1.1.5.x)                                          | mosip- resident -client (1.2.0.1)                                                                                 |
+| ------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| <ul><li>email</li><li>profile</li><li>roles</li><li>web-origins</li></ul> | <ul><li>email</li><li>ida_token</li><li>individual_id</li><li>profile</li><li>roles</li><li>web-origins</li></ul> |
 
 ### **Compliance-Tool-Kit**
 
 In previous iterations (1.1.5.x) of our system, we did not employ any clients for the compliance toolkit. However, beginning with version 1.2.0.1, we have implemented the use of `mosip_toolkit_clien`t. The following information outlines the service account roles and client scopes associated with `mosip_toolkit_client`.
 
-**Service account roles assigned to **_**mosip\_toolkit\_client**_** in 1.2.0.1**
+**Service account roles assigned to \_mosip\_toolkit\_client**\_\*\* in 1.2.0.1\*\*
 
 * default\_roles\_mosip
 
-&#x20;**Client scopes assigned to **_**mosip\_toolkit\_client**_** in 1.2.0.1**
+**Client scopes assigned to \_mosip\_toolkit\_client**\_\*\* in 1.2.0.1\*\*
 
 * email
 * profile
 * roles
 * web-origins
-
-&#x20;
