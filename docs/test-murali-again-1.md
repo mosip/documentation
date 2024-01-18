@@ -6,6 +6,7 @@
 
 ## History of Print Stage in MOSIP
 
+## New Change
 In the initial version of MOSIP (0.9.0), the "print stage" was primarily designed to facilitate the submission of printing requests. Its core functionality revolved around initiating a request for the physical printing of credentials. However, as the system evolved and incorporated additional features, the scope of the print stage expanded beyond its original purpose.
 
 In the evolved version, particularly after the integration of new features, the print stage underwent significant enhancements. Contrary to its initial purpose, the print stage no longer serves the singular function of printing credentials. Instead, it has transformed into a multifaceted component with a broader set of responsibilities.
