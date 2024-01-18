@@ -112,6 +112,8 @@ Once the application is created, there could be multiple statuses depending on t
     * Use the search box to find the registration center based on your search criteria.
     * Click **Recommended Centers** to view registration centers based on your demographic details. (Postal Code)
 * Click **Continue**.
+ *Note*: By default Registration centers which are present in the same Postal Code as user will be displayed. This can be configured by Updating the location hierarchy from which we need to fetch registration centers in this Property: **preregistration.recommended.centers.locCode** in pre-registration-default.properties file. 
+  
 
 #### Select an appointment time-slot
 * Select your preferred date from the list of available calendar days and the number of available bookings. 
