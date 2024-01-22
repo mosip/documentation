@@ -33,21 +33,29 @@ Below is the detailed summary of the release.
 * Secure KeyStore and Tuvali have been integrated as independent NPM modules within the INJI framework. For further information, please refer to the provided documentation.
 * Additionally, all image assets have been converted from png to svg format. This transition ensures the presence of a single asset set, and the color of the icons will now be dynamically rendered based on the application's theme.
   
-### Internal improvements
+### Security Fixes
 
-* Improved Bluetooth State and Permission Handling:
-  * We have refined the management of Bluetooth states and permissions.
-* Removed `Google Nearby` Implementation:
-  * We've transitioned to using [Tuvali](https://docs.mosip.io/inji/tuvali) for Bluetooth Low Energy (BLE) communication, enhancing the connectivity experience.
-* Encrypted VC’s Metadata:
-  * We now calculate and securely store an encrypted HASH (HMAC SHA256) of the VC's metadata key in the database, bolstering data security.
+The critical vulnerabilities identified by OWASP dependency check have been addressed:
+
+* The expo-app-loading package has been replaced with expo-splash-screen for the purpose of app loading.
+* In order to enhance security for devices without hardware backed keystore, the crypto-js package has been substituted with node-forge for encryption, decryption, and HMAC generation.
+* Efforts have been made to improve the security of data in the default file located in the `mmkv` folder under the [INJI-467](https://mosip.atlassian.net/browse/INJI-467?atlOrigin=eyJpIjoiMjBhNWIzMmFjMjdiNGE1YzhhZTE4YmM0ZjA0MDM4ZWYiLCJwIjoiZXhjZWwtamlyYSJ9) task.
+
 
 ### Bug fixes
 
-* **Bug fix**: Reduced the app size for Android #[INJI-103](https://mosip.atlassian.net/browse/INJI-103)
-* **Bug fix**: Resolved connectivity issue when sharing VC #[INJI-207](https://mosip.atlassian.net/browse/INJI-207)
-* **Bug fix**: Fixed QR/ Esignet login using INJI app #[INJI-209](https://mosip.atlassian.net/browse/INJI-209), [INJI-49](https://mosip.atlassian.net/browse/INJI-209)
-* **Bug fix**: Resolved BLE issues #[INJI-146](https://mosip.atlassian.net/browse/INJI-146), [INJI-70](https://mosip.atlassian.net/browse/INJI-70)
+#### Functional fixes
+
+
+#### App crash
+
+#### BLE issues
+
+#### Face Authentication
+
+#### UX issues
+
+#### UI Issues
 
 ## Repository Released
 
