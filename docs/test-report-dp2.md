@@ -114,7 +114,7 @@ Here is the detailed breakdown of metrics:
 
 Functional and test rig code base branch which is used for the above metrics is:
 
-Commit Sha: 6641489c9ea2129daaf6989c7e6d73bae528a4c0
+**Commit Sha**: 6641489c9ea2129daaf6989c7e6d73bae528a4c0
 
 ### UI Verification results by modules
 

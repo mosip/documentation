@@ -10,7 +10,7 @@
 
 ## Overview
 
-The Developer Preview Version2 release is an additional release on top of Inji 0.10.0. This release primarily emphasizes:
+The Developer Preview Version 2 release is an additional release on top of Inji 0.10.0. This release primarily emphasizes:
 
 * UI enhancements
 * Internal enhancements
@@ -31,14 +31,14 @@ Below is the detailed summary of the release.
 ### Internal enhancements
 
 * Secure KeyStore and Tuvali have been integrated as independent NPM modules within the INJI framework. For further information, please refer to the provided documentation.
-* Additionally, all image assets have been converted from png to svg format. This transition ensures the presence of a single asset set, and the color of the icons will now be dynamically rendered based on the application's theme.
+* Additionally, all image assets have been converted from `png` to `svg` format. This transition ensures the presence of a single asset set, and the color of the icons will now be dynamically rendered based on the application's theme.
 
 ### Security Fixes
 
 The critical vulnerabilities identified by OWASP dependency check have been addressed:
 
 * The expo-app-loading package has been replaced with expo-splash-screen for the purpose of app loading.
-* In order to enhance security for devices without hardware backed keystore, the crypto-js package has been substituted with node-forge for encryption, decryption, and HMAC generation.
+* In order to enhance security for devices without hardware backed keystore, the `crypto-js` package has been substituted with node-forge for encryption, decryption, and HMAC generation.
 * Efforts have been made to improve the security of data in the default file located in the `mmkv` folder under the [INJI-467](https://mosip.atlassian.net/browse/INJI-467?atlOrigin=eyJpIjoiMjBhNWIzMmFjMjdiNGE1YzhhZTE4YmM0ZjA0MDM4ZWYiLCJwIjoiZXhjZWwtamlyYSJ9) task.
 
 ### Bug fixes
