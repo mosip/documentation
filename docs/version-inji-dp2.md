@@ -44,7 +44,16 @@ The critical vulnerabilities identified by OWASP dependency check have been addr
 
 ### Bug fixes
 
+
 #### Functional fixes
+
+| **Issue ID**     | **Description**                                                                        |
+| ---------------- | ---------------------------------------------------------------------------------------|
+| [INJI-556](https://mosip.atlassian.net/browse/INJI-556)|  Unable to get error message when download retry count is updated to 10. |
+| []()                                                   |    |
+|    | | 
+
+             
 
 
 #### App crash
