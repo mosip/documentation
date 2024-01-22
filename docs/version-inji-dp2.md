@@ -69,14 +69,14 @@ The critical vulnerabilities identified by OWASP dependency check have been addr
 
 ## Repository Released
 
-| **Repositories** | **Tags Released**                                                                        |
-| ---------------- | ---------------------------------------------------------------------------------------- |
-| Inji             | [Inji Developer Preview Release1- vDP1](https://github.com/mosip/inji/releases/tag/vDP1) |
-| Mimoto           | [Mimoto vDP1](https://github.com/mosip/mimoto/releases/tag/vDP1)                         |
+| **Repositories** | **Tags Released**                                                                             |
+| ---------------- | --------------------------------------------------------------------------------------------- |
+| Inji             | [Inji Developer Preview Release2- vDP2](https://github.com/mosip/inji/releases/tag/vDP2-INJI) |
+| config           | [Release vDP2](https://github.com/mosip/mosip-config/releases/tag/vDP2-INJI)                  |
 
 ## Documentation
 
 * [Feature Documentation](./)
 * [User Guide](https://docs.mosip.io/1.2.0/modules/inji-user-guide)
-* [QA Report](https://github.com/mosip/test-management/tree/master/inji/Inji%20VDP1)
+* [QA Report](test-report-dp2.md)
 * To know more about Inji, watch the [video](https://www.youtube.com/watch?v=9Z1WuTd8q0M)!
