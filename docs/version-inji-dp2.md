@@ -64,7 +64,7 @@ The critical vulnerabilities identified by OWASP dependency check have been addr
 
 #### UX issues
 
-#### UI Issues
+#### UI issues
 
 ## Repository Released
 
