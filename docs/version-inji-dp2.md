@@ -30,26 +30,9 @@ Below is the detailed summary of the release.
 
 ### Internal enhancements
 
-Secure KeyStore and Tuvali have been integrated with INJI as NPM dependencies. For further information, please refer to the provided documentation.
-Additionally, all image assets have been converted to svg format from png. This change allows for a more efficient usage of assets, and the icons' colors will now be dynamically rendered based on the app theme.
-
-* Branding the App as `Inji`:
-  * We've rebranded the application, transitioning from `Resident App` to the more streamlined and recognisable `Inji`.
-* Ability to Choose Language During App Setup:
-  * Inji app users can configure the application in six distinct languages:
-    * English
-    * Filipino
-    * Arabic
-    * Hindi
-    * Kannada
-    * Tamil
-* Warning When Device Storage is Beyond the Threshold:
-  * Inji now offers customisable storage limits:
-    * For VC downloads, the threshold is set to 5MB. When the device's remaining storage space falls below this limit, Inji displays a warning message. However, users can still continue to verify and share VCs.
-    * For Inji audit logs, the threshold is set to 1MB. Once the device reaches this limit, Inji users will be restricted to viewing VCs, unable to perform additional actions.
-* Traceability with Unique ID for Customer Support:
-  * We've implemented a unique identification called as an Application ID for customer support interactions. Each support request is now assigned a traceable and distinct ID, allowing our support teams to efficiently track, manage, and resolve customer issues.
-
+* Secure KeyStore and Tuvali have been integrated as independent NPM modules within the INJI framework. For further information, please refer to the provided documentation.
+* Additionally, all image assets have been converted from png to svg format. This transition ensures the presence of a single asset set, and the color of the icons will now be dynamically rendered based on the application's theme.
+  
 ### Internal improvements
 
 * Improved Bluetooth State and Permission Handling:
