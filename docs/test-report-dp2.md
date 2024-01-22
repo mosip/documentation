@@ -42,19 +42,21 @@ The verification methods may differ based on how the need was addressed.
 
 For regression check, `MOSIP Test Rig`, an automation testing suite is indigenously designed and developed for supporting persona based testing. MOSIP Test Rig covers the end-to-end test execution and reporting. The end-to-end functional test scenarios are written starting from pre-registration, to creation of packet in registration center, processing the packet through the registration processor, generating UIN and authenticating identity using IDA through various permutation and combinations of cases being covered. MOSIP Test Rig will be an open source artifact which can also be enhanced and used by countries to validate the SI deliveries before going live. Persona classes include both negative and positive personas. Negative persona classes include users like Bribed Registration Office, Malicious Insider etc. The needs of positive persona classes must be met, whereas the needs of negative persona classes must be effectively restricted by the software.
 
-## Verified configuration 
+## Verified configuration
 
 Verification is performed on various configurations as mentioned below:
 
 * Default configuration - with 3 languages
-  
-*	Virtual countries
+* Virtual countries
   * 1 Lang configuration
-  *	2 Lang configuration
-  *	3 Lang configuration
+  * 2 Lang configuration
+  * 3 Lang configuration
 
 ## Feature health
 
+<figure><img src=".gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics
 
@@ -64,9 +66,9 @@ Below are the test metrics for Inji by performing functional testing using `mock
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
-| 1394      | 1166     | 176        | 52         |
+| 1394      | 1166       | 176        | 52          |
 
-**Test Rate: 96%** with **Pass Rate : 86%**
+**Test Rate: 96%** with **Pass Rate: 86%**
 
 Here is the detailed breakdown of metrics:
 
@@ -90,7 +92,7 @@ Below section provides details on API test metrics by executing MOSIP functional
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
-| 1268      | 1247       | 17          | 4           |
+| 1268      | 1247       | 17         | 4           |
 
 **Test Rate:** 100% with **Pass Rate:** 98.34%
 
@@ -106,7 +108,7 @@ Here is the detailed breakdown of metrics:
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
-| 1114      | 1095      | 15          | 4           |
+| 1114      | 1095       | 15         | 4           |
 
 **Note**:
 
@@ -134,19 +136,21 @@ Here is the detailed breakdown of metrics:
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
-| 50      | 25     | 25          | 0           |
+| 50        | 25         | 25         | 0           |
 
 ### Testing with various device combinations
 
 Below are the test metrics by performing VC Sharing functionality on various device combinations.
 
-<figure><img src=".gitbook/assets/combination-0.10.0.jpg" alt=""><figcaption></figcaption></figure>
+
+
+<figure><img src=".gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
-| 152        | 152         | 0          | 0           |
+| 152       | 152        | 0          | 0           |
 
-**Test Rate: 100%** with **Pass Rate : 100%**
+**Test Rate: 100%** with **Pass Rate: 100%**
 
 ### Detailed Test Metrics
 
