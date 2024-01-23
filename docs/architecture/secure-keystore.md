@@ -4,18 +4,18 @@ Secure Keystore is a **React Native library exclusively for Android platform**. 
 
 # Installation
 
-The Secure Keystore is an independent module which provides Android APIs for the same on React. On a React Native application this can be installed via
+The Secure Keystore is an independent module published as NPM module which provides Android APIs for the same on React. On a React Native application this can be installed via
 
 ```shell
-npm install mosip-react-native-secure-keystore
+npm install @mosip/secure-keystore
 ```
 
 ## Usage
 
-1. for RSA based Key Pair
+1. For RSA based Key Pair
 
 ```js
-import SecureKeyStore  from "mosip-react-native-secure-keystore";
+import SecureKeyStore  from "@mosip/secure-keystore";
 
 // ...
 
@@ -33,10 +33,10 @@ const signature = await SecureKeyStore.sign(alias, data)
 ```
 
 
-2. for symmetric key
+2. For symmetric key
 
 ```js
-import SecureKeyStore  from "mosip-react-native-secure-keystore";
+import SecureKeyStore  from "@mosip/secure-keystore";
 
 // ...
 
@@ -61,20 +61,20 @@ const decryptedData = await SecureKeyStore.decryptData(alias, encryptedData)
 
 `deviceSupportsHardware: boolean`
 
-Check if the device supports hardware key store
+Checks if the device supports hardware key store
 
 
 ### generateKey
 
 `generateKey(alias: string) => void`
 
-generates a symmetric key for encryption and decryption
+Generates a symmetric key for encryption and decryption
 
 ### generateKeyPair
 
 `generateKey(alias: string) => string`
 
-generates a asymmetric RSA key Pair for signing
+Generates a asymmetric RSA key Pair for signing
 
 ### encryptData
 
@@ -86,16 +86,16 @@ Encrypts the given data using the key that is assigned to the alias. Returns bac
 
 `decryptData(alias: string, encryptionText: string) => string`
 
-Decrypts the given encryptionText using the key that is assigned to the alias. Returns back the data as a string
+Decrypts the given `encryptionText` using the key that is assigned to the alias. Returns back the data as a string
 
 ### sign
 
 `sign(alias: string, data: string) => string`
 
-Create a signature for the given data using the key that is assigned to the alias. Returns back the signature as a string
+Creates a signature for the given data using the key that is assigned to the alias. Returns back the signature as a string
 
 ### hasAlias
 
 `hasAlias(alias: string) => boolean`
 
-Check if the given alias is present in the key store
+Checks if the given alias is present in the keystore
