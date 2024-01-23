@@ -118,7 +118,7 @@ Functional and test rig code base branch which is used for the above metrics is:
 
 ### UI Verification results by modules
 
-Below section provides details on UI test metrics by executing MOSIP functional automation Framework. Test executions were performed at module level isolation. Each end point is tested with the test data and expectations of each test data are mapped to assert the test case.
+Below section provides details on UI test metrics by executing MOSIP UI Automation Framework. Test executions were performed at module level isolation. Each end point is tested with the test data and expectations of each test data are mapped to assert the test case.
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
