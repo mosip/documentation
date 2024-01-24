@@ -17,7 +17,7 @@ Before you start with setting up Inji, ensure you have the following in place.
 3.  UIN Credentials:
 
     * Issuance of UIN (Unique identification number) as a demo credential will allow you to explore Inji’s capabilities and experience seamless VC sharing firsthand.
-    * Fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSd\_P4OMwimjTxGlJ2bfLob2TIt9UaaZDQF3sBO74e9TBST-vQ/viewform) here and we will generate the demo credentials, which you can use subsequently on the Inji app to download and share Verifiable Credentials (VCs).
+    * Fill out the [form ](https://docs.google.com/forms/d/e/1FAIpQLSc2I0CQqlYRIrEmcJ3J3tKlYOVNcYNj88YZe4MMwU2RZTrjOA/viewform)here and we will generate the demo credentials, which you can use subsequently on the Inji app to download and share Verifiable Credentials (VCs).
 
     _Note_: Please use 111111 as the OTP, for any OTP based feature in Collab environment.
 
