@@ -10,7 +10,7 @@ For example, use a QR code generator to visually display params and a QR code sc
 * The device on which the QR code is displayed shall generate connection parameters using the `startAdvertisement()` method:
 
 ```typescript
-import tuvali from 'react-native-tuvali';
+import tuvali from '@mosip/tuvali';
 const { verifier } = tuvali;
 
 const uri = verifier.startAdvertisement();
@@ -20,7 +20,7 @@ console.log(uri);
 * The device that scans the QR code will extract the connection parameters from the QR code and set its connection parameters using the `startAdvertisement()` method :
 
 ```typescript
-import tuvali from 'react-native-tuvali';
+import tuvali from '@mosip/tuvali';
 const { wallet } = tuvali;
 
 wallet.startConnection(uri);

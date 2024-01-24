@@ -29,6 +29,7 @@ The libraries are as follows:
 * To learn more about Tuvali's implementation, refer [here](https://docs.mosip.io/inji/integration-guide/tuvali).
 * For information on Tuvali's permissions and requirements, refer [here](https://docs.mosip.io/inji/integration-guide/tuvali/tuvali-requirements).
 * To understand Tuvali and Inji integration, along with API documentation, refer[ here](https://docs.mosip.io/inji/integration-guide/tuvali/tuvali-inji).
+* Check NPM module [here](https://www.npmjs.com/package/@mosip/tuvali).
 
 #### **2. Face Match**
 
@@ -58,12 +59,17 @@ To check all the APIs supported by this module, refer [here](https://github.com/
 
 * This feature is exclusive to the Android operating system.
 * It is only compatible with devices that have a hardware keystore.
+* Check NPM module [here](https://www.npmjs.com/package/@mosip/secure-keystore).
 
 ### **4. BLE Verifier**
 
 The [BLE Verifier](https://github.com/mosip/ble-verifier-sdk/tree/develop) is the module built for verifiers for receiving VC via BLE. This is a wrapper built on Tuvali with simplified APIs.
 
 To know more about API and how to integrate, refer [here](../integration-guide/ble-verifier.md).
+
+**Note**:
+
+* Check NPM module [here](https://www.npmjs.com/package/@mosip/ble-verifier-sdk).
 
 ### **5. Telemetry**
 

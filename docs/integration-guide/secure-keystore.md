@@ -6,10 +6,10 @@ Secure Keystore is a **React Native library exclusively for Android platform**. 
 
 ## Installation
 
-The Secure Keystore is an independent module which provides Android APIs for the same on React. On a React Native application, this can be installed via
+The Secure Keystore is an independent module published as NPM module which provides Android APIs for the same on React. On a React Native application, this can be installed via
 
 ```shell
-npm install mosip-react-native-secure-keystore
+npm install @mosip/secure-keystore
 ```
 
 ### Usage
@@ -17,7 +17,7 @@ npm install mosip-react-native-secure-keystore
 1. For RSA based Key Pair
 
 ```js
-import SecureKeyStore  from "mosip-react-native-secure-keystore";
+import SecureKeyStore  from "@mosip/secure-keystore";
 
 // ...
 
@@ -37,7 +37,7 @@ const signature = await SecureKeyStore.sign(alias, data)
 2. For symmetric key
 
 ```js
-import SecureKeyStore  from "mosip-react-native-secure-keystore";
+import SecureKeyStore  from "@mosip/secure-keystore";
 
 // ...
 
