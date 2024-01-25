@@ -55,7 +55,8 @@ The following new attributes have been added:
 * transliteration (mandatory to enable transliteration)
 * locationHierarchyLevel (mandatory to be added in each location dropdown to indicate the location hierarchy level)
 * parentLocCode (mandatory to be added in the topmost dropdown in the location hierarchy to indicate the parent for it. It can also be omitted, in which case the mosip.country.code property will be used)
-* The control type for the date of birth should be changed to "ageDate"
+* `gender` Attribute should be mandatory, and the parameter `required` should be `true`
+* The control type for the date of birth should be changed to `ageDate`
 * The labelName should be provided with the "languageCode" as the "key" and the label as the "value". Example: {"labelName": { "eng": "Date Of Birth", "ara": "تاريخ الولادة", "fra": "Date de naissance" \}}
 * visibleCondition (optional)
 * requiredCondition (optional)
@@ -64,11 +65,13 @@ The following new attributes have been added:
 * headerStyle (optional)
 * changeAction (optional)
 
+
+
 ### UI Specifications of 1.1.5 and 1.2.0
 
 ### 1.1.5
 
-~~~
+```
 {
 
               "identity": [{
@@ -776,12 +779,11 @@ The following new attributes have been added:
 
               "locationHierarchy": ["region", "province", "city", "zone", "postalCode"]
 }
-~~~
-
+```
 
 ### 1.2.0
 
-~~~
+```
 {
 
               "identity": {
@@ -1437,5 +1439,4 @@ The following new attributes have been added:
               }
 
 }
-~~~
-
+```
