@@ -1,14 +1,14 @@
 # Version 1.3.0
 
-**Release Name**: CTK 1.3.0 
+**Release Name**: CTK 1.3.0
 
 **Upgrade From**: CTK 1.2.0
 
 **Support**: Stable Release
 
-**Release Date**: 5th January, 2024 
+**Release Date**: 5th January, 2024
 
-**Note**: updated `mosip-compliance-toolkit` tag from `v1.3.0` to `v1.3.1` on 25th January, 2024
+**Note**: On January 25th, 2024, the `mosip-compliance-toolkit` tag has been updated from **v1.3.0** to **v1.3.1** in order to resolve a bug in the `BiometricsQualityCheckValidator` during the conversion of `bioScore` into `bioScoreRange`.
 
 ## Overview
 
@@ -24,12 +24,12 @@ To know more about the Hash generation logic, read [Hash Generation](hash-genera
 
 ### Repository Released
 
-| Repositories                 | Tags Released             |
-| ---------------------------- | ------------------------- |
-| mosip-compliance-toolkit     | [v1.3.1](https://github.com/mosip/mosip-compliance-toolkit/tree/v1.3.1) |
-| mosip-compliance-toolkit-ui  | [v1.3.0](https://github.com/mosip/mosip-compliance-toolkit-ui/tree/v1.3.0) |
-| bio-utils|    [v1.2.0.1-B4](https://github.com/mosip/bio-utils/tree/v1.2.0.1-B4)  |
-| Imagedecoder| [v0.9.0](https://github.com/mosip/imagedecoder/tree/v0.9.0)|
+| Repositories                | Tags Released                                                              |
+| --------------------------- | -------------------------------------------------------------------------- |
+| mosip-compliance-toolkit    | [v1.3.1](https://github.com/mosip/mosip-compliance-toolkit/tree/v1.3.1)    |
+| mosip-compliance-toolkit-ui | [v1.3.0](https://github.com/mosip/mosip-compliance-toolkit-ui/tree/v1.3.0) |
+| bio-utils                   | [v1.2.0.1-B4](https://github.com/mosip/bio-utils/tree/v1.2.0.1-B4)         |
+| Imagedecoder                | [v0.9.0](https://github.com/mosip/imagedecoder/tree/v0.9.0)                |
 
 ### Dependency
 
