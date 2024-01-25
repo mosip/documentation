@@ -6,7 +6,9 @@
 
 **Support**: Stable Release
 
-**Release Date**: 5th January, 2024
+**Release Date**: 5th January, 2024 
+
+**Note**: updated `mosip-compliance-toolkit` tag from `v1.3.0` to `v1.3.1` on 25th January, 2024
 
 ## Overview
 
@@ -24,7 +26,7 @@ To know more about the Hash generation logic, read [Hash Generation](hash-genera
 
 | Repositories                 | Tags Released             |
 | ---------------------------- | ------------------------- |
-| mosip-compliance-toolkit     | [v1.3.0](https://github.com/mosip/mosip-compliance-toolkit/tree/v1.3.0) |
+| mosip-compliance-toolkit     | [v1.3.1](https://github.com/mosip/mosip-compliance-toolkit/tree/v1.3.1) |
 | mosip-compliance-toolkit-ui  | [v1.3.0](https://github.com/mosip/mosip-compliance-toolkit-ui/tree/v1.3.0) |
 | bio-utils|    [v1.2.0.1-B4](https://github.com/mosip/bio-utils/tree/v1.2.0.1-B4)  |
 | Imagedecoder| [v0.9.0](https://github.com/mosip/imagedecoder/tree/v0.9.0)|
