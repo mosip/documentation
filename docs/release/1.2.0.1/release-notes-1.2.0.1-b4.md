@@ -39,7 +39,7 @@ To know more about the upgrades, refer [Upgrade Runbook](../../upgrade-runbook.m
 | websub                      | [1.2.0.1-B2](https://github.com/mosip/websub/tree/v1.2.0.1-B2)                       |
 | durian                      | [v1.2.0.1-B2](https://github.com/mosip/durian/tree/v1.2.0.1-B2)                      |
 | mosip-config                | [v1.2.0.1-B4](https://github.com/mosip/mosip-config/tree/v1.2.0.1-B4)                |
-| mosip-mock-services         | [v1.2.0.1-B3](https://github.com/mosip/mosip-mock-services/tree/v1.2.0.1-B3)         |
+| mosip-mock-services         | [v1.2.0.1-B4](https://github.com/mosip/mosip-mock-services/tree/v1.2.0.1-B4)         |
 | migration-utility           | [v1.2.0.1-B2](https://github.com/mosip/migration-utility/tree/v1.2.0.1-B2)           |
 | mosip-functional-tests      | [v1.2.0.1-B3](https://github.com/mosip/mosip-functional-tests/tree/v1.2.0.1-B3)      |
 | converters                  | [v1.2.0.1-B2](https://github.com/mosip/converters/tree/v1.2.0.1-B2)                  |
