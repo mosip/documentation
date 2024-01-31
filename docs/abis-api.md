@@ -203,11 +203,9 @@ Below is the sample API detail for reference URL.
 
 **Sample Encrypted Response**
 
-{% hint style="info" %}
 **The structure of the encrypted data downloaded from referenceURL in MOSIP 1.2.0 or later versions**
 
 The data downloaded would be URL-safe base64 encoded. Hence, after decoding the data will be in the below format. It will be divided into two Parts after splitting using #KEY\_SPLITTER#.
-{% endhint %}
 
 | Encrypted Key Data | KEY\_SPLITTER   | Encrypted Actual Data |
 | ------------------ | --------------- | --------------------- |
@@ -231,10 +229,11 @@ Block 2, i.e. the encrypted actual data is again split into two parts,
   
 _**Note**_: In Java 11, `PKCS5Padding` serves as a synonym for `NoPadding` in GCM mode encryption. Conversely, in Java 17, the synonym PKCS5Padding has been eliminated, and it is now mandatory to exclusively use NoPadding. Consequently, if data is encrypted using PKCS5Padding in Java 11, it will be decrypted with NoPadding in Java 17.
 
+{% endhint %}
+
 **The structure of the encrypted data downloaded from referenceURL in MOSIP 1.1.5.5 or prior versions**
 
 The data downloaded would be base64 encoded. Hence, after decoding the data will be in the below format. It will be divided into two Parts after splitting using #KEY\_SPLITTER#.
-{% endhint %}
 
 | Encrypted Key Data | KEY\_SPLITTER   | Encrypted Actual Data |
 | ------------------ | --------------- | --------------------- |
