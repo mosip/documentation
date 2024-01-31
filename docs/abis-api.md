@@ -203,9 +203,6 @@ Below is the sample API detail for reference URL.
 
 **Sample Encrypted Response**
 
-```
-```
-
 {% hint style="info" %}
 **The structure of the encrypted data downloaded from referenceURL in MOSIP 1.2.0 or later versions**
 
@@ -231,7 +228,8 @@ Block 2, i.e. the encrypted actual data is again split into two parts,
 
 * The 1st part is the random 32 bytes which will be used as _**AAD**_ in AES encryption(first 32 bytes). From this 32 bytes AAD data, the first 12 bytes is _**IV/Nonce**_.
 * The 2nd part is the encrypted data which is encrypted using AES GCM PKCS5Padding.
-
+  
+_**Note**_: In Java 11, `PKCS5Padding` serves as a synonym for `NoPadding` in GCM mode encryption. Conversely, in Java 17, the synonym PKCS5Padding has been eliminated, and it is now mandatory to exclusively use NoPadding. Consequently, if data is encrypted using PKCS5Padding in Java 11, it will be decrypted with NoPadding in Java 17.
 
 **The structure of the encrypted data downloaded from referenceURL in MOSIP 1.1.5.5 or prior versions**
 
@@ -255,6 +253,9 @@ Block 1, i.e. the encrypted key data is again split into two parts,
 Block 2, i.e. the encrypted actual data is again split into two parts,
 
 * The 1st part is the _**Encrypted data**_, encrypted using AES GCM PKCS5Padding.
+
+ _**Note**_: In Java 11, `PKCS5Padding` serves as a synonym for `NoPadding` in GCM mode encryption. Conversely, in Java 17, the synonym PKCS5Padding has been eliminated, and it is now mandatory to exclusively use NoPadding. Consequently, if data is encrypted using PKCS5Padding in Java 11, it will be decrypted with NoPadding in Java 17.
+  
 * The 2nd part is _**IV/Nonce**_ i.e. the last 32 bytes appended after encrypted data.
 {% endhint %}
 
