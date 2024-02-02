@@ -1,6 +1,7 @@
 # Registration Processor
 
 ## Overview
+
 Registration Processor (Regproc) is a backend processing engine to enable the ID Lifecycle management. The diagram below shows the Registration Processor along with the other modules that contribute in issuing a Unique Identification Number(UIN) for an individual. Internally, Regproc follows the [SEDA](https://en.wikipedia.org/wiki/Staged_event-driven_architecture) architecture where data flows via multiple stages till the UIN is issued.
 
 ![](_images/reg-proc.png)
@@ -27,21 +28,29 @@ The relationship of Regproc with other services is explained here. _NOTE: The nu
 {% embed url="https://www.youtube.com/watch?v=_SJW2__UoKc&list=PLF83tgjxrJvh6QVM27lxIYq5nlZx8rY8Z&index=6" %}
 
 ## Stages and services
+
 The Registration Processor contains several [stages and services](https://github.com/mosip/registration/tree/release-1.2.0#registration-stages-and-pipeline). 
 
 The registration packet flows through the various stages depending on the type of flow. See [Registration Flows and Stage Sequence](https://github.com/mosip/registration/blob/release-1.2.0/docs/flows.md).
 
+**Note**: The Print Stage has been renamed as the Credential Requestor Stage. For further information, please click [here]().
+
 ## Build and deploy
+
 Refer to [repo](https://github.com/mosip/registration/tree/release-1.2.0).
 
 ## Configurations
+
 Refer to [Configuration Guide](https://github.com/mosip/registration/blob/release-1.2.0/docs/configuration.md).
 
 ## Developer Guide
+
 To know more about the developer setup, read [Registration Processor Developers Guide](https://docs.mosip.io/1.2.0/modules/registration-processor/registration-processor-developers-guide).
 
 ## API
+
 Refer [API Documentation](https://mosip.github.io/documentation/release-1.2.0/release-1.2.0.html).
 
 ## Source code 
+
 [Github repo](https://github.com/mosip/registration/tree/release-1.2.0).
