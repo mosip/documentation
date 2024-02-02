@@ -25,7 +25,7 @@ brew install nvm
 
 nvm install 16.19.0
 
-nvm use16.19.0
+nvm use 16.19.0
 ```
 
 #### Step 2:
@@ -43,7 +43,7 @@ curl -s "https://get.sdkman.io" | bash
 
 sdk install gradle 8.0.2
 
-sdk install java11.0.18-amzn
+sdk install java 11.0.18-amzn
 ```
 
 #### Step 4:
@@ -70,26 +70,16 @@ export PATH="$PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_CMDLINE_TOOLS"
 Generate debug keystore for building debug build
 ```
 keytool \
-
  -genkey -v \
-
  -storetype PKCS12 \
-
  -keyalg RSA \
-
  -keysize 2048 \
-
  -validity 10000 \
-
  -storepass 'android' \
-
  -keypass 'android' \
-
  -alias androiddebugkey \
-
  -keystore android/app/debug.keystore \
-
- -dname"CN=io.mosip.residentapp,OU=,O=,L=,S=,C=US"
+ -dname "CN=io.mosip.residentapp,OU=,O=,L=,S=,C=US"
 ```
 
 export keystore
@@ -103,62 +93,101 @@ export DEBUG_KEYSTORE_PASSWORD=android
 
 #### Step 1:
 
-Install Chocolatey, refer https://chocolatey.org/install
+Install Git
+
+Use the below link to download git
 ```
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+https://git-scm.com/download/win
 ```
-Allow global confirmation to avoid providing confirmations for avoiding confirmation in each installation (Optional)
-```
-choco feature enable -n=allowGlobalConfirmation
-```
+After installing run Git as admin
 
 #### Step 2:
 
-Configure Git
+Install SDKMAN
+
+Use the below command in Git terminal
+
 ```
-choco install git
+curl -s "<https://get.sdkman.io>" | bash
 ```
+
+If encounters, `please install zip on your system using your favourite package manager` error while installing sdkman
+
+**Install zip**
+
+SDKMan need zip, which is not included by Windows Git Bash by default. To resolve this, go to <https://sourceforge.net/projects/gnuwin32/files/> and find zip in the list. Download zip-3.0-bin.zip and extract zip.exe in the bin folder. Copy it to c:\Program Files\Git\usr\bin. And run SDKMan install script again.
 
 #### Step 3:
 
-Configure Node & npm (We have to use v16.19.0)
-```
-choco install nodejs --version=16.19.0
+Install gradle
 
-npminstall-gnpm@8.19.3
+use the below command in Git terminal
 ```
+sdk install gradle 8.5
+```
+
+to check the installed gradle version
+
+gradle -V
 
 #### Step 4:
 
-Configure Gradle & Java
-Gradle - https://community.chocolatey.org/packages/gradle
+Installing Java JDK - https://www.oracle.com/ph/java/technologies/javase/javase8-archive-downloads.html
+
 ```
-choco install gradle
-```
-Java - https://community.chocolatey.org/packages/openjdk/11.0
-```
-choco install openjdk --version=11.0
+[!TIP]
+Restart system
 ```
 
 #### Step 5:
 
-Configure Android SDK, refer https://developer.android.com/
-
-Set up adb shell
+Install expo
 ```
-choco install adb
+npm install --global expo-cli
 ```
 
 #### Step 6:
 
-Generate debug keystore for building debug build
+Install Android SDK
 ```
-keytool -genkey -v -storetype PKCS12 -keyalg RSA -keysize 2048 -validity 10000 -storepass 'android'  -keypass 'android'  -alias androidreleasekey  -keystore android/app/release.keystore -dname "CN=io.mosip.residentapp,OU=,O=,L=,S=,C=US"
+https://developer.android.com/
 ```
 
+#### Step 7:
+
+Installing Node
+```
+https://nodejs.org/en/download
+```
+
+#### Step 8:
+
+Install nvm
+```
+curl -o- <https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh> | bash
+```
+or
+```
+wget -qO- <https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh> | bash
+```
+
+update the nvm version
+```
+nvm install 16.19.0
+nvm use 16.19.0
+```
+
+#### Step 9:
+
+Install adb
+```
+https://sourceforge.net/projects/quickadb/
+```
+
+Configure ANDROID_HOME and JAVA_HOME in system environment variables
 ### Prerequisites for running on device
 
-1.  It requires bluetooth v4.2 and above 
+1. It requires bluetooth v4.2 and above 
 2. Android v23 and above for Android
 
 
@@ -194,14 +223,26 @@ Go to the root folder of the project in the terminal. Install all the dependenci
 
 #### Step 5:
 
-**Build an application:**
-
-Run `cd android && ./gradlew :app:assembleMosipDebug && cd ..` to build the application.
-
 **Build and run the application on the device:**
 
 * Run `npm run android:mosip` to build and install the application on the device.
 * Run `npm run android:mosip --reset-cache` to build and install the application if any change is made in the .env file.
+
+If you encounter the below issue on Windows
+```
+FAILURE: Build failed with an exception.
+
+- Where:
+  Script 'C:\....\inji\node_modules\expo\scripts\autolinking.gradle' line: 2
+
+- What went wrong:
+  A problem occurred evaluating script.
+  > Could not read script 'C:\"PATH"\inji\node_modules\expo\scripts\android\autolinking_implementation.gradle' as it does not exist.
+```
+Run this `npm i expo-modules-autolinking@~1.1.0` and rebuild the app
+
+* Path for debug apk in Inji directory
+android/app/build/outputs/apk/mosip/debug
 
 ### Build for PlayConsole
 
