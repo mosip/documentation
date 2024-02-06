@@ -3,6 +3,8 @@
 ## Overview /Introduction /About
 
 This is a sample Readme template that can be used by developers to introduce the readers about what the repository/directory would contain.
+You should also add the link to other supporting front-end documentation like our docs/ eSignet documentation/ Inji documentation link/etc.
+
 
 ## Built With 
 
@@ -17,7 +19,7 @@ Here are a few examples:
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally. Hoever, no one template will serve all projects/requirements since your needs may be different.
+This is an example of how you may give instructions on setting up your project locally. However, no one template will serve all projects/requirements since your needs may be different.
 
 ### Pre-requisites
 
