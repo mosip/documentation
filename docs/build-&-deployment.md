@@ -111,11 +111,14 @@ Use the below command in Git terminal
 curl -s "<https://get.sdkman.io>" | bash
 ```
 
-If encounters, `please install zip on your system using your favourite package manager` error while installing sdkman
+If encounters error while installing sdkman `please install zip on your system using your favourite package manager`
 
 **Install zip**
 
-SDKMan need zip, which is not included by Windows Git Bash by default. To resolve this, go to <https://sourceforge.net/projects/gnuwin32/files/> and find zip in the list. Download zip-3.0-bin.zip and extract zip.exe in the bin folder. Copy it to c:\Program Files\Git\usr\bin. And run SDKMan install script again.
+1. SDKMan requires the installation of the zip utility, which is not included in the default installation of Windows Git Bash.
+2. To address this, please visit the following website: https://sourceforge.net/projects/gnuwin32/files/.
+3. Locate "zip" in the list of available files and download the "zip-3.0-bin.zip" archive. Extract the "zip.exe" file from the archive and place it in the "bin" folder. Location of bin folder "C:\Program Files\Git\usr\bin".
+4. Finally, rerun the SDKMan installation script.
 
 #### Step 3:
 
@@ -241,8 +244,7 @@ FAILURE: Build failed with an exception.
 ```
 Run this `npm i expo-modules-autolinking@~1.1.0` and rebuild the app
 
-* Path for debug apk in Inji directory
-android/app/build/outputs/apk/mosip/debug
+* Path for debug apk in Inji directory `android/app/build/outputs/apk/mosip/debug`
 
 ### Build for PlayConsole
 
