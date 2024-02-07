@@ -1,4 +1,4 @@
-# Build & Deployment
+# Build eSignet and OIDC UI
 
 The latest stable released codebase can be found under the "master" branch of the eSignet codebase. All the ongoing bug fixes or feature development are usually on the "develop" or on a specific feature branch.
 
@@ -8,7 +8,7 @@ It is recommended to either use master or released tags for local deployment and
 
 ## Build backend services
 
-[esignet-core](https://github.com/mosip/esignet/tree/master/esignet-core) and [esignet-service](https://github.com/mosip/esignet/tree/master/esignet-service) modules use Maven as the build tool. [esignet-service](https://github.com/mosip/esignet/tree/master/esignet-service) is a spring-boot application that hosts all the REST endpoints.
+Modules under [esignet](https://github.com/mosip/esignet/tree/master) use Maven as the build tool. [esignet-service](https://github.com/mosip/esignet/tree/master/esignet-service) is a spring-boot application that hosts all the REST endpoints.
 
 **Prerequisite**
 

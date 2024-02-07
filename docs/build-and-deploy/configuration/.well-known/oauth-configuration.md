@@ -4,18 +4,31 @@ eSignet's `oauth-configuration` well-known endpoint holds the map which is exact
 
 ```json
 {
-  'issuer': '${mosip.esignet.discovery.issuer-id}',
-  'authorization_endpoint': '${mosipbox.public.url}${server.servlet.path}/authorize',
-  'token_endpoint': '${mosipbox.public.url}${server.servlet.path}/token',
-  'token_endpoint_auth_methods_supported': {'private_key_jwt'},
-  'token_endpoint_auth_signing_alg_values_supported': {'RS256'},
-  'userinfo_endpoint': '${mosipbox.public.url}${server.servlet.path}/userinfo',
-  'jwks_uri': '${mosipbox.public.url}${server.servlet.path}/jwks.json',
-  'registration_endpoint': '${mosipbox.public.url}${server.servlet.path}/register',
-  'scopes_supported': ${mosip.esignet.supported.openid.scopes},
-  'response_types_supported': {'code', 'code token'},
-  'service_documentation': '${mosipbox.public.url}${server.servlet.path}/service_documentation.html',
-  'ui_locales_supported': ${mosip.esignet.supported.ui.locales}
+  "issuer": "https://esignet.collab.mosip.net",
+  "authorization_endpoint": "https://esignet.collab.mosip.net/authorize",
+  "token_endpoint": "https://esignet.collab.mosip.net/v1/esignet/oauth/v2/token",
+  "jwks_uri": "https://esignet.collab.mosip.net/.well-known/jwks.json",
+  "token_endpoint_auth_methods_supported": [
+    "private_key_jwt"
+  ],
+  "token_endpoint_auth_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "scopes_supported": [
+    "profile",
+    "email",
+    "phone"
+  ],
+  "response_modes_supported": [
+    "query"
+  ],
+  "grant_types_supported": [
+    "authorization_code"
+  ],
+  "response_types_supported": [
+    "code"
+  ],
+  "ui_locales_supported": ["en"]
 }
 ```
 

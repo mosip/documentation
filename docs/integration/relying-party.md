@@ -31,7 +31,7 @@ Once the above steps are completed the relying parties developers/managers are r
 
 * Provide the name that you want to register with the ID provider, the same name will be displayed on the eSignet authentication and consent page to the end user.
 
-* List the fields/attributes that you need from the eSignet ID provider upon the user’s consent. This is also called a claim. It's expected that the relying party indicates the mandatory and optional claims.  the possible values can be discovered from the eSignet .well-known.
+* List the fields/attributes that you need from the eSignet ID provider upon the user’s consent. This is also called a claim. It's expected that the relying party indicates the mandatory and optional claims. The possible values can be discovered from the eSignet [.well-known](../build-and-deploy/configuration/.well-known/openid-configuration.md).
 
 * Provide the logo for your application and organization to be utilized for display on the eSignet authentication page.
 
@@ -81,10 +81,10 @@ Setup your development environment. Once done you need to follow the following s
 
   {% endhint %}
 
-  * The button upon click should get a unique state (a random value) & nonce (a random value) from the server and redirect to the "/authorize" endpoint of the ID provider.  A sample URL is listed here. The details of what is supported are listed on the .well-known file in the respective eSignet provider.
+  * The button upon click should get a unique state (a random value) & nonce (a random value) from the server and redirect to the "/authorize" endpoint of the ID provider.  A sample URL is listed here. The details of what is supported are listed on the [.well-known](../build-and-deploy/configuration/.well-known/openid-configuration.md) file in the respective eSignet provider.
     
     * Sample /authorize Request:
-      GET https://esignet.id.provider/authorize?nonce=ere973eieljznge2311&state=eree2311&client_id=Mv45rBnfuu0ocWDy9APT5k5LZbGE_l0wX7P9vQXXswg&redirect_uri=https://relyingparty.dev.net/userprofile&scope=openid profile&response_type=code&acr_values=mosip:idp:acr:generated-code mosip:idp:acr:biometrics mosip:idp:acr:linked-wallet&claims={"userinfo":{"given_name":{"essential":true},"phone_number":{"essential":false},"email":{"essential":true},"picture":{"essential":false},"gender":{"essential":false},"birthdate":{"essential":false},"address":{"essential":false}},"id_token":{}}&claims_locales=en&display=page&ui_locales=en-US
+      ```GET https://esignet.id.provider/authorize?nonce=ere973eieljznge2311&state=eree2311&client_id=Mv45rBnfuu0ocWDy9APT5k5LZbGE_l0wX7P9vQXXswg&redirect_uri=https://relyingparty.dev.net/userprofile&scope=openid profile&response_type=code&acr_values=mosip:idp:acr:generated-code mosip:idp:acr:biometrics mosip:idp:acr:linked-wallet&claims={"userinfo":{"given_name":{"essential":true},"phone_number":{"essential":false},"email":{"essential":true},"picture":{"essential":false},"gender":{"essential":false},"birthdate":{"essential":false},"address":{"essential":false}},"id_token":{}}&claims_locales=en&display=page&ui_locales=en-US```
 
       {% swagger src="../.gitbook/assets/esignet-1.2.0.yml" path="/authorize" method="get" %}
       [esignet-1.2.0.yml](../.gitbook/assets/esignet-1.2.0.yml)
@@ -245,3 +245,5 @@ Other online tools are listed below
 * https://irrte.ch/jwt-js-decode/pem2jwk.html
 
 ### OpenId Plugins to integrate with token and userinfo endpoint
+
+//TODO

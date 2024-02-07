@@ -29,4 +29,4 @@ On receiving the id-token and access-token from the "_**/token**_" endpoint, the
 
 Please consult the accompanying Readme files in their respective repositories for instructions on how to build and run the mock relying party portal.
 
-{% embed url="https://github.com/mosip/esignet-mock-services/tree/release-0.9.X/mock-relying-party-service#build--run-for-developers" %}
+{% embed url="https://github.com/mosip/esignet-mock-services/tree/master/mock-relying-party-service#build--run-for-developers" %}

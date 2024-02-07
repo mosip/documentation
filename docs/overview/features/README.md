@@ -8,12 +8,6 @@ eSignet offers a convenient feature called Unified Login, which allows users to 
 
 eSignet implements a password-less login method that leverages authentication factors supported by our system. This approach enhances security by mitigating the potential risks associated with password-related security vulnerabilities, such as weak passwords, password reuse, and phishing attacks.
 
-{% hint style="info" %}
-Though we don't believe in passwords, eSignet still provides an option to enable password-based authentication for an authentication system that stores passwords. In order to perform password-based authentication in eSignet, you can go through the below article.
-
-[How to enable password-based authentication in eSignet?](../../faq/#how-to-configure-password-authentication-in-e-signet)
-{% endhint %}
-
 ## Support for various Authentication Modalities
 
 ### OTP Authentication
@@ -27,6 +21,10 @@ eSignet can connect to any biometric device that complies with IEEE P3167 SBI 2.
 ### Wallet-Based Authentication
 
 Mobile wallet-based authentication can be utilized to scan a QR code and finalize the authentication process using the previously activated credentials for online login. Additionally, facial authentication can happen on the wallet to make sure the presence is verified.
+
+### Password based Authentication
+
+eSignet also supports password as one of the authentication factor. Existing ID repositories storing user accounts with password can now be easily integrated with eSignet to offer OpenID based login to avail relying party services. 
 
 ## Verifiable Credentials Issuance
 

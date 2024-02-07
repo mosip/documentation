@@ -1,6 +1,6 @@
 # Deployment Architecture
 
-This page has the proposed deployment architecture for eSignet.
+This page has the proposed deployment architecture for eSignet in production.
 
 <figure><img src="../.gitbook/assets/deployment-diagram.png" alt=""><figcaption><p><em>eSignet Deployment Diagram</em></p></figcaption></figure>
 
