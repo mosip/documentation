@@ -2,11 +2,9 @@
 
 The Authenticator plugin is the main interface for eSignet, which provides methods to authenticate the end-user with control of the supported authentication factors.
 
-For example, if OTP is one of the supported authentication factors, the interface provides a method to,
+The two main functionalities of the authenticator interface, **KYC Auth** and **KYC Exchange,** are depicted in the below diagram
 
-* Define the supported OTP channels,
-* Implement the send-OTP functionality and
-* A method to share a list of certificates used for verifying user data published at [_/.well-known/jwks.json_](../build-and-deploy/configuration/.well-known/jwks.json.md), as per OIDC standards.
+<figure><img src="../.gitbook/assets/activity-diagrams-authenticator (1).png" alt=""><figcaption></figcaption></figure>
 
 Below is the eSignet authenticator interface,
 
@@ -54,6 +52,7 @@ public interface Authenticator {
 
     /**
      * Get the list of KYC signing certificates and their details.
+     * List of certificates used for verifying KYC JWT will be published in /.well-known/jwks.json, as per OIDC standards
      * @return list of certificates
      */
     List<KycSigningCertificateData> getAllKycSigningCertificates() throws KycSigningCertificateException;
@@ -64,9 +63,13 @@ public interface Authenticator {
 For the latest version of the interface please check our code base - [Authenticator.java](https://github.com/mosip/esignet/blob/master/esignet-integration-api/src/main/java/io/mosip/esignet/api/spi/Authenticator.java)
 {% endhint %}
 
-## Who uses this plugin?
 
-The authenticator plugin is implemented by [Identity Systems](../glossary.md#identity-systems) that want to integrate with eSignet and expose endpoints for the above interfaces.
+## Who should implement Authenticator plugin interface?
+
+The authenticator plugin is implemented by [Identity Systems](../glossary.md#identity-systems) that wish to integrate with eSignet to leverage the digital usage of identities.
+
+An Identity system can be as simple as a table in a database or an Excel file storing user identity data, or can be a complex Identity System.
+
 
 ## How to implement this plugin?
 
@@ -83,8 +86,26 @@ public class MockAuthenticationService implements Authenticator {
 }
 ```
 
-## Appendix - KYC Auth and Exchange
+For example, if OTP is one of the supported authentication factors in your identity system, authenticator interface provides method to,
 
-The two main functionalities of the authenticator interface, **KYC Auth** and **KYC Exchange,** are depicted in the diagram below:
+* Define the supported OTP channels,
+* Implement the send-OTP functionality
 
-<figure><img src="../.gitbook/assets/activity-diagrams-authenticator (1).png" alt=""><figcaption></figcaption></figure>
+If the identity system does not support OTP based authentication then you could throw exception with appropriate error code.
+
+```java    
+    SendOtpResult sendOtp(String relyingPartyId, String clientId, SendOtpDto sendOtpDto) {
+        throw new SendOtpException("not_supported");
+    }
+
+    boolean isSupportedOtpChannel(String channel) {
+        return false;
+    }
+```
+
+And also configure eSignet to expose only supported auth factors in the well-known endpoint.
+
+
+
+
+
