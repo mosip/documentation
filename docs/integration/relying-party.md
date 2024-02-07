@@ -23,7 +23,7 @@ This guide helps the developers of the relying party to get started with their d
 **Please do not use the same key for production. Its extremely dangerous. Create keys in safe production-grade hardened machines/vault/HSM.
 {% endhint %}
 
-#### Register/onboard as OIDC client with ID provider
+#### Register / Onboard as OIDC client with ID provider
 
 Once the above steps are completed the relying parties developers/managers are required to follow these steps:
 
@@ -84,7 +84,7 @@ Setup your development environment. Once done you need to follow the following s
   * The button upon click should get a unique state (a random value) & nonce (a random value) from the server and redirect to the "/authorize" endpoint of the ID provider.  A sample URL is listed here. The details of what is supported are listed on the [.well-known](../build-and-deploy/configuration/.well-known/openid-configuration.md) file in the respective eSignet provider.
     
     * Sample /authorize Request:
-      ```GET https://esignet.id.provider/authorize?nonce=ere973eieljznge2311&state=eree2311&client_id=Mv45rBnfuu0ocWDy9APT5k5LZbGE_l0wX7P9vQXXswg&redirect_uri=https://relyingparty.dev.net/userprofile&scope=openid profile&response_type=code&acr_values=mosip:idp:acr:generated-code mosip:idp:acr:biometrics mosip:idp:acr:linked-wallet&claims={"userinfo":{"given_name":{"essential":true},"phone_number":{"essential":false},"email":{"essential":true},"picture":{"essential":false},"gender":{"essential":false},"birthdate":{"essential":false},"address":{"essential":false}},"id_token":{}}&claims_locales=en&display=page&ui_locales=en-US```
+      ```GET https://esignet.id.provider.domain.name/authorize?nonce=ere973eieljznge2311&state=eree2311&client_id=Mv45rBnfuu0ocWDy9APT5k5LZbGE_l0wX7P9vQXXswg&redirect_uri=https://relyingparty.dev.net/userprofile&scope=openid profile&response_type=code&acr_values=mosip:idp:acr:generated-code mosip:idp:acr:biometrics mosip:idp:acr:linked-wallet&claims={"userinfo":{"given_name":{"essential":true},"phone_number":{"essential":false},"email":{"essential":true},"picture":{"essential":false},"gender":{"essential":false},"birthdate":{"essential":false},"address":{"essential":false}},"id_token":{}}&claims_locales=en&display=page&ui_locales=en-US```
 
       {% swagger src="../.gitbook/assets/esignet-1.2.0.yml" path="/authorize" method="get" %}
       [esignet-1.2.0.yml](../.gitbook/assets/esignet-1.2.0.yml)
@@ -96,10 +96,10 @@ Setup your development environment. Once done you need to follow the following s
 * Callback
   * The callback URL is the landing page/URL after the completion(Success|Failure) of authentication. The relying party developers are requested to provide this callback URL. The following signatures apply for the same.
 
-  https://relyingparty.doman.name/callbackurl?state=same-that-you-supplied&nonce=same-that-you-supplied&code=authorization_code&error_description=in_case_of_error_this_is_sent&error=error_code
+  https://relyingparty.domain.name/callbackurl?state=same-that-you-supplied&nonce=same-that-you-supplied&code=authorization_code&error_description=in_case_of_error_this_is_sent&error=error_code
 
   {% hint style="info" %}
-  https://relyingparty.doman.name/callbackurl is based on the domain pattern you sent during OAuth client registration.
+  https://relyingparty.domain.name/callbackurl is based on the domain pattern you sent during OAuth client registration.
   {% endhint %}
 
   * Once the redirection happens the relying party is expected to perform the following
@@ -142,7 +142,7 @@ Setup your development environment. Once done you need to follow the following s
         "aud": "yzLgU7sj8fr2qcqL-MZjwYnl-5ADiClp7Ycj8LiUV5I",
         "acr": "mosip:idp:acr:generated-code",
         "auth_time": 1672759590,
-        "iss": "https://esignet.id.provider",
+        "iss": "https://esignet.id.provider.domain.name",
         "exp": 1672766837,
         "iat": 1672759637,
         "nonce": "973eieljzng"
@@ -160,7 +160,7 @@ Setup your development environment. Once done you need to follow the following s
     {
     "sub": "268524736272681240519736297238054502",
     "aud": "yzLgU7sj8fr2qcqL-MZjwYnl-5ADiClp7Ycj8LiUV5I",
-    "iss": "https://esignet.id.provider",
+    "iss": "https://esignet.id.provider.domain.name",
     "exp": 1672766837,
     "iat": 1672759637
     }```
