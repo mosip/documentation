@@ -920,9 +920,10 @@ paths:
               - profile
               - email
               - phone
+              - address
           in: query
           name: scope
-          description: Specifies what access privileges are being requested for Access Tokens. The scopes associated with Access Tokens determine what resources will be available when they are used to access OAuth 2.0 protected endpoints. OpenID Connect requests MUST contain the OpenID scope value. Developers who are interested in VCI should use the scope mosip_identity_vc_ldp
+          description: Specifies what access privileges are being requested for Access Tokens. The scopes associated with Access Tokens determine what resources will be available when they are used to access OAuth 2.0 protected endpoints. OpenID Connect requests MUST contain the OpenID scope value. Developers who are interested in VCI flow should use the VC scope without opendid scope, For example 'mosip_identity_vc_ldp'
           required: true
         - schema:
             type: string

@@ -26,6 +26,8 @@ Mobile wallet-based authentication can be utilized to scan a QR code and finaliz
 
 eSignet also supports password as one of the authentication factor. Existing ID repositories storing user accounts with password can now be easily integrated with eSignet to offer OpenID based login to avail relying party services. 
 
+[How to enable password-based authentication in eSignet?](../../faq/#how-to-configure-password-authentication-in-e-signet)
+
 ## Verifiable Credentials Issuance
 
 Verifiable credentials (VCs) are an open standard for digital credentials. They can represent information found in physical credentials, such as a passport or license, in digital format. They have numerous advantages over physical credentials, most notably that they're digitally signed, which makes them tamper-resistant and instantly verifiable.
