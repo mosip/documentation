@@ -15,13 +15,11 @@ This guide helps the developers of the relying party to get started with their d
 
 * Choose the JWT plugins for the respective technology stack.
 
-* Create the **keys (a password-protected private key & store it safely).
+* Create the _keys_ (a password-protected private key & store it safely).
+
+  __Note__: Please avoid using identical keys for production purposes, as it poses a significant risk. Instead, it is recommended to generate keys on secure production-grade machines, vaults, or Hardware Security Modules (HSMs).
 
 * Design your callback API. The callback API is redirected by eSignet over the user's browser upon successful authentication. As best practice please ensure the callback API can render the UX as soon as possible so the user is aware of the progress. Please note that the user is redirected on both success and failure authentication. On failure, the user will be redirected without an auth-code. So based on the authentication response relying party portal needs to take the necessary action before allowing the user to move forward.
-
-{% hint style="info" %}
-**Please do not use the same key for production. Its extremely dangerous. Create keys in safe production-grade hardened machines/vault/HSM.
-{% endhint %}
 
 #### Register / Onboard as OIDC client with ID provider
 
@@ -52,8 +50,10 @@ The eSignet providers may have additional non-technical requirements. Those are 
 {% endhint %}
 
 {% hint style="info" %}
-These callback URL are for development purpose and choose them according to the URL in your development/qa environment. As much as possible * should avoided as it could result in security issues. For development its ok to provide the * as above.
-For the phone app the app callback deeplink should be provided. The following are the unsupported URL patterns.
+These callback URL are for development purpose and choose them according to the URL in your development/qa environment. As much as possible * should avoided as it could result in security issues. For development,  it is okay to provide the * as above.
+For the phone app, the app callback deeplink should be provided. 
+
+The following are the unsupported URL patterns.
 
   \\*
 
@@ -69,7 +69,7 @@ For the phone app the app callback deeplink should be provided. The following ar
 
 #### Development of Relying party application
 
-Setup your development environment. Once done you need to follow the following steps
+Setup your development environment. Once done, you will need to follow the following steps
 
 * Invoking eSignet authorize URL
   * Add a button on your login screen. The button might have standards in terms of logo, colour, and size. The ID provider usually provides these guidelines.
@@ -84,7 +84,10 @@ Setup your development environment. Once done you need to follow the following s
   * The button upon click should get a unique state (a random value) & nonce (a random value) from the server and redirect to the "/authorize" endpoint of the ID provider.  A sample URL is listed here. The details of what is supported are listed on the [.well-known](../build-and-deploy/configuration/.well-known/openid-configuration.md) file in the respective eSignet provider.
     
     * Sample /authorize Request:
-      ```GET https://esignet.id.provider.domain.name/authorize?nonce=ere973eieljznge2311&state=eree2311&client_id=Mv45rBnfuu0ocWDy9APT5k5LZbGE_l0wX7P9vQXXswg&redirect_uri=https://relyingparty.dev.net/userprofile&scope=openid profile&response_type=code&acr_values=mosip:idp:acr:generated-code mosip:idp:acr:biometrics mosip:idp:acr:linked-wallet&claims={"userinfo":{"given_name":{"essential":true},"phone_number":{"essential":false},"email":{"essential":true},"picture":{"essential":false},"gender":{"essential":false},"birthdate":{"essential":false},"address":{"essential":false}},"id_token":{}}&claims_locales=en&display=page&ui_locales=en-US```
+      
+      ```
+      GET https://esignet.id.provider.domain.name/authorize?nonce=ere973eieljznge2311&state=eree2311&client_id=Mv45rBnfuu0ocWDy9APT5k5LZbGE_l0wX7P9vQXXswg&redirect_uri=https://relyingparty.dev.net/userprofile&scope=openid profile&response_type=code&acr_values=mosip:idp:acr:generated-code mosip:idp:acr:biometrics mosip:idp:acr:linked-wallet&claims={"userinfo":{"given_name":{"essential":true},"phone_number":{"essential":false},"email":{"essential":true},"picture":{"essential":false},"gender":{"essential":false},"birthdate":{"essential":false},"address":{"essential":false}},"id_token":{}}&claims_locales=en&display=page&ui_locales=en-US
+      ```
 
       {% swagger src="../.gitbook/assets/esignet-1.2.0.yml" path="/authorize" method="get" %}
       [esignet-1.2.0.yml](../.gitbook/assets/esignet-1.2.0.yml)
