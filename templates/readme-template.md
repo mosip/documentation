@@ -3,8 +3,10 @@
 ## Overview /Introduction /About
 
 This is a sample Readme template that can be used by developers to introduce the readers about what the repository/directory would contain.
-You should also add the link to other supporting front-end documentation like our docs/ eSignet documentation/ Inji documentation link/etc.
 
+## Documentation
+
+This section can have the link to other supporting front-end documentation like our docs/ eSignet documentation/ Inji documentation link/etc. For example, To understand the features of eSignet, refer eSignet Documentation <give the hyperlink>.
 
 ## Built With 
 
