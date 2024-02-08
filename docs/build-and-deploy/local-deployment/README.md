@@ -1,14 +1,14 @@
-# Local Setup and Deployment
+# Local Deployment
 
 This document details the steps for running eSignet locally on your system for local development and integration.
 
-For the local deployment, eSignet is integrated with [mock identity system](https://github.com/mosip/esignet-mock-services/tree/master/mock-identity-system) using eSignet plugins specifically developed to connect with mock identity system.You can find the mock plugin implementation [here](https://github.com/mosip/esignet-mock-services/tree/master/mock-esignet-integration-impl).
+For the local deployment, eSignet is integrated with [mock identity system](https://github.com/mosip/esignet-mock-services/tree/master/mock-identity-system) using eSignet plugins specifically developed to connect with mock identity system. You can find the mock plugin implementation [here](https://github.com/mosip/esignet-mock-services/tree/master/mock-esignet-integration-impl).
 
 ![](../../.gitbook/assets/esignet-with-mock-identity-system.png)
 
 We have [docker-compose](https://github.com/mosip/esignet/tree/develop/docs/docker-compose) setup to start eSignet and its dependent services.
 
-You can also watch below video to setup and run eSignet and its dependent services locally one by one.
+You may find it helpful to watch the video below, which provides instructions on how to setup and run eSignet along with its dependent services locally.
 
 {% embed url="https://www.youtube.com/watch?v=nmIZl6Tmt68" %}
 

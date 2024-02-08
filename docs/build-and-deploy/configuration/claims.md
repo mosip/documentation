@@ -1,8 +1,8 @@
 # Claims
 
-In the context of authentication and authorization, "claims" are statements about an entity, such as a user, that are made by an identity provider (IdP). Claims are pieces of information that describe attributes, characteristics, or other properties associated with an entity.
+In the context of authentication and authorization, **claims** are statements about an entity, such as a user, that are made by an identity provider (IdP). Claims are pieces of information that describe attributes, characteristics, or other properties associated with an entity.
 
-These claims are typically packaged into security tokens, such as SAML (Security Assertion Markup Language) tokens or JWTs (JSON Web Tokens), and are used to convey information about the entity's identity and associated permissions.&#x20;
+These claims are typically packaged into security tokens, such as SAML (Security Assertion Markup Language) tokens or JWTs (JSON Web Tokens) and are used to convey information about the entity's identity and associated permissions.
 
 Claims are essential for implementing authentication and authorization processes. Relying parties (e.g., web applications) can examine these claims to determine whether the user should be granted access and what level of access they should receive. Claims-based authentication and authorization provide a flexible and standardized way to handle identity and access management in a wide range of applications and services.
 

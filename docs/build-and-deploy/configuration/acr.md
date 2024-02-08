@@ -1,6 +1,6 @@
 # ACR
 
-ACR, which stands for "Authentication Context Class Reference," is a parameter used in authentication and identity systems to define the context or level of assurance associated with an authentication event.
+ACR, which stands for **Authentication Context Class Reference**, is a parameter used in authentication and identity systems to define the context or level of assurance associated with an authentication event.
 
 ACR values are used to convey information about how a user was authenticated and the strength of that authentication. ACR values are typically defined by identity providers and relying parties to communicate the level of trust and security associated with an authentication event. These values can vary from one system to another but are often used to indicate different levels of assurance.
 
@@ -19,10 +19,10 @@ eSignet currently supports the below ACR values:
 * **mosip:idp:acr:linked-wallet**\
   For wallet-based authentication, which requires the wallet to be bound to the server. Thereafter, the binding key could be used to sign the JWT with the server-signed certificate in the header as an authentication factor.
 * **mosip:idp:acr:password**\
-  For password based authentication.
+  For password-based authentication.
 
 {% hint style="info" %}
-acr\_values request parameter in the `/authorize` request takes the above values as a space-separated list in any combination. 
+acr\_values request parameter in the `/authorize` request takes the above values as a space-separated list in any combination.
 {% endhint %}
 
 {% hint style="info" %}

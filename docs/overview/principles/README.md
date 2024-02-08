@@ -6,7 +6,7 @@ eSignet is designed with the architectural principles mentioned below. These arc
 
 * As the user enters the ID directly on the eSignet page, the relying party does not have to store the ID, which could otherwise be used for profiling in case of data leaks. The relying party gets a privacy-enabled token that is unique to the relying party and the user and is called the PSUT (Partner Specific User Token).
 * Sensitive data is protected (not stored or logged in clear form).
-* Consent support: the user decides what data can be shared with the relying party.
+* **Consent support**: The user decides the data that can be shared with the relying party.
 
 ## No Vendor Lock-in
 

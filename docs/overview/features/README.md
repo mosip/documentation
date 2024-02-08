@@ -18,13 +18,13 @@ OTP authentication offers an additional level of security due to the short valid
 
 eSignet can connect to any biometric device that complies with IEEE P3167 SBI 2.0 standards, perform secure biometric capture, and enable authentication against an underlying ID system that has the capability to perform biometric authentication.
 
-### Wallet-Based Authentication
+### Wallet-based Authentication
 
 Mobile wallet-based authentication can be utilized to scan a QR code and finalize the authentication process using the previously activated credentials for online login. Additionally, facial authentication can happen on the wallet to make sure the presence is verified.
 
-### Password based Authentication
+### Password-based Authentication
 
-eSignet also supports password as one of the authentication factor. Existing ID repositories storing user accounts with password can now be easily integrated with eSignet to offer OpenID based login to avail relying party services. 
+eSignet also offers password authentication as one of its authentication factors. With eSignet's integration capabilities, existing ID repositories storing user accounts with password can now be easily integrated with eSignet. This integration enables OpenID based login, allowing users to access relying party services seamlessly.
 
 [How to enable password-based authentication in eSignet?](../../faq/#how-to-configure-password-authentication-in-e-signet)
 
