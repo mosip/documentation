@@ -32,9 +32,7 @@ To create an application, the resident/operator can follow the steps below:
 5. Click **Send OTP** to receive a One Time Password (OTP) on your provided email address or mobile number.
 6. Enter the OTP and click **Verify**.
 
-_Note:_ In case you have not received OTP, click **Send** to receive a OTP again. Enter the newly received OTP.
-
-When your OTP is verified, you can create, view, or modify your pre-registration application.
+Note: If you have not received the One-Time Password (OTP), please click on **Send** to request another OTP. Enter the newly received OTP to proceed. Once your OTP has been successfully verified, you will be able to create, view, or update your pre-registration application.
 
 ### Create an application
 
