@@ -18,9 +18,11 @@ eSignet currently supports the below ACR values:
   For biometric authentication use a MOSIP SBI 2.0-compliant device.
 * **mosip:idp:acr:linked-wallet**\
   For wallet-based authentication, which requires the wallet to be bound to the server. Thereafter, the binding key could be used to sign the JWT with the server-signed certificate in the header as an authentication factor.
+* **mosip:idp:acr:password**\
+  For password based authentication.
 
 {% hint style="info" %}
-acr\_values request parameter in the `/authorize` request takes the above values as a space-separated list in any combination.
+acr\_values request parameter in the `/authorize` request takes the above values as a space-separated list in any combination. 
 {% endhint %}
 
 {% hint style="info" %}

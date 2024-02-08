@@ -910,24 +910,20 @@ paths:
 
         This endpoint will respond with a basic HTML page to load a JS application in the browser. UI JS application will then echo all the query parameters received in this endpoint to the "/authorization/oauth-details" endpoint as the request body.
 
-        All the validations on the query parameter values will be performed in the "/authorization/oauth-details" endpoint.
-
         **Authentication & Authroization**: None
       parameters:
         - schema:
             type: string
             default: openid profile
             enum:
-              - openid profile
               - openid
               - profile
               - email
-              - address
               - phone
-              - offline_access
+              - address
           in: query
           name: scope
-          description: Specifies what access privileges are being requested for Access Tokens. The scopes associated with Access Tokens determine what resources will be available when they are used to access OAuth 2.0 protected endpoints. OpenID Connect requests MUST contain the OpenID scope value.
+          description: Specifies what access privileges are being requested for Access Tokens. The scopes associated with Access Tokens determine what resources will be available when they are used to access OAuth 2.0 protected endpoints. OpenID Connect requests MUST contain the OpenID scope value. Developers who are interested in VCI flow should use the VC scope without opendid scope, For example 'mosip_identity_vc_ldp'
           required: true
         - schema:
             type: string
@@ -949,7 +945,7 @@ paths:
             format: uri
           in: query
           name: redirect_uri
-          description: Redirection URI to which the response would be sent. This URI must match one of the redirection URI values during the client ID creation.
+          description: The redirect URI is the callback URL of your application. This URI must match one of the redirection URI values during the client ID creation. The callback is the URL where the relying party wants to be redirected upon successful or failed authorization. In case of a development environment please use the http://localhost:<portnumber>/url-to-callback. Most often the URL is expected to load the user interface to keep the user informed of the action that's taking place.
           required: true
         - schema:
             type: string
@@ -964,32 +960,6 @@ paths:
           name: nonce
         - schema:
             type: string
-            enum:
-              - page
-              - popup
-              - touch
-              - wap
-          in: query
-          name: display
-          description: ASCII string value that specifies how the Authorization Server displays the authentication and consent user interface pages to the end user.
-        - schema:
-            type: string
-            enum:
-              - none
-              - login
-              - consent
-              - select_account
-            example: consent
-          in: query
-          name: prompt
-          description: Space delimited case-sensitive list of ASCII string values that specifies whether the Authorization Server prompts the End-User for re-authentication and consent.
-        - schema:
-            type: number
-          in: query
-          name: max_age
-          description: 'Maximum Authentication Age. This specifies the allowable elapsed time in seconds since the last time the end user was actively authenticated by the OP. If the elapsed time is greater than this value, then the OP MUST attempt to actively re-authenticate the end user. The max_age request parameter corresponds to the OpenID 2.0 PAPE [OpenID.PAPE] max_auth_age request parameter. When max_age is used, the ID Token returned MUST include an auth_time claim value.'
-        - schema:
-            type: string
           in: query
           name: ui_locales
           description: 'End user''s preferred languages and scripts for the user interface, represented as a space-separated list of BCP47 [RFC5646] language tag values, ordered by preference. For instance, the value "fr-CA fr en" represents a preference for French as spoken in Canada, then French (without a region designation), followed by English (without a region designation). An error SHOULD NOT result if some or all of the requested locales are not supported by the OpenID Provider.'
@@ -997,17 +967,17 @@ paths:
             type: string
           in: query
           name: acr_values
-          description: 'Requested Authentication Context Class Reference values. Space-separated string that specifies the acr values that the Authorization Server is being requested to use for processing this Authentication Request, with the values appearing in order of preference. The Authentication Context Class satisfied by the authentication performed is returned as the acr Claim Value, as specified in Section 2. The acr Claim is requested as a Voluntary Claim by this parameter.'
+          description: 'Space-separated string that specifies the acr values that the Authorization Server is being requested to use for processing this Authentication Request, with the values appearing in order of preference. The possible values can be discovered from the eSignet .well-known. The acr_values are used to force the eSignet the preferred authentication mechanism.  In case you need only biometric authentication then you can specify the acr_values as "mosip:idp:acr:biometrics" This will ensure to show only the biometric authentication to the user and would provide no other alternative login mechanism.'
         - schema:
             type: string
           in: query
           name: claims_locales
-          description: 'End-User''s preferred languages and scripts for Claims being returned, represented as a space-separated list of BCP47 [RFC5646] language tag values, ordered by preference. An error SHOULD NOT result if some or all of the requested locales are not supported by the OpenID Provider.'
+          description: 'End-User''s preferred language for Claims being returned, represented as a space-separated list of BCP47 [RFC5646] language tag values, ordered by preference. An error SHOULD NOT result if some or all of the requested locales are not supported by the OpenID Provider.'
         - schema:
             type: string
           in: query
           name: claims
-          description: This parameter is used to request specific claims to be returned. The value is a JSON object listing the requested claims. The claims parameter value is represented in an OAuth 2.0 request as UTF-8 encoded JSON.
+          description: This parameter is used to request specific claims to be returned. The value is a JSON object listing the requested claims. The claims parameter value is represented in an OAuth 2.0 request as UTF-8 encoded JSON. The same is displayed to the end user during consent. This has to be in line with the approval that you received at the end of the client Id creation with the ID provider.
         - schema:
             type: string
           in: query
@@ -3369,12 +3339,12 @@ paths:
                     type: string
                     x-stoplight:
                       id: ds94enhwrvdfs
-                    description: JSON string containing a nonce to be used to create a proof of possession of key material when requesting a Credential.
+                    description: This is returned only when authorize request was sent with VC scope. This is a string containing a nonce to be used to create a proof of possession of key material when requesting a Credential.
                   c_nonce_expires_in:
                     type: number
                     x-stoplight:
                       id: ctpnqgk9peag7
-                    description: JSON integer denoting the lifetime in seconds of the c_nonce.
+                    description: This is returned only when authorize request was sent with VC scope. This is integer denoting the lifetime in seconds of the c_nonce.
                 required:
                   - access_token
                   - token_type
@@ -3385,8 +3355,6 @@ paths:
                     token_type: Bearer
                     access_token: eyJraWQiOiJLT19tVHBfc1QwemxGRVVkX25UdGhmbzl0RTlTX21GQnJ6OTFwZjd5RFFBIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJQVlJtZkRwZ1pKcXZMTWZZcTZwcUItTDNZQTZXR3dYZmxiTlJpVWF6THJjIiwiYXVkIjoiaHR0cHM6XC9cL2VzaWduZXQtbW9jay5jb2xsYWIubW9zaXAubmV0XC92MVwvZXNpZ25ldFwvdmNpXC9jcmVkZW50aWFsIiwiY19ub25jZV9leHBpcmVzX2luIjo0MCwiY19ub25jZSI6IkN0OXJwUUZiOTZRU1N3Z0hBZkRPIiwic2NvcGUiOiJzYW1wbGVfdmNfbGRwIiwiaXNzIjoiaHR0cHM6XC9cL2VzaWduZXQtbW9jay5jb2xsYWIubW9zaXAubmV0XC92MVwvZXNpZ25ldCIsImV4cCI6MTY5ODYzNTczOSwiaWF0IjoxNjk4NjMyMTM5LCJjbGllbnRfaWQiOiI4OFZqdDM0YzVUd3oxb0oifQ.EAWkcaDUTMH1FcrXdsj4s-y9t8gVB1YBiIZ6VqZD3ZSGR3OrkIQUN2y8vbtvXJv8WAVV_0pvphFjIa9gVRP63_vdZipJ3h04vYcpyfTn50Yml-77uhB_JgHeQWZ0rnCQ1LQGSdSYKro9A1smevVCb1vyPf6QoQPumzKHJ9Jg7SojyhXON2sdIn94Xc5-gok-jGQEapbIBm3RhUEsFPGl7MjaMqBpodV-JOuEi0j_7VfxhLTXXoYZm_-h2aZCWJ9MQDtUC8TwNp-ap5f-O4lQx_M79jyn2mXa0NtoPPIQeffnCPq-uS43C0LZ9CQTfwIC4xV8-x2ema2fHWvtebSsmQ
                     expires_in: 3600
-                    c_nonce: Ct9rpQFb96QSSwgHAfDO
-                    c_nonce_expires_in: 40
           headers:
             Cache-Control:
               schema:
@@ -3425,25 +3393,6 @@ paths:
                 required:
                   - error
       description: |-
-        Once the client / relying party application receives the authorization code through redirect, this OIDC complaint endpoint will be called from the relying party backend application to get the ID and access token.
-
-        1. The only supported client authentication methods : <b>private_key_jwt</b>
-        2. clientAssertion is a signed JWT with Clients private key, corresponding public key should be shared with IdP during the OIDC client registration process.
-        3. clientAssertion JWT payload must be as below: 
-
-        The JWT MUST contain the following REQUIRED Claim Values and MAY contain the additional OPTIONAL Claim Values:
-
-        **iss**<span style="color:#FF0000">*</span> (Issuer): This MUST contain the client_id of the OAuth Client.
-
-        **sub**<span style="color:#FF0000">*</span> (Subject): This MUST contain the client_id of the OAuth Client.
-
-        **aud**<span style="color:#FF0000">*</span> (Audience): Value that identifies the authorization server as an intended audience. The authorization server MUST verify that it is an intended audience for the token. The audience SHOULD be the URL of the authorization server's token endpoint.
-
-        **exp**<span style="color:#FF0000">*</span> (Expiration): Time on or after which the ID token MUST NOT be accepted for processing.
-
-        **iat**<span style="color:#FF0000">*</span>: Time at which the JWT was issued.</p>
-
-        **Note**: The Client Assertion JWT can contain other Claims. Any Claims used that are not understood WILL be ignored.</p>
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3457,7 +3406,7 @@ paths:
                     - authorization_code
                 code:
                   type: string
-                  description: 'Authorization code, sent as query param in the client''s redirect URI.'
+                  description: 'Authorization code, sent as query param in the client''s callback URI.'
                 client_id:
                   type: string
                   description: Client Id of the OIDC client.
@@ -3488,13 +3437,13 @@ paths:
             examples:
               Example 1:
                 value:
-                  grant_type: authorization_code
-                  code: tyemdnjdfornfedg
-                  client_id: WMX5pO6dYdCFR3iaVWGclVPNxTNSADDv-kV7VBcnzvY
-                  client_assertion_type: 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'
-                  client_assertion: eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTg2MzE0NjAsIm5iZiI6MTY5ODYzMTQ2MCwiZXhwIjoxNjk4NjMxNTI1LCJqdGkiOiI1ZFFjaWhtb2lfQTlXMmlERGpYcDgiLCJzdWIiOiJXTVg1cE82ZFlkQ0ZSM2lhVldHY2xWUE54VE5TQUREdi1rVjdWQmNuenZZIiwiaXNzIjoiV01YNXBPNmRZZENGUjNpYVZXR2NsVlBOeFROU0FERHYta1Y3VkJjbnp2WSIsImF1ZCI6Imh0dHBzOi8vZXNpZ25ldC5jb2xsYWIubW9zaXAubmV0L3YxL2VzaWduZXQvb2F1dGgvdG9rZW4ifQ.G-OxPmb2wBq7R52PELNss9FCwvv_i2456FE4oag25BuZjwH6CgB8LDLmfCJdzeLGRuFp_MrKskGTkpsWI0RWLNtqZ7jvQTvSq8zQICusIFh9kcciWbkMsOZQqN91gPtdrn3WRS6xD7TxzwvrAeuqx4lTBbWNYTF2GQ3Zagq0t6ogOtPWg0wNioW3m11jWIdwooJ8jI2Z5oN772Lerrs1AXMnipLxQm4rdMM54taeHFrrXyxqFjoiq-bglrpHtCqeG6QFqhpQrRlIsLLoli8F1LU8Mu3Fw7ifCd6KEj9JNM_sPHjAy-JRg_dgjNdHL5tqtHzUsD5sSmLop33U4WH3Ow
-                  redirect_uri: 'https://fastlane.com/homepage'
-                  code_verifier: MN1Q0nNAKkqOu5EaNBKf2gYD4maYv9ZxLd-48N2_kTM
+                  '--data grant_type=authorization_code \'
+                  '--data code=tyemdnjdfornfedg \'
+                  '--data client_id=WMX5pO6dYdCFR3iaVWGclVPNxTNSADDv-kV7VBcnzvY \'
+                  '--data client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer \'
+                  '--data client_assertion=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTg2MzE0NjAsIm5iZiI6MTY5ODYzMTQ2MCwiZXhwIjoxNjk4NjMxNTI1LCJqdGkiOiI1ZFFjaWhtb2lfQTlXMmlERGpYcDgiLCJzdWIiOiJXTVg1cE82ZFlkQ0ZSM2lhVldHY2xWUE54VE5TQUREdi1rVjdWQmNuenZZIiwiaXNzIjoiV01YNXBPNmRZZENGUjNpYVZXR2NsVlBOeFROU0FERHYta1Y3VkJjbnp2WSIsImF1ZCI6Imh0dHBzOi8vZXNpZ25ldC5jb2xsYWIubW9zaXAubmV0L3YxL2VzaWduZXQvb2F1dGgvdG9rZW4ifQ.G-OxPmb2wBq7R52PELNss9FCwvv_i2456FE4oag25BuZjwH6CgB8LDLmfCJdzeLGRuFp_MrKskGTkpsWI0RWLNtqZ7jvQTvSq8zQICusIFh9kcciWbkMsOZQqN91gPtdrn3WRS6xD7TxzwvrAeuqx4lTBbWNYTF2GQ3Zagq0t6ogOtPWg0wNioW3m11jWIdwooJ8jI2Z5oN772Lerrs1AXMnipLxQm4rdMM54taeHFrrXyxqFjoiq-bglrpHtCqeG6QFqhpQrRlIsLLoli8F1LU8Mu3Fw7ifCd6KEj9JNM_sPHjAy-JRg_dgjNdHL5tqtHzUsD5sSmLop33U4WH3Ow \'
+                  '--data redirect_uri=https://relyingparty.doman.name/callbackurl \'
+                  '--data code_verifier=MN1Q0nNAKkqOu5EaNBKf2gYD4maYv9ZxLd-48N2_kTM'
         description: ''
       tags:
         - OIDC

@@ -4,9 +4,9 @@ eSignet's `openid-configuration` well-known endpoint holds the map, which is exa
 
 ```json
 {
-  "issuer": "https://esignet.collab.mosip.net/v1/esignet",
-  "authorization_endpoint": "https://esignet.collab.mosip.net/v1/esignet/authorize",
-  "token_endpoint": "https://esignet.collab.mosip.net/v1/esignet/oauth/token",
+  "issuer": "https://esignet.collab.mosip.net",
+  "authorization_endpoint": "https://esignet.collab.mosip.net/authorize",
+  "token_endpoint": "https://esignet.collab.mosip.net/v1/esignet/oauth/v2/token",
   "userinfo_endpoint": "https://esignet.collab.mosip.net/v1/esignet/oidc/userinfo",
   "jwks_uri": "https://esignet.collab.mosip.net/v1/esignet/oauth/.well-known/jwks.json",
   "scopes_supported": [
@@ -18,7 +18,7 @@ eSignet's `openid-configuration` well-known endpoint holds the map, which is exa
     "code"
   ],
   "acr_values_supported": [
-    "mosip:idp:acr:static-code",
+    "mosip:idp:acr:password",
     "mosip:idp:acr:generated-code",
     "mosip:idp:acr:linked-wallet",
     "mosip:idp:acr:biometrics"
@@ -28,9 +28,6 @@ eSignet's `openid-configuration` well-known endpoint holds the map, which is exa
   ],
   "userinfo_encryption_alg_values_supported": [
     "RSAXXXXX"
-  ],
-  "userinfo_encryption_enc_values_supported": [
-    "A128GCM"
   ],
   "response_modes_supported": [
     "query"
@@ -54,8 +51,7 @@ eSignet's `openid-configuration` well-known endpoint holds the map, which is exa
     "birthdate",
     "picture",
     "email",
-    "phone_number",
-    "individual_id"
+    "phone_number"
   ],
   "claims_locales_supported": [
     "en"

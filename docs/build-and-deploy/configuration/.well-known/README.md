@@ -2,7 +2,7 @@
 
 The ".well-known" folder is a convention used in web development to provide a standardized location for certain files or resources that need to be publicly accessible and discoverable. It typically resides at the root level of a website or web server. The purpose of this folder is to make it easy for web clients (browsers, applications, or services) to find important files or resources related to web services and security.
 
-### Why does eSignet use the ".well-know" directory?
+### Why does eSignet use the ".well-known" directory?
 
 eSignet uses the ".well-known" directory to serve the following purposes:
 

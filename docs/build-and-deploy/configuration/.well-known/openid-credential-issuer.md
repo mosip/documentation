@@ -4,36 +4,80 @@ eSignet's `openid-credential-issuer` well-known endpoint holds the map which is 
 
 ```json
 {
-  'credential_issuer': '${mosip.esignet.vci.identifier}',
-  'credential_endpoint': '${mosipbox.public.url}${server.servlet.path}/vci/credential',
-  'credentials_supported': {
-    'format': 'ldp_vc',
-    'id': 'SampleVerifiableCredential_ldp',
-    'scope': 'sample_vc_ldp',
-    'cryptographic_binding_methods_supported': {'did:jwk'},
-    'cryptographic_suites_supported': {'RsaSignature2018'},
-    'proof_types_supported': {'jwt'},
-    'credential_definition': {
-      'type': {'VerifiableCredential'},
-      'credentialSubject': {
-        'name': {'display': [{'name': 'Given Name', 'locale': 'en'}]},
-        'age': {'display': [{'name': 'Age', 'locale': 'en'}]}
-      }
-    },
-    'display': {
-      'name': 'Sample Verifiable Credential by e-Signet',
-      'locale': 'en',
-      'logo': {
-        'url': '${mosipbox.public.url}/logo.png',
-        'alt_text': 'a square logo of a MOSIP'
-      },
-      'background_color': '#12107c',
-      'text_color': '#FFFFFF'
+  "credential_issuer": "https://esignet.collab.mosip.net",
+  "credential_endpoint": "https://esignet.collab.mosip.net/v1/esignet/vci/credential",
+  "display": [
+    {
+      "name": "e-Signet",
+      "locale": "en"
     }
-  },
-  'display': {
-    'name': 'eSignet',
-    'locale': 'en'
+  ],
+  "credentials_supported": {
+    "MOSIPVerifiableCredential_ldp": {
+      "format": "ldp_vc",
+      "scope": "mosip_identity_vc_ldp",
+      "cryptographic_binding_methods_supported": [
+        "did:jwk"
+      ],
+      "cryptographic_suites_supported": [
+        "RsaSignature2018"
+      ],
+      "proof_types_supported": [
+        "jwt"
+      ],
+      "credential_definition": {
+        "type": [
+          "VerifiableCredential",
+          "MOSIPVerifiableCredential"
+        ],
+        "credentialSubject": {
+          "fullName": {
+            "display": [
+              {
+                "name": "Full Name",
+                "locale": "en"
+              }
+            ]
+          },
+          "phone": {
+            "display": [
+              {
+                "name": "Phone Number",
+                "locale": "en"
+              }
+            ]
+          },
+          "dateOfBirth": {
+            "display": [
+              {
+                "name": "DOB",
+                "locale": "en"
+              }
+            ]
+          },
+          "gender": {
+            "display": [
+              {
+                "name": "Gender",
+                "locale": "en"
+              }
+            ]
+          }
+        }
+      },
+      "display": [
+        {
+          "name": "MOSIP Verifiable Credential by e-Signet",
+          "locale": "en",
+          "logo": {
+            "url": "https://esignet.collab.mosip.net/logo.png",
+            "alt_text": "a square logo of a MOSIP"
+          },
+          "background_color": "#12107c",
+          "text_color": "#FFFFFF"
+        }
+      ]
+    }
   }
 }
 ```
@@ -50,8 +94,6 @@ eSignet's `openid-credential-issuer` well-known endpoint holds the map which is 
 * `credential_definition`: An object representing the definition of the sample verifiable credential.
 * `type`: The type of the verifiable credential. The value is {'VerifiableCredential'}.
 * `credentialSubject`: An object representing the subject of the verifiable credential.
-* `name`: An object representing the name of the subject. The value is {'display': \[{'name': 'Given Name', 'locale': 'en'}]}.
-* `age`: An object representing the age of the subject. The value is {'display': \[{'name': 'Age', 'locale': 'en'}]}.
 * `display`: An object representing the display information of the sample verifiable credential.
 * `name`: The name of the sample verifiable credential. The value is 'Sample Verifiable Credential by eSignet'.
 * `locale`: The locale of the display information. The value is 'en'.
