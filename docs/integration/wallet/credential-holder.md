@@ -6,14 +6,14 @@ The sequence diagram below illustrates the steps involved in the authorization c
 
 <figure><img src="../../.gitbook/assets/auth-code-flow.png" alt=""><figcaption></figcaption></figure>
 
-**Note**:&#x20;
+**Note**:
 
 * Currently, only the `ldp_vc` format in the [Credential request](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-credential-request-4) is supported.
 * Also, the [Pre-Authorized Code Flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-pre-authorized-code-flow) is not supported as yet.
 * The `private-key-jwt` is supported to enforce better security.
 
 {% hint style="info" %}
-To gain a better understanding of the VC Issuance flow in eSignet, please refer to the [activity diagram ](../vc-issuance.md#appendix-vc-issuance-flow)provided in the [VC Issuance Plugin](../vc-issuance.md) document.&#x20;
+To gain a better understanding of the VC Issuance flow in eSignet, please refer to the [activity diagram ](../vc-issuance.md#appendix-vc-issuance-flow)provided in the [VC Issuance Plugin](../vc-issuance.md) document.
 {% endhint %}
 
 Below are the steps for on-boarding a digital wallet as an OAuth Client and using the eSignet APIs to download verifiable credentials.
@@ -26,10 +26,10 @@ eSignet adheres to the OpenID4VCI wallet-initiated flow. Consequently, after aut
 
 #### 2. Get OAuth client credentials
 
-The wallet can utilize the eSignet client management APIs to formally register as an OAuth client and obtain the necessary client credentials. This will facilitate their connection with eSignet.&#x20;
+The wallet can utilize the eSignet client management APIs to formally register as an OAuth client and obtain the necessary client credentials. This will facilitate their connection with eSignet.
 
-{% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/client-mgmt/oauth-client" method="post" %}
-[esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
+{% swagger src="../../.gitbook/assets/esignet-1.2.0 (1).yml" path="/client-mgmt/oauth-client" method="post" %}
+[esignet-1.2.0 (1).yml](<../../.gitbook/assets/esignet-1.2.0 (1).yml>)
 {% endswagger %}
 
 To register the client in our Sandbox environment, click [here](../../try-it-out/).
@@ -40,8 +40,8 @@ To register the client in our Sandbox environment, click [here](../../try-it-out
 
 In order to initiate the credential issuance flow, the credential holder needs to authenticate and provide consent. Hence, the wallet needs to create a button to initiate authentication using eSignet by calling the "_**/authorize**_" endpoint.
 
-{% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/authorize" method="get" %}
-[esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
+{% swagger src="../../.gitbook/assets/esignet-1.2.0 (1).yml" path="/authorize" method="get" %}
+[esignet-1.2.0 (1).yml](<../../.gitbook/assets/esignet-1.2.0 (1).yml>)
 {% endswagger %}
 
 This process would redirect the user to a web view of eSignet's authentication screen. In this screen, the user will need to authenticate their identity and give consent to share their credentials.
@@ -52,8 +52,8 @@ Upon successful authentication and consent, the authorization code will be sent 
 
 The wallet app now needs to extract the authorization code (auth-code) parameter in the redirected deep link and exchange the **authorization code** to get the **access token and c\_nonce** from the eSignet server.
 
-{% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/oauth/v2/token" method="post" %}
-[esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
+{% swagger src="../../.gitbook/assets/esignet-1.2.0 (1).yml" path="/oauth/v2/token" method="post" %}
+[esignet-1.2.0 (1).yml](<../../.gitbook/assets/esignet-1.2.0 (1).yml>)
 {% endswagger %}
 
 {% hint style="info" %}
@@ -66,7 +66,7 @@ The wallet now needs to generate a key pair for the wallet holder and use the pr
 
 Corresponding public key is accepted as `did:jwk` in the PoP.
 
-**Note:**&#x20;
+**Note:**
 
 * eSignet does not mandate to create a different key pair for a holder on each credential request. it is left to the discretion of the wallet implementer.
 * Only `jwt` Proof Type is currently supported.
@@ -75,10 +75,10 @@ Corresponding public key is accepted as `did:jwk` in the PoP.
 
 Now, the wallet can invoke the "_**/vci/credential**_" endpoint of eSignet with PoP (Proof of Possession) and share the credential format metadata to get the Verifiable Credential in the requested format.
 
-Only the `ldp_vc` format in the [Credential request](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-credential-request-4) is supported.&#x20;
+Only the `ldp_vc` format in the [Credential request](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-credential-request-4) is supported.
 
-{% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/vci/credential" method="post" %}
-[esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
+{% swagger src="../../.gitbook/assets/esignet-1.2.0 (1).yml" path="/vci/credential" method="post" %}
+[esignet-1.2.0 (1).yml](<../../.gitbook/assets/esignet-1.2.0 (1).yml>)
 {% endswagger %}
 
 Once the credential is obtained, the wallet should be responsible for securely storing it.

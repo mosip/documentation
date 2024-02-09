@@ -16,12 +16,12 @@ As previously stated, prior to initiating authentication in eSignet, it is neces
 
 eSignet offers endpoints to request a one-time password (OTP) for this association, followed by another API to bind the public key of the wallet to the user's ID.
 
-{% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/binding/binding-otp" method="post" %}
-[esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
+{% swagger src="../../.gitbook/assets/esignet-1.2.0 (1).yml" path="/binding/binding-otp" method="post" %}
+[esignet-1.2.0 (1).yml](<../../.gitbook/assets/esignet-1.2.0 (1).yml>)
 {% endswagger %}
 
-{% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/binding/wallet-binding" method="post" %}
-[esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
+{% swagger src="../../.gitbook/assets/esignet-1.2.0 (1).yml" path="/binding/wallet-binding" method="post" %}
+[esignet-1.2.0 (1).yml](<../../.gitbook/assets/esignet-1.2.0 (1).yml>)
 {% endswagger %}
 
 Here, the challenge can be the OTP, or any other authentication type supported by eSignet, like biometrics.
@@ -41,25 +41,25 @@ To utilize the wallet with a secured credential for authentication, users are re
 * The wallet application will identify a link code within the QR code, which is essential for initiating the authentication.
 * To begin the authentication, the wallet will send the link code to the eSignet server using the _**"/linked-authorization/v2/link-transaction"**_ endpoint.
 
-{% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/linked-authorization/v2/link-transaction" method="post" %}
-[esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
+{% swagger src="../../.gitbook/assets/esignet-1.2.0 (1).yml" path="/linked-authorization/v2/link-transaction" method="post" %}
+[esignet-1.2.0 (1).yml](<../../.gitbook/assets/esignet-1.2.0 (1).yml>)
 {% endswagger %}
 
-* Once the transaction has been successfully initiated, the eSignet server will respond by providing a list of authentication factors known as WLA (Wallet Local Authentication).&#x20;
-* The wallet will then proceed to authenticate the user locally, possibly by comparing a selfie with the existing credentials stored on the phone.&#x20;
-* Upon successful local authentication on the wallet, it should generate a signed JWT (JSON Web Token) using the provided signed certificate from the wallet binding process.&#x20;
+* Once the transaction has been successfully initiated, the eSignet server will respond by providing a list of authentication factors known as WLA (Wallet Local Authentication).
+* The wallet will then proceed to authenticate the user locally, possibly by comparing a selfie with the existing credentials stored on the phone.
+* Upon successful local authentication on the wallet, it should generate a signed JWT (JSON Web Token) using the provided signed certificate from the wallet binding process.
 * Subsequently, the wallet will send the signed JWT to the eSignet server via the "/link-authorization/v2/authenticate" endpoint, using WLA as the challenge.
 
-{% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/linked-authorization/v2/authenticate" method="post" %}
-[esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
+{% swagger src="../../.gitbook/assets/esignet-1.2.0 (1).yml" path="/linked-authorization/v2/authenticate" method="post" %}
+[esignet-1.2.0 (1).yml](<../../.gitbook/assets/esignet-1.2.0 (1).yml>)
 {% endswagger %}
 
-* After the process of authentication is completed successfully, the eSignet server will proceed to send the consent action.&#x20;
+* After the process of authentication is completed successfully, the eSignet server will proceed to send the consent action.
 * The consent action can have two possible values: CAPTURE or NO CAPTURE. These values indicate whether the user should capture their consent or not.
 * In the event that the authentication response includes a consent action of CAPTURE, the wallet will prompt the user to provide their consent. The wallet will then proceed to share the captured consent with the eSignet server through the use of the _**"/link-authorization/v2/consent"**_ endpoint.
 
-{% swagger src="../../.gitbook/assets/esignet-1.2.0.yml" path="/linked-authorization/v2/consent" method="post" %}
-[esignet-1.2.0.yml](../../.gitbook/assets/esignet-1.2.0.yml)
+{% swagger src="../../.gitbook/assets/esignet-1.2.0 (1).yml" path="/linked-authorization/v2/consent" method="post" %}
+[esignet-1.2.0 (1).yml](<../../.gitbook/assets/esignet-1.2.0 (1).yml>)
 {% endswagger %}
 
 * The eSignet user interface now has the capability to automatically detect when consent has been given by the user. Subsequently, the authentication code will be sent to the redirect URI of the relying party.
