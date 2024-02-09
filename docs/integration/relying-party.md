@@ -73,8 +73,8 @@ Setup your development environment. Once done, you will need to follow the follo
     <pre data-overflow="wrap"><code><strong>GET https://esignet.id.provider.domain.name/authorize?nonce=ere973eieljznge2311&#x26;state=eree2311&#x26;client_id=Mv45rBnfuu0ocWDy9APT5k5LZbGE_l0wX7P9vQXXswg&#x26;redirect_uri=https://relyingparty.dev.net/userprofile&#x26;scope=openid profile&#x26;response_type=code&#x26;acr_values=mosip:idp:acr:generated-code mosip:idp:acr:biometrics mosip:idp:acr:linked-wallet&#x26;claims={"userinfo":{"given_name":{"essential":true},"phone_number":{"essential":false},"email":{"essential":true},"picture":{"essential":false},"gender":{"essential":false},"birthdate":{"essential":false},"address":{"essential":false}},"id_token":{}}&#x26;claims_locales=en&#x26;display=page&#x26;ui_locales=en-US
     </strong></code></pre>
 
-{% swagger src="../.gitbook/assets/esignet-1.2.0 (1) (1).yml" path="undefined" method="undefined" %}
-[esignet-1.2.0 (1) (1).yml](<../.gitbook/assets/esignet-1.2.0 (1) (1).yml>)
+{% swagger src="../.gitbook/assets/Identity-Provider (3).yaml" path="/authorize" method="get" %}
+[Identity-Provider (3).yaml](<../.gitbook/assets/Identity-Provider (3).yaml>)
 {% endswagger %}
 
 * This will navigate the user to the ID provider’s eSignet UI screen for the authentication page. If you have reached here and there is no error on the screen then congrats on your achievement.
@@ -98,8 +98,8 @@ https://relyingparty.domain.name/callbackurl is based on the domain pattern you 
   * eSignet only supports private\_key\_jwt client authentication method.
   * The server should generate a JWT with the following payload. `{ "iat": <current time>, "nbf": <current time>, "exp": <1-6 minutes from current time>, "jti": <random nonce>, "sub": <client id>, "iss": <client id>, "aud": <id provider domain uri's token end point> }`
 
-{% swagger src="../.gitbook/assets/esignet-1.2.0 (1).yml" path="/oauth/v2/token" method="post" %}
-[esignet-1.2.0 (1).yml](<../.gitbook/assets/esignet-1.2.0 (1).yml>)
+{% swagger src="../.gitbook/assets/Identity-Provider (3).yaml" path="/oauth/v2/token" method="post" %}
+[Identity-Provider (3).yaml](<../.gitbook/assets/Identity-Provider (3).yaml>)
 {% endswagger %}
 
 * Sample ID token JWT header and payload
@@ -155,8 +155,8 @@ The access token & ID token are considered as a piece of confidential informatio
 * Get userinfo with access token
   * In case the developer is interested in the user’s information (eKYC) like given\_name or anything that the claim has then Using the access token you can call the user info endpoint to get the user information as a signed JWT.
 
-{% swagger src="../.gitbook/assets/esignet-1.2.0 (1).yml" path="/oidc/userinfo" method="get" %}
-[esignet-1.2.0 (1).yml](<../.gitbook/assets/esignet-1.2.0 (1).yml>)
+{% swagger src="../.gitbook/assets/Identity-Provider (3).yaml" path="/oidc/userinfo" method="get" %}
+[Identity-Provider (3).yaml](<../.gitbook/assets/Identity-Provider (3).yaml>)
 {% endswagger %}
 
 * User info endpoints response example listed below:
