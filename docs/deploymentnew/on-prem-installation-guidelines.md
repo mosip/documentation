@@ -532,7 +532,7 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 * rke (version 1.3.10)
 * Setup MOSIP K8 Cluster node VM’s as per the hardware and network requirements as mentioned above.
 * Run `env-check.yaml` to check if cluster nodes are fine and dont have known issues in it.
-  * cd $K8\_ROOT/rancher/on-prem
+  * cd $K8\_ROOT/mosip/on-prem
   * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for MOSIP k8 cluster nodes.
     * `cp hosts.ini.sample hosts.ini`
     * `ansible-playbook -i hosts.ini env-check.yaml`
