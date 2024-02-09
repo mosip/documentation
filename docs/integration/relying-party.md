@@ -199,7 +199,7 @@ Example 2:
 ```
 
 {% hint style="info" %}
-eSignet by design does not maintain any session. So the entire session management and logout are features beyond what eSignet supports.
+eSignet by design does not maintain any session. Hence the entire session management and logout are features beyond what eSignet supports.
 {% endhint %}
 
 ### Key pair creation for registering OAuth client
@@ -208,7 +208,7 @@ eSignet by design does not maintain any session. So the entire session managemen
 
 The above command would ask you for a passphrase. Please provide a complex passphrase and ensure that it's remembered safely. Ensure to regenerate a new key when you go live the first time and keep the password/keys only on the server/HSM with restricted access.
 
-openssl rsa -pubout -in esignet\_private.pem -out esignet\_public.der
+`openssl rsa -pubout -in esignet_private.pem -out esignet_public.der`
 
 The above command would extract the public key to esignet\_public.der file. When prompted for password, enter the same passphrase as before.
 
@@ -216,16 +216,16 @@ The above command would extract the public key to esignet\_public.der file. When
 
 Use any of the online platforms or tools of your choice to convert the esignet\_public.der to JWK format. You can open the file in any text editor and copy its contents and use the tools listed below to conver to JWK.
 
-install pem-jwk tool
+`install pem-jwk tool`
 
-pem-jwk esignet\_public.der > ./esignet\_public.jwk
+`pem-jwk esignet_public.der > ./esignet_public.jwk`
 
-Other online tools are listed below
+Other online tools are listed below:
 
 * https://pem2jwk.vercel.app/
 * https://8gwifi.org/jwkconvertfunctions.jsp
 * https://irrte.ch/jwt-js-decode/pem2jwk.html
 
-### OpenId Plugins to integrate with token and userinfo endpoint
+### OpenID Plugins to integrate with token and userinfo endpoint
 
 //TODO
