@@ -1,6 +1,6 @@
 # Relying Party
 
-A relying party refers to a service provider that relies on an eSignet based identity provider for authentication and identity verification. This enables users to provide their identity details/biometrics securely and conveniently to access the services provided by the relying party.
+A relying party refers to a service provider that relies on an eSignet based identity provider for authentication and identity verification. This enables users to provide their identity details/ biometrics securely and conveniently to access the services provided by the relying party.
 
 ## Getting Started
 
@@ -10,21 +10,21 @@ This guide helps the developers of the relying party to get started with their d
 
 #### Setup my development machine:
 
-* Choose the technology stack (PHP, Python, Java, Node, Kotlin, Swift etc).
+* Choose the technology stack (PHP, Python, Java, Node, Kotlin, Swift etc.).
 * Choose the OpenID plugins for the respective technology stack.
 * Choose the JWT plugins for the respective technology stack.
 *   Create the _keys_ (a password-protected private key & store it safely).
 
-    **Note**: Please avoid using same keys for production purposes, as it poses a significant risk. Instead, it is recommended to generate keys on secure production-grade machines, vaults, or Hardware Security Modules (HSMs).
+    **Note**: Please avoid using the same keys for production purposes, as it poses a significant risk. Instead, it is recommended to generate keys on secure production-grade machines, vaults, or Hardware Security Modules (HSMs).
 * Design your callback API. The callback API is redirected by eSignet over the user's browser upon successful authentication. As best practice please ensure the callback API can render the UX as soon as possible so the user is aware of the progress. Please note that the user is redirected on both success and failure authentication. On failure, the user will be redirected without an auth-code. So based on the authentication response relying party portal needs to take the necessary action before allowing the user to move forward.
 
 #### Register / Onboard as OIDC client with ID provider
 
 Once the above steps are completed the relying parties developers/managers are required to follow these steps:
 
-* Work with the respective ID provider (eSignet provider) and request a client ID. You would need to share your public key to obtain your client ID. It is the same public key created in the above steps.
-* Provide the name that you want to register with the ID provider, the same name will be displayed on the eSignet authentication and consent page to the end user.
-* List the fields/attributes that you need from the eSignet ID provider upon the user’s consent. This is also called a claim. It's expected that the relying party indicates the mandatory and optional claims. The possible values can be discovered from the eSignet [.well-known](../build-and-deploy/configuration/.well-known/openid-configuration.md).
+* Work with the respective ID provider (eSignet provider) and request for a client ID. You would need to share your public key to obtain your client ID. It is the same public key created in the above steps.
+* Provide the name that you would want to register with the ID provider, the same name will be displayed on the eSignet authentication and consent page to the end user.
+* List the fields/ attributes that you need from the eSignet ID provider upon the user’s consent. This is also called a [**claim**](../build-and-deploy/configuration/claims.md). It's expected that the relying party indicates the mandatory and optional claims. The possible values can be discovered from the eSignet [.well-known](../build-and-deploy/configuration/.well-known/openid-configuration.md).
 * Provide the logo for your application and organization to be utilized for display on the eSignet authentication page.
 *   Provide any of the following \*\*callback URL patterns for local development & QA.
 
@@ -35,10 +35,10 @@ Once the above steps are completed the relying parties developers/managers are r
     http://ipaddrress-of-your-server:portnumber/\*
 
     my.phone.app://oauth/\*
-* Upon receiving the above information the ID provider should be able to process the request and provide you back with the client ID.
+* Upon receiving the above information, the ID provider should be able to process the request and provide you back with the client ID.
 
 {% hint style="warning" %}
-The eSignet providers may have additional non-technical requirements. Those are specific to the provider. This document will not cover those.
+The eSignet providers may have additional requirements unrelated to the technical aspects. These requirements vary depending on the provider. However, this document will not delve into those requirements.
 {% endhint %}
 
 {% hint style="info" %}
