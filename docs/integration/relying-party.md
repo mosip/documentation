@@ -71,33 +71,38 @@ For the phone app the app callback deeplink should be provided. The following ar
 The eSignet providers may have additional non-technical requirements. Those are specific to the provider. This document will not cover those.
 {% endhint %}
 
+
 #### Development of Relying party application
 
 Setup your development environment. Once done you need to follow the following steps
 
 * Invoking eSignet authorize URL
+
   * Add a button on your login screen. The button might have standards in terms of logo, colour, and size. The ID provider usually provides these guidelines.
 
   {% hint style="info" %}
     [Here](https://mosip.github.io/mosip-plugins/?path=/docs/javascript-sign-in-with-esignet--docs) is the UI storybook deployed by eSignet which can help relying party developers build the buttons for their website.
   {% endhint %}
 
-* The button upon click should get a unique state (a random value) & nonce (a random value) from the server and redirect to the "/authorize" endpoint of the ID provider.  A sample URL is listed here. The details of what is supported are listed on the [.well-known](../build-and-deploy/configuration/.well-known/openid-configuration.md) file in the respective eSignet provider.
+  * The button upon click should get a unique state (a random value) & nonce (a random value) from the server and redirect to the "/authorize" endpoint of the ID provider.  A sample URL is listed here. The details of what is supported are listed on the [.well-known](../build-and-deploy/configuration/.well-known/openid-configuration.md) file in the respective eSignet provider.
     
-  * Sample /authorize Request:
+    * Sample /authorize Request:
       
-  ```
-    GET https://esignet.id.provider.domain.name/authorize?nonce=ere973eieljznge2311&state=eree2311&client_id=Mv45rBnfuu0ocWDy9APT5k5LZbGE_l0wX7P9vQXXswg&redirect_uri=https://relyingparty.dev.net/userprofile&scope=openid profile&response_type=code&acr_values=mosip:idp:acr:generated-code mosip:idp:acr:biometrics mosip:idp:acr:linked-wallet&claims={"userinfo":{"given_name":{"essential":true},"phone_number":{"essential":false},"email":{"essential":true},"picture":{"essential":false},"gender":{"essential":false},"birthdate":{"essential":false},"address":{"essential":false}},"id_token":{}}&claims_locales=en&display=page&ui_locales=en-US
-  ```
+    ```
+      GET https://esignet.id.provider.domain.name/authorize?nonce=ere973eieljznge2311&state=eree2311&client_id=Mv45rBnfuu0ocWDy9APT5k5LZbGE_l0wX7P9vQXXswg&redirect_uri=https://relyingparty.dev.net/userprofile&scope=openid profile&response_type=code&acr_values=mosip:idp:acr:generated-code mosip:idp:acr:biometrics mosip:idp:acr:linked-wallet&claims={"userinfo":{"given_name":{"essential":true},"phone_number":{"essential":false},"email":{"essential":true},"picture":{"essential":false},"gender":{"essential":false},"birthdate":{"essential":false},"address":{"essential":false}},"id_token":{}}&claims_locales=en&display=page&ui_locales=en-US
+    ```
 
-    {% swagger src="../.gitbook/assets/esignet-1.2.0.yml" path="/authorize" method="get" %}
-    [esignet-1.2.0.yml](../.gitbook/assets/esignet-1.2.0.yml)
-    {% endswagger %}
-    
+      {% swagger src="../.gitbook/assets/esignet-1.2.0.yml" path="/authorize" method="get" %}
+      [esignet-1.2.0.yml](../.gitbook/assets/esignet-1.2.0.yml)
+      {% endswagger %}
+
   * This will navigate the user to the ID provider’s eSignet UI screen for the authentication page. If you have reached here and there is no error on the screen then congrats on your achievement.
+
   * Now the user is expected to enter his credentials on eSignet. Upon success or cancellation, the user's browser will be redirected to the approved callback URL.
 
+
 * Callback
+
   * The callback URL is the landing page/URL after the completion(Success|Failure) of authentication. The relying party developers are requested to provide this callback URL. The following signatures apply for the same.
 
   https://relyingparty.domain.name/callbackurl?state=same-that-you-supplied&nonce=same-that-you-supplied&code=authorization_code&error_description=in_case_of_error_this_is_sent&error=error_code
@@ -107,15 +112,21 @@ Setup your development environment. Once done you need to follow the following s
   {% endhint %}
 
   * Once the redirection happens the relying party is expected to perform the following
+
     * Send the state to the server. Validate if they are the same as expected. The server should also ensure the combination of state is valid.
+    
     * On Success, proceed with exchanging authorization code for access token using token endpoint.
+    
     * On failure, Use the error and error_description to decide on the user flow in your portal.
 
 
 
 * Exchange authorization code for Access token using token endpoint
+
   * Token endpoint should include client_assertion (JWT signed using OAuth Client private key). As this needs private key to build the request, we suggest relying party should delegate token request to backend server.
+  
   * eSignet only supports <b>private_key_jwt</b> client authentication method.
+  
   * The server should generate a JWT with the following payload.
   
     ```
@@ -128,12 +139,12 @@ Setup your development environment. Once done you need to follow the following s
     "iss": <client id>,
     "aud": <id provider domain uri's token end point>
     }
-    ```
+    ```    
   
   {% swagger src="../.gitbook/assets/esignet-1.2.0.yml" path="/oauth/v2/token" method="post" %}
   [esignet-1.2.0.yml](../.gitbook/assets/esignet-1.2.0.yml)
   {% endswagger %}
-  
+
   * Sample ID token JWT header and payload
     ```
       header: 
@@ -174,14 +185,17 @@ Setup your development environment. Once done you need to follow the following s
     }
     ```
     
-  * If the developer is interested in login/verify then we could consider the return of access token as a successful login. The remaining steps are optional.
+  * If the developer is only interested in login/verify then we could consider the return of access token as a successful login. The remaining steps are optional.
+
 
   {% hint style="info" %}
   The access token & ID token are considered as a piece of confidential information and its expected to be kept safe by the relying party.
   {% endhint %}
 
 
+
 * Get userinfo with access token
+
   * In case the developer is interested in the user’s information (eKYC) like given_name or anything that the claim has then Using the access token you can call the user info endpoint to get the user information as a signed JWT.
     
   {% swagger src="../.gitbook/assets/esignet-1.2.0.yml" path="/oidc/userinfo" method="get" %}
@@ -190,46 +204,48 @@ Setup your development environment. Once done you need to follow the following s
 
   * User info endpoints response example listed below:
   
-  ```
-  Example 1: 
+    ```
+    Example 1: 
   
-  {
-    "sub": "63EBC25D699305A26EE740A955852EAB2E6527BFF2F5E9E5562B502DACECD020",
-    "address": {
-      "street_address": "#991, 47 Street, 6 block",
-      "country": "KTA",
-      "locality": "KNT",
-      "region": "RSK",
-      "postal_code": "14022"
-    },
-    "gender": "Male",
-    "phone": "91600395660",
-    "name": "Manoj",
-    "email": "manoj@mail.com"
-  }
+    {
+      "sub": "63EBC25D699305A26EE740A955852EAB2E6527BFF2F5E9E5562B502DACECD020",
+      "address": {
+        "street_address": "#991, 47 Street, 6 block",
+        "country": "KTA",
+        "locality": "KNT",
+        "region": "RSK",
+        "postal_code": "14022"
+      },
+      "gender": "Male",
+      "phone": "91600395660",
+      "name": "Manoj",
+      "email": "manoj@mail.com"
+    }
   
-  Example 2: 
+    Example 2: 
   
-  {
-    "sub": "63EBC25D699305A26EE740A955852EAB2E6527BFF2F5E9E5562B502DACECD020",
-    "name#en": "Manoj",
-    "address#en": {
-      "formatted#en": "#991, 47 Street, 6 block"
-    },
-    "phone": "91600395660",
-    "gender#kn": "ಗಂಡು",
-    "name#kn": "ಮನೋಜ್",
-    "address#kn": {
-      "formatted#kn": "#991, 47 ಸ್ಟ್ರೀಟ್, 6 ಬ್ಲಾಕ್"
-    },
-    "gender#en": "Male",
-    "email": "mohd.taheer@gmail.com"
-  }
-  ```
+    {
+      "sub": "63EBC25D699305A26EE740A955852EAB2E6527BFF2F5E9E5562B502DACECD020",
+      "name#en": "Manoj",
+      "address#en": {
+        "formatted#en": "#991, 47 Street, 6 block"
+      },
+      "phone": "91600395660",
+      "gender#kn": "ಗಂಡು",
+      "name#kn": "ಮನೋಜ್",
+      "address#kn": {
+        "formatted#kn": "#991, 47 ಸ್ಟ್ರೀಟ್, 6 ಬ್ಲಾಕ್"
+      },
+      "gender#en": "Male",
+      "email": "mohd.taheer@gmail.com"
+    }
+    ```
+
 
 {% hint style="info" %}
 eSignet by design does not maintain any session. So the entire session management and logout are features beyond what eSignet supports.
 {% endhint %}
+
 
 ### Key pair creation for registering OAuth client
 

@@ -1,7 +1,7 @@
 # Login with OTP
 
 {% hint style="success" %}
-**Pre-requisite:**\
+**Prerequisites:**\
 The resident is issued with a unique virtual ID for a country's foundation ID. In the below demo application, which is a health portal, the resident is registered with MOSIP and has a valid UIN or VID.
 {% endhint %}
 

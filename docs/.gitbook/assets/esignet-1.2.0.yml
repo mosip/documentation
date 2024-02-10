@@ -30,8 +30,8 @@ info:
     PSUT - Partner(Relying Party) Specific User Token</br>
     VC - Verifiable Credential</br>
     VCI - Verifiable Credential Issuance      
-        
-       
+  
+
   license:
     name: MPL-2.0
     url: 'https://www.mozilla.org/en-US/MPL/2.0/'
@@ -591,8 +591,8 @@ paths:
                     status:
                       type: string
                       enum:
-                        - active
-                        - inactive
+                        - ACTIVE
+                        - INACTIVE
                       description: Status of OIDC client.
                     logoUri:
                       type: string
@@ -682,6 +682,7 @@ paths:
                       - authorization_code
                     clientAuthMethods:
                       - private_key_jwt
+                    status: ACTIVE
         description: ''
       tags:
         - Management
@@ -791,8 +792,8 @@ paths:
                     status:
                       type: string
                       enum:
-                        - active
-                        - inactive
+                        - ACTIVE
+                        - INACTIVE
                       description: Status of the Client.
                     logoUri:
                       type: string
@@ -860,32 +861,33 @@ paths:
             examples:
               Example 1:
                 value:
-                  value:
-                    requestTime: '2011-10-05T14:48:00.000Z'
-                    request:
-                      clientName: Fastlane e-Sim Service
-                      clientNameLangMap:
-                        fra: Service e-Sim de Fastlane
-                        ara: خدمة فاست لين e-SIM
-                      relyingPartyId: Fastlane
-                      logoUri: 'https://fastlane.com/logo.png'
-                      redirectUris:
-                        - 'https://fastlane.com/homepage'
-                        - 'http://fastlane-dev.com/*'
-                        - 'fastlaneapp://oauth/*'
-                      authContextRefs:
-                        - 'mosip:idp:acr:biometrics'
-                        - 'mosip:idp:acr:generated-code'
-                        - 'mosip:idp:acr:linked-wallet'
-                      userClaims:
-                        - name
-                        - email
-                        - phone_number
-                        - address
-                      grantTypes:
-                        - authorization_code
-                      clientAuthMethods:
-                        - private_key_jwt
+                  requestTime: '2011-10-05T14:48:00.000Z'
+                  request:
+                    clientName: Fastlane e-Sim Service
+                    clientNameLangMap:
+                      fra: Service e-Sim de Fastlane
+                      ara: خدمة فاست لين e-SIM
+                    relyingPartyId: Fastlane
+                    logoUri: 'https://fastlane.com/logo.png'
+                    redirectUris:
+                      - 'https://fastlane.com/homepage'
+                      - 'http://fastlane-dev.com/*'
+                      - 'fastlaneapp://oauth/*'
+                    authContextRefs:
+                      - 'mosip:idp:acr:biometrics'
+                      - 'mosip:idp:acr:generated-code'
+                      - 'mosip:idp:acr:linked-wallet'
+                    userClaims:
+                      - name
+                      - email
+                      - phone_number
+                      - address
+                    grantTypes:
+                      - authorization_code
+                    clientAuthMethods:
+                      - private_key_jwt
+                    status: ACTIVE
+
         description: ''
       tags:
         - Management
@@ -914,7 +916,7 @@ paths:
       parameters:
         - schema:
             type: string
-            default: openid profile
+            default: openid
             enum:
               - openid
               - profile
@@ -923,7 +925,7 @@ paths:
               - address
           in: query
           name: scope
-          description: Specifies what access privileges are being requested for Access Tokens. The scopes associated with Access Tokens determine what resources will be available when they are used to access OAuth 2.0 protected endpoints. OpenID Connect requests MUST contain the OpenID scope value. Developers who are interested in VCI flow should use the VC scope without opendid scope, For example 'mosip_identity_vc_ldp'
+          description: 'Specifies what access privileges are being requested for Access Tokens. The scopes associated with Access Tokens determine what resources will be available when they are used to access OAuth 2.0 protected endpoints. OpenID Connect requests MUST contain the OpenID scope value. Developers who are interested in VCI flow should use the VC scope without opendid scope, For example ''mosip_identity_vc_ldp'''
           required: true
         - schema:
             type: string
@@ -945,7 +947,7 @@ paths:
             format: uri
           in: query
           name: redirect_uri
-          description: The redirect URI is the callback URL of your application. This URI must match one of the redirection URI values during the client ID creation. The callback is the URL where the relying party wants to be redirected upon successful or failed authorization. In case of a development environment please use the http://localhost:<portnumber>/url-to-callback. Most often the URL is expected to load the user interface to keep the user informed of the action that's taking place.
+          description: 'The redirect URI is the callback URL of your application. This URI must match one of the redirection URI values during the client ID creation. The callback is the URL where the relying party wants to be redirected upon successful or failed authorization. In case of a development environment please use the http://localhost:<portnumber>/url-to-callback. Most often the URL is expected to load the user interface to keep the user informed of the action that''s taking place.'
           required: true
         - schema:
             type: string
@@ -1023,7 +1025,7 @@ paths:
                         description: |-
                           Auth factors defines the authentication screens displayed in IDP frontend.
                           More than one authFactor may be resolved or combination of auth factors.
-                          Precedence of authFactors is based on its order  
+                          Precedence of authFactors is based on its order
                         type: array
                         items:
                           type: array
@@ -1241,7 +1243,7 @@ paths:
                         description: |-
                           Auth factors defines the authentication screens displayed in IDP frontend.
                           More than one authFactor may be resolved or combination of auth factors.
-                          Precedence of authFactors is based on its order  
+                          Precedence of authFactors is based on its order
                         type: array
                         items:
                           type: array
@@ -1430,31 +1432,31 @@ paths:
             examples:
               example-1:
                 value:
-                  value:
-                    requestTime: '2022-09-22T08:01:10.000Z'
-                    request:
-                      clientId: WMX5pO6dYdCFR3iaVWGclVPNxTNSADDv
-                      scope: openid profile
-                      responseType: code
-                      redirectUri: 'https://fastlane.com/homepage'
-                      display: popup
-                      prompt: login
-                      acrValues: 'mosip:idp:acr:generated-code'
-                      claims:
-                        userinfo:
-                          name:
-                            essential: true
-                          phone_number: null
-                          email:
-                            essential: false
-                          address:
-                            essential: true
-                        id_token: {}
-                      nonce: 973eieljzng
-                      state: eree2311
-                      claimsLocales: en
-                      codeChallenge: UK95aVX_y3R44DF3hssd3wATvtZmO_WejE0P33-pwTs
-                      codeChallengeMethod: S256
+                  requestTime: '2022-09-22T08:01:10.000Z'
+                  request:
+                    clientId: WMX5pO6dYdCFR3iaVWGclVPNxTNSADDv
+                    scope: openid profile
+                    responseType: code
+                    redirectUri: 'https://fastlane.com/homepage'
+                    display: popup
+                    prompt: login
+                    acrValues: 'mosip:idp:acr:generated-code'
+                    claims:
+                      userinfo:
+                        name:
+                          essential: true
+                        phone_number: null
+                        email:
+                          essential: false
+                        address:
+                          essential: true
+                      id_token: {}
+                    nonce: 973eieljzng
+                    state: eree2311
+                    claimsLocales: en
+                    codeChallenge: UK95aVX_y3R44DF3hssd3wATvtZmO_WejE0P33-pwTs
+                    codeChallengeMethod: S256
+
       parameters:
         - schema:
             type: string
@@ -1539,7 +1541,7 @@ paths:
               properties:
                 requestTime:
                   type: string
-                  pattern: 'yyyy-MM-dd''T''HH:mm:ss.SSS''Z'''
+                  pattern: 'yyyy-MM-ddTHH:mm:ss.SSSZ'
                 request:
                   type: object
                   required:
@@ -1929,15 +1931,14 @@ paths:
             examples:
               Example 1:
                 value:
-                  value:
-                    requestTime: '2023-09-22T08:01:10.000Z'
-                    request:
-                      transactionId: EKb8cVbq9PX_yt46_hX0xlBJNExl9cnYtL8kGRxU5OM
-                      individualId: '464737289558'
-                      challengeList:
-                        - authFactorType: OTP
-                          challenge: '111111'
-                          format: alpha-numeric
+                  requestTime: '2023-09-22T08:01:10.000Z'
+                  request:
+                    transactionId: EKb8cVbq9PX_yt46_hX0xlBJNExl9cnYtL8kGRxU5OM
+                    individualId: '464737289558'
+                    challengeList:
+                      - authFactorType: OTP
+                        challenge: '111111'
+                        format: alpha-numeric
         description: ''
       description: |-
         Once end user provides the user identifier (UIN/VID) and all the required auth challenge to the UI application, this endpoint will be invoked.
@@ -2163,7 +2164,7 @@ paths:
         4. On open of wallet-app, wallet-app invokes /link-transaction endpoint.
         5. In the JS application, once machine-readable-code is rendered, at the same time /link-status endpoint is invoked as a polling request.
 
-        **Configuration to decide the expire date time of linkCode**: mosip.idp.link-code-expire-in-secs 
+        **Configuration to decide the expire date time of linkCode**: mosip.idp.link-code-expire-in-secs
       requestBody:
         content:
           application/json:
@@ -3296,7 +3297,7 @@ paths:
   /oauth/v2/token:
     post:
       summary: Token Endpoint V2
-      operationId: post-token
+      operationId: post-v2-token
       responses:
         '200':
           description: OK
@@ -3392,7 +3393,7 @@ paths:
                     description: Optional text providing additional information about the error that occurred.
                 required:
                   - error
-      description: |-
+      description: ''
       requestBody:
         content:
           application/x-www-form-urlencoded:
@@ -3436,14 +3437,7 @@ paths:
                 - redirect_uri
             examples:
               Example 1:
-                value:
-                  '--data grant_type=authorization_code \'
-                  '--data code=tyemdnjdfornfedg \'
-                  '--data client_id=WMX5pO6dYdCFR3iaVWGclVPNxTNSADDv-kV7VBcnzvY \'
-                  '--data client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer \'
-                  '--data client_assertion=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTg2MzE0NjAsIm5iZiI6MTY5ODYzMTQ2MCwiZXhwIjoxNjk4NjMxNTI1LCJqdGkiOiI1ZFFjaWhtb2lfQTlXMmlERGpYcDgiLCJzdWIiOiJXTVg1cE82ZFlkQ0ZSM2lhVldHY2xWUE54VE5TQUREdi1rVjdWQmNuenZZIiwiaXNzIjoiV01YNXBPNmRZZENGUjNpYVZXR2NsVlBOeFROU0FERHYta1Y3VkJjbnp2WSIsImF1ZCI6Imh0dHBzOi8vZXNpZ25ldC5jb2xsYWIubW9zaXAubmV0L3YxL2VzaWduZXQvb2F1dGgvdG9rZW4ifQ.G-OxPmb2wBq7R52PELNss9FCwvv_i2456FE4oag25BuZjwH6CgB8LDLmfCJdzeLGRuFp_MrKskGTkpsWI0RWLNtqZ7jvQTvSq8zQICusIFh9kcciWbkMsOZQqN91gPtdrn3WRS6xD7TxzwvrAeuqx4lTBbWNYTF2GQ3Zagq0t6ogOtPWg0wNioW3m11jWIdwooJ8jI2Z5oN772Lerrs1AXMnipLxQm4rdMM54taeHFrrXyxqFjoiq-bglrpHtCqeG6QFqhpQrRlIsLLoli8F1LU8Mu3Fw7ifCd6KEj9JNM_sPHjAy-JRg_dgjNdHL5tqtHzUsD5sSmLop33U4WH3Ow \'
-                  '--data redirect_uri=https://relyingparty.doman.name/callbackurl \'
-                  '--data code_verifier=MN1Q0nNAKkqOu5EaNBKf2gYD4maYv9ZxLd-48N2_kTM'
+                value: '--data grant_type=authorization_code --data code=tyemdnjdfornfedg --data client_id=WMX5pO6dYdCFR3iaVWGclVPNxTNSADDv-kV7VBcnzvY --data client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer --data client_assertion=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2OTg2MzE0NjAsIm5iZiI6MTY5ODYzMTQ2MCwiZXhwIjoxNjk4NjMxNTI1LCJqdGkiOiI1ZFFjaWhtb2lfQTlXMmlERGpYcDgiLCJzdWIiOiJXTVg1cE82ZFlkQ0ZSM2lhVldHY2xWUE54VE5TQUREdi1rVjdWQmNuenZZIiwiaXNzIjoiV01YNXBPNmRZZENGUjNpYVZXR2NsVlBOeFROU0FERHYta1Y3VkJjbnp2WSIsImF1ZCI6Imh0dHBzOi8vZXNpZ25ldC5jb2xsYWIubW9zaXAubmV0L3YxL2VzaWduZXQvb2F1dGgvdG9rZW4ifQ.G-OxPmb2wBq7R52PELNss9FCwvv_i2456FE4oag25BuZjwH6CgB8LDLmfCJdzeLGRuFp_MrKskGTkpsWI0RWLNtqZ7jvQTvSq8zQICusIFh9kcciWbkMsOZQqN91gPtdrn3WRS6xD7TxzwvrAeuqx4lTBbWNYTF2GQ3Zagq0t6ogOtPWg0wNioW3m11jWIdwooJ8jI2Z5oN772Lerrs1AXMnipLxQm4rdMM54taeHFrrXyxqFjoiq-bglrpHtCqeG6QFqhpQrRlIsLLoli8F1LU8Mu3Fw7ifCd6KEj9JNM_sPHjAy-JRg_dgjNdHL5tqtHzUsD5sSmLop33U4WH3Ow --data redirect_uri=https://relyingparty.doman.name/callbackurl --data code_verifier=MN1Q0nNAKkqOu5EaNBKf2gYD4maYv9ZxLd-48N2_kTM'
         description: ''
       tags:
         - OIDC
@@ -3965,12 +3959,12 @@ paths:
                               id: mh9ram1f4pu91
                             type: string
                         exp:
-                          type: string
+                          type: number
                           x-stoplight:
                             id: ildlqrbtesb9u
                           description: Expire datetime of the key. Given in ISO format.
                           format: date-time
-                          example: '2026-02-05T13:43:07.979Z'
+                          example: 1783915964
                       required:
                         - kid
                         - use
@@ -4035,14 +4029,14 @@ paths:
                   jwks_uri:
                     type: string
                     description: 'URL of the OP''s JSON Web Key Set [JWK] document.'
-                  registration_endpoint:
-                    type: string
-                    description: URL of Client Registration Endpoint.
                   scopes_supported:
                     type: array
                     description: 'JSON array containing a list of the OAuth 2.0 [RFC6749] scope values that this server supports.'
                     enum:
                       - openid
+                      - profile
+                      - phone
+                      - email
                     items: {}
                   response_types_supported:
                     type: array
@@ -4124,20 +4118,18 @@ paths:
                   - token_endpoint
                   - userinfo_endpoint
                   - jwks_uri
-                  - registration_endpoint
                   - scopes_supported
                   - response_types_supported
               examples:
                 Example 1:
                   value:
                     issuer: 'https://esignet.collab.mosip.net'
-                    authorization_endpoint: 'https://esignet.collab.mosip.net/v1/esignet/authorize'
-                    token_endpoint: 'https://esignet.collab.mosip.net/v1/esignet/oauth/token'
+                    authorization_endpoint: 'https://esignet.collab.mosip.net/authorize'
+                    token_endpoint: 'https://esignet.collab.mosip.net/v1/esignet/oauth/v2/token'
                     userinfo_endpoint: 'https://esignet.collab.mosip.net/v1/esignet/oidc/userinfo'
+                    jwks_uri: 'https://esignet.collab.mosip.net/.well-known/jwks.json'
                     scopes_supported:
-                      - profile
-                      - email
-                      - phone
+                      - openid
                     response_types_supported:
                       - code
                     response_modes_supported:
@@ -4228,11 +4220,11 @@ paths:
                           x-stoplight:
                             id: nr2xcq2y8wjo0
                         cryptographic_binding_methods_supported:
-                          type: string
+                          type: array
                           x-stoplight:
                             id: pc41zevq88tyl
                         proof_types_supported:
-                          type: string
+                          type: array
                           x-stoplight:
                             id: ikxe39snjo7zh
                         display:
