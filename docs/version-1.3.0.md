@@ -8,7 +8,9 @@
 
 **Release Date**: 5th January, 2024
 
-**Note**: On January 25th, 2024, the `mosip-compliance-toolkit` tag has been updated from **v1.3.0** to **v1.3.1** in order to resolve a bug in the `BiometricsQualityCheckValidator` during the conversion of `bioScore` into `bioScoreRange`.
+**Note**:
+ 1. On January 25th, 2024, the `mosip-compliance-toolkit` tag has been updated from **v1.3.0** to **v1.3.1** in order to resolve a bug in the `BiometricsQualityCheckValidator` during the conversion of `bioScore` into `bioScoreRange`.
+ 2. Furthermore, on February 12th, 2024, an update was made to the `mosip-compliance-toolkit` tag from **v1.3.1** to **v1.3.2**. This update aims to address the issue of missing table names in the `ddl.sql` located within the `db_scripts` folder.
 
 ## Overview
 
@@ -26,7 +28,7 @@ To know more about the Hash generation logic, read [Hash Generation](hash-genera
 
 | Repositories                | Tags Released                                                              |
 | --------------------------- | -------------------------------------------------------------------------- |
-| mosip-compliance-toolkit    | [v1.3.1](https://github.com/mosip/mosip-compliance-toolkit/tree/v1.3.1)    |
+| mosip-compliance-toolkit    | [v1.3.2]()    |
 | mosip-compliance-toolkit-ui | [v1.3.0](https://github.com/mosip/mosip-compliance-toolkit-ui/tree/v1.3.0) |
 | bio-utils                   | [v1.2.0.1-B4](https://github.com/mosip/bio-utils/tree/v1.2.0.1-B4)         |
 | Imagedecoder                | [v0.9.0](https://github.com/mosip/imagedecoder/tree/v0.9.0)                |
