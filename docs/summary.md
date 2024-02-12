@@ -34,6 +34,7 @@
     * [Wallet Authenticator](integration/wallet/wallet-authenticator.md)
   * [Relying Party](integration/relying-party.md)
 * [End User Guide](end-user-guide/README.md)
+  * [Login with Password](end-user-guide/login-with-password/README.md)
   * [Login with OTP](end-user-guide/login-with-otp/README.md)
   * [Login with Biometrics](end-user-guide/login-with-biometrics/README.md)
   * [Login with QR code (Inji)](end-user-guide/login-with-qr-code/README.md)
