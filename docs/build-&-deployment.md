@@ -13,13 +13,14 @@
 * [Node](https://nodejs.org/en/download)
 * [XCode](https://developer.apple.com/xcode/) for iOS development
 
-## Android - Build and run
+## Android - Build and Run
 
 ### Installation and Keystore generation on MAC
 
 #### Step 1:
 
-Configure Node & npm (We have to use v16.19.0) 
+Configure Node & npm (recommended to use v16.19.0)
+
 ```
 brew install nvm
 
@@ -31,6 +32,7 @@ nvm use 16.19.0
 #### Step 2:
 
 Configure Yarn
+
 ```
 brew install yarn
 ```
@@ -38,6 +40,7 @@ brew install yarn
 #### Step 3:
 
 Configure Gradle & Java
+
 ```
 curl -s "https://get.sdkman.io" | bash
 
@@ -48,13 +51,14 @@ sdk install java 11.0.18-amzn
 
 #### Step 4:
 
-Configure Expo, refer https://docs.expo.dev/get-started/installation/
+Configure Expo, refer [here](https://docs.expo.dev/get-started/installation/).
 
 #### Step 5:
 
-Configure Android SDK, refer https://developer.android.com/
+Configure Android SDK, refer [here](https://developer.android.com/).&#x20;
 
-Configure environment variables in your ~/.zshrc / or ~/.bashrc (depending upon your shell)
+Configure environment variables in your `~/.zshrc /` or `~/.bashrc` (depending upon your shell)
+
 ```
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 
@@ -67,7 +71,8 @@ export PATH="$PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_CMDLINE_TOOLS"
 
 #### Step 6:
 
-Generate debug keystore for building debug build
+Generate debug keystore for building debug build.
+
 ```
 keytool \
  -genkey -v \
@@ -82,7 +87,8 @@ keytool \
  -dname "CN=io.mosip.residentapp,OU=,O=,L=,S=,C=US"
 ```
 
-export keystore
+Export keystore
+
 ```
 export DEBUG_KEYSTORE_ALIAS=androiddebugkey
 
@@ -93,49 +99,49 @@ export DEBUG_KEYSTORE_PASSWORD=android
 
 #### Step 1:
 
-Install Git
+* Install Git
+* Use the below link to download git
 
-Use the below link to download git
 ```
 https://git-scm.com/download/win
 ```
-After installing run Git as admin
+
+* After installation, run Git as admin.
 
 #### Step 2:
 
-Install SDKMAN
-
-Use the below command in Git terminal
+* Install SDKMAN
+* Use the below command in Git terminal
 
 ```
 curl -s "<https://get.sdkman.io>" | bash
 ```
 
-If encounters error while installing sdkman `please install zip on your system using your favourite package manager`
+* If you encounter an error while installing sdkman, please install zip on your system using your favourite package manager.
 
 **Install zip**
 
-1. SDKMan requires the installation of the zip utility, which is not included in the default installation of Windows Git Bash.
-2. To address this, please visit the following website: https://sourceforge.net/projects/gnuwin32/files/.
-3. Locate "zip" in the list of available files and download the "zip-3.0-bin.zip" archive. Extract the "zip.exe" file from the archive and place it in the "bin" folder. Location of bin folder "C:\Program Files\Git\usr\bin".
-4. Finally, rerun the SDKMan installation script.
+1. `SDKMan` requires the installation of the zip utility, which is not included in the default installation of Windows Git Bash.
+2. To address this, please visit the [website](https://sourceforge.net/projects/gnuwin32/files/).&#x20;
+3. Locate **zip** in the list of available files and download the **zip-3.0-bin.zip** archive. Extract the **zip.exe** file from the archive and place it in the **bin** folder. Location of bin folder `C:\Program Files\Git\usr\bin`.
+4. Finally, rerun the `SDKMan` installation script.
 
 #### Step 3:
 
-Install gradle
+* Install gradle
+* Use the command below in Git terminal.
 
-use the below command in Git terminal
 ```
 sdk install gradle 8.5
 ```
 
-to check the installed gradle version
+* To check the installed gradle version.
 
-gradle -V
+`gradle -V`
 
 #### Step 4:
 
-Installing Java JDK - https://www.oracle.com/ph/java/technologies/javase/javase8-archive-downloads.html
+* Install Java JDK, refer [here](https://www.oracle.com/ph/java/technologies/javase/javase8-archive-downloads.html).&#x20;
 
 ```
 [!TIP]
@@ -144,37 +150,36 @@ Restart system
 
 #### Step 5:
 
-Install expo
+* Install expo
+
 ```
 npm install --global expo-cli
 ```
 
 #### Step 6:
 
-Install Android SDK
-```
-https://developer.android.com/
-```
+* Install Android SDK, refer [here](https://developer.android.com/).
 
 #### Step 7:
 
-Installing Node
-```
-https://nodejs.org/en/download
-```
+* Install Node, refer [here](https://nodejs.org/en/download).
 
 #### Step 8:
 
-Install nvm
+* Install nvm
+
 ```
 curl -o- <https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh> | bash
 ```
+
 or
+
 ```
 wget -qO- <https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh> | bash
 ```
 
 update the nvm version
+
 ```
 nvm install 16.19.0
 nvm use 16.19.0
@@ -183,32 +188,33 @@ nvm use 16.19.0
 #### Step 9:
 
 Install adb
+
 ```
 https://sourceforge.net/projects/quickadb/
 ```
 
-Configure ANDROID_HOME and JAVA_HOME in system environment variables
+Configure ANDROID\_HOME and JAVA\_HOME in system environment variables
+
 ### Prerequisites for running on device
 
-1. It requires bluetooth v4.2 and above 
+1. Requires Bluetooth v4.2 and above
 2. Android v23 and above for Android
-
 
 ### Command to build
 
 #### Step 1:
 
-Clone Inji repo
+* Clone Inji repository.
 
 #### Step 2:
 
-Create a `android/local.properties` file with the following data:
+* Create an `android/local.properties` file with the following data:
 
 ```
 sdk.dir = <location-of-the-android-sdk>
 ```
 
-Alternatively, you can open the Android folder in the android studio. It will create `local.properties` file with `sdk.dir = <location-of-the-android-sdk>`.
+* Alternatively, you can open the Android folder in the android studio. It will create `local.properties` file with `sdk.dir = <location-of-the-android-sdk>`.
 
 > Note:
 >
@@ -218,11 +224,14 @@ Alternatively, you can open the Android folder in the android studio. It will cr
 
 #### Step 3:
 
-Inji application currently supports two themes: orange and purple. The default theme of the app is orange. To change the theme of the application, go to `.env` file and change the value of `APPLICATION_THEME` to `orange` or `purple`
+* Inji application currently supports two themes: **orange** and **purple**.&#x20;
+* The default theme of the app is orange.
+* &#x20;To change the theme of the application, go to `.env` file and change the value of `APPLICATION_THEME` to `orange` or `purple`
 
 #### Step 4:
 
-Go to the root folder of the project in the terminal. Install all the dependencies using `npm install`.
+* Go to the root folder of the project in the terminal.&#x20;
+* Install all the dependencies using `npm install`.
 
 #### Step 5:
 
@@ -231,7 +240,8 @@ Go to the root folder of the project in the terminal. Install all the dependenci
 * Run `npm run android:mosip` to build and install the application on the device.
 * Run `npm run android:mosip --reset-cache` to build and install the application if any change is made in the .env file.
 
-If you encounter the below issue on Windows
+If you encounter the below issue on Windows,
+
 ```
 FAILURE: Build failed with an exception.
 
@@ -242,15 +252,15 @@ FAILURE: Build failed with an exception.
   A problem occurred evaluating script.
   > Could not read script 'C:\"PATH"\inji\node_modules\expo\scripts\android\autolinking_implementation.gradle' as it does not exist.
 ```
-Run this `npm i expo-modules-autolinking@~1.1.0` and rebuild the app
 
+* Run this `npm i expo-modules-autolinking@~1.1.0` and rebuild the app
 * Path for debug apk in Inji directory `android/app/build/outputs/apk/mosip/debug`
 
 ### Build for PlayConsole
 
 The Internal testing version of the build can be uploaded to `PlayConsole` for testing. PlayConsole allows the creation of internal testers group.
 
-![Internal testers](\_images/internal_testers_android.png)
+![Internal testers](\_images/internal\_testers\_android.png)
 
 **Publishing build manually to PlayConsole**
 
@@ -263,54 +273,52 @@ A Google play console developer account is a must to publish builds in PlayConso
 
 **Upload in PlayConsole**
 
-![img.png](\_images/upload_android.png)
+![img.png](\_images/upload\_android.png)
 
-![img.png](\_images/uploading_android.png)
+![img.png](\_images/uploading\_android.png)
 
 1. Once the build is uploaded and saved you will be able to see the status of the release with version name, code, API level and some more details.
 
-![img.png](\_images/uploaded_view_android.png)
+![img.png](\_images/uploaded\_view\_android.png)
 
-2. Select the testers group you want to share with. Once saved, you can copy the link and give to testers to test the Apk or App bundle.
+2. Select the testers group you want to share with. Once saved, you can copy the link and share the same with the  testers to test the APK or App bundle.
 
-![img.png](\_images/internal_testers_select_android.png)
+![img.png](\_images/internal\_testers\_select\_android.png)
 
-3. You need to manually provide the link to testers. They will not be notified whenever a new build is uploaded.
+3. You are required to manually share the link with the testers as they will not receive any notifications when a new build is uploaded.
 
 **Publishing build via Github actions (Automation) to PlayConsole**
 
-1. A Google play console developer account must be configured to Inji to publish builds via PlayConsole. 
+1. A Google PlayConsole developer account must be configured to Inji to publish builds via PlayConsole.
 
 > Testers must be added to internal testers group in Play console.
 
-![img.png](\_images/internal_testers_select_android.png)
+![img.png](\_images/internal\_testers\_select\_android.png)
 
-2. To deploy the Android build to PlayConsole, Select `Android Custom Build` workflow from github actions.
+2. To deploy the Android build to PlayConsole, select `Android Custom Build` workflow from github actions.
 
-![img.png](\_images/inji_android_github_actions.png)
+![img.png](\_images/inji\_android\_github\_actions.png)
 
-3. Choose the branch, backend url, theme and describe about build details. 
-
+3. Choose the branch, backend url, theme and describe about build details.
 4. Click the `Run` workflow button.
-
-5. Once the pipeline has done with building the app (takes around ~25-30min), you need to login to play console and verify the build version name and code in the internal testers track. 
-
+5. Once the pipeline has done with building the app (takes around \~25-30min), you need to login to PlayConsole and verify the build version name and code in the internal testers track.
 6. Now, you can share the link to testers.
 
- _Note_: Only those who are registered in the selected testers group will be able to download the App from Google Play.
+_**Note**_: Only those who are registered in the selected testers group will be able to download the App from Google Play.
 
----
+***
+
 ## iOS - Build and run
 
 ### Installation and Keystore generation
 
 #### Step 1:
 
-Follow [Steps](#installation-and-keystore-generation-on-mac) to configure Node & npm, Expo and generate debug keystore
+Follow the [Steps](build-&-deployment.md#installation-and-keystore-generation-on-mac) to configure Node & npm, Expo and generate debug keystore
 
 #### Step 2:
 
-Configure XCode, refer https://developer.apple.com/xcode/
+Configure XCode, refer [here](https://developer.apple.com/xcode/).&#x20;
 
 ### Build process
 
@@ -327,12 +335,14 @@ npx pod-install
 npm start
 ```
 
-* Run Inji directly to a connected device
-Command to run on simulator
+* Run Inji directly to a connected device Command to run on simulator
+
 ```
 npm run ios
 ```
+
 Command to run real device
+
 ```
 npm run ios -- --device
 ```
@@ -363,27 +373,24 @@ First choose `Distribute App`.
 
 1. Login to TestFlight and check for the build upload status. Once the build is uploaded successfully, add `Groups` to provide access to testers.
 
-![img.png](\_images/testflight_testers_group.png)
+![img.png](\_images/testflight\_testers\_group.png)
 
 2. All the group members will be notified about the new build. Open TestFlight and install the new version.
 
-
 **Publishing build via Github actions (Automation) to TestFlight**
 
-An Apple developer account must be configured to inji app to publish builds via TestFlight. 
+An Apple developer account must be configured to Inji app to publish builds via TestFlight.
 
-> Testers must be added to group in testflight.
+> Testers must be added to group in TestFlight.
 
-![img.png](\_images/testflight_testers_group.png)
+![img.png](\_images/testflight\_testers\_group.png)
 
-1. To deploy the iOS build to testflight, Select `Inji iOS build` workflow from github actions.
+1. To deploy the iOS build to testflight, select `Inji iOS build` workflow from github actions.
 
-![img.png](\_images/inji_ios_github_actions.png)
+![img.png](\_images/inji\_ios\_github\_actions.png)
 
-2. Choose branch, backend url, theme, testers group from testflight to get the build and describe about build details. 
-
+2. Choose the branch, backend URL, theme, testers group from TestFlight to get the build and describe about build details.
 3. Click the `Run` workflow button.
+4. Once the pipeline has done with building the app (takes around \~25-30min), TestFlight notifies corresponding testers associated with the testers group in email about deployed build details.
 
-4. Once the pipeline has done with building the app (takes around ~25-30min), Testflight notifies corresponding testers associated with the testers group in email about deployed build details.
-
-![img.png](\_images/testflight_ios_notification.png)
+![img.png](\_images/testflight\_ios\_notification.png)
