@@ -15,40 +15,40 @@ Below mentioned are the current set of mock services available in MOSIP.&#x20;
 
 1. #### [Mock MDS (MOSIP Device Services)](https://docs.mosip.io/1.1.5/biometrics/mosip-device-service-specification) <a href="#id-1.-mock-mds-mosip-device-services" id="id-1.-mock-mds-mosip-device-services"></a>
 
-* Simulates device services for testing, authentication, and delete registration functionalities.
-* Allows developers to interact with a device-service environment without a physical device.
+  * Simulates device services for testing, authentication, and delete registration functionalities.
+  * Allows developers to interact with a device-service environment without a physical device.
 
 2. **Mock MV (Manual Verification)**\
 
 
-* Reproduces the manual verification process for testing and validation purposes.
-* Enables the testing of manual verification workflows without human intervention.
+  * Reproduces the manual verification process for testing and validation purposes.
+  * Enables the testing of manual verification workflows without human intervention.
 
 3. #### [Mock ABIS (Automated Biometric Identification System)](https://docs.mosip.io/1.2.0/\~/changes/EDXkAXJ2BnUpKbwo76Y3/biometrics/abis) <a href="#id-3.-mock-abis-automated-biometric-identification-system" id="id-3.-mock-abis-automated-biometric-identification-system"></a>
 
-* Simulates the functionality of the Automated Biometric Identification System (ABIS).
-* Facilitates testing of biometric matching, searching, and integrating with ABIS without accessing production data.
-* Maintains resident biometric uniqueness through de-duplication.
-* Interfaces with MOSIP via message queues in JSON format.
-* Supports 1:N de-duplication and adheres to [ABIS API](https://docs.mosip.io/1.2.0/\~/changes/EDXkAXJ2BnUpKbwo76Y3/biometrics/abis-api) Specifications.
+  * Simulates the functionality of the Automated Biometric Identification System (ABIS).
+  * Facilitates testing of biometric matching, searching, and integrating with ABIS without accessing production data.
+  * Maintains resident biometric uniqueness through de-duplication.
+  * Interfaces with MOSIP via message queues in JSON format.
+  * Supports 1:N de-duplication and adheres to [ABIS API](https://docs.mosip.io/1.2.0/\~/changes/EDXkAXJ2BnUpKbwo76Y3/biometrics/abis-api) Specifications.
 
 4. #### Mock SDK ([Software Development Kit](https://docs.mosip.io/1.2.0/biometrics/biometric-sdk)) <a href="#id-4.-mock-sdk-software-development-kit" id="id-4.-mock-sdk-software-development-kit"></a>
 
-* Replicates MOSIP's Biometric Software Development Kit (SDK) for testing and debugging.
-* Allows developers to integrate biometric functionalities into applications without connecting to a physical device.
-* Used for 1:N match, quality, and  extraction, etc.
-* Simulation is available as Mock BioSDK, installed in the MOSIP sandbox.
-* Exposes REST APIs for 1:1 match and quality check at the MOSIP backend.
+  * Replicates MOSIP's Biometric Software Development Kit (SDK) for testing and debugging.
+  * Allows developers to integrate biometric functionalities into applications without connecting to a physical device.
+  * Used for 1:N match, quality, and  extraction, etc.
+  * Simulation is available as Mock BioSDK, installed in the MOSIP sandbox.
+  * Exposes REST APIs for 1:1 match and quality check at the MOSIP backend.
 
 5. #### Mock  SMTP (Simple Mail Transfer Protocol) <a href="#id-5.-mock-smtp-simple-mail-transfer-protocol" id="id-5.-mock-smtp-simple-mail-transfer-protocol"></a>
 
-* Simulates an SMTP server for testing email notifications without sending actual emails.
-* Enables the testing of communication workflows and email content.
+  * Simulates an SMTP server for testing email notifications without sending actual emails.
+  * Enables the testing of communication workflows and email content.
 
 &#x20;         **Mock SMTP Server**
 
-* Is installed as part of the default MOSIP installation.
-* Mimics real SMTP server behavior for testing and development purposes.
+  * Is installed as part of the default MOSIP installation.
+  * Mimics real SMTP server behavior for testing and development purposes.
 
 ### Benefits of Using Mock Services <a href="#benefits-of-using-mock-services" id="benefits-of-using-mock-services"></a>
 
@@ -63,15 +63,15 @@ MOSIP uses Mock Services in the following modules:
 
 1.  #### **Registration Client Module** <a href="#id-1.-registration-client-module" id="id-1.-registration-client-module"></a>
 
-    The Registration Client module uses below mentioned Mock Services during the execution of the registration process. To capture biometric data, check the quality of the captured biometric data, etc., the following services are run:
+   The Registration Client module uses below mentioned Mock Services during the execution of the registration process. To capture biometric data, check the quality of the captured biometric data, etc., the following services are run:
 
 * **Mock MDS (**[**MOSIP Device Service**](https://docs.mosip.io/1.1.5/biometrics/mosip-device-service-specification)**):**
 
-&#x20;      The [Registration Client](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-reg-client-setup-guide) module interacts with Mock MDS to capture biometric data during the registration.
+&#x20;  The [Registration Client](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-reg-client-setup-guide) module interacts with Mock MDS to capture biometric data during the registration.
 
 * **Mock SDK** ([**Software Development Kit**](https://docs.mosip.io/1.2.0/biometrics/biometric-sdk)):
 
-&#x20;       The [Registration Client](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-reg-client-setup-guide) module interacts with mock SDK to perform 1: N match for biometrics, extract biometric template, and check the quality of the captured biometrics.
+&#x20; The [Registration Client](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-reg-client-setup-guide) module interacts with mock SDK to perform 1: N match for biometrics, extract biometric template, and check the quality of the captured biometrics.
 
 2.  #### **Registration Processor Module** <a href="#id-2.-registration-processor-module" id="id-2.-registration-processor-module"></a>
 
@@ -79,15 +79,15 @@ MOSIP uses Mock Services in the following modules:
 
 &#x20;       Mentioned below are the services utilized by the Registration Processor module to facilitate the functions.
 
-* **Mock ABIS (**[**Automated Biometric Identification System**](https://docs.mosip.io/1.2.0/\~/changes/EDXkAXJ2BnUpKbwo76Y3/biometrics/abis)**):**
+  * **Mock ABIS (**[**Automated Biometric Identification System**](https://docs.mosip.io/1.2.0/\~/changes/EDXkAXJ2BnUpKbwo76Y3/biometrics/abis)**):**
 
 &#x20;      [Registration Processor](https://docs.mosip.io/1.2.0/modules/registration-processor) module interacts with mock ABIS for testing matching performance and error handling.
 
-* **Mock MV (Manual Verification):**
+  * **Mock MV (Manual Verification):**
 
 &#x20;      [Registration Processor](https://docs.mosip.io/1.2.0/modules/registration-processor) module interacts with Mock MV to process the packets that are marked for manual verification.
 
-* **Mock SDK (**[**Software Development Kit**](https://docs.mosip.io/1.2.0/biometrics/biometric-sdk)**):**
+  * **Mock SDK (**[**Software Development Kit**](https://docs.mosip.io/1.2.0/biometrics/biometric-sdk)**):**
 
 &#x20;       [Registration Processor](https://docs.mosip.io/1.2.0/modules/registration-processor) module interacts with Mock SDK to check the quality of the captured biometrics and for authentication purposes.
 
