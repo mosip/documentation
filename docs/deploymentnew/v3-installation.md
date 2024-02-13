@@ -3,7 +3,7 @@
 **Version**: 1.2.0.1-B4 (Latest stable release)
 
 * Release date: 12th January 2024
-* [Release notes](release-notes-1.2.0.1-b4.md)
+* [Release notes](../release/1.2.0.1/release-notes-1.2.0.1-b4.md)
 * [On-Prem Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-installation-guidelines)
 * [On-Prem without DNS Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-without-dns)
 * [AWS Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/aws-installation-guidelines-new)
