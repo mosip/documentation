@@ -70,8 +70,8 @@ Mock Services help [Registration Processor](registration-processor.md) to proces
 
 Mentioned below are the services utilized by the Registration Processor module to facilitate the functions.
 
-* **Mock ABIS** ([**Automated Biometric Identification System**](https://docs.mosip.io/1.2.0/\~/changes/EDXkAXJ2BnUpKbwo76Y3/biometrics/abis)): [Registration Processor](https://docs.mosip.io/1.2.0/modules/registration-processor) module interacts with mock ABIS for testing matching performance and error handling.
-* **Mock MV** (**Manual Verification**): [Registration Processor](https://docs.mosip.io/1.2.0/modules/registration-processor) module interacts with Mock MV to process the packets that are marked for manual verification.
+* **Mock ABIS** ([**Automated Biometric Identification System**](https://docs.mosip.io/1.2.0/\~/changes/EDXkAXJ2BnUpKbwo76Y3/biometrics/abis)): Registration Processor module interacts with mock ABIS for testing matching performance and error handling.
+* **Mock MV** (**Manual Verification**): Registration Processor module interacts with Mock MV to process the packets that are marked for manual verification.
 * **Mock SDK** ([**Software Development Kit**](https://docs.mosip.io/1.2.0/biometrics/biometric-sdk)): [Registration Processor](https://docs.mosip.io/1.2.0/modules/registration-processor) module interacts with Mock SDK to check the quality of the captured biometrics and for authentication purposes.
 
 3. **ID Authentication:** [ID Authentication](https://docs.mosip.io/1.2.0/modules/id-authentication-services) module also utilizes the mock services during development, testing, and demonstration phases. It uses Mock SDK to carry out the biometric authentication.
