@@ -29,9 +29,9 @@ The Registration Client Docker serves as a registration client zip downloader an
 
 **Note**: Deleting the `registration-client.jar` or `registration-services.jar` is not recoverable.
 
-<figure><img src=".gitbook/assets/reg-client-upgrade1.png" alt=""><figcaption><p>On patch download, the pre-loader screen displays <strong>Restart required</strong></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/reg-client-upgrade1.png" alt=""><figcaption><p>On patch download, the pre-loader screen displays <strong>Restart required</strong></p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/reg-client-upgrade2.png" alt=""><figcaption><p>Successful restart of the Registration Client application</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/reg-client-upgrade2.png" alt=""><figcaption><p>Successful restart of the Registration Client application</p></figcaption></figure>
 
 ## Version upgrade
 

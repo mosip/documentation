@@ -1,4 +1,4 @@
-# Applicant MVEL type Script
+# Identifying Applicant Type
 
 **Location**: [mosip-config](https://github.com/mosip/mosip-config) repository
 
@@ -57,7 +57,7 @@ For example, if the script returns applicant\_type\_code as “001”, all those
 
 Attaching the sample csv file below which lists down the required entries for `master.applicant_valid_document` table.
 
-{% file src=".gitbook/assets/applicant_valid_document.xlsx" %}
+{% file src="../../.gitbook/assets/applicant_valid_document.xlsx" %}
 
 We can upload this default data from Admin Portal through Bulk Upload feature.
 
@@ -70,4 +70,4 @@ The steps to be followed are mentioned below:
 
 Attaching screenshot for reference:
 
-![](\_images/upgrade-application-mvel.png)
+![](../../\_images/upgrade-application-mvel.png)
