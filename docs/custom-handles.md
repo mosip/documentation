@@ -42,7 +42,7 @@ The implementation of custom handles involves the below steps:
     "items" : { "type" : "string" },
     "fieldType": "default"  }
     ```
-3. When the collect identity object is sent to the ID repository, it validates the data and accepts the handle provided it is unique among the registered handles. If duplicated, a request to register the user is rejected.
+3. When the collected identity object is sent to the ID repository, it validates the data and accepts the handle provided it is unique among the registered handles. If duplicated, a request to register the user is rejected.
 
 4. Once identity is successfully processed and stored in an ID-repository, identity credentials are issued to the IDA to store user credentials for each ID (UIN & VID) as well for each selected handle.
 
