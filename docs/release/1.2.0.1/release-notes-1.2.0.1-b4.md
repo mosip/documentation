@@ -12,7 +12,7 @@
 
 The MOSIP **1.2.0.1 Beta4** release marks an upgrade from version 1.1.5.x to 1.2.0.1. This release primarily focuses on the **migration of all services/modules** to V3 architecture along with important bug fixes, enhancements to security, and improvements in performance.
 
-Additionally, this release incorporates enhancements to the existing features in [Mock Services](mock-services.md), aiming to enhance the user experience. For a comprehensive summary of the modifications,  refer [here](https://mosip.atlassian.net/issues/?jql=labels%20%3D%20%22mock-V1.2.0.1-B4%22).
+Additionally, this release incorporates enhancements to the existing features in [Mock Services](../../mock-services.md), aiming to enhance the user experience. For a comprehensive summary of the modifications, refer [here](https://mosip.atlassian.net/issues/?jql=labels%20%3D%20%22mock-V1.2.0.1-B4%22).
 
 To know more about the upgrades, refer [Upgrade Runbook](../../upgrade-runbook.md).
 
