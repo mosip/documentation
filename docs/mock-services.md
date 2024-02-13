@@ -4,7 +4,9 @@
 
 Modular Open Source Identity Platform (MOSIP) integrates a suite of Mock Services designed to emulate key functionalities of MOSIP services within the framework. In the development, testing, and demonstration phases, Mock Services will make available a controlled environment to evaluate MOSIP features. Developers and testers can refer to this documentation to gain a comprehensive understanding of the structure and functionality of each Mock Service within the MOSIP framework.
 
+{% hint style="info" %}
 Mock Services are not intended to be a substitute for production systems. Instead, their purpose is to facilitate evaluation during the development and testing stages.
+{% endhint %}
 
 ### Benefits of using Mock Services
 
@@ -18,41 +20,32 @@ This document details each of the Mock Services and explains its significance wi
 Below mentioned are the current set of mock services available in MOSIP.
 
 1. [**Mock MDS (MOSIP Device Services)**](https://docs.mosip.io/1.1.5/biometrics/mosip-device-service-specification)
-     
-     * Simulates device services for testing, authentication, and delete registration functionalities.
-     * Allows developers to interact with a device-service environment without a physical device.
-
-
-3. **Mock MV (Manual Verification)**
-
-    * Reproduces the manual verification process for testing and validation purposes.
-    * Enables the testing of manual verification workflows without human intervention.
-
+   * Simulates device services for testing, authentication, and delete registration functionalities.
+   * Allows developers to interact with a device-service environment without a physical device.
+2. **Mock MV (Manual Verification)**
+   * Reproduces the manual verification process for testing and validation purposes.
+   * Enables the testing of manual verification workflows without human intervention.
 3. [**Mock ABIS (Automated Biometric Identification System)**](https://docs.mosip.io/1.2.0/\~/changes/EDXkAXJ2BnUpKbwo76Y3/biometrics/abis)
-
-    * Simulates the functionality of the Automated Biometric Identification System (ABIS).
-    * Facilitates testing of biometric matching, searching, and integrating with ABIS without accessing production data.
-    * Maintains resident biometric uniqueness through de-duplication.
-    * Interfaces with MOSIP via message queues in JSON format.
-    * Supports 1:N de-duplication and adheres to [ABIS API](https://docs.mosip.io/1.2.0/\~/changes/EDXkAXJ2BnUpKbwo76Y3/biometrics/abis-api) Specifications.
-
+   * Simulates the functionality of the Automated Biometric Identification System (ABIS).
+   * Facilitates testing of biometric matching, searching, and integrating with ABIS without accessing production data.
+   * Maintains resident biometric uniqueness through de-duplication.
+   * Interfaces with MOSIP via message queues in JSON format.
+   * Supports 1:N de-duplication and adheres to [ABIS API](https://docs.mosip.io/1.2.0/\~/changes/EDXkAXJ2BnUpKbwo76Y3/biometrics/abis-api) Specifications.
 4. **Mock SDK (**[**Software Development Kit**](https://docs.mosip.io/1.2.0/biometrics/biometric-sdk)**)**
-
-    * Replicates MOSIP's Biometric Software Development Kit (SDK) for testing and debugging.
-    * Allows developers to integrate biometric functionalities into applications without connecting to a physical device.
-    * Used for 1:N match, quality, and extraction, etc.
-    * Simulation is available as Mock BioSDK, installed in the MOSIP sandbox.
-    * Exposes REST APIs for 1:1 match and quality check at the MOSIP backend.
-
-5. **Mock SMTP (Simple Mail Transfer Protocol)**
+   * Replicates MOSIP's Biometric Software Development Kit (SDK) for testing and debugging.
+   * Allows developers to integrate biometric functionalities into applications without connecting to a physical device.
+   * Used for 1:N match, quality, and extraction, etc.
+   * Simulation is available as Mock BioSDK, installed in the MOSIP sandbox.
+   * Exposes REST APIs for 1:1 match and quality check at the MOSIP backend.
+5.  **Mock SMTP (Simple Mail Transfer Protocol)**
 
     * Simulates an SMTP server for testing email notifications without sending actual emails.
     * Enables the testing of communication workflows and email content.
 
     **Mock SMTP Server**
 
-     * Is installed as part of the default MOSIP installation.
-     * Mimics real SMTP server behavior for testing and development purposes.
+    * Is installed as part of the default MOSIP installation.
+    * Mimics real SMTP server behavior for testing and development purposes.
 
 ### **Modules utilizing MOSIP Mock Services**
 
