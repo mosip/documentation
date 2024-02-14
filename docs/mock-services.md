@@ -74,4 +74,4 @@ Mentioned below are the services utilized by the Registration Processor module t
 
 [ID Authentication](https://docs.mosip.io/1.2.0/modules/id-authentication-services) module also utilizes the mock services during development, testing, and demonstration phases. It uses Mock SDK to carry out the biometric authentication.
 
-The development and improvement of Mock Services is an ongoing and evolving process. For more information regarding the recent updates implemented in the latest release, refer [here](https://mosip.atlassian.net/issues/?jql=labels%20%3D%20%22mock-V1.2.0.1-B4%22).
+Furthermore, the development and improvement of Mock Services is an ongoing and evolving process.&#x20;
