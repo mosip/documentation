@@ -17,6 +17,8 @@ Mock Services are not intended to be a substitute for production systems. Instea
 
 This document details each of the Mock Services and explains its significance within the MOSIP architecture.
 
+### Mock Services in MOSIP
+
 Below mentioned are the current set of mock services available in MOSIP.
 
 1. **Mock MDS** ([MOSIP Device Services](https://docs.mosip.io/1.1.5/biometrics/mosip-device-service-specification))
