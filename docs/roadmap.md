@@ -10,7 +10,7 @@ The year-wise roadmap details how these principles will be applied and advanced 
 Head below to navigate through our year-wise roadmap that provides a strategic overview of the journey ahead and highlights the key milestones & objectives for each year!
 
 * [Roadmap 2023-2024](roadmap-2023-2024.md)
-* [Roadmap 2024-2025](broken-reference)
+* [Roadmap 2024-2025](roadmap-2024-2025.md)
 
 ## Principles and Vision
 
