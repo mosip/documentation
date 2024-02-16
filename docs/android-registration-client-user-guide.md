@@ -1,4 +1,4 @@
-# ANDROID REGISTRATION CLIENT- USER GUIDE
+# Android Registration Client User Guide
 
 This user guide is designed to provide assistance to operators and supervisors in successfully installing, running, and registering applicants to obtain their Unique Identification Numbers (UIN) on tablet devices.
 
@@ -45,3 +45,24 @@ This user guide is designed to provide assistance to operators and supervisors i
       * Go to `User Center Mapping` and add the center for the user and activate it.
 
 > Note: The user should be assigned to the same Zone and Center as the device.
+
+4. The user should relaunch the ARC and log in using their valid credentials. Additionally, the operator has the option to select their preferred display language. 
+
+Upon successful login, the user will be directed to the Home page, which includes the following options:
+
+- New Registration
+- Operations Tasks (Future scope)
+- Dashboard (Future scope)
+- Settings (Future scope)
+
+### New Registration
+
+1. The operator clicks on **New Registration card** to begin.
+2. The operator selects the language to be used for data entry, which will be used to collect the resident's information. There will be a default language for data entry.
+3. The operator chooses the language in which the notification will be sent to the resident.
+4. To proceed, the operator needs to click on the **Submit** button.
+5. The operator will be directed to the Consent page, where the resident will must agree to the terms and conditions to continue.
+After accepting consent, the operator will need to fill out the demographic data of the resident, including their name, age, date of birth, and address. Once all mandatory fields are completed, the "Continue" button will become active.
+
+
+
