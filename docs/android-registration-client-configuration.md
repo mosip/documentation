@@ -1,4 +1,4 @@
-# Android Registration Client: Configuration Guide
+# Android Registration Client- Configuration Guide
 
 This guide provides a comprehensive list of configurable properties for the Android Registration Client. Please note that this list is not exhaustive but serves as a helpful checklist for reviewing commonly configured properties.
 
@@ -146,5 +146,13 @@ In order to facilitate this migration, certain configurations and templates have
 *  `mosip.registration.default-app-type-code=000`
 
   The above property defines the default applicantTypeCode. In LTS, we have applicanttype.mvel script to fetch the documents according to the age, gender and some other attributes. Based on the applicant details, the script returns an applicantTypeCode which can be any value from “000” to “014”, and respective documents will be fetched from `master.applicant_valid_document table`. Since we do not have this script defined in 1.1.5.x to handle this, we have added a default `applicantTypeCode`.
+
+#### Templates
+
+Ensure that the preview and acknowledge templates are present in the `template table` of `mosip_master` database with the following type code:
+
+`reg-android-preview-template-part`
+
+`reg-ack-template-part`
 
 
