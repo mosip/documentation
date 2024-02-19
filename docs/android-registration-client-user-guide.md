@@ -48,12 +48,12 @@ This user guide is designed to provide assistance to Operators and Supervisors i
 
 4. The user should relaunch the ARC and log in using their valid credentials. Additionally, the operator has the option to select their preferred display language. 
 
-Upon successful login, the user will be directed to the Home page, which includes the following options:
+  Upon successful login, the user will be directed to the Home page, which includes the following options:
 
-- New Registration
-- Operations Tasks (Future scope)
-- Dashboard (Future scope)
-- Settings (Future scope)
+  - New Registration
+  - Operations Tasks (Future scope)
+  - Dashboard (Future scope)
+  - Settings (Future scope)
 
 ### New Registration
 
