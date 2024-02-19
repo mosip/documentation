@@ -246,6 +246,65 @@ Run this `npm i expo-modules-autolinking@~1.1.0` and rebuild the app
 
 * Path for debug apk in Inji directory `android/app/build/outputs/apk/mosip/debug`
 
+### Setting Up Google API Services and Client ID
+
+#### Step 1:
+
+**Creating A Google Cloud Project**
+Refer to this documentation on setting up a Google Cloud Project - https://developers.google.com/workspace/guides/create-project  
+
+#### Step 2:
+
+**Enabling Google Drive APIs**
+Go to - https://console.cloud.google.com/apis/library
+
+![GCP API Library](\_images/gcp-api-libs.png)
+
+Search for `Google drive API` and Select Google Drive API from the list.
+
+Then enable the API.
+
+![GCP Drive API Enable](\_images/drive-api.png)
+
+
+#### Step 3:
+
+**Create Google Consent Screen**
+
+Go to - https://console.cloud.google.com/apis/credentials/consent
+
+Create a new Consent Screen with necessary details such as - App Name, User Support Email, App Logo and Developer Info. Once added these details Save and Continue. 
+
+#### Step 4:
+
+**Create Oauth Client ID**
+
+Go to - https://console.cloud.google.com/apis/credentials
+
+![GCP Create Client ID](\_images/create-CID.png)
+
+Click on `CREATE CREDENTIALS` and choose `OAuth client ID`
+
+![GCP Create Client ID](\_images/application-type.png)
+
+Choose Appliation type as `Android`
+
+![GCP Create Client ID](\_images/cid-details.png)
+
+Add in details such as  *Name*, *Package Name* and *SHA- Fingerptint*
+
+> Note:
+>* SHA-1 should be of the keystore generated for signing the APK
+>* Make sure you have checked `Custom URI Scheme` in `Advaned Settings`
+
+#### Step 5:
+
+**Set Environment Variable**
+
+Once the Client ID has been created copy the client ID and add it as part of `.env` file. 
+
+`GOOGLE_ANDROID_CLIENT_ID="<copied-client-id>"`
+
 ### Build for PlayConsole
 
 The Internal testing version of the build can be uploaded to `PlayConsole` for testing. PlayConsole allows the creation of internal testers group.
@@ -311,6 +370,10 @@ Follow [Steps](#installation-and-keystore-generation-on-mac) to configure Node &
 #### Step 2:
 
 Configure XCode, refer https://developer.apple.com/xcode/
+
+#### Step 3:
+
+Enable iCloud and create Containers, refer https://developer.apple.com/help/account/manage-identifiers/create-an-icloud-container/
 
 ### Build process
 
