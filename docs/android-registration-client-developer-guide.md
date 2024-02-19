@@ -8,15 +8,15 @@ The android-registration-client repository contains the Android Registration Cli
 
 To set up the Android Registration Client with Flutter and Android Studio, follow the steps below:
 
-#### Pre-requisites
+#### Prerequisites
 
-* Flutter SDK (>3.10): Install Flutter by following the official [Flutter installation guide](https://flutter.dev/docs/get-started/install).
+* Flutter SDK (3.10.4): Install Flutter by following the official [Flutter installation guide](https://flutter.dev/docs/get-started/install).
 
 * Android Studio (or Any IDE of your choice): Download and install Android Studio from the official [Android Studio website](https://developer.android.com/studio).
 
 #### Step 1: Clone the Repository
 
-The feature-flutter branch of android-reg-client is currently being actively developed. If you wish to access this branch, you can clone the repository by executing the following command in your terminal. Alternatively, you can download one of the releases available in the repository's release section.
+The `develop` branch of android-reg-client is currently being actively developed. If you wish to access this branch, you can clone the repository by executing the following command in your terminal. Alternatively, you can download one of the releases available in the repository's release section.
 
 ```
 git clone -b feature-flutter https://github.com/mosip/android-registration-client.git
@@ -24,9 +24,10 @@ git clone -b feature-flutter https://github.com/mosip/android-registration-clien
 
 **Active Branches**:
 
-* [developer-release/flutter/0.9.x](https://github.com/mosip/android-registration-client/tree/developer-release/flutter/0.9.x) (developer release branch)
+* [release-0.9.x](https://github.com/mosip/android-registration-client/tree/release-0.9.x)(developer release branch)
 
-* [feature-flutter](https://github.com/mosip/android-registration-client/tree/feature-flutter) (active development branch)
+* [develop](https://github.com/mosip/android-registration-client/tree/develop)(active development branch)
+
 
 #### Step 2: Set up Flutter in Android Studio
 
