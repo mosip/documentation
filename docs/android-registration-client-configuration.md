@@ -1,4 +1,4 @@
-# Android Registration Client- Configuration Guide
+# Android Registration Client - Configuration Guide
 
 This guide provides a comprehensive list of configurable properties for the Android Registration Client. Please note that this list is not exhaustive but serves as a helpful checklist for reviewing commonly configured properties.
 
