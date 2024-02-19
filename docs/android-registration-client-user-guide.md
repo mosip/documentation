@@ -69,10 +69,10 @@ To begin the Registration process, the Operator is required to follow the steps 
    * Select the **type** of document (e.g. proof of identity, proof of address) from the drop-down menu.
    * Enter the **Reference Number** of the document.
    * Upload the document by clicking on the **Scan** button to open the camera. The Operator can take a picture of the document and then choose from the following actions:
-   - **Cancel**: Clicking on the "cross" icon will remove the captured image and return the Operator to the previous screen.
-   - **Crop**: The Operator can drag from the four corners of the captured image to crop it as needed.
-   - **Save**: Clicking on the "Save" button will save the captured image and return the Operator to the previous Document Upload page.
-   - **Retake**: Clicking on the "Retake" button will remove the captured image, reopen the camera, and allow the Operator to take a new photo.
+     - **Cancel**: Clicking on the "cross" icon will remove the captured image and return the Operator to the previous screen.
+     - **Crop**: The Operator can drag from the four corners of the captured image to crop it as needed.
+     - **Save**: Clicking on the "Save" button will save the captured image and return the Operator to the previous Document Upload page.
+     - **Retake**: Clicking on the "Retake" button will remove the captured image, reopen the camera, and allow the Operator to take a new photo.
 7. After ensuring all required information has been accurately entered in the `Document Upload` screen, the Operator can proceed by clicking on the **Continue** button to access the `Biometric Capture` page. Here, the Operator can capture the biometric data of the Resident, including a face photo, fingerprint, and iris scan.
 
       **Face photo capture process**
