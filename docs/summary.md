@@ -30,6 +30,7 @@
   * [Android Registration Client](android-registration-client.md)
     * [Configuration Guide](android-registration-client-configuration.md)
     * [Developer Guide](android-registration-client-developer-guide.md)
+    * [User Guide](android-registration-client-user-guide.md)
   * [Automation Testing](automation-testing.md)
   * [Artifactory](artifactory.md)
   * [Commons](commons.md)
