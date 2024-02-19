@@ -1,4 +1,4 @@
-# Android Registration Client: Developer Guide
+# Android Registration Client - Developer Guide
 
 The documentation here will guide you through the pre-requisites and the other necessary details required for Android Registration Client developer setup.
 
