@@ -1,4 +1,4 @@
-# Android Registration Client User Guide
+# Android Registration Client - User Guide
 
 This user guide is designed to provide assistance to Operators and Supervisors in successfully installing, running, and registering applicants to obtain their Unique Identification Numbers (UIN) on tablet devices.
 
