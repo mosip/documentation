@@ -21,11 +21,11 @@ This user guide is designed to provide assistance to Operators and Supervisors i
 
     * Add a new machine and enter the machine details:
 
-      * Add the specs as **Android**
+      * Add the specs as **Mobile**
 
       * Map it to a Zone and Center
 
-      * Add the Machine spec ID as **Android**
+      * Add the Machine spec ID as **Mobile**
 
       * Enter Device name
 
