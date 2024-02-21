@@ -26,15 +26,15 @@ The key features provided in this release in addition to the ones present in the
    b. Multilingual Support for Data Entry (LTR)
 * Auto sync/ Manual sync
 * Enhanced new registration capabilities:
-  i. Streamlined New Registrations Consent
-  ii. Demographic Details
-  iii. Document Upload
-  iv. Biometrics capture
-  v. Preview Section
-  vi. Operator Authentication
-  vii. Packet Synchronization
-  viii. Packet Upload
-  ix. Acknowledgment Section
+    i. Streamlined New Registrations Consent
+    ii. Demographic Details
+    iii. Document Upload
+    iv. Biometrics capture
+    v. Preview Section
+    vi. Operator Authentication
+    vii. Packet Synchronization
+    viii. Packet Upload
+    ix. Acknowledgment Section
 
 **Note**: The Android Registration Client is compatible with the following MOSIP platform versions:
   1. 1.1.5.x
