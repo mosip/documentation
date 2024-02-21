@@ -10,17 +10,16 @@
 
 ## Overview
 
-The Android Registration Client is a tablet application that serves as a portable version of the existing desktop [Registration Client](https://docs.mosip.io/1.2.0/modules/registration-client). It has been developed to support accessibility on all Android devices. The existence of Android Registration Client came about in order to meet the mobility requirements of countries adopting MOSIP.
+The Android Registration Client is a tablet application designed to provide a mobile version of the existing desktop [Registration Client](https://docs.mosip.io/1.2.0/modules/registration-client). It has been developed to ensure accessibility on all Android devices and was created to meet the mobility needs of countries implementing MOSIP.
 
-The primary objective of the tablet version is to facilitate the registration process for residents, specifically those who are unable to physically visit registration centres and also serve remote locations where setting up Registration centres is not feasible. To address this challenge, the Android Registration Client was created, enabling Operators/ Supervisors to easily reach the remote areas and maximise resident registrations across the country.
+The main goal of the tablet application is to simplify the registration process for residents, particularly those who are unable to visit registration centers in person. It also aims to reach remote areas where establishing registration centers is difficult. The Android Registration Client allows Operators and Supervisors to efficiently reach these remote locations and increase resident registrations nationwide.
 
-The key features provided in this release in addition to the ones present in the Android Registration CLient DP1 release are:
+The new features included in this release, along with those from the [Android Registration Client DP1](https://docs.mosip.io/1.2.0/releases/release-notes-android-reg-client-dp1) release, are:
 
-* Trust validation- Certification for biometric capture
+* Device Trust validation- This feature is introduced since the Android Registration Client will not accept biometrics from any non-trusted biometric application.
 * Transliteration- Ability to transliterate to another language upon entering the data
-* Test with real SBI
+* Combatibility with real SBI
 * Audit 
-* 1.1.5.x compatible (change in decryption logic)- Compatibility with version MOSIP 1.1.5
 * Operator/Supervisor Login (offline and online)
    a. Multilingual Support for display of labels (LTR)
    b. Multilingual Support for Data Entry (LTR)
@@ -36,21 +35,15 @@ The key features provided in this release in addition to the ones present in the
     * Packet Upload
     * Acknowledgment Section
 
-**Note**: The Android Registration Client is compatible with the following MOSIP platform versions:
-  1. 1.1.5.x
-  2. LTS 1.2.0 and above 
-
 ## Repository Released
 
 | **Repositories**            | **Tags Released**   |  **Branch**                          |
 | --------------------------- | ------------------------------------------------------------| ------------------ |
-| android-registration-client   | [vDP1](https://github.com/mosip/android-registration-client/releases/tag/vDP1) | [Branch details](https://github.com/mosip/android-registration-client/tree/developer-release/flutter/0.9.x)  |
-
+| android-registration-client   | [v0.9.0]() | [Branch details]()  |
 
 **Dependencies**:
 
 1. `mosipdev/kernel-syncdata-service:1.1.5.3`- This image contains temporary fix for encryption methodology for Android Registration Client. In the next release, there will be some decryption login changes and this will no longer be needed. 
-
 
 ## Build and Deploy
 
