@@ -55,11 +55,11 @@ For details related to resident portal configurations, refer to the [Configurati
 
 ## User Guide
 
-To learn more about the available features, processes, and user interface, please consult the End User Guide for further information. [Adndroid Registration User Guide](android-registration-client-user-guide.md)
+To learn more about the available features, processes, and user interface, refer [Android Registration User Guide](android-registration-client-user-guide.md) for further information. 
 
-## Video
+## Known Issues
 
-To have a quick glance at the features, refer the [video](https://www.youtube.com/watch?v=DrBB5IJnS0Y&t=9s&ab_channel=MOSIP-IIITBangalore)!
+To view the list of known issues, refer [here](https://mosip.atlassian.net/issues/?jql=parent%3DRCF-31%20and%20labels%3DRCF_Known_Bug).
 
 
 
