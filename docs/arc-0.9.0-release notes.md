@@ -6,7 +6,7 @@
 
 **Support**: Support Release
 
-**Release Date**: 23rd Februaru, 2024
+**Release Date**: 23rd February, 2024
 
 ## Overview
 
@@ -14,12 +14,27 @@ The Android Registration Client is a tablet application that serves as a portabl
 
 The primary objective of the tablet version is to facilitate the registration process for residents, specifically those who are unable to physically visit registration centres and also serve remote locations where setting up Registration centres is not feasible. To address this challenge, the Android Registration Client was created, enabling Operators/ Supervisors to easily reach the remote areas and maximise resident registrations across the country.
 
-The key features provided on the Android Registration Client are:
+The key features provided in this release in addition to the ones present in the Android Registration CLient DP1 release are:
 
+* Trust validation- Certification for biometric capture
+* Transliteration- Ability to transliterate to another language upon entering the data
+* Test with real SBI
+* Audit 
+* 1.1.5.x compatible (change in decryption logic)- Compatibility with version MOSIP 1.1.5
 * Operator/Supervisor Login (offline and online)
-* Multi-language support
-* Auto-Sync/ manual sync
-* New Registrations
+   a. Multilingual Support for display of labels (LTR)
+   b. Multilingual Support for Data Entry (LTR)
+* Auto sync/ Manual sync
+* Enhanced new registration capabilities:
+  i. Streamlined New Registrations Consent
+  ii. Demographic Details
+  iii. Document Upload
+  iv. Biometrics capture
+  v. Preview Section
+  vi. Operator Authentication
+  vii. Packet Synchronization
+  viii. Packet Upload
+  ix. Acknowledgment Section
 
 **Note**: The Android Registration Client is compatible with the following MOSIP platform versions:
   1. 1.1.5.x
@@ -44,6 +59,10 @@ To access the build and read through the deployment instructions, refer to the [
 ## Configurations
 
 For details related to resident portal configurations, refer to the [Configuration Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-configuration).
+
+## User Guide
+
+To learn more about the available features, processes, and user interface, please consult the End User Guide for further information. [Adndroid Registration User Guide](android-registration-client-user-guide.md)
 
 ## Video
 
