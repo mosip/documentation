@@ -49,18 +49,18 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-1.png" alt=""><figcaption></figcaption></figure>
 
-1. The operator will be redirected to the Consent page, where the resident must agree to the `terms and conditions` in order to proceed.
-2. After accepting consent, the Operator will need to fill out the demographic data of the resident, including their name, age, date of birth, and address. Once all mandatory fields are completed, the **Continue** button will be enabled.
+4. The operator will be redirected to the Consent page, where the resident must agree to the `terms and conditions` in order to proceed.
+5. After accepting consent, the Operator will need to fill out the demographic data of the resident, including their name, age, date of birth, and address. Once all mandatory fields are completed, the **Continue** button will be enabled.
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-2.png" alt=""><figcaption></figcaption></figure>
 
-1. Upon clicking the **Continue** button, the Operator will be navigated to the `Document upload` page where they will need to:
+6. Upon clicking the **Continue** button, the Operator will be navigated to the `Document upload` page where they will need to:
    * Select the type of document (e.g. proof of identity, proof of address) from the drop-down menu.
    * Enter the **Reference Number** of the document.
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-3.png" alt=""><figcaption></figcaption></figure>
 
-* Upload the document by clicking on the **Scan** button to open the camera. The Operator can take a picture of the document and then choose from the following actions:
+7. Upload the document by clicking on the **Scan** button to open the camera. The Operator can take a picture of the document and then choose from the following actions:
   * **Cancel**: Clicking on the "Cross" icon will remove the captured image and return the Operator to the previous screen.
   * **Crop**: The Operator can drag from the four corners of the captured image to crop it as needed.
   * **Save**: Clicking on the "Save" button will save the captured image and return the Operator to the previous Document Upload page.
@@ -68,9 +68,9 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-4.png" alt=""><figcaption></figcaption></figure>
 
-1.  After ensuring all required information has been accurately entered in the `Document Upload` screen, the Operator can proceed by clicking on the **Continue** button to access the `Biometric Capture` page. Here, the Operator can capture the biometric data of the Resident, including a face photo, fingerprint, and iris scan.
+8.  After ensuring all required information has been accurately entered in the `Document Upload` screen, the Operator can proceed by clicking on the **Continue** button to access the `Biometric Capture` page. Here, the Operator can capture the biometric data of the Resident, including a face photo, fingerprint, and iris scan.
 
-    **Face photo capture process**
+**Face photo capture process**
 
     * For capturing the face photo, the Operator should click on the **Scan** button to activate the camera and take a picture.
     * The image quality will be displayed on the screen and must meet a certain threshold to be considered acceptable.
@@ -88,15 +88,11 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 **Note**: Three attempts are provided to capture the biometric data.
 
-
-
 <figure><img src=".gitbook/assets/arc-newregistration-Page-6.png" alt=""><figcaption></figcaption></figure>
 
+**Fingerprint Capture Process**: 
 
-
-_Fingerprint Capture Process_: In the event that a thumb is missing or experiencing difficulties that prevent its fingerprint from being captured, the Operator is authorized to indicate an **exception**. To mark an exception, the operator must select the affected thumb and specify the type of exception as either _Temporary_ or _Permanent_. Additionally, the operator may include any relevant additional comments.
-
-
+In the event that a thumb is missing or experiencing difficulties that prevent its fingerprint from being captured, the Operator is authorized to indicate an **exception**. To mark an exception, the operator must select the affected thumb and specify the type of exception as either _Temporary_ or _Permanent_. Additionally, the operator may include any relevant additional comments.
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-7.png" alt=""><figcaption></figcaption></figure>
 
@@ -110,11 +106,9 @@ _Fingerprint Capture Process_: In the event that a thumb is missing or experienc
 
 If one or both of the Irises are not detected or encounter issues that prevent successful capture, the Operator has the option to mark an exception. To do so, the Operator must identify the specific Iris that is problematic and indicate the type of exception- either _Temporary_ or _Permanent_. Additionally, the Operator may provide any relevant comments.
 
-
-
 <figure><img src=".gitbook/assets/arc-newregistration-Page-8.png" alt=""><figcaption></figcaption></figure>
 
-1. After all the biometric data has been properly captured or any exceptions have been noted, the **Continue** button will be activated. The Operator can then proceed by clicking on the **Continue** button, which will redirect them to the **Preview** page. The Preview page will display the following information:
+9. After all the biometric data has been properly captured or any exceptions have been noted, the **Continue** button will be activated. The Operator can then proceed by clicking on the **Continue** button, which will redirect them to the **Preview** page. The Preview page will display the following information:
 
 * Application ID
 * Timestamp of Registration
@@ -124,7 +118,7 @@ If one or both of the Irises are not detected or encounter issues that prevent s
 
 From the Preview page, the Operator has the ability to navigate back to previous screens in order to make any necessary adjustments to the entered or captured data. Once the Operator has verified the accuracy of the entered data, they can proceed by clicking on the **Continue** button, which will direct them to the `Operator Authentication` page.
 
-9. On the `Operator Authentication` page, operators are required to input their credentials (username and password) that were used during the login process.
+10. On the `Operator Authentication` page, operators are required to input their credentials (username and password) that were used during the login process.
 
 Upon successful verification of the credentials, the packet will be uploaded to the server and the operator will be redirected to the `Acknowledgment` screen. This screen includes the following information:
 
