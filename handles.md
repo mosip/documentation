@@ -1,12 +1,12 @@
-# Custom Handles Implementation Guide
+# Handles
 
 ### Overview
 
-Countries with an established user base can now enroll users into a secure portal using their unique identifiers, known as handles. These handles are customized to meet the specific needs of each country, facilitating convenient access to digital services and timely benefits from both the government and private sector. This method eliminates the necessity for users to memorize new or system-generated IDs.
+Countries with an established user base can now enroll users into a secure portal using their unique identifiers, known as handles. This feature facilitates convenient access to digital services and timely benefits from both the government and private sector. This method eliminates the necessity for users to memorize new or system-generated IDs.
 
 ### What is a handle?
 
-UIN/VID are system-generated unique identifiers provided to Residents. Residents have the option to verify their identity or authenticate themselves using either UIN/VID.
+UIN/ VID are system-generated unique identifiers provided to Residents. Residents have the option to verify their identity or authenticate themselves using either UIN/ VID.
 
 ### What if we provide residents with the option to personalize their handle (username) and utilize it for authentication purposes?
 
