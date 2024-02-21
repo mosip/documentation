@@ -1,4 +1,4 @@
-# # Android Registration Client: Release Notes
+# Android Registration Client: Release Notes
 
 **Release Name**: Android Registration Client v0.9.0
 
