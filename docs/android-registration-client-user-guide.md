@@ -34,10 +34,10 @@ This user guide is designed to provide assistance to Operators and Supervisors i
 
 Upon successful login, the user will be directed to the Home page, which includes the following options:
 
-* New Registration
-* Operations Tasks (Future scope)
-* Dashboard (Future scope)
-* Settings (Future scope)
+  * New Registration
+  * Operations Tasks (Future scope)
+  * Dashboard (Future scope)
+  * Settings (Future scope)
 
 ### New Registration
 
@@ -61,10 +61,10 @@ To begin the Registration process, the Operator is required to follow the steps 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-3.png" alt=""><figcaption></figcaption></figure>
 
 7. Upload the document by clicking on the **Scan** button to open the camera. The Operator can take a picture of the document and then choose from the following actions:
-  * **Cancel**: Clicking on the "Cross" icon will remove the captured image and return the Operator to the previous screen.
-  * **Crop**: The Operator can drag from the four corners of the captured image to crop it as needed.
-  * **Save**: Clicking on the "Save" button will save the captured image and return the Operator to the previous Document Upload page.
-  * **Retake**: Clicking on the "Retake" button will remove the captured image, reopen the camera, and allow the Operator to take a new photo.
+     * **Cancel**: Clicking on the "Cross" icon will remove the captured image and return the Operator to the previous screen.
+     * **Crop**: The Operator can drag from the four corners of the captured image to crop it as needed.
+     * **Save**: Clicking on the "Save" button will save the captured image and return the Operator to the previous Document Upload page.
+     * **Retake**: Clicking on the "Retake" button will remove the captured image, reopen the camera, and allow the Operator to take a new photo.
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-4.png" alt=""><figcaption></figcaption></figure>
 
@@ -72,11 +72,10 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 **Face photo capture process**
 
-    * For capturing the face photo, the Operator should click on the **Scan** button to activate the camera and take a picture.
-    * The image quality will be displayed on the screen and must meet a certain threshold to be considered acceptable.
-    * The Operator has three attempts to capture the biometric image.
-
-    It is important to note that no exceptions can be made for the face photo biometric capture process.
+   * For capturing the face photo, the Operator should click on the **Scan** button to activate the camera and take a picture.
+   * The image quality will be displayed on the screen and must meet a certain threshold to be considered acceptable.
+   * The Operator has three attempts to capture the biometric image.
+   * It is important to note that no exceptions can be made for the face photo biometric capture process.
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-5 (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -120,16 +119,17 @@ From the Preview page, the Operator has the ability to navigate back to previous
 
 10. On the `Operator Authentication` page, operators are required to input their credentials (username and password) that were used during the login process.
 
-Upon successful verification of the credentials, the packet will be uploaded to the server and the operator will be redirected to the `Acknowledgment` screen. This screen includes the following information:
+  Upon successful verification of the credentials, the packet will be uploaded to the server and the operator will be redirected to 
+  the `Acknowledgment` screen. This screen includes the following information:
 
-* Application ID
-* Timestamp of Registration
-* Demographic data captured
-* Documents uploaded
-* Biometric data captured
-* Print option
-* QR code for the Application ID
-* Option to initiate a new registration process.
+  * Application ID
+  * Timestamp of Registration
+  * Demographic data captured
+  * Documents uploaded
+  * Biometric data captured
+  * Print option
+  * QR code for the Application ID
+  * Option to initiate a new registration process.
 
 
 
