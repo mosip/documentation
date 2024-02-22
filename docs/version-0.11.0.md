@@ -6,7 +6,7 @@
 
 **Support**: Support Release
 
-**Release Date**: 22nd February, 2024
+**Release Date**: 23nd February, 2024
 
 ## Overview
 
@@ -14,15 +14,15 @@ We are excited to announce the first independent release of Mimoto, officially n
 
 * Onboarding a new VC Issuer
   
-* Mimoto-issuer configuration changes
+* Mimoto-Issuer onfiguration changes
 
 ## Summary
 
 Please find below the details for the 0.11.0 release:
 
-* Onboarding a new VC Issuer: For each new VC Issuer, Mimoto must be onboarded as an OIDC client to eSignet.
+* **Onboarding a new VC Issuer**: For each new VC Issuer, Mimoto must be onboarded as an OIDC client to eSignet.
 
-* Mimoto-Issuer Configuration Changes: Changes to authentication and well-known configuration details will be included in the mimoto-issuers configuration.
+* **Mimoto-Issuer configuration changes**: Changes to authentication and well-known configuration details will be included in the mimoto-issuers configuration.
 
 ## Repository Released
 
