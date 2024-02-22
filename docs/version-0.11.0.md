@@ -4,7 +4,7 @@
 
 **Upgrade From**: Inji 0.10.0
 
-**Support**: Developer Release
+**Support**: Support Release
 
 **Release Date**: 22nd February, 2024
 
@@ -12,7 +12,7 @@
 
 We are excited to announce the first independent release of Mimoto, officially named version 0.11.0. This release is built upon Inji vDP2 and primarily focuses on the following:
 
-* Onboarding a new VC Issuance
+* Onboarding a new VC Issuer
   
 * Mimoto-issuer configuration changes
 
@@ -20,7 +20,7 @@ We are excited to announce the first independent release of Mimoto, officially n
 
 Please find below the details for the 0.11.0 release:
 
-* Onboarding a new VC Issuance: For each new VC Issuer, Mimoto must be onboarded as an OIDC client to eSignet.
+* Onboarding a new VC Issuer: For each new VC Issuer, Mimoto must be onboarded as an OIDC client to eSignet.
 
 * Mimoto-Issuer Configuration Changes: Changes to authentication and well-known configuration details will be included in the mimoto-issuers configuration.
 
@@ -29,11 +29,8 @@ Please find below the details for the 0.11.0 release:
 | **Repositories** | **Tags Released**                                                         |
 | ---------------- | ------------------------------------------------------------------------- |
 | mimoto           | [v0.10.0](https://github.com/mosip/mimoto/tree/v0.10.0)                   |
-| inji             | [v0.10.0](https://github.com/mosip/inji/tree/v0.10.0)                     |
-| tuvali           | [v0.4.7](https://github.com/mosip/tuvali/tree/v0.4.7)                     |
 | mosip-config     | [v0.10.0-INJI](https://github.com/mosip/mosip-config/tree/v0.10.0-INJI)   |
-| secure-keystore  | [v0.1.4](https://github.com/mosip/secure-keystore/tree/v0.1.4)            |
-| mosip-onboarder  | [v1.2.0.1-B4](https://github.com/mosip/mosip-onboarding/tree/v1.2.0.1-B4) |
+
 
 ## Documentation
 
