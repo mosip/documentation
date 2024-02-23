@@ -37,9 +37,8 @@ The new features included in this release, along with those from the [Android Re
 
 ## Repository Released
 
-| **Repositories**            | **Tags Released**   |  **Branch**                          |
-| --------------------------- | ------------------------------------------------------------| ------------------ |
-| android-registration-client   | [v0.9.0]() | [Branch details]()  |
+| **Repositories**            | **Tags Released**   |  
+| android-registration-client   | [v0.9.0](https://github.com/mosip/android-registration-client/tree/v0.9.0) | 
 
 **Dependencies**:
 
