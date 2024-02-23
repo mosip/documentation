@@ -52,8 +52,6 @@ mosip.inji.openId4VCIDownloadVCTimeout=30000
 ```
 
 * **Step g**: Update the `application-local.properties` with the right openId configs.
-* **Step h**: Alternatively, instead of performing step d, e, f, g we can also add the below patch to the repo.
-
 * **Step i**: After that we can run, `mvn spring-boot:run -Dspring.profiles.active=local`
 * **Step j**: Mimoto will be up on 8088 as per `bootstrap.properties`.
 * **Step k**: You can confirm with this URL: `http://localhost:8088/v1/mimoto/issuers`
@@ -120,7 +118,7 @@ resourceUrl <credential url>
 
 ## 6. Setting up the Inji development environment
 
-* Download the [Inji repo](https://github.com/mosip/inji) from MOSIP (Tag: vDP2-INJI)
+* Download the [Inji repo](https://github.com/mosip/inji) from MOSIP.
 * Refer to the [Inji build & deploy](https://docs.mosip.io/inji/build-and-deployment) document for downloading the dependencies.
 * Make the changes in the `.env` file to point to the right eSignet and mimoto hosts.
 * Sometimes the configuration doesn’t get reflected on the app even if we update the `.env` file. In that case, we will need to hardcode these properties in the constants.ts file.
