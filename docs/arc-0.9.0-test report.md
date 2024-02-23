@@ -23,7 +23,7 @@ The testing focus of Android Registration Client includes the following processe
 - Authentication screen testing
 - Acknowledgement screen review
 - Multi-language support analysis
-- Syncing/uploading/Auto-uploading packets testing.
+- Syncing/ uploading/ Auto-uploading packets testing.
 
 ## Test Approach
 
@@ -59,7 +59,6 @@ Hash Tag: 19ae6cff54715a2a82011134c6678424620217fa
 #### Detailed Test metrics
 
 Below are the detailed test metrics by performing manual/automation testing. The project metrics are derived from Defect density, Test coverage, Test execution coverage, test tracking and efficiency. 
-
 
 The various metrics that assist in test tracking and efficiency are as follows:
 
