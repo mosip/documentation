@@ -70,7 +70,13 @@ This state machine takes care of VC downloaded via eSignet. This contains all th
 
 ## issuersMachine.ts
 
-This state machine takes care of the list of issuers which are supported to download VC. It keep record of issuers, issuer configurations, and generating key-pairs for esignet flow and verifies the credential in esignet flow.
+This state machine takes care of the complete openid4vci flow. The issuer state machine invokes /issuers and /issuers/<issuer_name> api based on the user to render the issuers list in the UI and also downloads the issuers configuration and caches it and also including the below actions
+
+* OIDC authorization using react-native-app-auth library
+* generating key-pairs for openid4vci flow
+* download credential
+* verify the verifiable credential
+* store the verifiable credential
 
 
 ## settings.ts

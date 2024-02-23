@@ -85,3 +85,18 @@ The configurable properties for mimoto can be found at [mimoto-default.propertie
 > Refer to [mimoto-default.properties](https://github.com/mosip/mosip-config/blob/collab/mimoto-default.properties) of Collab environment.
 
 The implementers can choose to use the existing configurations or add new configurations to them.
+
+### Issuers Listing
+
+The user is currently on the `+` button on the Home screen, which will open `Add new card` screen, where all the issuers are displayed
+Below issuers list API gives out all the issuers list 
+
+{% swagger src="../.gitbook/assets/mimoto.json" path="/issuers" method="get" %}
+[mimoto.json](../.gitbook/assets/mimoto.json)
+{% endswagger %}
+
+To get complete configuration of the specific issuer, below api is called.
+
+{% swagger src="../.gitbook/assets/mimoto.json" path="/issuers/{issuer-id}" method="get" %}
+[mimoto.json](../.gitbook/assets/mimoto.json)
+{% endswagger %}

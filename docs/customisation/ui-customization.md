@@ -251,3 +251,27 @@ export const DefaultTheme = {
   })
 }
 ```
+
+## VC Card Customization :
+
+The VC can be dynamically rendered with all the fields , and If the display properties provided in the [wellknown](https://esignet.collab.mosip.net/.well-known/openid-credential-issuer), the INJI downloads the wellknown and applies the below properties on the VC template to modify the VC render.
+* Text Colour
+* Background Colour
+* Logo Change
+
+```
+{
+  "display": [
+    {
+      "name": "MOSIP Identity Verifiable Credential",
+      "locale": "en",
+      "logo": {
+        "url": "https://esignet.collab.mosip.net/logo.png",
+        "alt_text": "a square logo of a Esignet"
+      },
+      "background_color": "#FDFAF9",
+      "text_color": "#7C4616"
+    }
+  ]
+}
+```
