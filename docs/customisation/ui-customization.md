@@ -252,22 +252,22 @@ export const DefaultTheme = {
 }
 ```
 
-## Sunbird VC Card Customization : 
+## VC Card Customization :
 
-The VC from Sunbird is dynamically rendered with all the fields , and If the display properties provided in the [wellknown](https://esignet.collab.mosip.net/.well-known/openid-credential-issuer), the INJI downloads the wellknown and applies the below properties on the VC template to modify the VC render.
+The VC can be dynamically rendered with all the fields , and If the display properties provided in the [wellknown](https://esignet.collab.mosip.net/.well-known/openid-credential-issuer), the INJI downloads the wellknown and applies the below properties on the VC template to modify the VC render.
 * Text Colour
-* Background Colur
+* Background Colour
 * Logo Change
 
 ```
 {
   "display": [
     {
-      "name": "Sunbird RC Insurance Verifiable Credential",
+      "name": "MOSIP Identity Verifiable Credential",
       "locale": "en",
       "logo": {
-        "url": "https://sunbird.org/images/sunbird-logo-new.png",
-        "alt_text": "a square logo of a Sunbird"
+        "url": "https://esignet.collab.mosip.net/logo.png",
+        "alt_text": "a square logo of a Esignet"
       },
       "background_color": "#FDFAF9",
       "text_color": "#7C4616"
@@ -275,5 +275,3 @@ The VC from Sunbird is dynamically rendered with all the fields , and If the dis
   ]
 }
 ```
-
-[//]: # (<Corresponding Images has to attached here>)
