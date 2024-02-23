@@ -6,11 +6,11 @@
 
 **Support**: Support Release
 
-**Release Date**: 23nd February, 2024
+**Release Date**: 23rd February, 2024
 
 ## Overview
 
-We are excited to announce the first independent release of Mimoto, officially named version 0.11.0. This release is built upon Inji vDP2 and primarily focuses on the following:
+We are excited to announce the first independent release of **Mimoto**, officially named version 0.11.0. This release is built upon Inji 0.10.0 and primarily focuses on the following:
 
 * Onboarding a new VC Issuer
 * Mimoto-Issuer onfiguration changes
@@ -20,14 +20,14 @@ We are excited to announce the first independent release of Mimoto, officially n
 Please find below the details for the 0.11.0 release:
 
 * **Onboarding a new VC Issuer**: For each new VC Issuer, Mimoto must be onboarded as an OIDC client to eSignet. To know more, refer [here](customisation/credential\_providers.md).
-* **Mimoto-Issuer configuration changes**: Changes to authentication and well-known configuration details will be included in the mimoto-issuers configuration. To know more, refer here.
+* **Mimoto-Issuer configuration changes**: Changes to authentication and well-known configuration details will be included in the mimoto-issuers configuration. To know more, refer [here](https://docs.mosip.io/inji/backend-services/mimoto#configuration).
 
 ## Repository Released
 
-| **Repositories** | **Tags Released**                                                       |
-| ---------------- | ----------------------------------------------------------------------- |
-| mimoto           | [v0.10.0](https://github.com/mosip/mimoto/tree/v0.10.0)                 |
-| mosip-config     | [v0.10.0-INJI](https://github.com/mosip/mosip-config/tree/v0.10.0-INJI) |
+| **Repositories** | **Tags Released**                                                               |
+| ---------------- | ------------------------------------------------------------------------------- |
+| mimoto           | [v0.11.0](https://github.com/mosip/mimoto/releases/tag/v0.11.0)                 |
+| mosip-config     | [v0.11.0-INJI](https://github.com/mosip/mosip-config/releases/tag/v0.11.0-INJI) |
 
 ## Documentation
 
