@@ -18,6 +18,7 @@
   * [Code Contribution](contribution/code-contribution.md)
   * [Code of Conduct](contribution/code-of-conduct.md)
 * [Build & Deployment](build-&-deployment.md)
+  * [Setting Up Inji, eSignet & Mimoto Locally](setting-up-inji-esignet-mimoto-locally.md)  
 * [Releases](versions.md)
   * [Version 0.11.0](version-0.11.0.md)
   * [Version DP2](version-inji-dp2.md)
