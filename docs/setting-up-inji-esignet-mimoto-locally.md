@@ -61,10 +61,10 @@ mosip.inji.openId4VCIDownloadVCTimeout=30000
 
 ## 3. Setting up eSignet in local
 
-* * **Step a**: Download the docker-compose containing the eSignet and relevant docker images from [here](https://github.com/mosip/esignet/tree/develop/docs/docker-compose).
-* * **Step b**: Run the docker-compose with the below command.
+* **Step a**: Download the docker-compose containing the eSignet and relevant docker images from [here](https://github.com/mosip/esignet/tree/develop/docs/docker-compose).
+* **Step b**: Run the docker-compose with the below command.
 `docker compose up -d`
-* * **Step c**: Check if all the services are up and running.
+* **Step c**: Check if all the services are up and running.
 
 ## 4. Test VCI flow via Esignet
 * Download and import the postman collections for eSignet from [here](
