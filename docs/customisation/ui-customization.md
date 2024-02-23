@@ -7,8 +7,7 @@ Currently, Inji supports two themes:
 * orange
 * purple
 
-We can customize the application by adding a new file under `components/ui/themes` and import that file in `components/ui/styleUtils.ts` and assign that to `Theme` variable in it.
-Orange theme is referred as DefaultTheme.
+We can customize the application by adding a new file under `components/ui/themes` and import that file in `components/ui/styleUtils.ts` and assign that to `Theme` variable in it. Orange theme is referred as DefaultTheme.
 
 ```
 Example:-
@@ -70,7 +69,7 @@ export const DefaultTheme = {
 
 To change the top header icons:
 
-<img src="_images/header_icons.png" height=400 width=200>
+![](\_images/header\_icons.png)
 
 In `HomeScreenLayout.tsx`, refer
 
@@ -85,7 +84,7 @@ const HomeScreenOptions = {
 
 To change the text, colour and logo for Tabs:
 
-<img src="_images/bottom_tabs.png" height=400 width=200>
+![](\_images/bottom\_tabs.png)
 
 In `main.ts`, there are 3 tab screens variables
 
@@ -96,9 +95,7 @@ const history: TabScreen
 
 ```
 
-`text` can be changed by `name` attribute
-`logo` can be changed by `icon` attribute
-`colour` can be changed by `color` attribute in `MainLayout.tsx` while rendering `Navigator`
+`text` can be changed by `name` attribute `logo` can be changed by `icon` attribute `colour` can be changed by `color` attribute in `MainLayout.tsx` while rendering `Navigator`
 
 ```
 Example:-
@@ -107,7 +104,7 @@ color={focused ? Theme.Colors.Icon : Theme.Colors.GrayIcon}
 
 To change the colour of the Details Label Text:
 
-<img src="_images/details-label.png" height=400 width=200>
+![](\_images/details-label.png)
 
 ```
 export const DefaultTheme = {
@@ -120,7 +117,7 @@ export const DefaultTheme = {
 
 To change the colour of Details Value Text:
 
-<img src="_images/details-value.png" height=400 width=200>
+![](\_images/details-value.png)
 
 ```
 export const DefaultTheme = {
@@ -136,9 +133,10 @@ export const DefaultTheme = {
 
 To change the colour of `+` icon colour:
 
-<img src="_images/add-id-button.png" height=400 width=200>
+![](\_images/add-id-button.png)
 
 In `HomeScreen.tsx`, refer `DownloadFABIcon` component
+
 ```
 const DownloadFABIcon: React.FC = () => {
     const plusIcon
@@ -148,7 +146,7 @@ const DownloadFABIcon: React.FC = () => {
 
 To change the colour of the Loading Transition:
 
-<img src="_images/loading-transition.png" height=400 width=200>
+![](\_images/loading-transition.png)
 
 ```
 export const DefaultTheme = {
@@ -161,7 +159,7 @@ export const DefaultTheme = {
 
 To change the colour of the Error message:
 
-<img src="_images/error-message.png" height=400 width=200>
+![](\_images/error-message.png)
 
 ```
 export const DefaultTheme = {
@@ -178,7 +176,7 @@ export const DefaultTheme = {
 
 To change the colour of noUinText:
 
-<img src="_images/no-uin-text.png" height=400 width=200>
+![](\_images/no-uin-text.png)
 
 ```
 export const DefaultTheme = {
@@ -191,7 +189,7 @@ export const DefaultTheme = {
 
 To change the colours of Label in Settings:
 
-<img src="_images/settings-labels.png" height=400 width=200>
+![](\_images/settings-labels.png)
 
 ```
 export const DefaultTheme = {
@@ -205,7 +203,7 @@ export const DefaultTheme = {
 
 To change the background and label colour for version section:
 
-<img src="_images/about-version.png" height=400 width=200>
+![](\_images/about-version.png)
 
 ```
 export const DefaultTheme = {
@@ -226,7 +224,7 @@ export const DefaultTheme = {
 
 To change colour on add new card page:
 
-<img src="_images/add-new-card.png" height=400 width=200>
+![](\_images/add-new-card.png)
 
 ```
 export const DefaultTheme = {
@@ -252,12 +250,13 @@ export const DefaultTheme = {
 }
 ```
 
-## VC Card Customization :
+## VC Card Customization:
 
-The VC can be dynamically rendered with all the fields , and If the display properties provided in the [wellknown](https://esignet.collab.mosip.net/.well-known/openid-credential-issuer), the INJI downloads the wellknown and applies the below properties on the VC template to modify the VC render.
-* Text Colour
-* Background Colour
-* Logo Change
+The VC can be dynamically rendered with all the fields, and if the display properties provided in the. well`-known`, Inji downloads the `.well-known` and applies the below properties on the VC template to modify the VC render.
+
+* Text colour
+* Background colour
+* Logo change
 
 ```
 {

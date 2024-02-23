@@ -1,7 +1,6 @@
 # Workflow customization
 
-Workflow in Inji is achieved by finite-state machine components. State machines are written using a library called [xstate](https://xstate.js.org/docs/recipes/react.html).
-All the state machines are available in the machines folder of the Inji codebase. There are few machines under the screens folder but these are too specific to those features.
+Workflow in Inji is achieved by finite-state machine components. State machines are written using a library called [xstate](https://xstate.js.org/docs/recipes/react.html). All the state machines are available in the machines folder of the Inji codebase. There are few machines under the screens folder but these are too specific to those features.
 
 Here is a list of state machines and their responsibilities. The developers can choose to use the existing state machine components and customize the workflow as per their needs.
 
@@ -22,12 +21,12 @@ This is the root state machine for the application. On initialisation, it starts
 
 This state machine takes care of actions related to storing and retrieving data on the mobile phone. It exposes the wrapper to all the other state machines to work with data stored on the device.
 
-It also performs the custom encryption and decryption required for saving and retrieving data from the underlying store. 
+It also performs the custom encryption and decryption required for saving and retrieving data from the underlying store.
 
 As of now, the store state machine uses following two libraries which abstracts how the data is stored between iOS and Android:
-* [react-native-mmkv-storage](https://github.com/ammarahm-ed/react-native-mmkv-storage)  - stores all the meta information and references of the encrypted VC.
-* [react-native-fs](https://www.npmjs.com/package/react-native-fs) - stores the encrypted VC as a separate file,
 
+* [react-native-mmkv-storage](https://github.com/ammarahm-ed/react-native-mmkv-storage) - stores all the meta information and references of the encrypted VC.
+* [react-native-fs](https://www.npmjs.com/package/react-native-fs) - stores the encrypted VC as a separate file,
 
 ## auth.ts
 
@@ -39,8 +38,7 @@ After selecting the unlock method as passcode or biometric, the user is navigate
 
 ## vc.ts
 
-This state machine takes care of the VC received in Inji as a Wallet or Verifier.
-When Inji is being used as a Wallet, all the user-downloaded VCs are displayed on the Home screen.
+This state machine takes care of the VC received in Inji as a Wallet or Verifier. When Inji is being used as a Wallet, all the user-downloaded VCs are displayed on the Home screen.
 
 It also keeps track of sharing VC over BLE. When Inji is being used as a Verifier, all received VCs are displayed under the Received Card option in Settings.
 
@@ -58,7 +56,6 @@ After a request is made to download a new VC, an event will be sent to this stat
 
 Any new feature for a VC is to be added to this state machine.
 
-
 ## EsignetMosipVCItemMachine.ts
 
 This state machine takes care of VC downloaded via eSignet. This contains all the activities/state related to VC like:
@@ -70,14 +67,13 @@ This state machine takes care of VC downloaded via eSignet. This contains all th
 
 ## issuersMachine.ts
 
-This state machine takes care of the complete openid4vci flow. The issuer state machine invokes /issuers and /issuers/<issuer_name> api based on the user to render the issuers list in the UI and also downloads the issuers configuration and caches it and also including the below actions
+This state machine manages the entire OpenID4VCI flow. The issuer state machine calls the endpoints `/issuers` and `/issuers/<issuer_name>` to display the list of issuers in the user interface, as well as downloads and caches the issuer's configuration. It also performs the following actions:
 
-* OIDC authorization using react-native-app-auth library
-* generating key-pairs for openid4vci flow
+* OIDC authorization using `react-native-app-auth` library
+* generating key-pairs for OpenID4VCI flow
 * download credential
 * verify the verifiable credential
 * store the verifiable credential
-
 
 ## settings.ts
 

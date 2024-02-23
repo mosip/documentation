@@ -1,4 +1,4 @@
-# Credential Provider customization
+# Credential Providers
 
 Inji currently provides support for two credential providers:
 
@@ -18,16 +18,15 @@ In `mimoto-issuers-config.json`, new providers can be added as per the `well-kno
 
 After adding the provider in configuration, it will be displayed on the UI on `Add new card` screen.
 
-* If new provider supports [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html) protocol, it is recommended to use `issuerMachine.ts` and `EsignetMosipVCItemMachine.ts` for workflow to download VC.
-  
+* If new provider supports [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html) protocol, it is recommended to use `issuerMachine.ts` and `EsignetMosipVCItemMachine.ts` for workflow to download VC.
 * If it doesn't support `OpenID4VCI` protocol, new state machine needs to be added. Please refer to `issuerMachine.ts` and `EsignetMosipVCItemMachine.ts`.
 
-## Onboarding the Mimoto as OIDC Client Esignet for new Issuer :
+## Onboarding Mimoto as OIDC Client esignet for new Issuer:
 
-* Mimoto OIDC client is now added as an optional partner, which can be onboarder through partner onboarder as per requirement.
-* In onboarder itself ,there is a script by the name create-signing-certs.sh which creates the certificates as well as the oidckeystore.p12.
+* Mimoto OIDC client is now added as an optional partner, which can be onboarded through partner onboarder as per requirement.
+* In [mosip-onboarding](https://github.com/mosip/mosip-onboarding) itself, there is a script by the name `create-signing-certs.sh` which creates the certificates as well as the `oidckeystore.p12`.
 * Client ID is created randomly by using the PMS API, and there is no client Secret for that.
-* clients can get renewed by demand, but that mean we will have to do some manual changes, P.s It is recommended to create a client once per environment as it has no expiry.
-* The install.sh script in mimoto as well as the helm charts inside mimoto repo were changed to allow for the storage and mounting of the oidckeystore.p12 file
-* For Onboarding the new issuer, same steps has to be followed and p12 has to be generated.
-* Once p12 file is generated, existing keystore file has to be exported from mimoto pod and newly created p12 file has to be imported and remounted in the Mimoto POD
+* Clients can be renewed upon request, however, this will require some manual adjustments. It is recommended to create a client only once per environment as they do not expire.
+* Modifications were made to the `install.sh` script within the Mimoto software, along with adjustments to the helm charts in the Mimoto repository, in order to facilitate the storage and mounting of the `oidckeystore.p12` file.
+* For Onboarding the new issuer, the same steps have to be followed and p12 has to be generated.
+* Once the p12 file is generated, the existing keystore file should be exported from the Mimoto pod. The newly created p12 file must then be imported and remounted in the Mimoto POD.
