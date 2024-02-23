@@ -21,7 +21,7 @@ After adding the provider in configuration, it will be displayed on the UI on `A
 * If new provider supports [OpenID4VCI](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html) protocol, it is recommended to use `issuerMachine.ts` and `EsignetMosipVCItemMachine.ts` for workflow to download VC.
 * If it doesn't support `OpenID4VCI` protocol, new state machine needs to be added. Please refer to `issuerMachine.ts` and `EsignetMosipVCItemMachine.ts`.
 
-## Onboarding Mimoto as OIDC Client esignet for new Issuer:
+## Onboarding Mimoto as OIDC Client for new Issuer:
 
 * Mimoto OIDC client is now added as an optional partner, which can be onboarded through partner onboarder as per requirement.
 * In [mosip-onboarding](https://github.com/mosip/mosip-onboarding) itself, there is a script by the name `create-signing-certs.sh` which creates the certificates as well as the `oidckeystore.p12`.
