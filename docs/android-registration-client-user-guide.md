@@ -34,10 +34,10 @@ This user guide is designed to provide assistance to Operators and Supervisors i
 
 Upon successful login, the user will be directed to the Home page, which includes the following options:
 
-  * New Registration
-  * Operations Tasks (Future scope)
-  * Dashboard (Future scope)
-  * Settings (Future scope)
+* New Registration
+* Operations Tasks (Future scope)
+* Dashboard (Future scope)
+* Settings (Future scope)
 
 ### New Registration
 
@@ -61,21 +61,21 @@ To begin the Registration process, the Operator is required to follow the steps 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-3.png" alt=""><figcaption></figcaption></figure>
 
 7. Upload the document by clicking on the **Scan** button to open the camera. The Operator can take a picture of the document and then choose from the following actions:
-     * **Cancel**: Clicking on the "Cross" icon will remove the captured image and return the Operator to the previous screen.
-     * **Crop**: The Operator can drag from the four corners of the captured image to crop it as needed.
-     * **Save**: Clicking on the "Save" button will save the captured image and return the Operator to the previous Document Upload page.
-     * **Retake**: Clicking on the "Retake" button will remove the captured image, reopen the camera, and allow the Operator to take a new photo.
+   * **Cancel**: Clicking on the "Cross" icon will remove the captured image and return the Operator to the previous screen.
+   * **Crop**: The Operator can drag from the four corners of the captured image to crop it as needed.
+   * **Save**: Clicking on the "Save" button will save the captured image and return the Operator to the previous Document Upload page.
+   * **Retake**: Clicking on the "Retake" button will remove the captured image, reopen the camera, and allow the Operator to take a new photo.
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-4.png" alt=""><figcaption></figcaption></figure>
 
-8.  After ensuring all required information has been accurately entered in the `Document Upload` screen, the Operator can proceed by clicking on the **Continue** button to access the `Biometric Capture` page. Here, the Operator can capture the biometric data of the Resident, including a face photo, fingerprint, and iris scan.
+8. After ensuring all required information has been accurately entered in the `Document Upload` screen, the Operator can proceed by clicking on the **Continue** button to access the `Biometric Capture` page. Here, the Operator can capture the biometric data of the Resident, including a face photo, fingerprint, and iris scan.
 
 **Face photo capture process**
 
-   * For capturing the face photo, the Operator should click on the **Scan** button to activate the camera and take a picture.
-   * The image quality will be displayed on the screen and must meet a certain threshold to be considered acceptable.
-   * The Operator has three attempts to capture the biometric image.
-   * It is important to note that no exceptions can be made for the face photo biometric capture process.
+* For capturing the face photo, the Operator should click on the **Scan** button to activate the camera and take a picture.
+* The image quality will be displayed on the screen and must meet a certain threshold to be considered acceptable.
+* The Operator has three attempts to capture the biometric image.
+* It is important to note that no exceptions can be made for the face photo biometric capture process.
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-5 (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -89,7 +89,7 @@ To begin the Registration process, the Operator is required to follow the steps 
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-6.png" alt=""><figcaption></figcaption></figure>
 
-**Fingerprint Capture Process**: 
+**Fingerprint Capture Process**:
 
 In the event that a thumb is missing or experiencing difficulties that prevent its fingerprint from being captured, the Operator is authorized to indicate an **exception**. To mark an exception, the operator must select the affected thumb and specify the type of exception as either _Temporary_ or _Permanent_. Additionally, the operator may include any relevant additional comments.
 
@@ -119,19 +119,24 @@ From the Preview page, the Operator has the ability to navigate back to previous
 
 10. On the `Operator Authentication` page, operators are required to input their credentials (username and password) that were used during the login process.
 
-  Upon successful verification of the credentials, the packet will be uploaded to the server and the operator will be redirected to 
-  the `Acknowledgment` screen. This screen includes the following information:
+Upon successful verification of the credentials, the packet will be uploaded to the server and the operator will be redirected to the `Acknowledgment` screen. This screen includes the following information:
 
-  * Application ID
-  * Timestamp of Registration
-  * Demographic data captured
-  * Documents uploaded
-  * Biometric data captured
-  * Print option
-  * QR code for the Application ID
-  * Option to initiate a new registration process.
-
-
+* Application ID
+* Timestamp of Registration
+* Demographic data captured
+* Documents uploaded
+* Biometric data captured
+* Print option
+* QR code for the Application ID
+* Option to initiate a new registration process.
 
 <figure><img src=".gitbook/assets/arc-newregistration-Page-9.png" alt=""><figcaption></figcaption></figure>
 
+Upon receipt of the acknowledgement, the packet is uploaded to the [Registration Processor](registration-processor.md). Once the packet has been successfully processed, a unique identification number (UIN) is generated.
+
+On the acknowledgement page, the operator will have two options available:
+
+1. Print - The operator can click on this option to obtain a physical copy of the acknowledgement.
+2. New Registration - The operator can initiate another registration by clicking on this option.
+
+In summary, the aforementioned steps can be followed by the user (Operator/ Supervisor) to register an individual by capturing demographic data, documents, and biometric data in order to generate their UIN.
