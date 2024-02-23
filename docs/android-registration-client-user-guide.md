@@ -136,7 +136,7 @@ Upon receipt of the acknowledgement, the packet is uploaded to the [Registration
 
 On the acknowledgement page, the operator will have two options available:
 
-1. Print - The operator can click on this option to obtain a physical copy of the acknowledgement.
-2. New Registration - The operator can initiate another registration by clicking on this option.
+1. **Print**- The operator can click on this option to obtain a physical copy of the acknowledgement.
+2. **New Registration**- The operator can initiate another registration by clicking on this option.
 
 In summary, the aforementioned steps can be followed by the user (Operator/ Supervisor) to register an individual by capturing demographic data, documents, and biometric data in order to generate their UIN.
