@@ -19,7 +19,7 @@ We are excited to announce the first independent release of **Mimoto**, official
 
 Please find below the details for the 0.11.0 release:
 
-* **Onboarding a new VC Issuer**: For each new VC Issuer, Mimoto must be onboarded as an OIDC client to eSignet. To know more, refer [here](customisation/credential\_providers.md).
+* **Onboarding a new VC Issuer**: For each new VC Issuer, Mimoto must be onboarded as an OIDC client to [eSignet](https://docs.esignet.io/). To know more, refer [here](customisation/credential\_providers.md).
 * **Mimoto-Issuer configuration changes**: Changes to authentication and well-known configuration details will be included in the mimoto-issuers configuration. To know more, refer [here](https://docs.mosip.io/inji/backend-services/mimoto#configuration).
 
 ## Repository Released

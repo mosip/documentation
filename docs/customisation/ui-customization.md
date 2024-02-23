@@ -252,7 +252,7 @@ export const DefaultTheme = {
 
 ## VC Card Customization:
 
-The VC can be dynamically rendered with all the fields, and if the display properties provided in the. well`-known`, Inji downloads the `.well-known` and applies the below properties on the VC template to modify the VC render.
+The VC can be dynamically rendered with all the fields, and if the display properties provided in the[ .well-known](https://mosip-team.slack.com/archives/D05BJE34VT4/p1708683594418449), Inji downloads the `.well-known` and applies the below properties on the VC template to modify the VC render.
 
 * Text colour
 * Background colour
