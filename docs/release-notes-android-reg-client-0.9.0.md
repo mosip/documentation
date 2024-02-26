@@ -1,4 +1,4 @@
-# Android Registration Client: Release Notes
+# Android Registration Client 0.9.0
 
 **Release Name**: Android Registration Client v0.9.0
 
@@ -19,33 +19,32 @@ The new features included in this release, along with those from the [Android Re
 * **Device Trust validation**- This feature is introduced since the Android Registration Client will not accept biometrics from any non-trusted biometric application.
 * **Transliteration**- Ability to transliterate to another language upon entering the data
 * **Combatibility with real SBI**
-* **Audit** 
+* **Audit**
 * **Operator/Supervisor Login (offline and online)**
-  
-   a. Multilingual Support for display of labels (LTR)
-  
-   b. Multilingual Support for Data Entry (LTR)
-  
+
+&#x20;      a. Multilingual Support for display of labels (LTR)
+
+&#x20;      b. Multilingual Support for Data Entry (LTR)
+
 * **Auto sync / Manual sync**
 * **Enhanced new registration capabilities**:
-    * Streamlined New Registrations Consent
-    * Demographic Details
-    * Document Upload
-    * Biometrics capture
-    * Preview Section
-    * Operator Authentication
-    * Packet Synchronization
-    * Packet Upload
-    * Acknowledgment Section
- 
+  * Streamlined New Registrations Consent
+  * Demographic Details
+  * Document Upload
+  * Biometrics capture
+  * Preview Section
+  * Operator Authentication
+  * Packet Synchronization
+  * Packet Upload
+  * Acknowledgment Section
+
 **Note**: Compatible with [MOSIP version 1.2.0](release/1.2.0/release-notes.md)
 
 ## Repository Released
 
-| **Repositories**            | **Tags Released**   |  
-|-----------------------------|---------------------|
-| android-registration-client   | [v0.9.0](https://github.com/mosip/android-registration-client/tree/v0.9.0) | 
-
+| **Repositories**            | **Tags Released**                                                          |
+| --------------------------- | -------------------------------------------------------------------------- |
+| android-registration-client | [v0.9.0](https://github.com/mosip/android-registration-client/tree/v0.9.0) |
 
 ## Build and Deploy
 
@@ -57,13 +56,8 @@ For details related to Android Registration CLient configurations, refer to the 
 
 ## User Guide
 
-To learn more about the available features, processes, and user interface, refer [Android Registration User Guide](android-registration-client-user-guide.md) for further information. 
+To learn more about the available features, processes, and user interface, refer [Android Registration User Guide](android-registration-client-user-guide.md) for further information.
 
 ## Known Issues
 
-To view the list of known issues, refer [here](https://mosip.atlassian.net/issues/?jql=parent%3DRCF-31%20and%20labels%3DRCF_Known_Bug).
-
-
-
-
-
+To view the list of known issues, refer [here](https://mosip.atlassian.net/issues/?jql=parent%3DRCF-31%20and%20labels%3DRCF\_Known\_Bug).
