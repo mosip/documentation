@@ -21,8 +21,11 @@ The new features included in this release, along with those from the [Android Re
 * **Combatibility with real SBI**
 * **Audit** 
 * **Operator/Supervisor Login (offline and online)**
+  
    a. Multilingual Support for display of labels (LTR)
+  
    b. Multilingual Support for Data Entry (LTR)
+  
 * **Auto sync / Manual sync**
 * **Enhanced new registration capabilities**:
     * Streamlined New Registrations Consent
