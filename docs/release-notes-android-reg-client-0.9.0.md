@@ -27,6 +27,7 @@ The new features included in this release, along with those from the [Android Re
 &#x20;      b. Multilingual Support for Data Entry (LTR)
 
 * **Auto sync / Manual sync**
+  
 * **Enhanced new registration capabilities**:
   * Streamlined New Registrations Consent
   * Demographic Details
@@ -52,7 +53,7 @@ To access the build and read through the deployment instructions, refer to the [
 
 ## Configurations
 
-For details related to Android Registration CLient configurations, refer to the [Configuration Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-configuration).
+For details related to Android Registration Client configurations, refer to the [Configuration Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-configuration).
 
 ## User Guide
 
