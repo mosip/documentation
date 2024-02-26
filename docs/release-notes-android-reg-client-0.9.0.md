@@ -6,7 +6,7 @@
 
 **Support**: Support Release
 
-**Release Date**: 23rd February, 2024
+**Release Date**: 26rd February, 2024
 
 ## Overview
 
@@ -38,11 +38,9 @@ The new features included in this release, along with those from the [Android Re
 ## Repository Released
 
 | **Repositories**            | **Tags Released**   |  
+|-----------------------------|---------------------|
 | android-registration-client   | [v0.9.0](https://github.com/mosip/android-registration-client/tree/v0.9.0) | 
 
-**Dependencies**:
-
-1. `mosipdev/kernel-syncdata-service:1.1.5.3`- This image contains temporary fix for encryption methodology for Android Registration Client. In the next release, there will be some decryption login changes and this will no longer be needed. 
 
 ## Build and Deploy
 
