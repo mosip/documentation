@@ -60,4 +60,4 @@ To learn more about the available features, processes, and user interface, refer
 
 ## Known Issues
 
-To view the list of known issues, refer [here](https://mosip.atlassian.net/issues/?jql=parent%3DRCF-31%20and%20labels%3DRCF\_Known\_Bug).
+To view the list of known issues, refer [here](https://mosip.atlassian.net/browse/RCF-489?jql=parent%3DRCF-31%20and%20labels%3DRCF\_Known\_Bug\_0.9.0).
