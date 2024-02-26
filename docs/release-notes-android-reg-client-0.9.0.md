@@ -49,7 +49,7 @@ The new features included in this release, along with those from the [Android Re
 
 ## Build and Deploy
 
-To access the build and read through the deployment instructions, refer to the [Deployment Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-developer-guide).
+To access the build and read through the deployment instructions, refer to the [Developer Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-developer-guide).
 
 ## Configurations
 
