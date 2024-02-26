@@ -6,7 +6,7 @@
 
 **Support**: Support Release
 
-**Release Date**: 26rd February, 2024
+**Release Date**: 26th February, 2024
 
 ## Overview
 
@@ -16,15 +16,15 @@ The main goal of the tablet application is to simplify the registration process 
 
 The new features included in this release, along with those from the [Android Registration Client DP1](https://docs.mosip.io/1.2.0/releases/release-notes-android-reg-client-dp1) release, are:
 
-* Device Trust validation- This feature is introduced since the Android Registration Client will not accept biometrics from any non-trusted biometric application.
-* Transliteration- Ability to transliterate to another language upon entering the data
-* Combatibility with real SBI
-* Audit 
-* Operator/Supervisor Login (offline and online)
+* **Device Trust validation**- This feature is introduced since the Android Registration Client will not accept biometrics from any non-trusted biometric application.
+* **Transliteration**- Ability to transliterate to another language upon entering the data
+* **Combatibility with real SBI**
+* **Audit** 
+* **Operator/Supervisor Login (offline and online)**
    a. Multilingual Support for display of labels (LTR)
    b. Multilingual Support for Data Entry (LTR)
-* Auto sync / Manual sync
-* Enhanced new registration capabilities:
+* **Auto sync / Manual sync**
+* **Enhanced new registration capabilities**:
     * Streamlined New Registrations Consent
     * Demographic Details
     * Document Upload
@@ -34,6 +34,8 @@ The new features included in this release, along with those from the [Android Re
     * Packet Synchronization
     * Packet Upload
     * Acknowledgment Section
+ 
+**Note**: Compatible with [MOSIP version 1.2.0](release/1.2.0/release-notes.md)
 
 ## Repository Released
 
