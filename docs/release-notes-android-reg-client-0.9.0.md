@@ -4,7 +4,7 @@
 
 **Release version**: 0.9.0
 
-**Support**: Support Release
+**Support**: Beta Release
 
 **Release Date**: 26th February, 2024
 
