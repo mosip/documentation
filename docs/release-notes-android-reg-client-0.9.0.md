@@ -48,7 +48,7 @@ To access the build and read through the deployment instructions, refer to the [
 
 ## Configurations
 
-For details related to resident portal configurations, refer to the [Configuration Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-configuration).
+For details related to Android Registration CLient configurations, refer to the [Configuration Guide](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-configuration).
 
 ## User Guide
 
