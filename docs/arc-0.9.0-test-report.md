@@ -46,8 +46,6 @@ Verification is performed on various configurations as mentioned below:
 
 ## Feature Health
 
-
-
 <figure><img src=".gitbook/assets/ARC Feature Health.png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics
@@ -56,9 +54,11 @@ Verification is performed on various configurations as mentioned below:
 
 Below are the test metrics by performing functional testing using mockSBI and mockABIS. The process followed was black box testing which based its test cases on the specifications of the software component under test. Functional test was performed in combination of individual module testing as well as integration testing. Test data were prepared in line with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple languages and configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
 
+| **Total** | **Passed** | **Failed** | **Skipped** |
+| --------- | ---------- | ---------- | ----------- |
+| 386     | 206       | 138      | 42          |
 
-
-
+**Test Rate: 89%** with **Pass Rate: 59%**
 
 Hash Tag: 19ae6cff54715a2a82011134c6678424620217fa
 
