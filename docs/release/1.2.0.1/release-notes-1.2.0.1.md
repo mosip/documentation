@@ -16,7 +16,7 @@ One of the major highlights of this patch release is the print stage. The print 
 
 Click here <link to credential requestor stage documentation> to know more about Credential Requestor Stage.
 
-To know more about bug fixes and enhancements, refer here.
+To know more about bug fixes and enhancements, refer [here](../1.2.0.1/).
 
 **Major Areas of Work**
 
