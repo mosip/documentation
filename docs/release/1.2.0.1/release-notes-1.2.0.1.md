@@ -14,9 +14,9 @@ DSL Automation scripts, which are part of this release, enable platform testing.
 
 One of the major highlights of this patch release is the print stage. The print stage, now re-named as **Credential Requester Stage**, additionally manages the initiation of credential requests tailored to partner-specific information needs.  
 
-Click here <link to credential requestor stage documentation> to know more about Credential Requestor Stage.
+Click [here](https://docs.mosip.io/1.2.0/modules/registration-processor#stages-and-services) to know more about Credential Requestor Stage.
 
-To know more about bug fixes and enhancements, refer [here](../1.2.0.1/).
+To know more about bug fixes and enhancements, refer [here](../1.2.0.1/enhancements-1.2.0.1.md).
 
 **Major Areas of Work**
 
