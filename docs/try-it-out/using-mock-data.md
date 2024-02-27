@@ -10,13 +10,13 @@ Individual images are included to facilitate **selfie authentication** for the I
 
 Please select the appropriate image file corresponding to the chosen UIN above.
 
-{% file src="../.gitbook/assets/Jane Thompson.jpeg" %}
+{% file src="../.gitbook/assets/Maria Powell.jpeg" %}
 
 {% file src="../.gitbook/assets/James Rodrigious.jpeg" %}
 
 {% file src="../.gitbook/assets/Gorge Cooper.jpeg" %}
 
-{% file src="../.gitbook/assets/Maria Powell.jpeg" %}
+{% file src="../.gitbook/assets/Jane Thompson.jpeg" %}
 
 {% hint style="info" %}
 The data used in the above VIDs is fictitious and the images returned are AI-generated from the website: [https://thispersondoesnotexist.com/](https://thispersondoesnotexist.com/)
