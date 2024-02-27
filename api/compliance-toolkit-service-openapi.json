@@ -1,0 +1,3689 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Compliance-Toolkit",
+    "description": "Compliance Toolkit Services",
+    "license": {
+      "name": "Mosip",
+      "url": "https://docs.mosip.io/platform/license"
+    },
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://api-internal.dev1.mosip.net/v1/toolkit",
+      "description": "Compliance Toolkit Services"
+    }
+  ],
+  "paths": {
+    "/validateResponse": {
+      "post": {
+        "tags": ["test-cases-controller"],
+        "summary": "Validate Response",
+        "description": "Validate methodResponse as per the specification",
+        "operationId": "validateResponse",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperValidationInputDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperValidationResponseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/validateRequest": {
+      "post": {
+        "tags": ["test-cases-controller"],
+        "summary": "Validate Request",
+        "description": "Validate methodRequest as per the specification",
+        "operationId": "validateRequest",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperValidateRequestSchemaDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperValidationResultDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/uploadResourceFile": {
+      "post": {
+        "tags": ["resource-management-controller"],
+        "summary": "upload resource file",
+        "description": "type any of these [MOSIP_DEFAULT, SCHEMAS, SCHEMAS_SBI, SCHEMAS_SDK, SCHEMAS_ABIS] & version as per SBI/SDK/ABIS schema version",
+        "operationId": "uploadResourceFile",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "version",
+            "in": "query",
+            "required": false,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": ["file"],
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary",
+                    "types": ["string"]
+                  }
+                },
+                "types": ["object"]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "required": ["file"],
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary",
+                    "types": ["string"]
+                  }
+                },
+                "types": ["object"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperBoolean"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/updateTestRun": {
+      "put": {
+        "tags": ["test-run-controller"],
+        "summary": "Update test run",
+        "description": "Update test run",
+        "operationId": "updateTestrun",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperTestRunDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperTestRunDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/updateSdkProject": {
+      "put": {
+        "tags": ["sdk-project-controller"],
+        "summary": "Update SDK project",
+        "description": "Update SDK project details",
+        "operationId": "updateSdkProject",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperSdkProjectDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperSdkProjectDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/updateSbiProject": {
+      "put": {
+        "tags": ["sbi-project-controller"],
+        "summary": "Update SBI project",
+        "description": "Update SBI project details",
+        "operationId": "updateSbiProject",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperSbiProjectDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperSbiProjectDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/updateAbisProject": {
+      "put": {
+        "tags": ["abis-project-controller"],
+        "summary": "Update ABIS project",
+        "description": "Update ABIS project details",
+        "operationId": "updateAbisProject",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperAbisProjectDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperAbisProjectDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/submitReportForReview": {
+      "post": {
+        "tags": ["report-controller"],
+        "summary": "Submit the report for review",
+        "description": "Partner can submit their report for admin review",
+        "operationId": "submitReportForReview",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperReportRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperComplianceTestRunSummaryDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/saveTestCases": {
+      "post": {
+        "tags": ["test-cases-controller"],
+        "summary": "Save testcases",
+        "description": "The user must have the CTK_ADMIN role in order to save test cases.",
+        "operationId": "saveTestCases",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperTestCaseRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperTestCaseResponseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/saveDataShareToken": {
+      "post": {
+        "tags": ["abis-data-share-controller"],
+        "summary": "Save data share token",
+        "description": "Save data share token",
+        "operationId": "saveDataShareToken",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDataShareSaveTokenRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/rejectPartnerReport/{partnerId}": {
+      "post": {
+        "tags": ["report-controller"],
+        "summary": "Reject partner report",
+        "description": "Admin can reject partner's report",
+        "operationId": "rejectPartnerReport",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperReportRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperComplianceTestRunSummaryDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/logout/user": {
+      "get": {
+        "tags": ["login-controller"],
+        "operationId": "logoutUser",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "cookie",
+            "required": false,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "redirecturi",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/login/{redirectURI}": {
+      "get": {
+        "tags": ["login-controller"],
+        "operationId": "login",
+        "parameters": [
+          {
+            "name": "state",
+            "in": "cookie",
+            "required": false,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "redirectURI",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/login-redirect/{redirectURI}": {
+      "get": {
+        "tags": ["login-controller"],
+        "operationId": "loginRedirect",
+        "parameters": [
+          {
+            "name": "redirectURI",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "state",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "session_state",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "code",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/isReportAlreadySubmitted": {
+      "post": {
+        "tags": ["report-controller"],
+        "summary": "Check if report submitted",
+        "description": "Check whether the report has already been submitted.",
+        "operationId": "isReportAlreadySubmitted",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperReportRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperBoolean"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/invalidateDataShareToken": {
+      "post": {
+        "tags": ["abis-data-share-controller"],
+        "summary": "Invalidate data share token",
+        "description": "Invalidate data share token",
+        "operationId": "invalidateDataShareToken",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDataShareSaveTokenRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getTestRunStatus/{runId}": {
+      "get": {
+        "tags": ["test-run-controller"],
+        "summary": "Get test run status",
+        "description": "Get test run status by run id",
+        "operationId": "getTestRunStatus",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperTestRunStatusDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getTestRunHistory": {
+      "get": {
+        "tags": ["test-run-controller"],
+        "summary": "Get test run history",
+        "description": "Get test run history for a collection",
+        "operationId": "getTestRunHistory",
+        "parameters": [
+          {
+            "name": "collectionId",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "pageNo",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "types": ["integer"],
+              "default": 0
+            }
+          },
+          {
+            "name": "pageSize",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "types": ["integer"],
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperPageDtoTestRunHistoryDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getTestRunDetails/{runId}": {
+      "get": {
+        "tags": ["test-run-controller"],
+        "summary": "Get test run details",
+        "description": "Get test run details by run id",
+        "operationId": "getTestRunDetails",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperTestRunDetailsResponseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getTestCasesForCollection/{id}": {
+      "get": {
+        "tags": ["collections-controller"],
+        "summary": "Get testcases for collection",
+        "description": "Get testcases for collection by id",
+        "operationId": "getTestCasesForCollection",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperCollectionTestCasesResponseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getTestCase/{testId}": {
+      "get": {
+        "tags": ["test-cases-controller"],
+        "summary": "Get testcase",
+        "description": "Get testcase by testId",
+        "operationId": "getTestCaseById",
+        "parameters": [
+          {
+            "name": "testId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperTestCaseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getSubmittedReport": {
+      "post": {
+        "tags": ["report-controller"],
+        "summary": "Get submitted report",
+        "description": "Download partner submitted report for review",
+        "operationId": "getSubmittedReport",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperReportRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": { "*/*": { "schema": { "type": "object" } } }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getSubmittedReportList": {
+      "get": {
+        "tags": ["report-controller"],
+        "summary": "Get submitted report list",
+        "description": "Get submitted report list",
+        "operationId": "getSubmittedReportList",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperListComplianceTestRunSummaryDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getSdkTestCases": {
+      "get": {
+        "tags": ["test-cases-controller"],
+        "summary": "Get SDK testcases",
+        "description": "Get SDK testcases by using the required fields given below.",
+        "operationId": "getSdkTestCases",
+        "parameters": [
+          {
+            "name": "specVersion",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "sdkPurpose",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperListTestCaseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getSdkProject/{id}": {
+      "get": {
+        "tags": ["sdk-project-controller"],
+        "summary": "Get SDK project",
+        "description": "Get SDK project by id",
+        "operationId": "getProjectById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperSdkProjectDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getSbiTestCases": {
+      "get": {
+        "tags": ["test-cases-controller"],
+        "summary": "Get SBI testcases",
+        "description": "Get SBI testcases by using the required fields given below.",
+        "operationId": "getSbiTestCases",
+        "parameters": [
+          {
+            "name": "specVersion",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "purpose",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "deviceType",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "deviceSubType",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "isAndroid",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "boolean", "types": ["boolean"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperListTestCaseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getSbiProject/{id}": {
+      "get": {
+        "tags": ["sbi-project-controller"],
+        "summary": "Get SBI project",
+        "description": "Get SBI project by id",
+        "operationId": "getProjectById_1",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperSbiProjectDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getSampleBioTestDataFile": {
+      "get": {
+        "tags": ["biometric-testdata-controller"],
+        "summary": "Get sample bio testdata file",
+        "description": "Download sample bio testdata file according to the purpose",
+        "operationId": "getSampleBioTestDataFile",
+        "parameters": [
+          {
+            "name": "purpose",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary",
+                  "types": ["string"]
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getProjects": {
+      "get": {
+        "tags": ["projects-controller"],
+        "summary": "Get projects",
+        "description": "Get partner's projects",
+        "operationId": "getProjects",
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperProjectsResponseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getPartnerTestRunDetails/{partnerId}/{runId}": {
+      "get": {
+        "tags": ["test-run-controller"],
+        "summary": "Get partner test run details",
+        "description": "Get partner test run details by partner id and run id",
+        "operationId": "getPartnerTestRunDetails",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperTestRunDetailsResponseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getPartnerTestCasesForCollection/{partnerId}/{id}": {
+      "get": {
+        "tags": ["collections-controller"],
+        "summary": "Get partner testcases for collection",
+        "description": "Get partner testcases for collection by id and partner id",
+        "operationId": "getPartnerTestCasesForCollection",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperCollectionTestCasesResponseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getPartnerReportList/{reportStatus}": {
+      "get": {
+        "tags": ["report-controller"],
+        "summary": "Get partner report list",
+        "description": "Get partner report list by report status",
+        "operationId": "getPartnerReportList",
+        "parameters": [
+          {
+            "name": "reportStatus",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperListComplianceTestRunSummaryDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getPartnerReport/{partnerId}": {
+      "post": {
+        "tags": ["report-controller"],
+        "summary": "Get partner report",
+        "description": "Get partner report by partner id",
+        "operationId": "getPartnerReport",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperReportRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": { "*/*": { "schema": { "type": "object" } } }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getPartnerMethodDetails/{partnerId}/{runId}/{testcaseId}/{methodId}": {
+      "get": {
+        "tags": ["test-run-controller"],
+        "summary": "Get partner method details",
+        "description": "Get partner method details",
+        "operationId": "getPartnerMethodDetails",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "testcaseId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "methodId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperTestRunDetailsDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getMethodDetails/{runId}/{testcaseId}/{methodId}": {
+      "get": {
+        "tags": ["test-run-controller"],
+        "summary": "Get method details",
+        "description": "Get method details based on the run id, testcase id and method id",
+        "operationId": "getMethodDetails",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "testcaseId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "methodId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperTestRunDetailsDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getListOfBiometricTestData": {
+      "get": {
+        "tags": ["biometric-testdata-controller"],
+        "summary": "Get list of biometric testdata",
+        "description": "Get list of biometric testdata uploaded by partners",
+        "operationId": "getListOfBiometricTestData",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperListBiometricTestDataDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getEncryptionKey": {
+      "get": {
+        "tags": ["sbi-project-controller"],
+        "summary": "Get Encryption Key",
+        "description": "Download the encryption key only for auth projects",
+        "operationId": "getEncryptionKey",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperString"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getCollections": {
+      "get": {
+        "tags": ["collections-controller"],
+        "summary": "Get collections",
+        "description": "Get collections based on the project id and project type",
+        "operationId": "getProjectCollections",
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperCollectionsResponseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getCollection/{id}": {
+      "get": {
+        "tags": ["collections-controller"],
+        "summary": "Get collection",
+        "description": "Get collection by id",
+        "operationId": "getCollection",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperCollectionDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getBiometricTestDataFile/{id}": {
+      "get": {
+        "tags": ["biometric-testdata-controller"],
+        "summary": "Get biometric testdata file",
+        "description": "Get biometric testdata file by id",
+        "operationId": "getBiometricTestDataFile",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary",
+                  "types": ["string"]
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getBioTestDataNames": {
+      "get": {
+        "tags": ["biometric-testdata-controller"],
+        "summary": "Get bio testdata names",
+        "description": "Get bio testdata names based on the purpose",
+        "operationId": "getBioTestDataNames",
+        "parameters": [
+          {
+            "name": "purpose",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperListString"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getAbisTestCases": {
+      "get": {
+        "tags": ["test-cases-controller"],
+        "summary": "Get ABIS testcases",
+        "description": "Get ABIS testcases based on the ABIS spec version",
+        "operationId": "getAbisTestCases",
+        "parameters": [
+          {
+            "name": "abisSpecVersion",
+            "in": "query",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperListTestCaseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/getAbisProject/{id}": {
+      "get": {
+        "tags": ["abis-project-controller"],
+        "summary": "Get ABIS project",
+        "description": "Get ABIS project by id",
+        "operationId": "getProjectById_2",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperAbisProjectDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/generateRequestForSDK": {
+      "post": {
+        "tags": ["test-cases-controller"],
+        "summary": "Generate request for SDK",
+        "description": "Generate request for SDK",
+        "operationId": "generateRequestForSDK",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperSdkRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperGenerateSdkRequestResponseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/generateRequestForSDKFrmBirs": {
+      "post": {
+        "tags": ["test-cases-controller"],
+        "summary": "Generate request for SDK From BIR's",
+        "description": "Generate request for SDK From BIR's",
+        "operationId": "generateRequestForSDKFrmBirs",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperSdkRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperGenerateSdkRequestResponseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/generateDraftReport": {
+      "post": {
+        "tags": ["report-controller"],
+        "summary": "Generate draft report",
+        "description": "Generate draft report for compliance collection",
+        "operationId": "generateDraftReport",
+        "parameters": [
+          {
+            "name": "origin",
+            "in": "header",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperReportRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": { "*/*": { "schema": { "type": "object" } } }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/generateDraftQAReport": {
+      "post": {
+        "tags": ["report-controller"],
+        "summary": "Generate QA draft report",
+        "description": "Generate draft report for quality assessment collection",
+        "operationId": "generateDraftQAReport",
+        "parameters": [
+          {
+            "name": "origin",
+            "in": "header",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperReportRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": { "*/*": { "schema": { "type": "object" } } }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/expireDataShareUrl": {
+      "post": {
+        "tags": ["abis-data-share-controller"],
+        "summary": "Expire data share Url",
+        "description": "Expire data share Url",
+        "operationId": "expireDataShareUrl",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDataShareExpireRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperBoolean"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/deleteTestRun/{runId}": {
+      "delete": {
+        "tags": ["test-run-controller"],
+        "summary": "Delete test run",
+        "description": "Delete testrun by run id",
+        "operationId": "deleteTestRun",
+        "parameters": [
+          {
+            "name": "runId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperBoolean"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/createDataShareUrl": {
+      "post": {
+        "tags": ["abis-data-share-controller"],
+        "summary": "Create data share Url",
+        "description": "Create data share Url",
+        "operationId": "createDataShareUrl",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperDataShareRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperDataShareResponseWrapperDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/configs": {
+      "get": {
+        "tags": ["main-controller"],
+        "summary": "Get config",
+        "description": "Get configuration values",
+        "operationId": "getConfigValues",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperMapStringString"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/authorize/admin/validateToken": {
+      "get": {
+        "tags": ["login-controller"],
+        "operationId": "validateAdminToken",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperMosipUserDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/approvePartnerReport/{partnerId}": {
+      "post": {
+        "tags": ["report-controller"],
+        "summary": "Approve partner report",
+        "description": "Admin can approve partner's report",
+        "operationId": "approvePartnerReport",
+        "parameters": [
+          {
+            "name": "partnerId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string", "types": ["string"] }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperReportRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperComplianceTestRunSummaryDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/addTestRun": {
+      "post": {
+        "tags": ["test-run-controller"],
+        "summary": "Add test run",
+        "description": "Add test run",
+        "operationId": "addTestrun",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperTestRunDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperTestRunDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/addTestRunDetails": {
+      "post": {
+        "tags": ["test-run-controller"],
+        "summary": "Add test run details",
+        "description": "Add test run details",
+        "operationId": "addTestrunDetails",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperTestRunDetailsDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperTestRunDetailsDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/addTestCasesForCollection": {
+      "post": {
+        "tags": ["collections-controller"],
+        "summary": "Add testcases for collection",
+        "description": "Add selected testcases for collection",
+        "operationId": "addTestCasesForCollection",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperListCollectionTestCaseDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperListCollectionTestCaseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/addSdkProject": {
+      "post": {
+        "tags": ["sdk-project-controller"],
+        "summary": "Add SDK project",
+        "description": "Add new SDK project",
+        "operationId": "addSdkProject",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperSdkProjectDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperSdkProjectDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/addSbiProject": {
+      "post": {
+        "tags": ["sbi-project-controller"],
+        "summary": "Add SBI project",
+        "description": "Add new SBI project",
+        "operationId": "addSbiProject",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperSbiProjectDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperSbiProjectDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/addCollection": {
+      "post": {
+        "tags": ["collections-controller"],
+        "summary": "Add collection",
+        "description": "Add new collection",
+        "operationId": "addCollection",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperCollectionRequestDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperCollectionDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/addBiometricTestData": {
+      "post": {
+        "tags": ["biometric-testdata-controller"],
+        "summary": "Add biometric testdata",
+        "description": "Partners can upload their own biometric testdata.",
+        "operationId": "addBiometricTestData",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": ["biometricMetaData", "file"],
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary",
+                    "types": ["string"]
+                  },
+                  "biometricMetaData": { "type": "string", "types": ["string"] }
+                },
+                "types": ["object"]
+              }
+            },
+            "application/json": {
+              "schema": {
+                "required": ["biometricMetaData", "file"],
+                "type": "object",
+                "properties": {
+                  "file": {
+                    "type": "string",
+                    "format": "binary",
+                    "types": ["string"]
+                  },
+                  "biometricMetaData": { "type": "string", "types": ["string"] }
+                },
+                "types": ["object"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperAddBioTestDataResponseDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    },
+    "/addAbisProject": {
+      "post": {
+        "tags": ["abis-project-controller"],
+        "summary": "Add ABIS project",
+        "description": "Add new ABIS project",
+        "operationId": "addAbisProject",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestWrapperAbisProjectDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResponseWrapperAbisProjectDto"
+                }
+              }
+            }
+          },
+          "403": { "description": "Forbidden" },
+          "404": { "description": "Not Found" },
+          "201": { "description": "Created" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "RequestWrapperValidationInputDto": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": { "$ref": "#/components/schemas/ValidationInputDto" }
+        }
+      },
+      "ValidationInputDto": {
+        "type": "object",
+        "properties": {
+          "testCaseType": { "type": "string", "types": ["string"] },
+          "testName": { "type": "string", "types": ["string"] },
+          "specVersion": { "type": "string", "types": ["string"] },
+          "testId": { "type": "string", "types": ["string"] },
+          "responseSchema": { "type": "string", "types": ["string"] },
+          "methodResponse": { "type": "string", "types": ["string"] },
+          "methodRequest": { "type": "string", "types": ["string"] },
+          "methodName": { "type": "string", "types": ["string"] },
+          "extraInfoJson": { "type": "string", "types": ["string"] },
+          "validatorDefs": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ValidatorDefDto" },
+            "types": ["array"]
+          },
+          "isNegativeTestcase": { "type": "boolean", "types": ["boolean"] }
+        }
+      },
+      "ValidatorDefDto": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string", "types": ["string"] },
+          "description": { "type": "string", "types": ["string"] }
+        }
+      },
+      "ResponseWrapperValidationResponseDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/ValidationResponseDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ServiceError": {
+        "type": "object",
+        "properties": {
+          "errorCode": { "type": "string", "types": ["string"] },
+          "message": { "type": "string", "types": ["string"] }
+        }
+      },
+      "ValidationResponseDto": {
+        "type": "object",
+        "properties": {
+          "validationsList": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ValidationResultDto" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ValidationResultDto": {
+        "type": "object",
+        "properties": {
+          "validatorName": { "type": "string", "types": ["string"] },
+          "validatorDescription": { "type": "string", "types": ["string"] },
+          "status": { "type": "string", "types": ["string"] },
+          "description": { "type": "string", "types": ["string"] },
+          "descriptionKey": { "type": "string", "types": ["string"] },
+          "extraInfoJson": { "type": "string", "types": ["string"] }
+        }
+      },
+      "RequestWrapperValidateRequestSchemaDto": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": { "$ref": "#/components/schemas/ValidateRequestSchemaDto" }
+        }
+      },
+      "ValidateRequestSchemaDto": {
+        "type": "object",
+        "properties": {
+          "testCaseType": { "type": "string", "types": ["string"] },
+          "testName": { "type": "string", "types": ["string"] },
+          "specVersion": { "type": "string", "types": ["string"] },
+          "testDescription": { "type": "string", "types": ["string"] },
+          "requestSchema": { "type": "string", "types": ["string"] },
+          "methodRequest": { "type": "string", "types": ["string"] }
+        }
+      },
+      "ResponseWrapperValidationResultDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/ValidationResultDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperBoolean": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "type": "boolean", "types": ["boolean"] },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "RequestWrapperTestRunDto": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": { "$ref": "#/components/schemas/TestRunDto" }
+        }
+      },
+      "TestRunDto": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "collectionId": { "type": "string", "types": ["string"] },
+          "runDtimes": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "executionDtimes": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "runConfigurationJson": { "type": "string", "types": ["string"] },
+          "executionStatus": { "type": "string", "types": ["string"] },
+          "runStatus": { "type": "string", "types": ["string"] }
+        }
+      },
+      "ResponseWrapperTestRunDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/TestRunDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "RequestWrapperSdkProjectDto": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": { "$ref": "#/components/schemas/SdkProjectDto" }
+        }
+      },
+      "SdkProjectDto": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "name": { "type": "string", "types": ["string"] },
+          "projectType": { "type": "string", "types": ["string"] },
+          "sdkVersion": { "type": "string", "types": ["string"] },
+          "url": { "type": "string", "types": ["string"] },
+          "sdkHash": { "type": "string", "types": ["string"] },
+          "websiteUrl": { "type": "string", "types": ["string"] },
+          "bioTestDataFileName": { "type": "string", "types": ["string"] },
+          "purpose": { "type": "string", "types": ["string"] },
+          "partnerId": { "type": "string", "types": ["string"] },
+          "orgName": { "type": "string", "types": ["string"] },
+          "crBy": { "type": "string", "types": ["string"] },
+          "crDate": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "upBy": { "type": "string", "types": ["string"] },
+          "updDate": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          }
+        }
+      },
+      "ResponseWrapperSdkProjectDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/SdkProjectDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "RequestWrapperSbiProjectDto": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": { "$ref": "#/components/schemas/SbiProjectDto" }
+        }
+      },
+      "SbiProjectDto": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "name": { "type": "string", "types": ["string"] },
+          "projectType": { "type": "string", "types": ["string"] },
+          "sbiVersion": { "type": "string", "types": ["string"] },
+          "purpose": { "type": "string", "types": ["string"] },
+          "deviceType": { "type": "string", "types": ["string"] },
+          "deviceSubType": { "type": "string", "types": ["string"] },
+          "isAndroidSbi": { "type": "string", "types": ["string"] },
+          "deviceImage1": { "type": "string", "types": ["string"] },
+          "deviceImage2": { "type": "string", "types": ["string"] },
+          "deviceImage3": { "type": "string", "types": ["string"] },
+          "deviceImage4": { "type": "string", "types": ["string"] },
+          "sbiHash": { "type": "string", "types": ["string"] },
+          "websiteUrl": { "type": "string", "types": ["string"] },
+          "partnerId": { "type": "string", "types": ["string"] },
+          "orgName": { "type": "string", "types": ["string"] },
+          "crBy": { "type": "string", "types": ["string"] },
+          "crDate": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          }
+        }
+      },
+      "ResponseWrapperSbiProjectDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/SbiProjectDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "AbisProjectDto": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "name": { "type": "string", "types": ["string"] },
+          "projectType": { "type": "string", "types": ["string"] },
+          "url": { "type": "string", "types": ["string"] },
+          "username": { "type": "string", "types": ["string"] },
+          "password": { "type": "string", "types": ["string"] },
+          "inboundQueueName": { "type": "string", "types": ["string"] },
+          "partnerId": { "type": "string", "types": ["string"] },
+          "orgName": { "type": "string", "types": ["string"] },
+          "crBy": { "type": "string", "types": ["string"] },
+          "crDate": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "upBy": { "type": "string", "types": ["string"] },
+          "updDate": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "outboundQueueName": { "type": "string", "types": ["string"] },
+          "modality": { "type": "string", "types": ["string"] },
+          "abisHash": { "type": "string", "types": ["string"] },
+          "websiteUrl": { "type": "string", "types": ["string"] },
+          "bioTestDataFileName": { "type": "string", "types": ["string"] },
+          "abisVersion": { "type": "string", "types": ["string"] }
+        }
+      },
+      "RequestWrapperAbisProjectDto": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": { "$ref": "#/components/schemas/AbisProjectDto" }
+        }
+      },
+      "ResponseWrapperAbisProjectDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/AbisProjectDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ReportRequestDto": {
+        "type": "object",
+        "properties": {
+          "projectType": { "type": "string", "types": ["string"] },
+          "projectId": { "type": "string", "types": ["string"] },
+          "collectionId": { "type": "string", "types": ["string"] },
+          "testRunId": { "type": "string", "types": ["string"] },
+          "adminComments": { "type": "string", "types": ["string"] },
+          "partnerComments": { "type": "string", "types": ["string"] }
+        }
+      },
+      "RequestWrapperReportRequestDto": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": { "$ref": "#/components/schemas/ReportRequestDto" }
+        }
+      },
+      "ComplianceTestRunSummaryDto": {
+        "type": "object",
+        "properties": {
+          "partnerId": { "type": "string", "types": ["string"] },
+          "orgName": { "type": "string", "types": ["string"] },
+          "projectType": { "type": "string", "types": ["string"] },
+          "projectId": { "type": "string", "types": ["string"] },
+          "collectionId": { "type": "string", "types": ["string"] },
+          "runId": { "type": "string", "types": ["string"] },
+          "reportStatus": { "type": "string", "types": ["string"] },
+          "partnerComments": { "type": "string", "types": ["string"] },
+          "adminComments": { "type": "string", "types": ["string"] },
+          "reviewDtimes": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "approveRejectDtimes": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "updDtimes": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "collectionName": { "type": "string", "types": ["string"] },
+          "collectionType": { "type": "string", "types": ["string"] },
+          "projectName": { "type": "string", "types": ["string"] },
+          "updBy": { "type": "string", "types": ["string"] }
+        }
+      },
+      "ResponseWrapperComplianceTestRunSummaryDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": {
+            "$ref": "#/components/schemas/ComplianceTestRunSummaryDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "OtherAttributes": {
+        "type": "object",
+        "properties": {
+          "purpose": {
+            "type": "array",
+            "items": { "type": "string", "types": ["string"] },
+            "types": ["array"]
+          },
+          "biometricTypes": {
+            "type": "array",
+            "items": { "type": "string", "types": ["string"] },
+            "types": ["array"]
+          },
+          "deviceSubTypes": {
+            "type": "array",
+            "items": { "type": "string", "types": ["string"] },
+            "types": ["array"]
+          },
+          "segments": {
+            "type": "array",
+            "items": { "type": "string", "types": ["string"] },
+            "types": ["array"]
+          },
+          "exceptions": {
+            "type": "array",
+            "items": { "type": "string", "types": ["string"] },
+            "types": ["array"]
+          },
+          "requestedScore": { "type": "string", "types": ["string"] },
+          "bioCount": { "type": "string", "types": ["string"] },
+          "deviceSubId": { "type": "string", "types": ["string"] },
+          "timeout": { "type": "string", "types": ["string"] },
+          "transactionId": { "type": "string", "types": ["string"] },
+          "invalidRequestAttribute": { "type": "string", "types": ["string"] },
+          "ageGroup": { "type": "string", "types": ["string"] },
+          "gender": { "type": "string", "types": ["string"] },
+          "occupation": { "type": "string", "types": ["string"] },
+          "race": { "type": "string", "types": ["string"] },
+          "testCaseRepeatCount": { "type": "string", "types": ["string"] },
+          "modalities": {
+            "type": "array",
+            "items": { "type": "string", "types": ["string"] },
+            "types": ["array"]
+          },
+          "sdkPurpose": {
+            "type": "array",
+            "items": { "type": "string", "types": ["string"] },
+            "types": ["array"]
+          },
+          "convertSourceFormat": { "type": "string", "types": ["string"] },
+          "convertTargetFormat": { "type": "string", "types": ["string"] },
+          "insertCount": { "type": "string", "types": ["string"] },
+          "insertReferenceId": { "type": "string", "types": ["string"] },
+          "identifyReferenceId": { "type": "string", "types": ["string"] },
+          "identifyGalleryIds": {
+            "type": "array",
+            "items": { "type": "string", "types": ["string"] },
+            "types": ["array"]
+          },
+          "expectedDuplicateCount": { "type": "string", "types": ["string"] },
+          "expectedFailureReason": { "type": "string", "types": ["string"] },
+          "resumeBtn": { "type": "boolean", "types": ["boolean"] },
+          "resumeAgainBtn": { "type": "boolean", "types": ["boolean"] },
+          "keyRotationTestCase": { "type": "boolean", "types": ["boolean"] },
+          "hashValidationTestCase": { "type": "boolean", "types": ["boolean"] },
+          "qualityAssessmentTestCase": {
+            "type": "boolean",
+            "types": ["boolean"]
+          },
+          "bulkInsert": { "type": "boolean", "types": ["boolean"] }
+        }
+      },
+      "RequestWrapperTestCaseRequestDto": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": { "$ref": "#/components/schemas/TestCaseRequestDto" }
+        }
+      },
+      "TestCaseDto": {
+        "type": "object",
+        "properties": {
+          "testCaseType": { "type": "string", "types": ["string"] },
+          "testId": { "type": "string", "types": ["string"] },
+          "specVersion": { "type": "string", "types": ["string"] },
+          "testName": { "type": "string", "types": ["string"] },
+          "testDescription": { "type": "string", "types": ["string"] },
+          "androidTestDescription": { "type": "string", "types": ["string"] },
+          "inactiveForAndroid": { "type": "string", "types": ["string"] },
+          "methodName": {
+            "type": "array",
+            "items": { "type": "string", "types": ["string"] },
+            "types": ["array"]
+          },
+          "requestSchema": {
+            "type": "array",
+            "items": { "type": "string", "types": ["string"] },
+            "types": ["array"]
+          },
+          "responseSchema": {
+            "type": "array",
+            "items": { "type": "string", "types": ["string"] },
+            "types": ["array"]
+          },
+          "validatorDefs": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": { "$ref": "#/components/schemas/ValidatorDef" },
+              "types": ["array"]
+            },
+            "types": ["array"]
+          },
+          "otherAttributes": { "$ref": "#/components/schemas/OtherAttributes" },
+          "isNegativeTestcase": { "type": "boolean", "types": ["boolean"] },
+          "inactive": { "type": "boolean", "types": ["boolean"] }
+        }
+      },
+      "TestCaseRequestDto": {
+        "required": ["testCases"],
+        "type": "object",
+        "properties": {
+          "testCases": {
+            "maxItems": 2147483647,
+            "minItems": 1,
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/TestCaseDto" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ValidatorDef": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string", "types": ["string"] },
+          "description": { "type": "string", "types": ["string"] }
+        }
+      },
+      "ResponseWrapperTestCaseResponseDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/TestCaseResponseDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "TestCaseResponseDto": {
+        "required": ["testCases"],
+        "type": "object",
+        "properties": {
+          "testCases": {
+            "type": "object",
+            "additionalProperties": { "type": "string", "types": ["string"] },
+            "types": ["object"]
+          }
+        }
+      },
+      "DataShareSaveTokenRequest": {
+        "type": "object",
+        "properties": {
+          "partnerId": { "type": "string", "types": ["string"] },
+          "ctkTestCaseId": { "type": "string", "types": ["string"] },
+          "ctkTestRunId": { "type": "string", "types": ["string"] }
+        }
+      },
+      "RequestWrapperDataShareSaveTokenRequest": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": {
+            "$ref": "#/components/schemas/DataShareSaveTokenRequest"
+          }
+        }
+      },
+      "ResponseWrapperString": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "type": "string", "types": ["string"] },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperTestRunStatusDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/TestRunStatusDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "TestRunStatusDto": {
+        "type": "object",
+        "properties": {
+          "resultStatus": { "type": "boolean", "types": ["boolean"] }
+        }
+      },
+      "PageDtoTestRunHistoryDto": {
+        "type": "object",
+        "properties": {
+          "pageNo": {
+            "type": "integer",
+            "format": "int32",
+            "types": ["integer"]
+          },
+          "pageSize": {
+            "type": "integer",
+            "format": "int32",
+            "types": ["integer"]
+          },
+          "currentPageElements": {
+            "type": "integer",
+            "format": "int32",
+            "types": ["integer"]
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32",
+            "types": ["integer"]
+          },
+          "totalElements": {
+            "type": "integer",
+            "format": "int64",
+            "types": ["integer"]
+          },
+          "hasNext": { "type": "boolean", "types": ["boolean"] },
+          "hasPrev": { "type": "boolean", "types": ["boolean"] },
+          "sort": { "type": "string", "types": ["string"] },
+          "content": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/TestRunHistoryDto" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperPageDtoTestRunHistoryDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": {
+            "$ref": "#/components/schemas/PageDtoTestRunHistoryDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "TestRunHistoryDto": {
+        "type": "object",
+        "properties": {
+          "runId": { "type": "string", "types": ["string"] },
+          "lastRunTime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "testCaseCount": {
+            "type": "integer",
+            "format": "int32",
+            "types": ["integer"]
+          },
+          "passCaseCount": {
+            "type": "integer",
+            "format": "int32",
+            "types": ["integer"]
+          }
+        }
+      },
+      "ResponseWrapperTestRunDetailsResponseDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": {
+            "$ref": "#/components/schemas/TestRunDetailsResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "TestRunDetailsDto": {
+        "type": "object",
+        "properties": {
+          "runId": { "type": "string", "types": ["string"] },
+          "testcaseId": { "type": "string", "types": ["string"] },
+          "methodId": { "type": "string", "types": ["string"] },
+          "methodUrl": { "type": "string", "types": ["string"] },
+          "methodRequest": { "type": "string", "types": ["string"] },
+          "methodResponse": { "type": "string", "types": ["string"] },
+          "executionStatus": { "type": "string", "types": ["string"] },
+          "resultStatus": { "type": "string", "types": ["string"] },
+          "resultDescription": { "type": "string", "types": ["string"] },
+          "testDataSource": { "type": "string", "types": ["string"] }
+        }
+      },
+      "TestRunDetailsResponseDto": {
+        "type": "object",
+        "properties": {
+          "collectionId": { "type": "string", "types": ["string"] },
+          "runId": { "type": "string", "types": ["string"] },
+          "runDtimes": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "executionDtimes": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "executionStatus": { "type": "string", "types": ["string"] },
+          "runStatus": { "type": "string", "types": ["string"] },
+          "testRunDetailsList": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/TestRunDetailsDto" },
+            "types": ["array"]
+          }
+        }
+      },
+      "CollectionTestCasesResponseDto": {
+        "type": "object",
+        "properties": {
+          "collectionId": { "type": "string", "types": ["string"] },
+          "testcases": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/TestCaseDto" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperCollectionTestCasesResponseDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": {
+            "$ref": "#/components/schemas/CollectionTestCasesResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperTestCaseDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/TestCaseDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperListComplianceTestRunSummaryDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ComplianceTestRunSummaryDto"
+            },
+            "types": ["array"]
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperListTestCaseDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/TestCaseDto" },
+            "types": ["array"]
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ProjectDto": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "name": { "type": "string", "types": ["string"] },
+          "projectType": { "type": "string", "types": ["string"] },
+          "isAndroidSbi": { "type": "string", "types": ["string"] },
+          "collectionsCount": {
+            "type": "integer",
+            "format": "int64",
+            "types": ["integer"]
+          },
+          "crDate": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "lastRunDt": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "lastRunId": { "type": "string", "types": ["string"] }
+        }
+      },
+      "ProjectsResponseDto": {
+        "type": "object",
+        "properties": {
+          "projects": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ProjectDto" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperProjectsResponseDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/ProjectsResponseDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperTestRunDetailsDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/TestRunDetailsDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "BiometricTestDataDto": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "name": { "type": "string", "types": ["string"] },
+          "type": { "type": "string", "types": ["string"] },
+          "purpose": { "type": "string", "types": ["string"] },
+          "partnerId": { "type": "string", "types": ["string"] },
+          "orgName": { "type": "string", "types": ["string"] },
+          "fileId": { "type": "string", "types": ["string"] },
+          "crDate": { "type": "string", "types": ["string"] }
+        }
+      },
+      "ResponseWrapperListBiometricTestDataDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/BiometricTestDataDto" },
+            "types": ["array"]
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "CollectionDto": {
+        "type": "object",
+        "properties": {
+          "collectionId": { "type": "string", "types": ["string"] },
+          "projectId": { "type": "string", "types": ["string"] },
+          "name": { "type": "string", "types": ["string"] },
+          "testCaseCount": {
+            "type": "integer",
+            "format": "int32",
+            "types": ["integer"]
+          },
+          "crDtimes": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "runDtimes": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "runId": { "type": "string", "types": ["string"] },
+          "collectionType": { "type": "string", "types": ["string"] }
+        }
+      },
+      "CollectionsResponseDto": {
+        "type": "object",
+        "properties": {
+          "collections": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/CollectionDto" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperCollectionsResponseDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/CollectionsResponseDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperCollectionDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/CollectionDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperListString": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": {
+            "type": "array",
+            "items": { "type": "string", "types": ["string"] },
+            "types": ["array"]
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "RequestWrapperSdkRequestDto": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": { "$ref": "#/components/schemas/SdkRequestDto" }
+        }
+      },
+      "SdkRequestDto": {
+        "type": "object",
+        "properties": {
+          "methodName": { "type": "string", "types": ["string"] },
+          "testcaseId": { "type": "string", "types": ["string"] },
+          "modalities": {
+            "type": "array",
+            "items": { "type": "string", "types": ["string"] },
+            "types": ["array"]
+          },
+          "bioTestDataName": { "type": "string", "types": ["string"] },
+          "birsForProbe": { "type": "string", "types": ["string"] },
+          "convertSourceFormat": { "type": "string", "types": ["string"] },
+          "convertTargetFormat": { "type": "string", "types": ["string"] }
+        }
+      },
+      "GenerateSdkRequestResponseDto": {
+        "type": "object",
+        "properties": {
+          "generatedRequest": { "type": "string", "types": ["string"] },
+          "testDataSource": { "type": "string", "types": ["string"] }
+        }
+      },
+      "ResponseWrapperGenerateSdkRequestResponseDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": {
+            "$ref": "#/components/schemas/GenerateSdkRequestResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "DataShareExpireRequest": {
+        "type": "object",
+        "properties": {
+          "url": { "type": "string", "types": ["string"] },
+          "transactionsAllowed": {
+            "type": "integer",
+            "format": "int32",
+            "types": ["integer"]
+          }
+        }
+      },
+      "RequestWrapperDataShareExpireRequest": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": { "$ref": "#/components/schemas/DataShareExpireRequest" }
+        }
+      },
+      "DataShareRequestDto": {
+        "type": "object",
+        "properties": {
+          "testcaseId": { "type": "string", "types": ["string"] },
+          "bioTestDataName": { "type": "string", "types": ["string"] },
+          "abisProjectModality": { "type": "string", "types": ["string"] },
+          "cbeffFileSuffix": {
+            "type": "integer",
+            "format": "int32",
+            "types": ["integer"]
+          },
+          "incorrectPartnerId": { "type": "string", "types": ["string"] },
+          "testRunId": { "type": "string", "types": ["string"] }
+        }
+      },
+      "RequestWrapperDataShareRequestDto": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": { "$ref": "#/components/schemas/DataShareRequestDto" }
+        }
+      },
+      "DataShare": {
+        "type": "object",
+        "properties": {
+          "url": { "type": "string", "types": ["string"] },
+          "validForInMinutes": {
+            "type": "integer",
+            "format": "int64",
+            "types": ["integer"]
+          },
+          "transactionsAllowed": {
+            "type": "integer",
+            "format": "int64",
+            "types": ["integer"]
+          },
+          "policyId": { "type": "string", "types": ["string"] },
+          "subscriberId": { "type": "string", "types": ["string"] }
+        }
+      },
+      "DataShareResponseDto": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responseTime": { "type": "string", "types": ["string"] },
+          "dataShare": { "$ref": "#/components/schemas/DataShare" }
+        }
+      },
+      "DataShareResponseWrapperDto": {
+        "type": "object",
+        "properties": {
+          "dataShareResponseDto": {
+            "$ref": "#/components/schemas/DataShareResponseDto"
+          },
+          "testDataSource": { "type": "string", "types": ["string"] }
+        }
+      },
+      "ResponseWrapperDataShareResponseWrapperDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": {
+            "$ref": "#/components/schemas/DataShareResponseWrapperDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperMapStringString": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": {
+            "type": "object",
+            "additionalProperties": { "type": "string", "types": ["string"] },
+            "types": ["object"]
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "MosipUserDto": {
+        "type": "object",
+        "properties": {
+          "userId": { "type": "string", "types": ["string"] },
+          "mobile": { "type": "string", "types": ["string"] },
+          "mail": { "type": "string", "types": ["string"] },
+          "langCode": { "type": "string", "types": ["string"] },
+          "userPassword": { "type": "string", "types": ["string"] },
+          "name": { "type": "string", "types": ["string"] },
+          "role": { "type": "string", "types": ["string"] },
+          "token": { "type": "string", "types": ["string"] },
+          "rid": { "type": "string", "types": ["string"] }
+        }
+      },
+      "ResponseWrapperMosipUserDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": { "$ref": "#/components/schemas/MosipUserDto" },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "RequestWrapperTestRunDetailsDto": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": { "$ref": "#/components/schemas/TestRunDetailsDto" }
+        }
+      },
+      "CollectionTestCaseDto": {
+        "type": "object",
+        "properties": {
+          "collectionId": { "type": "string", "types": ["string"] },
+          "testCaseId": { "type": "string", "types": ["string"] }
+        }
+      },
+      "RequestWrapperListCollectionTestCaseDto": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/CollectionTestCaseDto" },
+            "types": ["array"]
+          }
+        }
+      },
+      "ResponseWrapperListCollectionTestCaseDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/CollectionTestCaseDto" },
+            "types": ["array"]
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      },
+      "CollectionRequestDto": {
+        "type": "object",
+        "properties": {
+          "projectId": { "type": "string", "types": ["string"] },
+          "projectType": { "type": "string", "types": ["string"] },
+          "collectionName": { "type": "string", "types": ["string"] },
+          "collectionType": { "type": "string", "types": ["string"] }
+        }
+      },
+      "RequestWrapperCollectionRequestDto": {
+        "required": ["request"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "requesttime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "request": { "$ref": "#/components/schemas/CollectionRequestDto" }
+        }
+      },
+      "AddBioTestDataResponseDto": {
+        "type": "object",
+        "properties": {
+          "biometricTestDataDto": {
+            "$ref": "#/components/schemas/BiometricTestDataDto"
+          },
+          "info": { "type": "string", "types": ["string"] }
+        }
+      },
+      "ResponseWrapperAddBioTestDataResponseDto": {
+        "required": ["response"],
+        "type": "object",
+        "properties": {
+          "id": { "type": "string", "types": ["string"] },
+          "version": { "type": "string", "types": ["string"] },
+          "responsetime": {
+            "type": "string",
+            "format": "date-time",
+            "types": ["string"]
+          },
+          "metadata": { "type": "object", "types": ["object"] },
+          "response": {
+            "$ref": "#/components/schemas/AddBioTestDataResponseDto"
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ServiceError" },
+            "types": ["array"]
+          }
+        }
+      }
+    }
+  }
+}
