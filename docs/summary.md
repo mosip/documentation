@@ -1,6 +1,9 @@
 # Table of contents
 
 * [Inji](README.md)
+
+## Inji Mobile Wallet
+
 * [Overview](overview.md)
   * [Features](architecture/features.md)
     * [Feature Workflows](architecture/feature-workflows.md)
