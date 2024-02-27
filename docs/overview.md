@@ -1,13 +1,13 @@
 # Overview
 
-Inji Mobile wallet is a mobile application specifically created to streamline all types of identification and credentials into one digital wallet. This innovative solution allows for identity verification through a straightforward selfie. It has capabilities for issuance to certify anyone or anything, verification toolkit, and governance & trust frameworks.
+Inji Mobile wallet is a mobile application specifically created to streamline all types of identification and credentials into one digital wallet. This innovative solution allows for identity verification through a straightforward selfie. It has capabilities for issuance to certify anyone or anything, verification toolkit, and governance and trust frameworks.
 
 It offers a secure, trustworthy, and dependable mobile Verifiable Credentials wallet designed to fulfil the following functions:
 Inji stands as a secure, trustworthy, and dependable mobile Verifiable Credentials wallet designed to fulfil the following functions:
 
-* Download and **store Verifiable credentials (VC)** securely within the wallet.
+* Download and **store Verifiable Credentials (VC)** securely within the wallet.
 * Conduct **offline face authentication** against the stored VCs to verify the user's presence.
-* **Share Verifiable credentials** with relying parties without requiring an internet connection, utilizing Bluetooth Low Energy (BLE).
+* **Share Verifiable Credentials** with relying parties without requiring an internet connection, utilizing Bluetooth Low Energy (BLE).
 * Enable users to **log in to online portals** of relying parties by scanning a QR code, facilitating seamless access to their services.
 
 The application is constructed using the [React Native framework](https://reactnative.dev/), ensuring compatibility with both Android and iOS mobile operating systems. It leverages [Xstate state machines](https://xstate.js.org/docs/) for efficient application state management. The digital credentials produced by the mobile app adhere to the [Verifiable Credentials (VC) Data Model](https://www.w3.org/TR/vc-data-model/).
