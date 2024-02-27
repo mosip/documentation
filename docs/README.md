@@ -33,7 +33,7 @@ A digital credential stack to facilitate an ecosystem with high trust at low-cos
 
 Inji provides a practical, reliable, and cost-efficient solution for consolidating various forms of identification and credentialling. It seamlessly integrates with MOSIP and can easily adapt to other ID systems through a dedicated integration process.
 
-In Summary, Inji offers a digital credential stack for Create, Issue, Manage, Share, Verify and Consume Credentials. The key components include:
+In summary, Inji offers a digital credential stack for create, issue, manage, share, verify, and consume credentials. The key components include:
 
 * **Inji Mobile Wallet**: Secure, trustworthy, and dependable mobile Verifiable Credentials wallet
 
@@ -47,6 +47,6 @@ In Summary, Inji offers a digital credential stack for Create, Issue, Manage, Sh
 
 * **Inji Govern**: Policies, Schemas, Assurance, Parties
 
-Moreover, Inji serves individuals in remote locations with limited network accessibility. The credentials stored within the Inji mobile app only require a one-time download, allowing the app to verify both online and offline IDs at any given moment, eliminating the need for network connectivity.
+
 
 
