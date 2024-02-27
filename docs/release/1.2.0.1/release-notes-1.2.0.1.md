@@ -8,15 +8,17 @@
 
 **Release Date**: 
 
-The **1.2.0.1** release of MOSIP is a patch release on top of the [Long-Term Support (LTS) release 1.2.0](../1.2.0/release-notes.md). This release comprises of all features which have been released as beta release and few major fixes as requested by the countries. This release focuses on testability, usability, and security.
+This release comprises of all features which have been released as beta release and few major fixes as requested by the countries. This release focuses on testability, usability, and security.
 
 DSL Automation scripts, which are part of this release, enable platform testing. Also, few security related issues are resolved.
 
-One of the major highlights of this patch release is the print stage. The print stage, now re-named as **Credential Requester Stage**, additionally manages the initiation of credential requests tailored to partner-specific information needs.  
+One of the major highlights of this patch release is the enhancements to the print stage. The print stage, now re-named as **Credential Requester Stage**, additionally manages the initiation of credential requests tailored to partner-specific information needs.  
 
-Click here <link to credential requestor stage documentation> to know more about Credential Requestor Stage.
+Refer [here](https://docs.mosip.io/1.2.0/modules/registration-processor#stages-and-services) to know more about Credential Requestor Stage.
 
-To know more about bug fixes and enhancements, refer [here](../1.2.0.1/).
+From this release, Mock Service versioning is changed from v 1.2.0.1-B4 to v 1.0.
+
+Click [here](../1.2.0.1/enhancements-1.2.0.1.md) to refer to bug fixes and enhancements details for Release 1.2.0.1.
 
 **Major Areas of Work**
 
