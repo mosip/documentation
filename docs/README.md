@@ -45,38 +45,3 @@ In summary, Inji provides a digital credential stack for creating, issuing, mana
 Inji is a digital credential stack designed to facilitate an ecosystem with high trust at low cost.
 
 
----------------------------------------------------------------------------------------------------------------------------------
-### Key advantages of Inji
-
-A digital credential stack to facilitate an ecosystem with high trust at low-cost:
-
-* Serves as a secure **user wallet** for storing and managing ID credentials.
-* Streamlines the process of **obtaining authenticated ID credentials**.
-* Supports **decentralized ID verification** through offline sharing.
-* Allows users to have full control over the data shared with service providers, ensuring **privacy protection**.
-* Facilitates **seamless access** to multiple websites and services using the same login information, enhancing convenience and security.
-* **Simplifies the registration process** for government benefits, such as pensions or healthcare services, and enhances efficiency in situations where users need to provide their identification credentials. For example, it enables the presentation of VCs during airport security checks.
-* **Issue** credentials of various types in multiple formats.
-* **Verify** credentials as per your convenience and need.
-* **Share** credentials securely in a privacy preserving manner.
-* Enables **ecosystem participation** by providing governance and trust frameworks.
-
-Inji provides a practical, reliable, and cost-efficient solution for consolidating various forms of identification and credentialling. It seamlessly integrates with MOSIP and can easily adapt to other ID systems through a dedicated integration process.
-
-In summary, Inji offers a digital credential stack for create, issue, manage, share, verify, and consume credentials. The key components include:
-
-* **Inji Mobile Wallet**: Secure, trustworthy, and dependable mobile Verifiable Credentials wallet
-
-* **Inji Web**: Easy to use web-portal making credentials accessible to everyone
-
-* **Inji Certify (issuance)**: Issue credentials of any type in multiple formats
-
-* **Inji Verify**: Tools and utilities to verify credentials
-
-* **Inji Infra**: Revocation, Ledger, Status, Resolution, Federation
-
-* **Inji Govern**: Policies, Schemas, Assurance, Parties
-
-
-
-
