@@ -53,15 +53,15 @@ Mentioned below are the steps to download, install, and use ARC.
 
 ## Additional Resources ##
 
-To know more about features of the Android Registration Client along with the configurations, UI, deployment, and setup, click [here](https://docs.mosip.io/1.2.0/modules/android-registration-client).
+* To know more about features of the Android Registration Client, click [here](https://docs.mosip.io/1.2.0/modules/android-registration-client).
 
+* To learn more about our configurations, click [here](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-configuration).
+  
 ## Get in Touch ##
 
 If you require any assistance or encounter any issues during the testing and integration process, kindly reach out to us through the support mechanism provided below.
 
 * Navigate to [Community](https://community.mosip.io/).
-
-* To know more about our configurations, click [here](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-configuration).
 
 * Provide a detailed description about the support you require or provide complete information about the issue you have encountered, including steps to reproduce, error messages, logs and any other required details.
 
