@@ -4,16 +4,6 @@ In the current dynamic and globalized world, it is crucial to enhance residents'
 
 **Inji** is evolving as a user-centric digital credential stack for all types of credentials and identification solutions. It enables:
 
-* Issuance of Verifiable Credentials both in digital and in physical form
-
-* Users at the centre of holding and sharing credentials
-
-* Tools and utilities that help verifying the credential
-
-* Tools and services that enable Trust and Governance
-
-**Inji** is a digital credential stack that prioritizes user-centric design, offering a range of credential and identification solutions. It enables the following:
-
 * The issuance of Verifiable Credentials in both digital and physical formats
   
 * Placing users at the core of credential management and sharing
