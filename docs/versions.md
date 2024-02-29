@@ -1,7 +1,5 @@
 # Releases
 
-##
-
 ## Version: 0.11.0
 
 * Name: Inji 0.11.0&#x20;
