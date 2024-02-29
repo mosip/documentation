@@ -2,7 +2,7 @@
 
 **Android Registration Client (ARC)** is a tablet application that serves as portable version of the existing desktop [Registration Client](https://docs.mosip.io/1.2.0/modules/registration-client). It can be accessed through Android devices and also meets mobility requirements of countries adopting MOSIP Identity.
 
-The primary objective of the tablet version is to facilitate the registration process for residents who are not able to physically visit registration centres and also serve remote locations where setting up Registration centres is not feasible. To address this challenge, the ARC was developed enabling Operators / Supervisors to easily access the remote areas and maximise resident registrations across the country.
+The primary objective of the tablet version is to facilitate the registration process for residents who are not able to physically visit registration centres and also serve remote locations where setting up Registration centre is not feasible. To address this challenge, the ARC was developed enabling Operators / Supervisors to easily access the remote areas and maximise resident registrations across the country.
 
 Android Registration Client Demonstration Setup guide serves as a tool to demonstrate the impressive capabilities of MOSIP's system. The user of this guide will primarily be the Operator / Supervisor trying to register individuals for generating UIN.
 
@@ -24,7 +24,7 @@ For developers setting up ARC locally, refer [Developers Guide](https://docs.mos
 
    **Note**: For Mock MDS, click [here](https://drive.google.com/drive/folders/14q7E5pZtfj0eimF3JGzlVfU4eV-MRPCQ) to download the Mock MDS in your system folder, which will enable you to simulate biometric capture (without real biometric devices).
 
-* Accessing ARC in [Collab](https://collab.mosip.net/) environment requires the following:
+* Following setup is required to access ARC in [Collab](https://collab.mosip.net/) environment:
 
    * UIN or a VID
 
@@ -57,11 +57,11 @@ Mentioned below are the steps to download, install, and use ARC.
 
 * To know more about features of the Android Registration Client, click [here](https://docs.mosip.io/1.2.0/modules/android-registration-client).
 
-* To learn more about our configurations, click [here](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-configuration).
+* To learn more about the configurations, click [here](https://docs.mosip.io/1.2.0/modules/android-registration-client/android-registration-client-configuration).
   
 ## Get in Touch ##
 
-If you require any assistance or encounter any issues during the testing and integration process, kindly reach out to us through the support mechanism provided below.
+If you require any assistance or encounter any issues during the testing and integration process, kindly reach out to us through the support provided below.
 
 * Navigate to [Community](https://community.mosip.io/).
 
