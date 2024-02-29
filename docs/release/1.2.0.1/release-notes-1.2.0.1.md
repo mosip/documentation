@@ -8,15 +8,17 @@
 
 **Release Date**: 
 
-The **1.2.0.1** release of MOSIP is a patch release on top of the [Long-Term Support (LTS) release 1.2.0](../1.2.0/release-notes.md). This release comprises of all features which have been released as beta release and few major fixes as requested by the countries. This release focuses on testability, usability, and security.
+This 1.2.0.1 release comprises of all features which have been released as beta release and few major fixes as requested by the countries. This release focuses on testability, usability, and security.
 
-DSL Automation scripts, which are part of this release, enable platform testing. Also, few security related issues are resolved.
+DSL (Domain Specific Language) Automation scripts, which are part of this release, enable platform testing. Also, few security related issues are resolved.
 
 One of the major highlights of this patch release is the print stage. The print stage, now re-named as **Credential Requester Stage**, additionally manages the initiation of credential requests tailored to partner-specific information needs.  
 
-Click here <link to credential requestor stage documentation> to know more about Credential Requestor Stage.
+Click [here](https://docs.mosip.io/1.2.0/modules/registration-processor#stages-and-services) to know more about Credential Requestor Stage.
 
-To know more about bug fixes and enhancements, refer [here](../1.2.0.1/).
+Versioning of Mock Services is revised in this release. Hence, the Mock Service version is changed from v 1.2.0.1-B4 to v 1.0. Additionally, there were few changes implemented in Mock ABIS in this release.
+
+To know more about bug fixes and enhancements, refer [here](../1.2.0.1/enhancements-1.2.0.1.md).
 
 **Major Areas of Work**
 
@@ -69,5 +71,5 @@ To know more about bug fixes and enhancements, refer [here](../1.2.0.1/).
 ## Documentation
 
 * Functional test report.
-* Security report.
+
 * [Known Issues](https://mosip.atlassian.net/browse/MOSIP-29944?jql=labels%20%3D%20Known_Issue_1.2.0.1) 
