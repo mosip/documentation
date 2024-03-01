@@ -20,6 +20,12 @@
 * Validates end-user login requests
 * Explore [ID Authentication](https://docs.mosip.io/1.2.0/id-authentication)
 
+<div align="left">
+
+<figure><img src="../.gitbook/assets/sign up service.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 ## How It Works?
 
 * Sign up service shares the user selected Handle, Password and other details as an Identity object to the ID Repository.
@@ -31,10 +37,12 @@
 
 
 
+<figure><img src="../.gitbook/assets/login.png" alt=""><figcaption></figcaption></figure>
 
 
 
+<figure><img src="../.gitbook/assets/mobile number.png" alt=""><figcaption></figcaption></figure>
 
 
 
-
+<figure><img src="../.gitbook/assets/set up account.png" alt=""><figcaption></figcaption></figure>
