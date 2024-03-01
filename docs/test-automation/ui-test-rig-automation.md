@@ -61,6 +61,8 @@ The UI test rig is a comprehensive automation framework designed to validate the
      * Confirm the existence of the 'globaladmin' user in the Database.
      * Ensure all VM arguments mentioned above are correctly passed and executed.  
    * Update the kernel.properties file with the correct values for the client ID and secret key.
+   * Configure environment-specific secret keys in the Kernel.properties file located at: [Kernel.properties](https://github.com/mosip/mosip-automation-tests/blob/develop/mosip-acceptance-tests/ivv-orchestrator/src/main/resources/config/Kernel.properties)
+   * Set environment variables for each unique URL corresponding to different environments (for example, development, test, production).
 
 ## Execution from docker
 
