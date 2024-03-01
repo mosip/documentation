@@ -1,4 +1,4 @@
-  # Table of contents
+# Table of contents
 
 * [🍁 Home](README.md)
 * [🔍 Overview](overview/README.md)
@@ -48,6 +48,7 @@
     * [Identity Service Developers Guide](id-repository-identity-service-developer-guide.md)
     * [VID Service Developers Guide](id-repository-vid-service-developer-guide.md)
     * [.well-known](well-known.md)
+    * [Custom Handle](modules/id-repository/custom-handle.md)
   * [Inji](https://docs.mosip.io/inji)
   * [Inji User Guide](inji-user-guide.md)
   * [Keycloak](keycloak.md)
