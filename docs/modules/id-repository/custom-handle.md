@@ -19,27 +19,24 @@ The implementation of custom handles involves below steps:
 
 1. Mark the fields that can be used as user handles. A new attribute is introduced in identity schema, **handle** which accepts boolean value. More than one field in the identity schema can be marked as handle.
 
- With phone as an example: 
+   With phone as an example: 
 
       ``{"fieldCategory": "phone number", "format": "none", "type": "string", "fieldType": "default", "requiredOn" : "",  **"handle" : true**},``
 
- 2.  When the user registers, collected user data should contain **selectedHandles**, as more than one field can be marked 
-     as handle, user can choose amongst the handle fields to use. User can also choose all of them. Client UI’s collecting 
-     user data during registration can decide to provide this option to the user or it can also set selected handles to 
-     default values as decided by the country.
+ 2. When the user registers, collected user data should contain **selectedHandles**, as more than one field can be marked 
+    as handle, user can choose amongst the handle fields to use. User can also choose all of them. Client UI’s collecting 
+    user data during registration can decide to provide this option to the user or it can also set selected handles to 
+    default values as decided by the country. ``selectedHandles`` is also a field in schema, ``identity``.
 
-      a. **Note:** ``selectedHandles`` is also a field in schema, ``identity``.
+    `"selectedHandles" : {"fieldCategory": "none","format": "none","type": "array","items" : { "type" : "string" },"fieldType": "default"  }``
 
-
-      b. ``"selectedHandles" : {"fieldCategory": "none","format": "none","type": "array","items" : { "type" : "string" },"fieldType": "default"  }``
-
-2. When the collected identity object is sent to the ID repository, it validates the data and accepts the handle provided it is unique amongst the registered handles.
+3. When the collected identity object is sent to the ID repository, it validates the data and accepts the handle provided it is unique amongst the registered handles.
 
    **Note:** If duplicated, a request to register the user is rejected.
 
-3. Once identity is successfully processed and stored in an ID-repository, identity credentials are issued to IDA to store user credentials for each ID (UIN & VID) as well for each selected handle.
+4. Once identity is successfully processed and stored in an ID-repository, identity credentials are issued to IDA to store user credentials for each ID (UIN & VID) as well for each selected handle.
 
-4. ID-repository can be configured to disable issuance of user credential to IDA for both UIN or VID using below properties.
+5. ID-repository can be configured to disable issuance of user credential to IDA for both UIN or VID using below properties.
 
    ``mosip.idrepo.identity.disable-uin-based-credential-request=true``
 
