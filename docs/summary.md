@@ -187,7 +187,7 @@
     * [Pre-Registration UI Upgrade](upgrade-runbook/mock-services/upgrade-prereg-ui-specifications.md)
     * [Registration Client Upgrade](upgrade-runbook/mock-services/upgrade-registration-client.md)
     * [Guide to Reprocess Packets Manually](upgrade-runbook/mock-services/upgrade-regproc-reprocessing.md)
-* [Test Automation](test-automation/README.md)
+* [👾 Test Automation](test-automation/README.md)
   * [DSL Test Rig Automation](test-automation/dsl-test-rig-automation.md)
   * [UI Test Rig Automation](test-automation/ui-test-rig-automation.md)
   * [API Test Rig Automation](test-automation/api-test-rig-automation.md)
