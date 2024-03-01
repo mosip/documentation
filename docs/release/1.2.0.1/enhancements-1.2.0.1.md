@@ -82,6 +82,12 @@
 
 5. When a module  subscribes to websub, the hub secret was logged in plain text.  After the fix, upon logging, hub secret is encrypted. #MOSIP-24522
 
+## Websub ##
+
+### Bug Fix: ###
+
+1. When a module subscribes to websub, the hub secret was logged in plain text.  After the fix, upon logging, hub secret is encrypted. #MOSIP-24522
+
   ## Administration Portal ##
 
   ### Bug Fixes: ###
@@ -106,10 +112,3 @@
      updated to **cancelled** instead of **pre fetched**. After this fix, the application status is updated to **pre 
      fetched** as expected. #MOSIP-24650
 
-## Common ##
-
-### Bug Fixes: ### 
-
-1. [XLS files with , in the text gets corrupt when converted to csv](https://mosip.atlassian.net/browse/MOSIP-24393).
-
-2. [Commons is refering to auth-adapter and keymanager from properties and profiles](https://mosip.atlassian.net/browse/MOSIP-30716).
