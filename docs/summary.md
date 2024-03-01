@@ -38,6 +38,8 @@
   * [Login with OTP](end-user-guide/login-with-otp/README.md)
   * [Login with Biometrics](end-user-guide/login-with-biometrics/README.md)
   * [Login with QR code (Inji)](end-user-guide/login-with-qr-code/README.md)
+* [Use Cases](use-cases/README.md)
+  * [Sign up Service](use-cases/sign-up-service.md)
 * [Supported Integrations](integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
   * [Inji](https://docs.mosip.io/inji)
