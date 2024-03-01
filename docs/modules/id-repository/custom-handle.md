@@ -23,7 +23,10 @@ The implementation of custom handles involves below steps:
 
       ``{"fieldCategory": "phone number", "format": "none", "type": "string", "fieldType": "default", "requiredOn" : "",  **"handle" : true**},``
 
- 2. When the user registers, collected user data should contain **selectedHandles**, as more than one field can be marked as handle, user can choose amongst the handle fields to use. User can also choose all of them. Client UI’s collecting user data during registration can decide to provide this option to the user or it can also set selected handles to default values as decided by the country.
+ 2.  When the user registers, collected user data should contain **selectedHandles**, as more than one field can be marked 
+     as handle, user can choose amongst the handle fields to use. User can also choose all of them. Client UI’s collecting 
+     user data during registration can decide to provide this option to the user or it can also set selected handles to 
+     default values as decided by the country.
 
       a. **Note:** ``selectedHandles`` is also a field in schema, ``identity``.
     
