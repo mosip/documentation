@@ -23,7 +23,7 @@ The UI test rig is a comprehensive automation framework designed to validate the
 **Test Data**
 
 * **Description**: Input data required for the test, such as login credentials, file paths for document upload, or any other data necessary for the test scenario.
-* **Implementation**: Defined in the test script or loaded from external sources like kernel files.
+* **Implementation**: Defined in the test script or loaded from the external sources like kernel files.
 
 **Logging and Reporting**
 
