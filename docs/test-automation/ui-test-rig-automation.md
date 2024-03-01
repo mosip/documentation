@@ -71,7 +71,10 @@ Navigate to the cloned repository directory.
 
 **Setup**:
 
-For the docker setup of uitestrig we need to deploy uitestrig in a docker then we can directly run it using RUN button then after execution we will get report in uitestrig folder in minio.
+1. Once the ``UItest rig`` configuration maps are accurately configured, you can proceed to execute the UI test rig pod within 
+   the Docker environment
+2. Following execution, the comprehensive execution report will be made available in the Minio S3 bucket, accessible for retrieval and further analysis.
+   For the docker setup of ``uitestrig``, we need to deploy uitestrig in a docker, then we can directly run it using ``RUN`` button after execution, we will get report in ``uitestrig`` folder in minio.
 
 ## Pre-requisite data
 
@@ -93,9 +96,9 @@ For the docker setup of uitestrig we need to deploy uitestrig in a docker then w
 ## Analyse the report
 
 1. **Generate TestNG Reports**: Ensure your Selenium and Java project is configured to generate TestNG reports. Utilize build automation tools like Maven or Gradle to execute tests and automatically generate TestNG reports.
-2. **Locate the TestNG Reports**: After test execution, locate the TestNG reports directory. Typically, TestNG generates HTML reports in the testng-report or uitestrig directory within your project's directory structure.
+2. **Locate the TestNG Reports**: After test execution, locate the TestNG reports directory. Typically, TestNG generates HTML reports in the ``testng-report`` or ``uitestrig`` directory within your project's directory structure.
 3. **Reviewing TestNG HTML Reports**:
-   * **Overview Page**: Open the index.html or emailable-report.html file to access the test suite overview. Look for summary information such as total tests run, passed, failed, and skipped.
+   * **Overview Page**: Open the ``index.html`` or ``emailable-report.html`` file to access the test suite overview. Look for summary information such as total tests run, passed, failed, and skipped.
    * **Suite Information**: Navigate to the "Suite" section to examine details about individual test suites, including start and end times.
    * **Test Information**: Check the "Tests" section for detailed information about each test, including start and end times, test duration, and a summary of passed, failed, and skipped methods.
    * **Methods Information**: Explore the "Methods" section to obtain detailed information about each test method. This includes the class name, method name, description, status (pass/fail/skip), and time taken.
