@@ -28,7 +28,7 @@ The implementation of custom handles involves below steps:
     user data during registration can decide to provide this option to the user or it can also set selected handles to 
     default values as decided by the country. ``selectedHandles`` is also a field in schema, ``identity``.
 
-    `"selectedHandles" : {"fieldCategory": "none","format": "none","type": "array","items" : { "type" : "string" },"fieldType": "default"  }``
+    ``"selectedHandles" : {"fieldCategory": "none","format": "none","type": "array","items" : { "type" : "string" },"fieldType": "default"  }``
 
 3. When the collected identity object is sent to the ID repository, it validates the data and accepts the handle provided it is unique amongst the registered handles.
 
