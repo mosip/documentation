@@ -10,9 +10,9 @@ The API Test Rig consists of several key components and follows a specific execu
 
 **modules**: Indicates the name of the module being tested. Examples include auth, prereg, idrepo, resident, esignet, partner, mimoto, etc. Users can specify the module they wish to test, enabling targeted testing based on specific functionalities.
 
-**env.user**: This parameter specifies the user of the environment where the Testrig file will be executed.
+**env.user**: This parameter specifies the user of the environment where the ``Testrig`` file will be executed.
 
-**env.endpoint**: Indicates the environment where the application under test is deployed. Users should replace <base_env> with the hostname of the desired environment.
+**env.endpoint**: Indicates the environment where the application under test is deployed. Users should replace ``<base_env>`` with the hostname of the desired environment.
 
 **env.testlevel**: Determines the level of testing to be conducted. It should be set to ‘smoke’ to run only smoke test cases or ‘smokeandRegression’ to execute all tests of all modules.
 
@@ -24,7 +24,7 @@ Java 11 and Maven (3.6.0): Install Java 11 JDK and Maven 3.6.0 on your machine. 
 
 **Lombok Configuration**: Configure Lombok on your machine. Click [here](https://projectlombok.org/) to refer to the official Lombok website for installation instructions and setup details.
 
-**Git Bash (for Windows)**: Install Git Bash version 2.18.0.windows.1 on your Windows machine. Git Bash provides a Unix-like command-line environment on Windows, enabling seamless execution of commands.
+**Git Bash (for Windows)**: Install ``Git Bash version 2.18.0.windows.1`` on your Windows machine. Git Bash provides a Unix-like command-line environment on Windows, enabling seamless execution of commands.
 
 ## Maven Settings.xml Configuration:
 
