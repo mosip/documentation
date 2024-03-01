@@ -40,7 +40,7 @@
   * [Login with QR code (Inji)](end-user-guide/login-with-qr-code/README.md)
 * [Use Cases](use-cases/README.md)
   * [Sign up Service](use-cases/sign-up-service.md)
-  * [Supported Integrations](integrations/README.md)
+* [Supported Integrations](integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
   * [Inji](https://docs.mosip.io/inji)
   * [OpenCRVS](https://documentation.opencrvs.org/general/releases/v1.3.0-beta-release-notes#mosip-integration-v2-e-signet)
