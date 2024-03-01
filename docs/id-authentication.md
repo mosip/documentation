@@ -27,6 +27,7 @@ The authentication APIs support multiple factors. These can be:
 * Biometric: Finger, face, iris
 * Demographic: Name, date of birth, age, gender etc.
 * OTP: One-Time Password Based on the level of assurance needed for the transaction, the relying party can decide which factors are sufficient for identity verification.
+* Password-based authentication.
 
 Biometric authentication is performed using third-party matcher SDK that performs 1:1 matches on a given modality. Each biometric modality is treated as an independent factor in authentication.
 
