@@ -66,7 +66,8 @@ The UI test rig is a comprehensive automation framework designed to validate the
 
 ## Execution from docker
 
-   **Setup**: For the docker setup of uitestrig we need to deploy uitestrig in a docker then we can directly run it using 
+**Setup**
+For the docker setup of uitestrig we need to deploy uitestrig in a docker then we can directly run it using 
    RUN button then after execution we will get report in uitestrig folder in minio.
 
 ## Pre-requisite data
