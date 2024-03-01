@@ -29,21 +29,17 @@ The implementation of custom handles involves below steps:
      default values as decided by the country.
 
       a. **Note:** ``selectedHandles`` is also a field in schema, ``identity``.
-    
-      b. ``"selectedHandles" : {
- "fieldCategory": "none",
- "format": "none",
- "type": "array",
- "items" : { "type" : "string" },
- "fieldType": "default"  }``
 
-3. When the collected identity object is sent to the ID repository, it validates the data and accepts the handle provided it is unique amongst the registered handles.
+
+      b. ``"selectedHandles" : {"fieldCategory": "none","format": "none","type": "array","items" : { "type" : "string" },"fieldType": "default"  }``
+
+2. When the collected identity object is sent to the ID repository, it validates the data and accepts the handle provided it is unique amongst the registered handles.
 
    **Note:** If duplicated, a request to register the user is rejected.
 
-4. Once identity is successfully processed and stored in an ID-repository, identity credentials are issued to IDA to store user credentials for each ID (UIN & VID) as well for each selected handle.
+3. Once identity is successfully processed and stored in an ID-repository, identity credentials are issued to IDA to store user credentials for each ID (UIN & VID) as well for each selected handle.
 
-5. ID-repository can be configured to disable issuance of user credential to IDA for both UIN or VID using below properties.
+4. ID-repository can be configured to disable issuance of user credential to IDA for both UIN or VID using below properties.
 
    ``mosip.idrepo.identity.disable-uin-based-credential-request=true``
 
