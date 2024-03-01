@@ -97,6 +97,9 @@ To ensure successful execution from Docker, please verify the following prerequi
 * Ensure that the Authdemo pod is running and operational within the Docker environment.
 * Confirm that the Packetcreator pod is deployed and operational within the Docker environment.
 * Verify that the configuration maps for the DSL test rig are correctly set up and configured to facilitate communication and orchestration between components.
+
+<figure><img src="../.gitbook/assets/Communication.png" alt=""><figcaption></figcaption></figure>
+
 * Once the DSL test rig configuration maps are accurately configured, you can proceed to execute the DSL test rig pod within the Docker environment.
 * Following execution, the comprehensive execution report will be made available in the Minio S3 bucket, accessible for retrieval and further analysis.
 
