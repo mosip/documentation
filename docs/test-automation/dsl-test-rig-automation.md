@@ -185,6 +185,12 @@ Testing and refining the newly created scenario is crucial to ensure it function
 * Document your new scenario clearly and concisely, explaining its purpose and any changes made compared to the original scenario.
 * Below in the snapshot shown many more methods for your reference for the scenarios.
 
+<div align="left">
+
+<figure><img src="../.gitbook/assets/MOSIP Testrig.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
 ### Analyze the Scenario Names
 
 To analyze scenario names effectively, consider the following strategies:
