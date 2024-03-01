@@ -23,11 +23,11 @@ To know more about bug fixes and enhancements, refer [here](../1.2.0.1/enhanceme
 **Major Areas of Work**
 
 * Credential Requestor Stage
-* Introduction of Handles in ID Repository
+* [Introduction of Handles in ID Repository](https://docs.mosip.io/1.2.0/modules/id-repository/custom-handle)
 * Enabling password-based authentication in IDA
 * Functional bug fixes
 * Security bug fixes
-* DSL Automation
+* [Test Automation](https://docs.mosip.io/1.2.0/test-automation)
 * Performance fixes
 * Sonar bug fixes
 
