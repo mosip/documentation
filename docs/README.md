@@ -21,12 +21,12 @@ In Korean, Inji means `knowing` or `recognizance`. Hence, the word _Inji_ resona
 
 Inji provides a digital credential stack for creating, issuing, managing, sharing, verifying, and consuming credentials. Key components of Inji include:
 
-* [**Inji Mobile Wallet**](overview.md): A secure, trustworthy, dependable, and decentralized mobile Verifiable Credentials wallet. It allows users to download, manage, share, and verify verifiable credentials.
-* **Inji Web**: An easy-to-use web portal that makes credentials accessible to everyone. It enables users to download, print, store, and share verifiable credentials physically.
-* **Inji Certify (issuance)**: A platform to issue credentials of any type in multiple formats. It allows issuers to create, sign, issue, bind, and store/hold verifiable credentials.
-* **Inji Verify**: Tools and utilities for consuming and verifying credentials.
-* **Inji Infra**: Tools and utilities for revocation, ledger, status, resolution, and federation of verifiable credentials.
-* **Inji Govern**: Frameworks to define policies, schemas, assurance, and parties in the context of verifiable credentials.
+* [**Inji Mobile Wallet**](overview.md): A secure, trustworthy, dependable, and decentralized mobile Verifiable Credentials wallet. It allows users to download, manage, share, and verify verifiable credentials.&#x20;
+* **Inji Web**: An easy-to-use web portal that makes credentials accessible to everyone. It enables users to download, print, store, and share verifiable credentials physically. \[_Available starting March 2024 release_]
+* **Inji Certify (issuance)**: A platform to issue credentials of any type in multiple formats. It allows issuers to create, sign, issue, bind, and store/hold verifiable credentials. \[_Available starting March 2024 release_]
+* **Inji Verify**: Tools and utilities for consuming and verifying credentials. \[_Available starting March 2024 release_]
+* **Inji Infra**: Tools and utilities for revocation, ledger, status, resolution, and federation of verifiable credentials. \[_Future Wishlist_]
+* **Inji Govern**: Frameworks to define policies, schemas, assurance, and parties in the context of verifiable credentials. \[_Future Wishlist_]
 
 _Note: The above components are envisioned to evolve in the next few releases. For more details, refer to the_ [_Roadmap_](https://docs.mosip.io/1.2.0/roadmap)_._
 
