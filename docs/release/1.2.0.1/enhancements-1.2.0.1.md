@@ -8,10 +8,11 @@
   
 2.  There is no dependency on Credential Request Status table. UIN table is connected with service to retrieve data related to UIN and its associated VID. #MOSIP-23189
   
-### Bug Fix: ###
+### Bug Fixes: ###
 
 1. Enabled logging query parameter for biosdk service. Logging process helps in tracking the extraction process carried 
      out by biosdk services. #MOSIP-29421
+2. During authentication, number of attempts to enter OTP was not restricted. This could result in many number of attempts. During this fix, number of attempts to enter OTP has been restricted. #MOSIP-31314
    
 ## ID Repository ##
 
