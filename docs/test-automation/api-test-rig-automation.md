@@ -6,7 +6,7 @@ API Test Rig is a comprehensive tool designed to rigorously test all APIs provid
 
 ## Execution Components and Flow
 
-The API Test Rig consists of several key components and follows a specific execution flow:
+The API Test Rig consists of several key components and follows a specific execution flow.
 
 **modules**: Indicates the name of the module being tested. Examples include auth, prereg, idrepo, resident, esignet, partner, mimoto, etc. Users can specify the module they wish to test, enabling targeted testing based on specific functionalities.
 
