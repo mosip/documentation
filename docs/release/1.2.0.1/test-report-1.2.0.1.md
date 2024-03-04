@@ -57,20 +57,14 @@ Below are the test metrics by performing functional testing using mock MDS, mock
 | ----- | ------ | ------ | ------- |
 | 2722  | 2537   | 178    | 7       |
 
-**Test Rate: 100%** with **Pass rate: 93.19%**
+Test Rate: 100% with Pass rate: 93.19%
 
-Here is the detailed breakdown of metrics:
+Here is the detailed breakdown:
 
-|   Module          |  Status | Test Cases |
-| ----------------- | ------- | ---------- |
-| API Based Testing | Total   | 2538       |
-| API Based Testing | Passed  | 2373       |
-| API Based Testing | Failed  | 160        |
-| API Based Testing | Skipped | 5          |
-| UI Based Testing  | Total   | 184        |
-| UI Based Testing  | Passed  | 167        |
-| UI Based Testing  | Failed  | 15         |
-| UI Based Testing  | Skipped | 2          |
+| Module            | Total | Passed | Failed | Skipped |
+| ----------------- | ----- | ------ | ------ | ------- |
+| API Based Testing | 2538  | 2373   | 160    | 5       |
+| UI Based testing  | 184   | 167    | 15     | 2       |
 
 **Note**: In API Based testing, 5 test cases are marked as skipped as they were not automated. In UI Based testing, 2 test cases are marked as skipped as they were enhancement test cases.
 
@@ -78,12 +72,12 @@ Here is the detailed breakdown of metrics:
 
 **End-to-End Scenarios**
 
-|         |     |
-| ------- | --- |
-| Total   | 163 |
-| Pass    | 123 |
-| Fail    | 36  |
-| Skipped | 4   |
+| Status  | Test Cases |
+| ------- | ---------- |
+| Total   | 163        |
+| Pass    | 123        |
+| Fail    | 36         |
+| Skipped | 4          |
 
 **Detailed Test metrics**
 
