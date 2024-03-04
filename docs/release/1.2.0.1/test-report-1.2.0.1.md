@@ -15,7 +15,7 @@ Verification is performed not only from the end-user perspective but also from t
 
 Persona based approach has been adopted to perform the IV\&V(Independent Verification and Validation) by simulating the test scenarios that resemble a real-time implementation.
 
-A Persona is a fictional character/ user profile created to represent a user type that might use a product/ or a service in a similar way. Persona-based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software and thereby determines use cases/ scenarios that the customers will execute. The persona's needs may be addressed through any of the following:
+A Persona is a fictional character / user profile created to represent a user type that might use a product/ or a service in a similar way. Persona-based testing is a software testing technique that puts software testers in the customer's shoes, assesses their needs from the software and thereby determines use cases/ scenarios that the customers will execute. The persona's needs may be addressed through any of the following:
 
 * Functionality
 * Deployability
@@ -53,12 +53,10 @@ Verification is performed on various configurations as mentioned below:
 
 Below are the test metrics by performing functional testing using mock MDS, mock Auth and mock ABIS. The process followed was black box testing which based its test cases on the specifications of the software component under test. Functional test was performed in combination of individual module testing as well as integration testing. Test data were prepared inline with the user stories. Expected results were monitored by examining the user interface. The coverage includes GUI testing, System testing, End-To-End flows across multiple languages and configurations. The testing cycle included simulation of multiple identity schema and respective UI schema configurations.
 
-
-
-| Total | Passed | Failed | Skipped        |
-| ----- | ------ | ------ | ---------------|
-| 2722  | 2537   | 178    | 7              |
-| Test Rate: 100% with Pass rate: 93.19%   |
+| Total                                  | Passed | Failed | Skipped |
+| -------------------------------------- | ------ | ------ | ------- |
+| 2722                                   | 2537   | 178    | 7       |
+| Test Rate: 100% with Pass rate: 93.19% |        |        |         |
 
 Here is the detailed breakdown:
 
