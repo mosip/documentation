@@ -82,5 +82,5 @@ To know more about bug fixes and enhancements, refer [here](../1.2.0.1/enhanceme
 
 ## Documentation
 
-* Functional test report
+* [Functional test report](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1/test-report-1.2.0.1)
 * [Known Issues](https://mosip.atlassian.net/browse/MOSIP-29944?jql=labels%20%3D%20Known_Issue_1.2.0.1) 
