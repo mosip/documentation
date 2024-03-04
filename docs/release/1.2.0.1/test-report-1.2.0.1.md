@@ -102,8 +102,19 @@ Git hub link for the xls file:
 
 ## Sonar Report
 
-| Repository Name | Branch Name | Coverage (>80%) | Reliability (0) | Security (0) |  Hotspots (0) | Duplications (Less than 3%)  |
-| --------------- | ----------- | --------------- | --------------- | ------------ | - | - |
-|                 |             |                 |                 |              |   |   |
-|                 |             |                 |                 |              |   |   |
-|                 |             |                 |                 |              |   |   |
+| Repository Name             | Branch Name     | Coverage (>80%) | Reliability (0) | Security (0) | Hotspots (0) | Duplications (Less than 3%) |
+| --------------------------- | --------------- | --------------- | --------------- | ------------ | ------------ | --------------------------- |
+| partner-management-portal   | release-1.2.0.1 | -               | 42              | 0            | 0            | 11.7                        |
+| partner-management-services | release-1.2.0.1 | 76.8            | 2               | 0            | 0            | 11.7                        |
+| admin-ui                    | release-1.2.0.1 | -               | 54              | 0            | 0            | 18.2                        |
+| durian                      | release-1.2.0.1 | 85.2            | 5               | 0            | 0            | 0.0 %                       |
+| registration                | release-1.2.0.1 | 80.9            | 2               | 0            | 1            | 4.6                         |
+| packet-manager              | release-1.2.0.1 | 0%              | 7               | 0            | 0            | 1.2                         |
+| id-repository               | release-1.2.0.1 | 79.9            | 9               | 0            | 0            | 1.80%                       |
+| digital-card-service        | release-1.2.0.1 | 0               | 4               | 0            | 0            | 1.4                         |
+| pre-registration            | release-1.2.0.1 | 81              | 48              | 0            | 0            | 1.9                         |
+| pre-registration-ui         | release-1.2.0.1 | -               | 53              | 0            | 2            | 2.9                         |
+| id-authentication           | release-1.2.0.1 | 72.4            | 10              | 0            | 0            | 2.2                         |
+| otp-manager                 | release-1.2.0.1 | 53.51           | 0               | 0            | 0            | 0.0 %                       |
+| resident-services           | release-1.2.0.1 | 77.30%          | 0               | 0            | 0            | 1.30%                       |
+| registration-client         | release-1.2.0.1 | 73.7            | 21              | 0            | 5            | 7.5                         |
