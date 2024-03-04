@@ -40,9 +40,9 @@ Below are the features available in the release:
 | mosip-config                       | [1.3.0-ES](https://github.com/mosip/mosip-config/tree/v1.3.0-ES)             |
 | esignet                            | [1.3.0](https://github.com/mosip/esignet/tree/v1.3.0)                        |
 | esignet-mock-services              | [0.9.2](https://github.com/mosip/esignet-mock-services/tree/v0.9.2)          |
-| mosip-file-server                  |                                                                              |
-| mosip-plugins/sign-in-with-esignet |                                                                              |
-| mosip-onboarding                   |                                                                              |
-
+| id-repo                            | [1.2.0.1-B3](https://github.com/mosip/id-repository/tree/v1.2.0.1-B3)        |
+| esignet-signup                     | [1.0.0](https://github.com/mosip/esignet-signup/tree/v1.0.0)                 |
+| mosip-openid-bridge                | [1.2.0.1-B4](https://github.com/mosip/mosip-openid-bridge/tree/v1.2.0.1-B4)  |
+| mosip-openid-bridge                | [1.2.0.1-B4-lite](https://github.com/mosip/mosip-openid-bridge/tree/v1.2.0.1-B4-lite)  |
 
 For details on deployment, refer to the [helm charts](https://github.com/mosip/esignet/tree/v1.3.0/helm) in the eSignet repository.
