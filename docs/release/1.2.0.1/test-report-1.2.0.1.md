@@ -55,10 +55,10 @@ Below are the test metrics by performing functional testing using mock MDS, mock
 
 
 
-| Total | Passed | Failed | Skipped |
-| ----- | ------ | ------ | ------- |
-| 2722  | 2537   | 178    | 7       |
-|       |        |        |         |
+| Total | Passed | Failed | Skipped        |
+| ----- | ------ | ------ | ---------------|
+| 2722  | 2537   | 178    | 7              |
+| Test Rate: 100% with Pass rate: 93.19%   |
 
 Here is the detailed breakdown:
 
