@@ -4,9 +4,9 @@
 
 The UI test rig is a comprehensive automation framework designed to validate the functionality and user interface of various modules within web-based applications. This robust framework encompasses modules tailored for specific functionalities, ensuring thorough testing and validation of essential components. Below are the modules covered:
 
-1. **AdminUI**: Admin Service module facilitates the creation of machines and performs user, center, and device mapping. Additionally, it supports master data bulk upload and retrieval of lost RIDs.
-2. **PMPUI (Partner Management Services)**: PMPUI is a web-based UI application offering services for partner onboarding and management. It includes functionalities for Partner Management Service and Policy Management Service.
-3. **ResidentUI**: Resident service is a web-based UI application that enables users to perform various operations related to their UINs / VIDs. Users can utilize these services to view, update, manage, and share their data. Additionally, they can report issues in case of grievances.
+1. **Admin UI**: Admin Service module facilitates the creation of machines and performs user, center, and device mapping. Additionally, it supports master data bulk upload and retrieval of lost RIDs.
+2. **PMP UI (Partner Management Services)**: PMPUI is a web-based UI application offering services for partner onboarding and management. It includes functionalities for Partner Management Service and Policy Management Service.
+3. **Resident UI**: Resident service is a web-based UI application that enables users to perform various operations related to their UINs / VIDs. Users can utilize these services to view, update, manage, and share their data. Additionally, they can report issues in case of grievances.
 
 ## Execution Components
 
@@ -48,9 +48,9 @@ The UI test rig is a comprehensive automation framework designed to validate the
 
 **Clone Repository**
 
-* **AdminUI**: Clone the repository from [Admin UI](https://github.com/mosip/admin-ui).
-* **ResidentUI**: Clone the repository from [Resident UI](https://github.com/mosip/resident-ui).
-* **PMPUI**: Clone the repository from [Partner Management Portal](https://github.com/mosip/%20partner-management-portal).
+* **Admin UI**: Clone the repository from [Admin UI](https://github.com/mosip/admin-ui).
+* **Resident UI**: Clone the repository from [Resident UI](https://github.com/mosip/resident-ui).
+* **PMP UI**: Clone the repository from [Partner Management Portal](https://github.com/mosip/partner-management-portal).
 
 ## Configure Properties
 
