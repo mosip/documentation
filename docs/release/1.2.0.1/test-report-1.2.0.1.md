@@ -57,11 +57,11 @@ Below are the test metrics by performing functional testing using mock MDS, mock
 | ----- | ------ | ------ | ------- |
 | 2722  | 2537   | 178    | 7       |
 
-Test Rate: 100% with Pass rate: 93.19%
+**Test Rate: 100%** with **Pass rate: 93.19%**
 
-Here is the detailed breakdown:
+Here is the detailed breakdown of metrics:
 
-|                   |         | Test Cases |
+|   Module          |         | Test Cases |
 | ----------------- | ------- | ---------- |
 | API Based Testing | Total   | 2538       |
 | API Based Testing | Passed  | 2373       |
