@@ -38,8 +38,6 @@ Below are the features available in the release:
 | id-authentication                  | [1.2.0.1-B6](https://github.com/mosip/id-authentication/tree/v1.2.0.1-B6)    |
 | Artifactory-ref-impl               | [1.2.0.1-B8](https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.1-B8) |
 | mosip-config                       | [1.3.0-ES](https://github.com/mosip/mosip-config/tree/v1.3.0-ES)             |
-| mosip-helm                         |                                                                              |
-| mosip-infra                        |                                                                              |
 | esignet                            | [1.3.0](https://github.com/mosip/esignet/tree/v1.3.0)                        |
 | esignet-mock-services              | [0.9.2](https://github.com/mosip/esignet-mock-services/tree/v0.9.2)          |
 | mosip-file-server                  |                                                                              |
@@ -47,4 +45,4 @@ Below are the features available in the release:
 | mosip-onboarding                   |                                                                              |
 
 
-For details on deployment, go through the [helm charts](https://github.com/mosip/esignet/tree/v1.1.0/helm) in the eSignet repository.
+For details on deployment, refer to the [helm charts](https://github.com/mosip/esignet/tree/v1.3.0/helm) in the eSignet repository.
