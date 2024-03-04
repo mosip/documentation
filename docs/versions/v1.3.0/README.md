@@ -28,7 +28,7 @@ The 1.3.0 version of eSignet is the third release of eSignet. This release focus
 Below are the features available in the release:
 
 * Login with password
-* Sign-up service
+* [Sign-up service](https://docs.esignet.io/use-cases/sign-up-service)
 
 ## Repositories Released
 
