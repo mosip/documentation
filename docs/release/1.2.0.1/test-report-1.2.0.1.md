@@ -61,7 +61,7 @@ Below are the test metrics by performing functional testing using mock MDS, mock
 
 Here is the detailed breakdown of metrics:
 
-|   Module          |         | Test Cases |
+|   Module          |  Status | Test Cases |
 | ----------------- | ------- | ---------- |
 | API Based Testing | Total   | 2538       |
 | API Based Testing | Passed  | 2373       |
