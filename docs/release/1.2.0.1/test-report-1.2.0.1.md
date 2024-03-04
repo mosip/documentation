@@ -102,7 +102,7 @@ Git hub link for the xls file:
 
 ## Sonar Report
 
-| Repository Name | Branch Name | Coverage (>80%) | Reliability (0) | Security (0) |   |   |
+| Repository Name | Branch Name | Coverage (>80%) | Reliability (0) | Security (0) |  Hotspots (0) | Duplications (Less than 3%)  |
 | --------------- | ----------- | --------------- | --------------- | ------------ | - | - |
 |                 |             |                 |                 |              |   |   |
 |                 |             |                 |                 |              |   |   |
