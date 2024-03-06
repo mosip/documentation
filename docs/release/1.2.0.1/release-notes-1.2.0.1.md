@@ -16,8 +16,6 @@ One of the major highlights of this patch release is the print stage. The print 
 
 Click [here](https://docs.mosip.io/1.2.0/modules/registration-processor#stages-and-services) to know more about Credential Requestor Stage.
 
-Versioning of Mock Services is revised. Hence, the Mock Service version is changed from v 1.2.0.1-B4 to v 1.0. Additionally, there are a few changes implemented in Mock ABIS.
-
 To know more about bug fixes and enhancements, refer [here](../1.2.0.1/enhancements-1.2.0.1.md).
 
 **Major Areas of Work**
