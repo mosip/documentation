@@ -150,6 +150,8 @@
 * [📖 Releases](releases.md)
   * [Android Registration Client 0.9.0](release-notes-android-reg-client-0.9.0.md)
     * [Test Report](arc-0.9.0-test-report.md)
+  * [1.2.0.1](release/1.2.0.1/release-notes-1.2.0.1.md)
+    * [Test Report](release/1.2.0.1/test-report-1.2.0.1.md)
   * [1.2.0.1-B4 (Beta)](release/1.2.0.1/release-notes-1.2.0.1-b4.md)
     * [Test Report](release/1.2.0.1/test-report-1.2.0.1-b4.md)
   * [Android Registration Client DP1](release-notes-android-reg-client-dp1.md)
