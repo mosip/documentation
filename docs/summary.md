@@ -48,7 +48,7 @@
   * [v1.3.0](versions/v1.3.0/README.md)
     * [Test Report](versions/v1.3.0/test-report.md)
   * [v1.2.0](versions/v1.2.0/README.md)
-  * [Test Report](versions/v1.2.0/test-report/README.md)
+    * [Test Report](versions/v1.2.0/test-report/README.md)
   * [v1.1.0](versions/v1.1.0/README.md)
     * [Test Report](versions/v1.1.0/test-report/README.md)
   * [v1.0.0](versions/v1.0.0/README.md)
