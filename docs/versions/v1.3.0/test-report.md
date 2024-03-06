@@ -85,6 +85,8 @@ The various metrics that assist in test tracking and efficiency are as follows:
 * Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100
 * Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
 
+Link for the [detailed test report](https://github.com/mosip/test-management/tree/master/e-signet/1.3.0).
+
 ## Device and Browser details
 
 **Mobile Specification**
