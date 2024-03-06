@@ -40,8 +40,6 @@ Verification is performed on various configurations as mentioned below:
 
 ### Feature health
 
-###
-
 <figure><img src="../../.gitbook/assets/Picture1.png" alt=""><figcaption></figcaption></figure>
 
 ### Test Execution Statistics
@@ -90,8 +88,6 @@ The various metrics that assist in test tracking and efficiency are as follows:
 ## Device and Browser details
 
 **Mobile Specification**
-
-
 
 | Device            | Browser | Browser version | OS version    | Display resolution | Screen size |
 | ----------------- | ------- | --------------- | ------------- | ------------------ | ----------- |
