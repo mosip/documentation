@@ -40,6 +40,10 @@ Verification is performed on various configurations as mentioned below:
 
 ### Feature health
 
+###
+
+<figure><img src="../../.gitbook/assets/Picture1.png" alt=""><figcaption></figcaption></figure>
+
 ### Test Execution Statistics
 
 #### Functional test results for eSignet
@@ -50,7 +54,7 @@ The functional test was performed in combination with individual module testing 
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
-| 1604      | 1524       | 76         |  4          |
+| 1604      | 1524       | 76         | 4           |
 
 **Test Rate: 99%** with **Pass Rate: 95%**
 
@@ -87,4 +91,14 @@ The various metrics that assist in test tracking and efficiency are as follows:
 
 **Mobile Specification**
 
+
+
+| Device            | Browser | Browser version | OS version    | Display resolution | Screen size |
+| ----------------- | ------- | --------------- | ------------- | ------------------ | ----------- |
+| iphone 15 plus    | Safari  | 17              | 17.2          | 1290x2796 pixels   | 6.7 inches  |
+| iphone 7          | Safari  | 15              | 15.6          | 750 x 1334 pixels  | 4.7 inches  |
+| Vivo y73          | chrome  | 120.0.6099.193  | Android 13    | 1080x2400 pixels   | 6.44 inches |
+| Redmi 7A          | chrome  | 120.0.6099.145  | Android 10    | 720x1440 pixels    | 5.45 inches |
+| Samsung Galaxy S5 | chrome  | 120.0.6099.145  | Android 4.4.2 | 1080 x 1920 pixels | 5.1 inches  |
+| Moto G4           | chrome  | 120.0.6099.145  | Android 6.0.1 | 1080 x 1920 pixels | 5.5 inches  |
 
