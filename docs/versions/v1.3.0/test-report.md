@@ -99,3 +99,15 @@ The various metrics that assist in test tracking and efficiency are as follows:
 | Moto G4           | chrome  | 120.0.6099.145  | Android 6.0.1 | 1080 x 1920 pixels | 5.5 inches  |
 
 **Desktop browser specification**
+
+
+
+| Browser         | Browser version        |
+| --------------- | ---------------------- |
+| Chrome          | 120.0.6099.110         |
+| Mozilla Firefox | 122.0 (20240118164516) |
+| Microsoft Edge  | 121.0.2277.128         |
+| Duckduckgo      | 0.66.1                 |
+| Opera           | 107.0.5045.21          |
+| Safari          | 16.6                   |
+
