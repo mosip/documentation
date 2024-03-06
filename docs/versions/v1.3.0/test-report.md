@@ -98,3 +98,4 @@ The various metrics that assist in test tracking and efficiency are as follows:
 | Samsung Galaxy S5 | chrome  | 120.0.6099.145  | Android 4.4.2 | 1080 x 1920 pixels | 5.1 inches  |
 | Moto G4           | chrome  | 120.0.6099.145  | Android 6.0.1 | 1080 x 1920 pixels | 5.5 inches  |
 
+**Desktop browser specification**
