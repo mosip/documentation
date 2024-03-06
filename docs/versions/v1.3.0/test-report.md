@@ -38,6 +38,8 @@ Verification is performed on various configurations as mentioned below:
 * Login with Password
 * Forgot Password
 
+### Feature health
+
 ### Test Execution Statistics
 
 #### Functional test results for eSignet
