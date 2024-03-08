@@ -8,7 +8,7 @@
 
 **Release Date**: 06th March, 2024
 
-This 1.2.0.1 release comprises of all features which have been released as beta release and few major fixes as requested by the countries. This release focuses on testability, usability, and security.
+This **1.2.0.1** release comprises of all features which have been released as beta release and few major fixes as requested by the countries. This release focuses on testability, usability, and security.
 
 Domain Specific Language (DSL) Automation scripts, which are part of this release, enable platform testing. Also, few security related issues are resolved.
 
@@ -33,50 +33,39 @@ To know more about bug fixes and enhancements, refer [here](../1.2.0.1/enhanceme
 
 | **Repositories**            | **Tags Released**                                                                    |
 | --------------------------- | ------------------------------------------------------------------------------------ |
-| admin-ui                    |                                                                                      |
-| admin-services              |                                                                                      |
-| audit-manager               |                                                                                      |
-| biosdk-client               |                                                                                      |
-| id-authentication           |                                                                                      |
-| id-repository               |                                                                                      |
-| commons                     |                                                                                      |
-| packet-manager              |                                                                                      |
-| durian                      |                                                                                      |
-| keymanager                  |                                                                                      |
-| partner-management-services |                                                                                      |
-| partner-management-portal   |                                                                                      |
-| pre-registration            |                                                                                      |
-| print                       |                                                                                      |
-| resident-services           |                                                                                      |
-| registration                |                                                                                      |
-| registration-client         |                                                                                      |
-| print                       |                                                                                      |
-| mosip-openid-bridge         |                                                                                      |
-| biosdk-services             |                                                                                      |
-| mosip-config                |                                                                                      |
-| bio-utils                   |                                                                                      |
-| artifactory-ref-impl        |                                                                                      |
-| mosip-infra                 |                                                                                      |
-| mosip-config                |                                                                                      |
-| keyclock                    |                                                                                      |
-| websub                      |                                                                                      |
-| mosip-data                  |                                                                                      |
-| migration-utility           |                                                                                      |
-| mosip/mock-smtp-sms         |                                                                                      |
-| mosip-helm                  |                                                                                      |
-| mosip-ref-impl              |                                                                                      |
-| postgres-init               |                                                                                      |
-| mosip-functional-tests      |                                                                                      |
-| mosip-automation-tests      |                                                                                      |
-| mosip-file-server           |                                                                                      |
-| k8s-infra                   |                                                                                      |
-| mosip-onboarding            |                                                                                      |
-| reporting                   |                                                                                      |
-| demosdk                     |                                                                                      |
-| pre-registration-ui         |                                                                                      |
-| digital-card-service        |                                                                                      |
-| biosdk-client               |                                                                                      |
-| converters                  |                                                                                      |
+| admin-ui                    |[v1.2.0.1](https://github.com/mosip/admin-ui/tree/v1.2.0.1/)                          |
+| admin-services              |[v1.2.0.1](https://github.com/mosip/admin-services/tree/v1.2.0.1/)                    |
+| audit-manager               |[v1.2.0.1](https://github.com/mosip/audit-manager/tree/v1.2.0.1/)                     |
+| biosdk-client               |[v1.2.0.1](https://github.com/mosip/biosdk-client/tree/v1.2.0.1/)                     |
+| id-authentication           |[v1.2.0.1](https://github.com/mosip/id-authentication/tree/v1.2.0.1/)                 |
+| id-repository               |[v1.2.0.1](https://github.com/mosip/id-repository/tree/v1.2.0.1/)                     |
+| commons                     |[v1.2.0.1](https://github.com/mosip/commons/tree/v1.2.0.1/)                           |
+| packet-manager              |[v1.2.0.1](https://github.com/mosip/packet-manager/tree/v1.2.0.1/)                    |
+| durian                      |[v1.2.0.1](https://github.com/mosip/durian/tree/v1.2.0.1/)                            |
+| keymanager                  |[v1.2.0.1](https://github.com/mosip/keymanager/tree/v1.2.0.1/)                        |
+| partner-management-services |[v1.2.0.1]( https://github.com/mosip/partner-management-services/tree/v1.2.0.1/)      |
+| partner-management-portal   |[v1.2.0.1](https://github.com/mosip/partner-management-services/tree/v1.2.0.1/)       |
+| pre-registration            |[v1.2.0.1)(https://github.com/mosip/pre-registration/tree/v1.2.0.1/)                  |
+| print                       |[v1.2.0.1](https://github.com/mosip/print/tree/v1.2.0.1/)                             |
+| resident-services           |[v1.2.0.1](https://github.com/mosip/resident-services/tree/v1.2.0.1/)                 |
+| registration                |[v1.2.0.1](https://github.com/mosip/registration/tree/v1.2.0.1/)                      |
+| registration-client         |[v1.2.0.1](https://github.com/mosip/registration-client/tree/v1.2.0.1/)               |
+| mosip-openid-bridge         |[v1.2.0.1](https://github.com/mosip/mosip-openid-bridge/tree/v1.2.0.1/)               |
+| biosdk-services             |[v1.2.0.1](https://github.com/mosip/biosdk-services/tree/v1.2.0.1/)                   |
+| bio-utils                   |[v1.2.0.1](https://github.com/mosip/bio-utils/tree/v1.2.0.1/)                         |
+| mosip-config                |[v1.2.0.1](https://github.com/mosip/mosip-config/tree/v1.2.0.1/)                      |
+| keyclock                    |[v1.2.0.1](https://github.com/mosip/keycloak/tree/v1.2.0.1/)                          |
+| khazana                     |[v1.2.0.1](https://github.com/mosip/khazana/tree/v1.2.0.1/)                           |
+| mosip-data                  |[v1.2.0.1](https://github.com/mosip/mosip-data/tree/v1.2.0.1/)                        |
+| mosip-ref-impl              |[v1.2.0.1](https://github.com/mosip/mosip-ref-impl/tree/v1.2.0.1/)                    |
+| mosip-file-server           |[v1.2.0.1](https://github.com/mosip/mosip-file-server/tree/v1.2.0.1/)                 |
+| k8s-infra                   |[v1.2.0.1](https://github.com/mosip/k8s-infra/tree/v1.2.0.1/)                         |
+| mosip-onboarding            |[v1.2.0.1](https://github.com/mosip/mosip-onboarding/tree/v1.2.0.1/)                  |
+| reporting                   |[v1.2.0.1](https://github.com/mosip/reporting/tree/v1.2.0.1/)                         |
+| demosdk                     |[v1.2.0.1](https://github.com/mosip/demosdk/tree/v1.2.0.1/)                           |
+| pre-registration-ui         |[v1.2.0.1](https://github.com/mosip/pre-registration-ui/tree/v1.2.0.1/)               |
+| digital-card-service        |[v1.2.0.1](https://github.com/mosip/digital-card-service/tree/v1.2.0.1/)              |
+| converters                  | [v1.2.0.1](https://github.com/mosip/converters/tree/v1.2.0.1/)                       |
 
 ## Documentation
 
