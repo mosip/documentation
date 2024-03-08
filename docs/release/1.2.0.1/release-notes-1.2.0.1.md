@@ -45,7 +45,7 @@ To know more about bug fixes and enhancements, refer [here](../1.2.0.1/enhanceme
 | keymanager                  |[v1.2.0.1](https://github.com/mosip/keymanager/tree/v1.2.0.1/)                        |
 | partner-management-services |[v1.2.0.1]( https://github.com/mosip/partner-management-services/tree/v1.2.0.1/)      |
 | partner-management-portal   |[v1.2.0.1](https://github.com/mosip/partner-management-services/tree/v1.2.0.1/)       |
-| pre-registration            |[v1.2.0.1)(https://github.com/mosip/pre-registration/tree/v1.2.0.1/)                  |
+| pre-registration            |[v1.2.0.1](https://github.com/mosip/pre-registration/tree/v1.2.0.1/)                  |
 | print                       |[v1.2.0.1](https://github.com/mosip/print/tree/v1.2.0.1/)                             |
 | resident-services           |[v1.2.0.1](https://github.com/mosip/resident-services/tree/v1.2.0.1/)                 |
 | registration                |[v1.2.0.1](https://github.com/mosip/registration/tree/v1.2.0.1/)                      |
