@@ -4,6 +4,13 @@
 
 
 
+**Version: 1.2.0.1**
+
+* Name: Final patch on Asymmetric Amoeba
+* [![LTS](https://img.shields.io/badge/Support-Long%20Term%20Support-blue?style=plastic)](https://docs.mosip.io/1.2.0/releases/support-policy)
+* Date: 06th March, 2024
+* [Release Notes](release/1.2.0.1/release-notes-1.2.0.1.md)
+
 **Version: 1.2.0.1 Beta 4**
 
 * Name: Fourth patch on Asymmetric Amoeba
