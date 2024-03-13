@@ -25,7 +25,9 @@ Within the ``esignet-default.properties`` file, users can manage how usernames a
 ## Process to Login with Password
 
 1. If your relying party has enabled Login with Password login flow, application displays below mentioned screen.
-   <img src="Login with Password screen.png" alt="Login with Password screen.png">
+   
+   <img src="../_images/Login with Password screen.png" alt="Login with Password screen.png">
+   
 3. Before proceeding to login, users can enter username or mobile number, password, and verify captcha.
 4. Upon successful verification of user login credentials, **Consent** page is displayed as shown below.
 5. Upon successful consent, relying party page is displayed as shown below.
