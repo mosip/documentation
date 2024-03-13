@@ -4,7 +4,7 @@
 
 **Upgrade From**: 1.2.0
 
-**Release Date**: xxth March, 2024
+**Release Date**: 23rd February, 2024
 
 ## Overview
 
@@ -27,7 +27,7 @@ The 1.3.0 version of eSignet is the third release of eSignet. This release focus
 
 Below are the features available in the release:
 
-* Login with password
+* [Login with password](https://docs.esignet.io/overview/features)
 * [Sign-up service](https://docs.esignet.io/use-cases/sign-up-service)
 
 ## Repositories Released
