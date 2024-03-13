@@ -39,11 +39,11 @@ _Note_: Biometric-based login with Mock MDS is currently unavailable in the Coll
 
 #### Authentication using Wallet
 
-For our testing, we have integrated with [MOSIP's digital wallet- Inji](https://docs.mosip.io/inji/inji-mobile-wallet/sandbox-details/inji-setup-guide), which we can use as an authenticator.
+For our testing, we have integrated with [MOSIP's digital wallet- Inji](https://docs.mosip.io/inji), which we can use as an authenticator.
 
 In order to get your credentials onboarded on Inji and enable them for authentication, follow the below steps,
 
-1. Install the Inji APK on your mobile device using [this guide to set up and use Inji](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide)
+1. Install the Inji APK on your mobile device using [this guide to set up and use Inji](https://docs.mosip.io/inji/inji-mobile-wallet/sandbox-details/inji-setup-guide)
 2. Download your credentials on Inji. For details on how to download the credential, click [here](https://docs.mosip.io/1.2.0/collab-getting-started-guide/collab-inji-setup-guide) (Refer to step 3 in the guide)
 3. Ensure that you have activated your credentials for online login. This step is crucial for wallet-based authentication to work smoothly. For a comprehensive guide on how to activate the VC for online login, refer [here](https://docs.mosip.io/1.2.0/modules/inji-user-guide#wallet-binding-flow) and navigate to the section titled **Wallet Binding Flow**.
 
