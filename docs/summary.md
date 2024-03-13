@@ -40,6 +40,7 @@
   * [Login with QR code (Inji)](end-user-guide/login-with-qr-code/README.md)
 * [Use Cases](use-cases/README.md)
   * [Sign up Service](use-cases/sign-up-service.md)
+  * [Adding Prefix and Suffix to Handle](use-cases/adding-prefix-and-suffix-to-handle.md)
 * [Supported Integrations](integrations/README.md)
   * [MOSIP](https://docs.mosip.io)
   * [Inji](https://docs.mosip.io/inji)
