@@ -28,6 +28,14 @@ Within the ``esignet-default.properties`` file, users can manage how usernames a
    
    <img src="../_images/Login with Password screen.png" alt="Login with Password screen.png">
    
-3. Before proceeding to login, users can enter username or mobile number, password, and verify captcha.
-4. Upon successful verification of user login credentials, **Consent** page is displayed as shown below.
-5. Upon successful consent, relying party page is displayed as shown below.
+2. Before proceeding to login, users can enter username or mobile number, password, and verify captcha.
+
+   <img src="../_images/Login with Password filled with value.png" alt="Login with Password filled with value.png">
+      
+3. Upon successful verification of user login credentials, **Consent** page is displayed as shown below.
+
+   <img src="../_images/Consent screen after Login with Password.png" alt="Consent screen after Login with Password.png">
+   
+4. Upon successful consent, relying party page is displayed as shown below.
+
+   <img src="../_images/Relying party portal after login.png" alt="Relying party portal after login.png">
