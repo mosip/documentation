@@ -3,7 +3,7 @@
 ## Version: 1.3.0
 
 * Name: eSignet (Password based authentication)
-* Date: 11th December, 2023
+* Date: 23rd February, 2024
 * [Release Notes](v1.3.0/)
 
 ## Version: 1.2.0
