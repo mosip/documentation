@@ -39,7 +39,7 @@ _Note_: Biometric-based login with Mock MDS is currently unavailable in the Coll
 
 #### Authentication using Wallet
 
-For our testing, we have integrated with [MOSIP's digital wallet- Inji](https://docs.mosip.io/inji), which we can use as an authenticator.
+For our testing, we have integrated with [MOSIP's digital wallet- Inji](https://docs.mosip.io/inji/inji-mobile-wallet/sandbox-details/inji-setup-guide), which we can use as an authenticator.
 
 In order to get your credentials onboarded on Inji and enable them for authentication, follow the below steps,
 
