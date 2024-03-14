@@ -33,7 +33,7 @@ The Registration Processor contains several [stages and services](https://github
 
 The registration packet flows through the various stages depending on the type of flow. See [Registration Flows and Stage Sequence](https://github.com/mosip/registration/blob/release-1.2.0/docs/flows.md).
 
-**Note**: The Print Stage has been renamed as the Credential Requestor Stage. For further information, please click [here]().
+**Note**: The Print Stage has been renamed as the Credential Requestor Stage. For further information, please click [here](https://docs.mosip.io/1.2.0/modules/registration-processor/credential-requestor-stage).
 
 ## Build and deploy
 
