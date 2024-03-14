@@ -45,7 +45,7 @@ Verification is performed on various configurations as mentioned below:
 
 ## Feature Health
 
-<figure><img src="../../.gitbook/assets/feature Health.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/feature Health (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics
 
