@@ -35,14 +35,4 @@
 
 ## Sign up user flow
 
-
-
-<figure><img src="../.gitbook/assets/login.png" alt=""><figcaption></figcaption></figure>
-
-
-
-<figure><img src="../.gitbook/assets/mobile number.png" alt=""><figcaption></figcaption></figure>
-
-
-
-<figure><img src="../.gitbook/assets/set up account.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Sign-on-service.png" alt=""><figcaption></figcaption></figure>
