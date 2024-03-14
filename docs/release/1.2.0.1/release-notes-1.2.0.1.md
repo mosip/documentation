@@ -14,7 +14,7 @@ Domain Specific Language (DSL) Automation scripts, which are part of this releas
 
 One of the major highlights of this patch release is the print stage. The print stage, now re-named as **Credential Requestor Stage**, additionally manages the initiation of credential requests tailored to partner-specific information needs.  
 
-Click [here](https://docs.mosip.io/1.2.0/modules/registration-processor#stages-and-services) to know more about Credential Requestor Stage.
+Click [here](https://docs.mosip.io/1.2.0/modules/registration-processor/credential-requestor-stage) to know more about Credential Requestor Stage.
 
 Implementation of custom handles in ID Repository is also included as a part of this release. Refer [here](https://docs.mosip.io/1.2.0/modules/id-repository/custom-handle) to know more about handles and its implementation.
 
