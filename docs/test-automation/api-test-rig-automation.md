@@ -49,7 +49,7 @@ Java 11 and Maven (3.6.0): Install Java 11 JDK and Maven 3.6.0 on your machine. 
   * Comment out the lines beginning with authDemoServiceBaseURL and authDemoServicePort intended for Docker
   * Ensure that the `push-reports-to-s3` property is set to **no** for local execution
 
-<figure><img src="../.gitbook/assets/API.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/API_Test.png" alt=""><figcaption></figcaption></figure>
 
 * Update the kernel.properties file with the appropriate client ID and secret key Values
 * Ensure that the client ID and secret key are correctly configured for the intended environment.
