@@ -20,7 +20,7 @@
 * Validates end-user login requests
 * Explore [ID Authentication](https://docs.mosip.io/1.2.0/id-authentication)
 
-<div align="left">
+<div align="center">
 
 <figure><img src="../.gitbook/assets/sign up service.png" alt=""><figcaption></figcaption></figure>
 
