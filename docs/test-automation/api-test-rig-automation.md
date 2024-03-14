@@ -157,7 +157,9 @@ Following are tested modules:
 
 ## Example YAML Structure
 
-`CreateVID: # API Name IdRepository_CreateVID_ValidParameters_For_VidType_Smoke_T_sid: # Test Case Name endPoint: /idrepository/v1/vid # Endpoint of the API role: idrepo # Authentication method required restMethod: post # HTTP method inputTemplate: idRepository/CreateVID/createVid # Location of the input template outputTemplate: idRepository/CreateVID/createVidResult # Location of the output template input: '{ # Input data block "vidType": "Temporary", }' output: '{ # Output data block "vidStatus": "ACTIVE" }'`
+```
+CreateVID: # API Name IdRepository_CreateVID_ValidParameters_For_VidType_Smoke_T_sid: # Test Case Name endPoint: /idrepository/v1/vid # Endpoint of the API role: idrepo # Authentication method required restMethod: post # HTTP method inputTemplate: idRepository/CreateVID/createVid # Location of the input template outputTemplate: idRepository/CreateVID/createVidResult # Location of the output template input: '{ # Input data block "vidType": "Temporary", }' output: '{ # Output data block "vidStatus": "ACTIVE" }'
+```
 
 ## Execute Test Cases
 
