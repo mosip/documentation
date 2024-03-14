@@ -30,7 +30,8 @@ MOSIP has introduced a new partner profile for the Credential Requestor Stage. T
 
 **Sample Partner Profile**:
 
-``jsonCopy code{
+```
+jsonCopy code{
   "partners": [
     {
       "id": "digitalcardPartner",
@@ -59,7 +60,8 @@ MOSIP has introduced a new partner profile for the Credential Requestor Stage. T
       "metaInfoFields": ["opencrvsBRN"]
     }
   ]
-}``
+}
+```
 
 **Field Description**
 
