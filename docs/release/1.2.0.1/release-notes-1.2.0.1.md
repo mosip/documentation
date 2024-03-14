@@ -18,7 +18,6 @@ Click [here](https://docs.mosip.io/1.2.0/modules/registration-processor#stages-a
 
 Implementation of custom handles in ID Repository is also included as a part of this release. Refer [here](https://docs.mosip.io/1.2.0/modules/id-repository/custom-handle) to know more about handles and its implementation.
 
-To know more about bug fixes and enhancements, refer [here](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1/enhancements).
 
 **Major Areas of Work**
 
@@ -70,5 +69,6 @@ To know more about bug fixes and enhancements, refer [here](https://docs.mosip.i
 
 ## Documentation
 
+* [Enhancements and bug fixes](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1/enhancements-and-bug-fixes)
 * [Functional test report](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1/test-report-1.2.0.1)
 * [Known Issues](https://mosip.atlassian.net/browse/MOSIP-29944?jql=labels%20%3D%20Known_Issue_1.2.0.1) 
