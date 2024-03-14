@@ -82,6 +82,7 @@
     * [Registration Client Developers Guide](registration-client-developers-guide.md)
     * [Telemetry from Registration Client](registration-client-tus-protocol.md)
   * [Registration Processor](registration-processor.md)
+    * [Credential Requestor Stage](modules/registration-processor/credential-requestor-stage.md)
     * [Manual Adjudication and Verification](manual-adjudication-and-verification.md)
     * [Registration Processor Developers Guide](registration-processor-developers-guide.md)
   * [Reporting](reporting.md)
