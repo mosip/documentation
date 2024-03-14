@@ -10,7 +10,7 @@
 
 This **1.2.0.1** release comprises of all features which have been released as beta release and few major fixes as requested by the countries. This release focuses on testability, usability, and security.
 
-Domain Specific Language (DSL) Automation scripts, which are part of this release, enable platform testing. Also, few security related issues are resolved. Click [here](https://docs.mosip.io/1.2.0/test-automation) to know more about test automation.
+Domain Specific Language (DSL) automation scripts, which are part of this release, enable platform testing. Also, few security related issues are resolved. Click [here](https://docs.mosip.io/1.2.0/test-automation) to know more about test automation.
 
 One of the major highlights of this patch release is the print stage. The print stage, now re-named as **Credential Requestor Stage**, additionally manages the initiation of credential requests tailored to partner-specific information needs.  
 
