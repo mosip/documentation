@@ -34,14 +34,14 @@ Verification is performed on various configurations as mentioned below:
 
 ## Main feature tested
 
-* Admin
+* Administration
 * Pre-Registration
 * Registration Client
 * Registration Processor
-* PMS
+* Partner Management Service
 * Resident
-* IDRepo
-* ID Auth
+* ID Repository
+* ID Authorization
 
 ## Feature Health
 
