@@ -12,9 +12,7 @@ This **1.2.0.1** release comprises of all features which have been released as b
 
 Domain Specific Language (DSL) automation scripts, which are part of this release, enable platform testing. Also, few security related issues are resolved. Click [here](https://docs.mosip.io/1.2.0/test-automation) to know more about test automation.
 
-One of the major highlights of this patch release is the print stage. The print stage, now re-named as **Credential Requestor Stage**, additionally manages the initiation of credential requests tailored to partner-specific information needs.  
-
-Click [here](https://docs.mosip.io/1.2.0/modules/registration-processor/credential-requestor-stage) to know more about Credential Requestor Stage.
+One of the major highlights of this patch release is the print stage. The print stage, now re-named as **Credential Requestor Stage**, additionally manages the initiation of credential requests tailored to partner-specific information needs. Click [here](https://docs.mosip.io/1.2.0/modules/registration-processor/credential-requestor-stage) to know more about Credential Requestor Stage.
 
 Implementation of custom handles in ID Repository is also included as a part of this release. Refer [here](https://docs.mosip.io/1.2.0/modules/id-repository/custom-handle) to know more about handles and its implementation.
 
