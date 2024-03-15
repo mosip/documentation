@@ -4,7 +4,7 @@
 
 **Upgrade From**: 1.2.0
 
-**Release Date**: 23rd February, 2024
+**Release Date**: 14th March, 2024
 
 ## Overview
 
