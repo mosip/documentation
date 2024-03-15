@@ -5,10 +5,6 @@
 
 The resident is registered with a username and password using eSignet's Signup portal. In the below demo application, we are using resident's phone number as username.
 
-Below diagram depicts how eSignet Signup portal is setup with the MOSIP registry and IDA system.
-
-<img src="../../.gitbook/assets/signup-Page-2.png" alt="" data-size="original">
-{% endhint %}
 
 1\. On the portal, the resident clicks on the button **Sign In with eSignet**.
 
