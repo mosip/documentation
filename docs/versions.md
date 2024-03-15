@@ -4,7 +4,7 @@
 
 * Name: Inji 0.11.0&#x20;
 * Date: 23rd February, 2023
-* [Release Notes](versions.md#version-0.11.0)
+* [Release Notes](https://docs.mosip.io/inji/inji-mobile-wallet/versions/version-0.11.0)
 
 ## Version: 0.10.0
 
