@@ -3,7 +3,7 @@
 {% hint style="success" %}
 **Prerequisites:**
 
-The resident is registered with a username and password using eSignet's Signup portal. In the below demo application, we are using resident's phone number as username.
+The resident is registered with a username and password using eSignet's Signup portal. In the below demo application, we are using resident's phone number as username. {% endhint %}
 
 
 1\. On the portal, the resident clicks on the button **Sign In with eSignet**.
