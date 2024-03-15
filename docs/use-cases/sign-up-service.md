@@ -1,8 +1,8 @@
-# Sign up Service
+# Sign Up Service
 
 **eSignet** serves as the frontend for relying parties, offering various authentication methods aligned with functional identity and stored credentials. Integration with the ID Authentication service and ID repository under MOSIP allows the migration of existing accounts or creation of new user accounts and credentials.
 
-## Sign up Service
+## Sign Up Service
 
 * Generates ID object based on the user inputs.
 * Shares ID object with ID repository for account creation.
@@ -28,11 +28,11 @@
 
 ## How It Works?
 
-* Sign up service shares the user selected Handle, Password and other details as an Identity object to the ID Repository.
+* Sign Up service shares the user selected Handle, Password and other details as an Identity object to the ID Repository.
 * In ID Repository, using ID schema validates Identity object and identifies valid selected Handles.
 * ID repository shares selected Handles with ID Authentication to create credential for each.
 * IDA service verifies, if the hash of the Handles is unique before creating corresponding credentials.
 
-## Sign up user flow
+## Sign Up user flow
 
 <figure><img src="../.gitbook/assets/Sign-on-service.png" alt=""><figcaption></figcaption></figure>
