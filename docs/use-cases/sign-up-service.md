@@ -29,6 +29,6 @@
 * ID repository shares selected Handles with ID Authentication to create credential for each.
 * IDA service verifies, if the hash of the Handles is unique before creating corresponding credentials.
 
-## Sign Up user flow
+## Sign Up User Flow
 
 <figure><img src="../.gitbook/assets/Sign-on-service.png" alt=""><figcaption></figcaption></figure>
