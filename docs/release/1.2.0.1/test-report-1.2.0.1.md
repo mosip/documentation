@@ -41,7 +41,7 @@ Verification is performed on various configurations as mentioned below:
 * Partner Management Service
 * Resident
 * ID Repository
-* ID Authorization
+* ID Authentication
 
 ## Feature Health
 
