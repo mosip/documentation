@@ -1,4 +1,4 @@
-# Sign up Service
+# Sign Up Service
 
 **eSignet** serves as the frontend for relying parties, offering various authentication methods aligned with functional identity and stored credentials. Integration with the ID Authentication service and ID repository under MOSIP allows the migration of existing accounts or creation of new user accounts and credentials.
 
