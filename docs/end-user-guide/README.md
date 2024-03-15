@@ -12,9 +12,9 @@ Before starting with the login flows, let us understand the following terms:
 With this release, we support the login flow for the following authentication factors:
 
 1. [Login with Password](https://docs.esignet.io/end-user-guide/login-with-password)
-2. [Login flow for OTP-based authentication](https://docs.esignet.io/esignet-end-user-guide/login-with-otp)
-3. [Login flow for Biometrics based authentication](https://docs.esignet.io/esignet-end-user-guide/login-with-biometrics)
-4. [Login flow with QR code (Inji)](https://docs.esignet.io/esignet-end-user-guide/login-flow-qr-code)
+2. [Login flow for OTP-based authentication](https://docs.esignet.io/end-user-guide/login-with-otp)
+3. [Login flow for Biometrics based authentication](https://docs.esignet.io/end-user-guide/login-with-biometrics)
+4. [Login flow with QR code (Inji)](https://docs.esignet.io/end-user-guide/login-with-qr-code)
 
 > Note: The screenshots and the steps mentioned in each of the flows are for demonstration purpose only and are likely to change based on the use case.
 
