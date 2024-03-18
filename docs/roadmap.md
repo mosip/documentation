@@ -1,4 +1,4 @@
-# 🛣 Roadmap
+# 🛣️ Roadmap
 
 The MOSIP community strives to deliver major [releases](https://docs.mosip.io/1.2.0/releases) as per the designated schedules, while offering minor releases every other month! The roadmap outlines the vision, goals, and planned development milestones of all our ongoing and upcoming projects over a specific period of time. It also provides a high-level overview of the MOSIP platform's future direction, features, enhancements, and major updates.
 
@@ -9,8 +9,8 @@ The year-wise roadmap details how these principles will be applied and advanced 
 
 Head below to navigate through our year-wise roadmap that provides a strategic overview of the journey ahead and highlights the key milestones & objectives for each year!
 
-* [Roadmap 2023-2024](roadmap-2023-2024.md)
-* [Roadmap 2024-2025](roadmap-2024-2025.md)
+* [Roadmap 2023](roadmap-2023-2024.md)
+* [Roadmap 2024](roadmap-2024-2025.md)
 
 ## Principles and Vision
 
