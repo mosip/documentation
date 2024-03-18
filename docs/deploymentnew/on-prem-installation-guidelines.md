@@ -238,11 +238,11 @@ sudo systemctl status wg-quick@wg0
 > Note:
 > *  Make sure the permission for `privkey.pem` for ssh is set to 400.
 
-* Run `env-check.yaml` to check if cluster nodes are fine and do not have known issues in it.
+* Run `env-check-setup.yaml` to check if cluster nodes are fine and do not have known issues in it.
   * cd $K8\_ROOT/rancher/on-prem
   * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for Observation k8 cluster nodes.
     * `cp hosts.ini.sample hosts.ini`
-    * `ansible-playbook -i hosts.ini env-check.yaml`
+    * `ansible-playbook -i hosts.ini env-check-setup.yamll`
     * This ansible checks if localhost mapping is already present in /etc/hosts file in all cluster nodes, if not it adds the same.
 * Open ports and install docker on Observation K8 Cluster node VM’s.
   * `cd $K8_ROOT/rancher/on-prem`
@@ -525,7 +525,7 @@ helm repo add mosip https://mosip.github.io/mosip-helm
   * cd $K8\_ROOT/rancher/on-prem
   * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for MOSIP k8 cluster nodes.
     * `cp hosts.ini.sample hosts.ini`
-    * `ansible-playbook -i hosts.ini env-check-setup.yam`
+    * `ansible-playbook -i hosts.ini env-check-setup.yaml`
     * This ansible checks if localhost mapping ia already present in `/etc/hosts` file in all cluster nodes, if not it adds the same.
 * Setup passwordless ssh into the cluster nodes via pem keys. (Ignore if VM’s are accessible via pem’s).
   * Generate keys on your PC
