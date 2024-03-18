@@ -207,7 +207,7 @@
   * [Android Registration Client](collab-android-reg-client.md)
 * [🛣️ Roadmap](roadmap.md)
   * [Roadmap 2023-2024](roadmap-2023-2024.md)
-  * [Roadmap 2024-2025](roadmap-2024-2025.md)
+  * [Roadmap 2024](roadmap-2024-2025.md)
 * [❗ MOSIP Documentation Style Guide](mosip-documentation-style-guide.md)
 * [📩 License](license.md)
 * [API](https://mosip.github.io/documentation/1.2.0/1.2.0.html)
