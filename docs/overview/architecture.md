@@ -10,13 +10,13 @@ Furthermore, this overview outlines various user flows, detailing the seamless p
 
 Let’s go through a brief overview these components. 
 
-* **eSignet**: A server which is being used to generate verifiable credentials from user's data securely.
+* **eSignet**: This is a server which is being used to authorize user and generate verifiable credentials from user's data securely.
 
-* **Mimoto**:  BFF for routing API calls to services.
+* **Mimoto**:  This is a BFF(Backend for Frontend) for routing API calls to services.
 
-* **Tuvali**: SDK that transfers data securely over BLE.
+* **Tuvali**: This is an SDK that transfers data securely over BLE following OpenID4VPBLE specification.
 
-* **Iris Scan**: SDK used for face verification.
+* **Iris Scan**: This is an SDK used for face verification.
 
-* **Secure Key Store**:  SDK used for key generation, signing and encryption/ decryption.
+* **Secure Key Store**:  This is an SDK used for key-pair generation, signing and encryption/ decryption for Android.
 
