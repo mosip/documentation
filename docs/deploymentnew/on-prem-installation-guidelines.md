@@ -242,7 +242,7 @@ sudo systemctl status wg-quick@wg0
   * cd $K8\_ROOT/rancher/on-prem
   * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for Observation k8 cluster nodes.
     * `cp hosts.ini.sample hosts.ini`
-    * `ansible-playbook -i hosts.ini env-check-setup.yamll`
+    * `ansible-playbook -i hosts.ini env-check-setup.yaml`
     * This ansible checks if localhost mapping is already present in /etc/hosts file in all cluster nodes, if not it adds the same.
 * Open ports and install docker on Observation K8 Cluster node VM’s.
   * `cd $K8_ROOT/rancher/on-prem`
