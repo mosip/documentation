@@ -125,7 +125,7 @@ Incase the images are getting pulled from private repositories.
 ### Captcha
 
 ```
-cd $INFRA_ROOT/deployment/v3/external/msg-gateway
+cd $INFRA_ROOT/deployment/v3/external/captcha
 ./install.sh
 ```
 To setup the captcha for pre-reg and resident domains.

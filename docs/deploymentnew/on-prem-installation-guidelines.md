@@ -238,11 +238,11 @@ sudo systemctl status wg-quick@wg0
 > Note:
 > *  Make sure the permission for `privkey.pem` for ssh is set to 400.
 
-* Run `env-check.yaml` to check if cluster nodes are fine and do not have known issues in it.
+* Run `env-check-setup.yaml` to check if cluster nodes are fine and do not have known issues in it.
   * cd $K8\_ROOT/rancher/on-prem
   * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for Observation k8 cluster nodes.
     * `cp hosts.ini.sample hosts.ini`
-    * `ansible-playbook -i hosts.ini env-check.yaml`
+    * `ansible-playbook -i hosts.ini env-check-setup.yaml`
     * This ansible checks if localhost mapping is already present in /etc/hosts file in all cluster nodes, if not it adds the same.
 * Open ports and install docker on Observation K8 Cluster node VM’s.
   * `cd $K8_ROOT/rancher/on-prem`
@@ -317,7 +317,7 @@ sudo systemctl status wg-quick@wg0
         **Alternatively**
       * `export KUBECONFIG="$HOME/.kube/<cluster_name>_config`
     * Test cluster access:
-      * `kubect get nodes`
+      * `kubectl get nodes`
         * Command will result in details of the nodes of the Observation cluster.
     * Save your files
       * Save a copy of the following files in a secure location, they are needed to maintain, troubleshoot and upgrade your cluster.
@@ -332,7 +332,7 @@ Once the rancher cluster is ready, we need ingress and storage class to be set f
 * [Nginx Ingress Controller](https://kubernetes.github.io/ingress-nginx/deploy/): used for ingress in rancher cluster.
 
 ```
-cd $K8_ROOT/rancher/on-prem
+cd $K8_ROOT/mosip/on-prem
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 helm repo update
 helm install \                                                                                                             
@@ -531,11 +531,11 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 * ansible
 * rke (version 1.3.10)
 * Setup MOSIP K8 Cluster node VM’s as per the hardware and network requirements as mentioned above.
-* Run `env-check.yaml` to check if cluster nodes are fine and dont have known issues in it.
+* Run `env-check-setup.yaml` to check if cluster nodes are fine and dont have known issues in it.
   * cd $K8\_ROOT/rancher/on-prem
   * create copy of `hosts.ini.sample` as `hosts.ini` and update the required details for MOSIP k8 cluster nodes.
     * `cp hosts.ini.sample hosts.ini`
-    * `ansible-playbook -i hosts.ini env-check.yaml`
+    * `ansible-playbook -i hosts.ini env-check-setup.yaml`
     * This ansible checks if localhost mapping ia already present in `/etc/hosts` file in all cluster nodes, if not it adds the same.
 * Setup passwordless ssh into the cluster nodes via pem keys. (Ignore if VM’s are accessible via pem’s).
   * Generate keys on your PC
