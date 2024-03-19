@@ -6,7 +6,7 @@
 
 **Upgrade From**: 1.2.0
 
-**Release Date**: 06th March, 2024
+**Release Date**: 19th March, 2024
 
 This **1.2.0.1** release comprises of all features which have been released as beta release and few major fixes as requested by the countries. This release focuses on testability, usability, and security.
 
