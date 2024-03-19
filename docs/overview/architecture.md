@@ -10,7 +10,7 @@ Furthermore, this overview outlines various user flows, detailing the seamless p
 
 Let’s go through a brief overview these components. 
 
-* **eSignet**: This is a server which is being used to authorize user and generate verifiable credentials from user's data securely.
+* **eSignet**: Server enables user authorization and generates Verifiable Credentials (VCs) securely from user data.
 
 * **Mimoto**:  This is a BFF(Backend for Frontend) for routing API calls to services.
 
