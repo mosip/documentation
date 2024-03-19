@@ -68,4 +68,4 @@ Implementation of handles in ID Repository is also included as part of this rele
 
 * [Enhancements and bug fixes](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1/enhancements-and-bug-fixes)
 * [Functional test report](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1/test-report-1.2.0.1)
-* [Known Issues](https://mosip.atlassian.net/browse/MOSIP-29944?jql=labels%20%3D%20Known\_Issue\_1.2.0.1)
+* [Known Issues](https://mosip.atlassian.net/issues/?filter=11385)
