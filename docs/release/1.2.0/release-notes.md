@@ -2,8 +2,6 @@
 
 **Release Version**: 1.2.0
 
-**Upgrade from**: 1.1.5
-
 **Recommended Patch Version:** 1.2.0.1 Beta
 
 **Release Date**: 14th February 2022
