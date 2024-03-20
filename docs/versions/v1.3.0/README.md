@@ -31,7 +31,7 @@ Below are the features available in the release:
 | ---------------------- | ------------------------------------------------------------------------------------- |
 | keymanager             | [1.2.0.1-B4](https://github.com/mosip/keymanager/tree/1.2.0.1-B4)                     |
 | id-authentication      | [1.2.0.1-B6](https://github.com/mosip/id-authentication/tree/v1.2.0.1-B6)             |
-| Artifactory-ref-impl   | [1.2.0.1-B8](https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.1-B8)          |
+| Artifactory-ref-impl   | [1.2.0.1](https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.1)                |
 | mosip-config           | [1.3.0-ES](https://github.com/mosip/mosip-config/tree/v1.3.0-ES)                      |
 | mosip-infra            | [1.3.0-ES](https://github.com/mosip/mosip-infra/tree/v1.3.0-ES)                       |
 | mosip-functional-tests | [1.3.0-ES](https://github.com/mosip/mosip-functional-tests/tree/v1.3.0-ES)            |
