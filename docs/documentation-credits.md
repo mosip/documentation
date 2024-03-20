@@ -5,6 +5,7 @@ This page is dedicated to recognizing and acknowledging the MOSIP Community, com
 ## Authors:&#x20;
 
 * MOSIP Team
+* [Technology Partners](https://docs.mosip.io/1.2.0/community/contributions)
 
 ## Contributors:
 
