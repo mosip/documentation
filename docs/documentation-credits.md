@@ -11,4 +11,4 @@ This page is dedicated to recognizing and acknowledging the MOSIP Community, com
 
 We extend a **special thanks** to our community members, whose valuable feedback and contributions have greatly enriched our documentation.
 
-* Dasun Hegoda - Contribution to enhance the [Functional Architecture Diagram](https://docs.mosip.io/1.2.0/overview/architecture#high-level-reference-functional-architecture)
+* Dasun Hegoda - Enhancement of the [Functional Architecture Diagram](https://docs.mosip.io/1.2.0/overview/architecture#high-level-reference-functional-architecture)
