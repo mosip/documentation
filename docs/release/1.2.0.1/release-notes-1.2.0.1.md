@@ -4,8 +4,6 @@
 
 **Release Version**: 1.2.0.1
 
-**Upgrade From**: 1.2.0
-
 **Release Date**: 19th March, 2024
 
 The **1.2.0.1** release incorporates all features previously released in beta, along with several significant fixes requested by the countries. This release prioritizes enhancements in testability, usability, and security.
