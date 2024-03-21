@@ -29,7 +29,7 @@ Below are the features available in the release:
 
 | Repository Released    | Tags                                                                                  |
 | ---------------------- | ------------------------------------------------------------------------------------- |
-| keymanager             | [1.2.0.1-B4](https://github.com/mosip/keymanager/tree/1.2.0.1-B4)                     |
+| keymanager             | [1.2.0.1-B4](https://github.com/mosip/keymanager/tree/v1.2.0.1-B4)                    |
 | id-authentication      | [1.2.0.1-B6](https://github.com/mosip/id-authentication/tree/v1.2.0.1-B6)             |
 | Artifactory-ref-impl   | [1.2.0.1](https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.1)                |
 | mosip-config           | [1.3.0-ES](https://github.com/mosip/mosip-config/tree/v1.3.0-ES)                      |
