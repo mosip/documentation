@@ -9,7 +9,7 @@
 * [AWS Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/aws-installation-guidelines-new)
 
 
-**Version**: 1.2.0.1-B4 (Latest stable release)
+**Version**: 1.2.0.1-B4
 
 * Release date: 12th January 2024
 * [Release notes](../release/1.2.0.1/release-notes-1.2.0.1-b4.md)
@@ -17,7 +17,7 @@
 * [On-Prem without DNS Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/on-prem-without-dns)
 * [AWS Installation Guidelines](https://docs.mosip.io/1.2.0/deploymentnew/v3-installation/aws-installation-guidelines-new)
 
-**Version**: 1.2.0.1-B3 (Latest stable release)
+**Version**: 1.2.0.1-B3 
 
 * Release date: 14th April 2023
 * [Release notes](https://docs.mosip.io/1.2.0/releases/release-notes-1.2.0.1-b3)
