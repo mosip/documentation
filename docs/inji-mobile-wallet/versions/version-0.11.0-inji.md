@@ -68,7 +68,7 @@ Mentioned below is the list of other known issues.
 
 ## Documentation
 
-* [Feature documentation](architecture/features.md)
-* [Integration Guides](integration-guide/)
-* [User guide](end-user-guide.md)
+* [Feature documentation](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features)
+* [Integration Guides](https://docs.mosip.io/inji/inji-mobile-wallet/integration-guide)
+* [User guide](https://docs.mosip.io/inji/inji-mobile-wallet/end-user-guide)
 * [API Documentation](https://github.com/mosip/mimoto/tree/release-0.10.0/docs/postman-collections)
