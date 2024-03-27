@@ -29,7 +29,6 @@ Process flow diagram for cancel and discard flows in Pre-registration.
 
 For detailed description of Pre-registration services refer to [pre-registration repo](https://github.com/mosip/pre-registration).
 
-For high level and low level design refer to [pre-registration repo/design](https://github.com/mosip/pre-registration/design)
 
 ## Logical View
 
