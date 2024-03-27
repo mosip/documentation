@@ -1,5 +1,5 @@
 # Configurations in Pre-Registration Properties files
-**File Name**: [pre-registration-mz.properties](https://github.com/mosip/mosip-config/blob/master/sandbox/pre-registration-mz.properties)
+**File Name**: [pre-registration-mz.properties](https://github.com/mosip/mosip-config/blob/1.1.5_v3/pre-registration-default.properties)
 
 # Templates used by Pre-Registration
 
@@ -121,7 +121,7 @@ This template doesn't support any attributes.
 
 # Pre-Registration UI Specification
 
-**File Name**: [pre-registration-demographic.json]()
+**File Name**: [pre-registration-demographic.json](https://github.com/mosip/mosip-config/blob/1.1.5_v3/pre-registration-demographic.json)
 
 For details about the pre-registration UI specification, please go throught [this](UI-Specification-for-Pre-Registration.md) page.
 
@@ -131,7 +131,7 @@ This is a mapping file for the Pre-registration ID object. The fields name, proo
 * proofOfAddress - Document containing Proof of Address. It is used in document upload screen to fetch the address document from another applicant.
 * postalCode - Postal Code in the Address. To fetch the list of center for the postal code provided by the individual while providing the demographic details.
 
-**File Name**: [pre-registration-identity-mapping.json]()
+**File Name**: [pre-registration-identity-mapping.json](https://github.com/mosip/mosip-config/blob/1.1.5_v3/pre-registration-identity-mapping.json)
 
 ```JSON
 {
