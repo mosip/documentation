@@ -1,60 +1,71 @@
+# UI Specification for Pre-registration
+
 UI specification helps us identify how the data in an ID attribute (attributes of an ID object) is going to be retrieved from the UI. The UI screens in registration client application and pre-registration application are rendered using their respective UI specification JSON. We have different UI Specifications for Registration Client & Pre-registration which is derived from the ID Schema. Here we would be discussing about the properties used in the UI specification of Pre-registration.
 
-# UI Specification Properties
+## UI Specification Properties
 
 Below are the properties in pre-registration UI specification that are used to store ID attributes in an ID object.
 
-Name | Description | Example
------|-------------|--------
-id | Unique Ids for each attribute in ID Schema | fullname
-description | Description for the ID attribute | Full Name of Resident
-labelName | Label used for displaying the ID attribute in the UI | 
-labelName.eng | Label value in English | Full Name
-labelName.ara | Label value in Arabic | الاسم الكامل
-labelName.fra | Label value in French | Nom complet
-controlType | UI element used for displaying the attribute | textbox, dropdown, date, fileupload
-inputRequired | Used to identify if UI input is needed or not | true or false
-validators | List of validators for the attribute |
-validators.type | Type of validaton engine | regex
-validators.validator | Pattern / methodName / scriptName / expression for the validation |
-validators.arguments | List of arguments needed for the validator |
-required | Used to decide if it is mandatory or not | true or false
+| Name                 | Description                                                       | Example                             |
+| -------------------- | ----------------------------------------------------------------- | ----------------------------------- |
+| id                   | Unique Ids for each attribute in ID Schema                        | fullname                            |
+| description          | Description for the ID attribute                                  | Full Name of Resident               |
+| labelName            | Label used for displaying the ID attribute in the UI              |                                     |
+| labelName.eng        | Label value in English                                            | Full Name                           |
+| labelName.ara        | Label value in Arabic                                             | الاسم الكامل                        |
+| labelName.fra        | Label value in French                                             | Nom complet                         |
+| controlType          | UI element used for displaying the attribute                      | textbox, dropdown, date, fileupload |
+| inputRequired        | Used to identify if UI input is needed or not                     | true or false                       |
+| validators           | List of validators for the attribute                              |                                     |
+| validators.type      | Type of validaton engine                                          | regex                               |
+| validators.validator | Pattern / methodName / scriptName / expression for the validation |                                     |
+| validators.arguments | List of arguments needed for the validator                        |                                     |
+| required             | Used to decide if it is mandatory or not                          | true or false                       |
 
-## ID
+### ID
+
 The id property is the unique id provided to a fields to uniquely identify it. The fields can be alpha-numeric without any spaces between them.
 
-## Description
+### Description
+
 This is a non-mandatory property used to describe the ID attribute.
 
-## Label Name
+### Label Name
+
 This property defines label name to be used in UI. This property has sub attributes as the language code (eng, fra, ara) to store data in different languages based on the country's configuration.
 
-## Control Type
+### Control Type
+
 This property defines what kind of UI component to be used to capture data in UI. Currently the values that can be used are:
+
 * textbox
 * dropdown
 * date
 * fileupload
 
-## Input Required
+### Input Required
+
 This is a mandatory property which decides if the input is to be provided from the UI or not.
 
-## Validator
+### Validator
+
 This property enables us to add a the list of validators for the ID attribute. Each validator will have the below fields,
 
-Fields | Description
--------|-------------
-type | for validation engine type
-validator | for pattern / methodName / scriptName / expression
-arguments | array to hold parameter or dependent field ids required for validation
+| Fields    | Description                                                            |
+| --------- | ---------------------------------------------------------------------- |
+| type      | for validation engine type                                             |
+| validator | for pattern / methodName / scriptName / expression                     |
+| arguments | array to hold parameter or dependent field ids required for validation |
 
 Currently, regex is supported by MOSIP, the adopter can choose to add various types of validators.
 
-## Required
+### Required
+
 This is a mandatory property which is needed to identify if the ID attribute is mandatory or not.
 
-# Sample UI Specification
-```JSON
+## Sample UI Specification
+
+```
 {
   "identity": [
     {

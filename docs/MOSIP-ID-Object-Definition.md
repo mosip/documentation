@@ -1,8 +1,10 @@
+# MOSIP ID Object Definition
+
 ID Object describes attributes that a country or entity will capture from an Individual. Since MOSIP is a generic identity platform the attributes of an ID cannot be predefined by MOSIP. One country may capture, say, 5 attributes and another 10. So to accommodate this flexibility MOSIP provides a feature to define ID Object. This will be the first step in using MOSIP. Once an ID Object is defined all applications built on top of MOSIP platform must conform to the same.
 
-# ID Object Definition
+## ID Object Definition
 
-In order to define the ID object, MOSIP adopters need to analyze the attributes that they need in their ID object. We have provided a [sample excel](https://github.com/mosip/documentation/tree/1.1.5/docs/_sources/id_schema/Sample_ID_Object_Definition.xlsx) which might be helpful for adopter to analyze their ID attributes. The items that the adopter needs to analyze as part of tis exercise are:
+In order to define the ID object, MOSIP adopters need to analyze the attributes that they need in their ID object. We have provided a [sample excel](https://github.com/mosip/documentation/tree/1.1.5/docs/\_sources/id\_schema/Sample\_ID\_Object\_Definition.xlsx) which might be helpful for adopter to analyze their ID attributes. The items that the adopter needs to analyze as part of tis exercise are:
 
 * ID attributes that would be collected to identify a resident uniquely. Example: Attributes such as, Name, Gender, DateOfBirth, Address, Biometrics etc.
 * Additional evidence attributes that would be collected as evidence. Example: Attributes such as proof documents (Identity, Address, Date of Birth, Relationship, etc) or Introducer.
@@ -10,13 +12,14 @@ In order to define the ID object, MOSIP adopters need to analyze the attributes 
 * Validations for the above attributes. Example: Basic reg-ex validations for text fields, flow validations for capturing evidence data.
 * Various work flows for various types of applicants (say, a minor or a resident without any evidence, etc.)
 
-Once an adopter has proper clarity on the above topics, it is very easy for them to construct an ID schema. 
+Once an adopter has proper clarity on the above topics, it is very easy for them to construct an ID schema.
 
-# ID Schema
+## ID Schema
 
 ID schema is a JSON schema which would be used for defining the structure, content, and (to some extent) semantics of an ID object. It lets us specify metadata (data about data) about what an ID object’s attributes mean and what values are valid for those attributes.
 
-We use the ID schema JSON to validate the ID object when, 
+We use the ID schema JSON to validate the ID object when,
+
 * ID object is created in Pre-registration
 * ID object is created in Registration Client
 * Packet is opened in Registration Processor
@@ -24,7 +27,7 @@ We use the ID schema JSON to validate the ID object when,
 
 Below is a sample ID schema JSON.
 
-```JSON
+```
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "MOSIP Sample identity",
@@ -444,11 +447,13 @@ Below is a sample ID schema JSON.
 }
 ```
 
-# ID JSON
+## ID JSON
+
 ID JSON is an instance of the ID Schema (derived from ID Schema). It contains the basic details of an individual so that we can uniquely identify them in MOSIP.
 
-Below is a sample ID JSON for private packet as per the schema defined above: 
-```JSON
+Below is a sample ID JSON for private packet as per the schema defined above:
+
+```
 {
   "identity": {
     "proofOfAddress": {
@@ -576,14 +581,15 @@ Below is a sample ID JSON for private packet as per the schema defined above:
 }
 ```
 
-# UI Specification
+## UI Specification
 
 UI specification helps us identify how the data in an ID attribute (attributes of an ID object) is going to be retrieved from the UI. The UI screens in registration client application and pre-registration application are rendered using their respective UI specification JSON. We have different UI Specifications for Registration Client & Pre-registration which is derived from the ID Schema.
 
 For details about the UI specification of registration client & pre-registration please visit the respective pages,
+
 * [UI Specification for Registration Client](UI-Specification-for-Registration-Client.md)
 * [UI Specification for Pre-registration](UI-Specification-for-Pre-Registration.md)
 
-# Relationship between ID Schema, ID Object & UI Specification
+## Relationship between ID Schema, ID Object & UI Specification
 
-![](_images/id_schema/id_schema_concept.png)
+![](\_images/id\_schema/id\_schema\_concept.png)

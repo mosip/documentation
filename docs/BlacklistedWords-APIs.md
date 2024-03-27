@@ -1,39 +1,46 @@
-This section details about the service APIs for the BlacklistedWords 
+# BlacklistedWords APIs
 
-# BlacklistedWords Master API
-* [POST /blacklistedwords](#post-blacklistedwords)
-* [PUT /blacklistedwords](#put-blacklistedwords)
-* [GET /blacklistedwords/{langcode}](#get-blacklistedwords-langcode)
-* [DELETE /blacklistedwords/{word}](#delete-blacklistedwords-word)
-* [GET /blacklistedwords/all](#get-blacklistedwords-all)
-* [PUT /blacklistedwords/details](#put-blacklistedwords-details)
-* [POST /blacklistedwords/words](#post-blacklistedwords-words)
-* [POST /blacklistedwords/filtervalues](#post-blacklistedwords-filtervalues)
-* [POST /blacklistedwords/search](#post-blacklistedwords-search)
+This section details about the service APIs for the BlacklistedWords
 
+## BlacklistedWords Master API
 
-## POST /blacklistedwords
-This service will create a blacklisted word which will be used in the MOSIP platform. 
+* [POST /blacklistedwords](BlacklistedWords-APIs.md#post-blacklistedwords)
+* [PUT /blacklistedwords](BlacklistedWords-APIs.md#put-blacklistedwords)
+* [GET /blacklistedwords/{langcode}](BlacklistedWords-APIs.md#get-blacklistedwords-langcode)
+* [DELETE /blacklistedwords/{word}](BlacklistedWords-APIs.md#delete-blacklistedwords-word)
+* [GET /blacklistedwords/all](BlacklistedWords-APIs.md#get-blacklistedwords-all)
+* [PUT /blacklistedwords/details](BlacklistedWords-APIs.md#put-blacklistedwords-details)
+* [POST /blacklistedwords/words](BlacklistedWords-APIs.md#post-blacklistedwords-words)
+* [POST /blacklistedwords/filtervalues](BlacklistedWords-APIs.md#post-blacklistedwords-filtervalues)
+* [POST /blacklistedwords/search](BlacklistedWords-APIs.md#post-blacklistedwords-search)
 
-### Resource URL
+### POST /blacklistedwords
+
+This service will create a blacklisted word which will be used in the MOSIP platform.
+
+#### Resource URL
+
 `POST /blacklistedwords`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-description | optional | blacklisted word description ||
-isActive | Yes | is active or not ||
-langCode | Yes | language code ||
-word | Yes | blacklisted word name || 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name        | Required | Description                  | Default Value | Example |
+| ----------- | -------- | ---------------------------- | ------------- | ------- |
+| description | optional | blacklisted word description |               |         |
+| isActive    | Yes      | is active or not             |               |         |
+| langCode    | Yes      | language code                |               |         |
+| word        | Yes      | blacklisted word name        |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -48,8 +55,9 @@ word | Yes | blacklisted word name ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -67,32 +75,37 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
+
 **Response code: 200 Ok**
 
+### PUT /blacklistedwords
 
-## PUT /blacklistedwords
-This service will update the blacklisted word which is used in the MOSIP platform. 
+This service will update the blacklisted word which is used in the MOSIP platform.
 
-### Resource URL
+#### Resource URL
+
 `PUT /blacklistedwords`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-description | optional | blacklisted word description ||
-isActive | Yes| is active or not ||
-langCode | Yes | language code ||
-oldWord | Yes | old blacklisted word || 
-word |Yes |blacklisted word ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name        | Required | Description                  | Default Value | Example |
+| ----------- | -------- | ---------------------------- | ------------- | ------- |
+| description | optional | blacklisted word description |               |         |
+| isActive    | Yes      | is active or not             |               |         |
+| langCode    | Yes      | language code                |               |         |
+| oldWord     | Yes      | old blacklisted word         |               |         |
+| word        | Yes      | blacklisted word             |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -107,8 +120,10 @@ word |Yes |blacklisted word ||
   "version": "string"
 }
 ```
-### Example Response
-```JSON
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -126,27 +141,33 @@ word |Yes |blacklisted word ||
   "version": "string"
 }
 ```
+
 **Response code: 200 Ok**
 
-## GET /blacklistedwords/{langcode}
-This service will provides the service for the List of blacklisted words based on the passed language code. 
+### GET /blacklistedwords/{langcode}
 
-### Resource URL
+This service will provides the service for the List of blacklisted words based on the passed language code.
+
+#### Resource URL
+
 `GET /blacklistedwords/{langcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-langcode|Yes| language code ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name     | Required | Description   | Default Value | Example |
+| -------- | -------- | ------------- | ------------- | ------- |
+| langcode | Yes      | language code |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -170,27 +191,33 @@ langcode|Yes| language code ||
   "version": "string"
 }
 ```
+
 **Response code: 200 Ok**
 
-## DELETE /blacklistedwords/{word}
-This service will provides the service to delete the blacklisted word. 
+### DELETE /blacklistedwords/{word}
 
-### Resource URL
+This service will provides the service to delete the blacklisted word.
+
+#### Resource URL
+
 `DELETE /blacklistedwords/{word}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-word | Yes | blacklisted word to be deleted ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description                    | Default Value | Example |
+| ---- | -------- | ------------------------------ | ------------- | ------- |
+| word | Yes      | blacklisted word to be deleted |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -207,30 +234,36 @@ word | Yes | blacklisted word to be deleted ||
   "version": "string"
 }
 ```
+
 **Response code: 200 Ok**
 
-## GET /blacklistedwords/all 
-This service will provides the service for the List of blacklistedwords. 
+### GET /blacklistedwords/all
 
-### Resource URL
+This service will provides the service for the List of blacklistedwords.
+
+#### Resource URL
+
 `GET /blacklistedwords/all`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-orderBy | optional | response order | desc ||
-pageNumber | optional | page no for the requested data | 0 ||
-pageSize | optional | page size for the requested data | 10 ||
-sortBy | optional | sort the requested data based on param value | createdDateTime || 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name       | Required | Description                                  | Default Value   | Example |
+| ---------- | -------- | -------------------------------------------- | --------------- | ------- |
+| orderBy    | optional | response order                               | desc            |         |
+| pageNumber | optional | page no for the requested data               | 0               |         |
+| pageSize   | optional | page size for the requested data             | 10              |         |
+| sortBy     | optional | sort the requested data based on param value | createdDateTime |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -260,30 +293,36 @@ sortBy | optional | sort the requested data based on param value | createdDateTi
   "version": "string"
 }
 ```
+
 **Response code: 200 Ok**
 
-## PUT /blacklistedwords/details
-This service will update the blacklisted word details except the word itself. 
+### PUT /blacklistedwords/details
 
-### Resource URL
+This service will update the blacklisted word details except the word itself.
+
+#### Resource URL
+
 `PUT /blacklistedwords/details`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-description | optional | blacklisted word description ||
-isActive | Yes | is active or not ||
-langCode | Yes | language code ||
-word | Yes | blacklisted word name || 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name        | Required | Description                  | Default Value | Example |
+| ----------- | -------- | ---------------------------- | ------------- | ------- |
+| description | optional | blacklisted word description |               |         |
+| isActive    | Yes      | is active or not             |               |         |
+| langCode    | Yes      | language code                |               |         |
+| word        | Yes      | blacklisted word name        |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -298,8 +337,9 @@ word | Yes | blacklisted word name ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -317,27 +357,33 @@ word | Yes | blacklisted word name ||
   "version": "string"
 }
 ```
+
 **Response code: 200 Ok**
 
-## POST /blacklistedwords/words
-This service will return "Invalid" when the word is a blacklisted word and retrun "valid" when the word is not a blacklist word.  
+### POST /blacklistedwords/words
 
-### Resource URL
+This service will return "Invalid" when the word is a blacklisted word and retrun "valid" when the word is not a blacklist word.
+
+#### Resource URL
+
 `POST /blacklistedwords/words`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-blacklisted words | Yes | blacklisted words to be validated  ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name              | Required | Description                       | Default Value | Example |
+| ----------------- | -------- | --------------------------------- | ------------- | ------- |
+| blacklisted words | Yes      | blacklisted words to be validated |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -351,8 +397,9 @@ blacklisted words | Yes | blacklisted words to be validated  ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -364,42 +411,46 @@ blacklisted words | Yes | blacklisted words to be validated  ||
   "errors": null
 }
 ```
+
 **Response code: 200 Ok**
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-007 | Error occurred while fetching Blacklisted words | Fetch Issue
-KER-MSD-008 | Blacklisted word not found | Data Not Found
-KER-MSD-070 | Error occurred while inserting Blacklisted words | Insertion Issue
-KER-MSD-105 | Error occurred while updating Blacklisted Word | Update Issue
-KER-MSD-106 | Error occurred while deleting Blacklisted Word | Deletion Issue
+#### Failure details
 
-## POST /blacklistedwords/filtervalues
+| Error Code  | Error Message                                    | Error Description |
+| ----------- | ------------------------------------------------ | ----------------- |
+| KER-MSD-007 | Error occurred while fetching Blacklisted words  | Fetch Issue       |
+| KER-MSD-008 | Blacklisted word not found                       | Data Not Found    |
+| KER-MSD-070 | Error occurred while inserting Blacklisted words | Insertion Issue   |
+| KER-MSD-105 | Error occurred while updating Blacklisted Word   | Update Issue      |
+| KER-MSD-106 | Error occurred while deleting Blacklisted Word   | Deletion Issue    |
 
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+### POST /blacklistedwords/filtervalues
 
-### Resource URL
+This service returns the filter values which are required in the dropdown entries of the filter screen.
+
+#### Resource URL
+
 `POST /blacklistedwords/filtervalues`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters | No| Array of the filter applied. In case of "list" screen, this array will be empty | -NA- |
-columnName |No | The column name in the JSON response | -NA- |
-type | No | The value have to be in ["unique","all"] | unique | unique
-languagecode | Yes | Language code in Language code in ISO 639-2 format | | 
+#### Parameters
 
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
 
-### Example Request
-```JSON
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -427,8 +478,9 @@ languagecode | Yes | Language code in Language code in ISO 639-2 format | |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -450,41 +502,45 @@ languagecode | Yes | Language code in Language code in ISO 639-2 format | |
   "version": "string"
 }
 ```
+
 **Response code: 200 Ok**
 
-## POST /blacklistedwords/search
+### POST /blacklistedwords/search
 
-This service is for the blacklisted words search functionality. All the filter parameters are passed and the blacklisted words are searched and the matching results are returned. 
+This service is for the blacklisted words search functionality. All the filter parameters are passed and the blacklisted words are searched and the matching results are returned.
 
-### Resource URL
+#### Resource URL
+
 `POST /blacklistedwords/search`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in  ["contains","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the start range| -NA- |
-toValue|No|If the type is "between", this field is the value of the end range| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 10
-pageFetch| This is the amount of records to be fetched | 10 | 10
+#### Parameters
 
-### Example Request
-```JSON
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["contains","equals","startsWith","between"]           | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the start range            | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the end range              | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 10            |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -515,8 +571,9 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -546,4 +603,5 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
   "version": "string"
 }
 ```
+
 **Response code: 200 Ok**

@@ -1,41 +1,50 @@
+# Sync Data APIs
+
 This page contains detail about the service APIs for sync data that is sent from server to registration client.
 
-# Sync data (Public)
-* [GET /configs](#get-configs)
-* [GET /roles](#get-roles)
-* [GET /userdetails/{registrationcenterid}](#get-userdetails-registrationcenterid)
-* [GET /publickey](#get-publickey)
-* [POST /tpm/publickey](#post-tpm-publickey)
-* [POST /tpm/publickey/verify](#post-tpm-publickey)
-* [GET /clientsettings](#get-clientsettings)
-* [GET /clientsettings/{regcenterid}](#get-clientsettings-regcenterid)
+## Sync data (Public)
 
-## GET /configs
-This service will return back the global and registration configuration data of the MOSIP platform. 
+* [GET /configs](Sync-Data-APIs.md#get-configs)
+* [GET /roles](Sync-Data-APIs.md#get-roles)
+* [GET /userdetails/{registrationcenterid}](Sync-Data-APIs.md#get-userdetails-registrationcenterid)
+* [GET /publickey](Sync-Data-APIs.md#get-publickey)
+* [POST /tpm/publickey](Sync-Data-APIs.md#post-tpm-publickey)
+* [POST /tpm/publickey/verify](Sync-Data-APIs.md#post-tpm-publickey)
+* [GET /clientsettings](Sync-Data-APIs.md#get-clientsettings)
+* [GET /clientsettings/{regcenterid}](Sync-Data-APIs.md#get-clientsettings-regcenterid)
 
-### Resource URL
+### GET /configs
+
+This service will return back the global and registration configuration data of the MOSIP platform.
+
+#### Resource URL
+
 `https://mosip.io/v1/syncdata/configs`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Part Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
+#### Request Part Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Request
+
 N/A
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
 
-##### Description: latest configuration details.
-```JSON
+**Description: latest configuration details.**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -148,34 +157,41 @@ N/A
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-## GET /roles
-This service will return back the all roles of the applications. 
+### GET /roles
 
-### Resource URL
-`https://mosip.io/v1/syncdata/roles `
+This service will return back the all roles of the applications.
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource URL
 
-### Request Part Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+`https://mosip.io/v1/syncdata/roles`
 
-### Request
+#### Resource details
+
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
+
+#### Request Part Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Request
+
 N/A
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
 
-##### Description: all roles of the application
-```JSON
+**Description: all roles of the application**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -203,34 +219,41 @@ N/A
   }
 }		
 ```
+
 **Response Code : 200 (OK)**
 
-## GET /userdetails/{registrationcenterid} 
-This service will return back the list of users and its role-mapping based on the registration-center-id. 
+### GET /userdetails/{registrationcenterid}
 
-### Resource URL
-`https://mosip.io/v1/syncdata/userdetails/{registrationcenterid} `
+This service will return back the list of users and its role-mapping based on the registration-center-id.
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource URL
 
-### Request Part Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+`https://mosip.io/v1/syncdata/userdetails/{registrationcenterid}`
 
-### Request
-`https://mosip.io/v1/syncdata/userdetails/110011 `
+#### Resource details
 
-### Responses
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-#### Success Response
+#### Request Part Parameters
 
-##### Description: list of users and role-mapping 
-```JSON
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Request
+
+`https://mosip.io/v1/syncdata/userdetails/110011`
+
+#### Responses
+
+**Success Response**
+
+**Description: list of users and role-mapping**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -259,36 +282,43 @@ Name | Required | Description | Default Value | Example
   }
 }	
 ```
+
 **Response Code : 200 (OK)**
 
-## GET /publickey/{applicationId}
-This service will provide the public key for the specific application fetched from key manager. 
+### GET /publickey/{applicationId}
 
-### Resource URL
+This service will provide the public key for the specific application fetched from key manager.
+
+#### Resource URL
+
 `https://mosip.io/v1/syncdata/publickey/{applicationId}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Part Parameters
-Name | Required | Description |  Example
------|----------|-------------|--------
-applicationId |Yes|Id of the application| REGISTRATION,IDA
-referenceId|No|Id of the Machine/MISP|
-timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-`https://mosip.io/v1/syncdata/publickey/REGISTRATION?timeStamp=2018-12-09T06%3A39%3A03.683Z `
+#### Request Part Parameters
 
-### Responses
+| Name          | Required | Description               | Example              |
+| ------------- | -------- | ------------------------- | -------------------- |
+| applicationId | Yes      | Id of the application     | REGISTRATION,IDA     |
+| referenceId   | No       | Id of the Machine/MISP    |                      |
+| timeStamp     | Yes      | Date-time in UTC ISO-8601 | 2007-12-03T10:15:30Z |
 
-#### Success Response
+#### Request
 
-##### Description: public key and current active profile for the specified application
-```JSON
+`https://mosip.io/v1/syncdata/publickey/REGISTRATION?timeStamp=2018-12-09T06%3A39%3A03.683Z`
+
+#### Responses
+
+**Success Response**
+
+**Description: public key and current active profile for the specified application**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -308,29 +338,35 @@ timeStamp |Yes|Date-time  in UTC ISO-8601| 2007-12-03T10:15:30Z
   }
 }	
 ```
+
 **Response Code : 200 (OK)**
 
-## POST /tpm/publickey
-This service will upload the public key corresponding to a particular machine which are used in the MOSIP platform. This service will be used specifically in the Registration Client machines. 
+### POST /tpm/publickey
 
-### Resource URL
+This service will upload the public key corresponding to a particular machine which are used in the MOSIP platform. This service will be used specifically in the Registration Client machines.
+
+#### Resource URL
+
 `https://mosip.io/v1/syncdata/tpm/publickey`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Request format | application/json
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Part Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-machineName |Yes|Name of the machine| | MDLGE6273
-publickey |Yes|Base 64 encoded Public key of the passed machine| | 
+| Resource Details        | Description      |
+| ----------------------- | ---------------- |
+| Request format          | application/json |
+| Response format         | JSON             |
+| Requires Authentication | Yes              |
 
-### Request
-```JSON
+#### Request Part Parameters
+
+| Name        | Required | Description                                      | Default Value | Example   |
+| ----------- | -------- | ------------------------------------------------ | ------------- | --------- |
+| machineName | Yes      | Name of the machine                              |               | MDLGE6273 |
+| publickey   | Yes      | Base 64 encoded Public key of the passed machine |               |           |
+
+#### Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -343,12 +379,13 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
 }
 ```
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
 
-##### Description: The public key had been mapped to the machine
-```JSON
+**Description: The public key had been mapped to the machine**
+
+```
 {
   "id": "mosip.kernel.sync.publickeytomachine",
   "version": "1.0",
@@ -365,10 +402,12 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-#### Error Response
-```JSON
+**Error Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -383,29 +422,35 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
   "response": null
 }		
 ```
+
 **Response Code : 200 (OK)**
 
-## POST /tpm/publickey/verify
-This service will only verify the public key corresponding to a particular machine which are used in the MOSIP platform. This service will be used specifically in the Registration Client machines. 
+### POST /tpm/publickey/verify
 
-### Resource URL
+This service will only verify the public key corresponding to a particular machine which are used in the MOSIP platform. This service will be used specifically in the Registration Client machines.
+
+#### Resource URL
+
 `https://mosip.io/v1/syncdata/tpm/publickey/verify`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Request format | application/json
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Part Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-machineName |Yes|Name of the machine| | MDLGE6273
-publickey |Yes|Base 64 encoded Public key of the passed machine| | 
+| Resource Details        | Description      |
+| ----------------------- | ---------------- |
+| Request format          | application/json |
+| Response format         | JSON             |
+| Requires Authentication | Yes              |
 
-### Request
-```JSON
+#### Request Part Parameters
+
+| Name        | Required | Description                                      | Default Value | Example   |
+| ----------- | -------- | ------------------------------------------------ | ------------- | --------- |
+| machineName | Yes      | Name of the machine                              |               | MDLGE6273 |
+| publickey   | Yes      | Base 64 encoded Public key of the passed machine |               |           |
+
+#### Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -418,12 +463,13 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
 }
 ```
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
 
-##### Description: Verifies if the public key has been mapped to the machine
-```JSON
+**Description: Verifies if the public key has been mapped to the machine**
+
+```
 {
   "id": "mosip.kernel.sync.publickeytomachine",
   "version": "1.0",
@@ -440,10 +486,12 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-#### Error Response
-```JSON
+**Error Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -458,38 +506,42 @@ publickey |Yes|Base 64 encoded Public key of the passed machine| |
   "response": null
 }		
 ```
+
 **Response Code : 200 (OK)**
 
-## GET /clientsettings
+### GET /clientsettings
 
-This service will provides the list of all clientsettings. This service is used mainly by the Enrollment client module. 
+This service will provides the list of all clientsettings. This service is used mainly by the Enrollment client module.
 
-### Resource URL
+#### Resource URL
+
 `https://mosip.io/v1/syncdata/clientsettings?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24&lastupdated=2018-12-10T11:42:52.994Z`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request Part Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-lastupdated|No|Date in UTC ISO format| | 
-keyindex|Yes|Thumbprint of the public key corresponding to this machine| | 
+#### Request Part Parameters
 
+| Name        | Required | Description                                                | Default Value | Example |
+| ----------- | -------- | ---------------------------------------------------------- | ------------- | ------- |
+| lastupdated | No       | Date in UTC ISO format                                     |               |         |
+| keyindex    | Yes      | Thumbprint of the public key corresponding to this machine |               |         |
 
-### Request
+#### Request
+
 `https://mosip.io/v1/syncdata/clientsettings?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24`
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
 
-##### Description: latest clientsettings for the provided machine.
-```JSON
+**Description: latest clientsettings for the provided machine.**
+
+```
 {
   "id": null,
   "version": null,
@@ -853,36 +905,43 @@ keyindex|Yes|Thumbprint of the public key corresponding to this machine| |
   "errors": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-## GET /clientsettings/{regcenterid}
-This service will provides the list of all master data. This service is used mainly by the Enrollment client module. 
+### GET /clientsettings/{regcenterid}
 
-### Resource URL
+This service will provides the list of all master data. This service is used mainly by the Enrollment client module.
+
+#### Resource URL
+
 `https://mosip.io/v1/syncdata/clientsettings/10001?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24&lastupdated=2018-12-10T11:42:52.994Z`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Part Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-regcenterid|Yes|Registration center id| |
-lastupdated|No|Date in UTC ISO format| | 
-keyindex|Yes|Thumbprint of the public key corresponding to this machine| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
+#### Request Part Parameters
+
+| Name        | Required | Description                                                | Default Value | Example |
+| ----------- | -------- | ---------------------------------------------------------- | ------------- | ------- |
+| regcenterid | Yes      | Registration center id                                     |               |         |
+| lastupdated | No       | Date in UTC ISO format                                     |               |         |
+| keyindex    | Yes      | Thumbprint of the public key corresponding to this machine |               |         |
+
+#### Request
+
 `v1/syncdata/clientsettings/10001?keyindex=bb:2f:9f:29:2c:8b:fb:44:51:ba:f7:f9:66:9b:f2:f0:5a:2d:7c:2b:24:ac:a7:08:53:35:a0:b7:96:50:f0:24`
 
-### Responses
+#### Responses
 
-#### Success Response
+**Success Response**
 
-##### Description: latest masterdata for the provided machine.
-```JSON
+**Description: latest masterdata for the provided machine.**
+
+```
 {
   "id": null,
   "version": null,
@@ -1211,65 +1270,67 @@ keyindex|Yes|Thumbprint of the public key corresponding to this machine| |
   "errors": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-#### Failure details
-Error Code | Error Message | Error Description
-------------|----------|-------------
-KER-SNC-100 | Error occurred while parsing lastUpdated timesatamp | last updated parse exception
-KER-SNC-101 | Error occurred while fetching Applications | application fetch exception
-KER-SNC-102 | Error occurred while fetching Machine Details | machine detail  fetch  exception
-KER-SNC-103 | Error occurred while fetching Machine Registration Center | machine reg center fetch exception
-KER-SNC-104 | Error occurred while fetching Registration Center | reg  center  fetch  exception
-KER-SNC-105 | Error occurred while fetching Registration Center Type | reg  center  type  fetch  exception
-KER-SNC-106 | Error occurred while fetching Templates | template  fetch  exception
-KER-SNC-107 | Error occurred while fetching Template Types | template  type  fetch  exception
-KER-SNC-108 | Error occurred while fetching Reason Category | reason  category  fetch  exception
-KER-SNC-109 | Error occurred while fetching Holidays | holiday  fetch  exception
-KER-SNC-110 | Error occurred while fetching Blacklisted Words | blacklisted  words  fetch  exception
-KER-SNC-111 | Error occurred while fetching Biometric types | biometric type  fetch  exception
-KER-SNC-112 | Error occurred while fetching Biometric Attribute types | biometric attr type fetch exception
-KER-SNC-113 | Error occurred while fetching Titles | title  fetch  exception
-KER-SNC-114 | Error occurred while fetching Languages | language  fetch  exception
-KER-SNC-115 | Error occurred while fetching Genders | gender  fetch  exception
-KER-SNC-116 | Error occurred while fetching Registration Center Devices | registartion  center  devices  fetch  exception
-KER-SNC-117 | Error occurred while fetching Devices | devices  fetch  exception
-KER-SNC-118 | Error occurred while fetching Document Category | document  category  fetch  exception
-KER-SNC-119 | Error occurred while fetching Document Types | document  type  fetch  exception
-KER-SNC-120 | Error occurred while fetching Id Type | id  type  fetch  exception
-KER-SNC-121 | Error occurred while fetching Device Specification | device  specification  fetch  exception
-KER-SNC-122 | Error occurred while fetching Machine Specification | machine  specification  fetch  exception
-KER-SNC-123 | Error occurred while fetching Machine Type | machine  type  fetch  exception
-KER-SNC-124 | Error occurred while fetching Location | location  fetch  exception
-KER-SNC-125 | Error occurred while fetching Device Type | device  type  fetch  exception
-KER-SNC-126 | Error occurred while fetching Valid Document Type | valid  document  fetch  exception
-KER-SNC-127 | Error occurred while fetching Valid Document Type | reason  list  fetch  exception
-KER-SNC-128 | Error occurred while fetching data | thread  interrupted  while  fetch  exception
-KER-SNC-999 | Request Data not valid | Request Data Not Valid
-KER-SNC-129 | Error occurred while fetching Registration Center Machine | REG  CENTER  MACHINE Fetch Exception
-KER-SNC-130 | Error occurred while fetching Registration Center Device | REG  CENTER  DEVICE Fetch Exception
-KER-SNC-131 | Error occurred while fetching Registration Center Machine Device | REG  CENTER  MACHINE  DEVICE Fetch Exception
-KER-SNC-132 | Error occurred while fetching Registration Center Machine Device | REG  CENTER  USER  MACHINE  DEVICE Fetch Exception
-KER-SNC-133 | Error occurred while fetching Registration Center User | REG  CENTER  USER Fetch Exception
-KER-SNC-134 | Machine id not found | MACHINE  ID  Not found Exception
-KER-SNC-500 | Internal server error | Internal server error
-KER-SNC-135 | Timestamp cannot be future date | Invalid Timestamp
-KER-SNC-136 | Error occurred while fetching Registration Center User History | REG  CENTER  USER  HISTORY Fetch Exception
-KER-SNC-137 | Error occurred while fetching Registration Center Machine User History | REG  CENTER  MACHINE  USER  HISTORY Fetch Exception
-KER-SNC-138 | Error occurred while fetching Registration Center Device History | REG  CENTER  DEVICE  HISTORY Fetch Exception
-KER-SNC-139 | Error occurred while fetching Registration Center Machine History | REG  CENTER  MACHINE  HISTORY Fetch Exception
-KER-SNC-140 | Mac-Address and Serial Number cannot be empty | Empty  MAC  OR  SERIAL  Number
-KER-SNC-141 | Registration center not found | REGISTRATION  CENTER Not Found
-KER-SNC-142 | Error occurred while fetching app authorization methods | APP  AUTHORIZATION  METHOD Fetch Exception
-KER-SNC-143 | Error occurred while fetching app details | APP  DETAIL Fetch Exception
-KER-SNC-144 | Error occurred while fetching app role priorities | APP  ROLE  PRIORITY Fetch Exception
-KER-SNC-145 | Error occurred while fetching processList | PROCESS  LIST Fetch Exception
-KER-SNC-146 | Error occurred while fetching screen authorizations | SCREEN  AUTHORIZATION Fetch Exception
-KER-SNC-147 | Error occurred while fetching Individual types | Individual types Fetch Exception
-KER-SNC-148 | Mac-Address and/or Serial Number does not exist | INVALID  MAC  OR  SERIAL  Number
-KER-SNC-149 | Registration Center has been updated for the received Machine ID | REG CENTER  Updated
-KER-SNC-150 | Error occured while fetching screen detail | SCREEN  DETAIL Fetch Exception
-KER-SNC-151 | Error occurred while fetching ApplicantValidDocument | APPLICANT  VALID  DOCUMENT Fetch Exception
-KER-SNC-152 | Error occurred while fetching Registration Center Machine Device History | REG  CENTER  MACHINE  DEVICE  HISTORY Fetch Exception
-KER-SNC-153 | Error occured while fetching sync job definitons | SYNC  JOB  DEF Fetch Exception
-KER-SNC-154 | Error occured while parsing the response | SYNC  JOB  DEF  Parse Exception
+**Failure details**
+
+| Error Code  | Error Message                                                            | Error Description                                 |
+| ----------- | ------------------------------------------------------------------------ | ------------------------------------------------- |
+| KER-SNC-100 | Error occurred while parsing lastUpdated timesatamp                      | last updated parse exception                      |
+| KER-SNC-101 | Error occurred while fetching Applications                               | application fetch exception                       |
+| KER-SNC-102 | Error occurred while fetching Machine Details                            | machine detail fetch exception                    |
+| KER-SNC-103 | Error occurred while fetching Machine Registration Center                | machine reg center fetch exception                |
+| KER-SNC-104 | Error occurred while fetching Registration Center                        | reg center fetch exception                        |
+| KER-SNC-105 | Error occurred while fetching Registration Center Type                   | reg center type fetch exception                   |
+| KER-SNC-106 | Error occurred while fetching Templates                                  | template fetch exception                          |
+| KER-SNC-107 | Error occurred while fetching Template Types                             | template type fetch exception                     |
+| KER-SNC-108 | Error occurred while fetching Reason Category                            | reason category fetch exception                   |
+| KER-SNC-109 | Error occurred while fetching Holidays                                   | holiday fetch exception                           |
+| KER-SNC-110 | Error occurred while fetching Blacklisted Words                          | blacklisted words fetch exception                 |
+| KER-SNC-111 | Error occurred while fetching Biometric types                            | biometric type fetch exception                    |
+| KER-SNC-112 | Error occurred while fetching Biometric Attribute types                  | biometric attr type fetch exception               |
+| KER-SNC-113 | Error occurred while fetching Titles                                     | title fetch exception                             |
+| KER-SNC-114 | Error occurred while fetching Languages                                  | language fetch exception                          |
+| KER-SNC-115 | Error occurred while fetching Genders                                    | gender fetch exception                            |
+| KER-SNC-116 | Error occurred while fetching Registration Center Devices                | registartion center devices fetch exception       |
+| KER-SNC-117 | Error occurred while fetching Devices                                    | devices fetch exception                           |
+| KER-SNC-118 | Error occurred while fetching Document Category                          | document category fetch exception                 |
+| KER-SNC-119 | Error occurred while fetching Document Types                             | document type fetch exception                     |
+| KER-SNC-120 | Error occurred while fetching Id Type                                    | id type fetch exception                           |
+| KER-SNC-121 | Error occurred while fetching Device Specification                       | device specification fetch exception              |
+| KER-SNC-122 | Error occurred while fetching Machine Specification                      | machine specification fetch exception             |
+| KER-SNC-123 | Error occurred while fetching Machine Type                               | machine type fetch exception                      |
+| KER-SNC-124 | Error occurred while fetching Location                                   | location fetch exception                          |
+| KER-SNC-125 | Error occurred while fetching Device Type                                | device type fetch exception                       |
+| KER-SNC-126 | Error occurred while fetching Valid Document Type                        | valid document fetch exception                    |
+| KER-SNC-127 | Error occurred while fetching Valid Document Type                        | reason list fetch exception                       |
+| KER-SNC-128 | Error occurred while fetching data                                       | thread interrupted while fetch exception          |
+| KER-SNC-999 | Request Data not valid                                                   | Request Data Not Valid                            |
+| KER-SNC-129 | Error occurred while fetching Registration Center Machine                | REG CENTER MACHINE Fetch Exception                |
+| KER-SNC-130 | Error occurred while fetching Registration Center Device                 | REG CENTER DEVICE Fetch Exception                 |
+| KER-SNC-131 | Error occurred while fetching Registration Center Machine Device         | REG CENTER MACHINE DEVICE Fetch Exception         |
+| KER-SNC-132 | Error occurred while fetching Registration Center Machine Device         | REG CENTER USER MACHINE DEVICE Fetch Exception    |
+| KER-SNC-133 | Error occurred while fetching Registration Center User                   | REG CENTER USER Fetch Exception                   |
+| KER-SNC-134 | Machine id not found                                                     | MACHINE ID Not found Exception                    |
+| KER-SNC-500 | Internal server error                                                    | Internal server error                             |
+| KER-SNC-135 | Timestamp cannot be future date                                          | Invalid Timestamp                                 |
+| KER-SNC-136 | Error occurred while fetching Registration Center User History           | REG CENTER USER HISTORY Fetch Exception           |
+| KER-SNC-137 | Error occurred while fetching Registration Center Machine User History   | REG CENTER MACHINE USER HISTORY Fetch Exception   |
+| KER-SNC-138 | Error occurred while fetching Registration Center Device History         | REG CENTER DEVICE HISTORY Fetch Exception         |
+| KER-SNC-139 | Error occurred while fetching Registration Center Machine History        | REG CENTER MACHINE HISTORY Fetch Exception        |
+| KER-SNC-140 | Mac-Address and Serial Number cannot be empty                            | Empty MAC OR SERIAL Number                        |
+| KER-SNC-141 | Registration center not found                                            | REGISTRATION CENTER Not Found                     |
+| KER-SNC-142 | Error occurred while fetching app authorization methods                  | APP AUTHORIZATION METHOD Fetch Exception          |
+| KER-SNC-143 | Error occurred while fetching app details                                | APP DETAIL Fetch Exception                        |
+| KER-SNC-144 | Error occurred while fetching app role priorities                        | APP ROLE PRIORITY Fetch Exception                 |
+| KER-SNC-145 | Error occurred while fetching processList                                | PROCESS LIST Fetch Exception                      |
+| KER-SNC-146 | Error occurred while fetching screen authorizations                      | SCREEN AUTHORIZATION Fetch Exception              |
+| KER-SNC-147 | Error occurred while fetching Individual types                           | Individual types Fetch Exception                  |
+| KER-SNC-148 | Mac-Address and/or Serial Number does not exist                          | INVALID MAC OR SERIAL Number                      |
+| KER-SNC-149 | Registration Center has been updated for the received Machine ID         | REG CENTER Updated                                |
+| KER-SNC-150 | Error occured while fetching screen detail                               | SCREEN DETAIL Fetch Exception                     |
+| KER-SNC-151 | Error occurred while fetching ApplicantValidDocument                     | APPLICANT VALID DOCUMENT Fetch Exception          |
+| KER-SNC-152 | Error occurred while fetching Registration Center Machine Device History | REG CENTER MACHINE DEVICE HISTORY Fetch Exception |
+| KER-SNC-153 | Error occured while fetching sync job definitons                         | SYNC JOB DEF Fetch Exception                      |
+| KER-SNC-154 | Error occured while parsing the response                                 | SYNC JOB DEF Parse Exception                      |

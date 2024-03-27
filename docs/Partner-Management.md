@@ -1,4 +1,7 @@
-# Introduction
+# Partner Management
+
+## Introduction
+
 Partner Management provides services for various types of partners associated with the MOSIP system. Currently, in MOSIP we have identified some types of partners, but the adopters can choose to add many more partners.
 
 1. Authentication Partners who provide authentication services to individuals who have registered in the MOSIP system.
@@ -6,55 +9,56 @@ Partner Management provides services for various types of partners associated wi
 3. Device providers to provide MOSIP compliant devices for authentication & registration.
 4. Foundational Trust Providers to provide chips in SBI 2.0 devices.
 5. Credential or Print partners to generate ID Cards for the residents.
-6. ABIS (Automated Biometric Integration System) to perform de-duplication.
-... and many more, 
+6. ABIS (Automated Biometric Integration System) to perform de-duplication. ... and many more,
 
 Registered Partners are only allowed to access MOSIP services based on the roles provided to them by the MOSIP Partner Admin. These partners need to self register through MOSIP's Partner Management portal before the Partner Admin verifies their details and provides them access to MOSIP services. MOSIP services for a partner will work only when the Partner's credentials are registered in MOSIP and are verified by the service.
 
-Partner Management also involves policy management for Partners. Each partner can access various services only based on a defined policy. 
+Partner Management also involves policy management for Partners. Each partner can access various services only based on a defined policy.
 
 Based on partner type, MOSIP provides various services to respective partners.
 
-# Detailed functionality 
+## Detailed functionality
+
 For detailed functionality of partner management please view our page, [Parter Management Functionality](Partner-Management-Functionality.md)
 
-# Process Flows
+## Process Flows
 
-## Device Provider
+### Device Provider
 
-![](_images/partner_management/PMP-device_provider-flow_diagram.png)
+![](\_images/partner\_management/PMP-device\_provider-flow\_diagram.png)
 
-## Foundational Trust Provider
+### Foundational Trust Provider
 
-![](_images/partner_management/PMP-ftp-flow_diagram.png)
+![](\_images/partner\_management/PMP-ftp-flow\_diagram.png)
 
-## Authentication Partner
+### Authentication Partner
 
-![](_images/partner_management/PMP-authentication_partner-flow_diagram.png)
+![](\_images/partner\_management/PMP-authentication\_partner-flow\_diagram.png)
 
-## Credential Partner
+### Credential Partner
 
-![](_images/partner_management/PMP-credential_partner-flow_diagram.png)
+![](\_images/partner\_management/PMP-credential\_partner-flow\_diagram.png)
 
-## MISP (MOSIP Infrastructure Service Provider)
+### MISP (MOSIP Infrastructure Service Provider)
 
-![](_images/partner_management/PMP-misp-flow_diagram.png)
+![](\_images/partner\_management/PMP-misp-flow\_diagram.png)
 
-## Policy Management
+### Policy Management
 
-![](_images/partner_management/PMP-policy_manager-flow_diagram.png)
+![](\_images/partner\_management/PMP-policy\_manager-flow\_diagram.png)
 
+## Policy and Policy Group
 
-# Policy and Policy Group
+### Policy
 
-## Policy
 A Policy is a document in MOSIP which dictates various actions between the partner and MOSIP system. Policies for various partners may differ based on various use cases. Generally in MOSIP we have two types of Policies,
 
 1. Authentication Policy, used by Authentication Partners
 2. Credential Issuance Policy, used by Credential Partners
 
-### Sample Authentication Policy JSON
-```JSON
+#### Sample Authentication Policy JSON
+
+```
 {
   "allowedAuthTypes": [
     {
@@ -123,8 +127,9 @@ A Policy is a document in MOSIP which dictates various actions between the partn
 }
 ```
 
-### Sample Credential Issuance Policy JSON
-```JSON
+#### Sample Credential Issuance Policy JSON
+
+```
 {
   "dataSharePolicies": {
     "typeOfShare": "Data Share",
@@ -253,23 +258,30 @@ A Policy is a document in MOSIP which dictates various actions between the partn
 }
 ```
 
-## Policy Group
+### Policy Group
+
 A Policy Group is a sector or domain like banking, insurance, telecom etc, specific to a country. Any policy manager, partner manager and partner can belong to a specific policy group. MOSIP would require Policy Group master data prepared and defined beforehand by country, before creation of Partner, Partner Manager and Policy Manager.
- 
-## Policy Manager
+
+### Policy Manager
+
 Policy Manager would be creating and managing policies for the policy group he/she belongs to.
- 
-## PartnerAPIKey
+
+### PartnerAPIKey
+
 For a partner to opt for an authentication policy, they have to generate PartnerAPIKey request with following sample parameters - PartnerCode, UseCaseDescription, SupportingInfo, Status etc. Once the PartnerAPIKey request is approved by Partner Manager, Partner is provided PartnerAPIKey that contains details like - PartnerAPIKey (combination of PartnerCode, policy group and policy), issuedOn, validTill, isActive etc)
 
-## Logical View
-![Partner Management Logical View](_images/partner_management/partner_management_logical_diagram.png)
+### Logical View
 
-# Services
+![Partner Management Logical View](\_images/partner\_management/partner\_management\_logical\_diagram.png)
+
+## Services
+
 For detailed description of Partner Management Services, high and low level design refer to [partner management repo](https://github.com/mosip/mosip-partner-portal-api).
 
-# Build and deploy
+## Build and deploy
+
 Refer to build and deploy instructions in [partner management repo](https://github.com/mosip/mosip-partner-portal-api).
 
-# APIs
+## APIs
+
 [Partner Management](Partner-Management-Service-APIs.md)

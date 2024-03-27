@@ -1,50 +1,55 @@
+# Device APIs
+
 This page contains detail about the service APIs for Device Master data.
-* [Devices API](#devices)
-These APIs includes create and update APIs. These are used by the Administrator Portal for the Create and Update Device functionality.
-* [Device Types API](#device-types)
-These APIs includes create and update APIs. These are used by the Administrator Portal for the Create and Update Device Type functionality.
-* [Device Specifications API](#device-specifications)
-These APIs includes create and update APIs. These are used by the Administrator Portal for the Create and Update Device Specification functionality.
 
-# Devices
-* [POST /devices](#post-devices)
-* [PUT /devices](#put-devices)
-* [GET /devices/{languagecode}](#get-devices-languagecode)
-* [GET /devices/{languagecode}/{deviceType}](#get-devices-languagecode-devicetype)
-* [PUT /devices/decommission/{id}](#put-devices-decommission-id)
-* [DELETE /devices/{id}](#delete-devices-id)
-* [POST /devices/search](#post-devices-search)
-* [POST /devices/filtervalues](#post-devices-filtervalues)
+* [Devices API](Device-APIs.md#devices) These APIs includes create and update APIs. These are used by the Administrator Portal for the Create and Update Device functionality.
+* [Device Types API](Device-APIs.md#device-types) These APIs includes create and update APIs. These are used by the Administrator Portal for the Create and Update Device Type functionality.
+* [Device Specifications API](Device-APIs.md#device-specifications) These APIs includes create and update APIs. These are used by the Administrator Portal for the Create and Update Device Specification functionality.
 
-## POST /devices
+## Devices
+
+* [POST /devices](Device-APIs.md#post-devices)
+* [PUT /devices](Device-APIs.md#put-devices)
+* [GET /devices/{languagecode}](Device-APIs.md#get-devices-languagecode)
+* [GET /devices/{languagecode}/{deviceType}](Device-APIs.md#get-devices-languagecode-devicetype)
+* [PUT /devices/decommission/{id}](Device-APIs.md#put-devices-decommission-id)
+* [DELETE /devices/{id}](Device-APIs.md#delete-devices-id)
+* [POST /devices/search](Device-APIs.md#post-devices-search)
+* [POST /devices/filtervalues](Device-APIs.md#post-devices-filtervalues)
+
+### POST /devices
+
 This service will create a device which will be used in the MOSIP platform. Please find the steps to create primary/secondary languages in [Registration Center Create/Update API](Registration-Center-APIs.md#create-update-api).
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/v1/masterdata/devices`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-id|Yes|Id of the device| | 
-macAddress|Yes|Mac Address of the device| | 
-name|Yes|Name of the device| | 
-deviceSpecId|Yes|Device specification Id of the device| | 
-serialNum|Yes|Serial number of the device| | 
-langCode|Yes|Language code of the device| | 
-ipAddress|No|Ip Address of the device| | 
-isActive|Yes|Is the device active?| | 
-validityDateTime|Yes|Validity date of device| | 
-zoneCode|Yes|Zone code of device| | 
+#### Parameters
 
-### Example Request
-```JSON
+| Name             | Required | Description                           | Default Value | Example |
+| ---------------- | -------- | ------------------------------------- | ------------- | ------- |
+| id               | Yes      | Id of the device                      |               |         |
+| macAddress       | Yes      | Mac Address of the device             |               |         |
+| name             | Yes      | Name of the device                    |               |         |
+| deviceSpecId     | Yes      | Device specification Id of the device |               |         |
+| serialNum        | Yes      | Serial number of the device           |               |         |
+| langCode         | Yes      | Language code of the device           |               |         |
+| ipAddress        | No       | Ip Address of the device              |               |         |
+| isActive         | Yes      | Is the device active?                 |               |         |
+| validityDateTime | Yes      | Validity date of device               |               |         |
+| zoneCode         | Yes      | Zone code of device                   |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -65,8 +70,9 @@ zoneCode|Yes|Zone code of device| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -93,10 +99,12 @@ zoneCode|Yes|Zone code of device| |
   "errors": null
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Error Response:
-```JSON
+#### Error Response:
+
+```
 {
   "id": "string",
   "version": "string",
@@ -111,46 +119,52 @@ zoneCode|Yes|Zone code of device| |
  "response": null
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 | Internal Server Error|If system error occurs
-KER-ATH-403 | Forbidden | If unauthorized role detected
-KER-ATH-401 | Authentication Failed | If no role/invalid token is detected
-KER-MSD-069 | Error occurred while inserting Device details
-KER-MSD-439 | Admin not authorized to access this Device for this Zone | When Admin is not allowed to created a device for a Zone
+#### Failure details
 
-## PUT /devices
+| Error Code  | Error Message                                            | Error Description                                        |
+| ----------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| KER-MSD-500 | Internal Server Error                                    | If system error occurs                                   |
+| KER-ATH-403 | Forbidden                                                | If unauthorized role detected                            |
+| KER-ATH-401 | Authentication Failed                                    | If no role/invalid token is detected                     |
+| KER-MSD-069 | Error occurred while inserting Device details            |                                                          |
+| KER-MSD-439 | Admin not authorized to access this Device for this Zone | When Admin is not allowed to created a device for a Zone |
+
+### PUT /devices
+
 This service will update the list of devices which are used in the MOSIP platform. Please find the steps to create primary/secondary languages in [Registration Center Create/Update API](Registration-Center-APIs.md#createupdate-api)
 
-### Resource URL
+#### Resource URL
+
 `https://{base_url}/v1/masterdata/devices`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-id|Yes|Id of the device| | 
-macAddress|Yes|Mac Address of the device| | 
-name|Yes|Name of the device| | 
-deviceSpecId|Yes|Device specification Id of the device| | 
-serialNum|Yes|Serial number of the device| | 
-langCode|Yes|Language code of the device| | 
-ipAddress|No|Ip Address of the device| | 
-isActive|Yes|Is the device active?| | 
-validityDateTime|Yes|Validity date of device| | 
-zoneCode|Yes|Zone code of device| | 
+#### Parameters
 
-### Example Request
-```JSON
+| Name             | Required | Description                           | Default Value | Example |
+| ---------------- | -------- | ------------------------------------- | ------------- | ------- |
+| id               | Yes      | Id of the device                      |               |         |
+| macAddress       | Yes      | Mac Address of the device             |               |         |
+| name             | Yes      | Name of the device                    |               |         |
+| deviceSpecId     | Yes      | Device specification Id of the device |               |         |
+| serialNum        | Yes      | Serial number of the device           |               |         |
+| langCode         | Yes      | Language code of the device           |               |         |
+| ipAddress        | No       | Ip Address of the device              |               |         |
+| isActive         | Yes      | Is the device active?                 |               |         |
+| validityDateTime | Yes      | Validity date of device               |               |         |
+| zoneCode         | Yes      | Zone code of device                   |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -171,8 +185,9 @@ zoneCode|Yes|Zone code of device| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -199,10 +214,12 @@ zoneCode|Yes|Zone code of device| |
   "errors": null
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Error Response
-```JSON
+#### Error Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -217,36 +234,43 @@ zoneCode|Yes|Zone code of device| |
  "response": null
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MSD-069 |Error occurred while inserting Device details
-KER-MSD-439 |Admin not authorized to access this Device for this Zone |When Admin is not allowed to created a device for a Zone
+#### Failure details
 
-## GET /devices/{languagecode}
-This service will provides the service for the list of devices. 
+| Error Code  | Error Message                                            | Error Description                                        |
+| ----------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| KER-MSD-500 | Internal Server Error                                    | If system error occurs                                   |
+| KER-ATH-403 | Forbidden                                                | If unauthorized role detected                            |
+| KER-ATH-401 | Authentication Failed                                    | If no role/invalid token is detected                     |
+| KER-MSD-069 | Error occurred while inserting Device details            |                                                          |
+| KER-MSD-439 | Admin not authorized to access this Device for this Zone | When Admin is not allowed to created a device for a Zone |
 
-### Resource URL
+### GET /devices/{languagecode}
+
+This service will provides the service for the list of devices.
+
+#### Resource URL
+
 `GET https://{base_url}/v1/masterdata/devices/{languagecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": null,
   "version": null,
@@ -271,9 +295,11 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Error Response
+#### Error Response
+
 ```
 {
   "id": null,
@@ -289,35 +315,42 @@ Name | Required | Description | Default Value | Example
   ]
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MSD-010 | Device not Found | Data Not Found
+#### Failure details
 
-## GET /devices/{languagecode}/{deviceType}
-This service will provides the list of devices based on device type and language code. 
+| Error Code  | Error Message         | Error Description                    |
+| ----------- | --------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error | If system error occurs               |
+| KER-ATH-403 | Forbidden             | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed | If no role/invalid token is detected |
+| KER-MSD-010 | Device not Found      | Data Not Found                       |
 
-### Resource URL
+### GET /devices/{languagecode}/{deviceType}
+
+This service will provides the list of devices based on device type and language code.
+
+#### Resource URL
+
 `GET https://{base_url}/v1/masterdata/devices/{languagecode}/{deviceType}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": null,
   "version": null,
@@ -342,9 +375,11 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Error Response
+#### Error Response
+
 ```
 {
   "id": null,
@@ -360,38 +395,46 @@ Name | Required | Description | Default Value | Example
   ]
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MSD-010 | Device not Found | Data Not Found
+#### Failure details
 
-## PUT /devices/decommission/{id}
-This service will update existing devices. 
+| Error Code  | Error Message         | Error Description                    |
+| ----------- | --------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error | If system error occurs               |
+| KER-ATH-403 | Forbidden             | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed | If no role/invalid token is detected |
+| KER-MSD-010 | Device not Found      | Data Not Found                       |
 
-### Resource URL
+### PUT /devices/decommission/{id}
+
+This service will update existing devices.
+
+#### Resource URL
+
 `PUT /devices/decommission/{id}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-id | Yes | Device ID | -NA- | -NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
--NA-
+#### Parameters
 
-### Example Response
-```JSON
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| id   | Yes      | Device ID   | -NA-          | -NA-    |
+
+#### Example Request
+
+\-NA-
+
+#### Example Response
+
+```
 {
     "id": null,
     "version": null,
@@ -403,9 +446,11 @@ id | Yes | Device ID | -NA- | -NA-
     "errors": null
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Error Response
+#### Error Response
+
 ```
 {
   "id": null,
@@ -421,37 +466,44 @@ id | Yes | Device ID | -NA- | -NA-
   ]
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 | Internal Server Error| If system error occurs
-KER-ATH-403 | Forbidden| If unauthorized role detected
-KER-ATH-401 | Authentication Failed| If no role/invalid token is detected
-KER-MSD-083 | Error occurred while updating Device details
-KER-MSD-010 | Device not Found | Data Not Found
-KER-MSD-439 | Admin not authorized to access this Device for this Zone | When Admin is not allowed to created a device for a Zone
+#### Failure details
 
-## DELETE /devices/{id}
-This service will delete the devices. 
+| Error Code  | Error Message                                            | Error Description                                        |
+| ----------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| KER-MSD-500 | Internal Server Error                                    | If system error occurs                                   |
+| KER-ATH-403 | Forbidden                                                | If unauthorized role detected                            |
+| KER-ATH-401 | Authentication Failed                                    | If no role/invalid token is detected                     |
+| KER-MSD-083 | Error occurred while updating Device details             |                                                          |
+| KER-MSD-010 | Device not Found                                         | Data Not Found                                           |
+| KER-MSD-439 | Admin not authorized to access this Device for this Zone | When Admin is not allowed to created a device for a Zone |
 
-### Resource URL
+### DELETE /devices/{id}
+
+This service will delete the devices.
+
+#### Resource URL
+
 `DELETE https://{base_url}/v1/masterdata/devices/{id}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-deviceId|Yes|The device Id| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name     | Required | Description   | Default Value | Example |
+| -------- | -------- | ------------- | ------------- | ------- |
+| deviceId | Yes      | The device Id |               |         |
+
+#### Example Response
+
+```
 {
   "id": null,
   "version": null,
@@ -463,10 +515,12 @@ deviceId|Yes|The device Id| |
   "errors": null
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Failure Response:
-```JSON
+#### Failure Response:
+
+```
 {
   "id": null,
   "version": null,
@@ -482,67 +536,68 @@ deviceId|Yes|The device Id| |
 }
 ```
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-009 | Error occurred while fetching Devices | Fetch Issue
-KER-MSD-069 | Error occurred while inserting Device details | Insertion Issue
-KER-MSD-010 | Device not Found | Data Not Found
-KER-MSD-083 | Error while updating | Update Issue
-KER-MSD-084 | Error while deleting | Deletion Issue
-KER-MSD-147 | Cannot delete as dependency found | Deletion Issue because of dependency
-KER-MSD-439 | Admin not authorized to access this Device for this Zone | When Admin is not allowed to created a device for a Zone
+#### Failure details
 
-## POST /devices/search
+| Error Code  | Error Message                                            | Error Description                                        |
+| ----------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| KER-MSD-009 | Error occurred while fetching Devices                    | Fetch Issue                                              |
+| KER-MSD-069 | Error occurred while inserting Device details            | Insertion Issue                                          |
+| KER-MSD-010 | Device not Found                                         | Data Not Found                                           |
+| KER-MSD-083 | Error while updating                                     | Update Issue                                             |
+| KER-MSD-084 | Error while deleting                                     | Deletion Issue                                           |
+| KER-MSD-147 | Cannot delete as dependency found                        | Deletion Issue because of dependency                     |
+| KER-MSD-439 | Admin not authorized to access this Device for this Zone | When Admin is not allowed to created a device for a Zone |
+
+### POST /devices/search
+
 This service is for the devices search functionality. All the filter parameters are passed and the devices are searched and the matching results are returned.
 
-### Resource URL
+#### Resource URL
+
 `POST /devices/search`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["contains","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the fromName| -NA- |
-toValue|No|If the type is "between", this field is the value of the toName| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 0
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Filter Values
-Please find the filter columns used in search
-	* name
-	* isActive
-	* macAddress
-	* serialNum
-	* mapStatus
-	* deviceTypeName
+#### Parameters
 
-Filter Name| Search Values
------|----------
-Device Name|["contains","equals","startsWith"]
-Status|["contains","equals","startsWith"]
-MAC Address|["contains","equals","startsWith"]
-Serial Number|["contains","equals","startsWith"]
-Map Status|["contains","equals","startsWith"]
-Device Type|["contains","equals","startsWith"]
-Device Specification ID|["contains","equals","startsWith"]
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["contains","equals","startsWith","between"]           | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the fromName               | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the toName                 | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 0             |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
 
-### Example Request
-```JSON
+#### Filter Values
+
+Please find the filter columns used in search \* name \* isActive \* macAddress \* serialNum \* mapStatus \* deviceTypeName
+
+| Filter Name             | Search Values                       |
+| ----------------------- | ----------------------------------- |
+| Device Name             | \["contains","equals","startsWith"] |
+| Status                  | \["contains","equals","startsWith"] |
+| MAC Address             | \["contains","equals","startsWith"] |
+| Serial Number           | \["contains","equals","startsWith"] |
+| Map Status              | \["contains","equals","startsWith"] |
+| Device Type             | \["contains","equals","startsWith"] |
+| Device Specification ID | \["contains","equals","startsWith"] |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -573,8 +628,9 @@ Device Specification ID|["contains","equals","startsWith"]
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -601,30 +657,36 @@ Device Specification ID|["contains","equals","startsWith"]
   }
 }
 ```
+
 **Response codes: 200 Ok**
 
-## POST /devices/filtervalues
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+### POST /devices/filtervalues
 
-### Resource URL
+This service returns the filter values which are required in the dropdown entries of the filter screen.
+
+#### Resource URL
+
 `POST /devices/filtervalues`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
 	"id": "string",
 	"metadata": {},
@@ -642,8 +704,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -660,39 +723,46 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+
 **Response codes: 200 Ok**
 
-----
+***
 
-# Device Types
-* [POST /devicetypes](#post-devicetypes)
-* [PUT /devicetypes](#put-devicetypes)
-* [POST /devicetypes/search](#post-devicetypes-search)
-* [POST /devicetypes/filtervalues](#post-devicetypes-filtervalues)
+## Device Types
 
-## POST /devicetypes
-This service will create the list of Device types which are used in the MOSIP platform. 
+* [POST /devicetypes](Device-APIs.md#post-devicetypes)
+* [PUT /devicetypes](Device-APIs.md#put-devicetypes)
+* [POST /devicetypes/search](Device-APIs.md#post-devicetypes-search)
+* [POST /devicetypes/filtervalues](Device-APIs.md#post-devicetypes-filtervalues)
 
-### Resource URL
+### POST /devicetypes
+
+This service will create the list of Device types which are used in the MOSIP platform.
+
+#### Resource URL
+
 `POST /devicetypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-devicetypecode|Yes|Code of the device type| | 
-devicename|Yes|Name of the device type| | 
-description|Yes|Description of the device type| | 
-languagecode|Yes|Language code of the device type| | 
-isactive|Yes|Is the device type active?| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name           | Required | Description                      | Default Value | Example |
+| -------------- | -------- | -------------------------------- | ------------- | ------- |
+| devicetypecode | Yes      | Code of the device type          |               |         |
+| devicename     | Yes      | Name of the device type          |               |         |
+| description    | Yes      | Description of the device type   |               |         |
+| languagecode   | Yes      | Language code of the device type |               |         |
+| isactive       | Yes      | Is the device type active?       |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -708,8 +778,9 @@ isactive|Yes|Is the device type active?| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -722,39 +793,46 @@ isactive|Yes|Is the device type active?| |
   }
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-053 |  Error occurred while inserting Device Type details | Insertion Issue
-KER-MSD-003 |  Required Device Type detail Not Found | Data Not Found
-KER-MSD-002 |  Error occurred while mapping Device Type details | Mapping Issue
-KER-MSD-054 |  Error occurred while fetching Device Type details | Fetch Issue
+#### Failure details
 
-## PUT /devicetypes
-This service will update the list of Device types which are used in the MOSIP platform. 
+| Error Code  | Error Message                                      | Error Description |
+| ----------- | -------------------------------------------------- | ----------------- |
+| KER-MSD-053 | Error occurred while inserting Device Type details | Insertion Issue   |
+| KER-MSD-003 | Required Device Type detail Not Found              | Data Not Found    |
+| KER-MSD-002 | Error occurred while mapping Device Type details   | Mapping Issue     |
+| KER-MSD-054 | Error occurred while fetching Device Type details  | Fetch Issue       |
 
-### Resource URL
+### PUT /devicetypes
+
+This service will update the list of Device types which are used in the MOSIP platform.
+
+#### Resource URL
+
 `PUT /devicetypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-devicetypecode|Yes|Code of the device type| | 
-devicename|Yes|Name of the device type| | 
-description|Yes|Description of the device type| | 
-languagecode|Yes|Language code of the device type| | 
-isactive|Yes|Is the device type active?| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name           | Required | Description                      | Default Value | Example |
+| -------------- | -------- | -------------------------------- | ------------- | ------- |
+| devicetypecode | Yes      | Code of the device type          |               |         |
+| devicename     | Yes      | Name of the device type          |               |         |
+| description    | Yes      | Description of the device type   |               |         |
+| languagecode   | Yes      | Language code of the device type |               |         |
+| isactive       | Yes      | Is the device type active?       |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -770,8 +848,9 @@ isactive|Yes|Is the device type active?| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -784,51 +863,56 @@ isactive|Yes|Is the device type active?| |
   }
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-003 |  Required Device Type detail Not Found | Data Not Found
-KER-MSD-054 |  Error occurred while updating Device Type details | while updating Issue will occur 
+#### Failure details
 
-## POST /devicetypes/search
+| Error Code  | Error Message                                     | Error Description               |
+| ----------- | ------------------------------------------------- | ------------------------------- |
+| KER-MSD-003 | Required Device Type detail Not Found             | Data Not Found                  |
+| KER-MSD-054 | Error occurred while updating Device Type details | while updating Issue will occur |
+
+### POST /devicetypes/search
+
 This service is for the devices types search functionality. All the filter parameters are passed and the devices types are searched and the matching results are returned.
 
-### Resource URL
+#### Resource URL
+
 `POST /devicetypes/search`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["contains","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the fromName| -NA- |
-toValue|No|If the type is "between", this field is the value of the toName| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 0
-pageFetch| This is the amount of records to be fetched | 10 | 10
+#### Parameters
 
-### Filter Values
-Please find the filter columns used in search
-	* name
-	* status
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["contains","equals","startsWith","between"]           | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the fromName               | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the toName                 | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 0             |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
 
-### Example Request
-```JSON
+#### Filter Values
+
+Please find the filter columns used in search \* name \* status
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -859,8 +943,9 @@ Please find the filter columns used in search
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -883,30 +968,36 @@ Please find the filter columns used in search
   }
 }
 ```
+
 **Response codes: 200 Ok**
 
-## POST /devicetypes/filtervalues
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+### POST /devicetypes/filtervalues
 
-### Resource URL
+This service returns the filter values which are required in the dropdown entries of the filter screen.
+
+#### Resource URL
+
 `POST /devicetypes/filtervalues`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -924,8 +1015,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -942,46 +1034,53 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+
 **Response codes: 200 Ok**
 
-----
+***
 
-# Device Specifications
-* [POST /devicespecifications](#post-devicespecifications)
-* [PUT /devicespecifications](#put-devicespecifications)
-* [DELETE /devicespecifications/{id}](#delete-devicespecifications-id)
-* [GET /devicespecifications/{langcode}/{devicetypecode}](#get-devicespecifications-langcode-devicetypecode)
-* [GET /devicespecifications/{lang_code}](#get-devicespecifications-lang_code)
-* [POST /devicespecifications/search](#post-devicespecifications-search)
-* [POST /devicespecifications/filtervalues](#post-devicespecifications-filtervalues)
+## Device Specifications
 
-## POST /devicespecifications
-This service will create a Device Specification which are used in the MOSIP platform. 
+* [POST /devicespecifications](Device-APIs.md#post-devicespecifications)
+* [PUT /devicespecifications](Device-APIs.md#put-devicespecifications)
+* [DELETE /devicespecifications/{id}](Device-APIs.md#delete-devicespecifications-id)
+* [GET /devicespecifications/{langcode}/{devicetypecode}](Device-APIs.md#get-devicespecifications-langcode-devicetypecode)
+* [GET /devicespecifications/{lang\_code}](Device-APIs.md#get-devicespecifications-lang\_code)
+* [POST /devicespecifications/search](Device-APIs.md#post-devicespecifications-search)
+* [POST /devicespecifications/filtervalues](Device-APIs.md#post-devicespecifications-filtervalues)
 
-### Resource URL
+### POST /devicespecifications
+
+This service will create a Device Specification which are used in the MOSIP platform.
+
+#### Resource URL
+
 `https://mosip.io/v1/masterdata/devicespecifications`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-id|Yes|ID of the Device Specification| | 
-name|Yes|Name of the Device Specification| | 
-brand|Yes|Brand of the Device specification| | 
-model|Yes|Model of the Device specification| | 
-deviceTypeCode|Yes|device type code of the Device specification| | 
-minDriverversion|Yes|Minimum driver version required for the Device specification| | 
-description|Yes|Description of the Device specification| | 
-langCode|Yes|Language of the Device specification| | 
-isActive|Yes|Is the Device Specification active| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name             | Required | Description                                                  | Default Value | Example |
+| ---------------- | -------- | ------------------------------------------------------------ | ------------- | ------- |
+| id               | Yes      | ID of the Device Specification                               |               |         |
+| name             | Yes      | Name of the Device Specification                             |               |         |
+| brand            | Yes      | Brand of the Device specification                            |               |         |
+| model            | Yes      | Model of the Device specification                            |               |         |
+| deviceTypeCode   | Yes      | device type code of the Device specification                 |               |         |
+| minDriverversion | Yes      | Minimum driver version required for the Device specification |               |         |
+| description      | Yes      | Description of the Device specification                      |               |         |
+| langCode         | Yes      | Language of the Device specification                         |               |         |
+| isActive         | Yes      | Is the Device Specification active                           |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -1001,34 +1100,41 @@ isActive|Yes|Is the Device Specification active| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string"
 }
 ```
+
 **Response codes: 200 Ok**
 
-## PUT /devicespecifications
-This service will update a Device Specification which are used in the MOSIP platform. 
+### PUT /devicespecifications
 
-### Resource URL
+This service will update a Device Specification which are used in the MOSIP platform.
+
+#### Resource URL
+
 `PUT /devicespecifications`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-id|Yes|ID of the Device Specification| | 
-lang_code|Yes|Language code of the Device Specification| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name       | Required | Description                               | Default Value | Example |
+| ---------- | -------- | ----------------------------------------- | ------------- | ------- |
+| id         | Yes      | ID of the Device Specification            |               |         |
+| lang\_code | Yes      | Language code of the Device Specification |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1048,33 +1154,40 @@ lang_code|Yes|Language code of the Device Specification| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string"
 }
 ```
+
 **Response codes: 200 Ok**
 
-## DELETE /devicespecifications/{id}
-This service deletes a Device Specification from the Device Specifications master module. 
+### DELETE /devicespecifications/{id}
 
-### Resource URL
+This service deletes a Device Specification from the Device Specifications master module.
+
+#### Resource URL
+
 `DELETE /devicespecifications/{id}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-id|Yes|ID of the Device Specification| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description                    | Default Value | Example |
+| ---- | -------- | ------------------------------ | ------------- | ------- |
+| id   | Yes      | ID of the Device Specification |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1086,33 +1199,40 @@ id|Yes|ID of the Device Specification| |
    }
 }
 ```
+
 **Response codes: 200 Ok**
 
-## GET /devicespecifications/{langcode}/{devicetypecode}
-This service will provides the list of all Device Specifications for specified language code and device type code . 
+### GET /devicespecifications/{langcode}/{devicetypecode}
 
-### Resource URL
+This service will provides the list of all Device Specifications for specified language code and device type code .
+
+#### Resource URL
+
 `GET /devicespecifications/{langcode}/{devicetypecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-lang_code|Yes|Language code of the Device Specification| |
-dtyp_code|Yes|device type code of the Device specification| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name       | Required | Description                                  | Default Value | Example |
+| ---------- | -------- | -------------------------------------------- | ------------- | ------- |
+| lang\_code | Yes      | Language code of the Device Specification    |               |         |
+| dtyp\_code | Yes      | device type code of the Device specification |               |         |
+
+#### Example Request
+
+```
 -NA-
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1136,32 +1256,39 @@ dtyp_code|Yes|device type code of the Device specification| |
 }
 }
 ```
+
 **Response codes: 200 Ok**
 
-## GET /devicespecifications/{lang_code}
-This service will provides the list of all Device Specifications in a specific language. 
+### GET /devicespecifications/{lang\_code}
 
-### Resource URL
+This service will provides the list of all Device Specifications in a specific language.
+
+#### Resource URL
+
 `GET /devicespecifications/{lang_code}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-lang_code|Yes|Language code of the Device Specification| |
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name       | Required | Description                               | Default Value | Example |
+| ---------- | -------- | ----------------------------------------- | ------------- | ------- |
+| lang\_code | Yes      | Language code of the Device Specification |               |         |
+
+#### Example Request
+
+```
 -NA-
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1185,10 +1312,12 @@ lang_code|Yes|Language code of the Device Specification| |
  }
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Failure Response:
-```JSON
+#### Failure Response:
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1201,55 +1330,60 @@ lang_code|Yes|Language code of the Device Specification| |
   "response" : null
 }
 ```
+
 **Response codes: 200 Ok**
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-011 | Error occurred while fetching Device Specifications | Fetch Issue
-KER-MSD-054 | Error occurred while inserting Device Specification details | Insertion Issue
-KER-MSD-012 | Device Specification not found | Data Not Found
-KER-MSD-081 | Error occurred while updating Device Specification | Update Issue
-KER-MSD-082 | Error occurred while deleting Device Specification | Deletion Issue
-KER-MSD-121 | Cannot delete dependency found | Deletion Issue because of dependency
+#### Failure details
 
-## POST /devicespecifications/search
+| Error Code  | Error Message                                               | Error Description                    |
+| ----------- | ----------------------------------------------------------- | ------------------------------------ |
+| KER-MSD-011 | Error occurred while fetching Device Specifications         | Fetch Issue                          |
+| KER-MSD-054 | Error occurred while inserting Device Specification details | Insertion Issue                      |
+| KER-MSD-012 | Device Specification not found                              | Data Not Found                       |
+| KER-MSD-081 | Error occurred while updating Device Specification          | Update Issue                         |
+| KER-MSD-082 | Error occurred while deleting Device Specification          | Deletion Issue                       |
+| KER-MSD-121 | Cannot delete dependency found                              | Deletion Issue because of dependency |
+
+### POST /devicespecifications/search
+
 This service is for the devices specifications search functionality. All the filter parameters are passed and the device specifications are searched and the matching results are returned.
 
-### Resource URL
+#### Resource URL
+
 `POST /devicespecifications/search`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["contains","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the start range| -NA- |
-toValue|No|If the type is "between", this field is the value of the end range| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 0
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Filter Values
-Please find the filter columns used in search
-	* name
-	* isActive
-	* deviceTypeName
+#### Parameters
 
-### Example Request
-```JSON
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["contains","equals","startsWith","between"]           | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the start range            | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the end range              | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 0             |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
+
+#### Filter Values
+
+Please find the filter columns used in search \* name \* isActive \* deviceTypeName
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -1280,8 +1414,9 @@ Please find the filter columns used in search
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1308,30 +1443,36 @@ Please find the filter columns used in search
   }
 }
 ```
+
 **Response codes: 200 Ok**
 
-## POST /devicespecifications/filtervalues
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+### POST /devicespecifications/filtervalues
 
-### Resource URL
+This service returns the filter values which are required in the dropdown entries of the filter screen.
+
+#### Resource URL
+
 `POST /devicespecifications/filtervalues`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -1349,8 +1490,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1368,4 +1510,5 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+
 **Response codes: 200 Ok**

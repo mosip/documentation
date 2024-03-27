@@ -1,34 +1,43 @@
+# Device Type and Subtype APIs
+
 This page contains detail about the Device type and Device subtype API's.
-* [Device Types](#device-types)
-* [Device Subtypes](#device-subtypes)
 
-# Device Types
-* [POST /devicetypes](#post-devicetypes)
-* [GET /devicetypes/{code}](#get-devicetypes-code)
-* [PUT /devicetypes](#put-devicetypes)
-* [DELETE /devicetypes/{code}](#delete-devicetypes-code)
-	
-## POST /devicetypes 
-This service will create the Device Types which are used in the MOSIP platform. 
+* [Device Types](Device-Type-and-Subtype-APIs.md#device-types)
+* [Device Subtypes](Device-Type-and-Subtype-APIs.md#device-subtypes)
 
-### Resource URL
+## Device Types
+
+* [POST /devicetypes](Device-Type-and-Subtype-APIs.md#post-devicetypes)
+* [GET /devicetypes/{code}](Device-Type-and-Subtype-APIs.md#get-devicetypes-code)
+* [PUT /devicetypes](Device-Type-and-Subtype-APIs.md#put-devicetypes)
+* [DELETE /devicetypes/{code}](Device-Type-and-Subtype-APIs.md#delete-devicetypes-code)
+
+### POST /devicetypes
+
+This service will create the Device Types which are used in the MOSIP platform.
+
+#### Resource URL
+
 `POST /devicetypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|code of the device type| | 
-name|Yes|name of the device type| | 
-descr|No|description of the device type| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name  | Required | Description                    | Default Value | Example |
+| ----- | -------- | ------------------------------ | ------------- | ------- |
+| code  | Yes      | code of the device type        |               |         |
+| name  | Yes      | name of the device type        |               |         |
+| descr | No       | description of the device type |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -41,10 +50,12 @@ descr|No|description of the device type| |
   "version": "string"
 }
 ```
-### Example Response
 
-#### Success Response
-```JSON
+#### Example Response
+
+**Success Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -59,11 +70,12 @@ descr|No|description of the device type| |
   ],
 }
 ```
+
 **Response Code: 200 Ok**
 
-#### Error Response
+**Error Response**
 
-```JSON
+```
 {
   "id": "string",
   "version": "string",
@@ -78,36 +90,43 @@ descr|No|description of the device type| |
  "response": null
 }
 ```
+
 **Response Code: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
+#### Failure details
 
-## GET /devicetypes/{code}
-This service will provides the service to get the device types. 
+| Error Code  | Error Message         | Error Description                    |
+| ----------- | --------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error | If system error occurs               |
+| KER-ATH-403 | Forbidden             | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed | If no role/invalid token is detected |
 
-### Resource URL
+### GET /devicetypes/{code}
+
+This service will provides the service to get the device types.
+
+#### Resource URL
+
 `GET /devicetypes/{code}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
+#### Parameters
 
-#### Success Response
-```JSON
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+**Success Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -128,11 +147,12 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response Code: 200 Ok**
 
-#### Error Response
+**Error Response**
 
-```JSON
+```
 {
   "id": "string",
   "version": "string",
@@ -147,37 +167,44 @@ Name | Required | Description | Default Value | Example
  "response": null
 }
 ```
+
 **Response Code: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MDS-003 |Requiered Device Type details Not Found|Device code is not found
+#### Failure details
 
-## PUT /devicetypes
-This service will update the Device Types which are used in the MOSIP platform. 
+| Error Code  | Error Message                           | Error Description                    |
+| ----------- | --------------------------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error                   | If system error occurs               |
+| KER-ATH-403 | Forbidden                               | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed                   | If no role/invalid token is detected |
+| KER-MDS-003 | Requiered Device Type details Not Found | Device code is not found             |
 
-### Resource URL
+### PUT /devicetypes
+
+This service will update the Device Types which are used in the MOSIP platform.
+
+#### Resource URL
+
 `PUT /devicetypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|code of the device type| | 
-name|No|name of the device type| | 
-descr|No|description of the device type| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name  | Required | Description                    | Default Value | Example |
+| ----- | -------- | ------------------------------ | ------------- | ------- |
+| code  | Yes      | code of the device type        |               |         |
+| name  | No       | name of the device type        |               |         |
+| descr | No       | description of the device type |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -190,10 +217,12 @@ descr|No|description of the device type| |
   "version": "string"
 }
 ```
-### Example Response
 
-#### Success Response
-```JSON
+#### Example Response
+
+**Success Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -208,11 +237,12 @@ descr|No|description of the device type| |
   ],
 }
 ```
+
 **Response Code: 200 Ok**
 
-#### Error Response
+**Error Response**
 
-```JSON
+```
 {
   "id": "string",
   "version": "string",
@@ -227,38 +257,44 @@ descr|No|description of the device type| |
  "response": null
 }
 ```
+
 **Response Code: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MDS-003 |Requiered Device Type details Not Found|Device code is not found
+#### Failure details
 
-## DELETE /devicetypes/{code}
-This service will provides the service to delete the device types. 
+| Error Code  | Error Message                           | Error Description                    |
+| ----------- | --------------------------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error                   | If system error occurs               |
+| KER-ATH-403 | Forbidden                               | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed                   | If no role/invalid token is detected |
+| KER-MDS-003 | Requiered Device Type details Not Found | Device code is not found             |
 
-### Resource URL
+### DELETE /devicetypes/{code}
+
+This service will provides the service to delete the device types.
+
+#### Resource URL
+
 `DELETE /devicetypes/{code}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Example Response
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
 
-#### Success Response
-```JSON
+#### Example Response
+
+**Success Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -270,10 +306,12 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response Code: 200 Ok**
 
-#### Error Response
-```JSON
+**Error Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -288,44 +326,52 @@ Name | Required | Description | Default Value | Example
  "response": null
 }
 ```
+
 **Response Code: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MDS-003 |Requiered Device Type details Not Found|Device code is not found
+#### Failure details
 
-# Device Subtypes
-* [POST /devicesubtypes](#post-devicesubtypes)
-* [GET /devicesubtypes/{code}](#get-devicesubtypes-code)
-* [PUT /devicesubtypes](#put-devicesubtypes)
-* [DELETE /devicesubtypes/{code}](#delete-devicesubtypes-code)
-	
-## POST /devicesubtypes
-This service will create the Device Subtypes which are used in the MOSIP platform. 
+| Error Code  | Error Message                           | Error Description                    |
+| ----------- | --------------------------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error                   | If system error occurs               |
+| KER-ATH-403 | Forbidden                               | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed                   | If no role/invalid token is detected |
+| KER-MDS-003 | Requiered Device Type details Not Found | Device code is not found             |
 
-### Resource URL
+## Device Subtypes
+
+* [POST /devicesubtypes](Device-Type-and-Subtype-APIs.md#post-devicesubtypes)
+* [GET /devicesubtypes/{code}](Device-Type-and-Subtype-APIs.md#get-devicesubtypes-code)
+* [PUT /devicesubtypes](Device-Type-and-Subtype-APIs.md#put-devicesubtypes)
+* [DELETE /devicesubtypes/{code}](Device-Type-and-Subtype-APIs.md#delete-devicesubtypes-code)
+
+### POST /devicesubtypes
+
+This service will create the Device Subtypes which are used in the MOSIP platform.
+
+#### Resource URL
+
 `POST /devicesubtypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|code of the device subtype| | 
-deviceTypeCode|Yes|devicetype code of the device subtype| | 
-name|Yes|name of the device subtype| | 
-descr|No|description of the device subtype| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name           | Required | Description                           | Default Value | Example |
+| -------------- | -------- | ------------------------------------- | ------------- | ------- |
+| code           | Yes      | code of the device subtype            |               |         |
+| deviceTypeCode | Yes      | devicetype code of the device subtype |               |         |
+| name           | Yes      | name of the device subtype            |               |         |
+| descr          | No       | description of the device subtype     |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -339,10 +385,12 @@ descr|No|description of the device subtype| |
   "version": "string"
 }
 ```
-### Example Response
 
-#### Success Response
-```JSON
+#### Example Response
+
+**Success Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -357,10 +405,12 @@ descr|No|description of the device subtype| |
   ],
 }
 ```
+
 **Response Code: 200 Ok**
 
-#### Error Response
-```JSON
+**Error Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -375,36 +425,43 @@ descr|No|description of the device subtype| |
  "response": null
 }
 ```
+
 **Response Code: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
+#### Failure details
 
-## GET /devicesubtypes/{code}
-This service will provides the service to get the device subtypes. 
+| Error Code  | Error Message         | Error Description                    |
+| ----------- | --------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error | If system error occurs               |
+| KER-ATH-403 | Forbidden             | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed | If no role/invalid token is detected |
 
-### Resource URL
+### GET /devicesubtypes/{code}
+
+This service will provides the service to get the device subtypes.
+
+#### Resource URL
+
 `GET /devicesubtypes/{code}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
+#### Parameters
 
-#### Success Response
-```JSON
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+**Success Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -426,10 +483,12 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response Code: 200 Ok**
 
-#### Error Response
-```JSON
+**Error Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -444,37 +503,44 @@ Name | Required | Description | Default Value | Example
  "response": null
 }
 ```
+
 **Response Code: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
+#### Failure details
 
-## PUT /devicesubtypes
-This service will update the Device Subtypes which are used in the MOSIP platform. 
+| Error Code  | Error Message         | Error Description                    |
+| ----------- | --------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error | If system error occurs               |
+| KER-ATH-403 | Forbidden             | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed | If no role/invalid token is detected |
 
-### Resource URL
+### PUT /devicesubtypes
+
+This service will update the Device Subtypes which are used in the MOSIP platform.
+
+#### Resource URL
+
 `PUT /devicesubtypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|code of the device subtype| | 
-deviceTypeCode|Yes|devicetype code of the device subtype| | 
-name|Yes|name of the device subtype| | 
-descr|No|description of the device subtype| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name           | Required | Description                           | Default Value | Example |
+| -------------- | -------- | ------------------------------------- | ------------- | ------- |
+| code           | Yes      | code of the device subtype            |               |         |
+| deviceTypeCode | Yes      | devicetype code of the device subtype |               |         |
+| name           | Yes      | name of the device subtype            |               |         |
+| descr          | No       | description of the device subtype     |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -488,10 +554,12 @@ descr|No|description of the device subtype| |
   "version": "string"
 }
 ```
-### Example Response
 
-#### Success Response
-```JSON
+#### Example Response
+
+**Success Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -507,8 +575,9 @@ descr|No|description of the device subtype| |
 }
 ```
 
-#### Error Response
-```JSON
+**Error Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -524,34 +593,40 @@ descr|No|description of the device subtype| |
 }
 ```
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
+#### Failure details
 
-## DELETE /devicesubtypes/{code}
-This service will provides the service to delete the device subtypes. 
+| Error Code  | Error Message         | Error Description                    |
+| ----------- | --------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error | If system error occurs               |
+| KER-ATH-403 | Forbidden             | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed | If no role/invalid token is detected |
 
-### Resource URL
+### DELETE /devicesubtypes/{code}
+
+This service will provides the service to delete the device subtypes.
+
+#### Resource URL
+
 `DELETE /devicesubtypes/{code}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
+#### Parameters
 
-#### Success Response
-```JSON
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+**Success Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -563,10 +638,12 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response Code: 200 Ok**
 
-#### Error Response
-```JSON
+**Error Response**
+
+```
 {
   "id": "string",
   "version": "string",
@@ -581,11 +658,13 @@ Name | Required | Description | Default Value | Example
  "response": null
 }
 ```
+
 **Response Code: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
+#### Failure details
+
+| Error Code  | Error Message         | Error Description                    |
+| ----------- | --------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error | If system error occurs               |
+| KER-ATH-403 | Forbidden             | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed | If no role/invalid token is detected |

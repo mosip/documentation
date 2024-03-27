@@ -1,43 +1,46 @@
+# Packet APIs
+
 This section details about the service APIs in the Packet modules
 
-* [Packet Rejection Reasons API](#packet-rejection-reasons-master-api)
+* [Packet Rejection Reasons API](Packet-APIs.md#packet-rejection-reasons-master-api)
+* [Packet On Hold Reasons API](Packet-APIs.md#packet-on-hold-reasons-master-api)
 
-* [Packet On Hold Reasons API](#packet-on-hold-reasons-master-api)
+## Packet Rejection Reasons Master API
 
-# Packet Rejection Reasons Master API
+* [POST /packetrejectionreasons/reasoncategory](Packet-APIs.md#post-packetrejectionreasonsreasoncategory)
+* [POST /packetrejectionreasons/reasonlist](Packet-APIs.md#post-packetrejectionreasonsreasonlist)
+* [GET /packetrejectionreasons](Packet-APIs.md#get-packetrejectionreasons)
+* [GET /packetrejectionreasons/{reasoncategorycode}/{languagecode}](Packet-APIs.md#get-packetrejectionreasonsreasoncategorycodelanguagecode)
+* [GET /packetrejectionreasons/{id}/{languagecode}/{locationcode}](Packet-APIs.md#get-packetrejectionreasonsidlanguagecodelocationcode)
 
-* [POST /packetrejectionreasons/reasoncategory](#post-packetrejectionreasonsreasoncategory)
-* [POST /packetrejectionreasons/reasonlist](#post-packetrejectionreasonsreasonlist)
-* [GET /packetrejectionreasons](#get-packetrejectionreasons)
-* [GET /packetrejectionreasons/{reasoncategorycode}/{languagecode}](#get-packetrejectionreasonsreasoncategorycodelanguagecode)
-* [GET /packetrejectionreasons/{id}/{languagecode}/{locationcode}](#get-packetrejectionreasonsidlanguagecodelocationcode)
+## POST /packetrejectionreasons/reasoncategory
 
-# POST /packetrejectionreasons/reasoncategory
+This service will create the list of Packet Rejection Reasons which are used in the MOSIP platform.
 
-This service will create the list of Packet Rejection Reasons which are used in the MOSIP platform. 
+#### Resource URL
 
-### Resource URL
-### `POST /packetrejectionreasons/reasoncategory`
+#### `POST /packetrejectionreasons/reasoncategory`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Code of the reason category| | 
-name|Yes|Name of the reason category| | 
-description|Yes|description for the reason category| | 
-isActive|Yes|whether the reason category is in use| | 
-langCode|Yes|language code of the reason category| | 
+#### Parameters
 
+| Name        | Required | Description                           | Default Value | Example |
+| ----------- | -------- | ------------------------------------- | ------------- | ------- |
+| code        | Yes      | Code of the reason category           |               |         |
+| name        | Yes      | Name of the reason category           |               |         |
+| description | Yes      | description for the reason category   |               |         |
+| isActive    | Yes      | whether the reason category is in use |               |         |
+| langCode    | Yes      | language code of the reason category  |               |         |
 
-### Example Request
-```JSON
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -52,8 +55,10 @@ langCode|Yes|language code of the reason category| |
             }
 }
 ```
-### Example Response
-```JSON
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -68,7 +73,8 @@ langCode|Yes|language code of the reason category| |
 			
 	
 ```
-### Response codes
+
+#### Response codes
 
 201
 
@@ -86,34 +92,35 @@ Description: Unauthorized
 
 Description: Forbidden
 
+## POST /packetrejectionreasons/reasonlist
 
-# POST /packetrejectionreasons/reasonlist
+This service will create the list of Packet Rejection Reasons which are used in the MOSIP platform.
 
-This service will create the list of Packet Rejection Reasons which are used in the MOSIP platform. 
+#### Resource URL
 
-### Resource URL
-### `POST /packetrejectionreasons/reasonlist`
+#### `POST /packetrejectionreasons/reasonlist`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Code of the reason category| | 
-name|Yes|Name of the reason category| | 
-description|Yes|description for the reason category| |
-rsnCatCode|Yes|foreign key reference from reason category code| | 
-isActive|Yes|whether the reason category is in use| | 
-langCode|Yes|language code of the reason category| | 
+#### Parameters
 
+| Name        | Required | Description                                     | Default Value | Example |
+| ----------- | -------- | ----------------------------------------------- | ------------- | ------- |
+| code        | Yes      | Code of the reason category                     |               |         |
+| name        | Yes      | Name of the reason category                     |               |         |
+| description | Yes      | description for the reason category             |               |         |
+| rsnCatCode  | Yes      | foreign key reference from reason category code |               |         |
+| isActive    | Yes      | whether the reason category is in use           |               |         |
+| langCode    | Yes      | language code of the reason category            |               |         |
 
-### Example Request
-```JSON
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -133,8 +140,10 @@ langCode|Yes|language code of the reason category| |
              }
 }
 ```
-### Example Response
-```JSON		
+
+#### Example Response
+
+```
  {
   "id": "string",
   "version": "string",
@@ -150,7 +159,8 @@ langCode|Yes|language code of the reason category| |
 			
 	
 ```
-### Response codes
+
+#### Response codes
 
 201
 
@@ -168,32 +178,32 @@ Description: Unauthorized
 
 Description: Forbidden
 
+## GET /packetrejectionreasons
 
-# GET /packetrejectionreasons
-Master data is required across the platform. 
+Master data is required across the platform.
 
 This service will provides the service for the List of Packet Rejection Reasons.
 
+#### Resource URL
 
+#### `GET /packetrejectionreasons`
 
-### Resource URL
-### `GET /packetrejectionreasons`
+#### Resource details
 
-### Resource details
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Parameters
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-NA
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| NA   |          |             |               |         |
 
+#### Example Response
 
-### Example Response
-```JSON
+```
 {
   "id": "string",
   "version": "string",
@@ -231,6 +241,7 @@ NA
    }
 }
 ```
+
 200
 
 Description: Success
@@ -247,30 +258,30 @@ Description: Unauthorized
 
 Description: Not Found
 
+## GET /packetrejectionreasons/{reasoncategorycode}/{languagecode}
 
-# GET /packetrejectionreasons/{reasoncategorycode}/{languagecode}
+This service will provides the service for the List of Packet Rejection Reasons.
 
-This service will provides the service for the List of Packet Rejection Reasons. 
+#### Resource URL
 
+#### `GET /packetrejectionreasons/{reasoncategorycode}/{languagecode}`
 
-### Resource URL
-### `GET /packetrejectionreasons/{reasoncategorycode}/{languagecode}`
+#### Resource details
 
-### Resource details
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Parameters
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-NA
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| NA   |          |             |               |         |
 
+#### Example Response
 
-### Example Response
-```JSON
+```
 {
   "id": "string",
   "version": "string",
@@ -306,6 +317,7 @@ NA
   }
 }
 ```
+
 200
 
 Description: Success
@@ -322,31 +334,31 @@ Description: Unauthorized
 
 Description: Not Found
 
+## GET /packetrejectionreasons/{id}/{languagecode}/{locationcode}
 
-# GET /packetrejectionreasons/{id}/{languagecode}/{locationcode}
+This service will provides the service for the List of Packet Rejection Reasons based on id, language and location code.
 
-This service will provides the service for the List of Packet Rejection Reasons based on id, language and location code. 
+#### Resource URL
 
+#### `GET /packetrejectionreasons/{id}/{languagecode}/{locationcode}`
 
-### Resource URL
-### `GET /packetrejectionreasons/{id}/{languagecode}/{locationcode}`
+#### Resource details
 
-### Resource details
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Parameters
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-packetrejectionreasonid|Yes|Code of the language| | 
-packetrejectionreasondesc|Yes|Name of the language| | 
+| Name                      | Required | Description          | Default Value | Example |
+| ------------------------- | -------- | -------------------- | ------------- | ------- |
+| packetrejectionreasonid   | Yes      | Code of the language |               |         |
+| packetrejectionreasondesc | Yes      | Name of the language |               |         |
 
+#### Example Response
 
-### Example Response
-```JSON
+```
 {
   "id": "string",
   "version": "string",
@@ -371,6 +383,7 @@ packetrejectionreasondesc|Yes|Name of the language| |
       }
 }
 ```
+
 200
 
 Description: Success
@@ -387,8 +400,9 @@ Description: Unauthorized
 
 Description: Not Found
 
-### Failure Response
-```JSON
+#### Failure Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -402,42 +416,45 @@ Description: Not Found
 }
 ```
 
-#### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-035 | Error occurred while fetching Reasons | Fetch Issue
-KER-MSD-057 | Error occurred while inserting reason details | Insertion Issue
-KER-MSD-036 | Reason not found | Data Not Found
-KER-MSD-058 | Error occurred while inserting reason details | List Insertion Issue
+**Failure details**
 
+| Error Code  | Error Message                                 | Error Description    |
+| ----------- | --------------------------------------------- | -------------------- |
+| KER-MSD-035 | Error occurred while fetching Reasons         | Fetch Issue          |
+| KER-MSD-057 | Error occurred while inserting reason details | Insertion Issue      |
+| KER-MSD-036 | Reason not found                              | Data Not Found       |
+| KER-MSD-058 | Error occurred while inserting reason details | List Insertion Issue |
 
-# Packet On-hold Reasons Master API
+## Packet On-hold Reasons Master API
 
-* [POST /packetonholdreasons](#post-packetonholdreasons)
-* [GET /packetonholdreasons](#get-packetonholdreasons)
-* [GET /packetonholdreasons/{id}/{languagecode}](#get-packetonholdreasonsidlanguagecode)
+* [POST /packetonholdreasons](Packet-APIs.md#post-packetonholdreasons)
+* [GET /packetonholdreasons](Packet-APIs.md#get-packetonholdreasons)
+* [GET /packetonholdreasons/{id}/{languagecode}](Packet-APIs.md#get-packetonholdreasonsidlanguagecode)
 
-# POST /packetonholdreasons
+## POST /packetonholdreasons
 
-This service will create the list of Packet On-hold Reasons which are used in the MOSIP platform. 
+This service will create the list of Packet On-hold Reasons which are used in the MOSIP platform.
 
-### Resource URL
-### `POST /packetonholdreasons`
+#### Resource URL
 
-### Resource details
+#### `POST /packetonholdreasons`
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-packetonholdreasondesc|Yes|Name of the packet rejection reason| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name                   | Required | Description                         | Default Value | Example |
+| ---------------------- | -------- | ----------------------------------- | ------------- | ------- |
+| packetonholdreasondesc | Yes      | Name of the packet rejection reason |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -457,8 +474,10 @@ packetonholdreasondesc|Yes|Name of the packet rejection reason| |
 	}
 }
 ```
-### Example Response
-```JSON
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -477,7 +496,9 @@ packetonholdreasondesc|Yes|Name of the packet rejection reason| |
              }
   }
 ```
-### Response codes
+
+#### Response codes
+
 202
 
 Description: Accepted
@@ -494,32 +515,33 @@ Description: Unauthorized
 
 Description: Forbidden
 
-# GET /packetonholdreasons
-Master data is required across the platform. 
+## GET /packetonholdreasons
+
+Master data is required across the platform.
 
 This service will provides the service for the List of Packet On-hold Reasons.
 
+#### Resource URL
 
+#### `GET /packetonholdreasons`
 
-### Resource URL
-### `GET /packetonholdreasons`
+#### Resource details
 
-### Resource details
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Parameters
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-packetonholdreasonid|Yes|Code of the language| | 
-packetonholdreasondesc|Yes|Name of the language| | 
+| Name                   | Required | Description          | Default Value | Example |
+| ---------------------- | -------- | -------------------- | ------------- | ------- |
+| packetonholdreasonid   | Yes      | Code of the language |               |         |
+| packetonholdreasondesc | Yes      | Name of the language |               |         |
 
+#### Example Response
 
-### Example Response
-```JSON
+```
 {
   "id": "string",
   "version": "string",
@@ -542,6 +564,7 @@ packetonholdreasondesc|Yes|Name of the language| |
          }
 }
 ```
+
 200
 
 Description: Success
@@ -558,31 +581,31 @@ Description: Unauthorized
 
 Description: Not Found
 
+## GET /packetonholdreasons/{id}/{languagecode}
 
-# GET /packetonholdreasons/{id}/{languagecode}
+This service will provides the service for the List of Packet On-hold Reasons.
 
-This service will provides the service for the List of Packet On-hold Reasons. 
+#### Resource URL
 
+#### `GET /packetonholdreasons/{id}/{languagecode}`
 
-### Resource URL
-### `GET /packetonholdreasons/{id}/{languagecode}`
+#### Resource details
 
-### Resource details
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Parameters
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-packetonholdreasonid|Yes|Code of the language| | 
-packetonholdreasondesc|Yes|Name of the language| | 
+| Name                   | Required | Description          | Default Value | Example |
+| ---------------------- | -------- | -------------------- | ------------- | ------- |
+| packetonholdreasonid   | Yes      | Code of the language |               |         |
+| packetonholdreasondesc | Yes      | Name of the language |               |         |
 
+#### Example Response
 
-### Example Response
-```JSON
+```
 {
   "id": "string",
   "version": "string",
@@ -605,6 +628,7 @@ packetonholdreasondesc|Yes|Name of the language| |
                   }
   }
 ```
+
 200
 
 Description: Success
@@ -621,8 +645,9 @@ Description: Unauthorized
 
 Description: Not Found
 
-### Failure Response
-```JSON
+#### Failure Response
+
+```
 {
   "id": "string",
   "version": "string",

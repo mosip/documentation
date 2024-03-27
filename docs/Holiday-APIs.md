@@ -1,35 +1,43 @@
+# Holiday APIs
+
 This section details about the service APIs for the Holidays.
 
-# Holidays
-* [GET /holidays](#get-holidays)
-* [POST /holidays](#post-holidays)
-* [PUT /holidays](#put-holidays)
-* [DELETE /holidays](#delete-holidays)
-* [GET /holidays/{holidayid}](#get-holidays-holidayid)
-* [GET /holidays/{holidayid}/{langcode}](#get-holidays-holidayid-langcode)
-* [GET /holidays/all](#get-holidays-all)
-* [POST /holidays/filtervalues](#post-holidays-filtervalues)
-* [POST /holidays/search](#post-holidays-search)
+## Holidays
 
-## GET /holidays
-This service will get all the holidays. 
+* [GET /holidays](Holiday-APIs.md#get-holidays)
+* [POST /holidays](Holiday-APIs.md#post-holidays)
+* [PUT /holidays](Holiday-APIs.md#put-holidays)
+* [DELETE /holidays](Holiday-APIs.md#delete-holidays)
+* [GET /holidays/{holidayid}](Holiday-APIs.md#get-holidays-holidayid)
+* [GET /holidays/{holidayid}/{langcode}](Holiday-APIs.md#get-holidays-holidayid-langcode)
+* [GET /holidays/all](Holiday-APIs.md#get-holidays-all)
+* [POST /holidays/filtervalues](Holiday-APIs.md#post-holidays-filtervalues)
+* [POST /holidays/search](Holiday-APIs.md#post-holidays-search)
 
-### Resource URL
+### GET /holidays
+
+This service will get all the holidays.
+
+#### Resource URL
+
 `GET /holidays`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
---NA-- 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name   | Required | Description | Default Value | Example |
+| ------ | -------- | ----------- | ------------- | ------- |
+| --NA-- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": null,
   "version": null,
@@ -54,34 +62,40 @@ Name | Required | Description | Default Value | Example
   "errors": null
 }
 ```
+
 **Response Code : 200 (OK)**
 
-## POST /holidays
-This service will create a new holiday. 
+### POST /holidays
 
-### Resource URL
+This service will create a new holiday.
+
+#### Resource URL
+
 `POST /holidays`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-locationCode | Yes | location code ||
-holidayDate | Yes| date ||
-holidayMonth | Yes | month || 
-holidayYear |Yes | year ||
-holidayName |Yes | name ||
-holidayDesc |Yes | description ||
-langCode |Yes | language code ||
-isActive |Yes | is active? ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description   | Default Value | Example |
+| ------------ | -------- | ------------- | ------------- | ------- |
+| locationCode | Yes      | location code |               |         |
+| holidayDate  | Yes      | date          |               |         |
+| holidayMonth | Yes      | month         |               |         |
+| holidayYear  | Yes      | year          |               |         |
+| holidayName  | Yes      | name          |               |         |
+| holidayDesc  | Yes      | description   |               |         |
+| langCode     | Yes      | language code |               |         |
+| isActive     | Yes      | is active?    |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -102,8 +116,9 @@ isActive |Yes | is active? ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -123,36 +138,41 @@ isActive |Yes | is active? ||
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
-## PUT /holidays
-This service will update a holiday. 
+### PUT /holidays
 
-### Resource URL
+This service will update a holiday.
+
+#### Resource URL
+
 `PUT /holidays`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-locationCode | Yes | location code ||
-holidayDate | Yes| date ||
-newHolidayDate | Yes | new date || 
-newHolidayName | Yes | new name ||
-holidayName | Yes | name ||
-holidayDesc | Yes | description ||
-langCode | Yes | language code ||
-isActive | Yes | is active? ||
-newHolidayDesc | Yes | new description ||
+#### Parameters
 
-### Example Request
-```JSON
+| Name           | Required | Description     | Default Value | Example |
+| -------------- | -------- | --------------- | ------------- | ------- |
+| locationCode   | Yes      | location code   |               |         |
+| holidayDate    | Yes      | date            |               |         |
+| newHolidayDate | Yes      | new date        |               |         |
+| newHolidayName | Yes      | new name        |               |         |
+| holidayName    | Yes      | name            |               |         |
+| holidayDesc    | Yes      | description     |               |         |
+| langCode       | Yes      | language code   |               |         |
+| isActive       | Yes      | is active?      |               |         |
+| newHolidayDesc | Yes      | new description |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -173,8 +193,9 @@ newHolidayDesc | Yes | new description ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "holidayDate": "string",
   "holidayName": "string",
@@ -182,32 +203,35 @@ newHolidayDesc | Yes | new description ||
   "locationCode": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### DELETE /holidays
 
-## DELETE /holidays
-This service will provides the service to delete a holiday. 
+This service will provides the service to delete a holiday.
 
+#### Resource URL
 
-### Resource URL
 `DELETE /holidays`
 
-### Resource details
+#### Resource details
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-holidayDate | Yes | date to be deleted ||
-holidayName | Yes | name of the holiday to be deleted ||
-locationCode | Yes | location code ||
+#### Parameters
 
-### Example Request
-```JSON
+| Name         | Required | Description                       | Default Value | Example |
+| ------------ | -------- | --------------------------------- | ------------- | ------- |
+| holidayDate  | Yes      | date to be deleted                |               |         |
+| holidayName  | Yes      | name of the holiday to be deleted |               |         |
+| locationCode | Yes      | location code                     |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -221,36 +245,42 @@ locationCode | Yes | location code ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "holidayDate": "string",
   "holidayName": "string",
   "locationCode": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /holidays/{holidayid}
 
-## GET /holidays/{holidayid}
-This service will provides the service to get all holidays by Id. 
+This service will provides the service to get all holidays by Id.
 
-### Resource URL
+#### Resource URL
+
 `GET /holidays/{holidayid}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-holidayid | yes | holiday Id ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name      | Required | Description | Default Value | Example |
+| --------- | -------- | ----------- | ------------- | ------- |
+| holidayid | yes      | holiday Id  |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -280,29 +310,34 @@ holidayid | yes | holiday Id ||
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /holidays/{holidayid}/{langcode}
 
-## GET /holidays/{holidayid}/{langcode}
-This service will get all the holidays by holidayid and language code. 
+This service will get all the holidays by holidayid and language code.
 
-### Resource URL
+#### Resource URL
+
 `GET /holidays/{holidayid}/{langcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-holidayid | yes | holiday Id ||||
-langCode | Yes | language code ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name      | Required | Description   | Default Value | Example |
+| --------- | -------- | ------------- | ------------- | ------- |
+| holidayid | yes      | holiday Id    |               |         |
+| langCode  | Yes      | language code |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -332,31 +367,36 @@ langCode | Yes | language code ||
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
+### GET /holidays/all
 
-## GET /holidays/all
-This service will retrieve all the holidays with additional metadata. 
+This service will retrieve all the holidays with additional metadata.
 
-### Resource URL
+#### Resource URL
+
 `GET /holidays/all`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-orderBy | optional | response order	| desc	||
-pageNumber |optional | page no for the requested data | 0 ||	
-pageSize | optional	| page size for the requested data	| 10 ||
-sortBy | optional | sort the requested data based on param value | createdDateTime ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name       | Required | Description                                  | Default Value   | Example |
+| ---------- | -------- | -------------------------------------------- | --------------- | ------- |
+| orderBy    | optional | response order                               | desc            |         |
+| pageNumber | optional | page no for the requested data               | 0               |         |
+| pageSize   | optional | page size for the requested data             | 10              |         |
+| sortBy     | optional | sort the requested data based on param value | createdDateTime |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -394,47 +434,54 @@ sortBy | optional | sort the requested data based on param value | createdDateTi
 }
 ```
 
-### Response codes
-Response Code | Description
---------------|------------
-200 | Success
-400 | Bad request
-401 | Unauthorized
-403 | Forbidden
+#### Response codes
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-019 | Error occured while fetching Holidays | Fetch Issue
-KER-MSD-020 | Holiday not found | Data Not Found
-KER-MSD-065 | Error occurred while inserting holiday | Insertion Issue
-KER-MSD-099 | Error occurred while updating holiday | Update Issue
-KER-MSD-100 | Error occurred while deleting holiday | Deletion Issue
-KER-MSD-025 | Error occured while fetching Location Hierarchy | fetch issue
-KER-MSD-026 | Location not found | Data Not Found
+| Response Code | Description  |
+| ------------- | ------------ |
+| 200           | Success      |
+| 400           | Bad request  |
+| 401           | Unauthorized |
+| 403           | Forbidden    |
 
-## POST /holidays/filtervalues
+#### Failure details
+
+| Error Code  | Error Message                                   | Error Description |
+| ----------- | ----------------------------------------------- | ----------------- |
+| KER-MSD-019 | Error occured while fetching Holidays           | Fetch Issue       |
+| KER-MSD-020 | Holiday not found                               | Data Not Found    |
+| KER-MSD-065 | Error occurred while inserting holiday          | Insertion Issue   |
+| KER-MSD-099 | Error occurred while updating holiday           | Update Issue      |
+| KER-MSD-100 | Error occurred while deleting holiday           | Deletion Issue    |
+| KER-MSD-025 | Error occured while fetching Location Hierarchy | fetch issue       |
+| KER-MSD-026 | Location not found                              | Data Not Found    |
+
+### POST /holidays/filtervalues
+
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Holiday List View UI Screen.
 
-### Resource URL
+#### Resource URL
+
 `POST /holidays/filtervalues`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters | No| Array of the filter applied. In case of "list" screen, this array will be empty | -NA- |
-columnName |No | The column name in the JSON response | -NA- |
-type | No | The value have to be in ["unique","all"] | unique | unique
-languagecode | Yes | Language code in Language code in ISO 639-2 format | | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -462,8 +509,9 @@ languagecode | Yes | Language code in Language code in ISO 639-2 format | |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -485,45 +533,53 @@ languagecode | Yes | Language code in Language code in ISO 639-2 format | |
   "version": "string"
 }
 ```
+
 **Response Code : 200 (OK)**
 
-## POST /holidays/search
+### POST /holidays/search
+
 This API is used by the Administrator Portal to fetch list of Holidays based on a given filter criteria to display the list of Holidays on the Portal UI.
 
-### Resource URL
+#### Resource URL
+
 `POST /holidays/search`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["contains","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the fromName| -NA- |
-toValue|No|If the type is "between", this field is the value of the toName| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 0
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Filter Values
+#### Parameters
+
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["contains","equals","startsWith","between"]           | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the fromName               | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the toName                 | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 0             |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
+
+#### Filter Values
+
 Please find the filter columns used in search
-1) holidayName
-2) holidayDate|["between"]
-3) isActive
 
-### Example Request
-```JSON
+1. holidayName
+2. holidayDate|\["between"]
+3. isActive
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -554,8 +610,9 @@ Please find the filter columns used in search
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -583,6 +640,7 @@ Please find the filter columns used in search
   }
 }
 ```
+
 **Response Code : 200 (OK)**
 
-----
+***

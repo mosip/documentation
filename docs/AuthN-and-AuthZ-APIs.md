@@ -1,42 +1,50 @@
+# AuthN and AuthZ APIs
+
 This section contains all the Authentication and Authorization APIs.
-* [Authentication](#authentication)
-	* [Send OTP](#send-otp)
-	* [Authenticate using userID and OTP](#authenticate-using-userid-and-otp)
-	* [Authenticate using username and password](#authenticate-using-username-and-password)
-	* [Authenticate using clientid and secret key](#authenticate-using-clientid-and-secret-key)
-* [Authorization](#authorization)
-	* [Validate token](#validate-token)
-	* [Invalidate token](#invalidate-token)
-* [OTP services](#otp-services)
-	* [Generate OTP](#generate-otp)
-	* [Validate OTP](#validate-otp)
 
-# Authentication
+* [Authentication](AuthN-and-AuthZ-APIs.md#authentication)
+  * [Send OTP](AuthN-and-AuthZ-APIs.md#send-otp)
+  * [Authenticate using userID and OTP](AuthN-and-AuthZ-APIs.md#authenticate-using-userid-and-otp)
+  * [Authenticate using username and password](AuthN-and-AuthZ-APIs.md#authenticate-using-username-and-password)
+  * [Authenticate using clientid and secret key](AuthN-and-AuthZ-APIs.md#authenticate-using-clientid-and-secret-key)
+* [Authorization](AuthN-and-AuthZ-APIs.md#authorization)
+  * [Validate token](AuthN-and-AuthZ-APIs.md#validate-token)
+  * [Invalidate token](AuthN-and-AuthZ-APIs.md#invalidate-token)
+* [OTP services](AuthN-and-AuthZ-APIs.md#otp-services)
+  * [Generate OTP](AuthN-and-AuthZ-APIs.md#generate-otp)
+  * [Validate OTP](AuthN-and-AuthZ-APIs.md#validate-otp)
 
-## Send OTP
-This service sends an OTP to the user. The caller of this service have to send the channel in which the OTP will be sent. Based on the application ID, the corresponding channel's recipient address will be found out and the OTP is send accordingly. Note: At this point of time, no Auth Token will be generated. 
+## Authentication
 
-### Resource URL
+### Send OTP
+
+This service sends an OTP to the user. The caller of this service have to send the channel in which the OTP will be sent. Based on the application ID, the corresponding channel's recipient address will be found out and the OTP is send accordingly. Note: At this point of time, no Auth Token will be generated.
+
+#### Resource URL
+
 `POST https://{base_url}/v1/authmanager/authenticate/sendotp`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON Message
-Requires Authentication | No
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-userid | Yes | This is the userid of the user. Based on the useridtype, this will vary.| NA | M392380
-otpchannel | Yes | This is the channel in which the OTP will be sent. It is an array of the enumeration {"email", "phone"}. If the channel is not found, ChannelNotSupported error will be sent back| NA | phone
-useridtype | Yes | This field is the user id type. It should be one the {"UIN", "USERID"}. Based on the combination of "appid" and "useridtype" the system identifies from which system to pickup the channel's recipient address | NA | USERID
-appid | Yes | This is the application ID of the caller of this service. It should be on of the {"preregistration", "registrationclient", "registrationprocessor", "ida", "admin", "resident"} | NA | preregistration
-templateVariables | No| This is the map of custom template variables | NA | {"UIN":"2530192395"}
-context | Yes | This shows the purpose of the sending otp like Login, notification, etc. | "auth-otp" for default OTP| auth-otp, auth-login-otp
+| Resource Details        | Description  |
+| ----------------------- | ------------ |
+| Response format         | JSON Message |
+| Requires Authentication | No           |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name              | Required | Description                                                                                                                                                                                                    | Default Value              | Example                  |
+| ----------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | ------------------------ |
+| userid            | Yes      | This is the userid of the user. Based on the useridtype, this will vary.                                                                                                                                       | NA                         | M392380                  |
+| otpchannel        | Yes      | This is the channel in which the OTP will be sent. It is an array of the enumeration {"email", "phone"}. If the channel is not found, ChannelNotSupported error will be sent back                              | NA                         | phone                    |
+| useridtype        | Yes      | This field is the user id type. It should be one the {"UIN", "USERID"}. Based on the combination of "appid" and "useridtype" the system identifies from which system to pickup the channel's recipient address | NA                         | USERID                   |
+| appid             | Yes      | This is the application ID of the caller of this service. It should be on of the {"preregistration", "registrationclient", "registrationprocessor", "ida", "admin", "resident"}                                | NA                         | preregistration          |
+| templateVariables | No       | This is the map of custom template variables                                                                                                                                                                   | NA                         | {"UIN":"2530192395"}     |
+| context           | Yes      | This shows the purpose of the sending otp like Login, notification, etc.                                                                                                                                       | "auth-otp" for default OTP | auth-otp, auth-login-otp |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -55,11 +63,11 @@ context | Yes | This shows the purpose of the sending otp like Login, notificati
 }
 ```
 
-### Example Response
+#### Example Response
 
-#### Success Response 
+**Success Response**
 
-```JSON
+```
 {
   "id": "mosip.authentication.sendotp",
   "ver": "1.0",
@@ -71,9 +79,11 @@ context | Yes | This shows the purpose of the sending otp like Login, notificati
 }
 ```
 
-#### Error Response 
-1. Invalid Channel: This is the error response in case if the channel is not valid. 
-```JSON
+**Error Response**
+
+1. Invalid Channel: This is the error response in case if the channel is not valid.
+
+```
 {
   "id": "mosip.authentication.sendotp",
   "ver": "1.0",
@@ -87,8 +97,9 @@ context | Yes | This shows the purpose of the sending otp like Login, notificati
 }
 ```
 
-2. Multiple channels not supported: In case, if the caller can send only one channel, then this error will be sent. For example, Pre-Registration module cannot have multiple channels. 
-```JSON
+1. Multiple channels not supported: In case, if the caller can send only one channel, then this error will be sent. For example, Pre-Registration module cannot have multiple channels.
+
+```
 {
   "id": "mosip.authentication.sendotp",
   "ver": "1.0",
@@ -102,8 +113,9 @@ context | Yes | This shows the purpose of the sending otp like Login, notificati
 }
 ```
 
-3. User not found: If the passed is not found in the system. 
-```JSON
+1. User not found: If the passed is not found in the system.
+
+```
 {
   "id": "mosip.authentication.sendotp",
   "ver": "1.0",
@@ -117,8 +129,9 @@ context | Yes | This shows the purpose of the sending otp like Login, notificati
 }
 ```
 
-4. Channel path not found: If the channel's path is not found. For example, if the channel is email and the email ID is not found for that user. 
-```JSON
+1. Channel path not found: If the channel's path is not found. For example, if the channel is email and the email ID is not found for that user.
+
+```
 {
   "id": "mosip.authentication.sendotp",
   "ver": "1.0",
@@ -132,27 +145,31 @@ context | Yes | This shows the purpose of the sending otp like Login, notificati
 }
 ```
 
-## Authenticate using userID and OTP
+### Authenticate using userID and OTP
 
-This service authenticates the use ID and the OTP. If the authentication is successful, an AuthToken will be sent in the Response header. 
+This service authenticates the use ID and the OTP. If the authentication is successful, an AuthToken will be sent in the Response header.
 
-### Resource URL
+#### Resource URL
+
 `POST https://{base_url}/v1/authmanager/authenticate/useridOTP`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | Response Header and JSON Message 
-Requires Authentication | No
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-userid | Yes | This is the userid of the user against which the OTP had been sent. Based on the useridtype, this will vary. | NA | M392380
-otp | Yes| This is OTP which is sent to the userid's preferred channel | NA | 6473
+| Resource Details        | Description                      |
+| ----------------------- | -------------------------------- |
+| Response format         | Response Header and JSON Message |
+| Requires Authentication | No                               |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name   | Required | Description                                                                                                  | Default Value | Example |
+| ------ | -------- | ------------------------------------------------------------------------------------------------------------ | ------------- | ------- |
+| userid | Yes      | This is the userid of the user against which the OTP had been sent. Based on the useridtype, this will vary. | NA            | M392380 |
+| otp    | Yes      | This is OTP which is sent to the userid's preferred channel                                                  | NA            | 6473    |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -168,16 +185,17 @@ otp | Yes| This is OTP which is sent to the userid's preferred channel | NA | 64
 }
 ```
 
-### Example Response
+#### Example Response
 
-#### Success Response 
+**Success Response**
+
 ```
 Response Cookie:
 
 Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlkdWFsIiwibW9iaWxlIjoiOTY2MzE3NTkyOCIsIm1haWwiOiJpbmRpdmlkdWFsQGdtYWlsLmNvbSIsInJvbGUiOiJwZXJzb24iLCJpYXQiOjE1NTEzNDU1NjUsImV4cCI6MTU1MTM1MTU2NX0.pCyibViXo31enOgRD60BnKjEpEA-78yzbWnZGChxCIZ5lTpYnhgm-0dtoT3neFebTJ8eAI7-o8jDWMCMqq6uSw; Max-Age=6000000; Expires=Wed, 08-May-2019 19:59:43 GMT; Path=/; Secure; HttpOnly
 ```
 
-```JSON
+```
 {
   "id": "mosip.authentication.useridOTP",
   "ver": "1.0",
@@ -189,10 +207,11 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
 }
 ```
 
-### Error Responses
+#### Error Responses
 
-1. Invalid OTP: If the passed OTP is not valid. 
-```JSON
+1. Invalid OTP: If the passed OTP is not valid.
+
+```
 {
   "id": "mosip.authentication.useridOTP",
   "ver": "1.0",
@@ -206,8 +225,9 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
 }
 ```
 
-2. Expired OTP: If the passed OTP is expired. 
-```JSON
+1. Expired OTP: If the passed OTP is expired.
+
+```
 {
   "id": "mosip.authentication.useridOTP",
   "ver": "1.0",
@@ -221,27 +241,32 @@ Set-Cookie →Authorization=Mosip-TokeneyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJpbmRpdmlk
 }
 ```
 
-## Authenticate using username and password
-This service will authenticate the username and password. 
+### Authenticate using username and password
 
-### Resource URL
+This service will authenticate the username and password.
+
+#### Resource URL
+
 `https://{base_url}/v1/authmanager/authenticate/internal/useridPwd`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | Response Header and JSON Message
-Requires Authentication | No
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-username | Yes | This is the username of the user. | NA | M392380
-password | Yes | This is the password of the user.| NA | ADGDAGADFF
-appid | Yes | This is the application ID of the caller of this service. It should be on of the {"preregistration", "registrationclient", "registrationprocessor", "ida", "admin", "resident"} | NA | preregistration
+| Resource Details        | Description                      |
+| ----------------------- | -------------------------------- |
+| Response format         | Response Header and JSON Message |
+| Requires Authentication | No                               |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name     | Required | Description                                                                                                                                                                     | Default Value | Example         |
+| -------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- | --------------- |
+| username | Yes      | This is the username of the user.                                                                                                                                               | NA            | M392380         |
+| password | Yes      | This is the password of the user.                                                                                                                                               | NA            | ADGDAGADFF      |
+| appid    | Yes      | This is the application ID of the caller of this service. It should be on of the {"preregistration", "registrationclient", "registrationprocessor", "ida", "admin", "resident"} | NA            | preregistration |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -257,9 +282,10 @@ appid | Yes | This is the application ID of the caller of this service. It shoul
 }
 ```
 
-### Example Response
+#### Example Response
 
-#### Success Response 
+**Success Response**
+
 ```
 {
   "id": "string",
@@ -279,9 +305,11 @@ appid | Yes | This is the application ID of the caller of this service. It shoul
 }
 ```
 
-#### Error Responses
-1. Invalid credentials: If the passed credentials is not correct. 
-```JSON
+**Error Responses**
+
+1. Invalid credentials: If the passed credentials is not correct.
+
+```
 {
   "id": "string",
   "version": "string",
@@ -297,8 +325,9 @@ appid | Yes | This is the application ID of the caller of this service. It shoul
 }
 ```
 
-2. Invalid application ID: If the passed in application is not correct. 
-```JSON
+1. Invalid application ID: If the passed in application is not correct.
+
+```
 {
   "id": "string",
   "version": "string",
@@ -314,27 +343,31 @@ appid | Yes | This is the application ID of the caller of this service. It shoul
 }
 ```
 
-## Authenticate using clientid and secret key
-This service will authenticate the clientid and secret key. When an application try to call any service in the MOSIP system, the call have to be authenticated and authorized. For example, when Pre-registration application calls some master service, the call have to be authenticated first. This call can facilitate the call. 
-The clientid would have provided to the caller application before hand using another procedure. So, before making this call, the caller application have to have the clientid and the secret key.  
+### Authenticate using clientid and secret key
 
-### Resource URL
+This service will authenticate the clientid and secret key. When an application try to call any service in the MOSIP system, the call have to be authenticated and authorized. For example, when Pre-registration application calls some master service, the call have to be authenticated first. This call can facilitate the call. The clientid would have provided to the caller application before hand using another procedure. So, before making this call, the caller application have to have the clientid and the secret key.
+
+#### Resource URL
+
 `POST https://{base_url}/v1/authmanager/authenticate/clientidsecretkey`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | Response Header and JSON Message
-Requires Authentication | No
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-clientid|Yes|This is the client id, provided to the caller application upfront. | NA | D72HJDF8
-secretkey|Yes|This is the secret key which was provided to the application corresponding to the clientid| NA | JSlj8p789sdfjhlsJKDHFS
+| Resource Details        | Description                      |
+| ----------------------- | -------------------------------- |
+| Response format         | Response Header and JSON Message |
+| Requires Authentication | No                               |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name      | Required | Description                                                                                | Default Value | Example                |
+| --------- | -------- | ------------------------------------------------------------------------------------------ | ------------- | ---------------------- |
+| clientid  | Yes      | This is the client id, provided to the caller application upfront.                         | NA            | D72HJDF8               |
+| secretkey | Yes      | This is the secret key which was provided to the application corresponding to the clientid | NA            | JSlj8p789sdfjhlsJKDHFS |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -348,9 +381,10 @@ secretkey|Yes|This is the secret key which was provided to the application corre
 }
 ```
 
-### Example Response
+#### Example Response
 
-#### Success Response 
+**Success Response**
+
 ```
 Response Cookie:
 
@@ -358,7 +392,7 @@ Set-Cookie
 authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBLWZRRDZYVVpYeFlldk5UZWtYcnZKVXN1RG5TeHJjZ0tZIn0.eyJqdGkiOiI2Yzg0ZDMyNi04NjZhLTRmZTQtOGJiMy02NGY0YWVjNmZiZDAiLCJleHAiOjE2MDk5NDg3NTAsIm5iZiI6MCwiaWF0IjoxNjA5OTEyNzUwLCJpc3MiOiJodHRwczovL3FhMi5tb3NpcC5uZXQva2V5Y2xvYWsvYXV0aC9yZWFsbXMvbW9zaXAiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiODdmMDU3NjQtNzg5ZC00ZTZiLTljMWUtYzU2YmJkYzI5NTYzIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibW9zaXAtYWJpcy1jbGllbnQiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiJiNjZjMjBiMy03OTY1LTQ0ZDUtODg3Ny00Zjk2MDNlNzI5OTEiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vcWEyLm1vc2lwLm5ldCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1vc2lwLWFiaXMtY2xpZW50Ijp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6Im1vc2lwLWFiaXMtY2xpZW50IiwiY2xpZW50SG9zdCI6IjEwLjI0NC4zLjM1IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbW9zaXAtYWJpcy1jbGllbnQiLCJjbGllbnRBZGRyZXNzIjoiMTAuMjQ0LjMuMzUifQ.ntez3ZkbDsjWi467JVj9d3kfktbUc7e6zQhHv0bVJfmiQA0N1QGyXAiZdqZrHj3cgFo0Lft54jgEtCGZZAma8nAw9IDICet9TA2A_u5hZ3oAq6HwYMS1pWb43jx5K9RRr_Yc-hdNnma754KzHhJgU1A7e_y0m88MT_oohHpRQ16jItEfC0AUQUvOAsxPwn-mmhu4uFFEq9e05ftBDIEBr24t-8feWN92uCJVMrSYHHjFL2ayg03I4Zkw1IupfLa-HACIlIToUmAk00aPxLtyWMFpOHVcLKBS2i9gEeqCEiUzklwuEp0B4aCqk5_M-Ng2X6VcGsCUJ8ACWRG4lCQQYA 
 ```
 
-```JSON
+```
 {
   "id": "string",
   "version": "string",
@@ -372,9 +406,11 @@ authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBL
 }
 ```
 
-#### Error Responses
-1. Invalid credentials: If the passed credentials is not correct. 
-```JSON
+**Error Responses**
+
+1. Invalid credentials: If the passed credentials is not correct.
+
+```
 {
   "id": "string",
   "version": "string",
@@ -390,8 +426,9 @@ authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBL
 }
 ```
 
-2. Incorrect Application ID: If wrong application ID is passed
-```JSON
+1. Incorrect Application ID: If wrong application ID is passed
+
+```
 {
   "id": "string",
   "version": "string",
@@ -407,35 +444,41 @@ authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBL
 }
 ```
 
-# Authorization
+## Authorization
 
-## Validate token
+### Validate token
+
 This service checks the validity of the Auth token.
 
-### Resource URL
+#### Resource URL
+
 `GET https://{base_url}/v1/authmanager/authorize/admin/validateToken`
 
-### Resource detail
-Resource Details | Description
------------- | -------------
-Response format | The response will be sent in the Response Header and also a JSON message will be returned. 
-Requires Authentication | no
+#### Resource detail
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-Authorization|Yes|AuthToken passed in the request cookie| | Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ.-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM
+| Resource Details        | Description                                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------ |
+| Response format         | The response will be sent in the Response Header and also a JSON message will be returned. |
+| Requires Authentication | no                                                                                         |
 
-### Example Request
+#### Parameters
+
+| Name          | Required | Description                            | Default Value | Example                                                                                                                                                           |
+| ------------- | -------- | -------------------------------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Authorization | Yes      | AuthToken passed in the request cookie |               | Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ.-xN\_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM |
+
+#### Example Request
+
 ```
 Request Cookie:
 authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBLWZRRDZYVVpYeFlldk5UZWtYcnZKVXN1RG5TeHJjZ0tZIn0.eyJqdGkiOiIxZmUxYjQxNS1kY2NjLTQ2NmQtYTc5My03MTI5MGYzYmNmM2IiLCJleHAiOjE2MDk5NDc5ODgsIm5iZiI6MCwiaWF0IjoxNjA5OTExOTg4LCJpc3MiOiJodHRwczovL3FhMi5tb3NpcC5uZXQva2V5Y2xvYWsvYXV0aC9yZWFsbXMvbW9zaXAiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiODdmMDU3NjQtNzg5ZC00ZTZiLTljMWUtYzU2YmJkYzI5NTYzIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoibW9zaXAtYWJpcy1jbGllbnQiLCJhdXRoX3RpbWUiOjAsInNlc3Npb25fc3RhdGUiOiIyZjc1YjdkZS0zMjJkLTRjOGUtYmE4Yi0xNmI4M2UzMTYyMmIiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHBzOi8vcWEyLm1vc2lwLm5ldCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7Im1vc2lwLWFiaXMtY2xpZW50Ijp7InJvbGVzIjpbInVtYV9wcm90ZWN0aW9uIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJjbGllbnRJZCI6Im1vc2lwLWFiaXMtY2xpZW50IiwiY2xpZW50SG9zdCI6IjEwLjI0NC4zLjM1IiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJzZXJ2aWNlLWFjY291bnQtbW9zaXAtYWJpcy1jbGllbnQiLCJjbGllbnRBZGRyZXNzIjoiMTAuMjQ0LjMuMzUifQ.mQncxuxncDlvkCY6YxrC9DK3ACx27ArjzGMuKUjLl9Z4qPKdyio9zMPiZdCiOgEp75ctmoG5iIEVmeYZnNgv05enxaGHBqAmGC3S9-X_QeWA3bSSIjvpSh0w9hnSlLDN5UoYxnM9uSshGAfaCmJffbwKNqIMgOQxk4AdsGErTaUo8nf_Ugn76GTHH5iJb7mALuoqHgpYsr_lZfn5_N53B-NRdY_EjZ58fPdBFP9wPaJqmmTEfn4gDYvp_dB6vYD0l0MQVi_5CsBmqdQYgspH2m3DH9gtgdkbb3Wo84U0j-CwMgtIz2CTpCv3Ds_4r13XGgd7TIjLKQ2BhCxZ1G-KGg 
 ```
 
-### Example Response
+#### Example Response
 
-#### Success Response 
-```JSON
+**Success Response**
+
+```
 {
   "id": null,
   "version": null,
@@ -456,9 +499,11 @@ authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBL
 }
 ```
 
-#### Error Responses
-1. Invalid Token: If the passed token is not correct. 
-```JSON
+**Error Responses**
+
+1. Invalid Token: If the passed token is not correct.
+
+```
 {
   "id": null,
   "version": null,
@@ -474,8 +519,9 @@ authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBL
 }
 ```
 
-2. Cookie is empty: If the cookie is not set
-```JSON
+1. Cookie is empty: If the cookie is not set
+
+```
 {
   "id": null,
   "version": null,
@@ -491,33 +537,39 @@ authorization: eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJyanpjdUZPTmpBL
 }
 ```
 
-## Invalidate token
+### Invalidate token
+
 This service invalidates the token
 
-### Resource URL
+#### Resource URL
+
 `POST https://{base_url}/v1/authmanager/authorize/invalidateToken`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | Response Cookie and JSON Message
-Requires Authentication | No
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-Authorization|Yes|AuthToken passed in the request cookie| | eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ.-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM
+| Resource Details        | Description                      |
+| ----------------------- | -------------------------------- |
+| Response format         | Response Cookie and JSON Message |
+| Requires Authentication | No                               |
 
-### Example Request
+#### Parameters
+
+| Name          | Required | Description                            | Default Value | Example                                                                                                                                              |
+| ------------- | -------- | -------------------------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Authorization | Yes      | AuthToken passed in the request cookie |               | eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ.-xN\_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM |
+
+#### Example Request
+
 ```
 Request Cookie:
 Authorization=Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NjYwYmQifQ.-xN_h82PHVTCMA9vdoHrcZxH-x5mb11y1537t3rGzcM 
 ```
 
-### Example Response
+#### Example Response
 
-#### Success Response 
-```JSON
+**Success Response**
+
+```
 {
   "id": "mosip.authorize.invalidatetoken",
   "ver": "1.0",
@@ -528,9 +580,11 @@ Authorization=Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJi
 }
 ```
 
-#### Error Responses
-1. Empty Cookie: If the passed Cookie is empty. 
-```JSON
+**Error Responses**
+
+1. Empty Cookie: If the passed Cookie is empty.
+
+```
 {
   "id": null,
   "version": null,
@@ -546,29 +600,34 @@ Authorization=Mosip-TokeneyeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJi
 }
 ```
 
-# OTP services
+## OTP services
 
-## Generate OTP
+### Generate OTP
+
 The OTP Generator component will receive a request to generate OTP, validate if the OTP generation request is from an authorized source, call OTP generator API with the input parameters (Key), receive the OTP from the OTP generator API which is generated based on the OTP generation policy and respond to the source with the OTP.
 
 The OTP Generator can also reject a request from a blocked/frozen account and assign a validity to each OTP that is generated, based on the defined policy
 
-### Resource URL
+#### Resource URL
+
 `POST https://{base_url}/v1/otpmanager/otp/generate`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON Message 
-Requires Authentication | No
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-key|Yes|AuthToken passed in the request header| | 
+| Resource Details        | Description  |
+| ----------------------- | ------------ |
+| Response format         | JSON Message |
+| Requires Authentication | No           |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name | Required | Description                            | Default Value | Example |
+| ---- | -------- | -------------------------------------- | ------------- | ------- |
+| key  | Yes      | AuthToken passed in the request header |               |         |
+
+#### Example Request
+
+```
 {
   "id": "mosip.otp.generateOTP",
   "version":"1.0",	
@@ -579,10 +638,11 @@ key|Yes|AuthToken passed in the request header| |
 }
 ```
 
-### Example Response
+#### Example Response
 
-#### Success Response
-```JSON
+**Success Response**
+
+```
 {
   "id": "mosip.otp.generateOTP",
   "ver": "1.0",
@@ -594,38 +654,45 @@ key|Yes|AuthToken passed in the request header| |
 }
 ```
 
-#### Error Responses
+**Error Responses**
+
 NA
 
-## Validate OTP
+### Validate OTP
+
 This component facilitates basic validation of an OTP.
 
 This includes: Receiving a request for OTP validation with required input parameters (Key), Validating the pattern of OTP generated based on defined policy, validating if the OTP is active/inactive and responding to the source with a response (Valid/Invalid)
 
 This component also facilitates deletion of every successfully validated OTP when consumed and freezing an account for exceeding the number of retries/wrong input of OTP.
 
-### Resource URL
+#### Resource URL
+
 `https://dev-test.southindia.cloudapp.azure.com/v1/otpmanager/otp/validate?key=87637740607&otp=123456`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON Message
-Requires Authentication | no
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-Key|Yes|AuthToken passed in the request header| NA | 9820173642
-otp|Yes|OTP which was sent to the user| NA | 849004
+| Resource Details        | Description  |
+| ----------------------- | ------------ |
+| Response format         | JSON Message |
+| Requires Authentication | no           |
 
-### Example Request
+#### Parameters
+
+| Name | Required | Description                            | Default Value | Example    |
+| ---- | -------- | -------------------------------------- | ------------- | ---------- |
+| Key  | Yes      | AuthToken passed in the request header | NA            | 9820173642 |
+| otp  | Yes      | OTP which was sent to the user         | NA            | 849004     |
+
+#### Example Request
+
 NA
 
-### Example Response
+#### Example Response
 
-#### Success Response 
-```JSON
+**Success Response**
+
+```
 {
   "id": "mosip.otp.validateOTP",
   "ver": "1.0",
@@ -637,9 +704,11 @@ NA
 }
 ```
 
-#### Error Responses
-1. Invalid OTP: If the passed OTP is not correct. 
-```JSON
+**Error Responses**
+
+1. Invalid OTP: If the passed OTP is not correct.
+
+```
 {
   "id": "mosip.authentication.validateOTP",
   "ver": "1.0",
@@ -653,8 +722,9 @@ NA
 }
 ```
 
-2. OTP Expired: If the passed OTP had been expired. 
-```JSON
+1. OTP Expired: If the passed OTP had been expired.
+
+```
 {
   "id": "mosip.authentication.validateOTP",
   "ver": "1.0",

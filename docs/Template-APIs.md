@@ -1,59 +1,64 @@
+# Template APIs
+
 This section contains detail about the service APIs in the Template Masterdata module
 
-* [Templates API](#template-api)
+* [Templates API](Template-APIs.md#template-api)
 
 These APIs includes create, update and fetch APIs. Create and Update API is used by the Administrator Portal for the Create and Update Template functionality. Fetch API is used by all the modules across MOSIP (Pre-Registration, Registration Processor, IDA, Resident Services) to fetch a Template based on a given Language Code and a Template type. This template is then used by the different modules to either generate an Acknowledgement page or send a notification.
 
-* [Template Types API](#template-types-api)
+* [Template Types API](Template-APIs.md#template-types-api)
 
 This API is used to create a Template Type.
 
-* [Template- Search API](#post-templatesearch)
+* [Template- Search API](Template-APIs.md#post-templatesearch)
 
 This API is used by the Administrator Portal to fetch the list of Templates based on a given filter criteria to display the list of Templates on the Portal UI.
 
-* [Template- Filter values](#post-templatefiltervalues)
+* [Template- Filter values](Template-APIs.md#post-templatefiltervalues)
 
 This API is used by the Administrator Portal UI to populate filter dropdowns on the Template List View UI Screen.
 
-# Template API
+## Template API
 
-* [POST /templates](#post-templates)
-* [PUT /templates](#put-templates)
-* [DELETE /templates/{id}](#delete-templatesid)
-* [GET /templates](#get-templates)
-* [GET /templates/{langcode}](#get-templateslangcode)
-* [GET /templates/{langcode}/{templatetypecode}](#get-templateslangcodetemplatetypecode)
-* [GET /templates/all](#get-templatesall)
-* [GET /templates/templatetypecode/{code}](#get-templatestemplatetypecodecode)
+* [POST /templates](Template-APIs.md#post-templates)
+* [PUT /templates](Template-APIs.md#put-templates)
+* [DELETE /templates/{id}](Template-APIs.md#delete-templatesid)
+* [GET /templates](Template-APIs.md#get-templates)
+* [GET /templates/{langcode}](Template-APIs.md#get-templateslangcode)
+* [GET /templates/{langcode}/{templatetypecode}](Template-APIs.md#get-templateslangcodetemplatetypecode)
+* [GET /templates/all](Template-APIs.md#get-templatesall)
+* [GET /templates/templatetypecode/{code}](Template-APIs.md#get-templatestemplatetypecodecode)
 
-# POST /templates
+## POST /templates
 
-This service will create the list of Template  which are used in the MOSIP platform. 
+This service will create the list of Template which are used in the MOSIP platform.
 
-### Resource URL
-### `POST /templates`
+#### Resource URL
 
-### Resource details
+#### `POST /templates`
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-id|Yes|id of template | | 
-descr|Yes|Description of the template | | 
-lang_code|Yes|Language code of the template | | 
-isActive |Yes|is active or not| |
-moduleId |Yes| Id of module | |
-templateTypeCode |Yes| Id of template type | |
-fileFormatCode | Yes | Code of file format| |
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name             | Required | Description                   | Default Value | Example |
+| ---------------- | -------- | ----------------------------- | ------------- | ------- |
+| id               | Yes      | id of template                |               |         |
+| descr            | Yes      | Description of the template   |               |         |
+| lang\_code       | Yes      | Language code of the template |               |         |
+| isActive         | Yes      | is active or not              |               |         |
+| moduleId         | Yes      | Id of module                  |               |         |
+| templateTypeCode | Yes      | Id of template type           |               |         |
+| fileFormatCode   | Yes      | Code of file format           |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -75,8 +80,10 @@ fileFormatCode | Yes | Code of file format| |
 }
 }
 ```
-### Example Response
-```JSON
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -88,32 +95,36 @@ fileFormatCode | Yes | Code of file format| |
   }
 }
 ```
-# PUT /templates
 
-This service will update the list of Template  which are used in the MOSIP platform. 
+## PUT /templates
 
-### Resource URL
-### `PUT /templates`
+This service will update the list of Template which are used in the MOSIP platform.
 
-### Resource details
+#### Resource URL
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### `PUT /templates`
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-id|Yes|id of template | | 
-lang_code|Yes|Language code of the template | | 
-isActive |Yes|is active or not| |
-moduleId |Yes| Id of module | |
-templateTypeCode |Yes| Id of template type | |
-fileFormatCode | Yes | Code of file format| |
+#### Resource details
 
-### Example Request
-```JSON
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
+
+#### Parameters
+
+| Name             | Required | Description                   | Default Value | Example |
+| ---------------- | -------- | ----------------------------- | ------------- | ------- |
+| id               | Yes      | id of template                |               |         |
+| lang\_code       | Yes      | Language code of the template |               |         |
+| isActive         | Yes      | is active or not              |               |         |
+| moduleId         | Yes      | Id of module                  |               |         |
+| templateTypeCode | Yes      | Id of template type           |               |         |
+| fileFormatCode   | Yes      | Code of file format           |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -134,8 +145,10 @@ fileFormatCode | Yes | Code of file format| |
   }
 }
 ```
-### Example Response
-```JSON
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -148,30 +161,32 @@ fileFormatCode | Yes | Code of file format| |
 }
 ```
 
-# DELETE /templates/{id}
-Master data is required across the platform. 
+## DELETE /templates/{id}
 
-This service will deletes a list of Template from the Template master module. 
+Master data is required across the platform.
 
-### Resource URL
-### `DELETE /templates/{id}`
+This service will deletes a list of Template from the Template master module.
 
-### Resource details
+#### Resource URL
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### `DELETE /templates/{id}`
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-id|Yes|id of the Template| 
+#### Resource details
 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Success Response
-```JSON
+| Name | Required | Description        | Default Value | Example |
+| ---- | -------- | ------------------ | ------------- | ------- |
+| id   | Yes      | id of the Template |               |         |
+
+#### Success Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -184,8 +199,9 @@ id|Yes|id of the Template|
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -199,30 +215,32 @@ id|Yes|id of the Template|
 }
 ```
 
-# GET /templates
+## GET /templates
 
-Master data is required across the platform. 
+Master data is required across the platform.
 
-This service will fetch a list of Template from the Template master module. 
+This service will fetch a list of Template from the Template master module.
 
-### Resource URL
-### `GET /templates`
+#### Resource URL
 
-### Resource details
+#### `GET /templates`
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-NA ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Example Response
-```JSON
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| NA   |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -257,30 +275,32 @@ NA ||
 }
 ```
 
-# GET /templates/{langcode}
+## GET /templates/{langcode}
 
-Master data is required across the platform. 
+Master data is required across the platform.
 
-This service will fetch a list of Templates as per the language code from the Template master module. 
+This service will fetch a list of Templates as per the language code from the Template master module.
 
-### Resource URL
-### `GET /templates/{langcode}`
+#### Resource URL
 
-### Resource details
+#### `GET /templates/{langcode}`
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-langcode | Yes | language code||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Example Response
-```JSON
+| Name     | Required | Description   | Default Value | Example |
+| -------- | -------- | ------------- | ------------- | ------- |
+| langcode | Yes      | language code |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -315,31 +335,33 @@ langcode | Yes | language code||
 }
 ```
 
-# GET /templates/{langcode}/{templatetypecode}
+## GET /templates/{langcode}/{templatetypecode}
 
-Master data is required across the platform. 
+Master data is required across the platform.
 
-This service will fetch a list of Templates as per the language code and template type code from the Template master module. 
+This service will fetch a list of Templates as per the language code and template type code from the Template master module.
 
-### Resource URL
-### `GET /templates/{langcode}/{templatetypecode}`
+#### Resource URL
 
-### Resource details
+#### `GET /templates/{langcode}/{templatetypecode}`
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-langcode | Yes | language code||
-templatetypecode | Yes | template type code ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Example Response
-```JSON
+| Name             | Required | Description        | Default Value | Example |
+| ---------------- | -------- | ------------------ | ------------- | ------- |
+| langcode         | Yes      | language code      |               |         |
+| templatetypecode | Yes      | template type code |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -374,33 +396,35 @@ templatetypecode | Yes | template type code ||
 }
 ```
 
-# GET /templates/all
+## GET /templates/all
 
-Master data is required across the platform. 
+Master data is required across the platform.
 
-This service will fetch all Templates from the Template master module. 
+This service will fetch all Templates from the Template master module.
 
-### Resource URL
-### `GET /templates/all`
+#### Resource URL
 
-### Resource details
+#### `GET /templates/all`
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-orderBy | optional | order the requested data based on param||
-pageNumber | optional | page no for the requested data ||
-pageSize | optional | page size for the requested data||
-sortBy | optional | sort the requested data based on param value ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
+#### Parameters
 
-### Example Response
-```JSON
+| Name       | Required | Description                                  | Default Value | Example |
+| ---------- | -------- | -------------------------------------------- | ------------- | ------- |
+| orderBy    | optional | order the requested data based on param      |               |         |
+| pageNumber | optional | page no for the requested data               |               |         |
+| pageSize   | optional | page size for the requested data             |               |         |
+| sortBy     | optional | sort the requested data based on param value |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -438,29 +462,32 @@ sortBy | optional | sort the requested data based on param value ||
 }
 ```
 
-# GET /templates/templatetypecode/{code}
-Master data is required across the platform. 
+## GET /templates/templatetypecode/{code}
 
-This service will fetch all Templates as per the template type code from the Template master module. 
+Master data is required across the platform.
 
-### Resource URL
-### `GET /templates/templatetypecode/{code}`
+This service will fetch all Templates as per the template type code from the Template master module.
 
-### Resource details
+#### Resource URL
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### `GET /templates/templatetypecode/{code}`
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code | Yes | template type code||
+#### Resource details
 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description        | Default Value | Example |
+| ---- | -------- | ------------------ | ------------- | ------- |
+| code | Yes      | template type code |               |         |
+
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -495,44 +522,47 @@ code | Yes | template type code||
 }
 ```
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-045 | Error occurred while fetching templates | Fetch Issue
-KER-MSD-145 | Exception during inserting data into db | Insertion Issue
-KER-MSD-046 | Template not found. | Data Not Found
-KER-MSD-095 | Error occurred while updating template | Update Issue
-KER-MSD-096 | Error occurred while deleting template | Delete Issue
+#### Failure details
 
-# Template Types API
+| Error Code  | Error Message                           | Error Description |
+| ----------- | --------------------------------------- | ----------------- |
+| KER-MSD-045 | Error occurred while fetching templates | Fetch Issue       |
+| KER-MSD-145 | Exception during inserting data into db | Insertion Issue   |
+| KER-MSD-046 | Template not found.                     | Data Not Found    |
+| KER-MSD-095 | Error occurred while updating template  | Update Issue      |
+| KER-MSD-096 | Error occurred while deleting template  | Delete Issue      |
 
-* [POST /templatetypes](#post-templatetypes)
+## Template Types API
 
-# POST /templatetypes
+* [POST /templatetypes](Template-APIs.md#post-templatetypes)
 
-This service creates template type based on provided. 
+## POST /templatetypes
 
+This service creates template type based on provided.
 
-### Resource URL
-### `POST /templatetypes`
+#### Resource URL
 
-### Resource details
+#### `POST /templatetypes`
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|This is the template code field||
-description|Yes| Description of the template type ||
-isActive|Yes| is active? ||
-langCode|Yes| language code ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name        | Required | Description                      | Default Value | Example |
+| ----------- | -------- | -------------------------------- | ------------- | ------- |
+| code        | Yes      | This is the template code field  |               |         |
+| description | Yes      | Description of the template type |               |         |
+| isActive    | Yes      | is active?                       |               |         |
+| langCode    | Yes      | language code                    |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -547,8 +577,9 @@ langCode|Yes| language code ||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "errors": [
     {
@@ -567,75 +598,79 @@ langCode|Yes| language code ||
 }
 ```
 
-### Response codes
+#### Response codes
+
 201
 
 Description: Successfully created
 
-400	
+400
 
 Description: Request body passed is null or invalid
 
-401	
+401
 
 Description: Unauthorized
 
-403	
+403
 
 Description: Forbidden
 
-404	
+404
 
 Description: Not Found
 
-500	
+500
 
-Description:  any error occured while creating
+Description: any error occured while creating
 
-## Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-072 | Error occurred while inserting Template Type details into db | Insertion Issue
+### Failure details
 
+| Error Code  | Error Message                                                | Error Description |
+| ----------- | ------------------------------------------------------------ | ----------------- |
+| KER-MSD-072 | Error occurred while inserting Template Type details into db | Insertion Issue   |
 
+#### Resource URL
 
+#### `POST /template/search`
 
-### Resource URL
-### `POST /template/search`
+#### Resource details
 
-### Resource details
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Parameters
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["in","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the start range| -NA- |
-toValue|No|If the type is "between", this field is the value of the end range| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 10
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["in","equals","startsWith","between"]                 | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the start range            | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the end range              | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 10            |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
 
-### Filter Values
+#### Filter Values
+
 Please find the filter columns used in search
-1) name
-2) moduleId
-3) moduleName
-4) isActive
 
-### Example Request
-```JSON
+1. name
+2. moduleId
+3. moduleName
+4. isActive
+
+#### Example Request
+
+```
 {
 	"id": "string",
 	"metadata": {},
@@ -667,8 +702,9 @@ Please find the filter columns used in search
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -697,35 +733,38 @@ Please find the filter columns used in search
  }
 }
 ```
-# Templatefilter values
 
-* [POST /template/filtervalues](#post-templatefiltervalues)
+## Templatefilter values
 
-# POST /template/filtervalues
+* [POST /template/filtervalues](Template-APIs.md#post-templatefiltervalues)
 
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+## POST /template/filtervalues
 
-### Resource URL
-### `POST /template/filtervalues`
+This service returns the filter values which are required in the dropdown entries of the filter screen.
 
-### Resource details
+#### Resource URL
 
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### `POST /template/filtervalues`
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+#### Resource details
 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
 	"id": "string",
 	"metadata": {},
@@ -743,8 +782,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",

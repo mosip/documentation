@@ -1,30 +1,38 @@
+# Zone APIs
+
 This section details about the service APIs for the Zones
 
-# Zone Master API
-* [GET /zones/authorize/{rid}](#get-zones-authorize-rid)
-* [GET /zones/hierarchy/{langCode}](#get-zones-hierarchy-langcode)
-* [GET /zones/leafs/{langCode}](#get-zones-leafs-langcode)
-* [GET /zones/zonename](#get-zones-zonename)
+## Zone Master API
 
-## GET /zones/authorize/{rid}
+* [GET /zones/authorize/{rid}](Zone-APIs.md#get-zones-authorize-rid)
+* [GET /zones/hierarchy/{langCode}](Zone-APIs.md#get-zones-hierarchy-langcode)
+* [GET /zones/leafs/{langCode}](Zone-APIs.md#get-zones-leafs-langcode)
+* [GET /zones/zonename](Zone-APIs.md#get-zones-zonename)
+
+### GET /zones/authorize/{rid}
+
 This service will verify if the logged-in user is authorized to view the RID history.
 
-### Resource URL
+#### Resource URL
+
 `GET /zones/authorize/{rid}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-rid | yes | rid for which user wants to know the history ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description                                  | Default Value | Example |
+| ---- | -------- | -------------------------------------------- | ------------- | ------- |
+| rid  | yes      | rid for which user wants to know the history |               |         |
+
+#### Example Response
+
+```
 {
   "id": null,
   "version": null,
@@ -35,25 +43,30 @@ rid | yes | rid for which user wants to know the history ||
 }
 ```
 
-## GET /zones/hierarchy/{langCode}
-This service will fetch the logged-in user zone hierarchy. 
+### GET /zones/hierarchy/{langCode}
 
-### Resource URL
+This service will fetch the logged-in user zone hierarchy.
+
+#### Resource URL
+
 `GET /zones/hierarchy/{langCode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-langCode | yes | user language code ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name     | Required | Description        | Default Value | Example |
+| -------- | -------- | ------------------ | ------------- | ------- |
+| langCode | yes      | user language code |               |         |
+
+#### Example Response
+
+```
 {
   "id": null,
   "version": null,
@@ -81,25 +94,30 @@ langCode | yes | user language code ||
 }
 ```
 
-## GET /zones/leafs/{langCode}
-This service will fetch the logged-in user zone hierarchy leaf zones. 
+### GET /zones/leafs/{langCode}
 
-### Resource URL
+This service will fetch the logged-in user zone hierarchy leaf zones.
+
+#### Resource URL
+
 `GET /zones/leafs/{langCode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-langCode | yes | user language code ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name     | Required | Description        | Default Value | Example |
+| -------- | -------- | ------------------ | ------------- | ------- |
+| langCode | yes      | user language code |               |         |
+
+#### Example Response
+
+```
 {
   "id": null,
   "version": null,
@@ -127,26 +145,31 @@ langCode | yes | user language code ||
 }
 ```
 
-## GET /zones/zonename
-This service will fetch the logged-in user zone hierarchy leaf zones. 
+### GET /zones/zonename
 
-### Resource URL
+This service will fetch the logged-in user zone hierarchy leaf zones.
+
+#### Resource URL
+
 `GET /zones/zonename`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-langCode | yes | user language code ||
-userID | yes | user id ||
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name     | Required | Description        | Default Value | Example |
+| -------- | -------- | ------------------ | ------------- | ------- |
+| langCode | yes      | user language code |               |         |
+| userID   | yes      | user id            |               |         |
+
+#### Example Response
+
+```
 {
   "id": null,
   "version": null,
@@ -159,12 +182,13 @@ userID | yes | user id ||
 }
 ```
 
-# Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-337 | Error occured while fetching zone | Fetch Issue
-KER-MSD-339 | No zone found for the logged-in user | Data Not Found
-KER-MSD-338 | Error Occured while fetching zone of the user | Fetch Issue
-KER-MSD-391 | Entity for user ID specified Not Found | Data Not Found
-KER-MSD-392 | Entity for Zone Code of user ID specified Not Found | Data Not Found
-KER-MSD-393 | Internal Server Error | Dependency issue
+## Failure details
+
+| Error Code  | Error Message                                       | Error Description |
+| ----------- | --------------------------------------------------- | ----------------- |
+| KER-MSD-337 | Error occured while fetching zone                   | Fetch Issue       |
+| KER-MSD-339 | No zone found for the logged-in user                | Data Not Found    |
+| KER-MSD-338 | Error Occured while fetching zone of the user       | Fetch Issue       |
+| KER-MSD-391 | Entity for user ID specified Not Found              | Data Not Found    |
+| KER-MSD-392 | Entity for Zone Code of user ID specified Not Found | Data Not Found    |
+| KER-MSD-393 | Internal Server Error                               | Dependency issue  |

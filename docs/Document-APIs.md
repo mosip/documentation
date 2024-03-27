@@ -1,44 +1,50 @@
+# Document APIs
+
 This section contains detail about the service APIs for Document Master data.
-* [Documents Categories APIs](#documents-category)
-These APIs include create, update, fetch, search and filter which are used by the administrator portal. Create and update APIs are used for the create and updating document category functionality. Search API is used by the portal to fetch the list of document categories based on a filter criterion to display the list of document categories on the UI and filter API is used to populate document category filter drop-downs on the portal UI. Fetch API of document category are used by Pre-Registration UI to display the list of document categories for the applicant to view and by the ID Object validator to validate the document category received in the packet in Registration processor.
-* [Documents Types APIs](#documents-types)
-These APIs include create, update, fetch, search and filter which are used by the administrator portal. Create and update APIs are used for the create and update document type functionality. Search API is used by the portal to fetch the list of document types based on a filter criterion to display the list of document types on the UI and filter API is used to populate document types filter drop-downs on the portal UI. Fetch API of document type is used by Pre-Registration UI to display the list of document types for the applicant to view and select and by the ID Object validator to validate the document type received in the packet in Registration processor.
-* [Valid Documents API](#valid-documents)
-These APIs includes the map, unmap, search and filter which are used by the administrator portal. Map and un-map APIs are used by the portal to create and remove mapping of document category and document type. Search API is used by the portal to fetch the mappings of document categories and document types based on a filter criterion to display the list of mappings on the UI. Filter API is used to populate document mappings filter drop-downs on the portal UI.
 
-# Documents Category
-* [POST /documentcategories](#post-documentcategories)
-* [PUT /documentcategories](#put-documentcategories)
-* [GET /documentcategories](#get-documentcategories)
-* [GET /documentcategories/{code}/{langcode}](#get-documentcategories-code-langcode)
-* [GET /documentcategories/{langcode}](#get-documentcategories-langcode)
-* [DELETE /documentcategories/{code}](#delete-documentcategories-code)
-* [POST /documentcategories/search](#post-documentcategories-search)
-* [POST /documentcategories/filtervalues](#post-documentcategories-filtervalues)
+* [Documents Categories APIs](Document-APIs.md#documents-category) These APIs include create, update, fetch, search and filter which are used by the administrator portal. Create and update APIs are used for the create and updating document category functionality. Search API is used by the portal to fetch the list of document categories based on a filter criterion to display the list of document categories on the UI and filter API is used to populate document category filter drop-downs on the portal UI. Fetch API of document category are used by Pre-Registration UI to display the list of document categories for the applicant to view and by the ID Object validator to validate the document category received in the packet in Registration processor.
+* [Documents Types APIs](Document-APIs.md#documents-types) These APIs include create, update, fetch, search and filter which are used by the administrator portal. Create and update APIs are used for the create and update document type functionality. Search API is used by the portal to fetch the list of document types based on a filter criterion to display the list of document types on the UI and filter API is used to populate document types filter drop-downs on the portal UI. Fetch API of document type is used by Pre-Registration UI to display the list of document types for the applicant to view and select and by the ID Object validator to validate the document type received in the packet in Registration processor.
+* [Valid Documents API](Document-APIs.md#valid-documents) These APIs includes the map, unmap, search and filter which are used by the administrator portal. Map and un-map APIs are used by the portal to create and remove mapping of document category and document type. Search API is used by the portal to fetch the mappings of document categories and document types based on a filter criterion to display the list of mappings on the UI. Filter API is used to populate document mappings filter drop-downs on the portal UI.
 
-## POST /documentcategories
-This service will create the list of Documents Category which are used in the MOSIP platform. 
+## Documents Category
 
-### Resource URL
+* [POST /documentcategories](Document-APIs.md#post-documentcategories)
+* [PUT /documentcategories](Document-APIs.md#put-documentcategories)
+* [GET /documentcategories](Document-APIs.md#get-documentcategories)
+* [GET /documentcategories/{code}/{langcode}](Document-APIs.md#get-documentcategories-code-langcode)
+* [GET /documentcategories/{langcode}](Document-APIs.md#get-documentcategories-langcode)
+* [DELETE /documentcategories/{code}](Document-APIs.md#delete-documentcategories-code)
+* [POST /documentcategories/search](Document-APIs.md#post-documentcategories-search)
+* [POST /documentcategories/filtervalues](Document-APIs.md#post-documentcategories-filtervalues)
+
+### POST /documentcategories
+
+This service will create the list of Documents Category which are used in the MOSIP platform.
+
+#### Resource URL
+
 `POST /documentcategories`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Document category code| |
-description|optional|document description||
-isActive|Yes|is active or not||
-langCode|Yes|language code||
-name|Yes|Document category name|| 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name        | Required | Description            | Default Value | Example |
+| ----------- | -------- | ---------------------- | ------------- | ------- |
+| code        | Yes      | Document category code |               |         |
+| description | optional | document description   |               |         |
+| isActive    | Yes      | is active or not       |               |         |
+| langCode    | Yes      | language code          |               |         |
+| name        | Yes      | Document category name |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -54,8 +60,9 @@ name|Yes|Document category name||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -68,31 +75,37 @@ name|Yes|Document category name||
   }
  }
 ```
+
 **Response code: 200 Ok**
 
-## PUT/documentcategories
-This service will create the list of Documents Category which are used in the MOSIP platform. 
+### PUT/documentcategories
 
-### Resource URL
+This service will create the list of Documents Category which are used in the MOSIP platform.
+
+#### Resource URL
+
 `PUT /documentcategories`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Document category code| |
-description|optional|document description||
-isActive|Yes|is active or not||
-langCode|Yes|language code||
-name|Yes|Document category name|| 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name        | Required | Description            | Default Value | Example |
+| ----------- | -------- | ---------------------- | ------------- | ------- |
+| code        | Yes      | Document category code |               |         |
+| description | optional | document description   |               |         |
+| isActive    | Yes      | is active or not       |               |         |
+| langCode    | Yes      | language code          |               |         |
+| name        | Yes      | Document category name |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -108,8 +121,9 @@ name|Yes|Document category name||
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -122,27 +136,33 @@ name|Yes|Document category name||
   }
 }
 ```
+
 **Response code: 200 Ok**
 
-## GET /documentcategories
-This service will provides the service for the List of documents categories. 
+### GET /documentcategories
 
-### Resource URL
+This service will provides the service for the List of documents categories.
+
+#### Resource URL
+
 `GET /documentcategories`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -162,27 +182,33 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response code: 200 Ok**
 
-## GET /documentcategories/{code}/{langcode}
-This service will provides the service for the List of documents categories. 
+### GET /documentcategories/{code}/{langcode}
 
-### Resource URL
+This service will provides the service for the List of documents categories.
+
+#### Resource URL
+
 `GET /documentcategories/{code}/{langcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -202,27 +228,33 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response code: 200 Ok**
 
-## GET /documentcategories/{langcode} 
-This service will provides the service for the List of documents categories based on the passed langcode. 
+### GET /documentcategories/{langcode}
 
-### Resource URL
+This service will provides the service for the List of documents categories based on the passed langcode.
+
+#### Resource URL
+
 `GET /documentcategories/{langcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -242,27 +274,33 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response code: 200 Ok**
 
-## DELETE /documentcategories/{code} 
-This service will provides the service to delete documents categories based on the passed given code. 
+### DELETE /documentcategories/{code}
 
-### Resource URL
+This service will provides the service to delete documents categories based on the passed given code.
+
+#### Resource URL
+
 `DELETE /documentcategories/{code}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -274,44 +312,52 @@ Name | Required | Description | Default Value | Example
               }
 }
 ```
+
 **Response code: 200 Ok**
 
-## POST /documentcategories/search
-This service is for the registration centers search functionality. All the filter parameters are passed and the Documents Category are searched and the matching results are returned. 
+### POST /documentcategories/search
 
-### Resource URL
+This service is for the registration centers search functionality. All the filter parameters are passed and the Documents Category are searched and the matching results are returned.
+
+#### Resource URL
+
 `POST /documentcategories/search`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["contains","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the startRange| -NA- |
-toValue|No|If the type is "between", this field is the value of the endRange| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 10
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Filter Values
+#### Parameters
+
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["contains","equals","startsWith","between"]           | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the startRange             | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the endRange               | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 10            |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
+
+#### Filter Values
+
 Please find the filter columns used in search
+
 1. Name
 2. Status
 
-### Example Request
-```JSON
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -342,8 +388,9 @@ Please find the filter columns used in search
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -366,30 +413,36 @@ Please find the filter columns used in search
  }
 }
 ```
+
 **Response code: 200 Ok**
 
-## POST /documentcategories/filtervalues
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+### POST /documentcategories/filtervalues
 
-### Resource URL
+This service returns the filter values which are required in the dropdown entries of the filter screen.
+
+#### Resource URL
+
 `POST /documentcategories/filtervalues`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -407,8 +460,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -425,10 +479,12 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+
 **Response code: 200 Ok**
 
-### Failure Response
-```JSON
+#### Failure Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -441,54 +497,61 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   "response": null
 }
 ```
+
 **Response code: 200 Ok**
 
-### Failure details
-Error Code | Error Message | Error Description
-------------|------------------------------|-------------
-KER-MSD-013 | Error occurred while fetching Document Category details | Fetch Issue
-KER-MSD-051 | Error occurred while inserting Document Category details | Insertion Issue
-KER-MSD-014 | Document Category not found | Data Not Found
-KER-MSD-089 | Error occurred while updating Document Category details | Update Issue
-KER-MSD-090 | Error occurred while deleting Document Category details | Deletion Issue
-KER-MSD-123 | Cannot delete dependency found | Deletion Issue because of dependency
+#### Failure details
 
-----
+| Error Code  | Error Message                                            | Error Description                    |
+| ----------- | -------------------------------------------------------- | ------------------------------------ |
+| KER-MSD-013 | Error occurred while fetching Document Category details  | Fetch Issue                          |
+| KER-MSD-051 | Error occurred while inserting Document Category details | Insertion Issue                      |
+| KER-MSD-014 | Document Category not found                              | Data Not Found                       |
+| KER-MSD-089 | Error occurred while updating Document Category details  | Update Issue                         |
+| KER-MSD-090 | Error occurred while deleting Document Category details  | Deletion Issue                       |
+| KER-MSD-123 | Cannot delete dependency found                           | Deletion Issue because of dependency |
 
-# Documents Types
-* [POST /documenttype](#post-documenttype)
-* [PUT /documenttype](#put-documenttype)
-* [GET /documenttypes/{documentcategorycode}/{langcode}](#get-documenttypesdocumentcategorycodelangcode)
-* [GET /documentcategorytypes](#get-documentcategorytypes)
-* [GET /doccattypes](#get-doccattypes)
-* [GET /checkapptypedoccattypedoctype](#get-checkapptypedoccattypedoctype)
-* [POST /documenttypes/search](#post-documenttypessearch)
-* [POST /documenttypes/filtervalues](#post-documenttypesfiltervalues)
+***
 
-## POST /documenttype
-This service will create the list of Documents types which are used in the MOSIP platform. There is another service to map the document category and document type.
-Please find the steps to create primary/secondary languages in this [link](Registration-Center-APIs.md#create-update-api).
+## Documents Types
 
-### Resource URL
+* [POST /documenttype](Document-APIs.md#post-documenttype)
+* [PUT /documenttype](Document-APIs.md#put-documenttype)
+* [GET /documenttypes/{documentcategorycode}/{langcode}](Document-APIs.md#get-documenttypesdocumentcategorycodelangcode)
+* [GET /documentcategorytypes](Document-APIs.md#get-documentcategorytypes)
+* [GET /doccattypes](Document-APIs.md#get-doccattypes)
+* [GET /checkapptypedoccattypedoctype](Document-APIs.md#get-checkapptypedoccattypedoctype)
+* [POST /documenttypes/search](Document-APIs.md#post-documenttypessearch)
+* [POST /documenttypes/filtervalues](Document-APIs.md#post-documenttypesfiltervalues)
+
+### POST /documenttype
+
+This service will create the list of Documents types which are used in the MOSIP platform. There is another service to map the document category and document type. Please find the steps to create primary/secondary languages in this [link](Registration-Center-APIs.md#create-update-api).
+
+#### Resource URL
+
 `POST /documenttype`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Code of document type| | 
-name|Yes|Name of the document type| | 
-description|Yes|Description of the document type| | 
-langCode|Yes|Language code of the document type| | 
-isActive|Yes|Active field of the document type| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name        | Required | Description                        | Default Value | Example |
+| ----------- | -------- | ---------------------------------- | ------------- | ------- |
+| code        | Yes      | Code of document type              |               |         |
+| name        | Yes      | Name of the document type          |               |         |
+| description | Yes      | Description of the document type   |               |         |
+| langCode    | Yes      | Language code of the document type |               |         |
+| isActive    | Yes      | Active field of the document type  |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -504,8 +567,9 @@ isActive|Yes|Active field of the document type| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -527,9 +591,11 @@ isActive|Yes|Active field of the document type| |
   "errors": null
 }
 ```
+
 **Response code: 200 Ok**
 
-### Error Response
+#### Error Response
+
 ```
 {
   "id": "string",
@@ -545,39 +611,46 @@ isActive|Yes|Active field of the document type| |
  "response": null
 }
 ```
+
 **Response code: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MSD-101 |Error occurred while inserting application details
+#### Failure details
 
-## PUT /documenttype
-This service will update the list of Documents types which are used in the MOSIP platform. 
+| Error Code  | Error Message                                      | Error Description                    |
+| ----------- | -------------------------------------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error                              | If system error occurs               |
+| KER-ATH-403 | Forbidden                                          | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed                              | If no role/invalid token is detected |
+| KER-MSD-101 | Error occurred while inserting application details |                                      |
 
-### Resource URL
+### PUT /documenttype
+
+This service will update the list of Documents types which are used in the MOSIP platform.
+
+#### Resource URL
+
 `PUT /documenttype`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-code|Yes|Code of document type| | 
-name|Yes|Name of the document type| | 
-description|Yes|Description of the document type| | 
-langCode|Yes|Language code of the document type| | 
-isActive|Yes|Active field of the document type| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name        | Required | Description                        | Default Value | Example |
+| ----------- | -------- | ---------------------------------- | ------------- | ------- |
+| code        | Yes      | Code of document type              |               |         |
+| name        | Yes      | Name of the document type          |               |         |
+| description | Yes      | Description of the document type   |               |         |
+| langCode    | Yes      | Language code of the document type |               |         |
+| isActive    | Yes      | Active field of the document type  |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -593,8 +666,9 @@ isActive|Yes|Active field of the document type| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -616,9 +690,11 @@ isActive|Yes|Active field of the document type| |
   "errors": null
 }
 ```
+
 **Response code: 200 Ok**
 
-### Error Response
+#### Error Response
+
 ```
 {
   "id": "string",
@@ -634,37 +710,44 @@ isActive|Yes|Active field of the document type| |
  "response": null
 }
 ```
+
 **Response code: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MSD-091 |Error occurred while updating application details
-KER-MSD-118 |Document Type not found
+#### Failure details
 
-## GET /documenttypes/{documentcategorycode}/{langcode}
+| Error Code  | Error Message                                     | Error Description                    |
+| ----------- | ------------------------------------------------- | ------------------------------------ |
+| KER-MSD-500 | Internal Server Error                             | If system error occurs               |
+| KER-ATH-403 | Forbidden                                         | If unauthorized role detected        |
+| KER-ATH-401 | Authentication Failed                             | If no role/invalid token is detected |
+| KER-MSD-091 | Error occurred while updating application details |                                      |
+| KER-MSD-118 | Document Type not found                           |                                      |
+
+### GET /documenttypes/{documentcategorycode}/{langcode}
+
 This service will provides the service for the valid doucment type avialbale for specific Document Category code
 
-### Resource URL
+#### Resource URL
+
 `GET /documenttypes/{documentcategorycode}/{langcode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-documentcategorycode |Yes| Code of document category | |
-langcode | Yes | language code | |
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Response
-```JSON
+#### Parameters
+
+| Name                 | Required | Description               | Default Value | Example |
+| -------------------- | -------- | ------------------------- | ------------- | ------- |
+| documentcategorycode | Yes      | Code of document category |               |         |
+| langcode             | Yes      | language code             |               |         |
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -683,30 +766,37 @@ langcode | Yes | language code | |
   }
 }
 ```
+
 **Response code: 200 Ok**
 
-## GET /documentcategorytypes
-This service will provides the service for the List of documents types. 
+### GET /documentcategorytypes
 
-### Resource URL
+This service will provides the service for the List of documents types.
+
+#### Resource URL
+
 `GET /documentcategorytypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
--NA-
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
--NA-
+#### Parameters
 
-### Example Response
-```JSON
+| Name | Required | Description | Default Value | Example |
+| ---- | -------- | ----------- | ------------- | ------- |
+| -NA- |          |             |               |         |
+
+#### Example Request
+
+\-NA-
+
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -726,29 +816,35 @@ Name | Required | Description | Default Value | Example
   }
 }
 ```
+
 **Response code: 200 Ok**
 
-## GET /doccattypes
-This service will give back the document category and it's corresponding category types based on Individual type code, Age group type code and Gender type code. 
+### GET /doccattypes
 
-### Resource URL
+This service will give back the document category and it's corresponding category types based on Individual type code, Age group type code and Gender type code.
+
+#### Resource URL
+
 `GET /doccattypes`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-individualtypecode |Yes| Code of Individual type | |
-agegrouptypecode |Yes| Code of Age group type | |
-gendertypecode |Yes| Code of Gender type | |
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name               | Required | Description             | Default Value | Example |
+| ------------------ | -------- | ----------------------- | ------------- | ------- |
+| individualtypecode | Yes      | Code of Individual type |               |         |
+| agegrouptypecode   | Yes      | Code of Age group type  |               |         |
+| gendertypecode     | Yes      | Code of Gender type     |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "version": "string",
@@ -766,8 +862,9 @@ gendertypecode |Yes| Code of Gender type | |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "documentcategories": [
 	{
@@ -789,29 +886,35 @@ gendertypecode |Yes| Code of Gender type | |
   ]
 }
 ```
+
 **Response code: 200 Ok**
 
-## GET /checkapptypedoccattypedoctype
-This service checks the mapping between the Applicant type code, Document category and the Document type mapping. Result message will be success, if the mapping exists. 
+### GET /checkapptypedoccattypedoctype
 
-### Resource URL
+This service checks the mapping between the Applicant type code, Document category and the Document type mapping. Result message will be success, if the mapping exists.
+
+#### Resource URL
+
 `GET /checkapptypedoccattypedoctype`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-applicanttypecode |Yes| Code of Individual type | |
-documentcategorycode |Yes| Code of Age group type| |
-documenttypecode |Yes| Code of Document type | |
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name                 | Required | Description             | Default Value | Example |
+| -------------------- | -------- | ----------------------- | ------------- | ------- |
+| applicanttypecode    | Yes      | Code of Individual type |               |         |
+| documentcategorycode | Yes      | Code of Age group type  |               |         |
+| documenttypecode     | Yes      | Code of Document type   |               |         |
+
+#### Example Request
+
+```
 {
   "id": "mosip.master.doccattypesonindtypagegndr",
   "ver": "1.0",
@@ -824,52 +927,59 @@ documenttypecode |Yes| Code of Document type | |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "resultMessage":"Success"
 }
 ```
+
 **Response code: 200 Ok**
 
-## POST /documenttypes/search
-This service is for the document type search functionality. All the filter parameters are passed and the document type are searched and the matching results are returned. 
+### POST /documenttypes/search
 
-### Resource URL
+This service is for the document type search functionality. All the filter parameters are passed and the document type are searched and the matching results are returned.
+
+#### Resource URL
+
 `POST /documenttypes/search`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in  ["contains","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the start range| -NA- |
-toValue|No|If the type is "between", this field is the value of the end range| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 10
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Filter Values
-Filter Name| Search Values
------|----------
-code|["contains","equals","startsWith"]
-status|["contains","equals","startsWith"]
+#### Parameters
 
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["contains","equals","startsWith","between"]           | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the start range            | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the end range              | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 10            |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
 
-### Example Request
-```JSON
+#### Filter Values
+
+| Filter Name | Search Values                       |
+| ----------- | ----------------------------------- |
+| code        | \["contains","equals","startsWith"] |
+| status      | \["contains","equals","startsWith"] |
+
+#### Example Request
+
+```
 {
 	"id": "string",
 	"metadata": {},
@@ -901,8 +1011,9 @@ status|["contains","equals","startsWith"]
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -931,30 +1042,36 @@ status|["contains","equals","startsWith"]
  }
 }
 ```
+
 **Response code: 200 Ok**
 
-## POST /documenttypes/filtervalues
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+### POST /documenttypes/filtervalues
 
-### Resource URL
+This service returns the filter values which are required in the dropdown entries of the filter screen.
+
+#### Resource URL
+
 `POST /documenttypes/filtervalues`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
 	"id": "string",
 	"metadata": {},
@@ -972,8 +1089,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -990,51 +1108,59 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
  }
 }
 ```
+
 **Response code: 200 Ok**
 
-### Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-KER-MSD-015 | Error occurred while fetching Document Types
-KER-MSD-052 | Error occurred while inserting Document Type details
-KER-MSD-118 | Document Type not found
-KER-MSD-091 | Error occur while updating Document Type details
-KER-MSD-124 | Cannot delete dependency found
-KER-MSD-092 | Error occurred while deleting Document Type details
+#### Failure details
 
+| Error Code  | Error Message                                        | Error Description |
+| ----------- | ---------------------------------------------------- | ----------------- |
+| KER-MSD-015 | Error occurred while fetching Document Types         |                   |
+| KER-MSD-052 | Error occurred while inserting Document Type details |                   |
+| KER-MSD-118 | Document Type not found                              |                   |
+| KER-MSD-091 | Error occur while updating Document Type details     |                   |
+| KER-MSD-124 | Cannot delete dependency found                       |                   |
+| KER-MSD-092 | Error occurred while deleting Document Type details  |                   |
 
-# Valid documents
-* [GET /validdocuments/{languagecode}](#get-validdocumentslanguagecode)
-* [GET /validdocuments/{doccategorycode}/{languagecode}](#get-validdocumentsdocCategorycode)
-* [POST /validdocuments/search](#post-validdocumentssearch)
-* [POST /validdocuments/filtervalues](#post-validdocumentsfiltervalues)
-* [POST /validdocuments/map/{doccategorycode}/{doctypecode}](#post-validdocumentsmapdoccategorycodedoctypecode)
-* [PUT /validdocuments/unmap/{doccategorycode}/{doctypecode}](#put-validdocumentsunmapdoccategorycodedoctypecode)
+## Valid documents
 
-## GET /validdocuments/{languagecode}
+* [GET /validdocuments/{languagecode}](Document-APIs.md#get-validdocumentslanguagecode)
+* [GET /validdocuments/{doccategorycode}/{languagecode}](Document-APIs.md#get-validdocumentsdocCategorycode)
+* [POST /validdocuments/search](Document-APIs.md#post-validdocumentssearch)
+* [POST /validdocuments/filtervalues](Document-APIs.md#post-validdocumentsfiltervalues)
+* [POST /validdocuments/map/{doccategorycode}/{doctypecode}](Document-APIs.md#post-validdocumentsmapdoccategorycodedoctypecode)
+* [PUT /validdocuments/unmap/{doccategorycode}/{doctypecode}](Document-APIs.md#put-validdocumentsunmapdoccategorycodedoctypecode)
+
+### GET /validdocuments/{languagecode}
+
 This API fetches all the valid documents based on language code.
 
-### Resource URL
+#### Resource URL
+
 `GET /validdocuments/{languagecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-languagecode|Yes|Language code in ISO 639-2|-NA-|fra
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                | Default Value | Example |
+| ------------ | -------- | -------------------------- | ------------- | ------- |
+| languagecode | Yes      | Language code in ISO 639-2 | -NA-          | fra     |
+
+#### Example Request
+
+```
 -NA-
 ```
 
-### Example Success Response
-```JSON
+#### Example Success Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1063,10 +1189,12 @@ languagecode|Yes|Language code in ISO 639-2|-NA-|fra
   }
 }
 ```
+
 **Response code: 200 Ok**
 
-### Example Failure Response
-```JSON
+#### Example Failure Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1081,31 +1209,37 @@ languagecode|Yes|Language code in ISO 639-2|-NA-|fra
   "response": null
 }
 ```
+
 **Response code: 200 Ok**
 
-## GET /validdocuments/{languagecode}
+### GET /validdocuments/{languagecode}
 
-### Resource URL
+#### Resource URL
+
 `GET /validdocuments/{docCategoryCode}/{languagecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-languagecode|Yes|Language code in ISO 639-2|-NA-|fra
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                | Default Value | Example |
+| ------------ | -------- | -------------------------- | ------------- | ------- |
+| languagecode | Yes      | Language code in ISO 639-2 | -NA-          | fra     |
+
+#### Example Request
+
+```
 -NA-
 ```
 
-### Example Success Response
-```JSON
+#### Example Success Response
+
+```
 {
   "errors": [
     {
@@ -1128,10 +1262,12 @@ languagecode|Yes|Language code in ISO 639-2|-NA-|fra
   "version": "string"
 }
 ```
+
 **Response code: 200 Ok**
 
-### Example Failure Response
-```JSON
+#### Example Failure Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1146,39 +1282,45 @@ languagecode|Yes|Language code in ISO 639-2|-NA-|fra
   "response": null
 }
 ```
+
 **Response code: 200 Ok**
 
-## POST /validdocuments/search
-This service is for the valid document search functionality. All the filter parameters are passed and the valid document are searched and the matching results are returned. 
+### POST /validdocuments/search
 
-### Resource URL
+This service is for the valid document search functionality. All the filter parameters are passed and the valid document are searched and the matching results are returned.
+
+#### Resource URL
+
 `POST /validdocuments/search`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in  ["contains","equals","startsWith","between"]| -NA- |
-value|No|Value or id selected in the filter by the end user| -NA- |
-fromValue|No|If the type is "between", this field is the value of the start range| -NA- |
-toValue|No|If the type is "between", this field is the value of the end range| -NA- |
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
-sort|No|This is an array of the sort field and type| | 
-sortfield| The field on which the sort is applied | | modifiedDate
-sorttype| This should be either of ['ASC','DESC']| | ASC
-pagination|The pagination parameter object| |
-pageStart|This is the start index | 0 | 10
-pageFetch| This is the amount of records to be fetched | 10 | 10
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required                                    | Description                                                                     | Default Value | Example |
+| ------------ | ------------------------------------------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No                                          | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No                                          | The column name in the JSON response                                            | -NA-          |         |
+| type         | No                                          | The value have to be in \["contains","equals","startsWith","between"]           | -NA-          |         |
+| value        | No                                          | Value or id selected in the filter by the end user                              | -NA-          |         |
+| fromValue    | No                                          | If the type is "between", this field is the value of the start range            | -NA-          |         |
+| toValue      | No                                          | If the type is "between", this field is the value of the end range              | -NA-          |         |
+| languagecode | Yes                                         | Language code in Language code in ISO 639-2 format                              |               |         |
+| sort         | No                                          | This is an array of the sort field and type                                     |               |         |
+| sortfield    | The field on which the sort is applied      |                                                                                 | modifiedDate  |         |
+| sorttype     | This should be either of \['ASC','DESC']    |                                                                                 | ASC           |         |
+| pagination   | The pagination parameter object             |                                                                                 |               |         |
+| pageStart    | This is the start index                     | 0                                                                               | 10            |         |
+| pageFetch    | This is the amount of records to be fetched | 10                                                                              | 10            |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -1209,8 +1351,9 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1246,30 +1389,36 @@ pageFetch| This is the amount of records to be fetched | 10 | 10
   }
 }
 ```
+
 **Response code: 200 Ok**
 
-## POST /validdocuments/filtervalues
-This service returns the filter values which are required in the dropdown entries of the filter screen.  
+### POST /validdocuments/filtervalues
 
-### Resource URL
+This service returns the filter values which are required in the dropdown entries of the filter screen.
+
+#### Resource URL
+
 `POST /validdocuments/filtervalues`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-filters|No|Array of the filter applied. In case of "list" screen, this array will be empty| -NA- |
-columnName|No|The column name in the JSON response| -NA- |
-type|No|The value have to be in ["unique","all"]| unique | unique
-languagecode|Yes|Language code in Language code in ISO 639-2 format| | 
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
-```JSON
+#### Parameters
+
+| Name         | Required | Description                                                                     | Default Value | Example |
+| ------------ | -------- | ------------------------------------------------------------------------------- | ------------- | ------- |
+| filters      | No       | Array of the filter applied. In case of "list" screen, this array will be empty | -NA-          |         |
+| columnName   | No       | The column name in the JSON response                                            | -NA-          |         |
+| type         | No       | The value have to be in \["unique","all"]                                       | unique        | unique  |
+| languagecode | Yes      | Language code in Language code in ISO 639-2 format                              |               |         |
+
+#### Example Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -1287,8 +1436,9 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
 }
 ```
 
-### Example Response
-```JSON
+#### Example Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1305,41 +1455,49 @@ languagecode|Yes|Language code in Language code in ISO 639-2 format| |
   }
 }
 ```
+
 **Response code: 200 Ok**
 
-### Failure details
-Error Code | Error Message | Error Description
------|----------|-------------
-KER-MSD-071 | Exception during inserting data into db | Insertion Issue
-KER-MSD-016 | Valid document not found | Data Not Found
-KER-MSD-113 | Error occurred while deleting a mapping of Document Category and Document Type details | Deletion Issue
-KER-MSD-XXX | Error occurred while fetching Document Categories and Document Types | Fetching Issue
+#### Failure details
 
-## POST /validdocuments/map/{doccategorycode}/{doctypecode}
+| Error Code  | Error Message                                                                          | Error Description |
+| ----------- | -------------------------------------------------------------------------------------- | ----------------- |
+| KER-MSD-071 | Exception during inserting data into db                                                | Insertion Issue   |
+| KER-MSD-016 | Valid document not found                                                               | Data Not Found    |
+| KER-MSD-113 | Error occurred while deleting a mapping of Document Category and Document Type details | Deletion Issue    |
+| KER-MSD-XXX | Error occurred while fetching Document Categories and Document Types                   | Fetching Issue    |
+
+### POST /validdocuments/map/{doccategorycode}/{doctypecode}
+
 This service is for the valid document mapping category with document category with document type code.
 
-### Resource URL
+#### Resource URL
+
 `POST /validdocuments/map/{doccategorycode}/{doctypecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-doccategorycode|Yes|document category code| |-NA-|
-doctypecode|Yes|document type code| |-NA-|
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
+#### Parameters
+
+| Name            | Required | Description            | Default Value | Example |
+| --------------- | -------- | ---------------------- | ------------- | ------- |
+| doccategorycode | Yes      | document category code |               | -NA-    |
+| doctypecode     | Yes      | document type code     |               | -NA-    |
+
+#### Example Request
+
 ```
 https://{base_url}/v1/masterdata/validdocuments/map/POE/POC
 ```
 
-### Success Response 
-```JSON
+#### Success Response
+
+```
 {
   "id": null,
   "version": null,
@@ -1352,10 +1510,12 @@ https://{base_url}/v1/masterdata/validdocuments/map/POE/POC
   "errors": null
 }
 ```
+
 **Response code: 200 Ok**
 
-### Error Response
-``` JSON
+#### Error Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1370,43 +1530,51 @@ https://{base_url}/v1/masterdata/validdocuments/map/POE/POC
  "response": null
 }
 ```
+
 **Response code: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MSD-071 |Exception during inserting data into DB|If any error occur from database
-KER-MSD-360 |Document Type is already mapped to the received Document Category|If document type is already mapped to document category
-KER-MSD-361 |Document Category Code %s - Document Type %s Mapping does not exist|If the mapping document doesn't exist
+#### Failure details
 
-## PUT /validdocuments/unmap/{doccategorycode}/{doctypecode}
+| Error Code  | Error Message                                                       | Error Description                                       |
+| ----------- | ------------------------------------------------------------------- | ------------------------------------------------------- |
+| KER-MSD-500 | Internal Server Error                                               | If system error occurs                                  |
+| KER-ATH-403 | Forbidden                                                           | If unauthorized role detected                           |
+| KER-ATH-401 | Authentication Failed                                               | If no role/invalid token is detected                    |
+| KER-MSD-071 | Exception during inserting data into DB                             | If any error occur from database                        |
+| KER-MSD-360 | Document Type is already mapped to the received Document Category   | If document type is already mapped to document category |
+| KER-MSD-361 | Document Category Code %s - Document Type %s Mapping does not exist | If the mapping document doesn't exist                   |
+
+### PUT /validdocuments/unmap/{doccategorycode}/{doctypecode}
+
 This service is used for the un-mapping document category with document type code.
 
-### Resource URL
+#### Resource URL
+
 `PUT /validdocuments/unmap/{doccategorycode}/{doctypecode}`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-doccategorycode|Yes|document category code| |-NA-|
-doctypecode|Yes|document type code| |-NA-|
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Example Request
+#### Parameters
+
+| Name            | Required | Description            | Default Value | Example |
+| --------------- | -------- | ---------------------- | ------------- | ------- |
+| doccategorycode | Yes      | document category code |               | -NA-    |
+| doctypecode     | Yes      | document type code     |               | -NA-    |
+
+#### Example Request
+
 ```
 https://{base_url}/v1/masterdata/validdocuments/unmap/CIN/POB
 ```
 
-### Success Response 
-```JSON
+#### Success Response
+
+```
 {
   "id": null,
   "version": null,
@@ -1419,10 +1587,12 @@ https://{base_url}/v1/masterdata/validdocuments/unmap/CIN/POB
   "errors": null
 }
 ```
+
 **Response code: 200 Ok**
 
-### Error Response
-``` JSON
+#### Error Response
+
+```
 {
   "id": "string",
   "version": "string",
@@ -1437,14 +1607,16 @@ https://{base_url}/v1/masterdata/validdocuments/unmap/CIN/POB
  "response": null
 }
 ```
+
 **Response code: 200 Ok**
 
-### Failure details
-Error Code  | Error Message | Error Description
------|----------|-------------
-KER-MSD-500 |Internal Server Error|If system error occurs
-KER-ATH-403 |Forbidden|If unauthorized role detected
-KER-ATH-401 |Authentication Failed|If no role/invalid token is detected
-KER-MSD-071 |Exception during inserting data into DB|If any error occur from database
-KER-MSD-363 |Document Type is already unmapped from the received Document Category|If document type is already un-mapped to document category
-KER-MSD-361 |Document Category Code %s - Document Type %s Mapping does not exist|If the mapping document doesn't exist
+#### Failure details
+
+| Error Code  | Error Message                                                         | Error Description                                          |
+| ----------- | --------------------------------------------------------------------- | ---------------------------------------------------------- |
+| KER-MSD-500 | Internal Server Error                                                 | If system error occurs                                     |
+| KER-ATH-403 | Forbidden                                                             | If unauthorized role detected                              |
+| KER-ATH-401 | Authentication Failed                                                 | If no role/invalid token is detected                       |
+| KER-MSD-071 | Exception during inserting data into DB                               | If any error occur from database                           |
+| KER-MSD-363 | Document Type is already unmapped from the received Document Category | If document type is already un-mapped to document category |
+| KER-MSD-361 | Document Category Code %s - Document Type %s Mapping does not exist   | If the mapping document doesn't exist                      |

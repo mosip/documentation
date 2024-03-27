@@ -1,42 +1,50 @@
+# Packet Manager APIs
+
 This section details about the REST services in Commons Packet Manager.
 
-# Packet Reader APIs
+## Packet Reader APIs
+
 These APIs are used to read packet from object store:
 
-1. [Get Audits](#get-audits)
-2. [Get Biometrics](#get-biometrics)
-3. [Get Documents](#get-documents)
-4. [Get Meta Info](#get-meta-info)
-5. [Search Field](#search-field)
-6. [Search Fields](#search-fields)
-7. [Validate Packet](#validate-packet)
+1. [Get Audits](Packet-Manager-APIs.md#get-audits)
+2. [Get Biometrics](Packet-Manager-APIs.md#get-biometrics)
+3. [Get Documents](Packet-Manager-APIs.md#get-documents)
+4. [Get Meta Info](Packet-Manager-APIs.md#get-meta-info)
+5. [Search Field](Packet-Manager-APIs.md#search-field)
+6. [Search Fields](Packet-Manager-APIs.md#search-fields)
+7. [Validate Packet](Packet-Manager-APIs.md#validate-packet)
 
-## Get Audits
+### Get Audits
+
 API to fetch the audit details from a packet.
 
-### Resource URL
+#### Resource URL
+
 `POST https://{base_url}/commons/v1/packetmanager/audits`
 
-### Resource details
-Resource Details | Description
------------- | ----------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Body Parameters
-Name | Required | Description 
------|----------|------------
-id | Y | ID for the API.
-metadata | N | Meta Data for the API.
-requesttime | Y | Request time for the API.
-version | Y | Version for the API.
-request.bypassCache | Y | Used to fetch data from cache or from object store.
-request.id | Y | ID of the Packet.
-request.process | Y | Process of the Packet.
-request.source | Y | Source of the Packet.
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                | Required | Description                                         |
+| ------------------- | -------- | --------------------------------------------------- |
+| id                  | Y        | ID for the API.                                     |
+| metadata            | N        | Meta Data for the API.                              |
+| requesttime         | Y        | Request time for the API.                           |
+| version             | Y        | Version for the API.                                |
+| request.bypassCache | Y        | Used to fetch data from cache or from object store. |
+| request.id          | Y        | ID of the Packet.                                   |
+| request.process     | Y        | Process of the Packet.                              |
+| request.source      | Y        | Source of the Packet.                               |
+
+#### Request
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "metadata": {},
@@ -51,12 +59,13 @@ request.source | Y | Source of the Packet.
 }
 ```
 
+#### Response
 
-### Response
+**Success Response**
 
-#### Success Response
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "version": "v1",
@@ -90,9 +99,11 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "version": "v1",
@@ -108,48 +119,53 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-### Failure Details
-Error Code | Message | Scenario
------------|---------|---------
-KER-ATH-401 | Authentication Failed | Authentication Failure
-KER-PUT-002|Unable to Find File in Destination Folder|
-KER-PUT-003|Packet decryption failed|
-KER-PUT-005|API not accessible|
-KER-PUT-004|System Exception occured|
-KER-PUT-006|No available provider for given source and process|
-KER-PUT-013|No Object store adapter found.|
-KER-PUT-014|Packet keeper exception occured.|
-KER-PUT-019|Packet Integrity check failed|
+#### Failure Details
 
+| Error Code  | Message                                            | Scenario               |
+| ----------- | -------------------------------------------------- | ---------------------- |
+| KER-ATH-401 | Authentication Failed                              | Authentication Failure |
+| KER-PUT-002 | Unable to Find File in Destination Folder          |                        |
+| KER-PUT-003 | Packet decryption failed                           |                        |
+| KER-PUT-005 | API not accessible                                 |                        |
+| KER-PUT-004 | System Exception occured                           |                        |
+| KER-PUT-006 | No available provider for given source and process |                        |
+| KER-PUT-013 | No Object store adapter found.                     |                        |
+| KER-PUT-014 | Packet keeper exception occured.                   |                        |
+| KER-PUT-019 | Packet Integrity check failed                      |                        |
 
-## Get Biometrics
+### Get Biometrics
+
 API to fetch the biometric details from a packet.
 
-### Resource URL
+#### Resource URL
+
 `POST https://{base_url}/commons/v1/packetmanager/biometrics`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Body Parameters
-Name | Required | Description 
------|----------|-------------
-id | Y | ID of the API.
-metadata | N | Metadata of the API.
-requesttime | Y | Request time of the API.
-version | Y | Version of the API.
-request.bypassCache | Used to fetch data from cache or from object store.|
-request.id | Y | ID of the Packet.
-request.modalities | Modalities of biometrics to be fetched.|
-request.person | Entity for whom the biometrics is to be fetched.| values can be - individualBiometrics, individualAuthBiometrics, officerBiometric, supervisorBiometric
-request.process | Process of the Packet.|
-request.source | Source of the Packet.|
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                | Required                                            | Description                                                                                           |
+| ------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| id                  | Y                                                   | ID of the API.                                                                                        |
+| metadata            | N                                                   | Metadata of the API.                                                                                  |
+| requesttime         | Y                                                   | Request time of the API.                                                                              |
+| version             | Y                                                   | Version of the API.                                                                                   |
+| request.bypassCache | Used to fetch data from cache or from object store. |                                                                                                       |
+| request.id          | Y                                                   | ID of the Packet.                                                                                     |
+| request.modalities  | Modalities of biometrics to be fetched.             |                                                                                                       |
+| request.person      | Entity for whom the biometrics is to be fetched.    | values can be - individualBiometrics, individualAuthBiometrics, officerBiometric, supervisorBiometric |
+| request.process     | Process of the Packet.                              |                                                                                                       |
+| request.source      | Source of the Packet.                               |                                                                                                       |
+
+#### Request
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "metadata": {},
@@ -166,12 +182,13 @@ request.source | Source of the Packet.|
 }
 ```
 
+#### Response
 
-### Response
+**Success Response**
 
-#### Success Response
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": null,
   "version": null,
@@ -924,9 +941,11 @@ request.source | Source of the Packet.|
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "version": "v1",
@@ -942,48 +961,52 @@ request.source | Source of the Packet.|
 }
 ```
 
-### Failure Details
-Error Code | Message | Scenario
------------|---------|---------
-KER-ATH-401 | Authentication Failed | Authentication Failure
-KER-PUT-002|Unable to Find File in Destination Folder|
-KER-PUT-003|Packet decryption failed|
-KER-PUT-005|API not accessible|
-KER-PUT-004|System Exception occured|
-KER-PUT-006|No available provider for given source and process|
-KER-PUT-013|No Object store adapter found.|
-KER-PUT-014|Packet keeper exception occured.|
-KER-PUT-019|Packet Integrity check failed|
-KER-PUT-007|Biometric fieldname is not present inside packet|
-KER-PUT-005|Unable to fetch identity json from all sub packets|
-KER-PUT-008|Unable to fetch meta information from all sub packets|
+#### Failure Details
 
+| Error Code  | Message                                               | Scenario               |
+| ----------- | ----------------------------------------------------- | ---------------------- |
+| KER-ATH-401 | Authentication Failed                                 | Authentication Failure |
+| KER-PUT-002 | Unable to Find File in Destination Folder             |                        |
+| KER-PUT-003 | Packet decryption failed                              |                        |
+| KER-PUT-005 | API not accessible                                    |                        |
+| KER-PUT-004 | System Exception occured                              |                        |
+| KER-PUT-006 | No available provider for given source and process    |                        |
+| KER-PUT-013 | No Object store adapter found.                        |                        |
+| KER-PUT-014 | Packet keeper exception occured.                      |                        |
+| KER-PUT-019 | Packet Integrity check failed                         |                        |
+| KER-PUT-007 | Biometric fieldname is not present inside packet      |                        |
+| KER-PUT-005 | Unable to fetch identity json from all sub packets    |                        |
+| KER-PUT-008 | Unable to fetch meta information from all sub packets |                        |
 
-## Get Documents
+### Get Documents
 
-### Resource URL
+#### Resource URL
+
 `POST https://{base_url}/commons/v1/packetmanager/document`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Body Parameters
-Name | Required | Description 
------|----------|-------------
-id | Y | ID of the API.
-metadata | N | Metadata of the API.
-requesttime | Y | Request time of the API.
-version | Y | Version of the API.
-request.documentName | Y | Name of the document to be fetched. Example - proofOfAddress
-request.id | Y | ID of the Packet.
-request.process | Y | Process of the Packet.
-request.source | Y | Source of the Packet.
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                 | Required | Description                                                  |
+| -------------------- | -------- | ------------------------------------------------------------ |
+| id                   | Y        | ID of the API.                                               |
+| metadata             | N        | Metadata of the API.                                         |
+| requesttime          | Y        | Request time of the API.                                     |
+| version              | Y        | Version of the API.                                          |
+| request.documentName | Y        | Name of the document to be fetched. Example - proofOfAddress |
+| request.id           | Y        | ID of the Packet.                                            |
+| request.process      | Y        | Process of the Packet.                                       |
+| request.source       | Y        | Source of the Packet.                                        |
+
+#### Request
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "metadata": {},
@@ -998,11 +1021,13 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-### Response
+#### Response
 
-#### Success Response
+**Success Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": null,
   "version": null,
@@ -1018,9 +1043,11 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "version": "v1",
@@ -1036,47 +1063,52 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-### Failure Details
-Error Code | Message | Scenario
------------|---------|---------
-KER-ATH-401 | Authentication Failed | Authentication Failure
-KER-PUT-002|Unable to Find File in Destination Folder|
-KER-PUT-003|Packet decryption failed|
-KER-PUT-005|API not accessible|
-KER-PUT-004|System Exception occured|
-KER-PUT-006|No available provider for given source and process|
-KER-PUT-013|No Object store adapter found.|
-KER-PUT-014|Packet keeper exception occured.|
-KER-PUT-019|Packet Integrity check failed|
-KER-PUT-005|Unable to fetch identity json from all sub packets|
-KER-PUT-008|Unable to fetch meta information from all sub packets|
-KER-PUT-011|Failed to get document|
+#### Failure Details
 
-## Get Meta Info
+| Error Code  | Message                                               | Scenario               |
+| ----------- | ----------------------------------------------------- | ---------------------- |
+| KER-ATH-401 | Authentication Failed                                 | Authentication Failure |
+| KER-PUT-002 | Unable to Find File in Destination Folder             |                        |
+| KER-PUT-003 | Packet decryption failed                              |                        |
+| KER-PUT-005 | API not accessible                                    |                        |
+| KER-PUT-004 | System Exception occured                              |                        |
+| KER-PUT-006 | No available provider for given source and process    |                        |
+| KER-PUT-013 | No Object store adapter found.                        |                        |
+| KER-PUT-014 | Packet keeper exception occured.                      |                        |
+| KER-PUT-019 | Packet Integrity check failed                         |                        |
+| KER-PUT-005 | Unable to fetch identity json from all sub packets    |                        |
+| KER-PUT-008 | Unable to fetch meta information from all sub packets |                        |
+| KER-PUT-011 | Failed to get document                                |                        |
 
-### Resource URL
+### Get Meta Info
+
+#### Resource URL
+
 `POST https://{base_url}/commons/v1/packetmanager/metaInfo`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Body Parameters
-Name | Required | Description 
------|----------|-------------
-id | Y | ID of the API.
-metadata | N | Metadata of the API.
-requesttime | Y | Request time of the API.
-version | Y | Version of the API.
-request.bypassCache | Y | Used to fetch data from cache or from object store.
-request.id | Y | ID of the Packet.
-request.process | Y | Process of the Packet.
-request.source | Y | Source of the Packet.
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                | Required | Description                                         |
+| ------------------- | -------- | --------------------------------------------------- |
+| id                  | Y        | ID of the API.                                      |
+| metadata            | N        | Metadata of the API.                                |
+| requesttime         | Y        | Request time of the API.                            |
+| version             | Y        | Version of the API.                                 |
+| request.bypassCache | Y        | Used to fetch data from cache or from object store. |
+| request.id          | Y        | ID of the Packet.                                   |
+| request.process     | Y        | Process of the Packet.                              |
+| request.source      | Y        | Source of the Packet.                               |
+
+#### Request
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "metadata": {},
@@ -1091,11 +1123,13 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-### Response
+#### Response
 
-#### Success Response
+**Success Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": null,
   "version": null,
@@ -1120,9 +1154,11 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "version": "v1",
@@ -1138,47 +1174,52 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-### Failure Details
-Error Code | Message | Scenario
------------|---------|---------
-KER-ATH-401|Authentication Failed|Authentication Failure
-KER-PUT-002|Unable to Find File in Destination Folder|
-KER-PUT-003|Packet decryption failed|
-KER-PUT-005|API not accessible|
-KER-PUT-004|System Exception occured|
-KER-PUT-006|No available provider for given source and process|
-KER-PUT-013|No Object store adapter found.|
-KER-PUT-014|Packet keeper exception occured.|
-KER-PUT-019|Packet Integrity check failed|
-KER-PUT-005|Unable to fetch identity json from all sub packets|
-KER-PUT-008|Unable to fetch meta information from all sub packets|
+#### Failure Details
 
-## Search Field
+| Error Code  | Message                                               | Scenario               |
+| ----------- | ----------------------------------------------------- | ---------------------- |
+| KER-ATH-401 | Authentication Failed                                 | Authentication Failure |
+| KER-PUT-002 | Unable to Find File in Destination Folder             |                        |
+| KER-PUT-003 | Packet decryption failed                              |                        |
+| KER-PUT-005 | API not accessible                                    |                        |
+| KER-PUT-004 | System Exception occured                              |                        |
+| KER-PUT-006 | No available provider for given source and process    |                        |
+| KER-PUT-013 | No Object store adapter found.                        |                        |
+| KER-PUT-014 | Packet keeper exception occured.                      |                        |
+| KER-PUT-019 | Packet Integrity check failed                         |                        |
+| KER-PUT-005 | Unable to fetch identity json from all sub packets    |                        |
+| KER-PUT-008 | Unable to fetch meta information from all sub packets |                        |
 
-### Resource URL
+### Search Field
+
+#### Resource URL
+
 `POST https://{base_url}/commons/v1/packetmanager/searchField`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Body Parameters
-Name | Required | Description 
------|----------|-------------
-id | Y | ID of the API.
-metadata | N | Metadata of the API.
-requesttime | Y | Request time of the API.
-version | Y | Version of the API.
-request.bypassCache | Y | Used to fetch data from cache or from object store.
-request.field | Y | Field Name for which data needs to be fetched.
-request.id | Y | ID of the Packet.
-request.process | Y | Process of the Packet.
-request.source | Y | Source of the Packet.
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                | Required | Description                                         |
+| ------------------- | -------- | --------------------------------------------------- |
+| id                  | Y        | ID of the API.                                      |
+| metadata            | N        | Metadata of the API.                                |
+| requesttime         | Y        | Request time of the API.                            |
+| version             | Y        | Version of the API.                                 |
+| request.bypassCache | Y        | Used to fetch data from cache or from object store. |
+| request.field       | Y        | Field Name for which data needs to be fetched.      |
+| request.id          | Y        | ID of the Packet.                                   |
+| request.process     | Y        | Process of the Packet.                              |
+| request.source      | Y        | Source of the Packet.                               |
+
+#### Request
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "metadata": {},
@@ -1194,11 +1235,13 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-### Response
+#### Response
 
-#### Success Response
+**Success Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": null,
   "version": null,
@@ -1213,9 +1256,11 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "version": "v1",
@@ -1231,46 +1276,51 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-### Failure Details
-Error Code | Message | Scenario
------------|---------|---------
-KER-ATH-401 | Authentication Failed | Authentication Failure
-KER-PUT-002|Unable to Find File in Destination Folder|
-KER-PUT-003|Packet decryption failed|
-KER-PUT-005|API not accessible|
-KER-PUT-004|System Exception occured|
-KER-PUT-006|No available provider for given source and process|
-KER-PUT-013|No Object store adapter found.|
-KER-PUT-014|Packet keeper exception occured.|
-KER-PUT-019|Packet Integrity check failed|
-KER-PUT-005|Unable to fetch identity json from all sub packets|
+#### Failure Details
 
-## Search Fields
+| Error Code  | Message                                            | Scenario               |
+| ----------- | -------------------------------------------------- | ---------------------- |
+| KER-ATH-401 | Authentication Failed                              | Authentication Failure |
+| KER-PUT-002 | Unable to Find File in Destination Folder          |                        |
+| KER-PUT-003 | Packet decryption failed                           |                        |
+| KER-PUT-005 | API not accessible                                 |                        |
+| KER-PUT-004 | System Exception occured                           |                        |
+| KER-PUT-006 | No available provider for given source and process |                        |
+| KER-PUT-013 | No Object store adapter found.                     |                        |
+| KER-PUT-014 | Packet keeper exception occured.                   |                        |
+| KER-PUT-019 | Packet Integrity check failed                      |                        |
+| KER-PUT-005 | Unable to fetch identity json from all sub packets |                        |
 
-### Resource URL
+### Search Fields
+
+#### Resource URL
+
 `POST https://{base_url}/commons/v1/packetmanager/searchFields`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Body Parameters
-Name | Required | Description 
------|----------|-------------
-id | Y | ID of the API.
-metadata | Y | Metadata of the API.
-requesttime | Y | Request time of the API.
-version | Y | Version of the API.
-request.bypassCache | Y | Used to fetch data from cache or from object store.
-request.fields | Y | List of fields to be fetched.
-request.id | Y | ID of the Packet.
-request.process | Y | Process of the Packet.
-request.source | Y | Source of the Packet.
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                | Required | Description                                         |
+| ------------------- | -------- | --------------------------------------------------- |
+| id                  | Y        | ID of the API.                                      |
+| metadata            | Y        | Metadata of the API.                                |
+| requesttime         | Y        | Request time of the API.                            |
+| version             | Y        | Version of the API.                                 |
+| request.bypassCache | Y        | Used to fetch data from cache or from object store. |
+| request.fields      | Y        | List of fields to be fetched.                       |
+| request.id          | Y        | ID of the Packet.                                   |
+| request.process     | Y        | Process of the Packet.                              |
+| request.source      | Y        | Source of the Packet.                               |
+
+#### Request
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "metadata": {},
@@ -1288,11 +1338,13 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-### Response
+#### Response
 
-#### Success Response
+**Success Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": null,
   "version": null,
@@ -1308,9 +1360,11 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "version": "v1",
@@ -1326,45 +1380,50 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-### Failure Details
-Error Code | Message | Scenario
------------|---------|---------
-KER-ATH-401 | Authentication Failed | Authentication Failure
-KER-PUT-002|Unable to Find File in Destination Folder|
-KER-PUT-003|Packet decryption failed|
-KER-PUT-005|API not accessible|
-KER-PUT-004|System Exception occured|
-KER-PUT-006|No available provider for given source and process|
-KER-PUT-013|No Object store adapter found.|
-KER-PUT-014|Packet keeper exception occured.|
-KER-PUT-019|Packet Integrity check failed|
-KER-PUT-005|Unable to fetch identity json from all sub packets|
+#### Failure Details
 
-## Validate Packet
+| Error Code  | Message                                            | Scenario               |
+| ----------- | -------------------------------------------------- | ---------------------- |
+| KER-ATH-401 | Authentication Failed                              | Authentication Failure |
+| KER-PUT-002 | Unable to Find File in Destination Folder          |                        |
+| KER-PUT-003 | Packet decryption failed                           |                        |
+| KER-PUT-005 | API not accessible                                 |                        |
+| KER-PUT-004 | System Exception occured                           |                        |
+| KER-PUT-006 | No available provider for given source and process |                        |
+| KER-PUT-013 | No Object store adapter found.                     |                        |
+| KER-PUT-014 | Packet keeper exception occured.                   |                        |
+| KER-PUT-019 | Packet Integrity check failed                      |                        |
+| KER-PUT-005 | Unable to fetch identity json from all sub packets |                        |
 
-### Resource URL
+### Validate Packet
+
+#### Resource URL
+
 `POST https://{base_url}/commons/v1/packetmanager/validatePacket`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Body Parameters
-Name | Required | Description 
------|----------|-------------
-id | Y | ID of the API.
-metadata | N | Metadata of the API.
-requesttime | Y | Request time of the API.
-version | Y | Version of the API.
-request.bypassCache | Y | Used to fetch data from cache or from object store.
-request.id | Y | ID of the Packet.
-request.process | Y | Process of the Packet.
-request.source | Y | Source of the Packet.
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                | Required | Description                                         |
+| ------------------- | -------- | --------------------------------------------------- |
+| id                  | Y        | ID of the API.                                      |
+| metadata            | N        | Metadata of the API.                                |
+| requesttime         | Y        | Request time of the API.                            |
+| version             | Y        | Version of the API.                                 |
+| request.bypassCache | Y        | Used to fetch data from cache or from object store. |
+| request.id          | Y        | ID of the Packet.                                   |
+| request.process     | Y        | Process of the Packet.                              |
+| request.source      | Y        | Source of the Packet.                               |
+
+#### Request
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "metadata": {},
@@ -1379,11 +1438,13 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-### Response
+#### Response
 
-#### Success Response
+**Success Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "version": "v1",
@@ -1396,9 +1457,11 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "version": "v1",
@@ -1414,56 +1477,61 @@ request.source | Y | Source of the Packet.
 }
 ```
 
-### Failure Details
-Error Code | Message | Scenario
------------|---------|---------
-KER-ATH-401 | Authentication Failed | Authentication Failure
-KER-PUT-002|Unable to Find File in Destination Folder|
-KER-PUT-003|Packet decryption failed|
-KER-PUT-005|API not accessible|
-KER-PUT-004|System Exception occured|
-KER-PUT-006|No available provider for given source and process|
-KER-PUT-013|No Object store adapter found.|
-KER-PUT-014|Packet keeper exception occured.|
-KER-PUT-019|Packet Integrity check failed|
-KER-PUT-005|Unable to fetch identity json from all sub packets|
-KER-PUT-008|Unable to fetch meta information from all sub packets|
+#### Failure Details
 
+| Error Code  | Message                                               | Scenario               |
+| ----------- | ----------------------------------------------------- | ---------------------- |
+| KER-ATH-401 | Authentication Failed                                 | Authentication Failure |
+| KER-PUT-002 | Unable to Find File in Destination Folder             |                        |
+| KER-PUT-003 | Packet decryption failed                              |                        |
+| KER-PUT-005 | API not accessible                                    |                        |
+| KER-PUT-004 | System Exception occured                              |                        |
+| KER-PUT-006 | No available provider for given source and process    |                        |
+| KER-PUT-013 | No Object store adapter found.                        |                        |
+| KER-PUT-014 | Packet keeper exception occured.                      |                        |
+| KER-PUT-019 | Packet Integrity check failed                         |                        |
+| KER-PUT-005 | Unable to fetch identity json from all sub packets    |                        |
+| KER-PUT-008 | Unable to fetch meta information from all sub packets |                        |
 
-# Packet Writer API
+## Packet Writer API
+
 This service is used to create registration packet and store it in object-store.
 
-## Create Packet
+### Create Packet
 
-### Resource URL
+#### Resource URL
+
 `PUT https://{base_url}/commons/v1/packetmanager/createPacket`
 
-### Resource details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource details
 
-### Request Body Parameters
-Name | Required | Description
------|----------|-------------
-id | Y | ID of the API.
-metadata | N | Metadata of the API.
-requesttime | Y | Request time of the API.
-version | Y | Version of the API.
-request.audits | Y | Audit trail of the Packet in key-value pair.
-request.biometrics | N | Biometrics of the Packet.
-request.documents | N | Documents of the Packet.
-request.id | Y | ID of the packet.
-request.fields | Y | Fields of the Packet in key-value pair.
-request.metaInfo | Y | Metainfo of the Packet in key-value pair.
-request.schemaJson | Y | Schema JSON to use inorder to create the Packet.
-request.schemaVersion | Y | Schema Version to use inorder to create the Packet.
-request.process | Y | Process of the Packet. Example - NEW/UPDATE/LOST
-request.source | Y | Source of the Packet. Example - REGISTRATION_CLIENT
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                  | Required | Description                                          |
+| --------------------- | -------- | ---------------------------------------------------- |
+| id                    | Y        | ID of the API.                                       |
+| metadata              | N        | Metadata of the API.                                 |
+| requesttime           | Y        | Request time of the API.                             |
+| version               | Y        | Version of the API.                                  |
+| request.audits        | Y        | Audit trail of the Packet in key-value pair.         |
+| request.biometrics    | N        | Biometrics of the Packet.                            |
+| request.documents     | N        | Documents of the Packet.                             |
+| request.id            | Y        | ID of the packet.                                    |
+| request.fields        | Y        | Fields of the Packet in key-value pair.              |
+| request.metaInfo      | Y        | Metainfo of the Packet in key-value pair.            |
+| request.schemaJson    | Y        | Schema JSON to use inorder to create the Packet.     |
+| request.schemaVersion | Y        | Schema Version to use inorder to create the Packet.  |
+| request.process       | Y        | Process of the Packet. Example - NEW/UPDATE/LOST     |
+| request.source        | Y        | Source of the Packet. Example - REGISTRATION\_CLIENT |
+
+#### Request
+
+```
 {
   "id": "mosip.registration.packet.writer",
   "metadata": {},
@@ -2214,11 +2282,13 @@ request.source | Y | Source of the Packet. Example - REGISTRATION_CLIENT
 }
 ```
 
-### Response
+#### Response
 
-#### Success Response
+**Success Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": "mosip.registration.packet.reader",
   "version": "v1",
@@ -2266,9 +2336,11 @@ request.source | Y | Source of the Packet. Example - REGISTRATION_CLIENT
 }
 ```
 
-#### Failure Response
+**Failure Response**
+
 **Response Code : 200 (OK)**
-```JSON
+
+```
 {
   "id": null,
   "version": null,
@@ -2284,15 +2356,16 @@ request.source | Y | Source of the Packet. Example - REGISTRATION_CLIENT
 }
 ```
 
-### Failure Details
-Error Code | Message | Scenario
------------|---------|---------
-KER-ATH-401 | Authentication Failed | Authentication Failure
-KER-PUT-003|Packet encryption failed|
-KER-PUT-005|API not accessible|
-KER-PUT-004|System Exception occured|
-KER-PUT-006|No available provider for given source and process|
-KER-PUT-013|No Object store adapter found.|
-KER-PUT-014|Packet keeper exception occured.|
-KER-PUT-009|Unable to parse the zip|
-KER-PUT-010|Failed to generate digital signature|
+#### Failure Details
+
+| Error Code  | Message                                            | Scenario               |
+| ----------- | -------------------------------------------------- | ---------------------- |
+| KER-ATH-401 | Authentication Failed                              | Authentication Failure |
+| KER-PUT-003 | Packet encryption failed                           |                        |
+| KER-PUT-005 | API not accessible                                 |                        |
+| KER-PUT-004 | System Exception occured                           |                        |
+| KER-PUT-006 | No available provider for given source and process |                        |
+| KER-PUT-013 | No Object store adapter found.                     |                        |
+| KER-PUT-014 | Packet keeper exception occured.                   |                        |
+| KER-PUT-009 | Unable to parse the zip                            |                        |
+| KER-PUT-010 | Failed to generate digital signature               |                        |

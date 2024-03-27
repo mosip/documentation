@@ -1,40 +1,47 @@
+# ID Schema APIs
+
 This section details about the REST services for ID Schema.
 
-* [Create ID Schema](#create-id-schema)
-* [Update ID Schema](#update-id-schema)
-* [Delete ID Schema](#delete-id-schema)
-* [Get all ID Schema](#get-all-id-schema)
-* [Get ID Schema](#get-id-schema)
-* [Publish ID Schema](#publish-id-schema)
+* [Create ID Schema](ID-Schema-APIs.md#create-id-schema)
+* [Update ID Schema](ID-Schema-APIs.md#update-id-schema)
+* [Delete ID Schema](ID-Schema-APIs.md#delete-id-schema)
+* [Get all ID Schema](ID-Schema-APIs.md#get-all-id-schema)
+* [Get ID Schema](ID-Schema-APIs.md#get-id-schema)
+* [Publish ID Schema](ID-Schema-APIs.md#publish-id-schema)
 
-## Create ID Schema
-This API is used to create an ID Schema. 
+### Create ID Schema
 
-### Resource URL
+This API is used to create an ID Schema.
+
+#### Resource URL
+
 `POST https://{base_url}/v1/masterdata/idschema`
 
-### Resource Details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource Details
 
-### Request Body Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-id | yes | ID of the API | mosip.idschema.create | 
-version | yes | version of the API | | v1
-metadata | no | any meta information for the API | | 
-requesttime | yes | timestamp of the request | | 2019-12-11T06:12:25.288Z
-request | yes | request body attributes | | 
-request.description | yes | description for the ID schema | | MOSIP Sample identity
-request.effectiveFrom | yes | timestamp from when this will be effective from | | 2020-06-11T06:12:25.288Z
-request.schema | yes | UI specification attributes to generate the schema | | 
-request.schemaVersion | yes | schema version for the UI specification | | 
-request.title | yes | title or name of the schema | | MOSIP Identity Schema 1.1
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                  | Required | Description                                        | Default Value         | Example                   |
+| --------------------- | -------- | -------------------------------------------------- | --------------------- | ------------------------- |
+| id                    | yes      | ID of the API                                      | mosip.idschema.create |                           |
+| version               | yes      | version of the API                                 |                       | v1                        |
+| metadata              | no       | any meta information for the API                   |                       |                           |
+| requesttime           | yes      | timestamp of the request                           |                       | 2019-12-11T06:12:25.288Z  |
+| request               | yes      | request body attributes                            |                       |                           |
+| request.description   | yes      | description for the ID schema                      |                       | MOSIP Sample identity     |
+| request.effectiveFrom | yes      | timestamp from when this will be effective from    |                       | 2020-06-11T06:12:25.288Z  |
+| request.schema        | yes      | UI specification attributes to generate the schema |                       |                           |
+| request.schemaVersion | yes      | schema version for the UI specification            |                       |                           |
+| request.title         | yes      | title or name of the schema                        |                       | MOSIP Identity Schema 1.1 |
+
+#### Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -90,8 +97,9 @@ request.title | yes | title or name of the schema | | MOSIP Identity Schema 1.1
 }
 ```
 
-### Response
-```JSON
+#### Response
+
+```
 {
   "errors": [
     {
@@ -160,34 +168,39 @@ request.title | yes | title or name of the schema | | MOSIP Identity Schema 1.1
 }
 ```
 
-## Update ID Schema
+### Update ID Schema
+
 This API is used to update an ID Schema which is in draft status.
 
-### Resource URL
+#### Resource URL
+
 `PUT https://{base_url}/v1/masterdata/idschema?id={id_value}`
 
-### Resource Details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource Details
 
-### Request Body Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-id | yes | ID of the API | mosip.idschema.create | 
-version | yes | version of the API | | v1
-metadata | no | any meta information for the API | | 
-requesttime | yes | timestamp of the request | | 2019-12-11T06:12:25.288Z
-request | yes | request body attributes | | 
-request.description | yes | description for the ID schema | | MOSIP Sample identity
-request.effectiveFrom | yes | timestamp from when this will be effective from | | 2020-06-11T06:12:25.288Z
-request.schema | yes | UI specification attributes to generate the schema | | 
-request.schemaVersion | yes | schema version for the UI specification | | 
-request.title | yes | title or name of the schema | | MOSIP Identity Schema 1.1
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                  | Required | Description                                        | Default Value         | Example                   |
+| --------------------- | -------- | -------------------------------------------------- | --------------------- | ------------------------- |
+| id                    | yes      | ID of the API                                      | mosip.idschema.create |                           |
+| version               | yes      | version of the API                                 |                       | v1                        |
+| metadata              | no       | any meta information for the API                   |                       |                           |
+| requesttime           | yes      | timestamp of the request                           |                       | 2019-12-11T06:12:25.288Z  |
+| request               | yes      | request body attributes                            |                       |                           |
+| request.description   | yes      | description for the ID schema                      |                       | MOSIP Sample identity     |
+| request.effectiveFrom | yes      | timestamp from when this will be effective from    |                       | 2020-06-11T06:12:25.288Z  |
+| request.schema        | yes      | UI specification attributes to generate the schema |                       |                           |
+| request.schemaVersion | yes      | schema version for the UI specification            |                       |                           |
+| request.title         | yes      | title or name of the schema                        |                       | MOSIP Identity Schema 1.1 |
+
+#### Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -243,8 +256,9 @@ request.title | yes | title or name of the schema | | MOSIP Identity Schema 1.1
 }
 ```
 
-### Response
-```JSON
+#### Response
+
+```
 {
   "errors": [
     {
@@ -313,26 +327,32 @@ request.title | yes | title or name of the schema | | MOSIP Identity Schema 1.1
 }
 ```
 
-## Delete ID Schema
+### Delete ID Schema
+
 This API is used to delete an ID Schema which is in draft status.
 
-### Resource URL
+#### Resource URL
+
 `DELETE https://{base_url}/v1/masterdata/idschema?id={id_value}`
 
-### Resource Details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource Details
 
-### Request Body Parameters
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
+
+#### Request Body Parameters
+
 NA
 
-### Request
+#### Request
+
 NA
 
-### Response
-```JSON
+#### Response
+
+```
 {
   "errors": [
     {
@@ -348,26 +368,32 @@ NA
 }
 ```
 
-## Get all ID Schema
+### Get all ID Schema
+
 This API is used to fetch all the available ID Schema.
 
-### Resource URL
+#### Resource URL
+
 `GET https://{base_url}/v1/masterdata/idschema/all?orderBy={desc or asc}&pageNumber={page number}&pageSize={page size}&sortBy={field to sort}`
 
-### Resource Details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource Details
 
-### Request Body Parameters
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
+
+#### Request Body Parameters
+
 NA
 
-### Request
+#### Request
+
 NA
 
-### Response
-```JSON
+#### Response
+
+```
 {
   "errors": [
     {
@@ -443,26 +469,32 @@ NA
 }
 ```
 
-## Get ID Schema
+### Get ID Schema
+
 This API is used to fetch the latest published ID Schema if version is not passed in request url or less it an be used to fetch a specific id schema by passing the schema version.
 
-### Resource URL
+#### Resource URL
+
 `GET https://dev.mosip.net/v1/masterdata/idschema/latest?schemaVersion={version_number}`
 
-### Resource Details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource Details
 
-### Request Body Parameters
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
+
+#### Request Body Parameters
+
 NA
 
-### Request
+#### Request
+
 NA
 
-### Response
-```JSON
+#### Response
+
+```
 {
   "errors": [
     {
@@ -531,34 +563,39 @@ NA
 }
 ```
 
-## Publish ID Schema
+### Publish ID Schema
+
 This API is used to publish a draft ID Schema.
 
-### Resource URL
+#### Resource URL
+
 `PUT https://{base_url}/v1/masterdata/idschema/publish`
 
-### Resource Details
-Resource Details | Description
------------- | -------------
-Response format | JSON
-Requires Authentication | Yes
+#### Resource Details
 
-### Request Body Parameters
-Name | Required | Description | Default Value | Example
------|----------|-------------|---------------|--------
-id | yes | ID of the API | mosip.idschema.create | 
-version | yes | version of the API | | v1
-metadata | no | any meta information for the API | | 
-requesttime | yes | timestamp of the request | | 2019-12-11T06:12:25.288Z
-request | yes | request body attributes | | 
-request.description | yes | description for the ID schema | | MOSIP Sample identity
-request.effectiveFrom | yes | timestamp from when this will be effective from | | 2020-06-11T06:12:25.288Z
-request.schema | yes | UI specification attributes to generate the schema | | 
-request.schemaVersion | yes | schema version for the UI specification | | 
-request.title | yes | title or name of the schema | | MOSIP Identity Schema 1.1
+| Resource Details        | Description |
+| ----------------------- | ----------- |
+| Response format         | JSON        |
+| Requires Authentication | Yes         |
 
-### Request
-```JSON
+#### Request Body Parameters
+
+| Name                  | Required | Description                                        | Default Value         | Example                   |
+| --------------------- | -------- | -------------------------------------------------- | --------------------- | ------------------------- |
+| id                    | yes      | ID of the API                                      | mosip.idschema.create |                           |
+| version               | yes      | version of the API                                 |                       | v1                        |
+| metadata              | no       | any meta information for the API                   |                       |                           |
+| requesttime           | yes      | timestamp of the request                           |                       | 2019-12-11T06:12:25.288Z  |
+| request               | yes      | request body attributes                            |                       |                           |
+| request.description   | yes      | description for the ID schema                      |                       | MOSIP Sample identity     |
+| request.effectiveFrom | yes      | timestamp from when this will be effective from    |                       | 2020-06-11T06:12:25.288Z  |
+| request.schema        | yes      | UI specification attributes to generate the schema |                       |                           |
+| request.schemaVersion | yes      | schema version for the UI specification            |                       |                           |
+| request.title         | yes      | title or name of the schema                        |                       | MOSIP Identity Schema 1.1 |
+
+#### Request
+
+```
 {
   "id": "string",
   "metadata": {},
@@ -571,8 +608,9 @@ request.title | yes | title or name of the schema | | MOSIP Identity Schema 1.1
 }
 ```
 
-### Response
-```JSON
+#### Response
+
+```
 {
   "errors": [
     {
