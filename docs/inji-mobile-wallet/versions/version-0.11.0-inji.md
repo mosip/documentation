@@ -20,7 +20,7 @@ In the recent past, Inji mobile app had undergone GenderMag analysis which addre
 
 ## Summary
 
-Please find below the details for the **Inji 0.11.0-Inji** release:
+Please find below the details for the **Inji Version 0.11.0** release:
 
 ### Sunbird C Integration
 
