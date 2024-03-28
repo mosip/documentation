@@ -67,7 +67,12 @@ The credentials are shared in a peer-to-peer model with the verifier application
 
 <figure><img src="../.gitbook/assets/online_qr_login.png" alt=""><figcaption></figcaption></figure>
 
-
 ### 5. Data Backup and Restore
 
 From Settings screen, users can access Backup settings screen. In Backup settings screen, users can configure their preferences for data backup. The setting, configured once during the application's lifecycle, determines whether Google Drive or iCloud will be utilized based on the device platform. To restore backup data to the mobile wallet, users must log in to the same account and configure settings within the app accordingly. Additionally, restored Verifiable Credentials (VCs) should be re-activated to enable QR Code login functionality.
+
+
+
+<figure><img src="../.gitbook/assets/android (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/ios (2).png" alt=""><figcaption></figcaption></figure>
