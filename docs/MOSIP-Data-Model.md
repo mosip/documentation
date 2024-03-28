@@ -12,7 +12,7 @@ This section contains details related to MOSIP data model design.The section als
 
 ### Data Model
 
-Databases inventory in MOSIP
+Databases inventory in MOSIP. To know more about Schema / Table fields, click [here](https://github.com/mosip/registration/tree/1.1.5.5/db_scripts/mosip_regprc)
 
 
 
