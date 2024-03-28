@@ -10,12 +10,13 @@
 
 ## Overview
 
-We are excited to announce the release of **Inji Version 0.11.0**. This release is built upon Inji 0.10.0 and is compatible with 0.11.0 Mimoto release. As part of 0.11.0, Inji introduces below mentioned key features:
+We are excited to announce the release of **Inji Version 0.11.0** . This release is compatible with v0.11.0 Mimoto release. As part of 0.11.0, Inji introduces below mentioned key features:
 
 * Sunbird C Integration
 * Data backup and Restore
+* Improved UI / UX
 
-In the recent past, Inji mobile app had undergone GenderMag analysis which addresses gender / inclusivity bias in software. In this release, we have incorporated GenderMag features for UI / UX in inclusivity space.
+In the recent past, Inji mobile app had undergone GenderMag analysis which addresses gender / inclusivity bias in software. In this release, we have incorporated GenderMag features for UI / UX in inclusivity space. To know more about the GenderMag UI/UX changes in the application, please refer here.
 
 ## Summary
 
