@@ -19,7 +19,7 @@ Downloading your digital credentials (IDs) with you at all          times just g
 
 * **Downloading VC using the UIN/ VID:** Residents can use the country-provided ID (UIN/VID) to download their cards and avail of various government and private services.
 * **Downloading VC using the Application ID (AID):** Residents can also use their Application ID provided to them during the registration process to be able to download their card.
-* **Downloading VC using the OpenID for VC Issuance flow:** Residents can download a VC using a configured third-party issuer which follows OpenID for VCI standard.
+* **Downloading VC using the OpenID for VC Issuance flow:** Residents can download a VC using configured third-party issuer which complies with OpenID for VCI standard. For Inji mobile, MOSIP IDA and Sunbird Insurance are example integrations.
 
 ### Sharing Verifiable Credentials without the Internet
 
@@ -36,6 +36,14 @@ Downloading your digital credentials (IDs) with you at all          times just g
 &#x20;      To understand the QR code login flow, refer [here](https://docs.esignet.io/end-user-guide/login-with-qr-code).
 
 * Inji users have the ability to choose which downloaded VC should be enabled for online authentication and selectively share the credentials on their ID. This capability provides users with an additional layer of security and control over the utilization of their stored information.
+
+### Data Backup and Restore
+
+In order to safeguard against potential data loss in case of any unprecedented circumstances such as phone / app crashes, device change etc, and to improve user experience in the Inji app, users can now utilize the Backup and Restore feature for their Verifiable Credentials (VCs).
+
+Depending on their device platform, users can choose to store and retrieve VCs securely using either Google Drive (for Android users) or iCloud (for iOS users). This is a one-time setup process, where Android users can select their respective Google email account, while iOS users can back-up data using their default logged-in Apple account.
+
+To understand the backup & restore flow, refer here.
 
 ### Ingenious Design
 
