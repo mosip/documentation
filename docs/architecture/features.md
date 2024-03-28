@@ -43,7 +43,7 @@ In order to safeguard against potential data loss in case of any unprecedented c
 
 Depending on their device platform, users can choose to store and retrieve VCs securely using either Google Drive (for Android users) or iCloud (for iOS users). This is a one-time setup process, where Android users can select their respective Google email account, while iOS users can back-up data using their default logged-in Apple account.
 
-To understand the backup and restore flow, refer here.
+To understand the backup and restore flow, refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/feature-workflows#id-5.-data-backup-and-restore).
 
 ### Ingenious Design
 
