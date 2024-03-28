@@ -10,10 +10,10 @@
 
 ## Overview
 
-We are excited to announce the release of **Inji Version 0.11.0**. This release is built upon Inji 0.10.0 and is compatible with 0.11.0 Mimoto release. As part of 0.11.0, Inji introduces below key features:
+We are excited to announce the release of **Inji Version 0.11.0**. This release is built upon Inji 0.10.0 and is compatible with 0.11.0 Mimoto release. As part of 0.11.0, Inji introduces below mentioned key features:
 
 * Sunbird C Integration
-* Data backup & Restore
+* Data backup and Restore
 
 In the recent past, Inji mobile app had undergone GenderMag analysis which addresses gender / inclusivity bias in software. In this release, we have incorporated GenderMag comments on UI / UX in inclusivity space.
 
@@ -23,11 +23,11 @@ Please find below the details for the **Inji 0.11.0-Inji** release:
 
 ### Sunbird C Integration
 
-Sunbird Credentials is now onboarded as an issuer with Inji Mobile. This demonstrates that Inji Mobile wallet can integrate with any credential issuer supporting **OpenID** protocol and issues Verifiable Credentials (VCs) according to OpenID4VCI standards. Sunbird C currently offers Insurance Credentials which can be downloaded into Inji mobile wallet when integrated with eSignet 1.4.0 using Knowledge Based Authentication (KBA) method.
+Sunbird Credentials is now onboarded as an issuer with Inji Mobile. This demonstrates that Inji Mobile wallet can integrate with any credential issuer supporting **OpenID** protocol and issues Verifiable Credentials (VCs) based on OpenID4VCI standards. Sunbird C currently offers Insurance Credentials which can be downloaded into Inji mobile wallet when integrated with eSignet 1.4.0 using Knowledge Based Authentication (KBA) method.
 
-### Data backup & Restore
+### Data backup and Restore
 
-Inji mobile wallet currently offers data backup and restore functionality using Google Drive for Android and iCloud for iOS to safely store your verifiable credentials on your preferred cloud platform, ensuring security and accessibility. Resident can also easily restore backed up information as required, and therby enabling seamless user experience whether the resident uses Android or iOS.
+Inji mobile wallet currently offers data backup and restore functionality using Google Drive for Android and iCloud for iOS to safely store your verifiable credentials on your preferred cloud platform, ensuring security and accessibility. Resident can also easily restore backed up information as required, and thereby enabling seamless user experience whether the resident uses Android or iOS.
 
 ### GenderMag
 
