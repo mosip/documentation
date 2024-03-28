@@ -42,7 +42,7 @@ The GenderMag Method is a process and also a set of materials helpful in investi
 
 ## Known Issues
 
-Redmi devices are not supported in this release. To know more, refer to [known issues in Redmi device](https://mosip.atlassian.net/issues/?filter=-4\&jql=labels%20%3D%20redmi%20order%20by%20created%20DESC).
+Redmi devices are not supported in this release. To know more, refer [here](https://mosip.atlassian.net/issues/?filter=-4\&jql=labels%20%3D%20redmi%20order%20by%20created%20DESC).
 
 Mentioned below is the list of other known issues.
 
