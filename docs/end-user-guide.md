@@ -154,3 +154,7 @@ There are two ways to activate the VC:
 ### Restore - ios
 
 <figure><img src=".gitbook/assets/restore ios1.png" alt=""><figcaption></figcaption></figure>
+
+
+
+<figure><img src=".gitbook/assets/restore ios.png" alt=""><figcaption></figcaption></figure>
