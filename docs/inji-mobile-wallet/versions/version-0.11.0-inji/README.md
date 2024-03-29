@@ -36,14 +36,14 @@ The GenderMag Method is a process and also a set of materials helpful in investi
 
 ## Repository Released
 
-| **Repositories** | **Tags Released**                                         |
-| ---------------- | --------------------------------------------------------- |
-| Inji             | [v0.11.0](https://github.com/mosip/inji)                  |
-| mimoto           | [v0.11.0](https://github.com/mosip/mimoto)                |
-| tuvali           | [v0.11.0](https://github.com/mosip/tuvali)                |
-| mosip-config     | [v0.11.0](https://github.com/mosip/mosip-config)          |
-| Secure-Keystore  | [release-0.1.x](https://github.com/mosip/secure-keystore) |
-| mosip-onboarder  | [v0.11.0](https://github.com/mosip/mosip-onboarding)      |
+| **Repositories** | **Tags Released**                                                   |
+| ---------------- | ------------------------------------------------------------------- |
+| Inji             | [v0.11.0](https://github.com/mosip/inji/tree/v0.11.0)               |
+| mimoto           | [v0.11.0](https://github.com/mosip/mimoto/tree/v0.11.0)             |
+| tuvali           | [v0.4.7](https://github.com/mosip/tuvali/tree/v0.4.7)               |
+| mosip-config     | [v1.2.0.1](https://github.com/mosip/mosip-config/tree/v0.11.0-INJI) |
+| Secure-Keystore  | [v0.1.7](https://github.com/mosip/secure-keystore/tree/v0.1.7\_npm) |
+| mosip-onboarder  | [v1.2.0.1](https://github.com/mosip/mosip-onboarding/tree/v1.2.0.1) |
 
 ## Known Issues
 
