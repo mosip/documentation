@@ -137,22 +137,12 @@ There are two ways to activate the VC:
 
 ### Backup
 
-To back up virtual machines (VCs), users need to select a cloud provider based on the specific device they are using
+In order to backup VCs, user has to choose their preference of the cloud based on the device they are using.
 
 1. Firstly, user has to go to settings and click on the Backup and Restore menu option.
 2. User should consent for the app to use the drive, and once consented, application displays backup and restore screen.
 3. In this screen, user can manually take a backup by clicking on the Backup button and this asynchronously happens allowing the user to use the application.
 4. User will be notified on success or failure.
-
-### Restore
-
-In order to restore backed up VCs, user should choose their preference of the cloud based on the device and use the same google or apple ID which they used for taking backup.
-
-1. Firstly, user has to go to settings and click on the Backup and Restore menu option.
-2. User should consent for the app to use the drive, and once consented, application displays backup and restore screen.
-3. User find the details of latest backup details in Last Backup Details section.
-4. In this screen, user can manually restore a backup by clicking on the Restore button and this asynchronously happens allowing the user to use the application.
-5. User will be notified on success or failure.
 
 ### Data backup - Android
 
@@ -163,6 +153,16 @@ In order to restore backed up VCs, user should choose their preference of the cl
 ### Data backup- ios
 
 <figure><img src=".gitbook/assets/backup ios (1).png" alt=""><figcaption></figcaption></figure>
+
+### Restore
+
+In order to restore backed up VCs, user has to choose their preference of the cloud based on the device and use the same google/apple ID which they used for taking backup.
+
+1. Firstly, user has to go to settings and click on the Backup and Restore menu option.
+2. User should consent for the app to use the drive, and once consented, application displays backup and restore screen.
+3. User find the details of latest backup details in Last Backup Details section.
+4. In this screen, user can manually restore a backup by clicking on the Restore button and this asynchronously happens allowing the user to use the application.
+5. User will be notified on success or failure.
 
 ### Restore - Android
 
