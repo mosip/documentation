@@ -121,9 +121,7 @@ There are two ways to activate the VC:
 * The second option is to click on the activate button found in the detailed view.
 * Upon clicking the **Activate** button, a confirmation alert message will be prompted. Once permission is granted, the user will be directed to an OTP screen. After entering the correct OTP, the VC will be activated and projected on the screen with the same message.
 
-<figure><img src=".gitbook/assets/activate-vc-new-Page-1.png" alt=""><figcaption><p>User clicks on <strong>Activate button</strong></p></figcaption></figure>
-
-<figure><img src=".gitbook/assets/activate-vc-new-Page-2.png" alt=""><figcaption><p>VC activated for online login</p></figcaption></figure>
+<figure><img src=".gitbook/assets/activation1.png" alt=""><figcaption></figcaption></figure>
 
 ### Deleting a VC
 
