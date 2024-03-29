@@ -139,6 +139,8 @@ There are two ways to activate the VC:
 
 <figure><img src=".gitbook/assets/backup inji.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src=".gitbook/assets/backup inji 2.png" alt=""><figcaption></figcaption></figure>
+
 ### Data backup- ios
 
 ### Restore - Android
