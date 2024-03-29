@@ -36,10 +36,9 @@ The GenderMag Method is a process and also a set of materials helpful in investi
 
 ## Repository Released
 
-| **Repositories** | **Tags Released**  |
-| ---------------- | ------------------ |
-| mimoto           | [v0.11.0](./)      |
-| mosip-config     | [v0.11.0-INJI](./) |
+| **Repositories** | **Tags Released**                          |
+| ---------------- | ------------------------------------------ |
+| mimoto           | [v0.11.0](https://github.com/mosip/mimoto) |
 
 ## Known Issues
 
