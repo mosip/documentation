@@ -7,6 +7,7 @@
 * [Overview](overview.md)
   * [Features](architecture/features.md)
     * [Feature Workflows](architecture/feature-workflows.md)
+    * [GenderMag](inji-mobile-wallet/overview/features/gendermag.md)
   * [Architecture](overview/architecture.md)
 * [Components](architecture/components.md)
 * [Customizations](customization-overview.md)
