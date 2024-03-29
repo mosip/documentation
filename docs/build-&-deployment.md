@@ -295,7 +295,7 @@ Add in details such as  *Name*, *Package Name* and *SHA- Fingerptint*
 
 > Note:
 >* SHA-1 should be of the keystore generated for signing the APK
->* Make sure you have checked `Custom URI Scheme` in `Advaned Settings`
+>* Make sure you have checked `Custom URI Scheme` in `Advanced Settings`
 >* The APK signing keystore needs to be unchanged for backup feature to work as the SHA-1 is 1-1 mapped for a client ID created
 
 #### Step 5:
