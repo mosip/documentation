@@ -24,8 +24,6 @@ Please navigate to the Play Store or App Store for iOS, select the **Install** o
 
 <figure><img src=".gitbook/assets/TourGuide1.png" alt=""><figcaption></figcaption></figure>
 
-
-
 <figure><img src=".gitbook/assets/tourguide2.png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src=".gitbook/assets/first-launch-Page-3.png" alt=""><figcaption><p>Setting up the app</p></figcaption></figure>
@@ -138,6 +136,8 @@ There are two ways to activate the VC:
 ## Data backup and restore
 
 ### Data backup - Android
+
+<figure><img src=".gitbook/assets/backup inji.png" alt=""><figcaption></figcaption></figure>
 
 ### Data backup- ios
 
