@@ -43,9 +43,9 @@ To download VC, there are three methods:
 * Fill in the required information in the text box according to your needs, and then click on the **Generate Card** button.
 * You will be prompted to enter an OTP on the next page, and once you do so, the download will begin automatically.
 
-
-
 <figure><img src=".gitbook/assets/downloading VC1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/downloading VC using UIN1.png" alt=""><figcaption></figcaption></figure>
 
 **Downloading VC via eSignet**
 
