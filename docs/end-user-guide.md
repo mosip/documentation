@@ -20,7 +20,7 @@ Please navigate to the Play Store or App Store for iOS, select the **Install** o
 * The chosen language will be reflected within the app interface. Subsequently, a four-page tutorial for the Inji will be presented, followed by the option to secure the app.
 * This can be achieved through either a PIN or utilizing the device's Biometrics (such as fingerprint or facial recognition). Once the setting is done, users will be directed to the app's home page.
 
-
+**On Android device**
 
 <figure><img src=".gitbook/assets/TourGuide1.png" alt=""><figcaption></figcaption></figure>
 
