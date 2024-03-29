@@ -63,7 +63,9 @@ To download VC, there are three methods:
 
 Once we click on the downloaded VC, it will open as a detailed view.
 
-<figure><img src=".gitbook/assets/detailed-vc-view.png" alt=""><figcaption></figcaption></figure>
+
+
+<figure><img src=".gitbook/assets/detailed view.png" alt=""><figcaption></figcaption></figure>
 
 ### Viewing history of the downloaded VC
 
