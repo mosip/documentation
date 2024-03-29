@@ -43,9 +43,9 @@ To download VC, there are three methods:
 * Fill in the required information in the text box according to your needs, and then click on the **Generate Card** button.
 * You will be prompted to enter an OTP on the next page, and once you do so, the download will begin automatically.
 
-<figure><img src=".gitbook/assets/inji-download-via-uin-Page-1.png" alt=""><figcaption><p>Selecting the <strong>Download via UIN, VID, AID option</strong></p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/inji-download-via-uin-Page-2.png" alt=""><figcaption><p><strong>OTP Verification</strong> and <strong>Requesting for Credential</strong></p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/downloading VC1.png" alt=""><figcaption></figcaption></figure>
 
 **Downloading VC via eSignet**
 
