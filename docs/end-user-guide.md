@@ -71,7 +71,7 @@ Once we click on the downloaded VC, it will open as a detailed view.
 
 After we have completed several scenarios, when we navigate to the history page, we can find it by selecting the third icon located in the bottom right corner. This page will display a comprehensive list of all the events that have occurred.
 
-<figure><img src=".gitbook/assets/detailed-viewVC-history.png" alt=""><figcaption><p>History View</p></figcaption></figure>
+<figure><img src=".gitbook/assets/history.png" alt=""><figcaption></figcaption></figure>
 
 ### Sharing Credentials
 
