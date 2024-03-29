@@ -26,7 +26,7 @@ Please find below the details for the **Inji Version 0.11.0** release:
 
 Sunbird Credentials is now successfully onboarded as an issuer with Inji Mobile. This successful onboarding now demonstrates that Inji Mobile wallet has proven capability to integrate with any credential issuer supporting **OpenID** protocol and issues Verifiable Credentials (VCs) based on OpenID4VCI standards. Sunbird C currently offers Insurance Credentials which can be downloaded into Inji mobile wallet upon integrating with eSignet 1.4.0 using Knowledge Based Authentication (KBA) method.
 
-### Data backup and Restore
+### Data backup and restore
 
 Inji mobile wallet currently offers data backup and restore functionality using Google Drive for Android and iCloud for iOS to safely store residents' Verifiable Credentials(VCs) on resident's preferred cloud platform. This ensures security and accessibility. Resident can also easily restore backed up information as required, and thereby enabling seamless user experience whether the resident uses Android or iOS.
 
