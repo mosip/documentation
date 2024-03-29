@@ -55,11 +55,7 @@ To download VC, there are three methods:
 * A text box should be filled with your VID and the captcha should be completed in order to enable the **Get OTP** button.
 * Upon activation, the system will redirect to the One-Time Password (OTP) validation page. After successfully inputting the correct OTP, the user will be taken back to the application, landing on the loading screen. Following the completion of the download process, the user will be returned to the home page.
 
-<figure><img src=".gitbook/assets/inji-download-via-esignet-Page-1.png" alt=""><figcaption><p>Selecting the <strong>Download via eSignet</strong></p></figcaption></figure>
-
-<figure><img src=".gitbook/assets/inji-download-via-esignet-Page-2.png" alt=""><figcaption><p>User opts for <strong>Login with OTP option</strong></p></figcaption></figure>
-
-<figure><img src=".gitbook/assets/inji-download-via-esignet-Page-3.png" alt=""><figcaption><p>Successful download of VC</p></figcaption></figure>
+<figure><img src=".gitbook/assets/download using eSignet1.png" alt=""><figcaption></figcaption></figure>
 
 ### Detailed view of the downloaded VC
 
