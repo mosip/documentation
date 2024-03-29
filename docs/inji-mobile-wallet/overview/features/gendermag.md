@@ -11,7 +11,7 @@ The **GenderMag Methodology** aims to analyze and mitigate gender biases in user
    * Abi, who is either Abigail or Abishek, is 45 years old. He works as a homemaker, is literate, but not very tech- 
     savvy. His internet connectivity is moderate, and he does not have a personal phone.
 
-   * Tim , who is either Timothy or Timara, a 24-year-old financial consultant, is literate, tech-savvy, and boasts 
+   * Tim, who is either Timothy or Timara, a 24-year-old financial consultant, is literate, tech-savvy, and boasts 
      excellent internet connectivity. Additionally, he owns the latest phone.
   
 2. Examine the feature, systematically walk through the process, assess their information handling, and pinpoint any problems.
