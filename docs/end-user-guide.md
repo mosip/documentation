@@ -16,13 +16,15 @@ Please navigate to the Play Store or App Store for iOS, select the **Install** o
 
 ### First launch of the app
 
-* Upon launching the app, the MOSIP logo will be displayed before the language filter appears.&#x20;
+* Upon launching the app, the MOSIP logo will be displayed before the language filter appears.
 * The chosen language will be reflected within the app interface. Subsequently, a four-page tutorial for the Inji will be presented, followed by the option to secure the app.
-* &#x20;This can be achieved through either a PIN or utilizing the device's Biometrics (such as fingerprint or facial recognition). Once the setting is done, users will be directed to the app's home page.
+* This can be achieved through either a PIN or utilizing the device's Biometrics (such as fingerprint or facial recognition). Once the setting is done, users will be directed to the app's home page.
 
-<figure><img src=".gitbook/assets/first-launch-Page-1.png" alt=""><figcaption><p>First launch </p></figcaption></figure>
 
-<figure><img src=".gitbook/assets/first-launch-Page-2.png" alt=""><figcaption><p>Tooltips </p></figcaption></figure>
+
+<figure><img src=".gitbook/assets/TourGuide1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/first-launch-Page-2.png" alt=""><figcaption><p>Tooltips</p></figcaption></figure>
 
 <figure><img src=".gitbook/assets/first-launch-Page-3.png" alt=""><figcaption><p>Setting up the app</p></figcaption></figure>
 
@@ -36,9 +38,9 @@ To download VC, there are three methods:
 
 **Downloading VC using UIN/ VID/ AID**
 
-* On the home page, you will find a plus "+" symbol. Clicking on this symbol will display a list of issuers from which you can download VCs.&#x20;
-* Look for the issuer that offers the option to download via UIN and VID. Clicking on this option will present you with the option to download VC from AID and VID.&#x20;
-* Fill in the required information in the text box according to your needs, and then click on the **Generate Card** button.&#x20;
+* On the home page, you will find a plus "+" symbol. Clicking on this symbol will display a list of issuers from which you can download VCs.
+* Look for the issuer that offers the option to download via UIN and VID. Clicking on this option will present you with the option to download VC from AID and VID.
+* Fill in the required information in the text box according to your needs, and then click on the **Generate Card** button.
 * You will be prompted to enter an OTP on the next page, and once you do so, the download will begin automatically.
 
 <figure><img src=".gitbook/assets/inji-download-via-uin-Page-1.png" alt=""><figcaption><p>Selecting the <strong>Download via UIN, VID, AID option</strong></p></figcaption></figure>
@@ -47,10 +49,10 @@ To download VC, there are three methods:
 
 **Downloading VC via eSignet**
 
-* On the home page, there will be a plus "+" symbol that displays the list of issuers available to download VCs from.&#x20;
-* Select the issuer that states **Download via eSignet**. Once clicked, the browser will open and take you to the eSignet page.&#x20;
+* On the home page, there will be a plus "+" symbol that displays the list of issuers available to download VCs from.
+* Select the issuer that states **Download via eSignet**. Once clicked, the browser will open and take you to the eSignet page.
 * There will be an option to **Login with OTP**, which should be selected.
-* A text box should be filled with your VID and the captcha should be completed in order to enable the **Get OTP** button.&#x20;
+* A text box should be filled with your VID and the captcha should be completed in order to enable the **Get OTP** button.
 * Upon activation, the system will redirect to the One-Time Password (OTP) validation page. After successfully inputting the correct OTP, the user will be taken back to the application, landing on the loading screen. Following the completion of the download process, the user will be returned to the home page.
 
 <figure><img src=".gitbook/assets/inji-download-via-esignet-Page-1.png" alt=""><figcaption><p>Selecting the <strong>Download via eSignet</strong></p></figcaption></figure>
@@ -84,9 +86,9 @@ Let us understand the process of sharing credentials using an example. Suppose a
 **On the Sharing Party' phone:**
 
 * The resident opens the Scanner by clicking on the `Scan` button, the application now prompts for permission.
-* &#x20;Upon granting the necessary permissions, the app opens a camera where the resident can scan the QR code of the recipient's phone.&#x20;
+* Upon granting the necessary permissions, the app opens a camera where the resident can scan the QR code of the recipient's phone.
 * Once the QR code is successfully scanned, both phones will establish a connection.
-* The resident then needs to choose a downloaded VC and select either the **Share** option or the **Share with Selfie** option.&#x20;
+* The resident then needs to choose a downloaded VC and select either the **Share** option or the **Share with Selfie** option.
 * The **Share** button will solely share the VC, while the **Share with Selfie** option will verify if the sender's face matches the photo in the VC before proceeding to share.
 
 <figure><img src=".gitbook/assets/sharing-Page-1.png" alt=""><figcaption></figcaption></figure>
@@ -95,9 +97,9 @@ Let us understand the process of sharing credentials using an example. Suppose a
 
 **On the Relying Party' phone**:
 
-* This functionality is only available on Android devices. To access it, the receiver needs to navigate to the settings page and locate the `Receive Cards` option.&#x20;
+* This functionality is only available on Android devices. To access it, the receiver needs to navigate to the settings page and locate the `Receive Cards` option.
 * On selecting this option, it will open the QR code page. For the relying party to be able to receive a card, the resident needs to scan the QR code using a sharing phone. Once the QR code is scanned and shared, the relying party will receive the VC and be able to preview its contents.
-* To view the received cards, they would need to access the settings page and find the `Received Cards` section. Clicking on this section will display the received cards. If the receiver has not received any card, this section will be empty.&#x20;
+* To view the received cards, they would need to access the settings page and find the `Received Cards` section. Clicking on this section will display the received cards. If the receiver has not received any card, this section will be empty.
 * Please note that the relying party can only view the received cards and will not be able to share or perform other actions with them.
 
 <figure><img src=".gitbook/assets/sharing-Page-3.png" alt=""><figcaption></figcaption></figure>
@@ -116,7 +118,7 @@ After clicking on the ellipsis button on the downloaded VC, a button will appear
 
 There are two ways to activate the VC:
 
-* &#x20;The second option is to click on the activate button found in the detailed view.&#x20;
+* The second option is to click on the activate button found in the detailed view.
 * Upon clicking the **Activate** button, a confirmation alert message will be prompted. Once permission is granted, the user will be directed to an OTP screen. After entering the correct OTP, the VC will be activated and projected on the screen with the same message.
 
 <figure><img src=".gitbook/assets/activate-vc-new-Page-1.png" alt=""><figcaption><p>User clicks on <strong>Activate button</strong></p></figcaption></figure>
@@ -125,12 +127,8 @@ There are two ways to activate the VC:
 
 ### Deleting a VC
 
-* The process of removing a VC involves locating the three-dot menu on the downloaded VC.&#x20;
-* From there, the option to remove the card will be available. Select the option **Remove from Wallet**. Upon clicking this option, a confirmation prompt will appear asking for confirmation.&#x20;
+* The process of removing a VC involves locating the three-dot menu on the downloaded VC.
+* From there, the option to remove the card will be available. Select the option **Remove from Wallet**. Upon clicking this option, a confirmation prompt will appear asking for confirmation.
 * If the confirmation is selected, the VC will be successfully removed from the system.
 
 <figure><img src=".gitbook/assets/activate-vc-new-deleteVC.png" alt=""><figcaption><p>Remove a VC</p></figcaption></figure>
-
-
-
-
