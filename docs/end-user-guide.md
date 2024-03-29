@@ -45,6 +45,8 @@ To download VC, there are three methods:
 
 <figure><img src=".gitbook/assets/downloading VC in UIN.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src=".gitbook/assets/downloading using UIN.png" alt=""><figcaption></figcaption></figure>
+
 **Downloading VC via eSignet**
 
 * On the home page, there will be a plus "+" symbol that displays the list of issuers available to download VCs from.
