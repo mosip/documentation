@@ -147,4 +147,6 @@ There are two ways to activate the VC:
 
 ### Restore - Android
 
+<figure><img src=".gitbook/assets/restore Android.png" alt=""><figcaption></figcaption></figure>
+
 ### Restore - ios
