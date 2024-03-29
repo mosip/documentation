@@ -139,10 +139,10 @@ GenderMag methodology is designed to examine and address gender biases in users'
 
 1. We identified three personas based on their familiarity with technology and their ability to embrace technological progress. The personas are:
    
-   a. Abi, who is either Abigail or Abishek, is 45 years old. He works as a homemaker, is literate, but not very tech- 
+     a. Abi, who is either Abigail or Abishek, is 45 years old. He works as a homemaker, is literate, but not very tech- 
       savvy. His internet connectivity is moderate, and he does not have a personal phone.
   
-   b. Tim , who is either Timothy or Timara, a 24-year-old financial consultant, is literate, tech-savvy, and boasts 
+     b. Tim , who is either Timothy or Timara, a 24-year-old financial consultant, is literate, tech-savvy, and boasts 
       excellent internet connectivity. Additionally, he owns the latest phone.
   
 2. Examine the feature, systematically walk through the process, assess their information handling, and pinpoint any problems.
