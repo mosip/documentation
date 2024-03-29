@@ -57,6 +57,8 @@ To download VC, there are three methods:
 
 <figure><img src=".gitbook/assets/download using eSignet1.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src=".gitbook/assets/download using esignet2.png" alt=""><figcaption></figcaption></figure>
+
 ### Detailed view of the downloaded VC
 
 Once we click on the downloaded VC, it will open as a detailed view.
