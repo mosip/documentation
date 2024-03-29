@@ -63,15 +63,17 @@ To download VC, there are three methods:
 
 Once we click on the downloaded VC, it will open as a detailed view.
 
-
-
 <figure><img src=".gitbook/assets/detailed view.png" alt=""><figcaption></figcaption></figure>
 
 ### Viewing history of the downloaded VC
 
 After we have completed several scenarios, when we navigate to the history page, we can find it by selecting the third icon located in the bottom right corner. This page will display a comprehensive list of all the events that have occurred.
 
-<figure><img src=".gitbook/assets/history.png" alt=""><figcaption></figcaption></figure>
+<div align="left">
+
+<figure><img src=".gitbook/assets/history1.png" alt="" width="191"><figcaption></figcaption></figure>
+
+</div>
 
 ### Sharing Credentials
 
