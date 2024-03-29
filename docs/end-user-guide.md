@@ -143,7 +143,7 @@ There are two ways to activate the VC:
 
 ### Data backup- ios
 
-<figure><img src=".gitbook/assets/backup ios.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/backup ios (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Restore - Android
 
