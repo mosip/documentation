@@ -42,7 +42,7 @@ This state machine takes care of the VC received in Inji as a Wallet or Verifier
 
 It also keeps track of sharing VC over BLE. When Inji is being used as a Verifier, all received VCs are displayed under the Received Card option in Settings.
 
-## ExistingMosipVCItemMachine.ts
+## ExistingMosipVCItemMAchine.ts
 
 This state machine takes care of VC downloaded via UIN/VID. This contains all the activities/state related to VC like:
 
