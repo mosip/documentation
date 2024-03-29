@@ -134,3 +134,13 @@ There are two ways to activate the VC:
 * If the confirmation is selected, the VC will be successfully removed from the system.
 
 <figure><img src=".gitbook/assets/activate-vc-new-deleteVC.png" alt=""><figcaption><p>Remove a VC</p></figcaption></figure>
+
+## Data backup and restore
+
+### Data backup - Android
+
+### Data backup- ios
+
+### Restore - Android
+
+### Restore - ios
