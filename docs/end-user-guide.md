@@ -43,9 +43,7 @@ To download VC, there are three methods:
 * Fill in the required information in the text box according to your needs, and then click on the **Generate Card** button.
 * You will be prompted to enter an OTP on the next page, and once you do so, the download will begin automatically.
 
-<figure><img src=".gitbook/assets/downloading VC1.png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src=".gitbook/assets/downloading VC using UIN1.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/downloading VC in UIN.png" alt=""><figcaption></figcaption></figure>
 
 **Downloading VC via eSignet**
 
@@ -128,8 +126,6 @@ There are two ways to activate the VC:
 * The process of removing a VC involves locating the three-dot menu on the downloaded VC.
 * From there, the option to remove the card will be available. Select the option **Remove from Wallet**. Upon clicking this option, a confirmation prompt will appear asking for confirmation.
 * If the confirmation is selected, the VC will be successfully removed from the system.
-
-
 
 <figure><img src=".gitbook/assets/deletion of VC3.png" alt=""><figcaption></figcaption></figure>
 
