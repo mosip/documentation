@@ -131,7 +131,7 @@ There are two ways to activate the VC:
 * From there, the option to remove the card will be available. Select the option **Remove from Wallet**. Upon clicking this option, a confirmation prompt will appear asking for confirmation.
 * If the confirmation is selected, the VC will be successfully removed from the system.
 
-<figure><img src=".gitbook/assets/activate-vc-new-deleteVC.png" alt=""><figcaption><p>Remove a VC</p></figcaption></figure>
+<figure><img src=".gitbook/assets/deletion vc.png" alt=""><figcaption></figcaption></figure>
 
 ## Data backup and restore
 
