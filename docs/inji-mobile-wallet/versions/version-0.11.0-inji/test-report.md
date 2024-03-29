@@ -74,7 +74,7 @@ Below are the test metrics for Inji by performing functional testing using `mock
 | --------- | ---------- | ---------- | ----------- |
 | 1823      | 1610       | 169        | 44          |
 
-**Test Rate: 97.60%** with **Pass Rate : 88.31%**
+**Test Rate**: 97.60% with **Pass Rate**: 88.31%
 
 Here is the detailed breakdown of metrics:
 
@@ -100,7 +100,7 @@ Below section provides details on API test metrics by executing MOSIP functional
 | --------- | ---------- | ---------- | ----------- |
 | 1436      | 1353       | 68         | 13          |
 
-**Test Rate:** 99.09% with **Pass Rate:** 94.22%
+**Test Rate**: 99.09% with **Pass Rate**: 94.22%
 
 Here is the detailed breakdown of metrics:
 
@@ -124,7 +124,7 @@ Below section provides details on UI Automation by executing MOSIP functional au
 | --------- | ---------- | ---------- | ----------- |
 | 128       | 112        | 16         | 0           |
 
-**Test Rate:** 100% with **Pass Rate:** 87.50%
+**Test Rate**: 100% with **Pass Rate**: 87.50%
 
 Here is the detailed breakdown of metrics
 
@@ -154,7 +154,7 @@ Below are the test metrics by performing VC Sharing functionality on various dev
 | --------- | ---------- | ---------- | ----------- |
 | 213       | 155        | 61         | 0           |
 
-**Test Rate: 100%** with **Pass Rate : 72.8%**
+**Test Rate**: 100% with **Pass Rate**: 72.8%
 
 ### Detailed Test Metrics
 
