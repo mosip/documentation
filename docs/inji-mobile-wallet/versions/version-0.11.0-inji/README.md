@@ -6,7 +6,7 @@
 
 **Support**: Developer Release
 
-**Release Date**: \<tbd>
+**Release Date**: 29th March, 2024
 
 ## Overview
 
@@ -40,7 +40,7 @@ The GenderMag Method is a process and also a set of materials helpful in investi
 | ---------------- | --------------------------------------------------------- |
 | Inji             | [v0.11.0](https://github.com/mosip/inji)                  |
 | mimoto           | [v0.11.0](https://github.com/mosip/mimoto)                |
-| Tuvali           | [v0.11.0](https://github.com/mosip/tuvali)                |
+| tuvali           | [v0.11.0](https://github.com/mosip/tuvali)                |
 | mosip-config     | [v0.11.0](https://github.com/mosip/mosip-config)          |
 | Secure-Keystore  | [release-0.1.x](https://github.com/mosip/secure-keystore) |
 | mosip-onboarder  | [v0.11.0](https://github.com/mosip/mosip-onboarding)      |
