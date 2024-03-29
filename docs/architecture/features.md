@@ -37,7 +37,7 @@ Downloading your digital credentials (IDs) with you at all          times just g
 
 * Inji users have the ability to choose which downloaded VC should be enabled for online authentication and selectively share the credentials on their ID. This capability provides users with an additional layer of security and control over the utilization of their stored information.
 
-### Data Backup and Restore
+### Data backup and restore
 
 In order to safeguard against potential data loss in case of any unprecedented circumstances such as phone / app crashes, device change etc, and to improve user experience in the Inji app, users can now utilize the Backup and Restore feature for their Verifiable Credentials (VCs).
 
