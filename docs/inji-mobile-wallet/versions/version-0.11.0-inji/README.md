@@ -16,7 +16,7 @@ We are excited to announce the release of **Inji Version 0.11.0** . This release
 * Data backup and restore
 * Improved UI / UX
 
-In the recent past, Inji mobile app had undergone GenderMag analysis which addresses gender / inclusivity bias in software. In this release, we have incorporated GenderMag features for UI / UX in inclusivity space. To know more about the GenderMag UI/UX changes in the application, please refer here.
+In the recent past, Inji mobile app had undergone GenderMag analysis which addresses gender / inclusivity bias in software. In this release, we have incorporated GenderMag features for UI / UX in inclusivity space. To know more about the GenderMag UI/UX changes in the application, please refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/gendermag).
 
 ## Summary
 
