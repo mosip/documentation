@@ -58,7 +58,11 @@ Verification is performed on various configurations as mentioned below.
 
 ### On Android Device:
 
+<figure><img src="../../../.gitbook/assets/Android.jpg" alt=""><figcaption></figcaption></figure>
+
 ### On iOS Device
+
+<figure><img src="../../../.gitbook/assets/iOS.jpg" alt=""><figcaption></figcaption></figure>
 
 ## Test execution statistics
 
@@ -68,7 +72,7 @@ Below are the test metrics for Inji by performing functional testing using `mock
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
-| 1823      | 1610        | 169        | 44          |
+| 1823      | 1610       | 169        | 44          |
 
 **Test Rate: 97.60%** with **Pass Rate : 88.31%**
 
@@ -104,7 +108,7 @@ Here is the detailed breakdown of metrics:
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
-| 157       | 143        | 14          | 0           |
+| 157       | 143        | 14         | 0           |
 
 #### eSignet
 
@@ -112,14 +116,13 @@ Here is the detailed breakdown of metrics:
 | --------- | ---------- | ---------- | ----------- |
 | 1279      | 1210       | 54         | 13          |
 
-
 ## UI Automation results
 
 Below section provides details on UI Automation by executing MOSIP functional automation Framework.
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
-| 128       | 112        | 16          | 0           |
+| 128       | 112        | 16         | 0           |
 
 **Test Rate:** 100% with **Pass Rate:** 87.50%
 
@@ -130,7 +133,6 @@ Here is the detailed breakdown of metrics
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
 | 72        | 64         | 8          | 0           |
-
 
 #### ios
 
@@ -145,6 +147,8 @@ Hash Tag: `sha256 : f010aee8b1e7f25cfb2284b20779cb5b8b6bd2efdd8a22b1e3c6d3a20194
 ### Testing with various device combinations
 
 Below are the test metrics by performing VC Sharing functionality on various device combinations.
+
+<figure><img src="../../../.gitbook/assets/Combination_testing.jpg" alt=""><figcaption></figcaption></figure>
 
 | **Total** | **Passed** | **Failed** | **Skipped** |
 | --------- | ---------- | ---------- | ----------- |
@@ -161,6 +165,4 @@ The various metrics that assist in test tracking and efficiency are as follows:
 * Passed Test Cases Coverage: It measures the percentage of passed test cases. (Number of passed tests / Total number of tests executed) x 100
 * Failed Test Case Coverage: It measures the percentage of all the failed test cases. (Number of failed tests / Total number of test cases executed) x 100
 
-Link for the [detailed test report]()
-
-
+Link for the [detailed test report](test-report.md)
