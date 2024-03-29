@@ -125,6 +125,8 @@ There are two ways to activate the VC:
 
 <figure><img src=".gitbook/assets/activation1.png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src=".gitbook/assets/activation2.png" alt=""><figcaption></figcaption></figure>
+
 ### Deleting a VC
 
 * The process of removing a VC involves locating the three-dot menu on the downloaded VC.
