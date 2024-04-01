@@ -22,8 +22,8 @@
 
 **MOSIP cluster** - This cluster runs all the MOSIP components and certain third party components to secure the cluster, API’s and data.
 
-* [MOSIP External Components](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/external/README.md#mosip-external-components)
-* [MOSIP Services](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/mosip/README.md#mosip-services)
+* [MOSIP External Components](https://github.com/mosip/mosip-infra/blob/v1.2.0.1/deployment/v3/external/README.md#mosip-external-components)
+* [MOSIP Services](https://github.com/mosip/mosip-infra/blob/v1.2.0.1/deployment/v3/mosip/README.md#mosip-services)
 
 ### Architecture 
 
@@ -31,10 +31,10 @@
 
 ### Deployment repos
 
-* [k8s-infra](https://github.com/mosip/k8s-infra/tree/v1.2.0.1-B1) : contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
-* [mosip-infra](https://github.com/mosip/mosip-infra/tree/v1.2.0.1-B1/deployment/v3) : contains the deployment scripts to run charts in defined sequence.
-* [mosip-config](https://github.com/mosip/mosip-config/tree/v1.2.0.1-B1) : contains all the configuration files required by the MOSIP modules.
-* [mosip-helm](https://github.com/mosip/mosip-helm/tree/v1.2.0.1-B1) : contains packaged helm charts for all the MOSIP modules.
+* [k8s-infra](https://github.com/mosip/k8s-infra/tree/v1.2.0.1) : contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
+* [mosip-infra](https://github.com/mosip/mosip-infra/tree/v1.2.0.1/deployment/v3) : contains the deployment scripts to run charts in defined sequence.
+* [mosip-config](https://github.com/mosip/mosip-config/tree/v1.2.0.1) : contains all the configuration files required by the MOSIP modules.
+* [mosip-helm](https://github.com/mosip/mosip-helm/tree/v1.2.0.1) : contains packaged helm charts for all the MOSIP modules.
 
 ### Pre-requisites
 
