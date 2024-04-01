@@ -34,6 +34,8 @@ Inji mobile wallet currently offers data backup and restore functionality using 
 
 The GenderMag Method is a process and also a set of materials helpful in investigating gender biases during resident's problem-solving experiences with software. Gendermag adheres to Human Computer Interaction (HCI) principles and thereby factor in gender differences interaction with software. As part of GenderMag walkthrough, we have identified inclusivity bugs with respect to UI / UX in Inji mobile. Version 0.11.0 includes UI / UX changes for P1 items.
 
+To know more about the GenderMag UI/UX changes in the application, please refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/gendermag).
+
 ## Repository Released
 
 | **Repositories** | **Tags Released**                                                       |
