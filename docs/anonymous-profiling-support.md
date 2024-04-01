@@ -33,7 +33,7 @@ Example 3: They can compare the total number of enrollments against the total nu
 | ID Repository          | anonymous\_profile | Anonymous Identity Issuance profile |
 | Authentication         | anonymous\_profile | Anonymous Authentication profile    |
 
-_Note_: New DB tables are added for the anonymous profile because data in existing tables (except the pre-registration module) are encrypted and cannot be used to create reports and dashboards.
+_Note_: New DB tables are added for the anonymous profile because data in existing tables are encrypted and cannot be used to create reports and dashboards.
 
 ### Anonymous Registration profile
 
