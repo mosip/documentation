@@ -111,9 +111,9 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 * \[Ansible]\(https://docs.ansible.com/ansible/latest/installation\_guide/intro\_installation.html: version > 2.12.4
 *   Create a directory as mosip in your PC and:
 
-    * clone k8’s infra repo with tag : 1.2.0.1-B2 (**whichever is the latest version**) inside mosip directory.\
+    * clone k8’s infra repo with tag : 1.2.0.1 (**whichever is the latest version**) inside mosip directory.\
       `git clone https://github.com/mosip/k8s-infra -b v1.2.0.1-B2`
-    * clone mosip-infra with tag : 1.2.0.1-B2 (**whichever is the latest version**) inside mosip directory.\
+    * clone mosip-infra with tag : 1.2.0.1 (**whichever is the latest version**) inside mosip directory.\
       `git clone https://github.com/mosip/mosip-infra -b v1.2.0.1-B2`
     * Set below mentioned variables in bashrc
 
