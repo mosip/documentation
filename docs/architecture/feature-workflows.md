@@ -21,21 +21,13 @@ Residents have the ability to download a Verifiable Credential (VC) for themselv
 * Download via UIN/VID
 * Download via eSignet
 
-#### Download via UIN/VID
+#### Download via UIN /VID
 
 <figure><img src="../.gitbook/assets/download_via_uin_vid.png" alt=""><figcaption></figcaption></figure>
 
 #### Download via eSignet
 
-<div>
-
-<img src="_images/download_via_esignet.png" alt="">
-
- 
-
-<figure><img src="../.gitbook/assets/download_via_esignet.png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Sharing of credentials
 
@@ -70,8 +62,6 @@ The credentials are shared in a peer-to-peer model with the verifier application
 ### 5. Data backup and restore
 
 From Settings screen, users can access Backup settings screen. In Backup settings screen, users can configure their preferences for data backup. The setting, configured once during the application's lifecycle, determines whether Google Drive or iCloud will be utilized based on the device platform. To restore backup data to the mobile wallet, users must log in to the same account and configure settings within the app accordingly. Additionally, restored Verifiable Credentials (VCs) should be re-activated to enable QR Code login functionality.
-
-
 
 <figure><img src="../.gitbook/assets/android (1).png" alt=""><figcaption></figcaption></figure>
 
