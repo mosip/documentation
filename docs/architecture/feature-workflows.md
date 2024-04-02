@@ -41,6 +41,20 @@ This method of VC download illustrates the **OpenID4VCI** method of download usi
 
 <figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
+**Appendix**:
+
+* The term “identifier” in the architecture diagram refers to the unique identifier which can be used to download the credential on the esignet login Page
+* eSignet supports Various types of authorizations, ACR value is configured based on the Issuers' need to include the authorization mode in the authorization page
+* Types of Authorization Supported for Credential Download by eSignet are:
+
+  * **Login With OTP**: Credential download using OTP Based authentication to authorize the user
+    
+    **Illustrated Implementation**: National ID credentials download
+  * **Login With KBA**: Credential download using KBA to authorize the user. The knowledge (as described by the credential 
+    issuer to authorize) is exposed to eSignet from Registry (Issuer) through eSignet Issuance Plugins
+  
+    **Illustrated Implementation**: Insurance ID credentials download 
+
 ### 3. Sharing of credentials
 
 The credentials are shared in a peer-to-peer model with the verifier application. The data exchange between devices is done using the BLE Protocol. For more information, refer to [Tuvali](../integration-guide/tuvali.md) documentation.
