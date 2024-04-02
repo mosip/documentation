@@ -70,6 +70,20 @@ This method of VC download illustrates the **OpenID4VCI** method of download usi
 
 <figure><img src=".gitbook/assets/download using esignet2.png" alt=""><figcaption></figcaption></figure>
 
+**Appendix**:
+
+* The term “identifier” in the architecture diagram refers to the unique identifier which can be used to download the credential on the esignet login Page
+* eSignet supports Various types of authorizations, ACR value is configured based on the Issuers' need to include the authorization mode in the authorization page
+* Types of Authorization Supported for Credential Download by eSignet are:
+
+  * **Login With OTP**: Credential download using OTP Based authentication to authorize the user
+    
+    **Illustrated Implementation**: MOSIP National ID credentials download
+  * **Login With KBA**: Credential download using KBA to authorize the user. The knowledge (as described by the credential 
+    issuer to authorize) is exposed to eSignet from Registry (Issuer) through eSignet Issuance Plugins
+  
+    **Illustrated Implementation**: Sunbird Insurance ID credentials download 
+
 ### Detailed view of the downloaded VC
 
 Once we click on the downloaded VC, it will open as a detailed view.
@@ -85,20 +99,6 @@ After we have completed several scenarios, when we navigate to the history page,
 <figure><img src=".gitbook/assets/history1.png" alt="" width="191"><figcaption></figcaption></figure>
 
 </div>
-
-**Appendix**:
-
-* The term “identifier” in the architecture diagram refers to the unique identifier which can be used to download the credential on the esignet login Page
-* eSignet supports Various types of authorizations, ACR value is configured based on the Issuers' need to include the authorization mode in the authorization page
-* Types of Authorization Supported for Credential Download by eSignet are:
-
-  * **Login With OTP**: Credential download using OTP Based authentication to authorize the user
-    
-    **Illustrated Implementation**: MOSIP National ID credentials download
-  * **Login With KBA**: Credential download using KBA to authorize the user. The knowledge (as described by the credential 
-    issuer to authorize) is exposed to eSignet from Registry (Issuer) through eSignet Issuance Plugins
-  
-    **Illustrated Implementation**: Sunbird Insurance ID credentials download 
 
 ### Sharing Credentials
 
