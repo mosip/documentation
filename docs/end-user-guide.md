@@ -32,16 +32,18 @@ Please navigate to the Play Store or App Store for iOS, select the **Install** o
 
 To download VC, there are three methods:
 
-* Downloading VC using the UIN/ VID feature
+* Downloading VC using the UIN / VID feature
 * Downloading VC using the Application ID feature
 * Download VC via eSignet
 
-**Downloading VC using UIN/ VID/ AID**
+**Downloading VC using UIN / VID / AID**
 
-* On the home page, you will find a plus "+" symbol. Clicking on this symbol will display a list of issuers from which you can download VCs.
-* Look for the issuer that offers the option to download via UIN and VID. Clicking on this option will present you with the option to download VC from AID and VID.
-* Fill in the required information in the text box according to your needs, and then click on the **Generate Card** button.
-* You will be prompted to enter an OTP on the next page, and once you do so, the download will begin automatically.
+To download MOSIP issued VC, using OTP method, user can directly provide UIN / VID and connect to the IDA.
+
+* On the home page, there will be a plus "+" symbol that displays the list of issuers available to download VCs from.
+* Select the issuer that states **Download <Issuer> Credentials via OTP**.
+* Enter the UIN / VID and enter the OTP sent to your registered email ID.
+* Download the VC.
 
 <figure><img src=".gitbook/assets/downloading VC in UIN.png" alt=""><figcaption></figcaption></figure>
 
@@ -49,11 +51,20 @@ To download VC, there are three methods:
 
 **Downloading VC via eSignet**
 
+Below sections are going to detail as how Inji mobile wallet as an OIDC client to OpenID4VCI method of downloading a VC and illustrated implementations.
+
+**Download MOSIP credentials**:
+
+This method of MOSIP VC download illustrates the **OpenID4VCI** method of download using UIN / VID issued to the resident. In this, eSignet plays the authentication and authorisation end point to connect to the credential provider (in this case, it is MOSIP). To understand more about Onboarding Mimoto (Inji BFF) as an OIDC client to support credential issuance from any issuer who support OpenID4VCI protocol refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/customization-overview/credential_providers).
+
+**Download Sunbird credentials**
+
+This method of VC download illustrates the **OpenID4VCI** method of download using KBA (Knowledge Based Authentication). In this, eSignet plays the authentication, authorisation and credential issuance end point to connect to the credential provider (in this case, it is Sunbird). To understand more about Onboarding Mimoto (Inji BFF) as an OIDC client to support credential issuance from any issuer who support OpenID4VCI protocol refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/customization-overview/credential_providers).
+
 * On the home page, there will be a plus "+" symbol that displays the list of issuers available to download VCs from.
 * Select the issuer that states **Download via eSignet**. Once clicked, the browser will open and take you to the eSignet page.
-* There will be an option to **Login with OTP**, which should be selected.
-* A text box should be filled with your VID and the captcha should be completed in order to enable the **Get OTP** button.
-* Upon activation, the system will redirect to the One-Time Password (OTP) validation page. After successfully inputting the correct OTP, the user will be taken back to the application, landing on the loading screen. Following the completion of the download process, the user will be returned to the home page.
+* In The authorization page (eSignet page), user has to enter the details related to that credentials which they are aware of. In this sample implementation, Its Policy Number, Policy Name, and Date of Birth.
+* Upon Authorization, the user will be taken back to the application, landing on the loading screen. Following the completion of the download process, the user will be returned to the home page, where the Downloaded Credential will be available.
 
 <figure><img src=".gitbook/assets/download using eSignet1.png" alt=""><figcaption></figcaption></figure>
 
@@ -74,6 +85,20 @@ After we have completed several scenarios, when we navigate to the history page,
 <figure><img src=".gitbook/assets/history1.png" alt="" width="191"><figcaption></figcaption></figure>
 
 </div>
+
+**Appendix**:
+
+* The term “identifier” in the architecture diagram refers to the unique identifier which can be used to download the credential on the esignet login Page
+* eSignet supports Various types of authorizations, ACR value is configured based on the Issuers' need to include the authorization mode in the authorization page
+* Types of Authorization Supported for Credential Download by eSignet are:
+
+  * **Login With OTP**: Credential download using OTP Based authentication to authorize the user
+    
+    **Illustrated Implementation**: MOSIP National ID credentials download
+  * **Login With KBA**: Credential download using KBA to authorize the user. The knowledge (as described by the credential 
+    issuer to authorize) is exposed to eSignet from Registry (Issuer) through eSignet Issuance Plugins
+  
+    **Illustrated Implementation**: Sunbird Insurance ID credentials download 
 
 ### Sharing Credentials
 
