@@ -350,7 +350,7 @@ The following storage classes can be used:
 * [Vsphere storage class](https://github.com/vmware-archive/vsphere-storage-for-kubernetes): If you are already using VMware virtual machines, you can proceed with the vSphere storage class.
 * [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md).
 * [ceph-csi](TODO Implementation in progress)
-* [Longhorn](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md)
+* [Longhorn](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/longhorn/README.md)
 
 * Storage class setup: [Longhorn](https://longhorn.io/) creates a storage class in the cluster for creating pv (persistence volume) and pvc (persistence volume claim).
 
