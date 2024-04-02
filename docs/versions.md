@@ -1,10 +1,16 @@
 # Releases
 
+## Version: Inji 0.11.0-Inji
+
+* Name: Inji 0.11.0-Inji
+* Date: 29th March, 2024
+* [Release Notes](version-0.11.0.md)
+
 ## Version: 0.11.0
 
 * Name: Inji 0.11.0
 * Date: 23rd February, 2024
-* [Release Notes](version-0.11.0.md)
+* [Release Notes](../version-0.11.0.md)
 
 ## Version: vDP2
 
