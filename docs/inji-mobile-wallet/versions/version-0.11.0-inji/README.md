@@ -12,17 +12,19 @@
 
 We are excited to announce the release of **Inji Version 0.11.0** . This release is compatible with v0.11.0 Mimoto release. As part of 0.11.0, Inji introduces below mentioned key features:
 
-* Sunbird C Integration
+* VC download using KBA
 * Data backup and restore
 * Improved UI / UX
 
-In the recent past, Inji mobile app had undergone GenderMag analysis which addresses gender / inclusivity bias in software. In this release, we have incorporated GenderMag features for UI / UX in inclusivity space. To know more about the GenderMag UI/UX changes in the application, please refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/gendermag).
+In the recent past, Inji mobile app had undergone GenderMag analysis which addresses gender / inclusivity bias in software. In this release, we have incorporated GenderMag features for UI / UX in inclusivity space. 
+
+To know more about the GenderMag UI/UX changes in the application, please refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/gendermag).
 
 ## Summary
 
 Please find below the details for the **Inji Version 0.11.0** release:
 
-### Sunbird C Integration
+### VC download using KBA
 
 Sunbird Credentials is now successfully onboarded as an issuer with Inji Mobile. This successful onboarding now demonstrates that Inji Mobile wallet has proven capability to integrate with any credential issuer supporting **OpenID** protocol and issues Verifiable Credentials (VCs) based on OpenID4VCI standards. Sunbird C currently offers Insurance Credentials which can be downloaded into Inji mobile wallet upon integrating with eSignet 1.4.0 using Knowledge Based Authentication (KBA) method.
 
@@ -33,8 +35,6 @@ Inji mobile wallet currently offers data backup and restore functionality using 
 ### GenderMag
 
 The GenderMag Method is a process and also a set of materials helpful in investigating gender biases during resident's problem-solving experiences with software. Gendermag adheres to Human Computer Interaction (HCI) principles and thereby factor in gender differences interaction with software. As part of GenderMag walkthrough, we have identified inclusivity bugs with respect to UI / UX in Inji mobile. Version 0.11.0 includes UI / UX changes for P1 items.
-
-To know more about the GenderMag UI/UX changes in the application, please refer [here](https://docs.mosip.io/inji/inji-mobile-wallet/overview/features/gendermag).
 
 ## Repository Released
 
