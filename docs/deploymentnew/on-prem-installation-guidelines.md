@@ -22,8 +22,8 @@
 
 **MOSIP cluster** - This cluster runs all the MOSIP components and certain third party components to secure the cluster, API’s and data.
 
-* [MOSIP External Components](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/external/README.md#mosip-external-components)
-* [MOSIP Services](https://github.com/mosip/mosip-infra/blob/v1.2.0.1-B1/deployment/v3/mosip/README.md#mosip-services)
+* [MOSIP External Components](https://github.com/mosip/mosip-infra/blob/v1.2.0.1/deployment/v3/external/README.md#mosip-external-components)
+* [MOSIP Services](https://github.com/mosip/mosip-infra/blob/v1.2.0.1/deployment/v3/mosip/README.md#mosip-services)
 
 ### Architecture 
 
@@ -31,10 +31,10 @@
 
 ### Deployment repos
 
-* [k8s-infra](https://github.com/mosip/k8s-infra/tree/v1.2.0.1-B1) : contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
-* [mosip-infra](https://github.com/mosip/mosip-infra/tree/v1.2.0.1-B1/deployment/v3) : contains the deployment scripts to run charts in defined sequence.
-* [mosip-config](https://github.com/mosip/mosip-config/tree/v1.2.0.1-B1) : contains all the configuration files required by the MOSIP modules.
-* [mosip-helm](https://github.com/mosip/mosip-helm/tree/v1.2.0.1-B1) : contains packaged helm charts for all the MOSIP modules.
+* [k8s-infra](https://github.com/mosip/k8s-infra/tree/v1.2.0.1) : contains the scripts to install and configure Kubernetes cluster with required monitoring, logging and alerting tools.
+* [mosip-infra](https://github.com/mosip/mosip-infra/tree/v1.2.0.1/deployment/v3) : contains the deployment scripts to run charts in defined sequence.
+* [mosip-config](https://github.com/mosip/mosip-config/tree/v1.2.0.1) : contains all the configuration files required by the MOSIP modules.
+* [mosip-helm](https://github.com/mosip/mosip-helm/tree/v1.2.0.1) : contains packaged helm charts for all the MOSIP modules.
 
 ### Pre-requisites
 
@@ -111,10 +111,10 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 * \[Ansible]\(https://docs.ansible.com/ansible/latest/installation\_guide/intro\_installation.html: version > 2.12.4
 *   Create a directory as mosip in your PC and:
 
-    * clone k8’s infra repo with tag : 1.2.0.1-B2 (**whichever is the latest version**) inside mosip directory.\
-      `git clone https://github.com/mosip/k8s-infra -b v1.2.0.1-B2`
-    * clone mosip-infra with tag : 1.2.0.1-B2 (**whichever is the latest version**) inside mosip directory.\
-      `git clone https://github.com/mosip/mosip-infra -b v1.2.0.1-B2`
+    * clone k8’s infra repo with tag : 1.2.0.1 (**whichever is the latest version**) inside mosip directory.
+      `git clone https://github.com/mosip/k8s-infra -b v1.2.0.1`
+    * clone mosip-infra with tag : 1.2.0.1 (**whichever is the latest version**) inside mosip directory.
+      `git clone https://github.com/mosip/mosip-infra -b v1.2.0.1`
     * Set below mentioned variables in bashrc
 
     ```
@@ -348,9 +348,9 @@ this will install ingress in ingress-nginx namespace of rancher cluster.
 ## Storage classes
 The following storage classes can be used:
 * [Vsphere storage class](https://github.com/vmware-archive/vsphere-storage-for-kubernetes): If you are already using VMware virtual machines, you can proceed with the vSphere storage class.
-* [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/main/nfs/README.md).
+* [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md).
 * [ceph-csi](TODO Implementation in progress)
-* [Longhorn](https://github.com/mosip/k8s-infra/blob/main/longhorn/README.md)
+* [Longhorn](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/longhorn/README.md)
 
 * Storage class setup: [Longhorn](https://longhorn.io/) creates a storage class in the cluster for creating pv (persistence volume) and pvc (persistence volume claim).
 
@@ -383,7 +383,7 @@ Install Longhorn via helm
     * This value should be fine for sandbox and pilot but you may have to increase the default to "12" for production.
     * The value can be updated on Longhorn UI after installation.
 * Access the Longhorn dashboard from Rancher UI once installed.
-* Setup Backup : In case you want to bacup the pv data from longhorn to s3 periodically follow [instructions](https://github.com/mosip/k8s-infra/blob/main/docs/longhorn-backupstore-and-tests.md). (Optional, ignore if not required)
+* Setup Backup : In case you want to bacup the pv data from longhorn to s3 periodically follow [instructions](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/docs/longhorn-backupstore-and-tests.md). (Optional, ignore if not required)
 
 ### Setting up nginx server for Observation K8s Cluster
 
@@ -417,7 +417,7 @@ Install Longhorn via helm
     * Press enter in the `certbot` prompt to proceed.
     * Certificates are created in `/etc/letsencrypt` on your machine.
     * Certificates created are valid for 3 months only.
-* Wildcard SSL certificate [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
+* Wildcard SSL certificate [renewal](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
 *   Clone [k8s-infra](https://github.com/mosip/k8s-infra)
 
     ```
@@ -496,7 +496,7 @@ cd $K8_ROOT/rancher/keycloak
 ### RBAC for Rancher using Keycloak
 
 * For users in Keycloak assign roles in Rancher - **cluster** and **project** roles. Under `default` project add all the namespaces. Then, to a non-admin user you may provide Read-Only role (under projects).
-* If you want to create custom roles, you can follow the steps given [here](https://github.com/mosip/k8s-infra/blob/main/docs/create-custom-role.md).
+* If you want to create custom roles, you can follow the steps given [here](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/docs/create-custom-role.md).
 * Add a member to cluster/project in Rancher:
   * Navigate to RBAC cluster members
   * Add member name exactly as `username` in Keycloak
@@ -652,9 +652,9 @@ helm repo add mosip https://mosip.github.io/mosip-helm
 ## Storage classes
 The following storage classes can be used:
 * [Vsphere storage class](https://github.com/vmware-archive/vsphere-storage-for-kubernetes): If you are already using VMware virtual machines, you can proceed with the vSphere storage class.
-* [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/main/nfs/README.md).
+* [NFS client provisioner storage class](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/mosip/nfs/README.md).
 * [ceph-csi](TODO Implementation in progress)
-* [Longhorn](https://github.com/mosip/k8s-infra/blob/main/longhorn/README.md)
+* [Longhorn](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/longhorn/README.md)
 
 For time being, we are considering Longhorn as a storage class.
 
@@ -731,7 +731,7 @@ kubectl apply -f https://rancher.e2e.mosip.net/v3/import/pdmkx6b4xxtpcd699gzwdtt
       * Press enter in the `certbot` prompt to proceed.
       * Certificates are created in `/etc/letsencrypt` on your machine.
       * Certificates created are valid for 3 months only.
-  * `Wildcard SSL certificate` [renewal](https://github.com/mosip/k8s-infra/blob/main/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
+  * `Wildcard SSL certificate` [renewal](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/docs/wildcard-ssl-certs-letsencrypt.md#ssl-certificate-renewal). This will increase the validity of the certificate for next 3 months.
 *   Clone k8s-infra
 
     ```
@@ -847,10 +847,10 @@ MOSIP uses [Rancher Fluentd](https://ranchermanager.docs.rancher.com/v2.0-v2.4/e
       ```
   * MOSIP provides set of Kibana Dashboards for checking logs and throughputs.
     * Brief description of these dashboards are as follows:
-      * [01-logstash.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/01-logstash.ndjson) contains the logstash _Index_ Pattern required by the rest of the dashboards.
-      * [02-error-only-logs.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which shows only the error logs of the services, called `MOSIP Error Logs` dashboard.
-      * [03-service-logs.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which show all logs of a particular service, called MOSIP Service Logs dashboard.
-      * [04-insight.ndjson](https://github.com/mosip/k8s-infra/blob/main/logging/dashboards/04-insight.ndjson) contains dashboards which show insights into MOSIP processes, like the number of UINs generated (total and per hr), the number of Biometric deduplications processed, number of packets uploaded etc, called `MOSIP Insight` dashboard.
+      * [01-logstash.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/01-logstash.ndjson) contains the logstash _Index_ Pattern required by the rest of the dashboards.
+      * [02-error-only-logs.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which shows only the error logs of the services, called `MOSIP Error Logs` dashboard.
+      * [03-service-logs.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/03-service-logs.ndjson) contains a Search dashboard which show all logs of a particular service, called MOSIP Service Logs dashboard.
+      * [04-insight.ndjson](https://github.com/mosip/k8s-infra/blob/v1.2.0.1/logging/dashboards/04-insight.ndjson) contains dashboards which show insights into MOSIP processes, like the number of UINs generated (total and per hr), the number of Biometric deduplications processed, number of packets uploaded etc, called `MOSIP Insight` dashboard.
       * [05-response-time.ndjson](on-prem-installation-guidelines.md) contains dashboards which show how quickly different MOSIP Services are responding to different APIs, over time, called `Response Time` dashboard.
 * Import dashboards:
   * `cd K8_ROOT/logging`
