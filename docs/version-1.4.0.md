@@ -25,6 +25,8 @@ The 1.4.0 version of CTK includes the following new features:
 4. Community reported issue in the CTK UI GitHub repository is fixed - Android SBI CTK Check Device Status failed: SBI1028, SBI1029
 5. In trust validation also included a check for Org Name for logged in user and the Subject Org in the certificate.
 6. SBI RCapture response will be encrypted saved in CTK DB
+7. As per community reported issue, CTK is now sending "previousHash" as SHA256 hash of an empty UTF-8 string instead of just an empty string.
+8. The attributes "requestedScore" and "qualityScore" are now supporting floating point numbers in CTK schemas and testcases. 
 
 **ABIS Testcases Enhancements**
 1. Added new ABIS DataShare related testcases ABIS3030, ABIS3031. ABIS3031 is inactive in this release since it needs some changes in kernel-auth-adapter. 
