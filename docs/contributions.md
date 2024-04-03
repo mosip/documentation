@@ -19,7 +19,7 @@ Mindtree is a digital transformation and technology services company located in 
 The team at Technoforte has contributed multiple resources towards security testing, manual testing, automated testing, development, and devops.
 Technoforte has made significant contributions to the development of Partner Management Module, defining the partner policy, and setting up the partner portal. The team is also part of  the community led effort of Android Reg Client development. 
 
-These valuable contributions were made by the Technoforte team with an approximate cumulative effort of about 840 person days which translates to 6720 person hours.
+These valuable contributions were made by the Technoforte team with an approximate cumulative effort of about 4000+ person days which translates to 32000+ person hours..
 
 Technoforte Software Private Limited (Technoforte) is a Bangalore based firm engaged in providing enterprise solutions in the field of Information Technology.
 
