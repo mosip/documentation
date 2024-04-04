@@ -171,6 +171,7 @@
     * [Performance Test Report](release/1.2.0/performance-report/performance-test-report.md)
     * [Security Test Report](release/1.2.0/security-test-report.md)
     * [Feature Health Report](release/1.2.0/feature-health-report.md)
+  * [1.2.0.2](releases/1.2.0.2.md)
 * [📋 Adopting LTS 1.2.0](adopting-lts-1.2.0.md)
 * [🈴 Upgrade Runbook](upgrade-runbook.md)
   * [Deployment Architecture Upgrade](upgrade-deployment-architecture.md)
