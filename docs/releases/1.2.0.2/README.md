@@ -20,8 +20,6 @@ The **1.2.0.2** release resolves reported critical bugs. It also enhances the st
 
 ## Repository Released
 
-
-
 | Repositories                | Tags Released |
 | --------------------------- | ------------- |
 | registration-client         |               |
@@ -32,5 +30,5 @@ The **1.2.0.2** release resolves reported critical bugs. It also enhances the st
 
 ## Documentation
 
-* Functional test report
+* [Functional test report](https://docs.mosip.io/1.2.0/releases/1.2.0.2/test-report)
 * [Known Issues](https://mosip.atlassian.net/issues/?jql=labels%20%3D%20%22known\_issue\_1202%22)
