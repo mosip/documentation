@@ -2,7 +2,15 @@
 
 ## Latest Release
 
+**Version: 1.2.0.2**
 
+* Name: Patch on Asymmetric Amoeba
+* [![LTS](https://img.shields.io/badge/Support-Long%20Term%20Support-blue?style=plastic)](https://docs.mosip.io/1.2.0/releases/support-policy)
+* Date: 05th April, 2024
+* [Release Notes](releases/1.2.0.2/release-notes-1.2.0.2.md)
+
+
+## Older Releases
 
 **Version: 1.2.0.1**
 
@@ -10,9 +18,6 @@
 * [![LTS](https://img.shields.io/badge/Support-Long%20Term%20Support-blue?style=plastic)](https://docs.mosip.io/1.2.0/releases/support-policy)
 * Date: 06th March, 2024
 * [Release Notes](release/1.2.0.1/release-notes-1.2.0.1.md)
-
-
-## Older Releases
 
 **Version: 1.2.0.1 Beta 4**
 
