@@ -22,6 +22,7 @@
   * [Code Contribution](contribution/code-contribution.md)
   * [Code of Conduct](contribution/code-of-conduct.md)
 * [Build & Deployment](build-&-deployment.md)
+  * [Setting Up Inji, eSignet & Mimoto Locally](setting-up-inji-esignet-mimoto-locally.md)  
 * [Releases](versions.md)
   * [Version 0.11.0-Inji](inji-mobile-wallet/versions/version-0.11.0-inji/README.md)
     * [Test Report](inji-mobile-wallet/versions/version-0.11.0-inji/test-report.md)
