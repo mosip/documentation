@@ -21,7 +21,7 @@ The below mentioned scenario describes a user attempting to download a VC (Verif
 
 1. Resident logins in to their digital wallet (Inji mobile wallet) and clicks on the plus '+' button.
 2. Resident selects their preferred issuer from the list.
-3. Resident provides their **Policy Number**, **ull Name**, and **Date of Birth** as credentials for KBA login.
+3. Resident provides their **Policy Number**, **Full Name**, and **Date of Birth** as credentials for KBA login.
 4. Resident clicks on Login.
 5. Resident has successfully downloaded their Insurance Card into their digital wallet (Inji mobile wallet).
 
