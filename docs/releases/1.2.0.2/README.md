@@ -4,7 +4,7 @@
 
 **Release Version**: 1.2.0.2
 
-**Release Date**:
+**Release Date**: 5th April 2024
 
 The **1.2.0.2** release resolves reported critical bugs. It also enhances the stability and usability of the software, ensuring a seamless customer experience. Below mentioned is detailed description of the fixes included in this version:
 
