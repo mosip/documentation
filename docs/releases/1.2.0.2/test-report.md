@@ -35,11 +35,11 @@ Verification is performed on various configurations as mentioned below:
 ## Main Features Tested
 
 * Registration Client UI
-* Partner Management Service UI
+* Partner Management Portal UI
 
 ## Test execution statistics
 
-### Reg. Client and PMP UI Automation test results
+### Registration Client and PMP UI Automation test results
 
 Below mentioned are the test metrics for functional testing using mock MDS, mock Auth, and mock ABIS. The process followed was black box testing which based it's test cases on the specifications of the software component under test. 
 
@@ -49,8 +49,8 @@ Here is the detailed breakdown:
 
 | Module                    | Total | Passed | Failed | Skipped |
 | --------------------------| ----- | ------ | ------ | ------- |
-| Reg Client UI automation  | 27    | 27     |   0    | 0       |
-| PMP UI automation         | 18    | 18     |   0    | 0       |
+| Registration Client UI automation              | 27    | 27     |   0    | 0       |
+| Partner Management Portal UI automation         | 18    | 18     |   0    | 0       |
 
 ### DSL - End to end scenarios results
 
