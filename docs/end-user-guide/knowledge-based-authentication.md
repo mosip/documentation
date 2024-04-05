@@ -25,6 +25,6 @@ The below mentioned scenario describes a user attempting to download a VC (Verif
 4. Resident clicks on Login.
 5. Resident has successfully downloaded their Insurance Card into their digital wallet (Inji mobile wallet).
 
-
-
 <figure><img src="../.gitbook/assets/KBA eSignet1.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/KAB eSignet2.png" alt=""><figcaption></figcaption></figure>
