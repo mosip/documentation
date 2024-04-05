@@ -20,13 +20,15 @@ The **1.2.0.2** release resolves reported critical bugs. It also enhances the st
 
 ## Repository Released
 
-| Repositories                | Tags Released |
-| --------------------------- | ------------- |
-| registration-client         |               |
-| mosip-mock-services         |               |
-| artifactory-ref-impl        |               |
-| mosip-infra                 |               |
-| partner-management-services |               |
+| Repositories                | Tags Released                                                                |
+| --------------------------- | ---------------------------------------------------------------------------- |
+| registration-client         | [v1.2.0.2](https://github.com/mosip/registration-client/tree/v1.2.0.2)       |
+| mosip-mock-services         | [v1.2.0.2](https://github.com/mosip/mosip-mock-services/tree/v1.2.0.2)       |
+| artifactory-ref-impl        | [v1.2.0.2](https://github.com/mosip/artifactory-ref-impl/tree/v1.2.0.2)      |
+| mosip-infra                 | [v1.2.0.2](https://github.com/mosip/mosip-infra/tree/v1.2.0.2)               |
+| mosip-helm                  | [v1.2.0.2](https://github.com/mosip/mosip-helm/tree/v1.2.0.2)                |
+| K8s-infra                   | [v1.2.0.2](https://github.com/mosip/k8s-infra/tree/v1.2.0.2)                 |
+| partner-management-services | [v1.2.0.2](https://github.com/mosip/partner-management-portal/tree/v1.2.0.2) |
 
 ## Documentation
 
