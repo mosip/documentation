@@ -29,13 +29,13 @@ Also, it highlights some of CTK's powerful features, like its pre-built test cas
 
 ![CTK Landing Page2](\_images/ctk-landing-page2.png)
 
-It also covers the details of the SBI, Android SBI, SDK, and ABIS specs. By clicking the download option on the landing page, partners can also get the compliance toolkit apk.
+The landing page provides information about the SBI, Android SBI, SDK, and ABIS specifications. Additionally, partners can download the compliance toolkit APK by selecting the download option.
 
 ![CTK Landing Page3](\_images/ctk-landing-page3.png)
 
 ## Login
 
-The partners using the compliance tool kit should be registered in the system. Registered partners can log in to the compliance tool kit with the same credentials as they used to register themselves into the [Partner Management Portal](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-portal).
+Partners utilizing the compliance toolkit must be registered in the system. Once registered, partners can log in to the compliance toolkit using the same credentials they used for registration in the [Partner Management Portal](https://docs.mosip.io/1.2.0/modules/partner-management-services/partner-management-portal).
 
 The partner needs to enter the registered username or e-mail and password to log in.
 
@@ -528,7 +528,7 @@ The partner can only generate a QA Draft Report after running `Quality Assessmen
 
 ![](\_images/ctk-qa-collection-run.png)
 
-* Once the test execution is completed, the partner can see,
+* After completing the test execution, the partner will be able to view the below mentioned results
   * A high-level result with the number of test cases executed- with the number of test cases failed and the number of test cases passed in the run.
   * They also have the option to view the detailed `Test Run` report.
 
@@ -543,8 +543,8 @@ The partner can only generate a QA Draft Report after running `Quality Assessmen
 
 * Partners need to check the downloaded QA Draft Report, which contains their details, project specifics, test cases, and the complete test run results. These results include the number of test cases executed, passed, and failed.
 * This report also includes the biometric scores classification for each **SDK** and **SBI**.
-* After reviewing the downloaded report, the partner can submit it for review by checking the checkbox in the popup window. They can then proceed by clicking the `Send For Review` button to finalize the submission.
-* Once submitted the report, the `Quality Assessment Collection` cannot be rerun for the project. The partner can download the submitted report by clicking on the download icon.
+* Once the partner has reviewed the downloaded report, they can submit it for review by selecting the checkbox in the popup window. Afterward, they can click the Send For Review button to complete the submission.
+* After submitting the report, the `Quality Assessment Collection` cannot be re-executed for the project. Partners can download the submitted report by clicking on the download icon.
 
 ![](\_images/ctk-qa-report-submitted.png)
 

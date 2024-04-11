@@ -48,8 +48,8 @@ Summarizing as below:
 
 * The Quality Assessment Collection reporting procedure is very similar to the Compliance Collection process.
 * Using this collection,  partner can collect biometric scores for various groups of individuals (age wise, gender wise, occupation wise etc.).
-* The biometric scores will be given using BQAT SDK.
-* The scores will be used to perform quality assessment of the SBI partner.
+* BQAT SDK provides biometric score.
+* The scores will serve as the basis for evaluating the quality of the SBI partner.
 
 Summarizing as below:
 

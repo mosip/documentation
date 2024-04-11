@@ -8,7 +8,7 @@ CTK should be deployed with the required dockers.
 * compliance-toolkit-ui: 1.4.0
 * compliance-toolkit-batch-job: 1.4.0
 
-To deploy Compliance Toolkit, we require the below mandatory services:
+To successfully deploy Compliance Toolkit, below mentioned services are mandatorily required.
 
 ## Dependent Service (dockers)
 
@@ -24,7 +24,7 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 * ClamAV: clamav/clamav: latest
 * MinIO
 
-**The Setup guide is a checklist for the three categories below:**
+**The Setup guide serves as a checklist for the following three categories.**
 
 1. Configuration checks
 2. Steps to load testdata, schemas, testcases and terms and conditions templates
@@ -32,7 +32,7 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
 ### Configuration checks
 
-1. Ensure that in the `kernel-default.properties`, the value of `mosip-toolkit-client` and `mosip-toolkit-android-client` is set in `auth.server.admin.allowed.audience`. If this was not set by default, then set it and restart `kernel-auth-service` and `compliance-toolkit-service`.
+1. Make sure that the `kernel-default.properties` file includes the `mosip-toolkit-client` and `mosip-toolkit-android-client` values in the `auth.server.admin.allowed.audience` setting. If these values are not set by default, configure them and then restart the `kernel-auth-service` and `compliance-toolkit-service`.
    
 2.  Ensure that in `compliance-toolkit-default.properties`, CORS is enabled to allow access to `mosip-toolkit-android-client`:
 
@@ -52,13 +52,13 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
     mosip.role.keymanager.postverifycertificatetrust=`ZONAL_ADMIN`, `GLOBAL_ADMIN`, `PMS_ADMIN`, `PMS_USER`
 
-    Then `mosip-pms-client` should have any of the above roles.
+    Ensure that the `mosip-pms-client` possesses any of the roles mentioned above.
     
 4. Check that `mosip-pms-client` has the role `REGISTRATION_PROCESSOR`, `PARTNER_ADMIN`, `PMS_ADMIN` in Key Cloak. If this was not set by default, then set it and restart `keymanager` and `compliance-toolkit-service`.
    
 5. It is also needed to generate an encryption key for CTK.
    
-   *   Create a new app id by directly inserting the below row.
+   *   Insert the following row to create a new app ID.
 
        `INSERT INTO keymgr.key_policy_def(app_id, key_validity_duration, is_active,pre_expire_days, access_allowed, cr_by, cr_dtimes, upd_by, upd_dtimes, is_deleted, del_dtimes) VALUES ('COMPLIANCE_TOOLKIT', 1095, true, 60, 'NA', 'mosipadmin', '2022-11-28 09:00:40.822625', null, null, false, null);`
        
@@ -109,7 +109,7 @@ To deploy Compliance Toolkit, we require the below mandatory services:
 
        ![](\_images/ctk-generateMasterkey.png)
        
-   *   Directly download the certificate via key manager swagger URL and `getCertificate` endpoint, with App Id as `COMPLIANCE_TOOLKIT` and Ref Id as `COMP-FIR`.
+   *   Directly download the certificate through key manager swagger URL and `getCertificate` endpoint, with App Id as `COMPLIANCE_TOOLKIT` and Ref Id as `COMP-FIR`.
 
        ![](\_images/ctk-getCertificate.png)
        
@@ -125,13 +125,13 @@ To deploy Compliance Toolkit, we require the below mandatory services:
        mosip.ida.server.url=https://api-internal.${env}.mosip.net/v1/keymanager/getCertificate?applicationId=COMPLIANCE_TOOLKIT&referenceId=COMP-FIR
        ```
 
-       For real MDS/SBI, the vendors can download the new encryption key from the UI and test with the updated **SBI** which uses this encryption key.It can be downloaded for **Auth SBI** projects from UI.
+       For real MDS/SBI, the vendors can download the new encryption key from the UI and test with the updated **SBI** which uses this encryption key. It can be downloaded for **Auth SBI** projects from UI.
 
        ![](\_images/ctk-encryptionkey.png)
        
 6. Ensure that `reporting` module is deployed from the `develop` branch. This is required for the **Kibana Dashboard**.
 
-7. Verify that the `kernel-auth-adapter-1.2.0.1` has been deployed in the `compliance-tooolkit-service` and confirm that the same auth adapter was used to set up the mock-abis.
+7. Ensure that the `kernel-auth-adapter-1.2.0.1` has been successfully deployed in the `compliance-toolkit-service`, and verify that the identical authentication adapter was utilized to configure the mock ABIS.
 
 8. Check datashare configurations for **ABIS3030** and **ABIS3031** testcases.
 
