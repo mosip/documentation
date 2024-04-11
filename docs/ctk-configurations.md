@@ -29,5 +29,6 @@
 | `mosip.toolkit.batchjob.enable.testrun.archival`| Activates the test run archival process when set to 'true' and reverses the archiving, restoring previously archived test runs, when set to 'false'. | true |
 | `mosip.toolkit.batchjob.testrun.archive.offset`| Specifies the number of recent test runs to keep, after which the older test runs will be moved to the archives and saved in the Compliance Toolkit. | 10 |
 | `mosip.toolkit.batchjob.archival.revert.collectionids`| Specifies the collection IDs of a project for which the test run archival should be reverted for a specific partner.|  |
+| `mosip.toolkit.batchjob.schedule.cron.testRunArchivalJob`| Specifies the CRON job schedule for triggering the test run archival process. In this configuration by default, the test run archival job is scheduled to run daily at midnight (00:00:00) UTC time.| 0 0 0 * * ? |
 
 
