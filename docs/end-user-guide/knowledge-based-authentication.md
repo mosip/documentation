@@ -10,7 +10,7 @@ In KBA, users are often asked to provide answers to specific questions or prompt
 
 eSignet has expanded its authentication options to include KBA as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user specific details can now be easily integrated with eSignet. This integration enables OpenID based login, allowing users to access relying party services seamlessly.
 
-The below mentioned scenario describes a user attempting to download a VC (Verifiable Credential) from the list of VC issuers through their mobile wallet (for example., Inji mobile wallet). The user is verified using Knowledge-based authentication (KBA) through e-Signet.
+The below mentioned scenario describes a user attempting to download a VC (Verifiable Credential) from the list of VC issuers through their mobile wallet (for example., Inji mobile wallet). The user is verified using Knowledge-based authentication (KBA) through eSignet.
 
 ### Prerequisite:
 
@@ -19,11 +19,11 @@ The below mentioned scenario describes a user attempting to download a VC (Verif
 
 ### Steps
 
-1. Resident logins in to their digital wallet (Inji mobile wallet) and clicks on the plus '+' button.
-2. Resident selects their preferred issuer from the list.
+1. The resident accesses their digital wallet (e.g., Inji mobile wallet) and taps on the plus '+' button.
+2. Resident selects their preferred issuer from the available list.
 3. Resident provides their **Policy Number**, **Full Name**, and **Date of Birth** as credentials for KBA login.
-4. Resident clicks on Login.
-5. Resident has successfully downloaded their Insurance Card into their digital wallet (Inji mobile wallet).
+4. Resident clicks on the Login button.
+5. Upon successful completion, the user downloads their Insurance Card into their digital wallet (Inji mobile wallet).
 
 <figure><img src="../.gitbook/assets/KBA eSignet1.png" alt=""><figcaption></figcaption></figure>
 
