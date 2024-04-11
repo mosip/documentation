@@ -16,6 +16,7 @@
 * [Android App User Guide](android-user-guide.md)
 * [CTK Setup](how-to-guides/README.md)
   * [Setup steps](how-to-guides/how-to-set-up-ctk/README.md)
+    * [1.4.0](setup-steps-1.4.0.md)
     * [1.3.0](setup-steps-1.3.0.md)
     * [1.2.0](setup-steps-1.2.0.md)
     * [1.1.0](setup-steps-1.1.0.md)
