@@ -25,7 +25,7 @@
 | `mosip.toolkit.sbi.qualitycheck.iris.sdk.urls`| Specifies the SDK URLs used for quality check of iris biometric data in compliance toolkit | [{"name": "BQAT SDK","url": "https://api-internal.net/bqatsdk-service","healthUrl": "https://api-internal.net/bqatsdk-service/actuator/health", "includeInResults":false}] |
 | `mosip.toolkit.quality.assessment.age.groups`| Specifies the age groups used in Quality Assessment (QA) reports, categorized by age ranges. | child(5-12), adult(12-40), mature(40-59), senior(60+) |
 | `mosip.toolkit.quality.assessment.occupations`| Defines occupations categories used in Quality Assessment (QA) reports to assess variations in biometric quality due to occupational factors for Finger modality. | labourer, non-labourer |
-| `mosip.toolkit.quality.assessment.races`| Defines demographic categories used in Quality Assessment (QA) reports for Face modality. | asian, african, european |
+| `mosip.toolkit.quality.assessment.races`| Specifies racial demographic categories used in Quality Assessment (QA) reports for Face modality. | asian, african, european |
 | `mosip.toolkit.batchjob.enable.testrun.archival`| Activates the test run archival process when set to 'true' and reverses the archiving, restoring previously archived test runs, when set to 'false'. | true |
 | `mosip.toolkit.batchjob.testrun.archive.offset`| Specifies the number of recent test runs to keep, after which the older test runs will be moved to the archives and saved in the Compliance Toolkit. | 10 |
 | `mosip.toolkit.batchjob.archival.revert.collectionids`| Specifies the collection IDs of a project for which the test run archival should be reverted for a specific partner.|  |
