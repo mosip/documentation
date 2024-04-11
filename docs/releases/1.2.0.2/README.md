@@ -10,8 +10,8 @@ The **1.2.0.2** release addresses critical bugs that were reported, enhancing th
 
 ### Bug fixes
 
-1. **Issue with Policy Creation**: Our team performed Root Cause Analysis (RCA) for this issue and implemented a fix to address it comprehensively. Currently, users can seamlessly create Auth / DataShare policies upon creating and activating policy groups without encountering any error. #MOSIP-31976
-2. **Login Failure in Registration Client**: Through rigorous testing and implementation of required fixes, users can now successfully log in to Registration Client without encountering unresponsive behavior from the 'Submit' button. #MOSIP-32037
+1. **Issue with Policy Creation**: Previously, while attempting to create an Authorization or DataShare policy, the application encountered difficulties in successfully establishing the policy. Issue is resolved now and users can effortlessly define their Authorization or DataShare policies after creating and activating policy groups. [#MOSIP-31976](https://mosip.atlassian.net/browse/MOSIP-31976)
+2. **Login Failure in Registration Client**: Previously, users were unable to log into Registeration Client as  'Submit' button did not work as expected. Issue is resolved now, users can now successfully log into Registration Client. [#MOSIP-32037](https://mosip.atlassian.net/browse/MOSIP-32027)
 
 **Major Areas of Work**
 
