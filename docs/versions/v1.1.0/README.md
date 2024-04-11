@@ -2,13 +2,11 @@
 
 **Release Name**: eSignet
 
-**Upgrade From**: 1.0.0
-
 **Release Date**: 22nd September, 2023
 
 ## Overview
 
-The 1.1.0 version of eSignet is the third release of eSignet, which mainly focuses on the **Consent Registry** feature.
+The 1.1.0 version of eSignet focuses on the **Consent Registry** feature.
 
 The consent registry is designed to store user consent on claims and scopes requested during login to a relying party application using eSignet or the Wallet application ([Inji](https://docs.mosip.io/inji/)).
 
