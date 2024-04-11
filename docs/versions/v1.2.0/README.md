@@ -2,13 +2,11 @@
 
 **Release Name**: eSignet VCI
 
-**Upgrade From**: 1.1.0
-
 **Release Date**: 11th December, 2023
 
 ## Overview
 
-The 1.2.0 version of eSignet is the fourth release of eSignet which mainly focuses on the [**VC Issuance**](../../integration/vc-issuance.md) feature.
+The 1.2.0 version of eSignet focuses on the [**VC Issuance**](../../integration/vc-issuance.md) feature.
 
 * **Verifiable Credentials Issuance**: eSignet is an OAuth 2.0 and OIDC-based solution that has been enhanced to support OID4VCI flows. By integrating the eSignet VCI solution into a traditional issuer, it allows the issuer application to become compliant with OID4VCI standards, ensuring interoperability with all OID4VCI compatible wallets.
 * **Signed Consent**: eSignet securely saves the consent in a dedicated consent registry that is specifically designed to store user consent for claims and scopes requested during the initial login to a relying party's application using eSignet.
