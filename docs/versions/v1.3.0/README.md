@@ -41,3 +41,10 @@ Below are the features available in the release:
 | mosip-openid-bridge    | [1.2.0.1-B4-lite](https://github.com/mosip/mosip-openid-bridge/tree/v1.2.0.1-B4-lite) |
 
 For details on deployment, refer to the [helm charts](https://github.com/mosip/esignet/tree/v1.3.0/helm) in the eSignet repository.
+
+## Documentation
+
+* [Feature Documentation](../../overview/features/)
+* [Integration Guides](../../integration/)
+* [End User Guide](../../end-user-guide/)
+* [QA Report](https://docs.esignet.io/versions/v1.3.0/test-report)
