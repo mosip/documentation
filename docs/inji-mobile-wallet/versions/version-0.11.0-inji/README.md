@@ -2,8 +2,6 @@
 
 **Release Name**: Inji 0.11.0-Inji
 
-**Upgrade From**: Inji 0.10.0
-
 **Support**: Developer Release
 
 **Release Date**: 29th March, 2024
