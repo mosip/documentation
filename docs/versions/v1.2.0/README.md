@@ -49,5 +49,5 @@ For details on deployment, go through the [helm charts](https://github.com/mosip
 * [Feature Documentation](../../overview/features/)
 * [Integration Guides](../../integration/)
 * [End User Guide](../../end-user-guide/)
-* [API Documentation](https://mosip.stoplight.io/docs/identity-provider/jlmszj6dlxigw-e-signet)
+* [API Documentation](https://github.com/mosip/esignet/blob/v1.2.0/docs/idp-oidc-service-openapi.yaml)
 * [QA Report](test-report/)
