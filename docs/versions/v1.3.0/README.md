@@ -47,4 +47,5 @@ For details on deployment, refer to the [helm charts](https://github.com/mosip/e
 * [Feature Documentation](../../overview/features/)
 * [Integration Guides](../../integration/)
 * [End User Guide](../../end-user-guide/)
+* [API documentation](https://github.com/mosip/esignet/blob/v1.3.0/docs/esignet-openapi.yaml)
 * [QA Report](https://docs.esignet.io/versions/v1.3.0/test-report)
