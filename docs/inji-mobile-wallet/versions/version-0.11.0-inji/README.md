@@ -26,7 +26,9 @@ Please find below the details for the **Inji Version 0.11.0** release:
 
 ### VC download using KBA method
 
-Inji Mobile wallet has proven capability to integrate with any credential issuer supporting **OpenID** protocol and issues Verifiable Credentials (VCs) based on **OpenID4VCI** standards. To demonstrate the implementation of VC download using KBA (Knowledge Based Authentication), Inji mobile wallet integrated with eSignet 1.4.0, can now connect with any issuer preferring user authentication based on the information provided by the issuer to the holder.
+Inji Mobile wallet has proven capability to integrate with any credential issuer supporting **OpenID** protocol and issues Verifiable Credentials (VCs) based on **OpenID4VCI** standards. To demonstrate the implementation of VC download using KBA (Knowledge Based Authentication), Inji mobile wallet when integrated with [eSignet 1.4.0](https://docs.esignet.io/versions/v1.4.0), can connect with any issuer preferring KBA-based authentication.
+
+To know more about, KBA, refer [here](https://docs.esignet.io/end-user-guide/knowledge-based-authentication).
 
 ### Data backup and restore
 
