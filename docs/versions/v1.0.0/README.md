@@ -23,4 +23,5 @@ The features included in this release are:
 * [Feature Documentation](../../overview/features/)
 * [Integration Guides](../../integration/)
 * [End User Guide](../../end-user-guide/)
+* [API Documentation](https://github.com/mosip/esignet/blob/v1.0.0/docs/idp-oidc-service-openapi.yaml)
 * [QA Report](test-report/)
