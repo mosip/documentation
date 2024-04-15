@@ -52,7 +52,7 @@ _Note_: After registering, partners need to login the partner management portal 
 
 ## Terms and Conditions Consent
 
-After logging in, partners will encounter a Terms & Conditions popup window. They must accept these terms; otherwise, they will be logged out.
+After logging in, partners will encounter a Terms & Conditions popup window. Partner must accept these terms; otherwise, they will be logged out.
 
 Also, upon logging in, partners will be prompted with a popup if there have been any changes to the Terms & Conditions since their last consent.
 
