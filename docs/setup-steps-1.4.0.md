@@ -2,7 +2,7 @@
 
 ## Pre-requisites
 
-CTK should be deployed with the required dockers.
+CTK should be deployed along with the required dockers as mentioned below.
 
 * compliance-toolkit-service: 1.4.0
 * compliance-toolkit-ui: 1.4.0
@@ -113,7 +113,7 @@ To successfully deploy Compliance Toolkit, below mentioned services are mandator
 
        ![](\_images/ctk-getCertificate.png)
        
-   *   This certificate is to be used by **SBI** devices as the encryption key.
+   *   This certificate serves as the encryption key specifically for **SBI** devices.
 
        For Mock **MDS**, when running in **Auth** mode: update the below values in the `application.properties` file.
 
@@ -152,7 +152,7 @@ To successfully deploy Compliance Toolkit, below mentioned services are mandator
 
 1\. Browse [mosip-compliance-toolkit](https://github.com/mosip-compliance-toolkit.git)
 
-2\. Project structure will be as shown below.
+2\. Project structure will be displayed as mentioned below.
 
 ![](\_images/ctk-project-structure.png)
 

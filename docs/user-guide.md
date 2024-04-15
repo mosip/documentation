@@ -25,11 +25,11 @@ On the CTK landing page, partners can view the introduction of the CTK portal an
 
 ![CTK Landing Page1](\_images/ctk-landing-page1.png)
 
-Also, it highlights some of CTK's powerful features, like its pre-built test cases, validations, and detailed reporting.
+Additionally, it showcases several robust features of CTK, including its pre-defined test cases, validation mechanisms, and comprehensive reporting.
 
 ![CTK Landing Page2](\_images/ctk-landing-page2.png)
 
-The landing page provides information about the SBI, Android SBI, SDK, and ABIS specifications. Additionally, partners can download the compliance toolkit APK by selecting the download option.
+The landing page offers details about the SBI, Android SBI, SDK, and ABIS specifications. Furthermore, partners have the option to download the compliance toolkit APK by choosing the download button.
 
 ![CTK Landing Page3](\_images/ctk-landing-page3.png)
 
@@ -45,14 +45,14 @@ The partner can select the language of their preference from the dropdown in the
 * French
 * Arabic
 
-_Note_: Once a partner has registered, they must go into the partner management portal to access partner details.
+_Note_: After registering, partners need to login the partner management portal to retrieve partner details.
 
 
 ![CTK login page](\_images/ctk-toolkit-login.png)
 
 ## Terms and Conditions Consent
 
-The Terms & Conditions popup window will appear for the partner after they log in. It has to be accepted by the partner. If the partner does not accept the Terms & Conditions, they will be logged out.
+After logging in, partners will encounter a Terms & Conditions popup window. They must accept these terms; otherwise, they will be logged out.
 
 Also, upon logging in, partners will be prompted with a popup if there have been any changes to the Terms & Conditions since their last consent.
 
@@ -60,7 +60,7 @@ Also, upon logging in, partners will be prompted with a popup if there have been
 
 ## Dashboards
 
-Once the partner accepts the Terms & Conditions, they can view the `Project Dashboard` by default and would have the option to view the `Biometric Data Dashboard` and `My Reports Dashboard` as well.
+After accepting the Terms & Conditions, partners gain access to the `Project Dashboard` by default. Additionally, they have the option to explore the `Biometric Data Dashboard` and `My Reports Dashboard`.
 
 * `Project`: A project is a module that the partner wants to test. For example, if a device partner has developed a new version of their SBI for the fingerprint slap device, then, they can create a project in the compliance tool kit to verify this version of SBI.
 
@@ -541,10 +541,10 @@ The partner can only generate a QA Draft Report after running `Quality Assessmen
 
 ![](\_images/ctk-download-qa-report.png)
 
-* Partners need to check the downloaded QA Draft Report, which contains their details, project specifics, test cases, and the complete test run results. These results include the number of test cases executed, passed, and failed.
+* After downloading the report, partners can review the QA Draft Report. This report includes their details, project specifics, test cases, and a comprehensive summary of the test run results, including the number of test cases executed, passed, and failed.
 * This report also includes the biometric scores classification for each **SDK** and **SBI**.
-* Once the partner has reviewed the downloaded report, they can submit it for review by selecting the checkbox in the popup window. Afterward, they can click the Send For Review button to complete the submission.
-* After submitting the report, the `Quality Assessment Collection` cannot be re-executed for the project. Partners can download the submitted report by clicking on the download icon.
+* After reviewing the downloaded report, the partner can submit it for review by checking the checkbox in the popup window. Following that, they can click the `Send For Review` button to finalize the submission.
+* Once the report has been submitted, the ability to re-execute the `Quality Assessment Collection` for the project is no longer available. Partners can retrieve the submitted report by clicking on the download icon.
 
 ![](\_images/ctk-qa-report-submitted.png)
 
@@ -638,6 +638,6 @@ After reviewing the downloaded report and verifying its content, the admin can c
 
 Compliance Toolkit has a batch job process that archives X number of test runs for each collection.
 
-For example, if there are 15 test runs with an offset of 10, the most recent 10 will be retained, and the remaining 5 will be moved to archival table. In `test-run-history`, only the last 10 test run records are visible to partners.
+Consider this scenario: If there are 15 test runs, with an offset of 10, the most recent 10 will be retained, while the remaining 5 will be moved to an archival table. In the test-run-history, only the last 10 test run records are visible to partners.
 
 ![](\_images/ctk-archivaljob.png)
