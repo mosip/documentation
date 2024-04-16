@@ -40,8 +40,6 @@ Synchronize data is the data required to make the Registration Client(RC) functi
 
 An operator can download the pre-registration data of a machine mapped center while being online and store it locally in the registration machine for offline use. Now, when the system is offline and the pre-registration data is already downloaded, the operator can enter the pre-registration ID to auto-populate the registration form. Provided the machine is online, any pre-registration application can be downloaded irrespective of the center booked by the resident.
 
-This pre-registration data is downloaded from pre-registration API as an encrypted packet and stored in the local storage.There is a batch job running in background for deleting the pre-registration packets after configurable number of days.
-
 _Note_- Date Range of pre-registration data to be downloaded and storage location of pre-registration data in the registration machine is configurable. Also, this is synced as a part of configuration sync.
 
 ### Update Operator Biometrics
@@ -208,7 +206,3 @@ On clicking Dashboard, the Registration client dashboard HTML template is render
 ### News and updates
 
 This section has been reserved for the countries to be able to display their live news and updates. This can be implemented as per a country's requirements.
-
-### Consent
-
-During the training of the Operators, It must be ensured that consent is obtained directly from the resident whose personal information is being collected and processed. There is no  technical way to handle this scenario, so the operator training must include this activity as a manual process and emphasize upon strictly following the same.
