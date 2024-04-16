@@ -6,7 +6,7 @@
 
 * Name: CTK 1.4.0
 * Date: 15th April, 2024
-* [Release Notes](version-1.4.0)
+* [Release Notes](https://docs.mosip.io/compliance-tool-kit/versions/version-1.4.0)
 
 ### Version: 1.3.0
 
