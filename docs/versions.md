@@ -4,6 +4,12 @@
 
 ### Version: 1.3.0
 
+* Name: CTK 1.4.0
+* Date: 15th April, 2024
+* [Release Notes](version-1.4.0.md)
+
+### Version: 1.3.0
+
 * Name: CTK 1.3.0
 * Date: 5th January, 2024
 * [Release Notes](version-1.3.0.md)
