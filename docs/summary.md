@@ -2,6 +2,7 @@
 
 * [Overview](README.md)
 * [Releases](versions.md)
+  * [Version 1.3.0](version-1.4.0.md)
   * [Version 1.3.0](version-1.3.0.md)
     * [Test Report](test-report-1.3.0.md)
   * [Version 1.2.0](version-1.2.0.md)
