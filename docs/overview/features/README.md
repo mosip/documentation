@@ -32,6 +32,8 @@ eSignet also offers password authentication as one of its authentication factors
 
 eSignet has expanded its authentication options to include Knowledge-Based Authentication (KBA) as one of its factors. With eSignet's integration capabilities, existing ID repositories storing user-specific details can now be easily integrated with eSignet and thereby enabling service providers to authenticate users. 
 
+To know more about Knowledge Based Authentication, click [here](https://docs.esignet.io/end-user-guide/knowledge-based-authentication).
+
 ## Verifiable Credentials Issuance
 
 Verifiable credentials (VCs) are an open standard for digital credentials. They can represent information found in physical credentials, such as a passport or license, in digital format. They have numerous advantages over physical credentials, most notably that they're digitally signed, which makes them tamper-resistant and instantly verifiable.
