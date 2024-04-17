@@ -24,7 +24,7 @@ Version 1.4.0 of eSignet introduces a new authentication mode and addresses know
 | artifactory-ref-impl       | [v1.4.0-ES](https://github.com/mosip/artifactory-ref-impl)    |
 | digital-credential-plugins | [v0.1.0](https://github.com/mosip/digital-credential-plugins) |
 
-For details on deployment, refer to the [helm charts](v1.4.0.md) in the eSignet repository.
+For details on deployment, refer to the [helm charts](./) in the eSignet repository.
 
 ## Documentation
 
@@ -32,4 +32,4 @@ For details on deployment, refer to the [helm charts](v1.4.0.md) in the eSignet 
 * [Integration Guides](https://docs.esignet.io/integration)
 * [End User Guide](https://docs.esignet.io/end-user-guide)
 * [API Documentation](https://github.com/mosip/esignet/blob/v1.4.0/docs/esignet-openapi.yaml)
-* [QA Report]()
+* [QA Report](./)
