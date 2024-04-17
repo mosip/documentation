@@ -33,6 +33,7 @@
   * [Hash Generation](hash-generation.md)
   * [List of ISO validations performed by CTK](iso-validators.md)
   * [Create resource bundles for a new language](additional-languages.md)
+  * [CTK Configurations](ctk-configurations.md)
 * [API Documentation](api-documentation.md)
 * [License](license.md)
 
